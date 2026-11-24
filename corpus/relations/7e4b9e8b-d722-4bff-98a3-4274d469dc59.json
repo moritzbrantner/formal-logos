@@ -1,0 +1,10 @@
+{
+  "id": "7e4b9e8b-d722-4bff-98a3-4274d469dc59",
+  "label": "The q.44 a.1 co. participation premise is the ad 1 premise",
+  "subject_kind": "statement",
+  "subject_id": "732302a1-f7bf-594d-9a8a-cb4bd00687a7",
+  "predicate": "logically_equivalent_to",
+  "object_kind": "statement",
+  "object_id": "2b25a78c-abad-50d9-abb9-31a753409192",
+  "note": "Same proposition over the same parameters (a participation predicate, a cause relation CausesIn and the respect esse): both unfold to 'every x that has esse by participation has some c other than x that causes x's esse'. Verified as participatedCauseReadingsIff (Iff.rfl), a Comparator-checked theorem of the restated-premise controls result. Both records link ESSE_BY_PARTICIPATION_1 and esse; both bodies are CausesIn c x esse with c distinct from x (CAUSING_AN_EFFECT_3; DISAMB-BECOMING-BEING-CAUSE places STMT-PARTICIPATED-HAS-OTHER-CAUSE in sense 3). The ad 1 record's link to 196be87e (CAUSING_AN_EFFECT_2, whose HasExternalEsseCause adds that the cause is in act as to esse) does not match its body. That link is a pre-existing mis-tag, which is why truth semantics reports the pair under different senses; correcting it alone breaks the sense check of argument 358d8c6e, so it is a follow-up under #216. The equivalence holds between the bound declarations; it does not identify senses 2 and 3. The two stay distinct records because their source readings differ (ST I q.44 a.1 ad 1 and co.) and their routes bind different Lean declarations in frozen Challenges (ComponentFirstness and Round2Grounding); merged_legacy_ids is not used. No argument is registered in either direction, since each would be an identity transcription."
+}

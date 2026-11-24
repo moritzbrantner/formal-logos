@@ -315,6 +315,7 @@ public import TruthCore.Results.Causality.QuantitativeTransferPaths.Solution
 public import TruthCore.Results.Causality.ReceiptAllocation.Solution
 public import TruthCore.Results.Causality.ReceivedEsseActualGiver.Solution
 public import TruthCore.Results.Causality.ReceptionLimitation.Solution
+public import TruthCore.Results.Causality.ReflectiveComprehension.Solution
 public import TruthCore.Results.Causality.ReflexiveActualFusionNecessaryBeing.Solution
 public import TruthCore.Results.Causality.ReflexiveDependenceScope.Solution
 public import TruthCore.Results.Causality.RegressAccessibilityExcludesSeries.Solution
@@ -322,6 +323,7 @@ public import TruthCore.Results.Causality.RegressAccessibilityUnboundedDepth.Sol
 public import TruthCore.Results.Causality.RegressReadingsCoincide.Solution
 public import TruthCore.Results.Causality.RegressRivalCoverage.Coverage.Solution
 public import TruthCore.Results.Causality.RelationalReceipt.Solution
+public import TruthCore.Results.Causality.RestatedPremises.Solution
 public import TruthCore.Results.Causality.RivalRefutationsRound2.Solution
 public import TruthCore.Results.Causality.RootEssenceIdentity.Solution
 public import TruthCore.Results.Causality.RootIntellectWill.Solution

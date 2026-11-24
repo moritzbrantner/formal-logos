@@ -2358,3 +2358,137 @@ source actually grasp an explanatory content the recipient misses, or do
 they grasp the same content by different means? A demonstrated difference
 could discriminate these profiles. The intensity reading would still need a
 reason it raises the degree of the whole.
+
+## What does a reflective recipient grasp about its own present actuality?
+
+Take a particular actual giver *s* whose essence is its esse, and a particular
+recipient *x* of its esse who is attending to its own thinking. The candidate
+common excellence is **actually understanding what accounts for one's own
+present existence**. Each subject answers about itself. Requiring each to
+produce the numerically same answer would penalize one for being right about a
+different subject. Merely crediting each with some true thought about itself
+would make the test too easy.
+
+**First-person access.** In asking “Am I thinking now?” the reflective
+recipient exercises the activity in question. Attending to that very exercise
+gives it a reason to recognize the activity as its own. A thought's occurrence,
+its bearer's awareness, and the bearer's correct judgment *about itself* are
+distinct. The cogito gives the recipient a reason for “I exist now” under
+the bearer interpretation. The prior source argument takes a different route.
+Given immaterial intellectual aptitude, pure exercise and the immanent-form
+premises, the actual intellect apprehends its own immediate object, itself.
+In the Lean result the content is literally the bearer and correctness is
+identity. Attributing to it an articulated judgment “I am now thinking” already
+interprets that content further. Both subjects can thus have genuine
+self-apprehension. Neither mere acquaintance with the object nor the ability
+to explain this deduction to a third party gives the subject itself knowledge
+of *why* it exists. [Cogito and actuality](cogito-esse-1113.md#operation-route-and-its-precise-gap)
+· [Exact primary-object theorem](../../TruthCore/Results/Causality/IntentionalExemplarExtension/Solution.lean)
+
+**An asymmetry with the question held fixed.** Ask each subject “What accounts
+for my present existence, identifying its principal giver if I receive it?”
+On the selected account *s*'s positive answer is that the very actuality by
+which it subsists is what it is. There is no act received by a distinct
+principle in it and no act of efficient self-production. The answer for *x* is
+that its nature is actual through an act received from *s*. “Something gives
+me esse” leaves the principal unidentified. The scope is constitution and the
+principal of present esse. The question does not ask why there is any reality
+at all, or why this particular train of thought began.
+
+Suppose both actually understand their own constitution. At the level of
+**mode alone** they tie. One correctly recognizes identity and the other
+correctly recognizes receipt. If the question also requires identifying any
+principal of present esse, the source too must have warrant that it has no
+distinct principal giver. For the following comparison grant that the selected
+identity source is unreceived and underived and that it understands why.
+Identity of two fields in a profile is insufficient for that judgment.
+For *s*, grasping
+the positive identity **as accounting for its actuality** answers the question
+without a further identification of another being. For *x*, even insight into
+what receives and what is received leaves “from *s*” distinct from “from *t*.”
+Here is a reason for a source advantage on the same test. The source's own
+intelligible form, on the immanent-intellect account, immediately presents
+the very actuality that constitutes it. There is no intervening identification
+of an external giver to get wrong. But the inference needs the source actually
+to understand the constituting form **under that explanatory description**.
+A knower can apprehend its own thinking correctly while still considering what
+makes it actual. Real identity secures the referent across descriptions. It
+does not supply grasp of the explanation. In particular “I receive nothing”
+would also fit a primitively actual underived bearer whose being is taken as a
+basic fact. This alternative challenges the inference from underivedness. It
+adds no evidence that the proposed identity source misunderstands itself.
+[Underived actuality as a stopping point](#can-the-whole-unreceived-act-be-absent)
+
+There is a stronger rival at a different explanatory scope. It can grant
+**the same real identity** and agree that it accounts for how this whole is
+actual, conditional on its existence. It takes the obtaining of this very
+subsistent actuality as primitive. Its reason is that a constitutive account
+of an existing thing can identify all the principles of its actuality without
+showing why anything instantiates that account. The alternative would need a
+reason why the understood essence itself suffices for its obtaining. Even
+perfect discrimination of every constitution on our menu leaves these two
+answers to “Why does this very being obtain at all?” apart. Equally, tracing
+the actual giver of *x* leaves the obtaining of that giver to be explained on
+the broader question. [Constitution and adequacy of an intrinsic reason](intrinsic-existence-reason-1595.md)
+
+**A reflective recipient can answer, too.** The strongest rival grants
+self-apprehension on both sides and allows insight by argument. Let *x*
+recognize itself as a present participant and understand an independently
+grounded identification of *s*, for instance as the common principal giver
+also identified for another participant. If *x* understands why the
+single-giver argument applies to itself, it can infer “that same *s* gives
+me esse.” In the q.44 account the actual edge follows, and any distinct
+candidate for this same qualifying principal role is excluded. The bare
+description “whoever gives me esse” does not identify anyone independently.
+An inference that misclassifies *x* as a participant or fails to connect these
+two descriptions could give the wrong answer. Conversely a sound inference
+actually understood supplies the identification. A mediated answer can be
+every bit as correct and explanatory as an immediate one on this question.
+Neither subject needs to comprehend everything about its principal to answer
+it. [Single-giver conditions](../../TruthCore/Causality/SoleEsseGiver.lean)
+
+The [Lean diagnostic](../../Scratch/strict-esse-scale/ReflectiveGround.lean)
+holds the existing positive self-apprehending source and a distinct
+self-apprehending recipient fixed. It tests which answers specified evidence
+can distinguish in a restricted comparison. Mere presence distinguishes
+neither subject's ground. Mere nonreceipt fails to separate the identity
+explanation from a primitive stopping point. Positive insight into
+constitution distinguishes the identity account, while leaving open which
+of two principals gives a participant esse. Adding a justified identification
+distinguishes the recipient's answer as well. That yields a tie in explanatory
+success if both take up their evidence, or a recipient advantage if only
+the recipient grasps its account and the source merely apprehends itself.
+The latter is an evidential control. There is no positive finding of ignorance
+in the actual source. The alternatives test the content of the evidence and
+assert no metaphysically possible variation of this source. These local Lean
+examples can be run with
+`python3 scripts/worker_env.py -- lake env lean Scratch/strict-esse-scale/ReflectiveGround.lean`.
+
+**Consequences for the order of esse.** For the weak participant bound
+`aba6f4e1`, two subjects actually answering the question exhibit one candidate
+determination preserved under different modes. This favors the weak comparison
+on that dimension conditional on its purity. It gives neither the universal
+preservation of `191395d0` nor the common calibration required by
+`6ab848a8`, much less the all-respects principle `87f41688`. If only *s*
+has this determination, strict profile inclusion still needs preservation of
+the other admitted determinations. If only *x* has it, preservation for this
+pair fails on an inventory admitting it. Even then their scalar degrees
+could tie. If both succeed, immediacy gives no extra *content* to count.
+An order that values manner of knowing would need a reason this very
+difference increases a bearer's degree of esse. [Weak bound](../../corpus/results/5386c2ca-1637-42bc-a737-b01cb0edf56c.json)
+
+I give the source a conditional explanatory advantage where grasp of its
+own constituting identity is warranted and the recipient has grasped only
+receipt. The cognitive route supplies a reason for the source's immediate
+access. It gives less reason to claim that every such recipient falls short.
+For the strict identity-giver ascent `8176a284`, a correct answer alone supplies
+neither a bound on everything realized by *x* nor an *s*-level crossing it.
+A separate argument relating **exhaustive** comprehension and intellectual act
+to the bearer's own actuality could constrain that degree. Correctly answering
+this one question supplies no such exhaustion. The universal limited/unlimited
+comparison `fd2c8710` also reaches pairs outside this causal setting. I retain
+the direct participation premise at its source-scoped strength. I would
+raise the standing of the cognitive application on evidence that the source
+actually grasps its explanatory constitution and that even a recipient that
+knows its principal falls short on a specified further content at the same
+scope, with a reason the difference raises the selected grade. [Strict identity-giver result](../../corpus/results/1fd78e87-12d3-4144-96e4-4f6b5e138958.json)

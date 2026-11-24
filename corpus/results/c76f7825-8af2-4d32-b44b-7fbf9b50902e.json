@@ -1,0 +1,11 @@
+{
+  "id": "c76f7825-8af2-4d32-b44b-7fbf9b50902e",
+  "label": "Measured comprehension compares the two bearers through the witnessed knowing",
+  "argument_id": "011647ec-cabb-4ca7-870c-4d262505e190",
+  "challenge_module": "TruthCore.Results.Causality.ReflectiveComprehension.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ReflectiveComprehension.Solution",
+  "theorem": "TruthCore.Results.Causality.ReflectiveComprehension.ordersAct",
+  "comparator_config": "results/c76f7825-8af2-4d32-b44b-7fbf9b50902e/comparator.json",
+  "status": "solution-present",
+  "description": "Take the actual knowing that witnesses COMPREHEND_2. Its grade lies between the object's knowability and the knower's own act. Transitivity with the object's act-to-knowability comparison gives the weak order of acts."
+}
