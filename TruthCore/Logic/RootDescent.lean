@@ -95,8 +95,8 @@ theorem acc_exists_transGen {P Stop : α → Prop}
 
 /-- Purely structural descent with a mark: if every marked bearer of `P` has a
 predecessor bearing `P`, and the mark is decided on bearers of `P`, an
-unmarked bearer of `P` lies below. The decision `em` is a hypothesis, so no
-classical axiom is used. -/
+unmarked bearer of `P` exists (below the start, if `P` carries the chain). The
+decision `em` is a hypothesis, so no classical axiom is used. -/
 theorem acc_exists_unmarked {P Mark : α → Prop}
     (em : ∀ y, P y → Mark y ∨ ¬ Mark y)
     (step : ∀ y, P y → Mark y → ∃ z, r z y ∧ P z) {x : α} (hx : Acc r x) (hp : P x) :
@@ -113,8 +113,9 @@ theorem acc_notNot_exists_unmarked {P Mark : α → Prop}
       (fun y hy hNoPred => hNone ⟨y, hy, fun hm => hNoPred (step y hy hm)⟩) hx hp
 
 /-- Purely structural "no predecessor" form: with the existence of a
-predecessor bearing `P` decided on bearers of `P`, some bearer of `P` below an
-accessible one has no predecessor bearing `P`. -/
+predecessor bearing `P` decided on bearers of `P`, starting from an accessible
+bearer of `P`, some bearer of `P` exists that has no predecessor bearing `P`
+(below the start, if `P` carries the chain). -/
 theorem acc_exists_minimal {P : α → Prop}
     (em : ∀ y, P y → (∃ z, r z y ∧ P z) ∨ ¬ ∃ z, r z y ∧ P z)
     {x : α} (hx : Acc r x) (hp : P x) :
@@ -152,7 +153,7 @@ theorem acc_of_subtype {Q : α → Prop} {s : α → α → Prop}
 /-! ## The generic form -/
 
 /-- Purely structural: well-foundedness is accessibility of every element.
-The `NoInfinite…Reading` definitions are stated in one of these two forms. -/
+Many `NoInfinite…Reading` definitions are stated in one of these two forms. -/
 theorem wellFounded_iff_forall_acc : WellFounded r ↔ ∀ x, Acc r x :=
   ⟨fun h => h.apply, WellFounded.intro⟩
 
