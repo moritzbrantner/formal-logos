@@ -1,0 +1,10 @@
+{
+  "id": "d0040eb0-6ce1-4456-804e-e893871e7c1e",
+  "label": "Solve the balanced allocation equations for every feasible named share of work (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "4b73eb6b-a0fe-412c-9b81-838f9029d8b2",
+  "rule": "Construct a conserving allocation for each intermediate share and derive both bounds from the margins",
+  "meaning": "Four nonnegative routing entries realize every integer in the specified interval. At a zero lower bound one can construct an allocation with no named input expended. At a positive lower bound every compatible allocation supplies an exercised contributor step to the combined work. Interpreting actual expenditure as productive remains an open application condition.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}
