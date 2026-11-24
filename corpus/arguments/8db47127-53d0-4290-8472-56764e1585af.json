@@ -1,0 +1,35 @@
+{
+  "id": "8db47127-53d0-4290-8472-56764e1585af",
+  "label": "GOD_4 HAS_WILL_1, by the restricted Theta 5 principle at the joint-absence power",
+  "premise_statement_ids": [
+    "0050b6ed-3c7d-4d6a-b97a-417837d76184",
+    "906f5c39-2a63-4dc2-955d-a00cfd8a976b",
+    "9f7b1778-84c9-40cf-a1b6-a91a960b0590",
+    "3ef41442-431a-4bed-83bd-4458ed623f5f",
+    "c76b6e2c-1ca0-47fd-a9d0-2c2faa3d1174",
+    "a065c332-940d-4ec3-b9da-a6127b088a8b",
+    "a9776d21-ce91-48c2-9d7d-55c6897a777a"
+  ],
+  "conclusion_statement_id": "66aecdd7-ea4e-55c6-9377-10db08893854",
+  "inference_ids": [
+    "f1cb8273-0141-4b61-a050-80838e450bb9"
+  ],
+  "meaning": "Each GOD_4 g exists at w and holds the power for the joint absence of the actual contingent concreta; P2-prime puts g at an accessible world v where they are all absent; P5 gives one, x; by the creator reading g gives x being at w, and by factive giving not at v. So g is a two-way giver at w; its set-up is invariant (holder premise); argument C's conclusion gives it will. Constructive.",
+  "definition_ids": [
+    "158301bc-9585-4145-be60-34f08c9f922c",
+    "62dfa893-b633-4513-9790-8f9a0a3087e0",
+    "88f9f6e8-997b-5f7d-afa1-c501954c3807",
+    "7c64b499-6dba-5e03-bdf3-5acea95d8836",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "b4bb7bb4-4e2d-437d-825e-79a029340e77",
+    "bf7eddca-8291-4744-8470-379babcd7781",
+    "e006ddeb-2c88-4835-8558-2f360cc5a3eb"
+  ],
+  "disambiguation_ids": [
+    "941efd70-d56f-53f9-b5f9-8acd36711a54",
+    "623ddbf6-9683-5361-bae4-e348a00ec680",
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "id": "2da766c0-fd0b-4126-b3f0-1e4e086b17b5",
+  "label": "Every invariant two-way giver HAS_WILL_1, by the restricted Theta 5 principle (inference)",
+  "input_statement_ids": [
+    "55892476-1e99-444b-a6bd-5430b0f115c4",
+    "495a40ad-9bd4-4d1f-bf37-e89587432e12",
+    "65e0179f-55d4-4b77-98ba-4b5b26f2d404"
+  ],
+  "output_statement_id": "a9776d21-ce91-48c2-9d7d-55c6897a777a",
+  "rule": "The withheld giving exercises some power; DNP_inv makes it rational; a rational power is will",
+  "meaning": "A two-way giver y with an invariant set-up gives x being at w by some power p (giving exercises a power of the giver) and does not give it at an accessible v where it exists; DNP_inv makes p rational, and a being with a rational power has will. Constructive.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

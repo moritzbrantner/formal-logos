@@ -1,0 +1,12 @@
+{
+  "id": "d13836d5-e330-40b9-9411-b35e5d325493",
+  "label": "DNP-prime strengthens DNP_inv, the Theta 5 principle at invariant sources",
+  "subject_kind": "statement",
+  "subject_id": "6e4b519b-e766-4dbe-a046-aab8082cb484",
+  "predicate": "strengthens",
+  "object_kind": "statement",
+  "object_id": "55892476-1e99-444b-a6bd-5430b0f115c4",
+  "verification_result_id": "16002747-35ec-4509-830e-5c38b0224dba",
+  "strictness_result_id": "ec6627bf-e955-4532-8ee5-9345fd54fa9f",
+  "note": "Same frame and agency overlay. The strong version constrains every being at w with the same set-up at the withholding world; the weak one only beings whose set-up is invariant at w. The controls' three-world model satisfies the weak version while the strong one fails for a chancy being whose set-up varies at a third world."
+}
