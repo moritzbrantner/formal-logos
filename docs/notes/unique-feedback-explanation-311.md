@@ -3191,3 +3191,272 @@ invariance for all selected members, not merely one. Independent semantic
 challenge and Lean/Comparator/NanoDa/corpus verification are pending;
 no new corpus argument or philosophical establishment is claimed.
 
+
+### Checkpoint B: populated alternatives, guard boundaries and matched accounts
+
+**Strength refinement.** The argument actually needs only monotonicity of
+F restricted to subsets of U, once F(U) is included in U and the restricted
+operator maps these subsets into U. More generally it suffices to warrant
+existence of a fixed substate inside U by an independent method. It does not
+need full configuration uniqueness: for a particular C it is enough that
+every admissible fixed assignment **intersects C**, even if different members
+are present. This is a non-deletion rather than an all-member necessity
+standard. Requiring every individual in A to be invariant would amount to
+uniqueness on P(A); the weaker per-cone intersection standard need not do so.
+Neither standard is automatically true of a contingent actual order.
+An independent reason that a relevant cone cannot be entirely absent would
+be needed. This route provides a conditional discriminator, not a substitute
+for supplier completeness by fiat.
+
+**Controls on identical carriers (analyst models, not metaphysical
+interpretations).**
+
+- Independent root plus rootless regress: take A = {s} disjoint union Nat,
+  R(n+1,n), with no R-input to s and no edges between s and the chain.
+  Let F(U) contain s unconditionally, and n exactly when n+1 belongs to U.
+  This is monotone, obeys the uniform guard, and its only fixed states
+  are {s} and A: equality of membership at each pair of successive
+  natural numbers forces either all or none of Nat. The relation is acyclic,
+  and the strict transitive closure is irreflexive. Every natural number
+  has an incoming supplier at A; nonempty whole-roster roothood holds but
+  CCR fails on the closed Nat cone. Restricting to populated fixed states
+  does not repair the explanation of the chain's actuality. The greatest
+  fixed point selects A; whether that maximality is ontologically warranted
+  is an additional question. This extends the earlier #1883 whole-roster
+  tail control by preserving an independently activated outside bearer.
+- Root access with optional members: take A={s,a,b}; R contains s->a,
+  a->b, b->a. Let s be unconditional, a activated exactly when both s and
+  b are active, and b exactly when a is active. The two fixed assignments
+  are {s} and A; every nonempty R-closed subset contains s, hence every
+  fixed assignment intersects every such subset. This separates cone
+  intersection from unique fixedness. The model is not strict productive
+  priority, because the a/b edges cycle. Moreover, a has two necessary
+  inputs; finding a root path does not certify conjunctive inductive
+  supply of a or b. CCR is weaker than the all-input inductive standard.
+- Monotonicity cannot be dropped merely because the positive guard
+  survives. Let A={s,a,b}, R consist only of a->b and b->a. Define F(A)=A,
+  and for every other U let s be activated exactly when s is absent,
+  a exactly when b is present, and b exactly when a is present. F obeys
+  the uniform guard (s has no incoming edge); A is the unique fixed
+  assignment. The complement of C={a,b} contains s, and the restricted
+  map swaps empty and {s}; there is no fixed substate there. This is a
+  concrete failure of the unqualified no-deletion inference, not a
+  counterexample to the monotone theorem. It has a cycle and an
+  inhibitory rule, so it does not certify a productive strict-priority
+  metaphysics. A necessary global law could select by a different,
+  nonmonotone rule, but its existential import would need defense.
+
+**Bounded diagnostic performed here.** Enumerated all 20 monotone Boolean
+truth tables on three input bits, combined into 6,859 operators with the
+all-present state fixed; paired them with all distinct-edge three-node
+supplier menus, retaining the uniform guard. Across 74,088 eligible
+operator/relation pairs there were 15,317 nonempty closed rootless-cone
+cases. In each case there was a fixed assignment within the cone complement
+and the union of all such fixed assignments was itself fixed. In each of
+450 cases with a nonempty outside postfixed witness, that union was
+populated and contained every such witness. The finite two-cycle with
+unconditional s has fixed masks 1 and 7; the nonmonotone control has only
+7. These are Python exhaustive diagnostics on finite sets, not a Lean
+verification, a model-registry certificate or evidence for modal
+admissibility.
+
+Reproduction (bit masks; supplier menus exclude identity edges):
+```python
+from itertools import product
+sub = range(8)
+le = lambda a, b: a & b == a
+mono = [tuple((m >> u) & 1 for u in sub) for m in range(256)
+        if all(not ((m >> u) & 1) or ((m >> v) & 1)
+               for u in sub for v in sub if le(u, v))]
+menus = [[m for m in sub if not (m & (1 << i))] for i in range(3)]
+valid = cases = pop = 0
+for fs in product(mono, repeat=3):
+    if not all(f[7] for f in fs):
+        continue
+    f = tuple(sum(g[u] << i for i, g in enumerate(fs)) for u in sub)
+    for r in product(*menus):
+        if any(r[i] and f[u] & (1 << i) and not u & r[i]
+               for u in sub for i in range(3)):
+            continue
+        valid += 1
+        for c in range(1, 8):
+            if any(not r[i] or r[i] & ~c
+                   for i in range(3) if c & (1 << i)):
+                continue
+            u = 7 ^ c
+            cases += 1
+            assert le(f[u], u)
+            fixed = [v for v in sub if le(v, u) and f[v] == v]
+            assert fixed
+            greatest = 0
+            for v in fixed:
+                greatest |= v
+            assert f[greatest] == greatest
+            seeds = [v for v in sub if v and le(v, u) and le(v, f[v])]
+            if seeds:
+                pop += 1
+                assert greatest and all(le(v, greatest) for v in seeds)
+assert (valid, cases, pop) == (74088, 15317, 450)
+```
+
+**Why the guard may deserve positive warrant.** Distinguish (i) the
+existential condition on a producer actually exercising a power,
+(ii) its specific productive contribution to the recipient, and (iii)
+its role in selecting an entire configuration. If x receives esse in
+the strict per se productive sense, its real receipt requires at least
+one exercised productive input; the input is not just a description of
+x. Absence of all such inputs defeats that receipt as such. The
+existential guard is thus motivated by what receipt claims to be, rather
+than by conservation of a stuff called esse. However, to move from that
+local condition to the uniform guard needs a stable recipient identity,
+an exhaustive supplier menu across the selected alternatives and no
+activation of that recipient by a different mode. In particular the
+guard does not say every received contributor is intrinsically inert:
+one received power can make a proper contribution. The no-producer
+case must not be inferred from having no *recorded* producer.
+
+For monotonicity, adding true antecedents to a sufficient explanation
+preserves the entailment, with the same law, conditions and sense of
+sufficiency fixed. This is reason to examine a positive-input operator,
+not proof that the actual production law is monotone. Adding actual
+entities can introduce inhibiting conditions, competing production,
+or change what composite is being explained. Constitutive holistic
+constraints may also be nonmonotone. Establishing a monotone restricted
+operator therefore requires a fixed account of the relevant positive
+conditions, not just the assertion that existence is good or that
+causation is strict. The nonmonotone control isolates this cost.
+
+**Comparison at the same explanandum:** why the actual obtaining of
+the entire selected supplier-complete order is productive or otherwise
+adequately grounded, not just which cause accompanies each member.
+All accounts get credit for real local contributions if their proposed
+relation is independently warranted. None receives credit for actuality
+merely because it fits a mathematical configuration.
+
+| Account | Positive account of the same order | Residual obligation under the closed-cone test |
+| --- | --- | --- |
+| Hume–Edwards/distributive | Each actual member has its own sufficient actual cause; the obtaining of all members is no additional bearer needing a further cause | Explain why conjunction of mutually conditional local explanations is sufficient for actuality at this scope. A law permitting both the populated and unpopulated cone does not distinguish them. Denying a further explanandum is coherent but rejects this broader demand. |
+| Beginningless strict regress | Distinct upstream productive contributor for each member; no circular priority | Acyclicity and every local link are compatible with the Nat control. A populated cone needs a global selection/existence account or a justified non-deletion condition; an unrelated root does not help. Infinite descent itself is not the defect. |
+| Coinductive/holistic | Actuality belongs to the greatest fixed configuration, or a globally constituted fact whose parts are simultaneous | Greatestness provides a real mathematical selection rule, not yet existential import. Need warrant that maximal admissibility entails actual instantiation, and that the global fact is constitutively sufficient. The gfp account need not be inconsistent, especially if it rejects the independently proposed deletion alternatives. |
+| Priority monism / necessary composite whole | A necessarily actual concrete whole grounds its parts; necessary actuality of W may be offered as stopping point | If W is in the exhaustive selected relation as an underived supplier, it is not a counterexample to C1-bearer. Necessity alone does not entail roothood, simplicity, causal production or uniqueness; if W receives its actuality from its parts in the same productive respect, the strict-priority bridge would prohibit reciprocal dependence. Different respects require distinct evidence. |
+| Existential inertia | The same actual bearer persists without a new sustaining producer under a law, conditional on earlier actuality | This can be an adequate local persistence explanation; a beginningless actual history still needs its own actuality account at the expanded scope, unless the rival denies that demand or supplies a necessary history/whole. The model does not establish a contemporaneous sustaining cause or origin-to-sustaining bridge (#1616). |
+| Underived productive source | An actual source possesses the relevant act non-receptively, and its exercised power accounts for the derived recipients | Must justify source actuality, intrinsic productive sufficiency, same-respect coverage and the source's connection to the whole order. A contingent source plus its law may itself admit an empty alternative: non-deletion selection does not follow from roothood. A necessary source may warrant non-deletion only if its necessity and productive connections are established independently. |
+
+**What denial commits the rival to.** Relative to a fully specified
+productive R and nonempty closed actual cone, denial of CCR commits to
+a rootless closed cone. It does not alone entail modal arbitrariness,
+an epistemic collapse or logical contradiction. Under the uniform
+input guard and monotone restricted production, it has a cone-deleted
+fixed substate. If an independent outside postfixed assignment exists,
+even requiring global population cannot exclude that alternative.
+To maintain that the selected cone must obtain, the rival must either
+reject admissibility of the deletion, reject the uniform productive
+guard (e.g. alternative supplier or a constitutive/nonlocal input),
+reject restricted monotonicity/fixed substate existence, or give up
+the relevant non-deletion claim. This is a concrete disjunction of
+commitments under stated background, not an exhaustive taxonomy of
+worldviews. Coinductive maximality is a way of rejecting the selection
+standard while conceding the mathematical alternative. Underived-source
+accounts face the same existential-import test when they posit a
+necessary source. The useful burden is to name and warrant the positive
+actualizing/constitutive condition, not simply to posit a ban on the
+alternative.
+
+**Receipt and throughput interpretation (#1965/#1966).** Reuse #1965's
+finite-throughput ledger: finite summed positive edge throughput, a
+nonreturning transfer and receipt coverage at every actually grounded
+bearer force a relative root. The fitted-ledger equivalence rules out
+retrospective accounting as independent warrant. #1966's open PR uses
+finite upstream export ancestry plus injective matching to distinct
+receipts, avoiding a numerical magnitude but not the exclusive-use
+commitment. Individuating acts or recording provenance does not by
+itself imply injectivity: a received pattern or exercised ability can
+support several distinct contributions without being consumed. Counting
+recipient-specific *obligations* might make receipts distinct in a
+particular accounting semantics, but an upstream receipt need not be
+recipient-specific, and such bookkeeping does not establish existential
+exclusivity. No independent reason found for either finite summed esse
+throughput or the required existential receipt matching. The closed-cone
+proof uses neither a stock nor a conservation/exclusivity principle;
+it introduces the separate all-candidate guard and restricted fixed-point
+assumptions rather than solving those ledger bridges.
+
+**Connection to existing routes (no new graph arrow).**
+
+- For q3a4, with the exact R adapter, the all-cone conditional conclusion
+  is CCR (20babef7); the existing `c6d92415` derives `c35b1a5c` using
+  distinct-esse cause coverage `457698e4`, identity-bearer uniqueness
+  `a576300f`, actual population `78cffb8e`, and explicit EM `ee4ab504`.
+  A common first identity-bearing source here is connected by finite
+  directed ancestry, not automatically an immediate efficient giver.
+  Relative roothood alone does not establish its identity with esse.
+- For the actual-concrete grounding profile, apply the all-state version
+  to C=A. The existing #1964 factorization gives `5c898d24` as the
+  population-conditional double-negated root proposition and yields
+  `dc397705` with population and root-existence stability. Conversely a
+  root entails nontrapping. This equivalence is no fresh support when
+  used circularly. The populated-alternatives test diagnoses proper cones,
+  and is not itself the whole-roster proof.
+- With an actual root selected once, the existing contingent-grounding
+  commitment (every contingent actual concretum has an actual concrete
+  ground), and the needed modal logical bridge, exclude its contingency
+  and yield the necessary-underived candidate `0bdcf366` in that profile.
+  This does not establish contingency coverage or metaphysical modality,
+  and a root relative to concrete grounding may have an unmodelled or
+  nonconcrete explanation. Necessary existence of one candidate does not
+  exclude other necessary beings.
+- `ef632140` (unique actual root) uses actual population `56f68b40`,
+  `5c898d24`, EM, the actual/esse and distinct cause-to-ground
+  interfaces `0436de86`, `cb1cdea9`, cause coverage `457698e4`,
+  and identity uniqueness `a576300f`. It is not a consequence of bare
+  root existence. Reuse the same-witness route in
+  [De ente assessment](de-ente-esse-source-1628.md) and #1964's
+  unregistered `deriveFromActualRoot` (with its explicit contingent
+  grounding and shared classical-attribute premises; its sense mixing
+  registration blocker remains). No potency, simplicity, goodness,
+  intellect, will or GOD_4 bridge is discharged here.
+
+**Provisional judgment, pending challenge.** Retain the prior modest
+preference for nonreceived productive availability on an exhaustive
+per se existential-supply reading. It is supported by the distinction
+between received exercise and the positive availability presupposed by
+that exercise, together with the requirement that an explanation at
+this scope address obtaining rather than only conditional local
+transmission. This is a direct and comparative warrant for supplier
+completeness, not a deductive proof of it. The present discriminator
+improves specificity: even a populated rival with an unrelated
+underived root must explain how its rootless cone is selected, if
+its own activation account meets the test. It does not increase the
+strength of the prior judgment on the unrestricted mode-unspecified
+20babef7, nor refute coinductive or necessarily obtaining whole accounts.
+The strongest genuine denial remains a globally necessitated or
+primitive, bearerless constitutive fact with an independently defended
+admissibility/instantiation principle. A fundamental concrete whole
+that really supplies its parts instead concedes the narrow root
+conclusion. The positive source account must meet the same scope
+and cannot simply declare its own existence exempt while demanding
+a further reason from every rival.
+
+**Current handoff.** Work is partial; intended formal premise delta
+none. To proceed, use the prepared worker's canonical `truth related`,
+`dossier`, `brief`, `novelty`, `semantics` and `context` on the
+three targets and exact consumers; check existing fixed-point APIs in
+`TruthCore/Logic/Regress.lean` and `ClosedEsseSource`. Formalize the
+restricted monotone-operator lemma over the actual subtype and the
+guard as an explicit hypothesis, reuse existing adapters, distinguish
+local rootlessness from all-subsets borrowing Escape, and freeze a
+Challenge only after sense preflight. Certify the populated infinite
+control and the nonmonotone control with exact conjuncts and compare
+the weakest target non-deletion condition against existing strength
+records. Run the worker preflight, applicable Lean build, corpus,
+binding, Comparator and NanoDa checks and computed frontier-diff.
+Obtain a fresh independent semantic challenger for this final
+synthesis (particularly admissibility, rooted but noninductive control,
+conditional modality and comparative burden). Local clone fails DNS,
+there is no local Lean installation or independent worker facility in
+this session, and no installed convention checkout could be inspected
+beyond repository guidance fetched via GitHub. Hence this draft remains
+unreviewed and no Lean/Comparator/NanoDa or corpus success is claimed.
+No attribution, statement, definition, Challenge, Solution, result or
+argument records changed by this note. The attempt records the bounded
+blocked application without changing the current approved assessment.
