@@ -1,7 +1,7 @@
 {
   "id": "b517ca3e-503e-4346-b0e0-7b99ad4e875d",
   "label": "Whatever has power for the actual contingents' joint absence exists at w",
-  "paraphrase": "OPEN (analyst formulation, unattributed): whatever has at w a power (PowerFor) for the joint absence of the concrete beings contingent at w exists at w. The actualist reading of powers (a power held at a world is held by a being of that world), restricted to this one power. Without it a holder can exist only at a non-actual world (controls).",
+  "paraphrase": "OPEN (analyst formulation, unattributed): whatever has at w a power (PowerFor) for the joint absence of the concrete beings contingent at w exists at w. The actualist reading of powers (serious actualism: a being has properties, powers among them, only at worlds where it exists), restricted to this one power. Without it a holder can exist only at a non-actual world (controls).",
   "lean_declaration": "TruthCore.Causality.HolderRootIdentification.ActualAbsenceHoldersExistAt",
   "definition_ids": [
     "bf7eddca-8291-4744-8470-379babcd7781",

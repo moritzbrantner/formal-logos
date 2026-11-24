@@ -27,10 +27,12 @@ explicit:
    make a being underived: a necessary being can have a necessary ground
    (Avicenna's "necessary through another"). The bridge
    `NecessaryActualConcretaAreRoots` (NAR) says that it cannot.
-2. **One root.** Either the common-root reach of `0c27f65a` (the root directly
-   grounds every other actual concretum) or the at-most-one-root interface
-   `49fdec01` (De ente's no-multiplication of beings whose esse is their
-   essence) makes every actual root that root.
+2. **One root.** The common-root reach of `0c27f65a` (the root directly
+   grounds every other actual concretum) makes every actual root that root.
+   The at-most-one-root interface `49fdec01` (De ente's no-multiplication of
+   beings whose esse is their essence) gives only that any two actual roots
+   are the same, so it yields at most one holder, not an identification with
+   a named root.
 
 **Frames.** The holder lives in the shared `CausalityFrame`; the root in a
 `Profile`. They are joined only through `FirstMoverNecessity.groundProfile F
@@ -38,7 +40,10 @@ concrete G`: the profile *on the frame's own world-relative existence*, with
 the holder premises' `concrete` predicate and a selected grounding relation
 `G` that is a parameter. `G` is not identified with the frame's `GivesAt`,
 `CausesIn`, `DependsForBeing` or `PriorSimply` (rigor contract 5 of #1926;
-#1626): no premise here relates them. Using one existence predicate for both
+#1626): no premise of this batch relates them. On the composed routes the
+reused root nodes relate `G` one way to esse-causation (`cb1cdea9`) and to
+simple priority (the `0c27f65a` route's priority bridge); these are explicit
+open bridges there. Using one existence predicate for both
 is a choice of interpretation, recorded in the note; it identifies no two
 relations.
 
@@ -66,9 +71,10 @@ variable {W B T R : Type}
 
 /-- OPEN (holders exist at `w`): whatever has at `w` a power for the joint
 absence of the concrete beings contingent at `w` exists at `w`. The actualist
-reading of powers: a power held at a world is held by a being of that world
-(Pruss's powers are powers of actual substances). Restricted to this one power,
-the weakest form the identification uses. -/
+reading of powers (serious actualism: a being has properties, powers among
+them, only at worlds where it exists; Pruss's powers of actual substances,
+navigation only). Restricted to this one power, the weakest form the
+identification uses. -/
 def ActualAbsenceHoldersExistAt (F : CausalityFrame W B T R)
     (PowerFor : W → B → (W → Prop) → Prop) (concrete : B → Prop) (w : W) : Prop :=
   ∀ y, PowerFor w y (NoActualContingentConcreteIn F concrete w) → F.history.ontic.ExistsAt w y
@@ -78,9 +84,14 @@ at `w` that exists at every world accessible from `w` has no actual concrete
 ground at `w` in the selected relation, i.e. is an actual root. The denial of
 "necessary through another" for modal necessity (`NecessaryAt`, NECESSARY in the
 accessible-world sense, not the tertia via's per se necessity). Its rival is a
-necessary being necessarily emanated from another (note §4). With excluded
-middle it is equivalent to "whatever has an actual concrete ground at `w` is
-not necessary at `w`". -/
+necessary actual concretum with an actual concrete `G`-ground (note §4). The
+historical Avicennian version is causal (necessitated emanation): it bears on
+NAR only through the esse-cause bridge `cb1cdea9`, and its fixed giving would
+need a further causing-to-giving bridge that no premise states. Constructively
+equivalent to "whatever actual concretum (concrete, existing at `w`) has an
+actual concrete ground at `w` is not necessary at `w`"; with excluded middle,
+such a concretum is contingent at `w`. The unrestricted form (over all `x`,
+not only actual concreta) is strictly stronger. -/
 def NecessaryActualConcretaAreRoots (m : Profile W B) (w : W) : Prop :=
   ∀ x, ActualConcrete m w x → NecessaryAt m.ontic w x → ActualRoot m w x
 

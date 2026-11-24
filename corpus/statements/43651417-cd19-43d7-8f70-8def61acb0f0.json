@@ -1,15 +1,17 @@
 {
   "id": "43651417-cd19-43d7-8f70-8def61acb0f0",
   "label": "Every NECESSARY_2 actual concretum is an actual root of the selected grounding relation",
-  "paraphrase": "OPEN (NAR, analyst formulation, unattributed): every concrete being that exists at w and at every world accessible from w (NECESSARY_2, NecessaryAt) has no actual concrete ground at w in the selected grounding relation, i.e. is an actual root. The denial of 'necessary through another' for modal necessity; it is not about the tertia via's NECESSARY_3/NECESSARY_4 (a being necessary in that sense may have its necessity from another). With excluded middle it is equivalent to: whatever has an actual concrete ground at w is not NECESSARY_2 at w. Its rival is a necessary being necessarily emanated from another (Avicenna's necessary through another; note section 4).",
+  "paraphrase": "OPEN (NAR, analyst formulation, unattributed): every concrete being that exists at w and at every world accessible from w (NECESSARY_2, NecessaryAt) has no actual concrete ground at w in the selected grounding relation, i.e. is an actual root. The denial of 'necessary through another' for modal necessity; it is not about the tertia via's NECESSARY_3/NECESSARY_4 (a being necessary in that sense may have its necessity from another). Constructively equivalent to: whatever actual concretum (concrete, existing at w) has an actual concrete ground at w is not NECESSARY_2 at w; with excluded middle, such a concretum is contingent at w. The unrestricted form over all beings is strictly stronger. Compatible with the sourced statement 8c3870b7 (ST I q.44 a.1 ad 2, some necessary things have causes of their necessity) only if that statement is read as NECESSARY_3/NECESSARY_4. Its rival is a NECESSARY_2 actual concretum with an actual concrete ground (Avicenna's necessary through another, whose causal version bears on NAR only through the esse-cause bridge cb1cdea9; note section 4).",
   "lean_declaration": "TruthCore.Causality.HolderRootIdentification.NecessaryActualConcretaAreRoots",
   "definition_ids": [
     "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
     "c57e2682-08e6-527e-950f-0fa0a7ff11ef",
     "a1b2e330-388f-4120-bc5c-969642317792",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
     "beb654a7-e204-5f4c-a7b4-45e886ba7109"
   ],
   "disambiguation_ids": [
-    "83264cf5-01fe-52fc-9a00-eeb024f6496e"
+    "83264cf5-01fe-52fc-9a00-eeb024f6496e",
+    "623ddbf6-9683-5361-bae4-e348a00ec680"
   ]
 }
