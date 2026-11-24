@@ -795,3 +795,141 @@ warrant is separated from theorem consequence; the root and C2 connection
 plans remain OPEN. Intended root-premise effect: no discharge and no new
 registered support route. The coordinator's computed frontier delta records
 the actual integrated effect.
+
+
+## Restricted bruteness: local success versus exact-order explanation (2026-11-25)
+
+**Draft research checkpoint, independent challenge pending.** Continuation of
+#1872, #1908, #1910, #1927 and #1933 at
+`e5dd8243c5690f5d9255a509da00111cbdc36c8e`. This is an analyst formulation,
+not a new registered result or a change of the reviewed judgment above.
+The question is narrower than the general trap theorem: which explanandum
+does the strongest contained rival actually answer? Grant necessary immutable
+laws, a restricted ontology, reliable cognitive processes and exactly one
+brute contingent bearer at actuality. Grant substantive local explanations,
+not just labels on arrows. Do not assume recombination, a new coupling, an
+empty world, or arbitrary law variation.
+
+### Four distinct explanatory questions
+
+Fix actual contingent B, actual derivatives D, and a fixed description L of
+the necessary restrictions. The actual existence fact of B is b. Distinguish:
+
+| Question | What would answer it? | Contained rival's position |
+| --- | --- | --- |
+| Why does a particular derivative exist, given B? | Actual production or another adequate local reason | Granted |
+| Why is the order structured and governed in this way? | Constitutive and law-level explanation of its organization | Granted to the extent L supplies it |
+| Why is a foundational role occupied at all? | Explanation of role occupancy, not necessarily this occupant | May be necessary; not assumed brute |
+| Why does this actual order, including B and its dependent members, obtain? | An adequate actual answer covering the actual existence of B as well as what follows from it | No answer for b by stipulation |
+
+The last question concerns a plural or conjunctive explanandum, not an
+additional concrete being. There is no need to count an extra brute entity.
+Even if all derivative existence facts are explained by B, and the
+conjunction of them is explained by the very same B and L, those answers
+need not explain b. The deficiency is inherited in the scope of the
+unconditional answer, not multiplied into independent failures of the
+individual explanations.
+
+**Minimal scope principle (OPEN as an application):** an account advertised
+as an adequate explanation of the actual existence of all members of a
+specified order, including B, must provide an adequate answer for B's
+actual existence, whether directly or through a genuinely explanatory
+whole. This is a scope-of-question requirement, not unrestricted
+conjunction elimination for a generic explanation relation. Explaining a
+pattern, an existentially quantified role, a distribution, or the
+existence of at least one member does not commit one to explaining each
+member. A structural explanation of a balanced distribution, for example,
+can leave the individual allocations open. Such a weaker explanandum
+cannot silently substitute for the explicitly inclusive existence
+question.
+
+**Non-borrowing test (OPEN as a metaphysical application):** when an account
+uses b as an unaccounted actual prerequisite, its consequences cannot
+supply the missing answer merely by being derived from b. This does not
+ban every holistic, constitutive, or reciprocal explanation. It rules out
+treating the same unaccounted input as if its obtaining had been supplied
+by the conditional derivation. If a holistic reason really explains B
+without the relevant borrowing, the brute stipulation for B has been
+withdrawn; if the holistic whole is itself an unaccounted contingent
+existential input, the question is relocated. A brute non-being fact
+would not by itself falsify the being-level PSR; inspect the domain before
+drawing that conclusion.
+
+The argument is thus:
+
+1. B is an actual contingent member of the selected order and has no
+   adequate actual existential reason (the rival's grant).
+2. The question is the actual existence of the order including B, not just
+   its conditional functioning or generic instantiation.
+3. An adequate answer to that explicitly inclusive question must answer
+   B's actual existence, possibly through an adequate whole-level reason.
+4. Therefore this rival has no adequate answer to that inclusive
+   question. It may have excellent answers to the other three.
+
+Step 3 makes the conclusion partly conceptual; the substantive
+philosophical work is in whether the question is legitimate and worth
+answering, and what qualifies as an answer. It does not demonstrate that
+the question *must* have an answer in reality. Compare the exact
+`resourceInheritance` certificate (specs/existential-inheritance.toml),
+which proves a prerequisite obstruction under a particular inductive
+resource policy, not this unrestricted philosophical principle. Do not
+promote this argument to a new Lean theorem by defining completeness as
+the conclusion.
+
+### Direct warrant, and the rival's strongest reply
+
+A reason to ask about b is not simply that it is contingent. Its actual
+existence is precisely what is used to explain the rest of the order.
+An account of why the order is actual that leaves that very actual input
+unanswered leaves a specific part of its announced explanandum
+unanswered. Ordinary cases distinguish a fully adequate local account
+of a machine's operation from the different question of why there is
+that machine and supply. The distinction warrants the scope test, not a
+universal causal principle.
+
+The rival can reasonably restrict its explanatory ambition: foundational
+existence is an ontic primitive; derivative existence and lawful structure
+are explained. A directly warranted distinction between fundamental and
+derivative kinds could justify treating different explanatory questions
+differently. There is no contradiction unless it also claims that its
+explanation covers B's actual existence, or endorses a genuinely uniform
+ontic demand which applies to B. This is not merely a hypothetical
+objection: the populated replacement and primitive-resource controls
+already witness the difference between local coverage and the stronger
+supply/coverage condition in their respective formal interpretations.
+
+There is still a comparative difference if another account actually
+supplies an adequate reason for b or replaces the brute contingent
+bearer by an adequately intelligible necessary source and explains its
+derivatives at matched scope. Neither the number of explained facts nor
+the word necessary makes that alternative adequate. Direct, conceptual
+or cumulative warrant for a primitive restriction is compatible with
+leaving the actuality of its contingent occupant unexplained; an
+epistemically justified theory is not automatically a theory that gives
+the desired ontic reason.
+
+### Immediate root-facing connection and limit
+
+The target `608a262d-08fe-4dfd-9413-67e2ecf35b84` is the local #312
+reason-token existence PSR for *all beings contingent at the selected
+world*, not the adequacy or whole-order thesis. Its exact definition is
+`BruteContingencyParity.NoBruteContingentExistenceAt`. The rival falsifies
+it only when B has no token, rather than merely lacking a reason that
+meets a stronger adequacy standard. A positive argument still needs both
+a warrant for existential reason coverage and the interpretation/domain
+bridge to that predicate. The existing `esseCauseFromExistenceReasons`
+result `7bf9cb77-0418-4363-9298-266eac105edd` additionally requires BX1
+`6c6191dc` (no same-bearer reason for a contingent's existence) and BX2
+`0e44041e` (other-bearing reason source causes its esse) to reach B2
+`8a8d00e9-12b6-4cf0-b662-431cc4addd49`. Do not infer either bridge from
+scope completeness or from reason-token availability. The First Way
+same-mover application `8cc169e3` retains its own B0/B1/B3 and fixed
+witness conditions. Necessary impersonal sources remain live rivals.
+
+No new statement, result or registered graph edge is introduced. Intended
+premise effect: none. The existing accepted-qualified moderate preference
+for E and suspension about universal D are retained, not superseded.
+The next test is the strongest role/occupant restriction, including
+necessary occupancy, self-application and the effect of granting perfect
+epistemic reliability. This is a proposed continuation, not an independent
+semantic review of its own claims.
