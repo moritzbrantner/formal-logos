@@ -752,7 +752,7 @@ necessity, permissibility and accessibility are separate questions.
 No new warrant is assigned to any registered premise as established and
 no rival is defeated. The strongest standing package is a necessary
 noncognitive productive source with intrinsic invariant, objective
-good-directed nonnecessitating powers and a defended rule fixing some
+good-directed nonnecessitating powers and a still-to-be-defended rule fixing some
 positive communications; the purely impersonal case need not grant the
 rational-exercise conjunct of the registered selective rival.
 
