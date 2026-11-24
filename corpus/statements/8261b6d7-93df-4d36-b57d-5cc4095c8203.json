@@ -1,0 +1,17 @@
+{
+  "id": "8261b6d7-93df-4d36-b57d-5cc4095c8203",
+  "label": "Two-giver controls for existential application and same-giver composition",
+  "paraphrase": "Four distinct actual roles, with two givers of the producer's esse and a per se (PER_SE_5) producer-recipient link. In both assignments AsCaused b c is exactly application by some actual upstream giver, caused causes cause as caused, and individually applied givers receive downstream credit. With the supporter alone applying the producer, source application and credit, universal giver alignment, restricted composition and general composition all fail. After adding both source application and source credit, all four positive interfaces hold. An assignment test about esse, without a temporal, historical or metaphysical possibility claim.",
+  "lean_declaration": "TruthCore.Causality.GiverIndexedApplication.Control.Certificate",
+  "definition_ids": [
+    "8163859b-95b3-4dd2-8a69-541bd332f32f",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "4bca086d-1fa5-4b0d-bf2b-a22f3f0ac740",
+    "6b8ed953-9deb-4272-9e7b-a971be2119c3"
+  ],
+  "disambiguation_ids": [
+    "002f42cb-3015-5644-80b3-d408538394e6",
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b"
+  ]
+}

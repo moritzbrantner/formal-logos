@@ -1,0 +1,12 @@
+{
+  "id": "ba74a9b5-bcf7-4a0e-8213-0b55a4408f68",
+  "label": "PER_SE_5 composition from indexed credit and alignment with every giver",
+  "argument_id": "9f2abd14-bb9a-4a9b-a394-3604ada5555f",
+  "challenge_module": "TruthCore.Results.Causality.GiverIndexedApplication.Challenge",
+  "solution_module": "TruthCore.Results.Causality.GiverIndexedApplication.Solution",
+  "theorem": "TruthCore.Results.Causality.GiverIndexedApplication.perSeOfApplication",
+  "comparator_config": "results/ba74a9b5-bcf7-4a0e-8213-0b55a4408f68/comparator.json",
+  "status": "solution-present",
+  "description": "Assembly that locates the commitment. The alignment premise yields application by this particular incoming giver. The indexed credit premise then assigns the downstream edge to the same giver. This assembly supplies no independent warrant for either input or for the binary composition law.",
+  "transcription": "assembly"
+}
