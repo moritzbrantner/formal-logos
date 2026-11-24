@@ -1,0 +1,12 @@
+{
+  "id": "3651b6e2-49c9-4359-97dc-c9650dc32a9c",
+  "label": "With nonintrinsic bearer esse, a single deletion exactly tests all inherited esse cuts",
+  "paraphrase": "For any indexed group interpretation in which the esse index of each selected actual's bearer is not an intrinsic seed, every selected actual has original supply and inherits all cuts to the bearer's esse supply iff each has original supply and lacks supply after deleting every group whose effect is that bearer's esse. This checks absence of a supply route bypassing the indexed esse within the fixed complete choice of records and intrinsic seeds. It does not classify causes of that esse, establish ontological adequacy, or test whether group deletion itself represents a possible event.",
+  "lean_declaration": "TruthCore.Causality.ParticularActuality.SingleDeletionTest",
+  "definition_ids": [
+    "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "ff8bf1d7-0bf9-5dda-8038-7127e3d46ec8",
+    "c9d479bb-308a-5a2b-9755-ddc0170d4e35"
+  ]
+}

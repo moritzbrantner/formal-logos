@@ -12,6 +12,8 @@ The current cluster-level judgment is the
 [2026-11-18 assessment](#current-cluster-assessment-under-the-substantive-objection-standard-2026-11-18);
 the sections below it keep their own dates and wording.
 
+The [particular-actuality investigation](actuality-esse-research.md#9-does-a-particular-actuality-share-in-its-bearers-received-being) tests whether a real mode draws on the received being of its subject, and what further premise would attribute causal responsibility for the exercise to that giver.
+
 ## Source findings and fidelity
 
 Related discovery, the target dossier, the dossiers of all touched premise
