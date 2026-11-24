@@ -1,0 +1,9 @@
+{
+  "id": "879221f0-4cd7-4912-b9e4-c425f22b5925",
+  "label": "Adjacent-pair output richness and first-order profile restriction",
+  "term": "adjacent-pair output richness",
+  "definition": "AdjacentPairRich allowed n requires an admitted complete trace realizing each chosen pair a,b at t,t+1 for every t at least n+1. Different pair requests can have different witnesses. ProfileObstruction means every possibly time-dependent Profile true of all selector-admitted complete histories allows each such pair. A Profile has one Boolean current-state slot; it does not express a constraint on three consecutive values or a hidden larger state.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Explanation.AdjacentPairContainment.AdjacentPairRich",
+  "note": "The four period-three suffixes a,b,a XOR b satisfy adjacent-pair richness, but exclude the three-bit suffix 111 and obey a fixed second-order recurrence. Thus this condition is weaker than FiniteRich and WholeSuffixRich, and its exact characterization of ProfileObstruction is confined to this specified first-order observation language. The existing Profile meaning is 58d12f26-3402-5f67-b768-3c71f3381894; selector admission is 1e04df16-fe72-467a-bc25-785f0e94fc70. No causal compatibility, fundamental law change, exhaustive metaphysical possibility or real instability follows from these definitions."
+}

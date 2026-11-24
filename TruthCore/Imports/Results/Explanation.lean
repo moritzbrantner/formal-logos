@@ -5,6 +5,7 @@ public import TruthCore.Results.Explanation.AccessibleAccountNecessaryBeing.Solu
 public import TruthCore.Results.Explanation.ActualExistenceAdequacy.Realization.Solution
 public import TruthCore.Results.Explanation.ActualExistenceAdequacy.Solution
 public import TruthCore.Results.Explanation.ActualWorldGap.Solution
+public import TruthCore.Results.Explanation.AdjacentPairContainment.Solution
 public import TruthCore.Results.Explanation.AnselmCommonSourceAudit.Solution
 public import TruthCore.Results.Explanation.AnselmUltimateSource.Solution
 public import TruthCore.Results.Explanation.AutonomousGroundConcrete.Solution
