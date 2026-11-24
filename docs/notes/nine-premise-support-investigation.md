@@ -200,14 +200,18 @@ bruteness, open draft #1968](https://github.com/moritzbrantner/formal-logos/pull
 The existing assessment moderately favors a genuine explanation of contingent
 concrete existence. In cases of production, identifying what was exercised
 can explain an actual result where describing a capacity leaves the result
-open. A demand for such an explanation also carries across a shared feature
+open. When a nature leaves its bearer’s existence open, describing that
+nature still leaves its actual instantiation to explain. Whether the point
+extends to a simple foundation that receives its existence from nothing
+else is disputed. A demand for explanation also carries across a shared feature
 if that feature was one's reason for making the demand. A theist who demands
 an explanation because an initial state is contingent incurs the same demand
 for a contingent divine choice when the demand applies to facts of that kind.
 A rival can reserve the demand for things that receive existence. That is a
 principled distinction. Its scope and the claim that the proposed foundation
 itself qualifies for exemption need warrant. The project suspends judgment
-on the stronger claim that every such explanation must determine its outcome.
+on whether each actual contingent concrete being has some adequate reason,
+or combination of reasons, that rules out its absence.
 [Merged parity argument](https://github.com/moritzbrantner/formal-logos/pull/1872) ·
 [Warrant and strongest reply](psr-self-application-756.md#overall-provisional-judgment-and-downstream-consequences)
 
@@ -225,11 +229,21 @@ A necessary impersonal producer can share the advantage of actually
 explaining contingent things. To favor purposive production specifically,
 the question is whether a good apprehended by the source guided its very
 act of producing the effect. A purpose attached after the outcome supplies
-no such connection. An actual impersonal process that realizes the same
-outcome deserves credit for what it produces. The respective claims about
-guidance can be compared once both accounts specify how the selection works.
+no such connection. If an impersonal productive power tracks the same goods across alternatives
+and favors the same outcomes, that evidence supports its selection just as
+well. Independent evidence of apprehension guiding the particular act would
+distinguish intentional selection.
 [Actual exercise and alternatives, open PR #1933](https://github.com/moritzbrantner/formal-logos/pull/1933) ·
 [Comparison of purposeful and impersonal production, draft #1971](https://github.com/moritzbrantner/formal-logos/pull/1971)
+
+A promise gives a local test of whose choice can matter. Before the agreed
+deadline the person to whom the promise was made can release the promisor.
+A bystander's identical words leave the claim intact. The benefit to the
+third party stays fixed. The difference favors an account that recognizes
+the parties' authority over an account that predicts the duty from that
+benefit alone. A general impersonal principle can recognize that same
+authority. Attributing its institution to a necessary mind requires further
+grounds. [Who can release the promisor?](moral-governance-intellect-will.md#who-can-release-a-promise-and-what-ends-at-expiry-2026-11-25)
 
 ## From finite origins to one ancestral source
 
