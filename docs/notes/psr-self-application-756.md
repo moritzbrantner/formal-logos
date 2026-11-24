@@ -1248,10 +1248,11 @@ the events, memory mechanisms, causal ancestry or numerical identities that
 an actual historical interpretation requires. The absence of historical
 coupling is part of the blind interface's definition, and the positive control
 removes it. The theorem neither establishes that real history is inaccessible
-nor supplies a physical past-reading instrument. Its use is to locate the
-missing assumption when a proposed counterfeit is claimed to survive *all*
-future calibration: the proponent must show matching under every relevant
-intervention, including any real history-sensitive channel.
+nor supplies a physical past-reading instrument. It exposes a sufficient
+operational premise for a claim that a proposed counterfeit survives *all*
+future calibration. Defending this premise requires coverage of every relevant
+intervention, including any real history-sensitive channel; the theorem does
+not exclude other ways of establishing indistinguishability.
 
 There is a useful matched-scope consequence. If an old and a proposed young
 history satisfy this operational comparison, new experimental events may
@@ -1390,10 +1391,14 @@ ordinary historical inquiry or establish a probability for its failure.
 
 **Next discriminating work.** The universal adaptive question is answered
 within the specified deterministic interface. The remaining application
-questions require (1) a positive account making the putative full replacement
-history admissible, including its identities and provenance, and (2) an exact
-history-sensitive constraint or intervention that breaks matching, or a
-warrant account that survives without such discrimination. For theism, test
+questions include a positive account making the putative full replacement
+history admissible with explicit identities, provenance and operational states
+that preserve the commitments actually required by the selected interpretation.
+A qualitative replacement may differ numerically and in historical origin;
+it need not preserve the actual world's provenance unless that is a commitment
+of the particular interpretation being tested. Other tests are a justified
+history-sensitive constraint or intervention that breaks the supplied matching,
+or a warrant account that survives without such discrimination. For theism, test
 the no-systematic-frustration norm on the same evidence domain and source,
 retaining the distinction between moral goodness and bare goodness of being.
 For the restricted brute rival, defend the scope of its constitutive inventory

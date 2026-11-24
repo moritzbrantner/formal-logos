@@ -50,12 +50,8 @@ theorem historyControls : HistoryControls := by
     have impossible : false = true := (invariant (false, false) (true, false) same).mpr rfl
     cases impossible
   · decide
-  · refine ⟨(fun readings => readings[1]? = some true), ?_⟩
-    intro s
-    rcases s with ⟨past, visible⟩
-    change (some past = some true ↔ past = true)
-    constructor
-    · exact Option.some.inj
-    · exact congrArg some
+  · -- Primitive eliminators keep the supplied exact classifier zero-axiom.
+    exact ⟨(fun readings => List.casesOn readings False (fun _ tail =>
+      List.casesOn tail False (fun past _ => past = true))), fun _ => Iff.rfl⟩
 
 end TruthCore.Results.Science.AdaptiveHistoryAccess
