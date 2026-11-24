@@ -502,15 +502,22 @@ class DiscoverBindingTest(unittest.TestCase):
         self.assertTrue(found["proof"]["prover"].startswith("portfolio:"))
         self.assertTrue(set(found["proof"]["axioms"]) <= {"propext", "Classical.choice", "Quot.sound"})
         self.assertNotIn("outside_bundle_rejected", found)
-        # The certification text replays the portfolio tactic verbatim.
+        # The certification text states the portfolio tactic with its
+        # unfolding step as an explicit `delta` (`explicit_portfolio_tactic`),
+        # no scratch tactic defined, and Lean accepts it.
         label = found["proof"]["prover"].removeprefix("portfolio:")
         tactic = dict((l, t) for l, t in portfolio)[label]
-        prelude, _, extra = sweep_source()
+        sweep = found["sweep_unfold"]
+        steps = [s.strip() for s in tactic.split(";")]
+        steps = [(f"delta {' '.join(sweep)} at *" if s == "prove_sweep_unfold" else s)
+                 for s in steps if s != "prove_sweep_unfold" or sweep]
+        _, _, extra = sweep_source()
         delta = " ".join(found["unfold"])
         text = (
-            "".join(f"import {m}\n" for m in extra) + prelude
-            + f"\ntheorem discovered1 {found['signature']} := by\n  delta {delta} at *\n  {tactic}\n"
+            "".join(f"import {m}\n" for m in extra)
+            + f"\ntheorem discovered1 {found['signature']} := by\n  delta {delta} at *\n  {'; '.join(steps)}\n"
         )
+        self.assertNotIn("prove_sweep_unfold", text)
         check(text)
 
     def test_a_portfolio_proof_through_a_library_theorem_is_rejected(self):
@@ -541,6 +548,48 @@ class DiscoverBindingTest(unittest.TestCase):
             for line in stdout[0].splitlines() if "discover-external: " in line
         ]
         self.assertEqual(reports, [[f"{ns}.double_eq"], []])
+
+    def test_generated_lemma_names_are_exempt_only_for_their_kind(self):
+        ns = "TruthCore.DiscoverFixtureTarget"
+        stdout: list = []
+        run([f"#discover_external {ns}.{t}" for t in
+             ("usesInjName", "usesExtName", "usesAlias", "usesCtorInj")], raw=stdout)
+        reports = [
+            json.loads(line.split("discover-external: ", 1)[1])
+            for line in stdout[0].splitlines() if "discover-external: " in line
+        ]
+        # `double.inj` on a definition and `double.ext` are hand-written;
+        # `doubleAlias` is a Prop-typed definition: all three are premises.
+        self.assertEqual(reports[0], [f"{ns}.double.inj"])
+        self.assertEqual(reports[1], [f"{ns}.double.ext"])
+        self.assertIn(f"{ns}.doubleAlias", reports[2])
+        # A constructor's generated `injEq` is vocabulary.
+        self.assertEqual(reports[3], [])
+
+    def test_an_element_binder_is_never_bound_to_a_premise_term(self):
+        ns = "TruthCore.DiscoverFixtureTarget"
+        _, portfolio, _ = sweep_source()
+        config = lean_string(json.dumps({"portfolio": portfolio, "portfolio_heartbeats": 20000}))
+        outcome = run([f'#discover "elem" 2000 "" {config} {ns}.TgtAt from {ns}.PremAtPick'],
+                      portfolio=True)["elem"]
+        # Binding `w := pick W f v` would relabel the premise's instance as the
+        # target: the goal stays unresolved, and no term choice is tried.
+        self.assertIsNone(outcome["closed"])
+        self.assertEqual(outcome["projections_tried"], [])
+
+    def test_a_projection_and_a_term_for_one_binder_are_ambiguous(self):
+        ns = "TruthCore.DiscoverFixtureTarget"
+        outcome = run([f'#discover "both" 20000 "" "{{}}" {ns}.AllOther from {ns}.BothOffered'])["both"]
+        self.assertIsNotNone(outcome["closed"])
+        projection = outcome["projection"]
+        # The projection is tried first and closes the goal; the kept premise
+        # also builds the term, so both remain alternatives: identification
+        # by type alone, which `truth discover` rejects.
+        self.assertEqual(projection["bound_to"], f"{ns}.BothOffered.q.prof")
+        self.assertTrue(projection["ambiguous"])
+        self.assertEqual(sorted(projection["alternatives"]),
+                         sorted([f"{ns}.BothOffered.q.prof", f"{ns}.mkProf W F o"]))
+        self.assertFalse(outcome["projection_unused"])
 
 
     def test_a_target_binder_is_bound_to_a_term_a_premise_builds(self):

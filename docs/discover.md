@@ -139,13 +139,15 @@ target/release/truth discover --target STATEMENT --write-spec specs/discover-cau
    `NecessaryActualConcretaAreRoots (m : Profile W B) w` (#1926). After the
    projections, each closed application of a project definition (not a
    projection) in a delta-expanded premise whose type is the target binder's
-   is tried as the same kind of explicit choice: reported as `projection` with
+   is tried as the same kind of explicit choice, for a target binder of
+   structure type only: reported as `projection` with
    `term` and `bound_to`, a specialization of the target to that term, under
    the same `ambiguous`, `dropped_alternatives` and `projection_unused` rules
    (a term is "used" when a minimal premise still builds it; the four-choice
    cap counts both kinds). Nothing else is unified: an element binder such as
-   `w : W` is never bound to a term, and binders of different modules still
-   need a sense tag (step 4).
+   `w : W` is never bound to a term (binding it to `pick W f v`, which a premise
+   `P (pick W f v)` builds, would relabel the premise's instance as the
+   target), and binders of different modules still need a sense tag (step 4).
 
    Same-module identification compares the binder names the declarations
    *declare*: an outer binder renamed on entry (`w_3`, because the target
@@ -165,14 +167,21 @@ target/release/truth discover --target STATEMENT --write-spec specs/discover-cau
    goes through everything below exactly as Duper's: minimization (each
    deletion tries the portfolio, then Duper), the incompatibility core,
    probe, witnesses and certification; the prover is reported as
-   `portfolio:<label>`. A library `@[simp]` or `@[grind]` lemma is the one
-   way a portfolio tactic (unlike `duper [*]`, which sees only the goal's
-   hypotheses) could use something outside the bundle: a closed attempt whose
-   proof term rests on a project (`TruthCore.`) theorem, looked up through the
-   auxiliary lemmas the tactic created, is discarded and listed under
-   `outside_bundle_rejected` with the theorems it used; generated lemmas
-   (equation lemmas, `injEq`, `@[ext]` lemmas) and definitions are vocabulary,
-   not premises. Bridge checks stay Duper-only. When that fails and the goal
+   `portfolio:<label>`. Unlike `duper [*]`, which sees only the goal's
+   hypotheses, a portfolio tactic can reach the imported library: `@[simp]`
+   and `@[grind]` lemmas, `aesop` rules, instances. Whatever the route, the
+   proof term names what it used, and the check is on the term: a closed
+   attempt that rests on a project (`TruthCore.`) constant whose type is a
+   proposition (a theorem, a Prop-typed definition such as `abbrev alias :=
+   @lemma`, an opaque or an axiom) and that is no part of the statement's own
+   vocabulary (its constants closed through definition values) is discarded
+   and listed under `outside_bundle_rejected` with the constants it used.
+   Auxiliary lemmas the tactic created (`_proof_N`, `_auxLemma`, `_simp_N`,
+   also private) are read through; an auxiliary of the library itself is
+   reported. Exempt are only generated lemmas of the right kind: equation
+   lemmas (`eq_N`, `eq_def`, `eq_unfold`) of a definition and `inj`, `injEq`,
+   `sizeOf_spec` of a constructor; a hand-written `@[simp] theorem f.inj` and
+   every `ext` lemma are premises. Bridge checks stay Duper-only. When that fails and the goal
    reaches a definition of a value (its type ends in a value type such as
    `Formula Unit`, not in `Prop` or a `Sort`: `convergenceFormula`,
    `Formula.iterBox`), Duper is tried once more after rewriting those
@@ -209,11 +218,15 @@ target/release/truth discover --target STATEMENT --write-spec specs/discover-cau
    (binders with full names, hypotheses, conclusion, `delta …; duper [*]`;
    when the fallback closed the goal, `delta …`, `try simp only […] at *`,
    `all_goals duper [*]`; for a portfolio proof, `delta …` and the
-   portfolio tactic verbatim; the statement itself unchanged)
-   and elaborated in a separate Lean run with `#print axioms`. The file also
-   defines prove-sweep's tactics and the search's `#discover_external`
-   command (in a `section`, so its `open`s do not reach the theorems), which
-   runs after each theorem. A discovery whose text fails, whose proof uses an
+   portfolio tactic with its `prove_sweep_unfold` step stated as the explicit
+   `delta` of the definitions that step unfolds (`sweep_unfold` in the
+   outcome; the step is dropped when there are none); the statement itself
+   unchanged) and elaborated in a separate Lean run with `#print axioms`. The
+   Solution draft states the same text, so neither declares tactic syntax
+   that could clash with prove-sweep's scratch tactics where the module is
+   imported; a replay that differs from the search fails closed. The file also
+   defines the search's `#discover_external` command (in a `section`, so its
+   `open`s do not reach the theorems), which runs after each theorem. A discovery whose text fails, whose proof uses an
    axiom other than `propext`, `Classical.choice` and `Quot.sound`, or whose
    re-elaborated proof rests on a project theorem outside its bundle is
    filtered (`certification`, `axioms`, `outside_bundle`).
@@ -236,7 +249,7 @@ target/release/truth discover --target STATEMENT --write-spec specs/discover-cau
 | `witness` | no one-point joint model was found; Duper found no contradiction, so consistency is unresolved | flag |
 | `vacuous_target` | the premises refute the target's own antecedents (`∀ x, A x → B x` holds because nothing is `A`): valid, but true vacuously | flag |
 | `axioms`, `certification`, `reconstruction` | an axiom outside the three; the theorem text fails; Duper did not reprove an ATP-found goal | reject |
-| `outside_bundle` | the certified proof rests on a project theorem that is no premise of the bundle (a library `@[simp]`/`@[grind]` lemma a portfolio tactic found; step 5) | reject |
+| `outside_bundle` | the certified proof rests on a project proposition outside the statement's vocabulary (a library lemma, rule, instance or Prop-typed alias a portfolio tactic used; step 5) | reject |
 
 The joint witness interprets every carrier as `Unit`, every predicate (and
 predicate-valued structure field) as a constant `True` or `False`, structure

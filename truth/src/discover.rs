@@ -1668,6 +1668,31 @@ pub fn portfolio_tactic(outcome: &Value) -> Option<&'static str> {
         .and_then(prove_sweep::portfolio_tactic)
 }
 
+/// The unfolding step of prove-sweep's portfolio (its `PRELUDE` tactic).
+pub const SWEEP_UNFOLD: &str = "prove_sweep_unfold";
+
+/// A portfolio tactic as a library file can state it: the scratch-only
+/// `prove_sweep_unfold` step becomes an explicit `delta` of the definitions it
+/// unfolds (`sweep_unfold` of the Lean outcome, `sweepUnfoldNames` of
+/// `scripts/Discover.lean`), or is dropped when there are none. The
+/// certification run replays this text, so a difference fails closed.
+pub fn explicit_portfolio_tactic(tactic: &str, sweep: &[&str]) -> String {
+    let steps: Vec<String> = tactic
+        .split(';')
+        .map(str::trim)
+        .filter_map(|step| {
+            if step != SWEEP_UNFOLD {
+                Some(step.to_owned())
+            } else if sweep.is_empty() {
+                None
+            } else {
+                Some(format!("delta {} at *", sweep.join(" ")))
+            }
+        })
+        .collect();
+    steps.join("; ")
+}
+
 /// How the minimal proof was found, for reports and spec drafts: `Duper
 /// superposition`, or the `truth prove-sweep` portfolio tactic.
 pub fn prover_name(outcome: &Value) -> String {
@@ -1704,7 +1729,7 @@ pub fn proof_text(outcome: &Value) -> String {
     }
     if let Some(tactic) = portfolio_tactic(outcome) {
         text.push_str("  ");
-        text.push_str(tactic);
+        text.push_str(&explicit_portfolio_tactic(tactic, &names("sweep_unfold")));
     } else if equations.is_empty() {
         text.push_str("  duper [*]");
     } else {
@@ -1727,9 +1752,9 @@ pub fn theorem_text(name: &str, outcome: &Value, heartbeats: u64) -> String {
 /// `#print axioms` after each theorem; and each theorem's line range.
 ///
 /// With `discover` (the text of `scripts/Discover.lean`), the file also
-/// imports what the `truth prove-sweep` portfolio needs, defines its tactics
-/// ([`prove_sweep::PRELUDE`]) so that a portfolio proof replays verbatim, and
-/// runs `#discover_external` after each theorem: the project theorems its
+/// imports what the `truth prove-sweep` portfolio needs (a portfolio proof is
+/// stated with an explicit `delta`, [`explicit_portfolio_tactic`], as the
+/// Solution draft states it), and runs `#discover_external` after each theorem: the project theorems its
 /// proof rests on, which must be none (a library `@[simp]`/`@[grind]` lemma
 /// is a premise outside the bundle, filter `outside_bundle`). The search
 /// body is wrapped in a `section`, so its `open`s do not reach the theorems.
@@ -1757,8 +1782,7 @@ pub fn certification_text(
     });
     text.push('\n');
     if let Some(body) = &body {
-        text.push_str(prove_sweep::PRELUDE);
-        let _ = writeln!(text, "\nsection\n{body}\nend\n");
+        let _ = writeln!(text, "section\n{body}\nend\n");
     }
     let mut ranges = Vec::new();
     for (name, body_text) in theorems {
@@ -2143,9 +2167,9 @@ pub fn render_solution(
         let _ = writeln!(text, "public import {module}");
     }
     text.push_str("import Duper\n");
-    // A portfolio proof replays prove-sweep's tactic verbatim: its imports and,
-    // inside the batch namespace (so two drafts never declare the same syntax),
-    // its `prove_sweep_unfold` step.
+    // A portfolio proof needs the portfolio's imports; its unfolding step is an
+    // explicit `delta` (`explicit_portfolio_tactic`), so the draft declares no
+    // tactic syntax that could clash with prove-sweep's scratch tactics.
     let portfolio = findings
         .iter()
         .any(|f| portfolio_tactic(&f.outcome).is_some());
@@ -2153,7 +2177,6 @@ pub fn render_solution(
         for module in prove_sweep::PORTFOLIO_IMPORTS {
             let _ = writeln!(text, "import {module}");
         }
-        text.push_str("meta import Lean.Elab.Tactic\n");
     }
     text.push('\n');
     text.push_str(
@@ -2164,10 +2187,6 @@ pub fn render_solution(
          @[expose] public section\n\n",
     );
     let _ = writeln!(text, "namespace {batch}\n");
-    if portfolio {
-        text.push_str(prove_sweep::PRELUDE);
-        text.push('\n');
-    }
     for (n, f) in findings.iter().enumerate() {
         let target = &statements[&f.trial.target];
         // `set_option … in` goes before the doc comment, which belongs to the

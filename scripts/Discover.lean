@@ -29,8 +29,8 @@ accepts a proof of the expanded goal for the original one. The tactic
 portfolio of `truth prove-sweep` (configuration `"portfolio"`, each tactic
 under `"portfolio_heartbeats"`) runs first, then `duper [*]` under
 `maxHeartbeats` HEARTBEATS (thousands). A proof that rests on a project
-theorem outside the bundle (a library `@[simp]`/`@[grind]` lemma) is rejected
-and listed as `outside_bundle_rejected`. When ZIPPERPOSITION names an
+proposition outside its statement (a library lemma, rule, instance or alias,
+`projectTheorems`) is rejected and listed as `outside_bundle_rejected`. When ZIPPERPOSITION names an
 executable, lean-auto is tried next with Zipperposition as premise selector
 (`auto.tptp.premiseSelection`) and Duper as its native prover, so its proof
 is again reconstructed in Lean and kernel-checked; the external prover is
@@ -285,27 +285,62 @@ structure Portfolio where
 /-- The prover-name prefix of a portfolio attempt (`portfolio:unfold+grind`). -/
 def portfolioPrefix : String := "portfolio:"
 
-/-- Whether `n` is generated for a declaration rather than stated as a lemma:
-equation lemmas (`f.eq_1`, `f.eq_def`), constructor injectivity, `sizeOf`
-specifications and `@[ext]` lemmas of a structure. -/
+/-- Whether `n` is a lemma Lean generates for a declaration, not one stated
+in the library: an equation lemma (`f.eq_1`, `f.eq_def`, `f.eq_unfold`) of a
+definition `f`, or the injectivity (`C.inj`, `C.injEq`) or `sizeOf`
+specification of a constructor `C`. The kind of `f` or `C` is checked, so a
+hand-written `@[simp] theorem f.inj` is no exception; `@[ext]` lemmas are not
+exempt at all. -/
 def generatedTheorem (env : Environment) (n : Name) : Bool :=
   match n with
-  | .str p s => env.contains p && ((s.startsWith "eq_" && (s.drop 3).all Char.isDigit) ||
-      s == "eq_def" || s == "eq_unfold" || s == "injEq" || s == "inj" || s == "sizeOf_spec" ||
-      s == "ext" || s == "ext_iff")
+  | .str p s =>
+    match env.find? p with
+    | some (.defnInfo _) => (s.startsWith "eq_" && (s.drop 3).all Char.isDigit && s.length > 3) ||
+        s == "eq_def" || s == "eq_unfold"
+    | some (.ctorInfo _) => s == "inj" || s == "injEq" || s == "sizeOf_spec"
+    | _ => false
   | _ => false
 
-/-- The project (`TruthCore.`) theorems a proof term rests on, looking through
-auxiliary lemmas (internal names) the tactic created. A portfolio tactic such
-as `simp_all`, `aesop` or `grind` may use any `@[simp]` or `@[grind]` theorem
-of the imported library: such a theorem is a premise outside the bundle, and a
-proof that uses one is rejected (`truth discover` filters the same at
-certification, `outside_bundle`). Generated lemmas (`generatedTheorem`) and
-definitions are vocabulary, not premises. -/
-partial def projectTheorems (e : Expr) : MetaM (Array Name) := do
+/-- Whether `n` names an auxiliary a tactic created while proving (`_proof_N`,
+`_auxLemma.N`, `_simp_N`, also under `_private`): its value is part of the
+proof and is read through. -/
+def tacticAuxiliary (n : Name) : Bool :=
+  ((privateToUserName? n).getD n).components.any fun c => match c with
+    | .str _ s => s.startsWith "_proof_" || s == "_auxLemma" || s.startsWith "_simp_"
+    | _ => false
+
+/-- The project constants `stmt` is stated in: its constants, closed through
+the values of the definitions among them. They are the bundle's own
+declarations and vocabulary, never a premise outside it. -/
+partial def statementVocabulary (stmt : Expr) : MetaM NameSet := do
   let env ← getEnv
   let mut seen : NameSet := {}
-  let mut todo := e.getUsedConstants.toList
+  let mut todo := (← instantiateMVars stmt).getUsedConstants.toList
+  while !todo.isEmpty do
+    let n := todo.head!
+    todo := todo.tail!
+    if seen.contains n then continue
+    seen := seen.insert n
+    if let some (.defnInfo d) := env.find? n then
+      if (`TruthCore).isPrefixOf n then todo := d.value.getUsedConstants.toList ++ todo
+  return seen
+
+/-- The project (`TruthCore.`) propositions a proof term of `stmt` rests on
+outside its statement: every constant whose type is a proposition (a theorem,
+but also a Prop-typed definition such as `abbrev alias := @lemma`, an opaque
+or an axiom), read through the auxiliaries the tactic created
+(`tacticAuxiliary`; an auxiliary of the library itself is reported). A
+portfolio tactic may use any `@[simp]`/`@[grind]` theorem, `aesop` rule or
+instance of the imported library: whatever the route, the proof term names
+it, and a proof that does is rejected (`truth discover` checks the same at
+certification, `outside_bundle`). Generated lemmas (`generatedTheorem`),
+definitions of non-propositions and the statement's own vocabulary are not
+premises. -/
+partial def projectTheorems (e stmt : Expr) : MetaM (Array Name) := do
+  let env ← getEnv
+  let vocabulary ← statementVocabulary stmt
+  let mut seen : NameSet := {}
+  let mut todo := (← instantiateMVars e).getUsedConstants.toList
   let mut out : Array Name := #[]
   while !todo.isEmpty do
     let n := todo.head!
@@ -314,13 +349,13 @@ partial def projectTheorems (e : Expr) : MetaM (Array Name) := do
     seen := seen.insert n
     let some info := env.find? n | continue
     let user := (privateToUserName? n).getD n
-    if user.isInternal then
-      -- An auxiliary lemma or definition the tactic created (also a private
-      -- one, `_private.….0._proof_227`): look inside.
+    let project := (`TruthCore).isPrefixOf user
+    if tacticAuxiliary n && !project then
       if let some v := info.value? (allowOpaque := true) then todo := v.getUsedConstants.toList ++ todo
       continue
-    if let .thmInfo _ := info then
-      if (`TruthCore).isPrefixOf user && !generatedTheorem env n then out := out.push user
+    unless project do continue
+    if vocabulary.contains n || generatedTheorem env n then continue
+    if ← isProp info.type then out := out.push user
   return out
 
 /-- `#discover_external thm`: logs `discover-external: [names]`, the project
@@ -331,7 +366,7 @@ syntax (name := discoverExternal) "#discover_external " ident : command
 @[command_elab discoverExternal] def elabDiscoverExternal : Command.CommandElab := fun stx => do
   let n := stx[1].getId
   let some (.thmInfo t) := (← getEnv).find? n | throwError "unknown theorem {n}"
-  let names ← Command.liftTermElabM (projectTheorems t.value)
+  let names ← Command.liftTermElabM (projectTheorems t.value t.type)
   logInfo m!"discover-external: {Json.arr (names.map (Json.str ·.toString)) |>.compress}"
 
 structure Proved where
@@ -409,12 +444,13 @@ def prove (xs : Array Expr) (hyps : Array (Nat × Expr)) (concl : Expr) (u : Unf
       (fun _ => pure none)
     -- The kernel check runs outside the search budget, synchronously, so its
     -- axioms are those of the finished theorem. A proof that rests on a
-    -- project theorem outside the bundle (a `@[simp]` or `@[grind]` lemma a
-    -- portfolio tactic found in the library) is no proof from these premises.
+    -- project proposition outside its statement (`projectTheorems`: a library
+    -- lemma, rule, instance or alias a portfolio tactic found) is no proof
+    -- from these premises.
     let result ← match result with
       | none => pure none
       | some (used, stmt, value) => do
-        let outside ← projectTheorems value
+        let outside ← projectTheorems value stmt
         if outside.isEmpty then kernelCheck name used stmt value else
           if let some r := pf.rejected then
             let j := Json.mkObj [("prover", Json.str name),
@@ -1029,6 +1065,25 @@ def withProjection (xs : Array Expr) (hyps : Array (Nat × Expr)) (concl : Expr)
       b := body
     k ys hs b
 
+/-- The definitions prove-sweep's `prove_sweep_unfold` step (its `PRELUDE`)
+unfolds on `e`, in the order it meets them: every project definition in the
+goal, round after round (at most eight). One `delta` of the whole list unfolds
+them all at once (`deltaExpand` revisits what it unfolds), so the
+certification text and the Solution draft state a portfolio proof with this
+explicit `delta` instead of the scratch-only tactic; the certification run
+replays exactly that text and fails closed if it differs. -/
+def sweepUnfoldNames (e : Expr) : MetaM (Array Name) := do
+  let env ← getEnv
+  let mut e ← instantiateMVars e
+  let mut out : Array Name := #[]
+  for _ in [0:8] do
+    let names := e.getUsedConstants.filter fun n => (`TruthCore).isPrefixOf n &&
+      (match env.find? n with | some (.defnInfo _) => true | _ => false)
+    if names.isEmpty then break
+    out := out ++ names.filter (!out.contains ·)
+    e ← deltaExpand e names.contains
+  return out
+
 /-- Whether hypothesis `h` mentions the introducer of a binding choice: the
 premise structure binder of a projection (a free variable), or the term of a
 term binding, which the premise builds in its delta-expanded statement. -/
@@ -1077,6 +1132,9 @@ def termCandidates (target : Name) (xs : Array Expr) (origins : Array Origin)
     let xt ← instantiateMVars (← inferType x)
     if xt.isSort || (← isProp xt) then continue
     if ← forallTelescopeReducing xt fun ys _ => pure !ys.isEmpty then continue
+    -- Structures only: binding an element `w : W` to a term `pick W f v` the
+    -- premise builds would relabel the premise's instance as the target.
+    unless ← isStructureType xt do continue
     for t in terms do
       if t.containsFVar x.fvarId! then continue
       let tt ← try inferType t catch _ => continue
@@ -1168,6 +1226,13 @@ def finish (target : Name) (premises : Array Name) (heartbeats : Nat)
           projection.setObjVal! "dropped_alternatives" (rename "dropped_alternatives") else projection
       return (projection.setObjVal! "alternatives" (rename "alternatives"), added)
     let u' ← unfoldSet (minNames.push target)
+    -- A portfolio proof's unfolding step, made explicit (`sweepUnfoldNames`).
+    let sweep ← if best.prover.startsWith portfolioPrefix then do
+        -- Over the binders the minimal theorem states, as its signature does.
+        let (keptXs, _, _) ← ownContext xs ((minHyps.map (·.2)).push concl)
+        let body ← minHyps.foldrM (fun (_, h) acc => mkArrow h acc) concl
+        sweepUnfoldNames (← expand u' (← mkForallFVars keptXs body))
+      else pure #[]
     -- Vacuous truth: do the premises refute the target's own antecedents?
     -- (`∀ x, A x → B x` holds because nothing is `A`.) A valid derivation that a
     -- reviewer must see as such.
@@ -1215,6 +1280,7 @@ def finish (target : Name) (premises : Array Name) (heartbeats : Nat)
       ("probe", Json.bool probe),
       ("signature", Json.str (← signature xs minHyps concl)),
       ("unfold", jsonNames (u'.delta.toArray.qsort Name.lt)),
+      ("sweep_unfold", jsonNames sweep),
       -- Only when the closing proof needed them (the `+equations` fallback).
       ("equations", jsonNames (if best.prover.endsWith "+equations" then
         u'.eqns.toArray.qsort Name.lt else #[]))]

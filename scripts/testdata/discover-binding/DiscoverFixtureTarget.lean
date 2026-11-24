@@ -279,3 +279,58 @@ def AllOtherBuilt (W : Type) (F : Fr W) (o : W → Prop) : Prop := ∀ w, (mkPro
 def AtWorld (W : Type) (P : W → Prop) (w : W) : Prop := P w
 
 end TruthCore.DiscoverFixtureTarget
+
+namespace TruthCore.DiscoverFixtureTarget
+
+/-! Term binding is for structures only (#1926 review): an element `w : W` is
+never bound to a term a premise builds. -/
+
+/-- A value a premise builds from its own binders. -/
+def pick (W : Type) (f : W → W) (v : W) : W := f v
+
+/-- The target over an element `w`. -/
+def TgtAt (W : Type) (P : W → Prop) (w : W) : Prop := P w
+
+/-- The premise, at the built element `pick W f v` only. -/
+def PremAtPick (W : Type) (P : W → Prop) (f : W → W) (v : W) : Prop := P (pick W f v)
+
+/-! A projection and a term competing for one target binder. -/
+
+/-- A holder of a profile: `q.prof` is a projection candidate for `m`. -/
+structure Holder (W : Type) where
+  prof : Prof W
+
+/-- One premise that offers both: the projection `q.prof` and the term
+`mkProf W F o`. -/
+def BothOffered (W : Type) (q : Holder W) (F : Fr W) (o : W → Prop) : Prop :=
+  (∀ w, q.prof.other w) ∧ ∀ w, (mkProf W F o).other w
+
+/-! Lemmas named like generated ones, and a Prop-typed alias: premises outside
+any bundle, never exempt (#1926 review). -/
+
+/-- Hand-written, named like a constructor's injectivity lemma. -/
+@[simp] theorem double.inj (n : Nat) : double n = 2 * n := double_eq n
+
+/-- Hand-written, named like an `@[ext]` lemma. -/
+theorem double.ext (n : Nat) : double n = 2 * n := double_eq n
+
+/-- A Prop-typed definition: a lemma under another kind. -/
+abbrev doubleAlias : ∀ n, double n = 2 * n := double_eq
+
+/-- A point, whose constructor has a generated injectivity lemma. -/
+structure Pt where
+  x : Nat
+
+theorem usesInjName (P : Nat → Prop) (n : Nat) (h : P (2 * n)) : P (double n) := by
+  rw [double.inj]; exact h
+
+theorem usesExtName (P : Nat → Prop) (n : Nat) (h : P (2 * n)) : P (double n) := by
+  rw [double.ext]; exact h
+
+theorem usesAlias (P : Nat → Prop) (n : Nat) (h : P (2 * n)) : P (double n) := by
+  rw [doubleAlias]; exact h
+
+theorem usesCtorInj (a b : Nat) (h : Pt.mk a = Pt.mk b) : a = b := by
+  simpa only [Pt.mk.injEq] using h
+
+end TruthCore.DiscoverFixtureTarget

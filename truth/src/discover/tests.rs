@@ -611,6 +611,7 @@ fn a_portfolio_proof_is_classified_and_rendered_like_duper_s() {
     outcome["closed"]["prover"] = json!("portfolio:unfold+grind");
     outcome["proof"]["prover"] = json!("portfolio:unfold+grind");
     outcome["unfold"] = json!(["M.P"]);
+    outcome["sweep_unfold"] = json!(["M.Alias", "M.Value"]);
     // The same filters as a Duper proof: a minimized new implication.
     let f = classify(
         &trial(&["P", "Q", "R"]),
@@ -620,13 +621,15 @@ fn a_portfolio_proof_is_classified_and_rendered_like_duper_s() {
     );
     assert_eq!(f.kind, Kind::Discovery);
     assert_eq!(f.premises, ["P", "R"]);
-    // Its certification text replays prove-sweep's own tactic after the delta.
+    // Its certification text replays prove-sweep's own tactic after the
+    // delta, its unfolding step stated as the explicit `delta` it performed.
+    assert_eq!(
+        prove_sweep::portfolio_tactic("unfold+grind").unwrap(),
+        "intros; prove_sweep_unfold; grind"
+    );
     assert_eq!(
         proof_text(&outcome),
-        format!(
-            "by\n  delta M.P at *\n  {}",
-            prove_sweep::portfolio_tactic("unfold+grind").unwrap()
-        )
+        "by\n  delta M.P at *\n  intros; delta M.Alias M.Value at *; grind"
     );
     assert_eq!(
         prover_name(&outcome),
@@ -637,6 +640,19 @@ fn a_portfolio_proof_is_classified_and_rendered_like_duper_s() {
     // certification rather than certifying something else.
     outcome["proof"]["prover"] = json!("portfolio:unknown");
     assert!(proof_text(&outcome).ends_with("duper [*]"));
+}
+
+#[test]
+fn the_unfolding_step_becomes_an_explicit_delta_or_disappears() {
+    assert_eq!(
+        explicit_portfolio_tactic("intros; prove_sweep_unfold; aesop", &["A.b"]),
+        "intros; delta A.b at *; aesop"
+    );
+    assert_eq!(
+        explicit_portfolio_tactic("intros; prove_sweep_unfold; aesop", &[]),
+        "intros; aesop"
+    );
+    assert_eq!(explicit_portfolio_tactic("tauto", &["A.b"]), "tauto");
 }
 
 #[test]
@@ -665,9 +681,10 @@ fn certification_runs_the_premise_check_and_the_portfolio_tactics() {
             "import Mathlib.Tactic.Tauto"
         ]
     );
-    // prove-sweep's tactics are defined, the search body's `open`s stay in
-    // its section, and every theorem is followed by the premise check.
-    assert!(text.contains("elab \"prove_sweep_unfold\""));
+    // No scratch tactic is defined (the proof states its `delta`), the search
+    // body's `open`s stay in its section, and every theorem is followed by the
+    // premise check.
+    assert!(!text.contains("elab \"prove_sweep_unfold\""));
     let section = text.find("\nsection\n").unwrap();
     let end = text.find("\nend Discover\n\nend\n").unwrap();
     assert!(section < text.find("open Lean\n").unwrap() && end > section);
@@ -1017,7 +1034,7 @@ fn solution_draft_puts_the_option_before_the_doc_comment() {
 }
 
 #[test]
-fn a_solution_draft_with_a_portfolio_proof_defines_its_tactics() {
+fn a_solution_draft_with_a_portfolio_proof_declares_no_tactic() {
     let mut statements = BTreeMap::new();
     statements.insert("T".to_owned(), statement("T", "TruthCore.M.Target", &[]));
     statements.insert("P".to_owned(), statement("P", "TruthCore.M.P", &[]));
@@ -1037,17 +1054,15 @@ fn a_solution_draft_with_a_portfolio_proof_defines_its_tactics() {
         &BTreeMap::new(),
         5000,
     );
+    assert!(text.contains("import Aesop\n"), "{text}");
+    // No tactic syntax is declared in a library draft (it could clash with
+    // prove-sweep's scratch tactics wherever the module is imported): the
+    // unfolding step is gone here, as `sweep_unfold` is empty.
     assert!(
-        text.contains("import Aesop\nmeta import Lean.Elab.Tactic\n"),
+        !text.contains("prove_sweep_unfold") && !text.contains("elab "),
         "{text}"
     );
-    // The tactics are declared inside the batch namespace, before the proof.
-    let namespace = text
-        .find("namespace TruthCore.Results.Discover.Run")
-        .unwrap();
-    let prelude = text.find("elab \"prove_sweep_unfold\"").unwrap();
-    let proof = text.find("intros; prove_sweep_unfold; aesop").unwrap();
-    assert!(namespace < prelude && prelude < proof);
+    assert!(text.contains("intros; aesop"), "{text}");
     // A Duper-only draft needs none of it.
     let plain = render_solution(
         "TruthCore.Results.Discover.Run",
