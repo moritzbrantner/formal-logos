@@ -25,7 +25,7 @@ disambiguations = ["DISAMB-IN-ACT", "00e0d443-eb39-56a3-9179-9c8852ca4a2b"]
 id = "Actual productive path credit licenses causation of the same bearer in the same respect"
 lean = "CreditWarrantsCause"
 paraphrase = "Open one-way interpretation bridge. When a source has ExerciseContribution.Credit for a patient in a given respect on the specified exercise record and event-to-respect map, that same source bears the external CausesIn relation to the same patient in that respect. Establishing the interpretation requires genuine productive transmission under the attribution in question; mere enabling, an accidental path or a convenient reassignment of labels does not justify it."
-definitions = ["ff8bf1d7-0bf9-5dda-8038-7127e3d46ec8", "7b20df90-a3d9-41c7-be8b-1d2beb5b995a"]
+definitions = ["ff8bf1d7-0bf9-5dda-8038-7127e3d46ec8", "7b20df90-a3d9-41c7-be8b-1d2beb5b995a", "211a6432-8b8f-53ed-85e3-75173bb15b24"]
 
 [[argument]]
 id = "Trace productive ancestry by descent through earlier covered inputs"
