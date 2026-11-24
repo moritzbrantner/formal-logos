@@ -21,6 +21,11 @@ theorem composeOfPerSe {B P R : Type} (f : Profile B P R) (AsCaused : B → B �
   · have linkAB : ActualEsseCause f a b := ⟨distinct, actualA, linkBC.2.1, givesAB⟩
     exact hPerSe a b c linkAB ⟨linkBC, hBridge b c linkBC ⟨a, linkAB⟩⟩
 
+theorem restrictComposition {B P R : Type} (f : Profile B P R) (AsCaused : B → B → Prop)
+    (hFull : ActualEsseCauseComposes f) : PerSeComposition f AsCaused := by
+  intro a b c hab hbc
+  exact hFull a b c hab.2.1 hab.2.2.2 hbc.1
+
 theorem perSeOfApplication {B P R : Type} (f : Profile B P R) (AsCaused : B → B → Prop)
     (Through : B → B → B → Prop) (hCredit : AppliedGiverComposes f Through)
     (hAlign : EachGiverApplies f AsCaused Through) : PerSeComposition f AsCaused := by

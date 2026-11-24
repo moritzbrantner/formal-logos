@@ -75,8 +75,9 @@ def Background (both : Bool) : Prop :=
   AppliedGiverComposes (profile both) (through both)
 
 /-- Give only the supporter the application, then add application AND the
-corresponding effective edge for the source. Both settings keep the two
-original givers to the producer and the producer's per se outgoing edge. -/
+corresponding effective edge for the source. A third assignment retains the
+added edge while withholding source application. Every row keeps the original
+givers to the producer and the producer's per se outgoing edge. -/
 def Certificate : Prop :=
   Background false ∧ ¬ through false .source .producer .recipient ∧
   ¬ (profile false).CausesIn .source .recipient () ∧
@@ -85,6 +86,9 @@ def Certificate : Prop :=
   Background true ∧ through true .source .producer .recipient ∧
   (profile true).CausesIn .source .recipient () ∧
   EachGiverApplies (profile true) asCaused (through true) ∧
-  PerSeComposition (profile true) asCaused ∧ ActualEsseCauseComposes (profile true)
+  PerSeComposition (profile true) asCaused ∧ ActualEsseCauseComposes (profile true) ∧
+  (∀ b c, asCaused b c ↔ ∃ a, ActualEsseCause (profile true) a b ∧ through false a b c) ∧
+  AppliedGiverComposes (profile true) (through false) ∧
+  ¬ EachGiverApplies (profile true) asCaused (through false)
 end Control
 end TruthCore.Causality.GiverIndexedApplication

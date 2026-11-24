@@ -13,10 +13,17 @@ theorem composeOfPerSe {B P R : Type} (f : Profile B P R) (AsCaused : B → B �
     (hPerSe : PerSeComposition f AsCaused) : ActualEsseCauseComposes f := by
   sorry
 
+theorem restrictComposition {B P R : Type} (f : Profile B P R) (AsCaused : B → B → Prop)
+    (hFull : ActualEsseCauseComposes f) : PerSeComposition f AsCaused := by
+  sorry
+
 theorem perSeOfApplication {B P R : Type} (f : Profile B P R) (AsCaused : B → B → Prop)
     (Through : B → B → B → Prop) (hCredit : AppliedGiverComposes f Through)
     (hAlign : EachGiverApplies f AsCaused Through) : PerSeComposition f AsCaused := by
   sorry
+
+open TruthCore.Case.Catholicism (TransferRole transferFourForallDecidable)
+attribute [local instance] transferFourForallDecidable
 
 theorem controls : Control.Certificate := by
   sorry
