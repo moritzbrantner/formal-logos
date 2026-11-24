@@ -1,0 +1,348 @@
+{
+  "schema_version": 1,
+  "title": "Bounded second-hop premise retrieval on frozen known consequences",
+  "baseline_revision": "00d3e61cfb7e8f32e89a8444499b065ad370116f",
+  "branch_base_revision": "6ecc2d87c3576906cb32ea8dbbca22e7557cce6b",
+  "evaluation_corpus_revision": "00d3e61cfb7e8f32e89a8444499b065ad370116f",
+  "cohort_frozen": "2026-11-24",
+  "purpose": "Compare first-hop ranking with bounded second-hop backfill on the same curated corpus. This fixture supplies reference AND bundles for evaluation, not premises or theorem hints to ranked discovery. It changes no statement, meaning, proof, source attribution or philosophical warrant.",
+  "selection": {
+    "fresh_target_count": 12,
+    "method": "The independent semantic audit selected the initial nine-target cohort, excluded the previously investigated distinct-esse target 96971e31-4782-4478-95b8-b6863a6a9412, and added mereology, intentionality, generic unique existence and the eligible-uptake negative neighborhood. The coordinator froze these twelve targets before their production-ranker outcomes or engine edits. Keep every case after outcomes, including full-cap, unsuccessful and semantically blocked cases.",
+    "independence": "None of the twelve target IDs occurred in the baseline scripts/testdata, discovery tests or docs/discover.md when selected. They are existing research, not novel propositions. The assertion/meaning example is development data for this slice; the earlier maximality and causal-ascent cases remain reused controls.",
+    "baseline_question": "Measure which complete reference bundles the first hop retrieves. Do not assume that a semantically chosen held-out case has a retrieval omission or that bounded backfill can repair a full candidate list.",
+    "annotation_timing": "The target cohort and its candidate reference routes were selected before production-ranker outcomes. The coordinator reported baseline candidate counts while these reference annotations were being completed, before implementation and proof outcomes. Those counts did not change the cohort or select a favorable reference subset; all three initially inspected two-premise C2 routes are retained. This file contains no measured results."
+  },
+  "discovery_options": {
+    "premise_pool": "all",
+    "candidates": 8,
+    "heartbeats": 10000,
+    "batch": 1,
+    "jobs": 1,
+    "zipperposition": null
+  },
+  "measurement": {
+    "unit": "one target, one ranked candidate list and its separately specified reference bundle",
+    "ranked_variants": [
+      "baseline-first-hop",
+      "bounded-second-hop"
+    ],
+    "equal_budget": "Both variants have a total cap of eight candidates. The candidate rule backfills only unused slots, preserving first-hop choices. A full first-hop list is a no-change control for this bounded rule; it must not be replaced or widened to manufacture a gain.",
+    "primary_metrics": [
+      "complete coverage of every frozen reference AND bundle, reporting primary and alternative routes separately",
+      "number of retrieved reference members divided by required members, with each member's rank or absence",
+      "actual candidate count, ordered IDs and provenance for newly admitted candidates",
+      "retention of the original first-hop candidates, absence of duplicate IDs and exclusion of the target itself"
+    ],
+    "reference_semantics": "All entries in a case's premises array are jointly required for its selected reference route. A partial hit is not a complete bundle. An alternative_reference_bundles entry is a separate sufficient route, never additional conjuncts of the primary route; report each fixed bundle's coverage separately and do not choose a favorable route after outcomes. Compare literal canonical statement IDs, retaining every listed premise including explicit excluded middle wherever present. Do not remove or replace oracle members after proof minimization. Score the ranked list itself, not a later trial's candidates after optional sense-bridge insertion. References are not relevance-complete: another retrieved premise may support a different valid route.",
+    "diagnostics": "Exact reference-bundle and exact negative-pair runs use the existing explicit-premise path only on the integration that contains that capability. They bypass ranking and cannot count as ranked retrieval gains. The production retrieval change does not depend on the exact-premise feature. No cited Solution theorem, known proof or custom lemma is passed as a premise or solver hint.",
+    "proof_budget": "When proof diagnostics are run, keep the same solver, 10000 heartbeats in the CLI's thousands unit, one job and one target per batch. This budget is fixed before proof outcomes; report supplemental budgets separately. Ranking coverage is the primary retrieval result, not a prediction of proof-search success.",
+    "proof_case_rule": "Run before/after proof diagnostics for every underfilled baseline case, including development and negative-neighborhood cases, without selecting by expected success. Full-list cases retain identical ranked inputs under backfill-only expansion; reuse unchanged proof evidence instead of rerunning it. The exact literal-pair diagnostic remains separate. A known-filtered proof is a recovery, not an emitted certified discovery; report the actual certification and filter status.",
+    "separate_outcomes": [
+      "retrieved reference coverage",
+      "authored sense compatibility, shared-frame binding and any name-only carrier obligations",
+      "proved, unresolved, unavailable or error, with retained premise IDs",
+      "known-route, transcription, literal-negation, incompatibility, vacuity and other certification filters"
+    ],
+    "negative_oracle": "The all-pool negative-neighborhood run is not a non-entailment test: other pool premises may legitimately support its target. Its separate exact P/negation-P diagnostic must never be accepted as support; a reconstructed proof using that pair should be filtered as literal_negation. Unresolved search is not a passing demonstration that the filter ran.",
+    "novelty": "Every positive reference route is already registered or historically recorded. Recovery is known-route retrieval or rediscovery, never a new philosophical result. Proof under open premises does not establish those premises, an actual witness or a root conclusion.",
+    "reproducibility": "Use the same evaluation-corpus revision and complete Lean-exported dependency-closed vocabulary for both engines. Record exact engine revisions, vocabulary and fixture hashes, toolchain and environment identities with raw reports outside tracked source. Do not replace the production ranker with an approximate scoring implementation.",
+    "informational_only": [
+      "shared-runner wall-clock duration",
+      "output bytes"
+    ],
+    "failure_reporting": "Keep all frozen cases in the report. Missing exports, unsupported vocabulary or unavailable tooling are not unresolved logical goals or successes. Failure to prove a known implication does not show non-entailment. Candidate coverage does not discharge semantic identifications or warrant obligations."
+  },
+  "cases": [
+    {
+      "id": "eligible-uptake-warrant",
+      "role": "held-out",
+      "family": "Epistemic warrant and eligible uptake",
+      "target": "6280fbf0-551a-46f5-8e0a-a65410c86a64",
+      "premises": [
+        "38eb1610-1b62-4fbe-9d7c-21dc2bf29fa7",
+        "cf57c52c-c519-49c0-9536-d5fa8a9c9bac"
+      ],
+      "provenance": {
+        "argument": "86b5bf89-606a-4e92-94b6-6dc4633df5fe",
+        "result": "1db47fd9-6ab1-4fa1-a9dd-0aa9457d8146",
+        "theorem_reference_only": "TruthCore.Results.Logic.EpistemicUnderminers.eligibleReasonUptakeYieldsWarrant",
+        "vocabulary_module": "TruthCore.Logic.EpistemicUnderminers",
+        "reading": "SomeEligibleReasonUptake AND EligibleReasonUptakeWarrants imply SomeJustifiedBelief. An actual belief, a reason and the independently supplied eligibility condition occur together; the explicit warrant bridge applies to that case."
+      },
+      "semantic_boundary": "The declarations share the same module and named relations. Warrant need not imply truth. The conclusion is not licensed by a bare reason or a bare belief, and this case introduces no assertion/meaning identification."
+    },
+    {
+      "id": "goal-relative-authority-exclusion",
+      "role": "held-out",
+      "family": "Preference-independent epistemic authority",
+      "target": "8c6a14f8-5df6-4c29-916f-25185a160415",
+      "premises": [
+        "0c1a5185-eb02-4905-be59-2bb4d8f95ff7",
+        "d9f96be1-e2bb-4446-8cb5-b75330323dfc"
+      ],
+      "provenance": {
+        "argument": "a2a12365-d64a-452a-a6f3-5a3999c3440a",
+        "result": "3f585aa7-636f-4a79-8eab-3f7925367f8d",
+        "theorem_reference_only": "TruthCore.Results.Logic.EpistemicAuthority.goalRelativeExcludesAuthority",
+        "vocabulary_module": "TruthCore.Logic.EpistemicAuthority",
+        "reading": "GoalRelativeForce AND IndifferenceAvailable imply NoPreferenceIndependentReason in the same supplied Frame and with the same accuracy-aim predicate."
+      },
+      "semantic_boundary": "The indifference witness ranges over supplied preference alternatives. The conclusion denies force across every such alternative, not actual normative force or all epistemic reasons. Both premises are analyst inputs with attribution deferred."
+    },
+    {
+      "id": "goal-relative-actual-force",
+      "role": "held-out",
+      "family": "Preference-independent epistemic authority",
+      "target": "b391c809-50b9-488c-909d-6ba6658b989e",
+      "premises": [
+        "0c1a5185-eb02-4905-be59-2bb4d8f95ff7",
+        "d92ee0fc-2b21-4e73-8fdb-4cf3fa2f5c4b"
+      ],
+      "provenance": {
+        "argument": "1eae5cd6-1f4c-4537-9807-dff6806e9cfa",
+        "result": "3f888d00-c940-4bf3-99d7-faa342b42ed5",
+        "theorem_reference_only": "TruthCore.Results.Logic.EpistemicAuthority.concessionFromGoalRelative",
+        "vocabulary_module": "TruthCore.Logic.EpistemicAuthority",
+        "reading": "GoalRelativeForce AND AimedOrdinaryBelief imply ActualForceConcession for the same frame and aim."
+      },
+      "semantic_boundary": "The actual preference has the aim in the supplied witness. Actual force is not preference independence. This case and goal-relative-authority-exclusion share a family and a premise; count their coverage separately without presenting them as independent philosophical corroboration."
+    },
+    {
+      "id": "within-history-mismatch",
+      "role": "held-out",
+      "family": "Darwinian epistemic tracking",
+      "target": "c830e937-36c6-4471-a60b-40f205ce2b80",
+      "premises": [
+        "af1256e2-dcaa-48f5-975f-db90c0452667",
+        "d6708411-c173-473c-859d-c4bfc12d4a0f"
+      ],
+      "provenance": {
+        "argument": "c2f05fd1-4cdc-4c7f-ab84-3957272c9ee0",
+        "result": "8be398bc-ab7e-41ea-b40f-50e97d1728fc",
+        "theorem_reference_only": "TruthCore.Results.Logic.DarwinianEpistemicDebunking.selectionWithVariationYieldsMismatch",
+        "vocabulary_module": "TruthCore.Logic.DarwinianEpistemicDebunking",
+        "reading": "SelectionFixesVerdict AND CorrectnessVariesWithinHistory imply HistoryMateMismatch for one supplied DarwinianProfile."
+      },
+      "semantic_boundary": "This is the analyst within-history variant, not Street's fixed-truth first horn. A mistaken verdict somewhere with the actual history does not imply actual inaccuracy, justified defeat or absence of epistemic reasons."
+    },
+    {
+      "id": "history-fixed-accuracy",
+      "role": "held-out",
+      "family": "Darwinian epistemic tracking",
+      "target": "475beacf-c221-4a4a-a3b1-d7ba449963c1",
+      "premises": [
+        "af1256e2-dcaa-48f5-975f-db90c0452667",
+        "d2db118a-bb7b-49c5-8cef-00b2dc44412c",
+        "2602100d-99e9-4641-be2d-76c679b037ea"
+      ],
+      "provenance": {
+        "argument": "d1691cbe-0b0c-4ddc-a2e4-bc98bd2f3a77",
+        "result": "6e78b91c-a3c4-4904-b740-245dadb12466",
+        "theorem_reference_only": "TruthCore.Results.Logic.DarwinianEpistemicDebunking.historyFixedCorrectnessKeepsHistoryMatesAccurate",
+        "vocabulary_module": "TruthCore.Logic.DarwinianEpistemicDebunking",
+        "reading": "SelectionFixesVerdict AND CorrectnessFixedByHistory AND ActuallyAccurate imply HistoryMatesAccurate for the same profile."
+      },
+      "semantic_boundary": "Actual accuracy is a separate substantive input. The result does not establish it or select constructivism, functionalism or realism. It shares a profile vocabulary and selection premise with within-history-mismatch."
+    },
+    {
+      "id": "cross-history-mismatch",
+      "role": "held-out",
+      "family": "Darwinian epistemic tracking",
+      "target": "fe53f4ab-dba8-4995-9e7b-7e52030a397b",
+      "premises": [
+        "898b25e5-8d32-4188-8c91-c51deca64529",
+        "f94c7149-699e-4c13-a65e-c4aad5c2a9af"
+      ],
+      "provenance": {
+        "argument": "766d05ed-3fad-4dbb-9f12-410b92d788ce",
+        "result": "28051e37-ddea-4080-b5ff-7134e7d90b3d",
+        "theorem_reference_only": "TruthCore.Results.Logic.DarwinianEpistemicDebunking.CrossHistory.fixedTruthWithHistoryVariationYieldsMismatch",
+        "vocabulary_module": "TruthCore.Logic.DarwinianEpistemicDebunking",
+        "reading": "CorrectnessConstant AND VerdictVariesAcrossHistories imply ScenarioMismatch."
+      },
+      "semantic_boundary": "This is an analyst formulation of the non-probabilistic fixed-truth horn. The erroneous scenario can have another history. No probability, actual error, epistemic defeat or identification with the within-history variant is supplied."
+    },
+    {
+      "id": "moral-truth-aptness-error",
+      "role": "held-out",
+      "family": "Moral error and truth-aptness",
+      "target": "7989856a-8191-58e9-aabf-9ef91df5d2cc",
+      "premises": [
+        "153a1380-89f3-56a5-bd02-6e0971e2c155",
+        "8422ff2a-5633-543c-9530-a110ea40bc09"
+      ],
+      "provenance": {
+        "argument": "6a2b193c-35eb-5881-bba8-f3d89c5942f6",
+        "result": "5a5af63c-721b-56b4-8fa3-c2ba5682946e",
+        "theorem_reference_only": "TruthCore.Results.Comparison.MoralError.AquinasGermansErred.aquinasGermansErred",
+        "vocabulary_modules": [
+          "TruthCore.Metaethics",
+          "TruthCore.Latin.Aquinas.SummaTheologiae"
+        ],
+        "reading": "MoralJudgmentsAreTruthAptReading AND GermansHeldRobberyNotUnjustReading imply SomeMoralError. The registered reading includes the moral judgment's acceptance and its not holding."
+      },
+      "semantic_boundary": "These are existing source-reading premises, not newly verified historical or moral facts. The inference does not prove the natural-law judgment on which the falsity premise rests. Cross-module Agent/Sentence carriers have no matching authored parameter tags in this fixture; report name-only identification obligations separately from coverage and do not repair them silently."
+    },
+    {
+      "id": "contingency-prior-cause-disjunction",
+      "role": "held-out",
+      "family": "Contingency and existential reception",
+      "target": "6508c239-b36d-4010-b9e4-ff0cdd5757e5",
+      "premises": [
+        "8a8d00e9-12b6-4cf0-b662-431cc4addd49",
+        "ee74c678-0a06-47d3-9c76-27ff798e9a01"
+      ],
+      "provenance": {
+        "argument": "61924ce7-f9db-4bc4-a7b1-c708d480bfce",
+        "result": "560b0d8d-9f94-49c3-aaf7-d2c10df87a09",
+        "theorem_reference_only": "TruthCore.Results.Causality.ContingencyGrounding.c2FromEsseCause",
+        "vocabulary_module": "TruthCore.Causality.ContingencyGrounding",
+        "reading": "ContingentHasDistinctEsseCause (B2) AND DistinctEsseCausePriority (B3) imply ContingentReceptiveOrReceivedFromPrior (C2), through its distinct prior-cause disjunct."
+      },
+      "alternative_reference_bundles": [
+        {
+          "premises": [
+            "ae9d9473-34f1-4b51-8f13-41d340d64ad1",
+            "7fcfcee8-86ab-5a16-84ad-124cf5e8f9b2"
+          ],
+          "argument": "38394aad-234f-402c-994f-3d451636c15b",
+          "result": "61a1edec-52d7-420f-9f73-0474c90409b6",
+          "theorem_reference_only": "TruthCore.Results.Causality.ContingencyGrounding.c2FromReception",
+          "reading": "ContingentReceivesEsse (R1) AND ReceiverInPotencyToReceivedEsseReading imply C2 through its existentially receptive disjunct. This is a separate alternative to the primary B2/B3 bundle."
+        },
+        {
+          "premises": [
+            "8478f367-4aa4-4c75-a9db-de6871868f53",
+            "ee74c678-0a06-47d3-9c76-27ff798e9a01"
+          ],
+          "argument": "0a06cc95-90eb-47d8-a42c-57e52c0aa458",
+          "result": "8890e569-15cc-49cd-8b25-a3d33429abe2",
+          "theorem_reference_only": "TruthCore.Results.Causality.ContingencyGrounding.c2FromWeakAndPriority",
+          "reading": "ContingentReceptiveOrReceived (C2-minus) AND DistinctEsseCausePriority (B3) imply C2 by adding simple priority to its distinct-cause disjunct. This is a third separate two-premise route, not a replacement for either other frozen bundle."
+        }
+      ],
+      "semantic_boundary": "Keep the shared CausalityFrame, selected world and represented esse fixed. Distinct esse-causation, simple priority and receptive potency retain their existing senses. These registered routes are instantiations and establish no premise; do not turn retrieval into a new necessity or God-existence claim."
+    },
+    {
+      "id": "weak-plus-binary-supplementation",
+      "role": "held-out",
+      "family": "Mereology and supplementation",
+      "target": "bf4167dc-dfc4-5b13-a110-0a52c89d4a65",
+      "premises": [
+        "0880e645-8d9b-5edf-9de6-8b628424716f",
+        "939381cb-9f18-5c8d-9828-46cd07bd730c"
+      ],
+      "provenance": {
+        "argument": "c1bbbbe9-e71f-5b8f-bcff-2058cadd0afe",
+        "result": "758c2449-d17b-5c65-a6d8-58443f831997",
+        "theorem_reference_only": "TruthCore.Results.Mereology.SupplementationFusion.strongFromWeakBinary",
+        "vocabulary_module": "TruthCore.Mereology.SupplementationFusion",
+        "reading": "WeakSupplementation AND BinaryFusion imply StrongSupplementation in one supplied partial order, using the existing common-part Overlap and Sum2 fusion."
+      },
+      "semantic_boundary": "The PartialOrder instance is framework structure, not a newly inferred premise. Binary Sum2 is not overlap-only Sum3, unrestricted fusion, atomism or a modal ontology. Existing order lemmas needed by proof search are not supplied as hints."
+    },
+    {
+      "id": "intentional-error-report-only",
+      "role": "held-out",
+      "family": "Intentionality and content evaluation",
+      "target": "53716090-75ba-5ac0-882b-982f70e617a0",
+      "premises": [
+        "4e3da10c-68cf-5ee0-babc-a2fe971c89e2",
+        "ae2c0d17-cce2-527b-9dfa-d3c8d6850f51"
+      ],
+      "provenance": {
+        "argument": "71e94213-122f-5233-8a73-5387fe003d63",
+        "result": "2d5578c3-f6cb-532b-a594-6e0013e7603d",
+        "theorem_reference_only": "TruthCore.Results.Comparison.Intentionality943.rejectAffectionOnly",
+        "vocabulary_module": "TruthCore.Alternatives.Intentionality943",
+        "reading": "SomeError AND AffectionReportCorrect imply RejectContentOnlyAffection on the same occurrence/kind frame and content/situation semantics."
+      },
+      "semantic_boundary": "AffectionReportCorrect is the qualified report at an occurring target token. The rejected identification concerns truth conditions, not mental/physical token identity. The result does not derive a nonphysical subject, deny physicalism generally or attribute these universals to a historical author."
+    },
+    {
+      "id": "generic-unique-existence",
+      "role": "held-out",
+      "family": "Generic logical strength and uniqueness",
+      "target": "f976f890-aba8-59cb-a312-1feaf833e727",
+      "premises": [
+        "6694be77-c7b2-5199-b1e8-514e640c491c",
+        "a0c179aa-43a0-5c0a-8b80-55cbfab4a6b5"
+      ],
+      "provenance": {
+        "argument": "4979a72c-6dea-597b-9272-932c64aedc01",
+        "result": "9884d1dc-d038-5308-8d13-fc507afaa0cb",
+        "theorem_reference_only": "TruthCore.Results.Logic.StrengthUnique.reconstruction",
+        "vocabulary_module": "TruthCore.Logic.Strength.UniqueExistence",
+        "reading": "Exists AND AtMostOne imply Unique for one arbitrary supplied type and predicate."
+      },
+      "semantic_boundary": "This is a generic mathematical fixture, not an existence thesis about God or any other philosophical subject. Shared logical form does not authorize identifying its predicate with another corpus predicate."
+    },
+    {
+      "id": "eligible-uptake-negative-neighborhood",
+      "role": "negative-neighborhood",
+      "family": "Epistemic warrant and eligible uptake",
+      "target": "38eb1610-1b62-4fbe-9d7c-21dc2bf29fa7",
+      "premises": [],
+      "negative_neighbors": [
+        "6280fbf0-551a-46f5-8e0a-a65410c86a64",
+        "cbe1661b-1b9e-4200-b97d-0b8464a323d8"
+      ],
+      "provenance": {
+        "vocabulary_module": "TruthCore.Logic.EpistemicUnderminers",
+        "declaration_file": "TruthCore/Logic/EpistemicUnderminers.lean",
+        "reading": "SomeJustifiedBelief and NoJustifiedBeliefs are an exact P/negation-P pair: NoJustifiedBeliefs unfolds to the negation of SomeJustifiedBelief. SomeEligibleReasonUptake additionally mentions the supplied Reason and Eligible relations."
+      },
+      "exact_diagnostic": {
+        "premises": [
+          "6280fbf0-551a-46f5-8e0a-a65410c86a64",
+          "cbe1661b-1b9e-4200-b97d-0b8464a323d8"
+        ],
+        "execution_scope": "Separate explicit-premise diagnostic on the integration containing PR #1928; the excluded ranking path is reused unchanged.",
+        "expected": "A proof from this exact contradictory pair is filtered as literal_negation and is neither support nor a newly discovered incompatibility. Record unresolved/unavailable separately if no such proof is reconstructed."
+      },
+      "semantic_boundary": "The ranked all-pool run is an adversarial-neighbor observation, not a non-entailment oracle. Other retrieved premises can legitimately support the target. Do not demand failure from an otherwise sound retained bundle, and do not count explosion from the literal pair as support."
+    }
+  ],
+  "reused_controls": [
+    {
+      "id": "assertion-meaning-development",
+      "role": "development",
+      "target": "f7e3ad49-3140-4fdf-9a83-1156243cb701",
+      "premises": [
+        "b45ca9db-0bf2-40d3-819c-44dc4e2cef5c",
+        "42114721-87d8-44b7-8057-255c732fd7df"
+      ],
+      "argument": "8a3dcfc2-f986-4356-bfca-138d664879ce",
+      "result": "bec15d81-9f10-4b58-a280-2da08ef0c7ac",
+      "boundary": "The assertion witness and local meaning bridge are already a development example for this slice. Any recovery is known and is excluded from fresh held-out totals."
+    },
+    {
+      "id": "maximality-full-list-control",
+      "role": "already-full-control",
+      "target": "4c79298d-ee09-5e99-9ced-1be92c19b4cc",
+      "premises": [
+        "18561596-1269-53ff-8505-c56e4348e335",
+        "fad8af3e-3e4e-582a-a592-0164bdd62527",
+        "86d02b69-87eb-5594-9958-ccaa5fe6b685"
+      ],
+      "provenance": "Previously investigated case A in scripts/testdata/discovery-benchmark.json at the evaluation-corpus revision; corpus/attempts/discover-adaptive-repair-fourth-way-20261122.json records its history.",
+      "boundary": "Retain the existing first-hop full list. Prior carrier curation and known conditional support are not new second-hop outcomes; this reused case is excluded from held-out totals."
+    },
+    {
+      "id": "causal-ascent-full-list-control",
+      "role": "already-full-control",
+      "target": "6c27657f-a2bf-5c1d-963c-c154b66bfa85",
+      "premises": [
+        "c11369aa-7c3d-5dea-8421-535d5b4b3104",
+        "d5a94eb1-72d2-53e0-9a52-9787b5b61a8d",
+        "f29a6b53-475f-5a28-9224-8ca5d7484366",
+        "5cda1946-b22e-52dc-9524-a3611c63585c",
+        "ee4ab504-c8fe-59bc-bc96-7cbeefed6410"
+      ],
+      "argument": "1dff22d0-34f1-5244-bc7d-2b0c978db109",
+      "result": "1b988b36-9c72-5611-9f1a-3c4ca22578e4",
+      "boundary": "Previously investigated case D. A full candidate list does not mean full reference coverage. Retain the first-hop list under backfill-only expansion, and keep its well-founded proof-search limitation separate from retrieval."
+    }
+  ]
+}
