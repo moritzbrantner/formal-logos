@@ -38,10 +38,10 @@
     "assessment": "For acyclic distinct-step dependence on a populated domain, identity labels and the edge theory reproduce its reversed nonempty finite paths exactly. Independent identification of fact levels can add information. A consistent PLG theory, a map taking every distinct dependence step to strict ground in that theory, alignment of every per se cause with such a step, and finitely many of those labels in each effect’s ancestry suffice for accessibility. Independently tracing ordinary supply gives local direction. A finite inventory covering unrestricted existential ancestry remains unwarranted by those examples.",
     "next_test": "For one effect, justify an inventory of existential roles that covers every upstream supplier, and test the orientation on independently identified transitions and repeated roles.",
     "note": "docs/notes/distinct-dependence-strict-ground-route.md#what-does-a-consistent-representation-add",
-    "reviewed_revision": "90311da4a6c567e7858b6dc0075b89fc79a2ea98",
-    "review": "unreviewed",
-    "publication": "unpublished",
-    "evidence": "Five registered results and the same-series predecessor model test the distinction between structural representation, ancestral finiteness and actual supply.",
+    "reviewed_revision": "ab774b58cc4fcd5b6bebe497cffd979fb220877e",
+    "review": "accepted_qualified",
+    "publication": "published",
+    "evidence": "Independent semantic challenge at ab774b58c accepted the populated-domain, acyclic identity result, the fixed-label criterion and collision control, and all four premises of the regress argument. Five registered results passed binding, Comparator and NanoDa. The reviewed outcome is published on research/comparing-explanatory-representations.",
     "supersedes": "The earlier status of the converse as proposed and of the finite-atom pullback as unchecked. The philosophical warrant for the selected interpretation remains open."
   }
 }
