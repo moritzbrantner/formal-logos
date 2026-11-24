@@ -93,7 +93,7 @@ theorem acc_exists_transGen {P Stop : α → Prop}
     · obtain ⟨n, hn, hnz⟩ := ih z hz hpz
       exact ⟨n, hn, .tail hnz hz⟩
 
-/-- Purely structural descent with a mark:if every marked bearer of `P` has a
+/-- Purely structural descent with a mark: if every marked bearer of `P` has a
 predecessor bearing `P`, and the mark is decided on bearers of `P`, an
 unmarked bearer of `P` lies below. The decision `em` is a hypothesis, so no
 classical axiom is used. -/
