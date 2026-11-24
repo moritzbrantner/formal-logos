@@ -3089,3 +3089,105 @@ inertia citation; F8, a code span; F9, the frontier-diff record; F10, the
 countermodel's target. The scoped assessment records the review as
 `changes_requested` on that head, with repairs pending the coordinator's
 re-check; it remains `unpublished`.
+
+
+## Closed-cone selection without a quantitative transfer ledger (2026-11-25; draft)
+
+**Scope and baseline.** Continue #1724, #1616, #1882, #1964, #1965 and the
+still-open #1966, from main `e7073368fcd87fb5be224b6bb7971a55f5316f40`.
+This is an analyst reconstruction, not a source attribution or a registered
+Lean result. Targets: `20babef7` (all nonempty actual-esse-cause-closed
+collections rooted), `5c898d24` (whole actual-concrete roster nontrapping),
+`dc397705` (some actual-concrete ground-relative root). These are not
+interchangeable: the first fixes q3a4's tenseless `ActualEsseCause`; the
+latter two fix `m.grounds w` with actual-concrete endpoint guards.
+`ClosedEsseSource.esseCauseGraph` is an exact adapter on its own singleton
+index, not a bridge to an independently supplied world-relative profile.
+The selected relation must be exhaustive for the productive respect in
+question before a relation-relative root is called existentially underived.
+
+### Checkpoint A: delete a whole closed cone rather than the whole roster
+
+The all-state selection result of #1878 shows that an entirely borrowed
+activation rule admits the empty state. #1883 already shows why a global
+nonemptiness restriction changes that test, and #1964 distinguishes
+whole-roster nontrapping from actual-root existence and the stronger
+all-collections cut. Do not repeat these results. The new candidate test
+asks whether **a particular actual member** is forced by the productive
+rules when an unrelated, independently supplied component remains present.
+It avoids requiring uniqueness of the whole configuration, finiteness,
+strict descent, additive throughput or exclusive receipt use.
+
+Fix a nonempty actual roster A, and the selected actual supplier relation
+R on A. For the structural test let F : P(A) -> P(A) be a monotone
+activation operator (inclusion order). A is the designated fixed
+assignment. Other assignments are mathematical substates, not automatically
+possible worlds. Require this **uniform positive-input guard**:
+
+    for every U subset of A and every x in A with an incoming R-edge,
+    x in F(U) implies there is c in U with R(c,x).
+
+The guard is one-way, allowing real joint contributions, duplication and
+additional enabling conditions. It is stronger than coverage at the
+designated actual assignment: it freezes the potential supplier menu to
+actual R-edges and constrains every candidate assignment. A genuinely
+different producer in another state, or a change in the identity of the
+bearer, is not silently excluded in a metaphysical application.
+
+Let C be nonempty, closed under every incoming R-edge, and have no R-root.
+Put U = A minus C. If x in C were in F(U), the guard gives a predecessor in
+U, but closure puts that predecessor in C. Hence F(U) is a subset of U.
+
+There is a fixed assignment contained in U, including when A and C are
+infinite and R has cycles:
+
+1. Let V be the union of all S subset of U with S subset of F(S).
+2. Every such S is included in F(V) by monotonicity; therefore V is
+   included in F(V).
+3. F(V) is included in F(U), hence in U. By monotonicity it is itself
+   postfixed, so F(V) is included in V.
+4. Thus F(V) = V, and every x in C is absent from V.
+
+This is the greatest fixed substate contained in U. The union is legitimate
+on the stipulated powerset; the empty set is postfixed, so this argument
+does not presuppose an inhabited survivor. If there is a nonempty postfixed
+S0 contained in U, the very same V contains S0 and is populated. One
+independently activated outside bearer suffices (its singleton is postfixed).
+Neither a relative R-root by itself nor an independently named law entails
+this activation condition.
+
+**Consequences to check in Lean.** If an actual x is present in every fixed
+assignment in this test (or in every populated fixed assignment when an
+outside postfixed witness is given for the tested cone), no R-closed
+rootless C containing x is compatible with those assumptions. If that
+invariance holds for every actual x against all fixed assignments, every
+nonempty closed collection contains a root, classically. With the exact
+q3a4 R-adapter this is the proposed conditional application to 20babef7;
+with the actual-concrete relation and C=A it gives the whole-roster
+nontrapping conclusion, and population plus the appropriate stability/EM
+gives dc397705. C=A admits no nonempty outside witness; the populated-only
+version does not prove whole-roster nontrapping. These are proposed
+deductions, not verified corpus arrows. The direct premise options remain.
+
+The proof is a localized fixed-point bound, related to
+`Logic.Regress.Graph` and #1878, not an independent discovery of
+fixed-point existence. Its increment is the exact combination of
+**closed-cone deletion, monotone greatest survivor, and targeted invariance
+among even populated alternatives**. It can diagnose a rootless component
+beside an unrelated source, where whole-roster root existence and global
+nonemptiness cannot. The candidate invariance is weaker than uniqueness
+when other components may vary; it is not furnished by a local causal
+explanation or by the mere fact that x actually exists.
+
+**Claim/type self-sweep (informal).** The conclusion is existence of a
+fixed mathematical substate omitting C, not possible nonexistence, temporal
+destruction, a physically realizable intervention or an actuality-producing
+operation. If one asserts only uniqueness among a restricted admissibility
+class, the constructed substate must be independently admitted before
+using the contradiction. Monotonicity, actual relation closure, uniform
+input guard, and invariance are all explicit; the proof does not infer
+uniform guards from actual edges. Full collection rootedness needs
+invariance for all selected members, not merely one. Independent semantic
+challenge and Lean/Comparator/NanoDa/corpus verification are pending;
+no new corpus argument or philosophical establishment is claimed.
+
