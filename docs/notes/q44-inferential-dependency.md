@@ -1091,3 +1091,56 @@ The existing `sourceSupplyFromCommon` consumer can use the resulting `b4987085` 
 **Independent challenge.** Review of `5b864f4dc5d0969592973b3e978d969e8dd40292` identified the distinct-route case and the difference between efficient application and the mode-unspecified q3 relation. Re-review accepted `020f500b690824419b56e38f98e6b598b2b8dfb0` with the third assignment and the constructive restriction projection. The computed comparison to `dee9abb04` adds one verified conditional support alternative for `b4987085`. Its dossier reports “proved; established: false”. The new inputs and the philosophical alignment question remain open. [Attempt and result references](../../corpus/attempts/4adbd36c-854c-408f-b72f-857f9922668a.json)
 
 The [comparison of application, immediate concurrence and conservation](actuality-esse-research.md#11-does-the-giver-act-through-the-secondary-agent-in-this-effect) examines whether contributing to the same effect can justify credit even when the named source does not bring the secondary power into exercise.
+
+### Can the effect alone locate the giver's contribution?
+
+Fix the named giver, secondary producer and patient in one actual occasion. Two questions are at issue. Does the giver contribute to the patient's result? Does its contribution to that result enter **through this producer's exercise**? The second question matters to `d851dbc6`, which extends the attribution to *every* qualifying upstream giver. Its q3 type has no occasion parameter. Applying it to a particular exercise requires a reading under which the selected relation concerns that exercise; agreement about the bearers alone cannot pick a repeated occurrence.
+
+**Test with the actual corpus meanings.** Give the proponent even unrestricted composition of actual esse causes (`b4987085`), the binary caused-cause bridge (`e74de400`), and credit whenever a named giver applies the intermediate (`6dd808ed`). These statements pass the sense preflight together. All three are true in the **same** four-role interpretation of the existing [control certificate](../../TruthCore/Results/Causality/GiverIndexedApplication/Solution.lean). The source gives esse to the producer and the recipient. The supporter applies the producer in its per se production of the recipient. The source does not. The distinction survives even when the binary marker is exactly the projection of application by some actual upstream giver. The following projection from the existing proof type-checks locally without axioms. It identifies an invalid inference at the declared meanings; which interpretation applies to a real existential giver remains open.
+
+```lean
+import TruthCore.Results.Causality.GiverIndexedApplication.Solution
+open TruthCore.Latin.Aquinas.DeEnte
+open TruthCore.Causality.Q44SourceSupply
+open TruthCore.Causality.GiverIndexedApplication
+open TruthCore.Causality.GiverIndexedApplication.Control
+theorem exactBundleControl :
+    CausedEsseCauseCausesAsCaused (profile true) asCaused ∧
+    AppliedGiverComposes (profile true) (through false) ∧
+    ActualEsseCauseComposes (profile true) ∧
+    ¬ EachGiverApplies (profile true) asCaused (through false) := by
+  obtain ⟨_, _, _, _, _, _, bg, _, _, _, _, comp, _, credit, failure⟩ :=
+    TruthCore.Results.Causality.GiverIndexedApplication.controls
+  exact ⟨bg.2.2.2.2.2.1, credit, comp, failure⟩
+```
+
+On revision `ba741f5cd`, Duper ran with 10,000 heartbeats, one job and a batch size of one. Ranked discovery (`--premise-pool all --candidates 8`) retrieved all three exact-bundle members among its eight candidates. The exact run explicitly supplied `e74de400`, `6dd808ed`, `b4987085` in that order. Both ran one goal, returned unresolved and reported no setup errors. Both reports include name-based binder identifications. The independent Lean projection fixes the profile and relations explicitly and establishes non-entailment for the exact three premises. The search outcomes alone do not establish non-entailment for the ranked eight or for other candidate bundles.
+
+**A test that grants selective input dependence.** In an instrumented press, distinguish the giver's working input `g` from the upkeep that keeps the press in existence. Let `p` represent the producer's local readiness, `s` its effective stroke and `y` the patient's mark. Two rival mechanisms give the mark exactly the same response to **every** combination of the two inputs. In one the selected input transmits force to the ram. In the other the ram strokes independently while a second contribution is needed at the patient, for example an independently powered backing plate required to receive the imprint. Keep the actual input, stroke and mark present in both. These are deliberately simplified productive mechanisms. The second represents independent execution at the producer with joint production at the patient; a source doing mere upkeep would have a different role again.
+
+| Mechanism | Stroke | Patient's mark | Withhold working input, keep readiness | Hold stroke present while withholding working input |
+| --- | --- | --- | --- | --- |
+| Through the producer | `s = g ∧ p` | `y = s` | Stroke and mark cease | Mark occurs |
+| At the patient alongside the producer | `s = p` | `y = g ∧ s` | Stroke persists, mark ceases | Mark ceases |
+
+Thus, even selective loss of the mark and an actual observed stroke give the same answers before locating the path. Observing what happens **at the stroke** under selective withdrawal already distinguishes these mechanisms. If the stroke can instead be driven independently, the last column tests whether the mark still needs the giver's input when the stroke is supplied. Both tests assume the other working conditions and patient response can be held fixed. This reuses the [controlled direct effect distinction](causal-transitivity-1399.md) for the named-source question. It complements the [previous press cases](actuality-esse-research.md#11-does-the-giver-act-through-the-secondary-agent-in-this-effect) by giving the rivals the same entire endpoint response table. A local Lean check of the finite equations uses no axioms:
+
+```lean
+namespace ExerciseEndpoint
+-- g is a selected working input. p is the producer's local readiness.
+def mediatedStroke (g p : Bool) := g && p
+def jointStroke (_g p : Bool) := p
+def mediatedEffect (stroke : Bool) := stroke
+def jointEffect (g stroke : Bool) := g && stroke
+theorem endpointAgreement (g p : Bool) :
+    mediatedEffect (mediatedStroke g p) = jointEffect g (jointStroke g p) := rfl
+theorem actualAgreement : mediatedStroke true true = jointStroke true true := rfl
+theorem discriminate : mediatedStroke false true ≠ jointStroke false true ∧
+    mediatedEffect true ≠ jointEffect false true := by decide
+#print axioms endpointAgreement
+#print axioms actualAgreement
+#print axioms discriminate
+end ExerciseEndpoint
+```
+
+**Provisional assessment.** Actual transmission traced from this giver into this producer's exercise is positive evidence of named application, even where other agents share the work. Credit at the endpoint and knowledge that the giver sustains both bearers leave its role in the producer unresolved. The controlled comparison establishes the limits of that evidence even after granting functional dependence of the endpoint on a selective working input. It gives no reason to posit a second action where the agent's operation and the patient's change are numerically one. In that reading the stroke/mark manipulation may be unavailable. The remaining test is to identify a source-specific contribution to the producer *as exercising its power*, for example a measured transmission at its working interface, or an independently warranted account of why receiving this power entails receiving its actual employment in this occasion from the same giver. Showing only that the producer received its nature or that the patient received the result would repeat the existing evidence. The restricted composition assembly `9f2abd14` retains its two explicit inputs. Extension to every respect under `b26c10a0` still requires coverage and an interpretation of each productive contribution in the target profile.
