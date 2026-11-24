@@ -1,0 +1,15 @@
+{
+  "id": "b124c486-f099-4797-a503-5358d26a23e0",
+  "label": "The selected giver bounds participated esse from preserved pure levels (inference)",
+  "input_statement_ids": [
+    "eeb89ffe-5b61-4572-8b35-87adf541bcab",
+    "50da2b49-c914-4c44-a956-1cb134a399f8",
+    "191395d0-e3ac-4aea-bff5-77dd437993b9",
+    "6ab848a8-9dc0-4b5e-a8f2-82dce793fd1a"
+  ],
+  "output_statement_id": "aba6f4e1-bbf1-4aaa-ac1c-dead4efbef09",
+  "rule": "Lift recipient-specific inclusion of realized levels to their least upper bounds",
+  "meaning": "The populated supply premise establishes actuality of the selected giver. At each actual participant the efficient-total bridge and the preservation premise transport every witnessed pure level to that very giver. The calibrated least upper bounds are therefore ordered in the same preorder, without total comparability, attainment of a greatest level, strict causal superiority or the unrestricted adequacy principle. This supplies exactly the represented participant bound used in the greatest-degree argument.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

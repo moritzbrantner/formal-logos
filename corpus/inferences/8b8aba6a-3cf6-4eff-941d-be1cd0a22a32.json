@@ -1,0 +1,15 @@
+{
+  "id": "8b8aba6a-3cf6-4eff-941d-be1cd0a22a32",
+  "label": "Actual identity-source ascent from a pure determination above the recipient's bound (inference)",
+  "input_statement_ids": [
+    "79dce8d6-cc2a-4c72-8898-7df7f9521e0a",
+    "b4caa738-f5e1-490e-95f1-c2f66ad94999",
+    "6ab848a8-9dc0-4b5e-a8f2-82dce793fd1a",
+    "9eaa3b6e-ad2f-5776-ab26-03cfa9f54ad8"
+  ],
+  "output_statement_id": "8176a284-769b-4ed0-b90b-ff655b7fd864",
+  "rule": "Bound the recipient's degree by its nature's capacity and bound the higher item by the giver's degree",
+  "meaning": "For every qualifying actual identity-giver pair, least-upper-bound calibration puts the recipient's degree at or below its nature's stated ceiling and the giver's degree at or above the witnessed level. Strict crossing therefore yields strict order of their own degrees and, by the Unit specialization of the degree-to-more bridge, primitive MoreIn at esse. This gives an application on the identity-source route without assuming absolute limited-to-unlimited comparison. Neither premise about capacity is established by the proof, and it asserts no actual identity giver.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

@@ -1,0 +1,9 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.ParticipatedEsseScale.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ParticipatedEsseScale.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.ParticipatedEsseScale.channelControl"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}
