@@ -1651,3 +1651,375 @@ BX1 are not elaborated or novelty-checked. No new source
 attribution or theorem registration. Independent semantic
 challenge and canonical verification of this continuation
 remain outstanding.
+
+
+## Restricted bruteness: what limits an unreceived act? (2026-11-25)
+
+**Draft continuation; independent semantic challenge outstanding.** Continue
+the actual-order and intrinsic-reason checkpoints above. Reuse #1881's
+explicit R1 decomposition, the
+[unreceived whole-nature comparison](de-ente-esse-source-1628.md#unreceived-esse-and-the-two-questions-about-plurality-2026-11-17),
+[the existing C2 assessment](contingency-receptivity-c2.md), the
+[esse-root limitation assessment](esse-root-leaves.md), and #1811's
+whole-first alternative. This is the contingent-bearer slice of the
+limitation/reception question, not a new proof of uniqueness, simplicity or
+the necessity of all pure acts. No new source attribution.
+
+### 1. Separate the two bridges that #1881 already identified
+
+On the SAME world-relative bearer x, let C be actual modal contingency,
+L be the existing qualitative limitation of the act of esse
+(LIMITED_ESSE_1, definition `6ced5205`), and R be reception of that
+act in some principle. The proposed participation route is
+
+```text
+C  -- OPEN modal-to-real calibration --> L
+L  -- 1304b462 (q.7 reading, open warrant) --> R
+R  -- with scoped R3, receptive potency, irreflexivity --> B6
+R  -- with reception/CAUSE_2 coverage --> distinct cause of esse
+```
+
+R1 is the composite coverage `ContingentReceivesEsse`, statement
+`ae9d9473-34f1-4b51-8f13-41d340d64ad1`. The exact existing
+`contingentDistinctEsseFromReception` proof (`c4bc08b3`) uses
+R1, R3 (`65f3d0c7`), De ente's receiving-principle potency law
+(`7fcfcee8`) and receptive irreflexivity (`14325c83`) to derive
+B6 (`96971e31-4782-4478-95b8-b6863a6a9412`).
+A recipient is a principle, not automatically an external causal bearer.
+The separate result `8d8920ac` additionally needs
+`4bc853db` (coverage by a distinct CAUSE_2 of esse) and
+`7ce040a2` (that cause's presence at the selected world), yielding
+`2f9b4acb`; its projection `d2d55c9b` supplies B2. Neither receipt
+nor limitation alone gives the latter.
+
+A defense of L → R, even a decisive one, would **not** establish C → L.
+No degree of actual qualitative perfection is lost within x merely because
+x is absent in an accessible world; there is no x in that world whose
+qualitative grade has diminished. Conversely an actual finite grade
+need not vary or be absent in any accessible world. Do not identify
+this distinction with "non-being is a degree of being" without a real
+metaphysical calibration.
+
+The earlier `natureModel` result is a distinct route. Soundness of an
+actually adequate world-independent intrinsic existence reason yields the
+bearer's necessity. Being unreceived and having one's own stable
+intrinsic profile do not themselves supply that reason.
+
+### 2. Content for limitation independent of the reception predicate
+
+There are at least three testable meanings of a restriction. Their
+distinction matters precisely at the current frontier; none is silently
+made a new definition of `EsseLimited`.
+
+| Candidate discriminator | Content independent of receipt | Missing calibration |
+| --- | --- | --- |
+| Actual lower grade | A real, positive perfection is realized in a greater degree by a comparable actual bearer | Same respect and measure; being outdone in the selected population need not be intrinsic finitude |
+| Intrinsic qualitative ceiling | A real positive level in the relevant perfection domain is outside the bearer-kind's admissible realized range, not merely absent on this occasion | Positive characterization of the domain, real realizability of the higher level, and its bearing on formal perfection of esse rather than a particular power |
+| Existence-conditional nature | The bearer has a fixed nature whenever it exists, and it is actually present but absent at another accessible world | This is contingency plus essential predication, not an independently observed qualitative limitation |
+
+The second is the strongest candidate for investigating formal limitation
+without defining it by receipt. A mere missing property is not yet a ceiling.
+A mere ceiling on the number of effects, the length of a trajectory, a
+spatial measure or a specialized operation is not yet a ceiling on being
+as act. Treating a pure perfection as a missing element also needs the
+same-sense formal/virtual/eminent distinctions from #1855/#1949.
+See #1952's actual common-giver level comparison (`identityAscentFromCapacity`):
+its receipt ceiling, higher level realized by the same giver, and common
+degree calibration are independently required. Do not use a conclusion
+about degree as evidence that those inputs already hold.
+
+A bounded positive profile nevertheless offers a substantive rival mechanism.
+A primitive typed actuality could have positive essential determinations
+which explain exactly its range of powers. In that ontology the act is
+not a more general power externally curtailed by a recipient. The limit
+of the operation follows from what that primitive power is. The
+existential question remains: why is there an actual bearer of that
+primitive power? This is not an account of limited **esse** without
+receipt, but it explains why an inference from definite character or
+limited operation to a separate limiting principle would be unsound.
+The rival must extend its account to formal perfection of actuality
+itself, not merely to limited powers.
+
+### 3. Matched structural controls: local restriction is not modal vulnerability
+
+The following finite diagnostic extends the populated role-occupancy control
+above. At actuality world 0, B0 and its derivative D0 exist. Every world
+contains exactly one foundational bearer Bi and its essential derivative Di.
+The same fixed law requires Di iff Bi and assigns the local reason and cause
+Bi → Di. No source reason, reception or esse-cause of Bi is assigned.
+In the necessary overlay, world 1 also contains B0 and D0; in the
+contingent overlay, world 1 contains B1 and D1 instead. Identity is
+fixed, both worlds are populated, there is no independent existence of
+a derivative or variable law. Each present derivative has a distinct
+actual source. No claim about temporal dynamics is encoded.
+
+Use an independently specified two-feature comparison domain
+K = {u,v} and positive profile P(B0) = {u} or K, fixed wherever the
+same B0 exists. Give each B a fixed operation which returns the
+intersection of an input request with its profile, so every permitted
+input has a definite response. This models a positive typed signature,
+not arbitrary changes in behavior. The comparison domain is **stipulated**;
+its features are not certified pure perfections, its full profile is not
+metaphysical infinity, and the map of that positive profile to the
+existing qualitative `EsseLimited` is OPEN.
+
+| Profile of the same actual B0 | Occupants at 0 and 1 | Absence witness for B0? | Actual recipient of B0's esse? |
+| --- | --- | --- | --- |
+| All represented features | B0, B0 | no | none assigned |
+| All represented features | B0, B1 | yes | none assigned |
+| Proper subset of represented features | B0, B0 | no | none assigned |
+| Proper subset of represented features | B0, B1 | yes | none assigned |
+
+This is a matched non-entailment at the specified signature, not a new
+metaphysical model. Comparing rows with the same profile keeps all
+actual local behavior fixed while the absence witness changes.
+Comparing rows with the same modal overlay changes the positive
+profile without changing contingency. Receivers and root reasons
+are absent **by construction**. If the comparison predicate were
+admitted as a real instance of L, the lower rows would violate the
+open limitation-to-reception principle; the full-profile contingent
+row would still require a bridge that makes C imply genuine L.
+Granting one bridge does not repair the other. The upper rows are
+not evidence that any concrete being possesses every pure perfection.
+
+A second control tests a positive mechanism for operational limitation.
+For all subset inputs q of K, compare the restricted-reception
+implementation `q ∩ A ∩ R`, with A=K and R={u}, to an intrinsically
+typed implementation `q ∩ P`, with P={u}. All four input probes have
+the same output. An independently specified change in R to K
+holding A fixed separates those implementations: the first now
+admits v and the second still does not. This is a discriminating
+test *if the same A and the independently alterable receiver
+are already established*. It is not evidence for either architecture
+from fixed outputs alone. An altered derivative filter may change
+observed output without changing the fundamental act's nature.
+The point is the identifiability of a positive limiting principle,
+not the assumption that the act of being is a numerical quantity,
+conserved input or transferable common stock.
+
+Reproduction (the finite checks ran in standalone Python; no registered
+Lean certificate):
+
+```python
+from itertools import product, combinations
+K = frozenset({"u", "v"})
+queries = [frozenset(s) for i in range(3) for s in combinations(K, i)]
+for limited, contingent in product((False, True), repeat=2):
+    profiles = {0: frozenset({"u"}) if limited else K, 1: K}
+    occupants = {0: 0, 1: 1 if contingent else 0}
+    exists = {w: {("B", i), ("D", i)} for w, i in occupants.items()}
+    reasons = {w: {(("B", i), ("D", i))} for w, i in occupants.items()}
+    for w in (0, 1):
+        assert len([b for b in exists[w] if b[0] == "B"]) == 1
+        assert len([d for d in exists[w] if d[0] == "D"]) == 1
+        for i in (0, 1):
+            assert (("B", i) in exists[w]) == (("D", i) in exists[w])
+        assert all(s in exists[w] and t in exists[w] for s, t in reasons[w])
+        assert all(any(s == ("B", d[1]) and t == d for s, t in reasons[w])
+                   for d in exists[w] if d[0] == "D")
+        assert all(t[0] != "B" for s, t in reasons[w])
+    b = ("B", 0)
+    assert ((b in exists[0]) and any(b not in E for E in exists.values())) == contingent
+    assert (profiles[0] < K) == limited
+    assert all((q & profiles[0]) == frozenset(v for v in q if v in profiles[0])
+               for q in queries)
+    if not contingent:
+        assert all(occupants[w] == 0 for w in (0, 1))
+A, R, primitive = K, frozenset({"u"}), frozenset({"u"})
+assert all(q & A & R == q & primitive for q in queries)
+assert any(q & A & K != q & primitive for q in queries)
+```
+
+### 4. The positive metaphysical comparison: real determinant versus primitive typed act
+
+The strongest participation argument is not that every real positive
+difference entails an added constituent. It is a claim about the
+explanatory role of **this** act: if actualization in the relevant sense
+is real and supplies actuality as such, while a genuinely different
+intrinsic determinant explains why that very actuality is possessed in
+one mode rather than another, a real distinction between act and
+determinant has explanatory content. Insofar as the determinant is a
+recipient of that act, the existing receptive-potency analysis applies.
+An independent way to identify the determinant's explanatory role, not
+just a different term used to describe the act, would support this
+analysis. For example, in a suitable independently established
+actualization mechanism, a receiving condition may delimit the same
+actualizing source while the source's wider active scope is fixed. This
+illustrates a kind of evidence; it is not by itself a demonstration
+of the real essence–esse distinction in an ultimate source. Causation
+by a giver is not numerical identity of its act with a received act.
+
+The strongest primitive-nature rival instead says that an actual act
+is intrinsically of a definite kind. The positive type explains the
+scope of its capacities without another principle delimiting an
+otherwise common act. It need not define the type by lack of a cause.
+This preserves the conceptual distinction between the question *what
+it is* and *that it is* without conceding that they mark real
+constituents. The Thomistic account has a coherent answer to why many
+different kinds are actually real; the rival offers the different
+answer that actuality is not a shared real factor separable from type.
+The logical distinction or common use of "is" cannot decide the two
+ontologies. Nor does the rival's positive explanation of operation
+explain the actual existence of its basic bearer. The proposed
+limitation-only-through-reception premise `1304b462` is therefore
+substantive, not made analytic by this comparison.
+
+There is a narrower objection against a **whole-first** variant of the
+primitive nature proposal (#1811). Suppose that the actual existence
+of a real internal mode m is existentially explained by the whole x.
+That mode may explain how x is characterized. If the rival then uses
+the actual existence of that very mode as a full existential
+ground of x, under the same asymmetric dependence relation, the
+two directions are incompatible. This is an instance of the existing
+non-borrowing and mixed-priority tests, not a new theorem or a
+prohibition of every immanent explanation. The relevant assumption
+is a real explanatory dependence on the whole, not just coexistence
+of x and m. It does not apply to independently actual constituents
+that constitute a composite from below, an autonomous essence-fact
+that does not borrow actuality, or a non-strict, nonproductive
+intrinsic explanation on a different relation. For the latter
+options the adequacy and full-actual-input question remains.
+Under the restricted variant that all internal determinations are
+derivative from x, explanatory detail about those determinations
+cannot itself be a new independent supply of x's existence.
+This sharpens which part of the strongest whole-first reply needs
+positive warrant without inferring composition simply from
+determinate character.
+
+For the contingent but genuinely nonreceiving source, two live
+accounts now remain sharply distinct:
+
+- A finite typed act, with independently warranted finite
+  character and primitive actual instantiation. It must deny
+  the reception analysis of a real limit *if* its limit is shown
+  to be at esse, rather than a limit merely in operation.
+- A source whose positive actuality is unrestricted in the
+  relevant qualitative sense, but whose possible total absence
+  is a primitive modal fact. Even if the limitation-to-reception
+  principle is accepted, this account is not excluded until
+  one explains why such possible absence requires some real
+  existential vulnerability or why the source's own actuality
+  is intrinsically an adequate, invariant existence reason.
+
+The latter is a stronger test than another finite root model:
+it isolates an alternative that does not need to deny q.7's
+limitation principle at all. A principle saying that necessary
+existence is itself a pure perfection would help only with its
+own warrant. If that classification rests on the C2 power
+account of existential vulnerability, it is not an independent
+route against denial of C2. If it rests on an intrinsically
+adequate world-invariant nature reason, it reuses the preceding
+checkpoint's applicability premise. If modal necessity is
+simply included in the meaning of "unrestricted", the alleged
+derivation is definitional. Keep actual positive perfection,
+absence of dependence, and box-existence distinct.
+
+### 5. Horizontal support and the weakest root-facing application
+
+A second way to test finite typed actuality does not ask why
+every contingent bearer is limited. Hold an actual ultimate
+giver g and one of its actual effects e fixed. Suppose e
+actually possesses a genuine pure perfection lacking in g in
+the very intrinsic sense at issue. If the existing
+causal-perfection argument can establish that this same giver
+possesses that perfection formally or in an independently
+warranted intrinsic higher mode, the candidate g is excluded
+with respect to that particular proposed limit. Compare
+#1855's containment/recognition distinction, #1949's
+productive-capacity versus possession question, and the
+existing `64498e7e`, `f8ba2429`, `d5a94eb1` frontier.
+A general power to produce the perfection is not automatically
+its intrinsic possession. The causal account must actually
+connect the source and the given effect in the required sense.
+This is a horizontal application plan, not a registered new
+edge or a claim that every actual or possible pure perfection
+is possessed by the source. If successful it restricts the
+rival's actual repertoire independently of the argument
+from contingency; it still leaves the unlimited-but-contingent
+rival. Avoid counting the same causal-adequacy premise twice
+through this and the attribute route.
+
+For the first-mover necessity question, the conditional
+participation route need only establish reception for the
+same selected f on its actual contingency hypothesis (rather
+than for every being), retaining the existing source of f
+and all other Route C inputs. The exact
+`firstMoverNecessaryByEsseIdentity` proof (`e874589f`) uses
+B6 only on that f, so the proposed localized R1/B6 application
+can proceed as follows:
+
+1. f is the actual first mover supplied by the existing
+   premises, pure act and simple on the route's existing
+   senses; assume an accessible world lacks f.
+2. Obtain receipt of f's esse from the selected-case
+   application of the two open limitation premises (or another
+   reception route).
+3. The same f's represented essence–esse identity, scoped R3,
+   recipient-to-act potency and irreflexivity exclude that receipt.
+4. The absent-world assumption contradicts the bundle; explicit
+   excluded middle gives `NecessaryAt` for this f. Carry the
+   original pure-act and actual-existence conditions.
+
+This is the proof already supplied by #1877 and Route C
+specialized to a witness, not a new certified conclusion.
+It does not require universal B2, BX1/BX2, external causal
+coverage or B3 on this route; it retains the independent
+`FirstUnmovedMoverIsSimpleReading`, existence of a first
+unmoved mover, B0, pure act and EM from `e874589f`.
+The scope refinement must be checked for existing variants
+and formalized under the canonical preflight before
+registration. The other B2 route still requires its own
+premises. Neither route identifies an independently selected
+root with this f without a same-witness bridge.
+
+**Provisional synthesis (unreviewed).** The earlier moderate
+preference for adequate existential intelligibility E,
+suspension about universal D, and C2's suspension at the
+foundational case are retained. The real act/recipient
+analysis has positive explanatory content conditional on
+its ontology, but independently characterizing a limited
+operation does not settle real limitation of esse. The
+new scope distinction shows why defending only L → R would
+not defeat the strongest rival: an unlimited yet contingently
+actual source would reject the different C → L bridge.
+Its compatibility in a structural surrogate is not proof
+of real possibility. A nonreceiving source whose finite
+typed act has genuine explanatory content could challenge
+L → R, but even a successful account of the nature's
+determination leaves the brute existence question unless
+it supplies a positive existential reason.
+
+**Next decisive test:** test the strongest **unrestricted but
+contingent** actuality. Give it all independently warranted
+positive perfection and absence of actual borrowing. Ask
+whether its *possible total absence* can be a positive
+metaphysical possibility without an actual power or
+essential existential condition supporting that absence.
+Reuse the #1887/#1908 C2/PGP and alternative-admission
+results and the exact first-mover frame. Compare the
+actual-world warrant for the alleged modal possibility
+against an actual internally or externally grounded
+existential vulnerability. Do not count "necessary
+existence is a perfection" as new evidence unless its
+classification has independent content. In the parallel
+finite-typed branch, reopen the limitation principle on a
+same-sense positive determination of formal esse, or an
+actual pure-perfection witness excluded from the source
+under independently warranted causal adequacy. Preserve
+the prior intrinsic-reason and PSR/B2 adequacy questions
+and #1933's separate operational-content blockers.
+
+**Validation/scope:** inspected #1881, #1870/#1877's exact
+R1/B6 and same-mover Solution, #1952's degree calibration,
+#1811's positive whole-first proposal and existing notes.
+Four populated finite overlays and the four input probes
+passed the standalone diagnostic; the last test witnesses
+different outputs on the stipulated receiver variation.
+No new Lean declaration, corpus proof or source claim is
+added. No new modal or metaphysical possibility, no proof
+of C → L or L → R, no causal reach or closure is asserted.
+Canonical CLI novelty, semantics, binding, corpus and
+Comparator/NanoDa checks and independent challenge of the
+actual final outcome remain required. The earlier
+unreviewed checkpoint remains available and no accepted
+judgment is superseded.
