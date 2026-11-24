@@ -1,0 +1,35 @@
+[batch]
+vocab = "TruthCore.Science.AdaptiveHistoryAccess"
+results = "TruthCore.Results.Science.AdaptiveHistoryAccess"
+definitions = ["4a52e22b-c56f-4814-9661-9ef540301cb4"]
+disambiguations = []
+
+[[statement]]
+id = "Stable observation matching survives every finite adaptive experiment"
+lean = "AdaptiveAgreement"
+paraphrase = "For every pair of deterministic experiments with shared action and observation carriers, a relation that preserves current readouts and every same-action successor yields identical transcripts from related initial states for every finite number of steps and every policy choosing actions from its previous readouts. The relation need not be state equality, but initial readout equality alone is insufficient. This formalizes the deterministic subcase of PR #1904 comment 7113063138 section 4, rather than claiming a new discovery or a stochastic-kernel theorem. Metaphysical admissibility, coverage of all real interventions and epistemic warrant are additional application obligations."
+definitions = ["4a52e22b-c56f-4814-9661-9ef540301cb4"]
+
+[[statement]]
+id = "Adaptive testing leaves a hidden past marker unresolved until a supplied audit reveals it"
+lean = "HistoryControls"
+paraphrase = "In the explicit two-bit structural surrogate, the blind experiment preserves the visible-coordinate relation and gives identical finite transcripts under every adaptive policy whenever initial readouts agree, even with opposite past markers. No one such transcript admits an exact classifier of the past marker in the existing data-relative criterion sense. Two repeated toggles give the nonconstant trace false,true,false. The audit interface has the same initial readout on the selected opposite-marker states but one true action distinguishes them, and its one-action transcript admits an exact classifier on the entire two-bit state space. This compares mathematical interfaces; it does not establish fabricated histories as metaphysically possible, an actual history-sensitive instrument, or defeat of fallible knowledge."
+definitions = ["4a52e22b-c56f-4814-9661-9ef540301cb4", "68f277cc-e5fc-4665-86b5-2fed6d82cdba", "a6e1ef95-8138-5cfc-8fe2-1202ba3b9a5c"]
+
+[[argument]]
+id = "Adaptive transcript equality by preserved transition matching"
+theorem = "adaptiveAgreement"
+axioms = []
+premises = []
+conclusion = "Stable observation matching survives every finite adaptive experiment"
+rule = "Induction on the finite experiment length using equal transcripts to select the same next action"
+meaning = "A universally quantified conditional mathematical result. Matching initial states gives equal initial readouts. At each induction step the shared policy receives the same earlier transcript and selects the same action; successor preservation supplies related next states and thus equal new readouts. The proof constrains a recursively defined experiment, rather than applying a premise already containing the transcript conclusion. The state/repertoire correspondence to admissible real histories remains OPEN. Named research connection: historical reliability as a rival test for local existential PSR 608a262d, with no registered implication from bruteness to this matching premise or from indistinguishability to skeptical defeat."
+
+[[argument]]
+id = "Hidden-history obstruction and history-sensitive audit control"
+theorem = "historyControls"
+axioms = []
+premises = []
+conclusion = "Adaptive testing leaves a hidden past marker unresolved until a supplied audit reveals it"
+rule = "Instantiate the adaptive theorem, reuse CorrectionCriterion.characterization, and evaluate the audit operation"
+meaning = "The blind transition preserves equality of current readouts under either action; the adaptive theorem then supplies equal complete finite transcripts for the selected opposite-marker states. CorrectionCriterion.characterization turns that mismatch in correctness on an equal-data fiber into failure of exact classification. Direct evaluation verifies changing readouts under repeated toggles and shows the supplied history-sensitive audit recovers the marker after one step. The no-coupling assumption is exposed and removed in the positive control. No metaphysical possibility, source attribution, probabilistic estimate, infallibility norm or root-premise discharge is asserted."

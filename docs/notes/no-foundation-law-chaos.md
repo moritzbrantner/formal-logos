@@ -1,5 +1,8 @@
 # No ultimate foundation, radical law-change, and whole-history stability
 
+Current integrated assessment: [Metaphysical explosion and containment
+(2026-11-24)](#metaphysical-explosion-and-containment-2026-11-24).
+
 This is an **ontic conditional** for the God-existence-stage explanation question
 in #735, extending the exact existing #736 history-selection, #737 predictive,
 #743 law-actuality and #1801 persistence-law distinctions. It addresses a
@@ -946,3 +949,362 @@ rival's own calibration and entitlement standard. The three-site and
 population models settle the shared-premise inference; they cannot
 adjudicate those stronger, incompatible metaphysical commitments by
 stipulating a new space of worlds.
+
+## Metaphysical explosion and containment (2026-11-24)
+
+This is the integrated assessment of the owner's research program, continuing
+#1872, #1874, #1808, #1809, #1904, #1908, #1910 and #1913. Its targets are the
+contingent-existence PSR `608a262d-08fe-4dfd-9413-67e2ecf35b84`, its B2 consumer
+`8a8d00e9-12b6-4cf0-b662-431cc4addd49`, and the proposed epistemic bridge
+`e519065f-2b96-5214-a506-54e42eb7c494`. These remain different propositions.
+An absence of an adequate existential reason, an absence of a represented
+reason token, and an absence of a totality ground are not interchangeable.
+The analysis below is an analyst formulation, with no new historical
+attribution. The dated earlier sections remain evidence for their own scopes.
+
+**Current answer.** There is a strong conditional containment problem, but
+no established inference from one brute contingent existent to unrestricted
+metaphysical possibility. An account that asserts a definite exclusion must
+identify a restriction with the required scope; one that promises an ultimate
+explanation must also meet that promise for the relevant actuality. These
+are two burdens. Meeting the first can genuinely contain variation while
+leaving the second unanswered. A necessary or directly warranted primitive
+restriction need not generate an infinite regress. Conversely, merely naming
+a foundation or a primitive law does not establish either its explanatory
+adequacy or its scope over all proposed alternatives.
+
+The new formal work sharpens this answer in two directions: it weakens the
+conditions for particular observable consequences, and it states exactly
+when subsequent adaptive calibration cannot distinguish opposed histories.
+It does not repeat the capacity-one, parity-intervention or fixed-offset
+controls from #1913. See the [adjacent-pair batch](../../specs/adjacent-pair-containment.toml)
+and the [adaptive-history batch](../../specs/adaptive-history-access.toml),
+with its [PSR continuation](psr-self-application-756.md#containment-of-evidence-and-adaptive-calibration-2026-11-24).
+Their finite controls are structural interpretations, not certificates that
+their selected histories or brute bearers are metaphysically possible.
+
+### What the stronger propagation claim would have to establish
+
+The phrase "arbitrary existence" can hide several different transitions.
+The following inventory fixes the additional work in each case. The
+right-hand column is a condition to investigate, not a premise established
+by the denial of the PSR.
+
+| Proposed consequence | Additional bridge that would make the consequence relevant |
+|---|---|
+| Another uncaused being | Individual admissibility of that candidate **and** its joint admission with the retained occupants. #1913's capacity-one control separates these. |
+| Origination at any time or place | A genuinely possible unreceived onset, plus scope-preserving relocation of that onset. An eternal underived bearer is not an onset. Relocation need not permit simultaneous duplication. |
+| Arbitrary fundamental laws or powers | Admission of different natures, law realizations or power bearers, with a bridge from their configurations to the stipulated alternatives. Varying an outcome under fixed laws is not a change of those laws. |
+| Unreceived change in an existing being | A compatible influence or intrinsic transition with effective access to that same persisting bearer. Permission for a new individual does not grant every old individual every transition. |
+| Arbitrary joint combinations | Extension of a permitted assignment while preserving previous assignments, including all shared resources and constraints. Individual or pairwise admission does not supply this. |
+| Any complete history | Finite richness together with a separate complete-history closure principle, or another independently warranted route to complete richness. #1874 provides both the theorem and the eventual-constancy counterexample. |
+| A matching fabricated past | An admitted realization of the same evidence with the historical assertion false; for immunity to later experiments, preservation of the entire relevant observation/transition relation. Present resemblance alone is insufficient. |
+
+This gives a constructive question to the proponent of propagation: **which
+extension preserves which background, and what actually transmits its
+difference?** It also gives a constructive question to the proponent of
+containment: **which excluded assignment violates which warranted invariant
+or law, and why does its scope include this candidate?** Neither party can
+win by leaving that model class implicit.
+
+### A strict hierarchy of observable freedom
+
+Fix one selector of complete Boolean traces, the same observed all-true
+prefix through time n, and the existing `Admitted` predicate. All claims in
+this table concern that fixed interpretation. "Universal" means true of
+every selector-admitted trace, not merely true of the actual trace.
+
+| Level | Exact selected content | Consequence and separation |
+|---|---|---|
+| Single-time richness | Both Boolean values occur among admitted traces at each chosen future time. | No estimator using only the common recorded prefix is exactly correct on every admitted trace at that time. Two constant suffixes already give this freedom while excluding changes within a suffix. |
+| Adjacent-pair richness | Every pair of Boolean values occurs at every wholly future adjacent pair of times, possibly in different traces. | Exactly the condition under which every universal first-order Boolean transition profile permits every future pair. It excludes a universal deterministic profile on this one-bit state description. |
+| Finite richness | Every prescribed finite suffix pattern has an admitted complete extension. | Implies adjacent-pair richness. The period-three parity family below is pair-rich but not finite-rich. |
+| Whole-suffix richness | Every prescribed infinite suffix is admitted. | Implies finite richness. The previously checked eventually-constant class is finite-rich and one-step-rich but not whole-suffix-rich. |
+
+The new strict control uses four suffixes generated by two initial bits
+and the recurrence `x(t+2) = x(t) XOR x(t+1)`: the all-zero suffix and the
+three rotations of `011011...`. At each fixed adjacent position, the four
+suffixes realize `00`, `01`, `10` and `11`. Nevertheless every suffix obeys
+the same deterministic recurrence with two-bit memory, and most prescribed
+three-bit patterns are excluded. The original observed prefix is held
+fixed; the recurrence applies in the suffix. Thus:
+
+* losing every first-order restriction on a projected observation does not
+  entail losing every law;
+* exact uncertainty from the old prefix can coexist with useful prediction
+  after acquiring further state information;
+* an account claiming containment by a law with memory must specify that
+  state and its cross-time constraint. A one-bit profile cannot silently
+  stand for the complete determining state.
+
+The characterization is a weakest-condition result **within the stated
+Boolean selector/profile problem**. It is not a weakest metaphysical
+principle, a probability assignment, or proof that real laws are first-order
+in the observer's chosen variable. The new consequence uses substantially
+less than #1874's whole-suffix premise for this particular conclusion.
+Full-history freedom still has its stronger burden. In the reverse direction,
+the characterization constructs an extensionally true profile excluding a
+missing pair. That construction does not give the profile independent
+warrant as a governing law or explain why its restriction obtains. The
+period-three recurrence is separately specified mathematical structure;
+its real-world applicability remains an open question.
+
+There is also a useful localization by direct reuse of #1874. If a
+prefix-compatible complete trace is excluded by a prefix-closed selector,
+some finite prefix of that trace has no admitted extension. Otherwise
+`PrefixClosed` would admit the trace. If every finite prefix does have an
+extension, its exclusion instead witnesses failure of that closure
+principle. This classical contrapositive identifies **where the restriction
+acts**, without claiming that an actual observer can decide modal
+admissibility by finitely many measurements. With a populated cell,
+one-step richness and prefix closure already entail whole-suffix richness;
+a proposed exclusion must reject at least one of those commitments. This
+is an application of the existing result, not a newly counted certificate.
+
+### The containment dilemma at three strengths
+
+**1. Comparative explanatory incompleteness.** Suppose a view promises an
+adequate complete account of a selected fact q, and its own account of
+that task requires accounting for the actuality of its source b. If b is
+left brute, that promise is unmet. The local causal explanation of q can
+still succeed. This is the earlier complete-account conditional, not a
+proof that every explanation must meet that standard. The same test applies
+to a contingent decree, a primitive law bearer and an initial physical state.
+
+**2. A specified containment commitment.** A view claiming that an outcome
+is excluded must deny a sufficient admission-and-transmission bundle for
+that outcome, or identify a restriction making the bundle inapplicable.
+The hierarchy makes this sharper than "some restriction is needed":
+an exact fixed-time guarantee denies single-time richness; a universal
+first-order profile with a forbidden pair denies pair richness; exclusion
+of one infinite trace can instead be an infinite-history condition. These
+are different prices. A higher-order invariant can earn genuine local
+explanatory value without explaining its own instantiation. The number of
+additional premises does not rank their philosophical merit.
+
+**3. Internal incompatibility.** If a view both admits the adverse
+alternative and endorses and positively claims an entitlement that its own
+norm excludes in the presence of that alternative, the package is
+inconsistent. #1808 establishes this for its strict forecast/high-payoff
+norm; #1872 establishes the corresponding feature-relative explanatory
+parity constraint. A fallibilist who never adopts the strict norm is not
+refuted by either result. Nor does refusing a universal PSR while openly
+accepting a derivative-only demand contradict itself. A claimed universal
+norm and its concrete exception, rather than bruteness by itself, supply
+the contradiction.
+
+An unspecified boundary is not the negation of every possible boundary.
+Accordingly "no containment has been defended here" supports a diagnosis
+of an unanswered burden, not the unrestricted-richness premise. And a
+contingent restriction does not cease to exclude violations just because
+its obtaining lacks an ultimate explanation. The dilemma becomes stronger
+only as the rival's own admission, adequacy and entitlement commitments
+become stronger. This is why the established conclusion falls short of
+logical explosion while still narrowing coherent combined positions.
+
+### Where restrictions can terminate the problem
+
+Keep the rule, its truth, its warrant and any concrete bearer distinct.
+The [exemption analysis](psr-self-application-756.md#does-a-contingent-foundation-merit-exemption-from-determining-explanation-2026-11-23)
+already supplies the detailed derivative/initial/whole/kind comparison.
+The current program retains its following dispositions.
+
+| Restriction | What can genuinely terminate here | What is not thereby supplied |
+|---|---|---|
+| Necessary constitutive constraint | No further contingent selection of that constraint is required if its necessity and interpretation are warranted. Direct or cumulative warrant is allowed. | Actual instantiation of a merely conditional nature; necessary existence of this particular occupant; exhaustive applicability to new kinds. |
+| Contingent operative restriction | It can explain and exclude specified variations in every history where that restriction operates. | A complete explanation of why this restriction obtains, if that is part of the view's own promised explanandum. |
+| Primitive restricted explanatory demand | A dependence-triggered demand can consistently stop at an underived bearer, with an explicit direct warrant and defeaters. | The actual existence of the exempt bearer. Defending an exemption does not fill that explanatory slot. |
+| A necessary source explaining contingent effects | Can supply an actual source without a further contingent source-existence question, if necessity and actual production are established. | A determining contrast for every exercise; intelligence, freedom, goodness or trustworthy governance merely from necessity. |
+
+A legitimate stopping point needs neither an endlessly prior proof nor a
+renamed universal PSR. Its warrant and its scope remain assessable. The
+question "why does the rule obtain?" returns an existential burden only
+when the target really is within the existential rule's domain; broader
+contingent-fact coverage must be separately adopted. The strongest
+restricted rival does not have to call an exempt foundation self-explained.
+It can candidly leave that existence unexplained while defending its
+constraints and its fallible knowledge of ordinary causes.
+
+### Historical reliability and epistemological self-application
+
+#1904 established the present-evidence distinction. Its [subsequent
+research comment](https://github.com/moritzbrantner/formal-logos/pull/1904#issuecomment-7113063138)
+proposed the adaptive continuation without a Lean certificate. The new
+adaptive-history result formalizes a deterministic, relation-based version:
+if related states give the same observations and remain related after every
+allowed action, every finite policy choosing experiments from earlier
+responses receives the same transcript. The relation can connect distinct
+states, not just two names for one state. A hidden historical marker and a
+mutable present readout supply the structural control. A history-sensitive
+query breaks the relation and restores discrimination in the positive
+control. The preservation condition does the substantive work.
+
+This supplies a sharper empirical-repair test. More calibration of a channel
+that cannot access the differing historical feature cannot resolve it;
+adding an independently warranted history-sensitive channel can. The
+result does not make real fossils, memories or origin relations inaccessible,
+license fabrication, or give the fabricated alternative credible weight.
+It also permits new experiments and reliable future predictions even while
+the earlier past is not discriminated. The precise formal control and the
+fallible-warrant comparison are in the [PSR continuation](psr-self-application-756.md#containment-of-evidence-and-adaptive-calibration-2026-11-24).
+
+Apply self-application separately to each claimed source of warrant:
+
+| Claim at risk | What would establish a relevant failure | What remains insufficient |
+|---|---|---|
+| Historical support for a scientific theory | The historical warrant actually relies on the challenged traces, and the rival's own warranted account defeats that route under its own standard. | A merely possible false record, or failure to eliminate every skeptic. Present experiments may still support the dynamics. |
+| Reliability of reasoning faculties | A specified corruption mechanism reaches the relevant cognitive operation, and defeats its reliability on the account's own norm. | Corrupting an input record. Valid inference from a bad input is not invalid logic. |
+| Continued explanatory principles | The view's admitted changes and endorsed projection rule conflict for that principle at its actual scope. | Contingency of the beings to which the principle applies. A necessary conditional can govern contingent instances. |
+| Evidence for the containment rule | The offered calibration cannot distinguish the violation being excluded, and no other relevant warrant meets the claimed standard. | Lack of deductive certainty; directly or cumulatively warranted structure may remain available. |
+| Truth or warrant of the worldview | A genuine contradiction, or defeat of a justification route the view itself treats as indispensable. | Defeat of one historical argument when independent conceptual, practical or externally reliable warrant remains. |
+
+For fallible standards, the question is whether the actual method or the
+relevant alternatives are sufficiently trustworthy by that standard. Modal
+admissibility alone supplies neither a rate of error nor equal credibility.
+The existing error/common-mode results may be used by an account that
+adopts their probabilistic interpretation; no prior over worldviews is
+assigned here. An externalist may have historical knowledge through a
+genuine reliable trace without possessing an introspective discriminator
+against a duplicate. Whether the actual process is reliable is then an
+explicit positive commitment, not a contradiction in that epistemology.
+
+### Symmetric comparison of the six foundation accounts
+
+This table compares the same three questions: what constrains admissible
+histories, what accounts for actual instantiation, and what warrants the
+inquirer's access. It gives analyst versions of the accounts, not an
+attribution of one package to every proponent of a school.
+
+| Account | Principled containment available | Actuality and epistemic commitments still owed at the claimed scope |
+|---|---|---|
+| Brute contingent foundation | Constitutive kinds, an exhaustive reception/production law, and a history restriction can exclude new entrants and forged histories. | Foundation existence is deliberately left unexplained. Exhaustive scope and actual trace reliability need warrant; no promise of complete explanation can count this slot as filled. |
+| Necessary impersonal foundation | Necessary nature can constrain both kinds and effects; a genuine dependence relation can explain derivative bearers. | Necessity of the source alone selects no specific contingent order and guarantees no cognitive access. A nonnecessitating productive exercise must be assessed on the same adequacy standard as free agency. |
+| Primitive fundamental laws | Actually governing laws with a specified state space, initial conditions and domain can preserve invariants. A directly warranted necessary law is not a further contingent exception merely because it is primitive. | Mathematical solution is not actual governance. Initial data, application to all candidates, and authentic records are additional issues unless the theory genuinely supplies them. |
+| Humean account | A regular actual mosaic and a warranted projectibility/simplicity practice can sustain fallible inference. A complete-history constraint can differ from a local transition rule. | A true summary of the actual mosaic need not constrain alternative mosaics. The admissibility and credibility of replacement histories require the account's actual modal and epistemic commitments. |
+| Metaphysical necessitarianism | If the entire concrete order is necessary, competing orders are excluded at the outset. This rejects the initial brute-contingency supposition. | The necessity thesis and our warrant for the particular necessary order need support. It survives this explosion argument but is not thereby established or shown to explain every fact. |
+| Necessary intelligent free source | Universal receipt of existence excludes a distinct unreceived entrant; real intentional production and reasons can explain contingent products without necessitating them. | Establish the same source's necessity, actual productive exercise, intelligence and adequate reasons. Truth-conducive governance and reliable finite access need further support. Bare freedom and ontological goodness do not rule out misleading appearances. |
+
+**Strongest surviving rival to the proposed explosion inference:** a
+contingent but stable foundation, a necessary constitutive restriction on
+its kinds and admissible interactions, an explicit admissible-history
+restriction, and fallible causal or prima facie warrant for the relevant
+traces. This is the strongest developed *candidate reply in this comparison*,
+not a proved globally possible or uniquely best worldview. Its commitments
+do real work: a modal restriction must cover the candidates in question;
+the history restriction must address matching initialization if that is the
+selected threat; actual knowledge needs an appropriate warrant. It declines
+universal existential explanation rather than secretly satisfying it.
+The mathematical controls establish consistency only for their displayed
+fragments. No single finite model certifies this entire metaphysical account.
+
+If adequate existential explanation E is retained, a necessary impersonal
+productive source is a different strong surviving alternative. It can
+share the existential-explanation advantage. The remaining discrimination
+then lies in the actual routes to intellect, will, goodness and intentional
+creation, not in another application of the bare explosion argument.
+
+**Divine freedom and the comparative judgment.** A nonnecessitating reason
+can be an actual, relevant explanation; not uniquely determining an outcome
+does not by itself make it brute. A purpose-guided actual exercise has
+additional content beyond a label "choice" if the represented good really
+governs the same act that produces the effect. This same criterion admits
+any impersonal account that can supply the corresponding explanatory
+content. Invoking a new unexplained selection fact cannot meet a demand
+for its complete determining explanation merely by calling the selection
+free. For epistemic advantage, theism additionally needs truth-conducive
+governance applicable to historical traces and human inquiry. The existing
+[divine veracity results](divine-veracity-1410.md) concern their specified
+assertion/content conditions; nature is not automatically an assertion.
+The [goodness and love bridges](divine-love-goodness-bridge.md) and actual
+productive/intentional exercise remain substantive conditions.
+
+Theism therefore has a **substantive conditional comparative advantage**
+over an avowedly brute stopping point if it supplies the adequate actual
+existential explanation and reason-guided order the latter declines.
+This does not yet decide between theism and every necessary impersonal
+source, nor establish a comparative epistemic advantage from theism alone.
+The prior moderate preference for E and suspension about universal
+determining explanation D are retained. The new results sharpen the
+conditions and expose misleading summaries; they do not add independent
+warrant for E by counting conditional consequences.
+
+### Comparative argument graph and legitimate burden shifts
+
+Solid arrows below show conditional routes, with all named inputs jointly
+required. The admission branch does not follow from bruteness alone. The
+adequacy/token/scope bridge from E is **OPEN**. The right branch is a
+research comparison, not a newly registered root proof.
+
+```mermaid
+flowchart TD
+    Q["Adequate existential explanation E"] --> P["OPEN adequacy and domain bridges"]
+    P --> T["Existence PSR plus BX1 and BX2"]
+    T --> B["B2: distinct cause under contingency"]
+    B --> N["First-mover B0, B1, B3 and logic"]
+    N --> G["Same mover necessarily exists"]
+    R["Brute exception admitted"] --> C["Substantive restrictions retained"]
+    C --> V["Contained rival and explicit warrant burden"]
+    R --> U["Additional admission and transmission premises"]
+    U --> H["Selected level of observable freedom"]
+    H --> S["Own exclusion norm and positive entitlement"]
+    S --> I["Conditional internal incompatibility"]
+    R --> K["Admissible alternatives left unspecified"]
+    K --> O["Propagation remains unresolved"]
+```
+
+The existing B2 route is `7bf9cb77` followed by the same-witness
+`8cc169e3` application under its original assumptions. Neither new formal
+batch discharges `608a262d`, B2, C2 or the God-naming/attribute premises.
+The separate C2 route `e5d49f99` still concerns the same rigid bearer;
+replacement of its office is not an absence witness for that bearer.
+The already available actual-root uniqueness theorem `c056ad5c` can contain
+coexisting grounding roots without first proving the founder necessary,
+under the assumptions recorded above. It is not uniqueness of every
+unexplained thing or every candidate cause.
+
+The following burdens legitimately shift after a *specific* challenge:
+
+* A claimant of an exclusion must identify the operative restriction,
+  retained background and domain that exclude the proposed case. It need
+  not derive every primitive from an earlier premise.
+* A selective critic whose explanatory demand is uniform in a relevant
+  feature must apply it to its own matching accepted case or defend a
+  relevant distinction. The proponent of parity still owes the uniformity
+  and feature-matching premises.
+* A claimant of an epistemic entitlement must show how its own norm is met
+  after a relevant, supported defeating mechanism is identified. A merely
+  conceivable failure does not transfer a burden to rule out all skepticism.
+* The proponent of propagation continues to owe joint admission, effective
+  coupling and any complete-history closure used. The proponent of theism
+  continues to owe its actual explanatory and attribute bridges.
+
+### Remaining discriminating investigations
+
+1. **Ontological scope of a necessary constraint.** Fix a serious
+   dispositional/structural rival and one proposed additional bearer. Derive
+   why the same retained target must reject every effective unmatched
+   coupling, or produce a positively warranted coupling violating it.
+   No new enumeration of Boolean possibilities can settle that application.
+2. **Constitutive history and access.** Identify a candidate relation that
+   excludes or reveals matching initialization, and an action that reads it.
+   If it is necessarily historical but operationally inaccessible, assess
+   externalist warrant separately. This is the next test after the adaptive
+   certificate; another evidence-only classifier cannot answer it.
+3. **Same actual source and exercise.** Connect productive supply,
+   reason-guidance and nonnecessitating choice in one interpretation, using
+   the existing intentional-creation and operation results. Test the
+   necessary impersonal alternative at that same explanatory scope.
+4. **Existential versus total factual coverage.** Investigate the warrant
+   for extending the adequate existential principle to selection acts or
+   law-obtaining facts. Preserve D and the #755 collapse-core obligations;
+   do not silently turn a being-level PSR into a total determining PSR.
+5. **Truth-conducive governance.** Give a bridge from warranted divine
+   intellect/goodness/veracity to this historical or cognitive channel,
+   without promising universal errorlessness. Compare the rival's
+   constitutive reliable process by the identical criterion.
+
+These are the remaining philosophical obstacles to a stronger result:
+actual scope, explanatory adequacy, and epistemic applicability. The present
+checkpoint resolves the formal discrimination questions it undertakes and
+states the stronger metaphysical bridges rather than treating an unchanged
+root-premise count as failure.
