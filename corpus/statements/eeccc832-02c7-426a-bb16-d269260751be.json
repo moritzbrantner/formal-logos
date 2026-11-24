@@ -1,0 +1,18 @@
+{
+  "id": "eeccc832-02c7-426a-bb16-d269260751be",
+  "label": "Every actual root gives each NECESSARY_2 being it grounds being at accessible worlds where it exists",
+  "paraphrase": "OPEN bridge (b2), analyst formulation, unattributed: every actual root n of the selected grounding relation G at w gives being (GivesTo) to each NECESSARY_2 being x that n grounds at w, at every world accessible from w where n exists. Rigidity of the root's giving to a necessary grounded being, the weakest form argument N1 uses: only at roots, only for necessary grounded beings, only at worlds where the root exists. It holds only vacuously for the classical theist, who posits no necessary grounded being; only the necessary-through-another rival accepts it in substance (the emanationist First gives the first intelligence being in every world). It says nothing about contingent grounded beings, so a contingent being sustained elsewhere by another source is no counterexample.",
+  "lean_declaration": "TruthCore.Causality.NarDerivation.ActualRootsGiveNecessaryGroundedWherever",
+  "definition_ids": [
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "c57e2682-08e6-527e-950f-0fa0a7ff11ef",
+    "a1b2e330-388f-4120-bc5c-969642317792",
+    "62dfa893-b633-4513-9790-8f9a0a3087e0",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ],
+  "disambiguation_ids": [
+    "83264cf5-01fe-52fc-9a00-eeb024f6496e",
+    "623ddbf6-9683-5361-bae4-e348a00ec680"
+  ]
+}

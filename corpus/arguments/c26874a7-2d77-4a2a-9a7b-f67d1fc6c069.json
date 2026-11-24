@@ -1,0 +1,41 @@
+{
+  "id": "c26874a7-2d77-4a2a-9a7b-f67d1fc6c069",
+  "label": "Every actual root withholds each grounded being, from uniform giving at the root",
+  "premise_statement_ids": [
+    "2dd1f217-77bd-42cd-9410-174b939b0e45",
+    "3ef41442-431a-4bed-83bd-4458ed623f5f",
+    "0c27f65a-6a6b-438a-b96c-b2bab9f21ac3",
+    "d164f730-95b4-4297-8978-9e5586f0b2ef",
+    "c76b6e2c-1ca0-47fd-a9d0-2c2faa3d1174",
+    "19f2e094-5740-4021-b3b4-13d7ed929355"
+  ],
+  "conclusion_statement_id": "fbd0a6d3-5ca6-4f17-8651-ed0d6989c747",
+  "inference_ids": [
+    "b1e4dc1d-e711-4106-bdfb-c7a997f39b36"
+  ],
+  "meaning": "Every actual root is the common root n of 0c27f65a (only its root and reach clauses are used). A concrete being c contingent at w (c76b6e2c) is absent at some accessible v, where the necessary n exists; so c is not n, n grounds c, n gives c being at w by (b1) and not at v by factive giving: n is two-way toward c. By uniformity n is two-way toward every being it gives at w, and by (b1) it gives each actual concretum it grounds. Constructive.",
+  "definition_ids": [
+    "158301bc-9585-4145-be60-34f08c9f922c",
+    "1c4078eb-5afd-4684-b67c-b3b4d44c064a",
+    "62dfa893-b633-4513-9790-8f9a0a3087e0",
+    "8c945061-acb2-47e1-9865-d10f8f925757",
+    "1620ba7e-edb9-56c4-bd02-3ece55903b1c",
+    "c57e2682-08e6-527e-950f-0fa0a7ff11ef",
+    "88f9f6e8-997b-5f7d-afa1-c501954c3807",
+    "88bc0655-9dd0-5879-ba1b-3fca9f86c1f4",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "a1b2e330-388f-4120-bc5c-969642317792"
+  ],
+  "disambiguation_ids": [
+    "6e92c6e3-edf0-5d7e-b2b3-788b24b8b768",
+    "623ddbf6-9683-5361-bae4-e348a00ec680",
+    "6f1d1395-7c1d-5bd5-a45d-03380857aed6",
+    "205a39c3-915d-5fe4-8076-a9ff91329e08",
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f",
+    "83264cf5-01fe-52fc-9a00-eeb024f6496e",
+    "c529e8d3-43e3-53a8-a82f-3955e9815265"
+  ]
+}

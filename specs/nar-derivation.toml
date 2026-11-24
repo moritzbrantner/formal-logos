@@ -1,0 +1,128 @@
+# #1926 phase 3, the next test of #1944's gap 1: can NAR (43651417, every
+# NECESSARY_2 actual concretum is an actual root of the selected grounding G)
+# be derived instead of assumed? N1 derives NAR from (a) the root withholds
+# each being it grounds at some accessible world where it exists and (b2), the
+# G-to-giving rigidity bridge at the root, with a common root. N2 derives (a) from a
+# uniform mode of giving at the root; N3 derives (a) from the will route of
+# ST I q.19 a.3 (willed giving, WN and SS). Controls show that one power, an
+# invariant set-up and willed exercise do not force a uniform mode, and that
+# under (b2) and its companions (a) is NAR in the giving register. Analyst
+# formulations, attribution deferred. Note: docs/notes/nar-derivation.md.
+
+[batch]
+vocab = "TruthCore.Causality.NarDerivation"
+results = "TruthCore.Results.Causality.NarDerivation"
+
+# ---------------------------------------------------------------- statements
+
+[[statement]]
+id = "Every actual root gives being at w to each existing being it grounds"
+label = "Every actual root gives being at w to each being it grounds that exists at w"
+lean = "ActualRootsGiveGroundedHere"
+paraphrase = "OPEN bridge (b1), analyst formulation, unattributed: every actual root n of the selected grounding relation G at w gives being (GivesTo) at w to each being x that n grounds at w and that exists at w. The local G-to-giving bridge at the root (rigor contract 5 of #1926; #1626): grounding by the root read as productive dependence for being (the sustaining cause-of-being sense of 88a8fba7). Restricted to roots and to w, the weakest form arguments N2 and N3 use. Classical theism (conservation) and Avicenna's emanation both accept it; it fails if G is read as non-productive dependence (a singleton on its member)."
+definitions = ["c57e2682-08e6-527e-950f-0fa0a7ff11ef", "a1b2e330-388f-4120-bc5c-969642317792", "62dfa893-b633-4513-9790-8f9a0a3087e0", "1b8baf77-84fa-5513-a138-7fa14840dd87", "DEF-KANT-ONTOLOGICAL-MODEL"]
+disambiguations = ["DISAMB-CONCRETE-ABSTRACT-CRITERIA"]
+
+[[statement]]
+id = "Every actual root gives each NECESSARY_2 being it grounds being wherever the root exists"
+label = "Every actual root gives each NECESSARY_2 being it grounds being at accessible worlds where it exists"
+lean = "ActualRootsGiveNecessaryGroundedWherever"
+paraphrase = "OPEN bridge (b2), analyst formulation, unattributed: every actual root n of the selected grounding relation G at w gives being (GivesTo) to each NECESSARY_2 being x that n grounds at w, at every world accessible from w where n exists. Rigidity of the root's giving to a necessary grounded being, the weakest form argument N1 uses: only at roots, only for necessary grounded beings, only at worlds where the root exists. It holds only vacuously for the classical theist, who posits no necessary grounded being; only the necessary-through-another rival accepts it in substance (the emanationist First gives the first intelligence being in every world). It says nothing about contingent grounded beings, so a contingent being sustained elsewhere by another source is no counterexample."
+definitions = ["38b92bb6-33ae-5817-85c6-b5a1afa63bd1", "c57e2682-08e6-527e-950f-0fa0a7ff11ef", "a1b2e330-388f-4120-bc5c-969642317792", "62dfa893-b633-4513-9790-8f9a0a3087e0", "1b8baf77-84fa-5513-a138-7fa14840dd87", "DEF-KANT-ONTOLOGICAL-MODEL"]
+disambiguations = ["83264cf5-01fe-52fc-9a00-eeb024f6496e", "DISAMB-CONCRETE-ABSTRACT-CRITERIA"]
+
+[[statement]]
+id = "fbd0a6d3-5ca6-4f17-8651-ed0d6989c747"
+label = "Every actual root withholds its giving of each grounded actual concretum at some accessible world"
+lean = "ActualRootsWithholdEachGrounded"
+paraphrase = "OPEN premise (a), analyst formulation, unattributed: for every actual root n of the selected grounding relation G at w and every actual concretum x that n grounds at w, there is a world accessible from w where n exists and does not give x being. #1897's two-way profile extended from the actual contingents to every being the root grounds, including any putatively NECESSARY_2 one; close to the theist-internal free-creation premise. Under (b2), factive giving, a common root, necessary roots and excluded middle it is equivalent to NAR (43651417): the same commitment in the giving register, not additional evidence."
+definitions = ["c57e2682-08e6-527e-950f-0fa0a7ff11ef", "a1b2e330-388f-4120-bc5c-969642317792", "62dfa893-b633-4513-9790-8f9a0a3087e0", "1b8baf77-84fa-5513-a138-7fa14840dd87", "DEF-KANT-ONTOLOGICAL-MODEL"]
+disambiguations = ["DISAMB-CONCRETE-ABSTRACT-CRITERIA"]
+
+[[statement]]
+id = "d164f730-95b4-4297-8978-9e5586f0b2ef"
+lean = "ActualRootsNecessary"
+paraphrase = "OPEN (analyst formulation, unattributed): every actual root of the selected grounding relation G at w exists at every world accessible from w (NECESSARY_2, NecessaryAt). Universal over actual roots; with a common root, the necessity of that one root. Its warrant is that of the necessary-root routes; not assessed in this batch."
+definitions = ["38b92bb6-33ae-5817-85c6-b5a1afa63bd1", "c57e2682-08e6-527e-950f-0fa0a7ff11ef", "1b8baf77-84fa-5513-a138-7fa14840dd87", "DEF-KANT-ONTOLOGICAL-MODEL"]
+disambiguations = ["83264cf5-01fe-52fc-9a00-eeb024f6496e", "DISAMB-CONCRETE-ABSTRACT-CRITERIA"]
+
+[[statement]]
+id = "19f2e094-5740-4021-b3b4-13d7ed929355"
+lean = "ActualRootsGiveUniformly"
+paraphrase = "OPEN (analyst formulation, unattributed): every actual root of the selected grounding relation G at w gives in a uniform mode (UniformGivingModeAt): if it is two-way toward some effect at w (gives it being at w and withholds it at an accessible world where the root exists), it is two-way toward every being it gives being at w. Excludes a mixed-mode root, fixed toward one effect and two-way toward another. Not entailed by one power, an invariant set-up and willed exercise (controls, mixed-mode root)."
+definitions = ["1c4078eb-5afd-4684-b67c-b3b4d44c064a", "8c945061-acb2-47e1-9865-d10f8f925757", "c57e2682-08e6-527e-950f-0fa0a7ff11ef", "62dfa893-b633-4513-9790-8f9a0a3087e0", "1b8baf77-84fa-5513-a138-7fa14840dd87"]
+disambiguations = ["DISAMB-CONCRETE-ABSTRACT-CRITERIA"]
+
+[[statement]]
+id = "06145e71-01c8-49d6-ae6a-e0b622076575"
+lean = "ActualRootsOnePower"
+paraphrase = "OPEN (analyst formulation, unattributed): every actual root of the selected grounding relation G at w has one power (OnePower: any two of its active powers are the same). The power-level aspect of simplicity at the root; the root counterpart of #1941's holder premise 9856239a."
+definitions = ["fdeb7757-10db-4fa7-91a4-6c15ee5100d2", "c57e2682-08e6-527e-950f-0fa0a7ff11ef", "1b8baf77-84fa-5513-a138-7fa14840dd87"]
+disambiguations = ["e5417243-d6f3-4776-9694-40d85bb34ff4", "DISAMB-CONCRETE-ABSTRACT-CRITERIA"]
+
+[[statement]]
+id = "0266eac2-3fad-43eb-a1f1-e784c5356105"
+lean = "RationalFixedGivingIsRequired"
+paraphrase = "OPEN (WN, analyst formulation, unattributed): if y gives x being at w by exercising a rational power and is fixed toward x from w (NECESSITATE_5: gives x being at w and at every accessible world where y exists), then x is required by y's own end (EndRequires y x, the teleological means-to-end relation: x is a means without which y's end cannot be attained; x's necessary existence does not make it required). The structure of ST I q.19 a.3 co. (navigation only): the will is necessarily related to its end and to what the end cannot be had without, not to other things. Rivals on which a perfect will is fixed (NECESSITATE_5) toward effects its own good does not require: the necessary diffusion of the good (Neoplatonic emanation; Avicenna's First as standardly reported), Rowe's argument that a perfectly good creator of the best is not free, and Kretzmann's Dionysian argument (navigation). Leibniz's moral necessity of choosing the best is not metaphysical necessity, so it is not a fixity in this sense."
+definitions = ["02aa24f8-e6cc-4d47-8b34-d3b7149e7ee8", "90719cb5-43c2-4677-8ad7-20e077e28ac9", "b8061228-9131-40f2-83bd-cb7d719bd0a0", "582f44c3-7778-4806-b385-e1eff852ac5e", "62dfa893-b633-4513-9790-8f9a0a3087e0"]
+disambiguations = ["5836e1f6-ccce-4ce8-b9d6-c89afc7120bb", "e5417243-d6f3-4776-9694-40d85bb34ff4"]
+
+[[statement]]
+id = "85f3fea2-f0a3-424a-acb9-ec4ecd0cd4e1"
+lean = "ActualRootsEndRequiresNoOther"
+paraphrase = "OPEN (SS, analyst formulation, unattributed): for every actual root n of the selected grounding relation G at w and every being x other than n, x is not required by n's own end (EndRequires, read as the teleological means-to-end relation). The self-sufficiency of the root's good: on Aquinas's account the divine goodness is complete without other things (ST I q.19 a.3 co., paraphrase, navigation only). On the rejected strict-modal reading of EndRequires (x exists wherever y does), every necessary being would be required and SS with a common root alone would yield NAR (controls, law 6), begging the question; SS is asserted only on the means-to-end reading."
+definitions = ["90719cb5-43c2-4677-8ad7-20e077e28ac9", "c57e2682-08e6-527e-950f-0fa0a7ff11ef", "1b8baf77-84fa-5513-a138-7fa14840dd87"]
+disambiguations = ["DISAMB-CONCRETE-ABSTRACT-CRITERIA"]
+
+[[statement]]
+id = "b8ee1a50-b1e2-435e-a082-4652a894438b"
+lean = "Model.Controls"
+paraphrase = "Premise-free laws and finite models (structural surrogates, not metaphysical possibility). Laws: (1) a two-way giver is one two-way toward some effect; (2) with (b1), factive giving, a common root, necessary roots and some concrete contingent being, every actual root is two-way toward some concrete contingent being; (3) with (b2), factive giving, a common root, necessary roots and excluded middle, NAR holds exactly when (a) does; (4) exercise-level invariance, with every exercise a giving and every giving at w the exercise of some power, makes a giver two-way toward nothing (uniformity only by collapse); (5) with reflexive access, the will route gives (a) without (b1); (6) on the rejected strict-modal reading of EndRequires, SS and a common root alone yield NAR. Models: theist nonvacuity of N1-N3 ((b2) and WN only vacuously); the mixed-mode root (one rational power, invariant set-up, willed two-way giving toward the contingent, fixed giving toward a necessary grounded being that holds the joint-absence power; (b1), (b2) and the holder premises hold; uniformity, (a), NAR and #1944's argument 1 conclusion fail; WN or SS fails); omission models of N1, N2 and N3."
+definitions = ["02aa24f8-e6cc-4d47-8b34-d3b7149e7ee8", "8c945061-acb2-47e1-9865-d10f8f925757", "1c4078eb-5afd-4684-b67c-b3b4d44c064a", "90719cb5-43c2-4677-8ad7-20e077e28ac9", "38b92bb6-33ae-5817-85c6-b5a1afa63bd1", "DEF-KANT-MODAL-CONTINGENCY", "c57e2682-08e6-527e-950f-0fa0a7ff11ef", "a1b2e330-388f-4120-bc5c-969642317792", "62dfa893-b633-4513-9790-8f9a0a3087e0", "e006ddeb-2c88-4835-8558-2f360cc5a3eb", "fdeb7757-10db-4fa7-91a4-6c15ee5100d2", "b4bb7bb4-4e2d-437d-825e-79a029340e77", "b8061228-9131-40f2-83bd-cb7d719bd0a0", "de24ce2e-84e4-48d8-9cac-5f66ad532015", "bf7eddca-8291-4744-8470-379babcd7781"]
+disambiguations = ["83264cf5-01fe-52fc-9a00-eeb024f6496e", "5836e1f6-ccce-4ce8-b9d6-c89afc7120bb", "e5417243-d6f3-4776-9694-40d85bb34ff4", "8b3d47bc-7fee-4936-99ad-6561aedc657a", "DISAMB-KANT-CONTINGENCY"]
+
+# ---------------------------------------------------------------- arguments
+
+[[argument]]
+id = "abc27f55-00fc-4c09-a6ad-1418de7926e9"
+label = "NAR, from the root's withholding of each grounded being, bridge (b2) and the common root"
+theorem = "narFromRootWithholding"
+axioms = []
+premises = ["0c27f65a-6a6b-438a-b96c-b2bab9f21ac3", "Every actual root gives each NECESSARY_2 being it grounds being wherever the root exists", "fbd0a6d3-5ca6-4f17-8651-ed0d6989c747"]
+conclusion = "43651417-cd19-43d7-8f70-8def61acb0f0"
+rule = "A grounded necessary being would be given being by the common root at the root's withholding world"
+meaning = "Let x be a NECESSARY_2 actual concretum and suppose it has an actual concrete G-ground. The common root n of 0c27f65a (only its root and reach clauses are used) is x (impossible: a root has no ground) or grounds x. By (a), n exists at some accessible world v and does not give x being there. x is necessary, so by (b2) n gives x being at v: contradiction. So x is an actual root. Constructive."
+description = "Argument N1, the derivation of NAR asked by #1944's gap 1. Not a transcription: neither premise's consequent is NAR. It uses NAR's general form (over all actual concreta), which is no harder to derive here than the holder-restricted form, so the restriction is not registered. Establishes no premise. Shared dependency: under (b2), factive giving, a common root, necessary roots and excluded middle, its premise (a) restates NAR (controls, law 3); it adds warrant for NAR only through support for (a) (N2, N3, neither of which restates NAR). Premise choice: the weakest common-root premise is a6b46d2e (ActualCommonRootAt), and the Solution proves N1 from it (nar_of_commonRoot); the registered argument uses 0c27f65a, whose root and reach clauses are exactly a6b46d2e, because a6b46d2e's legacy definition links carry several senses of four terms and would make any new argument using it an unbridged sense mixing (a #216 cleanup). The God-naming and intellect clauses of 0c27f65a are unused. Omission models: without (b2) (#1944's necessary-through-another model, whose root gives nothing), without (a) (the mixed-mode root), without the common root (mutual grounding, where 0c27f65a fails)."
+
+[[argument]]
+id = "c26874a7-2d77-4a2a-9a7b-f67d1fc6c069"
+label = "Every actual root withholds each grounded being, from uniform giving at the root"
+theorem = "rootWithholdingFromUniformity"
+axioms = []
+premises = ["Every actual root gives being at w to each existing being it grounds", "3ef41442-431a-4bed-83bd-4458ed623f5f", "0c27f65a-6a6b-438a-b96c-b2bab9f21ac3", "d164f730-95b4-4297-8978-9e5586f0b2ef", "c76b6e2c-1ca0-47fd-a9d0-2c2faa3d1174", "19f2e094-5740-4021-b3b4-13d7ed929355"]
+conclusion = "fbd0a6d3-5ca6-4f17-8651-ed0d6989c747"
+rule = "The root is two-way toward a contingent being, so by uniformity toward every being it gives"
+meaning = "Every actual root is the common root n of 0c27f65a (only its root and reach clauses are used). A concrete being c contingent at w (c76b6e2c) is absent at some accessible v, where the necessary n exists; so c is not n, n grounds c, n gives c being at w by (b1) and not at v by factive giving: n is two-way toward c. By uniformity n is two-way toward every being it gives at w, and by (b1) it gives each actual concretum it grounds. Constructive."
+description = "Argument N2, the uniformity route of #1944's gap 1 and #1897's gap 6. Not a transcription: the root's two-way profile toward the contingents is derived (controls, law 2), not assumed, and without #1897's holder premises. Establishes no premise. The decisive premise is uniformity at the root, which one power, an invariant set-up and willed exercise do not entail (controls, mixed-mode root). Its warrant is weak. As analogical evidence only (neither case is a giving of being to an effect in the carrier): on the theist's own account one will is necessary toward its own goodness and free toward other things, and the Son is begotten by nature (note section 4). Omission models: without uniformity (the mixed-mode root), without (b1), without factive giving, without necessary roots, without some contingent concretum, without the common root (a mediated creator). Same premise choice as N1: 0c27f65a stands for the bare common root a6b46d2e."
+
+[[argument]]
+id = "5b18e784-755e-4a68-bbcd-5043055179ed"
+label = "Every actual root withholds each grounded being, from willed giving, WN and SS"
+theorem = "rootWithholdingFromWill"
+axioms = []
+premises = ["ee4ab504-c8fe-59bc-bc96-7cbeefed6410", "0c27f65a-6a6b-438a-b96c-b2bab9f21ac3", "5c1aba17-d224-49fd-a31c-728a54ac63a9", "06145e71-01c8-49d6-ae6a-e0b622076575", "Every actual root gives being at w to each existing being it grounds", "0266eac2-3fad-43eb-a1f1-e784c5356105", "85f3fea2-f0a3-424a-acb9-ec4ecd0cd4e1"]
+conclusion = "fbd0a6d3-5ca6-4f17-8651-ed0d6989c747"
+rule = "A root never withholding a grounded being would be fixed toward it by its will, so its end would require it"
+meaning = "Every actual root n is the common GOD_4 root of 0c27f65a, so it has intellect; with one power, its giving is the exercise of a rational power (5c1aba17). Let n ground the actual concretum x and suppose n withholds x at no accessible world where n exists. By (b1), n gives x being at w, so n is fixed toward x (NECESSITATE_5). WN makes x required by n's end; x is not n (a root does not ground itself), so SS denies it. By excluded middle, n withholds x somewhere."
+description = "Argument N3, the will route (the structure of ST I q.19 a.3 co., navigation only, not attributed): a second, partly independent support bundle for (a), from the will and perfection families instead of the modal profile of the root's giving. Not a transcription. Establishes no premise. Simplicity enters through one power: it makes every giving of the root an exercise of its one rational power (uniform kind of power), not a uniform mode; WN and SS supply the mode. With reflexive access (b1) is idle here (controls, law 5). EndRequires is the teleological means-to-end relation; on the rejected strict-modal reading SS alone with a common root yields NAR (controls, law 6) and N3 would beg the question. Shared dependencies: 0c27f65a and 5c1aba17 (hence will following intellect, 090be689) are also inputs of #1944's arguments 2 and 5, so N3 adds nothing against a rival that denies intellect at the root; its value is against an Avicennian-style rival that grants the common root's direct reach, intellect, willed giving, one power, (b1) and SS on the means-to-end reading: that rival must deny WN. Which premise the historical Avicennian system denies is unresolved (unread): if its emanation is mediated (from the one only one proceeds), it denies 0c27f65a's direct reach and is the mediated-creator variant, against which N3 does nothing. Omission models: without WN and without SS (the mixed-mode root), without 5c1aba17 (natural emanation by an intellectual root), without one power, without 0c27f65a (an emanating root without intellect), without (b1) (a non-reflexive frame)."
+
+[[argument]]
+id = "48653f48-d5ba-40c4-a997-324fc2316c54"
+theorem = "narDerivationControls"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+sense_mixing_control = true
+premises = []
+conclusion = "b8ee1a50-b1e2-435e-a082-4652a894438b"
+rule = "General laws and explicit finite models"
+meaning = "Premise-free: six laws (two-way givers; the root is two-way toward the contingents; the relocation equivalence of NAR and (a); exercise-level simplicity yields only uniform fixity; the will route without (b1) under reflexive access; the strict-modal reading of EndRequires begs the question) and finite models (theist nonvacuity, the mixed-mode root, omissions of N1, N2 and N3). Model-witnessed separations only; no premise is established and no reality claim is made."
+description = "Premise-free laws and models for the NAR derivation batch. Sense-mixing control: they relate NECESSARY_2, NECESSITATE_5, the willed-giving and power senses without a bridge premise. Establishes no premise."
