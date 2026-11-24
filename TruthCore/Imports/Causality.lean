@@ -292,6 +292,7 @@ public import TruthCore.Causality.WholePowerClassification
 public import TruthCore.Causality.WholePowerPerfection
 public import TruthCore.Causality.WholeRosterFoundation
 public import TruthCore.Causality.WholeRosterMaximalComparison
+public import TruthCore.Causality.WillVersusChance
 public import TruthCore.Causality.WitnessLocalTeleology
 public import TruthCore.Causality.WorldSourceRegress
 public import TruthCore.Causality.WorldwiseCompositeGround

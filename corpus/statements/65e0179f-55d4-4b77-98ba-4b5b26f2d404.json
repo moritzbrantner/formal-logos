@@ -1,0 +1,14 @@
+{
+  "id": "65e0179f-55d4-4b77-98ba-4b5b26f2d404",
+  "label": "Whatever has a rational power HAS_WILL_1",
+  "paraphrase": "OPEN bridge (analyst formulation): whatever has an active power of the rational class (Rational) has will (HAS_WILL_1). The converse of the previous bridge; near-definitional under the HAS_WILL_1 definition, since a rational power is an inclination following intellectual apprehension of the good.",
+  "lean_declaration": "TruthCore.Causality.WillVersusChance.RationalPowerIsWill",
+  "definition_ids": [
+    "7c64b499-6dba-5e03-bdf3-5acea95d8836",
+    "b8061228-9131-40f2-83bd-cb7d719bd0a0",
+    "582f44c3-7778-4806-b385-e1eff852ac5e"
+  ],
+  "disambiguation_ids": [
+    "941efd70-d56f-53f9-b5f9-8acd36711a54"
+  ]
+}
