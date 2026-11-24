@@ -209,4 +209,27 @@ theorem controls : TruthCore.Causality.TimeSymmetricGiving.Control.Certificate :
     obtain ⟨g, hg⟩ := hCA () false 0 () rfl trivial
     exact hg
 
+
+/-- Scope compatibility on one rigid, nonempty history: the non-received
+bearer receives no giving; the received one is currently given being.
+This uses the previously built `eternal` and `givesAlways` dictionaries,
+not a newly invented causal frame or a new source premise. -/
+theorem subsetInertiaCompatibleWithC3 : Control.SubsetInertiaCompatibleWithC3 := by
+  unfold Control.SubsetInertiaCompatibleWithC3
+  refine ⟨?_, ?_, ?_⟩
+  · intro v x t z hz _
+    have hx : x = false := hz
+    subst x
+    exact ⟨true, by simp [Control.givesAlways]⟩
+  · refine ⟨true, rfl, ?_, ?_, ?_⟩
+    · intro t
+      trivial
+    · intro g t hg
+      simp [Control.givesAlways] at hg
+    · intro z hz
+      simp [falseReceived] at hz
+  · refine ⟨false, rfl, rfl, ?_⟩
+    intro t
+    exact ⟨trivial, true, by simp [Control.givesAlways]⟩
+
 end TruthCore.Results.Causality.TimeSymmetricGiving

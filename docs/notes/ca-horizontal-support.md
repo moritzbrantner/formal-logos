@@ -435,3 +435,208 @@ beyond `81ec01fe` are marked as leads with no weight. An independent semantic
 challenge of the first draft found 4 P1 and 12 P2 findings, which were
 repaired; see the PR. The objections above name their target premise, their mechanism and
 their status. No hypothetical objection is presented as evidence.
+
+
+## 4. Which existential-inertia theses genuinely negate C3? (2026-11-23)
+
+**Destination and target.** This review continues #1801's question about whether
+an actually received-esse bearer can survive without positive concurrent
+being-giving. It reuses the existing `TimeSymmetricGiving.Control.eternal`,
+`givesAlways`, `falseReceived` and weak `ConcurrentlyActualized`
+(`40a97664`) rather than changing the meaning of that established open
+premise. The source-facing issue remains #1616. #1895 owns the matched-past
+withdrawal/no-positive-loss comparison, and #1891 the full #1614 priority
+source-bundle controls. Neither is replaced or made a dependency here.
+
+### A critical scope distinction from the pro-inertia literature
+
+In his public 2021 response to Hsiao and Sanders, Joseph Schmid explicitly
+distinguishes a universal existential-inertia thesis from one restricted to a
+**nonempty subset of temporal concrete things** (§2.1), notes that some
+non-fundamental things may receive concurrent sustaining causes even if their
+foundation persists inertially, and proposes the **necessary temporal foundation**
+(NTF) package (§4.1): a necessary temporal foundation N persists without
+sustaining causes or grounds. N explains the existence of each other temporal
+concrete object whenever that object exists, directly or indirectly. The
+account allows causal, grounding and constitutive explanations. The response also distinguishes
+lack of required sustenance from lack of *actual* sustenance (§2.2).
+Navigation: [Schmid, response to Hsiao and Sanders (2021), §§2.1–2.4, 4.1](https://josephschmid.com/response-to-hsiao-and-sanders-on-existential-inertia-and-the-thomistic-contingency-argument/).
+This is a consulted public textual comparison, **not a newly pinned passage or
+a new formal attribution**. No new source claim or verified passage is asserted.
+
+Consequently the mere proposition
+
+> **S (refined actual-persistence reading):** Some temporal concrete being
+> actually persists without concurrent extrinsic ontological dependence.
+
+is **not** the genuine logical negation of
+
+> **C3:** Whenever a bearer with received esse is present, some giver gives it
+> being at that moment, in every world quantified over by the history.
+
+One possible witness to S is an **underived *temporal* necessary
+foundation N**, which is outside C3's antecedent. C3 and S may both be true
+in such a framework: N does not need a giver, while N's *effects* may
+receive continuing support. But the classical Thomistic first source is
+**timeless**, not temporal, so it does **not** witness S. A world in which
+every temporal concrete being is concurrently sustained by a timeless
+source may satisfy C3 and has no witness for S. This incompatibility
+concerns actual unsustained persistence. The formal comparison below checks
+only the no-giver projection of S, with an ever-present unreceived bearer.
+
+**Checked formal surrogate.** The newly added unregistered theorem
+`Results.Causality.TimeSymmetricGiving.subsetInertiaCompatibleWithC3`
+proves `Control.SubsetInertiaCompatibleWithC3` on ONE already-existing
+`Int`-indexed history:
+
+- `falseReceived` holds of `false` only; this received bearer has a distinct
+  giver `true` at **every** moment;
+- the same `true` bearer is present at every moment and is **never** the
+  recipient of any strict `GivesAt` in the supplied dictionary;
+- `true` does not have received esse in the tested predicate.
+
+This is a **scope compatibility model**, not a full model of NTF or EIT.
+Its `Int`-indexed, ever-present source can serve as a *temporal candidate*
+under the inclusive presence reading; the model has no independent predicate
+proving that it is fundamentally temporal rather than timeless. Its
+one-world modal necessity is trivial, and it does **not** type
+fundamentality, real intrinsic esse, source nature, absence of every possible
+external grounding relation or the productive semantics of the giver. The
+independently important distinction is the antecedent: a universally
+quantified requirement over *received* concreta is consistent with one
+*non-received* concretum having no giver. The theorem is a conditional
+structural check, not a fresh argument for C3 or a ground of N's necessity.
+The older controls already establish each conjunct separately; composing them
+on the **same** existing model makes the scope comparison explicit and adds
+no independent warrant.
+
+### The genuine ¬C3 rival and its stronger obligations
+
+The strongest relevant ¬C3 account instead says of the **same actually
+received-esse bearer x** that it was originated, retains its numerical
+identity and actuality under an independently operative persistence rule,
+and at a later moment has **no appropriately concurrent productive giver**.
+The previously checked `C3ActualWorld` and #1891's necessary-origin control
+supply structural examples of the weak non-giving claim. They do not thereby
+settle the metaphysical meaning of `EsseReceivedIn` or the full
+source/ground relationship. In particular:
+
+1. **No-giver versus no-extrinsic-ground.** A no-`GivesAt` model can still
+   carry an `ActualConcreteGround` edge (as #1885 showed). Schmid's **refined**
+   EIT in the same 2021 response (§2.3 and §3) excludes concurrent extrinsic
+   ontological dependence of its selected inertial bearer, potentially
+   including grounding and realization, not merely current *efficient
+   production*. A model falsifying only `40a97664` is therefore not
+   automatically a model of this full EIT. A necessary originator's being
+   present at every world also cannot by itself test the dependence
+   counterfactual; a ground relation is separate from co-presence.
+2. **No corruption versus no production.** Aquinas himself formulates
+   the *positive-corruption-only* objection in ST I q.104 a.1 **objection 3**:
+   failure of a creature's existence appears to demand an active cause of
+   corruption, especially for naturally incorruptible substances. In the
+   **body** and **reply 3**, he restricts that objection to preservation by
+   warding off corruption and argues separately for direct per-se conservation
+   of being. The affirmative argument is that a thing's esse may depend
+   on a cause of *being as such*, not only a past cause of *becoming*.
+   These are two causal claims with distinct explananda, **not** a theorem
+   that all cessation is a positive destructive process.
+   Existing pinned claim `da9c82ed` records direct conservation and
+   `40aefb2e` becoming/being separation; the English passage
+   `AQUINAS-ST-I-Q104-A1-EN` was read in the earlier campaign. **Reuse the
+   C2 source investigation** in
+   [foundational-absence-warrant.md §3](foundational-absence-warrant.md#3-test-2-the-hybrids-reply): ST I q.104 a.3 **reply 1** expressly separates the absence of
+   existence (no directly productive non-being) from corruption; **reply 3**
+   says divine annihilation, if it occurred, would be cessation of an action
+   rather than another positive divine action. These are source-specific
+   statements of the conservation theory, **not** independent evidence
+   that a derivative being is unable to retain its esse under an inertial
+   law. In q.104 a.4 Aquinas additionally denies that actual creatures
+   will be annihilated; a model where one vanishes is a test of a
+   counterfactual, not a prediction on his view. The q.104 a.3 reading
+   already exists in the C2 note: this is a **cross-family connection,
+   not a new source reading or attributed corpus claim**.
+   **Change-law versus existential-loss law.** This also isolates a
+   nontrivial transfer required by the positive ¬C3 argument. A principle
+   that *any actual change of a persisting subject* needs an inducing cause
+   does **not**, without an additional premise, cover the case where the
+   bearer itself ceases to exist and no bearer survives the transition.
+   Creation and annihilation are not motions of an enduring subject in
+   Aquinas's q.45 a.2 sense, as the already reviewed C2 note observes.
+   `TimeSymmetricGiving.CessationNeedsInducer` and
+   `ConcurrentCessation.CessationHasCause` therefore state **stronger
+   existential-loss coverage hypotheses** when read over the bearer
+   itself: the former explicitly quantifies present-then-absent cases;
+   the latter requires a represented terminal destructive occurrence.
+   Their verification as conditional implications does *not* follow
+   from a source's account of ordinary physical changes. A sophisticated
+   inertialist may take *change* in the broader sense of any difference
+   between positive existence facts across times and directly defend
+   existential-loss coverage on that ground; this is a **live primitive
+   extension**, not an inconsistency or automatic refutation. Conversely,
+   the conserver needs positive warrant that withdrawal suffices for
+   loss without a further destructive act, because q.104 a.3's
+   annihilation classification assumes direct dependence for esse.
+   The existing #1895 four-history and withdrawal-as-loss controls
+   discriminate the *two open hypotheses*, not their real-world truth.
+   This is a conceptual/source-scope audit, **not** a new Lean theorem,
+   claimed new attribution, or an independent warrant count.
+3. **Source of positive warrant on each side.** The strongest inertialist
+   explains later survival by previous real existence, an applicable
+   no-positive-loss rule and the absence of such a loss inducer; it is **not**
+   committed to an intrinsic present power of x grounding its own being.
+   Feser's same-time circularity objection to a *persistence property*
+   therefore does not by itself defeat the prior-stage/no-change variant.
+   Conversely, the source account argues that an essence unable to originate
+   esse is also unable by itself to account for **its present actuality**,
+   but this last step needs a substantive present dependence/retention
+   principle; naming the bearer `received` or using an illumination analogy
+   is insufficient. This is the crux in §§4–6, not a newly proved bridge.
+
+### Cumulative effect and positive revision conditions
+
+The scope correction **does not lower or strengthen** C3's warrant merely
+because a weak or differently scoped inertialist thesis is compatible with it.
+It sharpens which rival is genuinely contradictory:
+
+- **C1/C2 and C3 together** may admit an unreceived **temporal**
+  necessary source and continuously derivative creatures. Restricted subset
+  EIT about this temporal N is compatible with C3 for those creatures;
+  it is *not* a competing worldview on their actual dependence. The
+  classical **timeless** source does not instantiate the nonempty subset EIT
+  claim, even if it can sustain all temporal creatures.
+- **Genuine ¬C3 of a received bearer** is a live alternative that a
+  positive causal/conservation account must confront. #1895's
+  no-destruction-law success and its withdrawal-as-loss counter-reading test
+  that alternative at one interval, without metaphysical source certification.
+- **EIT on a fundamental temporal N** and **EIT on a derivative created x**
+  have different consequences for God-existence routes. The former may
+  coexist with the necessary source; the latter bears directly on sustaining
+  interpretations of `23e04ae5`, `2068f91c` and `cb1cdea9`. Neither
+  alone negates all C1/C2 routes, and they must not be counted as one
+  independent objection plus another.
+
+**Provisional assessment.** The actual received-esse case remains
+underdetermined. The subset-NTF account has a positive role as a model of
+*how an unsustained foundation and sustained derivatives could coexist*, but
+is not an answer to the disputed received-bearer continuation question.
+The genuinely opposed account has the local explanatory successes and
+unsatisfied application burdens recorded in #1801. There is no warrant here
+for ranking whole worldviews by the number of inertial bearers or for
+equating necessary existence with causelessness, pure actuality or simplicity.
+
+**Next discriminating test:** fix one **currently derivative** x, its
+essence/esse interpretation and exact selected actual world. Test the
+no-positive-destruction law over x's own **existential** cessation—not a
+property of x—under a source withdrawal that does not import a positive
+corruption process. Separately test whether the same concrete source's
+*productive*, strictly present dependence is independently warranted or
+whether historical origination plus a real present nonproductive ground
+suffices. If a fundamental N is the only inertial item, the test has
+not yet opposed C3; record that as a scope mismatch, not as a failed
+inertialist account.
+
+**Integration boundary.** This adds one unregistered, directly checked
+structural certificate, one scoped reading comparison and no new corpus
+statement, definition, claim, argument or result. Intended `frontier-diff`:
+**no change**. The independent semantic challenge of this full section and
+the final-head CI are required before publication as reviewed support.
