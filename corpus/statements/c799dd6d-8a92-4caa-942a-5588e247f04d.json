@@ -1,0 +1,9 @@
+{
+  "id": "c799dd6d-8a92-4caa-942a-5588e247f04d",
+  "label": "Only finitely many selected fact labels occur in the per se ancestry of each effect",
+  "paraphrase": "OPEN local finiteness premise about the supplied labelling. For every effect, the image under that labelling of itself and all bearers reaching it by finitely many per se cause steps is finite. The set can differ by effect. A single label can cover infinitely many bearers.",
+  "lean_declaration": "TruthCore.Causality.StrictGroundRepresentation.FiniteAncestralLabels",
+  "definition_ids": [
+    "4a101a4c-12de-53c8-80c6-de7a523ea9d9"
+  ]
+}

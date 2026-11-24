@@ -1,0 +1,15 @@
+{
+  "id": "5dc114ec-db0d-4906-af12-ebe85ebd31f5",
+  "label": "Derive the Second Way regress premise using finite ancestral labels (inference)",
+  "input_statement_ids": [
+    "fea5942a-b50c-4299-a5fe-80a5c2b8c0a9",
+    "42756c07-03cd-4b54-8ed6-ed6c1a5132aa",
+    "adb951c1-db12-48bf-be7b-a152b8e27021",
+    "c799dd6d-8a92-4caa-942a-5588e247f04d"
+  ],
+  "output_statement_id": "97f5850f-62bc-5e43-a0c1-dd1033d08fc9",
+  "rule": "Induct on derivable strict ground restricted to the finite label image over the chosen effect",
+  "meaning": "Each per se predecessor remains in the same ancestral cone and moves strictly down among its labels by alignment and the selected consistent theory. Strict ground on this finite label set is transitive and irreflexive, hence well-founded. Induction yields accessibility of the effect for the original cause relation. The premises concern the same labels throughout.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

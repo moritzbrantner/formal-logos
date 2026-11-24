@@ -1,0 +1,13 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.CartesianIdeaOfInfinite.Challenge",
+  "solution_module": "TruthCore.Results.Causality.CartesianIdeaOfInfinite.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.CartesianIdeaOfInfinite.infiniteCauseWithEsse",
+    "TruthCore.Results.Causality.CartesianIdeaOfInfinite.distinctPossessorWithoutBearer",
+    "TruthCore.Results.Causality.CartesianIdeaOfInfinite.surpassedCauseWithEsse",
+    "TruthCore.Results.Causality.CartesianIdeaOfInfinite.causeWithoutEsse",
+    "TruthCore.Results.Causality.CartesianIdeaOfInfinite.finiteRulesDiscriminateAboveEveryBound"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}

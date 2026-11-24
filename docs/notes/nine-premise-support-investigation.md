@@ -3,6 +3,56 @@
 Date: 2026-11-13. Research baseline:
 `03d97b48a86d4b7d7bbedcb4441398ce3a9dadef`.
 
+## Current comparisons of causal, Cartesian and cosmological explanations
+
+The proposed conclusions on branch `research/comparing-explanatory-representations`
+received independent semantic challenge at `ab774b58c` for the causal and
+Cartesian arguments and at `9351b7054` for cosmology. The six new registered
+results passed local binding, Comparator and NanoDa. The outstanding tests
+concern the actual levels of existential supply, the intrinsic unity grasped
+by the thinker, and predictions for the same observer records.
+
+### What a representation can establish about its source
+
+Strict ground gives two routes into the causal argument. Acyclic dependence
+implies that distinct beings cannot depend on each other. If every per se
+cause supplies the corresponding distinct dependence step, a consistent
+strict-ground map also gives the Second Way's regress premise when each
+effect's ancestry has only finitely many distinct fact labels. A finite list
+of descriptions alone cannot support this argument. Combining two unrelated
+supply chains under shared descriptions can create a cycle even when each
+chain keeps different labels at its two ends. For acyclic distinct-step
+dependence on an inhabited domain, identity labels give a theory constructed
+from the edges that reproduces their reversed nonempty finite paths exactly. The
+independent warrant for existential direction must come from what fixes
+those edges or what warrants the theory in advance. [Derivations and
+rival](distinct-dependence-strict-ground-route.md#what-does-a-consistent-representation-add)
+
+The Cartesian argument presents a parallel question about a different kind
+of representation. A finite rule can determine positive content about an
+unbounded domain. A thinker can also distinguish one subject knowing every
+truth from each truth being known by someone. Those discriminations give
+a finite contributor a role in articulating content. Whether they explain
+a first-person grasp of all perfections as intrinsically united remains
+open. Given the Cartesian adequacy premises and the actuality-to-being
+bridge, the same cause of the episode's content has esse. A further premise
+is required to establish its maximality in being. [Finite-thinker test,
+Cartesian reply and same-cause argument](cartesian-infinity-content.md)
+
+### Does a purposive source predict which vacuum density observers measure?
+
+Assume a flat prior per unit positive vacuum density and weight observations
+by ordinary-matter entropy production in a homogeneous causal diamond. Integrating two
+published stellar histories then gives about 34% or 43% to the decade
+containing our density. A different treatment of late entropy can change the
+distribution. Communicating goodness gives a reason to create but supplies
+no probability for this decade. Maximizing the fraction of baryons becoming
+life gives a more specific comparison, conditional on the feasible densities
+and their unknown life yields. On this datum the physical model gives a
+quantitative fit under explicit assumptions. The evidence does not yet rank
+it against the purposive account. [Physical prediction, purpose and outstanding
+comparison](fine-tuning-selection.md#1569-which-vacuum-energy-decade-does-an-observer-find)
+
 ## Outcome
 
 The investigation found substantive support for the selected potency and

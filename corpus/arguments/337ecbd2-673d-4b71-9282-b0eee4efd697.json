@@ -1,0 +1,27 @@
+{
+  "id": "337ecbd2-673d-4b71-9282-b0eee4efd697",
+  "label": "Classify exactly the fixed labels admitting the distinct-dependence PLG map",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "0f98a4a8-57ab-44d5-a243-e0f0efa665fc",
+  "inference_ids": [
+    "e2432920-cb5a-454f-bd7c-8a9cba87f704"
+  ],
+  "meaning": "A projected cycle gives strict self-grounding in any theory realizing the map. Conversely, in an acyclic projection each generating step strictly enlarges the set of weakly reachable predecessors. Rank soundness excludes self-grounding, so the edge theory itself witnesses consistency. The consequence concerns selectable theories over the supplied labels.",
+  "definition_ids": [
+    "bf26b9b2-41ed-55b0-9557-dae90ab9b81f",
+    "df5284cb-8f1f-5b61-9b1c-ee4c1544b469",
+    "5d9a94e0-d64b-53ca-b9cc-504735060e0a"
+  ],
+  "disambiguation_ids": [
+    "23dd6f32-b456-4963-adb3-7befbf0dc4fb"
+  ],
+  "sense_bridges": [
+    {
+      "term": "DEPENDENCE_FOR_BEING_VERSUS_STRICT_GROUND",
+      "from": "c6e310c2-a8c9-41cb-8d7e-18859802484d",
+      "to": "28212589-ee94-4eb0-b20e-f7cead4438b1",
+      "statement_id": "0f98a4a8-57ab-44d5-a243-e0f0efa665fc",
+      "role": "conclusion"
+    }
+  ]
+}
