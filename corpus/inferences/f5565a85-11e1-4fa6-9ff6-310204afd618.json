@@ -1,0 +1,15 @@
+{
+  "id": "f5565a85-11e1-4fa6-9ff6-310204afd618",
+  "label": "GOD_4 is one from GOD_4 maximality and distinct esse cause exclusion (inference)",
+  "input_statement_ids": [
+    "4c79298d-ee09-5e99-9ced-1be92c19b4cc",
+    "18561596-1269-53ff-8505-c56e4348e335",
+    "86d02b69-87eb-5594-9958-ccaa5fe6b685",
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410"
+  ],
+  "output_statement_id": "33b18ae7-4578-54bc-a2b5-edce99b21fc2",
+  "rule": "Use the first candidate's maximality to exclude the other's proposed esse gift",
+  "meaning": "For any two Gods the first is maximal, and the second, if distinct, would give the first its esse in the same CausesIn relation. Exclusion and an identity split give equality. This route can take God-to-maximality directly without assuming an existing maximum. Deriving it by 14cbab05 reintroduces the witness and the two shared causal assumptions.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

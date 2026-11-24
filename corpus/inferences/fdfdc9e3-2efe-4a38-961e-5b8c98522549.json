@@ -1,0 +1,15 @@
+{
+  "id": "fdfdc9e3-2efe-4a38-961e-5b8c98522549",
+  "label": "GOD_4 is one from a maximal bearer excluding distinct esse causes (inference)",
+  "input_statement_ids": [
+    "fad8af3e-3e4e-582a-a592-0164bdd62527",
+    "18561596-1269-53ff-8505-c56e4348e335",
+    "86d02b69-87eb-5594-9958-ccaa5fe6b685",
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410"
+  ],
+  "output_statement_id": "33b18ae7-4578-54bc-a2b5-edce99b21fc2",
+  "rule": "Pin every God to the same maximal witness by excluding a distinct giver of that witness's esse",
+  "meaning": "With one MAXIME_1 witness m, each GOD_4 distinct from m would give m its esse in CAUSE_2. Exclusion forbids this, so an identity split yields equality with m for every God. The auxiliary theorem needs only CausesAllInGenus for each God at esse since m is in act there. The registered input is the existing carrier-wide converse. No God is supplied.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}
