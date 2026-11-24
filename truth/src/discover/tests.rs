@@ -681,10 +681,10 @@ fn certification_runs_the_premise_check_and_the_portfolio_tactics() {
             "import Mathlib.Tactic.Tauto"
         ]
     );
-    // No scratch tactic is defined (the proof states its `delta`), the search
-    // body's `open`s stay in its section, and every theorem is followed by the
-    // premise check.
-    assert!(!text.contains("elab \"prove_sweep_unfold\""));
+    // The scratch defines prove-sweep's tactics for the search body (its
+    // probe), the body's `open`s stay in its section, and every theorem is
+    // followed by the premise check.
+    assert!(text.contains("elab \"prove_sweep_probe\""));
     let section = text.find("\nsection\n").unwrap();
     let end = text.find("\nend Discover\n\nend\n").unwrap();
     assert!(section < text.find("open Lean\n").unwrap() && end > section);

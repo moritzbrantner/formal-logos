@@ -222,10 +222,11 @@ target/release/truth discover --target STATEMENT --write-spec specs/discover-cau
    `delta` of the definitions that step unfolds (`sweep_unfold` in the
    outcome; the step is dropped when there are none); the statement itself
    unchanged) and elaborated in a separate Lean run with `#print axioms`. The
-   Solution draft states the same text, so neither declares tactic syntax
-   that could clash with prove-sweep's scratch tactics where the module is
-   imported; a replay that differs from the search fails closed. The file also
-   defines the search's `#discover_external` command (in a `section`, so its
+   Solution draft states the same text, so no library draft uses or declares
+   tactic syntax that could clash with prove-sweep's scratch tactics where the
+   module is imported; a replay that differs from the search fails closed. The
+   certification file, a scratch file, also defines prove-sweep's tactics
+   (the search body needs its probe) and the search's `#discover_external` command (in a `section`, so its
    `open`s do not reach the theorems), which runs after each theorem. A discovery whose text fails, whose proof uses an
    axiom other than `propext`, `Classical.choice` and `Quot.sound`, or whose
    re-elaborated proof rests on a project theorem outside its bundle is

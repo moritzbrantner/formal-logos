@@ -1782,7 +1782,11 @@ pub fn certification_text(
     });
     text.push('\n');
     if let Some(body) = &body {
-        let _ = writeln!(text, "section\n{body}\nend\n");
+        // The search body needs prove-sweep's tactics (its transcription
+        // probe); this scratch file is no library module, and the theorems
+        // themselves use none of them.
+        text.push_str(prove_sweep::PRELUDE);
+        let _ = writeln!(text, "\nsection\n{body}\nend\n");
     }
     let mut ranges = Vec::new();
     for (name, body_text) in theorems {
