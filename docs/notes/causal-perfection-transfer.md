@@ -2936,3 +2936,146 @@ The existing path is `5bedb69b` plus `6884dcfd`, `3317e074`, `4be9a4ac` through 
 **Next precise test (PRD R3).** Investigate whether a noncognitive act can be intrinsically perfective without being an acquired or maintained state: independently specify its positive operation/end, not merely its own bearer or the absence of external actualizers. Contrast self-maintaining living activity (see [life-restricted composition](life-restricted-composition-327.md)) with a fully actual source, removing only the implementation's receptive and compositional conditions. An operation belonging essentially to a nature and intrinsically completing it without augmenting it is the candidate to examine. If no such noncognitive example has a nontrivial common perfective content, the remaining question is whether the broad life reading itself is a genuine pure perfection and suffices for any existing consumer via an explicit sense bridge. A genuine example or a demonstrated obstacle would change the warrant; more variations of arbitrary operation predicates would not. Reopen the R4 limitation bridge on that fixed positive content. Do not repeat the intellect or will investigations.
 
 **Self-challenge and boundaries.** Rejected: equivocation between broad exercise and immanent act, treating `5bedb69b` as an operation-specific disjunction, inferring actualization from co-truth, inferring strict immanence from an identical act-reference, treating an effect-dependent description as an incoming esse-ground, and asserting that a finite transitive cause is an actual root. Source reading restricted to the inspected clauses. Same source and matching comparison standard preserved; the model does not prove metaphysical applicability, joint purity, or necessity. No new statements, claims, Challenge or result registrations. No computed frontier change is claimed. Canonical reuse/novelty/semantic preflight, corpus validation and independent final challenge remain outstanding (no prepared checkout or separate reviewer here). This is an owner-authorized draft checkpoint, not reviewed support.
+
+
+## Intrinsic completion versus kind-completeness (2026-11-24; draft continuation)
+
+**Scope.** PRD R3 (purity and immanence of life), then R4 (scope of limitation) at `d164b1ff-ad31-5fbc-8ef9-eb0db51ebd96` and `c4fb87a6-047d-5f3d-b3e3-8dc0c4bbc946`. Reconciled read-only against main `ba8a75398b009932a33f649ec7abcb2069a3e030`; the causal-perfection note's main blob is unchanged. Retain `5bedb69b` and its consumers, `64498e7e` and `fe67d766`. No further intellect/will argument. Read `DEF-PURE-PERFECTION`, `DISAMB-PERFECTION-SCOPE`, `WholePowerPerfection`, argument `95c04a6d`, #1914's `bc17c420`, `688e42fc`, [life-restricted composition](life-restricted-composition-327.md), and [due actuality](goodness-form-end-definitions.md). Required CLI retrieval and independent worker review remain outstanding; no claim of novel registered result.
+
+### Positive content of noncognitive immanence
+
+1. **End directed toward the subject is not necessarily the end present in the activity.** Aristotle, [De anima II.4, 415a22–b7 and 416b9–29](https://psychclassics.yorku.ca/Aristotle/De-anima/de-anima2.htm), distinguishes nutrition's preservation of an already existing organism from generation and growth. The nutritive operation has an intelligible beneficiary and a positive result: maintaining the individual's substance. This is not self-production of esse. It is also not automatically an operation whose entire perfection is present in the exercise rather than in a maintained condition. The finite realizations use food, change and composition; the already investigated reciprocal-regeneration case makes its mechanism and intervention conditions explicit. No new biological model or criterion of individual persistence is claimed.
+2. **The complete-activity contrast.** [Metaphysics IX.6, 1048b18–35, and IX.8, 1050a21–b2](https://classics.mit.edu/Aristotle/metaphysics.9.ix.html) distinguish activities complete in their exercise from processes aimed at a further product. The latter passage explicitly locates life and well-being in the soul and gives seeing/theorizing as illustrations. This motivates examining an intrinsically completed activity that does not acquire a further perfection. It does not supply an example of noncognitive, nonreceptive, simple divine operation. Even an exercise complete as an act need not be necessary, timeless or free of other receptive conditions.
+3. **Purity of end versus purity of means.** [ST I q.18 a.2 co. and a.3 ad 1–3](https://www.newadvent.org/summa/1018.htm) distinguish living nature from its observed operations, distinguish immanent from transitive action, and expressly deny that incorruptible life needs vegetative nutrition/reproduction. The last reply follows the identification of divine life with its own understanding; it removes a finite implementation requirement, not the obligation to specify a positive immanent act. Mere incorruptibility is not the act of living. Mere existence, even where underived, does not by that description say that a proper operation of the source is intrinsically perfective.
+
+This isolates a constructive next question rather than merely removing finite properties. An intrinsically perfective act would need an independently specified content that is complete in its own exercise and belongs to the agent's very actuality, rather than just serving a beneficiary or producing an external terminus. Being nonreceptive does not supply that content. The previous act-identity test excludes external constitutive grounding under its explicit hypotheses but cannot supply the new positive content. Do not equate the operation with the act of existing by definition, which would make every actual existent strictly immanent in the selected respect. Nor does an essential life-predicate by itself imply its exercise.
+
+**Retained positive finding:** a genuinely acting root has active efficacy (given the productive interpretation and operation attribution), rather than only passive aptitude. When the actuality of the act belongs essentially to the source and is not borrowed, the proposed broad first-agency life reading has independent motivation in SCG I.97 n.3. Both rivals earn this same conclusion under the same assumptions; whether the broad sense is sufficient for LIVING_1 remains an explicit interpretation problem, and it is not `7acc985a`. The strict noncognitive immanence test remains unresolved. No actual noncognitive instance satisfying all of positive intrinsic operation, completion in exercise, nonreception and absence of kind limitation has been identified here. This neither proves such activity impossible nor makes strict immanent life an impure perfection. The life branch is now a specific test of the general fullness claim, not the only way to it.
+
+### Whole power: the restriction of a mode versus restriction to a mode
+
+[SCG I.28 nn.1–4, 23773–23776](https://www.corpusthomisticum.org/scg1014.html) distinguishes living from merely existing things and argues that what is its own esse has the whole power of being. Its separated-whiteness illustration explains why a received perfection can be contracted by the recipient. [ST I q.4 a.2 co., ad 3](https://www.newadvent.org/summa/1004.htm) expressly distinguishes the perfection of existence considered in itself from participation in particular modes including life. The strongest positive reconstruction does not say that being a full instance of a specific kind implies every other kind; it says that the subsistent source is the non-contracted act of being itself, not an instance of a kind that receives its act.
+
+**New discriminator for this investigation.** Test two kinds of completeness separately:
+- Within-mode completeness: the source possesses the fullness of its own actual positive nature; no recipient diminishes that actuality.
+- Across-mode intrinsic fullness: each genuinely pure positive actuality pertaining to being is present in the source, without an exclusionary restriction to some determinate mode.
+
+The whiteness illustration strongly motivates the first, and SCG I.28 explicitly argues for the second. But the illustration alone does not license the generalization: whiteness is a specified perfection, while esse is not a genus or one specific quality. A nature's internal completeness may coexist with the absence of a distinct kind of excellence. The Thomistic answer is that the subsistent act is not a particular form or a member of a genus; pure perfections do not add an alien restriction to it. This is a substantive answer with positive explanatory content, not a formal entailment from the bare predicate `OwnBeing`. The alternative primitive whole nature can be maximally actual in its own specific character without a receiving constituent. Its challenge to `d164b1ff` is precisely that an irreducibly determinate actuality might be intrinsic rather than contracted by a separate principle. Whether this constitutes genuine unqualified esse is the question, not a concession. A natural source with no incoming dependence but a specific character must justify its non-contraction under the same act/receipt account applied to a personal source.
+
+The essential-goodness comparison helps avoid begging the question. [ST I q.6 a.3 co. and ad 1–2](https://www.newadvent.org/summa/1006.htm) distinguishes constitution of being, requisite operative perfections, and attainment of end; the divine application relies on attributes already argued for, including lack of accidents. Reuse `TruthCore.Metaethics.GoodnessFormEnd`'s supplied due-for-form/end distinction, not its unrestricted goodness biconditional or any moral thesis. There is a difference between lacking nothing **due to the bearer** and lacking no genuine pure positive actuality anywhere in the inventory. An incorruptible bearer can lack nutrition without defect. An independently specified pure life respect might still be absent from a determinate nature which claims no intrinsic life capacity. Absence of passive potency does not by itself say that every pure capacity belongs to that nature.
+
+**Exact conditional consequence (local analyst derivation, not registered):** let `DueFor` use the form/end semantics and restrict to the same actual g. If every due determination of g is really possessed, and every pure determination is due to g's nature/end, then g has every pure determination. These are separate premises. With the additional local assumption that every possessed pure determination is due, and no due determination missing, pure fullness and pure-due coverage are equivalent. Without that additional assumption the converse need not hold. The point is not to rename `d164b1ff`: a lack-of-privation route must now defend the scope of the standard, and cannot import unlimited fullness into the meaning of `DueFor`. The argument does not require `00e962ae` or unrestricted `d5a94eb1`/`f8ba2429`. Nor does this derive the universal `d164b1ff` over every OfBeing determination: Pure → OfBeing does not give its converse absent the existing further purity bundle.
+
+### Fixed-due-scope structural comparison
+
+All four variants retain actual g, actual distinct x, g's sole outgoing existential ground of x, a stipulated OwnBeing g, a nonvacuous passive-potency contrast, and g's explicitly assigned productive efficacy in every respect in the small pure inventory (all witnessed by x). These are finite analyst assignments; `Pure = OfBeing` is stipulated, the source's real determination set is a subset of that inventory, and the `Has`/production split is explicit. The fixed nature-relative due standard for each variant is not inferred from the possession table. The two variables are whether life is in g's actual determination set, and whether life is due to g. This is not an independently warranted essence or causal ontology.
+
+| Source has life | Life due to g | No due determination missing | Every pure determination possessed |
+| --- | --- | --- | --- |
+| no | no | yes | no |
+| no | yes | no | no |
+| yes | yes | yes | yes |
+| yes | no | yes | yes |
+
+The first cell shows that no due absence, stipulated own being, strict determination purity, an actual root, and actual productive coverage do not force whole-power fullness in this signature. The second cell restores due coverage, exposing the real conflict. The fourth cell shows that due coverage is not necessary for fullness without the separately stated possessed-pure-due constraint. The assignment does not satisfy the stronger absolute-esse thesis when that thesis entails across-mode fullness. It is not evidence for a metaphysically possible deficient absolute act. It tests the scope error of inferring absence of every nonpossession from absence of due deficiency. Neither side is charged with a defect defined by its rival's unestablished criterion. No goodness evaluation, modal possibility or temporal process is inferred.
+
+Executed exact diagnostic (four variants and the displayed conditional tests, all passed):
+
+```javascript
+// Fixed actual source g, actual distinct living effect x, and supplied Pure/OfBeing inventory.
+// These are structural assignments, not a metaphysical life criterion.
+function assert(c){ if(!c) throw Error("control failed"); }
+const ds=["esse","activeEfficacy","life"];
+const pure=new Set(ds), ofBeing=new Set(ds);
+const actual=["g","x"], ground=[["g","x"]];
+const root=actual.includes("g")&&!ground.some(([a,y])=>y==="g");
+const ownBeing=new Set(["g"]); // stipulated, not derived from roothood
+const passivePotency=new Set(["x"]); // nonvacuous pure-act contrast
+const hasX=new Set(ds);
+const produces=ds.map(d=>["g","x",d]); // explicit coverage, not inferred from giving esse
+const rows=[];
+for(const hasLife of [false,true])
+for(const dueLife of [false,true]){
+  const hasG=new Set(["esse","activeEfficacy",...(hasLife?["life"]:[])]);
+  const dueG=new Set(["esse","activeEfficacy",...(dueLife?["life"]:[])]);
+  const noDueMissing=[...dueG].every(d=>hasG.has(d));
+  const pureDue=[...pure].every(d=>dueG.has(d));
+  const full=[...pure].every(d=>hasG.has(d));
+  const possessedPureDue=[...pure].every(d=>!hasG.has(d)||dueG.has(d));
+  const wholePower=[...ofBeing].every(d=>hasG.has(d));
+  assert(root&&ownBeing.has("g")&&!passivePotency.has("g")&&passivePotency.has("x"));
+  assert(actual.length===2&&hasX.has("life")&&produces.every(([a,x,d])=>actual.includes(a)&&actual.includes(x)&&hasX.has(d)));
+  assert([...hasG].every(d=>pure.has(d))&&[...pure].every(d=>ofBeing.has(d)));
+  assert(!noDueMissing||!pureDue||full);
+  assert(!noDueMissing||!possessedPureDue||(full===pureDue));
+  assert(full===wholePower); // this fixture stipulates Pure = OfBeing
+  rows.push({hasLife,dueLife,noDueMissing,pureDue,full,possessedPureDue,wholePower});
+}
+const get=(h,d)=>rows.find(r=>r.hasLife===h&&r.dueLife===d);
+assert(get(false,false).noDueMissing&&!get(false,false).full);
+assert(!get(false,true).noDueMissing&&!get(false,true).full);
+assert(get(true,true).noDueMissing&&get(true,true).full);
+assert(get(true,false).full&&!get(true,false).pureDue);
+return rows;
+```
+
+### Argument graph and highest-leverage premises
+
+The graph below separates universal premise derivations from their instance applications. A box containing several inputs denotes their conjunction; arrows on the established side summarize only the registered conditional consequences. Dashed research arrows are candidate applications, not additional registered arguments.
+
+```mermaid
+flowchart TD
+  R["Supplied actual root g"]
+  L["08178314: limited actual concretum has grounding giver"]
+  U["g has unlimited esse"]
+  R --> U
+  L --> U
+  I["be1289df: unlimited esse implies infinity"]
+  F["Infinite g"]
+  U --> F
+  I --> F
+  P["965d0e26 + 7de89edb + bc1810e5: infinity, reception and OwnBeing"]
+  W["d164b1ff: whole-power intrinsic possession"]
+  Q["c4fb87a6: every pure perfection pertains to being"]
+  T["122b112e: infinite has every pure perfection"]
+  P --> T
+  W --> T
+  Q --> T
+  G["fe67d766: every actual root has every pure determination"]
+  F --> G
+  T --> G
+  O["OwnBeing at each root: eight inputs + 26e8e6ed"]
+  O -->|whole-power route 7d8bbdcb| G
+  W --> G
+  Q --> G
+  X["Other uniqueness premises in 688e42fc / pure-indiscernibility sibling"]
+  N["91b085c4: unique actual necessary root"]
+  G --> N
+  X --> N
+  B["5bedb69b: broad operation or moved implies immanent-or-moved disjunction"]
+  A["Act identity, agency and ground transport at g"]
+  A -.-> E["Nonborrowed operative actuality"]
+  E -.-> J["OPEN: positive immanent activity at g"]
+  B -.-> J
+  H["Life at g: 38aa1327 + unmovedness"]
+  J --> H
+  H -.-> S["OPEN: life purity and mode-aligned Has"]
+  S -.-> V["Particular pure determination at g"]
+  G -.->|same actual g and independently supplied purity| V
+  Y["64498e7e: universal preexistence in inclusive InAct"]
+  G -.->|only a restricted candidate with sense and scope adapters| Y
+```
+
+The arrow from infinite g to the universal `fe67d766` is schematic for arbitrary supplied g and universal hypotheses, not a proof from one instance. The top route is #1914 argument `bc17c420` (all three universal inputs `08178314`, `be1289df`, `122b112e`); `95c04a6d` derives the last from its five recorded premises. The alternative `7d8bbdcb` requires eleven recorded inputs. The direct limitation-to-incoming-ground argument needs `1304b462`, `4bc853db`, `cb1cdea9` and the retained receipt derivation where used. The life route uses `45030701`, `38aa1327` and `4be9a4ac` in `aa1c3134`; `ad49ea00` is required for LIVING_1 and the nine-scoped consumers have their own guards. This graph does not derive `5bedb69b` from the source case, nor a universal conclusion from a single life witness. `G`'s dotted arrow to `64498e7e` marks an unbuilt restricted replacement plan; its full all-causes/all-respects reading needs additional arguments. No new proof edge.
+
+| Priority in this investigation | Premise or bridge | Reason |
+| --- | --- | --- |
+| P0 | `d164b1ff` + `c4fb87a6` | Direct intrinsic scope and positive mode classification; both whole-power and infinity derivations depend on these when expanded through `95c04a6d`. `122b112e` remains a separate direct option. |
+| P0 | `1304b462` (limitation implies receipt), and the missing-pure-mode → real limitation bridge | Converts the disputed determinate-nature account into the existing finite-dependence argument, provided the same limitation sense and concrete-ground premise are warranted. |
+| P0 | `64498e7e` with the formal/substantive-eminent versus merely productive reading split | Main original target and high fan-out; no universal discharge from source-only pure fullness. The two Has/InAct scope senses must not be identified. |
+| P1 | `5bedb69b` with `7acc985a`, `38aa1327`, `ad49ea00` | Concrete life test; the source-scoped positive operation is narrower than the existing universal or nine-wide premises. |
+| P1 | `be1289df`, `122b112e` and `bc1810e5` | Keep the infinity/own-being dictionary explicit; a name for infinity is not independent evidence of intrinsic fullness. |
+
+Priority is based on substantive leverage, not a leaf-count ranking of truth. For broader context [root-route modal-load audit](root-route-modal-load.md#crux-inventory-of-the-25-modal-free-routes-stages-12), PR #1902: on that exact historical snapshot seven leaves each removed all 25 modal-free routes under the tested fixpoint—`d5a94eb1`, `f8ba2429`, `64498e7e`, `7067553d`, `00e962ae`, `ca07cae9`, `818a73cc`. `d9fad785` removed 21 (four had alternative derivations). Do not report this as a freshly computed count at the current head, or as the result of a premise-warrant judgment.
+
+**Provisional judgment and continuation.** The positive whole-power explanation remains promising: an act received into a determinate nature explains its contracted mode, and unqualified actualizing esse is not merely one kind of power. The most useful next target is now `d164b1ff`'s across-mode argument: independently specify a pure positive determination whose exclusion is a restriction *of act itself*, rather than simply the absence of a different kind. The noncognitive life test has identified a concrete reason for not treating all internally directed biological maintenance as strict immanent perfection; active efficacy is a positive case but does not discriminate the rival sources. Seek horizontal support through the non-genus distinction, source-specific positive actuality, and essence/esse-reception account; neither complete-kind nor absence-of-due-defect criteria suffice alone. A principled account of the exclusion of a separately characterized pure actuality in an unreceived nature weakens the whole-power route; a proof that such exclusion requires a real contraction strengthens it. The direct primitive/cumulative warrant of the original whole-power commitment is retained. Preserve joint compatibility as a separate question. No metaphysical winner, independent challenge, new attribution, registered proof or computed frontier delta claimed. Review remains outstanding. This is the single draft research checkpoint.
