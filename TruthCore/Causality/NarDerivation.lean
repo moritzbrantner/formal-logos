@@ -110,9 +110,10 @@ def ActualRootsGiveGroundedHere (F : CausalityFrame W B T R) (concrete : B → P
 being: every actual root of `G` at `w` gives each NECESSARY_2 being that it
 grounds at `w` being at every world accessible from `w` where the root exists.
 The weakest form argument N1 uses: only at roots, only for necessary grounded
-beings, only where the root exists. Both classical theism and the
-necessary-through-another rival in its emanationist form accept it (the First
-gives the first intelligence being in every world). It says nothing about
+beings, only where the root exists. It holds only vacuously for the classical
+theist, who posits no necessary grounded being; only the
+necessary-through-another rival accepts it in substance (the emanationist
+First gives the first intelligence being in every world). It says nothing about
 contingent grounded beings, so a contingent being sustained elsewhere by
 another source (#1897's `replacementG`) is no counterexample. -/
 def ActualRootsGiveNecessaryGroundedWherever (F : CausalityFrame W B T R) (concrete : B → Prop)
