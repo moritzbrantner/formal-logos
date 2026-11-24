@@ -1,0 +1,6 @@
+{
+  "id": "34f9ad6f-fd45-44a6-951c-4ae54f3e3c62",
+  "label": "A finite-throughput transfer has a return path or an upstream net exporter",
+  "paraphrase": "For a nonnegative directed ledger on any carrier with finite summed edge throughput, each positive transfer from a to b either admits a finite positive path from b to a, or has an upstream u reaching a by a finite positive path (possibly empty) whose exports strictly exceed receipts. Both alternatives may hold.",
+  "lean_declaration": "TruthCore.Causality.FiniteThroughput.ReturnOrNetExport"
+}

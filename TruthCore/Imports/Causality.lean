@@ -114,6 +114,7 @@ public import TruthCore.Causality.FiniteBranching
 public import TruthCore.Causality.FiniteEsseDependence
 public import TruthCore.Causality.FiniteNecessaryUnion
 public import TruthCore.Causality.FiniteRestriction
+public import TruthCore.Causality.FiniteThroughput
 public import TruthCore.Causality.FirstMoverNecessity
 public import TruthCore.Causality.FixedDurationGrimReaper
 public import TruthCore.Causality.Frame
@@ -265,6 +266,7 @@ public import TruthCore.Causality.SpineRivalsAttributes
 public import TruthCore.Causality.SpineRivalsRootEsse
 public import TruthCore.Causality.SpineRivalsStageOne
 public import TruthCore.Causality.StrictEsseScale
+public import TruthCore.Causality.StrictGroundInfiniteCauseSeries
 public import TruthCore.Causality.StrictPriorityPureAct
 public import TruthCore.Causality.SubjectFocalRoles
 public import TruthCore.Causality.SubtractionArgument

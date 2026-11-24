@@ -1,0 +1,10 @@
+{
+  "id": "3065c262-eb56-48e6-83ff-1e3f7edb4abf",
+  "label": "Compare exports and receipts over the full ancestry of a positive transfer",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "34f9ad6f-fd45-44a6-951c-4ae54f3e3c62",
+  "inference_ids": [
+    "1cb88621-8981-43d3-9197-cd3e9a7e1d12"
+  ],
+  "meaning": "A return-free edge leaves the sender ancestry while every positive receipt into it originates inside. Finite throughput makes the strict edge survive summation. Reindexing both sums contradicts local coverage if every ancestor merely forwards receipts."
+}

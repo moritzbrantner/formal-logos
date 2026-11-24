@@ -1,0 +1,11 @@
+{
+  "id": "8177563b-0174-4cde-8560-94339cb35b8e",
+  "label": "Derive an actual root from one-way throughput and grounded export coverage",
+  "argument_id": "129d06c4-d4dc-449c-9e00-d05282db151b",
+  "challenge_module": "TruthCore.Results.Causality.FiniteThroughput.Challenge",
+  "solution_module": "TruthCore.Results.Causality.FiniteThroughput.Solution",
+  "theorem": "TruthCore.Results.Causality.FiniteThroughput.actualRootOfLedger",
+  "comparator_config": "results/8177563b-0174-4cde-8560-94339cb35b8e/comparator.json",
+  "status": "solution-present",
+  "description": "Use the net exporter on the ancestry of the transfer. An actual ground for this same exporter would violate its strict excess by the supplied coverage inequality. Every carrier in the ledger is actual and concrete by its type. The root is relative to this grounding relation. The accounting-to-grounding bridge is open."
+}

@@ -204,3 +204,27 @@ Next concrete work is now specified rather than another undirected search:
 The support investigation covers all nine requested premises. These are
 proposed proof/application tasks, not completed graph changes or a claim that
 every philosophical question about the nine premises is settled.
+
+## Current checkpoint on change, strict dependence and first supply
+
+Under the adopted meaning of unactualized potency, capacity under privation
+and lack of the corresponding act in a capable subject support one another.
+For a separately supplied potency predicate the analysis of potency as
+unactualized capacity is a substantive third input. Any two of these three
+generic statements now yield the third. With all three withheld the cycle
+supplies no starting point. A retained ability during exercise is compatible
+with the adopted distinction. [Proofs, direct options and rival readings](potency-privation-support-investigation.md)
+
+At the efficient-cause consumer, interpreting distinct existential dependence
+as strict ground can block reciprocal dependence. A single consistent formal
+interpretation meets that test and the other Second Way premises except the
+regress premise, while each cause has a further cause. This gives positive
+grounds for demanding a different argument for first supply. In a ledger
+with finite summed throughput, a transfer outside a circulation requires an
+upstream net exporter. If every actually grounded bearer can only forward
+receipts in that same ledger, a ground-relative root follows. A freely fitted
+ledger carries the root assumption back in: some fitting ledger exists exactly
+when there is a root and another actual bearer. The relative weakness of the
+infinite forwarding account appears only where throughput and the one-way
+transfer are independently fixed. Whether existential dependence bears those
+features remains open. [Infinite model](distinct-dependence-strict-ground-route.md#the-infinite-series-at-the-efficient-cause-consumer) · [Whole argument, competing accounts and reopening test](contractive-borrowed-power-1378.md#can-an-infinite-series-explain-a-one-way-transfer-by-forwarding-alone)

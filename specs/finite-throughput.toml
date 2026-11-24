@@ -1,0 +1,66 @@
+[batch]
+vocab = "TruthCore.Causality.FiniteThroughput"
+results = "TruthCore.Results.Causality.FiniteThroughput"
+
+[[statement]]
+id = "A finite-throughput transfer has a return path or an upstream net exporter"
+lean = "ReturnOrNetExport"
+paraphrase = "For a nonnegative directed ledger on any carrier with finite summed edge throughput, each positive transfer from a to b either admits a finite positive path from b to a, or has an upstream u reaching a by a finite positive path (possibly empty) whose exports strictly exceed receipts. Both alternatives may hold."
+
+[[statement]]
+id = "A one-way transfer has finitely grounded power under the exercise and intrinsic-input bridges"
+lean = "GroundedExerciseAtTransfer"
+paraphrase = "If a finite-throughput ledger maps every positive transfer to an actual transmission and every net exporter to an intrinsic contributor in this respect, any recipient of a positive edge without a positive return path has finitely grounded power in the existing inductive sense. The result supplies one finite source path even with joint inputs. It makes no attribution of a particular share of the output."
+
+[[statement]]
+id = "The selected ledger has finite total throughput and a positive transfer without a return path"
+lean = "FiniteOneWayTransfer"
+paraphrase = "OPEN analyst application premise. Sum over all directed transfers in the fixed ledger is finite and one positive edge has no finite positive path back to its sender. Finite inventory is insufficient for finite summed throughput. The edge witnesses population."
+
+[[statement]]
+id = "Every actually grounded bearer covers its exports from receipts in the selected ledger"
+lean = "GroundedExportCovered"
+paraphrase = "OPEN analyst application bridge. At the selected world, for every actual concretum which has an actual concrete ground, exports in the same ledger total at most receipts. Building this ledger requires a common unit, a warranted accounting boundary and a substantive connection between being grounded and forwarding the selected quantity. A grounded battery can violate the bridge in a current-only electrical ledger."
+definitions = ["c57e2682-08e6-527e-950f-0fa0a7ff11ef", "beb654a7-e204-5f4c-a7b4-45e886ba7109"]
+
+[[statement]]
+id = "An unrestricted fitting ledger exists exactly for a root with another actual bearer"
+lean = "LedgerExistenceCriterion"
+paraphrase = "In each profile at its selected world, some ledger with finite throughput, a positive one-way edge and covered exports for all actually grounded bearers exists exactly when there is an actual root and a distinct actual concretum. The reverse direction builds one unit transfer from the root to the other bearer. Choosing the ledger retrospectively carries no independent warrant for root existence."
+definitions = ["c57e2682-08e6-527e-950f-0fa0a7ff11ef", "beb654a7-e204-5f4c-a7b4-45e886ba7109"]
+
+[[argument]]
+id = "Compare exports and receipts over the full ancestry of a positive transfer"
+theorem = "returnOrNetExport"
+premises = []
+conclusion = "A finite-throughput transfer has a return path or an upstream net exporter"
+rule = "Strict comparison of summable cuts"
+meaning = "A return-free edge leaves the sender ancestry while every positive receipt into it originates inside. Finite throughput makes the strict edge survive summation. Reindexing both sums contradicts local coverage if every ancestor merely forwards receipts."
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+
+[[argument]]
+id = "Lift a positive transfer path from a net exporter into grounded exercise"
+theorem = "groundedExerciseAtTransfer"
+premises = ["A finite-throughput transfer has a return path or an upstream net exporter"]
+conclusion = "A one-way transfer has finitely grounded power under the exercise and intrinsic-input bridges"
+rule = "Induction over the upstream witness path"
+meaning = "The no-return hypothesis selects the net-export witness. The intrinsic-input bridge starts the inductive construction and each positive entry transports it along an actual transmission."
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+
+[[argument]]
+id = "Derive an actual root from one-way throughput and grounded export coverage"
+theorem = "actualRootOfLedger"
+premises = ["A finite-throughput transfer has a return path or an upstream net exporter", "The selected ledger has finite total throughput and a positive transfer without a return path", "Every actually grounded bearer covers its exports from receipts in the selected ledger"]
+conclusion = "dc397705-d727-419e-92f9-65d44e1ff15d"
+rule = "Apply the ledger obstruction to the selected actual roster"
+meaning = "Use the net exporter on the ancestry of the transfer. An actual ground for this same exporter would violate its strict excess by the supplied coverage inequality. Every carrier in the ledger is actual and concrete by its type. The root is relative to this grounding relation. The accounting-to-grounding bridge is open."
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+
+[[argument]]
+id = "Characterize unrestricted ledger fitting by constructing a single transfer from a root"
+theorem = "ledgerExistenceCriterion"
+premises = ["A finite-throughput transfer has a return path or an upstream net exporter"]
+conclusion = "An unrestricted fitting ledger exists exactly for a root with another actual bearer"
+rule = "Apply the cut and construct a one-edge converse witness"
+meaning = "The endpoints of a return-free transfer differ, so one differs from the root supplied by the cut. Conversely assign one unit only from the given root to the distinct actual bearer. Every grounded bearer exports zero; the single edge has no return."
+axioms = ["propext", "Classical.choice", "Quot.sound"]

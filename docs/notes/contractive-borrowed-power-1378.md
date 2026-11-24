@@ -319,3 +319,73 @@ expanded-route diagnostic (lowest cost): Catholicism is true: the Catholic Churc
 distinct verified support alternatives: 288 -> 288
 verified support alternatives added: 0
 no change
+
+## Can an infinite series explain a one-way transfer by forwarding alone?
+
+Fix one positive transfer from a sender to a recipient. Entries measure a
+common quantity over the same interval or at the same instant. Add up what
+passes over **edges**. A unit routed through ten stages counts ten times in
+throughput even if it belongs to one conserved inventory. Allow splitting,
+merging and cycles elsewhere. The question is whether every supplier upstream
+of this particular sender can cover its exports from its receipts.
+
+**Cut argument.** Take the sender and everything that reaches it by a finite
+path of positive transfers. Every positive receipt into that set comes from
+inside it. If the recipient cannot reach the sender, the selected transfer
+leaves the set. Consequently exports from the set, counting internal transfers
+on both sides, strictly exceed receipts when total edge throughput is finite.
+If each member exported at most its receipts, summing those very inequalities
+would give the opposite result. Some identifiable upstream bearer therefore
+exports more than it receives. The argument tolerates loss, perfect forwarding
+and infinitely many contributors. It needs neither a fixed percentage loss
+per stage nor an assumption that all chains terminate. The path establishes
+reachability. In a mixed pool it does not trace an individual unit of excess
+to the selected recipient. [Cut proof and exercise bridge](../../TruthCore/Results/Causality/FiniteThroughput/Solution.lean)
+
+**Test the strongest rival on the same series.** In the [Second Way successor
+model](distinct-dependence-strict-ground-route.md#the-infinite-series-at-the-efficient-cause-consumer),
+each stage has a further cause. Assign one unit to each transfer from stage
+n+1 to stage n. Each sender receives exactly the unit it forwards; no transfer
+admits a return path. This mathematical account pays an infinite sum of edge
+throughputs, despite a finite unit at each stage. Choosing geometrically
+smaller amounts upstream can make the sum finite, but then some stages must
+contribute beyond receipts. For example, on edge n+1 to n put
+2 raised to the power −(n+1). Stage n+1 receives half what it exports. These
+are additional ledgers on the model's immediate-cause graph. The original
+model assigns no amounts. The earlier two-node swap gives the rival another
+option: finite balanced throughput with a real return edge. The obstruction
+discriminates among these accounts without ruling out infinite causal order.
+
+**Where this helps the existence argument.** For a fixed ledger over actual
+concreta at one world, suppose each bearer with an actual concrete ground
+covers its exports from receipts. Then the upstream net exporter has no actual
+concrete ground in that same relation. This supplies the existing actual-root
+premise directly. The hypothesis does substantive work. Over a fixed interval
+a charged battery can export electrical energy with zero incoming current
+while its existence depends on components. Counting opening stock explains
+the output, but changes the ledger. To apply the proof to existential giving,
+identify an independently motivated additive measure, positive one-way exercise,
+finite summed throughput, and a reason grounded bearers cannot originate any
+net amount of that quantity. Strict priority by itself gives no magnitude.
+Even for an ordinary incompressible steady flow at a positive rate, inserting
+more bookkeeping cross-sections increases summed throughput while leaving
+the physical stock fixed. A metaphysical application needs a reason for which
+distinct transfers count. The weaker exercise result only needs an interpretation
+of positive transfers as productive links and of net exporters as intrinsic
+contributors to the selected activity. [Exact premises](../../TruthCore/Causality/FiniteThroughput.lean)
+
+**Can a fitted ledger count as independent evidence?** With complete freedom
+to choose amounts, the existence of a fitting ledger is equivalent to a root
+and a second, distinct actual bearer. Given those beings, put one unit from
+the root to the other and zero elsewhere. Every grounded bearer then exports
+zero. Conversely the cut supplies the root and the nonreturning edge ensures
+two distinct endpoints. Retrospective fitting thus repackages the desired
+root together with plurality. This is a reason to favor an independently
+specified source of input over mere forwarding in a measured, finite,
+one-way system, and to withhold an evidential preference between subsistent
+esse and a primitive or infinitely ordered concrete reality on this test
+alone. A ground-relative root can itself be an impersonal whole. Common
+coverage, necessity, intellect and will require further same-bearer premises.
+Reopen the comparison on an independently calibrated instance of existential
+transfer or on a non-quantitative account of participation which distinguishes
+derivative exercise from local origination. [Ledger equivalence](../../TruthCore/Results/Causality/FiniteThroughput/Solution.lean)
