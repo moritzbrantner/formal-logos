@@ -417,3 +417,50 @@ In two control histories the fixed rod stays at 2 units while the other goes fro
 **Assessment.** The absence of an intrinsic alteration at the named subject is a poor objection to causal responsibility for a real founded comparison. The other end can supply the decisive change. For acquired qualities, the preservation of a real contribution through practice, copying or active response is a better test than persistence of the bearer or sameness of the resulting quality. I favor these two forms of local attribution. For universal transfer this route needs at least one qualifying realization for each eligible bearer at each actual non-esse respect, with a contribution from that very existential source. Whether the histories cover that range, and whether the attribution applies to real relational respects, remains open. The same wax could receive its lettering twice. A path to the first impression warrants no inference by itself about who made the second. A case in which the alleged contribution is screened off by actual replacement, while preserving an independent route to the same observed outcome, would defeat that *specific attribution*. A reason why at least one such history for each eligible bearer and respect includes a source-supplied input would strengthen the universal case. Neither revision follows merely from adding actualities to the formal domain.
 
 **Independent semantic review.** The reviewer checked the sources, rival accounts, both formal tests, the press witness and the graph connections at `288d59eaa61436c6f94d7e54ce447049f6c6a899`. Review of the repairs at `45f329f3238a6fbfd5ae99f6fc3abe471b2c88b2` accepted the qualification about repeated occurrences, the distinction between causing a match and producing an intrinsic accident on each side, and the link to the external sense of causation. The next test concerns present responsibility for a retained determination after its producer ceases to act. [Reviewed dossier assessment](../../corpus/attempts/bc9f10d6-63ca-4493-94a8-49c282747f97.json)
+
+
+## Does surviving the loss of each determination establish the priority of esse?
+
+The bound sentence `7067553d` says that if this bearer is actual in any respect, this bearer is actual at esse. Consider the additional argument that the bearer can persist without each of its determinations, whereas none of those determinations can be realized *as its determination* without it. What explanatory priority does this asymmetry support?
+
+Distinguish the impeller from the circulation it maintains. The impeller can remain in place when the fluid comes to rest. It is possible to identify it there by its continuing material structure and to restart it. A circulating pattern can retain its history and connected flow while slowing or speeding up. On a process reading, if that organized circulation really ceases, the same parcel of water remaining in the vessel does not suffice for that very circulation to continue. The contrast uses independent criteria of persistence, rather than calling anything designated by a noun a substance. The process rival grants actual existence to the circulation throughout its operation and grounds its persistence in the continuing organization of the flow. It has a positive basis for allowing different particular profiles while requiring some organized motion.
+
+**A check on the quantifiers.** In a deliberately discrete example, one process has two alternative regimes and can cease. The profile stipulates the regime and whether the process exists separately from any claim about grounding. The original formula holds at each setting. For each particular regime there is a setting in which the process persists without that regime. There is no setting in which the process persists without any regime. These three local checks use no axioms. The two regimes exhaust the finite example by construction; they do not classify all physical flows.
+
+```lean
+import TruthCore.Latin.Aquinas.SummaTheologiae.PrimaPars.Question4.Article1
+namespace ProfileChange
+open TruthCore.Latin.Aquinas.SummaTheologiae
+-- none denotes cessation; the two live states are different regimes.
+def act (s : Option Bool) (_ : Unit) : Option Bool → Prop
+  | none => s.isSome = true
+  | some k => s = some k
+
+theorem importAt (s : Option Bool) :
+    ActualityOnlyInsofarAsBeingReading (act s) none := by
+  intro x r h
+  cases r with
+  | none => exact h
+  | some k => change s = some k at h; subst s; rfl
+
+theorem eachCanCease (k : Bool) :
+    ∃ s, act s () none ∧ ¬ act s () (some k) := by
+  cases k
+  · exact ⟨some true, rfl, by intro h; cases h⟩
+  · exact ⟨some false, rfl, by intro h; cases h⟩
+
+theorem neverAllAbsent :
+    ¬ ∃ s, act s () none ∧ ∀ k, ¬ act s () (some k) := by
+  rintro ⟨s, live, absent⟩
+  cases s with
+  | none => cases live
+  | some k => exact absent k rfl
+#print axioms importAt
+#print axioms eachCanCease
+#print axioms neverAllAbsent
+end ProfileChange
+```
+
+**Judgment.** For real exemplification, favor the original same-bearer premise: if the actual contribution being tracked is this impeller's operation, a description, duplicate or model of the impeller cannot do that work. With the adopted calibration from real existence to actuality at esse on that frame, this is enough for the [first mover's existential import](../../TruthCore/Results/Aquinas/SummaTheologiae/FirstMoverIsMaximeEns/Solution.lean). The proof takes the mover's actual exercise in one respect and retains that mover when it concludes actuality at esse. It does not ask what grounds the mover's existence. The [argument about all perfections](../../TruthCore/Results/Aquinas/SummaTheologiae/FirstMoverHasPerfectionsOfThings/Solution.lean) also requires the import for arbitrary actual possessors in its wider use.
+
+There is further warrant for a **constitutive contribution** where this independently identifiable subject is itself part of what realizes this very operation. Replacing the impeller with a duplicate can restore circulation while changing whose operation it is. To establish priority of the subject's esse over the whole range of ways in which it is actual, give a reason to treat the subject as a continuing constituent at that explanatory level. Survival across loss of each particular mode establishes less: the process example grants all of those survivals. The [registered inheritance test](../../TruthCore/Causality/ParticularActuality.lean) can distinguish explanations under specified constitutive records; the disputed work is justifying those records in the case at hand. Even a justified constitutive priority leaves open which efficient agent produces a given change. Revise the subject-first reading for a class where its identity is independently traced to a continuing organization and loss of that organization ends the subject itself. Revise the minimal premise only on showing actual realization by the *same* bearer in a respect although it lacks real being under the selected calibration.
