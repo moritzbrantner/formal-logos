@@ -1453,3 +1453,10 @@ checks passed; no premise change is claimed. These reviews establish neither
 actual divine applicability nor a historical guarantee. The PR and the two
 selected issues own the publication and delivered-head CI disposition.
 No merge is requested.
+
+The accepted source and complete-outcome snapshots are durably published as
+[`d759ab6e`](https://github.com/moritzbrantner/formal-logos/commit/d759ab6e8dc07f2af13169f7468e85075e760a45)
+and [`813aed9c`](https://github.com/moritzbrantner/formal-logos/commit/813aed9c2aa3251ba1a5e4c8d3970e321ed83640),
+respectively. Each has the identical Git tree as its reviewed local snapshot.
+The [published branch](https://github.com/moritzbrantner/formal-logos/tree/agent/source-independence-history)
+contains the main integration and completed review dispositions; it is not merged.

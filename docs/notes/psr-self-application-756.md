@@ -1742,3 +1742,7 @@ fields, identity/calibration distinction, complete root-will bundle and
 NAR support. Acceptance covers the bounded semantic assessment and its
 stated limitations; it supplies no new formal certification or full
 metaphysical realization.
+
+The reviewed local snapshot has the identical Git tree as published revision
+[`d759ab6e`](https://github.com/moritzbrantner/formal-logos/commit/d759ab6e8dc07f2af13169f7468e85075e760a45).
+The findings are published on `agent/source-independence-history`, not merged.

@@ -1366,3 +1366,7 @@ files were unchanged through main integration
 `94eff81001593764167d31a72915595282a6e94b`. Acceptance covers the stated
 semantic boundaries; it does not establish an actual source/channel, remove
 the coverage and normative commitments, or confer new formal certification.
+
+The reviewed local snapshot has the identical Git tree as published revision
+[`813aed9c`](https://github.com/moritzbrantner/formal-logos/commit/813aed9c2aa3251ba1a5e4c8d3970e321ed83640).
+The findings are published on `agent/source-independence-history`, not merged.
