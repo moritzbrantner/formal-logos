@@ -1,0 +1,42 @@
+{
+  "id": "72a86cf4-baca-4a47-b157-7b0dd50ba12b",
+  "label": "Compare intrinsically completed activity, due perfection and whole-power possession",
+  "date": "2026-11-24",
+  "statement_ids": [
+    "5bedb69b-8fbb-53b5-be2f-377d1331cf37",
+    "d164b1ff-ad31-5fbc-8ef9-eb0db51ebd96",
+    "c4fb87a6-047d-5f3d-b3e3-8dc0c4bbc946",
+    "122b112e-3f19-5cd4-8cd0-a704ab1f2d87",
+    "fe67d766-3e9f-57b5-bbff-c3e2c50c56fd",
+    "64498e7e-7f10-54a0-9ec0-c65e6076de1f"
+  ],
+  "kind": "reading",
+  "outcome": "blocked",
+  "summary": "See docs/notes/causal-perfection-transfer.md#intrinsic-completion-versus-kind-completeness-2026-11-24-draft-continuation. Historical R3 compares the beneficiary of noncognitive maintenance with Aristotle's complete exercise, and living nature with vital episodes. Q.18 a.3 ad 3 removes finite vegetative mechanisms and leaves the need for a positively specified immanent operation. A demonstrated finite requirement revises the purity classification of that candidate. SCG I.28's separated-whiteness analogy motivates uncontracted possession in a mode. Across-mode possession needs the substantive absolute-esse account. Under the existing form/end due-perfection distinction, absence of due defects plus every pure determination being due suffices for pure fullness. The four-variant local test retains a supplied actual root, stipulated OwnBeing, actual productive witnesses, strict purity and nonvacuous passive potency, and separates absence of due defects from fullness. The note gives the registered conjunctive bundles and exact root-scoped application. The initial independent semantic challenge of PR #1916 at 35c03763084282b3b33bacf6b4ab274957180cbc reproduced the note's embedded operation and due-scope controls and requested changes. The targeted re-review accepted the repaired checkpoint at 1d63f12806ed9984ea2ea8973295b1e6b1210d59.",
+  "blocker": "The same-source link from absence of an independently warranted pure OfBeing mode to intrinsic restriction of esse remains open. The standing rival needs a reason for non-contraction under the same act/recipient account. Generalization beyond the selected mode remains open. Strict noncognitive life is a secondary candidate with its own positive-content and purity burdens.",
+  "evidence": [
+    "PR-1518",
+    "PR-1855",
+    "PR-1892",
+    "PR-1902",
+    "PR-1914",
+    "PR-1916",
+    "586275e6-d7b0-47a1-9180-5e245d6d4de1"
+  ],
+  "current_assessment": {
+    "date": "2026-11-24",
+    "statement_ids": [
+      "d164b1ff-ad31-5fbc-8ef9-eb0db51ebd96",
+      "c4fb87a6-047d-5f3d-b3e3-8dc0c4bbc946"
+    ],
+    "scope": "Across-mode intrinsic whole-power possession at the same actual source on the OwnBeing reading, and the Pure-to-OfBeing classification for the selected mode. This informs conditional support for fe67d766.",
+    "assessment": "Contracted reception and the non-genus account of esse motivate whole-power possession as a direct and cumulative option. OwnBeing with within-kind completeness or freedom from due defect leaves across-mode warrant open. A determinate primitive nature offers an account of mode-specific powers and exclusions. That rival would weaken fullness if it retained OwnBeing for the same source, genuinely excluded an independently warranted pure OfBeing mode and justified the exclusion as non-contracting under the same act/recipient account. The finite controls isolate the disputed conditions and leave their metaphysical application unresolved. A finite implementation can revise the purity classification of its candidate without settling whole-power possession.",
+    "next_test": "Start with d164b1ff. Independently characterize one positive mode, justify its purity and classify it as OfBeing through c4fb87a6. Keep the same actual source and OwnBeing assumptions. If the mode is absent, test E for nature-based exclusion and L for real contraction, then test whether such contraction requires a receiver on the same #1914 account. Generalization to all OfBeing determinations remains open. Strict noncognitive life is secondary.",
+    "note": "docs/notes/causal-perfection-transfer.md#current-assessment-and-next-test",
+    "reviewed_revision": "1d63f12806ed9984ea2ea8973295b1e6b1210d59",
+    "review": "accepted_qualified",
+    "publication": "published",
+    "evidence": "PR-1916 initial independent challenge of 35c03763084282b3b33bacf6b4ab274957180cbc against main ba8a75398b009932a33f649ec7abcb2069a3e030, followed by acceptance at 1d63f12806ed9984ea2ea8973295b1e6b1210d59 after targeted repairs. Acceptance covers the documentation and research checkpoint, including the statement of the exact registered bundles and restricted structural evidence. The substantive whole-power applicability and generalization tests remain open.",
+    "supersedes": "None of the earlier reviewed judgments. The historical R1–R3 findings and their life-first sequence remain evidence. The next_test field provides the current research priority for this scope."
+  }
+}

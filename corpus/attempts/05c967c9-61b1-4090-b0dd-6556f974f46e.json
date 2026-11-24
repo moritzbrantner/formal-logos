@@ -1,0 +1,22 @@
+{
+  "id": "05c967c9-61b1-4090-b0dd-6556f974f46e",
+  "label": "Distinguish grounding by the selected recipient from immanent life at the ultimate source",
+  "date": "2026-11-24",
+  "statement_ids": [
+    "5bedb69b-8fbb-53b5-be2f-377d1331cf37",
+    "45030701-91da-588f-b602-dca6c15e761a",
+    "38aa1327-b28a-5ac8-b70d-6b2fdbedf554",
+    "1773079b-236a-5f7d-b1e9-fb8f23202341"
+  ],
+  "kind": "reading",
+  "outcome": "blocked",
+  "summary": "See docs/notes/causal-perfection-transfer.md#operation-origin-terminus-and-intrinsic-completion-2026-11-24-draft-continuation. R1–R2 distinguish the broad actual operation from strict immanent Operates using SCG I.97 n.3 and ST I q.18, q.25, q.45 and q.13. Supply an actual root g, its distinct actual productive recipient x at w, and an actual operation o of g. A is real identity of that operative act with g's esse-act, B is x constitutively grounding that very operative act at w, and C transports that grounding in the identity case to an incoming actual concrete ground of g. A, B and C contradict actual roothood. Given the root, A and C, the exclusion is B for this x, o and w. All actual concreta at w require universal transport. Abstract, absent and unmodeled grounds, external determination of the end, and the act's immanence remain open. Sixteen structural configurations on two local rosters (32 assignments) retain the productive witnesses and vary identity, act grounding, transport and immanence. The central control falsifies the local reading of 5bedb69b with an actual operation, no immanent operation whatsoever and no motion whatsoever at g. Transitive operation alone leaves the dichotomy open. These controls test the selected signature. The initial semantic challenge of PR #1916 at 35c03763084282b3b33bacf6b4ab274957180cbc reproduced the note's embedded operation and due-scope controls and requested scope repairs. The targeted re-review accepted the repaired checkpoint at 1d63f12806ed9984ea2ea8973295b1e6b1210d59. See attempt 72a86cf4 for the current research assessment.",
+  "blocker": "Applying the productive-operation adapter, real act/esse identity and same-act grounding transport to the neutral root remains open. With an actual operation and unmovedness, 5bedb69b would supply strict Operates at that bearer. Own transitive operation gives no warrant for the dichotomy by itself. A noncognitive strict life application still needs independently characterized immanent content, candidate purity and the relevant nature, Has and LIVING_1/LIVING_2 bridges. The nine-scoped consequences require their own premises.",
+  "evidence": [
+    "PR-1518",
+    "PR-1855",
+    "PR-1892",
+    "PR-1914",
+    "PR-1916"
+  ]
+}
