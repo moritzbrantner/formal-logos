@@ -1,0 +1,23 @@
+{
+  "id": "ac7d268f-8042-4c13-83a1-afcd7c6d8ba9",
+  "label": "Derive an actual root from local finiteness and distinct-receipt coverage",
+  "premise_statement_ids": [
+    "c9545c29-5d97-4808-b343-8aaf87370479",
+    "4b4d62a2-f5f0-46af-aec1-8b07458b4505",
+    "08ed59de-c83e-400f-a8ee-aef527cfc3e4"
+  ],
+  "conclusion_statement_id": "dc397705-d727-419e-92f9-65d44e1ff15d",
+  "inference_ids": [
+    "9ec42f40-5c03-44b9-94d7-b6cc56fbc0df"
+  ],
+  "meaning": "The unmatched sender is actual and concrete. If it had a selected actual concrete ground, it would admit an injective match, contradicting the obstruction. The root is relative to the profile's grounding relation. A freely chosen transfer class has no independent evidential force.",
+  "definition_ids": [
+    "c57e2682-08e6-527e-950f-0fa0a7ff11ef",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ],
+  "disambiguation_ids": [
+    "6e92c6e3-edf0-5d7e-b2b3-788b24b8b768",
+    "6f1d1395-7c1d-5bd5-a45d-03380857aed6",
+    "c529e8d3-43e3-53a8-a82f-3955e9815265"
+  ]
+}

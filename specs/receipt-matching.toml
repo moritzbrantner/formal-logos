@@ -1,0 +1,65 @@
+[batch]
+vocab = "TruthCore.Causality.ReceiptMatching"
+results = "TruthCore.Results.Causality.ReceiptMatching"
+
+[[statement]]
+id = "A one-way selected transfer has an upstream matching deficit on finite export ancestry"
+lean = "UnmatchedUpstream"
+paraphrase = "For a marked token transfer, suppose its recipient has no finite selected path back to its sender and there are only finitely many selected exports from bearers who reach that sender. Then for some such upstream bearer there is no injection from its selected outgoing events into its selected incoming events. Bearers and unselected transactions need not be finite."
+
+[[statement]]
+id = "Some selected transfer leaves its finite export ancestry without a return path"
+lean = "OneWayFiniteAncestry"
+paraphrase = "OPEN application premise about the same class of transfer occurrences: some selected transfer has no return path from recipient to sender, and the selected events sent by anyone reaching that sender form a finite type. The sender itself is included by the empty path. This is a local finiteness claim about events, stronger than finite out-degree per sender."
+
+[[statement]]
+id = "Each actually grounded bearer can match its selected exports to distinct selected receipts"
+lean = "GroundedCanMatch"
+paraphrase = "OPEN application bridge. For a fixed selected class of transfer occurrences among actual concreta, each bearer with an actual concrete ground admits an injection from its outgoing events into its incoming events. One receipt used twice does not supply the injection. The definition asks for a matching, without asserting actual historical provenance or the existence of a particular tracer. Application to existential giving needs independent individuation of transfers and support for distinct receipts."
+definitions = ["c57e2682-08e6-527e-950f-0fa0a7ff11ef", "beb654a7-e204-5f4c-a7b4-45e886ba7109"]
+
+[[statement]]
+id = "Every positive integer regrading covers exports exactly when all upper-grade counts do"
+lean = "CoverageUnderRegrading"
+paraphrase = "For two finite histograms on the same finite ordered grades, evaluate each grade by the sum of strictly positive integer increments up to it, with absence worth zero. Total output is at most total input for every such scale iff at every threshold there are at most as many output as input occurrences at or above that grade. This concerns an additive total of separately individuated occurrences."
+
+[[statement]]
+id = "Two calibrations preserve every realized grade but reverse a relay's export balance"
+lean = "RelayCalibrationControl"
+paraphrase = "In a four-bearer transfer tree every giver realizes each of its recipient's selected features. Each bearer's degree is the least upper bound of its realized levels for every high level at least two and fixed low level two. Book each recipient's degree on its incoming edge. A relay's receipts and exports are three and four under high grade three, and five and four under high grade five. The ordinal comparisons between all bearers agree on those two scales. No actual existential amounts are assigned."
+
+[[argument]]
+id = "Derive an upstream matching deficit by injectivity on a finite set of exports"
+theorem = "unmatchedUpstream"
+premises = []
+conclusion = "A one-way selected transfer has an upstream matching deficit on finite export ancestry"
+rule = "Choose the local matches and use surjectivity of an injection on the finite ancestral export set"
+meaning = "If every upstream sender admits a matching, assign each of its exports its matched receipt. The resulting predecessor map stays among upstream exports and is injective because the receiver fixes the sender whose local matching was used. It cannot hit the marked transfer since that transfer's recipient lies outside this ancestry."
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+
+[[argument]]
+id = "Derive an actual root from local finiteness and distinct-receipt coverage"
+theorem = "actualRootOfReceiptMatching"
+premises = ["A one-way selected transfer has an upstream matching deficit on finite export ancestry", "Some selected transfer leaves its finite export ancestry without a return path", "Each actually grounded bearer can match its selected exports to distinct selected receipts"]
+conclusion = "dc397705-d727-419e-92f9-65d44e1ff15d"
+rule = "Apply the finite matching obstruction to the actual roster and eliminate a concrete ground"
+meaning = "The unmatched sender is actual and concrete. If it had a selected actual concrete ground, it would admit an injective match, contradicting the obstruction. The root is relative to the profile's grounding relation. A freely chosen transfer class has no independent evidential force."
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+
+[[argument]]
+id = "Characterize robust transfer coverage by counts at each grade threshold"
+theorem = "allCalibrations"
+premises = []
+conclusion = "Every positive integer regrading covers exports exactly when all upper-grade counts do"
+rule = "Expand each additive total by grade increments and vary a single increment"
+meaning = "Each grade increment is multiplied by the count of all occurrences reaching its threshold. If one output count exceeds that input count, enlarge just that increment beyond the total of the input threshold counts. Conversely the count inequalities can be multiplied by each increment and summed."
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+
+[[argument]]
+id = "Separate one-to-many ordinal preservation from a relay's additive balance"
+theorem = "relayCalibrationControl"
+premises = []
+conclusion = "Two calibrations preserve every realized grade but reverse a relay's export balance"
+rule = "Check all giver edges and all realized-level bounds, then compute the two finite ledgers"
+meaning = "The relay receives a higher-grade instance and gives two lower-grade ones. Only the numerical distance between the grades changes. The witness uses the existing realizedLevels definition, without claiming the assignment realizes every premise about an actual sole essential giver."
+axioms = ["propext", "Classical.choice", "Quot.sound"]
