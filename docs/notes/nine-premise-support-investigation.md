@@ -155,6 +155,21 @@ state violated the beings' actual identity or required background. Open
 application bridges are not presented as defeated merely because they remain
 open. Conversely, agreement between reviewers is not proof of premise truth.
 
+## Continuity of the recipient in a sustaining-cause argument
+
+The London plaster Diplodocus cast and the bronze made using its scan test
+two explanations of identity. The scan carried information specific to the
+earlier object into the design of a new one. The museum tracked the plaster
+cast itself through moves and changes in posture. These histories give
+different answers to “which object continued?” even though both involve a
+causal contribution from the earlier object. A persistence law can apply to
+the identified plaster cast. A conserving source could also sustain that very
+cast while its material history distinguishes it from the bronze. Both
+accounts can recover the identity judgment. Neither tracing the patient nor
+identifying a producer of its shape supplies a present giver of its existence,
+the premise needed by the sustaining-cause argument.
+[Case, rival commitments and test of present dependence](sustaining-vs-existential-inertia.md#10-which-later-individual-continues-the-earlier-bearer-1801-2026-11-25)
+
 ## Verification and current handoff
 
 The two research lanes used distinct families: act/privation and causal
