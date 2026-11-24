@@ -183,6 +183,54 @@ are three places where a rival and a theist can give different answers.
 [Potency comparison](potency-privation-support-investigation.md) ·
 [Continuity and present giving](sustaining-vs-existential-inertia.md#10-which-later-individual-continues-the-earlier-bearer-1801-2026-11-25)
 
+### Where a rival loses explanatory standing
+
+For the question raised in [issue #1570](https://github.com/moritzbrantner/formal-logos/issues/1570),
+grant the strongest brute-foundation account its fixed laws, real derivative
+causes and reliable inquiry. Suppose the account requires some occupant of
+a foundational role. Its laws explain how things proceed once the occupant
+exists. If the same laws permit two different occupants, knowing that the
+role is filled leaves open why this occupant exists. Discovering which one
+exists can settle the observer's question while leaving its existence
+unexplained. That is a specific price of treating this contingent starting
+point as brute. It matters to a claim to explain the whole actual order.
+It is compatible with explaining its subsequent development. [Restricted
+bruteness, open draft #1968](https://github.com/moritzbrantner/formal-logos/pull/1968)
+
+The existing assessment moderately favors a genuine explanation of contingent
+concrete existence. In cases of production, identifying what was exercised
+can explain an actual result where describing a capacity leaves the result
+open. A demand for such an explanation also carries across a shared feature
+if that feature was one's reason for making the demand. A theist who demands
+an explanation because an initial state is contingent incurs the same demand
+for a contingent divine choice when the demand applies to facts of that kind.
+A rival can reserve the demand for things that receive existence. That is a
+principled distinction. Its scope and the claim that the proposed foundation
+itself qualifies for exemption need warrant. The project suspends judgment
+on the stronger claim that every such explanation must determine its outcome.
+[Merged parity argument](https://github.com/moritzbrantner/formal-logos/pull/1872) ·
+[Warrant and strongest reply](psr-self-application-756.md#overall-provisional-judgment-and-downstream-consequences)
+
+A different weakness reaches an internal inconsistency. Suppose a view admits
+two continuations that agree on the entire observed record and give opposite
+answers to a particular forecast. If the view calls its forecast entitled
+only when correct in every admitted continuation, endorsing either answer
+violates its own standard. A fallibilist can give up the guarantee. A
+defender of fixed laws can deny that both continuations are admitted. One
+unexplained foundation alone does not license arbitrary futures. [Formal
+forecast test](no-foundation-practical-collapse.md) · [Completed admission
+test in issue #1867](https://github.com/moritzbrantner/formal-logos/issues/1867#issuecomment-7113023982)
+
+A necessary impersonal producer can share the advantage of actually
+explaining contingent things. To favor purposive production specifically,
+the question is whether a good apprehended by the source guided its very
+act of producing the effect. A purpose attached after the outcome supplies
+no such connection. An actual impersonal process that realizes the same
+outcome deserves credit for what it produces. The respective claims about
+guidance can be compared once both accounts specify how the selection works.
+[Actual exercise and alternatives, open PR #1933](https://github.com/moritzbrantner/formal-logos/pull/1933) ·
+[Comparison of purposeful and impersonal production, draft #1971](https://github.com/moritzbrantner/formal-logos/pull/1971)
+
 ## From finite origins to one ancestral source
 
 If every actual concrete being has a finite path from some actual root,
