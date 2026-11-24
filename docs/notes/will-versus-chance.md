@@ -845,3 +845,335 @@ the actual delivery remains a draft pending independent review and CI.
 No new stating claim or formal theorem is proposed, so no new claim/type
 pair or proof certificate is represented. The full repository self-sweep
 and CLI validation remain outstanding.
+
+
+## Can the same intrinsic actuality understand and produce blindly? (2026-11-25)
+
+Continuation of the preceding checkpoint and #1962's concrete real-composition
+test. Target `29818edd`, `66aecdd7`, the actual giving classified by
+`5c1aba17`, and the registered contemplative-intellect rival
+`2537adb1` to `090be689`. This is a semantic and warrant investigation,
+not a new power ontology or a mechanically certified consequence.
+
+### 1. The strongest standing intellectual rival must be distinguished from the wholly impersonal one
+
+First grant the same necessary n, actual existential supply, intrinsic
+invariance and genuinely alternative realizations. Then **add actual
+intellectual apprehension** of n's own goodness to both sides of this
+conditional test. The purely noncognitive rival is not thereby defeated:
+its denial of this addition is still a separate challenge to the intellect
+routes. See [causal perfection and the cognitive first source](causal-perfection-transfer.md)
+and [teleology and the common root](teleology-first-mover.md).
+
+Distinguish three claims:
+
+1. n's actual giving exercises an owned power classified as rational;
+2. n's actual giving is performed for an apprehended good, in virtue of
+   the actual exercise of its intellectual inclination toward that good;
+3. the particular identity and every detail of the actual recipient are
+   specifically determined by that practical apprehension.
+
+The existing theorem `oneIntellectualPowerGivesWilledGiving` (result
+`b5b84276`, conclusion `5c1aba17`) gives (1), not (2) or (3).
+Inspect its actual proof: it obtains a rational power from
+`WillFollowsIntellectReading` (`090be689`) and `WillIsRationalPower`
+(`71fc097b`), an owned exercised power from
+`GivingExercisesOwnPower` (`495a40ad`), and identifies those powers by
+`OnePower`. The conclusion is
+`∀ y, HasIntellect y → OnePower A y → ∀ v x, GivesTo F v y x →
+∃ p, A.PowerOf y p ∧ A.Rational p ∧ A.Exercises v y x p`.
+No end, apprehended content, occasion of adoption or constitutive mode of
+actual exercise is in that conclusion. The argument validly excludes
+the two-power chancer of #1941 under its premises, not every account of
+nonoperative cognition.
+
+The rival denying `090be689` (some intellect without will,
+`2537adb1`) differs from a source granting actual rational self-love
+but denying that creation proceeds from it. The first rejects the
+capacity conclusion; the second can grant it and reject (2).
+A third, genuinely purposive source grants (2) but leaves the exact
+recipient-selection contrast unsettled. It is not a wholly noncognitive
+producer. Accordingly a failure to explain x rather than y does not
+establish the absence of rational governance.
+
+### 2. Positive rationale: exercise *qua* an intellectual inclination
+
+Reopen the existing semantic calibration of `AgencyFrame.Exercises`,
+not the formal proof. `Rational` (DEF `b8061228`) is intended to name
+an inclination following intellectual apprehension of a good;
+HAS_WILL_1 (DEF `7c64b499`) is also an inclination toward an
+intelligibly apprehended good. An actual exercise **as that inclination**
+is more specific than the occurrence of an effect through a power
+which also has a rational classification. The latter does not say
+which aspect of its owner supplies the formative measure of this
+actual production.
+
+A substantive source-based motivation for the stronger interpretation:
+Aristotle, [Metaphysics Θ.2 (1046b4–15) and Θ.5 (1047b31–1048a24)](https://classics.mit.edu/Aristotle/metaphysics.9.ix.html),
+explains rational powers by the account possessed in knowledge. Medical
+art can produce health or disease because it understands the relation
+of the positive state and its privation; the appropriate desire
+determines its actual employment. A mere range of possible contrary
+effects is not the distinctive explanatory feature of the art.
+The one-way manifestation thesis for non-rational powers in Θ.5 is
+exactly what #1941's CHANCE_3 discussion disputes. Do not infer its
+universal applicability from this passage; noncognitive powers may
+have multiple possible manifestations. The useful feature of the
+contrast is the role of the understood account, not the number of
+outputs.
+
+Aquinas, [ST I q.25 a.1 co., ad 3–4 and a.5 ad 1](https://www.newadvent.org/summa/1025.htm),
+distinguishes the actual productive principle from a passive capacity
+or a principle distinct from the divine action; ad 4 identifies
+knowledge, will and execution in reality while distinguishing their
+accounts. Article 5 ad 1 separates the scope of divine power from what
+is actually done under foreknowledge and preordination. The latter
+claim supports actual practical governance, not the inference that
+identity of power and cognition alone yields such governance.
+These are readings of the linked primary translations, consulted for
+the argument, not new pinned attributions or a proof of the classical
+account. The previously read q.19 a.4 and q.14 a.8 retain their
+respective formative and appetite conditions.
+
+**Independent ordinary-case test of the semantic bridge.** A physician
+produces a beneficial outcome either by deploying a correctly understood
+treatment because it will restore health, or by carrying out an
+independently imposed prescription that she correctly understands but
+does not follow for that therapeutic reason. In the latter case a
+different reason may actually govern her action; it is not necessarily
+nonintentional. A noncognitive dispenser can also achieve the same
+therapeutic outcome under an objectively appropriate rule. In each case
+the end's independent success conditions and the productive outcome may
+coincide. The first action is an exercise of medical expertise as
+practical knowledge; the second may exercise it in execution without
+the therapeutic end itself guiding adoption; the third is not an
+exercise of intellectual expertise unless an independent account
+establishes cognition. The diagnostic is not a test based on observing
+a successful treatment. Its warrant comes from actually tracing the
+agent's uptake and use of the therapeutic reason. Implicit or tacit
+practical cognition can satisfy this, without conscious deliberation
+or verbal report. This example concerns familiar composite producers;
+it is not evidence of a simple-source world.
+
+This provides direct defeasible warrant for a **qua-exercise
+calibration**: when a giving truly exercises the rational inclination
+in its formative mode, at least some apprehended good is operative in
+that giving under an independently interpretable description. This
+is a restricted claim about the nature of exercising an intellectual
+inclination. It is close to constitutive of that stronger sense,
+not an independent theorem that all acts originating in an intelligent
+subject have this character. The difficult substantive premise is
+that the existing existential giving is an exercise **in this sense**
+rather than an effect of a differently specified productive aspect.
+A proof that merely renames `Exercises` would be a transcription.
+Do not strengthen the frozen dictionary or theorem.
+
+There is a useful conditional consequence: if the actual giving is
+indeed the exercise of n's unique power *qua rational inclination*,
+a wholly blind account of that very exercise fails. No separate
+argument that an unknown blind constituent must exist is required in
+this conditional case. The objective rule may still govern residual
+realization within what is adopted; the result is only (2).
+
+### 3. Test the alternative: real constitution, not numerical labels or explanatory isolation
+
+Return to #1962's challenge. There are at least two genuinely different
+ways to develop the intellectual-but-blind account.
+
+**Independent intrinsic constituent.** The rival says an actual
+productive determination p is sufficient as the blind formative
+principle independently of the source's actual intellectual
+determination k, and that p and k are really distinct internal
+constituents (not merely distinct concepts or termini). Then the
+combination is incompatible with a simplicity principle excluding
+those constituents. In particular if p is an actual intrinsic
+ground of k as an actuality, and strict simplicity identifies both
+with n's esse, an irreflexive actual-grounding interpretation would
+give self-grounding; this is an application of the #1961
+identity/dependence boundary, not a new cycle proof. It does not follow
+if p grounds a truth about k, provides the content it knows, or is
+just another description of k. Establishing actual constitutive
+dependence or real plurality is the burden; two individually
+indispensable explanatory descriptions of one actuality do not suffice.
+
+**One actuality, different explanatory aspects.** The strongest
+remaining intellectual rival identifies the intrinsic principle of
+production and the actual principle of cognition with a single
+actuality. It has a positive objective directedness to good, and knows
+itself, including the character of that directedness. Its knowing
+is contemplative; the actual choice of a permitted manifestation
+proceeds from its primitive propensity, not from an apprehended reason.
+No extra inner selecting event or new intrinsic state is stipulated.
+A fixed self-content about the necessary source avoids a claim of
+contingent intrinsic foreknowledge; explaining the particular
+contingent truth in that knowledge remains a further #1737 obligation.
+This is a proposed ontological explanation, not a demonstrated model
+of strict simplicity. It can even include an actual inward rational
+orientation to its own good, while rejecting creative exercise *qua*
+that orientation. Whether it can give a satisfactory unitary
+constitution of these roles is a real unresolved question.
+
+The identity of the actuality designated by p and k allows
+substitution in an extensional causal relation. It does **not**
+license substitution in a claim of productive relevance under a
+particular explanatory aspect. If n acts, and n has actual
+self-understanding identical with its actuality, it follows that
+the actor is the self-understanding being; it does not follow that
+apprehension of the good explains the exercise *as a reason*.
+Conversely the failure of that explanatory substitution does not
+entail that the aspects have distinct real bearers or parts.
+Necessary co-presence of aspects would not establish identity, and
+an independently describable aspect is not thereby a constituent.
+Thus a proposed inference from the blind role's explanatory isolation
+to ontological composition needs a defended bridge in the existing
+composition analysis (`ca07cae9` is a causal claim about composites,
+not that criterion).
+
+For the personal account a positive unifying interpretation is
+available: what n actually understands as a good supplies the
+intelligible measure of its own active exercise, and the productive
+actuality just is that intellectual inclination in effective exercise.
+It gives one constitutive explanation of the correspondence between
+the recognized end and practical direction without making the
+cognition a second efficient cause or adding a separate choice-event.
+This earns comparative credit **if** the formative relation is
+independently warranted as an actual relation of n, not merely
+specified in the hypothesis. The unified impersonal account can
+provide its own common-nature explanation of objective direction
+and self-knowledge, and the fully noncognitive account does not
+owe an explanation of n's cognition unless cognition is established.
+Do not rank the theories by counting primitive descriptions. The
+relevant contrast is whether the recognized end has the specified
+productive role; coherence of the one-act personal and one-act
+contemplative accounts remains to be warranted.
+
+### 4. Narrow the bypass test to what is actually explained
+
+An independently specified end E might be fulfilled by x or by y.
+Suppose this source apprehends E, actually exercises its power for E,
+and directly supplies x as a realization of E. Suppose that the
+propensity among E-realizations leaves x rather than y
+nonnecessitated. This is a **partially specified rational exercise**:
+the actuality of production under E and the remaining selection
+contrast need not have the same explanation. No internal mechanism
+distinct from n is inferred from the two explanatory scopes.
+It is not a demonstration that such a source is possible under
+strict simplicity or that a reason can fail to necessitate an
+identical rigid act while retaining all #555 premises.
+
+Compare the bypass challenge under matched actual supply:
+
+* If the noncognitive propensity accounts for the occurrence and
+  direction of the complete exercise even without the supposed
+  practical governance, and the latter merely tracks the effect,
+  then the offered practical explanation has not been shown to be
+  operative.
+* If it only accounts for which eligible realization occurs **given**
+  an actually end-directed giving, it does not provide a replacement
+  explanation of the actual giving's end-directedness. If the
+  apprehended end governs that giving, the residual indeterminacy
+  cannot on its own turn the entire act into blind production.
+
+These are alternative positive dependence interpretations, not
+interventions which switch an essential cognitive feature off in a
+world where the same simple necessary source exists. Mere modal
+availability of a different route to the same effect is not actual
+bypass. A rival could defend the first interpretation by locating
+the actual formative principle in a blind nature; the personal
+account could defend the second by establishing exercise *qua*
+the intellectual appetite. The matching standard is actual
+explanatory responsibility, not a requirement that one account
+uniquely determine the result while the other need only produce it.
+
+Application to `a94c5dfc`: producing an actual x for E may still
+mean producing x as a means or as a foreseen concomitant rather
+than willing x's own existence-good to x. For example, purposefully
+making a habitat may also deliberately create a support organism
+for the benefit of other inhabitants without that organism's own
+good being the producer's object. This is an intentional-scope
+test, not a claim that such a producer is perfectly good or that the
+support organism is not good in being. The existing recipient-specific
+willing bridge still needs positive warrant. Nor does an actual
+creative exercise require that the source seek an unpossessed good.
+The [own-good exercise analysis](causal-perfection-transfer.md#from-self-understanding-to-love-of-ones-own-good)
+gives separate conditional grounds for actual inward love, not
+an argument that every external gift is a communication of it.
+This preserves `00e962ae`, self-love and recipient-directed
+goodness as distinct commitments.
+
+### 5. Assessment, graph destination and next discriminating evidence
+
+The narrow semantic step from actual exercise **qua will** to
+direction by an apprehended good has a substantive rationale from
+the nature of intellectual inclination and practical knowledge.
+It need not demand a further intentional event mediating the
+one source's production. The main application burden has moved
+from an unqualified appeal to real composition to the actual
+individuation of the productive exercise. The two-power rival is
+already conditionally excluded by #1941; the proposed one-actuality
+contemplative rival is not excluded by the same identity proof.
+Even granting intellect and self-love, actual governance of
+external production remains open. This is a scoped interpretive
+assessment, not a change of warrant or status of an existing
+registered premise.
+
+The existing graph route to `29818edd` supplies the intellect
+predicate, not actual uptake of any particular end. `090be689`
+and `71fc097b`, with `495a40ad` and the one-power hypothesis,
+give `5c1aba17` through `b5b84276`. The additional qua-exercise
+calibration would interpret this giving as actual rational
+production under a good. #1944's same-holder/root identification
+and `834ddcfa` continue to connect the willed holder to
+`66aecdd7`, with their registered premises and sense bridges.
+The qualifier does not add a Lean conclusion, identify
+`GivesTo` with `CausesIn`, or resolve NAR, WN, actual
+accessible omission or policy-level optimality. A genuinely
+operative end can supply a candidate nonnecessitating
+explanation of an actual existential gift, not a proof of
+`608a262d` over its whole domain or of BX1/BX2. No claim of
+overall personal superiority follows for thin productive-order
+explananda. The candidate personal account has a conditional
+advantage for the richer intentional explanandum; warrant for
+including that explanandum in the actual case is still needed.
+
+**Reopening conditions, in priority order.**
+(1) Find a positive reason why a source whose intrinsic essence is
+actual understanding supplies the *formative specification of its
+actual productive exercise* through that understanding, rather than
+merely owning or cognizing the effective principle. Test the actual
+source's self-content, the independent intelligible measure of the
+productive end, and the exercise of its own will in the same giving.
+A criterion for genuinely exercising a power qua its essential
+formative mode can advance the case without a new real-distinction
+argument. (2) If the rival gives a unitary, strictly simple
+contemplative-propensity account, demand the same constitutive
+explanation of its intrinsic roles and actual exercise as of the
+personal one; if it instead asserts actual distinct intrinsic
+grounds, check the existing composition and identity-dependence
+principles at those exact relata. (3) Independently warrant the
+actual adoption/communication of the owned good, and then the
+recipient-specific willing required for `a94c5dfc`. A normative
+permission or a match in outcomes is insufficient.
+These conditions exclude another exercise of the same reclassification
+or collapse proofs as useful next work.
+
+**Verification/disposition.** This delivery changes the note and a
+new scoped attempt, not definitions, proof inputs, source claims or
+graph edges. Directly inspected the current `WillVersusChance`
+definitions, solution A, the intellect/will definitions and
+recipient-good records; read the linked Θ.2/5 and q.25 articles
+in their relevant context. Author's semantic sweep: ordinary cases
+and rival sketches explicitly not strict-simplicity models; matched
+efficacy and stopping standards; no attribution registered; exact
+type and witness distinguished from formative interpretation;
+no counterfactual intervention on a necessary intrinsic state;
+Rational/HAS_WILL_1/recipient-good senses retained. Previous
+#1971 head `65b78691b29b68ae25bb6cb6335ed3eb19646b04` CI passed
+([run 45509424903](https://github.com/moritzbrantner/formal-logos/actions/runs/45509424903));
+automated review found one P1, the overstated defense of invariant
+communication, corrected at `83865fdff2b494bea9331aea688a6ddf389f9b30`.
+That review does not constitute the independent semantic challenge
+of this new assessment or certify this changed head. No local
+checkout, Lean/Rust CLI or independent reviewer worker is available
+here; final applicable CI, computed premise comparison and
+independent semantic review remain outstanding.
