@@ -1,0 +1,11 @@
+{
+  "id": "8cbb943d-a6cd-4cb3-8a43-3432523db0ea",
+  "label": "Compare local intensity under pass-through and concentration of the same whole supply",
+  "argument_id": "99f585e2-9b01-4d40-b98b-cef9829610d8",
+  "challenge_module": "TruthCore.Results.Causality.ParticipatedEsseScale.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ParticipatedEsseScale.Solution",
+  "theorem": "TruthCore.Results.Causality.ParticipatedEsseScale.channelControl",
+  "comparator_config": "results/8cbb943d-a6cd-4cb3-8a43-3432523db0ea/comparator.json",
+  "status": "solution-present",
+  "description": "For every positive n, both outputs account for all 2n units. Separate routing gives the input and output the same least upper bound n; pooled routing yields least upper bound 2n, and the 2n probe distinguishes the output from the input. This controls the inference from no additional supplied quantity to preservation of local grade. The ports are an analogy for that inference and carry no causal or metaphysical classification."
+}

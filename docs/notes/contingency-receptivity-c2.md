@@ -2234,3 +2234,127 @@ that every intrinsic restriction of esse involves receiving potency would
 strengthen the latter judgment. A concrete account of intrinsically finite
 actuality that explains its determinate powers without reception would
 weaken it. The modal verdict for this very individual remains open.
+
+#### When does a missing perfection make a bearer strictly less?
+
+The universal bridge `fd2c8710` compares **every** bearer with limited esse to
+**every** bearer without it, on the same approach scale. Its Lean type has no
+actuality or causal-edge qualification. Two consumers use different instances.
+Strict primacy compares each bearer other than the supplied primary to that
+one primary. Identity-source ascent compares each actual identity giver to
+each distinct actual recipient whose esse it causes, then interprets the degree
+comparison as `MoreIn` at esse. The latter supplies the ascent premise for
+the common-source argument for maximal causality. A comparison on an actual
+causal edge leaves the first consumer's other comparisons open.
+[Strict primacy](../../corpus/results/STRICT-PRIMACY-FROM-RECEPTION-LIMITS.json)
+· [Identity-source ascent](../../corpus/results/62bd2829-47bc-4f75-8ba2-aa160760464b.json)
+· [Common-source consumer](../../corpus/results/47efe91a-7ac9-445b-b99c-91c36acf7903.json)
+
+Suppose the giver really has every admitted pure perfection the recipient has,
+and one further perfection can be identified in the giver. Does that answer
+the comparative question? It depends on what the degree measures.
+
+- **The profile of actual perfections.** Give each admitted feature its
+  singleton set as a level and order sets by inclusion. The least upper bound
+  for each bearer is exactly its set of realized features. Preservation and
+  one missing feature then put the recipient strictly below the giver. This
+  reading compares the contents themselves, even when a comparison in other
+  cases leaves two profiles incomparable. Its philosophical attraction is that
+  a real positive gain on one dimension with every other admitted dimension
+  retained supplies a reason for preference. The features must correspond to
+  genuine actualities. Merely redescribing one actuality in two ways supplies
+  no difference in realization. Identifying strict inclusion with being more
+  in esse still needs the degree-to-`MoreIn` bridge.
+- **A common intensity.** Give each feature a level on one ordered scale and
+  take the least upper bound of each bearer's realized levels. A recipient with
+  level 2 and a giver with levels 1 and 2 both reach 2. Even a *highest* feature
+  found only in the giver can leave the degrees tied. Let the grades be the
+  natural numbers with a top above them. The recipient realizes each finite
+  level, while the giver also realizes the top. Every finite candidate ceiling
+  fails at its successor. Both least upper bounds are therefore the top.
+  This example tests even the difference between attaining a grade and being
+  bounded by it. It assigns no such inventory to an actual creature.
+
+More exactly, under inclusion and least-upper-bound calibration the degrees
+are strictly ordered **if and only if** the giver realizes some level which
+the recipient's degree fails to bound. If the recipient degree bounds every
+giver level, it bounds the giver's least upper bound. This would give a tie in
+rank. In a preorder the separating level can itself be incomparable with the
+recipient degree. A level strictly above a known recipient ceiling is a
+sufficient test which also works without assuming inclusion.
+[Checked comparisons](../../Scratch/strict-esse-scale/Comparison.lean)
+· [Shared calibration](maximum-definition-fork.md#when-does-what-is-communicated-fix-the-givers-own-degree-of-esse)
+
+**An application to the actual identity-giver argument.** Assign a capacity
+to the recipient's nature, independently of the disputed ranking of giver and
+recipient. Check that this bounds *all* its realized pure levels. Identify a
+pure determination actually realized in this very giver at a level strictly
+above that capacity. With the common calibration, the recipient's degree lies
+at or below the capacity and the giver's lies at or above the witnessed level.
+The existing degree-to-more premise, used only at esse, then gives the precise
+source-scoped ascent `8176a284` if these two checks hold for each qualifying
+pair. The ceiling need not be attained. Different recipients may have
+different ceilings and different separating items in the same giver. This
+route requires neither a numerical greatest grade nor a premise about every
+unlimited bearer. Substituting the recipient's rank for its capacity and
+assigning a level to the giver merely because it is higher would make the
+argument circular in application.
+[Conditional argument](../../corpus/arguments/bda1d345-a299-4595-bbf1-bb92374aebab.json)
+
+**What could count as the extra actuality?** The subsistence argument already
+distinguishes the actual source's own-being from the recipient's received act
+on its stated assumptions. Its positive case is that a whole whose actuality
+is constitutive through and through realizes a completeness absent in a whole
+whose intrinsic receiving principle requires a distinct act. That is a reason
+to try *completeness of actualization* as a dimension. The strongest rival
+grants the constitutional difference. On its account the recipient's act
+fully actualizes this very nature, and receipt explains how that completeness
+is realized. Calling the same recipient deficient simply because it receives
+would decide the disputed comparison in the label. Even if subsistence is an
+additional pure item, the intensity test still asks which other actualities
+in the recipient could reach its level. [Actual mode contrast](../../corpus/results/94271978-0448-47ad-b906-59d4a7bdbb5f.json)
+
+A second candidate has positive content identifiable apart from being a giver.
+In actual self-understanding a subject understands itself *as the subject of
+its activity*. Reflection supplies a case for the content independently of
+claims about a first cause. There is a prior
+conditional source-side reason. The immateriality route attributes
+intellectual aptitude to a source free from matter and componenthood. With
+pure actuality and the capacity/exercise bridges it obtains actual
+understanding. To reach self-understanding it further requires the source's
+own form to be its immediate intelligible form, to present that very subject,
+and to be actually apprehended. The argument does not take comparative ascent
+as a logical input. Applying it here still requires the same identity giver
+to meet its conditions on independent grounds. The rival that the source is
+intelligible while only other subjects apprehend it challenges the aptitude
+and intentionality steps directly. Grant those steps for this giver and
+consider a recipient whose own operations are wholly noncognitive. If self-understanding
+counts as a pure perfection and the source preserves all the recipient's
+other admitted perfections, this pair passes the **profile** test. If the
+degree instead measures how fully each whole is actual, an inventory of the
+recipient's cognitive limitations supplies no ceiling on all its other
+actualities. Even a successful comparison with this recipient would leave
+actual reflective recipients to examine. Importing divine intellect from a
+later result that already uses this same ascent would add no warrant.
+[Same-source self-understanding argument](../../TruthCore/Results/Causality/IntentionalExemplarExtension/Solution.lean)
+· [Interpretation and rival](causal-perfection-transfer.md#controls-surviving-impersonal-account-and-comparative-judgment)
+
+I favor strict comparison where a positive perfection is genuinely contracted
+in reception and its bearing on the selected order can be defended. The
+profile reading gives that judgment a clear conditional application. The
+strongest case for the scalar reading turns on a restriction to the
+actuality of the whole, with the same criterion of actuality in the giver.
+The mode contrast warrants investigation of that restriction. It supplies
+no independently bounded recipient inventory on its own. I would retain
+the source-scoped ascent as a defensible direct participation premise and
+give the universal bridge less weight. A substantive reason for a genuinely
+new pure perfection always to raise esse on the chosen scale, or independent
+bounds and crossing witnesses for the relevant recipients, would strengthen
+that judgment. A sharper next
+pair is the alleged source and a recipient actually attending to its own
+thought. Both meet the proposed self-understanding test. Compare the positive
+content each grasps about the grounds of its own present actuality. Does the
+source actually grasp an explanatory content the recipient misses, or do
+they grasp the same content by different means? A demonstrated difference
+could discriminate these profiles. The intensity reading would still need a
+reason it raises the degree of the whole.
