@@ -93,7 +93,10 @@ The two latter judgments can come apart. Someone can accept a first giver
 and deny its necessity, or require a ground for every contingent member and
 allow an endless order of givers. The population route assumes concrete population, a root in every nonempty collection closed under direct actual concrete grounds (CCR), a concrete ground for each actual contingent concretum, and excluded middle. An unborrowed producer in one series establishes neither the scope of CCR nor well-founded grounding below a thinker. It requires neither
 a first instant nor an S5 inference from possible necessity. Accessibility
-must still represent the intended metaphysical alternatives. The separately
+must still represent the intended metaphysical alternatives. Even if this very
+source exists in every such world, its being underived *in every world* is
+a further question. The coverage route explicitly asks whether a source
+without an actual concrete ground could acquire one elsewhere. The separately
 checked temporal routes have their own possible-history and frame premises.
 Agreement on the conclusion gives no independent reason to accept a contested
 premise. [Stage-one dependency map](spine-dependency-map.md#current-stage-one-join)
