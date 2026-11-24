@@ -1851,12 +1851,12 @@
       "path": "corpus/disambiguations/causal-series.json",
       "status": "inspected",
       "classification": "reviewed_semantic_note",
-      "finding": "Reviewed #1112 clarification: no first member is presupposed by an essential-series definition; here-and-now/removal is an OPEN interpretation of primitive links and accessibility a separate premise. Historical succession and essential dependence are distinct without an explicit edge dictionary. The new typed analyst sibling certifies only conditional exclusion and formal same-member compatibility, not metaphysical possibility. Existing source claims, frozen interfaces and every audited route premise remain unchanged; see docs/causal-regress-and-grim-reapers.md.",
+      "finding": "Reviewed #1112 clarification: no first member is presupposed by an essential-series definition; here-and-now/removal is an OPEN interpretation of primitive links and accessibility a separate premise. Historical succession and essential dependence are distinct without an explicit edge dictionary. The new typed analyst sibling certifies only conditional exclusion and formal same-member compatibility, not metaphysical possibility. Existing source claims, frozen interfaces and every audited route premise remain unchanged; see docs/causal-regress-and-grim-reapers.md. 2026-11-24 review (#1926, sense splits): appended sense SERIES_OF_CAUSES_4 (definition 57348ddc, DependenceOrderSenses.CausesBeingAsCaused, the existential per se link: here and now c efficiently causes x's being, per se as caused) with its own Lean declaration, and a resolution paragraph saying that its only passage to SERIES_OF_CAUSES_3 is an explicit open sense bridge and that no passage the other way is asserted. SERIES_OF_CAUSES_1-3, their declarations, the existing resolution text and the audited results are unchanged, and no audited step uses the new sense.",
       "before": {
         "sha256": "e49c7b1303cbad80df9fdf569a5050be6943c34cd984f64022c52c99644e8cae",
         "lean_declaration": null
       },
-      "reviewed_sha256": "875baf86a2e35dbbce28aab34f8744bb778ef991d181de9bc371385583b059e9"
+      "reviewed_sha256": "c68ec833c64d634addde1dc74cb592e8695deb06fb2bf5a803bf8a8d643cf2f5"
     },
     {
       "kind": "disambiguations",

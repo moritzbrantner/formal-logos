@@ -1,0 +1,31 @@
+{
+  "id": "e3140a79-4c6c-46f4-995e-b735239387a4",
+  "label": "No infinite SERIES_OF_CAUSES_4 series, from 97f5850f and the sense inclusion",
+  "premise_statement_ids": [
+    "97f5850f-62bc-5e43-a0c1-dd1033d08fc9",
+    "e81ec2fe-d10e-47e0-bdcf-8f1faf972ab8"
+  ],
+  "conclusion_statement_id": "87aa978c-f33c-4fc6-8881-5ff6484f8a7a",
+  "inference_ids": [
+    "99c7ac4b-446a-4f26-a903-df184d0e7f2f"
+  ],
+  "meaning": "Non-transcription conditional derivation: if the per se series of efficient causes on SERIES_OF_CAUSES_3 cannot go on to infinity (97f5850f) and every SERIES_OF_CAUSES_4 link is a SERIES_OF_CAUSES_3 link (the open sense bridge), then the existential series cannot go on to infinity. So, given the sense bridge, the existential no-regress premise is the weaker of the two: the existential relation is the narrower one. The order is not definitional: without the sense bridge they are independent (second conjunct of senseInclusionControls: 97f5850f holds with CausesAsCaused empty while the existential series has a two-cycle), and the existential premise never gives 97f5850f (secundaSplitLimit, attached to the PER_SE_5 argument). senseInclusionControls also drop 97f5850f and give a nonvacuous interpretation. No strengthens relation is registered, because the order needs the open sense bridge.",
+  "definition_ids": [
+    "4bca086d-1fa5-4b0d-bf2b-a22f3f0ac740",
+    "57348ddc-eaa0-4f0d-bf3f-ce358f452b53",
+    "69c0b23e-54c7-57a1-871f-839c6e5514c6",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "4a101a4c-12de-53c8-80c6-de7a523ea9d9"
+  ],
+  "disambiguation_ids": [
+    "81c233d4-01b4-528c-8bbd-7da228443ffe"
+  ],
+  "sense_bridges": [
+    {
+      "term": "SERIES_OF_CAUSES",
+      "from": "be30bf4e-59fd-43b8-8c85-905ec7c86387",
+      "to": "4455d83d-d0be-4361-9a14-8e59dcc46eaf",
+      "statement_id": "e81ec2fe-d10e-47e0-bdcf-8f1faf972ab8"
+    }
+  ]
+}

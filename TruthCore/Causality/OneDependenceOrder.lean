@@ -154,9 +154,10 @@ a per se actual cause of the moved thing's esse. Ad 7 gives as per se series
 the stone moved by the stick, moved by the hand, and the generation of this
 man depending on this man, the elementary body and the sun (causes of motion
 and of coming to be). That the stick continues to be when the hand lets go is
-an analyst observation, not ad 7's. The premise is defensible only under a
-not-yet-existing existential sense of `CausesAsCaused`; the sense split is the
-next test. -/
+an analyst observation, not ad 7's. The premise is defensible only under an
+existential sense of `CausesAsCaused`, now SERIES_OF_CAUSES_4
+(`DependenceOrderSenses.CausesBeingAsCaused`), on which it is restated as
+`DependenceOrderSenses.PerSeEsseLinksArePerSeEsseCauses`. -/
 def PerSeEfficientCausesArePerSeEsseCauses {B P R : Type} (p : Profile B P R)
     (AsCaused CausesAsCaused : B → B → Prop) : Prop :=
   ∀ c x, CausesAsCaused c x → PerSeActualEsseCause p AsCaused c x

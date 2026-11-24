@@ -1,0 +1,43 @@
+{
+  "id": "32012257-4890-4eb0-8bfb-c9694ceb5930",
+  "label": "Every SERIES_OF_CAUSES_4 link is PER_SE_5, from e8664ab8 and the sense inclusion",
+  "premise_statement_ids": [
+    "e8664ab8-c12f-42e2-8b9f-f38fe14cb52a",
+    "e81ec2fe-d10e-47e0-bdcf-8f1faf972ab8"
+  ],
+  "conclusion_statement_id": "bb7e4426-c300-4719-a8c1-8e27edf59fb4",
+  "inference_ids": [
+    "9feecc04-56b8-464d-bff7-a913441f56f6"
+  ],
+  "meaning": "Conditional derivation recording the strength order between the two bridges: if every SERIES_OF_CAUSES_3 link is a PER_SE_5 actual cause of being (e8664ab8) and every SERIES_OF_CAUSES_4 link is a SERIES_OF_CAUSES_3 link, then every SERIES_OF_CAUSES_4 link is a PER_SE_5 actual cause of being. So, given the sense bridge, the restated bridge is weaker than e8664ab8; it is the version that survives the hand-and-stick counterexample kept against e8664ab8. This is a support option for the restated bridge through a premise with a kept counterexample; the restated bridge's other support option (from 8b2561cd and the present-cause bridge) does not use e8664ab8. oldBridgeControls give, for each input, a Bool interpretation in which the other holds and the conclusion fails, and a nonvacuous one; secundaSplitLimit shows the restated bridge holding while e8664ab8 fails.",
+  "definition_ids": [
+    "4bca086d-1fa5-4b0d-bf2b-a22f3f0ac740",
+    "57348ddc-eaa0-4f0d-bf3f-ce358f452b53",
+    "8163859b-95b3-4dd2-8a69-541bd332f32f",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "69c0b23e-54c7-57a1-871f-839c6e5514c6",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "4a101a4c-12de-53c8-80c6-de7a523ea9d9"
+  ],
+  "disambiguation_ids": [
+    "81c233d4-01b4-528c-8bbd-7da228443ffe",
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "002f42cb-3015-5644-80b3-d408538394e6",
+    "57f80020-fa6f-5b69-be58-b4cf95b7226f"
+  ],
+  "sense_bridges": [
+    {
+      "term": "SERIES_OF_CAUSES",
+      "from": "be30bf4e-59fd-43b8-8c85-905ec7c86387",
+      "to": "4455d83d-d0be-4361-9a14-8e59dcc46eaf",
+      "statement_id": "e81ec2fe-d10e-47e0-bdcf-8f1faf972ab8"
+    },
+    {
+      "term": "UNITING_CAUSE_VERSUS_EFFICIENT_CAUSE",
+      "from": "018d4f0a-2276-42a7-b20d-b0fe6c9c3714",
+      "to": "2478812d-d2cd-4182-8ad0-d27a4bdb9ff2",
+      "statement_id": "bb7e4426-c300-4719-a8c1-8e27edf59fb4",
+      "role": "conclusion"
+    }
+  ]
+}

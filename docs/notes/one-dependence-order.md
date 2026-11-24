@@ -298,3 +298,196 @@ would weaken every member at once.
 * Phase 2 of #1926: an `instance_of_schema` registration of the esse,
   priority and grounding regress premises as instances of the inclusion
   kernel.
+
+## Sense splits (#1926, continued, 2026-11-24)
+
+Status: verified conditional derivations and controls on branch
+`research/1926-sense-splits`, pending the independent semantic challenge.
+Spec `specs/dependence-order-senses.toml`, module
+`TruthCore/Causality/DependenceOrderSenses.lean`, results
+`TruthCore/Results/Causality/DependenceOrderSenses/`, attempt `b204e708`.
+It takes up the first two next tests above.
+
+### (i) The existential sense of the per se link
+
+**The sense.** SERIES_OF_CAUSES_4 (definition `57348ddc`, appended to the
+"Series of causes" disambiguation `81c233d4`, where `CausesAsCaused` is
+SERIES_OF_CAUSES_3; the `CAUSES_AS_CAUSED_3` of the records above is that
+sense). Lean: `CausesBeingAsCaused EfficientlyCausesIn esse AsCaused c x :=
+EfficientlyCausesIn c x esse ∧ AsCaused c x`. Here and now `c` efficiently causes
+the being of `x` (DEF-EFFICIENT-CAUSING at the respect of being), and does so per
+se, as caused: `AsCaused` is the PER_SE_5 primitive, whose definition already
+glosses it as "c causes the esse of x only insofar as c's own esse is caused".
+The sense is defined from two existing primitives; it is not defined from
+`CausesAsCaused`, `CausesIn`, grounding or priority.
+
+**Results** (all constructive, no axiom, Comparator and NanoDa checked):
+
+| Result | Premises | Conclusion |
+| --- | --- | --- |
+| `perSeEsseSeriesOfPerSeEsseRegress` (`0d89840b`) | PER_SE_5 regress `ea251340`, restated bridge `bb7e4426` | existential no-regress `87aa978c` |
+| `perSeEsseLinksOfPresentEsseCause` (`c4b9b829`) | no self-causation `8b2561cd`, present-cause bridge `622dbf36` | restated bridge `bb7e4426` |
+| `perSeEsseSeriesOfPerSeEfficientSeries` (`c6a1167b`) | `97f5850f`, sense inclusion `e81ec2fe` | `87aa978c` |
+| `perSeEsseLinksOfPerSeEfficientLinks` (`15f2decb`) | `e8664ab8`, sense inclusion `e81ec2fe` | `bb7e4426` |
+
+`bb7e4426` is e8664ab8 restated on SERIES_OF_CAUSES_4. Since the per se conjunct
+is the same primitive on both sides, its only content is the passage from present
+efficient causing of being to a distinct actual cause of being; `622dbf36` states
+exactly that, without the per se link, and `8b2561cd` (ST I q.2 a.3, "nec est
+possibile quod aliquid sit causa efficiens sui ipsius") supplies distinctness.
+
+**Relation between the senses.** Neither inclusion is definitional
+(`CausesAsCaused` is a primitive). With the open sense bridge `e81ec2fe`
+(SERIES_OF_CAUSES_4 ⊆ SERIES_OF_CAUSES_3) the existential relation is the narrower
+one, so its no-regress premise is the *weaker* (`c6a1167b`) and the restated bridge
+is weaker than e8664ab8 (`15f2decb`). Without the sense bridge the two no-regress
+premises are independent (second conjunct of `senseInclusionControls`), and the
+existential premise never gives 97f5850f (`secundaSplitLimit`). No `strengthens`
+relation is registered: each order needs the open sense bridge, so no
+single-premise strength result exists. The converse inclusion fails on the
+hand-and-stick case: the hand is a SERIES_OF_CAUSES_3 link through c2880fe0 and
+causes no being.
+
+**Does the secunda via's premise join the one order?** On SERIES_OF_CAUSES_4,
+yes: AGWF `82cfaf26` → `fd12ad3d` (#1942, weak esse-ground bridge) → `ea251340`
+(`ed411e36`) → `87aa978c` (through `bb7e4426`). On the bound SERIES_OF_CAUSES_3,
+no: `secundaSplitLimit` is a `Nat` interpretation in which the whole existential
+part of the order holds nonvacuously (AGWF, the weak esse-ground bridge, both
+calibrations, `fd12ad3d`, `ea251340`, `bb7e4426`, `e81ec2fe`, `87aa978c`, with
+the existential link `1 → 0`), while `97f5850f` and the per se mover regress fail
+(an infinite upward successor series, mover links read as equal to
+`CausesAsCaused`) and e8664ab8 fails. A fact about that interpretation: the
+existential order puts no constraint on per se series of movers or of causes of
+becoming.
+
+**Root connection.** None changed (`frontier-diff`: no change). The root routes
+consume `97f5850f` on SERIES_OF_CAUSES_3: the efficient-regress Catholicism routes
+use it to derive the prima via's mover regress through c2880fe0 (`226c38f6`), and
+the secunda via conclusion `6105565d` (`fc96d5e9`) uses it. Neither can run on
+SERIES_OF_CAUSES_4, because mover links are not existential links. Connection plan
+for `87aa978c`: a SERIES_OF_CAUSES_4 instance of the secunda via (a first
+efficient cause of being), feeding the De ente root interface. No technical
+blocker; its value is low while the De ente route already consumes `fd12ad3d`,
+which is stronger than `87aa978c` given `bb7e4426`.
+
+**Source fidelity** (passages materialized and read: `aba37900` q.2 a.3,
+`a34be6a3` q.46 a.2, `f74e1b94` q.104 a.1 in English). The secunda via speaks of
+an "ordo causarum efficientium" found in sensible things and of the removal of
+the effect with the cause; it does not restrict the series to causes of the
+effect's being ("esse ordinem" there is the copula, not the act of being). Ad 7
+gives as per se series the stone, stick and hand (motion) and "generatio huius
+hominis" depending on this man, the elementary body and the sun. By q.104 a.1 a
+same-species generator is a cause of becoming only, while a heavenly body is a
+cause of being as well: ad 7's second series mixes the two, and is a series of
+causes of the generation. Q.104 a.1 shows that Aquinas has the notion of a per se
+cause of being (preservation per se, "when what is preserved depends on the
+preserver in such a way that it cannot exist without it") and De ente c.4 runs a
+regress over causes of esse, but no read passage restricts the secunda via's per
+se series to causes of being. **Finding:** the existential reading is an analyst
+reading of the secunda via, attribution deferred; it is a narrowing of the
+series' relation (so a weaker no-regress premise, and a different conclusion: a
+first efficient cause of being), not a reading the read text states. Whether a
+commentator's existential reading matches it is not checked here.
+
+**Warrant.** `622dbf36`: positively supported by the meanings (efficient causing
+is one mode of the mode-unspecified `CausesIn`; a present agent acts only as in
+act; a present effect of being has being). No substantive objection identified,
+beyond the shared reading of the q.3 a.4 profile's world-free `InAct` as being in
+act at the reading world (#1942). `e81ec2fe`: supported if SERIES_OF_CAUSES_3 is
+the respect-free per se link of all efficient causes, as its definition says; no
+substantive objection identified. `87aa978c` inherits AGWF's standing: the
+source-free global-structure rival (a beginningless network in which every
+member's being is derived) targets it exactly as it targets AGWF and `fd12ad3d`;
+the split does not answer it.
+
+### (ii) PRIOR_1 and PRIOR_4
+
+**PRIOR_4 already existed** (`f4365b55`, `PriorityInBeing.PriorInBeing`, In V
+Metaph. lect. 13 n. 15, being-without). No new sense was needed. PRIOR_1's
+definition (`1d9aa4d9`) is priority in act in a respect. So 86efed1a, bound to
+PRIOR_1, is falsified on its bound sense by the hand-and-stick case, and the
+positive warrant #1942 cited for it (lect. 13 nn. 15-18, `47aff057`) is warrant
+for the PRIOR_4 reading.
+
+**Result** `priorityInBeingWFOfActualGroundingWF` (`1dbd7440`): AGWF `82cfaf26`
+and the bridge `bd305511` (between actual concreta at w, what is PRIOR_4 to the
+other grounds it) give PRIOR_4 well-founded among the actual concreta at w
+(`522506d1`). It needs no irreflexivity premise, because PRIOR_4 is asymmetric by
+definition. The bridge assumes both relata are actual concreta, so neither the
+absent or non-concrete prior thing (86efed1a's second falsifier; on the
+real-possibility reading of CanBeWithout every necessary abstract object is
+PRIOR_4 to every contingent being it can be without, the Fine-style
+overgeneration of modal dependence) nor the hand-and-stick case (the stick can be
+without the hand) touches it. *Kept scope condition* on `bd305511`. Target: its
+grounding conclusion. Mechanism: a necessary condition that is no ground. A flame
+cannot be without oxygen, and oxygen can be without the flame, so oxygen is
+PRIOR_4 to the flame among actual concreta. Justification: the cause/condition
+distinction. Relevance: the bridge then needs the selected `grounds` to count
+such conditions as grounds, which the principal-sustaining reading that the
+converse bridge `98efaa9e` needs excludes. Whether "possunt" is natural or
+absolute possibility decides whether such cases are PRIOR_4 at all: under divine
+power the flame could be without oxygen. That choice is open in DEF-CAN-BE-WITHOUT.
+So `bd305511` and `98efaa9e` pull the reading of `grounds` in opposite directions
+(broad and principal); no argument uses both.
+
+**Relation PRIOR_1 / PRIOR_4.** No inclusion either way is asserted or
+definitional. `priorityConsumerLimit` gives an interpretation with a PRIOR_1 pair
+that is not PRIOR_4 and one with a PRIOR_4 pair that is not PRIOR_1 (formal
+independence of the two primitives under the encoding). The substantive cases are
+the ones already on file: reciprocal cross-respect moving excludes PRIOR_1 ⊆
+PRIOR_4 (`moverPriorityAsPriorityInBeingExcludesReciprocity`), and PRIOR_4 ⊆
+PRIOR_1 has no positive warrant beyond n. 18's "aliquo modo".
+
+**Consumers.** The only consumer of `d85de8e1` is `e229bb2c` (→ `42890b45` →
+`438866fa` → `97f5850f`). It needs PRIOR_1: its other premise e078f07b makes
+every efficient cause, in any respect, prior to its effect, and the PRIOR_4
+reading of that shape fails (the stick can be without the hand).
+`priorityConsumerLimit` certifies this: there AGWF, `bd305511`, `522506d1` and
+PRIOR_4 well-founded on the whole carrier hold, the inputs of `e229bb2c`
+(`57552dce`, e078f07b) and `32d77f18` hold, while `d85de8e1` and `42890b45` fail
+and 86efed1a fails. So the weakest version that suffices for the one order on
+priority is `522506d1`, and no current root-route consumer uses it. The many
+other arguments that take 86efed1a as a premise (the GOD_4 existence and
+classical-attributes routes) were not re-bound here; each would need its own
+PRIOR_4 sibling, and whether its downstream use needs PRIOR_1 is that argument's
+question.
+
+### Updated overall provisional judgment
+
+The one dependence order is an order of *being*: AGWF, the De ente esse regress
+(and its per se version), PRIOR_4 among actual concreta and the existential per
+se series all share it through recorded, positively supported bridges whose
+counterexamples have been scoped away. The stage-one premises the root routes
+actually consume on the prima and secunda via (`d85de8e1` on PRIOR_1, `97f5850f`
+on SERIES_OF_CAUSES_3) are about causing and priority *in a respect* (motion,
+becoming). They do not share the order: their only inclusions face the
+hand-and-stick case, and the two limit interpretations show the order is silent
+about them. So on the current routes, the prima and secunda via regress premises
+remain separate well-foundedness assumptions, not presentations of AGWF. Each
+can be supported only by its own warrant: the per se mover series and the
+instrument argument. Revision conditions: a defended reading of the prima or
+secunda via on which every per se link causes being (no read text supports it);
+a defended PRIOR_4 → PRIOR_1 bridge for first beings (on file only as the
+first-in-being bridge, equivalent to 74eb9113); a root route rebuilt on the
+existential secunda via.
+
+Outcome label (rigor contract 6): **a new bridge** (verified conditional
+derivations joining the existential secunda via premise and PRIOR_4 to the one
+order, with per-sense restated bridges and strength comparisons conditional on an
+open sense bridge). No presentational duplicates factored, no proof-body
+consolidation.
+
+### Next tests
+
+* If the existential secunda via is to carry weight on a route: a
+  SERIES_OF_CAUSES_4 instance of the secunda via conclusion, wired to the De ente
+  root interface (connection plan above).
+* PRIOR_4 siblings of the 86efed1a consumers on the GOD_4 routes, one argument at
+  a time, checking whether each downstream step needs PRIOR_1.
+* Natural versus absolute possibility in DEF-CAN-BE-WITHOUT, which decides the
+  oxygen case for `bd305511`.
+* Tooling (lane C): lean4export merges `∀ y x, R y x → S y x` with the
+  implicit-binder body of `Subrelation`, so Comparator reports a value mismatch
+  for a definition with that body when the Solution also uses `Subrelation`
+  (attempt `b204e708`). `SecundaSplitLimit` omits its c2880fe0 conjunct for this
+  reason.

@@ -1,0 +1,15 @@
+{
+  "id": "e81ec2fe-d10e-47e0-bdcf-8f1faf972ab8",
+  "label": "Every SERIES_OF_CAUSES_4 link is a SERIES_OF_CAUSES_3 link",
+  "paraphrase": "OPEN analyst sense bridge, attribution deferred: whenever here and now c efficiently causes the being of x per se, as caused (SERIES_OF_CAUSES_4, definition 57348ddc), c causes x as a caused cause (CausesAsCaused, SERIES_OF_CAUSES_3, DEF 4a101a4c): a per se cause of being is a middle cause of a per se series of efficient causes. Positive warrant: SERIES_OF_CAUSES_3 is the secunda via's respect-free per se link, and a present per se cause of being is a per se efficient cause in the respect of being. It is not definitional (CausesAsCaused is a primitive). The converse is not asserted and fails on the hand-and-stick case (a SERIES_OF_CAUSES_3 link through c2880fe0 that causes no being).",
+  "lean_declaration": "TruthCore.Causality.DependenceOrderSenses.PerSeEsseLinkIsPerSeCauseLink",
+  "definition_ids": [
+    "57348ddc-eaa0-4f0d-bf3f-ce358f452b53",
+    "4a101a4c-12de-53c8-80c6-de7a523ea9d9",
+    "69c0b23e-54c7-57a1-871f-839c6e5514c6",
+    "4bca086d-1fa5-4b0d-bf2b-a22f3f0ac740"
+  ],
+  "disambiguation_ids": [
+    "81c233d4-01b4-528c-8bbd-7da228443ffe"
+  ]
+}
