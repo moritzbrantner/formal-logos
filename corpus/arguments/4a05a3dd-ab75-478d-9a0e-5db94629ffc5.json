@@ -29,5 +29,8 @@
       "statement_id": "e81ec2fe-d10e-47e0-bdcf-8f1faf972ab8",
       "role": "conclusion"
     }
-  ]
+  ],
+  "strong_version_needed": {
+    "8a22ae75-4198-5a32-ae52-bad2848a50a5": "Reading B needs RelevantTo c x esse r' for the respect in which c is caused; the third premise gives only 'caused in some respect', so B does not suffice with these premises. A B-variant would need the stronger premise that the cause of every existential link is efficiently caused in a respect relevant to its causing x's being."
+  }
 }

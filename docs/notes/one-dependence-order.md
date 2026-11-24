@@ -372,13 +372,18 @@ from three premises:
 * the new premise that an existential link's cause is itself efficiently caused
   here and now in some respect (`e082dd15`).
 
-That new premise closes a **kept mode gap**. `AsCaused` says only that c's esse is
+That new premise (`8053cc06`) closes a **kept mode gap**; its own positive
+warrant is thin, since it rests on reading "caused in being here and now" as
+efficient causing, which the definitions do not settle. `AsCaused` says only that c's esse is
 caused, in an unspecified mode. DEF 4a101a4c requires a middle cause to be
 efficiently caused here and now. So a cause of being whose own being was caused
 non-efficiently, or not now, would be a SERIES_OF_CAUSES_4 link and no
 SERIES_OF_CAUSES_3 link. No case of that kind is on file. Reading A of
 `8a22ae75` is itself strong: any efficient cause caused in any respect counts as
-a middle cause.
+a middle cause. That is why `e082dd15` uses reading A: the weaker reading B
+(`446e3f2a`, registered as weaker by `strengthens` `234b49f1`) needs the cause to
+be caused in a respect relevant to its causing x's being, which the third premise
+does not give (`strong_version_needed` on argument `4a05a3dd`).
 
 **Does the secunda via's premise join the one order?**
 
@@ -552,8 +557,9 @@ routes) were not re-bound here.
   via.
 * Missing bridges:
   * from no infinite PRIOR_4 descent among actual concreta to "some actual
-    concretum is first in being". This needs a classical minimal element and
-    that what is PRIOR_4 to an actual concretum is itself an actual concretum;
+    concretum is first in being". This needs a classical minimal element, a
+    nonempty set of actual concreta, and that what is PRIOR_4 to an actual
+    concretum is itself an actual concretum;
   * from "the first in being" to "the first unmoved mover is first in being".
 * Blocker: that second identification is the same-bearer obstacle (#1926
   findings: 89 attempts). Well-foundedness gives *some* first in being, not that
@@ -582,7 +588,7 @@ causes, which through c2880fe0 includes mover links). They are not presentations
 of AGWF. On current evidence their support comes from their own warrants:
 
 * the per se mover series;
-* the instrument argument;
+* the instrument argument (`8b58de76`, with `80a648c0` and `a9e269dd`);
 * for `97f5850f`, the finite-ancestry route `b58472dd` (`e529c42f`, `37e9e7a0`,
   `f10d5632`).
 
@@ -611,6 +617,9 @@ consolidation.
 * An existential instance of the secunda via, wired to `3d01134d`, if the
   existential series is to carry weight on a route (plan above).
 * A same-bearer bridge for `522506d1` → `c51a07a1` (plan above).
+* A reading-B variant of the sense inclusion: from `446e3f2a` with the stronger
+  premise that the cause of every existential link is efficiently caused in a
+  respect relevant to its causing x's being.
 * PRIOR_4 siblings of the 86efed1a consumers on the GOD_4 routes, one argument
   at a time, checking whether each downstream step needs PRIOR_1.
 * Natural possibility versus possibility by divine power under
