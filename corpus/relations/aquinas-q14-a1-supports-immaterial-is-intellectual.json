@@ -1,0 +1,11 @@
+{
+  "id": "c900e6dd-7e18-524f-b41c-70c965e46fd9",
+  "label": "Aquinas's immateriality/cognition ordering supports an open universal intellect bridge",
+  "legacy_id": "REL-AQUINAS-Q14-A1-SUPPORTS-IMMATERIAL-IS-INTELLECTUAL",
+  "subject_kind": "claim",
+  "subject_id": "5bfe3093-c298-57bd-9550-a0e2ffe5e961",
+  "predicate": "supports",
+  "object_kind": "statement",
+  "object_id": "180f5ad2-a421-541a-85c9-9bca578b4a43",
+  "note": "ST I q.14 a.1 gives the graded immateriality/cognition connection and specifically argues from God's highest immateriality to knowledge. It does not equate the two formal negations ¬ComposedOfMatterAndForm x and ∀ y, ¬ComponentOf x y with highest immateriality for every x, nor give an unconditional rule to HasIntellect x. Both steps are analyst commitments (see STMT-ALTOGETHER-IMMATERIAL-IS-MAXIMALLY-IMMATERIAL and STMT-INTELLECT-FOLLOWS-GRADE-OF-IMMATERIALITY). The strong conditional's Lean status is unchanged."
+}
