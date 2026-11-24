@@ -319,10 +319,10 @@ warrant** for its assumptions. A change at one layer does not settle another.
 
 | Surface | What it supplies; what remains outside its result |
 | --- | --- |
-| `discover`, Duper and lean-auto | Target-relative vocabulary/definition/sense ranking, typed binding, Duper search, equation fallback, optional ATP selection with Duper reconstruction, and separate certification. This evaluation used Duper only; it makes no ATP comparison. Complete multi-hop retrieval and reliable timeout-versus-saturation reporting remain open. |
+| `discover`, Duper and lean-auto | Target-relative vocabulary/definition/sense ranking, typed binding, Duper search, equation fallback, optional ATP selection with Duper reconstruction, and separate certification. This evaluation used Duper only; it makes no ATP comparison. The separate [bounded second-hop follow-up (#1929)](https://github.com/moritzbrantner/formal-logos/pull/1929) fills unused slots; full-list premise selection and reliable timeout-versus-saturation reporting remain open. |
 | Exact bundles and adaptive repair | `--premise` now reaches the existing engine rather than being silently ignored. Raw `repair/retry` candidates can receive the engine's filters, certification and weakening. A supplied bundle is external premise selection; an oracle identification remains conditional until reviewed. Repeating unchanged inputs supplies no new diagnosis. |
 | Minimization, weakening and incompatibility | Failed deletion is not necessity; a certified weaker sibling may supersede a stronger bundle. A nontrivial certified inconsistent core supplies an incompatibility; literal-negation pairs are filtered and neither supplies affirmative support. Independent deletions cannot be combined without checking the retained conjunction; the separate #1925 repair is discussed below. |
-| `countermodel` and `prove-sweep` | Checked finite models establish a precise formal non-implication; bounded failure does not establish entailment. Function and structure vocabulary limit extraction. Prove-sweep probes frozen Challenges and possible transcriptions; its closure still needs a real Solution and the normal gates. |
+| `countermodel` and `prove-sweep` | Checked finite models establish a precise formal non-implication; bounded failure does not establish entailment. The separate [unary-function follow-up (#1930)](https://github.com/moritzbrantner/formal-logos/pull/1930) supports explicit-input, nondependent unary carrier functions; richer function fragments and structure vocabulary still limit extraction. Prove-sweep probes frozen Challenges and possible transcriptions; its closure still needs a real Solution and the normal gates. |
 | Target-free pilot | Explicit binder maps and full AND bundles permit checked cross-family conjectures, models and OPEN bridges. Graph-known filtering requires a registered conclusion ID; arbitrary Lean text still needs prior-work comparison. A sufficient bridge is not shown necessary or weakest. An intended root connection remains OPEN until linked; naming a consumer does not connect it. |
 | `brief`, `related`, `novelty`, `semantics` | Retrieve prior arguments, assessments, sources, senses and issue history, then expose identification obligations. Relevance is not equivalence, `no-match-found` is not novelty, and a missing snapshot means unknown history. The later independent #1644 tier, not its superseded lexical verdicts, supplies the controls below. |
 | Frontier and support | `frontier` identifies consequential obligations; `support-graph` preserves alternative rules, full conjunctions, commitments and cycles. Neither replaces Lean composition or premise warrant. A lower-level derivation can add leaves while improving conditional support options; fewer leaves is not itself a better argument. |
@@ -333,7 +333,9 @@ The [fixed fixture](../scripts/testdata/discovery-benchmark.json) was frozen
 before execution, SHA-256
 `ffbdb95ca2166b85440c6dfc382f79aa6ebfb0679ccfe91ca9c95b69c45fda56`.
 It contains three positive reference cases (A, B, D), negative C, and two
-unsupported countermodel boundaries. B is held out from the curation case.
+countermodel boundaries that were unsupported at baseline. The frozen fixture
+is unchanged; the unary-function follow-up below supersedes one of those
+refusals. B is held out from the curation case.
 All positive relationships were registered or previously reported; no cited
 Solution theorem was passed as a premise or hint. Novel relationships are
 therefore **0**, independently of whether a run labels a result `discovery`.
@@ -459,13 +461,26 @@ or the marker's cognitive interpretation; this yields no truth, knowledge or
 God inference. The model distinguishes the missing assumption; proof-search
 failure by itself did not do so.
 
-| Countermodel request, bound 2 | Actual boundary |
-| --- | --- |
-| `existenceFromOccurrence --omit hRepresents` | Unsupported `represent : Episode → Being`, exit 2 |
-| `actualGiverImpliesB2 --omit hGiver` | Unsupported `F : CausalityFrame W B T R`, exit 2 |
+| Countermodel request, bound 2 | Historical baseline finding | Follow-up scope |
+| --- | --- | --- |
+| `existenceFromOccurrence --omit hRepresents` | Unsupported `represent : Episode → Being`, exit 2 | Superseded in #1930 for this explicit unary function: the omission is Lean-checked |
+| `actualGiverImpliesB2 --omit hGiver` | Unsupported `F : CausalityFrame W B T R`, exit 2 | Still unsupported; no shared-frame model result |
 
-Neither unsupported extraction is an exhaustive failed model search. In the
-separate #1925 classifier regression, `{P, ¬P, Q, ¬Q}` exposed independent
+Neither baseline refusal was an exhaustive failed model search. The separate
+[unary-function extension (#1930)](https://github.com/moritzbrantner/formal-logos/pull/1930)
+returns exactly three `lean-checked` reports for
+the module-qualified `existenceFromOccurrence --all --size 2` run: omit
+`hOccurs`, omit `hRepresents`, and the joint witness, all with singleton
+`Episode` and `Being` carriers. The [measured countermodel outcome](https://github.com/moritzbrantner/formal-logos/blob/7b7747917203127d6bb6005f0a798544619ae0f8/docs/countermodels.md#unary-function-coverage-checked-on-2026-11-24)
+records the command, complete predicate assignments, existing control and
+the separately Lean-checked nonconstant swap probe. Occurrence alone does not
+entail `SomeExistent ExistsIn` under the encoded vocabulary; the witness for
+both premises establishes formal satisfiability only. This is known-control
+coverage with no novel philosophical consequence, premise-warrant change or
+metaphysical-coherence claim. It does not generalize to the remaining
+structure case or to higher-order, dependent or implicit-input functions.
+
+In the separate #1925 classifier regression, `{P, ¬P, Q, ¬Q}` exposed independent
 single deletions being combined into an empty core and a false reported
 incompatibility. The same unedited Lean output was fed to both classifiers:
 all four deletions proved contradiction; the repair retained all four premises,
@@ -503,10 +518,17 @@ python3 scripts/retrieval_correctness_benchmark.py \
   --json /tmp/retrieval-correctness.json
 ```
 
-The next priorities are a bounded second retrieval hop measured on complete
-AND bundles; a checked `WellFounded.has_min` specialization for D, derived
-from its supplied well-foundedness rather than a stronger axiom; and finite
-model coverage for the demonstrated function/shared-frame boundaries. Follow
+The bounded second hop is submitted in [#1929](https://github.com/moritzbrantner/formal-logos/pull/1929):
+development B gains its missing reference premise and a known-filtered proof,
+while fresh held-out coverage remains 8/11 complete primary bundles and 18/23
+reference occurrences. The next retrieval priority is selection among competing
+full-list premise bundles, tested on those frozen misses. Other priorities are a
+checked `WellFounded.has_min` specialization for D, derived from its supplied
+well-foundedness rather than a stronger axiom, and finite models for the remaining
+shared-frame boundary. The explicit unary-function boundary has the scoped checked
+coverage in separate [#1930](https://github.com/moritzbrantner/formal-logos/pull/1930).
+Both follow-ups are submitted independently; this audit preserves its original
+baseline and does not imply that their implementations are included here. Follow
 with sequential certified core minimization, registration of the already
 checked [modal alternative/strength bundles](../corpus/attempts/modal-discover-findings-20261120.json)
 (registration, not novelty), and reliable timeout/saturation diagnostics.
