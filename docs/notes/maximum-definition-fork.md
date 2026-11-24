@@ -896,3 +896,48 @@ then explain whether variation in it can vary *being* with kinds of operation
 held fixed. A comparison sensitive instead to received versus subsistent
 mode at fixed content would put pressure on the calibration itself. This
 question can remain open while other arguments for a greatest bearer proceed.
+
+### Current judgment on the four giver propositions
+
+1. **Adequacy at esse (`87f41688`).** Given an actual participant, one selected
+   own-being giver for all actual participants, and efficient total giving,
+   the [preservation argument](../../corpus/arguments/8fe13407-28a6-4c20-b3e2-2905499e13cf.json)
+   yields a weak upper bound if every admitted pure determination the recipient
+   realizes is also realized in the giver and their degrees are the least upper
+   bounds of their respective levels on one scale. This supports the
+   participation-specific conclusion `aba6f4e1`. The important open application
+   is to identify the same positive content in the giver independently of what
+   it produces, and justify why these contents measure the whole bearer's esse.
+2. **Whole giving (`50da2b49`).** Both an indispensable instrument and a
+   necessary additional contributor can stop delivery when removed. In the
+   [secondary-cause test](causal-perfection-transfer.md#does-a-dependent-secondary-contribute-alongside-the-giver-of-esse),
+   isolating a secondary's own productive input while preserving transmission
+   distinguishes them. At the onset of a new organism, giving the underlying
+   matter its being can explain why no independent material supply is needed.
+   To infer total efficient giving one must still trace what the generator's
+   own exercise contributes to the new individual's esse.
+3. **An actual supplier whose being is its own (`de05072a`).** In the
+   [borrower-chain test](q44-inferential-dependency.md#can-effective-local-supply-continue-throughout-a-borrower-only-order),
+   every active stage has an effective upstream supplier. The law allows an
+   empty solution even with every link intact. Given activity somewhere, it
+   determines every stage. A source-free explanation can take population as
+   a primitive. The source account offers a further explanation if it can exhibit an
+   intrinsically actual giver whose exercise accounts for the population and
+   reaches this particular recipient.
+4. **Strict comparison (`fd2c8710`).** A source can possess a determination
+   absent from its recipient while both still have the same highest realized
+   level. The [capacity test](contingency-receptivity-c2.md#when-does-a-missing-perfection-make-a-bearer-strictly-less)
+   asks for an upper bound on everything the recipient actually realizes
+   and a determination actually realized by the giver above it. On the shared
+   calibration this suffices for a strict comparison. Its application to
+   `8176a284` also needs the bridge from represented degree to the primitive
+   comparison. It leaves open the broader claim about every limited and every
+   unlimited bearer.
+
+The two degree arguments can use the same scale. I would next test the claim
+that *understanding something* is a positive actuality realized in the source
+and unavailable to a particular noncognitive recipient. Its content must be
+identified in the source independently of its production of minds. Even then,
+one must justify where the recipient's **other** actual perfections lie on the
+same scale. That comparison could support strictness for this pair. Ranking every
+participant or establishing intellect in the giver would need further evidence.
