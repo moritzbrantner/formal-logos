@@ -646,3 +646,57 @@ The first grades of `5e281daf`, `2f6b9eff` and `791fa216` answer the slice 2
 revision condition "an assessment of `5e281daf`, `2f6b9eff` and `791fa216`".
 They leave `b26c10a0`'s conditional standing as it was, and record that for
 operations its derivation and its direct option share one open question.
+
+### When does productive transmission warrant strict superiority? (2026-11-24)
+
+The target `d5a94eb1` says that for **every** distinct cause and recipient, causing the quality in this respect implies being *strictly more* such in that respect. It has a recorded direct reading and the conditional reception-limit derivations `924302df` and `a31b3e52`. The latter still require `7030af77`: an unlimited possessor exceeds a limited one under the specified limiter. If the only reason for attributing that excess in the case at hand is that one bearer causes the other, the deduction gives no independent reason for the comparison. [Target](../../TruthCore/Greek/Aristotle/Metaphysics.lean) · [Existing reception argument](../../corpus/arguments/cause-of-quality-more-such-from-reception-limits.json)
+
+**A positive case with a same-kind quality.** Consider the concentration of a single dissolved substance in a feed and a distinct receiving solution at the same time. In the ideal steady-flow model a well-mixed recipient takes donor solution at volume rate `p > 0` and clear solvent at rate `q ≥ 0`; there is one outlet, no solute production or loss, constant volume and additive flows. For positive outlet concentration `r` and donor concentration `d`, solute balance gives `(p+q)r = pd`. We can identify the donor's productive contribution by tracing the incoming solute that continually replaces what leaves. Replacing that stream with clear solvent at the same rate gives zero concentration at the new steady state. Neither identification uses a donor–recipient comparison. Now **the donor is strictly more concentrated exactly when there is positive dilution**. At zero dilution fresh solute still arrives and leaves; feed and recipient then have exactly the same concentration. Their possession has the same measure and meaning even in the tie. This tests a current productive attribution in an explicitly idealized setting. It does not treat a vessel as possessing the color or concentration of its contents.
+
+**Why even equality is not a universal floor for formal degree.** A motor-driven gear transmitting work under a resisting load is distinguishable from the driven gear by the input of work and its transmission under engagement. The gear constraint alone is symmetric and would not identify a driver. For equal pitch and no slip, tooth counts `m,n` and positive unsigned angular speeds `d,r` satisfy `md = nr`. Independent tooth counts determine whether the driver turns faster, equally fast, or slower. A step-up transmits motion while reducing available output torque at a fixed ideal power; ranking by power instead would change the respect. The speed example concerns a magnitude of motion. The solution example tests the same intensive characteristic in both bearers without relying on the treatment of speed as a quality. Both are analyst models, not reports of measurements or historical exegesis.
+
+**Warrant at the actual root use.** Strict superiority has good local warrant where an independently identified productive mechanism has a demonstrated degree-reducing condition. Mere dependence, dependence on a sole supplier, and common formal possession do not specify such a condition. I would reject the unrestricted rule on the ordinary efficient-production and same-formal-degree reading. Its direct participation reading remains a serious narrower option: if a source has undiminished a positive perfection genuinely restricted in its recipient, that difference can ground comparative ascent. Supplying the recipient's actuality does not of itself tell us that it lacks some positive content of that very source. This is decisive for the two uses at *esse* identified above. Neither tooth count nor solute balance calibrates the primitive `MoreIn esse`. Proving the local models excludes no existential giver. To reopen positive ascent at that scope, identify positive actual content belonging to the named source which the specific mode of reception excludes, and justify its ordering as a perfection of being while allowing equal positive content as a live control. For consumers needing only exclusion of an incoming cause, keep that weaker obligation separate. The investigation changes no registered support or closure.
+
+**Reproducible local control.** This Lean fragment checks the independent calibrations over rational assignments and an exact counterinterpretation of the bound statement. `outlet` is the sole-feed, zero-dilution response under replacement of the feed concentration. The selected causal edge records its direction and the recipient's response to that replacement. The proof uses a common contemporaneous actual concentration of one on the two roles. The interpretation of a productive process and its calibration are supplied by the preceding mechanisms; the Lean calculation certifies their consequences only.
+
+```lean
+import Mathlib.Tactic.Linarith
+import TruthCore.Greek.Aristotle.Metaphysics
+namespace ProductiveDegree
+open TruthCore.Greek.Aristotle.Metaphysics
+-- d and r are positive unsigned speeds. m and n are the tooth counts.
+theorem gear (m n d r : ℚ) (hm : 0 < m) (hr : 0 < r)
+    (mesh : m * d = n * r) : r < d ↔ m < n := by
+  constructor
+  · intro h
+    by_contra! hn
+    nlinarith [mul_pos hm (sub_pos.mpr h), mul_nonneg (sub_nonneg.mpr hn) hr.le]
+  · intro h
+    by_contra! hd
+    nlinarith [mul_pos (sub_pos.mpr h) hr, mul_nonneg hm.le (sub_nonneg.mpr hd)]
+-- Steady balance for positive donor flow p, clear diluent flow q, donor
+-- concentration d and outlet concentration r in a well-mixed tank.
+theorem dilution (p q d r : ℚ) (hp : 0 < p) (hq : 0 ≤ q) (hr : 0 < r)
+    (balance : (p+q)*r = p*d) : r < d ↔ 0 < q := by
+  constructor
+  · intro h
+    by_contra! hz
+    have z : q = 0 := le_antisymm hz hq
+    subst q
+    nlinarith [mul_pos hp (sub_pos.mpr h)]
+  · intro h
+    by_contra! hd
+    nlinarith [mul_pos h hr, mul_nonneg hp.le (sub_nonneg.mpr hd)]
+-- Sole feed into a well-mixed tank; replacing its solute by clear carrier
+-- at the same flow gives zero outlet concentration. Both actual degrees are 1.
+def outlet (donor : Nat) : Nat := donor
+def soleFeed (a b : Bool) (_ : Unit) : Prop :=
+  a = false ∧ b = true ∧ outlet 0 < outlet 1
+def sameConcentration (_ : Bool) : Nat := 1
+theorem tie : ¬ CauseOfQualityInAnotherIsMoreSuchReading soleFeed
+    (fun _ a b => sameConcentration b < sameConcentration a) := by
+  intro h
+  exact (Nat.lt_irrefl 1) (h false true () (by decide) (by decide))
+end ProductiveDegree
+
+```
