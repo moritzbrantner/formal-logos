@@ -155,6 +155,23 @@ state violated the beings' actual identity or required background. Open
 application bridges are not presented as defeated merely because they remain
 open. Conversely, agreement between reviewers is not proof of premise truth.
 
+## Unity of a proposed giver of being
+
+Two accounts that allow many individual givers disagree over whether their
+domains overlap. In the finite partition model each of two sources gives
+being to a different recipient. Neither gives being to the other source.
+If each source instead gave being to every other being, each would give
+being to the other. If receiving being in this respect entails dependence
+on the giver, and distinct bearers cannot depend for being on each other
+in that respect, the two sources could not be distinct. This route to at
+most one God uses no premise about degrees of perfection. Two further
+routes use the exclusion of a distinct cause of a maximal being's esse.
+The route beginning with a maximal witness can restrict divine causal
+reach to recipients in act in esse, because that witness is in act. The
+claims that a God exists and that the God-description has the asserted
+causal scope retain separate warrant requirements.
+[Arguments and model comparisons](maximum-definition-fork.md#divine-unity-without-general-genus-causality-1936)
+
 ## Continuity of the recipient in a sustaining-cause argument
 
 The London plaster Diplodocus cast and the bronze made using its scan test
