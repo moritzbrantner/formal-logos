@@ -233,6 +233,7 @@ public import TruthCore.Results.Causality.ModalSenseSupport.Solution
 public import TruthCore.Results.Causality.MotionMapsBatch1.Solution
 public import TruthCore.Results.Causality.MotionMoverFork.Solution
 public import TruthCore.Results.Causality.NamingVeracityBatch1.Solution
+public import TruthCore.Results.Causality.NarDerivation.Solution
 public import TruthCore.Results.Causality.NecessarilyUnderived.LiftFromBridges.Solution
 public import TruthCore.Results.Causality.NecessarilyUnderived.NonRefutationLift.Solution
 public import TruthCore.Results.Causality.NecessarilyUnderived.PositiveLift.Solution
