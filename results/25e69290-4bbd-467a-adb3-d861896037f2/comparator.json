@@ -1,0 +1,10 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.RootSupplyInterface.Challenge",
+  "solution_module": "TruthCore.Results.Causality.RootSupplyInterface.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.RootSupplyInterface.rootExistsOverWholeRosterExact",
+    "TruthCore.Results.Causality.RootSupplyInterface.wholeRosterIsInhabitedRootNotAbsent"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}

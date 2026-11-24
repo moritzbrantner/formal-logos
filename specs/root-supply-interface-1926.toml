@@ -1,0 +1,124 @@
+# #1926 phase 2, slice 2a: the root-supply interface. The interface is the
+# existing statement "an actual concrete root exists at the selected world"
+# (dc397705, RootPositiveIntellectWill.ActualRootExistsAt): a root of the
+# profile's one selected relation grounds w among actual concreta. Variants
+# stated without population or excluded middle cannot entail it; they entail,
+# constructively, its population-conditional double-negated form, whole-roster
+# nontrapping (5c898d24), which 41 arguments consume. Registered: root
+# existence, well-founded actual grounding and the all-subsets borrowing cut
+# strengthen whole-roster nontrapping (the first with a certified difference);
+# the source-backed supply premise is equivalent to root existence. The
+# classical GOD_4 root of the quarta via is proved once from the interface
+# (deriveFromActualRoot, a Comparator-checked theorem; its corpus argument is
+# blocked by the base route's legacy POTENCY sense mixing).
+# Grounding, causing and priority stay distinct relations; nothing identifies
+# them. Analyst formulations, attribution deferred. Attempt: "Root-supply
+# interface: variants into whole-roster nontrapping and one derivation from root
+# existence".
+
+[batch]
+vocab = "TruthCore.Causality.RootSupplyInterface"
+results = "TruthCore.Results.Causality.RootSupplyInterface"
+
+[[statement]]
+id = "The actual roster is inhabited and actual-root existence is stable"
+lean = "InhabitedWithStableRoot"
+paraphrase = "Difference statement, analyst formulation: some concrete candidate exists at the selected world w, and if it is not the case that no actual concrete root of the selected relation exists at w, then such a root exists (stability of root existence for this one proposition; it follows from excluded middle and is weaker than it). Open; not attributed to a source. Under excluded middle its second conjunct holds automatically, so classically it says only that the actual roster is inhabited."
+definitions = ["c57e2682-08e6-527e-950f-0fa0a7ff11ef", "beb654a7-e204-5f4c-a7b4-45e886ba7109", "1b8baf77-84fa-5513-a138-7fa14840dd87"]
+disambiguations = ["6e92c6e3-edf0-5d7e-b2b3-788b24b8b768", "c529e8d3-43e3-53a8-a82f-3955e9815265", "6f1d1395-7c1d-5bd5-a45d-03380857aed6"]
+
+[[statement]]
+id = "An actual root exists iff the roster is not trapped, is inhabited and root existence is stable"
+lean = "RootExistsOverWholeRosterExact"
+paraphrase = "For every profile and world: some actual concretum has no actual concrete ground in the selected relation if and only if the nonempty actual roster is not a borrowing trap, some concrete candidate exists at w, and root existence at w is stable (not-not root existence gives root existence). A premise-free comparison of encodings, proved without excluded middle; it asserts none of the statements compared."
+definitions = ["c57e2682-08e6-527e-950f-0fa0a7ff11ef", "beb654a7-e204-5f4c-a7b4-45e886ba7109", "1b8baf77-84fa-5513-a138-7fa14840dd87"]
+disambiguations = ["6e92c6e3-edf0-5d7e-b2b3-788b24b8b768", "c529e8d3-43e3-53a8-a82f-3955e9815265", "6f1d1395-7c1d-5bd5-a45d-03380857aed6"]
+
+[[argument]]
+id = "Whole-roster nontrapping from an actual root"
+theorem = "wholeRosterOfActualRootExists"
+comparator_theorems = ["deriveFromActualRoot"]
+premises = ["dc397705-d727-419e-92f9-65d44e1ff15d"]
+conclusion = "5c898d24-d1f7-5087-b09e-3287a723e787"
+weakening = true
+axioms = []
+rule = "The root is a source of the recorded actual-concrete graph, which contradicts the trap's no-source clause"
+meaning = "Strength order (backing result): if some actual concretum n has no actual concrete ground in the selected relation at w, the nonempty actual roster is not a borrowing trap, since n is a source of the recorded graph of that relation and a trap has no source. Same profile, selected relation and world; constructive. The Comparator configuration also checks deriveFromActualRoot: the quarta-via classical GOD_4 root (NecessaryClassicalGodRootAt) from an actual root, contingent grounding, excluded middle and the 21 shared inputs of NecessaryClassicalGodRoot.derive, which it applies once after obtaining population and whole-roster nontrapping from the root. That theorem is not registered as a corpus argument: its premise bundle repeats the base route's allowlisted POTENCY_CAPACITY_AND_POWER_ACROSS_ADOPTED mixing (a4d3261a is tagged DEF-POTENCY, c6d6379b DEF-INDEPENDENT-POTENCY, for one Lean parameter InPotency), which a new argument may not repeat without a genuine bridge. The converse fails: in a world with no actual concretum whole-roster nontrapping holds vacuously and no root exists; the certified difference is population plus stability of root existence."
+
+[[argument]]
+id = "Whole-roster nontrapping from WELL_FOUNDEDNESS_OF_THE_SELECTED_RELATION_1"
+theorem = "wholeRosterOfActualGroundingWF"
+sense_bridges = [
+  { term = "NECESSARY", from = "8c881fa6-2b9f-44be-a32a-c8ef29c13643", to = "7af298fb-a2c4-4239-919b-7685f2e1f67a", statement_id = "82cfaf26-fc86-54ab-8328-9a7b2bdbbe21" },
+  { term = "WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT", from = "9232f675-db0a-474c-9f00-d8e5aba69ef7", to = "556515c9-1fcc-4ea0-b85d-2a4cad7eff79", statement_id = "82cfaf26-fc86-54ab-8328-9a7b2bdbbe21" },
+  { term = "WELL_FOUNDEDNESS_OF_THE_SELECTED_RELATION", from = "2f42c0e7-46ae-4e2b-9ac4-95dcb865da61", to = "f4609d52-a878-4d09-9af3-083b1945770c", statement_id = "82cfaf26-fc86-54ab-8328-9a7b2bdbbe21" },
+  { term = "NONNECESSARY_VERSUS_CONTINGENT_ROOT", from = "cf6a8bb9-2a70-4e90-86bd-06f69106da2f", to = "9f9108e2-3cc3-45dd-be1d-d8fdaaced708", statement_id = "82cfaf26-fc86-54ab-8328-9a7b2bdbbe21" },
+]
+premises = ["82cfaf26-fc86-54ab-8328-9a7b2bdbbe21"]
+conclusion = "5c898d24-d1f7-5087-b09e-3287a723e787"
+weakening = true
+axioms = []
+rule = "Accessibility induction: no accessible actual concretum lies in a trap, since each member of a trap has a ground in it"
+meaning = "Strength order (backing result): if the selected relation restricted to actual concreta is well-founded at w, the nonempty actual roster is not a borrowing trap: by induction on accessibility, no actual concretum belongs to a trap, because each trap member has an actual concrete ground that is again a trap member. Same profile, selected relation and world; constructive, no excluded middle. Whole-roster nontrapping concerns only the whole roster, well-foundedness every descending chain: a roster with a root and an infinite descending chain beside it satisfies the weak version and not the strong one (not model-certified in this slice)."
+
+[[argument]]
+id = "Root existence factors as whole-roster nontrapping, population and stability"
+theorem = "rootExistsOverWholeRosterExact"
+premises = []
+conclusion = "An actual root exists iff the roster is not trapped, is inhabited and root existence is stable"
+axioms = []
+comparator_theorems = ["wholeRosterIsInhabitedRootNotAbsent"]
+rule = "Forward: the root gives nontrapping, an inhabitant and stability; backward: nontrapping with population gives not-not root existence, and stability removes the double negation"
+meaning = "Certified difference (#1598): an actual root exists iff the nonempty actual roster is not a trap, the roster is inhabited and root existence is stable. Proved constructively, with no excluded middle; the Comparator configuration also checks that whole-roster nontrapping is equivalent to 'if the actual roster is inhabited, it is not the case that no actual root exists' (wholeRosterIsInhabitedRootNotAbsent). Premise-free; it asserts none of the statements compared."
+
+[[relation]]
+id = "Actual root existence strengthens whole-roster nontrapping"
+subject_kind = "statement"
+subject_id = "dc397705-d727-419e-92f9-65d44e1ff15d"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "5c898d24-d1f7-5087-b09e-3287a723e787"
+verification_result_id = "Whole-roster nontrapping from an actual root"
+note = "Same profile, selected relation grounds w and world. The strong version gives a witness: some actual concretum with no actual concrete ground. The weak version says only that the nonempty actual roster is not a trap, which holds vacuously in a world with no actual concretum. The difference is certified: the strong version is the weak one plus population and stability of root existence (constructive equivalence; under excluded middle, plus population alone)."
+
+[[relation]]
+id = "Actual root existence over whole-roster nontrapping: certified difference"
+subject_kind = "statement"
+subject_id = "dc397705-d727-419e-92f9-65d44e1ff15d"
+predicate = "strength_comparison"
+object_kind = "statement"
+object_id = "5c898d24-d1f7-5087-b09e-3287a723e787"
+comparison_spec = "rootExistsOverWholeRoster"
+delta_statement_id = "The actual roster is inhabited and actual-root existence is stable"
+evidence_result_ids = { implication = "Whole-roster nontrapping from an actual root", equivalence = "Root existence factors as whole-roster nontrapping, population and stability" }
+statement_parameter_indices = { stronger = [0, 1, 2, 3], weaker = [0, 1, 2, 3], delta = [0, 1, 2, 3] }
+note = "Difference of root existence and whole-roster nontrapping on the same profile, selected relation and world: the strong version adds exactly that the actual roster is inhabited and that root existence is stable (not-not root existence gives root existence). Stability is the constructive price of the double negation in nontrapping; it follows from excluded middle for this one proposition, so under excluded middle the difference is population alone, as the existing exact-strength comparison WholeRosterRootEquivalenceAt states. No separator is registered; the empty roster separates the versions."
+
+[[relation]]
+id = "WELL_FOUNDEDNESS_OF_THE_SELECTED_RELATION_1 strengthens whole-roster nontrapping"
+subject_kind = "statement"
+subject_id = "82cfaf26-fc86-54ab-8328-9a7b2bdbbe21"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "5c898d24-d1f7-5087-b09e-3287a723e787"
+verification_result_id = "Whole-roster nontrapping from WELL_FOUNDEDNESS_OF_THE_SELECTED_RELATION_1"
+note = "Same profile, selected relation grounds w and world; constructive. The strong version constrains every descending chain of actual grounding; the weak version only the whole actual roster. Together with the registered order 'finite rank strengthens well-founded actual grounding' (6f632c38) it also brings finite-rank grounding to whole-roster nontrapping. No certified difference is registered. Each candidate delta must give back well-foundedness from whole-roster nontrapping. Here the obstacle is that every known route from a no-trap condition to well-foundedness uses excluded middle (BorrowingEscapeWFEquivalence takes it explicitly), and a certified difference requires a background-free equivalence. A delta built on excluded middle as a background premise is a later option. The obstacle is not shown to be unavoidable."
+
+[[relation]]
+id = "The all-subsets borrowing cut strengthens whole-roster nontrapping"
+subject_kind = "statement"
+subject_id = "e27ea8e3-b61d-55a4-aea3-25adf8ff6c2d"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "5c898d24-d1f7-5087-b09e-3287a723e787"
+verification_result_id = "88ac9b2a-47ab-500e-9443-9bab8103054e"
+note = "Same recorded actual-concrete graph of the selected relation at w. The existing result WHOLE-ROSTER-FROM-CUT applies the all-subsets cut once at the whole roster; this registers that verified one-premise implication as a strength order. The strong version constrains every nonempty set of actual concreta, the weak version only the whole roster. No certified difference is registered, for the reason given on the well-founded registration: the cut is equivalent to well-founded actual grounding only under explicit excluded middle (BorrowingEscapeWFEquivalence)."
+
+[[relation]]
+id = "Source-backed actual-concrete supply is equivalent to actual root existence"
+subject_kind = "statement"
+subject_id = "e95c2bab-9020-5e61-bb10-34696fc01687"
+predicate = "logically_equivalent_to"
+object_kind = "statement"
+object_id = "dc397705-d727-419e-92f9-65d44e1ff15d"
+note = "Same profile, selected relation and world: some actual concretum has joint supply in the recorded actual-concrete graph with graph sources as intrinsic contributions iff some actual concretum has no actual concrete ground. Verified, without excluded middle, by the existing premise-free result CONCRETE-SUPPLY-ROOT-EQUIVALENCE (supplyRootEquivalence, result 89605d34), whose right-hand side is ActualRootExistsAt's body. The records stay distinct (a supply formulation and a root formulation); no argument is registered in either direction."

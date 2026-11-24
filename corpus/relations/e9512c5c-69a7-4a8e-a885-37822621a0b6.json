@@ -1,0 +1,37 @@
+{
+  "id": "e9512c5c-69a7-4a8e-a885-37822621a0b6",
+  "label": "Actual root existence over whole-roster nontrapping: certified difference",
+  "subject_kind": "statement",
+  "subject_id": "dc397705-d727-419e-92f9-65d44e1ff15d",
+  "predicate": "strength_comparison",
+  "object_kind": "statement",
+  "object_id": "5c898d24-d1f7-5087-b09e-3287a723e787",
+  "comparison_spec": "TruthCore.Causality.RootSupplyInterface.rootExistsOverWholeRoster",
+  "delta_statement_id": "fcea3f8b-e991-4d2c-8bdb-6eb8ef4ccff1",
+  "background_statement_ids": [],
+  "evidence_result_ids": {
+    "equivalence": "25e69290-4bbd-467a-adb3-d861896037f2",
+    "implication": "1dbcca44-1931-41a2-8777-32da0bd57f74"
+  },
+  "statement_parameter_indices": {
+    "stronger": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "weaker": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "delta": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  "note": "Difference of root existence and whole-roster nontrapping on the same profile, selected relation and world: the strong version adds exactly that the actual roster is inhabited and that root existence is stable (not-not root existence gives root existence). Stability is the constructive price of the double negation in nontrapping; it follows from excluded middle for this one proposition, so under excluded middle the difference is population alone, as the existing exact-strength comparison WholeRosterRootEquivalenceAt states. No separator is registered; the empty roster separates the versions."
+}

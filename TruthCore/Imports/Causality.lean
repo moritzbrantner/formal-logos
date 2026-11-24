@@ -236,6 +236,7 @@ public import TruthCore.Causality.RootMultiplication
 public import TruthCore.Causality.RootPositiveIntellectWill
 public import TruthCore.Causality.RootPositiveIntellectWillControl
 public import TruthCore.Causality.RootPurity
+public import TruthCore.Causality.RootSupplyInterface
 public import TruthCore.Causality.RootWiring
 public import TruthCore.Causality.RootWithoutLimitingPrinciple
 public import TruthCore.Causality.RotatingBearerSenseComparison

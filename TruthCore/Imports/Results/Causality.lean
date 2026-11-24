@@ -335,6 +335,7 @@ public import TruthCore.Results.Causality.RootNonlimitationFromCompositionKinds.
 public import TruthCore.Results.Causality.RootPositiveIntellectWill.Solution
 public import TruthCore.Results.Causality.RootPositiveIntellectWillControl.Solution
 public import TruthCore.Results.Causality.RootPurity.Solution
+public import TruthCore.Results.Causality.RootSupplyInterface.Solution
 public import TruthCore.Results.Causality.RootWiring.Solution
 public import TruthCore.Results.Causality.RootWithoutLimitingPrinciple.Solution
 public import TruthCore.Results.Causality.RotatingBearerSenseComparison.Solution

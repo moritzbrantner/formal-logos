@@ -1,0 +1,10 @@
+{
+  "id": "6cd38489-0824-4fa2-97e7-1d5fb02f8fcb",
+  "label": "Root existence factors as whole-roster nontrapping, population and stability (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "1c2e155f-72bc-4776-a676-7400fd0a92ac",
+  "rule": "Forward: the root gives nontrapping, an inhabitant and stability; backward: nontrapping with population gives not-not root existence, and stability removes the double negation",
+  "meaning": "Certified difference (#1598): an actual root exists iff the nonempty actual roster is not a trap, the roster is inhabited and root existence is stable. Proved constructively, with no excluded middle; the Comparator configuration also checks that whole-roster nontrapping is equivalent to 'if the actual roster is inhabited, it is not the case that no actual root exists' (wholeRosterIsInhabitedRootNotAbsent). Premise-free; it asserts none of the statements compared.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

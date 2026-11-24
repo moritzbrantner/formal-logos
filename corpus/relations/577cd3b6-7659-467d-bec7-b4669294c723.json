@@ -1,0 +1,11 @@
+{
+  "id": "577cd3b6-7659-467d-bec7-b4669294c723",
+  "label": "WELL_FOUNDEDNESS_OF_THE_SELECTED_RELATION_1 strengthens whole-roster nontrapping",
+  "subject_kind": "statement",
+  "subject_id": "82cfaf26-fc86-54ab-8328-9a7b2bdbbe21",
+  "predicate": "strengthens",
+  "object_kind": "statement",
+  "object_id": "5c898d24-d1f7-5087-b09e-3287a723e787",
+  "verification_result_id": "df25c141-69d4-413b-9c44-dfebf1045a9b",
+  "note": "Same profile, selected relation grounds w and world; constructive. The strong version constrains every descending chain of actual grounding; the weak version only the whole actual roster. Together with the registered order 'finite rank strengthens well-founded actual grounding' (6f632c38) it also brings finite-rank grounding to whole-roster nontrapping. No certified difference is registered. Each candidate delta must give back well-foundedness from whole-roster nontrapping. Here the obstacle is that every known route from a no-trap condition to well-foundedness uses excluded middle (BorrowingEscapeWFEquivalence takes it explicitly), and a certified difference requires a background-free equivalence. A delta built on excluded middle as a background premise is a later option. The obstacle is not shown to be unavoidable."
+}
