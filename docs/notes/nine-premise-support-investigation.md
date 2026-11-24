@@ -228,3 +228,17 @@ when there is a root and another actual bearer. The relative weakness of the
 infinite forwarding account appears only where throughput and the one-way
 transfer are independently fixed. Whether existential dependence bears those
 features remains open. [Infinite model](distinct-dependence-strict-ground-route.md#the-infinite-series-at-the-efficient-cause-consumer) · [Whole argument, competing accounts and reopening test](contractive-borrowed-power-1378.md#can-an-infinite-series-explain-a-one-way-transfer-by-forwarding-alone)
+
+### Does a purposive source predict which vacuum density observers measure?
+
+Assume a flat prior per unit positive vacuum density and weight observations
+by the entropy produced in a homogeneous causal diamond. Integrating two
+published stellar histories then gives about 34% or 43% to the decade
+containing our density. A different treatment of late entropy can change the
+distribution. Communicating goodness gives a reason to create but supplies
+no probability for this decade. Maximizing the fraction of baryons becoming
+life gives a more specific comparison, conditional on the feasible densities
+and their unknown life yields. On this datum the physical model gives a
+quantitative fit under explicit assumptions. The evidence does not yet rank
+it against the purposive account. [Physical prediction, purpose and outstanding
+comparison](fine-tuning-selection.md#1569-which-vacuum-energy-decade-does-an-observer-find)

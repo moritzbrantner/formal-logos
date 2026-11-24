@@ -17,5 +17,20 @@
     "37179a1f-babd-4241-92cd-2915081b4930",
     "847ba0b4-6372-4015-a4f0-0132fd00198f"
   ],
-  "blocker": "The homogeneous stellar CEP supplies a proxy distribution; its population prior, worldline/late-entropy weighting and applicability to sampled records need warrant. Page’s strict optimizer lacks life yields and a demonstrated optimum over the bin and its alternatives. Communicated goodness alone specifies neither that objective nor an implementation/selection distribution. Reopen on a calibrated physical record measure or an independently supported choice rule and same-background yield bounds across the observed decade. Epistemic inference and GOD_4 identification remain open."
+  "blocker": "The homogeneous stellar CEP supplies a proxy distribution; its population prior, worldline/late-entropy weighting and applicability to sampled records need warrant. Page’s strict optimizer lacks life yields and a demonstrated optimum over the bin and its alternatives. Communicated goodness alone specifies neither that objective nor an implementation/selection distribution. Reopen on a calibrated physical record measure or an independently supported choice rule and same-background yield bounds across the observed decade. Epistemic inference and GOD_4 identification remain open.",
+  "current_assessment": {
+    "date": "2026-11-24",
+    "statement_ids": [
+      "6a84cd7a-e306-4fe3-9718-8d696083ae4c"
+    ],
+    "scope": "The observed positive vacuum-energy decade as residual evidence after conditioning on an observation record.",
+    "assessment": "The homogeneous causal-entropic model gives a quantitative fit conditional on its population prior and entropy proxy. A source that communicates goodness supplies no probability for this decade. Maximizing the baryon fraction becoming life gives an ordering criterion whose needed life yields are unknown. The comparative evidential direction remains open.",
+    "next_test": "Calibrate record weights across vacuum densities or bound the life yields and choice distribution for the same feasible worlds and centers.",
+    "note": "docs/notes/fine-tuning-selection.md#1569-which-vacuum-energy-decade-does-an-observer-find",
+    "reviewed_revision": "9e44476157024495c6d35a5579c9457f684ce411",
+    "review": "unreviewed",
+    "publication": "unpublished",
+    "evidence": "The note gives the Fig. 8 integration, the late-entropy sensitivity and the two-point stellar-yield condition.",
+    "supersedes": "None. This assessment concerns the named models and the specified decade."
+  }
 }
