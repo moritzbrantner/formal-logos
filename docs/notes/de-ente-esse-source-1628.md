@@ -665,6 +665,87 @@ newly warranted candidate-domain or real-nature bridge; keep the current
 ascent/degree test as the distinct next input. Director descent/termination
 still supplies no new cognition inference, and no intellect/UI record is edited.
 
+### From one divine nature to personal distinctions (2026-11-24)
+
+The q11 theorem counts beings satisfying `IsGod`. Its domain stipulation
+leaves personal distinctions open. If the one God knows and loves himself,
+what would distinguish the Word and Love from descriptions of that same
+subject? Aquinas addresses precisely this difference. The knower and what he
+knows in self-knowledge are the same. What introduces a real relation, on
+his account, is the Word's **origin** from the knower. Likewise, loving God
+belongs to the divine essence. “Love” names the Spirit personally when it
+designates what proceeds through love. This distinction prevents the premise
+that God loves himself from already containing a second or third person.
+[Q11 domain stipulation](../../corpus/definitions/q11-divine-person-outside-domain.json)
+· [ST I q28 a4 ad 1](https://www.newadvent.org/summa/1028.htm#article4)
+· [q37 a1, body](https://www.newadvent.org/summa/1037.htm#article1)
+
+**Why these two origins?** Aquinas starts with Scripture's language of
+procession. An inner word expresses what is understood and remains in the
+knower. In divine self-understanding the act is the knower's very substance.
+Aquinas uses this to explain why a Word proceeding as the living likeness of
+its source subsists in the same nature and is called Son. Love has another
+mode of origin. It inclines the lover toward a good already understood. Its
+order after the Word concerns origin, without temporal succession. Aquinas
+restricts immanent divine operations to intellect and will. Power accounts
+for external effects, and goodness is the object of will. A single act
+comprehends all God knows and a single act all he wills, so repetition of
+either procession would add nothing to its first perfect expression.
+[ST I q27 aa1–2, especially a2 ad 2](https://www.newadvent.org/summa/1027.htm#article2)
+· [aa3–4](https://www.newadvent.org/summa/1027.htm#article3)
+· [a5, body and replies](https://www.newadvent.org/summa/1027.htm#article5)
+· [q42 aa2–3, coeternity and order](https://www.newadvent.org/summa/1042.htm#article2)
+
+**Why three persons?** Each origin has two relational directions. Aquinas
+calls the resulting relations paternity, filiation, spiration and procession.
+Paternity and filiation oppose one another. In God, a relation of origin
+subsists because its reality is the divine essence, while its reference to
+another distinguishes it from its opposite. On Aquinas's Latin account, the
+order of Word and Love puts Father and Son together on the originating side
+of spiration. This relation belongs to both and cannot constitute a fourth
+person. The Spirit is distinguished as the one proceeding. Counting three
+presupposes this ordering and the account of what constitutes a person.
+[ST I q28 aa1–4](https://www.newadvent.org/summa/1028.htm#article1)
+· [q29 a4, body](https://www.newadvent.org/summa/1029.htm#article4)
+· [q30 a2, body and ad 1](https://www.newadvent.org/summa/1030.htm#article2)
+
+Augustine gives a reason to take the analogy seriously and a way to test
+its reach. In *De Trinitate* IX.12.18 the mind's knowledge of itself can
+express what it knows adequately, as an inward word, and the mind can love
+the very good it knows. The terms of comparison come from one life. In
+XV.7.11–12 and XV.22.42 he asks who actually remembers, understands and
+loves in the image. One human person does all three. Distributing the
+faculties among the divine persons would even deprive the Father of his
+own understanding or love. The analogy thus gives content to expression
+and love while leaving a difference in personal origin to be justified.
+[Augustine, *On the Trinity* IX, ch. 12](https://www.newadvent.org/fathers/130109.htm)
+· [XV, chs. 7 and 22](https://www.newadvent.org/fathers/130115.htm)
+
+**What the argument warrants.** Aquinas says natural reason can reach God's
+unity from creatures. Their existence points to creative power, common to
+all three persons, and therefore supplies no distinction of personal
+origins. He treats the analogy of the mind as a reason for finding the
+revealed doctrine fitting. Human and divine intellect differ in their manner
+of understanding, so the analogy cannot demonstrate that real relations of
+origin obtain in God. This leaves a precise question for a philosophical
+derivation. What feature of perfect self-understanding requires a personally
+distinct expression of it? Simplicity bears on the status of a Word once an
+immanent origin is granted. Using it at that step still leaves the origin
+itself to be justified. [ST I q32 a1, body and ad 2](https://www.newadvent.org/summa/1032.htm#article1)
+
+The Greek creed professes the Son's generation before all ages and his
+consubstantiality with the Father. It says the Spirit proceeds from the
+Father and is worshipped and glorified together with Father and Son. Common
+spiration is a further feature of Aquinas's explanation. An exclusive
+claim about the source of the Spirit would also add to the Greek wording.
+The creed's text was checked in the materialized Greek transcription of
+DS 150, articles 2 and 8 in the repository division. The Aquinas readings
+above use the English Dominican translation (1920) and are recorded here as
+research notes. The two existing corpus claims bind the creed clauses only.
+[Greek witness](https://corpuscoranicum.de/en/intertexts/47)
+· [Son claim](../../corpus/claims/creed-c381-art-02.json)
+· [Spirit claim](../../corpus/claims/creed-c381-art-08.json)
+
 ## Unreceived esse and the two questions about plurality (2026-11-17)
 
 **Target and scope.** Shared nature `75b5b027-21f1-400a-8b21-775bb6d47983`,
