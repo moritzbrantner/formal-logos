@@ -316,6 +316,17 @@ instance, together with an independently motivated consistent theory of its
 grounds. A successful local bridge should be tested for extension of scope
 before registering the global premise. No termination assumption is needed.
 
+### Registration and infinite-series test (2026-11-24)
+
+P2-A subsequently landed. Result `40b8313e` takes consistency
+(`fea5942a`) and the distinct-edge interpretation map (`42756c07`) to P2
+(`0f49d71e`). Result `972ed7e5` consumes that exact P2, together with P8
+and no self-causation, to conclude that a cause is independent of its effect
+(`47b151ca`). Result `a01e0429` realizes the full package on a single series
+in which every member has a further cause. This locates the outstanding
+termination question at the per se regress premise (`97f5850f`).
+[Model, scope and warrant](distinct-dependence-strict-ground-route.md#the-infinite-series-at-the-efficient-cause-consumer)
+
 ## 6. P8: received esse, same-respect effects, and export to the bearer
 
 ### Positive conservation argument, with its premises exposed

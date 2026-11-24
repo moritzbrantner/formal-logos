@@ -204,6 +204,54 @@ So the bundle is not satisfied only by an empty `D`. This is a formal
 interpretation only. It says nothing about real beings, and the model's
 infinite descent is an incidental property of this witness.
 
+## The infinite series at the efficient-cause consumer
+
+Consider the cause of member 0. Member 1 supplies it, independently of 0,
+and receives from member 2. At every later step the successor plays both
+roles. Independence **of this effect** leaves room for dependence on a
+further cause. What happens if this answer is available at every step?
+
+Result `a01e0429-1544-453d-973b-779f186c1654`,
+`strictGroundConsumerAllowsInfiniteCauses`, joins the earlier Fine descent
+and Second Way omission models on one carrier. The beings and PLG atoms are
+natural numbers with the identity labelling. There is one respect. Both the
+efficient cause and the per se link of each `x` are its successor. Set
+`D(x,y)` precisely when `x < y`. This includes indirect dependence on
+**every** later member. PLG strict transitivity extends the successor sequents
+to that entire relation. Thus the rival survives even when distinct-step
+dependence is transitive and excludes finite cycles.
+
+| Step in the existing argument | What holds in this model |
+|---|---|
+| Consistency and the distinct-edge map give P2 (`40b8313e`). | Every mapped edge is derivable in the same consistent theory. The model chooses strict dependence on the diagonal. P2 itself leaves the diagonal open. |
+| P8, no self-causation and P2 give cause independence (`972ed7e5`). | For `c = x+1`, `x < c` and `¬ c < x`. Yet `c < c+1`. |
+| Effect dependence, cause independence and sufficiency of nonmutual dependence for priority give cause priority (`695c2113`). | Interpret `P(c,x)` by `x < c`. This makes the separate sufficiency bridge true for all pairs here. |
+| The Second Way separately requires accessibility of its per se relation (`97f5850f`). | Its order, cause-priority, irreflexivity and middle-cause premises all hold. Every candidate first cause `f` has the incoming cause `f+1`, so there is no first efficient cause and accessibility fails. |
+
+**Provisional judgment.** P2 has positive warrant wherever the source of a
+bearer's very existence can be identified independently of the recipient in
+that same respect. The light's dependence on the shining sun illustrates the
+intended causal direction. Applying the strict-ground result globally still
+requires a consistent theory and a defended assignment of existence facts to
+all distinct dependence edges. The witness supplies arithmetic labels. It
+specifies neither counterfactual truth conditions nor a metaphysics of
+production. Its single respect also leaves the hand-and-stick objection to P8's
+all-respects export intact. P2 remains available directly as the weaker
+commitment.
+
+As an explanation, the infinitist can take the entire organized series as
+given and cite a specific upstream supplier for each member. The founded
+account additionally explains supply by something whose own supply is
+underived. At issue is whether the local answers and the organization suffice
+to explain **why there is supply at all**. The borrowed-exercise comparison
+shows how relay constraints can admit both an active and an inactive series.
+Transferring that comparison to existence requires an account of admissible
+alternatives for the very same bearers and respect. This model fixes the edges
+and contains no such alternatives. A discriminating next test would show on
+those common alternatives either that the organization accounts for actual
+supply or that supply requires an underived source, with a reason independent
+of assuming termination. [Borrowed exercise, “Three rivals”](borrowed-exercise-741.md#three-rivals)
+
 ## Effect on the God-existence support graph
 
 The new proof creates another way to support one of the **nine inputs shared
