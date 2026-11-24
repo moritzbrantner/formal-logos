@@ -2,8 +2,9 @@
 //! docs/countermodels.md).
 //!
 //! For `thm (Carriers) (Predicates) (h₁ : P₁) … (hₙ : Pₙ) : C`, the omission
-//! model for premise k interprets the carriers as `Fin m` and the predicates as
-//! finite tables so that every Pᵢ with i ≠ k holds and C fails. The search
+//! model for premise k interprets the carriers as `Fin m` and the predicates
+//! and unary carrier functions as finite tables so that every Pᵢ with i ≠ k
+//! holds and C fails. The search
 //! grounds the first-order skeleton that `scripts/Countermodel.lean` extracts,
 //! encodes it in CNF and runs a small DPLL solver that prefers false atoms. A
 //! found model is only a candidate: it is rendered as Lean `abbrev`s with a
@@ -11,9 +12,10 @@
 //! it. "No model within bounds" is reported as unresolved; it never shows that
 //! the premise is needed.
 //!
-//! The search order (carrier sizes, constants, atom numbering, false-first
-//! branching) is the one the retired `scripts/countermodel.py` used, so the
-//! same theorem yields the same models.
+//! For function-free skeletons, the search order (carrier sizes, constants,
+//! atom numbering, false-first branching) is the one the retired
+//! `scripts/countermodel.py` used, so the same theorem yields the same models.
+//! Function tables are enumerated lazily inside each constant assignment.
 
 use crate::{
     structure::{self, Sources, os_error},
@@ -43,10 +45,12 @@ pub enum Sort {
     Set(Vec<String>),
 }
 
-/// A term: a variable or constant, or a predicate-valued `fun xs => body`.
+/// A term: a variable or constant, a unary carrier-function application, or a
+/// predicate-valued `fun xs => body`.
 #[derive(Clone, Debug)]
 pub enum Term {
     Var(String),
+    App(String, Box<Term>),
     Lam(Vec<(String, String)>, Box<Formula>),
 }
 
@@ -82,6 +86,14 @@ pub struct Premise {
     pub formula: Formula,
 }
 
+/// A total, nondependent unary function between two declared carriers.
+#[derive(Clone, Debug, PartialEq, Eq)]
+pub struct UnaryFunction {
+    pub name: String,
+    pub domain: String,
+    pub codomain: String,
+}
+
 /// The first-order skeleton of a theorem, as `scripts/Countermodel.lean`
 /// writes it (plus the module it was read from).
 pub struct Skeleton {
@@ -89,6 +101,7 @@ pub struct Skeleton {
     pub carriers: Vec<String>,
     pub predicates: Vec<(String, Vec<Sort>)>,
     pub constants: Vec<(String, String)>,
+    pub functions: Vec<UnaryFunction>,
     pub premises: Vec<Premise>,
     pub conclusion_lean: String,
     pub conclusion: Formula,
@@ -139,6 +152,12 @@ fn parse_term(value: &Value) -> Result<Term, String> {
             name.as_str()
                 .ok_or_else(|| format!("variable name is not a string: {value}"))?
                 .to_owned(),
+        ));
+    }
+    if value.get("app").is_some() {
+        return Ok(Term::App(
+            text(value, "app")?,
+            Box::new(parse_term(field(value, "arg")?)?),
         ));
     }
     let vars = list(value, "lam")?
@@ -201,7 +220,20 @@ impl Skeleton {
             });
         }
         let conclusion = field(value, "conclusion")?;
-        Ok(Skeleton {
+        let functions = match value.get("functions") {
+            None => Vec::new(),
+            Some(_) => list(value, "functions")?
+                .iter()
+                .map(|f| {
+                    Ok(UnaryFunction {
+                        name: text(f, "name")?,
+                        domain: text(f, "domain")?,
+                        codomain: text(f, "codomain")?,
+                    })
+                })
+                .collect::<Result<Vec<_>, String>>()?,
+        };
+        let skeleton = Skeleton {
             theorem: text(value, "theorem")?,
             carriers: strings(value, "carriers")?,
             predicates: list(value, "predicates")?
@@ -220,6 +252,7 @@ impl Skeleton {
                 .iter()
                 .map(|c| Ok((text(c, "name")?, text(c, "sort")?)))
                 .collect::<Result<_, String>>()?,
+            functions,
             premises: list(value, "premises")?
                 .iter()
                 .map(|p| {
@@ -234,7 +267,42 @@ impl Skeleton {
             conclusion: parse_formula(field(conclusion, "formula")?)?,
             unfolded: strings(value, "unfolded")?,
             module: module.to_owned(),
-        })
+        };
+        skeleton.validate_function_signatures()?;
+        Ok(skeleton)
+    }
+
+    fn validate_function_signatures(&self) -> Result<(), String> {
+        let carriers: BTreeSet<&str> = self.carriers.iter().map(String::as_str).collect();
+        if !self.functions.is_empty() && carriers.len() != self.carriers.len() {
+            return Err("duplicate carrier names in function signatures".into());
+        }
+        let mut names: BTreeSet<&str> = carriers
+            .iter()
+            .copied()
+            .chain(self.predicates.iter().map(|(name, _)| name.as_str()))
+            .chain(self.constants.iter().map(|(name, _)| name.as_str()))
+            .collect();
+        for function in &self.functions {
+            if function.name.is_empty() || !names.insert(function.name.as_str()) {
+                return Err(format!(
+                    "duplicate or empty function name {:?}",
+                    function.name
+                ));
+            }
+            for (role, carrier) in [
+                ("domain", &function.domain),
+                ("codomain", &function.codomain),
+            ] {
+                if !carriers.contains(carrier.as_str()) {
+                    return Err(format!(
+                        "function {} has unknown {role} carrier {carrier}",
+                        function.name
+                    ));
+                }
+            }
+        }
+        Ok(())
     }
 
     pub fn premise_names(&self) -> Vec<&str> {
@@ -254,7 +322,11 @@ impl Skeleton {
             }
         }
         fn term(t: &Term) -> bool {
-            matches!(t, Term::Lam(_, body) if formula(body))
+            match t {
+                Term::Var(_) => false,
+                Term::App(_, argument) => term(argument),
+                Term::Lam(_, body) => formula(body),
+            }
         }
         self.premises.iter().any(|p| formula(&p.formula)) || formula(&self.conclusion)
     }
@@ -334,12 +406,16 @@ pub enum Val {
 /// The interpretation of each predicate: the argument tuples where it holds.
 pub type Tables = BTreeMap<String, BTreeSet<Vec<Val>>>;
 
+/// Each unary function's output at domain indices `0, …, size(domain)-1`.
+pub type FunctionTables = BTreeMap<String, Vec<usize>>;
+
 /// A finite model: carrier sizes (in carrier order), constants and tables.
 #[derive(Clone, Debug)]
 pub struct Model {
     pub sizes: Vec<(String, usize)>,
     pub constants: HashMap<String, usize>,
     pub tables: Tables,
+    pub functions: FunctionTables,
 }
 
 impl Model {
@@ -355,23 +431,135 @@ fn size_of(sizes: &[(String, usize)], carrier: &str) -> usize {
         .map_or(0, |(_, size)| *size)
 }
 
-/// Every index tuple of `lengths`, the last position varying fastest
-/// (`itertools.product` order).
-fn product(lengths: &[usize]) -> Vec<Vec<usize>> {
-    let mut out = vec![Vec::new()];
-    for &length in lengths {
-        out = out
-            .into_iter()
-            .flat_map(|prefix| {
-                (0..length).map(move |index| {
-                    let mut next = prefix.clone();
-                    next.push(index);
-                    next
-                })
-            })
-            .collect();
+/// Mixed-radix tuples, last position fastest. Holding only the next tuple
+/// avoids materializing every possible function interpretation at once.
+struct Assignments {
+    lengths: Vec<usize>,
+    next: Option<Vec<usize>>,
+}
+
+impl Assignments {
+    fn new(lengths: &[usize]) -> Self {
+        Self {
+            lengths: lengths.to_vec(),
+            next: (!lengths.contains(&0)).then(|| vec![0; lengths.len()]),
+        }
     }
-    out
+}
+
+impl Iterator for Assignments {
+    type Item = Vec<usize>;
+
+    fn next(&mut self) -> Option<Self::Item> {
+        let current = self.next.take()?;
+        let mut following = current.clone();
+        for index in (0..following.len()).rev() {
+            if following[index] + 1 < self.lengths[index] {
+                following[index] += 1;
+                self.next = Some(following);
+                break;
+            }
+            following[index] = 0;
+        }
+        Some(current)
+    }
+}
+
+/// Every index tuple of `lengths`, in the historical search order.
+fn product(lengths: &[usize]) -> Vec<Vec<usize>> {
+    Assignments::new(lengths).collect()
+}
+
+struct FunctionLayout<'s> {
+    rows: Vec<(&'s UnaryFunction, usize)>,
+    lengths: Vec<usize>,
+}
+
+fn checked_power(mut base: usize, mut exponent: usize) -> Option<usize> {
+    let mut result = 1usize;
+    while exponent != 0 {
+        if exponent % 2 == 1 {
+            result = result.checked_mul(base)?;
+        }
+        exponent /= 2;
+        if exponent != 0 {
+            base = base.checked_mul(base)?;
+        }
+    }
+    Some(result)
+}
+
+fn function_layout<'s>(
+    skeleton: &'s Skeleton,
+    sizes: &[(String, usize)],
+) -> Result<FunctionLayout<'s>, String> {
+    let mut rows = Vec::new();
+    let mut cells = 0usize;
+    let mut cardinality = 1usize;
+    for function in &skeleton.functions {
+        let domain = size_of(sizes, &function.domain);
+        let codomain = size_of(sizes, &function.codomain);
+        if domain == 0 || codomain == 0 {
+            return Err(format!(
+                "function {} has a missing or empty carrier",
+                function.name
+            ));
+        }
+        cells = cells
+            .checked_add(domain)
+            .ok_or("function table dimensions overflow")?;
+        if cells
+            .checked_mul(std::mem::size_of::<usize>())
+            .is_none_or(|bytes| bytes > isize::MAX as usize)
+        {
+            return Err("function table dimensions exceed addressable storage".into());
+        }
+        cardinality = cardinality
+            .checked_mul(
+                checked_power(codomain, domain)
+                    .ok_or("function interpretation cardinality overflows")?,
+            )
+            .ok_or("combined function interpretation cardinality overflows")?;
+        rows.push((function, domain));
+    }
+    let mut lengths = Vec::new();
+    lengths
+        .try_reserve_exact(cells)
+        .map_err(|error| format!("cannot allocate function table dimensions: {error}"))?;
+    for (function, domain) in &rows {
+        lengths.extend(std::iter::repeat_n(
+            size_of(sizes, &function.codomain),
+            *domain,
+        ));
+    }
+    Ok(FunctionLayout { rows, lengths })
+}
+
+fn check_function_tables(skeleton: &Skeleton, model: &Model) -> Result<(), String> {
+    if model.functions.len() != skeleton.functions.len() {
+        return Err("model function tables do not match the declared functions".into());
+    }
+    for function in &skeleton.functions {
+        let domain = model.size(&function.domain);
+        let codomain = model.size(&function.codomain);
+        let table = model
+            .functions
+            .get(&function.name)
+            .ok_or_else(|| format!("missing table for function {}", function.name))?;
+        if domain == 0 || codomain == 0 || table.len() != domain {
+            return Err(format!(
+                "invalid table dimensions for function {}",
+                function.name
+            ));
+        }
+        if table.iter().any(|value| *value >= codomain) {
+            return Err(format!(
+                "function {} has an output outside its codomain",
+                function.name
+            ));
+        }
+    }
+    Ok(())
 }
 
 #[derive(Clone, Copy)]
@@ -398,6 +586,7 @@ struct Grounding<'s, 'm> {
     skeleton: &'s Skeleton,
     sizes: &'m [(String, usize)],
     constants: &'m HashMap<String, usize>,
+    functions: &'m FunctionTables,
     atoms: Atoms<'m>,
 }
 
@@ -469,6 +658,33 @@ impl Grounding<'_, '_> {
                     .map(|value| TermValue::Elem(*value))
                     .ok_or_else(|| format!("unknown term {name}")),
             },
+            Term::App(name, argument) => {
+                let TermValue::Elem(argument) = self.term(argument, env)? else {
+                    return Err(format!("function {name} requires a carrier element"));
+                };
+                let function = self
+                    .skeleton
+                    .functions
+                    .iter()
+                    .find(|function| function.name == *name)
+                    .ok_or_else(|| format!("unknown function {name}"))?;
+                if argument >= self.size(&function.domain)? {
+                    return Err(format!(
+                        "function {name} has an argument outside its domain"
+                    ));
+                }
+                let value = self
+                    .functions
+                    .get(name)
+                    .and_then(|table| table.get(argument))
+                    .ok_or_else(|| format!("incomplete table for function {name}"))?;
+                if *value >= self.size(&function.codomain)? {
+                    return Err(format!(
+                        "function {name} has an output outside its codomain"
+                    ));
+                }
+                Ok(TermValue::Elem(*value))
+            }
             Term::Lam(vars, body) => {
                 let sorts: Vec<String> = vars.iter().map(|(_, sort)| sort.clone()).collect();
                 let mut out = Vec::new();
@@ -737,6 +953,7 @@ pub fn find_model(
     max_size: usize,
 ) -> Result<Option<Model>, String> {
     for sizes in size_assignments(&skeleton.carriers, max_size) {
+        let layout = function_layout(skeleton, &sizes)?;
         let names: Vec<&String> = skeleton.constants.iter().map(|(name, _)| name).collect();
         let lengths: Vec<usize> = skeleton
             .constants
@@ -746,65 +963,81 @@ pub fn find_model(
         for values in product(&lengths) {
             let constants: HashMap<String, usize> =
                 names.iter().map(|n| (*n).clone()).zip(values).collect();
-            let mut g = Grounding {
-                skeleton,
-                sizes: &sizes,
-                constants: &constants,
-                atoms: Atoms::Encode(HashMap::new(), Vec::new()),
-            };
-            let mut parts = Vec::new();
-            for f in holds {
-                parts.push(g.formula(f, &[])?);
-            }
-            for f in fails {
-                parts.push(neg(g.formula(f, &[])?));
-            }
-            let target = conj(parts);
-            let Atoms::Encode(_, order) = g.atoms else {
-                unreachable!("encoding")
-            };
-            let atom_count = order.len();
-            let mut clauses = Vec::new();
-            let nvars = match target {
-                Prop::Const(false) => continue,
-                Prop::Const(true) => atom_count,
-                target => {
-                    let mut counter = atom_count;
-                    let top = tseitin(&target, &mut clauses, &mut counter);
-                    clauses.push(vec![top]);
-                    counter
+            for outputs in Assignments::new(&layout.lengths) {
+                let mut outputs = outputs.into_iter();
+                let functions: FunctionTables = layout
+                    .rows
+                    .iter()
+                    .map(|(function, domain)| {
+                        (
+                            function.name.clone(),
+                            outputs.by_ref().take(*domain).collect(),
+                        )
+                    })
+                    .collect();
+                let mut g = Grounding {
+                    skeleton,
+                    sizes: &sizes,
+                    constants: &constants,
+                    functions: &functions,
+                    atoms: Atoms::Encode(HashMap::new(), Vec::new()),
+                };
+                let mut parts = Vec::new();
+                for f in holds {
+                    parts.push(g.formula(f, &[])?);
                 }
-            };
-            let prefer: Vec<usize> = (1..=atom_count).collect();
-            let Some(assignment) = solve(&clauses, nvars, &prefer) else {
-                continue;
-            };
-            let mut tables: Tables = skeleton
-                .predicates
-                .iter()
-                .map(|(name, _)| (name.clone(), BTreeSet::new()))
-                .collect();
-            for (index, (pred, args)) in order.into_iter().enumerate() {
-                if assignment[index + 1] {
-                    tables.entry(pred).or_default().insert(args);
+                for f in fails {
+                    parts.push(neg(g.formula(f, &[])?));
                 }
-            }
-            let model = Model {
-                sizes: sizes.clone(),
-                constants,
-                tables,
-            };
-            for f in holds {
-                if !evaluate(skeleton, &model, f)? {
-                    return Err("solver model does not satisfy its own encoding".into());
+                let target = conj(parts);
+                let Atoms::Encode(_, order) = g.atoms else {
+                    unreachable!("encoding")
+                };
+                let atom_count = order.len();
+                let mut clauses = Vec::new();
+                let nvars = match target {
+                    Prop::Const(false) => continue,
+                    Prop::Const(true) => atom_count,
+                    target => {
+                        let mut counter = atom_count;
+                        let top = tseitin(&target, &mut clauses, &mut counter);
+                        clauses.push(vec![top]);
+                        counter
+                    }
+                };
+                let prefer: Vec<usize> = (1..=atom_count).collect();
+                let Some(assignment) = solve(&clauses, nvars, &prefer) else {
+                    continue;
+                };
+                let mut tables: Tables = skeleton
+                    .predicates
+                    .iter()
+                    .map(|(name, _)| (name.clone(), BTreeSet::new()))
+                    .collect();
+                for (index, (pred, args)) in order.into_iter().enumerate() {
+                    if assignment[index + 1] {
+                        tables.entry(pred).or_default().insert(args);
+                    }
                 }
-            }
-            for f in fails {
-                if evaluate(skeleton, &model, f)? {
-                    return Err("solver model does not satisfy its own encoding".into());
+                let model = Model {
+                    sizes: sizes.clone(),
+                    constants,
+                    tables,
+                    functions,
+                };
+                check_function_tables(skeleton, &model)?;
+                for f in holds {
+                    if !evaluate(skeleton, &model, f)? {
+                        return Err("solver model does not satisfy its own encoding".into());
+                    }
                 }
+                for f in fails {
+                    if evaluate(skeleton, &model, f)? {
+                        return Err("solver model does not satisfy its own encoding".into());
+                    }
+                }
+                return Ok(Some(model));
             }
-            return Ok(Some(model));
         }
     }
     Ok(None)
@@ -812,10 +1045,12 @@ pub fn find_model(
 
 /// Direct evaluation of a formula in a concrete model (independent of the CNF).
 pub fn evaluate(skeleton: &Skeleton, model: &Model, f: &Formula) -> Result<bool, String> {
+    check_function_tables(skeleton, model)?;
     let mut g = Grounding {
         skeleton,
         sizes: &model.sizes,
         constants: &model.constants,
+        functions: &model.functions,
         atoms: Atoms::Eval(&model.tables),
     };
     match g.formula(f, &[])? {
@@ -929,7 +1164,24 @@ fn render_predicate(
     }
 }
 
-/// The model as Lean `abbrev`s: carriers, constants, predicates.
+fn render_function(function: &UnaryFunction, table: &[usize]) -> String {
+    let (last, earlier) = table
+        .split_last()
+        .expect("nonempty function table of a valid finite model");
+    let signature = format!("{} → {}", function.domain, function.codomain);
+    if earlier.iter().all(|value| value == last) {
+        return format!("abbrev {} : {signature} := fun _ => {last}", function.name);
+    }
+    let mut body = last.to_string();
+    for (index, value) in earlier.iter().enumerate().rev() {
+        body = format!("if x = {index} then {value} else {body}");
+    }
+    format!("abbrev {} : {signature} := fun x => {body}", function.name)
+}
+
+/// A valid model as Lean `abbrev`s: carriers, constants, functions, predicates.
+/// `find_model` produces valid tables; `evaluate` checks externally supplied
+/// function tables before evaluating a formula.
 pub fn render_model(skeleton: &Skeleton, model: &Model) -> Vec<String> {
     let mut lines: Vec<String> = skeleton
         .carriers
@@ -941,6 +1193,9 @@ pub fn render_model(skeleton: &Skeleton, model: &Model) -> Vec<String> {
             "abbrev {name} : {sort} := {}",
             model.constants[name]
         ));
+    }
+    for function in &skeleton.functions {
+        lines.push(render_function(function, &model.functions[&function.name]));
     }
     let empty = BTreeSet::new();
     for (name, sorts) in &skeleton.predicates {
