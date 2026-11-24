@@ -1,0 +1,9 @@
+{
+  "id": "a3876b86-7245-47ea-9016-b051d1f72e56",
+  "label": "Reachability by finite paired flips on a three-site path",
+  "term": "reachability by paired interventions",
+  "definition": "For an initial Boolean triple s, s is reachable. After any reachable triple one may choose either value for each of two edge inputs. Each active edge flips both endpoints. Reachability is the least relation closed under these finite steps.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Explanation.PairedInterventions.Reachable",
+  "note": "This analyst repertoire permits all finite compositions, including the empty sequence. Conservation of parity and the exact reachable class are consequences to be proved. Whether these moves exhaust a real receiver’s ways of interacting is an application premise."
+}

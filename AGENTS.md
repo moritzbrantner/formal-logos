@@ -687,7 +687,7 @@ Do not call an argument mechanically verified unless its result passes Comparato
 
 ### 8. Self-sweep before requesting review
 
-Before requesting `@codex review`, apply the Review guidelines below to your own diff in one pass and fix what you find:
+Before requesting `@codex review`, apply the Review guidelines below to your own diff in one pass and fix what you find. For research PRs, also go through the [recurring semantic defects checklist](docs/systematic-corpus-loop.md#recurring-semantic-defects-pre-push-checklist). An automated review does not replace the independent semantic challenge. A research thread does not leave a draft PR without either that challenge or a handoff naming it as pending.
 
 - every "read as" or attributed claim states no more than its cited sentence; any strengthening is stated as an explicit, unattributed open premise;
 - **attribution self-check (#989), before the first push** (CI runs the same check on every PR): run `target/release/truth attribution-check --base <merge-base>`. This offline check prints each new or changed stating claim (or claim whose statement text changed) beside its locator and any usable cached passage text; absent or stale text is reported as not checked, and it fails until the claim records `"attribution": "The passage states X, which is the premise."` Check quantifier scope, species/genus restriction (one kind of cause or being read as all), and temporal and modal scope. If the sentence would be false, because the passage only bears on the premise or states something narrower, do not keep the claim as stating. Replace it by a `supports` relation with a gap note (#987), or state the narrower reading as its own statement;

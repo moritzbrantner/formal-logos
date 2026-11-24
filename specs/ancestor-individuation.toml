@@ -1,0 +1,49 @@
+[batch]
+vocab = "TruthCore.Causality.AncestorIndividuation"
+results = "TruthCore.Results.Causality.AncestorIndividuation"
+definitions = ["1dff2d68-1348-5e7e-8ee7-248af63c8c53"]
+
+[[statement]]
+id = "A bearer is numerically identified by all its nonempty-path ancestors"
+lean = "IdentityByAncestors"
+paraphrase = "Open criterion of numerical identity on one selected graph. For every x and y, agreement on all z that reach them by a nonempty directed path implies x = y. This ranges over all bearers, including dependents. A nonempty path can return to its starting point in a cyclic graph. Interpreting the paths as precisely the full existential ancestry of actual concrete beings remains open."
+definitions = ["1dff2d68-1348-5e7e-8ee7-248af63c8c53"]
+
+[[statement]]
+id = "Every two distinct bearers are comparable by nonempty paths in the selected graph"
+lean = "ComparableByAncestry"
+paraphrase = "For each pair x and y in the selected graph there is a nonempty directed path from x to y, x equals y, or there is a nonempty directed path from y to x. This concerns ancestors in the selected relation, with no requirement of a direct edge."
+definitions = ["1dff2d68-1348-5e7e-8ee7-248af63c8c53"]
+
+[[statement]]
+id = "Two distinct effects of one source have exactly the same nonempty-path ancestors in the fixture"
+lean = "SiblingControl"
+paraphrase = "The existing three-object production graph is well-founded with one source that directly gives rise to both distinct effects. The two effects have the same strict ancestors, while identity by all ancestors and pairwise comparability by strict ancestry both fail. This is a structural assignment. The model supplies no evidence that two actual concrete beings receive existence from precisely these sources."
+definitions = ["1dff2d68-1348-5e7e-8ee7-248af63c8c53"]
+
+[[argument]]
+id = "Full ancestor identity and well-foundedness force comparability by ancestry"
+theorem = "comparability"
+axioms = []
+premises = ["ee4ab504-c8fe-59bc-bc96-7cbeefed6410", "25697a6f-d4f8-55c4-9e12-2d6b6710c119", "A bearer is numerically identified by all its nonempty-path ancestors"]
+conclusion = "Every two distinct bearers are comparable by nonempty paths in the selected graph"
+rule = "Nested well-founded induction on nonempty paths"
+meaning = "Well-foundedness passes to nonempty paths. Apply induction to each bearer of the pair. Excluded middle tests the two directional paths. If neither exists, the induction hypotheses and path composition show that either bearer's ancestors are ancestors of the other. The identity criterion then identifies the pair. No assumption makes each immediate contribution transitive or implies that actual existence satisfies this criterion."
+
+[[argument]]
+id = "One existing production fixture separates single origin from identity by all ancestors"
+theorem = "siblings"
+axioms = []
+premises = []
+conclusion = "Two distinct effects of one source have exactly the same nonempty-path ancestors in the fixture"
+rule = "Explicit finite graph witnesses and induction on nonempty paths"
+meaning = "Use FullFirstCause.Fixture.graph unchanged. Its only source gives rise to both effects. Every ancestor of either effect must be that source. Distinctness and absence of paths between them refute the two universal conditions inside this interpretation. No claim about actual creative activity or metaphysical possibility follows."
+
+[[argument]]
+id = "Identity by nonempty-path ancestors gives at most one source"
+theorem = "atMostOneSource"
+axioms = []
+premises = ["A bearer is numerically identified by all its nonempty-path ancestors"]
+conclusion = "861e20d6-7d65-5856-85cf-0cd0d0c167f3"
+rule = "Exclude incoming paths at sources and apply the universal identity criterion"
+meaning = "A nonempty path ending at a source would give it an incoming final edge. Any two sources therefore agree on every strict ancestor, and the universal criterion identifies them. This argument requires neither population, well-foundedness nor excluded middle. The same criterion also applies to dependent beings, where the sibling control shows how it exceeds source uniqueness."

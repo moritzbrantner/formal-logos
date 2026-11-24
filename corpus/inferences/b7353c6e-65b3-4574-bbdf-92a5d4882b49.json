@@ -1,0 +1,16 @@
+{
+  "id": "b7353c6e-65b3-4574-bbdf-92a5d4882b49",
+  "label": "Actual receipt and the q.3 a.4 external-cause principle support a distinct giver (inference)",
+  "input_statement_ids": [
+    "871a5f81-7c63-4511-81fc-8ca437587ccd",
+    "65f3d0c7-cc3d-4ce3-a4a9-6fa38bf722cb",
+    "7fcfcee8-86ab-5a16-84ad-124cf5e8f9b2",
+    "14325c83-1c3f-5afb-b63f-52b0c2b2a326",
+    "33ad148b-ceab-5856-a4f8-c999a1dba644"
+  ],
+  "output_statement_id": "4bc853db-ec33-40ff-857e-6a67f17532fb",
+  "rule": "Exclude identity by self-receptive potency, then apply the distinct-esse cause premise",
+  "meaning": "A principle receiving the bearer's esse would stand in potency to its own act if the bearer's essence were identical to its esse. The identity-scoped location and irreflexivity premises exclude that consequence. Receipt also places the bearer in act, so the q.3 a.4 cause reading provides an external cause. Retain the same bearer and cause in the existing tenseless coverage conclusion for all recipients. The bare receipt predicate leaves external causation and world-indexed existence open.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}
