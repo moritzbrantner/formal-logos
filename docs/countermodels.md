@@ -22,7 +22,7 @@ target/release/truth countermodel THEOREM --module TruthCore.X.Solution   # skip
    `Sort u`), predicate parameters (into `Prop`, over carriers or over
    carrier predicates `T → Prop`), element constants (`esse : R`), total
    nondependent unary functions with explicit inputs (`f : A → B`, where both
-   carriers are already declared), and premises.
+   carriers are already declared), structure parameters (below), and premises.
    It unfolds each premise and the conclusion through their definitions into
    `∀ ∃ ∧ ∨ ¬ → ↔ = ≠ True False` over predicate atoms. A quantifier over `Prop`,
    as in `ExcludedMiddle`, ranges over the two truth values. Fully applied and
@@ -38,7 +38,7 @@ target/release/truth countermodel THEOREM --module TruthCore.X.Solution   # skip
    predicate-of-predicates argument (`Possible (fun t => ¬ IsAt x t)`) is
    matched against every concrete subset. The found model is evaluated again
    directly before it is reported.
-3. The model, including typed functions, is rendered as Lean `abbrev`s and a
+3. The model, including typed functions and structure values, is rendered as Lean `abbrev`s and a
    `certificate` theorem
    `¬ Pₖ ∧ P₁ ∧ … ∧ ¬ C`, proved by `delta <unfolded definitions>; decide`.
    A premise quantified over `Prop` is closed by `Classical.em`. Unless
@@ -46,6 +46,38 @@ target/release/truth countermodel THEOREM --module TruthCore.X.Solution   # skip
    `lean-rejected` (with the Lean output), `candidate` (not checked) or
    `unresolved`. `--all` adds a joint witness in which every premise and the
    conclusion hold.
+
+## Structure parameters
+
+A theorem over a shared frame or a profile, such as
+`(F : CausalityFrame W B T R)` (#1784) or `(m : GProfile W B)`, is read field
+by field, recursively through nested structures (`F.history.ontic.frame`):
+
+| Field | Becomes |
+| --- | --- |
+| A relation or predicate into `Prop` over declared carriers (`F.GivesAt : W → B → B → T → Prop`) | a typed predicate table, flat name `F_GivesAt` |
+| A `Prop` (`p : Prop`) | a nullary predicate |
+| An element of a declared carrier (`F.esse : R`, `F.history.now : T`) | an element constant |
+| A nondependent explicit unary function between declared carriers | a function table (#1930) |
+| A structure (`F.history : History W B T`) | expanded the same way |
+| A proof (`refl : ∀ x, acc x x`) | the refusal `unsupported field F.refl : … (a proof field …)`: a finite certificate cannot construct it |
+| Anything else (a carrier bundled in the structure, `List W`, a binary function) | opaque: built as `default` when no formula mentions it; otherwise the refusal `unsupported field F.extra : List W` |
+
+The refusal names the field, not the whole structure. A projection of a value
+built by a definition, such as `(groundProfile F concrete G).concrete`,
+reduces to the definition's argument (`concrete`), and the definition joins
+the certificate's `delta` list. The certificate then builds the actual
+structure, inner values first, by its anonymous constructor over the field
+tables:
+
+```lean
+abbrev F_history : TruthCore.Modal.TemporalHistory.History W B T := ⟨F_history_ontic, F_history_IsAt, F_history_now⟩
+abbrev F : TruthCore.Causality.Frame.CausalityFrame W B T R := ⟨F_history, F_GivesAt, …, F_esse⟩
+```
+
+so the checked statement is the theorem's own omission instance over `F`
+(`F.GivesAt v c x t` reduces to the table). Instance-implicit structures
+(type classes) remain unsupported parameters.
 
 A checked certificate can be pasted into a `Control` namespace, renamed and
 cited from the result's `controls` theorem. Copy the statement, not just the
@@ -76,11 +108,13 @@ this tool searches for countermodels.
   is not retained by the certificate renderer. Also unsupported are dependent
   functions, functions with multiple inputs, functions taking or returning
   functions, partially applied function terms, and function equality.
-- Other unsupported vocabulary: structure-bundled parameters (`M.MovedIn`),
-  concrete carriers in the theorem (`Nat`, `Bool`), typeclass arguments,
-  quantifiers over predicates other than `Prop`, and definitions that unfold
-  outside the fragment. Unary function support does not unpack shared frames
-  or identify separately declared carriers or function parameters.
+- Other unsupported vocabulary: carriers bundled inside a structure, proof
+  fields and structure fields outside the fragment that a formula mentions
+  (each refused by name, above), concrete carriers in the theorem (`Nat`,
+  `Bool`), typeclass arguments, quantifiers over predicates other than
+  `Prop`, and definitions that unfold outside the fragment. Neither function
+  nor structure support identifies separately declared carriers, functions
+  or fields.
 - The solver is exhaustive over the bound and has no symmetry breaking. A size 3
   search over ternary relations can be slow. At fixed carrier sizes, a function
   `A → B` contributes `|B|^|A|` interpretations; multiple functions multiply

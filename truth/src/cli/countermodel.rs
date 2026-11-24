@@ -72,6 +72,8 @@ fn run(args: &Args, operands: &[&str]) -> Output {
     let value = json!({
         "theorem": theorem,
         "module": skeleton.module,
+        "structures": skeleton.structures.iter().map(|s| s.name.as_str()).collect::<Vec<_>>(),
+        "opaque_fields": skeleton.opaque_fields.iter().map(|(field, ty)| json!({"field": field, "type": ty})).collect::<Vec<_>>(),
         "reports": reports.iter().map(countermodel::Report::to_json).collect::<Vec<_>>(),
     });
     let text = reports

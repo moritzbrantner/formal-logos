@@ -94,14 +94,32 @@ pub struct UnaryFunction {
     pub codomain: String,
 }
 
+/// A structure parameter (a shared frame, a profile) or one of its nested
+/// structure fields, built in the certificate by its anonymous constructor
+/// from the field tables: `abbrev F : CausalityFrame W B T R := ⟨…⟩`. A field
+/// `None` is outside the fragment and unused by every formula; it is
+/// rendered `default`.
+#[derive(Clone, Debug, PartialEq, Eq)]
+pub struct StructureValue {
+    pub name: String,
+    pub lean_type: String,
+    pub fields: Vec<Option<String>>,
+}
+
 /// The first-order skeleton of a theorem, as `scripts/Countermodel.lean`
-/// writes it (plus the module it was read from).
+/// writes it (plus the module it was read from). The fields of a structure
+/// parameter appear among the predicates, constants and functions under flat
+/// names (`F_history_IsAt` for `F.history.IsAt`).
 pub struct Skeleton {
     pub theorem: String,
     pub carriers: Vec<String>,
     pub predicates: Vec<(String, Vec<Sort>)>,
     pub constants: Vec<(String, String)>,
     pub functions: Vec<UnaryFunction>,
+    /// Structure values, inner ones first.
+    pub structures: Vec<StructureValue>,
+    /// Fields outside the fragment that no formula mentions: (path, type).
+    pub opaque_fields: Vec<(String, String)>,
     pub premises: Vec<Premise>,
     pub conclusion_lean: String,
     pub conclusion: Formula,
@@ -233,6 +251,33 @@ impl Skeleton {
                 })
                 .collect::<Result<Vec<_>, String>>()?,
         };
+        let structures = match value.get("structures") {
+            None => Vec::new(),
+            Some(_) => list(value, "structures")?
+                .iter()
+                .map(|s| {
+                    Ok(StructureValue {
+                        name: text(s, "name")?,
+                        lean_type: text(s, "type")?,
+                        fields: list(s, "fields")?
+                            .iter()
+                            .map(|f| match f {
+                                Value::Null => Ok(None),
+                                Value::String(name) => Ok(Some(name.clone())),
+                                other => Err(format!("structure field is not a name: {other}")),
+                            })
+                            .collect::<Result<_, String>>()?,
+                    })
+                })
+                .collect::<Result<Vec<_>, String>>()?,
+        };
+        let opaque_fields = match value.get("opaque_fields") {
+            None => Vec::new(),
+            Some(_) => list(value, "opaque_fields")?
+                .iter()
+                .map(|f| Ok((text(f, "field")?, text(f, "type")?)))
+                .collect::<Result<Vec<_>, String>>()?,
+        };
         let skeleton = Skeleton {
             theorem: text(value, "theorem")?,
             carriers: strings(value, "carriers")?,
@@ -253,6 +298,8 @@ impl Skeleton {
                 .map(|c| Ok((text(c, "name")?, text(c, "sort")?)))
                 .collect::<Result<_, String>>()?,
             functions,
+            structures,
+            opaque_fields,
             premises: list(value, "premises")?
                 .iter()
                 .map(|p| {
@@ -269,7 +316,35 @@ impl Skeleton {
             module: module.to_owned(),
         };
         skeleton.validate_function_signatures()?;
+        skeleton.validate_structures()?;
         Ok(skeleton)
+    }
+
+    /// Every structure field names a declared table or an earlier structure
+    /// value, and no name is used twice.
+    fn validate_structures(&self) -> Result<(), String> {
+        let tables: BTreeSet<&str> = self
+            .predicates
+            .iter()
+            .map(|(name, _)| name.as_str())
+            .chain(self.constants.iter().map(|(name, _)| name.as_str()))
+            .chain(self.functions.iter().map(|f| f.name.as_str()))
+            .collect();
+        let mut built: BTreeSet<&str> = BTreeSet::new();
+        for structure in &self.structures {
+            for field in structure.fields.iter().flatten() {
+                if !tables.contains(field.as_str()) && !built.contains(field.as_str()) {
+                    return Err(format!(
+                        "structure {} has an undeclared field value {field}",
+                        structure.name
+                    ));
+                }
+            }
+            if tables.contains(structure.name.as_str()) || !built.insert(&structure.name) {
+                return Err(format!("duplicate structure name {}", structure.name));
+            }
+        }
+        Ok(())
     }
 
     fn validate_function_signatures(&self) -> Result<(), String> {
@@ -1202,6 +1277,21 @@ pub fn render_model(skeleton: &Skeleton, model: &Model) -> Vec<String> {
         let table = model.tables.get(name).unwrap_or(&empty);
         lines.push(render_predicate(name, sorts, table, model));
     }
+    // Structures last, inner ones first: each is the actual structure, built
+    // by its anonymous constructor from the field tables above.
+    for structure in &skeleton.structures {
+        let fields: Vec<&str> = structure
+            .fields
+            .iter()
+            .map(|f| f.as_deref().unwrap_or("default"))
+            .collect();
+        lines.push(format!(
+            "abbrev {} : {} := ⟨{}⟩",
+            structure.name,
+            structure.lean_type,
+            fields.join(", ")
+        ));
+    }
     lines
 }
 
@@ -1256,6 +1346,13 @@ pub fn render_certificate(
         format!("/-! {what} Candidate from `truth countermodel`; checked by `decide`. -/"),
     ];
     lines.extend(render_model(skeleton, model));
+    // Through a structure value every atom is a chain of projections of
+    // abbreviations, and one `Decidable` problem over a frame can exceed the
+    // default instance size (128); raise it only there, so the certificates of
+    // structure-free theorems stay as they were.
+    if !skeleton.structures.is_empty() {
+        lines.push("set_option synthInstance.maxSize 4096 in".to_owned());
+    }
     lines.push(format!("theorem certificate :\n    {statement} := by"));
     lines.push(format!("{delta}  refine ⟨{holes}⟩ <;> {closer}"));
     lines.push(format!("end {label}"));

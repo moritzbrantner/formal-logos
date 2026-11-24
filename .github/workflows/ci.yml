@@ -160,7 +160,9 @@ jobs:
         if: needs.comparator-plan.outputs.lean == 'true'
         run: target/release/truth unused-premises --strict
       # `truth countermodel` (docs/countermodels.md) rediscovers the hand-written
-      # omission certificates of five results and Lean accepts every one; the solver
+      # omission certificates of five results, and checks three results over a
+      # structure parameter (the shared frame, a profile; #1926), and Lean accepts
+      # every one; the solver
       # and its golden replays run offline in the truth-cli job.
       - name: Rediscover omission countermodels with Lean
         if: needs.comparator-plan.outputs.lean == 'true'
@@ -170,7 +172,10 @@ jobs:
             SelfOperationLife.pureActLives \
             PerfectionOfBeing.actualityOnlyInsofarAsBeing \
             NecessaryBeingInAct.necessaryBeingInAct \
-            ComponentFirstness.noComponentFirst; do
+            ComponentFirstness.noComponentFirst \
+            DependenceOrderSenses.priorInBeingGroundOfDependence \
+            HolderRootIdentification.atMostOneHolderFromAtMostOneRoot \
+            WillVersusChance.oneIntellectualPowerGivesWilledGiving; do
             target/release/truth --json countermodel --all "TruthCore.Results.Causality.$theorem" \
               | jq -e '.reports | length > 1 and all(.status == "lean-checked")' >/dev/null \
               || { echo "countermodel rediscovery failed for $theorem"; exit 1; }

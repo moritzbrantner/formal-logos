@@ -590,3 +590,89 @@ fn golden_excluded_middle() {
 fn golden_causal_maps() {
     replay("causeOfQualityMoreSuch", 2);
 }
+
+/// A theorem over a structure parameter `F : Frame B` with a relation field,
+/// an element field and a field outside the fragment, as the extractor
+/// writes it: the fields are flat tables, the structure a value built from
+/// them (`run` in `scripts/Countermodel.lean`).
+fn structure_skeleton() -> Value {
+    json!({
+        "theorem": "Example.frameThm",
+        "carriers": ["B"],
+        "constants": [{"name": "F_point", "sort": "B", "field": "F.point"}],
+        "predicates": [{"name": "F_rel", "args": ["B", "B"], "field": "F.rel"}],
+        "structures": [{"name": "F", "type": "Example.Frame B", "fields": ["F_rel", "F_point", null]}],
+        "opaque_fields": [{"field": "F.extra", "type": "List B"}],
+        "premises": [
+            {"name": "hSerial", "lean": "∀ x, F.rel x F.point",
+             "formula": forall("x", "B", atom("F_rel", &["x", "F_point"]))},
+        ],
+        "conclusion": {"lean": "F.rel F.point F.point",
+                       "formula": atom("F_rel", &["F_point", "F_point"])},
+        "unfolded": [],
+    })
+}
+
+#[test]
+fn structure_parameters_render_as_their_constructor_over_field_tables() {
+    let skeleton = Skeleton::parse(&structure_skeleton(), "Example").unwrap();
+    assert_eq!(
+        skeleton.structures,
+        [StructureValue {
+            name: "F".into(),
+            lean_type: "Example.Frame B".into(),
+            fields: vec![Some("F_rel".into()), Some("F_point".into()), None],
+        }]
+    );
+    assert_eq!(
+        skeleton.opaque_fields,
+        [("F.extra".to_owned(), "List B".to_owned())]
+    );
+    // The joint witness: every premise and the conclusion hold.
+    let holds: Vec<&Formula> = skeleton
+        .premises
+        .iter()
+        .map(|p| &p.formula)
+        .chain([&skeleton.conclusion])
+        .collect();
+    let model = find_model(&skeleton, &holds, &[], 2).unwrap().unwrap();
+    let text = render_certificate(&skeleton, "W", &model, None);
+    // The certificate instantiates the actual structure by its anonymous
+    // constructor, after the tables it is built from; an opaque field is
+    // `default`.
+    let structure = text
+        .find("abbrev F : Example.Frame B := ⟨F_rel, F_point, default⟩")
+        .unwrap_or_else(|| panic!("{text}"));
+    assert!(text.find("abbrev F_rel").unwrap() < structure);
+    assert!(text.find("abbrev F_point").unwrap() < structure);
+    assert!(structure < text.find("theorem certificate").unwrap());
+    assert!(text.contains("set_option synthInstance.maxSize 4096 in\ntheorem certificate"));
+    // The checked statement is the theorem's own, over `F`.
+    assert!(text.contains("(∀ x, F.rel x F.point)"), "{text}");
+}
+
+#[test]
+fn structure_fields_must_name_declared_tables() {
+    let mut value = structure_skeleton();
+    value["structures"][0]["fields"][0] = json!("F_missing");
+    let error = Skeleton::parse(&value, "Example").err().unwrap();
+    assert!(
+        error.contains("undeclared field value F_missing"),
+        "{error}"
+    );
+    let mut value = structure_skeleton();
+    value["structures"][0]["name"] = json!("F_rel");
+    let error = Skeleton::parse(&value, "Example").err().unwrap();
+    assert!(error.contains("duplicate structure name F_rel"), "{error}");
+}
+
+#[test]
+fn an_extractor_field_refusal_names_the_field() {
+    let value = json!({"theorem": "Example.t",
+                       "error": "unsupported field F.wf : WellFounded F.rel (a proof field: a finite certificate cannot construct it)"});
+    let error = Skeleton::parse(&value, "Example").err().unwrap();
+    assert_eq!(
+        error,
+        "Example.t: unsupported field F.wf : WellFounded F.rel (a proof field: a finite certificate cannot construct it)"
+    );
+}
