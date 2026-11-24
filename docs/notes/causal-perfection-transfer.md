@@ -3078,3 +3078,43 @@ The following mechanisms give the two sides of that test philosophical content. 
 **Provisional judgment.** The strongest affirmative account treats the concrete producer, its operative power and the exercise reaching the patient as dependent on the source. Its explanatory strength is that the same giver's influence can persist through real secondary agency. For a specified perfection there is warrant when the productive history identifies that influence. The rival grants the source sustains concrete subjects and may mediately cause many of their determinations, while some acquired organization is traced to a distinct operation. The [copied and independently recut dies](actuality-esse-research.md) show why identity of bearer through a change of productive history matters: after recutting, the continued existence of the die no longer traces its new lettering to the maker of the original pattern. This explains a genuine possible failure of a *particular tracing argument*. It does not demonstrate a metaphysically independent engraver, nor exclude the universal giver's contribution through the engraver.
 
 I favor the scoped transfer wherever an actual productive history, or identity of the precise efficient terminus under two descriptions, is independently justified. I would withhold the unrestricted commitment. In particular, a partial giver's contribution to esse is insufficient evidence by itself for credit at every acquired determination. A theory on which only the ultimate source gives esse absolutely can remove the particular-giver cases if it independently earns that reading of the antecedent. It must still show why that source's gift reaches each relevant determination of each recipient. Calling each esse giver the total cause of the fully determined individual settles the question only if there is a separate reason why its productive contribution extends to the individual **in each respect**. The person supplied with a die that bears certain lettering and the source of that lettering are independently identifiable roles. For the GOD_4 routes that use the narrower principle, the live test is to trace the named universal giver into the secondary producer's determination of the disputed respect, or explain why the same giving already has that determination as its own efficient terminus. For the unrestricted principle, this test must also succeed for any genuinely eligible particular giver. No change to causal closure or to the registered proof alternatives follows from this local check.
+
+### What can the complete performance of a product tell us about its producer?
+
+The bound claim `64498e7e` says that whenever *c* causes *x* at esse and *x* is in act in respect *r*, *c* is in act in *r*. It uses one `InAct` predicate on both sides. It does not identify a formal instance, exhibit an eminent mode or give a criterion of eminence. The registered [containment argument](../../corpus/arguments/400ba1f0-231f-4c37-852d-b97d969f01a3.json) exposes two jobs. Transfer `f8ba2429` identifies this cause as responsible for the actual respect; `634a80b8` attributes that respect to every such cause. Granting the first leaves the second substantive. A cause that genuinely produces an operation has some exercised efficacy of its own. On the reading of “virtually” as power to produce precisely that operation, this gives a positive but correspondingly limited answer. A contributor to just one input has shown only its part in the production. Supplying the whole organized response is a stronger grant.
+
+**A source-side test of sameness of content.** Consider two devices capable of making the same family of governors. Each released governor senses its own displacement from its setpoint and commands a compensating motion. One maker also corrects displacement of its own tool head while it works. The other guides a tool along a fixed jig with a preset stroke; the geometry it gives the product lets the finished product close its own loop. Within their manufacturing tolerances both can assemble the same feedback linkage. In each case include the functioning production equipment in the maker; the output test measures the released governor. Fix the candidate content before deciding who has it: present deviation of this bearer from a standard is sensed in it and used to direct its own corrective command. A source can have this organization with another sensor, actuator, time scale and standard. Merely copying the governor’s shape is unnecessary. In the feedback maker one can interrupt its error signal, perturb its head, and observe whether its corrective command loses the predicted response at fixed construction instructions. Identifying the actual loop matters: coincidentally opposite motions need not be corrective ones.
+
+A simple Lean diagnostic gives each released product the ideal nominal command for every integer setpoint and measured displacement. The local source diagnostic tests the analogous *maker-side* command. The off setting of the source flag represents the fixed-stroke maker's zero **feedback correction**, not absence of productive motion. No test of the entire released-product command table can identify which maker also has the local correction law. This quantifies over candidate tests of that table; the tables are equal by construction and the local laws disagree already at displacement one. These are measurement models for stipulated productive mechanisms. The equations do not prove that a manufacturer creates a governor at esse, that real actuators have unbounded response, that all feedback is a pure perfection, or that some other higher analogue has been excluded.
+
+```lean
+namespace Operative
+-- Signed displacement, followed by the source's own correction command.
+def governorCommand (error : Int) := -error
+def sourceCommand (feedback : Bool) (error : Int) : Int :=
+  if feedback then governorCommand error else 0
+-- Both constructors release the same governor at each chosen setpoint.
+def productCommand (_feedback : Bool) (setpoint actual : Int) :=
+  governorCommand (actual - setpoint)
+def hasCorrection (feedback : Bool) : Prop :=
+  ∀ error, sourceCommand feedback error = -error
+theorem sourceTest (feedback : Bool) : hasCorrection feedback ↔ feedback = true := by
+  cases feedback
+  · constructor
+    · intro h
+      have bad := h 1
+      exact (by decide : (0 : Int) ≠ -1) bad |>.elim
+    · intro h; cases h
+  · exact ⟨fun _ => rfl, fun _ _ => rfl⟩
+theorem noOutputTest (test : (Int → Int → Int) → Prop) :
+    ¬ ∀ f, test (productCommand f) ↔ hasCorrection f := by
+  intro h
+  have yes := (h true).2 ((sourceTest true).2 rfl)
+  have no := (sourceTest false).1 ((h false).1 yes)
+  cases no
+#print axioms sourceTest
+#print axioms noOutputTest
+end Operative
+```
+
+**Provisional judgment.** I favor attributing to the producing source the actual efficacy traceable to its own operation. Where the independently specified perfective content is also realized in that operation, a local possession claim has affirmative warrant. The governor comparison suggests a test for **preservation of content across modes**. It gives no ordering that makes one mode higher. Eminence in the stronger sense additionally requires grounds for that ordering, for example that the proposed source act realizes the same content without a particular receptive limitation present in the effect, with evidence that removing this limitation preserves the content. The strongest rival can give a determinate account of the operative structure that produces the governor’s capacity while denying that this structure exercises self-correction. Granting the full construction sequence to the maker answers an objection about a missing stage of manufacture; it does not turn the jig’s structure into a loop correcting the jig’s own deviation. A metaphysically total source could satisfy a separate account of unrestricted intrinsic actuality, considered [above](#the-limitation-bridge-two-separable-obligations-not-another-synonym). Extending the conclusion to such a source needs that account or another source-side reason for intrinsic containment. Neither universal `64498e7e` nor its denial follows from the manufacturing comparison. The two local theorems above used no axioms; no new corpus result or source attribution is claimed.
