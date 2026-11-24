@@ -1724,6 +1724,21 @@ Comparator record is introduced. Retrieval used related, dossier,
 context, brief and novelty before interpretation, followed by the
 current CLI's semantics audit of the productive cut and will consumer
 and the complete PSR/BX1/BX2-to-B2 preflight; that bundle passed the
-sense rules. The new assessment needs independent semantic challenge.
+sense rules.
 Existing proof evidence retains its original branch and hypothesis
-scope. Intended premise change: none.
+scope. On the proposed main-based delivery, `truth check` passed
+(`ok: true`, with lexicon/formal-status warnings); offline
+`attribution-check` found no new or changed stating claims. Scoped
+record/evidence references, local link targets and `git diff --check`
+also passed. No Lean inputs changed, so no new build, binding or
+Comparator evidence is claimed. Intended premise change: none; the
+coordinator's delivered-head frontier comparison remains authoritative.
+
+**Review disposition.** Independent reviewer `/root/continuation_review`
+accepted this #1957 scope with qualifications and no new defect at
+revision `70d83fcdf621078ef4766583fe7b57bec92afe27` plus the validation-only
+paragraph above. The review checked the exact source passages, cut/bypass
+fields, identity/calibration distinction, complete root-will bundle and
+NAR support. Acceptance covers the bounded semantic assessment and its
+stated limitations; it supplies no new formal certification or full
+metaphysical realization.
