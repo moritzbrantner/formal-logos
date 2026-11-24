@@ -1,0 +1,11 @@
+{
+  "id": "93e9c82a-eed8-43e5-bc3b-ad4fb0a9d232",
+  "label": "Determine all threshold gains and losses from the two source increments",
+  "argument_id": "7759f8cf-4f6a-462f-88b8-3cfa1a0d5ab9",
+  "challenge_module": "TruthCore.Results.Causality.ComparativeFoundation.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ComparativeFoundation.Solution",
+  "theorem": "TruthCore.Results.Causality.ComparativeFoundation.thresholds",
+  "comparator_config": "results/93e9c82a-eed8-43e5-bc3b-ad4fb0a9d232/comparator.json",
+  "status": "solution-present",
+  "description": "The positive readings of the strict comparison are the offsets below the signed gap. Two gaps agree if their strict lower sets agree, since the smaller gap separates any two different ones. Equality of the actual and residual gaps then cancels their common baseline and forces equality of the two increments."
+}

@@ -1,0 +1,33 @@
+[batch]
+vocab = "TruthCore.Causality.ComparativeFoundation"
+results = "TruthCore.Results.Causality.ComparativeFoundation"
+
+[[statement]]
+id = "Thresholds that distinguish a named source's two comparative increments"
+lean = "ThresholdCharacterization"
+paraphrase = "For every additive pair of integer readings and every signed offset, the comparison changes from false to true precisely on offsets between the residual gap inclusive and actual gap exclusive. Loss has the reverse interval. Agreement at all offsets is equivalent to the source adding equal increments to both foundations. The residual is a controlled omission that preserves all other inputs."
+definitions = ["ba726ddd-9170-4b89-8ea3-a002bffb12f6"]
+
+[[statement]]
+id = "Source responsibility under a comparative change with an unchanged fixed rod"
+lean = "Rods.Controls"
+paraphrase = "At the same actual measurements a left rod stays at two, a right rod extends from one to three, and the same source gives every other bearer esse. The driver of the extension changes both inverse zero-offset descriptions under its controlled omission. The exact universal transfer predicate holds on the diagnostic profile with the universal giver as driver and fails with a different driver. A separate equal-increment control changes both readings and preserves every comparison threshold. Diagnostic credit is a restricted counterfactual interpretation at the two comparative respects."
+definitions = ["ba726ddd-9170-4b89-8ea3-a002bffb12f6", "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"]
+
+[[argument]]
+id = "Determine all threshold gains and losses from the two source increments"
+theorem = "thresholds"
+premises = []
+conclusion = "Thresholds that distinguish a named source's two comparative increments"
+rule = "Order and cancellation on integer gaps"
+meaning = "The positive readings of the strict comparison are the offsets below the signed gap. Two gaps agree if their strict lower sets agree, since the smaller gap separates any two different ones. Equality of the actual and residual gaps then cancels their common baseline and forces equality of the two increments."
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+
+[[argument]]
+id = "Compare mirror descriptions and common input in matched rod histories"
+theorem = "controls"
+premises = ["Thresholds that distinguish a named source's two comparative increments"]
+conclusion = "Source responsibility under a comparative change with an unchanged fixed rod"
+rule = "Hold actual lengths and existential coverage fixed, evaluate both driver omissions and apply invariance to a common translation"
+meaning = "When the named source drives the extension, the selected relation changes without an intrinsic change of length at the left subject. The matching profile with a different driver leaves the relation true on omitting the source's selective input. Equal nonzero contributions to both readings supply a distinct control for all offsets. Universal transfer is evaluated on these specific interpretations of its relations."
+axioms = ["propext", "Classical.choice", "Quot.sound"]

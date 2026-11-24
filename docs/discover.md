@@ -788,3 +788,158 @@ missing link, it does not show substantive independence. The tests
 (`scripts/test_discover_conjecture.py`) cover the acceptance fixtures of #1834
 offline. The pilot's candidates, outcomes and comparison with `truth discover`
 and `truth bridge-experiments` are recorded in the attempt it cites.
+
+## Bounded second-hop retrieval benchmark (2026-11-24)
+
+Second-hop backfill keeps the direct candidates in order and fills unused slots
+through their eligible neighbors, using the same rules and premise pool. Additions
+never become anchors. Empty and full direct lists stay unchanged; the target and
+aliases of selected declarations are excluded from additions. `Candidate.via`
+records the admitting anchor, not a proof dependency. An added candidate's score
+is relative to that anchor, not directly comparable to target scores.
+
+The cap applies to the **ranked list**. The existing goal builder can then append
+registered sense bridges as optional, explicit hypotheses, so a trial can exceed
+the ranking cap. Coverage below is measured before that insertion, separately
+from the retained proof; retrieval itself identifies no senses.
+
+### Frozen workload and measurement
+
+The [fixture](../scripts/testdata/discovery-multihop-benchmark.json) has twelve
+fresh targets: eleven known-consequence cases and one negative neighborhood.
+There are thirteen reference AND bundles because C2 has three separate routes.
+Assertion/meaning B is development data; maximality A and causal ascent D are reused
+full-list controls. Keep these groups separate: related cases are not independent
+philosophical corroboration, and no favorable subset was selected after outcomes.
+
+An independent semantic audit selected the target cohort and candidate reference
+routes before production-ranker outcomes and engine edits. Reference annotations
+were completed after baseline candidate counts were reported, before implementation
+and proof outcomes; all initially inspected C2 pairs were retained. The fixture
+is published unchanged as `ac6415f504215acba366462a99a322dfa97dfbcd`, with SHA-256
+`cb1e6d8daf68dfd12238951fa8c46d9a8e2836b272c4d54df914929b4e2d98b7`.
+
+Both engines use corpus `00d3e61cfb7e8f32e89a8444499b065ad370116f`, the same complete
+dependency-closed vocabulary of 12,716 declarations, pool `all` and candidate cap
+eight. Coverage means literal canonical IDs in each frozen bundle: every AND
+member must occur, including explicit excluded middle where listed. Neither proof
+minimization nor implicit classical background changes the reference oracle.
+The reference bundles are not a complete relevance oracle for every possible route.
+
+Proof diagnostics use 10,000 heartbeats in the CLI's thousands unit, batch one,
+one job and no external prover. The rule selects every underfilled baseline case:
+three fresh cases and development B. Nine fresh cases and A/D have full lists;
+unchanged ranked inputs permit reuse of unchanged proof evidence. Exact reference
+bundles and the literal-pair negative diagnostic use the separate explicit-premise
+path on the #1928 integration and do not count as ranked retrieval improvements.
+No referenced Solution theorem or custom proof hint is supplied to search.
+
+### Reference coverage
+
+| Fresh target | Direct candidates | Primary bundle before | Primary bundle after |
+|---|---:|---:|---:|
+| `6280fbf0` eligible uptake yields warranted belief | 3 | 2/2 | 2/2 |
+| `8c6a14f8` goal-relative authority exclusion | 8 | 0/2 | 0/2 |
+| `b391c809` goal-relative actual-force concession | 8 | 0/2 | 0/2 |
+| `c830e937` within-history tracking mismatch | 8 | 2/2 | 2/2 |
+| `475beacf` history-fixed accuracy | 8 | 3/3 | 3/3 |
+| `fe53f4ab` cross-history tracking mismatch | 8 | 2/2 | 2/2 |
+| `7989856a` moral truth-aptness and error | 8 | 2/2 | 2/2 |
+| `6508c239` contingent reception/prior cause, C2 | 8 | 1/2 | 1/2 |
+| `bf4167dc` strong supplementation | 8 | 2/2 | 2/2 |
+| `53716090` reject affection-report-only content | 8 | 2/2 | 2/2 |
+| `f976f890` generic unique existence | 2 | 2/2 | 2/2 |
+| `38eb1610` eligible-uptake negative neighborhood | 3 | Not scored | Not scored |
+
+Baseline primary coverage is 8/11 complete bundles and 18/23 reference occurrences.
+Each additional C2 bundle retrieves one of its two members, giving 8/13 complete
+bundles and 20/27 occurrences across all frozen positive routes. All these figures
+are unchanged after backfill: every fresh target has the same ordered IDs and scores.
+The primary-reference membership precision proxy is also unchanged: 18 matches
+among 77 candidates across the eleven positive cases, or 18/77, with recall 18/23.
+Off-reference does not mean irrelevant: the frozen bundles are not a complete
+semantic-relevance oracle. Coverage does not discharge moral-error's cross-module
+Agent/Sentence identifications or predict proof success.
+
+Only development B changes: two to seven candidates and reference coverage one of
+two to two of two. All five additions have `via: 42114721`; the missing assertion
+`b45ca9db` is the first addition. B's membership proxy is 1/2 before and 2/7 after;
+its reference recall rises from 1/2 to 2/2. This is no held-out gain. A retains
+three of three reference premises; D retains three of five. Both eight-entry lists
+keep identical IDs, order and scores. A full list is not a complete reference bundle.
+
+### Proof and negative-control outcomes
+
+| Case | Before | After | Interpretation |
+|---|---|---|---|
+| Fresh eligible-uptake warrant | Known-filtered proof | Same | Reference bundle already complete before |
+| Fresh generic unique existence | Known-filtered proof | Same | Reference bundle already complete before |
+| Fresh negative uptake neighborhood | Literal-negation filtered | Same | Contradictory pair supplies no support |
+| Development assertion/meaning B | Unresolved | Known-filtered proof | Development recovery, excluded from held-out gains |
+
+The negative neighborhood includes `6280fbf0` (some warranted actual belief) and
+`cbe1661b` (its literal negation), initially at ranks two and three. A reconstructed
+proof from that pair is filtered as `literal_negation` in both ranked runs and the
+separate exact diagnostic. The latter preserves precisely those two requested IDs,
+with null ranking cap and pool. An all-pool run is not a non-entailment test: other
+premises may legitimately support its target. The observed filter is evidence of
+rejection of this literal pair, not of general target non-entailment.
+
+Known-filtered proofs are recoveries, not emitted certified discoveries: their
+`certified` fields are null. B retains `42114721` and `b45ca9db`, with no name-only
+binding, and matches registered argument `8a3dcfc2`. The four-goal runs change from
+two to three known proofs and one to zero unresolved goals; both reject the literal
+pair. New discoveries, incompatibilities, vocabulary theorems and errors are zero.
+Open-premise warrant and actual applicability remain separate obligations.
+
+Total engine times were 716 seconds before, 1,482 after and 525 for exact negative.
+They are not comparable performance measurements: the after run stalled in the
+unchanged vocabulary export under resource pressure, with disposable debug-build
+cache removed during the run. A separate warmed, serialized comparison interleaved
+three samples per engine under the heavy-job lock: baseline 0.494, 0.515, 0.362
+seconds; after 0.367, 0.336, 0.352. Each covers process start, corpus load, cached
+vocabulary read and ranking all fifteen targets, excluding extraction and proof
+search. All were below 0.52 seconds; this small workload does not establish a speedup.
+
+### Remaining gaps and reproduction
+
+The frozen missing bundles are in full lists. Epistemic authority targets
+`8c6a14f8` and `b391c809` omit both reference members. C2 retrieves B2 but omits
+B3 `ee74c678`; its reception alternative retrieves R1 but omits `7fcfcee8`, and its
+weak-form alternative again omits B3. D additionally misses `5cda1946` and
+`ee4ab504`. Backfilling unused slots cannot fix these full-list omissions; they
+remain a distinct ranking problem. The existing well-founded proof-search gap is
+also separate. No new philosophical assumption follows from either limitation.
+
+Published source snapshots are tests-only `b179899fb7020932f35b3fb50af85444e465d8e1`
+and engine `263a6653bd00d0ff6014343bcc70e48605f2d667`, independently based on main
+`6ecc2d87c3576906cb32ea8dbbca22e7557cce6b`. To reproduce the controlled after source,
+apply those two commits to curated baseline `00d3e61c`, then add the frozen fixture
+commit above. This reconstructs the measured code in integration `e49c8a753`;
+it does not make the production change depend on #1928.
+For ranking-only reproduction, load the same corpus with `Corpus::load`, obtain
+`discover::statements`, and export and close the vocabulary with production
+`discover::export_vocabulary` and `discover::close_vocabulary`. Reuse that exact
+export for both engines. Build `SenseTags` and `weaker_siblings` from the same
+corpus and call `discover::rank` with the all-statement pool and limit eight for
+each fixture target. Compare ordered IDs and second-hop `via`; do not reproduce
+the scoring formula in another implementation. The closed-export SHA-256 is
+`2fe7b436115a0f0554188c06edb20359a2726aee0421a88047b1f6dbb4ce3b95`.
+
+For the four proof diagnostics, build the selected engine and use the same corpus
+root and the corresponding fixture target, under the existing heavy-job lock:
+
+```bash
+flock /tmp/moenarch/truth-core-heavy.lock \
+  ENGINE/target/release/truth --root CORPUS --json discover \
+  --target TARGET --premise-pool all --candidates 8 \
+  --heartbeats 10000 --batch 1 --jobs 1
+```
+
+Record engine/corpus/fixture/vocabulary identities with raw reports. The tests-only
+snapshot produced five failures and two passes in its seven focused cases; the
+engine passed 54 discovery unit tests, four exact-CLI integration tests, formatting,
+Clippy, release build, corpus/generator checks and attribution. The independent
+main-based production change leaves its frontier unchanged: 602 support alternatives,
+581 open premises and cost 16. This is separate from the curated measurement corpus.
+Shared-runner timings are informational; no universal speed or precision claim follows.

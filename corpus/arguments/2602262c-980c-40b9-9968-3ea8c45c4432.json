@@ -1,0 +1,16 @@
+{
+  "id": "2602262c-980c-40b9-9968-3ea8c45c4432",
+  "label": "Separate a forced aggregate source share from credit for either particular output",
+  "premise_statement_ids": [
+    "4b73eb6b-a0fe-412c-9b81-838f9029d8b2"
+  ],
+  "conclusion_statement_id": "9f5c2560-1611-4dbb-a72c-c38a0338795e",
+  "inference_ids": [
+    "f4dced8e-7e66-4c91-a610-78d8a0b6568c"
+  ],
+  "meaning": "The two positive-input cases distinguish the role of storage from compulsory consumption. In the exhausted two-output case the source must feed the combined work, but either individual outlet can receive the named unit.",
+  "definition_ids": [
+    "7b20df90-a3d9-41c7-be8b-1d2beb5b995a",
+    "cc5be5e2-5a9d-4831-86c9-32dd91482f5b"
+  ]
+}

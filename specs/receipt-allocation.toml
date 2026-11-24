@@ -1,0 +1,33 @@
+[batch]
+vocab = "TruthCore.Causality.ReceiptAllocation"
+results = "TruthCore.Results.Causality.ReceiptAllocation"
+
+[[statement]]
+id = "Sharp bounds for a named source's contribution to a patient's accounted expenditure"
+lean = "RangeCertificate"
+paraphrase = "In each balanced integer window, the possible named-inlet quantities used in the work run from the expenditure less the pooled opening stock and other receipts (truncated at zero) to the lesser of expenditure and named receipts, inclusive. Every fitting allocation gives the named receipt an actual productive step to that work exactly when expenditure exceeds the pool. The attribution concerns a conserved input used by the specified patient or process. It presupposes warranted boundaries, conservation and the given interpretation of productive use."
+definitions = ["cc5be5e2-5a9d-4831-86c9-32dd91482f5b", "7b20df90-a3d9-41c7-be8b-1d2beb5b995a"]
+
+[[statement]]
+id = "Balanced work can force source participation yet leave its particular output unresolved"
+lean = "Controls"
+paraphrase = "With one stored unit, one named receipt, one unit of work and one remaining, two allocations fit all observed totals. Only one sends the named receipt into the work. With the same inlets, two units of work and none remaining, every fitting allocation sends named input into the combined work. In every such allocation, both assignments of its one named unit to either of two one-unit outputs are compatible with the counts. This tests both the possible source role under a zero lower bound and the scope of a positive lower bound."
+definitions = ["cc5be5e2-5a9d-4831-86c9-32dd91482f5b", "7b20df90-a3d9-41c7-be8b-1d2beb5b995a"]
+
+[[argument]]
+id = "Solve the balanced allocation equations for every feasible named share of work"
+theorem = "sharpRange"
+premises = []
+conclusion = "Sharp bounds for a named source's contribution to a patient's accounted expenditure"
+rule = "Construct a conserving allocation for each intermediate share and derive both bounds from the margins"
+meaning = "Four nonnegative routing entries realize every integer in the specified interval. At a zero lower bound one can construct an allocation with no named input expended. At a positive lower bound every compatible allocation supplies an exercised contributor step to the combined work. Interpreting actual expenditure as productive remains an open application condition."
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+
+[[argument]]
+id = "Separate a forced aggregate source share from credit for either particular output"
+theorem = "controls"
+premises = ["Sharp bounds for a named source's contribution to a patient's accounted expenditure"]
+conclusion = "Balanced work can force source participation yet leave its particular output unresolved"
+rule = "Instantiate the sharp source bound and construct the opposing allocations for identical margins"
+meaning = "The two positive-input cases distinguish the role of storage from compulsory consumption. In the exhausted two-output case the source must feed the combined work, but either individual outlet can receive the named unit."
+axioms = ["propext", "Classical.choice", "Quot.sound"]
