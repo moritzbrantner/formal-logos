@@ -462,6 +462,6 @@ impersonal and theistic accounts both owe a token criterion if they invoke
 this argument. To reopen its application, identify a kind of existential
 contribution whose use in one recipient precludes counting that *same receipt*
 for a second recipient, or demonstrate independent upper-threshold count
-bounds in the grade model. Bounds on measured iron in one feeding apply to
-the material; the capacity by which the child uses iron remains a different
+bounds in the grade model. The incorporation measurements across six feeds apply to
+the material. The capacity by which the child uses iron remains a different
 explanandum. [Nourishment case](wielenberg-making-account.md#does-a-childs-actual-nourishment-identify-its-underived-source-1812)

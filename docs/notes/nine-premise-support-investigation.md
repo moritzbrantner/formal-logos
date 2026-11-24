@@ -232,8 +232,11 @@ features remains open. [Infinite model](distinct-dependence-strict-ground-route.
 ### What a proposed first source explains in three matched tests
 
 The participation argument can rank one giver above or level with each
-recipient while leaving the sign of its net contribution open. Counting distinct
-selected receipts gives a conditional route to a grounding root even without
+recipient while leaving the relay’s balance open when it receives from a
+higher giver and gives to multiple recipients. For the receipt-count argument,
+one selected transfer must have no return path, and the selected exports from
+all bearers reaching its sender must be finite. With those conditions, counting
+distinct receipts gives a conditional route to a grounding root even without
 numerical distances between grades. Its live application premise says that
 each grounded giver's selected exports can be matched to distinct receipts.
 A retained form can guide repeated productions after a single acquisition;

@@ -359,13 +359,16 @@ ancestor of that very child. These two selections answer different questions.
 What would join them is evidence that the latter source gives or sustains the
 organization by which this child makes use of the material.
 
-### One patient, one exercise, a separate duty
+### One patient, a measured course of feeds, a separate duty
 
 Fix the infant in the first row of Table 2 of Davidsson et al. (2000). In
 protocol A the authors estimated that 8.0% of the iron-58 dose in the formula
 was incorporated into this child's circulating erythrocytes, using blood
-isotope enrichment 14 days after feeding began. This is a trace of material
-from a particular input to a particular patient. The study did not measure
+isotope enrichment 14 days after feeding began. The course comprised six
+feeds over about 24 hours. A nurse gave the first two to three bottles and
+parents gave the rest at home. The estimate traces material from the labeled
+course to this patient. It cannot apportion incorporation among bottles or
+caregivers. The study did not measure
 the value of that episode to the child, establish that the child was deficient,
 or adjudicate anyone's care obligations. [Methods, pp. 848–849, and Table 2](https://doi.org/10.1017/S0007114500002464)
 
@@ -393,11 +396,11 @@ with the actual episode.
   *this label* for goodness would give the wrong answer. Conversely, tracing
   iron only as far as the feeding bottle would leave its use in this patient
   unexplained. Delivery and incorporation have different success conditions.
-- **Change who undertook the care.** Keep this child's need, feed, actual
-  feeder and bodily result fixed. Suppose one of two able adults had undertaken
-  to arrange that feeding, inducing the others to rely on it. Exchange only
+- **Change who undertook the care.** Keep this child's need, the six feeds, who
+  administered each and the aggregate bodily result fixed. Suppose one of two
+  able adults had undertaken to arrange the course, inducing reliance. Exchange only
   who gave the undertaking and who was relied upon. On the proposed
-  responsibility principle the special *pro tanto* duty to arrange the feed
+  responsibility principle the special *pro tanto* duty to arrange the course
   changes hands. Its bearer can arrange successful feeding by another.
   Incorporation in the patient can be identical in either case. This tests a
   normative interpretation of the case, without ascribing the hypothetical
@@ -408,8 +411,8 @@ with the actual episode.
 
 Iron mass admits additive accounting. Incorporation is something the child
 *does with* an input. A feeder can repeatedly supply iron without losing
-an equivalent quantity of their own capacity for incorporation. A second
-feeding can realize the same function again. Neither observation assigns
+an equivalent quantity of their own capacity for incorporation. Repeated
+feeding can support repeated operation of the same capacity. Neither point assigns
 additive units of that capacity to the feeder–child edge. The percentage in
 Table 2 measures the fate of a dose, not the sum of transfers across every
 edge in an ancestry. On a short feeding ledger a bottle with an opening stock
@@ -445,11 +448,11 @@ The participation account has a positive answer at an intermediate strength.
 If a source sustains the *specific organization* that takes up and incorporates
 iron with either material input, it helps explain why either supply
 can realize the same good. Its contribution reaches the child's standing
-capacity and, when that organization actually operates in this feeding,
-mediates a contribution to the exercise. The feeder can still explain why
-the exercise occurred then with this material. The specifically moral input
+capacity and, when that organization operates during the course,
+mediates a contribution to the exercise. The nursing and parental deliveries can explain how
+the labeled material was available during this interval. The specifically moral input
 survives at a different point: it constrains which outcome an adequate account
-of care should explain. An account that made this feeder or this isotope
+of care should explain. An account that made one particular caregiver or this isotope
 indispensable to fulfilling the child's need would miss the two substitutions.
 Both a basic norm keyed to the child's need and a wise ordering to that need
 can respect this constraint. An independently warranted exemplar in *s* could
@@ -461,7 +464,7 @@ inherent in the child and allows distinct causes to explain different aspects
 of one event. It does not require an extra efficient cause to stamp the
 completed event with value. A natural source can earn exactly the same
 credit on exactly the same evidence. Neither source's efficient contribution
-by itself selects the proper end or constitutes an undertaking by the feeder.
+by itself selects the proper end or constitutes a caregiver’s undertaking.
 [Participation and production control](../participation-grounding.md#the-mechanically-checked-consequences)
 · [Secondary-only interpretation, 38c52f02](../../corpus/arguments/CAUSAL-PERFECTION-TRANSFER-SECONDARY-ONLY-RIVAL.json)
 
