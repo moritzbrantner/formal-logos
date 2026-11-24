@@ -2620,8 +2620,8 @@ not a certified joint model.
 
 This is a matrix of **candidate explanatory strategies**, not six
 complete worldviews, a proved compatibility matrix or an exhaustive
-partition. The modal, temporal, causal and cognitive signatures have
-only been combined in the scoped controls named above. #1891 establishes
+partition. These controls combine subsets of the modal, temporal, causal
+and cognitive signatures. There is no single checked structure for all four. #1891 establishes
 a conjunction on the ancestry-ground reading in its supplied model. #1879
 concerns source self-knowledge under its own assumptions. Will, omniscience,
 free creation and GOD_4 require further bridges.
@@ -2722,9 +2722,9 @@ The following are the remaining claims most directly relevant to that move.
 
 | Corpus proposition or connection | Discriminating question |
 | --- | --- |
-| **20babef7**, rootedness of every nonempty closed collection of actual esse-suppliers | Does complete per se productive dependence itself require an underived supplier, or can a globally admitted, positively actual whole supply what the account needs? The existing positive judgment favors rootedness only in the selected exhaustive productive sense. |
-| **20d5fecd** and **823d4312**, contingency's two power channels and unconditional exercise of esse in an esse-identical nature | With the same actual foundational individual fixed, what warrants the power disjunction or the exercise-in-nature bridge for its possible absence? The rival says nature governs the act whenever the bearer exists. The warrant remains at parity in #1887. |
+| **20babef7**, rootedness of every nonempty collection of actual esse bearers closed under all their distinct actual esse suppliers | Does complete per se productive dependence itself require an underived supplier, or can a globally admitted, positively actual whole supply what the account needs? The existing positive judgment favors rootedness only in the selected exhaustive productive sense. |
+| **20d5fecd** and **823d4312**, contingency's two power channels and unconditional exercise of esse in an esse-identical nature | For this same foundational individual, does possible absence require one of the two power channels, and does the profile exclude both? Does identity of esse and essence require unconditional exercise, with a warranted act–fact and modal bridge? The existence-conditional account governs the act where the bearer exists. #1887 retains parity at the fixed case between power completeness and the warrant for this conditional alternative. |
 | **40a97664**, weak concurrent actualization | Does the same actually received esse require productive giving whenever its bearer is present? Origin-plus-law can meet the ancestry-ground test conditionally. Its lawhood at this existential scope and the necessity of present giving are the disputed claims. |
-| **180f5ad2** and the source-to-intrinsic-cognition bridge | Does double noncomposition give this bearer intellectual capacity, and what warrants its own actual apprehension? Genuine cognition in its effects and objective exemplarity leave the source's exercise open. |
+| **180f5ad2** and the source-to-intrinsic-cognition bridge | Does being neither a matter–form composite nor a component of anything give this bearer intellectual capacity, and what warrants its own actual apprehension? Genuine cognition in its effects and objective exemplarity leave the source's exercise open. |
 | **1ac7429d** and **1822b59d**, selected-content knowing and optimal choice | Can this same simple source adopt an effective practical specification with genuinely contingent fulfillment? Distinguish actual directed exercise, factive reference to the particular product, and an exhaustive explanation of the choice. See #1737 for the open interfaces. |
-| **8626f8a5**, GOD_4 existence | Which premises identify the actual supplier, necessary concretum, giver and knowing subject as one bearer, and which secure the required profile across the relevant worlds? Compare #1890's conditional completion with the separate question of metaphysical admissibility. |
+| **8626f8a5**, GOD_4 existence, and #1890's stronger fixed-profile target | For actual GOD_4 naming, which existing route's premises would qualify this bearer? Separately, what would show that the actual supplier, necessary concretum, giver and knowing subject can be one bearer with the full profile across the relevant worlds? #1890's conditional completion addresses that second target. It supplies no independent warrant for metaphysical admissibility. |
