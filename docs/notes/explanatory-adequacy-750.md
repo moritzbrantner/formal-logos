@@ -1165,8 +1165,8 @@ rational-power exercise result; the strong-simplicity realization
 of an operative content remains OPEN.
 
 **Provisional synthesis (unreviewed; prior accepted judgment
-unchanged).** The strongest rival coherently contains local
-unexplained existences and may contain epistemic
+unchanged).** The strongest rival can confine the lack of local reasons
+to its foundation in the displayed interpretation and may contain epistemic
 underdetermination. It cannot answer the inclusive actuality
 question while insisting that its included B has no adequate
 existential reason. The comparative advantage of a successful
@@ -1201,3 +1201,111 @@ asymmetric explanatory demands rejected; no new source
 attribution, result, definition, or registered edge; no
 supersession of a reviewed judgment. Independent challenge
 and hosted validation remain pending.
+
+
+### Checkpoint 4: a narrower root-facing burden and fundamentality test
+
+The existing B2 proof uses a universal premise; the downstream proof uses
+only its instance for the same first mover. Inspect the actual
+`firstMoverNecessaryByEsseCause` Solution:
+`TruthCore/Results/Causality/FirstMoverNecessity/Solution.lean`. It obtains
+f from `hThere`, obtains actual existence via B0, carries pure act, then
+for any accessible v in which f is absent invokes
+`hCause f ⟨hfw, v, hv, h⟩`. B3 converts the resulting distinct esse-cause
+into simple priority, and B1 makes that cause identical to f, contrary
+to distinctness. Excluded middle supplies existence at each v. There
+is no invocation of B2 for another bearer.
+
+A candidate weaker bridge for this specific route (analyst formulation,
+not a registered or independently verified theorem) would replace
+`hCause : ContingentHasDistinctEsseCause F w` by the hypothesis
+
+```lean
+hCauseForMover :
+  ∀ f, IsFirstUnmovedMover MovedIn F.MovesIn f →
+    ContingentAt F.history.ontic w f →
+    ∃ c, c ≠ f ∧ F.CausesIn c f F.esse
+```
+
+with the identical other premises and conclusion. The proof would use
+`hCauseForMover f hf ⟨hfw, v, hv, h⟩` in the one line above. This
+is a proposed strength restriction of the existing result, not a
+new proof of B2 or a claim of novelty. The actual declaration
+signature of `IsFirstUnmovedMover` and the existing related,
+novelty and semantics dossiers must be checked locally before
+registration. If already present, reuse it. The analogous
+restriction of the PSR/BX1/BX2 reasoning need only cover reasons
+for the same contingent mover, and must retain the distinction
+between the existence-token predicate and adequacy. B0, B1, B3,
+excluded middle, existence of a first unmoved mover and the pure-act
+premise remain as in the existing theorem. This does not identify the
+rival's B with f.
+
+This restriction has a substantive methodological implication. In
+comparing the first mover with a brute ultimate source, it is not
+necessary to prove that every contingent entity in every ontology
+has an adequate existential reason before examining why the relevant
+candidate first mover would have one. But the exemption is precisely
+what the rival claims about that candidate. A scope reduction may
+therefore reduce irrelevant commitments without resolving the
+disagreement.
+
+Consider the following positive candidate criteria for a primitive
+existential stop, instead of defining the foundation as just
+whatever lacks an explanation.
+
+| Proposed criterion | What it contributes | What would be needed for the actuality question |
+| --- | --- | --- |
+| Dependence-priority or no productive predecessors | Identifies a terminus in the selected order | The implication from that priority to eligible existential primitivity; noncausal reason or an independent intrinsic account is not yet excluded |
+| Invariant intrinsic constitution, if the bearer exists | Explains or fixes constitution conditional on the bearer | An actual existentially relevant reason, not just a conditional description of the bearer |
+| A uniquely possible bearer of a necessarily occupied role | Gives necessary existence of the same bearer, if uniqueness is rigid and all accessible worlds are covered | Warrant for the rigidity and necessary occupancy; necessary existence alone is still not an adequate why |
+| Intrinsic self-intelligibility not borrowing actual existence | Could directly answer the existential question | Content and warrant of the nature-to-existence relation; this is incompatible with stipulated complete absence of a reason, but not by definition with nonnecessitating explanation |
+
+This identifies a more precise burden than "why is the foundation
+fundamental?" If fundamentality supplies an adequate existential
+reason, the proposed rival is no longer brute in that sense.
+If it supplies a principled license for not seeking such a reason,
+the rival can retain bruteness without contradiction; the license
+must be evaluated as a methodological or ontological claim in its
+own right. If it supplies only a terminus label, it does not
+settle either question. Direct warrant for a stopping criterion
+remains a legitimate option. No demonstrated contradiction follows
+from dependence-priority and modal contingency alone.
+
+This also isolates BX1 and BX2 rather than smuggling them into E.
+A productive self-explanation by an already actual bearer is
+problematic as an explanation of that very actuality: if it needs
+that actuality as an unaccounted input, the non-borrowing test
+applies. A constitutive reason explaining a bearer's intrinsic
+profile may be perfectly adequate for the profile without
+explaining why the bearer exists. A nature that entails the
+bearer's existence at every accessible world would remove its
+contingency, given the relevant warrant and modal interpretation.
+These cases provide reasons for a restricted no-self-explanation
+demand, but do not yet rule out every admissible noncausal,
+nonnecessitating intrinsic reason token (BX1's exact scope).
+Similarly, a reason token about another bearer need not
+automatically describe that bearer's productive giving of esse;
+BX2 remains a substantive interpretation bridge. Reason
+coverage alone supplies neither causal priority nor the First
+Way's identification conditions.
+
+The most useful next step is a scoped comparison of the
+foundation's own nature as a proposed *existence* reason versus
+a merely conditional essence, on the existing B6 and C2
+frames. Test the same bearer, not an independently necessary
+substitute; examine both direct intrinsic warrant and the
+rival's license for a brute stop. Reuse the existing
+`natureModel` in `BruteContingencyParity` and the existing
+reception/esse-identity results before creating any statement.
+No further philosophical judgment or formal status is changed
+by the proof inspection in this checkpoint.
+
+**Verification disposition:** the actual existing Solution bodies
+for `esseCauseFromExistenceReasons` and
+`firstMoverNecessaryByEsseCause` were inspected at the parent
+revision; the latter calls its universal B2 hypothesis once for f.
+The proposed restricted proof has not been elaborated or novelty-
+checked by the Truth CLI; no new Lean/corpus proof is registered.
+Keep the scoped route and both adequacy applications OPEN for
+independent semantic review and canonical verification.
