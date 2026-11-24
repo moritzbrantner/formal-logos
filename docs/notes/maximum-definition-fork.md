@@ -1002,9 +1002,9 @@ answer by itself explains why the subsistent source is actual at all.
    The universal claim also compares bearers lacking intellect.
    [Reflective comparison](../../corpus/results/87de8ed8-dfd7-4001-8396-e31008fb3641.json)
 
-**Test on the same individual.** Two histories can deliver the same opening
-pulse and establish the same local organization in the daughter while different
-agents send the effective pulse. The source can grasp that organization and
+**Test on the same individual.** In two histories the daughter's inlet opens at the same
+time and the same local organization is established, while different agents
+send the effective pulse. The source can grasp that organization and
 truly understand something about the daughter in either history. Knowing
 which sender acted requires content that distinguishes those histories. In
 the positive comparison the source understands its own order to a specific
