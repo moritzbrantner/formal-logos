@@ -2174,3 +2174,29 @@ same-source operative-adoption interpretation now at issue. The current
 continuation grants successful containment, so it does not reactivate
 the prior effort to prove unrestricted admission. No new certificate
 or imported definition is changed by this reconciliation.
+
+#### Continuation review and publication disposition
+
+The continuation is published in [PR #1933](https://github.com/moritzbrantner/formal-logos/pull/1933),
+branch `agent/existential-inheritance`. Fresh independent semantic challenge
+accepted the qualified outcome at local `7444a9d25deabe0440dd64309f03451552fabce5`,
+including PR draft SHA-256
+`f78a0640694c6985214bba3d5e6c1fa67f53783b4e17cb23cdee5dbcfc3498df`.
+The initial challenge found two summary mismatches: the primitive-adoption
+row had to name its enlarged independent basis, and the graph had to
+separate exact target equality from semantic record truth while retaining
+assertoric scope. An obsolete aggregate status excerpt was also removed.
+Targeted pass 1 accepted those repairs and the integration of merged #1927
+with both earlier assessment histories intact. No new theorem, model or
+premise was introduced by the repairs.
+
+The GitHub-resolvable reviewed snapshot is `5db0fd7bf98b6c9774edc6ea0272322251cbe228`.
+Its fetched tree `cbd275bc36e41a95271da9e07be6b9878317da6a` is identical to the accepted
+local snapshot. Subsequent changes record this review/publication disposition;
+canonical build, binding, Comparator/NanoDa and final-head CI evidence are
+reported in the PR. These are separate checks from semantic interpretation.
+The current assessments name the same reviewed snapshot and retain the
+operative-practical-content, actual-channel, historical-target, adequacy and
+normative-policy application blockers described above. This publication is
+a reviewed research contribution, not a merge or an unconditional worldview
+conclusion.
