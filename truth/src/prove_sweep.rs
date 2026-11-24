@@ -46,7 +46,19 @@ const SORRY_WARNING: &str = "declaration uses `sorry`";
 /// Imports the portfolio needs besides the Challenge's own (`tauto` is
 /// Mathlib's; Aesop ships with Mathlib; `decide`, `omega`, `simp_all` and
 /// `grind` are core).
-const PORTFOLIO_IMPORTS: &[&str] = &["Mathlib.Tactic.Tauto", "Aesop"];
+pub const PORTFOLIO_IMPORTS: &[&str] = &["Mathlib.Tactic.Tauto", "Aesop"];
+
+/// Default `maxHeartbeats` (raw thousands) of each portfolio attempt: a tenth
+/// of Lean's default. `truth discover` runs the same portfolio under it.
+pub const DEFAULT_HEARTBEATS: u64 = 20_000;
+
+/// The portfolio tactic of `label`, if it is one.
+pub fn portfolio_tactic(label: &str) -> Option<&'static str> {
+    PORTFOLIO
+        .iter()
+        .find(|(l, _)| *l == label)
+        .map(|(_, tactic)| *tactic)
+}
 
 /// The scratch file's own tactics: `prove_sweep_unfold` delta-unfolds the
 /// project (`TruthCore`) definitions in the goal and hypotheses, repeatedly;

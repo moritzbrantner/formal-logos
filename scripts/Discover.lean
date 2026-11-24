@@ -25,8 +25,12 @@ but the named statement declarations becomes a hypothesis.
 Search. The goal's hypotheses and conclusion are delta-expanded through every
 project (`TruthCore.`) definition whose type ends in `Prop` and that is not a
 projection or instance, transitively; this is definitional, so the kernel
-accepts a proof of the expanded goal for the original one. `duper [*]` runs
-under `maxHeartbeats` HEARTBEATS (thousands). When ZIPPERPOSITION names an
+accepts a proof of the expanded goal for the original one. The tactic
+portfolio of `truth prove-sweep` (configuration `"portfolio"`, each tactic
+under `"portfolio_heartbeats"`) runs first, then `duper [*]` under
+`maxHeartbeats` HEARTBEATS (thousands). A proof that rests on a project
+theorem outside the bundle (a library `@[simp]`/`@[grind]` lemma) is rejected
+and listed as `outside_bundle_rejected`. When ZIPPERPOSITION names an
 executable, lean-auto is tried next with Zipperposition as premise selector
 (`auto.tptp.premiseSelection`) and Duper as its native prover, so its proof
 is again reconstructed in Lean and kernel-checked; the external prover is
@@ -162,7 +166,10 @@ partial def bind (tags : Array (Name × Name × String)) (strict : Bool)
     let bundle ← isStructureType d
     for (x, o) in xs.zip origins do
       let xbi ← x.fvarId!.getBinderInfo
-      let sameName := (← x.fvarId!.getUserName).eraseMacroScopes == n.eraseMacroScopes
+      -- The outer binder's *declared* name: a binder renamed on entry (`w_3`,
+      -- because the target already has a `w`) keeps its declaration's name
+      -- for the same-module convention.
+      let sameName := o.binder.eraseMacroScopes == n.eraseMacroScopes
       let authored := (sameName && o.module == module) || (sense.any wholeBinderTag && o.sense == sense)
       let fallback := !strict && (carrier || bundle) && sameName && !authored
       let allowed := if bi.isInstImplicit then xbi.isInstImplicit else authored || fallback
@@ -263,6 +270,69 @@ def proverTactic (u : Unfolding) (prover : TSyntax `tactic) : TermElabM (TSyntax
   let eqs ← simpArgs u.eqns
   `(tactic| ((try simp only [$eqs,*] at *); all_goals ($prover:tactic)))
 
+/-- The tactic portfolio of `truth prove-sweep` (`PORTFOLIO` in
+`truth/src/prove_sweep.rs`, passed in by `truth discover` as `"portfolio"`):
+each tactic, parsed from its text, runs on the delta-expanded goal under its
+own budget (`"portfolio_heartbeats"`, raw `maxHeartbeats` thousands as in
+`truth prove-sweep`) before Duper. A closed attempt is kernel-checked like a
+Duper proof. `rejected` collects attempts that closed the goal only through a
+project theorem outside the bundle (`projectTheorems`). -/
+structure Portfolio where
+  tactics : Array (String × Syntax) := #[]
+  heartbeats : Nat := 20000
+  rejected : Option (IO.Ref (Array Json)) := none
+
+/-- The prover-name prefix of a portfolio attempt (`portfolio:unfold+grind`). -/
+def portfolioPrefix : String := "portfolio:"
+
+/-- Whether `n` is generated for a declaration rather than stated as a lemma:
+equation lemmas (`f.eq_1`, `f.eq_def`), constructor injectivity, `sizeOf`
+specifications and `@[ext]` lemmas of a structure. -/
+def generatedTheorem (env : Environment) (n : Name) : Bool :=
+  match n with
+  | .str p s => env.contains p && ((s.startsWith "eq_" && (s.drop 3).all Char.isDigit) ||
+      s == "eq_def" || s == "eq_unfold" || s == "injEq" || s == "inj" || s == "sizeOf_spec" ||
+      s == "ext" || s == "ext_iff")
+  | _ => false
+
+/-- The project (`TruthCore.`) theorems a proof term rests on, looking through
+auxiliary lemmas (internal names) the tactic created. A portfolio tactic such
+as `simp_all`, `aesop` or `grind` may use any `@[simp]` or `@[grind]` theorem
+of the imported library: such a theorem is a premise outside the bundle, and a
+proof that uses one is rejected (`truth discover` filters the same at
+certification, `outside_bundle`). Generated lemmas (`generatedTheorem`) and
+definitions are vocabulary, not premises. -/
+partial def projectTheorems (e : Expr) : MetaM (Array Name) := do
+  let env ← getEnv
+  let mut seen : NameSet := {}
+  let mut todo := e.getUsedConstants.toList
+  let mut out : Array Name := #[]
+  while !todo.isEmpty do
+    let n := todo.head!
+    todo := todo.tail!
+    if seen.contains n then continue
+    seen := seen.insert n
+    let some info := env.find? n | continue
+    let user := (privateToUserName? n).getD n
+    if n.isInternal && !isPrivateName n then
+      -- An auxiliary lemma or definition the tactic created: look inside.
+      if let some v := info.value? then todo := v.getUsedConstants.toList ++ todo
+      continue
+    if let .thmInfo _ := info then
+      if (`TruthCore).isPrefixOf user && !generatedTheorem env n then out := out.push user
+  return out
+
+/-- `#discover_external thm`: logs `discover-external: [names]`, the project
+theorems the proof of `thm` rests on (`projectTheorems`); `truth discover`
+runs it after each theorem of its certification file. -/
+syntax (name := discoverExternal) "#discover_external " ident : command
+
+@[command_elab discoverExternal] def elabDiscoverExternal : Command.CommandElab := fun stx => do
+  let n := stx[1].getId
+  let some (.thmInfo t) := (← getEnv).find? n | throwError "unknown theorem {n}"
+  let names ← Command.liftTermElabM (projectTheorems t.value)
+  logInfo m!"discover-external: {Json.arr (names.map (Json.str ·.toString)) |>.compress}"
+
 structure Proved where
   prover : String
   used : Array Nat
@@ -285,23 +355,27 @@ def kernelCheck (prover : String) (used : Array Nat) (stmt value : Expr) :
 context of `xs`, with the expanded types; returns the prover, the hypotheses the
 kernel-checked proof uses, and its axioms. -/
 def prove (xs : Array Expr) (hyps : Array (Nat × Expr)) (concl : Expr) (u : Unfolding)
-    (heartbeats : Nat) (zip : String) (duperOnly : Bool := false) : TermElabM (Option Proved) := do
+    (heartbeats : Nat) (zip : String) (duperOnly : Bool := false) (pf : Portfolio := {}) :
+    TermElabM (Option Proved) := do
   let concl' ← expand u concl
   let hypTys ← hyps.mapM fun (i, h) => return (i, ← expand u h)
-  -- Each prover runs plain first; the variant that evaluates value
-  -- definitions by their equations (`proverTactic`) is only a fallback, so a
-  -- proof that treats such a definition as an opaque symbol is kept, and the
-  -- name records which variant closed the goal (`+equations`).
+  -- The prove-sweep portfolio first, each tactic under its own (small)
+  -- budget; then Duper. Each prover runs plain first; the variant that
+  -- evaluates value definitions by their equations (`proverTactic`) is only a
+  -- fallback, so a proof that treats such a definition as an opaque symbol is
+  -- kept, and the name records which variant closed the goal (`+equations`).
+  let mut provers : Array (String × Syntax × Nat) :=
+    pf.tactics.map fun (label, tac) => (portfolioPrefix ++ label, tac, pf.heartbeats)
   let duper ← `(tactic| duper [*])
-  let mut provers : Array (String × Syntax) := #[("duper", duper)]
+  provers := provers.push ("duper", duper, heartbeats)
   if !u.eqns.isEmpty then
-    provers := provers.push ("duper+equations", ← proverTactic u duper)
+    provers := provers.push ("duper+equations", ← proverTactic u duper, heartbeats)
   if !duperOnly && !zip.isEmpty then
     let auto ← `(tactic| auto)
-    provers := provers.push ("auto+zipperposition", auto)
+    provers := provers.push ("auto+zipperposition", auto, heartbeats)
     if !u.eqns.isEmpty then
-      provers := provers.push ("auto+zipperposition+equations", ← proverTactic u auto)
-  for (name, tac) in provers do
+      provers := provers.push ("auto+zipperposition+equations", ← proverTactic u auto, heartbeats)
+  for (name, tac, heartbeats) in provers do
     let saved ← saveState
     let result ← tryCatchRuntimeEx (do
         let opts := (← getOptions)
@@ -333,10 +407,19 @@ def prove (xs : Array Expr) (hyps : Array (Nat × Expr)) (concl : Expr) (u : Unf
             return some (used, stmt, ← instantiateMVars value))
       (fun _ => pure none)
     -- The kernel check runs outside the search budget, synchronously, so its
-    -- axioms are those of the finished theorem.
+    -- axioms are those of the finished theorem. A proof that rests on a
+    -- project theorem outside the bundle (a `@[simp]` or `@[grind]` lemma a
+    -- portfolio tactic found in the library) is no proof from these premises.
     let result ← match result with
       | none => pure none
-      | some (used, stmt, value) => kernelCheck name used stmt value
+      | some (used, stmt, value) => do
+        let outside ← projectTheorems value
+        if outside.isEmpty then kernelCheck name used stmt value else
+          if let some r := pf.rejected then
+            let j := Json.mkObj [("prover", Json.str name),
+              ("outside_bundle", Json.arr (outside.map (Json.str ·.toString)))]
+            r.modify fun a => if a.contains j then a else a.push j
+          pure none
     saved.restore (restoreInfo := true)
     if let some p := result then return some p
   return none
@@ -363,9 +446,9 @@ only another statement (the target, a dropped premise) introduces: `∀ y : B,
 R y ∧ ¬ R y` is refuted only given some `x : B`, and is satisfiable over an
 empty `B`. -/
 def proveOwn (xs : Array Expr) (hyps : Array (Nat × Expr)) (concl : Expr) (u : Unfolding)
-    (heartbeats : Nat) : TermElabM (Option Proved) := do
+    (heartbeats : Nat) (pf : Portfolio := {}) : TermElabM (Option Proved) := do
   let (xs', lctx, insts) ← ownContext xs ((hyps.map (·.2)).push concl)
-  withLCtx lctx insts <| prove xs' hyps concl u heartbeats "" (duperOnly := true)
+  withLCtx lctx insts <| prove xs' hyps concl u heartbeats "" (duperOnly := true) pf
 
 /-- A literal negation in an inconsistent core: indices `(i, j)` of two core
 members where hypothesis `j` is definitionally (delta, default transparency)
@@ -390,7 +473,7 @@ def literalNegation (hyps : Array (Nat × Expr)) (core : Array Nat) (heartbeats 
 /-- Deletion minimization: drop each remaining premise in turn and keep it
 dropped when Duper still proves the goal. -/
 def minimize (xs : Array Expr) (hyps : Array (Nat × Expr)) (concl : Expr) (u : Unfolding)
-    (heartbeats : Nat) (start : Proved) (own : Bool := false) :
+    (heartbeats : Nat) (start : Proved) (own : Bool := false) (pf : Portfolio := {}) :
     TermElabM (Array Nat × Array Json × Proved) := do
   let mut current := start.used
   let mut best := start
@@ -399,8 +482,8 @@ def minimize (xs : Array Expr) (hyps : Array (Nat × Expr)) (concl : Expr) (u : 
     unless current.contains i do continue
     let without := current.filter (· != i)
     let sub := hyps.filter fun (j, _) => without.contains j
-    let attempt ← if own then proveOwn xs sub concl u heartbeats
-      else prove xs sub concl u heartbeats "" (duperOnly := true)
+    let attempt ← if own then proveOwn xs sub concl u heartbeats pf
+      else prove xs sub concl u heartbeats "" (duperOnly := true) pf
     match attempt with
     | some p =>
       log := log.push (Json.mkObj [("premise", toJson i), ("outcome", "dropped")])
@@ -945,47 +1028,103 @@ def withProjection (xs : Array Expr) (hyps : Array (Nat × Expr)) (concl : Expr)
       b := body
     k ys hs b
 
+/-- Whether hypothesis `h` mentions the introducer of a binding choice: the
+premise structure binder of a projection (a free variable), or the term of a
+term binding, which the premise builds in its delta-expanded statement. -/
+def mentions (u : Unfolding) (h e : Expr) : MetaM Bool := do
+  if e.isFVar then return h.containsFVar e.fvarId!
+  -- `a.occurs b`: `a` occurs in `b`.
+  return e.occurs (← expand u h)
+
+/-- The closed applications of project definitions in `e`, outermost first
+(`groundProfile F concrete G` inside `ActualRoot (groundProfile F concrete G) w n`). -/
+partial def definitionTerms (env : Environment) (e : Expr) : Array Expr :=
+  let here := match e.getAppFn with
+    | .const c _ =>
+      if (`TruthCore).isPrefixOf c && e.getAppNumArgs > 0 && !e.hasLooseBVars &&
+          (env.getProjectionFnInfo? c).isNone && (match env.find? c with
+            | some (.defnInfo _) => true
+            | _ => false) then #[e] else #[]
+    | _ => #[]
+  here ++ match e with
+    | .app f a => definitionTerms env f ++ definitionTerms env a
+    | .lam _ d b _ | .forallE _ d b _ => definitionTerms env d ++ definitionTerms env b
+    | .letE _ t v b _ => definitionTerms env t ++ definitionTerms env v ++ definitionTerms env b
+    | .mdata _ b | .proj _ _ b => definitionTerms env b
+    | _ => #[]
+
+/-- Term binding choices: `(i, term)` where target binder `xs[i]` (a value,
+under the same restrictions as a projection) has the type of a term that a
+premise builds from outer binders by a project definition: an adapter from the
+shared frame such as `groundProfile F concrete G`, which
+`ActualRootsWithholdEachGrounded F concrete G w` applies (#1784, #1926). The
+terms are read from the delta-expanded premises and must not mention `xs[i]`.
+Like a projection, the choice is explicit, reported and a specialization of
+the target to that term. -/
+def termCandidates (target : Name) (xs : Array Expr) (origins : Array Origin)
+    (hyps : Array (Nat × Expr)) (u : Unfolding) : MetaM (Array (Nat × Expr)) := do
+  let env ← getEnv
+  let mut terms : Array Expr := #[]
+  for (_, h) in hyps do
+    for t in definitionTerms env (← expand u (← instantiateMVars h)) do
+      unless terms.contains t do terms := terms.push t
+  let mut out : Array (Nat × Expr) := #[]
+  for i in [0:xs.size] do
+    let x := xs[i]!
+    unless origins[i]!.decl == target do continue
+    if (← x.fvarId!.getBinderInfo).isInstImplicit then continue
+    let xt ← instantiateMVars (← inferType x)
+    if xt.isSort || (← isProp xt) then continue
+    if ← forallTelescopeReducing xt fun ys _ => pure !ys.isEmpty then continue
+    for t in terms do
+      if t.containsFVar x.fvarId! then continue
+      let tt ← try inferType t catch _ => continue
+      if ← withoutModifyingState (isDefEq tt xt) then out := out.push (i, t)
+  return out
+
 /-- Everything after the goal closed: minimization, the incompatibility core
 and its literal-negation check, the transcription probe, vacuous truth,
 witnesses and the theorem signature. -/
 def finish (target : Name) (premises : Array Name) (heartbeats : Nat)
     (byName : IO.Ref (Array Membership)) (xs : Array Expr) (hyps : Array (Nat × Expr))
     (concl : Expr) (u : Unfolding) (added : Array Json) (full : Proved) (projection : Json)
-    (structureBinder : Option Expr := none) (alternatives : Array (Nat × String) := #[]) :
+    (introducer : Option Expr := none) (alternatives : Array (Expr × String) := #[])
+    (pf : Portfolio := {}) :
     TermElabM Json := do
-    -- Duper is the authority for the Solution: re-prove an ATP-found goal on its core.
-    let start ← if full.prover.startsWith "duper" then pure (some full) else
-      prove xs (hyps.filter fun (i, _) => full.used.contains i) concl u heartbeats "" (duperOnly := true)
+    -- Duper (or a portfolio tactic, also run in Lean) is the authority for the
+    -- Solution: re-prove an ATP-found goal on its core.
+    let start ← if full.prover.startsWith "duper" || full.prover.startsWith portfolioPrefix then
+        pure (some full) else
+      prove xs (hyps.filter fun (i, _) => full.used.contains i) concl u heartbeats "" (duperOnly := true) pf
     let some start := start
       | return Json.mkObj [("binders", toJson added), ("alone", Json.null), ("closed", proved (some full)),
           ("projection", projection),
           ("reconstruction", "Duper did not reprove the premise core the external prover selected")]
-    let (minimal, log, best) ← minimize xs hyps concl u heartbeats start
+    let (minimal, log, best) ← minimize xs hyps concl u heartbeats start (pf := pf)
     let minHyps := hyps.filter fun (i, _) => minimal.contains i
     -- A projection choice is ambiguous when another structure binder (or
     -- another field of the same one) with a field of the target binder's type
     -- survives minimization: an alternative that only a dropped premise
     -- introduced is no part of the theorem (#1845).
+    let retained ← alternatives.filterM fun (e, _) => minHyps.anyM fun (_, h) => mentions u h e
     let projection := if alternatives.isEmpty then projection else
-      let retained := alternatives.filter fun (k, _) => match xs[k]? with
-        | some y => minHyps.any fun (_, h) => h.containsFVar y.fvarId!
-        | none => false
       let dropped := alternatives.filter fun a => !retained.any (·.2 == a.2)
       projection
         |>.setObjVal! "ambiguous" (Json.bool (retained.size > 1))
         |>.setObjVal! "alternatives" (toJson (retained.map (·.2)))
         |>.setObjVal! "dropped_alternatives" (toJson (dropped.map (·.2)))
-    -- Under a projection binding, a minimal premise must still speak of the
-    -- structure binder: otherwise the premise that introduced it was dropped
-    -- and the "derivation" is about the structure alone (`projection_unused`).
-    let projectionUnused := match structureBinder with
-      | some y => !minHyps.any fun (_, h) => h.containsFVar y.fvarId!
-      | none => false
+    -- Under a projection (or term) binding, a minimal premise must still speak
+    -- of the structure binder (or build the term): otherwise the premise that
+    -- introduced it was dropped and the "derivation" is about the structure
+    -- alone (`projection_unused`).
+    let projectionUnused ← match introducer with
+      | some y => (!·) <$> minHyps.anyM fun (_, h) => mentions u h y
+      | none => pure false
     -- An incompatibility is checked over the premises' own binders only (`proveOwn`).
-    let vacuous ← proveOwn xs minHyps (Lean.mkConst ``False) u heartbeats
+    let vacuous ← proveOwn xs minHyps (Lean.mkConst ``False) u heartbeats pf
     let (vacuousCore, core, coreNames, coreProof) ← match vacuous with
       | some v => do
-        let (core, _, best) ← minimize xs minHyps (Lean.mkConst ``False) u heartbeats v (own := true)
+        let (core, _, best) ← minimize xs minHyps (Lean.mkConst ``False) u heartbeats v (own := true) (pf := pf)
         pure (toJson core, core, core.filterMap fun i => premises[i]?, some best)
       | none => pure (Json.null, #[], #[], none)
     -- A core that is a premise and its literal negation (`truth discover`
@@ -1039,7 +1178,7 @@ def finish (target : Name) (premises : Array Name) (heartbeats : Nat)
           if ← isProp (← inferType y) then props := true
         if !props then return none
         let noB ← mkForallFVars ys (Lean.mkConst ``False)
-        prove xs minHyps noB u' (max 2000 (heartbeats / 4)) "" (duperOnly := true)
+        prove xs minHyps noB u' (max 2000 (heartbeats / 4)) "" (duperOnly := true) pf
       pure refuted.isSome
     -- Joint witness (premises and conclusion) and one-point omission models.
     let (joint, omissions) ← if vacuous.isSome then pure (none, #[]) else do
@@ -1081,7 +1220,7 @@ def finish (target : Name) (premises : Array Name) (heartbeats : Nat)
 
 def trial (target : Name) (premises : Array Name) (heartbeats : Nat) (zip : String)
     (tags : Array (Name × Name × String)) (bridges : Bool) (strict : Bool)
-    (byName : IO.Ref (Array Membership)) :
+    (byName : IO.Ref (Array Membership)) (pf : Portfolio := {}) :
     TermElabM Json := do
   let env ← getEnv
   for n in premises.push target do
@@ -1120,7 +1259,7 @@ def trial (target : Name) (premises : Array Name) (heartbeats : Nat) (zip : Stri
     let extra := (xs.zip origins).filterMap fun (x, o) => if o.decl == target then none else some x.fvarId!
     let aloneLCtx := extra.foldl (·.erase ·) (← getLCtx)
     let aloneInsts := (← getLocalInstances).filter fun i => !extra.contains i.fvar.fvarId!
-    let alone ← withLCtx aloneLCtx aloneInsts <| prove targetXs #[] concl u heartbeats zip
+    let alone ← withLCtx aloneLCtx aloneInsts <| prove targetXs #[] concl u heartbeats zip (pf := pf)
     if alone.isSome then
       let uAlone ← unfoldSet #[target]
       return Json.mkObj [("binders", toJson added), ("alone", proved alone),
@@ -1128,37 +1267,51 @@ def trial (target : Name) (premises : Array Name) (heartbeats : Nat) (zip : Stri
         ("unfold", jsonNames (uAlone.delta.toArray.qsort Name.lt)),
         ("equations", jsonNames (if (alone.map (·.prover.endsWith "+equations")).getD false then
           uAlone.eqns.toArray.qsort Name.lt else #[]))]
-    if let some full ← prove xs hyps concl u heartbeats zip then
-      return ← finish target premises heartbeats byName xs hyps concl u added full Json.null
+    if let some full ← prove xs hyps concl u heartbeats zip (pf := pf) then
+      return ← finish target premises heartbeats byName xs hyps concl u added full Json.null (pf := pf)
     -- Projection binding choices (explicit and reported, never silent). A
     -- target binder with more than one candidate projection (two fields, or
     -- two structure binders, of its type) is identified by type alone: the
     -- choice is reported `ambiguous` and `truth discover` rejects it
     -- (`projection_ambiguous`).
-    let candidates ← projectionCandidates target xs origins
+    -- Term binding choices come after the projections: a target binder bound
+    -- to a structure a premise builds from the shared frame (`termCandidates`).
+    -- Each choice: target binder, value, the expression that introduced it
+    -- (a premise structure binder, or the term itself), its label, and the
+    -- report fields naming its origin.
     let label (j : Nat) (field : Name) : String :=
       s!"{origins[j]!.decl}.{origins[j]!.binder}.{field}"
+    let termText (t : Expr) : TermElabM String :=
+      withOptions (fun o => o |>.set `pp.fullNames true |>.set `pp.fieldNotation false
+        |>.set `format.width (100000 : Nat)) do pure (toString (← ppExpr t))
+    let mut choices : Array (Nat × Expr × Expr × String × List (String × Json)) := #[]
+    for (i, j, field, value) in ← projectionCandidates target xs origins do
+      let p := origins[j]!
+      choices := choices.push (i, value, xs[j]!, label j field,
+        [("structure_binder", Json.str s!"{p.decl}.{p.binder}"), ("field", Json.str field.toString)])
+    for (i, t) in ← termCandidates target xs origins hyps u do
+      let text ← termText t
+      choices := choices.push (i, t, t, text, [("term", Json.str text)])
     let mut tried : Array Json := #[]
     let mut unused : Option Json := none
-    for (i, j, field, value) in candidates.extract 0 maxProjections do
+    for (i, value, intro, bound, fields) in choices.extract 0 maxProjections do
       let o := origins[i]!
-      let p := origins[j]!
-      let alternatives := (candidates.filter (·.1 == i)).map fun (_, j', f', _) => Json.str (label j' f')
-      let choice := Json.mkObj [("binder", Json.str s!"{o.decl}.{o.binder}"),
-        ("bound_to", Json.str (label j field)),
-        ("structure_binder", Json.str s!"{p.decl}.{p.binder}"), ("field", Json.str field.toString),
-        ("ambiguous", Json.bool (alternatives.size > 1)), ("alternatives", Json.arr alternatives)]
+      let others := choices.filter (·.1 == i)
+      let alternatives := others.map fun (_, _, _, l, _) => Json.str l
+      let choice := Json.mkObj ([("binder", Json.str s!"{o.decl}.{o.binder}"),
+        ("bound_to", Json.str bound)] ++ fields ++
+        [("ambiguous", Json.bool (alternatives.size > 1)), ("alternatives", Json.arr alternatives)])
       tried := tried.push choice
       let added' := added.mapIdx fun k b =>
-        if k == i then b.setObjVal! "bound_to" (Json.str (label j field)) else b
-      -- The structure binder's position once `xs[i]` is removed.
-      let j' := if j > i then j - 1 else j
-      -- Every alternative, by its structure binder's position in the reopened goal.
-      let alts := (candidates.filter (·.1 == i)).map fun (_, j2, f2, _) =>
-        ((if j2 > i then j2 - 1 else j2), label j2 f2)
+        if k == i then b.setObjVal! "bound_to" (Json.str bound) else b
+      let rest := xs.filter (· != xs[i]!)
       let result ← withProjection xs hyps concl i value fun ys hs c => do
-        let some full ← prove ys hs c u heartbeats zip | return none
-        some <$> finish target premises heartbeats byName ys hs c u added' full choice ys[j']? alts
+        let some full ← prove ys hs c u heartbeats zip (pf := pf) | return none
+        -- Introducers, moved into the reopened goal's binders.
+        let move (e : Expr) : Expr := e.replaceFVars rest ys
+        let alts := others.map fun (_, _, e, l, _) => (move e, l)
+        some <$> finish target premises heartbeats byName ys hs c u added' full choice
+          (some (move intro)) alts pf
       if let some json := result then
         -- A choice whose structure premise minimization dropped is kept only
         -- as the report of last resort; another choice may use its premise.
@@ -1187,13 +1340,30 @@ syntax (name := discoverTry) "#discover " str num str str ident " from " ident* 
   let bridges := (config.getObjValAs? Bool "bridges").toOption.getD false
   let strict := (config.getObjValAs? Bool "strict_domains").toOption.getD false
   let byName ← IO.mkRef (#[] : Array Membership)
+  -- The prove-sweep portfolio, `[[label, tactic text], …]`; a tactic that does
+  -- not parse is an error of the whole command, never silently skipped.
+  let rejected ← IO.mkRef (#[] : Array Json)
+  let mut tactics : Array (String × Syntax) := #[]
+  for t in (config.getObjValAs? (Array (Array String)) "portfolio").toOption.getD #[] do
+    let [label, text] := t.toList | throwError "portfolio entry {t}: expected [label, tactic]"
+    -- Parenthesized, a sequence `intros; prove_sweep_unfold; grind` is one tactic.
+    match Parser.runParserCategory (← getEnv) `tactic s!"({text})" with
+    | .ok tac => tactics := tactics.push (label, tac)
+    | .error e => throwError "portfolio tactic {label}: {e}"
+  let budget := (config.getObjValAs? Nat "portfolio_heartbeats").toOption.getD 20000
+  let pf : Portfolio := { tactics := tactics, rejected := some rejected, heartbeats := budget }
   let target := stx[5].getId
   let premises := stx[7].getArgs.map (·.getId)
   let started ← IO.monoMsNow
   let result ← liftTermElabM do
-    try trial target premises heartbeats zip tags bridges strict byName
+    try trial target premises heartbeats zip tags bridges strict byName pf
     catch e => return Json.mkObj [("error", Json.str (← e.toMessageData.toString))]
   let result := result.setObjVal! "label" (Json.str label)
+  -- Attempts that closed the goal only through a project theorem outside the
+  -- bundle (rejected, listed so a reviewer sees what the library supplied).
+  let outside ← rejected.get
+  let result := if outside.isEmpty then result else
+    result.setObjVal! "outside_bundle_rejected" (Json.arr outside)
   let all := (← byName.get).filterMap fun m =>
     if m.byName then some (m.text m.originDecl m.originBinder) else none
   let result := if (result.getObjVal? "domain_identified_by_name").isOk then result else

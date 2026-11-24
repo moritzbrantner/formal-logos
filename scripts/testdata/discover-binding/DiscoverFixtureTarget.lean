@@ -220,3 +220,43 @@ def FrameAndOther (W : Type) (m : Prof W) : Prop := EuclFrame W m.frame ∧ ∀ 
 def Whole (W : Type) (m : Prof W) : Prop := m = m
 
 end TruthCore.DiscoverFixtureTarget
+
+namespace TruthCore.DiscoverFixtureTarget
+
+/-! The `truth prove-sweep` portfolio inside `truth discover`. `PlusOne` needs
+an arithmetic fact (`n < n + 1`) that `duper [*]` has no premise for, while
+`simp_all` and `grind` close it from `Keeps`. -/
+
+/-- The target: `Q` with a successor fact. -/
+def PlusOne (P Q : Nat → Prop) : Prop := ∀ n, P n → Q n ∧ n < n + 1
+
+/-- The premise the portfolio needs. -/
+def Keeps (P Q : Nat → Prop) : Prop := ∀ n, P n → Q n
+
+/-- Doubling by recursion: `double n = 2 * n` needs induction. -/
+def double : Nat → Nat
+  | 0 => 0
+  | n + 1 => double n + 2
+
+/-- A library theorem, tagged for `simp` and `grind`: a premise outside any
+bundle. A portfolio proof that rests on it must be rejected. -/
+@[simp, grind =] theorem double_eq (n : Nat) : double n = 2 * n := by
+  induction n with
+  | zero => rfl
+  | succ n ih => rw [double, ih]; omega
+
+/-- Follows from no premise only through `double_eq`. -/
+def DoubleTarget (P : Nat → Prop) : Prop := ∀ n, P (2 * n) → P (double n)
+
+/-- An unrelated premise of the same vocabulary. -/
+def DoubleKeeps (P : Nat → Prop) : Prop := ∀ n, P n → P n
+
+/-- A proof through `double_eq`, for `#discover_external`. -/
+theorem usesDoubleEq (P : Nat → Prop) (n : Nat) (h : P (2 * n)) : P (double n) := by
+  rw [double_eq]; exact h
+
+/-- A proof through `double`'s equation lemmas only (generated, not premises). -/
+theorem usesEquations (P : Nat → Prop) (h : P 2) : P (double 1) := by
+  simp only [double]; exact h
+
+end TruthCore.DiscoverFixtureTarget

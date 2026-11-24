@@ -121,6 +121,7 @@ fn run(args: &Args, operands: &[&str]) -> Output {
             .clone()
             .or_else(|| std::env::var("TRUTH_ZIPPERPOSITION").ok())
             .filter(|p| !p.is_empty()),
+        portfolio: defaults.portfolio,
         jobs: given.jobs.unwrap_or(defaults.jobs),
         batch: args.sweep.batch.unwrap_or(defaults.batch),
         modules: args.modules.clone(),
@@ -263,6 +264,7 @@ fn run(args: &Args, operands: &[&str]) -> Output {
             "candidates": (!exact).then_some(options.candidates),
             "premise_pool": (!exact).then_some(options.pool.name()),
             "zipperposition": options.zipperposition,
+            "portfolio_heartbeats": options.portfolio,
             "jobs": options.jobs, "batch": options.batch, "modules": options.modules,
         },
         "summary": summary,

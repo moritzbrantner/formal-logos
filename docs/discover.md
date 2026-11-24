@@ -3,7 +3,8 @@
 `truth discover` searches for new logical relationships between corpus
 propositions (#1784). For each target statement it retrieves candidate
 premises, asks Duper whether they prove the target over the statements' own
-Lean declarations, minimizes and filters what it finds, and re-checks every
+Lean declarations (the tactic portfolio of `truth prove-sweep` first, then
+Duper), minimizes and filters what it finds, and re-checks every
 surviving proof from its text. It also reports, for goals it cannot prove, the
 exact missing bridges between vocabularies that would close them. It is a
 search helper: the Lean kernel is the authority, and a discovery is a
@@ -130,10 +131,48 @@ target/release/truth discover --target STATEMENT --write-spec specs/discover-cau
    from other premises about the projected field alone) is rejected as
    `projection_unused`, reported only when no other choice succeeds. Rejected
    goals stay out of `--write-spec` drafts.
+
+   **Term binding.** A target binder may instead stand for a structure that a
+   premise *builds* from outer binders with a project definition: the frame
+   adapter `groundProfile F concrete G`, which `ActualRootsWithholdEachGrounded
+   F concrete G w` applies to its own binders, against the target
+   `NecessaryActualConcretaAreRoots (m : Profile W B) w` (#1926). After the
+   projections, each closed application of a project definition (not a
+   projection) in a delta-expanded premise whose type is the target binder's
+   is tried as the same kind of explicit choice: reported as `projection` with
+   `term` and `bound_to`, a specialization of the target to that term, under
+   the same `ambiguous`, `dropped_alternatives` and `projection_unused` rules
+   (a term is "used" when a minimal premise still builds it; the four-choice
+   cap counts both kinds). Nothing else is unified: an element binder such as
+   `w : W` is never bound to a term, and binders of different modules still
+   need a sense tag (step 4).
+
+   Same-module identification compares the binder names the declarations
+   *declare*: an outer binder renamed on entry (`w_3`, because the target
+   already has a `w`) is still joined by a premise of its own module whose
+   binder is `w` (before #1926 the renamed binder matched nothing and the
+   premise got a separate `w_4`).
 5. **Search.** The hypotheses and the conclusion are delta-expanded through
    every project definition whose type ends in `Prop` (not projections or
-   instances), and `duper [*]` runs under `--heartbeats` (thousands, default
-   100000, shared by Duper's portfolio). When that fails and the goal
+   instances). The tactic portfolio of `truth prove-sweep`
+   (`PORTFOLIO` in `truth/src/prove_sweep.rs`: `decide`, `omega`, `tauto`,
+   `simp_all`, `aesop`, `grind`, `unfold+grind`, `unfold+aesop`, with its
+   `prove_sweep_unfold` step) runs first, each tactic under prove-sweep's
+   budget (raw `maxHeartbeats` 20000; the configuration carries the list and
+   budget, read from that one source, not restated). Then `duper [*]` runs
+   under `--heartbeats` (thousands, default 100000, shared by Duper's
+   portfolio). A portfolio proof is an ordinary kernel-checked proof term and
+   goes through everything below exactly as Duper's: minimization (each
+   deletion tries the portfolio, then Duper), the incompatibility core,
+   probe, witnesses and certification; the prover is reported as
+   `portfolio:<label>`. A library `@[simp]` or `@[grind]` lemma is the one
+   way a portfolio tactic (unlike `duper [*]`, which sees only the goal's
+   hypotheses) could use something outside the bundle: a closed attempt whose
+   proof term rests on a project (`TruthCore.`) theorem, looked up through the
+   auxiliary lemmas the tactic created, is discarded and listed under
+   `outside_bundle_rejected` with the theorems it used; generated lemmas
+   (equation lemmas, `injEq`, `@[ext]` lemmas) and definitions are vocabulary,
+   not premises. Bridge checks stay Duper-only. When that fails and the goal
    reaches a definition of a value (its type ends in a value type such as
    `Formula Unit`, not in `Prop` or a `Sort`: `convergenceFormula`,
    `Formula.iterBox`), Duper is tried once more after rewriting those
@@ -169,10 +208,15 @@ target/release/truth discover --target STATEMENT --write-spec specs/discover-cau
 8. **Certification.** Each discovery is rendered as plain theorem text
    (binders with full names, hypotheses, conclusion, `delta …; duper [*]`;
    when the fallback closed the goal, `delta …`, `try simp only […] at *`,
-   `all_goals duper [*]`; the statement itself unchanged)
-   and elaborated in a separate Lean run with `#print axioms`. A discovery
-   whose text fails or whose proof uses an axiom other than `propext`,
-   `Classical.choice` and `Quot.sound` is filtered (`certification`, `axioms`).
+   `all_goals duper [*]`; for a portfolio proof, `delta …` and the
+   portfolio tactic verbatim; the statement itself unchanged)
+   and elaborated in a separate Lean run with `#print axioms`. The file also
+   defines prove-sweep's tactics and the search's `#discover_external`
+   command (in a `section`, so its `open`s do not reach the theorems), which
+   runs after each theorem. A discovery whose text fails, whose proof uses an
+   axiom other than `propext`, `Classical.choice` and `Quot.sound`, or whose
+   re-elaborated proof rests on a project theorem outside its bundle is
+   filtered (`certification`, `axioms`, `outside_bundle`).
 
 ## Filters
 
@@ -192,6 +236,7 @@ target/release/truth discover --target STATEMENT --write-spec specs/discover-cau
 | `witness` | no one-point joint model was found; Duper found no contradiction, so consistency is unresolved | flag |
 | `vacuous_target` | the premises refute the target's own antecedents (`∀ x, A x → B x` holds because nothing is `A`): valid, but true vacuously | flag |
 | `axioms`, `certification`, `reconstruction` | an axiom outside the three; the theorem text fails; Duper did not reprove an ATP-found goal | reject |
+| `outside_bundle` | the certified proof rests on a project theorem that is no premise of the bundle (a library `@[simp]`/`@[grind]` lemma a portfolio tactic found; step 5) | reject |
 
 The joint witness interprets every carrier as `Unit`, every predicate (and
 predicate-valued structure field) as a constant `True` or `False`, structure
@@ -201,9 +246,11 @@ model whose proof uses an axiom other than the three allowed (say, through an
 imported `sorry`-dependent simp lemma) is not reported. It
 tries all-`False`, all-`True` and each single flip. Such a model may be
 trivial (every antecedent empty); it shows only that the formal premises are
-jointly satisfiable. `truth countermodel` does not yet read structure-bundled
-vocabulary, which most of `TruthCore/Causality/` uses, so the engine uses this
-witness search instead; models the finite finder could give remain open work.
+jointly satisfiable. The engine keeps this one-point search; `truth
+countermodel` now also reads structure parameters such as the shared frame
+(field tables and the anonymous constructor, [countermodels](countermodels.md#structure-parameters)),
+so a finite omission model of a recorded result over a frame can be searched
+there; the engine does not call it.
 
 Bindings are part of the result. The JSON lists every outer binder with the
 declaration and parameter it came from, so a reviewer can see which
@@ -729,7 +776,7 @@ admits and ranks premises by whole-binder sense tags.
   module follows that module's convention; across modules only sense tags
   identify parameters. The reviewer still checks that the composed statement
   means what the prose says (AGENTS.md, Review guidelines).
-- Duper's proofs are classical (`Classical.choice`): a discovery must not count
+- Duper's proofs, and those of `tauto`, `grind` and `aesop`, are classical (`Classical.choice`): a discovery must not count
   as evidence where excluded middle is in question (docs/axiom-policy.md). For
   the same reason a known route that lists excluded middle as a premise counts
   as the same route (`known`, flagged `implicit_excluded_middle`); a

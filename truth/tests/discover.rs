@@ -122,6 +122,10 @@ elif Path(args[-1]).name == 'DiscoverCertify.lean':
             print(json.dumps(dict(severity='error' if error else 'information', pos=dict(line=i),
                 data='synthetic certification rejection' if error else
                      "'%s' depends on axioms: [Classical.choice]" % line.split()[-1])))
+        if line.startswith('#discover_external '):
+            outside = (root / 'outside.json').read_text() if (root / 'outside.json').exists() else '[]'
+            print(json.dumps(dict(severity='information', pos=dict(line=i),
+                data='discover-external: ' + outside.strip())))
 else:
     for line in Path(args[-1]).read_text().splitlines():
         if line.startswith('#discover '):
@@ -226,6 +230,34 @@ fn exact_bundle_reuses_certification_and_rejection_filters() {
             .count(),
         before
     );
+}
+
+#[test]
+fn a_portfolio_proof_resting_on_a_library_theorem_fails_certification() {
+    let fixture = fixture("outside");
+    let mut raw: Value =
+        serde_json::from_str(&fs::read_to_string(fixture.0.join("solver.json")).unwrap()).unwrap();
+    raw["closed"]["prover"] = json!("portfolio:simp_all");
+    raw["proof"]["prover"] = json!("portfolio:simp_all");
+    write(&fixture.0, "solver.json", &raw.to_string());
+    // The search's own check found no outside theorem; the re-elaborated
+    // certification text does (as a different library could supply one).
+    write(&fixture.0, "outside.json", r#"["TruthCore.Lib.simpLemma"]"#);
+    let view = report(&truth(&fixture.0, &["--premise", "STMT-P0"]));
+    let finding = &view["findings"][0];
+    assert_eq!(finding["kind"], "filtered", "{view}");
+    assert_eq!(finding["filters"][0]["filter"], "outside_bundle");
+    assert!(
+        finding["filters"][0]["detail"]
+            .as_str()
+            .unwrap()
+            .contains("TruthCore.Lib.simpLemma")
+    );
+    // The configuration carried prove-sweep's portfolio and its budget.
+    assert_eq!(view["options"]["portfolio_heartbeats"], 20000);
+    fs::remove_file(fixture.0.join("outside.json")).unwrap();
+    let view = report(&truth(&fixture.0, &["--premise", "STMT-P0"]));
+    assert_eq!(view["findings"][0]["kind"], "discovery", "{view}");
 }
 
 #[test]

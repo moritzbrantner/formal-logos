@@ -98,6 +98,10 @@ pub struct Options {
     pub premises: Vec<String>,
     /// A Zipperposition executable for lean-auto premise selection.
     pub zipperposition: Option<String>,
+    /// The `truth prove-sweep` tactic portfolio, tried before Duper on every
+    /// goal under this `maxHeartbeats` budget (raw thousands, as in
+    /// `prove-sweep`); `None` runs Duper alone.
+    pub portfolio: Option<u64>,
     /// Parallel Lean processes.
     pub jobs: usize,
     /// Targets per Lean process.
@@ -116,6 +120,7 @@ impl Default for Options {
             pool: Pool::Closed,
             premises: Vec::new(),
             zipperposition: None,
+            portfolio: Some(prove_sweep::DEFAULT_HEARTBEATS),
             jobs: 2,
             batch: 6,
             modules: Vec::new(),
@@ -860,7 +865,9 @@ fn lean_string(text: &str) -> String {
     format!("\"{}\"", text.replace('\\', "\\\\").replace('"', "\\\""))
 }
 
-/// The `#discover` command line of `trial`.
+/// The `#discover` command line of `trial`. With `portfolio` (its
+/// heartbeats), the configuration carries the `truth prove-sweep` tactic
+/// portfolio ([`prove_sweep::PORTFOLIO`]) for the search to try before Duper.
 pub fn command_line(
     trial: &Trial,
     statements: &BTreeMap<String, Statement>,
@@ -868,6 +875,7 @@ pub fn command_line(
     zipperposition: Option<&str>,
     tags: &SenseTags,
     bridges: bool,
+    portfolio: Option<u64>,
 ) -> String {
     let declarations: Vec<&str> = trial
         .premises
@@ -875,7 +883,11 @@ pub fn command_line(
         .chain([&trial.target])
         .map(|id| statements[id].declaration.as_str())
         .collect();
-    let config = json!({"tags": tags.for_declarations(&declarations), "bridges": bridges});
+    let mut config = json!({"tags": tags.for_declarations(&declarations), "bridges": bridges});
+    if let Some(budget) = portfolio {
+        config["portfolio"] = json!(prove_sweep::PORTFOLIO);
+        config["portfolio_heartbeats"] = json!(budget);
+    }
     let premises: Vec<&str> = trial
         .premises
         .iter()
@@ -906,14 +918,16 @@ pub fn split_imports(text: &str) -> (Vec<String>, String) {
     (imports, body)
 }
 
-/// The scratch file: imports, the transcription probe of `truth prove-sweep`,
-/// the search command and one line per trial.
+/// The scratch file: imports (with those of the `truth prove-sweep`
+/// portfolio), the tactics of `truth prove-sweep` (its transcription probe and
+/// unfolding step), the search command and one line per trial.
 pub fn scratch_text(discover: &str, modules: &BTreeSet<String>, lines: &[String]) -> String {
     let (own, body) = split_imports(discover);
     let imports: BTreeSet<&str> = own
         .iter()
         .map(String::as_str)
         .chain(modules.iter().map(String::as_str))
+        .chain(prove_sweep::PORTFOLIO_IMPORTS.iter().copied())
         .collect();
     let mut text = String::new();
     for module in imports {
@@ -1005,6 +1019,7 @@ pub fn search(
                 options.zipperposition.as_deref(),
                 tags,
                 options.bridges,
+                options.portfolio,
             )
         })
         .collect();
@@ -1016,7 +1031,11 @@ pub fn search(
         .map_err(|error| format!("{}: {error}", path.display()))?;
     // Each attempt is bounded by heartbeats; a target makes at most a few
     // dozen attempts (minimization, vacuity, witnesses).
-    let per_target = 60 + options.heartbeats / 1000 * 3;
+    let per_target = 60
+        + options.heartbeats / 1000 * 3
+        + options
+            .portfolio
+            .map_or(0, |p| p / 1000 * 2 * prove_sweep::PORTFOLIO.len() as u64);
     let timeout = Duration::from_secs(300 + per_target * trials.len() as u64);
     let mut command = lake_command(
         root,
@@ -1313,10 +1332,21 @@ pub fn domain_flag(outcome: &Value) -> Option<String> {
 
 /// The projection binding choice the goal was closed under, if any
 /// (`scripts/Discover.lean`, projection binding, #1819): the target binder was
-/// replaced by a field of a premise's structure binder. Always reported.
+/// replaced by a field of a premise's structure binder, or (a term binding)
+/// by a structure a premise builds from outer binders with a project
+/// definition, such as `groundProfile F concrete G`. Always reported.
 pub fn projection_flag(outcome: &Value) -> Option<String> {
     let choice = outcome["projection"].as_object()?;
     let field = |k: &str| choice.get(k).and_then(Value::as_str).unwrap_or_default();
+    if choice.contains_key("term") {
+        return Some(format!(
+            "binding choice: the target binder {} is bound to the term {}, which a premise builds; \
+             the theorem is a specialization of the target to that term, not the target over \
+             an arbitrary binder",
+            field("binder"),
+            field("term")
+        ));
+    }
     Some(format!(
         "binding choice: the target binder {} is bound to the projection {} (field {} of {}); \
          the theorem is a specialization of the target to the projection, not the target over \
@@ -1360,7 +1390,10 @@ pub fn projection_filters(outcome: &Value) -> Vec<(String, String)> {
             "projection_unused".to_owned(),
             format!(
                 "minimization dropped the premise that introduced {}: the derivation does not use the structure it projects",
-                choice["structure_binder"].as_str().unwrap_or_default()
+                choice["structure_binder"]
+                    .as_str()
+                    .or_else(|| choice["term"].as_str())
+                    .unwrap_or_default()
             ),
         ));
     }
@@ -1622,12 +1655,38 @@ pub fn theorem_name(index: usize) -> String {
     format!("discovered{}", index + 1)
 }
 
+/// The prover prefix of a `truth prove-sweep` portfolio attempt
+/// (`portfolioPrefix` of `scripts/Discover.lean`).
+pub const PORTFOLIO_PREFIX: &str = "portfolio:";
+
+/// The portfolio tactic that closed the minimal goal, if the proof is one
+/// (`proof.prover` of the Lean outcome is `portfolio:<label>`).
+pub fn portfolio_tactic(outcome: &Value) -> Option<&'static str> {
+    outcome["proof"]["prover"]
+        .as_str()?
+        .strip_prefix(PORTFOLIO_PREFIX)
+        .and_then(prove_sweep::portfolio_tactic)
+}
+
+/// How the minimal proof was found, for reports and spec drafts: `Duper
+/// superposition`, or the `truth prove-sweep` portfolio tactic.
+pub fn prover_name(outcome: &Value) -> String {
+    match outcome["proof"]["prover"]
+        .as_str()
+        .and_then(|p| p.strip_prefix(PORTFOLIO_PREFIX))
+    {
+        Some(label) => format!("prove-sweep portfolio `{label}`"),
+        None => "Duper superposition".to_owned(),
+    }
+}
+
 /// The Lean proof of a discovery: delta-expansion, then Duper. When the goal
 /// reaches definitions of values (`equations` of the Lean outcome, such as
 /// `convergenceFormula`, built by recursion), their defining equations
 /// evaluate the closed terms to constructor form first (`simp only`), as in
-/// the search (`proverTactic` of `scripts/Discover.lean`, #1845). The theorem
-/// statement itself is unchanged.
+/// the search (`proverTactic` of `scripts/Discover.lean`, #1845). A proof the
+/// `truth prove-sweep` portfolio found replays its tactic, verbatim, after
+/// the same delta-expansion. The theorem statement itself is unchanged.
 pub fn proof_text(outcome: &Value) -> String {
     let names = |key: &str| -> Vec<&str> {
         outcome[key]
@@ -1643,7 +1702,10 @@ pub fn proof_text(outcome: &Value) -> String {
     if !unfold.is_empty() {
         let _ = writeln!(text, "  delta {} at *", unfold.join(" "));
     }
-    if equations.is_empty() {
+    if let Some(tactic) = portfolio_tactic(outcome) {
+        text.push_str("  ");
+        text.push_str(tactic);
+    } else if equations.is_empty() {
         text.push_str("  duper [*]");
     } else {
         let _ = writeln!(text, "  try simp only [{}] at *", equations.join(", "));
@@ -1663,23 +1725,77 @@ pub fn theorem_text(name: &str, outcome: &Value, heartbeats: u64) -> String {
 
 /// The certification file: plain text, as a Solution would state it, with
 /// `#print axioms` after each theorem; and each theorem's line range.
+///
+/// With `discover` (the text of `scripts/Discover.lean`), the file also
+/// imports what the `truth prove-sweep` portfolio needs, defines its tactics
+/// ([`prove_sweep::PRELUDE`]) so that a portfolio proof replays verbatim, and
+/// runs `#discover_external` after each theorem: the project theorems its
+/// proof rests on, which must be none (a library `@[simp]`/`@[grind]` lemma
+/// is a premise outside the bundle, filter `outside_bundle`). The search
+/// body is wrapped in a `section`, so its `open`s do not reach the theorems.
 pub fn certification_text(
     modules: &BTreeSet<String>,
     theorems: &[(String, String)],
+    discover: Option<&str>,
 ) -> (String, Vec<(String, usize, usize)>) {
     let mut text = String::new();
     for module in modules.iter().map(String::as_str).chain(["Duper"]) {
         let _ = writeln!(text, "import {module}");
     }
+    let body = discover.map(|discover| {
+        let (own, body) = split_imports(discover);
+        let extra: BTreeSet<&str> = own
+            .iter()
+            .map(String::as_str)
+            .chain(prove_sweep::PORTFOLIO_IMPORTS.iter().copied())
+            .filter(|m| *m != "Duper" && !modules.contains(*m))
+            .collect();
+        for module in extra {
+            let _ = writeln!(text, "import {module}");
+        }
+        body
+    });
     text.push('\n');
+    if let Some(body) = &body {
+        text.push_str(prove_sweep::PRELUDE);
+        let _ = writeln!(text, "\nsection\n{body}\nend\n");
+    }
     let mut ranges = Vec::new();
-    for (name, body) in theorems {
+    for (name, body_text) in theorems {
         let start = text.lines().count() + 1;
-        text.push_str(body);
-        let _ = writeln!(text, "#print axioms {name}\n");
+        text.push_str(body_text);
+        let _ = writeln!(text, "#print axioms {name}");
+        if body.is_some() {
+            let _ = writeln!(text, "#discover_external {name}");
+        }
+        text.push('\n');
         ranges.push((name.clone(), start, text.lines().count()));
     }
     (text, ranges)
+}
+
+/// The marker of a `#discover_external` report.
+pub const EXTERNAL_MARKER: &str = "discover-external: ";
+
+/// Each theorem's project theorems outside the bundle, from the
+/// `#discover_external` reports in its range (absent when none reported).
+pub fn parse_external(
+    messages: &[prove_sweep::Message],
+    ranges: &[(String, usize, usize)],
+) -> BTreeMap<String, Vec<String>> {
+    let mut out = BTreeMap::new();
+    for (name, start, end) in ranges {
+        let report = messages.iter().find_map(|m| {
+            (m.line >= *start && m.line <= *end)
+                .then(|| m.data.strip_prefix(EXTERNAL_MARKER))
+                .flatten()
+        });
+        if let Some(list) = report.and_then(|r| serde_json::from_str::<Vec<String>>(r.trim()).ok())
+        {
+            out.insert(name.clone(), list);
+        }
+    }
+    out
 }
 
 /// Each theorem's verdict from `lean --json` messages: `Ok(axioms)` when it
@@ -1726,10 +1842,12 @@ pub fn parse_certification(
 }
 
 /// Re-elaborates every discovery from its theorem text (one Lean run) and
-/// records the verdict; a discovery that fails or uses another axiom is
-/// filtered.
+/// records the verdict; a discovery that fails, uses another axiom or rests on
+/// a project theorem outside its bundle (`outside_bundle`) is filtered.
+/// `discover` is the text of `scripts/Discover.lean` ([`certification_text`]).
 pub fn certify(
     root: &Path,
+    discover: &str,
     findings: &mut [Finding],
     statements: &BTreeMap<String, Statement>,
     vocabulary: &BTreeMap<String, Vocabulary>,
@@ -1755,7 +1873,7 @@ pub fn certify(
             theorem_text(&theorem_name(n), &f.outcome, heartbeats),
         ));
     }
-    let (text, ranges) = certification_text(&modules, &theorems);
+    let (text, ranges) = certification_text(&modules, &theorems, Some(discover));
     let directory = scratch_dir("truth-discover-certify");
     let path = directory.join("DiscoverCertify.lean");
     fs::create_dir_all(&directory)
@@ -1783,7 +1901,9 @@ pub fn certify(
     }
     let done =
         done?.ok_or_else(|| format!("certification timed out after {}s", timeout.as_secs()))?;
-    let verdicts = parse_certification(&prove_sweep::parse_messages(&done.stdout), &ranges);
+    let messages = prove_sweep::parse_messages(&done.stdout);
+    let verdicts = parse_certification(&messages, &ranges);
+    let external = parse_external(&messages, &ranges);
     for (n, &i) in chosen.iter().enumerate() {
         let verdict = verdicts
             .get(&theorem_name(n))
@@ -1806,6 +1926,27 @@ pub fn certify(
                         "axioms".into(),
                         format!("certified proof uses {}", forbidden.join(", ")),
                     ));
+                }
+                let outside = external.get(&theorem_name(n)).cloned();
+                match outside {
+                    Some(names) if names.is_empty() => {}
+                    Some(names) => {
+                        finding.kind = Kind::Filtered;
+                        finding.filters.push((
+                            "outside_bundle".into(),
+                            format!(
+                                "certified proof rests on project theorems outside the bundle: {}",
+                                names.join(", ")
+                            ),
+                        ));
+                    }
+                    None => {
+                        finding.kind = Kind::Filtered;
+                        finding.filters.push((
+                            "certification".into(),
+                            "no #discover_external report: premise use unchecked".into(),
+                        ));
+                    }
                 }
             }
         }
@@ -1928,10 +2069,11 @@ pub fn render_spec(
             .map(|id| statements[id].label.as_str())
             .collect();
         let mut meaning = format!(
-            "Discovered by truth discover: {} follows from {}. Duper proof over the delta-expanded \
+            "Discovered by truth discover: {} follows from {}. {} proof over the delta-expanded \
              statement definitions, kernel-checked; parameters are identified by name within one module or by sense tag.",
             target.label,
-            premise_labels.join("; ")
+            premise_labels.join("; "),
+            prover_name(&finding.outcome)
         );
         if let Some(choice) = projection_flag(&finding.outcome) {
             let _ = write!(meaning, " Explicit {choice}.");
@@ -1939,7 +2081,7 @@ pub fn render_spec(
         let _ = write!(
             text,
             "\n[[argument]]\nid = {}\nlabel = {}\ntheorem = {}\npremises = [{}]\nconclusion = {}\n\
-             rule = \"Duper superposition proof over the delta-expanded definitions\"\nmeaning = {}\n\
+             rule = {}\nmeaning = {}\n\
              axioms = [\"propext\", \"Classical.choice\", \"Quot.sound\"]\n",
             toml_string(&format!("discover-{}", n + 1)),
             toml_string(&label),
@@ -1951,6 +2093,10 @@ pub fn render_spec(
                 .collect::<Vec<_>>()
                 .join(", "),
             toml_string(&finding.trial.target),
+            toml_string(&format!(
+                "{} proof over the delta-expanded definitions",
+                prover_name(&finding.outcome)
+            )),
             toml_string(&meaning),
         );
         let bridges: Vec<Value> = sense_check
@@ -1996,14 +2142,32 @@ pub fn render_solution(
     for module in &modules {
         let _ = writeln!(text, "public import {module}");
     }
-    text.push_str("import Duper\n\n");
+    text.push_str("import Duper\n");
+    // A portfolio proof replays prove-sweep's tactic verbatim: its imports and,
+    // inside the batch namespace (so two drafts never declare the same syntax),
+    // its `prove_sweep_unfold` step.
+    let portfolio = findings
+        .iter()
+        .any(|f| portfolio_tactic(&f.outcome).is_some());
+    if portfolio {
+        for module in prove_sweep::PORTFOLIO_IMPORTS {
+            let _ = writeln!(text, "import {module}");
+        }
+        text.push_str("meta import Lean.Elab.Tactic\n");
+    }
+    text.push('\n');
     text.push_str(
         "/-!\n# Discovered derivations (draft written by `truth discover`)\n\n\
-         Each theorem was found by Duper over the delta-expanded statement definitions\n\
-         and re-elaborated from this text; review before recording (docs/discover.md).\n-/\n\n\
+         Each theorem was found by Duper or the `truth prove-sweep` portfolio over the\n\
+         delta-expanded statement definitions and re-elaborated from this text; review\n\
+         before recording (docs/discover.md).\n-/\n\n\
          @[expose] public section\n\n",
     );
     let _ = writeln!(text, "namespace {batch}\n");
+    if portfolio {
+        text.push_str(prove_sweep::PRELUDE);
+        text.push('\n');
+    }
     for (n, f) in findings.iter().enumerate() {
         let target = &statements[&f.trial.target];
         // `set_option … in` goes before the doc comment, which belongs to the
@@ -2378,6 +2542,7 @@ pub fn discover(
     progress("certifying discoveries");
     certify(
         root,
+        &discover,
         &mut findings,
         &statements,
         &vocabulary,

@@ -89,11 +89,47 @@ fn command_line_names_declarations_and_quotes_the_configuration() {
         Some("/bin/zip"),
         &tags,
         true,
+        None,
     );
     assert_eq!(
         line,
         r#"#discover "t1" 5000 "/bin/zip" "{\"bridges\":true,\"tags\":[[\"TruthCore.M.Premise\",\"CausesIn\",\"s1\"]]}" M.Target from TruthCore.M.Premise"#
     );
+}
+
+#[test]
+fn command_line_carries_the_prove_sweep_portfolio_and_its_budget() {
+    let mut statements = BTreeMap::new();
+    statements.insert("T".to_owned(), statement("T", "M.Target", &[]));
+    statements.insert("P".to_owned(), statement("P", "TruthCore.M.Premise", &[]));
+    let line = command_line(
+        &trial(&["P"]),
+        &statements,
+        5000,
+        None,
+        &tags_of(&[], &[]),
+        false,
+        Some(1234),
+    );
+    // The configuration is the fourth string literal of the command.
+    let start = line.find(" \"{").unwrap() + 1;
+    let end = line.rfind("}\" ").unwrap() + 2;
+    let quoted: String = serde_json::from_str(&line[start..end]).unwrap();
+    let config: Value = serde_json::from_str(&quoted).unwrap();
+    assert_eq!(config["portfolio_heartbeats"], json!(1234));
+    // Exactly prove-sweep's portfolio, in its order: reused, not restated.
+    let expected: Vec<Value> = prove_sweep::PORTFOLIO
+        .iter()
+        .map(|(label, tactic)| json!([label, tactic]))
+        .collect();
+    assert_eq!(config["portfolio"], Value::Array(expected));
+    let labels: Vec<&str> = prove_sweep::PORTFOLIO.iter().map(|(l, _)| *l).collect();
+    for label in ["tauto", "unfold+aesop", "unfold+grind"] {
+        assert!(
+            labels.contains(&label),
+            "{label} missing from the portfolio"
+        );
+    }
 }
 
 #[test]
@@ -109,13 +145,20 @@ fn scratch_hoists_imports_and_lifts_the_command_heartbeat_cap() {
         .collect();
     assert_eq!(
         imports,
-        ["import Duper", "import Lean", "import TruthCore.A"]
+        [
+            "import Aesop",
+            "import Duper",
+            "import Lean",
+            "import Mathlib.Tactic.Tauto",
+            "import TruthCore.A"
+        ]
     );
     assert!(text.contains("prove_sweep_probe"));
+    assert!(text.contains("prove_sweep_unfold"));
     assert!(text.contains("namespace Discover"));
     let cap = text.find("set_option maxHeartbeats 0").unwrap();
     assert!(cap < text.find("#discover \"t1\"").unwrap());
-    assert_eq!(text.matches("import ").count(), 3);
+    assert_eq!(text.matches("import ").count(), 5);
 }
 
 #[test]
@@ -562,6 +605,124 @@ fn unresolved_errors_and_vocabulary_theorems() {
     );
 }
 
+#[test]
+fn a_portfolio_proof_is_classified_and_rendered_like_duper_s() {
+    let mut outcome = closed_outcome();
+    outcome["closed"]["prover"] = json!("portfolio:unfold+grind");
+    outcome["proof"]["prover"] = json!("portfolio:unfold+grind");
+    outcome["unfold"] = json!(["M.P"]);
+    // The same filters as a Duper proof: a minimized new implication.
+    let f = classify(
+        &trial(&["P", "Q", "R"]),
+        &outcome,
+        &Graph::default(),
+        &SenseCheck::empty(),
+    );
+    assert_eq!(f.kind, Kind::Discovery);
+    assert_eq!(f.premises, ["P", "R"]);
+    // Its certification text replays prove-sweep's own tactic after the delta.
+    assert_eq!(
+        proof_text(&outcome),
+        format!(
+            "by\n  delta M.P at *\n  {}",
+            prove_sweep::portfolio_tactic("unfold+grind").unwrap()
+        )
+    );
+    assert_eq!(
+        prover_name(&outcome),
+        "prove-sweep portfolio `unfold+grind`"
+    );
+    assert_eq!(prover_name(&closed_outcome()), "Duper superposition");
+    // An unknown label is not replayed as a tactic: Duper's text, which fails
+    // certification rather than certifying something else.
+    outcome["proof"]["prover"] = json!("portfolio:unknown");
+    assert!(proof_text(&outcome).ends_with("duper [*]"));
+}
+
+#[test]
+fn certification_runs_the_premise_check_and_the_portfolio_tactics() {
+    let (text, ranges) = certification_text(
+        &set(&["TruthCore.A"]),
+        &[(
+            "discovered1".into(),
+            "theorem discovered1 : True := by\n  intros; prove_sweep_unfold; grind\n".into(),
+        )],
+        Some(
+            "import Lean\nimport Duper\n/-! doc -/\nopen Lean\nnamespace Discover\nend Discover\n",
+        ),
+    );
+    let imports: Vec<&str> = text
+        .lines()
+        .take_while(|l| l.starts_with("import "))
+        .collect();
+    assert_eq!(
+        imports,
+        [
+            "import TruthCore.A",
+            "import Duper",
+            "import Aesop",
+            "import Lean",
+            "import Mathlib.Tactic.Tauto"
+        ]
+    );
+    // prove-sweep's tactics are defined, the search body's `open`s stay in
+    // its section, and every theorem is followed by the premise check.
+    assert!(text.contains("elab \"prove_sweep_unfold\""));
+    let section = text.find("\nsection\n").unwrap();
+    let end = text.find("\nend Discover\n\nend\n").unwrap();
+    assert!(section < text.find("open Lean\n").unwrap() && end > section);
+    let (_, start, stop) = ranges[0].clone();
+    let lines: Vec<&str> = text.lines().collect();
+    let range = &lines[start - 1..stop];
+    assert!(range.contains(&"#print axioms discovered1"));
+    assert!(range.contains(&"#discover_external discovered1"));
+    assert!(start > text[..end].lines().count());
+    let message = |line, data: &str| prove_sweep::Message {
+        severity: "information".into(),
+        line,
+        data: data.into(),
+    };
+    let reported = parse_external(
+        &[message(
+            stop - 1,
+            "discover-external: [\"TruthCore.A.simpLemma\"]",
+        )],
+        &ranges,
+    );
+    assert_eq!(reported["discovered1"], ["TruthCore.A.simpLemma"]);
+    assert!(parse_external(&[], &ranges).is_empty());
+}
+
+#[test]
+fn a_term_binding_is_reported_as_a_specialization() {
+    let mut outcome = closed_outcome();
+    outcome["projection"] = json!({
+        "binder": "T.m", "bound_to": "G.groundProfile F concrete G",
+        "term": "G.groundProfile F concrete G", "ambiguous": false,
+        "alternatives": ["G.groundProfile F concrete G"]
+    });
+    let filters = projection_filters(&outcome);
+    assert_eq!(filters.len(), 1);
+    assert_eq!(filters[0].0, "projection_binding");
+    assert!(
+        filters[0]
+            .1
+            .contains("bound to the term G.groundProfile F concrete G")
+    );
+    outcome["projection"]["ambiguous"] = json!(true);
+    outcome["projection_unused"] = json!(true);
+    let filters: Vec<String> = projection_filters(&outcome)
+        .into_iter()
+        .map(|f| f.0)
+        .collect();
+    assert_eq!(filters, ["projection_ambiguous", "projection_unused"]);
+    let unused = &projection_filters(&outcome)[1].1;
+    assert!(
+        unused.contains("introduced G.groundProfile F concrete G"),
+        "{unused}"
+    );
+}
+
 // --- report parsing ------------------------------------------------------------------
 
 #[test]
@@ -587,6 +748,7 @@ fn certification_reads_errors_and_axioms_per_theorem() {
                 "theorem discovered2 : True := by\n  duper [*]\n".into(),
             ),
         ],
+        None,
     );
     assert!(text.starts_with("import TruthCore.A\nimport Duper\n"));
     let (_, s1, e1) = ranges[0].clone();
@@ -852,6 +1014,54 @@ fn solution_draft_puts_the_option_before_the_doc_comment() {
     assert!(
         text.contains("set_option maxHeartbeats 5000 in\n/-- label of T -/\ntheorem discovered1 ")
     );
+}
+
+#[test]
+fn a_solution_draft_with_a_portfolio_proof_defines_its_tactics() {
+    let mut statements = BTreeMap::new();
+    statements.insert("T".to_owned(), statement("T", "TruthCore.M.Target", &[]));
+    statements.insert("P".to_owned(), statement("P", "TruthCore.M.P", &[]));
+    let mut outcome = closed_outcome();
+    outcome["proof"]["prover"] = json!("portfolio:unfold+aesop");
+    let mut f = classify(
+        &trial(&["P", "Q", "R"]),
+        &outcome,
+        &Graph::default(),
+        &SenseCheck::empty(),
+    );
+    f.premises = vec!["P".into()];
+    let text = render_solution(
+        "TruthCore.Results.Discover.Run",
+        &[&f],
+        &statements,
+        &BTreeMap::new(),
+        5000,
+    );
+    assert!(
+        text.contains("import Aesop\nmeta import Lean.Elab.Tactic\n"),
+        "{text}"
+    );
+    // The tactics are declared inside the batch namespace, before the proof.
+    let namespace = text
+        .find("namespace TruthCore.Results.Discover.Run")
+        .unwrap();
+    let prelude = text.find("elab \"prove_sweep_unfold\"").unwrap();
+    let proof = text.find("intros; prove_sweep_unfold; aesop").unwrap();
+    assert!(namespace < prelude && prelude < proof);
+    // A Duper-only draft needs none of it.
+    let plain = render_solution(
+        "TruthCore.Results.Discover.Run",
+        &[&classify(
+            &trial(&["P"]),
+            &closed_outcome(),
+            &Graph::default(),
+            &SenseCheck::empty(),
+        )],
+        &statements,
+        &BTreeMap::new(),
+        5000,
+    );
+    assert!(!plain.contains("prove_sweep_unfold") && !plain.contains("import Aesop"));
 }
 
 #[test]

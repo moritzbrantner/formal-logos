@@ -14,12 +14,18 @@ target here reaches it as a finding.
 control and a re-elaboration of the certification text; a projection
 alternative that only a dropped premise introduced is not ambiguous; and the
 vocabulary export marks a structure binder used only through one field.
+
+The prove-sweep portfolio (`PORTFOLIO` and `PRELUDE` of
+`truth/src/prove_sweep.rs`, read from that source, not restated) runs inside
+the search: it closes a goal Duper has no premise for, and a portfolio proof
+that rests on a library theorem outside the bundle is rejected.
 """
 
 from __future__ import annotations
 
 import json
 import os
+import re
 import shutil
 import subprocess
 import tempfile
@@ -45,6 +51,19 @@ def skip_reason() -> str | None:
     return None
 
 
+SWEEP = ROOT / "truth" / "src" / "prove_sweep.rs"
+
+
+def sweep_source() -> tuple[str, list[list[str]], list[str]]:
+    """`PRELUDE`, `PORTFOLIO` and `PORTFOLIO_IMPORTS` of prove-sweep's source."""
+    source = SWEEP.read_text()
+    prelude = re.search(r'pub const PRELUDE: &str = r#"(.*?)"#;', source, re.S).group(1)
+    block = re.search(r"pub const PORTFOLIO: &\[\(&str, &str\)\] = &\[(.*?)\];", source, re.S).group(1)
+    portfolio = [list(pair) for pair in re.findall(r'\("([^"]+)", "([^"]+)"\)', block)]
+    imports = re.findall(r'"([^"]+)"', re.search(r"pub const PORTFOLIO_IMPORTS[^=]*= &\[(.*?)\];", source, re.S).group(1))
+    return prelude, portfolio, imports
+
+
 def lean_string(text: str) -> str:
     return '"' + text.replace("\\", "\\\\").replace('"', '\\"') + '"'
 
@@ -56,12 +75,17 @@ def tags(relation_key: str) -> list[list[str]]:
     return rows
 
 
-def scratch(commands: list[str]) -> str:
+def scratch(commands: list[str], portfolio: bool = False) -> str:
     body = "\n".join(line for line in TOOL.read_text().splitlines() if not line.startswith("import "))
     imports = ["Duper", "Lean"] + [f"TruthCore.{m}" for m in MODULES]
+    tactics = '\nmacro "prove_sweep_probe" : tactic => `(tactic| fail "stub")\n\n'
+    if portfolio:
+        prelude, _, extra = sweep_source()
+        imports += extra
+        tactics = "\n" + prelude + "\n"
     return (
         "".join(f"import {m}\n" for m in imports)
-        + '\nmacro "prove_sweep_probe" : tactic => `(tactic| fail "stub")\n\n'
+        + tactics
         + body
         + "\nset_option maxHeartbeats 0\n\n"
         + "\n".join(commands)
@@ -69,7 +93,7 @@ def scratch(commands: list[str]) -> str:
     )
 
 
-def run(commands: list[str]) -> dict:
+def run(commands: list[str], portfolio: bool = False, raw: list | None = None) -> dict:
     with tempfile.TemporaryDirectory() as tmp:
         module_dir = Path(tmp) / "TruthCore"
         module_dir.mkdir()
@@ -80,7 +104,7 @@ def run(commands: list[str]) -> dict:
                 f'lean --root="$1" -o "$1/TruthCore/{module}.olean" "$1/TruthCore/{module}.lean"'
             )
         path = Path(tmp) / "Scratch.lean"
-        path.write_text(scratch(commands))
+        path.write_text(scratch(commands, portfolio))
         script = " && ".join(compile_steps) + ' && LEAN_PATH="$1:$LEAN_PATH" lean "$2"'
         completed = subprocess.run(
             ["lake", "env", "sh", "-c", script, "sh", tmp, str(path)],
@@ -88,6 +112,8 @@ def run(commands: list[str]) -> dict:
         )
     if completed.returncode != 0:
         raise AssertionError(completed.stderr or completed.stdout)
+    if raw is not None:
+        raw.append(completed.stdout)
     outcomes: dict = {}
     for line in completed.stdout.splitlines():
         if "DISCOVER-JSON " in line:
@@ -451,6 +477,70 @@ class DiscoverBindingTest(unittest.TestCase):
         # Through another field too, or whole: not projection-only.
         self.assertEqual(uses[f"{ns}.FrameAndOther"], [[], []])
         self.assertEqual(uses[f"{ns}.Whole"], [[], []])
+
+
+    def test_the_prove_sweep_portfolio_closes_what_duper_has_no_premise_for(self):
+        ns = "TruthCore.DiscoverFixtureTarget"
+        _, portfolio, _ = sweep_source()
+        labels = [label for label, _ in portfolio]
+        for label in ("tauto", "unfold+aesop", "unfold+grind"):
+            self.assertIn(label, labels)
+        with_pf = lean_string(json.dumps({"portfolio": portfolio, "portfolio_heartbeats": 20000}))
+        without = lean_string(json.dumps({}))
+        outcomes = run([
+            f'#discover "pf" 2000 "" {with_pf} {ns}.PlusOne from {ns}.Keeps',
+            f'#discover "duper" 2000 "" {without} {ns}.PlusOne from {ns}.Keeps',
+        ], portfolio=True)
+        # Duper alone has no premise for `n < n + 1` (the control).
+        self.assertIsNone(outcomes["duper"]["closed"])
+        found = outcomes["pf"]
+        self.assertIsNone(found["alone"])
+        self.assertTrue(found["closed"]["prover"].startswith("portfolio:"), found["closed"])
+        # The same minimization as Duper's: the premise is needed.
+        self.assertEqual(found["minimal"], [0])
+        self.assertEqual(found["deletions"], [{"premise": 0, "outcome": "kept"}])
+        self.assertTrue(found["proof"]["prover"].startswith("portfolio:"))
+        self.assertTrue(set(found["proof"]["axioms"]) <= {"propext", "Classical.choice", "Quot.sound"})
+        self.assertNotIn("outside_bundle_rejected", found)
+        # The certification text replays the portfolio tactic verbatim.
+        label = found["proof"]["prover"].removeprefix("portfolio:")
+        tactic = dict((l, t) for l, t in portfolio)[label]
+        prelude, _, extra = sweep_source()
+        delta = " ".join(found["unfold"])
+        text = (
+            "".join(f"import {m}\n" for m in extra) + prelude
+            + f"\ntheorem discovered1 {found['signature']} := by\n  delta {delta} at *\n  {tactic}\n"
+        )
+        check(text)
+
+    def test_a_portfolio_proof_through_a_library_theorem_is_rejected(self):
+        ns = "TruthCore.DiscoverFixtureTarget"
+        _, portfolio, _ = sweep_source()
+        config = lean_string(json.dumps({"portfolio": portfolio, "portfolio_heartbeats": 20000}))
+        stdout: list = []
+        outcomes = run([
+            f'#discover "outside" 2000 "" {config} {ns}.DoubleTarget from {ns}.DoubleKeeps',
+            f"#discover_external {ns}.usesDoubleEq",
+            f"#discover_external {ns}.usesEquations",
+        ], portfolio=True, raw=stdout)
+        outcome = outcomes["outside"]
+        # `simp_all`, `aesop` and `grind` close it only through the `@[simp]`/
+        # `@[grind]` theorem `double_eq`: no proof from the bundle, not even a
+        # vocabulary theorem.
+        self.assertIsNone(outcome["alone"])
+        self.assertIsNone(outcome["closed"])
+        rejected = outcome["outside_bundle_rejected"]
+        self.assertTrue(rejected)
+        for entry in rejected:
+            self.assertTrue(entry["prover"].startswith("portfolio:"))
+            self.assertEqual(entry["outside_bundle"], [f"{ns}.double_eq"])
+        # The certification check: a library theorem is reported, the
+        # generated equation lemmas of `double` are not.
+        reports = [
+            json.loads(line.split("discover-external: ", 1)[1])
+            for line in stdout[0].splitlines() if "discover-external: " in line
+        ]
+        self.assertEqual(reports, [[f"{ns}.double_eq"], []])
 
 
 if __name__ == "__main__":

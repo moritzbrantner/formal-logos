@@ -13,8 +13,6 @@ pub const COMMAND: Command = Command {
     run,
 };
 
-/// Default `maxHeartbeats` per attempt: a tenth of Lean's default.
-const HEARTBEATS: usize = 20_000;
 /// Default Challenges per Lean run.
 const BATCH: usize = 40;
 
@@ -36,7 +34,10 @@ fn run(args: &Args, operands: &[&str]) -> Output {
         return Err(usage("no Challenge theorem matches the filters"));
     }
     let options = Options {
-        heartbeats: args.sweep.heartbeats.unwrap_or(HEARTBEATS) as u64,
+        heartbeats: args
+            .sweep
+            .heartbeats
+            .map_or(prove_sweep::DEFAULT_HEARTBEATS, |h| h as u64),
         batch: args.sweep.batch.unwrap_or(BATCH),
     };
     let targets: usize = challenges.iter().map(|c| c.targets.len()).sum();
