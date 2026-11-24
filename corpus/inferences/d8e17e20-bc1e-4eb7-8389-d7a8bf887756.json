@@ -1,0 +1,10 @@
+{
+  "id": "d8e17e20-bc1e-4eb7-8389-d7a8bf887756",
+  "label": "Restated-premise controls, checked (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "e8724436-0c5a-4685-be68-0c99b520b622",
+  "rule": "Iff.rfl for the three equivalences; one explicit three-world model checked by case analysis",
+  "meaning": "Closed controls for the restated-premise consolidation: the three registered equivalences hold by Iff.rfl over the stated carriers, and on one three-world frame with contingent concreta the three single-proposition grounding premises hold (P1-prime non-vacuously) while the universal Aristotelian grounding principle fails, so no one of them, and not their conjunction, entails the universal. The universal principle is satisfiable on the same frame. Model-witnessed only; a statement about these formal interpretations.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

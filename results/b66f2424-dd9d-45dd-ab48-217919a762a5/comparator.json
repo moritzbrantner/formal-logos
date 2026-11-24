@@ -1,0 +1,9 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.RestatedPremises.Challenge",
+  "solution_module": "TruthCore.Results.Causality.RestatedPremises.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.RestatedPremises.actualityGroundedAtAbsenceWorldsOfEverywhere"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}

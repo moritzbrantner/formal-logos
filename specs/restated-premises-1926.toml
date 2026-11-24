@@ -1,0 +1,114 @@
+# #1926 phase 2, slice 1: restated premises. Which premises reported as
+# restatements of one another coincide, and which only look alike.
+# Same proposition, two records: three logically_equivalent_to registrations,
+# each verified by Iff.rfl as a Comparator-checked theorem of the controls
+# result. One principle, several instances: Aristotelian modality stated once
+# (AristotelianGroundingEverywhere), registered as strengthening two of the
+# single-proposition bare premises of the Pruss routes by instantiation, with
+# a separator on which all three single-proposition instances hold and the
+# universal fails. Alike in shape only: the assertion, doubt and thinking
+# occurrence premises (no relation registered). Analyst formulations,
+# attribution deferred. Findings: docs/notes/restated-premises.md and the
+# attempt "Consolidation of the restated premises reported by the #1926 survey".
+
+[batch]
+vocab = "TruthCore.Causality.RestatedPremises"
+results = "TruthCore.Results.Causality.RestatedPremises"
+
+[[statement]]
+id = "Aristotelian modality at every world: a non-actual accessible possibility is grounded in a power"
+lean = "AristotelianGroundingEverywhere"
+paraphrase = "OPEN (Aristotelian modality, stated once; analyst formulation of A. Pruss's principle, navigation only, attribution deferred): at every world u and for every proposition p, if p holds at some world accessible from u and fails at u, then some being existing at u has, at u, a power whose exercise would initiate a causal chain issuing in p (PowerFor u y p, the primitive of ModalGrounding). The single-proposition bare premises 95bf8780 (P1-prime, at w, for the joint absence of the concreta contingent at w), 607e94cf (at each world accessible from w that lacks them, for w obtaining) and 94393b5b (at w, for there being no contingent concretum) are instances of it. It says nothing about which being holds the power, whether the holder is concrete, necessary or unique, or whether the power is ever exercised; it is not PGP (powers over the existence of individuals)."
+definitions = ["bf7eddca-8291-4744-8470-379babcd7781", "DEF-KANT-ONTOLOGICAL-MODEL"]
+
+[[statement]]
+id = "Restated-premise controls: three equivalences, grounding instances without the universal"
+lean = "RestatedPremisesControls"
+paraphrase = "Closed controls. (1) For all parameters, ParticipatedHasOtherCause (2b25a78c, q.44 a.1 ad 1) and ParticipatedEsseHasDistinctCause (732302a1, q.44 a.1 co.) are the same proposition (Iff.rfl). (2) For every idea frame I, MeditatorThinks I (22954087) is SelectedBearsOccurringThought (b0fd6cc1) at I's occurrence, bearing and meditator fields (Iff.rfl). (3) For every causality frame F, concreteness predicate, grounding relation and world w, SomeContingentConcreteAt F concrete w (c76b6e2c) is SomeActualContingentAt (c94b5446) on the ground profile of F with the same concreteness predicate (Iff.rfl). (4) On one three-world frame (worlds a, b, z, all mutually accessible; g exists everywhere, c and d exist at a and z and not at b; every candidate concrete; g has at a a power for whatever holds at b and at b a power for whatever holds at a, nothing else has a power): the joint absence of the concreta contingent at a is possible at a, some concrete being is contingent at a, the three single-proposition grounding premises 95bf8780, 607e94cf and 94393b5b hold at a, and the universal Aristotelian grounding principle fails (z obtaining is possible at a, fails at a, and nothing at a has a power for it). (5) The universal principle holds on the same frame when g has at every world a power for every proposition. Only these conjuncts are certified; the models are formal interpretations, not evidence about actual powers."
+definitions = ["bf7eddca-8291-4744-8470-379babcd7781", "DEF-KANT-ONTOLOGICAL-MODEL", "DEF-KANT-MODAL-CONTINGENCY", "DEF-INHABITED-CONCRETE-WORLD", "DEF-THOUGHT-OCCURRENCE", "DEF-THOUGHT-BEARER", "14d30c53-51c2-502d-b009-247dac0421e0", "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"]
+disambiguations = ["DISAMB-CONCRETE-ABSTRACT-CRITERIA", "DISAMB-KANT-CONTINGENCY"]
+
+[[argument]]
+id = "P1-prime from Aristotelian modality at every world, by instantiation"
+theorem = "actualAbsenceGroundedOfEverywhere"
+premises = ["Aristotelian modality at every world: a non-actual accessible possibility is grounded in a power"]
+conclusion = "95bf8780-0e3c-49ba-b636-2274e2997a30"
+weakening = true
+axioms = []
+transcription = "instantiation"
+rule = "Universal instantiation at the world w and the proposition that every concretum contingent at w is absent"
+meaning = "Instantiation (a weakening, not a substantive derivation): Aristotelian modality at every world, instantiated at w and at the proposition NoActualContingentConcreteIn F concrete w, is P1-prime, on the same frame, power primitive, concreteness predicate and world. The converse fails (the controls' separator). As a transcription it closes P1-prime only if the universal principle is closed, and it never expands P1-prime in the route-cost diagnostic. It records that P1-prime is one instance of a principle the Pruss routes use at several propositions, not new warrant for it."
+description = "Transcription (instantiation): Aristotelian modality at every world entails P1-prime (95bf8780) by instantiating its world and proposition. Registered as a strength order; the controls' separator shows the converse fails. It adds no warrant to P1-prime and closes nothing while the universal principle is open."
+
+[[argument]]
+id = "Absence-world grounding of the actual world from Aristotelian modality at every world"
+theorem = "actualityGroundedAtAbsenceWorldsOfEverywhere"
+premises = ["Aristotelian modality at every world: a non-actual accessible possibility is grounded in a power"]
+conclusion = "607e94cf-07df-46c1-9b75-452e50762211"
+weakening = true
+axioms = []
+transcription = "instantiation"
+rule = "Universal instantiation, at each world v accessible from w that lacks the concreta contingent at w, at v and the proposition that w obtains"
+meaning = "Instantiation (a weakening, not a substantive derivation): Aristotelian modality at every world, instantiated at each absence world v and the proposition that w obtains, gives the grounding premise of Pruss's own direction (607e94cf), on the same frame, power primitive, concreteness predicate and world. The converse fails (the controls' separator). As a transcription it closes 607e94cf only if the universal principle is closed, and it never expands it in the route-cost diagnostic."
+description = "Transcription (instantiation): Aristotelian modality at every world entails grounding, at each absence world, of the actual world's obtaining (607e94cf). Registered as a strength order; the controls' separator shows the converse fails. It adds no warrant and closes nothing while the universal principle is open."
+
+[[argument]]
+id = "Restated-premise controls, checked"
+theorem = "restatedPremisesControls"
+premises = []
+conclusion = "Restated-premise controls: three equivalences, grounding instances without the universal"
+axioms = []
+sense_mixing_control = true
+comparator_theorems = ["participatedCauseReadingsIff", "meditatorThinksIff", "someContingentConcreteIff"]
+rule = "Iff.rfl for the three equivalences; one explicit three-world model checked by case analysis"
+meaning = "Closed controls for the restated-premise consolidation: the three registered equivalences hold by Iff.rfl over the stated carriers, and on one three-world frame with contingent concreta the three single-proposition grounding premises hold (P1-prime non-vacuously) while the universal Aristotelian grounding principle fails, so no one of them, and not their conjunction, entails the universal. The universal principle is satisfiable on the same frame. Model-witnessed only; a statement about these formal interpretations."
+description = "Closed controls (Iff.rfl and one finite model): the three restated-premise equivalences, and a frame on which P1-prime, absence-world grounding of the actual world and the global grounding premise hold while Aristotelian modality at every world fails."
+
+[[relation]]
+id = "Aristotelian modality at every world strengthens P1-prime"
+subject_kind = "statement"
+subject_id = "Aristotelian modality at every world: a non-actual accessible possibility is grounded in a power"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "95bf8780-0e3c-49ba-b636-2274e2997a30"
+verification_result_id = "P1-prime from Aristotelian modality at every world, by instantiation"
+strictness_result_id = "Restated-premise controls, checked"
+note = "Same frame, power primitive PowerFor and world; the weak version is the strong one at the world w and the single proposition that every concretum contingent at w is absent. The strong version adds grounding at every other world and for every other proposition. Strictness: on the controls' three-world frame P1-prime holds non-vacuously (the joint absence is possible at a and fails at a) and the universal fails for the proposition that z obtains, which no being at a has a power for. Registered so that the several single-proposition grounding premises of the Pruss routes show their common principle; the routes keep the weak version. No certified difference (strength_comparison) is registered: the natural delta (grounding at every other world-proposition pair) is the universal with one instance removed, which needs a case split on equality of propositions and adds nothing a reviewer cannot read off the definitions."
+
+[[relation]]
+id = "Aristotelian modality at every world strengthens absence-world grounding of the actual world"
+subject_kind = "statement"
+subject_id = "Aristotelian modality at every world: a non-actual accessible possibility is grounded in a power"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "607e94cf-07df-46c1-9b75-452e50762211"
+verification_result_id = "Absence-world grounding of the actual world from Aristotelian modality at every world"
+strictness_result_id = "Restated-premise controls, checked"
+note = "Same frame, power primitive PowerFor and world w; the weak version is the strong one at each world v accessible from w that lacks the concreta contingent at w, for the single proposition that w obtains. The strong version adds grounding at every other world and for every other proposition. Strictness: on the controls' three-world frame the weak version holds (the only absence world is b, and g at b has a power for a obtaining) and the universal fails at a for the proposition that z obtains. The routes keep the weak version. No certified difference (strength_comparison) is registered, for the reason given on the P1-prime registration."
+
+[[relation]]
+id = "The q.44 a.1 co. participation premise is the ad 1 premise"
+subject_kind = "statement"
+subject_id = "732302a1-f7bf-594d-9a8a-cb4bd00687a7"
+predicate = "logically_equivalent_to"
+object_kind = "statement"
+object_id = "2b25a78c-abad-50d9-abb9-31a753409192"
+note = "Same proposition over the same parameters (a participation predicate, a cause relation CausesIn and the respect esse): both unfold to 'every x that has esse by participation has some c other than x that causes x's esse'. Verified as participatedCauseReadingsIff (Iff.rfl), a Comparator-checked theorem of the restated-premise controls result. Both records link ESSE_BY_PARTICIPATION_1 and esse; the ad 1 record also links the mode-unspecified external cause of esse (196be87e), the co. record the cause of a perfection (CAUSE_2), which at esse is the same mode-unspecified cause of being (the efficient sibling is a separate statement). The two stay distinct records because their source readings differ (ST I q.44 a.1 ad 1 and co.) and their routes bind different Lean declarations in frozen Challenges (ComponentFirstness and Round2Grounding); merged_legacy_ids is not used. No argument is registered in either direction, since each would be an identity transcription."
+
+[[relation]]
+id = "The meditator thinks is the selected-bearer thinking premise on the idea frame"
+subject_kind = "statement"
+subject_id = "22954087-d5fb-4bd3-bcb7-5d5167016988"
+predicate = "logically_equivalent_to"
+object_kind = "statement"
+object_id = "b0fd6cc1-8907-5ec6-b0b4-598848314bf2"
+note = "The same proposition on the idea frame's carrier: MeditatorThinks I unfolds (through ThinkingRootFork.Thinks) to 'some episode e occurs and the meditator I.me bears e', which is SelectedBearsOccurringThought with Occurs := I.Occurs, Bears := I.Bears and the selected being := I.me. Verified for every idea frame as meditatorThinksIff (Iff.rfl), a Comparator-checked theorem of the restated-premise controls result. Same occurrence and bearer senses (DEF-THOUGHT-OCCURRENCE, DEF-THOUGHT-BEARER). The equivalence holds at that instantiation: the selected-bearer premise is stated for any occurrence and bearing relations and any selected being, the cogito premise for the meditator of an idea frame, so it is the selected-bearer premise with the selection fixed as the meditator, not a claim that every selected being is a meditator. The records stay distinct (Cartesian idea-of-the-infinite route and Round 3 cogito-base grounding route, different carriers, frozen Challenges); no argument is registered in either direction."
+
+[[relation]]
+id = "Some concrete contingent at w is the same on the frame and on its ground profile"
+subject_kind = "statement"
+subject_id = "c76b6e2c-1ca0-47fd-a9d0-2c2faa3d1174"
+predicate = "logically_equivalent_to"
+object_kind = "statement"
+object_id = "c94b5446-e7e7-5b36-9bed-288959725526"
+note = "The same proposition on two carriers: SomeContingentConcreteAt F concrete w ('some x is concrete and ContingentAt F.history.ontic w x', exists at w and fails to exist at some world accessible from w) is SomeActualContingentAt on the ground profile of F with the same concreteness predicate (groundProfile F concrete grounds, whose ontic is F.history.ontic), for every grounding relation, which the proposition does not mention. Verified as someContingentConcreteIff (Iff.rfl), a Comparator-checked theorem of the restated-premise controls result. Same contingency sense (MODAL_CONTINGENCY_1, DEF-KANT-MODAL-CONTINGENCY) and model (DEF-KANT-ONTOLOGICAL-MODEL). Both take the concreteness predicate as a parameter; the c94b5446 record also reads it as CONCRETE_6 (DEF-CONCRETE-ESSE-IN-RE), while c76b6e2c leaves the selected predicate open, so the equivalence holds whenever the same predicate is supplied and does not fix the c76b6e2c routes to CONCRETE_6. The adapter runs from frames to profiles only: a profile that is not a frame's ground profile has no c76b6e2c counterpart. The records stay distinct (Pruss routes on the CausalityFrame, the contingent-being node on its route profile); no argument is registered in either direction."

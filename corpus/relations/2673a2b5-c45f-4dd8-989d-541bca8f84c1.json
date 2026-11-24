@@ -1,0 +1,12 @@
+{
+  "id": "2673a2b5-c45f-4dd8-989d-541bca8f84c1",
+  "label": "Aristotelian modality at every world strengthens P1-prime",
+  "subject_kind": "statement",
+  "subject_id": "31d9564c-0955-44cf-b088-c205c7195253",
+  "predicate": "strengthens",
+  "object_kind": "statement",
+  "object_id": "95bf8780-0e3c-49ba-b636-2274e2997a30",
+  "verification_result_id": "89359310-cd95-495b-8533-aa2c3f8a1f41",
+  "strictness_result_id": "554f060b-f097-4729-b90a-196d535448ac",
+  "note": "Same frame, power primitive PowerFor and world; the weak version is the strong one at the world w and the single proposition that every concretum contingent at w is absent. The strong version adds grounding at every other world and for every other proposition. Strictness: on the controls' three-world frame P1-prime holds non-vacuously (the joint absence is possible at a and fails at a) and the universal fails for the proposition that z obtains, which no being at a has a power for. Registered so that the several single-proposition grounding premises of the Pruss routes show their common principle; the routes keep the weak version. No certified difference (strength_comparison) is registered: the natural delta (grounding at every other world-proposition pair) is the universal with one instance removed, which needs a case split on equality of propositions and adds nothing a reviewer cannot read off the definitions."
+}

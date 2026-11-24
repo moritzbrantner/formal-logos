@@ -1,0 +1,11 @@
+{
+  "id": "554f060b-f097-4729-b90a-196d535448ac",
+  "label": "Restated-premise controls, checked",
+  "argument_id": "f381e5bf-f589-4737-b86f-a3710ce2f05a",
+  "challenge_module": "TruthCore.Results.Causality.RestatedPremises.Challenge",
+  "solution_module": "TruthCore.Results.Causality.RestatedPremises.Solution",
+  "theorem": "TruthCore.Results.Causality.RestatedPremises.restatedPremisesControls",
+  "comparator_config": "results/554f060b-f097-4729-b90a-196d535448ac/comparator.json",
+  "status": "solution-present",
+  "description": "Closed controls (Iff.rfl and one finite model): the three restated-premise equivalences, and a frame on which P1-prime, absence-world grounding of the actual world and the global grounding premise hold while Aristotelian modality at every world fails."
+}

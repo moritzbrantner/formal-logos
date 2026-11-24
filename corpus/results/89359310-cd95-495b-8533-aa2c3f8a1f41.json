@@ -1,0 +1,12 @@
+{
+  "id": "89359310-cd95-495b-8533-aa2c3f8a1f41",
+  "label": "P1-prime from Aristotelian modality at every world, by instantiation",
+  "argument_id": "ec669d99-9425-4f6b-ab8d-5c8b520e6da2",
+  "challenge_module": "TruthCore.Results.Causality.RestatedPremises.Challenge",
+  "solution_module": "TruthCore.Results.Causality.RestatedPremises.Solution",
+  "theorem": "TruthCore.Results.Causality.RestatedPremises.actualAbsenceGroundedOfEverywhere",
+  "comparator_config": "results/89359310-cd95-495b-8533-aa2c3f8a1f41/comparator.json",
+  "status": "solution-present",
+  "description": "Transcription (instantiation): Aristotelian modality at every world entails P1-prime (95bf8780) by instantiating its world and proposition. Registered as a strength order; the controls' separator shows the converse fails. It adds no warrant to P1-prime and closes nothing while the universal principle is open.",
+  "transcription": "instantiation"
+}

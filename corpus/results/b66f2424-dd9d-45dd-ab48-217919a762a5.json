@@ -1,0 +1,12 @@
+{
+  "id": "b66f2424-dd9d-45dd-ab48-217919a762a5",
+  "label": "Absence-world grounding of the actual world from Aristotelian modality at every world",
+  "argument_id": "360bcde2-108b-41a0-8f2a-7bbe748109cd",
+  "challenge_module": "TruthCore.Results.Causality.RestatedPremises.Challenge",
+  "solution_module": "TruthCore.Results.Causality.RestatedPremises.Solution",
+  "theorem": "TruthCore.Results.Causality.RestatedPremises.actualityGroundedAtAbsenceWorldsOfEverywhere",
+  "comparator_config": "results/b66f2424-dd9d-45dd-ab48-217919a762a5/comparator.json",
+  "status": "solution-present",
+  "description": "Transcription (instantiation): Aristotelian modality at every world entails grounding, at each absence world, of the actual world's obtaining (607e94cf). Registered as a strength order; the controls' separator shows the converse fails. It adds no warrant and closes nothing while the universal principle is open.",
+  "transcription": "instantiation"
+}
