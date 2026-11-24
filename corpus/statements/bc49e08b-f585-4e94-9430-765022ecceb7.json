@@ -1,0 +1,6 @@
+{
+  "id": "bc49e08b-f585-4e94-9430-765022ecceb7",
+  "label": "Conserving the complete supply allows tied or increased local intensity under different routing",
+  "paraphrase": "Closed mechanism control. Two ports each supply n positive units. Passing both counts through separately preserves every local threshold. Combining both into one output preserves the same total while passing a local threshold of twice n that neither input port passes. In both layouts the local peak is the least upper bound of the independently checked threshold levels. The interpretation concerns routed counts and imposes no degree of esse on any actual being.",
+  "lean_declaration": "TruthCore.Causality.ParticipatedEsseScale.ChannelControl"
+}

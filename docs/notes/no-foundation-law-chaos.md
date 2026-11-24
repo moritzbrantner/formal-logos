@@ -1320,8 +1320,10 @@ This continuation answers two selected questions left by the reviewed
 That checkpoint's head `e5dd8243c5690f5d9255a509da00111cbdc36c8e` passed
 [CI run 45452272141](https://github.com/moritzbrantner/formal-logos/actions/runs/45452272141).
 It remains an unmerged source of evidence, not a new set of declarations in
-this main-based research change. The present baseline is
-`61acfd5629cab58221fe148b034340c7af9278ff`.
+this main-based research change. The research baseline was
+`61acfd5629cab58221fe148b034340c7af9278ff`; publication integrates main
+`9c627028019a785fad5e147d5a919cd4a6bf14c9`. Its intervening esse-scale
+and transmission findings preserve the dependencies and qualifications used here.
 
 The two investigations are independent. [#1957](https://github.com/moritzbrantner/formal-logos/issues/1957)
 tests the inference from product-dependent specification to dependence of a
@@ -1439,6 +1441,15 @@ The scoped assessments update existing attempts `9d7b8ae0` and
 `divine-veracity-1410`, preserving their earlier findings. Independent review
 of #1957 accepted checkpoint `70d83fcdf621078ef4766583fe7b57bec92afe27`
 and its validation paragraph with qualifications and no substantive finding.
-The historical delta and this combined synthesis await their own challenge
-before publication. The PR and the two selected issues own the publication
-and delivered-head CI disposition. No merge is requested.
+Independent reviewer `/root/final_continuation_review` accepted the historical
+delta, this combined synthesis and the actual proposed PR body at
+`02b10877de416cff3858f9fdc3cbada5b267f216`, with qualifications and no
+substantiated defect. The reviewer read the primary historical passages,
+actual assertion/representation/confirmation consumers and whole-vector
+evidence definitions, and checked the diagnostic against its elaboration log.
+The five owned files are unchanged through main integration
+`94eff81001593764167d31a72915595282a6e94b`. Refreshed corpus and frontier
+checks passed; no premise change is claimed. These reviews establish neither
+actual divine applicability nor a historical guarantee. The PR and the two
+selected issues own the publication and delivered-head CI disposition.
+No merge is requested.

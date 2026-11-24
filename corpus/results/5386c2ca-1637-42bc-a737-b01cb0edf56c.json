@@ -1,0 +1,11 @@
+{
+  "id": "5386c2ca-1637-42bc-a737-b01cb0edf56c",
+  "label": "The selected giver bounds participated esse from preserved pure levels",
+  "argument_id": "8fe13407-28a6-4c20-b3e2-2905499e13cf",
+  "challenge_module": "TruthCore.Results.Causality.ParticipatedEsseScale.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ParticipatedEsseScale.Solution",
+  "theorem": "TruthCore.Results.Causality.ParticipatedEsseScale.boundFromRealizedLevels",
+  "comparator_config": "results/5386c2ca-1637-42bc-a737-b01cb0edf56c/comparator.json",
+  "status": "solution-present",
+  "description": "The populated supply premise establishes actuality of the selected giver. At each actual participant the efficient-total bridge and the preservation premise transport every witnessed pure level to that very giver. The calibrated least upper bounds are therefore ordered in the same preorder, without total comparability, attainment of a greatest level, strict causal superiority or the unrestricted adequacy principle. This supplies exactly the represented participant bound used in the greatest-degree argument."
+}

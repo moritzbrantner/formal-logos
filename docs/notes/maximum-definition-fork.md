@@ -805,3 +805,142 @@ A difference in dependence identifies the two roles and leaves that question ope
 
 [Existing source-supply and selection arguments](q44-inferential-dependency.md) ·
 [Existing degree and capacity arguments](causal-perfection-transfer.md#recipient-relative-limitation-and-source-scoped-ascent-2026-11-17)
+
+### When does what is communicated fix the giver’s own degree of esse?
+
+Take one actual participant and the same principal giver as above. Suppose we can
+identify a respect in which the participant is actually perfect, specify the
+positive content of that perfection without reference to who gave it, and
+identify that content in the giver. If this holds for **each determination that
+sets the participant’s degree of esse**, it explains why receiving esse cannot
+put this participant above the giver. Two claims give this proposal a test.
+
+1. **Preservation in the giver.** Select the determinations in advance. Among
+   these, each pure determination realized in the actual participant must also
+   be realized in its efficient total giver. The test concerns the two bearers'
+   own actualities. The giver can pass it in a different mode only if we can
+   say which positive content the modes share and what warrants attributing that
+   content to the giver. The fact that the giver can produce the participant
+   supplies no such identification on its own. [Preservation premise](../../corpus/statements/191395d0-e3ac-4aea-bff5-77dd437993b9.json)
+2. **Calibration of the whole bearer.** Assign each admitted determination a
+   level common to all its bearers. An actual bearer’s degree of esse must bound
+   the levels it realizes, and every bound on those levels must already bound
+   its degree. The second condition is the substantive completeness claim. For
+   instance, if two actualities jointly contribute a perfection which neither
+   registers alone, the inventory must capture the contribution of their union.
+   Renaming or counting more descriptions of the same actuality adds nothing.
+   Neither a total ordering nor a highest individual item is required.
+   An empty inventory can satisfy calibration when each actual bearer's degree
+   is a bottom value. A constant level on nonempty realized profiles likewise
+   yields ties. Such readings cannot explain differences in degree. A proposed
+   scale meant to distinguish degrees must supply independently identifiable
+   intrinsic differences and justify their ordering across bearers.
+   [Calibration premise](../../corpus/statements/6ab848a8-9dc0-4b5e-a8f2-82dce793fd1a.json)
+
+Every level witnessed in the participant now has a witness in the actual giver.
+So the giver’s own degree bounds those levels, and calibration puts the
+participant’s degree at or below it. Equal profiles give bounds in both
+directions. On a preorder that is a tie in rank, even when the representing
+values are distinct. This reaches the existing participant bound
+(`aba6f4e1`) without taking strict superiority (`d5a94eb1`) or adequacy
+in every respect (`87f41688`) as a premise. The populated source and
+efficient-total giving commitments remain. The [earlier coverage argument](../../corpus/results/e3167aef-eab5-45be-b9eb-bf17e1d1690a.json)
+assumes a source with the whole inclusive repertoire. Here only the
+participant's admitted actualities need transport, but their levels must
+calibrate the very degree used in the conclusion. [Degree argument](../../corpus/arguments/8fe13407-28a6-4c20-b3e2-2905499e13cf.json)
+
+**A control on the inference from total supply.** Send one unit down each
+of two ports. A local detector fires when at least two units arrive *at one
+port*. Straight routing leaves this detector silent at both ends. Redirecting
+both units into the same output makes it fire there. The total supplied
+quantity is two in each case, every output unit comes from the inputs, and the
+detector rule is fixed before routing. For any positive input of *n* per
+port, the greatest local threshold rises from *n* to *2n* under concentration
+and stays at *n* under straight routing. This explains exactly how counting
+the complete supply can coexist with a reversal on another common, independently
+specified measure. A participant's form could likewise determine *how* an
+actuality is realized while receiving the whole act by which it exists. The
+control gives a reason to demand preservation of the proposed grade-setting
+content. It supplies no example of a recipient exceeding its cause in esse.
+[Checked routing control](../../corpus/results/8cbb943d-a6cd-4cb3-8a43-3432523db0ea.json)
+
+**Application to esse.** Being one actually existing whole gives a first common
+test. The source and the recipient each pass it on the stated interpretation.
+This supports a tie on that test. To use it as a sufficient measure of esse
+would require the further thesis that all actually existing wholes have the
+same grade. A richer candidate is the unity realized in an organism's immanent
+self-maintenance. That description allows an inquiry into what the organism
+itself does. A giver's production of such an organism identifies its effect
+without yet identifying any immanent act in the giver. Even if we identify
+one, we still need a reason why it contributes to **degree of existence**,
+and how its level compares across the two modes. Counting observed life
+functions would make the rank depend on the organism's particular mode.
+The [immanent-operation investigation](causal-perfection-transfer.md)
+examines the difference between acting on another and acting in a way that
+perfects the agent.
+
+The positive case is strongest on a determinate reading of participation:
+the recipient has the common perfection precisely by sharing in what the
+giver actually is, and reception can contract its realization. This gives
+a reason for preservation of that perfection; it gives no warrant for
+treating every effect-specific organization as an actuality shared in that
+way. An account on which the act makes the whole exist while the recipient's
+form specifies its mode explains why one giver could supply all the esse
+without reproducing those organizations in itself. I would retain the weak
+bound as a defensible direct premise on the sharing reading, and use the new
+derivation conditionally. The attribution of a single grade-setting content
+to both bearers and the claim that those contents exhaust the degree of esse
+still need warrant. A discriminating next case would identify an intrinsic
+actuality in giver and participant by evidence other than the giver's output,
+then explain whether variation in it can vary *being* with kinds of operation
+held fixed. A comparison sensitive instead to received versus subsistent
+mode at fixed content would put pressure on the calibration itself. This
+question can remain open while other arguments for a greatest bearer proceed.
+
+### Current judgment on the four giver propositions
+
+1. **Adequacy at esse (`87f41688`).** Given an actual participant, one selected
+   own-being giver for all actual participants, and efficient total giving,
+   the [preservation argument](../../corpus/arguments/8fe13407-28a6-4c20-b3e2-2905499e13cf.json)
+   yields a weak upper bound if every admitted pure determination the recipient
+   realizes is also realized in the giver and their degrees are the least upper
+   bounds of their respective levels on one scale. This supports the
+   participation-specific conclusion `aba6f4e1`. The important open application
+   is to identify the same positive content in the giver independently of what
+   it produces, and justify why these contents measure the whole bearer's esse.
+2. **Whole giving (`50da2b49`).** Both an indispensable instrument and a
+   necessary additional contributor can stop delivery when removed. In the
+   [secondary-cause test](causal-perfection-transfer.md#does-a-dependent-secondary-contribute-alongside-the-giver-of-esse),
+   isolating a secondary's own productive input while preserving transmission
+   distinguishes them. At the onset of a new organism, giving the underlying
+   matter its being can explain why no independent material supply is needed.
+   To infer total efficient giving one must still trace what the generator's
+   own exercise contributes to the new individual's esse.
+3. **An actual supplier whose being is its own (`de05072a`).** In the
+   [borrower-chain test](q44-inferential-dependency.md#can-effective-local-supply-continue-throughout-a-borrower-only-order),
+   every active stage has an effective upstream supplier. The law allows an
+   empty solution even with every link intact. Given activity somewhere, it
+   determines every stage. A source-free explanation can take population as
+   a primitive. The source account offers a further explanation if it can exhibit an
+   intrinsically actual giver whose exercise accounts for the population and
+   reaches this particular recipient.
+4. **Strict comparison (`fd2c8710`).** If the comparison ranks profiles by
+   inclusion, preserving all of a recipient's genuine perfections and adding
+   one gives strict superiority on that measure. If it ranks bearers by peak
+   intensity, both can still reach the same highest realized level. The [capacity test](contingency-receptivity-c2.md#when-does-a-missing-perfection-make-a-bearer-strictly-less)
+   asks for an upper bound on all the admitted levels the recipient realizes
+   and a determination actually realized by the giver above it. On the shared
+   calibration this suffices for a strict comparison. Its application to
+   `8176a284` also needs the bridge from represented degree to the primitive
+   comparison. It leaves open the broader claim about every limited and every
+   unlimited bearer.
+
+The two degree arguments can use the same scale. I would next test the claim
+that *understanding something* is a positive actuality realized in the source
+and unavailable to a particular noncognitive recipient. Its content must be
+identified in the source independently of its production of minds. Even then,
+one must justify where the recipient's **other** actual perfections lie on the
+same scale. That comparison could support strictness for this pair. Ranking every
+participant or establishing intellect in the giver would need further evidence.
+A recipient who also understands its own activity then provides a stronger test. Can we identify a truth about the source's own
+actuality that it grasps and the participant misses about its own?

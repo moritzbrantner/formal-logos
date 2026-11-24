@@ -193,6 +193,7 @@ public import TruthCore.Causality.ParityUnionRegress
 public import TruthCore.Causality.PartFreePlurality
 public import TruthCore.Causality.PartMediatedSelfMotion
 public import TruthCore.Causality.ParticipatedDuration
+public import TruthCore.Causality.ParticipatedEsseScale
 public import TruthCore.Causality.ParticularActuality
 public import TruthCore.Causality.PerAccidensResponses
 public import TruthCore.Causality.PerfectionOfBeing
@@ -259,6 +260,7 @@ public import TruthCore.Causality.SourceWitness
 public import TruthCore.Causality.SpineRivalsAttributes
 public import TruthCore.Causality.SpineRivalsRootEsse
 public import TruthCore.Causality.SpineRivalsStageOne
+public import TruthCore.Causality.StrictEsseScale
 public import TruthCore.Causality.StrictPriorityPureAct
 public import TruthCore.Causality.SubjectFocalRoles
 public import TruthCore.Causality.SubtractionArgument
