@@ -201,9 +201,10 @@ None of the following is independent support:
 
 Provisional judgment: **moderate**, on prima facie plausibility alone. The
 contrary combination (a modally necessary being that nonetheless has an
-actual ground) is coherent and has a developed defence in the causal register
-(Avicenna; `8c3870b7` read as NECESSARY_2). That defence reaches `G` only
-through `cb1cdea9`. No argument found here discharges NAR.
+actual ground) is formally satisfiable (model `NecessaryThroughAnother`) and has
+a developed defence in the causal register (Avicenna; Neoplatonic emanation).
+That defence reaches `G` only through `cb1cdea9`. The sourced `8c3870b7` is
+read here as NECESSARY_3/4, so it is not counted as support for the rival. No argument found here discharges NAR.
 
 **Strongest rival: a necessary-through-another holder.** Model
 `NecessaryThroughAnother`:
@@ -254,7 +255,8 @@ giving or the `Ontic` causal field.
   will need those creed commitments. NAR is compatible with them on either of
   two conditions: `G` excludes intra-divine origin (a principle, not a cause;
   navigation only), or the persons are not distinct concreta in this carrier
-  (disambiguation GOD_AS_DIVINE_BEING_VERSUS_DIVINE, `852f282b`). That
+  (sense GOD_AS_DIVINE_BEING_VERSUS_DIVINE_1 of disambiguation `852f282b`:
+  every quantified God is a divine being, not a divine person). That
   compatibility condition is recorded, not derived.
 
 **Price of the rival.**
@@ -324,7 +326,8 @@ uniqueness.** This is the main finding of the slice.
     `29818edd` (every GOD_4 has intellect, a premise of `571e36f0`).
     `0c27f65a` is a one-witness endpoint: it does not say that arbitrary GOD_4
     bearers have intellect. Through `0050b6ed` and at most one holder,
-    argument 5 carries that one witness's intellect to every GOD_4. It is an
+    argument 5's premises jointly imply that every GOD_4 has that witness's
+    intellect. It is an
     alternative intellect bundle, not a re-presentation of `571e36f0`.
   - *What it adds at the exercise level:* under its premises, the GOD_4 whose
     will `66aecdd7` asserts is the very being whose giving of the actual
@@ -393,7 +396,8 @@ parity.**
 - *Against the identification:*
   - a developed account of a NECESSARY_2 being with an actual ground that
     itself gives two-way;
-  - reading `8c3870b7` as NECESSARY_2 with a `G`-ground;
+  - evidence that ST I q.44 a.1 ad 2 (`8c3870b7`) means NECESSARY_2, with a
+    cause that is an actual concrete `G`-ground;
   - a defence of multiple underived roots that answers the multiplication
     argument.
 
@@ -417,12 +421,20 @@ attributed; no claim record is added.
 
 1. **Warrant for NAR** (decisive). Next test: derive NAR from two premises.
    - (a) The root's giving to every `G`-grounded concretum is two-way.
-   - (b) A `G`-grounded concretum exists at `v` only if it is given being at
-     `v`. This is an explicit `G`-to-giving bridge.
+   - (b) A `G`-grounded concretum exists at `v` only if its `G`-ground gives it
+     being at `v`. This is an explicit `G`-to-giving bridge.
 
    Then a `G`-grounded concretum is absent where the giving is withheld, so it
    is not NECESSARY_2. Premise (b) is the new bridge that rigor contract 5
    requires to be explicit.
+
+   Premise (a) extends #1897's two-way profile, which is derived only for the
+   giving of the actual contingents, to putatively necessary beings. That
+   extension is exactly what the rival denies, and it is close to the
+   theist-internal free-creation premise. So (a) relocates the question rather
+   than discharging it, unless (a) is itself derived. One candidate
+   derivation: one power, an invariant set-up and simplicity give a uniform
+   mode of giving across effects (#555; #1897 gap 6).
 2. **Existence of a holder at `w`:** the arguments are universal over holders.
    #1897's P1′ supplies existence; with argument 3 it gives GOD_4's existence
    at `w` as a further route, which is not registered here.
