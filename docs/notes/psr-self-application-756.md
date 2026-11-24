@@ -1161,7 +1161,9 @@ assuming aggregate coverage or denying contingency by definition.
 Move against D if an independently warranted genuinely contingent
 production or agency case provides complete existential explanation
 at the selected (not merely partial) adequacy standard without a
-necessitating basis. Start the next comparison with `acting` at world
+necessitating basis. The comparison proposed here is now completed in
+[the fixed-act test below](#the-fixed-act-test-and-the-contained-selection-boundary-2026-11-24).
+Its original specification starts with `acting` at world
 0. The contingent act `.member 0` is admitted as a reason for the
 distinct fact `.target`. They hold in exactly the same worlds, and
 the necessary `.source true` is an admitted reason for the act.
@@ -1183,3 +1185,98 @@ picture, the absence witness required for n, the priority premise
 in the First Way application and the distinct witnesses in #942. Attempt
 `9d7b8ae0-474d-4ae4-9d08-019cffbdea7b` records the revised
 provisional assessment and its open bridges.
+
+### The fixed-act test and the contained-selection boundary (2026-11-24)
+
+The exact next test from #1910 is now formalized in
+[`ContainedSelection`](../../TruthCore/Explanation/ContainedSelection.lean).
+The registered `ExerciseComparison` is statement
+`5bc4e4c1-ef43-4688-95a3-a7bbe894cedd`, result
+`31a48b76-871a-4205-9c51-58663787b64d`, theorem
+`TruthCore.Results.Explanation.ContainedSelection.exerciseComparison`.
+The companion `RestrictionBoundary` is statement
+`397cdbfa-16ca-428c-974c-de3c8b2155dd`, result
+`9a2c5f49-7c1d-4fbe-b4fb-8dbee1642f61`, theorem
+`TruthCore.Results.Explanation.ContainedSelection.restrictionBoundary`.
+Both certificates have no proposition premises: they prove the stated
+conditional tests and properties of expressly constructed interpretations,
+not the metaphysical adequacy of those interpretations. The
+[specification](../../specs/contained-selection.toml) records the complete
+bindings and selected vocabulary.
+
+At world 0, `unexplainedAct` retains `acting.arena`'s whole ontology,
+truth conditions and existence-fact assignment. The actual contingent act
+`.member 0` and actual contingent outcome `.target` are the same distinct
+facts as before. The act-to-outcome and direct source-to-outcome reasons
+remain. The only removed edge is the necessary source's reason for
+`.member 0`. The source and every other fact keep their truth conditions.
+This is a precise intervention on one represented explanation, not an
+assertion that metaphysical reasons can be freely recombined.
+
+| Test at world 0 | Original `acting.arena` | `unexplainedAct` |
+| --- | --- | --- |
+| Actual act and target, both contingent | Yes | Yes |
+| Act and direct source admitted as target reasons | Yes | Yes |
+| Actual act has a reason | Yes | No |
+| Every contingent fact has a reason | Yes | No |
+| Exact contingent-existence token PSR through `existenceView` | Yes | Yes |
+| Explanation necessitates its effect throughout the selected scope | No | No |
+
+`existenceView` is an explicit narrow adapter: a token about a bearer
+counts precisely when that bearer's existence fact is an admitted reason
+for the target bearer's existence fact. It does not translate every kind
+of adequate explanation into an existence token. The experiment therefore
+exhibits an actual gap between existential coverage and contingent-fact
+coverage in the reused vocabulary. It does not silently broaden E to
+acts, propositions or every contingent feature of an existent.
+
+The model has **two necessary sources** (`some true` and `some false`) and
+a contingent bearer (`none`); the act fact is not itself another concrete
+bearer in that domain. It includes admitted reasons, not a production
+relation, intellect, will, a proof of agency or the same divine individual
+in every role. Its reason assignments are factive at the relevant uses,
+but their adequacy remains open. One cannot identify this interpretation
+with classical theism, or infer that the original's source-to-act edge
+already solves the free-choice problem. A label on an edge supplies no
+such warrant.
+
+The philosophical gain is a precise extra obligation. A source-to-product
+existential explanation may remain intact while the actual exercise is
+unexplained under a broader standard. To claim an ultimate explanation
+covering that exercise, a proponent must supply its reason or defend the
+scope of a stopping policy. A nonnecessitating reason can be a legitimate
+answer if its actual explanatory direction and adequacy have substantive
+warrant. The same allowance and same demand apply to a necessary
+impersonal source. Neither side may demand determining contrast from its
+rival while accepting mere admitted reason coverage for itself.
+
+The companion restriction result is expressly about **determination**.
+`DeterminesFact` requires an actually obtaining condition which entails
+the target throughout accessible worlds where it obtains. If that
+condition is only a function of necessary restriction truths, it cannot
+determine a contingent target. `CompleteTruthFixed` excludes contingency
+of every represented fact but does not establish a single numerical world
+or an exhaustive representation of complete metaphysical possibilities.
+This reuses `HistorySelection.EvidenceOnly`; it is not a theorem that
+necessary reasons cannot explain contingent effects nonnecessitatingly.
+The advisory tactic sweep closes `restrictionBoundary` after unfolding
+and leaves `exerciseComparison` unresolved; both have hand-written Lean
+proofs. The former is a short structural boundary, not a newly established
+universal metaphysical PSR.
+
+**Current assessment.** The completed test supports keeping E, all-fact
+coverage and D distinct. It strengthens the explicit burden on an account
+which promises to explain both creation and the actual creative exercise,
+without settling whether a genuine agent explanation meets that burden.
+The moderate provisional preference for E and suspension about universal D
+remain as above. The broader comparison now grants perfect containment;
+see [existential inheritance and the six-worldview comparison](no-foundation-law-chaos.md#existential-inheritance-under-perfect-containment-2026-11-24).
+
+**Next unresolved test.** Connect this same exercise and outcome to a
+substantive productive-supply interpretation and to reasons carried by
+the same bearer; then evaluate the adequacy of its actual exercise at a
+nonnecessitating standard, with a matching impersonal candidate. Existing
+#942 results use different witnesses. No such bridge follows merely from
+this model's existential coverage or its admitted reason edges. The
+absence of that jointly warranted interpretation is the present blocker;
+rerunning the completed edge-removal test would not address it.

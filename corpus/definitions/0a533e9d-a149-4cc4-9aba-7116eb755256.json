@@ -1,0 +1,9 @@
+{
+  "id": "0a533e9d-a149-4cc4-9aba-7116eb755256",
+  "label": "Essential existence requirements preserve the same bearers across accessible worlds",
+  "term": "essence-to-modal existence requirement bridge",
+  "definition": "EssenceAbsenceBridge p w says that each source-indexed existence requirement EssenceRequiresExistence p x b entails ModalRequiresExistence p w x b: at every world accessible from w, the existence of the same x requires the existence of the same b. It constrains the existing Profile.InEssence primitive; it does not define essence as co-presence or infer explanatory or causal dependence from co-presence.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Explanation.ExistentialInheritance.EssenceAbsenceBridge",
+  "note": "Analyst formulation, attribution deferred. Reuses the previously identified OPEN bridge of definition 0b1d99d6-f96b-4a07-90d1-c3fc5c5946bb and the exact modal co-requirement d7f66ca4-38c0-4cbb-ac5c-b2237ec3645c. The body encodes that bridge without defending it. The conditional use is restricted to essence claims that concern a particular bearer, not a replaceable kind or functional role. An origin-dependent artifact is an illustrative candidate; whether a replacement origin gives the same object is an OPEN identity question. Necessary co-presence, a law sufficient for an outcome, and actual causal ancestry do not establish this primitive nature claim. Ordinary-to-metaphysical applicability, source-indexed nature content and the interpretation of accessible worlds remain OPEN. See docs/notes/explanatory-adequacy-750.md#existential-inheritance-with-a-contained-brute-foundation-2026-11-24."
+}

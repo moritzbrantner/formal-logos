@@ -15,6 +15,25 @@
     "PR-739",
     "PR-1808",
     "PR-1809",
-    "PR-1874"
-  ]
+    "PR-1874",
+    "dcda2ffc-b742-4850-bd49-1dc7220d064d",
+    "84562a64-8e16-4fe0-92d2-6bd860b8b538",
+    "3a404de1-a186-4700-89ec-afee90edcd1f",
+    "027d38f9-449e-445c-bb64-3dff1abd439d"
+  ],
+  "current_assessment": {
+    "date": "2026-11-24",
+    "statement_ids": [
+      "608a262d-08fe-4dfd-9413-67e2ecf35b84"
+    ],
+    "scope": "Exact initial-condition restrictions for positive historical record soundness under fixed deterministic laws",
+    "assessment": "New certificates characterize sound positive records by true content throughout each admitted positive observation fiber, equivalently uniformity plus an authentic member per inhabited positive fiber. Uniformly false fibers fail. Complete trajectories retain time-zero distinctions but present states can converge and a deterministic truth-linked channel can correct false records. Essential origin with identified existing bearers is a sufficient route to uniform origin; essential identity alone does not establish observation-based identification or truth. Logical controls do not establish fabricated-past admissibility, equal credibility, skeptical defeat or absence of fallible knowledge.",
+    "next_test": "Instantiate a genuine historical evidence channel with interpreted historical content and complete state/memory, then warrant its admitted-input restriction or truth-linked production. Evaluate an actual false-positive fiber under the same epistemic standard. Evidence-only calibration cannot distinguish stipulated same-evidence alternatives; independent, direct or cumulative warrant remains eligible.",
+    "note": "docs/notes/fixed-initial-history-535.md#initial-conditions-and-authentic-historical-evidence-2026-11-24",
+    "reviewed_revision": "0ba63817f91c66a6dc0dae3c741c9b485845b249",
+    "review": "accepted_qualified",
+    "publication": "unpublished",
+    "evidence": "Independent semantic challenge by fresh /root/semantic_challenge accepted the complete consequential outcome at 0ba63817f91c66a6dc0dae3c741c9b485845b249. Scope: nine certificate definitions/types/proofs and bindings, four notes, graph, comparative judgments, reconciled attempts and PR draft (SHA256 1083c3de697831569cbb05afa9f29cf6d0db4a8c30b843a3402fda8bc3dc01d0). Sufficient/necessary wording, a note link and graph-case wording were repaired without theorem changes. Qualified acceptance preserves open metaphysical adequacy/application bridges and does not substitute for canonical verification or establish root premises.",
+    "supersedes": "Extends rather than reverses the #1904 historical assessment: the general continuity demand now has an exact positive-fiber criterion and sufficient identity bridge. Real-world admissibility and epistemic warrant remain unresolved."
+  }
 }

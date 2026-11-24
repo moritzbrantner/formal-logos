@@ -1,0 +1,13 @@
+{
+  "id": "334ceafa-8848-4b4a-8713-3968e608b7da",
+  "label": "Essential origin of an existing bearer and observation-based identification",
+  "term": "existence-conditional essential origin and bearer identification",
+  "definition": "EssentialOrigin h origin uses the existing History/Ontic interface: for any two history indices i and j and the same numerical bearer b, if b exists at both according to h.ontic.ExistsAt, origin i b equals origin j b. origin : I -> B -> H is a primitive historical descriptor; it is not a causal edge, an existence condition or a completed account of essence. BearersPresent requires the designated bearer i to exist at each admitted i. IdentifiesBearer requires equal observations at admitted inputs to imply equality of their designated numerical bearers. Together they fix the designated origin over each observation fiber. For a supplied claim-value function, actual origin truth additionally requires an authentic anchor in each inhabited positive fiber.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Epistemology.InitialHistoryAuthenticity.EssentialOrigin",
+  "definition_ids": [
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "dd7b91ea-5284-4558-bac5-7a0759843b0c"
+  ],
+  "note": "Analyst conditional for the #1904 essential-history question, with attribution deferred. Equality fixes the SAME bearer; the existence antecedents do not assert that it exists in every alternative. Epistemic identification is a separate strong bridge, not supplied by essential origin. A genuine fossil and an observationally matching replica illustrate the distinction only conditionally on the reality of their differing origins and possibility; the theorem establishes neither. The finite control retains both Boolean bearers in every history and at every supplied time, assigns each a rigid origin marker, and changes which is the designated record bearer while preserving the visible bit. Empty ordinary causation and primitive marker assignment are explicit structural limitations. Applicability to actual historical origin, numerical identity and observable identification remains OPEN. See docs/notes/fixed-initial-history-535.md#initial-conditions-and-authentic-historical-evidence-2026-11-24."
+}

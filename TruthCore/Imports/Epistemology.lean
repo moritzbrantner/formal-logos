@@ -2,6 +2,7 @@
 module
 
 public import TruthCore.Epistemology.FitnessTruthBoundary
+public import TruthCore.Epistemology.InitialHistoryAuthenticity
 public import TruthCore.Epistemology.NoFoundationPractice
 public import TruthCore.Epistemology.SleepingBeauty1401
 public import TruthCore.Epistemology.SleepingBeauty1401.Reflection

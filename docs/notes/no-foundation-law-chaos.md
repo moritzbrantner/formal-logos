@@ -1,5 +1,10 @@
 # No ultimate foundation, radical law-change, and whole-history stability
 
+The continuation [Existential inheritance under perfect containment](#existential-inheritance-under-perfect-containment-2026-11-24)
+grants the stable rival's restrictions in full. Its question is what remains
+unexplained after the threat of arbitrary further onsets has been contained.
+It does not strengthen the original conditional into an explosion argument.
+
 This is an **ontic conditional** for the God-existence-stage explanation question
 in #735, extending the exact existing #736 history-selection, #737 predictive,
 #743 law-actuality and #1801 persistence-law distinctions. It addresses a
@@ -946,3 +951,482 @@ rival's own calibration and entitlement standard. The three-site and
 population models settle the shared-premise inference; they cannot
 adjudicate those stronger, incompatible metaphysical commitments by
 stipulating a new space of worlds.
+
+## Existential inheritance under perfect containment (2026-11-24)
+
+### Question, grants and answer
+
+This analyst investigation continues #1872, #1874, #1904, #1908, #1910,
+#1913 and the qualified containment findings proposed in #1927. The last is
+a separate, unmerged proposal at the start of this investigation; no result
+here imports its new modules. The present target is the existential-reason
+PSR `608a262d-08fe-4dfd-9413-67e2ecf35b84`, through an assessment of its
+strongest restricted rival. The registered certificates below establish
+structural consequences and controls, not that PSR. The substantive bridge
+from their resource semantics to adequate metaphysical explanation remains
+explicitly **OPEN**.
+
+Grant necessary and immutable fundamental laws, a fixed inventory of kinds
+and identities, genuine restrictions on initial conditions, deterministic
+production, and no additional uncaused events. Grant that these restrictions
+successfully exclude radical arbitrariness, and, where the rival supplies
+them, grant restrictions sufficient for sound records. No argument below
+requires arbitrary recombination, a new intruder, a changing law, or a
+fabricated history to be metaphysically possible.
+
+**Qualified answer.** These grants can contain contingent variation and
+secure complete proximate explanations. They do not, just by doing those
+jobs, explain the actual existence of an indispensable brute source. If an
+ultimate account of a dependent order must account for the actual
+prerequisites indispensable to that account, an unexplained indispensable
+source leaves that account incomplete. The deficiency is inherited by the
+account of the order, not automatically by each local causal explanation or
+each description of a present state. A rival can consistently accept this
+stopping point and decline the stronger ultimate demand. Classical theism
+has a candidate resource in intrinsically grounded necessary actuality and
+rational actual production, but its success requires more than attaching
+the words necessary, intelligent and free to a source.
+
+The restriction of the conclusion is substantive. It excludes the proposed
+inference from one brute input to chaos. It also excludes the opposite
+inference from perfectly orderly transmission to an explanation of the
+input's actuality. The reason to prefer a fuller account, if available, is
+that it answers an additional intelligible question about what actually
+supplies the order. It is not that the restricted rival is contradictory.
+
+### Four claims which must not be identified
+
+| Claim about a dependent being or order | Required connection | What it does not establish |
+| --- | --- | --- |
+| Modal contingency | Actual existence and an accessible absence of the same bearer | Bruteness, temporal change or a need for a particular kind of cause |
+| Existential dependence on B | A substantive essential requirement, with the explicit bridge to modal co-presence | An adequate explanation of B or the dependent being |
+| Proximate explanation | An actual reason or productive cause at the selected local scope | A complete account of the reason's own actual prerequisites |
+| Inherited ultimate deficiency | An indispensable actual input left unaccounted for under the stated completeness standard | Absence of a proximate reason, ignorance of every fact, or unrestricted modal freedom |
+
+The [existential-inheritance vocabulary](../../TruthCore/Explanation/ExistentialInheritance.lean)
+reuses the source-indexed essence and `ModalRequiresExistence` of
+`EssenceReasonSeparation`, and the existing `Groups`, `FullSupply` and
+`Trap` infrastructure. `EssenceAbsenceBridge` is a separately named
+commitment. Putting an existence fact in a nature field does not by itself
+make it true wherever its subject exists. Likewise the `explains` field of
+an `Arena` records an admitted relation; its name does not certify adequate
+explanation. [The full warrant and controls](explanatory-adequacy-750.md)
+retain those distinctions.
+
+### The strongest warranted inheritance result
+
+Fix an actual world w, a foundation B, and any class D of actual beings.
+Suppose every x in D modally requires this same B: at every world accessible
+from w, if x exists, B exists. Suppose B is absent at one accessible world v.
+Then **that same v lacks every x in D**. Consequently each actual x is
+contingent. Modal requirements compose, so the result extends through any
+given chain of such requirements. `AbsenceInheritance` proves this without
+finiteness, a recombination rule, or an inference from separate possible
+absences to a jointly possible absence. The essential interpretation adds
+`EssenceAbsenceBridge`; its warrant must come from the nature or origin
+claim actually defended. [Certificate](../../TruthCore/Results/Explanation/ExistentialInheritance/Solution.lean)
+
+The result is stronger than individual contingency but narrower than an
+empty-world conclusion. A necessary background may remain at v. It concerns
+the same individuals, not a role whose occupant can change. In the populated
+`ReplacementBoundary` control the same target exists in both worlds, with
+the actual base as its cause in one and an alternative source in the other.
+Actual cause and actual existential reason therefore do not alone imply
+the modal requirement. An independently warranted essential-origin premise
+may rule out that replacement; calling the actual source a cause does not.
+Nor does the tenseless existence predicate prove continuous temporal
+sustenance. [Replacement control](../../TruthCore/Explanation/ExistentialInheritance.lean)
+
+For explanation, the informative result is a **resource extraction**, not
+the stipulation that an adequate explanation has already been found. In
+`Contained`, a fixed necessary law and a persistent background accompany
+one base and arbitrarily many finite dependence layers. Every derivative
+has a distinct existing immediate cause and a proximate existence reason.
+Every rule uses the predecessor's existence together with the law. For
+**any finite derivation** of a derivative which admits no derivative
+existence as a primitive leaf, `ResourceInheritance` extracts both the
+base's existence and the law from its primitive resources. The existing
+trap theorem rules out deriving a derivative from only the fixed law and
+background. Adding base existence as a primitive resource restores every
+finite layer. The rules are actually available and preserve truth across
+the selected accessible worlds. [Certificate and definitions](../../TruthCore/Results/Explanation/ExistentialInheritance/Solution.lean)
+
+Thus the law does genuine work: together with its input it explains or
+derives what follows, under the relevant interpretation. The input is also
+doing work. Repeating the rule arbitrarily far does not discharge that
+input. A rival which admits it primitively has a successful relative
+derivation, not a contradiction. A necessary-base overlay preserves the
+same actual resource deficit: changing modal status alone does not add a
+reason to the represented account. This is not an argument that a necessary
+source cannot explain its own actuality through its nature. That positive
+interpretation is absent from the overlay and must be supplied separately.
+
+The metaphysical extension has three load-bearing conditions: the records
+represent actual explanatory prerequisites; the source really is
+indispensable to a complete account of this target; and the account claims
+ultimate completeness rather than conditional success given that source.
+Under those conditions, leaving the source brute leaves a question inside
+the claimed scope unanswered. These are defensible substantive commitments,
+not independent axioms mechanically demanded of every explanation. A
+complete account of why the lamp lit can legitimately presuppose an actual
+power supply. An account of the actual existence of the entire supplied
+order cannot answer the further question about the supply by repeating the
+lamp explanation. The objection has force exactly where the latter scope
+is claimed.
+
+The qualification about indispensability prevents contamination by an
+irrelevant brute bystander, an optional causal contribution, or a redundant
+route. If another genuinely sufficient account supplies the target without
+using B, the proposed inheritance argument must address that account. If
+all the beings of the selected order essentially depend on B, and the
+offered complete explanation requires B's actuality, one such source is
+enough for the order's account to retain this gap. It does not follow that
+each being is individually brute: the contained model explicitly gives
+each derivative a reason. Existing closure results diagnose the available
+stopping policies; they do not settle the philosophical adequacy of those
+policies by definition. [Closure analysis](explanatory-closure-745.md)
+
+### What can be conserved, transmitted or erased
+
+There are two different results, with an **OPEN** bridge between them.
+First, a prerequisite cannot be removed from a resource derivation which
+still indispensably uses it. Second, an injective evolution cannot merge
+distinct admitted initial states. The latter is an extensional mathematical
+claim; describing the alternatives as brute or unexplained adds a
+metaphysical interpretation. Neither result defines a numerical quantity of
+arbitrariness, an entropy, or a universal conservation law for explanation.
+
+`InitialHistoryAuthenticity.Dynamics` treats a fixed, possibly
+time-dependent deterministic rule with no later independent inputs. If
+every step is injective, each time slice remains injective in the initial
+state. Injectivity on the admitted inputs is enough for a selected readout
+to retain their variation. Even for an irreversible rule, the map from
+initial input to **complete trajectory including time zero** is injective.
+Different initial histories cannot become the very same complete history
+by sharing a later segment. [Dynamics certificate](../../TruthCore/Results/Epistemology/InitialHistoryAuthenticity/Solution.lean)
+
+Convergence nevertheless can **really remove present-state variation**.
+The constant-erasure control sends both Boolean initial states to the same
+state after one step. A lossy observation can conceal distinctions even
+under reversible evolution. A further control copies a retained past
+coordinate into a record: it corrects an initially false record and merges
+states which differed only in that record. It would therefore be false to
+say that every present outcome, every observed property, or every record
+inherits the input's underdetermination. A common outcome can follow from
+every admissible input, and a truth-tracking mechanism can produce sound
+evidence. [Controls and scope](fixed-initial-history-535.md)
+
+What convergence does not explain is why this complete history, including
+its particular initial actuality, occurred. It also does not by itself
+explain why any concrete bearer instantiates the common state at all.
+These are further explananda, not defects in a successful explanation of
+the common state. If tokens with different essential histories count as
+different beings, convergence of qualitative descriptions is weaker again
+than numerical identity. Conversely, a conclusion about the existential
+history of a token cannot be inferred just from a varying coordinate in a
+state model.
+
+The defensible metaphysical analogue is consequently a **conditional
+transmission principle**: lawful transformation alone does not discharge an
+unexplained actual prerequisite still indispensable to the target's
+ultimate account; reversible encodings preserve the represented
+alternatives, while irreversible encodings can erase their distinctions
+from a selected output. A further actual explanation of the input can
+remove the original explanatory gap. The principle excludes explanatory
+creation by mere iteration, not learning, genuine new explanation, or
+convergence. It has no claim to be a physical law.
+
+One binary input can affect arbitrarily many dependent beings while adding
+only one correlated choice across those beings. `Contained` has this exact
+profile: agreement about base existence fixes the existence profile of the
+whole candidate population. Causal reach and the number of independent
+modal options are therefore different dimensions. No multiplication of
+independent freedoms follows from a large dependent order. This preserves
+the containment verdicts of #1874 and #1913 while sharpening the remaining
+question about actuality.
+
+### Containment and selection: the strongest defensible fork
+
+Let R be the necessary restrictions and K the nonempty class of **complete
+metaphysical possibilities** they admit, including the actual one. The
+completeness and metaphysical admissibility qualifications matter. A unique
+solution conditional on an existing foundation can still leave its absence
+possible; a unique observational description can represent many histories;
+and a unique equation does not produce its own instance.
+
+1. If K contains just one complete possibility, relevant contingency has
+   been removed within that exhaustive scope. The unique outcome can be
+   necessary without the mathematical uniqueness itself explaining or
+   producing concrete actuality. An empty K gives no actual worldview.
+2. If K contains different complete possibilities, the invariant content
+   of R does not by itself discriminate which one actually obtains. A
+   function only of the same restriction truths cannot yield different
+   warranted selections in alternatives sharing all those truths.
+
+`ContainedSelection.restrictionBoundary` proves the factual version: an
+actually obtaining, truth-entailing condition which depends only on a
+necessary basis cannot determine an actually contingent represented fact.
+Its second conjunct proves that fixing every represented truth throughout
+the accessible scope excludes represented contingency. It does **not**
+prove numerical uniqueness of worlds or exhaustiveness of the represented
+facts. The first conjunct consumes the existing `HistorySelection`
+evidence vocabulary and complements its established no-selection result.
+[Vocabulary](../../TruthCore/Explanation/ContainedSelection.lean) ·
+[Certificate](../../TruthCore/Results/Explanation/ContainedSelection/Solution.lean)
+
+This is an obstruction to **determination by invariant restrictions**, not
+a theorem that contingent actuality has no sufficient explanation. A
+necessary concrete producer may act contingently; a factive explanation
+may be nonnecessitating. An actual explanatory principle need not be a
+second entity alongside R: an actual necessary bearer with a genuinely
+productive nature is already more than a bare admissibility restriction.
+What matters is the explanation of the actual effect and, at broader
+scope, of the actual exercise. A contingent distinguishing input can
+determine the output, but asking about that input remains legitimate where
+the chosen completeness demand includes it. A necessary reason that is
+nonnecessitating is not refuted merely because it holds in an alternative
+where the effect does not.
+
+The completed #1910 experiment makes that scope boundary concrete. It
+keeps exactly `ExplanatorySymmetry.acting`'s worlds, beings, act `.member 0`,
+outcome `.target`, truth conditions, act-to-outcome reason and direct
+source-to-outcome reason, removing only the source-to-act edge. The original
+and modified interpretations both satisfy the existing existential
+reason-token PSR through the explicit narrow `existenceView` adapter.
+Only the original satisfies coverage of **all contingent facts** at world
+0; the modified interpretation leaves the actual act without a reason.
+Neither explanation relation is necessitating. This is a structural
+scope test with **two necessary sources**, not a model of the one God,
+personal agency or actual causal production. [Matched comparison](psr-self-application-756.md#the-fixed-act-test-and-the-contained-selection-boundary-2026-11-24)
+
+The lesson for a nonnecessitating productive explanation is conditional.
+It answers more than brute selection if it identifies an actual producer,
+an intelligible exercise, and the real production of this effect. It does
+not automatically answer an all-facts or fully contrast-determining demand.
+If its actual exercise is itself left brute, it relocates the residual gap
+at that broader scope. If the exercise is genuinely explained without
+necessitation, rejecting it solely for lacking necessitation assumes the
+stronger standard in dispute. Apply that distinction to stochastic,
+impersonal and intentional candidates alike.
+
+### Historical authenticity under immutable laws
+
+Fix an admitted initial-state class A, a deterministic evolution, an
+observation o, and the historical content asserted by a positive record.
+The exact guarantee is: **every admitted input which yields that positive
+record has the asserted history**. Equivalently, A is contained in the
+safe-input class; equivalently, each positive observation fiber, intersected
+with A, lies wholly inside the truth set for that record's content.
+`Authenticity` also factors this into uniform truth value within a positive
+fiber **and an authentic member in every inhabited positive fiber**. The
+second factor cannot be omitted: a fiber can be uniformly false.
+[Exact condition and countermodels](../../TruthCore/Epistemology/InitialHistoryAuthenticity.lean)
+
+This characterization tells a proposed initial restriction what it must
+achieve. It does not establish that the restriction actually governs, that
+the input is admitted, or that the content predicate faithfully represents
+a real past. Selecting precisely the safe states by definition would restate
+the guarantee unless an independent or directly warranted account explains
+why those states are the admissible ones. A non-singleton accurate-input
+class shows that sound records need not determine the whole initial world.
+The correcting-channel control shows that a sufficient mechanism can also
+secure the relevant soundness after initialization. Immutable lawhood alone
+does not distinguish that mechanism from a deterministic rule which stamps
+the same positive record regardless of the retained past coordinate.
+
+Reversibility of the full state is not observational access to that state.
+Convergence of observations can conceal distinct histories; reversibility
+does not repair a lossy record reader. Essential historical identity is
+also a different condition. The `IdentityBridge` requires the same existing
+numerical bearer, essential origin, **successful identification of that
+bearer from equal observations**, and authentic witnesses. Essential origin
+without identification permits different bearers with indistinguishable
+records. The populated control discloses its empty ordinary causal relation
+and stipulated origin markers; it is a surrogate for this identification
+problem, not an asserted counterfeit-history metaphysics.
+
+There is a conditional epistemic circle if the sole proposed warrant for
+the safe-input restriction is a historical record, and that record is
+deemed guaranteed authentic only by assuming that restriction. On matched
+evidence, an evidence-only calibration cannot manufacture the missing
+distinction. The existing #1904 analysis already establishes that
+informational limitation. It does not exclude directly warranted
+perceptual entitlement, fallible induction, external reliability, or
+cumulative support for the restriction. Nor does the logical existence of a
+surrogate alternative make it credible, equiprobable, or a defeater of
+knowledge. A claim of **guaranteed** reliability owes the stronger coverage
+argument; ordinary justified belief need not rule out every logical model.
+[Historical reliability assessment](fixed-initial-history-535.md)
+
+Reliable laws and reliable records thus require different commitments:
+transition stability versus an authentic production or admissibility
+relation connecting evidence to its content. They may be jointly explained
+by a richer nature, production mechanism or governance account. Calling a
+source divine does not by itself guarantee every record either: its
+purposes, permitted errors and the channel at issue remain relevant.
+
+### The same standards for six worldviews
+
+The comparison grants each account its strongest coherent containment and
+uses the same questions: actual existence, actual exercise, local
+production, historical truth and the scope of a claimed ultimate answer.
+The rows are conditional commitments, not attributed summaries of every
+adherent or formal models of entire philosophies.
+
+| Candidate | What the granted account can explain or secure | Remaining question under the same ultimate standard |
+| --- | --- | --- |
+| Brute contingent physical foundation | Its nature can impose necessary constitutive constraints; actual powers and laws can explain every derivative locally; sound initial restrictions may be granted | The indispensable foundation's actuality is left primitive. This is a genuine stopping policy with a complete conditional order, but no complete answer to why that order has its actual existential input |
+| Necessary impersonal foundation | Removes possible absence of that bearer; a substantive intrinsic nature may explain its actuality; real nonnecessitating production may explain contingent effects | Necessity alone supplies neither intrinsic explanation nor an account of a contingent exercise. If both are supplied at the accepted standard, this rival survives the present objection; intellect needs a further discriminating argument |
+| Necessary laws and brute initial conditions | Deterministic histories, invariant local laws, possibly unique coarse outcomes and reliable records | Mathematical restriction and derivation presuppose the actual initial instance. Reversibility retains alternatives; convergence need not explain the particular history or actual instantiation |
+| Humean account of a primitive mosaic | Grant its best-system description, stable regularities and admitted constraints; those can organize successful local explanations | If the mosaic is primitive, a description of its regularities does not thereby produce or ultimately explain its actuality. A Humean can decline the productive/ultimate demand; that is a stated difference of explanatory ambition, not an internal contradiction |
+| Metaphysical necessitarianism | An exhaustive uniquely admitted complete reality removes the relevant selection contrast | Warrant for complete necessity must cover actual beings and history, not only the laws or solutions conditional on inputs. Denying genuine alternatives has a philosophical cost only relative to warranted contingency; the present proofs do not defeat it |
+| Necessary intelligent freely acting divine source | An intrinsically grounded source and genuine rational production could explain actual contingent products without necessitating them | The source, its intellectual reasons, its actual will/exercise and the product must be connected at the same witness. The exercise must meet the adopted explanatory scope. Freedom alone and a reason token do not discharge this obligation |
+
+The strongest brute rival has no immediate internal incoherence here. Its
+conditional disadvantage is the conceded unanswered question about the
+input, when a fuller actual-existence explanation is sought. The strongest
+necessary impersonal rival is stronger on that very criterion and should
+not inherit the brute contingent rival's defect by association. A
+necessitarian likewise removes rather than answers a contingent contrast;
+this investigation does not assume contingency of the entire actual order
+against it. The comparative case changes if its denial conflicts with an
+independently warranted instance of contingency. No score based on how many
+primitive leaves a view has would assess these differences.
+
+### When intentional production adds something
+
+Rational intention supplies a candidate explanation absent from **bare
+brute selection**: an actual agent produces this effect because of a good
+or purpose it understands, by an exercise belonging to that agent. The
+content must constrain what counts as an intelligible act independently of
+merely redescribing the realized outcome. This gives a possible reason why
+the act is performed and why its product is appropriate even if equally
+good alternatives exist. Ties can leave a fully determining contrast open
+without making the actual production inexplicable at a nonnecessitating
+standard. Existing carried-reason and whole-exercise results express parts
+of that content; they do not already encode genuine production by the same
+personal bearer. [Whole-order reasons](../../TruthCore/Explanation/WholeSeriesReason.lean) ·
+[Intrinsic actuality](intrinsic-existence-reason-1595.md)
+
+A classical-theistic completion therefore requires the following jointly
+interpreted commitments, each eligible for direct, primitive or cumulative
+warrant rather than an endless sequence of independent proofs:
+
+* The same necessary source has intrinsically grounded actuality; a bare
+  assertion of necessity is not the whole intrinsic explanation.
+* Its actual exercise really produces the concrete effect. A capacity,
+  law-like conditional, optimality label or encoded choice function alone
+  is insufficient for this productive claim.
+* Intellect presents substantive goods or purposes and will acts for them.
+  The reason's connection to this exercise has explanatory direction and
+  is not simply the effect renamed as a reason.
+* The source's actual exercise is covered at the chosen adequacy scope.
+  Agent causation or a nonnecessitating reason may be a defensible
+  primitive; it cannot be used to exempt a matching impersonal exercise
+  solely because the latter is impersonal. If the demand is instead a
+  fully necessitating contrast, this free account has not met it.
+* The account reconciles necessity of the source and, where affirmed,
+  simplicity with a genuinely contingent product. Necessary intrinsic
+  conditions plus a necessary truth-entailing relation to one output
+  would exclude that output's contingency. A nonnecessitating productive
+  relation or a defended account of contingent relational exercise must
+  do actual work, without introducing an unowned brute selector.
+
+Those commitments explain how theism could avoid the inherited deficit.
+They do not show that it does so automatically, or that no impersonal
+account can satisfy the same adequacy standard. Intentional reason-content
+is an additional candidate resource compared with a brute fact. Proving
+that a sufficiently rich impersonal account cannot provide an adequate
+alternative needs a positive intellect/will argument. The appropriate
+comparison is between actual explanatory performances at matching scope,
+not between a maximally interpreted theism and an intentionally impoverished
+rival. The fixed-act control is a precise warning about that asymmetry.
+
+### Argument graph and root connections
+
+Solid arrows below are implications with the displayed conditions, not
+unconditional proofs of a worldview. The dashed arrows name interpretation
+or warrant work which remains open.
+
+```mermaid
+flowchart TD
+    L["Granted complete proximate account"]
+    A["Same-source modal requirement and possible absence"] --> J["Joint possible absence of dependents"]
+    I["Indispensable brute input and ultimate scope"] --> U["Unanswered actuality in that account"]
+    L --> Q["Input actuality remains a separate question"]
+    Q -. "indispensability and completeness" .-> U
+    R["Restrictions with nonempty exhaustive possibility scope"] -- "if exactly one" --> S["One complete possibility"]
+    R -- "if several" --> M["Several complete possibilities"]
+    S --> N["Relevant contingency removed"]
+    M --> D["Restrictions alone do not determine actuality"]
+    P["Actual nonnecessitating rational production"] -. "same-source adequacy" .-> E["Candidate ultimate existential explanation"]
+    U -. "warrant for existential coverage" .-> E
+```
+
+| Existing destination | Contribution and retained bridge |
+| --- | --- |
+| Existential PSR `608a262d-08fe-4dfd-9413-67e2ecf35b84` | Inheritance clarifies the cost of a brute exception; containment does not discharge the universal coverage premise. The resource interpretation and adequate-reason-to-token bridge remain open |
+| B2 `8a8d00e9-12b6-4cf0-b662-431cc4addd49` | Existing result `7bf9cb77-0418-4363-9298-266eac105edd` consumes the token PSR jointly with BX1 and BX2 to supply a distinct esse-cause. No new theorem here replaces either bridge |
+| First-mover necessity `8cc169e3-7e88-48b1-b542-a6fdaaf8d41b` | Existing B0, B2, B3 and B1 argument retains the same actual mover. B3's priority bridge and B1's firstness matter; a replacement occupant is not its absence |
+| C2 `6508c239-b36d-4010-b9e4-ff0cdd5757e5` and necessity target `b19ffd92-01bd-5c0b-9643-e7407137ea5e` | Modal inheritance does not prove contingency entails receptivity or a prior esse-cause. It exposes why the same-bearer absence and existential-reception bridges must remain separate |
+| Divine intellect and will | The next destination is a same-bearer account joining actual production, carried intellectual reasons and explanatory coverage of the actual exercise. The #735/#942 witnesses and the present two-source control supply no such joint identification |
+
+The graph records a research effect on those destinations, not a newly
+registered derivation of God, intellect or will. The formal certificate
+conclusions are their own structural targets. They are connected to the
+God-existence stage by this explicit interpretation plan and the corresponding
+attempt records. This prevents an informative library from being reported as
+a completed root route.
+
+### Overall provisional assessment and discriminating next work
+
+Retain the moderate provisional preference from #1910 for **adequate
+existential intelligibility (E)** over a brute-contingency exception, while
+suspending the stronger universal **determining** demand (D). The present
+work strengthens the diagnosis of what E seeks: accounting for actual
+existential supply even when modal variation and history are perfectly
+contained. Its positive warrant combines the intelligibility of production
+and receipt, the explanatory difference between a nature and its actual
+instance, and the failure of merely repeating a conditional derivation to
+account for its indispensable input. A primitive commitment to such
+intelligibility is a live rational starting point. This is cumulative
+warrant, not a deduction that every underived contingent must have a reason.
+
+The conclusion becomes weaker if no ultimate completeness demand is
+defended, if the target has an independent adequate account, or if the
+relevant reality is necessary in the exhaustive sense. It becomes stronger
+if the proposed brute foundation is shown to be received or actualized, or
+if an actual adequate source explains the same order with no exception at
+the relevant scope. The modal and resource certificates alone settle none
+of those philosophical premises.
+
+Three precise unresolved tests replace the completed fixed-act task.
+First, interpret the **same exercise and outcome** jointly as actual
+productive supply and rationally guided agency; the known separate models
+cannot be composed by their labels. Second, assess whether that exercise's
+reason is adequate without necessitation, using the same standard for a
+necessary impersonal producer. If the candidate merely reasserts the actual
+choice, neither side has improved on the selection problem. Third, for any
+claimed historical guarantee identify the genuine observation channel and
+warrant its safe-input or truth-tracking condition; immutable laws by
+themselves and essential identity without identification are insufficient.
+No selected empirical channel or jointly interpreted divine exercise is
+provided by this request or by the reused models. Those are concrete
+interpretive/evidential blockers to the stronger conclusions, not reasons
+to repeat the already resolved scope and conservation tests.
+
+### Independent review disposition
+
+A fresh semantic challenge accepted this complete qualified outcome at
+`0ba63817f91c66a6dc0dae3c741c9b485845b249`: all nine certificate
+definitions, statements, proofs and bindings; the four linked notes;
+this graph and comparative judgment; the reconciled attempts; and the PR
+draft with SHA-256
+`1083c3de697831569cbb05afa9f29cf6d0db4a8c30b843a3402fda8bc3dc01d0`.
+The review repaired sufficient-versus-necessary wording, a broken note
+link, the graph's explicit case conditions and assessment bookkeeping.
+No theorem signature or proof changed. It found no remaining substantive
+mismatch within that qualified scope. This disposition leaves the
+metaphysical adequacy and application bridges open; formal gates and
+publication evidence are recorded separately in the PR. The existing
+attempts carry the scoped review revision and current next tests.

@@ -1,0 +1,11 @@
+{
+  "id": "360411ab-e8a1-43fe-9ecd-045f2fd382af",
+  "label": "A replacement source blocks automatic contingency inheritance",
+  "argument_id": "d6975761-51bf-4792-a8ca-97e212b9a22f",
+  "challenge_module": "TruthCore.Results.Explanation.ExistentialInheritance.Challenge",
+  "solution_module": "TruthCore.Results.Explanation.ExistentialInheritance.Solution",
+  "theorem": "TruthCore.Results.Explanation.ExistentialInheritance.replacementBoundary",
+  "comparator_config": "results/360411ab-e8a1-43fe-9ecd-045f2fd382af/comparator.json",
+  "status": "solution-present",
+  "description": "Omission control for the same-bearer modal requirement used by the transfer theorem, preserving actual source/target identity, populated worlds and causal provision. Neither all causal dependence nor determinism alone establishes essential requirement. The assigned relations do not establish real metaphysical possibility or explanation adequacy."
+}

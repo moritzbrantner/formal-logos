@@ -11,7 +11,7 @@
   "kind": "derivation",
   "outcome": "blocked",
   "summary": "See docs/notes/psr-self-application-756.md#does-a-contingent-foundation-merit-exemption-from-determining-explanation-2026-11-23. Distinguishes actual adequate existential reasons (E) for contingent concrete individuals, determining reasons (D) and a stance's demand. Each negation requires an actual counterinstance at its own standard. The existing parity results concern some reason. In the analyst extension, uniformity transfers a determining demand to the accepted fact. Honoring it yields an explaining fact with the required modal sufficiency in the picture. Its absence there contradicts the premises. The stance can mistakenly believe it absent. Factivity and explanatory adequacy are further conditions. Changing which individual fills a role can leave n present as a dependent. Failure of a proposed basis to determine n's existence requires an accessible absence of the same n with the entire basis holding. A complete initial inventory and production rule can exclude a further newly appearing brute agent within their warranted scope. An additional basic agent outside the proposed inventory tests that scope. A change of the initial inventory tests which inventory obtains. Evidence for a restriction, the restriction's actual governance and the existence of its concrete bearer are distinct. LawActuality.omissions preserves mathematical uniqueness with no state-bearers present. A contingent structure can explain a restriction that follows from its nature while leaving its own instantiation open. A derivative-only rival may take a constrained order as primitive. Apply the same requirements to personal and impersonal sources. Actual nonnecessitating production can explain the product while leaving a contrast about the exercise open. The #755 collapse core requires additional premises beyond D. Moderate provisional preference for E over a brute exception, suspension about universal D. Token coverage and BX1/BX2 give B2. In firstMoverNecessaryByEsseCause the mover exists at w by B0. B3 gives its hypothetical distinct esse-cause simple priority and B1 excludes that distinct predecessor. The unprioritized control retains B2 and a contingent first mover without B3.",
-  "blocker": "Actual production and receipt support E for produced and received beings. Their extension to an underived simple individual and the adequacy-to-token and concrete-scope bridges remain open. Compare the proposed global constraint against a fixed candidate extra bearer and establish independently which agents its inventory covers and why the constraint applies here. Only a contingent concrete bearer falls under E or D on that account. The restriction's truth needs broader fact coverage. For D, start with acting's contingent .member 0 and distinct .target at world 0. Compare retaining and dropping the necessary source's explanation of the act while fixing the act-to-outcome explanation and truth conditions. The #942 ProductiveAxis uses separate #735 overlays. A joint interpretation of Supply and personal agency at this same exercise remains to be given.",
+  "blocker": "Universal adequate existential coverage, adequate-reason-to-token and concrete-domain bridges remain open. The fixed-act edge-removal comparison is completed in 31a48b76. It supplies no productive Supply, agency or same-divine-bearer interpretation. A jointly warranted interpretation and substantive adequacy of the actual exercise, compared symmetrically with an impersonal producer, remain the next discriminating work.",
   "evidence": [
     "PR-1908",
     "7bf9cb77-0418-4363-9298-266eac105edd",
@@ -24,6 +24,23 @@
     "1f678ab6-cc89-5796-b3fd-c4be88298e16",
     "8cc169e3-7e88-48b1-b542-a6fdaaf8d41b",
     "2b71a3ad-7dc9-405c-aae8-783c850ff2b0",
-    "43d045d9-9713-5539-9054-8b1a52290d04"
-  ]
+    "43d045d9-9713-5539-9054-8b1a52290d04",
+    "31a48b76-871a-4205-9c51-58663787b64d",
+    "9a2c5f49-7c1d-4fbe-b4fb-8dbee1642f61"
+  ],
+  "current_assessment": {
+    "date": "2026-11-24",
+    "statement_ids": [
+      "608a262d-08fe-4dfd-9413-67e2ecf35b84"
+    ],
+    "scope": "Completed #1910 fixed-act test and selection/existential-coverage comparison under perfectly contained contingency",
+    "assessment": "The exact acting-arena edge-removal test now preserves the same ontology, act, outcome, truth conditions and target reasons. Both interpretations satisfy the existing contingent-existence token PSR through a narrow explicit adapter; only the original covers every contingent fact at world 0. The modified interpretation leaves the act without a reason. Necessary restrictions alone cannot determine a genuinely contingent represented fact. This distinguishes existential coverage, actual exercise explanation and modal determination; it neither models one divine source nor establishes agency, productive Supply or adequacy. Retain moderate provisional preference for E and suspension about universal D under the symmetric six-worldview comparison.",
+    "next_test": "Provide a jointly warranted interpretation of the same bearer, exercise and outcome as actual productive supply and rationally guided agency, then assess the actual exercise at a nonnecessitating adequacy standard against a matching impersonal producer. Separate #942 witnesses cannot supply that bridge. The fixed-act edge-removal test is completed.",
+    "note": "docs/notes/psr-self-application-756.md#the-fixed-act-test-and-the-contained-selection-boundary-2026-11-24",
+    "reviewed_revision": "0ba63817f91c66a6dc0dae3c741c9b485845b249",
+    "review": "accepted_qualified",
+    "publication": "unpublished",
+    "evidence": "Independent semantic challenge by fresh /root/semantic_challenge accepted the complete consequential outcome at 0ba63817f91c66a6dc0dae3c741c9b485845b249. Scope: nine certificate definitions/types/proofs and bindings, four notes, graph, comparative judgments, reconciled attempts and PR draft (SHA256 1083c3de697831569cbb05afa9f29cf6d0db4a8c30b843a3402fda8bc3dc01d0). Sufficient/necessary wording, a note link and graph-case wording were repaired without theorem changes. Qualified acceptance preserves open metaphysical adequacy/application bridges and does not substitute for canonical verification or establish root premises.",
+    "supersedes": "Supersedes only the historical next-test request to compare retaining and dropping the source-to-act reason in acting at world 0. Preserves the prior moderate E preference, suspension about universal D, and B2/C2 application limits."
+  }
 }

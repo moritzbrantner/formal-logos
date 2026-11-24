@@ -1,0 +1,43 @@
+{
+  "id": "e8530252-bd72-4350-93ce-d8e4b99c1ebe",
+  "label": "Initial-history authenticity: exact admissibility, coalescence and essential-origin limits",
+  "date": "2026-11-24",
+  "statement_ids": [
+    "c378c2d2-fc8e-4125-af1a-a6763306d87a",
+    "995550a6-1f29-45bc-ac2e-6aad4e42007f",
+    "903db154-82f9-4561-8e94-b2d2104e56cd",
+    "64374598-f8db-44ff-83a6-ea9639531700",
+    "608a262d-08fe-4dfd-9413-67e2ecf35b84"
+  ],
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "Bounded analyst investigation documented in docs/notes/fixed-initial-history-535.md#initial-conditions-and-authentic-historical-evidence-2026-11-24. Reused HistorySelection SameEvidence/EvidenceOnly, distinguished its presence-history Determines from complete state trajectories, and inspected UltimateExplanation, the #1904 historical-reliability note and open #1927 AdaptiveHistoryAccess without importing or duplicating its adaptive result. Four frozen certificates derive admitted variation preservation under injectivity, input recovery from complete trajectories, the exact positive-fiber condition for authentic records, and the essential-origin/identified-existing-bearer bridge with authentic anchors; concrete controls distinguish state coalescence, coarse observation, uniformly false fibers and genuine deterministic record correction. Rejected unconditional conservation of every output distinction: a many-to-one rule may fix a coarse state, or correct records by reading a retained past coordinate, while full trajectories remain different. Essential origin alone neither identifies the observed bearer nor makes its record true. All controls are structural surrogates and no fake-history metaphysical admissibility, unrestricted recombination, equal priors or guarantee-to-skepticism inference is asserted. Direct Lean elaboration and axiom inspection pass for all four targets with zero axioms; corpus generation/check and sense preflights pass. Comparator/NanoDa and independent final semantic challenge remain coordinator gates; these local checks are development evidence, not a certification claim. The first SafeInitial equivalence is explicitly definitional; the fiber witness factorization, EvidenceOnly adapter, time induction and omission/correction controls supply the substantive comparison. No root implication or premise discharge is claimed.",
+  "blocker": "Application to historical evidence needs an independently interpreted historical-content relation, a complete state/memory description, and warrant for the admitted initial class or a truth-linked causal/identity restriction. A fallible knowledge claim separately needs a reliability/probability/normative bridge. Application to existence PSR 608a262d needs the same contingent bearer, its existence reason and the relevant explanatory standard; none is supplied by extensional initial variation or absence of one ultimate explanation. Next distinct test: instantiate one actual causal record channel and determine whether a false-content positive fiber is really admitted or excluded at that same scope.",
+  "evidence": [
+    "dcda2ffc-b742-4850-bd49-1dc7220d064d",
+    "84562a64-8e16-4fe0-92d2-6bd860b8b538",
+    "3a404de1-a186-4700-89ec-afee90edcd1f",
+    "027d38f9-449e-445c-bb64-3dff1abd439d",
+    "PR-1904",
+    "PR-1927"
+  ],
+  "current_assessment": {
+    "date": "2026-11-24",
+    "statement_ids": [
+      "c378c2d2-fc8e-4125-af1a-a6763306d87a",
+      "995550a6-1f29-45bc-ac2e-6aad4e42007f",
+      "903db154-82f9-4561-8e94-b2d2104e56cd",
+      "64374598-f8db-44ff-83a6-ea9639531700",
+      "608a262d-08fe-4dfd-9413-67e2ecf35b84"
+    ],
+    "scope": "Initial-history authenticity, dynamic conservation and positive correction controls",
+    "assessment": "The exact positive-fiber condition, injective variation preservation, full-trajectory result and identified-bearer sufficient route have accepted qualified interpretations. Irreversible convergence and deterministic truth-linked record correction genuinely can remove present differences. No metaphysical fake-history admissibility, skeptical defeat or explanatory-adequacy conclusion follows from these structural controls.",
+    "next_test": "Application to historical evidence needs an independently interpreted historical-content relation, a complete state/memory description, and warrant for the admitted initial class or a truth-linked causal/identity restriction. A fallible knowledge claim separately needs a reliability/probability/normative bridge. Application to existence PSR 608a262d needs the same contingent bearer, its existence reason and the relevant explanatory standard; none is supplied by extensional initial variation or absence of one ultimate explanation. Next distinct test: instantiate one actual causal record channel and determine whether a false-content positive fiber is really admitted or excluded at that same scope.",
+    "note": "docs/notes/fixed-initial-history-535.md#initial-conditions-and-authentic-historical-evidence-2026-11-24",
+    "reviewed_revision": "0ba63817f91c66a6dc0dae3c741c9b485845b249",
+    "review": "accepted_qualified",
+    "publication": "unpublished",
+    "evidence": "Independent semantic challenge by fresh /root/semantic_challenge accepted the complete consequential outcome at 0ba63817f91c66a6dc0dae3c741c9b485845b249. Scope: nine certificate definitions/types/proofs and bindings, four notes, graph, comparative judgments, reconciled attempts and PR draft (SHA256 1083c3de697831569cbb05afa9f29cf6d0db4a8c30b843a3402fda8bc3dc01d0). Sufficient/necessary wording, a note link and graph-case wording were repaired without theorem changes. Qualified acceptance preserves open metaphysical adequacy/application bridges and does not substitute for canonical verification or establish root premises.",
+    "supersedes": "None. Records the accepted qualified scope of this new bounded investigation; the philosophical application blockers remain."
+  }
+}

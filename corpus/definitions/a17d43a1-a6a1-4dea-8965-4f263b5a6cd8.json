@@ -1,0 +1,9 @@
+{
+  "id": "a17d43a1-a6a1-4dea-8965-4f263b5a6cd8",
+  "label": "Replacement source preserves the same target while the actual source is absent",
+  "term": "replacement-source existence interpretation",
+  "definition": "Replacement.profile has four fixed bearer identities and two universally accessible worlds. Background and target exist in both; base exists only at false, alternative only at true. The cause and #312 circumstance-reason source of the same target are base at false and alternative at true. The nature field is empty. The actual base is contingent and causes the target, which nevertheless exists necessarily and does not modally require that base.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Explanation.ExistentialInheritance.Replacement.profile",
+  "note": "Analyst omission control, attribution deferred. Both worlds are populated and both have a distinct existing cause of target. The alternative source is a different bearer at a different whole world, not an extra source inserted into an occupied history. The concrete mechanism is replacement of a nonessential actual source, familiar in systems with substitutable support; substantial identity across different sources remains OPEN for particular real beings. The model proves only that actual causal/reason dependence alone does not imply same-bearer modal requirement. Its empty InEssence field is disclosed, and it supplies no counterexample to a validated essential requirement. See docs/notes/explanatory-adequacy-750.md#existential-inheritance-with-a-contained-brute-foundation-2026-11-24."
+}

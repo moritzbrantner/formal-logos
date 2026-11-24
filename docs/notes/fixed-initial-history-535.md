@@ -548,3 +548,248 @@ principle covering initial bearers, or a necessitarian account of the initial
 state) is supplied, or if an explicit accounting rule for modal commitments is
 defended. Formal status: five premise-free conditional/model results; no root
 premise closed, no possibility of any actual history asserted.
+
+## Initial conditions and authentic historical evidence (2026-11-24)
+
+This analyst investigation grants one fixed deterministic law, a fixed supplied
+state domain, and no further independent inputs. It addresses the historical
+reliability question of #1904 within the existential-inheritance program. The
+root-facing destination remains the local existence PSR
+`608a262d-08fe-4dfd-9413-67e2ecf35b84`, through the existing PSR/BX1/BX2-to-B2
+argument and its same-mover application. The present results locate an
+admissibility and evidence-channel obligation; they add no registered implication
+to that PSR, B2, C2, or the God-existence target. An explanatory or normative bridge
+with matching meaning and witness remains **OPEN**.
+
+### Question, reuse and exact new boundary
+
+The issue is not whether determinism alone fixes an outcome given a complete
+initial state; it does. The question is which differences between admitted
+initial states survive into a selected state, a complete trajectory, or a
+historical record. These are different maps. Identifying them would conceal the
+central premise.
+
+`HistorySelection.SameEvidence`, `EvidenceOnly` and `Determines` were inspected
+with their certificate and omission controls. The existing selector theorem
+already excludes an evidence-only entailing selection between accessible
+different histories sharing the entire evidence vector. It is not repeated here.
+The new `AuthenticityEvidenceOnly` consumes the same `EvidenceOnly` definition
+on the admitted subtype and its observation-equality vector. The complete-state
+trajectories introduced here are not identified with
+`HistoryContrastive.SameHistory`, which compares only supplied temporal presence
+extensions. `UltimateExplanation` already separates exact coarse prediction
+from selection of a complete history; its distinction is retained.
+
+The #1904 note supplies the historical and fallibilist comparison. The open
+#1927 `AdaptiveHistoryAccess` work was also inspected: matching initial outputs
+plus preservation under every same action yields matching finite adaptive
+transcripts. Its unmerged module is not imported. This batch supplies no second
+adaptive-indistinguishability or selector-impossibility argument. It instead
+asks for the initial-admissibility condition under which the record is true.
+The related/brief/novelty/semantics/dossier/context queries were advisory reuse
+checks, not evidence that no further prior work exists.
+
+The frozen targets in `specs/initial-history-authenticity.toml` bind as follows:
+
+| Statement and result | Exact consequence |
+| --- | --- |
+| `c378c2d2-fc8e-4125-af1a-a6763306d87a`; result `dcda2ffc-b742-4850-bd49-1dc7220d064d`, `dynamics` | Injectivity on the admitted inputs preserves and reflects witnessed variation. Injective steps give injective evolution to every finite time. Every complete trajectory map retains its input at time zero, even for noninjective dynamics. A coarse readout requires its own injectivity to preserve those distinctions. |
+| `995550a6-1f29-45bc-ac2e-6aad4e42007f`; result `84562a64-8e16-4fe0-92d2-6bd860b8b538`, `authenticity` | Positive-record soundness is exactly containment of admitted inputs in `SafeInitial`, exactly truth throughout each admitted positive observation fiber, and exactly positive-fiber uniformity together with an authentic member in every inhabited positive fiber. Uniformity for all records matches existing `EvidenceOnly`. |
+| `903db154-82f9-4561-8e94-b2d2104e56cd`; result `3a404de1-a186-4700-89ec-afee90edcd1f`, `identityBridge` | Essential origin of the same existing bearer, existence of each designated bearer, and observation-based identification make origin claims uniform. Soundness then still requires the authentic-member condition. |
+| `64374598-f8db-44ff-83a6-ea9639531700`; result `027d38f9-449e-445c-bb64-3dff1abd439d`, `controls` | Explicit coalescence, reversible-state/lossy-observation, sound nonsingleton restriction, mixed and uniformly false fibers, essential-identity-without-identification, and deterministic correcting-channel controls. |
+
+### What conservation can and cannot mean here
+
+Write `E_n(i)` for the state obtained from initial input `i` at time `n` under
+the same rule. When each step is injective, distinct inputs retain distinct
+states at every finite time. The proof is induction using equality-reflection
+of each step. An observation `O(E_n(i))` may nevertheless lose the distinction;
+reversibility of the full state does not imply reversibility of an instrument.
+
+For a many-to-one rule, present states may genuinely coalesce. The control
+`erase` sends both Boolean initial inputs to `false` after one step and keeps
+them there. Given that law, the current Boolean state is exactly fixed even
+though the initial state varies. It would be incorrect to say that uncertainty
+about every future quantity must remain. A two-valued logical possibility set
+does not carry an entropy, a probability measure, or an explanatory deficit by
+itself.
+
+The complete trajectory `n ↦ E_n(i)` still includes its value at zero. Equality
+of complete trajectories therefore implies equality of inputs. This is the
+precise history-level conservation: a later merge does not retroactively make
+the earlier states identical. The theorem concerns the modeled state history,
+not every fact about a metaphysical world, the observer's access to that history,
+or absence of an adequate reason for its existence. An ontic claim that a
+derivative inherits a particular deficit of explanation needs its own relation
+and closure premises. It cannot be obtained by renaming extensional variation
+as explanatory arbitrariness.
+
+Necessary lawhood is granted in the intended application by holding the rule
+fixed throughout the comparison. The module does not derive a modal necessity
+predicate from a function. Its `step : Nat → S → S` can depend on time, and `S`
+must contain all state or memory that the chosen transition actually uses.
+Nothing proved for a Boolean readout licenses treating it as the complete
+state of a law with additional memory. The controls introduce no extra
+independent events after the initial condition.
+
+### The exact initial-condition requirement for authentic evidence
+
+Let `A` be the admitted initial conditions, `O` the selected observation map,
+`P(o)` the condition that observation `o` positively asserts the historical
+claim, and `C(o,i)` the truth of that content in the history indexed by `i`.
+For dynamics, instantiate `O` with `i ↦ read(E_n(i))`. The exact guarantee is
+
+\[
+\forall o,\quad P(o)\;\Longrightarrow\;
+  A\cap O^{-1}(\{o\})\subseteq\{i\mid C(o,i)\}.
+\]
+
+Equivalently, every admitted initial input belongs to
+`SafeInitial O P C`, the set satisfying `P(O(i)) → C(O(i),i)`.
+This identifies the largest permissible input class for the specified guarantee.
+It does not independently justify excluding a particular input, explain why the
+actual input obtains, or make the safe class observable. There need not be one
+unique initial state: the accurate-input control admits both `(false,false)`
+and `(true,true)` and nevertheless gives sound positive records. Conversely,
+empty admitted classes pass the universal test vacuously; the concrete comparisons
+retain admitted inputs and, where relevant, an inhabited positive fiber.
+
+A second factorization prevents an important mistake. Uniformity says that the
+same observation always has the same authenticity verdict over its admitted
+fiber. The common verdict could be false. Soundness is equivalent to
+**uniformity plus at least one authentic member of every inhabited positive
+fiber**. The uniformly false control has a real admitted positive observation,
+passes uniformity, and fails both soundness and the authentic-member condition.
+Being able to assign a common truth value is therefore weaker than guaranteeing
+that the positive record is true. An authentic member is an ontic anchor in this
+theorem; the theorem supplies no independent procedure for finding or justifying
+that anchor.
+
+`C` is an explicitly primitive historical truth condition. For an actual dating
+claim it would need to encode the event that occurred and the relevant causal
+history, not merely another currently visible label. In the controls it is only
+agreement of two stipulated Boolean coordinates. Applying the theorem to fossils,
+memory, experiment logs or cosmology requires that interpretation; a Lean function
+called `pastContent` cannot supply it by itself.
+
+### Essential history and the same existing bearer
+
+`EssentialOrigin` is conditional on the same bearer existing in both supplied
+histories. It says that its supplied origin descriptor agrees there. It does not
+force the bearer's presence in all alternatives. `BearersPresent` separately
+requires each designated record bearer to exist at its admitted input, using the
+unchanged `History.ontic.ExistsAt` relation. `IdentifiesBearer` is the further
+condition that equal observations identify the same numerical bearer.
+
+Together these premises make the designated origin agree across an observation
+fiber. A record asserting that origin is then sound exactly when each inhabited
+positive fiber contains an authentic member. Thus an essential origin can do
+real conditional work while neither identifying the observed object nor making
+an arbitrary asserted origin true. Bearer identification is a sufficient route
+to this uniformity, not a general necessary condition for record soundness:
+distinct bearers sharing the same origin descriptor can support sound claims
+under the same observation.
+
+The omission control preserves a fixed populated roster: both Boolean bearers
+exist in every history and at every supplied time. Each has a rigid stipulated
+origin marker, while the designated bearer and visible record are separate
+coordinates. `(false,true)` and `(true,true)` display the same positive record
+but designate different bearers. Essential origin and bearer presence hold;
+identification and uniform authenticity fail. This is a **structural surrogate**.
+Its origin marker is not an independently authenticated biological or causal
+origin; its ordinary causal relation is empty. It therefore establishes neither
+that actual essential histories permit a fabricated counterpart nor that such
+a counterpart is metaphysically possible. A real exclusion requires a warranted
+identity or trace constraint with the corresponding observational scope.
+
+### Positive correction is compatible with many-to-one dynamics
+
+The strongest positive channel control is `copyPast`: from `(p,r)` it produces
+`(p,p)`. After one step every positive visible record truthfully reports the
+retained historical coordinate. Initial record differences disappear:
+`(false,false)` and `(false,true)` coalesce. The rule is deterministic and
+many-to-one, so it both removes a current distinction and corrects an inaccurate
+initial record. It succeeds because the mechanism has direct access to the
+coordinate that specifies its historical target. It does not need a unique
+initial record or a fresh uncaused intervention.
+
+By comparison, `stampPositive` produces `(p,true)` regardless of `p`. It is just
+as deterministic and uses the same state domain, but its positive record is false
+when the past coordinate is false. The mechanism of failure is explicit mismatch
+between the historical target and the written record, not mere conceivability.
+These controls show what a positive natural or theistic account of evidence must
+supply at this channel: a warranted truth-linked process or an input restriction
+with the same effect. They do not establish that an actual process has either
+property.
+
+### Standing positive accounts and provisional assessment
+
+| Account at the same historical-record target | Positive contribution | Still required for this exact guarantee |
+| --- | --- | --- |
+| Stable impersonal law plus admissible initial restriction | Actual trace-producing processes can correlate records with their originating events; the correcting control exhibits such a mechanism conditionally. | Warrant for the restriction or channel, and for the historical interpretation of its target. Its actual existence may remain primitive. |
+| Essential-origin account | The same existing bearer cannot change its specified origin across the admitted comparisons. | For this identification-based route, observation-based identification and an authentic anchor; the theorem does not identify originals from appearances. Other sound routes can involve distinct bearers sharing the same origin descriptor. |
+| Necessary impersonal foundation | A fixed source and deterministic laws may constrain the initial-state and channel class. | An actual truth-conducive constraint at the selected record; necessity alone is not that constraint. |
+| Intelligent nondeceptive source | Intended truth-conducive record production is a candidate explanation of a trustworthy channel. | Actual production, scope of nondeception, applicability to the selected records and reliable access. Bare necessary existence supplies none of these encoded premises. |
+| Fallibilist, causal-reliabilist or prima facie epistemic account | Historical belief can have defeasible warrant without truth throughout every metaphysically admitted alternative. | A specified warrant rule and its actual reliability/defeaters; this is a different target from the universal guarantee, not a failure merely because it is fallible. |
+
+**Provisional assessment.** The conservation proposal is supported at its precise
+information-preserving and complete-trajectory scope. Its unconditional extension
+to every present output is false in the displayed structural class. A restricted
+admissible input domain or a truth-tracking correcting channel can genuinely secure
+the specified historical record, even with many initial states and irreversible
+dynamics. These results supply no verdict that an unexplained initial existence
+necessarily makes historical evidence false or unwarranted. Conversely, determinism,
+fixed ontology and essential identity alone do not supply the guarantee; the exact
+fiber and identity conditions show where an additional assertion is needed.
+
+This assessment retains #1904's support for fallible inquiry and gives no equal
+prior to a fabricated past. It neither demotes primitive, direct or cumulative
+warrant nor assigns theism or naturalism a special exemption. Theorems about a
+selected class do not settle whether its elements are metaphysical possibilities.
+There is no new support-route edge or root-premise discharge.
+
+**Next discriminating test and revision conditions.** Select an actual causal
+record channel and give a sufficiently complete state description, historical
+content relation and independently warranted admissible initial class. Then test
+whether a positive fiber contains a false-content input or whether a causal/identity
+constraint excludes it at that same scope. A demonstrated false-content admissible
+input defeats the universal guarantee for that channel; a warranted restriction or
+truth-linked mechanism supports it. A fallible epistemic comparison must separately
+supply its probabilities or reliability norm. For the existential-inheritance
+program, connect this record target to the same contingent bearer, existence reason
+and explanatory standard used by `608a262d`; otherwise the result remains an
+informative unconnected boundary. Repeating general selector impossibility or
+assuming unrestricted recombination would not answer those missing bridges.
+
+**Worker evidence boundary.** Challenge signatures were frozen before hand proof
+work; their SHA-256 is
+`b015b1745b63cb470c7766a9117b8dcda08ef6c63fec73e1b1385974318423d0`.
+The new vocabulary and Solution elaborate with the supplied pinned Lean setup.
+All four registered results request zero permitted axioms, and `#print axioms`
+reports none for each. Generated records pass the corpus check (repository
+backfill warnings remain), the spec regenerates unchanged, the module convention
+check and bundle audit pass, and all four semantic preflights report no mixing. The coordinator
+owns advisory proof-discovery, exact delivered-head binding, Comparator/NanoDa,
+independent semantic challenge, generated shared files and integration. These
+development checks alone are not a claim of mechanical certification. No source
+claim or new attribution was added. The claim/type self-sweep includes the fixed
+state/memory scope, existence-qualified same bearer, uniformly false fibers,
+empty-fiber vacuity, surrogate origins, and guarantee-versus-fallible-warrant
+distinctions above.
+
+Computed `frontier-diff` against `e66eb9969956fdc14a5287299ea8ae90fdb731f4`:
+
+```text
+open premises reaching the root: 581 (430 bare, 92 supported, 59 stated) -> 581 (430 bare, 92 supported, 59 stated)
+expanded-route diagnostic (lowest cost): 16 -> 16
+distinct verified support alternatives: 602 -> 602
+verified support alternatives added: 0
+no change
+```
+
+The ordinary automated omission-finder path invokes `lake build` before searching
+and its supported fragment excludes the function-valued parameters used here.
+Its call was cancelled during build setup to preserve the coordinator's build
+ownership; it returned no search verdict. The displayed Boolean controls instead
+have direct zero-axiom Lean proofs. Advisory `prove-sweep` was not attempted in
+the worker; the coordinator owns that check on the unchanged frozen Challenges.

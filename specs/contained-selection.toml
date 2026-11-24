@@ -1,0 +1,32 @@
+[batch]
+vocab = "TruthCore.Explanation.ContainedSelection"
+results = "TruthCore.Results.Explanation.ContainedSelection"
+
+[[statement]]
+id = "Necessary restrictions cannot determine a genuinely contingent represented fact"
+lean = "RestrictionBoundary"
+definitions = ["ef77f135-336d-420d-a6f2-6072e78a9f08", "66da8cf2-2e22-4107-b642-fc7ea657c7ed", "fe4b7da0-cbd6-5d1f-b589-953f9def12b7"]
+paraphrase = "For every PSR arena, selected world and necessary basis, any condition depending only on the entire basis truth vector that actually obtains and entails a fact at every accessible world excludes that fact's contingency. If every accessible represented truth agrees with actuality, no represented fact is contingent. Determination is informational and truth-entailing, not causal or explanatory adequacy. The basis may be infinite; represented completeness, actual metaphysical accessibility and an explanatory interpretation are not supplied."
+
+[[statement]]
+id = "Existential coverage survives removing the explanation of the same contingent act"
+lean = "ExerciseComparison"
+definitions = ["c1ae0b54-f6f2-4f93-afdc-5d948c36c0d8", "9e6cdf50-baaa-46a2-917c-cc079bce38b3", "fe4b7da0-cbd6-5d1f-b589-953f9def12b7", "e7302a28-f9fc-4961-811f-bf58bd86c28d", "DEF-PSR-REASON", "DEF-PSR-EXISTENCE-FACT", "DEF-KANT-MODAL-CONTINGENCY"]
+disambiguations = ["DISAMB-KANT-CONTINGENCY", "DISAMB-BRUTE-EXISTENCE-AND-GROUNDING"]
+paraphrase = "The fixed ExplanatorySymmetry.acting arena and its unexplainedAct variant have identical ontology, truth and existence-fact map. At world 0 the act member 0 and distinct target are contingent; both retain the act-to-target reason and the variant retains the direct source-to-target reason. Only the original has a reason for member 0 and contingent-fact PSR. Both satisfy the exact NoBruteContingentExistenceAt predicate through the explicitly restricted existenceView adapter. Neither explanation relation necessitates its outcomes. The inherited two necessary sources, assigned reason edges and nonexistential act distinguish formal scopes; they establish no personal agency, causal productivity, single divine source, explanatory adequacy or metaphysical possibility."
+
+[[argument]]
+id = "Necessary restriction determination boundary by truth-vector invariance"
+theorem = "restrictionBoundary"
+premises = []
+conclusion = "Necessary restrictions cannot determine a genuinely contingent represented fact"
+rule = "Instantiate truth-vector invariance at the accessible absence witness"
+meaning = "Necessary basis facts give the same complete selected evidence vector at actuality and the absence witness. EvidenceOnly transfers the actually true condition there; its determining clause contradicts the absence. CompleteTruthFixed directly excludes contingency. This is the fact-level application of the existing history-selection obstruction, not a new theorem that every adequate explanation must determine an outcome."
+
+[[argument]]
+id = "Matched act-reason deletion separates existential from contingent-fact coverage"
+theorem = "exerciseComparison"
+premises = []
+conclusion = "Existential coverage survives removing the explanation of the same contingent act"
+rule = "Exhaust the fixed fact and being signatures while preserving the original truth table"
+meaning = "Use the exact #742 ActingReason constructors. The deleted target has no admitted reason, while all other original edges remain. Source-existence tokens still explain the contingent target bearer in the #312 projection, but the separate contingent act fact refutes contingent-fact coverage. A necessary source true at world 1 fails to necessitate the act or outcome. The result executes the prior #1910 matched comparison; it does not claim that admitted edges are adequate reasons or actual causes."
