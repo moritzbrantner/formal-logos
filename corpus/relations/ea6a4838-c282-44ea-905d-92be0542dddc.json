@@ -1,0 +1,10 @@
+{
+  "id": "ea6a4838-c282-44ea-905d-92be0542dddc",
+  "label": "The world-level optimizer over complete outputs is an alternative to WN",
+  "subject_kind": "statement",
+  "subject_id": "78af5042-9b4e-41a4-bb76-ad4d1973e25a",
+  "predicate": "alternative_to",
+  "object_kind": "statement",
+  "object_id": "0266eac2-3fad-43eb-a1f1-e784c5356105",
+  "note": "A rival to WN only conditionally: with SS, a rational exercise and an optimal complete-output family that fixes some given being, it would make WN fail (not proved here). Unrefuted; G1 does not bear on it."
+}

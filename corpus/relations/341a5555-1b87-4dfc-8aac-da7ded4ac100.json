@@ -1,0 +1,10 @@
+{
+  "id": "341a5555-1b87-4dfc-8aac-da7ded4ac100",
+  "label": "Selective necessary diffusion at the root is an alternative to WN",
+  "subject_kind": "statement",
+  "subject_id": "ea1425c0-5f70-4f5b-a056-acc8fc462d74",
+  "predicate": "alternative_to",
+  "object_kind": "statement",
+  "object_id": "0266eac2-3fad-43eb-a1f1-e784c5356105",
+  "note": "The decisive standing rival of docs/notes/nar-derivation.md section 5: it includes the denial of WN at one root, with a two-way effect. Unrefuted; no refutation is claimed."
+}

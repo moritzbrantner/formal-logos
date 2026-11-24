@@ -11,9 +11,12 @@ families did not reach the root: #462/#1737's selected-effect and
 optimal-creation controls (`TruthCore.Modal.SelectedEffectBridge`,
 `TruthCore.Modal.OptimalCreationChoice`, on a world-indexed `OutputProfile`) and
 the root-route premise WN of #1947 (`RationalFixedGivingIsRequired`,
-`0266eac2`, on #1897's `CausalityFrame`). WN's recorded rivals include Rowe's
-argument that a perfectly good creator of the best is not free (navigation, not
-attributed). This module states that rival on the root's giving and connects
+`0266eac2`, on #1897's `CausalityFrame`). WN's recorded rivals hold a perfect
+will fixed toward effects its end does not require (navigation, not
+attributed). This module states a narrow being-level "one best effect" variant
+of that rival on the root's giving (closer to *ex uno non fit nisi unum* than
+to Rowe's world-level argument, which is not represented), records the
+standing selective-diffusion and world-level-optimizer rivals, and connects
 the two families through one adapter.
 
 **The adapter (`givingProfile`).** For a being `y` of a `CausalityFrame` `F`,
@@ -29,9 +32,12 @@ toward every being given at `w`" (`stable_iff_fixed`).
 of `G` at `w` gives by total optimal output over a fixed candidate set and a
 fixed partially ordered quality scale (`OptimalOutputs`: at `w` and every
 accessible world where it exists it gives something, and only optimal
-candidates), and at most one candidate is optimal. A being-level surrogate of
-"must create the unique best": the candidates are beings the root may give
-being to, not complete worlds or complete orders of effects.
+candidates), and at most one candidate is optimal. Since every given being is
+optimal and at most one is, each root gives being to exactly one being at each
+accessible world where it exists; with (b1) and the common root's reach there
+is at most one actual concretum besides the root. A being-level "one best
+effect" variant: the candidates are beings, not complete worlds or orders of
+effects.
 
 Every model is a finite structural surrogate; it witnesses only its formal
 interpretation, never metaphysical possibility. See
@@ -64,15 +70,17 @@ def givingProfile (F : CausalityFrame W B T R) (y : B) : OutputProfile W B Unit 
   performs := fun v _ => F.history.ontic.ExistsAt v y
   output := fun v _ x => GivesTo F v y x
 
-/-- OPEN rival (the optimizing creator, being-level surrogate): every actual
-root `n` of `G` at `w` gives by total optimal output over the fixed candidate
-set `feasible` and quality scale `quality` (`OptimalOutputs` on
-`givingProfile F n`: at `w` and every accessible world where `n` exists it gives
-being to something, and every being it gives is optimal), and at most one
-candidate is optimal. Rowe's "a perfectly good creator must create the unique
-best" (navigation, not attributed), with candidates read as beings given
-being. It does not say why the root optimizes, nor that a best exists apart from
-the root's giving. -/
+/-- OPEN rival (a being-level "one best effect" variant): every actual root `n`
+of `G` at `w` gives by total optimal output over the fixed candidate set
+`feasible` and quality scale `quality` (`OptimalOutputs` on `givingProfile F n`:
+at `w` and every accessible world where `n` exists it gives being to something,
+and every being it gives is optimal), and at most one candidate is optimal.
+Consequently each root gives being to exactly one being, the unique optimal
+candidate, at each accessible world where it exists; with (b1) and the common
+root's reach there is at most one actual concretum besides the root. Closer to
+*ex uno non fit nisi unum* than to Rowe's world-level argument, which is not
+represented. It does not say why the root optimizes. Without direct reach it
+is satisfiable by a mediated creator (#1947's `chainG`, candidates `{g}`). -/
 def ActualRootsGiveUniqueOptimum (F : CausalityFrame W B T R) (concrete : B → Prop)
     (G : W → B → B → Prop) (w : W) (V : Type) [PartialOrder V] (feasible : Set B)
     (quality : B → V) : Prop :=
@@ -85,6 +93,40 @@ def NotEveryActualRootGivesUniqueOptimum (F : CausalityFrame W B T R) (concrete 
     (G : W → B → B → Prop) (w : W) (V : Type) [PartialOrder V] (feasible : Set B)
     (quality : B → V) : Prop :=
   ¬ ActualRootsGiveUniqueOptimum F concrete G w V feasible quality
+
+/-- OPEN standing rival (selective necessary diffusion at the root): some
+actual root `n` of `G` at `w` exercises a rational power `p` toward a being `x`
+other than itself, is fixed (NECESSITATE_5) toward `x`, and `x` is not
+required by `n`'s own end (`EndRequires`, the means-to-end relation), while `n`
+is two-way toward some being `c`. A perfect will fixed toward an effect its
+good does not require, selectively: the necessary diffusion of the good toward
+a necessary intermediary (Plotinus; Avicenna's First as standardly reported;
+Kretzmann; navigation, not attributed), with free giving of the contingents.
+Stated only; no argument here supports or refutes it. #1947's `MixedModeRoot`
+model is of this shape. It is the denial of WN at one root, together with a
+two-way effect. -/
+def SelectiveNecessaryDiffusionAtRoot (F : CausalityFrame W B T R) (A : AgencyFrame W B S P)
+    (concrete : B → Prop) (G : W → B → B → Prop) (EndRequires : B → B → Prop) (w : W) :
+    Prop :=
+  ∃ n p x c, ActualRoot (groundProfile F concrete G) w n ∧ x ≠ n ∧ A.PowerOf n p ∧
+    A.Rational p ∧ A.Exercises w n x p ∧ FixedTowardAt F w n x ∧ ¬ EndRequires n x ∧
+    TwoWayTowardAt F w n c
+
+/-- OPEN standing rival (the world-level optimizer, ties allowed): every actual
+root `n` of `G` at `w`, at `w` and at every accessible world where it exists,
+gives being to exactly the beings of some optimal complete output: the set
+`{x | GivesTo F v n x}` is an optimal candidate among the fixed admissible sets
+`feasible` under the fixed quality `quality`. Candidates are complete outputs,
+not single beings. With several optimal complete outputs that all contain a
+necessary intermediary, the root would be fixed toward it and free toward the
+rest (not proved here). Closer to Rowe's and Leibniz's best-world framing than
+the being-level variant; stated only, neither supported nor refuted here. -/
+def ActualRootsGiveOptimalCompleteOutputs (F : CausalityFrame W B T R) (concrete : B → Prop)
+    (G : W → B → B → Prop) (w : W) (V : Type) [PartialOrder V] (feasible : Set (Set B))
+    (quality : Set B → V) : Prop :=
+  ∀ n, ActualRoot (groundProfile F concrete G) w n →
+    ∀ v, (v = w ∨ F.history.ontic.frame.access w v) → F.history.ontic.ExistsAt v n →
+      Optimal feasible quality {x | GivesTo F v n x}
 
 /-! ## Laws and a tied-optimum model -/
 
@@ -118,8 +160,9 @@ def tiedQuality (_ : Bg) : Nat := 0
 2. **A unique optimum makes the root fixed toward every effect.** If an actual
    root gives by total optimal output and at most one candidate is optimal, it
    is fixed toward every being it gives at `w`, so it is two-way toward none:
-   being-level optimization cannot yield a mixed-mode root (fixed toward a
-   necessary `d`, two-way toward the contingents).
+   a unique-optimum root cannot be a mixed-mode root (it gives exactly one
+   being per world). Without direct reach it can still be a mediated creator
+   that gives only a necessary intermediary.
 3. **The optimizing rival is a rival to WN.** With SS, a root that gives by a
    unique optimum and gives some other being `x` at `w` by exercising a
    rational power makes WN fail.
@@ -149,8 +192,8 @@ intellect (`onlyG`), the premises the refutation uses besides uniqueness hold:
 (b1), factive giving, the common GOD_4 root with intellect, necessary roots and
 some concrete contingent being. `g` gives by total optimal output over `{c, d}`
 under constant quality, yet two candidates are optimal, `g` is two-way toward
-`c`, and the optimizing rival with uniqueness fails. Ties leave the root's
-giving unfixed: #1737's tied control, now on the root's giving. Encoding
+`c`, and the optimizing rival with uniqueness fails. Here the tied root is
+two-way toward `c`: #1737's tied control, now on the root's giving. Encoding
 disclosures: quality is constant; `G` and existence are fixed by construction;
 the frame's `Ontic` causal field and other relations are empty; `d` exists
 only at `true`. -/

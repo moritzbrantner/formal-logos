@@ -345,7 +345,12 @@ N3 begs the question (law 6).
     effects that its good does not require. Developed defences (navigation):
     - the necessary diffusion of the good (Plotinus; Avicenna's First as
       standardly reported, whose consent to emanation is necessitated);
-    - Rowe's argument that a perfectly good creator of the best is not free;
+    - Rowe's argument that a perfectly good creator of the best is not free
+      (world-level; not represented. A narrow being-level "one best effect"
+      variant, `b72a790a`, has a non-counting conditional refutation, G1 of
+      [orphan-graft-map.md](orphan-graft-map.md); it does not touch the
+      mediated creator or the world-level optimizer `78af5042`. Selective
+      diffusion is recorded as `ea1425c0`, unrefuted);
     - Kretzmann's Dionysian argument that goodness must diffuse.
   - *Not a rival in this sense:* Leibniz. His moral necessity of choosing the
     best is not metaphysical necessity, so it does not make the choice fixed
@@ -508,8 +513,10 @@ for this slice. Nothing from them is quoted; they are paraphrased.
    whether (b1) holds by meaning.
 5. **`a6b46d2e`'s legacy definition links:** prune them (#216). N1 and N2 can
    then be registered on the bare common root.
-6. **Necessary roots** (`d164f730`): connect to an existing necessary-root
-   derivation.
+6. **Necessary roots** (`d164f730`): answered by G2 of
+   [orphan-graft-map.md](orphan-graft-map.md): derived from `91b085c4` (a
+   unique necessary actual root), registered `strengthens`. Closed, not
+   established.
 
 ## 10. Edits outside the batch
 
