@@ -1,0 +1,12 @@
+{
+  "id": "f4395e76-95df-4862-8b2d-fa3656150c6c",
+  "label": "Box K node projected from the NECESSARY_2 classical GOD_4 root",
+  "argument_id": "e3d120ed-c7d5-45b0-9126-e9c72d69d4b5",
+  "challenge_module": "TruthCore.Results.Causality.NecessaryClassicalGodRootBoxK.Challenge",
+  "solution_module": "TruthCore.Results.Causality.NecessaryClassicalGodRootBoxK.Solution",
+  "theorem": "TruthCore.Results.Causality.NecessaryClassicalGodRootBoxK.boxKOfClassicalGodRoot",
+  "comparator_config": "results/f4395e76-95df-4862-8b2d-fa3656150c6c/comparator.json",
+  "status": "solution-present",
+  "description": "Assembly (a weakening, not a substantive derivation): the classical GOD_4 root projects onto the box K node of the sense fork for the same signature, Profile and world, using necessaryAt_iff_boxExistsAt (Iff.rfl). It gives the box K node a closure path from every derivation of STMT-NECESSARY-CLASSICAL-GOD-ROOT (including its Dei Filius, underived-individual, act-priority-at-first, pure-act-by-composition, positive-root and asymmetry routes). It closes the node only if its premise is closed; every upstream premise keeps its status. A verified non-transcription derivation of the box K node from the same 25 quarta-via inputs already exists (argument a693bf86).",
+  "transcription": "assembly"
+}

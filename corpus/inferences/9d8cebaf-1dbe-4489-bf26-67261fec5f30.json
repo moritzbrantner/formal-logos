@@ -1,0 +1,10 @@
+{
+  "id": "9d8cebaf-1dbe-4489-bf26-67261fec5f30",
+  "label": "Strictness separator for the box K projection, checked (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "de1ebd56-9671-4dcf-bac5-06ec85436e8b",
+  "rule": "One explicit finite model checked by unfolding",
+  "meaning": "On the one-point model of the necessary-sense fork, the box K node holds and the classical GOD_4 root fails when the supplied intellect predicate is empty. So the box K node does not entail the classical GOD_4 root. Model-witnessed only; a statement about this formal interpretation.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

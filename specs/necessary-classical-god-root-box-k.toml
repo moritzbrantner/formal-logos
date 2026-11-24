@@ -1,0 +1,53 @@
+# #1926 phase 0: the quarta-via classical-God root (STMT-NECESSARY-CLASSICAL-GOD-ROOT)
+# projected onto the box K node of the necessary-sense fork (STMT-NECESSARY-ROOT-BOX-K).
+# Same Signature, Profile and world; NecessaryAt is the box K existence by Iff.rfl.
+# An assembly (weakening) registered as a strength order, with a strictness
+# separator. Analyst formulations, attribution deferred. Findings and the
+# cheapest-route packing analysis: attempt "Cheapest-route packing of the
+# God-existence leaf in the fork route" and docs/notes/cheapest-route-packing.md.
+
+[batch]
+vocab = "TruthCore.Causality.NecessaryClassicalGodRootBoxK"
+results = "TruthCore.Results.Causality.NecessaryClassicalGodRootBoxK"
+disambiguations = ["DISAMB-NECESSARY"]
+
+[[statement]]
+id = "Strictness separator: the box K node holds and the classical GOD_4 root fails on one model"
+lean = "Separation.Separator"
+paraphrase = "Formal control on the one-point model of the necessary-sense fork (one world accessing itself, one concrete ungrounded candidate that exists there, is GOD_4 and has the signature's classical attributes field), with a q.3 a.4 profile in which the one being is in act and its represented esse and essence coincide: the box K node of the sense fork holds, while the classical GOD_4 root fails once the supplied intellect predicate is empty (the eighth of the nine case predicates). So the box K node does not entail the classical GOD_4 root. The failure comes only from that emptied predicate, a degenerate choice made for the control; the other supplied predicates are fixed as in the Lean control, and nothing is said about intellect. A statement about this formal interpretation only; nothing is claimed about the actual world or about which predicates apply to it."
+definitions = ["DEF-KANT-MODAL-NECESSITY", "DEF-NECESSARY-IN-SENSE"]
+disambiguations = ["DISAMB-NECESSARY"]
+
+[[argument]]
+id = "Box K node projected from the NECESSARY_2 classical GOD_4 root"
+label = "Box K node projected from the NECESSARY_2 classical GOD_4 root"
+theorem = "boxKOfClassicalGodRoot"
+premises = ["STMT-NECESSARY-CLASSICAL-GOD-ROOT"]
+conclusion = "STMT-NECESSARY-ROOT-BOX-K"
+weakening = true
+axioms = []
+rule = "Existential elimination and introduction, conjunction elimination, and the definitional identity of NecessaryAt with box-existence (necessaryAt_iff_boxExistsAt, Iff.rfl)"
+meaning = "Assembly (a weakening, not a substantive derivation): for the same signature, Profile m and world w, the witness n of NecessaryClassicalGodRootAt is an actual root (first conjunct of PerfectRootAt); its necessity NecessaryAt m.ontic w n is box-existence of the same n over the same frame m.ontic.frame (Iff.rfl, no bridge); n is GOD_4, is the one GOD_4 (IsTheOneGod, the fourth of the nine case predicates) and has the signature's classical attributes field. So the box K node holds for that n. The relation CN (causes the necessity of) is unconstrained and unused by the box K sense. Uniqueness of the selected root, maximum, perfection, firstness, esse/essence identity, matter/form exclusion, remoteness and the other eight case predicates are discarded; no converse is claimed (see the strictness separator). As an assembly it closes the box K node only if its premise is closed (invariant 16 fixpoint); it does not expand the box K node in the route-cost diagnostic."
+description = "Assembly (a weakening, not a substantive derivation): the classical GOD_4 root projects onto the box K node of the sense fork for the same signature, Profile and world, using necessaryAt_iff_boxExistsAt (Iff.rfl). It gives the box K node a closure path from every derivation of STMT-NECESSARY-CLASSICAL-GOD-ROOT (including its Dei Filius, underived-individual, act-priority-at-first, pure-act-by-composition, positive-root and asymmetry routes). It closes the node only if its premise is closed; every upstream premise keeps its status. A verified non-transcription derivation of the box K node from the same 25 quarta-via inputs already exists (argument a693bf86)."
+transcription = "assembly"
+senses = {GOD = "GOD_4"}
+
+[[argument]]
+id = "Strictness separator for the box K projection, checked"
+theorem = "separator"
+premises = []
+conclusion = "Strictness separator: the box K node holds and the classical GOD_4 root fails on one model"
+axioms = []
+rule = "One explicit finite model checked by unfolding"
+meaning = "On the one-point model of the necessary-sense fork, the box K node holds and the classical GOD_4 root fails when the supplied intellect predicate is empty. So the box K node does not entail the classical GOD_4 root. Model-witnessed only; a statement about this formal interpretation."
+
+[[relation]]
+id = "The NECESSARY_2 classical GOD_4 root strengthens the box K node"
+subject_kind = "statement"
+subject_id = "STMT-NECESSARY-CLASSICAL-GOD-ROOT"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "STMT-NECESSARY-ROOT-BOX-K"
+verification_result_id = "Box K node projected from the NECESSARY_2 classical GOD_4 root"
+strictness_result_id = "Strictness separator for the box K projection, checked"
+note = "Same signature, Profile m and world w; NecessaryAt m.ontic w n is box-existence over m.ontic.frame by Iff.rfl. Same witness n: keep that n is an actual root, box-exists, is GOD_4, the one GOD_4 and has the classical attributes field. The strong version adds selected-root uniqueness, maximum, perfection, esse/essence identity, firstness, matter/form exclusion, remoteness and the other eight case predicates. Strictness: the one-point separator."

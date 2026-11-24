@@ -1,0 +1,11 @@
+{
+  "id": "4e83dbac-9ef6-466f-a6a7-abad494cda18",
+  "label": "Strictness separator for the box K projection, checked",
+  "argument_id": "4c9504c0-8710-4ca1-9502-940052eb3dfa",
+  "challenge_module": "TruthCore.Results.Causality.NecessaryClassicalGodRootBoxK.Challenge",
+  "solution_module": "TruthCore.Results.Causality.NecessaryClassicalGodRootBoxK.Solution",
+  "theorem": "TruthCore.Results.Causality.NecessaryClassicalGodRootBoxK.separator",
+  "comparator_config": "results/4e83dbac-9ef6-466f-a6a7-abad494cda18/comparator.json",
+  "status": "solution-present",
+  "description": "On the one-point model of the necessary-sense fork, the box K node holds and the classical GOD_4 root fails when the supplied intellect predicate is empty. So the box K node does not entail the classical GOD_4 root. Model-witnessed only; a statement about this formal interpretation."
+}

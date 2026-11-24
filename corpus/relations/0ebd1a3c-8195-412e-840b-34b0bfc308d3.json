@@ -1,0 +1,12 @@
+{
+  "id": "0ebd1a3c-8195-412e-840b-34b0bfc308d3",
+  "label": "The NECESSARY_2 classical GOD_4 root strengthens the box K node",
+  "subject_kind": "statement",
+  "subject_id": "da3facd6-008e-5e76-92fa-677350c2dfdb",
+  "predicate": "strengthens",
+  "object_kind": "statement",
+  "object_id": "cdf897a8-5490-561a-b9d2-507486a3f192",
+  "verification_result_id": "f4395e76-95df-4862-8b2d-fa3656150c6c",
+  "strictness_result_id": "4e83dbac-9ef6-466f-a6a7-abad494cda18",
+  "note": "Same signature, Profile m and world w; NecessaryAt m.ontic w n is box-existence over m.ontic.frame by Iff.rfl. Same witness n: keep that n is an actual root, box-exists, is GOD_4, the one GOD_4 and has the classical attributes field. The strong version adds selected-root uniqueness, maximum, perfection, esse/essence identity, firstness, matter/form exclusion, remoteness and the other eight case predicates. Strictness: the one-point separator."
+}
