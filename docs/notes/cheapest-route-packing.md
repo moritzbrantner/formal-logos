@@ -165,3 +165,29 @@ This is #1926 phase 4. Changing the route-cost rule needs an owner decision. A
 certified difference for the new `strengthens` registration (#1598) needs a
 same-witness delta statement and is still open, as it is for most
 registrations.
+
+## Second instance: root existence for whole-roster nontrapping (2026-11-24, #1926 slice 2a)
+
+Slice 2a registered root existence `dc397705` as strengthening whole-roster
+nontrapping `5c898d24` (relation `67afbf3d`, certified difference `e9512c5c`).
+The order is correct, and registering every strong-to-weak implication is owner
+policy, so the registration stays.
+
+The new support option is circular in the current corpus. The only derivation
+of `dc397705` is `6560ccfa` (result `9f7c8201`). That result is an assembly
+transcription, and it consumes `5c898d24` together with population and excluded
+middle. So the option adds no warrant.
+
+It still lowers two route costs: `1deb1d29` drops from 52 to 50 and `3357fa30`
+from 53 to 51. `--routes` cannot expand a transcription, so `dc397705` stands as
+one `proved_unestablished` leaf. Those routes now assume root existence in place
+of the three potential-gap premises `516c4fee`, `5adb2dc9` and `838f7cca`.
+
+This is a packing artifact of the same kind as the fork route's `b9816722`.
+
+**Tooling gap.** Route expansion does not apply the support-cycle set-aside of
+[the strength-registration decision](../decisions/2026-11-12-03-strength-registrations-reach.md).
+Closure does apply it.
+
+The well-founded registration `577cd3b6` is the slice's non-circular new
+support option for `5c898d24`.
