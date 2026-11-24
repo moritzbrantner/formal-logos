@@ -1,0 +1,15 @@
+{
+  "id": "2d8e788b-0889-4c55-9ca5-2ed9bd8565a7",
+  "label": "Additional uncaused agent entry at a fixed population boundary",
+  "term": "additional uncaused agent entry",
+  "definition": "AdditionalEntry fixes one admission condition b, the founder-only complete input and any tick k. An accessible complete input retains every other input bit and all prior entity presences, retains the founder, and adds an agent with a first presence at k+1. The entrant persists to k+2 and is absent in an accessible alternative at that same time. No entity produces the entrant at any modeled time and no #312 token explains its existence at k+2. The entrant produces its next-tick firing and changes the same time-indexed detector from no firing to firing. Causation, existence of a reason token, modal admission and observable difference are separate conjuncts.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Explanation.PopulationEntry.AdditionalEntry",
+  "definition_ids": [
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "60b36398-a152-552a-a413-ef649e5b7b1f",
+    "d513fb8a-64ee-5d49-ae56-4d695f93ca71"
+  ],
+  "note": "Analyst interpretation for #1867/#1913. Population is the cardinality of active birth indices. There is at most one birth per tick, each agent persists and emits once, and no modeled event creates an agent. The input bit records whether that agent enters; it is not itself another entity causing the agent. A circumstantial reason for a firing is assigned to its producer. Absence of reasons for agents is a distinct stipulation of the brute rival. The model's production edges are asymmetric and terminate at firings. Mere causal reach, common ancestry or variation of the source label would not by itself imply detector sensitivity. Constant population and capacity one restrict admissible complete inputs, whereas the unrestricted case admits the contrasted input even with its founder present. Whether the relevant concrete causal domain is complete, preserves every agent or admits new ones, and whether its boundary has explanatory or modal warrant are open application questions. See docs/notes/no-foundation-law-chaos.md."
+}

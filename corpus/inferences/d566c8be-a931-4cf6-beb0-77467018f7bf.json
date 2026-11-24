@@ -1,0 +1,10 @@
+{
+  "id": "d566c8be-a931-4cf6-beb0-77467018f7bf",
+  "label": "Populated founder and agent-entry controls under three fixed boundary conditions (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "c37994de-7342-450e-9c26-21c843901700",
+  "rule": "Count persistent birth indices, compare adjacent populations, and construct complete single-entry histories with a fixed detector",
+  "meaning": "In one birth-input mechanism the represented number of agents is the cardinality of active birth indices. A late birth increases that count. Under conservation, equality of initial bits forces equality of complete birth histories. Exact conservation excludes even solitary late birth; capacity one is saturated by the persisting founder, yet admits the same later candidate in its absence. At an unrestricted boundary, adding just the late input suffices for an admissible extra agent, its produced event and a changed source-blind detector reading. Absence of incoming causes and absence of #312 reason tokens are separately represented. A conserved net charge, a real modal recombination principle or global loss of empirical warrant is outside the theorem.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

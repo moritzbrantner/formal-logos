@@ -429,19 +429,34 @@ premise is established.
 
 ## Can the whole unreceived act be absent?
 
-**Current conclusion.** Creatures can identify a source together even when
-none requires it individually. What would pick out this very n is a feature
-of their joint history that cannot obtain without its contribution.
-Showing that n offers the best explanation is a weaker, evidential result.
-Conversely, several admissible histories can give evidence for n's possible
-absence if their outcomes cannot all fit an independently warranted
-commitment of n. A cycle of choices illustrates both the argument and
-the difference between guaranteeing a result and permitting a procedure.
-The strongest current obstacle is distinguishing n from another proposed
-supplier of the same whole order. I retain moderate confidence in
-suspension on the shared premises.
-[Individual origins](#can-ordinary-individuals-identify-the-same-foundation-across-histories)
-and [groups and whole worlds](#what-can-a-group-or-a-whole-world-show-that-one-creature-cannot).
+**Current conclusion.** There is a positive case against obtaining a
+populated world without n by subtraction. Grant a root in every populated
+order and n as the sole actual root of the same relation of giving
+existence. A populated alternative without n then requires either an actual
+dependent that can be underived there or an underived individual outside
+the actual concrete inventory. A contradiction eliminates the particular
+proposal that entails it. Repeated failure to find an absence can favor
+necessity if the inquiry stood a real chance of detecting one under some
+still credible account of P. I retain moderate confidence in suspension
+about P on the shared premises.
+[Individual origins](#can-ordinary-individuals-identify-the-same-foundation-across-histories),
+[groups and whole worlds](#what-can-a-group-or-a-whole-world-show-that-one-creature-cannot),
+[the cumulative assessment](#when-do-adverse-consequences-count-against-possible-absence)
+and [the comparison with infinite regress](#what-does-possible-absence-have-in-common-with-an-infinite-regress).
+The [comparison of exemptions](#which-beings-could-be-exceptions-to-the-demand-for-a-cause)
+shows when accepting an uncaused contingent foundation removes an objection
+to a rival. The regress comparison gives a reason to reject a defense in which
+every argument for an omission derives its warrant from another assumed
+omission. Independent evidence of an admissible order incompatible with
+n would answer that objection. The [argument from contingent dependence](#does-being-contingent-mean-being-contingent-upon-something) explains where a demand for a determining reason can support necessity and where it needs a further premise about dependence.
+The [argument from received and unreceived existence](#does-depending-on-nothing-identify-one-being-as-god)
+explains how two creatures can receive existence from one giver. It favors
+uniqueness if every root is subsistent existence itself and two acts of
+that kind could be distinguished only through a recipient or a limiting
+determination. Both claims need a defense against a rival that accepts only
+the absence of an external giver. The [argument about the source of a limit](#in-what-sense-is-unlimited-being-the-default)
+now carries formal limitation through a recipient to a distinct actual giver
+under the explicit reception and causal premises.
 
 Analyst assessment of the rigid individual in issue #1887. Let P say that this
 very n is absent at some world accessible from the actual world. Grant the
@@ -1336,3 +1351,886 @@ If the admissible world instead *fully grounds* P at actuality, it conflicts
 with the question's strict no-ground stipulation. Nothing in the group
 argument treats absence in another world as an event that happens to n.
 Attempt `bb466836` records this assessment and its open premises.
+
+### When do adverse consequences count against possible absence?
+
+The actual n exists on both hypotheses. P adds that an accessible history
+lacks that very individual throughout. A bad outcome in such a history
+can matter in three different ways. It can make the proposed history
+undesirable, make it incompatible with commitments its proponent has
+reason to retain, or put present beliefs at risk of error. Only the
+second by itself defeats that combination of premises. For instance, a
+world without inquiry could contain no successful inquiries. That is a
+loss. A world literally devoid of *all* truths could not be one at which
+it is true that n is absent. That is an incoherent specification. Neither
+argument excludes a world without local thinkers in which it is true
+that n is absent. Moving from truth *at* the world to a concrete
+truthmaker *in* it needs a separate premise, as does identification of
+that truthmaker with n. [Empty-world truthmaker controls](disjunction-ground-485.md#exact-empty-world-core-and-distinct-replies-554).
+
+An appeal to goodness can go beyond wishing that n exist. Leibniz compares
+possible universes by their degrees of perfection to explain the choice of
+one. The comparison itself takes inferior candidates seriously as
+possibilities. Pittard offers a different argument: if deceptive worlds
+predominate among conceivable worlds containing one's internal duplicate,
+confidence that our actual environment is hospitable to knowledge needs a
+countervailing reason. He considers a fundamental order directed toward
+goodness as such a reason. Even if this favors an ordering toward good,
+one route to necessity for n would identify a good required in *every*
+admissible order for which this individual's presence is indispensable.
+Inferring that requirement
+from the loss of a particular good in one proposed order would be circular
+if the only reason for ruling out that loss were the assumption that n
+must be present. The same test applies to a proposed impersonal guarantor.
+Conversely, n's presence alone gives no guarantee that finite inquirers
+exist or that a particular inquirer's method succeeds.
+[Leibniz, *Monadology*, §§53–55](https://en.wikisource.org/wiki/Monadology/Latta_translation)
+and [Pittard, “Deceptive Worlds, Skepticism, and Axiarchism”](https://doi.org/10.1080/0020174X.2021.1938902).
+
+A proposed loss of scientific knowledge gives a second test. A view that
+admits an immediate reversal of a law on the same evidence and claims
+that this evidence *guarantees* the law's continuation cannot keep both
+claims. A rival can posit a stable basic law or defend a fallible forecast.
+Even granting instability in some n-free world does not put that reversal
+among the futures of our actual history. Conversely, a necessary source
+free to allow either future supplies no guarantee without a reason for
+stability. This identifies a substantive disadvantage of the unrestricted
+prediction claim and preserves a coherent reply.
+[Law-change comparison](no-foundation-law-chaos.md) and
+[scope of the practical objection](no-foundation-practical-collapse.md#exact-scope-of-the-collapse).
+
+**What a successful subtraction would have to change.** Use one relation
+throughout: giving a concrete being its existence in the relevant order.
+Call a concrete bearer a root if no distinct concrete giver gives it
+existence in that order. This is a relative description. It says nothing
+by itself about the bearer's simplicity, its having no internal recipient,
+its supplying everyone else, or its being divine. Grant two substantive
+premises: n is the only actual root, and every populated accessible order
+has a root in this same respect. The second has a positive rationale where
+all candidate givers would otherwise merely pass on actuality they wholly
+receive. Accounting for each link by another link need not account for
+anyone's having actuality to pass on. Whether this applies to every
+complete order is contested. The whole-roster result concerns the actual
+root of a specified grounding relation. Applying it here requires matching
+that relation to existential giving and defending coverage at each relevant
+world. Actual firstness alone establishes neither premise.
+[Complete orders of givers](unique-feedback-explanation-311.md)
+and [scope of the whole-roster result](../../corpus/results/WHOLE-ROSTER-ROOT-EQUIVALENCE.json).
+
+Now take any putative n-free history. If it contains something concrete,
+choose a root there. If that individual is among the actual concreta, it
+was dependent here, since n was the only actual root. If it is outside
+that inventory, the proposed history includes a *different possible root*.
+Thus the options are concrete emptiness, a change in the dependence status
+of some actual individual across histories, or a root outside the actual
+concrete inventory. The last two can occur together. This excludes every
+populated proposal formed by deleting n and retaining only actual dependents
+as dependents, **even if we also delete most of them and reassign every
+particular giver**. No organism needs to retain its numerical parents and
+no link needs to retain its actual direction, provided the two premises
+and the retained dependence statuses hold. Nothing here treats cross-world
+variation as a temporal change.
+
+This is stronger than observing that a particular proposed omission has
+no known cause. It also exposes the limit of the argument. Imagine a
+different root supplying the same recipients. They still have givers; the
+identity of the giver differs. This meets the two premises at the level
+of the specification. Its genuine possibility remains open. An ordinary
+reason for admitting a person who never actually existed is that a couple
+could have had a different child. That reason invokes generation and gives
+no comparable warrant for an additional *underived* bearer. Conversely,
+the fact that no one could produce a new underived being in the actual
+world gives no reason why one could never have existed in another. This
+route to necessity needs to exclude **n-free** realizations of those cases.
+A new root could coexist with n, as could a previously dependent individual
+now underived, if two roots are admissible together. Ruling out all new
+roots and all status changes would suffice for the populated cases, but
+would be stronger than needed. Essence–esse identity in actual n settles
+none of these questions about other bearers.
+[Adams, “Actualism and Thisness,” §4.2](https://paperzz.com/doc/6797968/actualism-and-thisness)
+and [the earlier replacement test](#testing-occupation-and-replacement).
+
+**Can an actual dependent itself become the replacement?** Consider the
+rational soul in Aquinas's account. Its inability to arise by rearranging
+matter gives a reason about how it could be produced *if produced*. On
+its own this would leave open an unproduced soul. Aquinas offers a stronger
+reason. The soul is a subsistent form whose act of being it has by
+participation. He holds that having being in this way entails having a
+cause, even though no particular cause is mentioned in the definition of a
+soul. If this mode of being belongs to the same soul wherever it exists,
+and participation requires a distinct concrete giver there, then this very
+soul cannot go from dependent here to underived in the alternative. Giving
+it a beginningless history would leave the reason for dependence intact.
+It could still receive existence from another source, if that source is
+admissible. This excludes one proposal without assuming that n is necessary.
+
+The strongest objection targets the inference from limited or participated
+being to an *extrinsic giver*. Distinguishing what a soul is from its being
+actual identifies a difference within the account of the soul. Treating
+that difference alone as evidence of an efficient cause would skip the
+participation premise. In Aquinas's example of iron heated by fire there
+can be independent evidence of heat passing from one body to the other.
+Simply observing that the iron's temperature is finite would not supply
+that evidence. Likewise, if “participates” already means “gets its being
+from another,” the work lies in showing why the soul meets that description
+wherever it exists. The corpus's distinct-esse result concludes under
+its premises that there is another actual cause, with its mode unspecified.
+It does not establish the required concreteness, transworld scope or the
+identity of the giver. Aquinas's full argument to the one God employs
+further premises; the narrower argument can be assessed without importing
+that conclusion. I give the exclusion of a brute soul substantial weight
+*within the participation account* and little independent weight against a
+world with a replacement giver.
+[ST I.90.2–3](https://www.newadvent.org/summa/1090.htm#article2),
+[I.44.1, especially reply 1](https://www.newadvent.org/summa/1044.htm#article1)
+and [the precise distinct-esse premise](../../corpus/statements/457698e4-eb21-4561-ab32-eccbfb0a992e.json).
+
+**What richer comparisons actually exclude.** A lamp can stay lit when
+its main supply fails because a backup switches on. Recording the switch
+position and energy flow as well as the lamp rules out *that explanation*
+for two otherwise identical installation histories if those additional
+records would differ. Likewise, retaining the independently specified fact
+that a being receives existence from someone excludes declaring that same
+being's existence wholly ungiven in the alternative. It does not name its
+giver. Finally, persistence without a current conserver could explain a
+being's later state. It cannot supply a whole history without n if n
+indispensably supplied its origin in that history. These exclusions concern
+different mechanisms. Once the remaining proposal says that every recorded
+contribution is unchanged except who ultimately gives existence, more
+readings from the same machinery cannot distinguish it. Nor would a
+different way for the lamp to be lit show that its actual supply did no
+work. [Intervention comparison](joint-cooperation-744.md) and
+[origin versus conservation](causal-dependence-support-investigation.md).
+
+There are two readings of “the complete creature history underdetermines
+the foundation.” Two accounts may agree on everything we know of creatures
+while disagreeing on what is possible. That establishes a limit of those
+data. If instead there really are two admissible histories with the same
+creature facts and opposite verdicts about n's presence, one of them
+already witnesses P. Establishing the first reading repeatedly does not
+establish the second. Equally, excluding a duplicate of the *actual*
+history still leaves a possible absence in a quite different history.
+
+**One kind of loss could matter here.** Suppose an inquirer claims to
+know that this particular n exists from the public order of creatures.
+On a demanding safety condition for knowledge, such a belief cannot
+easily have been false when formed on the same basis. If the same inquirer
+could very easily have made the same judgment about the same n by the
+same method in an n-free history, that claim to knowledge is in trouble
+already. One well-motivated error of this sort matters more than any
+number of remote, uninhabited alternatives. A replacement observer who
+correctly thinks “my source exists” does not supply the required false
+belief. If the actual judgment requires acquaintance with n, retaining
+its evidence and reference in an n-free world is itself in dispute.
+An argument cannot appeal to the ease of precisely this error to motivate
+replacement, then dismiss that same error as remote to defend knowledge
+on the very same standard. Mere metaphysical accessibility, though,
+implies no such ease. Necessity would guarantee the true answer to the
+fixed question even when someone merely guessed. It would still leave
+their warrant to be explained. These are costs to identifiable epistemic
+commitments on either side.
+[Pritchard, “In Defence of Modest Anti-Luck Epistemology,” §§II–III](https://escholarship.org/content/qt64p736bn/qt64p736bn_noSplash_e278f99b5301228f09e0b95f0fba857d.pdf)
+and [truth versus access](transcendental-foundation-routes.md).
+
+**How much does another failure to find an omission count?** Consider an
+illustration about an investigator's evidence. Under necessity suppose the
+investigator never falsely certifies an absence. Conditional on P, suppose
+they initially give equal weight to two accounts. On one, each fresh,
+independent inquiry would have a one-half chance of correctly detecting an
+absence. On the other, this particular procedure could never detect one.
+A first miss has probability 1 under necessity and 3/4 under P,
+so the evidence multiplies the odds of necessity against P by 4/3. After
+two misses the cumulative multiplier is 8/5. Even an arbitrarily long
+series approaches a multiplier of only 2, because the undetectable account
+predicts every miss just as well as necessity. The probabilities concern
+the procedure, with independence only conditional on the detectable
+account. They are neither a measure over worlds nor estimates for C2.
+[Dependence between reports](correlated-testimony-1396.md) and
+[contrastive confirmation](contrastive-worldview-934.md).
+
+We have no calibrated detection rates or weights of this kind for
+metaphysical inquiry. There is nevertheless a qualitative result. A
+search that retains an individual independently known to require n has
+no opportunity to discover an n-free world by varying that individual's
+circumstances. Adding cases can increase our confidence in *why this search
+is insensitive* without changing the comparative evidence for P. An
+argument that instead decides whether concrete reality could be empty
+would test a different class of alternatives. An independently grounded
+judgment that a normally derivative bearer must remain derivative wherever
+it exists would eliminate a status change for that bearer alone.
+
+**Provisional judgment.** I favor the objection to unrestricted subtraction
+over the inference from ordinary removability to P. On the two root
+premises the objection is decisive for the populated histories specified
+above. I have high confidence in that restriction and moderate confidence
+in suspension about P itself. The most consequential outstanding question
+for populated worlds is whether the evidence that identifies how a
+particular being receives existence can distinguish the ultimate giver
+from a replacement. Evidence of a genuinely admissible alternative whose
+features preclude n's coexistence would move me toward P. Warranted
+exclusions of concrete emptiness and of n-free realizations of the two
+populated cases, together with the root premises, would support necessity.
+If the explanation of an alternative is offered as a full prior ground for P at
+actuality, it would revise the strict no-ground stipulation. An alternative
+admitted partly because P is already permitted can give evidence for P
+without being its prior ground. The strict question also requires that P
+itself lack any other full ground at actuality. These are philosophical
+assessments using the existing results. Attempt `27447619` records their scope.
+
+
+### What does possible absence have in common with an infinite regress?
+
+Suppose n exists, is simple and underived, and its possible absence P has
+no full metaphysical ground at actuality. P says that somewhere among
+the admissible alternatives this very individual never exists. Nothing
+in P posits an infinite series. A series can enter a proposed account
+of what exists in an alternative, an argument for admitting that
+alternative, or an explanation of why n actually exists. These questions
+come apart even if each answer uses the phrase “there is always another.”
+
+**What can a chain of copies explain?** Leibniz imagines a geometry book
+that has always been copied from an earlier book. Cleanthes in Hume's
+*Dialogues* challenges a demand for a further cause of twenty particles
+once the individual causes are known. Here is a contrast one can examine
+without deciding whether a collection is a further entity. Suppose every
+edition misspells the same word, and all the scribes reproduce the word
+exactly as they receive it. Inspection of the preceding copy can explain
+this scribe's spelling. The copying rule would preserve the correct
+spelling just as faithfully. Even if we had inspected every copy, we
+would know *which* spelling persisted without learning from that rule
+*why the lineage had that spelling throughout rather than the other*. A rule that actually
+corrected the word at every copying would answer the spelling question,
+given an operating lineage and the correct dictionary entry. It would
+still presuppose scribes and books. This concedes the value of the local
+causes and identifies a particular contrast they leave open. Requiring
+an ultimate answer to every such contrast is a further premise.
+[Leibniz, *The Ultimate Origin of Things*, opening two pages](https://www.earlymoderntexts.com/assets/pdfs/leibniz1697b.pdf)
+and [Hume, *Dialogues*, IX.3 and IX.9](https://davidhume.org/texts/d/9).
+
+**When additional links make a proposal worse.** Imagine a line of relays
+in a steady operating condition. Every output is independently bounded by
+four units. Inspection can tell us which relays are purely passive and
+pass on half the power received from the next. A station beyond the
+inspected block could add power. A meter at the near end reads one unit. Finding one passive relay is
+compatible with that reading. Finding two still allows an input of four.
+Finding three consecutive purely passive relays bounds the terminal output
+by four divided by eight, at most half a unit. No number of additional
+upstream relays can make this complete proposal work. The third inspection
+matters because it crosses a bound on *all* the unexamined contributors.
+
+If the relays instead transmit without loss, flows of one and of zero
+satisfy exactly the same transmission rule and bound. A measurement
+settles which flow obtains. The rule explains why readings agree along
+the line and leaves the amount transmitted undetermined.
+
+Now allow operating cells along the original half-loss line. At relay i,
+numbering from zero at the meter, suppose the cell adds (3/4)·2⁻ⁱ units after the
+incoming power is halved. Then an output of 2⁻ⁱ units at every relay obeys
+the balance: at the meter the local cell supplies 3/4 and the more distant
+cells together supply 1/4. The total added by all cells is finite. The
+balance and boundedness determine the terminal output, since after k relays
+the remaining upstream contribution is at most 4/2ᵏ. The infinite chain
+now explains how one unit reaches the meter over the stated interval. How
+the cells obtained their charge is a different question one can still ask.
+[Existing results on borrowed power and vanishing upstream contributions](contractive-borrowed-power-1378.md).
+
+For C2, the closest analogue would be an n-free inhabited order that
+promises both to retain some creature's received existence and to explain
+that receipt entirely through creatures passing it on. Tracing a supply
+link is genuine progress. To exclude **every** route using those
+contributors one needs a reason why the organized contributors together
+cannot supply what each presupposes in acting. Each giver's action presupposes its own actuality. It cannot supply
+itself with the very actuality it already needs to act. Another giver's
+action could still supply that bearer. To move from the local point to
+the whole, the critic must defend the further premise that routing wholly
+received actuality within the collection cannot explain its availability
+throughout the collection. An infinitist can maintain that each giver
+genuinely supplies its successor and that explaining all the members
+suffices, or can accept the obtaining of the whole order as a basic fact.
+A different reply posits a basic concrete whole that constitutes the
+bearers and their powers. It offers a positive account of how the members
+exist, conditional on that whole's reality. A different underived giver would also answer the
+receipt question if the alternative were admissible. The charge analogy
+does not measure existence, and being a source of power does not make a
+cell a source of its own being. No bound on all ways of giving existence
+without n has been established. The example tells us what would give a
+new case evidential force and which rival that case could actually defeat.
+[Actual existential supply and the constitutive rival](unique-feedback-explanation-311.md#what-counts-as-completed-explanation).
+
+**When infinitely many witnesses give no better reason to believe P.**
+Imagine dossiers describing different worlds without n. Each candidate
+giver could supply the specified creatures *if* that giver could exist
+without n. Each dossier's only authority for that possibility is a
+referral to the next dossier. Suppose each referral warrants acceptance
+of its dossier exactly when the next one is warranted. Accepting all and
+withholding acceptance from all equally respect every referral. The
+problem persists even if we inspect the entire pattern. It would arise
+just as readily from two dossiers referring back to each other. Nor does
+a proof that n survives every rearrangement we have constructed establish
+that our rearrangements exhaust possibility. Once a particular world
+has independent warrant and is incompatible with n's presence, one
+dossier could do what infinitely many referrals failed to do.
+
+A serious infinitist can accept this test. Peijnenburg and Atkinson give
+an infinite chain with independently specified conditional probabilities
+for a claim given its successor and given its successor's falsity.
+The effect of the unknown distant probability tends to zero and their
+example fixes the initial probability at one half. No first independently
+known marginal probability is needed. The conditionals carry information
+that a bare referral lacks. We have no corresponding calibration for P.
+An independently supported principle of recombination could likewise give
+a primitivist a reason to believe P if its application to this unreceived
+act survived tests other than rearrangements which all retain n. If the
+principle instead supplies a full metaphysical ground for P, that answers
+a different question from the strict one here. Rival worlds need never
+produce or authorize one another in reality.
+[Peijnenburg and Atkinson, §2, equations (9)–(16)](https://doi.org/10.1007/s11225-008-9132-7)
+and [the distinction between consistency, warrant and existence](../../corpus/results/REGRESS-SCHEMA-PACKAGE.json).
+
+**Can a defender of P give a determining reason for n's actual existence?** Ask why
+this very n actually exists, granting the rival its claim that n could
+have been absent. Suppose someone promises a determining explanation of
+that fact using only facts that would hold even in the proposed absence.
+The promise fails on its own terms. Those reasons could all obtain with
+the opposite answer. Adding “n exercises its own act of being” distinguishes
+the two histories, but if this just restates that n exists, it supplies
+no independent reason. An independently motivated account of n's nature
+that both obtains unconditionally and determines the existence of this
+individual would make the necessity case succeed. Identifying essence
+and esse in the actual individual establishes no such unconditional
+obtaining. Simplicity and underivedness do remove two familiar candidates
+for a variable explanation: a recipient in a condition to receive existence,
+and a giver deciding whether to supply it. That makes a determining reason
+for a contingent, unreceived act harder to exhibit. Nor could a decision n makes already presupposing its existence
+explain why n exists in the first place.
+
+A defender of P who retains the demand for a determining explanation
+could instead identify a contingent fact that differs between the two
+histories. The task is to characterize it independently, explain why it
+has priority over the fact of n's existence, and show how it can determine
+that fact compatibly with underivedness. Merely tracking whether n exists
+would settle none of those questions. The strict stipulation concerns
+grounds for P at actuality. It leaves reasons for n's actual existence
+open. This pressure arises from asking for a determining reason, even if
+the proposed explanation has only one step.
+
+Another reply gives up the promise of a determining contrast at that
+point. There is independent reason to distinguish a productive
+explanation of an outcome from an explanation excluding every other
+outcome. One controlled lottery can explain the production of its winner
+without the rules and entrants determining which ticket won. This explains
+an outcome *given* an operating lottery. Treating a lottery as producing
+the underived n would abandon the target. A consistent primitivist can
+instead take the actual unreceived act and the permission for its absence
+as basic, and explain dependent beings from their actual source. The
+particular concession is significant for a worldview promising a complete
+determining reason for every contrast. A worldview promising memberwise
+explanation can stand by its narrower claim. Equally, asserting primitive
+necessity rules out the contrast without supplying an intrinsic explanation
+of why n exists. Apply the same demand to a proposed personal giver and
+to a proposed basic physical whole.
+[Comparison of intrinsic reasons, free exercise and impersonal alternatives](intrinsic-existence-reason-1595.md#same-explanandum-rival-comparison-and-discriminatory-consequences).
+
+#### Does being contingent mean being contingent upon something?
+
+Two readings give different answers. An actual being is *modally contingent*
+if that very being could have failed to exist. To say its existence is
+*contingent upon* a giver is to say it depends for existence on that giver.
+Removing every eligible giver rules out dependence of that kind. One
+sufficient bridge is the claim that every actual concrete being which
+could have been absent has an actual concrete ground in the relevant
+relation. A reason establishing that connection for n specifically would
+also suffice. The repository already proves the inference for the same unique
+actual root. A root in this proof has no concrete predecessor in the
+selected relation. If “nothing else” rules out only other beings, one
+also needs to exclude self-grounding in that relation. A being acting to
+produce its own existence would presuppose precisely the existence the
+act was supposed to supply. In that setting with excluded middle, the general
+grounding premise is equivalent to there being no contingent root. One
+can defend the premise independently. Citing that equivalence as evidence
+for the premise would give the exclusion back in different words.
+The repository also states the explicitly causal version: every existing
+contingent individual has a distinct existing cause. That principle can
+hold throughout an endless causal series. For the present argument the
+actual underived individual is already given. Metaphysical priority here
+need not involve an earlier instant. Under the C2 disjunction, firstness rules out a prior giver. The stipulated absence of both
+received esse and matter–form composition rules out the internal
+receptive alternative. Firstness alone does not eliminate both.
+[Same-root necessity](../../corpus/results/ACTUAL-ROOT-NECESSITY-UPGRADE.json),
+[the equivalence](../../TruthCore/Causality/NecessaryRootFork.lean),
+[distinct-cause principle](../../TruthCore/German/Kant/CosmologicalInference.lean)
+and [C2's disjunctive route](#2-checked-results).
+
+Avicenna argues for the connection in *The Healing* I.6. Consider a
+thing just in respect of its nature. If that suffices for existence, he
+calls it necessary in itself. If its nature leaves existence open, he
+asks what determines that it exists. Further conditions that collectively
+still leave existence open have yet to supply a determining explanation,
+however many there are. A being necessitated through another can thus
+remain possible in itself for Avicenna. Applying the argument to absence
+in an accessible world requires the following further reasoning.
+[Avicenna, *The Healing*, I.6, Marmura translation, PDF pp. 3–4](https://wmit-pages-prod.s3.amazonaws.com/wp-content/uploads/sites/283/2022/06/12145806/avicenna1.pdf#page=3).
+
+**The argument for this individual.** Call the actual simple being n.
+It neither receives existence in a subject nor has another being giving
+it existence. Suppose for the sake of argument that this very n could
+have been absent altogether.
+
+1. What calls for explanation is now a definite contrast. Why does n
+   actually exist when its complete absence was a genuine alternative?
+   This asks about the actual side of the contrast. The stipulation that
+   nothing grounds the *possibility* of absence leaves this question open.
+   Comparing these histories requires no subject to pass from absence
+   into existence.
+2. Grant that every such contrast in concrete existence has a determining
+   reason. A proposed reason must explain in the right direction and be
+   sufficient for the outcome. The complete reason for n's existence
+   could not obtain unchanged in any admissible history without n. Taken
+   by itself, “if n exists, it is identical with its act of existing”
+   is compatible with omitting the whole act. A stronger theory of essence
+   would have to show why this individual must instantiate that nature.
+3. Grant a second premise about what could do the determining. If the
+   existence of a concrete individual really is optional, every complete
+   basis for its existence, including several facts working jointly,
+   must involve either a receptive principle in the individual or a
+   condition on which it existentially depends in a respect excluded
+   by its being underived. Ordinary cases give the two suggestions some
+   warrant. In a change we can identify the subject that receives a new
+   determination. In production we can identify a giver on whose activity
+   an individual's existence depends. The stipulated profile of n excludes
+   both a recipient of its existence and an external giver. A choice
+   by n to exist would already presuppose a chooser. But the general
+   premise needs more than these examples. An intrinsic, contingent
+   feature that explained n's existence without already presupposing
+   it would defeat this premise if it required neither kind of dependence.
+   The absence of a known example cannot exclude it. A noncausal ground
+   external to n would likewise require attention if underivedness rules
+   out only efficient giving. On the stronger reading that excludes all
+   external existential grounds, that last exclusion follows by hypothesis.
+4. Step 2 now requires a complete determining basis for the supposed
+   contingent actuality of n. Step 3 requires that basis to involve
+   something the stipulated simple, unreceived, underived n lacks.
+   The contradiction follows if both premises apply to n. Since n actually
+   exists, ruling out its possible absence gives necessary existence for
+   n itself. No inference from a necessary office to its actual occupant
+   is needed.
+
+**Why take the premises seriously?** Suppose a workshop claims that its
+records fully explain why a particular bronze casting exists. A design
+and a stocked furnace that were equally available for a cancelled pour
+leave a specific question unanswered. An independently documented pour
+can explain the difference. The finished casting's serial number can
+settle *which* casting was produced, but stamping it presupposed its
+existence. It cannot explain the original production. This gives a reason
+both to demand a distinguishing fact and to check the direction of its
+explanation. We can ask the same question about the foundation. What the
+workshop also gives us, and the foundational case lacks, is independent
+evidence of a production process to which that demand applies. There is
+a positive case for extending the question: if what first called for
+explanation was the fact that one of two genuine alternatives obtained,
+the same fact would be present at n on the supposition of contingency.
+But if what licensed confidence in an answer was the evidence of a pour,
+that confidence does not carry over. This is where a reason to keep
+asking falls short of a guarantee that there is an answer.
+
+The strongest objection accepts both tests of a *proposed* explanation.
+It disputes the move to a guarantee that reality always supplies one.
+On this view n's unreceived act is itself basic, it explains dependent
+beings, and a primitive modal fact permits that entire act to be absent.
+Nothing has to exercise a power in n's absence. The cost is precise:
+why this very act obtains while its absence was open has no determining
+answer. That is a real cost for an account promising such an answer to
+every existential contrast. Conversely, bare necessity excludes the rival
+history without telling us what about n explains that exclusion. The same
+standard applies to an impersonal foundation. I give substantial weight
+to the demand to look for a determining reason and retain moderate
+confidence in suspension about whether this act must have one. A
+defensible account of how n's own nature unconditionally entails the
+existence of this individual, or independent warrant for both steps 2
+and 3 including the exclusion of other ways of determining its existence,
+would move the assessment toward necessity. Independent evidence
+for a genuinely admissible order incompatible with this very n would move
+it toward P. Primitivism by itself permits either modal verdict.
+[Intrinsic existence and explanatory direction](intrinsic-existence-reason-1595.md)
+and [coverage, necessitation and causal giving](psr-strength-755.md).
+
+There is a second question if one starts with *mere possibility of
+existence*. For the actual n, ruling out the conjunction “exists here and
+could be absent” excludes possible absence, because its first conjunct
+is given. Classically this already gives necessary existence. On the usual
+reflexive reading, its actuality also witnesses its possibility. Even for
+a merely possible
+candidate, there is a direct argument if we have independently excluded,
+*from our standpoint*, the combination of possible existence and possible
+absence of that very individual. Given possible existence, possible
+absence is then excluded. Classically this yields necessary existence
+without any principle transporting necessity between worlds. Take care
+with the repository's actualist predicate. A never-built bridge can
+vacuously fail to be an *actual contingent being* simply because it does
+not exist here. That observation and its possible construction would give
+no reason for its necessity.
+
+If instead we establish necessity *inside a witness world*, let G mean
+that **this same individual** exists. Once G is necessary at that world,
+transport only requires that it can access every alternative under
+consideration here. The repository gives a sufficient way to secure
+this argument starting from possible G. It assumes that throughout the
+alternatives G entails necessary G, and that any two alternatives from
+our starting point are accessible one from the other (as in S5). The
+witness world then both requires G and sees every alternative in question. Bare possible existence, or merely knowing that n would be
+the sole inhabitant of one world, supplies neither the required
+necessity-if-existent claim nor its metaphysical warrant. The same modal
+principle takes possible absence seriously: under its assumptions a
+warranted absence would instead imply impossibility. Neither choice of
+possibility is licensed by the rule alone.
+[Possibility-to-necessity proof and reverse direction](../../TruthCore/Results/Modal/NecessaryIfExistent/Solution.lean)
+and [scope controls](../../corpus/results/NECESSARY-IF-EXISTENT-CONTROLS.json).
+
+#### Which beings could be exceptions to the demand for a cause?
+
+Suppose someone grants that a concrete being could exist contingently
+without a cause. They have given up *contingency alone* as a sufficient
+reason to demand a cause in every admissible case. A merely possible
+exception challenges the unrestricted modal rule. Refuting the corpus
+principle about all contingents *here* requires an actual counterinstance.
+One can also keep asking about a cause without assuming that there is one. If they still rule out an
+uncaused personal foundation while admitting an uncaused impersonal one,
+what difference bears on **the existence of the bearer**? A similar question
+arises for someone who allows a personal foundation to be underived and
+rules out an impersonal one. Even without a cause or a nature that guarantees
+existence, a thing could have a noncausal explanation. If an external
+noncausal condition necessarily obtained and sufficed for its existence,
+that thing could even be necessary through another. The comparison below
+grants genuine possible absence as well. Calling the thing wholly
+unexplained would make a still stronger claim.
+
+**A restriction with some warrant.** When a proposed difference does
+the explanatory work, we should be able to say why it makes a cause or
+ground indispensable and apply that reason wherever the relevant
+difference recurs. Try changing which candidate has the feature while
+keeping the question fixed. If the evidence of dependence moved to the
+other candidate, this particular objection would move with it. Other
+reasons could still favor the original verdict. The justification is simple: if all the facts
+cited as reasons would license the opposite classification equally well,
+those reasons have supplied no basis for the choice. There may be
+additional evidence or a genuine primitive difference. We need not first
+assume that every fact has an explanation to identify what an offered
+argument warrants. The existing parity result concerns a stance that
+requires a reason for one fact, applies that requirement uniformly on a
+feature the two facts share, and claims to meet the requirement. It
+cannot then accept the other fact as wholly unexplained. Applying this
+test to a demand for a *cause* uses the stated causal standard in the
+same way. A demand for a reason alone never specifies a concrete giver.
+[Existing feature-relative parity result](../../corpus/results/6e7f5afd-4d72-466d-bba0-b9eead60d2d2.json)
+and [brute contingency and parity](psr-self-application-756.md#the-parity-argument-owner-direction-refined-2026-11-23).
+
+An echo is a case where we can draw a line. Time a pulse and its return,
+move the reflecting surface, and the return is delayed by the added trip.
+Absorbing the pulse removes the return. Those checks give us a reason to
+classify this particular sound as a reflection. The dependence concerns
+the production of this acoustic event. An uncaused sound with
+the same waveform would not be an echo of that pulse. This explains why
+accepting the possibility of a brute foundation does not commit anyone
+to brute echoes. It supplies no reason to classify a fundamental field
+or a simple mind as a reflection or a derivative being.
+
+There is also a defensible place to stop *some* causal questions. A
+physical theory that takes a first state as boundary data and successfully
+derives later states has a principled reason to stop that temporal
+derivation at the boundary. A model's first state can leave open whether
+there was a wider physical prehistory. If it really was the first instant,
+there is no earlier event. A genuinely atemporal source also has no
+temporally earlier producer, since it has no time against which to order
+one. In neither case has temporal reasoning settled why the bearer exists. Evidence that
+the physical theory describes the actual history well can favor belief
+in its physical subject even while this question remains open. If there
+is less evidence for a divine subject, an atheist can withhold belief
+in it consistently. For the same reason, if attributing independent
+agency to a source explained some evidence better, its lack of an earlier
+producer would not cancel that advantage. Neither evidential comparison
+establishes that only one kind of subject could be uncaused.
+
+A stronger physicalist objection would establish that agency as such
+requires realization in a distinct system on which the agent itself
+depends for existence. That would bear directly on an underived personal
+source. Showing that a particular human action requires a functioning
+brain establishes a narrower claim about an operation. In the other
+direction, a theist could give reason to think a particular cosmos must
+receive existence from constituents or a giver. Its having parts alone
+leaves open the monist's proposal that the whole is basic and the parts
+depend on it. If independently warranted constitutive dependence were
+established for either candidate, it would exclude *that* bearer from
+being entirely underived. Saying that the classical God is necessary by
+definition leaves the identification of this actual foundation with that
+God to be established.
+[Mind and realization](mind-physicalism-fork-419.md),
+[material priority and its domain](priority-monism-framework.md)
+and [the comparison with a physical foundation](physical-ground-468.md).
+
+**What this buys for C2.** A view may take an unequal distribution of
+uncaused beings as primitive. It then accepts that its general principle
+leaves that particular asymmetry unexplained. Alternatively it can supply
+a relevant difference, allow the same exemption in both cases, or renew
+the demand for both. Equal treatment under one objection does not fix
+the candidates' relative credibility or establish either one's possibility.
+A genuine uncaused contingent composite could even retain the receptive
+disjunct of C2. To settle C2 for n we need to reach the particular simple,
+unreceived bearer. I have high confidence that the bare refusal of a
+cause cannot consistently serve as a categorical objection on just one
+side when that is the very feature both sides grant. The gain is a
+restriction on arbitrary exclusions. My verdict about this individual's
+necessity remains open.
+
+**Assessment.** The regress comparison strengthens the objection to two
+specific defenses of P: passing existential receipt on without addressing
+its collective availability, and passing permission on without ever
+discriminating an admissible alternative from an inadmissible one. The
+first has force against an account of complete existential supply, the
+second against an argument for modal warrant. Failure on either test is
+compatible with a different, successful n-free history. Concrete emptiness
+would contain no derivative chain to which the first objection applied.
+My confidence is high about the failure of pure referral and the bounded
+relay case, and moderate that suspension about bare P is still warranted.
+I would revise toward necessity for an independently warranted reason why
+the actuality of this very n is unconditionally determined, or evidence
+covering all the alternatives in the preceding assessment. I would revise
+toward P for independent evidence of an admissible, incompatible order,
+even if the permission inferred from it were metaphysically primitive.
+Attempt `2eb9960c` records the comparison.
+
+
+### Does depending on nothing identify one being as God?
+
+Fix the actual concrete beings and ask of each one which *other actual concrete
+beings* it depends on for existence. A dependence for an operation or a reason
+for a possibility answers a different question. Let D(x) list the beings
+in the chosen dependence relation to x. There is exactly one empty set.
+There can be no bearer of that description, one bearer, or several. The
+underived individual n stipulated in the question about C2 supplies a bearer
+in this respect.
+Outside that stipulation, a nonempty population with a well-founded order of
+strict existential dependence suffices for at least one. Pointing to an empty
+list supplies no witness. The scope here also leaves dependence on nonconcrete
+grounds to be assessed separately.
+
+**Why there can be two creatures.** Two oaks need not have different ultimate
+givers of existence to be two trees. On the Thomistic account they are the same kind
+by substantial form, and each is this individual through its own designated
+matter. Each oak's essence determines how it receives existence.
+An oak and a horse also differ in substantial form. Even an immaterial creature
+could have a definite nature whose act of existence is received. Matter thus
+explains one kind of multiplication. The more general distinction is between
+a being that has existence according to a determinate nature and one whose
+whole nature is its subsisting act of existence. A recipient here is a
+constitutive principle of the existing creature. There is no already existent
+oak waiting for existence to arrive. [Aquinas, De ente et essentia, §69875](https://www.corpusthomisticum.org/oee.html#69875) and [ST I, q.7, aa.1–2](https://www.newadvent.org/summa/1007.htm#article1).
+
+This reply succeeds. It also tells us what to give up in the original
+formulation. If the identities of creatures were fixed entirely by the list
+of their ultimate givers, two creatures wholly dependent on one God would
+both have the list {God} and would therefore be identical. Allowing the
+recipient's nature and individuation to matter avoids that result. The
+ordinary claim that a creature could not exist without its essential sources
+never required the converse that the sources suffice to identify the creature.
+
+The [formal ancestry test](../../TruthCore/Results/Causality/AncestorIndividuation/Solution.lean)
+exposes the reach of that converse. Suppose it applies
+to *every* being and lists *all* its strict existential ancestors. In a
+well-founded transitive order this forces any two beings to be comparable
+in existential priority. For suppose otherwise. Choose a minimal x among
+beings with an incomparable partner, then a minimal y among x's incomparable
+partners. Every predecessor of x is comparable with y by the first choice.
+It must be below y, since equality with y or priority of y to it would put
+y below x. By the second choice every predecessor of y is likewise below x.
+Thus x and y have exactly the same predecessors. The criterion identifies
+them, contrary to their incomparability. In Lean, a strict ancestor is
+connected by a nonempty finite path along the selected edges. Such a path
+can return to its starting point in a cycle. Well-foundedness rules this out
+in the comparability argument. The comparison
+uses well-foundedness and excluded middle. The global identity criterion
+alone gives *at most one* root, even without either assumption. In the checked three-object
+production graph one source has two distinct effects with the same ancestors.
+This tests the structural inference. The real dependence of the two oaks
+requires its own interpretation.
+
+**Why should the giver be unique?** Start with the actual underived n,
+before calling it God. Consider a second alleged root. Ask what fixes its
+mode of being. If its determinate essence really receives its existence,
+the essence explains *what* is actualized. Explaining *that* it is actual
+by an exercise of its own power would already presuppose its actuality.
+On the premise that received existence requires an actual giver, this
+candidate therefore depends on another. That premise has content beyond
+uniqueness. It also rules out a single finitely constituted being whose
+receipt of existence has no giver. Rejecting self-production alone leaves
+that latter option open. Proving that at most one unlimited being exists would
+still allow one unlimited source alongside such a finite independent being.
+
+Now suppose both candidates are subsistent esse itself. A difference of
+kind would ordinarily tell us how one is determined to a mode of being
+the other does not share. On the stronger Thomistic reading the whole
+what-it-is of each is its act of existence, with no further principle
+contracting it to a kind. On that account neither a pair of receiving
+natures nor a division of matter can distinguish the two. If one lacked
+a pure perfection the other possessed, it too would be limited. Here
+“unlimited” concerns the fullness of actuality. Having specifically
+equine form, for example, is a determination to one creaturely mode.
+It need not belong formally to the source for the source to be unlimited.
+
+The positive reason to prefer one such act is that the familiar ways of
+accounting for two actual instances do real explanatory work among
+creatures, and each requires something that the supposed second instance
+would lack. The stronger assertion that these ways exhaust real
+multiplication excludes bare numerical difference. Merely restricting
+“same sources, same being” to empty lists would assume that conclusion.
+[Common nature and the multiplication argument](de-ente-esse-source-1628.md#2-could-there-be-two-numerically-distinct-instances-of-that-same-nature).
+
+**The strongest objection concerns the first fork.** A pluralist can deny
+that having a definite positive character always involves *receiving* an
+act of existence. On this proposal two whole primitive natures differ
+intrinsically and explain different powers. Different whole forms need not
+differ by an extra constituent. Even the Thomistic account recognizes that
+point for immaterial created forms, although their existence is received.
+So this is a reason to reject a general inference from difference to an
+added part. It supplies no instance of an intrinsically limited *unreceived*
+act. The pluralist needs an account of how that restriction works. The
+Thomist needs a reason why all limits to esse require reception. The identity
+of essence and existence *within* each candidate is insufficient by itself.
+[Whole-nature rival and its limits](de-ente-esse-source-1628.md#1-could-the-two-candidates-have-different-whole-natures).
+
+A pluralist has a stronger reply than inventing two names. In the checked
+five-being interpretation, two underived sources support one instrument.
+Exchanging labels preserves the fact that the instrument has two distinct
+underived supporters. Identifying the sources removes that fact. This gives
+content to the pluralist's claim even without a qualitative description of
+each source. Observing the one shared effect does not tell us whether that fact
+is actual. Equally, an impersonal monist can accept one independent source and
+many recipients on the same terms as a theist. Parsimony favors a single
+source over redundant duplicates to the extent that it preserves the facts
+either account must explain. The model tests the inference and leaves the
+metaphysical adequacy of the competing accounts open.
+[Five-being control and cooperation argument](part-free-plurality.md#cooperation-versus-common-origin).
+
+**How to identify the bearer.** There is a route that need not decide the
+individuation dispute first. Suppose there is an actual concrete giver g of the
+existence of *every other* actual concrete being, where giving entails the
+very dependence n lacks. If g differed from n, n would receive its existence
+from g. Hence g is n, and the same argument identifies any further root with
+g. This allows distinct recipients to depend wholly on g. The positive burden
+is to warrant g's unrestricted reach. Even a unique actual root can stand
+beside an endless chain that never reaches it. If every being does trace to
+some root, uniqueness identifies one common ancestor. Direct giving still
+needs its own case. [Isolated root beside a regress](de-ente-esse-source-1628.md#exact-controls-and-rejected-shortcuts).
+
+The existing God-existence route gives this proposal a particular application.
+Given an intellectual maximum in the respect of existence, the claim that
+such a maximum causes every other being in act in that respect, and the
+actuality and concrete-ground bridges, the maximum must be n. The registered
+route retains excluded middle. Its further steps to classical God naming
+use priority, actuality in relation to being, transfer of perfections,
+exclusion of a first being from composition as a component, and the premise
+applying the name to the fully described bearer. The governor premise
+supplies an intellectual maximum. Underivedness supplies the identity test.
+Intelligence cannot be read off an empty list. Local intelligent direction
+can also occur under an impersonal first source through secondary agents.
+[Same-witness result and its full inputs](../../corpus/arguments/5ab29aa8-6adc-4634-82c0-9c470a3be27e.json)
+and [evidence for the governor premise](teleology-first-mover.md#same-phenomenon-support-serious-rival-and-next-discriminator).
+
+**Verdict for C2.** I have high confidence that dependence on zero others,
+even with the actual witness granted, is insufficient to identify God or
+establish numerical unity. I favor uniqueness on the stronger account of
+subsistent esse. It explains
+why the same giver can have many recipients and why those modes of
+multiplication cease to apply to the giver. I have moderate confidence in
+that philosophical preference. Extending it to every alleged root turns
+on whether a real restriction to an intrinsic kind of esse calls for reception.
+A case for this covering all
+eligible sources, or independent evidence of one giver reaching even a
+putative second root, would move me toward uniqueness. A case for genuinely
+indispensable, independently underived contributions to one existence would
+move me toward plurality. As to P, even exactly one root in each possible
+world leaves open which individual occupies the role. A world with no
+concrete beings raises a further question about whether the role must always
+be occupied at all. Neither possibility is certified by describing it.
+Moderate confidence in suspension on the original shared premises remains.
+[Earlier test of occupation and replacement](#testing-occupation-and-replacement).
+
+#### In what sense is unlimited being the default?
+
+Take “limited” to mean that the act of existence of a concrete individual
+is restricted to a determinate mode of being. A finite size, a finite
+lifetime and an inability to do a particular task are different claims.
+Here “default” can express a metaphysical thesis with an actual consequence.
+For any being whose existence is genuinely unreceived, there is no principle
+contracting that existence to a finite mode. The strong premise is that
+**every** actual restriction of esse has a basis of this kind. It applies
+to a finite physical foundation and to a finite independent spirit alike.
+It gives no initial probability to an unlimited being and supplies no
+existing bearer on its own.
+
+There are two questions about an alleged finite foundation. *What fixes
+this limit?* A determinate nature is a candidate answer. *Why does there
+actually exist something with that nature?* The first answer can be
+informative even while the second remains open. In an oak, the nature that
+makes growth an activity of this kind also makes sense of why the tree grows
+as an oak. Its capacity to grow cannot give the oak its own existence.
+An exercise of that capacity already requires an actual tree. This gives a
+reason to exclude one purported source of actuality. The further demand
+that what receives existence have some actualizer gives the argument its
+force against brute finite actuality. [Aquinas, ST I, q.3, a.4](https://www.newadvent.org/summa/1003.htm#article4).
+
+The strongest positive reason for the restriction premise is that esse
+accounts for the actuality of a tree just as it accounts for the actuality
+of a horse, while their natures explain the different ways in which each
+is actual. Giving the common explanatory work to esse and the specific
+determination to essence explains both the agreement and the difference.
+The rival assigns both jobs to one primitively determinate actuality.
+The distinction between being actual and being an oak in our explanations
+does not by itself establish two really distinct principles in each
+concrete case. Conversely, merely calling a physical or a personal nature
+“primitive” offers no account of why its particular powers belong together.
+A successful account of the powers in terms of that one nature would
+answer the question about its character. Whether it would also answer
+why the bearer exists is precisely what divides the rivals.
+
+ST I, q.7, a.1 gives a reason to treat reception as a source of limitation.
+The force of the converse depends on how limitation was ascertained.
+If a measure already consists in a recipient's capacity, locating the limit
+in reception adds little. If the evidence identifies only a determinate
+positive nature, the move to a real recipient is substantive. The
+formalization leaves limitation and reception separately interpretable so
+this inference can fail. Merely omitting a limit from a description of
+being leaves both possibilities open. The stronger Thomistic reading says
+of this concrete act that there is positively no further principle that
+determines it to a kind. [Earlier warrant assessment](esse-root-leaves.md#current-cluster-assessment-under-the-substantive-objection-standard-2026-11-19) and [Aquinas, ST I, q.7, aa.1–2](https://www.newadvent.org/summa/1007.htm#article1).
+
+**Premises and consequences.** The arguments keep three roles distinct. In
+the notation below, x and g are beings, r is a recipient principle, and w
+is the selected world. A cause of existence and a ground at w are separate
+relations. The bearer x stays fixed throughout.
+
+| Claim | Formal content and status |
+| --- | --- |
+| A limit has a receiving principle | `1304b462` says that formally limited esse implies receipt in *some* r. Its converse, receipt implies limitation, cannot supply this direction. Reading r as a real intrinsic constituent of x requires a further interpretation. The formal premise supplies a recipient witness without a parthood or external-cause conclusion. |
+| Actual receipt and distinction of principles | The open premise `871a5f81` takes actual receipt to entail actuality in the selected respect. If essence and esse coincide, any receiver would be that very essence (`65f3d0c7`). A receiver stands in receptive potency to this esse (`7fcfcee8`). Nothing stands in that relation to itself (`14325c83`). Together actual receipt implies an actual bearer with esse distinct from essence. |
+| From receipt to an external giver | The q.3 a.4 premise `33ad148b` assigns a distinct actual cause of esse to that last case. Its upstream argument needs both an exhaustive internal-or-external causal alternative and the exclusion of sufficient essential self-production. The derived coverage `4bc853db` retains the same bearer, with a cause g distinct from x. The cause and recipient principle occupy distinct argument positions. [Coverage proof](../../corpus/results/2cf16a68-2692-446e-b135-3a4e390b7323.json) |
+| From a cause to dependence at w | For an actual concrete x, `cb1cdea9` takes that very giver as an actual concrete ground at w. Whether an originating cause still grounds the effect's present existence is a substantive application of this premise. [Grounding proof](../../corpus/results/1c21c205-1914-45d2-b543-fc524b72ed5e.json) |
+| From underivedness to fullness | If such a ground exists for every limited actual concretum, an actual root cannot be limited. Classifying unlimited esse as infinite in perfection (`be1289df`) and granting that the infinite possesses each pure perfection (`122b112e`) gives the existing root-perfection conclusion `fe67d766`. None of these universals supplies a root. [Root-perfection proof](../../corpus/results/586275e6-d7b0-47a1-9180-5e245d6d4de1.json) |
+| From fullness to uniqueness, divine identity and necessity | The preceding multiplication argument still needs shared nature and a basis of numerical difference (`860eae63`). The governor route supplies intellect and full naming under its own inputs (`6eb3fb5c`). The same-root necessity upgrade uses contingent grounding (`b63a1f75`). A claim about the extent of an existing act quantifies over different things from a claim about which possible worlds contain this very being. |
+
+The existing `uncausedComposite` interpretation isolates the cost of
+stopping at an actual recipient with no giver. The cause-of-esse route
+excludes that interpretation through its causal premises. The countermodel
+under the weaker assumptions supplies no evidence that such a recipient is
+metaphysically possible. Conversely, an impersonal account could accept an
+unlimited source and dispute that it has intellect. The argument fixes what
+a complete rival must address without settling that further dispute.
+
+I give the argument moderate positive weight for an unlimited *actual*
+foundation given a real, underived source. It explains why a finite
+recipient cannot supply the actuality it presupposes. My confidence in the
+conditional exclusion of a finite root is higher than my confidence that
+all real finitude falls under the reception principle. Independent evidence
+that every intrinsic restriction of esse involves receiving potency would
+strengthen the latter judgment. A concrete account of intrinsically finite
+actuality that explains its determinate powers without reception would
+weaken it. The modal verdict for this very individual remains open.

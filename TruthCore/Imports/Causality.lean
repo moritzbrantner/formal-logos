@@ -15,6 +15,7 @@ public import TruthCore.Causality.ActualOnlyEuclidean
 public import TruthCore.Causality.ActualPartsDeclarationControls
 public import TruthCore.Causality.ActualRootUniqueness
 public import TruthCore.Causality.ActualUnderivedEssenceEsse
+public import TruthCore.Causality.AncestorIndividuation
 public import TruthCore.Causality.AppetitePowerExercise
 public import TruthCore.Causality.AristotelianCauseModes
 public import TruthCore.Causality.AristotelianRivalRefutations
@@ -106,6 +107,7 @@ public import TruthCore.Causality.ExistenceSenseRoute
 public import TruthCore.Causality.ExistentialSelfActualization
 public import TruthCore.Causality.ExistsSenseMeaning
 public import TruthCore.Causality.FiniteBranching
+public import TruthCore.Causality.FiniteEsseDependence
 public import TruthCore.Causality.FiniteNecessaryUnion
 public import TruthCore.Causality.FiniteRestriction
 public import TruthCore.Causality.FirstMoverNecessity

@@ -1,0 +1,9 @@
+{
+  "id": "eee96f99-49c7-47d6-a7b0-c6bbbabc98f0",
+  "label": "Accuracy of a change comparison under two Boolean offsets",
+  "term": "accuracy of a differential XOR reading",
+  "definition": "For all true Boolean readings p and q and respective offsets a and b, the change calculated from the two displayed XOR readings equals the true change exactly when a and b agree.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Explanation.PairedInterventions.OffsetAccuracy",
+  "note": "This analyst criterion compares relative changes between two times. A shared nonzero offset can preserve a change while reversing both absolute readings. It assumes a correctly evaluated comparison and assigns no empirical frequencies or standard of entitlement."
+}

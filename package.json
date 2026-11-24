@@ -1,7 +1,6 @@
 {
   "name": "truth-core",
   "private": true,
-  "packageManager": "bun@1.4.5",
   "workspaces": [
     "apps/*"
   ],
@@ -14,5 +13,11 @@
   },
   "devDependencies": {
     "turbo": "latest"
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "bun",
+      "version": "^1.4.0"
+    }
   }
 }
