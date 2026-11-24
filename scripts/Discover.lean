@@ -314,9 +314,10 @@ partial def projectTheorems (e : Expr) : MetaM (Array Name) := do
     seen := seen.insert n
     let some info := env.find? n | continue
     let user := (privateToUserName? n).getD n
-    if n.isInternal && !isPrivateName n then
-      -- An auxiliary lemma or definition the tactic created: look inside.
-      if let some v := info.value? then todo := v.getUsedConstants.toList ++ todo
+    if user.isInternal then
+      -- An auxiliary lemma or definition the tactic created (also a private
+      -- one, `_private.….0._proof_227`): look inside.
+      if let some v := info.value? (allowOpaque := true) then todo := v.getUsedConstants.toList ++ todo
       continue
     if let .thmInfo _ := info then
       if (`TruthCore).isPrefixOf user && !generatedTheorem env n then out := out.push user

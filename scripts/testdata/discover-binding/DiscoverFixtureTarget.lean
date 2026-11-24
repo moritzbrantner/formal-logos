@@ -260,3 +260,22 @@ theorem usesEquations (P : Nat → Prop) (h : P 2) : P (double 1) := by
   simp only [double]; exact h
 
 end TruthCore.DiscoverFixtureTarget
+
+namespace TruthCore.DiscoverFixtureTarget
+
+/-! Term binding (#1926): the target speaks of a profile `m`; the premise of
+the profile it builds from its own binders with an adapter. -/
+
+/-- An adapter: a profile from a frame and a predicate. -/
+def mkProf (W : Type) (F : Fr W) (o : W → Prop) : Prof W := ⟨F, o⟩
+
+/-- The target: every world is `other` in `m`. -/
+def AllOther (W : Type) (m : Prof W) : Prop := ∀ w, m.other w
+
+/-- The premise: every world satisfies `o`, stated of the adapter's profile. -/
+def AllOtherBuilt (W : Type) (F : Fr W) (o : W → Prop) : Prop := ∀ w, (mkProf W F o).other w
+
+/-- A target with its own world `w` (another module than the premises). -/
+def AtWorld (W : Type) (P : W → Prop) (w : W) : Prop := P w
+
+end TruthCore.DiscoverFixtureTarget

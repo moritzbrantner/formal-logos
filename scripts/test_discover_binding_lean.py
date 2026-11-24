@@ -543,5 +543,34 @@ class DiscoverBindingTest(unittest.TestCase):
         self.assertEqual(reports, [[f"{ns}.double_eq"], []])
 
 
+    def test_a_target_binder_is_bound_to_a_term_a_premise_builds(self):
+        ns = "TruthCore.DiscoverFixtureTarget"
+        outcome = run([f'#discover "term" 20000 "" "{{}}" {ns}.AllOther from {ns}.AllOtherBuilt'])["term"]
+        # `m` and the adapter's profile are unrelated binders; bound to the
+        # term the premise builds, the goal closes as a reported
+        # specialization, not silently.
+        self.assertIsNotNone(outcome["closed"])
+        projection = outcome["projection"]
+        self.assertEqual(projection["term"], f"{ns}.mkProf W F o")
+        self.assertEqual(projection["bound_to"], f"{ns}.mkProf W F o")
+        self.assertFalse(projection["ambiguous"])
+        self.assertFalse(outcome["projection_unused"])
+        bound = [b for b in outcome["binders"] if "bound_to" in b]
+        self.assertEqual([b["from"] for b in bound], [f"{ns}.AllOther.m"])
+
+    def test_a_renamed_binder_still_joins_its_own_modules_binder(self):
+        target = "TruthCore.DiscoverFixtureTarget.AtWorld"
+        here = "TruthCore.DiscoverFixturePremise.HoldsHere"
+        also = "TruthCore.DiscoverFixturePremise.AlsoHere"
+        rows = [[d, "W", "carrier"] for d in (target, here, also)]
+        config = lean_string(json.dumps({"tags": rows}))
+        outcome = run([f'#discover "renamed" 20000 "" {config} {target} from {here} {also}'])["renamed"]
+        # The target's `w` is another module's: the first premise's `w` is a
+        # new binder, renamed `w_2` on entry. The second premise, of the same
+        # module, joins that `w_2` by its declared name `w` (before #1926 it
+        # got a third world `w_3`).
+        worlds = sorted(b["name"] for b in outcome["binders"] if b["name"].startswith("w"))
+        self.assertEqual(worlds, ["w", "w_2"])
+
 if __name__ == "__main__":
     unittest.main()

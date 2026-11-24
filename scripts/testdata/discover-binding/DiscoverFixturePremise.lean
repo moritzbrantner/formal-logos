@@ -67,3 +67,14 @@ def GenSome (C : Type) (S : C → Prop) : Prop := ∃ y, ¬ S y
 def ConjRule (B : Type) (R Q : B → Prop) : Prop := ∀ g, R g → Q g
 
 end TruthCore.DiscoverFixturePremise
+
+namespace TruthCore.DiscoverFixturePremise
+
+/-- Two premises of one module over one world `w` (renamed on entry, since
+the target already has a `w`): they must share it (#1926). -/
+def HoldsHere (W : Type) (P : W → Prop) (w : W) : Prop := P w
+
+/-- The second premise over the same `w`. -/
+def AlsoHere (W : Type) (P : W → Prop) (w : W) : Prop := P w → P w
+
+end TruthCore.DiscoverFixturePremise
