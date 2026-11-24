@@ -258,6 +258,191 @@ fn omit_by_name_or_position() {
     assert!(omit(&["hNope"]).is_err());
 }
 
+fn application(function: &str, argument: Value) -> Value {
+    json!({"app": function, "arg": argument})
+}
+
+fn equation(a: Value, b: Value) -> Value {
+    json!({"t": "eq", "a": a, "b": b})
+}
+
+fn function_skeleton(
+    functions: Value,
+    carriers: Value,
+    predicates: Value,
+    premises: Value,
+    conclusion: Value,
+) -> Result<Skeleton, String> {
+    Skeleton::parse(
+        &json!({
+            "theorem": "Example.functions", "carriers": carriers, "constants": [],
+            "functions": functions, "predicates": predicates, "premises": premises,
+            "conclusion": {"lean": "C", "formula": conclusion}, "unfolded": [],
+        }),
+        "Example",
+    )
+}
+
+#[test]
+fn unary_functions_rediscover_the_occurrence_omissions() {
+    let occurs =
+        json!({"t": "exists", "v": "e", "sort": "Episode", "body": atom("Occurs", &["e"])});
+    let represents = forall(
+        "e",
+        "Episode",
+        imp(
+            atom("Occurs", &["e"]),
+            json!({"t": "atom", "p": "ExistsIn", "args": [application("represent", json!({"v": "e"}))]}),
+        ),
+    );
+    let exists =
+        json!({"t": "exists", "v": "b", "sort": "Being", "body": atom("ExistsIn", &["b"])});
+    let skeleton = function_skeleton(
+        json!([{"name": "represent", "domain": "Episode", "codomain": "Being"}]),
+        json!(["Episode", "Being"]),
+        json!([{"name": "Occurs", "args": ["Episode"]}, {"name": "ExistsIn", "args": ["Being"]}]),
+        json!([
+            {"name": "hOccurs", "lean": "ThoughtOccurs Occurs", "formula": occurs},
+            {"name": "hRepresents", "lean": "Represents Occurs ExistsIn represent", "formula": represents},
+        ]),
+        exists,
+    )
+    .unwrap();
+    for target in omission_targets(&skeleton, None) {
+        let model = find_model(&skeleton, &target.holds, &target.fails, 2)
+            .unwrap()
+            .unwrap();
+        assert_eq!(
+            model.sizes,
+            [("Episode".to_owned(), 1), ("Being".to_owned(), 1)]
+        );
+        for formula in target.holds {
+            assert!(evaluate(&skeleton, &model, formula).unwrap());
+        }
+        for formula in target.fails {
+            assert!(!evaluate(&skeleton, &model, formula).unwrap());
+        }
+        let omitted = skeleton
+            .premises
+            .iter()
+            .find(|p| Some(p.name.as_str()) == target.omitted)
+            .unwrap();
+        assert!(!evaluate(&skeleton, &model, &omitted.formula).unwrap());
+    }
+    let reports = run(&skeleton, None, 2, true, None).unwrap();
+    assert_eq!(reports.len(), 3);
+    assert!(reports.iter().all(|r| r.status == "candidate"));
+    assert!(reports.iter().all(|r| {
+        r.lean
+            .as_ref()
+            .unwrap()
+            .contains("abbrev represent : Episode → Being")
+    }));
+}
+
+#[test]
+fn unary_functions_find_a_nonconstant_swap_and_nested_apps() {
+    let x = json!({"v": "x"});
+    let fx = application("f", x.clone());
+    let no_fixed_point = forall("x", "A", not(equation(fx.clone(), x.clone())));
+    let involution = forall("x", "A", equation(application("f", fx), x));
+    let skeleton = function_skeleton(
+        json!([{"name": "f", "domain": "A", "codomain": "A"}]),
+        json!(["A"]),
+        json!([]),
+        json!([
+            {"name": "hNoFixed", "lean": "NoFixed f", "formula": no_fixed_point},
+            {"name": "hTwice", "lean": "Twice f", "formula": involution},
+        ]),
+        json!({"t": "true"}),
+    )
+    .unwrap();
+    let holds: Vec<_> = skeleton.premises.iter().map(|p| &p.formula).collect();
+    assert!(find_model(&skeleton, &holds, &[], 1).unwrap().is_none());
+    let model = find_model(&skeleton, &holds, &[], 2).unwrap().unwrap();
+    assert_eq!(model.sizes, [("A".to_owned(), 2)]);
+    assert!(
+        holds
+            .iter()
+            .all(|f| evaluate(&skeleton, &model, f).unwrap())
+    );
+    assert!(
+        render_model(&skeleton, &model)
+            .iter()
+            .any(|line| line.starts_with("abbrev f : A → A"))
+    );
+}
+
+#[test]
+fn unary_functions_repeated_applications_share_one_output() {
+    let fx = application("f", json!({"v": "x"}));
+    let inconsistent =
+        json!({"t": "exists", "v": "x", "sort": "A", "body": not(equation(fx.clone(), fx))});
+    let skeleton = function_skeleton(
+        json!([{"name": "f", "domain": "A", "codomain": "A"}]),
+        json!(["A"]),
+        json!([]),
+        json!([{ "name": "h", "lean": "H", "formula": inconsistent }]),
+        json!({"t": "true"}),
+    )
+    .unwrap();
+    assert!(
+        find_model(&skeleton, &[&skeleton.premises[0].formula], &[], 2)
+            .unwrap()
+            .is_none()
+    );
+}
+
+#[test]
+fn unary_functions_keep_distinct_names_and_unequal_carriers() {
+    let x = json!({"v": "x"});
+    let different = forall(
+        "x",
+        "A",
+        not(equation(application("f", x.clone()), application("g", x))),
+    );
+    let skeleton = function_skeleton(
+        json!([
+            {"name": "f", "domain": "A", "codomain": "B"},
+            {"name": "g", "domain": "A", "codomain": "B"},
+        ]),
+        json!(["A", "B"]),
+        json!([]),
+        json!([{ "name": "h", "lean": "H", "formula": different }]),
+        json!({"t": "true"}),
+    )
+    .unwrap();
+    let model = find_model(&skeleton, &[&skeleton.premises[0].formula], &[], 2)
+        .unwrap()
+        .unwrap();
+    assert_eq!(model.sizes, [("A".to_owned(), 1), ("B".to_owned(), 2)]);
+    assert!(evaluate(&skeleton, &model, &skeleton.premises[0].formula).unwrap());
+}
+
+#[test]
+fn unary_functions_reject_unknown_carriers_and_duplicate_names() {
+    for functions in [
+        json!([{"name": "f", "domain": "missing", "codomain": "A"}]),
+        json!([{"name": "f", "domain": "A", "codomain": "missing"}]),
+        json!([
+            {"name": "f", "domain": "A", "codomain": "A"},
+            {"name": "f", "domain": "A", "codomain": "A"},
+        ]),
+    ] {
+        assert!(
+            function_skeleton(
+                functions.clone(),
+                json!(["A"]),
+                json!([]),
+                json!([]),
+                json!({"t": "true"}),
+            )
+            .is_err(),
+            "accepted invalid function signatures: {functions}"
+        );
+    }
+}
+
 /// The recorded skeleton and Python report for `name` at `size`.
 fn golden(name: &str, size: usize) -> (Value, Value) {
     let dir = Path::new(env!("CARGO_MANIFEST_DIR")).join("src/testdata/countermodel");
