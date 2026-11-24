@@ -232,7 +232,7 @@ features remains open. [Infinite model](distinct-dependence-strict-ground-route.
 ### What a proposed first source explains in three matched tests
 
 The participation argument can rank one giver above or level with each
-recipient while leaving the relay’s balance open when it receives from a
+recipient while leaving the relay’s balance open when it receives from an
 upstream giver and gives to multiple recipients. For the receipt-count argument,
 one selected transfer must have no return path, and the selected exports from
 all bearers reaching its sender must be finite. With those conditions, counting
