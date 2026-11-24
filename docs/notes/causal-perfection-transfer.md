@@ -2829,3 +2829,110 @@ assert all(get(1,1,0)[k] for k in ['adapter','broad','dichotomy','life_rule'])
 assert not get(0,0,1)['adapter'] and not get(0,0,1)['broad']
 print('Four selected controls pass')
 ```
+
+
+## Operation origin, terminus and intrinsic completion (2026-11-24; draft continuation)
+
+**Target and scope.** Investigate `5bedb69b-8fbb-53b5-be2f-377d1331cf37`, following the PRD's R1 and R2, with the R3 purity question retained. Evidence base `016e61bd27aa0c498292b3c909f5e81f31c9b9d1`; the PRD checkpoint is `0f8dfc2b5401cf2ac59c1136d7b0e7bd9a176a6b`. Read `Round5Worklist`, its existing Solution, `SelfOperationLife`, `DeiFiliusLivingNineScope`, the operation and life definitions, the related attempt `38c1e7b1`, and [selected-effect bridge](selected-effect-bridge-462.md), [simplicity-collapse](simplicity-collapse-555.md) and `RelationalReceipt`. These already cover same-token variation and the asymmetric creation relation. Do not repeat their modal or sustaining-causality investigations. The present question concerns the kind of intrinsic act, not the necessity of any effect.
+
+### 1. Source reading and exact dictionary
+
+In [SCG I.97 n.3, 24394](https://www.corpusthomisticum.org/scg1097.html), Aquinas moves from animals' self-motion to things directing themselves to their own proper activities ("agit se ad proprias operationes"), and argues for the first agent's life from nonborrowed agency. This is a distinct stated argument from n.2's intellect/will and n.4's fullness arguments, but it occurs after the attributes have already been argued for. It does not explicitly identify every independently exercised transitive operation with a strict immanent one. [ST I q.18 a.1 co., ad 2; a.2 co., ad 2; a.3 co., ad 1–3](https://www.newadvent.org/summa/1018.htm) separates living nature from its episodes, grades self-movement by execution, form and end, and distinguishes action completing the patient from action perfecting the agent. The highest-life application appeals to intellect. Mere use of the phrase "from itself" is insufficient to transfer a result between these readings.
+
+The existing corpus explicitly fixes:
+- `d77b6ed3` (`OperationOf o x`): transient OR immanent operation, distinct from the narrow unary `Operates`.
+- `1c062aa6` (DEF-OPERATING-AGENT): generic exercise of activity, also transient or immanent, not restricted to nonborrowed exercise.
+- `7acc985a`: immanent operation as an act perfecting its operator, explicitly excluding transient heating as such. Unmovedness is a separate condition.
+- `b89f3234` (DEF-LIVING), `LIVING_2` at a time and `LIVING_1` timeless life are not interchanged by naming a predicate. `ad49ea00` remains the existing restricted bridge.
+
+Thus the exact registered statement `5bedb69b` is a **bearer-level disjunction**: from each operation of x it gives *some* immanent operation of x OR being moved in some respect. It does not claim the particular operation itself is immanent. The strongest relevant rival must deny all immanent operation at the fixed source, not merely classify its giving esse as transitive. No definition is rewritten.
+
+### 2. The terminal-independence test
+
+Distinguish the intrinsic actual principle of giving, the productive relation to a recipient, and the recipient's resultant actuality. Let g be the supplied actual concrete root at w and x a distinct actual existential effect. Explicitly grant a productive application of the cause relation at esse. An external terminus of an operation need not be a real actualizer of the source's operative act.
+
+**Conditional exclusion.** If (A) the source's operative act is really identical with its own esse, (B) the actual effect constitutively grounds that very operative act as a real determination of g, and (C) such grounding of the identical esse act gives an actual concrete incoming ground of g at w, then g cannot be an actual root. The argument is by direct application of (C), not by a new general metaphysical law: (A,B,C) give the incoming ground that ActualRoot excludes. On a supplied root with (A,C), deny (B). The conclusion is **nonborrowed actuality in this respect**, not immanent operation. Identity of the two *descriptions* is insufficient for (A), and mere existence, causation or co-truth is insufficient for (B) or (C). A source-only variant does not discharge universal `5bedb69b`.
+
+This makes the positive rationale for the selected root more precise. [ST I q.25 a.1 ad 2–3](https://www.newadvent.org/summa/1025.htm#article1) identifies divine action and power with divine essence and distinguishes being a principle of an effect from being a principle of a further action. [ST I q.45 a.3 co., ad 1–3](https://www.newadvent.org/summa/1045.htm#article3) puts the real creation relation in the creature and describes active creation by divine action with a relation to the creature; [ST I q.13 a.7 co., ad 3, ad 6](https://www.newadvent.org/summa/1013.htm#article7) expressly distinguishes the source-side denomination from intrinsic change and the co-meaning of relative names from metaphysical priority. These support a real intrinsic active principle without reverse dependence of its actuality on the external product. They are God-indexed source arguments: application to a neutral actual root and the reality of act-identity are OPEN. `RelationalReceipt` already records the asymmetric origin relation with pinned passages `fb7bd7bb` and `12d8ecc5`; its relation does not by itself mean a present giving. Q.45 a.3 ad 3 also distinguishes creation's newness from continued existence. No new attribution or pinned witness is claimed by this draft.
+
+**Critical distinction:** an action's external result may be its terminus and the truth of a particular productive description may require that result; neither implies that the effect grounds the source's own active actuality. An extrinsically qualified description of an act may be true only where that effect obtains. Therefore one cannot combine q.18's transitive/immanent distinction with the source's underivedness to conclude that every source operation must be immanent or that an exclusively productive source must be moved. The classical account itself supplies the distinction between intrinsic active principle and extrinsic relation. This is substantive positive motivation for the rival mechanism, not a proof that an impersonal source having *no other operations* is metaphysically possible. Aquinas's source is not a counterexample to `5bedb69b`, since he independently gives it immanent understanding.
+
+### 3. Same-standard assessment: autonomy is not yet immanence
+
+A narrower first-agent argument may be defended as follows. An actual existential giver is not inert. If its operative act is its own unreceived actuality and no other actualizes it in that very respect, it exercises its own active principle rather than a borrowed exercise. If its proper form, execution and end are not assigned by a distinct prior source, that supports autonomy of operation (external determination of the end is a separate premise; it does not follow from absence of an incoming existential ground). This is a potentially genuine positive respect of life on the broad first-agency reading of SCG I.97 n.3. It neither means self-causation nor self-proposal of ends by intellect. The bearer/nature reading of life requires that such activity belong to the nature itself, not an accidental episode.
+
+Both a simple classical source and an impersonal productive source with the same intrinsic act and operative nature meet this conditional autonomy standard. The impersonal account must supply actual productive efficacy, not an abstract law or a bare unexercised capacity. The classical account gains support for nonborrowed active actuality, not yet for every pure perfection. If a broad life criterion recognizes the impersonal source as living, retain that result and its exact meaning. Do not identify it with `7acc985a` or the existing strict life route by stipulation. An appeal to actual activity's goodness establishes neither an intrinsic object/end of operation nor an additional mode of perfection.
+
+A proposed stronger principle says that a source's own essential activity constitutes, rather than augments, its positive perfection. This is a promising candidate for an immanent act without receptive potency: actual activity is identical with rather than received by the bearer. But identifying the source's own active principle with such an activity is still insufficient if the only positively specified activity is producing something else. Otherwise every actual power acting externally is already immanent in the relevant sense, contrary to the fixed distinction. The required positive content is an operation intrinsically perfective *as an operation*, not merely an intrinsic active principle or a self-identical act-token.
+
+### 4. Structural controls: external denomination versus incoming ground
+
+Reuse the alternating-output idea from #462 without asserting metaphysical alternativity or a modal result. This diagnostic is deliberately weaker than the repository's certified ontology: two local rosters, the same g and respectively one actual distinct effect x or y, with g → effect at esse. Each actual bearer has an operation witness; only the effect is moved and in passive potency. The productive description "g gives x" changes truth with the x-denomination while a source-act reference is held fixed by construction. That is co-truth, not a grounding or necessitation theorem. Four independent switches vary represented act/esse identity, external grounding of the operative act, transport of that grounding to g in the identity case, and immanent operation. No law of nature, causal adequacy, simplicity ontology, LIVING_1/2 rule, or modal accessibility is encoded.
+
+| Case | Identity | External act-ground | Transport | Immanent | Actual root g / strict dichotomy |
+| --- | --- | --- | --- | --- | --- |
+| Extrinsic description, transitive-only | yes | no | on | no | yes / no |
+| Restore immanent operation | yes | no | on | yes | yes / yes |
+| Effect completes the identical source-act | yes | yes | on | no | no / no |
+| Omit the ground adapter | yes | yes | off | no | yes / no |
+| Distinct operation act | no | yes | on | no | yes / no |
+
+The transported incoming edge makes the third variant no longer a root, with mutual ground edges in this toy graph. This is intentional: it shows the consequence of restoring the bridge, not a metaphysical model of grounding cycles. The remaining cases deliberately omit that condition or the identity antecedent. The two no-external-act-ground cases share the actual productive operation and identity; immanent operation is independently supplied. Thus the terminal-independence conclusion is not the immanent-operation conclusion in this signature. There is no claim that the underlying primitives exhaust philosophical readings. The original #462 model does not establish real act identity or any first-source application. No additional countermodel to modal collapse is claimed.
+
+**Executed diagnostic** (16 configurations, 32 local assignments, five selected controls passed in JavaScript). It is an analyst structural check, not a Lean certificate. To reproduce, use the following function body in a local JavaScript runner, or wrap it in a function and print the return value.
+
+```javascript
+// Analyst structural surrogate; no modal frame or metaphysical certificate.
+function check(ok) { if (!ok) throw Error("control failed"); }
+const rows = [];
+for (const identity of [false,true])
+for (const completion of [false,true])
+for (const transport of [false,true])
+for (const immanent of [false,true]) {
+  const states = ["x","y"].map(effect => {
+    const actual = new Set(["g",effect]);
+    const act = identity ? "g-esse" : "g-operation";
+    const ground = [["g",effect]];
+    const actGround = completion ? [[effect,act]] : [];
+    if (identity && completion && transport) ground.push([effect,"g"]);
+    const root = actual.has("g") && !ground.some(([c,x])=>x==="g");
+    const effects = [["g",effect,"esse"]];
+    const moved = new Set([effect]), potency = new Set([effect]);
+    const operations = [["give","g"],["secondary",effect]];
+    if (immanent) operations.push(["inward","g"]);
+    const intrinsic = new Set(immanent ? ["g"] : []);
+    const dichotomy = operations.every(([o,x])=>intrinsic.has(x)||moved.has(x));
+    const bridge = !identity || !actGround.length ||
+      ground.some(([c,x])=>c===effect && x==="g");
+    const givesX = effects.some(([c,x,r])=>c==="g" && x==="x" && r==="esse");
+    check(actual.size===2 && effect!=="g" && effects.length===1);
+    check(operations.some(([o,x])=>o==="give" && x==="g"));
+    check(!moved.has("g") && !potency.has("g") && moved.has(effect) && potency.has(effect));
+    check([...actual].every(x=>operations.some(([o,y])=>y===x)));
+    check(givesX===actual.has("x"));
+    if (root && identity && bridge) check(!actGround.length);
+    check(dichotomy===immanent);
+    return {root,bridge,act,term:effect,givesX};
+  });
+  check(states[0].act===states[1].act && states[0].term!==states[1].term);
+  check(states[0].givesX && !states[1].givesX);
+  rows.push({identity,completion,transport,immanent,states});
+}
+const find=(i,c,t,m)=>rows.find(r=>r.identity===i&&r.completion===c&&r.transport===t&&r.immanent===m);
+check(find(true,false,true,false).states.every(s=>s.root&&s.bridge));
+check(find(true,false,true,true).states.every(s=>s.root&&s.bridge));
+check(find(true,true,true,false).states.every(s=>!s.root&&s.bridge));
+check(find(true,true,false,false).states.every(s=>s.root&&!s.bridge));
+check(find(false,true,true,false).states.every(s=>s.root&&s.bridge));
+return rows.length;
+```
+
+### 5. Downstream and next research discriminator
+
+The existing path is `5bedb69b` plus `6884dcfd`, `3317e074`, `4be9a4ac` through argument `8de2d2ee` to `45030701`; argument `aa1c3134` uses `45030701`, `38aa1327`, `4be9a4ac` to reach `1773079b`. Existing nine-restricted siblings `8f93d9cc`, `280770e3` and the restated sufficiency `5fbea2f5` remain; their antecedent already includes intellect and will. They cannot independently establish life at a neutral root, and a neutral-root-specific result cannot replace the nine-wide consumer without an application/scope bridge. The generality and sense burdens of `64498e7e`, `fe67d766`, `d164b1ff` and `122b112e` are unchanged.
+
+**Provisional assessment.** The direct source-based argument for underived operative actuality deserves positive weight, conditional on the act identity and actual-ground interpretation. Source evidence warrants keeping apart the strict and broad operation readings. The stronger inference from underived transitive agency to some intrinsic immanent operation is not warranted by the inspected argument alone; retain it as an open direct/cumulative option, with a substantive distinction-based rival, not a defeated premise. Neither view is excluded or established by the finite assignments. No prior reviewed judgment is superseded.
+
+**Next precise test (PRD R3).** Investigate whether a noncognitive act can be intrinsically perfective without being an acquired or maintained state: independently specify its positive operation/end, not merely its own bearer or the absence of external actualizers. Contrast self-maintaining living activity (see [life-restricted composition](life-restricted-composition-327.md)) with a fully actual source, removing only the implementation's receptive and compositional conditions. An operation belonging essentially to a nature and intrinsically completing it without augmenting it is the candidate to examine. If no such noncognitive example has a nontrivial common perfective content, the remaining question is whether the broad life reading itself is a genuine pure perfection and suffices for any existing consumer via an explicit sense bridge. A genuine example or a demonstrated obstacle would change the warrant; more variations of arbitrary operation predicates would not. Reopen the R4 limitation bridge on that fixed positive content. Do not repeat the intellect or will investigations.
+
+**Self-challenge and boundaries.** Rejected: equivocation between broad exercise and immanent act, treating `5bedb69b` as an operation-specific disjunction, inferring actualization from co-truth, inferring strict immanence from an identical act-reference, treating an effect-dependent description as an incoming esse-ground, and asserting that a finite transitive cause is an actual root. Source reading restricted to the inspected clauses. Same source and matching comparison standard preserved; the model does not prove metaphysical applicability, joint purity, or necessity. No new statements, claims, Challenge or result registrations. No computed frontier change is claimed. Canonical reuse/novelty/semantic preflight, corpus validation and independent final challenge remain outstanding (no prepared checkout or separate reviewer here). This is an owner-authorized draft checkpoint, not reviewed support.
