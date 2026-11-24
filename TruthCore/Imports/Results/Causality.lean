@@ -158,6 +158,7 @@ public import TruthCore.Results.Causality.EternityDefinitions.PrimitiveCompositi
 public import TruthCore.Results.Causality.EternityDefinitions.RecognitionStrength.Solution
 public import TruthCore.Results.Causality.EventIdentityProfiles.AccessibleTransport.Solution
 public import TruthCore.Results.Causality.EventIdentityProfiles.Solution
+public import TruthCore.Results.Causality.ExerciseContribution.Solution
 public import TruthCore.Results.Causality.ExistenceAccountIntegration.Solution
 public import TruthCore.Results.Causality.ExistenceSenseRoute.Solution
 public import TruthCore.Results.Causality.ExistentialSelfActualization.Solution

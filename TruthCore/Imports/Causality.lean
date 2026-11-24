@@ -101,6 +101,7 @@ public import TruthCore.Causality.EssentialPower
 public import TruthCore.Causality.EternityDefinitionFork
 public import TruthCore.Causality.EventIdentityProfiles
 public import TruthCore.Causality.EventStatePreservation
+public import TruthCore.Causality.ExerciseContribution
 public import TruthCore.Causality.ExistenceAccountIntegration
 public import TruthCore.Causality.ExistenceActuality
 public import TruthCore.Causality.ExistenceSenseRoute

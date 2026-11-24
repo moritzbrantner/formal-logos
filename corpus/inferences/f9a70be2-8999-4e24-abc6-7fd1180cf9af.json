@@ -1,0 +1,10 @@
+{
+  "id": "f9a70be2-8999-4e24-abc6-7fd1180cf9af",
+  "label": "Compose exercised contributor paths through the selected secondary stroke (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "91b81949-a6a5-4676-845e-35ac82140cce",
+  "rule": "Extend the source's nonempty path by the secondary stroke's actual contributor step",
+  "meaning": "The source path to this stroke extends to this result event. The secondary's own step yields a nonempty path to the same event. Reusing those witnesses gives credit in its respect to both bearers. The credit interpretation has no rule from an existential sustainer to a productive path.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}
