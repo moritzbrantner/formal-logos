@@ -17,11 +17,11 @@ argument. [Physical test and controls](../supertasks.md#what-the-reader-gets)
 DDC described continued control of his body after hemispheric disconnection.
 His performance differed between immediate visual comparisons and a delayed
 task in which a cue could guide reporting across visual fields. Those findings
-support a distinction between types of access. The delayed answer can be
-scored identically whether one owner retained the item or information passed
-between owners. A personal-source argument still needs to explain why this
-experiencer's existence depends on a distinct thinking subject. The organized
-living individual is a rival candidate for the bearer across both tasks.
+support a distinction between types of access. A cue could reach the side that retained the shape and enable the same
+verbal report. Both accounts can identify the continuing embodied person as
+the bearer and use the same explanation of task performance. They disagree
+over whether the organism's organization suffices for this subject's existence
+without a distinct thinking ground.
 [Case, competing explanations and existential ancestry](mind-physicalism-fork-419.md#does-divided-access-identify-the-source-of-the-experiencer-2026-11-25)
 
 ## Current comparisons of causal, Cartesian and cosmological explanations
