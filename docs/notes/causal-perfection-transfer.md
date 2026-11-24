@@ -3435,3 +3435,129 @@ checkpoint. The local Python diagnostic ran successfully, not as a
 repository proof. The computed frontier comparison and independent semantic
 challenge of this complete draft remain pending; no premise change is
 intended.
+
+
+### Dependency-explicit restoration: a root contribution to the content
+
+The four-slot diagnostic above leaves rule provenance as an independent
+primitive. The following stronger local test replaces that flag's bare
+interpretation with different dependency equations. Two distinct content
+targets are stipulated true in the same domain. Keep the source and
+recipient actual and their esse edge fixed in every assignment. A
+secondary exercise is required for the recipient's cognitive episode.
+A source mode and a separately supplied rule are distinguished by which
+one determines the target of the secondary exercise.
+
+```python
+from itertools import product
+
+def profile(owned, mode, rule, enabled, root_noesis):
+    actual = {'g', 'x'}
+    esse_edge = ('g', 'x')
+    content = mode if owned else rule
+    truth = {0, 1}  # two distinct true content targets
+    cognition = {('x', content)} if enabled else set()
+    cognition |= {('g', 0)} if root_noesis else set()
+    grounded = set(cognition)  # stipulated cognitive grounding
+    assert all(c in truth for _, c in cognition)
+    return actual, esse_edge, cognition, grounded
+
+for owned, root_noesis in product((False, True), repeat=2):
+    p = profile(owned, 0, 0, True, root_noesis)
+    mode = profile(owned, 1, 0, True, root_noesis)
+    rule = profile(owned, 0, 1, True, root_noesis)
+    stopped = profile(owned, 0, 0, False, root_noesis)
+
+    def xs(p):
+        return {c for b, c in p[2] if b == 'x'}
+
+    assert all(q[:2] == p[:2] for q in (mode, rule, stopped))
+    assert xs(p) == {0}
+    assert (xs(mode) != xs(p)) == owned
+    assert (xs(rule) != xs(p)) == (not owned)
+    assert xs(stopped) == set()
+    assert bool({c for b, c in p[2] if b == 'g'}) == root_noesis
+    print(owned, root_noesis, xs(mode) != xs(p),
+          xs(rule) != xs(p), xs(stopped) == set())
+```
+
+Executed output (columns: owned rule, root noesis, root mode determines
+different effect content, separate rule determines different effect
+content, stopping secondary exercise stops the recipient episode):
+
+```text
+False False False True True
+False True  False True True
+True  False True  False True
+True  True  True  False True
+```
+
+These parameter variations compare descriptions, not metaphysically
+possible changes in a necessary source or law. The actual source and
+effect, same edge and actual baseline recipient episode are nonempty.
+The source-intrinsic orientation really controls the selected recipient
+content **in the equation** in the owned-rule branch. The alternative
+orientation is irrelevant there. In the other branch the separate rule
+does the selecting. Secondary exercise is not dispensed with in either
+branch. The difference is therefore not merely that one root has been
+labelled a productive cause and the other has not. Nevertheless the
+equations stipulate cognitive grounding, mode ownership and the kind
+of causal dependence; the model neither supplies a metaphysical account
+of those nor verifies the efficient-total giver premise. In particular,
+it does not prove that withholding a secondary exercise while holding
+the recipient's esse fixed is metaphysically possible. It isolates
+attribution to the determination, not the totality of the giving.
+
+The two profiles show how one might look for positive evidence of
+source-level productive responsibility for the distinctive perfection
+instead of treating every causal edge at esse as automatically
+carrying all respects. In the source-owned branch the specification of
+the manifestation's content is intrinsic to the source by hypothesis,
+and a change in that specification changes which content is apprehended
+by the recipient. Even that stronger dependence is compatible in this
+encoding with an empty root-side apprehension relation. Restoring root
+noesis leaves the effect-side dependencies unchanged; this is not a
+claim that intellectual and impersonal sources are equally explanatory
+in metaphysics, because no explanation of the root's own cognitive
+episode or the origin of its mode is represented.
+
+**Further discriminator for the whole-being route.** Compare a source
+that instantiates its own directed manifestation profile to a source
+whose exercise is itself a grasp of truth. In both cases the same
+source can be assigned the power to cause the same effect. If actual
+grasp of truth is intrinsically perfective, the second account adds
+an immanent fulfillment rather than merely an extra effect. This is
+positive evidence for the *content* of an intellectual perfection:
+correct specification and actual understanding differ by who
+apprehends and the kind of act, not by output quality. It does not
+yet establish that intellectual fulfillment is pure in the existing
+sense or due to every subsistent source. Acquisition, ignorance
+overcome, discursive sequence and a received cognitive species are
+finite realization features that need not be included in the target
+description. Intentional subject/object articulation, truth and
+the content's cognitive grounding cannot be deleted along with them.
+The relevant positive candidate is a non-received apprehension of
+truth; establishing a coherent realization of that candidate in a
+simple source remains the #1879/#1892 issue. A subject's being its
+own primary object eliminates the demand for two distinct bearers,
+but not every possible demand for real articulation in one bearer.
+
+This makes the limitation question more specific. A noncognitive
+source can be assigned all observed kinds of efficacy and a
+determinate intrinsic manifestation profile. The rival must not
+claim that *only* an unreceived act lacking any kind restriction
+explains that profile unless it also explains how its positive nature
+can exclude the pure intellectual mode without contracting actuality.
+The classical account likewise must show why any such intrinsic
+nature-specific exclusion counts as contraction; mere absence of a
+finite-like operation is insufficient. The premise is not a
+definition of pure perfection. An independently justified distinction
+between restrictions arising from a finite mode of realization and
+restrictions of the source's own act is the next step for the
+`d164b1ff` route. This comparison adds no evidence that the source
+owns a rational end or actually wills; the will/goodness interfaces
+remain downstream and conditional.
+
+This second diagnostic was executed locally with the output above.
+It is a structural test of the exact equations, not a Lean or
+Comparator result. No newly attributed claims or registered proofs.
