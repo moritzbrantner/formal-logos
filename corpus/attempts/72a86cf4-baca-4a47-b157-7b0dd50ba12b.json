@@ -1,0 +1,26 @@
+{
+  "id": "72a86cf4-baca-4a47-b157-7b0dd50ba12b",
+  "label": "Compare intrinsically completed activity, due perfection and whole-power possession",
+  "date": "2026-11-24",
+  "statement_ids": [
+    "5bedb69b-8fbb-53b5-be2f-377d1331cf37",
+    "d164b1ff-ad31-5fbc-8ef9-eb0db51ebd96",
+    "c4fb87a6-047d-5f3d-b3e3-8dc0c4bbc946",
+    "122b112e-3f19-5cd4-8cd0-a704ab1f2d87",
+    "fe67d766-3e9f-57b5-bbff-c3e2c50c56fd",
+    "64498e7e-7f10-54a0-9ec0-c65e6076de1f"
+  ],
+  "kind": "reading",
+  "outcome": "blocked",
+  "summary": "See docs/notes/causal-perfection-transfer.md#intrinsic-completion-versus-kind-completeness-2026-11-24-draft-continuation. Separate noncognitive self-maintenance's beneficiary from Aristotle's complete exercise, and living nature from vital episodes. Q.18 a.3 ad 3 removes finite vegetative mechanisms, not the need for a positive immanent operation. SCG I.28's separated-whiteness analogy motivates uncontracted possession in a mode but the across-mode generalization requires the substantive absolute-esse account. Use the existing form/end due-perfection distinction: no due determination missing plus every pure determination due suffices for pure fullness; a four-variant structural test retains a supplied root, stipulated own being, actual distinct living effect, productive coverage, strict purity and nonvacuous passive potency. Absence of due defects alone does not entail fullness in this signature. Explicit graph reuses 95c04a6d, bc17c420, 7d8bbdcb and uniqueness consumers; no scope/sense collapse into 64498e7e. Pivot to d164b1ff and the intrinsic exclusion-to-limitation bridge, preserving the qualified life branch. Independent review and canonical verification not performed.",
+  "blocker": "Identify a genuinely pure positive actuality with independent content (not merely an unreceived active principle or finite maintenance process), and justify the bridge from its nature-based absence to contraction of esse rather than lack of another kind. A positive primitive whole-nature account would have to explain non-contraction under the same standard. Show joint compatibility and Has/InAct sense applications before changing the universal target or any proof. Independent challenge and prepared-checkout CLI tests remain outstanding.",
+  "evidence": [
+    "PR-1518",
+    "PR-1855",
+    "PR-1892",
+    "PR-1902",
+    "PR-1914",
+    "PR-1916",
+    "586275e6-d7b0-47a1-9180-5e245d6d4de1"
+  ]
+}
