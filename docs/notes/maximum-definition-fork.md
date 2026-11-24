@@ -924,9 +924,10 @@ question can remain open while other arguments for a greatest bearer proceed.
    a primitive. The source account offers a further explanation if it can exhibit an
    intrinsically actual giver whose exercise accounts for the population and
    reaches this particular recipient.
-4. **Strict comparison (`fd2c8710`).** A source can possess a determination
-   absent from its recipient while both still have the same highest realized
-   level. The [capacity test](contingency-receptivity-c2.md#when-does-a-missing-perfection-make-a-bearer-strictly-less)
+4. **Strict comparison (`fd2c8710`).** If the comparison ranks profiles by
+   inclusion, preserving all of a recipient's genuine perfections and adding
+   one gives strict superiority on that measure. If it ranks bearers by peak
+   intensity, both can still reach the same highest realized level. The [capacity test](contingency-receptivity-c2.md#when-does-a-missing-perfection-make-a-bearer-strictly-less)
    asks for an upper bound on everything the recipient actually realizes
    and a determination actually realized by the giver above it. On the shared
    calibration this suffices for a strict comparison. Its application to
@@ -941,3 +942,5 @@ identified in the source independently of its production of minds. Even then,
 one must justify where the recipient's **other** actual perfections lie on the
 same scale. That comparison could support strictness for this pair. Ranking every
 participant or establishing intellect in the giver would need further evidence.
+A recipient who also understands its own activity then provides a stronger test. Can we identify a truth about the source's own
+actuality that it grasps and the participant misses about its own?
