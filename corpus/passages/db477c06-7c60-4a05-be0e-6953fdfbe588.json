@@ -1,0 +1,39 @@
+{
+  "snapshot": {
+    "kind": "web_snapshot",
+    "source_id": "4117ffec-4713-40e4-8948-0ceff7ad4d05",
+    "source_url": "https://freddoso.com/translat/molina26.htm",
+    "retrieved_at": "2026-11-24T08:21:40Z",
+    "sha256": "sha256:790f39c3ea87456e6a5b0ab6eee76ade92dc811b7aeb563129b165067353c15c",
+    "wayback_url": "https://web.archive.org/web/20260410123214id_/https://freddoso.com/translat/molina26.htm",
+    "wayback_sha256": "sha256:790f39c3ea87456e6a5b0ab6eee76ade92dc811b7aeb563129b165067353c15c",
+    "encoding": "utf-8",
+    "language": "eng",
+    "translation": {
+      "translator": "Alfred J. Freddoso",
+      "year": "undated",
+      "edition": "Translator's online edition, listed in Unpublished Philosophical Translations"
+    },
+    "license": "The translator's page displays no redistribution license. Only metadata and an incipit are included. The April 2026 archive capture matches the live response bytes and selected text across two fetches."
+  },
+  "passages": [
+    {
+      "id": "db477c06-7c60-4a05-be0e-6953fdfbe588",
+      "label": "Molina, Concordia II, disputation 26 on God's general concurrence",
+      "locator": "Concordia II, disp. 26, §§1–16",
+      "claim_locator_prefixes": [
+        "Concordia II, disp. 26, §"
+      ],
+      "html_selector": {
+        "from": {
+          "text": "DISPUTATION 26"
+        },
+        "to": {
+          "text": "Translated by"
+        }
+      },
+      "text_sha256": "sha256:53b70c8bf0ef27f8676d594a990e06ab981df5eed3590e3f18af2615ddd24e1f",
+      "incipit": "DISPUTATION 26"
+    }
+  ]
+}

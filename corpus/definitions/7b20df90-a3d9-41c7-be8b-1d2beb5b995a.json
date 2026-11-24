@@ -1,0 +1,9 @@
+{
+  "id": "7b20df90-a3d9-41c7-be8b-1d2beb5b995a",
+  "label": "Effective causal credit interpreted by actual exercised contributor paths",
+  "term": "productive credit in a realized respect",
+  "definition": "Credit m respect a x r holds when a nonempty path of productive steps joins an event borne by a to a realized event of x in respect r. Each step has occurring endpoints at the actual scenario and is witnessed by an admitted, exercised group with its source among its contributors and its target as effect. An enabler can be needed for exercise without occupying a contributor position. Projection to a bearer and respect existentially forgets the individual outcome; a token-specific claim retains the result event.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.ExerciseContribution.Credit",
+  "note": "Analyst interpretation of effective responsibility, with attribution deferred. Direct participation by a second input to a joint effect and mediation through the secondary's exercise can both supply productive credit. To apply it to real existential causation, justify the event identities, their bearers and respects, the completeness of the exercised records, their directions, and the attribution of upstream productive responsibility along these paths. Co-occurrence, antecedent necessity, admission of a record and inductive supply alone each leave this interpretation open. See docs/notes/actuality-esse-research.md."
+}
