@@ -35,7 +35,7 @@
     "reviewed_revision": "7c30d88a0737d863c7947b21b30fe2e5c30e346b",
     "review": "unreviewed",
     "publication": "published",
-    "evidence": "Proposed note delivered on draft PR-1968 at 7c30d88a0737d863c7947b21b30fe2e5c30e346b. Independent semantic challenge not obtained; local repository toolchain unavailable. Python finite diagnostic passed; no new Lean proof registered or verified. Parent #1933 review applies only to unchanged evidence.",
+    "evidence": "Proposed note delivered on draft PR-1968 at 7c30d88a0737d863c7947b21b30fe2e5c30e346b. Independent semantic challenge not obtained; local repository toolchain unavailable. Python finite diagnostic passed; no new Lean proof registered or verified. Parent #1933 review applies only to unchanged evidence. The draft was retargeted to main for the repository's main-only PR CI; its research delta remains relative to parent #1933. Target and result IDs were resolved at the proposed branch; this is a reference check, not the canonical corpus check.",
     "supersedes": "None. This separate scoped proposal does not supersede the accepted-qualified assessment 9d7b8ae0 or the existing #1933 operative-content and evidence-channel work."
   }
 }
