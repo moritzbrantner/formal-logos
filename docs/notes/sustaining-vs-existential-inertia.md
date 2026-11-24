@@ -1378,9 +1378,9 @@ has been made would remove a competitor without changing how the copy came
 into being. In the harder case of destruction *before* reconstruction, the
 two-candidate contradiction no longer applies. There the positive reason for
 counting a replacement is its fresh production history. Van Inwagen's
-manuscript example sharpens the point: even returning the same atoms to the
-same places leaves open whether these ink marks owe their arrangement to the
-writer's inscription or to a later reconstruction. That is a thought experiment
+manuscript example sharpens the point: the atoms and their arrangement alone cannot distinguish the writer's
+inscription from marks assembled later. Given the stipulated reconstruction,
+van Inwagen judges the reassembled manuscript a replacement. That is a thought experiment
 about a historically individuated artifact. Neither it nor the museum case
 proves a universal necessity of uninterrupted material composition.
 [Van Inwagen, “The Possibility of Resurrection,” pp. 117–119](https://www.andrewmbailey.com/pvi/Possibility_of_Resurrection.pdf).
@@ -1419,13 +1419,14 @@ calibrates that procedure. It does not identify a museum object's esse-giver.
 | Production of a matching successor wholly independently of x's history, with resemblance sufficient for identity | Gives a wrong verdict in the coexistence control and lacks the provenance that distinguishes continuation from replication. This objection targets the proposed identity rule specifically. Even an account positing a sole producer of esse can retain an intrinsic historical criterion for *which* patient it produces or sustains. |
 
 The primary texts sharpen the disagreement. Feser explicitly appeals to
-substantial form and designated matter for diachronic identity while
-defending conservation. On his account prior combination leaves a present
+substantial form and designated matter for the diachronic identity of
+substances, while defending conservation. On his account prior combination leaves a present
 actual combination to explain. Schmid's local deduction instead uses this
 bearer's prior presence, absence of a cessation inducer and a causal
 requirement on change. That deduction does explanatory work once the law
 covers existential loss. It does not identify one among rival candidates for
-the later bearer. Neither account misidentifies the London cast. The stronger
+the later bearer. Given the museum's independent artifact criterion, both
+reconstructed accounts accommodate its identification. The stronger
 principle that the earlier existence must itself *cause the later existence*,
 rather than contribute to individuation, would put pressure on exclusive
 production by the source. Even that principle allows jointly necessary
@@ -1437,8 +1438,8 @@ and “Rather, a critique,” passage a73919f4](../../corpus/passages/feser-iner
 
 **What could discriminate the survivors?** Hold the earlier individual,
 source, ordinary material history through t0 and independently specified
-destructive conditions fixed. Withdraw only s's present exercise, with no
-replacement giver. If the existential no-loss law applies independently to
+destructive conditions fixed. Compare an independently identified withdrawal of s's present exercise,
+with every other strict giver excluded, including self-giving. If the existential no-loss law applies independently to
 this case and withdrawal supplies no cause of loss, it predicts that x
 survives. If this exercise is indispensable to x's esse, x ceases even if a
 matching successor appears. Use the provenance test to distinguish the latter
