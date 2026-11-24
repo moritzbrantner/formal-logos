@@ -61,6 +61,7 @@ meaning = "Analyst witness. A premise-free finite sample shows the weak ordered 
 [[argument]]
 id = "Willing GOOD_4 to all existing at the CREATURE_WILLING_1 carrier"
 theorem = "willsGoodForAllExistingAtCarrier"
+transcription = "instantiation"
 premises = ["e0dae79f-c042-5a08-a148-725d0468df91", "66aecdd7-ea4e-55c6-9377-10db08893854", "00e962ae-f109-55f7-a7fd-f107ce0dea6b", "a94c5dfc-c722-49fe-a242-dd39409b079d", "2a168a36-bd60-491a-8ad7-ce5b1d2fb560"]
 conclusion = "c691e3d0-5dd0-404a-a1dd-9a4a278dcd31"
 axioms = []
@@ -71,6 +72,7 @@ meaning = "Corollary tying the registered parametric result 7209fa2f to the CREA
 [[argument]]
 id = "LOVE_1 of all existing at the LOVE_1 and CREATURE_WILLING_1 carriers"
 theorem = "lovesAllExistingAtCarriers"
+transcription = "instantiation"
 premises = ["e0dae79f-c042-5a08-a148-725d0468df91", "66aecdd7-ea4e-55c6-9377-10db08893854", "00e962ae-f109-55f7-a7fd-f107ce0dea6b", "a94c5dfc-c722-49fe-a242-dd39409b079d", "2a168a36-bd60-491a-8ad7-ce5b1d2fb560", "16ab027e-52d1-4309-97a6-fc0a45e9f4c5"]
 conclusion = "e3d5bece-f216-4877-9fca-8a1eb7d96bcd"
 axioms = []

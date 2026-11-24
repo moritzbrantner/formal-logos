@@ -1,0 +1,13 @@
+{
+  "id": "32e068a3-0fa7-425b-bb6f-0ddd6ee461db",
+  "label": "Measured comprehension compares the two bearers through the witnessed knowing (inference)",
+  "input_statement_ids": [
+    "7921f9c8-81f4-4af5-b945-d98787d12f42",
+    "7db53cde-911c-48ec-ab4f-054a00288148"
+  ],
+  "output_statement_id": "2924332c-a710-4a8d-95be-84d52082a3e5",
+  "rule": "Compose the lower bound on knowability, its attainment and the knower's act bound",
+  "meaning": "Take the actual knowing that witnesses COMPREHEND_2. Its grade lies between the object's knowability and the knower's own act. Transitivity with the object's act-to-knowability comparison gives the weak order of acts.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

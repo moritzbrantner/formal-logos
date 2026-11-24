@@ -1,0 +1,19 @@
+{
+  "id": "f381e5bf-f589-4737-b86f-a3710ce2f05a",
+  "label": "Restated-premise controls, checked",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "e8724436-0c5a-4685-be68-0c99b520b622",
+  "inference_ids": [
+    "d8e17e20-bc1e-4eb7-8389-d7a8bf887756"
+  ],
+  "meaning": "Closed controls for the restated-premise consolidation: the three registered equivalences hold by Iff.rfl over the stated carriers (the same parameters; the idea frame's fields; the frame's ground profile with the same concreteness predicate). A comparison of encodings; it asserts none of the compared premises.",
+  "definition_ids": [
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "14d30c53-51c2-502d-b009-247dac0421e0",
+    "ce8ccc1a-4f9a-5904-a10c-548778d79b66",
+    "c0cbef1c-060a-54d4-bb49-8d59da40caf3"
+  ]
+}

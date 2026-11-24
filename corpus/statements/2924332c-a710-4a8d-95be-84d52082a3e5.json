@@ -1,0 +1,13 @@
+{
+  "id": "2924332c-a710-4a8d-95be-84d52082a3e5",
+  "label": "Measured comprehension bounds the object's whole act by the knower's",
+  "paraphrase": "For every s and x, if s knows x at some degree reaching x's knowability in itself, the measured act of x is at most that of s. Mutual measured comprehension therefore gives inequalities in both directions. No cognitive or causal relation is asserted to obtain.",
+  "lean_declaration": "TruthCore.Causality.ReflectiveComprehension.ComprehensionOrdersAct",
+  "definition_ids": [
+    "1218cc1e-e6ef-4f27-9036-d6e28cae67ad",
+    "5b196f1c-210d-450e-b3f1-33e214f9f45d"
+  ],
+  "disambiguation_ids": [
+    "e151d506-c074-4e5d-a0f9-e9c51f1a73d7"
+  ]
+}

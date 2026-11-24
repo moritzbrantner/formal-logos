@@ -194,6 +194,7 @@ public import TruthCore.Causality.ParityUnionRegress
 public import TruthCore.Causality.PartFreePlurality
 public import TruthCore.Causality.PartMediatedSelfMotion
 public import TruthCore.Causality.ParticipatedDuration
+public import TruthCore.Causality.ParticipatedEsseScale
 public import TruthCore.Causality.ParticularActuality
 public import TruthCore.Causality.PerAccidensResponses
 public import TruthCore.Causality.PerfectionOfBeing
@@ -222,10 +223,12 @@ public import TruthCore.Causality.QuantitativeTransferPaths
 public import TruthCore.Causality.ReceiptAllocation
 public import TruthCore.Causality.ReceivedEsseActualGiver
 public import TruthCore.Causality.ReceptionLimitation
+public import TruthCore.Causality.ReflectiveComprehension
 public import TruthCore.Causality.ReflexiveDependenceScope
 public import TruthCore.Causality.RegressReadings
 public import TruthCore.Causality.RegressRivalCoverage
 public import TruthCore.Causality.RelationalReceipt
+public import TruthCore.Causality.RestatedPremises
 public import TruthCore.Causality.RivalRefutationsRound2
 public import TruthCore.Causality.RootEssenceIdentity
 public import TruthCore.Causality.RootIntellectWill
@@ -260,6 +263,7 @@ public import TruthCore.Causality.SourceWitness
 public import TruthCore.Causality.SpineRivalsAttributes
 public import TruthCore.Causality.SpineRivalsRootEsse
 public import TruthCore.Causality.SpineRivalsStageOne
+public import TruthCore.Causality.StrictEsseScale
 public import TruthCore.Causality.StrictPriorityPureAct
 public import TruthCore.Causality.SubjectFocalRoles
 public import TruthCore.Causality.SubtractionArgument
