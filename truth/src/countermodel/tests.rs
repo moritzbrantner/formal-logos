@@ -361,6 +361,7 @@ fn unary_functions_find_a_nonconstant_swap_and_nested_apps() {
     assert!(find_model(&skeleton, &holds, &[], 1).unwrap().is_none());
     let model = find_model(&skeleton, &holds, &[], 2).unwrap().unwrap();
     assert_eq!(model.sizes, [("A".to_owned(), 2)]);
+    assert_eq!(model.functions["f"], [1, 0]);
     assert!(
         holds
             .iter()
@@ -369,7 +370,7 @@ fn unary_functions_find_a_nonconstant_swap_and_nested_apps() {
     assert!(
         render_model(&skeleton, &model)
             .iter()
-            .any(|line| line.starts_with("abbrev f : A → A"))
+            .any(|line| line == "abbrev f : A → A := fun x => if x = 0 then 1 else 0")
     );
 }
 
@@ -416,6 +417,8 @@ fn unary_functions_keep_distinct_names_and_unequal_carriers() {
         .unwrap()
         .unwrap();
     assert_eq!(model.sizes, [("A".to_owned(), 1), ("B".to_owned(), 2)]);
+    assert_eq!(model.functions["f"], [0]);
+    assert_eq!(model.functions["g"], [1]);
     assert!(evaluate(&skeleton, &model, &skeleton.premises[0].formula).unwrap());
 }
 
@@ -441,6 +444,92 @@ fn unary_functions_reject_unknown_carriers_and_duplicate_names() {
             "accepted invalid function signatures: {functions}"
         );
     }
+}
+
+#[test]
+fn unary_functions_reject_malformed_model_tables_even_when_unused() {
+    let skeleton = function_skeleton(
+        json!([{"name": "f", "domain": "A", "codomain": "B"}]),
+        json!(["A", "B"]),
+        json!([]),
+        json!([]),
+        json!({"t": "true"}),
+    )
+    .unwrap();
+    let model = find_model(&skeleton, &[], &[], 1).unwrap().unwrap();
+    assert!(evaluate(&skeleton, &model, &Formula::True).unwrap());
+    for table in [Vec::new(), vec![0, 0], vec![1]] {
+        let mut malformed = model.clone();
+        malformed.functions.insert("f".into(), table);
+        assert!(evaluate(&skeleton, &malformed, &Formula::True).is_err());
+    }
+    let mut missing = model.clone();
+    missing.functions.remove("f");
+    assert!(evaluate(&skeleton, &missing, &Formula::True).is_err());
+    let mut extra = model;
+    extra.functions.insert("g".into(), vec![0]);
+    assert!(evaluate(&skeleton, &extra, &Formula::True).is_err());
+}
+
+#[test]
+fn unary_functions_report_overflow_before_allocating_tables() {
+    let one = function_skeleton(
+        json!([{"name": "f", "domain": "A", "codomain": "B"}]),
+        json!(["A", "B"]),
+        json!([]),
+        json!([]),
+        json!({"t": "true"}),
+    )
+    .unwrap();
+    let cardinality = function_layout(&one, &[("A".into(), usize::BITS as usize), ("B".into(), 2)])
+        .err()
+        .unwrap();
+    assert!(cardinality.contains("cardinality"), "{cardinality}");
+    let dimensions = function_layout(&one, &[("A".into(), usize::MAX), ("B".into(), 1)])
+        .err()
+        .unwrap();
+    assert!(dimensions.contains("dimensions"), "{dimensions}");
+    let two = function_skeleton(
+        json!([
+            {"name": "f", "domain": "A", "codomain": "B"},
+            {"name": "g", "domain": "A", "codomain": "B"},
+        ]),
+        json!(["A", "B"]),
+        json!([]),
+        json!([]),
+        json!({"t": "true"}),
+    )
+    .unwrap();
+    let combined = function_layout(
+        &two,
+        &[("A".into(), (usize::BITS / 2) as usize), ("B".into(), 2)],
+    )
+    .err()
+    .unwrap();
+    assert!(combined.contains("combined"), "{combined}");
+}
+
+#[test]
+fn unary_functions_enumerate_lazily_in_the_historical_product_order() {
+    assert_eq!(
+        Assignments::new(&[usize::MAX, 2])
+            .take(3)
+            .collect::<Vec<_>>(),
+        [vec![0, 0], vec![0, 1], vec![1, 0]]
+    );
+    assert_eq!(
+        product(&[2, 3]),
+        [
+            vec![0, 0],
+            vec![0, 1],
+            vec![0, 2],
+            vec![1, 0],
+            vec![1, 1],
+            vec![1, 2]
+        ]
+    );
+    assert_eq!(product(&[]), [Vec::<usize>::new()]);
+    assert!(product(&[2, 0]).is_empty());
 }
 
 /// The recorded skeleton and Python report for `name` at `size`.
