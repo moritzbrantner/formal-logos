@@ -1,0 +1,9 @@
+{
+ "id": "de24ce2e-84e4-48d8-9cac-5f66ad532015",
+ "label": "Willed two-way giving: a rational power gives x, and not at a world with the same set-up",
+ "term": "willed two-way giving, choice (WilledTwoWayAt)",
+ "definition": "WilledTwoWayAt F A w y: as PropensityChanceAt F A w y with the power rational: y exists at w, and there are a rational power p of y, a being x and a world v accessible from w where y exists with the same set-up, such that y gives x being at w by p and does not give x being at v.",
+ "basis": "stipulative",
+ "lean_declaration": "TruthCore.Causality.WillVersusChance.WilledTwoWayAt",
+ "note": "Analyst definition, attribution deferred (docs/notes/will-versus-chance.md). Example: on Aquinas's account, God giving a creature being by his will, which 'determinat seipsam' to an object to which it has a non-necessary relation (ST I q.19 a.3 ad 5, navigation). It differs from CHANCE_3 only in Rational (flip law). It does not say that the exercise is explained contrastively; the luck objection to undetermined choice is not answered by the definition. Implies TwoWayGiverAt (DEF e006ddeb)."
+}

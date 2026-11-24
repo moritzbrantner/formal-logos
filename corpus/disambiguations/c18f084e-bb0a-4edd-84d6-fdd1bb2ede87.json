@@ -1,0 +1,32 @@
+{
+ "id": "c18f084e-bb0a-4edd-84d6-fdd1bb2ede87",
+ "label": "Chance at a source: incidental coincidence, varying set-up, indeterministic propensity",
+ "term": "chance",
+ "sense_definition_ids": [
+  "e0179074-ab4e-4078-8ecb-a7ae9696fd11",
+  "0fe412ef-83c9-444c-9e92-da7246a0e6c5",
+  "a2840d96-8bdc-4e6a-a9a3-376a9505ec7c"
+ ],
+ "resolution": "CHANCE_1 (incidental: a varying concurring condition) and CHANCE_2 (a varying set-up) are both excluded at a source with an invariant set-up (Model.Laws 1 of the will-versus-chance batch); only CHANCE_3 (a non-rational power that gives otherwise from the same set-up) is the chance rival at a simple, patientless source. The arguments of the batch use CHANCE_3 only, and only inside the controls; no argument passes from one sense to another. The senses are not exclusive in general (a giver may have CHANCE_2 at one accessible world and CHANCE_3 at another) and no coverage of all chance is claimed. Willed two-way giving (choice) is not a sense of chance: it differs from CHANCE_3 only in the Rational classification (flip law).",
+ "term_label": "CHANCE",
+ "senses": [
+  {
+   "id": "b7dc9a77-80c7-4504-9595-c3df666230a4",
+   "label": "CHANCE_1",
+   "definition_id": "e0179074-ab4e-4078-8ecb-a7ae9696fd11",
+   "lean_declaration": "TruthCore.Causality.WillVersusChance.IncidentalVariationAt"
+  },
+  {
+   "id": "005bb3e6-c21d-4c80-95d8-8fc56d43a4ca",
+   "label": "CHANCE_2",
+   "definition_id": "0fe412ef-83c9-444c-9e92-da7246a0e6c5",
+   "lean_declaration": "TruthCore.Causality.WillVersusChance.SetupVariationAt"
+  },
+  {
+   "id": "b767005e-c49a-4e6f-8257-77f9481c62f0",
+   "label": "CHANCE_3",
+   "definition_id": "a2840d96-8bdc-4e6a-a9a3-376a9505ec7c",
+   "lean_declaration": "TruthCore.Causality.WillVersusChance.PropensityChanceAt"
+  }
+ ]
+}
