@@ -1000,7 +1000,9 @@ answer by itself explains why the subsistent source is actual at all.
    strictly above this recipient in degree of act. Ordinary reflection
    supplies no such exhaustive knowledge, and an unanswered question can
    coexist with equal degrees of act. This test concerns a reflective pair.
-   The universal claim also compares bearers lacking intellect.
+   The universal claim orders nearness to the primary, including for bearers
+   lacking intellect. Applying the comparison here also requires connecting
+   that nearness to the represented degree of esse.
    [Reflective comparison](../../corpus/results/87de8ed8-dfd7-4001-8396-e31008fb3641.json)
 
 **Test on the same individual.** Stipulate that the right-hand daughter is
