@@ -373,15 +373,18 @@ For a sharper comparison, Page examines a biophilic principle that selects
 a value maximizing the fraction of all baryons becoming life. Its objective
 can be stated without mentioning the observed decade. Taking it as a
 creator's *exclusive* choice rule adds a substantive premise to the broader
-end. Page factors the life fraction into the fraction collapsing into galaxies
-and the life yield of those baryons. Smaller positive Λ favors collapse;
-metal enrichment, gas retention and stellar environments affect the second
-factor. A derivative at the observed value could test exact local optimality.
-Excluding **the whole bin** instead requires every feasible value in E to be
-outperformed by an available alternative. If all attainable global maximizers
-are outside E, a successful exact optimizer assigns E zero, conditional on
-producing an observation record in its chosen world. Maximizers on both sides
-require a choice and sampling rule. [Page, §§2–3, especially pp. 6–9](https://arxiv.org/pdf/1101.2444)
+end. Assuming that life develops from baryons in galaxies, Page factors the
+life fraction into the fraction collapsing into galaxies and the life yield
+of those baryons. Smaller positive Λ favors collapse. Metal enrichment,
+gas retention and stellar environments may affect the second factor, whose
+direction of change is unknown. A derivative can test local optimality where
+nearby densities are feasible on both sides. Suppose a global maximum is
+attained. For the objective alone to rule out **the whole bin** under every
+tie-breaking choice, every feasible value in E must be outperformed by an
+available alternative. If all maximizers lie outside E, a successful exact
+optimizer gives E zero probability conditional on an observation record,
+provided such records have positive probability. If maximizers lie on both
+sides, a specified choice and sampling rule can still give E zero weight. [Page, §§2–3, especially pp. 6–9](https://arxiv.org/pdf/1101.2444)
 
 There is a numerical check on substituting stellar production for life.
 Sorini, Peacock and Lombriser's positive-Λ models give asymptotic stellar
