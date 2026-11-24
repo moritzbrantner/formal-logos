@@ -102,6 +102,11 @@ def Inventory (d : Profile) : Prop :=
   SourceUnderived d ∧ Classifies d ∧ UniqueUnderived d ∧
     UniqueTerm d d.generation ∧ UniqueTerm d d.spiration
 
+-- Use constructor disjointness for finite numerals; all interpretation
+-- certificates in this batch have an empty permitted-axiom list.
+local instance : Zero Nat := ⟨0⟩
+local instance (n : Nat) : NeZero (Nat.succ n) := ⟨Nat.noConfusion⟩
+
 /-- Finite interpretations for the cardinality and subsistence tests. The three
 positions are roles only. 'P' has different cardinalities in different tests.
 The 'Esse' field takes a token, rather than a kind shared by similar tokens. -/

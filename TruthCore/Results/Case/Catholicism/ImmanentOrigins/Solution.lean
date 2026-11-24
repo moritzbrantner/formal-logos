@@ -45,6 +45,11 @@ theorem collapse : TokenCollapse := by
   intro d injective ⟨f, w, _, h⟩
   exact h.fw (injective f w (h.father.2.trans h.word.2.symm))
 
+-- Use constructor disjointness for finite numerals; all interpretation
+-- certificates in this batch have an empty permitted-axiom list.
+local instance : Zero Nat := ⟨0⟩
+local instance (n : Nat) : NeZero (Nat.succ n) := ⟨Nat.noConfusion⟩
+
 set_option synthInstance.maxSize 4096
 set_option maxRecDepth 4000
 
