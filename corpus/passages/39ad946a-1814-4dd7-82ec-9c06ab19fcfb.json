@@ -1,0 +1,24 @@
+{
+  "snapshot": {
+    "source_id": "62a49533-d670-4bb0-a81e-5afdf2bfb4a1",
+    "edition_urn": "http://scta.info/resource/jsnvu6-d1e2369/cod-du87us",
+    "language": "lat",
+    "repository": "scta-texts/jsnvu6",
+    "revision": "44930fe0954eff1148eefd3483d9b34c1a54cd5c",
+    "path": "jsnvu6-d1e2369/cod-du87us_jsnvu6-d1e2369.xml",
+    "git_blob_sha": "3b5db33d83f1fe0aef3c44deb302c5d895310917",
+    "source_url": "https://raw.githubusercontent.com/scta-texts/jsnvu6/44930fe0954eff1148eefd3483d9b34c1a54cd5c/jsnvu6-d1e2369/cod-du87us_jsnvu6-d1e2369.xml",
+    "license": "CC BY-NC-SA 4.0 according to the TEI publicationStmt. Medieval text in the public domain. Transcription and TEI encoding credited to Jeffrey C. Witt, draft dated 20 August 2023. The transcribed Lyon text contains occasional spelling and segmentation errors."
+  },
+  "passages": [
+    {
+      "id": "39ad946a-1814-4dd7-82ec-9c06ab19fcfb",
+      "label": "Durand of Saint-Pourçain on immediate divine action in every action of a creature",
+      "locator": "Redaction C, In II Sent. d.1 q.5, complete question, Lyon 1563 fol. 111ra–vb. SCTA jsnvu6-d1e2369, especially §§6, 10–12, 17 (paragraph IDs ending d1e238, d1e419, d1e476, d1e505, d1e664).",
+      "claim_locator_prefixes": [
+        "C.II.1.5."
+      ],
+      "tei_xml_id": "jsnvu6-d1e2369"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.ReceiptAllocation.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ReceiptAllocation.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.ReceiptAllocation.sharpRange"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "enable_nanoda": true
+}

@@ -160,6 +160,7 @@ pub struct ConfigurationArgs {
     pub flags: bool,
     pub case: Option<String>,
     pub seed: Option<String>,
+    /// `--premise`, also read by `semantics`, `index` and `discover`.
     pub premises: Vec<String>,
     pub registered: bool,
     /// `models --check`, `--argument` and `--verify` (Lean), and
@@ -200,7 +201,7 @@ pub struct BriefArgs {
 
 /// `semantics --conclusion STATEMENT`, `--bridge STATEMENT[@SENSE,SENSE]` and
 /// `--definition DEF`
-/// (the preflight; `--premise` is shared with `configurations`).
+/// (the preflight; `--premise` is shared with `configurations` and `discover`).
 #[derive(Default)]
 pub struct SemanticsArgs {
     /// Whether either was given.
@@ -263,8 +264,8 @@ pub struct CountermodelArgs {
     pub no_check: bool,
 }
 
-/// The `discover` options (it also reads `--target`, `--module`, `--heartbeats`,
-/// `--batch` and `--limit`).
+/// The `discover` options (it also reads `--target`, `--premise`, `--module`,
+/// `--heartbeats`, `--batch` and `--limit`).
 #[derive(Default)]
 pub struct DiscoverArgs {
     /// Whether any of them was given.

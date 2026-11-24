@@ -1,0 +1,14 @@
+{
+  "id": "aa8618b3-508d-477e-903d-94a18afbd04c",
+  "label": "Solve the balanced allocation equations for every feasible named share of work",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "4b73eb6b-a0fe-412c-9b81-838f9029d8b2",
+  "inference_ids": [
+    "d0040eb0-6ce1-4456-804e-e893871e7c1e"
+  ],
+  "meaning": "Four nonnegative routing entries realize every integer in the specified interval. At a zero lower bound one can construct an allocation with no named input expended. At a positive lower bound every compatible allocation supplies an exercised contributor step to the combined work. Interpreting actual expenditure as productive remains an open application condition.",
+  "definition_ids": [
+    "7b20df90-a3d9-41c7-be8b-1d2beb5b995a",
+    "cc5be5e2-5a9d-4831-86c9-32dd91482f5b"
+  ]
+}

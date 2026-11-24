@@ -1,0 +1,13 @@
+{
+  "challenge_module": "TruthCore.Results.Discover.GodMaximalFromCauseExclusion.Challenge",
+  "solution_module": "TruthCore.Results.Discover.GodMaximalFromCauseExclusion.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Discover.GodMaximalFromCauseExclusion.godMaximalFromCauseExclusion"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "enable_nanoda": true
+}

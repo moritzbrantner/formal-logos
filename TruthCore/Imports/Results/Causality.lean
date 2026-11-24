@@ -2,6 +2,7 @@
 module
 
 public import TruthCore.Results.Causality.AccidentalFeatureOrigin.Solution
+public import TruthCore.Results.Causality.AcquiredHistoryTransfer.Solution
 public import TruthCore.Results.Causality.ActPriorityAtFirst.Solution
 public import TruthCore.Results.Causality.ActPriorityThetaEight.Solution
 public import TruthCore.Results.Causality.ActualCommonRoot.Solution
@@ -60,6 +61,7 @@ public import TruthCore.Results.Causality.ComingToBeHorns.Solution
 public import TruthCore.Results.Causality.CommonPriority.ContingentGround.Solution
 public import TruthCore.Results.Causality.CommonPriority.Solution
 public import TruthCore.Results.Causality.CompactOperationCount.Solution
+public import TruthCore.Results.Causality.ComparativeFoundation.Solution
 public import TruthCore.Results.Causality.CompleteCauseContributorCover.Solution
 public import TruthCore.Results.Causality.CompleteCauseSourceUniqueness.Solution
 public import TruthCore.Results.Causality.CompleteCauseUnderivedSource.Solution
@@ -240,6 +242,7 @@ public import TruthCore.Results.Causality.NecessaryBeingInAct.Solution
 public import TruthCore.Results.Causality.NecessaryClassicalGodCase.Solution
 public import TruthCore.Results.Causality.NecessaryClassicalGodRoot.Solution
 public import TruthCore.Results.Causality.NecessaryClassicalGodRootAtFirst.Solution
+public import TruthCore.Results.Causality.NecessaryClassicalGodRootBoxK.Solution
 public import TruthCore.Results.Causality.NecessaryClassicalGodRootByComposition.Solution
 public import TruthCore.Results.Causality.NecessaryClassicalGodRootControl.Solution
 public import TruthCore.Results.Causality.NecessaryClassicalGodRootFromAsymmetry.Solution
@@ -304,6 +307,7 @@ public import TruthCore.Results.Causality.PureIndiscernibility.Solution
 public import TruthCore.Results.Causality.Q44EssentialSource.Solution
 public import TruthCore.Results.Causality.Q44SourceSupply.Solution
 public import TruthCore.Results.Causality.QuantitativeTransferPaths.Solution
+public import TruthCore.Results.Causality.ReceiptAllocation.Solution
 public import TruthCore.Results.Causality.ReceivedEsseActualGiver.Solution
 public import TruthCore.Results.Causality.ReceptionLimitation.Solution
 public import TruthCore.Results.Causality.ReflexiveActualFusionNecessaryBeing.Solution

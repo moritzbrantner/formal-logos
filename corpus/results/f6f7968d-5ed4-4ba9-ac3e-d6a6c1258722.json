@@ -1,0 +1,11 @@
+{
+  "id": "f6f7968d-5ed4-4ba9-ac3e-d6a6c1258722",
+  "label": "Populate acquisition-history assumptions with the operative press and its patient",
+  "argument_id": "cee6dcc7-55db-4b2a-a923-7543e74b1004",
+  "challenge_module": "TruthCore.Results.Causality.AcquiredHistoryTransfer.Challenge",
+  "solution_module": "TruthCore.Results.Causality.AcquiredHistoryTransfer.Solution",
+  "theorem": "TruthCore.Results.Causality.AcquiredHistoryTransfer.populatedPress",
+  "comparator_config": "results/f6f7968d-5ed4-4ba9-ac3e-d6a6c1258722/comparator.json",
+  "status": "solution-present",
+  "description": "The source drive supplies both the stroke and the separate signal; the stroke supplies the imprint at a higher rank. A universal giver must be the source since no incoming productive record ends at its esse. Enumeration then covers the distinct bearers' actual respects. The transfer frame already interprets causal responsibility as productive path credit. This interpretation is deliberately substantive and finite."
+}

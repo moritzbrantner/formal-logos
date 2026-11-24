@@ -1,5 +1,6 @@
 //! `truth discover (--target STATEMENT | --targets open-root|next-tests)...
-//! [--module PREFIX]... [--premise-pool closed|proved|all] [--candidates N]
+//! [--module PREFIX]... [--premise STATEMENT]...
+//! [--premise-pool closed|proved|all] [--candidates N]
 //! [--limit N] [--heartbeats N] [--batch N] [--jobs N] [--zipperposition PATH]
 //! [--write-spec PATH]`: Duper search for new implications between corpus
 //! propositions (docs/discover.md, [`truth::discover`]). Advisory: it writes
@@ -88,6 +89,12 @@ fn run(args: &Args, operands: &[&str]) -> Output {
         ));
     }
     let given = &args.discover;
+    let exact = !args.configuration.premises.is_empty();
+    if exact && (given.pool.is_some() || given.candidates.is_some()) {
+        return Err(usage(
+            "--premise selects an exact bundle; --premise-pool and --candidates apply only to ranked retrieval",
+        ));
+    }
     if bridge.targets.is_empty() && given.selectors.is_empty() {
         return Err(usage(
             "discover requires --target STATEMENT or --targets open-root|next-tests",
@@ -100,7 +107,7 @@ fn run(args: &Args, operands: &[&str]) -> Output {
         }
     };
     let defaults = Options::default();
-    let options = Options {
+    let mut options = Options {
         bridges: true,
         heartbeats: args
             .sweep
@@ -108,6 +115,7 @@ fn run(args: &Args, operands: &[&str]) -> Output {
             .map_or(defaults.heartbeats, |h| h as u64),
         candidates: given.candidates.unwrap_or(defaults.candidates),
         pool,
+        premises: Vec::new(),
         zipperposition: given
             .zipperposition
             .clone()
@@ -133,6 +141,31 @@ fn run(args: &Args, operands: &[&str]) -> Output {
     }
     let mut seen = BTreeSet::new();
     targets.retain(|id| seen.insert(id.clone()));
+    for token in &args.configuration.premises {
+        if token.trim().is_empty() {
+            return Err(usage("--premise requires a non-empty statement"));
+        }
+        let id = resolve_statement(&aliases, token)?;
+        let record = corpus
+            .get("statements", &id)
+            .ok_or_else(|| super::unknown(&format!("unknown premise: {token}")))?;
+        if !record
+            .fields
+            .get("lean_declaration")
+            .and_then(Value::as_str)
+            .is_some_and(|declaration| !declaration.trim().is_empty())
+        {
+            return Err(usage(format!(
+                "explicit premise {token}: no lean_declaration"
+            )));
+        }
+        if targets.contains(&id) {
+            return Err(usage(format!("target is also a premise: {token}")));
+        }
+        if !options.premises.contains(&id) {
+            options.premises.push(id);
+        }
+    }
     eprintln!("discover: building Duper and the library");
     discover::build(&args.root).map_err(|message| input_error("lake", message))?;
     // `--limit` caps the targets after the module filter.
@@ -224,8 +257,12 @@ fn run(args: &Args, operands: &[&str]) -> Output {
     });
     let value = json!({
         "options": {
-            "heartbeats": options.heartbeats, "candidates": options.candidates,
-            "premise_pool": options.pool.name(), "zipperposition": options.zipperposition,
+            "heartbeats": options.heartbeats,
+            "premise_selection": if exact { "exact" } else { "ranked" },
+            "premises": options.premises,
+            "candidates": (!exact).then_some(options.candidates),
+            "premise_pool": (!exact).then_some(options.pool.name()),
+            "zipperposition": options.zipperposition,
             "jobs": options.jobs, "batch": options.batch, "modules": options.modules,
         },
         "summary": summary,
