@@ -373,6 +373,7 @@ public import TruthCore.Results.Causality.SpineRivalsRootEsse.Solution
 public import TruthCore.Results.Causality.SpineRivalsStageOne.Solution
 public import TruthCore.Results.Causality.StrictEsseScale.Solution
 public import TruthCore.Results.Causality.StrictGroundInfiniteCauseSeries.Solution
+public import TruthCore.Results.Causality.StrictGroundRepresentation.Solution
 public import TruthCore.Results.Causality.StrictPriorityPureAct.Solution
 public import TruthCore.Results.Causality.StrictPriorityPureActControls.Solution
 public import TruthCore.Results.Causality.SubjectFocalRoles.Solution

@@ -242,3 +242,29 @@ and their unknown life yields. On this datum the physical model gives a
 quantitative fit under explicit assumptions. The evidence does not yet rank
 it against the purposive account. [Physical prediction, purpose and outstanding
 comparison](fine-tuning-selection.md#1569-which-vacuum-energy-decade-does-an-observer-find)
+
+### What a representation can establish about its source
+
+Strict ground gives two routes into the causal argument. Acyclic dependence
+implies that distinct beings cannot depend on each other. If every per se
+cause supplies the corresponding distinct dependence step, a consistent
+strict-ground map also gives the Second Way's regress premise when each
+effect's ancestry has only finitely many distinct fact labels. A finite list
+of descriptions alone cannot support this argument. Combining two unrelated
+supply chains under shared descriptions can create a cycle even when each
+chain keeps different labels at its two ends. With identity labels a theory
+constructed from the edges reproduces their finite paths exactly. The
+independent warrant for existential direction must come from what fixes
+those edges or what warrants the theory in advance. [Derivations and
+rival](distinct-dependence-strict-ground-route.md#what-does-a-consistent-representation-add)
+
+The Cartesian argument presents a parallel question about a different kind
+of representation. A finite rule can determine positive content about an
+unbounded domain. A thinker can also distinguish one subject knowing every
+truth from each truth being known by someone. Those discriminations give
+a finite contributor a role in articulating content. Whether they explain
+a first-person grasp of all perfections as intrinsically united remains
+open. Given the Cartesian adequacy premises and the actuality-to-being
+bridge, the same cause of the episode's content has esse. A further premise
+is required to establish its maximality in being. [Finite-thinker test,
+Cartesian reply and same-cause argument](cartesian-infinity-content.md)

@@ -1,0 +1,27 @@
+{
+  "id": "a8cec5bc-9c14-4d96-a2bc-5b64e2ee27fa",
+  "label": "Test the strict-ground interpretation after identifying labels across two disjoint pairs",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "a46e6e95-7543-47df-b415-47b1af2749a5",
+  "inference_ids": [
+    "94df1cea-20a6-40bb-bf7b-7d76dd55040a"
+  ],
+  "meaning": "The four bearers have only two disjoint dependence edges. Their fixed labels preserve different endpoints on each dependence path while combining the edges into a two-cycle at the label level.",
+  "definition_ids": [
+    "bf26b9b2-41ed-55b0-9557-dae90ab9b81f",
+    "df5284cb-8f1f-5b61-9b1c-ee4c1544b469",
+    "5d9a94e0-d64b-53ca-b9cc-504735060e0a"
+  ],
+  "disambiguation_ids": [
+    "23dd6f32-b456-4963-adb3-7befbf0dc4fb"
+  ],
+  "sense_bridges": [
+    {
+      "term": "DEPENDENCE_FOR_BEING_VERSUS_STRICT_GROUND",
+      "from": "c6e310c2-a8c9-41cb-8d7e-18859802484d",
+      "to": "28212589-ee94-4eb0-b20e-f7cead4438b1",
+      "statement_id": "a46e6e95-7543-47df-b415-47b1af2749a5",
+      "role": "conclusion"
+    }
+  ]
+}
