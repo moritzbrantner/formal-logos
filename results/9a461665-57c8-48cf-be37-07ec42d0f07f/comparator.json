@@ -1,0 +1,13 @@
+{
+  "challenge_module": "TruthCore.Results.Explanation.PopulationEntry.Challenge",
+  "solution_module": "TruthCore.Results.Explanation.PopulationEntry.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Explanation.PopulationEntry.entryComparison"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "enable_nanoda": true
+}

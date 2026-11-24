@@ -1,0 +1,28 @@
+{
+  "id": "18ad47bf-e45d-4f0b-866e-e1e2697d2229",
+  "label": "POWER_OVER_ESSE_1 over each actual contingent concretum, by the transfer bridge",
+  "premise_statement_ids": [
+    "95bf8780-0e3c-49ba-b636-2274e2997a30",
+    "18e5bd4e-8178-468e-b867-fbaf9c5988ad",
+    "c76b6e2c-1ca0-47fd-a9d0-2c2faa3d1174",
+    "f0ac2f76-62fe-4b9b-8427-e0ca8d7a3cef"
+  ],
+  "conclusion_statement_id": "eb41bc9a-c78f-475c-933e-46c332d0357d",
+  "inference_ids": [
+    "7c45abc9-feb4-4021-9c5d-63dbecd1c1b2"
+  ],
+  "meaning": "A concrete being is contingent at w, so the joint absence fails at w, while P4-prime gives an accessible world where it holds; P1-prime gives a being y at w with a power for it; the transfer bridge gives y POWER_OVER_ESSE_1 over each concrete being contingent at w. Constructive.",
+  "definition_ids": [
+    "3fd6bddb-f10c-4df4-8694-3eb5e7c28617",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "bf7eddca-8291-4744-8470-379babcd7781"
+  ],
+  "disambiguation_ids": [
+    "197f0097-f2ae-4a47-8770-3d43758f737b",
+    "623ddbf6-9683-5361-bae4-e348a00ec680",
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f",
+    "f5dda05f-ba3c-4fdf-82a3-e4803c24ddb5"
+  ]
+}

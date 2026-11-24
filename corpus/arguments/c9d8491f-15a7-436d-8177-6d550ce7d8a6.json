@@ -1,0 +1,33 @@
+{
+  "id": "c9d8491f-15a7-436d-8177-6d550ce7d8a6",
+  "label": "Existence in essence at an esse-essence identity: controls checked",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "ac557772-fe52-462e-a93a-841275a69fd0",
+  "inference_ids": [
+    "3b72a255-19df-4fe5-9ffb-fb3b3f3baedf"
+  ],
+  "meaning": "Premise-free laws relating the senses of 'existence belongs to an essence' (conceptual containment, essential truth, act identity, consequential essential truth), Kant's conceptual thesis, concept adequacy, the identity-to-concept bridge, the act-fact link, exercise in the nature, existence-conditional essences and serious-actualist essences, then finite models: kantAquinas, conditionalIdentity, four Kant-adequacy omission models and two factorization omission models. Model-witnessed separations only; no premise is established and no reality claim is made.",
+  "definition_ids": [
+    "16c40fbe-8a86-464a-a868-384103e11304",
+    "1fda7b2c-4411-4ffd-8fa2-78e30b6aedef",
+    "25d4df96-f18b-4477-a7ce-11fa8c17cd83",
+    "316780ef-70da-498f-8893-317cb35ca80b",
+    "54bdb2f0-aa66-489f-ae06-174dd668d424",
+    "7cf63236-9c12-41bc-bf20-6fbce7a121db",
+    "7fcf846e-d0ef-400e-89c0-7c82b94edde7",
+    "90353211-7e2e-47cb-bbab-3e0bef36d077",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "183b48d2-1753-583d-aef9-4199cff86231",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "b2e22524-357f-47b5-814f-0a0e59f0d612"
+  ],
+  "disambiguation_ids": [
+    "1aef8986-ed29-564f-9803-d812d2ff63e1",
+    "6f1d1395-7c1d-5bd5-a45d-03380857aed6",
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f",
+    "f704b7ca-b455-4da7-a757-b0564fe76b3b"
+  ],
+  "sense_mixing_control": true
+}

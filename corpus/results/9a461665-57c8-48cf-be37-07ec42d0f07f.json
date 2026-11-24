@@ -1,0 +1,11 @@
+{
+  "id": "9a461665-57c8-48cf-be37-07ec42d0f07f",
+  "label": "Populated founder and agent-entry controls under three fixed boundary conditions",
+  "argument_id": "6945eaa7-ac04-40fe-9364-8611414e5902",
+  "challenge_module": "TruthCore.Results.Explanation.PopulationEntry.Challenge",
+  "solution_module": "TruthCore.Results.Explanation.PopulationEntry.Solution",
+  "theorem": "TruthCore.Results.Explanation.PopulationEntry.entryComparison",
+  "comparator_config": "results/9a461665-57c8-48cf-be37-07ec42d0f07f/comparator.json",
+  "status": "solution-present",
+  "description": "In one birth-input mechanism the represented number of agents is the cardinality of active birth indices. A late birth increases that count. Under conservation, equality of initial bits forces equality of complete birth histories. Exact conservation excludes even solitary late birth; capacity one is saturated by the persisting founder, yet admits the same later candidate in its absence. At an unrestricted boundary, adding just the late input suffices for an admissible extra agent, its produced event and a changed source-blind detector reading. Absence of incoming causes and absence of #312 reason tokens are separately represented. A conserved net charge, a real modal recombination principle or global loss of empirical warrant is outside the theorem."
+}

@@ -1,0 +1,13 @@
+{
+  "challenge_module": "TruthCore.Results.Ontology.ExistenceInEssence.Challenge",
+  "solution_module": "TruthCore.Results.Ontology.ExistenceInEssence.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Ontology.ExistenceInEssence.exerciseInNatureGivesEssentialExistence"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "enable_nanoda": true
+}

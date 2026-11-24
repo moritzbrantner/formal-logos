@@ -1,0 +1,26 @@
+{
+  "id": "71514b8a-b9a0-4745-a5e2-96a09c404a61",
+  "label": "Can a whole unreceived act be absent? Joint omission, necessary population and individuation",
+  "date": "2026-11-23",
+  "statement_ids": [
+    "6508c239-b36d-4010-b9e4-ff0cdd5757e5",
+    "20d5fecd-950e-42f8-8dc9-3014491ff6ae",
+    "823d4312-2405-43db-90ea-3d9b303ac07a",
+    "b19ffd92-01bd-5c0b-9643-e7407137ea5e"
+  ],
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "See docs/notes/contingency-receptivity-c2.md#can-the-whole-unreceived-act-be-absent. Identity excludes retaining the bearer while removing its identical act. Joint omission requires no dormant constituent, but needs an independent warrant of admissibility. A route to the same individual's necessity would exclude both no unreceived actuality and replacement by another unreceived act. Population and transworld individuation can be assessed independently. Neither local uniqueness nor an existentially necessary power-holder meets both obligations. Under the strict no-ground stipulation, an affirmative answer requires primitive permission. The reviewed prior parity assessment d067722e is retained. No new theorem or premise effect. Independent challenge at note blob 077ad0d2 and targeted recheck at c7a0b075 addressed indispensable giving, coverage of replacement acts and the strict no-ground condition. Final note blob b4611e17abc18008463712b6f3eb0b85cbcc8266 applies the reviewer’s exact recombination scope.",
+  "blocker": "A proof of necessity needs independent existential import at an act-essence or grounds for occupation and individual identity across every accessible order. A proof of possible absence needs warranted admissibility of joint omission at this very being. Conditional identity and the population and individuation controls separate inferences only.",
+  "evidence": [
+    "PR-1884",
+    "PR-1888",
+    "PR-1889",
+    "PR-1896",
+    "PR-1897",
+    "PR-1901",
+    "514112f2-cdc0-558e-aaed-fd0286bdc824",
+    "841e7c81-2137-511c-ba18-29620f7a1b16",
+    "037bfce4-c040-4b73-9db0-dd284c848f3c"
+  ]
+}

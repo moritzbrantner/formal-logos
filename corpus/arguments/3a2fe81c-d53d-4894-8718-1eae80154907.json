@@ -1,0 +1,51 @@
+{
+  "id": "3a2fe81c-d53d-4894-8718-1eae80154907",
+  "label": "The stage-one node, by the distributive powers at a concrete foundational being",
+  "premise_statement_ids": [
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410",
+    "eb41bc9a-c78f-475c-933e-46c332d0357d",
+    "c5da5e62-a9cd-4142-8d3a-a96f86548e88"
+  ],
+  "conclusion_statement_id": "b19ffd92-01bd-5c0b-9643-e7407137ea5e",
+  "inference_ids": [
+    "5f5189cc-66b1-4204-b68c-aa4a9e212a88"
+  ],
+  "meaning": "A concrete foundational being f at w is under no being's POWER_OVER_ESSE_1. Were it absent at a world accessible from w, it would be a concrete being contingent at w, and the holder would have POWER_OVER_ESSE_1 over it. So, with excluded middle, f exists at every world accessible from w; being concrete and actual, it witnesses the stage-one node.",
+  "definition_ids": [
+    "3fd6bddb-f10c-4df4-8694-3eb5e7c28617",
+    "7fcf846e-d0ef-400e-89c0-7c82b94edde7",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "4433942e-aaf6-55a9-b777-66e55638103d",
+    "d8e2ed12-8089-5202-ae51-e807cf611c76",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "f8948e28-b13a-5244-95f1-41a05cd4fff2",
+    "e1ff44df-ed97-5990-8424-1abd720f23ea",
+    "baddf770-36bf-542f-bb3c-2297342d5452",
+    "1d9aa4d9-18cc-5930-95fb-5af65e32c0f8",
+    "bf7eddca-8291-4744-8470-379babcd7781"
+  ],
+  "disambiguation_ids": [
+    "197f0097-f2ae-4a47-8770-3d43758f737b",
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "623ddbf6-9683-5361-bae4-e348a00ec680",
+    "5921354b-51e6-5da3-8d8c-e9041840fd9f",
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f",
+    "7507d645-874d-5434-add8-2f49c2801d36",
+    "be54be36-3ce8-53f9-8168-50d1114e6c76",
+    "f5dda05f-ba3c-4fdf-82a3-e4803c24ddb5",
+    "83264cf5-01fe-52fc-9a00-eeb024f6496e"
+  ],
+  "sense_bridges": [
+    {
+      "term": "NECESSARY",
+      "from": "8c881fa6-2b9f-44be-a32a-c8ef29c13643",
+      "to": "7af298fb-a2c4-4239-919b-7685f2e1f67a",
+      "statement_id": "b19ffd92-01bd-5c0b-9643-e7407137ea5e",
+      "role": "conclusion"
+    }
+  ]
+}

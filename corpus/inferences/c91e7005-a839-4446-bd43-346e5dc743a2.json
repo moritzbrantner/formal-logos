@@ -1,0 +1,12 @@
+{
+  "id": "c91e7005-a839-4446-bd43-346e5dc743a2",
+  "label": "The stage-one node, by Pruss's own direction (inference)",
+  "input_statement_ids": [
+    "1af99585-27ed-4477-94c8-1a2cc1e47145"
+  ],
+  "output_statement_id": "b19ffd92-01bd-5c0b-9643-e7407137ea5e",
+  "rule": "Forget the power and the absence world",
+  "meaning": "The witness of Pruss's direction is concrete, exists at w and at every accessible world: it witnesses the stage-one node on the frame's own profile.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

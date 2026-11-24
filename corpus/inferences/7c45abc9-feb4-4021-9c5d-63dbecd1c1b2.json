@@ -1,0 +1,15 @@
+{
+  "id": "7c45abc9-feb4-4021-9c5d-63dbecd1c1b2",
+  "label": "POWER_OVER_ESSE_1 over each actual contingent concretum, by the transfer bridge (inference)",
+  "input_statement_ids": [
+    "95bf8780-0e3c-49ba-b636-2274e2997a30",
+    "18e5bd4e-8178-468e-b867-fbaf9c5988ad",
+    "c76b6e2c-1ca0-47fd-a9d0-2c2faa3d1174",
+    "f0ac2f76-62fe-4b9b-8427-e0ca8d7a3cef"
+  ],
+  "output_statement_id": "eb41bc9a-c78f-475c-933e-46c332d0357d",
+  "rule": "Ground the joint absence, then pass from the collective power to each member by the transfer bridge",
+  "meaning": "A concrete being is contingent at w, so the joint absence fails at w, while P4-prime gives an accessible world where it holds; P1-prime gives a being y at w with a power for it; the transfer bridge gives y POWER_OVER_ESSE_1 over each concrete being contingent at w. Constructive.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

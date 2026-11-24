@@ -1,0 +1,26 @@
+{
+  "id": "25d4df96-f18b-4477-a7ce-11fa8c17cd83",
+  "label": "Esse exercised at a point: the principle is in act there (for esse, its act of being), a primitive",
+  "term": "exercise of the act of being at a point (the Exercised parameter)",
+  "definition": "EsseExercisedAt Exercised v p := Exercised v p, for a point v and a principle p (of the type of the q.3 a.4 represented esse and essence): p is in act at v; for an esse principle, that act of being is exercised at v. A parameter wrapper over the primitive Lean parameter Exercised of type W → P → Prop of TruthCore.Ontology.ExistenceInEssence, constrained only by the premises that use it: the act–fact link (EsseExercisedWhereExists: a being's act of being is exercised exactly at the points where the being exists) and exercise in the nature (IdentityPutsExerciseInNature). Sense WORLD_RELATIVE_EXISTENCE_METAPHYSICAL_ESSE_NECESSITY_6 of DISAMB-EXISTENCE-ESSE-SUPPORT.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Ontology.ExistenceInEssence.EsseExercisedAt",
+  "note": "Stipulated for #1887 (docs/notes/existence-in-essence-identity.md). It is world-indexed, unlike the q.3 a.4 InAct x esse and the frame respect CausalityFrame.esse (sense _5 of the same disambiguation), and it is not the world-relative existence fact ExistsAt (sense _1): the passage between them is the explicit OPEN premise EsseExercisedWhereExists, listed as a sense bridge where an argument uses both. ST I q.3 a.4 ad 2 (read, New Advent) distinguishes 'to be' as the act of essence from 'to be' as the composition of a proposition; this primitive represents the first, ExistsAt is closer to the second. Attribution deferred. The models of docs/notes/existence-in-essence-identity.md give distinct beings distinct esse principles (Pr), so the act–fact link does not force them to co-exist. The binder Exercised of EsseExercisedWhereExists and IdentityPutsExerciseInNature is tagged with this sense.",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "EsseExercisedAt Exercised v p says that the principle p is in act at point v; for the esse of a being, that being's act of being is exercised there. A model supplies the relation; Lean fixes only its type.",
+    "examples": [
+      "Socrates' act of being is exercised at a world where Socrates lives.",
+      "In a model where both beings exist only at the actual point, every esse principle is exercised exactly there."
+    ],
+    "exclusions": [
+      "The truth of the proposition 'x exists' (the composition of a proposition, q.3 a.4 ad 2's second sense).",
+      "The q.3 a.4 InAct x esse and CausalityFrame.esse, which have no world index.",
+      "World-relative existence ExistsAt: related only by EsseExercisedWhereExists."
+    ],
+    "open_obligations": [
+      "No structural property is assumed; in particular nothing says an act is exercised only where its bearer exists, except the explicit act–fact link.",
+      "Whether the act-of-being notion is coherent at all is contested (the quantifier view of existence; see the note)."
+    ]
+  }
+}

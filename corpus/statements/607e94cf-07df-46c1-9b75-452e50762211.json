@@ -1,0 +1,16 @@
+{
+  "id": "607e94cf-07df-46c1-9b75-452e50762211",
+  "label": "At each accessible world lacking the actual contingents, a being there has power for w obtaining",
+  "paraphrase": "OPEN (Aristotelian grounding at a non-actual world, Pruss's own direction; analyst formulation): at every world v accessible from w that lacks every concrete being contingent at w, if w is accessible from v and v is not w, then some being existing at v has, at v, a power (PowerFor) for the proposition that w obtains. Pruss ('A combined account', read 2026-11-23, navigation only): 'there is a substance x in w1 which could have initiated a causal chain that could lead to w0 being actual'.",
+  "lean_declaration": "TruthCore.Modal.PrussPowerPremises.ActualityGroundedAtAbsenceWorlds",
+  "definition_ids": [
+    "bf7eddca-8291-4744-8470-379babcd7781",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ],
+  "disambiguation_ids": [
+    "623ddbf6-9683-5361-bae4-e348a00ec680",
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f"
+  ]
+}

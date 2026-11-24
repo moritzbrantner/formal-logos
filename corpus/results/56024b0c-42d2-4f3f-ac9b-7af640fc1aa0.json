@@ -1,0 +1,11 @@
+{
+  "id": "56024b0c-42d2-4f3f-ac9b-7af640fc1aa0",
+  "label": "The actual contingents' joint absence by withholding, under the creator reading",
+  "argument_id": "f872a512-c5a9-4188-8e6d-4823c184da1e",
+  "challenge_module": "TruthCore.Results.Modal.PrussPowerPremises.Challenge",
+  "solution_module": "TruthCore.Results.Modal.PrussPowerPremises.Solution",
+  "theorem": "TruthCore.Results.Modal.PrussPowerPremises.actualAbsenceRealizedByWithholding",
+  "comparator_config": "results/56024b0c-42d2-4f3f-ac9b-7af640fc1aa0/comparator.json",
+  "status": "solution-present",
+  "description": "Under the creator reading, the power for the joint absence is realized by withholding: the abstention structure of ST I q.104 a.3 ad 1 and ad 3 (annihilation would be 'a mere cessation of His action'; navigation only). Not a transcription. Establishes no premise. With P5 the holder is a two-way giver in the withholding form and not a fixed giver (controls, law 6); with the withheld-giving bridge it yields the transfer's conclusion without the transfer premise."
+}

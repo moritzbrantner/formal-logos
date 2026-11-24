@@ -1,0 +1,29 @@
+{
+  "id": "9d7b8ae0-474d-4ae4-9d08-019cffbdea7b",
+  "label": "Test contingent-foundation exemptions under parity and determining explanation",
+  "date": "2026-11-23",
+  "statement_ids": [
+    "608a262d-08fe-4dfd-9413-67e2ecf35b84",
+    "8a8d00e9-12b6-4cf0-b662-431cc4addd49",
+    "6508c239-b36d-4010-b9e4-ff0cdd5757e5",
+    "b19ffd92-01bd-5c0b-9643-e7407137ea5e"
+  ],
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "See docs/notes/psr-self-application-756.md#does-a-contingent-foundation-merit-exemption-from-determining-explanation-2026-11-23. Distinguishes actual adequate existential reasons (E) for contingent concrete individuals, determining reasons (D) and a stance's demand. Each negation requires an actual counterinstance at its own standard. The existing parity results concern some reason. In the analyst extension, uniformity transfers a determining demand to the accepted fact. Honoring it yields an explaining fact with the required modal sufficiency in the picture. Its absence there contradicts the premises. The stance can mistakenly believe it absent. Factivity and explanatory adequacy are further conditions. Changing which individual fills a role can leave n present as a dependent. Failure of a proposed basis to determine n's existence requires an accessible absence of the same n with the entire basis holding. A complete initial inventory and production rule can exclude a further newly appearing brute agent within their warranted scope. An additional basic agent outside the proposed inventory tests that scope. A change of the initial inventory tests which inventory obtains. Evidence for a restriction, the restriction's actual governance and the existence of its concrete bearer are distinct. LawActuality.omissions preserves mathematical uniqueness with no state-bearers present. A contingent structure can explain a restriction that follows from its nature while leaving its own instantiation open. A derivative-only rival may take a constrained order as primitive. Apply the same requirements to personal and impersonal sources. Actual nonnecessitating production can explain the product while leaving a contrast about the exercise open. The #755 collapse core requires additional premises beyond D. Moderate provisional preference for E over a brute exception, suspension about universal D. Token coverage and BX1/BX2 give B2. In firstMoverNecessaryByEsseCause the mover exists at w by B0. B3 gives its hypothetical distinct esse-cause simple priority and B1 excludes that distinct predecessor. The unprioritized control retains B2 and a contingent first mover without B3.",
+  "blocker": "Actual production and receipt support E for produced and received beings. Their extension to an underived simple individual and the adequacy-to-token and concrete-scope bridges remain open. Compare the proposed global constraint against a fixed candidate extra bearer and establish independently which agents its inventory covers and why the constraint applies here. Only a contingent concrete bearer falls under E or D on that account. The restriction's truth needs broader fact coverage. For D, start with acting's contingent .member 0 and distinct .target at world 0. Compare retaining and dropping the necessary source's explanation of the act while fixing the act-to-outcome explanation and truth conditions. The #942 ProductiveAxis uses separate #735 overlays. A joint interpretation of Supply and personal agency at this same exercise remains to be given.",
+  "evidence": [
+    "PR-1908",
+    "7bf9cb77-0418-4363-9298-266eac105edd",
+    "19260537-f06d-451c-9549-b248fefb14fd",
+    "6e7f5afd-4d72-466d-bba0-b9eead60d2d2",
+    "8fba6dd2-fefd-49d3-b832-9323f61477dd",
+    "a1056aab-cace-47f4-a12f-f29519964d59",
+    "b63a1f75-e355-541f-a462-43f079a8b73c",
+    "e5d49f99-685f-4c4e-8c8b-35cb21e1ec24",
+    "1f678ab6-cc89-5796-b3fd-c4be88298e16",
+    "8cc169e3-7e88-48b1-b542-a6fdaaf8d41b",
+    "2b71a3ad-7dc9-405c-aae8-783c850ff2b0",
+    "43d045d9-9713-5539-9054-8b1a52290d04"
+  ]
+}
