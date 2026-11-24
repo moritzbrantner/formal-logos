@@ -62,3 +62,226 @@ Eight premises are open leaves of **every** modal-free route. Together they form
 To test whether a crux has unacceptable consequences, these are the premises whose defeat would remove the modal-free routes. Seven of them would each remove all 25 routes at once. `d9fad785` would remove 21. The Fourth Way grade premises carry 19–22 routes, the First Way core and the attribute bridges about 12–16, and the modal crux (`c71c068c`) carries 2.
 
 Reproduction uses `truth frontier --json` and `truth frontier --routes --json`, the corpus arguments and results, and the fixpoint above. No CLI command answers the query "which routes are free of a class of statements" yet. Adding one belongs to the tooling follow-up.
+
+
+## Follow-up (2026-11-24): God-specific esse causation instead of genus causality
+
+**Draft research handoff; not certified, not a revised frontier measurement.**
+Owner-requested continuation of #1928, dispatched as #1936 and #1937. Inspected
+main `62bb4ce3cddf21bb2ebcd41489085d9fa99d3098` and the then-open #1928
+head `1aea6f30a4a67767f531071144b48c7031394b4a`. The #1902 measurements
+above remain historical. No changes to registered propositions, proofs,
+sources, meanings, attempts, or computed closure are proposed in this draft.
+Attribution deferred: the following are analyst deductions from existing
+formal readings, not new claims about source texts.
+
+### 1. A direct God-uniqueness candidate
+
+The three premises registered by #1928's `14cbab05` already exist on main:
+
+- `18561596`: `MaximumHasNoDistinctEsseCause InAct MoreIn CausesIn esse`.
+- `fad8af3e`: `SomeBeingMaximalInBeing InAct MoreIn esse`.
+- `86d02b69`: `GodCausesBeingOfAllOthers IsGod CausesIn esse`.
+
+Use the same Being, Respect, InAct, MoreIn, CausesIn, esse and IsGod. In the
+exact definitions, `IsMaximalIn` is definitionally `IsMaximumIn`:
+`InAct m esse ∧ ∀ y, ¬ MoreIn esse y m`. The causal converse quantifies
+over every distinct carrier individual, not only actual bearers.
+
+Given a maximal witness m, take arbitrary g satisfying IsGod. If g ≠ m,
+the converse supplies CausesIn g m esse; exclusion contradicts this.
+Hence g = m. In classical logic all God candidates coincide; the existing
+`GodIsOne` (`33b18ae7`) follows. More strongly, **if a God exists**, every
+maximum at esse equals that God, not merely every God being maximal. Without
+the existence premise, the joint bundle permits zero Gods. It does not
+establish that a maximum exists in every possible world, that every maximum
+causes all beings, or that arbitrary maxima are unique unconditionally.
+
+Source definitions:
+[exclusion](../../TruthCore/Case/Catholicism/MaximalBeingCauseExclusion.lean),
+[causal converse](../../TruthCore/Causality/GodMaximalCausal.lean),
+[maximal existence](../../TruthCore/Causality/TermSenseForks3.lean),
+[GodIsOne](../../TruthCore/Case/Catholicism/StageTwo.lean).
+Existing stage-two uniqueness `bc0cff0b` uses `d9fad785`, `d5a94eb1`,
+`4c79298d` and explicit excluded middle; the q.11 nature argument
+`d602ba9e` already avoids genus causality via a different substantive bundle.
+The new candidate is not the first genus-free uniqueness route.
+
+A second variant better fits the stage-two assembly: given
+`GodIsMaximalInBeing` (`4c79298d`), exclusion and the causal converse,
+take two God candidates g and g'. For g' ≠ g, the converse makes g cause
+g'; g' is maximal, so exclusion rejects that cause. This does not require
+a separate maximal-existence premise. When the assembly already supplies
+`d5a94eb1`, its causal comparison can replace exclusion using `8bbe817d`
+or the direct contradiction with maximality. In the existing explicit
+logic reading retain `ee4ab504` as needed for equality; the proposed
+direct #1928-bundle proof may use the same classical background as #1928,
+subject to the repository's logic-floor and unused-premise checks.
+
+**Small-model diagnostic (not Lean checked).** Exhaustive Python evaluation
+of the definitions for two individuals, one respect, all four Boolean
+predicates/relations (IsGod and InAct: two bits each; MoreIn and CausesIn:
+four bits each) tested all 4096 structures. 172 satisfied all three premises,
+56 of these had at least one God, and zero falsified at-most-one-God.
+Zero joint models had both a God and two maxima. Dropping exactly one of the
+three premises admitted 60, 196 and 116 two-God structures respectively
+(in exclusion, maximal-existence, causal-converse order). This checks the
+finite encoding, not philosophical necessity or global minimality.
+
+Reproduction (standalone Python; not a new repository tool):
+
+```python
+from itertools import product
+D = range(2)
+def bits(n):
+    return list(product([False, True], repeat=n))
+joint = nonvacuous = failures = multi_max = 0
+omissions = [0, 0, 0]
+for G, A, M, C in product(bits(2), bits(2), bits(4), bits(4)):
+    maxima = [m for m in D if A[m] and not any(M[y*2+m] for y in D)]
+    H = [
+        all(not C[c*2+m] for m in maxima for c in D if c != m),
+        bool(maxima),
+        all(C[g*2+y] for g in D if G[g] for y in D if y != g),
+    ]
+    if all(H):
+        joint += 1
+        nonvacuous += any(G)
+        failures += sum(G) > 1
+        multi_max += any(G) and len(maxima) > 1
+    for i in range(3):
+        omissions[i] += (
+            sum(G) > 1 and not H[i] and all(H[j] for j in range(3) if j != i)
+        )
+assert (joint, nonvacuous, failures, multi_max, omissions) == (
+    172, 56, 0, 0, [60, 196, 116]
+)
+```
+
+Concrete two-actual-bearer controls, with identity interpreted normally and
+unlisted relation entries false: the positive model has God = {0},
+MoreIn = CausesIn = {(0,1)}. For omission of exclusion, both are Gods,
+MoreIn empty and CausesIn = {(0,1),(1,0)}. For omission of maximal
+existence, both are Gods and MoreIn = CausesIn = {(0,1),(1,0)}.
+For omission of causal converse, both are Gods and both relations empty.
+These are structural surrogates: the omitted exclusion model need not
+satisfy causal superiority; the omitted maximal-existence model permits
+mutual comparison; the omitted causal-converse model has no causation.
+Certify relevant controls in Lean and inspect stronger background models
+before interpreting them as rival metaphysics.
+
+### 2. Three substitutions in the same attribute assembly
+
+Existing solutions explicitly use general genus causality at esse in just
+three local calculations in the all-attributes assembly:
+[GodIsOne](../../TruthCore/Results/Case/Catholicism/StageTwo/GodIsOne/Solution.lean),
+[GodIsPerfect](../../TruthCore/Results/Case/Catholicism/StageTwo/GodIsPerfect/Solution.lean),
+[GodIsSupremelyGood](../../TruthCore/Results/Case/Catholicism/StageTwo/GodIsSupremelyGood/Solution.lean),
+and [ClassicalAttributesAll](../../TruthCore/Results/Case/Catholicism/StageTwo/ClassicalAttributesAll/Solution.lean).
+The following are complete candidate premise bundles for those local
+conclusions, not registered proof edges:
+
+| Target | Candidate inputs | Removed from corresponding stage-two bundle |
+|---|---|---|
+| `33b18ae7` GodIsOne | `4c79298d`, `86d02b69`, `d5a94eb1`, `ee4ab504` | `d9fad785` |
+| `2639f425` GodIsPerfect | `86d02b69`, `64498e7e`, `ee4ab504` | `4c79298d`, `d9fad785`, `7067553d` |
+| `e0dae79f` GodIsSupremelyGood | `4c79298d`, `86d02b69`, `00e962ae`, `f8ba2429` | `d9fad785`, `7067553d` |
+
+**Perfection.** The current theorem `GodIsPerfect.godIsPerfect` handles
+x = g by equality. In the distinct case, replace
+`hGenus esse g (hMaximal g hg) x hOther (hBeing x r hx)` with
+`hCausal g x hg hOther`. The existing `hPreexist` transfers the
+represented perfection of x to g. Maximality and actuality-only-through-esse
+are not otherwise used by this proof. This conclusion is the existing
+represented-perfection predicate, not a resolution of the formal/eminent
+or pure-perfection interpretation problem.
+
+**Supreme goodness.** The current theorem uses `hMaximal` to establish
+actual esse of g; the existing `hGoodness` supplies goodness at esse.
+For each distinct x in act at r, `hCausal g x hg hOther` supplies the
+esse-cause argument to `hPerfections`. This avoids both genus causality
+and `hBeing` in that calculation, not the substantive goodness or
+perfection-causation premises. It is not a theorem of moral benevolence.
+
+**Assembly.** In the existing `ClassicalAttributesAll.godHasClassicalAttributes`
+body (argument `79252a71`, conclusion `d5ac1620`), `hGenus` is passed
+only to hOne, hPerfect and hGood; `hBeing` is passed only to the latter two.
+Replace those three calls by the new siblings (the first uses hMaximal
+and hCauseMore already available). All other arguments and the exact
+nine-predicate `hSuffice` remain unchanged. Thus the proposed sibling
+replaces `d9fad785` by `86d02b69` and removes `7067553d` from this
+particular assembly, while retaining every other premise in `79252a71`.
+For the local-logic sibling `6c6549ae`, examine its separately registered
+`12dc2662` and local equality decisions rather than treating statement IDs
+as interchangeable. No existing Challenge is to be weakened.
+
+The existing modular [classical God assembly](../../corpus/arguments/classical-god-assembly.json)
+`3769b87e` consumes `8626f8a5` (GodExists), `33b18ae7` and `d5ac1620`
+to obtain `20a2b6a3` on the same actual witness. This identifies a concrete
+downstream destination for the proposed siblings. It does not supply
+`8626f8a5`. The all-attributes proof itself is universal over IsGod; using
+its conditional conclusions to infer the initial existence witness would
+be circular or vacuous. Other root routes may inline genus causality in
+constructing their stage-one witness.
+
+### 3. The substitute is not simply a weaker axiom
+
+In the encoded setting, `d9fad785` quantifies over every respect and
+maximum, restricted to actual bearers of that respect. `86d02b69`
+quantifies over God candidates at esse, covering all distinct carrier
+individuals. Neither entails the other even with nonempty IsGod,
+God-maximality and causal superiority.
+
+Two small structural controls (two individuals 0,1; respects esse,r;
+God = {0}; unlisted facts false):
+- InAct at esse = {0}, InAct at r empty, MoreIn and CausesIn empty.
+  Genus causality holds vacuously for distinct actual bearers, God is
+  maximal, causal superiority holds, but the God-specific converse fails
+  at the distinct carrier individual 1.
+- InAct at both respects = {0,1}; MoreIn and CausesIn at esse = {(0,1)};
+  at r both relations empty. The God-specific converse, God-maximality and
+  causal superiority hold; genus causality fails at r, since both actual
+  bearers are maximal there but no distinct causal edges hold.
+
+These are finite definition evaluations, not checked Lean certificates.
+The first model's nonactual carrier and the second model's unrestricted
+respect are essential to the displayed failure. If the intended application
+makes every carrier actual at esse, the first contrast is not admissible
+under that added assumption. If the genus principle is restricted to esse
+only, the second contrast no longer witnesses the same claim. Both
+scope differences deserve explicit controls, not a philosophical verdict
+from a smaller premise count.
+
+### 4. Current assessment and next discriminating test
+
+The God-specific premise is relevant positive conditional support because
+it directly supplies the cause used by these proofs, without requiring
+that every maximum of every genus cause the other members of that genus.
+It is not yet shown to have stronger warrant: the converse has its own
+naming and actual-carrier scope burden, and a plural-source rival can
+deny that one God candidate is the cause of every distinct carrier.
+The shared causal-superiority, causal adequacy and attribute-identity
+commitments remain. No prior premise-warrant assessment is superseded.
+
+#1936 owns uniqueness; #1937 owns perfection, goodness, assembly and
+downstream exclusion audit. Before formalizing, run the existing
+`truth related`, `dossier`, `novelty`, `semantics` and proof/binding gates
+on the refreshed corpus. Use exact-bundle discovery once #1928 is available,
+or construct the direct proofs with the current existing tools. Verify
+positive/omission/independence controls, actual same-witness consumers and
+reviewed senses, not only search success. Compare closure against the
+#1902 procedure with modal necessity excluded, then remove `d9fad785`
+alone and its definitionally matching sibling(s) together; isolate baseline,
+#1928, uniqueness, attribute siblings and integrated assembly. Report actual
+reachability of GodExists, UniqueClassicalGodExists and the root arguments
+separately, including the first remaining upstream bottleneck and the
+computed `truth frontier-diff`. A hypothetical graph edge is not a new
+registered proof or an established premise.
+
+**Blockers:** no prepared checkout, Lean, truth CLI, or independent semantic
+challenger was available for this draft. The two-bearer diagnostic was
+executed in Python; source definitions and the all-attributes proof were
+read at the stated main revision. No formal result or premise change is
+claimed. The independent final challenge and CI on the final proposed
+formal content remain required. Retain these issues until the promised
+integration or an exact unresolved blocker is documented.
