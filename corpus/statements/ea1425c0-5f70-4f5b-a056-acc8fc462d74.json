@@ -1,0 +1,22 @@
+{
+  "id": "ea1425c0-5f70-4f5b-a056-acc8fc462d74",
+  "label": "Some actual root is fixed toward a being its end does not require, and two-way toward another",
+  "paraphrase": "OPEN standing rival to WN (0266eac2), analyst formulation, unattributed: some actual root n of the selected grounding relation G at w exercises a rational power toward a being x other than itself, is fixed toward x (NECESSITATE_5: gives x being at w and at every accessible world where n exists), x is not required by n's own end (EndRequires, the means-to-end relation), and n is two-way toward some being. Combines the necessary-diffusion thesis (Plotinus; Avicenna's First as standardly reported; Kretzmann; cited for the diffusion component only, navigation) with free giving of the contingents. No source is recorded as holding the combination; it is #1947 section 9's selective version. The Lean fixes n toward x; with a necessary root and factive giving, x then exists wherever n does. Neither necessity nor intermediacy of x is stated. #1947's MixedModeRoot (b8ee1a50) has FixedTowardAt g d, TwoWayTowardAt g c and the failure of WN with EndRequires empty, and keeps N3's other premises: it witnesses the shape, and does not register this statement. Stated only: no argument here supports or refutes it.",
+  "lean_declaration": "TruthCore.Causality.NarGrafts.SelectiveNecessaryDiffusionAtRoot",
+  "definition_ids": [
+    "02aa24f8-e6cc-4d47-8b34-d3b7149e7ee8",
+    "8c945061-acb2-47e1-9865-d10f8f925757",
+    "90719cb5-43c2-4677-8ad7-20e077e28ac9",
+    "b8061228-9131-40f2-83bd-cb7d719bd0a0",
+    "582f44c3-7778-4806-b385-e1eff852ac5e",
+    "62dfa893-b633-4513-9790-8f9a0a3087e0",
+    "c57e2682-08e6-527e-950f-0fa0a7ff11ef",
+    "a1b2e330-388f-4120-bc5c-969642317792",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87"
+  ],
+  "disambiguation_ids": [
+    "5836e1f6-ccce-4ce8-b9d6-c89afc7120bb",
+    "e5417243-d6f3-4776-9694-40d85bb34ff4",
+    "623ddbf6-9683-5361-bae4-e348a00ec680"
+  ]
+}
