@@ -3921,3 +3921,378 @@ absent. The earlier source review and CI evidence do not certify
 this new head. The independent semantic challenge and new-head
 CI/frontier comparison are pending. No existing reviewed judgment
 is changed.
+
+
+## Does intrinsically grounded self-understanding require real articulation? (2026-11-25; provisional)
+
+### Reuse and scope
+
+Continue the essential-exclusion test at PR head
+`9b0a68d7ab3acfd3b5c36335404a6d42e904ba35`. The prior four-scenario
+and 3,072 finite-family diagnostic checks were reproduced locally.
+Targets: `d164b1ff`, `c4fb87a6`, `29818edd`; destination is the same
+actual source's intrinsic intellectual perfection, not a second
+first-source witness. Reuse #1879/#1892, attempts `8e3a7c52` and
+`58750abd`, the [immanent-primary-form interface](../../TruthCore/Causality/IntentionalExemplarExtension.lean)
+and the reviewed [Plotinian comparison](../immaterial-intellect-reception.md#the-strongest-simple-cognition-reply-and-the-remaining-disagreement).
+The earlier source readings and reviewed assessments retain their status.
+The present analyst comparison does not certify their witness bytes anew.
+
+The source-backed rival is not simply an insensible mechanism.
+The prior note's reading of V.4.2 admits qualified self-presence,
+while VI.9.2/.6 object to the articulated character of proper noesis.
+The Thomistic reply in q.14 aa.2 and 4 identifies the knower's act,
+intelligible object and subsistent essence in reality while retaining
+positive cognition. Both are substantive reconstructions; neither
+follows from a negative description of immateriality or firstness.
+The question is whether the articulation necessary for a *genuine*
+actual apprehension requires a real internal differentiator, not
+whether a reflexive formula is grammatically well formed.
+
+Fix one actual concrete source g, its own intentional exercise a,
+and the intended primary object o. The relevant candidate is true,
+intrinsically grounded apprehension of the source's actual reality
+by that same source, not just the correct specification of a distinct
+secondary's response. Do not identify every true representation,
+objective intelligibility, or pre-reflective consciousness with
+intellectual comprehension. If the chosen first-source interpretation
+identifies g, a and o, this is a hypothesis about real identity;
+it is not the existing Lean theorem's conclusion.
+`SubsistentActHasOnlyOwnSpecies` identifies an immediate form with
+the supplied own-form value, not all three real act/object/subject
+tokens, and `IntrinsicSelfKnowledge` does not entail comprehensive
+knowledge of every actual determination. These gaps remain explicit.
+
+### 1. The norm of an act is not necessarily an additional real actualizer
+
+There are three different articulation claims:
+
+- **Intentional:** knowing is the knowing *of* something by someone;
+  the object's role fixes what the episode is about and what would
+  count as success or error. Different intentional roles need not
+  signify two bearers.
+- **Real dependence:** the object, its intelligible form, or a further
+  cognitive act must be a real actualizer of this intellectual act,
+  distinct and prior in a selected constitutive dependence relation.
+- **Real but non-constitutive distinction:** the roles correspond to
+  irreducibly different actual aspects, even if neither is an
+  independently existing part, giver or actualizer. Whether such
+  articulation conflicts with the requisite unity is another question.
+
+In finite acquired knowledge the thing can be as it is independently
+of our judgment, and a received representation or causal process can
+actualize that judgment. The relation of correctness to its object,
+the acquisition of the judgment, and the efficient or constitutive
+conditions of its actual existence are identifiable explanatory jobs.
+They can come apart: after acquiring a true judgment one can lose its
+original evidence while retaining the judgment, or maintain the same
+mental state as its external truth conditions change. Such cases give
+a positive rationale for not making truth/factivity, epistemic basing
+and actualizing dependence one relation.
+
+For the proposed non-received cognition of one's own present act,
+the object that fixes the correctness of apprehension is not a
+previously unknown external item. If the act really apprehends its
+own actual reality, that very reality supplies what is apprehended
+and the standard to which the apprehension answers. This permits a
+positive account of epistemic immediacy without a second productive
+transaction: the source neither makes its own existence true by
+judging it, nor acquires a representation from a prior giver. The
+truth of the judgment depends on the object's actual character.
+It does not follow that the knowing act must therefore receive
+actuality from that object as from a distinct real source.
+
+The positive account still needs the intrinsic intentional grasp:
+identity with the actual object is no evidence by itself that the
+source understands. The prior `ActApprehendsPrimaryObject` rule
+requires an actual intellectual act, not merely self-intelligibility.
+Nor is an epistemic or fact-level ground automatically a strict
+dependence relation on the bearer/act/object tokens. A critic may
+give a substantive reason that cognitive grounding is inherently
+a real actualization by another, or that the truth and intellectual
+act must be distinct real facts even with identical underlying
+bearer. The latter is not settled by a priority relation on
+tokens.
+
+**Role-lifting test.** If the two explanatory arrows from subject and
+object to the knowing act are read as strict ontic priority between
+their real referents, and all three denote g, the resulting relation
+requires strict priority of g to itself. The same follows when
+either required prior role denotes the very act. An order of
+distinct *role descriptions* can be acyclic while its image under
+real identity is cyclic. Therefore the numerical-identity account
+cannot simply inherit a strict-dependence interpretation of
+intentional direction. Equally the objection cannot establish
+strict real priority merely by drawing arrows between distinct
+role names. The substantive premise is the lift of one or more
+relations into the selected strict ontic relation.
+
+This is stronger than noting that a reflexive binary predicate is
+consistent. It identifies the exact source of a contradiction in
+the positive identity account under the priority reading. It is
+not an answer to a pure intelligible-articulation principle that
+makes no strict priority claim. The earlier strict-constituent
+test and the present priority test answer different possible
+reconstructions of that objection.
+
+### 2. The complete self-comprehension test
+
+Consider a source which already actually understands its own
+reality. Strengthen that to **complete act-directed self-knowledge**:
+every actual intrinsic act of this very subject is apprehended
+truly, with appropriate cognitive grounding, by some actual
+intrinsic knowing act of this same subject. This is a deliberately
+stronger premise than minimal `IntrinsicSelfKnowledge`. Applying
+it to a purported exhaustive self-comprehension of the source's
+own actuality needs a separate scope bridge: a grasp of a whole
+may be implicit rather than an enumerated set of explicit
+judgments. No assumption is made that there is a separate content
+token or a separate knowing act for each known act.
+
+Suppose the rival additionally insists on **strict act mediation**:
+whenever one such act apprehends another, the apprehended act is
+strictly ontically prior to the apprehending act, in one
+irreflexive transitive order on the actual acts. This is stronger
+than requiring different intentional roles, two acts in some
+ordinary introspection, or even a distinct act for every episode.
+The stronger premise is a precise test of the actualizer
+interpretation, not an attribution of that premise to Plotinus
+or to every higher-order theory.
+
+Let A be the nonempty set of actual intrinsic acts; K(a,b) means
+b truly apprehends a with the required grounding. Then:
+
+```text
+Complete act-directed coverage:  for every a in A, some b in A satisfies K(a,b).
+Strict mediation:                K(a,b) implies a ≺ b.
+Finite A, or an actual maximal member for ≺: incompatible with both.
+```
+
+Proof: take a maximal member m of the finite nonempty strict order
+(or the separately supplied maximal member). Coverage supplies a
+b with K(m,b), so m ≺ b, contrary to maximality. Equivalently, in a
+finite graph where every node has an outgoing edge, repeatedly
+following edges reaches a cycle. No strict partial order contains
+one. No premise about modal necessity, maximal causal superiority,
+or the source's numerical degree of perfection occurs.
+
+The consequences for the classical/rival comparison are limited
+but substantive:
+
+- Under an independently warranted complete act-directed coverage
+  requirement and a finite intrinsic-act roster, **some** apprehension
+  cannot be interpreted as strict dependence of a knowing act on its
+  object act. This alone does not say which one or establish
+  self-apprehension by identity in a multiple-act bearer.
+- If the source has just one actual intrinsic act and coverage is
+  granted, that very act must apprehend itself. A strict mediation
+  reading is then contradictory. This is conditional on cognition
+  and coverage and the one-act hypothesis, not an inference from
+  simplicity to cognition.
+- A distinct higher-order act can monitor a first-order act without
+  a regress when the monitor is outside the knowledge-coverage
+  requirement. This is a serious option for finite, partial
+  consciousness. If the monitor is an actual intrinsic act of a
+  source that is supposed exhaustively to apprehend every such act,
+  leaving the monitor unapprehended gives up the stipulated
+  completeness. A noncognitive monitoring state outside the act
+  roster is another possibility; including it requires a wider
+  coverage argument, not an automatic extension of this result.
+- Infinitely many actual acts can satisfy these two graph
+  conditions with no maximal member. Ordinary well-foundedness
+  in the predecessor direction does not exclude an infinite
+  *ascending* chain. Do not infer a forbidden infinite regress
+  without defending the relevant no-ascending-chain, maximality
+  or simplicity premise. A cyclic interpretation may provide
+  coverage but is not strict ontic priority.
+- Rejecting strict mediation is compatible with an intentional
+  articulation that is real but not a strict priority of act
+  tokens. The strongest simplicity objection must still address
+  that branch; the proof does not settle it.
+
+This supplies a positive reason to investigate an intrinsic,
+non-acquired mode of self-presence when evaluating comprehensive
+knowledge, rather than taking a separate prior object-act or
+monitoring act as universally mandatory. It is not a proof that
+such a mode occurs in an ultimate source, nor that complete
+self-knowledge is the only valuable form of intellectual
+perfection.
+
+### 3. Ordinary self-awareness as a restricted horizontal lead
+
+A person absorbed in understanding a proof can be immediately
+aware of the ongoing experience rather than acquiring this fact
+only from a later reflective report. A separate act may articulate
+what that person was thinking. It is an open question whether
+the immediate awareness is a constituent of the original
+cognitive act, an identity-level feature of that act, or supplied
+by distinct monitoring that need not itself be conscious.
+First-person access gives a positive reason to consider
+non-acquired awareness, but ordinary cases do not distinguish
+all those mechanisms, and a finite person's awareness is not
+proof of an absolutely simple intellect.
+
+The [SEP higher-order consciousness survey, §6](https://plato.stanford.edu/entries/consciousness-higher/#SelRepHigOrdThe)
+distinguishes same-state identity and part-whole accounts of
+self-representational consciousness. The
+[phenomenological self-consciousness entry, §1](https://plato.stanford.edu/entries/self-consciousness-phenomenological/)
+describes prereflective awareness, and the discussion of
+higher-order monitoring recognizes the reply that a monitor
+need not be conscious. These accessible secondary discussions
+were consulted for conceptual comparison, not read as pinned
+primary-source witnesses or registered as stating claims.
+They concern phenomenal consciousness rather than the full
+content of intellectual apprehension, so they support taking
+the mechanism fork seriously, not deriving simple divine
+intellect by analogy. The coverage premise above is specifically
+stronger than the premise that every conscious experience is
+monitored; ordinary higher-order accounts can reject it.
+
+### 4. Executed structural checks
+
+The following code, executed locally, checks both the role-to-token
+lift and the finite complete-coverage obstruction. It adds no
+Lean or corpus result. All selected knowledge/grounding labels
+are stipulated; it is not a cognitive simulation or a new
+formal model of the full `CausalityFrame`. The roster and esse
+edge in the final controls are fixed but do not constrain the
+graph theorem, so those controls do not certify actual causal
+production or a metaphysical source.
+
+```python
+from itertools import product
+
+def acyclic(nodes, edges):
+    remaining = set(nodes)
+    while remaining:
+        terminal = {a for a in remaining
+                    if not any(u == a and v in remaining for u, v in edges)}
+        if not terminal:
+            return False
+        remaining -= terminal
+    return True
+
+roles = ('subject', 'act', 'object')
+semantic = {('subject', 'act'), ('object', 'act')}
+role_maps = 0
+for values in product(range(3), repeat=3):
+    den = dict(zip(roles, values))
+    lifted = {(den[u], den[v]) for u, v in semantic}
+    all_distinct_from_act = (den['subject'] != den['act'] and
+                             den['object'] != den['act'])
+    assert acyclic(set(values), lifted) == all_distinct_from_act
+    role_maps += 1
+assert role_maps == 27
+
+# K(a,b): actual act b truly and groundedly apprehends act a.
+checks = complete = 0
+for n in (1, 2, 3):
+    acts = set(range(n))
+    pairs = [(a,b) for a in acts for b in acts]
+    for flags in product((False, True), repeat=len(pairs)):
+        K = {p for p, on in zip(pairs, flags) if on}
+        covered = all(any(a == u for u,v in K) for a in acts)
+        if covered:
+            complete += 1
+            assert not acyclic(acts, K)
+        checks += 1
+assert checks == 530 and complete == 353
+
+actual = {'g', 'x'}
+esse_edges = {('g','x')}
+assert len(actual) == 2 and esse_edges == {('g','x')}
+assert not acyclic({0}, {(0,0)})  # reading K as strict priority
+assert acyclic({0}, set())       # K need not be read as priority
+assert acyclic({0,1}, {(0,1)})   # partial monitoring
+assert not all(any(a==u for u,v in {(0,1)}) for a in {0,1})
+assert not acyclic({0,1}, {(0,1),(1,0)})  # cyclic coverage
+print(role_maps, checks, complete)  # 27 530 353
+```
+
+The 27 maps are assignments of the three role referents to
+three token labels (not three necessarily distinct constituents).
+The test supposes both displayed role arrows are required to lift;
+requiring only object-to-act yields a correspondingly weaker
+contradiction when those two referents coincide. The 530 act
+tables exhaust all binary relations on one, two and three
+labelled acts, including 353 with complete outgoing coverage;
+all covered tables contain a cycle. The general finite result
+comes from the maximal-member proof, not extrapolation from
+these finite tests. The positive self-directed control assigns
+K(a,a) and an empty *strict priority* relation; it does not
+identify that absence of priority with real simplicity or prove
+an intentional episode. An objective-but-noncognitive assignment
+can also have empty strict priority, and would lack the K edge.
+The partial-monitoring control drops complete coverage, not
+factivity. In the cyclic control K is complete but cannot
+itself be a strict priority relation.
+
+### 5. Same-standard assessment and graph destination
+
+| Account | Positive explanation | Remaining burden |
+| --- | --- | --- |
+| Separate representational or monitoring acts | Gives a distinct mechanism for directed and acquired cognition | In a finite exhaustive self-knower, why may some actual act remain outside coverage, or why does mediation not entail strict real priority? |
+| Supra-noetic unity | Refuses determinate noetic articulation to preserve firstness and self-sufficiency; qualified awareness is not ruled out by the earlier source comparison | Why does the relevant articulation, rather than only receptive/constitutive dependence, violate the requisite unity? Can the proposed higher presence preserve the positive content of understanding? |
+| Nonconstitutive immanent self-apprehension | A single actual intentional exercise is immediately of its own reality; avoids acquiring a second actuality or strictly prior object | Independent warrant for genuine truth-directed uptake and for the compatibility of its intelligible differentiation with real unity; no inference from mere self-identity. |
+| Objective exemplarity or primitive disposition | Explains correct secondary cognition without assuming a cognitive episode in the producer | Does not yet explain why the source essentially excludes a compatible pure intellectual mode. |
+
+**Provisional assessment (unreviewed).** The object/act identity
+answer alone is insufficient; the strict-actualizer version of
+the objection has a clear additional burden. The coverage
+argument gives a nontrivial conditional conflict between complete
+finite self-knowledge and universally strict cognitive mediation.
+The remaining serious rival can deny complete act-directed
+coverage, allow non-strict or nonconstitutive articulation, or
+defend an independent thesis that determinate intelligible
+content involves real differentiation incompatible with
+unqualified unity even without distinct actualizers. The last
+is the strongest unresolved pure-content obstruction. The
+classical account can make a positive case for non-receptive
+cognition, but must still establish its intentional content
+and compatible realization; it cannot infer either from the
+absence of constituents. We do not treat the higher-order
+literature as settling this application.
+
+For the `d164b1ff` route, this weakens only the argument that
+intentional direction itself establishes strict real priority,
+and conditionally excludes the strict-mediation bundle under
+its exact coverage/maximality premises. It does not establish
+`c4fb87a6` for noesis, defeat the broader Plotinian objection,
+or discharge the positive-exclusion/saturation or omission-to-
+limitation obligation in the preceding section. If a real
+nonpure limiting factor is independently demonstrated, the
+earlier strict-purity route remains applicable under its
+scope. The `191395d0` preservation route still needs its
+separate purity and same-content bridges. Even full intrinsic
+self-knowledge of g does not supply its knowledge of every
+contingent effect, actual will, choice or moral goodness;
+retain #1873's coverage/uptake and #1866's recognition
+distinctions, and the established will consumer only on its
+own assumptions.
+
+**Next decisive discriminator.** Investigate the remaining
+non-priority articulation claim: does the determination of
+a genuine cognitive content require an intrinsic distinction
+with its own positive actualizing work, or can one indivisible
+act ground several intelligible descriptions without a
+separate real constituent for each? Distinguish truth of
+distinct propositions about the same act, actual apprehension
+under those descriptions, and real constituents/facts. Do
+not equate a many-to-one truthmaker with cognitive grasp or
+merely assert that the aspects are conceptual. The positive
+test must concern a genuine content distinction, and identify
+the alleged independently actual contribution. A warranted
+necessity of such a contribution would strengthen the
+supra-noetic objection; a warranted non-receptive
+same-act account would support joint compatibility without
+establishing fullness by itself.
+
+Validation: current local checkout attempt failed on GitHub DNS;
+Lean/lake are absent. Existing instructions and meanings are
+reused from this PR's prior inspection. Local Python reproduced
+the prior 3,072 checks and executed all 27 role maps and 530
+act tables, plus explicit controls. Independent semantic
+challenge of this new substantive draft remains pending; the
+prior code review and CI evidence cannot certify this new
+head. No new attributed source claim, result, statement or
+formal premise change is claimed.
