@@ -795,7 +795,10 @@ reporting the *earlier shape*. Accuracy was 68.7% on those question-mark trials
 with the cue across fixation, significantly above the authors' chance baseline.
 Thus success on the full task cannot all be credited to trials permitting the
 first shape to be ignored. Eye position was checked at each presentation.
-Sequence, delay and instructions changed together. The authors propose a slower
+In a simultaneous control with the same stimuli at the same positions as in
+the sequential task, DDC's cross-field same/different judgments stayed at
+chance. Stimulus identity and position therefore do not explain the difference
+by themselves. Timing and the response rule still changed together. The authors propose a slower
 route carrying more abstract information alongside impaired rapid visual
 integration. Their study does not identify that route's anatomy. A correct
 delayed answer requires less than simultaneous awareness of two detailed images.
@@ -842,8 +845,10 @@ Mind-Body Problem*, pp.23–24, on the identity and nonidentity proposals](https
 * **Immediate comparison** makes the boundary track stimulus placement and
   report format. Taken as the criterion for a persisting subject, it would let
   a failed comparison count against common ownership even within the life that
-  DDC experiences as continuous. The recorded success under a later cue gives
-  a specific reason to reject permanent mutual inaccessibility of the fields.
+  DDC experiences as continuous. What succeeded was a delayed verbal report
+  of the earlier shape after a cue in the opposite field. The request could
+  reach the side retaining the shape and prompt an answer there. The task
+  leaves open whether the shape information crossed and who owned the memory.
   Neither result locates an occasion on which an experiencer came into being.
 * **Availability across time or by any route** explains how local channels
   can serve one agent. But information also crosses between people by cues
@@ -857,16 +862,14 @@ Mind-Body Problem*, pp.23–24, on the identity and nonidentity proposals](https
   persist when the task changes. Even a successful explanation on that reading
   gives U = x, whereas the distinct-ancestor premise requires a witness c ≠ x.
 
-A developed organizational competitor takes the embodied individual as bearer.
-Partial disconnection alters which information can be compared immediately,
-which can be retained in a usable form, and which can guide speech or hand
-movements. The account preserves a single organism through all three changes.
-Its metaphysical extension is that the organized individual's existence and
-powers suffice for there to be this experiencer, even if its constituting
-conditions do not themselves think. The task contrasts support the
-differentiation of powers. They leave that sufficiency thesis open. Equally,
-a personal constitution account can accept all the same neural dependencies.
-It gains explanatory credit for the familiar dependence of experiential
+Both accounts can identify DDC, the continuing embodied individual, as the
+bearer. Both can explain task performance through the same distinction between
+rapid visual comparison and the use of retained information for a later report.
+The organizational sufficiency thesis says the individual's organization and
+powers suffice for this subject to exist without a distinct thinking ground.
+On the personal constitution proposal, this same individual's existence as an
+experiencer depends on a distinct experiencing whole U. The latter proposal draws
+support for the familiar dependence of experiential
 aspects on a subject and for explicitly addressing the bearer. Its extra
 explanatory burden is why a restriction of U constitutes someone else who
 experiences at all. [Earlier whole-to-aspect and bonding comparison](#completed-comparison-one-subject-two-contents)
@@ -921,10 +924,10 @@ at n. An occurrence in n does not settle its intellectual cognition or will.
 and [supplied-root naming helper](../../TruthCore/Results/Causality/DirectEsseRootGodExistence/Solution.lean)
 
 **Provisional judgment.** DDC provides positive evidence for experienced
-continuity with task-dependent access. The organizational account offers the
-more specific explanation of the performance differences. At the shared
-metaphysical target, the data give no comparative reason to prefer a distinct
-thinking ancestor of this owner to realization in the continuing organism.
+continuity with task-dependent access. Both metaphysical accounts share the
+explanatory credit for the task-specific access mechanism. The results leave
+open whether organization suffices for this embodied subject's existence
+without a distinct thinking ground.
 The access test thus reaches a definite limit. Reopen the ancestry question
 for an independently warranted criterion of subject constitution that makes
 the remembered-item distinction and explains why the same bearer's existence
