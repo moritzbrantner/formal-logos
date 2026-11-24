@@ -372,7 +372,7 @@ d23a5d3; the independent semantic challenge of that head and its repair are
 recorded in PR #1875. The assessment above remains a provisional judgment.
 
 
-## Rational authorship versus brute selection (2026-11-23; proposed, unreviewed)
+## Rational authorship versus brute selection (2026-11-23)
 
 Scope: #1737, #735/#750, #1875, #1887. Evidence baseline
 `8083301a037428574d0e46b1064d8f6d858da377`; related open work #1901,
@@ -637,7 +637,7 @@ epistemic-end interpretation remain OPEN; do not exchange witnesses or
 identify `m.grounds` with `m.ontic.Causes` (#555 applicability).
 5a035a1e is assertion-only, not a new historical-reliability consumer.
 No new graph edge or premise discharge. Expected premise delta none;
-computed frontier-diff and offline corpus validation remain pending.
+the computed frontier comparison and validation evidence are recorded in PR #1911.
 
 Next discriminators: (a) a constitutive/exemplar account giving productive
 intentional direction rather than output-conditioned relation while retaining
@@ -661,7 +661,7 @@ related/dossier/novelty and full checks unavailable in this session.
 Attempt 7d015c02 records the proposed checkpoint.
 
 
-## Can direct intentional production be extrinsic without becoming brute? (2026-11-23; proposed, unreviewed)
+## Can direct intentional production be extrinsic without becoming brute? (2026-11-23)
 
 Continuation of the preceding #1737 checkpoint, same witness n and complete
 creaturely order H. Reuse the checked #555 rigid-token and #462 output-profile
@@ -1016,10 +1016,10 @@ intact. Independent final semantic review must challenge
 the distinction between the obtaining causal transaction
 and an independently meaningful intention, the conditional
 no-mediator regress, the granularity claims and the q.45
-interpretation before publication as reviewed support.
+interpretation. The review and disposition are recorded in PR #1911.
 
 
-## Exemplar as practical measure: can specificity belong to the exercise? (2026-11-23; proposed, unreviewed)
+## Exemplar as practical measure: can specificity belong to the exercise? (2026-11-23)
 
 Continuation of §§6–10, prior head eec73ea4bf32706f814d53ff5ef300849598f012.
 Main at dispatch f93b376f390bbd480b9a7705404c001622bdb553 (C2 note and
@@ -1289,7 +1289,7 @@ q.15, and the unresolved strong intrinsic-orientation
 principle.
 
 
-## Active power, immanent operation and the essential object of an act (2026-11-23; proposed, unreviewed)
+## Active power, immanent operation and the essential object of an act (2026-11-23)
 
 Continuation of §§11–14, prior head e5e728d280a0d01a666b37f51d7c2046790b7a73;
 main f93b376f390bbd480b9a7705404c001622bdb553 at dispatch. #1912 owns the
@@ -1567,7 +1567,7 @@ effect-side intentional relation. CI and actual computed
 premise comparison outstanding.
 
 
-## Restricted object essentiality: the two relations and particularity of the recipient (2026-11-23; proposed, unreviewed)
+## Restricted object essentiality: the two relations and particularity of the recipient (2026-11-23)
 
 Continuation of §§15–18 on prior head f13c6c03b68d7f50cec90de7e80ada8d9eb93d48.
 Current main at dispatch f9c1f2ef6bcc56f341c95a70f3815834827595dc.
