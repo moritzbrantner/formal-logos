@@ -1,0 +1,10 @@
+{
+  "id": "cf4d7714-ef8d-437f-8685-0b2b93cc8204",
+  "label": "One existing production fixture separates single origin from identity by all ancestors (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "ed1e46af-1b61-4d1f-ad8d-b0f884e84f65",
+  "rule": "Explicit finite graph witnesses and induction on nonempty paths",
+  "meaning": "Use FullFirstCause.Fixture.graph unchanged. Its only source gives rise to both effects. Every ancestor of either effect must be that source. Distinctness and absence of paths between them refute the two universal conditions inside this interpretation. No claim about actual creative activity or metaphysical possibility follows.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

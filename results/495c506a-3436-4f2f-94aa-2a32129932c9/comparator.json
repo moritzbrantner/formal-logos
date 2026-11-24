@@ -1,0 +1,9 @@
+{
+  "challenge_module": "TruthCore.Results.Explanation.PairedInterventions.Challenge",
+  "solution_module": "TruthCore.Results.Explanation.PairedInterventions.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Explanation.PairedInterventions.inputRange"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}

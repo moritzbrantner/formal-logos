@@ -717,6 +717,149 @@ theorem coherent_forbidden_task_rules_out_moral_incapacity {A : Type} (σ : Sign
   exact (moral_incapacity_forces_task_inconsistency σ power Permitted
     taskOf w x hJoint.1 hJoint.2 a hForbidden) hConsistent
 
+/-! ## C5 from an actual same-source bearer: the four nonrigid slots
+
+This refines the already verified ten-attribute route rather than inserting an
+E-to-M admissibility assumption. A fixedProfile instance makes nine attributes
+world-invariant by definition, not by argument. The remaining positive
+conditions are three actual-world attributes and persistence at M-successors
+of four world-sensitive slots (selected-root uniqueness, complete cognition,
+moral selection and free selection). These conditions are NOT derived from
+pure actuality or from absence of contradictions. M-as-metaphysical, essential
+interpretation, and the intentional/moral/agency content remain OPEN.
+-/
+
+/-- A full candidate profile from ten SAME-source actual attributes and the
+explicit four-slot completion. The equality to fixedProfile is important:
+without it the nine rigid fields cannot be transported. The actual-world
+knowledge, impeccable selection and free exercise are separately required;
+the four world-sensitive predicates must hold at every M-successor. This
+is a conditional assembly, not an independent warrant for those predicates.
+`hComplete` asks `free` (a noncoerced choice actually made) at EVERY
+M-successor: the "necessarily exercised" reading of freedom, not merely an
+essentially available capacity. The conclusion names the bearer: the same `n`
+with `PositiveCoreAt` (hence the selected unique root at `w`) is maximally
+great at `w`. -/
+theorem candidate_greatness_from_ten_and_four {P R C A : Type} (σ : Signature)
+    (m : Profile W σ.Being) (w : W)
+    (q : TruthCore.Latin.Aquinas.SummaTheologiae.PrimaPars.Question3.Article4.Profile σ.Being P R)
+    (Composite Infinite Eternal HasIntellect HasWill : σ.Being → Prop)
+    (GoodIn InPotency : σ.Being → R → Prop)
+    (power : Power σ) (S : Semantics W C)
+    (Knows : W → σ.Being → C → Prop)
+    (Chooses : W → σ.Being → A → Prop) (Permitted : W → A → Prop)
+    (Capable Imposed : W → σ.Being → A → Prop)
+    (p : ProfileSlots W σ.Being)
+    (hFixed : p = fixedProfile σ m q Composite Infinite Eternal HasIntellect HasWill
+      GoodIn InPotency power S Knows Chooses Permitted Capable Imposed)
+    (hTen : ∃ n, PositiveCoreAt m.ontic p w n ∧ p.infinite w n ∧
+      p.omnipotent w n ∧ p.immutable w n ∧ p.eternal w n)
+    (hComplete : ∀ n, PositiveCoreAt m.ontic p w n →
+      p.omniscient w n ∧ p.morallyPerfect w n ∧ p.free w n ∧
+        (∀ v, m.ontic.frame.access w v →
+          p.one v n ∧ p.omniscient v n ∧ p.morallyPerfect v n ∧ p.free v n)) :
+    ∃ n, PositiveCoreAt m.ontic p w n ∧ GreatnessAt m.ontic p n w := by
+  subst p
+  let p := fixedProfile σ m q Composite Infinite Eternal HasIntellect HasWill
+    GoodIn InPotency power S Knows Chooses Permitted Capable Imposed
+  obtain ⟨n, hCore, hInf, hOmni, hImm, hEter⟩ := hTen
+  obtain ⟨hKnow, hMoral, hFree, hAcross⟩ := hComplete n hCore
+  refine ⟨n, hCore, ?_⟩
+  obtain ⟨hExists, hNecessary, hSimple, hPerfect, hGood, hOne, hInt, hWill⟩ := hCore
+  have hNine : NineAt p w n :=
+    ⟨hSimple, hPerfect, hGood, hOne, hInf, hImm, hEter, hInt, hWill⟩
+  refine ⟨hExists, ⟨hNine, hOmni, hKnow, hMoral, hFree⟩, ?_⟩
+  intro v hV
+  obtain ⟨hS, hP, hG, hI, hM, hE, hX, hW, hPow⟩ :=
+    fixedProfile_rigid σ m q Composite Infinite Eternal HasIntellect HasWill
+      GoodIn InPotency power S Knows Chooses Permitted Capable Imposed w v n
+  obtain ⟨hOneV, hKnowV, hMoralV, hFreeV⟩ := hAcross v hV
+  have hNineV : NineAt p v n :=
+    ⟨hS hSimple, hP hPerfect, hG hGood, hOneV,
+      hI hInf, hM hImm, hE hEter, hX hInt, hW hWill⟩
+  exact ⟨hNecessary v hV, ⟨hNineV, hPow hOmni, hKnowV, hMoralV, hFreeV⟩⟩
+
+/-- Explicit composition with the EXISTING same-root ten-slot theorem. Unlike
+a pure E-to-M transfer, the starting bearer is actual and necessary already;
+the remaining three attributes and cross-world four-slot completion remain
+open inputs. Actual reflexivity then gives M-possible greatness, but does not
+establish that the chosen M frame captures genuine metaphysical possibility.
+The second conjunct pins the bearer: the actual selected root `n` itself (it
+has `PositiveCoreAt`, which includes the `one` slot at `w`) is maximally great
+at `w`; `PossibleGreatness` alone would quantify the bearer away.
+The output is NOT a GOD_4 name. -/
+theorem candidate_possible_from_same_root {P R C A : Type} (σ : Signature)
+    (m : Profile W σ.Being) (w : W)
+    (q : TruthCore.Latin.Aquinas.SummaTheologiae.PrimaPars.Question3.Article4.Profile σ.Being P R)
+    (Composite MatterForm Infinite Eternal HasIntellect HasWill : σ.Being → Prop)
+    (GoodIn InPotency : σ.Being → R → Prop)
+    (MoreIn : R → σ.Being → σ.Being → Prop)
+    (PriorSimply ComponentOf : σ.Being → σ.Being → Prop)
+    (power : Power σ) (S : Semantics W C)
+    (Knows : W → σ.Being → C → Prop)
+    (Chooses : W → σ.Being → A → Prop) (Permitted : W → A → Prop)
+    (Capable Imposed : W → σ.Being → A → Prop)
+    (hRoot : NecessaryPositiveRootIntellectWillAt m w q GoodIn MoreIn
+      PriorSimply ComponentOf Composite MatterForm HasIntellect HasWill)
+    (hInfinity : TruthCore.Latin.Aquinas.SummaTheologiae.SubsistentBeingIsInfiniteReading
+      q.essenceOf q.esseOf Infinite)
+    (hUnlimited : TruthCore.Causality.NamingVeracityBatch1.InfiniteIsUnlimitedAct
+      σ Infinite power)
+    (hActive : TruthCore.Causality.NamingVeracityBatch1.ActivePowerFollowsAct σ power)
+    (hPossible : TruthCore.Causality.NamingVeracityBatch1.ConsistentTaskRequiresOnlyPossiblePerfections
+      σ power)
+    (hMixedComposite : ActInBeingAndPotencyMakeComposite q.InAct InPotency q.esse Composite)
+    (hEternity : ImmutableIsEternalReading InPotency Eternal)
+    (hComplete : ∀ n, PositiveCoreAt m.ontic
+      (fixedProfile σ m q Composite Infinite Eternal HasIntellect HasWill
+        GoodIn InPotency power S Knows Chooses Permitted Capable Imposed) w n →
+      let p := fixedProfile σ m q Composite Infinite Eternal HasIntellect HasWill
+        GoodIn InPotency power S Knows Chooses Permitted Capable Imposed
+      p.omniscient w n ∧ p.morallyPerfect w n ∧ p.free w n ∧
+        (∀ v, m.ontic.frame.access w v →
+          p.one v n ∧ p.omniscient v n ∧ p.morallyPerfect v n ∧ p.free v n))
+    (hRef : ActualReflexive m.ontic w) :
+    PossibleGreatness m.ontic
+      (fixedProfile σ m q Composite Infinite Eternal HasIntellect HasWill
+        GoodIn InPotency power S Knows Chooses Permitted Capable Imposed) w ∧
+    ∃ n, PositiveCoreAt m.ontic
+        (fixedProfile σ m q Composite Infinite Eternal HasIntellect HasWill
+          GoodIn InPotency power S Knows Chooses Permitted Capable Imposed) w n ∧
+      GreatnessAt m.ontic
+        (fixedProfile σ m q Composite Infinite Eternal HasIntellect HasWill
+          GoodIn InPotency power S Knows Chooses Permitted Capable Imposed) n w := by
+  let p := fixedProfile σ m q Composite Infinite Eternal HasIntellect HasWill
+    GoodIn InPotency power S Knows Chooses Permitted Capable Imposed
+  have hTen := positiveCore_with_ten_from_same_root σ m w q
+    Composite MatterForm Infinite Eternal HasIntellect HasWill
+    GoodIn InPotency MoreIn PriorSimply ComponentOf
+    power S Knows Chooses Permitted Capable Imposed
+    hRoot hInfinity hUnlimited hActive hPossible hMixedComposite hEternity
+  obtain ⟨n, hCore, hGreat⟩ :=
+    candidate_greatness_from_ten_and_four σ m w q Composite Infinite Eternal
+      HasIntellect HasWill GoodIn InPotency power S Knows Chooses Permitted
+      Capable Imposed p rfl hTen hComplete
+  exact ⟨⟨w, hRef, n, hGreat⟩, n, hCore, hGreat⟩
+
+/-- Decree-as-respect collapses contingency under the constant family. Read
+`SimplicityCollapse.RespectSuffices m InAct' w g d x` with the constant family
+`InAct' := fun _ => InAct` (the C5 encoding's world-free `q.InAct`); its body is
+then exactly `hSuffices`. If the decree `d` is a respect of `g`, it holds at
+every world, so the effect exists at every accessible world and is not
+contingent at `w`. No ModalCapacity, IX.6 reading, immutability,
+ExclusiveDecree or decree-at-each-world is used. The world-free `InAct` is
+rigid by construction, an encoding artifact like `fixedProfile_rigid`, and is
+evidence for neither C5 nor its negation; under it a contingent effect requires
+that the decree not be an `InAct`-respect of the source or that respect
+sufficiency fail. Unregistered helper. -/
+theorem constant_respect_collapses_contingency {R : Type} (m : Ontic W B)
+    (InAct : B → R → Prop) (w : W) (g x : B) (d : R)
+    (hDecree : InAct g d)
+    (hSuffices : ∀ v, m.frame.access w v → InAct g d → m.ExistsAt v x) :
+    ¬ TruthCore.German.Kant.CosmologicalInference.ContingentAt m w x := by
+  rintro ⟨_, v, hV, hAbsent⟩
+  exact hAbsent (hSuffices v hV hDecree)
+
 /-! ## Restoring the omitted source and intentional-output constraints
 
 Uses exactly the previous NecessaryVariableEffects.alternatingEffects model,
@@ -1038,6 +1181,43 @@ def namingOmission : Prop :=
     ProfileNineSuffice godless godlessSlots false ∧
     ¬ ActualDivineNaming godless godlessOntic godlessSlots false ∧
     ¬ GodExists godless.IsGod
+
+/-- S5, a rigid necessary bearer, and ALL thirteen opaque slots ACTUALLY
+satisfied need not give a possible maximal profile: the opaque `one` slot (here
+`v = false`; not `fixedProfile`'s ActualRoot uniqueness) can fail at an
+accessible world even when the bearer continues to exist. All other slots
+remain true. Slot names on the generic `ProfileSlots` are mnemonic only.
+Whether the `fixedProfile` root premises entail `one` at M-successors is
+untested. "Essential" in `actualButNotEssential` means de re modal possession
+of the slots at every M-successor, not a Finean essence (cf.
+`NecessaryExcellenceAt`). This is a structural omission control, not a
+metaphysical counterexample to the divine essence. -/
+def persistingOntic : Ontic Bool Bool where
+  frame := TruthCore.Modal.PossibilityTransfer.epistemic
+  ExistsAt := fun _ x => x = true
+  Causes := fun _ _ _ => False
+
+def uniquenessOnlyHere : ProfileSlots Bool Bool :=
+  { allTrue with one := fun v _ => v = false }
+
+def actualButNotEssential : Prop :=
+  TruthCore.Modal.FrameSatisfies .S5 persistingOntic.frame ∧
+    persistingOntic.ExistsAt false true ∧
+    TruthCore.German.Kant.CosmologicalInference.NecessaryAt persistingOntic false true ∧
+    ExcellenceAt uniquenessOnlyHere false true ∧
+    ¬ GreatnessAt persistingOntic uniquenessOnlyHere true false ∧
+    ¬ PossibleGreatness persistingOntic uniquenessOnlyHere false
+
+set_option maxRecDepth 10000 in
+set_option synthInstance.maxSize 100000 in
+theorem actualButNotEssential_holds : actualButNotEssential := by
+  dsimp [actualButNotEssential, persistingOntic, uniquenessOnlyHere, allTrue,
+    TruthCore.German.Kant.CosmologicalInference.NecessaryAt, ExcellenceAt, NineAt, NineClassicalAttributes, GreatnessAt,
+    PossibleGreatness, TruthCore.Modal.NecessaryIfExistent.MaximalProfile,
+    TruthCore.Modal.PossibilityTransfer.epistemic,
+    TruthCore.Modal.FrameSatisfies, TruthCore.Modal.Reflexive,
+    TruthCore.Modal.Euclidean]
+  decide
 
 set_option maxRecDepth 10000 in
 set_option synthInstance.maxSize 100000 in

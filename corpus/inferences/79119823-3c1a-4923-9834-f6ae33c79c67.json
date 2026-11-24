@@ -1,0 +1,10 @@
+{
+  "id": "79119823-3c1a-4923-9834-f6ae33c79c67",
+  "label": "Derive the three-coordinate parity restriction and its removal from the available inputs (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "fd3c2ed2-7711-4828-a9df-970d73b0b3e1",
+  "rule": "Induction on finite interventions and constructive choice of edge inputs",
+  "meaning": "Each paired input preserves parity. For a target with the starting parity, matching the two outer coordinates fixes edge choices that also give the required middle value. Each pair projection is full, and an optional unmatched endpoint flip switches parity classes. This uses the triple, coordinate map and parity predicate from the static elementary-report comparison in #1088. The operations are stipulated on one fixed background. Whether a real candidate source can exercise them there remains open.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}
