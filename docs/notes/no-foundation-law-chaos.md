@@ -1430,3 +1430,13 @@ mismatch within that qualified scope. This disposition leaves the
 metaphysical adequacy and application bridges open; formal gates and
 publication evidence are recorded separately in the PR. The existing
 attempts carry the scoped review revision and current next tests.
+
+The findings are published in [PR #1933](https://github.com/moritzbrantner/formal-logos/pull/1933).
+The challenger subsequently inspected the review-only bookkeeping delta and
+verified that remote snapshot `2648404f2213921de852b8c4ff94359825a6ed4c`
+has the identical tree `4c5df10cefcf92a0b4e892c15c48f3f4c7ac1f4f`
+as the local publication snapshot. Qualified acceptance applies to that
+GitHub-resolvable revision without new findings. The advisory sweep of all
+nine frozen targets closes four and leaves five unresolved, with no errors
+or likely transcriptions; every target has a hand-written Solution. This
+search report is separate from binding and kernel verification.
