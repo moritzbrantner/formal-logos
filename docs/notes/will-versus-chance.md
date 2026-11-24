@@ -372,7 +372,11 @@ attributed; no claim record is added.
    route): a reason specific to invariant, patientless beings.
 2. **Holder-root identification** (#1897 gap 2), needed to carry the intellect
    routes' HAS_INTELLECT_1 to the holder (premise `813a9181`) and for argument
-   B's connection to the root.
+   B's connection to the root. Built conditionally in
+   [holder-root-identification.md](holder-root-identification.md): `813a9181`
+   is derived from `0c27f65a` through the premise that NECESSARY_2 actual
+   concreta are underived (NAR), which is the crux; argument B gets a consumer
+   at `66aecdd7` that shares the intellect route's dependencies.
 3. **Root consumer of argument B:** a bridge from exercising a rational power in
    giving to the `Wills` relation of the q.19 a.4 node `a94c5dfc`.
 4. **Certified difference** for the `strengthens` registration DNP′ → DNP_inv

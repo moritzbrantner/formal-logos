@@ -1,0 +1,11 @@
+{
+  "id": "88f1ee6e-2c04-4f5b-8066-c5f1121bed74",
+  "label": "Holders of the joint-absence power are actual roots, from P2', P3', presence and NAR",
+  "argument_id": "5de3990e-2c98-4a1b-bc14-2f4ae25ae7f3",
+  "challenge_module": "TruthCore.Results.Causality.HolderRootIdentification.Challenge",
+  "solution_module": "TruthCore.Results.Causality.HolderRootIdentification.Solution",
+  "theorem": "TruthCore.Results.Causality.HolderRootIdentification.holdersAreActualRoots",
+  "comparator_config": "results/88f1ee6e-2c04-4f5b-8066-c5f1121bed74/comparator.json",
+  "status": "solution-present",
+  "description": "Argument 1, the first half of the holder-root identification (#1897 gap 2). Not a transcription: the necessity of every holder is derived from P2' and P3' (law 1; #1897 derived it only for some holder). NAR carries exactly the step from necessity to underivedness: its omission model is a necessary holder grounded by the root (Avicenna's necessary through another). Establishes no premise. Omission models: without existence at w, without P2', without P3', without NAR."
+}

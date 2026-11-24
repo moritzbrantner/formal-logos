@@ -1,0 +1,11 @@
+{
+  "id": "9b7683e1-962c-4a26-9815-864792234389",
+  "label": "At most one holder of the joint-absence power, from at most one actual root",
+  "argument_id": "61eb178b-9160-4081-a9d0-f919510b7d27",
+  "challenge_module": "TruthCore.Results.Causality.HolderRootIdentification.Challenge",
+  "solution_module": "TruthCore.Results.Causality.HolderRootIdentification.Solution",
+  "theorem": "TruthCore.Results.Causality.HolderRootIdentification.atMostOneHolderFromAtMostOneRoot",
+  "comparator_config": "results/9b7683e1-962c-4a26-9815-864792234389/comparator.json",
+  "status": "solution-present",
+  "description": "Argument 4: the holder-uniqueness interface fed by the De ente at-most-one-root route (c056ad5c), whose only uniqueness-bearing premise is a576300f (at most one actual being has esse identical with essence; De ente's no-multiplication inventory). A different uniqueness source from argument 2's common-root reach. Not a transcription in the sense of invariant 16: neither premise's consequent is the conclusion with its antecedent supplied; it is a composition. Establishes no premise. Omission models: without argument 1's conclusion (a root holder beside a necessary holder grounded by it), without 49fdec01 (two roots)."
+}

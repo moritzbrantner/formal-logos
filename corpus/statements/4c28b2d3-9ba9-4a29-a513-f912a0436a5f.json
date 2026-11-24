@@ -1,0 +1,25 @@
+{
+  "id": "4c28b2d3-9ba9-4a29-a513-f912a0436a5f",
+  "label": "Holder-root identification: laws, nonvacuity, necessary-through-another, omissions, two roots",
+  "paraphrase": "Premise-free laws and finite models (structural surrogates, not metaphysical possibility). Laws: (1) with P2', P3' and holders at w, no holder is contingent at w, and with excluded middle every holder is concrete, exists at w and is NECESSARY_2 at w; (2) adding a common root of the selected relation, every holder is that root or a NECESSARY_2 actual concretum directly grounded by it; (3) with NAR, every holder is the common root. Models: theist nonvacuity of arguments 1-5; the necessary-through-another holder (a two-way giver satisfying the creator reading and factive giving; NAR fails; the common GOD_4 root with intellect and at most one root both hold; every holder conclusion fails); omissions of holders at w, P2' and P3'; two necessary underived holders (at most one root and the common root fail); a root holder beside a holder grounded by it (at most one root holds, at most one holder fails); omissions of at most one holder, the rational-power bridge, the GOD_4 bridge and the willed holder (the chance rival of #1941).",
+  "lean_declaration": "TruthCore.Causality.HolderRootIdentification.Model.Controls",
+  "definition_ids": [
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "c57e2682-08e6-527e-950f-0fa0a7ff11ef",
+    "a1b2e330-388f-4120-bc5c-969642317792",
+    "1620ba7e-edb9-56c4-bd02-3ece55903b1c",
+    "bf7eddca-8291-4744-8470-379babcd7781",
+    "88f9f6e8-997b-5f7d-afa1-c501954c3807",
+    "88bc0655-9dd0-5879-ba1b-3fca9f86c1f4",
+    "7c64b499-6dba-5e03-bdf3-5acea95d8836",
+    "de24ce2e-84e4-48d8-9cac-5f66ad532015",
+    "b8061228-9131-40f2-83bd-cb7d719bd0a0"
+  ],
+  "disambiguation_ids": [
+    "83264cf5-01fe-52fc-9a00-eeb024f6496e",
+    "e5417243-d6f3-4776-9694-40d85bb34ff4",
+    "8b3d47bc-7fee-4936-99ad-6561aedc657a",
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f"
+  ]
+}
