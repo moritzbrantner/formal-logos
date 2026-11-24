@@ -3041,3 +3041,40 @@ Priority is based on substantive leverage, not a leaf-count ranking of truth. Fo
 **Next discriminating test.** Start with `d164b1ff`. Independently characterize one positive mode and justify its classification as pure and, via `c4fb87a6`, OfBeing. Hold fixed the same actual source and OwnBeing assumptions across the comparison. If that source lacks the mode, test E (nature-based exclusion versus neutral absence) and L (real contraction versus kind-completeness), then test whether any real contraction needs a receiving principle under the same #1914 act/recipient account. A warranted non-contracting essential exclusion weakens fullness for that source. A supported chain from exclusion to real contraction and then to a receiver strengthens the same-source conditional case. Generalization to all OfBeing determinations remains open. Strict noncognitive life is secondary. If one candidate necessarily involves reception or composition, revise the purity classification of that candidate.
 
 Attempt `72a86cf4-baca-4a47-b157-7b0dd50ba12b` records this scoped provisional assessment. The initial semantic challenge requested changes to `35c03763084282b3b33bacf6b4ab274957180cbc` in PR #1916. The targeted re-review accepted the repaired checkpoint at `1d63f12806ed9984ea2ea8973295b1e6b1210d59`.
+
+## Can credit for every determination extend to an additional giver of esse?
+
+`f8ba2429` quantifies over **each** cause of a recipient's being. By contrast, `b26c10a0` asks about a cause of the being of every other actual being, applied to a distinct recipient. Even full coverage by one such source leaves the attribution to a particular co-giver outstanding. The existing [scope comparison](../../TruthCore/Case/Catholicism/CausalPerfectionTransfer.lean) makes the difference concrete. In its concurrent setting the universal source gives the recipient both esse and skill. The supporter gives that same recipient esse, and the producer causes its skill. The supporter has no skill edge to the recipient. This is an exact scope separator. The assignments alone do not show that the supporter is a real cause of esse on the metaphysical reading.
+
+**A revision test on the exact unrestricted statement.** Suppose a causal account already satisfies the unrestricted transfer. We learn that another named agent `a` contributed to the being of recipient `x`. Retain every previous attribution, add that one esse edge, and ask which further evidence the old conclusion now needs. For decidable respect equality, the enlarged account still satisfies transfer **exactly when** every actual non-esse respect of this recipient already carries productive credit to this added agent. In particular, evidence that a different giver covers all the respects cannot supply the condition. Conversely, no facts about any other recipient need to change. The test compares two interpretations of causal responsibility. It makes no assumption that one can physically add or withdraw an existential cause independently of all its effects.
+
+```lean
+import TruthCore.Case.Catholicism.CausalPerfectionTransfer
+open TruthCore.Case.Catholicism
+namespace AdditionalGiver
+variable {B R : Type} (act : B → R → Prop) (cause : B → B → R → Prop)
+  (esse : R) (a x : B)
+def added (c y : B) (r : R) := cause c y r ∨ (c = a ∧ y = x ∧ r = esse)
+theorem transferAfter [DecidableEq R] (initial : CauseOfBeingCausesEveryPerfection act cause esse) :
+    CauseOfBeingCausesEveryPerfection act (added cause esse a x) esse ↔
+    ∀ r, r ≠ esse → act x r → cause a x r := by
+  constructor
+  · intro h r different actual
+    obtain h | ⟨_, _, eq⟩ := h a x r (Or.inr ⟨rfl, rfl, rfl⟩) actual
+    · exact h
+    · exact False.elim (different eq)
+  · intro coverage c y r incoming actual
+    rcases incoming with old | ⟨rfl, rfl, _⟩
+    · exact Or.inl (initial c y r old actual)
+    · by_cases same : r = esse
+      · exact Or.inr ⟨rfl, rfl, same⟩
+      · exact Or.inl (coverage r same actual)
+#print axioms transferAfter
+end AdditionalGiver
+```
+
+The following mechanisms give the two sides of that test philosophical content. In the [press study](actuality-esse-research.md#11-does-the-giver-act-through-the-secondary-agent-in-this-effect), a drive that transmits its work into the engaged ram earns credit for the impression this ram leaves. A die that furnishes the pattern can earn credit for the shape of the same impression. Giving and continuously maintaining the very operative profile under load can likewise earn mediated credit for what it shapes; a different agent can supply the trigger. This is a positive reason for same-source transfer where the contribution can be followed into the relevant determination. If a tracing of the material, formation and maintenance of the marked bearer also identifies the drive as a contributor to the bearer's coming to be, this would support **both** attributions for that drive. Making a mark on a pre-existing bearer alone does not identify any cause of the bearer's esse. The case grants no divine identification. [Producer-side premise, reviewed separately](https://github.com/moritzbrantner/truth-core/pull/1946)
+
+**Provisional judgment.** The strongest affirmative account treats the concrete producer, its operative power and the exercise reaching the patient as dependent on the source. Its explanatory strength is that the same giver's influence can persist through real secondary agency. For a specified perfection there is warrant when the productive history identifies that influence. The rival grants the source sustains concrete subjects and may mediately cause many of their determinations, while some acquired organization is traced to a distinct operation. The [copied and independently recut dies](actuality-esse-research.md) show why identity of bearer through a change of productive history matters: after recutting, the continued existence of the die no longer traces its new lettering to the maker of the original pattern. This explains a genuine possible failure of a *particular tracing argument*. It does not demonstrate a metaphysically independent engraver, nor exclude the universal giver's contribution through the engraver.
+
+I favor the scoped transfer wherever an actual productive history, or identity of the precise efficient terminus under two descriptions, is independently justified. I would withhold the unrestricted commitment. In particular, a partial giver's contribution to esse is insufficient evidence by itself for credit at every acquired determination. A theory on which only the ultimate source gives esse absolutely can remove the particular-giver cases if it independently earns that reading of the antecedent. It must still show why that source's gift reaches each relevant determination of each recipient. Calling each esse giver the total cause of the fully determined individual settles the question only if there is a separate reason why its productive contribution extends to the individual **in each respect**. The person supplied with a die that bears certain lettering and the source of that lettering are independently identifiable roles. For the GOD_4 routes that use the narrower principle, the live test is to trace the named universal giver into the secondary producer's determination of the disputed respect, or explain why the same giving already has that determination as its own efficient terminus. For the unrestricted principle, this test must also succeed for any genuinely eligible particular giver. No change to causal closure or to the registered proof alternatives follows from this local check.
