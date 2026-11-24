@@ -964,7 +964,8 @@ answer by itself explains why the subsistent source is actual at all.
    participant's degree of act. Its degree of act is bounded by its knowability
    (`7921f9c8`), and the giver's own degree of act bounds the degree at which
    it knows this recipient (`7db53cde`). With one measure of act at esse, this
-   yields the weak bound `aba6f4e1`. Actual self-apprehension and correct
+   yields an alternative proof of the weak participant bound `aba6f4e1`.
+   The general total-cause adequacy thesis `87f41688` stays open. Actual self-apprehension and correct
    knowledge of one effect each fall short of the comprehension premise.
    This route has force if knowledge of the participant is warranted
    independently of the proposed ranking. It introduces no requirement that
@@ -1002,9 +1003,10 @@ answer by itself explains why the subsistent source is actual at all.
    The universal claim also compares bearers lacking intellect.
    [Reflective comparison](../../corpus/results/87de8ed8-dfd7-4001-8396-e31008fb3641.json)
 
-**Test on the same individual.** In two histories the daughter's inlet opens at the same
-time and the same local organization is established, while different agents
-send the effective pulse. The source can grasp that organization and
+**Test on the same individual.** Stipulate that the right-hand daughter is
+new. Compare two reconstructions of her onset in which the inlet opens at the
+same time and the same local organization is established. The proposed senders
+of the effective pulse differ. The source can grasp that organization and
 truly understand something about the daughter in either history. Knowing
 which sender acted requires content that distinguishes those histories. In
 the positive comparison the source understands its own order to a specific
@@ -1014,10 +1016,10 @@ historical judgment. Extending the reasoning to full comprehension requires
 grounds for which features exhaust the daughter's knowability and how one
 actual knowing reaches that measure. Whether knowing every causal history
 belongs to understanding a being *in itself* is a separate choice of scope.
-[Two onset histories](../../Scratch/sole-esse-giver/DivisionHistory.lean)
+[Two reconstructions of the onset](actuality-esse-research.md#does-knowing-the-sources-own-act-disclose-how-this-daughter-began)
 
-I would carry forward the weak cognitive argument wherever the giver's grasp
-of the participant has this independent warrant. For a reflective recipient
+I would carry forward the weak cognitive argument wherever there is independent
+warrant for the giver's full comprehension of the participant. For a reflective recipient
 whose only demonstrated insight is that it exists through another, I would
 withhold a strict rank. The outstanding question is whether knowing its
 source and constitution exhausts what is knowable about that recipient's
