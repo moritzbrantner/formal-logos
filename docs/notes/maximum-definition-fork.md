@@ -969,6 +969,7 @@ answer by itself explains why the subsistent source is actual at all.
    This route has force if knowledge of the participant is warranted
    independently of the proposed ranking. It introduces no requirement that
    all arguments for a greatest being must first establish intellect.
+   [Measured participant bound](../../corpus/results/071fe119-ec6f-47b9-9a97-115f865762cb.json)
 2. **Total giving (`50da2b49`).** Where one organism divides into two distinct
    self-maintaining individuals, at least one begins, even if the other
    continues the parent. Under the specified substantial and productive
@@ -999,11 +1000,26 @@ answer by itself explains why the subsistent source is actual at all.
    supplies no such exhaustive knowledge, and an unanswered question can
    coexist with equal degrees of act. This test concerns a reflective pair.
    The universal claim also compares bearers lacking intellect.
+   [Reflective comparison](../../corpus/results/87de8ed8-dfd7-4001-8396-e31008fb3641.json)
 
-The next test for the cognitive argument is what would warrant *full*
-comprehension of this recipient by the source. A true account of the
-source's giving could still leave open which originating work the secondary
-performed in this particular history. Does the source's own intellectual act
-settle that difference, or does the case require further knowledge of the
-effect? Answering on the same individual would bring the upper-bound argument
-and the investigation of total giving to bear on one another.
+**Test on the same individual.** Two histories can deliver the same opening
+pulse and establish the same local organization in the daughter while different
+agents send the effective pulse. The source can grasp that organization and
+truly understand something about the daughter in either history. Knowing
+which sender acted requires content that distinguishes those histories. In
+the positive comparison the source understands its own order to a specific
+sender, that order governs which pulse arrives, and the source takes up the
+consequence for the daughter. These conditions warrant the corresponding
+historical judgment. Extending the reasoning to full comprehension requires
+grounds for which features exhaust the daughter's knowability and how one
+actual knowing reaches that measure. Whether knowing every causal history
+belongs to understanding a being *in itself* is a separate choice of scope.
+[Two onset histories](../../Scratch/sole-esse-giver/DivisionHistory.lean)
+
+I would carry forward the weak cognitive argument wherever the giver's grasp
+of the participant has this independent warrant. For a reflective recipient
+whose only demonstrated insight is that it exists through another, I would
+withhold a strict rank. The outstanding question is whether knowing its
+source and constitution exhausts what is knowable about that recipient's
+present actuality. On the causal side it still matters who supplied the
+secondary's exercised power, even when the identity of the sender is known.
