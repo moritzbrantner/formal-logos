@@ -5,14 +5,12 @@ public import TruthCore.Causality.OneDependenceOrder
 /-!
 # One dependence order (#1926 phase 3)
 
-* `esseRegressOfActualGroundingWF`: actual grounding well-founded, an actual
-  concretum's distinct esse cause is its actual concrete ground (cb1cdea9),
-  what is in act of esse exists at `w` (546975ef) and is concrete (2d9807a5)
-  give no infinite regress of actual causes of being (fd12ad3d).
-* `esseRegressOfActualGroundingWFWeak`: the same with the weak bridge
-  `ActualEsseCauseIsActualGround` (an actual cause of being between actual
-  concreta grounds), which `actualEsseCauseIsActualGroundOfEsseCause` derives
-  from cb1cdea9.
+* `esseRegressOfActualGroundingWFWeak`: actual grounding well-founded, the weak
+  bridge `ActualEsseCauseIsActualGround` (an actual cause of being between
+  actual concreta grounds), what is in act of esse exists at `w` (546975ef) and
+  is concrete (2d9807a5) give no infinite regress of actual causes of being
+  (fd12ad3d). `actualEsseCauseIsActualGroundOfEsseCause` derives the weak
+  bridge from cb1cdea9.
 * `actualGroundingWFOfEsseRegress`: the converse inclusion. The esse regress,
   an actual concrete ground of an actual concretum is a distinct cause of its
   esse (98efaa9e) and what exists at `w` is in act of esse (0436de86) give
@@ -59,26 +57,11 @@ open TruthCore.Latin.Aquinas.SummaTheologiae
 
 /-! ## The derivations -/
 
-/-- Esse causing into actual grounding: every actual cause of being `c` of `x`
-is, by the two actuality calibrations, a cause of the esse of an actual
-concretum, hence (bridge) an actual concrete ground of it. Well-foundedness of
-grounding among actual concreta transfers to actual causes of being. -/
-theorem esseRegressOfActualGroundingWF {W B P R : Type} (m : Profile W B) (w : W)
-    (p : TruthCore.Latin.Aquinas.SummaTheologiae.PrimaPars.Question3.Article4.Profile B P R)
-    (hWF : ActualGroundingWF m w)
-    (hEsse : EsseCauseIsActualConcreteGround m w p.CausesIn p.esse)
-    (hExists : ActOfEsseSufficesForExistenceAt m.ontic p.InAct p.esse w)
-    (hConcrete : EsseInReIsConcrete m p.InAct p.esse) :
-    NoInfiniteActualEsseCauseRegress p := by
-  refine wellFounded_of_predecessorInclusion (ActualConcrete m w) (m.grounds w) _ hWF ?_
-  intro c x h
-  obtain ⟨hne, _, hx, hcause⟩ := h
-  have g := hEsse c x hne ⟨hConcrete x hx, hExists x hx⟩ hcause
-  exact ⟨⟨g.1, g.2.1⟩, g.2.2⟩
-
-/-- The same with the weak bridge: an actual cause of being `c` of `x` is in
-act, as is `x`, so by the two calibrations both are actual concreta; the weak
-bridge then makes `c` ground `x`. -/
+/-- Esse causing into actual grounding, through the weak bridge: an actual
+cause of being `c` of `x` is in act, as is `x`, so by the two calibrations both
+are actual concreta; the weak bridge then makes `c` ground `x`. Well-foundedness
+of grounding among actual concreta transfers to actual causes of being (only
+the predecessor need be an actual concretum). -/
 theorem esseRegressOfActualGroundingWFWeak {W B P R : Type} (m : Profile W B) (w : W)
     (p : TruthCore.Latin.Aquinas.SummaTheologiae.PrimaPars.Question3.Article4.Profile B P R)
     (hWF : ActualGroundingWF m w)
@@ -172,22 +155,6 @@ theorem pIdle_regress : NoInfiniteActualEsseCauseRegress pIdle :=
 
 theorem pEdge_regress : NoInfiniteActualEsseCauseRegress pEdge :=
   wellFounded_of_singleEdge true false true_ne_false' (fun _ _ h => h.2.2.2)
-
-theorem esseRegressControls : EsseRegressControls := by
-  refine ⟨⟨mCyc_not_agwf, ?_, fun _ _ => trivial, fun _ _ => trivial, pCyc_not_regress⟩,
-    ⟨actualGroundingWF_of_wellFounded _ _ noRel_wf, ?_, fun _ _ => trivial, fun _ _ => trivial,
-      pCyc_not_regress⟩,
-    ⟨actualGroundingWF_of_wellFounded _ _ noRel_wf, ?_, ?_, fun _ _ => trivial, pCyc_not_regress⟩,
-    ⟨actualGroundingWF_of_wellFounded _ _ noRel_wf, ?_, fun _ _ => trivial, ?_, pCyc_not_regress⟩,
-    ⟨actualGroundingWF_of_wellFounded _ _ edgeTF_wf, ?_, fun _ _ => trivial, fun _ _ => trivial,
-      pEdge_regress, true_ne_false', trivial, trivial, rfl, rfl⟩⟩
-  · exact fun _ _ hne _ h => ⟨trivial, trivial, h⟩
-  · exact fun h => (h true false true_ne_false' ⟨trivial, trivial⟩ true_ne_false').2.2
-  · exact fun _ _ _ hx _ => hx.2.elim
-  · exact fun h => h true trivial
-  · exact fun _ _ _ hx _ => hx.1.elim
-  · exact fun h => h true trivial
-  · exact fun _ _ _ _ h => ⟨trivial, trivial, h⟩
 
 theorem weakEsseRegressControls : WeakEsseRegressControls := by
   refine ⟨⟨mCyc_not_agwf, fun _ _ _ _ _ h => h, fun _ _ => trivial, fun _ _ => trivial,

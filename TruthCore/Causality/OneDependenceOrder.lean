@@ -52,9 +52,10 @@ and finite or `Nat` interpretations used by the controls of
 `TruthCore.Results.Causality.OneDependenceOrder`. Everything else the results
 use already exists:
 
-* esse causing into grounding: `EsseCauseIsActualConcreteGround` (cb1cdea9),
-  with the actuality calibrations `ActOfEsseSufficesForExistenceAt` (546975ef)
-  and `EsseInReIsConcrete` (2d9807a5);
+* esse causing into grounding: the actuality calibrations
+  `ActOfEsseSufficesForExistenceAt` (546975ef) and `EsseInReIsConcrete`
+  (2d9807a5), with the new weak bridge, itself derived from
+  `EsseCauseIsActualConcreteGround` (cb1cdea9);
 * grounding into esse causing: `ActualGroundIsDistinctEsseCause` (98efaa9e)
   with `ExistingInActAt` (0436de86);
 * simple priority into grounding: `SimplyPriorIsActualConcreteGround`
@@ -267,37 +268,6 @@ open TruthCore.Latin.Aquinas.SummaTheologiae
   (MaximumInGenusCausesAllInGenusReading NothingPriorToItselfReading
    NoInfinitePerSeEfficientCauseSeriesReading)
 open Control
-
-/-- Omissions and nonvacuity for the esse regress from actual grounding. Each
-of the four inputs fails in a one-world `Bool` interpretation in which the
-other three hold and the regress premise fails; in the last interpretation all
-inputs hold with a nonempty actual cause of being. -/
-def EsseRegressControls : Prop :=
-  (¬ ActualGroundingWF mCyc () ∧
-    EsseCauseIsActualConcreteGround mCyc () pCyc.CausesIn pCyc.esse ∧
-    ActOfEsseSufficesForExistenceAt mCyc.ontic pCyc.InAct pCyc.esse () ∧
-    EsseInReIsConcrete mCyc pCyc.InAct pCyc.esse ∧
-    ¬ NoInfiniteActualEsseCauseRegress pCyc) ∧
-  (ActualGroundingWF mNone () ∧
-    ¬ EsseCauseIsActualConcreteGround mNone () pCyc.CausesIn pCyc.esse ∧
-    ActOfEsseSufficesForExistenceAt mNone.ontic pCyc.InAct pCyc.esse () ∧
-    EsseInReIsConcrete mNone pCyc.InAct pCyc.esse ∧
-    ¬ NoInfiniteActualEsseCauseRegress pCyc) ∧
-  (ActualGroundingWF mAbsent () ∧
-    EsseCauseIsActualConcreteGround mAbsent () pCyc.CausesIn pCyc.esse ∧
-    ¬ ActOfEsseSufficesForExistenceAt mAbsent.ontic pCyc.InAct pCyc.esse () ∧
-    EsseInReIsConcrete mAbsent pCyc.InAct pCyc.esse ∧
-    ¬ NoInfiniteActualEsseCauseRegress pCyc) ∧
-  (ActualGroundingWF mAbstract () ∧
-    EsseCauseIsActualConcreteGround mAbstract () pCyc.CausesIn pCyc.esse ∧
-    ActOfEsseSufficesForExistenceAt mAbstract.ontic pCyc.InAct pCyc.esse () ∧
-    ¬ EsseInReIsConcrete mAbstract pCyc.InAct pCyc.esse ∧
-    ¬ NoInfiniteActualEsseCauseRegress pCyc) ∧
-  (ActualGroundingWF mEdge () ∧
-    EsseCauseIsActualConcreteGround mEdge () pEdge.CausesIn pEdge.esse ∧
-    ActOfEsseSufficesForExistenceAt mEdge.ontic pEdge.InAct pEdge.esse () ∧
-    EsseInReIsConcrete mEdge pEdge.InAct pEdge.esse ∧
-    NoInfiniteActualEsseCauseRegress pEdge ∧ ActualEsseCause pEdge true false)
 
 /-- Omissions and nonvacuity for the esse regress from actual grounding with
 the weak bridge `ActualEsseCauseIsActualGround` in place of cb1cdea9. -/

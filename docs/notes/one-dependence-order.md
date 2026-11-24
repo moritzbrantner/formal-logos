@@ -46,15 +46,14 @@ well-foundedness among actual concreta.
 
 | Result | Premises | Conclusion | Inclusion used |
 | --- | --- | --- | --- |
-| `esseRegressOfActualGroundingWF` | AGWF `82cfaf26`, esse cause is actual concrete ground `cb1cdea9`, in act of esse exists at w `546975ef`, esse in re is concrete `2d9807a5` | `fd12ad3d` | actual esse causing ⊆ grounding among actual concreta |
-| `esseRegressOfActualGroundingWFWeak` | AGWF, **new** weak bridge `ActualEsseCauseIsActualGround`, `546975ef`, `2d9807a5` | `fd12ad3d` | the same, through the weaker bridge |
+| `esseRegressOfActualGroundingWFWeak` | AGWF `82cfaf26`, **new** weak bridge `b17a8954` (`ActualEsseCauseIsActualGround`), in act of esse exists at w `546975ef`, esse in re is concrete `2d9807a5` | `fd12ad3d` | actual esse causing ⊆ grounding among actual concreta |
 | `actualEsseCauseIsActualGroundOfEsseCause` | `cb1cdea9` | the weak bridge | strength step; registered `strengthens` |
 | `actualGroundingWFOfEsseRegress` | `fd12ad3d`, actual ground is distinct esse cause `98efaa9e`, existing is in act `0436de86` | AGWF | grounding among actual concreta ⊆ actual esse causing |
 | `simplePriorityWFOfActualGroundingWF` | AGWF, simply prior is actual concrete ground `86efed1a`, nothing prior to itself `32d77f18` | `d85de8e1` | simple priority ⊆ grounding (predecessor actual) |
 | `perSeEfficientSeriesOfPerSeEsseRegress` | per se esse regress `ea251340`, **new** premise `e8664ab8` | `97f5850f` | per se efficient causing ⊆ per se actual esse causing |
 
 Controls (Comparator-checked theorems, facts about the stated interpretations
-only): `esseRegressControls`, `weakEsseRegressControls`, `converseControls`,
+only): `weakEsseRegressControls`, `converseControls`,
 `priorityControls` and `secundaControls` drop each input in turn in a
 one-world `Bool` interpretation in which the others hold and the conclusion
 fails, and give a nonvacuous interpretation. The last conjunct of
@@ -88,8 +87,8 @@ weakest regress version that suffices; its premise is correspondingly stronger
   necessity-cause bridge as its two siblings). It does not suffice: it fires
   only when the effect is an actual concretum, and the q.3 a.4 profile's
   `InAct` is world-free. The derivation also needs the two actuality
-  calibrations `546975ef` and `2d9807a5`; the controls drop each and the
-  regress fails.
+  calibrations `546975ef` and `2d9807a5`; `weakEsseRegressControls` drops
+  each (with the weak bridge in place of `cb1cdea9`) and the regress fails.
 * "… and the secunda via's first cause": **not by that bridge.** The secunda
   via's relation is `CausesAsCaused`, not `CausesIn … esse`. It needs a
   further inclusion, the new `e8664ab8`, which fails on its bound sense
@@ -129,7 +128,9 @@ shared, open interpretive commitment, not a fixed meaning.
    `c ≠ x`, `CausesIn c x esse` ⇒ `grounds w c x`) suffices, because the
    derivation can use the `InAct c` clause of `ActualEsseCause` with the two
    calibrations. It is registered as the weak version of `cb1cdea9`
-   (`strengthens`), and the scope condition does not touch it.
+   (`strengthens`), and the scope condition does not touch it. Under the
+   weakest-version rule the batch derives `fd12ad3d` only through the weak
+   bridge; an earlier sibling from `cb1cdea9` itself was dropped before merge.
    Rivals: statement `4c9908ba` (some actual concretum has a distinct existing
    non-concrete esse cause; relation `2d08898d`) is kept as an alternative to
    `cb1cdea9`. Grounding read as non-causal determination among facts (Fine,
@@ -203,7 +204,9 @@ shared, open interpretive commitment, not a fixed meaning.
    ordinary cases; the quarta via itself assigns a causal role only to the
    maximum (`MaximumInGenusCausesAllInGenusReading`), not to intermediate
    grades. *Relevance:* it is the only inclusion that would carry AGWF to the
-   ascent premise, and any map-based transfer faces the same counterexample.
+   ascent premise. It is the only inclusion. A map-based transfer would need a
+   further premise supplying the map, and `ascentLimit` shows that the listed
+   premises supply none.
    **`ascentLimit`** (Comparator-checked) gives a `Nat` interpretation in
    which AGWF, the esse regress, well-founded priority, the four listed
    inclusions (`cb1cdea9`, `98efaa9e`, `86efed1a`, and `d96105fb`
@@ -264,7 +267,8 @@ grade relation `MoreIn esse` is not included either; it lies above grounding,
 so the quarta via's premise is stronger, not derived.
 
 Outcome label (rigor contract 6): **a new bridge** (verified conditional
-derivations AGWF → `fd12ad3d` with the strong or the weak esse bridge,
+derivations AGWF → `fd12ad3d` through the weak esse bridge (itself derived
+from `cb1cdea9`),
 AGWF → `d85de8e1`, `ea251340` → `97f5850f`, and `fd12ad3d` → AGWF), with
 **presentational duplicates identified** (AGWF/`fd12ad3d` under the two-way
 package), not consolidated by a relation. The `ea251340` → `97f5850f` option

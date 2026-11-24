@@ -852,7 +852,7 @@ actual grounding), `86efed1a` and `32d77f18` (result
 `simplePriorityWFOfActualGroundingWF`), so it is formally closed from open
 premises rather than a bare leaf. This does not revise the judgment above: the
 derivation binds the unsplit PRIOR_1, `86efed1a` is supported only on priority
-in being and meets row 1 on priority in causing, and the route to `42890b45`
+in being and meets row 1's case on priority in causing, and the route to `42890b45`
 through `e229bb2c` still needs `e078f07b`. The "open with a named blocker"
 standing in (c) is unchanged as a warrant judgment; only its formal status
 moved.

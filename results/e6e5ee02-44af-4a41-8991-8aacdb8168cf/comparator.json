@@ -3,7 +3,8 @@
   "solution_module": "TruthCore.Results.Causality.OneDependenceOrder.Solution",
   "theorem_names": [
     "TruthCore.Results.Causality.OneDependenceOrder.esseRegressOfActualGroundingWFWeak",
-    "TruthCore.Results.Causality.OneDependenceOrder.weakEsseRegressControls"
+    "TruthCore.Results.Causality.OneDependenceOrder.weakEsseRegressControls",
+    "TruthCore.Results.Causality.OneDependenceOrder.ascentLimit"
   ],
   "permitted_axioms": [],
   "enable_nanoda": true
