@@ -3764,8 +3764,15 @@ direct productive-receipt conditional is strongly motivated
 within its intended sense. The fixed actual supplier menu and
 global monotonicity were unnecessarily demanding sufficient
 conditions for some deletion tests; the component guard plus a
-joint retained witness gives a strictly more permissive test
-on the displayed controls. Nevertheless the essential-reception
+joint retained witness permits the displayed varying-supplier,
+nonmonotone control. The sufficient packages are not ordered in
+general: the monotone proof can preserve only a subset of U. For
+example, with a closed two-cycle C={a,b}, outside s activated
+unconditionally and outside t activated exactly by a, the full
+assignment is fixed, but deleting C makes t inactive. The earlier
+monotone proof finds {s}, while J for the entire U={s,t} fails.
+Thus the revised criterion trades a stronger retained-witness
+requirement for weaker assumptions about the operator. Nevertheless the essential-reception
 application, potential component closure, joint realization
 and modal/ontic import remain separate. Non-deletion does not
 follow from even strict, necessary and identity-fixed local
