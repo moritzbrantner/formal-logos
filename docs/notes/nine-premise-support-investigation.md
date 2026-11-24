@@ -157,8 +157,8 @@ open. Conversely, agreement between reviewers is not proof of premise truth.
 
 ## Unity of a proposed giver of being
 
-Two accounts that allow many individual givers disagree over whether their
-domains overlap. In the finite partition model each of two sources gives
+Sharing recipients leaves open whether each proposed giver is itself a
+recipient of the other. In the finite partition model each of two sources gives
 being to a different recipient. Neither gives being to the other source.
 If each source instead gave being to every other being, each would give
 being to the other. If receiving being in this respect entails dependence

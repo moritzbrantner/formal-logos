@@ -1115,16 +1115,19 @@ Two further tests give the disagreement positive content.
   each is actual in esse. This omission is an artifact of unconstrained
   predicates in the encoding, not evidence for nonactual gods.
 
-**Provisional assessment.** Unity has strong conditional warrant for a
-source understood to give every other's esse. The witness argument has
+**Provisional assessment.** Unity follows for a universal giver of esse under either maximality and
+exclusion package, or under the two dependence premises. Universal giving
+alone allows reciprocal causation in the two-candidate control. The witness argument has
 the advantage that the recipient its proof uses is already actual. The
 dependence argument supplies a different reason to expect unity on the
-productive reading: if the whole being of each of two givers is received
-from the other in that very respect, neither supplies an independently
-available source for the other's gift. This favors nonmutuality where the
-giver's exercise can be identified independently of its effect. Mere
-counterfactual inseparability can be reciprocal and gives no comparable
-reason for direction. Inferring nonmutuality from a strict ground ordering
+productive reading: if the power of each giver to give must already be available independently
+of receiving that very exercise from the other, reciprocal borrowing of the
+whole exercise supplies no such power. That priority requirement needs
+warrant at the two givers. The separate cause-to-dependence premise also
+requires the same effect to depend counterfactually on that agent under the
+relevant alternatives. Tracing an actual exercise leaves open whether a
+substitute would preserve the effect. Mere counterfactual inseparability
+can be reciprocal. Inferring nonmutuality from a strict ground ordering
 already chosen to prohibit cycles adds no independent warrant for the
 causal interpretation. The earlier dependence assessment distinguishes
 these readings. [Distinct dependence and strict ground](distinct-dependence-strict-ground-route.md)
