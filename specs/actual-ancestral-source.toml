@@ -3,6 +3,12 @@ vocab = "TruthCore.Causality.ActualAncestralSource"
 results = "TruthCore.Results.Causality.ActualAncestralSource"
 
 [[statement]]
+id = "One actual concrete root at this world has a finite grounding path to every actual concretum"
+lean = "CommonActualGroundingAncestry"
+definitions = ["a1b2e330-388f-4120-bc5c-969642317792","ea94e8dd-6f08-4099-9032-d302dd799a4e","822c9912-2313-584b-b2b7-77031da20107"]
+paraphrase = "On the selected profile and world there is an actual concrete root, every actual concrete root equals it, and every actual concretum has a finite path of actual concrete grounds from it. ConcreteExistentialSupply.graph uses m.grounds at the selected world for edges and actual concrete beings for both endpoints."
+
+[[statement]]
 id = "Each GOD_4 is a finite grounding ancestor of every actual concretum at this world"
 lean = "GodReachesActualConcreta"
 definitions = ["88f9f6e8-997b-5f7d-afa1-c501954c3807","a1b2e330-388f-4120-bc5c-969642317792","822c9912-2313-584b-b2b7-77031da20107"]
@@ -18,7 +24,7 @@ paraphrase = "At world false in the unchanged chainG profile, the earlier Mediat
 id = "Track every actual recipient to the same root using uniqueness and finite access"
 theorem = "commonAncestryOfUniqueAndAccess"
 premises = ["7ab0ddcb-cf48-5457-bee7-b6ea9c13b6b1","a9a13d38-2b4e-4a0b-9549-875e5af10e20"]
-conclusion = "96082032-91f1-586b-9db8-e42edbb5e52e"
+conclusion = "One actual concrete root at this world has a finite grounding path to every actual concretum"
 axioms = []
 rule = "Induct on each finite access derivation and identify its initial root on the same profile"
 meaning = "On ConcreteExistentialSupply.graph m w, all nodes are the actual concreta of this world and all edges are its selected grounding edges. Each recipient's access derivation starts at a root. Uniqueness identifies every such initial node with the supplied root. This constructs a finite path for each recipient on the actual subtype. No common path length, direct coverage or universal termination is assumed."
@@ -26,7 +32,7 @@ meaning = "On ConcreteExistentialSupply.graph m w, all nodes are the actual conc
 [[argument]]
 id = "Recover pointwise actual root access from one finite ancestral source"
 theorem = "rootAccessOfCommonAncestry"
-premises = ["96082032-91f1-586b-9db8-e42edbb5e52e"]
+premises = ["One actual concrete root at this world has a finite grounding path to every actual concretum"]
 conclusion = "a9a13d38-2b4e-4a0b-9549-875e5af10e20"
 axioms = []
 rule = "Translate the actual-subtype finite path into a concrete root-access derivation"
@@ -35,7 +41,7 @@ meaning = "Use the common root and paths on the actual grounding graph of exactl
 [[argument]]
 id = "Identify the unique actual root from finite common ancestry on its grounding graph"
 theorem = "uniqueOfCommonAncestry"
-premises = ["96082032-91f1-586b-9db8-e42edbb5e52e"]
+premises = ["One actual concrete root at this world has a finite grounding path to every actual concretum"]
 conclusion = "7ab0ddcb-cf48-5457-bee7-b6ea9c13b6b1"
 axioms = []
 rule = "Transfer the existence and agreement of subtype sources to actual roots"
@@ -54,7 +60,7 @@ meaning = "The carrier-wide causal naming premise and the bridge from a distinct
 id = "Identify one ancestral source from GOD_4 existence, finite reach and an actual root"
 theorem = "commonAncestryOfNamedSource"
 premises = ["8626f8a5-9531-5da7-9ebd-f901e74b1129","dc397705-d727-419e-92f9-65d44e1ff15d","Each GOD_4 is a finite grounding ancestor of every actual concretum at this world"]
-conclusion = "96082032-91f1-586b-9db8-e42edbb5e52e"
+conclusion = "One actual concrete root at this world has a finite grounding path to every actual concretum"
 comparator_theorems = ["namedRootOfReach"]
 axioms = []
 rule = "Inspect the last step of a path ending at a root and preserve its identified source"

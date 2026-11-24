@@ -155,6 +155,34 @@ state violated the beings' actual identity or required background. Open
 application bridges are not presented as defeated merely because they remain
 open. Conversely, agreement between reviewers is not proof of premise truth.
 
+## How much has the existence case gained?
+
+The largest gain in these comparisons is a sharper argument about borrowed
+activity. On a fixed transfer ledger with finite total throughput, even an
+infinite network of intermediaries cannot fund a positive transfer out of
+its upstream region by forwarding alone. This removes a genuine escape
+available to the rival when the sum of the transfers is unrestricted. Its
+force for existence depends on a reason why giving being itself obeys that
+accounting. A discharging battery shows why an object with causes can supply
+a present output from stored resources. Choosing the ledger to fit a desired
+root would put the conclusion into the premise. [Positive cut argument and
+its application limits](contractive-borrowed-power-1378.md#can-an-infinite-series-explain-a-one-way-transfer-by-forwarding-alone)
+
+Counting the translations between potency and privation as fresh evidence
+would overstate the gain. So would counting an artifact's continuity twice
+because two accounts explain it. The necessary intermediary below is a
+different result. It realizes the rival's proposed universal gift to
+contingent beings while leaving the giver itself dependent. Across these
+cases I see a stronger argument against forwarding under specified
+conditions, and little change in the balance between a divine source and
+an impersonal foundation for actual existence. Further weight would come
+from a reason to accept or reject one disputed condition in the same case
+on terms both accounts recognize. The source's own dependence, the origin
+of its capacity to give, and the evidence identifying it across recipients
+are three places where a rival and a theist can give different answers.
+[Potency comparison](potency-privation-support-investigation.md) ·
+[Continuity and present giving](sustaining-vs-existential-inertia.md#10-which-later-individual-continues-the-earlier-bearer-1801-2026-11-25)
+
 ## From finite origins to one ancestral source
 
 If every actual concrete being has a finite path from some actual root,

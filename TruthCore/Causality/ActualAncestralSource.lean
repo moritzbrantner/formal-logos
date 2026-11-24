@@ -18,6 +18,11 @@ open TruthCore.Causality.NarDerivation.Model (chainG chainGrounds)
 open TruthCore.Causality.FirstMoverNecessity (groundProfile)
 open TruthCore.Modal.PrussPowerPremises.Model (allC)
 
+/-- One root reaches all nodes of the actual concrete grounding graph at this
+world. The graph uses the profile's grounds relation at both actual endpoints. -/
+def CommonActualGroundingAncestry {W B : Type} (m : Profile W B) (w : W) : Prop :=
+  RootedAtUniqueSource (graph m w)
+
 /-- A causal interpretation of the naming predicate: each being so named is a
 finite grounding ancestor of every actual concretum at the chosen world.
 The empty path covers the being itself. This conditional supplies no God. -/

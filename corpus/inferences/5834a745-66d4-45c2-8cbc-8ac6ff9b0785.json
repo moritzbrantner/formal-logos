@@ -2,7 +2,7 @@
   "id": "5834a745-66d4-45c2-8cbc-8ac6ff9b0785",
   "label": "Identify the unique actual root from finite common ancestry on its grounding graph (inference)",
   "input_statement_ids": [
-    "96082032-91f1-586b-9db8-e42edbb5e52e"
+    "8269797e-4c7b-4c33-8ed6-b1e5262885cc"
   ],
   "output_statement_id": "7ab0ddcb-cf48-5457-bee7-b6ea9c13b6b1",
   "rule": "Transfer the existence and agreement of subtype sources to actual roots",

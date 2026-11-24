@@ -8,7 +8,6 @@ public import TruthCore.Results.Causality.NarGrafts.Solution
 namespace TruthCore.Results.Causality.ActualAncestralSource
 open TruthCore.Causality.BruteFoundationBoundary (Profile)
 open TruthCore.Causality.ConcreteExistentialSupply (graph)
-open TruthCore.Causality.SourceForest (RootedAtUniqueSource)
 open TruthCore.Causality.ConcreteRootAccess (UniversalRootAccess)
 open TruthCore.Causality.ActualRootUniqueness (UniqueActualRootAt)
 open TruthCore.Causality.ActualCommonRoot (ActualCommonRootAt)
@@ -35,7 +34,7 @@ private theorem sourceIffRoot {W B : Type} (m : Profile W B) (w : W)
 
 theorem commonAncestryOfUniqueAndAccess {W B : Type} (m : Profile W B) (w : W)
     (hUnique : UniqueActualRootAt m w) (hAccess : UniversalRootAccess m w) :
-    RootedAtUniqueSource (graph m w) := by
+    CommonActualGroundingAncestry m w := by
   obtain ⟨n, hn, unique⟩ := hUnique
   let root : {b // ActualConcrete m w b} := ⟨n, hn.1⟩
   refine ⟨root, (sourceIffRoot m w root).mpr hn, fun y hy =>
@@ -55,7 +54,7 @@ theorem commonAncestryOfUniqueAndAccess {W B : Type} (m : Profile W B) (w : W)
   exact fun x => path (hAccess x.val x.property) x.property
 
 theorem rootAccessOfCommonAncestry {W B : Type} (m : Profile W B) (w : W)
-    (h : RootedAtUniqueSource (graph m w)) : UniversalRootAccess m w := by
+    (h : CommonActualGroundingAncestry m w) : UniversalRootAccess m w := by
   obtain ⟨s, hs, _, reach⟩ := h
   have access {x y : {b // ActualConcrete m w b}}
       (p : FiniteCausalPath (graph m w).edge x y) : ActualRoot m w y.val → RootAccess m w x.val := by
@@ -67,7 +66,7 @@ theorem rootAccessOfCommonAncestry {W B : Type} (m : Profile W B) (w : W)
   exact access (reach ⟨x, hx⟩) ((sourceIffRoot m w s).mp hs)
 
 theorem uniqueOfCommonAncestry {W B : Type} (m : Profile W B) (w : W)
-    (h : RootedAtUniqueSource (graph m w)) : UniqueActualRootAt m w := by
+    (h : CommonActualGroundingAncestry m w) : UniqueActualRootAt m w := by
   obtain ⟨s, hs, one, _⟩ := h
   refine ⟨s.val, (sourceIffRoot m w s).mp hs, fun x hx => ?_⟩
   exact congrArg Subtype.val (one ⟨x, hx.1⟩ ((sourceIffRoot m w ⟨x, hx.1⟩).mpr hx))
@@ -92,7 +91,7 @@ theorem namedRootOfReach {W B : Type} (m : Profile W B) (w : W) (IsGod : B → P
 
 theorem commonAncestryOfNamedSource {W B : Type} (m : Profile W B) (w : W)
     (IsGod : B → Prop) (hGod : GodExists IsGod) (hRoot : ActualRootExistsAt m w)
-    (hReach : GodReachesActualConcreta m w IsGod) : RootedAtUniqueSource (graph m w) := by
+    (hReach : GodReachesActualConcreta m w IsGod) : CommonActualGroundingAncestry m w := by
   obtain ⟨g, hg⟩ := hGod
   obtain ⟨n, hn⟩ := hRoot
   obtain rfl := namedRootOfReach m w IsGod hReach g n hg hn

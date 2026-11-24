@@ -543,6 +543,10 @@ and [uniqueness projection](../../corpus/results/273fb2d3-d2e8-404e-adad-f6ae2c8
 
 The graph used here is `ConcreteExistentialSupply.graph m w`. Its contributors
 and recipients exist at w and are concrete, and an edge is `m.grounds w`.
+In the same three-being example below, the ordinary causal relation
+`Ontic.Causes` is empty. Its three existing beings are isolated sources,
+whereas the grounding graph has a single root. This difference is why the
+corpus records the conclusion specifically for actual concrete grounding.
 The abstract graph argument must be instantiated on that relation. Results
 on ordered parts, past events or another causal relation need an explicit
 identification to apply. The return paths in the corpus preserve the option
@@ -600,9 +604,8 @@ actual recipients and a reason for their roots to coincide, it has a positive
 explanation of common ancestry even where intermediate givers are real. A
 theory that merely identifies a necessary giver for all contingents still owes
 a reason why that giver is underived if it claims ultimacy for it. The mediated
-account has a concrete answer for the contingency of the last gift in the
-model and remains viable against the direct-reach objection. The worlds and
-giving assignments specify where that gift varies. Explaining *why* it varies,
+account permits the last gift to vary while the first source keeps the same
+immediate recipient. The two worlds exhibit this compatibility. Explaining *why* it varies,
 and whether one required act can admit that variation, needs a further account
 of the intermediary. The distinguishing test for the necessity inference is
 to determine what supplies the being of the putative necessary intermediary
