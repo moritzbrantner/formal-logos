@@ -1,0 +1,41 @@
+{
+  "id": "eac309a0-95b5-4d9a-8705-0819cd8b6d49",
+  "label": "Compare inclusive actual-order explanation with contained contingent bruteness",
+  "date": "2026-11-25",
+  "statement_ids": [
+    "608a262d-08fe-4dfd-9413-67e2ecf35b84",
+    "8a8d00e9-12b6-4cf0-b662-431cc4addd49"
+  ],
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "See docs/notes/explanatory-adequacy-750.md#restricted-bruteness-local-success-versus-exact-order-explanation-2026-11-25. Draft PR-1968 continues PR-1872/1908/1910/1927/1933. Distinguishes local derivative, structural, generic-role and inclusive actuality explananda. Under the proposed scope principle, the latter cannot be fully answered while its included B lacks an adequate reason; does not imply universal existential coverage. Two populated finite worlds retain one brute contingent base each, all derivative reason assignments, fixed identities, invariant constraints and a correct resident-observer identity decoder. Role-only observations cannot distinguish occupants uniformly; conditioning on the actual essentially dependent D0 screens off its base-absence world. Finite assignments and rational probability samples checked with a standalone Python diagnostic, not a Lean certificate. A necessary exemption can be directly warranted without falling within the being-level contingent PSR; even a contingent rule fact is not automatically a being. Positive priority, conditional essence, necessary role occupancy and intrinsic self-intelligibility have distinct explanatory scopes. The inspected firstMoverNecessaryByEsseCause proof uses B2 only at its selected f; a mover-scoped strength restriction is proposed, not registered or checked for novelty. Retain BX1/BX2 and actual firstness/priority/existence premises. A nonnecessitating actual reason may explain the recipient without uniquely determining an act; scope, operative content and actual production remain separate. No premise established, no new formal edge or source claim. Prior accepted E/D and practical-content assessments remain intact.",
+  "blocker": "Universal adequate existential coverage and the adequacy-to-token/domain bridge remain OPEN. A principled priority or constitutive feature has not yet been shown to warrant eligibility of a brute contingent actuality as an ultimate stop, nor has the opposite been demonstrated. Test the same bearer's intrinsic existential self-intelligibility versus conditional essence using existing natureModel, B6 and C2. Mover-scoped PSR/BX1/BX2 and B2 proposal needs related/novelty/semantics preflight and elaboration, binding and certificate checks before registration. Same-source operative practical content and actual evidence-channel applications remain as in PR-1933. No general epistemic deficit follows without a specific non-discriminating channel and no other warrant. Independent semantic challenge and canonical validation are outstanding.",
+  "evidence": [
+    "PR-1872",
+    "PR-1908",
+    "PR-1910",
+    "PR-1927",
+    "PR-1933",
+    "PR-1968",
+    "7bf9cb77-0418-4363-9298-266eac105edd",
+    "8cc169e3-7e88-48b1-b542-a6fdaaf8d41b",
+    "af8321b9-2bc0-4514-b3c7-e8ee6913da1c",
+    "360411ab-e8a1-43fe-9ecd-045f2fd382af"
+  ],
+  "current_assessment": {
+    "date": "2026-11-25",
+    "statement_ids": [
+      "608a262d-08fe-4dfd-9413-67e2ecf35b84",
+      "8a8d00e9-12b6-4cf0-b662-431cc4addd49"
+    ],
+    "scope": "Inclusive existence scope, role occupancy, epistemic screening and same-mover coverage",
+    "assessment": "Proposed unreviewed synthesis: a contained brute input leaves the inclusive actual-existence question unanswered if that question covers the very base and the scope principle is accepted. This is explanatory incompleteness, not a contradiction, independent derivative bruteness or universal epistemic failure. Fixed-role constraints, a positive exemption criterion and reliable cognitive inference are compatible with the displayed structural assignments. Essential identity information may remove occupant ambiguity, without supplying an ontic why. A necessary source with adequate actual nonnecessitating production could improve the comparison, but no such adequate source or personal-over-impersonal ranking is established. Retain the earlier moderate preference for E and suspension about D; no change to their accepted review status.",
+    "next_test": "Compare a positive criterion for intrinsic existential intelligibility of the same contingent bearer against mere conditional essence and the rival's principled primitive-stop license. Reuse natureModel, B6 and C2. Test a mover-scoped version of the existing PSR/BX1/BX2-to-B2 argument and firstMoverNecessaryByEsseCause after checking for existing variants; preserve actual witness, B0/B1/B3 and explicit excluded middle. Further epistemic objections require a concrete target, admitted alternative, non-discriminating evidence and absence of other warrant.",
+    "note": "docs/notes/explanatory-adequacy-750.md#restricted-bruteness-local-success-versus-exact-order-explanation-2026-11-25",
+    "reviewed_revision": "7c30d88a0737d863c7947b21b30fe2e5c30e346b",
+    "review": "unreviewed",
+    "publication": "published",
+    "evidence": "Proposed note delivered on draft PR-1968 at 7c30d88a0737d863c7947b21b30fe2e5c30e346b. Independent semantic challenge not obtained; local repository toolchain unavailable. Python finite diagnostic passed; no new Lean proof registered or verified. Parent #1933 review applies only to unchanged evidence.",
+    "supersedes": "None. This separate scoped proposal does not supersede the accepted-qualified assessment 9d7b8ae0 or the existing #1933 operative-content and evidence-channel work."
+  }
+}
