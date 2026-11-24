@@ -1183,3 +1183,234 @@ picture, the absence witness required for n, the priority premise
 in the First Way application and the distinct witnesses in #942. Attempt
 `9d7b8ae0-474d-4ae4-9d08-019cffbdea7b` records the revised
 provisional assessment and its open bridges.
+
+## Containment of evidence and adaptive calibration (2026-11-24)
+
+This checkpoint integrates the boundary assessment above with #1904's
+[continuation comment, especially sections 4–5](https://github.com/moritzbrantner/formal-logos/pull/1904#issuecomment-7113063138).
+That comment already proposed future experimental indistinguishability and a
+fallible-warrant comparison. The contribution here is a canonical Lean
+formalization of its **deterministic subcase**, a relation-based sufficient
+condition that permits different state representations, and an explicit
+control showing how a history-sensitive operation defeats the construction.
+The comment's stochastic-kernel argument and replacement-mixture calculations
+are not certified by these theorems. No numerical probability is assigned to a
+worldview, a past event or a corpus premise.
+
+The graph destination remains local existential explanation
+`608a262d-08fe-4dfd-9413-67e2ecf35b84`, assessed through the adequacy of rival
+accounts of historical evidence. The same-individual necessary-concrete target
+`b19ffd92-01bd-5c0b-9643-e7407137ea5e` and the existing B2 consumer remain
+downstream only through their complete earlier premises. The new results do
+not derive this explanatory principle, its negation or necessary existence.
+The bridges from a brute foundation to an admissible duplicate history, and
+from experimental indistinguishability to loss of warrant under a particular
+epistemic norm, are explicitly **OPEN**.
+
+### What future experiments can and cannot repair
+
+An experiment has a current state, a readout and a transition for each allowed
+action. A policy selects its next action from its entire observation record;
+it can therefore change its plan after each response. `StableMatching` says
+that related states have equal readouts and remain related after every same
+action. It is a condition on the complete selected experimental interface.
+It is stronger than the claim that the two instruments currently display the
+same number. Equality of the complete relevant state and the same readout and
+transition functions is one way to meet it; two differently represented states
+may also meet it through a relation.
+
+`adaptiveAgreement` (result `83edc309-1c34-402d-9394-4d095218244a`) proves that
+related states yield identical transcripts under every finite adaptive policy.
+At each step the earlier observations agree, so the policy chooses the same
+action; transition preservation gives related successor states and hence the
+same next observation. This is a conditional induction over concrete operations.
+It does not infer global historical identity, stochastic distribution equality,
+or metaphysical possibility from a matching readout. Every quantified run is
+finite; no completed infinite experiment or countable-recombination principle
+is assumed.
+
+`historyControls` (result `fe46786d-f478-4c90-a9c4-e9f31e00d6c9`) fixes two
+Boolean coordinates. One is a stipulated truth marker for a past event; the
+other is a mutable visible reading. The blind interface can repeatedly retain
+or toggle the reading but cannot consult the historical marker. Opposite
+markers with the same visible coordinate remain indistinguishable through
+every adaptive run. The existing
+`CorrectionCriterion.characterization` (`0590fe21-edb9-5915-9837-62560c8f40e2`)
+therefore excludes an exact classifier for that marker from any such transcript.
+The interface is not observationally inert: repeated toggles produce the
+three-reading sequence false, true, false. The positive control supplies an
+audit action that copies the historical marker into the reading. Both states
+still have the same initial display, but one audit distinguishes them and
+admits an exact classifier on the entire two-bit state space.
+
+These are **structural surrogates**. The past is a truth marker, not a model of
+the events, memory mechanisms, causal ancestry or numerical identities that
+an actual historical interpretation requires. The absence of historical
+coupling is part of the blind interface's definition, and the positive control
+removes it. The theorem neither establishes that real history is inaccessible
+nor supplies a physical past-reading instrument. It exposes a sufficient
+operational premise for a claim that a proposed counterfeit survives *all*
+future calibration. Defending this premise requires coverage of every relevant
+intervention, including any real history-sensitive channel; the theorem does
+not exclude other ways of establishing indistinguishability.
+
+There is a useful matched-scope consequence. If an old and a proposed young
+history satisfy this operational comparison, new experimental events may
+really occur in both and validate the same local future predictions. Those
+experiments nevertheless add no transcript distinction about the disputed old
+event. Historical truth, current experimental performance and future stability
+are separate targets. Failure to recover a particular old event does not
+undermine logic or all present science. Conversely, stable future prediction
+does not certify that the apparent earlier calibration actually happened.
+
+### Three different kinds of containment
+
+The following distinction sharpens the proposed dilemma without changing the
+epistemic standard halfway through the comparison.
+
+| Claim being defended | What must be supplied | What a primitive commitment can legitimately do |
+| --- | --- | --- |
+| The unwanted history or intervention is metaphysically excluded | A justified restriction with the relevant global scope; the positive-control action tests a claimed experimental exclusion | A necessary constitutive constraint may terminate this question without an earlier cause. Its content and applicability still need warrant. |
+| The unwanted history is admitted but does not defeat fallible confidence | The account's actual entitlement standard and the feature that limits the epistemic relevance of the rival | Prima facie memory entitlement, a warranted model class or a justified inductive policy may be basic. Their mere classification as primitive is no refutation. |
+| The actual method is reliable | An actually truth-connected process, or other conditions the selected externalist account requires | An actually reliable process can confer warrant without an observer being able to rule out every duplicate from the inside. Its existence does not by itself explain the ultimate order. |
+
+Metaphysical admission alone supplies no probability, no adverse likelihood
+and no evidence that a particular method is unreliable. This limitation also
+applies to the theist's comparison. For a rival that *already adopts* a
+Bayesian standard, existing `ContrastiveWorldview.updateConstraints` says
+that equal positive likelihoods preserve the prior. No equal prior is
+required. For an account that represents calibration as the shared-plus-local
+profile of `PrefaceConnectivity.crossCheckBoundary` (`4a85e1e3`), checks blind
+to the shared condition cannot improve its support; even perfect local checks
+leave that shared condition's probability unchanged. Neither representation
+is imposed on ordinary inquiry. Their interpretations require evidence that
+the alleged alternative actually matches the observations or that the actual
+checks are blind to the alleged common failure. The matching theorem supplies
+only the specified deterministic transcript equality.
+
+The narrower self-application argument is consequently about a **particular
+route to warrant**. If a worldview relies exclusively on historical evidence
+that it concedes has no discriminatory force at its own required standard,
+and offers no other entitlement for its historical conclusion, that route
+cannot deliver the claimed warrant. This is not strict self-refutation: the
+view might be true, possess another supporting route, adopt actual-process
+reliabilism, or claim a weaker epistemic status. #1808 already treats an
+inconsistent positive entitlement under an expressly strict norm; the present
+comparison neither repeats that theorem nor silently demands that norm of a
+fallibilist. Merely permitting a counterfeit or failing to refute one does
+not satisfy the self-undermining antecedent.
+
+### Where the restriction problem genuinely stops
+
+A justification for excluding an added agent, a justification for believing
+the exclusion, and an explanation of why the actual foundation exists are
+different achievements. A restriction may succeed at the first two while
+leaving the third open. This is explanatory incompleteness at the third
+question, not proof that the first two achievements are illusory.
+
+The strongest surviving rival to universal existential explanation in this
+comparison is a **contingent primitive foundation with constitutive scope
+restrictions and genuinely reliable secondary processes**. Its positive
+content must say which kinds exist, which transitions their natures permit,
+and why its claimed scope covers the putative interference. It may use direct,
+empirical and cumulative warrant for those commitments. To exclude historical
+counterfeit initialization, its constraints must concern admissible origins
+or complete histories, not merely the subsequent operation of whatever
+present state happens to exist. Alternatively it may admit that initialization
+while defending fallible or externalist warrant without claiming empirical
+discrimination of every admitted history.
+
+This package is not established as the actual metaphysics, and the surrogate
+does not certify all its commitments jointly. It survives the proposed
+inference from a brute existence to universal arbitrariness because the
+missing origin/recombination/epistemic bridges are substantive. Its residual
+price is the expressly unexplained contingent actuality of the foundation and
+whatever further obtaining it itself leaves primitive. A necessary restriction
+is not automatically another unexplained *contingent* fact. The rule's own
+truth enters the existential PSR only through an appropriate bearer or a
+separately defended fact-level extension; the type distinction in the earlier
+self-application test remains decisive.
+
+The dilemma therefore has different defensible strengths. A restriction that
+conflicts with a demand the rival applies uniformly to the same kind of fact
+can yield internal inconsistency by the existing parity tests. A rule that
+merely leaves actuality unexplained incurs a comparative explanatory cost
+under an accepted demand for existential intelligibility. A view with no
+defended restraint has not *established containment*. To infer that every
+alternative is possible still requires positive admission or completeness
+principles: absence of a known restriction is not unrestricted recombination.
+
+### Symmetry, legitimate burdens and current assessment
+
+An actual nonnecessitating productive explanation can explain a particular
+effect even when it does not settle every contrast about the producer's
+exercise. Both a genuine reason-guided free act and an impersonal stochastic
+or dispositional process receive that credit at the same scope. A theist who
+demands a determining explanation of every contingent fact must also apply
+it to the creative exercise; necessity of the source does not settle that
+question. An impersonal source's necessary nature can likewise supply real
+constraints without establishing why one of its contingent effects obtains.
+Metaphysical necessitarianism instead rejects the initial contingency at the
+tested scope and must defend that denial; it is not a brute-exception model.
+
+Classical theism gains a **substantive but conditional explanatory advantage**
+over a wholly brute account of the same order if its source has an adequate
+intrinsic existential explanation, actual reason-guided productive activity,
+and appropriate truth-directed governance. These conditions supply specific
+explanatory content. They cannot be replaced by the words necessary, personal
+or good. Against a necessary impersonal source with warranted constraints and
+reliable processes, the extra case concerns genuine rational authorship and
+care for epistemic goods; no comparative defeat is delivered here. The
+[practical authorship and epistemic-end tests](optimal-creation-choice.md#rational-authorship-versus-brute-selection-2026-11-23)
+keep the corresponding interpretation and moral bridges open. Assertion-only
+divine truthfulness is insufficient to exclude misleading nonasserted traces;
+the scope of a no-systematic-frustration norm and any overriding reasons must
+be independently assessed.
+
+Legitimate burdens shift at three specific points. A rival facing a supported
+same-feature parity argument must identify a relevant difference or reject
+the demand, rather than merely designate its preferred exception. A rival
+claiming universal empirical containment must answer an exhibited admissible
+intervention that violates it, or reject the stated admissibility/coupling
+premise with reasons. A view claiming historical warrant from a particular
+channel must meet its own standard when a warranted failure mechanism targets
+that channel. None of these shifts transfers the initial burden of proving
+unrestricted recombination, imposes an infinite justification regress, or
+establishes theism by default.
+
+**Overall provisional assessment.** Retain the earlier moderate preference
+for genuine adequate existential explanation E over an unexplained contingent
+exception, and suspension about universal determining explanation D. The
+new formal contribution sharpens the epistemic application boundary and
+integrates previously unverified discussion; it supplies no new warrant for
+the brute-to-counterfeit bridge. Restricted bruteness remains undefeated by
+the explosion argument, while unrestricted historical replacement combined
+with an incompatible claimed epistemic guarantee remains subject to the
+existing conditional objections. These results do not reduce the value of
+ordinary historical inquiry or establish a probability for its failure.
+
+**Next discriminating work.** The universal adaptive question is answered
+within the specified deterministic interface. The remaining application
+questions include a positive account making the putative full replacement
+history admissible with explicit identities, provenance and operational states
+that preserve the commitments actually required by the selected interpretation.
+A qualitative replacement may differ numerically and in historical origin;
+it need not preserve the actual world's provenance unless that is a commitment
+of the particular interpretation being tested. Other tests are a justified
+history-sensitive constraint or intervention that breaks the supplied matching,
+or a warrant account that survives without such discrimination. For theism, test
+the no-systematic-frustration norm on the same evidence domain and source,
+retaining the distinction between moral goodness and bare goodness of being.
+For the restricted brute rival, defend the scope of its constitutive inventory
+and identify which of its constraints are necessary, contingently grounded or
+primitive. No existing checked theorem in this slice supplies these bridges.
+Reopening requires one of those substantive inputs; repeating a present-record
+counterexample or re-proving the strict-norm contradiction would not answer it.
+
+The formal module is `TruthCore.Science.AdaptiveHistoryAccess`; its frozen
+Challenge and record specification are in the corresponding Results directory
+and `specs/adaptive-history-access.toml`. The current assessment of historical
+attempt `82b6c542-3f01-41eb-8a3d-b3b8b34d6315` records this exact scoped
+assessment, verification boundary and review disposition. The assessment of
+`9d7b8ae0-474d-4ae4-9d08-019cffbdea7b` is unchanged: its same-member absence
+and adequate-reason tests remain open.

@@ -1,0 +1,10 @@
+{
+  "id": "65de5c68-3896-40d6-9371-e816a57db8ae",
+  "label": "Adaptive transcript equality by preserved transition matching (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "54fb5040-cbe9-4285-ab74-86cfaeac8628",
+  "rule": "Induction on the finite experiment length using equal transcripts to select the same next action",
+  "meaning": "A universally quantified conditional mathematical result. Matching initial states gives equal initial readouts. At each induction step the shared policy receives the same earlier transcript and selects the same action; successor preservation supplies related next states and thus equal new readouts. The proof constrains a recursively defined experiment, rather than applying a premise already containing the transcript conclusion. The state/repertoire correspondence to admissible real histories remains OPEN. Named research connection: historical reliability as a rival test for local existential PSR 608a262d, with no registered implication from bruteness to this matching premise or from indistinguishability to skeptical defeat.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

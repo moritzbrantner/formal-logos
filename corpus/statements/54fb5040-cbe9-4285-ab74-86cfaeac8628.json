@@ -1,0 +1,9 @@
+{
+  "id": "54fb5040-cbe9-4285-ab74-86cfaeac8628",
+  "label": "Stable observation matching survives every finite adaptive experiment",
+  "paraphrase": "For every pair of deterministic experiments with shared action and observation carriers, a relation that preserves current readouts and every same-action successor yields identical transcripts from related initial states for every finite number of steps and every policy choosing actions from its previous readouts. The relation need not be state equality, but initial readout equality alone is insufficient. This formalizes the deterministic subcase of PR #1904 comment 7113063138 section 4, rather than claiming a new discovery or a stochastic-kernel theorem. Metaphysical admissibility, coverage of all real interventions and epistemic warrant are additional application obligations.",
+  "lean_declaration": "TruthCore.Science.AdaptiveHistoryAccess.AdaptiveAgreement",
+  "definition_ids": [
+    "4a52e22b-c56f-4814-9661-9ef540301cb4"
+  ]
+}
