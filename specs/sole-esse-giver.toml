@@ -6,7 +6,7 @@ results = "TruthCore.Results.Causality.SoleEsseGiver"
 id = "At least one actual bearer participates in esse"
 lean = "ActualParticipantExists"
 paraphrase = "Analyst nonvacuity premise. Some bearer is actual in the selected esse respect and bears the q44 participation predicate. An actual source alone does not supply a recipient."
-definitions = ["5dc08b95-ca15-52ab-b8cd-2b558e9a13f7", "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168", "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"]
+definitions = ["14d30c53-51c2-502d-b009-247dac0421e0", "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168", "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"]
 
 [[statement]]
 id = "One selected own-being giver supplies every actual participant in esse and is unique in that role"
@@ -24,13 +24,13 @@ definitions = ["5dc08b95-ca15-52ab-b8cd-2b558e9a13f7", "14d30c53-51c2-502d-b009-
 id = "Every actual participant has at most the selected actual source's represented degree of esse"
 lean = "BoundsParticipatedEsse"
 paraphrase = "Analyst formulation. The selected s is actual as to esse. Each actual q44 participant x satisfies degree(esse,x) ≤ degree(esse,s) in one fixed preorder. This is a positive weak bound on the represented scale and allows equal degrees. Passing to the primitive comparative, excluding ties, and extending the comparison to a different perfection each require additional warrant."
-definitions = ["5dc08b95-ca15-52ab-b8cd-2b558e9a13f7", "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168", "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72", "8323604a-2e7a-554c-9b32-d82e5201271d"]
+definitions = ["14d30c53-51c2-502d-b009-247dac0421e0", "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168", "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72", "8323604a-2e7a-554c-9b32-d82e5201271d"]
 
 [[statement]]
 id = "One total giver of participated esse permits a tied degree and does not entail degree adequacy"
 lean = "EqualDegreeControl"
 paraphrase = "Closed two-bearer interpretation with actual distinct giver true and recipient false, one own-being source, source represented identity and recipient represented distinction. Giving is efficient and total at esse. A constant natural-valued scale satisfies weak adequacy with a tie. Assigning the same recipient 2 and giver 1 instead makes adequacy fail on the same causal facts. This tests dependence on the degree premise. The assignments do not claim an actual metaphysical tie or reversal."
-definitions = ["5dc08b95-ca15-52ab-b8cd-2b558e9a13f7", "14d30c53-51c2-502d-b009-247dac0421e0", "211a6432-8b8f-53ed-85e3-75173bb15b24", "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72", "8323604a-2e7a-554c-9b32-d82e5201271d", "33ebf451-eb02-48f5-b420-24a34da9b865", "8934912c-7997-4af7-9520-ec94ff221043", "183b48d2-1753-583d-aef9-4199cff86231"]
+definitions = ["5dc08b95-ca15-52ab-b8cd-2b558e9a13f7", "14d30c53-51c2-502d-b009-247dac0421e0", "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168", "211a6432-8b8f-53ed-85e3-75173bb15b24", "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72", "8323604a-2e7a-554c-9b32-d82e5201271d", "33ebf451-eb02-48f5-b420-24a34da9b865", "8934912c-7997-4af7-9520-ec94ff221043", "183b48d2-1753-583d-aef9-4199cff86231"]
 
 [[argument]]
 id = "One principal giver of participated esse from local supply and common source selection"
