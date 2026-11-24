@@ -747,8 +747,7 @@ accommodate) would move the verdict at `n` with it.
    mistake. This belongs to test 5.
 5. Secondary conceivability of `n`'s absence, and the calibration premise
    against modal rationalism.
-6. HD's strengthened form (Van Cleve §4, unread) against B2 and the route's
-   dependence premises; necessity of origin (§9, unread).
+6. HD's strengthened form and necessity of origin. The later [C2 occupation and replacement test](contingency-receptivity-c2.md#testing-occupation-and-replacement) examines Van Cleve §§4 and 9 against the same-individual inference.
 7. The formal requests F1–F5.
 
 ## 10. Literature
@@ -851,7 +850,6 @@ relevance, and the extra-content test is applied to PGP as to its rivals.
 | P2-12 Werner unused | **Accepted.** Moved to navigation only | §10 |
 
 No finding is disputed.
-
 
 ## 11. Step 2: must real possibility be grounded in actuality? (2026-11-23)
 
@@ -1159,3 +1157,53 @@ the Step 2 reasons for retaining it. The corresponding Step 2
 attempt records what was tested and its open blocker, not a new
 closure or superseding assessment. See issue #1887 for the
 single ongoing handoff.
+
+## Testing positive conceivability of this individual's absence
+
+The [C2 companion test](contingency-receptivity-c2.md#testing-occupation-and-replacement)
+leaves open an epistemic question even if the possibility itself is primitive.
+Could a thinker have a reason for P without knowing everything about n's
+essence? Consider a nonempty finite roster of rigidly identified concrete
+individuals, each known to be distinct from n. Include the concrete parts
+required by the proposed scene in the roster and apply the same distinctness
+condition to them. If these are *all* the concrete individuals in an accessible
+world, n is absent there. This exclusion needs only the stated identities
+and scope. A comprehensive grasp of n's nature is unnecessary for that step.
+By contrast a list of descriptions such as “the sole foundation” need not
+distinguish its occupant from n. Rigid reference resolves which individual
+we mean. It confers no ability to decide which inventories can be complete.
+
+The Humean can claim a positive intuition that the described individuals
+exhaust concrete reality. Positive imagination can include a totality
+judgment, just as it can concern an unobservable arrangement. The strongest
+objection concerns what the conception actually verifies. Take the very
+same local scene and ask whether it verifies “these are the only concrete
+beings” or just “these are all the concrete beings I have specified.” Even a
+minimal realization of the scene would include any further bearer indispensable
+to its realization. The minimality instruction alone cannot settle whether
+there is such a bearer. The literal exact-roster judgment does exclude n,
+but appending that sentence supplies no independent evidence that one has
+positively conceived its truth. This argument grants the Humean's
+truth conditions and addresses the warrant for the totality judgment.
+Chalmers distinguishes imagining a verifying situation from entertaining an
+entailing description, differentiates actual-world identification from
+counterfactual evaluation, and discusses minimality and the controversial
+example of a necessarily existing God. The rigid-roster application is an
+analyst test. [Chalmers, “Does Conceivability Entail Possibility?”, §§2–6, 8, 12](https://consc.net/papers/conceivability.html)
+
+**Judgment.** This narrows the earlier incomplete-knowledge objection.
+Someone could identify an exhaustive roster excluding n without first
+settling n's real definition. The disputed datum is the apparent
+exhaustiveness of a *counterfactual* roster. It supplies a defeasible reason
+for P to the extent that it survives reflection on what the roster requires.
+The same restraint applies to necessity: imagining n present alongside
+every configuration considered leaves open whether the sample covers all
+admissible configurations. One warranted omission would suffice for P; any
+number of selected examples of presence still needs a reason for coverage.
+Neither absence of a contradiction nor absence of
+a verified omission decides the issue. A way to distinguish a genuinely
+exhaustive concrete inventory from a locally complete description compatible
+with further bearers would increase confidence in P if it licensed the
+former at this case. A warranted dependence tying some roster member to n
+would defeat this particular example while leaving other routes to P open.
+See attempt `91e562cc`; the overall assessment at n remains suspension.

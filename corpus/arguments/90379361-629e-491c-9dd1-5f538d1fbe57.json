@@ -1,0 +1,13 @@
+{
+  "id": "90379361-629e-491c-9dd1-5f538d1fbe57",
+  "label": "Cancel the shared component of two Boolean measurement offsets",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "77f924d5-87fd-47c6-bed7-f25ca4b1db40",
+  "inference_ids": [
+    "8863c7ec-8303-4cc8-bad4-104fdbd99f61"
+  ],
+  "meaning": "Evaluating the four input bits identifies the precise condition under which a differential reading tracks change in a fixed XOR channel. Keeping or reading the two values and correctly carrying out the comparison are application conditions. The identity supplies no physical frequencies or normative premise.",
+  "definition_ids": [
+    "eee96f99-49c7-47d6-a7b0-c6bbbabc98f0"
+  ]
+}

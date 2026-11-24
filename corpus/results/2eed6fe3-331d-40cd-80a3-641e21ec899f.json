@@ -1,0 +1,11 @@
+{
+  "id": "2eed6fe3-331d-40cd-80a3-641e21ec899f",
+  "label": "One existing production fixture separates single origin from identity by all ancestors",
+  "argument_id": "9efd8d2f-c525-4d83-955a-d20ac4a916d0",
+  "challenge_module": "TruthCore.Results.Causality.AncestorIndividuation.Challenge",
+  "solution_module": "TruthCore.Results.Causality.AncestorIndividuation.Solution",
+  "theorem": "TruthCore.Results.Causality.AncestorIndividuation.siblings",
+  "comparator_config": "results/2eed6fe3-331d-40cd-80a3-641e21ec899f/comparator.json",
+  "status": "solution-present",
+  "description": "Use FullFirstCause.Fixture.graph unchanged. Its only source gives rise to both effects. Every ancestor of either effect must be that source. Distinctness and absence of paths between them refute the two universal conditions inside this interpretation. No claim about actual creative activity or metaphysical possibility follows."
+}
