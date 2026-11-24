@@ -1,0 +1,30 @@
+{
+  "id": "fa840507-1db4-497d-a47a-260bbcd25dbc",
+  "label": "A represented greatest degree of being from the participant bound and roster coverage",
+  "premise_statement_ids": [
+    "aba6f4e1-bbf1-4aaa-ac1c-dead4efbef09",
+    "11e24b50-06bc-5e2e-b9b6-a4e4dc421237",
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410"
+  ],
+  "conclusion_statement_id": "27fb3450-3bf6-57e1-acb0-11abf563b3d5",
+  "inference_ids": [
+    "2a69dac0-b82a-42ef-936f-489b55255be4"
+  ],
+  "meaning": "The selected source realizes its degree. Split each actual bearer on equality to it. Its own degree is reflexively bounded; all others participate by explicit roster coverage and therefore satisfy the weak bound. This yields the existing MAXIME_2 existence statement on the represented preorder. The proof permits multiple bearers to have the greatest degree; passing to primitive maximality takes its existing separate calibration.",
+  "definition_ids": [
+    "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "d8e2ed12-8089-5202-ae51-e807cf611c76",
+    "9146daed-3e78-5804-8291-70c4e2c9d6c1",
+    "14d30c53-51c2-502d-b009-247dac0421e0",
+    "8323604a-2e7a-554c-9b32-d82e5201271d",
+    "5dc08b95-ca15-52ab-b8cd-2b558e9a13f7"
+  ],
+  "disambiguation_ids": [
+    "4f1d0cf6-88ba-59e3-814d-01450c2bf282",
+    "54f33165-05df-5205-807a-04154b5fd6ad"
+  ],
+  "strong_version_needed": {
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The case split concerns equality to the selected giver. No nominal GOD_4 candidate has been identified for a local excluded-middle premise."
+  }
+}

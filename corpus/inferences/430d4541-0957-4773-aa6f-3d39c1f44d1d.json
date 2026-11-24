@@ -1,0 +1,10 @@
+{
+  "id": "430d4541-0957-4773-aa6f-3d39c1f44d1d",
+  "label": "Test degree adequacy and strictness on a populated sole-giver interpretation (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "1db69c26-cfbd-4f3b-bbea-1481290ef1af",
+  "rule": "Evaluate two degree assignments on the same fixed two-bearer causal profile",
+  "meaning": "A constant degree satisfies total-cause adequacy and gives the distinct giver and recipient equal degrees. On the same efficient total edge the assignment giver 1, recipient 2 violates adequacy. This tests formal entailment without treating unconstrained degree assignments as metaphysical counterexamples.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}
