@@ -27,8 +27,8 @@
     "note": "docs/notes/law-actuality-743.md#c3-law-preserving-withdrawal-test-for-the-same-existent-1801-2026-11-23",
     "reviewed_revision": "f439b7256e1f8e8f0f525cd14cb9a940919b0bb7",
     "review": "accepted_qualified",
-    "publication": "unpublished",
-    "evidence": "PR-1895 records the independent semantic challenge at 9bcae75bbe and targeted acceptance at f439b7256. They cover the scoped withdrawal-law comparison. The PR links final CI separately. No new source claim or corpus argument/result.",
+    "publication": "merged",
+    "evidence": "PR-1895 merged at 016e61bd27aa0c498292b3c909f5e81f31c9b9d1. It records the independent semantic challenge at 9bcae75bbe and targeted acceptance at f439b7256. They cover the scoped withdrawal-law comparison. The PR links final CI separately. No new source claim or corpus argument/result.",
     "supersedes": "None: this is the first current assessment of the #1801 matched-source-withdrawal test. The older beginningless/whole-history §7 assessment and attempted explanatory-completeness boundary remain intact."
   }
 }

@@ -2,7 +2,7 @@
 
 - **Project** Formal Logos (`moritzbrantner/formal-logos`)
 - **Date** 2026-11-24
-- **Status** Independently reviewed research specification in PR #1917. Formal implementation remains open.
+- **Status** Independently reviewed research specification merged in PR #1917 at `233857c34`. Formal implementation remains open.
 - **Target** `00e962ae-f109-55f7-a7fd-f107ce0dea6b` — `GoodnessIsActualityReading`
 - **Primary consumer** `e0dae79f-c042-5a08-a148-725d0468df91` — `GodIsSupremelyGood`
 - **Evidence baseline** Repository evidence at `0ce1e78ed5e42962586356631a778e24a832c546` and historical route analysis at `fd78b77e6`.
