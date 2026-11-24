@@ -9,9 +9,9 @@ In a well-founded grounding order, it suffices that the immediate suppliers
 joined to each dependent by a single grounding edge trace back pairwise to
 a common ancestor. They may meet at different
 beings for different dependents. If the actual grounding graph is weakly
-connected, all its underived sources must then coincide. A pluralist who
-accepts connectivity and well-foundedness is committed to some dependent
-with two such suppliers having no shared ancestor. In the existing model,
+connected, all its underived sources must then coincide. A pluralist who posits two distinct
+underived sources in this connected, well-founded graph is committed to
+a dependent with two such suppliers having no shared ancestor. In the existing model,
 two rank-zero sources directly precede the same rank-one constituent.
 Explaining how two powers coordinate would leave open what sustains
 the existence of their bearers. [Argument, model and test](part-free-plurality.md#when-immediate-co-suppliers-suffice-for-a-common-source)
