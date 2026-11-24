@@ -350,7 +350,7 @@ no change
 
 ## Does a child's actual nourishment identify its underived source? (#1812)
 
-**Proposed judgment for independent challenge, 2026-11-24.** An observed
+**Provisional judgment, 2026-11-24.** An observed
 instance gives positive evidence of received material and of a determinate
 operation in the patient. It also tells us *which* capacity an account of the
 child's good must explain. The evidence selects a proximate material source.
