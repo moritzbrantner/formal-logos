@@ -6,6 +6,7 @@ definitions = ["DEF-DEPENDS-FOR-BEING", "DEF-FINE-PLG-DERIVABILITY", "DEF-FINE-P
 [[statement]]
 id = "Strict-ground dependence and efficient-cause independence in a series without a first cause"
 lean = "ConsumerModel"
+definitions = ["DEF-DEPENDS-FOR-BEING", "DEF-FINE-PLG-STRICT-PARTIAL-GROUND"]
 paraphrase = "On Nat with one respect, each successor causes its predecessor and acts as a per se link. Each number depends on every larger number, and priority runs from larger to smaller. Some consistent PLG theory realizes the distinct dependence map under identity labelling. P2, cause-to-dependence, no self-causation, and cause independence of its effect all hold. The Second Way's order, priority, irreflexivity and middle-cause premises hold. Its regress prohibition fails and no first efficient cause exists in this interpretation."
 
 [[argument]]
@@ -15,7 +16,7 @@ conclusion = "Strict-ground dependence and efficient-cause independence in a ser
 premises = []
 axioms = ["propext", "Classical.choice", "Quot.sound"]
 disambiguations = ["23dd6f32-b456-4963-adb3-7befbf0dc4fb"]
-sense_mixing_control = true
+sense_bridges = [{ term = "DEPENDENCE_FOR_BEING_VERSUS_STRICT_GROUND", from = "DEPENDENCE_FOR_BEING_VERSUS_STRICT_GROUND_1", to = "DEPENDENCE_FOR_BEING_VERSUS_STRICT_GROUND_2", statement_id = "2b1c8fbe-1c5c-4039-accd-bf69f097f4da", role = "conclusion" }]
 rule = "Extend the Fine successor sequents by strict transitivity, apply the P2 bridge and its actual consumer, and test firstness on the same series"
 meaning = "A joint model of the strict-ground package and the full cause-independence inference. Each efficient cause is independent of the effect it causes, while itself caused by its successor. The P2 package can therefore coexist with the failure of the separate per se regress premise, even for transitive dependence. No interpretation of arithmetic edges as actual suppliers of existence follows."
 

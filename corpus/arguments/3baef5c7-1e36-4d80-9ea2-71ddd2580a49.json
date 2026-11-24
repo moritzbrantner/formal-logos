@@ -15,8 +15,16 @@
     "4a101a4c-12de-53c8-80c6-de7a523ea9d9",
     "1d9aa4d9-18cc-5930-95fb-5af65e32c0f8"
   ],
-  "sense_mixing_control": true,
   "disambiguation_ids": [
     "23dd6f32-b456-4963-adb3-7befbf0dc4fb"
+  ],
+  "sense_bridges": [
+    {
+      "term": "DEPENDENCE_FOR_BEING_VERSUS_STRICT_GROUND",
+      "from": "c6e310c2-a8c9-41cb-8d7e-18859802484d",
+      "to": "28212589-ee94-4eb0-b20e-f7cead4438b1",
+      "statement_id": "2b1c8fbe-1c5c-4039-accd-bf69f097f4da",
+      "role": "conclusion"
+    }
   ]
 }

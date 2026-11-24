@@ -361,8 +361,9 @@ concreta at one world, suppose each bearer with an actual concrete ground
 covers its exports from receipts. Then the upstream net exporter has no actual
 concrete ground in that same relation. This supplies the existing actual-root
 premise directly. The hypothesis does substantive work. Over a fixed interval
-a charged battery can export electrical energy with zero incoming current
-while its existence depends on components. Counting opening stock explains
+a discharging battery can deliver electrical energy through its two-terminal
+port without receiving charging energy, while its existence depends on its
+components. Its chemical store decreases. Counting the opening store explains
 the output, but changes the ledger. To apply the proof to existential giving,
 identify an independently motivated additive measure, positive one-way exercise,
 finite summed throughput, and a reason grounded bearers cannot originate any

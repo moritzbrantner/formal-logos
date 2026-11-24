@@ -2,5 +2,9 @@
   "id": "2b1c8fbe-1c5c-4039-accd-bf69f097f4da",
   "label": "Strict-ground dependence and efficient-cause independence in a series without a first cause",
   "paraphrase": "On Nat with one respect, each successor causes its predecessor and acts as a per se link. Each number depends on every larger number, and priority runs from larger to smaller. Some consistent PLG theory realizes the distinct dependence map under identity labelling. P2, cause-to-dependence, no self-causation, and cause independence of its effect all hold. The Second Way's order, priority, irreflexivity and middle-cause premises hold. Its regress prohibition fails and no first efficient cause exists in this interpretation.",
-  "lean_declaration": "TruthCore.Causality.StrictGroundInfiniteCauseSeries.ConsumerModel"
+  "lean_declaration": "TruthCore.Causality.StrictGroundInfiniteCauseSeries.ConsumerModel",
+  "definition_ids": [
+    "bf26b9b2-41ed-55b0-9557-dae90ab9b81f",
+    "5d9a94e0-d64b-53ca-b9cc-504735060e0a"
+  ]
 }
