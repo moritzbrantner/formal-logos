@@ -1204,6 +1204,17 @@ not the metaphysical adequacy of those interpretations. The
 [specification](../../specs/contained-selection.toml) records the complete
 bindings and selected vocabulary.
 
+The dependency audit distinguishes the two certificates. `restrictionBoundary`
+has no axioms. `ExerciseComparison` and the reused `ExplanatorySymmetry.acting`
+model already depend on `propext`; the dependency is present in the stored
+proposition, even before selecting a proof. Its result therefore uses the
+repository's exact permitted Mathlib set (`propext`, `Classical.choice`,
+`Quot.sound`), as the existing explanatory-symmetry comparison does. The
+measured dependency is only `propext`. This corrects the initially too-strict
+result configuration without altering the frozen statement, proof or model.
+No philosophical premise is introduced as an axiom; this certificate does not
+serve an argument against an intuitionist's withholding of excluded middle.
+
 At world 0, `unexplainedAct` retains `acting.arena`'s whole ontology,
 truth conditions and existence-fact assignment. The actual contingent act
 `.member 0` and actual contingent outcome `.target` are the same distinct

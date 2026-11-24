@@ -26,6 +26,10 @@ meaning = "Necessary basis facts give the same complete selected evidence vector
 [[argument]]
 id = "Matched act-reason deletion separates existential from contingent-fact coverage"
 theorem = "exerciseComparison"
+# The reused acting model and the frozen ExerciseComparison proposition already
+# depend on propext. Use the repository's exact permitted Mathlib set; the
+# measured dependency is propext, not either of the other permitted axioms.
+axioms = ["propext", "Classical.choice", "Quot.sound"]
 premises = []
 conclusion = "Existential coverage survives removing the explanation of the same contingent act"
 rule = "Exhaust the fixed fact and being signatures while preserving the original truth table"
