@@ -508,8 +508,9 @@ partially ordered quality; at w and each accessible v where the actual root
 exists, its exact giving set is optimal. Take an actual root n and a being d
 distinct from n. Suppose every feasible complete output S omitting d has
 some feasible T strictly better than S. Then no optimal complete output can
-omit d: if S were optimal, T would contradict its undominated/optimal
-status. Consequently the optimizer is fixed toward d in the giving sense.
+omit d: if S were optimal, T would contradict its greatest-quality status (`Optimal` is membership in the feasible set
+and `IsGreatest (quality '' feasible) (quality S)`, not merely being
+undominated). Consequently the optimizer is fixed toward d in the giving sense.
 This uses neither a unique optimum nor an exhaustive order. With factive
 giving and a necessary root it also yields d's existence throughout the
 specified worlds, but not d's ungroundedness. To conclude a counterinstance
@@ -518,6 +519,19 @@ end-required; to instantiate the recorded selective-diffusion rival
 `ea1425c0` further require two-way giving toward some being. The optimizer
 alone asserts neither. This is an analyst argument, not a Lean result or
 refutation of either rival.
+
+Conversely, **given an existing optimum**, if every optimal complete output
+includes d, choose any optimal T. For any feasible S omitting d,
+quality(S) ≤ quality(T); equality would make S optimal, contrary to its
+omitting d. Hence quality(S) < quality(T). Thus the strict-improvement
+criterion characterizes the common recipient core given existence of a
+greatest feasible quality, without assuming linearity or injectivity. It
+is not equivalent without the existence condition: two incomparable
+quality values on the feasible outputs ∅ and {d} have no greatest value,
+so the universal claim about optima is vacuous but the improvement test
+fails. An actually existing root subject to the optimizer at w has an
+optimum by the rival's own condition. This is a bridge to test using the
+existing `Optimal` vocabulary, not a registered consequence.
 
 The relevant stronger hypothesis is strict improvement of *complete*
 decisions without d, not the isolated goodness of d. It may be motivated by
@@ -765,3 +779,69 @@ run; direct GitHub record/definition inspection and the stated PR evidence
 are not substitutes. An independent challenge of the actual draft and
 applicable CI remain required before reliance as reviewed support.
 
+
+### 6. Reproduced analyst controls (unregistered)
+
+Executed the following dependency-free Python 3 diagnostic on this checkpoint.
+Its finite integer rankings are a test of the abstract quality argument,
+not a metaphysical measure of goodness, a Lean model or a substitute for
+the existing kernel checks.
+
+```python
+from itertools import product
+
+X = tuple(frozenset(i for i in range(3) if mask & (1 << i))
+          for mask in range(8))
+d, a, b = 0, 1, 2
+quality = lambda s: 2 * (d in s) + int((a in s) != (b in s))
+opt = [s for s in X if all(quality(t) <= quality(s) for t in X)]
+assert opt == [frozenset((d, a)), frozenset((d, b))]
+assert all(any(quality(t) > quality(s) for t in X)
+           for s in X if d not in s)
+assert all(d in s for s in opt) and any(a not in s for s in opt)
+assert frozenset() in X and frozenset((a,)) in X
+
+checked = triggered = 0
+for q in product(range(3), repeat=len(X)):
+    highest = max(q)
+    improvement = all(
+        any(q[j] > q[i] for j in range(len(X)))
+        for i, s in enumerate(X) if d not in s
+    )
+    winners = [s for i, s in enumerate(X) if q[i] == highest]
+    core = all(d in s for s in winners)
+    assert improvement == core
+    checked += 1
+    triggered += improvement
+print(checked, triggered)
+```
+
+Result: two tied optima; all 6,561 rank assignments pass, 1,055
+satisfy the improvement condition. The enumeration only covers a
+nonempty finite, totally ordered quality image with an optimum.
+The partial-order argument above is separate.
+
+**Omission controls (scope only).** Retain the same feasible outputs.
+A due-perfection policy admitting all the outputs after actual recipient
+duties are satisfied permits ∅ and {a}; realizing only {d,a} and {d,b}
+still leaves d fixed. Thus permission to omit d without an accessible
+exercise omitting it does not suffice. Realize {a} instead of {d,b} at
+the alternative situation: d is no longer fixed, although the actual
+giving at w and the due-perfection policy remain the same. The
+world-level optimizer under the original quality would no longer hold;
+it is the actual accessible omission, not the label of the policy, that
+breaks fixity. No claim about metaphysical feasibility or intrinsic
+constitution follows.
+
+**Author's self-sweep (not independent review).** These are output
+surrogates, not instances of the full ontology; both personal and
+impersonal proposals receive the same productive/coverage credit;
+no new historical reading is attributed; WN's actual and accessible
+giving, rational exercise and end-requirement quantifiers are preserved;
+the quality/feasibility assignments and absence of intrinsic constitution
+are explicit; the root-restricted WN application is distinguished from
+the unrestricted theorem and the other sense bridges are retained;
+the actual delivery remains a draft pending independent review and CI.
+No new stating claim or formal theorem is proposed, so no new claim/type
+pair or proof certificate is represented. The full repository self-sweep
+and CLI validation remain outstanding.
