@@ -28,6 +28,7 @@ Per candidate the rendered Lean file checks, each as its own declaration with
 * `main`: premises -> conclusion (`conjecture_unfold; duper [*]`);
 * `vac`: premises -> False (an incompatibility, never support);
 * `drop_i`: the goal without premise i (single-deletion minimization);
+* `vacdrop_i`: False without premise i (single-deletion core reduction);
 * `none`: the conclusion from no premise (a vocabulary theorem/tautology);
 * `probe`: the folded transcription probe of `truth prove-sweep`;
 * `litneg_i_j`: whether premise i unfolds definitionally to the negation of j;
@@ -45,11 +46,11 @@ certified. Identification is admissible only between parameters of the same
 name in one Lean module, through one whole-binder sense tag shared by both
 parameters, or as forced by such an identification of a relation whose type
 mentions the carrier; two parameters of one declaration mapped to one binder
-are an obligation. Single deletions are independent checks, so when more than
-one succeeds the full bundle is kept and flagged; a premise counts as needed
-only with a certified omission model. A verified implication is support only
-with a certified joint witness, and every check is counted as proved only
-within the three allowed axioms.
+are an obligation. Single deletions of implication or contradiction premises
+are independent checks, so when more than one succeeds the full bundle is
+kept and flagged; a premise counts as needed only with a certified omission
+model. A verified implication is support only with a certified joint witness,
+and every check is counted as proved only within the three allowed axioms.
 """
 
 from __future__ import annotations
@@ -564,7 +565,14 @@ def classify(config: dict, corpus: Corpus, binders: dict, status: dict, spans: d
             for i in range(len(prem))}
         report["axioms"] = main["axioms"]
         if vac["proved"]:
-            core = [i for i in range(len(prem)) if not check(f"vacdrop{i}")["proved"]]
+            # These are independent re-proofs from the original bundle, just
+            # like the goal deletions above, not a sequential core reduction.
+            vac_droppable = [i for i in range(len(prem)) if check(f"vacdrop{i}")["proved"]]
+            if len(vac_droppable) > 1:
+                core = list(range(len(prem)))
+                report["flags"].append("inconsistent core: several single deletions succeed; their joint deletion is untested, so the full bundle is kept (not minimized)")
+            else:
+                core = [i for i in range(len(prem)) if i not in vac_droppable]
             report["inconsistent_core"] = [prem[i].sid for i in core]
             literal = [(i, j) for i in core for j in core if i != j and check(f"litneg{i}_{j}")["proved"]]
             if literal:
