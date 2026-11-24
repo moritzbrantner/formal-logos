@@ -16,6 +16,13 @@ the sorted TruthCore-local constants that occur syntactically in its type and,
 for a definition, its stored body (the declaration itself included). Nothing
 is unfolded. Shared constants are a ranking signal only: they are not
 evidence of entailment, equivalence or a common interpretation.
+
+With a third argument `--closure` it also prints one row for every
+TruthCore-local constant reachable from the listed ones through those
+constant lists (type and stored body, transitively), each once, in
+breadth-first order. `truth definitions residue` reads this closure to tell
+whether a definition's declaration occurs in a statement's own type, is reached
+only by unfolding, or is not reached at all (#1926, #216).
 -/
 import Lean
 
@@ -155,18 +162,24 @@ def binderUses (env : Environment) (package : Name) (info : ConstantInfo) : List
         out := out ++ [if heads.any (·.isEmpty) then #[] else heads]
   return out
 
+/-- The sorted TruthCore-local constants of a declaration's type and, for a
+definition, its stored body (the declaration itself included). -/
+def localConstants (env : Environment) (package : Name) (decl : Name) (info : ConstantInfo) :
+    Array Name :=
+  let body := match info with
+    | .defnInfo d => d.value.getUsedConstants
+    | _ => #[]
+  let used := (info.type.getUsedConstants ++ body).push decl
+  let owned := used.filter fun n => !n.isInternal && isLocal env package n
+  let sorted := owned.qsort (·.toString < ·.toString)
+  sorted.foldl (init := (#[] : Array Name)) fun acc n =>
+    if acc.back? == some n then acc else acc.push n
+
 def describe (env : Environment) (package : Name) (decl : Name) : Json :=
   match env.find? decl with
   | none => Json.mkObj [("declaration", Json.str decl.toString), ("error", Json.str "unknown declaration")]
   | some info =>
-    let body := match info with
-      | .defnInfo d => d.value.getUsedConstants
-      | _ => #[]
-    let used := (info.type.getUsedConstants ++ body).push decl
-    let owned := used.filter fun n => !n.isInternal && isLocal env package n
-    let names := (owned.map toString).qsort (· < ·)
-    let unique := names.foldl (init := (#[] : Array String)) fun acc n =>
-      if acc.back? == some n then acc else acc.push n
+    let unique := (localConstants env package decl info).map toString
     let module := match env.getModuleIdxFor? decl with
       | some idx => (env.header.moduleNames[idx.toNat]?.map toString).getD ""
       | none => ""
@@ -181,9 +194,33 @@ def describe (env : Environment) (package : Name) (decl : Name) : Json :=
         Json.arr (hs.map Json.str)).toArray),
       ("constants", Json.arr (unique.map Json.str))]
 
+/-- The listed declarations followed by every local constant reachable from
+them through `localConstants`, each once, in breadth-first order. -/
+def closure (env : Environment) (package : Name) (decls : Array Name) : Array Name := Id.run do
+  let mut seen : NameSet := {}
+  let mut order : Array Name := #[]
+  for d in decls do
+    if !seen.contains d then
+      seen := seen.insert d
+      order := order.push d
+  let mut i := 0
+  -- Each name enters `order` once, so the loop ends once `order` is exhausted.
+  while i < order.size do
+    let d := order[i]!
+    i := i + 1
+    if let some info := env.find? d then
+      for c in localConstants env package d info do
+        if !seen.contains c then
+          seen := seen.insert c
+          order := order.push c
+  return order
+
 def main (args : List String) : IO UInt32 := do
-  let [root, file] := args
-    | IO.eprintln "usage: lean --run scripts/StatementConstants.lean <ROOT-MODULE> <declarations.txt>"
+  let (root, file, transitive) ← match args with
+    | [root, file] => pure (root, file, false)
+    | [root, file, "--closure"] => pure (root, file, true)
+    | _ =>
+      IO.eprintln "usage: lean --run scripts/StatementConstants.lean <ROOT-MODULE> <declarations.txt> [--closure]"
       return 2
   let decls := (← IO.FS.lines file).filterMap fun line =>
     let line := line.trimAscii.toString
@@ -191,6 +228,7 @@ def main (args : List String) : IO UInt32 := do
   initSearchPath (← findSysroot)
   let rootName := root.toName
   let env ← importModules #[{ module := rootName }] {}
+  let decls := if transitive then closure env rootName.getRoot decls else decls
   let rows := decls.map (describe env rootName.getRoot)
   IO.println (Json.arr rows).compress
   return 0

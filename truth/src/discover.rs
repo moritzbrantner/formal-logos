@@ -2073,34 +2073,44 @@ pub fn export_vocabulary(
     root: &Path,
     declarations: &BTreeSet<&str>,
 ) -> Result<BTreeMap<String, Vocabulary>, String> {
+    let stdout = export_constants(root, declarations, false)?;
+    let value: Value = serde_json::from_str(stdout.trim())
+        .map_err(|error| format!("vocabulary export is not JSON: {error}"))?;
+    parse_vocabulary(&value)
+}
+
+/// The raw `StatementConstants.lean` output for `declarations` (one Lean
+/// run, after `lake build`); with `closure`, also a row for every TruthCore
+/// constant reachable from them (`--closure`, `truth definitions residue`).
+pub fn export_constants(
+    root: &Path,
+    declarations: &BTreeSet<&str>,
+    closure: bool,
+) -> Result<String, String> {
     let directory = scratch_dir("truth-discover-vocabulary");
     let path = directory.join("declarations.txt");
     let list: String = declarations.iter().map(|d| format!("{d}\n")).collect();
     fs::create_dir_all(&directory)
         .and_then(|()| fs::write(&path, list))
         .map_err(|error| format!("{}: {error}", path.display()))?;
-    let done = run(
-        lake_command(
-            root,
-            &[
-                "env".into(),
-                "lean".into(),
-                "--run".into(),
-                CONSTANTS_LEAN.into(),
-                "TruthCore".into(),
-                path.display().to_string(),
-            ],
-        ),
-        Duration::from_secs(1800),
-    );
+    let mut tail: Vec<String> = vec![
+        "env".into(),
+        "lean".into(),
+        "--run".into(),
+        CONSTANTS_LEAN.into(),
+        "TruthCore".into(),
+        path.display().to_string(),
+    ];
+    if closure {
+        tail.push("--closure".into());
+    }
+    let done = run(lake_command(root, &tail), Duration::from_secs(1800));
     let _ = fs::remove_dir_all(&directory);
     let done = done?.ok_or("vocabulary export timed out")?;
     if !done.success {
         return Err(format!("vocabulary export failed: {}", done.stderr.trim()));
     }
-    let value: Value = serde_json::from_str(done.stdout.trim())
-        .map_err(|error| format!("vocabulary export is not JSON: {error}"))?;
-    parse_vocabulary(&value)
+    Ok(done.stdout)
 }
 
 /// A run, with the statements and vocabulary it used.
