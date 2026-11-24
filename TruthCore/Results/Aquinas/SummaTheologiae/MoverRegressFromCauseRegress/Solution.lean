@@ -19,12 +19,7 @@ theorem moverRegressFromCauseRegress {Being : Type}
     NoInfinitePerSeMoverSeriesReading MovesAsMoved := by
   -- INF-AQUINAS-MOVER-REGRESS-FROM-CAUSE-REGRESS: induction on accessibility
   intro x
-  have hAcc := hCauseRegress x
-  induction hAcc with
-  | intro x _ ih =>
-    apply Acc.intro x
-    intro y hMovesAsMoved
-    exact ih y (hLink y x hMovesAsMoved)
+  exact Subrelation.accessible (fun {y x} h => hLink y x h) (hCauseRegress x)
 
 /-- The cause-regress premise is needed: if moving as moved and causing as caused
 are both the successor relation on the natural numbers, the link holds and the

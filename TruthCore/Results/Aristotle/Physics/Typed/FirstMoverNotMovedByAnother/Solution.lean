@@ -1,12 +1,14 @@
 module
 
 public import TruthCore.Greek.Aristotle.Physics.Typed.Motion
+public import TruthCore.Logic.RootDescent
 
 @[expose] public section
 
 namespace TruthCore.Results.Aristotle.Physics.Typed.FirstMoverNotMovedByAnother
 open TruthCore.Greek.Aristotle.Physics.Typed
 open TruthCore.Latin.Aquinas.SummaTheologiae
+open TruthCore.Logic.RootDescent (acc_not_of_notNot_inherited)
 
 /-- *Physics* VIII.5, 256a13-21: something is moved; whatever is moved is moved by
 something; and the mover relation is accessible at every being (an additional,
@@ -30,16 +32,13 @@ theorem firstMoverNotMovedByAnother {Being : Type} {Respect : Type}
   have hAll : ∀ f, (∃ x r, MovesIn f x r) → ¬ ¬ MovedByAnother MovesIn f :=
     fun f hf hNot => hNone ⟨f, hf, hNot⟩
   have noMover : ∀ y, Acc (MoverMovedByAnotherLink MovesIn) y →
-      (∃ x r, MovesIn y x r) → False := by
-    intro y hAcc
-    induction hAcc with
-    | intro y _ ih =>
-      intro hy
+      ¬ ∃ x r, MovesIn y x r := fun _ =>
+    acc_not_of_notNot_inherited (P := fun y => ∃ x r, MovesIn y x r) fun y hy hNoUp => by
       apply hAll y hy
       rintro ⟨z, r, hNe, hz⟩
       apply hAll z ⟨y, r, hz⟩
       intro hzByAnother
-      exact ih z ⟨hNe, ⟨r, hz⟩, hzByAnother⟩ ⟨y, r, hz⟩
+      exact hNoUp ⟨z, ⟨hNe, ⟨r, hz⟩, hzByAnother⟩, ⟨y, r, hz⟩⟩
   obtain ⟨x, r, hMoved⟩ := hSense
   obtain ⟨y, r', hy⟩ := hMover x r hMoved
   exact noMover y (hRegress y) ⟨x, r', hy⟩

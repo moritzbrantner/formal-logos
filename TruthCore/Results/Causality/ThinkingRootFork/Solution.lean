@@ -5,6 +5,7 @@ public import TruthCore.Results.Logic.CogitoSubject.Solution
 public import TruthCore.Latin.Aquinas.DeEnte.RootInterface
 public import TruthCore.Causality.UnderivedRootRoute
 public import TruthCore.Results.Causality.DirectEsseRootGodExistence.Solution
+public import TruthCore.Logic.RootDescent
 
 /-! The two literal horns share *one* root witness. Only the positive horn
 descends, and it descends through distinct thinkers rather than every ground.
@@ -31,6 +32,7 @@ open TruthCore.German.Kant.CosmologicalInference (NecessaryAt ContingentAt)
 open TruthCore.Logic.CogitoSubject
 open TruthCore.Logic.CogitoConcrete
 open TruthCore.Logic (ExcludedMiddle)
+open TruthCore.Logic.RootDescent (acc_exists_unmarked)
 open TruthCore.Latin.Aquinas.SummaTheologiae
 open TruthCore.Case.Catholicism
 
@@ -159,22 +161,14 @@ theorem thinkingRootOfAccessible (m : Profile W B) (w : W)
     (hEM : ExcludedMiddle) :
     ∃ n, Thinks Occurs Bears n ∧ GroundAncestor m w n selected ∧
       ActualRoot m w n := by
-  have walk : ∀ x, Acc (ThinkerPredecessor m w Occurs Bears) x →
-      Cone m w selected x → Thinks Occurs Bears x →
-      ∃ n, Thinks Occurs Bears n ∧ GroundAncestor m w n selected ∧
-        ActualRoot m w n := by
-    intro x hx
-    induction hx with
-    | intro x _ ih =>
-      intro hCone hThinks
-      rcases hEM (P m w Occurs Bears x) with hP | hNoP
-      · obtain ⟨c, hc⟩ := hP
-        exact ih c hc
-          ⟨actualOfPositiveGroundPath m w hc.2.2,
-            ancestorOfPositiveGroundPath m w hc.2.2 hCone.2⟩ hc.2.1
-      · exact ⟨x, hThinks, hCone.2,
-          noPIsActualRoot m w Occurs Bears selected x hCone hThinks hNoFresh hNoP⟩
-  exact walk selected hAcc ⟨hActual, Relation.ReflTransGen.refl⟩ hThink
+  obtain ⟨n, ⟨hCone, hThinks⟩, hNoP⟩ := acc_exists_unmarked
+    (P := fun x => Cone m w selected x ∧ Thinks Occurs Bears x) (Mark := P m w Occurs Bears)
+    (fun _ _ => hEM _)
+    (fun _ ⟨hCone, _⟩ ⟨c, hc⟩ => ⟨c, hc, ⟨actualOfPositiveGroundPath m w hc.2.2,
+      ancestorOfPositiveGroundPath m w hc.2.2 hCone.2⟩, hc.2.1⟩)
+    hAcc ⟨⟨hActual, Relation.ReflTransGen.refl⟩, hThink⟩
+  exact ⟨n, hThinks, hCone.2,
+    noPIsActualRoot m w Occurs Bears selected n hCone hThinks hNoFresh hNoP⟩
 
 /-- The **same** terminal thinker is necessary if contingent thinking members
 of this selected cone always have an actual concrete ground. Without that

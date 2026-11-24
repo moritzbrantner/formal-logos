@@ -1,11 +1,13 @@
 module
 
 public import TruthCore.Latin.Aquinas.SummaTheologiae.PrimaPars.Question2.Article3SecundaVia
+public import TruthCore.Logic.RootDescent
 
 @[expose] public section
 
 namespace TruthCore.Results.Aquinas.SummaTheologiae.SecundaVia
 open TruthCore.Latin.Aquinas.SummaTheologiae
+open TruthCore.Logic.RootDescent (acc_not_of_notNot_inherited)
 
 /-- ST I q.2 a.3 co., the *secunda via*: there is an order of efficient causes;
 nothing causes itself, since it would be prior to itself; a caused cause causes
@@ -27,24 +29,19 @@ theorem secundaVia {Being : Type} {Respect : Type}
     fun x r hSelf => hIrrefl x (hPrior x x r hSelf)
   -- INF-AQUINAS-ST-I-Q2-A3-FIRST-EFFICIENT-CAUSE: reductio by well-founded induction
   intro hNoFirst
-  have hNoEffect : ∀ x, (∃ c r, EfficientlyCausesIn c x r) → False := by
-    intro x
-    have hAcc := hRegress x
-    induction hAcc with
-    | intro x _ ih =>
-      intro ⟨c, r, hCauses⟩
-      -- the cause is another thing, since nothing causes itself
-      have hDistinct : c ≠ x := by
-        intro hEq
-        subst hEq
-        exact hNoSelf c r hCauses
-      -- if the cause were caused by nothing, it would be a first efficient cause
-      have hCaused : ¬ ¬ ∃ d r', EfficientlyCausesIn d c r' := by
-        intro hUncaused
-        exact hNoFirst ⟨c, ⟨x, r, hCauses⟩, fun d r' h => hUncaused ⟨d, r', h⟩⟩
-      -- otherwise it is a middle cause, one step up a well-founded series
-      exact hCaused fun hC =>
-        ih c (hPerSe c x r hDistinct hCauses hC) hC
+  -- being an effect passes up a well-founded per se series: no effect exists
+  have hNoEffect : ∀ x, ¬ ∃ c r, EfficientlyCausesIn c x r := fun x =>
+    acc_not_of_notNot_inherited (P := fun x => ∃ c r, EfficientlyCausesIn c x r)
+      (fun x ⟨c, r, hCauses⟩ hNoUp => by
+        -- the cause is another thing, since nothing causes itself
+        have hDistinct : c ≠ x := by
+          intro hEq
+          subst hEq
+          exact hNoSelf c r hCauses
+        -- if the cause were caused by nothing, it would be a first efficient cause;
+        -- otherwise it is a middle cause, one step up the series
+        exact hNoFirst ⟨c, ⟨x, r, hCauses⟩, fun d r' h =>
+          hNoUp ⟨c, hPerSe c x r hDistinct hCauses ⟨d, r', h⟩, d, r', h⟩⟩) (hRegress x)
   obtain ⟨c, x, r, hCauses⟩ := hOrder
   exact hNoEffect x ⟨c, r, hCauses⟩
 
