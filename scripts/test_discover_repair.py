@@ -113,6 +113,11 @@ def stub(outcome):
 
 
 class PlannerTests(unittest.TestCase):
+    def test_exact_bundle_is_not_a_truncated_retrieval(self):
+        f = finding("t", ["ptor", "rtoq"])
+        self.assertTrue(bp.signals(f, {"candidates": 2})["truncated"])
+        self.assertFalse(bp.signals(f, {"premise_selection": "exact", "candidates": None})["truncated"])
+
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory()
         self.addCleanup(self.tmp.cleanup)

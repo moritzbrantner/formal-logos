@@ -13,6 +13,7 @@ conditional support option for review, never a corpus record by itself.
 flock /tmp/moenarch/truth-core-heavy.lock \
   target/release/truth discover --targets open-root --module TruthCore.Causality --limit 40
 target/release/truth discover --target STATEMENT --premise-pool all --candidates 10
+target/release/truth discover --target STATEMENT --premise PREMISE_1 --premise PREMISE_2
 target/release/truth --json discover --targets next-tests --zipperposition ~/.cache/agent-work/bin/zipperposition
 target/release/truth discover --target STATEMENT --write-spec specs/discover-causality.toml
 ```
@@ -29,6 +30,20 @@ target/release/truth discover --target STATEMENT --write-spec specs/discover-cau
    results) or `all` (every statement with a Lean declaration: the discoveries
    are then conditional on open premises). Premises are always existing
    corpus statements: nothing else enters a goal as a hypothesis.
+
+   **Exact bundles.** Repeated `--premise STATEMENT` selects the complete
+   input bundle for every selected target, including open premises. IDs,
+   legacy aliases and labels resolve to canonical IDs; duplicates are removed
+   in first-supplied order. This mode bypasses the pool, retrieval ranking and
+   candidate cap. It never adds a registered bridge automatically: name a
+   bridge with another `--premise` when it is part of the intended bundle.
+   `--module` still filters targets, but does not remove an explicit premise.
+   `--premise-pool` and `--candidates` are rejected in this mode, as are empty,
+   unknown or undeclared premises and a target included as its own premise.
+   A declared premise missing from the built library is an error, not a
+   skipped goal. The same binding, search, minimization, weakening, filters,
+   certification and spec generation below apply; minimization may remove a
+   redundant premise, and weakening produces separately labelled trials.
 3. **Retrieval.** `scripts/StatementConstants.lean` exports every
    declaration's parameter names and the project constants it mentions,
    closed transitively. A candidate must share project vocabulary, a
@@ -275,6 +290,13 @@ goals closed, except those closed only by a literal P/¬P core. A
 *vocabulary theorem* is a target that follows from no premise: its
 definitions alone prove it.
 
+The options report `premise_selection` as `ranked` or `exact`. For an exact
+bundle, `premises` lists the ordered canonical input IDs, while `premise_pool`
+and `candidates` are null because no retrieval occurred. The finding's
+`candidates` retains that exact input; its `premises` reports what the proof
+kept. Adaptive repair does not diagnose a retrieval-cap failure from an exact
+bundle's size.
+
 `--write-spec PATH` writes an `argument_batch.py` spec draft with one argument
 per discovery (premises, conclusion, the three axioms, `sense_bridges` where a
 premise bridges senses, or `role = "conclusion"` where the conclusion does)
@@ -309,6 +331,15 @@ agent's proposal stays untrusted until Lean checks it.
    has, or a second carrier). The verdict separates a *retrieval* gap, an
    *identification* gap (the exact sense or bridge obligations), a *search* gap
    (retrieved, identifiable, not composed) and *no-known* derivation.
+
+   When this exposes a complete known bundle that retrieval missed, try it
+   with repeated `--premise` before developing a new manual derivation. This
+   isolates retrieval from binding and proof search while keeping the normal
+   filters; an expected `known` result confirms recovery, not a new argument.
+   Repeating unchanged inputs adds no evidence. Let the diagnosis select a
+   changed bundle, a justified budget test, a reviewed identification or
+   manual lemma work; exact search is useful for this case, not a prerequisite
+   for every investigation.
 3. **Oracle (optional).** To ask whether an identification is the only
    obstacle, run the engine once with a temporary overlay of whole-binder tags
    (`python3 scripts/discover_blueprint.py oracle OVERLAY.json -- <run-discovery
@@ -420,8 +451,11 @@ composition from verified arguments makes it `closed-known` (`modulo_logic`
 when only with excluded middle, granted, as by the engine's `known` filter,
 only to a proof whose axioms include `Classical.choice`); the
 `truth semantics` preflight checks its senses, for known closures too. What survives is a raw
-`closed-candidate`: certify it with `truth discover` and record it only through
-the spec path and the semantic challenge. Per premise, a deletion that fails
+`closed-candidate`: submit the same ordered bundle and heartbeat budget to
+`truth discover --target ID --premise P1 --premise P2 --heartbeats N` for the
+engine's filters and certification, and record it only through the spec path
+and the semantic challenge. This uses the corpus's reviewed tags; the retry's
+raw result or an oracle overlay is not a certificate. Per premise, a deletion that fails
 is "kept within budget; necessity unresolved" unless an omission model shows
 it needed. A goal with no proof is `unresolved`, never refuted.
 
@@ -440,10 +474,9 @@ plain binding, fails at one instantiation of its binders. It refutes no
 premise, no stronger or differently bound formulation, no sense identification
 and no larger bundle.
 
-Engine changes this layer does not make: an exact `--premise` bundle for
-`truth discover`, so that its own filters and certification run on a repair
-goal; a reported distinction between a heartbeat timeout and a saturated
-search; countermodels for unresolved goals in the engine itself; a binding
+Engine changes this layer does not make: a reported distinction between a
+heartbeat timeout and a saturated search; countermodels for unresolved goals
+in the engine itself; a binding
 rule that does not depend on tag order when a binder carries both a
 whole-binder and a partial-application tag; and one shared
 universe-specialization helper (`scripts/DiscoverRepair.lean` copies the block

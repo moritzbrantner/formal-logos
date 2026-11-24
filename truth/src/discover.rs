@@ -93,13 +93,17 @@ pub struct Options {
     /// Candidate premises per target.
     pub candidates: usize,
     pub pool: Pool,
+    /// An exact, ordered premise bundle for every target. Empty selects
+    /// ranked retrieval; nonempty bypasses the pool and optional bridges.
+    pub premises: Vec<String>,
     /// A Zipperposition executable for lean-auto premise selection.
     pub zipperposition: Option<String>,
     /// Parallel Lean processes.
     pub jobs: usize,
     /// Targets per Lean process.
     pub batch: usize,
-    /// Declaration prefixes (`TruthCore.Causality`) targets and candidates must match.
+    /// Declaration prefixes (`TruthCore.Causality`) targets and retrieved
+    /// candidates must match. Explicit premises are not filtered.
     pub modules: Vec<String>,
 }
 
@@ -110,6 +114,7 @@ impl Default for Options {
             heartbeats: 100_000,
             candidates: 8,
             pool: Pool::Closed,
+            premises: Vec::new(),
             zipperposition: None,
             jobs: 2,
             batch: 6,
@@ -2053,11 +2058,29 @@ pub fn discover(
                 .iter()
                 .any(|m| declaration.starts_with(m.as_str()))
     };
-    let pool_set = pool_ids(corpus, report, options.pool);
-    let pool: Vec<&Statement> = statements
-        .values()
-        .filter(|s| pool_set.contains(&s.id) && in_scope(&s.declaration))
-        .collect();
+    let exact = !options.premises.is_empty();
+    let pool: Vec<&Statement> = if exact {
+        options
+            .premises
+            .iter()
+            .map(|id| {
+                let statement = statements
+                    .get(id)
+                    .filter(|s| !s.declaration.trim().is_empty())
+                    .ok_or_else(|| format!("explicit premise {id}: no lean_declaration"))?;
+                if targets.contains(id) {
+                    return Err(format!("target is also a premise: {id}"));
+                }
+                Ok(statement)
+            })
+            .collect::<Result<_, _>>()?
+    } else {
+        let pool_set = pool_ids(corpus, report, options.pool);
+        statements
+            .values()
+            .filter(|s| pool_set.contains(&s.id) && in_scope(&s.declaration))
+            .collect()
+    };
     let mut skipped = Vec::new();
     let mut chosen = Vec::new();
     for id in targets {
@@ -2072,14 +2095,33 @@ pub fn discover(
         .chain(chosen.iter())
         .map(|s| s.declaration.as_str())
         .collect();
-    progress(&format!(
-        "{} targets, pool {} ({} statements); exporting vocabulary",
-        chosen.len(),
-        options.pool.name(),
-        pool.len()
-    ));
+    if exact {
+        progress(&format!(
+            "{} targets, exact bundle ({} premises); exporting declarations",
+            chosen.len(),
+            pool.len()
+        ));
+    } else {
+        progress(&format!(
+            "{} targets, pool {} ({} statements); exporting vocabulary",
+            chosen.len(),
+            options.pool.name(),
+            pool.len()
+        ));
+    }
     let mut vocabulary = export_vocabulary(root, &declarations)?;
-    close_vocabulary(root, &mut vocabulary)?;
+    if exact {
+        for premise in &pool {
+            if !vocabulary.contains_key(&premise.declaration) {
+                return Err(format!(
+                    "explicit premise {}: {} is not in the built library",
+                    premise.id, premise.declaration
+                ));
+            }
+        }
+    } else {
+        close_vocabulary(root, &mut vocabulary)?;
+    }
     let weaker = weaker_siblings(corpus);
     let tags = SenseTags::new(corpus)?;
     let mut trials = Vec::new();
@@ -2091,33 +2133,42 @@ pub fn discover(
             ));
             continue;
         }
-        let ranked = rank(
-            target,
-            &pool,
-            &vocabulary,
-            &weaker,
-            &tags,
-            options.candidates,
-        );
-        if ranked.is_empty() {
+        let mut premises: Vec<String> = if exact {
+            options.premises.clone()
+        } else {
+            rank(
+                target,
+                &pool,
+                &vocabulary,
+                &weaker,
+                &tags,
+                options.candidates,
+            )
+            .into_iter()
+            .map(|candidate| candidate.id)
+            .collect()
+        };
+        if premises.is_empty() {
             skipped.push((
                 target.id.clone(),
                 "no candidate premise shares its vocabulary".into(),
             ));
             continue;
         }
-        let mut premises: Vec<String> = ranked.into_iter().map(|c| c.id).collect();
         // Different senses of one term on the target and a candidate: the
-        // registered bridge statements join as optional premises.
+        // registered bridge statements join as optional premises in ranked
+        // retrieval only. An exact bundle must name its bridges explicitly.
         let mut bridges = Vec::new();
-        for id in premises.clone() {
-            for b in tags.bridge_statements(&target.declaration, &statements[&id].declaration) {
-                if b != target.id
-                    && statements.contains_key(&b)
-                    && !premises.contains(&b)
-                    && !bridges.contains(&b)
-                {
-                    bridges.push(b);
+        if !exact {
+            for id in &premises {
+                for b in tags.bridge_statements(&target.declaration, &statements[id].declaration) {
+                    if b != target.id
+                        && statements.contains_key(&b)
+                        && !premises.contains(&b)
+                        && !bridges.contains(&b)
+                    {
+                        bridges.push(b);
+                    }
                 }
             }
         }

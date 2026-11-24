@@ -1046,7 +1046,8 @@ message classification without Lean.
 ## `discover`
 
 `truth discover (--target STATEMENT | --targets open-root|next-tests)...
-[--module PREFIX]... [--premise-pool closed|proved|all] [--candidates N]
+[--module PREFIX]... [--premise STATEMENT]...
+[--premise-pool closed|proved|all] [--candidates N]
 [--limit N] [--heartbeats N] [--batch N] [--jobs N] [--zipperposition PATH]
 [--write-spec PATH]` (`truth::discover`) searches for new implications between
 corpus propositions with Duper (#1784, docs/discover.md): candidate retrieval,
@@ -1057,6 +1058,12 @@ rendered theorem text, and a ranked list of missing bridges. `--write-spec`
 writes an `argument_batch.py` spec draft and a Solution draft, never corpus
 records. Unit tests cover goal generation, the filters and report parsing
 without Lean; CI runs one fixed known derivation end to end.
+
+Repeated `--premise` supplies an exact ordered bundle through that same
+pipeline, bypassing retrieval and automatic bridge insertion. Open premises
+are allowed; `--module` filters only targets in this mode. Do not combine an
+exact bundle with `--premise-pool` or `--candidates`. The JSON records the
+selection mode and canonical input IDs separately from the minimized proof.
 
 ## `senses`
 

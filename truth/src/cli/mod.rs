@@ -123,7 +123,8 @@ pub const HELP: &str = "Usage: truth [--root PATH] [--json] status
        truth [--root PATH] [--json] prove-sweep [--theorem NAME]... [--module MODULE]... [--heartbeats N]
              [--batch N]
        truth [--root PATH] [--json] discover (--target STATEMENT | --targets open-root|next-tests)...
-             [--module PREFIX]... [--premise-pool closed|proved|all] [--candidates N] [--limit N]
+             [--module PREFIX]... [--premise STATEMENT]... [--limit N]
+             [--premise-pool closed|proved|all] [--candidates N]
              [--heartbeats N] [--batch N] [--jobs N] [--zipperposition PATH] [--write-spec PATH]
 
 An ID, STATEMENT, TARGET or --target may be a uuid, a legacy id (STMT-...) or a label.
