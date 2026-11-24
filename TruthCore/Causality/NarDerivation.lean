@@ -15,19 +15,24 @@ gap 1 asks whether NAR can be derived from
 * **(a)** the root withholds, at some accessible world where it exists, its
   giving of being to each actual concretum it grounds
   (`ActualRootsWithholdEachGrounded`), and
-* **(b)** the explicit `G`-to-giving bridge: an actual concrete `G`-ground of
-  `x` gives `x` being at `w` and at every accessible world where `x` exists
-  (`ActualGroundsGiveWhereverGroundedExists`).
+* **(b)** the explicit `G`-to-giving bridge, here split into its two used
+  parts, each restricted to actual roots (the weakest versions that suffice):
+  (b1) a root gives each actual concretum it grounds being at `w`
+  (`ActualRootsGiveGroundedHere`), and (b2) a root gives each NECESSARY_2
+  concretum it grounds being at every accessible world where the root exists
+  (`ActualRootsGiveNecessaryGroundedWherever`).
 
 and whether (a) itself follows from one power, an invariant set-up and
 simplicity through a *uniform mode of giving* (#1897 gap 6).
 
 **Relations kept distinct (rigor contract 5 of #1926; #1626).** `G` stays a
 parameter of the profile `groundProfile F concrete G`. Giving is the frame's
-`GivesAt`, through #1897's `GivesTo`. The only premise that joins them is
-(b), stated as an open bridge. The new primitive `EndRequires` (what a
-being's own end, its good, cannot be had without) is a parameter, related to
-giving only by the open premise `RationalFixedGivingIsRequired`.
+`GivesAt`, through #1897's `GivesTo`. The only premises that join them are
+(b1) and (b2), stated as open bridges. The new primitive `EndRequires` (the
+teleological means-to-end relation: `x` is a means without which `y`'s own end
+cannot be attained) is a parameter, related to giving only by the open premise
+`RationalFixedGivingIsRequired`. Its strict-modal reading is rejected
+(`Model.Laws` 6).
 
 **Modes of giving toward one effect.** `FixedTowardAt` (NECESSITATE_5: giving
 `x` being at `w` and at every accessible world where the giver exists) and
@@ -87,25 +92,35 @@ def UniformGivingModeAt (F : CausalityFrame W B T R) (w : W) (y : B) : Prop :=
 
 /-! ## Premises (all OPEN) -/
 
-/-- OPEN bridge (b), from `G`-grounding to giving (rigor contract 5): whatever
-is an actual concrete `G`-ground of `x` at `w` gives `x` being at `w` if `x`
-exists there, and at every world accessible from `w` where `x` exists.
-
-Two components, both carried here: (b1) the *local* bridge, that a
-`G`-ground gives its grounded being being (grounding read as productive
-dependence for being, the sustaining CAUSE_OF_BEING sense of `88a8fba7`); and
-(b2) *rigidity of the actual ground's giving*: the being that grounds `x` at
-`w` gives `x` being wherever `x` exists (necessity of origin, conservation by
-the same source). Classical theism and Avicenna's emanation both accept it:
-God conserves each creature wherever it exists; the First gives the first
-intelligence being in every world. Its rival is a non-productive reading of
-`G` (grounding as metaphysical dependence without giving, e.g. a set on its
-members), under which (b1) fails. -/
-def ActualGroundsGiveWhereverGroundedExists (F : CausalityFrame W B T R) (concrete : B → Prop)
+/-- OPEN bridge (b1), local, from `G`-grounding to giving at the root (rigor
+contract 5): every actual root of `G` at `w` gives being at `w` to each being
+that it grounds at `w` and that exists at `w`. Grounding by the root is read as
+productive dependence for being (the sustaining CAUSE_OF_BEING sense of
+`88a8fba7`). Restricted to roots and to `w`: the weakest form arguments N2 and
+N3 use. Classical theism (conservation) and Avicenna's emanation both accept
+it. Its rival is a non-productive reading of `G` (metaphysical dependence
+without giving, e.g. a singleton on its member), under which it fails. -/
+def ActualRootsGiveGroundedHere (F : CausalityFrame W B T R) (concrete : B → Prop)
     (G : W → B → B → Prop) (w : W) : Prop :=
-  ∀ y x, ActualConcreteGround (groundProfile F concrete G) w y x →
-    (F.history.ontic.ExistsAt w x → GivesTo F w y x) ∧
-    ∀ v, F.history.ontic.frame.access w v → F.history.ontic.ExistsAt v x → GivesTo F v y x
+  ∀ n x, ActualRoot (groundProfile F concrete G) w n →
+    ActualConcreteGround (groundProfile F concrete G) w n x →
+    F.history.ontic.ExistsAt w x → GivesTo F w n x
+
+/-- OPEN bridge (b2), rigidity of the root's giving to a necessary grounded
+being: every actual root of `G` at `w` gives each NECESSARY_2 being that it
+grounds at `w` being at every world accessible from `w` where the root exists.
+The weakest form argument N1 uses: only at roots, only for necessary grounded
+beings, only where the root exists. Both classical theism and the
+necessary-through-another rival in its emanationist form accept it (the First
+gives the first intelligence being in every world). It says nothing about
+contingent grounded beings, so a contingent being sustained elsewhere by
+another source (#1897's `replacementG`) is no counterexample. -/
+def ActualRootsGiveNecessaryGroundedWherever (F : CausalityFrame W B T R) (concrete : B → Prop)
+    (G : W → B → B → Prop) (w : W) : Prop :=
+  ∀ n x, ActualRoot (groundProfile F concrete G) w n →
+    ActualConcreteGround (groundProfile F concrete G) w n x →
+    NecessaryAt F.history.ontic w x →
+    ∀ v, F.history.ontic.frame.access w v → F.history.ontic.ExistsAt v n → GivesTo F v n x
 
 /-- OPEN premise (a), the root withholds each grounded being somewhere: for
 every actual root `n` of `G` at `w` and every actual concretum `x` that `n`
@@ -113,9 +128,9 @@ grounds at `w`, there is a world accessible from `w` where `n` exists and does
 not give `x` being. #1897's two-way profile extended from the giving of the
 actual contingents to every being the root grounds, including any
 putatively necessary one; close to the theist-internal free-creation premise
-(ST I q.19 a.3, navigation). Under (b), factive giving, a common root and
-necessary roots and excluded middle it is equivalent to NAR (`Model.Laws` 3): it relocates NAR into
-the giving register; it is not additional evidence for it. -/
+(ST I q.19 a.3, navigation). Under (b2), factive giving, a common root,
+necessary roots and excluded middle it is equivalent to NAR (`Model.Laws` 3):
+it is NAR in the giving register, not additional evidence for it. -/
 def ActualRootsWithholdEachGrounded (F : CausalityFrame W B T R) (concrete : B → Prop)
     (G : W → B → B → Prop) (w : W) : Prop :=
   ∀ n x, ActualRoot (groundProfile F concrete G) w n →
@@ -148,27 +163,40 @@ def ActualRootsOnePower (F : CausalityFrame W B T R) (A : AgencyFrame W B S P)
 /-- OPEN (WN, a rational power is fixed only toward what its end requires): if
 `y` gives `x` being at `w` by exercising a rational power and is fixed toward
 `x` from `w` (NECESSITATE_5), then `x` is required by `y`'s own end
-(`EndRequires y x`). The structure of ST I q.19 a.3 co. (navigation, not
-attributed): the will has a necessary relation to its end and to what the end
-cannot be had without, but not to other things. Rivals: the necessary
-diffusion of the good (Neoplatonic emanation; Avicenna's First, whose
-consenting will is necessitated toward its effects), and the moral necessity
-of choosing the best (Leibniz; Rowe's argument that a perfectly good creator
-is not free). Both hold that a perfect will is fixed toward effects that its
-own good does not require. -/
+(`EndRequires y x`, the teleological means-to-end relation, not strict modal
+co-existence). The structure of ST I q.19 a.3 co. (navigation, not
+attributed): the will is necessarily related to its end and to what the end
+cannot be had without, but not to other things. Rivals that hold a perfect
+will fixed (NECESSITATE_5) toward effects its own good does not require: the
+necessary diffusion of the good (Neoplatonic emanation; Avicenna's First, as
+standardly reported), Rowe's argument that a perfectly good creator of the
+best is not free, and Kretzmann's Dionysian argument that goodness must
+diffuse (navigation). Leibniz is not among them: his moral necessity of
+choosing the best is not metaphysical necessity, so it does not make the
+choice fixed in this sense. -/
 def RationalFixedGivingIsRequired (F : CausalityFrame W B T R) (A : AgencyFrame W B S P)
     (EndRequires : B → B → Prop) (w : W) : Prop :=
   ∀ y p x, A.PowerOf y p → A.Rational p → A.Exercises w y x p → FixedTowardAt F w y x →
     EndRequires y x
 
 /-- OPEN (SS, self-sufficiency of the root's end): no being other than an
-actual root of `G` at `w` is required by that root's end. The aseity of the
-root's good: "His goodness can be without other things, ... no perfection can
-accrue to Him from them" (ST I q.19 a.3 co., navigation). Avicenna's First is
-self-sufficient in the same sense; the emanationist rival denies WN, not SS. -/
+actual root of `G` at `w` is required by that root's end, on the means-to-end
+reading of `EndRequires`. The aseity of the root's good: on Aquinas's account
+the divine goodness is complete without other things, and nothing adds to its
+perfection (ST I q.19 a.3 co., paraphrased from memory, navigation only). On
+the rejected strict-modal reading, every necessary being other than the root
+would be required, and SS with a common root alone would yield NAR
+(`Model.Laws` 6), begging the question. -/
 def ActualRootsEndRequiresNoOther (F : CausalityFrame W B T R) (concrete : B → Prop)
     (G : W → B → B → Prop) (EndRequires : B → B → Prop) (w : W) : Prop :=
   ∀ n x, ActualRoot (groundProfile F concrete G) w n → x ≠ n → ¬ EndRequires n x
+
+/-- The REJECTED strict-modal reading of `EndRequires`, stated only to show why
+it is rejected: `x` exists at every world accessible from `w` where `y` exists.
+On it every NECESSARY_2 `x` is required by every `y` (`Model.Laws` 6). -/
+def StrictModalRequirement (F : CausalityFrame W B T R) (w : W) (y x : B) : Prop :=
+  ∀ v, F.history.ontic.frame.access w v → F.history.ontic.ExistsAt v y →
+    F.history.ontic.ExistsAt v x
 
 /-! ## Laws and models -/
 
@@ -191,13 +219,13 @@ open TruthCore.Modal.PrussPowerPremises (ActualAbsenceHoldersGiveEach)
 
 1. **Two-way givers.** `y` is a two-way giver at `w` (#1897) exactly when it is
    two-way toward some effect.
-2. **The root is two-way toward the contingents.** With (b), factive giving, a
+2. **The root is two-way toward the contingents.** With (b1), factive giving, a
    common root, necessary roots and some concrete contingent being at `w`,
    every actual root is two-way toward some concrete contingent being. Derived
    without #1897's holder premises: what (a) adds is only the extension to
    every grounded being.
-3. **Relocation.** With (b), factive giving, a common root, necessary roots and
-   excluded middle, NAR holds exactly when (a) does. So (a) is NAR in the
+3. **Relocation.** With (b2), factive giving, a common root, necessary roots
+   and excluded middle, NAR holds exactly when (a) does. So (a) is NAR in the
    giving register: given these premises it adds no evidence for NAR.
 4. **Simplicity at the level of exercise forces uniform *fixity*.** If `y`
    exercises toward each effect at every accessible world where it exists
@@ -209,13 +237,17 @@ open TruthCore.Modal.PrussPowerPremises (ActualAbsenceHoldersGiveEach)
 5. **The will route under reflexive access.** If `w` is accessible from
    itself, (a) follows from excluded middle, the common GOD_4 root with
    intellect (`0c27f65a`), #1941's willed giving of a one-power intellectual
-   being (`5c1aba17`), roots with one power, WN and SS, without (b). -/
+   being (`5c1aba17`), roots with one power, WN and SS, without (b1).
+6. **The strict-modal reading of `EndRequires` begs the question.** With a
+   common root, SS read with `StrictModalRequirement` yields NAR outright. So
+   `EndRequires` is the teleological means-to-end relation, and a being's
+   necessary existence does not make it required by any end. -/
 def Laws : Prop :=
   (∀ (W B T R : Type) (F : CausalityFrame W B T R) (w : W) (y : B),
     TwoWayGiverAt F w y ↔ ∃ x, TwoWayTowardAt F w y x) ∧
   (∀ (W B T R : Type) (F : CausalityFrame W B T R) (concrete : B → Prop)
       (G : W → B → B → Prop) (w : W),
-    ActualGroundsGiveWhereverGroundedExists F concrete G w → GivenExists F →
+    ActualRootsGiveGroundedHere F concrete G w → GivenExists F →
     ActualCommonRootAt (groundProfile F concrete G) w → ActualRootsNecessary F concrete G w →
     SomeContingentConcreteAt F concrete w →
     ∀ n, ActualRoot (groundProfile F concrete G) w n →
@@ -223,7 +255,7 @@ def Laws : Prop :=
   (∀ (W B T R : Type) (F : CausalityFrame W B T R) (concrete : B → Prop)
       (G : W → B → B → Prop) (w : W),
     TruthCore.Logic.ExcludedMiddle →
-    ActualGroundsGiveWhereverGroundedExists F concrete G w → GivenExists F →
+    ActualRootsGiveNecessaryGroundedWherever F concrete G w → GivenExists F →
     ActualCommonRootAt (groundProfile F concrete G) w → ActualRootsNecessary F concrete G w →
     (NecessaryActualConcretaAreRoots (groundProfile F concrete G) w ↔
       ActualRootsWithholdEachGrounded F concrete G w)) ∧
@@ -241,7 +273,12 @@ def Laws : Prop :=
     OnePowerIntellectualGivingWilled F A HasIntellect → ActualRootsOnePower F A concrete G w →
     RationalFixedGivingIsRequired F A EndRequires w →
     ActualRootsEndRequiresNoOther F concrete G EndRequires w →
-    ActualRootsWithholdEachGrounded F concrete G w)
+    ActualRootsWithholdEachGrounded F concrete G w) ∧
+  (∀ (W B T R : Type) (F : CausalityFrame W B T R) (concrete : B → Prop)
+      (G : W → B → B → Prop) (w : W),
+    ActualCommonRootAt (groundProfile F concrete G) w →
+    ActualRootsEndRequiresNoOther F concrete G (StrictModalRequirement F w) w →
+    NecessaryActualConcretaAreRoots (groundProfile F concrete G) w)
 
 /-! ### Frames on #1897's three candidates (`Bg`: `g`, `c`, `d`; actual world `false`) -/
 
@@ -328,11 +365,15 @@ def toTrueG : CausalityFrame Bool Bg Unit Bool := gFrame toTrue gcAlways givesCT
 
 /-- **Theist nonvacuity** (`theistG`, `g` grounds every other being,
 `simpleRational`, intellect and GOD_4 at `g`, nothing required; actual world
-`false`): every premise and conclusion of arguments N1–N3 holds. -/
+`false`): every premise and conclusion of arguments N1–N3 holds. (b2) and WN
+hold only vacuously here (no necessary being other than `g`; nothing
+required); `MixedModeRoot` with `gRequiresD` is the model in which (b2) and WN
+hold non-vacuously. -/
 def TheistNonvacuity : Prop :=
   TruthCore.Logic.ExcludedMiddle ∧
   ActualCommonRootAt (groundProfile theistG allC gGroundsOthers) false ∧
-  ActualGroundsGiveWhereverGroundedExists theistG allC gGroundsOthers false ∧
+  ActualRootsGiveGroundedHere theistG allC gGroundsOthers false ∧
+  ActualRootsGiveNecessaryGroundedWherever theistG allC gGroundsOthers false ∧
   GivenExists theistG ∧
   ActualRootsNecessary theistG allC gGroundsOthers false ∧
   SomeContingentConcreteAt theistG allC false ∧
@@ -347,20 +388,24 @@ def TheistNonvacuity : Prop :=
 
 /-- **The mixed-mode root** (`mixedG`, `g` grounds every other being,
 `rationalGD`, intellect and GOD_4 at `g`; the holder is `d`): the
-necessary-through-another rival of #1944 that *respects* (b). The root `g`
+necessary-through-another rival of #1944 that *respects* (b1) and (b2). The root `g`
 gives the necessary `d` being at both worlds (fixed toward `d`) and the
 contingent `c` being at the actual world only (two-way toward `c`), by one
 rational power under an invariant set-up, so its giving is willed two-way
-giving (#1941). (b), factive giving, the common root, necessary roots, some
+giving (#1941). (b1), (b2), factive giving, the common root, necessary roots, some
 contingent, the common GOD_4 root with intellect, #1941's willed giving of a
 one-power intellectual being, one power at the root, an invariant set-up and
 the holder premises P2′, P3′, holders at `w` and the creator reading all
 hold; uniformity, (a), NAR and the holder conclusion of #1944's argument 1
 fail. With nothing required, WN fails and SS holds; with `g`'s end requiring
 `d`, WN holds and SS fails. So one power, an invariant set-up and willed
-exercise do not force a uniform mode of giving. -/
+exercise do not force a uniform mode of giving. Encoding artifacts: `d`
+gives `c` being without `G`-grounding it; `rationalGD` gives `d` a rational
+power although `d` has no intellect; `Exercises` holds where nothing is given
+(as in #1941's overlays). -/
 def MixedModeRoot : Prop :=
-  ActualGroundsGiveWhereverGroundedExists mixedG allC gGroundsOthers false ∧
+  ActualRootsGiveGroundedHere mixedG allC gGroundsOthers false ∧
+  ActualRootsGiveNecessaryGroundedWherever mixedG allC gGroundsOthers false ∧
   GivenExists mixedG ∧
   ActualCommonRootAt (groundProfile mixedG allC gGroundsOthers) false ∧
   ActualRootsNecessary mixedG allC gGroundsOthers false ∧
@@ -385,22 +430,22 @@ def MixedModeRoot : Prop :=
   RationalFixedGivingIsRequired mixedG rationalGD gRequiresD false ∧
   ¬ ActualRootsEndRequiresNoOther mixedG allC gGroundsOthers gRequiresD false
 
-/-- **Omission models of argument N1** (NAR from (a), (b) and a common root;
+/-- **Omission models of argument N1** (NAR from (a), (b2) and a common root;
 `g` grounds every other being unless stated):
 
-1. without (b) (`gdWithholdG` of #1944): `g` grounds the necessary `d` and
+1. without (b2) (`gdWithholdG` of #1944): `g` grounds the necessary `d` and
    gives nothing; (a) and the common GOD_4 root with intellect hold, NAR fails;
 2. without (a): `MixedModeRoot`;
 3. without the common root (`mutualG`, `g` and `d` ground and give each other):
-   (a) holds vacuously at the only root `c`, (b) holds, the common root and
+   (a) and (b2) hold vacuously at the only root `c`, the common root and
    `0c27f65a` fail, NAR fails. -/
 def OmissionsN1 : Prop :=
   (ActualCommonRootAt (groundProfile gdWithholdG allC gGroundsOthers) false ∧
     IntellectualGodCommonRootAt (groundProfile gdWithholdG allC gGroundsOthers) false onlyG onlyG ∧
     ActualRootsWithholdEachGrounded gdWithholdG allC gGroundsOthers false ∧
-    ¬ ActualGroundsGiveWhereverGroundedExists gdWithholdG allC gGroundsOthers false ∧
+    ¬ ActualRootsGiveNecessaryGroundedWherever gdWithholdG allC gGroundsOthers false ∧
     ¬ NecessaryActualConcretaAreRoots (groundProfile gdWithholdG allC gGroundsOthers) false) ∧
-  (ActualGroundsGiveWhereverGroundedExists mutualG allC mutualGD false ∧
+  (ActualRootsGiveNecessaryGroundedWherever mutualG allC mutualGD false ∧
     ActualRootsWithholdEachGrounded mutualG allC mutualGD false ∧
     ¬ ActualCommonRootAt (groundProfile mutualG allC mutualGD) false ∧
     ¬ IntellectualGodCommonRootAt (groundProfile mutualG allC mutualGD) false onlyG onlyG ∧
@@ -411,7 +456,7 @@ other being unless stated). Without uniformity: `MixedModeRoot`. In each model
 below uniformity holds vacuously (the root is two-way toward nothing) and (a)
 fails:
 
-1. without (b) (`fixedDG`): `g` gives only `d`, fixedly, and not `c`;
+1. without (b1) (`fixedDG`): `g` gives only `d`, fixedly, and not `c`;
 2. without factive giving (`nonFactiveMixedG`): `g` gives `c` being also where
    `c` is absent;
 3. without necessary roots (`contingentRootG`): everything exists at `false`
@@ -425,30 +470,30 @@ def OmissionsN2 : Prop :=
     ActualRootsNecessary fixedDG allC gGroundsOthers false ∧
     SomeContingentConcreteAt fixedDG allC false ∧
     ActualRootsGiveUniformly fixedDG allC gGroundsOthers false ∧
-    ¬ ActualGroundsGiveWhereverGroundedExists fixedDG allC gGroundsOthers false ∧
+    ¬ ActualRootsGiveGroundedHere fixedDG allC gGroundsOthers false ∧
     ¬ ActualRootsWithholdEachGrounded fixedDG allC gGroundsOthers false) ∧
-  (ActualGroundsGiveWhereverGroundedExists nonFactiveMixedG allC gGroundsOthers false ∧
+  (ActualRootsGiveGroundedHere nonFactiveMixedG allC gGroundsOthers false ∧
     ActualCommonRootAt (groundProfile nonFactiveMixedG allC gGroundsOthers) false ∧
     ActualRootsNecessary nonFactiveMixedG allC gGroundsOthers false ∧
     SomeContingentConcreteAt nonFactiveMixedG allC false ∧
     ActualRootsGiveUniformly nonFactiveMixedG allC gGroundsOthers false ∧
     ¬ GivenExists nonFactiveMixedG ∧
     ¬ ActualRootsWithholdEachGrounded nonFactiveMixedG allC gGroundsOthers false) ∧
-  (ActualGroundsGiveWhereverGroundedExists contingentRootG allC gGroundsOthers false ∧
+  (ActualRootsGiveGroundedHere contingentRootG allC gGroundsOthers false ∧
     GivenExists contingentRootG ∧
     ActualCommonRootAt (groundProfile contingentRootG allC gGroundsOthers) false ∧
     SomeContingentConcreteAt contingentRootG allC false ∧
     ActualRootsGiveUniformly contingentRootG allC gGroundsOthers false ∧
     ¬ ActualRootsNecessary contingentRootG allC gGroundsOthers false ∧
     ¬ ActualRootsWithholdEachGrounded contingentRootG allC gGroundsOthers false) ∧
-  (ActualGroundsGiveWhereverGroundedExists noContingentG allC gGroundsOthers false ∧
+  (ActualRootsGiveGroundedHere noContingentG allC gGroundsOthers false ∧
     GivenExists noContingentG ∧
     ActualCommonRootAt (groundProfile noContingentG allC gGroundsOthers) false ∧
     ActualRootsNecessary noContingentG allC gGroundsOthers false ∧
     ActualRootsGiveUniformly noContingentG allC gGroundsOthers false ∧
     ¬ SomeContingentConcreteAt noContingentG allC false ∧
     ¬ ActualRootsWithholdEachGrounded noContingentG allC gGroundsOthers false) ∧
-  (ActualGroundsGiveWhereverGroundedExists chainG allC chainGrounds false ∧
+  (ActualRootsGiveGroundedHere chainG allC chainGrounds false ∧
     GivenExists chainG ∧
     ¬ IntellectualGodCommonRootAt (groundProfile chainG allC chainGrounds) false onlyG onlyG ∧
     ActualRootsNecessary chainG allC chainGrounds false ∧
@@ -469,28 +514,28 @@ below (a) fails:
    gives by a non-rational second power);
 3. without the common GOD_4 root with intellect `0c27f65a` (`mixedG`,
    `naturalGD`, intellect for nobody): an emanating root without intellect;
-4. without (b) (`toTrueG`, access from `false` to `true` only): `g` does not
+4. without (b1) (`toTrueG`, access from `false` to `true` only): `g` does not
    give `c` being at `false`, where `c` exists, and gives it at the only
-   accessible world. Law 5 shows that with reflexive access (b) is idle in
+   accessible world. Law 5 shows that with reflexive access (b1) is idle in
    N3, so this omission needs a non-reflexive frame. -/
 def OmissionsN3 : Prop :=
   (IntellectualGodCommonRootAt (groundProfile mixedG allC gGroundsOthers) false onlyG onlyG ∧
     ActualRootsOnePower mixedG naturalGD allC gGroundsOthers false ∧
-    ActualGroundsGiveWhereverGroundedExists mixedG allC gGroundsOthers false ∧
+    ActualRootsGiveGroundedHere mixedG allC gGroundsOthers false ∧
     RationalFixedGivingIsRequired mixedG naturalGD noRequirement false ∧
     ActualRootsEndRequiresNoOther mixedG allC gGroundsOthers noRequirement false ∧
     ¬ OnePowerIntellectualGivingWilled mixedG naturalGD onlyG ∧
     ¬ ActualRootsWithholdEachGrounded mixedG allC gGroundsOthers false) ∧
   (IntellectualGodCommonRootAt (groundProfile mixedG allC gGroundsOthers) false onlyG onlyG ∧
     OnePowerIntellectualGivingWilled mixedG twoPowerChancer onlyG ∧
-    ActualGroundsGiveWhereverGroundedExists mixedG allC gGroundsOthers false ∧
+    ActualRootsGiveGroundedHere mixedG allC gGroundsOthers false ∧
     RationalFixedGivingIsRequired mixedG twoPowerChancer noRequirement false ∧
     ActualRootsEndRequiresNoOther mixedG allC gGroundsOthers noRequirement false ∧
     ¬ ActualRootsOnePower mixedG twoPowerChancer allC gGroundsOthers false ∧
     ¬ ActualRootsWithholdEachGrounded mixedG allC gGroundsOthers false) ∧
   (OnePowerIntellectualGivingWilled mixedG naturalGD nobody ∧
     ActualRootsOnePower mixedG naturalGD allC gGroundsOthers false ∧
-    ActualGroundsGiveWhereverGroundedExists mixedG allC gGroundsOthers false ∧
+    ActualRootsGiveGroundedHere mixedG allC gGroundsOthers false ∧
     RationalFixedGivingIsRequired mixedG naturalGD noRequirement false ∧
     ActualRootsEndRequiresNoOther mixedG allC gGroundsOthers noRequirement false ∧
     ¬ IntellectualGodCommonRootAt (groundProfile mixedG allC gGroundsOthers) false onlyG nobody ∧
@@ -500,7 +545,7 @@ def OmissionsN3 : Prop :=
     ActualRootsOnePower toTrueG simpleRational allC gGroundsOthers false ∧
     RationalFixedGivingIsRequired toTrueG simpleRational noRequirement false ∧
     ActualRootsEndRequiresNoOther toTrueG allC gGroundsOthers noRequirement false ∧
-    ¬ ActualGroundsGiveWhereverGroundedExists toTrueG allC gGroundsOthers false ∧
+    ¬ ActualRootsGiveGroundedHere toTrueG allC gGroundsOthers false ∧
     ¬ ActualRootsWithholdEachGrounded toTrueG allC gGroundsOthers false)
 
 /-- The certificate: laws and models. -/

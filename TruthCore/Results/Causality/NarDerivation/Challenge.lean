@@ -31,17 +31,17 @@ open TruthCore.Modal.PrussPowerPremises.Model (Bg Bg.forall_iff Bg.exists_iff gF
   allC uni gcEx gcAlways givesCHere)
 open TruthCore.German.Kant.CosmologicalInference (NecessaryAt ContingentAt)
 
-/-- Argument N1: NAR from (a), (b) and the common root of `0c27f65a` (only its
+/-- Argument N1: NAR from (a), (b2) and the common root of `0c27f65a` (only its
 root and reach clauses are used; `nar_of_commonRoot` is the same argument from
 the bare common root). Let `x` be a NECESSARY_2 actual concretum with an actual
 concrete ground. The common root `n` is `x` (impossible: `n` is a root) or
 grounds `x`. Then (a) gives an accessible world `v` where `n` exists and does
-not give `x` being; `x` exists at `v` (it is necessary), so (b) makes `n` give it
-being there. Constructive. -/
+not give `x` being; `x` is necessary, so (b2) makes `n` give it being there.
+Constructive. -/
 theorem narFromRootWithholding {W B T R : Type} (F : CausalityFrame W B T R)
     (concrete IsGod HasIntellect : B → Prop) (G : W → B → B → Prop) (w : W)
     (hIG : IntellectualGodCommonRootAt (groundProfile F concrete G) w IsGod HasIntellect)
-    (hB : ActualGroundsGiveWhereverGroundedExists F concrete G w)
+    (hB : ActualRootsGiveNecessaryGroundedWherever F concrete G w)
     (hA : ActualRootsWithholdEachGrounded F concrete G w) :
     NecessaryActualConcretaAreRoots (groundProfile F concrete G) w := by
   sorry
@@ -49,10 +49,10 @@ theorem narFromRootWithholding {W B T R : Type} (F : CausalityFrame W B T R)
 /-- Argument N2: (a) from uniformity at the root (with the root and reach clauses
 of `0c27f65a` as the common root). By law 2 the root is two-way
 toward a contingent being; uniformity makes it two-way toward every being it
-gives at `w`, and by (b) it gives each actual concretum it grounds. -/
+gives at `w`, and by (b1) it gives each actual concretum it grounds. -/
 theorem rootWithholdingFromUniformity {W B T R : Type} (F : CausalityFrame W B T R)
     (concrete IsGod HasIntellect : B → Prop) (G : W → B → B → Prop) (w : W)
-    (hB : ActualGroundsGiveWhereverGroundedExists F concrete G w) (hGE : GivenExists F)
+    (hB : ActualRootsGiveGroundedHere F concrete G w) (hGE : GivenExists F)
     (hIG : IntellectualGodCommonRootAt (groundProfile F concrete G) w IsGod HasIntellect)
     (hNec : ActualRootsNecessary F concrete G w) (hSome : SomeContingentConcreteAt F concrete w)
     (hU : ActualRootsGiveUniformly F concrete G w) :
@@ -62,7 +62,7 @@ theorem rootWithholdingFromUniformity {W B T R : Type} (F : CausalityFrame W B T
 /-- Argument N3: (a) from the will route. The common GOD_4 root with intellect
 (`0c27f65a`) is every actual root; with one power its giving is the exercise of
 a rational power (#1941 `5c1aba17`). A root that never withheld a being it
-grounds would, by (b), give it being at `w` and be fixed toward it; WN then
+grounds would, by (b1), give it being at `w` and be fixed toward it; WN then
 makes that being required by the root's end, against SS. Excluded middle. -/
 theorem rootWithholdingFromWill {W B T R S P : Type} (F : CausalityFrame W B T R)
     (A : AgencyFrame W B S P) (concrete IsGod HasIntellect : B → Prop) (G : W → B → B → Prop)
@@ -71,7 +71,7 @@ theorem rootWithholdingFromWill {W B T R S P : Type} (F : CausalityFrame W B T R
     (hIG : IntellectualGodCommonRootAt (groundProfile F concrete G) w IsGod HasIntellect)
     (hWill : OnePowerIntellectualGivingWilled F A HasIntellect)
     (hOne : ActualRootsOnePower F A concrete G w)
-    (hB : ActualGroundsGiveWhereverGroundedExists F concrete G w)
+    (hB : ActualRootsGiveGroundedHere F concrete G w)
     (hWN : RationalFixedGivingIsRequired F A EndRequires w)
     (hSS : ActualRootsEndRequiresNoOther F concrete G EndRequires w) :
     ActualRootsWithholdEachGrounded F concrete G w := by
@@ -79,7 +79,8 @@ theorem rootWithholdingFromWill {W B T R S P : Type} (F : CausalityFrame W B T R
 
 macro "nd_unfold" : tactic => `(tactic|
   simp only [TruthCore.Logic.ExcludedMiddle, ActualCommonRootAt,
-    ActualGroundsGiveWhereverGroundedExists, ActualRootsWithholdEachGrounded,
+    ActualRootsGiveGroundedHere, ActualRootsGiveNecessaryGroundedWherever,
+    ActualRootsWithholdEachGrounded, StrictModalRequirement,
     ActualRootsNecessary, ActualRootsGiveUniformly, ActualRootsOnePower,
     RationalFixedGivingIsRequired, ActualRootsEndRequiresNoOther, UniformGivingModeAt,
     FixedTowardAt, TwoWayTowardAt, NecessaryActualConcretaAreRoots,

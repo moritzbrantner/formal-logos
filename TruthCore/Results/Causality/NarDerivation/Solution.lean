@@ -51,11 +51,11 @@ theorem ne_of_root_grounds {W B : Type} (m : Profile W B) (w : W) (n x : B)
   subst h
   exact hn.2 x hg
 
-/-- NAR from (a), (b) and a bare common root (the core of argument N1). -/
+/-- NAR from (a), (b2) and a bare common root (the core of argument N1). -/
 theorem nar_of_commonRoot {W B T R : Type} (F : CausalityFrame W B T R)
     (concrete : B → Prop) (G : W → B → B → Prop) (w : W)
     (hCommon : ActualCommonRootAt (groundProfile F concrete G) w)
-    (hB : ActualGroundsGiveWhereverGroundedExists F concrete G w)
+    (hB : ActualRootsGiveNecessaryGroundedWherever F concrete G w)
     (hA : ActualRootsWithholdEachGrounded F concrete G w) :
     NecessaryActualConcretaAreRoots (groundProfile F concrete G) w := by
   intro x hx hnec
@@ -64,8 +64,8 @@ theorem nar_of_commonRoot {W B T R : Type} (F : CausalityFrame W B T R)
   rcases hReach x hx with h | hgx
   · subst h
     exact hn.2 z hz
-  · obtain ⟨v, hv, _, hng⟩ := hA n x hn hx hgx
-    exact hng ((hB n x hgx).2 v hv (hnec v hv))
+  · obtain ⟨v, hv, hnv, hng⟩ := hA n x hn hx hgx
+    exact hng (hB n x hn hgx hnec v hv hnv)
 
 /-- The reach clause of the common GOD_4 root with intellect (`0c27f65a`) is a
 common root. -/
@@ -75,27 +75,27 @@ theorem commonRoot_of_intellectual {W B : Type} (m : Profile W B) (w : W)
   obtain ⟨n, hn, hReach, _, _⟩ := hIG
   exact ⟨n, hn, hReach⟩
 
-/-- Argument N1: NAR from (a), (b) and the common root of `0c27f65a` (only its
+/-- Argument N1: NAR from (a), (b2) and the common root of `0c27f65a` (only its
 root and reach clauses are used; `nar_of_commonRoot` is the same argument from
 the bare common root). Let `x` be a NECESSARY_2 actual concretum with an actual
 concrete ground. The common root `n` is `x` (impossible: `n` is a root) or
 grounds `x`. Then (a) gives an accessible world `v` where `n` exists and does
-not give `x` being; `x` exists at `v` (it is necessary), so (b) makes `n` give it
-being there. Constructive. -/
+not give `x` being; `x` is necessary, so (b2) makes `n` give it being there.
+Constructive. -/
 theorem narFromRootWithholding {W B T R : Type} (F : CausalityFrame W B T R)
     (concrete IsGod HasIntellect : B → Prop) (G : W → B → B → Prop) (w : W)
     (hIG : IntellectualGodCommonRootAt (groundProfile F concrete G) w IsGod HasIntellect)
-    (hB : ActualGroundsGiveWhereverGroundedExists F concrete G w)
+    (hB : ActualRootsGiveNecessaryGroundedWherever F concrete G w)
     (hA : ActualRootsWithholdEachGrounded F concrete G w) :
     NecessaryActualConcretaAreRoots (groundProfile F concrete G) w :=
   nar_of_commonRoot F concrete G w (commonRoot_of_intellectual _ w IsGod HasIntellect hIG) hB hA
 
-/-- Law 2: under (b), factive giving, a common root, necessary roots and some
+/-- Law 2: under (b1), factive giving, a common root, necessary roots and some
 concrete contingent being, every actual root is two-way toward some concrete
 contingent being. -/
 theorem root_twoWay_toward_contingent {W B T R : Type} (F : CausalityFrame W B T R)
     (concrete : B → Prop) (G : W → B → B → Prop) (w : W)
-    (hB : ActualGroundsGiveWhereverGroundedExists F concrete G w) (hGE : GivenExists F)
+    (hB : ActualRootsGiveGroundedHere F concrete G w) (hGE : GivenExists F)
     (hCommon : ActualCommonRootAt (groundProfile F concrete G) w)
     (hNec : ActualRootsNecessary F concrete G w) (hSome : SomeContingentConcreteAt F concrete w)
     (n : B) (hn : ActualRoot (groundProfile F concrete G) w n) :
@@ -108,16 +108,16 @@ theorem root_twoWay_toward_contingent {W B T R : Type} (F : CausalityFrame W B T
   rcases hReach c ⟨hcC, hcE⟩ with h | hgc
   · subst h
     exact absurd hnv hcv
-  · exact ⟨c, hcC, ⟨hcE, v, hv, hcv⟩, hn.1.2, (hB n c hgc).1 hcE, v, hv, hnv,
+  · exact ⟨c, hcC, ⟨hcE, v, hv, hcv⟩, hn.1.2, hB n c hn hgc hcE, v, hv, hnv,
       fun hg => hcv (hGE v n c hg)⟩
 
 /-- Argument N2: (a) from uniformity at the root (with the root and reach clauses
 of `0c27f65a` as the common root). By law 2 the root is two-way
 toward a contingent being; uniformity makes it two-way toward every being it
-gives at `w`, and by (b) it gives each actual concretum it grounds. -/
+gives at `w`, and by (b1) it gives each actual concretum it grounds. -/
 theorem rootWithholdingFromUniformity {W B T R : Type} (F : CausalityFrame W B T R)
     (concrete IsGod HasIntellect : B → Prop) (G : W → B → B → Prop) (w : W)
-    (hB : ActualGroundsGiveWhereverGroundedExists F concrete G w) (hGE : GivenExists F)
+    (hB : ActualRootsGiveGroundedHere F concrete G w) (hGE : GivenExists F)
     (hIG : IntellectualGodCommonRootAt (groundProfile F concrete G) w IsGod HasIntellect)
     (hNec : ActualRootsNecessary F concrete G w) (hSome : SomeContingentConcreteAt F concrete w)
     (hU : ActualRootsGiveUniformly F concrete G w) :
@@ -125,7 +125,7 @@ theorem rootWithholdingFromUniformity {W B T R : Type} (F : CausalityFrame W B T
   intro n x hn hx hgx
   obtain ⟨c, _, _, hc⟩ := root_twoWay_toward_contingent F concrete G w hB hGE
     (commonRoot_of_intellectual _ w IsGod HasIntellect hIG) hNec hSome n hn
-  obtain ⟨_, _, hw⟩ := hU n hn ⟨c, hc⟩ x ((hB n x hgx).1 hx.2)
+  obtain ⟨_, _, hw⟩ := hU n hn ⟨c, hc⟩ x (hB n x hn hgx hx.2)
   exact hw
 
 /-- The will step shared by N3 and law 5: if the root gives `x` being at `w`,
@@ -161,7 +161,7 @@ theorem will_step {W B T R S P : Type} (F : CausalityFrame W B T R) (A : AgencyF
 /-- Argument N3: (a) from the will route. The common GOD_4 root with intellect
 (`0c27f65a`) is every actual root; with one power its giving is the exercise of
 a rational power (#1941 `5c1aba17`). A root that never withheld a being it
-grounds would, by (b), give it being at `w` and be fixed toward it; WN then
+grounds would, by (b1), give it being at `w` and be fixed toward it; WN then
 makes that being required by the root's end, against SS. Excluded middle. -/
 theorem rootWithholdingFromWill {W B T R S P : Type} (F : CausalityFrame W B T R)
     (A : AgencyFrame W B S P) (concrete IsGod HasIntellect : B → Prop) (G : W → B → B → Prop)
@@ -170,16 +170,16 @@ theorem rootWithholdingFromWill {W B T R S P : Type} (F : CausalityFrame W B T R
     (hIG : IntellectualGodCommonRootAt (groundProfile F concrete G) w IsGod HasIntellect)
     (hWill : OnePowerIntellectualGivingWilled F A HasIntellect)
     (hOne : ActualRootsOnePower F A concrete G w)
-    (hB : ActualGroundsGiveWhereverGroundedExists F concrete G w)
+    (hB : ActualRootsGiveGroundedHere F concrete G w)
     (hWN : RationalFixedGivingIsRequired F A EndRequires w)
     (hSS : ActualRootsEndRequiresNoOther F concrete G EndRequires w) :
     ActualRootsWithholdEachGrounded F concrete G w := by
   intro n x hn hx hgx
   exact will_step F A concrete IsGod HasIntellect G EndRequires w hEM hIG hWill hOne hWN hSS
-    n x hn hgx ((hB n x hgx).1 hx.2)
+    n x hn hgx (hB n x hn hgx hx.2)
 
 theorem laws : Laws := by
-  refine ⟨?_, ?_, ?_, ?_, ?_⟩
+  refine ⟨?_, ?_, ?_, ?_, ?_, ?_⟩
   · intro W B T R F w y
     constructor
     · rintro ⟨hy, x, v, hv, hyv, hg, hng⟩
@@ -210,10 +210,18 @@ theorem laws : Laws := by
     · exact will_step F A concrete IsGod HasIntellect G EndRequires w hEM hIG hWill hOne hWN hSS
         n x hn hgx hgw
     · exact ⟨w, hRefl, hn.1.2, hgw⟩
+  · intro W B T R F concrete G w hCommon hSS x hx hnec
+    refine ⟨hx, fun z hz => ?_⟩
+    obtain ⟨n, hn, hReach⟩ := hCommon
+    rcases hReach x hx with h | hgx
+    · subst h
+      exact hn.2 z hz
+    · exact hSS n x hn (ne_of_root_grounds _ w n x hn hgx) (fun v hv _ => hnec v hv)
 
 macro "nd_unfold" : tactic => `(tactic|
   simp only [TruthCore.Logic.ExcludedMiddle, ActualCommonRootAt,
-    ActualGroundsGiveWhereverGroundedExists, ActualRootsWithholdEachGrounded,
+    ActualRootsGiveGroundedHere, ActualRootsGiveNecessaryGroundedWherever,
+    ActualRootsWithholdEachGrounded, StrictModalRequirement,
     ActualRootsNecessary, ActualRootsGiveUniformly, ActualRootsOnePower,
     RationalFixedGivingIsRequired, ActualRootsEndRequiresNoOther, UniformGivingModeAt,
     FixedTowardAt, TwoWayTowardAt, NecessaryActualConcretaAreRoots,

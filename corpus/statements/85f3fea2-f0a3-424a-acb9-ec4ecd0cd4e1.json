@@ -1,7 +1,7 @@
 {
   "id": "85f3fea2-f0a3-424a-acb9-ec4ecd0cd4e1",
   "label": "No being other than an actual root is required by that root's own end",
-  "paraphrase": "OPEN (SS, analyst formulation, unattributed): for every actual root n of the selected grounding relation G at w and every being x other than n, x is not required by n's own end (EndRequires). The self-sufficiency of the root's good (ST I q.19 a.3 co., navigation only: 'His goodness can be without other things'). Avicenna's First is self-sufficient in the same sense; the emanationist rival denies WN, not SS.",
+  "paraphrase": "OPEN (SS, analyst formulation, unattributed): for every actual root n of the selected grounding relation G at w and every being x other than n, x is not required by n's own end (EndRequires, read as the teleological means-to-end relation). The self-sufficiency of the root's good: on Aquinas's account the divine goodness is complete without other things (ST I q.19 a.3 co., paraphrase, navigation only). On the rejected strict-modal reading of EndRequires (x exists wherever y does), every necessary being would be required and SS with a common root alone would yield NAR (controls, law 6), begging the question; SS is asserted only on the means-to-end reading.",
   "lean_declaration": "TruthCore.Causality.NarDerivation.ActualRootsEndRequiresNoOther",
   "definition_ids": [
     "90719cb5-43c2-4677-8ad7-20e077e28ac9",
