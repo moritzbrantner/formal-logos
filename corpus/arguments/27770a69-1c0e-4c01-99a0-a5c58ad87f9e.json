@@ -6,7 +6,7 @@
   "inference_ids": [
     "1421ed52-a8db-4151-86cb-2e2a067cfa7d"
   ],
-  "meaning": "Premise-free: thirteen laws (chance senses at an invariant set-up, VG's symmetry and strength, DNP excluding CHANCE_3, the flip, one power with will, set-up collapse and the holder's non-necessitation (part A), VG as set-up necessitation, DNP as the exact denial of CHANCE_3, the dichotomy at a simple source, the chance core) and finite models (theist nonvacuity, the chance rival, the intellectual chancer, chance-core deletions, omissions of arguments A-D, DNP strictness, VG and chance-sense models). Model-witnessed separations only; no premise is established and no reality claim is made.",
+  "meaning": "Premise-free: fourteen laws (chance senses at an invariant set-up, VG's symmetry and strength, DNP excluding CHANCE_3, the flip, one power with will, set-up collapse at an invariant source and the holder's non-necessitation (part A), VG as set-up necessitation, DNP as the exact denial of CHANCE_3, the dichotomy at a simple source, the chance core, set-up necessitation as fixed giving at an invariant source) and finite models (theist nonvacuity, the chance rival, the intellectual chancer, chance-core deletions, omissions of arguments A-D, DNP strictness, VG and chance-sense models). Model-witnessed separations only; no premise is established and no reality claim is made.",
   "definition_ids": [
     "0fe412ef-83c9-444c-9e92-da7246a0e6c5",
     "582f44c3-7778-4806-b385-e1eff852ac5e",
@@ -18,6 +18,8 @@
     "7c64b499-6dba-5e03-bdf3-5acea95d8836",
     "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
     "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "3055e6f1-5de7-5c32-9b6f-d023d0c82025",
+    "01b44013-2db5-546c-a22e-06104e8e724c",
     "a2840d96-8bdc-4e6a-a9a3-376a9505ec7c",
     "b4bb7bb4-4e2d-437d-825e-79a029340e77",
     "b8061228-9131-40f2-83bd-cb7d719bd0a0",
@@ -30,7 +32,11 @@
   ],
   "disambiguation_ids": [
     "35fa7162-6cb3-52e1-ac5b-66afc318c74f",
-    "c18f084e-bb0a-4edd-84d6-fdd1bb2ede87"
+    "c18f084e-bb0a-4edd-84d6-fdd1bb2ede87",
+    "5836e1f6-ccce-4ce8-b9d6-c89afc7120bb",
+    "941efd70-d56f-53f9-b5f9-8acd36711a54",
+    "e5417243-d6f3-4776-9694-40d85bb34ff4",
+    "8b3d47bc-7fee-4936-99ad-6561aedc657a"
   ],
   "sense_mixing_control": true
 }

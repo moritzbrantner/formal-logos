@@ -19,21 +19,26 @@ This module asks two questions (#1926 phase 3):
 
 1. **A necessitating impersonal source.** Does a necessary root with contingent
    effects exclude a source that necessitates them? The core fact is already
-   established elsewhere: #555 `SimplicityCollapse.rigid_core` (with
-   `ModalSenseSupport.RivalNegations`, which refutes
-   `NecessaryActStrictlyYieldsContingent` from it), #1897 laws 3, 4 and 6 and
-   `PSRStrength.necessitating_reason_contingent`. Here it is restated only in
-   the will step's own sense, SET-UP NECESSITATION (`SetupNecessitatedAt`),
-   and connected to #1897's holder (laws 8–10). The exclusion does not use
-   impersonality: it excludes a set-up-necessitated will equally.
+   established elsewhere: #555 `SimplicityCollapse.rigid_core` (the first
+   clause of `Core`; `ModalSenseSupport.RivalNegations` refutes
+   `NecessaryActStrictlyYieldsContingent`), #1897 laws 3 and 4 and, as a
+   fact-level analogue, `PSRStrength.necessitating_reason_contingent`. Here it
+   is restated only in the will step's own sense, SET-UP NECESSITATION
+   (`SetupNecessitatedAt`), at a source with an invariant set-up (law 8), and
+   connected to #1897's withholding holder (laws 8–10; #1897 law 6 lies behind
+   law 10). The exclusion does not use impersonality: it excludes a
+   set-up-necessitated will equally.
 2. **What discriminates choice from chance** at a source with an invariant
    set-up. In this overlay the answer is: only the classification `Rational`
    (law 5, the flip), and the Θ.5 principle restricted to invariant sources
    (DNP_inv) is, with excluded middle, exactly the denial of CHANCE_3 at such
-   sources (law 11). The one route that discriminates without restating the
-   rival's denial passes through intellect and one power at the source
-   (arguments A and B, law 13): at a simple source, the chance rival must deny
-   the source's intellect.
+   sources (law 11). A route found here that discriminates without restating
+   the rival's denial passes through intellect and one power at the source
+   (arguments A and B): at a source with one power, intellect with will
+   following intellect and will as a rational power suffices to make the
+   giving willed, and the chance rival must deny the source's intellect
+   (law 13). The converse is not proved (`Rational` has no content): other
+   warrants for will at the source would discriminate equally (law 6).
 
 **What is new.** One overlay of agency primitives on the shared
 `CausalityFrame` (`AgencyFrame`): intrinsic states, external conditions of a
@@ -72,7 +77,7 @@ namespace TruthCore.Causality.WillVersusChance
 
 open TruthCore.Causality.Frame (CausalityFrame)
 open TruthCore.Modal.PrussPowerPremises (GivesTo GivingSameIn TwoWayGiverAt GivenExists
-  ActualAbsenceHoldersGiveEach ActualAbsenceByWithholding)
+  ActualAbsenceHoldersGiveEach ActualAbsenceByWithholding FixedGiver)
 open TruthCore.Modal.ModalGrounding (NoActualContingentConcreteIn SomeContingentConcreteAt
   ActualAbsenceInitiatorPresent)
 open TruthCore.German.Kant.CosmologicalInference (NecessaryAt)
@@ -153,7 +158,9 @@ set-up. Example: fire heating the same fuel under the same conditions.
 Non-examples: a CHANCE_3 propensity; a willed two-way giving. With an
 invariant set-up it is the accessible-world form of #1897's `FixedGiver`
 (DEF `7bc1d667`) and the frame counterpart of #555's strict efficacy of one
-rigid act: what the set-up fixes is given wherever the source is. -/
+rigid act: what the set-up fixes is given wherever the source is (law 14 proves
+the coincidence with an invariant set-up; without one, a giver whose set-up
+varies is vacuously set-up necessitated and law 8 does not apply). -/
 def SetupNecessitatedAt (F : CausalityFrame W B T R) (A : AgencyFrame W B S P) (w : W) (y : B) :
     Prop :=
   ∀ v, F.history.ontic.frame.access w v → F.history.ontic.ExistsAt v y → SetupSameIn A y w v →
@@ -248,9 +255,10 @@ def SameSetupVariationIsRational (F : CausalityFrame W B T R) (A : AgencyFrame W
 set-up is invariant at `w` (simple, patientless sources). The weakest version
 that the Θ.5 route uses. With excluded middle, exactly the denial of CHANCE_3 at
 beings with an invariant set-up (law 11). The physical propensities that tell
-against DNP′ belong to beings whose set-up varies across the worlds where they
-exist, so they are not counterexamples to it; they do undercut the inductive
-warrant it inherited from DNP′ (note §5). -/
+against DNP′ are not counterexamples to it *on the assumption* that every
+physical propensity bearer has a set-up that differs at some accessible world
+where it exists (under broad metaphysical access); they do undercut the
+inductive warrant it inherited from DNP′ (note §5). -/
 def InvariantSetupVariationIsRational (F : CausalityFrame W B T R) (A : AgencyFrame W B S P)
     (w : W) : Prop :=
   ∀ y p x v, SetupInvariantAt F A w y → F.history.ontic.ExistsAt w y →
@@ -365,8 +373,10 @@ open TruthCore.Modal.PrussPowerPremises.Model (Bg V3 Bg.forall_iff Bg.exists_iff
    two-way giver into a CHANCE_3 giver, and reclassifying every power as
    rational does the converse; the set-up relation is unchanged by
    reclassification.
-6. **One power and will exclude chance.** If having will is having a rational
-   power, a being with will and one power has no CHANCE_3 at any world.
+6. **One power and will exclude chance.** If whatever has will has a rational
+   power (only this direction of the will bridges is used), a being with will
+   and one power has no CHANCE_3 at any world, whatever the warrant for its
+   will.
 7. Willed two-way giving and CHANCE_3 are both two-way giving (#1897).
 8. **Set-up collapse (part A).** With factive giving, a being necessary at `w`
    whose set-up is invariant and whose giving is set-up necessitated gives
@@ -386,7 +396,12 @@ open TruthCore.Modal.PrussPowerPremises.Model (Bg V3 Bg.forall_iff Bg.exists_iff
     giver; with one power, not both.
 13. **The chance core.** One power, CHANCE_3, intellect, will following
     intellect and will as a rational power are jointly inconsistent. So a
-    simple chancy source lacks intellect, given the two will bridges. -/
+    one-power chancy source lacks intellect, given will following intellect
+    and will as a rational power.
+14. **Set-up necessitation and fixed giving.** At a being with an invariant
+    set-up, set-up necessitation from `w` is exactly giving the same beings at
+    every accessible world where it exists; and a fixed giver (#1897
+    `FixedGiver`) existing at `w` is set-up necessitated from `w`. -/
 def Laws : Prop :=
   (∀ (W B T R S P : Type) (F : CausalityFrame W B T R) (A : AgencyFrame W B S P) (w : W) (y : B),
     SetupInvariantAt F A w y → ¬ IncidentalVariationAt F A w y ∧ ¬ SetupVariationAt F A w y) ∧
@@ -432,7 +447,12 @@ def Laws : Prop :=
   (∀ (W B T R S P : Type) (F : CausalityFrame W B T R) (A : AgencyFrame W B S P)
       (HasIntellect HasWill : B → Prop) (w : W) (y : B),
     OnePower A y → PropensityChanceAt F A w y → HasIntellect y →
-    WillFollowsIntellectReading HasIntellect HasWill → WillIsRationalPower A HasWill → False)
+    WillFollowsIntellectReading HasIntellect HasWill → WillIsRationalPower A HasWill → False) ∧
+  (∀ (W B T R S P : Type) (F : CausalityFrame W B T R) (A : AgencyFrame W B S P) (w : W) (y : B),
+    (SetupInvariantAt F A w y → (SetupNecessitatedAt F A w y ↔
+      ∀ v, F.history.ontic.frame.access w v → F.history.ontic.ExistsAt v y →
+        GivingSameIn F y w v)) ∧
+    (FixedGiver F y → F.history.ontic.ExistsAt w y → SetupNecessitatedAt F A w y))
 
 /-! ### Overlays on #1897's two-world frames (`Bg`: `g`, `c`, `d`) -/
 
@@ -667,7 +687,7 @@ actual world `false`):
    intellect for `g`;
 5. without withholding: `inertG`, `simpleRational`, intellect for `g`;
 6. without P5: `inertG`, `simpleRational`, nothing concrete (withholding holds
-   vacuously). -/
+   vacuously; the holder premises and argument A's conclusion hold). -/
 def OmissionsHolderWill : Prop :=
   (ActualAbsenceByWithholding theistG gPower allC false ∧ SomeContingentConcreteAt theistG allC false ∧
     ActualAbsenceHoldersSetupInvariant theistG simpleChancy gPower allC false ∧
@@ -695,6 +715,10 @@ def OmissionsHolderWill : Prop :=
     ¬ ActualAbsenceByWithholding inertG gPower allC false ∧
     ¬ ActualAbsenceHolderGivesByWill inertG simpleRational gPower allC false) ∧
   (ActualAbsenceByWithholding inertG gPower nobody false ∧
+    ActualAbsenceHoldersSetupInvariant inertG simpleRational gPower nobody false ∧
+    ActualAbsenceHoldersHaveIntellect inertG gPower nobody onlyG false ∧
+    ActualAbsenceHoldersOnePower inertG simpleRational gPower nobody false ∧
+    OnePowerIntellectualGivingWilled inertG simpleRational onlyG ∧
     ¬ SomeContingentConcreteAt inertG nobody false ∧
     ¬ ActualAbsenceHolderGivesByWill inertG simpleRational gPower nobody false)
 
@@ -790,7 +814,9 @@ def DNPStrictness : Prop :=
 3. CHANCE_1 (`theistG`, `concurrence`): `g`'s giving varies with a concurring
    condition `d`.
 4. Without VG, the theist and chance-rival models have an invariant two-way
-   giver. -/
+   giver.
+5. The chance senses are not exclusive: on `threeWorldG`, `threeWorldChancy`,
+   `g` has CHANCE_2 (against `z`) and CHANCE_3 (against `b`) at `a`. -/
 def SenseModels : Prop :=
   (VariationNeedsVaryingSetup necessitarianG simpleChancy false ∧
     NoTwoWayGiverWithInvariantSetup necessitarianG simpleChancy false ∧
@@ -800,7 +826,9 @@ def SenseModels : Prop :=
     TwoWayGiverAt theistG false .g ∧ SetupVariationAt theistG varyingState false .g) ∧
   IncidentalVariationAt theistG concurrence false .g ∧
   (¬ NoTwoWayGiverWithInvariantSetup theistG simpleRational false ∧
-    ¬ NoTwoWayGiverWithInvariantSetup theistG simpleChancy false)
+    ¬ NoTwoWayGiverWithInvariantSetup theistG simpleChancy false) ∧
+  (SetupVariationAt threeWorldG threeWorldChancy .a .g ∧
+    PropensityChanceAt threeWorldG threeWorldChancy .a .g)
 
 /-- The certificate: laws and models. -/
 def Controls : Prop :=

@@ -1,0 +1,57 @@
+{
+ "id": "e5417243-d6f3-4776-9694-40d85bb34ff4",
+ "label": "Power: a power for a proposition versus an active power of a being",
+ "term": "power",
+ "sense_definition_ids": [
+  "bf7eddca-8291-4744-8470-379babcd7781",
+  "582f44c3-7778-4806-b385-e1eff852ac5e"
+ ],
+ "resolution": "POWER_FOR_VERSUS_ACTIVE_POWER_1 is PowerFor (DEF bf7eddca-8291-4744-8470-379babcd7781): at w, y could initiate a causal chain issuing in a proposition p; it is the power of #1897's holder for the joint absence of the actual contingent concreta. POWER_FOR_VERSUS_ACTIVE_POWER_2 is an active power of the agency overlay (PowerOf, exercised in a giving; DEF 582f44c3-7778-4806-b385-e1eff852ac5e). They are separate primitives and nothing identifies them: nothing says that a power for an outcome is one of the holder's active powers, or that exercising an active power realizes a power for a proposition. The only passage between them is the explicit OPEN holder premise 'Whatever has power for the actual contingents' joint absence has one power', listed as the sense bridge of the argument that the withholding holder gives by will; it says how many active powers whatever holds PowerFor has, without identifying the two kinds of power. The holder premises of the will-versus-chance batch use PowerFor only to pick out the holder; the one-power premise (OnePower) and the rationality of a power concern PowerOf only.",
+ "term_label": "POWER_FOR_VERSUS_ACTIVE_POWER",
+ "senses": [
+  {
+   "id": "f4417ed2-3be6-4d78-b2a6-c4db9ac640b3",
+   "label": "POWER_FOR_VERSUS_ACTIVE_POWER_1",
+   "definition_id": "bf7eddca-8291-4744-8470-379babcd7781",
+   "lean_declaration": "TruthCore.Modal.ModalGrounding.AristotelianGroundingFor",
+   "lean_parameters": [
+    {
+     "declaration": "TruthCore.Modal.ModalGrounding.AristotelianGroundingFor",
+     "parameter": "PowerFor"
+    },
+    {
+     "declaration": "TruthCore.Causality.WillVersusChance.ActualAbsenceHoldersSetupInvariant",
+     "parameter": "PowerFor"
+    },
+    {
+     "declaration": "TruthCore.Causality.WillVersusChance.ActualAbsenceHoldersHaveIntellect",
+     "parameter": "PowerFor"
+    },
+    {
+     "declaration": "TruthCore.Causality.WillVersusChance.ActualAbsenceHoldersOnePower",
+     "parameter": "PowerFor"
+    },
+    {
+     "declaration": "TruthCore.Causality.WillVersusChance.GodsHoldActualAbsencePower",
+     "parameter": "PowerFor"
+    },
+    {
+     "declaration": "TruthCore.Causality.WillVersusChance.ActualAbsenceHolderGivesByWill",
+     "parameter": "PowerFor"
+    }
+   ]
+  },
+  {
+   "id": "a252ca84-4442-435b-991c-a14f3cc3cedb",
+   "label": "POWER_FOR_VERSUS_ACTIVE_POWER_2",
+   "definition_id": "582f44c3-7778-4806-b385-e1eff852ac5e",
+   "lean_declaration": "TruthCore.Causality.WillVersusChance.GivesBy",
+   "lean_parameters": [
+    {
+     "declaration": "TruthCore.Causality.WillVersusChance.AgencyFrame",
+     "parameter": "PowerOf"
+    }
+   ]
+  }
+ ]
+}

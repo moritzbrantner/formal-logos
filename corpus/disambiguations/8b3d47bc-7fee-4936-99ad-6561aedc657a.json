@@ -1,0 +1,25 @@
+{
+ "id": "8b3d47bc-7fee-4936-99ad-6561aedc657a",
+ "label": "Will: the HAS_WILL_1 capacity versus a willed two-way giving",
+ "term": "will (capacity versus willed giving)",
+ "sense_definition_ids": [
+  "7c64b499-6dba-5e03-bdf3-5acea95d8836",
+  "de24ce2e-84e4-48d8-9cac-5f66ad532015"
+ ],
+ "resolution": "WILL_CAPACITY_VERSUS_WILLED_GIVING_1 is HAS_WILL_1 (DEF 7c64b499-6dba-5e03-bdf3-5acea95d8836), having will as a capacity, the sense of STMT-GOD-HAS-WILL. WILL_CAPACITY_VERSUS_WILLED_GIVING_2 (DEF de24ce2e-84e4-48d8-9cac-5f66ad532015) is exercise-level: a giving by a power classified Rational that is withheld at an accessible world with the same set-up (WilledTwoWayAt, the will-versus-chance batch). Sense 2 is unbridged to sense 1 except through the explicit OPEN bridges 'Whatever HAS_WILL_1 has a rational power' and 'Whatever has a rational power HAS_WILL_1', and it is unbridged to the Wills relation of statement a94c5dfc-c722-49fe-a242-dd39409b079d and to the exercise senses of disambiguation 941efd70-d56f-53f9-b5f9-8acd36711a54. No argument passes between the senses without one of those listed bridges.",
+ "term_label": "WILL_CAPACITY_VERSUS_WILLED_GIVING",
+ "senses": [
+  {
+   "id": "916b63e7-d8d8-49ba-9d42-9ad19c1fa090",
+   "label": "WILL_CAPACITY_VERSUS_WILLED_GIVING_1",
+   "definition_id": "7c64b499-6dba-5e03-bdf3-5acea95d8836",
+   "lean_declaration": "TruthCore.Case.Catholicism.GodHasWill"
+  },
+  {
+   "id": "9c62da92-c637-4f61-9bdc-4c5dc8d857cc",
+   "label": "WILL_CAPACITY_VERSUS_WILLED_GIVING_2",
+   "definition_id": "de24ce2e-84e4-48d8-9cac-5f66ad532015",
+   "lean_declaration": "TruthCore.Causality.WillVersusChance.WilledTwoWayAt"
+  }
+ ]
+}

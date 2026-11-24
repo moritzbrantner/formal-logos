@@ -1,7 +1,7 @@
 {
   "id": "ff9c8158-e568-4094-af22-4190de4d1b8c",
   "label": "Will and CHANCE_3 at an invariant source: laws, nonvacuity, core, omissions, rivals",
-  "paraphrase": "Premise-free laws and finite models (structural surrogates, not metaphysical possibility). Laws: (1) an invariant set-up excludes CHANCE_1 and CHANCE_2; (2) VG excludes every invariant two-way giver, willed or chancy; (3) VG implies DNP-prime; (4) DNP-prime excludes CHANCE_3; (5) the flip: reclassifying powers turns a willed two-way giver into a CHANCE_3 giver and conversely, with the same set-up; (6) will as a rational power and one power exclude CHANCE_3 for a being with will; (7) both are two-way giving; (8) part A: with factive giving, a necessary giver with an invariant set-up whose giving is set-up necessitated gives being at w only to necessary beings; (9) with excluded middle, VG is set-up necessitation of every being at w; (10) part A: withholding, P5 and the holder's invariant set-up give a holder that is a two-way giver and not set-up necessitated, whatever its power; (11) with excluded middle, DNP-prime is exactly the absence of CHANCE_3 at w and DNP_inv exactly its absence at invariant beings; (12) with excluded middle and giving as exercise, an invariant two-way giver is willed or CHANCE_3, and not both given one power; (13) one power, CHANCE_3, intellect, will following intellect and will as a rational power are jointly inconsistent. Models: theist nonvacuity of arguments A-D; the chance rival (same frame and set-up, non-rational power: DNP-prime and DNP_inv fail, the conclusions of B, C and D fail); the intellectual chancer (two powers); each member of the chance core needed; omission models of arguments A-D; DNP-prime strictly stronger than DNP_inv (three worlds); VG and chance-sense nonvacuity.",
+  "paraphrase": "Premise-free laws and finite models (structural surrogates, not metaphysical possibility). Laws: (1) an invariant set-up excludes CHANCE_1 and CHANCE_2; (2) VG excludes every invariant two-way giver, willed or chancy; (3) VG implies DNP-prime; (4) DNP-prime excludes CHANCE_3; (5) the flip: reclassifying powers turns a willed two-way giver into a CHANCE_3 giver and conversely, with the same set-up; (6) will as a rational power and one power exclude CHANCE_3 for a being with will; (7) both are two-way giving; (8) part A: with factive giving, a necessary giver with an invariant set-up whose giving is set-up necessitated gives being at w only to necessary beings (without invariance the law does not apply); (9) with excluded middle, VG is set-up necessitation of every being at w; (10) part A: withholding, P5 and the holder's invariant set-up give a holder that is a two-way giver and not set-up necessitated, whatever its power; (11) with excluded middle, DNP-prime is exactly the absence of CHANCE_3 at w and DNP_inv exactly its absence at invariant beings; (12) with excluded middle and giving as exercise, an invariant two-way giver is willed or CHANCE_3, and not both given one power; (13) one power, CHANCE_3, intellect, will following intellect and will as a rational power are jointly inconsistent; (14) with an invariant set-up, set-up necessitation is exactly giving the same beings at every accessible world where the giver exists, and a fixed giver existing at w is set-up necessitated. Models: theist nonvacuity of arguments A-D; the chance rival (same frame and set-up, non-rational power: DNP-prime and DNP_inv fail, the conclusions of B, C and D fail); the intellectual chancer (two powers); each member of the chance core needed; omission models of arguments A-D; DNP-prime strictly stronger than DNP_inv (three worlds); VG and chance-sense nonvacuity, including one giver with CHANCE_2 and CHANCE_3 at the same world.",
   "lean_declaration": "TruthCore.Causality.WillVersusChance.Model.Controls",
   "definition_ids": [
     "b8061228-9131-40f2-83bd-cb7d719bd0a0",
@@ -10,6 +10,8 @@
     "582f44c3-7778-4806-b385-e1eff852ac5e",
     "fdeb7757-10db-4fa7-91a4-6c15ee5100d2",
     "ca00e246-197c-4107-97a7-ca51448b0247",
+    "01b44013-2db5-546c-a22e-06104e8e724c",
+    "3055e6f1-5de7-5c32-9b6f-d023d0c82025",
     "e0179074-ab4e-4078-8ecb-a7ae9696fd11",
     "0fe412ef-83c9-444c-9e92-da7246a0e6c5",
     "a2840d96-8bdc-4e6a-a9a3-376a9505ec7c",
@@ -26,6 +28,9 @@
   ],
   "disambiguation_ids": [
     "c18f084e-bb0a-4edd-84d6-fdd1bb2ede87",
+    "5836e1f6-ccce-4ce8-b9d6-c89afc7120bb",
+    "e5417243-d6f3-4776-9694-40d85bb34ff4",
+    "8b3d47bc-7fee-4936-99ad-6561aedc657a",
     "35fa7162-6cb3-52e1-ac5b-66afc318c74f"
   ]
 }

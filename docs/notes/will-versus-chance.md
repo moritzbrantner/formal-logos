@@ -1,10 +1,12 @@
 # Will versus chance at a necessary, patientless source (#1926 phase 3)
 
 Outcome label (rigor contract 6): **a new bridge**, conditional. Part A is
-**already established** elsewhere and is only connected here; part B adds a
-verified, non-transcription support option for STMT-GOD-HAS-WILL (`66aecdd7`)
-whose crux is shown to be the chance rival's exact denial, and a second,
-intellect-based route that discriminates without restating that denial.
+**already established** elsewhere and is only connected here. In part B only
+arguments C and D add support options on a root route: C for `a9776d21`, and D
+for STMT-GOD-HAS-WILL (`66aecdd7`); their crux is shown to be the chance rival's
+exact denial. Arguments A and B are an intellect-based route found here that
+discriminates without restating that denial; they conclude `fdd2b1cf`, which has
+no root consumer yet (§10, gap 3).
 
 Lean: `TruthCore.Causality.WillVersusChance` (vocabulary, laws, models) and
 `TruthCore.Results.Causality.WillVersusChance` (Solution). Spec:
@@ -34,15 +36,18 @@ possibility.
 
 | Sense | Vocabulary | Definition | Exclusion of a necessary source with a contingent effect |
 | --- | --- | --- | --- |
-| Strict efficacy of one rigid act token | #555 `OutputProfile` | `StrictEfficacy`, DEF `01b44013` | `SimplicityCollapse.rigid_core`; `ModalSenseSupport.RivalNegations` derives `¬ NecessaryActStrictlyYieldsContingent` from it |
-| Fixed giving (same beings wherever the giver exists) | #1897 `CausalityFrame` | `FixedGiver`, DEF `7bc1d667` | #1897 laws 3 and 4 |
-| Set-up necessitation (same set-up ⇒ same giving) | this batch, agency overlay on the same frame | `SetupNecessitatedAt`, DEF `ca00e246` | controls law 8 |
-| Necessitating reason | #755 `Arena` | `PSRStrength.Necessitating`, DEF `3055e6f1` | `PSRStrength.necessitating_reason_contingent` |
+| NECESSITATE_1: strict efficacy of one rigid act token | #555 `OutputProfile` | `StrictEfficacy`, DEF `01b44013` | `SimplicityCollapse.rigid_core` (the first clause of `Core`); `ModalSenseSupport.RivalNegations` with `Core` refutes `NecessaryActStrictlyYieldsContingent` outright, premise-free |
+| NECESSITATE_2: fixed giving (same beings wherever the giver exists) | #1897 `CausalityFrame` | `FixedGiver`, DEF `7bc1d667` | #1897 laws 3 and 4 |
+| NECESSITATE_3: set-up necessitation (same set-up ⇒ same giving) | this batch, agency overlay on the same frame | `SetupNecessitatedAt`, DEF `ca00e246` | controls law 8, **only at a source with an invariant set-up** |
+| NECESSITATE_4: necessitating reason (a fact-level analogue, not a source relation) | #755 `Arena` | `PSRStrength.Necessitating`, DEF `3055e6f1` | `PSRStrength.necessitating_reason_contingent` |
+
+The senses are joined by the disambiguation NECESSITATE `5836e1f6`.
 
 **The brief's first test is already answered.** Joint satisfiability of the
-route premises with `NecessaryActStrictlyYieldsContingent` fails: that bundle is
-refuted by `SimplicityCollapse.Core`, which `rigid_core` proves
-(`ModalSenseSupport.RivalNegations`, second clause). The core fact is K-closure
+route premises with `NecessaryActStrictlyYieldsContingent` fails: that
+proposition is refuted outright, since `ModalSenseSupport.RivalNegations` (second
+clause) derives its negation from `SimplicityCollapse.Core`, whose first clause
+`rigid_core` proves. The core fact is K-closure
 on the access relation: a necessary source, a strict implication from it to the
 effect, hence a necessary effect. Nothing new was proved for it.
 
@@ -50,17 +55,21 @@ effect, hence a necessary effect. Nothing new was proved for it.
 
 - Law 8: with factive giving, a necessary giver whose set-up is invariant and
   whose giving is set-up necessitated gives being at `w` only to necessary
-  beings. With an invariant set-up, set-up necessitation coincides with fixed
-  giving at accessible worlds.
+  beings. Without the invariance hypothesis the law fails: on `theistG` with
+  `varyingState`, the necessary `g` gives the contingent `c` only at `false`,
+  its set-up varies, and it is vacuously set-up necessitated.
 - Law 9: with excluded middle, VG (variation needs a varying set-up) is exactly
   set-up necessitation of every being at `w`.
 - Law 10: #1897's withholding holder, with P5 and an invariant set-up, is a
   two-way giver and is **not** set-up necessitated, whatever its power.
+- Law 14: with an invariant set-up, set-up necessitation from `w` is exactly
+  giving the same beings at every accessible world where the giver exists; and
+  a fixed giver existing at `w` is set-up necessitated from `w`.
 
-**What it excludes and what it leaves.** Every sense excludes a necessitating
-source of contingent effects **whether personal or not**: a necessitated will
-is excluded as well (law 2: VG excludes willed and chancy two-way giving
-alike). So part A removes the necessitating impersonal source (Spinozist
+**What it excludes and what it leaves.** Each sense excludes a necessitating
+source of contingent effects **whether personal or not** (the set-up sense only
+at a source with an invariant set-up): a necessitated will is excluded as well
+(laws 8 and 10 do not mention `Rational`). So part A removes the necessitating impersonal source (Spinozist
 emanation of the actual contingents) *only by the same step that requires the
 theist's will to be non-necessitating toward creatures* (q.19 a.3). It does
 not discriminate will from impersonality. The surviving impersonal rival is the
@@ -82,7 +91,8 @@ between fields, or with the frame, is assumed; every bridge is a premise.
 | Giving by a power | DEF `582f44c3` | `GivesTo` plus the exercise of a power |
 | One power | DEF `fdeb7757` | all powers of the being are one (q.19 a.4 ad 4) |
 | CHANCE_1 / _2 / _3 | DEFs `e0179074`, `0fe412ef`, `a2840d96`; disambiguation `c18f084e` | incidental (varying concurring condition); varying set-up; indeterministic propensity of a non-rational power |
-| Willed two-way giving | DEF `de24ce2e` | CHANCE_3's profile with a rational power |
+| Willed two-way giving | DEF `de24ce2e`; sense WILL_CAPACITY_VERSUS_WILLED_GIVING_2 of `8b3d47bc` | CHANCE_3's profile with a rational power: an exercise-level sense, unbridged to HAS_WILL_1 and to the `Wills` relation of `a94c5dfc` |
+| Power for a proposition / active power | disambiguation POWER_FOR_VERSUS_ACTIVE_POWER `e5417243` | `PowerFor` (DEF `bf7eddca`) picks out #1897's holder; `PowerOf` (DEF `582f44c3`) is an active power. Separate primitives; nothing identifies them. One power and `Rational` concern `PowerOf` only; argument B lists the one-power holder premise as its sense bridge |
 
 **Semantic grounding of the new relations.** *Set-up sameness* is an
 equivalence on worlds for a fixed giver (reflexive, symmetric, transitive by
@@ -120,9 +130,11 @@ CHANCE_1). Arguments (1) and (3) pass through intellect.
 **Laws** (`Model.Laws`): (1) an invariant set-up excludes CHANCE_1 and
 CHANCE_2; (2) VG excludes invariant two-way giving, willed or chancy; (3) VG ⇒
 DNP′; (4) DNP′ ⇒ no CHANCE_3; (5) the flip: reclassifying powers exchanges
-willed two-way giving and CHANCE_3 with the same set-up; (6) will as a rational
-power and one power exclude CHANCE_3 for a being with will; (7) both are
-two-way giving; (8)–(10) part A above; (11) with excluded middle, DNP′ is
+willed two-way giving and CHANCE_3 with the same set-up; (6) one power and will
+exclude CHANCE_3 for a being with will, whatever the warrant for its will (only
+the bridge "whatever has will has a rational power" is used); (7) both are
+two-way giving; (8)–(10) part A above; (14) set-up necessitation and fixed
+giving (part A above); (11) with excluded middle, DNP′ is
 exactly the absence of CHANCE_3 at `w`, and DNP_inv exactly its absence at
 invariant beings; (12) with excluded middle and giving as exercise, an invariant
 two-way giver is willed or CHANCE_3, and not both given one power; (13) the
@@ -135,13 +147,16 @@ DNP_inv fail; the conclusions of B, C, D fail); the intellectual chancer (two
 powers); each member of the chance core needed (five deletion models); omission
 models of every premise of A (3), B (6), C (3) and D (7); DNP′ strictly
 stronger than DNP_inv (three worlds: a chancy being whose set-up varies at a
-third world); VG and chance-sense nonvacuity. `truth countermodel` does not
+third world); VG and chance-sense nonvacuity, including one giver with
+CHANCE_2 and CHANCE_3 at the same world (the senses are not exclusive). `truth
+countermodel` does not
 handle `CausalityFrame` parameters (#1897 gap 9), so all models are hand-written.
 
 ## 5. What discriminates will from chance
 
 **Formal finding.** In this overlay nothing but `Rational` separates a willed
-two-way giver from a CHANCE_3 giver (law 5), confirming #742 at the will step.
+two-way giver from a CHANCE_3 giver (law 5), consistent with #742 at the will
+step.
 The Θ.5 premise in either strength is, with excluded middle, *exactly* the
 denial of CHANCE_3 in its scope (law 11). So argument C/D is a valid support
 option whose only discriminating content against the chance rival is DNP_inv
@@ -149,18 +164,26 @@ itself: as evidence against that rival it begs the question unless DNP_inv has
 warrant of its own. Different presentations of one assumption are not
 additional evidence.
 
-**The discriminating route.** At a source with one power, the dichotomy of law
-12 is decided by whether that one power is rational, and intellect with the two
-will bridges decides it (arguments A, B; law 13). The chance rival is therefore
-consistent only if it denies one of: the source's intellect, its one power,
-will following intellect (`090be689`), will as a rational power, or giving as
-exercise. Its natural choice is to deny intellect at the source. The will-step
-question at a simple source **reduces to the intellect question**, which has
-its own arguments and its own impersonal rival
+**A discriminating route found here.** At a source with one power, intellect
+with will following intellect (`090be689`) and "whatever has will has a rational
+power" (`71fc097b`) suffices to make the giving willed (arguments A, B), and the
+chance rival must deny the source's intellect (law 13). Law 13's core has four
+members besides CHANCE_3 itself: one power, intellect, `090be689` and
+`71fc097b`; a one-power chancy source must deny at least one of them, and its
+natural choice is intellect. Giving as exercise (`495a40ad`) is not a member of
+that core (CHANCE_3 already contains an exercised power); it is needed separately
+for arguments A and B and for the dichotomy of law 12: without it a source can
+give without exercising any power and is then neither willed nor CHANCE_3 (the
+`powerless` model). The converse is **not** proved: `Rational` has no content,
+so nothing here shows that a source without intellect is not willed, and other
+warrants for will at the source (Fifth Way and governor routes, argument D)
+would discriminate equally (law 6). So the case for willed giving at the source,
+by this route, is at most as strong as the conjunction of intellect at the
+source, one power and the holder-root identification (#1897 gap 2). Intellect
+has its own arguments and its own impersonal rival
 (`docs/notes/causal-perfection-transfer.md`, "Emergence and comparison under
 the same standard"; `docs/immaterial-intellect-reception.md`, rival 9). This is
-horizontal support from another argument family; it shares the dependency on
-those intellect routes and the holder-root identification (#1897 gap 2).
+horizontal support from another argument family and shares its dependencies.
 
 **Warrant of DNP′ and DNP_inv** (Substantive Objection Standard applied both
 ways).
@@ -172,17 +195,18 @@ ways).
 - *Objection to DNP′.* Target: the universal premise DNP′. Mechanism: an
   indeterministic non-rational power (CHANCE_3). Independent justification:
   stochastic dynamics in collapse and Copenhagen-type readings of quantum
-  mechanics, which are developed, empirically adequate positions; Pruss's own
-  first cause "perhaps non-deterministic". Relevance: one such power falsifies
+  mechanics, which are developed, empirically adequate positions. (Navigation
+  only, not support: Pruss allows his first cause to be "perhaps
+  non-deterministic".) Relevance: one such power falsifies
   DNP′ (law 11). Status: **live, not established**: deterministic readings
   (Bohmian, Everettian) are equally adequate, so the evidence is
   interpretation-dependent.
-- *DNP_inv escapes the counterexample.* The specific difference: physical
-  propensities belong to beings whose set-up varies across the worlds where
-  they exist (they are embedded in changing conditions), so they fall outside
-  DNP_inv's scope (the strictness model has this shape). The evidence of
-  physics bears on the general principle, not on beings with an invariant
-  set-up.
+- *DNP_inv escapes the counterexample, on an assumption.* Assumption: every
+  physical propensity bearer has a set-up that differs at some accessible world
+  where it exists, under broad metaphysical access (a nucleus can exist in other
+  environments and states). Then physical propensities fall outside DNP_inv's
+  scope (the strictness model has this shape), and the evidence of physics bears
+  on the general principle, not on beings with an invariant set-up.
 - *But its positive warrant is undercut.* DNP_inv inherited its support from
   the general natural-necessity principle; if per se chance exists among
   natural powers, that inductive base no longer supports the restricted
@@ -193,10 +217,41 @@ ways).
   (a determinate effect from an undetermined being needs intellect) is an
   argument about specifying determinate outcomes, which is the intellect /
   exemplar question (C4 in `causal-perfection-transfer.md`), not a separate
-  warrant for DNP_inv.
+  warrant for DNP_inv; (iii) *Physics* II.6, that chance and spontaneity are
+  posterior to intellect and nature (navigation), concerns incidental chance
+  (CHANCE_1), which an invariant set-up already excludes (law 1), so it does not
+  bear on CHANCE_3.
 - *No substantive objection* was identified to the inferences of A–E, to
-  giving as exercise, or to the two will bridges beyond their being
-  primitives. The omission models show only that each premise is needed.
+  giving as exercise, or to the will bridges (`71fc097b`, `65e0179f`) beyond
+  their being primitives. The omission models show only that each premise is
+  needed.
+
+**Warrant of the other central premises of B and D.**
+
+- *Holder invariance* (`a065c332`, used by B and D). Positive warrant: the
+  classical arguments for divine immutability and simplicity (a pure act has no
+  intrinsic state that could differ), and patientlessness of a source that gives
+  being to every actual contingent (no pre-existing patient or concurring cause
+  of that giving). Contested on the theist side too: theists who take divine
+  decrees to be contingent intrinsic states deny it (DEF `b4bb7bb4`). Both the
+  theist and the chance-rival models accept it, so it does not discriminate;
+  it decides whether law 12's dichotomy applies. If it fails, varying intrinsic
+  states (CHANCE_2-type variation) carry the difference and the question moves
+  to what explains those states. Provisional judgment: prima facie plausible
+  for a first source on the simplicity routes, open, not assessed further here.
+- *One power* (`9856239a`, B). Positive warrant: simplicity at the level of
+  powers (q.19 a.4 ad 4: knowledge, will and executing power "in Deo unum
+  sunt"). The chance rival's natural reply is a source with two powers (the
+  intellectual chancer, Pruss's "non-unitary cause"). Provisional judgment: as
+  strong as the simplicity case for the source, which this slice does not
+  reassess; it is the premise the intellectual chancer denies.
+- *GOD_4 holds the power* (`0050b6ed`, D). Positive warrant: on classical theism
+  God could have refrained from creating (q.19 a.3) and could cease to give
+  existence (q.104 a.3, read for #1897), so God has a power for the joint absence
+  of the actual contingents; directional, not uniqueness. No substantive
+  objection identified given the GOD_4 definition and the existence of
+  contingent concreta. Provisional judgment: a near-definitional direct option
+  on classical theism; its open part is that GOD_4 exists at `w`.
 
 ## 6. The strongest standing rival and its price
 
@@ -205,27 +260,33 @@ patientless source that gives the actual contingents being by an
 indeterministic propensity (CHANCE_3), and could have withheld them. Model:
 `Model.ChanceRival`. It accepts every premise of #1897's withholding route.
 
-**Price, derived under the stated premises:**
+**Price.** Items 1, 2 and the first sentence of 3 are derived under the
+stated premises; the rest are recorded commitments.
 
 1. It denies DNP′ and DNP_inv (law 11), i.e. it posits per se chance at a
    necessary, simple being.
 2. It denies VG (shared with the theist; law 2).
-3. Given one power and the will bridges, it denies intellect at the source (law
-   13). If the source gives being to intellectual beings, it must therefore
-   deny the perfection-transfer premises for intellect, or mediate the
-   intellect of its effects through causes it does not totally supply (the
-   emergence reply of `causal-perfection-transfer.md`).
-4. It owes a non-cognitive specification of determinate outcome-weights at a
-   simple being (the q.19 a.4 determination point; the C4 exemplarity
-   question). It is not shown that this is impossible.
+3. Given one power, `090be689` and `71fc097b`, it denies intellect at the
+   source (law 13). Imported, not derived here: if the source gives being to
+   intellectual beings, it must then deny the perfection-transfer premises for
+   intellect or the totality of its existential supply (the emergence reply of
+   `causal-perfection-transfer.md`).
+4. Recorded, not derived, and symmetric: both sides owe an account of how a
+   simple source settles determinate outcomes. The chancy source owes a
+   non-cognitive specification of outcome weights; the willing source owes the
+   account of determinate ideas in a simple intellect (the exemplar question).
+   This is the C4 / intellect question of `causal-perfection-transfer.md`, not
+   a separate cost of chance.
 
 None of these is shown to conflict with an accepted floor item; each is a
 substantive commitment, not a refutation. Unusualness is not counted as a cost.
 
 ## 7. Matched-scope comparison (same explanandum)
 
-Explanandum: a necessary source with an invariant set-up gives the actual
-contingent concreta being and withholds them at an accessible world.
+Explanandum: a necessary source with an invariant set-up and one power gives
+the actual contingent concreta being and withholds them at an accessible world.
+(Without one power, the intellect rows do not apply: a source with two powers
+can have intellect and give by chance, the intellectual chancer.)
 
 | Criterion | Willing source | Chancy impersonal source |
 | --- | --- | --- |
@@ -249,7 +310,8 @@ listed as a next test, not scored.
 
 - **Part A:** settled conditionally on the stated frames and already recorded
   in three vocabularies: a necessitating source of contingent effects is
-  excluded, in every fixed sense, together with a necessitated will. High
+  excluded in each fixed sense (in the set-up sense only at a source with an
+  invariant set-up), together with a necessitated will. High
   confidence in the consequence; it decides nothing between will and an
   impersonal non-necessitating source.
 - **Part B, Θ.5 route (C, D):** a valid new support option for `66aecdd7`, but
@@ -257,12 +319,15 @@ listed as a next test, not scored.
   which is weakened (its parent principle meets a live objection) and not
   independently supported. The chance rival stands at this step.
 - **Part B, intellect route (A, B):** discriminating, conditional on the
-  source's intellect and one power. The will-versus-chance question at a simple
-  source is the intellect question; the case for will at the source is as
-  strong as the case for intellect at the source (the existing intellect routes
-  and their impersonal rival), and no stronger.
-- **Overall:** the Θ.5 bridge is not a separate warrant for will; will at the
-  first source is supported horizontally, through intellect.
+  source's intellect and one power. At a source with one power, intellect (with
+  `090be689` and `71fc097b`) suffices to make the giving willed, and the chance
+  rival must deny the source's intellect. By this route the case for willed
+  giving at the source is at most as strong as the conjunction of intellect,
+  one power and the holder identification; other warrants for will at the
+  source would discriminate equally (law 6).
+- **Overall:** the Θ.5 bridge is not a separate warrant against chance; in this
+  slice, will at the first source is supported horizontally, through intellect,
+  or through other routes to will.
 
 **Revision conditions.** For the will side: an independent argument that an
 invariant, patientless being cannot have a non-rational propensity (it would
@@ -285,10 +350,10 @@ perfection-transfer premise for a total existential source.
 | `a065c332`, `813a9181`, `9856239a` | holders invariant / intellectual / one power | `∀ y, PowerFor w y q → …` | holders at `w` only; not existence |
 | `0050b6ed` | every GOD_4 exists at `w` and holds the power | `∀ g, IsGod g → ExistsAt w g ∧ PowerFor w g q` | not uniqueness; not every holder is GOD_4 |
 | `5c1aba17` | every giving of a one-power intellectual being is by a rational power | `∀ y, HasIntellect y → OnePower y → ∀ v x, GivesTo v y x → ∃ p, PowerOf y p ∧ Rational p ∧ Exercises v y x p` | all worlds |
-| `fdd2b1cf` | some holder is a willed two-way giver | `∃ y, PowerFor w y q ∧ WilledTwoWayAt w y` | existence at `w` inside `WilledTwoWayAt`; no contrastive explanation |
+| `fdd2b1cf` | some holder is a willed two-way giver | `∃ y, PowerFor w y q ∧ WilledTwoWayAt w y` | existence at `w` inside `WilledTwoWayAt`; exercise-level "willed", unbridged to HAS_WILL_1; no contrastive explanation |
 | `a9776d21` | invariant two-way givers have will | `∀ y, SetupInvariantAt w y → TwoWayGiverAt w y → HasWill y` | capacity |
 | `66aecdd7` (reused) | God has will | `∀ g, IsGod g → HasWill g` | world-free conclusion from premises at one `w` |
-| `ff9c8158` | laws and models | `Model.Controls` | surrogates only |
+| `ff9c8158` | laws and models | `Model.Controls` | surrogates only; links FixedGiver because law 14 relates it to set-up necessitation |
 
 Every hypothesis of each theorem is a listed premise (bind-check). No source is
 attributed; no claim record is added.
@@ -312,10 +377,14 @@ attributed; no claim record is added.
 
 ## 11. Edits outside the batch
 
-None to existing records or modules. New: the two Lean modules (Challenge
-generated), the spec and its generated records, ten definitions, the CHANCE
-disambiguation `c18f084e`, this note and attempt records. A NECESSITATE
-disambiguation joining the four senses of §2 was drafted and dropped: adding the
-existing definitions `01b44013`, `7bc1d667` and `3055e6f1` as its senses would
-have required re-tagging the labels of existing records, and no argument uses
-two of the senses.
+- Existing records: DEF `7bc1d667` (FixedGiver) relabelled with its sense tag
+  NECESSITATE_2; `docs/notes/pruss-power-premises.md` §6 and §7 point here.
+  (Adding the willed sense to the audited disambiguation `941efd70` was tried
+  and reverted: its bundle audit pins it; a separate disambiguation is used.)
+- Generated: `TruthCore/Imports/Causality.lean`,
+  `TruthCore/Imports/Results/Causality.lean`.
+- New: the two Lean modules (Challenge generated), the spec and its generated
+  records, ten definitions, disambiguations CHANCE `c18f084e`, NECESSITATE
+  `5836e1f6`, POWER_FOR_VERSUS_ACTIVE_POWER `e5417243` and
+  WILL_CAPACITY_VERSUS_WILLED_GIVING `8b3d47bc`, this note and three
+  attempt records.

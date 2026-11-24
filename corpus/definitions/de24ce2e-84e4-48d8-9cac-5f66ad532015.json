@@ -1,6 +1,6 @@
 {
  "id": "de24ce2e-84e4-48d8-9cac-5f66ad532015",
- "label": "Willed two-way giving: a rational power gives x, and not at a world with the same set-up",
+ "label": "WILL_CAPACITY_VERSUS_WILLED_GIVING_2: a rational power gives x, not at a same-set-up world",
  "term": "willed two-way giving, choice (WilledTwoWayAt)",
  "definition": "WilledTwoWayAt F A w y: as PropensityChanceAt F A w y with the power rational: y exists at w, and there are a rational power p of y, a being x and a world v accessible from w where y exists with the same set-up, such that y gives x being at w by p and does not give x being at v.",
  "basis": "stipulative",

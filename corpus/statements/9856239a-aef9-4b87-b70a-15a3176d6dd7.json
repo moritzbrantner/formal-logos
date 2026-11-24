@@ -1,15 +1,17 @@
 {
   "id": "9856239a-aef9-4b87-b70a-15a3176d6dd7",
   "label": "Whatever has power for the actual contingents' joint absence has one power",
-  "paraphrase": "OPEN (analyst formulation): whatever has at w a power for the joint absence of the concrete beings contingent at w has one power: all its active powers are one (the power-level aspect of simplicity; ST I q.19 a.4 ad 4, navigation). Not implied by an invariant set-up: a necessary being with a rational and a non-rational power is a model of its failure.",
+  "paraphrase": "OPEN (analyst formulation): whatever has at w a power for the joint absence of the concrete beings contingent at w has one power: all its active powers are one (the power-level aspect of simplicity; ST I q.19 a.4 ad 4, navigation). The one-power clause concerns active powers (PowerOf), not the PowerFor that picks out the holder; the two are unbridged primitives (disambiguation POWER_FOR_VERSUS_ACTIVE_POWER). Not implied by an invariant set-up: a necessary being with a rational and a non-rational power is a model of its failure.",
   "lean_declaration": "TruthCore.Causality.WillVersusChance.ActualAbsenceHoldersOnePower",
   "definition_ids": [
     "bf7eddca-8291-4744-8470-379babcd7781",
     "fdeb7757-10db-4fa7-91a4-6c15ee5100d2",
+    "582f44c3-7778-4806-b385-e1eff852ac5e",
     "1b8baf77-84fa-5513-a138-7fa14840dd87",
     "97f37f5c-7f82-5077-9bb9-6cfc8673631d"
   ],
   "disambiguation_ids": [
+    "e5417243-d6f3-4776-9694-40d85bb34ff4",
     "623ddbf6-9683-5361-bae4-e348a00ec680",
     "35fa7162-6cb3-52e1-ac5b-66afc318c74f"
   ]

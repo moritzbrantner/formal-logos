@@ -118,7 +118,7 @@ theorem sameSetupVariationIsRationalWeakens {W B T R S P : Type}
 /-! ## Laws and models -/
 
 theorem laws : Laws := by
-  refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩
+  refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩
   · intro W B T R S P F A w y hInv
     refine ⟨?_, ?_⟩
     · rintro ⟨_, v, hwv, hyv, _, z, _, hz⟩
@@ -193,6 +193,9 @@ theorem laws : Laws := by
   · intro W B T R S P F A HasIntellect HasWill w y hOne ⟨_, p, _, _, hpow, hnr, _⟩ hI hWF hWR
     obtain ⟨q, hq, hr⟩ := hWR y (hWF y hI)
     exact hnr (hOne q p hq hpow ▸ hr)
+  · intro W B T R S P F A w y
+    exact ⟨fun hInv => ⟨fun h v hv hy => h v hv hy (hInv v hv hy), fun h v hv hy _ => h v hv hy⟩,
+      fun hFix hyw v _ hyv _ => hFix w v hyw hyv⟩
 
 macro "wc_unfold" : tactic => `(tactic|
   simp only [WillFollowsIntellectReading, WillIsRationalPower, GivingExercisesOwnPower,
@@ -243,7 +246,7 @@ theorem omissionsIntellectRoute : OmissionsIntellectRoute := by
 theorem omissionsHolderWill : OmissionsHolderWill := by
   unfold OmissionsHolderWill
   refine ⟨⟨?_, ?_, ?_, ?_, ?_, ?_, ?_⟩, ⟨?_, ?_, ?_, ?_, ?_⟩, ⟨?_, ?_, ?_⟩, ⟨?_, ?_, ?_, ?_⟩,
-    ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_⟩, ⟨?_, ?_, ?_⟩⟩ <;>
+    ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_⟩, ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_⟩⟩ <;>
   wc_unfold <;> simp [Bool.forall_bool, Bool.exists_bool, Bg.forall_iff, Bg.exists_iff]
 
 theorem omissionsThetaFive : OmissionsThetaFive := by
@@ -266,8 +269,9 @@ theorem dnpStrictness : DNPStrictness := by
 
 theorem senseModels : SenseModels := by
   unfold SenseModels
-  refine ⟨⟨?_, ?_, ?_⟩, ⟨?_, ?_, ?_, ?_⟩, ?_, ⟨?_, ?_⟩⟩ <;>
-  wc_unfold <;> simp [Bool.forall_bool, Bool.exists_bool, Bg.forall_iff, Bg.exists_iff]
+  refine ⟨⟨?_, ?_, ?_⟩, ⟨?_, ?_, ?_, ?_⟩, ?_, ⟨?_, ?_⟩, ⟨?_, ?_⟩⟩ <;>
+  wc_unfold <;> simp [Bool.forall_bool, Bool.exists_bool, Bg.forall_iff, Bg.exists_iff,
+    V3.forall_iff, V3.exists_iff]
 
 /-- Argument F, the certificate of laws and models. Premise-free. -/
 theorem willVersusChanceControls : Controls :=

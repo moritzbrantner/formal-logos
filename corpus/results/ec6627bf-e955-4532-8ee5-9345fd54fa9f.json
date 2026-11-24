@@ -7,5 +7,5 @@
   "theorem": "TruthCore.Results.Causality.WillVersusChance.willVersusChanceControls",
   "comparator_config": "results/ec6627bf-e955-4532-8ee5-9345fd54fa9f/comparator.json",
   "status": "solution-present",
-  "description": "Premise-free laws and models for the will-versus-chance batch. Sense-mixing control: they relate the three CHANCE senses, fixed giving and set-up necessitation, MODAL_CONTINGENCY_1 and NECESSARY_2 without a bridge premise. Establishes no premise."
+  "description": "Premise-free laws and models for the will-versus-chance batch. Sense-mixing control: they relate the three CHANCE senses, NECESSITATE_2 and NECESSITATE_3, MODAL_CONTINGENCY_1 and NECESSARY_2 without a bridge premise. Establishes no premise."
 }

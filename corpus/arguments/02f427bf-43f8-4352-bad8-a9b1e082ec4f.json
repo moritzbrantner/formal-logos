@@ -31,6 +31,16 @@
   ],
   "disambiguation_ids": [
     "623ddbf6-9683-5361-bae4-e348a00ec680",
-    "35fa7162-6cb3-52e1-ac5b-66afc318c74f"
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f",
+    "e5417243-d6f3-4776-9694-40d85bb34ff4"
+  ],
+  "sense_bridges": [
+    {
+      "term": "POWER_FOR_VERSUS_ACTIVE_POWER",
+      "from": "f4417ed2-3be6-4d78-b2a6-c4db9ac640b3",
+      "to": "a252ca84-4442-435b-991c-a14f3cc3cedb",
+      "statement_id": "9856239a-aef9-4b87-b70a-15a3176d6dd7",
+      "role": "premise"
+    }
   ]
 }

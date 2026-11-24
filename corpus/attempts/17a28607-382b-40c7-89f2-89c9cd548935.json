@@ -14,7 +14,7 @@
   ],
   "kind": "countermodel",
   "outcome": "succeeded",
-  "summary": "Hand-written finite models in TruthCore.Causality.WillVersusChance.Model, checked by result ec6627bf: omission of every premise of arguments A (3), B (6), C (3) and D (7); chance-core deletions (5); DNP-prime strictly stronger than DNP_inv (three worlds). truth countermodel was not used: it does not handle CausalityFrame parameters (#1897 gap 9). The models are structural surrogates on #1897's frames: each shows only that a premise is needed under its formal interpretation, not that it is false or doubtful.",
+  "summary": "Hand-written finite models in TruthCore.Causality.WillVersusChance.Model, checked by result ec6627bf: omission of every premise of arguments A (3), B (6), C (3) and D (7); chance-core deletions (5); DNP-prime strictly stronger than DNP_inv (three worlds); one giver with CHANCE_2 and CHANCE_3 at the same world. Each omission model certifies every other premise of its argument (the P5 omission of B after review repair: the holder premises and argument A's conclusion at concrete := nobody are now conjuncts). truth countermodel was not used: it does not handle CausalityFrame parameters (#1897 gap 9). The models are structural surrogates on #1897's frames: each shows only that a premise is needed under its formal interpretation, not that it is false or doubtful.",
   "evidence": [
     "ec6627bf-e955-4532-8ee5-9345fd54fa9f"
   ]
