@@ -3,8 +3,7 @@
   "solution_module": "TruthCore.Results.Causality.DependenceOrderSenses.Solution",
   "theorem_names": [
     "TruthCore.Results.Causality.DependenceOrderSenses.perSeEsseSeriesOfPerSeEsseRegress",
-    "TruthCore.Results.Causality.DependenceOrderSenses.perSeEsseSeriesControls",
-    "TruthCore.Results.Causality.DependenceOrderSenses.secundaSplitLimit"
+    "TruthCore.Results.Causality.DependenceOrderSenses.perSeEsseSeriesControls"
   ],
   "permitted_axioms": [],
   "enable_nanoda": true

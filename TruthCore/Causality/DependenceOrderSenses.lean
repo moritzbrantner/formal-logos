@@ -2,6 +2,7 @@ module
 
 public import TruthCore.Causality.OneDependenceOrder
 public import TruthCore.Causality.PriorityInBeing
+public import TruthCore.Causality.ReflexiveDependenceScope
 public import TruthCore.Latin.Aquinas.SummaTheologiae.PrimaPars.Question2.Article3
 public import TruthCore.Latin.Aquinas.SummaTheologiae.PrimaPars.Question2.Article3SecundaVia
 
@@ -14,7 +15,7 @@ sense questions, both on root routes:
 * **(i) `CausesAsCaused`.** The bridge e8664ab8
   (`PerSeEfficientCausesArePerSeEsseCauses`: every per se efficient-cause link is a
   PER_SE_5 actual cause of being) fails on its bound sense SERIES_OF_CAUSES_3
-  (the label `CAUSES_AS_CAUSED_3` of DEF 4a101a4c), because c2880fe0 extends that
+  (DEF 4a101a4c), because c2880fe0 extends that
   sense to per se mover links (the hand moving the stick causes neither the being
   of the stick nor anything about it beyond its motion).
 * **(ii) `PriorSimply`.** The bridge 86efed1a (whatever is PRIOR_1 to another is an
@@ -119,6 +120,16 @@ def PerSeEsseLinkIsPerSeCauseLink {B R : Type} (EfficientlyCausesIn : B → B �
     (esse : R) (AsCaused CausesAsCaused : B → B → Prop) : Prop :=
   ∀ c x, CausesBeingAsCaused EfficientlyCausesIn esse AsCaused c x → CausesAsCaused c x
 
+/-- OPEN analyst bridge, attribution deferred: the cause of every
+SERIES_OF_CAUSES_4 link is itself, here and now, efficiently caused in some
+respect. `AsCaused` says that `c`'s own esse is caused, in a mode it leaves
+unspecified; this premise adds that `c` is caused efficiently and now, which is
+what the secunda via's per se ordering premise asks of a middle cause. -/
+def ExistentialLinkCauseIsEfficientlyCaused {B R : Type}
+    (EfficientlyCausesIn : B → B → R → Prop) (esse : R) (AsCaused : B → B → Prop) : Prop :=
+  ∀ c x, CausesBeingAsCaused EfficientlyCausesIn esse AsCaused c x →
+    ∃ d r, EfficientlyCausesIn d c r
+
 /-! ## (ii) Priority in being and grounding -/
 
 /-- OPEN analyst bridge, attribution deferred, the PRIOR_4 weak sibling of
@@ -145,6 +156,8 @@ possible or plausible. -/
 
 namespace Control
 
+open TruthCore.Causality.OneDependenceOrder.Control (edge10)
+
 /-- Here-and-now efficient causing at the one respect, from a relation on beings. -/
 def eff {B : Type} (rel : B → B → Prop) : B → B → Unit → Prop := fun c x _ => rel c x
 
@@ -166,6 +179,27 @@ def allWithout {B : Type} (_ _ : B) : Prop := True
 
 /-- `true` can be without `false` and nothing else (PRIOR_4 is `true → false`). -/
 def tfWithout (a b : Bool) : Prop := a = true ∧ b = false
+
+/-- `x` depends for its being on `y` only for `x = false`, `y = true`. -/
+def dFT (x y : Bool) : Prop := x = false ∧ y = true
+
+/-- Two respects on `Nat`: being (`true`) and motion (`false`). Efficient
+causing of being is the single edge `1 → 0`; efficient causing in motion is the
+upward successor. -/
+def effTwo (c x : Nat) (r : Bool) : Prop := (r = true ∧ edge10 c x) ∨ (r = false ∧ succUp c x)
+
+/-- The per se efficient links of `effTwo`: the being edge and the motion series. -/
+def caaTwo (c x : Nat) : Prop := edge10 c x ∨ succUp c x
+
+/-- A q.3 a.4 profile on `Nat` with two respects: everything in act; the cause
+of being is the edge `1 → 0` at the respect of being (`true`). -/
+def q3Two : Q3Profile Nat Unit Bool where
+  InAct := fun _ _ => True
+  CausesIn := fun c x r => r = true ∧ edge10 c x
+  essenceOf := fun _ => ()
+  esseOf := fun _ => ()
+  essentialPrinciplesAloneSufficeForEsse := fun _ => False
+  esse := true
 
 /-- Everything concrete and existing on `Nat`; grounding is `ltWithout`. -/
 abbrev mLt : GProfile Unit Nat :=
@@ -192,10 +226,13 @@ open TruthCore.Causality.Round2ExistenceAct (ActOfEsseSufficesForExistenceAt)
 open TruthCore.Case.Catholicism.CauseOfBeingHasBeing (EsseInReIsConcrete)
 open TruthCore.Causality.Round5Worklist (SimplePriorityWellFounded HistoryEdgesAreEfficientCausings)
 open TruthCore.Causality.FiniteBranching (WellFoundedPredecessors)
+open TruthCore.Causality.PriorityInBeing (PriorityInBeingRequiresNonmutualDependence)
+open TruthCore.Causality.ReflexiveDependenceScope (ActualDistinctDependenceIsGrounding)
 open TruthCore.Latin.Aquinas.SummaTheologiae
   (NothingPriorToItselfReading NoInfinitePerSeEfficientCauseSeriesReading
    NothingIsEfficientCauseOfItselfReading EfficientCauseIsPriorToEffectReading
-   NoInfinitePerSeMoverSeriesReading)
+   NoInfinitePerSeMoverSeriesReading SecondEfficientCausesCauseOnlyAsCausedReading
+   PerSeMoverLinkIsPerSeCauseLinkReading)
 
 /-- Omissions and nonvacuity for the existential series from the PER_SE_5
 regress: dropping the regress (causes of being form a two-cycle), dropping the
@@ -226,7 +263,8 @@ def PresentCauseControls : Prop :=
     ¬ PerSeEsseLinksArePerSeEsseCauses pNone (eff cyc) allLinks) ∧
   (NothingIsEfficientCauseOfItselfReading (eff edgeTF) ∧
     PresentEfficientEsseCauseIsActualEsseCause pEdge (eff edgeTF) ∧
-    PerSeEsseLinksArePerSeEsseCauses pEdge (eff edgeTF) allLinks)
+    PerSeEsseLinksArePerSeEsseCauses pEdge (eff edgeTF) allLinks ∧
+    CausesBeingAsCaused (eff edgeTF) pEdge.esse allLinks true false)
 
 /-- Omissions and nonvacuity for the existential series from 97f5850f and the
 inclusion of SERIES_OF_CAUSES_4 into SERIES_OF_CAUSES_3. The second conjunct is
@@ -242,7 +280,33 @@ def SenseInclusionControls : Prop :=
     ¬ NoInfinitePerSeEsseEfficientCauseSeries (eff cyc) () allLinks) ∧
   (NoInfinitePerSeEfficientCauseSeriesReading edgeTF ∧
     PerSeEsseLinkIsPerSeCauseLink (eff edgeTF) () allLinks edgeTF ∧
-    NoInfinitePerSeEsseEfficientCauseSeries (eff edgeTF) () allLinks)
+    NoInfinitePerSeEsseEfficientCauseSeries (eff edgeTF) () allLinks ∧
+    CausesBeingAsCaused (eff edgeTF) () allLinks true false)
+
+/-- Omissions and nonvacuity for the inclusion of SERIES_OF_CAUSES_4 into
+SERIES_OF_CAUSES_3 from the secunda via's per se ordering premise (8a22ae75),
+no self-causation (8b2561cd) and the premise that an existential link's cause is
+itself efficiently caused: dropping each in turn (a two-cycle of efficient
+causing with no per se link; an efficient self-loop; one existential link whose
+cause nothing causes), and a nonvacuous interpretation. -/
+def InclusionSupportControls : Prop :=
+  (¬ SecondEfficientCausesCauseOnlyAsCausedReading (eff cyc) (noRel : Bool → Bool → Prop) ∧
+    NothingIsEfficientCauseOfItselfReading (eff cyc) ∧
+    ExistentialLinkCauseIsEfficientlyCaused (eff cyc) () allLinks ∧
+    ¬ PerSeEsseLinkIsPerSeCauseLink (eff cyc) () allLinks noRel) ∧
+  (SecondEfficientCausesCauseOnlyAsCausedReading (eff loopT) (noRel : Bool → Bool → Prop) ∧
+    ¬ NothingIsEfficientCauseOfItselfReading (eff loopT) ∧
+    ExistentialLinkCauseIsEfficientlyCaused (eff loopT) () allLinks ∧
+    ¬ PerSeEsseLinkIsPerSeCauseLink (eff loopT) () allLinks noRel) ∧
+  (SecondEfficientCausesCauseOnlyAsCausedReading (eff edgeTF) (noRel : Bool → Bool → Prop) ∧
+    NothingIsEfficientCauseOfItselfReading (eff edgeTF) ∧
+    ¬ ExistentialLinkCauseIsEfficientlyCaused (eff edgeTF) () allLinks ∧
+    ¬ PerSeEsseLinkIsPerSeCauseLink (eff edgeTF) () allLinks noRel) ∧
+  (SecondEfficientCausesCauseOnlyAsCausedReading (eff cyc) cyc ∧
+    NothingIsEfficientCauseOfItselfReading (eff cyc) ∧
+    ExistentialLinkCauseIsEfficientlyCaused (eff cyc) () allLinks ∧
+    PerSeEsseLinkIsPerSeCauseLink (eff cyc) () allLinks cyc ∧
+    CausesBeingAsCaused (eff cyc) () allLinks true false)
 
 /-- Omissions and nonvacuity for the restated bridge from e8664ab8 and the
 inclusion. -/
@@ -255,33 +319,37 @@ def OldBridgeControls : Prop :=
     ¬ PerSeEsseLinksArePerSeEsseCauses pNone (eff cyc) allLinks) ∧
   (PerSeEfficientCausesArePerSeEsseCauses pEdge allLinks edgeTF ∧
     PerSeEsseLinkIsPerSeCauseLink (eff edgeTF) () allLinks edgeTF ∧
-    PerSeEsseLinksArePerSeEsseCauses pEdge (eff edgeTF) allLinks)
+    PerSeEsseLinksArePerSeEsseCauses pEdge (eff edgeTF) allLinks ∧
+    CausesBeingAsCaused (eff edgeTF) pEdge.esse allLinks true false)
 
-/-- The split limit, on `Nat`: the whole existential part of the one order holds
-nonvacuously (actual grounding well-founded, the weak esse-ground bridge, the two
-actuality calibrations, the esse regress and its per se version, the restated
-bridge, the inclusion of SERIES_OF_CAUSES_4 into SERIES_OF_CAUSES_3, the
-existential no-regress premise, with the single existential link `1 → 0`), while
-the per se efficient series (97f5850f) and the per se mover series, read with
-mover links equal to `CausesAsCaused` (so that c2880fe0 holds trivially), both
-descend for ever and e8664ab8 fails. c2880fe0 is not a conjunct: stated over two
-identical relations it is `∀ y x, R y x → R y x`, whose export lean4export merges
-with the implicit-binder body of `Subrelation`, which Comparator then reports as
-a value mismatch (a tooling defect, recorded in the attempt). -/
+/-- The split limit, on `Nat` with two respects, being and motion (`q3Two`,
+`effTwo`, `caaTwo`). The whole existential part of the one order holds
+nonvacuously: actual grounding well-founded, the weak esse-ground bridge, the
+two actuality calibrations, the esse regress and its per se version, the
+restated bridge, the inclusion of SERIES_OF_CAUSES_4 into SERIES_OF_CAUSES_3 and
+the existential no-regress premise, with the single existential link `1 → 0`.
+Efficient causing in the motion respect is the upward successor, each such link
+is a per se efficient link (the secunda via's per se ordering premise 8a22ae75
+holds), and the per se mover links are those motion links (c2880fe0 holds).
+Yet the per se efficient series (97f5850f) and the per se mover series descend
+for ever and e8664ab8 fails. -/
 def SecundaSplitLimit : Prop :=
   ActualGroundingWF mNat () ∧
-    ActualEsseCauseIsActualGround mNat () pNat.CausesIn pNat.esse ∧
-    ActOfEsseSufficesForExistenceAt mNat.ontic pNat.InAct pNat.esse () ∧
-    EsseInReIsConcrete mNat pNat.InAct pNat.esse ∧
-    NoInfiniteActualEsseCauseRegress pNat ∧
-    NoInfinitePerSeActualEsseCauseRegress pNat allNat ∧
-    PerSeEsseLinksArePerSeEsseCauses pNat (eff edge10) allNat ∧
-    PerSeEsseLinkIsPerSeCauseLink (eff edge10) pNat.esse allNat succUp ∧
-    NoInfinitePerSeEsseEfficientCauseSeries (eff edge10) pNat.esse allNat ∧
-    CausesBeingAsCaused (eff edge10) pNat.esse allNat 1 0 ∧
-    ¬ NoInfinitePerSeEfficientCauseSeriesReading succUp ∧
+    ActualEsseCauseIsActualGround mNat () q3Two.CausesIn q3Two.esse ∧
+    ActOfEsseSufficesForExistenceAt mNat.ontic q3Two.InAct q3Two.esse () ∧
+    EsseInReIsConcrete mNat q3Two.InAct q3Two.esse ∧
+    NoInfiniteActualEsseCauseRegress q3Two ∧
+    NoInfinitePerSeActualEsseCauseRegress q3Two allNat ∧
+    PerSeEsseLinksArePerSeEsseCauses q3Two effTwo allNat ∧
+    PerSeEsseLinkIsPerSeCauseLink effTwo q3Two.esse allNat caaTwo ∧
+    NoInfinitePerSeEsseEfficientCauseSeries effTwo q3Two.esse allNat ∧
+    CausesBeingAsCaused effTwo q3Two.esse allNat 1 0 ∧
+    SecondEfficientCausesCauseOnlyAsCausedReading effTwo caaTwo ∧
+    PerSeMoverLinkIsPerSeCauseLinkReading succUp caaTwo ∧
+    effTwo 2 1 false ∧
+    ¬ NoInfinitePerSeEfficientCauseSeriesReading caaTwo ∧
     ¬ NoInfinitePerSeMoverSeriesReading succUp ∧
-    ¬ PerSeEfficientCausesArePerSeEsseCauses pNat allNat succUp
+    ¬ PerSeEfficientCausesArePerSeEsseCauses q3Two allNat caaTwo
 
 /-- Omissions and nonvacuity for PRIOR_4 well-founded among actual concreta from
 actual grounding. PRIOR_4 is asymmetric by definition, so the omissions use an
@@ -295,25 +363,41 @@ def PriorityInBeingControls : Prop :=
   (ActualGroundingWF mEdge () ∧ PriorInBeingAmongActualConcretaIsGround mEdge () tfWithout ∧
     PriorityInBeingWFAmongActualConcreta mEdge () tfWithout ∧ PriorInBeing tfWithout true false)
 
-/-- The priority limit, on `Bool`: the PRIOR_4 member of the order holds
-(actual grounding well-founded, the PRIOR_4 bridge, PRIOR_4 well-founded among
-actual concreta and on the whole carrier), the inputs of the prima via chain
-e229bb2c hold (every history edge is efficient causing, every efficient cause is
-PRIOR_1 to its effect, e078f07b, and nothing is prior to itself), while PRIOR_1
-(d85de8e1) and the causal predecessors (42890b45) are not well-founded and
-86efed1a fails. The PRIOR_4 reading of e078f07b's shape fails, and a PRIOR_1
-pair is not a PRIOR_4 pair. The last conjunct gives a PRIOR_4 pair that is not a
-PRIOR_1 pair. Interpretation facts only. -/
+/-- Omissions and nonvacuity for the PRIOR_4 bridge among actual concreta from
+c4bb0481 (PRIOR_4 requires nonmutual dependence for being) and a8298fbd (an
+actual concretum's distinct actual dependee grounds it). -/
+def PriorityBridgeControls : Prop :=
+  (¬ PriorityInBeingRequiresNonmutualDependence tfWithout (noRel : Bool → Bool → Prop) ∧
+    ActualDistinctDependenceIsGrounding mNone () noRel ∧
+    ¬ PriorInBeingAmongActualConcretaIsGround mNone () tfWithout) ∧
+  (PriorityInBeingRequiresNonmutualDependence tfWithout dFT ∧
+    ¬ ActualDistinctDependenceIsGrounding mNone () dFT ∧
+    ¬ PriorInBeingAmongActualConcretaIsGround mNone () tfWithout) ∧
+  (PriorityInBeingRequiresNonmutualDependence tfWithout dFT ∧
+    ActualDistinctDependenceIsGrounding mEdge () dFT ∧
+    PriorInBeingAmongActualConcretaIsGround mEdge () tfWithout ∧ PriorInBeing tfWithout true false)
+
+/-- The priority limit, on `Bool`. The PRIOR_4 member of the order holds
+nonvacuously (actual grounding well-founded with the edge `true → false`, the
+PRIOR_4 bridge, PRIOR_4 well-founded among actual concreta and on the whole
+carrier, with the PRIOR_4 pair `true → false`), and the inputs of the prima via
+chain e229bb2c hold (every history edge is efficient causing, every efficient
+cause is PRIOR_1 to its effect, e078f07b, nothing is prior to itself), while
+PRIOR_1 (d85de8e1) and the causal predecessors (42890b45) are not well-founded,
+86efed1a fails, and the PRIOR_4 reading of e078f07b's shape fails. So the PRIOR_4
+member does not entail d85de8e1, 42890b45 or that reading. The PRIOR_1 pair
+`false → true` is not PRIOR_4; the last conjunct, a second interpretation, has a
+PRIOR_4 pair that is not PRIOR_1. Interpretation facts only. -/
 def PriorityConsumerLimit : Prop :=
-  (ActualGroundingWF mNone () ∧ PriorInBeingAmongActualConcretaIsGround mNone () allWithout ∧
-    PriorityInBeingWFAmongActualConcreta mNone () allWithout ∧
-    WellFounded (PriorInBeing (allWithout : Bool → Bool → Prop)) ∧
+  (ActualGroundingWF mEdge () ∧ PriorInBeingAmongActualConcretaIsGround mEdge () tfWithout ∧
+    PriorityInBeingWFAmongActualConcreta mEdge () tfWithout ∧
+    WellFounded (PriorInBeing tfWithout) ∧ PriorInBeing tfWithout true false ∧
     HistoryEdgesAreEfficientCausings cyc (eff cyc) ∧
     EfficientCauseIsPriorToEffectReading (eff cyc) cyc ∧ NothingPriorToItselfReading cyc ∧
     ¬ SimplePriorityWellFounded cyc ∧ ¬ WellFoundedPredecessors cyc ∧
-    ¬ SimplyPriorIsActualConcreteGround mNone () cyc ∧
-    ¬ EfficientCauseIsPriorToEffectReading (eff cyc) (PriorInBeing allWithout) ∧
-    cyc true false ∧ ¬ PriorInBeing allWithout true false) ∧
+    ¬ SimplyPriorIsActualConcreteGround mEdge () cyc ∧
+    ¬ EfficientCauseIsPriorToEffectReading (eff cyc) (PriorInBeing tfWithout) ∧
+    cyc false true ∧ ¬ PriorInBeing tfWithout false true) ∧
   (PriorInBeing tfWithout true false ∧ ¬ (noRel : Bool → Bool → Prop) true false)
 
 end TruthCore.Causality.DependenceOrderSenses

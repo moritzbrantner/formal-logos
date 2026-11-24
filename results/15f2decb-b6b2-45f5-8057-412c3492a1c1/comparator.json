@@ -3,7 +3,8 @@
   "solution_module": "TruthCore.Results.Causality.DependenceOrderSenses.Solution",
   "theorem_names": [
     "TruthCore.Results.Causality.DependenceOrderSenses.perSeEsseLinksOfPerSeEfficientLinks",
-    "TruthCore.Results.Causality.DependenceOrderSenses.oldBridgeControls"
+    "TruthCore.Results.Causality.DependenceOrderSenses.oldBridgeControls",
+    "TruthCore.Results.Causality.DependenceOrderSenses.secundaSplitLimit"
   ],
   "permitted_axioms": [],
   "enable_nanoda": true

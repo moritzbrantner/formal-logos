@@ -1,0 +1,29 @@
+{
+  "id": "4b98cb7c-0f96-44db-94dd-53660d079fdd",
+  "label": "Between actual concreta what is PRIOR_4 grounds, via the dependee-grounds bridge",
+  "premise_statement_ids": [
+    "c4bb0481-60aa-4461-baee-f490a5fc554e",
+    "a8298fbd-f3c5-480d-95e9-8316889c327f"
+  ],
+  "conclusion_statement_id": "bd305511-282b-479c-97b0-b3ec2291128f",
+  "inference_ids": [
+    "03559d11-7b19-420a-b73c-851fba5c84d1"
+  ],
+  "meaning": "Non-transcription conditional derivation, a support option for the PRIOR_4 bridge. If what is PRIOR_4 to x is something x depends on for its being and which does not so depend on x (c4bb0481), and an actual concretum's distinct actual dependee grounds it (a8298fbd), then between actual concreta at w what is PRIOR_4 to the other grounds it. Step: PRIOR_4 is irreflexive by definition, so the prior thing is distinct; c4bb0481 gives the dependence; a8298fbd gives the grounding. The bridge therefore shares the dependencies of c4bb0481 (with 000e1f65, 8ab3d114 and excluded middle behind it) and of a8298fbd, and inherits the 8ab3d114 failure case recorded on c4bb0481. priorityBridgeControls give, for each input, a Bool interpretation in which the other holds and the conclusion fails, and a nonvacuous one.",
+  "term_senses": {
+    "PRIOR": "11d1b100-3b05-4695-9d63-31cb8d09a284"
+  },
+  "definition_ids": [
+    "d0b06beb-e8cb-5cb8-af2f-bc7f8cc004b2",
+    "008cb21a-256c-5a90-822c-acd4591d699a",
+    "bf26b9b2-41ed-55b0-9557-dae90ab9b81f",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "a1b2e330-388f-4120-bc5c-969642317792",
+    "f4365b55-da11-4e27-b5b7-71024d9508be"
+  ],
+  "disambiguation_ids": [
+    "23dd6f32-b456-4963-adb3-7befbf0dc4fb",
+    "623ddbf6-9683-5361-bae4-e348a00ec680",
+    "be54be36-3ce8-53f9-8168-50d1114e6c76"
+  ]
+}

@@ -49,7 +49,10 @@ open TruthCore.Latin.Aquinas.DeEnte
   (ActualEsseCause PerSeActualEsseCause NoInfiniteActualEsseCauseRegress
    NoInfinitePerSeActualEsseCauseRegress)
 open TruthCore.Latin.Aquinas.SummaTheologiae
-  (NoInfinitePerSeEfficientCauseSeriesReading NothingIsEfficientCauseOfItselfReading)
+  (NoInfinitePerSeEfficientCauseSeriesReading NothingIsEfficientCauseOfItselfReading
+   SecondEfficientCausesCauseOnlyAsCausedReading NoInfinitePerSeMoverSeriesReading)
+open TruthCore.Causality.PriorityInBeing (PriorityInBeingRequiresNonmutualDependence)
+open TruthCore.Causality.ReflexiveDependenceScope (ActualDistinctDependenceIsGrounding)
 
 /-! ## (i) The existential per se series -/
 
@@ -93,7 +96,33 @@ theorem perSeEsseLinksOfPerSeEfficientLinks {B P R : Type} (p : Q3Profile B P R)
     PerSeEsseLinksArePerSeEsseCauses p EfficientlyCausesIn AsCaused :=
   fun c x h => hOld c x (hIncl c x h)
 
+/-- The sense inclusion from the secunda via's per se ordering premise: an
+existential link's cause is other than its effect (no efficient self-causation)
+and is itself efficiently caused, so by the per se ordering premise it causes
+as caused. -/
+theorem perSeEsseLinkIsPerSeCauseLinkOfOrdering {B R : Type}
+    (EfficientlyCausesIn : B → B → R → Prop) (esse : R) (AsCaused CausesAsCaused : B → B → Prop)
+    (hOrder : SecondEfficientCausesCauseOnlyAsCausedReading EfficientlyCausesIn CausesAsCaused)
+    (hSelf : NothingIsEfficientCauseOfItselfReading EfficientlyCausesIn)
+    (hCaused : ExistentialLinkCauseIsEfficientlyCaused EfficientlyCausesIn esse AsCaused) :
+    PerSeEsseLinkIsPerSeCauseLink EfficientlyCausesIn esse AsCaused CausesAsCaused := by
+  intro c x h
+  have hne : c ≠ x := fun e => hSelf x esse (e ▸ h.1)
+  exact hOrder c x esse hne h.1 (hCaused c x h)
+
 /-! ## (ii) Priority in being -/
+
+/-- The PRIOR_4 bridge from dependence: what is PRIOR_4 to `x` is other than `x`
+(PRIOR_4 is irreflexive by definition), `x` depends for its being on it
+(c4bb0481), and a distinct actual dependee grounds (a8298fbd). -/
+theorem priorInBeingGroundOfDependence {W B : Type} (m : GProfile W B) (w : W)
+    (CanBeWithout DependsForBeing : B → B → Prop)
+    (hDep : PriorityInBeingRequiresNonmutualDependence CanBeWithout DependsForBeing)
+    (hGround : ActualDistinctDependenceIsGrounding m w DependsForBeing) :
+    PriorInBeingAmongActualConcretaIsGround m w CanBeWithout := by
+  intro y x hy hx h
+  have hne : y ≠ x := fun e => by subst e; exact h.2 h.1
+  exact hGround y x hne hx hy (hDep y x h).1
 
 /-- PRIOR_4 among actual concreta into grounding: each PRIOR_4 step between
 actual concreta is a grounding step (bridge), so well-foundedness of grounding
@@ -135,7 +164,7 @@ theorem perSeEsseSeriesControls : PerSeEsseSeriesControls := by
 theorem presentCauseControls : PresentCauseControls := by
   refine ⟨⟨fun h => h true () ⟨rfl, rfl⟩, ?_, ?_⟩,
     ⟨fun x _ h => h rfl, fun h => (h true false true_ne_false' true_ne_false').2.2.2, ?_⟩,
-    ⟨?_, ?_, ?_⟩⟩
+    ⟨?_, ?_, ?_, ⟨rfl, rfl⟩, trivial⟩⟩
   · intro c x hne h
     exact (hne (h.1.trans h.2.symm)).elim
   · exact fun h => (h true true ⟨⟨rfl, rfl⟩, trivial⟩).1.1 rfl
@@ -153,12 +182,31 @@ theorem senseInclusionControls : SenseInclusionControls := by
   refine ⟨⟨fun h => cyc_not_wf ⟨h⟩, fun _ _ h => h.1, effCyc_not_series⟩,
     ⟨fun x => noRel_wf.apply x, fun h => h true false ⟨true_ne_false', trivial⟩,
       effCyc_not_series⟩,
-    ⟨fun x => edgeTF_wf.apply x, fun _ _ h => h.1, effEdge_series⟩⟩
+    ⟨fun x => edgeTF_wf.apply x, fun _ _ h => h.1, effEdge_series, ⟨rfl, rfl⟩, trivial⟩⟩
 
+theorem cyc_caused (c : Bool) : ∃ d r, eff cyc d c r :=
+  ⟨!c, (), by cases c <;> exact fun h => Bool.noConfusion h⟩
+
+theorem inclusionSupportControls : InclusionSupportControls := by
+  refine ⟨⟨fun h => h true false () true_ne_false' true_ne_false' ⟨false, (), fun e => true_ne_false' e.symm⟩,
+      fun _ _ h => h rfl, fun c _ _ => cyc_caused c,
+      fun h => h true false ⟨true_ne_false', trivial⟩⟩,
+    ⟨fun c x _ hne h _ => (hne (h.1.trans h.2.symm)).elim, fun h => h true () ⟨rfl, rfl⟩,
+      fun c x h => ⟨c, (), ⟨h.1.1, h.1.1⟩⟩, fun h => h true true ⟨⟨rfl, rfl⟩, trivial⟩⟩,
+    ⟨?_, fun x _ h => true_ne_false' (h.1.symm.trans h.2), ?_,
+      fun h => h true false ⟨⟨rfl, rfl⟩, trivial⟩⟩,
+    ⟨fun _ _ _ _ h _ => h, fun _ _ h => h rfl, fun c _ _ => cyc_caused c, fun _ _ h => h.1,
+      true_ne_false', trivial⟩⟩
+  · intro c x r _ h hc
+    obtain ⟨d, _, hd⟩ := hc
+    exact (true_ne_false' (h.1.symm.trans hd.2)).elim
+  · intro h
+    obtain ⟨d, _, hd⟩ := h true false ⟨⟨rfl, rfl⟩, trivial⟩
+    exact true_ne_false' hd.2
 theorem oldBridgeControls : OldBridgeControls := by
   refine ⟨⟨fun h => (h true false true_ne_false').1.2.2.2, fun _ _ h => h.1, ?_⟩,
     ⟨fun _ _ h => h.elim, fun h => h true false ⟨true_ne_false', trivial⟩, ?_⟩,
-    ⟨?_, fun _ _ h => h.1, ?_⟩⟩
+    ⟨?_, fun _ _ h => h.1, ?_, ⟨rfl, rfl⟩, trivial⟩⟩
   · exact fun h => (h true false ⟨true_ne_false', trivial⟩).1.2.2.2
   · exact fun h => (h true false ⟨true_ne_false', trivial⟩).1.2.2.2
   · intro c x h
@@ -172,26 +220,49 @@ theorem oldBridgeControls : OldBridgeControls := by
 
 theorem one_ne_zero' : (1 : Nat) ≠ 0 := fun h => Nat.noConfusion h
 
+theorem caaTwo_not_acc : ¬ NoInfinitePerSeEfficientCauseSeriesReading caaTwo := by
+  intro h
+  have key : ∀ n, Acc caaTwo n → False := by
+    intro n hn
+    induction hn with
+    | intro n _ ih => exact ih (n + 1) (Or.inr rfl)
+  exact key 0 (h 0)
+
+theorem succUp_not_acc : ¬ NoInfinitePerSeMoverSeriesReading succUp := by
+  intro h
+  have key : ∀ n, Acc succUp n → False := by
+    intro n hn
+    induction hn with
+    | intro n _ ih => exact ih (n + 1) rfl
+  exact key 0 (h 0)
+
+theorem effTwo_esse {c x : Nat} (h : effTwo c x true) : edge10 c x := by
+  rcases h with h | h
+  · exact h.2
+  · exact (Bool.noConfusion h.1)
+
 theorem secundaSplitLimit : SecundaSplitLimit := by
-  refine ⟨actualGroundingWF_of_wellFounded _ _ edge10_wf, fun _ _ _ _ _ h => h,
+  refine ⟨actualGroundingWF_of_wellFounded _ _ edge10_wf, fun _ _ _ _ _ h => h.2,
     fun _ _ => trivial, fun _ _ => trivial,
-    wellFounded_of_singleEdge 1 0 one_ne_zero' (fun _ _ h => h.2.2.2),
-    wellFounded_of_singleEdge 1 0 one_ne_zero' (fun _ _ h => h.1.2.2.2),
+    wellFounded_of_singleEdge 1 0 one_ne_zero' (fun _ _ h => h.2.2.2.2),
+    wellFounded_of_singleEdge 1 0 one_ne_zero' (fun _ _ h => h.1.2.2.2.2),
     ?_, ?_,
-    fun x => (wellFounded_of_singleEdge 1 0 one_ne_zero' (fun _ _ h => h.1)).apply x,
-    ⟨⟨rfl, rfl⟩, trivial⟩,
-    fun h => not_wellFounded_succ ⟨h⟩, fun h => not_wellFounded_succ ⟨h⟩, ?_⟩
+    fun x => (wellFounded_of_singleEdge 1 0 one_ne_zero' (fun _ _ h => effTwo_esse h.1)).apply x,
+    ⟨Or.inl ⟨rfl, rfl, rfl⟩, trivial⟩, ?_, fun _ _ h => Or.inr h, Or.inr ⟨rfl, rfl⟩,
+    caaTwo_not_acc, succUp_not_acc, ?_⟩
   · intro c x h
-    refine ⟨⟨?_, trivial, trivial, h.1⟩, trivial⟩
+    have he := effTwo_esse h.1
+    refine ⟨⟨?_, trivial, trivial, rfl, he⟩, trivial⟩
     intro e
-    exact one_ne_zero' (h.1.1.symm.trans (e.trans h.1.2))
+    exact one_ne_zero' (he.1.symm.trans (e.trans he.2))
   · intro c x h
-    have h1 : c = 1 := h.1.1
-    have h2 : x = 0 := h.1.2
-    subst h1 h2
-    rfl
+    exact Or.inl (effTwo_esse h.1)
+  · intro c x r _ h _
+    rcases h with h | h
+    · exact Or.inl h.2
+    · exact Or.inr h.2
   · intro h
-    have k := (h 2 1 rfl).1.2.2.2
+    have k := (h 2 1 (Or.inr rfl)).1.2.2.2.2
     exact Nat.noConfusion (Nat.succ.inj k.1)
 
 theorem lt_not_wf_sub (m : GProfile Unit Nat) (hAll : ∀ x, ActualConcrete m () x)
@@ -220,14 +291,33 @@ theorem priorityInBeingControls : PriorityInBeingControls := by
       (fun h => h.1) (InvImage.wf _ edgeTF_wf)
   · exact fun h => true_ne_false' h.2
 
+theorem tfWithout_wf : WellFounded (PriorInBeing tfWithout) :=
+  wellFounded_of_singleEdge true false true_ne_false' (fun _ _ h => h.1)
+
+theorem priorityBridgeControls : PriorityBridgeControls := by
+  refine ⟨⟨fun h => (h true false ⟨⟨rfl, rfl⟩, fun e => true_ne_false' e.2⟩).1,
+      fun _ _ _ _ _ h => h, fun h => h true false ⟨trivial, trivial⟩ ⟨trivial, trivial⟩
+        ⟨⟨rfl, rfl⟩, fun e => true_ne_false' e.2⟩⟩,
+    ⟨?_, fun h => h true false true_ne_false' ⟨trivial, trivial⟩ ⟨trivial, trivial⟩ ⟨rfl, rfl⟩,
+      fun h => h true false ⟨trivial, trivial⟩ ⟨trivial, trivial⟩
+        ⟨⟨rfl, rfl⟩, fun e => true_ne_false' e.2⟩⟩,
+    ⟨?_, ?_, fun _ _ _ _ h => h.1, ⟨rfl, rfl⟩, fun e => true_ne_false' e.2⟩⟩
+  · intro y x h
+    exact ⟨⟨h.1.2, h.1.1⟩, fun e => true_ne_false' (h.1.1.symm.trans e.1)⟩
+  · intro y x h
+    exact ⟨⟨h.1.2, h.1.1⟩, fun e => true_ne_false' (h.1.1.symm.trans e.1)⟩
+  · intro c x _ _ _ h
+    exact ⟨h.2, h.1⟩
+
 theorem priorityConsumerLimit : PriorityConsumerLimit := by
-  refine ⟨⟨actualGroundingWF_of_wellFounded _ _ noRel_wf, fun _ _ _ _ h => (h.2 trivial).elim,
-      ?_, ?_, fun y x h => ⟨(), h⟩, fun _ _ _ h => h, fun _ h => h rfl, cyc_not_wf, cyc_not_wf,
-      fun h => (h true false true_ne_false' true_ne_false').2.2,
-      fun h => (h true false () true_ne_false').2 trivial, true_ne_false',
-      fun h => h.2 trivial⟩,
-    ⟨⟨rfl, rfl⟩, fun h => true_ne_false' h.2⟩, fun h => h⟩
-  · exact ⟨fun a => ⟨a, fun _ h => (h.2 trivial).elim⟩⟩
-  · exact ⟨fun a => ⟨a, fun _ h => (h.2 trivial).elim⟩⟩
+  refine ⟨⟨actualGroundingWF_of_wellFounded _ _ edgeTF_wf, fun _ _ _ _ h => h.1, ?_, tfWithout_wf,
+      ⟨⟨rfl, rfl⟩, fun e => true_ne_false' e.2⟩, fun y x h => ⟨(), h⟩, fun _ _ _ h => h,
+      fun _ h => h rfl, cyc_not_wf, cyc_not_wf,
+      fun h => true_ne_false' (h false true (fun e => true_ne_false' e.symm) (fun e => true_ne_false' e.symm)).2.2.2,
+      fun h => true_ne_false' (h false true () (fun e => true_ne_false' e.symm)).1.1.symm,
+      fun e => true_ne_false' e.symm, fun h => true_ne_false' h.1.1.symm⟩,
+    ⟨⟨rfl, rfl⟩, fun e => true_ne_false' e.2⟩, fun h => h⟩
+  · exact Subrelation.wf (r := InvImage (PriorInBeing tfWithout)
+      (fun a : {x // ActualConcrete mEdge () x} => a.1)) (fun h => h) (InvImage.wf _ tfWithout_wf)
 
 end TruthCore.Results.Causality.DependenceOrderSenses

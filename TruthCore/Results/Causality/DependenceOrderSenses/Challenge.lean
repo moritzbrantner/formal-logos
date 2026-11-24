@@ -45,7 +45,10 @@ open TruthCore.Latin.Aquinas.DeEnte
   (ActualEsseCause PerSeActualEsseCause NoInfiniteActualEsseCauseRegress
    NoInfinitePerSeActualEsseCauseRegress)
 open TruthCore.Latin.Aquinas.SummaTheologiae
-  (NoInfinitePerSeEfficientCauseSeriesReading NothingIsEfficientCauseOfItselfReading)
+  (NoInfinitePerSeEfficientCauseSeriesReading NothingIsEfficientCauseOfItselfReading
+   SecondEfficientCausesCauseOnlyAsCausedReading NoInfinitePerSeMoverSeriesReading)
+open TruthCore.Causality.PriorityInBeing (PriorityInBeingRequiresNonmutualDependence)
+open TruthCore.Causality.ReflexiveDependenceScope (ActualDistinctDependenceIsGrounding)
 
 /-! ## (i) The existential per se series -/
 
@@ -87,7 +90,29 @@ theorem perSeEsseLinksOfPerSeEfficientLinks {B P R : Type} (p : Q3Profile B P R)
     PerSeEsseLinksArePerSeEsseCauses p EfficientlyCausesIn AsCaused := by
   sorry
 
+/-- The sense inclusion from the secunda via's per se ordering premise: an
+existential link's cause is other than its effect (no efficient self-causation)
+and is itself efficiently caused, so by the per se ordering premise it causes
+as caused. -/
+theorem perSeEsseLinkIsPerSeCauseLinkOfOrdering {B R : Type}
+    (EfficientlyCausesIn : B → B → R → Prop) (esse : R) (AsCaused CausesAsCaused : B → B → Prop)
+    (hOrder : SecondEfficientCausesCauseOnlyAsCausedReading EfficientlyCausesIn CausesAsCaused)
+    (hSelf : NothingIsEfficientCauseOfItselfReading EfficientlyCausesIn)
+    (hCaused : ExistentialLinkCauseIsEfficientlyCaused EfficientlyCausesIn esse AsCaused) :
+    PerSeEsseLinkIsPerSeCauseLink EfficientlyCausesIn esse AsCaused CausesAsCaused := by
+  sorry
+
 /-! ## (ii) Priority in being -/
+
+/-- The PRIOR_4 bridge from dependence: what is PRIOR_4 to `x` is other than `x`
+(PRIOR_4 is irreflexive by definition), `x` depends for its being on it
+(c4bb0481), and a distinct actual dependee grounds (a8298fbd). -/
+theorem priorInBeingGroundOfDependence {W B : Type} (m : GProfile W B) (w : W)
+    (CanBeWithout DependsForBeing : B → B → Prop)
+    (hDep : PriorityInBeingRequiresNonmutualDependence CanBeWithout DependsForBeing)
+    (hGround : ActualDistinctDependenceIsGrounding m w DependsForBeing) :
+    PriorInBeingAmongActualConcretaIsGround m w CanBeWithout := by
+  sorry
 
 /-- PRIOR_4 among actual concreta into grounding: each PRIOR_4 step between
 actual concreta is a grounding step (bridge), so well-foundedness of grounding
@@ -110,6 +135,8 @@ theorem presentCauseControls : PresentCauseControls := by
 theorem senseInclusionControls : SenseInclusionControls := by
   sorry
 
+theorem inclusionSupportControls : InclusionSupportControls := by
+  sorry
 theorem oldBridgeControls : OldBridgeControls := by
   sorry
 
@@ -117,6 +144,9 @@ theorem secundaSplitLimit : SecundaSplitLimit := by
   sorry
 
 theorem priorityInBeingControls : PriorityInBeingControls := by
+  sorry
+
+theorem priorityBridgeControls : PriorityBridgeControls := by
   sorry
 
 theorem priorityConsumerLimit : PriorityConsumerLimit := by
