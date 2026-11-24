@@ -1,0 +1,12 @@
+{
+  "id": "c4642dd6-8110-4b1c-b2a3-9824eedbab72",
+  "label": "Compare mirror descriptions and common input in matched rod histories (inference)",
+  "input_statement_ids": [
+    "54550834-0718-437e-8e24-e8533eb0ed35"
+  ],
+  "output_statement_id": "2a8ddf8d-a08a-4e2f-a33e-3bb582c9da08",
+  "rule": "Hold actual lengths and existential coverage fixed, evaluate both driver omissions and apply invariance to a common translation",
+  "meaning": "When the named source drives the extension, the selected relation changes without an intrinsic change of length at the left subject. The matching profile with a different driver leaves the relation true on omitting the source's selective input. Equal nonzero contributions to both readings supply a distinct control for all offsets. Universal transfer is evaluated on these specific interpretations of its relations.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

@@ -16,6 +16,8 @@ The [particular-actuality investigation](actuality-esse-research.md#9-does-a-par
 
 The [later reading of Durand and Suárez](actuality-esse-research.md#12-what-the-conservationist-grants-about-this-effect) settles the historical question left open below. Durand attributes the very action mediately to the giver of its exercised power. His denial of immediate divine concurrence leaves the earlier finite skill comparison in its role as an analyst’s control.
 
+The [acquired-quality and relational tests](actuality-esse-research.md#13-who-causes-an-acquired-quality-or-a-relation-to-obtain) examine causal histories that can carry mediated responsibility to a particular respect, including when the other relatum changes. They give a conditional route to the existing universal transfer premise.
+
 ## Source findings and fidelity
 
 Related discovery, the target dossier, the dossiers of all touched premise

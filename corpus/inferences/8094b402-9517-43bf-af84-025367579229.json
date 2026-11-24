@@ -1,0 +1,14 @@
+{
+  "id": "8094b402-9517-43bf-af84-025367579229",
+  "label": "Transfer causal responsibility to actual respects through covered productive histories (inference)",
+  "input_statement_ids": [
+    "f481eab0-155e-44e2-94ab-3513a9293b01",
+    "abceb0a7-a3c6-44aa-a8e5-83d0a9a70fce",
+    "4c32ba60-2d18-4b12-83d9-1e04a0b344c4"
+  ],
+  "output_statement_id": "b26c10a0-983d-5a88-aa03-cc601bc1ddc6",
+  "rule": "Split off the existing esse edge; trace the covered realization and transport its productive credit",
+  "meaning": "The named universal esse source already has the required edge at esse. For any other case use the coverage witness, evaluate ancestry at that very endpoint and project those events to credit for the named recipient and respect. Apply the one-way interpretation bridge. This is a substantive support alternative to total-cause transfer only where the coverage and credit assumptions have independent warrant.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

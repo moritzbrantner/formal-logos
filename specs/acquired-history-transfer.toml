@@ -1,0 +1,62 @@
+[batch]
+vocab = "TruthCore.Causality.AcquiredHistoryTransfer"
+results = "TruthCore.Results.Causality.AcquiredHistoryTransfer"
+
+[[statement]]
+id = "Each covered acquisition has source input or an earlier covered productive contributor"
+lean = "RankedInputs"
+paraphrase = "Open within a supplied exercise record. For each named source and each event in its covered family, either a source-borne event contributes by an actual exercised step to this event, or some covered event at a strictly lower natural-number stage does. One productive predecessor per covered event suffices. Warrant for the assigned coverage, stages, contributors and any temporal interpretation requires independent evidence."
+definitions = ["7b20df90-a3d9-41c7-be8b-1d2beb5b995a"]
+
+[[statement]]
+id = "The named source has a nonempty productive path to every token in its covered history"
+lean = "CoveredAncestry"
+paraphrase = "Each covered token for a given source is reached by a nonempty chain of actual contributor steps beginning at an event borne by that source. The endpoint is the very same token throughout. The source may contribute through different events across acquisitions. The reading requires no claim that it produced every other input."
+definitions = ["7b20df90-a3d9-41c7-be8b-1d2beb5b995a"]
+
+[[statement]]
+id = "Every respect tested by universal esse transfer is esse or has an actual covered realization"
+lean = "TargetCoverage"
+paraphrase = "Open scope condition on the same actuality and efficient-responsibility dictionary as the target. For each universal esse source and each distinct recipient whose esse it causes, an actual respect either is esse or has an occurring token at that bearer and respect in the named source's covered family. The family is a supplied classification. This premise claims neither source ancestry nor causation in each respect. Limiting the evidence to acquired qualities leaves other real respects uncovered."
+definitions = ["DEF-ESSE", "DEF-ACT", "ff8bf1d7-0bf9-5dda-8038-7127e3d46ec8", "211a6432-8b8f-53ed-85e3-75173bb15b24", "c19faf56-0908-5e6e-8c39-ccba40dce5d1", "7b20df90-a3d9-41c7-be8b-1d2beb5b995a"]
+disambiguations = ["DISAMB-IN-ACT", "00e0d443-eb39-56a3-9179-9c8852ca4a2b"]
+
+[[statement]]
+id = "Actual productive path credit licenses causation of the same bearer in the same respect"
+lean = "CreditWarrantsCause"
+paraphrase = "Open one-way interpretation bridge. When a source has ExerciseContribution.Credit for a patient in a given respect on the specified exercise record and event-to-respect map, that same source bears the external CausesIn relation to the same patient in that respect. Establishing the interpretation requires genuine productive transmission under the attribution in question; mere enabling, an accidental path or a convenient reassignment of labels does not justify it."
+definitions = ["ff8bf1d7-0bf9-5dda-8038-7127e3d46ec8", "7b20df90-a3d9-41c7-be8b-1d2beb5b995a"]
+
+[[argument]]
+id = "Trace productive ancestry by descent through earlier covered inputs"
+theorem = "ancestryFromRankedInputs"
+premises = ["Each covered acquisition has source input or an earlier covered productive contributor"]
+conclusion = "The named source has a nonempty productive path to every token in its covered history"
+rule = "Strong induction on the rank of the selected endpoint"
+meaning = "An immediate source contribution gives a one-step path. Otherwise induction at the smaller rank supplies a path from the named source to the actual contributor, which extends by its exercised step to this endpoint. An unseeded cycle cannot justify the local rule by citing a successor at the same or greater rank."
+axioms = []
+
+[[argument]]
+id = "Transfer causal responsibility to actual respects through covered productive histories"
+theorem = "transferFromCoveredHistories"
+premises = ["The named source has a nonempty productive path to every token in its covered history", "Every respect tested by universal esse transfer is esse or has an actual covered realization", "Actual productive path credit licenses causation of the same bearer in the same respect"]
+conclusion = "STMT-UNIVERSAL-CAUSE-TRANSFERS-PERFECTIONS"
+rule = "Split off the existing esse edge; trace the covered realization and transport its productive credit"
+meaning = "The named universal esse source already has the required edge at esse. For any other case use the coverage witness, evaluate ancestry at that very endpoint and project those events to credit for the named recipient and respect. Apply the one-way interpretation bridge. This is a substantive support alternative to total-cause transfer only where the coverage and credit assumptions have independent warrant."
+axioms = []
+
+[[statement]]
+id = "The application press populates ranked acquisition histories and a distinct actual work target"
+lean = "PressWitness.Populated"
+paraphrase = "In the existing application press, take the covered family for the giver to consist of the stroke, imprint and indicator. Give the imprint rank one and all other events rank zero. Ranked inputs, target coverage and the credit bridge then hold on the original profile. The giver is a universal esse source, the distinct patient receives its esse and is actual at work, and the patient's imprint is a covered event. This finite witness instantiates the premises. It does not justify their metaphysical extension."
+definitions = ["DEF-ACT", "DEF-ESSE", "ff8bf1d7-0bf9-5dda-8038-7127e3d46ec8", "7b20df90-a3d9-41c7-be8b-1d2beb5b995a", "211a6432-8b8f-53ed-85e3-75173bb15b24", "c19faf56-0908-5e6e-8c39-ccba40dce5d1"]
+disambiguations = ["DISAMB-IN-ACT", "00e0d443-eb39-56a3-9179-9c8852ca4a2b"]
+
+[[argument]]
+id = "Populate acquisition-history assumptions with the operative press and its patient"
+theorem = "populatedPress"
+premises = []
+conclusion = "The application press populates ranked acquisition histories and a distinct actual work target"
+rule = "Identify direct and mediated inputs and enumerate actual non-esse outcomes at distinct bearers"
+meaning = "The source drive supplies both the stroke and the separate signal; the stroke supplies the imprint at a higher rank. A universal giver must be the source since no incoming productive record ends at its esse. Enumeration then covers the distinct bearers' actual respects. The transfer frame already interprets causal responsibility as productive path credit. This interpretation is deliberately substantive and finite."
+axioms = ["propext", "Classical.choice", "Quot.sound"]

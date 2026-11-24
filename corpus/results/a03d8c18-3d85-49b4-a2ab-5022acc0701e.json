@@ -1,0 +1,11 @@
+{
+  "id": "a03d8c18-3d85-49b4-a2ab-5022acc0701e",
+  "label": "Trace productive ancestry by descent through earlier covered inputs",
+  "argument_id": "4c0f36b2-4851-4bba-a413-d221a4224fef",
+  "challenge_module": "TruthCore.Results.Causality.AcquiredHistoryTransfer.Challenge",
+  "solution_module": "TruthCore.Results.Causality.AcquiredHistoryTransfer.Solution",
+  "theorem": "TruthCore.Results.Causality.AcquiredHistoryTransfer.ancestryFromRankedInputs",
+  "comparator_config": "results/a03d8c18-3d85-49b4-a2ab-5022acc0701e/comparator.json",
+  "status": "solution-present",
+  "description": "An immediate source contribution gives a one-step path. Otherwise induction at the smaller rank supplies a path from the named source to the actual contributor, which extends by its exercised step to this endpoint. An unseeded cycle cannot justify the local rule by citing a successor at the same or greater rank."
+}

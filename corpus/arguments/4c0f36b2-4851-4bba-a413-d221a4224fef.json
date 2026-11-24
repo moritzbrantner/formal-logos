@@ -1,0 +1,15 @@
+{
+  "id": "4c0f36b2-4851-4bba-a413-d221a4224fef",
+  "label": "Trace productive ancestry by descent through earlier covered inputs",
+  "premise_statement_ids": [
+    "14539ae8-d014-4931-95c0-2f309e94f986"
+  ],
+  "conclusion_statement_id": "f481eab0-155e-44e2-94ab-3513a9293b01",
+  "inference_ids": [
+    "ba590260-fe1e-4218-a955-a38212f5705c"
+  ],
+  "meaning": "An immediate source contribution gives a one-step path. Otherwise induction at the smaller rank supplies a path from the named source to the actual contributor, which extends by its exercised step to this endpoint. An unseeded cycle cannot justify the local rule by citing a successor at the same or greater rank.",
+  "definition_ids": [
+    "7b20df90-a3d9-41c7-be8b-1d2beb5b995a"
+  ]
+}

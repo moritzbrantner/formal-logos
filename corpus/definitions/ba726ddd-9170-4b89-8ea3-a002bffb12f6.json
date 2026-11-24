@@ -1,0 +1,9 @@
+{
+  "id": "ba726ddd-9170-4b89-8ea3-a002bffb12f6",
+  "label": "Pair of foundations with named increments and a residual comparison",
+  "term": "comparative foundation under a specified source input",
+  "definition": "A run supplies two signed readings in the absence of the named input and the two signed increments it contributes on the selected operation. The actual pair adds each increment to its corresponding residual reading. The probe at offset k asks whether the left reading plus k is strictly below the right one.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.ComparativeFoundation.Run.actual",
+  "note": "The residual preserves other operative inputs. It can differ from the earlier observed state. The input must have independent provenance, and additive superposition and a common measurement scale must be warranted. A change of truth under this test diagnoses contrastive responsibility at the selected threshold. Whether it warrants productive responsibility in a real relation and whether it explains any alteration in its subject are further questions."
+}
