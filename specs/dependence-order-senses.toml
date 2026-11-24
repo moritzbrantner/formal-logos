@@ -1,0 +1,164 @@
+# Sense splits for the one dependence order (#1926 phase 3, continued from
+# specs/one-dependence-order.toml). (i) The existential sense SERIES_OF_CAUSES_4
+# of the secunda via's per se link (definition 57348ddc, CausesBeingAsCaused),
+# e8664ab8 restated on it, and its relation to SERIES_OF_CAUSES_3
+# (CausesAsCaused). (ii) PRIOR_4 (priority in being) among actual concreta and
+# actual grounding. Analyst formulations, attribution deferred. Every proof is
+# constructive and axiom-free. Nothing identifies causing, grounding, priority or
+# moving by definition (#1626, #1926 rigor contract 5); each passage is an OPEN
+# premise. Note: docs/notes/one-dependence-order.md, section "Sense splits".
+
+[batch]
+vocab = "TruthCore.Causality.DependenceOrderSenses"
+results = "TruthCore.Results.Causality.DependenceOrderSenses"
+definitions = []
+disambiguations = []
+
+# ---------------------------------------------------------------- statements
+
+[[statement]]
+id = "No infinite SERIES_OF_CAUSES_4 per se series of efficient causes of being"
+lean = "NoInfinitePerSeEsseEfficientCauseSeries"
+paraphrase = "OPEN analyst premise, attribution deferred, the SERIES_OF_CAUSES_4 sibling of 97f5850f: a per se ordered series of present efficient causes of being cannot go on to infinity. Every being is accessible along CausesBeingAsCaused (definition 57348ddc): here and now c efficiently causes the being of x (EfficientlyCausesIn c x esse, DEF-EFFICIENT-CAUSING at the respect of being) and does so per se, as caused (AsCaused, the per se primitive of PER_SE_5). It says nothing about series of movers or of causes of becoming, which 97f5850f (SERIES_OF_CAUSES_3) covers through c2880fe0. It is not attributed to the secunda via (ST I q.2 a.3 and q.46 a.2 ad 7 do not restrict the per se series to causes of being)."
+definitions = ["57348ddc-eaa0-4f0d-bf3f-ce358f452b53", "69c0b23e-54c7-57a1-871f-839c6e5514c6", "4bca086d-1fa5-4b0d-bf2b-a22f3f0ac740", "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"]
+disambiguations = ["81c233d4-01b4-528c-8bbd-7da228443ffe"]
+
+[[statement]]
+id = "Every SERIES_OF_CAUSES_4 link is a PER_SE_5 actual CAUSE_2 of being"
+lean = "PerSeEsseLinksArePerSeEsseCauses"
+paraphrase = "OPEN analyst bridge, attribution deferred, e8664ab8 restated on SERIES_OF_CAUSES_4: whenever here and now c efficiently causes the being of x per se, as caused (CausesBeingAsCaused, definition 57348ddc), c is a per se actual cause of the being of x in the q.3 a.4 profile (PerSeActualEsseCause, PER_SE_5): c is other than x, both are in act as to being, CausesIn c x esse (CAUSE_2, mode unspecified, tenseless) and AsCaused c x. The per se conjunct is shared with the antecedent, so the content is the passage from present efficient causing of being to a distinct actual cause of being. The hand-and-stick case that falsifies e8664ab8 on SERIES_OF_CAUSES_3 does not touch it: the hand causes the stick's motion, not its being, so it is no SERIES_OF_CAUSES_4 link. No substantive objection identified beyond the shared reading of the world-free InAct of the q.3 a.4 profile as being in act at the reading world."
+definitions = ["57348ddc-eaa0-4f0d-bf3f-ce358f452b53", "4bca086d-1fa5-4b0d-bf2b-a22f3f0ac740", "8163859b-95b3-4dd2-8a69-541bd332f32f", "211a6432-8b8f-53ed-85e3-75173bb15b24", "69c0b23e-54c7-57a1-871f-839c6e5514c6", "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"]
+disambiguations = ["81c233d4-01b4-528c-8bbd-7da228443ffe", "002f42cb-3015-5644-80b3-d408538394e6", "00e0d443-eb39-56a3-9179-9c8852ca4a2b", "57f80020-fa6f-5b69-be58-b4cf95b7226f"]
+
+[[statement]]
+id = "A present efficient cause of another's being is an actual CAUSE_2 of its being"
+lean = "PresentEfficientEsseCauseIsActualEsseCause"
+paraphrase = "OPEN analyst bridge, attribution deferred, the cross-vocabulary step without the per se link: if c is other than x and here and now c efficiently causes the being of x (EfficientlyCausesIn c x esse, DEF-EFFICIENT-CAUSING), then c is an actual cause of the being of x in the q.3 a.4 profile (ActualEsseCause, DEF 8163859b): both are in act as to being and CausesIn c x esse (CAUSE_2). Positive warrant: efficient causing is one mode of the mode-unspecified CausesIn; a present agent acts only as in act ('nihil agit nisi inquantum est actu'); an effect whose being is caused here and now has being. It relates the secunda via's here-and-now efficient causing to the q.3 a.4 cause of being, two distinct primitives; it is not the converse bridge (EsseCauseEfficiency.DistinctActualEsseCauseIsEfficient), which goes from a mode-unspecified to an efficient cause. No substantive objection identified."
+definitions = ["8163859b-95b3-4dd2-8a69-541bd332f32f", "211a6432-8b8f-53ed-85e3-75173bb15b24", "69c0b23e-54c7-57a1-871f-839c6e5514c6", "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"]
+disambiguations = ["00e0d443-eb39-56a3-9179-9c8852ca4a2b", "57f80020-fa6f-5b69-be58-b4cf95b7226f"]
+
+[[statement]]
+id = "Every SERIES_OF_CAUSES_4 link is a SERIES_OF_CAUSES_3 link"
+lean = "PerSeEsseLinkIsPerSeCauseLink"
+paraphrase = "OPEN analyst sense bridge, attribution deferred: whenever here and now c efficiently causes the being of x per se, as caused (SERIES_OF_CAUSES_4, definition 57348ddc), c causes x as a caused cause (CausesAsCaused, SERIES_OF_CAUSES_3, DEF 4a101a4c): a per se cause of being is a middle cause of a per se series of efficient causes. Positive warrant: SERIES_OF_CAUSES_3 is the secunda via's respect-free per se link, and a present per se cause of being is a per se efficient cause in the respect of being. Support option: it follows from the secunda via's per se ordering premise 8a22ae75 (strong reading A), no self-causation 8b2561cd and the premise that an existential link's cause is itself efficiently caused here and now in some respect (this batch). Kept mode gap: AsCaused says only that c's esse is caused, in a mode it leaves unspecified, while DEF 4a101a4c requires a middle cause to be efficiently caused here and now; a cause of being whose own being is caused non-efficiently, or not now, would be a SERIES_OF_CAUSES_4 link and no SERIES_OF_CAUSES_3 link. No case of that kind is on file. It is not definitional (CausesAsCaused is a primitive). The converse is not asserted and fails on the hand-and-stick case (a SERIES_OF_CAUSES_3 link through c2880fe0 that causes no being)."
+definitions = ["57348ddc-eaa0-4f0d-bf3f-ce358f452b53", "4a101a4c-12de-53c8-80c6-de7a523ea9d9", "69c0b23e-54c7-57a1-871f-839c6e5514c6", "4bca086d-1fa5-4b0d-bf2b-a22f3f0ac740"]
+disambiguations = ["81c233d4-01b4-528c-8bbd-7da228443ffe"]
+
+[[statement]]
+id = "The cause of every SERIES_OF_CAUSES_4 link is itself efficiently caused in some respect"
+lean = "ExistentialLinkCauseIsEfficientlyCaused"
+paraphrase = "OPEN analyst bridge, attribution deferred: whenever here and now c efficiently causes the being of x per se, as caused (SERIES_OF_CAUSES_4, definition 57348ddc), something here and now efficiently causes c in some respect (EfficientlyCausesIn d c r, DEF-EFFICIENT-CAUSING). AsCaused already says that c's own esse is caused, but in an unspecified mode; this premise closes the mode gap to the efficient, present causing the secunda via's per se ordering premise 8a22ae75 asks of a middle cause. Positive warrant: on the existential reading c's being is caused here and now, and a present cause of being is an efficient cause in the respect of being. No case of a non-efficiently caused existential link is on file. Its positive warrant is thin: it rests on reading 'caused in being here and now' as efficient causing, which the definitions of AsCaused and DEF-EFFICIENT-CAUSING do not settle."
+definitions = ["57348ddc-eaa0-4f0d-bf3f-ce358f452b53", "69c0b23e-54c7-57a1-871f-839c6e5514c6", "4bca086d-1fa5-4b0d-bf2b-a22f3f0ac740"]
+disambiguations = ["81c233d4-01b4-528c-8bbd-7da228443ffe"]
+
+[[statement]]
+id = "Between actual CONCRETE_6 individuals at w, what is PRIOR_4 to the other grounds it"
+lean = "PriorInBeingAmongActualConcretaIsGround"
+paraphrase = "OPEN analyst bridge, attribution deferred, the PRIOR_4 weak sibling of 86efed1a: at the selected world w, if y and x are both concrete and exist at w and y is prior to x in being (PRIOR_4: y can be without x and x cannot be without y, DEF-CAN-BE-WITHOUT), then y grounds x under the selected relation at w. It assumes that both relata are actual concreta, so an absent or non-concrete prior thing (the second falsifier recorded for 86efed1a; on the real-possibility reading of CanBeWithout every necessary abstract object would be PRIOR_4 to every contingent being it can be without) does not touch it, and it is stated for PRIOR_4, so the hand-and-stick case that falsifies 86efed1a on PRIOR_1 does not touch it either (the stick can be without the hand). Support option (this batch): it follows from c4bb0481 (what is PRIOR_4 to x is something x depends on for its being and which does not depend on x; claim 95f41960 reads In V Metaph. lect. 13 n. 18 as dependence running one way) and the distinct-relata bridge a8298fbd (an actual concretum's distinct actual dependee grounds it, also used in argument 57f22435); so it shares their dependencies and is not independent warrant beside them. ST I q.104 a.1 states the converse direction (per se preservation: the preserved cannot exist without the preserver, dependence to cannot-be-without), so it is not warrant for this bridge. Kept scope condition: a necessary condition that is no ground (a flame cannot be without oxygen, oxygen can be without the flame) satisfies PRIOR_4 among actual concreta; the bridge then needs the selected relation to count such conditions as grounds, which the principal-sustaining reading of the converse bridge 98efaa9e excludes. DEF-CAN-BE-WITHOUT fixes real possibility; whether real possibility is natural possibility or possibility by divine power (by which the flame could be without oxygen) is open, and decides whether such cases are PRIOR_4 at all."
+definitions = ["f4365b55-da11-4e27-b5b7-71024d9508be", "d0b06beb-e8cb-5cb8-af2f-bc7f8cc004b2", "beb654a7-e204-5f4c-a7b4-45e886ba7109", "008cb21a-256c-5a90-822c-acd4591d699a", "a1b2e330-388f-4120-bc5c-969642317792"]
+disambiguations = ["be54be36-3ce8-53f9-8168-50d1114e6c76", "623ddbf6-9683-5361-bae4-e348a00ec680"]
+
+[[statement]]
+id = "PRIOR_4 among the actual CONCRETE_6 individuals at w is well-founded"
+lean = "PriorityInBeingWFAmongActualConcreta"
+paraphrase = "OPEN analyst premise, attribution deferred, the restricted PRIOR_4 sibling of d85de8e1: there is no infinite descending chain of actual concreta at w each prior in being (PRIOR_4) to the one before. It constrains only chains among beings that are concrete and exist at w; it is weaker than well-foundedness of PRIOR_4 on the whole carrier. No current consumer on a root route takes it: the prima via chain from d85de8e1 (e229bb2c) needs PRIOR_1, because e078f07b makes every efficient cause, in any respect, prior to its effect, and an efficient cause in a respect is not in general PRIOR_4 to its effect (the stick can be without the hand)."
+definitions = ["f4365b55-da11-4e27-b5b7-71024d9508be", "d0b06beb-e8cb-5cb8-af2f-bc7f8cc004b2", "beb654a7-e204-5f4c-a7b4-45e886ba7109", "008cb21a-256c-5a90-822c-acd4591d699a"]
+disambiguations = ["be54be36-3ce8-53f9-8168-50d1114e6c76", "623ddbf6-9683-5361-bae4-e348a00ec680"]
+
+# ---------------------------------------------------------------- arguments
+
+[[argument]]
+id = "No infinite SERIES_OF_CAUSES_4 series, from the PER_SE_5 regress"
+theorem = "perSeEsseSeriesOfPerSeEsseRegress"
+comparator_theorems = ["perSeEsseSeriesControls"]
+premises = ["ea251340-c89e-4535-a00f-6323cd8403a5", "Every SERIES_OF_CAUSES_4 link is a PER_SE_5 actual CAUSE_2 of being"]
+conclusion = "No infinite SERIES_OF_CAUSES_4 per se series of efficient causes of being"
+sense_bridges = [
+  { term = "UNITING_CAUSE_VERSUS_EFFICIENT_CAUSE", from = "UNITING_CAUSE_VERSUS_EFFICIENT_CAUSE_2", to = "UNITING_CAUSE_VERSUS_EFFICIENT_CAUSE_3", statement_id = "Every SERIES_OF_CAUSES_4 link is a PER_SE_5 actual CAUSE_2 of being" },
+]
+axioms = []
+rule = "Accessibility along a subrelation (Subrelation.accessible)"
+meaning = "Non-transcription conditional derivation on one q.3 a.4 profile p, one here-and-now efficient causing relation and one PER_SE_5 per se link AsCaused. If there is no infinite chain of PER_SE_5 actual causes of being (ea251340) and every SERIES_OF_CAUSES_4 link is a PER_SE_5 actual cause of being (the restated bridge), then no per se series of present efficient causes of being goes on to infinity (the SERIES_OF_CAUSES_4 sibling of 97f5850f). With esseRegressOfActualGroundingWFWeak (#1942) and the strength relation ed411e36 (fd12ad3d to ea251340) it carries well-founded actual grounding (82cfaf26) to the secunda via's per se premise on the existential sense: that sense joins the one dependence order. It does not reach 97f5850f (secundaSplitLimit, attached to the argument from e8664ab8 and the sense inclusion). perSeEsseSeriesControls give, for each input, a Bool interpretation in which the other holds and the conclusion fails, and a nonvacuous one. Facts about these interpretations only. The conclusion is not attributed to Aquinas."
+
+[[argument]]
+id = "Every SERIES_OF_CAUSES_4 link is PER_SE_5, from the present-cause bridge"
+theorem = "perSeEsseLinksOfPresentEsseCause"
+comparator_theorems = ["presentCauseControls"]
+premises = ["STMT-NOTHING-IS-EFFICIENT-CAUSE-OF-ITSELF", "A present efficient cause of another's being is an actual CAUSE_2 of its being"]
+conclusion = "Every SERIES_OF_CAUSES_4 link is a PER_SE_5 actual CAUSE_2 of being"
+sense_bridges = [
+  { term = "UNITING_CAUSE_VERSUS_EFFICIENT_CAUSE", from = "UNITING_CAUSE_VERSUS_EFFICIENT_CAUSE_2", to = "UNITING_CAUSE_VERSUS_EFFICIENT_CAUSE_3", statement_id = "A present efficient cause of another's being is an actual CAUSE_2 of its being" },
+]
+axioms = []
+rule = "Discharge distinctness by no self-causation, then apply the cross-vocabulary bridge"
+meaning = "Non-transcription conditional derivation. If nothing is the efficient cause of itself in any respect (8b2561cd, ST I q.2 a.3) and a here-and-now efficient cause of the being of something other than itself is an actual cause of its being in the q.3 a.4 profile (the cross-vocabulary bridge), then every SERIES_OF_CAUSES_4 link is a PER_SE_5 actual cause of being. Step: the cause of an existential link is other than its effect by no self-causation; the bridge makes it an actual cause of being; the per se link is the same primitive AsCaused on both sides. The bridge used does not mention the per se link at all, so the restated bridge's only open content is the passage from present efficient causing of being to a distinct actual cause of being. presentCauseControls give, for each input, a Bool interpretation in which the other holds and the conclusion fails (an efficient self-loop; a two-cycle of efficient causing with no cause of being in the profile), and a nonvacuous one."
+
+[[argument]]
+id = "No infinite SERIES_OF_CAUSES_4 series, from 97f5850f and the sense inclusion"
+theorem = "perSeEsseSeriesOfPerSeEfficientSeries"
+comparator_theorems = ["senseInclusionControls"]
+premises = ["97f5850f-62bc-5e43-a0c1-dd1033d08fc9", "Every SERIES_OF_CAUSES_4 link is a SERIES_OF_CAUSES_3 link"]
+conclusion = "No infinite SERIES_OF_CAUSES_4 per se series of efficient causes of being"
+sense_bridges = [
+  { term = "SERIES_OF_CAUSES", from = "SERIES_OF_CAUSES_3", to = "SERIES_OF_CAUSES_4", statement_id = "Every SERIES_OF_CAUSES_4 link is a SERIES_OF_CAUSES_3 link" },
+]
+axioms = []
+rule = "Accessibility along a subrelation (Subrelation.accessible)"
+meaning = "Non-transcription conditional derivation: if the per se series of efficient causes on SERIES_OF_CAUSES_3 cannot go on to infinity (97f5850f) and every SERIES_OF_CAUSES_4 link is a SERIES_OF_CAUSES_3 link (the open sense bridge), then the existential series cannot go on to infinity. So, given the sense bridge, the existential no-regress premise is the weaker of the two: the existential relation is the narrower one. The order is not definitional: without the sense bridge they are independent (second conjunct of senseInclusionControls: 97f5850f holds with CausesAsCaused empty while the existential series has a two-cycle), and the existential premise never gives 97f5850f (secundaSplitLimit, attached to the argument from e8664ab8 and the sense inclusion). senseInclusionControls also drop 97f5850f and give a nonvacuous interpretation. No strengthens relation is registered, because the order needs the open sense bridge."
+
+[[argument]]
+id = "Every SERIES_OF_CAUSES_4 link is PER_SE_5, from e8664ab8 and the sense inclusion"
+theorem = "perSeEsseLinksOfPerSeEfficientLinks"
+comparator_theorems = ["oldBridgeControls", "secundaSplitLimit"]
+premises = ["e8664ab8-c12f-42e2-8b9f-f38fe14cb52a", "Every SERIES_OF_CAUSES_4 link is a SERIES_OF_CAUSES_3 link"]
+conclusion = "Every SERIES_OF_CAUSES_4 link is a PER_SE_5 actual CAUSE_2 of being"
+sense_bridges = [
+  { term = "SERIES_OF_CAUSES", from = "SERIES_OF_CAUSES_3", to = "SERIES_OF_CAUSES_4", statement_id = "Every SERIES_OF_CAUSES_4 link is a SERIES_OF_CAUSES_3 link" },
+  { term = "UNITING_CAUSE_VERSUS_EFFICIENT_CAUSE", from = "UNITING_CAUSE_VERSUS_EFFICIENT_CAUSE_2", to = "UNITING_CAUSE_VERSUS_EFFICIENT_CAUSE_3", statement_id = "Every SERIES_OF_CAUSES_4 link is a PER_SE_5 actual CAUSE_2 of being", role = "conclusion" },
+]
+axioms = []
+rule = "Compose the sense inclusion with e8664ab8"
+meaning = "Conditional derivation recording the strength order between the two bridges: if every SERIES_OF_CAUSES_3 link is a PER_SE_5 actual cause of being (e8664ab8) and every SERIES_OF_CAUSES_4 link is a SERIES_OF_CAUSES_3 link, then every SERIES_OF_CAUSES_4 link is a PER_SE_5 actual cause of being. So, given the sense bridge, the restated bridge is weaker than e8664ab8; it is the version that survives the hand-and-stick counterexample kept against e8664ab8. This is a support option for the restated bridge through a premise with a kept counterexample; the restated bridge's other support option (from 8b2561cd and the present-cause bridge) does not use e8664ab8. oldBridgeControls give, for each input, a Bool interpretation in which the other holds and the conclusion fails, and a nonvacuous one. secundaSplitLimit (attached here because this Solution's export uses no Subrelation; see the attempt on the export defect) is a Nat interpretation with two respects, being and motion: actual grounding, the weak esse-ground bridge, both actuality calibrations, fd12ad3d, ea251340, the restated bridge, the sense inclusion and the existential no-regress premise hold with the existential link 1 -> 0; efficient causing in the motion respect is the upward successor, the secunda via's per se ordering premise 8a22ae75 and c2880fe0 hold; yet 97f5850f and the per se mover regress fail and e8664ab8 fails. So, under the encoded predicates, the existential order does not entail 97f5850f, the mover regress or e8664ab8. Facts about that interpretation only."
+
+[[argument]]
+id = "PRIOR_4 well-founded among actual concreta, from grounding well-founded on them"
+theorem = "priorityInBeingWFOfActualGroundingWF"
+comparator_theorems = ["priorityInBeingControls", "priorityConsumerLimit"]
+strong_version_needed = {"82cfaf26-fc86-54ab-8328-9a7b2bdbbe21" = "The conclusion is full well-foundedness of PRIOR_4 among the actual concreta at w, so the premise must exclude every infinite descending grounding chain among them. The weak versions do not: ConeWellFounded (1b1e3f09) constrains only the ancestor cone of one selected individual, ActualGroundingAsymmetric (39f7c63d) excludes only two-cycles, and closed-collection rootedness (aca3baa1) admits an infinite descending chain whose members also descend from a root (RootedInfiniteControl of ClosedEsseSource)."}
+premises = ["82cfaf26-fc86-54ab-8328-9a7b2bdbbe21", "Between actual CONCRETE_6 individuals at w, what is PRIOR_4 to the other grounds it"]
+conclusion = "PRIOR_4 among the actual CONCRETE_6 individuals at w is well-founded"
+senses = {PRIOR = "PRIOR_4"}
+sense_bridges = [
+  { term = "NECESSARY", from = "NECESSARY_11", to = "NECESSARY_2", statement_id = "82cfaf26-fc86-54ab-8328-9a7b2bdbbe21" },
+  { term = "NONNECESSARY_VERSUS_CONTINGENT_ROOT", from = "NONNECESSARY_VERSUS_CONTINGENT_ROOT_1", to = "NONNECESSARY_VERSUS_CONTINGENT_ROOT_2", statement_id = "82cfaf26-fc86-54ab-8328-9a7b2bdbbe21" },
+  { term = "WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT", from = "WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT_1", to = "WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT_2", statement_id = "82cfaf26-fc86-54ab-8328-9a7b2bdbbe21" },
+  { term = "WELL_FOUNDEDNESS_OF_THE_SELECTED_RELATION", from = "WELL_FOUNDEDNESS_OF_THE_SELECTED_RELATION_1", to = "WELL_FOUNDEDNESS_OF_THE_SELECTED_RELATION_2", statement_id = "82cfaf26-fc86-54ab-8328-9a7b2bdbbe21" },
+]
+axioms = []
+rule = "Well-foundedness along a subrelation (Subrelation.wf)"
+meaning = "Non-transcription conditional derivation on one grounding profile m, one world w and one being-without relation CanBeWithout. If grounding among actual concreta at w is well-founded (82cfaf26) and, between actual concreta at w, what is PRIOR_4 to the other grounds it (the PRIOR_4 bridge), then PRIOR_4 among the actual concreta at w is well-founded. Unlike simplePriorityWFOfActualGroundingWF (#1942, PRIOR_1) it needs no irreflexivity premise, because PRIOR_4 is asymmetric by definition, and its bridge is not touched by the hand-and-stick case or by an absent or abstract prior thing. So PRIOR_4 among actual concreta joins the one dependence order. priorityConsumerLimit is a Bool interpretation in which the PRIOR_4 member holds nonvacuously (actual grounding, the PRIOR_4 bridge, PRIOR_4 well-founded among actual concreta and on the whole carrier, with the PRIOR_4 pair true -> false) together with the inputs of e229bb2c (57552dce, e078f07b) and 32d77f18, while d85de8e1, 42890b45, 86efed1a and the PRIOR_4 reading of e078f07b's shape fail; so the PRIOR_4 member does not entail d85de8e1, 42890b45 or that reading. That e078f07b fails on PRIOR_4 is the hand-and-stick argument (the stick can be without the hand), not something the control shows. In it a PRIOR_1 pair is not PRIOR_4, and its last conjunct (a second interpretation) gives a PRIOR_4 pair that is not PRIOR_1. priorityInBeingControls drop each input on Nat (PRIOR_4 is asymmetric, so an infinite ascent replaces the two-cycle) and give a nonvacuous Bool interpretation. Facts about these interpretations only."
+
+[[argument]]
+id = "Every SERIES_OF_CAUSES_4 link is a SERIES_OF_CAUSES_3 link, from the per se ordering"
+theorem = "perSeEsseLinkIsPerSeCauseLinkOfOrdering"
+comparator_theorems = ["inclusionSupportControls"]
+strong_version_needed = {"8a22ae75-4198-5a32-ae52-bad2848a50a5" = "Reading B needs RelevantTo c x esse r' for the respect in which c is caused; the third premise gives only 'caused in some respect', so B does not suffice with these premises. A B-variant would need the stronger premise that the cause of every existential link is efficiently caused in a respect relevant to its causing x's being."}
+premises = ["STMT-SECOND-EFFICIENT-CAUSES-CAUSE-ONLY-AS-CAUSED", "STMT-NOTHING-IS-EFFICIENT-CAUSE-OF-ITSELF", "The cause of every SERIES_OF_CAUSES_4 link is itself efficiently caused in some respect"]
+conclusion = "Every SERIES_OF_CAUSES_4 link is a SERIES_OF_CAUSES_3 link"
+sense_bridges = [
+  { term = "SERIES_OF_CAUSES", from = "SERIES_OF_CAUSES_3", to = "SERIES_OF_CAUSES_4", statement_id = "Every SERIES_OF_CAUSES_4 link is a SERIES_OF_CAUSES_3 link", role = "conclusion" },
+]
+axioms = []
+rule = "Discharge distinctness by no self-causation, then apply the per se ordering premise"
+meaning = "Non-transcription conditional derivation, a support option for the sense bridge. If an efficient cause other than its effect that is itself efficiently caused causes only as caused (8a22ae75, the secunda via's per se ordering premise on its strong reading A), nothing is the efficient cause of itself (8b2561cd), and the cause of every SERIES_OF_CAUSES_4 link is itself efficiently caused here and now in some respect (the new bridge, which closes the mode gap between AsCaused, caused in an unspecified mode, and DEF 4a101a4c's efficiently caused middle cause), then every SERIES_OF_CAUSES_4 link is a SERIES_OF_CAUSES_3 link. 8a22ae75 is a strong premise: on reading A any efficient cause caused in any respect is a middle cause; the weaker relevant-respect reading is not used. inclusionSupportControls give, for each input, a Bool interpretation in which the other two hold and the conclusion fails (a two-cycle of efficient causing with no per se link; an efficient self-loop; one existential link whose cause nothing causes), and a nonvacuous one with an existential link."
+
+[[argument]]
+id = "Between actual concreta what is PRIOR_4 grounds, via the dependee-grounds bridge"
+theorem = "priorInBeingGroundOfDependence"
+comparator_theorems = ["priorityBridgeControls"]
+premises = ["c4bb0481-60aa-4461-baee-f490a5fc554e", "a8298fbd-f3c5-480d-95e9-8316889c327f"]
+conclusion = "Between actual CONCRETE_6 individuals at w, what is PRIOR_4 to the other grounds it"
+senses = {PRIOR = "PRIOR_4"}
+axioms = []
+rule = "Irreflexivity of PRIOR_4 by definition, then dependence into grounding"
+meaning = "Non-transcription conditional derivation, a support option for the PRIOR_4 bridge. If what is PRIOR_4 to x is something x depends on for its being and which does not so depend on x (c4bb0481), and an actual concretum's distinct actual dependee grounds it (a8298fbd), then between actual concreta at w what is PRIOR_4 to the other grounds it. Step: PRIOR_4 is irreflexive by definition, so the prior thing is distinct; c4bb0481 gives the dependence; a8298fbd gives the grounding. The bridge therefore shares the dependencies of c4bb0481 (with 000e1f65, 8ab3d114 and excluded middle behind it) and of a8298fbd, and inherits the 8ab3d114 failure case recorded on c4bb0481. Only c4bb0481's dependence conjunct (x depends on y, the side resting on 8ab3d114 and excluded middle) is used, not its nonmutual conjunct (the side resting on 000e1f65). priorityBridgeControls give, for each input, a Bool interpretation in which the other holds and the conclusion fails, and a nonvacuous one."

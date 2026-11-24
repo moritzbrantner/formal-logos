@@ -1,0 +1,20 @@
+{
+  "id": "bb7e4426-c300-4719-a8c1-8e27edf59fb4",
+  "label": "Every SERIES_OF_CAUSES_4 link is a PER_SE_5 actual CAUSE_2 of being",
+  "paraphrase": "OPEN analyst bridge, attribution deferred, e8664ab8 restated on SERIES_OF_CAUSES_4: whenever here and now c efficiently causes the being of x per se, as caused (CausesBeingAsCaused, definition 57348ddc), c is a per se actual cause of the being of x in the q.3 a.4 profile (PerSeActualEsseCause, PER_SE_5): c is other than x, both are in act as to being, CausesIn c x esse (CAUSE_2, mode unspecified, tenseless) and AsCaused c x. The per se conjunct is shared with the antecedent, so the content is the passage from present efficient causing of being to a distinct actual cause of being. The hand-and-stick case that falsifies e8664ab8 on SERIES_OF_CAUSES_3 does not touch it: the hand causes the stick's motion, not its being, so it is no SERIES_OF_CAUSES_4 link. No substantive objection identified beyond the shared reading of the world-free InAct of the q.3 a.4 profile as being in act at the reading world.",
+  "lean_declaration": "TruthCore.Causality.DependenceOrderSenses.PerSeEsseLinksArePerSeEsseCauses",
+  "definition_ids": [
+    "57348ddc-eaa0-4f0d-bf3f-ce358f452b53",
+    "4bca086d-1fa5-4b0d-bf2b-a22f3f0ac740",
+    "8163859b-95b3-4dd2-8a69-541bd332f32f",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "69c0b23e-54c7-57a1-871f-839c6e5514c6",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"
+  ],
+  "disambiguation_ids": [
+    "81c233d4-01b4-528c-8bbd-7da228443ffe",
+    "002f42cb-3015-5644-80b3-d408538394e6",
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "57f80020-fa6f-5b69-be58-b4cf95b7226f"
+  ]
+}

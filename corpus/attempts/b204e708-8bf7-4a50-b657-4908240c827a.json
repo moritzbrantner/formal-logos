@@ -1,0 +1,36 @@
+{
+  "id": "b204e708-8bf7-4a50-b657-4908240c827a",
+  "label": "Sense splits for the one dependence order: SERIES_OF_CAUSES_4 and PRIOR_4 (#1926)",
+  "statement_ids": [
+    "e8664ab8-c12f-42e2-8b9f-f38fe14cb52a",
+    "97f5850f-62bc-5e43-a0c1-dd1033d08fc9",
+    "ea251340-c89e-4535-a00f-6323cd8403a5",
+    "86efed1a-f353-5b5d-9431-df7fc643ace1",
+    "d85de8e1-2f7f-5b2f-ba1e-112a0799994c",
+    "82cfaf26-fc86-54ab-8328-9a7b2bdbbe21",
+    "87aa978c-f33c-4fc6-8881-5ff6484f8a7a",
+    "bb7e4426-c300-4719-a8c1-8e27edf59fb4",
+    "622dbf36-0ca9-4401-b766-08a309f31ec1",
+    "e81ec2fe-d10e-47e0-bdcf-8f1faf972ab8",
+    "bd305511-282b-479c-97b0-b3ec2291128f",
+    "522506d1-9e06-42c9-91a0-47ebcf50ba8e",
+    "a8298fbd-f3c5-480d-95e9-8316889c327f",
+    "c4bb0481-60aa-4461-baee-f490a5fc554e",
+    "8a22ae75-4198-5a32-ae52-bad2848a50a5",
+    "8053cc06-b1d5-423c-9aa0-f9e8d42fa4c7"
+  ],
+  "date": "2026-11-24",
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "#1926 phase 3, the two sense tests left by the one-dependence-order slice (docs/notes/one-dependence-order.md, section 'Sense splits'; specs/dependence-order-senses.toml); independent semantic challenge accepted after P1 repairs, applied. (i) New analyst sense SERIES_OF_CAUSES_4 (definition 57348ddc, CausesBeingAsCaused: here and now c efficiently causes x's being, per se as caused, with the PER_SE_5 primitive AsCaused), an existential narrowing of the secunda via's per se link. e8664ab8 restated on it (bb7e4426) escapes the hand-and-stick case; it follows from no self-causation 8b2561cd and the present-cause bridge 622dbf36. The existential no-regress premise 87aa978c follows from ea251340 and bb7e4426, so it joins the one order (82cfaf26 -> fd12ad3d -> ea251340 -> 87aa978c). With the open sense bridge e81ec2fe (SERIES_OF_CAUSES_4 into SERIES_OF_CAUSES_3; itself derived from 8a22ae75, 8b2561cd and the premise that an existential link's cause is efficiently caused, which closes a kept mode gap) it also follows from 97f5850f, and bb7e4426 from e8664ab8: the existential relation is narrower and its premises weaker; without the sense bridge they are independent, and secundaSplitLimit (Nat, respects being and motion) shows the existential order not entailing 97f5850f, the mover regress or e8664ab8 under the encoded predicates. Source finding (passages aba37900, a34be6a3, f74e1b94 materialized and read): the secunda via and ad 7 do not restrict the per se series to causes of being; ad 7's examples are movers and generation (q.104 a.1: a same-species generator causes becoming only); the existential reading is an analyst narrowing, attribution deferred. (ii) PRIOR_4 already existed (f4365b55). Reading grounds existentially and the hand as PRIOR_1 to the stick, 86efed1a is falsified on its bound PRIOR_1; its warrant belongs to PRIOR_4. The PRIOR_4 bridge among actual concreta bd305511 (derived from c4bb0481 and a8298fbd, so sharing their dependencies) and AGWF give PRIOR_4 well-founded among actual concreta (522506d1), with no irreflexivity premise. The only consumer of d85de8e1 (e229bb2c) needs PRIOR_1, because e078f07b fails on PRIOR_4 by the hand-and-stick argument; priorityConsumerLimit shows the PRIOR_4 member does not entail d85de8e1, 42890b45 or the PRIOR_4 reading of e078f07b. Provisional judgment: the one order is an order of being; the prima and secunda via regress premises the routes consume (d85de8e1 on PRIOR_1, 97f5850f on the respect-free SERIES_OF_CAUSES_3) are not presentations of AGWF; on current evidence their support comes from their own warrants (per se mover series, the instrument argument 8b58de76 with 80a648c0 and a9e269dd, finite-ancestry route b58472dd for 97f5850f), none of which runs through the order. frontier-diff: no change. Tooling finding: Lean Expr equality ignores binder info, so lean4export hash-conses the whole value of PerSeMoverLinkIsPerSeCauseLinkReading (fun {Being} (M C) => forall y x, M y x -> C y x) with that of Subrelation (fun {alpha} (q r) => forall {a b}, q a b -> r a b); when a Solution's export also contains Subrelation, Comparator reports a value mismatch. secundaSplitLimit is attached to 15f2decb, whose export has no Subrelation.",
+  "evidence": [
+    "0d89840b-55b0-4f39-89d2-2f5fa48124f0",
+    "c4b9b829-7406-4f6f-935a-d931d87cfdb1",
+    "c6a1167b-37ae-4578-a626-71cf28dbda7c",
+    "15f2decb-b6b2-45f5-8057-412c3492a1c1",
+    "e082dd15-e7ad-4982-b870-4731c23336b9",
+    "1dbd7440-9639-46ce-b1fa-901b7077458f",
+    "67b278a7-c9a8-4c9f-b4a7-71410922f26c"
+  ],
+  "blocker": "Open: every bridge (bb7e4426, 622dbf36, e81ec2fe with its mode-gap premise, bd305511) and 82cfaf26 remain open premises; bd305511 keeps the necessary-condition scope condition (oxygen and flame) and depends on natural versus divine-power possibility under DEF-CAN-BE-WITHOUT's real possibility; no root route consumes 87aa978c (plan: existential secunda via instance to 3d01134d, adding only a weaker-premise alternative) or 522506d1 (plan: to c51a07a1, blocked by the same-bearer identification of the first in being with the first unmoved mover); the source-free global-structure rival targets AGWF and so every member of the order; the lean4export binder-info merge is a lane C tooling defect. Next test: a reading-B variant of the sense inclusion (from 446e3f2a), which needs the stronger premise that the cause of every existential link is efficiently caused in a respect relevant to its causing x's being."
+}

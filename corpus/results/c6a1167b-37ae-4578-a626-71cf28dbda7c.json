@@ -1,0 +1,11 @@
+{
+  "id": "c6a1167b-37ae-4578-a626-71cf28dbda7c",
+  "label": "No infinite SERIES_OF_CAUSES_4 series, from 97f5850f and the sense inclusion",
+  "argument_id": "e3140a79-4c6c-46f4-995e-b735239387a4",
+  "challenge_module": "TruthCore.Results.Causality.DependenceOrderSenses.Challenge",
+  "solution_module": "TruthCore.Results.Causality.DependenceOrderSenses.Solution",
+  "theorem": "TruthCore.Results.Causality.DependenceOrderSenses.perSeEsseSeriesOfPerSeEfficientSeries",
+  "comparator_config": "results/c6a1167b-37ae-4578-a626-71cf28dbda7c/comparator.json",
+  "status": "solution-present",
+  "description": "Non-transcription conditional derivation: if the per se series of efficient causes on SERIES_OF_CAUSES_3 cannot go on to infinity (97f5850f) and every SERIES_OF_CAUSES_4 link is a SERIES_OF_CAUSES_3 link (the open sense bridge), then the existential series cannot go on to infinity. So, given the sense bridge, the existential no-regress premise is the weaker of the two: the existential relation is the narrower one. The order is not definitional: without the sense bridge they are independent (second conjunct of senseInclusionControls: 97f5850f holds with CausesAsCaused empty while the existential series has a two-cycle), and the existential premise never gives 97f5850f (secundaSplitLimit, attached to the argument from e8664ab8 and the sense inclusion). senseInclusionControls also drop 97f5850f and give a nonvacuous interpretation. No strengthens relation is registered, because the order needs the open sense bridge."
+}

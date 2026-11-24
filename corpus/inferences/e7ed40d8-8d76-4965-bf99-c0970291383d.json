@@ -1,0 +1,13 @@
+{
+  "id": "e7ed40d8-8d76-4965-bf99-c0970291383d",
+  "label": "PRIOR_4 well-founded among actual concreta, from grounding well-founded on them (inference)",
+  "input_statement_ids": [
+    "82cfaf26-fc86-54ab-8328-9a7b2bdbbe21",
+    "bd305511-282b-479c-97b0-b3ec2291128f"
+  ],
+  "output_statement_id": "522506d1-9e06-42c9-91a0-47ebcf50ba8e",
+  "rule": "Well-foundedness along a subrelation (Subrelation.wf)",
+  "meaning": "Non-transcription conditional derivation on one grounding profile m, one world w and one being-without relation CanBeWithout. If grounding among actual concreta at w is well-founded (82cfaf26) and, between actual concreta at w, what is PRIOR_4 to the other grounds it (the PRIOR_4 bridge), then PRIOR_4 among the actual concreta at w is well-founded. Unlike simplePriorityWFOfActualGroundingWF (#1942, PRIOR_1) it needs no irreflexivity premise, because PRIOR_4 is asymmetric by definition, and its bridge is not touched by the hand-and-stick case or by an absent or abstract prior thing. So PRIOR_4 among actual concreta joins the one dependence order. priorityConsumerLimit is a Bool interpretation in which the PRIOR_4 member holds nonvacuously (actual grounding, the PRIOR_4 bridge, PRIOR_4 well-founded among actual concreta and on the whole carrier, with the PRIOR_4 pair true -> false) together with the inputs of e229bb2c (57552dce, e078f07b) and 32d77f18, while d85de8e1, 42890b45, 86efed1a and the PRIOR_4 reading of e078f07b's shape fail; so the PRIOR_4 member does not entail d85de8e1, 42890b45 or that reading. That e078f07b fails on PRIOR_4 is the hand-and-stick argument (the stick can be without the hand), not something the control shows. In it a PRIOR_1 pair is not PRIOR_4, and its last conjunct (a second interpretation) gives a PRIOR_4 pair that is not PRIOR_1. priorityInBeingControls drop each input on Nat (PRIOR_4 is asymmetric, so an infinite ascent replaces the two-cycle) and give a nonvacuous Bool interpretation. Facts about these interpretations only.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

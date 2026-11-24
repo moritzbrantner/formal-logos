@@ -80,6 +80,7 @@ public import TruthCore.Causality.DeiFiliusLordBlessed
 public import TruthCore.Causality.DeiFiliusOperationFromIntellect
 public import TruthCore.Causality.DeiFiliusUnifiedRoute
 public import TruthCore.Causality.DependenceGroundingPriority
+public import TruthCore.Causality.DependenceOrderSenses
 public import TruthCore.Causality.DependenceStrictGroundMap
 public import TruthCore.Causality.DependenceStrictGroundMapStrength
 public import TruthCore.Causality.DerivativeJointPower

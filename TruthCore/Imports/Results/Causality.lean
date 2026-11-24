@@ -120,6 +120,7 @@ public import TruthCore.Results.Causality.DeiFiliusLordBlessed.Solution
 public import TruthCore.Results.Causality.DeiFiliusOperationFromIntellect.Solution
 public import TruthCore.Results.Causality.DeiFiliusUnifiedRoute.Solution
 public import TruthCore.Results.Causality.DependenceGroundingPriority.Solution
+public import TruthCore.Results.Causality.DependenceOrderSenses.Solution
 public import TruthCore.Results.Causality.DependenceStrictGroundMap.Solution
 public import TruthCore.Results.Causality.DependenceStrictGroundMapStrength.Solution
 public import TruthCore.Results.Causality.DerivativeJointPower.Solution
