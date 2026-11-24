@@ -509,6 +509,5 @@ independently admissible history.
 
 **Publication and claim/type boundary.** This is research prose with no changed Lean
 declaration, source-attributed corpus claim, proposition, result, graph edge or premise.
-The two original conditional arguments need independent semantic challenge and must not
-be represented as reviewed or Lean-verified. No root frontier effect is intended; the
-computed comparison belongs to PR CI.
+The two original analyst conditionals and their review are recorded in PR #1904.
+They have no Lean binding. The computed frontier comparison is linked in the PR.
