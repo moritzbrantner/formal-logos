@@ -1027,3 +1027,24 @@ withhold a strict rank. The outstanding question is whether knowing its
 source and constitution exhausts what is knowable about that recipient's
 present actuality. On the causal side it still matters who supplied the
 secondary's exercised power, even when the identity of the sender is known.
+
+### From one giver to a necessary being and to personal origins
+
+The claim that just one principal gives this recipient its existence answers
+a question about the actual causal order. To infer that this same giver
+could never have failed to exist, we need grounds for excluding a primitive
+contingent first bearer. The necessary-being audit follows the inference from
+one actual thinker and identifies exactly where the rival can agree about
+the giving yet disagree about the giver.
+[Stage-one assessment](modal-spine.md#how-far-the-case-for-a-necessary-being-reaches-2026-11-24)
+· [Test of existential limitation](necessary-being-five-senses.md#what-would-show-that-a-limit-belongs-to-the-act-of-existing)
+
+If the principal source is also understood to will its own possessed good,
+the minimal sense of self-love applies to that very source. Whether this
+is an inward act of affirmation or delight, and whether Love proceeds as
+someone personally distinct, are successively stronger claims. The psychological
+analogy gives the latter question a definite object. A reason why a perfect
+inner expression or love must subsist in personal opposition to its origin
+would take the argument further.
+[Self-love finding](causal-perfection-transfer.md#from-self-understanding-to-love-of-ones-own-good)
+· [Aquinas and Augustine on personal origins](de-ente-esse-source-1628.md#from-one-divine-nature-to-personal-distinctions-2026-11-24)
