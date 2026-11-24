@@ -433,3 +433,335 @@ Both checks elaborate locally without axioms. A favored result in the calibrated
 **Provisional judgment.** The positive case gains content where evidence identifies both an end whose fulfillment conditions can be assessed independently of success and this source's apprehension and adoption of that end guiding the actual production. This can explain why a suitable order was produced *for the sake of* a good, over and above its being selected by a good-sensitive tendency. In familiar agents, uptake of a corrected account of the blockage, use of the same end to devise previously unavailable means, and traced practical control of execution give defeasible grounds for attributing those roles. A new cue test can disfavor a particular physical proxy; behavioral flexibility alone does not establish ownership of reasons. A mechanism meeting a defensible functional account of apprehension and practical control would itself be a candidate for agency. [Existing authorship tests and limits](optimal-creation-choice.md#rational-authorship-versus-brute-selection-2026-11-23)
 
 Applied to the ultimate source, the impersonal rival pays for a productive propensity with the relevant ordering, and the personal account pays for intrinsic intelligible content and directed exercise with an appropriate fulfillment condition. Contingent production and order alone leave the first rival standing. Evidence independently grounding intentional content in this very source and tracing realization to its exercise would favor the personal account. An independent derivation of the common root's intellect followed by the holder and will bridges would also discriminate. The diagnostic establishes neither the root intellect premise `0c27f65a` nor `55892476` (every invariant-set-up withheld giving uses a rational power); the primitive rational-power classification in the latter carries a further application burden. Even will as capacity leaves the token exercise question open without an exercise bridge such as `5c1aba17`. This adds no graph edge or claim about historical authors.
+## End requirement, policy requirement and productive fixity (2026-11-25)
+
+**Draft research checkpoint, not a new certified argument.** Continues #1737,
+#1941, #1944, #1947, #1953, #1955, #1962 and #1963. It specifically tests the
+WN rivals left open by #1963 and the connection between reason-guided exercise
+and contingent recipients. It does not replace #1962's operative-direction
+investigation or #1955's effect/action/perfection comparison. Reuse
+[the NAR note](nar-derivation.md), [the graft map](orphan-graft-map.md),
+[holder identification](holder-root-identification.md), and
+[the selected-effect note](optimal-creation-choice.md). #1962 at
+`9a4265d0aee3c1b7e684d54ce4cd04cd78c7dcdb` is external PR evidence, not a
+patch included here. Its formative-governance and composition discriminator is
+retained. No new source attribution is made; historical formulations in the
+earlier notes are not additional premises.
+
+### 1. Fix the explanatory target before comparing accounts
+
+Grant one necessary, invariant, productive n, the actual effect, genuine
+contingent exercise, objectively good-directed propensity, and the same
+productive efficacy and admissible alternatives on both sides. The rival is
+not indifferent CHANCE_3: it can discriminate goods, exclude bad outcomes and
+produce its effect directly. CHANCE_3 is a classification of giving by a
+non-rational power, not a denial of all teleology. Its necessity is the
+bearer's necessity, not a rigid act or a fixed complete effect.
+
+There are four questions about this very n: (i) what makes the recipient
+actually exist; (ii) why this exercise is intelligible under an independently
+specified end or good; (iii) whether the good is actually apprehended and
+operative as a practical reason of n; (iv) what settles the exact exercise
+rather than every other permitted one. The first two can be answered by a
+genuine impersonal teleology. The third supplies a different explanandum,
+intentional authorship, not automatically a stronger explanation of (i).
+The fourth remains open for either nonnecessitating account if the demand is
+a further determining explanation. Neither a primitive selection rule nor
+the phrase "free choice" settles it. A direct reason-guided productive
+exercise is a substantive candidate for stopping under nonnecessitating PSR,
+just as a direct objective propensity is; grant or challenge the adequacy of
+both at the same scope.
+
+### 2. A new application of the WN fork: requirement by a good versus by a policy
+
+WN `0266eac2` is `RationalFixedGivingIsRequired`, not a normative
+maximization theorem: for every y,p,x, if y owns rational p, exercises p
+toward x at w and is `FixedTowardAt` from w, then `EndRequires y x`.
+Fixity requires giving at w and at all accessible worlds where y exists.
+`EndRequires` is the means-to-end relation, not modal co-existence.
+SS `85f3fea2` says no being distinct from an actual root is required by
+its end. The latter is not a theorem that every creative policy is optional.
+
+Compare independently specified complete outputs S and three different
+sources of a constraint on them:
+
+* E: without x, the giver cannot attain its own end (the intended WN sense).
+* P: a proposed norm or policy admits no complete decision omitting x.
+  Such a policy can concern communication of the end, not attainment of it.
+* F: all actual/accessibly realized givings include x (the existing fixity
+  sense, restricted to a source which gives x here).
+
+E and P must not be defined using F. Even a norm P that is actually binding
+does not entail F without a bridge from obligation to invariant compliance.
+If the compliance is granted, P can account for F without E. Conversely
+absence of P does not imply absence of F: a rational or impersonal source can
+invariably supply something it has no duty to supply. Multiple distinct
+complete outputs can all share x. This is the exact reason that free exercise
+toward some effect is weaker than WN/SS and cannot answer #1963's selective
+rival. The issue is a normative and productive bridge, not the already known
+unique-optimum collapse.
+
+**A discriminating strict-improvement criterion for the world-level rival.**
+Use the actual `ActualRootsGiveOptimalCompleteOutputs` of
+`TruthCore.Causality.NarGrafts`: fixed feasible sets of beings and a fixed
+partially ordered quality; at w and each accessible v where the actual root
+exists, its exact giving set is optimal. Take an actual root n and a being d
+distinct from n. Suppose every feasible complete output S omitting d has
+some feasible T strictly better than S. Then no optimal complete output can
+omit d: if S were optimal, T would contradict its undominated/optimal
+status. Consequently the optimizer is fixed toward d in the giving sense.
+This uses neither a unique optimum nor an exhaustive order. With factive
+giving and a necessary root it also yields d's existence throughout the
+specified worlds, but not d's ungroundedness. To conclude a counterinstance
+to WN additionally require rational exercise at w and that d is not
+end-required; to instantiate the recorded selective-diffusion rival
+`ea1425c0` further require two-way giving toward some being. The optimizer
+alone asserts neither. This is an analyst argument, not a Lean result or
+refutation of either rival.
+
+The relevant stronger hypothesis is strict improvement of *complete*
+decisions without d, not the isolated goodness of d. It may be motivated by
+benefit to another recipient if the additional good is compatible with every
+relevant cost and good, and with the same full-world feasibility constraints.
+It is not licensed by the mere fact that d could be good. Strict
+improvability of every decision (not merely those omitting d) would instead
+leave no optimal decision at all, as already tested in #1737. The rival
+does not need that stronger thesis. It also need not count the source's own
+intrinsic perfection as increasing with the quality of its effects.
+
+**Structural nonvacuity target.** Use the full powerset of {d,a,b}, including
+omission, and a quality with two units for the presence of d, plus one for
+exactly one of a and b being present. The two tied optima {d,a} and {d,b}
+share d. At one situation give {d,a}, at another {d,b}; n exists throughout
+and each output is supplied by it. Stipulate a distinct intrinsic end of n
+requiring none of d,a,b. These assignments realize the output/quality
+structure, including d's invariant presence and a's two-way giving.
+No identity of these assignments with a complete CausalityFrame or a
+metaphysically possible strict-simple source is claimed; the quality and
+end assignments are stipulated, and no rational power or genuine intellect
+is represented. The positive quality of d is not derived from its presence;
+the example tests the logical relationship between policy and end
+requirement. It is an independently specified comparison with an objective
+ranking, not indifferent randomness.
+
+### 3. Due perfection as a positive alternative to mandatory maximization
+
+The personal case should not rely on a blanket principle that the will is
+free precisely because it chooses. Consider instead two distinct normative
+grounds: a perfection due to an existent bearer (or a role actually adopted
+in exercising its own power), and an antecedent obligation to adopt that
+role or bring that bearer into existence. These are different. If a
+producer adopts an end of giving a recipient a certain good, faithfully
+realizing the recipient-directed end is an intelligible excellence in the
+actual exercise. The producer's goodness does not thereby require adoption
+of every compatible beneficial end. Due perfection is more than mere
+absence of a defect in execution: a good independently specified end,
+genuine practical governance, and adequate realization together provide a
+positive reason for the act, not just permission to act. But the act's
+excellence and moral permissibility remain distinct.
+
+A concrete positive policy: if a producer undertakes to create a recipient
+of type R, it must provide what is due to R, and if it undertakes a
+relationship with a determinate beneficiary it must respect that
+relationship. It has no obligation *on the basis of these conditional
+requirements alone* to create all possible R or to undertake that
+relationship. This policy permits an omission and two differently excellent
+complete outputs if they all meet these constraints. An independent
+antecedent duty to potential recipients, a norm of obligatory
+self-communication, a promise, or an overall moral dominance relation can
+override that permissibility. Such duties cannot be ruled out by saying
+the recipients do not yet exist; duties concerning future persons are a
+serious counterexample to an unrestricted denial. Nor does the root's
+intrinsic self-sufficiency imply that the moral quality of its exercise
+cannot be compared. These are the policy premises that need warrant.
+The classical account's positive candidate is voluntary communication of
+a possessed good, not a good to be acquired by the producer. A recipient's
+perfection can genuinely matter without increasing the producer's intrinsic
+perfection. The policy is a philosophical candidate, not a new definition
+of the corpus's `00e962ae` or a conclusion from it.
+
+For an actual giving of d that does not serve an indispensable means to the
+root's own end, distinguish these tests:
+
+1. End-preserving feasibility: a complete alternative omitting d is feasible
+   while the source's own end remains attained.
+2. Due-perfection permissibility: some such alternative is permissible under
+   the same independently justified requirements, with all actual obligations
+   and incompatible goods accounted for.
+3. Real exercise: at some accessible situation with n present, n actually
+   gives according to such an alternative.
+
+The third plus actual rational giving of d suffices to rule out fixity of d;
+the first two give positive reasons to seek it, but are not that bridge.
+To obtain WN on the scope of actual root givings, one needs this accessible
+omission for each non-end-required recipient, not realization of every
+possible complete output. Claiming availability by the definition of
+freedom would just restate WN on that scope. The genuine warrant would
+come from a defensible specific nonnecessitating exercise principle,
+coupled with the first two tests, and not from moral permission alone.
+Even two options sharing d may both be permissible and realized. This
+pinpoints why the #1947 mixed-mode model is not defeated by the positive
+argument for nonmaximizing goodness.
+
+### 4. Same-source formative governance, not another output discriminator
+
+The approved prior comparisons establish that extensional responsiveness
+does not distinguish an apprehended reason from an objective propensity.
+The positive intentional hypothesis adds a truth-evaluable practical
+understanding of the relevant good as a good and of the effect as its
+realization, together with the exercise's being governed by that
+understanding. A fit between an actual result and a good-sensitive rule
+is not enough. A rule can instantiate the same independently justified
+norm, and a functional account that actually realizes understanding and
+practical control receives the same agential credit. There is no
+in-principle output test against a rival matched on all of these extensional
+consequences.
+
+The next ontological challenge from #1962 is more precise than counting
+intellect and productive power as two descriptions. Compare:
+
+* One intrinsic intellectual actuality, productive in virtue of the
+  intelligible form it actually adopts as the measure of this exercise.
+  The norm of correct realization is not invented after the output, and
+  no prior selecting event or passive cognitive reception is posited.
+* One intrinsic noncognitive productive actuality with a good-sensitive
+  profile; the actual effect is genuinely supplied by it. This has no
+  apprehension of the good as a reason, but can have an objective end.
+* One purportedly simple source that actually understands the good, yet
+  has a blind selective character explanatorily sufficient for its exercise.
+  If the understood content is only speculative, neither one power nor
+  identity of the bearer establishes that cognition governs production.
+
+For the third case, a route to exclusion would show that its blind
+selective character must be a really distinct intrinsic productive
+principle in addition to its intrinsic understanding. To warrant this,
+show that the **constitutive ground of the exercise** contains an intrinsic
+actual determination whose explanatory role cannot be realized by the
+source's intellectual actuality; and that the asserted independence is
+one of real intrinsic principles, not merely non-equivalent descriptions,
+logical independence, two extrinsic termini, or independent modeling
+parameters. Given an independently warranted strict simplicity constraint
+against that real distinction, the conjunction would be inadmissible.
+Merely observing that the production could be modeled without a cognition
+variable does not show such an intrinsic constituent. Conversely merely
+identifying both principles with n's esse does not show that the productive
+role is intellectual *as such*. An exclusively intellectual active
+principle which actually forms this exercise could satisfy the proposed
+constitutive condition, but the exclusively intellectual and formative
+interpretation are substantive commitments. A second selector is not
+posited just to solve the problem.
+
+This identifies a conditional explanatory advantage without requiring a
+determining reason: if the actual apprehended reason is constitutively
+operative, it explains why this productive act is intentionally directed
+toward an independently intelligible good, not merely why an outcome fits
+a rule. Reasons for giving under a recipient role can be nonnecessitating
+and real even when more than one particular recipient or complete order
+would realize that role. A role under which a particular recipient is
+actually, nondeviantly supplied explains production of that recipient
+under that role; it does not establish a prior rigid individual choice,
+all details, or the recipient's own existence-good as explicitly willed
+for it. Do not replace the latter by coarse purpose in `a94c5dfc`.
+This extends the same-source case only conditional on actual formative
+governance, not on an arbitrary Rational flag.
+
+Simplicity and immutability allow a candidate one-act account with stable
+intellectual nature and distinct contingent productive termini. Their
+compatibility with actual directed exercise, not just stable possibility
+knowledge, remains open. If the exercise's formative actuality depends
+on the product and is identical with esse, #1961's grounding-promotion
+problem applies under its explicit calibration; a true relational
+description of completed production does not give this premise. Neither
+side gets to manufacture a direction of existential dependence by
+renaming the outcome. The particular recipient must actually be produced,
+not supply the truthmaker of a retrospective attribution of intent in
+place of the productive principle.
+
+### 5. Matched rival assessment and graph connections
+
+| Account | Positive resources at the same explanandum | Discriminating remaining price |
+| --- | --- | --- |
+| Necessitarian source | Stable productive law; determinate effect explained by fixed efficacy | Incompatible with granted genuine contingency only under the already established rigid necessity/efficacy bundle. Not a personality test. |
+| Objective propensity | Direct supply; a nonnecessitating invariant tendency favoring independently grounded goods | Actual exercise can be primitive; no actual apprehension as a reason. The personal account must meet the same stopping standard. |
+| Impersonal teleology | Genuine ends, independently specified fulfillment, productive directedness | Explain the ground of directedness and actual exercise. Not defeated by good-directed order or normative policy alone. |
+| Selective necessary diffusion | Positive reason for an invariant core of gifts and contingent exercise toward others | Must ground invariant communication or its necessary policy rather than infer it from the source's having a good. Not defeated by one power, SS or freedom toward another effect alone. |
+| Complete-output optimizer | Objective whole-decision ranking; ties allow contingency; strict improvement can fix individual recipients | Needs warranted feasibility, ranking, existence of an optimum, a binding maximizing norm and invariant compliance. Due-perfection permission does not prove metaphysical withholding. |
+| Noncognitive productive powers | Intrinsic power produces intelligent or purposive effects, including mediated production | Intrinsic intellectual adequacy is a distinct open causal-perfection question, not resolved by either output intelligence or labels of power. |
+| Rational direct authorship | Actual intellectual content, nondeviant practical governance and existential supply; good-directed finite exercise not requiring self-improvement | Same-source intellect and formative bridges, exact-exercise sufficiency, defensible policy and compatibility with strict simplicity. A uniquely determining reason is not assumed. |
+
+Existing connections, not new proof edges:
+
+* `29818edd` is GOD_4 HAS_INTELLECT_1 (`GodHasIntellect`); `66aecdd7`
+  is GOD_4 HAS_WILL_1 (`GodHasWill`). Existing `571e36f0` uses intellect
+  plus `090be689`. #1941 A (`b5b84276`) uses `090be689`, rational-power
+  bridge `71fc097b` and actual exercise `495a40ad` to reach `5c1aba17`
+  in the one-power setting. B (`963e9689`) reaches `fdd2b1cf` under its
+  withholding, actual contingency, invariance, holder-intellect and one-power
+  premises plus A's conclusion. #1944 `834ddcfa` connects `fdd2b1cf`,
+  `0050b6ed`, `5f93d4f0`, `65e0179f` to `66aecdd7`; holder/root
+  identification and the sense bridges remain required. These are capacity
+  and exercise classifications, not an established formative-governance
+  theorem. `29818edd` alone does not identify the holder with the root
+  or establish actual intellect-directed production.
+* The new policy analysis concerns the **root-restricted** use of WN
+  `0266eac2` in #1947 N3 `d6588ea7`. That theorem also uses EM, common
+  intellectual root `0c27f65a`, `5c1aba17`, root one power `06145e71`,
+  root giving bridge (b1) `2dd1f217`, and SS `85f3fea2`. N1 then
+  requires its own common-root and (b2) premises to derive NAR; none is
+  discharged here. The #1963 narrow being-level refutation does not
+  resolve either complete-output or selective diffusion.
+* Existential PSR `608a262d`, BX1 and BX2 lead to B2 `8a8d00e9` through
+  `7bf9cb77`. Rational authorship is a candidate concrete productive
+  explanation; neither partial contrastive coverage nor the source's
+  necessary existence establishes universal PSR, those bridges, or
+  determining closure of the actual decision. Keep giving, grounding,
+  and existential causation distinct.
+* Goodness `00e962ae`, intrinsic-perfection/transfer `64498e7e`,
+  `f8ba2429` and the prior recipient-directed will results retain their
+  original scopes. Positive goodness as due perfection and the freedom
+  policy require their own normative and modal application. A superior
+  created effect does not alone show an intrinsically superior source or
+  more morally excellent decision.
+
+**Scoped provisional assessment.** Actual rational guidance has positive
+explanatory content beyond conformity with an objective good where the
+explanandum is intentional production. Under that very interpretation it
+is not a bare label. For the thinner explanandum of contingent intelligible
+productive order, the impersonal good-sensitive rival remains on parity
+unless independent evidence connects n's intrinsic intellectual actuality
+to this exercise. The policy analysis sharpens a live rival of WN: a common
+core of gifts may be fixed by a substantive maximizing or diffusion policy,
+even where no such gift is required to attain the source's own end and other
+gifts are contingent. A due-perfection policy can license a good-preserving
+omission without obliging the source to maximize created goods. Its actual
+necessity, permissibility and accessibility are separate questions.
+No new warrant is assigned to any registered premise as established and
+no rival is defeated. The strongest standing package is a necessary
+noncognitive productive source with intrinsic invariant, objective
+good-directed nonnecessitating powers and a defended rule fixing some
+positive communications; the purely impersonal case need not grant the
+rational-exercise conjunct of the registered selective rival.
+
+**Reopening conditions.** (1) Derive formative relevance from a defended
+account of the same source's intrinsic active principle or construct a
+positive strict-simple intellectual-but-blind rival preserving actual
+cognition, actual supply, recipient and the same end. Inspect real
+composition, not descriptions. (2) Defend the normative antecedent duty
+to maximize or diffuse (including complete-decision opportunity costs),
+or an independent due-perfection permission argument covering omission.
+(3) Provide an actual accessible exercise bridge omitting each selected
+non-end-required being without weakening the admitted metaphysics.
+(4) Establish the relevant recipient's existence-good as intentionally
+willed, or delimit the weaker role-intention result. If the remaining
+proposal merely stipulates an invariant output or names the selection
+Rational, the known comparison is repeated rather than advanced.
+
+Verification boundary: the present checkpoint adds prose only. No new
+registered proof, claim, definition, sense, source or frontier edge.
+The local checkout/Lean/Rust toolchain and fresh independent semantic
+worker are unavailable in this execution environment. Related, dossier,
+novelty, semantics and computed frontier-diff have therefore not been
+run; direct GitHub record/definition inspection and the stated PR evidence
+are not substitutes. An independent challenge of the actual draft and
+applicable CI remain required before reliance as reviewed support.
+
