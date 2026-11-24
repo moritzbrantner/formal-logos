@@ -944,3 +944,66 @@ same scale. That comparison could support strictness for this pair. Ranking ever
 participant or establishing intellect in the giver would need further evidence.
 A recipient who also understands its own activity then provides a stronger test. Can we identify a truth about the source's own
 actuality that it grasps and the participant misses about its own?
+
+### What self-understanding adds to the four comparisons
+
+Fix one alleged giver and a recipient actually thinking about its present
+existence. “I am thinking” and “I exist now” can be warranted for the
+recipient by the very exercise under consideration. The fuller question for
+each subject is “How do I exist, and from whom do I receive existence, if I
+receive it?” A giver that apprehends its subsistence, its underivedness and
+their explanatory significance can answer. A recipient that recognizes only
+its dependence still has to identify its giver. If it comes to know who its
+giver is and understands the argument, both can answer correctly. Neither
+answer by itself explains why the subsistent source is actual at all.
+[Comparison of the two reflective subjects](contingency-receptivity-c2.md#what-does-a-reflective-recipient-grasp-about-its-own-present-actuality)
+
+1. **The upper bound at esse (`87f41688`).** Consider the stronger assumption
+   that the selected actual giver comprehends each actual participant as fully
+   as that participant is knowable. Two existing premises connect this to the
+   participant's degree of act. Its degree of act is bounded by its knowability
+   (`7921f9c8`), and the giver's own degree of act bounds the degree at which
+   it knows this recipient (`7db53cde`). With one measure of act at esse, this
+   yields the weak bound `aba6f4e1`. Actual self-apprehension and correct
+   knowledge of one effect each fall short of the comprehension premise.
+   This route has force if knowledge of the participant is warranted
+   independently of the proposed ranking. It introduces no requirement that
+   all arguments for a greatest being must first establish intellect.
+2. **Total giving (`50da2b49`).** Where one organism divides into two distinct
+   self-maintaining individuals, at least one begins, even if the other
+   continues the parent. Under the specified substantial and productive
+   reading, the parent's actual work in establishing both successors'
+   organization earns it credit for an individual's first existence.
+   Whether this exercise draws its efficacy entirely from the principal in
+   the respect of esse is a further causal question. Knowing which principal
+   gave the organism existence does not by itself answer it.
+   [Generation at division](causal-perfection-transfer.md#what-does-the-generator-give-when-one-living-individual-becomes-two)
+3. **Supplier completeness (`de05072a`).** In the three-latch case, the
+   organization of an instantiated device forces at least one spring to carry
+   a load. Any of the three can be the sole load as the settings vary. Thus an
+   organized whole can explain activity somewhere among its parts without
+   assuming population as a separate premise. Applied to existence, the rival
+   account owes an instantiated whole and an account of how that whole
+   constitutes this actual participant. It qualifies as the proposed giver
+   only if it has its own subsistent being and causes the participant's esse
+   in the selected sense. Knowing that some concrete reality exists cannot
+   identify that whole.
+   [Constitutive explanation of population](q44-inferential-dependency.md#can-the-organization-of-a-whole-explain-why-any-supplier-is-active)
+4. **Strict ascent (`fd2c8710`).** If the recipient fully comprehends itself,
+   the same two cognitive premises give a comparison in both directions.
+   Its actual knowing reaches its own knowability, which reaches its degree
+   of act, which bounds that very knowing. All three therefore occupy
+   equivalent positions on the common scale. In this case an independently
+   evidenced higher act of knowing in the giver suffices to put the giver
+   strictly above this recipient in degree of act. Ordinary reflection
+   supplies no such exhaustive knowledge, and an unanswered question can
+   coexist with equal degrees of act. This test concerns a reflective pair.
+   The universal claim also compares bearers lacking intellect.
+
+The next test for the cognitive argument is what would warrant *full*
+comprehension of this recipient by the source. A true account of the
+source's giving could still leave open which originating work the secondary
+performed in this particular history. Does the source's own intellectual act
+settle that difference, or does the case require further knowledge of the
+effect? Answering on the same individual would bring the upper-bound argument
+and the investigation of total giving to bear on one another.
