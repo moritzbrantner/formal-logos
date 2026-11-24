@@ -1,0 +1,15 @@
+{
+  "id": "87aa978c-f33c-4fc6-8881-5ff6484f8a7a",
+  "label": "No infinite SERIES_OF_CAUSES_4 per se series of efficient causes of being",
+  "paraphrase": "OPEN analyst premise, attribution deferred, the SERIES_OF_CAUSES_4 sibling of 97f5850f: a per se ordered series of present efficient causes of being cannot go on to infinity. Every being is accessible along CausesBeingAsCaused (definition 57348ddc): here and now c efficiently causes the being of x (EfficientlyCausesIn c x esse, DEF-EFFICIENT-CAUSING at the respect of being) and does so per se, as caused (AsCaused, the per se primitive of PER_SE_5). It says nothing about series of movers or of causes of becoming, which 97f5850f (SERIES_OF_CAUSES_3) covers through c2880fe0. It is not attributed to the secunda via (ST I q.2 a.3 and q.46 a.2 ad 7 do not restrict the per se series to causes of being).",
+  "lean_declaration": "TruthCore.Causality.DependenceOrderSenses.NoInfinitePerSeEsseEfficientCauseSeries",
+  "definition_ids": [
+    "57348ddc-eaa0-4f0d-bf3f-ce358f452b53",
+    "69c0b23e-54c7-57a1-871f-839c6e5514c6",
+    "4bca086d-1fa5-4b0d-bf2b-a22f3f0ac740",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"
+  ],
+  "disambiguation_ids": [
+    "81c233d4-01b4-528c-8bbd-7da228443ffe"
+  ]
+}
