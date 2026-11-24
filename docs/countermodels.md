@@ -92,7 +92,9 @@ this tool searches for countermodels.
 CI (the `corpus-and-lean` job, after `lake build`) has `truth countermodel
 --all` rediscover and Lean-check the omission models and joint witnesses of
 `SelfOperationLife`, `PerfectionOfBeing`, `NecessaryBeingInAct` and
-`ComponentFirstness` (`TruthCore/Results/Causality/*/Solution.lean`). The
+`ComponentFirstness` (`TruthCore/Results/Causality/*/Solution.lean`), plus
+`AssertionRetorsion.existenceFromOccurrence` in its separately specified
+`TruthCore.Results.Logic.AssertionRetorsion.Solution` module. The
 solver's unit tests and golden replays (`truth/src/countermodel/tests.rs`,
 recorded skeletons in `truth/src/testdata/countermodel/`) run offline in the
 `truth-cli` job. `scripts/test_countermodel_lean.py` exercises the actual Lean
@@ -102,3 +104,57 @@ suite discovers it and metadata-only jobs skip Lean execution.
 For function-free skeletons, the search order is the one the retired
 `scripts/countermodel.py` used, so models it found and that Lean files cite
 are found again.
+
+### Unary-function coverage checked on 2026-11-24
+
+The baseline extractor stopped at `represent : Episode → Being` when asked
+for an omission model of
+[`existenceFromOccurrence`](../TruthCore/Results/Logic/AssertionRetorsion/Solution.lean).
+That was an unsupported parameter, not a completed negative model search.
+The explicit unary-function extension supersedes that refusal for this case;
+the other unsupported fragments listed above remain outside its coverage.
+
+Reproduce through the existing CLI:
+
+```bash
+target/release/truth --json countermodel \
+  TruthCore.Results.Logic.AssertionRetorsion.existenceFromOccurrence \
+  --module TruthCore.Results.Logic.AssertionRetorsion.Solution --all --size 2
+```
+
+The actual run produced exactly three `lean-checked` reports. Each uses
+`Episode = Fin 1`, `Being = Fin 1` and `represent := fun _ => 0`:
+
+| Report | `Occurs` | `ExistsIn` | Checked conjunction |
+| --- | --- | --- | --- |
+| Omit `hOccurs` | Always false | Always false | Occurrence fails; the representation bridge holds vacuously; the conclusion fails |
+| Omit `hRepresents` | Always true | Always false | Occurrence holds; the representation bridge and conclusion fail |
+| Joint witness | Always true | Always true | Both premises and the conclusion hold |
+
+The `hRepresents` report recovers the existing
+[`OccurrenceWithoutExistenceControl`](../TruthCore/Logic/AssertionRetorsion.lean),
+already proved by `AssertionRetorsion.controls`. Occurrence alone does not
+entail `SomeExistent ExistsIn` in this vocabulary: the representation bridge
+is an explicit premise. Membership in the model's `Being` carrier does not
+assert `ExistsIn`. The omission models establish those formal non-implications;
+they do not make the bridge false or philosophically doubtful. The joint
+witness establishes satisfiability of this encoded bundle, without establishing
+metaphysical coherence or the actual occurrence or existence of anything.
+This is a gain in known-control coverage, with **no novel philosophical
+consequence and no change in premise warrant**.
+
+The singleton reports exercise constant function tables. A separate public-API
+probe exercised a nonconstant table: no size-1 model satisfies
+`∀ x, f x ≠ x` together with `∀ x, f (f x) = x`; size 2 produced the swap
+`f = [1, 0]`. The generated certificate used
+`fun x => if x = 0 then 1 else 0` and Lean accepted both properties by `decide`.
+This checks rendering and reuse of a nested function application; it is a
+synthetic implementation control, not a corpus discovery.
+
+Validation also passed all 24 Rust countermodel tests, including eight unary
+function tests and the unchanged function-free goldens, and all five durable
+Lean extraction tests. The latter accept explicit nested cross-carrier
+functions and reject implicit inputs, binary functions, function equality and
+structure parameters. The measured change is one demonstrated extraction
+refusal becoming three checked reports; it is not a general performance or
+agent-effort comparison.
