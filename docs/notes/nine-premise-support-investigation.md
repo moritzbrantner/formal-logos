@@ -3,6 +3,15 @@
 Date: 2026-11-13. Research baseline:
 `03d97b48a86d4b7d7bbedcb4441398ce3a9dadef`.
 
+The current checkpoint is on `research/common-source-and-reliable-records`.
+Independent challenge accepted the common-source finding at `26f657f5c`,
+the quantum application at `79311ee6f` and the repaired access/ownership
+comparison at `4e44d8ce8`. The three new formal results passed binding,
+Comparator and NanoDa. Hosted checks and integration are pending. Work
+continues on divine unity without genus-wide causation (#1936) and on
+whether diachronic identity distinguishes conservation from persistence
+under a law (#1801).
+
 ## From an underived source to one shared source
 
 In a well-founded grounding order, it suffices that the immediate suppliers

@@ -32,7 +32,7 @@
     "note": "docs/supertasks.md#when-a-stage-must-leave-a-reliably-readable-state-1859",
     "reviewed_revision": "79311ee6fee45f886cd03a85e2157a952f79477f",
     "review": "accepted_qualified",
-    "publication": "unpublished",
+    "publication": "published",
     "evidence": "Independent semantic review checked the equal-prior discrimination bound, generator action, matched-arm control, Zeno counterexample and all-ancestor coverage. Acceptance concerns the model and this limited causal application.",
     "supersedes": "None. Extends the orthogonal case in #1859 to imperfect single-shot readability and retains the existing compact-clock and analytic-limit findings."
   }

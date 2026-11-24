@@ -38,10 +38,10 @@
     "assessment": "Under well-foundedness, tracing every immediate fork to a same-relation common ancestor suffices to join all finite upstream paths. In a connected well-founded plural-source graph some immediate co-suppliers have no common ancestor. In the five-being interpretation the two rank-zero sources both precede the rank-one constituent with no intervening rank. Their edges to the instrument also meet the single-edge reading. The edges establish a shared dependent; joint indispensability would require further premises. A shared dependent and coordinated activity alone do not warrant universal local joining for substantial existential grounds. The alternating-relay model separates well-foundedness from universal short paths to some source, even with local joining and acyclicity.",
     "next_test": "Trace what sustains the existence of each constituent of a specific pair of substantial co-suppliers. Test whether a common ground explains the existence of both or only the coordination of their acts, and what would extend this explanation across the actual grounding graph.",
     "note": "docs/notes/part-free-plurality.md#when-immediate-co-suppliers-suffice-for-a-common-source",
-    "reviewed_revision": "4e44d8ce8b8ef9c56666492dac2399bc9cd73888",
-    "review": "unreviewed",
-    "publication": "unpublished",
-    "evidence": "Frozen challenges and existing same-source De ente consumer c66eead8. Integration and independent challenge in progress.",
+    "reviewed_revision": "26f657f5ca4dd0eca0b54eec5fe7ae7ff6ed483e",
+    "review": "accepted_qualified",
+    "publication": "published",
+    "evidence": "Independent semantic challenge accepted the final inference, rank-one constituent example, distinction from jointly indispensable causes, literal grounding graph, scope of prior routes, and same-source consumer at 26f657f5c. All three registered results passed binding, Comparator and NanoDa on the published research branch.",
     "supersedes": "The prior requirement to defend every pair of finite paths directly can be replaced by a universal immediate-fork test under well-foundedness."
   }
 }
