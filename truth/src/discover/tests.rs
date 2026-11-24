@@ -234,6 +234,11 @@ fn ranking_backfills_companions_without_a_third_hop_or_target_alias() {
     );
     let ids: Vec<_> = ranked.iter().map(|c| c.id.as_str()).collect();
     assert_eq!(ids, ["A", "B", "C", "E"]);
+    assert_eq!(
+        ranked.iter().map(|c| c.via.as_deref()).collect::<Vec<_>>(),
+        [None, None, Some("A"), Some("B")],
+        "the first admitting anchor is provenance, not a proof dependency"
+    );
     let reversed = rank(
         &target,
         &pool.iter().rev().collect::<Vec<_>>(),

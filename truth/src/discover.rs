@@ -598,7 +598,86 @@ impl SenseTags {
 #[derive(Clone, Debug, PartialEq)]
 pub struct Candidate {
     pub id: String,
+    /// Score against the target, or against `via` for a backfilled candidate.
     pub score: f64,
+    /// The original direct candidate that admitted this second-hop addition.
+    /// Retrieval provenance only, not a proof dependency; `None` is direct.
+    pub via: Option<String>,
+}
+
+/// Ranks premises without displacing the direct candidates. When direct
+/// ranking underfills `limit`, backfill through those original candidates in
+/// their ranked order, using the same admission rules and scoped pool. Newly
+/// added candidates never become anchors, and the ranked bundle stays within
+/// `limit`. Each backfilled score is relative to its admitting anchor (`via`).
+pub fn rank(
+    target: &Statement,
+    pool: &[&Statement],
+    vocabulary: &BTreeMap<String, Vocabulary>,
+    weaker: &BTreeMap<String, BTreeSet<String>>,
+    tags: &SenseTags,
+    limit: usize,
+) -> Vec<Candidate> {
+    let mut ranked = rank_direct(target, pool, vocabulary, weaker, tags, limit);
+    if ranked.is_empty() || ranked.len() == limit {
+        return ranked;
+    }
+    let statements: BTreeMap<&str, &Statement> = pool.iter().map(|s| (s.id.as_str(), *s)).collect();
+    let anchors: Vec<&Statement> = ranked
+        .iter()
+        .filter_map(|c| statements.get(c.id.as_str()).copied())
+        .collect();
+    let mut selected_ids: BTreeSet<&str> = anchors
+        .iter()
+        .map(|s| s.id.as_str())
+        .chain([target.id.as_str()])
+        .collect();
+    let mut selected_declarations: BTreeSet<&str> = anchors
+        .iter()
+        .map(|s| s.declaration.as_str())
+        .chain([target.declaration.as_str()])
+        .collect();
+    for anchor in anchors {
+        let remaining: Vec<&Statement> = pool
+            .iter()
+            .copied()
+            .filter(|s| {
+                !selected_ids.contains(s.id.as_str())
+                    && !selected_declarations.contains(s.declaration.as_str())
+            })
+            .collect();
+        if remaining.is_empty() {
+            break;
+        }
+        // Keep every eligible result available: an alias skipped below must
+        // not hide a later unique declaration behind a premature truncation.
+        for mut candidate in rank_direct(
+            anchor,
+            &remaining,
+            vocabulary,
+            weaker,
+            tags,
+            remaining.len(),
+        ) {
+            let Some(statement) = statements.get(candidate.id.as_str()) else {
+                continue;
+            };
+            // Two results from this same ranking may share a declaration.
+            if selected_ids.contains(statement.id.as_str())
+                || selected_declarations.contains(statement.declaration.as_str())
+            {
+                continue;
+            }
+            selected_ids.insert(statement.id.as_str());
+            selected_declarations.insert(statement.declaration.as_str());
+            candidate.via = Some(anchor.id.clone());
+            ranked.push(candidate);
+            if ranked.len() == limit {
+                return ranked;
+            }
+        }
+    }
+    ranked
 }
 
 /// Ranks pool statements as premises for `target`. A candidate must share
@@ -611,7 +690,7 @@ pub struct Candidate {
 /// (precision) and of the target's constants it uses (recall), plus shared
 /// definitions, the same module, a strength order with the target and a
 /// projection fit. A ranking only: Lean decides whether the types compose.
-pub fn rank(
+fn rank_direct(
     target: &Statement,
     pool: &[&Statement],
     vocabulary: &BTreeMap<String, Vocabulary>,
@@ -747,6 +826,7 @@ pub fn rank(
             Some(Candidate {
                 id: s.id.clone(),
                 score,
+                via: None,
             })
         })
         .collect();
