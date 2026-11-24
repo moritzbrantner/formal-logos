@@ -846,6 +846,17 @@ The other two points are the dependence principle for contingent concreta
 (`3ef67739`, against existential inertia) and the transport of priority in
 being to spine III. Nothing here is established, defeated or closed.
 
+Later derivation (#1926, 2026-11-24; [one-dependence-order.md](one-dependence-order.md),
+attempt `b2cf0e2e`): `d85de8e1` is now derived from `82cfaf26` (well-founded
+actual grounding), `86efed1a` and `32d77f18` (result
+`simplePriorityWFOfActualGroundingWF`), so it is formally closed from open
+premises rather than a bare leaf. This does not revise the judgment above: the
+derivation binds the unsplit PRIOR_1, `86efed1a` is supported only on priority
+in being and meets row 1's case on priority in causing, and the route to `42890b45`
+through `e229bb2c` still needs `e078f07b`. The "open with a named blocker"
+standing in (c) is unchanged as a warrant judgment; only its formal status
+moved.
+
 ### (g) Revision conditions and next tests
 
 This judgment would change with:

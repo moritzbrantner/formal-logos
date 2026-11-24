@@ -1,0 +1,35 @@
+{
+  "id": "b2cf0e2e-60c7-4af2-af5b-b45ad09712fc",
+  "label": "One dependence order: stage-one well-foundedness premises through actual grounding (#1926)",
+  "statement_ids": [
+    "82cfaf26-fc86-54ab-8328-9a7b2bdbbe21",
+    "fd12ad3d-6729-4fa0-bb87-0121260df684",
+    "ea251340-c89e-4535-a00f-6323cd8403a5",
+    "d85de8e1-2f7f-5b2f-ba1e-112a0799994c",
+    "97f5850f-62bc-5e43-a0c1-dd1033d08fc9",
+    "7dfa068a-9974-5fcd-ba23-fac4dee2fc70",
+    "c18faab2-aaff-4132-9e64-db763d723293",
+    "cb1cdea9-eb6c-578c-8008-84e0d4107fd3",
+    "546975ef-0614-5c0a-8f49-fab2cd2a2533",
+    "2d9807a5-ebff-45fd-972f-e241f18713d4",
+    "98efaa9e-1c91-4e52-8c0d-faf03d4f8372",
+    "0436de86-6579-53f2-9ff5-2111ba44ebae",
+    "86efed1a-f353-5b5d-9431-df7fc643ace1",
+    "32d77f18-a9c2-5486-b51c-a24f32863af4",
+    "e8664ab8-c12f-42e2-8b9f-f38fe14cb52a",
+    "c2880fe0-a7a8-5be0-91e5-d2f3bd7d7186",
+    "b17a8954-c86b-4127-b816-102b93ed3bdd"
+  ],
+  "date": "2026-11-24",
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "#1926 phase 3, bridge 'one dependence order' (docs/notes/one-dependence-order.md, specs/one-dependence-order.toml). Question: can the stage-one well-foundedness premises over different relations be derived from one well-foundedness principle through explicit open inclusion bridges, without identifying the relations? Kernel: wellFounded_of_predecessorInclusion (core Lean, no axiom; the identity case of pull-back along an edge-preserving map): well-foundedness of G among the S-elements transfers to R when every R-predecessor is in S and G-related. Verified, zero-axiom results: (1) e6e5ee02: 82cfaf26 + new weak bridge b17a8954 (an actual cause of esse between actual concreta grounds) + 546975ef + 2d9807a5 -> fd12ad3d (and through the strength relation ed411e36, argument 80f81d44, ea251340); a215884f derives b17a8954 from cb1cdea9, registered as strengthens; b17a8954 avoids cb1cdea9's scope condition (a world-free cause of being absent at w). An earlier sibling deriving fd12ad3d from the stronger cb1cdea9 was dropped before merge under the weakest-version rule. (2) 0d919852: fd12ad3d + 98efaa9e + 0436de86 -> 82cfaf26 (converse); with (1) and the strength step, under the two-way package the two relations are coextensive (law actualEsseCause_iff_actualGround) and 82cfaf26 and fd12ad3d are interderivable, one assumption in two presentations; the strictness control (vacuous in its empty relations) shows they come apart without 98efaa9e. (3) 3463650f: 82cfaf26 + 86efed1a + 32d77f18 -> d85de8e1 for the frame's F.PriorSimply, in the unsplit PRIOR_1 type; 86efed1a is supported on priority in being only and meets the hand-and-stick case on priority in a respect, and an absent or non-concrete prior thing falsifies it. (4) 12a7f9d3: ea251340 + new open framework premise e8664ab8 (per se efficient-cause links are PER_SE_5 actual causes of being) -> 97f5850f. e8664ab8 fails on the bound sense CAUSES_AS_CAUSED_3, which c2880fe0 (sourced to ad 7, claim 712924b7) extends to per se mover links: with c2880fe0 every per se mover would be a per se actual cause of the moved thing's esse; ad 7 gives as per se series stone-stick-hand and this man's generation from this man, the elementary body and the sun (motion and coming to be); that the stick continues to be when the hand lets go is an analyst observation. It is defensible only under a not-yet-existing existential sense of CausesAsCaused; the sense split is the next test. Controls (Comparator-checked): each input omitted in a Bool interpretation, nonvacuity, strictness, and ascentLimit: a Nat interpretation with 82cfaf26, the esse regress, well-founded priority, the four listed inclusions (cb1cdea9, 98efaa9e, 86efed1a, d96105fb), the genus principle d9fad785 (vacuously), the actuality calibrations and GradesFoundInBeing, in which 7dfa068a and its actual-concreta restriction c18faab2 fail. Survey claims checked: controls_of_wellFounded does apply to 82cfaf26 via Source <-> ActualRoot (axiom-free lemma, scratch only), but controls_of_wellFounded itself uses classical (propext, Classical.choice, Quot.sound); cb1cdea9 alone does not suffice for fd12ad3d (the two actuality calibrations are also needed); the secunda via needs e8664ab8. Warrant: inclusions among being relations (esse causing, priority in being, existential grounding) are positively supported, with a shared dependency on reading the stipulated grounds relation as existential grounding of concreta; causing in a respect is not included (hand-and-stick, causal-dependence-support-investigation.md (e) row 1); the grade is not included (beings compared in grade need not depend on each other; the genus principle is vacuous without a maximum; it is the only inclusion; a map-based transfer would need a further premise supplying the map, and ascentLimit shows that the listed premises supply none); the order runs ground into more, so the quarta via premise sits above 82cfaf26 (existing f9c69ee8). Rejected approaches: a direct bridge 'per se efficient cause is an actual concrete ground' and formalizing 'more in being between actual concreta is grounding' as a premise, both because of established counterexamples; e8664ab8 faces the same hand-and-stick mechanism and is kept only as an open framework premise whose failure on its bound sense is recorded, so that the exact missing condition (an existential sense) is visible; a separate 82cfaf26 -> ea251340 argument is redundant given ed411e36. Outcome label: a new bridge, with presentational duplicates identified (82cfaf26/fd12ad3d under the two-way package).",
+  "evidence": [
+    "0d919852-bc09-45b0-b896-6c963b2a94c9",
+    "e6e5ee02-44af-4a41-8991-8aacdb8168cf",
+    "12a7f9d3-c2d1-400a-947b-1326683a5767",
+    "3463650f-5caa-4bcc-a7b3-eaa7608db3fb",
+    "a215884f-fac9-4d4d-933f-2096b165a53c"
+  ],
+  "blocker": "Open: every input bridge and 82cfaf26 itself remain open premises; the source-free global-structure rival (causal-dependence assessment rival 4) targets well-foundedness as such and is not answered by concentrating the load on 82cfaf26; e8664ab8 fails on its bound sense and needs a sense split of CausesAsCaused (in esse / in a respect); the priority derivation binds the unsplit PRIOR_1 and needs the PRIOR_1 split; no defended inclusion of MoreIn esse into grounding exists, so the quarta via ascent premise is not derivable from 82cfaf26; a conditional equivalence 82cfaf26 <-> fd12ad3d cannot be registered as a relation with the current schema; registering cb1cdea9's weak version flags its 61 pre-existing consumers for a weakest-version review."
+}
