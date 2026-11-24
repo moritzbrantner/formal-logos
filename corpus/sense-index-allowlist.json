@@ -1614,10 +1614,6 @@
       ]
     },
     "07d16972-637f-5e39-abd1-b4c2aee94064": {
-      "CAUSE": [
-        "572f19f2-8833-4133-8bea-b8b5fa4ac24f",
-        "bdc6001c-9699-4126-9e35-6fbd1da78100"
-      ],
       "GOD": [
         "295c9096-50b8-4ccd-960e-f833730a0774",
         "52c2ebac-0a71-4dd4-8a21-804c1dd0847a",
@@ -1626,10 +1622,6 @@
       "MAXIMAL_IN_A_SELECTED_PERFECTION_GREATEST": [
         "9bea9a43-3a87-4d62-86de-e5873aea62f8",
         "a833bcdb-8e99-4079-8cb6-fc1295eb690f"
-      ],
-      "PER_SE": [
-        "466d3a02-acfc-456c-b1cb-5d7ebf54d2ca",
-        "df046130-853b-41ae-b3fb-afc126d06c0d"
       ],
       "POTENCY_CAPACITY_AND_POWER_ACROSS_ADOPTED": [
         "5252f7f4-95a7-42f3-a420-23770702a0f4",
@@ -2031,25 +2023,6 @@
       "CHURCH_VISIBLE_SOCIETY_AND_SPIRITUAL_COMMUNITY": [
         "2a4a2460-811c-4244-8fe4-8ba72ee2ea43",
         "9e428f41-c648-4377-91e9-c558593fdce8"
-      ]
-    },
-    "3769b87e-57a9-51ed-968d-3bc6f3607e8c": {
-      "CAUSE": [
-        "572f19f2-8833-4133-8bea-b8b5fa4ac24f",
-        "bdc6001c-9699-4126-9e35-6fbd1da78100"
-      ],
-      "GOD": [
-        "295c9096-50b8-4ccd-960e-f833730a0774",
-        "52c2ebac-0a71-4dd4-8a21-804c1dd0847a",
-        "b11d7317-49bb-4c03-b1aa-fefada6943ff"
-      ],
-      "MAXIMAL_IN_A_SELECTED_PERFECTION_GREATEST": [
-        "9bea9a43-3a87-4d62-86de-e5873aea62f8",
-        "a833bcdb-8e99-4079-8cb6-fc1295eb690f"
-      ],
-      "PER_SE": [
-        "466d3a02-acfc-456c-b1cb-5d7ebf54d2ca",
-        "df046130-853b-41ae-b3fb-afc126d06c0d"
       ]
     },
     "80946eca-fbb8-5ab9-b89e-d6960e0266c4": {
@@ -5710,10 +5683,6 @@
       ]
     },
     "b773170a-0219-53ef-872c-2144523ab39f": {
-      "CAUSE": [
-        "572f19f2-8833-4133-8bea-b8b5fa4ac24f",
-        "bdc6001c-9699-4126-9e35-6fbd1da78100"
-      ],
       "CAUSE_OF_ESSE_VERSUS_SUFFICIENT_REASON": [
         "4f63bd47-86a8-4076-ab17-208c0022aa18",
         "815a5a9b-f3c4-4853-8318-194f046cdf04"
@@ -5743,11 +5712,6 @@
       "NONNECESSARY_VERSUS_CONTINGENT_ROOT": [
         "9f9108e2-3cc3-45dd-be1d-d8fdaaced708",
         "cf6a8bb9-2a70-4e90-86bd-06f69106da2f"
-      ],
-      "PER_SE": [
-        "110c4d86-2460-4eb0-9d99-79442908d368",
-        "466d3a02-acfc-456c-b1cb-5d7ebf54d2ca",
-        "df046130-853b-41ae-b3fb-afc126d06c0d"
       ],
       "WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT": [
         "556515c9-1fcc-4ea0-b85d-2a4cad7eff79",

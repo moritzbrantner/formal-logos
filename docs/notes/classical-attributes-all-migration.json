@@ -779,14 +779,14 @@
       "kind": "statements",
       "id": "20a2b6a3-83e7-5ea0-be63-9dbc03c302b3",
       "path": "corpus/statements/unique-god-with-classical-attributes-exists.json",
-      "status": "inspected",
-      "classification": "preservation",
-      "finding": "Exactly ∃g, σ.IsGod g ∧ IsTheOneGod σ.IsGod g ∧ σ.HasClassicalAttributes g. Fourth-Way m and First-Way f remain the single respective witness; uniqueness ranges over original σ.IsGod, including in Q11-NATURE.",
+      "status": "repaired",
+      "classification": "definition_link_prune",
+      "finding": "Exactly ∃g, σ.IsGod g ∧ IsTheOneGod σ.IsGod g ∧ σ.HasClassicalAttributes g. Fourth-Way m and First-Way f remain the single respective witness; uniqueness ranges over original σ.IsGod, including in Q11-NATURE. Definition-link prune (#1926 graft slice, 2026-11-25): the record changed after this audit only in definition_ids and disambiguation_ids. Kept the 12 definitions its Lean type and paraphrase use: Signature.IsGod (GOD_4, 88f9f6e8), IsTheOneGod (d980bbd2), the HasClassicalAttributes bundle (c8f9c2fb) and its eight remaining attribute definitions (85f7f569, 5f851204, 58e0de99, 1d8890c0, da5c0716, 1291944d, 88bc0655, 7c64b499), and UniqueClassicalGodExists itself (b1415b6b): the same vocabulary as GodHasClassicalAttributes d5ac1620 plus its own definition. Removed 28 links inherited from the derivations that conclude it (motion, respect, potency, act, per se series, first mover, grades, true, maximum, maxime ens, cause of a perfection, esse, self-evident, first being, simply prior, nominal God GOD_1, nominal definition, remote from all, God naming the unique maxime ens GOD_2, definitively proposes, Catholicism true, Signature, good, essence, pure act, altogether immaterial): none occurs in UniqueClassicalGodExists sigma. Disambiguations replaced by those of d5ac1620 (In act, God, Infinite, Eternal, Immutable, Cognition/intellect); Cause, Per se and Essence were reached only through the removed links. The proposition, Lean declaration and paraphrase are unchanged, so the earlier disposition stands. Every removed definition is still linked by another record in this audit's scope (coverage unchanged), and the arguments concluding it keep their own definition and disambiguation links; truth semantics shows only fewer legacy mixings (3769b87e, b773170a, 07d16972), whose allowlist entries were shrunk.",
       "before": {
         "sha256": "9c1652a18e12bb35f55b1478bb315866fed3c5cec8dfd892bbca08849ef62dc2",
         "lean_declaration": "TruthCore.Case.Catholicism.UniqueClassicalGodExists"
       },
-      "reviewed_sha256": "6e5d4d75d738ea0e02ffbcf3d44d91c95d3126b84e3275c4d411318ee771e142"
+      "reviewed_sha256": "f217d1b32fb9a4ab63ef53334b42b1b9c701e7eee597faff1ab4c54aff3a1853"
     },
     {
       "kind": "statements",
