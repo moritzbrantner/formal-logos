@@ -1,0 +1,13 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.ComparativeFoundation.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ComparativeFoundation.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.ComparativeFoundation.thresholds"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "enable_nanoda": true
+}

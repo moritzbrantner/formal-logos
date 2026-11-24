@@ -1,0 +1,11 @@
+{
+  "id": "de2e9403-c232-4347-a2bf-6f9b6e443803",
+  "label": "Compare mirror descriptions and common input in matched rod histories",
+  "argument_id": "321b6995-634e-4702-aa73-bd4f7706431f",
+  "challenge_module": "TruthCore.Results.Causality.ComparativeFoundation.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ComparativeFoundation.Solution",
+  "theorem": "TruthCore.Results.Causality.ComparativeFoundation.controls",
+  "comparator_config": "results/de2e9403-c232-4347-a2bf-6f9b6e443803/comparator.json",
+  "status": "solution-present",
+  "description": "When the named source drives the extension, the selected relation changes without an intrinsic change of length at the left subject. The matching profile with a different driver leaves the relation true on omitting the source's selective input. Equal nonzero contributions to both readings supply a distinct control for all offsets. Universal transfer is evaluated on these specific interpretations of its relations."
+}

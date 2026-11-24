@@ -1,0 +1,35 @@
+{
+  "snapshot": {
+    "kind": "web_snapshot",
+    "source_id": "235966cc-024d-5630-9426-50912ce6af4f",
+    "source_url": "https://www.corpusthomisticum.org/cpy05.html",
+    "retrieved_at": "2026-11-24T13:49:59Z",
+    "sha256": "sha256:6167632661b953b477a6ebfd82a618697773ba63cfa304ba7eb69eeb51467689",
+    "wayback_url": "https://web.archive.org/web/20251007125521id_/https://www.corpusthomisticum.org/cpy05.html",
+    "wayback_sha256": "sha256:6167632661b953b477a6ebfd82a618697773ba63cfa304ba7eb69eeb51467689",
+    "encoding": "iso-8859-1",
+    "language": "lat",
+    "license": "The medieval Latin is public domain. The Corpus Thomisticum page identifies the Leonine text in its Turin 1954 edition, transcribed by Roberto Busa and reviewed by Enrique Alarcón. Fundación Tomás de Aquino reserves rights in this digital edition. Metadata, hashes, locators and a short incipit are committed. The live page and October 2025 Wayback copy matched byte-for-byte and yielded the same passage on two fetches."
+  },
+  "passages": [
+    {
+      "id": "6cad8064-7503-48a2-b29a-c5f06c4c0a76",
+      "label": "Thomas Aquinas on change in a correlate and the foundation of a real relation of equality",
+      "locator": "V, lect. 3 nn. 7–8 [72197–72198], on Physics V.2, 225b12–15",
+      "claim_locator_prefixes": [
+        "V, lect. 3 n. 7 ",
+        "V, lect. 3 n. 8 "
+      ],
+      "html_selector": {
+        "from": {
+          "anchor": "72197"
+        },
+        "to": {
+          "anchor": "72199"
+        }
+      },
+      "text_sha256": "sha256:891d90c115cf3adbedd2e9a755a272a847b010ff805e391d7ff7c8dac11672f6",
+      "incipit": "[72197] In Physic., lib. 5 l. 3 n. 7 Deinde cum dicit: neque est in ad aliquid"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "cee6dcc7-55db-4b2a-a923-7543e74b1004",
+  "label": "Populate acquisition-history assumptions with the operative press and its patient",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "179c0663-1bac-4ee1-9f4f-9632fe9def01",
+  "inference_ids": [
+    "6c73f07b-96ad-4547-8fda-52a1c94e4bcb"
+  ],
+  "meaning": "The source drive supplies both the stroke and the separate signal; the stroke supplies the imprint at a higher rank. A universal giver must be the source since no incoming productive record ends at its esse. Enumeration then covers the distinct bearers' actual respects. The transfer frame already interprets causal responsibility as productive path credit. This interpretation is deliberately substantive and finite.",
+  "definition_ids": [
+    "7b20df90-a3d9-41c7-be8b-1d2beb5b995a",
+    "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "ff8bf1d7-0bf9-5dda-8038-7127e3d46ec8",
+    "c19faf56-0908-5e6e-8c39-ccba40dce5d1"
+  ],
+  "disambiguation_ids": [
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "dba7b1de-f3a0-57af-9af9-b2a4da3136fa"
+  ]
+}

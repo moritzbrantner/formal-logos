@@ -200,6 +200,205 @@ fn strength_siblings_rank_first() {
     assert_eq!(ranked[0].id, "B");
 }
 
+/// Two direct anchors, a companion shared by both, another companion of B,
+/// and a third-hop-only neighbour. Aliases must not consume backfill slots.
+fn backfill_fixture() -> (Statement, Vec<Statement>, BTreeMap<String, Vocabulary>) {
+    let target = statement("T", "M.Target", &["goal"]);
+    let pool = vec![
+        target.clone(),
+        statement("TargetAlias", "M.Target", &["goal"]),
+        statement("A", "M.A", &["goal", "left"]),
+        statement("B", "M.B", &["goal", "right"]),
+        statement("C", "M.C", &["left", "right", "third"]),
+        statement("CAlias", "M.C", &["left", "right", "third"]),
+        statement("E", "M.E", &["right"]),
+        statement("X", "M.X", &["third"]),
+    ];
+    let vocabulary = pool
+        .iter()
+        .map(|s| (s.declaration.clone(), vocab("M", &["x"], &[])))
+        .collect();
+    (target, pool, vocabulary)
+}
+
+#[test]
+fn ranking_backfills_companions_without_a_third_hop_or_target_alias() {
+    let (target, pool, vocabulary) = backfill_fixture();
+    let ranked = rank(
+        &target,
+        &pool.iter().collect::<Vec<_>>(),
+        &vocabulary,
+        &BTreeMap::new(),
+        &SenseTags::default(),
+        8,
+    );
+    let ids: Vec<_> = ranked.iter().map(|c| c.id.as_str()).collect();
+    assert_eq!(ids, ["A", "B", "C", "E"]);
+    assert_eq!(
+        ranked.iter().map(|c| c.via.as_deref()).collect::<Vec<_>>(),
+        [None, None, Some("A"), Some("B")],
+        "the first admitting anchor is provenance, not a proof dependency"
+    );
+    let reversed = rank(
+        &target,
+        &pool.iter().rev().collect::<Vec<_>>(),
+        &vocabulary,
+        &BTreeMap::new(),
+        &SenseTags::default(),
+        8,
+    );
+    assert_eq!(
+        ranked, reversed,
+        "pool iteration order is not a tie-breaker"
+    );
+}
+
+#[test]
+fn ranking_backfill_preserves_direct_scores_order_and_the_cap() {
+    let (target, pool, vocabulary) = backfill_fixture();
+    let retrieve = |limit| {
+        rank(
+            &target,
+            &pool.iter().collect::<Vec<_>>(),
+            &vocabulary,
+            &BTreeMap::new(),
+            &SenseTags::default(),
+            limit,
+        )
+    };
+    assert!(retrieve(0).is_empty());
+    assert_eq!(retrieve(1)[0].id, "A");
+    let direct = retrieve(2);
+    assert_eq!(
+        direct.iter().map(|c| c.id.as_str()).collect::<Vec<_>>(),
+        ["A", "B"]
+    );
+    let expanded = retrieve(3);
+    assert_eq!(expanded.len(), 3);
+    assert_eq!(&expanded[..2], direct.as_slice());
+    assert_eq!(expanded[2].id, "C");
+}
+
+#[test]
+fn ranking_backfill_visits_original_anchors_in_direct_rank_order() {
+    let (target, pool, vocabulary) = backfill_fixture();
+    // E scores higher against B than C does against A, but B is the second
+    // anchor. Backfill introduces no new cross-anchor scoring rule.
+    let weaker = BTreeMap::from([("B".to_owned(), set(&["E"]))]);
+    let ranked = rank(
+        &target,
+        &pool.iter().collect::<Vec<_>>(),
+        &vocabulary,
+        &weaker,
+        &SenseTags::default(),
+        3,
+    );
+    assert_eq!(
+        ranked.iter().map(|c| c.id.as_str()).collect::<Vec<_>>(),
+        ["A", "B", "C"]
+    );
+}
+
+#[test]
+fn ranking_backfill_stays_inside_the_supplied_pool() {
+    let (target, pool, vocabulary) = backfill_fixture();
+    // The vocabulary still describes the omitted companions. A pool or
+    // module restriction must not be undone by following their definitions.
+    let scoped: Vec<_> = pool
+        .iter()
+        .filter(|s| !["C", "CAlias", "E"].contains(&s.id.as_str()))
+        .collect();
+    let ranked = rank(
+        &target,
+        &scoped,
+        &vocabulary,
+        &BTreeMap::new(),
+        &SenseTags::default(),
+        8,
+    );
+    assert_eq!(
+        ranked.iter().map(|c| c.id.as_str()).collect::<Vec<_>>(),
+        ["A", "B"]
+    );
+}
+
+#[test]
+fn ranking_backfill_requires_an_original_direct_anchor() {
+    let (mut target, pool, vocabulary) = backfill_fixture();
+    target.definitions = set(&["unrelated"]);
+    assert!(
+        rank(
+            &target,
+            &pool.iter().collect::<Vec<_>>(),
+            &vocabulary,
+            &BTreeMap::new(),
+            &SenseTags::default(),
+            8,
+        )
+        .is_empty()
+    );
+}
+
+#[test]
+fn ranking_backfill_does_not_admit_names_partial_tags_or_unfitting_binders() {
+    let (target, mut pool, mut vocabulary) = backfill_fixture();
+    for (id, declaration, definitions, binders) in [
+        ("Homonym", "M.Homonym", vec![], vec!["x"]),
+        ("Partial", "M.Partial", vec![], vec!["y"]),
+        ("OtherSense", "M.OtherSense", vec![], vec!["y"]),
+        ("Foreign", "M.Foreign", vec!["left"], vec!["z"]),
+    ] {
+        pool.push(statement(id, declaration, &definitions));
+        vocabulary.insert(declaration.into(), vocab("M", &binders, &[]));
+    }
+    let tags = tagged(vec![
+        tag("M.A", "x", &[], "left-sense"),
+        tag("M.Partial", "y", &["fixed"], "left-sense"),
+        tag("M.OtherSense", "y", &[], "different-sense"),
+    ]);
+    let ranked = rank(
+        &target,
+        &pool.iter().collect::<Vec<_>>(),
+        &vocabulary,
+        &BTreeMap::new(),
+        &tags,
+        8,
+    );
+    assert_eq!(
+        ranked.iter().map(|c| c.id.as_str()).collect::<Vec<_>>(),
+        ["A", "B", "C", "E"]
+    );
+}
+
+#[test]
+fn ranking_backfill_deduplicates_declarations_before_filling_the_cap() {
+    let target = statement("T", "M.Target", &["goal"]);
+    let pool = [
+        statement("A", "M.A", &["goal", "left"]),
+        statement("C", "M.C", &["left"]),
+        statement("CAlias", "M.C", &["left"]),
+        statement("D", "M.D", &["left"]),
+        statement("E", "M.E", &["left"]),
+    ];
+    let vocabulary = pool
+        .iter()
+        .chain([&target])
+        .map(|s| (s.declaration.clone(), vocab("M", &["x"], &[])))
+        .collect();
+    let ranked = rank(
+        &target,
+        &pool.iter().collect::<Vec<_>>(),
+        &vocabulary,
+        &BTreeMap::new(),
+        &SenseTags::default(),
+        4,
+    );
+    assert_eq!(
+        ranked.iter().map(|c| c.id.as_str()).collect::<Vec<_>>(),
+        ["A", "C", "D", "E"]
+    );
+}
+
 #[test]
 fn target_selectors_read_the_frontier_report() {
     let report = json!({

@@ -1,0 +1,11 @@
+{
+  "id": "18548e6e-ac9e-4fad-87cd-64feef80384a",
+  "label": "Solve the balanced allocation equations for every feasible named share of work",
+  "argument_id": "aa8618b3-508d-477e-903d-94a18afbd04c",
+  "challenge_module": "TruthCore.Results.Causality.ReceiptAllocation.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ReceiptAllocation.Solution",
+  "theorem": "TruthCore.Results.Causality.ReceiptAllocation.sharpRange",
+  "comparator_config": "results/18548e6e-ac9e-4fad-87cd-64feef80384a/comparator.json",
+  "status": "solution-present",
+  "description": "Four nonnegative routing entries realize every integer in the specified interval. At a zero lower bound one can construct an allocation with no named input expended. At a positive lower bound every compatible allocation supplies an exercised contributor step to the combined work. Interpreting actual expenditure as productive remains an open application condition."
+}

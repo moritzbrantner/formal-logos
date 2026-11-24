@@ -3,6 +3,7 @@ module
 
 public import TruthCore.Causality.A10PreferentialExpectation
 public import TruthCore.Causality.AccidentalFeatureOrigin
+public import TruthCore.Causality.AcquiredHistoryTransfer
 public import TruthCore.Causality.ActPriorityAtFirst
 public import TruthCore.Causality.ActPriorityThetaEight
 public import TruthCore.Causality.ActualCommonRoot
@@ -44,6 +45,7 @@ public import TruthCore.Causality.CogitoCapacityInterface
 public import TruthCore.Causality.CogitoNecessaryConcrete
 public import TruthCore.Causality.ComingToBeHorns
 public import TruthCore.Causality.CommonPriority
+public import TruthCore.Causality.ComparativeFoundation
 public import TruthCore.Causality.CompleteCauseContributorCover
 public import TruthCore.Causality.ComponentFirstness
 public import TruthCore.Causality.ComposerTemporalDefinitionFork
@@ -212,6 +214,7 @@ public import TruthCore.Causality.PureIndiscernibility
 public import TruthCore.Causality.Q44EssentialSource
 public import TruthCore.Causality.Q44SourceSupply
 public import TruthCore.Causality.QuantitativeTransferPaths
+public import TruthCore.Causality.ReceiptAllocation
 public import TruthCore.Causality.ReceivedEsseActualGiver
 public import TruthCore.Causality.ReceptionLimitation
 public import TruthCore.Causality.ReflexiveDependenceScope

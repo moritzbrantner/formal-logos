@@ -1,0 +1,9 @@
+{
+  "id": "14539ae8-d014-4931-95c0-2f309e94f986",
+  "label": "Each covered acquisition has source input or an earlier covered productive contributor",
+  "paraphrase": "Open within a supplied exercise record. For each named source and each event in its covered family, either a source-borne event contributes by an actual exercised step to this event, or some covered event at a strictly lower natural-number stage does. One productive predecessor per covered event suffices. Warrant for the assigned coverage, stages, contributors and any temporal interpretation requires independent evidence.",
+  "lean_declaration": "TruthCore.Causality.AcquiredHistoryTransfer.RankedInputs",
+  "definition_ids": [
+    "7b20df90-a3d9-41c7-be8b-1d2beb5b995a"
+  ]
+}
