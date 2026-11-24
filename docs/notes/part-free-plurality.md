@@ -377,6 +377,17 @@ intellect and the application of GOD_4 have their own arguments.
 [Root agreement](../../corpus/results/62568126-6e89-40b8-a786-2ec49fb7687e.json)
 and [same-source consumer](../../corpus/results/c66eead8-8674-4d0c-b04f-423d51c34392.json)
 
+The computed premise comparison also exposes older ways to prove structural
+source agreement. One identifies beings by their strict ancestors. Two roots
+both have an empty strict ancestry, so applying that identity criterion to
+actual beings already constrains their individuation. Another route identifies
+complete producers through their participation and coverage premises. To
+use that route here, the actual-concrete grounding edges would have to meet
+its complete-production and parthood assumptions. Neither an argument on a
+different graph nor the mere listing of a route supplies that application.
+[Ancestor identity premise](../../corpus/statements/53cc2c53-1f9a-4e4a-8402-3ac464fa8352.json)
+and [complete-producer route](../../corpus/arguments/COMPLETE-CAUSE-CONNECTED-SOURCE-UNIQUENESS.json)
+
 **Provisional judgment.** This gives the common-source account a sufficient
 condition one could investigate at the actual sites of joint dependence. The
 five-being case prevents transferring the unity of an effect to its sources
