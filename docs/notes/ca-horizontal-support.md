@@ -455,9 +455,10 @@ distinguishes a universal existential-inertia thesis from one restricted to a
 **nonempty subset of temporal concrete things** (§2.1), notes that some
 non-fundamental things may receive concurrent sustaining causes even if their
 foundation persists inertially, and proposes the **necessary temporal foundation**
-(NTF) package (§4.1): one or more actually necessary temporal foundations do
-not themselves require sustaining, while the rest of reality may be caused,
-grounded or constituted by them at every moment. The response also distinguishes
+(NTF) package (§4.1): a necessary temporal foundation N persists without
+sustaining causes or grounds. N explains the existence of each other temporal
+concrete object whenever that object exists, directly or indirectly. The
+account allows causal, grounding and constitutive explanations. The response also distinguishes
 lack of required sustenance from lack of *actual* sustenance (§2.2).
 Navigation: [Schmid, response to Hsiao and Sanders (2021), §§2.1–2.4, 4.1](https://josephschmid.com/response-to-hsiao-and-sanders-on-existential-inertia-and-the-thomistic-contingency-argument/).
 This is a consulted public textual comparison, **not a newly pinned passage or
@@ -465,23 +466,23 @@ a new formal attribution**. No new source claim or verified passage is asserted.
 
 Consequently the mere proposition
 
-> **S:** Some temporal concrete being persists without external sustaining.
+> **S (refined actual-persistence reading):** Some temporal concrete being
+> actually persists without concurrent extrinsic ontological dependence.
 
 is **not** the genuine logical negation of
 
-> **C3:** Every *presently existentially derivative* bearer of received esse
-> has an appropriately concurrent actualizer of its being.
+> **C3:** Whenever a bearer with received esse is present, some giver gives it
+> being at that moment, in every world quantified over by the history.
 
 One possible witness to S is an **underived *temporal* necessary
 foundation N**, which is outside C3's antecedent. C3 and S may both be true
 in such a framework: N does not need a giver, while N's *effects* may
 receive continuing support. But the classical Thomistic first source is
 **timeless**, not temporal, so it does **not** witness S. A world in which
-all temporal creatures are concurrently sustained by a timeless source may
-satisfy C3 but **fails to instantiate Schmid's nonempty restricted temporal
-inertia thesis**. The compatibility established here is between C3 and
-*one unsustained temporal, unreceived N*, not between Schmid's subset EIT
-and every classical theistic worldview.
+every temporal concrete being is concurrently sustained by a timeless
+source may satisfy C3 and has no witness for S. This incompatibility
+concerns actual unsustained persistence. The formal comparison below checks
+only the no-giver projection of S, with an ever-present unreceived bearer.
 
 **Checked formal surrogate.** The newly added unregistered theorem
 `Results.Causality.TimeSymmetricGiving.subsetInertiaCompatibleWithC3`
@@ -543,8 +544,7 @@ source/ground relationship. In particular:
    `40aefb2e` becoming/being separation; the English passage
    `AQUINAS-ST-I-Q104-A1-EN` was read in the earlier campaign. **Reuse the
    C2 source investigation** in
-   [foundational-absence-warrant.md](foundational-absence-warrant.md),
-   §2.2: ST I q.104 a.3 **reply 1** expressly separates the absence of
+   [foundational-absence-warrant.md §3](foundational-absence-warrant.md#3-test-2-the-hybrids-reply): ST I q.104 a.3 **reply 1** expressly separates the absence of
    existence (no directly productive non-being) from corruption; **reply 3**
    says divine annihilation, if it occurred, would be cessation of an action
    rather than another positive divine action. These are source-specific
@@ -640,4 +640,3 @@ structural certificate, one scoped reading comparison and no new corpus
 statement, definition, claim, argument or result. Intended `frontier-diff`:
 **no change**. The independent semantic challenge of this full section and
 the final-head CI are required before publication as reviewed support.
-
