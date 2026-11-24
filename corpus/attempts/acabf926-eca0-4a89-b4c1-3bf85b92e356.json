@@ -1,0 +1,19 @@
+{
+  "id": "acabf926-eca0-4a89-b4c1-3bf85b92e356",
+  "label": "Test selective operative-input deletion as a local productive-path diagnostic",
+  "date": "2026-11-24",
+  "statement_ids": [
+    "ca58266a-44d2-4388-a6db-b6a02c4be057",
+    "b26c10a0-983d-5a88-aa03-cc601bc1ddc6"
+  ],
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "Draft handoff for #1934, docs/notes/actuality-esse-research.md, Source-specific productive deletion. A proposed Supply-induction lemma says loss of an originally supplied target after deleting groups using selected productive inputs implies a nonempty contributor path from a selected input to that same target. Reproduced finite structural diagnostic: 8192 assignments, 8146 supplied targets, 194 losses after the productive cut and no loss without such a path, 6846 selected-input paths despite surviving the cut, 98 recipient-esse-cut losses without the selected-input path. Both bearer-esse supplies are preserved by the productive cut. A separate two-context control preserves a retained determination without a present selected-input path; it changes the seed basis and does not instantiate the fixed-seed lemma. No proof or causal attribution is mechanically verified; these counts supersede unrecorded chat counts for the stated fixture only. No new source claim or change to earlier judgments.",
+  "blocker": "Formalize or reuse the loss-to-path consequence, ensure the path uses actually exercised records with actual endpoints and independently warranted source ownership and contributor classification, and assess the existing CreditWarrantsCause adapter. Universal coverage of the same source for every eligible respect remains open. Next substantive test: whether giving the concrete nature of a secondary agent includes giving the productive efficacy of its native powers, separately from their exercise on this occasion. Local truth CLI, Lean, Comparator, NanoDa and independent semantic review are unavailable in the current environment.",
+  "evidence": [
+    "PR-1921",
+    "0b462078-ca02-4731-945c-8b088d1b69ad",
+    "a03d8c18-3d85-49b4-a2ab-5022acc0701e",
+    "fd3330d0-dab7-4d44-9f51-790f196f8049"
+  ]
+}
