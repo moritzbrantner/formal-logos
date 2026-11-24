@@ -1531,3 +1531,120 @@ For sub-route C, `96d25c42`'s own recorded next step is retained unchanged
 discriminates universal essential dependence from switching support, or
 justifies the two source interfaces and their world scope." The 2026-11-11
 next step recorded for its concrete instance `dd41c165` is likewise retained.
+
+
+## ¬C3: from finite survival to survival at a limit (2026-11-23)
+
+**Target and nonoverlap.** Issue #1801 asks what a law contributes to the
+continued existence of the *same already actual received-esse bearer* under
+¬C3 (`40a97664`). This is a temporal-scope test of that law, distinct from
+#1891's complete #1614 source/priority model, #1895's finite-step source
+withdrawal, and #1898's inertial-foundation subset. It adds no new causal
+ontology, source claim, God-route premise, or proof of a metaphysically
+possible world. The relevant existing relations are
+`TimeSymmetricGiving.CessationNeedsInducer` (all time pairs),
+`ConcurrentActualization.ConcurrentlyActualized`,
+`SustainingCausation.BeingGiving`, and `TemporalHistory.History`.
+
+### Same bearer, two laws and the limit
+
+The new `LimitPersistenceLaw` control uses `WithTop Nat`, an
+abstract time order with natural-number stages and an additional limit
+`⊤` (ω+1). The source is present at every stage in both versions; the
+received-esse recipient is present at *every finite* stage and is given
+being at stage zero only. All finite stages and the source's identity are
+the same in the two versions. At `⊤`, one history keeps the recipient
+and the other loses it. Both agree with the world-level existence
+interpretation at the designated present `now = 0`.
+
+- **Finite-step persistence** `E(n) → E(n+1)` is true in **both**
+  versions. It is silent on whether the receiver exists at `⊤`.
+  Therefore it cannot, by itself, carry a proof of existence through a
+  limit, regardless of the number of finite stages inspected.
+- **Global interval no-positive-loss** (the already defined
+  `CessationNeedsInducer`) says that if the *same* bearer is present
+  at s and missing at any later t, some positive cessation-inducer
+  occurs in (s,t]. With no inducer, it holds of the limit-surviving
+  history and fails for the disappearing one. This is a genuinely
+  stronger existential-law scope, not a theorem extracted from the
+  finite-step rule.
+- **Positive loss at the limit**: a third profile retains the
+  disappearing history but explicitly declares an inducer at `⊤`
+  for that very receiver, which makes the interval law true. That
+  interpretation adds an ontic event; it is not licensed by
+  describing a missing recipient or source withdrawal as an event.
+  Anyone treating withdrawal as a positive loss must justify that
+  classification. A conserver can instead reject the law's coverage
+  of this kind of cessation.
+- **¬C3 survives the stronger law.** The limit-surviving receiver
+  obeys the interval-wide no-positive-loss law while the originator
+  does not give its being at later stages or the limit. Thus even
+  a strengthened global conservation-of-presence law is compatible
+  with rejection of weak concurrent `GivesAt` in the *same model*.
+  This compatibility is not an explanatory proof of that law or
+  of genuine existential derivativeness.
+
+`TruthCore.Results.Explanation.LimitPersistenceLaw.limitPersistenceControls`
+is the unregistered proof of the above exact 14-conjunct
+`LimitCertificate` (check the delivered CI head before calling it
+Lean-verified). It reuses `WithTop Nat` from Mathlib and leaves
+the previously registered #743 law-identification results untouched.
+
+### Strongest ¬C3 response and the exact question
+
+Schmid's no-cessation account considers an object present throughout
+a half-open interval before a later moment, with no cessation inducer over
+the relevant interval. It does not restrict persistence to discrete
+successor steps. The `TimeSymmetricGiving.CessationNeedsInducer` control
+uses the analyst's stronger premise that presence at any earlier moment
+suffices, given no inducer up to the later moment. Applying it to an
+ω+1 endpoint is an analyst test. If the global law is genuinely metaphysically governing,
+prior actuality plus no positive loss explains the later bearer,
+including at a limit, without strict concurrent production.
+This model adds **no independent objection** to that broad form of
+existential inertia. It shows why the weaker local/step version of
+the rival is not enough.
+
+The conservation advocate can deny the **existential** reach of
+that global law for still-received esse, or argue that loss of a
+concurrent actualizer is itself a relevant absence whose effects
+need no positive destructor; neither is a consequence of the
+purely formal model. The inertialist can reply that cessation is
+a change requiring an inducer but must clarify whether this covers
+a bearer without an underlying persistent subject at the endpoint.
+Both sides must preserve the distinction between an ontic
+destructive event and an absent productive contribution.
+
+At **local explanatory scope**, the broad interval law, an earlier
+positive existence fact and the absence of a bearer-directed inducer
+over the interval jointly give a conditional persistence account. At **ultimate scope**, that law still uses the prior actuality
+as a positive explanans. A global law can be independently primitive,
+but neither its quantifier over arbitrary intervals nor its satisfaction
+by the complete history establishes the actual *instantiation*
+`∃t, E(t)` without a further foundation/ontology commitment.
+This is the previously recorded #1801 §7 positive-actuality question,
+not a second "law fails to select a history" theorem or an independent
+new cost. The sustaining side is subject to the same test for its
+source's actuality and the bridge from ground to productive giving.
+
+**Cumulative judgment (provisional):** the stronger interval-wide
+no-destruction law avoids the limit objection and remains a coherent
+structural ¬C3 rival. Compared with mere successor-step persistence,
+it pays for **explicit limit-inclusive existential coverage**, not
+a demonstrated logical contradiction. Its metaphysical warrant and
+the treatment of an apparent nonproductive cessation remain open.
+Neither C1/C2 nor a same-witness GOD_4 route is disproved by it; in
+particular a necessary origin can coexist with inertial persistence.
+C3 and its negation still separate at the meaning and positive warrant
+of *presently productive existential derivation*, not the arithmetic
+of successor steps.
+
+**Next discriminating test:** seek a source/causal or metaphysical
+principle for **limit-inclusive absence of real destruction** that
+(i) is not simply `CessationNeedsInducer` asserted again, (ii)
+does not confuse absence of a bearer with an act of destroying it,
+(iii) applies to this very bearer with received esse, and (iv)
+can be evaluated against a timeless/concurrent sustainer under
+matched explanatory completeness standards. No claimed frontier
+change; no fresh premise, theorem registration, source attribution
+or warrant promotion.
