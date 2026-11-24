@@ -1,0 +1,9 @@
+{
+ "id": "8c945061-acb2-47e1-9865-d10f8f925757",
+ "label": "Two-way toward one effect: y gives x being at w and withholds it where accessible y exists",
+ "term": "two-way toward one effect (TwoWayTowardAt)",
+ "definition": "TwoWayTowardAt F w y x: y exists at w, gives x being at w (GivesTo, DEF 62dfa893-b633-4513-9790-8f9a0a3087e0), and at some world accessible from w where y exists does not give x being. TwoWayGiverAt (DEF e006ddeb-2c88-4835-8558-2f360cc5a3eb) holds exactly when y is two-way toward some effect (NarDerivation Model.Laws 1).",
+ "basis": "stipulative",
+ "lean_declaration": "TruthCore.Causality.NarDerivation.TwoWayTowardAt",
+ "note": "Analyst definition, attribution deferred (docs/notes/nar-derivation.md). It says nothing about what decides the difference: choice, chance and a varying external condition all satisfy it. Example: on the Thomist account, God giving a creature being and being free not to continue its existence (ST I q.104 a.3 co., navigation). Non-example: a giver fixed toward x (DEF 02aa24f8-e6cc-4d47-8b34-d3b7149e7ee8)."
+}

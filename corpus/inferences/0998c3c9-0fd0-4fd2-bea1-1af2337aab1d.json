@@ -1,0 +1,14 @@
+{
+  "id": "0998c3c9-0fd0-4fd2-bea1-1af2337aab1d",
+  "label": "NAR, from the root's withholding of each grounded being, bridge (b) and the common root (inference)",
+  "input_statement_ids": [
+    "0c27f65a-6a6b-438a-b96c-b2bab9f21ac3",
+    "c02c7bbe-1ec5-4700-8232-2888ed9b6eb1",
+    "fbd0a6d3-5ca6-4f17-8651-ed0d6989c747"
+  ],
+  "output_statement_id": "43651417-cd19-43d7-8f70-8def61acb0f0",
+  "rule": "A grounded necessary being would be given being by the common root at the root's withholding world",
+  "meaning": "Let x be a NECESSARY_2 actual concretum and suppose it has an actual concrete G-ground. The common root n of 0c27f65a (only its root and reach clauses are used) is x (impossible: a root has no ground) or grounds x. By (a), n exists at some accessible world v and does not give x being there. x exists at v, being necessary, so by (b) n gives x being at v: contradiction. So x is an actual root. Constructive.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

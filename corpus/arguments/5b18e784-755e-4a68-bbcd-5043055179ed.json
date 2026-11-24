@@ -1,0 +1,43 @@
+{
+  "id": "5b18e784-755e-4a68-bbcd-5043055179ed",
+  "label": "Every actual root withholds each grounded being, from willed giving, WN and SS",
+  "premise_statement_ids": [
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410",
+    "0c27f65a-6a6b-438a-b96c-b2bab9f21ac3",
+    "5c1aba17-d224-49fd-a31c-728a54ac63a9",
+    "06145e71-01c8-49d6-ae6a-e0b622076575",
+    "c02c7bbe-1ec5-4700-8232-2888ed9b6eb1",
+    "0266eac2-3fad-43eb-a1f1-e784c5356105",
+    "85f3fea2-f0a3-424a-acb9-ec4ecd0cd4e1"
+  ],
+  "conclusion_statement_id": "fbd0a6d3-5ca6-4f17-8651-ed0d6989c747",
+  "inference_ids": [
+    "88811881-c7f0-45f2-9e10-f4b5243e52ed"
+  ],
+  "meaning": "Every actual root n is the common GOD_4 root of 0c27f65a, so it has intellect; with one power, its giving is the exercise of a rational power (5c1aba17). Let n ground the actual concretum x and suppose n withholds x at no accessible world where n exists. By (b), n gives x being at w, so n is fixed toward x (NECESSITATE_5). WN makes x required by n's end; x is not n (a root does not ground itself), so SS denies it. By excluded middle, n withholds x somewhere.",
+  "definition_ids": [
+    "02aa24f8-e6cc-4d47-8b34-d3b7149e7ee8",
+    "582f44c3-7778-4806-b385-e1eff852ac5e",
+    "62dfa893-b633-4513-9790-8f9a0a3087e0",
+    "90719cb5-43c2-4677-8ad7-20e077e28ac9",
+    "1620ba7e-edb9-56c4-bd02-3ece55903b1c",
+    "c57e2682-08e6-527e-950f-0fa0a7ff11ef",
+    "d8e2ed12-8089-5202-ae51-e807cf611c76",
+    "88f9f6e8-997b-5f7d-afa1-c501954c3807",
+    "88bc0655-9dd0-5879-ba1b-3fca9f86c1f4",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "a1b2e330-388f-4120-bc5c-969642317792",
+    "b8061228-9131-40f2-83bd-cb7d719bd0a0",
+    "fdeb7757-10db-4fa7-91a4-6c15ee5100d2"
+  ],
+  "disambiguation_ids": [
+    "5836e1f6-ccce-4ce8-b9d6-c89afc7120bb",
+    "6e92c6e3-edf0-5d7e-b2b3-788b24b8b768",
+    "623ddbf6-9683-5361-bae4-e348a00ec680",
+    "6f1d1395-7c1d-5bd5-a45d-03380857aed6",
+    "205a39c3-915d-5fe4-8076-a9ff91329e08",
+    "c529e8d3-43e3-53a8-a82f-3955e9815265",
+    "e5417243-d6f3-4776-9694-40d85bb34ff4"
+  ]
+}

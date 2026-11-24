@@ -6,9 +6,10 @@
   "01b44013-2db5-546c-a22e-06104e8e724c",
   "7bc1d667-fda2-4744-b055-9ba6cbe7f648",
   "ca00e246-197c-4107-97a7-ca51448b0247",
-  "3055e6f1-5de7-5c32-9b6f-d023d0c82025"
+  "3055e6f1-5de7-5c32-9b6f-d023d0c82025",
+  "02aa24f8-e6cc-4d47-8b34-d3b7149e7ee8"
  ],
- "resolution": "Four senses of a necessitating source or reason, on three vocabularies. NECESSITATE_1: one rigid act token strictly implies the effect (#555 OutputProfile, StrictEfficacy). NECESSITATE_2: the giver gives the same beings wherever it exists (#1897 CausalityFrame, FixedGiver). NECESSITATE_3: the giver gives the same beings at accessible worlds with the same set-up (the will step's sense, on the agency overlay of the same CausalityFrame). NECESSITATE_4: an explaining reason strictly implies its explanandum (#755 Arena; a fact-level analogue, not a source relation). A necessary source or true reason with a contingent effect is excluded by an already verified K-closure fact in senses 1, 2 and 4: #555 rigid_core (the first clause of SimplicityCollapse.Core; ModalSenseSupport.RivalNegations refutes NecessaryActStrictlyYieldsContingent), #1897 laws 3 and 4, and PSRStrength.necessitating_reason_contingent; in sense 3 only at a source with an invariant set-up (will-versus-chance Model.Laws 8), since a giver whose set-up varies is vacuously set-up necessitated. NECESSITATE_2 implies NECESSITATE_3 for a giver existing at w, and with an invariant set-up NECESSITATE_3 is exactly accessible-world fixed giving (Model.Laws 14). No argument passes between senses, and no translation between the OutputProfile, Arena and CausalityFrame vocabularies is asserted. The exclusion is indifferent to the source's being personal: it excludes a necessitated will as well as a necessitating impersonal source (Model.Laws 8 and 10).",
+ "resolution": "Five senses of a necessitating source or reason, on three vocabularies. NECESSITATE_1: one rigid act token strictly implies the effect (#555 OutputProfile, StrictEfficacy). NECESSITATE_2: the giver gives the same beings wherever it exists (#1897 CausalityFrame, FixedGiver). NECESSITATE_3: the giver gives the same beings at accessible worlds with the same set-up (the will step's sense, on the agency overlay of the same CausalityFrame). NECESSITATE_4: an explaining reason strictly implies its explanandum (#755 Arena; a fact-level analogue, not a source relation). A necessary source or true reason with a contingent effect is excluded by an already verified K-closure fact in senses 1, 2 and 4: #555 rigid_core (the first clause of SimplicityCollapse.Core; ModalSenseSupport.RivalNegations refutes NecessaryActStrictlyYieldsContingent), #1897 laws 3 and 4, and PSRStrength.necessitating_reason_contingent; in sense 3 only at a source with an invariant set-up (will-versus-chance Model.Laws 8), since a giver whose set-up varies is vacuously set-up necessitated. NECESSITATE_2 implies NECESSITATE_3 for a giver existing at w, and with an invariant set-up NECESSITATE_3 is exactly accessible-world fixed giving (Model.Laws 14). No argument passes between senses, and no translation between the OutputProfile, Arena and CausalityFrame vocabularies is asserted. The exclusion is indifferent to the source's being personal: it excludes a necessitated will as well as a necessitating impersonal source (Model.Laws 8 and 10). NECESSITATE_5 (appended for docs/notes/nar-derivation.md): the giver is fixed toward one effect from w, giving it being at w and at every accessible world where the giver exists (FixedTowardAt); per effect, so a giver can be fixed toward one effect and two-way toward another. Used only by the open premise WN (RationalFixedGivingIsRequired); no argument passes between it and the other senses.",
  "term_label": "NECESSITATE",
  "senses": [
   {
@@ -34,6 +35,12 @@
    "label": "NECESSITATE_4",
    "definition_id": "3055e6f1-5de7-5c32-9b6f-d023d0c82025",
    "lean_declaration": "TruthCore.Explanation.PSRStrength.Necessitating"
+  },
+  {
+   "id": "11ebe8bd-d0c8-4fad-a257-36091940ce10",
+   "label": "NECESSITATE_5",
+   "definition_id": "02aa24f8-e6cc-4d47-8b34-d3b7149e7ee8",
+   "lean_declaration": "TruthCore.Causality.NarDerivation.FixedTowardAt"
   }
  ]
 }

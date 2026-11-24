@@ -435,6 +435,12 @@ attributed; no claim record is added.
    than discharging it, unless (a) is itself derived. One candidate
    derivation: one power, an invariant set-up and simplicity give a uniform
    mode of giving across effects (#555; #1897 gap 6).
+
+   **Done in [nar-derivation.md](nar-derivation.md).** NAR follows from (a),
+   (b) and the common root (N1). Under (b) and its companions, (a) is
+   equivalent to NAR. Uniformity does not follow from one power, an invariant
+   set-up and willed exercise (mixed-mode root model). (a) also follows from
+   the will route (WN and SS, N3), which moves the crux to WN.
 2. **Existence of a holder at `w`:** the arguments are universal over holders.
    #1897's P1′ supplies existence; with argument 3 it gives GOD_4's existence
    at `w` as a further route, which is not registered here.

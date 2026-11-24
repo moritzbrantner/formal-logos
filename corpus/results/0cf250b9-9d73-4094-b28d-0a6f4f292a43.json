@@ -1,0 +1,11 @@
+{
+  "id": "0cf250b9-9d73-4094-b28d-0a6f4f292a43",
+  "label": "NAR derivation controls checked",
+  "argument_id": "48653f48-d5ba-40c4-a997-324fc2316c54",
+  "challenge_module": "TruthCore.Results.Causality.NarDerivation.Challenge",
+  "solution_module": "TruthCore.Results.Causality.NarDerivation.Solution",
+  "theorem": "TruthCore.Results.Causality.NarDerivation.narDerivationControls",
+  "comparator_config": "results/0cf250b9-9d73-4094-b28d-0a6f4f292a43/comparator.json",
+  "status": "solution-present",
+  "description": "Premise-free laws and models for the NAR derivation batch. Sense-mixing control: they relate NECESSARY_2, NECESSITATE_5, the willed-giving and power senses without a bridge premise. Establishes no premise."
+}

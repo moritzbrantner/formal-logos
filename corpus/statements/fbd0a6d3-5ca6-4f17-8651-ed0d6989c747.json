@@ -1,0 +1,16 @@
+{
+  "id": "fbd0a6d3-5ca6-4f17-8651-ed0d6989c747",
+  "label": "Every actual root withholds its giving of each grounded actual concretum at some accessible world",
+  "paraphrase": "OPEN premise (a), analyst formulation, unattributed: for every actual root n of the selected grounding relation G at w and every actual concretum x that n grounds at w, there is a world accessible from w where n exists and does not give x being. #1897's two-way profile extended from the actual contingents to every being the root grounds, including any putatively NECESSARY_2 one; close to the theist-internal free-creation premise. Under (b), factive giving, a common root, necessary roots and excluded middle it is equivalent to NAR (43651417): the same commitment in the giving register, not additional evidence.",
+  "lean_declaration": "TruthCore.Causality.NarDerivation.ActualRootsWithholdEachGrounded",
+  "definition_ids": [
+    "c57e2682-08e6-527e-950f-0fa0a7ff11ef",
+    "a1b2e330-388f-4120-bc5c-969642317792",
+    "62dfa893-b633-4513-9790-8f9a0a3087e0",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ],
+  "disambiguation_ids": [
+    "623ddbf6-9683-5361-bae4-e348a00ec680"
+  ]
+}

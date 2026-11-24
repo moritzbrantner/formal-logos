@@ -1,0 +1,15 @@
+{
+  "id": "c02c7bbe-1ec5-4700-8232-2888ed9b6eb1",
+  "label": "An actual G-ground gives its grounded being being wherever that being exists",
+  "paraphrase": "OPEN bridge (b), analyst formulation, unattributed: whatever is an actual concrete ground of x at w in the selected grounding relation G (in the profile on the frame's existence) gives x being (GivesTo) at w if x exists there, and at every world accessible from w where x exists. The only premise of this batch that joins G-grounding to giving (rigor contract 5 of #1926; #1626). It carries two components: grounding read as productive dependence for being (the sustaining cause-of-being sense of 88a8fba7), and rigidity of the actual ground's giving across accessible worlds where the grounded being exists. Classical theism (conservation) and Avicenna's emanation both accept it; it fails if G is read as non-productive dependence.",
+  "lean_declaration": "TruthCore.Causality.NarDerivation.ActualGroundsGiveWhereverGroundedExists",
+  "definition_ids": [
+    "a1b2e330-388f-4120-bc5c-969642317792",
+    "62dfa893-b633-4513-9790-8f9a0a3087e0",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ],
+  "disambiguation_ids": [
+    "623ddbf6-9683-5361-bae4-e348a00ec680"
+  ]
+}

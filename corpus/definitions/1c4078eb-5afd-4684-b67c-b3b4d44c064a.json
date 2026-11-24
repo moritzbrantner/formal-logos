@@ -1,0 +1,9 @@
+{
+ "id": "1c4078eb-5afd-4684-b67c-b3b4d44c064a",
+ "label": "Uniform mode of giving: a giver two-way toward one effect is two-way toward each it gives",
+ "term": "uniform mode of giving (UniformGivingModeAt)",
+ "definition": "UniformGivingModeAt F w y: if y is two-way toward some effect at w (DEF 8c945061-acb2-47e1-9865-d10f8f925757), then y is two-way toward every being it gives being at w. A mixed-mode giver (fixed toward one effect, DEF 02aa24f8-e6cc-4d47-8b34-d3b7149e7ee8, and two-way toward another) violates it; a giver two-way toward nothing satisfies it vacuously.",
+ "basis": "stipulative",
+ "lean_declaration": "TruthCore.Causality.NarDerivation.UniformGivingModeAt",
+ "note": "Analyst definition for #1897 gap 6 and #1944 gap 1 (docs/notes/nar-derivation.md). It is a constraint on the extensional exercise profile only; it does not say that one intrinsic act has one mode. One power, an invariant set-up and willed (rational) exercise do not entail it (Model.MixedModeRoot). Exercise-level invariance (the #555 BeingCarriesAct pattern) makes a giver two-way toward nothing (Model.Laws 4), so it yields uniformity only by collapse. On the theist's own account the mode of one will varies by object: God wills his own goodness necessarily and other things not necessarily (ST I q.19 a.3, navigation), and the Son is begotten by nature, not by will (ST I q.41 a.2, navigation)."
+}

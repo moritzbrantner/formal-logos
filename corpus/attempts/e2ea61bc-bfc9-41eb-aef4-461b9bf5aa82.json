@@ -1,0 +1,18 @@
+{
+  "id": "e2ea61bc-bfc9-41eb-aef4-461b9bf5aa82",
+  "label": "Does one power with an invariant set-up force a uniform mode of giving across effects?",
+  "date": "2026-11-24",
+  "statement_ids": [
+    "19f2e094-5740-4021-b3b4-13d7ed929355",
+    "fbd0a6d3-5ca6-4f17-8651-ed0d6989c747",
+    "43651417-cd19-43d7-8f70-8def61acb0f0",
+    "b8ee1a50-b1e2-435e-a082-4652a894438b"
+  ],
+  "kind": "countermodel",
+  "outcome": "succeeded",
+  "summary": "Answer: no. Hand-written model MixedModeRoot in TruthCore.Causality.NarDerivation.Model, checked by result 0cf250b9: the only actual root g (GOD_4, intellect, grounds every other being) gives the necessary d being at both worlds (fixed toward d, NECESSITATE_5) and the contingent c being at the actual world only (two-way toward c), by one rational power under a constant set-up with no external conditions; OnePower, SetupInvariantAt, WilledTwoWayAt, #1941's 5c1aba17, (b), factive giving, the common root, necessary roots and #1944's holder premises (holder d) hold, while uniformity, (a), NAR and #1944's argument-1 conclusion fail. Law 4: exercise-level simplicity (the #555 BeingCarriesAct pattern with strict efficacy) forces uniformity only as uniform fixity (two-way toward nothing), which law 2 excludes at a necessary root with a contingent effect. The obstacle: the classical reply to modal collapse (one intrinsic act, varying extrinsic termini) is the move that leaves the mode toward each effect unconstrained. Theist-internal evidence against unrestricted uniformity: one will necessary toward its own goodness and free toward others (ST I q.19 a.3), the Son begotten by nature not by will (ST I q.41 a.2), navigation only. Omission models of N1, N2 and N3 are in the same certificate; omitting (b) from N3 needs a non-reflexive frame (law 5).",
+  "blocker": "Uniformity needs its own premise; its warrant is weak and its defensible restricted form (effects distinct in nature from the source) is warranted only by N3's reasons (WN and SS). Next test: none on uniformity; work moves to WN.",
+  "evidence": [
+    "0cf250b9-9d73-4094-b28d-0a6f4f292a43"
+  ]
+}

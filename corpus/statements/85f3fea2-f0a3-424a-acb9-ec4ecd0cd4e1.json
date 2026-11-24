@@ -1,0 +1,14 @@
+{
+  "id": "85f3fea2-f0a3-424a-acb9-ec4ecd0cd4e1",
+  "label": "No being other than an actual root is required by that root's own end",
+  "paraphrase": "OPEN (SS, analyst formulation, unattributed): for every actual root n of the selected grounding relation G at w and every being x other than n, x is not required by n's own end (EndRequires). The self-sufficiency of the root's good (ST I q.19 a.3 co., navigation only: 'His goodness can be without other things'). Avicenna's First is self-sufficient in the same sense; the emanationist rival denies WN, not SS.",
+  "lean_declaration": "TruthCore.Causality.NarDerivation.ActualRootsEndRequiresNoOther",
+  "definition_ids": [
+    "90719cb5-43c2-4677-8ad7-20e077e28ac9",
+    "c57e2682-08e6-527e-950f-0fa0a7ff11ef",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87"
+  ],
+  "disambiguation_ids": [
+    "623ddbf6-9683-5361-bae4-e348a00ec680"
+  ]
+}

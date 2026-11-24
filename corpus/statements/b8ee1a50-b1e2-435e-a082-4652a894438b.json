@@ -1,0 +1,30 @@
+{
+  "id": "b8ee1a50-b1e2-435e-a082-4652a894438b",
+  "label": "NAR derivation: laws, nonvacuity, the mixed-mode root, omission models",
+  "paraphrase": "Premise-free laws and finite models (structural surrogates, not metaphysical possibility). Laws: (1) a two-way giver is one two-way toward some effect; (2) with (b), factive giving, a common root, necessary roots and some concrete contingent being, every actual root is two-way toward some concrete contingent being; (3) with these and excluded middle, NAR holds exactly when (a) does; (4) exercise-level invariance with exercise as giving makes a giver two-way toward nothing (uniformity only by collapse); (5) with reflexive access, the will route gives (a) without (b). Models: theist nonvacuity of N1-N3; the mixed-mode root (one rational power, invariant set-up, willed two-way giving toward the contingent, fixed giving toward a necessary grounded being that holds the joint-absence power; (b) and the holder premises hold; uniformity, (a), NAR and #1944's argument 1 conclusion fail; WN or SS fails); omission models of N1, N2 and N3.",
+  "lean_declaration": "TruthCore.Causality.NarDerivation.Model.Controls",
+  "definition_ids": [
+    "02aa24f8-e6cc-4d47-8b34-d3b7149e7ee8",
+    "8c945061-acb2-47e1-9865-d10f8f925757",
+    "1c4078eb-5afd-4684-b67c-b3b4d44c064a",
+    "90719cb5-43c2-4677-8ad7-20e077e28ac9",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "c57e2682-08e6-527e-950f-0fa0a7ff11ef",
+    "a1b2e330-388f-4120-bc5c-969642317792",
+    "62dfa893-b633-4513-9790-8f9a0a3087e0",
+    "e006ddeb-2c88-4835-8558-2f360cc5a3eb",
+    "fdeb7757-10db-4fa7-91a4-6c15ee5100d2",
+    "b4bb7bb4-4e2d-437d-825e-79a029340e77",
+    "b8061228-9131-40f2-83bd-cb7d719bd0a0",
+    "de24ce2e-84e4-48d8-9cac-5f66ad532015",
+    "bf7eddca-8291-4744-8470-379babcd7781"
+  ],
+  "disambiguation_ids": [
+    "83264cf5-01fe-52fc-9a00-eeb024f6496e",
+    "5836e1f6-ccce-4ce8-b9d6-c89afc7120bb",
+    "e5417243-d6f3-4776-9694-40d85bb34ff4",
+    "8b3d47bc-7fee-4936-99ad-6561aedc657a",
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f"
+  ]
+}
