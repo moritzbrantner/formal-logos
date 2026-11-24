@@ -3,6 +3,56 @@
 Date: 2026-11-13. Research baseline:
 `03d97b48a86d4b7d7bbedcb4441398ce3a9dadef`.
 
+The current checkpoint is on `research/common-source-and-reliable-records`.
+Independent challenge accepted the common-source finding at `26f657f5c`,
+the quantum application at `79311ee6f` and the repaired access/ownership
+comparison at `4e44d8ce8`. The three new formal results passed binding,
+Comparator and NanoDa. Hosted checks and integration are pending. Work
+continues on divine unity without genus-wide causation (#1936) and on
+whether diachronic identity distinguishes conservation from persistence
+under a law (#1801).
+
+## From an underived source to one shared source
+
+In a well-founded grounding order, it suffices that the immediate suppliers
+joined to each dependent by a single grounding edge trace back pairwise to
+a common ancestor. They may meet at different
+beings for different dependents. If the actual grounding graph is weakly
+connected, all its underived sources must then coincide. A pluralist who posits two distinct
+underived sources in this connected, well-founded graph is committed to
+a dependent with two such suppliers having no shared ancestor. In the existing model,
+two rank-zero sources directly precede the same rank-one constituent.
+Explaining how two powers coordinate would leave open what sustains
+the existence of their bearers. [Argument, model and test](part-free-plurality.md#when-immediate-co-suppliers-suffice-for-a-common-source)
+
+This result connects arguments for the existence of an actual root with
+arguments that need to identify the same source. Having a short path to
+some source at every point is insufficient for the local-fork argument.
+The alternating relay has two roots even though every stage has an immediate
+source and every immediate fork joins. [Proof](../../TruthCore/Results/Causality/LocalSourceConfluence/Solution.lean)
+and [use of uniqueness in the De ente argument](../../corpus/results/c66eead8-8674-4d0c-b04f-423d51c34392.json)
+
+## What two observations tell us about a source
+
+In a closed, unitarily evolving memory with pure states, a blinded, equal-prior
+single-copy comparison between adjacent states turns a reliable readout into
+a lower bound on the change in the memory. At 75% success the required
+integral of energy standard deviation is at least πℏ/6 per transition. A
+clock displaying the answer can give a perfect score with the memory fixed.
+Even a bound established for one device's successive records would need to
+cover the fact labels across every upstream branch to support the finite-label
+argument. [Physical test and controls](../supertasks.md#what-the-reader-gets)
+
+DDC described continued control of his body after hemispheric disconnection.
+His performance differed between immediate visual comparisons and a delayed
+task in which a cue could guide reporting across visual fields. Those findings
+support a distinction between types of access. A cue could reach the side that retained the shape and enable the same
+verbal report. Both accounts can identify the continuing embodied person as
+the bearer and use the same explanation of task performance. They disagree
+over whether the organism's organization suffices for this subject's existence
+without a distinct thinking ground.
+[Case, competing explanations and existential ancestry](mind-physicalism-fork-419.md#does-divided-access-identify-the-source-of-the-experiencer-2026-11-25)
+
 ## Current comparisons of causal, Cartesian and cosmological explanations
 
 The proposed conclusions on branch `research/comparing-explanatory-representations`
