@@ -59,9 +59,10 @@ toward another (a *mixed-mode* giver).
 
 **Formal form of (a).** (a) says that the root withholds each grounded actual
 concretum at some accessible world where the root exists. It omits "gives `x`
-at `w`", which (b1) supplies. That is the only part N1 uses.
+at `w`", which (b1) supplies in N2 and N3; N1 uses only the withholding
+clause, together with (b2).
 
-**The bridge (b), split into what is used.** The brief's bridge (b) ("a
+**The bridge (b), split into what is used.** #1944 gap 1's bridge (b) ("a
 `G`-grounded concretum exists at `v` only if its `G`-ground gives it being at
 `v`") is not registered in its general form. The arguments use two parts, each
 only at the root:
@@ -308,7 +309,9 @@ N3 begs the question (law 6).
     therefore records an interpretation choice for `G` at the root:
     productive dependence for being.
 - **(b2)** (`eeccc832`): **moderately high.**
-  - Both sides accept it.
+  - The classical theist posits no necessary grounded being, so for them (b2)
+    holds only vacuously. Only the necessary-through-another rival accepts it
+    in substance.
   - The objection to general rigidity (contingent beings sustained elsewhere,
     or not at all) does not apply to it, because it is restricted to
     necessary grounded beings at worlds where the root exists.
@@ -409,7 +412,7 @@ The necessary-through-another rival now comes in three variants.
 (unread).** His emanation is standardly reported as mediated: from the one
 only one proceeds (*Ilāhiyyāt* IX.4, navigation only, not read for this
 slice). If so, the historical system denies `0c27f65a`'s direct-reach clause
-and is the mediated-creator variant, not the (b)-respecting variant against
+and is the mediated-creator variant, not the (b1)/(b2)-respecting variant against
 which N3 has force.
 
 ## 7. Overall provisional judgment
