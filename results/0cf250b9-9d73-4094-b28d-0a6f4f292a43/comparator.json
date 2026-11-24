@@ -1,0 +1,13 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.NarDerivation.Challenge",
+  "solution_module": "TruthCore.Results.Causality.NarDerivation.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.NarDerivation.narDerivationControls"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "enable_nanoda": true
+}

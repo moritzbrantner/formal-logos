@@ -1,0 +1,33 @@
+{
+  "id": "abc27f55-00fc-4c09-a6ad-1418de7926e9",
+  "label": "NAR, from the root's withholding of each grounded being, bridge (b2) and the common root",
+  "premise_statement_ids": [
+    "0c27f65a-6a6b-438a-b96c-b2bab9f21ac3",
+    "eeccc832-02c7-426a-bb16-d269260751be",
+    "fbd0a6d3-5ca6-4f17-8651-ed0d6989c747"
+  ],
+  "conclusion_statement_id": "43651417-cd19-43d7-8f70-8def61acb0f0",
+  "inference_ids": [
+    "0998c3c9-0fd0-4fd2-bea1-1af2337aab1d"
+  ],
+  "meaning": "Let x be a NECESSARY_2 actual concretum and suppose it has an actual concrete G-ground. The common root n of 0c27f65a (only its root and reach clauses are used) is x (impossible: a root has no ground) or grounds x. By (a), n exists at some accessible world v and does not give x being there. x is necessary, so by (b2) n gives x being at v: contradiction. So x is an actual root. Constructive.",
+  "definition_ids": [
+    "62dfa893-b633-4513-9790-8f9a0a3087e0",
+    "1620ba7e-edb9-56c4-bd02-3ece55903b1c",
+    "c57e2682-08e6-527e-950f-0fa0a7ff11ef",
+    "88f9f6e8-997b-5f7d-afa1-c501954c3807",
+    "88bc0655-9dd0-5879-ba1b-3fca9f86c1f4",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "a1b2e330-388f-4120-bc5c-969642317792"
+  ],
+  "disambiguation_ids": [
+    "6e92c6e3-edf0-5d7e-b2b3-788b24b8b768",
+    "623ddbf6-9683-5361-bae4-e348a00ec680",
+    "6f1d1395-7c1d-5bd5-a45d-03380857aed6",
+    "205a39c3-915d-5fe4-8076-a9ff91329e08",
+    "83264cf5-01fe-52fc-9a00-eeb024f6496e",
+    "c529e8d3-43e3-53a8-a82f-3955e9815265"
+  ]
+}
