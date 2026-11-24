@@ -499,3 +499,132 @@ this no-first profile. Neither result infers finite event cardinality from a
 finite metric bound. The interval is also not the integer unit grid of the
 bounded-resource argument; a uniform resource increment on every integer step
 is a separate hypothesis. Intended and actual root-premise change: none.
+
+## When a stage must leave a reliably readable state (#1859)
+
+**Provisional assessment (2026-11-25).** Finite generator action gives a
+physical reason to exclude an infinite sequence of uniformly readable
+updates of one closed quantum memory, even when adjacent states overlap.
+The relevant observation is the reader's advantage over guessing which of
+two adjacent states it received. A task that requires only a terminal value
+or a continuous change need never produce such an advantage. This extends
+the orthogonal-transition test in the [issue checkpoint](https://github.com/moritzbrantner/truth-core/issues/1859).
+
+### What the reader gets
+
+Fix one device, its physical clock and an ordered list of sampling times.
+For each adjacent pair, tell the reader which *pair* is under test. In
+repeat trials present one copy of the earlier or later internal state with
+equal probability. Hide the choice, sampling time and preparation command.
+Use the same readout for both alternatives within the pair. The readout
+may vary between pairs. Score every trial, assigning a fair guess on a
+missing or inconclusive record. Estimate the success probability on fresh
+trials after fixing the decoder. With unequal priors even a constant guess
+can beat one half. Repeated preparations estimate single-shot performance;
+pooling copies to decide each individual trial tests a different resource.
+
+Let the two record distributions be P and Q. If the decoder reports
+“later” on a set B, its success probability is
+`p = (1 + Q(B) − P(B))/2`. Thus success of at least `1/2 + ε` requires
+total variation distance `TV(P,Q) ≥ 2ε`. A binary record suffices. Waldherr
+and colleagues prepared two nonorthogonal states of a single nitrogen
+nuclear spin and measured correct, wrong and inconclusive identifications
+as a function of their overlap. This gives an experimental procedure for
+testing readability for individual pairs. It supplies no uniform guarantee
+over an infinite schedule and no measurement of that schedule's action.
+[Experimental protocol, Eq. (7) and Fig. 3](https://arxiv.org/pdf/1206.0453)
+
+### How much action a readable pair requires
+
+For a finite-dimensional memory, a binary readout has an effect
+`0 ≤ E ≤ I`. Its change in “later” probability is
+`Tr[E(ρ₁ − ρ₀)] ≤ D`, where `D = ‖ρ₁ − ρ₀‖₁/2`: the traceless difference
+has positive eigenvalues summing to D, and projection onto their subspace
+attains the bound. A fixed instrument with a fresh, uncorrelated auxiliary
+system likewise induces an effect on the memory. For pure endpoints,
+`D = √(1 − |⟨ψ₀|ψ₁⟩|²)`, as also follows from the equal-prior minimum-error
+formula. The shortest ray distance in the convention of the issue is
+`2 arccos |⟨ψ₀|ψ₁⟩| = 2 arcsin D`. Hence for a differentiable unitary
+trajectory on this same memory, each tested pair with advantage
+`εₙ ∈ [0,1/2]` consumes at least `ℏ arcsin(2εₙ)` of integrated energy
+standard deviation. The Hamiltonian may vary with the physical time used
+in the integral. [Anandan–Aharonov, Eqs. (1)–(6)](https://www.tau.ac.il/~yakir/yahp/yh64)
+
+For disjoint successive intervals within one action budget
+`A = ∫ ΔH(t) dt < ∞`, every finite prefix satisfies
+
+$$
+\hbar\sum_{n<N}\arcsin(2\varepsilon_n)\le A.
+$$
+
+A memory specified to score at least 75% on every pair therefore allows
+at most `⌊6A/(πℏ)⌋` such transitions. Perfect discrimination recovers the
+orthogonal cost `πℏ/2`. Even with a changing specification, an infinite
+sequence requires summable advantages since `arcsin x ≥ x` for `0 ≤ x ≤ 1`.
+A finite test establishes performance only on its tested pairs. The
+exclusion concerns a task specification requiring that performance at
+*every* stage within the one budget. Calibration can sample an endpoint on
+a separate run. If the task measures during evolution, its measurement and
+reset dynamics must be included in a justified action bound, for example
+for a specified larger closed system.
+
+The metric argument also applies to classical internal distributions: one
+common stochastic readout per pair contracts total variation (the chance
+of a “later” report is the expectation of a function valued in [0,1]).
+Finite total variation of the internal path then bounds twice the sum of
+the achievable advantages. The remaining variation on successive intervals
+tends to zero, so optimal adjacent-pair success tends to one half. The
+sampled states are Cauchy and have a limit if the metric space is
+complete. No endpoint act or admitted endpoint state is needed for the
+count. A classical variation budget needs its own physical warrant.
+
+### Two controls and the causal application
+
+* **A clock can supply the entire score.** Hold the internal state fixed
+  and stamp the record with the externally selected early/late bit. The
+  reader scores 100% while the internal distance is zero. A matched
+  control can quantify this confound. Keep the decoder, timing, settings
+  and apparatus preparation of each arm fixed, but present the earlier
+  state in *both* arms. If the original and control scores are p and q,
+  only the later-arm probability changes. Its fixed binary effect gives
+  `2(p − q) ≤ D`. A reproducible positive excess therefore still gives a
+  lower bound on the internal state displacement, even with arm-specific clock information. This comparison requires
+  reproducible states and an unchanged readout channel within each arm.
+  An intervention that also changes the apparatus or its correlations
+  with the input fails that test. A joint system and clock record can
+  instead be studied with an action budget for that joint system.
+* **Weak changes survive finite action.** In clock units with interval
+  length one, take `ψ(t) = cos(t)|0⟩ + sin(t)|1⟩` generated by
+  `H = ℏσᵧ`. Here `ΔH = ℏ`. At the existing Zeno times
+  `tₙ = 1 − 2⁻ⁿ`, every adjacent pair differs and the best possible
+  advantage is $\sin(2^{-(n+1)})/2$. These advantages are positive, summable
+  and tend to zero. One bounded, continuous rotation realizes the state
+  trajectory in the model. Individuating infinitely many performed acts
+  or separately controlled pulses would require further evidence.
+
+**Transfer to the Second Way.** A successful blind readout distinguishes contents. An
+occurrence also has a bearer and interval, and two occurrences can share
+the same transition. For any proposed effect, locate its actual upstream
+bearers in the selected respect. To use the count, show how the relevant
+causal links require distinct, nonoverlapping, reliably readable updates
+of one system on one physical clock within its budget. A controller or
+parallel bearer outside that boundary can contribute to the effect without
+causing a separate transition of this memory. The existing negative-integer
+clock model also permits unbounded ancestry across intervals.
+[Occurrence identity](../TruthCore/Causality/EventIdentityProfiles.lean) ·
+[Compact-clock and ancestry controls](../TruthCore/Causality/OperationLocalFiniteness.lean)
+
+In particular, result `d09f6268` needs, **for every effect**, finite
+coverage of the selected fact labels of *all* its per se ancestors,
+including the effect itself. Bounding updates along one observed path
+does not cover other branches. To supply that premise by this route,
+exhibit, for each effect, coverage of those labels by its own finite
+roster of records with a specified label per record (including the
+effect separately if needed). Preserve the same cause relation, dependence
+respect, strict-ground mapping and consistent theory used in the result.
+Reopen the transfer when a proposed device or argument identifies those
+upstream bearers and explains why their contributions require such
+records. The present operational test supplies a conditional SU-REAL
+objection for readable serial memories. It supplies no premise discharge
+for `97f5850f` and no verdict on simultaneous dependence or Reaper
+recombination in general. [Exact local-label premise](../TruthCore/Causality/StrictGroundRepresentation.lean)
