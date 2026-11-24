@@ -285,3 +285,235 @@ read at the stated main revision. No formal result or premise change is
 claimed. The independent final challenge and CI on the final proposed
 formal content remain required. Retain these issues until the promised
 integration or an exact unresolved blocker is documented.
+
+
+### 5. Source-first integration: avoid even the strong God-specific converse
+
+**2026-11-24 continuation, draft.** This section refines the candidate in
+sections 1–4, not the historical #1902 analysis. Main remains
+`62bb4ce3cddf21bb2ebcd41489085d9fa99d3098`. The existing
+[maximum-definition fork research](maximum-definition-fork.md#current-existence-bundle-judgment-select-the-cause-before-identifying-the-maximum-2026-11-17)
+already supplies a stronger starting point than assuming `86d02b69` directly.
+No new canonical edge, checked theorem or premise assessment is claimed here.
+
+#### Existing source and existence route
+
+[MaximalFromEsseSource.maximalCauses](../../TruthCore/Results/Causality/MaximalFromEsseSource/Solution.lean),
+argument `f4df2153` / result `82fb68e4`, derives fixed-esse
+`da09703b` from `c35b1a5c` (one actual esse/essence-identity source with
+actual cause paths to every other actual bearer), `b4987085` (actual
+esse-cause composition), `cffad050` (distinct esse causes exceed effects
+at esse), and `ee4ab504` (excluded middle).
+It does not use the all-respects genus law `d9fad785`. The existing
+`c98328f1` / `d8cb586a` consumes that fixed-esse conclusion plus eleven
+other inputs to derive GodExists, retaining the same actual first root
+through naming. The source-first result is not evidence for the truth of
+common ancestry or composition.
+
+A second exact existing path is particularly convenient for the proposed
+attribute continuation:
+
+1. `da09703b` and `fad8af3e` yield `0881e859` by `8c0cce46`:
+   some m is maximal at esse and causes each distinct **actual** bearer
+   at esse. Maximal existence is an extra input, not a consequence of
+   fixed-esse maximal causality.
+2. `0881e859` and seven additional inputs yield GodExists via
+   [678ff65f](../../corpus/arguments/god-exists-from-maxime-ens-causing-all.json):
+   `7067553d`, `d5a94eb1`, `ee4ab504`, `f8ba2429`,
+   `09c6d5f0`, `eaa4c679`, `1ec205ed`.
+   Sibling `5d2b7c6e` substitutes `cffad050` for unrestricted
+   `d5a94eb1`. The supplied witness itself is named by the full-description
+   premise after its uniqueness, universal causal scope, every-perfection
+   causality and remoteness have been obtained.
+
+These are registered conditional routes already present on main, not
+discoveries of this draft or proofs of the premises. For the second route,
+the following proposed argument can connect the very same witness to the
+classical attributes without the strong carrier-wide God converse.
+
+#### Candidate convergence theorem
+
+Write A(x,r) for InAct, C(c,x,r) for CausesIn, and M(x) for the exact
+weak IsMaximumIn at esse. Let U(m) mean CausesAllInGenus at esse:
+for every x distinct from m, A(x,esse) implies C(m,x,esse).
+
+Joint inputs:
+- `0881e859`: some m satisfies M(m) and U(m).
+- `cffad050`: for c distinct from x, C(c,x,esse) implies MoreIn esse c x.
+- `4c79298d`: each IsGod g satisfies M(g).
+- `ee4ab504`: equality case splits in the explicit classical reading.
+
+Take the m supplied by the first premise. Suppose g is God and g ≠ m.
+Then M(g) implies A(g,esse); U(m) gives C(m,g,esse); ascent implies
+MoreIn esse m g, contrary to M(g). Thus g = m. In fact the first two
+substantive premises alone imply every maximum equals m; the third
+transports that identity to all God candidates. Alternatively use the
+existing maximum-exclusion proposition `18561596` directly for the
+contradiction instead of ascent, or use `d5a94eb1` restricted at esse.
+
+Consequences in this same dictionary:
+- GodIsOne (`33b18ae7)), with no God existence inferred from this universal
+  conclusion alone.
+- Every God candidate causes every distinct actual bearer at esse
+  (`∀ g, IsGod g → CausesAllInGenus InAct CausesIn esse g`).
+- If additionally the existing naming bundle for `678ff65f` holds,
+  the supplied m is God, not an unrelated existential witness.
+
+The second conclusion is a **candidate helper**, not an invented statement
+ID or a proof of the stronger `86d02b69` (which quantifies over inactive
+carrier individuals as well). It can be kept local to the consumer; register
+a separate proposition only if reuse warrants it. This avoids replacing an
+all-genus law by a God-specific axiom with unmotivated carrier-wide scope.
+
+**Finite diagnostic, executed in Python.** Exhaust all 4096 structures with
+two individuals and one respect. With M and U as above, test the three
+substantive inputs, ordinary classical equality, and the conjunction of
+at-most-one-God and actual-bearer God-causality:
+
+```python
+from itertools import product
+D = range(2)
+def bits(n):
+    return list(product([False, True], repeat=n))
+joint = nonempty = failures = strong_failures = 0
+omission_failures = [0, 0, 0]
+for G, A, M, C in product(bits(2), bits(2), bits(4), bits(4)):
+    maxima = [m for m in D if A[m] and not any(M[y*2+m] for y in D)]
+    def U(m):
+        return all(C[m*2+x] for x in D if x != m and A[x])
+    H = [
+        any(U(m) for m in maxima),
+        all(not C[c*2+x] or M[c*2+x] for c in D for x in D if c != x),
+        all(not G[g] or g in maxima for g in D),
+    ]
+    conclusion = sum(G) <= 1 and all(U(g) for g in D if G[g])
+    if all(H):
+        joint += 1
+        nonempty += any(G)
+        failures += not conclusion
+        strong_failures += any(
+            G[g] and not C[g*2+x] for g in D for x in D if g != x
+        )
+    for i in range(3):
+        omission_failures[i] += (
+            not conclusion and not H[i] and all(H[j] for j in range(3) if j != i)
+        )
+assert (joint, nonempty, failures, omission_failures, strong_failures) == (
+    128, 64, 0, [36, 20, 128], 32
+)
+```
+
+All 128 joint models satisfy the candidate conclusion; 64 have at least
+one God. The three omission counts refer to falsification of the **joint**
+conclusion, not separately to the necessity of each input for each
+conjunct. The strong carrier-wide converse fails in 32 joint models.
+A nontrivial three-carrier illustration: 0 and 1 are actual at esse, 2 is
+inactive; God = {0}, MoreIn and CausesIn at esse = {(0,1)}.
+Then 0 is the sole maximum and universal actual source, but causes no
+inactive carrier 2. If all carriers are assumed actual at esse, that
+separator is unavailable. These are structural diagnostics only. Re-run
+with intended carrier constraints, include the full naming premise in a
+nonvacuous control, and certify relevant models in Lean.
+
+#### Candidate attribute integration using actual-bearer scope
+
+The existing all-attributes assembly `79252a71` can retain the same
+18 other premises and replace **only** `d9fad785` with `0881e859`,
+using convergence and the existing `d5a94eb1` at esse. Unlike the
+strong-converse proposal, retain `7067553d` because actualities must be
+related to esse to use U(m). No new God-specific causal premise is needed.
+
+- Uniqueness: convergence.
+- Perfection: if A(x,r), actuality-to-being gives A(x,esse); if x ≠ g,
+  actual-bearer universality gives C(g,x,esse), and `64498e7e` yields
+  A(g,r). If x = g, transport directly.
+- Supreme goodness: M(g) gives A(g,esse); `00e962ae` yields goodness at
+  esse. For each distinct actual x in r, use the same C(g,x,esse) and
+  `f8ba2429` to cause its represented perfection. Existing restricted
+  `b26c10a0` (UniversalCauseTransfersPerfections) is a further candidate
+  replacement once actual-bearer universality is supplied; it is not an
+  established warrant for the transfer.
+- The other six attributes reuse the unchanged calls in
+  [ClassicalAttributesAll](../../TruthCore/Results/Case/Catholicism/StageTwo/ClassicalAttributesAll/Solution.lean):
+  simplicity, infinity, immutability, eternity, intellect and will.
+  The same g is passed to `818a73cc`, yielding `d5ac1620`.
+
+The final candidate bundle is precisely the existing `79252a71` bundle
+minus `d9fad785` plus `0881e859`. It does not discharge `4c79298d`;
+the forward naming premise does not imply its converse, and using God
+maximality derived from the stronger `86d02b69` would reintroduce that
+stronger obligation. Direct acceptance of `4c79298d` or its other
+existing support options remains visible.
+
+```mermaid
+flowchart TD
+  A["Common source c35b1a5c"] --> J["Joint source-first bundle"]
+  B["Actual cause composition b4987085"] --> J
+  C["Esse ascent cffad050 + EM"] --> J
+  J --> D["Fixed-esse policy da09703b — f4df2153"]
+  D --> K["Joint witness bundle"]
+  E["Maximal existence fad8af3e"] --> K
+  K --> W["Actual maximal universal source 0881e859 — 8c0cce46"]
+  W --> N["Existing full-description naming — 678ff65f"]
+  X["Seven naming inputs, including 1ec205ed"] --> N
+  N --> G["GodExists 8626f8a5"]
+  W --> H["Candidate convergence on same m"]
+  M["God-to-maximality 4c79298d + ascent + EM"] --> H
+  H -.-> O["GodIsOne 33b18ae7"]
+  H -.-> U["God causes every other actual bearer"]
+  U -.-> P["Perfection and supreme goodness"]
+  T["Actuality-to-being + perfection preexistence + goodness + transfer"] --> P
+  O -.-> S["Classical assembly — proposed sibling of 79252a71"]
+  P -.-> S
+  L["Retained six attributes + naming 818a73cc"] --> S
+  S -.-> Q["GodHasClassicalAttributes d5ac1620"]
+  G --> I["Existing modular assembly 3769b87e"]
+  O --> I
+  Q --> I
+  I --> Y["UniqueClassicalGodExists 20a2b6a3"]
+```
+
+Solid arrows from complete bundles denote existing registered conditional
+connections; dotted arrows denote proposed consequences/integration. The
+six-attribute box abbreviates all the retained `79252a71` obligations;
+the diagram is not an exhaustive formula. Every incoming edge to a joint
+bundle is conjunctive. The final assembly is the existing structural
+consumer, not a newly verified chain.
+
+#### Specific root-route test and residual crux
+
+The existing root argument [fa24c576](../../corpus/arguments/catholicism-from-maxime-ens-causing-all.json)
+directly takes `0881e859`, the seven naming inputs from `678ff65f`,
+`d5ac1620`, and the seven retained stage-3 premises. The proposed
+assembly sibling would therefore give a **specific candidate complete
+dependency route**, from fixed-esse source support through both stage-one
+and stage-two inputs, avoiding direct use of `d9fad785` and `12dc2662`
+at these local steps. This is a structural substitution check, not a
+fresh verified fixpoint. It does not tell whether fa24c576 was among the
+four historical surviving routes, whether all expanded premises admit
+modal-free and genus-free derivations under the #1902 leaf rule, or how
+many additional routes survive. Those require the existing frontier CLI
+on the integrated corpus.
+
+The first genuinely philosophical residual issue is source selection:
+`c35b1a5c` already presupposes one common actual ancestor. A plurality of
+underived sources could instead supply different disjoint causal orders;
+local causal ascent and transitive chains do not establish a common source.
+The De ente at-most-one-esse/essence route and its open shared-nature
+premise `75b5b027` are the relevant next test, alongside the existing
+`c35b1a5c` derivation, not an assumption that maximality by itself forces
+causal universality. Compare several unreceived sources, one impersonal
+universal source and a personal source under the same actual-production
+and coverage criteria. A common source does not by itself establish
+intellect, will, modal necessity or present sustaining causation. The
+perfection and attribute bridges remain substantial.
+
+**Next dispatch:** implement the source-first sibling within #1937,
+prefer the already registered actual-bearer dictionary to a new strong
+converse; check the exact `79252a71` and `fa24c576` consumers, and record
+computed exclusions and frontier-diff after certification. #1936 remains
+the separate #1928 uniqueness investigation. No independent challenge or
+Lean/CLI run is available in this session; the 4096-model diagnostic was
+executed and the section 1 diagnostic was rerun with matching counts.
+No change to registered proof status, corpus records or philosophical
+warrant is warranted by this draft.
