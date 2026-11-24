@@ -1,0 +1,11 @@
+{
+  "id": "d8073ba0-ff27-479a-adbe-05086acb1da1",
+  "label": "Holder-root identification controls checked",
+  "argument_id": "91fd0ff7-8238-4acb-b442-b69d7a9ebea5",
+  "challenge_module": "TruthCore.Results.Causality.HolderRootIdentification.Challenge",
+  "solution_module": "TruthCore.Results.Causality.HolderRootIdentification.Solution",
+  "theorem": "TruthCore.Results.Causality.HolderRootIdentification.holderRootIdentificationControls",
+  "comparator_config": "results/d8073ba0-ff27-479a-adbe-05086acb1da1/comparator.json",
+  "status": "solution-present",
+  "description": "Premise-free laws and models for the holder-root identification batch. Sense-mixing control: they relate NECESSARY_2, MODAL_CONTINGENCY_1, the willed-giving and HAS_WILL_1 senses and both POWER senses without a bridge premise. Establishes no premise."
+}

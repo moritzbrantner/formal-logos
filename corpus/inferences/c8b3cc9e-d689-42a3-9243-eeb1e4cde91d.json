@@ -1,0 +1,13 @@
+{
+  "id": "c8b3cc9e-d689-42a3-9243-eeb1e4cde91d",
+  "label": "Holders of the joint-absence power are GOD_4, from the common GOD_4 root (inference)",
+  "input_statement_ids": [
+    "0a995309-2656-469b-81b1-3d70cbc3cab9",
+    "0c27f65a-6a6b-438a-b96c-b2bab9f21ac3"
+  ],
+  "output_statement_id": "2146ebc9-d410-4e26-bfaf-327ae950eeb7",
+  "rule": "A root that the common root does not ground is the common root",
+  "meaning": "As argument 2: every holder is the common root n of 0c27f65a, which is GOD_4 under its retained naming premise. Constructive.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}
