@@ -64,7 +64,7 @@ class CountermodelExtractionTests(unittest.TestCase):
             path.write_text(TOOL.read_text() + "\n" + FIXTURE)
             completed = subprocess.run(
                 [sys.executable, "scripts/worker_env.py", "--", "lake", "env", "lean", str(path)],
-                cwd=ROOT, capture_output=True, text=True,
+                cwd=ROOT, capture_output=True, text=True, timeout=120,
             )
         if completed.returncode != 0:
             raise AssertionError(completed.stdout + completed.stderr)
