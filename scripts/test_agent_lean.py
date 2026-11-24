@@ -9,7 +9,9 @@ from pathlib import Path
 import subprocess
 import tempfile
 import threading
+import time
 import unittest
+from unittest.mock import patch
 
 import agent_lean
 
@@ -154,15 +156,37 @@ class AgentLeanTest(unittest.TestCase):
         self.assertEqual(agent_lean.settings(self.workspace, {"TRUTH_CORE_AGENT_SESSION": "env"})["session"], "env")
 
     def test_waiting_does_not_issue_request_before_lease(self):
-        results = []
-        with self.lock.open("a") as lease:
-            fcntl.flock(lease, fcntl.LOCK_EX)
-            thread = threading.Thread(target=lambda: results.append(self.submit()))
-            thread.start()
-            self.assertFalse(self.entered.wait(0.05))
-        thread.join(timeout=5)
-        self.assertFalse(thread.is_alive())
-        self.assertGreaterEqual(results[0]["client"]["lease_wait_s"], 0.04)
+        real_flock = fcntl.flock
+        for startup_delay in (0, 0.06):
+            with self.subTest(startup_delay=startup_delay):
+                results = []
+                lease_attempted = threading.Event()
+                self.entered.clear()
+
+                def submit():
+                    time.sleep(startup_delay)
+                    results.append(self.submit())
+
+                thread = threading.Thread(target=submit)
+
+                def observe_flock(file, operation):
+                    if threading.current_thread() is thread and operation == fcntl.LOCK_EX:
+                        lease_attempted.set()
+                    return real_flock(file, operation)
+
+                with patch.object(agent_lean.fcntl, "flock", observe_flock):
+                    try:
+                        with self.lock.open("a") as lease:
+                            real_flock(lease, fcntl.LOCK_EX)
+                            thread.start()
+                            # The client timer has started; thread startup and validation
+                            # must not consume the interval we require it to wait.
+                            self.assertTrue(lease_attempted.wait(5))
+                            self.assertFalse(self.entered.wait(0.05))
+                    finally:
+                        thread.join(timeout=5)
+                self.assertFalse(thread.is_alive())
+                self.assertGreaterEqual(results[0]["client"]["lease_wait_s"], 0.04)
 
 
 if __name__ == "__main__":
