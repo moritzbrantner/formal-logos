@@ -3398,13 +3398,16 @@ assumptions rather than solving those ledger bridges.
   used circularly. The populated-alternatives test diagnoses proper cones,
   and is not itself the whole-roster proof.
 - With an actual root selected once, the existing contingent-grounding
-  commitment (every contingent actual concretum has an actual concrete
-  ground), and the needed modal logical bridge, exclude its contingency
-  and yield the necessary-underived candidate `0bdcf366` in that profile.
-  This does not establish contingency coverage or metaphysical modality,
-  and a root relative to concrete grounding may have an unmodelled or
-  nonconcrete explanation. Necessary existence of one candidate does not
-  exclude other necessary beings.
+  commitment `c71c068c` (every contingent actual concretum has an actual
+  concrete ground) and the needed modal logical background exclude its
+  contingency and give the same necessary actual root, hence
+  `b19ffd92`. **Correction at checkpoint D:** this does NOT yield
+  `0bdcf366`, whose support exclusion ranges over every carrier world.
+  The latter needs a further all-world transport/underivedness argument,
+  e.g. the existing standing-ancestry/coverage routes mapped in
+  [conceptual-existence-boundary](conceptual-existence-boundary.md).
+  Neither result excludes unmodelled or nonconcrete explanations or other
+  necessary beings.
 - `ef632140` (unique actual root) uses actual population `56f68b40`,
   `5c898d24`, EM, the actual/esse and distinct cause-to-ground
   interfaces `0436de86`, `cb1cdea9`, cause coverage `457698e4`,
@@ -3785,7 +3788,7 @@ or a primitive whole obtaining fact, remains the strongest
 rootless competitor; a genuinely underived concrete whole is
 not a denial of the narrow foundation conclusion.
 
-**Current handoff.** This supersedes the earlier draft's handoff,
+**Checkpoint C handoff (historical).** This superseded the earlier draft's handoff,
 not its independently reviewed historical assessments. The next
 discriminating target is the intrinsic-existence-reason comparison:
 can the necessity of a necessary abstract/structural law or
@@ -3804,3 +3807,413 @@ semantic challenge and installed-convention inspection are
 unavailable here. Keep this PR draft. Intended formal premise
 change remains none; the new head requires its own CI/frontier
 evidence. No changes to formal declarations or closure rules.
+
+
+### Checkpoint D: existential import after excluding posterior grounds
+
+**Question and evidence revision.** Can a necessary abstract structure or a
+necessary concrete composite whole provide an independently adequate reason
+for its own concrete actuality, without importing the very actuality it
+explains? Continue C at `9765c079c3b4d3490bfa31a581f9ab672c1b6b16`.
+Keep the identical question for the subsistent-esse proposal. This is an
+analyst derivation and comparison, not a new primary-source attribution.
+The central claim about intrinsic explanation is
+`a7bbd2fd-242c-5097-a9a3-581d25835890` (#1595/#319); its reviewed
+[assessment](intrinsic-existence-reason-1595.md#current-reviewed-assessment-2026-11-17)
+has **no registered God-root consumer**. The planned connections are the
+q3a4 source route and the actual-necessary-root/identity route, not a
+proof that an intrinsic reason already supplies a GOD_4 bearer. Reuse
+`IntrinsicReasonBoundary.ActualRecord` (one actual, nonempty full
+record), `selectedNatureRecord` (classification, not adequacy),
+`EssenceReasonSeparation` (necessity/essence/reason separation),
+`ExistenceIngredient` (joint records, not the sufficiency of individual
+ingredients), and `HistorySelection.characterization` (determination
+by a truth vector, not priority). No replacement explanation or ground
+registry is introduced.
+
+#### 1. Fix the explanandum and the three readings of a nature or structure
+
+Hold one actual bearer n, the positive existence fact E(n), a proposed
+nature-description, and the proposed explanation of derivative effects
+fixed. When comparing whole foundations, also include the actual
+constitution and exercise on which their proposed explanation relies.
+Do not credit an account for the explanatory import of a more restricted
+explanandum. Following #1595, mere accessibility-necessity, inclusion
+of an existence fact in a nature, equal represented essence/esse maps,
+and an adequate intrinsic existence reason are distinct.
+
+- **Abstract specification:** a formal relation, universal law, blueprint,
+  or essential conditional, whose truth is independent of whether there
+  is a real concrete instantiation. It may explain features conditional
+  on a realization; its being necessary is compatible with no concrete
+  realization if the independently specified theory admits such an
+  interpretation.
+- **Instantiated nature/structure:** the concrete whole has the nature,
+  organization, or exercise in question in reality. This fact is
+  existentially committing. Its truth implies actuality of its bearer,
+  but logical implication alone gives no direction of metaphysical
+  explanation. The instantiated organization may be explained by the
+  constituents or conversely; that is a further question.
+- **Unconditional existence-conveying nature:** the positive content
+  itself warrants the actuality of this very candidate, not merely a
+  conditional about instances, and is not a fact whose obtaining is
+  explanatorily posterior to the existence it is invoked to explain.
+  This is the live positive proposal of the subsistent-esse account,
+  but a rival can equally propose it for a necessary whole or a
+  nonproductive global ground. It must be tested, not stipulated as a
+  special consequence of the term 'esse'.
+
+The first and second readings make different claims. The common move
+from the mathematically necessary organization to a factive, actual
+organization changes the antecedent; it does not preserve the
+explanatory gain for free. For the third reading, an explicit positive
+concrete realization axiom can consistently rule out noninstantiation.
+Its semantic/ontological warrant, as distinct from its syntactic
+existential import, is the issue.
+
+#### 2. Filter actual candidate grounds by explanatory priority, then test their joint import
+
+The increment over C and #1595 is to apply **both** tests to the
+same complete record, without assuming one necessary particular part,
+well-foundedness, a numerical measure, or that every reason must be
+an efficient cause.
+
+At the selected actual standpoint, use a single strict transitive
+explanatory-priority relation P on true facts; a -> b means a is
+explanatorily prior to b. This is an OPEN interpretation of an order
+on facts, not automatically any of the repository's relations on
+bearers, exercise tokens, or causes. Strict priority of each
+indispensable full-ground ingredient relative to its effect is a
+substantive partial-to-full grounding policy, not a theorem about
+nonnecessitating reasons. Redundant ingredients may be removed before
+applying this policy; do not demand that irrelevant facts be strict
+grounds. It is sufficient that the selected record be nonempty and
+all its retained members strict contributors in this policy.
+
+Let e=E(n). Let H be the actually true candidate reason facts, with
+a fixed interpretation, in the specified explanatory scope. Define
+the excluded region D={e} union {f in H : P(e,f)} (intersection with
+H where needed), and the eligible region L=H minus D. A strict
+adequate full ground G, using this policy, must satisfy
+nonempty G subset L: any f=e would violate irreflexivity, and
+P(e,f) together with P(f,e) violates transitivity and
+irreflexivity. This necessary eligibility filter does not claim
+every f in L actually grounds e.
+
+Independently, choose a background theory/interpretation class
+K on which the proposed reason claims existential entailment. Keep
+the definitions and independently warranted reason-content fixed.
+K is a class of formal interpretations, not necessarily the modal
+worlds of the actual profile; an omitted n in this class is not
+automatically metaphysically possible. An actual interpretation
+satisfies the ground facts and e. For each target-absent
+interpretation v in K, let B(v) be the members of H true there.
+The sufficient-record condition over K is exactly
+
+    for every v with e false, some f in G is not in B(v).
+
+In other words the **same joint record** must exclude every
+target-absent interpretation. This is the elementary truth-vector
+test specialized to the eligible region; reuse the existing
+selection reasoning, rather than counting this equivalence as a
+second independent proof.
+
+**Combined discriminator.** If one target-absent v preserves every
+fact in L, no nonempty strict-eligible record from H can be
+existentially sufficient over K: every such record is contained in
+B(v). Conversely, when at least one target-absent interpretation
+exists, if every such interpretation omits at least one fact of L,
+then L itself is nonempty and entails e on K. This converse
+only exhibits a set of actually true eligible facts with the
+truth-entailment property, not an admitted, realizable, finite or
+metaphysically adequate full ground; the P(f,e) edges need their
+own warrant. For a finite nonempty set of omission interpretations,
+one can choose one eliminating eligible fact for each; this finite
+record also entails e. For an infinite set of omission interpretations,
+no finite record is guaranteed. If no omission interpretation exists,
+even empty/irrelevant records entail e, so this test cannot distinguish
+them. That is the exact necessity-vacuity boundary already noted in
+`IntrinsicReasonBoundary`.
+
+One must use a **common** omission interpretation for the forward
+obstruction, not one separately chosen for each ingredient. Two
+actually true eligible facts p and q may be jointly determining:
+one omission preserves p and omits q, another preserves q and
+omits p. Neither singleton determines e; {p,q} does. Thus even
+when neither abstract ingredient alone can entail existence, the
+whole record may have import. To reject all purely abstract
+records by the common-omission test requires an actual
+model-construction preserving their joint theory. This restriction
+prevents dismissing joint sufficient grounds just because each
+ingredient individually seems nonproductive.
+
+The priority exclusion is useful even without modal entailment:
+a proposed strict explanatory arrow from a posterior fact to its
+own explanatory ancestor contradicts the shared priority policy,
+whether or not the effect is necessitated. The second test applies
+only to a ground offered as entailing concrete actuality relative
+to K, not a universal requirement on all causal or nonnecessitating
+explanations. Necessity at accessible worlds does not license an
+arbitrary enlargement of K. A separate reason that K captures the
+independently warranted content, or a real modal bridge to K, is
+required before interpreting the omission as a philosophical
+counterexample.
+
+#### 3. Matched application to the necessary whole
+
+Reuse `WorldwiseCompositeGround.ReplacementCertificate` (#1097,
+result `e167d4d4-2be0-5820-9cbc-8c6ccb2bf473`): the same necessary
+whole with replaced contingent proper atoms in both worlds, actual
+fusion and strong supplementation, and whole-to-part grounding.
+The model grants concrete whole-first grounding and so concedes
+selected concrete roothood rather than denying it. Its worldwise
+mereology supplies neither the whole's intrinsic reason nor
+unrestricted existential independence. #1966's open PR already
+tests deficit of perfection and distinct esse, so no general
+composition-implies-reception premise is added here.
+
+For this very whole W at the selected world, suppose it is offered
+as existentially prior to all its proper parts. Use E(W), E(p) for
+the actual part, and K(W) for the actual instantiated constitution.
+The targeted extra assumptions are:
+
+- E(W) P E(p) (whole-to-part existential explanatory priority;
+  a bridge from the selected bearer grounding edge to fact priority);
+- E(p) P K(W) for at least one actual indispensable constitutive
+  input p (a partial fact-ground bridge, not mere essentiality,
+  co-existence, or parthood);
+- K(W) is a strict contributing ground of E(W) itself, not just of
+  its structural properties or of its being a whole of this kind.
+
+Then E(W) P K(W) and K(W) P E(W), impossible on the same strict
+transitive P. The proof tolerates arbitrarily many or replaced
+parts, indirect finite paths, and infinite derivative orders
+elsewhere. Only one actual constituent with the displayed priority
+path suffices. It requires neither all-world constancy of particular
+parts nor all-part priority in being. The first two arrows concern
+explanatory priority of positive facts, not a modal necessity of
+co-existence; the third is the specific alleged existential
+explanation. No source claim or existing checked theorem is
+asserted to supply these three interpretations jointly.
+
+**Positive warrant and limitation.** In ordinary realized assemblies,
+part states and their organized arrangement often make a structural
+fact obtain: remove a required realizing component without
+replacement and that specific organization no longer obtains.
+This gives a reason to investigate constituent realization as
+partial grounding. It does not prove strict priority of the
+particular part's existence over a fundamental whole's
+constitution. Whole-first functional integration gives a serious
+alternative direction (reuse the priority-monism framework),
+and merely requiring some part plurality essentially is a
+constraint, not an explanatory arrow. Even if the actual
+constitution is posterior, the whole could explain its
+actuality by another positive nature fact, not K(W); this is
+exactly where the candidate record filter is needed. The
+argument excludes a specific explanatory cycle, not all priority
+monism, mereological essentialism or necessarily composite wholes.
+
+If instead the whole's proposed explanation is an uninstantiated
+structure description B plus abstract laws L, the strict-priority
+cycle is absent but we need a separate positive existential
+import test. In a guarded interpretation with a fixed abstract
+domain and variable actual-concrete extension, preserve L and B
+and let W and its dependent parts be absent; any outsider can
+remain present. If that interpretation satisfies the independently
+specified theory, L and B are jointly insufficient for the target.
+This construction is legitimate for abstract-only statements and
+laws whose concrete obligations are all guarded by actual
+members of the removed order; it is not legitimate for an
+unconditionally existential, mixed bridge or independently
+warranted necessary-concrete theory. Such a rival must explain
+the import of that bridge, not merely demonstrate uniqueness of
+an abstract realization up to isomorphism.
+
+The key conditional alternative for a concrete whole is therefore:
+a reason using an instantiated constituent configuration that
+is posterior to W cannot strictly ground W; a description that
+survives a common omission cannot entail W; a genuinely
+nonposterior, existence-conveying nature remains a live third
+option. These are tests on candidate explanations, not an
+exhaustive disjunction of all metaphysical modes or a proof
+that the third option is empty. Nonnecessitating and nonstrict
+explanatory accounts need comparison on their own standards.
+
+#### 4. Apply the identical filter to subsistent esse
+
+Suppose n is independently actual and a relative root.
+`RootEssenceIdentity.identityOfActualRoot` derives the represented
+essence/esse equality from exactly: this same root, EM,
+`ExistingInActAt`, `EsseCauseIsActualConcreteGround`, the q3
+causal dichotomy, and no essential efficient self-causation.
+Do not infer the dichotomy from the priority filter above.
+In particular, an abstract/constitutive noncausal external reason
+can evade the efficient-only dichotomy.
+
+If the proposed intrinsic reason is just the fact 'n is in act as
+to esse', and that is identical in content to E(n), the strict
+ground reading supplies a self-arrow, not an explanation.
+If it describes a factive exercised act whose obtaining is
+explanatorily posterior to E(n), the same cycle objection applies.
+If it is only an abstract essence-description or equality of
+represented principle values, a common omission control in
+an independently justified interpretation class blocks entailment.
+The existing #1887 assessment already distinguishes these and
+records `565ccd6c`, the unconditional existence-in-essence
+bridge; do not silently treat that premise as established by the
+identity result. The positive alternative is nonreceived actuality
+as the independently warranted nature of this very actual source,
+with no posterior realizing condition. That is a substantive
+metaphysical proposal, not efficient self-production. If identity
+is itself proposed as a nonstrict explanatory stopping point,
+do not impose an extra strict ground arrow by definition.
+Then compare the stopping criterion against a fundamental
+composite's analogous proposal.
+
+There is a limited comparative advantage for the subsistent-esse
+proposal when the composite rival invokes a separately obtaining
+and explanatorily posterior organization while the former has no
+such realization requirement. This does not establish that the
+whole's nature is posterior, that all composition has an
+actualizing source, or that the subsistent act has adequate positive
+existential content. Conversely, an arbitrary tag or statement of
+necessity for the source cannot do the work it fails to do for
+the whole. The positive warrant for preferring a nonreceived act
+over wholly received productive input remains the mode-of-having
+argument from the preceding checkpoints, not an independent
+proof of unconditional intrinsic adequacy. Both accounts owe the
+explanation of their own existence, unless they defend a stopping
+rule under which no further explanation is apt.
+
+#### 5. Finite audit and same-witness correction
+
+The following Python diagnostic was actually run in this session.
+All n=1..3 nonempty families of target-absent rows were checked for
+every possible exclusion mask; n=4 checks all pairs of rows with
+repetition, not every family. Candidate facts are all actual, a row
+is a subset of them true when the target is absent, and masks D are
+stipulated priority exclusions. This tests the joint sufficiency/
+eligibility characterization only; it does not certify actual
+strict explanatory orders or metaphysical adequacy.
+
+```python
+from itertools import combinations_with_replacement
+for n in range(1, 5):
+    A = (1 << n) - 1
+    rows_n = 1 << n
+    families = ([tuple(v for v in range(rows_n) if mask >> v & 1)
+                 for mask in range(1, 1 << rows_n)]
+                if n <= 3 else
+                list(combinations_with_replacement(range(rows_n), 2)))
+    for rows in families:
+        for D in range(A + 1):
+            L = A ^ D
+            feasible = [g for g in range(1, A + 1)
+                        if g & D == 0 and all(g & ~r for r in rows)]
+            common = any(L & ~r == 0 for r in rows)
+            assert bool(feasible) == (not common)
+            if feasible:
+                assert L in feasible
+# Output (n, families, cases): (1,3,6), (2,15,60),
+# (3,255,2040), (4,136,2176). Total 4282 cases.
+# Candidate reason tokens for a selected necessary whole:
+law, blueprint, p, q, actual_shape, positive = [1 << i for i in range(6)]
+D = p | q | actual_shape
+absent = law | blueprint
+for g in range(1, 32):
+    assert not (bool(g & ~absent) and not (g & D))
+# A stipulated nonposterior positive nature token would pass both tests:
+assert positive & ~absent and not positive & D
+# Jointly eliminating record: neither singleton suffices, both do.
+assert all(not all(g & ~r for r in [1, 2]) for g in [1, 2])
+assert all(3 & ~r for r in [1, 2])
+```
+
+Self-sweep also caught a genuine previous draft scope error:
+roothood at w plus contingent-grounding and the necessary logical
+background proves an actual necessary root at w, hence
+`b19ffd92`, not the all-world underivedness clause of
+`0bdcf366`. The corrected paragraph at checkpoint B now names
+the missing transport. A two-world structural control (reuse
+the shape of the modal-grounding rotating-root controls) has
+two actual necessary concreta everywhere, a->b at world 0 and
+b->a at world 1, universal access. Each world has a root, all
+actual contingent-grounding obligations hold vacuously, but no
+one bearer has no incoming actual concrete ground at every world.
+This directly tests the invalid extension. It neither contradicts
+the existing all-world transport theorems nor implies that
+such rotating actual grounding is metaphysically admissible.
+The test executed:
+
+```python
+worlds = beings = range(2)
+exists = lambda w, x: True
+edge = lambda w, y, x: ((w == 0 and y == 0 and x == 1) or
+                         (w == 1 and y == 1 and x == 0))
+roots = [x for x in beings if exists(0,x) and
+         not any(exists(0,y) and edge(0,y,x) for y in beings)]
+assert roots == [0]
+assert all(all(exists(w,x) for w in worlds) for x in beings)
+assert not any(all(not edge(w,y,x) for w in worlds for y in beings)
+               for x in beings)
+```
+
+Earlier A/B/C finite diagnostics were rerun verbatim: 74,088
+eligible operator/relation pairs, 15,317 cone cases, 450 with a
+nonempty outside postfixed witness; 218 size-three covering
+families, 90 not containing U and 128 directed covering; both
+nonmonotone varying-supplier controls passed. This is local
+Python reproduction, not a new Lean/Comparator proof. CI run
+45512050386 for the preceding checkpoint C was still running
+at the baseline inspection; final-head CI remains outstanding.
+
+**Provisional judgment and current handoff.** The abstract-law
+account incurs a concrete-import burden when its joint abstract
+content survives the omission. The composite-whole account
+incurs a strict-priority conflict specifically when it uses an
+actual constitution posterior to the whole to explain that
+whole's existence. Neither conclusion is a general refutation:
+a positively existence-conveying, nonposterior whole-nature or
+noncausal global explanation remains live. The same combined
+filter excludes a copy or posterior act as an intrinsic reason
+for a simple source. The prior modest preference for nonreceived
+productive availability and suspension on unconditional intrinsic
+adequacy are retained; no new establishment, source attribution
+or checked support edge. No general composition-to-reception
+claim is made. For the root question, a concrete necessary
+whole with genuine whole-to-part support grants the relative
+root; identifying that root with subsistent esse continues to
+require the existing q3a4 inputs, including the causal exhaustiveness
+premise. An abstract reason would also require an actual productive
+bearer bridge to yield the root conclusion. For the necessity
+route, use the exact same actual root and the contingency
+coverage/EM, then separate modal support transport if all-world
+underivedness is the endpoint.
+
+Next substantive test: investigate **whether the act of existence
+itself can be positively characterized without presupposing an
+already actual recipient**, and whether the proposed absence
+of a limiting/receiving principle warrants nonposterior,
+unconditional existence-content (as opposed to a conditional
+identity). Reuse #1887's exercise-in-nature and act-fact analysis,
+#1595's intrinsic adequacy, and the #1966 deficit-of-perfection
+test on the same bearer. Seek a substantive constraint that
+distinguishes the existence-mode of a candidate whole from the
+subsistent-act account, rather than repeating necessity or a
+fixed-point model. A successful argument would give an explicit
+bridge to `565ccd6c` and/or the adequate intrinsic reason
+`a7bbd2fd`; it must not infer modal necessity or God naming
+from a mere equality of principle labels. Reopen on independently
+warranted nature-content/instantiation, or an actual partial
+ground link from a constituent to the whole's esse.
+
+Prepared-clone CLI dossier, context, semantics and novelty
+retrieval, installed convention inspection, independent semantic
+challenge and formal registration remain unavailable in this
+session: GitHub DNS prevents a local clone, no Lean/lake/cargo
+are installed, and no independent worker is available. This
+is a draft with analyst reasoning and executable finite
+diagnostics. Do not merge; keep the existing reviewed
+assessments intact. No new formal statement, result or source
+claim changes; intended formal premise change none, new-head
+frontier comparison pending.
