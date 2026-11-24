@@ -417,3 +417,103 @@ In two control histories the fixed rod stays at 2 units while the other goes fro
 **Assessment.** The absence of an intrinsic alteration at the named subject is a poor objection to causal responsibility for a real founded comparison. The other end can supply the decisive change. For acquired qualities, the preservation of a real contribution through practice, copying or active response is a better test than persistence of the bearer or sameness of the resulting quality. I favor these two forms of local attribution. For universal transfer this route needs at least one qualifying realization for each eligible bearer at each actual non-esse respect, with a contribution from that very existential source. Whether the histories cover that range, and whether the attribution applies to real relational respects, remains open. The same wax could receive its lettering twice. A path to the first impression warrants no inference by itself about who made the second. A case in which the alleged contribution is screened off by actual replacement, while preserving an independent route to the same observed outcome, would defeat that *specific attribution*. A reason why at least one such history for each eligible bearer and respect includes a source-supplied input would strengthen the universal case. Neither revision follows merely from adding actualities to the formal domain.
 
 **Independent semantic review.** The reviewer checked the sources, rival accounts, both formal tests, the press witness and the graph connections at `288d59eaa61436c6f94d7e54ce447049f6c6a899`. Review of the repairs at `45f329f3238a6fbfd5ae99f6fc3abe471b2c88b2` accepted the qualification about repeated occurrences, the distinction between causing a match and producing an intrinsic accident on each side, and the link to the external sense of causation. The next test concerns present responsibility for a retained determination after its producer ceases to act. [Reviewed dossier assessment](../../corpus/attempts/bc9f10d6-63ca-4493-94a8-49c282747f97.json)
+
+## Source-specific productive deletion (2026-11-24; draft handoff, #1934)
+
+**Question.** Can a local deletion test support an attribution to a named giver without turning bearer-dependence into productive causation? Continue [#1921](https://github.com/moritzbrantner/formal-logos/pull/1921) and the acquired-history results above. This is a proposed diagnostic, not a new source reading or a registered proof. It does not require ranking the whole history.
+
+### Exact candidate consequence
+
+Reuse `ParticularActuality.restrict` and `DerivativeJointPower.Supply`. Fix the same selected realization token `v`, record family `h`, intrinsic seeds `I`, and set `S` of independently identified productive input tokens of a named giver `a`. Delete only groups with a contributor in `S` (not enablers); keep intrinsic seeds and the contents of all retained groups fixed. In an actual exercise interpretation take `h := m.exercisedGroups`, and keep the original frame and event identities fixed. Define the candidate cut by `keep g := ∀ u ∈ h.contributors g, u ∉ S`.
+
+**Proposed structural lemma (not Lean/Comparator checked):** if `Supply h I v` and `¬ Supply (restrict h keep) I v`, there is a nonempty contributor path from some `u ∈ S` to that very `v` along originally supplied groups. A supplied group means an admitted group whose contributors all have original supply; its effect then has original supply. This is a reachability claim about the records, not a statement about modal worlds.
+
+Proof sketch: take an original supply derivation of v. Under the supposition that no selected input has a nonempty path to v, inductively transport the derivation into the restricted family. An intrinsic derivation is unchanged. At a joint step, the original derivation supplies every contributor; if any contributor is selected there is an immediate path to the effect. If a selected input reaches a contributor by a nonempty path, extending that path with this group reaches the effect. Thus the group is retained and each contributor derivation satisfies the no-path condition; transport them and apply the joint constructor. This proves no path implies survival; the loss-to-path direction is classical contraposition (state any required logic assumptions). No acyclicity, uniform finite depth, unique sufficient cause or indispensability of all contributors is used. An independently seeded target cannot be lost. The path may use a group that also has other productive inputs.
+
+To obtain the existing `ExerciseContribution.Step`/ `Credit` rather than a bare graph path, require that the relevant admitted groups are actually exercised and the path endpoints occur at the original actual scenario, for example from the appropriate exercise coherence condition. Ownership of each selected input by a must be independently warranted (`m.bearer u = a`); tags alone are not evidence of operative ownership. For the same recipient x and respect r, require `m.bearer v = x`, `tag v = r`, and the open `AcquiredHistoryTransfer.CreditWarrantsCause` adapter. A separate side condition checks that the productive cut preserves supply of the tested bearers' esse. That side condition is not needed for the graph lemma but is needed for the intended discrimination from bearer-only withdrawal. It does not establish occurrence or metaphysical possibility in a counterfactual scenario.
+
+**Scope separation:** `ca58266a` and `SingleDeletionTest` concern cutting all records producing the same bearer-esse; the present cut concerns direct use of selected productive inputs. No identification of either cut or of `Supply` with `CausesIn`. Redundant paths may survive the cut, so the converse is false in general. If the selected events are actually only enablers, the stipulated cut does not remove those records. An admitted, available, or previously exercised input is not thereby presently engaged. A path from a source-named seed through constitutive or existential records cannot be relabeled operative on the strength of the graph alone; classification and the cause dictionary remain substantive bridges.
+
+### Reproducible structural diagnostic
+
+Seven event indices: 0 = common existential seed, 1 = recipient esse, 2 = producer esse, 3 = independently stipulated source operative input, 4 = alternative operative input, 5 = intermediate, 6 = selected target. The fixed seeds are 0, 3, 4. The two fixed esse records are 0 → 1 and 0 → 2. All 13 optional productive group records can be independently retained or omitted; these are analyst assignments, not a causal ontology. Compute least inductive supply by saturation and positive reachability from 3 through groups whose contributors and effects are originally supplied (source and target are distinct). The recipient-esse cut independently removes records producing 1; the productive cut removes records with 3 as contributor. The former is not a possible-world claim about a nonexistent recipient, and the latter does not remove 3 as a seed. Both bearers' esse remains supplied under the productive cut. The actual-exercise interpretation requires separate evidence; supplied groups need not all be exercised in reality.
+
+Executed the following JavaScript diagnostic on 2026-11-24. Copy the fenced code to Node.js or a browser console to reproduce. These are the authoritative reproducible counts for this fixture; earlier unrecorded chat counts are withdrawn rather than treated as verification.
+
+```javascript
+const groups = [
+  [[3],5],[[3],6],[[4],5],[[4],6],[[1],5],[[1],6],
+  [[2],5],[[2],6],[[5],6],[[6],5],[[3,4],6],[[1,5],6],[[2,5],6]
+];
+const fixed = [[[0],1],[[0],2]], seeds = [0,3,4];
+function supply(gs, ss = seeds) {
+  const s = new Set(ss); let n;
+  do {
+    n = s.size;
+    for (const [inputs,out] of gs)
+      if (inputs.every(i => s.has(i))) s.add(out);
+  } while (s.size !== n);
+  return s;
+}
+function path(gs,s,src,target) {
+  const r = new Set([src]); let n;
+  do {
+    n = r.size;
+    for (const [inputs,out] of gs)
+      if (inputs.every(i => s.has(i)) && s.has(out) &&
+          inputs.some(i => r.has(i))) r.add(out);
+  } while (r.size !== n);
+  return r.has(target); // used only for distinct src and target
+}
+const counts = {graphs:0,supplied:0,loss:0,lossNoPath:0,
+  pathSurvives:0,bearerLossNoSelectedPath:0};
+for (let mask = 0; mask < 2**groups.length; mask++) {
+  const gs = [...fixed,...groups.filter((_,i) => mask & (1<<i))];
+  const orig = supply(gs);
+  const cut = supply(gs.filter(([i]) => !i.includes(3)));
+  const bearerCut = supply(gs.filter(([,o]) => o !== 1));
+  const p = path(gs,orig,3,6);
+  counts.graphs++;
+  if (!cut.has(1) || !cut.has(2)) throw Error("bearer not preserved");
+  if (!orig.has(6)) continue;
+  counts.supplied++;
+  if (!cut.has(6)) {
+    counts.loss++;
+    if (!p) counts.lossNoPath++;
+  } else if (p) counts.pathSurvives++;
+  if (!bearerCut.has(6) && !p) counts.bearerLossNoSelectedPath++;
+}
+const expected = {graphs:8192,supplied:8146,loss:194,lossNoPath:0,
+  pathSurvives:6846,bearerLossNoSelectedPath:98};
+if (JSON.stringify(counts) !== JSON.stringify(expected))
+  throw Error(JSON.stringify(counts));
+const historical = [...fixed,[[3],5],[[5],6]];
+const present = [...fixed,[[5],6]];
+const retainedSeeds = [...seeds,5];
+if (!path(historical,supply(historical),3,6) ||
+    !supply(present,retainedSeeds).has(6) ||
+    path(present,supply(present,retainedSeeds),3,6))
+  throw Error("retention control");
+console.log(counts);
+```
+
+| Test | Count |
+| --- | ---: |
+| Optional-record assignments | 8192 |
+| Originally supplied target | 8146 |
+| Supplied target lost after operative-input cut | 194 |
+| Loss without selected-input path | 0 |
+| Selected-input path despite surviving cut | 6846 |
+| Target lost after recipient-esse cut, no selected-input path | 98 |
+
+The last rows isolate two different errors: treating indispensability as necessary for productive contribution, and inferring productive credit from inherited bearer dependence. The retention control compares a history where 3 feeds 5 and 5 feeds 6 with a later record context where 5 is stipulated as an independent present seed. The present target is still supplied with no present path from 3. This shows why a present-only record cannot settle historical provenance; it is a structural surrogate for a change of sustaining basis, not evidence that an acquired state is metaphysically underived. Holding all fixed seeds except adding 5 at the second context is intentional and is not an instance of the fixed-seed cut lemma.
+
+### Graph destination and next test
+
+Local loss-to-path is potentially useful alongside the ranked-history ancestry result `a03d8c18` and existing transfer argument `69bb5e0b`. It can identify a particular productive line without covering every event in a ranked family. To yield `b26c10a0`, universal transfer, one still needs a suitably interpreted realization for **each** eligible distinct bearer and actual non-esse respect, productive attribution to the same source, and the existing credit adapter. Esse is covered by the original antecedent. The existing GOD_4 consumer `fd3330d0` retains its other seven premises and full-description naming. This checkpoint supplies neither that coverage nor a registered conditional support edge. No change of term sense or established status is proposed.
+
+**Provisional assessment:** prefer the sufficient selective diagnostic where the contribution classification is independently warranted. A conservationist who grants the giver supplies an actually transmitted operative power can grant mediated credit while rejecting immediate concurrence. A stronger conservationist can retain complete local secondary execution and restrict the giver's activity to sustaining its bearer; mere observation of real bearers or the result's loss under an existential cut does not discriminate. Redundancy and historical retention also do not imply causal independence. These controls separate claims in the record formalism, not whole metaphysical worldviews.
+
+**Next metaphysical question:** does giving the concrete nature of this agent include giving the efficacy of its native active powers (and, separately, their exercise on this occasion), rather than sustaining a bearer with independently operative powers? Distinguish gift of a nature, actual possession and conservation of a power, application/exercise, specification by a secondary, and ongoing effect conservation. Investigate whether the real active power is an essential intrinsic determination whose receipt is included in the giver's own productive action, or whether the causal origin of that power or its actual exercise can differ. Compare the best conservationist and concurrence accounts with the very same operative power, patient, local specification, and exercise. Do not require determinism, universal immediate concurrence, or the divine identification. A separately warranted productive ancestry from the named source to this power actually in use would reopen the local attribution; proof of universal coverage is another question.
+
+**Handoff and verification:** documentation/structural investigation only. No new Lean vocabulary, theorem, source attribution, statement, result or argument is registered; intended no premise change, computed frontier-diff unavailable in this environment. GitHub connector inspection and the finite JavaScript diagnostic are available; a repository checkout, `truth` CLI, installed local conventions, Lean, Comparator, NanoDa, and independent semantic challenger are unavailable here. Run the reuse/dossier/brief/novelty/semantics preflight and check for overlap on current main before formalizing. Complete the independent semantic challenge, claim/type sweep, proof/binding/verification and computed frontier comparison if adding a certified result. This note does not supersede the independently reviewed previous sections or advance their formal status. Issue #1934 remains open.
