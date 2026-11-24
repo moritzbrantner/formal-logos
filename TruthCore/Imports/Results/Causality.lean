@@ -212,6 +212,7 @@ public import TruthCore.Results.Causality.LifeBoundaryPotency.Solution
 public import TruthCore.Results.Causality.LiftingStrength.Solution
 public import TruthCore.Results.Causality.LocalFramePossibleExternalCause.Solution
 public import TruthCore.Results.Causality.LocalObservationSelectsSolution.Solution
+public import TruthCore.Results.Causality.LocalSourceConfluence.Solution
 public import TruthCore.Results.Causality.LocalTeleologyGodIntellect.Solution
 public import TruthCore.Results.Causality.LogicalNecessityProfiles.Solution
 public import TruthCore.Results.Causality.MaximalFromEsseSource.Solution

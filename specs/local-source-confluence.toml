@@ -1,0 +1,47 @@
+[batch]
+vocab = "TruthCore.Causality.LocalSourceConfluence"
+results = "TruthCore.Results.Causality.LocalSourceConfluence"
+definitions = ["f64856c0-6d2c-5c5d-97ef-9895039d8c27", "1dff2d68-1348-5e7e-8ee7-248af63c8c53", "822c9912-2313-584b-b2b7-77031da20107"]
+disambiguations = ["34ddfede-ff4d-59ad-9882-4bcb490df9bb", "4b02d34a-9226-5009-9ac2-3b52f4222b21"]
+
+[[statement]]
+id = "Every immediate pair of suppliers of one dependent has a common upstream node"
+lean = "LocalForksJoin"
+definitions = ["f64856c0-6d2c-5c5d-97ef-9895039d8c27", "1dff2d68-1348-5e7e-8ee7-248af63c8c53", "822c9912-2313-584b-b2b7-77031da20107"]
+disambiguations = ["34ddfede-ff4d-59ad-9882-4bcb490df9bb", "4b02d34a-9226-5009-9ac2-3b52f4222b21"]
+paraphrase = "For each node and each pair of immediate suppliers, one node is reachable from each supplier by finitely many reversed edges of the selected relation, allowing an empty path. The joining node can vary by pair. Open when applied to the actual concrete grounds of each dependent in a fixed world."
+
+[[statement]]
+id = "Two alternating sources can supply every stage of a connected acyclic locally joining graph"
+lean = "LadderControl"
+definitions = ["f64856c0-6d2c-5c5d-97ef-9895039d8c27", "1dff2d68-1348-5e7e-8ee7-248af63c8c53", "822c9912-2313-584b-b2b7-77031da20107"]
+disambiguations = ["34ddfede-ff4d-59ad-9882-4bcb490df9bb", "4b02d34a-9226-5009-9ac2-3b52f4222b21"]
+paraphrase = "In the specified infinite relay graph, every node either is a source or has an immediate source. Every immediate fork joins upstream, the graph is weakly connected and acyclic, and the two named roots are distinct sources. Global upstream confluence and well-foundedness both fail on this interpretation."
+
+[[argument]]
+id = "Join all finite upstream paths by joining immediate forks under well-foundedness"
+theorem = "confluenceOfLocalForks"
+premises = ["25697a6f-d4f8-55c4-9e12-2d6b6710c119", "Every immediate pair of suppliers of one dependent has a common upstream node"]
+conclusion = "1a575754-6316-5d66-ac5b-db8fb4cf1aef"
+comparator_theorems = ["obstructionOfTwoSources", "uniqueActualOfLocalForks"]
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Well-founded induction on the common starting node and decomposition of the first upstream steps"
+meaning = "Both initial steps have a common extension by the local premise. Induction at the two immediate suppliers extends the original paths to a single node. The companion locates an unjoinable immediate fork somewhere in any weakly connected well-founded graph with two distinct sources, using classical logic to exhibit a failing instance. A second companion specializes the full chain to actual well-founded grounds, weak connectivity, universal local joining and a supplied actual root."
+
+[[argument]]
+id = "Identify an actual root from existence and source agreement on its grounding graph"
+theorem = "uniqueActualOfSourceAgreement"
+premises = ["dc397705-d727-419e-92f9-65d44e1ff15d", "861e20d6-7d65-5856-85cf-0cd0d0c167f3"]
+conclusion = "7ab0ddcb-cf48-5457-bee7-b6ea9c13b6b1"
+axioms = []
+rule = "Lift the supplied actual roots into the actual-concrete subtype and project their equality"
+meaning = "Instantiate the structural source-agreement premise on exactly ConcreteExistentialSupply.graph m w. The supplied actual root and any competing actual root of this profile are both sources of that graph, so their underlying bearers coincide. The same witness can be furnished by any route to actual root existence at this world."
+
+[[argument]]
+id = "Test local joining when every stage has a source but its relay chain continues"
+theorem = "alternatingSources"
+premises = []
+conclusion = "Two alternating sources can supply every stage of a connected acyclic locally joining graph"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Construct upstream joins by parity and prove acyclicity by strict stage order"
+meaning = "Each relay stage has both an immediate source and a further relay. Sources alternate, so the further relay reaches the initial source through one more relay. Opposite sources have no common extension. This tests substituting a short route to some source for well-foundedness in the local-fork argument."

@@ -7,16 +7,41 @@
     "1a575754-6316-5d66-ac5b-db8fb4cf1aef",
     "96082032-91f1-586b-9db8-e42edbb5e52e",
     "e1d114a4-abc0-5649-b453-568a939da431",
-    "c91db136-3b14-53d9-9f61-b4bba9a57ac9"
+    "c91db136-3b14-53d9-9f61-b4bba9a57ac9",
+    "7ab0ddcb-cf48-5457-bee7-b6ea9c13b6b1",
+    "9cd1588d-4416-439e-ac0c-190d46e6b753",
+    "25697a6f-d4f8-55c4-9e12-2d6b6710c119",
+    "861e20d6-7d65-5856-85cf-0cd0d0c167f3"
   ],
   "kind": "countermodel",
   "outcome": "succeeded",
-  "summary": "Reuse inventory consumed exact SourceForest/SourceWitness theorems and unchanged PartFreePlurality.jointControl. The literal actualGraph of that ontology is definitionally its actualSupportGraph: both retain prior, not a replacement relation. It is weakly connected and WF with distinct actual rank-zero sources jointly causing instrument, whose upstream extensions cannot join. Imported rooted_from_source would identify these sources if confluence held, so confluence fails while its other inputs hold. The full existing joint commitment bundle is retained. Existing isolated, diamond and literal overlap controls supply disjoint/common-source/infinite-branch contrasts without claiming they share every extra metaphysical premise. Proposed unity-to-common-ground defense remains an unattributed open commitment; a common downstream effect or q3a7 uniting cause does not supply upstream merger. Strongest pluralist reply and outstanding individuation, semantic and explanatory burdens are in docs/notes/part-free-plurality.md. Rejected inferring confluence from cooperation, necessity, part-freedom, WF or intrinsic explanation tokens, and rejected treating finite satisfiability as real possibility. No root premise added/removed/discharged. Shared-session combined proof v2 accepted at clean preview db603d3140e92c4b1ca653ab2098a0189a70653f with SHA2563822e5179b3493f75be5df2ad244e2507745a8b3a58b7e3d9c925b333282e5e5; permitted Mathlib axioms only. First client timeout and explicit-binder correction preserved in the note. Final canonical verification remains CI-owned.",
+  "summary": "Reuse inventory consumed exact SourceForest/SourceWitness theorems and unchanged PartFreePlurality.jointControl. The literal actualGraph of that ontology is definitionally its actualSupportGraph: both retain prior, not a replacement relation. It is weakly connected and WF with distinct actual rank-zero sources jointly causing instrument, whose upstream extensions cannot join. Imported rooted_from_source would identify these sources if confluence held, so confluence fails while its other inputs hold. The full existing joint commitment bundle is retained. Existing isolated, diamond and literal overlap controls supply disjoint/common-source/infinite-branch contrasts without claiming they share every extra metaphysical premise. Proposed unity-to-common-ground defense remains an unattributed open commitment; a common downstream effect or q3a7 uniting cause does not supply upstream merger. Strongest pluralist reply and outstanding individuation, semantic and explanatory burdens are in docs/notes/part-free-plurality.md. Rejected inferring confluence from cooperation, necessity, part-freedom, WF or intrinsic explanation tokens, and rejected treating finite satisfiability as real possibility. No root premise added/removed/discharged. Shared-session combined proof v2 accepted at clean preview db603d3140e92c4b1ca653ab2098a0189a70653f with SHA2563822e5179b3493f75be5df2ad244e2507745a8b3a58b7e3d9c925b333282e5e5; permitted Mathlib axioms only. First client timeout and explicit-binder correction preserved in the note. Final canonical verification remains CI-owned. Follow-up, November 25. Well-founded induction turns universal immediate-fork joining into global upstream confluence. On a connected well-founded graph, two distinct roots force an unjoinable immediate fork. An explicit connected acyclic infinite relay has two alternating roots and universal local joins, with every node at distance zero or one from some root. On one actual-concrete grounding profile, root existence and structural source agreement give the existing unique-actual-root interface. The composed local-fork application is separately checked. See the section on immediate co-suppliers in the linked note.",
   "evidence": [
     "3f074065-19d2-588c-9ff5-5c919376f5b6",
     "a5b44455-66e5-5bef-9784-e37472a39324",
     "8ac4f805-9c10-521d-a4a8-7e7a5ed8b51d",
     "d25f68a3-a9f7-547e-81f1-964da24856e0",
-    "b06d45ee-a1da-5ce4-84be-4f2a8009ab07"
-  ]
+    "b06d45ee-a1da-5ce4-84be-4f2a8009ab07",
+    "02d310f0-101e-4647-8a89-debab38104ba",
+    "62568126-6e89-40b8-a786-2ec49fb7687e",
+    "cbc25f11-29fe-483a-8157-672c7703e6cd"
+  ],
+  "current_assessment": {
+    "date": "2026-11-25",
+    "statement_ids": [
+      "7ab0ddcb-cf48-5457-bee7-b6ea9c13b6b1",
+      "9cd1588d-4416-439e-ac0c-190d46e6b753",
+      "25697a6f-d4f8-55c4-9e12-2d6b6710c119",
+      "861e20d6-7d65-5856-85cf-0cd0d0c167f3"
+    ],
+    "scope": "Common ancestry of immediate actual existential co-suppliers, structural source agreement, and uniqueness of an actual concrete root at the selected world.",
+    "assessment": "Under well-foundedness, tracing every immediate fork to a same-relation common ancestor suffices to join all finite upstream paths. In a connected well-founded plural-source graph some immediate co-suppliers have no common ancestor. The five-being interpretation specifies such a site. A shared dependent and coordinated activity alone do not warrant universal local joining for substantial existential grounds. The alternating-relay model separates well-foundedness from universal short paths to some source, even with local joining and acyclicity.",
+    "next_test": "Trace what sustains the existence of each constituent of a specific pair of substantial co-suppliers. Test whether a common ground explains the existence of both or only the coordination of their acts, and what would extend this explanation across the actual grounding graph.",
+    "note": "docs/notes/part-free-plurality.md#when-immediate-co-suppliers-suffice-for-a-common-source",
+    "reviewed_revision": "4e44d8ce8b8ef9c56666492dac2399bc9cd73888",
+    "review": "unreviewed",
+    "publication": "unpublished",
+    "evidence": "Frozen challenges and existing same-source De ente consumer c66eead8. Integration and independent challenge in progress.",
+    "supersedes": "The prior requirement to defend every pair of finite paths directly can be replaced by a universal immediate-fork test under well-foundedness."
+  }
 }

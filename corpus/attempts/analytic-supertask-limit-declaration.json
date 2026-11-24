@@ -30,10 +30,10 @@
     "assessment": "A fixed single-copy advantage over chance imposes a positive action cost on each adjacent pure-state transition of the same unitarily evolving device. Independent apparatus information can account for the entire readout. A bounded continuous qubit rotation admits infinitely many distinct sampled states with vanishing advantage. These results favor excluding uniformly readable serial tasks within this model. A physical premise requiring such records for the upstream bearers of every effect remains open.",
     "next_test": "For a proposed application, compare every required pair using blinded records or the fixed-channel earlier-state control, and justify the complete action budget. For the ancestral-label route, locate all upstream bearers for each effect, including parallel or external contributors, and show how their selected fact labels are covered by the bounded roster.",
     "note": "docs/supertasks.md#when-a-stage-must-leave-a-reliably-readable-state-1859",
-    "reviewed_revision": "9df4e1bcbbf3d9653c6976976ab9f36296392299",
-    "review": "unreviewed",
+    "reviewed_revision": "79311ee6fee45f886cd03a85e2157a952f79477f",
+    "review": "accepted_qualified",
     "publication": "unpublished",
-    "evidence": "Local analysis of #1859 with a derivation, omission controls and primary-paper locators in the note. The experimental comparator is a finite spin-preparation protocol. The action bound and causal transfer have no new Lean result or corpus source claim. Coordinator semantic review pending.",
+    "evidence": "Independent semantic review checked the equal-prior discrimination bound, generator action, matched-arm control, Zeno counterexample and all-ancestor coverage. Acceptance concerns the model and this limited causal application.",
     "supersedes": "None. Extends the orthogonal case in #1859 to imperfect single-shot readability and retains the existing compact-clock and analytic-limit findings."
   }
 }

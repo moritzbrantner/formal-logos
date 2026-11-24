@@ -148,6 +148,7 @@ public import TruthCore.Causality.InterventionTransitivity
 public import TruthCore.Causality.JointGroups
 public import TruthCore.Causality.LifeBoundaryPotency
 public import TruthCore.Causality.LocalFramePossibleExternalCause
+public import TruthCore.Causality.LocalSourceConfluence
 public import TruthCore.Causality.LocalTeleologyGodIntellect
 public import TruthCore.Causality.LocalTransmission
 public import TruthCore.Causality.LogicalNecessityContrast

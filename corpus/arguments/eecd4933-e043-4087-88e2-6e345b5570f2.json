@@ -1,0 +1,29 @@
+{
+  "id": "eecd4933-e043-4087-88e2-6e345b5570f2",
+  "label": "Identify an actual root from existence and source agreement on its grounding graph",
+  "premise_statement_ids": [
+    "dc397705-d727-419e-92f9-65d44e1ff15d",
+    "861e20d6-7d65-5856-85cf-0cd0d0c167f3"
+  ],
+  "conclusion_statement_id": "7ab0ddcb-cf48-5457-bee7-b6ea9c13b6b1",
+  "inference_ids": [
+    "9ad688dd-e0ca-4431-82e2-c4ba4f3dc813"
+  ],
+  "meaning": "Instantiate the structural source-agreement premise on exactly ConcreteExistentialSupply.graph m w. The supplied actual root and any competing actual root of this profile are both sources of that graph, so their underlying bearers coincide. The same witness can be furnished by any route to actual root existence at this world.",
+  "definition_ids": [
+    "c57e2682-08e6-527e-950f-0fa0a7ff11ef",
+    "822c9912-2313-584b-b2b7-77031da20107",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "1dff2d68-1348-5e7e-8ee7-248af63c8c53",
+    "f64856c0-6d2c-5c5d-97ef-9895039d8c27",
+    "9aa95dab-4e15-56e4-b9cf-8ad8aef87540",
+    "7439c292-82a4-530d-8144-a61a6c21f502"
+  ],
+  "disambiguation_ids": [
+    "6e92c6e3-edf0-5d7e-b2b3-788b24b8b768",
+    "4b02d34a-9226-5009-9ac2-3b52f4222b21",
+    "6f1d1395-7c1d-5bd5-a45d-03380857aed6",
+    "34ddfede-ff4d-59ad-9882-4bcb490df9bb",
+    "c529e8d3-43e3-53a8-a82f-3955e9815265"
+  ]
+}

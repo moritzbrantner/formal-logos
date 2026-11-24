@@ -3,6 +3,25 @@
 Date: 2026-11-13. Research baseline:
 `03d97b48a86d4b7d7bbedcb4441398ce3a9dadef`.
 
+## From an underived source to one shared source
+
+In a well-founded grounding order, it suffices that the immediate suppliers
+of each dependent trace back to a common ancestor. They may meet at different
+beings for different dependents. If the actual grounding graph is weakly
+connected, all its underived sources must then coincide. A pluralist who
+accepts connectivity and well-foundedness is committed to some dependent
+whose immediate suppliers have no shared ancestor. The existing model of
+two underived powers jointly supplying one instrument specifies just such
+a case. Tracing the coordination of the powers would leave open what sustains
+the existence of their bearers. [Argument, model and test](part-free-plurality.md#when-immediate-co-suppliers-suffice-for-a-common-source)
+
+This result connects arguments for the existence of an actual root with
+arguments that need to identify the same source. Having a short path to
+some source at every point is insufficient for the local-fork argument.
+The alternating relay has two roots even though every stage has an immediate
+source and every immediate fork joins. [Proof](../../TruthCore/Results/Causality/LocalSourceConfluence/Solution.lean)
+and [use of uniqueness in the De ente argument](../../corpus/results/c66eead8-8674-4d0c-b04f-423d51c34392.json)
+
 ## What two observations tell us about a source
 
 In a closed, unitarily evolving memory with pure states, a blinded, equal-prior
