@@ -1,0 +1,10 @@
+{
+  "id": "b6f48876-e5d7-44e8-ab51-cad440ceff59",
+  "label": "An unrestricted fitting ledger exists exactly for a root with another actual bearer",
+  "paraphrase": "In each profile at its selected world, some ledger with finite throughput, a positive one-way edge and covered exports for all actually grounded bearers exists exactly when there is an actual root and a distinct actual concretum. The reverse direction builds one unit transfer from the root to the other bearer. Choosing the ledger retrospectively carries no independent warrant for root existence.",
+  "lean_declaration": "TruthCore.Causality.FiniteThroughput.LedgerExistenceCriterion",
+  "definition_ids": [
+    "c57e2682-08e6-527e-950f-0fa0a7ff11ef",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "9a8c1cf9-e2be-4a9c-b123-a0043839a7a7",
+  "label": "Characterize unrestricted ledger fitting by constructing a single transfer from a root",
+  "argument_id": "2189f2c6-0795-4547-b0be-8f0e8a522db6",
+  "challenge_module": "TruthCore.Results.Causality.FiniteThroughput.Challenge",
+  "solution_module": "TruthCore.Results.Causality.FiniteThroughput.Solution",
+  "theorem": "TruthCore.Results.Causality.FiniteThroughput.ledgerExistenceCriterion",
+  "comparator_config": "results/9a8c1cf9-e2be-4a9c-b123-a0043839a7a7/comparator.json",
+  "status": "solution-present",
+  "description": "The endpoints of a return-free transfer differ, so one differs from the root supplied by the cut. Conversely assign one unit only from the given root to the distinct actual bearer. Every grounded bearer exports zero; the single edge has no return."
+}

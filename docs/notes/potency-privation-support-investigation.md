@@ -1,9 +1,74 @@
 # Potency and privation: support and exact bridges
 
-Date: 2026-11-13. Evidence baseline:
-`03d97b48a86d4b7d7bbedcb4441398ce3a9dadef`.
+## Verified reverse bridge, 2026-11-24
 
-## Question and finding
+At baseline `68c0bba0d` the sole registered consumer of the two premises was
+the forward argument `804d2c83`. It takes **T** (potency is capacity under
+privation) and **Q** (on capable subjects, privation is lack of act) to **F**
+(potency is unactualized capacity). The two new rules conclude the original
+statements in that consumer's generic vocabulary.
+
+| Available together | Derived using the same subject, respect and predicates | Result |
+| --- | --- | --- |
+| F and Q | T. In either direction the capacity witness licenses Q at that very subject and respect. | [capacityUnderPrivation](../../corpus/results/30f03b0e-b8e7-4749-89e3-f19d687263e6.json) |
+| F and T | Q. Given capacity, translate privation to potency to lack of act, and conversely. Nothing follows about incapable subjects. | [lackInCapable](../../corpus/results/ac7a46e7-8d1c-4b87-9ba2-42c56034de08.json) |
+
+At exactly `AdoptedPotency.InPotency InAct CanBe`, the existing
+`AdoptedPotency.analysis` supplies F. The separately checked companion
+`adoptedEquivalence` then gives adopted T iff Q without an analysis premise.
+Its Challenge fixes the potency function on the T side. It supplies no unary
+rule into the generic T node. Both generic arguments keep F as their explicit
+bridge between unactualized potency and the capacity that can persist during
+exercise. [Frozen types](../../TruthCore/Results/Causality/PotencyPrivation/Challenge.lean)
+and [proofs](../../TruthCore/Results/Causality/PotencyPrivation/Solution.lean).
+
+**Connection to the First Way.** The existing argument `08333363` combines F
+with `76e0f716` (being moved is actualization of an unactualized capacity) to
+obtain the motion analysis `0628359b`. Argument `b4eccbb4` uses it to derive
+that what is moved is in potency. That is one premise of `3516aa48` for the
+first-mover conclusion `c1b68c21`; `ed7c588a` uses that conclusion with its
+own four gap premises for G. Neither reversal supplies `76e0f716`, a mover,
+or those identification and existence bridges.
+
+**Premise effect.** The working-tree `truth frontier-diff --base 68c0bba0d`
+adds exactly the two support alternatives in the table. It reports F moving
+from `closed` to `stated` in its expanded diagnostic. Direct acceptance of F,
+T, and Q remains available. With F already supplied to the motion consumer,
+taking a detour through T or Q gives no further support for F. The old T-and-Q
+entry still derives F. No independent evidence for an input comes from
+recovering it from its own consequences.
+
+For a check on the historical terminal-only calculation, export
+`truth --json support-graph 8626f8a5-9531-5da7-9ebd-f901e74b1129`,
+supply every node without an incoming rule, and repeatedly add conclusions
+whose entire premise sets are available until no node is added. In the baseline
+rule set (omit the two new arguments and recompute the terminal set), T and Q
+are terminal and give F. With both reversals, none of F, T and Q is terminal.
+They supply none of one another on that basis. Adding any one as a direct
+input gives only itself within this triple; adding any pair gives all three.
+G remains reachable on both all-terminal evaluations through the wider graph.
+These checks concern registered conditional rules and supplied inputs.
+
+**Judgment and revision.** The earlier case for broad apt-subject absence and
+unactualized potency stands on the conceptual account and evidence below.
+The certificates settle the inference between those readings. A power held
+during actual exercise remains the strongest rival interpretation of P:
+where C and A both hold, identifying P with the retained C contradicts F.
+That test distinguishes the readings while preserving the evidence for
+retained capacities. A stage-relative privation would also require a reason
+that the subject is due the act at that stage. Reassess application if an
+actual consumer supplies either rival predicate, changes respect or context,
+or identifies a capable subject violating Q under the broad reading. The
+aptitude-to-privation analysis below remains a separate proposed warrant.
+The two bindings, Comparator and NanoDa passed locally. Lean reports zero
+axioms for all three theorems. [Derivation attempt](../../corpus/attempts/072bc854-302b-443c-916d-c4ca08df07df.json).
+
+## Original investigation, 2026-11-13
+
+The remaining sections record the findings and verification status at
+`03d97b48a86d4b7d7bbedcb4441398ce3a9dadef`, before the reverse bridge above.
+
+### Question and finding
 
 This investigation concerns two of the nine common inputs in the
 [terminal-only God-existence calculation](god-existence-support-formula.md#nine-shared-terminal-obligations-for-g).
