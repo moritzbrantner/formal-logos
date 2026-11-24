@@ -1293,7 +1293,15 @@ not follow from the claim that a power has a definite natural
 character; having a single definite *mode of operation* is not the
 same as producing a single kind of effect. Equivocal causation and
 a formative principle of a whole differentiated order are positive
-alternatives. A source producing different effects directly need
+alternatives. Aquinas himself distinguishes univocal from non-univocal
+production in [ST I q.25 a.2 ad 2](https://www.newadvent.org/summa/1025.htm#article2),
+read here together with a.1 ad 2–4. His first cause is explicitly not
+univocal with any creature. That distinction supports caution about
+transferring a finite single-kind operation principle to the ultimate
+source; it does not supply a noncognitive ultimate cause. The previous
+Θ.2 reading was also checked in the linked Ross translation: its
+medical-art comparison explicitly explains the role of a rational
+account in understanding a positive state and its contrary. A source producing different effects directly need
 not reproduce each effect's form in itself as a finite natural
 instance. No proof is claimed that the actual universe supplies
 the stipulated direct, total, different-kind witnesses.
