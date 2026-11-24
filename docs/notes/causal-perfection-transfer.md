@@ -2704,7 +2704,7 @@ Fix one actual concrete root g and its distinct actual productive recipient x at
 
 A, B and C imply an incoming ground of g, which its supplied actual roothood excludes. Given A and C, B fails for x and o at w. Extending the exclusion to all actual concreta at the same w requires a universally quantified transport adapter. Abstract, absent or otherwise unmodeled grounds and external determination of the operation's end remain open. An effect-dependent description may require the effect for its truth without grounding the operation.
 
-**Life fork.** A broad life analogy can draw on genuinely self-originating proper activity if that stronger, nature-level premise is warranted. The selected-recipient exclusion supplies one bounded contribution. An impersonal active foundation earns the same conclusion under the same inputs. Strict immanent life still requires the applicable intrinsic operation and unmovedness. Applications to LIVING_1, LIVING_2 and `Has` in `fe67d766` retain their distinct sense and purity burdens.
+**Life fork.** A broad life analogy can draw on genuinely self-originating proper activity if that stronger, nature-level premise is warranted. The selected-recipient exclusion supplies one bounded contribution. An impersonal active foundation earns the same conclusion under the same inputs. The registered strict operation-to-life inference requires an immanent operation and unmovedness in every respect. Applications to LIVING_1, LIVING_2 and `Has` in `fe67d766` retain their distinct sense and purity burdens.
 
 ### 4. Structural test and comparative verdict
 
@@ -2744,7 +2744,7 @@ Do not penalize the impersonal alternative for lack of biological life, cognitio
 
 **R4 — Limitation.** The E/L tests separate a missing mode, a nature-based exclusion and a real contraction of esse. Absence of due defects can coexist with across-mode nonpossession in the fixed signature. The pure-mode test still requires a substantive purity classification and a reason to treat exclusion as a limitation under the same act/recipient account. A comparison between two profiles needs a calibrated link from inclusion of a further determination to `MoreIn esse`. Joint compatibility and a capacity of this actual source to acquire a further actuality would be separate claims.
 
-**R5 — Application.** A warranted pure determination at the selected root would need the relevant `Has/Pure` application. Both registered routes to `fe67d766` and its uniqueness consumers retain their exact premise bundles. A root-scoped use toward `64498e7e` also needs the D/R and `Has`/`InAct` bridges and scope expansion. The [current assessment](#current-assessment-and-next-test) records the selected next test.
+**R5 — Application.** A warranted pure determination at the selected root would need the relevant `Has/Pure` application. The two registered routes to `fe67d766` examined here and its uniqueness consumers retain their exact premise bundles. A root-scoped use toward `64498e7e` also needs the D/R and `Has`/`InAct` bridges and scope expansion. The [current assessment](#current-assessment-and-next-test) records the selected next test.
 
 ### 6. Evidence and verification status
 
@@ -2996,7 +2996,7 @@ return rows;
 
 ### Registered argument bundles and the selected root
 
-Every row lists a conjunction of registered premise statements. The two routes to `fe67d766` prove a universal over actual roots at the selected world, conditional on their respective bundles. For one supplied actual root g, the #1914 instance uses `08178314` to exclude `Limited g`, `be1289df` to give infinity of g and `122b112e` to give every pure determination of g. This instance concerns g. The universal consequence is the separate registered application `bc17c420` with its three universally scoped inputs.
+Every row lists a conjunction of registered premise statements. The two routes to `fe67d766` examined here prove a universal over actual roots at the selected world, conditional on their respective bundles. For one supplied actual root g, the #1914 instance uses `08178314` to exclude `Limited g`, `be1289df` to give infinity of g and `122b112e` to give every pure determination of g. This instance concerns g. The universal consequence is the separate registered application `bc17c420` with its three universally scoped inputs.
 
 | Registered argument | Joint premises | Conditional conclusion |
 | --- | --- | --- |
