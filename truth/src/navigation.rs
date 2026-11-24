@@ -147,7 +147,7 @@ pub fn format_next_steps(report: &Value) -> String {
     let progress = &report["progress"];
     lines.push(format!(
         "Foundational progress: {} established root-reaching statements; \
-         {} premises with verified support alternatives; \
+         {} unestablished premises with verified support alternatives; \
          {} distinct conditional bundles",
         t(&progress["root_reaching_established_count"]),
         t(&progress["with_verified_alternative_count"]),

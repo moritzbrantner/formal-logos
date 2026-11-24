@@ -88,7 +88,7 @@ export default function NextPage() {
       <h2 id="support-heading" className="font-serif text-2xl">Foundational progress and support options</h2>
       <ul className="mt-3 list-disc pl-5 text-sm">
         <li>{progress.root_reaching_established_count} root-reaching statements established in the corpus</li>
-        <li>{progress.with_verified_alternative_count} premises have a verified support alternative</li>
+        <li>{progress.with_verified_alternative_count} unestablished premises have a verified support alternative</li>
         <li>{progress.verified_alternative_bundle_count} distinct verified premise bundles, including established conclusions</li>
       </ul>
       <p className="mt-3 text-sm text-[var(--muted)]">A premise can be assumed directly or supported by a verified argument from other premises. Adding the latter is useful even when expanded leaf cost rises. Verification establishes the inference, not its open premises; bundle counts neither measure argument independence nor establish the root.</p>
