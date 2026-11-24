@@ -222,6 +222,7 @@ public import TruthCore.Causality.QuantitativeTransferPaths
 public import TruthCore.Causality.ReceiptAllocation
 public import TruthCore.Causality.ReceivedEsseActualGiver
 public import TruthCore.Causality.ReceptionLimitation
+public import TruthCore.Causality.ReflectiveComprehension
 public import TruthCore.Causality.ReflexiveDependenceScope
 public import TruthCore.Causality.RegressReadings
 public import TruthCore.Causality.RegressRivalCoverage
