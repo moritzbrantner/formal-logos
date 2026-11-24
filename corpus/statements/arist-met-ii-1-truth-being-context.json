@@ -1,0 +1,13 @@
+{
+  "id": "aeddf4c6-b715-56ee-9219-c6728b0dbccc",
+  "label": "Aristotle: truth and being correspond in the context of eternal principles",
+  "legacy_id": "STMT-ARIST-MET-II-1-TRUTH-BEING-CONTEXT",
+  "paraphrase": "Metaphysics II.1 argues that what causes later things' being true is most true, that the principles of eternal things are always most true because they are not dependent for being, and concludes that how each thing stands to being is how it stands to truth, in that causal context.",
+  "note": "Original-language contextual reading of 993b24–31; 'truth' denotes at most truth said of things (TRUE_7). No conformity to divine intellect, global universal comparison across all kinds or pairwise biconditionals are claimed. The extension of the final 'each' beyond the immediate explanatory context remains an interpretive dispute.",
+  "definition_ids": [
+    "9d37eba3-360b-4098-a6fc-bd07edb1594f"
+  ],
+  "disambiguation_ids": [
+    "80b5fc49-ed55-5c61-b14b-3621d2aa1520"
+  ]
+}

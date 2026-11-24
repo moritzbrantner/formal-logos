@@ -1,5 +1,7 @@
 # Maximality, greatest represented degree and strict supremacy
 
+> Source-fidelity update (2026-11-23, #1849): the source-attributed Metaphysics II.1 claim was narrowed; `5a948c37` remains an open analyst biconditional with only a `supports` relation. See [source-fidelity-1849.md](source-fidelity-1849.md). Historical status counts in older sections of this research snapshot are not current frontier reports.
+
 The source-shaped `GreatestDegreeCausesAllInGenusReading` and the old open
 `MaximumInBeingCausesAllBeingsReading` have different antecedents. The first
 requires a greatest represented degree among bearers. The second applies to
@@ -315,7 +317,7 @@ dates.
 | --- | --- | --- |
 | `c11369aa` more such has the perfection (`cf4db879`) | `98755509`, `ed766869`, `ac72bbfe` | Stated: claim AQUINAS-ST-I-Q2-A3-MORE-SUCH-HAS-PERFECTION-A |
 | `6c27657f` grades have a maximum (`c201b61a`) | `f29a6b53`, `5cda1946` (with `c11369aa`, transfer `2c0b9bd7`, excluded middle) | Stated: AQUINAS-ST-I-Q2-A3-GRADES-HAVE-MAXIMUM-A |
-| `5a948c37` as to being, so to truth (`2db4a37a`, feeding `101bdd62` through `8542e377`) | `1568610e`, `2a0e7f12` | Stated: ARIST-MET-993B-AS-TO-BEING-SO-TO-TRUTH-A |
+| `5a948c37` as to being, so to truth (`2db4a37a`, feeding `101bdd62` through `8542e377`) | `1568610e`, `2a0e7f12` | Supported only: b7d959b1 now attributes a narrower reading; global biconditionals are an analyst extension (#1849) |
 | `d9fad785` maximum in a genus causes all in it (`c70736c4`) | `dc619ad6`, `e433b6f5`, `88b2caf5` | Supported only (q.2 a.3, Met. II.1, q.13 a.5); attacked by being-not-a-genus |
 | `d5a94eb1` cause of a quality is more such (`a31b3e52`) | `cdb79aa6`, `39a4c28c`; through `a9036c3c` (`5e42f97e`): `efe134d4`, `9da93cd4`; through `d0b76fb9` (`29851dcb`): `3e890700`; through `7030af77` (`1fbc8de7`): `a961a13e`, `f6677834` | Stated: ARIST-APOST-72A-CAUSE-MORE-SUCH |
 | `7067553d` nothing has actuality except insofar as it is (`8ba56e15`) | `ca84f62d`, `196e6606` | Stated twice: q.4 a.1 ad 3 and q.3 a.4 claims |
