@@ -328,12 +328,13 @@ def SecundaControls : Prop :=
     NoInfinitePerSeEfficientCauseSeriesReading edgeTF ∧ edgeTF true false)
 
 /-- The ascent limit, on the `Nat` grade model: actual grounding is
-well-founded, every recorded inclusion between esse causing, simple priority,
-grounding and the grade holds (esse cause into ground, ground into esse cause,
-priority into ground, ground into more in esse), so do the genus principle, the
-actuality calibrations, the esse regress and well-founded priority, and some
-being is more a being than another; yet there is an infinite ascent in being,
-even among actual concreta. -/
+well-founded; the four inclusions esse cause into ground (cb1cdea9), ground
+into esse cause (98efaa9e), priority into ground (86efed1a) and ground into
+more in esse (d96105fb) hold, so do the genus principle (vacuously: the grade
+has no maximum), the actuality calibrations, the esse regress and well-founded
+priority, and some being is more a being than another; yet there is an
+infinite ascent in being, even among actual concreta. Grounding, causing and
+priority are the single edge `1 → 0`. -/
 def AscentLimit : Prop :=
   ActualGroundingWF mNat () ∧
     EsseCauseIsActualConcreteGround mNat () pNat.CausesIn pNat.esse ∧

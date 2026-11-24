@@ -158,11 +158,12 @@ justification.
    maximum (`MaximumInGenusCausesAllInGenusReading`), not to intermediate
    grades. *Relevance:* it is the only inclusion that would carry AGWF to the
    ascent premise. **`ascentLimit`** (Comparator-checked) gives a `Nat`
-   interpretation in which AGWF, the esse regress, well-founded priority, every
-   recorded inclusion among esse causing, priority, grounding and the grade
+   interpretation in which AGWF, the esse regress, well-founded priority, the four
+   recorded inclusions among esse causing, priority, grounding and the grade
    (`cb1cdea9`, `98efaa9e`, `86efed1a`, `d96105fb` ground ⊆ more), the genus
-   principle `d9fad785`, the three actuality calibrations and `GradesFoundInBeing`
-   all hold, while there is an infinite ascent in being, even among actual
+   principle `d9fad785` (vacuously), the three actuality calibrations and
+   `GradesFoundInBeing` all hold, with grounding, causing and priority the single
+   edge `1 → 0`, while there is an infinite ascent in being, even among actual
    concreta. The genus principle cannot help: an infinite ascent has no
    maximum, so it is vacuous there. The recorded inclusion runs the other way:
    ground ⊆ more (`d96105fb`, causa nobilior effectu) gives AGWF *from* the
@@ -172,8 +173,9 @@ justification.
 
 ## Shared dependency or presentation?
 
-* **Forward direction only (bridges 1, 3): a real reduction.** AGWF is
-  strictly stronger than what it yields. The strictness conjunct of
+* **Forward direction only (bridges 1, 3): a real reduction.** AGWF is not
+  entailed by what it yields together with the forward bridges. The strictness
+  conjunct of
   `converseControls` is an interpretation in which the forward bridges, the
   esse regress, irreflexive priority, its bridge and well-founded priority all
   hold while grounding among actual concreta is a two-cycle. So deriving

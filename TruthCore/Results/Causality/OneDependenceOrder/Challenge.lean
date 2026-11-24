@@ -23,8 +23,9 @@ import TruthCore.Causality.OneDependenceOrder
 Each step transfers well-foundedness along an explicit inclusion; nothing
 identifies the relations. The controls show each input is needed under the
 encoded predicates, that actual grounding is not recovered from what it implies
-without the converse bridge, and (`ascentLimit`) that no recorded inclusion
-gives the quarta via's no-infinite-ascent premise from actual grounding.
+without the converse bridge, and (`ascentLimit`) that actual grounding with
+the inclusions listed in `AscentLimit` does not give the quarta via's
+no-infinite-ascent premise.
 -/
 
 namespace TruthCore.Results.Causality.OneDependenceOrder
