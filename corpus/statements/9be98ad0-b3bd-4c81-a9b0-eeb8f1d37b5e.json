@@ -1,6 +1,6 @@
 {
   "id": "9be98ad0-b3bd-4c81-a9b0-eeb8f1d37b5e",
-  "label": "Selected modes have supplied realizations with an intermediate contribution trace to their bearer's esse",
+  "label": "Selected modes have supplied realizations traceable through contributors to their bearer's esse",
   "paraphrase": "Open mediated interface. For each selected mode its realization has original supply and belongs to a specified set. Within that set any intrinsic input is that bearer's esse. Every admitted group with effect in the set either produces the bearer's esse or has some contributor in the set. Intermediate contributors may vary by group. A witness set and adequate realization records are substantive commitments in applications.",
   "lean_declaration": "TruthCore.Causality.ParticularActuality.ModeThroughBearer",
   "definition_ids": [
