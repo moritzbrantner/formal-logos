@@ -1414,3 +1414,316 @@ attempt `82b6c542-3f01-41eb-8a3d-b3b8b34d6315` records this exact scoped
 assessment, verification boundary and review disposition. The assessment of
 `9d7b8ae0-474d-4ae4-9d08-019cffbdea7b` is unchanged: its same-member absence
 and adequate-reason tests remain open.
+
+## Source specification and existential grounding (#1957, 2026-11-24)
+
+**Question and conclusion.** Does dependence of a simple source's operative
+specification on its product make the product a ground of the source's own
+esse? The strongest positive argument succeeds **if the product grounds the
+very intrinsic actuality identified with that esse, in the same dependence
+sense**. Equality is no escape from that consequence. Dependence of a
+relational fact, a successful-production description, or an object-specifying
+content does not yet have that target. The remaining substantive dispute is
+whether genuine practical direction must have the first kind of dependence.
+Calling direction either intrinsic or extrinsic does not settle it.
+
+This is the research scope of [#1957](https://github.com/moritzbrantner/formal-logos/issues/1957).
+It concerns the fixed actual source n, recipient x and exercise, rather than
+coverage of invariant or contingent specifications (#1953), modal object
+essentiality (#1737), or the ranking of effects and intrinsic source
+perfection (#1955). The graph destination remains existential PSR
+`608a262d-08fe-4dfd-9413-67e2ecf35b84`, its joint BX1/BX2 support for B2
+`8a8d00e9-12b6-4cf0-b662-431cc4addd49`, and the same-source will question
+`66aecdd7-ea4e-55c6-9377-10db08893854`. This investigation establishes no
+new graph edge or root premise.
+
+### Exact reuse and what remains to be explained
+
+The source baseline is main `61acfd5629cab58221fe148b034340c7af9278ff`.
+The additional exercise evidence was inspected in the reviewed, still
+unmerged [PR #1933](https://github.com/moritzbrantner/formal-logos/pull/1933)
+at `e5dd8243c5690f5d9255a509da00111cbdc36c8e`. Its declarations are
+referenced as candidate-branch evidence, not as results present on this
+main-based delivery.
+
+| Existing evidence | Exact useful boundary |
+| --- | --- |
+| [Terminal-independence test](causal-perfection-transfer.md#2-the-terminal-independence-test), with its [structural controls](causal-perfection-transfer.md#4-structural-controls-external-denomination-versus-incoming-ground) | Already combines real act/esse identity, an external constitutive act-ground, and transport to the same bearer's actual grounding. Its local JavaScript assignments are structural diagnostics, not Lean or metaphysical possibility certificates. |
+| PR #1933, [ActualExerciseExplanation](https://github.com/moritzbrantner/formal-logos/blob/e5dd8243c5690f5d9255a509da00111cbdc36c8e/TruthCore/Explanation/ActualExerciseExplanation.lean), with [Solution](https://github.com/moritzbrantner/formal-logos/blob/e5dd8243c5690f5d9255a509da00111cbdc36c8e/TruthCore/Results/Explanation/ActualExerciseExplanation/Solution.lean) | `productiveCut` needs both all-route productive prerequisites and no independent supply. `matchedComparison` distinguishes an admitted from an exercised independent route. `outputBypass` restores supply by a direct source-to-product route while retaining product-dependent adoption. |
+| [OneDependenceOrder](../../TruthCore/Causality/OneDependenceOrder.lean) and [DependenceOrderSenses](../../TruthCore/Causality/DependenceOrderSenses.lean) | Causing, grounding and priority are connected by explicit inclusions and actuality calibrations. A relation of motion or a productive-role relation does not become existential grounding by sharing an arrow shape. |
+| [NecessaryConcreteRouteBridge.actualGroundingAsymmetricOfWF](../../TruthCore/Causality/NecessaryConcreteRouteBridge.lean) | Actual-grounding well-foundedness excludes reciprocal ground edges between the same actual concreta. Its weaker conclusion, actual-grounding asymmetry, already suffices for this local contradiction. |
+| [Selected-effect source comparison](selected-effect-bridge-462.md#source-follow-up-self-determination-and-the-complete-decree-2026-10-28) and [practical relation comparison](optimal-creation-choice.md#17-a-substantive-comparison-purpose-selection-and-the-real-relation) | Already distinguish identity of intrinsic act from relational specification and require actual practical direction beyond output conformity. The present task does not repeat the modal-collapse proof or the practical-measure test. |
+
+Three exact typing restrictions prevent over-reading these results.
+`ActualExerciseExplanation` gives operation and adoption the same bearer
+but **different event indices**. It establishes neither their numerical
+identity with each other nor act/esse identity. `SIMPLE_4` is
+`IsSimple Composite n := ¬ Composite n`, with the intended kinds of
+composition recorded in `85f7f569`; the primitive alone is not a Lean
+equation between an operative event and esse. In the q.3 a.4
+[Profile](../../TruthCore/Latin/Aquinas/SummaTheologiae/PrimaPars/Question3/Article4.lean),
+`essenceOf n` and `esseOf n` have the principle type, while
+`m.grounds w x n` relates beings. The act identity and the passage from a
+principle's actuality to the bearer's existential dependence must therefore
+be interpreted explicitly. Neither the word intrinsic in `Supply.intrinsic`
+nor `WillVersusChance.OnePower` supplies that passage.
+
+The updated will route is also retained. Merged #1944 has the root consumer
+`godHasWillFromWilledHolder`, result
+`834ddcfa-8631-4bbc-8afc-6ae04ccc55d0`: willed holder
+`fdd2b1cf`, the GOD_4-holder premise `0050b6ed`, at most one holder
+`5f93d4f0`, and rational-power-to-will bridge `65e0179f` jointly give
+`66aecdd7`. Its [holder identification](holder-root-identification.md#6-what-changes-for-will-versus-chance)
+has its own complete support bundles. [#1947's NAR derivation](nar-derivation.md)
+adds a conditional route through root withholding and explicit
+grounding/giving bridges; one power and invariant setup alone do not
+establish uniform giving. These are useful conditional connections. They
+do not identify a D-directed relational fact with the source's esse, and
+this investigation adds no such reading to them.
+
+### The strongest positive identity argument
+
+Grant the fixed source's strict simplicity in the stronger intended sense:
+its **intrinsic actual act**, not merely its capacity or the name of its
+successful transaction, is really identical with its essence and esse.
+Grant also that x is an actual distinct product of n. The positive argument
+then has the following content.
+
+1. The alleged dependence on x concerns the existence or intrinsic
+   constitution of that very act. It is not just the fact that this act
+   counts as producing x, its being correctly described as D-directed, or
+   the truth of its intentional content.
+2. Since that actuality is the source's esse, the same dependence reaches
+   the source's esse. If act and source occupy the same object type and
+   the dependence relation is held fixed, this is ordinary substitution
+   of identicals. If the representation instead distinguishes principles
+   from bearers, the realization calibration must say that this very
+   dependence of the esse-principle is dependence of the being.
+3. To invoke actual-grounding asymmetry, both this incoming dependence and
+   n's outgoing production of x must fall under the selected
+   `m.grounds w`, with n and x actual and concrete at the same w. Under
+   those conditions the existing asymmetry lemma excludes their conjunction.
+   Alternatively, actual roothood of n excludes the incoming edge directly.
+
+This is a forceful conditional argument. A source cannot concede that its
+own intrinsic actuality is received from x and evade the consequence by
+renaming that same actuality will, operation or being. Strong simplicity
+removes the reply that only a really distinct intrinsic accident receives
+the relevant actualization while the source's esse remains independent.
+The warrant here is the positive identity commitment together with the
+meaning of dependence of that actuality, not a demand for an independently
+proved premise at every stage. Those commitments may be supported directly
+or cumulatively. No substantive objection to **same-target, same-relation
+identity substitution** has been identified.
+
+The disputed first step remains substantive. An intrinsic act can be
+referred to by a relational description without the whole relational fact
+being that act. Substituting an identical subject inside “a is directed to
+D” produces the corresponding predication of the same subject; it does not
+turn that predication into “n exists.” Likewise, if what depends on x is
+the obtaining of a relation with x, identity of its subject with n does not
+identify the whole relation with n. This is a difference of explanatory
+targets, not a special exemption from identity for divine willing.
+
+This clarifies the prior transport diagnostic. In its “identity on,
+act-ground on, transport off” assignment, the act reference and the
+bearer-grounding relation are separately represented. That assignment shows
+the formal need for their calibration; it is **not** a counterexample to
+substitution of literal equals within one relation. Conversely, turning
+transport on does not establish that a dependence originally stated of a
+relational fact had the intrinsic act as its target. The informative work
+is interpreting the incoming dependence, not another proof of a two-cycle
+contradiction.
+
+Necessary existence alone supplies neither roothood nor this prohibition.
+The contradiction uses actual roothood or same-relation asymmetry, not the
+claim that every necessary being is underived. Nor does actual grounding
+by itself supply a possible absence of n. The modal conclusions still need
+their own existing bridges.
+
+### The relational reply and its positive content
+
+The strongest reply retains one actually productive source and real
+act/esse identity. It distinguishes the source's intrinsic active
+actuality from the complete fact of that actuality's directed production
+of this recipient. The recipient can enter the latter fact without
+actualizing the former. In the intentional version, D is an apprehended
+practical measure of n's own exercise, not a pattern assigned to x after
+the event. The claim that this direction can be relational is an explicit
+metaphysical commitment. A direct exercise need not be produced by a
+second decision, and its admissibility is assessed by its positive content
+and explanatory performance, rather than a compulsory prior efficient
+cause for every exercise.
+
+The source evidence makes the proposed distinction specific:
+
+- **ST I q.45 a.3 co., ad 1–3**, materialized passage
+  `fb7bd7bb-c007-43fa-9147-a017d0ae1f01`.
+  Active creation signifies divine action, identified with essence,
+  together with a creature-relative relation. The creature bears the
+  real relation to its principle. Ad 3 makes the creature prior to that
+  relation as its subject while retaining priority on the side of the
+  relation's term, the creature's principle. Thus the text itself
+  distinguishes the subject-to-relation and principle-to-creature orders.
+  It does not state a modern fact-grounding theory or identify the
+  relation with a new act that produces the source. It also distinguishes
+  creation's beginning from continued existence.
+  [Primary text](https://www.newadvent.org/summa/1045.htm#article3).
+- **ST I q.13 a.7 co., ad 1, 3–6**, materialized passage
+  `12d8ecc5-37c5-4309-870a-f9273a43669e`.
+  A name can signify essence and imply a relation whose application
+  depends on creatures. Correlative names and the priority of their
+  bearers are distinguished; the column illustration motivates a
+  relational predication without an intrinsic alteration. Ad 5 does not
+  reduce God's lordship to a fiction: its truth follows the creature's
+  real subjection. Crucially, ad 3 treats immanent intellect/will
+  relations separately from names following external effects. Therefore
+  temporal Creator-denomination is not, without further argument, an
+  account of actual D-directed willing.
+  [Primary text](https://www.newadvent.org/summa/1013.htm#article7).
+- **ST I q.19 a.2 ad 1, a.3 ad 5–6, a.5 co./ad 1**, materialized
+  passages `ea2050f1`, `8dfa4697`, `444cbd08`.
+  Willing and being are the same in reality, while willing's
+  signification includes an object-relation. Aquinas supplies
+  self-determination toward nonnecessary objects and distinguishes
+  rational order among willed objects from a cause producing the single
+  willing act. These are positive resources for the reply. They do not
+  by themselves settle how this D becomes operative under simplicity.
+  [Primary text](https://www.newadvent.org/summa/1019.htm).
+
+The existing [RelationalReceipt](../../TruthCore/Causality/RelationalReceipt.lean)
+already preserves the first two passages' relational architecture. Its
+origin relation and presence conditions do not alone imply present giving;
+`TermGives` is explicit. Reuse that boundary here: a real relation is
+not automatically the productive act, and the source passages do not
+license silently equating origin, conservation, productive contribution
+and existential grounding.
+
+The reply has a concrete explanation of why the promotion can fail. A
+source produces x; the completed relation “produces x” requires x as a
+term; the truth of that relation therefore cannot be retained when its
+term is removed under that interpretation. This is compatible with the
+source being prior in the productive order. Treating these as a cycle
+requires identifying the two orders and their targets. Q.45 gives a
+positive reason to resist that identification, rather than merely
+omitting a return edge in a model.
+
+The strongest opposing pressure remains the **operative**, rather than
+success-relative, character of D. In an ordinary intentional performance,
+the actual practical orientation can distinguish intending D from
+producing an outcome conforming to D by some other policy. This supports
+requiring an agent-attributable determination of the exercise. It does
+not yet prove that every such determination is a separate intrinsic
+actuality, or that an effect supplies the actuality of a simple source.
+Spinoza's *Ethics* I proposition 33, note II supplies a stronger
+identity-based challenge: even granting will as essence, different
+actual intellect/will would imply different essence. The inspected
+passage targets different decrees; it does not prove that a creature
+grounds the source's act. Its relevance here is the disputed
+identification of complete practical specification with intrinsic
+actuality, not an independently established reverse-grounding edge.
+The existing [source comparison](selected-effect-bridge-462.md#spinoza-the-strongest-surviving-reply)
+preserves its modal argument and Aquinas's reply.
+
+### What the counterexample actually excludes
+
+The PR #1933 output bypass answers a narrower but useful question. The
+same operation supplies the product directly; the product then contributes
+to the adoption-role record. Actual `Supply` is obtained although all
+suppliers of that role still need the product. Therefore one-sided
+product dependence is insufficient for the **two-sided borrowing cut**.
+This defeats that inference within its represented contribution rules.
+
+It does not show that an intrinsically product-grounded act can be
+identical to an ungrounded esse. The model's roles are distinct events;
+its cause credit, supply and independent basis have their stated
+interpretations; it does not encode full simplicity, apprehension of D
+or D's practical direction. Those omissions limit the question answered.
+They are not evidence against either metaphysical interpretation.
+The equally limited ordinary relational examples illustrate a failure of
+promotion from relational predication; they are not complete models of a
+strictly simple, intentionally creating being.
+
+The rival therefore cannot use the bypass to certify rational guidance.
+It must say whether its product-dependent role is merely the description
+of a successful transaction, or the **operative practical determination
+itself**. If x is an indispensable productive prerequisite of that
+determination and every actual productive route to x requires it,
+`productiveCut` applies under its independent-basis conditions. If x
+instead belongs only to the completed relation's specification, there is
+no demonstrated productive loop; the positive account of direction
+remains to be assessed. Neither result alone identifies a role with esse.
+
+| Same question | Identity-based objection | Relational/direct-exercise reply |
+| --- | --- | --- |
+| What is dependent on x? | The source's very intrinsic operative actuality | A completed relation or relational specification; the intrinsic actuality is not received from x |
+| Is identity substitution retained? | Yes; dependence of that actuality transfers with it | Yes; the dependent relation is not identified with the source's esse |
+| What supports the classification? | Real identity and the proposed intrinsic character of actual practical determination | Nonreceptive production, distinct subject/relation and source/effect orders, and a source-attributable direct exercise |
+| What would defeat the local proposal? | Showing that the demonstrated dependence concerns only relational predication removes its first premise | Showing that the product constitutes the very intrinsic actuality, with the same-relation calibration, defeats the reply at an actual root |
+| What is still required for a personal advantage? | Independent warrant for intellect and the relevant will bridges remains consequential | Actual apprehension and direction by D; product conformity or permission to stop at a primitive is insufficient |
+
+An impersonal producer has the same access to direct, primitive and
+cumulative warrant. A necessary noncognitive source may likewise produce
+contingently without its product grounding its own esse on this account.
+This earns the same limited independence credit; it does not thereby
+explain a production *for an apprehended reason*. The
+[good-sensitive propensity comparison](will-versus-chance.md#would-selection-that-tracks-a-good-identify-an-intellectual-and-willing-source)
+already prevents treating favorable output as a discriminator against
+every impersonal source. Conversely, independently supported same-source
+intellect and will premises retain their force against the nonrational
+rival. Neither parity of productive structure nor this grounding
+distinction cancels those separate arguments.
+
+### Scoped assessment, reversal conditions and next test
+
+**Overall provisional assessment.** Retain the positive identity argument
+for genuine dependence of the intrinsic act and reject its application
+based only on the words product-dependent specification. The
+source-supported relational architecture makes that distinction
+substantive. It favors the relational reply against an inference from
+effect-relative denomination alone; it leaves unresolved whether the
+same reply can account for the source's actual operative practical
+determination. No countermodel to the fully specified strong-simplicity
+and rational-direction package is claimed. No personal-over-impersonal
+ranking follows from the shared independence result. The earlier
+moderate preference for adequate existential explanation E, suspension
+about universal determining explanation D, and the B2/C2 boundaries are
+unchanged.
+
+The **remaining blocker is classification with an explanation**, not
+equality substitution. For the fixed n, D and x, identify what positive
+reality makes D operative in this production. Does x constitute or supply
+that very intrinsic actuality, or enter only as the term of a relation
+whose productive principle is already actual? An argument for the first
+classification, preserving literal identity and the actual-grounding
+calibration, would activate the existing obstruction. An account of the
+second that preserves actual apprehension, nondeviant direction and
+independently stated fulfillment conditions would strengthen the
+relational reply. A dependence located only in a true output description
+does neither. This is an actual-explanatory-order test; it requires no
+unrestricted recombination of worlds, no independently manufactured
+counterfactual histories and no further choosing-to-choose event.
+
+Do not rerun the existing identity/transport matrix, two-cycle proof or
+output-matching control as the next investigation. The positive actual
+practical-relation question is already selected in #1953/#1737; this
+finding supplies its precise grounding consequence and tells it what
+would reopen #1957. The scope of this research question is answered as a
+conditional semantic assessment, while a joint metaphysical realization
+remains open. This does not close PSR, derive BX1/BX2, or establish the
+classical synthesis.
+
+**Source and verification boundary.** The five Aquinas articles were read
+in full, including objections/replies, from the existing pinned SCTA
+witnesses; the English primary text was consulted for comparison. The
+Spinoza passage was read with proposition 33 and both notes from existing
+passage `b1fe3948-7144-54f1-88c6-f8c5e7d8facd`, Elwes translation,
+GITenberg revision `ebe6b9d77e22c5809de3514d005bc26a29eb5610`.
+No new corpus claim, formal definition, statement, theorem or
+Comparator record is introduced. Retrieval used related, dossier,
+context, brief and novelty before interpretation, followed by the
+current CLI's semantics audit of the productive cut and will consumer
+and the complete PSR/BX1/BX2-to-B2 preflight; that bundle passed the
+sense rules. The new assessment needs independent semantic challenge.
+Existing proof evidence retains its original branch and hypothesis
+scope. Intended premise change: none.
