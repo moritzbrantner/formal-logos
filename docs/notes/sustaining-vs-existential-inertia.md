@@ -1345,7 +1345,7 @@ test addresses its narrower outstanding #1614 configuration.
 
 ## 10. Which later individual continues the earlier bearer? (#1801, 2026-11-25)
 
-**Judgment proposed for challenge.** For familiar material objects, the history
+**Provisional judgment.** For familiar material objects, the history
 of what happened to *this* object gives positive, defeasible grounds for
 identifying it again. Copying its structure can causally influence a second
 object without carrying the first object into the second. This distinction

@@ -292,7 +292,19 @@ identifying a producer of its shape supplies a present giver of its existence,
 the premise needed by the sustaining-cause argument.
 [Case, rival commitments and test of present dependence](sustaining-vs-existential-inertia.md#10-which-later-individual-continues-the-earlier-bearer-1801-2026-11-25)
 
-## Verification and current handoff
+## November 25 handoff
+
+The reviewed research on `research/persistence-and-divine-unity` ends at
+`101546617c42be0f990d4ebd0e4f727afaa48da6`. The individual attempts
+record the reviewed revisions for the museum comparison, unity, ancestral
+reach and the promise. The comparison of explanatory burdens was reviewed at
+`21e99e2722d393c9931fb7eed25db521a69a99e6`. Local proof checks cover the
+eleven registered result configurations. The pull request carries the exact
+premise comparison and the checks on the delivered revision. The next tests
+concern the proposed contingent exception for the first being in #1887 and
+the same bearer's perfection and goodness in #1937.
+
+## Verification of the original November 13 investigation
 
 The two research lanes used distinct families: act/privation and causal
 dependence. The coordinator investigated priority/separation and logical

@@ -25,10 +25,10 @@
     "assessment": "Strong defeasible support for using the earlier individual's own material history to distinguish continuation from a copy in ordinary artifact cases. Copying can transmit causally specific information, while transport and changes in posture preserve a token. Equality excludes identifying two distinct later tokens with the earlier one. These facts support neither the claim that earlier existence efficiently produces later esse nor the claim that such production requires a concurrent source. The governing-law and joint-conservation accounts both recover the independently warranted identity. Weak C3 and its GOD_4 support route remain conditional.",
     "next_test": "Reopen the identity comparison if one account predicts a specific replacement or loss despite independently traced bearer continuity, or if an account of restoration can distinguish recovery of the original from successful copying after a total break. For C3 test an independently identified withdrawal of production of esse, with the source present, the same earlier patient, all other strict giving excluded (including self-giving), an independently warranted assessment of destructive conditions and an observed outcome.",
     "note": "docs/notes/sustaining-vs-existential-inertia.md#10-which-later-individual-continues-the-earlier-bearer-1801-2026-11-25",
-    "reviewed_revision": "2372eca239c52c3f4ffa5a660e9c9be84351dca7",
-    "review": "unreviewed",
-    "publication": "unpublished",
-    "evidence": "Section 10 contains the complete local proposal awaiting independent challenge. Offline truth frontier-diff --base 4e44d8ce8 --head 2372eca23 reports no change and zero verified support alternatives added. This is the identity slice's delta against its starting head.",
+    "reviewed_revision": "bf27dade9d5717331e19f755977fc14f5e4aa98d",
+    "review": "accepted_qualified",
+    "publication": "published",
+    "evidence": "The independent challenge checked the museum account, original and copy, and the causal conditions for the proposed withdrawal test. Section 10 records the accepted qualifications. The identity investigation has no registered premise change.",
     "supersedes": "None in substance. The previous current entry covered the matched-source-withdrawal law at f439b7256e1f8e8f0f525cd14cb9a940919b0bb7, accepted qualified and merged in PR-1895 (016e61bd2), in docs/notes/law-actuality-743.md. Its scoped assessment and the §7 whole-history question stand. This entry follows the separate identity question raised in #1801 after PR-1899."
   }
 }
