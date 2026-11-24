@@ -2,11 +2,13 @@ module
 
 public import TruthCore.Latin.Aquinas.SummaTheologiae.PrimaPars.Question2.Article3
 public import TruthCore.Results.Causality.SameRespectActualization.Solution
+public import TruthCore.Logic.RootDescent
 
 @[expose] public section
 
 namespace TruthCore.Results.Aquinas.SummaTheologiae.PrimaVia
 open TruthCore.Latin.Aquinas.SummaTheologiae
+open TruthCore.Logic.RootDescent (acc_not_of_notNot_inherited)
 theorem primaVia {Being : Type} {Respect : Type}
     (MovedIn : Being → Respect → Prop)
     (MovesIn : Being → Being → Respect → Prop)
@@ -27,20 +29,15 @@ theorem primaVia {Being : Type} {Respect : Type}
     MovedIn MovesIn hReduction hNoSelf
   -- INF-AQUINAS-ST-I-Q2-A3-FIRST-MOVER: reductio by well-founded induction
   intro hNoFirst
-  have hNoMotion : ∀ x, (∃ r, MovedIn x r) → False := by
-    intro x
-    have hAcc := hRegress x
-    induction hAcc with
-    | intro x _ ih =>
-      intro ⟨r, hMoved⟩
-      obtain ⟨y, hDistinct, hMoves⟩ := hAnother x r hMoved
-      -- If the mover y were moved in no respect, it would be a first mover.
-      have hMoverMoved : ¬ ¬ ∃ r', MovedIn y r' := by
-        intro hUnmoved
-        exact hNoFirst ⟨y, ⟨x, r, hMoves⟩, fun r' h => hUnmoved ⟨r', h⟩⟩
-      -- Otherwise it is a second mover, one step up a well-founded series.
-      exact hMoverMoved fun hMoved' =>
-        ih y (hPerSe y x r hDistinct hMoves hMoved') hMoved'
+  -- Being moved passes up a well-founded per se series: nothing is moved.
+  have hNoMotion : ∀ x, ¬ ∃ r, MovedIn x r := fun x =>
+    acc_not_of_notNot_inherited (P := fun x => ∃ r, MovedIn x r)
+      (fun x ⟨r, hMoved⟩ hNoUp => by
+        obtain ⟨y, hDistinct, hMoves⟩ := hAnother x r hMoved
+        -- If the mover y were moved in no respect, it would be a first mover;
+        -- otherwise it is a second mover, one step up the series.
+        exact hNoFirst ⟨y, ⟨x, r, hMoves⟩, fun r' h =>
+          hNoUp ⟨y, hPerSe y x r hDistinct hMoves ⟨r', h⟩, r', h⟩⟩) (hRegress x)
   obtain ⟨x, r, hMoved⟩ := hSense
   exact hNoMotion x ⟨r, hMoved⟩
 end TruthCore.Results.Aquinas.SummaTheologiae.PrimaVia
