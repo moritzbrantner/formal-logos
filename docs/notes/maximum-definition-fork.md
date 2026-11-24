@@ -928,7 +928,7 @@ question can remain open while other arguments for a greatest bearer proceed.
    inclusion, preserving all of a recipient's genuine perfections and adding
    one gives strict superiority on that measure. If it ranks bearers by peak
    intensity, both can still reach the same highest realized level. The [capacity test](contingency-receptivity-c2.md#when-does-a-missing-perfection-make-a-bearer-strictly-less)
-   asks for an upper bound on everything the recipient actually realizes
+   asks for an upper bound on all the admitted levels the recipient realizes
    and a determination actually realized by the giver above it. On the shared
    calibration this suffices for a strict comparison. Its application to
    `8176a284` also needs the bridge from represented degree to the primitive
