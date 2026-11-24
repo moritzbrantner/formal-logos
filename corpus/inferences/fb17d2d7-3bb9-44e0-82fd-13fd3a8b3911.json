@@ -1,0 +1,14 @@
+{
+  "id": "fb17d2d7-3bb9-44e0-82fd-13fd3a8b3911",
+  "label": "Actual esse composition from the caused-as-caused bridge and PER_SE_5 composition (inference)",
+  "input_statement_ids": [
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410",
+    "e74de400-fa5c-4bfa-b233-d6ec6add2975",
+    "7648194d-042b-495d-a098-ce906bdc7005"
+  ],
+  "output_statement_id": "b4987085-f7b0-4031-a795-364873d3c216",
+  "rule": "Split the upstream identity and supply the caused intermediate as an actual witness",
+  "meaning": "Use the explicitly registered excluded-middle premise on a = b. When they coincide the second edge already gives the claimed responsibility. Otherwise actuality of a, actuality of b from the second link, distinctness and the original edge give an actual first link. That same a witnesses the caused-as-caused bridge for the second link; restricted composition then supplies the required edge for a. A conditional route to q44 source supply, sharing the open per se bridge with the regress route.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

@@ -1,0 +1,28 @@
+{
+  "id": "85eeb70c-c7c3-4e4f-a645-4ecbb987b3ff",
+  "label": "Actual esse composition from the caused-as-caused bridge and PER_SE_5 composition",
+  "premise_statement_ids": [
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410",
+    "e74de400-fa5c-4bfa-b233-d6ec6add2975",
+    "7648194d-042b-495d-a098-ce906bdc7005"
+  ],
+  "conclusion_statement_id": "b4987085-f7b0-4031-a795-364873d3c216",
+  "inference_ids": [
+    "fb17d2d7-3bb9-44e0-82fd-13fd3a8b3911"
+  ],
+  "meaning": "Use the explicitly registered excluded-middle premise on a = b. When they coincide the second edge already gives the claimed responsibility. Otherwise actuality of a, actuality of b from the second link, distinctness and the original edge give an actual first link. That same a witnesses the caused-as-caused bridge for the second link; restricted composition then supplies the required edge for a. A conditional route to q44 source supply, sharing the open per se bridge with the regress route.",
+  "definition_ids": [
+    "4bca086d-1fa5-4b0d-bf2b-a22f3f0ac740",
+    "8163859b-95b3-4dd2-8a69-541bd332f32f",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "d8e2ed12-8089-5202-ae51-e807cf611c76",
+    "a0a9e610-979f-476d-834e-7616343d4863"
+  ],
+  "disambiguation_ids": [
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "1aef8986-ed29-564f-9803-d812d2ff63e1",
+    "002f42cb-3015-5644-80b3-d408538394e6",
+    "54f33165-05df-5205-807a-04154b5fd6ad"
+  ]
+}

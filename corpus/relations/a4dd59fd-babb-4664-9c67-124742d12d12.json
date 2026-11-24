@@ -1,0 +1,11 @@
+{
+  "id": "a4dd59fd-babb-4664-9c67-124742d12d12",
+  "label": "General actual esse composition strengthens PER_SE_5 restricted composition",
+  "subject_kind": "statement",
+  "subject_id": "b4987085-f7b0-4031-a795-364873d3c216",
+  "predicate": "strengthens",
+  "object_kind": "statement",
+  "object_id": "7648194d-042b-495d-a098-ce906bdc7005",
+  "verification_result_id": "f35f333b-6d24-4065-a579-d0029ac93709",
+  "note": "The unrestricted law gives the restricted law on the same profile for any binary classification by dropping its extra guards. Under the separately listed caused-as-caused bridge and equality split, the reverse route also holds. No independent warrant for the full law is claimed from this projection."
+}

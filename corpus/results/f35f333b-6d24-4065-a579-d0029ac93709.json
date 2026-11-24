@@ -1,0 +1,12 @@
+{
+  "id": "f35f333b-6d24-4065-a579-d0029ac93709",
+  "label": "Restrict actual esse composition to a following PER_SE_5 link",
+  "argument_id": "dfb4d663-7ffd-43ff-bd1d-5a74225b4e5f",
+  "challenge_module": "TruthCore.Results.Causality.GiverIndexedApplication.Challenge",
+  "solution_module": "TruthCore.Results.Causality.GiverIndexedApplication.Solution",
+  "theorem": "TruthCore.Results.Causality.GiverIndexedApplication.restrictComposition",
+  "comparator_config": "results/f35f333b-6d24-4065-a579-d0029ac93709/comparator.json",
+  "status": "solution-present",
+  "description": "Scope projection. From an actual incoming link retain the upstream giver's actuality and causal edge; from the per se outgoing link retain its actual causal edge with the other guards. The full law applies without any use of excluded middle or the caused-as-caused bridge. This direction registers the order of assumptions.",
+  "transcription": "single_application"
+}

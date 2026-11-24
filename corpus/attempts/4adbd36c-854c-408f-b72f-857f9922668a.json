@@ -1,0 +1,27 @@
+{
+  "id": "4adbd36c-854c-408f-b72f-857f9922668a",
+  "label": "Test which giver acts through a secondary esse cause",
+  "statement_ids": [
+    "b4987085-f7b0-4031-a795-364873d3c216",
+    "e74de400-fa5c-4bfa-b233-d6ec6add2975",
+    "b26c10a0-983d-5a88-aa03-cc601bc1ddc6",
+    "7648194d-042b-495d-a098-ce906bdc7005",
+    "6dd808ed-ddcf-4915-8ca7-090ef32f00ee",
+    "d851dbc6-c30f-4fc3-bf41-88fbbd780786",
+    "8261b6d7-93df-4d36-b57d-5cc4095c8203"
+  ],
+  "date": "2026-11-24",
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "See docs/notes/q44-inferential-dependency.md, When does the giver act through the agent? Binary per se composition plus the caused-cause bridge and excluded middle yield the original composition premise. The equal-giver case uses the existing last edge. In the distinct case the named giver witnesses the upstream actual cause needed by the bridge. The binary marker still has no giver index. Application-indexed causal credit and alignment of every preceding giver with the applier imply the binary law. The four-role control preserves positive indexed credit and existential application while separating the two-giver assignment from universal binary composition. Actual transmission through the operating secondary agent provides positive, defeasible evidence in the ordinary cases. Source withdrawal alone is neither a named contribution nor a test of which causal role is exercised. A third combination holds both binary and unrestricted composition true while every-giver alignment fails. The alignment is sufficient for one explanation of the downstream edge. Unrestricted composition itself implies its binary restriction by forgetting conditions, which provides no additional warrant when used in a cycle.",
+  "blocker": "On the proposed explanation by application through b, identifying each preceding giver as applying b requires independent warrant. Another route to the same downstream edge remains available. The generic q3 cause relation also requires interpretation before importing a productive efficient reading. For b26c10a0 causal responsibility in the particular respect is a further obligation.",
+  "evidence": [
+    "PR-1921",
+    "PR-1922",
+    "63aa606d-7980-4734-a6c8-3c00c97e90a4",
+    "ba74a9b5-bcf7-4a0e-8213-0b55a4408f68",
+    "a587f218-82d7-4080-b528-f6bc650cdf85",
+    "d31e0887-decb-4c53-82ea-cf88bf2881b3",
+    "f35f333b-6d24-4065-a579-d0029ac93709"
+  ]
+}

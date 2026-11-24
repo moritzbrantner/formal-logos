@@ -1,0 +1,10 @@
+{
+  "id": "3f160b50-f3ff-4c0a-9e9f-fe35bff53eb6",
+  "label": "Finite test of which actual giver applies the producing intermediate (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "8261b6d7-93df-4d36-b57d-5cc4095c8203",
+  "rule": "Exhaust the four roles with one or two appliers and vary the downstream credit",
+  "meaning": "In the first populated interpretation the named source and supporter both cause the producer's esse and only the supporter applies the producer. Existential projection, indexed credit and the caused-as-caused bridge hold, but composition fails for the source. Adding source application and matching credit restores the universal formulas on the same four roles. With the final edge retained and source application withheld, projection and indexed credit still hold and both composition laws survive despite failure of alignment. The cause table leaves any alternate mechanism for the edge unspecified.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}
