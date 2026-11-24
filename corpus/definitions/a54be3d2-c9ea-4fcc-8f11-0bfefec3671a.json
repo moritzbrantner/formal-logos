@@ -1,0 +1,9 @@
+{
+  "id": "a54be3d2-c9ea-4fcc-8f11-0bfefec3671a",
+  "label": "Both Boolean values admitted at one selected coordinate",
+  "term": "single-coordinate output richness",
+  "definition": "BitRich allowed n k requires, for each Boolean value b, a complete trace f admitted by the existing fixed-selector Admitted allowed n relation whose value at k is b. Witnesses share the recorded all-true prefix through n; they need not agree elsewhere. ForecastObstruction compares all UsesRecord n estimators against every admitted f at k and requires each estimator to fail exact uniform equality somewhere.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Explanation.AdjacentPairContainment.BitRich",
+  "note": "The two constant suffixes after n satisfy BitRich at each later coordinate, but do not permit arbitrary joint values at distinct coordinates. Empty admission fails BitRich and makes exact uniform forecasts vacuous, so no nonemptiness premise is concealed. ForecastObstruction is an equality test, not probabilistic accuracy, justified belief, or a claim that actual observations are corrupted. Selector admission and the record restriction reuse 1e04df16-fe72-467a-bc25-785f0e94fc70 and 5f8284ad-ca15-536c-a0b2-8bb51186b7ac. Applicability to metaphysically possible histories remains OPEN."
+}

@@ -1,0 +1,11 @@
+{
+  "id": "8de536c8-8d38-4787-acc6-fa01a94c72fc",
+  "label": "The unchanged causal copying mechanism admits an attitude-free control",
+  "argument_id": "fcfdf5c9-fa08-48c0-b963-9aa92c412580",
+  "challenge_module": "TruthCore.Results.Epistemology.SourceEvidenceAdequacy.Challenge",
+  "solution_module": "TruthCore.Results.Epistemology.SourceEvidenceAdequacy.Solution",
+  "theorem": "TruthCore.Results.Epistemology.SourceEvidenceAdequacy.nonmentalControl",
+  "comparator_config": "results/8de536c8-8d38-4787-acc6-fa01a94c72fc/comparator.json",
+  "status": "solution-present",
+  "description": "Applies the same exact-value production guarantee without attributing cognition or assertion to the source. The empty mental relations are explicitly disclosed and not mistaken for empty causation; the positive cognitive control restores them. Necessity is stipulated on a universal frame and is not what proves record truth. Comparison beyond these functional conditions remains a philosophical application question."
+}

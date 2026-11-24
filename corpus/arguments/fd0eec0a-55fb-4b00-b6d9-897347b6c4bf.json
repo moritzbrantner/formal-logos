@@ -1,0 +1,26 @@
+{
+  "id": "fd0eec0a-55fb-4b00-b6d9-897347b6c4bf",
+  "label": "Every invariant two-way giver HAS_WILL_1, by the restricted Theta 5 principle",
+  "premise_statement_ids": [
+    "55892476-1e99-444b-a6bd-5430b0f115c4",
+    "495a40ad-9bd4-4d1f-bf37-e89587432e12",
+    "65e0179f-55d4-4b77-98ba-4b5b26f2d404"
+  ],
+  "conclusion_statement_id": "a9776d21-ce91-48c2-9d7d-55c6897a777a",
+  "inference_ids": [
+    "2da766c0-fd0b-4126-b3f0-1e4e086b17b5"
+  ],
+  "meaning": "A two-way giver y with an invariant set-up gives x being at w by some power p (giving exercises a power of the giver) and does not give it at an accessible v where it exists; DNP_inv makes p rational, and a being with a rational power has will. Constructive.",
+  "definition_ids": [
+    "582f44c3-7778-4806-b385-e1eff852ac5e",
+    "62dfa893-b633-4513-9790-8f9a0a3087e0",
+    "7c64b499-6dba-5e03-bdf3-5acea95d8836",
+    "a2840d96-8bdc-4e6a-a9a3-376a9505ec7c",
+    "b4bb7bb4-4e2d-437d-825e-79a029340e77",
+    "b8061228-9131-40f2-83bd-cb7d719bd0a0",
+    "e006ddeb-2c88-4835-8558-2f360cc5a3eb"
+  ],
+  "disambiguation_ids": [
+    "941efd70-d56f-53f9-b5f9-8acd36711a54"
+  ]
+}

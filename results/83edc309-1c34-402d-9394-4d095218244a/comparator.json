@@ -1,0 +1,9 @@
+{
+  "challenge_module": "TruthCore.Results.Science.AdaptiveHistoryAccess.Challenge",
+  "solution_module": "TruthCore.Results.Science.AdaptiveHistoryAccess.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Science.AdaptiveHistoryAccess.adaptiveAgreement"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}

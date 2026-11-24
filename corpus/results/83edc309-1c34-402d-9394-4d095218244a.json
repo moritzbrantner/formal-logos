@@ -1,0 +1,11 @@
+{
+  "id": "83edc309-1c34-402d-9394-4d095218244a",
+  "label": "Adaptive transcript equality by preserved transition matching",
+  "argument_id": "39ff2ead-e5d6-412e-9620-0110ee8d3518",
+  "challenge_module": "TruthCore.Results.Science.AdaptiveHistoryAccess.Challenge",
+  "solution_module": "TruthCore.Results.Science.AdaptiveHistoryAccess.Solution",
+  "theorem": "TruthCore.Results.Science.AdaptiveHistoryAccess.adaptiveAgreement",
+  "comparator_config": "results/83edc309-1c34-402d-9394-4d095218244a/comparator.json",
+  "status": "solution-present",
+  "description": "A universally quantified conditional mathematical result. Matching initial states gives equal initial readouts. At each induction step the shared policy receives the same earlier transcript and selects the same action; successor preservation supplies related next states and thus equal new readouts. The proof constrains a recursively defined experiment, rather than applying a premise already containing the transcript conclusion. The state/repertoire correspondence to admissible real histories remains OPEN. Named research connection: historical reliability as a rival test for local existential PSR 608a262d, with no registered implication from bruteness to this matching premise or from indistinguishability to skeptical defeat."
+}

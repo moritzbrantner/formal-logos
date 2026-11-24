@@ -10,7 +10,8 @@ Usage, after `lake build <module>`:
 Input: `{"modules": [...], "theorem": "<name>"}`. The theorem's binders are
 classified as carriers (`B : Type` or `Sort u`), predicate parameters (functions
 from carriers, or from carrier-valued predicates `T → Prop`, into `Prop`),
-element constants (`esse : R`) and propositional hypotheses (premises). Each
+element constants (`esse : R`), total unary functions between carriers, and
+propositional hypotheses (premises). Each
 premise and the conclusion are unfolded through definitions into a formula over
 `∀ ∃ ∧ ∨ ¬ → ↔ = ≠ True False` and predicate atoms; quantifiers over `Prop`
 (as in `ExcludedMiddle`) range over the two truth values. The output is a search
@@ -29,6 +30,8 @@ structure Ctx where
   carriers : Array (FVarId × String) := #[]
   /-- Predicate parameters, element constants and bound variables. -/
   names : Array (FVarId × String) := #[]
+  /-- Top-level unary carrier functions, kept distinct from predicate names. -/
+  functions : Array (FVarId × String) := #[]
 
 structure St where
   unfolded : Array Name := #[]
@@ -70,10 +73,16 @@ partial def term (ctx : Ctx) (e : Expr) : M Json := do
   let e := (← instantiateMVars e).consumeMData.headBeta
   if let .fvar f := e then
     if let some n := lookup ctx.names f then return Json.mkObj [("v", str n)]
+  if let .fvar f := e.getAppFn.consumeMData then
+    if let some n := lookup ctx.functions f then
+      let args := e.getAppArgs
+      if args.size != 1 then unsupported "unary function application" e
+      return Json.mkObj [("app", str n), ("arg", ← term ctx args[0]!)]
   let ty ← whnf (← inferType e)
   if ty.isForall then
     -- a predicate-valued argument: eta-expand over carriers
-    return ← forallTelescope ty fun xs _ => do
+    return ← forallTelescope ty fun xs result => do
+      if !result.consumeMData.isProp then unsupported "function-valued term" e
       let mut vars : Array Json := #[]
       let mut ctx := ctx
       for x in xs do
@@ -150,6 +159,19 @@ def predicateArgs (ctx : Ctx) (ty : Expr) : MetaM (Option (Array Json)) :=
       | none => return none
     return some args
 
+/-- Only a nondependent unary function with an explicit input between already
+declared carriers. Function-valued arguments/results, multiple arguments and
+dependent families remain outside the extracted fragment. -/
+def unaryFunctionSorts (ctx : Ctx) (ty : Expr) : MetaM (Option (String × String)) :=
+  forallTelescope ty fun xs body => do
+    if xs.size != 1 then return none
+    -- Certificates render an explicit arrow; accepting implicit inputs would
+    -- lose the binder metadata needed by the original pretty-printed premises.
+    if (← xs[0]!.fvarId!.getBinderInfo) != .default then return none
+    let some domain := carrierOf ctx (← inferType xs[0]!) | return none
+    let some codomain := carrierOf ctx body | return none
+    return some (domain, codomain)
+
 def run (n : Name) : MetaM Json := do
   let some info := (← getEnv).find? n | throwError "unknown declaration {n}"
   forallTelescope info.type fun xs concl => do
@@ -157,10 +179,16 @@ def run (n : Name) : MetaM Json := do
     let mut carriers : Array Json := #[]
     let mut preds : Array Json := #[]
     let mut consts : Array Json := #[]
+    let mut funcs : Array Json := #[]
+    let mut names : Array String := #[]
     let mut hyps : Array (String × Expr) := #[]
     for x in xs do
       let decl ← x.fvarId!.getDecl
       let name := decl.userName.eraseMacroScopes.toString
+      if ctx.functions.any (fun entry => entry.2 == name) then
+        throwError "unsupported duplicate function binder name {name}"
+      let reusedName := names.contains name
+      names := names.push name
       let ty ← instantiateMVars decl.type
       if ty.isProp then
         ctx := { ctx with names := ctx.names.push (x.fvarId!, name) }
@@ -173,11 +201,16 @@ def run (n : Name) : MetaM Json := do
       else if let some c := carrierOf ctx ty then
         ctx := { ctx with names := ctx.names.push (x.fvarId!, name) }
         consts := consts.push (Json.mkObj [("name", str name), ("sort", str c)])
-      else
-        let some args ← predicateArgs ctx ty
-          | throwError "unsupported parameter {name} : {← ppExpr ty}"
+      else if let some args ← predicateArgs ctx ty then
         ctx := { ctx with names := ctx.names.push (x.fvarId!, name) }
         preds := preds.push (Json.mkObj [("name", str name), ("args", Json.arr args)])
+      else if let some (domain, codomain) ← unaryFunctionSorts ctx ty then
+        if reusedName then throwError "unsupported duplicate function binder name {name}"
+        ctx := { ctx with functions := ctx.functions.push (x.fvarId!, name) }
+        funcs := funcs.push (Json.mkObj [("name", str name),
+          ("domain", str domain), ("codomain", str codomain)])
+      else
+        throwError "unsupported parameter {name} : {← ppExpr ty}"
     let pp (e : Expr) : MetaM String := do
       return toString (← withOptions (fun o => o.setBool `pp.fullNames true) (ppExpr e))
     let action : M Json := do
@@ -190,6 +223,7 @@ def run (n : Name) : MetaM Json := do
       let st ← get
       return Json.mkObj [("theorem", str n.toString), ("carriers", Json.arr carriers),
         ("predicates", Json.arr preds), ("constants", Json.arr consts),
+        ("functions", Json.arr funcs),
         ("premises", Json.arr premises),
         ("conclusion", Json.mkObj [("formula", c), ("lean", str (← pp concl))]),
         ("unfolded", Json.arr (st.unfolded.map (str ·.toString)))]

@@ -2408,21 +2408,6 @@ fn count(value: &Value, key: &str) -> i64 {
     value.get(key).and_then(Value::as_i64).unwrap_or(0)
 }
 
-/// Python `format_depth_counts`.
-fn format_depth_counts(counts: &Value) -> String {
-    let mut text = format!(
-        "{} bare, {} supported, {} stated",
-        count(counts, BARE),
-        count(counts, SUPPORTED),
-        count(counts, STATED)
-    );
-    let proved = count(counts, PROVED_UNESTABLISHED);
-    if proved != 0 {
-        text += &format!(", {proved} proved-unestablished");
-    }
-    text
-}
-
 fn format_floor_bases(routes: &Value) -> Vec<String> {
     let rendered: Vec<String> = routes["floor_bases"]
         .as_array()
@@ -2450,14 +2435,10 @@ pub fn format_frontier(report: &Value) -> String {
     } else {
         format!("{root} (unknown statement)")
     };
-    lines.push(format!(
-        "frontier: {} open premises: {}; root {root_note}",
-        report["open_premise_count"],
-        format_depth_counts(&report["depth_counts"])
-    ));
+    lines.push(format!("frontier: root {root_note}"));
     if let Some(options) = report.get("support_options") {
-        lines.push(format!("conditional premise support (root-reaching): {} of {} unestablished premises have verified alternatives; {} distinct bundles (not established by verification alone)",
-            options["with_verified_alternative_count"], options["unestablished_premise_count"], options["verified_alternative_bundle_count"]));
+        lines.push(format!("conditional premise support (root-reaching): {} unestablished premises have verified alternatives; {} distinct bundles (not established by verification alone)",
+            options["with_verified_alternative_count"], options["verified_alternative_bundle_count"]));
     }
     let recorded = report["alternatives_recorded"] == true;
     if !recorded {
@@ -3042,36 +3023,12 @@ pub fn frontier_delta(base: &Value, head: &Value) -> Value {
 
 /// Python `format_frontier_delta`.
 pub fn format_frontier_delta(delta: &Value) -> String {
-    let counts = |c: &Value| format!("{} ({})", c["open"], format_depth_counts(c));
-    let route = |r: &Value| {
-        if truthy(Some(&r["argument_id"])) {
-            format!(
-                "{} (cost {})",
-                s(&r["argument_id"]),
-                py_str(Some(&r["cost"]))
-            )
-        } else {
-            "none".to_owned()
-        }
-    };
-    let mut lines = vec![
-        format!(
-            "premise delta for {}: {} -> {}",
-            s(&delta["root"]),
-            s(&delta["base"]),
-            s(&delta["head"])
-        ),
-        format!(
-            "open premises reaching the root: {} -> {}",
-            counts(&delta["base_counts"]),
-            counts(&delta["head_counts"])
-        ),
-        format!(
-            "expanded-route diagnostic (lowest cost): {} -> {}",
-            route(&delta["base_cheapest_route"]),
-            route(&delta["head_cheapest_route"])
-        ),
-    ];
+    let mut lines = vec![format!(
+        "premise delta for {}: {} -> {}",
+        s(&delta["root"]),
+        s(&delta["base"]),
+        s(&delta["head"])
+    )];
     if delta["support_bundle_comparison_available"] == true {
         lines.push(format!(
             "distinct verified support alternatives: {} -> {}",
@@ -3119,20 +3076,10 @@ pub fn format_frontier_delta(delta: &Value) -> String {
         );
         return lines.join("\n");
     }
-    let bare_added = strs(&delta["bare_added"]);
-    if bare_added.is_empty() {
-        lines.push("bare premises added: none".into());
-    } else {
-        lines.push(format!(
-            "bare premises added: {} (listed for visibility; not a regression, owner decision 2026-11-07)",
-            bare_added.len()
-        ));
-        lines.extend(bare_added.iter().map(|statement| format!("  {statement}")));
-    }
     for label in ["added", "removed", "moved"] {
         for (status, statements) in delta[label].as_object().into_iter().flatten() {
             let statements = strs(statements);
-            lines.push(format!("{label} ({status}): {}", statements.len()));
+            lines.push(format!("{label} ({status}):"));
             lines.extend(statements.iter().map(|statement| format!("  {statement}")));
         }
     }
@@ -3141,36 +3088,23 @@ pub fn format_frontier_delta(delta: &Value) -> String {
         .cloned()
         .unwrap_or_default();
     if !changes.is_empty() {
-        lines.push("route cost changes:".into());
+        lines.push("route dependency changes:".into());
     }
-    let side = |cost: &Value, verified: bool, depths: &Value| {
+    let side = |cost: &Value, verified: bool| {
         if cost.is_null() {
-            return "absent".to_owned();
-        }
-        let split = if truthy(Some(depths)) {
-            format!(" ({})", format_depth_counts(depths))
+            "absent"
+        } else if verified {
+            "verified"
         } else {
-            String::new()
-        };
-        format!(
-            "{cost}{split}{}",
-            if verified { "" } else { " (unverified)" }
-        )
+            "unverified"
+        }
     };
     for change in &changes {
         lines.push(format!(
             "  {}: {} -> {}",
             s(&change["argument_id"]),
-            side(
-                &change["base_cost"],
-                change["base_verified"] == true,
-                &change["base_depth_counts"]
-            ),
-            side(
-                &change["head_cost"],
-                change["head_verified"] == true,
-                &change["head_depth_counts"]
-            )
+            side(&change["base_cost"], change["base_verified"] == true),
+            side(&change["head_cost"], change["head_verified"] == true)
         ));
         if change["base_cost"].is_null() || change["head_cost"].is_null() {
             continue;
@@ -4126,6 +4060,14 @@ mod tests {
         delta["base"] = json!("BASE");
         delta["head"] = json!("working tree");
         let text = format_frontier_delta(&delta);
-        assert!(text.contains("added (stated): 1\n  S"));
+        assert!(text.contains("added (stated):\n  S"));
+        assert!(!text.contains("open premises reaching the root:"));
+        assert!(!text.contains("bare premises added:"));
+        assert!(!text.contains("expanded-route diagnostic"));
+        assert!(!text.contains("route cost changes:"));
+        assert!(text.contains("route dependency changes:"));
+        let rendered = format_frontier(&head);
+        assert!(rendered.starts_with("frontier: root ROOT"));
+        assert!(!rendered.contains(" open premises:"));
     }
 }

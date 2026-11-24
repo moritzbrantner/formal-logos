@@ -2,8 +2,10 @@
 module
 
 public import TruthCore.Explanation.AccessibleAccountNecessaryBeing
+public import TruthCore.Explanation.ActualExerciseExplanation
 public import TruthCore.Explanation.ActualExistenceAdequacy
 public import TruthCore.Explanation.ActualWorldGap
+public import TruthCore.Explanation.AdjacentPairContainment
 public import TruthCore.Explanation.AnselmCommonSourceAudit
 public import TruthCore.Explanation.AnselmUltimateSource
 public import TruthCore.Explanation.AutonomousGroundConcrete

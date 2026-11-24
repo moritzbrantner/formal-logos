@@ -18,7 +18,6 @@ export default function GraphPage() {
   // The page ships only the bucket manifest; the graph itself loads in buckets (#491).
   const { graph, manifest } = getGraphBuckets();
   const obligations = researchFrontier(corpus, graph, getFrontierReport());
-  const open = graph.statements.filter((statement) => statement.frontier);
   const established = graph.statements.filter((statement) => statement.established).length;
   return (
     <div className="frontier-page">
@@ -26,14 +25,11 @@ export default function GraphPage() {
         <div>
           <p className="eyebrow">Truth Core / Knowledge map</p>
           <h1 id="graph-heading">Epistemic frontier</h1>
-          <p className="frontier-intro">Follow connected propositions to the premises that still need defending. Each highlighted dot is a real open obligation in the corpus.</p>
+          <p className="frontier-intro">Follow connected propositions, conditional deductions, and their assumptions. Highlighted dots identify recorded premise status, not philosophical warrant.</p>
         </div>
         <dl className="frontier-counts">
           <div><dt>Propositions</dt><dd>{graph.statements.length}</dd></div>
           <div><dt>Established</dt><dd>{established}</dd></div>
-          <div><dt>Open frontier</dt><dd>{open.length}</dd></div>
-          <div><dt>Bare premises</dt><dd>{open.filter((statement) => statement.frontierDepth === "bare").length}</dd></div>
-          <div><dt>Supported only</dt><dd>{open.filter((statement) => statement.frontierDepth === "supported").length}</dd></div>
         </dl>
       </header>
       <Suspense fallback={<p>Loading the proposition graph…</p>}>

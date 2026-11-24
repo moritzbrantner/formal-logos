@@ -1,0 +1,11 @@
+{
+  "id": "51ea3a40-319a-4838-a222-d31d1a14f33f",
+  "label": "Every invariant two-way giver HAS_WILL_1, by the restricted Theta 5 principle",
+  "argument_id": "fd0eec0a-55fb-4b00-b6d9-897347b6c4bf",
+  "challenge_module": "TruthCore.Results.Causality.WillVersusChance.Challenge",
+  "solution_module": "TruthCore.Results.Causality.WillVersusChance.Solution",
+  "theorem": "TruthCore.Results.Causality.WillVersusChance.thetaFiveBridgeGivesWill",
+  "comparator_config": "results/51ea3a40-319a-4838-a222-d31d1a14f33f/comparator.json",
+  "status": "solution-present",
+  "description": "Argument C, the Theta 5 bridge with the weakest Theta 5 version that suffices (DNP_inv, restricted to invariant sources). Not a transcription. Establishes no premise. With excluded middle DNP_inv is exactly the denial of CHANCE_3 at invariant sources (controls, law 11), so this route discriminates will from chance only as far as DNP_inv is independently warranted; its omission model is the chance rival."
+}

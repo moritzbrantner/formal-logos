@@ -242,6 +242,7 @@ public import TruthCore.Results.Causality.NecessaryBeingInAct.Solution
 public import TruthCore.Results.Causality.NecessaryClassicalGodCase.Solution
 public import TruthCore.Results.Causality.NecessaryClassicalGodRoot.Solution
 public import TruthCore.Results.Causality.NecessaryClassicalGodRootAtFirst.Solution
+public import TruthCore.Results.Causality.NecessaryClassicalGodRootBoxK.Solution
 public import TruthCore.Results.Causality.NecessaryClassicalGodRootByComposition.Solution
 public import TruthCore.Results.Causality.NecessaryClassicalGodRootControl.Solution
 public import TruthCore.Results.Causality.NecessaryClassicalGodRootFromAsymmetry.Solution
@@ -406,6 +407,7 @@ public import TruthCore.Results.Causality.WholeRosterFoundation.Solution
 public import TruthCore.Results.Causality.WholeRosterFromMaximumAsymmetry.Solution
 public import TruthCore.Results.Causality.WholeRosterMaximalComparison.Solution
 public import TruthCore.Results.Causality.WholeRosterRootEquivalence.Solution
+public import TruthCore.Results.Causality.WillVersusChance.Solution
 public import TruthCore.Results.Causality.WitnessLocalTeleology.Solution
 public import TruthCore.Results.Causality.WorldIndexedSources.Solution
 public import TruthCore.Results.Causality.WorldLocalGroundingDoubling.Solution

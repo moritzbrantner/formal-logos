@@ -1,0 +1,12 @@
+{
+  "id": "a447ad3e-a72e-4afe-93d3-eb5a4d976aaa",
+  "label": "Pair-rich histories can retain a fixed two-step law and exclude longer patterns",
+  "paraphrase": "For each fixed cutoff, the two constant suffixes admit either value at every future coordinate but not every adjacent pair. The four period-three suffixes a,b,a XOR b admit every adjacent pair while satisfying the fixed recurrence f(t+2)=f(t) XOR f(t+1) after the record. Their first two suffix values determine the whole admitted history. This selector excludes a three-true suffix prefix, hence lacks both finite-pattern and whole-suffix richness. These are complete mathematical control histories; no actual law, metaphysical admissibility or chance measure is assigned.",
+  "lean_declaration": "TruthCore.Explanation.AdjacentPairContainment.MemoryControls",
+  "definition_ids": [
+    "a54be3d2-c9ea-4fcc-8f11-0bfefec3671a",
+    "879221f0-4cd7-4912-b9e4-c425f22b5925",
+    "75c530a8-7680-478b-9c28-06924e3b3cdb",
+    "1e04df16-fe72-467a-bc25-785f0e94fc70"
+  ]
+}

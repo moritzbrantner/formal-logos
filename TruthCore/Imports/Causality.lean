@@ -165,6 +165,7 @@ public import TruthCore.Causality.NecessarilyUnderived
 public import TruthCore.Causality.NecessaryBeingInAct
 public import TruthCore.Causality.NecessaryBeingSurvey
 public import TruthCore.Causality.NecessaryClassicalGodRoot
+public import TruthCore.Causality.NecessaryClassicalGodRootBoxK
 public import TruthCore.Causality.NecessaryClassicalGodRootControl
 public import TruthCore.Causality.NecessaryConcreteRouteBridge
 public import TruthCore.Causality.NecessaryConcreteUnderived
@@ -290,6 +291,7 @@ public import TruthCore.Causality.WholePowerClassification
 public import TruthCore.Causality.WholePowerPerfection
 public import TruthCore.Causality.WholeRosterFoundation
 public import TruthCore.Causality.WholeRosterMaximalComparison
+public import TruthCore.Causality.WillVersusChance
 public import TruthCore.Causality.WitnessLocalTeleology
 public import TruthCore.Causality.WorldSourceRegress
 public import TruthCore.Causality.WorldwiseCompositeGround

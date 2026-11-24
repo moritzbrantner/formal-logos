@@ -1,0 +1,11 @@
+{
+  "id": "62d59ef4-fc23-4f8f-86f6-9af03c4ecc1e",
+  "label": "Adaptive testing leaves a hidden past marker unresolved until a supplied audit reveals it",
+  "paraphrase": "In the explicit two-bit structural surrogate, the blind experiment preserves the visible-coordinate relation and gives identical finite transcripts under every adaptive policy whenever initial readouts agree, even with opposite past markers. No one such transcript admits an exact classifier of the past marker in the existing data-relative criterion sense. Two repeated toggles give the nonconstant trace false,true,false. The audit interface has the same initial readout on the selected opposite-marker states but one true action distinguishes them, and its one-action transcript admits an exact classifier on the entire two-bit state space. This compares mathematical interfaces; it does not establish fabricated histories as metaphysically possible, an actual history-sensitive instrument, or defeat of fallible knowledge.",
+  "lean_declaration": "TruthCore.Science.AdaptiveHistoryAccess.HistoryControls",
+  "definition_ids": [
+    "4a52e22b-c56f-4814-9661-9ef540301cb4",
+    "68f277cc-e5fc-4665-86b5-2fed6d82cdba",
+    "a6e1ef95-8138-5cfc-8fe2-1202ba3b9a5c"
+  ]
+}

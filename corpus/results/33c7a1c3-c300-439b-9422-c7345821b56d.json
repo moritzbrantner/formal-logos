@@ -1,0 +1,11 @@
+{
+  "id": "33c7a1c3-c300-439b-9422-c7345821b56d",
+  "label": "Weaken infinite-suffix freedom to exact one-bit and adjacent-pair exposure conditions",
+  "argument_id": "2a46e979-8010-41cd-934e-daa15b6f21e3",
+  "challenge_module": "TruthCore.Results.Explanation.AdjacentPairContainment.Challenge",
+  "solution_module": "TruthCore.Results.Explanation.AdjacentPairContainment.Solution",
+  "theorem": "TruthCore.Results.Explanation.AdjacentPairContainment.exposureCertificate",
+  "comparator_config": "results/33c7a1c3-c300-439b-9422-c7345821b56d/comparator.json",
+  "status": "solution-present",
+  "description": "An absent adjacent pair defines a time-specific exclusion Profile holding on every admitted trace. Conversely any realized pair must satisfy every universal Profile. Opposite values at one coordinate defeat common-record exact estimators, while absence of one Boolean value permits a correct constant estimator. Finite richness realizes each pair through a finite prefix, and #1874's recombinationFork supplies it from populated one-step extension. WholeSuffixRich and PrefixClosed are unnecessary for these narrower adverse consequences; no ontic, causal or epistemic application bridge is established."
+}

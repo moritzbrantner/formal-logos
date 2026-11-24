@@ -1,0 +1,11 @@
+{
+  "id": "add4c236-3c26-4173-8aae-55a3fceea7a2",
+  "label": "Populated truthful-production positive control",
+  "argument_id": "91501a7c-3a5e-4d01-b3fa-911d941fbcc3",
+  "challenge_module": "TruthCore.Results.Epistemology.SourceEvidenceAdequacy.Challenge",
+  "solution_module": "TruthCore.Results.Epistemology.SourceEvidenceAdequacy.Solution",
+  "theorem": "TruthCore.Results.Epistemology.SourceEvidenceAdequacy.positiveControl",
+  "comparator_config": "results/add4c236-3c26-4173-8aae-55a3fceea7a2/comparator.json",
+  "status": "solution-present",
+  "description": "Restores the full source-to-record bundle without empty source populations, empty causal relations or constant observations. The assigned source and all token bearers exist throughout; cognitive attitudes vary with history. Structural satisfiability only: no actual source, metaphysical model or probability is established."
+}

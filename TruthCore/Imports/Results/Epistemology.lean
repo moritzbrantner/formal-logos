@@ -6,4 +6,5 @@ public import TruthCore.Results.Epistemology.InitialHistoryAuthenticity.Solution
 public import TruthCore.Results.Epistemology.NoFoundationPractice.Solution
 public import TruthCore.Results.Epistemology.SleepingBeauty1401.Reflection.Solution
 public import TruthCore.Results.Epistemology.SleepingBeauty1401.Solution
+public import TruthCore.Results.Epistemology.SourceEvidenceAdequacy.Solution
 public import TruthCore.Results.Epistemology.UltimateExplanation.Solution

@@ -793,3 +793,230 @@ Its call was cancelled during build setup to preserve the coordinator's build
 ownership; it returned no search verdict. The displayed Boolean controls instead
 have direct zero-axiom Lean proofs. Advisory `prove-sweep` was not attempted in
 the worker; the coordinator owns that check on the unchanged frozen Challenges.
+
+## Source veracity to observed evidence (2026-11-24)
+
+This continuation is an analyst reconstruction on baseline
+`b53683fda10350756d43a740296e86e264edd9fb`. Its exact root-route destination is
+individuated `ContentAssertionTruth`, statement
+`98f13d52-356c-440a-956a-c28df295fe73`. That existing target connects through
+result `693522aa` to legacy `GodAssertsOnlyTruth` (`5a035a1e`), then through the
+confirmation bridge to `c1deb2ee`. This section tests what applying that promise
+to a historical record would require. It supplies no actual source, channel or
+historical identification and adds no new support edge reaching the root.
+
+### What the new bridge establishes
+
+`TruthCore/Epistemology/SourceEvidenceAdequacy.lean` reuses the existing
+`History.ontic` existence/causal relations, the existing individuated
+`Attitudes`, and the existing world/content `Semantics`. It does not return to
+the legacy `Prop` abstraction. A channel has separate token encoding, receipt
+and decoding maps. Source-token causation includes the existence of the same
+source and token bearer at that history. It does not identify causation with
+genuine assertion, immediate emission or an observer's knowledge of provenance.
+
+| Result | Exact contribution |
+| --- | --- |
+| `7b9429c8-d870-4cf4-9904-554042cb3e69`, `transportWeakens` | Exact decoded-content identity (`RECORD_TRANSPORT_1`) implies truth preservation (`RECORD_TRANSPORT_2`) on the same channel and named domain. The former is its sole premise. |
+| `841e7fc2-33b7-438b-845e-21a20e807e75`, `sourceGuarantee` | The same source's true assertions, assertoric plans, actual realization, provenance of selected records and truth-preserving transmission jointly imply true decoded records. This is a **conditional assembly**, not independent warrant for trusting the source. |
+| `24906f55-81c1-4ea0-95e9-106f9f96464c`, `copyGuarantee` | If actual source tokens copy an independently supplied target and the observed records come from those tokens, exact transport recovers that target. No mental or God predicate is a premise. |
+| `add4c236-3c26-4173-8aae-55a3fceea7a2`, `positiveControl` | A populated, varying channel jointly realizes the truthful-source bundle, actual tokens and a necessarily present source on the stipulated universal frame. |
+| `cbc30caf-c329-4f25-b5e2-eedbb1befe28`, `omissionControls` | Four concrete failures preserve source truth while breaking assertoric scope, realization, transmission or same-source provenance respectively. |
+| `4f173774-99ca-4bc5-b02a-de7adc5a956f`, `semanticTransportControl` | Retagging a content preserves truth and actual record coverage while changing content identity. Exact recovery is therefore stronger than the main truth guarantee needs. |
+| `8de536c8-8d38-4787-acc6-fa01a94c72fc`, `nonmentalControl` | The same causes, necessary source, target copying and exact transport give sound records when all represented plans, assertions and assents are absent. This tests functional parity, not a complete theory of mindlessness. |
+
+The source assembly is uniform over the **admitted histories**. It therefore
+requires `ContentAssertionTruth` at each such history, with history-indexed
+attitudes. Truthfulness only at an actual history cannot be silently promoted
+to that premise. For an actual-world application the admitted class can instead
+be appropriately restricted. Neither restriction is independently warranted by
+the theorem. Source classification is fixed by the supplied `Signature`; it
+does not derive classical perfections from a label.
+
+The assembly follows a particular observed record back to an existing token
+caused by the designated source. The realization condition identifies a planned
+content in the domain whose code is that token. Assertoric scope makes it an
+assertion by the very same source. Existing veracity supplies its truth;
+truth-preserving transmission carries that truth to the decoded observation.
+The proof preserves source, history, token and content at each step. The causal
+relation may cover indirect effects; its application to the selected production
+process remains open.
+
+These conditions can fail separately. `RealizesPlans` constrains actual tokens
+on the selected channel, not merely a power or wish to make records. It includes
+coverage of those tokens by plans and successful encoding. It is a sufficient
+condition, not a claim that every sound process must be planned or produced by
+this source. The copying route shows a different sufficient bundle. Neither
+route repeats the earlier equivalence between soundness and true observation
+fibers; both specify additional structure that can imply it.
+
+### What the omission controls do and do not show
+
+The controls use two histories, a fixed roster containing two source bearers
+and tagged record bearers, and nonempty causal relations. Every bearer exists
+at each history. The Boolean history index is only a stipulated past marker;
+the one-time presence structure supplies no past event process or independent
+metaphysical admissibility. The designated source's actual assertions are sincere and
+true; its assent is accurate and complete on all represented contents, including
+negations. There is an actual assertion in each history. The content tag permits
+distinct co-true contents; it is a structural proxy for individuation, not an
+account of mental representation. The formal “informed” label means these
+assertion and assent conjuncts; it does not supply an epistemic-knowledge
+predicate or an intellect-to-assent bridge. The positive control's readouts differ across
+the two histories, so success is not obtained by empty evidence or a constant
+observation.
+
+1. **Nonassertoric signs.** The source plans and causes a sign with false decoded
+   content, but never asserts that content as true. The source's genuine
+   assertions remain truthful. A planned fiction is a conceptual illustration
+   of this logical distinction; no actual divine fiction or deceptive purpose
+   is established. Unplanned causal traces would also require an additional
+   plan-coverage premise before this assertoric route could govern them.
+2. **Ineffective realization.** A true assertoric plan is present, but the actual
+   caused token encodes different content. Intention alone supplies no execution
+   guarantee. The primitive classical-attribute label in this finite control
+   is not a model of omnipotence or flawless divine action.
+3. **Corrupted transmission.** True source tokens are received through a map
+   that flips the historical truth coordinate. Source truth, plans, realization
+   and actual provenance remain; truth transport fails.
+4. **Wrong producer.** The proposed source still causes its correct token, but
+   the observed false token comes from the other source. Correct decoding of a
+   token does not identify who produced it. The model retains both actual causal
+   outputs; it does not manufacture the failure by eliminating causation.
+
+The positive control restores the complete conditions on these same carriers.
+The retagging control restores truth preservation without exact identity:
+changing only an independent content tag keeps the record true. Accordingly the
+main assembly uses `RECORD_TRANSPORT_2`, while exact-value recovery uses
+`RECORD_TRANSPORT_1` on the actual target range. The witnesses establish
+dependence of these sufficient bundles, not that the omitted conditions are
+universally necessary or actually false. They assign no probability to a
+fabricated past and do not refute a fuller providential source account.
+
+### Same-channel calibration and positive entitlement
+
+The relevant existing stronger calibration result is
+`b16198d5-565c-57f3-91a6-208dc8c46b02`,
+`TruthCore.Results.Science.ReadingSelfCertification.certificate`, inspected
+with its context, dossier, vocabulary and proof. In its **unrestricted
+constant-additive-bias model**, any entire reading profile is compatible with
+a compensating signal shift and a nonzero offset. Consequently a positive test
+derived only from those complete readings cannot both affirm anywhere and
+guarantee zero bias uniformly. Derived reports may even be infinite sequences.
+The same theorem proves that supplying the true signal value at one point
+restores exact identification under the constant-bias assumption. A variable
+bias is a different model; the companion calibration control shows why one
+anchor need not identify it.
+
+This is more informative than repeating the generic fiber theorem, but its
+scope must remain exact. It concerns zero additive bias, not all reliability,
+historical authenticity or justification. An actual historical application
+would still have to show that an admissible false-history alternative preserves
+the full observed calibration record. A general claim that absent ultimate
+explanation permits such substitution is not supplied here.
+
+A source-authentication report carried entirely by an observationally
+indistinguishable channel does not create a distinction merely by saying
+"this source is reliable". In the additive model this is already covered by
+arbitrary derived reports. The conclusion is an obstruction to a **uniform
+deductive certificate**, not a ban on using the same senses, memory or ordinary
+methods in successful calibration. A differently named instrument helps this
+particular identification problem only if its supplied information or warranted
+structural constraints break the compensating equivalence. A true anchor is
+not acquired or justified by labeling one datum an anchor.
+
+Positive entitlement therefore remains a separate live route. Direct
+perceptual or memorial entitlement, a properly functioning reliable process,
+successful cross-checks, and cumulative coherence can support a fallible
+judgment under an explicit epistemic standard. They need not begin with an
+infallible proof of that standard. The repository's `ReliabilityFrame` already
+separates truth, support, undercutting and warrant; failure to prove reliability
+is not itself a supplied undercutting rule. Conversely, a source account whose
+only warrant is a self-affirming token has added no discriminating information
+against a stipulated same-token rival. The actual epistemic rule and its
+defeaters must be assessed, with shared dependencies retained.
+
+### Comparison and current provisional assessment
+
+The strongest recipient-directed source reply is developed in
+[the veracity continuation](divine-veracity-1410.md#recipient-directed-nondeception-and-historical-inquiry-2026-11-24).
+It supplies a substantive candidate reason for reliable historical inquiry;
+the new causal controls do not evaluate that whole normative package.
+
+| Same comparison target | Knowledgeable truthful source | Necessary impersonal truth-tracking source |
+| --- | --- | --- |
+| Actual production | Must actually cause the relevant tokens; capacity and intention alone do not suffice. | Must actually produce the target-dependent tokens; necessity of its bearer alone does not suffice. |
+| Why content tracks history | Actual knowledge plus a recipient-directed epistemic end can explain deliberate tracking if the normative/efficacy bridges hold. | A specified stable production structure can carry the target into tokens; its nature and causal access may be primitive or independently explained. |
+| Provenance and transport | Must cover the selected observed records and preserve their decoded truth. | Owes the same coverage and transmission conditions. |
+| Identification and warrant | The inquirer needs warranted application to this source and channel; a self-affirming record alone is not an exact discriminator. | The inquirer needs warranted application to this mechanism and channel at the same standard. |
+| Universal truth versus ordinary inquiry | An end of fallible, corrigible inquiry does not imply every record is true. A stronger undertaking could support a stronger scope. | A generally reliable mechanism may permit local error; an exact-copy mechanism supports a stronger scope if actually applicable. |
+
+**Provisional assessment.** A truthful source supplies real conditional support
+for the truth of its genuine assertions. Extending it to all caused appearances
+is unsupported without a scope and production argument. The new assembly and
+controls identify that missing application precisely, while the target-copying
+route gives a positive sufficient impersonal mechanism at the same functional
+standard. Neither source necessity nor mental vocabulary discriminates the
+truth of the resulting records by itself. This leaves overall worldview
+superiority underdetermined; it does not make the accounts equally probable or
+erase direct, primitive or cumulative warrant.
+
+**Next discriminating dependency.** No actual evidence channel or warranted
+historical target was supplied for this slice. Its empirical application is
+therefore blocked on identifying that channel, its allowed conditions and an
+independently interpreted target, then checking provenance, effective copying
+or assertion coverage, and transmission together. Its philosophical application
+is blocked on the recipient-directed norm and complete policy comparison in the
+linked veracity section. A systematic false record produced under the *full*
+specified source/end/efficacy conditions would weaken that reply; a warranted
+truthful policy whose superiority is explained by those conditions would
+strengthen it. Repeating the soundness/fiber equivalence, changing the source's
+name or demanding an endless chain of prior certifications would not supply
+these dependencies.
+
+### Worker verification and evidence boundary
+
+The Challenge signatures were frozen before proof work, with SHA-256
+`f46b9ac875ac5d986205333d32c4399da231a138e61da766d830ffcb8dee328d`, and remain
+unchanged. The vocabulary and Solution elaborate in the pinned Lean setup.
+The six closed certificate types and all seven proofs report **no axioms**;
+all seven Comparator configurations therefore request an empty permitted-axiom
+list. The generic transport theorem is also axiom-free. The finite negation
+law uses direct Boolean case analysis; no propositional-extensionality
+dependency is hidden in the control types.
+
+The targeted advisory `prove-sweep` was run before handwritten proofs: all
+seven goals closed, with no likely-transcription flag. Its Lake prerequisite
+reported a build failure inside the read-only-cache isolation, while the
+already compiled vocabulary and subsequent proof-search elaboration succeeded.
+This is not a green Lake build. The source-to-record result is still explicitly
+classified as an assembly by semantic assessment. The ordinary omission finder
+does not support structure-bundled or function-valued vocabulary; these
+populated controls instead have direct Lean proofs. No unreturned search is
+treated as evidence.
+
+Generated records pass `truth check`; the batch regenerates unchanged; the
+module convention check, bundle audit and whitespace check pass. The final
+transport, strictness and source-assembly semantic checks report no unbridged
+mixing. New definitions and exact versus truth-preserving sense tags are
+registered without changing existing definitions. Source attribution is
+unchanged. Delivered-head binding, Comparator/NanoDa, independent semantic
+challenge and shared generated import lists remain coordinator-owned; direct
+Lean elaboration is not advertised as completion of those gates.
+
+Coordinator-computed integrated comparison against current main, reused after
+subsequent note and metadata edits:
+
+```text
+premise delta for Catholicism is true: the Catholic Church is a teaching authority founded by GOD_4, and every… [53964cbe]: 87857479e534c6ea42f5bdc754d56c77fda15796 -> working tree
+distinct verified support alternatives: 607 -> 607
+verified support alternatives added: 0
+no change
+```
+
+No root dependency is discharged or reclassified.
+
+The substantive change is the explicit source-to-record application test,
+its genuine sufficient copying mechanism and its comparative warrant analysis.
+It is not a discharge of source truth, a historical reliability premise, the
+existence PSR or the root.

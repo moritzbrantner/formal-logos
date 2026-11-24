@@ -955,3 +955,154 @@ asserted contingent content; weaken if a fitting beneficial false assertion
 survives with genuine assertion and reasonable audience agency retained.
 Owners: #1439/#1440 (assertion-premise investigations), #1737 (common
 perfect-agency policy), #1734 (source and cognitive reliability).
+
+## Recipient-directed nondeception and historical inquiry (2026-11-24)
+
+This is a further analyst assessment of the application of individuated source
+veracity (`98f13d52-356c-440a-956a-c28df295fe73`) to historical evidence. The
+formal channel work, exact record IDs and comparison with a nonmental copying
+mechanism are in
+[the source/evidence continuation](fixed-initial-history-535.md#source-veracity-to-observed-evidence-2026-11-24).
+No historical channel is identified and no new source attribution is made.
+The earlier q.14, SCG and assertion-norm readings remain the existing evidence;
+the following policy argument is not attributed to those passages.
+
+### The strongest reply goes beyond absence of false assertions
+
+The serious positive reply is that an actually knowledgeable good source could
+intend recipients to gain genuine historical understanding through ordinary
+inquiry under appropriate conditions. Deliberately arranging a systematically
+fabricated past would then frustrate an end the source itself adopts. A source
+that knows the historical truth, knows how its signs will be understood and
+effectively governs the selected process has a reason to produce trustworthy
+traces even when no trace is a literal speech act. This is a recipient-directed
+reason, not merely the prohibition on asserting what the speaker believes false.
+
+The inference has substantive content when the epistemic end is independently
+specified. An end of **true historical understanding** evaluates a successful
+past-directed belief differently from an equally useful false belief. An end
+of predictive success or practical coordination alone need not distinguish
+those policies. Saying the source is intelligent, good or necessary does not
+identify which end it actually adopts, its intended scope or its priority
+among other ends. The actual exercise and content bridges examined above remain
+relevant; a capacity for understanding is not this undertaking.
+
+One defensible instrumental norm is: a source that adopts an end should not
+knowingly choose a feasible policy that is strictly worse for that end when a
+feasible alternative preserves the other relevant goods and constraints. For
+this to exclude fabricated history, the account needs the following joint
+application, all concerning the same source and recipients:
+
+- An actual epistemic end covering genuine historical understanding in the
+  specified inquiry conditions, rather than only an ability or a generic
+  classification as good.
+- Actual knowledge of the relevant past and of how the candidate record policy
+  will affect those recipients; ignorance of content is distinct from truthful
+  intention and from a successful outcome.
+- A feasible truthful policy that is better in the **complete relevant
+  comparison**, or an independently justified recipient-protection constraint
+  that excludes knowingly inducing the false belief even when goods trade off.
+- A reason that this normative constraint governs the source's actual choice,
+  together with effective execution and application to the observed channel.
+
+These are eligible for direct, conceptual and cumulative warrant; they need
+not each await an unrelated proof. They also cannot be supplied merely by
+renaming the desired historical reliability. The informational production
+conditions in `SourceEvidenceAdequacy` make the last step concrete. The
+recipient-directed norm would provide a reason for a source to realize such a
+policy; the channel theorem does not prove that reason or its application.
+
+The earlier optimal-choice result `a1990e04-1e7d-565f-bd98-f2e64b570aa1` remains
+the exact useful boundary. It permits distinct tied optima. Consequently,
+availability of a truthful alternative with the **same** benefit does not,
+under a policy permitting every optimum, exclude a false-sign policy. A
+successful dominance reply must establish strictness in the full ordering, or
+an additional prohibition. The result is about an abstract order on options;
+its application to epistemic responsibilities is an explicitly provisional
+analyst inference, not a newly proved moral theorem. Repeating its tied model
+under new names would add no evidence.
+
+### What changes when errors, fiction and secondary agency are restored
+
+**Ordinary fallibility.** A source can aim at reliable, corrigible inquiry
+without guaranteeing each individual conclusion. Error detection, correction,
+intellectual development and room for recipient action can be parts of that
+end. Such an account can provide a reason against wholesale manipulation of
+the evidential environment while allowing particular bad readings. Its
+conclusion is a scoped, defeasible expectation of successful inquiry; it is
+not the uniform `RecordsSound` conclusion for every positive observation.
+Obtaining that conclusion requires an appropriately stronger undertaking.
+
+**Fiction and figurative signs.** Their relevant content must be fixed before
+the truth test. A source can truthfully indicate that a story represents p
+without asserting p. The new nonassertoric-sign control separates these acts,
+but does not show that intentionally misleading recipients is permitted. A
+recipient-directed norm can forbid predictable false uptake beyond literal
+assertion, provided its scope and overriding conditions are defended.
+
+**Free secondary agents.** Another producer can alter or counterfeit a token;
+the provenance control exhibits that particular mechanism. Allowing secondary
+agency is not by itself a reason for, or against, a guarantee that the ultimate
+source will protect a particular inquiry practice. The account must say which
+channels it undertakes to protect, how correction remains available and why
+permitting an error is compatible with its epistemic end. If the ultimate
+source is also counted as an indirect cause of the false token, that does not
+turn it into the source's assertion: assertoric and recipient-protection scope
+must still be established. No actual error rate or divine permission policy is
+encoded in the controls.
+
+**Proper conditions.** These must be identified independently of whether the
+belief turns out true. Defining them as “the cases in which the record is
+accurate” merely reintroduces soundness. An account should instead specify the
+recipient practice, relevant source undertaking, channel provenance, ordinary
+interference conditions and acknowledged defeaters, then assess whether the
+targeted epistemic benefit follows. A warranted restriction can be useful even
+if not every alternative is deductively excluded.
+
+### Matching comparison and provisional judgment
+
+An independently supported historical epistemic end would help explain why
+this source produces truth-oriented information. Whether this gives a
+comparative advantage depends on the **strongest impersonal account**. Such
+an account can posit or explain a stable necessary
+source whose actual causal structure copies historically relevant states into
+records, with the same provenance and interference conditions. The formal
+copying control supplies that positive functional option, not its actuality.
+Its nature and target access may have prima facie, empirical or cumulative
+warrant; treating them as primitive is not automatically a defect. A theistic
+end may likewise be a directly warranted commitment. Each account must be
+assessed on its actual support rather than on a requirement that only its
+rival derive every premise.
+
+Once the same target-tracking production and transmission are granted, both
+accounts support the same record truth at the tested scope. The remaining
+comparison concerns why that actual architecture obtains and how the inquirer
+is warranted in applying the account. Merely inserting an intention label
+into an already sound channel adds no causal or epistemic explanation. Nor
+does deleting an intention label establish a mindless metaphysics. The
+structural controls keep both limits explicit.
+
+**Overall provisional judgment.** The recipient-directed reply provides a
+substantive *conditional and defeasible* reason against systematic fabricated
+history, when its end, knowledge, feasible alternatives and normative priority
+are supported. It is stronger than the bare inference from veracity to all
+causal traces, which the new controls reject at the stated structural scope.
+The present evidence does not establish those commitments of an actual source,
+show that every historical record falls under a protective undertaking, or
+favor the source account over a comparably warranted impersonal mechanism.
+Local fallibility does not refute the scoped reply, and an unsupported
+fabrication possibility does not defeat ordinary historical warrant. The
+earlier moral/divine-application assessment is refined, not reversed.
+
+**Next discriminating test.** Fix one recipient practice and a source's
+independently specified epistemic undertaking. Compare a genuinely truthful
+record policy with a fabricated policy while holding the source's cognitive
+and causal abilities, the other relevant goods and feasible alternatives fixed.
+Determine whether false inducement is strictly
+inferior or excluded by a defended recipient-directed norm, and whether that
+norm requires exact truth or only reliable, corrigible inquiry. Pair this with
+the same target and actual production constraints for the necessary impersonal
+source. The test can strengthen the source reply without proving every record
+true; a genuine tradeoff or surviving tied policy would weaken the proposed
+universal exclusion without defeating veracity itself. No further theorem
+about abstract token maps can settle these normative and application premises.

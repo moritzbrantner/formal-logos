@@ -436,8 +436,11 @@ contingent giving.
   - a reason why the replacement reading of `q` is the only coherent one. Then
     the creator reading fails and the C2 link drops.
 - *For the will bridge:* a reason why chance cannot be exercised by a
-  patientless necessary being, for example if chance requires a chancy set-up
-  with contingent conditions. This would strengthen the Θ.5 bridge.
+  patientless necessary being. (The candidate "chance requires a chancy set-up
+  with contingent conditions" was examined in
+  [will-versus-chance.md](will-versus-chance.md) §5 and rejected: it names
+  set-up chance, CHANCE_2, and begs the question against an indeterministic
+  propensity, CHANCE_3.)
 - *For the transfer:* a derivation of the creator reading from P1′ together
   with a principle that a member's possible absence is grounded in power over
   its being. That would make the transfer warranted, but it would share PGP's
@@ -454,6 +457,10 @@ contingent giving.
   1. **Θ.5 bridge:** a necessary concrete being whose giving of being varies
      across accessible worlds where it exists, with no varying external
      condition, has will (HAS_WILL_1). It is blocked by the chance rival in §5.
+     Continued in [will-versus-chance.md](will-versus-chance.md): built for
+     sources with an invariant set-up (arguments C and D), with the restricted
+     Θ.5 premise shown to be exactly the denial of CHANCE_3 in its scope; an
+     intellect-and-one-power route discriminates without it.
   2. **Identification:** the holder is GOD_4 (uniqueness and the existing
      identification nodes).
 - **Related existing work:** #435 and #462 (models of a necessary source with

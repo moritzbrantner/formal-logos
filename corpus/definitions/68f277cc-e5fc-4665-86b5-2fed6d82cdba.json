@@ -1,0 +1,13 @@
+{
+  "id": "68f277cc-e5fc-4665-86b5-2fed6d82cdba",
+  "label": "Hidden historical marker and supplied audit control",
+  "term": "hidden historical marker and supplied audit control",
+  "definition": "HistoryState is a pair of Booleans. Its first coordinate is a stipulated marker for whether a selected past event occurred; PastOccurred means that coordinate is true. Its second coordinate is the mutable current readout. SameVisible equates only second coordinates. The blind experiment reads only the second coordinate and lets actions retain or toggle it, leaving the first coordinate unchanged and unused. The audit experiment has an additional interpretation of the true action: it copies the first coordinate into the second. The probe policy always selects true. The two interfaces share their initial readout on opposite-marker states with the same second coordinate, but only the blind interface preserves SameVisible for all actions.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Science.AdaptiveHistoryAccess.PastOccurred",
+  "definition_ids": [
+    "4a52e22b-c56f-4814-9661-9ef540301cb4",
+    "a6e1ef95-8138-5cfc-8fe2-1202ba3b9a5c"
+  ],
+  "note": "Structural surrogate, not a model of a metaphysically possible counterfeit world, real memory, genuine causal history or source of existence. The blind interface's inability to consult the first bit is an explicit encoding restriction; the audit control deliberately removes it. No actual availability of the history-sensitive operation or justified access to its outcome is claimed. Exact classification uses the existing AdmitsCriterion meaning and is distinct from fallible epistemic warrant. See docs/notes/psr-self-application-756.md#containment-of-evidence-and-adaptive-calibration-2026-11-24."
+}

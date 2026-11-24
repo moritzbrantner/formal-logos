@@ -1,0 +1,13 @@
+{
+  "id": "5c1aba17-d224-49fd-a31c-728a54ac63a9",
+  "label": "Every giving by a one-power being with HAS_INTELLECT_1 exercises a rational power of it",
+  "paraphrase": "For every being y with intellect (HAS_INTELLECT_1) and one power, and every world v and being x: if y gives x being in v, then that giving is the exercise of a rational power of y. Nothing about which worlds y gives in, or about God.",
+  "lean_declaration": "TruthCore.Causality.WillVersusChance.OnePowerIntellectualGivingWilled",
+  "definition_ids": [
+    "88bc0655-9dd0-5879-ba1b-3fca9f86c1f4",
+    "fdeb7757-10db-4fa7-91a4-6c15ee5100d2",
+    "b8061228-9131-40f2-83bd-cb7d719bd0a0",
+    "582f44c3-7778-4806-b385-e1eff852ac5e",
+    "62dfa893-b633-4513-9790-8f9a0a3087e0"
+  ]
+}

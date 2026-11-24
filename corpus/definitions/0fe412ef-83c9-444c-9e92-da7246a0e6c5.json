@@ -1,0 +1,9 @@
+{
+ "id": "0fe412ef-83c9-444c-9e92-da7246a0e6c5",
+ "label": "CHANCE_2, varying set-up: the giving and the giver's set-up both differ at an accessible world",
+ "term": "chance, varying set-up sense (SetupVariationAt)",
+ "definition": "SetupVariationAt F A w y: y exists at w, and at some world v accessible from w where y exists, y's giving differs and its set-up differs (not SetupSameIn A y w v).",
+ "basis": "stipulative",
+ "lean_declaration": "TruthCore.Causality.WillVersusChance.SetupVariationAt",
+ "note": "Analyst definition, attribution deferred (docs/notes/will-versus-chance.md). Deterministic or statistical chance. Example: a coin toss whose outcome tracks varying initial conditions. It does not require that the set-up difference determines the outcome. Excluded at an invariant set-up (Model.Laws 1)."
+}
