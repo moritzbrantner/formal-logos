@@ -8,6 +8,7 @@ public import TruthCore.Results.Causality.NarGrafts.Solution
 namespace TruthCore.Results.Causality.ActualAncestralSource
 open TruthCore.Causality.BruteFoundationBoundary (Profile)
 open TruthCore.Causality.ConcreteExistentialSupply (graph)
+open TruthCore.Causality.SourceForest (RootedAtUniqueSource)
 open TruthCore.Causality.ConcreteRootAccess (UniversalRootAccess)
 open TruthCore.Causality.ActualRootUniqueness (UniqueActualRootAt)
 open TruthCore.Causality.ActualCommonRoot (ActualCommonRootAt)
@@ -32,7 +33,7 @@ private theorem sourceIffRoot {W B : Type} (m : Profile W B) (w : W)
   · rintro ⟨_, hr⟩ ⟨y, hy⟩
     exact hr y.val ⟨y.property.1, y.property.2, hy⟩
 
-theorem commonAncestryOfUniqueAndAccess {W B : Type} (m : Profile W B) (w : W)
+theorem groundingAncestryOfUniqueAndAccess {W B : Type} (m : Profile W B) (w : W)
     (hUnique : UniqueActualRootAt m w) (hAccess : UniversalRootAccess m w) :
     CommonActualGroundingAncestry m w := by
   obtain ⟨n, hn, unique⟩ := hUnique
@@ -53,7 +54,12 @@ theorem commonAncestryOfUniqueAndAccess {W B : Type} (m : Profile W B) (w : W)
       exact .link edge (ih supplier.property)
   exact fun x => path (hAccess x.val x.property) x.property
 
-theorem rootAccessOfCommonAncestry {W B : Type} (m : Profile W B) (w : W)
+theorem commonAncestryOfUniqueAndAccess {W B : Type} (m : Profile W B) (w : W)
+    (hUnique : UniqueActualRootAt m w) (hAccess : UniversalRootAccess m w) :
+    RootedAtUniqueSource (graph m w) :=
+  groundingAncestryOfUniqueAndAccess m w hUnique hAccess
+
+theorem rootAccessOfGroundingAncestry {W B : Type} (m : Profile W B) (w : W)
     (h : CommonActualGroundingAncestry m w) : UniversalRootAccess m w := by
   obtain ⟨s, hs, _, reach⟩ := h
   have access {x y : {b // ActualConcrete m w b}}
@@ -65,11 +71,19 @@ theorem rootAccessOfCommonAncestry {W B : Type} (m : Profile W B) (w : W)
   intro x hx
   exact access (reach ⟨x, hx⟩) ((sourceIffRoot m w s).mp hs)
 
-theorem uniqueOfCommonAncestry {W B : Type} (m : Profile W B) (w : W)
+theorem rootAccessOfCommonAncestry {W B : Type} (m : Profile W B) (w : W)
+    (h : RootedAtUniqueSource (graph m w)) : UniversalRootAccess m w :=
+  rootAccessOfGroundingAncestry m w h
+
+theorem uniqueOfGroundingAncestry {W B : Type} (m : Profile W B) (w : W)
     (h : CommonActualGroundingAncestry m w) : UniqueActualRootAt m w := by
   obtain ⟨s, hs, one, _⟩ := h
   refine ⟨s.val, (sourceIffRoot m w s).mp hs, fun x hx => ?_⟩
   exact congrArg Subtype.val (one ⟨x, hx.1⟩ ((sourceIffRoot m w ⟨x, hx.1⟩).mpr hx))
+
+theorem uniqueOfCommonAncestry {W B : Type} (m : Profile W B) (w : W)
+    (h : RootedAtUniqueSource (graph m w)) : UniqueActualRootAt m w :=
+  uniqueOfGroundingAncestry m w h
 
 theorem ancestralNamingOfDirectCausing {W B R : Type} (m : Profile W B) (w : W)
     (IsGod : B → Prop) (CausesIn : B → B → R → Prop) (esse : R)
@@ -89,19 +103,24 @@ theorem namedRootOfReach {W B : Type} (m : Profile W B) (w : W) (IsGod : B → P
   | refl => rfl
   | tail _ edge => exact False.elim (hn.2 _ edge)
 
-theorem commonAncestryOfNamedSource {W B : Type} (m : Profile W B) (w : W)
+theorem groundingAncestryOfNamedSource {W B : Type} (m : Profile W B) (w : W)
     (IsGod : B → Prop) (hGod : GodExists IsGod) (hRoot : ActualRootExistsAt m w)
     (hReach : GodReachesActualConcreta m w IsGod) : CommonActualGroundingAncestry m w := by
   obtain ⟨g, hg⟩ := hGod
   obtain ⟨n, hn⟩ := hRoot
   obtain rfl := namedRootOfReach m w IsGod hReach g n hg hn
-  apply commonAncestryOfUniqueAndAccess m w
+  apply groundingAncestryOfUniqueAndAccess m w
   · exact ⟨g, hn, fun x hx => (namedRootOfReach m w IsGod hReach g x hg hx).symm⟩
   · have access {x : B} (p : GroundAncestor m w g x) : ActualConcrete m w x → RootAccess m w x := by
       induction p with
       | refl => exact fun _ => .root hn
       | tail _ edge ih => exact fun hx => .step (ih ⟨edge.1, edge.2.1⟩) hx edge
     exact fun x hx => access (hReach g hg x hx) hx
+
+theorem commonAncestryOfNamedSource {W B : Type} (m : Profile W B) (w : W)
+    (IsGod : B → Prop) (hGod : GodExists IsGod) (hRoot : ActualRootExistsAt m w)
+    (hReach : GodReachesActualConcreta m w IsGod) : RootedAtUniqueSource (graph m w) :=
+  groundingAncestryOfNamedSource m w IsGod hGod hRoot hReach
 
 open TruthCore.Causality.NarDerivation.Model (chainG chainGrounds)
 open TruthCore.Causality.FirstMoverNecessity (groundProfile)
@@ -120,7 +139,7 @@ theorem mediatedChain : MediatedControl := by
     rcases hx.2.2 with ⟨_, he⟩ | ⟨_, he⟩ <;> cases he
   have dg : ActualConcreteGround m false .d .g := ⟨(actual .d).1, (actual .d).2, Or.inl ⟨rfl, rfl⟩⟩
   have gc : ActualConcreteGround m false .g .c := ⟨(actual .g).1, (actual .g).2, Or.inr ⟨rfl, rfl⟩⟩
-  apply commonAncestryOfUniqueAndAccess m false
+  apply groundingAncestryOfUniqueAndAccess m false
   · refine ⟨.d, root, fun x hx => ?_⟩
     cases x with
     | g => exact False.elim (hx.2 _ dg)

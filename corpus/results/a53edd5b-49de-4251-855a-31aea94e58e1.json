@@ -4,7 +4,7 @@
   "argument_id": "0c393c60-5969-4f00-86bf-fc8452b3f51c",
   "challenge_module": "TruthCore.Results.Causality.ActualAncestralSource.Challenge",
   "solution_module": "TruthCore.Results.Causality.ActualAncestralSource.Solution",
-  "theorem": "TruthCore.Results.Causality.ActualAncestralSource.rootAccessOfCommonAncestry",
+  "theorem": "TruthCore.Results.Causality.ActualAncestralSource.rootAccessOfGroundingAncestry",
   "comparator_config": "results/a53edd5b-49de-4251-855a-31aea94e58e1/comparator.json",
   "status": "solution-present",
   "description": "Use the common root and paths on the actual grounding graph of exactly m and w. Induction lifts each path to the existing RootAccess predicate. The outputs cover all actual recipients and admit the root itself."

@@ -2,6 +2,7 @@
   "challenge_module": "TruthCore.Results.Causality.ActualAncestralSource.Challenge",
   "solution_module": "TruthCore.Results.Causality.ActualAncestralSource.Solution",
   "theorem_names": [
+    "TruthCore.Results.Causality.ActualAncestralSource.groundingAncestryOfUniqueAndAccess",
     "TruthCore.Results.Causality.ActualAncestralSource.commonAncestryOfUniqueAndAccess"
   ],
   "permitted_axioms": [],
