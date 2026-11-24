@@ -18,6 +18,7 @@ remoteness and the other eight case predicates are discarded. -/
 namespace TruthCore.Results.Causality.NecessaryClassicalGodRootBoxK
 open TruthCore.Causality.BruteFoundationBoundary
 open TruthCore.Causality.NecessarySenseFork
+open TruthCore.Causality.NecessaryRootFork
 open TruthCore.Causality.NecessaryClassicalGodRoot
 open TruthCore.Causality.NecessaryClassicalGodRootBoxK
 open TruthCore.Latin.Aquinas.SummaTheologiae
@@ -38,9 +39,23 @@ theorem boxKOfClassicalGodRoot {W P R : Type} (σ : Signature)
     hRoot, hGod, hNine.2.2.2.1, hField⟩
 
 theorem separator : Separation.Separator := by
-  refine ⟨⟨(), fun _ _ => trivial, ⟨⟨trivial, trivial⟩, fun _ h => h.2.2⟩,
-    trivial, fun _ _ => rfl, trivial⟩, ?_⟩
-  rintro ⟨_, -, -, -, -, -, -, hNine, -⟩
-  exact hNine.2.2.2.2.2.2.2.1
+  open Separation in
+  have hRoot : ∀ b, ActualRoot pairProfile () b := fun _ => ⟨⟨trivial, trivial⟩, fun _ h => h.2.2⟩
+  have hBody : PairBodyExceptRootUniqueness true :=
+    ⟨hRoot true, fun _ _ => trivial, ⟨trivial, fun _ h => h⟩, fun _ _ _ => trivial, rfl,
+      fun _ h => h.elim, fun h => h, fun _ h => h, rfl,
+      ⟨fun h => h, fun _ _ _ => trivial, ⟨trivial, fun _ _ _ _ => trivial⟩, fun _ h => h,
+        trivial, fun _ h => h, trivial, trivial, trivial⟩, trivial⟩
+  have hIff : PairClassicalRoot ↔ ∃ n, PairBodyExceptRootUniqueness n ∧
+      ∀ x, ActualRoot pairProfile () x → x = n := by
+    constructor
+    · rintro ⟨n, ⟨hR, hN, hU, hM, hP⟩, hE, hF, hMF, hRem, hG, hNine, hField⟩
+      exact ⟨n, ⟨hR, hN, hM, hP, hE, hF, hMF, hRem, hG, hNine, hField⟩, hU⟩
+    · rintro ⟨n, ⟨hR, hN, hM, hP, hE, hF, hMF, hRem, hG, hNine, hField⟩, hU⟩
+      exact ⟨n, ⟨hR, hN, hU, hM, hP⟩, hE, hF, hMF, hRem, hG, hNine, hField⟩
+  refine ⟨⟨true, fun _ _ => trivial, hRoot true, rfl, fun _ h => h, trivial⟩, ?_, hIff, hBody,
+    hRoot false, Bool.false_ne_true⟩
+  rintro ⟨n, ⟨-, -, hU, -, -⟩, -⟩
+  exact Bool.false_ne_true ((hU false (hRoot false)).trans (hU true (hRoot true)).symm)
 
 end TruthCore.Results.Causality.NecessaryClassicalGodRootBoxK

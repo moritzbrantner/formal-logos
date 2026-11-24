@@ -3,9 +3,11 @@
 The cheapest root route is `8df2faad`, with cost 16. This note asks why it is so
 cheap, and whether the classical GOD_4 root `da3facd6` can take the place of the
 leaf that makes it cheap. It is a structural note about the graph and the
-route-cost diagnostic. It judges no premise's warrant. The attempt record is
-`6becc920` ("Cheapest-route packing of the God-existence leaf in the fork
-route"). The batch is `specs/necessary-classical-god-root-box-k.toml`.
+route-cost diagnostic. It judges no premise's warrant. The attempt records are `6becc920`
+("Projection of the classical GOD_4 root onto the box K node of the fork
+route", succeeded) and `b3467390` ("Re-routing the fork route's box K node off
+the packed GOD_4 leaf", blocked). The batch is
+`specs/necessary-classical-god-root-box-k.toml`.
 
 ## The chain
 
@@ -30,42 +32,98 @@ same world `w`. The necessity clause of `da3facd6`, `NecessaryAt m.ontic w n`, i
 `Iff.rfl`). The projection
 `NecessaryClassicalGodRootBoxK.boxKOfClassicalGodRoot` (result `f4395e76`)
 is verified with no axioms. It is registered as `strengthens` from `da3facd6` to
-`cdf897a8`. Its one-point separator (result `4e83dbac`) shows that the converse
-fails.
+`cdf897a8`.
 
 The proof only destructures its hypothesis and rebuilds the conclusion. So it is
 declared `transcription: assembly`, like the sibling projections `822de823` and
 `0e932825` from the same node. An assembly never expands a statement in the
-route-cost diagnostic and is not a support bundle. It closes `cdf897a8` only if
-`da3facd6` is closed. **Route costs and closure are unchanged.**
+route-cost diagnostic and is not a support bundle. It closes `cdf897a8` by rule
+(d) only if `da3facd6` is closed.
+
+`truth frontier --json` on the merged head (`main` `62bb4ce3c` plus this batch)
+gives `da3facd6`, `cdf897a8` and `bed94ec2` the status `proved`. Each is closed
+by rule (a), proved from open premises, and none is established. `cdf897a8` was
+already closed by rule (a) through `0b9f4b1c` and `a693bf86`. So rule (d)
+through the assembly adds no closure. **Route costs and closure are unchanged.**
+
+### Strictness separator
+
+The separator (result `4e83dbac`) is a two-point model. Both candidates are
+concrete, exist at the one self-accessing world and are grounded by nothing, so
+both are actual roots. Only one of them is GOD_4. Every supplied attribute
+predicate is chosen so that its attribute holds: goodness, infinity, eternity,
+intellect and will are everywhere true, and potency, the more-than relation,
+simple priority, component-of, composition and matter/form are empty. The Lean
+`Separator` proves five things on this model:
+
+1. the box K node holds, with the GOD_4 candidate as witness;
+2. the classical root fails;
+3. the classical root is equivalent to "some candidate satisfies every other
+   conjunct of the root's body and is the only actual root";
+4. the GOD_4 candidate satisfies every other conjunct;
+5. the other candidate is an actual root and is not GOD_4.
+
+So the classical root fails only through the selected-root uniqueness conjunct
+of `PerfectRootAt` (`∀ x, ActualRoot m w x → x = n`). The box K node has only
+`IsTheOneGod`, uniqueness among GOD_4 bearers, which does not exclude a second,
+non-GOD_4 actual root. The separation is non-degenerate: no supplied predicate
+is emptied, and the failing conjunct uses `ActualRoot`, which both nodes contain.
+A first draft failed only by emptying `HasIntellect`, a free parameter the box K
+node does not mention; it was replaced.
+
+The classical root also adds maximum, perfection, firstness, esse/essence
+identity, matter/form exclusion, remoteness and eight case predicates. That is
+a syntactic comparison of the two definitions; this model does not separate the
+nodes on any of it. No certified difference (`strength_comparison`, #1598) is
+registered. The sense-fork precedents factor through a witness-independent
+frame condition. Here the added content constrains the witness of an
+existential, so a delta would need a new same-witness delta statement and its
+equivalence proof.
 
 ## Why no derivation can remove the packing
 
 `cdf897a8` already has a verified non-transcription derivation without the
 packed leaf: `a693bf86`. It uses the same 25 quarta-via premises as the
-`da3facd6` derivation `3a56507d`. The route-cost rule picks the proof with the
-smallest leaf union for each statement. `truth frontier --routes --frontier-root`
+`da3facd6` derivation `3a56507d`. The route-cost rule expands an intermediate
+statement through the verified non-transcription proof with the smallest leaf
+union, chosen greedily per statement (docs/corpus-model.md, `--routes`).
+`truth frontier --routes --frontier-root cdf897a8-5490-561a-b9d2-507486a3f192`
 gives the following costs:
 
 | Derivation of `cdf897a8` | Cost |
 |---|---|
+| assembly `25bfe291` from the actualist K node `7f24ce4d` | 1, transcription |
 | packed bundle `0b9f4b1c` | 4 |
 | naming-node bundle `25135d6e` | 6 |
-| projection from `da3facd6` (the cheapest derivation of `da3facd6`, `379399d1`, costs 35) | 35, assembly |
+| projection `e3d120ed` from `da3facd6` (the cheapest derivation of `da3facd6`, `379399d1`, costs 35) | 35, transcription |
 | unpacked bundle `a693bf86` | 43 |
 
-The naming-node bundle is not usable in the full graph. Its premise `8540b456` is
-derived only from `cdf897a8` itself (`eceaaacc`). So the packed bundle wins,
-however many unpacked derivations are added. That would hold even if the
-projection were not an assembly.
+The listing marks `25bfe291` `[cheapest, transcription]`. As a transcription it
+expands nothing under the `--routes` rule, so it does not compete for the
+expansion of `cdf897a8`. The naming-node bundle is not an independent
+alternative either. Its premise `8540b456` is derived only from `cdf897a8`
+itself (`eceaaacc`), so it runs back through the packed bundle; without
+`0b9f4b1c` it costs 45.
+
+So the packed bundle, with a union of 4, wins against:
+
+- any derivation with a leaf union above 4;
+- every existing derivation not through `b9816722`, which costs at least 35;
+- any derivation from `da3facd6`, which costs at least cost(`da3facd6`) = 35.
+
+A new derivation would replace it only with a union of at most 3 that avoids
+`b9816722`, and no such candidate is known. This holds whether or not the
+projection is an assembly. Attempt `b3467390` records this as blocked at the
+rule level.
 
 A counterfactual diagnostic shows the size of the artifact. It was run on a
-scratch copy of `main` `6ecc2d87c` with `0b9f4b1c` and its result removed:
+scratch copy of the merged head (`main` `62bb4ce3c` plus this batch, which
+changes no route cost) with `0b9f4b1c` and its result `8348fe91` removed:
 
 | | fork route `8df2faad` | cheapest route |
 |---|---|---|
-| main | 16 (5 bare, 11 proved) | `8df2faad`, 16 |
-| without `0b9f4b1c` | 55 (20 bare, 8 supported, 27 proved) | `88671579` (from GOD_4 exists), 26 |
+| merged head | 16 (5 bare, 11 proved) | `8df2faad`, 16 |
+| without `0b9f4b1c` | 55 (22 bare, 6 supported, 27 proved) | `88671579` (from GOD_4 exists), 26 |
 
 This comparison is not a cost reduction, and it says nothing against `b9816722`.
 A direct assumption remains a legitimate support option.
@@ -88,5 +146,6 @@ A computed view could list two kinds of premise:
 - premises whose content a later root step discards.
 
 This is #1926 phase 4. Changing the route-cost rule needs an owner decision. A
-certified difference for the new `strengthens` registration (#1598) is still
-open, as it is for most registrations.
+certified difference for the new `strengthens` registration (#1598) needs a
+same-witness delta statement and is still open, as it is for most
+registrations.

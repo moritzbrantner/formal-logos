@@ -1,13 +1,17 @@
 {
   "id": "de1ebd56-9671-4dcf-bac5-06ec85436e8b",
   "label": "Strictness separator: the box K node holds and the classical GOD_4 root fails on one model",
-  "paraphrase": "Formal control on the one-point model of the necessary-sense fork (one world accessing itself, one concrete ungrounded candidate that exists there, is GOD_4 and has the signature's classical attributes field), with a q.3 a.4 profile in which the one being is in act and its represented esse and essence coincide: the box K node of the sense fork holds, while the classical GOD_4 root fails once the supplied intellect predicate is empty (the eighth of the nine case predicates). So the box K node does not entail the classical GOD_4 root. The failure comes only from that emptied predicate, a degenerate choice made for the control; the other supplied predicates are fixed as in the Lean control, and nothing is said about intellect. A statement about this formal interpretation only; nothing is claimed about the actual world or about which predicates apply to it.",
+  "paraphrase": "Formal control on a two-point model: one world accessing itself and two candidates, both concrete and existing there, with nothing grounding anything, so both are actual roots; only one of them is GOD_4, and both have the signature's classical-attributes field. The q.3 a.4 profile puts every candidate in act, lets every candidate cause every candidate in the one respect (CausesIn, a relation distinct from grounding; no bridge between them is assumed) and identifies represented esse and essence. The other supplied predicates are chosen so that every attribute they encode holds: goodness, infinity, eternity, intellect and will are everywhere true, and potency, the more-than relation, simple priority, component-of, composition and matter/form are empty. On this model the box K node of the sense fork holds, with the GOD_4 candidate as witness, and the classical GOD_4 root fails. The classical root on this model is equivalent to: some candidate satisfies every other conjunct of the root's body and is the only actual root. The GOD_4 candidate satisfies every other conjunct, and the other candidate is a second actual root that is not GOD_4. So the classical root fails only because its selected-root uniqueness conjunct (every actual root is the witness, inside PerfectRootAt) has no witness; the box K node asks only that its witness be the one GOD_4 (IsTheOneGod), which does not exclude a second, non-GOD_4 actual root. So the box K node does not entail the classical GOD_4 root. The separation is non-degenerate: no supplied predicate is emptied to make an attribute fail, and the failing conjunct is stated with ActualRoot, which both nodes use. The model does not separate the nodes on any other content (maximum, perfection, firstness, esse/essence identity, matter/form exclusion, remoteness or the case predicates other than IsTheOneGod); that further difference is a syntactic comparison of the two definitions only. A statement about this formal interpretation only; nothing is claimed about the actual world.",
   "lean_declaration": "TruthCore.Causality.NecessaryClassicalGodRootBoxK.Separation.Separator",
   "definition_ids": [
     "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
-    "f830795a-b5d8-5f9f-800d-2f3d1f443a0a"
+    "f830795a-b5d8-5f9f-800d-2f3d1f443a0a",
+    "c57e2682-08e6-527e-950f-0fa0a7ff11ef",
+    "88f9f6e8-997b-5f7d-afa1-c501954c3807",
+    "d980bbd2-1a96-564c-bc0d-4065d7786715"
   ],
   "disambiguation_ids": [
-    "83264cf5-01fe-52fc-9a00-eeb024f6496e"
+    "83264cf5-01fe-52fc-9a00-eeb024f6496e",
+    "205a39c3-915d-5fe4-8076-a9ff91329e08"
   ]
 }
