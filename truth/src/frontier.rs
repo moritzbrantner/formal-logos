@@ -3023,14 +3023,12 @@ pub fn frontier_delta(base: &Value, head: &Value) -> Value {
 
 /// Python `format_frontier_delta`.
 pub fn format_frontier_delta(delta: &Value) -> String {
-    let mut lines = vec![
-        format!(
-            "premise delta for {}: {} -> {}",
-            s(&delta["root"]),
-            s(&delta["base"]),
-            s(&delta["head"])
-        ),
-    ];
+    let mut lines = vec![format!(
+        "premise delta for {}: {} -> {}",
+        s(&delta["root"]),
+        s(&delta["base"]),
+        s(&delta["head"])
+    )];
     if delta["support_bundle_comparison_available"] == true {
         lines.push(format!(
             "distinct verified support alternatives: {} -> {}",

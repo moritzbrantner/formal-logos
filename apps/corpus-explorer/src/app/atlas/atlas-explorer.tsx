@@ -249,7 +249,7 @@ function RouteView({ model, selectedRouteId, selectRoute }: { model: AtlasModel;
           <span className={styles.routeRowBody}><span className={styles.routeName}>{compactId(route.argument_id)}</span>
           </span>
         </button>)}</div>
-        <p className={styles.panelNote}>Inspect each route's actual assumptions and conditional consequences. Neither source status nor the number of assumptions determines philosophical strength.</p>
+        <p className={styles.panelNote}>Inspect the assumptions and conditional consequences of each route. Neither source status nor the number of assumptions determines philosophical strength.</p>
       </section>
       {selected ? <section className={styles.panel} aria-label="Selected proof route">
         <div className={styles.panelHeading}><span>Selected route</span><span>{selected.designated ? "Designated" : "Alternative"}</span></div>
