@@ -3561,3 +3561,363 @@ remain downstream and conditional.
 This second diagnostic was executed locally with the output above.
 It is a structural test of the exact equations, not a Lean or
 Comparator result. No newly attributed claims or registered proofs.
+
+
+## Essential exclusion and positive-nature completeness (2026-11-25; provisional)
+
+### Question and fixed background
+
+Continue the subject-index test immediately above. Target `d164b1ff`
+and `c4fb87a6`, with the same-root `fe67d766` destination and the
+`191395d0` alternative. Baseline PR head
+`e50a8c965b7ed872078d176af72693b7345e4c96`.
+The previous CI and ordinary Codex code review passed on that head;
+neither constitutes an independent semantic challenge. This continuation
+is provisional. No new historical attribution, statement, result or
+formal edge is proposed.
+
+Reuse the reviewed 72a86cf4 assessment and the nature/act/limitation
+disambiguation `06fb4f51`. Three commitments must not be identified:
+
+- A supplied actual root g has no grounding predecessor.
+- g has none of the three represented principles in
+  `RootMultiplication.HasLimitingPrinciple` (composition, esse distinct
+  from essence, a distinct simply prior being); the **formal** absence
+  of limitation in `FiniteEsseDependence.rootUnlimited` is a separate
+  result, using the limited-esse grounding-giver premise `08178314`.
+- g is its own being in the primitive `OwnBeing` sense and possesses
+  each real determination that pertains to being (`d164b1ff`). The
+  former does not follow merely from represented equality, and the
+  latter is the disputed fullness claim, not part of the former's
+  definition.
+
+`RootPurity.UnlimitedDeterminationsArePure` says that absence of the
+three represented limiting principles suffices for every determination
+actually in the bearer to be pure. It does not say every pure
+determination is actually in the bearer. The same-root consequence
+`ActualRootDeterminationsArePure` accordingly cannot discharge
+`ActualRootHasEveryPureDetermination`. See
+[the exact strict-purity interface](../../TruthCore/Causality/RootPurity.lean)
+and [whole-being interface](../../TruthCore/Causality/WholePowerPerfection.lean).
+Preserve the scope of the separate reception argument in
+[the finite-esse assessment](contingency-receptivity-c2.md#in-what-sense-is-unlimited-being-the-default).
+
+Let k be the candidate positive intellectual determination: actual
+non-received apprehension of truth, cognitively grounded in that very
+subject. Its purity and coherent non-received realization remain open.
+For the conditional tests grant an actual instance in the distinct
+dependent knower x of the relevant positive content (not its finite
+implementation), and grant that k is an independently admitted pure
+OfBeing determination. The test does not show that the cognitive
+episode of an ordinary thinker is non-received or that its entire
+nature is pure. g is stipulated to explain the specific productive
+manifestation in x as in the preceding source-owned-rule branch. The
+question is why the positive content does not occur intrinsically in g.
+
+### Positive exclusion versus primitive closure
+
+An essential exclusion is a stronger claim than an omission in a
+description. Suppose a rival says that g's positive nature, rather
+than an additional limiting principle, suffices to explain why g
+cannot have k. Test that explanation at the level of the **actual
+positive nature requirements cited by the rival**, not by replacing
+g with a different bearer or supposing a possible temporal change.
+
+Let P describe the positive actual features and constitutive
+requirements the rival has so far invoked for g's nature. Let F be
+the family of intrinsic profiles consistent with the stated constraints
+on the source role and those requirements' interpretation. These are
+admissible *descriptions under the proposed constraints*, not a
+certified space of metaphysically possible worlds. Use one independently
+specified candidate content k. A profile in F extending P with k
+shows that those requirements do not deductively fix the exclusion.
+It is not enough that a different kind of being, or a being with
+different positive constitutive requirements, can possess k. Nor can
+one require in the comparison a negative stipulation that the profile
+is precisely P and then use the resulting exclusion as evidence for
+that stipulation.
+
+The exact constraint comparison, for P itself in F, is
+
+```text
+every q in F containing P omits k
+  iff
+there is no q in F containing P and k.
+```
+
+Thus if the claimed essential exclusion must follow from the positively
+specified requirements and independently supported constraints, exhibiting
+a compatible completion with k undermines *that proposed explanation*.
+This is a narrow test of necessity/entailment, not a principle that every
+metaphysical explanation is necessitating. The description may omit
+a genuine positive feature of the source's nature; the rival can supply
+that feature and run the test again. A primitive holistic nature need
+not decompose into feature-atoms or be a composite of its predicates.
+A constraint grounded in the actual positive nature may be substantive
+even if not reducible to one feature.
+
+The test gives three distinct ways to resist full pure possession:
+
+1. **Finite-mode obstruction.** A positive mode of realization in the
+   source prevents possession of k, for example a receptive capacity
+   whose specified constitution excludes the intellectual exercise.
+   If the obstruction really is an actual nonpure determination of g
+   (and not just an external condition or a conceptual restriction),
+   it conflicts with the earlier strict-purity conclusion. To connect
+   it to `Limited g` or receipt requires the separate real-limitation
+   correspondence. Calling it a differentia or a finite capacity
+   without establishing its real role does not suffice. This horn has
+   genuine pressure under the strict-purity bundle rather than merely
+   restating fullness.
+2. **Pure-content obstruction.** A positively specified joint intrinsic
+   nature is incompatible with k even though its own constituents or
+   aspects and k are separately classified pure. This challenges the
+   compossibility of the selected perfections. There is no requirement
+   to instantiate genuinely contradictory determinations, and a
+   logical impossibility is not a privation. On the existing
+   DEF-PURE-PERFECTION, separate positive actuality without potency,
+   limitation or reception does not yet give a formal certificate of
+   joint compatibility. If the obstruction is actually mode-specific
+   and restrictive, reconsider its purity instead. The Plotinian
+   real-articulation objection is a substantive example of the kind of
+   claim that needs this test, not a proven instance.
+3. **No positively specified obstruction.** The source's own positive
+   nature and supported constraints leave a compatible completion
+   with k, yet the rival posits an exact noncognitive profile. Its
+   productive laws can fix every effect and its existence can be
+   necessary, while the *exclusion* remains an additional commitment.
+   It can appeal to a primitive essence or totality/closure fact,
+   or deny that an absence needs a further ground. Such an account
+   is not contradictory merely because it has a primitive. Its
+   negative closure does not gain independent warrant from the
+   positive productive specification that left the exclusion open.
+
+These are outcomes of the specified comparison, not an exhaustive
+taxonomy of metaphysics. In particular an adequately warranted
+intrinsic essence may supply a positive reason not captured in our
+description. Do not infer global arbitrariness, metaphysical
+possibility, or causal dependence from the two descriptions alone.
+
+**Candidate positive-exclusion principle (OPEN):** Where an actual
+subsistent source essentially excludes an independently warranted
+pure positive content, and this exclusion is offered as a consequence
+of its own positive nature, the relevant positive nature conditions
+must be jointly incompatible with that content, rather than simply
+listing its absence among the conditions. This is a demand on the
+proposed account of the exclusion. It is not a demand for a new cause
+of every negative truth. It puts pressure on a rival claiming to have
+explained the exclusion without forbidding primitive necessary
+natures. To strengthen it into a metaphysical premise that *all* such
+exclusions have a sufficient positive ground, rather than a direct
+negative or totality ground, requires separate warrant.
+
+An analogous debate appears in the external conceptual lead
+[SEP, Truthmakers, sections 2.2–2.3](https://plato.stanford.edu/entries/truthmakers/):
+incompatibility-based, negative-fact and totality-fact approaches to
+negative truths are genuine alternatives. Truthmaking and causal or
+constitutive explanation are distinct, so this debate motivates the
+comparison, not an attribution of our proposed root-specific premise
+to any of those authors. No new pinned source reading is registered.
+A principle demanding further positive grounds for the necessary
+incompatibilities themselves risks a regress; stopping at a warranted
+necessary incompatibility is a legitimate option for both accounts.
+A single totality fact may parsimoniously determine many absences,
+without explaining why *this* is the totality rather than a richer
+compatible one. That distinction applies equally to an intellectual
+source proposed as having just a stipulated roster.
+
+### Diagnostic: positive constraints, pairwise compossibility and totality
+
+The following executed Python test fixes two actual bearers g and x
+with an esse edge, and stipulates source productive coverage of the
+effect. The source role, actuality and the effect's target
+determination are fixed across all compared descriptions. The profiles
+are sets of selected features of g, not constituents of g. Symbols a
+and b are **abstract** pure-candidate slots; k is a stipulated pure
+candidate, not a demonstration of the purity of noesis. The rules are
+stipulated constraints, not metaphysical compatibility theorems.
+Neither source necessity nor real composition is proved by the model.
+
+```python
+from itertools import combinations
+
+e, a, b, k, l = 'esse', 'a', 'b', 'noesis', 'limiter'
+U = frozenset({e, a, b, k, l})
+pure = frozenset({e, a, b, k})
+P = frozenset({e, a, b})
+profiles = {frozenset(v) for n in range(len(U) + 1)
+            for v in combinations(U, n) if e in v}
+roster = {'g', 'x'}
+edge = {('g', 'x')}
+effect = frozenset({e, k})
+assert effect <= pure and k in effect
+assert roster == {'g', 'x'} and edge == {('g', 'x')}
+
+scenarios = {
+    'open': (P, lambda q: l not in q),
+    'finite-mode blocker': (P | {l}, lambda q: not {l, k} <= q),
+    'joint pure conflict': (P, lambda q: l not in q and not {a,b,k} <= q),
+    'exact closure': (P, lambda q: q == P),
+}
+rows = []
+for name, (observed, rule) in scenarios.items():
+    F = {q for q in profiles if rule(q)}
+    assert observed in F and k not in observed
+    extension = any(observed <= q and k in q for q in F)
+    fixes_absence = all(k not in q for q in F if observed <= q)
+    assert extension != fixes_absence
+    strict_purity = observed <= pure
+    pairwise = all(any({u, v} <= q for q in F)
+                   for u, v in combinations(pure, 2))
+    rows.append((name, strict_purity, pairwise, extension, fixes_absence))
+assert rows == [
+    ('open', True, True, True, False),
+    ('finite-mode blocker', False, True, False, True),
+    ('joint pure conflict', True, True, False, True),
+    ('exact closure', True, False, False, True),
+]
+for row in rows:
+    print(*row)
+
+# Check the exact conditional in every nonempty family on a small carrier.
+small = [frozenset(v) for n in range(4)
+         for v in combinations(range(3), n)]
+checks = 0
+for n in range(1, len(small) + 1):
+    for family_tuple in combinations(small, n):
+        F = set(family_tuple)
+        for P0 in F:
+            for d in range(3):
+                omission = d not in P0
+                extension = any(P0 <= q and d in q for q in F)
+                fixes_absence = all(d not in q for q in F if P0 <= q)
+                assert fixes_absence == (not extension)
+                if (not omission or fixes_absence) and extension:
+                    assert d in P0
+                checks += 1
+print(checks)  # 3072
+```
+
+| Constraints | Actual source has only admitted pure features | Every pair jointly permitted somewhere | P plus k permitted | Positive requirements + constraints fix absence |
+| --- | --- | --- | --- | --- |
+| Open | yes | yes | yes | no |
+| Finite-mode blocker | no | yes | no | yes |
+| Joint pure conflict | yes | yes | no | yes |
+| Exact closure | yes | no | no | yes |
+
+The pairwise test is deliberately quantified over each pair having
+*some* admitted profile, not all pairs in one profile. The joint
+conflict is independent of any one pair in this encoding, so
+pairwise compossibility cannot replace a whole-positive-profile
+application. The finite-mode blocker explicitly adds nonpure l to
+the actual source and prevents the joint occurrence of l and k;
+it cannot serve as a strict-pure source control. Exact closure fixes
+the omission by construction and contributes no independent evidence
+for the closure constraint. The open profile is an omission witness
+against inference from strict purity and the stipulated role alone.
+All four assignments stipulate the original source and effect
+rather than encode actual causation, cognition, receipt or the complete
+existing metaphysical frames. The structural models say nothing about
+the metaphysical possibility of the negative profiles, a real source,
+or the truth of `d164b1ff`.
+
+### A narrower argument and its actual philosophical burden
+
+The two independent obligations are now sharper.
+
+**Compatibility:** Establish that the independently specified pure
+intellectual content is compatible with the *joint* positive
+requirements on the actual source's own act. This requires a
+positive account of self-understanding: truth is apprehended by the
+source in its own operation, and the cognitive act has the source
+as its own intelligible object. Identity of the subject and object
+does not erase their different intentional roles. It is logically
+possible to have a reflexive relation on one term, and separate
+descriptions of one actuality do not by themselves demonstrate real
+parts. But an independently justified requirement that actual noesis
+has a real constituent or an intelligible articulation incompatible
+with the specified simplicity would block this application. The
+mere fact that a predicate admits reflexive arguments does not
+warrant actual noesis. See the prior #1879/#1892
+[articulation fork](../immaterial-intellect-reception.md) and
+[Plotinian account](plotinian-composition-unity.md#completed-successor-reading-enneads-vi91-6-2026-10-31).
+The issue is whether the actual kind of articulation required by
+understanding is a receptive or compositional limit, not whether
+logical roles can be renamed.
+
+**Exclusion adequacy:** Even joint compatibility does not imply
+actual possession. A further thesis must connect subsistent esse to
+the absence of any ungrounded exclusion of compatible pure modes,
+or show that a particular omission is a genuine restriction of the
+source's own act of existing. The direct case for this thesis is
+that the real explanatory role of a receiving mode is to determine
+*which* actuality a bearer has, while unreceived actuality is not
+bounded by such a principle. If the same role is assigned to a
+primitive determinate nature, ask why that nature intrinsically
+selects the given mode and excludes the other. This identifies the
+contrast between the uncontracted-act and primitive-profile
+explanations. It does not prove that no intrinsically determinate
+unreceived act exists. The source may be necessary with its
+intrinsic profile fixed in every world of the rival's theory; this
+does not follow from the root role alone, nor does the description
+comparison give a possible world where that necessary being changes.
+
+A narrower conditional consequence is obtained if the positive
+exclusion principle is strengthened to a substantive general
+premise: every absent admitted pure determination at this own-being
+source is excluded by its positive nature and warranted background.
+With a warranted compatibility completion for the actual source
+requirements and k, omission contradicts that principle. Equivalently,
+this is local profile saturation under the chosen compatibility
+constraints; it does not yield fullness where incompatibilities
+remain. The finite diagnostic checks this consequence for each
+target in a small set of profiles. To reach `d164b1ff` itself,
+one needs the unrestricted OwnBeing scope and every OfBeing
+determination, not merely actual caused instances or a supplied
+root. To reach the narrower `fe67d766` via the existing whole-power
+route one still needs all pure determinations, their OfBeing bridge
+and the same-root OwnBeing assumptions; a single cognitive target
+would instead support a local same-source intellect route subject
+to the capacity/recognition/actual-exercise distinctions. No
+application of `64498e7e` or `d5a94eb1` is needed in this
+conditional comparison.
+
+A same-standard judgment: the classical account has a positive
+reason to seek compatibility without introducing a receiving
+principle, grounded in the contrast between finite reception and
+subsistent esse. The dispositional rival has a positive reason to
+resist attributing the manifestation to the source as its own
+episode, and can propose an intrinsically determinate, necessary
+nature. The latter's positive productive content is not yet an
+account of its exclusion; the former's non-reception is not yet an
+account of joint compossibility or fullness. Neither may credit
+mere definitional closure as evidence. No independent ranking
+beyond these specific explanatory comparisons is claimed.
+
+**Provisional assessment and next decisive test.** We have an actual
+discriminator for rival mechanisms: if a proposed noncognitive
+essential boundary depends on a real nonpure determination of the
+source, the strict-purity route conditionally rules it out; if the
+boundary depends on a genuinely joint incompatibility of admitted
+pure modes, the classical route must answer it; if it depends on a
+primitive exact closure, productive completeness and necessity alone
+do not warrant the closure. A direct metaphysical argument for
+compatibility remains necessary for the selected noetic content.
+Concentrate next on the strongest positive incompatibility:
+does actual, intrinsically grounded self-apprehension necessarily
+introduce *real intelligible articulation* incompatible with the
+source's unity, even where the knowing act, bearer and known
+reality are not numerically distinct? This would either supply a
+substantive pure-content obstruction or remove one concrete reason
+for excluding the candidate. It must not be replaced by a merely
+formal reflexive-relation model.
+
+Validation: the preceding two four-profile Python diagnostics were
+reproduced and the new four-scenario test plus all 3,072 finite
+family/member/target checks executed successfully. These are
+structural diagnostics, not Lean, binding or Comparator results.
+The local repository clone is blocked by DNS and Lean/lake are
+absent. The earlier source review and CI evidence do not certify
+this new head. The independent semantic challenge and new-head
+CI/frontier comparison are pending. No existing reviewed judgment
+is changed.
