@@ -4,7 +4,7 @@
 - **Date** 2026-11-24
 - **Target** `7067553d-cad9-5d79-b6b2-912e35051530`, `ActualityOnlyInsofarAsBeingReading`
 - **Rival** `630273f8-b7f8-5b6a-895f-5d2ff23e84cc`, `ActualityWithoutBeingReading`
-- **Status** Documentation checkpoint revised after the draft's independent semantic challenge. Targeted re-review is pending.
+- **Status** Independently reviewed documentation checkpoint. The proposed formal mappings and implementation remain open.
 - **Evidence** Original search excerpts refer to `cae86aa7c092ca2d4276b0f8cfb29e3054d21533` and the route count to the historical `fd78b77e6` analysis. The goodness PRD is in [#1917](https://github.com/moritzbrantner/formal-logos/pull/1917).
 
 ## 1. Question and result
@@ -51,9 +51,9 @@ ST I q.4 a.1 ad 3 answers the objection that esse seems imperfect and receptive 
 
 ### Meinong, §3–4
 
-In *Über Gegenstandstheorie* (1904), §3 p. 8 presents *Sosein* as what characterizes the object itself, including the golden mountain and the impossible round square. Meinong qualifies the independence thesis by saying that warrant for a judgment about *Sosein* in matters knowable only a posteriori depends on knowledge of being. In §4 pp. 11–13, he distinguishes *Existenz* from *Bestand* and rejects the inference from the subsistence of an objective, such as the objective of an object's nonbeing, to the being of its object. In his account the object's own *Sosein* is available to inquiry independently of an existential judgment. [German transcription from the 1913 collection](https://ozekik.github.io/meinong/1904/)
+In *Über Gegenstandstheorie* (1904), §3 p. 8 presents *Sosein* as what characterizes the object itself, including the golden mountain and the impossible round square. Meinong affirms the independence thesis. He separately qualifies the warrant for a posteriori judgments about *Sosein*, which depends on knowledge of being. In §4 pp. 11–13, he distinguishes *Existenz* from *Bestand* and rejects an unrestricted inference from the subsistence of an objective to the being of its object. An example is the objective of an object's nonbeing. In his account the object's own *Sosein* is available to inquiry independently of an existential judgment. [German transcription from the 1913 collection](https://ozekik.github.io/meinong/1904/)
 
-Two mappings are open. The rival needs a bridge from objective characterization (`Sosein x r`) to the real same-bearer `InAct x r` consumed by the causal proofs. It also needs a mapping from the relevant denial of being, given the *Existenz*/*Bestand* distinction, to `¬ E(x)` or `¬ InAct x esse` in the chosen interpretation. The public text was consulted during independent review. Future corpus attribution requires a pinned witness for `MEINONG-GEGENSTANDSTHEORIE-3` and a reassessment of attempt `8a4cbffd` against both mappings.
+Two mappings are open. The rival needs a bridge from objective characterization (`Sosein x r`) to the real same-bearer `InAct x r` consumed by the causal proofs. The formal rival requires a mapping from the relevant denial of being, given the *Existenz*/*Bestand* distinction, to `¬ InAct x esse`. A mapping to `¬ E(x)` supplies that denial given `ActOfEsseSufficesForExistenceAt` (`546975ef`) on the same frame. The public text was consulted during independent review. Future corpus attribution requires a pinned witness for `MEINONG-GEGENSTANDSTHEORIE-3` and a reassessment of attempt `8a4cbffd` against both mappings.
 
 ## 4. Positive metaphysical warrant and exact calibration
 
@@ -129,7 +129,7 @@ The older Lean control `godExistsFromMaximeEnsCausingAllByBeing_omit_hBeing` use
 | Process, trope or bundle ontology | Real events/determinations can be primitive or bearers of actuality; no separately posited substance is required. | Same-bearer calibration for operations and attribution. Cannot be refuted simply by demanding a substance. |
 | Strong actuality-without-being rival | Asserts a real actualization while denying esse of its very bearer in the same interpretation. | Explain what makes it real rather than characterized and how the same bearer participates in existential causation. The formal rival remains satisfiable in the old encoding. |
 
-The independent semantic challenge of draft `0d091bf61c06773ff404a65e55c26ac29c1f824e` checked the consumer uses, act senses, public source readings and finite controls. The revisions above address its findings. Targeted re-review of the revised assertions is pending, and a future new source attribution requires its own pinned evidence.
+The independent semantic challenge of draft `0d091bf61c06773ff404a65e55c26ac29c1f824e` checked the consumer uses, act senses, public source readings and finite controls. Targeted re-review at `6d4e53be949c8129e5f6c43e08a6488068c9cb9d` accepted the repairs subject to the two source-scope clarifications now in §3. A future new source attribution requires its own pinned evidence.
 
 ## 8. Integration plan and next discriminating research
 
@@ -141,4 +141,4 @@ The independent semantic challenge of draft `0d091bf61c06773ff404a65e55c26ac29c1
 
 **Reopening conditions:** a genuinely realized intrinsic property or operation of a bearer lacking real esse in the *same* selected interpretation; a justified alternate meaning of `InAct` used by the universal consumers; or a case where an independently existent abstract bearer cannot be assigned appropriate being without equivocation. The current favorable direct judgment is limited to real actuality of the same bearer, not a denial of meaningful nonexistential predication.
 
-The earlier CI run checked draft head `0d091bf61c06773ff404a65e55c26ac29c1f824e` against base `ba8a75398b009932a33f649ec7abcb2069a3e030`. Its "Report the premise frontier" step computed no change. This evidence is for the earlier documentation revision. The revised checkpoint records conditional comparisons and open bridges pending targeted re-review. [Prior frontier report](https://github.com/moritzbrantner/formal-logos/actions/runs/45323535338/job/138207787680)
+The earlier CI run checked draft head `0d091bf61c06773ff404a65e55c26ac29c1f824e` against base `ba8a75398b009932a33f649ec7abcb2069a3e030`. Its "Report the premise frontier" step computed no change. This evidence is for the earlier documentation revision. The reviewed checkpoint records conditional comparisons and the open interpretation bridges. Integrated-head CI supplies the updated comparison. [Prior frontier report](https://github.com/moritzbrantner/formal-logos/actions/runs/45323535338/job/138207787680)
