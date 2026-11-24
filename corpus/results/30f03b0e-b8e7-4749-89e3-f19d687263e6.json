@@ -1,0 +1,11 @@
+{
+  "id": "30f03b0e-b8e7-4749-89e3-f19d687263e6",
+  "label": "POTENCY_1 under privation from unactualized capacity and capable-subject lack",
+  "argument_id": "87950cb5-0733-491b-b58b-3f9c6b29002b",
+  "challenge_module": "TruthCore.Results.Causality.PotencyPrivation.Challenge",
+  "solution_module": "TruthCore.Results.Causality.PotencyPrivation.Solution",
+  "theorem": "TruthCore.Results.Causality.PotencyPrivation.capacityUnderPrivation",
+  "comparator_config": "results/30f03b0e-b8e7-4749-89e3-f19d687263e6/comparator.json",
+  "status": "solution-present",
+  "description": "For the supplied potency predicate, the analysis F gives capacity and lack of act in the same respect. On precisely those capable subjects, Q exchanges lack of act for privation in either direction. This derives T. At the adopted function F is definitional. For an independently supplied predicate F is an explicit input."
+}
