@@ -1573,9 +1573,9 @@ interpretation at the designated present `now = 0`.
   for that very receiver, which makes the interval law true. That
   interpretation adds an ontic event; it is not licensed by
   describing a missing recipient or source withdrawal as an event.
-  The conserver may reject the no-inducer premise for precisely
-  this reason, while the inertialist must argue that the event
-  really is a positive loss, rather than pure failure of production.
+  Anyone treating withdrawal as a positive loss must justify that
+  classification. A conserver can instead reject the law's coverage
+  of this kind of cessation.
 - **¬C3 survives the stronger law.** The limit-surviving receiver
   obeys the interval-wide no-positive-loss law while the originator
   does not give its being at later stages or the limit. Thus even
@@ -1592,12 +1592,13 @@ the previously registered #743 law-identification results untouched.
 
 ### Strongest ¬C3 response and the exact question
 
-The most robust inertialist does **not** restrict the causal principle
-to discrete successor steps: Schmid's own no-cessation account is stated
-for arbitrary earlier/later instants (the existing
-`TimeSymmetricGiving.CessationNeedsInducer` encoding already reflects
-this), and therefore reaches a designated endpoint without a separate
-successor there. If the global law is genuinely metaphysically governing,
+Schmid's no-cessation account considers an object present throughout
+a half-open interval before a later moment, with no cessation inducer over
+the relevant interval. It does not restrict persistence to discrete
+successor steps. The `TimeSymmetricGiving.CessationNeedsInducer` control
+uses the analyst's stronger premise that presence at any earlier moment
+suffices, given no inducer up to the later moment. Applying it to an
+ω+1 endpoint is an analyst test. If the global law is genuinely metaphysically governing,
 prior actuality plus no positive loss explains the later bearer,
 including at a limit, without strict concurrent production.
 This model adds **no independent objection** to that broad form of
@@ -1614,9 +1615,9 @@ a bearer without an underlying persistent subject at the endpoint.
 Both sides must preserve the distinction between an ontic
 destructive event and an absent productive contribution.
 
-At **local explanatory scope**, the broad interval law plus the
-earlier positive existence fact is a genuine conditional persistence
-account. At **ultimate scope**, that law still uses the prior actuality
+At **local explanatory scope**, the broad interval law, an earlier
+positive existence fact and the absence of a bearer-directed inducer
+over the interval jointly give a conditional persistence account. At **ultimate scope**, that law still uses the prior actuality
 as a positive explanans. A global law can be independently primitive,
 but neither its quantifier over arbitrary intervals nor its satisfaction
 by the complete history establishes the actual *instantiation*

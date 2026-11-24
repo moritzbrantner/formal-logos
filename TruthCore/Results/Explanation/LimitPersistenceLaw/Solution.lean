@@ -53,7 +53,7 @@ theorem limitPersistenceControls :
       exact hnot (Or.inr hn)
     exact ⟨t, hst, le_refl t, ⟨hx, ht⟩⟩
   · intro h
-    obtain ⟨g, hg⟩ := h () false ((1 : Nat) : WithTop Nat) () 
+    obtain ⟨g, hg⟩ := h () false ((1 : Nat) : WithTop Nat) ()
       (by simp [TruthCore.Causality.ConcurrentActualization.Control.falseReceived])
       (by simp [existsAtLimit])
     simp [givingAtOrigin] at hg
