@@ -52,4 +52,22 @@ theorem commonAncestryOfNamedSource {W B : Type} (m : Profile W B) (w : W)
 theorem mediatedChain : MediatedControl := by
   sorry
 
+theorem groundingAncestryOfUniqueAndAccess {W B : Type} (m : Profile W B) (w : W)
+    (hUnique : UniqueActualRootAt m w) (hAccess : UniversalRootAccess m w) :
+    CommonActualGroundingAncestry m w := by
+  sorry
+
+theorem rootAccessOfGroundingAncestry {W B : Type} (m : Profile W B) (w : W)
+    (h : CommonActualGroundingAncestry m w) : UniversalRootAccess m w := by
+  sorry
+
+theorem uniqueOfGroundingAncestry {W B : Type} (m : Profile W B) (w : W)
+    (h : CommonActualGroundingAncestry m w) : UniqueActualRootAt m w := by
+  sorry
+
+theorem groundingAncestryOfNamedSource {W B : Type} (m : Profile W B) (w : W)
+    (IsGod : B → Prop) (hGod : GodExists IsGod) (hRoot : ActualRootExistsAt m w)
+    (hReach : GodReachesActualConcreta m w IsGod) : CommonActualGroundingAncestry m w := by
+  sorry
+
 end TruthCore.Results.Causality.ActualAncestralSource
