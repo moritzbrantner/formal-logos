@@ -3105,14 +3105,8 @@ pub fn format_frontier_delta(delta: &Value) -> String {
         lines.push(format!(
             "  {}: {} -> {}",
             s(&change["argument_id"]),
-            side(
-                &change["base_cost"],
-                change["base_verified"] == true
-            ),
-            side(
-                &change["head_cost"],
-                change["head_verified"] == true
-            )
+            side(&change["base_cost"], change["base_verified"] == true),
+            side(&change["head_cost"], change["head_verified"] == true)
         ));
         if change["base_cost"].is_null() || change["head_cost"].is_null() {
             continue;
