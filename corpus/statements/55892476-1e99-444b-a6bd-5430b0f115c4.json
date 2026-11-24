@@ -1,0 +1,12 @@
+{
+  "id": "55892476-1e99-444b-a6bd-5430b0f115c4",
+  "label": "At a source with an invariant set-up, a power exercised in a withheld giving is rational",
+  "paraphrase": "OPEN (DNP_inv, analyst formulation; WEAK version of DNP-prime): for every being y at w whose set-up is invariant at w (the same intrinsic states and external conditions at every accessible world where it exists: the surrogate of a simple, patientless source), if y gives x being at w by its power p and does not give x being at an accessible world where it exists, then p is rational. With excluded middle it is exactly the denial of CHANCE_3 at beings with an invariant set-up (controls, law 11): it restates the chance rival's denial at such sources and adds no discriminating information against that rival beyond its own warrant (note, section 5).",
+  "lean_declaration": "TruthCore.Causality.WillVersusChance.InvariantSetupVariationIsRational",
+  "definition_ids": [
+    "b8061228-9131-40f2-83bd-cb7d719bd0a0",
+    "b4bb7bb4-4e2d-437d-825e-79a029340e77",
+    "582f44c3-7778-4806-b385-e1eff852ac5e",
+    "62dfa893-b633-4513-9790-8f9a0a3087e0"
+  ]
+}

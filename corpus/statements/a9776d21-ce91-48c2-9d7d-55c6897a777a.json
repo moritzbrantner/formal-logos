@@ -1,0 +1,14 @@
+{
+  "id": "a9776d21-ce91-48c2-9d7d-55c6897a777a",
+  "label": "Every two-way giver at w with an invariant set-up HAS_WILL_1",
+  "paraphrase": "For every being y: if y's set-up is invariant at w and y is a two-way giver at w (it gives some x being at w and does not give x being at an accessible world where it exists; TwoWayGiverAt), then y has will (HAS_WILL_1, the capacity). Nothing about the will's exercise or about God.",
+  "lean_declaration": "TruthCore.Causality.WillVersusChance.InvariantSetupTwoWayGiversWill",
+  "definition_ids": [
+    "7c64b499-6dba-5e03-bdf3-5acea95d8836",
+    "b4bb7bb4-4e2d-437d-825e-79a029340e77",
+    "e006ddeb-2c88-4835-8558-2f360cc5a3eb"
+  ],
+  "disambiguation_ids": [
+    "941efd70-d56f-53f9-b5f9-8acd36711a54"
+  ]
+}

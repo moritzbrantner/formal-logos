@@ -1,0 +1,19 @@
+{
+  "id": "fdd2b1cf-503b-4241-aaa1-2e4a06db5723",
+  "label": "Some holder of power for the actual contingents' joint absence is a willed two-way giver",
+  "paraphrase": "Some being has at w a power for the joint absence of the concrete beings contingent at w and is, at w, a willed two-way giver: it exists at w, gives some being x being at w by a rational power of it, and at an accessible world where it exists with the same set-up does not give x being. It is not a CHANCE_3 giver given one power (controls, law 12). It does not say that the choice is contrastively explained, nor that the holder is GOD_4 or unique.",
+  "lean_declaration": "TruthCore.Causality.WillVersusChance.ActualAbsenceHolderGivesByWill",
+  "definition_ids": [
+    "bf7eddca-8291-4744-8470-379babcd7781",
+    "de24ce2e-84e4-48d8-9cac-5f66ad532015",
+    "b8061228-9131-40f2-83bd-cb7d719bd0a0",
+    "69d8aef9-b0d4-461d-9a48-ef0bb4fbd56f",
+    "582f44c3-7778-4806-b385-e1eff852ac5e",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d"
+  ],
+  "disambiguation_ids": [
+    "623ddbf6-9683-5361-bae4-e348a00ec680",
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f"
+  ]
+}

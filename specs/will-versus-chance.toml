@@ -1,0 +1,189 @@
+# #1926 phase 3: the impersonal-source rival at the stage-two will step
+# (STMT-GOD-HAS-WILL). Part A: a necessitating impersonal source is excluded
+# by results already verified elsewhere (#555 rigid_core, #1897 laws 3-4,
+# PSRStrength); here only restated in the will step's set-up sense and
+# connected to #1897's withholding holder (controls, laws 8-10). Part B: will
+# versus chance at a source with an invariant set-up. An agency overlay on the
+# shared CausalityFrame; three senses of chance; the Theta 5 principle for
+# non-rational powers in a strong (DNP-prime) and a weak, invariant-source
+# (DNP_inv) version; the intellect-and-one-power route that discriminates
+# without restating the rival's denial. Analyst formulations, attribution
+# deferred. Read for this slice (2026-11-24), navigation only, no claim
+# record: ST I q.19 a.4 (materialized witness of passage 74e86e1a).
+# Note: docs/notes/will-versus-chance.md.
+
+[batch]
+vocab = "TruthCore.Causality.WillVersusChance"
+results = "TruthCore.Results.Causality.WillVersusChance"
+
+# ---------------------------------------------------------------- statements
+
+[[statement]]
+id = "Whenever a being gives another being, the giving exercises a power of the giver"
+lean = "GivingExercisesOwnPower"
+paraphrase = "OPEN (analyst formulation, unattributed): whenever, in a world v, y gives x being (GivesTo), there is an active power p of y (PowerOf) such that y's giving x being in v is an exercise of p (Exercises). Giving is an operation of the giver from one of its own principles. Omitting it lets a model give being while exercising nothing (an encoding artifact, controls)."
+definitions = ["582f44c3-7778-4806-b385-e1eff852ac5e", "62dfa893-b633-4513-9790-8f9a0a3087e0"]
+
+[[statement]]
+id = "Whatever HAS_WILL_1 has a rational power"
+lean = "WillIsRationalPower"
+paraphrase = "OPEN bridge (analyst formulation): whatever has will (HAS_WILL_1, the inclination of an intellectual nature toward the good apprehended) has some active power of the rational class (Rational). It reads having that inclination as having a power of that class; HAS_WILL_1 and Rational are independent primitives, and without this bridge a being can have will and no rational power (controls)."
+definitions = ["7c64b499-6dba-5e03-bdf3-5acea95d8836", "b8061228-9131-40f2-83bd-cb7d719bd0a0", "582f44c3-7778-4806-b385-e1eff852ac5e"]
+disambiguations = ["941efd70-d56f-53f9-b5f9-8acd36711a54"]
+
+[[statement]]
+id = "Whatever has a rational power HAS_WILL_1"
+lean = "RationalPowerIsWill"
+paraphrase = "OPEN bridge (analyst formulation): whatever has an active power of the rational class (Rational) has will (HAS_WILL_1). The converse of the previous bridge; near-definitional under the HAS_WILL_1 definition, since a rational power is an inclination following intellectual apprehension of the good."
+definitions = ["7c64b499-6dba-5e03-bdf3-5acea95d8836", "b8061228-9131-40f2-83bd-cb7d719bd0a0", "582f44c3-7778-4806-b385-e1eff852ac5e"]
+disambiguations = ["941efd70-d56f-53f9-b5f9-8acd36711a54"]
+
+[[statement]]
+id = "A power exercised in a giving withheld under the same set-up is rational"
+label = "A power exercised in a giving withheld under the same set-up is rational (strong version)"
+lean = "SameSetupVariationIsRational"
+paraphrase = "OPEN (DNP-prime, analyst formulation; STRONG version): for every being y at w, if y gives x being at w by its power p and, at an accessible world where y exists with the same set-up, does not give x being, then p is rational. Met. Theta 5's rule that a non-rational potency, agent and patient meeting, must act, applied to every being (navigation). With excluded middle it is exactly the denial of CHANCE_3 (an indeterministic non-rational propensity) at w (controls, law 11). Its universal scope is challenged by indeterministic physical propensities on stochastic readings of quantum mechanics (note, section 5); the weak version below suffices for the will route."
+definitions = ["b8061228-9131-40f2-83bd-cb7d719bd0a0", "69d8aef9-b0d4-461d-9a48-ef0bb4fbd56f", "582f44c3-7778-4806-b385-e1eff852ac5e", "62dfa893-b633-4513-9790-8f9a0a3087e0"]
+
+[[statement]]
+id = "At a source with an invariant set-up, a power exercised in a withheld giving is rational"
+lean = "InvariantSetupVariationIsRational"
+paraphrase = "OPEN (DNP_inv, analyst formulation; WEAK version of DNP-prime): for every being y at w whose set-up is invariant at w (the same intrinsic states and external conditions at every accessible world where it exists: the surrogate of a simple, patientless source), if y gives x being at w by its power p and does not give x being at an accessible world where it exists, then p is rational. With excluded middle it is exactly the denial of CHANCE_3 at beings with an invariant set-up (controls, law 11): it restates the chance rival's denial at such sources and adds no discriminating information against that rival beyond its own warrant (note, section 5)."
+definitions = ["b8061228-9131-40f2-83bd-cb7d719bd0a0", "b4bb7bb4-4e2d-437d-825e-79a029340e77", "582f44c3-7778-4806-b385-e1eff852ac5e", "62dfa893-b633-4513-9790-8f9a0a3087e0"]
+
+[[statement]]
+id = "Whatever has power for the actual contingents' joint absence has an invariant set-up"
+lean = "ActualAbsenceHoldersSetupInvariant"
+paraphrase = "OPEN (analyst formulation): whatever has at w a power for the joint absence of the concrete beings contingent at w has an invariant set-up at w: no intrinsic state of it and no external condition of its giving differs at an accessible world where it exists. The simplicity-and-patientlessness reading of #1897's holder; not derived from its necessity (a necessary holder with world-varying intrinsic states is a model of its failure)."
+definitions = ["bf7eddca-8291-4744-8470-379babcd7781", "b4bb7bb4-4e2d-437d-825e-79a029340e77", "1b8baf77-84fa-5513-a138-7fa14840dd87", "DEF-KANT-MODAL-CONTINGENCY"]
+disambiguations = ["DISAMB-CONCRETE-ABSTRACT-CRITERIA", "DISAMB-KANT-CONTINGENCY"]
+
+[[statement]]
+id = "Whatever has power for the actual contingents' joint absence HAS_INTELLECT_1"
+lean = "ActualAbsenceHoldersHaveIntellect"
+paraphrase = "OPEN bridge (analyst formulation): whatever has at w a power for the joint absence of the concrete beings contingent at w has intellect (HAS_INTELLECT_1). It is the point at which the chance rival must disagree, given one power and the will bridges (controls, law 13). Its connection plan: the existing intellect routes conclude HAS_INTELLECT_1 of GOD_4 or of the selected perfect root; carrying that to the holder needs the identification of the holder with that root (#1897 note, gap 2)."
+definitions = ["bf7eddca-8291-4744-8470-379babcd7781", "88bc0655-9dd0-5879-ba1b-3fca9f86c1f4", "1b8baf77-84fa-5513-a138-7fa14840dd87", "DEF-KANT-MODAL-CONTINGENCY"]
+disambiguations = ["DISAMB-CONCRETE-ABSTRACT-CRITERIA", "DISAMB-KANT-CONTINGENCY"]
+
+[[statement]]
+id = "Whatever has power for the actual contingents' joint absence has one power"
+lean = "ActualAbsenceHoldersOnePower"
+paraphrase = "OPEN (analyst formulation): whatever has at w a power for the joint absence of the concrete beings contingent at w has one power: all its active powers are one (the power-level aspect of simplicity; ST I q.19 a.4 ad 4, navigation). Not implied by an invariant set-up: a necessary being with a rational and a non-rational power is a model of its failure."
+definitions = ["bf7eddca-8291-4744-8470-379babcd7781", "fdeb7757-10db-4fa7-91a4-6c15ee5100d2", "1b8baf77-84fa-5513-a138-7fa14840dd87", "DEF-KANT-MODAL-CONTINGENCY"]
+disambiguations = ["DISAMB-CONCRETE-ABSTRACT-CRITERIA", "DISAMB-KANT-CONTINGENCY"]
+
+[[statement]]
+id = "Every GOD_4 exists at w and has power for the actual contingents' joint absence"
+lean = "GodsHoldActualAbsencePower"
+paraphrase = "OPEN bridge (analyst formulation, unattributed): every GOD_4 exists at w and has at w a power (PowerFor) for the joint absence of the concrete beings contingent at w. The directional identification that brings #1897's holder premises to GOD_4: not uniqueness and not that every holder is GOD_4. Motivation, navigation only: on classical theism God could have refrained from creating (ST I q.19 a.3)."
+definitions = ["88f9f6e8-997b-5f7d-afa1-c501954c3807", "bf7eddca-8291-4744-8470-379babcd7781", "1b8baf77-84fa-5513-a138-7fa14840dd87", "DEF-KANT-MODAL-CONTINGENCY"]
+disambiguations = ["DISAMB-CONCRETE-ABSTRACT-CRITERIA", "DISAMB-KANT-CONTINGENCY"]
+
+[[statement]]
+id = "Every giving by a one-power being with HAS_INTELLECT_1 exercises a rational power of it"
+lean = "OnePowerIntellectualGivingWilled"
+paraphrase = "For every being y with intellect (HAS_INTELLECT_1) and one power, and every world v and being x: if y gives x being in v, then that giving is the exercise of a rational power of y. Nothing about which worlds y gives in, or about God."
+definitions = ["88bc0655-9dd0-5879-ba1b-3fca9f86c1f4", "fdeb7757-10db-4fa7-91a4-6c15ee5100d2", "b8061228-9131-40f2-83bd-cb7d719bd0a0", "582f44c3-7778-4806-b385-e1eff852ac5e", "62dfa893-b633-4513-9790-8f9a0a3087e0"]
+
+[[statement]]
+id = "Some holder of power for the actual contingents' joint absence gives by will"
+label = "Some holder of power for the actual contingents' joint absence is a willed two-way giver"
+lean = "ActualAbsenceHolderGivesByWill"
+paraphrase = "Some being has at w a power for the joint absence of the concrete beings contingent at w and is, at w, a willed two-way giver: it exists at w, gives some being x being at w by a rational power of it, and at an accessible world where it exists with the same set-up does not give x being. It is not a CHANCE_3 giver given one power (controls, law 12). It does not say that the choice is contrastively explained, nor that the holder is GOD_4 or unique."
+definitions = ["bf7eddca-8291-4744-8470-379babcd7781", "de24ce2e-84e4-48d8-9cac-5f66ad532015", "b8061228-9131-40f2-83bd-cb7d719bd0a0", "69d8aef9-b0d4-461d-9a48-ef0bb4fbd56f", "582f44c3-7778-4806-b385-e1eff852ac5e", "1b8baf77-84fa-5513-a138-7fa14840dd87", "DEF-KANT-MODAL-CONTINGENCY"]
+disambiguations = ["DISAMB-CONCRETE-ABSTRACT-CRITERIA", "DISAMB-KANT-CONTINGENCY"]
+
+[[statement]]
+id = "Every two-way giver at w with an invariant set-up HAS_WILL_1"
+lean = "InvariantSetupTwoWayGiversWill"
+paraphrase = "For every being y: if y's set-up is invariant at w and y is a two-way giver at w (it gives some x being at w and does not give x being at an accessible world where it exists; TwoWayGiverAt), then y has will (HAS_WILL_1, the capacity). Nothing about the will's exercise or about God."
+definitions = ["7c64b499-6dba-5e03-bdf3-5acea95d8836", "b4bb7bb4-4e2d-437d-825e-79a029340e77", "e006ddeb-2c88-4835-8558-2f360cc5a3eb"]
+disambiguations = ["941efd70-d56f-53f9-b5f9-8acd36711a54"]
+
+[[statement]]
+id = "Will and CHANCE_3 at an invariant source: laws, nonvacuity, core, omission and rival models"
+label = "Will and CHANCE_3 at an invariant source: laws, nonvacuity, core, omissions, rivals"
+lean = "Model.Controls"
+paraphrase = "Premise-free laws and finite models (structural surrogates, not metaphysical possibility). Laws: (1) an invariant set-up excludes CHANCE_1 and CHANCE_2; (2) VG excludes every invariant two-way giver, willed or chancy; (3) VG implies DNP-prime; (4) DNP-prime excludes CHANCE_3; (5) the flip: reclassifying powers turns a willed two-way giver into a CHANCE_3 giver and conversely, with the same set-up; (6) will as a rational power and one power exclude CHANCE_3 for a being with will; (7) both are two-way giving; (8) part A: with factive giving, a necessary giver with an invariant set-up whose giving is set-up necessitated gives being at w only to necessary beings; (9) with excluded middle, VG is set-up necessitation of every being at w; (10) part A: withholding, P5 and the holder's invariant set-up give a holder that is a two-way giver and not set-up necessitated, whatever its power; (11) with excluded middle, DNP-prime is exactly the absence of CHANCE_3 at w and DNP_inv exactly its absence at invariant beings; (12) with excluded middle and giving as exercise, an invariant two-way giver is willed or CHANCE_3, and not both given one power; (13) one power, CHANCE_3, intellect, will following intellect and will as a rational power are jointly inconsistent. Models: theist nonvacuity of arguments A-D; the chance rival (same frame and set-up, non-rational power: DNP-prime and DNP_inv fail, the conclusions of B, C and D fail); the intellectual chancer (two powers); each member of the chance core needed; omission models of arguments A-D; DNP-prime strictly stronger than DNP_inv (three worlds); VG and chance-sense nonvacuity."
+definitions = ["b8061228-9131-40f2-83bd-cb7d719bd0a0", "69d8aef9-b0d4-461d-9a48-ef0bb4fbd56f", "b4bb7bb4-4e2d-437d-825e-79a029340e77", "582f44c3-7778-4806-b385-e1eff852ac5e", "fdeb7757-10db-4fa7-91a4-6c15ee5100d2", "ca00e246-197c-4107-97a7-ca51448b0247", "e0179074-ab4e-4078-8ecb-a7ae9696fd11", "0fe412ef-83c9-444c-9e92-da7246a0e6c5", "a2840d96-8bdc-4e6a-a9a3-376a9505ec7c", "de24ce2e-84e4-48d8-9cac-5f66ad532015", "e006ddeb-2c88-4835-8558-2f360cc5a3eb", "7bc1d667-fda2-4744-b055-9ba6cbe7f648", "7c64b499-6dba-5e03-bdf3-5acea95d8836", "88bc0655-9dd0-5879-ba1b-3fca9f86c1f4", "88f9f6e8-997b-5f7d-afa1-c501954c3807", "62dfa893-b633-4513-9790-8f9a0a3087e0", "bf7eddca-8291-4744-8470-379babcd7781", "DEF-KANT-MODAL-NECESSITY", "DEF-KANT-MODAL-CONTINGENCY"]
+disambiguations = ["c18f084e-bb0a-4edd-84d6-fdd1bb2ede87", "DISAMB-KANT-CONTINGENCY"]
+
+# ---------------------------------------------------------------- arguments
+
+[[argument]]
+id = "Every giving by a one-power intellectual being exercises a rational power, from will following intellect"
+label = "Every giving by a one-power HAS_INTELLECT_1 being is by a rational power"
+theorem = "oneIntellectualPowerGivesWilledGiving"
+axioms = []
+premises = ["090be689-b77f-51a1-9d5d-caf339169e4b", "Whatever HAS_WILL_1 has a rational power", "Whenever a being gives another being, the giving exercises a power of the giver"]
+conclusion = "Every giving by a one-power being with HAS_INTELLECT_1 exercises a rational power of it"
+rule = "Will from intellect, a rational power from will, identify it with the exercised power by one power"
+meaning = "An intellectual y has will (will follows intellect), hence some rational power q; each giving of y exercises some power p of y; with one power, p = q, so the giving exercises a rational power. Constructive."
+description = "The intellect route to willed giving (argument A). It is the route that discriminates choice from chance without restating the chance rival's denial: given one power, an intellectual source cannot give by a non-rational power (controls, laws 6 and 13). Its price for the chance rival is the source's intellect. Not a transcription. Establishes no premise; nothing about God or about which worlds y gives in. Omission models: without will following intellect, without will as a rational power, without giving as exercise."
+
+[[argument]]
+id = "The withholding holder is a willed two-way giver, from its intellect and one power"
+label = "The withholding holder is a willed two-way giver, by its HAS_INTELLECT_1 and one power"
+theorem = "actualAbsenceHolderGivesByWill"
+axioms = []
+premises = ["b8a2a9e1-0dda-48bc-a646-d4cb229ca62c", "c76b6e2c-1ca0-47fd-a9d0-2c2faa3d1174", "Whatever has power for the actual contingents' joint absence has an invariant set-up", "Whatever has power for the actual contingents' joint absence HAS_INTELLECT_1", "Whatever has power for the actual contingents' joint absence has one power", "Every giving by a one-power being with HAS_INTELLECT_1 exercises a rational power of it"]
+conclusion = "Some holder of power for the actual contingents' joint absence gives by will"
+rule = "Take the withholding holder and a P5 witness; its giving is by a rational power; its set-up is the same at the withholding world"
+meaning = "Withholding gives a holder y at w that gives each concrete being contingent at w being at w and none at an accessible world v where y exists; P5 supplies one, x. The holder has intellect and one power, so by argument A's conclusion its giving of x at w exercises a rational power; its invariant set-up makes v a world with the same set-up. So y is a willed two-way giver at w. Constructive."
+description = "Argument B: #1897's withholding holder gives by will, not by chance, given its intellect and one power, with no Theta 5 principle. Not a transcription. Establishes no premise. Its omission models show what each premise carries: without the holder's intellect the chance rival (same frame, set-up and giving, non-rational power) satisfies every other premise; without one power, the intellectual chancer. It does not say that the holder is GOD_4 or unique, nor that the choice is contrastively explained. Connection plan: the holder's intellect premise needs the holder-root identification (#1897 note, gap 2); a consumer on the root route is the q.19 a.4 creation-by-will node a94c5dfc, which needs a bridge from exercising a rational power in giving to its Wills relation (not built)."
+
+[[argument]]
+id = "Every invariant two-way giver HAS_WILL_1, by the restricted Theta 5 principle"
+theorem = "thetaFiveBridgeGivesWill"
+axioms = []
+premises = ["At a source with an invariant set-up, a power exercised in a withheld giving is rational", "Whenever a being gives another being, the giving exercises a power of the giver", "Whatever has a rational power HAS_WILL_1"]
+conclusion = "Every two-way giver at w with an invariant set-up HAS_WILL_1"
+rule = "The withheld giving exercises some power; DNP_inv makes it rational; a rational power is will"
+meaning = "A two-way giver y with an invariant set-up gives x being at w by some power p (giving exercises a power of the giver) and does not give it at an accessible v where it exists; DNP_inv makes p rational, and a being with a rational power has will. Constructive."
+description = "Argument C, the Theta 5 bridge with the weakest Theta 5 version that suffices (DNP_inv, restricted to invariant sources). Not a transcription. Establishes no premise. With excluded middle DNP_inv is exactly the denial of CHANCE_3 at invariant sources (controls, law 11), so this route discriminates will from chance only as far as DNP_inv is independently warranted; its omission model is the chance rival."
+
+[[argument]]
+id = "GOD_4 HAS_WILL_1, by the restricted Theta 5 principle at the holder of the joint-absence power"
+label = "GOD_4 HAS_WILL_1, by the restricted Theta 5 principle at the joint-absence power"
+theorem = "godHasWillByThetaFive"
+axioms = []
+premises = ["Every GOD_4 exists at w and has power for the actual contingents' joint absence", "906f5c39-2a63-4dc2-955d-a00cfd8a976b", "9f7b1778-84c9-40cf-a1b6-a91a960b0590", "3ef41442-431a-4bed-83bd-4458ed623f5f", "c76b6e2c-1ca0-47fd-a9d0-2c2faa3d1174", "Whatever has power for the actual contingents' joint absence has an invariant set-up", "Every two-way giver at w with an invariant set-up HAS_WILL_1"]
+conclusion = "66aecdd7-ea4e-55c6-9377-10db08893854"
+rule = "Each GOD_4 holds the power; P2-prime, P5, the creator reading and factive giving make it a two-way giver; its set-up is invariant; apply argument C's conclusion"
+meaning = "Each GOD_4 g exists at w and holds the power for the joint absence of the actual contingent concreta; P2-prime puts g at an accessible world v where they are all absent; P5 gives one, x; by the creator reading g gives x being at w, and by factive giving not at v. So g is a two-way giver at w; its set-up is invariant (holder premise); argument C's conclusion gives it will. Constructive."
+description = "Argument D: a horizontal, intellect-free support option for STMT-GOD-HAS-WILL through #1897's creator premises and the restricted Theta 5 principle. Not a transcription: no premise mentions will except argument C's conclusion, which is conditional on a two-way profile the proof derives. Establishes no premise. Its crux is DNP_inv, consumed through argument C: the chance rival model satisfies every other premise of C and D. Shared dependencies with #1897's withholding route: P2-prime, P5, the creator reading and factive giving."
+
+[[argument]]
+id = "The restricted Theta 5 principle, from the strong one"
+theorem = "sameSetupVariationIsRationalWeakens"
+axioms = []
+weakening = true
+premises = ["A power exercised in a giving withheld under the same set-up is rational"]
+conclusion = "At a source with an invariant set-up, a power exercised in a withheld giving is rational"
+rule = "An invariant set-up is the same set-up at the withholding world"
+meaning = "DNP-prime applies to every being at w with the same set-up at the withholding world; an invariant set-up gives that same set-up, so DNP-prime gives DNP_inv. Constructive."
+description = "Backs the strength order DNP-prime strengthens DNP_inv. Establishes no premise. Strictness: controls, three-world model (a chancy being whose set-up varies elsewhere satisfies DNP_inv and violates DNP-prime)."
+
+[[argument]]
+id = "Will and CHANCE_3 controls checked"
+theorem = "willVersusChanceControls"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+sense_mixing_control = true
+premises = []
+conclusion = "Will and CHANCE_3 at an invariant source: laws, nonvacuity, core, omission and rival models"
+rule = "General laws and explicit finite models"
+meaning = "Premise-free: thirteen laws (chance senses at an invariant set-up, VG's symmetry and strength, DNP excluding CHANCE_3, the flip, one power with will, set-up collapse and the holder's non-necessitation (part A), VG as set-up necessitation, DNP as the exact denial of CHANCE_3, the dichotomy at a simple source, the chance core) and finite models (theist nonvacuity, the chance rival, the intellectual chancer, chance-core deletions, omissions of arguments A-D, DNP strictness, VG and chance-sense models). Model-witnessed separations only; no premise is established and no reality claim is made."
+description = "Premise-free laws and models for the will-versus-chance batch. Sense-mixing control: they relate the three CHANCE senses, fixed giving and set-up necessitation, MODAL_CONTINGENCY_1 and NECESSARY_2 without a bridge premise. Establishes no premise."
+
+# ---------------------------------------------------------------- relations
+
+[[relation]]
+id = "DNP-prime strengthens DNP_inv, the Theta 5 principle at invariant sources"
+subject_kind = "statement"
+subject_id = "A power exercised in a giving withheld under the same set-up is rational"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "At a source with an invariant set-up, a power exercised in a withheld giving is rational"
+verification_result_id = "The restricted Theta 5 principle, from the strong one"
+strictness_result_id = "Will and CHANCE_3 controls checked"
+note = "Same frame and agency overlay. The strong version constrains every being at w with the same set-up at the withholding world; the weak one only beings whose set-up is invariant at w. The controls' three-world model satisfies the weak version while the strong one fails for a chancy being whose set-up varies at a third world."

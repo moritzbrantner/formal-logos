@@ -1,0 +1,27 @@
+{
+  "id": "790d6d05-da9f-489c-b9f5-e4b66e2eab82",
+  "label": "What discriminates will from chance at a necessary source with an invariant set-up?",
+  "date": "2026-11-24",
+  "statement_ids": [
+    "66aecdd7-ea4e-55c6-9377-10db08893854",
+    "55892476-1e99-444b-a6bd-5430b0f115c4",
+    "6e4b519b-e766-4dbe-a046-aab8082cb484",
+    "813a9181-8cce-45a0-a3f1-ad8cd2b281c6",
+    "9856239a-aef9-4b87-b70a-15a3176d6dd7",
+    "a9776d21-ce91-48c2-9d7d-55c6897a777a",
+    "fdd2b1cf-503b-4241-aaa1-2e4a06db5723",
+    "5c1aba17-d224-49fd-a31c-728a54ac63a9"
+  ],
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "See docs/notes/will-versus-chance.md sections 5-8. Verified zero-axiom results: A b5b84276 (intellect and one power make every giving willed), B 963e9689 (the withholding holder is a willed two-way giver given its intellect and one power), C 51ea3a40 (restricted Theta 5 principle DNP_inv gives will to invariant two-way givers), D bc4d81f6 (GOD_4 HAS_WILL_1 from the GOD_4 holder bridge, #1897 creator premises and C's conclusion), E 16002747 (DNP-prime implies DNP_inv; strengthens registered, strictness in the controls). Controls ec6627bf: the flip law (only Rational separates a willed from a CHANCE_3 giver), DNP-prime and DNP_inv are, with excluded middle, exactly the denial of CHANCE_3 in their scope (law 11), and the chance core (law 13: one power, CHANCE_3, intellect, will-follows-intellect and will-as-rational-power inconsistent, each member needed). So the Theta 5 route adds no discriminating information against the chance rival beyond DNP_inv's own warrant, and the will-versus-chance question at a simple source reduces to the intellect question. Rejected candidate warrants for DNP_inv: 'chance needs a varying set-up' (that is CHANCE_2 and begs the question); q.19 a.4's determination argument (it is the intellect/exemplar question, not a separate warrant). Read ST I q.19 a.4 in the materialized witness 74e86e1a (navigation, no claim).",
+  "blocker": "No independent warrant was found that a being with an invariant, patientless set-up cannot have a non-rational indeterministic propensity; DNP-prime's inductive base meets a live, interpretation-dependent objection from stochastic quantum dynamics, which undercuts DNP_inv's inherited support though it is not a counterexample to it. Reopen on a reason specific to invariant sources, on strong evidence for deterministic fundamental dynamics, or on the holder-root identification that carries the existing intellect routes to the holder.",
+  "evidence": [
+    "b5b84276-2b13-459e-9f59-a3d083f52cc3",
+    "963e9689-42c0-4056-b519-684bd37ab23d",
+    "51ea3a40-319a-4838-a222-d31d1a14f33f",
+    "bc4d81f6-7cfb-4595-b7c9-7858bbece685",
+    "16002747-35ec-4509-830e-5c38b0224dba",
+    "ec6627bf-e955-4532-8ee5-9345fd54fa9f"
+  ]
+}

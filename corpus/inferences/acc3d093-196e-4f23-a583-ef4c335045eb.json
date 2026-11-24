@@ -1,0 +1,14 @@
+{
+  "id": "acc3d093-196e-4f23-a583-ef4c335045eb",
+  "label": "Every giving by a one-power HAS_INTELLECT_1 being is by a rational power (inference)",
+  "input_statement_ids": [
+    "090be689-b77f-51a1-9d5d-caf339169e4b",
+    "71fc097b-4039-4812-a498-2ad70fe08b98",
+    "495a40ad-9bd4-4d1f-bf37-e89587432e12"
+  ],
+  "output_statement_id": "5c1aba17-d224-49fd-a31c-728a54ac63a9",
+  "rule": "Will from intellect, a rational power from will, identify it with the exercised power by one power",
+  "meaning": "An intellectual y has will (will follows intellect), hence some rational power q; each giving of y exercises some power p of y; with one power, p = q, so the giving exercises a rational power. Constructive.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

@@ -1,0 +1,9 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.WillVersusChance.Challenge",
+  "solution_module": "TruthCore.Results.Causality.WillVersusChance.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.WillVersusChance.thetaFiveBridgeGivesWill"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}

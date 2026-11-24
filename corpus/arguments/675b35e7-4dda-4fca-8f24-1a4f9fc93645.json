@@ -1,0 +1,20 @@
+{
+  "id": "675b35e7-4dda-4fca-8f24-1a4f9fc93645",
+  "label": "The restricted Theta 5 principle, from the strong one",
+  "premise_statement_ids": [
+    "6e4b519b-e766-4dbe-a046-aab8082cb484"
+  ],
+  "conclusion_statement_id": "55892476-1e99-444b-a6bd-5430b0f115c4",
+  "inference_ids": [
+    "65f17353-279e-4e35-bad8-efc86e4133ab"
+  ],
+  "meaning": "DNP-prime applies to every being at w with the same set-up at the withholding world; an invariant set-up gives that same set-up, so DNP-prime gives DNP_inv. Constructive.",
+  "definition_ids": [
+    "582f44c3-7778-4806-b385-e1eff852ac5e",
+    "62dfa893-b633-4513-9790-8f9a0a3087e0",
+    "69d8aef9-b0d4-461d-9a48-ef0bb4fbd56f",
+    "b4bb7bb4-4e2d-437d-825e-79a029340e77",
+    "b8061228-9131-40f2-83bd-cb7d719bd0a0"
+  ],
+  "weakening": true
+}

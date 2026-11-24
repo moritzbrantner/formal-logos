@@ -1,0 +1,12 @@
+{
+  "id": "6e4b519b-e766-4dbe-a046-aab8082cb484",
+  "label": "A power exercised in a giving withheld under the same set-up is rational (strong version)",
+  "paraphrase": "OPEN (DNP-prime, analyst formulation; STRONG version): for every being y at w, if y gives x being at w by its power p and, at an accessible world where y exists with the same set-up, does not give x being, then p is rational. Met. Theta 5's rule that a non-rational potency, agent and patient meeting, must act, applied to every being (navigation). With excluded middle it is exactly the denial of CHANCE_3 (an indeterministic non-rational propensity) at w (controls, law 11). Its universal scope is challenged by indeterministic physical propensities on stochastic readings of quantum mechanics (note, section 5); the weak version below suffices for the will route.",
+  "lean_declaration": "TruthCore.Causality.WillVersusChance.SameSetupVariationIsRational",
+  "definition_ids": [
+    "b8061228-9131-40f2-83bd-cb7d719bd0a0",
+    "69d8aef9-b0d4-461d-9a48-ef0bb4fbd56f",
+    "582f44c3-7778-4806-b385-e1eff852ac5e",
+    "62dfa893-b633-4513-9790-8f9a0a3087e0"
+  ]
+}

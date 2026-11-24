@@ -1,0 +1,36 @@
+{
+  "id": "02f427bf-43f8-4352-bad8-a9b1e082ec4f",
+  "label": "The withholding holder is a willed two-way giver, by its HAS_INTELLECT_1 and one power",
+  "premise_statement_ids": [
+    "b8a2a9e1-0dda-48bc-a646-d4cb229ca62c",
+    "c76b6e2c-1ca0-47fd-a9d0-2c2faa3d1174",
+    "a065c332-940d-4ec3-b9da-a6127b088a8b",
+    "813a9181-8cce-45a0-a3f1-ad8cd2b281c6",
+    "9856239a-aef9-4b87-b70a-15a3176d6dd7",
+    "5c1aba17-d224-49fd-a31c-728a54ac63a9"
+  ],
+  "conclusion_statement_id": "fdd2b1cf-503b-4241-aaa1-2e4a06db5723",
+  "inference_ids": [
+    "6af9b573-80a0-439b-8241-a0e6fd85f3aa"
+  ],
+  "meaning": "Withholding gives a holder y at w that gives each concrete being contingent at w being at w and none at an accessible world v where y exists; P5 supplies one, x. The holder has intellect and one power, so by argument A's conclusion its giving of x at w exercises a rational power; its invariant set-up makes v a world with the same set-up. So y is a willed two-way giver at w. Constructive.",
+  "definition_ids": [
+    "582f44c3-7778-4806-b385-e1eff852ac5e",
+    "62dfa893-b633-4513-9790-8f9a0a3087e0",
+    "69d8aef9-b0d4-461d-9a48-ef0bb4fbd56f",
+    "88bc0655-9dd0-5879-ba1b-3fca9f86c1f4",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "b4bb7bb4-4e2d-437d-825e-79a029340e77",
+    "b8061228-9131-40f2-83bd-cb7d719bd0a0",
+    "bf7eddca-8291-4744-8470-379babcd7781",
+    "de24ce2e-84e4-48d8-9cac-5f66ad532015",
+    "e006ddeb-2c88-4835-8558-2f360cc5a3eb",
+    "fdeb7757-10db-4fa7-91a4-6c15ee5100d2"
+  ],
+  "disambiguation_ids": [
+    "623ddbf6-9683-5361-bae4-e348a00ec680",
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f"
+  ]
+}

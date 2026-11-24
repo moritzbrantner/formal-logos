@@ -1,0 +1,11 @@
+{
+  "id": "b5b84276-2b13-459e-9f59-a3d083f52cc3",
+  "label": "Every giving by a one-power HAS_INTELLECT_1 being is by a rational power",
+  "argument_id": "b3806678-bfa2-4858-88f0-4adca14fe33c",
+  "challenge_module": "TruthCore.Results.Causality.WillVersusChance.Challenge",
+  "solution_module": "TruthCore.Results.Causality.WillVersusChance.Solution",
+  "theorem": "TruthCore.Results.Causality.WillVersusChance.oneIntellectualPowerGivesWilledGiving",
+  "comparator_config": "results/b5b84276-2b13-459e-9f59-a3d083f52cc3/comparator.json",
+  "status": "solution-present",
+  "description": "The intellect route to willed giving (argument A). It is the route that discriminates choice from chance without restating the chance rival's denial: given one power, an intellectual source cannot give by a non-rational power (controls, laws 6 and 13). Its price for the chance rival is the source's intellect. Not a transcription. Establishes no premise; nothing about God or about which worlds y gives in. Omission models: without will following intellect, without will as a rational power, without giving as exercise."
+}
