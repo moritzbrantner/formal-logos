@@ -2549,3 +2549,182 @@ God-root consumer; the same-bearer/attribute bridge toward
 defeat, universal PSR or primitive-disqualification claim is made. The synthesis
 is proposed for coordinator challenge; prior accepted findings and #750's
 independent-standard question are preserved.
+
+
+## Act, esse, necessity and attributes: joined worldview comparison (2026-11-23)
+
+**Purpose and evidential status.** This is a cross-family synthesis of already
+merged research, not a new proof, configuration certificate, metaphysical
+admissibility model, source attribution or authoritative status register.
+It serves the God-existence-stage necessary-concretum node
+**b19ffd92** and the same-source attribute/ultimate-adequacy questions.
+The most consequential current source notes are
+[complete existential supply](unique-feedback-explanation-311.md),
+[contingency/reception](contingency-receptivity-c2.md),
+[modal-grounding frameworks](modal-grounding-frameworks.md),
+[concurrent causation versus inertia](sustaining-vs-existential-inertia.md),
+[causal perfection](causal-perfection-transfer.md) and
+[the modal spine](modal-spine.md). Their reviewed scoped judgments are retained.
+
+### Reference discipline: five questions, not five established premises
+
+C1–C5 are **investigation labels**, not a uniform corpus conjunction.
+In the #1882 C1 section, *C2* denotes **necessity of the underived source**
+and *C3* denotes **unity of that source**. The distinct #1884 C2 question
+is **contingency requiring reception or a simply prior cause**; #1885's C3
+is **weak concurrent actualization**. These cannot be composed by matching
+their labels. Use their exact content and IDs:
+
+| Question for comparison | Selected existing content | What is not entailed |
+| --- | --- | --- |
+| **Foundation (C1 in #1882)** | **20babef7**, every nonempty closed collection has an actual underived bearer for the fixed q.3 a.4 actual-esse-cause relation; the source judgment is modestly favorable only at exhaustive per se productive scope | A necessary, unique, simple, first-mover or intelligent bearer |
+| **Contingency bridge (C2 in #1884)** | **6508c239**: a contingent actual being has the specified receptive/composition route or a distinct simply prior cause of its esse. Power-grounding **20d5fecd** is one openly disputed support | Universal reception merely from the definition of contingency; applicability to a simple underived being |
+| **Necessary concrete same witness** | The First Way route to **f9208664**, then **b19ffd92** using the concrete-movers premise **6e6c5d8d** (argument **5e7d0079**); compare #1870, #1884 | That this mover is identical with the root supplied by **20babef7**, or actually gives every other being its esse |
+| **Present conservation (C3 in #1885)** | **40a97664** weak concurrent actualization; the temporal giving field and the tenseless actual-esse-cause field are not definitionally identical | Origination implying sustaining giving, or contingency implying present receipt |
+| **Intellect and full greatness (C4/C5 investigations)** | #1855/#1866/#1879 give conditional same-source self-knowledge routes; #1865/#1876/#1880 construct and interpret modal-profile candidates | Productive intellectual power implying intrinsic understanding; actual attribute possession implying essential cross-world possession or genuine metaphysical possibility of the entire fixed profile |
+
+**Formal consequence versus metaphysical applicability.** The links
+**20babef7** plus coverage/uniqueness/population/EM to the common source
+**c35b1a5c**; #1882's alternative totality route to **da09703b**;
+#1884's C2 plus same-mover unreceivedness to **f9208664**; and #1889's
+Pruss-premise route through **b90ee2de** to **b19ffd92** are *different
+conditional support bundles*. None proves its own open application
+principles. The Pruss route does not take power-grounded possibility as
+a formal premise, but its global power-grounding requirement is not
+dialectically independent of that disputed theory. Do not count such
+routes as multiple independent warrants for the shared thesis.
+
+### One explanatory target; multiple non-exhaustive packages
+
+For comparison hold fixed an actual concrete **x**, an actual world
+**w**, and its positive existence at a selected moment (and, for
+persistence comparisons, at a later moment). Where contingency is
+assumed, it is metaphysical contingency at **w**, not a temporal
+beginning. Where a candidate source **n** is supplied, test its actual
+existence, de re necessity relative to the stated accessibility,
+productive relation to **x**, and identity across uses. A relation
+recorded as **CausesIn** does not automatically instantiate **GivesAt**,
+a present ground, an intrinsic explanation or an intentional act.
+Sources and rivals must account for *the same* actuality; when they
+use different frames, the cross-frame interpretation is an OPEN bridge,
+not a certified joint model.
+
+| Live explanatory package | Positive resources offered | Exact remaining obligation |
+| --- | --- | --- |
+| **Underived necessary productive source** | An intrinsically underived bearer and a possible actual giver of dependent esse; #1882's supplier case and #1870/#1884's same-First-Way-mover necessity routes | Identify the supplier-cone root, necessary mover and actual giver as **one bearer** under matching meanings; establish productive exercise and explain why this contingent order obtains. Unity, conservation and intellect are additional claims |
+| **Necessary originator with existential inertia** | An originator accounts for initial existence; a persistence law accounts conditionally for later existence without repeated productive giving. #1885/#1886 separate those conditions on fixed histories. [#1891](https://github.com/moritzbrantner/formal-logos/pull/1891) adds a necessary originator and the #1614 ancestry-ground bundle with ¬40a97664; the strict current-ground variant loses a ground for the effect | Justify the persistence law for genuinely received esse and account for the first or complete history's positive actuality |
+| **Underived impersonal intellectual exemplar** | A necessary intelligible source or norm can structure secondary minds' genuinely correct cognition without thereby performing the first source's own cognitive act; compare #1855/#1879 | Explain why intrinsic truth-grasp is or is not a pure perfection of that source, and the same-source q.14 capacity-to-exercise and primary-object bridges. [#1892](https://github.com/moritzbrantner/formal-logos/pull/1892) separates own-form exemplar structure from source apprehension in a model with an actual secondary knower. Its `Norms` relation is primitive |
+| **Contingent underived first being** | Primitive actual existence at the first being and local downstream explanation, without assuming a necessary root. #1870's brute-first control separates pure act/firstness from de re necessity | Positive modal warrant for this *same* being's absence against power-grounded, essence–esse and unconditional essentialist accounts. The finite assignment does not certify metaphysical admissibility |
+| **Source-free globally admitted holistic actuality** | A primitive populated-world admission or constitutive law plus member-level relations; #1878/#1883 provide structural fixed-state controls | Defend the admission's ontic force and actual productive relation, especially when an empty state is also fixed. Under a strict per se productive-priority bridge a finite rootless cycle is excluded; an infinite source-free case remains a live scope-specific question |
+| **Plural or underived-whole foundation** | Multiple underived suppliers, or an underived constitutive whole that explains its members. An unreceived whole inside the bearer domain can root a supplier cone it supplies | Explain why those suppliers, or that whole, suffice for this effect. At whole-order scope also account for that order's actuality. Rooting one cone leaves **20babef7**'s claim about every nonempty supplier-closed collection open. Numerical uniqueness is a further burden of the one-source account |
+
+This is a matrix of **candidate explanatory strategies**, not six
+complete worldviews, a proved compatibility matrix or an exhaustive
+partition. These controls combine subsets of the modal, temporal, causal
+and cognitive signatures. There is no single checked structure for all four. #1891 establishes
+a conjunction on the ancestry-ground reading in its supplied model. #1879
+concerns source self-knowledge under its own assumptions. Will, omniscience,
+free creation and GOD_4 require further bridges.
+
+### The dependency fork the combined work actually exposes
+
+1. **Why there is positive actuality at all.** In the narrow per se
+   productive sense, the received-act/mode-of-having argument provides a
+   direct, provisionally favored reason for an underived supplier.
+   The strongest holist replies with a **positive obtaining/admission
+   principle**, not just an arbitrary cycle; the source reply has its
+   own active-seed/application commitment. Neither law is free of a
+   warrant and metaphysical-import burden (#1878/#1883).
+2. **Why the same foundation cannot fail to exist.** Here the crux is
+   not another first-mover proof but the *meaning of de re possible
+   absence* for an actually underived, simple being. Power-grounding
+   **20d5fecd**, esse/essence bridge **96971e31**, essentialism,
+   recombination and existence-conditional essentialism yield different
+   results under different OPEN principles (#1888/#1889). The current
+   matched-scope assessment finds no discriminating warrant that
+   establishes either the foundational being's possible absence or the
+   opposing complete-power-grounding principle.
+3. **What the root does over time.** A necessary source plus an
+   originating cause does not by itself answer whether a presently
+   derivative effect requires current giving. The origin-only and
+   sustaining assignments expose the missing ground-to-giving
+   interpretation; continuing existence is distinct from explaining
+   which entire possible history obtains (#1885/#1886).
+4. **What the root itself is.** Producing actual minds, possessing
+   objective intelligible form, having cognitive capacity and actually
+   understanding are different conditions. The same-source immanent
+   cognitive argument needs the q.14 intellect, exercise and intentional
+   object bridges (#1855/#1866/#1879). An impersonal source is not
+   refuted merely by giving correct cognition to its effects.
+5. **Whether all the attributes form one possible nature.** A fixed
+   interpreted profile plus S5 consequence is not yet the metaphysical
+   possibility and cross-world essentiality of that entire profile.
+   Same-root possession must not be silently turned into a
+   necessarily-exemplified maximal profile. [#1890](https://github.com/moritzbrantner/formal-logos/pull/1890)
+   gives conditional completion for the same bearer under its fixed profile.
+   It adds three actual and four successor slot conditions to the ten actual
+   slots. Its opaque-slot control shows a schema-level gap when a successor
+   slot is missing. Warrant for the fixed-profile modal slots, admissible
+   access, and freedom with contingent effects remains open.
+
+### Cumulative judgment and the next cross-family test
+
+**Provisional judgment (scope: merged evidence as of 2026-11-23).**
+These arguments now form a coherent *research architecture* with
+explicit convergence on the necessary-concrete endpoint. The
+underived-actual-source reading remains modestly favored under the
+restrictive **exhaustive productive per se** interpretation, mainly
+from the groundedness/mode-of-having rationale already assessed in the
+C1 note. Neither its unrestricted mode-unspecified generalization nor
+the full **necessary, unique, sustaining, intrinsically intelligent,
+maximally great source** is thereby established. A necessary impersonal
+source, origin-plus-inertia, contingent first being, plural foundation
+and positively admitted holism retain specific unanswered commitments.
+No overall complete-worldview winner is inferred; nor does the
+survival of a structural rival establish equal philosophical warrant.
+
+**Next cross-family tests.** Hold one effect, its history and source fixed.
+For conservation, use #1891's already checked ancestry-ground case and ask
+what makes the same effect depend on a present productive act rather than
+persist under a governing law after origination. Keep the strict
+present-ground reading explicit. For intrinsic cognition, hold fixed the
+same source and its genuinely cognitive effect in the #1892 comparison.
+Ask whether truth-grasp is an immanent pure perfection and whether a simple
+subject can apprehend its object without the real articulation required by
+the strongest Plotinian objection. #1892 tests the stronger distinct-real-
+constituent premise. For the modal profile, ask what warrants each actual or
+accessible-world slot for this same bearer and what licenses the relevant
+metaphysical access. None of the three comparisons requires a new frame.
+
+**Revision conditions.** Reassess source priority if an actual
+productive rootless whole with warranted nonempty admission is supplied,
+or if a source-active-every-state premise cannot meet the same
+explanatory standard. Reassess source necessity if the matched-scope
+modal frameworks acquire discriminating warrant at the fixed
+foundational being. Reassess conservation, intrinsic cognition and
+maximal-profile conclusions only on their respective positive
+same-source bridges. Neither a new
+support-option count nor the absence of further countermodels
+changes these judgments.
+
+**Change boundary.** No new proposition, Lean theorem, model,
+source passage, attribution, strength comparison or status marking
+is introduced. Existing current assessments are not superseded.
+The intended root-premise/frontier effect of this documentation-only
+integration is **none**. Exact revision and review evidence are in #1894.
+
+### Propositions for further investigation with Astra
+
+Start with **b19ffd92**, the existence of one concrete individual that is
+actual and exists at every accessible world. Fix the proposed bearer before
+asking whether it is the actual giving source or has any classical attribute.
+The following are the remaining claims most directly relevant to that move.
+
+| Corpus proposition or connection | Discriminating question |
+| --- | --- |
+| **20babef7**, rootedness of every nonempty collection of actual esse bearers closed under all their distinct actual esse suppliers | Does complete per se productive dependence itself require an underived supplier, or can a globally admitted, positively actual whole supply what the account needs? The existing positive judgment favors rootedness only in the selected exhaustive productive sense. |
+| **20d5fecd** and **823d4312**, contingency's two power channels and unconditional exercise of esse in an esse-identical nature | For this same foundational individual, does possible absence require one of the two power channels, and does the profile exclude both? Does identity of esse and essence require unconditional exercise, with a warranted act–fact and modal bridge? The existence-conditional account governs the act where the bearer exists. #1887 retains parity at the fixed case between power completeness and the warrant for this conditional alternative. |
+| **40a97664**, weak concurrent actualization | Does the same actually received esse require productive giving whenever its bearer is present? Origin-plus-law can meet the ancestry-ground test conditionally. Its lawhood at this existential scope and the necessity of present giving are the disputed claims. |
+| **180f5ad2** and the source-to-intrinsic-cognition bridge | Does being neither a matter–form composite nor a component of anything give this bearer intellectual capacity, and what warrants its own actual apprehension? Genuine cognition in its effects and objective exemplarity leave the source's exercise open. |
+| **1ac7429d** and **1822b59d**, selected-content knowing and optimal choice | Can this same simple source adopt an effective practical specification with genuinely contingent fulfillment? Distinguish actual directed exercise, factive reference to the particular product, and an exhaustive explanation of the choice. See #1737 for the open interfaces. |
+| **8626f8a5**, GOD_4 existence, and #1890's stronger fixed-profile target | For actual GOD_4 naming, which existing route's premises would qualify this bearer? Separately, what would show that the actual supplier, necessary concretum, giver and knowing subject can be one bearer with the full profile across the relevant worlds? #1890's conditional completion addresses that second target. It supplies no independent warrant for metaphysical admissibility. |
