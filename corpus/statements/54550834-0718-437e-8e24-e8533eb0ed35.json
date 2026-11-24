@@ -1,0 +1,9 @@
+{
+  "id": "54550834-0718-437e-8e24-e8533eb0ed35",
+  "label": "Thresholds that distinguish a named source's two comparative increments",
+  "paraphrase": "For every additive pair of integer readings and every signed offset, the comparison changes from false to true precisely on offsets between the residual gap inclusive and actual gap exclusive. Loss has the reverse interval. Agreement at all offsets is equivalent to the source adding equal increments to both foundations. The residual is a controlled omission that preserves all other inputs.",
+  "lean_declaration": "TruthCore.Causality.ComparativeFoundation.ThresholdCharacterization",
+  "definition_ids": [
+    "ba726ddd-9170-4b89-8ea3-a002bffb12f6"
+  ]
+}

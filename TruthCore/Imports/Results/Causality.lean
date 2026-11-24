@@ -2,6 +2,7 @@
 module
 
 public import TruthCore.Results.Causality.AccidentalFeatureOrigin.Solution
+public import TruthCore.Results.Causality.AcquiredHistoryTransfer.Solution
 public import TruthCore.Results.Causality.ActPriorityAtFirst.Solution
 public import TruthCore.Results.Causality.ActPriorityThetaEight.Solution
 public import TruthCore.Results.Causality.ActualCommonRoot.Solution
@@ -60,6 +61,7 @@ public import TruthCore.Results.Causality.ComingToBeHorns.Solution
 public import TruthCore.Results.Causality.CommonPriority.ContingentGround.Solution
 public import TruthCore.Results.Causality.CommonPriority.Solution
 public import TruthCore.Results.Causality.CompactOperationCount.Solution
+public import TruthCore.Results.Causality.ComparativeFoundation.Solution
 public import TruthCore.Results.Causality.CompleteCauseContributorCover.Solution
 public import TruthCore.Results.Causality.CompleteCauseSourceUniqueness.Solution
 public import TruthCore.Results.Causality.CompleteCauseUnderivedSource.Solution

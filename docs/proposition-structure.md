@@ -263,7 +263,7 @@ claim of whole-corpus migration or renewed source fidelity.
 
 ## Current handoff: causal perfection transfer
 
-The conservationist follow-up to merged #1924 is on `research/conservationist-onset`, based on `6ecc2d87c`. Durand credits the giver of the exercised power mediately with the same action. The outstanding question for `b26c10a0` is whether the same giver of esse supplies the relevant causal principle in each respect, including acquired and relational determinations. [Investigation, judgments and tests](notes/actuality-esse-research.md#12-what-the-conservationist-grants-about-this-effect) · [Source and theorem references](../corpus/attempts/fb42b3a5-1b41-4d7a-9d97-10b70373c7a0.json)
+The acquired-quality and real-relation follow-up to merged #1931 was independently reviewed at `45f329f3238a6fbfd5ae99f6fc3abe471b2c88b2` on `research/acquired-and-relational-actuality`, based on `e66eb9969`. A productive history through a later acquisition can earn the same giver mediated credit. A change at one relatum can cause a comparison to obtain at the other. The history route to `b26c10a0` still needs a credited realization for each eligible bearer at each actual non-esse respect, together with a warranted reading of that credit as efficient causation. The next test is whether the giver currently helps preserve a standing determination after its maker ceases to act. [§13, tests and current judgment](notes/actuality-esse-research.md#13-who-causes-an-acquired-quality-or-a-relation-to-obtain) · [§12, Durand and Suárez](notes/actuality-esse-research.md#12-what-the-conservationist-grants-about-this-effect)
 
 Continue from merged #731, starting synchronized main
 `aab5dcf4827b03dcc18be2c2b115990de0fcf7cc`. The bounded structural migration
