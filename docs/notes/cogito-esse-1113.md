@@ -1002,12 +1002,12 @@ not new graph effects:
 
 ### Remaining tests
 
-1. Issue #543 still calls for a Lean proof that an episode-only theory
-   admits an expansion with empty fresh concrete-existence predicates, and
-   a separate control preserving a true abstract content in the absence of
-   concrete population. The [two questionings and unread quotation](#which-occurrence-supplies-the-witness)
-   resolve the local applicability question for e₀ under the event-inclusive
-   reading and the adopted esse contract.
+1. The [episode-model separation and abstract-truth controls](../../TruthCore/Logic/CogitoSeparation.lean)
+   show that occurrence can coexist with empty fresh existence predicates and
+   that a true abstract content can survive without concrete population.
+   Applying the population argument to a performance requires identifying
+   its representative at the selected world. The [two questionings and unread quotation](#which-occurrence-supplies-the-witness)
+   identify e₀ under the event-inclusive reading and the adopted esse contract.
 2. Test whether the content-appropriation of one grasp is an independently
    warranted nonidentity/ownership relation or an internal aspect of an
    event. A concrete criterion that rules out the strongest organized
