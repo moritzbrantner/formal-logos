@@ -8,8 +8,19 @@ import subprocess
 import sys
 
 
+def authorship(record):
+    fields = {}
+    login = (record.get("user") or {}).get("login")
+    if login:
+        fields["author"] = {"login": login}
+    if record.get("author_association"):
+        fields["authorAssociation"] = record["author_association"]
+    return fields
+
+
 def item(issue):
     row = {
+        **authorship(issue),
         "number": issue["number"],
         "title": issue["title"],
         "url": issue["html_url"],
@@ -34,6 +45,7 @@ def snapshot(issue, pages, captured_at):
         for event in page:
             if event["event"] == "commented":
                 target["comments"].append({
+                    **authorship(event),
                     "url": event["html_url"],
                     "body": event.get("body") or "",
                     "createdAt": event["created_at"],
