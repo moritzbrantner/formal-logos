@@ -1855,12 +1855,7 @@ alternative that does not need that premise.
 
 ## Connected source and uniqueness packages (#1729, 2026-11-17)
 
-The [connected actual-source reconstruction](de-ente-esse-source-1628.md#connected-actual-source-and-uniqueness-reconstruction-1729-2026-11-17)
-consumes this note at its stated scope, compares the complete alternative
-packages, and retains the same witness through the actual-root, necessity and
-God-consumer interfaces. It adds no foundation or individuation theorem and
-does not identify the different relation/nature/determination dictionaries.
-The existing warrant assessment and its reopening conditions remain here.
+The source assembly compares the uniqueness packages and states which additional identifications each requires of the selected root. [Connected actual source and uniqueness reconstruction](de-ente-esse-source-1628.md#connected-actual-source-and-uniqueness-reconstruction-1729-2026-11-17)
 
 ## Research attempts citing this note
 

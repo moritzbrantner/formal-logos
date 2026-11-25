@@ -101,10 +101,4 @@ verification with `scripts/verify-result.sh THESEUS-IDENTITY-BOUNDARY` after bui
 
 ## Material coincidence comparison
 
-[Material constitution scope](material-constitution-scope.md) compares the same
-two-time material history as enduring bearers and as overlapping nonempty
-temporal occurrence wholes. It preserves existence and constituent observations
-at every represented time, while distinguishing slice coincidence from global
-extensionality and equality of all mereological parts. The new certificate
-composes the existing results; physical and persistence applicability remain
-OPEN, and no root premise is discharged.
+The material-constitution certificate uses `TheseusIdentity.chain_identity` to carry a bearer predicate through an identity-preserving chain. [Material coincidence and the scope of extensionality](material-constitution-scope.md)

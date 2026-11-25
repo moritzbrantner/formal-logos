@@ -51,6 +51,7 @@ public import TruthCore.Logic.KnowabilityCompatibility
 public import TruthCore.Logic.KnowledgeAdmissibility
 public import TruthCore.Logic.KnowledgeRetorsion
 public import TruthCore.Logic.LimitAdmission
+public import TruthCore.Logic.LogicalPsychologism
 public import TruthCore.Logic.MaximumOrder
 public import TruthCore.Logic.MeaningDefinitionFork
 public import TruthCore.Logic.MetaethicsTruthAptRivalBoundary

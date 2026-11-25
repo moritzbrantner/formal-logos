@@ -102,21 +102,7 @@ The proof body of `TruthCore.Results.Science.InductionSelection.noUnique` is exa
 `(hn e).symm.trans (congrArg select hf)`. In `TruthCore.Mereology.Fission1397.no_choice`, the equality is oriented the other way:
 `(congrArg choose fixed).symm.trans (equiv d)`; its remaining proof is the case split over the admissible two alternatives. Neither proof needs invertibility. In `TruthCore.Results.Explanation.PathRelocation.symmetry_transfer`, uniqueness is applied to the transformed satisfying path. This is the set-valued form of the fixed-point constraint. The spatial proof `no_covariant_selector` first rewrites by `relative_shift`, then uses `fixed_iff`; it needs a body to exclude an empty absolute configuration.
 
-Proposed two local lemmas if equivalent existing ones are not available:
-
-```lean
-theorem fixed_output {E H : Sort _} (s : E → H)
-    (t : E → E) (u : H → H) (e : E)
-    (fixed : t e = e) (commutes : s (t e) = u (s e)) :
-    u (s e) = s e :=
-  commutes.symm.trans (congrArg s fixed)
-
-theorem unique_closed_fixed {H : Sort _} (P : H → Prop)
-    (u : H → H) (h : H) (member : P h)
-    (unique : ∀ x, P x → x = h) (closed : ∀ x, P x → P (u x)) :
-    u h = h :=
-  unique (u h) (closed h member)
-```
+The shared module now proves both lemmas. In `fixed_output`, taking `e′ = t e` recovers the fixed-input case. `unique_closed_fixed` applies uniqueness to the transported member. [Checked fixed-point lemmas](../../TruthCore/Logic/FixedPointSelection.lean)
 
 | Existing proof to retain | Result ID and migration action |
 | --- | --- |
@@ -136,18 +122,7 @@ The audit initially treated several families as independent, but they already ha
 - `HistorySelection.characterization` constructs the predicate `fun w => SameEvidence truth basis w a` and proves constancy by reflexivity, symmetry and transitivity. Its `no_selection` is a direct use of that characterization. Result `4b8f07db-2a50-5826-ac09-083f0e088d64`.
 - `ForeknowledgeDiscrimination.core` uses selected truth agreement and factivity, not unrestricted knowledge. Result `067b5373-8169-42a6-8f80-cf7874761eb9`. Retain reflexivity when using agreement of epistemic rows; an empty accessibility row is complete in the thin semantics without providing factivity.
 
-The genuinely additional reuse target is the passage between equivalence-invariant predicates and exact determination for different projections, not another proof of the already-shared historical criterion. Prefer a proposition-valued construction (avoids demanding function extensionality or propositional extensionality to encode an entire truth vector as an equality). One useful constructive adapter signature is:
-
-```lean
-theorem matched_data_no_exact_classifier {S O : Sort _}
-    (observe : S → O) (P : S → Prop) (s t : S)
-    (same : observe s = observe t) (hs : P s) (ht : ¬ P t) :
-    ¬ ∃ C : O → Prop, ∀ x, C (observe x) ↔ P x := by
-  rintro ⟨C, exactC⟩
-  exact ht ((exactC t).mp (same ▸ (exactC s).mpr hs))
-```
-
-This is a consequence of the already-proved CorrectionCriterion characterization; use that theorem if its carrier and axiom boundaries fit, rather than registering this as a new philosophical result. The pure algebraic statement works with supplied equality and truth at the two states. The fact that a target is not determined by an observation alone does not prove the target unknowable given further evidence.
+An exact classifier assigns the same verdict to two states with equal observations. If the predicate holds at one and fails at the other, those observations cannot classify it exactly. This is the forward implication of `factor_iff`, used directly in the registered criterion result. The conclusion concerns the specified observations. Further evidence can still distinguish the states. [Factorization theorem](../../TruthCore/Logic/InformationInvariance.lean) · [Registered application](../../TruthCore/Results/Logic/CorrectionCriterion/Solution.lean)
 
 ### 7.3 Stable dynamics: relational matching versus coarse-graining
 

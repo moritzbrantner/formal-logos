@@ -319,64 +319,11 @@ CLI fallback worked with explicit warm LEAN_PATH. Recommendation: retain the
 revision guard and refresh the coordinator's handoff before further service edits.
 Conventions sourceRevision: 625cb04ca568aebc8d45c90033e107a05e9bd2a0.
 
-```lean
-import TruthCore.Modal.ReasonResponseHistory
-
--- Exploratory structural test, not a registered ownership/freedom result.
-namespace Ownership945Probe
-open TruthCore.Modal.ReasonResponseHistory
--- old selector, revision recommendation, access gate, revision route override
--- are separate ports. Override suppresses revision and retains old; it supplies
--- no independent replacement value.
-def revise (old recommendation gate override : Bool) : Bool :=
-  if override then old else if gate then recommendation else old
-
-def Participates (gate override : Bool) : Prop :=
-  ∀ old, revise old false gate override ≠ revise old true gate override
-
-example : ∀ gate override, Participates gate override ↔
-    gate = true ∧ override = false := by
-  intro gate override
-  cases gate <;> cases override <;> simp [Participates, revise]
-
--- A bypassed acquisition can be screened off by later effective revision.
-example : ∀ (acquire : Acquisition) u m recommendation,
-    revise (acquire u m) recommendation true false = recommendation := by
-  intro acquire u m recommendation
-  rfl
-
--- Losing access or suppressing revision defeats that screening.
-example : revise false true false false = false ∧
-    revise false true true true = false := by decide
-
--- Repeating the acquired selector as one's recommendation can LOOK like
--- endorsement, while effective responsiveness to a revised assessment fails.
-def echo (old _assessment : Bool) : Bool := old
-example : ∀ old, revise old (echo old false) true false = old ∧
-    revise old (echo old true) true false = old := by decide
-
--- Assessment uptake is not truth or understanding: reversing the assessment
--- has the same influence signature as faithfully transmitting it.
-def uptake (old assessment gate override invert : Bool) : Bool :=
-  revise old (if invert then !assessment else assessment) gate override
-example : ∀ invert old,
-    uptake old false true false invert ≠ uptake old true true false invert := by decide
-
--- Merely adding chance cannot repair a closed review gate.
-example : ∀ (old assessment noise : Bool),
-    revise old assessment false false = old ∧
-    (if noise then revise old assessment false false else !old) =
-      (if noise then old else !old) := by decide
-end Ownership945Probe
-
-```
-
 ## Certification continuation and installed standards (2026-11-11 draft)
 
 The preceding deferral of registration pending semantic review is superseded:
 conditional structural tests can be certified without endorsing their agency
-interpretation. `TruthCore.Modal.RevisionUptake` and
-`specs/revision-uptake-945.toml` register Screening and Controls. Vocabulary and
+interpretation. The [routing definitions](../../TruthCore/Modal/RevisionUptake.lean) give the three screening claims and three controls. Their [Lean proofs](../../TruthCore/Results/Modal/RevisionUptake/Solution.lean) are registered in the [revision-uptake specification](../../specs/revision-uptake-945.toml). Vocabulary and
 matching Challenges were frozen at `23bf81dcb` before Solution work. The probe's
 `Participates` tests recommendation variation at **every** old selector; it is
 not the earlier existential action-changing acquisition predicate. Screening
