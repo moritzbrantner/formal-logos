@@ -3498,9 +3498,24 @@ read scope without asserting new pinned attribution. The author sweep
 retains the same source, causal scope, simplicity standard and stopping
 permission; distinguishes forms, contents, capacities, actual uptake and
 governance; and checks every cited formal bundle against its actual type.
-Independent semantic review of this complete continuation, both companion
-additions, the three current attempt assessments and the actual PR body is
-pending. Earlier accepted checkpoints retain their existing scope.
+Independent reviewer `/root/forms_unity_review` accepted this complete
+continuation, both companion additions, all three current assessments and
+the actual PR body with qualifications at local
+`dc0bead65187da9709dfda8a84b4df90f30fb0e4`, tree
+`c58596ed79d006dca8b1f3ee4de06b4a3e9c41fd`. The initial full review required
+one repair: nonexhaustion alone does not establish admissible alternative
+orders. The targeted recheck accepted the §51 alternative-order and
+rational-policy repair; no substantiated P1/P2 finding remains unresolved.
+The [published reviewed snapshot](https://github.com/moritzbrantner/formal-logos/commit/0a5781d9c80e6db4ff612bb2e6ffc48b3826b22b)
+has exactly that same Git tree. Reviewed PR-body SHA-256:
+`5c2e9515133cd3e68ad2ab141e0ed1c7feec758197c478f59481365e3c8240f8`.
+Later changes reconcile review/publication bookkeeping only. Acceptance
+establishes neither ultimate constitution, the metaphysical possibility
+of the complete impersonal candidate, actual intellectual governance,
+admissible alternative orders nor global explanatory equivalence. The
+current prose/record checks pass; unchanged formal evidence is reused,
+and PR #1962 records delivered-head CI separately. Earlier accepted
+checkpoints retain their existing scope.
 
 ## Research attempts citing this note
 
