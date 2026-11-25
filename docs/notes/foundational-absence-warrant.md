@@ -1351,10 +1351,11 @@ as evidence that all laws need a local bearer, or that laws can govern
 with no concrete bearer at all, would extrapolate from the very same
 observations.
 
-The powers account faces the same test of scope. When a derivative's
-existence requires a giver, the giver's capacity never to give can
-explain the derivative's never existing without an episode of
-destruction. At n the actual grant removes the receiver and the
+The powers account faces the same test of scope. Suppose this derivative could exist only through this giver's giving.
+If that giver can refrain throughout the history, its withholding explains
+how this derivative could be absent throughout without being destroyed.
+If another supplier could give the very same derivative existence, the
+first giver's abstention leaves that possibility open. At n the actual grant removes the receiver and the
 external supplier. Withholding by n can vary what **another** receives.
 It cannot explain a history lacking n merely by making all those effects
 absent. A proponent may hold that every real possibility of existential
@@ -1364,16 +1365,18 @@ dependent creature's giver have no established counterparts for n.
 The failure to identify a maker cannot establish the completeness of
 those channels. Conversely, the absence of a subject undergoing change
 defeats a demand for destruction, while leaving a positive-ground
-requirement open. In #1897 a holder of a power for a collective state
-does not thereby have power over each member's esse. Even a necessary
-holder y would need identification with n. [Pruss power-premise controls](pruss-power-premises.md)
+requirement open. Two controls in #1897 separate the transfers. In `9bba1325`, power
+for the joint absence of two actual contingents does not supply power for
+each one's absence. In `8ad1804e`, the thin collective-power reading holds
+with one actual contingent while distributive power over esse fails. Even
+a necessary holder y would need identification with n. [Pruss power-premise controls](pruss-power-premises.md)
 
 **Overall provisional assessment.** I retain moderate confidence in
 suspension about P at the qualitatively unrestricted n. Both sides gain
 a reason to reject specific inferences. The nonpower account correctly
 allows a law to adjudicate whole-history omissions without an annihilator.
 The powers account correctly asks what makes an allowed output realizable
-and can answer for a derivative whose giver can refrain. The archive
+and can answer for a derivative whose indispensable giver can refrain. The archive
 distinguishes good and bad applications of *both* tests while giving
 neither an advantage on this bearer. A direct primitive permission for
 n's absence and a direct commitment to power coverage remain available
