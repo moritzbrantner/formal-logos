@@ -55,6 +55,7 @@ public import TruthCore.Results.Causality.ChainInstantiation.Solution
 public import TruthCore.Results.Causality.ClassicalGodAssembly.Solution
 public import TruthCore.Results.Causality.ClassicalGodFromPositiveRoot.Solution
 public import TruthCore.Results.Causality.ClassicalGodRevelationBoundary.Solution
+public import TruthCore.Results.Causality.ClosedEsseSourceGod.Solution
 public import TruthCore.Results.Causality.ClosedGroundingRoots.Solution
 public import TruthCore.Results.Causality.CogitoCapacityInterface.Solution
 public import TruthCore.Results.Causality.CogitoNecessaryConcrete.Solution
