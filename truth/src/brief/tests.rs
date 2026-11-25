@@ -1613,7 +1613,12 @@ fn issue_brief_finds_review_and_delivery_while_issue_is_open() {
         &pr_only.to_string(),
     );
     let snapshot = json!({"items":[
-        {"number":12,"url":"https://github.com/o/r/issues/12","state":"OPEN","body":format!("Compare `{GOAL}`. See #40."),"crossReferences":["https://github.com/o/r/pull/41"]},
+        {"number":12,"url":"https://github.com/o/r/issues/12","state":"OPEN","body":format!("Compare `{GOAL}`. See #40."),"crossReferences":["https://github.com/o/r/pull/41"],
+         "comments":[{"body":"Prior discussion without metadata."},
+                     {"body":format!("## Follow-up: which conception of goodness actually generates the maximization objection?\n\nOwner direction: compare competing senses and accounts of goodness. {} END_OF_LONG_COMMENT", "detail ".repeat(50)),
+                      "url":"https://github.com/o/r/issues/12#issuecomment-2","createdAt":"2026-11-24T20:35:39Z"},
+                     {"body":"  "}]},
+        {"number":13,"url":"https://github.com/o/r/issues/13","comments":[{"body":"Owner direction: unrelated work."}]},
         {"number":40,"url":"https://github.com/o/r/pull/40","state":"MERGED"},
         {"number":41,"url":"https://github.com/o/r/pull/41","state":"MERGED","headRefOid":"delivered456"},
         {"number":42,"url":"https://github.com/o/r/pull/42","comments":[{"body":"The subsequent reading of #10/#12."}]},
@@ -1671,9 +1676,19 @@ fn issue_brief_finds_review_and_delivery_while_issue_is_open() {
         "Track the same bearer",
         "Earlier transfer reading repaired",
         "PR #41",
+        "Issue comment 2  2026-11-24T20:35:39Z  https://github.com/o/r/issues/12#issuecomment-2",
+        "which conception of goodness actually generates the maximization objection? Owner direction: compare competing senses",
+        "More issue comments in --json.",
     ] {
         assert!(text.contains(term), "{term}");
     }
+    for absent in ["END_OF_LONG_COMMENT", "Prior discussion", "unrelated work"] {
+        assert!(!text.contains(absent), "{absent}");
+    }
+    let expanded = super::issue::render(&brief, 2);
+    assert!(expanded.contains("Issue comment 1\n    Prior discussion without metadata."));
+    assert!(!expanded.contains("More issue comments"));
+    assert_eq!(brief["issue"]["comments"], snapshot["items"][0]["comments"]);
     let split =
         json!({"issues":[snapshot["items"][0]],"pull_requests":[{"number":40,"state":"OPEN"}]});
     std::fs::write(&path, split.to_string()).unwrap();

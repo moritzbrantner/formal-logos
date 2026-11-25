@@ -1,5 +1,5 @@
 //! Direct checkout and host references for an issue-led research handoff.
-use super::retrieval::{Issues, Revision, is_pull_request, issue_header};
+use super::retrieval::{Issues, Revision, excerpt, is_pull_request, issue_header};
 use crate::{Corpus, KINDS, notes};
 use fancy_regex::Regex;
 use serde_json::{Map, Value, json};
@@ -308,6 +308,38 @@ pub fn report(
     )
 }
 
+/// Show the tail of the assigned issue's captured discussion. Keep the
+/// snapshot ordinal as a locator even when a legacy comment lacks a URL.
+fn render_issue_comments(out: &mut String, issue: &Value, limit: usize) {
+    let Some(comments) = issue["comments"].as_array() else {
+        return;
+    };
+    let mut discussion = comments
+        .iter()
+        .enumerate()
+        .rev()
+        .filter_map(|(i, comment)| {
+            let body = comment["body"].as_str()?.trim();
+            (!body.is_empty()).then_some((i + 1, comment, body))
+        });
+    for (ordinal, comment, body) in discussion.by_ref().take(limit) {
+        write!(out, "Issue comment {ordinal}").unwrap();
+        if let Some(login) = comment["author"]["login"].as_str() {
+            write!(out, "  @{login}").unwrap();
+        }
+        if let Some(date) = comment["createdAt"].as_str() {
+            write!(out, "  {date}").unwrap();
+        }
+        if let Some(url) = comment["url"].as_str() {
+            write!(out, "  {url}").unwrap();
+        }
+        writeln!(out, "\n    {}", excerpt(body, 220)).unwrap();
+    }
+    if discussion.next().is_some() {
+        out.push_str("  More issue comments in --json.\n");
+    }
+}
+
 pub fn render(report: &Value, limit: usize) -> String {
     let issue = &report["issue"];
     let mut out = format!(
@@ -343,6 +375,7 @@ pub fn render(report: &Value, limit: usize) -> String {
             out.push_str("  Snapshot predates this checkout.\n");
         }
     }
+    render_issue_comments(&mut out, issue, limit);
     for pr in report["pull_requests"].as_array().unwrap() {
         writeln!(
             out,
