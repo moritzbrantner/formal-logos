@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { JudgmentReader } from "@/components/judgment-reader";
 import { treeHref } from "@/lib/argument-tree";
-import { casePremiseHref, type currentCase } from "@/lib/current-case";
+import { caseArgumentHref, casePremiseHref, GOD_EXISTS, type currentCase } from "@/lib/current-case";
 import { getBuildInfo, sourceUrl } from "@/lib/site-state";
 
 type Case = ReturnType<typeof currentCase>;
@@ -27,6 +27,11 @@ function Bundles({ bundles, names }: { bundles: Case["bundles"]; names: Map<stri
       <Link className="link-quiet" href={casePremiseHref(id)}>{names.get(id) ?? id}</Link>
     </li>)}</ul>
     {!bundle.premise_statement_ids.length ? <p>No premises recorded.</p> : null}
+    {bundle.status === "verified" && bundle.conclusion_statement_id === GOD_EXISTS ? (
+      <p className="mt-3">
+        <Link className="link-quiet font-medium" href={caseArgumentHref(bundle.id)}>Inspect argument and compare premises</Link>
+      </p>
+    ) : null}
     <Link className="link-quiet text-sm" href={`${casePremiseHref(bundle.conclusion_statement_id)}#argument-${bundle.id}`}>Argument context and expanded support</Link>
   </li>)}</ul>;
 }

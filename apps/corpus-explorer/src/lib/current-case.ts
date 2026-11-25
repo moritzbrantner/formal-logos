@@ -174,3 +174,7 @@ export function currentCase({ corpus, report, dossiers, assessments, revision }:
 export function casePremiseHref(statementId: string) {
   return `/case/god-exists/premises/${encodeURIComponent(statementId)}`;
 }
+
+export function caseArgumentHref(argumentId: string) {
+  return `/case/god-exists/arguments/${encodeURIComponent(argumentId)}`;
+}
