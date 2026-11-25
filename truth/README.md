@@ -71,8 +71,8 @@ are errors rather than silently omitted records.
 
 `truth synthesis` opens the classical-theism God-existence statement. Give a
 statement UUID, legacy ID, exact label or Lean declaration to read another
-proposition, or search
-recorded judgments in your own words. Both forms run offline and accept
+proposition, or search current judgments and earlier investigations in your
+own words. Both forms run offline and accept
 `--root PATH`.
 
 ```sh
@@ -95,8 +95,10 @@ a scope naming just the target, then an attempt citing a result for the
 target, then a smaller scope. A different review state gets the second slot
 when present. These rules select examples for reading. The scope written by
 the researcher governs the judgment, even when a record names just one
-statement. A question orders matching records by their wording and offers
-statement commands for following the argument.
+statement. A question retrieves findings from the attempts and offers statement
+commands for following the argument. Results labeled as earlier investigations
+provide historical evidence. A current assessment carries its own scope and
+review state.
 
 The complete statement JSON includes these fields.
 
@@ -882,7 +884,9 @@ status, judgment or record.
   existing brief section extraction (the reference graph is built only when
   revision declarations require impact analysis), with no reconciliation,
   endorsement or strength ranking. IDs/labels/aliases use the normal resolver.
-- `brief --question TEXT`: the notes the `truth index` FTS5 projection ranks
+- `brief --question TEXT` opens with matching judgments and investigations from
+  the same search used by `truth synthesis --question`. The broader brief also
+  includes the notes the `truth index` FTS5 projection ranks
   for any query word (by stem prefix) or identifier, each scored paragraph by
   paragraph and heading by heading (coverage = query items found in one
   unit), a note whose title covers half the question ranked first, with its best

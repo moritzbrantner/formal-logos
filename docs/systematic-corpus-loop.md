@@ -31,6 +31,8 @@ Keep the readable case, judgments and rivals in the existing issue or linked cas
 
 ### When several arguments stop at the same premise
 
+Use `truth synthesis PREMISE_ID` to read the judgments about that premise and see which arguments use it. If you have the question but lack its statement ID, `truth synthesis --question "…"` retrieves prior findings and their associated statements.
+
 When distinct arguments have been decomposed and still depend on the same open premise, make its **negation** the next research question. Name the arguments and the exact premise each uses. Retrieve earlier work on both sides, including the strongest surviving objection and its recorded reopening condition. If the routes use different senses or witnesses, investigate the bridge between them first.
 
 Write the denial with its original scope. For example, a single exception would defeat the claim that the giver of a recipient’s existence contributes productively to each of its operations. A rival can grant the gift of existence and claim that a secondary cause supplies one operation without that further contribution. The issue is whether the giver also contributes to that very operation. Evidence that the secondary cause is active fits both accounts.
