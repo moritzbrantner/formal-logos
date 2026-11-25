@@ -801,3 +801,129 @@ as declared transcriptions in these tables (including assembly in checkpoint
 4); use the same eight input IDs. The recorded count comparison and seed
 scenarios do not assert formal closure outside the selected graph. The
 actual-to-possible population candidate is **not** included as a new edge.
+
+
+### Cross-family use: the necessary-or-contingent fork (additional candidate)
+
+The population question need not wait for an independent proof of actual
+contingency. Reuse the same rigid `Profile` and standpoint for:
+
+- `56f68b40-9737-59a0-8cac-5610980a1547`,
+  `InhabitedConcreteAt m.ontic m.concrete w`;
+- `b19ffd92-01bd-5c0b-9643-e7407137ea5e`,
+  `BruteFoundationBoundary.NecessaryConcreteAt m w`;
+- `c94b5446-e7e7-5b36-9bed-288959725526`,
+  `ContingentBeingNode.SomeActualContingentAt m w`.
+
+The existing historical [argument-first pilot](argument-first-pilots-565.md)
+already identified the stronger grounding fork. Do not recreate that
+research. The existing zero-graph-premise theorem
+[BRUTE-ROOT-DISJUNCTION](../../corpus/results/BRUTE-ROOT-DISJUNCTION.json)
+(result `6df8f68f-9d74-56e5-888d-ea8f9e437fbd`, argument
+`8241104a-77a0-5ebb-b112-f6857bdb659c`, conclusion
+`df62ec24-4a65-5030-8354-4aa08414ab74`) states:
+population plus absence of a necessary concretum entails a contingent
+concrete root without an actual concrete predecessor or non-well-founded
+grounding. Its Solution uses the classical helper in
+[BruteFoundationBoundary](../../TruthCore/Causality/BruteFoundationBoundary.lean).
+The permitted axiom policy includes Classical.choice, and the
+theorem's conditional hypotheses are internal to its conclusion.
+Non-well-foundedness here concerns the whole candidate carrier, so
+one may not infer an infinite actual temporal history, nor even an
+actual ungrounded chain without restricting the relation to actual
+concrete endpoints. The other horn is a root relative to the selected
+grounding relation, not an absence of all possible explanation.
+Neither horn is ruled out by the theorem. The existing thinker-local
+fork (`03a4c1f5`, result `fe34d347`, conclusion `7e9ca71a`) uses Acc
+below a selected concrete thinker and explicit excluded middle.
+
+A simpler **modal-only** fork of the same actual population can connect
+that basis directly to the reconciled collapse results in this audit,
+without grounding or well-foundedness premises. The candidate below
+uses the existing predicates and the already recorded EM premise, not
+implicit classical axioms. For one actual concrete x, decide whether
+an accessible world lacks x. If yes, keep that same x as the contingency
+witness; if no, use EM on the individual presence at each accessible
+world to build its positive `NecessaryAt`. The necessary and contingent
+existential conclusions are not mutually exclusive across different
+individuals. The disjunction is conditional on the selected actual
+population and the explicit logic; it is not a theorem establishing
+a necessary individual unconditionally.
+
+Uncompiled example for verification (no registered edge):
+
+```lean
+import TruthCore.Causality.ContingentBeingNode
+import TruthCore.Logic.ExcludedMiddle
+
+open TruthCore.Causality.BruteFoundationBoundary
+open TruthCore.Causality.ContingentBeingNode
+open TruthCore.Logic.CogitoConcrete
+open TruthCore.Logic (ExcludedMiddle)
+
+example {W B : Type} (m : Profile W B) (w : W)
+    (hPop : InhabitedConcreteAt m.ontic m.concrete w)
+    (hEM : ExcludedMiddle) :
+    NecessaryConcreteAt m w ∨ SomeActualContingentAt m w := by
+  obtain ⟨x, hc, he⟩ := hPop
+  rcases hEM (∃ v, m.ontic.frame.access w v ∧
+      ¬ m.ontic.ExistsAt v x) with habs | hno
+  · exact Or.inr ⟨x, hc, he, habs⟩
+  · refine Or.inl ⟨x, hc, he, ?_⟩
+    intro v hv
+    rcases hEM (m.ontic.ExistsAt v x) with hx | hx
+    · exact hx
+    · exact False.elim (hno ⟨v, hv, hx⟩)
+```
+
+**Conditional rival comparison.** If a view retains actual concrete
+population but denies any necessary concrete individual on the same
+rigid metaphysical profile, this fork supplies a concrete contingency
+witness. The already checked K/nonnecessitarian/strict-act exclusions
+then follow under that denial, while the separate classical
+BRUTE-ROOT-DISJUNCTION constrains its grounding account. If the view
+instead denies any actual concrete contingency, population supplies a
+necessary concrete individual. A theory can retain both necessary and
+contingent individuals; the first horn neither identifies that individual
+with the source nor proves underivedness or personality. A nonreflexive
+dead-end frame can make box-existence vacuous, so application to real
+modality still needs its intended accessibility and fixed numerical
+identity. This does not force a choice between theism and impersonal
+necessity, or rule out brute or circular grounding. It clarifies what
+can be investigated on either modal horn without requiring a disputed
+contingency thesis in advance.
+
+**Executed finite scope test (not Lean):** all 1,024 profiles with two
+candidate individuals and two world labels, varying two concreteness
+bits, four presence bits and four accessibility bits, satisfied
+population iff necessary-population or contingent-population. Each
+exclusive horn and coexistence were witnessed. The enumeration also
+confirmed the conditional no-necessary-to-contingent transfer.
+
+```python
+from itertools import product
+cases = set()
+for bits in product((False, True), repeat=10):
+    c = list(bits[:2])
+    e = [list(bits[2:4]), list(bits[4:6])]
+    a = [list(bits[6:8]), list(bits[8:10])]
+    pop = any(c[x] and e[0][x] for x in range(2))
+    nec = any(c[x] and e[0][x] and
+              all(not a[0][v] or e[v][x] for v in range(2))
+              for x in range(2))
+    cont = any(c[x] and e[0][x] and
+               any(a[0][v] and not e[v][x] for v in range(2))
+               for x in range(2))
+    assert pop == (nec or cont)
+    assert not (pop and not nec) or cont
+    if pop:
+        cases.add((nec, cont))
+assert cases == {(True, False), (False, True), (True, True)}
+```
+
+This is a selected follow-up outside the 83-rule sample. The full
+corpus novelty/dossier check and independent semantic challenge are
+still required. If already supplied by another registered consequence,
+reuse that record; otherwise consider registering the direct
+conditional implications only if they have a substantive consumer.
+Do not add a new registry or promote either horn to the floor.
