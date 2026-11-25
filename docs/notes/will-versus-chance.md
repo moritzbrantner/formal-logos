@@ -1682,6 +1682,187 @@ Lean theorem, definition, sourced claim or premise discharge. The
 [published reviewed snapshot](https://github.com/moritzbrantner/formal-logos/commit/ebe7aca0e20702feafd79c9273a8e1d43c41c130)
 has the identical Git tree as the named local review revision.
 
+## One simple productive nature and many forms (2026-11-25)
+
+This continues the intrinsic-constitution branch above on baseline
+`1d6b7551eb166b263a40889659a9cb38fab1382b`. Grant the strongest rival:
+one necessary, underived concrete n, strict simplicity, intrinsic
+invariance, nonnecessitating productive power, objective goods and
+genuine rational recipients. The question is whether these commitments
+can belong together. Distinguish simultaneous diversity, alternative
+total orders and the actual exercise producing one order.
+
+### A. What would it mean for n to have forms?
+
+| Sense of form | Proposed location and commitment |
+| --- | --- |
+| A recipient's constituting form | In the effect; n produces its actuality without thereby being a finite instance of that form. |
+| n's own unreceived essence | What n is; calling n a form need not posit a subject receiving it. |
+| Virtual or eminent possession | The effect's perfection pre-exists causally in n's productive actuality, without the same finite mode of being. |
+| A form as understood object | Content apprehended by n; this cognitive commitment is not supplied merely by productive efficacy. |
+
+[ST I q.3 a.2 co./ad 3, a.4 co. and a.6–7 co.](https://www.newadvent.org/summa/1003.htm)
+prevent two shortcuts: an unreceived form is not a matter–form composite,
+but immateriality alone does not exclude essence–esse or subject–accident
+composition. [Q.4 a.2 co./ad 1–3](https://www.newadvent.org/summa/1004.htm#article2)
+distinguishes formal from higher causal possession. Neither distinction
+establishes the impersonal candidate's reality or n's apprehension.
+The [necessary-simple-plurality controls](necessary-simple-plurality.md)
+likewise do not provide this productive constitution.
+
+The sharper control is
+[De potentia q.7 a.1 ad 1, 7–8](https://www.corpusthomisticum.org/qdp7.html)
+([English and Latin](https://isidore.co/aquinas/QDdePotentia7.htm),
+Corpus Thomisticum `[60086]`, `[60092]`–`[60093]`). Ad 1 denies that one
+simple power must have only one effect. Its separate constancy claim
+concerns an unchanged agent acting by natural necessity at different
+times, with material or accidental differences qualified. Ad 7 locates
+one operation in the producer and plurality in the products. Ad 8
+distinguishes forms united in an operative nature from many objects
+understood through one essence. Divine intellectual production uses
+its own nature's efficacy, unlike an artisan's external instruments.
+Aquinas positively unites causal possession and differentiated effects
+within an explicitly intellectual account. He does not endorse an
+impersonal ultimate source.
+
+Fire and sun illustrations check the counting inference; their
+context-dependent efficacy does not model a universal source. A seed's
+integrated production has the further limitation that the seed is
+composite. This candidate needs its own constitutive warrant.
+
+### B. Could the per se effect be one differentiated whole?
+
+[De potentia q.3 a.16 co., ad 11 and ad 13–15](https://www.corpusthomisticum.org/qdp3.html)
+([English and Latin](https://isidore.co/aquinas/QDdePotentia3.htm),
+`[59134]`, `[59145]`, `[59147]`–`[59149]`) examines the presumed necessary
+determination of cause to effect. Prior differentiated matter cannot
+explain the universal source's products. Infinite efficacy and goodness
+do not require one particular inferior order. Required constituents
+follow conditionally from the intended order: producing that whole
+requires its differentiated parts. Ad 11 attributes multiple effects
+of one simple action to wisdom and will; ad 13–15 distinguish many
+understood objects from distinct principles of understanding.
+
+The rival accepts whole-order scope while contesting the intellectual
+interpretation. Suppose its proper effect is an integrated order H.
+The proposal is that one generative character specifies coordinated,
+heterogeneous parts; unity of the whole does not mean homogeneity of
+each product.
+This is more than collecting unrelated outputs under one name only
+if the nature accounts for their constitutions and relations together.
+Merely renaming the universe H supplies no such account.
+
+1. **Many parts of H.** One per se effect can contain them; their
+   differentiation need not reproduce internal differentiation in n.
+2. **Alternative total orders.** The same nature's capacity for H and H′
+   is a further claim, not established by plurality within H.
+3. **Actual exercise.** Capacity for both does not supply actual giving.
+   Whether the productive exercise proceeds through apprehended content
+   remains the contested interpretation.
+
+Even a premise restricting a natural cause to one determinate kind of
+per se effect needs a separate argument against an internally diverse
+whole. A stronger premise fixing exactly one complete order challenges
+the granted nonnecessitating rival. Q.3 a.16 does not make that extension
+follow from counting forms. Its intellectual explanation discriminates
+against this rival only with an applicable natural-agency or
+original-ordering premise.
+
+### C. The strongest one-nature productive proposal
+
+The proposed constitution is one unreceived active actuality whose
+operative power is that actuality itself. There is no subject bearing
+acquired powers, no store of finite forms and no rule awaiting an
+executor. Its productive character is jointly formative: it gives
+recipients their different constitutions and coordination. All matter,
+conditions and secondary powers required by the proposed order belong
+within its explanatory scope. Conditions arising within H cannot
+silently become independent prior sources of H's differentiation.
+
+Make the commitment substantive. An eligible order includes a genuinely
+rational recipient, objects accessible to it, and relations enabling
+truth-responsive correction. Call this specification D; its success
+conditions are understood independently of whichever order results.
+Missing the cognitive capacity
+or relevant access would fail D. The rival attributes their coordinated
+realization to n's concrete efficacy; D is neither a separately productive
+law nor an observer's favorable output label. Descriptions such as power
+to produce the recipient and power to establish its access concern this
+one productive nature through different termini, not posited internal
+constituents. The personal proposal instead takes the apprehended D as
+the actual formative measure of giving.
+
+This is an articulated primitive causal proposal, not an exhibited
+strict-simple metaphysical model. Its application needs warrant for
+this efficacy in n, just as the intellectual account needs warrant for
+actual apprehension and formative use there. Either may receive direct,
+primitive or cumulative warrant; neither owes an independent proof for
+every commitment. Allow the rival's nonnecessitating actual exercise
+the same stopping permission as actual willing. It need not supply an
+exhaustive contrastive reason for every eligible order if the personal
+explanation does not either. That permission does not turn a possible
+exercise into actual production.
+
+### D. What would defeat this proposal?
+
+The following would discriminate if warranted of the same n and
+productive respect:
+
+- Form-specific efficacy consists of genuinely distinct intrinsic
+  principles, or requires a form that actualizes n as receiver.
+  This defeats strict simplicity under the criterion above, equally
+  for an intellectual act with those dependencies.
+- Differentiation depends on matter, a selector or a formative source
+  outside the proposed universal explanation. This defeats whole-order
+  scope, although a weaker mediated-causation claim may remain.
+- Every original coordination of the relevant good-directed effects
+  must be an apprehended specification actually governing production.
+  This defeats the noncognitive interpretation. It is the substantive
+  original-ordering bridge, not a consequence of calling D intelligible.
+
+[ST I q.19 a.4 co.](https://www.newadvent.org/summa/1019.htm#article4)
+and [q.47 a.1 co./ad 1](https://www.newadvent.org/summa/1047.htm#article1)
+motivate intellectual ordering and contrast natural determination with
+production through understood forms. Applying that contrast requires
+warrant that an underived nonnecessitating nature cannot possess the
+proposed coordinated efficacy. Treating all noncognitive direction as
+received, or every definite nature as fixing one total history, does
+not supply that warrant without the disputed premise. Conversely, the
+rival's description does not establish a real simple source.
+
+### E. Formal boundary and result
+
+The inspected `OnePower` definition `fdeb7757` says any two owned powers
+are equal: at-most-one, not a derivation of the constitution above.
+The open holder premise `9856239a` remains an application obligation.
+#1941 A (`b5b84276`) classifies giving as owned rational-power exercise
+under its full premises; B (`963e9689`) uses A's conclusion together with
+the withholding, contingency, invariant-holder, intellect and one-power
+bundle. Neither states that D actually governs giving. The existing
+`7d015c02`/`6ecb5bc7` governance gap remains.
+
+#555 still rules out contingency of the same effect if the same rigid
+act occurs throughout accessible alternatives and strictly entails that
+effect. Identity of n's
+intrinsic nature alone does not supply both premises. These distinctions
+concern constitution and total-order scope; another table of opaque
+power/form flags would not test them. No new Lean result or graph edge
+is proposed; `29818edd` and `66aecdd7` retain their full-bundle boundaries.
+
+**Assessment and evidence.** The new source control blocks treating
+causal possession of multiple forms as already a collection of internal
+forms. It leaves the exclusive intellectual interpretation open in
+this comparison. Reopen on a warranted constitutive dependency or an
+applicable original-ordering bridge, with equal permission for primitive
+explanation. Q.7 a.1 and q.3 a.16 were consulted through objections,
+response and replies; exact passages used are above. The linked ST
+articles were reread for the indicated scopes. These are primary
+research readings, not newly pinned source claims. Bounded locator
+searches and advisory novelty retrieval on the current reused index
+found substantial prior work, not a new certified implication. No
+closure status changes; independent review and publication remain
+with the coordinated continuation.
+
 ## Research attempts citing this note
 
 - [Does the PSR-collapse family exclude a necessitating impersonal source at the will step?](../../corpus/attempts/24ae0211-148c-4400-9843-90eac4f25a59.json)

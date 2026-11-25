@@ -985,6 +985,118 @@ intellectual-origin proof or premise discharge. No fresh Lean or model
 verification is claimed for this research-only extension; PR #1962 records
 current delivered-head CI separately.
 
+## One simple source and the differences between its effects (2026-11-25; provisional)
+
+Continue the [intrinsic-finality comparison](#intrinsic-finality-and-the-source-of-its-order-2026-11-25)
+at `1d6b7551eb166b263a40889659a9cb38fab1382b`. The question is whether
+nonreceived possession of differentiated forms must be intellectual. Reuse
+the [existing exemplar account](optimal-creation-choice.md#11-fixed-exemplars-variable-practical-role)
+and [source-specific manifestation comparison](causal-perfection-transfer.md#source-specific-manifestation-versus-intrinsic-understanding-2026-11-25-provisional).
+The additional test concerns the source of the differences, before the
+separate question of contingent selection or actual practical governance.
+
+### A common source must also account for the differentiating determinations
+
+In [ST I q.14 a.6 co.](https://www.newadvent.org/summa/1014.htm#article6),
+Aquinas rejects centre/radii and light/colours analogies as sufficient accounts
+of proper knowledge: their common principle does not supply what distinguishes
+the effects. His positive alternative invokes containment of their distinguishing
+perfections, not merely common being. This strengthens the explanatory requirement;
+it does not independently establish its intellectual fulfillment.
+
+Consider one lamp illuminating two differently coloured filters. The common
+illumination does not explain the colour difference without the filters'
+different constitutions. Now include a fixed manufacturing mechanism that
+makes those filters from supplied materials before illuminating them. The
+proposed explanation locates their difference in the mechanism's operations
+and material constitution. It need not attribute apprehension of colours to
+that mechanism. This is an explanatory comparison, not a reported experiment
+or a claim that its design history lacks intelligence. The enlarged system
+is composite and dependent, so it is no model of the ultimate simple source.
+
+Its restricted lesson is that source-specific productive constitution adds
+something a generic common input lacks. Under the universal-source proposal,
+the factors supplying the differences must themselves fall within the claimed
+explanatory coverage, directly or through dependent processes. An account that
+leaves all differentiation to independently given recipients has not met that
+scope. The strongest impersonal candidate instead proposes an intrinsic
+generative nature supplying those determinations. Whether that constitution
+can be strictly simple remains open; identifying its determinate causal work
+does not yet identify either cognition or distinct intrinsic constituents.
+
+### One actualizing principle and many understood objects
+
+The positive intellectual proposal distinguishes these roles:
+
+| What “form in the source” means | What must be explained |
+| --- | --- |
+| Constituent or actualizer of the source | Whether distinct real principles compose or perfect the bearer. |
+| Intelligible principle by which it understands | Q.14 aa.2/4 identify this with one divine essence and act. |
+| Object understood through that principle | Q.15 a.2 allows many understood objects and relations of imitability without many actualizing species. |
+| Productive ground of an effect's form | Why this source supplies that determination; causal sufficiency does not itself assert apprehension. |
+
+The distinction has positive cognitive warrant: understanding a stone does
+not require becoming a stone. Possession as an understood object differs
+from possession as one's natural constitution. This supports taking
+intentional possession seriously, rather than treating it as another name
+for productive efficacy. It does not demonstrate that ordinary cognition
+lacks all intrinsic articulation. The stricter proposal needs an account of
+how actual apprehension belongs to one subsistent act.
+
+Q.14 a.5 starts from perfect self-knowledge and knowledge of the reach of
+one's power. [Q.15 a.2 co./ad 1–4](https://www.newadvent.org/summa/1015.htm#article2)
+explains the many ideas through the essence as variously imitable; the
+relations are understood, not introduced by temporal creatures. The
+resulting proposal therefore includes differentiated content before any
+actual creature supplies a comparison. A power to produce never-realized
+effects could likewise have unmanifested determinations. Absence of an
+actual recipient alone does not distinguish the proposals.
+
+### The direction of the argument and the remaining test
+
+Q.15 a.1 explicitly starts from intellectual agency. A.2 starts from perfect
+self-understanding. Their account answers a composition objection to already
+posited cognition; reversing it into a proof of that cognition would assume
+the disputed premise. This is not a circularity charge against Aquinas's
+whole argument: q.14 a.1 supplies an earlier immateriality argument, whose
+application is examined in the [existing reception audit](../immaterial-intellect-reception.md#the-strongest-source-argument-and-its-exact-outstanding-inference).
+
+The two proposals thus share a demand for grounded differentiation, while
+claiming different modes of possession. Neither is adequately defended by
+saying only “many respects of one essence.” The intellectual account needs
+actual apprehension of the differentiated content through its one principle.
+The impersonal account needs determinate productive efficacy belonging to
+its nature. Counting their objects or effects establishes no real composition.
+Conversely, if either account requires distinct intrinsic actualizers, the
+same strict-simplicity objection applies. The [Plotinian comparison](../immaterial-intellect-reception.md#the-strongest-simple-cognition-reply-and-the-remaining-disagreement)
+and [later articulation analysis](causal-perfection-transfer.md#does-intrinsically-grounded-self-understanding-require-real-articulation-2026-11-25-provisional)
+retain their own scope and review qualifications; they certify neither new
+ultimate-source realization here.
+
+**Provisional assessment.** The q.14–15 account gives a substantive conditional
+explanation of intellectual plurality. The source-of-differences test rules
+out an inadequate common-input explanation, not the strongest generative
+rival. This comparison establishes no exclusive ultimate intellect conclusion.
+Reopen on a defended reason why the required productive constitution entails
+apprehension or real multiplicity, or a warranted simple noncognitive constitution.
+Q.15 a.3 and q.14 a.8 also separate knowing possibilities from practical
+production. Thus this finding supplies neither actual governance nor any
+missing clause of `WitnessLocalTeleology.Bundle` (`65c409cc`). The
+[complete local application](#a-concrete-application-requirement-and-the-exact-remaining-route)
+and `11628966` retain their full jointly required inputs; `29818edd` attributes
+intellect to GOD_4 without asserting its existence or this giving's practical
+measure. No new formal edge or premise discharge is proposed.
+
+**Evidence boundary.** Existing passage `AQUINAS-ST-I-Q14-A1`
+(`ffd6f30f-cf8a-58e4-aea8-2712c5772fbb`) was materialized. Complete articles
+1–6 and 8 were read from its verified full XML blob
+`313acd7bdc7586fb9c92f75dfc5441ab37f028ec`, revision
+`f9065dc8ce7bc790b8c972e49ee19d661f028be6`; the registered selector covers
+a.1 only. Complete q.15 aa.1–3 were consulted at the linked primary
+translation. These contextual readings add no pinned passage or stating
+claim. Earlier accepted reviews do not cover this proposed continuation;
+fresh semantic review remains pending.
+
 ## Research attempts citing this note
 
 - [Pointwise governor identity, common-root coverage and GOD_4 naming (#1793)](../../corpus/attempts/ac68f95a-00fd-445e-b7de-d083ee6511b6.json)

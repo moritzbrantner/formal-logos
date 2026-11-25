@@ -3251,6 +3251,257 @@ a premise. The previously accepted §§37–44 and their modal/simplicity
 controls retain their own review scope. Current scoped checks pass; draft
 PR #1962 records the delivered-head CI disposition separately.
 
+## Can one simple source contain many forms? (2026-11-25)
+
+The next question is whether the strengthened impersonal source is already
+inconsistent: how can it possess the productive specification of different
+forms while remaining strictly simple? This continuation starts from the
+published finality checkpoint `1d6b7551eb166b263a40889659a9cb38fab1382b`,
+with main `93e7ee882fba969b62df982486a1b8ec36217c57`. It retains the same n,
+actual order H and independently specified recipient good D of §37. Neither
+side receives a weaker simplicity condition or an additional uncaused field
+of differentiated materials. The question concerns an ultimate producer,
+not merely a local agent acting upon an already organized environment.
+
+### 49. The strongest composition objection and its proper target
+
+If n receives genuinely distinct forms which actualize different intrinsic
+capacities, the proposed unity requires an account of that real composition.
+Calling the collection one nature does not remove its constituents. That
+objection applies to a store of mental templates as much as to a store of
+noncognitive instructions. Immateriality alone does not settle it: the
+[existing limitation investigation](necessary-simple-plurality.md#act-limitation-follow-up-q7-does-not-reverse-reception)
+distinguishes a subsistent form from a source without an essence/esse
+composition. Conversely, a determinate nature does not by itself establish
+that its form or being is received.
+
+The strongest rival does not propose that n naturally instantiates each
+creaturely form. It proposes **virtual productive containment**: one actual
+nature has the efficacy to originate differentiated recipients. An actual
+knower supplies a different kind of possession, **intentional presence**:
+the forms are objects understood, without the knower becoming the natural
+things known. Those differences of possession must survive the comparison.
+Virtual containment does not already assert understanding; intentional
+presence does not already assert actual practical direction.
+
+The sharper primary-source control is *De potentia* q.7 a.1 ad 1, 7–8,
+examined in the [companion productive-unity analysis](will-versus-chance.md#one-simple-productive-nature-and-many-forms-2026-11-25).
+Ad 1 expressly allows many effects from one simple power; ad 7 distinguishes
+one operation on the operator's side from multiple effects; ad 8 separately
+explains forms as united in operative nature and as many objects understood
+through one essence. Aquinas joins natural efficacy with intellectual
+production. He is not endorsing an impersonal first source. Nevertheless,
+his explanation does not infer distinct intrinsic constituents just by
+counting the forms produced. That narrower inference cannot be used against
+the rival while this distinction is retained for the personal account.
+
+This is stronger than merely saying that no contradiction has yet been
+found. It identifies a positive relation under which plurality belongs to
+the effects rather than to the cause's constituents. Its applicability to
+a particular ultimate constitution still needs warrant. Neither the word
+"virtual" nor the word "intellectual" establishes strict simplicity by
+itself. The stronger Plotinian objection that cognition entails real
+articulation remains distinct from a receiver/actualizer argument; the
+[existing articulation investigation](causal-perfection-transfer.md#does-intrinsically-grounded-self-understanding-require-real-articulation-2026-11-25-provisional)
+retains that issue and its own stated review limits.
+
+### 50. Two positive constitutions at the same scope
+
+The impersonal candidate takes n's own underived actuality to be the
+productive ground of an integrated order. It supplies the recipients,
+their form-specific capacities, and the conditions under which those
+capacities develop and operate. Its unity is proposed as the unity of that
+productive nature, not as a collection of independently existing modules.
+The formal differences are realized in the dependent order. The source
+need not itself be bodily, alive in a creaturely way, or an instance of
+each produced species. In particular it produces the genuinely rational
+x of §37; replacing x by a successful nonknowing imitator would weaken the
+granted rival.
+
+Its good-directedness has content: the proposed constitution explains
+conditions of a recipient's own competence, including the distinction
+between understanding and merely getting an answer right. Those standards
+cannot be obtained merely by naming whatever happens the goal. But a
+primitive, determinate productive nature is an admissible explanatory
+commitment; it does not need an independent derivation solely because it
+is primitive. It must be assessed for its positive content, fit, coherence
+and any conflict with the other commitments. A description listing its
+effects does not yet vindicate that constitution, and a list in our
+description does not itself refute its unity.
+
+The personal candidate identifies n's actuality with an intrinsically
+operative understanding and inclination. Through comprehending its own
+productive perfection it understands the different ways that perfection
+can be communicated; the apprehended recipient good is the measure under
+which this production occurs. The forms are many as objects understood,
+not as received species which separately actualize the source. This gives
+a substantive account of how plurality of intelligible content can belong
+to one act without a sequence of internal decisions. The
+[q.14–15 analysis](teleology-first-mover.md#one-simple-source-and-the-differences-between-its-effects-2026-11-25-provisional)
+explains the source argument and its limits.
+
+That account has an intelligible basis in the distinction between knowing
+something and naturally being that thing. Its strict-simple extension
+requires the proposed identity of source, operative act and immediate
+intelligible principle; ordinary finite cognition does not demonstrate
+that extension. Q.15 explains ideas **given** intellectual agency and
+perfect self-knowledge. Reversing that explanation into a proof of its
+own cognition premise would beg the question. This does not make Aquinas's
+larger ordered argument circular.
+
+The contemplative candidate from §37 remains a separate check. Knowing
+the entire productive specification, even knowing the actual giving,
+does not by itself identify the known good as the formative measure.
+The personal proposal is stronger only where that operative relation is
+warranted. The same numerical actuality may have several true explanatory
+descriptions without each description being relevant to every exercise.
+
+### 51. One differentiated whole is not one homogeneous effect
+
+A natural power's having a definite character does not immediately entail
+that its effect is homogeneous. The strongest impersonal account treats
+the integrated order as the per se effect of one productive nature. It
+does not start with unrelated forms and ask a further agent to assemble
+them. This is a proposed whole-order constitution, not a demonstrated
+metaphysical model. A seed or a manufacturing process can illustrate
+differentiated production, but their composition and borrowed conditions
+prevent their promotion into models of the strictly simple ultimate n.
+
+*De potentia* q.3 a.16 supplies a precise comparison. Its body rejects
+preexisting matter as the explanation of ultimate differentiation, and
+argues that, given an intended form of order, the different beings needed
+for that order are required. A whole made entirely of its supposedly
+highest kind of part would fail to realize the proposed whole. The
+intellectual account thus explains differentiated means through a unified
+intended good; this is positive explanatory work. The source's argument
+does not make the particular total order necessary merely because that
+order has necessary constitutive conditions.
+
+The strengthened rival can accept the whole/part dependence while locating
+it in intrinsic, noncognitive generative finality. The comparison must
+therefore separate three questions:
+
+| Question | Intellectual answer | Strong impersonal answer and remaining obligation |
+| --- | --- | --- |
+| Why different parts within an order? | Their different capacities serve the apprehended form or good of that order. | Their different capacities express one integrated productive orientation; explain their dependence on that orientation, not merely their co-occurrence. |
+| Why are more than one total order admissible? | Nonexhaustion motivates the proposal; genuinely possible alternatives and the absence of a uniquely requiring rational policy remain further commitments. §§17 and 20 retain that distinction. | The invariant nature has genuinely nonnecessitating, selective efficacy; defend the alternative orders' possibility and admissibility without inserting an external selector or changing n. |
+| Why does this actual exercise issue in H? | An actual exercise under an apprehended good, with whatever further contrastive reason is warranted. | An actual manifestation of the intrinsic directed power, with whatever further contrastive explanation its constitution supplies. Neither a range of possibilities nor a description of D alone supplies that manifestation. |
+
+The second and third questions do not follow from the first. In particular,
+q.7 a.1 ad 1 distinguishes effect plurality from variation across times
+under natural necessity. The present rival is expressly granted
+nonnecessitating powers. Reintroducing natural necessitation as the meaning
+of "impersonal" would remove the tested rival instead of answering it.
+Nor may the personal candidate count a sufficient reason for producing
+under D as a determining contrast between every two complete histories
+meeting D. The same stopping rule from §§38–41 remains in force.
+
+### 52. What actually distinguishes the accounts
+
+Q.14 a.6 adds a useful constraint to both proposals: a common source does
+not explain the differences merely by explaining what the effects share.
+Its light/colours and centre/radii examples fail as explanations of proper
+knowledge when the differentiating conditions are supplied elsewhere.
+Aquinas's answer appeals to source containment of the distinguishing
+perfections, together with complete self-understanding. The companion
+analysis separates that content requirement from cognitive uptake.
+
+Applied to this investigation, the point is **source-specific
+specification**. If a supposed universal producer merely supplies generic
+existence to independently constituted forms, it has not explained the
+same whole order. If it originates the differentiating conditions as well,
+that particular objection is answered. Nothing in the difference-ground
+requirement alone identifies their origin as apprehension. Likewise,
+generic self-knowledge cannot replace an account of how the source knows
+the differences, or how its knowledge governs this production.
+
+The following findings would genuinely change the comparison:
+
+- **Against the impersonal constitution:** show that its actual productive
+  distinctions require received determinations or genuinely distinct
+  intrinsic constituents under the shared simplicity criterion; or that
+  its proposed nature lacks a differentiating ground which the personal
+  account actually supplies. A mere count of effects, parameters or
+  explanatory descriptions does not establish either failure.
+- **For rational authorship:** warrant the same source's actual
+  apprehension of the differentiating good and its formative use in this
+  exercise. A defended account that original specification must be
+  intellectual could supply this bridge; q.15's account of ideas, taken
+  alone, does not. Evidence of an author's content-sensitive exercise
+  would distinguish authorship even if a rival could reproduce the output.
+  If the entire relevant evidential profile is stipulated identical,
+  that profile supplies no such discrimination.
+- **Against the personal constitution:** show that its different contents
+  require the very intrinsic composition it excludes, or that its
+  apprehension is nonoperative. Lack of a temporal acquisition or separate
+  executive event is not such a defect. The independent articulation and
+  modal objections remain available under their exact assumptions.
+- **For limited equivalence:** where both warranted constitutions ground
+  the same formal differences, recipient standards and actual productive
+  dependence, they meet those specified explanatory requirements alike.
+  This is compatible with a further warranted intentional relation in
+  only one. Matching output alone establishes neither this constitutive
+  equivalence nor identity of the complete explanations.
+
+**Overall provisional judgment:** plural produced forms do not establish
+real composition in the strongest impersonal candidate. The new source
+control positively supports this distinction while leaving the candidate's
+ultimate realization open. The intellectual proposal supplies a richer
+account of forms as understood and used, but neither that richness nor
+the one-act formulation proves that it is actually instantiated. The
+shared requirement to originate the distinguishing conditions is now more
+precise. On this test the strengthened impersonal account survives; it is
+not thereby proved, and the two ultimate explanations are not declared
+globally equivalent.
+
+### 53. Existing conditional bridges and continuation boundary
+
+The inspected formal interfaces already preserve the distinctions this
+test needs. `IntentionalExemplarExtension.EffectExemplarCoverage` requires
+true effect-specific content; `CognitivelyTakesUpExemplar` separately
+requires the source's own grounded uptake. Its `ImmanentSelfPresence`
+premises begin with actual intellectual operation, identify the immediate
+species with the supplied own form under the stated simplicity premise,
+and connect that operation to its primary object. They neither derive
+intellect from causal plurality nor establish actual practical governance.
+The `WholePowerPerfection` interfaces likewise keep generic perfection
+possession, source cognitive capacity, actual exercise and grounding apart.
+Their finite controls retain their stated structural and interpretive
+limits; none is a complete realization of either ultimate candidate.
+
+The same-token collapse result from #555 still needs `SameActEverywhere`
+and `StrictEfficacy` for the same rigid effect. Necessary existence plus
+`BeingCarriesAct` is a sufficient route to the former, not its necessary
+characterization. No new modal theorem follows from the plurality of
+forms. The full `65c409cc`/`11628966` intellect connection in §48 and the
+A/B and will consumers in §44 remain unchanged. No new Lean declaration,
+source claim, support edge or premise discharge is introduced; another
+model with freely assigned unity/cognition predicates would not test the
+live constitutive issue.
+
+This slice has answered the proposed plurality objection and tested its
+stronger whole-order and determinate-content replacements. It returns to
+the same application bottleneck with additional source evidence, rather
+than a new independent argument for intellect. Further repetition of
+effect counting, one-power labels, or common-source analogies cannot
+advance it. Reopening requires a warranted constitutive asymmetry between
+productive and intentional containment, or evidence of the actual
+formative role of apprehension. The related self-understanding and
+articulation investigations remain available at their recorded scopes;
+their open application premises are not silently supplied here.
+
+The two fresh research slices are both within the owner's requested
+simplicity/forms question; they are not claimed as independent argument
+families. Existing primary passages and formal evidence are reused; the
+companion notes identify the new primary consultations and their exact
+read scope without asserting new pinned attribution. The author sweep
+retains the same source, causal scope, simplicity standard and stopping
+permission; distinguishes forms, contents, capacities, actual uptake and
+governance; and checks every cited formal bundle against its actual type.
+Independent semantic review of this complete continuation, both companion
+additions, the three current attempt assessments and the actual PR body is
+pending. Earlier accepted checkpoints retain their existing scope.
+
 ## Research attempts citing this note
 
 - [Issue 1737 same-source contingent creation, omission, and selection adequacy](../../corpus/attempts/divine-knowledge-choice-creation-1737.json)
