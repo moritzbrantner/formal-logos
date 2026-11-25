@@ -1,0 +1,14 @@
+{
+  "id": "8f394797-785c-4494-aa49-3d493596b213",
+  "label": "Credential bundle omission controls",
+  "paraphrase": "Five structural interpretations of the same five-member bundle: with a reason and its presentation, an empty credential relation omits credentialing; a flat credential with empty priority omits prior transfer; a natural-number successor credential chain satisfies strict transitive prior transfer but omits well-foundedness; an unpresented thin reason omits presentation; and an empty reason frame omits thin reason existence. The well-foundedness omission is infinite, the others finite. These are not claims of actual epistemic adequacy or possible metaphysics.",
+  "lean_declaration": "TruthCore.Logic.EpistemicCredentialing.CredentialControls",
+  "definition_ids": [
+    "d13c0241-320a-5d56-8927-341e46063e05",
+    "15160f9d-a231-4a9f-834f-cc78a7523dc3",
+    "70ab36ea-a14c-413b-8f51-adfad1f01b3c"
+  ],
+  "disambiguation_ids": [
+    "339c6bf8-37f1-5d5e-9f26-3258957443cc"
+  ]
+}

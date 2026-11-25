@@ -1,0 +1,9 @@
+{
+  "id": "70ab36ea-a14c-413b-8f51-adfad1f01b3c",
+  "label": "Belief-reason credential data and epistemic priority",
+  "term": "belief-reason credential and prior-reason dependence",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Logic.EpistemicCredentialing.CredentialData",
+  "definition": "Use the existing epistemic reason definition Frame without changing its thin Reason or attributed consideration fields. A reason instance is the pair of a consideration and a targeted belief content; Active identifies it by CountsAsReason at believe p. CredentialData independently records whether the subject believes a credential content, whether that belief meets the supplied warrant standard, whether the content certifies the particular subject/consideration/target instance, and the supplied relation pointing from a prior reason instance to a dependent one for that same subject. Credential is the conjunction of certification, actual belief and warrant; no factivity or prior reason is built in. UniversalCredential, PriorCredentialReason and CredentialWellFounded are separate conditions. Prior is intended as independent epistemic priority, not time, efficient causation, metaphysical grounding or a claim that every support relation is strict. The order's well-foundedness is a separate proposition, not assumed in the data.",
+  "note": "Analyst formulation, attribution deferred. An understood actual instance may support an existential without a separate credential; a stricter account can require a justified credential and further reason for it. Mere metabelief, prior standing credential, simultaneous support, and independently prior active reason are different. The structural controls assign warrant and reason status and do not establish the actual adequacy of these relations. See docs/notes/actual-inquiry-presuppositions.md."
+}

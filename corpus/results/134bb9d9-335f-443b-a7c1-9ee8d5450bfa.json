@@ -1,0 +1,11 @@
+{
+  "id": "134bb9d9-335f-443b-a7c1-9ee8d5450bfa",
+  "label": "Universal well-founded prior credentialing excludes thin belief reasons",
+  "argument_id": "8542b5e2-e680-452a-84ee-531f5027a168",
+  "challenge_module": "TruthCore.Results.Logic.EpistemicCredentialing.Challenge",
+  "solution_module": "TruthCore.Results.Logic.EpistemicCredentialing.Solution",
+  "theorem": "TruthCore.Results.Logic.EpistemicCredentialing.noReasonsFromCredentials",
+  "comparator_config": "results/134bb9d9-335f-443b-a7c1-9ee8d5450bfa/comparator.json",
+  "status": "solution-present",
+  "description": "From an assumed thin reason, presentation supplies a particular attributed consideration for that belief. Each active reason has a justified credential, and prior transfer supplies another active reason for its credential at the same subject, prior to the original. Well-founded induction excludes every such active instance. This is a conditional derivation of the existing thin nihilism proposition, not a defense of nihilism or a premise that all epistemic dependence is well-founded."
+}

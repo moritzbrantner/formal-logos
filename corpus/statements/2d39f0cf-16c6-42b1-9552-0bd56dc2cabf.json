@@ -1,0 +1,14 @@
+{
+  "id": "2d39f0cf-16c6-42b1-9552-0bd56dc2cabf",
+  "label": "Thin reasons and universal well-founded prior credentialing are incompatible",
+  "paraphrase": "For the same frame and credential data, thin reason existence, consideration presentation, universal justified credentialing, prior-reason transmission for each justified credential, and well-founded credential priority cannot all hold. Does not choose which member to reject.",
+  "lean_declaration": "TruthCore.Logic.EpistemicCredentialing.CredentialBundleInconsistent",
+  "definition_ids": [
+    "d13c0241-320a-5d56-8927-341e46063e05",
+    "15160f9d-a231-4a9f-834f-cc78a7523dc3",
+    "70ab36ea-a14c-413b-8f51-adfad1f01b3c"
+  ],
+  "disambiguation_ids": [
+    "339c6bf8-37f1-5d5e-9f26-3258957443cc"
+  ]
+}

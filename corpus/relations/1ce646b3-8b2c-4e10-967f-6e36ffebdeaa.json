@@ -1,0 +1,10 @@
+{
+  "id": "1ce646b3-8b2c-4e10-967f-6e36ffebdeaa",
+  "label": "Conditional exclusion of the universal credential requirement",
+  "subject_kind": "argument",
+  "subject_id": "f7bd5674-105f-4af8-9f92-df930096f12e",
+  "predicate": "refutes",
+  "object_kind": "statement",
+  "object_id": "ffb08b22-4304-472d-b9e7-a49d8d34fbd3",
+  "note": "Conclusion is the exact negation of C. Counts as a refutation only subject to the existing verification and established-premise gates; presentation, prior transfer and well-foundedness remain distinct open inputs."
+}

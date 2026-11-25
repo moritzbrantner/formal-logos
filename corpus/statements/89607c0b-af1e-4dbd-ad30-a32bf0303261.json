@@ -1,0 +1,14 @@
+{
+  "id": "89607c0b-af1e-4dbd-ad30-a32bf0303261",
+  "label": "Credential priority is well-founded for each subject",
+  "paraphrase": "OPEN analyst order condition. For each subject, the supplied prior-to relation on consideration/content reason-instance pairs is WellFounded. This is epistemic priority, not temporal precedence, causal dependence, or a claim about the well-foundedness of actual metaphysical explanation.",
+  "lean_declaration": "TruthCore.Logic.EpistemicCredentialing.CredentialWellFounded",
+  "definition_ids": [
+    "d13c0241-320a-5d56-8927-341e46063e05",
+    "15160f9d-a231-4a9f-834f-cc78a7523dc3",
+    "70ab36ea-a14c-413b-8f51-adfad1f01b3c"
+  ],
+  "disambiguation_ids": [
+    "339c6bf8-37f1-5d5e-9f26-3258957443cc"
+  ]
+}
