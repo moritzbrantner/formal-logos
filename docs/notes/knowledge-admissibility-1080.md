@@ -3,7 +3,7 @@
 This analyst comparison studies one inference: does learning a phenomenal fact,
 after complete physical information, show that physical duplicates can differ
 phenomenally? Attribution is deferred. No Mary experiment, actual completeness,
-psychophysical identity or historical position is established.
+psychophysical identity or historical position is established. [Research record](../../corpus/attempts/ATTEMPT-KNOWLEDGE-ADMISSIBILITY-1080.json)
 
 ## Reuse and missing comparison
 

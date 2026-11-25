@@ -1,0 +1,9 @@
+{
+  "id": "d240f1e1-752b-48dc-b7e5-8b681a2be308",
+  "label": "The comparison panel covers every realized value of the selected factor",
+  "paraphrase": "Each represented scenario matches some designated panel member on the selected factor. Whether the panel covers the intended class is an application question.",
+  "lean_declaration": "TruthCore.Logic.DarwinianEpistemicDebunking.BasisDefeat.PanelCovers",
+  "definition_ids": [
+    "e17e93bf-eedf-45db-be80-ffac82ef7d98"
+  ]
+}

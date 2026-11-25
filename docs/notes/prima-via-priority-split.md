@@ -5,7 +5,7 @@ is separate so that the two open PRs do not both add the same file. Batch spec
 `specs/priority-in-being.toml`; vocabulary
 `TruthCore/Causality/PriorityInBeing.lean`; Solution
 `TruthCore/Results/Causality/PriorityInBeing/Solution.lean`; attempt
-`45fc1037`.
+[`45fc1037`](../../corpus/attempts/45fc1037-143a-49ac-adec-33c75e8b185d.json).
 
 ## Slice 2: the PRIOR_4 split (2026-11-19)
 

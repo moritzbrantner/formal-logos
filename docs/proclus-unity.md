@@ -139,7 +139,7 @@ At baseline `bf106c2f`, route costs were:
 | CATHOLICISM-FROM-PRIMA-VIA-WITH-Q11-UNIQUENESS | 38 | 38 |
 
 The complete root-route sets are unchanged, not only their counts. Corpus
-attempt `ATTEMPT-PROCLUS-ET-1-2-UNITY-READING` preserves the blocked derivation
+attempt [`ATTEMPT-PROCLUS-ET-1-2-UNITY-READING`](../corpus/attempts/proclus-et-1-2-unity-reading.json) preserves the blocked derivation
 and rejected readings without creating philosophical claims to log activity.
 
 Shared conventions were resolved with source revision

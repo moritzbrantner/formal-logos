@@ -1,0 +1,10 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.PotencyPrivation.Challenge",
+  "solution_module": "TruthCore.Results.Causality.PotencyPrivation.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.PotencyPrivation.capacityUnderPrivation",
+    "TruthCore.Results.Causality.PotencyPrivation.adoptedEquivalence"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}

@@ -3,7 +3,7 @@
 The question is whether unchanged relations among bodies settle the identity or
 explanation of their spatial placement. This bounded comparison supports the
 foundational inquiry without assuming either relationalism or absolute space.
-The analyst geometry and the historical arguments have different authorities.
+The analyst geometry and the historical arguments have different authorities. [Research record](../../corpus/attempts/space-translation-boundary.json)
 
 ## Consulted evidence and actual argument
 
@@ -227,3 +227,7 @@ new declarations before their proofs, leaving the three original Challenge
 theorems unchanged. The registered result requires final Lean, binding,
 Comparator and NanoDa verification. Formal validity, metaphysical applicability and identification with
 the root's GOD_4 witness must be assessed separately.
+
+## Research attempts citing this note
+
+- [Spacetime occupancy and necessary-root grounding bridge with an actual-edge omission control](../../corpus/attempts/2dec2ef1-2ff8-4605-be9b-45e690a8f4b9.json)

@@ -12,6 +12,8 @@
   "blocker": "Generic cell defeat remains unresolved. The owner instead adopted the unactualized-capacity configuration in #1007 comment 6685335011; that interpretation does not prove non-overlap for every independent potency predicate or refute other senses. Applicability of the adopted InAct and CanBe framework inputs remains open.",
   "evidence": [
     "cfb46686-5d78-53b5-b62b-3da52d07cb17",
-    "81ca8216-ddf6-5d47-ba1b-a3473d306a9b"
+    "81ca8216-ddf6-5d47-ba1b-a3473d306a9b",
+    "PR-1016",
+    "PR-1125"
   ]
 }

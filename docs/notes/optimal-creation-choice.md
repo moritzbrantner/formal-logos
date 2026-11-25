@@ -8,7 +8,7 @@ and dossier for `STMT-SELECTED-EFFECT-BRIDGE-CERTIFICATE` were inspected before
 new vocabulary; choice-context controls already distinguish fixed conditions
 from local functionality. The additional discrimination here concerns the
 internal structure of the choice rule: unique optimal option, tied best values,
-and absence of an achieved best value.
+and absence of an achieved best value. [Research record](../../corpus/attempts/optimal-creation-choice.json)
 
 ## Verified source readings
 
@@ -658,7 +658,7 @@ statement or result; exact modal and knowledge controls retained, no
 claim that the conceptual authorship sketch models full divine simplicity
 or that an epistemic end entails every historical belief. Canonical
 related/dossier/novelty and full checks unavailable in this session.
-Attempt 7d015c02 records the proposed checkpoint.
+Attempt [7d015c02](../../corpus/attempts/7d015c02-2e23-4b2e-a418-e23c943c3a5a.json) records the proposed checkpoint.
 
 
 ## Can direct intentional production be extrinsic without becoming brute? (2026-11-23)
@@ -1816,13 +1816,13 @@ claimed.
 
 ## Effect superiority, practical excellence and intrinsic source perfection (#1955; 2026-11-24)
 
-**Preliminary research checkpoint, not independently reviewed.** Continuation of
+This comparison continues
 [#1953](https://github.com/moritzbrantner/formal-logos/issues/1953) and #1737.
 Baseline: `61acfd5629cab58221fe148b034340c7af9278ff`. No new statement,
 source claim, definition, sense, Lean theorem, argument or result is registered.
 The existing optimal-output and selected-effect results remain unchanged.
 
-### 23. Fix the comparison before asking about superiority
+### 31. Fix the comparison before asking about superiority
 
 An effect can be a more valuable created product without its production being
 a better exercise of the producer's power. Conversely, flawless execution of
@@ -1865,7 +1865,7 @@ possibility of unsurpassable agency. The encyclopedia discussion was inspected;
 Rowe's full book and Adams's original paper were not materialized or read for
 this checkpoint. Do not attribute the following analyst model to them.
 
-### 24. Exact reflection obstruction
+### 32. Exact reflection obstruction
 
 For a nonempty comparison domain S, let E, A and P be ordinal maps into
 strictly ordered codomains (only their strict comparisons are used).
@@ -1883,7 +1883,7 @@ and 3, no strict A comparison is possible, even if there is strict E
 variation. Under 4 and 2, strict E variation forces a failure of 3 at
 some pair. Under 4 and 3, strict E variation forces a failure of 2.
 Neither of the reflection rules is a consequence of the definitions.
-If A is replaced by F, step 2 is an even more restrictive assumption.
+Replacing A by F tests whether a better product requires better execution relative to the adopted end. Each reflection rule needs its own warrant.
 If P is replaced by R, invariance needs fresh warrant.
 
 The following matched controls use three labeled comparison situations.
@@ -1946,7 +1946,7 @@ interpretation the same proof works on arbitrary comparison domains.
 This is a simple incompatibility diagnostic; do not register an open
 reflection premise or a transcription as an independently supported result.
 
-### 25. A positive nonexhaustion argument, and its limit
+### 33. A positive nonexhaustion argument, and its limit
 
 Suppose a productive source has the power to actualize each of two
 specified ends. In each case the adopted end is fully and competently
@@ -2005,7 +2005,7 @@ acts and the actual operative content must be defended, not stipulated
 away by assigning a constant P map. Ordinary productive agents are not
 witnesses of the strong simplicity claim.
 
-### 26. Symmetric assessment and root-facing consequences
+### 34. Symmetric assessment and root-facing consequences
 
 | Account or control | Execution | Complete decision / source burden |
 | --- | --- | --- |
@@ -2042,19 +2042,103 @@ weaken the permissive proposal; a defensible criterion of due versus
 freely communicable good and an independently warranted actual
 practical-content bridge would strengthen it.
 
-### 27. Review and publication boundary
+### 35. What can make the choice of a smaller gift good?
 
-This draft checkpoint adds only the present section to the canonical
-note. The seven recurring semantic-defect checks were addressed at
-author level: finite ranking controls only; matched scope; source
-orientation and prior pin distinguished; exact quantified comparison
-above; fixed-map stipulation disclosed; no existing sense or ID
-overloaded; open status retained. Independent semantic challenge,
-repository CLI reuse/novelty/semantics preflight, canonical validation
-and computed frontier-diff were not available in this chat connector
-workflow. No premise or result record changed; intended premise
-change: none. No formal frontier claim is made. Before ready/merge,
-reconcile against main and active #1953/#1737 work, run the
-canonical gates, obtain independent review, and persist any reviewed
-assessment in the appropriate existing attempt. Do not close #1955
-or the broader research on the strength of the preliminary test.
+Consider a printer who has undertaken to make a single accessible edition
+for a particular reader by Friday. On the last available press shift she can
+honor that undertaking, print several standard copies for other readers,
+or leave the press idle. Assume that the standard copies yield more total
+reading benefit, that the accessible edition meets an actual need, and
+that the other readers have no comparable claim on this shift. All three
+options include the forgone uses of the shift. A wholly competent
+execution is possible for either printing option.
+
+The reader's claim gives the printer a positive reason to choose the
+accessible edition. It also explains why choosing this end can exhibit
+fidelity even if it yields less total benefit. If the reader releases the
+claim beforehand, the benefit ranking and printing ability stay fixed
+while that particular reason falls away. Serving the reader's need can
+still be generous. To rank that generosity above using the shift for the
+other readers requires a judgment about their competing goods. Likewise,
+a rule that tracks valid claims can select the same edition. Attributing
+fidelity as a motive requires evidence that the printer acted on her
+understanding of what she owed. [Earlier waiver comparison](moral-governance-intellect-will.md)
+
+For a proposed creator, a prior promise to an existing reader cannot justify
+creating that very reader in the first place. The comparison shows what a
+reason concerning this recipient can contribute when its basis is available.
+A case for freely communicating a good still needs a reason applicable
+before the proposed gift, an account of permission across the complete
+alternatives including omission, and evidence that the same giver acted
+for that reason. A source that necessarily understands the end but produces
+through an independently operative disposition still fits the output.
+The invariant-good comparison in #1962 and the policy test in #1971 locate
+those remaining questions. [Policy and end requirement](will-versus-chance.md#end-requirement-policy-requirement-and-productive-fixity-2026-11-25)
+
+### 36. Which account of goodness requires choosing the greatest feasible good? (#1955)
+
+Grant one producer four feasible complete decisions. Hold fixed what
+counts as care due to each created beneficiary and the ranking of
+created benefit among the outcomes in which all receive that care.
+
+| Decision | Outcome | Satisfies every actual beneficiary’s due claim | Also maximizes created benefit among the eligible options |
+| --- | --- | --- | --- |
+| O | Create no beneficiary | Yes | No |
+| A | Create one and provide due care | Yes | No |
+| B | Create two and provide due care to both | Yes | Yes |
+| C | Create two and withhold due care from one | No | No |
+
+The stipulated ranking is O < A < B. C is ineligible before the
+maximization comparison. A rule requiring due care for every actual
+beneficiary permits O, A and B on that criterion. Adding the obligation
+to select a greatest eligible outcome selects B. Withholding care in C
+has an existing patient. Including the interests of possible beneficiaries
+or imposing impersonal beneficence could change the comparison, given
+an argument for that wider standard. The table answers no question about
+the actual distribution of suffering.
+
+Now vary the proposed ground of goodness while preserving those four
+decisions, the ranking, and the due-care judgments. Someone who takes
+evaluative truths as necessary and primitive can endorse either policy.
+A proponent of divine-nature goodness likewise needs a reason why
+expressing that nature requires maximizing created value, or a reason
+why a nonmaximal expression can be wise and generous. Learning a
+beneficiary’s needs without theology concerns access to the good.
+Holding that a decree cannot make deprivation good concerns independence
+from voluntary choice. Either thesis can be held while attributing the
+good’s being to divine nature. Ontic independence from that nature is a
+third, substantive thesis. A necessary normative truth could constrain
+what counts as permissible without removing the producer’s capacity
+to perform the act. [Normative standing and the origin of a claim](moral-governance-intellect-will.md)
+
+The immanent due-good account has a concrete advantage in explaining
+what counts as a defect in C through the good of that recipient. A
+natural-kind account can use the same explanation of flourishing and
+still owes a reason why another agent must secure it. A realist about
+necessary norms can supply that practical requirement as a basic
+truth. Its primitiveness alone gives no argument against it. An account
+in terms of ideal attitudes owes a well-defined, nonempty class of
+competent assessors and grounds for trusting their verdicts here.
+Distinguishing preexisting goodness from command-grounded obligation
+also allows a theist to deny that arbitrary commands set the value
+ranking. The participation proposal can relate the good of the patient
+to the source of its being, conditional on the transfer premises.
+Coextension with actuality alone does not establish identity or moral
+benevolence. The same tests of scope and explanatory adequacy apply to
+each primitive commitment. [Finite goods and their source](wielenberg-making-account.md) · [Owner’s matched comparison](https://github.com/moritzbrantner/formal-logos/issues/1955#issuecomment-7143785792)
+
+The strongest remaining objection asks whether an unsurpassably good
+chooser could actually select A when B dominates it as a complete
+decision. Both accounts exclude A if they also grant that a perfect
+chooser must avoid dominated decisions. Showing B yields more created
+benefit establishes only the first ranking in the table. The next
+test is what about the source’s own end could make communicating good to
+this recipient positively excellent while permitting omission or a
+different gift. An independently warranted obligation of impersonal
+beneficence applying to those very alternatives would count against
+the permission. Identifying an actual operative reason for this giver
+is the further application pursued in #1953.
+
+## Research attempts citing this note
+
+- [Issue 1737 same-source contingent creation, omission, and selection adequacy](../../corpus/attempts/divine-knowledge-choice-creation-1737.json)

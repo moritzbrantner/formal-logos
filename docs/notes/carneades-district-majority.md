@@ -1,7 +1,7 @@
 # Carneades electoral aggregation diagnostic
 
 Owner-authorized broader Carneades research, 2026-10-28. Independent mathematical
-test `POLITICAL-DISTRICT-MAJORITY-CONTROLS`; no root premise change.
+test `POLITICAL-DISTRICT-MAJORITY-CONTROLS`; no root premise change. [Research record](../../corpus/attempts/carneades-district-majority-controls.json)
 
 ## Consulted reading and evidence boundary
 

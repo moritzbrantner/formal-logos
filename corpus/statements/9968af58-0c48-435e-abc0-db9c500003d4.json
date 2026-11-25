@@ -1,0 +1,6 @@
+{
+  "id": "9968af58-0c48-435e-abc0-db9c500003d4",
+  "label": "The selected ledger has finite total throughput and a positive transfer without a return path",
+  "paraphrase": "OPEN analyst application premise. Sum over all directed transfers in the fixed ledger is finite and one positive edge has no finite positive path back to its sender. Finite inventory is insufficient for finite summed throughput. The edge witnesses population.",
+  "lean_declaration": "TruthCore.Causality.FiniteThroughput.FiniteOneWayTransfer"
+}

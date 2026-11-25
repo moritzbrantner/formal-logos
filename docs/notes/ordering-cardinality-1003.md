@@ -145,4 +145,4 @@ The existing no-infinite-perfection-cause-regress premise remains supported and
 open. No argument deriving it is added. Intended root-frontier change: none;
 the PR reports the computed `corpus.py frontier-diff` output rather than a new
 hand-counted route estimate. Verified attempts, rejected inferences and remaining
-burdens are retained in `ATTEMPT-ORDERING-CARDINALITY-1003`.
+burdens are retained in [`ATTEMPT-ORDERING-CARDINALITY-1003`](../../corpus/attempts/ordering-cardinality-1003.json).

@@ -1,6 +1,6 @@
 # Is being a genus? (issue #340)
 
-The *quarta via* (ST I q.2 a.3) says that what is maximal "in aliquo genere" causes everything in that genus, and it applies this to being. Aristotle (*Metaphysics* III.3, 998b22-27) and Aquinas (ST I q.3 a.5) say that being is not a genus. This note records what the first batch established, which readings were rejected and why, and what remains open.
+The *quarta via* (ST I q.2 a.3) says that what is maximal "in aliquo genere" causes everything in that genus, and it applies this to being. Aristotle (*Metaphysics* III.3, 998b22-27) and Aquinas (ST I q.3 a.5) say that being is not a genus. This note records what the first batch established, which readings were rejected and why, and what remains open. [Original PR #351](https://github.com/moritzbrantner/formal-logos/pull/351)
 
 ## Sources pinned and read
 
@@ -174,7 +174,7 @@ Candidate `ARIST-MET-993B-PRINCIPLES-UNCAUSED-IN-BEING` asks whether
 the primary is treated as an effect. The full pinned Greek `ARIST-MET-II-1`
 was materialized and reread, together with the whole newly pinned Latin
 `AQUINAS-IN-METAPH-II-L2` (Corpus Thomisticum, Turin 1950 text, II lect. 2).
-The source finding is preserved by `ATTEMPT-PRIMARY-ANALOGATE-UNCAUSED`;
+The source finding is preserved by [`ATTEMPT-PRIMARY-ANALOGATE-UNCAUSED`](../corpus/attempts/primary-analogate-uncaused.json);
 it is a blocked premise-substitution attempt, not a new attributed proposition
 or a proof of uncausedness.
 
@@ -324,3 +324,8 @@ causal and approach applicability in the same intended domain. Predication
 reduction, coverage, and the divine-name/God-creature applications of the
 original definition remain unencoded; source-fidelity judgments would require
 an independently selected reading task. No historical winner is selected here.
+
+## Research attempts citing this note
+
+- [Cluster reassessment of immaterial-intellect and director-recognition premises (#1751)](../corpus/attempts/386cc16c-8b34-416a-ab16-30bf3eaf949c.json)
+- [Rejected attributing strict primacy to ST I q.3 a.5 ad 2: approach to God and denial of a…](../corpus/attempts/strict-primacy-reading.json)

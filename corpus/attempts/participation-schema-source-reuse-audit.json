@@ -19,7 +19,8 @@
     "a7887ba3-e500-543c-b7ae-d04da62a50d2",
     "11b0106d-9061-54c3-bc53-82a3acaaddd2",
     "5ea67ac7-55f9-5e8d-b156-d816a7f662f2",
-    "317f30d9-86d4-5641-af80-f3bf4f8722d3"
+    "317f30d9-86d4-5641-af80-f3bf4f8722d3",
+    "PR-460"
   ],
   "blocker": "A substantive common inference with separately justified domain conditions has not yet been identified. Model the Proclus unity/participant distinction and the Aquinas analogical/essential-esse conditions independently before selecting the common theorem; do not add bridges merely to make schema registration pass. Preserve the full Plato/Proclus/Aquinas scope of issue #412."
 }

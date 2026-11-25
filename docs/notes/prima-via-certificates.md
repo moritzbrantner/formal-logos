@@ -2,12 +2,12 @@
 
 Formal certificates for the findings of the 2026-11-18 cluster assessments of
 the prima via route to GOD_4 exists (argument `ed7c588a`, root `8626f8a5`):
-lane A, `prima-via-strength-consumers.md` (attempt `a82b06b6`, PR #1768), and
-lane B, `causal-dependence-support-investigation.md` (attempt `9d71e28d`,
+lane A, `prima-via-strength-consumers.md` (attempt [`a82b06b6`](../../corpus/attempts/a82b06b6-f603-4084-a110-35765662fee9.json), PR #1768), and
+lane B, `causal-dependence-support-investigation.md` (attempt [`9d71e28d`](../../corpus/attempts/9d71e28d-d492-4797-9221-45fa517a6e6b.json),
 PR #1769). Batch spec `specs/prima-via-certificates.toml`; vocabulary
 `TruthCore/Causality/PrimaViaCertificates.lean`; Solution
 `TruthCore/Results/Causality/PrimaViaCertificates/Solution.lean`; attempt
-`8915af42`.
+[`8915af42`](../../corpus/attempts/8915af42-6391-4595-bd5c-bdfacac44173.json).
 
 ## Slice 1: certificates and the regress rebinding (2026-11-19)
 

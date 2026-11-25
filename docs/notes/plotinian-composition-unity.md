@@ -3,7 +3,7 @@
 Bounded #361 investigation connected to #319/#320 and the comparison of
 Platonism, Aristotelianism, mereological rivals and Catholic metaphysics. The
 six source readings are prose commitments, not new Lean results or a proof
-that their philosophical premises are true. No root premise is discharged.
+that their philosophical premises are true. No root premise is discharged. [Research record](../../corpus/attempts/plotinian-v4-composition-unity.json)
 
 ## Witness and contextual reading
 
@@ -102,7 +102,7 @@ existing `OneFirstMover.oneFirstMover` instead uses every-perfection,
 differentiation in act and an identity/distinctness split. None of those three
 is supplied merely by the sentence that a pair would not be one.
 
-The #320 audit (`ATTEMPT-ULTIMATE-GROUND-UNIQUENESS-BRIDGE-AUDIT`) already keeps
+The #320 audit ([`ATTEMPT-ULTIMATE-GROUND-UNIQUENESS-BRIDGE-AUDIT`](../../corpus/attempts/ultimate-ground-uniqueness-bridge-audit.json)) already keeps
 nature/individuation, perfection and reciprocal potential-causal scope routes
 separate. The current reading adds a sourced positive argument and locates its
 burden; it does not manufacture an opaque “simplicity implies uniqueness”

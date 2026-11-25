@@ -5,7 +5,7 @@ An omission countermodel for premise k of a theorem
 interpretation in which every Pᵢ with i ≠ k holds and C fails. It shows that the
 remaining premises do not entail C under the encoded vocabulary. Workers used to
 write these models and their `Control.Certificate` proofs by hand.
-`truth countermodel` (the Rust CLI, `truth/README.md`) searches for them.
+`truth countermodel` (the Rust CLI, `truth/README.md`) searches for them. [Original PR #1204](https://github.com/moritzbrantner/formal-logos/pull/1204)
 
 ```bash
 target/release/truth countermodel TruthCore.Results.Causality.SelfOperationLife.pureActLives

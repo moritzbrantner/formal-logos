@@ -4,7 +4,7 @@ The question is whether a greatest whole may be infinite, and whether its
 order position supplies the causal or explanatory priority needed by the
 Fourth Way. `INFINITE-GREATEST-WHOLE-CONTROL` gives a precise new control and
 imports the established finite-top/Nat-ascent witnesses. It neither proves
-the Fourth Way nor establishes the actuality of an infinite physical space.
+the Fourth Way nor establishes the actuality of an infinite physical space. [Research record](../../corpus/attempts/infinite-greatest-whole-696.json)
 
 ## One geometry, two different orders
 

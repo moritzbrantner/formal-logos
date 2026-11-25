@@ -27,7 +27,10 @@
     "2170237a-2347-4fa2-a691-0f8ec8e29e07",
     "de375db2-ec3d-46c9-bae4-297578d8a1fe",
     "3f3cc37b-1f9f-4231-a8f9-9b06c287921d",
-    "17deb517-6bfa-46ec-b161-6c866bc25632"
+    "17deb517-6bfa-46ec-b161-6c866bc25632",
+    "PR-1530",
+    "PR-1575",
+    "PR-1949"
   ],
   "blocker": "Parent semantic challenge of the complete general-certification and mixed-realization draft in docs/notes/direct-grounding-warrant.md. Independent warrant remains open: justify a sufficient realization rule or a substantive restriction to concrete-root generation. No concrete test within the selected existential interpretation discriminates these accounts; finite enumeration and decomposition alone cannot do so."
 }

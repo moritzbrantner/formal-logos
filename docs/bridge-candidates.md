@@ -7,7 +7,7 @@ closed Lean goal is not a verified result and says nothing about the fidelity
 of any reading (invariants 6 and 16); a goal that stays open is not a
 refutation. An accepted bridge is recorded the usual way ([Bridges](bridges.md)):
 inference, argument, frozen Challenge, Solution, result, binding, Comparator
-and NanoDa.
+and NanoDa. [Original PR #1210](https://github.com/moritzbrantner/formal-logos/pull/1210)
 
 ## Pipeline
 

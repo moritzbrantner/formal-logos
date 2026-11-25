@@ -1,0 +1,13 @@
+{
+  "id": "dc2dd2f0-cfd5-4d6f-bc9d-74b2f7078681",
+  "label": "Privation on capable subjects from the two POTENCY_1 analyses (inference)",
+  "input_statement_ids": [
+    "c85e8ef5-3dc4-502d-90f8-da1429e33fd8",
+    "3c0b7bb3-1526-55a9-b71e-0d5fb3148782"
+  ],
+  "output_statement_id": "7c3da33e-7ead-54f8-aace-ed3cf3a7bb02",
+  "rule": "Under the capacity hypothesis pass in each direction through the same potency instance",
+  "meaning": "At any capable subject and respect, T turns privation into potency and F turns potency into lack of act. Conversely, F turns capacity and lack of act into potency and T recovers privation. No constraint on incapable subjects follows. The calculation requires independent entry into the premises when offered as support.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

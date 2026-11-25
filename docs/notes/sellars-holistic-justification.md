@@ -1,5 +1,7 @@
 # Observational authority and holistic justification
 
+[Research record](../../corpus/attempts/sellars-holistic-justification.json)
+
 ## Question and source boundary
 
 Can empirical justification include reciprocal systematic support without being an unsupported inferential circle? The current regress investigation asks what an account supplies beyond a predecessor, consistent network or available sequence. This bounded reading supplies a positive reply rather than an inference from formal graph consistency.

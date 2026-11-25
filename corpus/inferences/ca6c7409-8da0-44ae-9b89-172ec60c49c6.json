@@ -1,0 +1,14 @@
+{
+  "id": "ca6c7409-8da0-44ae-9b89-172ec60c49c6",
+  "label": "Thin epistemic reasons from warranted acceptance and surviving evidential support (inference)",
+  "input_statement_ids": [
+    "6280fbf0-551a-46f5-8e0a-a65410c86a64",
+    "0e2bbd59-2b4c-438d-b792-0ca401eaf862",
+    "6b4e3331-01ca-484b-bda1-460ebff1df35"
+  ],
+  "output_statement_id": "f56b2ee7-c69e-5e3b-85b0-e671d907ba58",
+  "rule": "Extract a surviving basis at the warranted belief and apply the pointwise reason calibration",
+  "meaning": "The two necessity and attribution assumptions recover a thin reason for the same subject and content as a warranted acceptance. If a specified basis was undercut for that subject, the surviving basis is distinct. Result 1db47fd9 supplies the acceptance conditionally but its eligible-uptake input already includes a reason. That producer adds no independent grounds for thin F6. Independently assessing an actual warranted acceptance is a separate application option.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

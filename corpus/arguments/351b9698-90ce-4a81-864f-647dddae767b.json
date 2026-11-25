@@ -1,0 +1,19 @@
+{
+  "id": "351b9698-90ce-4a81-864f-647dddae767b",
+  "label": "Population by specialization to the selected world's existence extension",
+  "premise_statement_ids": [
+    "43253cd8-62be-4528-85e4-54806bd3fac0"
+  ],
+  "conclusion_statement_id": "43f09b83-776d-57b8-a5b3-b84715e48fc2",
+  "inference_ids": [
+    "ff063c2d-f11f-408e-be90-bfa59c7686bb"
+  ],
+  "meaning": "Instantiation transcription. Use SomeExistent with ExistsIn fixed to m.ontic.ExistsAt w. Both sides say that this extension has a member. In the occurrence argument that member is the selected episode's own representative. The companion theorem retains the asserting agent, claim, realizing episode and representative together under the three existing assertion, realization and world-indexed representation inputs. A reading about the actual denial requires those inputs to hold of the performance here.",
+  "definition_ids": [
+    "8e86ac44-8980-5d5f-b571-644e18d30d08",
+    "e9d86382-0aa2-4b87-b721-461ec85ed0f1"
+  ],
+  "disambiguation_ids": [
+    "f7bae38e-9b21-54fe-8236-2646c230568b"
+  ]
+}

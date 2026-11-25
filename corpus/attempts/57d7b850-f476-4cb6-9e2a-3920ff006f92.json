@@ -1,0 +1,26 @@
+{
+  "id": "57d7b850-f476-4cb6-9e2a-3920ff006f92",
+  "label": "Measure the acts of a comprehending source and a reflective recipient",
+  "statement_ids": [
+    "aba6f4e1-bbf1-4aaa-ac1c-dead4efbef09",
+    "87f41688-c06f-4fe9-994b-0682a4be3038",
+    "fd2c8710-988f-527f-a81a-2566fe10e3f9",
+    "7921f9c8-81f4-4af5-b945-d98787d12f42",
+    "7db53cde-911c-48ec-ab4f-054a00288148",
+    "06410834-141f-4035-8a30-14f8a18c3139",
+    "2412c010-3246-4cb8-b8a1-e10340384261",
+    "1aab2bd1-020d-4b61-a59b-dc97f6f8a72e"
+  ],
+  "date": "2026-11-24",
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "Comprehension orders whole acts under the existing act-to-knowability and knowing-within-act laws. Applying the comparison at the sole giver gives a new direct support option for the weak represented-esse bound on actual participants, under full measured comprehension of each participant and explicit same-state scale calibration. At a witnessed full self-comprehension the recipient's measured act, knowability and knowing all agree up to preorder equivalence. A higher actual knowing by the source then yields a strict represented-esse inequality on this pair. Positive content-indexed uptake by the source admits a lower source act, ordinary self-knowing with higher source performance admits a tie, and even one-way full comprehension admits a tie. A populated model realizes the positive strict and weak conditions without knowledge above the object's knowability. See docs/notes/modal-spine.md, 'Can measured cognition compare the giver and recipient of esse?'. These formal readings concern actual attainment. No new attribution, general adequacy principle, or universal limited/unlimited calibration follows.",
+  "evidence": [
+    "c76f7825-8af2-4d32-b44b-7fbf9b50902e",
+    "071fe119-ec6f-47b9-9a97-115f865762cb",
+    "87de8ed8-dfd7-4001-8396-e31008fb3641",
+    "8e620a09-68b7-42ab-a626-bc8161676076",
+    "PR-1954"
+  ],
+  "blocker": "Weak application needs affirmative warrant that the source comprehends the actual individual to its knowability, beyond one true effect-directed content, and calibration of the same state's whole-act measure at represented esse. Strict application needs a supported ceiling on the recipient's knowability or full self-comprehension at a measured grade, together with a higher source knowing. Explanatory correctness about one's own constitution can tie. Seek an independently warranted degree difference on the selected bearers; reversing the noninfinite-intellect theorem presupposes a nonmaximal act premise."
+}

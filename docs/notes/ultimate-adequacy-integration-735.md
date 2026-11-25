@@ -1,5 +1,7 @@
 # Necessary existence: cumulative argument and adequacy comparisons (#735/#786)
 
+[Research record](../../corpus/attempts/ultimate-adequacy-integration-735.json)
+
 ## Owner question: explanatory parity and the remaining gap
 
 Owner question, paraphrased (2026-11-06): **Are the alternatives merely
@@ -2740,3 +2742,12 @@ The following are the remaining claims most directly relevant to that move.
 | **180f5ad2** and the source-to-intrinsic-cognition bridge | Does being neither a matter–form composite nor a component of anything give this bearer intellectual capacity, and what warrants its own actual apprehension? Genuine cognition in its effects and objective exemplarity leave the source's exercise open. |
 | **1ac7429d** and **1822b59d**, selected-content knowing and optimal choice | Can this same simple source adopt an effective practical specification with genuinely contingent fulfillment? Distinguish actual directed exercise, factive reference to the particular product, and an exhaustive explanation of the choice. See #1737 for the open interfaces. |
 | **8626f8a5**, GOD_4 existence, and #1890's stronger fixed-profile target | For actual GOD_4 naming, which existing route's premises would qualify this bearer? Separately, what would show that the actual supplier, necessary concretum, giver and knowing subject can be one bearer with the full profile across the relevant worlds? #1890's conditional completion addresses that second target. It supplies no independent warrant for metaphysical admissibility. |
+
+## Research attempts citing this note
+
+- [Composed the existing necessaryConcreteOfActualGrounded and PositiveUnion.checks certificates…](../../corpus/attempts/necessary-concrete-underived-composition.json)
+- [Inventory at 9c213151 found no argument directly consuming the necessary-concrete statement, while…](../../corpus/attempts/necessary-witness-interface-connection.json)
+- [Materialized and read spinoza ethics elwes full, Ethics I definitions/axioms and propositions 1–11…](../../corpus/attempts/intrinsic-explanation-source-connection.json)
+- [Necessary-being integration: contingent-existence dependence and productive-receipt warrant](../../corpus/attempts/necessary-being-integration-786.json)
+- [Owner correction: connect established infinite-borrowing insufficiency and contingent-root demand…](../../corpus/attempts/cumulative-existential-supply-necessary-concrete.json)
+- [Owner-requested one-video intake: primary metadata verifies Capturing Christianity Over 100…](../../corpus/attempts/capturing-christianity-100-intake-20261031.json)

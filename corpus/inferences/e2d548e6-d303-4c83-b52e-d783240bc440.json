@@ -1,0 +1,10 @@
+{
+  "id": "e2d548e6-d303-4c83-b52e-d783240bc440",
+  "label": "Characterize robust transfer coverage by counts at each grade threshold (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "4e383231-761c-493f-8724-0a431ce292a3",
+  "rule": "Expand each additive total by grade increments and vary a single increment",
+  "meaning": "Each grade increment is multiplied by the count of all occurrences reaching its threshold. If one output count exceeds that input count, enlarge just that increment beyond the total of the input threshold counts. Conversely the count inequalities can be multiplied by each increment and summed.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

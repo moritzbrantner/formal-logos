@@ -24,7 +24,9 @@
     "d492d6e9-e381-5628-ba20-18e7855c322d",
     "cc957087-0d67-5723-b007-3ce9ea0e56f4",
     "90dbcc69-9ce5-5e02-bf52-8d5593c00c31",
-    "bf7c011f-ee7c-5416-9bcb-73e4b490ca9e"
+    "bf7c011f-ee7c-5416-9bcb-73e4b490ca9e",
+    "PR-808",
+    "PR-1357"
   ],
   "blocker": "The closing premise EveryContingentGroundedAt and restricted well-foundedness have no defence for any real relation; the four bridges are open; a route premise needing de re necessity was not found, so the necessary-being milestone does not lower a route cost. Whether a route should gain a necessity-consuming premise is a modelling question for the owner, not a proof gap."
 }

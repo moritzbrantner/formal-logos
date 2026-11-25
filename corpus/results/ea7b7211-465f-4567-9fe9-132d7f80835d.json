@@ -1,0 +1,11 @@
+{
+  "id": "ea7b7211-465f-4567-9fe9-132d7f80835d",
+  "label": "Derive an actual root from local finiteness and distinct-receipt coverage",
+  "argument_id": "ac7d268f-8042-4c13-83a1-afcd7c6d8ba9",
+  "challenge_module": "TruthCore.Results.Causality.ReceiptMatching.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ReceiptMatching.Solution",
+  "theorem": "TruthCore.Results.Causality.ReceiptMatching.actualRootOfReceiptMatching",
+  "comparator_config": "results/ea7b7211-465f-4567-9fe9-132d7f80835d/comparator.json",
+  "status": "solution-present",
+  "description": "The unmatched sender is actual and concrete. If it had any actual concrete ground in the profile, it would admit an injective match, contradicting the obstruction. The root is relative to the profile's grounding relation. A freely chosen transfer class has no independent evidential force."
+}

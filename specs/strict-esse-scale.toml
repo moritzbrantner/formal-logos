@@ -1,0 +1,23 @@
+[batch]
+vocab = "TruthCore.Causality.StrictEsseScale"
+results = "TruthCore.Results.Causality.StrictEsseScale"
+
+[[statement]]
+id = "The receiving nature bounds its bearer's realized pure levels at an actual identity giver"
+lean = "RecipientLevelsWithinCapacity"
+paraphrase = "Open analyst premise. Fix one admitted inventory, common level assignment and capacity function on represented essences. Whenever a distinct actual identity bearer causes an actual recipient's esse, the capacity assigned to that recipient's essence bounds every level of a pure item the recipient actually realizes. For philosophical warrant the capacity needs specification independently of the already disputed comparison."
+definitions = ["efce4d54-fd69-4a00-a4d3-6adcb460f518", "211a6432-8b8f-53ed-85e3-75173bb15b24", "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72", "183b48d2-1753-583d-aef9-4199cff86231", "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168", "cd977b0f-2265-5b91-9c88-56cf1d6b8ea7", "65e38ffa-5a1c-55d0-935c-6538d843b780", "3aba5f19-f48d-50db-bc57-93ba2e99f845"]
+
+[[statement]]
+id = "The actual identity giver realizes a pure item above the receiving nature's capacity"
+lean = "GiverRealizesBeyondCapacity"
+paraphrase = "Open analyst premise. For each distinct actual recipient whose esse is caused by an actual bearer with represented essence equal to its esse, that very giver realizes a pure item of the same inventory at a level strictly above the capacity assigned to this recipient's essence. The item may vary by recipient. Independent evidence must identify its positive content in the giver and justify its place on the selected common scale."
+definitions = ["efce4d54-fd69-4a00-a4d3-6adcb460f518", "211a6432-8b8f-53ed-85e3-75173bb15b24", "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72", "183b48d2-1753-583d-aef9-4199cff86231", "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168", "cd977b0f-2265-5b91-9c88-56cf1d6b8ea7", "65e38ffa-5a1c-55d0-935c-6538d843b780", "3aba5f19-f48d-50db-bc57-93ba2e99f845"]
+
+[[argument]]
+id = "Actual identity-source ascent from a pure determination above the recipient's bound"
+theorem = "identityAscentFromCapacity"
+premises = ["The receiving nature bounds its bearer's realized pure levels at an actual identity giver", "The actual identity giver realizes a pure item above the receiving nature's capacity", "6ab848a8-9dc0-4b5e-a8f2-82dce793fd1a", "9eaa3b6e-ad2f-5776-ab26-03cfa9f54ad8"]
+conclusion = "8176a284-769b-4ed0-b90b-ff655b7fd864"
+rule = "Bound the recipient's degree by its nature's capacity and bound the higher item by the giver's degree"
+meaning = "For every qualifying actual identity-giver pair, least-upper-bound calibration puts the recipient's degree at or below its nature's stated ceiling and the giver's degree at or above the witnessed level. Strict crossing therefore yields strict order of their own degrees and, by the Unit specialization of the degree-to-more bridge, primitive MoreIn at esse. This gives an application on the identity-source route without assuming absolute limited-to-unlimited comparison. Neither premise about capacity is established by the proof, and it asserts no actual identity giver."

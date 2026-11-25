@@ -1,0 +1,58 @@
+{
+ "id": "e0253e6b-0086-4081-a79e-a4de8f7b1ab2",
+ "label": "Can disconnected verified results be grafted onto the NAR/WN root route?",
+ "date": "2026-11-24",
+ "statement_ids": [
+  "0266eac2-3fad-43eb-a1f1-e784c5356105",
+  "d164f730-95b4-4297-8978-9e5586f0b2ef",
+  "1822b59d-1040-57e4-8991-f7862db26355",
+  "b8ee1a50-b1e2-435e-a082-4652a894438b",
+  "91b085c4-f1c7-5ada-9848-8e7dc753313a",
+  "73f6b3c8-b325-5ed8-b632-960a078a773b",
+  "20a2b6a3-83e7-5ea0-be63-9dbc03c302b3",
+  "d5ac1620-1de5-5cd8-862e-cfdfd6d8b8a5",
+  "b72a790a-2b4a-45fd-8e90-4aec3db0fac6",
+  "ea1425c0-5f70-4f5b-a056-acc8fc462d74",
+  "78af5042-9b4e-41a4-bb76-ad4d1973e25a",
+  "a9a13d38-2b4e-4a0b-9549-875e5af10e20",
+  "7ab0ddcb-cf48-5457-bee7-b6ea9c13b6b1",
+  "8269797e-4c7b-4c33-8ed6-b1e5262885cc",
+  "75974d26-9483-4e1b-81a9-693a90ee9d0f"
+ ],
+ "kind": "derivation",
+ "outcome": "succeeded",
+ "summary": "See docs/notes/orphan-graft-map.md. Verified zero-axiom results: 6c2ae534 (G1: a narrow being-level one-best-effect rival to WN, b72a790a, every actual root gives by total optimal output over fixed candidates with a unique optimum, so each root gives being to exactly one being per accessible world where it exists and, with (b1) and the common root's reach, at most one actual concretum besides the root exists; not Rowe's world-level argument; it is refuted from #1947's law-2 premises (b1) 2dd1f217, factive giving 3ef41442, the common root of 0c27f65a, necessary roots d164f730 and some contingent c76b6e2c, composed with the two premise-free certificates 1822b59d (#1737 optimal choice) and b8ee1a50 (#1947 NAR laws); recorded alternative_to WN and refutes, non-counting; the standing rivals selective necessary diffusion ea1425c0 and the world-level optimizer 78af5042 are recorded alternative_to WN beside it, unrefuted) and 7670662c (G2: d164f730 from 91b085c4, registered strengthens). Controls f0eb2f96 (G3, Mathlib three axioms; laws 4-5 single effect and one creature, MediatedOptimum on chainG): stability under the giving-output adapter is fixity; a unique optimum makes a root fixed toward every effect, so a unique-optimum root cannot be a mixed-mode root (it gives exactly one being per accessible world where it exists), though without direct reach it can be the mediated creator (chainG satisfies the rival); with SS the rival makes WN fail; a tied-optimum model keeps the root two-way. Computed: d164f730 moves bare to closed; the two certificates 1822b59d and b8ee1a50 now support a recorded refutation of a WN rival, so their results a1990e04 and 0cf250b9 reach the root; orphans 1676 to 1675. Rejected or blocked grafts: d164f730 from the orphan 73f6b3c8 (or 593d7307, f2a65d16) plus at-most-one 49fdec01 fails the sense rules because of legacy definition links (NECESSARY_11 through DEF f8948e28, WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT_1 through DEF c86cc1d1); d5ac1620 from 20a2b6a3 (UniqueClassicalGodExists, eight orphan stage 1-2 endpoints) is a two-line uniqueness transfer but 20a2b6a3 carries 40 inherited definition links (GOD_1, GOD_2, GOD_4, CAUSE_1, CAUSE_2, PER_SE_1, PER_SE_3, ...), and pruning them to its Lean type's vocabulary trips the reviewed bundle audits (docs/notes/classical-attributes-all-migration.json, naming-first-mover-migration.json), so it was reverted. The November 25 continuation identifies the unique actual root as the finite ancestral source of all actual concrete recipients when every such recipient has root access. On the original mediated optimum d is that source. Its necessary intermediary g actually gives being to every actual contingent concretum at false, while itself receiving a ground. The same-profile scope and implications for the causal naming argument are in docs/notes/nar-derivation.md#which-giver-reaches-all-the-way-to-the-recipients.",
+ "blocker": "Not blocked for G1 and G2. WN's warrant is unchanged. Standing rivals of WN: selective diffusion ea1425c0 and the world-level optimizer 78af5042; the mediated creator is a standing rival of G1's reach premise 0c27f65a. A unique-optimum root cannot be a mixed-mode root (it gives exactly one being per accessible world where it exists). Without direct reach it can be the mediated creator: #1947's chainG satisfies the rival with candidates {g} (G3 MediatedOptimum), so G1 does not touch it. With direct reach it collapses to one creature. Ties do not force fixity (the tied model, one encoding). Standing rivals recorded unrefuted: selective necessary diffusion ea1425c0 and the world-level optimizer 78af5042. Next tests: the world-level optimizer against law 2; the mediated creator against direct reach; the d5ac1620 graft after a reviewed prune of 20a2b6a3's definition links with the bundle audits updated (a grounded support cycle through the assembly 398f4323); the same prune for the 73f6b3c8 family, keeping a definition for ACTUAL_CONCRETE_GROUND_1.",
+ "evidence": [
+  "6c2ae534-c668-4c62-9e90-4c92ccfffee1",
+  "7670662c-d82e-49c4-aeac-8e438d3f0114",
+  "f0eb2f96-e313-4310-9c13-7064bcf13e1b",
+  "0dcb0397-8a2a-4f8f-8550-4bbac1192c2b",
+  "a53edd5b-49de-4251-855a-31aea94e58e1",
+  "273fb2d3-d2e8-404e-adad-f6ae2c821169",
+  "acc12ba2-a7e2-4146-bbed-f5c964602bbb",
+  "0269173b-9dd1-43f9-909f-c2462710fb1a",
+  "1e652b87-fba4-4653-801e-1911fbd4b957",
+  "012166ef-0b65-4785-a163-1900d60044c9",
+  "PR-1963",
+  "PR-1973"
+ ],
+ "current_assessment": {
+  "date": "2026-11-25",
+  "statement_ids": [
+   "a9a13d38-2b4e-4a0b-9549-875e5af10e20",
+   "7ab0ddcb-cf48-5457-bee7-b6ea9c13b6b1",
+   "8269797e-4c7b-4c33-8ed6-b1e5262885cc",
+   "75974d26-9483-4e1b-81a9-693a90ee9d0f"
+  ],
+  "scope": "Finite existential ancestry, direct grounding coverage, and the test of a necessary supplier to all contingent recipients on the earlier mediated optimum.",
+  "assessment": "Universal actual root access and actual-root uniqueness identify one source reaching all actual concreta on the same grounding graph. Separately, a named candidate reaching every actual concretum must coincide with any actual root, since a path into a root cannot end with an incoming edge. The model retains d as the common ancestral source even though direct coverage fails. The necessary intermediary g gives being to all actual contingent concreta and itself has a ground. This identifies the additional question about the source of the intermediary’s own existence. Neither the model nor the path condition establishes GOD_4 existence.",
+  "next_test": "Assess the origin of the necessary intermediary itself. For direct conservation, distinguish the first source sustaining the intermediary and the first source giving the remote recipient its own being. Track the selected existential relation and intended patient in both claims.",
+  "note": "docs/notes/nar-derivation.md#which-giver-reaches-all-the-way-to-the-recipients",
+  "reviewed_revision": "e3a2f279796b6e7104af0f2ff57b5d6777a7fbf5",
+  "review": "accepted_qualified",
+  "publication": "published",
+  "evidence": "The independent challenge checked the grounding-specific statement 8269797e, all four frozen contract pairs, named-root identity and the populated necessary-intermediary comparison. The six ancestry configurations and contingent-recipient configuration passed binding, Comparator and NanoDa.",
+  "supersedes": "Extends the earlier direct-reach omission with the positive finite-ancestry result and the necessary-intermediary test. Earlier model and WN comparisons stand."
+ }
+}

@@ -1,5 +1,7 @@
 # Evidence gives a reason against wishful distortion (#930)
 
+[Research record](../../corpus/attempts/epistemic-reasons-930.json)
+
 Analyst argument, 2026-11-05. Attribution deferred. This note investigates a
 positive reason to believe the principle, rather than claiming that the previous
 truth-policy/access countermodels establish it. The selected conclusion is:

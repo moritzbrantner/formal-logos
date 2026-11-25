@@ -1,0 +1,15 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.LocalSourceConfluence.Challenge",
+  "solution_module": "TruthCore.Results.Causality.LocalSourceConfluence.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.LocalSourceConfluence.confluenceOfLocalForks",
+    "TruthCore.Results.Causality.LocalSourceConfluence.obstructionOfTwoSources",
+    "TruthCore.Results.Causality.LocalSourceConfluence.uniqueActualOfLocalForks"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "enable_nanoda": true
+}

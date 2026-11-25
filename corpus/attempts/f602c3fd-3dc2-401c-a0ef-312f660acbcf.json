@@ -17,7 +17,8 @@
     "426a1984-278b-4422-a040-611ef987a87d",
     "58893813-151d-4eca-ae3f-1d8dfb979a06",
     "e79013a6-99e1-4cb7-b8bf-7a8f0a558683",
-    "c5fa184f-6da3-4be5-9013-591a70d5e9c5"
+    "c5fa184f-6da3-4be5-9013-591a70d5e9c5",
+    "PR-1617"
   ],
   "blocker": "Partial-dependence networks (several overlapping shared nodes), a threshold result for imperfect checkers, the application question whether specific Truth Core checks are discriminating for a given error type and shared-sensitive check flags (events on the shared and local coordinates together) remain open. Connection to #930/#931/#934 is a plan, not a route."
 }

@@ -1,0 +1,11 @@
+{
+  "id": "91e4b2c4-ea00-4026-8e97-e6de2bc2ef5a",
+  "label": "Compare exports and receipts over the full ancestry of a positive transfer",
+  "argument_id": "3065c262-eb56-48e6-83ff-1e3f7edb4abf",
+  "challenge_module": "TruthCore.Results.Causality.FiniteThroughput.Challenge",
+  "solution_module": "TruthCore.Results.Causality.FiniteThroughput.Solution",
+  "theorem": "TruthCore.Results.Causality.FiniteThroughput.returnOrNetExport",
+  "comparator_config": "results/91e4b2c4-ea00-4026-8e97-e6de2bc2ef5a/comparator.json",
+  "status": "solution-present",
+  "description": "A return-free edge leaves the sender ancestry while every positive receipt into it originates inside. Finite throughput makes the strict edge survive summation. Reindexing both sums contradicts local coverage if every ancestor merely forwards receipts."
+}

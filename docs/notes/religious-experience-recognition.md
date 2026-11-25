@@ -2,7 +2,7 @@
 
 This analyst reconstruction serves `STMT-REVELATION-POSSIBLE-AND-RECOGNIZABLE`
 (`5fc7a6f9-94d7-5938-9e32-b2614c159646`), a direct stage-three input on
-Catholicism routes. Attribution is deferred. It adds no source claim.
+Catholicism routes. Attribution is deferred. It adds no source claim. [Research record](../../corpus/attempts/0daee124-568a-4edd-9989-255571610e01.json)
 
 The strongest case is an occurring experience that accurately presents its
 source, survives defeaters and reliably identifies that source. The strongest
@@ -34,7 +34,7 @@ explicit distinction between justified belief and truth is retained, not used
 as a theorem. Sellars's recognized-report-reliability record likewise does not
 supply experience calibration. The nearby testimony comparisons do not prove
 any experience premise. The previous naming/veracity rejected-edges attempt
-(`253f4671-7ae5-5b91-862a-867abcb123f5`) already shows why the root's primitive
+([`253f4671-7ae5-5b91-862a-867abcb123f5`](../../corpus/attempts/ATTEMPT-NAMING-VERACITY-BATCH1-REJECTED-EDGES.json)) already shows why the root's primitive
 capability cannot be obtained without a bridge; this reconstruction preserves
 that boundary. The revelation calibration context supplies the exact profile
 and scope distinction, not independent justification of its calibration.
