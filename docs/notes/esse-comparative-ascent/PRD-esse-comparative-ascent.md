@@ -3,8 +3,8 @@
 - **Repository** `moritzbrantner/formal-logos`
 - **Original draft and continuation** 2026-11-24
 - **Original evidence revision** `0ce1e78ed5e42962586356631a778e24a832c546` (read-only connector retrieval)
-- **Draft status** Independent semantic challenge reviewed the original PR #1919 head `a0cd646f9f33cc12f0b8c3287397458c6c1269c0`. The targeted re-review accepted this local research handoff at `9a2f58dfd7ac2f9da1460bc8d19b202671bc3213`. Proof integration and merge remain outside the authority of the owner’s draft-only publication request.
-- **Reconciliation (2026-11-25)** Current-main responses and existing conditional results appear in A1–A2, B4 and §12.7. The earlier acceptance applies to the draft at its recorded revision.
+- **Review history** Independent semantic challenge reviewed the original PR #1919 head `a0cd646f9f33cc12f0b8c3287397458c6c1269c0`. The targeted re-review accepted this local research handoff at `9a2f58dfd7ac2f9da1460bc8d19b202671bc3213`. The original delivery was a research draft.
+- **Reconciliation (2026-11-25)** Current-main responses and existing conditional results appear in A1–A2, B4 and §12.7. Independent recheck accepted those reconciled findings at `a8937e777cc37f5f2505d7a9e9ccfdc097a07e0d`. The proposed siblings remain research candidates.
 - **Primary targets** `d5a94eb1`, `cffad050` and `8176a284`. Comparative crux `fd2c8710` / `9eaa3b6e`.
 
 ## 1. Executive decision
@@ -42,7 +42,7 @@ Retain prior findings:
 | `e3167aef`, `31055b56`, `94271978` | Existing inclusive content, causal footprint and own-being/infinity/limitation contrast results. Reuse; do not treat footprint as intrinsic fullness. |
 | `fe67d766`, `3b39e0ba`, `f8b58a9b`, `bd0a956c` | Root pure completeness, strict purity, real thisness, and purely determined indiscernibles identity respectively. |
 
-The draft concerns analyst proposals on the existing GOD_4 routes. Direct primitive support remains available alongside any sufficient derivation. The evidence uses recorded historical readings, with source attribution deferred for this work. Draft PR #1919 carries the owner’s draft publication request. The reviewed correction remains a local research checkpoint.
+The draft concerns analyst proposals on the existing GOD_4 routes. Direct primitive support remains available alongside any sufficient derivation. The evidence uses recorded historical readings, with source attribution deferred for this work. PR #1919 carries the reviewed comparison and the record of which proposed proofs already have counterparts.
 
 The [companion assessment](esse-comparative-ascent-assessment.md) contains the bounded consumer audit and causal-asymmetry argument. This PRD extends it; the canonical destination of accepted findings is the relevant existing corpus note and attempt, not a new permanent requirements registry.
 
