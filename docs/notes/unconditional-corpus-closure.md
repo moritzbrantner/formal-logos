@@ -1,8 +1,7 @@
 # Audit of unconditional corpus consequences
 
 Continues #497, #1007, #1565, #1926, #1987 and #1989. Initial baseline:
-`8a8dcdbed7c2c1501b74c9ae8aa408ec5fa25c26`. Draft research checkpoint; no floor marking, relation, proof,
-definition, or closure rule is changed here. No new status registry.
+`8a8dcdbed7c2c1501b74c9ae8aa408ec5fa25c26`. The corpus-wide replay and its bounded conclusions were independently reviewed at `4fcdda343c46190d9c2ec008249b5d24d1ffe4fa`. The nine closure comparisons and the cycle findings were reproduced. The recheck accepted the correction to the empty-history witness and the description of the rule filter. [Delivery and checks](https://github.com/moritzbrantner/formal-logos/pull/1993)
 
 ## What reaches the God-existence stage
 
@@ -537,7 +536,7 @@ no-episode/constant-state controls. Their existence is formal compatibility,
 not a claim of equal philosophical warrant. Reopening condition: a
 justified same-content actual witness, or a proof in the already fixed
 truth/episode semantics that transfers that witness without packing the
-target into a premise. Independent semantic challenge remains pending.
+target into a premise. The subsequent corpus-wide review is recorded at the start of this note.
 
 ## Checkpoint 4: actuality, modal certificates and concrete contingency
 
