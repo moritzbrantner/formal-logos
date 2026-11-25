@@ -23,6 +23,7 @@ public import TruthCore.Results.Logic.CorrelatedTestimony1396.Solution
 public import TruthCore.Results.Logic.DarwinianEpistemicDebunking.BasisDefeat.Solution
 public import TruthCore.Results.Logic.DarwinianEpistemicDebunking.CrossHistory.Solution
 public import TruthCore.Results.Logic.DarwinianEpistemicDebunking.Solution
+public import TruthCore.Results.Logic.EpistemicAccuracy.BayesianRefinement.Solution
 public import TruthCore.Results.Logic.EpistemicAccuracy.Refinement.Solution
 public import TruthCore.Results.Logic.EpistemicAccuracy.Solution
 public import TruthCore.Results.Logic.EpistemicAccuracy.Statewise.Solution

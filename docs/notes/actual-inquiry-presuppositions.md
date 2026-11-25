@@ -1082,3 +1082,77 @@ The strongest standing higher-order rival can agree the first-order evidence sup
 ### Verification and handoff
 
 Earlier graph CI failed; the targeted repair at `d48fe8f8ea50ff805b42ce6734ff8e9c58e51154` is retained. The refinement Challenge was frozen in `1c1e8eaf778d98367ae580e627be2f0f27efbcd7` before writing Solution. The new result is solution-present only until CI and binding/Comparator/NanoDa pass. No floor or source-attribution changes and no computed root frontier delta claimed. Independent semantic challenge, actual case warrant and full local verification remain outstanding (no prepared clone or Lean/Lake/Cargo in this environment). The next discriminating work is to apply the qualitative test to an actual direct-ground case and the strongest credible higher-order undercutter, distinguish possession/use/sufficiency, and identify a concrete condition under which a requested additional credential supplies genuine warrant rather than renaming competence.
+
+
+## Continuation: Bayesian limits on demands for further reasons
+
+The owner requested the Bayes connection and interesting consequences of the bounded-check result. Reuse [the existing contrastive comparison](contrastive-worldview-934.md), `LOGIC-CONTRASTIVE-WORLDVIEW` (`82e41e84`), [conditional corroboration and dependence controls](correlated-testimony-1396.md), the [accuracy/threshold studies](epistemic-reasons-930.md), and the registered binary check-value proposition `99c8b610` (result `44b0968c`). This is a local epistemological diagnostic, not probabilistic scoring of historical stages or an assignment of numbers to metaphysical premises.
+
+### Likelihood contrast measures the prospective value of a check
+
+Fix a binary hypothesis H and its complement, with prior p in (0,1). A proposed binary observation has a=Pr(E|H) and b=Pr(E|not H), predictive weight m=pa+(1-p)b, and m in (0,1). Let u=pa/m and v=p(1-a)/(1-m) be the two posteriors. Directly from the joint equations,
+
+    m*u+(1-m)*v = p
+    m*(1-m)*(u-v) = p*(1-p)*(a-b).
+
+Composing with the previous check-value certificate gives
+
+    G = m*(1-m)*(u-v)^2
+      = [p*(1-p)*(a-b)]^2/[m*(1-m)].
+
+The exact scaled identity, recovered prior, and zero condition (G=0 iff a=b) are registered as [result 031d314d](../../corpus/results/031d314d-e057-4ada-a116-cff3f284ef73.json), taking the existing `99c8b610` statement as its explicit premise. [Frozen Challenge](../../TruthCore/Results/Logic/EpistemicAccuracy/BayesianRefinement/Challenge.lean), [Solution](../../TruthCore/Results/Logic/EpistemicAccuracy/BayesianRefinement/Solution.lean) and [batch spec](../../specs/epistemic-bayesian-refinement.toml). The joint-equation interface uses real probabilities and allows a or b to be zero if both predictive outcomes have positive mass; it is not a claim that the older strictly-positive rational `Comparison` covers zero denominators. No prior or likelihood is assigned to an actual metaphysical proposition. The conditional math does not select a normative account.
+
+The mean posterior equals the prior. Thus a prospective useful check need not be expected to raise belief in H: information gain is not expected confirmation. A test may be valuable precisely because a contrary outcome would rationally lower confidence.
+
+### Four discriminating consequences
+
+1. **Strength of received evidence is distinct from value of seeking evidence.** At p=1/2, rates a=9/10,b=1/10 give posterior 9/10 on E and gain 4/25. Rates a=9/1000,b=1/1000 have the same positive-outcome likelihood ratio 9 and the same posterior 9/10 on E, but gain only 4/4975. The rare positive result is just as diagnostic when received, while the prospective check is about 199 times less valuable under the chosen accuracy measure. An unlikely objection or confirmation cannot be assessed merely by the magnitude of its update conditional on occurring. Conversely a rare result can be decisive when it does occur, and practical stakes or other epistemic objectives can alter the value of pursuing it.
+2. **Diminishing returns are bounded, not necessarily monotonic.** The available expected squared-error improvement at prior p is at most p(1-p); at p=99/100 and the same 9/10,1/10 channel, gain is 363/557500, about 0.000651. A different prior or later evidence can move confidence back toward the middle, so there is no claim that every successive conditional gain is smaller. The earlier unconditional telescoping budget applies only to a fixed target, same coherent measure and nested evidence refinements. A dogmatic prior is not evidence of certainty; zero room under a stipulated model does not certify the model.
+3. **Accumulation is neither a count nor an independence requirement.** For a sequence of received observations use the conditional likelihood factor given the observations already obtained. Prior odds times the product of those factors are the updated odds. This is the existing chain-factor principle, not multiplication of marginal likelihood ratios. Deterministic copies of a single positive report (posterior 9/10) leave that posterior at 9/10 when the copying mechanism is fixed; partial dependence need not do so. If the conditional factors along the observed sequence are all at least k>1, and initial odds O0>0, then after n such factors odds are at least O0*k^n. For a fixed chosen threshold t in (0,1), n satisfying O0*k^n >= t/(1-t) is sufficient. This is a conditional finite-threshold result, not a proof that the observations will occur, any threshold is legitimate, or arbitrarily high confidence is warranted in actual inquiry. Without a nonzero lower bound on prior odds, no finite uniform n follows from a finite factor bound. Even strictly favorable updates can fail to attain a threshold: for n>=1 take factor L_n=(n+1)^2/[n(n+2)]>1. The product through N telescopes to 2(N+1)/(N+2), strictly below 2. From prior 1/2, posterior is 2(N+1)/(3N+4), increasing toward 2/3 but always below it. These factors are realizable as successive conditional likelihood ratios for a positive outcome, e.g. b_n=1/2 and a_n=L_n/2, with fresh outcomes conditional on H/not H; the assertion concerns the all-positive path. Merely adding more favoring arguments does not guarantee arbitrary warrant or confidence. This telescoping example and threshold argument are algebraic research findings in the note, not separately registered Lean theorems.
+4. **Question-relative stopping, with reopening.** Suppose a particular instance is genuinely apprehended and the subject grasps the existential consequence, or the existing grounds entail the target on the fixed interpretation. Another test cannot improve optimal first-order squared-error accuracy when the correctly conditioned assessment already assigns the target probability one. Yet a check of access, premise truth or rule application can be informative for a different, unresolved target. In an illustrative assessment, a known target with prior one has zero gain for any admissible further refinement, while an uncertain reliability target with prior 1/2 and rates 9/10,1/10 has gain 4/25. This is not a claim that the direct-grasp judgment is already calibrated with p=1; a concrete undercutter may warrant revising that assessment. The distinction blocks both arbitrary endless credentialing and arbitrary dogmatism. A request to repeat a reason must show what new uncertainty it addresses, not merely relabel the original target. A credible challenge to the interpretation, evidence access or model is not redundant just because the first-order consequence is fixed.
+
+### Executed checks, boundaries and next test
+
+The following exact-fraction test ran in the container on p=i/12 for i=1,...,11 and a,b=j/12 for j=0,...,12. There were 1,837 positive-denominator profiles. It checked posterior pooling, the risk-difference formula, the scaled identity, the zero condition, the upper bound, and both update directions. The four fixtures above and 1,000 bounded-product steps also passed. Reproduction (Python standard library):
+
+```python
+from fractions import Fraction as F
+from itertools import product
+
+def gain(p,a,b):
+    w=p*a+(1-p)*b
+    if not 0<w<1: return None
+    u=p*a/w
+    v=p*(1-a)/(1-w)
+    g=w*(1-w)*(u-v)**2
+    assert p==w*u+(1-w)*v
+    assert g==p*(1-p)-w*u*(1-u)-(1-w)*v*(1-v)
+    assert w*(1-w)*g==(p*(1-p)*(a-b))**2
+    assert (g==0)==(a==b) if 0<p<1 else g==0
+    assert 0<=g<=p*(1-p)
+    assert (u>p)==(a>b) if 0<p<1 else u==p
+    assert (v<p)==(a>b) if 0<p<1 else v==p
+    return w,u,v,g
+count=0
+for p,a,b in product([F(i,12) for i in range(1,12)],
+                     [F(i,12) for i in range(13)],
+                     [F(i,12) for i in range(13)]):
+    if gain(p,a,b) is not None: count+=1
+assert count==1837
+assert gain(F(1,2),F(9,10),F(1,10))[-1]==F(4,25)
+assert gain(F(1,2),F(9,1000),F(1,1000))[-1]==F(4,4975)
+assert gain(F(99,100),F(9,10),F(1,10))[-1]==F(363,557500)
+assert gain(F(1,2),F(7,10),F(7,10))[-1]==0
+assert gain(F(1),F(9,10),F(1,10))[-1]==0
+odds=F(1)
+for n in range(1,1001):
+    factor=F((n+1)**2,n*(n+2))
+    assert factor>1
+    odds*=factor
+    assert odds==F(2*(n+1),n+2)<2
+    assert odds/(1+odds)==F(2*(n+1),3*n+4)<F(2,3)
+```
+
+The prior/likelihood model and the accuracy objective require justification; the calculations alone do not confer normative authority or a universal cutoff. They complement rather than replace the C/T/W/F6 incompatibility. The strict universal independent-credential demand is not justified by the mere possibility of positive further gain, and possible gain is not sufficient to show that current belief is unwarranted. The strongest higher-order rival can grant the first-order bearing and challenge the access/model grounds. The next discriminating test is to identify a concrete model or access defeater and compare the gain of investigating that uncertainty to merely restating the original reason. Keep actual reason attribution and F6 independent warrant separate.
+
+The Challenge was frozen at `d3f53785e237640989f0c68ba23a848347eae246` before writing the Solution. The previous head's selected Comparator shard completed successfully; other integration checks were still running at inspection. The new result is solution-present pending kernel/Comparator/NanoDa, corpus checks and independent semantic challenge. No source claim, floor change, or computed root premise discharge asserted. The absence of a prepared local clone and Lean/Lake/Cargo remains the local verification blocker.

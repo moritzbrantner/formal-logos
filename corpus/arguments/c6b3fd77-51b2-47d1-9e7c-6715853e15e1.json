@@ -1,0 +1,16 @@
+{
+  "id": "c6b3fd77-51b2-47d1-9e7c-6715853e15e1",
+  "label": "Bayesian likelihood contrast determines binary check accuracy gain",
+  "premise_statement_ids": [
+    "99c8b610-ab86-4610-bfe0-27a4cd339a96"
+  ],
+  "conclusion_statement_id": "907aafab-960d-4290-bd08-b955f1f10f4c",
+  "inference_ids": [
+    "2fb10fdc-5efb-4504-8a4c-bc197994095f"
+  ],
+  "meaning": "Use the existing binary-check accuracy certificate on the two conditional posteriors. Adding the joint equations recovers the prior. Eliminating the common pooled prior gives w(1-w)(u-v)=p(1-p)(a-b); substitution into the existing gain identity gives the scaled formula. The nondegenerate weights and prior make the zero-gain condition exactly equality of likelihoods. This real-valued joint-equation profile allows zero likelihoods with positive predictive masses, whereas the earlier contrastive rational Comparison has strictly positive likelihoods. It does not assign actual probabilities, establish reason attribution or supply a threshold of sufficient warrant.",
+  "definition_ids": [
+    "c89d6b19-0d84-5124-8289-99f130113c74",
+    "1683f712-7c0b-4b81-b6ba-82a2644de4e8"
+  ]
+}

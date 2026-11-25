@@ -22,6 +22,7 @@ public import TruthCore.Logic.DarwinianEpistemicDebunking
 public import TruthCore.Logic.DarwinianEpistemicDebunking.BasisDefeat
 public import TruthCore.Logic.DistributedKnowledge
 public import TruthCore.Logic.EpistemicAccuracy
+public import TruthCore.Logic.EpistemicAccuracy.BayesianRefinement
 public import TruthCore.Logic.EpistemicAccuracy.Refinement
 public import TruthCore.Logic.EpistemicAuthority
 public import TruthCore.Logic.EpistemicCredentialing
