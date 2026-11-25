@@ -896,7 +896,10 @@ the actual request before closing or dispatching it.
 
 An assessment can name the exact note section that mentions the issue. The
 brief follows that link even when the assessment omits the issue number.
-Other sections in the same file keep their own scope.
+It also shows records explicitly named in that section and attempts citing a
+related PR in their `evidence`. Each result identifies the reference that led
+to it. A batch PR can deliver several investigations. Match the attempt's scope
+and the section containing the finding before treating it as the issue's answer.
 
 The text gives a bounded view. `--json` includes the original request and
 comments, all matching records and all directly referenced note sections.

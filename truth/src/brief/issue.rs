@@ -3,7 +3,7 @@ use super::retrieval::{Issues, Revision, is_pull_request, issue_header};
 use crate::{Corpus, KINDS, notes};
 use fancy_regex::Regex;
 use serde_json::{Map, Value, json};
-use std::collections::BTreeSet;
+use std::collections::{BTreeMap, BTreeSet};
 use std::fmt::Write;
 use std::path::Path;
 use std::sync::LazyLock;
@@ -17,7 +17,15 @@ static REFERENCE: LazyLock<Regex> = LazyLock::new(|| {
         .expect("issue reference pattern")
 });
 
-fn github_item(url: &str) -> Option<(&str, u64)> {
+fn repository_name(name: &str) -> &str {
+    if name.eq_ignore_ascii_case("moritzbrantner/truth-core") {
+        "moritzbrantner/formal-logos"
+    } else {
+        name
+    }
+}
+
+pub(crate) fn github_item(url: &str) -> Option<(&str, u64)> {
     let path = url
         .strip_prefix("https://github.com/")
         .or_else(|| url.strip_prefix("http://github.com/"))?;
@@ -30,14 +38,15 @@ fn github_item(url: &str) -> Option<(&str, u64)> {
     if !matches!(kind, "issues" | "pull") || repo.split('/').count() != 2 {
         return None;
     }
-    Some((repo, number.parse().ok()?))
+    Some((repository_name(repo), number.parse().ok()?))
 }
 
 fn references(text: &str, repository: Option<&str>) -> BTreeSet<u64> {
     let mut numbers = BTreeSet::new();
     for captures in REFERENCE.captures_iter(text).flatten() {
-        let is_local =
-            |repo: &str| repository.is_some_and(|local| repo.eq_ignore_ascii_case(local));
+        let is_local = |repo: &str| {
+            repository.is_some_and(|local| repository_name(repo).eq_ignore_ascii_case(local))
+        };
         if let Some(ids) = captures.get(2) {
             if captures.get(1).is_none_or(|repo| is_local(repo.as_str())) {
                 numbers.extend(
@@ -55,7 +64,7 @@ fn references(text: &str, repository: Option<&str>) -> BTreeSet<u64> {
     numbers
 }
 
-fn checkout_repository(root: &Path) -> Option<String> {
+pub(crate) fn checkout_repository(root: &Path) -> Option<String> {
     if !root.join(".git").exists() {
         return None;
     }
@@ -73,7 +82,12 @@ fn checkout_repository(root: &Path) -> Option<String> {
         .strip_prefix("https://github.com/")
         .or_else(|| url.strip_prefix("git@github.com:"))
         .or_else(|| url.strip_prefix("ssh://git@github.com/"))?;
-    Some(name.to_ascii_lowercase())
+    Some(repository_name(name).to_ascii_lowercase())
+}
+
+pub(crate) fn matches_checkout(repository: &str, checkout: Option<&str>) -> bool {
+    repository.eq_ignore_ascii_case("moritzbrantner/formal-logos")
+        || checkout.is_none_or(|local| repository.eq_ignore_ascii_case(local))
 }
 
 fn host_text(row: &Fields) -> impl Iterator<Item = &str> {
@@ -153,15 +167,23 @@ pub fn report(
             .then(|| names.into_iter().next())
             .flatten()
     });
-    let repo = repo.or_else(|| checkout_repository(root));
+    let checkout = checkout_repository(root);
+    if let (Some(host), Some(local)) = (&repo, &checkout)
+        && !matches_checkout(host, Some(local))
+    {
+        return Err(format!(
+            "issue snapshot belongs to {host}, checkout belongs to {local}"
+        ));
+    }
+    let repo = repo.or(checkout);
     let local = repo.as_deref();
     let digits = number.to_string();
     let matches = |text: &str| text.contains(&digits) && references(text, local).contains(&number);
     let mut named_records = BTreeSet::new();
     let mut named = BTreeSet::new();
     let mut timeline = BTreeSet::new();
+    let lookup = notes::Lookup::of_corpus(corpus);
     if let Some(target) = target {
-        let lookup = notes::Lookup::of_corpus(corpus);
         for text in host_text(target) {
             named.extend(references(text, local));
             for section in notes::parse("issue", text).sections {
@@ -181,6 +203,7 @@ pub fn report(
         }
     }
     let mut prs = Vec::new();
+    let mut related_prs = BTreeMap::new();
     for item in items.iter().filter(|r| is_pull_request(r)) {
         if repo_of(item).is_some_and(|r| Some(r.as_str()) != local) {
             continue;
@@ -204,12 +227,14 @@ pub fn report(
             header["references"] = json!(links);
             header["head"] = json!(item.get("headRefOid"));
             header["mention_excerpt"] = json!(excerpt);
+            related_prs.insert(format!("PR-{pr}"), pr);
             prs.push(header);
         }
     }
     prs.sort_by_key(|v| v["number"].as_u64());
     let mut sections = Vec::new();
     let mut section_keys = BTreeSet::new();
+    let mut section_records = BTreeMap::<_, BTreeSet<_>>::new();
     for (path, bytes) in notes::read_all(root)? {
         let text = std::str::from_utf8(&bytes).map_err(|e| format!("{path}: {e}"))?;
         if !text.contains(&digits) {
@@ -218,6 +243,12 @@ pub fn report(
         let note = notes::parse(&path, text);
         for section in &note.sections {
             if matches(&section.heading) || matches(&section.body) {
+                for link in lookup.links(section).0 {
+                    section_records
+                        .entry((link.kind, link.id))
+                        .or_default()
+                        .insert(note.key(section));
+                }
                 if !section.anchor.is_empty() {
                     section_keys.insert(note.key(section));
                 }
@@ -230,19 +261,31 @@ pub fn report(
         for record in corpus.entries(kind) {
             let fields = &record.fields;
             let id = fields.get("id").and_then(Value::as_str).unwrap_or_default();
-            let named_by_issue = named_records.contains(&(kind.to_owned(), id.to_owned()));
+            let key = (kind.to_owned(), id.to_owned());
+            let named_by_issue = named_records.contains(&key);
+            let named_by_sections = section_records.get(&key);
+            let cited_prs: BTreeSet<_> = fields
+                .get("evidence")
+                .and_then(Value::as_array)
+                .into_iter()
+                .flatten()
+                .filter_map(Value::as_str)
+                .filter_map(|reference| related_prs.get(reference))
+                .collect();
             let mentions_issue = fields.values().any(|v| contains_ref(v, &matches));
             let assessment_section = fields
                 .get("current_assessment")
                 .and_then(|assessment| assessment["note"].as_str())
                 .filter(|note| section_keys.contains(*note));
-            if !named_by_issue && !mentions_issue && assessment_section.is_none() {
+            let direct = named_by_issue || mentions_issue || assessment_section.is_some();
+            if !direct && named_by_sections.is_none() && cited_prs.is_empty() {
                 continue;
             }
             records.push(json!({"kind":kind,"path":record.path,"id":fields.get("id"),
                 "label":fields.get("label").or_else(|| fields.get("paraphrase")),
                 "named_by_issue":named_by_issue, "mentions_issue":mentions_issue,
-                "assessment_section":assessment_section,
+                "assessment_section":assessment_section, "direct":direct,
+                "named_by_sections":named_by_sections, "cited_related_prs":cited_prs,
                 "scope_names_issue":fields.get("current_assessment").and_then(|v|v["scope"].as_str()).is_some_and(matches),
                 "current_assessment":fields.get("current_assessment"),"outcome":fields.get("outcome"),
                 "summary":fields.get("summary"),"blocker":fields.get("blocker")}));
@@ -250,6 +293,8 @@ pub fn report(
     }
     records.sort_by_key(|r| {
         (
+            r["direct"] != true,
+            r["direct"] != true && r["named_by_sections"].is_null(),
             !r["scope_names_issue"].as_bool().unwrap_or(false),
             r["assessment_section"].is_null(),
             r["current_assessment"].is_null(),
@@ -259,7 +304,7 @@ pub fn report(
     Ok(
         json!({"number":number,"revision":revision,"issue":target,"issue_history":issues,
         "pull_requests":prs,"records":records,"note_sections":sections,
-        "boundary":"Direct references on this checkout and in the supplied history. Compare the requested scope with the cited delivery before dispatch or closure."}),
+        "boundary":"References from this issue, its note sections and related PRs. Compare the requested scope with the cited delivery before dispatch or closure."}),
     )
 }
 
@@ -316,7 +361,7 @@ pub fn render(report: &Value, limit: usize) -> String {
     let sections = report["note_sections"].as_array().unwrap();
     writeln!(
         out,
-        "Direct checkout references: {} records, {} note sections.",
+        "Linked checkout evidence: {} records, {} note sections.",
         records.len(),
         sections.len()
     )
@@ -329,6 +374,30 @@ pub fn render(report: &Value, limit: usize) -> String {
             row["label"].as_str().unwrap_or("")
         )
         .unwrap();
+        if let Some(sections) = row["named_by_sections"]
+            .as_array()
+            .filter(|_| row["direct"] != true)
+        {
+            for section in sections.iter().filter_map(Value::as_str) {
+                writeln!(out, "    Named in {section}").unwrap();
+            }
+        }
+        if let Some(prs) = row["cited_related_prs"]
+            .as_array()
+            .filter(|v| !v.is_empty())
+        {
+            let refs = prs
+                .iter()
+                .filter_map(Value::as_u64)
+                .map(|n| format!("#{n}"))
+                .collect::<Vec<_>>()
+                .join(", ");
+            writeln!(out, "    Cites related PR {refs}").unwrap();
+            if row["direct"] != true && row["named_by_sections"].is_null() {
+                // A batch can also contain work on independent issues.
+                continue;
+            }
+        }
         let a = &row["current_assessment"];
         if !a.is_null() {
             if let Some(section) = row["assessment_section"].as_str() {
@@ -369,6 +438,6 @@ pub fn render(report: &Value, limit: usize) -> String {
         )
         .unwrap();
     }
-    out.push_str("Use --json for the issue body, available discussions, all direct records, assessments and note locations.\n");
+    out.push_str("Use --json for the issue body, available discussions, all linked records, assessments and note locations.\n");
     out
 }
