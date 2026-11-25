@@ -98,6 +98,11 @@ truth --json synthesis 3de4bd49-567b-44de-8472-88a24ea1311a --compare-premises
 
 The comparison starts with that argument’s retained premises and commitments. It follows rules backed by registered solutions, including zero-input results. It reports whether the selected argument still applies, other producers of the conclusion supported by those same inputs, and a dependency-ordered derivation when one exists. The target is excluded from the starting facts and from intermediate derivations. A withheld input can be derived through another route. The result concerns conditional reachability of statement IDs. Verifying that the witnesses and interpretations match across an inferred path requires a separate Lean composition.
 
+`--without` also reads prior investigations and scoped assessments of the withheld
+inputs. JSON gives each matching attempt once in `previous_investigations`, even
+when it targets several withheld inputs. `withheld_assessments` uses each current
+judgment’s own statement IDs.
+
 The statement view leads with the formal target and the frozen Lean theorem for a supporting route, with its Solution and verification configuration. It quotes
 scoped judgments and a live test, and compares the actual premises of its
 immediate arguments. A complete illustrative route provides a command for each
@@ -126,9 +131,12 @@ The complete statement JSON includes these fields.
 | `objections` | Registered attacks, alternatives and refutation relations directed at the target or an immediate premise, with their original notes and paths. The relation alone does not establish defeat. |
 | `consumers`, `related_statements` | Downstream arguments with all co-premises, separate commitments and conclusion IDs, and the additional statement descriptions needed to read them. |
 | `target_attempt_paths` | Target-indexed investigations, including earlier attempts without a current assessment. An empty current-assessment list can coexist with substantial prior work. |
+| `previous_investigations` | Each attempt targeting the statement or one of its immediate premises, in attempt ID order. Entries retain the attempt’s original statement IDs, kind, outcome, summary, blocker, evidence and source path. |
 
-`--limit` affects text display. JSON retains every matching assessment and
-every immediate argument. Read a premise with `truth synthesis PREMISE_ID` to
+The text can show one earlier finding about an input or target outside that
+attempt’s current judgment scope. Its outcome describes the investigation.
+`--limit` affects text display. JSON retains every matching investigation,
+assessment and immediate argument. Read a premise with `truth synthesis PREMISE_ID` to
 continue down its branch. `truth dossier PREMISE_ID` includes historical
 attempts and source records. `truth support-graph STATEMENT` exports the
 complete backward slice of result-backed arguments. Direct consideration of a

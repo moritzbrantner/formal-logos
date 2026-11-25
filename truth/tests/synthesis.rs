@@ -117,6 +117,23 @@ fn exact_argument_overlap_scoped_rivals_and_prior_work() {
         "Separate research.",
         "accepted_qualified",
     );
+    let counterexample = json!({
+        "id":"counterexample", "label":"Finite comparison", "date":"2026-11-18",
+        "statement_ids":["Q","T","P"], "kind":"countermodel", "outcome":"succeeded",
+        "summary":"A finite model separates the inputs in this interpretation. Its scope is limited to that model.",
+        "blocker":"Check whether the model represents the actual witnesses.",
+        "evidence":["result-b","PR-23"]
+    });
+    fixture.write("attempts", counterexample.clone());
+    fixture.write(
+        "attempts",
+        json!({
+            "id":"blocked-search", "label":"Direct argument search", "date":"2026-11-17",
+            "statement_ids":["Q"], "kind":"derivation", "outcome":"failed",
+            "summary":"The search found no derivation from the retained inputs.",
+            "blocker":"The bridge to the actual witness is still open.", "evidence":["result-c"]
+        }),
+    );
     fixture.write("relations",json!({"id":"challenge","subject_kind":"statement","subject_id":"C",
         "predicate":"attacks","object_kind":"statement","object_id":"Q","note":"An objection to Q."}));
 
@@ -137,6 +154,44 @@ fn exact_argument_overlap_scoped_rivals_and_prior_work() {
     assert_eq!(value["assessments"].as_object().unwrap().len(), 3);
     assert_eq!(value["premises"]["P"]["assessment_ids"], json!(["across"]));
     assert_eq!(value["premises"]["Q"]["assessment_ids"], json!([]));
+    let previous = value["previous_investigations"].as_array().unwrap();
+    assert_eq!(
+        previous
+            .iter()
+            .map(|r| r["attempt_id"].as_str().unwrap())
+            .collect::<Vec<_>>(),
+        [
+            "across",
+            "blocked-search",
+            "competing",
+            "counterexample",
+            "direct",
+            "elsewhere"
+        ]
+    );
+    assert_eq!(previous[0]["statement_ids"], json!(["P", "S", "T"]));
+    assert_eq!(
+        value["assessments"]["across"]["statement_ids"],
+        json!(["P", "S"])
+    );
+    assert_eq!(previous[1]["outcome"], "failed");
+    assert_eq!(
+        previous[1]["blocker"],
+        "The bridge to the actual witness is still open."
+    );
+    for field in [
+        "label",
+        "date",
+        "statement_ids",
+        "kind",
+        "outcome",
+        "summary",
+        "blocker",
+        "evidence",
+    ] {
+        assert_eq!(previous[3][field], counterexample[field], "{field}");
+    }
+    assert_eq!(previous[3]["path"], "corpus/attempts/counterexample.json");
     assert_eq!(
         value["shared_premises"],
         json!([{"statement_id":"P","argument_ids":["a","b"]}])
@@ -189,6 +244,10 @@ fn exact_argument_overlap_scoped_rivals_and_prior_work() {
     assert!(human.contains("It does not establish the universal claim."));
     assert!(human.contains("Proposed, unreviewed"));
     assert!(human.contains("The same case favors the competing interpretation."));
+    assert!(human.contains("Earlier investigation (countermodel, recorded outcome succeeded)"));
+    assert!(human.contains("Its scope is limited to that model."));
+    assert!(human.contains("Source — corpus/attempts/counterexample.json"));
+    assert!(human.contains("Use --json for full attempt findings"));
     assert_eq!(
         human
             .matches("One investigation covers the actual witnesses.")
@@ -213,6 +272,9 @@ fn exact_argument_overlap_scoped_rivals_and_prior_work() {
     let bare: Value = serde_json::from_slice(&fixture.run(&["Q", "--json"]).stdout).unwrap();
     assert_eq!(bare["routes"], json!([]));
     assert_eq!(bare["target_assessment_ids"], json!([]));
+    let bare_text = String::from_utf8(fixture.run(&["Q"]).stdout).unwrap();
+    assert!(bare_text.contains("No current assessment explicitly names this proposition."));
+    assert!(bare_text.contains("Its scope is limited to that model."));
     assert!(
         bare["consumers"]
             .as_array()
@@ -243,7 +305,7 @@ fn exact_argument_overlap_scoped_rivals_and_prior_work() {
         assert!(human.contains(&format!("truth synthesis {}", premise.as_str().unwrap())));
     }
     for id in ["T", "Q"] {
-        fixture.write("statements", json!({"id":id,"paraphrase":format!("Statement {id}."),"lean_declaration":format!("{id}.Exists")}));
+        fixture.write("statements", json!({"id":id,"label":id,"paraphrase":format!("Statement {id}."),"lean_declaration":format!("{id}.Exists")}));
     }
     assert!(fixture.run(&["T.Exists"]).status.success());
     let ambiguous = fixture.run(&["Exists", "--json"]);
@@ -257,6 +319,42 @@ fn exact_argument_overlap_scoped_rivals_and_prior_work() {
             .contains("truth synthesis T")
     );
     assert_eq!(fixture.run(&["missing"]).status.code(), Some(3));
+
+    let withheld = ["a", "--without", "P", "--without", "Q"];
+    let output = fixture.run(&withheld);
+    assert!(
+        output.status.success(),
+        "{}",
+        String::from_utf8_lossy(&output.stderr)
+    );
+    let withheld_text = String::from_utf8(output.stdout).unwrap();
+    assert_eq!(
+        withheld_text
+            .matches("corpus/attempts/counterexample.json")
+            .count(),
+        1
+    );
+    assert!(withheld_text.contains("One investigation covers the actual witnesses."));
+    assert!(withheld_text.contains("Its scope is limited to that model."));
+    let replay: Value =
+        serde_json::from_slice(&fixture.run(&[&withheld[..], &["--json"]].concat()).stdout)
+            .unwrap();
+    assert_eq!(replay["reachable"], false);
+    assert_eq!(
+        replay["withheld_assessments"][0]["statement_ids"],
+        json!(["P", "S"])
+    );
+    assert_eq!(
+        replay["previous_investigations"],
+        json!([previous[0], previous[1], previous[3]])
+    );
+    let without_q: Value =
+        serde_json::from_slice(&fixture.run(&["a", "--without", "Q", "--json"]).stdout).unwrap();
+    assert_eq!(without_q["withheld_assessments"], json!([]));
+    assert_eq!(
+        without_q["previous_investigations"],
+        json!([previous[1], previous[3]])
+    );
 }
 
 #[test]

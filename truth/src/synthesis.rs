@@ -4,6 +4,7 @@ pub mod argument;
 
 use crate::{
     Corpus, Record,
+    attribution::clip,
     context::{Lean, module_path},
     frontier::{Frontier, transcription_flags},
     lifecycle,
@@ -12,6 +13,7 @@ use crate::{
 use serde::Serialize;
 use serde_json::{Value, json};
 use std::{
+    cmp::Reverse,
     collections::{BTreeMap, BTreeSet},
     path::Path,
 };
@@ -78,6 +80,101 @@ struct SharedAssessment<'a> {
 }
 
 #[derive(Serialize)]
+struct Investigation<'a> {
+    attempt_id: &'a str,
+    path: &'a str,
+    label: &'a str,
+    date: &'a str,
+    statement_ids: Vec<&'a str>,
+    kind: &'a str,
+    outcome: &'a str,
+    summary: &'a str,
+    blocker: Option<&'a Value>,
+    evidence: Vec<&'a str>,
+    #[serde(skip)]
+    current_scope: Option<Vec<&'a str>>,
+}
+
+fn previous_investigations<'a>(
+    corpus: &'a Corpus,
+    scope: &BTreeSet<&str>,
+) -> Vec<Investigation<'a>> {
+    if scope.is_empty() {
+        return Vec::new();
+    }
+    corpus
+        .records_by_id("attempts")
+        .filter_map(|(attempt_id, record)| {
+            let fields = &record.fields;
+            let statement_ids = list(fields, "statement_ids");
+            statement_ids
+                .iter()
+                .any(|id| scope.contains(id))
+                .then(|| Investigation {
+                    attempt_id,
+                    path: &record.path,
+                    label: text(fields, "label"),
+                    date: text(fields, "date"),
+                    statement_ids,
+                    kind: text(fields, "kind"),
+                    outcome: text(fields, "outcome"),
+                    summary: text(fields, "summary"),
+                    blocker: fields.get("blocker"),
+                    evidence: list(fields, "evidence"),
+                    current_scope: fields
+                        .get("current_assessment")
+                        .and_then(Value::as_object)
+                        .map(|assessment| list(assessment, "statement_ids")),
+                })
+        })
+        .collect()
+}
+
+fn investigation_example(
+    investigations: &[Investigation<'_>],
+    relevant: impl Fn(&str) -> bool,
+) -> Option<String> {
+    let example = investigations
+        .iter()
+        .filter(|entry| {
+            !entry.summary.is_empty()
+                && entry.statement_ids.iter().any(|id| {
+                    relevant(id)
+                        && entry
+                            .current_scope
+                            .as_ref()
+                            .is_none_or(|scope| !scope.contains(id))
+                })
+        })
+        .min_by_key(|entry| {
+            (
+                entry.current_scope.is_some(),
+                Reverse(entry.date),
+                entry.attempt_id,
+            )
+        })?;
+    let mut example_text = format!(
+        "Earlier investigation ({}, recorded outcome {}) — {}\nRecorded finding — {}",
+        example.kind,
+        example.outcome,
+        clip(example.label, 140),
+        clip(example.summary, 940)
+    );
+    if let Some(blocker) = example
+        .blocker
+        .and_then(Value::as_str)
+        .filter(|text| !text.is_empty())
+    {
+        example_text.push_str(&format!("\nRemaining blocker — {}", clip(blocker, 480)));
+    }
+    example_text.push_str(&format!(
+        "\nSource — {}\nUse --json for full attempt findings, original targets and evidence.",
+        example.path
+    ));
+    Some(example_text)
+}
+
+#[derive(Serialize)]
 pub struct Synthesis<'a> {
     schema_version: u32,
     input_identity: String,
@@ -97,6 +194,7 @@ pub struct Synthesis<'a> {
     direct_assumption_available: bool,
     /// All target-indexed attempts, including those without a scoped current judgment.
     target_attempt_paths: Vec<&'a str>,
+    previous_investigations: Vec<Investigation<'a>>,
 }
 
 fn statement<'a>(corpus: &'a Corpus, id: &str) -> Result<Statement<'a>, String> {
@@ -325,10 +423,11 @@ pub fn build<'a>(
             objections.push(value);
         }
     }
-    let target_attempt_paths = corpus
-        .records_by_id("attempts")
-        .filter(|(_, record)| list(&record.fields, "statement_ids").contains(&target.id))
-        .map(|(_, record)| record.path.as_str())
+    let previous_investigations = previous_investigations(corpus, &scoped);
+    let target_attempt_paths = previous_investigations
+        .iter()
+        .filter(|entry| entry.statement_ids.contains(&target.id))
+        .map(|entry| entry.path)
         .collect();
     let mut report = Synthesis {
         schema_version: 1,
@@ -348,6 +447,7 @@ pub fn build<'a>(
         results,
         direct_assumption_available: true,
         target_attempt_paths,
+        previous_investigations,
     };
     report.summary = report.reading(DEFAULT_LIMIT);
     Ok(report)
@@ -529,7 +629,7 @@ impl Synthesis<'_> {
         let positions = self.positions();
         let shown: BTreeSet<_> = positions.iter().copied().take(limit).collect();
         if positions.is_empty() {
-            paragraphs.push(format!("No current assessment explicitly names this proposition. Earlier attempts and their findings can be inspected with truth dossier {}.", self.target.id));
+            paragraphs.push("No current assessment explicitly names this proposition.".into());
         } else {
             for (idx, id) in positions.iter().take(limit).enumerate() {
                 paragraphs.push(self.position(id, idx == 0));
@@ -537,6 +637,17 @@ impl Synthesis<'_> {
             if positions.len() > shown.len() {
                 paragraphs.push(format!("{} further target-scoped judgments and their revision tests are available in --json.", positions.len() - shown.len()));
             }
+        }
+        if let Some(example) =
+            investigation_example(&self.previous_investigations, |id| id == self.target.id).or_else(
+                || {
+                    investigation_example(&self.previous_investigations, |id| {
+                        self.premises.contains_key(id)
+                    })
+                },
+            )
+        {
+            paragraphs.push(example);
         }
         if let Some(shared) = self.shared_premises.iter().max_by_key(|s| {
             (

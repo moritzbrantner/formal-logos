@@ -1,7 +1,9 @@
 //! Replay a selected argument with only its recorded inputs. A withheld input
 //! can be recovered by another rule. Never seed or expand the target as a fact
 //! while finding its producers: a target-to-premise cycle cannot support it.
-use super::{format_result_witness, result_witness};
+use super::{
+    format_result_witness, investigation_example, previous_investigations, result_witness,
+};
 use crate::{
     Corpus, Record,
     thickness::{list, text},
@@ -222,6 +224,12 @@ pub fn report(
             field("note")
         ));
     }
+    let investigations = previous_investigations(corpus, &scenario.withheld);
+    if let Some(example) =
+        investigation_example(&investigations, |sid| scenario.withheld.contains(sid))
+    {
+        output.push(example);
+    }
     let mut json = serde_json::to_value(&scenario).map_err(|e| e.to_string())?;
     json["schema_version"] = json!(1);
     json["input_identity"] = json!(corpus.input_identity());
@@ -231,6 +239,7 @@ pub fn report(
     json["results"] = json!(results);
     json["inputs"] = json!(inputs);
     json["withheld_assessments"] = json!(reviewed_inputs);
+    json["previous_investigations"] = json!(investigations);
     if compare {
         let mut comparisons = Vec::new();
         for &sid in &selected {
