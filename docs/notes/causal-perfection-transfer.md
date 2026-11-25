@@ -3174,9 +3174,7 @@ Two alternatives locate the remaining work. An intellect can contemplate its own
 and #1731: can one strictly noncognitive ultimate source confer genuine
 intellectual and moral powers while lacking the corresponding intrinsic
 perfections? This is independent of the prose-only semantic proposal in
-draft #1983; it branches from main and does not consume that draft as
-reviewed evidence. The prior note blob on this branch is
-`d5f1b8a865a7a1d0129d7f9a5fc24b9f1b904252`. This checkpoint is an analyst argument and finite
+#1983. Its premises stand independently of that proposed account of jurisdiction. This checkpoint is an analyst argument and finite
 structural test, not a source attribution, registered theorem, metaphysical
 possibility certificate or reviewed defeat.
 
@@ -3205,7 +3203,7 @@ validity, standing and actual response are held fixed across the explanatory
 comparison. Neither agent merely emits a correct sentence.
 
 The counterfactual control is an agent who has the same competence, sees
-the same facts and exhibits the same refraining, but whose actual refraining
+and understands the same facts and exhibits the same refraining, but whose actual refraining
 is due to a physical impediment rather than the apprehended reason.
 This changes the token practical-basing relation, not the standing or
 external success. Reuse the existing [rational basing assessment](epistemic-underminer-boundaries.md#rational-basing-the-particular-transition-must-exercise-the-capacity)
@@ -3310,10 +3308,13 @@ Use the listed groups, written as input sets -> target:
 
 The first five groups stipulate actual productive/constitutive support,
 including support for the relevant exercise of secondary power, not
-determination of a free creature's act by n alone. P only collects two
-targets, so no hidden inference to actual willing. In a bypass variant O
-would not be the required procedure in operation; physical success does
-not restore the missing uptake input. A more fine-grained model would
+determination of a free creature's act by n alone. P collects uptake and duty. In the physical-impediment control A still
+understands: O operates, so U, D and their conjunction P can all obtain.
+The impediment explains the outward result independently of A’s practical
+basing. A different control bypasses cognition itself: remove the support
+group producing O while keeping the other groups and grounds. D still follows,
+but the displayed groups cannot yield U or P. Neither control encodes choice.
+A more fine-grained model would
 also distinguish the constitution of the capacity from the epistemic
 warrant of a token, and the claim from its practical appropriation.
 
@@ -3414,10 +3415,18 @@ This gives two distinct conditional reuse routes, neither registered anew:
 1. **Causal preexistence.** Preserve `64498e7e` and its uniform IN_ACT_4
    reading. The already delivered
    [CartesianAdequacy adapter](../../TruthCore/Results/Causality/CartesianAdequacy/Solution.lean)
-   `godContainsFromIntellectualExemplar` needs its same-bearer maximality,
-   being-only causal reach, actuality, exemplar and formal/inclusive
-   calibrations and preexistence bundle; `intrinsicIntellectOfContainment`
-   additionally needs both formal and eminent recognition premises.
+   `godContainsFromIntellectualExemplar` takes GOD_4 maximality in being,
+   the genus-maximum causal rule, actuality only insofar as being, and an
+   intellectual exemplar x. Excluded middle on x = g separates the exemplar
+   itself from a distinct effect. Intellectual possession is classified as
+   formal act in the selected respect. `FormalActEntersGrades` calibrates
+   that formal act on the effect side. For the distinct effect,
+   `FormalEffectPreexistsInclusively` gives formal or eminent possession
+   in the cause. Uniform IN_ACT_4 preexistence alone does not do this job.
+   The separate `intrinsicIntellectOfContainment` needs two implications
+   at GOD_4 bearers: formal possession implies intellect there, and eminent
+   possession implies intellect there. The second is disputed precisely
+   when production or objective exemplarity exhausts eminent possession.
    Source-borne K or J is not a replacement for those premises.
    `f8ba2429` concerns particular perfection responsibility and also
    does not give that recognition by itself.
@@ -3446,7 +3455,7 @@ support edge is claimed.
 
 ### A distinct moral-perfection boundary
 
-Prior #1973 establishes that local promise release tracks entitled
+The reviewed waiver comparison in [55bc6a0c](../../corpus/attempts/55bc6a0c-7cf3-4a97-a67d-e9ce755f4cad.json) (#1973) finds that local promise release tracks entitled
 standing rather than benefit alone. For the *first* rational agents
 the impersonal account must answer a different question: why is there
 original standing before any interpersonal grant? A constitutive account
@@ -3485,7 +3494,7 @@ goodness obligations with the perfection and creation routes.
 | Intelligent but nonauthorial producer | Intrinsic cognition and perhaps will, while production follows a nonintentionally operative nature | Actual apprehension alone is not token intentional creation or institution |
 | Rational author of intrinsic good | The same source intrinsically grasps the relevant goods and intentionally institutes the powers, with rightful original title | Warrant actual apprehension, operative authorship, and jurisdiction rather than assume them; permit genuine secondary cognition and authority |
 
-**Provisional assessment, pending independent challenge.** The first-agent
+**Provisional assessment.** The first-agent
 case sharpens the strongest impersonal profile. A complete account of
 concrete production is insufficient to establish complete cognitive and
 normative grounding, and even their source-based grounding does not by
@@ -3517,18 +3526,7 @@ prior explanation or infer that all necessary standards are external
 objects. The distinct source-identity and intentional-creation
 questions remain open even if intrinsic intellect is established.
 
-**Verification and handoff:** Executed the four-row Python diagnostic
-locally; all assertions passed. No new Lean, corpus statements, records,
-source claims, generated artifacts or premise changes. Existing formal
-results and reviewed judgments are unchanged; these are proposed
-applications only. No repository clone/Lean or installed-convention
-toolchain was available, so canonical related/dossier/novelty/semantics,
-independent semantic challenge, corpus checks, frontier comparison and
-attempt/current assessment reconciliation remain outstanding before
-ready/merge. Record this as a separate draft checkpoint with no issue
-closure; reconcile #1731/#1748/#1460 and the prior causal-perfection
-attempts once reviewed.
-
+The four closure rows passed their recorded assertions. The C4 record [58750abd](../../corpus/attempts/58750abd-e037-4902-b2f5-7c83e0f467a3.json) owns the first-agent test of intrinsic uptake: what makes the source itself a subject of apprehension if it grounds the agents’ cognition? The causal-adequacy record [59336904](../../corpus/attempts/59336904-26c1-4562-a276-d7c4252ffb23.json) distinguishes the premises for asymmetric containment from the subsequent recognition of intellect. These applications retain the original records’ assessment scopes.
 
 ## Research attempts citing this note
 
