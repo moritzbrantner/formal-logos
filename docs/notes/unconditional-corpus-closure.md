@@ -171,8 +171,11 @@ targets). The following projection ran on the merged corpus. Its outputs stay un
 `target/unconditional-audit/`. It uses the existing pinned analysis dependencies and computes
 the **direct implication** closure separately from canonical
 `established_statements` (which includes floor, recorded refutations and
-strength). Status-qualified, non-transcription, non-model rules are a
-conservative candidate set. A theorem with hidden semantic assumptions
+strength). The screen excludes arguments with nonempty `commitment_statement_ids`.
+It retains a rule if at least one result has status `solution-present` or
+`verified` and its ID is absent from the frontier's `transcription_results`.
+The empty-episode model certificate (`81a85cbd`, conclusion ID) passes
+this screen. Its conclusion certifies the existence of a formal model. A theorem with hidden semantic assumptions
 remains a candidate for interpretation review even when it has no
 graph premises. Non-transcription is not a philosophical warrant.
 
@@ -603,10 +606,11 @@ The existing [empty-history necessary-being result](../../TruthCore/Results/Expl
 `c34db0b0-141a-5b87-86cb-59528aa0af99`) consumes the open possible
 population premise `5a12e877-ef76-5763-b149-1fe063f8384e` and already
 requires actual reflexivity `2b20b5af-d653-56ba-8001-35903fb3d1ea`.
-If the directly warranted actual concrete population
-`56f68b40-9737-59a0-8cac-5610980a1547` uses the same Ontic,
-Concrete and actual standpoint w, choose w itself as the possibility
-witness. No new possible history, S5, causal production, or actual
+The alternative application supplies actual concrete population
+(`56f68b40-9737-59a0-8cac-5610980a1547`) as a premise. It is absent
+from all three canonical established sets. Given a population witness on
+the same Ontic, Concrete and actual standpoint w, choose w itself as the
+possibility witness. No new possible history, S5, causal production, or actual
 contingency principle is required.
 
 Locally elaborated application using the existing definitions (zero axioms):
@@ -633,10 +637,15 @@ Give the displayed example the local name `possibleFromActual`, import the
 Solution, and replace the final `hPositive` argument of `necessaryBeing`
 with `(possibleFromActual A Concrete w hActual hReflexive)`. Lean 4.35.0
 reports no axioms for either this composition or the modal fork below.
-The composition still takes EM as a hypothesis. Its output forgets the
-causal role and concreteness of the witness; the existing helper
-`necessaryConcrete` preserves concreteness but still gives a cause of
-the negative fact only in its caused-fact branch.
+The composition takes EM as a hypothesis. Under all six hypotheses of the
+original result, `necessaryConcrete` gives a single concrete individual c
+that exists at w and at every world accessible from w. In particular, c
+exists at the accessible coverage world v, contradicting literal concrete
+emptiness there. The proof uses `CauseFact` under the temporary emptiness
+assumption. That branch cannot describe a second realizable case under the
+full hypotheses. The helper retains concreteness in its existential
+conclusion. The registered `necessaryBeing` projects existence at w and
+necessity for that same c. Neither conclusion exports a `CauseFact` witness.
 
 The exact definition is an existential over accessible worlds with the
 same `InhabitedConcreteAt` predicate. The complete result-backed graph has no rule concluding
@@ -654,8 +663,8 @@ consumer's registration cannot supply that semantic judgment. This is a witness 
 classified as a transcription, not a substantive new theorem or
 independent metaphysical warrant.
 
-It replaces a separate possible-population input with an already
-available actual-population input on this route, if the interpretation
+It replaces a separate possible-population input with a supplied
+actual-population input on this route, if the interpretation
 matches. The original consumer's other inputs are retained: EM,
 Euclidean access, the fixed negative-fact meaning, and the three-part
 accessible empty coverage. It does not prove a necessary being from
@@ -826,7 +835,7 @@ not the truth of what their models represent.
 | [MODAL-HIJK-CONVERGENCE-CERTIFICATE](../../corpus/results/MODAL-HIJK-CONVERGENCE-CERTIFICATE.json) | `c3afabb3-3442-5b29-83bf-7114354b345a` | `866251cb-15ea-55ec-824c-0cb2e3116d7c` | `87a2fc46-e23b-5c41-8002-5d3d64a8cac3` | none | Declared transcription. Assembly of frame correspondences, approved Mathlib axioms including choice. |
 | [MODAL-TERTIA-VIA-CONVERGENCE](../../corpus/results/MODAL-TERTIA-VIA-CONVERGENCE.json) | `26ea1f1e-bd79-5d83-8638-2d14048eea4a` | `9f7e31d8-5e0e-518d-b080-187cfdc67576` | `1a11625a-d538-5bf1-b88f-685285a668ad` | `ee4ab504-c8fe-59bc-bc96-7cbeefed6410`, `2b20b5af-d653-56ba-8001-35903fb3d1ea`, `0436de86-6579-53f2-9ff5-2111ba44ebae`, `d9fad785-40ab-555a-a1c1-5e39c9d50497`, `3c468121-b8fe-5342-a1ab-d35009e5fdd4` | Conditional identity with any maximum; no existence of either. |
 | [a4c8b0ce-c6cd-4e0a-858c-fad90e6e0d72](../../corpus/results/a4c8b0ce-c6cd-4e0a-858c-fad90e6e0d72.json) | `43f09b83-776d-57b8-a5b3-b84715e48fc2` | `351b9698-90ce-4a81-864f-647dddae767b` | `a4c8b0ce-c6cd-4e0a-858c-fad90e6e0d72` | `43253cd8-62be-4528-85e4-54806bd3fac0` | Declared transcription. Instantiation to selected existence extension; not concrete or necessary population. |
-| [empty-history-causal-availability](../../corpus/results/empty-history-causal-availability.json) | `c778a6ca-e756-56ac-aa68-c81e9883ca7c` | `c34db0b0-141a-5b87-86cb-59528aa0af99` | `e9b7ecc7-c668-54c2-a82d-62e804c75af5` | `ee4ab504-c8fe-59bc-bc96-7cbeefed6410`, `62b4a40a-919e-5da4-998c-131c386b7361`, `2b20b5af-d653-56ba-8001-35903fb3d1ea`, `655599be-0184-5e92-b935-93443cad28a6`, `8e8c261c-37cf-57ef-9386-530e76370430`, `5a12e877-ef76-5763-b149-1fe063f8384e` | Necessary witness via coverage world or caused negative fact; all six inputs, no causal role for first branch. |
+| [empty-history-causal-availability](../../corpus/results/empty-history-causal-availability.json) | `c778a6ca-e756-56ac-aa68-c81e9883ca7c` | `c34db0b0-141a-5b87-86cb-59528aa0af99` | `e9b7ecc7-c668-54c2-a82d-62e804c75af5` | `ee4ab504-c8fe-59bc-bc96-7cbeefed6410`, `62b4a40a-919e-5da4-998c-131c386b7361`, `2b20b5af-d653-56ba-8001-35903fb3d1ea`, `655599be-0184-5e92-b935-93443cad28a6`, `8e8c261c-37cf-57ef-9386-530e76370430`, `5a12e877-ef76-5763-b149-1fe063f8384e` | All six inputs entail a necessary concrete witness at w, hence concrete presence at accessible coverage v. The registered projection retains necessary existence. Neither conclusion supplies a CauseFact role. |
 
 Reproduce the 83-rule sample by selecting the argument IDs in the three
 inventory tables from the full exported support graph, retaining exactly
