@@ -1,0 +1,42 @@
+{
+  "id": "e1fa608e-9eb1-49ab-8c79-9d92cc499ecf",
+  "label": "Logical psychologism and truth-directed psychological realization",
+  "statement_ids": [
+    "c425f0c5-6c3f-5115-ba04-3e61bd049e3b",
+    "f56b2ee7-c69e-5e3b-85b0-e671d907ba58"
+  ],
+  "date": "2026-11-25",
+  "kind": "refutation",
+  "outcome": "blocked",
+  "summary": "Continues #1989 and #1007. Compared actual habits, ideal dispositions, constitutive practices, evolutionary/functional and truth-sensitive realization accounts under a fixed classical interpretation. MP and affirming the consequent differ on the explicit countervaluation p=false, q=true despite equal acceptance. Exhaustive Python comparison of four valuations, four acceptance profiles and all Boolean classifiers confirms failure exactly for equal acceptance data. Reuses the fixed semantic entailment and criterion characterization. F1 is case-predicate noncontradiction, not anti-psychologism; applying it requires same predicate/respect and factive conflicting verdicts. Thin F6 excludes denial of every reason for the same relation; denial of irreducibility is not that denial. Existing warranted acceptance and reason bearer routes retain their exact bridges. Proposed Lean application, controls, warrant comparison and reproduction commands are in docs/notes/logical-psychologism.md.",
+  "blocker": "No executable repository checkout, Lean/Lake/Cargo or independent semantic challenge in this connector session. Full novelty, dossier, semantic preflight, proof checks and frontier delta remain pending. The strongest live rival preserves truth-directed correctness and attempts to explain it with a wider natural/functional base; the finite projection comparison does not settle that reduction. The proposed F6 application requires an actual subject's warranted acceptance on surviving support with the matching calibration and, for population, selected-world presence and esse contract.",
+  "evidence": [
+    "e03147fa-7a1f-48d9-bac0-7aec0ee2b645",
+    "b203c461-805a-4572-b966-ba3a7886d561",
+    "0590fe21-edb9-5915-9837-62560c8f40e2",
+    "a7ecf1fe-a234-5de6-bb72-bf76309c5ea3",
+    "146b502b-e5fd-40cf-8a39-9ed2d45e59bb",
+    "d2b63ed6-5454-4255-a2c3-a9ea8891ebff",
+    "2930b66a-b5e3-4f3f-b2d3-758d84c0e54d",
+    "b41427d3-a0c7-55aa-b1cb-f4f90a14277c",
+    "b3ddb7c4-683a-4127-8221-b30be7858f92",
+    "b50727e1-04de-488c-819f-2d5b9993c485",
+    "PR-1990"
+  ],
+  "current_assessment": {
+    "date": "2026-11-25",
+    "statement_ids": [
+      "c425f0c5-6c3f-5115-ba04-3e61bd049e3b",
+      "f56b2ee7-c69e-5e3b-85b0-e671d907ba58"
+    ],
+    "scope": "Psychologism's proposed validity criterion and consequences for F1 and thin F6, relative to a fixed classical interpretation.",
+    "assessment": "Bare frequency/actual acceptance fails as a sufficient validity criterion when the same data cover a valid and an invalid inference. A psychologically realized truth-sensitive account survives; the comparison supplies no ontological nonreduction theorem. Psychologism does not itself deny F1 or F6. Global reason elimination has the already recorded F6 incompatibility and self-undermining consequences. Direct F6 warrant remains available; valid proof structure alone is not proof of an actual reason witness.",
+    "next_test": "Assess the same actual subject's uptake of the existing universal-falsity proof and its invalid comparison; identify the premise basis, correct transition, actual acceptance, and surviving support. Inspect a specified truth-directed reduction of semantic correctness and its data projection without holding disputed reducing facts fixed by stipulation. Run local semantic and novelty preflight and verify the proposed Lean applications before any registration.",
+    "note": "docs/notes/logical-psychologism.md#provisional-assessment-and-next-test",
+    "reviewed_revision": "e638b77a27f4f4b819f323e3bca4ea80264c43f4",
+    "review": "unreviewed",
+    "publication": "unpublished",
+    "evidence": "Draft PR #1990; note at e638b77a27f4f4b819f323e3bca4ea80264c43f4; finite Python test passed in connector session, Lean proposal uncompiled and independent semantic challenge pending.",
+    "supersedes": "None. Adds a scoped psychologism assessment; prior F1, F6 and authority judgments are retained."
+  }
+}
