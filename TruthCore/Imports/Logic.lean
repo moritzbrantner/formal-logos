@@ -34,6 +34,7 @@ public import TruthCore.Logic.FallibleCorrection
 public import TruthCore.Logic.FiniteValidationLogic
 public import TruthCore.Logic.FirstPrincipleRoles
 public import TruthCore.Logic.FitchKnowability
+public import TruthCore.Logic.FixedPointSelection
 public import TruthCore.Logic.ForeknowledgeDiscrimination
 public import TruthCore.Logic.FormSelection
 public import TruthCore.Logic.GlobalThesisBoundaries

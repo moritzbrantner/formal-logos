@@ -256,3 +256,45 @@ The actual run reported 32 fixed-selector antecedent instances, four closed-uniq
 Prioritize the precise §7.1 migration as a small independent maintenance slice if the novelty/context checks confirm it is not already covered. Use the existing four result IDs as inputs to `truth context`, inspect their frozen Challenges and Comparator configurations, and record the baseline axiom lists before moving proof bodies. Keep domain-specific lemmas and imports where they own genuine application work. The second slice should reuse the already-existing historical evidence adapter and target the outstanding relational/functional invariance boundary in §7.2–7.3. The modal and witness patterns in §8 should be handled through the corresponding existing #1926 work rather than duplicate it.
 
 The draft is a documentation checkpoint. A prepared repository checkout, installed conventions in the local toolchain, Lean elaboration, exact theorem binding/axiom comparisons and independent semantic review of consequential applications remain pending. No new corpus relation is written, no record is deleted, no proof body or frozen Challenge changes, and no premise change is intended. No claim of mechanically checked equivalence or new root support is made.
+
+## 11. Implementation checkpoint: shared fixed-point selection
+
+Owner approved this style of abstraction on 2026-11-25. The draft now
+implements the small maintenance slice identified in §7.1. Earlier sections
+describe the earlier documentation-only checkpoints.
+
+`TruthCore/Logic/FixedPointSelection.lean` has two prelude-only helper theorems:
+`fixed_output` and `unique_closed_fixed`. The former uses equal inputs
+`e' = e` and a pointwise transformation equation, instead of requiring a
+global input endomorphism; this is weak enough for the spatial observation
+projection. The latter applies uniqueness to a transformed member of a closed
+predicate. Neither is a new corpus proposition.
+
+- Induction: the singleton clause of `symmetry` uses the unique-closed lemma;
+  `noUnique` uses fixed-output equality.
+- Fission: `no_choice` uses the same fixed-output equality, with its original
+  case split, admissibility, distinctness and swap premises.
+- Space: `no_covariant_selector` supplies `relative_shift` and its original
+  covariance equation; it retains the nonempty body and nonzero-shift proof.
+- Time: `symmetry_transfer` supplies precomposition by the original reindexing,
+  the invariant condition and the unique solution. The stationarity and
+  arithmetic arguments are unchanged.
+
+All five affected proof bodies keep their original theorem types and four
+existing certificate/result identities. Frozen Challenges, comparator
+configurations, vocabulary definitions, corpus records and semantic obligations
+are unchanged. The fission certificate permits no axioms; the other three
+permit the existing Mathlib axiom set. The two helpers use only equality
+transport and function application; the actual axiom lists still need
+mechanical confirmation.
+
+The affected Logic aggregator was generated from the complete pinned Git tree
+using the repository generator's sorted module-name/render algorithm, after
+reproducing the exact existing aggregator byte-for-byte. A full local
+`scripts/root-imports.sh --write`/check remains pending with the prepared clone.
+The connector-only environment has no Lean, no working repository clone and
+no network access from its local shell. Check the final revision with the
+commands in §10 and the four affected certificate IDs in §7.1; do not merge
+until those checks pass. No philosophical application or graph bridge is
+registered here; independent semantic review remains pending for such
+applications. Proof-body consolidation is not additional support for the case.
