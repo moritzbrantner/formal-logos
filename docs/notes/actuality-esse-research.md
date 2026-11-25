@@ -21,12 +21,7 @@ Do not solve this by declaring `InAct x esse` definitionally equal to `∃ r, In
 
 ## 2. Reuse and exact senses
 
-The existing declaration in [Question4/Article1.lean](https://github.com/moritzbrantner/formal-logos/blob/main/TruthCore/Latin/Aquinas/SummaTheologiae/PrimaPars/Question4/Article1.lean) is:
-
-```lean
-def ActualityOnlyInsofarAsBeingReading ... : Prop :=
-  ∀ x r, InAct x r → InAct x esse
-```
+The declaration requires that a bearer in act in any respect is in act as to esse. [Q.4 a.1 declaration](../../TruthCore/Latin/Aquinas/SummaTheologiae/PrimaPars/Question4/Article1.lean#L31).
 
 It formalizes only the consequence of ST I q.4 a.1 ad 3, not a whole theory of esse. The existing [PerfectionOfBeing](https://github.com/moritzbrantner/formal-logos/blob/main/TruthCore/Results/Causality/PerfectionOfBeing/Solution.lean) argument uses `ca84f62d` (perfect ↔ actual) and `196e6606` (perfection entails esse). As the current [maximum-definition-fork note](https://github.com/moritzbrantner/formal-logos/blob/main/docs/notes/maximum-definition-fork.md) explains, given the former, the latter is equivalent to the target: do not count their combination as independent corroboration. The proof uses only actuality → perfection, which is questionable if perfection means complete realization rather than possession in a respect.
 
@@ -67,14 +62,7 @@ Reuse the open analyst bridge `ConceptualExistenceBoundary.ActualityExists` (`08
 
 The existing omission control `6353cb71`, witnessed by `bbb4600e`, retains a fully characterized actual exemplar with empty existence when `ActualityExists` is omitted. The Parsons-style `nuclearCharacterizationControl` (`b1a51ed4`) supplies a complementary separation: a nuclear-existent object can lack extranuclear existence. Each control tests the relevant implication in its formal interpretation. [Conceptual omission argument](../../corpus/arguments/bbb4600e-3fae-4a72-8e9d-202741c5f268.json) · [Nuclear characterization result](../../corpus/results/b1a51ed4-efd3-47df-8463-e4c47fa2d02c.json)
 
-The calibration and `ExistingInActAt` (`0436de86`) together give `7067553d`. Conversely, `7067553d` with `ActOfEsseSufficesForExistenceAt` (`546975ef`) gives the calibration. The two proposed compositions are
-
-```lean
--- Proposed proof term; uncompiled, explicit hypotheses only.
-fun x r h => hExisting x (hImport x r h)
--- Reverse under the already existing converse calibration:
-fun x r h => hSuffices x (hBeing x r h)
-```
+The calibration and `ExistingInActAt` (`0436de86`) together give `7067553d`. Conversely, `7067553d` with `ActOfEsseSufficesForExistenceAt` (`546975ef`) gives the calibration. [Forward and reverse compositions at the selected world](../../TruthCore/Causality/ActualityImportControls.lean#L20).
 
 With both esse/existence directions fixed, the calibration and the target are equivalent. The calibration can add independent support only if genuine same-bearer real exemplification warrants it at `w` independently of the target. The interpretation must keep every premise at that same world.
 
@@ -429,39 +417,7 @@ Distinguish the impeller from the circulation it maintains. The impeller can rem
 
 **A check on the quantifiers.** In a deliberately discrete example, one process has two alternative regimes and can cease. The profile stipulates the regime and whether the process exists separately from any claim about grounding. The original formula holds at each setting. For each particular regime there is a setting in which the process persists without that regime. There is no setting in which the process persists without any regime. These three local checks use no axioms. The two regimes exhaust the finite example by construction; they do not classify all physical flows.
 
-```lean
-import TruthCore.Latin.Aquinas.SummaTheologiae.PrimaPars.Question4.Article1
-namespace ProfileChange
-open TruthCore.Latin.Aquinas.SummaTheologiae
--- none denotes cessation; the two live states are different regimes.
-def act (s : Option Bool) (_ : Unit) : Option Bool → Prop
-  | none => s.isSome = true
-  | some k => s = some k
-
-theorem importAt (s : Option Bool) :
-    ActualityOnlyInsofarAsBeingReading (act s) none := by
-  intro x r h
-  cases r with
-  | none => exact h
-  | some k => change s = some k at h; subst s; rfl
-
-theorem eachCanCease (k : Bool) :
-    ∃ s, act s () none ∧ ¬ act s () (some k) := by
-  cases k
-  · exact ⟨some true, rfl, by intro h; cases h⟩
-  · exact ⟨some false, rfl, by intro h; cases h⟩
-
-theorem neverAllAbsent :
-    ¬ ∃ s, act s () none ∧ ∀ k, ¬ act s () (some k) := by
-  rintro ⟨s, live, absent⟩
-  cases s with
-  | none => cases live
-  | some k => exact absent k rfl
-#print axioms importAt
-#print axioms eachCanCease
-#print axioms neverAllAbsent
-end ProfileChange
-```
+[Compiled process interpretation and the three regime-change proofs](../../TruthCore/Causality/ActualityImportControls.lean#L41).
 
 **Judgment.** For real exemplification, favor the original same-bearer premise: if the actual contribution being tracked is this impeller's operation, a description, duplicate or model of the impeller cannot do that work. With the adopted calibration from real existence to actuality at esse on that frame, this is enough for the [first mover's existential import](../../TruthCore/Results/Aquinas/SummaTheologiae/FirstMoverIsMaximeEns/Solution.lean). The proof takes the mover's actual exercise in one respect and retains that mover when it concludes actuality at esse. It does not ask what grounds the mover's existence. The [argument about all perfections](../../TruthCore/Results/Aquinas/SummaTheologiae/FirstMoverHasPerfectionsOfThings/Solution.lean) also requires the import for arbitrary actual possessors in its wider use.
 

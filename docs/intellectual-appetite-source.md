@@ -335,9 +335,7 @@ A local Lean signature probe isolated a previously unanswered appraisal cell:
 retain the actual `possessedLove` assignment, including its soul, possession
 and actual love, but set `apprehendsGood` false. A nonempty possible-love
 capacity follows suitable apprehension. Every `Exercise` constructor still
-requires good appraisal, so no exercise inhabitant exists. The exact probe is
-retained below for reproduction. It passed `lake env lean` through the supplied
-worker environment with an empty axiom set. It is **not** a registered result,
+requires good appraisal, so no exercise inhabitant exists. The signature boundary is axiom-free. It is **not** a registered result,
 Comparator/NanoDa certificate, model-compatible research-comparison cell,
 real psychology or source-compatible interpretation. No proof-status change
 is inferred. Its exclusion is a direct constructor-admission consequence.
@@ -350,39 +348,7 @@ already fixed actual love and possession directly instantiates
 `Exercise.loving`; that direction is transcription, not a new argument.
 Existing idle controls isolate missing acts and need no duplication.
 
-```lean
-import TruthCore.Causality.AppetitePowerExercise
-namespace CognitiveAppetiteAdmissionAudit
-open TruthCore.Causality.AppetitePowerExercise
-
-def suitableOnly : Interpretation :=
-  { possessedLove with apprehendsGood := fun _ _ _ => False }
-
-def suitableOnlyCapacity : Capacity suitableOnly () where
-  possible := fun _ _ r => r = .love
-  apprehension := fun _ _ _ _ => Or.inl True.intro
-  seeking := fun _ _ h => nomatch h
-  loving := fun _ _ _ => True.intro
-  delighting := fun _ _ h => nomatch h
-  communicating := fun _ _ _ h => nomatch h
-
-theorem signatureBoundary : suitableOnlyCapacity.Possessed ∧
-    suitableOnly.apprehendsSuitable () () () ∧
-    suitableOnly.possessed () () () ∧ suitableOnly.loves () () () ∧
-    ¬ suitableOnly.apprehendsGood () () () ∧
-    ¬ Nonempty (Exercise suitableOnly () () ()) := by
-  refine ⟨⟨True.intro, (), (), .love, rfl⟩,
-    True.intro, True.intro, True.intro, (fun h => h), ?_⟩
-  rintro ⟨e⟩
-  cases e with
-  | seeking good _ _ => exact good
-  | loving good _ _ => exact good
-  | delighting good _ _ => exact good
-  | communicating _ good _ _ _ => exact good
-
-#print axioms signatureBoundary
-end CognitiveAppetiteAdmissionAudit
-```
+[Compiled appraisal control and its interpretation](../TruthCore/Causality/AppetiteAppraisal.lean#L24).
 
 Next step: retain specification, possession, recognition and divine applicability
 as separate obligations. The remaining consumer bridge must supply the content

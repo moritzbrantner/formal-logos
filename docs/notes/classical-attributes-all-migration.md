@@ -765,53 +765,9 @@ support or truth discharge. Final delivered-head CI remains required.
 
 Fix one candidate `g` throughout. The exact conclusion of `818a73cc` is the signature's `HasClassicalAttributes g`. As a classification of an already identified bearer, the bridge has substantial warrant when the nine predicates carry the classical senses agreed for the route. The joint predication conveys much more than nine predicates scattered across different beings. The distinct question is what warrants calling **this** bearer GOD_4. The [stage-one-and-two conclusion](../../TruthCore/Case/Catholicism/StagesOneTwo.lean) explicitly asks for `IsGod g`, uniqueness and classical attributes together.
 
-**Exact residual.** In the adopted assembly, the fourth predicate means that every being to which `IsGod` applies is identical with this bearer. If *some* being independently qualifies, equality transports its identification to this very bearer. If none qualifies, the fourth predicate is vacuously satisfied. The following two local Lean checks isolate the residual assumption. The second changes only the name predicate of the [two-being joint assignment](../../TruthCore/Case/Catholicism/ClassicalAttributesJointWitness.lean), keeping its other individual, causal comparisons and concrete attribute definitions. The selected being satisfies all nine predicates in that assignment; the sufficiency bridge in its equivalent uncurried form holds as well. This control concerns the nine and the sufficiency bridge. It deliberately omits the stage-one naming premise and makes no claim that the full named route can fail under all its premises.
+**Exact residual.** In the adopted assembly, the fourth predicate means that every being to which `IsGod` applies is identical with this bearer. If *some* being independently qualifies, equality transports its identification to this very bearer. If none qualifies, the fourth predicate is vacuously satisfied. The two linked Lean theorems isolate the residual assumption. The second changes only the name predicate of the [two-being joint assignment](../../TruthCore/Case/Catholicism/ClassicalAttributesJointWitness.lean), keeping its other individual, causal comparisons and concrete attribute definitions. The selected being satisfies all nine predicates in that assignment; the sufficiency bridge in its equivalent uncurried form holds as well. This control concerns the nine and the sufficiency bridge. It deliberately omits the stage-one naming premise and makes no claim that the full named route can fail under all its premises.
 
-```lean
-import TruthCore.Case.Catholicism.ClassicalAttributesJointWitness
-import TruthCore.Case.Catholicism.StagesOneTwo
-open TruthCore.Case.Catholicism
-namespace Population
-theorem identify (σ : Signature) (g : σ.Being)
-    (one : IsTheOneGod σ.IsGod g) (attrs : σ.HasClassicalAttributes g) :
-    UniqueClassicalGodExists σ ↔ ∃ h, σ.IsGod h := by
-  constructor
-  · rintro ⟨h, god, _⟩
-    exact ⟨h, god⟩
-  · rintro ⟨h, god⟩
-    exact ⟨g, one h god ▸ god, one, attrs⟩
-open ClassicalAttributesJointWitness
-def unnamed : Signature := { σ with IsGod := fun _ => False }
-abbrev Nine (g : Being) :=
-  NineClassicalAttributes (IsSimple Composite) (IsPerfect InAct)
-    (IsSupremelyGood InAct GoodIn CausesIn esse) (IsTheOneGod unnamed.IsGod)
-    Infinite (IsImmutable InPotency) Eternal HasIntellect HasWill g
-theorem missingName : Nine false ∧
-    (∀ g : Being, Nine g → unnamed.HasClassicalAttributes g) ∧
-    ¬ UniqueClassicalGodExists unnamed := by
-  refine ⟨?_, ?_, ?_⟩
-  · refine ⟨?_, ?_, ?_, ?_, rfl, ?_, rfl, rfl, rfl⟩
-    · intro h
-      exact Bool.noConfusion h
-    · intro _ r _
-      exact Or.inl rfl
-    · refine ⟨Or.inl rfl, ?_⟩
-      intro x r hx _
-      cases x
-      · exact False.elim (hx rfl)
-      · exact ⟨rfl,rfl⟩
-    · intro h hh
-      exact False.elim hh
-    · intro r hr
-      exact Bool.noConfusion hr.1
-  · intro g h
-    exact h.2.2.2.2.1
-  · rintro ⟨_, h, _⟩
-    exact h
-#print axioms identify
-#print axioms missingName
-end Population
-```
+[Identification with an inhabited name and the empty-name control](../../TruthCore/Case/Catholicism/ClassicalAttributesNaming.lean#L14).
 
 **Assessment.** The empty-name interpretation shows semantic freedom in the primitives. Relabelling alone gives no competing account of where things come from. The affirmative identification has independent content when the same candidate is exhibited as the unique maximal being, cause of the being and perfections of the others, and no constituent of them. The [full-description naming bridge](../../TruthCore/Case/Catholicism/StageOneQuartaVia.lean) (`1ec205ed`) supplies a reason for applying the name to the independently characterized occupant of that role. Each role condition, its selected meaning and their joint realization require separate warrant. A highest-ranked item inside a system could satisfy a comparison while failing universal causal reach or remoteness; the full description makes this a substantive distinction. Where the route instead starts with an underived actual source or a power holder, it must connect that *same source* to the naming conditions, including the appropriate uniqueness. Conditional identification of a holder with a root does not establish those conditions by itself.
 

@@ -3052,30 +3052,7 @@ Attempt [`72a86cf4-baca-4a47-b157-7b0dd50ba12b`](../../corpus/attempts/72a86cf4-
 
 **A revision test on the exact unrestricted statement.** Suppose a causal account already satisfies the unrestricted transfer. We learn that another named agent `a` contributed to the being of recipient `x`. Retain every previous attribution, add that one esse edge, and ask which further evidence the old conclusion now needs. For decidable respect equality, the enlarged account still satisfies transfer **exactly when** every actual non-esse respect of this recipient already carries productive credit to this added agent. In particular, evidence that a different giver covers all the respects cannot supply the condition. Conversely, no facts about any other recipient need to change. The test compares two interpretations of causal responsibility. It makes no assumption that one can physically add or withdraw an existential cause independently of all its effects.
 
-```lean
-import TruthCore.Case.Catholicism.CausalPerfectionTransfer
-open TruthCore.Case.Catholicism
-namespace AdditionalGiver
-variable {B R : Type} (act : B → R → Prop) (cause : B → B → R → Prop)
-  (esse : R) (a x : B)
-def added (c y : B) (r : R) := cause c y r ∨ (c = a ∧ y = x ∧ r = esse)
-theorem transferAfter [DecidableEq R] (initial : CauseOfBeingCausesEveryPerfection act cause esse) :
-    CauseOfBeingCausesEveryPerfection act (added cause esse a x) esse ↔
-    ∀ r, r ≠ esse → act x r → cause a x r := by
-  constructor
-  · intro h r different actual
-    obtain h | ⟨_, _, eq⟩ := h a x r (Or.inr ⟨rfl, rfl, rfl⟩) actual
-    · exact h
-    · exact False.elim (different eq)
-  · intro coverage c y r incoming actual
-    rcases incoming with old | ⟨rfl, rfl, _⟩
-    · exact Or.inl (initial c y r old actual)
-    · by_cases same : r = esse
-      · exact Or.inr ⟨rfl, rfl, same⟩
-      · exact Or.inl (coverage r same actual)
-#print axioms transferAfter
-end AdditionalGiver
-```
+[Exact coverage condition for the added giver](../../TruthCore/Causality/GiverPerfectionControls.lean#L18).
 
 The following mechanisms give the two sides of that test philosophical content. In the [press study](actuality-esse-research.md#11-does-the-giver-act-through-the-secondary-agent-in-this-effect), a drive that transmits its work into the engaged ram earns credit for the impression this ram leaves. A die that furnishes the pattern can earn credit for the shape of the same impression. Giving and continuously maintaining the very operative profile under load can likewise earn mediated credit for what it shapes; a different agent can supply the trigger. This is a positive reason for same-source transfer where the contribution can be followed into the relevant determination. If a tracing of the material, formation and maintenance of the marked bearer also identifies the drive as a contributor to the bearer's coming to be, this would support **both** attributions for that drive. Making a mark on a pre-existing bearer alone does not identify any cause of the bearer's esse. The case grants no divine identification. [Producer-side premise, reviewed separately](https://github.com/moritzbrantner/truth-core/pull/1946)
 
@@ -3091,35 +3068,7 @@ The bound claim `64498e7e` says that whenever *c* causes *x* at esse and *x* is 
 
 A simple Lean diagnostic gives each released product the ideal nominal command for every integer setpoint and measured displacement. The local source diagnostic tests the analogous *maker-side* command. The off setting of the source flag represents the fixed-stroke maker's zero **feedback correction**, not absence of productive motion. No test of the entire released-product command table can identify which maker also has the local correction law. This quantifies over candidate tests of that table; the tables are equal by construction and the local laws disagree already at displacement one. These are measurement models for stipulated productive mechanisms. The equations do not prove that a manufacturer creates a governor at esse, that real actuators have unbounded response, that all feedback is a pure perfection, or that some other higher analogue has been excluded.
 
-```lean
-namespace Operative
--- Signed displacement, followed by the source's own correction command.
-def governorCommand (error : Int) := -error
-def sourceCommand (feedback : Bool) (error : Int) : Int :=
-  if feedback then governorCommand error else 0
--- Both constructors release the same governor at each chosen setpoint.
-def productCommand (_feedback : Bool) (setpoint actual : Int) :=
-  governorCommand (actual - setpoint)
-def hasCorrection (feedback : Bool) : Prop :=
-  ∀ error, sourceCommand feedback error = -error
-theorem sourceTest (feedback : Bool) : hasCorrection feedback ↔ feedback = true := by
-  cases feedback
-  · constructor
-    · intro h
-      have bad := h 1
-      exact (by decide : (0 : Int) ≠ -1) bad |>.elim
-    · intro h; cases h
-  · exact ⟨fun _ => rfl, fun _ _ => rfl⟩
-theorem noOutputTest (test : (Int → Int → Int) → Prop) :
-    ¬ ∀ f, test (productCommand f) ↔ hasCorrection f := by
-  intro h
-  have yes := (h true).2 ((sourceTest true).2 rfl)
-  have no := (sourceTest false).1 ((h false).1 yes)
-  cases no
-#print axioms sourceTest
-#print axioms noOutputTest
-end Operative
-```
+[Maker-side correction and the impossibility of an output-only test](../../TruthCore/Causality/GiverPerfectionControls.lean#L50).
 
 **Provisional judgment.** I favor attributing to the producing source the actual efficacy traceable to its own operation. Where the independently specified perfective content is also realized in that operation, a local possession claim has affirmative warrant. The governor comparison suggests a test for **preservation of content across modes**. It gives no ordering that makes one mode higher. Eminence in the stronger sense additionally requires grounds for that ordering, for example that the proposed source act realizes the same content without a particular receptive limitation present in the effect, with evidence that removing this limitation preserves the content. The strongest rival can give a determinate account of the operative structure that produces the governor’s capacity while denying that this structure exercises self-correction. Granting the full construction sequence to the maker answers an objection about a missing stage of manufacture; it does not turn the jig’s structure into a loop correcting the jig’s own deviation. A metaphysically total source could satisfy a separate account of unrestricted intrinsic actuality, considered [above](#the-limitation-bridge-two-separable-obligations-not-another-synonym). Extending the conclusion to such a source needs that account or another source-side reason for intrinsic containment. Neither universal `64498e7e` nor its denial follows from the manufacturing comparison. The two local theorems above used no axioms; no new corpus result or source attribution is claimed.
 
