@@ -706,6 +706,92 @@ and [research attempt](../../corpus/attempts/a29f4411-ac87-42b2-bae3-48fa0882b41
 - [Moore's paradox](https://github.com/moritzbrantner/truth-core/issues/1417)
 - [Global explanatory skepticism](https://github.com/moritzbrantner/truth-core/issues/1415)
 
+## Additional rivals for investigation: reasoning, meaning and epistemic authority
+
+Research intake following #1987 and #1007, 2026-11-25. Baseline
+`a9819b148bd4a7c089cff9dc07f95c209452511e`. This section proposes discriminating research questions,
+not new verified statements or claimed defeats. The original 23 cases
+remain intact. Prefer investigating positive replacement accounts over
+inventing extreme theses for easy retorsions. The formulations below are
+analyst variants; the linked literature is navigation for obtaining and
+assessing actual proponents, not pinned source attribution. Scoped,
+modest and strengthened variants must not be conflated. Connector search
+found the indicated overlaps; it is not an exhaustive novelty check.
+
+The shared test uses the proof of `NotEveryPropositionFails` (`b41427d3`). Its imported existence proof supplies `True` and `True.intro`. Given a holding proposition P and its witness hP, universal falsity would supply a negation of P, which contradicts hP. Instantiating universal falsity at False is valid and gives only ¬False. To obtain a contradiction there one would also need a witness of False. A proposed subject who explains this difference could supply evidence of their grasp. The proof records no such observation. [Prior application in #1987](orphan-graft-map.md)
+
+The comparison separates truth,
+validity, psychological execution, available evidence, actual
+understanding, rational force and the subject's existence. F1
+`c425f0c5`, F6 `f56b2ee7`, assertion realization `1edfc1d1`, and
+concrete population `56f68b40` are the named graph destinations or
+intermediate targets. None of the new comparison tests is a direct
+argument for GOD_4 `8626f8a5` without the subsequent metaphysical
+premises.
+
+### Priority A: distinct tests of the authority and intelligibility of reasoning
+
+| Candidate (strong analyst formulation) | Test, connection and strongest escape |
+| --- | --- |
+| **Logical psychologism:** inference is valid solely in virtue of actual psychological regularities, or accepted habits. | Fix meanings and truth conditions, compare a population habituated to modus ponens with one habituated to affirming the consequent. Prevalence can vary while countervaluations do not. Can the account explain error *in* a normal habit, and how does the empirical investigation justify its own inference? Target F1's intended logical reading and F6, not merely a frequency benchmark. Reuse `e03147fa`, `b203c461` and [fallible correction](fallible-correction-931.md). The substantive surviving account treats psychology as realizing or enabling reasoning, or adds a truth-sensitive standard; it does not have to deny logical validity. Source lead: [SEP Psychologism, §§3–5](https://plato.stanford.edu/entries/psychologism/) (Frege/Husserl and replies). |
+| **Strong logical conventionalism:** adoption of a rule is sufficient for its correctness; no nonconventional constraint on its application is needed. | Distinguish choosing symbols and rules, correctly applying the chosen rule, and its truth-preserving status under a fixed interpretation. A new conventional instruction to apply an earlier instruction still needs correct application; test the regress only if the rival really requires a further convention at every step. Compare meaning-changing rules versus two procedures on one fixed content; no inference from an uninterpreted alternative calculus to invalidity. Reuse #1084's [plural closure](plural-closure-boundary-1084.md) and the [epistemic-underminer basing](epistemic-underminer-boundaries.md#rational-basing-the-particular-transition-must-exercise-the-capacity) account. Targets F1/F6. Implicit definitions, primitive rule grasp, indexed logics and local conventions remain live. Source lead: [SEP Convention, §2](https://plato.stanford.edu/entries/convention/) (Carnap, Quine's objection, contemporary defenses). |
+| **Framework-relative epistemic justification / equal validity:** there is no framework-independent fact about what justifies what; no epistemic system is objectively superior. | Truth relativism (case 17) is not enough. Hold evidence, meanings and task fixed; one rule tracks a verified distinction while another ignores it. Does the thesis that neither is superior have only local force, or purport to govern both frameworks? In the latter case test the bridge from its own cross-framework comparative authority to the disputed standard. Reuse [#934 contrastive warrant](contrastive-worldview-934.md), [#930 authority](epistemic-authority.md) and existing candidate `RELATIVISM-GLOBAL-LOCAL-EPISTEMIC-WITNESSES`. Targets thin F6 and the stronger preference-independent authority `2ca463c2` separately. A relativist can acknowledge local standards, common accuracy aims or shared facts while rejecting a uniquely correct complete epistemic system. Source lead: [SEP Relativism §4.4](https://plato.stanford.edu/entries/relativism/). |
+| **Epistemic expressivism / inferentialism (strong anti-factual reading):** epistemic reason attributions express commitments or policies and require no truth-bearing fact of favoring. | Reuse moral expressive/embedded-meaning investigations and #930. Compare 'E is a reason for p' asserted, negated and embedded in a conditional without endorsing its antecedent. Can a subject coherently distinguish a mistaken appraisal from a change of policy, and maintain stable content across the argument? Test the meaning account and its own justificatory endorsement separately. F6 is a thin existential, not a robust normative-property ontology. An expressivist can concede thin reasons, stable inferential roles and minimal truth without conceding robust facts or categorical force. Source leads: [Chrisman 2012, abstract](https://doi.org/10.1111/j.1747-9991.2011.00465.x), [Chrisman 2022, ch. 9 abstract](https://doi.org/10.1093/oso/9780192898852.003.0009). Do not attribute the strong anti-factual analyst formulation merely from these abstracts. |
+| **Content-exclusion account of reasoning:** an actual inferential transition is entirely indifferent to the content or support relation it purports to track; content has no explanatory role in rational basing. | Distinct from the denial of beliefs and from output-level responsiveness (cases 7, 14). Test same content across paraphrases and changed support relations across matched forms; discriminate a syntax/cue copier from a content-sensitive implementation. Require actual token dependence and semantic calibration, not merely benchmark accuracy. Reuse [#943 intentionality](intentionality-943.md), [basing](epistemic-underminer-boundaries.md#rational-basing-the-particular-transition-must-exercise-the-capacity), #550 and `a70546f7`. Targets assertion realization and F6; downstream intellect/perfection application needs a separate bridge. A physically realized content-sensitive mechanism, a noncausal rational grounding account, or mental/physical explanations at different levels can survive; do not identify physicalism with content-exclusion. Source lead: [SEP Mental Causation](https://plato.stanford.edu/entries/mental-causation/). |
+
+### Priority B: precise rivals about the limits of truth and inquiry
+
+| Candidate | Test, connection and strongest escape |
+| --- | --- |
+| **Utility-exhausts-truth:** a content is true exactly when adopting it has the specified practical benefit, with no further truth condition. | Hold the truth conditions fixed; vary rewards or beliefs while preserving the actual fact. A false comforting belief and an inconvenient true one distinguish immediate payoff from truth. Reuse `SIGNED-WAGER-PRACTICAL-NONTRUTH` in [companions in guilt](companions-in-guilt-new-results.md); that result separates utility and truth but is not yet an exclusion of every utility theory. Test the account's claim of truth (not just a recommendation to adopt it). Targets F6's truth-directed interpretation, and the proposed absolute-truth witness `f625ad83`. Ideal inquiry, truth-related success and practical reasons for acting rather than believing remain live. Source lead: [SEP Pragmatic Theory of Truth](https://plato.stanford.edu/entries/truth-pragmatic/). |
+| **Global infallibilist demand:** warranted belief (stronger variant) or knowledge (weaker variant) requires exclusion of every possible error scenario, including those for the method assessing the exclusions. | Separate factivity, absence of residual risk, relevant alternatives, higher-order access and proof in a fixed logic. Test a correctly checked finite deduction and a finite observation with an indistinguishable alternative; then apply the universal demand to its own claimed justification. A local underdetermination theorem cannot by itself establish global skepticism. Reuse #931, #1416, [scoped empirical barrier](scoped-empirical-proof-barrier.md) and `72288c48`. Targets warrant routes to F6 and the warrant, not literal existential content, of F4 `fbc516c1`. Relevant-alternatives accounts, fallible justification plus factive knowledge and a reasonless skeptical truth survive. Source lead: [SEP Skepticism](https://plato.stanford.edu/entries/skepticism/) and [Epistemic Closure](https://plato.stanford.edu/entries/closure-epistemic/). |
+| **No metaphysical warrant transmission:** an ordinary warranted premise can never transmit warrant to a metaphysical conclusion even through an adequately grasped valid inference. | This is stronger than a local closure restriction and distinct from scientism. Compare a recognized existential consequence of a known instance with a conclusion introducing a disputed new concept/subject matter or requiring a new substantive premise. A claim of impossibility of metaphysical warrant itself needs a scope and type of epistemic access. Reuse #1053, #931, [scoped proof barrier](scoped-empirical-proof-barrier.md) and `6801590a`; test the population step in the same selected world first, then test transfer across the additional direct-esse premises. No entailment from warrant for the observation to warrant for all those premises. Contrastive and subject-matter-sensitive closure accounts survive where their actual conditions fail. Source lead: SEP Epistemic Closure, especially lightweight-to-heavyweight examples. |
+| **Global modal skepticism / universal ban on metaphysical possibility judgments:** no agent is warranted in judging any metaphysical possibility or impossibility. | Distinguish a denial about our modal access from a denial of modal facts. Test whether asserting that a metaphysical proposition *cannot* be established itself invokes an in-scope modal judgment; epistemic impossibility and metaphysical impossibility are distinct. Test ordinary ability examples separately from extraordinary essences and S5 necessity. Reuse #1887's contingent/necessary dispute and existing [Kant cosmological inquiry](../kant-cosmological-inference.md). Root destination `8626f8a5` via existing modal routes; no claim that modal skepticism blocks the nonmodal routes. A modest skeptical view restricting access to extraordinary modal claims survives, as do primitive or fallible modal judgments. Source lead: [SEP Epistemology of Modality §3](https://plato.stanford.edu/entries/modality-epistemology/). |
+| **Global semantic indeterminacy (strong extension):** no facts distinguish incompatible content assignments even when rationally relevant correctness conditions differ. | Fix a shared interpretation and compare translations/role assignments with equal behavior on the observed cases but different predictions or validity on a discriminating case. Is the disagreement genuine about one content, or a re-description preserving all relevant relations? Reuse #943, #1010, the Kripke/PU boundary in [scientism and meaning](scientism-meaning-rival-boundary.md), and #1058; a finite underdetermination result does not itself imply that there is no correct semantic assignment. Targets assertion realization `1edfc1d1`, meaningfulness and the premise-binding of the metaphysical case. Quinean empirically equivalent translation, use-theoretic and externalist accounts may preserve enough determinate inferential structure for inquiry. Source lead: [SEP Quine §6.2](https://plato.stanford.edu/entries/quine/). |
+
+### Existing work to continue, rather than duplicate
+
+- #1461 (peer-disagreement about disagreement), #1427 (permissivism), and
+  #1428 (higher-order defeaters) are closed investigations. Apply their
+  exact existing results to the proof example before opening a new
+  issue. Investigate a genuine peer's rejection of the conciliatory
+  policy, not disagreement by itself. [SEP Disagreement §5.5.1](https://plato.stanford.edu/entries/disagreement/).
+- #1415 (global explanatory skepticism), #1416 (Putnam's always-envatted
+  reference challenge), #1417 (Moore's paradox) are already closed
+  research issues; closure is a workflow fact, not an unconditional
+  defeat. Reuse their existing handoffs and test only unmet application
+  bridges. #550 remains an open, research/issues-only epiphenomenalism
+  trilemma. Do not reopen or duplicate their original assignments.
+- #398 already names Clifford's evidentialism and strong agnosticism;
+  neither becomes a new rival merely by paraphrasing it. #932/#1084
+  already address indexed logic and common closure. The present
+  convention question is about the correctness of rule application
+  and its basis, not merely the coexistence of several consequence
+  relations.
+
+### Investigation protocol
+
+Select one candidate and fix the actual rival proposition rather than a
+school name. Start with `truth brief`, `truth novelty`, `truth related`,
+`truth context`, `truth dossier` and semantic preflight at the named
+targets. Search for the existing named follow-up issue and exact
+statement IDs first. In a single witness profile compare the rival's
+positive account with a truth-/reason-sensitive alternative. Derive
+its consequences for its own acceptance where it claims the relevant
+status, then construct scope and replacement-account controls. If a
+rival restricts the original principle, investigate whether that
+restriction is motivated independently of shielding the thesis itself.
+Distinguish a counterexample to the criterion, a conditional
+incompatibility, self-undermining and a merely explanatory deficit.
+A failing rival is not by itself a proof of its preferred alternative.
+
+Two follow-up investigations now use the same countervaluation: with p false and q true, affirming the consequent takes true premises to a false conclusion. [Logical psychologism (#1990)](https://github.com/moritzbrantner/formal-logos/pull/1990) tests whether acceptance or restricted performance recovers fixed-content validity. Its remaining question is whether a specified functional account selects the intended truth conditions. [Logical conventionalism (#1991)](https://github.com/moritzbrantner/formal-logos/pull/1991) distinguishes permission, correct execution and soundness. Its remaining questions concern error within an unchanged practice and reasons for an actual dissenter. The shared countervaluation supplies one piece of evidence.
+
+The next candidates from this intake are epistemic expressivism under embedding of the same content and equal validity of epistemic frameworks in the same task. The ten entries are research leads. The documented connections use the existing F1, F6, realization and population premises at their stated scopes.
+
+
+The targeted independent recheck accepted the proof description, the two delivered applications and the remaining intake questions at 221aac629cc723bb7b34437aca3f63c9a44b6cb6. PR-1989.
+
 ## Research attempts citing this note
 
 - [Moral and epistemic parity: distinguish categorical force from irreducible favoring](../../corpus/attempts/cc9f51e3-529d-4e59-bc50-bc79d8eae6c0.json)
