@@ -25,7 +25,8 @@
     "46c875b1-286f-4bfb-a1c9-cd66acbfc7f6",
     "a4c8b0ce-c6cd-4e0a-858c-fad90e6e0d72",
     "5a8cda5c-fb8d-4ca1-9e8c-c6d7c01ce03e",
-    "fd5e32d4-aa4f-57a8-8991-8d85ef14b25f"
+    "fd5e32d4-aa4f-57a8-8991-8d85ef14b25f",
+    "PR-1980"
   ],
   "current_assessment": {
     "date": "2026-11-25",
@@ -42,7 +43,7 @@
     "note": "docs/causal-finite-branching-and-psr-syllogisms.md#can-the-denial-itself-supply-s2s-population-premise-1007",
     "reviewed_revision": "401cbd98394a839d8d2fe05dcf36a2cd420dfa1c",
     "review": "accepted_qualified",
-    "publication": "unpublished",
+    "publication": "published",
     "evidence": "Independent semantic review accepted the witness-preserving theorem, definitional specialization, concrete-emptiness control, both downstream premise bundles and the sole former orphan 46c875b1 at the reviewed revision.",
     "supersedes": "Adds the performed-denial application to S2's population premise. The earlier S2 assessment of an explained existent retains its original scope."
   }
