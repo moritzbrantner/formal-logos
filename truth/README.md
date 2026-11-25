@@ -96,7 +96,7 @@ truth synthesis 3de4bd49-567b-44de-8472-88a24ea1311a --without 20babef7-6ae7-4b4
 truth --json synthesis 3de4bd49-567b-44de-8472-88a24ea1311a --compare-premises
 ```
 
-The comparison starts with that argument’s retained premises and commitments. It follows rules backed by registered solutions, including zero-input results. It reports whether the selected argument still applies, other producers of the conclusion supported by those same inputs, and a dependency-ordered derivation when one exists. The target is excluded from the starting facts and from intermediate derivations. A withheld input can be derived through another route. The result concerns conditional reachability of statement IDs. Lean checks joint instantiation of witnesses and interpretations in the composed theorem.
+The comparison starts with that argument’s retained premises and commitments. It follows rules backed by registered solutions, including zero-input results. It reports whether the selected argument still applies, other producers of the conclusion supported by those same inputs, and a dependency-ordered derivation when one exists. The target is excluded from the starting facts and from intermediate derivations. A withheld input can be derived through another route. The result concerns conditional reachability of statement IDs. Verifying that the witnesses and interpretations match across an inferred path requires a separate Lean composition.
 
 The statement view leads with the formal target and the frozen Lean theorem for a supporting route, with its Solution and verification configuration. It quotes
 scoped judgments and a live test, and compares the actual premises of its
