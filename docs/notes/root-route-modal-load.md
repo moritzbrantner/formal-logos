@@ -725,10 +725,16 @@ substantial claim the discriminating evidence would identify a contribution
 from the same whole to the continued existence of *each material bearer*,
 and distinguish its withdrawal from ordinary destruction, replacement and
 loss of function. Fabrication and resonance measurements supply no such
-withdrawal. If two such traces were established, they would support one
-local existential join. The known theorem would still require coverage
-of the other forks, weak connectivity and well-foundedness for global source
-agreement. Attributing direct giving to the maximal witness of `0881e859`
+withdrawal. Two such traces would identify a common ancestor of the rim
+and spokes. To exhibit one fork in the theorem, we also need one actual
+concrete dependent whose existence the rim and spokes each immediately
+ground on that same relation at the same world. Their joint contribution to
+the measured response establishes a dynamical relation. Choosing the
+resonator itself as dependent would create a grounding cycle with the proposed
+paths from the whole to its parts, violating well-foundedness. Once a
+particular fork and its common ancestor are established, global source
+agreement still requires coverage of every fork, weak connectivity and
+well-foundedness. Attributing direct giving to the maximal witness of `0881e859`
 also needs its own premises. [Identity and withdrawal comparison](sustaining-vs-existential-inertia.md#apply-the-criterion-before-varying-the-sources-exercise) · [Exact graph and proof](../../TruthCore/Results/Causality/LocalSourceConfluence/Solution.lean)
 
 #### Exclusion fixpoint and full support options
