@@ -5,7 +5,7 @@ vocab = "TruthCore.Causality.SameSourceWitness"
 results = "TruthCore.Results.Causality.ClosedEsseSourceGod"
 
 [[argument]]
-id = "Dependent beings, their common uncaused esse source, and the existence of GOD_4"
+id = "From a concrete existent to GOD_4 through a common uncaused source and a conditional premise about dependent beings"
 theorem = "godExistsFromClosedCollections"
 premises = [
   "56f68b40-9737-59a0-8cac-5610980a1547",
