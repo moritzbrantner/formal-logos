@@ -37,6 +37,7 @@ public import TruthCore.Results.Logic.ExcludedMiddleAssertionBoundary.ExactPolic
 public import TruthCore.Results.Logic.ExcludedMiddleIffDne.Solution
 public import TruthCore.Results.Logic.ExcludedMiddleIrrefutable.Solution
 public import TruthCore.Results.Logic.ExcludedMiddleNotDeniable.Solution
+public import TruthCore.Results.Logic.ExperiencedThoughtBearer.Solution
 public import TruthCore.Results.Logic.FallibleCorrection.Solution
 public import TruthCore.Results.Logic.FiniteValidationLogic.Solution
 public import TruthCore.Results.Logic.FitchKnowability.Solution

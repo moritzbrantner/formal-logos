@@ -26,6 +26,7 @@ public import TruthCore.Logic.EpistemicReasons
 public import TruthCore.Logic.EpistemicUnderminers
 public import TruthCore.Logic.ExcludedMiddle
 public import TruthCore.Logic.ExcludedMiddleAssertionBoundary
+public import TruthCore.Logic.ExperiencedThoughtBearer
 public import TruthCore.Logic.FallibleCorrection
 public import TruthCore.Logic.FiniteValidationLogic
 public import TruthCore.Logic.FirstPrincipleRoles

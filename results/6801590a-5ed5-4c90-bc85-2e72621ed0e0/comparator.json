@@ -1,0 +1,9 @@
+{
+  "challenge_module": "TruthCore.Results.Logic.ExperiencedThoughtBearer.Challenge",
+  "solution_module": "TruthCore.Results.Logic.ExperiencedThoughtBearer.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Logic.ExperiencedThoughtBearer.populationOfThinkingSubject"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}
