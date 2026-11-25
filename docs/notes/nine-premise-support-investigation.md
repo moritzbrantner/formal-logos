@@ -8,7 +8,7 @@ The common-source, quantum-memory and split-brain investigations landed in
 `70309ab53`. The repaired ownership comparison is at `4e44d8ce8`; the
 earlier worker draft is superseded. The cosmological and Cartesian findings
 landed in [PR #1967](https://github.com/moritzbrantner/formal-logos/pull/1967).
-The unity and recipient-continuity findings are in
+The unity and recipient-continuity findings landed at `8814a65b2` in
 [PR #1973](https://github.com/moritzbrantner/formal-logos/pull/1973).
 
 ## What a necessary law says about its bearer
