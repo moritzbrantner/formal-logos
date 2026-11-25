@@ -3,14 +3,35 @@
 Date: 2026-11-13. Research baseline:
 `03d97b48a86d4b7d7bbedcb4441398ce3a9dadef`.
 
-The current checkpoint is on `research/common-source-and-reliable-records`.
-Independent challenge accepted the common-source finding at `26f657f5c`,
-the quantum application at `79311ee6f` and the repaired access/ownership
-comparison at `4e44d8ce8`. The three new formal results passed binding,
-Comparator and NanoDa. Hosted checks and integration are pending. Work
-continues on divine unity without genus-wide causation (#1936) and on
-whether diachronic identity distinguishes conservation from persistence
-under a law (#1801).
+The common-source, quantum-memory and split-brain investigations landed in
+[PR #1972](https://github.com/moritzbrantner/formal-logos/pull/1972) at
+`70309ab53`. The repaired ownership comparison is at `4e44d8ce8`; the
+earlier worker draft is superseded. The cosmological and Cartesian findings
+landed in [PR #1967](https://github.com/moritzbrantner/formal-logos/pull/1967).
+The unity and recipient-continuity findings landed at `8814a65b2` in
+[PR #1973](https://github.com/moritzbrantner/formal-logos/pull/1973).
+
+## What a necessary law says about its bearer
+
+Suppose a law correctly specifies every possible history of creatures. It
+can settle which outcomes are allowed while leaving open whether this very
+source is required to realize them. A simple archive test separates the two
+questions. Two publications return the same file. Only one names version A
+as a parent. Removing A breaks that publication’s history; the other can
+be constructed intact in a fresh archive that never held A. Here the rule
+fixes the dependency, and the independent construction establishes the
+scope of the omission.
+
+For a foundational being n, a necessary exercise by n would require n.
+Even a requirement for a concrete power-holder in every order could be met
+by different holders. Conversely, an impersonal law permitting every
+observed creature output leaves open whether one complete order can be
+realized without n, including as an additional bearer. The discriminating
+question is what makes the law applicable to a whole order and whether that
+requires this individual. The ordinary example has a known boundary and an
+external writer, so it supplies no evidence of a possible world lacking n.
+The five original tests in [#1887](https://github.com/moritzbrantner/formal-logos/issues/1887)
+already have a reviewed answer. [New law comparison and revision conditions](foundational-absence-warrant.md#12-can-a-necessary-law-license-omission-of-the-unrestricted-bearer)
 
 ## From an underived source to one shared source
 
