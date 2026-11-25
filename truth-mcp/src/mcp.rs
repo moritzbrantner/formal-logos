@@ -64,7 +64,7 @@ Returns ranked records and note sections with their IDs and paths.",
     },
     Tool {
         name: "research_synthesis",
-        description: "Read the current findings for a statement, its premise judgments, shared dependencies and next tests. Supply a question to find assessed propositions by wording, a target for the graph-based synthesis, or neither for the God-existence case.",
+        description: "Read registered Lean theorem signatures, proof sources and record status for a statement or question, followed by scoped research findings. Search a theorem by name or ask in ordinary language. Omit both fields for God-existence.",
         schema: || {
             json!({ "type":"object", "additionalProperties":false, "properties":{
             "target":id_schema("Statement UUID, legacy ID or exact label."),

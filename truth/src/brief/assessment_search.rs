@@ -66,7 +66,7 @@ fn phrases(query: &Query) -> BTreeSet<String> {
         .collect()
 }
 
-fn expression(query: &Query) -> Option<String> {
+pub(super) fn expression(query: &Query) -> Option<String> {
     // FTS's Porter tokenizer folds inflections. Prefixing a cropped stem
     // would also retrieve different words such as "temporary" for "temporally".
     let terms: Vec<_> = query
@@ -331,6 +331,38 @@ pub fn report_for_root(
         );
         text.insert_str(text.find('\n').unwrap_or(text.len()), &excerpt);
         report["note_match"] = note;
+    }
+    let results =
+        super::proof_search::find(root, corpus, &query, limit).map_err(|err| err.to_string())?;
+    let library = if results
+        .iter()
+        .any(|r| r["theorem"] == query.text.trim().trim_matches('`'))
+    {
+        None
+    } else {
+        super::proof_search::library_declaration(root, &query.text)
+    };
+    let proof_section = if let Some(declaration) = &library {
+        format!(
+            "\n\nLean library declaration · {}:{}\n{}",
+            string(declaration, "path"),
+            declaration["line"],
+            string(declaration, "source")
+        )
+    } else if results.is_empty() {
+        "\n\nNo registered Lean result matched this question.".to_owned()
+    } else {
+        let rendered = results
+            .iter()
+            .map(crate::synthesis::format_result_witness)
+            .collect::<Vec<_>>()
+            .join("\n\n");
+        format!("\n\nMatching Lean results\n{rendered}")
+    };
+    text.insert_str(text.find('\n').unwrap_or(text.len()), &proof_section);
+    report["lean_results"] = json!(results);
+    if let Some(declaration) = library {
+        report["lean_declaration"] = declaration;
     }
     Ok((report, text))
 }

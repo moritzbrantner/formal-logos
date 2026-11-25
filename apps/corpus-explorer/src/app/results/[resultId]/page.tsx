@@ -57,6 +57,49 @@ export default async function ResultPage({ params }: ResultPageProps) {
       <h1 className="mt-5 max-w-4xl font-serif text-4xl leading-[1.02] tracking-[-0.04em] sm:text-5xl">
         {conclusion?.paraphrase ?? argument.conclusion_statement_id}
       </h1>
+      <section id="lean-evidence" className="record-section max-w-4xl">
+        <p className="eyebrow">Lean</p>
+        <h2 className="mt-3 font-serif text-3xl tracking-[-0.03em]">The advertised theorem</h2>
+        <p className="mt-3 text-sm leading-6 text-[var(--muted)]">
+          As frozen in the Challenge module (with <code className="font-mono">sorry</code>). The Solution module proves the same
+          statement; Comparator checks that the two agree and that the proof uses only the permitted axioms.
+        </p>
+        {challenge ? <pre className="lean-snippet">{challenge.snippet}</pre> : null}
+        <p className="mt-3 flex flex-wrap gap-4 text-sm">
+          {challenge ? (
+            <a className="link-quiet" href={sourceUrl(challenge.file, challenge.line)} rel="noreferrer" target="_blank">
+              Challenge ↗
+            </a>
+          ) : null}
+          {solution ? (
+            <a className="link-quiet" href={sourceUrl(solution.file, solution.line)} rel="noreferrer" target="_blank">
+              Solution (proof) ↗
+            </a>
+          ) : null}
+          <a className="link-quiet" href={sourceUrl(result.comparator_config)} rel="noreferrer" target="_blank">
+            Comparator config ↗
+          </a>
+        </p>
+        <dl className="mt-6 grid gap-4 text-sm sm:grid-cols-[11rem_minmax(0,1fr)]">
+          <dt className="text-[var(--muted)]">Theorem</dt>
+          <dd className="font-mono break-all">{result.theorem}</dd>
+          <dt className="text-[var(--muted)]">Permitted axioms</dt>
+          <dd>{comparator.permitted_axioms.length ? comparator.permitted_axioms.join(", ") : "None"}</dd>
+          <dt className="text-[var(--muted)]">NanoDa kernel check</dt>
+          <dd>{comparator.enable_nanoda ? "Enabled" : "Disabled"}</dd>
+          {comparator.theorem_names && comparator.theorem_names.length > 1 ? (
+            <>
+              <dt className="text-[var(--muted)]">Also checked</dt>
+              <dd className="font-mono break-all">
+                {comparator.theorem_names.filter((name) => name !== result.theorem).join(", ")}
+              </dd>
+            </>
+          ) : null}
+          <dt className="text-[var(--muted)]">Gate</dt>
+          <dd>Comparator, NanoDa and the premise binding check run on every change before it merges to main.</dd>
+        </dl>
+      </section>
+
       <p className="mt-6 max-w-4xl text-lg leading-8 text-[var(--muted)]">{result.meaning}</p>
 
       <StrengthComparisons comparisons={comparisonsForResult(getStrengthComparisons(), result.id)} />
@@ -134,49 +177,6 @@ export default async function ResultPage({ params }: ResultPageProps) {
           title="Terms and senses the derivation depends on"
         />
       </div>
-
-      <section id="lean-evidence" className="record-section max-w-4xl">
-        <p className="eyebrow">Lean</p>
-        <h2 className="mt-3 font-serif text-3xl tracking-[-0.03em]">The advertised theorem</h2>
-        <p className="mt-3 text-sm leading-6 text-[var(--muted)]">
-          As frozen in the Challenge module (with <code className="font-mono">sorry</code>). The Solution module proves the same
-          statement; Comparator checks that the two agree and that the proof uses only the permitted axioms.
-        </p>
-        {challenge ? <pre className="lean-snippet">{challenge.snippet}</pre> : null}
-        <p className="mt-3 flex flex-wrap gap-4 text-sm">
-          {challenge ? (
-            <a className="link-quiet" href={sourceUrl(challenge.file, challenge.line)} rel="noreferrer" target="_blank">
-              Challenge ↗
-            </a>
-          ) : null}
-          {solution ? (
-            <a className="link-quiet" href={sourceUrl(solution.file, solution.line)} rel="noreferrer" target="_blank">
-              Solution (proof) ↗
-            </a>
-          ) : null}
-          <a className="link-quiet" href={sourceUrl(result.comparator_config)} rel="noreferrer" target="_blank">
-            Comparator config ↗
-          </a>
-        </p>
-        <dl className="mt-6 grid gap-4 text-sm sm:grid-cols-[11rem_minmax(0,1fr)]">
-          <dt className="text-[var(--muted)]">Theorem</dt>
-          <dd className="font-mono break-all">{result.theorem}</dd>
-          <dt className="text-[var(--muted)]">Permitted axioms</dt>
-          <dd>{comparator.permitted_axioms.length ? comparator.permitted_axioms.join(", ") : "None"}</dd>
-          <dt className="text-[var(--muted)]">NanoDa kernel check</dt>
-          <dd>{comparator.enable_nanoda ? "Enabled" : "Disabled"}</dd>
-          {comparator.theorem_names && comparator.theorem_names.length > 1 ? (
-            <>
-              <dt className="text-[var(--muted)]">Also checked</dt>
-              <dd className="font-mono break-all">
-                {comparator.theorem_names.filter((name) => name !== result.theorem).join(", ")}
-              </dd>
-            </>
-          ) : null}
-          <dt className="text-[var(--muted)]">Gate</dt>
-          <dd>Comparator, NanoDa and the premise binding check run on every change before it merges to main.</dd>
-        </dl>
-      </section>
 
       {appliedForks.length ? (
         <section aria-label="Fork applied here" className="record-section max-w-4xl">

@@ -26,6 +26,8 @@ current conclusion linked to the substantive evidence in existing records/notes.
 A generated current-case view must reuse those records, distinguish recorded
 warrant from formal status, and never rank philosophical strength by leaf count.
 
+Encode formal definitions, mathematical claims, countermodels and worked proof applications in compiled Lean wherever their meaning can be specified. Reuse existing declarations before introducing new ones. Link the theorem from the research record and use the normal result registry when it supplies an argument in the graph. Keep observations, historical attribution, interpretive judgments and open applications traceable to their evidence.
+
 ## Source checks stay offline (owner direction, 2026-11-11)
 
 Full-source verification is not a repository standard. CI, scheduled/manual

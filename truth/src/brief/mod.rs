@@ -16,6 +16,7 @@
 pub mod assessment_search;
 pub mod issue;
 pub mod novelty;
+mod proof_search;
 pub mod retrieval;
 #[cfg(test)]
 mod tests;

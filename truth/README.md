@@ -67,17 +67,19 @@ The corpus directory must exist. Missing optional record collections are empty;
 unreadable collections, dangling collection links, and non-file JSON entries
 are errors rather than silently omitted records.
 
+Use `truth index duplicates notes` to locate repeated research sections. Append `check` to return a failing status when copies are present.
+
 ## Statement synthesis
 
 `truth synthesis` opens the classical-theism God-existence statement. Give a
 statement UUID, legacy ID, exact label or Lean declaration to read another
-proposition, or search current judgments and earlier investigations in your
-own words. Both forms run offline and accept
+proposition. Search registered Lean proofs by theorem name or in your own words. Both forms run offline and accept
 `--root PATH`.
 
 ```sh
 target/release/truth synthesis STMT-GOD-EXISTS
 target/release/truth synthesis 0881e859-c4c3-53ff-9bec-b61294e12d51
+target/release/truth synthesis --question TruthCore.Results.Modal.RevisionUptake.screening
 target/release/truth synthesis --question "Do observations identify a common giver?"
 target/release/truth --json synthesis STMT-GOD-EXISTS
 ```
@@ -85,7 +87,7 @@ target/release/truth --json synthesis STMT-GOD-EXISTS
 An ambiguous Lean short name such as `GodExists` lists the matching declarations
 and a command for each meaning.
 
-The statement view gives the target’s meaning and formal status, quotes
+The statement view leads with the formal target and the frozen Lean theorem for a supporting route, with its Solution and verification configuration. It quotes
 scoped judgments and a live test, and compares the actual premises of its
 immediate arguments. A complete illustrative route provides a command for each
 premise and separately listed commitment. Each quoted assessment retains its full wording, review
@@ -95,7 +97,7 @@ a scope naming just the target, then an attempt citing a result for the
 target, then a smaller scope. A different review state gets the second slot
 when present. These rules select examples for reading. The scope written by
 the researcher governs the judgment, even when a record names just one
-statement. A question retrieves findings from the attempts and offers statement
+statement. Question JSON returns matching registered theorem records in `lean_results`, including the Challenge signature, Solution path and argument premise IDs. A fully qualified library declaration outside the argument registry returns its source in `lean_declaration`. Both lookups work without research notes. A question also retrieves findings from the attempts and offers statement
 commands for following the argument. Results labeled as earlier investigations
 provide historical evidence. A current assessment carries its own scope and
 review state. When a question phrase is missing from the leading finding,
