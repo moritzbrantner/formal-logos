@@ -298,3 +298,266 @@ at the final head. This is an attempt with a blocked formal delivery, not a
 new verified result. The next philosophical test is the actual proof-uptake
 assessment and the proposed reduction of semantic truth conditions to
 functional facts, not additional truth-table examples alone.
+
+
+## Continuation: pressure-testing the non-eliminative accounts (2026-11-25)
+
+Continues the earlier judgment rather than treating every non-eliminative
+account as automatically adequate. Baseline of this continuation: draft
+head `4dc24d4f95d4bf45da08a53e2801ddaa9b50b123`. Analyst constructions;
+no new author attribution. Reuse #943's [functional content and error
+comparison](intentionality-943.md#multiple-functions-and-stable-factual-guidance-2026-11-14),
+#930's [evidence/incentive and authority analysis](epistemic-reasons-preconditions.md#authority-continuation-evidence-incentives-and-an-indifferent-believer-2026-11-17),
+#931's fallible correction, #934's contrastive warrant, and #1084's
+plural-closure boundary. The existing positive functional accounts are
+genuine competitors: they supply an environmental discriminator rather
+than equating correctness with a reward or a disposition.
+
+### 1. Which distinctions are substantive, and what would defeat each one?
+
+| Proposed retreat from eliminativism | Strongest positive version | Decisive pressure test and remaining commitment |
+| --- | --- | --- |
+| Actual versus normal performance | A faculty can malfunction even if most tokens are errors. Normal means a disposition under specified enabling conditions rather than majority assent. | A perfectly stable deterministic policy can preserve all actually true beliefs in its restricted environments and still admit countervaluations in the intended logic. If normality means no errors across all semantic cases, it incorporates a semantic coverage/calibration obligation. |
+| Nomic versus logical necessity | Given the reasoner's psychological law, the same accepted inputs necessarily cause a specified acceptance. | This is necessity of an output given attitudes, not preservation of the truth of the contents. Restricting the semantic domain to psychologically reachable cases can produce false positives even with perfect performance and true premises. See the coverage result below. |
+| Reliability versus deductive validity | Reliable functions can make a token epistemically good without making its type deductively valid. | Grant this distinction: AC can be arbitrarily reliable under a full-support distribution and still fail deduction. The rival must either explain deductive validity separately or restrict its claims to defeasible warrant. This is a real escape for reliabilism about warrant, not a reduction of deductive validity. |
+| Ideal competence versus circular idealization | An independently described, finite truth-table procedure computes the right answer even when actual subjects err. | Such a positive mechanism survives. A definition of ideality as accepting exactly valid rules is only a coextension, not yet a reductive explanation. Resource bounds, stability, or internal acceptance alone do not imply the procedure's correctness. Test the calibration from the independently described procedure to contents. |
+| Internal use versus content | The total inferential role might determine what a symbol means, rather than merely how tokens are manipulated. | Compare one complete syntactic response map under material-conditional and equivalence interpretations. Their truth-preserving inferential statuses differ; the rival needs an additional content-selection constraint. Full soundness of accepted rules can select a candidate connective, but cannot establish that those rules are valid for the ordinary material conditional. See the explicit positive control below. |
+| Correct function versus incidental benefit | A faculty has a historically selected or currently organizational truth-guiding function, with failure conditions independent of comfort. | #943 already gives a positive mechanism of environmental discrimination. Grant it, then ask whether the relevant environment covers all semantic countercases and whether truth conditions are fixed by that mechanism. Successful action alone does not guarantee either. No universal objection to teleosemantics follows. |
+| Attributive correctness versus reason-giving force | There is a fact about whether this is a good inference as an inference, but it has pro tanto force only for a subject with an epistemic aim. | Indifference cannot erase a countervaluation of a fixed argument. Nevertheless, whether that defect supplies a reason to this indifferent subject remains open under #930. If the rival offers a claim as deductively established to subjects pursuing truth, it needs soundness rather than approval even on its own instrumental account. It may consistently grant the latter and deny categorical force. |
+| Realization versus reduction | Mental/physical processes implement semantic and normative relations; a wider relational base might also constitute them. | Realization accounts survive without explaining why the realized relation is correct. A reduction owes a determinate mapping and an explanatory case for its base; the constructions test specified projections, not the total natural facts. A reductive explanation that actually supplies such a mapping must be assessed on its merits. Nonreductive realization already abandons the stronger claim that psychology exhausts correctness. |
+
+Do not attack a label by calling it circular. The same constraint can be
+a legitimate primitive, a definition of a target, or an unearned assumption
+in a *reduction of* that target. Which it is depends on the claimed
+explanatory direction. Similarly, an account of how an inference occurs
+can be both true and irrelevant to its type-validity, without being an
+inadequate account of how it occurs.
+
+### 2. Perfect psychological performance in a restricted domain
+
+Fix a semantic interpretation S, premises Γ, conclusion c. Use the existing
+`ReflectiveCoherence.Models` and `Entails`. Let C be the independently
+specified subset of valuations a method can consider or has been tested on.
+Define restricted truth preservation as the universal implication only
+over members of C. Grant the rival the **actual truth labels**, not just
+self-reports, of every member of C.
+
+For any omitted valuation v in an expressive classical propositional
+language, form a content q that is false exactly at v (the negation of
+the conjunction of literals identifying v). Use a tautology t as the sole
+premise. Then t entails q on C, but t does not entail q on the full
+interpretation. If C is nonempty, the premise is actually true on every
+tested valuation. This is not vacuous passing because no true premise
+case occurred. In the two-atom model, all fourteen nonempty proper subsets
+of the four valuations admit such a counterexample. Every singleton
+premise/target pair of truth-functions was enumerated.
+
+**General boundary.** For a selected inference class, exact classification
+by restricted truth preservation is equivalent to the requirement that
+each globally invalid inference has at least one countervaluation in C.
+It need not include all valuations if the inference class cannot distinguish
+them. If a tautology and an isolating false-only-at-v content for every
+v are expressible and those sequents are included, coverage of every v is
+necessary, as the construction proves, and sufficient directly by restriction.
+Do not infer full coverage in an arbitrary infinite/non-separating language.
+For the fixed two-atom Boolean semantics, the necessary expressivity is
+provided by ordinary Boolean connectives, not an extra metaphysical premise.
+
+This attacks a more generous psychological account than prevalence-only:
+even complete, accurately labelled, perfectly consistent performance
+inside a restricted range is insufficient for unrestricted deductive
+validity. If the proposed ground instead includes a complete calibrated
+truth-functional evaluation across all four cases, it succeeds in this
+finite domain. No metaphysical claim about which worlds are possible is
+made: these are semantic valuations. A rival who restricts validity to
+a nomically allowed frame has changed the target; frame adequacy is a
+substantive further question.
+
+### 3. Can the internal functional role fix the logical content?
+
+Grant a fixed complete response table for three **accepted-token flags**
+p, q, c. The system adds q if p and c are accepted, adds p if q and c are
+accepted, otherwise retains the accepted flags. The table covers all eight
+input patterns; its operation is defined without a truth predicate. Grant
+truthful connective observations in both diagonal valuations (p=q=0 and
+p=q=1): c is true in each. The system performs both transitions and can
+have correct outcomes in the actual matched training episode p=q=c=1.
+
+For Boolean truth-functional meanings of c, there are sixteen candidate
+truth tables. Write their entries in order 00,01,10,11.
+
+| Interpretation of c | Table | MP sound | AC sound |
+| --- | --- | --- | --- |
+| Material conditional | 1,1,0,1 | yes | no |
+| Equivalence | 1,0,0,1 | yes | yes |
+
+The same entire response map and both diagonal truth labels fit both
+interpretations as *descriptions of what the system does*. Even granting
+MP's semantic soundness leaves precisely these two tables. The AC soundness
+constraint then selects equivalence; a truthful off-diagonal calibration
+c(0,1)=1 instead selects material implication and exposes AC's error. This
+discriminating condition is not encoded by the eight input patterns.
+The same syntactic moves can have different statuses under the two
+interpretations. We do not say one and the same proposition has different
+truth conditions. Nor have we held all psychological, external or physical
+facts fixed: the complete data are just the stipulated acceptance-response
+map plus the two semantic labels (and, for the strengthened fork, MP
+soundness).
+
+This yields a positive as well as a negative argument. A role account
+that includes jointly sound introduction/elimination constraints may
+successfully fix a connective. Here a soundness commitment about each
+of the two elimination rules plus the diagonal conditions uniquely
+selects equivalence. The positive proposal has a genuine burden:
+explain why those constraints, not the equally executable but erroneous
+material-conditional use, constitute the ordinary connective's content.
+Inferring the soundness of actual use merely from a meaning chosen to
+make it sound would discard the very possibility of error being tested.
+Implicit definition, independent semantic calibration, environmental
+content determination and primitive rule grasp remain different
+positive options. The test does not claim their joint impossibility,
+and does not subsume #1084 or the separate conventionalism research.
+
+For an abstract deductive relation, the #943 account of stable guidance
+across goals is relevant but not sufficient as stated: a system can
+coordinate action correctly on every selected environmental task while
+its inferential scope misses v. To extend the account to this case the
+rival must provide actual discriminating tasks or a compositional semantic
+argument covering the countervaluation. That is a concrete criterion
+for its next explanatory improvement, not a demand that every premise
+have an isolated proof.
+
+### 4. Even near-perfect full-support reliability is not validity
+
+For every integer n >= 4, use the distribution on 00,01,10,11 with
+masses 1/n,1/n,1/n,(n-3)/n. Every valuation has positive mass. The
+material-conditional AC rule has true premises precisely at 01 and
+11; at 01 its conclusion is false. Conditional on true premises,
+its failure probability is 1/(n-2). For any positive rational error
+tolerance, choose n sufficiently large. Reliability can thus be
+arbitrarily near one while the inferential type remains invalid.
+There is no statistical inference from this constructed distribution
+to actual populations.
+
+This cannot be repaired merely by granting that selection or
+learning favors success in typical conditions: the argument works
+with full support and arbitrary positive reliability tolerance. An
+idealized **exact** zero error-mass standard does work on a finite
+full-support space: a nonempty countervaluation set necessarily has
+positive mass. Zero *conditional* error is equivalent when true
+premises have positive mass. If they do not, the conditional rate
+is undefined (unconditional countervaluation mass is still zero).
+Full-support, exact calibration and the type rather than token of
+success are the nontrivial conditions of the positive reduction.
+In infinite spaces a countervaluation can be measure zero, so do not
+transfer the finite equivalence without an additional positive-mass
+condition on definable counterexample sets.
+
+This sharpens #931 without contradicting its positive fallible
+guarantees. There is a difference between a rational, fallible basis
+for a belief and a deduction. The reliable-invalid rule might provide
+genuine probabilistic support for p after accepting q and the
+conditional. It does not prove p. A proponent can sensibly claim the
+weaker warrant; it cannot use that concession to identify reliability
+with deductive validity.
+
+### 5. The explanatory and self-application fork
+
+A serious surviving account can supply a physical implementation of
+a calibrated truth-function evaluator, then distinguish cognitive
+failure from correct execution. In the finite case the computation
+is extensional and explanatory at the level of how a competent
+reasoner determines validity; no mysterious act is needed in this
+computational description. It can be supported by a proof from the
+compositional semantics. The issue is the further grounding claim:
+why are these the relevant truth conditions and why does this semantic
+relation make the inference correct? A causal derivation of a verdict
+from its mechanism is not by itself an answer, even if the verdict
+happens to be right.
+
+If an advocate offers only restricted success, the counterexample in
+section 2 directly defeats the claim to unrestricted deduction.
+If the advocate offers independently calibrated full coverage, grant
+the deduction and test the interpretation and its proposed natural
+ground. If the advocate defines the in-scope truth labels by the
+method's own verdict, distinguish correctness relative to that
+definition from the intended fixed contents; the former need not
+warrant a claim about the latter. A new calibration which genuinely
+derives the intended labels from independently specified relations
+would be a positive answer, not disqualified merely by being naturalistic.
+
+If the thesis claims that its naturalistic ground is *deductively*
+established by evidence E, there are two questions: whether the
+psychological procedure actually yields the conclusion and whether
+E entails it. The former does not imply the latter. Two candidate
+grounds assigning the same likelihood to E receive no contrastive
+support from E alone under the exact #934 Bayesian policy; unequal
+priors or further evidence can still favor one. This is not an
+argument that all evidence for naturalism is nondiscriminating.
+If the advocate instead makes a defeasible inference, assess its
+actual evidential support; the absence of deduction does not imply
+absence of reasons. If it makes a mere autobiographical report,
+it does not establish the metaphysical thesis for others.
+If it argues for eliminating every genuine reason for belief,
+the prior same-relation F6 retorsion applies. None of the intermediate
+retreats logically entails that elimination.
+
+No regress from the use of logical standards to a metaphysical
+nonreduction theorem has been obtained. Epistemic priority (a
+deductive defense employs standards) differs from grounding priority
+(what makes those standards hold). Only an account requiring another
+justificatory inference before every application would incur the
+existing strong-prior regress; primitive rule grasp and competence
+models do not require that. A purported reduction that merely
+assumes the conclusion as its standard of ideality is inadequate
+as a *reduction*, but a substantive reduction may presuppose logic
+in the method by which the reduction is argued for. These are
+different dependency relations.
+
+### 6. Target implications and provisional judgment
+
+F1's exact case-predicate scope and F6's thin reason relation remain
+unchanged. The new comparisons give a stronger case against replacing
+truth-preservation by frequency, nomic inevitability, bounded perfect
+performance or arbitrarily high reliability, not an argument against
+psychological realization as such. If any richer proposal supplies an
+objective, content-sensitive standard, it preserves the relevant
+correctness contrast, even if it attempts an ontological reduction.
+If the proposal denies categorical force, #930's preference-independent
+authority remains a separate obligation. No change in the agent's
+aim can make an actual countervaluation cease to be a countervaluation
+under the same interpretation, but it may be claimed to change the
+agent's reasons for conforming.
+
+The most promising next decisive proposition is more precise than
+"psychologism is false":
+
+> Can a completely specified descriptive functional base determine
+> the truth conditions of the same abstract contents, including
+> unencountered countervaluations, without using semantic correctness
+> as an input or changing the contents to fit accepted use?
+
+This is a **grounding** question, not whether a finite program can
+compute correctly. Strongest naturalistic answer: compositional content
+and external relations determine truth labels, from which actual rule
+soundness follows; the labels need not be independent substances.
+Strongest objection: the relevant abstract-content calibration and
+countercase scope might not follow from the proposed base. Supply
+one precise naturalistic calibration and test it against the actual
+candidate functions above, rather than presupposing that all natural
+facts are exhausted by internal dispositions. A verified exact
+calibration that excludes the competing meaning on nonsemantic
+grounds would weaken the stronger anti-reduction judgment.
+A matched model of the *entire proposed base*, not just the response
+projection, with a differing interpretation that respects its
+content-selection constraints would strengthen it.
+
+**Overall provisional assessment:** the descriptive-performance
+versions are insufficient for the selected deductive target. A
+truth-directed functional account that supplies genuinely calibrated
+content remains viable; its explanatory burden is now localized
+to the interpretation/scope relation and, separately, the reason-giving
+status of that relation. This is a new scoped judgment about the
+surviving accounts; it does not supersede the prior F1/F6 or #930
+authority judgments, and does not establish ontological irreducibility.
+No independent challenge has yet assessed this extension.
