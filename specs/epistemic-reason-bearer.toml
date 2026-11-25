@@ -1,0 +1,39 @@
+[batch]
+vocab = "TruthCore.Logic.EpistemicReasonBearer"
+results = "TruthCore.Results.Logic.EpistemicReasonBearer"
+
+[[statement]]
+id = "Warrant for accepted beliefs requires an undefeated supporting basis"
+lean = "AcceptedWarrantNeedsBasis"
+paraphrase = "OPEN evidential warrant condition. At each acceptance in this reliability frame, warrant requires a supporting basis available to that subject for that content which is not undercut for the subject."
+definitions = ["15160f9d-a231-4a9f-834f-cc78a7523dc3"]
+
+[[statement]]
+id = "A surviving supporting basis gives its subject a thin belief reason"
+lean = "SurvivingBasisGivesReason"
+paraphrase = "OPEN pro tanto calibration. A basis supporting a content for a subject, and not undercut for that subject, supplies that subject a thin epistemic reason to believe that content. Sufficiency for belief or preference-independent force is not required."
+definitions = ["dcbd9590-2c87-5550-a69c-b4af6e272fa4"]
+
+[[statement]]
+id = "Subjects with available epistemic reasons are represented as present at the selected world"
+lean = "ReasonBearerPresentAt"
+paraphrase = "OPEN same-standpoint application. For each subject with an epistemic reason for a content, the ontic representative of that subject exists in re at the selected world. An evaluation of reasons for hypothetical subjects need not describe who exists here."
+definitions = ["dcbd9590-2c87-5550-a69c-b4af6e272fa4", "beb654a7-e204-5f4c-a7b4-45e886ba7109"]
+
+[[argument]]
+id = "Thin epistemic reasons from warranted acceptance and surviving evidential support"
+theorem = "reasonsFromWarrant"
+comparator_theorems = ["otherBasis", "warrantControls"]
+premises = ["6280fbf0-551a-46f5-8e0a-a65410c86a64", "Warrant for accepted beliefs requires an undefeated supporting basis", "A surviving supporting basis gives its subject a thin belief reason"]
+conclusion = "STMT-THERE-ARE-EPISTEMIC-REASONS"
+rule = "Extract a surviving basis at the warranted belief and apply the pointwise reason calibration"
+meaning = "The two necessity and attribution assumptions recover a thin reason for the same subject and content as a warranted acceptance. If a specified basis was undercut for that subject, the surviving basis is distinct. Result 1db47fd9 supplies the acceptance conditionally but its eligible-uptake input already includes a reason. That producer adds no independent grounds for thin F6. Independently assessing an actual warranted acceptance is a separate application option."
+
+[[argument]]
+id = "An actual reason bearer supplies CONCRETE_6 population under the selected esse contract"
+theorem = "populationFromReasons"
+comparator_theorems = ["standpointControl"]
+premises = ["STMT-THERE-ARE-EPISTEMIC-REASONS", "Subjects with available epistemic reasons are represented as present at the selected world", "STMT-EXISTING-IN-ACT-AT"]
+conclusion = "STMT-COGITO-INHABITED-CONCRETE-WORLD"
+rule = "Transport the reason bearer to the selected world and apply the existing one-way esse contract"
+meaning = "On the supplied subject representation, F6 supplies a bearer; the presence premise locates that very representative at the selected world, and 0436de86 gives its act in esse there. This instantiates the existing population input with concreteness as HasEsseInRe. No performance, full belief, causal inference or later divine identification follows from reasons alone."

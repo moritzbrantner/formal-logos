@@ -1,0 +1,11 @@
+{
+  "id": "b50727e1-04de-488c-819f-2d5b9993c485",
+  "label": "An actual reason bearer supplies CONCRETE_6 population under the selected esse contract",
+  "argument_id": "e29f44e9-b32c-4816-8f47-ebe1a39ef6b2",
+  "challenge_module": "TruthCore.Results.Logic.EpistemicReasonBearer.Challenge",
+  "solution_module": "TruthCore.Results.Logic.EpistemicReasonBearer.Solution",
+  "theorem": "TruthCore.Results.Logic.EpistemicReasonBearer.populationFromReasons",
+  "comparator_config": "results/b50727e1-04de-488c-819f-2d5b9993c485/comparator.json",
+  "status": "solution-present",
+  "description": "On the supplied subject representation, F6 supplies a bearer; the presence premise locates that very representative at the selected world, and 0436de86 gives its act in esse there. This instantiates the existing population input with concreteness as HasEsseInRe. No performance, full belief, causal inference or later divine identification follows from reasons alone."
+}

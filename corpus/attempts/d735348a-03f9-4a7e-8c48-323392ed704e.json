@@ -1,10 +1,38 @@
 {
   "id": "d735348a-03f9-4a7e-8c48-323392ed704e",
   "label": "Locate discriminating input in agenda selection and compare motivated choice",
-  "date": "2026-11-14",
-  "statement_ids": ["5465fccb-01d6-55b9-b0c2-cd4bf2758bcc", "dd4dfa3b-1bf0-4125-a27b-069cb1110893"],
+  "date": "2026-11-25",
+  "statement_ids": [
+    "5465fccb-01d6-55b9-b0c2-cd4bf2758bcc",
+    "dd4dfa3b-1bf0-4125-a27b-069cb1110893"
+  ],
   "kind": "reading",
   "outcome": "succeeded",
-  "summary": "At 561ba7d5 mapped complete proposed selection inputs into the existing noUnique selector obstruction and WholeSeriesChoicePolicies agenda certificate. A transported agenda changes the complete input; equal option value alone does not fix it. Preserved the moved-output condition, genuinely distinct outcome requirement, and the difference between a symmetric distribution and a unique realization. Clarke Fifth Reply §§1–20 supplies a positive motivated-agency comparison; no source claim or formal attribution added. Distinguished reasons to act, contrastive reasons and actual practical governance. The agenda explains a procedure under its order, while its authority and any divine application remain open; nonnecessitating agency is neither refuted nor identified with chance. Exact comparison, provisional assessment and next governance/post-hoc-rationalization test are in docs/notes/explanatory-symmetry-742.md. No new result, premise closure or personality inference.",
-  "evidence": ["6cf4fc73-3265-5712-a0aa-c30a8cb3c299", "49e1d2c6-9546-492f-a687-8a4fc6c707ce", "1b478d58-8b1e-448b-85f2-5953c71e84e9", "PR-1646"]
+  "summary": "At 561ba7d5 mapped complete proposed selection inputs into the existing noUnique selector obstruction and WholeSeriesChoicePolicies agenda certificate. A transported agenda changes the complete input; equal option value alone does not fix it. Preserved the moved-output condition, genuinely distinct outcome requirement, and the difference between a symmetric distribution and a unique realization. Clarke Fifth Reply §§1–20 supplies a positive motivated-agency comparison; no source claim or formal attribution added. Distinguished reasons to act, contrastive reasons and actual practical governance. The agenda explains a procedure under its order, while its authority and any divine application remain open; nonnecessitating agency is neither refuted nor identified with chance. At ec72649fb completed the #1570 governance test in docs/notes/explanatory-symmetry-742.md under Did the reason guide production of this order?. Matched dispatches separate a content-derived instruction used in production from an independent booking rule with the same later report; only the former stops on disconnect. A direct impersonal selector survives a correction of the booking just as the edited route does. At a tie the end warrants either eligible output. Actual basing and object-specific adoption motivate a conditional authorship advantage. Both productive origins can improve on brute actuality under whole-order explanation; identifying a rational power leaves its operative apprehended specification at this exercise open. The next discriminator is a same-giver constitutive account against common-source contemplation and value-sensitive production. No new result, premise closure or personality inference. Applied the reviewed dispatch comparison to Darwin abandoning the marine-origin claim for the Parallel Roads. The new Glen Roy section compares two sources of this very embodied knower’s continued existence, with identical geological and local rational resources. A finite terrain/report construction distinguishes responding to a report from always giving the same answer. Copying an externally computed verdict can match every answer and its accuracy gain. At the source the construction distinguishes use of a supplied instruction from bypassing it. The identity of a contemplating giver and its adoption of Darwin’s good require separate grounds. Contemporaneous selective engagement favors basing. Neither the correction nor the identity of the power decides whether the giver sustained Darwin for his own epistemic good. The earlier published assessment at b559b9d12da12d91f44f093740eb81b38f562927 covers the dispatch only.",
+  "evidence": [
+    "6cf4fc73-3265-5712-a0aa-c30a8cb3c299",
+    "49e1d2c6-9546-492f-a687-8a4fc6c707ce",
+    "1b478d58-8b1e-448b-85f2-5953c71e84e9",
+    "PR-1646",
+    "b5b84276-2b13-459e-9f59-a3d083f52cc3",
+    "9598a73d-7db6-4fe3-8c9a-114e21dc1ed8",
+    "PR-1978",
+    "PR-1981"
+  ],
+  "current_assessment": {
+    "date": "2026-11-25",
+    "statement_ids": [
+      "5465fccb-01d6-55b9-b0c2-cd4bf2758bcc",
+      "dd4dfa3b-1bf0-4125-a27b-069cb1110893"
+    ],
+    "scope": "The #1570 application to Charles Darwin correcting his marine-origin claim about the high shelves of Glen Roy. Compare the grounds of his continued existence, the evidence for his revision, and the proposed purpose of this very giving.",
+    "assessment": "Darwin weighed considerations from the same correspondent differently and later credited the reply to his difficulties. This favors evidential engagement over blanket deference. Both accounts can accommodate his continuing embodied life and his use of evidence. If the giver adopted Darwin’s exercise of his own judgment as an end and that end directed the giving, it could explain the provision of life and access to evidence. The letters leave the giver’s adoption open. The same good and history can accompany independent productivity.",
+    "next_test": "At fixed giver, recipient, apprehended good and successful outcome, test whether the exemplar account of the actual giving can derive a recipient-directed practical object from the giver’s operation without presupposing adoption. The independently operating power can preserve the same individual and realize the same good. On strict intrinsic invariance, identify what grounds the determinate practical relation to this contingent recipient.",
+    "note": "docs/notes/explanatory-symmetry-742.md#why-did-darwin-give-up-the-marine-explanation-of-the-parallel-roads",
+    "reviewed_revision": "826535a6cdc4c6f1b0ee94c17c2dc49dc569ff6b",
+    "review": "accepted_qualified",
+    "publication": "merged",
+    "evidence": "The original Glen Roy note was committed at fa333246066fe7c9fa76d99112adc85fc29bc227. Independent challenge of the complete draft at d88e02325f09e5f7a6cae5b50463d875aed9d510 accepted the historical assessment, counts, and transfer limits, and requested narrower claims about accuracy, instruction use and explanatory scope. The prior dispatch assessment was independently accepted at b559b9d12da12d91f44f093740eb81b38f562927. Independent recheck accepted the complete note and attempt at the reviewed revision. It reproduced all 80 matched answers under an external verdict and the zero-gain tie with an uninformative report, and accepted the limited historical and philosophical conclusion. PR #1981 merged into main at 10653e8d824cf012d376b2e99595ed649d969d1c.",
+    "supersedes": "Answers the previous next test about one knower who can detect and correct errors. The reviewed dispatch assessment and comparison of whole-order explanations retain their original scope."
+  }
 }

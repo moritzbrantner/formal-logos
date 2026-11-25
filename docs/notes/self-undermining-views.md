@@ -41,10 +41,72 @@ provisional judgment, not as automatic frontier closure.
 | 20 | There are no normative reasons of any kind | [Global reason denial](../../corpus/results/40ae0ae9-36f6-487d-bbb6-2cb4a500e98a.json) leaves no internal adoption reason in the profile. [F6 excludes it](../../corpus/results/0c32687e-0e0f-45a8-a85f-9c324bc10728.json) when the same profile contains an epistemic reason. |
 | 21 | All truth is socially constructed | [Construction plus variation](../../corpus/results/a1fa828f-3efd-4f92-b3bc-5238c313eb86.json) excludes objective truth inside the scope when objective truth means actual truth stable across the supplied profiles. That exclusion applies to the thesis's own formulation if it is in scope. The [controls](../../corpus/results/7a23011d-5098-4477-8f2e-ab6750459bdf.json) preserve objective truth outside local scope and allow stable truth even with universal construction status when the variation premise fails. |
 | 22 | Evolutionary naturalism undermines trust in the reasoning that supports it | [The accepted package lacks warrant](../../corpus/results/fe69aa38-9a65-4f83-ba33-82c1e909307d.json) when it raises the specified reliability concern, that concern undercuts the basis, every supporting basis is the targeted one, and warrant requires undefeated support. The [controls](../../corpus/results/eea262e9-35fb-4779-9aae-8eea32fee146.json) preserve package truth in a model with lack of warrant and preserve warrant with independent support. The [fitness and truth analysis](plantinga-fitness-truth-boundary.md) leaves the reliability assessment for evolutionary naturalism open. |
-| 23 | Darwinian debunking of realist epistemic judgments, applied to the debunker | [The realist debunker lacks warrant](../../corpus/results/60425b3c-f72e-417a-bc63-26016902daa1.json) for the debunking conclusion under an analyst within-history-variation reading, when the uniform mismatch policy undercuts the debunker's own selection-fixed epistemic basis and that basis is the sole support. [History-fixed correctness](../../corpus/results/6e78b91c-a3c4-4904-b740-245dadb12466.json) with actual accuracy blocks the tracking failure; [the controls](../../corpus/results/92a88754-ad36-4b22-a645-d054fc0400ac.json) keep the conclusion true and F6 intact, and keep warrant in a no-undercutting model with history-fixed correctness. Street's own fixed-truth horn has only its [non-probabilistic part](../../corpus/results/28051e37-ddea-4080-b5ff-7134e7d90b3d.json) formalized, with no self-application yet. See [Street's dilemma and epistemic reasons](#streets-dilemma-and-epistemic-reasons-1585). |
+| 23 | Darwinian debunking of realist epistemic judgments, applied to the debunker | [The realist debunker lacks warrant](../../corpus/results/60425b3c-f72e-417a-bc63-26016902daa1.json) for the debunking conclusion under an analyst within-history-variation reading, when the uniform mismatch policy undercuts the debunker's own selection-fixed epistemic basis and that basis is the sole support. [History-fixed correctness](../../corpus/results/6e78b91c-a3c4-4904-b740-245dadb12466.json) with actual accuracy blocks the tracking failure; [the controls](../../corpus/results/92a88754-ad36-4b22-a645-d054fc0400ac.json) keep the conclusion true and F6 intact, and keep warrant in a no-undercutting model with history-fixed correctness. For the fixed-truth horn, [audited self-application](../../corpus/results/8f0f44e5-2a3b-497b-aee9-c38115992973.json) requires a further defeat policy. A calibrated proxy survives the bypass objection in [the #1615 comparison](#when-does-a-genealogy-defeat-its-own-evidential-basis-1615-2026-11-25). See [Street's dilemma and epistemic reasons](#streets-dilemma-and-epistemic-reasons-1585). |
 
 The [epistemic-underminer analysis](epistemic-underminer-boundaries.md) records the
 warrant, benchmark and prior-demonstration assumptions in more detail.
+
+## Which thought supplies the concrete-population premise? (#1007)
+
+Suppose someone actually asserts “no thought is experienced.” The assertion
+result requires a thought realizing that assertion and the classification of
+the speaker's realizing thoughts for this content as experienced. It supplies an
+occurring, experienced thought that falsifies the asserted universal. The
+thesis considered in silence supplies no performance. Nothing in this test
+evaluates the speaker's warrant. [Assertion result](../../corpus/results/0c9d64e6-e29f-4b47-b974-5f38c1beb0eb.json)
+
+For the further Cogito step, fix the occurrence predicate to thought episodes.
+If each experienced occurring thought has a bearer, apply that principle to
+the witnessed episode. This gives a bearer together with the thought it
+bears. It need not be the asserting agent. The bearer step is an
+instantiation. In the checked two-episode interpretation both thoughts
+occur, only one is experienced and borne, and the all-thought
+bearer premise fails. Holding occurrence and experience fixed while emptying
+the bearer relation removes every thinking-subject witness. This control tests
+the inference's scope and supplies no evidence for actual subjectless experience.
+[Scoped result and control](../../corpus/results/06ce17e9-ad97-487b-8bf4-e4e8d098dd38.json)
+
+A separate consumer takes **any** already witnessed subject and its occurring
+thought. The existing bearer-concreteness and bearer-existence-at-world
+premises apply to that very pair. Together they give a concrete inhabitant
+of the selected world. The earlier Cogito consumer obtained the pair by
+applying the bearer principle for all occurring thoughts. Both routes
+remain available. The new consumer also accepts the direct single-bearer
+assumption. [Population result](../../corpus/results/6801590a-5ed5-4c90-bc85-2e72621ed0e0.json)
+[Original Cogito result](../../corpus/results/COGITO-SUBJECT-FROM-OCCURRENCE.json)
+
+The direct-esse argument takes this population at the same world and
+concreteness interpretation. Reaching its God-existence conclusion still
+requires the whole-roster and contingent-grounding premises, excluded middle,
+the principles connecting existence, grades and causation in esse, firstness
+and component exclusion, and the nominal bridge. The argument record gives
+the complete bundle. Its first root need not be the thinker. God-existence
+in turn supplies one input of the Catholicism skeleton. [Direct-esse argument](../../corpus/arguments/fc46b7f9-32d0-416d-8f72-5bc908992f30.json)
+[Root skeleton](../../corpus/arguments/CATHOLICISM-SKELETON.json)
+
+**Provisional assessment.** Consider a conscious episode whose content is the denial
+“no thought is experienced.” The denial itself is presented from a particular
+point of view. That first-person
+presentation gives prima facie reason to ascribe this very thought to a bearer.
+Extending it to every experienced thought requires a substantive
+account of why having a point of view entails having a bearer. The impersonal
+event account locates perspective in the organization of the experiencing
+event itself. Denying an enduring self leaves the thin bearer premise intact
+if the event or a momentary bundle qualifies as its bearer. The disagreement
+concerns cases in which the account accepts the phenomenal occurrence and
+denies *any* such attribution. The formal control separates those claims.
+It does not decide which account fits first-person experience. An independent
+criterion for attributing a particular experienced thought to a bearer would
+revise this assessment. [Existing bearer investigation](../../corpus/attempts/cogito-subject-consolidation.json)
+
+At baseline `7a5a834d` the orphan report lists both `0c9d64e6` (phenomenal
+occurrence) and `d2cb9100` (the original Cogito instantiation). Both now reach
+the root via the single-bearer consumer. The separate represented-existence result
+`46c875b1` now supplies the PSR population premise `43f09b83` when its
+existence predicate is the selected world's existence extension. For a
+particular denial, the open question is whether its representative tracks
+the performance itself. The same individual witnesses concrete population
+under the selected world's existence-in-act contract. [Represented-occurrence proof and control](../causal-finite-branching-and-psr-syllogisms.md#can-the-denial-itself-supply-s2s-population-premise-1007) · [Assertion attempt](../../corpus/attempts/69a4a681-8caa-4b34-8fc4-84d8ae522e7b.json)
 
 ## Internal reasons to adopt a view
 
@@ -442,8 +504,7 @@ within-history premise, but it is the paradigm target of the cross-history
 horn (step 1). It survives step 4 only if its actual verdicts are accurate,
 which the horn disputes, so it is not counted as a survivor. *Relation-asserting
 supervenience realism* (epistemic correctness supervening on truth-conduciveness
-that selection responds to) belongs to Street's second horn, which is not
-formalized here; nothing here shows that the extension fails to reach it.
+that selection responds to) belongs to Street's second horn, whose calibration premises are examined in the #1615 follow-up below.
 
 **Strongest surviving replies to this reconstruction.**
 - (a) Global constructivism extends n. 57's antirealist reply to epistemic
@@ -454,7 +515,7 @@ formalized here; nothing here shows that the extension fails to reach it.
   assessed by epistemic standards, which is the complication Street flags.
   Whether a basis exists that needs no epistemic evaluative judgment is open.
 
-**Provisional judgment, about this reconstruction only.**
+**Historical assessment at #1611, before the #1615 tests below.**
 - Under the within-history variant, the self-application undermines a realist
   debunker's warrant, and a debunker with history-fixed correctness keeps it.
 - Street's own horn has only its non-probabilistic part formalized (step 1).
@@ -467,11 +528,177 @@ formalized here; nothing here shows that the extension fails to reach it.
   cross-history mismatch without counting bare falsity as defeat, or when a
   non-evaluative basis for the debunking conclusion is identified.
 
-**Root connection.** Frontier delta: no change (476 open premises reaching the
-root before and after). F6 is a floor item that these results neither use nor
+**Root connection at #1611.** Frontier delta: no change. F6 is a floor item that these results neither use nor
 threaten. The route to the case runs through warrant for accepting root-route
 premises, the #930 bridge that is still unbuilt. Attempt
 [`a29f4411-ac87-42b2-bae3-48fa0882b41a`](../../corpus/attempts/a29f4411-ac87-42b2-bae3-48fa0882b41a.json).
+
+### When does a genealogy defeat its own evidential basis? (#1615, 2026-11-25)
+
+Fix one subject, judgment, class of relevant histories, and roster of bases.
+Let E be the method actually producing a verdict. An independent report about
+E says it followed a specified cue while bypassing a specified local comparison.
+The subject must accept the report with warrant and actually rely on an undefeated
+basis that supplies adequate grounds for it apart from the operation under investigation. The Lean audit takes
+the report's content and the provenance relation as interpretation inputs.
+An auditor who simply repeats E's output supplies no such provenance.
+
+**The disputed principle P.** For every E on this subject's roster, if correctness
+is fixed across the admitted histories, E's verdict differs from its actual
+verdict in some other history, and the subject has that independently based
+warranted report about E, then E is undercut for the subject. **Its classical
+negation** requires **one** E meeting all three conditions that remains
+undercut-free. An example with a missing audit, or a second ground that rescues
+the target while E is undercut, does not witness this negation. Independent
+grounds for the *audit* and for the *target* answer different questions.
+[Typed policy](../../corpus/statements/dc7d2e57-5d06-4f4a-a51f-b3b0ea7aec00.json)
+
+**Why accept or deny P?** A process record can discredit a person's claim to
+have compared the evidence. When the entire apparent evidential advantage of
+the output came from that comparison, the discovery removes the reason to give
+the output that weight. The same discovery leaves open how the cue acquired its
+own evidential value. The strongest denier grants the audit and the variation, specifies the producing basis as the entire cue-reading method, and holds its access and background calibration fixed.
+A method can copy a fallible source that independently tests the subject matter.
+Changing that source's message can change our answer to a fixed question while
+its actual message still favors the answer. This challenges defeat of **the
+producing method as a whole**. It grants defeat of a claim to firsthand comparison.
+
+For scale, stipulate a reference class of matched binary questions with equal
+prior odds and known reporting rates. The source endorses in nine out of ten
+true cases and one out of ten false cases. Conditional on that calibration and
+the channel's identity, an endorsement multiplies the odds by nine. Learning
+that the recipient copied it can remove any extra weight assigned for local
+checking while preserving that testimonial increment. The calibration is
+background information; by itself it does not answer the target question. If endorsement rates
+are equal and positive in the two classes, its likelihood ratio is one and
+it adds no such weight. These are comparison calculations across questions.
+They supply neither a measure over possible histories of one fixed truth nor
+observed frequencies for moral or epistemic judgments. Comparing the two
+channel models on the same evidence matters more than counting how many
+mechanisms each story names. A copying hypothesis explains the pilot's output
+without an extra local comparison; parsimony alone has no bearing on whether
+the copied cue carries information. Inferring falsity from its origin would
+discard the very distinction the matched cases test.
+
+**Reflexive application.** Take E as the basis for the debunker's inference
+that the genealogy discredits the target. The same P applies to that E. If
+the debunker's own independently warranted process report and cross-history
+premises hold and all supporting grounds for the inference are E, requiring
+undefeated support for warrant gives loss of warrant. The first control
+realizes the entire bundle with a true target. A contradiction requires a
+further assertion of warrant for that same subject and target, or another
+premise implying it. Advocating the conclusion as warranted on grounds that
+one's own argument removes is epistemic self-undermining. Losing E can leave warrant intact if the remaining grounds adequately sustain
+the subject's acceptance. The theorem quantifies over all available supporting
+grounds. To draw the same conclusion about a person's belief from the grounds
+they actually used, we also need evidence of what their acceptance was based on.
+The second control realizes the exact denial of P. The third gives an example
+in which P, other support and target warrant all hold after E is defeated. The fourth
+keeps the report, P and a constantly wrong verdict while E remains undefeated.
+Bare falsity cannot activate P. Distinct basis labels in these examples
+stipulate a model; an actual case needs a provenance check for shared error.
+[Self-application](../../corpus/results/8f0f44e5-2a3b-497b-aee9-c38115992973.json)
+and [controls](../../corpus/results/fddc2381-a88e-41b9-b799-16e834ad7217.json)
+
+**The nonmodal test.** Independently adjudicated failures of the very operation
+being used, in cases matched for task, access and difficulty, can warrant a
+low assessment without any variation premise about this judgment. The existing
+package result takes acceptance, a package-to-concern premise and an explicit
+concern-to-undercut policy. Instantiate the package as the calibration evidence
+and its effect as a low assessment of E. Its conclusion is local defeat under
+those premises. Mere fallibility, inability to estimate a rate, or a poor
+average over a different task supplies no target-specific adverse calibration.
+The existing policy is stronger because it also covers inability to assess.
+Its rejection and the presence of other support have separate controls. The
+low-assessment premise itself requires an appropriate comparison with what
+could already be inferred without E. A useful report may be fallible.
+[Package result](../../corpus/results/29256101-b0a6-4df1-aa19-15f4c68cffec.json)
+and [omission controls](../../corpus/results/eea262e9-35fb-4779-9aae-8eea32fee146.json)
+
+**The relation horn.** Fix a factor independently of the verdict, such as
+detectable features bearing on a perceptual method's accuracy. Correctness
+supervening on that factor means that equal factor values have equal correctness.
+The identity and reversed maps on a binary factor both satisfy this constraint.
+The existing strong-supervenience pair demonstrates precisely this ambiguity
+for moral profiles. In the epistemic profile, suppose the *selected verdict*
+also stays fixed for each factor value. If a designated panel covers every
+realized value and independent adjudication supports the panel's accuracy,
+verdict and correctness transport together to every represented case. Lean
+checks the transport with panel accuracy as a premise. Neither causal selection
+for those features nor independent adjudication is established by the type.
+For fallible alignment use the existing common-distribution bound on selection
+error plus factor/truth error. Its four-case model puts all the error in the
+hard subclass. A calibration panel containing only adaptive successes cannot
+settle epistemic hard cases without evidence of coverage. Both calculations
+depend on the alignment of the factor with the same standard of correctness;
+they contribute no second independent warrant for that alignment.
+[Panel transport](../../corpus/results/b4ada0ef-3bd7-4603-8c55-318fa577451e.json),
+[supervenience controls](../../corpus/results/92c0d3ea-1685-48fb-bf34-6e0ea44589a2.json),
+[error bound](../../corpus/results/ba953e0a-9a32-42ac-91f8-04f96512d925.json)
+and [subclass model](../../corpus/results/37bee36b-6b6f-45f9-a805-ccab0811f02a.json)
+
+**Blind probe, 2026-11-25.** Truth was fixed to 1. Endorsement and rejection
+were 1 and 0; withholding was null. Exactly one mechanism used the local
+comparison when enabled and withheld otherwise, one copied the selection cue,
+and one copied the external verdict. In local, selection, external order,
+the four public rows with comparison enabled were 111, 101, 010 and 000.
+Their respective ABC outputs were 111, 101, 010 and 000. They identified B
+as copying selection and left A/C interchangeable. Before disclosure I sent
+the coordinator both joint predictions, in probe order (111 disabled, 110
+enabled): **(null,1,1); (1,1,0)** or **(1,1,null); (0,1,1)**. Any other
+joint observation, including mixing halves of these patterns, disconfirms
+the stipulated noiseless assignment. The coordinator then revealed the first
+pair. A used local comparison and C copied the external verdict in this model.
+
+The coordinator's SHA-256 commitment was
+`bfe0144318ad606bd6f290c2cba5a2c71907e9d4976a73457fc04d33337d2d7b`.
+The revealed UTF-8 payload, with no trailing newline, was
+
+```json
+{"assignment":{"A":"local_comparison","B":"repeat_selection","C":"repeat_external_comparison"},"salt":"12f4b909f0c09d374ababc02aeae7944","withheld_reports":[[null,1,1],[1,1,0]]}
+```
+
+Disabling comparison tests reliance on its availability. Separating the local
+and external inputs tests which one governs the output. Accurate copying
+could be rationally based testimony given a trustworthy source, intact
+transmission, actual testimonial reliance and no overriding defeater. These
+runs distinguish mechanisms only under the stipulated menu. They test no
+source competence, access to truth, entitlement to trust, real genealogy,
+or actual debunker's warrant. Neither a unique A/C forecast nor a measured
+accuracy advantage was obtained before disclosure.
+
+**Overall provisional judgment.** The warrant for withdrawing a claim to
+firsthand comparison is strong when an independent process trace shows bypass.
+P goes further. Its unrestricted full-basis conclusion loses to calibrated
+proxy cases on their stated assumptions. Full defeat is supported where the
+missing comparison exhausted the output's evidential advantage, and this
+supports a conditional reflexive criticism. There is no evidence here that
+a determinate actual debunker's only basis meets that condition. Reopen at a
+named inference with its actual evidential chain: vary the suspected cue while
+preserving access to the facts, trace testimony and any alternative checks to
+their sources, and independently calibrate the cue in matched cases including
+cases where cue and local evidence disagree. Recalibrate or withdraw the
+defeat judgment if that path retains predictive information. If the audit
+depends on the very error it alleges, its own warrant needs reassessment too.
+For a concrete comparison in the existing record, Darwin's selective challenges
+to parts of Jamieson's field report discriminate use of particular evidence
+from blanket assent. That episode supplies a reason to take testimonial
+mediation seriously. Its geology and provenance do not establish how a
+debunker formed an epistemic evaluation. [Glen Roy comparison](explanatory-symmetry-742.md#why-did-darwin-give-up-the-marine-explanation-of-the-parallel-roads)
+An independent route need only avoid the specified fault; no premise requires
+abandoning all epistemic norms.
+
+**Case connection.** An actual warranted acceptance, plus surviving support
+and its interpretation as a pro tanto reason, can feed thin F6. With the
+represented subject existing at the chosen world and the same esse contract,
+F6 can populate the stage-one God-existence argument. A result denying one
+subject warrant for one target supplies no such positive witness. Other
+reasons, including direct warrant for F6, remain available. Warrant for
+accepting particular root-route premises (#930) and the additional stage-one
+premises remain separate obligations. No inference from a Darwinian moral
+genealogy to God is delivered here.
+[Warrant, F6 and represented population (#1980)](epistemic-underminer-boundaries.md#from-warranted-belief-to-an-actual-bearer-1007-2026-11-25)
+and [research attempt](../../corpus/attempts/a29f4411-ac87-42b2-bae3-48fa0882b41a.json).
 
 ## Follow-up investigations
 

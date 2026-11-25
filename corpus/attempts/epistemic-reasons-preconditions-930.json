@@ -5,18 +5,43 @@
   "statement_ids": [
     "f56b2ee7-c69e-5e3b-85b0-e671d907ba58",
     "bea77d88-037f-5ff1-9798-a99bbbc27206",
-    "2ca463c2-bd1f-5a13-a395-0e2c57a5ad8f"
+    "2ca463c2-bd1f-5a13-a395-0e2c57a5ad8f",
+    "b391c809-50b9-488c-909d-6ba6658b989e",
+    "1b74e22c-3e2e-5328-b587-6dc2517f5e3f",
+    "d92ee0fc-2b21-4e73-8fdb-4cf3fa2f5c4b",
+    "0c1a5185-eb02-4905-be59-2bb4d8f95ff7"
   ],
-  "date": "2026-11-17",
+  "date": "2026-11-25",
   "kind": "derivation",
   "outcome": "succeeded",
-  "summary": "Earlier role, authority, local-good and application findings retain their qualified status and are preserved in the dated sections of docs/notes/epistemic-reasons-preconditions.md. Continuation from 9bcca33f1: completed the route through properly based warranted response without successful factual understanding. The response account adds error coverage; an explicit Sum attitude map separates belief from withholding about the same content and passed focused Lean elaboration. Neither check assigns normative force. The existing warrant result already assumes Reason and derives Warrant, not preference-independent authority. The strongest goal-relative account accepts the evidence and basing facts while restricting force. The positive account retains direct evaluative warrant but returns to the same isolated relevance commitment. No new discriminating authority argument was found. Full outcome, fixed preference domain, map, rejected approaches and precise revision conditions are in the note. Proposed next allocation: another open root node rather than another version of this same transfer. The actual successful-case route remains closed to further application work without its specified episode evidence. No new source claim, formal premise, proof registration or root discharge; fresh independent challenge belongs to the coordinator.",
+  "summary": "Earlier role, authority, local-good and application findings retain their qualified status and are preserved in the dated sections of docs/notes/epistemic-reasons-preconditions.md. Continuation from 9bcca33f1: completed the route through properly based warranted response without successful factual understanding. The response account adds error coverage; an explicit Sum attitude map separates belief from withholding about the same content and passed focused Lean elaboration. Neither check assigns normative force. The existing warrant result already assumes Reason and derives Warrant, not preference-independent authority. The strongest goal-relative account accepts the evidence and basing facts while restricting force. The positive account retains direct evaluative warrant but returns to the same isolated relevance commitment. No new discriminating authority argument was found. Full outcome, fixed preference domain, map, rejected approaches and precise revision conditions are in the note. Proposed next allocation: another open root node rather than another version of this same transfer. The actual successful-case route remains closed to further application work without its specified episode evidence. No new source claim, formal premise, proof registration or root discharge; fresh independent challenge belongs to the coordinator.\n\n#1007 belief-witness continuation. Result decf920c projects the actual-force concession b391c809 through reverse consideration presentation 1b74e22c at the same subject and content to thin F6. Only an attributed consideration at believe p and the local reverse implication are needed. Goal-relative producer 3f888d00 already assumes an aimed ordinary belief witness. Checked populated controls preserve presentation with actual or all-preference force for suspension alone, or preserve the concession while omitting presentation. A distinct content can express the false global denial while nobody has a reason to believe it. The two attitude existentials, including 2ca463c2 supplied by 73f46094 from hThin, cannot return a belief witness on their own. This instantiation connects precisely 3f888d00 through F6 to the existing conditional population route. The aimed belief attribution deserves case-specific assessment; this projection gives no independent warrant for the attribution or for categorical force. See the 2026-11-25 section of docs/notes/epistemic-reasons-preconditions.md.",
   "evidence": [
     "PR-1046",
     "2930b66a-b5e3-4f3f-b2d3-758d84c0e54d",
     "3f585aa7-636f-4a79-8eab-3f7925367f8d",
     "PR-1646",
-    "PR-1706"
+    "PR-1706",
+    "3f888d00-c940-4bf3-99d7-faa342b42ed5",
+    "decf920c-6b29-4f36-a7a0-aad4bce01811",
+    "PR-1980"
   ],
-  "blocker": "The remaining inference is that the properly based warranted response counts for its bearer without a relevant end or sound practical connection. Structural eligibility and warrant do not supply that authority; using a stronger Reason or Warrant interpretation would assume it. No different test remains in this reconstruction. Further work requires a substantive new argument, mechanism or consequence that discriminates on this exact relevance question, not a new predicate or another success measure. Preserve prior qualified judgments and propose allocation to another open root node after review. The separate actual-case application still needs its previously specified episode evidence."
+  "blocker": "The remaining inference is that the properly based warranted response counts for its bearer without a relevant end or sound practical connection. Structural eligibility and warrant do not supply that authority; using a stronger Reason or Warrant interpretation would assume it. No different test remains in this reconstruction. Further work requires a substantive new argument, mechanism or consequence that discriminates on this exact relevance question, not a new predicate or another success measure. Preserve prior qualified judgments and propose allocation to another open root node after review. The separate actual-case application still needs its previously specified episode evidence. The local belief-witness question has a separate application test: establish the accuracy aim, receipt of a parity-sensitive tally and its pro tanto bearing on this answer. If the observed pair count is equally likely conditional on even and on odd, a report that omits the residue favors neither answer, though it can give the investigator a reason to check the residue. Neither assent nor an end-independent force premise is required for the local route.",
+  "current_assessment": {
+    "date": "2026-11-25",
+    "statement_ids": [
+      "f56b2ee7-c69e-5e3b-85b0-e671d907ba58",
+      "2ca463c2-bd1f-5a13-a395-0e2c57a5ad8f",
+      "b391c809-50b9-488c-909d-6ba6658b989e",
+      "1b74e22c-3e2e-5328-b587-6dc2517f5e3f"
+    ],
+    "scope": "Issue #1007. Which actual-force concessions yield a reason to believe a particular content in the same subject and reason relation?",
+    "assessment": "A consideration attributed specifically to believing p supplies a thin reason for that same subject and content under reverse presentation. Force at any or all preferences for withholding about p leaves that belief witness open. The accuracy-directed account can grant a reason to believe when evidence favors an answer and the investigator seeks accuracy. This leaves its dispute with preference-independent authority open.",
+    "next_test": "For the same investigator and parity question, establish whether the received tally included the unpaired residue. A pair count whose likelihood is the same under even and odd leaves their prior odds unchanged. An accurate copy of a checked tally can transmit its discriminating information.",
+    "note": "docs/notes/epistemic-reasons-preconditions.md#which-consideration-gives-a-reason-to-believe-this-content-1007-2026-11-25",
+    "review": "accepted_qualified",
+    "reviewed_revision": "c77bd578cd6a18570ee69a578d4addc684c7bac6",
+    "publication": "merged",
+    "evidence": "Independent review accepted the six declarations, exact belief witness and graph use of 3f888d00 at f97da0a4e4a3758300c9673d212b4e70d7a795a2. Targeted review accepted the equal-likelihood and copied-tally repairs at the reviewed revision. Published in PR #1980. PR #1980 merged as eb2347bd3a5c976db13ab549358ad9fef025b591.",
+    "supersedes": "Adds the belief-directed concession and its suspension control to the existing reasons assessment. The separate warrant and end-independent authority tests retain their scope."
+  }
 }
