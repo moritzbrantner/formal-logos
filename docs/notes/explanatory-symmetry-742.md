@@ -565,12 +565,13 @@ human participants. Their roles were distributed. No inference requires
 one controller to have chosen the end, communicated it and executed the
 maneuver alone. [Flight Control Division report, Appendix B, p. B-12, §E.1–2](https://www.apollojournals.org/alsj/a13/A13_MissionOpReport.pdf)
 
-The records have different evidential roles. The flight director reports the
+The records have different evidential roles. The flight directors’ joint postflight narrative describes the
 selection meeting. Haise's own readback distinguishes Earth/Sun from Earth/Moon
 alignment and identifies the intended Pacific return. This is participant
 evidence of his understanding of the instructions. It gives little reason to
-credit him personally with choosing the Pacific option. The retrofire officer's
-account supplies his reason for his own no-go call. These are distinct
+credit him personally with choosing the Pacific option. The retrofire team’s joint
+postflight report gives the on-duty officer’s operational reason for the no-go
+call. The four signatories do not identify which of them wrote that passage. These are distinct
 perspectives on a shared operation, and both written accounts belong to one
 official report. A well-calibrated automatic controller can use the target in
 steering, while a human who understands the target and accurately predicts the
