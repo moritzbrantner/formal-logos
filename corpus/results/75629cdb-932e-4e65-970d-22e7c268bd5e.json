@@ -1,0 +1,11 @@
+{
+  "id": "75629cdb-932e-4e65-970d-22e7c268bd5e",
+  "label": "NECESSARY_2 first mover underived, from actual root and support coverage",
+  "argument_id": "e36b2af9-3138-4eaa-852b-52f8a49881d0",
+  "challenge_module": "TruthCore.Results.Causality.FirstMoverUnderived.Challenge",
+  "solution_module": "TruthCore.Results.Causality.FirstMoverUnderived.Solution",
+  "theorem": "TruthCore.Results.Causality.FirstMoverUnderived.underivedOfFirstMoverRoot",
+  "comparator_config": "results/75629cdb-932e-4e65-970d-22e7c268bd5e/comparator.json",
+  "status": "solution-present",
+  "description": "Conditional support for the existing underivedness node from the First Way's necessary actual root and concrete support coverage. Necessity is accessible-world existence. The support exclusion ranges over all admitted worlds and is relative to the selected relation and existing concrete supporters. The uncovered-edge control has a necessary actual first mover with an incoming concrete supporter at another world, while a different individual is underived. This is a structural test of witness preservation without coverage."
+}

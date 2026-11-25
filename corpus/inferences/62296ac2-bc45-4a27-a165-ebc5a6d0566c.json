@@ -1,0 +1,13 @@
+{
+  "id": "62296ac2-bc45-4a27-a165-ebc5a6d0566c",
+  "label": "NECESSARY_2 first mover underived, from actual root and support coverage (inference)",
+  "input_statement_ids": [
+    "11958874-aa8f-4b09-97ba-4f6028d26cd9",
+    "df42581f-5fff-4b5f-8b40-6e16d2b890f2"
+  ],
+  "output_statement_id": "0bdcf366-29c7-5d45-b603-5c929dcad976",
+  "rule": "A concrete supporter anywhere would give the same bearer an actual concrete supporter, contradicting its actual rootedness",
+  "meaning": "Take the first mover f from the actual necessary root premise. On the same groundProfile F concrete grounds and selected world w, coverage turns an incoming selected edge from an existing concrete candidate at any admitted world into an incoming edge to f from a concrete candidate existing at w. The actual root conjunct excludes that edge. The companion sameMoverUnderived keeps f's status as a first mover moved by none, actual rootedness, accessible-world existence, firstness in being and pure act together with the all-admitted-world exclusion. The registered conclusion projects this same f to the existing underivedness node consumed by 8f956c81. The coverage step needs no new root selection and adds no well-foundedness, J1, reflexive access or excluded-middle input.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}
