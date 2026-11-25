@@ -1,0 +1,10 @@
+{
+  "id": "c5c21423-0f24-45ac-b095-2b308e472070",
+  "label": "Apply the existing joint borrowing trap to the adoption-product pair (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "3a189449-ff46-497d-aced-e32deb01c760",
+  "rule": "Construct the two-role borrowing trap and reuse its existing obstruction theorem",
+  "meaning": "The selected pair contains no independently supplied role. Each actual record entering it requires the opposite role within it, even if a necessary source is another contributor. Apply DerivativeJointPower.trap_obstruction to both members. This is a narrow reuse application whose new research role is fixed by the matched restoration controls; it does not independently defend inductive supply or identify semantic dependence with productive prerequisites.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

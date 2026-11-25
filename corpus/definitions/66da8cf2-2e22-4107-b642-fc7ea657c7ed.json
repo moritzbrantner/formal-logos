@@ -1,0 +1,9 @@
+{
+  "id": "66da8cf2-2e22-4107-b642-fc7ea657c7ed",
+  "label": "Every accessible represented truth agrees with actuality",
+  "term": "complete represented truth fixed",
+  "definition": "CompleteTruthFixed A a means that for every world accessible from a and every fact represented in the arena, the fact holds at that world exactly when it holds at a. Different world indices may still have identical valuations. The condition does not identify worlds or assert a singleton ontology.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Explanation.ContainedSelection.CompleteTruthFixed",
+  "note": "Calling the represented valuations complete metaphysical possibilities requires an exhaustive representation of all relevant facts, a correctly delimited accessibility relation, and actual membership in the admitted class. A unique history conditional on there being a foundation is not this condition if foundation absence remains possible. This is a mathematical test rather than an argument for necessitarianism; attribution deferred."
+}

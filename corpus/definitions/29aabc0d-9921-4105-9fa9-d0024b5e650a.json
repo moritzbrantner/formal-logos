@@ -1,0 +1,9 @@
+{
+  "id": "29aabc0d-9921-4105-9fa9-d0024b5e650a",
+  "label": "Selected deterministic prerequisite records preserve truth across accessible worlds",
+  "term": "truth preservation by a prerequisite record",
+  "definition": "RulesPreserveTruth A w h says that for each admitted record g and every world accessible from w, truth of every contributor and enabler of g implies truth of its effect there. It is a sufficient conditional over a fixed scenario class. It does not assert that each member is necessary for the effect, that the members obtain, or that the record causally produces or adequately explains it.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Explanation.ExistentialInheritance.RulesPreserveTruth",
+  "note": "Analyst formulation, attribution deferred. It represents the deterministic restriction explicitly granted to the rival in this investigation. It is not an adequacy requirement for all explanation: a probabilistic or freely exercised source can offer a different account. The contained control validates the conditional from its actual existence table, rather than promoting a fact labelled law to efficacy. Whether actual metaphysical laws have this scope, whether every operative condition was listed, and whether any explanation requires another criterion remain OPEN. See docs/notes/explanatory-adequacy-750.md#existential-inheritance-with-a-contained-brute-foundation-2026-11-24."
+}

@@ -1,0 +1,9 @@
+{
+  "id": "c1ae0b54-f6f2-4f93-afdc-5d948c36c0d8",
+  "label": "Matched selection arena with the actual act left unexplained",
+  "term": "matched act explanation removal",
+  "definition": "unexplainedAct retains ExplanatorySymmetry.acting's Nat worlds, Option Bool candidate beings, Fact signature, world-relative truth and existence-fact map, and keeps an ActingReason edge exactly when its target is not member 0. The only removed original edge is the source-to-member-0 edge at world 0. The distinct member-0-to-target and direct source-to-target edges remain. ContingentPSR quantifies over all actually contingent represented facts; Explained only asserts that a reason is admitted.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Explanation.ContainedSelection.unexplainedAct",
+  "note": "This realizes the matched next test from PR-1910. In acting, target and member 0 hold exactly at world 0, sources true and false hold everywhere, member 1 and other hold at nonzero worlds. The same ontology is preserved in both interpretations. Sources are not identified with God; personal agency, rational content and productive causation are absent from this signature. Assigned reason edges establish neither explanatory adequacy nor metaphysical possibility. There are two necessary sources in this inherited control, not a single classical-theistic source. The model's event-fact coverage result must not be transferred automatically to the narrower being-level PSR."
+}

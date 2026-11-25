@@ -1,0 +1,10 @@
+{
+  "id": "fd5b9138-9830-438c-8000-f321857af50b",
+  "label": "Populated truthful-production positive control (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "b561dadc-f7e3-4efd-b3e7-bdaa6c5a4acb",
+  "rule": "Evaluate populated causal and cognitive assignments with the existing content-veracity route",
+  "meaning": "Restores the full source-to-record bundle without empty source populations, empty causal relations or constant observations. The assigned source and all token bearers exist throughout; cognitive attitudes vary with history. Structural satisfiability only: no actual source, metaphysical model or probability is established.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

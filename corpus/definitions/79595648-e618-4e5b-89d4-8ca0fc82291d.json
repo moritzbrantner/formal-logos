@@ -1,0 +1,14 @@
+{
+  "id": "79595648-e618-4e5b-89d4-8ca0fc82291d",
+  "label": "Deterministic record correction, coalescence and false positive fiber controls",
+  "term": "initial-history authenticity structural controls",
+  "definition": "erase sends each Boolean state to false; reverse toggles it. A state pair carries a stipulated past bit and a record bit, read by record. positiveRecord means the visible bit is true; pastContent o i means the initial past bit equals o. accurateInputs admits matching bits; falsePositiveInputs admits false past and true record. copyPast maps (p,r) to (p,p), while stampPositive maps it to (p,true). identityHistory keeps every Boolean bearer present in every Bool-pair-indexed alternative and at every Unit time, with universal accessibility and empty ordinary causes. originMarker returns that same bearer label and recordBearer chooses the input past coordinate. These assignments encode no additional uncaused events, evolving ontology, chance measure or unrestricted recombination.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Epistemology.InitialHistoryAuthenticity.Controls",
+  "definition_ids": [
+    "07fffca9-7d59-49b3-a85a-1c0345382f51",
+    "dd7b91ea-5284-4558-bac5-7a0759843b0c",
+    "334ceafa-8848-4b4a-8713-3968e608b7da"
+  ],
+  "note": "Structural surrogates only. The Boolean past coordinate is not a witnessed historical event, and no model is certified metaphysically possible or a complete naturalistic or theistic cosmology. copyPast is a positive truth-tracking mechanism under the stipulated direct availability of its past coordinate; real channels need warrant for that availability. It is many-to-one because record differences disappear, so improving record truth need not conserve every input difference at the current state. Complete trajectories still include the initial difference. Conversely, fixed deterministic stamping cannot create truth about a contrary past. The all-present identity control preserves numerical existence while revealing the missing identification bridge; its empty causes are not a causal theory. See docs/notes/fixed-initial-history-535.md#initial-conditions-and-authentic-historical-evidence-2026-11-24."
+}

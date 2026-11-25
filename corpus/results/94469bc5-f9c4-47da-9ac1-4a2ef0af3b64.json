@@ -1,0 +1,11 @@
+{
+  "id": "94469bc5-f9c4-47da-9ac1-4a2ef0af3b64",
+  "label": "Perfection of GOD_4 from its gift of esse to each other carrier",
+  "argument_id": "ea6317cf-be93-4ea2-a8a5-ad52c156c35e",
+  "challenge_module": "TruthCore.Results.Case.Catholicism.AttributesFromEsse.Challenge",
+  "solution_module": "TruthCore.Results.Case.Catholicism.AttributesFromEsse.Solution",
+  "theorem": "TruthCore.Results.Case.Catholicism.AttributesFromEsse.perfectFromGodCause",
+  "comparator_config": "results/94469bc5-f9c4-47da-9ac1-4a2ef0af3b64/comparator.json",
+  "status": "solution-present",
+  "description": "Self-identity transports actuality directly. For every other x actual at r the carrier-wide converse gives the esse edge and the preexistence rule gives actuality in the same r at g."
+}

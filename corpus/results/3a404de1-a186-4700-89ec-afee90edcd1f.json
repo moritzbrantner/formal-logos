@@ -1,0 +1,11 @@
+{
+  "id": "3a404de1-a186-4700-89ec-afee90edcd1f",
+  "label": "Essential origin and identified bearer reduce record soundness to authentic anchors",
+  "argument_id": "177c8502-5eff-48d3-a5ef-143309232a66",
+  "challenge_module": "TruthCore.Results.Epistemology.InitialHistoryAuthenticity.Challenge",
+  "solution_module": "TruthCore.Results.Epistemology.InitialHistoryAuthenticity.Solution",
+  "theorem": "TruthCore.Results.Epistemology.InitialHistoryAuthenticity.identityBridge",
+  "comparator_config": "results/3a404de1-a186-4700-89ec-afee90edcd1f/comparator.json",
+  "status": "solution-present",
+  "description": "Derives the conditional identification bridge on the existing History/Ontic interface while preserving the same bearer and record content. The genuine historical reading of origin, the identification premise and authentic anchors are explicit application obligations. This is a structural conditional, not a proof that essential origins make replicas observable or that an arbitrary positive record is true."
+}

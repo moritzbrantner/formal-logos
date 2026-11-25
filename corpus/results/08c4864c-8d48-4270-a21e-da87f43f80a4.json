@@ -1,0 +1,11 @@
+{
+  "id": "08c4864c-8d48-4270-a21e-da87f43f80a4",
+  "label": "Apply the existing joint borrowing trap to the adoption-product pair",
+  "argument_id": "4df18b31-1b44-4d5c-abef-15d203c6c2f7",
+  "challenge_module": "TruthCore.Results.Explanation.ActualExerciseExplanation.Challenge",
+  "solution_module": "TruthCore.Results.Explanation.ActualExerciseExplanation.Solution",
+  "theorem": "TruthCore.Results.Explanation.ActualExerciseExplanation.productiveCut",
+  "comparator_config": "results/08c4864c-8d48-4270-a21e-da87f43f80a4/comparator.json",
+  "status": "solution-present",
+  "description": "The selected pair contains no independently supplied role. Each actual record entering it requires the opposite role within it, even if a necessary source is another contributor. Apply DerivativeJointPower.trap_obstruction to both members. This is a narrow reuse application whose new research role is fixed by the matched restoration controls; it does not independently defend inductive supply or identify semantic dependence with productive prerequisites."
+}

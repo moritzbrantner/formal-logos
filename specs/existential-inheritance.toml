@@ -1,0 +1,54 @@
+# Conditional modal inheritance and an explicit actual-prerequisite audit.
+# Analyst formulations, attribution deferred; no root premise is discharged.
+
+[batch]
+vocab = "TruthCore.Explanation.ExistentialInheritance"
+results = "TruthCore.Results.Explanation.ExistentialInheritance"
+
+[[statement]]
+id = "Same-bearer CONTINGENCY_1 inheritance and joint absence through a common required bearer"
+lean = "AbsenceInheritance"
+paraphrase = "For an actual x, the existing modal requirement that x exists only where the same b exists transfers b's witnessed contingency to x. Modal requirements compose transitively. Under the explicit OPEN EssenceAbsenceBridge, the source-indexed essential existence requirement supplies that modal condition. For any selected class of actual bearers all modally requiring the same contingent b, every member is contingent and one accessible world lacks all of them. No recombination, arbitrary-world closure, actual cause-to-dependence bridge, essentialism proof or joint-absence inference from individual contingency is asserted. The empty selected class is allowed and the common base supplies the witness world."
+definitions = ["0a533e9d-a149-4cc4-9aba-7116eb755256", "0b1d99d6-f96b-4a07-90d1-c3fc5c5946bb", "d7f66ca4-38c0-4cbb-ac5c-b2237ec3645c", "DEF-KANT-MODAL-CONTINGENCY", "DEF-KANT-ONTOLOGICAL-MODEL", "DEF-PSR-EXISTENCE-FACT"]
+disambiguations = ["DISAMB-KANT-CONTINGENCY"]
+
+[[statement]]
+id = "Contained existence retains proximate reasons and the base in INDUCTIVE_CLOSURE_2"
+lean = "ResourceInheritance"
+paraphrase = "In each of two modal overlays of the same contained interpretation, the law and background are necessary, the base existence profile fixes all bearer existence, all admitted records have actual true members and effects and preserve truth across accessible worlds, the base existence fact has no reason, and each derivative existence fact has a reason. Every derivative has a distinct existing cause wherever it exists. The fixed-resource policy admits law and background only; its base-dependent facts form the existing borrowing trap, so no derivative has FullSupply under that policy. Admitting the actual base as a primitive resource restores FullSupply for every derivative. Any FullSupply derivation admitting no derivative existence as a primitive leaf uses both base existence and the law as primitive resources. The contingent overlay validates the explicit essential-to-modal bridge and one shared absence world; the necessary overlay has necessary base and derivatives with the same actual explanatory/resource deficit. FullSupply here is a mathematical prerequisite derivation, not productive causal power or ultimate adequacy. The model has no temporal events; no spontaneous-birth or physical-law theorem is claimed."
+definitions = ["9cf0d91a-6cd2-41cf-900c-0b01a4307540", "29aabc0d-9921-4105-9fa9-d0024b5e650a", "dc694d9a-119b-436e-ab45-9354441aacf6", "0a533e9d-a149-4cc4-9aba-7116eb755256", "DEF-EXPLANATORY-FULL-SUPPLY", "a8172538-204c-45f5-9ee0-9e9d7b437660", "DEF-JOINT-CAUSAL-GROUPS", "DEF-PSR-STRENGTH-ARENA", "DEF-PSR-STRENGTH-REASON", "DEF-KANT-MODAL-CONTINGENCY", "DEF-KANT-MODAL-NECESSITY", "DEF-KANT-ONTOLOGICAL-MODEL"]
+disambiguations = ["DISAMB-KANT-CONTINGENCY"]
+
+[[statement]]
+id = "Actual cause and existence-reason source need not transfer CONTINGENCY_1 to the same target"
+lean = "ReplacementBoundary"
+paraphrase = "A populated two-world interpretation has an actual contingent base causing and furnishing a #312 circumstance reason for the same target, although the target exists necessarily and has a distinct existing cause at both worlds. In the other world an alternative bearer replaces base as source. Thus the target does not modally require the actual base. The earlier directedNature interpretation is reused: necessary co-presence holds both ways while its source-indexed essential existence requirement holds only one way. These controls separate actual causation, candidate explanation, modal co-requirement and source-indexed essence; they neither refute essential dependence nor establish metaphysical possibility or adequacy of the assigned explanations."
+definitions = ["a17d43a1-a6a1-4dea-8965-4f263b5a6cd8", "0b1d99d6-f96b-4a07-90d1-c3fc5c5946bb", "d7f66ca4-38c0-4cbb-ac5c-b2237ec3645c", "DEF-PSR-REASON", "DEF-PSR-EXISTENCE-FACT", "DEF-KANT-MODAL-CONTINGENCY", "DEF-KANT-MODAL-NECESSITY", "DEF-KANT-ONTOLOGICAL-MODEL"]
+disambiguations = ["DISAMB-KANT-CONTINGENCY"]
+
+[[argument]]
+id = "Same-bearer absence inheritance without recombination"
+theorem = "absenceInheritance"
+premises = []
+conclusion = "Same-bearer CONTINGENCY_1 inheritance and joint absence through a common required bearer"
+rule = "Reuse the base absence witness and compose the existing modal requirements"
+meaning = "A witness world lacking b cannot contain an x that requires that same b there. The single witness works for the whole selected class. Transitive composition preserves the same world, identity and accessibility standpoint. Essential interpretation uses the explicit EssenceAbsenceBridge. All philosophical conditions remain internal hypotheses of the universal certificate."
+description = "Constructive same-witness modal consequences, including a common absence witness for a selected dependent class. Does not establish the essential bridge, a metaphysical possibility, a PSR, causation or a necessary being. Connection plan to existence PSR 608a262d-08fe-4dfd-9413-67e2ecf35b84 remains OPEN: absence inheritance supplies no actual reason."
+
+[[argument]]
+id = "Contained explanatory resources expose the base without erasing proximate reasons"
+theorem = "resourceInheritance"
+premises = []
+conclusion = "Contained existence retains proximate reasons and the base in INDUCTIVE_CLOSURE_2"
+rule = "Construct the explicit records and trap, reuse trap obstruction, and extract primitive resources"
+meaning = "The contained interpretation grants fixed truth-preserving rules, actual prerequisites, existing causal predecessors and reasons for every derivative. The existing trap obstruction excludes FullSupply from law and background alone. Induction constructs every derivative after admitting base and extracts base plus law from any derivation with no derivative primitive. Changing only the modal overlay separates resource deficiency from modal contingency. The result concerns the displayed rules and resource policies, whose adequacy and exhaustiveness are not assumed."
+description = "Structural resource discrimination with unbounded finite layers, checked proximate explanations, a primitive-stop positive control and modal overlays. Reuses the existing FullSupply and trap_obstruction; no new inductive supply theory or opaque adequacy proposition. Shows the retained actual input, not a contradiction of brute contingency. No new registered edge to the root-facing existence PSR or C2."
+
+[[argument]]
+id = "A replacement source blocks automatic contingency inheritance"
+theorem = "replacementBoundary"
+premises = []
+conclusion = "Actual cause and existence-reason source need not transfer CONTINGENCY_1 to the same target"
+rule = "Check populated replacement and reuse the necessary co-presence law"
+meaning = "At the actual world base is the cause and circumstance-reason source of target; at the other world the same target remains present with an alternative existing cause. The exact modal requirement needed for inheritance fails. The existing directedNature necessary-co-presence control is consumed rather than rediscovered."
+description = "Omission control for the same-bearer modal requirement used by the transfer theorem, preserving actual source/target identity, populated worlds and causal provision. Neither all causal dependence nor determinism alone establishes essential requirement. The assigned relations do not establish real metaphysical possibility or explanation adequacy."
