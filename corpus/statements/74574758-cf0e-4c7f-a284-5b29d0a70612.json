@@ -1,0 +1,11 @@
+{
+  "id": "74574758-cf0e-4c7f-a284-5b29d0a70612",
+  "label": "Covered realizations lose supply under deletion of exercised groups using inputs of the named giver",
+  "paraphrase": "The exercise record is coherent. For each covered source and token pair, all selected inputs for that pair belong to that source. The same token has original inductive supply and lacks supply after removing exercised groups with a selected contributor, keeping the intrinsic basis and surviving records fixed. The classification of operative contributors, the intrinsic basis and the fidelity of the exercise record require independent warrant. Bearer-esse survival is a separate application test.",
+  "lean_declaration": "TruthCore.Causality.ProductiveDeletion.CoveredLosses",
+  "definition_ids": [
+    "c9d479bb-308a-5a2b-9755-ddc0170d4e35",
+    "7b20df90-a3d9-41c7-be8b-1d2beb5b995a",
+    "ff8bf1d7-0bf9-5dda-8038-7127e3d46ec8"
+  ]
+}

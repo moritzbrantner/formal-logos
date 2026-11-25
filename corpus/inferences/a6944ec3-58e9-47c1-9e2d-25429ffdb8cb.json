@@ -1,0 +1,10 @@
+{
+  "id": "a6944ec3-58e9-47c1-9e2d-25429ffdb8cb",
+  "label": "Four controls for the audited defeat policy (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "b8a3fa12-81b3-4c87-b7f2-e2179f7c9eb3",
+  "rule": "Reuse cross-history and reliability controls and evaluate the subject’s report support and the targeted basis",
+  "meaning": "The controls exhibit the policy firing, its existential denial at one basis, other supporting grounds despite defeat, and its failure to fire on bare error. All report, provenance and warrant fields are stipulated. Different basis labels in these frames carry no empirical provenance certificate.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}
