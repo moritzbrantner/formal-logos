@@ -889,8 +889,12 @@ target/release/truth brief '#1792' --issues-from /tmp/truth-1792.json
 The first command reads the issue and its paginated GitHub timeline. It keeps
 the issue body, comments, and the same-repository issues and PRs that referenced
 it. It can find a merged delivery while the issue is still open. The second
-command runs offline. Read the assessment’s scope, reviewed revision, source
-note and next test alongside each relevant PR’s state. An issue mention can
+command runs offline. The text brief shows excerpts from the assigned issue's
+comments with their links when available. Explicit follow-up headings receive
+priority, followed by comments from an identified repository owner or issue
+author. A follow-up may add to the original request. Compare the assessment’s
+scope, reviewed revision, source note and next test with each relevant PR's
+state. An issue mention can
 refer to an objection or an earlier draft. Compare what the PR delivered with
 the actual request before closing or dispatching it.
 
@@ -912,6 +916,29 @@ A previously captured snapshot can be reused. Without a snapshot, the issue
 brief can still find directly referenced checkout records. Outbound-only links,
 private or unreferenced work and changes since capture can require another
 source. A wider all-state issue/PR snapshot in the supported format also works.
+
+### Checking a returned worker revision
+
+Use the commit from the handoff and either its PR number or its owning attempt.
+This example looks up the undrawn-triangle investigation from #1790.
+
+```bash
+python3 scripts/reconcile_worker_report.py c96f355e4913031e832475c0b7b3bdda7f94fe9e --pr 1988
+```
+
+The report compares the worker commit with the recorded review, the published
+head and the selected main revision. For #1988, the worker commit is the exact
+revision with qualified acceptance. The later publication includes that
+revision. Read the returned assessment for the finding, its limits and the
+test that could reopen it.
+
+The command uses local `origin/main` by default. Refresh that ref when you need
+current publication status, or select a known revision with `--main`. An ordinary
+local PR merge supplies the head and merge commits. Otherwise the command can
+look up the PR with `gh` or read a saved `gh pr view` JSON record supplied with
+`--snapshot` (see `--help` for fields). A squash, divergent histories or
+missing objects can leave the relation unresolved. Inspect the cited changes
+and review scope before deciding what needs another review.
 
 ## `issues` and `dossier --issues-from`
 

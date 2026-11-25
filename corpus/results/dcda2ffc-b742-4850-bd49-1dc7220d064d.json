@@ -1,0 +1,11 @@
+{
+  "id": "dcda2ffc-b742-4850-bd49-1dc7220d064d",
+  "label": "Initial variation under injective dynamics and complete trajectories",
+  "argument_id": "5505bbf6-bb13-45ec-a59f-457013033267",
+  "challenge_module": "TruthCore.Results.Epistemology.InitialHistoryAuthenticity.Challenge",
+  "solution_module": "TruthCore.Results.Epistemology.InitialHistoryAuthenticity.Solution",
+  "theorem": "TruthCore.Results.Epistemology.InitialHistoryAuthenticity.dynamics",
+  "comparator_config": "results/dcda2ffc-b742-4850-bd49-1dc7220d064d/comparator.json",
+  "status": "solution-present",
+  "description": "Derives the exact structural conservation boundary for a fixed law and admitted input class. Reversible finite evolution preserves distinctions; retaining time zero distinguishes complete histories even after later coalescence. Readout preservation requires its own injectivity. No unconditional conservation of ignorance, arbitrariness, lack of explanation or every observable is claimed. The law's necessity and the admitted class's metaphysical scope remain application commitments."
+}

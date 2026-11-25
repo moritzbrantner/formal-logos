@@ -1,0 +1,9 @@
+{
+  "id": "9e6cdf50-baaa-46a2-917c-cc079bce38b3",
+  "label": "Existence-fact projection of an arena reason relation",
+  "term": "existence reason projection",
+  "definition": "existenceView retains an Arena's ontology and maps an intrinsic or circumstance token about bearer y to the proposition that y exists. It admits that token for x's existence exactly when A.explains relates y's existence fact to x's existence fact. The token's bearer is selected by the existing BruteContingencyParity.source function. NoBruteContingentExistenceAt then applies with its original #312 token and de re contingent-existence meaning.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Explanation.ContainedSelection.existenceView",
+  "note": "A narrow explicit adapter, not a complete translation of arbitrary fact explanations. It omits reasons not represented as existence facts and conflates the two token tags for this projection only. It preserves no unasserted causal, intrinsic-essence or adequacy property. In the two matched models the contingent target bearer has a source-existence reason, while the nonexistential act fact can remain unexplained. This is an exact counterexample to extending being-level coverage to every contingent fact without a domain bridge, not a refutation of either coverage principle."
+}

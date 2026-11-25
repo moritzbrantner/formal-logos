@@ -1,0 +1,23 @@
+{
+  "id": "eb72d679-30c6-4d4b-bd8c-350b36e59fb5",
+  "label": "Contained existence retains proximate reasons and the base in INDUCTIVE_CLOSURE_2",
+  "paraphrase": "In each of two modal overlays of the same contained interpretation, the law and background are necessary, the base existence profile fixes all bearer existence, all admitted records have actual true members and effects and preserve truth across accessible worlds, the base existence fact has no reason, and each derivative existence fact has a reason. Every derivative has a distinct existing cause wherever it exists. The fixed-resource policy admits law and background only; its base-dependent facts form the existing borrowing trap, so no derivative has FullSupply under that policy. Admitting the actual base as a primitive resource restores FullSupply for every derivative. Any FullSupply derivation admitting no derivative existence as a primitive leaf uses both base existence and the law as primitive resources. The contingent overlay validates the explicit essential-to-modal bridge and one shared absence world; the necessary overlay has necessary base and derivatives with the same actual explanatory/resource deficit. FullSupply here is a mathematical prerequisite derivation, not productive causal power or ultimate adequacy. The model has no temporal events; no spontaneous-birth or physical-law theorem is claimed.",
+  "lean_declaration": "TruthCore.Explanation.ExistentialInheritance.ResourceInheritance",
+  "definition_ids": [
+    "9cf0d91a-6cd2-41cf-900c-0b01a4307540",
+    "29aabc0d-9921-4105-9fa9-d0024b5e650a",
+    "dc694d9a-119b-436e-ab45-9354441aacf6",
+    "0a533e9d-a149-4cc4-9aba-7116eb755256",
+    "aa8a8cd7-3ad0-5ddc-b8ff-6433bfcaa9c6",
+    "a8172538-204c-45f5-9ee0-9e9d7b437660",
+    "ff8bf1d7-0bf9-5dda-8038-7127e3d46ec8",
+    "fe4b7da0-cbd6-5d1f-b589-953f9def12b7",
+    "179d4557-bda1-59c4-938a-b91e9974a27f",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ],
+  "disambiguation_ids": [
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f"
+  ]
+}

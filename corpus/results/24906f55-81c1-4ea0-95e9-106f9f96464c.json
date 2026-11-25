@@ -1,0 +1,11 @@
+{
+  "id": "24906f55-81c1-4ea0-95e9-106f9f96464c",
+  "label": "Actual copying and complete record provenance yield exact target recovery",
+  "argument_id": "47d92276-6d43-4185-9af5-ba83e1d4573c",
+  "challenge_module": "TruthCore.Results.Epistemology.SourceEvidenceAdequacy.Challenge",
+  "solution_module": "TruthCore.Results.Epistemology.SourceEvidenceAdequacy.Solution",
+  "theorem": "TruthCore.Results.Epistemology.SourceEvidenceAdequacy.copyGuarantee",
+  "comparator_config": "results/24906f55-81c1-4ea0-95e9-106f9f96464c/comparator.json",
+  "status": "solution-present",
+  "description": "A nonmental sufficient process bundle with the same causal coverage and transport standard. CopiesTarget constrains actual production relative to an independently given target; it is not assumed record soundness. The theorem derives exact-value record truth, while access to a genuine historical target and the mechanism's applicability remain OPEN. The explicit no-plan/no-attitude witness tests functional parity, not a complete impersonal worldview."
+}

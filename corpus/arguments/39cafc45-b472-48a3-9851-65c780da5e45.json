@@ -1,0 +1,33 @@
+{
+  "id": "39cafc45-b472-48a3-9851-65c780da5e45",
+  "label": "Exact content recovery supplies truth-preserving record transport",
+  "premise_statement_ids": [
+    "c7c0ccda-a540-43f5-bad5-1e9b25eb2ca7"
+  ],
+  "conclusion_statement_id": "636afc90-2c2c-4054-adca-9680d35b9e98",
+  "inference_ids": [
+    "1bdbcc53-fe5c-427a-8009-7642aeaf4578"
+  ],
+  "meaning": "RECORD_TRANSPORT_1 implies RECORD_TRANSPORT_2 on the SAME channel and domain. The former is the sole Prop premise; allowed histories and content semantics are parameters. This is a strength comparison, not a defense of either transport condition or historical reliability. The retagging control witnesses failure of the converse.",
+  "definition_ids": [
+    "16daa03a-e1d0-4e07-89ad-3ac67db8c66c",
+    "91414c1b-813a-4b1d-bab5-715394ccd0bc",
+    "9fcefb90-0cc3-4c0a-b964-cbf3585bc9c9",
+    "e37c56c6-ac07-40d9-93df-6688593784e9"
+  ],
+  "strong_version_needed": {
+    "c7c0ccda-a540-43f5-bad5-1e9b25eb2ca7": "The strong condition is the subject of this strength comparison; the main assertion-to-record assembly uses only the weaker truth-preserving condition."
+  },
+  "sense_bridges": [
+    {
+      "term": "RECORD_TRANSPORT",
+      "from": "3d26300a-3f1f-4f88-b5ea-069b1225c822",
+      "to": "a937d92a-a3fc-4a62-8d30-b1c9ce4206de",
+      "statement_id": "636afc90-2c2c-4054-adca-9680d35b9e98",
+      "role": "conclusion"
+    }
+  ],
+  "disambiguation_ids": [
+    "594c9ccf-e253-4585-8904-133281547321"
+  ]
+}

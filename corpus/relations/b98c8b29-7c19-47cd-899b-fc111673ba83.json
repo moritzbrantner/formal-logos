@@ -1,0 +1,10 @@
+{
+  "id": "b98c8b29-7c19-47cd-899b-fc111673ba83",
+  "label": "Truth nontriviality challenges global absolute-truth denial",
+  "subject_kind": "argument",
+  "subject_id": "4124c437-b63a-5aa8-bdb5-a8373e4c6893",
+  "predicate": "attacks",
+  "object_kind": "statement",
+  "object_id": "bff72296-915a-543f-8903-182edf096dfc",
+  "note": "GlobalDenialPrice within TruthNontrivialityCore proves that global denial precludes an expressive absolute truth predicate, and excludes the denial under disquotation plus capture. These antecedents are not independently established. Retain the relative-only survivor and do not identify the absolute predicate with Lean Prop. Non-counting objection."
+}

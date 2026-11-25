@@ -1,0 +1,12 @@
+{
+  "id": "dd7b91ea-5284-4558-bac5-7a0759843b0c",
+  "label": "Positive record truth, admitted observation fibers and authentic anchors",
+  "term": "sound positive historical records and uniform authenticity",
+  "definition": "RecordsSound allowed observe positive content means: each admitted i whose observation is a positive record makes content (observe i) i true. positive o marks that o asserts the selected historical claim; content o i is the supplied primitive truth condition of that claim in the history indexed by i. SafeInitial is that implication at i. PositiveFibersTrue requires the admitted inverse image of each positive observation o to lie wholly in the set where content o is true. PositiveUniform says authenticity has the same truth value within each inhabited positive observation fiber; it permits uniformly false fibers. PositiveWitnesses gives at least one authentic input in each inhabited positive fiber. AuthenticityEvidenceOnly uses existing EvidenceOnly on the admitted subtype and the full vector of observation-equality tests; with all observations counted positive it is equivalent to PositiveUniform. This is a universal truth guarantee, not a definition of fallible knowledge, warrant or historical probability.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Epistemology.InitialHistoryAuthenticity.RecordsSound",
+  "definition_ids": [
+    "c8c357e8-33d1-5468-858d-78f8493e353b"
+  ],
+  "note": "The independent primitives are admitted input class, observation map, positive-assertion classification and content truth condition. The theorems constrain their relationship; they do not complete the historical meaning of content, identify actual authentic traces, or justify choosing an admissible class. An ordinary example would supply the actual event producing a dated trace as content, and the currently read trace as observe; this application is OPEN. In the Boolean controls content is explicitly only agreement between a retained past marker and a reported bit. A uniformly false positive fiber is a concrete distinction between classificatory uniformity and truth. Empty admissible classes and unobserved fibers pass vacuously; controls retain inhabited positive fibers. No fake past is made metaphysically admissible and no equal prior or skeptical conclusion follows. See docs/notes/fixed-initial-history-535.md#initial-conditions-and-authentic-historical-evidence-2026-11-24."
+}

@@ -410,3 +410,119 @@ Universal application requires a reason the account covers every admissible
 pair. If every being is already assumed to reach one and the same source along
 a finite upstream path, that source witnesses every local join. Deriving
 local joining that way adds no reason for its universal reach.
+
+## Two-domain test at GW170817 and GRB 170817A
+
+**One coalescing binary is strongly supported as the productive origin of these
+two particular transients.** The recipient was real. On 17 August 2017 the
+LIGO–Virgo alert team used a Hanford inspiral candidate and Fermi's separately
+triggered gamma-ray burst in issuing GCN Circular 21505 at 13:21:42 UTC.
+Its claim of coincidence required both records. The incoming radiation reached
+different detectors, and the team received reports derived from their responses.
+The alert establishes joint use. The case for common production comes from
+measurements made on the two branches. [GCN Circular 21505](https://gcn.nasa.gov/circulars/21505) · [Multi-messenger collaboration, §§2–2.2 and Fig. 2](https://arxiv.org/pdf/1710.05833)
+
+Take each signal token to be the particular emitted disturbance. Use one
+relation throughout the upstream trace: one physical process contributes to
+bringing another about. The evolving binary, including its inspiral *before*
+contact, generates the gravitational chirp through its changing mass
+quadrupole. The same system supplies merger material and energy for an
+outflow in which gamma radiation is produced. The waveform identifies a
+compact inspiral independently of the burst. Fermi recorded the burst and
+INTEGRAL registered it in a separate instrument. Later radio images showed
+apparent superluminal motion of the afterglow source between days 75 and 230,
+supporting a relativistic jet from this system. They did not image the site of
+prompt photon emission. Jet emission and shock emission from surrounding
+material leave room for different immediate producers within this common
+history. The witness is one evolving system with two stars and several
+processes, with no claim of simplicity or sole causal responsibility.
+[GW analysis, §§III–IV](https://arxiv.org/pdf/1710.05832) ·
+[Joint GW–gamma analysis, §§2, 5.1 and 6](https://arxiv.org/pdf/1710.05834) ·
+[Mooley et al., radio astrometry](https://arxiv.org/abs/1806.09693)
+
+**What favors that history?** An unrelated compact inspiral and an unrelated
+short burst would each account for its own detector signature. Both kinds of
+signal occur, so an accidental pairing has an empirical background. The
+burst onset followed the inferred coalescence by 1.74 ± 0.05 s and the
+independently inferred sky regions overlapped. Using independent Poisson event
+streams, the GBM short-burst rate corrected for livetime, and randomized burst
+sky maps, the collaborations obtained a temporal p-value of 5 × 10⁻⁶ and a
+spatial p-value of 0.01. Their joint 5 × 10⁻⁸ measures coincidence at least
+this good under the chance model. It supplies neither posterior odds across
+all source models nor a probability for a common existential ground. An
+incompatible localization or positive identification of a different prompt
+emitter would reopen this particular association. [Joint analysis, §3](https://arxiv.org/pdf/1710.05834)
+
+The same event provides a measured case of **mixed provenance**. At Livingston,
+an instrumental transient saturated a feedback channel 1.1 s before
+coalescence. Similar glitches recur without correlation between sites. Removing
+the affected interval still recovered the chirp in two detectors. One strain
+record thus includes contributions with different origins. At the level of
+the two celestial signals, distinct radiation mechanisms *within* one merger
+can explain both the match and the difference between a chirp during inspiral
+and a delayed pulse from matter set in motion by coalescence. The chance calculation tests independent
+events and cannot select among such mechanisms. At the level of substantial
+grounds, a pluralist can accept the entire emission history while assigning
+the gravitational and electromagnetic bearers distinct sources of existence.
+The same binary dynamics and outflow physics explain the association on either account. Distinct
+fields give content to the distinction of bearers, but provide no evidence that
+their sustaining ancestries terminate separately. Nor does emission show that
+the binary sustains either field, the existence of its own constituents, or
+the traveling disturbances after emission. [Livingston analysis, §II and Fig. 2](https://arxiv.org/pdf/1710.05832)
+
+**A closer case of present dependence.** Lake et al. photographed one diamond
+microdisk, measured its radial breathing resonance and measured its optical
+cavity resonances. They wrote an optical signal into mechanical motion and
+read it back optically. Here the material that deforms can be identified in
+the device, and the dielectric boundary confines the circulating optical
+field. On a reading that admits particular mode excitations as concrete
+dependents, both require this disk to exist *as these disk-bound excitations*
+while realized. Removing the laser drive and removing the resonator would
+test different claims: an undriven disk retains resonances, whereas a pulse
+escaping a removed cavity can persist as light but cannot persist as that
+cavity excitation. This is an identity and boundary-condition argument.
+The reported experiment measured storage, retrieval and mode spectra, not
+disk removal. The disk provides common present support in this restricted
+sense even with an external optical drive. It does not thereby give existence
+to the electromagnetic field or to the diamond as a substance. A model in
+which the field and the lattice each persist and the disk sets boundary
+conditions for their interaction predicts the same readout. Both accounts
+need the disk for these particular modes. Only the stronger claim about
+the bearers would distinguish their existential ancestry. [Lake et al., Figs. 5–7 and “Mode characterization”](https://pmc.ncbi.nlm.nih.gov/articles/PMC7844031/)
+
+**Graph destination and revision condition.** To instantiate even one fork of
+`9cd1588d`, identify actual concrete nodes at the selected world, two
+`m.grounds w` edges into the same dependent, and finite upstream paths on that
+very relation to one node. Signal production, evidence used in an alert, and
+present dependence of a confined mode answer different questions. For the
+substantial reading, the next discriminating case would identify the two
+contributing substances independently of their joint effect and trace what
+keeps each in being. Selective loss of their joint output while both continue
+to exist identifies an activity condition. Evidence of a common ongoing
+condition constitutive of each contributor's continued existence, together
+with grounds for both edges into the dependent, would favor a local join.
+Finding distinct immediate sustainers would move the test upstream. Showing
+a split requires grounds for excluding any common ancestor on that relation.
+[Tracing two material parts back through fabrication](root-route-modal-load.md#two-domain-test-on-actual-contributors) · [Actual-concrete graph](../../TruthCore/Causality/ConcreteExistentialSupply.lean)
+
+Even one such join leaves the quantifier over **every** fork open. With that
+coverage, well-foundedness, weak connectivity and a separately supplied actual
+root, the existing result yields unique actual root `7ab0ddcb`. To reach the
+Fourth Way's `0881e859` requires a bearer actual and unexceeded at esse that **directly**
+gives esse to each distinct actual-at-esse recipient. The source-first route
+requires a bridge to actual esse-cause paths with the specified esse/essence
+source (`c35b1a5c`), composition (`b4987085`) and superiority at esse
+(`cffad050`) with excluded middle, to derive the fixed-esse law
+(`da09703b`): every maximum gives esse to every distinct actual recipient.
+A maximal witness (`fad8af3e`) makes this existential (`0881e859`). The partition in §6 misses an actual
+recipient for each of its two maxima. Gravitational and electromagnetic
+channels are not a demonstrated partition of *esse* recipients. Identifying the maximal giver with a named God takes the further naming
+bundle (argument `678ff65f`). The restricted converse says each named God
+gives esse to each distinct *actual-at-esse* recipient. The stronger converse
+(`86d02b69`) also covers inactive carriers. Neither converse asserts a named
+God exists. The genus law (`d9fad785`) concerns every maximum and every
+distinct actual recipient *at each respect*.
+The positive finding is cross-domain production of these tokens and a narrower
+case of present dependence for bound modes. Neither supplies a new premise
+discharge. [Local-fork theorem](../../TruthCore/Results/Causality/LocalSourceConfluence/Solution.lean) ·
+[Source-first route and exact alternatives, §§5–6](root-route-modal-load.md#what-a-partition-denies)

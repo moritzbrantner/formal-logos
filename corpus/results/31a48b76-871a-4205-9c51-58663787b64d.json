@@ -1,0 +1,11 @@
+{
+  "id": "31a48b76-871a-4205-9c51-58663787b64d",
+  "label": "Matched act-reason deletion separates existential from contingent-fact coverage",
+  "argument_id": "f7c01af6-5a19-48b5-bf76-f5aae3a429b6",
+  "challenge_module": "TruthCore.Results.Explanation.ContainedSelection.Challenge",
+  "solution_module": "TruthCore.Results.Explanation.ContainedSelection.Solution",
+  "theorem": "TruthCore.Results.Explanation.ContainedSelection.exerciseComparison",
+  "comparator_config": "results/31a48b76-871a-4205-9c51-58663787b64d/comparator.json",
+  "status": "solution-present",
+  "description": "Use the exact #742 ActingReason constructors. The deleted target has no admitted reason, while all other original edges remain. Source-existence tokens still explain the contingent target bearer in the #312 projection, but the separate contingent act fact refutes contingent-fact coverage. A necessary source true at world 1 fails to necessitate the act or outcome. The result executes the prior #1910 matched comparison; it does not claim that admitted edges are adequate reasons or actual causes."
+}

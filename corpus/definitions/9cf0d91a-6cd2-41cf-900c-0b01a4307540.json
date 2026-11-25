@@ -1,0 +1,9 @@
+{
+  "id": "9cf0d91a-6cd2-41cf-900c-0b01a4307540",
+  "label": "Actual availability of all factual prerequisites in an admitted record",
+  "term": "actual factual resource availability",
+  "definition": "ActualResources A w h says that every admitted record of h has an actually true effect and actually true members at w in the existing PSRStrength.Arena. Groups supplies contributors, enablers, effect and admission; here their carrier is facts. Every contributor and enabler is counted through Groups.members. This use is the mathematical prerequisite-record structure only, not Exercise or a claim of productive causal supply.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Explanation.ExistentialInheritance.ActualResources",
+  "note": "Analyst interpretation, attribution deferred. Arena.holds and the record fields are existing interpreted primitives. ActualResources asserts availability and nothing about whether a record genuinely explains, whether its list is exhaustive, or whether the listed facts are themselves explained. An operating circuit's stated input and enabling conditions motivate this bookkeeping; its abstraction to substantial existence is not assumed. FullSupply (aa8a8cd7-3ad0-5ddc-b8ff-6433bfcaa9c6) is reused only as inductive derivability from a declared resource set, with all members required. Its name supplies no power, causal production, well-foundedness of reality or ultimate adequacy. Scope, exclusions, examples and the open actual-resource closure warrant are in docs/notes/explanatory-adequacy-750.md#existential-inheritance-with-a-contained-brute-foundation-2026-11-24."
+}

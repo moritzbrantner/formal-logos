@@ -1,0 +1,11 @@
+{
+  "id": "83d0e838-cfd4-4249-9cc5-620f19bc6321",
+  "label": "Restore a source-only product route while retaining product-dependent adoption",
+  "argument_id": "b146787e-6db8-4d4f-82ab-a4ec428f770e",
+  "challenge_module": "TruthCore.Results.Explanation.ActualExerciseExplanation.Challenge",
+  "solution_module": "TruthCore.Results.Explanation.ActualExerciseExplanation.Solution",
+  "theorem": "TruthCore.Results.Explanation.ActualExerciseExplanation.outputBypass",
+  "comparator_config": "results/83d0e838-cfd4-4249-9cc5-620f19bc6321/comparator.json",
+  "status": "solution-present",
+  "description": "The restored actual route targets the product. It constructs Supply before the adoption role is supplied, although every actual adoption supplier still needs that product. This falsifies the proposed shortcut from output-dependent adoption alone to a productive borrowing trap, while leaving whether that adoption is a rational guide unresolved."
+}

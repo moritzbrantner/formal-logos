@@ -1,0 +1,15 @@
+{
+  "id": "db942933-fc01-4a2e-b9e5-189a0c095b82",
+  "label": "Supreme goodness of GOD_4 from its gift of esse to each other carrier (inference)",
+  "input_statement_ids": [
+    "86d02b69-87eb-5594-9958-ccaa5fe6b685",
+    "4c79298d-ee09-5e99-9ced-1be92c19b4cc",
+    "00e962ae-f109-55f7-a7fd-f107ce0dea6b",
+    "f8ba2429-b4f1-5712-a4d3-798213963d34"
+  ],
+  "output_statement_id": "e0dae79f-c042-5a08-a148-725d0468df91",
+  "rule": "Use actuality at esse and transfer along the giver’s own edge",
+  "meaning": "Only the actuality conjunct of maximality supplies the bearer’s goodness at esse. Every other represented actuality is caused under the explicit transfer rule.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}
