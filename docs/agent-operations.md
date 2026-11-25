@@ -5,7 +5,7 @@ This is the detailed operational reference required by the [root agent contract]
 ## Permanent invariants
 
 1. **Read before attributing.** Every source-derived claim must point to a stable source record and a precise locator. For a copyrighted work with no pinnable witness, that locator may be a `bibliographic_span`: edition, ISBN or DOI, and exact pages or section, without pinned bytes (owner decision 1c on #378; see `docs/source-evidence.md`).
-2. **Materialize, do not remember.** Before publishing a source-derived claim, resolve or create its `corpus/passages/` witness and run `python3 scripts/source_evidence.py materialize <PASSAGE-ID>`. Read that verified text and enough context to interpret it. Model memory, a search snippet, or a plausible citation is never source evidence. A `bibliographic_span` has no bytes to materialize (`materialize` refuses it): claim from it only after reading the cited pages in the edition itself, never from memory, and its claims carry `witness: "bibliographic"`, so they are shown as not byte-verified.
+2. **Materialize, do not remember.** Before formalizing or publishing a proposition as a source-derived reading, resolve or create its `corpus/passages/` witness and run `python3 scripts/source_evidence.py materialize <PASSAGE-ID>`. Read that verified text and enough context to interpret it. Model memory, a search snippet, or a plausible citation is never source evidence. A `bibliographic_span` has no bytes to materialize (`materialize` refuses it): claim from it only after reading the cited pages in the edition itself, never from memory, and its claims carry `witness: "bibliographic"`, so they are shown as not byte-verified.
 3. **Source integrity is not source fidelity.** A pinned revision, Git blob hash, CTS path, and successful materialization establish which source text was consulted. They do not establish that an interpretation is correct. Preserve that scholarly judgment separately.
 4. **Statements have independent identity.** A statement is a proposition used by logic. A claim says that a source supports a statement under an interpretation. Never make statement identity depend on source provenance.
 5. **One defensible reading per claim.** If two materially different interpretations are both reasonable, create two claims. They may point to distinct statements even when later work could relate those statements.
@@ -44,7 +44,7 @@ See `docs/systematic-corpus-loop.md`, "Parallel lanes".
 
 ## One atomic work item
 
-For each substantive reading or argument, apply the relevant steps below. Steps 1, 3's attribution requirements and 4 apply when publishing a source-derived claim. For an analyst formulation, start with reuse and a faithful explicit reconstruction; do not make source acquisition a prerequisite. All applicable formal certification and review gates still apply.
+For each substantive reading or argument, apply the relevant steps below. Steps 1, 3's attribution requirements and 4 apply when formalizing or publishing a source-derived reading. For an analyst formulation, start with reuse and a faithful explicit reconstruction; do not make source acquisition a prerequisite. All applicable formal certification and review gates still apply.
 
 ### 1. Research from verified source evidence (attributed work only)
 
