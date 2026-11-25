@@ -192,3 +192,22 @@ principle for `d` from diffusion would sharpen the WN dispute.
    creator against direct reach (continuation of G1).
 6. Naturalism refutations with the bridge "GOD_4 is not a part of spacetime".
 7. The `c778a6ca` family through a concreteness argument.
+
+## 6. Retorsion graft audit (draft continuation of #1926, #1963, #1007, #1008)
+
+Baseline for this slice: `5bf0ce3656c1b9b6c94807c1b862d621f451be68`. This is a proposed semantic audit,
+not a new verification result or a computed frontier delta. Distinguish a
+closed certificate of an implication from a proof of its consequent: a
+premise-free result may encode a conditional, a dilemma, or a countermodel.
+Only a proof of the failure of the exact recorded rival can count as its
+refutation. A failure of knowability or warrant is not falsity of the rival.
+No new philosophical premise or floor status is introduced by this checkpoint.
+
+The existing [self-undermining analysis](self-undermining-views.md),
+[retorsion dilemmas](../retorsion-dilemmas.md),
+[verificationism showcase](../showcase-verificationism.md), and
+[underminer boundaries](epistemic-underminer-boundaries.md) constrain the
+candidate grafts. Next: inspect the actual statement/argument/result triples
+and their relation endpoints, match the same scope and witness to the root
+floor items, preserve countermodels, and compute the orphan and frontier
+comparison on the final head. Do not add an edge based on vocabulary alone.
