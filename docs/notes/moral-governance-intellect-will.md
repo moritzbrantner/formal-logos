@@ -709,6 +709,247 @@ challenge accepted this scoped finding with the
 [recorded qualifications](goodness-standard-priority.md#work-and-review-disposition);
 no formal premise or closure changes.
 
+### Complete intrinsic specification, fixed rules and varying applications (owner follow-up, 2026-11-25)
+
+This subsection examines §2 of the [owner's follow-up](https://github.com/moritzbrantner/formal-logos/pull/1998#issuecomment-7169154319)
+against `cb90f4bf44424aca52703a590587c0f62ad0b72b`, with main
+`1d84cb4b461b7a0aa8c1b6219b92556497c61bd7` unchanged. It extends the
+preceding accepted comparison; that earlier review does not cover this
+addition. The question is whether **complete intrinsic specification of
+each option's eligibility** can be falsified while the alleged intrinsic
+ground is fixed. This is narrower than whether one fixed source can
+ground a conditional norm, cause its varied applications, or select among
+eligible options.
+
+#### The exact reused consequence
+
+Result [`0590fe21`](../../corpus/results/CORRECTION-CRITERION-EXACT-FACTORIZATION.json),
+`TruthCore.Results.Logic.CorrectionCriterion.characterization`, has type
+`CriterionCharacterizationAndControls`, defined as
+`CriterionCharacterization ∧ CriterionControls`. Its first conjunct is:
+
+```lean
+∀ (State Evidence : Type) (observe : State → Evidence) (Correct : State → Prop),
+  AdmitsCriterion observe Correct ↔ FiberInvariant observe Correct
+```
+
+Here `AdmitsCriterion observe Correct` means
+`∃ criterion, ∀ s, criterion (observe s) ↔ Correct s`; `FiberInvariant`
+means `∀ s t, observe s = observe t → (Correct s ↔ Correct t)`.
+These are the existing
+[definitions](../../TruthCore/Logic/CorrectionCriterion.lean), not causal
+or normative-grounding relations.
+
+For the comment's fixed option type O and admitted profile type S,
+instantiate `Correct` separately at each option o as `Good(·,o)`.
+The hypothesis `∀ o, AdmitsCriterion data (fun s => Good s o)` then
+requires `Good(s,o) ↔ Good(t,o)` whenever `data(s) = data(t)`.
+Thus one independently warranted difference in an option's eligibility
+at equal data would refute **that sufficiency hypothesis**. The
+comment's application uses this existing direction. No new theorem or
+proof registration is proposed here.
+
+In this application `Good` means the comment's supplied eligibility
+predicate. Its name does not identify it with GOOD_1, GOOD_4, the
+intrinsic goodness of n, or the `Eligible` condition in the separate
+reason-uptake theorem. O must keep the same actions, recipients,
+question and relevant normative respect across the comparison. A
+reinterpretation of o in the second profile would not test the claimed
+factorization for the original content.
+
+The central application premise is stronger than saying that n
+intrinsically grounds a **rule**. An invariant rule such as “a valid
+waiver removes this claim” can give different token verdicts when the
+holder's act changes. To factor those verdicts through the source's
+intrinsic signature alone is to claim that the signature already
+settles every relevant application fact. Complete original causation
+or ultimate grounding, without further argument, does not assert that
+stronger supervenience. In particular, a distinguishing recipient-side
+fact caused by n or its effects is not thereby an independent co-ground
+of n. Its dependence and explanatory role need their own assessment.
+
+#### Executed two-profile controls
+
+Take the same S = `{0,1}` and O = `{0,1}` throughout this structural
+test. A four-entry table lists `Good(0,0), Good(0,1), Good(1,0),
+Good(1,1)`. Enumerate all tables and test invariance on equal data:
+
+```python
+from itertools import product
+
+def factors(table, data):
+    return all(data[s] != data[t] or table[2*s+o] == table[2*t+o]
+               for s in (0, 1) for t in (0, 1) for o in (0, 1))
+
+tables = list(product((0, 1), repeat=4))
+singleton = [p for p in tables if sum(p[:2]) == sum(p[2:]) == 1]
+assert sum(factors(p, (0, 0)) for p in tables) == 4
+assert len(singleton) == 4
+assert sum(factors(p, (0, 0)) for p in singleton) == 2
+
+flip = (1, 0, 0, 1)
+assert not factors(flip, (0, 0))
+assert factors(flip, (0, 1))
+rule = lambda kind, option: kind == option
+assert all(bool(flip[2*s+o]) == rule(s, o)
+           for s in (0, 1) for o in (0, 1))
+```
+
+All displayed assertions were executed in Python 3. Four of the
+sixteen Boolean tables factor through constant data; two of the four
+tables having exactly one eligible option per profile do. These are
+counts of this fixture, not priors, frequencies or comparative warrant
+for metaphysical theories.
+
+| Eligibility in profile 0; profile 1 | Constant data suffice? | Narrow result |
+| --- | --- | --- |
+| `(1,0); (0,1)` | no | The assigned eligibility difference is invisible to this data projection. |
+| `(1,0); (1,0)` | yes | One fixed eligible option is compatible with constant data. |
+| `(1,1); (1,1)` | yes | Either option may be selected in either profile; different selections do not refute eligibility factorization. |
+| `(0,0); (0,0)` | yes | Factorization alone supplies neither an eligible option nor actual productive efficacy. |
+
+The tied and empty rows also passed `factors`. For the tied row,
+selections `(0,1)` were checked to differ while each selected option
+was eligible. This separates normative specification from actual
+selection and does not assume necessitating efficacy.
+
+The single kind-sensitive rule produces the flip table when the case
+input changes from kind 0 to kind 1. Adding that input makes the
+classification exact. This demonstrates neither two rule bearers nor
+two concrete constituents: the pair of input coordinates is a
+representation, not an ontology. Conversely, calling the rule one
+function establishes neither a simple concrete productive power nor
+its actual source. These tables stipulate eligibility and compared
+profiles; they provide no independently warranted variation of a
+necessary n, possible-world interpretation, original right, or actual
+source-level cognition.
+
+#### What the existing inquiry and claim cases actually vary
+
+The earlier paired-count correction does **not** supply the missing
+ultimate-source witness. Its correction holds the three-item
+collection and the question fixed while changing the available
+report. The comparison with a two-item collection exposes the lost
+distinction in that report; it changes the counted facts, not an
+independently established complete intrinsic ground of n. Correctness
+of the answer about the fixed three-item collection remains unchanged.
+
+The [#1984 first-agent case](causal-perfection-transfer.md#fix-the-first-agent-case-and-separate-what-is-conferred)
+keeps A, C, the relevant content, C's standing and the proper response
+fixed. Its impediment control varies whether A actually refrains
+**because of** the apprehended claim. It does not vary the claim's
+validity or show that n's intrinsic specification is incomplete.
+The actual-basing difference matters even when the action agrees.
+Result [`1db47fd9`](../../corpus/results/1db47fd9-6ab1-4fa1-a9dd-0aa9457d8146.json)
+accordingly requires both `SomeEligibleReasonUptake Reason Believes Eligible`
+and `EligibleReasonUptakeWarrants Reason Believes Eligible Warrant` to
+yield `SomeJustifiedBelief Believes Warrant`. The omission control
+[`cf896bd6`](../../corpus/results/cf896bd6-1437-4c43-a6da-05a29b49d797.json)
+keeps a reason, an actual belief and the calibration while omitting
+eligible uptake and warrant. A table classifying options supplies
+neither the relevant actual uptake nor that calibration.
+
+The [#1986 consent case](physical-ground-468.md#a-positive-noncognitive-constitutive-candidate-tested-at-matched-scope)
+gives a more specific test of a **coarse** normative projection.
+Keep the same A, patient C, bystander B and harmful procedure. Keep
+the two options `proceed` and `refrain`, C's waivable original claim,
+the validity of C's consent, the invalidity of B's consent on B's own
+behalf, and the absence of competing justification fixed. Compare
+the two admitted **case descriptions** in that existing analysis:
+B supplies the consent token, or C supplies it. The existing selected
+norm is `duty_to_refrain = harm and consent != "C"`. Define eligibility
+only in the respect of **not violating this particular claim**:
+`not (duty_to_refrain and action == "proceed")`.
+
+| Consent token | Proceed without violating this claim | Refrain without violating this claim |
+| --- | --- | --- |
+| B on B's own behalf | no | yes |
+| C, validly | yes | yes |
+
+Executing that rule returned `(0,1); (1,1)`. It fails factorization
+through constant data and factors once the consent distinction is
+retained. This is a concrete, content-preserving reason to reject
+**consent-omitting data as complete for this claim's application**,
+conditional on the existing substantive standing and waiver premises.
+It is not an all-things-considered permission to proceed, a fresh
+proof of C's original title, or an actual two-world counterexample
+to the necessary source. The rightful holder and rule stay fixed;
+the fact of who acts changes. One invariant conditional rule explains
+that difference. Knowing which party consented still does not give
+the knower C's title.
+
+Nor do the existing
+[`EpistemicAuthority.controls`](../../corpus/results/2930b66a-b5e3-4f3f-b2d3-758d84c0e54d.json)
+supply a varying-norm witness against this rival. They distinguish
+favoring from preference-indexed force and test an aim-relative rule
+with an indifferent profile. This investigation grants objective
+normative force; substituting the aim-relative rule would change the
+agreed background. None of these controls establishes both equality
+of n's **complete relevant grounds** and a conflicting eligibility
+verdict in independently admitted profiles. No actual witness against
+the strongest intrinsic proposal has been obtained here.
+
+#### Positive source-side account and the remaining discriminator
+
+The strongest noncognitive proposal need not say that every applicable
+norm is identical to the source's presently selected output. It can
+propose one intrinsic generative nature directed to rational
+fulfillment, with a fixed appropriateness relation for possible
+recipient kinds and circumstances. Actual production gives creatures
+the capacities and relations to which that appropriateness applies.
+The #1984/#1986 candidate adds content: K includes the creature's
+content-guided, correctable cognition; J connects the patient's
+rational status and good to original standing. It must supply a real
+source-side basis of those powers and their normative significance,
+including their actual instantiation. Merely concatenating K and J
+as two predicates supplies no such bearer or warrant. Nevertheless,
+variation in derived circumstances is not evidence that their
+conditional standard was supplied by an independent external source.
+
+The strongest personal account instead makes the source's actual
+apprehension of those goods and their relations the operative measure
+of the same production. An invariant apprehended rule also permits
+different applications; the factorization test gives it no exemption
+from including relevant circumstances. Its positive contribution is
+the source's own content-guided activity, if warranted, rather than
+another copy of the table. Actual awareness alone does not establish
+operative uptake; correctness alone supplies no original jurisdiction.
+Both accounts can propose direction toward a possible recipient good
+without making the actual recipient's downstream normative fact the
+ground of the very production that supplies it. The separate
+[dependency investigation](goodness-standard-priority.md) owns that
+cycle test and its strict-order assumptions.
+
+**Provisional result.** The owner's factorization proposal supplies a
+valid conditional completeness test using the existing theorem. The
+executed controls and consent case identify how a proposed data
+projection can fail. They do not turn intrinsic rulehood or complete
+ultimacy into the stronger exact-data premise, establish an actual
+varying-norm witness against the rival, or decide whether the real
+source intrinsically understands. The prior promise/expiry,
+source-ownership and #1984/#1986 assessments remain unchanged.
+
+The next discriminating evidence would warrant the candidate complete
+ground and its compared profiles, then establish either a genuinely
+unaccounted-for eligibility difference or the actual provenance of the
+distinguishing ground. If that extra ground is alleged to compromise
+original sourcehood, show that it is an indispensable independent
+ground rather than a recipient fact or derivative condition. A positive
+source-side account can instead explain why one intrinsic nature
+provides the requisite goods, powers and conditional applications.
+The source's real simplicity, actual efficacy, original title and
+intrinsic apprehension remain separate application questions. Existing
+intellect/will bundles `11628966` and `dd55f57a` are unchanged; no new
+vocabulary, argument edge, formal certificate or premise discharge is
+introduced by this subsection. Its finite diagnostics are executed
+Python checks. The coordinator also elaborated the exact per-option
+application and companion strict-cycle application with pinned Lean
+4.35.0; both reported no axioms. The
+[primary note](goodness-standard-priority.md) preserves that code and
+its scoped verification evidence. This is a local application check,
+not a new canonical result or Comparator/NanoDa certificate. The
+amendment's independent semantic review has a separate disposition.
+
 ## Research attempts citing this note
 
 - [SCG I.44 instrumental priority and contingent-effect source scope (#1747)](../../corpus/attempts/b50e08a5-1d89-449c-a260-3585bd7fc1b4.json)

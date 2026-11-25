@@ -550,6 +550,414 @@ verdict; this continuation supplies the analysis accepted with the scope
 qualifications below. Draft #1998 remains a separate direct-main checkpoint and is
 not authorized for merge.
 
+## Actual grounding, explanatory cycles and positive source constitution
+
+This continuation tests the [owner's follow-up on #1998](https://github.com/moritzbrantner/formal-logos/pull/1998#issuecomment-7169154319).
+Its proposals are research inputs, not previously certified conclusions.
+The earlier review at `24b1c73b` does not cover this addition. The rival
+retains an actual, strictly noncognitive, simple, necessary,
+invariant, concretely productive and nonnecessitating source of genuine
+rational creatures. The comparison does not withdraw a grant because
+the rival has not supplied a complete ultimate metaphysics.
+
+### Actual specification does not require every norm to be fulfilled
+
+Three claims must remain distinct: an evaluative proposition is true or
+necessary; a particular creature or relation instantiates its conditions;
+and an actual source-owned power or exercise is specified by that good.
+A true obligation can remain violated. A genuine power can have a good
+as its possible terminus without exercising it now. Neither case removes
+the question of what actually constitutes the power's normative
+specification. The question concerns the actual ground of this disposition
+or exercise, not a rule requiring every true norm to have a successful
+instance.
+
+The mathematical comparison therefore does one limited job. A true
+abstract characterization does not by itself introduce a concrete
+producer, an actual power or its exercise. It also does not prove that
+abstract normative content can have no explanatory role. If the claim is
+that such content really specifies this actual source's power, that
+relationship needs an account. On the intrinsic proposal, the source's
+positive nature is the concrete realization of this specification;
+the proposition articulates it without being an independently supplying
+entity. On an external proposal, a distinct ground supplies something
+indispensable to the specification. These are different constitutive
+claims even if both theories express the same necessary proposition.
+
+The point is not that n efficiently causes its own nature. Identity of
+the productive and evaluative actuality is a proposed constitution,
+not a strict self-grounding edge. Conversely, having one bearer does
+not identify every fact about it: a fact about its nature and a fact
+about its exercise may still require a substantive explanation of their
+connection. Calling both facts intrinsic settles neither that connection
+nor the simplicity of their realization.
+
+Retain the earlier scope distinction concerning `ActualRoot`. A concrete
+actual s which grounds n's existence in the selected `m.grounds` relation
+contradicts that root predicate. A necessary proposition alone supplies
+none of these premises. An independent indispensable ground of the
+normatively specified exercise can defeat a claim that n completely
+supplies its original productive specification without thereby defeating
+existence-roothood. That second conclusion needs the wider explanatory
+sufficiency claim and the actual dependence; it is not obtained by
+renaming act-dependence as existence-grounding. The cycle implication and
+any criterion factorization do not supply this missing interpretation.
+
+### A real cycle requires the same facts in one explanatory order
+
+Fix A as **this source's actual normatively specified giving or directing
+exercise**, R as **the actual constitution of this recipient**, and D as
+**the particular normative fact concerning this recipient**. Let
+`prior x y` mean that fact x is explanatorily prior to fact y in one
+transitive, irreflexive order. The proposed failure is then precise:
+
+| Proposed edge | Required application, beyond its schematic description |
+| --- | --- |
+| A → R | This very exercise supplies this actual recipient constitution, with the productive dependence admitted into the selected explanatory order. |
+| R → D | This actual constitution grounds this token normative fact in that same order. The claim must retain any additional normative ground needed; constitution by itself has not made a substantive evaluative principle true. |
+| D → A | This token normative fact supplies the actuality or original specification of that same exercise, rather than its beneficial description, an observer's warrant, or the content of a possible end. |
+
+Under those hypotheses, transitivity gives `prior A A`, contradicting
+irreflexivity. Distinctness of the three labels is not needed for the
+general implication. If two purportedly distinct roles are the very
+same fact, the relevant strict edge is already problematic. If they
+are different facts about the same bearer, bearer identity alone does
+not eliminate the need to test the three edges.
+
+The principal application risk lies in the last row. Let Aprod be the
+productive occurrence and `Beneficial(Aprod)` the fact that it benefits
+the recipient. The explanation
+`Aprod → R → D → Beneficial(Aprod)` contains no return edge to Aprod.
+The recipient's actual good can explain why the giving is rightly
+described as beneficial. That is a legitimate downstream appraisal,
+but it does not yet explain the giving's original direction. Likewise,
+a relational description of giving *to this actually existing recipient*
+must not be substituted for the source's intrinsic exercise and then
+treated as an incoming actualizer of that exercise.
+
+The first two edges need care as well. Efficient production, constitutive
+grounding, normative explanation and conceptual dependence are not
+automatically one relation. Their composition requires a justified
+embedding into the chosen strict explanatory order, preserving the same
+facts and edge directions. Three separately acyclic relations can have
+a cyclic union. Nor is every use of "explains" a claim of strict priority:
+mutual constraints and identity explanations need their own treatment.
+This is why the cycle is a useful conditional failure, rather than a
+general prohibition on mentioning the recipient's good in an explanation
+of its production.
+
+Eternity does not repair the exact cycle. No temporal succession occurs
+in its proof, so making A, R and D timeless leaves `prior A A` unchanged.
+Nor does calling the relation eternal establish any of its edges. The
+substantive question is explanatory dependence, not which fact occurs
+first in time. The merged [#1970 comparison](causal-perfection-transfer.md#does-intrinsically-grounded-self-understanding-require-real-articulation-2026-11-25-provisional)
+already distinguishes priority between roles from strict priority between
+their real referents; that result is reused here without rerunning its
+role or act-coverage diagnostics.
+
+**Executed finite control.** The owner's three-node cycle check was
+reproduced and strengthened to enumerate every strict partial order on
+the three labeled nodes. There are 6 total orders and 19 strict partial
+orders; none contains all three cycle edges. Removing any one edge leaves
+exactly one extension of each kind. Each singleton edge is separately a
+strict partial order, while the three-edge union fails transitivity; its
+transitive closure contains all three self-loops. The following is the
+reproducible core of the executed check:
+
+```python
+from itertools import permutations, product
+
+nodes = range(3)
+cycle = ((0, 1), (1, 2), (2, 0))
+pairs = tuple(product(nodes, repeat=2))
+
+def strict_order(edges):
+    return (all((x, x) not in edges for x in nodes)
+            and all((x, z) in edges for x, y in edges
+                    for y2, z in edges if y == y2))
+
+def linear_extensions(edges):
+    return [p for p in permutations(nodes)
+            if all(p.index(x) < p.index(y) for x, y in edges)]
+
+orders = [frozenset(p for p, bit in zip(pairs, bits) if bit)
+          for bits in product((0, 1), repeat=9)]
+orders = [order for order in orders if strict_order(order)]
+assert len(orders) == 19
+assert not linear_extensions(cycle)
+assert not any(set(cycle) <= order for order in orders)
+for i in range(3):
+    remaining = cycle[:i] + cycle[i+1:]
+    assert len(linear_extensions(remaining)) == 1
+    assert sum(set(remaining) <= order for order in orders) == 1
+assert all(strict_order(frozenset((edge,))) for edge in cycle)
+assert not strict_order(frozenset(cycle))
+closure = set(cycle)
+while True:
+    expanded = closure | {(x, z) for x, y in closure
+                          for y2, z in closure if y == y2}
+    if expanded == closure:
+        break
+    closure = expanded
+assert closure == set(pairs)
+```
+
+This is finite relational verification. It supplies no actual source,
+normative ground, philosophical edge or common-order interpretation.
+The mixed-relation control diagnoses an invalid composition; it is not
+a metaphysical model of the granted rival.
+
+### The strongest intrinsic escape specifies a possible recipient good
+
+Let E express the positive perfection appropriate to a possible rational
+recipient: for example, apprehending what is true through its own
+intellectual power. Let Pn be the actual source-owned disposition whose
+positive character is to supply recipients and powers of that kind.
+The proposal is that n's intrinsic nature realizes Pn, with E articulating
+its evaluative character. Actual exercise then produces R, and R together
+with the relevant constitutive normative grounds supports a token D.
+The source need not derive Pn's specification from that downstream token.
+
+This avoids the proposed cycle by denying precisely D → A, while retaining
+actual recipient good and actual productive efficacy. It does not replace
+that good with whatever n happens to produce. E has recipient-sensitive
+content which can distinguish truth from error and fulfillment from
+defect, including in unfulfilled possibilities. An actual disposition
+toward such a possible good does not require that the possible recipient
+already exist, that the end be consciously represented, or that its
+exercise necessitate every eligible effect. Those conclusions would each
+need an additional premise. The stipulated nonnecessitation remains fixed.
+
+The proposal's positive explanatory work is therefore more specific than
+"there is no contradiction": the same original power is claimed to supply
+the recipient, its genuinely rational constitution and the grounds of its
+appropriate perfection. But asserting this joint constitution does not
+yet establish it. The live question is whether the actual n can have that
+positive evaluative and productive character intrinsically, without a
+received actualizer or an independent indispensable co-ground. A mere
+truth table or a restatement of its successful output leaves that question
+open. Equally, an objection must identify the failed connection or
+incompatibility; counting the cognitive, normative and productive
+descriptions does not show three independent constituents.
+
+The personal alternative proposes actual apprehension of the possible
+recipient's good and its operative uptake in intellectual appetite.
+Apprehension does not make its object good. It adds a candidate account
+of how a recognized good specifies the source's own exercise, while
+leaving the objective goodness and actual operative connection to be
+warranted. The existing
+[`IntentionalExemplarExtension` declarations](../../TruthCore/Causality/IntentionalExemplarExtension.lean)
+and [effect-knowledge result](../../TruthCore/Results/Causality/IntentionalExemplarExtension/Solution.lean)
+are narrower: coverage concerns existing effects actually caused by the
+same g, and uptake yields g's grounded apprehension of their contents.
+They do not cover unactualized possible recipients or prove that the
+content operates in the production of its object. Those are further
+bridges. The #1962 proper-manifestation comparison remains reviewed
+**unmerged** evidence at the commit recorded above; no part of its
+application is silently promoted into the current main branch.
+
+### Positive perfection routes impose determinate, conditional constraints
+
+A positive source account must respect any full argument bundle actually
+warranted at that source. Permission to posit an intrinsic nature is not
+permission to affirm an argument's exact premises while denying its
+conclusion. Conversely, failure to prove a full realization from freely
+assigned predicates does not establish inconsistency. The pertinent
+existing routes in
+[`WholePowerPerfection/Solution.lean`](../../TruthCore/Results/Causality/WholePowerPerfection/Solution.lean)
+make the application burden concrete:
+
+- `rootPerfectionFromWholePower` needs excluded middle,
+  `ExistingInActAt`, `EsseCauseIsActualConcreteGround`,
+  `DistinctEsseCauseDichotomyReading`,
+  `EssentialPrinciplesCannotCauseDistinctEsseReading`,
+  `SimplyPriorIsActualConcreteGround`,
+  `CompositePosteriorToComponentsReading`, and
+  `CompositeHasComponentOtherThanItselfReading`, followed by
+  `UnlimitedIsOwnBeing`, `OwnBeingLacksNoPerfectionOfBeing` and
+  `PurePerfectionsPertainToBeing`. Its conclusion is possession of every
+  selected pure determination at each actual root in that world and
+  grounding profile. It supplies neither a root witness nor a proof that
+  the selected determination really is pure.
+- `rootPerfectionFromInfinity` uses the first five inputs in that list
+  through the distinct-esse no-self-cause premise, then
+  `SubsistentBeingIsInfiniteReading` and
+  `InfiniteHasEveryPurePerfection`. Its infinity-to-possession bridge
+  remains substantive. It is not obtained merely by replacing the word
+  "good" with "infinite" or by invoking absence of a received cause.
+
+For either route, `Has` must retain the chosen real intrinsic determination
+reading. Power to produce wisdom in another subject is not automatically
+possession of one's own apprehension. The proposed pure intellectual
+content is intelligible apprehension as such, distinguished from error,
+search and receptive acquisition. The merged
+[#1986 discussion](physical-ground-468.md#3-support-the-puritycompatibility-premise-without-assuming-a-personal-source)
+gives a positive reason to investigate nonacquisitive understanding, but
+does not infer nonreceived subsistence from a learner's continuing to
+understand. Its admissible wisdom extension must preserve **all** the
+actual source's positive intrinsic determinations. Separate feasibility,
+pairwise compatibility and extra predicate count do not prove that joint
+realization, nor a strict increase in esse.
+
+Even `Has n wisdom` is not yet the actual cognitive conclusion. The
+[`WisdomSelfUnderstanding` definitions](../../TruthCore/Causality/WholePowerPerfection.lean)
+and results preserve these distinct jobs:
+
+| Application | Exact additional burden |
+| --- | --- |
+| Pure wisdom at the same n | Warrant `Pure wisdom` and the real `Has` interpretation. Generic labels and recipient cognition do not settle either. |
+| n's own intellectual capacity | `WisdomSelfCapacity` yields a correct content about n which **n itself** can apprehend; productive capacity to make another knower does not meet its intended reading. |
+| Actual exercise | `SelfCapacityExercisedOrPotent` for that same content, together with `PureAct InPotency n`, excludes the potency branch. The theorem's independent-potency reading (POTENCY_2) is substantive, not a definition making every productive capacity continuously exercise. |
+| Actual intrinsic self-knowledge | `TrueSelfApprehensionGrounded` supplies cognitive basing of that correct apprehension. True content and causal correlation alone do not supply it. |
+| The existing intellect target | The capacity consumer needs capacity-to-`HasIntellect` recognition; the actual-self-knowledge consumer needs recognition from actual intrinsic self-knowledge. Each GOD_4 application retains its own same-bearer scope premises. |
+
+`actualRootSelfKnowledgeFromWisdom` additionally retains root
+nonlimitation and `UnlimitedIsOwnBeing` at the selected actual root;
+the fullness interface alone must not stand in for those inputs.
+Its conclusion existentially supplies a true, intrinsically grounded
+self-content. It is not full knowledge of all acts, possible recipients
+or norms. The subsequent extension and operative-direction obligations
+remain. If these premises are warranted with their cognitive meanings
+at n, strict noncognition is excluded at n. If their application is
+disputed, the exact purity, possession, capacity, exercise, basing or
+recognition bridge identifies the dispute. This neither imports intellect
+by definition nor requires reopening every stipulated feature of the rival.
+
+### One source and two distinct recipient goods
+
+The positive proposal can be tested against the already fixed first-agent
+case in merged [#1984](causal-perfection-transfer.md#first-rational-agents-productive-coverage-normative-grounding-and-intrinsic-intellectual-perfection-2026-11-25-draft)
+and [#1986](physical-ground-468.md#a-positive-noncognitive-constitutive-candidate-tested-at-matched-scope).
+Use B for the acting creature here, to keep it distinct from the cycle's
+source exercise A. B genuinely apprehends the relevant facts and a
+patient C's original claim against a specified unjustified intervention;
+B refrains because of that claim. No earlier finite intentional grantor
+confers C's initial standing. Keep these truths, the positive recipient
+goods and the actual reason-guided response fixed.
+
+| Recipient good | What the proposed one source must supply | What remains separate |
+| --- | --- | --- |
+| Truth-directed intellectual uptake by B | A genuinely cognitive constitution, appropriate truth conditions and the actual exercise of B's own power in response to content | A successful output or the source's selection of a true content is not thereby apprehension by n. |
+| C's standing and the directed obligation it grounds | A substantive relation between C's good/status and this claim, together with the actual relevant circumstances | Neither benefit alone nor causal production supplies rightful title; the norm can hold when B fails to comply. |
+
+The strongest impersonal constitution makes one actual productive nature
+the source of these cognitive and normative bases jointly. Its normative
+content concerns C's own good and title, not an instruction to count every
+product as good. Its epistemic content preserves B as a genuine subject,
+not a verbal response device. There is no requirement to posit a separate
+primitive for every explanatory role. What remains to substantiate is
+that this one actual nature supplies both bases with the granted simplicity,
+originality and nonnecessitation. The two-row description is a specification
+of a candidate, not its metaphysical realizer.
+
+The personal constitution can add n's own apprehension and affirmation of
+the good, but it must also explain why these grounds are objective and why
+that very intellectual appetite operates in production. Its authorship
+does not confer rightful jurisdiction by itself. It need not possess C's
+particular creature-relative claim or B's token episode. The comparison
+concerns the source's positive intrinsic excellences and original direction,
+not literal transfer of every effect-relative property.
+
+The merged controls sharpen this test without deciding it. #1984 preserves
+an actually apprehending secondary subject while distinguishing source
+objective exemplarity from source uptake. #1986 distinguishes a proposed
+joint wisdom extension from profile flags, and one real act's two true
+contents from a proof of that act's actual grasp. #1970 tests the stronger
+strict-mediation objection and its exact coverage assumptions; it does
+not turn every intentional distinction into receptive composition. These
+are current-main evidence, unlike #1962. Their finite models are reused
+only at those scopes, not combined into a new complete ultimate model.
+
+**New scoped finding and reopening conditions.** A constitutive account
+that grounds this very actual direction in a token recipient norm, while
+grounding that norm in the very effect of the direction, fails **if** all
+three dependencies belong to one justified strict explanatory order.
+Timelessness does not help. The stronger intrinsic possible-good account
+does not incur that cycle, and the fixed grants do not show that it needs
+an external actualizer. Its positive realization remains the test.
+
+Reopen the exclusion if the exact return edge and common order are
+warranted; if an indispensable independent supplier of the actual
+normative specification is identified; or if the full pure-wisdom and
+cognitive-recognition route is warranted at this same n. Strengthen the
+intrinsic account if it gives a positive joint realization of the two
+recipient goods which preserves the granted source profile and explains
+the actual source-owned direction. Strengthen the personal account if
+the proposed simple act demonstrably supplies its own content-sensitive
+uptake and operative appetite while preserving that profile. The same
+primitive permission and the same requirement of actual application
+apply to both. No numeric prior, global equivalence or strongest-rival
+defeat follows from this local result.
+
+**Additional read and verification scope.** This continuation consulted
+the owner comment; the named definitions and both root-perfection and
+wisdom-to-self-knowledge/capacity consumer declarations in
+`WholePowerPerfection`; `EffectExemplarCoverage`,
+`CognitivelyTakesUpExemplar`, `UnderstandsActualEffects`,
+`RootToEsseCauseAt` and their two effect-knowledge consumers; the
+first-agent, joint-compatibility, one-act and final source-uptake sections
+linked above. It reuses the merged #1984/#1986/#1970 analyses rather than
+claiming a fresh execution of their diagnostics or a new primary-source
+reading. The new execution here is the displayed finite cycle control.
+No source materialization, Lean declaration, corpus record, support edge
+or premise discharge is added by this substantive slice.
+
+## Conditional applications checked with Lean
+
+The follow-up's strict-cycle application and option-indexed application
+of the existing exact-classification theorem were elaborated with the
+repository-pinned Lean **4.35.0**. The unchanged
+`TruthCore.Logic.CorrectionCriterion` and its `Solution` were compiled
+into an isolated scratch output directory, then the following complete
+application file was checked. No repository Lean source was edited.
+
+```lean
+import TruthCore.Results.Logic.CorrectionCriterion.Solution
+
+open TruthCore.Logic.CorrectionCriterion
+
+namespace GoodnessStandardApplicationCheck
+
+theorem noStrictCycle {F : Type} (prior : F → F → Prop)
+    (trans : ∀ {x y z}, prior x y → prior y z → prior x z)
+    (irrefl : ∀ x, ¬ prior x x)
+    (a r d : F) (hAR : prior a r) (hRD : prior r d)
+    (hDA : prior d a) : False :=
+  irrefl a (trans (trans hAR hRD) hDA)
+
+theorem eligibilityOnEqualData {S E O : Type}
+    (data : S → E) (Good : S → O → Prop)
+    (h : ∀ o, AdmitsCriterion data (fun s => Good s o))
+    {s t : S} (same : data s = data t) (o : O) :
+    Good s o ↔ Good t o :=
+  ((TruthCore.Results.Logic.CorrectionCriterion.characterization.1
+    S E data (fun s => Good s o)).mp (h o)) s t same
+
+#print axioms noStrictCycle
+#print axioms eligibilityOnEqualData
+
+end GoodnessStandardApplicationCheck
+```
+
+Both declarations reported **no axioms**. The complete application file's
+SHA256 is
+`8d06415459f3d9a23db0aa7b8a637e00f682e42f418a1a2024f8fa925cea9dfa`.
+The reused source files are those at
+[checkpoint cb90f4bf](https://github.com/moritzbrantner/formal-logos/tree/cb90f4bf44424aca52703a590587c0f62ad0b72b).
+The registered factorization result remains `0590fe21`, argument
+`5bbbb01c`, statement `6df7921a`, with the same supplied-predicate and
+exact-classification meanings. Its criterion is neither a metaphysical
+ground nor a warranted epistemic test merely by its type.
+
+This check establishes the displayed conditional applications only. It
+supplies no actual grounding edge, common explanatory-order interpretation,
+complete intrinsic data or admitted varying-norm profile. The `ActualRoot`
+unfolding was inspected against its existing definitions; it was not part
+of these two application checks. This is not a new registered result,
+Comparator contract, NanoDa certificate, source attribution or premise
+closure. Existing root-perfection and cognitive-recognition proofs are
+reused at their recorded scope, not reported as newly certified here.
+
 ## Overall judgment and review
 
 ### Integrated assessment of the prior-standard argument
@@ -591,6 +999,50 @@ the strongest intrinsic candidate. Neither the normative indispensability
 of a standard nor our need to understand it establishes that dependence.
 Source cognition alone would not repair an external dependency if it were
 found: recognition and grounding are different relations.
+
+### Follow-up synthesis: actual grounds and joint constitution
+
+The owner's later dependency and coherence questions add two useful tests
+without reversing the earlier finding. A source account fails the strict
+cycle test if its own actual normatively specified exercise grounds the
+recipient constitution, that constitution grounds the token norm, and
+that token norm grounds the very same exercise, all in one justified
+transitive, irreflexive explanatory order. A downstream explanation of
+why the exercise is beneficial is not that return edge. Nor is a source
+power directed toward a possible recipient good already dependent on
+an actual recipient's token norm.
+
+The completeness test similarly excludes a proposed data projection
+only under exact sufficiency for each option's fixed eligibility fact.
+The existing consent case shows how omitting a relevant fact can fail
+that test. It does not show a varying norm at fixed complete source
+constitution: one conditional rule can apply differently when the
+rightful holder's action differs. The two tests identify real failure
+mechanisms for specific explanatory proposals, not an actual failure
+of the strongest intrinsic source granted in this comparison.
+
+The positive comparison now asks how one actual source supplies both
+genuine truth-directed cognition and the grounds of original directed
+standing. Assigning the roles two predicates does not realize them;
+assigning them one predicate does not unify them. Their proposed joint
+ground must preserve the same positive perfections, source identity,
+simplicity, nonnecessitating efficacy and actual direction. Existing
+pure-perfection routes provide a conditional positive argument for
+source wisdom when their complete bundles and cognitive application
+bridges are warranted. Neither the source's essential goodness nor its
+production of a knower supplies those bridges alone. The personal
+proposal retains the further task of possible-exemplar coverage and
+actual practical uptake; the existing actual-effect knowledge result
+does not settle either.
+
+The earlier assessment is preserved in the preceding analysis and in
+its [exact reviewed record](https://github.com/moritzbrantner/formal-logos/blob/24b1c73bba629c9c743c098606134115fb8c4fce/corpus/attempts/goodness-form-end-forks-1116.json).
+The amended current assessment adds these tests and refines the next
+source-constitution task; it reverses no previous warrant judgment.
+The continuing absence of a complete joint realizer is an open research
+task, not evidence manufactured against either account. A demonstrated
+cycle, independent indispensable supplier, or contradiction with a
+warranted same-source cognitive-perfection bundle would be evidence.
 
 ### Exact formal connection and retained obligations
 
@@ -635,8 +1087,8 @@ related, dossier, context and semantic inspections and existing primary
 source consultations. There is no new Lean input or unsupported certificate
 claim.
 
-The independent reviewer `goodness_standard_review` accepted the complete
-outcome as **accepted_qualified**, with no substantiated P1/P2 finding and
+The initial independent reviewer `goodness_standard_review` accepted the
+standard-priority outcome before the later owner follow-up as **accepted_qualified**, with no substantiated P1/P2 finding and
 no substantive repair requested. The checked local candidate was
 `81e2863c9d3240f55f8566afd5d526ae6beb5415`, identical in tree
 (`e7f1f399a751566b7eb01ed0d5fdea7417f4065b`) to the
@@ -652,14 +1104,27 @@ established the external dependence needed to exclude the strongest
 intrinsic candidate. It is not acceptance of a complete metaphysical
 realization, global explanatory parity, a strongest-rival defeat, a new
 formal certificate or any premise discharge. The next source-constitution
-and actual-uptake tests remain open. This final disposition changes only
-review and publication bookkeeping, not the reviewed reasoning.
+and actual-uptake tests remain open. The disposition published at
+`cb90f4bf44424aca52703a590587c0f62ad0b72b` changed only review and
+publication bookkeeping. That initial review does not cover the later
+cycle, completeness and joint-constitution additions.
 
 Local corpus, offline attribution, generated documentation/imports,
 scoped relative-link and whitespace checks passed. The computed frontier
 comparison with main `1d84cb4b461b7a0aa8c1b6219b92556497c61bd7` reports
-no change. A fresh full local Lean/Comparator/NanoDa run was unavailable
-in the unchanged cache setup; no Lean input was changed. The
+no change. The original full-verifier startup was blocked; a full local
+Lean/Comparator/NanoDa run was not performed. The later two bounded Lean
+applications have their separate evidence above; no canonical Lean input
+was changed. The
 [PR validation section](https://github.com/moritzbrantner/formal-logos/pull/1998)
 tracks CI for the delivered head and distinguishes that evidence from the
 unchanged formal results reused here. The PR remains draft and unmerged.
+
+### Review of the owner follow-up
+
+The complete amended outcome includes the two new dependency/completeness
+investigations, their concrete controls, the exact locally checked Lean
+applications, the cumulative assessment and the updated actual PR body.
+It awaits a separate independent semantic challenge. The initial accepted
+review is retained as history and is not extended to these findings by
+publication or successful compilation alone.
