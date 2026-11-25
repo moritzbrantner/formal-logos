@@ -824,21 +824,11 @@ remains satisfied and the occurrence witness remains. Nevertheless
 `¬ ∃ b, Concrete(b) ∧ ExistsAt(w₀,b)` holds for every selected w₀.
 One may keep `ExistsAt` nonempty instead and still set Concrete empty.
 
-This mathematical argument covers arbitrary episode-only theories under
-the stated language restriction. The generic Lean certificate and the
-separate abstract-truth control remain open under #543. The construction
-requires the new predicates to be independent of L, including any
-truth/representation dictionary. Merely adding
-a syntactic quotation of "nothing concrete exists" preserves the construction
-if interpretation of the quote is independent. If that quote is required to
-express the actual negation of concrete population, interpret its content at
-the expanded model and separately verify the realization; the existing
-`RepresentedOccurrence.denialControl` from #1980 does so with a populated
-existence extension and a separate esse classifier. Arbitrary content
-theories with a built-in truthmaker/concreteness condition do not qualify.
-A true abstract proposition is not thereby a real concrete occurrence or a
-concrete truthmaker. Its truth can remain fixed when fresh concrete-existence
-predicates are empty, unless such a truthmaker condition is imposed.
+The Lean theorem packages every old interpretation into one component of the expanded model. Every predicate on that component has exactly its old truth value. In particular, satisfaction of an old theory and the occurrence of the very same episode survive together. The added world and being vocabulary has an empty concrete extension, so even that witnessed occurrence cannot imply concrete population at any selected world. Keeping the existence extension inhabited still leaves the concrete extension empty. [General expansion and separation proof](../../TruthCore/Logic/CogitoSeparation.lean#L53)
+
+Content alone can survive this expansion. In one checked example both tokens occur. The first says that its own representative lacks concrete existence at this world, and its content is true under the assignment. The second denies its own occurrence, and its performance falsifies its content. The separate assertion control from #1980 realizes the global denial of concrete population while allowing an existing representative under an independent esse classification. [Two self-referential contents](../../TruthCore/Logic/CogitoSeparation.lean#L71) · [Represented assertion and its global denial](../../TruthCore/Results/Explanation/RepresentedOccurrence/Solution.lean#L45)
+
+The abstract-truth control uses propositions themselves as the candidate contents. At the selected world their truth conditions are their ordinary ones. It supplies both a true and a false abstract content while the extensions of concrete and world-relative existence are empty. The construction depends on the freedom to interpret the fresh predicates. An additional requirement that every true content have a concrete truthmaker would constrain that extension. Whether an actual experience is itself a concrete event remains the interpretive question below. [Abstract truth at the selected world](../../TruthCore/Logic/CogitoSeparation.lean#L90)
 
 Positive application is exactly the reverse distinction. For a selected
 real experience the occurrence witness itself (not merely its propositional
