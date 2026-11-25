@@ -936,7 +936,7 @@ is claimed.
 
 ### Draft continuation: esse comparative ascent (2026-11-24)
 
-Owner-requested research handoff: [PRD and supporting analysis](esse-comparative-ascent/PRD-esse-comparative-ascent.md). It isolates the `fd2c8710` / `9eaa3b6e` calibration gap in the already registered `8176a284` route, and audits comparison-free alternatives for causal exclusion and maximum uniqueness. The mode-sensitive order and its finite Python controls are proposals, not new verified corpus edges. Targeted semantic re-review accepted the local draft handoff at `9a2f58dfd7ac2f9da1460bc8d19b202671bc3213`. Formal integration and Lean certification remain open. No premise change is proposed by this documentation checkpoint.
+The [reviewed comparative-ascent PRD](esse-comparative-ascent/PRD-esse-comparative-ascent.md) distinguishes preservation plus a giver-only realization from strict crossing of a recipient’s degree ceiling. Its [current same-pair test](esse-comparative-ascent/PRD-esse-comparative-ascent.md#127-current-provisional-assessment-and-next-test) follows the [equal-content assessment](maximum-definition-fork.md#can-a-receiving-constitution-itself-make-a-bearer-less-in-esse). Source-scoped ascent retains conditional warrant; calibration at equal actual content and the proposed causal-exclusion siblings remain open.
 
 ## Independent fullness candidates and rival comparison (2026-11-17)
 
