@@ -17,7 +17,7 @@ was computed from. The output is advisory retrieval, not a verdict: keep formal 
 consequence, recorded provisional judgments, source attribution and issue/work status \
 distinct; a missing hit or 'no-match-found' is not evidence that no prior work exists, \
 and an unknown or stale issue snapshot is stated explicitly. IDs may be uuids, legacy \
-ids (STMT-...) or labels. Start with research_search or research_brief.";
+ids (STMT-...) or labels. Use research_synthesis for current conclusions and the support routes behind them.";
 
 type Builder = fn(&Map<String, Value>, &State) -> Result<Vec<String>, String>;
 
@@ -58,6 +58,29 @@ Returns ranked records and note sections with their IDs and paths.",
                 return Err("query has no search words".into());
             }
             argv.extend(words.into_iter().map(str::to_string));
+            argv.extend(limit(args)?);
+            Ok(argv)
+        },
+    },
+    Tool {
+        name: "research_synthesis",
+        description: "Read the current findings for a statement, its premise judgments, shared dependencies and next tests. Supply a question to find assessed propositions by wording, a target for the graph-based synthesis, or neither for the God-existence case.",
+        schema: || {
+            json!({ "type":"object", "additionalProperties":false, "properties":{
+            "target":id_schema("Statement UUID, legacy ID or exact label."),
+            "question":{"type":"string","maxLength":1000,"description":"Research question in ordinary language."},
+            "limit":limit_schema() } })
+        },
+        build: |args, _| {
+            let mut argv = vec!["synthesis".to_owned()];
+            match (text(args, "target", 300)?, text(args, "question", 1000)?) {
+                (Some(target), None) => argv.push(target),
+                (None, Some(question)) => argv.extend(["--question".into(), question]),
+                (None, None) => {}
+                (Some(_), Some(_)) => {
+                    return Err("give target or question, or omit both for God-existence".into());
+                }
+            }
             argv.extend(limit(args)?);
             Ok(argv)
         },
@@ -590,6 +613,33 @@ mod tests {
             build("research_inspect", json!({"id": "STMT-X"})).unwrap(),
             ["inspect", "STMT-X"]
         );
+    }
+
+    #[test]
+    fn synthesis_uses_the_same_entry_points_as_the_cli() {
+        assert_eq!(
+            build("research_synthesis", json!({})).unwrap(),
+            ["synthesis"]
+        );
+        assert_eq!(
+            build("research_synthesis", json!({"target":"STMT-X"})).unwrap(),
+            ["synthesis", "STMT-X"]
+        );
+        assert_eq!(
+            build(
+                "research_synthesis",
+                json!({"question":"one common giver", "limit":2})
+            )
+            .unwrap(),
+            [
+                "synthesis",
+                "--question",
+                "one common giver",
+                "--limit",
+                "2"
+            ]
+        );
+        assert!(build("research_synthesis", json!({"target":"X", "question":"Y"})).is_err());
     }
 
     #[test]

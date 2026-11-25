@@ -12,6 +12,7 @@ Deployed at `https://mcp.moenarch.com/mcp` (health: `/healthz`).
 
 | Tool | Command |
 | --- | --- |
+| `research_synthesis` | `truth synthesis [STATEMENT \| --question TEXT] [--limit N]` |
 | `research_search` | `truth index search WORDS [--limit N]` |
 | `research_brief` | `truth brief (TARGET \| --question TEXT) [--issues-from SNAPSHOT]` |
 | `research_novelty_check` | `truth novelty (TEXT \| --statement ID) [--issues-from SNAPSHOT]` |
@@ -21,6 +22,8 @@ Deployed at `https://mcp.moenarch.com/mcp` (health: `/healthz`).
 | `research_semantics` | `truth semantics TARGET` or `truth semantics [--premise P]... --conclusion C [--definition D]... [--bridge B]...` (at most 12 each of premises, definitions and bridges) |
 | `research_inspect` | `truth inspect ID` |
 | `research_history` | `truth issues --from OPEN-ISSUES --for ID` |
+
+Call `research_synthesis` with no arguments for the current God-existence case. For a particular question, pass `{"question":"Does one source give being to every actual recipient?","limit":2}`. Each matching judgment names its assessed statements. Passing one of their IDs as `target` brings up its support routes and their shared premises.
 
 Every result starts with its binding: repository commit and commit time, the
 exact command, and the issue snapshot's capture time and size, or "unknown"
