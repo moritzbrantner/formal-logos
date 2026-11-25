@@ -510,3 +510,231 @@ checkout, and the public deployed graph manifest was inaccessible to
 the retrieval tool. The complete canonical closure, verified current
 floor, all-corpus SCCs and application review still require the local
 replay. No corpus records or floor markings are changed in this checkpoint.
+
+
+## Checkpoint 4: actuality, modal certificates and concrete contingency
+
+Pinned to the same baseline as checkpoints 2–3. The current main had moved
+to `bff18fce135d73ffe2e00933a56decdb2a1c89af` when this checkpoint began;
+the sample remains pinned to the initial revision for reproducibility.
+The related actual-inquiry research #1995 owns its broader epistemological
+applications. This lane compares actual-population and modal application
+bases, reusing [modal results triage](modal-results-triage.md) and the
+[modal spine](modal-spine.md).
+
+### Executed closure and conditional impact
+
+A further 42 directly inspected argument/result pairs extend the selected
+sample to 83 distinct registered arguments. All new result records have
+status `solution-present`. In the resulting graph the least-fixed-point
+chaining gave:
+
+| Basis | Newly reached conclusion IDs |
+| --- | ---: |
+| Empty input | 41 |
+| Eight recorded floor markings hypothetically supplied | 47 |
+| Same floor, excluding explicitly declared transcriptions (instantiation and assembly) | 42 |
+
+These are sample diagnostics, not philosophical truth judgments, fresh
+verification or whole-corpus counts. The only nontrivial SCC in this
+sample remains the two-statement truth-pilot cycle in checkpoint 3.
+The complete added rule inventory is appended below. The full canonical
+frontier has its own handling of heuristic transcriptions, strength
+registrations, counted refutations and met floor criteria.
+
+Compare additional reached IDs beyond the empty-input baseline and the
+scenario's own seeds. No floor seeds are added to this comparison.
+
+| Scenario | Additional conclusion IDs in the selected graph |
+| --- | --- |
+| Actual concrete population `56f68b40` | none |
+| Actual concrete contingency `c94b5446` | `185ce448`, `56f68b40`, `602246df`, `9aeab54e` |
+| Contingency + T schema `cb456382` | the same four and `5089057e` |
+| Contingency + B schema `98bede5a` | the same four and `a03ed3eb` |
+| Contingency + T and 5 schemas `cb456382`, `6f474aba` | the same four and both `5089057e`, `a03ed3eb` |
+
+**Concrete population and actual contingency must remain separate.**
+`56f68b40` is recorded as a working truth, not a floor marking, and has
+substantial direct warrant from actual exercise without settling whether
+a bearer is an immaterial substance. `c94b5446` additionally requires a
+genuine accessible alternative where the very same concrete individual
+is absent, not merely an alternative description, an earlier time, or
+a different state of it. Its actual contingency is still open. Its
+existing checked consequences exclude concrete necessitarianism,
+actual full modal collapse and a necessarily performed act token that
+strictly yields every actual concretum. The T/B/5 schema inputs give
+further collapse exclusions. These consequences constrain both theistic
+and impersonal necessitating-source theories, without additional causal,
+choice, personality or PSR premises; a necessary source whose productive
+exercise is not both necessary and strictly efficacious survives.
+The conditional refutations cannot defend their own source premise.
+The modal triage note already records these connections; the reconciled
+theorems import verified modal laws rather than retain their certificates
+as open graph premises.
+
+### Candidate graft: actual population supplies possible population
+
+The existing [empty-history necessary-being result](../../TruthCore/Results/Explanation/EmptyHistoryCausalAvailability/Challenge.lean)
+(result `e9b7ecc7-c668-54c2-a82d-62e804c75af5`, argument
+`c34db0b0-141a-5b87-86cb-59528aa0af99`) consumes the open possible
+population premise `5a12e877-ef76-5763-b149-1fe063f8384e` and already
+requires actual reflexivity `2b20b5af-d653-56ba-8001-35903fb3d1ea`.
+If the directly warranted actual concrete population
+`56f68b40-9737-59a0-8cac-5610980a1547` uses the same Ontic,
+Concrete and actual standpoint w, choose w itself as the possibility
+witness. No new possible history, S5, causal production, or actual
+contingency principle is required.
+
+Uncompiled local candidate, using only existing definitions:
+
+```lean
+import TruthCore.Explanation.EmptyHistoryCausalAvailability
+
+open TruthCore.Explanation.PSRStrength (Arena)
+open TruthCore.Explanation.EmptyHistoryCausalAvailability
+open TruthCore.Causality.NecessarilyUnderived (ActualReflexive)
+open TruthCore.Logic.CogitoConcrete (InhabitedConcreteAt)
+
+example {W B F : Type} (A : Arena W B F)
+    (Concrete : B → Prop) (w : W)
+    (hActual : InhabitedConcreteAt A.ontic Concrete w)
+    (hReflexive : ActualReflexive A.ontic w) :
+    PossiblyInhabitedConcreteAt A Concrete w :=
+  ⟨w, hReflexive, hActual⟩
+```
+
+The exact definition is an existential over accessible worlds with the
+same `InhabitedConcreteAt` predicate. Current-main indexed search found
+the target ID only in the empty-history consumer and the Lean declaration
+in that module, its result and its count control; this is not exhaustive
+novelty evidence. Run the normal `truth related`, `truth dossier`,
+`truth novelty`, and `truth semantics` checks on the three full IDs
+before registering a graft. This is a witness instantiation and may be
+classified as a transcription, not a substantive new theorem or
+independent metaphysical warrant.
+
+It replaces a separate possible-population input with an already
+available actual-population input on this route, if the interpretation
+matches. The original consumer's other inputs are retained: EM,
+Euclidean access, the fixed negative-fact meaning, and the three-part
+accessible empty coverage. It does not prove a necessary being from
+population and reflexivity alone. In particular, a consumer whose
+`ExistsAt` represents whole-history EVER-existence cannot silently
+consume an actual witness calibrated only to a now-slice. The existing
+history correspondence remains open, as do admission and causal
+availability of the negative fact. A fact is not an individual and
+CauseFact is not Ontic.Causes.
+
+**Executed finite boundary test (Python, not Lean).** The following
+enumeration ran across 128 assignments of concreteness for one candidate,
+existence at two labels, and four accessibility edges. All forward
+implications held; all four omission/separation controls were found.
+
+```python
+from itertools import product
+controls = set()
+for c, e0, e1, a00, a01, a10, a11 in product((False, True), repeat=7):
+    e = [e0, e1]
+    a = [[a00, a01], [a10, a11]]
+    actual = c and e0
+    reflexive = a00
+    possible = any(a[0][v] and c and e[v] for v in range(2))
+    contingent = actual and any(a[0][v] and not e[v] for v in range(2))
+    necessary = all(not a[0][v] or e[v] for v in range(2))
+    assert not (actual and reflexive) or possible
+    assert not contingent or actual
+    assert not (contingent and necessary)
+    if actual and not reflexive and not possible:
+        controls.add("omit reflexivity")
+    if reflexive and not actual and not possible:
+        controls.add("omit actual population")
+    if possible and reflexive and not actual:
+        controls.add("reverse fails")
+    if actual and reflexive and necessary and not contingent:
+        controls.add("contingency does not follow")
+assert len(controls) == 4
+```
+
+These are finite controls of the stipulated predicate shapes, not
+substantive philosophical objections or metaphysical possibility
+certificates.
+
+### Actuality: the weakest local commitment versus the universal thesis
+
+The [Ontic](../../TruthCore/German/Kant/CosmologicalInference.lean)
+actual existence predicate is independent of candidate-domain membership
+and of the cause relation. The [esse contract](../../TruthCore/Causality/ExistenceActuality.lean)
+`0436de86` is a one-way interface into a supplied act-in-esse respect.
+Its intended profile can have direct conceptual warrant, but in an
+arbitrary assignment the existence and act predicates are independent.
+The two perfection premises `ca84f62d`, `196e6606` support both the
+direct `7067553d` and negative `65c301a8` routes. Reconstructing the
+positive thesis classically from the latter is not independent support.
+The existing golden-mountain omission controls distinguish predication
+of a candidate from its being in act in the chosen esse respect.
+A Meinongian account of true predication of a nonexistent object does
+not itself establish a realized operation of that object.
+
+The merely-possible route needs `a62975a9` and `c85117b0`. In the
+[actuality map](../../TruthCore/Causality/Round2ExistenceAct.lean),
+MerelyPossible is a supplied predicate, not a defined complement.
+An intended reading of *merely* possible as possible but not actual
+supports the second (disjointness) conceptually; it does not support the
+first universal claim that every candidate lacking esse is merely
+possible, especially for a Platonist admitting nonproductive abstracta.
+A direct actual witness and a universal act/esse thesis are different
+commitments. Prefer testing the local act-to-existence and
+existence-to-act use sites, preserving wider principles as independent
+questions.
+
+The configured necessary-to-act theorem `17ae2081` also isolates
+a logical strength boundary. Under actual reflexivity, absence of
+possible absence constructively yields double-negated actual presence:
+assuming absence here supplies a counterexample at w. The registered
+proof uses EM on that particular existence proposition to obtain
+positive presence, then consumes `ExistingInActAt`. If a same-bearer
+positive `NecessaryAt` (box-existence) premise is already warranted on
+the intended Ontic, reflexivity immediately yields presence without this
+EM step. The existing `necessaryAt_iff_boxExistsAt` is definitionally
+proved. No constructive equivalence of positive box and the negative
+reading is asserted. Actualist K/possibilist K root equivalence is
+conditioned by the existing packed actual-root facts; arbitrary K-box
+existence need not imply actual existence. Neither the universal
+necessary-to-act bridge nor tertia-via convergence establishes the
+existence of a necessary candidate or of a maximum.
+
+### Exact modal escalation, without an extra metaphysical axiom
+
+The registered zero-external-premise certificate `0b44216e` proves
+equivalence of forward escalation for all predicates and masked successor
+connectivity. The [existing solution](../../TruthCore/Results/Modal/NecessaryIfConnectivity/Solution.lean)
+already proves both rival escalations from connectivity and the boxed
+conditional in `matrix`; EM is used for coverage. Its reflexive symmetric
+three-world line is not Euclidean. Thus Euclidean access is sufficient
+but not the minimal mathematical condition. Existing statement
+`0523281a-0c8b-5cc3-a05e-dfb111d706cc` names connectivity;
+`c41962ba-9ff9-511a-a837-d5339dc2c690` names all-predicate validity.
+The positive and negative registered results use Euclidean access.
+A same-standpoint alternate derivation can consume the existing
+`matrix` (or propagation helpers) without new mathematics; it needs
+the normal binding and semantic checks and an actual consumer before
+registration. For one fixed God predicate, the all-predicate
+correspondence need not be necessary. No frame applicability, boxed
+conditional for GOD_4, or possibility horn is established. Empty K5 and
+disconnected S5 controls prevent inferring an actual or global necessity
+from coverage alone.
+
+**Next decisive test:** establish whether actual concrete occurrence
+supplies justified accessible absence of the same concretion, not just
+a change of states or our description. If this cannot be warranted
+directly, retain actual population as the weaker direct starting point.
+Test the local existence-to-esse interpretation without presupposing
+the universal act-to-being principle. Coordinate these tests with the
+existing actuality and contingency research, not an overlapping
+formalization. No new floor status or corpus record has been added.
+
+The environment was rechecked: `git ls-remote` failed with
+"Could not resolve host: github.com", and neither cargo nor lake was
+available on PATH. Full local closure, heuristic transcription/axiom
+audit, local compilation of the example, and independent semantic
+challenge remain pending.
