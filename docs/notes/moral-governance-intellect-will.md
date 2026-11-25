@@ -254,8 +254,9 @@ to depart from performance is not necessarily the extinction of the claim.
 
 A bounded analyst control uses the following explicit rule for a *live*
 prospective claim: extinguished = valid automatic condition OR authorized
-release. SourceOperative = source's action AND its understanding AND its
-adoption of this end. For this toy rule, the displayed values are stipulated,
+release. SourceOperative requires the source to act, understand and adopt the end,
+and for that adoption actually to guide this token act. Coincidence of the
+first three conditions leaves guidance open. For this toy rule, the displayed values are stipulated,
 not evidence of actual moral authority or metaphysical possibility.
 
 | Variant | Valid automatic condition | Authorized release | SourceOperative at release | Source authored general rule | Extinguished |
@@ -266,15 +267,17 @@ not evidence of actual moral authority or metaphysical possibility.
 | Source-authored automatic rule | yes | no | no | yes | yes |
 
 The third row grants legitimate jurisdiction to the source and actual
-apprehension/adoption; these are not inferred from the output. It can be
+guidance of this dispensation by the end it apprehends and adopts. The
+identical extinction verdict in the other rows gives no evidence of that guidance. It can be
 jurisdiction under an antecedent rule, not proof of authorship. The fourth
 row concerns an authored rule without a fresh act at its application.
 SourceAuthored denotes a separate intentional institution, not a conjunction
 over the release episode. In every row, the result is compatible with the
 displayed premises. In an unauthorized-only control with no automatic
-condition, the claim persists. A JavaScript evaluation of the four displayed
-rows reproduced the common extinction and the distinct operative/source-author
-columns; no Lean, Comparator or NanoDa certificate.
+condition, the claim persists. The earlier four-row check reproduced these extinction and authorship values.
+The guidance condition is stipulated in the deliberate row. Holding action,
+understanding and adoption fixed while bypassing the adopted end makes
+SourceOperative false even if a valid automatic condition extinguishes the claim.
 
 This gives a structural separation: the normative verdict does not specify
 the bearer or the episode of its authorial explanation. It does not show
@@ -287,6 +290,12 @@ part of the root's own wise ordinance, allowing genuinely delegated powers
 and automatic applications without fresh decisions. Both must explain
 original legitimate jurisdiction and the content/priority of the norms, not
 just match the verdict.
+
+C's title to release this claim, a grantor's authority to confer such a
+title, and C's actual exercise of it answer three different questions.
+The holder/bystander control in #1973 supports the first distinction in
+practice. The same release by C can exercise either constitutive or
+conferred title, leaving the grantor question open.
 
 **Origination constraint.** An authorizing act that validly confers a power
 presupposes a relevant power or standing to make the conferral; the two
@@ -340,7 +349,7 @@ same-bearer GOD_4 application; actual intentional creation remains separate.
 The linked causal-perfection and holder identification notes own those
 formal derivations; no duplicate edge is proposed here.
 
-**Provisional outcome (pending independent challenge):** the original
+**Provisional outcome.** the original
 dispensation case discriminates ordinary causal efficacy from a rightful
 exercise of authority, not original impersonal normative grounding from
 personal authorship. The strong impersonal account remains a positive
@@ -366,15 +375,7 @@ operative-institution result would additionally support personal creation.
 Conversely, an adequate constitutive account of title plus a positive
 noncognitive production account would preserve the rival on this test.
 
-**Handoff:** Preliminary prose-only checkpoint; no new corpus records,
-definitions or proof changes. Reconcile with #1460/#1748 and the prior
-attempts after independent semantic challenge. Local CLI
-related/dossier/novelty/semantics, installed conventions, formal checks and
-computed frontier comparison are not available in this connector-only
-investigation; run them before any formal registration or ready/merge
-decision. Preserve the existing note's reviewed material and its next-test
-history.
-
+The owning record [55bc6a0c](../../corpus/attempts/55bc6a0c-7cf3-4a97-a67d-e9ce755f4cad.json) retains the reviewed #1973 waiver and expiry assessment. This continuation tests the reserved-power case under an explicit rule. The next test concerns the title of the first agents and what could warrant its intentional institution by the same root.
 
 ## Research attempts citing this note
 
