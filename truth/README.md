@@ -69,6 +69,8 @@ are errors rather than silently omitted records.
 
 Use `truth index formalization` to locate embedded Lean proofs, executable comparisons, and Python or JavaScript examples that need inspection. The JSON `section` field opens the same passage with `truth index show`. Append `check` to flag embedded Lean proof bodies; queries such as `#check` and executable research diagnostics remain available.
 
+When moving a comparison into Lean, check that the new declaration covers the original examples, including the cases that distinguish rivals. Keep the applicable interpretation, evidence, and conditions for revising the judgment in their existing records. An earlier executable comparison can remain alongside its source until the replacement covers it.
+
 Use `truth index duplicates notes` to locate repeated research sections. Append `check` to return a failing status when copies are present.
 
 ## Statement synthesis
