@@ -22,7 +22,26 @@
     "PR-1646",
     "PR-1706",
     "3f888d00-c940-4bf3-99d7-faa342b42ed5",
-    "decf920c-6b29-4f36-a7a0-aad4bce01811"
+    "decf920c-6b29-4f36-a7a0-aad4bce01811",
+    "PR-1980"
   ],
-  "blocker": "The remaining inference is that the properly based warranted response counts for its bearer without a relevant end or sound practical connection. Structural eligibility and warrant do not supply that authority; using a stronger Reason or Warrant interpretation would assume it. No different test remains in this reconstruction. Further work requires a substantive new argument, mechanism or consequence that discriminates on this exact relevance question, not a new predicate or another success measure. Preserve prior qualified judgments and propose allocation to another open root node after review. The separate actual-case application still needs its previously specified episode evidence. The local belief-witness question has a separate application test: establish the accuracy aim, receipt of a parity-sensitive tally and its pro tanto bearing on this answer. If the observed pair count is equally likely conditional on even and on odd, a report that omits the residue favors neither answer, though it can give the investigator a reason to check the residue. Neither assent nor an end-independent force premise is required for the local route."
+  "blocker": "The remaining inference is that the properly based warranted response counts for its bearer without a relevant end or sound practical connection. Structural eligibility and warrant do not supply that authority; using a stronger Reason or Warrant interpretation would assume it. No different test remains in this reconstruction. Further work requires a substantive new argument, mechanism or consequence that discriminates on this exact relevance question, not a new predicate or another success measure. Preserve prior qualified judgments and propose allocation to another open root node after review. The separate actual-case application still needs its previously specified episode evidence. The local belief-witness question has a separate application test: establish the accuracy aim, receipt of a parity-sensitive tally and its pro tanto bearing on this answer. If the observed pair count is equally likely conditional on even and on odd, a report that omits the residue favors neither answer, though it can give the investigator a reason to check the residue. Neither assent nor an end-independent force premise is required for the local route.",
+  "current_assessment": {
+    "date": "2026-11-25",
+    "statement_ids": [
+      "f56b2ee7-c69e-5e3b-85b0-e671d907ba58",
+      "2ca463c2-bd1f-5a13-a395-0e2c57a5ad8f",
+      "b391c809-50b9-488c-909d-6ba6658b989e",
+      "1b74e22c-3e2e-5328-b587-6dc2517f5e3f"
+    ],
+    "scope": "Issue #1007. Which actual-force concessions yield a reason to believe a particular content in the same subject and reason relation?",
+    "assessment": "A consideration attributed specifically to believing p supplies a thin reason for that same subject and content under reverse presentation. Force at any or all preferences for withholding about p leaves that belief witness open. The accuracy-directed account can grant a reason to believe when evidence favors an answer and the investigator seeks accuracy. This leaves its dispute with preference-independent authority open.",
+    "next_test": "For the same investigator and parity question, establish whether the received tally included the unpaired residue. A pair count whose likelihood is the same under even and odd leaves their prior odds unchanged. An accurate copy of a checked tally can transmit its discriminating information.",
+    "note": "docs/notes/epistemic-reasons-preconditions.md#which-consideration-gives-a-reason-to-believe-this-content-1007-2026-11-25",
+    "review": "accepted_qualified",
+    "reviewed_revision": "c77bd578cd6a18570ee69a578d4addc684c7bac6",
+    "publication": "published",
+    "evidence": "Independent review accepted the six declarations, exact belief witness and graph use of 3f888d00 at f97da0a4e4a3758300c9673d212b4e70d7a795a2. Targeted review accepted the equal-likelihood and copied-tally repairs at the reviewed revision. Published in PR #1980.",
+    "supersedes": "Adds the belief-directed concession and its suspension control to the existing reasons assessment. The separate warrant and end-independent authority tests retain their scope."
+  }
 }
