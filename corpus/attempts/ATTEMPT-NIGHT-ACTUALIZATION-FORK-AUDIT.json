@@ -17,7 +17,8 @@
     "2f3e2b91-0d58-57dc-b6f2-e477598d3a08",
     "c0656af8-2e01-56a4-b187-d2701f34278e",
     "fdf05b33-6da7-52ba-a370-dc433f779a82",
-    "baca92f9-71f0-5038-bdab-b378321d2a94"
+    "baca92f9-71f0-5038-bdab-b378321d2a94",
+    "PR-588"
   ],
   "blocker": "This audit is not mechanical certification. Final exact-input Lean, binding, Comparator and NanoDa checks remain coordinator obligations. All philosophical background premises remain open; actual root-premise delta is none."
 }

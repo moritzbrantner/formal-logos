@@ -1,0 +1,13 @@
+{
+  "id": "f9050a94-bfb1-4542-8c12-4baf437cfac7",
+  "label": "CONCRETE_6 population of the same world under its in-re esse contract (inference)",
+  "input_statement_ids": [
+    "43f09b83-776d-57b8-a5b3-b84715e48fc2",
+    "0436de86-6579-53f2-9ff5-2111ba44ebae"
+  ],
+  "output_statement_id": "56f68b40-9737-59a0-8cac-5610980a1547",
+  "rule": "Classify and retain the existing witness",
+  "meaning": "Assembly transcription in the adopted esse reading. Select the inhabitant x and retain its actual existence while applying the one-way local existence-in-act contract to x. This supplies the concrete population premise for a grounding profile with the same ontic data and HasEsseInRe classification. It adds no independent defense of the contract. The companion interpretation realizes the very denial of concrete population, has an existing representative here and an empty other world, and fails the contract at that representative.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

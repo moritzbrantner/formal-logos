@@ -1,7 +1,7 @@
 # Contrastive worldview justification: evidence, inheritance and authority
 
 Issue #934. Analyst formulations, attribution deferred. No historical attribution,
-new source reading, witness or authorial intention is asserted here.
+new source reading, witness or authorial intention is asserted here. [Research record](../../corpus/attempts/contrastive-worldview-934.json)
 
 ## Argument and strongest alternative
 
@@ -262,3 +262,7 @@ refreshing the shared service. Recommendation: **revise** preview dependency
 alignment before retaining it for this lane; CLI remained sufficient and the
 preview did not block the logic. Comparator/NanoDa and delivered-head CI remain
 the final verification authorities.
+
+## Research attempts citing this note
+
+- [Coherence and shared evidence in metaphysical system choice](../../corpus/attempts/metaphysical-system-choice.json)

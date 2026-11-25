@@ -3,7 +3,7 @@
 Analyst formulations; attribution deferred. The owner lifted the original
 research-only restriction in issue comment 6600966383 (2026-11-03). This note
 records mathematical findings and interpretive boundaries; the issue holds the
-current delivery handoff.
+current delivery handoff. [Research record](../../corpus/attempts/finite-hitting-561.json)
 
 The question is whether necessary population can force one and the same
 necessary concrete individual without a finite *global* population roster.

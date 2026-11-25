@@ -25,7 +25,9 @@
     "07f546df-953c-4fd9-be08-2a1f1da84c4d",
     "18a84746-fbd8-4c06-bd49-de4bab6416ee",
     "e1a47448-b5fc-4ad3-ad46-b189b5e62d81",
-    "33bd6aed-5cd6-42d0-8466-107cb181c33a"
+    "33bd6aed-5cd6-42d0-8466-107cb181c33a",
+    "PR-1494",
+    "c9a9a1fe-2543-53c4-aad2-98f461dd8c88"
   ],
   "blocker": "Not blocked. Next tests: (0) read Suarez DM 31 (or the corpus's real-distinction sources) to decide whether the Suarezian denial is a substantive objection to the bridge da72ae93 under DEF-ESSE-RECEIVED-IN, or only to a stronger really-distinct reading; (1) give CREATURE a disambiguation with two typed senses (broad: ordered to some cause of its being; narrow: DEF-CREATURE) and re-register b7d4eede and 29e71e43 at their senses, after which da72ae93 might be derived from a sense-consistent pair; (2) a non-degenerate root model (act not everywhere true, a creature in potency) so the root bundle's joint satisfiability does not rest on the all-true act dictionary; (3) derive bbac932e from a typed measure of knowability (open test (3) of 76bad0cb); (4) the joint-bundle consequence 'caused by another implies esse distinct from essence' is a lake-checked lemma (causedHasDistinctEsse), registered only if a later argument needs it."
 }

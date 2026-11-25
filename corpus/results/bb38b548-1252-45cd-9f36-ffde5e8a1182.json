@@ -1,0 +1,11 @@
+{
+  "id": "bb38b548-1252-45cd-9f36-ffde5e8a1182",
+  "label": "Derive three personal candidates from subsistent opposed immanent origins",
+  "argument_id": "63c8a037-346f-4862-a471-f9a832d6f289",
+  "challenge_module": "TruthCore.Results.Case.Catholicism.ImmanentOrigins.Challenge",
+  "solution_module": "TruthCore.Results.Case.Catholicism.ImmanentOrigins.Solution",
+  "theorem": "TruthCore.Results.Case.Catholicism.ImmanentOrigins.threeCandidates",
+  "comparator_config": "results/bb38b548-1252-45cd-9f36-ffde5e8a1182/comparator.json",
+  "status": "solution-present",
+  "description": "The opposed source and each receiver are distinct. The receivers differ either because the Word is an active origin of Love or because one person cannot receive both selected modes. All premises use the same concrete Profile, roles and numerical act. No unconditioned inference from knowing and willing or historical identification follows."
+}

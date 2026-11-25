@@ -1,6 +1,6 @@
 ---
 phase: batch-1
-premise: `STMT-SECOND-MOVERS-MOVE-ONLY-AS-MOVED`
+premise: [`STMT-SECOND-MOVERS-MOVE-ONLY-AS-MOVED`](https://github.com/moritzbrantner/formal-logos/blob/ec72649fb5a8ee3ac06d391b179cf1af7f75b304/corpus/statements/second-movers-move-only-as-moved.json)
 rival: `STMT-MOVED-MOVER-MOVES-NOT-AS-MOVED` (a mover moved in an irrelevant respect)
 class: not yet attackable: it bears on the fidelity of the strong reading; the reply is the weaker sibling reading
 status: open; supported by ST I q.46 a.2 ad 7 reading B

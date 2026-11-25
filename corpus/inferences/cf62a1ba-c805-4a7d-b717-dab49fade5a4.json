@@ -1,0 +1,14 @@
+{
+  "id": "cf62a1ba-c805-4a7d-b717-dab49fade5a4",
+  "label": "CONCRETE_AND_ABSTRACT_6 population from an already witnessed thinking subject (inference)",
+  "input_statement_ids": [
+    "0315d471-5093-59e3-a435-b7beff4c48a4",
+    "a7040bf1-b15a-5ffb-b096-6b60411a066e",
+    "c821487b-9c5e-5836-bf27-dcb47f210c94"
+  ],
+  "output_statement_id": "56f68b40-9737-59a0-8cac-5610980a1547",
+  "rule": "Conjunction at the witnessed bearer",
+  "meaning": "Eliminate the positive Cogito witness. Apply the two existing bridges at its bearer and occurring thought, giving both concreteness and existence at the selected world for one candidate. This consumer accepts a single borne episode even if other occurring thoughts have no bearer. It does not identify the candidate with the speaker, episode or its representative.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

@@ -4,7 +4,7 @@ Issue #185 remains open. The primary witness is Stevenson's *The Emotive
 Meaning of Ethical Terms*, Mind 46 (1937), pp. 14–31, pinned in
 `STEVENSON-EMOTIVE-MEANING-1937-14-31`. The complete article was materialized
 and read; the University of Alberta PDF and extracted text stay in ignored
-cache. A hash pins the consulted bytes, not the interpretation's fidelity.
+cache. A hash pins the consulted bytes, not the interpretation's fidelity. [Research record](../corpus/attempts/stevenson-primary-disagreement.json)
 
 The affirmative answer to Q-MORAL-DISAGREEMENT is practical: a person favours
 an object, another disfavours it, and neither is content to leave the other's

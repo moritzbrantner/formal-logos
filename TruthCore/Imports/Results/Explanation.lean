@@ -2,6 +2,7 @@
 module
 
 public import TruthCore.Results.Explanation.AccessibleAccountNecessaryBeing.Solution
+public import TruthCore.Results.Explanation.ActualExerciseExplanation.Solution
 public import TruthCore.Results.Explanation.ActualExistenceAdequacy.Realization.Solution
 public import TruthCore.Results.Explanation.ActualExistenceAdequacy.Solution
 public import TruthCore.Results.Explanation.ActualWorldGap.Solution
@@ -16,6 +17,7 @@ public import TruthCore.Results.Explanation.BruteContingencyParity.Solution
 public import TruthCore.Results.Explanation.CompleteResponseParity.Solution
 public import TruthCore.Results.Explanation.CondensationSufficiency.Solution
 public import TruthCore.Results.Explanation.ConservativeReasonExpansion.Solution
+public import TruthCore.Results.Explanation.ContainedSelection.Solution
 public import TruthCore.Results.Explanation.DisjunctionGround.Solution
 public import TruthCore.Results.Explanation.EmptyHistoryCausalAvailability.Solution
 public import TruthCore.Results.Explanation.EmptyHistoryCountControl.Solution
@@ -24,6 +26,7 @@ public import TruthCore.Results.Explanation.EmptyTruthmaker.Core.Solution
 public import TruthCore.Results.Explanation.EmptyTruthmaker.Replies.Solution
 public import TruthCore.Results.Explanation.EssenceReasonSeparation.Solution
 public import TruthCore.Results.Explanation.ExistenceIngredient.Solution
+public import TruthCore.Results.Explanation.ExistentialInheritance.Solution
 public import TruthCore.Results.Explanation.ExplanatoryAdequacy.Solution
 public import TruthCore.Results.Explanation.ExplanatoryClosure.Solution
 public import TruthCore.Results.Explanation.ExplanatorySymmetry.Solution
@@ -57,6 +60,7 @@ public import TruthCore.Results.Explanation.PSRStrength.Solution
 public import TruthCore.Results.Explanation.PairedInterventions.Solution
 public import TruthCore.Results.Explanation.PathRelocation.Solution
 public import TruthCore.Results.Explanation.PopulationEntry.Solution
+public import TruthCore.Results.Explanation.RepresentedOccurrence.Solution
 public import TruthCore.Results.Explanation.SelectionCoverageBoundary.Controls.Solution
 public import TruthCore.Results.Explanation.SelectionCoverageBoundary.Coverage.Solution
 public import TruthCore.Results.Explanation.SelectionCoverageBoundary.FalseFactivityFailure.Solution

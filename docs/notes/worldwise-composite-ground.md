@@ -5,7 +5,7 @@ alternative worlds. Each has two actual disjoint proper atoms, and the two
 pairs differ. The whole supplies the same direct support to both active atoms;
 this is the SAME `grounds` relation for P2 and P3, with an explicit required
 `IntendedProfile`. Its necessity and whole-first support are model assignments,
-not an intrinsic explanation, metaphysical possibility or reality-fit claim.
+not an intrinsic explanation, metaphysical possibility or reality-fit claim. [Research record](../../corpus/attempts/worldwise-composite-ground-1097.json)
 
 Actual domains inherit the existing nonempty-subsets-of-Bool partial order.
 Existing common-part `Overlap`, Sum2 `Fusion` and `StrongSupplementation` apply

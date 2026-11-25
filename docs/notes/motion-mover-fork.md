@@ -3,7 +3,7 @@
 Target: `STMT-NOTHING-REDUCED-TO-ACT-EXCEPT-BY-A-MOVER`, on the first-mover root route.
 Analyst formulations; attribution deferred. The finite readings below are the
 selected research scope. The original Physics VIII.4 attempt remains a failed
-derivation of per-se coverage from the literal per-accidens division.
+derivation of per-se coverage from the literal per-accidens division. [Research record](../../corpus/attempts/66008088-55c6-4f10-a13c-04ebe34acf02.json)
 
 ## Typed meanings and consequences
 
@@ -212,3 +212,8 @@ lowest expanded route cost 28. The finite boundary analysis supplies no new
 root-reaching support alternative. Final delivered-head CI remains required.
 Shared conventions resolved at source revision
 `625cb04ca568aebc8d45c90033e107a05e9bd2a0`.
+
+## Research attempts citing this note
+
+- [Part-mediated animal motion and root projection boundary](../../corpus/attempts/9ffec08a-fe75-419e-8a05-82aa61a08b33.json)
+- [The literal generator-or-remover reading yields a mover per se or per accidens, not a per-se mover…](../../corpus/attempts/physics-viii4-literal-per-se.json)

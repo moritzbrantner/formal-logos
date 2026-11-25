@@ -1,0 +1,10 @@
+{
+  "id": "94df1cea-20a6-40bb-bf7b-7d76dd55040a",
+  "label": "Test the strict-ground interpretation after identifying labels across two disjoint pairs (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "a46e6e95-7543-47df-b415-47b1af2749a5",
+  "rule": "Compute both projected steps and apply the supplied-label cycle criterion",
+  "meaning": "The four bearers have only two disjoint dependence edges. Their fixed labels preserve different endpoints on each dependence path while combining the edges into a two-cycle at the label level.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

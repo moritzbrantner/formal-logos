@@ -1,0 +1,16 @@
+{
+  "id": "fcea3f8b-e991-4d2c-8bdb-6eb8ef4ccff1",
+  "label": "The actual roster is inhabited and actual-root existence is stable",
+  "paraphrase": "Difference statement, analyst formulation: some concrete candidate exists at the selected world w, and if it is not the case that no actual concrete root of the selected relation exists at w, then such a root exists (stability of root existence for this one proposition; it follows from excluded middle and is weaker than it). Open; not attributed to a source. Under excluded middle its second conjunct holds automatically, so classically it says only that the actual roster is inhabited. Given population, the stability conjunct is constructively equivalent to 'nontrapping implies root existence' (stabilityIsRootImplicationGivenPopulation), so the substantive difference is population; stability is the logical price of the double negation.",
+  "lean_declaration": "TruthCore.Causality.RootSupplyInterface.InhabitedWithStableRoot",
+  "definition_ids": [
+    "c57e2682-08e6-527e-950f-0fa0a7ff11ef",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87"
+  ],
+  "disambiguation_ids": [
+    "6e92c6e3-edf0-5d7e-b2b3-788b24b8b768",
+    "c529e8d3-43e3-53a8-a82f-3955e9815265",
+    "6f1d1395-7c1d-5bd5-a45d-03380857aed6"
+  ]
+}

@@ -23,7 +23,8 @@
     "a94fd849-9264-5497-b9d1-1828cf81744a",
     "6a18f049-ac06-5461-9b6d-fe931f83d054",
     "d2cb9100-2980-5e83-a278-294346f7fb93",
-    "6df8f68f-9d74-56e5-888d-ea8f9e437fbd"
+    "6df8f68f-9d74-56e5-888d-ea8f9e437fbd",
+    "PR-580"
   ],
   "blocker": "Root connection: no root-path premise is stated in world-indexed de re necessity; a bridge from NecessaryConcreteAncestorOfThinker to the tertia via's necessary being (DEF-NECESSARY-BEING, cannot-not-be) or to a stage-1 premise needs a modeling decision (DISAMB-NECESSARY-INDIVIDUAL-SCOPE). Premises: independent defence of the thinker-local anti-brute-root principle (#505, #545) and thinker-local accessibility of grounding, plus O, B, C and E."
 }

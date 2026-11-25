@@ -1,0 +1,27 @@
+{
+  "id": "0d73df62-9be9-4112-aef4-c5d78e014b6c",
+  "label": "Recover the exact strict path relation of an acyclic dependence presentation",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "0dd124a1-b5a4-4d1f-85b3-dc945d5065dd",
+  "inference_ids": [
+    "9eb0fb94-6b95-48d7-a91c-463a48bf2792"
+  ],
+  "meaning": "Proper inclusion of the predecessor sets at a and b puts a among the predecessors of b and excludes equality. Thus every derivable strict partial ground in the generated theory reflects a nonempty reversed dependence path. The earlier acyclicity theorem supplies the reverse implication.",
+  "definition_ids": [
+    "bf26b9b2-41ed-55b0-9557-dae90ab9b81f",
+    "df5284cb-8f1f-5b61-9b1c-ee4c1544b469",
+    "5d9a94e0-d64b-53ca-b9cc-504735060e0a"
+  ],
+  "disambiguation_ids": [
+    "23dd6f32-b456-4963-adb3-7befbf0dc4fb"
+  ],
+  "sense_bridges": [
+    {
+      "term": "DEPENDENCE_FOR_BEING_VERSUS_STRICT_GROUND",
+      "from": "c6e310c2-a8c9-41cb-8d7e-18859802484d",
+      "to": "28212589-ee94-4eb0-b20e-f7cead4438b1",
+      "statement_id": "0dd124a1-b5a4-4d1f-85b3-dc945d5065dd",
+      "role": "conclusion"
+    }
+  ]
+}

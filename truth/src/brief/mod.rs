@@ -13,6 +13,7 @@
 //! conditional consequence, and no hit (or no snapshot) is evidence that no
 //! prior work exists.
 
+pub mod issue;
 pub mod novelty;
 pub mod retrieval;
 #[cfg(test)]

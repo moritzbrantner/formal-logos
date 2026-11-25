@@ -1,0 +1,17 @@
+{
+  "id": "f78f9ad3-617f-4238-9e5d-c565a718740c",
+  "label": "Locate the generator's work in the onset of a new individual at division",
+  "date": "2026-11-24",
+  "statement_ids": [
+    "50da2b49-c914-4c44-a956-1cb134a399f8"
+  ],
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "With exactly one prior lineage member, no immigration or revival and two distinct substantial successors, at least one begins, independently of a rule selecting a survivor. The parent's exercise prepares both local supplies, so its work reaches the new recipient on either selection. Scratch/sole-esse-giver/Division.lean reuses reciprocal regeneration and checks that simple separation loses both capacities in two renewals, while the two separate sides both pass the reciprocal test exactly when both supplies have been rerouted. This is an idealized mechanism with organism individuation supplied separately. It favors efficient attribution to the generator for this individual's actual beginning through constitution, and rules out mere specification of a preexisting daughter's features. See docs/notes/causal-perfection-transfer.md#what-does-the-generator-give-when-one-living-individual-becomes-two. It adds no corpus result or attribution.",
+  "blocker": "An additional required input to forming this individual need not be an additional efficient input alongside the principal in the respect of esse. The source may act through it. Conversely the precursor's existential dependence alone leaves that source-specific productive role open. Holding fixed the successful gift of esse to x while removing x is inconsistent; holding support of the precursors fixed tests their exercise only. Test whether the reason for x's receiving esse from this giver makes the generator's operative efficacy in that respect dependent in its very exercise. Persistence of either daughter and repeated branching comparisons cannot decide the initial relation, much less totality for every qualifying pair.",
+  "evidence": [
+    "d03376f9-9c91-4dc4-b529-62039d7c1fc4",
+    "d60b7562-a8d6-4d08-a90b-26e9e45ed840",
+    "PR-1954"
+  ]
+}

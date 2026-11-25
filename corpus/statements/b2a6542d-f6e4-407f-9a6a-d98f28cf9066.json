@@ -1,0 +1,6 @@
+{
+  "id": "b2a6542d-f6e4-407f-9a6a-d98f28cf9066",
+  "label": "A one-way transfer has finitely grounded power under the exercise and intrinsic-input bridges",
+  "paraphrase": "If a finite-throughput ledger maps every positive transfer to an actual transmission and every net exporter to an intrinsic contributor in this respect, any recipient of a positive edge without a positive return path has finitely grounded power in the existing inductive sense. The result supplies one finite source path even with joint inputs. It makes no attribution of a particular share of the output.",
+  "lean_declaration": "TruthCore.Causality.FiniteThroughput.GroundedExerciseAtTransfer"
+}

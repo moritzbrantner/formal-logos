@@ -7,7 +7,7 @@ category error. A proposed positive route toward a conclusion does not oppose
 that conclusion, and refuting the route does not establish the conclusion.
 The global schema and its unchanged verified refutation remain. Only the
 incorrect automatic rivalry edge is removed; no serious negative account is
-weakened or deleted.
+weakened or deleted. [Original PR #1147](https://github.com/moritzbrantner/formal-logos/pull/1147)
 
 The logical scopes are now separate propositions. The global schema quantifies
 over every being/time/presence dictionary and is false. A local shift quantifies
@@ -90,3 +90,7 @@ check actual structural incompatibility/non-entailment. None establishes a
 framework input, an actual necessary being or a root discharge. The original
 tertiary interpretive disagreement between quantifier-shift and plenitude
 readings is a separate historical question and is unchanged.
+
+## Research attempts citing this note
+
+- [The existing collective-possibility dossier and Third Way declarations distinguish the contested…](../../corpus/attempts/necessary-individual-quantifier-shift.json)

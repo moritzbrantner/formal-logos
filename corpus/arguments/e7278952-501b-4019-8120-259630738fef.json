@@ -1,0 +1,29 @@
+{
+  "id": "e7278952-501b-4019-8120-259630738fef",
+  "label": "GOD_4 is one from a maximal bearer excluding distinct esse causes",
+  "premise_statement_ids": [
+    "fad8af3e-3e4e-582a-a592-0164bdd62527",
+    "18561596-1269-53ff-8505-c56e4348e335",
+    "86d02b69-87eb-5594-9958-ccaa5fe6b685",
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410"
+  ],
+  "conclusion_statement_id": "33b18ae7-4578-54bc-a2b5-edce99b21fc2",
+  "inference_ids": [
+    "fdfdc9e3-2efe-4a38-961e-5b8c98522549"
+  ],
+  "meaning": "With one MAXIME_1 witness m, each GOD_4 distinct from m would give m its esse in CAUSE_2. Exclusion forbids this, so an identity split yields equality with m for every God. The auxiliary theorem needs only CausesAllInGenus for each God at esse since m is in act there. The registered input is the existing carrier-wide converse. No God is supplied.",
+  "definition_ids": [
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "d8e2ed12-8089-5202-ae51-e807cf611c76",
+    "88f9f6e8-997b-5f7d-afa1-c501954c3807",
+    "a2a8de58-42e0-5481-b7fb-848ae8602036",
+    "5766de66-8a37-5b04-aa65-9eec53319f50",
+    "d980bbd2-1a96-564c-bc0d-4065d7786715"
+  ],
+  "disambiguation_ids": [
+    "3b0d67c5-59e4-5556-a728-26bd567f0fb1",
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "4f1d0cf6-88ba-59e3-814d-01450c2bf282"
+  ]
+}

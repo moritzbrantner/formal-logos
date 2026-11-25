@@ -1,0 +1,11 @@
+{
+  "id": "8ba99a96-b804-45e3-8008-a0f312279192",
+  "label": "GOD_4 is one from a maximal bearer excluding distinct esse causes",
+  "argument_id": "e7278952-501b-4019-8120-259630738fef",
+  "challenge_module": "TruthCore.Results.Case.Catholicism.GodIsOneFromEsse.Challenge",
+  "solution_module": "TruthCore.Results.Case.Catholicism.GodIsOneFromEsse.Solution",
+  "theorem": "TruthCore.Results.Case.Catholicism.GodIsOneFromEsse.oneFromWitness",
+  "comparator_config": "results/8ba99a96-b804-45e3-8008-a0f312279192/comparator.json",
+  "status": "solution-present",
+  "description": "With one MAXIME_1 witness m, each GOD_4 distinct from m would give m its esse in CAUSE_2. Exclusion forbids this, so an identity split yields equality with m for every God. The auxiliary theorem needs only CausesAllInGenus for each God at esse since m is in act there. The registered input is the existing carrier-wide converse. No God is supplied."
+}

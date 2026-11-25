@@ -1567,3 +1567,140 @@ fn revision_consumers_are_tiered_grouped_and_screened_soundly() {
     );
     std::fs::remove_dir_all(root).unwrap();
 }
+
+#[test]
+fn issue_brief_finds_review_and_delivery_while_issue_is_open() {
+    let root = fixture("issue-handoff");
+    let id = "73000000-0000-4000-8000-000000000012";
+    let record = json!({
+        "id":id,"label":"Memory comparison","summary":"The first handoff addressed #12",
+        "current_assessment":{"scope":"The memory test for #12","publication":"published",
+        "review":"accepted_qualified","reviewed_revision":"reviewed123","assessment":"Both accounts recover the result.",
+        "supersedes":"Earlier transfer reading repaired","next_test":"Track the same bearer","note":"docs/notes/memory.md"}
+    });
+    write(
+        &root,
+        &format!("corpus/attempts/{id}.json"),
+        &record.to_string(),
+    );
+    write(
+        &root,
+        "docs/notes/memory.md",
+        "# Memory\n\n## Repair (#12)\n\nScoped reference: `STMT-FIX-SERIES`.\n\n## Other (#120)\n\nA different case.\n",
+    );
+    let section_id = "73000000-0000-4000-8000-000000000200";
+    let other_id = "73000000-0000-4000-8000-000000000300";
+    let file_id = "73000000-0000-4000-8000-000000000400";
+    for (id, note) in [
+        (section_id, "docs/notes/memory.md#repair-12"),
+        (other_id, "docs/notes/memory.md#other-120"),
+        (file_id, "docs/notes/memory.md"),
+    ] {
+        let linked = json!({"id":id,"label":"Section assessment",
+            "current_assessment":{"scope":"Same-bearer comparison","note":note,
+            "reviewed_revision":"linked456","next_test":"Check the section-specific prediction"}});
+        write(
+            &root,
+            &format!("corpus/attempts/{id}.json"),
+            &linked.to_string(),
+        );
+    }
+    let pr_only_id = "73000000-0000-4000-8000-000000000500";
+    let pr_only = json!({"id":pr_only_id,"label":"Delivery history","evidence":["PR-41","PR-410"]});
+    write(
+        &root,
+        &format!("corpus/attempts/{pr_only_id}.json"),
+        &pr_only.to_string(),
+    );
+    let snapshot = json!({"items":[
+        {"number":12,"url":"https://github.com/o/r/issues/12","state":"OPEN","body":format!("Compare `{GOAL}`. See #40."),"crossReferences":["https://github.com/o/r/pull/41"]},
+        {"number":40,"url":"https://github.com/o/r/pull/40","state":"MERGED"},
+        {"number":41,"url":"https://github.com/o/r/pull/41","state":"MERGED","headRefOid":"delivered456"},
+        {"number":42,"url":"https://github.com/o/r/pull/42","comments":[{"body":"The subsequent reading of #10/#12."}]},
+        {"number":43,"url":"https://github.com/o/r/pull/43","body":"See #120, other/r#12 and https://github.com/other/r/issues/12."},
+        {"number":44,"url":"https://github.com/other/r/pull/44","body":"For #12."}
+    ]});
+    let path = root.join("timeline.json");
+    std::fs::write(&path, snapshot.to_string()).unwrap();
+    let history = retrieval::Issues::Snapshot(
+        retrieval::read_snapshot(path.to_str().unwrap(), None).unwrap(),
+    );
+    let corpus = Corpus::load(&root).unwrap();
+    let brief = super::issue::report(&root, &corpus, 12, &history, Default::default()).unwrap();
+    assert_eq!(brief["issue"]["state"], "OPEN");
+    let prs = brief["pull_requests"].as_array().unwrap();
+    assert_eq!(
+        prs.iter()
+            .map(|row| row["number"].as_u64().unwrap())
+            .collect::<Vec<_>>(),
+        vec![40, 41, 42]
+    );
+    assert_eq!(prs[1]["head"], "delivered456");
+    assert!(
+        prs[2]["mention_excerpt"]
+            .as_str()
+            .unwrap()
+            .contains("#10/#12")
+    );
+    assert_eq!(
+        brief["records"][0]["current_assessment"]["reviewed_revision"],
+        "reviewed123"
+    );
+    assert!(
+        brief["records"]
+            .as_array()
+            .unwrap()
+            .iter()
+            .any(|row| row["id"] == GOAL && row["named_by_issue"] == true)
+    );
+    let records = brief["records"].as_array().unwrap();
+    let indirect = records.iter().find(|r| r["id"] == pr_only_id).unwrap();
+    assert_eq!(indirect["cited_related_prs"], json!([41]));
+    assert_eq!(indirect["direct"], false);
+    let by_section = records.iter().find(|r| r["id"] == SERIES).unwrap();
+    assert_eq!(
+        by_section["named_by_sections"],
+        json!(["docs/notes/memory.md#repair-12"])
+    );
+    let headings = brief["note_sections"].as_array().unwrap();
+    assert!(headings.iter().any(|s| s["heading"] == "Repair (#12)"));
+    assert!(!headings.iter().any(|s| s["heading"] == "Other (#120)"));
+    let text = super::issue::render(&brief, 1);
+    for term in [
+        "reviewed123",
+        "Track the same bearer",
+        "Earlier transfer reading repaired",
+        "PR #41",
+    ] {
+        assert!(text.contains(term), "{term}");
+    }
+    let split =
+        json!({"issues":[snapshot["items"][0]],"pull_requests":[{"number":40,"state":"OPEN"}]});
+    std::fs::write(&path, split.to_string()).unwrap();
+    let split_history = retrieval::Issues::Snapshot(
+        retrieval::read_snapshot(path.to_str().unwrap(), None).unwrap(),
+    );
+    let split =
+        super::issue::report(&root, &corpus, 12, &split_history, Default::default()).unwrap();
+    assert_eq!(split["pull_requests"][0]["number"], 40);
+    let missing = retrieval::Issues::Missing {
+        meaning: retrieval::MISSING_ISSUES,
+    };
+    let local = super::issue::report(&root, &corpus, 12, &missing, Default::default()).unwrap();
+    assert_eq!(local["issue_history"]["availability"], "missing");
+    assert!(local["pull_requests"].as_array().unwrap().is_empty());
+    assert_eq!(local["records"][0]["id"], id);
+    let records = local["records"].as_array().unwrap();
+    assert!(records.iter().any(|r| r["id"] == section_id
+        && r["assessment_section"] == "docs/notes/memory.md#repair-12"
+        && r["mentions_issue"] == false));
+    assert!(
+        records
+            .iter()
+            .all(|r| r["id"] != other_id && r["id"] != file_id)
+    );
+    assert!(super::issue::render(&local, 2).contains("Check the section-specific prediction"));
+    assert!(records.iter().all(|r| r["id"] != pr_only_id));
+    assert!(!root.join(".cache/truth-index.sqlite").exists());
+    std::fs::remove_dir_all(root).unwrap();
+}

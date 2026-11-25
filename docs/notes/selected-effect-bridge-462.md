@@ -2,7 +2,7 @@
 
 This diagnostic completes the bounded act/output discrimination after #481.
 It attributes no claim to a historical author. Source interpretation is paused.
-The overlay is not a definition of God, free agency, or metaphysical creation.
+The overlay is not a definition of God, free agency, or metaphysical creation. [Original PR #621](https://github.com/moritzbrantner/formal-logos/pull/621)
 
 ## Reused evidence and residual question
 
@@ -294,3 +294,8 @@ onward identification toward **8626f8a5-9531-5da7-9ebd-f901e74b1129** remains
 OPEN. Prior #462 stopping/reopening conditions and #1737 ownership remain.
 This is proposed synthesis pending coordinator semantic challenge; no new
 formal consequence or premise closure.
+
+## Research attempts citing this note
+
+- [Certified modal variable effects and modal fixed effect both have a necessarily existing source…](../../corpus/attempts/modal-variable-effect-shift.json)
+- [Read materialized SCTA ST I q19 a3–5,7–8,10 and pinned Elwes Spinoza Ethics I…](../../corpus/attempts/necessary-act-free-creation-source-boundary.json)

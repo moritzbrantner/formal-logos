@@ -142,6 +142,25 @@ impl EvidenceGraph {
                         .into(),
                 );
             }
+            // Bare PR numbers belong to this corpus. A mixed snapshot needs
+            // qualified URLs to distinguish deliveries with the same number.
+            use crate::brief::issue::{checkout_repository, github_item, matches_checkout};
+            let repositories: BTreeSet<_> = arrays
+                .iter()
+                .flat_map(|(_, items)| items.iter())
+                .map(|item| {
+                    item.get("url")?
+                        .as_str()
+                        .and_then(github_item)
+                        .map(|(repo, _)| repo.to_ascii_lowercase())
+                })
+                .collect();
+            let checkout = checkout_repository(root);
+            let scoped_pr_numbers = repositories.len() == 1
+                && repositories
+                    .first()
+                    .and_then(Option::as_deref)
+                    .is_some_and(|repo| matches_checkout(repo, checkout.as_deref()));
             for (container, items) in arrays {
                 for (index, item) in items.iter().enumerate() {
                     let Some(number) = item
@@ -164,6 +183,9 @@ impl EvidenceGraph {
                     let path = format!("offline-snapshot/{container}/{index}");
                     let key = graph.add_node(kind, &number.to_string(), &path, item);
                     graph.alias(&format!("#{number}"), &key);
+                    if is_pr && scoped_pr_numbers {
+                        graph.alias(&format!("PR-{number}"), &key);
+                    }
                     if let Some(url) = item.get("url").and_then(Value::as_str) {
                         graph.alias(url, &key);
                     }
@@ -368,6 +390,7 @@ impl EvidenceGraph {
                         || text.starts_with("docs/")
                         || text.starts_with("https://")
                         || text.starts_with('#')
+                        || (node.kind == "pull_requests" && text.starts_with("PR-"))
                         || node.kind == "senses"
                         || text.starts_with("STMT-")
                         || text.starts_with("DEF-")
@@ -1003,6 +1026,35 @@ mod tests {
                 .query_references("See https://github.com/foreign/repo/issues/27")
                 .is_empty()
         );
+    }
+    #[test]
+    fn attempt_pr_evidence_resolves_only_to_a_pr_in_a_scoped_snapshot() {
+        let fixture = Fixture::new();
+        fixture.record(
+            "attempts",
+            json!({"id":"ATTEMPT-LOCAL","evidence":["PR-28","PR-27"]}),
+        );
+        let local = json!([{"number":27,"url":"https://github.com/o/r/issues/27"},
+            {"number":28,"url":"https://github.com/o/r/pull/28"}]);
+        let graph = fixture.graph(Some(&local));
+        assert_eq!(graph.resolve("PR-28"), vec!["pull_requests:28"]);
+        assert!(graph.resolve("PR-27").is_empty());
+        assert!(
+            graph
+                .edges()
+                .iter()
+                .any(|e| e.from == "attempts:ATTEMPT-LOCAL"
+                    && e.to == "pull_requests:28"
+                    && e.provenance.field == "/evidence/0")
+        );
+        let mut mixed = local;
+        mixed
+            .as_array_mut()
+            .unwrap()
+            .push(json!({"number":9,"url":"https://github.com/other/repo/pull/9"}));
+        assert!(fixture.graph(Some(&mixed)).resolve("PR-28").is_empty());
+        let unscoped = json!([{"number":28,"kind":"pull_request"}]);
+        assert!(fixture.graph(Some(&unscoped)).resolve("PR-28").is_empty());
     }
     #[test]
     fn ordinary_prose_cooccurrence_never_creates_an_edge() {

@@ -1,0 +1,11 @@
+{
+  "id": "f0eb2f96-e313-4310-9c13-7064bcf13e1b",
+  "label": "Optimizing-giving laws, tied and mediated optimum models, checked",
+  "argument_id": "7dd54a71-a6d6-40ef-9af9-a710917c4066",
+  "challenge_module": "TruthCore.Results.Causality.NarGrafts.Challenge",
+  "solution_module": "TruthCore.Results.Causality.NarGrafts.Solution",
+  "theorem": "TruthCore.Results.Causality.NarGrafts.narGraftControls",
+  "comparator_config": "results/f0eb2f96-e313-4310-9c13-7064bcf13e1b/comparator.json",
+  "status": "solution-present",
+  "description": "Premise-free laws and models for the NAR graft batch (G3). Sense-mixing control: it relates the optimality, output-profile, NECESSITATE_5 and NECESSARY_2 senses without a bridge premise. Laws 2 and 3 use #1737's certificate through its Lean theorem. The tied model shows that G1 needs the uniqueness clause: with two optimal candidates the root can be two-way toward a contingent while giving only optimal candidates at every world where it exists. The mediated model shows that G1 needs the common root's direct reach: on #1947's chain frame the rival holds and the root gives being only to the necessary intermediary. Establishes no premise."
+}

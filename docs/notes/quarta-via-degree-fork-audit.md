@@ -1,6 +1,6 @@
 # Degree fork: semantic and source boundaries
 
-Research evidence for `ATTEMPT-QUARTA-VIA-DEGREE-FORK-AUDIT`, at baseline
+Research evidence for [`ATTEMPT-QUARTA-VIA-DEGREE-FORK-AUDIT`](../../corpus/attempts/quarta-via-degree-fork-audit.json), at baseline
 `1c83a5eaa217cf2eea7a2ed4330434901d87567d`. This note is not a handoff or a
 separate proof-status authority.
 

@@ -9,8 +9,8 @@ independent warrant; (b) does it reach a God-relevant conclusion while avoiding
 `40a97664`; or (c) is it neutral, or does it presuppose `40a97664`?
 
 **Reused, not repeated.** [sustaining-vs-existential-inertia.md](sustaining-vs-existential-inertia.md)
-§§1–5 and its §4 judgment (attempt `21883b61`); the present-receipt test
-(§5, attempt `50e08b09`); the Schmid 2021 and Feser 2021 readings in
+§§1–5 and its §4 judgment (attempt [`21883b61`](../../corpus/attempts/21883b61-1dec-454f-821e-e1c2fb0e37c4.json)); the present-receipt test
+(§5, attempt [`50e08b09`](../../corpus/attempts/50e08b09-fc52-4cf1-9bd7-4bad25707dc6.json)); the Schmid 2021 and Feser 2021 readings in
 [eternity-dependence-connection.md](../eternity-dependence-connection.md)
 (both pinned and read). Schmid's passage `SCHMID-INERTIA-REPLY-3-ARTICLE` was
 materialized and re-read for this note, for the exact form of the PSR-like
@@ -247,7 +247,7 @@ per-thing reading is taken from the proof.) The three options:
    change anywhere. For the whole history it is closest to the Hume–Edwards
    view that explaining every member explains the series. That view is the
    recorded rival of `b08eee83` and one of the whole-series standards retained
-   in PR #1297 (attempt `a5958e25`). The analogy is inexact, since the members
+   in PR #1297 (attempt [`a5958e25`](../../corpus/attempts/a5958e25-0904-46cb-a9e8-62ca5f3f5286.json)). The analogy is inexact, since the members
    here are moments of one thing, not members of a series. It also rejects, by
    analogy, the world-indexed De ente coverage `d1f3ffcc`; that premise is
    stated over `DistinctEsseAt` and no bridge is built. The inertialist avoids
@@ -281,7 +281,7 @@ The price is conditional on two things:
     from, nor be discernible from" the actual state (`2bd8f0e3`). On a
     relationalist view of time, distinct indiscernible moments of a
     stationary history may not exist, and then the case is empty.
-  - Attempt `05c7e8d0` rejected "PSR alone → relationalism", so this point is
+  - Attempt [`05c7e8d0`](../../corpus/attempts/space-translation-boundary.json) rejected "PSR alone → relationalism", so this point is
     not decisive. It bears on the condition, not on the entailment.
 - **Modal scope.** Coverage is applied as holding in every possible history,
   as a principle about received esse.
@@ -351,7 +351,7 @@ The sustaining note §3 stands. Two additions:
 
 This is scoped to the horizontal families above. It stands beside the
 2026-11-19 assessment of attempt `21883b61` and the 2026-11-18 cluster
-assessment, and does not replace them.
+assessment, and does not replace them. [Assessment record](../../corpus/attempts/9da52c33-4ac7-4bef-a37d-d85039a80251.json)
 
 - **The dependency is avoidable for God's existence on six routes, not all.**
   - No route to GOD_4 has `40a97664` as an open premise.

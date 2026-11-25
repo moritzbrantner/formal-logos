@@ -8,7 +8,7 @@ violates the selection requirement, without supplying a truthful nonselector.
 The existing `TruthfulRival.checks` theorem already has a false-only control
 and a positive truthful-rival construction. This batch reuses that theorem;
 the missing work is first-class factivity and coverage, not a new permutation
-or countermodel machinery.
+or countermodel machinery. [Original PR #1157](https://github.com/moritzbrantner/formal-logos/pull/1157)
 
 `AcceptedAreTrue` is the independent OPEN policy `∀ p, adequate p → p a` for the
 same mathematical Arrangement, selected `a` and supplied acceptance judgment.
@@ -74,3 +74,7 @@ attribution stays deferred and no existing claim changes. Findings and rejected
 inferences are persisted in the existing ordering-cardinality attempt. Actual
 root-premise effects come from `frontier-diff` in the PR; adding a conditional
 fork is not a premise discharge or a whole-repository audit completion.
+
+## Research attempts citing this note
+
+- [Issue #1003: establish the labeled mathematical cardinality claim and R1–R3 controls; the…](../../corpus/attempts/ordering-cardinality-1003.json)

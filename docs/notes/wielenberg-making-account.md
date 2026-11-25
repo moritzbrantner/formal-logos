@@ -36,12 +36,12 @@ selected natural profile. It does not preserve a single fixed substantive
 norm across those assignments. StrongImpliesWeak supplies only same-world
 instantiation, not making, explanation or normative warrant. The Boolean
 natural base is expressly selected and need not be complete. Reuse attempt
-`e2baa97d-dcff-4d9f-b3a3-b770e927a596`; do not relabel these controls as
+[`e2baa97d-dcff-4d9f-b3a3-b770e927a596`](../../corpus/attempts/e2baa97d-dcff-4d9f-b3a3-b770e927a596.json); do not relabel these controls as
 countermodels of Wielenberg's positive package.
 
 Read #1502's actual open head
 `2a540aec02d490e44d2b099056b168c2aa0a9dba` attempt via git show: its
-`cc9f51e3-529d-4e59-bc50-bc79d8eae6c0` record is absent here and the PR is
+[`cc9f51e3-529d-4e59-bc50-bc79d8eae6c0`](../../corpus/attempts/cc9f51e3-529d-4e59-bc50-bc79d8eae6c0.json) record is absent here and the PR is
 open. Its explicit boundary agrees with this investigation: thin F6 and
 preference-independent epistemic authority do not supply a moral instance or
 irreducible favoring. No branch-only evidence imported, and no #1500/#1508
@@ -347,3 +347,174 @@ distinct verified support alternatives: 373 -> 373
 verified support alternatives added: 0
 no change
 ```
+
+## Does a child's actual nourishment identify its underived source? (#1812)
+
+**Provisional judgment, 2026-11-24.** An observed
+instance gives positive evidence of received material and of a determinate
+operation in the patient. It also tells us *which* capacity an account of the
+child's good must explain. The evidence selects a proximate material source.
+An independently defended foundation for the child could select an underived
+ancestor of that very child. These two selections answer different questions.
+What would join them is evidence that the latter source gives or sustains the
+organization by which this child makes use of the material. [Assessment record](../../corpus/attempts/e354e5df-72e0-43b1-8fe1-6a1855531dc4.json)
+
+### One patient, a measured course of feeds, a separate duty
+
+Fix the infant in the first row of Table 2 of Davidsson et al. (2000). In
+protocol A the authors estimated that 8.0% of the iron-58 dose in the formula
+was incorporated into this child's circulating erythrocytes, using blood
+isotope enrichment 14 days after feeding began. The course comprised six
+feeds over about 24 hours. A nurse gave the first two to three bottles and
+parents gave the rest at home. The estimate traces material from the labeled
+course to this patient. It cannot apportion incorporation among bottles or
+caregivers. The study did not measure
+the value of that episode to the child, establish that the child was deficient,
+or adjudicate anyone's care obligations. [Methods, pp. 848–849, and Table 2](https://doi.org/10.1017/S0007114500002464)
+
+Fix the perfection under assessment as the child's exercise of the capacity
+to incorporate dietary iron into red cells in the service of blood function.
+The tracer identifies an exercise. The reason to count it as good *in this
+respect* is its contribution to the child's own functioning, including
+oxygen carriage by iron-containing hemoglobin. This gives a criterion
+independent of which adult feeds the child. Larger tracer recovery need not
+mean better functioning. The due-status judgment uses the scoped positive
+direction of the form/end thesis: realization of a perfection appropriate to
+the patient's form and end counts in its favor. The study supplies evidence
+on realization. The evaluative direction remains a defensible premise.
+[DueActualityThesis, 6cc47d1b](../../corpus/statements/goodness-due-to-form-and-end.json)
+· [Natural goodness and the first practical precept](natural-goodness-function-and-authority.md#what-the-positive-argument-actually-supplies)
+
+Two substitutions locate the explanatory work. They are analyst comparisons
+with the actual episode.
+
+- **Change the marker.** Supply equally usable iron with ordinary isotopic
+  composition, holding the child's uptake and use of iron fixed. Excess
+  enrichment from the labeled dose disappears while the selected kind of
+  nutritive good is realized in the same child. The traced material made an
+  actual contribution even though a substitute could have served. Requiring
+  *this label* for goodness would give the wrong answer. Conversely, tracing
+  iron only as far as the feeding bottle would leave its use in this patient
+  unexplained. Delivery and incorporation have different success conditions.
+- **Change who undertook the care.** Keep this child's need, the six feeds, who
+  administered each and the aggregate bodily result fixed. Suppose one of two
+  able adults had undertaken to arrange the course, inducing reliance. Exchange only
+  who gave the undertaking and who was relied upon. On the proposed
+  responsibility principle the special *pro tanto* duty to arrange the course
+  changes hands. Its bearer can arrange successful feeding by another.
+  Incorporation in the patient can be identical in either case. This tests a
+  normative interpretation of the case, without ascribing the hypothetical
+  undertaking to anyone in the study. Directed standing, priority in a
+  conflict and rightful command retain the burdens identified above.
+
+### How far can the material be traced?
+
+Iron mass admits additive accounting. Incorporation is something the child
+*does with* an input. A feeder can repeatedly supply iron without losing
+an equivalent quantity of their own capacity for incorporation. Repeated
+feeding can support repeated operation of the same capacity. Neither point assigns
+additive units of that capacity to the feeder–child edge. The percentage in
+Table 2 measures the fate of a dose, not the sum of transfers across every
+edge in an ancestry. On a short feeding ledger a bottle with an opening stock
+can be a net exporter although its existence has an ordinary concrete ground.
+
+This locates the failure at the application premise of the finite-flow result.
+Even granting finite total throughput and a positive edge with no return path,
+`returnOrNetExport` gives an upstream exporter in *that ledger*.
+`actualRootOfLedger` additionally needs *every* actually grounded bearer to
+cover exports by receipts there. Extending the interval to include filling the
+bottle changes the boundary and who appears upstream. It supplies no reason
+for existentially grounded bearers to obey that coverage rule for goodness or
+for the exercise of a power. The theorem therefore helps identify the question
+of material supply. Neither physical scarcity of the iron nor repeatability of
+the operation settles existential foundation. [Finite-throughput proof and application](../../TruthCore/Results/Causality/FiniteThroughput/Solution.lean)
+
+### What would give the same source credit for the good?
+
+The strongest impersonal completion can grant an actual natural foundation
+and even grant that it sustains the existence of this infant. The functional
+organization of the infant accounts for the use to which the received iron
+is put. Given a natural-goodness criterion, the end served explains the
+relevance of that use. Given a substantive reliance norm, the undertaking
+and need can make a directed duty obtain. In the robust-making version the
+concrete circumstances do metaphysical work in grounding the token verdict.
+Its primitive normative content still needs warrant where disputed. The
+faculty-free parity objection challenges the content and authority of the
+mapping. Renaming it leaves the traced delivery and incorporation intact.
+A source theory likewise owes an account of rightful authority beyond
+producing the patient. [Issue checkpoint on the parity objection](https://github.com/moritzbrantner/formal-logos/issues/1812#issuecomment-7033381889)
+
+The participation account has a positive answer at an intermediate strength.
+If a source sustains the *specific organization* that takes up and incorporates
+iron with either material input, it helps explain why either supply
+can realize the same good. Its contribution reaches the child's standing
+capacity and, when that organization operates during the course,
+mediates a contribution to the exercise. The nursing and parental deliveries can explain how
+the labeled material was available during this interval. The specifically moral input
+survives at a different point: it constrains which outcome an adequate account
+of care should explain. An account that made one particular caregiver or this isotope
+indispensable to fulfilling the child's need would miss the two substitutions.
+Both a basic norm keyed to the child's need and a wise ordering to that need
+can respect this constraint. An independently warranted exemplar in *s* could
+then explain why the source produces a capacity directed to the very end
+that gives caregivers reason to act. Inferring the exemplar from that fit
+alone counts the agreement twice: the rival also explains why the norm
+tracks this outcome by using the child's good in the norm's content. This treats the good as
+inherent in the child and allows distinct causes to explain different aspects
+of one event. It does not require an extra efficient cause to stamp the
+completed event with value. A natural source can earn exactly the same
+credit on exactly the same evidence. Neither source's efficient contribution
+by itself selects the proper end or constitutes a caregiver’s undertaking.
+[Participation and production control](../participation-grounding.md#the-mechanically-checked-consequences)
+· [Secondary-only interpretation, 38c52f02](../../corpus/arguments/CAUSAL-PERFECTION-TRANSFER-SECONDARY-ONLY-RIVAL.json)
+
+The existing selected-cone result improves on invoking a root somewhere.
+At the actual world select this infant as the concrete being in
+`SelectedAncestry.necessaryRootAncestor`. Well-foundedness on the child's
+**complete actual grounding cone**, contingent dependence there and explicit
+excluded middle yield a necessary concrete ancestor *s* with no incoming ground from any
+actual concretum at that world. Strictly separating *s* from the child
+requires that the child itself has an actual concrete ground (or another
+exclusion of its rootness). The organism's use of an ingested material
+warrants derivative exercise in one respect. It supplies neither cone
+well-foundedness nor that existential grounding fact. The prior
+non-self-supply argument retains its affirmative force for foundation, and
+its distributed-order rival remains live. The moral premise remains deletable
+from the existential inference. The whole-roster argument `0d88a858` likewise
+takes actual concrete population, borrowing escape, contingent-root exclusion
+and excluded middle. Its existential conclusion does not designate this child's
+source. [Whole-roster argument](../../corpus/arguments/NECESSARY-CONCRETE-FROM-BORROWING-ESCAPE.json) [Selected-cone argument and inputs](../../corpus/arguments/SELECTED-CONE-NECESSARY-ROOT-ANCESTOR.json)
+· [Foundation assessment](unique-feedback-explanation-311.md)
+
+**Missing bridge and revision test.** Hold *s*, patient and capacity fixed.
+Compare (i) continuing production by *s* of the organization under which
+iron is incorporated with (ii) continued existence through *s* while the
+organization is generated and maintained by secondary processes. Trace what
+maintains the operative disposition across renewal of its material. Evidence
+that the *same s* supplies the specific organizing activity through those
+processes would support mediated capacity-source credit. Evidence tracing
+only fresh iron to a supplier or only existence to *s* leaves the two
+completions in contention. The traced episode warrants local reception and
+exercise under either completion. It supplies no preference between a natural
+and a rationally exemplary foundation on its own. This test of source-specific
+credit is distinct from the earlier entrusted-interest test of the duty.
+[Prior same-source transfer assessment](causal-perfection-transfer.md)
+
+**Downstream boundary.** For argument `678ff65f`, the very same *s* must
+qualify as actual and maximal at *esse*, cause being in every other bearer
+actual at *esse*, cause each actual perfection of every other bearer, enter
+into the composition of nothing, and be the unique maximal being. The
+consumer derives parts of this profile using further premises, including
+firstness and the exclusion of components from firstness, then uses naming
+bridge `1ec205ed` to conclude `∃ g, IsGod g` at GOD_4 (`8626f8a5`).
+A local ground of one patient does not yet cover other patients or even all
+the perfections of this one. The divine supreme-goodness result runs in the
+other direction from premises about what is already God. Its conclusion
+attributes goodness at *esse* and causation of every actual perfection of
+others to such a bearer. Even a source's production of this good would not
+show that the source itself fulfills that description; rational governance,
+willing and jurisdiction have their own same-witness tests. The present comparison
+adds warrant concerning a creature's good and refines the B2-P test. It adds
+no registered inference, premise discharge or source attribution to the corpus.
+[Stage-one consumer and its premises](../../corpus/arguments/god-exists-from-maxime-ens-causing-all.json)
+· [Stage-two goodness result](../../corpus/arguments/CATHOLICISM-STAGE2-GOD-IS-SUPREMELY-GOOD.json)

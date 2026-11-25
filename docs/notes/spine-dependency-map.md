@@ -2,7 +2,7 @@
 
 Linked from [the modal spine handoff](modal-spine.md). Working root:
 `STMT-GOD-EXISTS` (8626f8a5). Nothing here establishes a premise; it records
-which registered solution-present arguments need which premises.
+which registered solution-present arguments need which premises. [Original PR #1514](https://github.com/moritzbrantner/formal-logos/pull/1514)
 
 The later [exact God-existence support formula](god-existence-support-formula.md)
 records the 2026-11-13 snapshot, its complete immediate disjunction and recursive
@@ -72,7 +72,7 @@ CCR also follows conditionally from borrowed reality 45890c84 **and** the
 concrete-supplier bridge b28f3a70 (ee5a7fb8 / closedRootedOfBorrowed), or the
 uncalibrated uniform attenuation bundle f3158145 (feb28c90 /
 closedRootedOfAttenuation). These are additional open commitments, not warrant
-supplied by the theorem. Reuse attempts 4da08bd8 and 14fb7669.
+supplied by the theorem. Reuse attempts [4da08bd8](../../corpus/attempts/4da08bd8-8375-40b7-b635-83012168ed6f.json) and [14fb7669](../../corpus/attempts/14fb7669-48c1-4d38-b702-7ecdce2565b8.json).
 
 J2 (d149d238) has derivation fe4b5ec7 from F1 (2b20b5af),
 AGWF and no-novel-edge bd983df2, and the newer graded derivation 96acab66
@@ -107,7 +107,7 @@ fd1f7e75, beec1dc1, 0a639ec4, 1c154f2f, 72391d4d, 5e8e6054, 92ab7c94),
 plus #1522's esse-only siblings fc46b7f9 and 3367bf93. Their exact theorems are
 `TruthCore.Results.Causality.GradesAtBeingRoutes.directEsseRootGodExistsAtBeing`
 and `existenceOnlyGodExistsAtBeing`. They use e4e6b0cd rather than all-respects
-grades 6c27657f. Attempt bc71bfe8 preserves the declined 1c154f2f sibling and
+grades 6c27657f. Attempt [bc71bfe8](../../corpus/attempts/bc71bfe8-5a43-4d42-80ae-01ca4e75db0f.json) preserves the declined 1c154f2f sibling and
 its unresolved sense passage; do not count that sibling as registered.
 
 Strict-expansion recomputation on this baseline:
@@ -137,7 +137,7 @@ It uses POTENCY_2 and PRIOR_1, plus the explicit GOD_1 → GOD_4 naming bridge
 act), 3d99779b (act plus potency makes composite), ca07cae9 (composite has a
 distinct cause), e0088de9 (perfection cause to efficient cause), and e078f07b
 (efficient cause is prior). Those warrant questions survive the bypass.
-Reuse attempt e432c07c and its verification evidence. No new certification is
+Reuse attempt [e432c07c](../../corpus/attempts/e432c07c-19d6-4282-a945-d0fabdbec137.json) and its verification evidence. No new certification is
 claimed by this map.
 
 ## Coordinator handoff: next targets, in owner order
@@ -148,7 +148,7 @@ These are assignment briefs, not investigations begun by this refresh.
    376d6a5a / d5a94eb1. Reuse the current #1516 ladder
    376d6a5a ⇒ d0fc96b7 ⇒ 4ccb319f ⇒ 4a5a43a5, preexistence 64498e7e,
    `TruthCore.Results.Case.Catholicism.CauseOfBeingHasBeing.causeOfBeingHasBeingOfAgency`
-   and `causeOfABeingHasBeingOfPreexistence`, plus attempt c0c90cee.
+   and `causeOfABeingHasBeingOfPreexistence`, plus attempt [c0c90cee](../../corpus/attempts/c0c90cee-39f6-4650-aee9-d42e42f3cd48.json).
    First reconcile #1518's branch with main: cffad050, 2c0b9bd7 and proposed
    route 5d2b7c6e are **absent from this baseline**, so their reported 11-route
    experiments are not current-main evidence. #1519 item 2 is already delivered
@@ -224,3 +224,7 @@ not an unresolved dependency-map implementation.
 Computed frontier delta against the audited main: open root premises
 479 → 479 (340 bare, 93 supported, 46 stated); support alternatives 373 → 373;
 lowest-cost diagnostic 16 → 16; added alternatives 0; no change.
+
+## Research attempts citing this note
+
+- [Act priority at a first being from Metaphysics Theta.8: substance routes, plenitude, rivals](../../corpus/attempts/124ff6a9-008f-4e40-8af6-6df906f3d7d2.json)

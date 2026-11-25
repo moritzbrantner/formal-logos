@@ -1,0 +1,31 @@
+{
+  "id": "3756c4db-04d0-4658-afe4-0f54d810b3b2",
+  "label": "Whole-roster nontrapping from an actual root",
+  "premise_statement_ids": [
+    "dc397705-d727-419e-92f9-65d44e1ff15d"
+  ],
+  "conclusion_statement_id": "5c898d24-d1f7-5087-b09e-3287a723e787",
+  "inference_ids": [
+    "02c75892-3a5e-4147-924d-737367e6a60c"
+  ],
+  "meaning": "Strength order (backing result): if some actual concretum n has no actual concrete ground in the selected relation at w, the nonempty actual roster is not a borrowing trap, since n is a source of the recorded graph of that relation and a trap has no source. Same profile, selected relation and world; constructive. The Comparator configuration also checks deriveFromActualRoot: the quarta-via classical GOD_4 root (NecessaryClassicalGodRootAt) from an actual root, contingent grounding, excluded middle and the 21 shared inputs of NecessaryClassicalGodRoot.derive, which it applies once after obtaining population and whole-roster nontrapping from the root. That theorem is not registered as a corpus argument: its premise bundle repeats the base route's allowlisted POTENCY_CAPACITY_AND_POWER_ACROSS_ADOPTED mixing (a4d3261a is tagged DEF-POTENCY, c6d6379b DEF-INDEPENDENT-POTENCY, for one Lean parameter InPotency), which a new argument may not repeat without a genuine bridge. The converse fails: in a world with no actual concretum whole-roster nontrapping holds vacuously and no root exists; the certified difference is population plus stability of root existence.",
+  "definition_ids": [
+    "f825624c-78af-5df8-ba76-c9ef691eb9af",
+    "c57e2682-08e6-527e-950f-0fa0a7ff11ef",
+    "008cb21a-256c-5a90-822c-acd4591d699a",
+    "ff8bf1d7-0bf9-5dda-8038-7127e3d46ec8",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "1dff2d68-1348-5e7e-8ee7-248af63c8c53",
+    "c2c8b139-fb8a-5ce2-8add-ec55a60d8b0b",
+    "a8172538-204c-45f5-9ee0-9e9d7b437660"
+  ],
+  "disambiguation_ids": [
+    "6e92c6e3-edf0-5d7e-b2b3-788b24b8b768",
+    "623ddbf6-9683-5361-bae4-e348a00ec680",
+    "6f1d1395-7c1d-5bd5-a45d-03380857aed6",
+    "9403807f-f7d4-5ce8-a8ba-ca53ed932959",
+    "34ddfede-ff4d-59ad-9882-4bcb490df9bb",
+    "c529e8d3-43e3-53a8-a82f-3955e9815265"
+  ],
+  "weakening": true
+}

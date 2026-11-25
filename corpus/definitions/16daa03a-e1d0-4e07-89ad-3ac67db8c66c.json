@@ -1,0 +1,13 @@
+{
+  "id": "16daa03a-e1d0-4e07-89ad-3ac67db8c66c",
+  "label": "Truth-preserving decoded content RECORD_TRANSPORT_2",
+  "term": "record transport preserving truth in admitted histories",
+  "definition": "TruthTransport S K allowed D means: at each admitted history i, if a content c in the named domain D is true under the existing Semantics S, then decoding receipt of its specified code is also true at that SAME i. It does not assert c is true, identify the two contents, or assert any actual record came from that code. SourceGuarantee uses this weaker sense together with independently supplied source truth, assertoric scope, realization and provenance.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Epistemology.SourceEvidenceAdequacy.TruthTransport",
+  "definition_ids": [
+    "91414c1b-813a-4b1d-bab5-715394ccd0bc",
+    "9fcefb90-0cc3-4c0a-b964-cbf3585bc9c9"
+  ],
+  "note": "RECORD_TRANSPORT_2 concerns truth preservation rather than exact identity or fallible epistemic warrant. It remains an OPEN channel condition. The retagging model witnesses its compatibility with failure of RECORD_TRANSPORT_1 on nonempty domains and nonconstant observations; no translation practice is thereby certified."
+}

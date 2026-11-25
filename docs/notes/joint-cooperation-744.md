@@ -2,7 +2,7 @@
 
 Result `JOINT-COOPERATION-CERTIFICATE`, module `TruthCore.Explanation.JointCooperation`.
 Semantic profile: the #733 `Exercise` records and #734 `Supply`, unchanged. Everything
-below is relative to one supplied scenario space and event carrier.
+below is relative to one supplied scenario space and event carrier. [Research record](../../corpus/attempts/joint-cooperation-744.json)
 
 ## Thesis tested
 
@@ -385,3 +385,7 @@ interpretation. Repairs clamp PUBLIC a only; latent first=true remains intact.
 No latent-source intervention, necessary-bearer nonexistence or real
 counterpossible truth is established, and the original intervention/application
 boundaries remain OPEN.
+
+## Research attempts citing this note
+
+- [Follow-up to #744, #735 and active PR #925, with no new source claim or root route](../../corpus/attempts/joint-law-nature-grounding-20261103.json)

@@ -6,7 +6,7 @@ the pinned witness in #651) and `STMT-STREET-DARWINIAN-ACCESS-CHALLENGE` are the
 sourced commitments. Neither author states a rate, a distribution or an error
 bound; every number below is an analyst input or a stipulated model value. The
 source reading is in `docs/naturalistic-moral-realism.md`, "Moral access
-comparison".
+comparison". [Research record](../../corpus/attempts/51d3de27-d977-4589-926f-4fd1c79740ed.json)
 
 Lean: `TruthCore.Logic.ThirdFactorTracking` (vocabulary) and
 `TruthCore.Results.Logic.ThirdFactorTracking` (five results); spec

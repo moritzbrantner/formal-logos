@@ -1,0 +1,10 @@
+{
+  "id": "ec8beb5c-abf5-4a3f-8a6d-3d671492e443",
+  "label": "Some concrete contingent at w is the same on the frame and on its ground profile",
+  "subject_kind": "statement",
+  "subject_id": "c76b6e2c-1ca0-47fd-a9d0-2c2faa3d1174",
+  "predicate": "logically_equivalent_to",
+  "object_kind": "statement",
+  "object_id": "c94b5446-e7e7-5b36-9bed-288959725526",
+  "note": "The same proposition on two carriers: SomeContingentConcreteAt F concrete w ('some x is concrete and ContingentAt F.history.ontic w x', exists at w and fails to exist at some world accessible from w) is SomeActualContingentAt on the ground profile of F with the same concreteness predicate (groundProfile F concrete grounds, whose ontic is F.history.ontic), for every grounding relation, which the proposition does not mention. Verified as someContingentConcreteIff (Iff.rfl), a Comparator-checked theorem of the restated-premise controls result. Same contingency sense (MODAL_CONTINGENCY_1, DEF-KANT-MODAL-CONTINGENCY) and model (DEF-KANT-ONTOLOGICAL-MODEL). Both take the concreteness predicate as a parameter; the c94b5446 record also reads it as CONCRETE_6 (DEF-CONCRETE-ESSE-IN-RE), while c76b6e2c leaves the selected predicate open, so the equivalence holds whenever the same predicate is supplied and does not fix the c76b6e2c routes to CONCRETE_6. Every profile is the ground profile of some frame on its own ontic, so the equivalence needs only the same concreteness predicate. The records stay distinct (Pruss routes on the CausalityFrame, the contingent-being node on its route profile); no argument is registered in either direction."
+}

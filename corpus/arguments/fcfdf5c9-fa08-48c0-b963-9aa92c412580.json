@@ -1,0 +1,20 @@
+{
+  "id": "fcfdf5c9-fa08-48c0-b963-9aa92c412580",
+  "label": "The unchanged causal copying mechanism admits an attitude-free control",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "5a596081-4ec0-47d5-9578-58d44aedc548",
+  "inference_ids": [
+    "bfe54f98-2bfd-4f40-9bfc-9d4ef1e150af"
+  ],
+  "meaning": "Applies the same exact-value production guarantee without attributing cognition or assertion to the source. The empty mental relations are explicitly disclosed and not mistaken for empty causation; the positive cognitive control restores them. Necessity is stipulated on a universal frame and is not what proves record truth. Comparison beyond these functional conditions remains a philosophical application question.",
+  "definition_ids": [
+    "4abacd6f-e9f3-4790-b4d9-8e8368c95fdd",
+    "91414c1b-813a-4b1d-bab5-715394ccd0bc",
+    "9fcefb90-0cc3-4c0a-b964-cbf3585bc9c9",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "b31ee595-dc6e-47a4-88a9-1910a0092199",
+    "dd7b91ea-5284-4558-bac5-7a0759843b0c",
+    "e37c56c6-ac07-40d9-93df-6688593784e9",
+    "fa09d1dc-e38e-42ec-ac95-c510e8a87716"
+  ]
+}

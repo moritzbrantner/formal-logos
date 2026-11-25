@@ -4,7 +4,7 @@ Proposed outcome for independent semantic challenge, 2026-11-17. Baseline
 `d69634db451aabb99ba0be7f2c231747169a478f`; target definition
 `f114f527-20e2-5997-8219-df7f0457cf63`. Analyst dependency reconstruction;
 existing source readings reused, attribution deferred. This note does not
-certify a historical derivation or introduce a theological premise.
+certify a historical derivation or introduce a theological premise. [Original PR #1701](https://github.com/moritzbrantner/formal-logos/pull/1701)
 
 ## Parent and root connection
 
@@ -817,9 +817,9 @@ retrieval-reliability assignment; committed evidence remains available.
 **Scope and boundary.** Issue #1751, slice 3, drafted on main
 `95ed6125265252988b7a88ad14e42fed79e9d8ec` (PR #1754 merged). The coordinator
 counted 11 `legacy_only` GOD_4-route premises whose attempts cite this note: the
-open targets of legacy attempt `74008d2a`, which cites this note and
+open targets of legacy attempt [`74008d2a`](../../corpus/attempts/causal-perfection-transfer.json), which cites this note and
 [causal-perfection-transfer.md](causal-perfection-transfer.md). At this baseline
-all 11 are already `current` through slice 2's `5c7bc356`. Slice 2 left two
+all 11 are already `current` through slice 2's [`5c7bc356`](../../corpus/attempts/5c7bc356-a1dc-4781-8548-24ad1ce06f79.json). Slice 2 left two
 things open. It deferred the source-selection detail of six of them
 (`11e24b50`, `cbb068e8`, `b4987085`, `6acd44eb`, `e2bfd1b1`, `dcf4bcdd`) to this
 note. It also stated that it supplies "no numerical unity (`a576300f`,
@@ -828,7 +828,7 @@ note. It also stated that it supplies "no numerical unity (`a576300f`,
 four further open GOD_4-route inputs of that numerical unity and of the common
 source. Their currentness state is `none`: the multiplication inventory
 `2495a71d`, no added difference `f13d1cdd`, no matter `38ed105c` and the
-population `33f3c4c5`.
+population `33f3c4c5`. [Assessment record](../../corpus/attempts/1db2004a-5956-4c7e-994a-fd74c3b584a6.json)
 
 The cluster is therefore the q44 participation route as this note fixes it:
 
@@ -841,7 +841,7 @@ The cluster is therefore the q44 participation route as this note fixes it:
 The scoped assessment names the six deferred premises, the four new ones and the
 route nodes `a576300f`, `de05072a` and `8b8bb6df`, which are not open leaves. The
 other open inputs keep the assessments that actually assessed them, reused
-unchanged: `75b5b027` under `9f771edb` and the
+unchanged: `75b5b027` under [`9f771edb`](../../corpus/attempts/9f771edb-fb20-4426-9ae2-82de322bbe5f.json) and the
 [de ente source-selection judgment](de-ente-esse-source-1628.md#current-source-selection-judgment-identity-and-the-nature-being-multiplied-2026-11-17),
 and `6dfe01ab`, `7fcfcee8`, `14325c83`, `bc1810e5` and `86d02b69` under
 `5c7bc356`.
@@ -1222,3 +1222,36 @@ The direct q44 premise remains an available commitment. The checked alternative 
 **Revision test.** For a particular esse recipient, identify the allegedly exhaustive supplying respect and independently justify either an intrinsic act giving in that respect, or a concrete law or whole whose obtaining suffices for these members to be actual. A source that continues to supply with the proposed borrowed input independently excluded would bear on that cone. A constitutive rival that accounts for the actual exercise as well as its propagation would reduce the source's explanatory advantage. Check whether its whole is itself an underived actual giver in the selected relation: in that case the remaining disagreement concerns its identity and scope. Further finite surveys of working links cannot turn either candidate into general supplier completeness.
 
 The [Lean control](../../Scratch/q44-borrowed-supply/InterruptedTransmission.lean) reuses `PowerTransmissionRule`, `ActualEsseCause` and `ParticipatedHasEssentialSource`. It elaborates locally with `python3 scripts/worker_env.py -- lake env lean Scratch/q44-borrowed-supply/InterruptedTransmission.lean`. It is unregistered. This section contributes a scoped interpretation test and a proposed warrant assessment, with no formal premise change or new historical attribution.
+
+## Can the organization of a whole explain why any supplier is active?
+
+There is a stronger holistic answer than assuming a populated chain. A whole can impose relations among its parts that force *some* activity while leaving open which part is active. The question for `de05072a` is whether that sort of explanation reaches a participant's own being, and whether the whole then counts as its distinct actual giver.
+
+### An organization that selects population
+
+Consider a possible mechanism with three latches. Each is held at either of two stops, at signed displacements −1 and +1. At each of the three pairs, a linkage adds the two displacements and applies the sum to a spring about its neutral position. A spring with positive stiffness then exerts a restoring force whenever its ends' settings agree. These mechanical details give the word “loaded” an independent test. Disconnect the spring and the latches can retain their settings while the restoring force disappears. This is a design calculation for ideal bidirectional springs, with no claim of an experiment.
+
+If all three springs were relaxed, each latch would have to be opposite to each of its neighbours. Following the three reversals around the triangle would bring the first latch back to its opposite setting. In fact exactly one or all three springs carry load. Any one can carry the sole load. Two loaded springs would already satisfy a mere population requirement, yet this arrangement excludes that outcome. Reverse one linkage to take the *difference* of its two settings and all three springs can be relaxed together. Thus the joint organization explains a contrast independently of naming an active spring. The formal calculation uses signed displacement alone. Its force interpretation requires actual intact springs of positive stiffness. [Checked parity and reversal](../../Scratch/q44-borrowed-supply/ConstrainedPopulation.lean)
+
+To compare with the borrower-only rival, put one intact-or-interrupted chain under each contact, keep the effective transmission rule above, and require that the bottom stage be active exactly when its contact carries load. This last requirement is a separate interface assumption. It says how the two descriptions constrain the same state and gives the springs no role as extra inputs to the relay equation. With free latch settings, a joint assignment exists exactly when at least one chain has **every** link intact. A loaded contact requires activity at its bottom, which requires an intact link and an active supplier at every higher stage. Conversely, put the sole load over any fully intact chain, turn on all its stages and leave the other chains off. Cutting a link somewhere in each chain rules out the joint arrangement altogether. Holding all other conditions fixed after those cuts, sustained bottom activity would require a different supply rule, such as a working feed at that bottom. The cuts would locate an additional contribution relative to the interrupted channels. They could not tell whether the feed itself received its being. [Assembly criterion and actual-supplier interpretation](../../Scratch/q44-borrowed-supply/ConstrainedPopulation.lean)
+
+### Where the explanation reaches esse
+
+For the mechanical case a holist can explain both *that* some spring is loaded and *which* spring is loaded given the actual latch settings. The restoring force is the spring's own exercise under deformation. Its being an exercise of a part of this very assembly requires no additional producer external to the device. The structure constrains activity even when no individual latch fixes where the load falls. The device still presupposes the concrete springs, latches and linkages whose activity is explained. Those parts persist when unloaded. Reading the computed load as the *esse of a participant* therefore requires an argument that the given whole constitutes the bearer itself, in addition to determining one of its states. The Lean comparison lets the active stages of a loaded chain be participants and gives each an actual distinct neighbour in the existing q3 profile. Assigning `OwnBeing` to none of those stages is consistent with this rule. The carrier of that profile consists of stages only. It leaves open whether a whole outside that carrier supplies their being.
+
+There is also a constitutive case in which a *concrete member itself* can be identified. Consider a metal casting with two lobes joined only by one narrow web. Count a piece as a maximal physically continuous portion of this metal. A groove that stops short of cutting the web leaves one piece. Cutting the last connection leaves two, with each piece identifiable by tracing continuous metal through its lobe. The difference makes each lobe a separate piece without adding metal to it. The cut has an efficient cause, and the casting has a material history. What the constitution explains is why *this separate piece* exists given the actual material and the separation. The explanation earns its existential wording from an independently applicable criterion of individuation. A further identification is needed to infer that the piece's entire act of being, as opposed to its being separately countable, is received from the organized whole. This gives a concrete test of that identification for proposed whole-to-bearer explanations.
+
+Consider two ways the holist might identify a concrete whole. If “the whole” just names the roster of already existing members, the roster's existence presupposes theirs. Relational organization can still explain their pattern. If the whole instead has its own actuality and the members are differentiations of it, explaining how its determinate modes constitute *these bearers* can explain their existence without a second bearer producing them from outside the whole. Inclusion alone supplies no such account. For the mechanical example, independently setting the stops and measuring the predicted pattern and its reversal could warrant the device's actual operation. At existential scope an occurring act likewise gives a reason to affirm some concrete actuality. To identify that actuality as a mode of one comprehensive whole would take evidence that the conditions individuating this bearer require that whole. A law obeyed by every instance allows the question whether it has an instance. Even a reason why *some* concrete reality must obtain leaves open which reality must obtain. The holist can instead take this determinate whole's actuality as primitive and offer its internal explanation without further modal commitment. [Existing comparison of primitive and necessary concrete wholes](unique-feedback-explanation-311.md#state-indexed-actual-holism-what-global-selection-buys-1724-1616-2026-11-23)
+
+For the same explanandum, the positive source argument starts from the distinction between having a received power and exercising it. If each stage's *own actuality to give* is received through the complete order, an intrinsically actual giver already exercising towards this participant supplies what receipt presupposes. Its positive advantage depends on warrant for that productive reading throughout the cone. Inferring the source solely from the need for some activity would lose that advantage, since the triangle can already select activity. Conversely the source premise alone predicts neither which recipient is actual nor the parity pattern. The concrete source account owes the particular direction of its exercise, just as the constitutive account owes the particular articulation of its whole.
+
+**Overall provisional judgment.** Constitutive organization has positive explanatory warrant for population *within* an instantiated system. The direct source premise remains positively motivated where the participant's existence is itself received as a product. The contest over the existence of the whole order remains open on the mode-unspecified q3 meaning. The q44 target requires a cause numerically distinct from its recipient, with its own subsistent esse. A whole may include its recipient as a proper part and still be distinct. If the whole has its own subsistent esse and its constituting the member qualifies as causing that member's esse in the selected sense, the whole qualifies for this participant. The productive reading additionally requires actual giving in that respect. Grounding priority, basicness and holism alone supply neither classification. For the universal premise the account must reach each participant. The existing common-source conclusion also needs population and the same-giver selection premise. [Q44 target](../../TruthCore/Causality/Q44EssentialSource.lean) · [Principal giver argument](../../corpus/arguments/1a4f8730-c6d9-4be8-9b4e-dcd5bd320433.json)
+
+**Reopening condition.** Hold fixed a particular participant whose actuality is independently warranted. Show either how an independently identified whole individuates and constitutes that bearer, or how a named giver contributes to that bearer's very existence with the secondary conditions specified. An independently justified reason that this very whole must be instantiated would strengthen the first explanation at total-order scope. Evidence for a productive gift applying across the complete cone would strengthen the second. Further constraints on the distribution of activities of already existing parts leave that question unchanged.
+
+The unregistered Lean diagnostic elaborates with `python3 scripts/worker_env.py -- lake env lean Scratch/q44-borrowed-supply/ConstrainedPopulation.lean`. It adds no formal premise change or historical attribution.
+
+## Research attempts citing this note
+
+- [Constitutive population from a concrete organization and the q44 own-being giver](../../corpus/attempts/e37eaee1-2907-4523-9164-b1b21f67dd41.json)
+- [Effective delivery through an interrupted borrower-only order and q44 source supply](../../corpus/attempts/0719304b-11a2-4b0b-851c-3b8d3371b5b6.json)

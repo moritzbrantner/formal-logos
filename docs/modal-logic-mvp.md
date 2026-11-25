@@ -1,6 +1,6 @@
 # Modal logic MVP
 
-This slice adds a small, mechanically checked laboratory for normal propositional modal logic without changing the source-corpus model.
+This slice adds a small, mechanically checked laboratory for normal propositional modal logic without changing the source-corpus model. [Original PR #24](https://github.com/moritzbrantner/formal-logos/pull/24)
 
 ## Purpose
 
@@ -141,3 +141,7 @@ calculus, claiming completeness, or discharging any philosophical premise.
 This inventory introduces no dependency, source-attributed claim, philosophical
 premise or root-frontier change. It replaces the older suggestion to build a
 finite checker from scratch: a checked finite evaluator already exists.
+
+## Research attempts citing this note
+
+- [Bounded lane1 inventory reused Frame/Formula/Holds/Valid, existing K/T/D/B/4/5 forward validity…](../corpus/attempts/modal-standard-correspondence.json)

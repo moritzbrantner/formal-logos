@@ -1,0 +1,11 @@
+{
+  "id": "67afbf3d-e336-498e-a625-3a93d2da7b4d",
+  "label": "Actual root existence strengthens whole-roster nontrapping",
+  "subject_kind": "statement",
+  "subject_id": "dc397705-d727-419e-92f9-65d44e1ff15d",
+  "predicate": "strengthens",
+  "object_kind": "statement",
+  "object_id": "5c898d24-d1f7-5087-b09e-3287a723e787",
+  "verification_result_id": "1dbcca44-1931-41a2-8777-32da0bd57f74",
+  "note": "Same profile, selected relation grounds w and world. The strong version gives a witness: some actual concretum with no actual concrete ground. The weak version says only that the nonempty actual roster is not a trap, which holds vacuously in a world with no actual concretum. The difference is certified: the strong version is the weak one plus population and stability of root existence (constructive equivalence; under excluded middle, plus population alone)."
+}

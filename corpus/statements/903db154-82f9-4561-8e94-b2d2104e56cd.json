@@ -1,0 +1,11 @@
+{
+  "id": "903db154-82f9-4561-8e94-b2d2104e56cd",
+  "label": "Identified bearers with essential origins reduce record soundness to authentic anchors",
+  "paraphrase": "For any supplied History and primitive origin descriptor, suppose the same bearer has the same origin wherever it exists, each admitted record bearer exists, and equal observations of admitted histories identify the same numerical bearer. For claims asserting a supplied origin value, positive record soundness is then equivalent to the existence of an authentic member in each inhabited positive observation fiber. Essential identity and correct identification make authenticity uniform; they do not determine that common verdict to be true. No mandatory bearer presence outside the admitted class, real origin law, epistemically available identification, or actual trustworthy evidence is inferred.",
+  "lean_declaration": "TruthCore.Epistemology.InitialHistoryAuthenticity.IdentityBridge",
+  "definition_ids": [
+    "334ceafa-8848-4b4a-8713-3968e608b7da",
+    "dd7b91ea-5284-4558-bac5-7a0759843b0c",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ]
+}

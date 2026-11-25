@@ -1,0 +1,43 @@
+# Analyst comparisons for #1936. Attribution deferred.
+[batch]
+vocab = "TruthCore.Case.Catholicism.GodIsOneFromEsse"
+results = "TruthCore.Results.Case.Catholicism.GodIsOneFromEsse"
+
+[[statement]]
+id = "Finite controls on GOD_4 uniqueness by esse causation"
+lean = "Controls"
+definitions = ["88f9f6e8-997b-5f7d-afa1-c501954c3807","a2a8de58-42e0-5481-b7fb-848ae8602036","211a6432-8b8f-53ed-85e3-75173bb15b24","5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72","bf26b9b2-41ed-55b0-9557-dae90ab9b81f","d980bbd2-1a96-564c-bc0d-4065d7786715"]
+paraphrase = "Finite interpretations of the three conditional GodIsOne bundles. A single God causes an actual other while general genus causality fails at a second respect. Omitting any single nonlogical input of its bundle permits two Gods. Other interpretations separate two maxima from two Gods, two partitioned givers from universal sources, and causing every other actual bearer's esse from causing every other carrier's esse. Actual-recipient scope alone leaves two inactive God candidates compatible with the dependence bundle. These are closed facts about the supplied dictionaries."
+
+[[argument]]
+id = "GOD_4 is one from a maximal bearer excluding distinct esse causes"
+theorem = "oneFromWitness"
+comparator_theorems = ["oneFromActualRecipients", "assembleFromWitness"]
+premises = ["fad8af3e-3e4e-582a-a592-0164bdd62527","18561596-1269-53ff-8505-c56e4348e335","86d02b69-87eb-5594-9958-ccaa5fe6b685","ee4ab504-c8fe-59bc-bc96-7cbeefed6410"]
+conclusion = "33b18ae7-4578-54bc-a2b5-edce99b21fc2"
+rule = "Pin every God to the same maximal witness by excluding a distinct giver of that witness's esse"
+meaning = "With one MAXIME_1 witness m, each GOD_4 distinct from m would give m its esse in CAUSE_2. Exclusion forbids this, so an identity split yields equality with m for every God. The auxiliary theorem needs only CausesAllInGenus for each God at esse since m is in act there. The registered input is the existing carrier-wide converse. No God is supplied."
+
+[[argument]]
+id = "GOD_4 is one from GOD_4 maximality and distinct esse cause exclusion"
+theorem = "oneFromGodMaximal"
+premises = ["4c79298d-ee09-5e99-9ced-1be92c19b4cc","18561596-1269-53ff-8505-c56e4348e335","86d02b69-87eb-5594-9958-ccaa5fe6b685","ee4ab504-c8fe-59bc-bc96-7cbeefed6410"]
+conclusion = "33b18ae7-4578-54bc-a2b5-edce99b21fc2"
+rule = "Use the first candidate's maximality to exclude the other's proposed esse gift"
+meaning = "For any two Gods the first is maximal, and the second, if distinct, would give the first its esse in the same CausesIn relation. Exclusion and an identity split give equality. This route can take God-to-maximality directly without assuming an existing maximum. Deriving it by 14cbab05 reintroduces the witness and the two shared causal assumptions."
+
+[[argument]]
+id = "GOD_4 is one from reciprocal gifts of esse and nonmutual dependence"
+theorem = "oneFromNonmutualDependence"
+premises = ["86d02b69-87eb-5594-9958-ccaa5fe6b685","2068f91c-1eeb-5dbb-a71a-f7b6a12bb495","0f49d71e-09e6-5a9c-b7e7-e0e9b8fe769c","ee4ab504-c8fe-59bc-bc96-7cbeefed6410"]
+conclusion = "33b18ae7-4578-54bc-a2b5-edce99b21fc2"
+rule = "Turn the two opposite gifts of esse into mutually opposed dependence-for-being edges on the same pair"
+meaning = "Two distinct Gods would each cause the other's esse. Applying the explicit effect-to-giver dependence premise twice violates nonmutuality for distinct beings. The only logical split is on identity. Strong God causality is shared with the maximality routes, while this derivation uses no order, maximum, genus causality, actual-ground frame, or prohibition on self-dependence."
+
+[[argument]]
+id = "Finite controls on GOD_4 uniqueness by esse causation, checked"
+theorem = "controls"
+premises = []
+conclusion = "Finite controls on GOD_4 uniqueness by esse causation"
+rule = "Evaluate fixed finite cause, order, actuality and dependence dictionaries"
+meaning = "Explicit finite models establish joint nonvacuity, individual nonlogical omissions and scope distinctions for the stated bundles. Partitioned causes each give a real edge in the model. With causation restricted to actual recipients the dependence route also needs to reach God candidates. For the maximal-witness proof the existing MAXIME_1 definition already supplies actuality at esse for the required recipient."

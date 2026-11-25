@@ -1,0 +1,38 @@
+{
+  "id": "7099c2c7-c543-4bb8-ba0a-a493488167a8",
+  "label": "Every actual root is NECESSARY_2, from the unique necessary actual root",
+  "premise_statement_ids": [
+    "91b085c4-f1c7-5ada-9848-8e7dc753313a"
+  ],
+  "conclusion_statement_id": "d164f730-95b4-4297-8978-9e5586f0b2ef",
+  "inference_ids": [
+    "c659bc89-b01b-4c51-8020-4039f55351ba"
+  ],
+  "meaning": "Instantiate the selected profile at groundProfile F concrete G. There is an actual root n necessary at w with every actual root equal to n; so any actual root m is n and is NECESSARY_2 at w. Constructive.",
+  "definition_ids": [
+    "c57e2682-08e6-527e-950f-0fa0a7ff11ef",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "f1a17ff8-e477-5463-b669-d35a41246c12"
+  ],
+  "disambiguation_ids": [
+    "6e92c6e3-edf0-5d7e-b2b3-788b24b8b768",
+    "d16b94fa-886f-54f3-85a3-7fc0c43d2b58",
+    "4b02d34a-9226-5009-9ac2-3b52f4222b21",
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "623ddbf6-9683-5361-bae4-e348a00ec680",
+    "9403807f-f7d4-5ce8-a8ba-ca53ed932959",
+    "dba7b1de-f3a0-57af-9af9-b2a4da3136fa",
+    "79644a0a-db5b-5497-bb47-9f96d14cdae7",
+    "83264cf5-01fe-52fc-9a00-eeb024f6496e",
+    "7507d645-874d-5434-add8-2f49c2801d36",
+    "b9adce48-6b86-5f58-b2ea-b25f51c70cbd",
+    "1795a62e-f78b-5f5b-94e7-9e7490824811",
+    "002f42cb-3015-5644-80b3-d408538394e6",
+    "be54be36-3ce8-53f9-8168-50d1114e6c76",
+    "34ddfede-ff4d-59ad-9882-4bcb490df9bb",
+    "c529e8d3-43e3-53a8-a82f-3955e9815265"
+  ],
+  "weakening": true
+}

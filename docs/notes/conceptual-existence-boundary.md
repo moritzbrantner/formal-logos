@@ -2,7 +2,7 @@
 
 ## Current reviewed assessment (2026-11-17)
 
-Coverage and union well-foundedness remain distinct sufficient support policies. Standing actual ancestry offers a checked, more flexible alternative to direct-edge persistence; the weakest source scope suffices for the union bridge. These conditional routes add no independent warrant to actual population, modal support or the divine naming inputs.
+Coverage and union well-foundedness remain distinct sufficient support policies. Standing actual ancestry offers a checked, more flexible alternative to direct-edge persistence; the weakest source scope suffices for the union bridge. These conditional routes add no independent warrant to actual population, modal support or the divine naming inputs. [Assessment record](../../corpus/attempts/0ddaa334-3444-4487-9280-2508a76fe51b.json)
 
 Reviewed scope: Connected existence interpretation and conditional source routes; scope/ancestry continuation retained. Worker `c04f9a5d`; independent reviewer `e75ce8e4`
 reported no findings on delivered head `b5e27f88ec92938f9094112861cd3ddbb0e4ffe5`.
@@ -825,9 +825,9 @@ with no existing concrete supporter at any admitted world:
 | Already recorded actual-scope coverage `36c6b111-29bd-4649-beb8-3960900e57f5` | `b19ffd92`, `82cfaf26`, selected-world J1 `84751fc2-0179-49ce-b96a-04d95781d8bc`, `df42581f`, `ee4ab504`. |
 
 The last route and the existing closed-collection variants are prior work,
-not new results here. Attempt `b7e250b6-39f2-4e16-8da4-0a1f7a21d83a` already
+not new results here. Attempt [`b7e250b6-39f2-4e16-8da4-0a1f7a21d83a`](../../corpus/attempts/b7e250b6-39f2-4e16-8da4-0a1f7a21d83a.json) already
 shows that actual J1 cannot replace full J1 on the union route by itself.
-Attempt `14fb7669-48c1-4d38-b702-7ecdce2565b8` already identifies when actual WF
+Attempt [`14fb7669-48c1-4d38-b702-7ecdce2565b8`](../../corpus/attempts/14fb7669-48c1-4d38-b702-7ecdce2565b8.json) already identifies when actual WF
 can be weakened to closed-collection rootedness for an **endpoint**, and why
 that weakening does not supply union WF. We retain both distinctions.
 

@@ -21,7 +21,7 @@ parity result.
 same-witness endpoint `f9208664` and the C2 route `e5d49f99`
 ([contingency-receptivity-c2.md](contingency-receptivity-c2.md)). Warrant
 targets: PGP `20d5fecd`, and S2 (each concretum could fail to exist) at the
-candidate necessary being (attempt `03e1f49f`, checked incompatibility
+candidate necessary being (attempt [`03e1f49f`](../../corpus/attempts/03e1f49f-7074-4e78-abe5-79b89ed97ec5.json), checked incompatibility
 `6b12525b`).
 
 **Question.** At matching scope (the possible absence of a foundational,
@@ -592,7 +592,7 @@ question, not a cost.
 necessity; its node `b19ffd92` excludes S2 at its world, `6b12525b`), at the
 fixed meanings of §1. Criteria: the substantive objection standard, applied
 symmetrically, and explanatory comparison at matching scope (does an account
-deliver its verdict at `n` from content independently motivated *at `n`*?).
+deliver its verdict at `n` from content independently motivated *at `n`*?). [Assessment record](../../corpus/attempts/d067722e-015a-4e04-9ddc-63633eccdcd8.json)
 
 1. **Parity at `n`.** Neither the claim that `n` could be absent nor PGP's
    verdict that `n` is necessary has discriminating warrant at `n`.
@@ -966,7 +966,7 @@ possible absence.
 Merged #1914 gives conditional support for the move from received esse to
 a distinct actual cause and from limited esse to actual grounding. The
 giver's freedom and the same bearer's modal presence remain open. The
-positive-conceivability test below and attempt 91e562cc ask a different
+positive-conceivability test below and attempt [91e562cc](../../corpus/attempts/91e562cc-dc0b-4678-8500-1c5ca2fdb743.json) ask a different
 question: what warrants an exhaustive rigid roster that would exclude \(n\)?
 
 ### 11.3 Aristotle and Pruss: powers do not automatically cover absence
@@ -1205,3 +1205,205 @@ with further bearers would increase confidence in P if it licensed the
 former at this case. A warranted dependence tying some roster member to n
 would defeat this particular example while leaving other routes to P open.
 See attempt `91e562cc`; the overall assessment at n remains suspension.
+
+## 12. Can a necessary law license omission of the unrestricted bearer?
+
+Fix the actual individual n of §11. Grant the rival in #1968 its strongest
+case: n's esse is unreceived and n lacks no positive perfection in the
+represented range. What would justify saying that this very n could have
+been absent from a whole history? The issue is the scope of the proposed
+law. A law could be exactly right about which effects occur together,
+and even predict every observable difference between them, while leaving
+open what must exist for any of those effects to be real. Counting
+necessary existence among the represented perfections would answer the
+question by changing the grant. [#1968, limitation test at 70d1370d](https://github.com/moritzbrantner/truth-core/blob/70d1370da0cdd3ef5896221e213aa71aa2521c2e/docs/notes/explanatory-adequacy-750.md#restricted-bruteness-what-limits-an-unreceived-act-2026-11-25)
+
+**A positive criterion for subtraction.** A defender of a primitively
+necessary law can offer two reasons. First, independently specify what a
+retained thing needs in order to be that very thing. This can exclude an
+omission. Second, give a reason why the remaining requirements can be
+jointly realized *without the candidate*. This can license an omission.
+One sufficient reason would be a complete construction from independently
+admissible inputs, with an account of everything the construction itself
+presupposes in the domain in question. Another would be independent
+evidence for an admissible condition incompatible with the candidate's
+presence. Neither reason requires that someone produce a world. The
+second test matters because an inventory closed under every *listed*
+requirement could still leave out a condition of its own realization.
+One realization without n suffices even if others with n fit exactly
+the same data.
+
+### A necessary rule with different predictions at the same output
+
+Consider the constitutive rule for a complete, self-contained version
+archive: starting from its published version, a reader must be able to
+retrieve every version named as a parent, recursively, from that archive.
+Fix one target version A by its full content identifier. Publish the same
+file snapshot in two ways. In the first publication the version names A
+as its parent. In the second it publishes the identical snapshot as a
+fresh history. Fix each publication's identity when testing its own
+alternatives. Both original archives include A. Does a complete archive
+with *that publication* require a stored copy of A?
+
+| Publication retained | Prediction from the parent rule | Independent check in a fresh archive with no A written |
+| --- | --- | --- |
+| Child of A | A copy is required. Reading the child's own bytes identifies exactly which missing object the history reader would request. | Reading the published file succeeds. The integrity check fails on the missing parent A. |
+| Fresh history | Its entire reachable history and file data can be written without A. The root version, directory and file exhaust what has to be written. | The very same fresh-history publication passes the integrity check and yields the same file. A lookup for A fails. |
+
+These are executed controls. The four isolated, ordinary Git object stores
+used the same tree `d162de6157b3834d9fcafa0e46752eb90bb6180f` and target
+`5b332b55e44b49555d9babcb5f6ac3e159ef9814`. For the child `4e451b78`,
+`git fsck --full --no-reflogs` returned 0 with A and 2 with a broken parent
+link without A. For the fresh publication `a319015b` it returned 0 both
+times, reporting A as dangling when included. Each publication resolved
+the same file bytes in both trials. The successful omission store was
+initialized empty and received only the blob, tree and parentless commit.
+A was never stored in it. Thus a valid archive can have more objects than
+its publication needs, and the reason to admit a smaller archive is its
+actual independent construction. Reading just the file would have given
+the wrong permission in the first case.
+
+A is identified here as version content. The test concerns the presence
+of **some local copy of exactly A**, and cannot distinguish two physical
+copies of the same bytes. The archive has an externally supplied medium,
+writer, and specified boundary. These features are what let us verify
+completeness at archive scope. They also explain why the test gives no
+instance of omitting a foundation of all concrete reality. Its value is a
+prediction on which the accounts can agree before choosing a theory of
+that foundation. The powers theorist can point to the writer's capacity
+to publish the fresh history with no A ever stored. The same writer can
+also put the child bytes in a store without A. What it cannot thereby
+produce is a *complete history of that child*. Power to reproduce the
+effect, here the readable file, gives the wrong verdict if it is treated
+as power to realize the full target. The constitutive rule explains the
+difference without invoking a power to destroy A. Neither the rule's
+success nor the writer's success discriminates between the two ontologies
+of metaphysical possibility.
+
+### Does the proposed law depend on n?
+
+Apply the criterion to the strongest nonpower proposal. Suppose a
+necessary law specifies exactly which creature histories occur as the
+creature part of an admissible order. Grant even its completeness on
+that question. For each permitted history this buys *some* realization.
+If the law specifies the creature part only, then every permitted
+history could already have a realization supplied by n. An alternative
+description with the supplier's name erased adds no further realization.
+Conversely, even if n **can** supply every permitted history, its ability
+to do so leaves open whether one of them can be realized without it.
+This is the difference between reproducing each output and fixing what
+must exist to realize it. [Joint-history comparison](contingency-receptivity-c2.md#what-can-a-group-or-a-whole-world-show-that-one-creature-cannot)
+
+There is a more demanding test of the necessary law itself. Ask what the
+rival means by retaining it when omitting n.
+
+- If what must obtain everywhere is **this very exercise of governance by
+  n**, then the proposed omission fails on the rival's own assumptions.
+  An exercise by an individual requires that individual. This is a
+  case-specific reason for necessity that both sides can accept *given
+  the premise*. Evidence of n actually exercising a power, however
+  unrestricted its range, establishes no requirement that this exercise
+  obtain in every alternative. A necessary requirement for **some**
+  governor would secure only that role.
+- If the law says that wherever a particular creature e exists it
+  receives esse from n, then preserving **that e under that requirement**
+  excludes n's absence. The singular law itself can be satisfied with
+  neither present on an existence-conditional reading. This leaves live
+  histories without e, and a rival can also contest whether this very
+  giver belongs to e's identity. A necessary law whose conditions no
+  creature ever meets in a proposed history does not positively license
+  that history. The rival needs a reason why that way of satisfying the
+  law is admissible.
+- An impersonal restriction on complete orders could instead take
+  independent modal authority as primitive. It need not identify its
+  truth with any exercise by n, posit an event of subtraction, or claim
+  that each local permission can be exercised jointly. Its strongest
+  application would specify the independent inputs and show why at
+  least one permitted realization excludes n, including n as an idle
+  or additional bearer. Evidence for predicating the law of the same
+  effects under different conditions gives no evidence of *that*
+  independence if all trials presuppose the actual foundation. If the
+  admissibility of a whole order is itself treated as prior and fully
+  grounds P, this is an alternative to the stricter rival that takes P
+  itself to lack any full ground at actuality. [Admission versus ground](contingency-receptivity-c2.md#could-a-genuinely-ungrounded-absence-be-recognized)
+
+**Could the force of law itself require a bearer?** There is a positive
+reason to press the impersonal rival here. Even in the fresh archive
+with no A, the parent rule tells us what would go wrong *if* we published
+a child naming A and supplied no parent. A mere list of the files actually
+read would miss that prediction. Likewise, if the rival retains a
+necessary law in a creatureless order, calling it a law commits the
+rival to the appropriate constraints on alternatives even where there
+is no exercise to observe. That is a reason to demand more than the
+accidental truth of a conditional with a false antecedent. It is not
+yet a reason to demand a local exerciser. The primitivist's answer is
+that the same impersonal rule excludes violations objectively across
+histories, including histories with creatures. The powers theorist can
+instead hold that counterfactual authority always requires a standing
+concrete capacity in the order in question. If at least one such law
+must have that authority in every order, this latter account excludes
+concrete emptiness. It gets no further than a possibly different
+capacity-holder in each order until the capacity is tied to n.
+The archive comparison cannot adjudicate that remaining disagreement:
+the boundary and a way to interpret the rule were available in *every*
+trial, including the one that omitted A. Treating successful prediction
+as evidence that all laws need a local bearer, or that laws can govern
+with no concrete bearer at all, would extrapolate from the very same
+observations.
+
+The powers account faces the same test of scope. Suppose this derivative could exist only through this giver's giving.
+If that giver can refrain throughout the history, its withholding explains
+how this derivative could be absent throughout without being destroyed.
+If another supplier could give the very same derivative existence, the
+first giver's abstention leaves that possibility open. At n the actual grant removes the receiver and the
+external supplier. Withholding by n can vary what **another** receives.
+It cannot explain a history lacking n merely by making all those effects
+absent. A proponent may hold that every real possibility of existential
+omission falls within the two channels of PGP. That claim has content
+here precisely because the archive's independent writer and the
+dependent creature's giver have no established counterparts for n.
+The failure to identify a maker cannot establish the completeness of
+those channels. Conversely, the absence of a subject undergoing change
+defeats a demand for destruction, while leaving a positive-ground
+requirement open. Two controls in #1897 separate the transfers. In `9bba1325`, power
+for the joint absence of two actual contingents does not supply power for
+each one's absence. In `8ad1804e`, the thin collective-power reading holds
+with one actual contingent while distributive power over esse fails. Even
+a necessary holder y would need identification with n. [Pruss power-premise controls](pruss-power-premises.md)
+
+**Overall provisional assessment.** I retain moderate confidence in
+suspension about P at the qualitatively unrestricted n. Both sides gain
+a reason to reject specific inferences. The nonpower account correctly
+allows a law to adjudicate whole-history omissions without an annihilator.
+The powers account correctly asks what makes an allowed output realizable
+and can answer for a derivative whose indispensable giver can refrain. The archive
+distinguishes good and bad applications of *both* tests while giving
+neither an advantage on this bearer. A direct primitive permission for
+n's absence and a direct commitment to power coverage remain available
+at their previously assessed warrant. Neither acquires independent
+support from reproducing the effects or from n's qualitative plenitude.
+
+**Residual cases and revision.** In a populated order the rival needs
+an admissible realization compatible with all retained dependences and
+excluding n, whether it has a replacement source or another account of
+the order. A concrete-empty order would suffice separately if admissible.
+Necessity has to cover both classes. Reopen on evidence that the very
+law which must obtain includes an indispensable exercise of this
+particular n, or on independent grounds for one *complete* realization
+incompatible with n's presence. Proving that a law's predictions about
+creatures are exhaustive, or building another matching output, cannot
+decide between these. The actual-world act–essence question of §11.7
+remains a separate route.
+
+This assessment concerns the warrant for C2 of #1884 at the First Way's
+selected mover. The conditional result `e5d49f99` reaches `f9208664`
+using first-mover existence, B0, firstness, pure actuality, unreceivedness,
+C2 and excluded middle. The projection `402e5643` also takes movers as
+concrete to reach `b19ffd92`. Failure of this n to be necessary would
+still leave the existential endpoint open to another witness. The
+archive checks are local evidence about a constitutive rule. This
+continuation adds no Lean implication or source attribution.
+
+## Research attempts citing this note
+
+- [Reality-grounded possibility versus positive existential powers at the first being](../../corpus/attempts/c2e6cfda-09c9-4571-9f87-6c380d3e968a.json)

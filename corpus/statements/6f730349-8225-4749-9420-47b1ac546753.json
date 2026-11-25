@@ -1,0 +1,17 @@
+{
+  "id": "6f730349-8225-4749-9420-47b1ac546753",
+  "label": "Same-bearer CONTINGENCY_1 inheritance and joint absence through a common required bearer",
+  "paraphrase": "For an actual x, the existing modal requirement that x exists only where the same b exists transfers b's witnessed contingency to x. Modal requirements compose transitively. Under the explicit OPEN EssenceAbsenceBridge, the source-indexed essential existence requirement supplies that modal condition. For any selected class of actual bearers all modally requiring the same contingent b, every member is contingent and one accessible world lacks all of them. No recombination, arbitrary-world closure, actual cause-to-dependence bridge, essentialism proof or joint-absence inference from individual contingency is asserted. The empty selected class is allowed and the common base supplies the witness world.",
+  "lean_declaration": "TruthCore.Explanation.ExistentialInheritance.AbsenceInheritance",
+  "definition_ids": [
+    "0a533e9d-a149-4cc4-9aba-7116eb755256",
+    "0b1d99d6-f96b-4a07-90d1-c3fc5c5946bb",
+    "d7f66ca4-38c0-4cbb-ac5c-b2237ec3645c",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "fcb346d7-ddd2-50bb-a7c2-3d79d41b8eae"
+  ],
+  "disambiguation_ids": [
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f"
+  ]
+}

@@ -28,7 +28,8 @@
     "191c4ad9-36a0-55bc-9218-6b8b4acee969",
     "b7d959b1-10df-5e0a-b7c6-d0773878ea0a",
     "f4b1c499-8294-5a9d-aa58-f0a755480edd",
-    "03932727-0fc0-5443-b25b-e914c287482f"
+    "03932727-0fc0-5443-b25b-e914c287482f",
+    "PR-1776"
   ],
   "blocker": "Open: no definition of NOBLE (degree of being or evaluative standing) and no linked GOOD sense for 1c8383f5 and e4a7ef4b; no comparative goodness-being bridge for the bonum half of e4a7ef4b; no warrant on file for the universal of 1c8383f5 beyond the paradigm pair (lexical priority of self-operation or eminent containment); the gloss of b89f3234 lacks the qualifier 'as to the principle of the operation' that fixes the middle reading on which 0ce7b6c5 and e7cbb87f both hold; no episode-level definition of IsOperation, and the ThoughtOccurs export forgets the realizing episode, so a doubt-restricted sibling of 17667565 cannot yet be applied. Next test: derive e462cf2f from the thinker inputs, 0ce7b6c5, e7cbb87f and the esse sibling of 1c8383f5, then the verum conjunct with 5a948c37; the warrant of the esse sibling decides the outcome.",
   "current_assessment": {

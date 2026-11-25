@@ -1,0 +1,12 @@
+{
+  "id": "e37c56c6-ac07-40d9-93df-6688593784e9",
+  "label": "Exact decoded-content identity RECORD_TRANSPORT_1",
+  "term": "record transport preserving identical content",
+  "definition": "ExactTransport K D means that for every message c in the named domain D, decoding receipt of its specified code yields that very c. The domain restriction is explicit. This is a functional round-trip condition and says nothing about whether c is true, whether the code was caused by the proposed source, or whether an actual observer has epistemic access to the maps.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Epistemology.SourceEvidenceAdequacy.ExactTransport",
+  "definition_ids": [
+    "91414c1b-813a-4b1d-bab5-715394ccd0bc"
+  ],
+  "note": "RECORD_TRANSPORT_1 is sufficient for RECORD_TRANSPORT_2 by equality substitution. The converse fails on the explicit independent-tag control: truth is preserved while content identity changes. Exact-value reporting in CopyGuarantee uses this stronger condition because its target is exact recovery, not merely truth of an individuated proposition."
+}

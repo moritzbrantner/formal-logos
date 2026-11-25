@@ -1,0 +1,10 @@
+{
+  "id": "08ed59de-c83e-400f-a8ee-aef527cfc3e4",
+  "label": "Each actually grounded bearer can match its selected exports to distinct selected receipts",
+  "paraphrase": "OPEN application bridge. For a fixed selected class of transfer occurrences among actual concreta, each bearer with an actual concrete ground admits an injection from its outgoing events into its incoming events. One receipt used twice does not supply the injection. The definition asks for a matching, without asserting actual historical provenance or the existence of a particular tracer. Application to existential giving needs independent individuation of transfers and support for distinct receipts.",
+  "lean_declaration": "TruthCore.Causality.ReceiptMatching.GroundedCanMatch",
+  "definition_ids": [
+    "c57e2682-08e6-527e-950f-0fa0a7ff11ef",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ]
+}

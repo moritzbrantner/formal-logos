@@ -1,0 +1,11 @@
+{
+  "id": "531adda1-c6e7-4076-9c96-59ad97c10826",
+  "label": "Separate one-to-many ordinal preservation from a relay's additive balance",
+  "argument_id": "3116ebac-fb21-4a6c-8bfc-10ce0328c45b",
+  "challenge_module": "TruthCore.Results.Causality.ReceiptMatching.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ReceiptMatching.Solution",
+  "theorem": "TruthCore.Results.Causality.ReceiptMatching.relayCalibrationControl",
+  "comparator_config": "results/531adda1-c6e7-4076-9c96-59ad97c10826/comparator.json",
+  "status": "solution-present",
+  "description": "The relay receives a higher-grade instance and gives two lower-grade ones. Only the numerical distance between the grades changes. The witness uses the existing realizedLevels definition, without claiming the assignment realizes every premise about an actual sole essential giver."
+}

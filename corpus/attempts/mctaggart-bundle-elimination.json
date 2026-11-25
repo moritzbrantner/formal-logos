@@ -23,7 +23,9 @@
     "14893355-1c80-52c6-890a-68fd0d3dc1e2",
     "ae18d5dd-8202-5d90-81a7-190e5730c056",
     "b3efaa8a-6649-53e5-8592-7ab564dcc736",
-    "1da45265-793e-5a79-9958-91a824c0b0d5"
+    "1da45265-793e-5a79-9958-91a824c0b0d5",
+    "PR-502",
+    "PR-1160"
   ],
   "blocker": "Closing the core needs STMT-OPINION-IS-A-MOTION on the floor (observation, after pinning and handling McTaggart's answer in The Nature of Existence II, ch. 44) and STMT-MOTION-IS-A-CHANGE as common ground (sourced claims from each recorded rival), or proofs of either."
 }

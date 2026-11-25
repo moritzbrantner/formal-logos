@@ -1,6 +1,6 @@
 # Transcendental foundation routes: practice, correctness and normative authority
 
-Current continuation: see [the 2026-11-14 common-ground connection and handoff](#common-ground-connection-and-current-handoff-2026-11-14).
+Current continuation: see [the 2026-11-14 common-ground connection and handoff](#common-ground-connection-and-current-handoff-2026-11-14). [Original PR #929](https://github.com/moritzbrantner/formal-logos/pull/929)
 
 **Investigation status (2026-11-02):** analytic, source-free candidate comparison; two new Lean
 boundary experiments proposed for Comparator certification. No additional
@@ -374,3 +374,7 @@ The computed frontier comparison with `561ba7d5` reported no change: 490 open
 premises reaching the root and 489 verified support alternatives on each side.
 No new Lean, Comparator or NanoDa certification is claimed; no Lean or formal
 proposition was changed in this checkpoint.
+
+## Research attempts citing this note
+
+- [Connect distinct local goods to a common source without conflating their grounds](../../corpus/attempts/1b4dfcc6-eadb-4634-9d24-b272e000ceac.json)

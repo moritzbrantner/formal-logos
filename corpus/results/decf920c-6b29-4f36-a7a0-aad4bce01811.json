@@ -1,0 +1,12 @@
+{
+  "id": "decf920c-6b29-4f36-a7a0-aad4bce01811",
+  "label": "Thin belief reason from actual-force concession and consideration presentation",
+  "argument_id": "5ce876b8-c76c-4f00-958d-94ca7bd84b27",
+  "challenge_module": "TruthCore.Results.Logic.BeliefReasonWitness.Challenge",
+  "solution_module": "TruthCore.Results.Logic.BeliefReasonWitness.Solution",
+  "theorem": "TruthCore.Results.Logic.BeliefReasonWitness.reasonsFromConcession",
+  "comparator_config": "results/decf920c-6b29-4f36-a7a0-aad4bce01811/comparator.json",
+  "status": "solution-present",
+  "description": "Instantiation transcription. For the subject a and content p of the concession, the attributed consideration targets believe p. The reverse presentation implication at a,p yields Reason a p. Actual force, aim satisfaction and preference independence do no work in this projection. A general attitude about p does not supply the belief witness. F6 leaves p existential and does not identify p with the denial.",
+  "transcription": "instantiation"
+}

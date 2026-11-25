@@ -528,7 +528,7 @@ case.
 of #1889), does "existence never belongs to an essence" make the identity
 modally idle, or does the identity make existence essential? Criteria: the
 substantive objection standard, applied symmetrically, and matching-scope
-comparison (#1888 §6).
+comparison (#1888 §6). [Assessment record](../../corpus/attempts/a88768a8-8cc3-4f7d-aa0c-55e0ab323f22.json)
 
 1. **The Kant-type thesis does not apply to the identity on any assessed
    motivation without a bridge or a presupposition.**

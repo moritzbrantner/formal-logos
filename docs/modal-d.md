@@ -4,7 +4,7 @@ Issue #263 studies D using the shared fixture from #261. Every world has at
 least one accessible successor (`Serial`). Reflexivity, symmetry and transitivity
 are separate conditions. These are stipulated mathematical models. They establish
 neither metaphysical possibility nor an unrestricted conceivability bridge, and
-are not a refutation of Hume's actual argument.
+are not a refutation of Hume's actual argument. [Original PR #287](https://github.com/moritzbrantner/formal-logos/pull/287)
 
 The vocabulary is unchanged: `Frame`, `Formula`, `Holds`, `Box`, `Dia`,
 `ResearchFixture.MC`, `allPredicates`, `expressible`, and the existing `Contingent`.

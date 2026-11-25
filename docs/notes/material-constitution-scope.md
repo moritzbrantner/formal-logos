@@ -2,7 +2,7 @@
 
 This is an analyst reconstruction for #1075, with attribution deferred. It tests
 an inference used in statue/lump discussions, rather than attributing that
-inference or an answer to a historical author. No new source claim is made.
+inference or an answer to a historical author. No new source claim is made. [Research record](../../corpus/attempts/material-constitution-scope.json)
 
 The reuse inventory inspected `STMT-PROCESS-TURNOVER-BOUNDARY` and
 `STMT-THESEUS-IDENTITY-BOUNDARY`, their dossiers, related arguments, prior attempts
@@ -103,3 +103,8 @@ The allowed Mathlib axiom ceiling is exactly `propext`, `Classical.choice`,
 in the PR's verification evidence. Final CI verifies the delivered revision.
 Shared engineering policy resolved at source revision
 `625cb04ca568aebc8d45c90033e107a05e9bd2a0`.
+
+## Research attempts citing this note
+
+- [Pinned/materialized/read Perrin translation of Plutarch Theseus23 and adjacent22/24 context…](../../corpus/attempts/theseus-identity-boundary.json)
+- [Reused Vitalism turnover fixture and scenario_has_turnover, derived changed-member obstruction to…](../../corpus/attempts/river-process-turnover.json)

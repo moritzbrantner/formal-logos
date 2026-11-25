@@ -1,0 +1,10 @@
+{
+  "id": "c7c0ccda-a540-43f5-bad5-1e9b25eb2ca7",
+  "label": "Exact decoded-content recovery RECORD_TRANSPORT_1 on the selected domain",
+  "paraphrase": "OPEN channel condition RECORD_TRANSPORT_1: for each message in the supplied domain D, decoding receipt of its specified code recovers that identical message. This neither says the message is true nor identifies an actual source.",
+  "lean_declaration": "TruthCore.Epistemology.SourceEvidenceAdequacy.ExactTransport",
+  "definition_ids": [
+    "e37c56c6-ac07-40d9-93df-6688593784e9",
+    "91414c1b-813a-4b1d-bab5-715394ccd0bc"
+  ]
+}
