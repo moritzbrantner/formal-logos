@@ -2046,8 +2046,8 @@ available and the new scoped assessment below preserves its unresolved bridges.
 
 ## One brute exception: derivative completeness and principled stopping (2026-11-25)
 
-**Proposed final assessment for the present #1968 continuation; independent
-challenge pending.** The inspected remote baselines are #1933 at
+**Qualified assessment for the present #1968 continuation, independently
+challenged with the disposition recorded below.** The inspected remote baselines are #1933 at
 b16659c99419cb3696be2a832c3f6def6cdacf16 and #1968 at
 ce5b79e3a620105b98473714ad26a977db9894a8. The integration checkout adds main
 a9819b148bd4a7c089cff9dc07f95c209452511e without changing their explanatory
@@ -2599,6 +2599,20 @@ The claim/type sweep covers local versus inclusive scope, fixed versus
 arbitrary inputs, actual versus possible source exercise, necessary
 occupancy versus a necessary individual, the extra background in the matched
 control, fact versus being, and exactly what the finite assignments assert.
+
+**Independent semantic disposition: accepted with qualifications.** The
+fresh challenger inspected the complete comparison, scoped attempt,
+six-worldview revision, proposed PR body and current-handoff text against
+their definitions, proofs, model assignments and the two primary passages.
+The initial candidate was 61cd34c989ebe9e31f2a26a7b6323709ace4795f.
+One claim/type mismatch was found: the C2 summary omitted the matter–form
+alternative within existential receptivity. The repair at
+7799949bec0e5a45f54b88fbf71b32226449b8ce, tree
+1961043cbd2777d29b24c76cd633ef8ac7753662, restores that alternative.
+One targeted recheck accepted the correction; no P1 or P2 findings remain.
+The challenger also reproduced both diagnostics. The acceptance preserves
+all stated adequacy, interpretation and warrant limits; it establishes no
+open premise, adds no registered certificate and authorizes no merge.
 
 
 ## Research attempts citing this note
