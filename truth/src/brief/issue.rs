@@ -1,5 +1,5 @@
 //! Direct checkout and host references for an issue-led research handoff.
-use super::retrieval::{Issues, Revision, is_pull_request, issue_header};
+use super::retrieval::{Issues, Revision, excerpt, is_pull_request, issue_header};
 use crate::{Corpus, KINDS, notes};
 use fancy_regex::Regex;
 use serde_json::{Map, Value, json};
@@ -308,6 +308,64 @@ pub fn report(
     )
 }
 
+// An explicit subject can identify a follow-up even in snapshots without logins.
+static FOLLOW_UP_HEADING: LazyLock<Regex> = LazyLock::new(|| {
+    Regex::new(
+        r"(?i)^(?:#{1,6}\s+(?:\*\*)?follow[- ]up\b|(?:\*\*)?follow[- ]up(?:\*\*)?\s*(?:[:—–-]|$))",
+    )
+    .expect("follow-up heading")
+});
+
+fn comment_role(issue: &Value, comment: &Value) -> Option<&'static str> {
+    if comment["authorAssociation"] == "OWNER" {
+        return Some("repository owner");
+    }
+    let author = issue["author"]["login"].as_str()?;
+    let commenter = comment["author"]["login"].as_str()?;
+    (!author.is_empty() && author.eq_ignore_ascii_case(commenter)).then_some("issue author")
+}
+
+/// Prefer explicit follow-ups, then comments by the owner or issue author.
+/// Reverse snapshot order breaks ties and preserves legacy comment locators.
+fn render_issue_comments(out: &mut String, issue: &Value, limit: usize) {
+    let Some(comments) = issue["comments"].as_array() else {
+        return;
+    };
+    let mut discussion: Vec<_> = comments
+        .iter()
+        .enumerate()
+        .rev()
+        .filter_map(|(i, comment)| {
+            let body = comment["body"].as_str()?.trim();
+            let subject = body.lines().next()?;
+            let follow_up = FOLLOW_UP_HEADING.is_match(subject).unwrap_or(false);
+            let role = comment_role(issue, comment);
+            Some((follow_up, role, i + 1, comment, body))
+        })
+        .collect();
+    discussion.sort_by_key(|(follow_up, role, ..)| (!*follow_up, role.is_none()));
+    let omitted = discussion.len() > limit;
+    for (_, role, ordinal, comment, body) in discussion.into_iter().take(limit) {
+        write!(out, "Issue comment {ordinal}").unwrap();
+        if let Some(login) = comment["author"]["login"].as_str() {
+            write!(out, "  @{login}").unwrap();
+        }
+        if let Some(role) = role {
+            write!(out, "  ({role})").unwrap();
+        }
+        if let Some(date) = comment["createdAt"].as_str() {
+            write!(out, "  {date}").unwrap();
+        }
+        if let Some(url) = comment["url"].as_str() {
+            write!(out, "  {url}").unwrap();
+        }
+        writeln!(out, "\n    {}", excerpt(body, 220)).unwrap();
+    }
+    if omitted {
+        out.push_str("  More issue comments in --json.\n");
+    }
+}
+
 pub fn render(report: &Value, limit: usize) -> String {
     let issue = &report["issue"];
     let mut out = format!(
@@ -343,6 +401,7 @@ pub fn render(report: &Value, limit: usize) -> String {
             out.push_str("  Snapshot predates this checkout.\n");
         }
     }
+    render_issue_comments(&mut out, issue, limit);
     for pr in report["pull_requests"].as_array().unwrap() {
         writeln!(
             out,
