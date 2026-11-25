@@ -112,7 +112,9 @@ point with no input gives eight conclusion IDs; with the eight recorded
 floor markings hypothetically supplied as seeds, it gives ten new IDs
 (the weak closure is already a seed), not eighteen unconditional truths.
 This sample does not count any `refutes` or `alternative_to` relation as a
-positive implication. No whole-corpus total is inferred.
+positive implication. No whole-corpus total is inferred. The fourteen selected edges contain no
+nontrivial SCC or self-loop; that observation says nothing about cycles in
+the omitted graph.
 
 | Conclusion statement ID | Argument ID | Result ID | Recorded premises (complete) | Interpretation / limitation |
 | --- | --- | --- | --- | --- |
@@ -183,7 +185,8 @@ import networkx as nx
 
 out = Path("target/unconditional-audit")
 frontier = json.loads((out / "frontier.json").read_text())
-ids = sorted(frontier["statement_statuses"])
+ids = sorted(frontier["statement_depths"])
+assert set(ids) == set(frontier["statement_statuses"])
 raw = subprocess.check_output(
     ["target/release/truth", "--json", "support-graph", *ids], text=True
 )
@@ -232,16 +235,34 @@ for group in nx.strongly_connected_components(deps):
         "zero_input_reached": sorted(group & empty),
         "floor_relative_reached": sorted(group & legacy),
         "canonical_established": sorted(group & established),
-        "incoming_rules": sorted(
+        "entry_rules": sorted(
             r["argument_id"] for r in rules
             if r["conclusion_statement_id"] in group
             and not set(r["premise_statement_ids"]) & group
         ),
+        "mixed_rules": [
+            {"argument_id": r["argument_id"],
+             "external_premises": sorted(set(r["premise_statement_ids"]) - group)}
+            for r in rules if r["conclusion_statement_id"] in group
+            and set(r["premise_statement_ids"]) & group
+            and set(r["premise_statement_ids"]) - group
+        ],
     })
 # No SCC member is ever made a seed by this diagnostic.
 by_conclusion = {}
+all_incoming = {}
+all_consumers = {}
 for r in rules:
     by_conclusion.setdefault(r["conclusion_statement_id"], []).append(r)
+for r in graph["rules"]:
+    all_incoming.setdefault(r["conclusion_statement_id"], []).append(r["argument_id"])
+    for p in r["premise_statement_ids"]:
+        all_consumers.setdefault(p, []).append(r["argument_id"])
+
+def eligible_supports(supports, reached):
+    return [r["argument_id"] for r in supports
+            if set(r["premise_statement_ids"]) <= reached]
+
 inventory = []
 for statement in graph["statements"]:
     sid = statement["id"]
@@ -252,8 +273,13 @@ for statement in graph["statements"]:
         "zero_input_direct_implication": sid in empty,
         "floor_relative_direct_implication": sid in legacy,
         "floor": [f for f in frontier["floor"] if f["statement_id"] == sid],
-        "incoming_rules": supports,
-        "consumers": sorted(deps.successors(sid)),
+        "canonical_status": frontier["statement_statuses"][sid],
+        "eligible_incoming_rules": supports,
+        "all_registered_incoming_argument_ids": sorted(all_incoming.get(sid, [])),
+        "all_registered_consumer_argument_ids": sorted(set(all_consumers.get(sid, []))),
+        "zero_input_supports": eligible_supports(supports, empty),
+        "floor_relative_supports": eligible_supports(supports, legacy),
+        "eligible_consumer_statements": sorted(deps.successors(sid)),
         "semantic_review": "not assessed by computation",
     })
 report = {
@@ -270,7 +296,7 @@ report = {
     "inventory": inventory,
 }
 (out / "inventory.json").write_text(
-    json.dumps(report, indent=2, sort_keys=True) + "\\n"
+    json.dumps(report, indent=2, sort_keys=True) + "\n"
 )
 PY
 ```
@@ -280,8 +306,11 @@ substantive proposition. Preserve theorem-internal antecedents, axiom
 footprints, consistency witnesses and the exact scope of intended
 interpretations. Run `truth context ARGUMENT-ID`, `truth dossier STMT-ID`,
 `truth brief STMT-ID`, `truth semantics STMT-ID` and the semantic preflight
-for any proposed graft. The generated inventory links all supporting and
-consuming rules and intentionally labels semantic review as pending.
+for any proposed graft. The generated inventory links all registered supporting and consuming rules
+and separately records rules eligible for the direct-implication diagnostic.
+An eligible support in the completed fixed point is not necessarily an
+acyclic derivation witness on its own: replay from the selected seeds to
+identify a firing order. Semantic review is intentionally pending.
 Prioritize zero-input results that are disconnected under both root views,
 then actual observation / first-person and necessary inquiry applications
 with selected witnesses; separately compare common ground for each named
