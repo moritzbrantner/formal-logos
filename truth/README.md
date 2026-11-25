@@ -889,8 +889,12 @@ target/release/truth brief '#1792' --issues-from /tmp/truth-1792.json
 The first command reads the issue and its paginated GitHub timeline. It keeps
 the issue body, comments, and the same-repository issues and PRs that referenced
 it. It can find a merged delivery while the issue is still open. The second
-command runs offline. Read the assessment’s scope, reviewed revision, source
-note and next test alongside each relevant PR’s state. An issue mention can
+command runs offline. The text brief shows excerpts from the assigned issue's
+comments with their links when available. Explicit follow-up headings receive
+priority, followed by comments from an identified repository owner or issue
+author. A follow-up may add to the original request. Compare the assessment’s
+scope, reviewed revision, source note and next test with each relevant PR's
+state. An issue mention can
 refer to an objection or an earlier draft. Compare what the PR delivered with
 the actual request before closing or dispatching it.
 

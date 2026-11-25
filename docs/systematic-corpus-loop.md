@@ -265,7 +265,7 @@ with that PR. An older worker handoff can be superseded by its own repairs.
 For unfinished work, give the worker the first undelivered acceptance item
 in the [worker brief](../AGENTS.md#worker-brief-and-handoff). For example, the
 starting result for the comparative-ascent question in #1919 is `1fd78e87`.
-On the common scale, a giver who realizes a level above the recipient's
+On the common scale, a giver that realizes a level above the recipient's
 ceiling ranks higher in esse under the stated bridge from degree to being.
 Can we independently identify that ceiling and a level this very giver actually
 realizes above it for one actual giver–recipient pair? Such a finding would
