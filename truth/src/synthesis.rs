@@ -2,6 +2,7 @@
 //! arguments that produce and consume it. A shared citation is one record.
 use crate::{
     Corpus, Record,
+    context::{Lean, module_path},
     frontier::{Frontier, transcription_flags},
     lifecycle,
     thickness::{Records, list, text},
@@ -103,6 +104,55 @@ fn statement<'a>(corpus: &'a Corpus, id: &str) -> Result<Statement<'a>, String> 
         .ok_or_else(|| format!("argument references missing statement {id}"))
 }
 
+/// Read the theorem specified by this result from its frozen Challenge.
+pub fn result_witness(root: &Path, result: &Record) -> Value {
+    let fields = &result.fields;
+    let theorem = text(fields, "theorem");
+    let challenge = text(fields, "challenge_module");
+    let solution = text(fields, "solution_module");
+    let (_, advertised) = Lean::new(root).challenge_statements(challenge, theorem);
+    json!({
+        "id": fields.get("id"),
+        "path": result.path,
+        "argument_id": fields.get("argument_id"),
+        "theorem": fields.get("theorem"),
+        "status": fields.get("status"),
+        "challenge_path": (!challenge.is_empty()).then(|| module_path(challenge)),
+        "solution_path": (!solution.is_empty()).then(|| module_path(solution)),
+        "comparator_config": fields.get("comparator_config"),
+        "advertised_statement": advertised,
+    })
+}
+
+/// Render the exact frozen text and its source alongside the recorded status.
+pub fn format_result_witness(witness: &Value) -> String {
+    let status = witness["status"].as_str().unwrap_or("unspecified");
+    let theorem = witness["theorem"].as_str().unwrap_or("unnamed theorem");
+    let status_label = match status {
+        "solution-present" => "solution-present, solution registered",
+        "verified" => "verified in the result record",
+        other => other,
+    };
+    let mut lines = vec![format!("Lean theorem — {theorem} ({status_label})")];
+    let advertised = &witness["advertised_statement"];
+    if let Some(declaration) = advertised["statement"].as_str() {
+        lines.push(declaration.to_owned());
+    } else {
+        lines.push("The frozen declaration text is unavailable in this checkout.".into());
+    }
+    if let Some(path) = witness["challenge_path"].as_str() {
+        let location = advertised["line"]
+            .as_u64()
+            .map(|line| format!(":{line}"))
+            .unwrap_or_default();
+        lines.push(format!("Challenge — {path}{location}"));
+    }
+    if let Some(path) = witness["solution_path"].as_str() {
+        lines.push(format!("Solution — {path}"));
+    }
+    lines.join("\n")
+}
+
 /// Build the one-step argument neighborhood. All producer bundles are retained,
 /// even transcriptions, unverified proposals, and bundles absorbed by another.
 /// Separate commitments never become ordinary premises in the overlap analysis.
@@ -143,10 +193,11 @@ pub fn build<'a>(
             .map(Vec::as_slice)
             .unwrap_or_default();
         for &(rid, result) in witnesses {
-            results.entry(rid).or_insert_with(|| json!({
-                "id":rid, "path":result.path, "theorem":result.fields.get("theorem"),
-                "status":result.fields.get("status"), "transcription":frontier.result_transcription(rid),
-            }));
+            results.entry(rid).or_insert_with(|| {
+                let mut witness = result_witness(root, result);
+                witness["transcription"] = json!(frontier.result_transcription(rid));
+                witness
+            });
         }
         let status = if witnesses.is_empty() {
             "unverified"
@@ -369,6 +420,74 @@ impl Synthesis<'_> {
         ids
     }
 
+    /// Give a readable producer with its frozen declaration first. The number
+    /// of inputs only breaks ties between otherwise comparable examples.
+    fn illustrative_argument(&self) -> String {
+        let exemplar = self
+            .routes
+            .iter()
+            .map(|route| {
+                let witness = route
+                    .result_ids
+                    .iter()
+                    .map(|rid| &self.results[rid])
+                    .min_by_key(|result| {
+                        (
+                            result["advertised_statement"].is_null(),
+                            !result["transcription"].is_null(),
+                        )
+                    });
+                (route, witness)
+            })
+            .min_by_key(|(route, witness)| {
+                (
+                    witness.is_none_or(|w| w["advertised_statement"].is_null()),
+                    match route.status {
+                        "derivation" => 0,
+                        "transcription" => 1,
+                        _ => 2,
+                    },
+                    route.premise_statement_ids.len() + route.commitment_statement_ids.len(),
+                )
+            });
+        let Some((route, witness)) = exemplar else {
+            return "No registered argument concludes this statement. Its direct-assumption option remains available.".into();
+        };
+
+        let mut lines = vec![format!(
+            "Illustrative argument ({}) — {}\n  truth context {}",
+            route.status, route.label, route.argument_id
+        )];
+        if let Some(witness) = witness {
+            lines.push(format_result_witness(witness));
+        } else {
+            lines.push(
+                "No Lean result is registered for any argument concluding this statement.".into(),
+            );
+        }
+        if route.premise_statement_ids.is_empty() {
+            lines.push("  This argument registers no ordinary premises.".into());
+        }
+        for &id in &route.premise_statement_ids {
+            lines.push(format!(
+                "  {}  →  truth synthesis {id}",
+                self.premises[id].statement.paraphrase
+            ));
+        }
+        for &id in &route.commitment_statement_ids {
+            let label = self
+                .premises
+                .get(id)
+                .map(|p| p.statement.paraphrase)
+                .or_else(|| self.related_statements.get(id).map(|s| s.paraphrase))
+                .unwrap_or(id);
+            lines.push(format!(
+                "  Separate commitment — {label}  →  truth synthesis {id}"
+            ));
+        }
+        lines.join("\n")
+    }
+
     pub fn reading(&self, limit: usize) -> Vec<String> {
         let formal = if self.formal_status["established"] == true {
             "The frontier records this proposition as established."
@@ -385,6 +504,10 @@ impl Synthesis<'_> {
             ""
         };
         let mut paragraphs = vec![format!("{}\n{formal}{refutation}", self.target.paraphrase)];
+        if let Some(name) = self.target.lean_declaration.and_then(Value::as_str) {
+            paragraphs.push(format!("Lean proposition — {name}"));
+        }
+        paragraphs.push(self.illustrative_argument());
         let positions = self.positions();
         let shown: BTreeSet<_> = positions.iter().copied().take(limit).collect();
         if positions.is_empty() {
@@ -397,9 +520,7 @@ impl Synthesis<'_> {
                 paragraphs.push(format!("{} further target-scoped judgments and their revision tests are available in --json.", positions.len() - shown.len()));
             }
         }
-        if self.routes.is_empty() {
-            paragraphs.push("No registered argument concludes this statement. Its direct-assumption option remains available.".into());
-        } else if let Some(shared) = self.shared_premises.iter().max_by_key(|s| {
+        if let Some(shared) = self.shared_premises.iter().max_by_key(|s| {
             (
                 s.argument_ids.len(),
                 !self.premises[s.statement_id].assessment_ids.is_empty(),
@@ -416,44 +537,6 @@ impl Synthesis<'_> {
             paragraphs.push(format!("The arguments {examples} both require “{}”. This premise occurs in {} of {} registered arguments for the target. Reusing it carries the same obligation into each argument.", premise.statement.paraphrase, shared.argument_ids.len(), self.routes.len()));
         } else if self.routes.len() > 1 {
             paragraphs.push("The registered arguments share no immediate premise ID. Deeper dependencies and common evidence can still connect them.".into());
-        }
-        // Pick a concise derivation solely as an example. Its length says
-        // nothing about the warrant for any premise or the target.
-        if let Some(route) = self.routes.iter().min_by_key(|r| {
-            (
-                match r.status {
-                    "derivation" => 0,
-                    "transcription" => 1,
-                    _ => 2,
-                },
-                r.premise_statement_ids.len() + r.commitment_statement_ids.len(),
-            )
-        }) {
-            let mut lines = vec![format!(
-                "Illustrative argument ({}) — {}\n  truth context {}",
-                route.status, route.label, route.argument_id
-            )];
-            if route.premise_statement_ids.is_empty() {
-                lines.push("  This argument registers no ordinary premises.".into());
-            }
-            for &id in &route.premise_statement_ids {
-                lines.push(format!(
-                    "  {}  →  truth synthesis {id}",
-                    self.premises[id].statement.paraphrase
-                ));
-            }
-            for &id in &route.commitment_statement_ids {
-                let label = self
-                    .premises
-                    .get(id)
-                    .map(|p| p.statement.paraphrase)
-                    .or_else(|| self.related_statements.get(id).map(|s| s.paraphrase))
-                    .unwrap_or(id);
-                lines.push(format!(
-                    "  Separate commitment: {label}  →  truth synthesis {id}"
-                ));
-            }
-            paragraphs.push(lines.join("\n"));
         }
         // Give the actual verdict on a premise. Skip an assessment already quoted
         // for the target and prefer a premise recurring across several arguments.

@@ -139,6 +139,7 @@ fn boundary_at(text: &str, index: usize) -> bool {
 
 /// Python `DECLARATION` at a line start: the declared name's span.
 fn declaration_at(text: &str, index: usize) -> Option<(usize, usize)> {
+    let index = text.len() - text[index..].trim_start_matches([' ', '\t']).len();
     let mut starts = vec![index];
     if text[index..].starts_with("@[")
         && let Some(close) = text[index + 2..].find(']')
@@ -159,6 +160,20 @@ fn declaration_at(text: &str, index: usize) -> Option<(usize, usize)> {
     })
 }
 
+/// Named arguments and default binders can contain `:=` inside a type.
+fn declaration_body(text: &str) -> Option<usize> {
+    let mut depth = 0usize;
+    for (offset, ch) in text.char_indices() {
+        match ch {
+            '(' | '[' | '{' | '⟨' | '⦃' => depth += 1,
+            ')' | ']' | '}' | '⟩' | '⦄' => depth = depth.saturating_sub(1),
+            ':' if depth == 0 && text[offset..].starts_with(":=") => return Some(offset),
+            _ => {}
+        }
+    }
+    None
+}
+
 /// A theorem's verbatim statement text up to `:=` (Python `theorem_blocks`).
 #[derive(Debug, Clone, Serialize, PartialEq)]
 pub struct TheoremBlock {
@@ -174,7 +189,7 @@ pub fn theorem_blocks_in(text: &str) -> Vec<TheoremBlock> {
         if is_line_start(text, index)
             && let Some((name_start, name_end)) = declaration_at(text, index)
         {
-            let stop = text[name_end..].find(":=").map(|offset| name_end + offset);
+            let stop = declaration_body(&text[name_end..]).map(|offset| name_end + offset);
             // A declaration boundary on a later line before `:=` ends the search.
             let bounded = stop.is_some_and(|stop| {
                 text[name_end..stop]
@@ -219,6 +234,23 @@ impl<'a> Lean<'a> {
         path.is_file()
             .then(|| std::fs::read_to_string(path).ok())
             .flatten()
+    }
+
+    /// All frozen declarations plus the specific theorem named by the result record.
+    pub(crate) fn challenge_statements(
+        &self,
+        challenge_module: &str,
+        theorem: &str,
+    ) -> (Vec<TheoremBlock>, Option<TheoremBlock>) {
+        let blocks = self
+            .read(challenge_module)
+            .map_or_else(Vec::new, |source| theorem_blocks_in(&source));
+        let short_name = theorem.rsplit('.').next().unwrap_or_default();
+        let advertised = blocks
+            .iter()
+            .find(|block| block.name == short_name)
+            .cloned();
+        (blocks, advertised)
     }
 
     pub(crate) fn imports(&self, module: &str) -> Vec<String> {
@@ -703,14 +735,8 @@ pub fn context_pack(
         let theorem = text(result, "theorem");
         let challenge = text(result, "challenge_module");
         let solution = text(result, "solution_module");
-        let blocks = lean_files
-            .read(challenge)
-            .map_or_else(Vec::new, |source| theorem_blocks_in(&source));
+        let (blocks, advertised) = lean_files.challenge_statements(challenge, theorem);
         let short_name = theorem.rsplit('.').next().unwrap_or_default();
-        let advertised = blocks
-            .iter()
-            .find(|block| block.name == short_name)
-            .cloned();
         let comparator: Record = if pyfmt::truthy(result.get("comparator_config")) {
             std::fs::read(root.join(text(result, "comparator_config")))
                 .ok()
