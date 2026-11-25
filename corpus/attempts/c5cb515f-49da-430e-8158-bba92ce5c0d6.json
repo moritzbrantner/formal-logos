@@ -1,0 +1,43 @@
+{
+  "id": "c5cb515f-49da-430e-8158-bba92ce5c0d6",
+  "label": "Test rational governance and the end versus policy requirement",
+  "statement_ids": [
+    "29818edd-9f5a-5414-baa2-9a7d0c8abf18",
+    "66aecdd7-ea4e-55c6-9377-10db08893854",
+    "0266eac2-3fad-43eb-a1f1-e784c5356105",
+    "ea1425c0-5f70-4f5b-a056-acc8fc462d74",
+    "78af5042-9b4e-41a4-bb76-ad4d1973e25a"
+  ],
+  "date": "2026-11-25",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "Distinct continuation of #1962 and #1963. See docs/notes/will-versus-chance.md#end-requirement-policy-requirement-and-productive-fixity-2026-11-25. Analyst argument using the existing Optimal greatest-value definition: if every feasible complete output omitting d has a strictly better feasible competitor, each optimal output contains d; conversely, given an optimum, a common recipient of all optima satisfies that strict-improvement condition. A world-level optimizer can therefore be fixed toward d even when other recipients vary. Rational exercise and absence of end requirement are separate conditions for a WN counterinstance; selective diffusion additionally requires two-way giving toward some being. Reproduced tied-optimum structural example and 6,561 finite ordinal quality assignments in Python; 1,055 satisfy the improvement condition, all pass. Distinguish attainment of the source's own end, antecedent normative policy, and actual accessible exercise. Due-perfection obligations conditional on an adopted creative end can give a positive nonmaximizing policy, but do not establish actual accessible omission. Equal productive and contrastive coverage credited to objective good-sensitive impersonal sources. Actual apprehended content governing this same productive exercise provides intentional explanatory content not licensed by output conformity, one power or subject identity alone. Strict simplicity excludes the intellectual-but-blind rival only if its selective role requires a really distinct intrinsic principle; this application remains open. Root-attribute and NAR connections explicitly preserve existing holder, rational-power, WN/SS and grounding bridges. No new proof edge or source claim; no claim of novel formal consequence or actual metaphysical countermodel. Author self-sweep completed for prose; full local convention and CLI checks unavailable; independent semantic challenge pending.",
+  "blocker": "Reopen with a warranted intrinsic-constitution criterion for formative relevance (or a positive simple-source intellectual-but-blind account); an independently justified complete-decision permission or obligation covering omission and competing goods; and actual accessible exercise omitting the non-end-required recipient. Preserve actual existential supply and recipient-directed reference. No premise discharge.",
+  "evidence": [
+    "PR-1971",
+    "PR-1962",
+    "PR-1963",
+    "PR-1947",
+    "PR-1941",
+    "PR-1944"
+  ],
+  "current_assessment": {
+    "date": "2026-11-25",
+    "statement_ids": [
+      "29818edd-9f5a-5414-baa2-9a7d0c8abf18",
+      "66aecdd7-ea4e-55c6-9377-10db08893854",
+      "0266eac2-3fad-43eb-a1f1-e784c5356105",
+      "ea1425c0-5f70-4f5b-a056-acc8fc462d74",
+      "78af5042-9b4e-41a4-bb76-ad4d1973e25a"
+    ],
+    "scope": "End requirement, policy requirement and productive fixity",
+    "assessment": "Given an optimum, every optimal output includes the recipient exactly when every feasible output omitting it has a strictly better feasible alternative. A disposition can ground invariant optimal production. A WN counterinstance additionally requires actual owned rational exercise and absence of end requirement.",
+    "next_test": "Reopen with a warranted intrinsic-constitution criterion for formative relevance (or a positive simple-source intellectual-but-blind account); an independently justified complete-decision permission or obligation covering omission and competing goods; and actual accessible exercise omitting the non-end-required recipient. Preserve actual existential supply and recipient-directed reference. No premise discharge.",
+    "note": "docs/notes/will-versus-chance.md#end-requirement-policy-requirement-and-productive-fixity-2026-11-25",
+    "reviewed_revision": "168aa3f495290991b982ea322533d5192ad6a878",
+    "review": "accepted_qualified",
+    "publication": "published",
+    "evidence": "Independent semantic challenge at b3c6d5a80027ad31875da8c9498d5343695e962e accepted the article 3 reading, tied-optima criterion, controls and qualified ultimate application. The targeted recheck accepted the operation-identity, optimizer and owned-rational-exercise repairs at 168aa3f495290991b982ea322533d5192ad6a878.",
+    "supersedes": "Updates the pending-review disposition for this scoped comparison."
+  }
+}
