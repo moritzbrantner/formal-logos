@@ -13,6 +13,7 @@
 //! conditional consequence, and no hit (or no snapshot) is evidence that no
 //! prior work exists.
 
+pub mod assessment_search;
 pub mod issue;
 pub mod novelty;
 pub mod retrieval;
@@ -1264,6 +1265,7 @@ pub fn question_brief(
         "semantic_discovery": semantic,
         "evidence_graph": graph,
         "mode": "question",
+        "matching_assessments": assessment_search::matches(inputs.corpus, question).map_err(|err| err.to_string())?,
         "current_assessments": crate::lifecycle::current(inputs.corpus, &anchor_list.iter().map(|(id,_,_)| id.clone()).collect()),
         "revision_impacts": crate::lifecycle::impacts(inputs.root, inputs.corpus, &anchor_list.iter().map(|(id,_,_)| id.clone()).collect())?,
         "boundary": BOUNDARY,
@@ -1620,16 +1622,39 @@ fn graph_lines(lines: &mut Vec<String>, graph: &Value, limit: usize) {
 /// reference, at most `limit` per section.
 pub fn format_brief(brief: &Value, aliases: &Aliases, limit: usize) -> String {
     let mut lines = Vec::new();
-    lines.extend(crate::lifecycle::lines(
-        brief["current_assessments"]
+    if brief["mode"] == "question" {
+        let matches = brief["matching_assessments"]
             .as_array()
             .map(Vec::as_slice)
-            .unwrap_or_default(),
-        brief["revision_impacts"]
+            .unwrap_or_default();
+        lines.push(assessment_search::render(
+            brief["question"]["text"].as_str().unwrap_or_default(),
+            matches,
+            limit,
+        ));
+        if !brief["revision_impacts"]
             .as_array()
-            .map(Vec::as_slice)
-            .unwrap_or_default(),
-    ));
+            .is_none_or(Vec::is_empty)
+        {
+            lines.push("The full brief includes revision impacts for statements referenced by the retrieved notes (--json).".to_owned());
+        }
+    } else {
+        lines.extend(crate::lifecycle::lines(
+            brief["current_assessments"]
+                .as_array()
+                .map(Vec::as_slice)
+                .unwrap_or_default(),
+            brief["revision_impacts"]
+                .as_array()
+                .map(Vec::as_slice)
+                .unwrap_or_default(),
+        ));
+        if let Some(id) = brief["statement"]["id"].as_str() {
+            lines.push(format!(
+                "Compare the support routes and their shared premises: truth synthesis {id}"
+            ));
+        }
+    }
     graph_lines(&mut lines, &brief["evidence_graph"], limit);
     let absent = brief["absent"].as_array().cloned().unwrap_or_default();
     if brief["mode"] == "question" {
