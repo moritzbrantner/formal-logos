@@ -850,8 +850,9 @@ ban every holistic, constitutive, or reciprocal explanation. It rules out
 treating the same unaccounted input as if its obtaining had been supplied
 by the conditional derivation. If a holistic reason really explains B
 without the relevant borrowing, the brute stipulation for B has been
-withdrawn; if the holistic whole is itself an unaccounted contingent
-existential input, the question is relocated. A brute non-being fact
+withdrawn. If the whole is itself an unexplained contingent input, a
+further deficit arises when the demand covers the whole or requires
+an answer for every indispensable input. A brute non-being fact
 would not by itself falsify the being-level PSR; inspect the domain before
 drawing that conclusion.
 
@@ -898,10 +899,12 @@ objection: the populated replacement and primitive-resource controls
 already witness the difference between local coverage and the stronger
 supply/coverage condition in their respective formal interpretations.
 
-There is still a comparative difference if another account actually
-supplies an adequate reason for b or replaces the brute contingent
-bearer by an adequately intelligible necessary source and explains its
-derivatives at matched scope. Neither the number of explained facts nor
+For the question that includes this very B, a competing account gains an
+advantage if it supplies an adequate reason for b. Replacing B with a
+necessary source leaves that question unanswered. Replacement can be
+compared on a different question: why do these same derivatives exist?
+That comparison requires their identities and dependencies to be preserved.
+Where D0 essentially depends on B0, replacing B0 also loses D0. Neither the number of explained facts nor
 the word necessary makes that alternative adequate. Direct, conceptual
 or cumulative warrant for a primitive restriction is compatible with
 leaving the actuality of its contingent occupant unexplained; an
@@ -1135,7 +1138,13 @@ shows that deleting the reason for an act-fact can preserve
 being-level existence-token coverage. Do not read that as showing
 that a token is adequate. A contingent act may not itself be a
 being; if it is a being in the selected ontology, it must be
-included in the being-level comparison. A direct exercise need not
+included in the being-level comparison. If the exercise is a separate
+fact, explaining the existence of every member does not by itself
+require explaining why that exercise occurs. A demand covering the
+exercise, or every indispensable input fact when the exercise is such
+an input, does require an answer. This applies equally to a necessary
+producer's contingent exercise and a primitive application fact.
+A direct exercise need not
 be the effect of an earlier choosing event, but labelling it
 "direct", "free" or "rational" does not provide its positive
 explanatory warrant. A reason explaining actual selection need not
@@ -1169,9 +1178,10 @@ unchanged).** The strongest rival can confine the lack of local reasons
 to its foundation in the displayed interpretation and may contain epistemic
 underdetermination. It cannot answer the inclusive actuality
 question while insisting that its included B has no adequate
-existential reason. The comparative advantage of a successful
-necessary-source account at this scope is substantive, not a
-count of reasons; its realization is still conditional.
+existential reason. A necessary source would improve the answer to that question if
+it adequately explains this B. A source proposed in B's place
+can compete on the derivative order insofar as it preserves the
+derivatives. Neither comparison turns on a count of reasons.
 The prior moderate preference for E and suspension about D
 remain appropriate. No unconditional contradiction,
 epistemic self-undermining, unique personal source, PSR or B2
@@ -1461,11 +1471,13 @@ automatically such an exercise.
 
 The **primitive application** row allows a reason for the existence
 of B without another being producing B. If the application is an
-unexplained contingent fact, a fact-level or inclusive actual-order
-demand still has an unanswered input. But this alone is no refutation
-of the exact *being-level* PSR: a is not another being in the
-displayed ontology. Conversely, the nature-explains-application
-row shows why even the stronger represented contingent-fact coverage
+unexplained contingent fact, a demand expressly covering a, or all
+indispensable input facts when a is one, still has an unanswered input.
+A demand for the existence of every member covers b. If a adequately
+explains b, it answers that part of the demand even while a remains
+primitive. The displayed ontology treats a as a separate fact. The
+same distinction applies to a necessary producer's contingent exercise.
+Conversely, the nature-explains-application row shows why even the stronger represented contingent-fact coverage
 does not, by itself, force necessitation. A positive nonnecessitating
 intrinsic ground remains a live proposal. It would require actual
 relevance and direction, not an assertion that a fixed conceptual
@@ -1655,7 +1667,7 @@ remain outstanding.
 
 ## Restricted bruteness: what limits an unreceived act? (2026-11-25)
 
-**Draft continuation; independent semantic challenge outstanding.** Continue
+**Draft continuation, repaired after independent challenge and awaiting targeted recheck.** Continue
 the actual-order and intrinsic-reason checkpoints above. Reuse #1881's
 explicit R1 decomposition, the
 [unreceived whole-nature comparison](de-ente-esse-source-1628.md#unreceived-esse-and-the-two-questions-about-plurality-2026-11-17),
@@ -1757,8 +1769,9 @@ Use an independently specified two-feature comparison domain
 K = {u,v} and positive profile P(B0) = {u} or K, fixed wherever the
 same B0 exists. Give each B a fixed operation which returns the
 intersection of an input request with its profile, so every permitted
-input has a definite response. This models a positive typed signature,
-not arbitrary changes in behavior. The comparison domain is **stipulated**;
+input has a definite response. Every profile is finite. The varied
+predicate is proper-subset coverage of K, measured by which requested
+features the operation returns. The comparison domain is **stipulated**;
 its features are not certified pure perfections, its full profile is not
 metaphysical infinity, and the map of that positive profile to the
 existing qualitative `EsseLimited` is OPEN.
@@ -1774,7 +1787,8 @@ This is a matched non-entailment at the specified signature, not a new
 metaphysical model. Comparing rows with the same profile keeps all
 actual local behavior fixed while the absence witness changes.
 Comparing rows with the same modal overlay changes the positive
-profile without changing contingency. Receivers and root reasons
+operational coverage without changing contingency. The response gives
+no warrant for reception of the bearer's existence. Receivers and root reasons
 are absent **by construction**. If the comparison predicate were
 admitted as a real instance of L, the lower rows would violate the
 open limitation-to-reception principle; the full-profile contingent
@@ -1989,20 +2003,25 @@ L → R, but even a successful account of the nature's
 determination leaves the brute existence question unless
 it supplies a positive existential reason.
 
-**Next decisive test:** test the strongest **unrestricted but
-contingent** actuality. Give it all independently warranted
-positive perfection and absence of actual borrowing. Ask
-whether its *possible total absence* can be a positive
-metaphysical possibility without an actual power or
-essential existential condition supporting that absence.
-Reuse the #1887/#1908 C2/PGP and alternative-admission
-results and the exact first-mover frame. Compare the
-actual-world warrant for the alleged modal possibility
-against an actual internally or externally grounded
-existential vulnerability. Do not count "necessary
-existence is a perfection" as new evidence unless its
-classification has independent content. In the parallel
-finite-typed branch, reopen the limitation principle on a
+**Absence of the unrestricted bearer.** The necessary-law test has
+already been carried out. At the same observable output, the archive
+control distinguishes a history that requires a particular parent from
+one independently constructed without it. Its writer and medium are
+supplied in both cases. At foundational scope, even reproducing every
+effect can leave n present as an idle or additional bearer. Separate
+permissions to omit individual effects do not establish their joint
+omissibility, and even their joint absence leaves n's absence open.
+The comparison retains suspension about the possible absence of this
+particular unrestricted n. [Foundational absence warrant, §12](foundational-absence-warrant.md#12-can-a-necessary-law-license-omission-of-the-unrestricted-bearer)
+
+Reopen on independent grounds for one complete realization excluding n
+even as an additional bearer, compatible with every retained dependence.
+One such realization suffices, whether populated or concrete-empty.
+In the other direction, show that a law required in every order entails
+an indispensable exercise by this very n. Required occupancy by some
+governor leaves the occupant open. Apply either result to the selected
+mover only with the same witness. In the finite-typed branch, reopen
+the limitation principle on a
 same-sense positive determination of formal esse, or an
 actual pure-perfection witness excluded from the source
 under independently warranted causal adequacy. Preserve
@@ -2019,8 +2038,8 @@ No new Lean declaration, corpus proof or source claim is
 added. No new modal or metaphysical possibility, no proof
 of C → L or L → R, no causal reach or closure is asserted.
 Canonical CLI novelty, semantics, binding, corpus and
-Comparator/NanoDa checks and independent challenge of the
-actual final outcome remain required. The earlier
+Comparator/NanoDa checks remain with final CI. The three corrections
+to this draft await targeted independent recheck. The earlier
 unreviewed checkpoint remains available and no accepted
 judgment is superseded.
 
