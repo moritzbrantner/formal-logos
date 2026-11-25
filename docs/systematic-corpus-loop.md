@@ -261,7 +261,15 @@ work that was actually delivered.
 outcome with the owning record on current `main` and any open PR delivering
 that outcome. If it is on `main`, link the evidence and close the completed
 issue. If a PR already delivers it, carry the issue through review and merge
-with that PR. An older worker handoff can be superseded by its own repairs.
+with that PR. When a worker returns an older handoff, run the
+[revision lookup](../truth/README.md#checking-a-returned-worker-revision)
+with its commit and PR or owning attempt. Read the scope and disposition of
+the recorded review. If the returned work is already included and that finding
+was accepted, carry its qualifications forward. If the revisions differ,
+check what changed in the finding or its dependencies and send only the
+affected claims through the existing repair procedure. Treat an unresolved
+revision match as a reason to inspect the cited records.
+
 For unfinished work, give the worker the first undelivered acceptance item
 in the [worker brief](../AGENTS.md#worker-brief-and-handoff). For example, the
 starting result for the comparative-ascent question in #1919 is `1fd78e87`.

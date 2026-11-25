@@ -917,6 +917,29 @@ brief can still find directly referenced checkout records. Outbound-only links,
 private or unreferenced work and changes since capture can require another
 source. A wider all-state issue/PR snapshot in the supported format also works.
 
+### Checking a returned worker revision
+
+Use the commit from the handoff and either its PR number or its owning attempt.
+This example looks up the undrawn-triangle investigation from #1790.
+
+```bash
+python3 scripts/reconcile_worker_report.py c96f355e4913031e832475c0b7b3bdda7f94fe9e --pr 1988
+```
+
+The report compares the worker commit with the recorded review, the published
+head and the selected main revision. For #1988, the worker commit is the exact
+revision with qualified acceptance. The later publication includes that
+revision. Read the returned assessment for the finding, its limits and the
+test that could reopen it.
+
+The command uses local `origin/main` by default. Refresh that ref when you need
+current publication status, or select a known revision with `--main`. An ordinary
+local PR merge supplies the head and merge commits. Otherwise the command can
+look up the PR with `gh` or read a saved `gh pr view` JSON record supplied with
+`--snapshot` (see `--help` for fields). A squash, divergent histories or
+missing objects can leave the relation unresolved. Inspect the cited changes
+and review scope before deciding what needs another review.
+
 ## `issues` and `dossier --issues-from`
 
 `truth issues --from FILE [--for ID]` is `corpus.py issues --from FILE`: the
