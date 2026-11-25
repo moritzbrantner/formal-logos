@@ -760,4 +760,4 @@ commit `2c37ad4c0` apply to the identical proof files, transitive Lean
 imports and configurations on `8a1113e40`. Corpus, record regeneration,
 the exclusion fixpoint and support exports were checked on the integrated
 draft. This is an analyst reconstruction; historical attribution is deferred.
-Independent semantic challenge and final integration CI remain with #1938.
+Independent review accepted the qualified findings at `5738527ff21aa1749a7781b0ca0e0837bf019579`. [Reviewed delivery and CI](https://github.com/moritzbrantner/formal-logos/pull/1938)
