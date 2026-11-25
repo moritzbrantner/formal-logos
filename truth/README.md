@@ -89,6 +89,15 @@ target/release/truth --json synthesis STMT-GOD-EXISTS
 An ambiguous Lean short name such as `GodExists` lists the matching declarations
 and a command for each meaning.
 
+To inspect a particular argument, pass its ID. For example, try the closed-collection argument for a common uncaused source:
+
+```sh
+truth synthesis 3de4bd49-567b-44de-8472-88a24ea1311a --without 20babef7-6ae7-4b48-b72a-f417e8e63136
+truth --json synthesis 3de4bd49-567b-44de-8472-88a24ea1311a --compare-premises
+```
+
+The comparison starts with that argument’s retained premises and commitments. It follows rules backed by registered solutions, including zero-input results. It reports whether the selected argument still applies, other producers of the conclusion supported by those same inputs, and a dependency-ordered derivation when one exists. The target is excluded from the starting facts and from intermediate derivations. A withheld input can be derived through another route. The result concerns conditional reachability of statement IDs. Lean checks joint instantiation of witnesses and interpretations in the composed theorem.
+
 The statement view leads with the formal target and the frozen Lean theorem for a supporting route, with its Solution and verification configuration. It quotes
 scoped judgments and a live test, and compares the actual premises of its
 immediate arguments. A complete illustrative route provides a command for each

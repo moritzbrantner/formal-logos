@@ -1,5 +1,7 @@
 //! Statement synthesis and discovery of scoped judgments for a question.
-use super::{Args, Command, Output, input_error, load, resolve_statement, unknown, usage};
+use super::{
+    Args, Command, Output, input_error, load, resolve_in, resolve_statement, unknown, usage,
+};
 use serde_json::{Value, json};
 use truth::{brief::assessment_search, support_graph, synthesis};
 
@@ -32,7 +34,18 @@ fn run(args: &Args, operands: &[&str]) -> Output {
         return Err(usage("--limit must be positive"));
     }
     let (corpus, aliases, _) = load(args)?;
+    let comparing = !args.without.is_empty() || args.compare_premises;
+    if args.compare_premises && !args.without.is_empty() {
+        return Err(usage(
+            "choose --without for one scenario or --compare-premises for individual omissions",
+        ));
+    }
     if let Some(question) = question {
+        if comparing {
+            return Err(usage(
+                "withholding premises requires a selected argument ID",
+            ));
+        }
         let limit = args.research.limit.unwrap_or(5);
         let (value, text) =
             assessment_search::report_for_root(&args.root, &corpus, question, limit as usize)
@@ -43,7 +56,29 @@ fn run(args: &Args, operands: &[&str]) -> Output {
         .first()
         .copied()
         .unwrap_or(support_graph::DEFAULT_TARGETS[0]);
-    let target = resolve_statement(&aliases, token)?;
+    let target = resolve_in(&aliases, token, &["statements", "arguments"])?;
+    if let Some(argument) = corpus.get("arguments", &target) {
+        let without = args
+            .without
+            .iter()
+            .map(|s| resolve_statement(&aliases, s))
+            .collect::<Result<Vec<_>, _>>()?;
+        let (value, text) = synthesis::argument::report(
+            &args.root,
+            &corpus,
+            argument,
+            &without,
+            args.compare_premises,
+            args.research.limit.unwrap_or(5) as usize,
+        )
+        .map_err(|error| input_error("synthesis", error))?;
+        return Ok((value, Some(text)));
+    }
+    if comparing {
+        return Err(usage(
+            "withholding premises requires a selected argument ID",
+        ));
+    }
     let target = if let Some(record) = corpus.get("statements", &target) {
         record
     } else {

@@ -366,7 +366,25 @@ pub fn report_for_root(
     } else {
         let rendered = results
             .iter()
-            .map(crate::synthesis::format_result_witness)
+            .enumerate()
+            .map(|(i, r)| {
+                let mut entry = format!(
+                    "{}\n{}",
+                    string(r, "argument_label"),
+                    crate::synthesis::format_result_witness(r)
+                );
+                if i == 0 && !string(r, "argument_meaning").is_empty() {
+                    entry.push_str(&format!(
+                        "\nRecorded interpretation — {}",
+                        string(r, "argument_meaning")
+                    ));
+                }
+                entry.push_str(&format!(
+                    "\nInspect or withhold a premise — truth synthesis {}",
+                    string(r, "argument_id")
+                ));
+                entry
+            })
             .collect::<Vec<_>>()
             .join("\n\n");
         format!("\n\nMatching Lean results\n{rendered}")
