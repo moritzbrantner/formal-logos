@@ -1,5 +1,7 @@
 module
 
+public import TruthCore.Logic.FixedPointSelection
+
 /-!
 Analyst reconstruction for #1397; historical attribution deferred. One context
 contains earlier/later occurrences, assigned bearers in B. B is not a body or
@@ -45,7 +47,8 @@ theorem no_choice {D B : Type} (transform : D → D) (swap : B → B)
     (fixed : transform d = d) (equiv : Equivariant transform swap choose)
     (admissible : choose d = a ∨ choose d = b)
     (sa : swap a = b) (sb : swap b = a) (distinct : a ≠ b) : False := by
-  have h : choose d = swap (choose d) := (congrArg choose fixed).symm.trans (equiv d)
+  have h : choose d = swap (choose d) :=
+    (TruthCore.Logic.FixedPointSelection.fixed_output choose swap fixed (equiv d)).symm
   rcases admissible with ha | hb
   · rw [ha, sa] at h
     exact distinct h

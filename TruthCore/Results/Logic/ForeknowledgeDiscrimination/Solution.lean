@@ -1,5 +1,6 @@
 module
 public import TruthCore.Logic.ForeknowledgeDiscrimination
+public import TruthCore.Logic.InformationInvariance
 @[expose] public section
 namespace TruthCore.Results.Logic.ForeknowledgeDiscrimination
 open TruthCore.Logic.ForeknowledgeDiscrimination
@@ -91,8 +92,8 @@ theorem canonicalCertificate : CanonicalCertificate := by
   · intro u v
     constructor
     · intro h x
-      exact ⟨fun k => trans _ _ _ (symm _ _ h) k,
-        fun k => trans _ _ _ h k⟩
+      exact TruthCore.Logic.InformationInvariance.class_agreement
+        (canonical (W := W) C).access symm trans h x
     · intro h
       exact (h v).2 (refl v)
 theorem finiteProfiles : FiniteProfiles := by

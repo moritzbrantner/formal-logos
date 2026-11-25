@@ -1,6 +1,7 @@
 module
 
 public import TruthCore.Explanation.HistorySelection
+public import TruthCore.Logic.InformationInvariance
 public import TruthCore.Results.Causality.UniqueFeedback.Solution
 public import TruthCore.Results.Causality.EssentialPowerUnderdetermined.Solution
 public import TruthCore.Results.Causality.SourceWitness.Solution
@@ -26,10 +27,9 @@ theorem characterization (h : History W B T) (truth : W → R → Prop)
   · intro hd
     refine ⟨fun w => SameEvidence truth basis w a, ?_, evidence_refl truth basis a, ?_⟩
     · intro v w hvw
-      constructor
-      · intro hva
-        exact evidence_trans truth basis (fun r hr => (hvw r hr).symm) hva
-      · exact evidence_trans truth basis hvw
+      exact TruthCore.Logic.InformationInvariance.class_agreement (SameEvidence truth basis)
+        (fun _ _ related r hr => (related r hr).symm)
+        (fun _ _ _ h₁ h₂ => evidence_trans truth basis h₁ h₂) hvw a
     · exact hd
   · rintro ⟨p, hp, hselect⟩ v hv he
     exact hselect.2 v hv ((hp v a he).mpr hselect.1)

@@ -1,6 +1,7 @@
 module
 
 public import TruthCore.Epistemology.InitialHistoryAuthenticity
+public import TruthCore.Logic.InformationInvariance
 
 @[expose] public section
 
@@ -68,8 +69,12 @@ theorem sound_iff_uniform_witnesses (allowed : I → Prop) (observe : I → O)
     · intro i hi hp
       exact ⟨i, hi, rfl, hs i hi hp⟩
   · rintro ⟨hu, hw⟩ i hi hp
-    obtain ⟨j, hj, he, ha⟩ := hw i hi hp
-    exact (hu i j hi hj hp he.symm).mpr ha
+    exact TruthCore.Logic.InformationInvariance.of_representative
+      (fun i j => allowed j ∧ observe i = observe j)
+      (fun i => content (observe i) i) i
+      (fun j related => hu i j hi related.1 hp related.2) (by
+        obtain ⟨j, hj, he, ha⟩ := hw i hi hp
+        exact ⟨j, ⟨hj, he.symm⟩, ha⟩)
 
 /-- All observation-equality tests have the same truth values exactly when
 the observations agree. This consumes the old SameEvidence definition. -/

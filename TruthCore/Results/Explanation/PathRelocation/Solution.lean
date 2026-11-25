@@ -1,6 +1,7 @@
 module
 
 public import TruthCore.Explanation.PathRelocation
+public import TruthCore.Logic.FixedPointSelection
 public import TruthCore.Results.Explanation.HistorySelection.Solution
 
 @[expose] public section
@@ -13,7 +14,8 @@ open TruthCore.Results.Explanation.HistorySelection (no_selection characterizati
 
 theorem symmetry_transfer {T S : Type} (σ : T → T) (C : (T → S) → Prop) (f : T → S)
     (hσ : InvariantUnder σ C) (hu : UniqueSolution C f) : f ∘ σ = f :=
-  hu.2 _ (hσ f hu.1)
+  TruthCore.Logic.FixedPointSelection.unique_closed_fixed C (fun g => g ∘ σ)
+    f hu.1 hu.2 hσ
 
 theorem constant_of_stationary {S : Type} (f : Int → S)
     (h : ∀ t, f (t + 1) = f t) : ∀ t, f t = f 0 := by
