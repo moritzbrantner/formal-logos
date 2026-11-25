@@ -1,0 +1,14 @@
+{
+  "id": "c0338bfc-dd47-4a56-aa5a-f3c75f654b3b",
+  "label": "Trace divine causal reach on actual concreta through the esse-to-ground correspondence (inference)",
+  "input_statement_ids": [
+    "86d02b69-87eb-5594-9958-ccaa5fe6b685",
+    "cb1cdea9-eb6c-578c-8008-84e0d4107fd3",
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410"
+  ],
+  "output_statement_id": "75974d26-9483-4e1b-81a9-693a90ee9d0f",
+  "rule": "Split identity of the recipient explicitly and turn the distinct esse cause into a one-step path",
+  "meaning": "The carrier-wide causal naming premise and the bridge from a distinct esse cause of an actual concretum to actual grounding yield the ancestor reading. Excluded middle is used for identity. Other readings may warrant mediated reach without warranting the direct causal-and-grounding bundle.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

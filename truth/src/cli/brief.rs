@@ -103,6 +103,32 @@ fn run_brief(args: &Args, operands: &[&str]) -> Output {
     };
     let limit = limit(args)?;
     let (corpus, aliases, frontier_root) = load(args)?;
+    if let Some(raw) = target.and_then(|token| token.strip_prefix('#')) {
+        let number = raw
+            .parse::<u64>()
+            .ok()
+            .filter(|n| *n > 0 && raw.bytes().all(|b| b.is_ascii_digit()))
+            .ok_or_else(|| {
+                usage("brief issue targets use # followed by a positive issue number")
+            })?;
+        let revision = retrieval::Revision::of(&args.root);
+        let history = issues(args, &revision)?;
+        let mut value =
+            brief::issue::report(&args.root, &corpus, number, &history, revision).map_err(error)?;
+        if args.full_evidence {
+            let mut seeds = vec![format!("#{number}")];
+            seeds.extend(
+                value["records"]
+                    .as_array()
+                    .into_iter()
+                    .flatten()
+                    .filter_map(|record| record["id"].as_str().map(str::to_owned)),
+            );
+            value["explicit_evidence"] = super::evidence::expansion(args, &corpus, &seeds)?;
+        }
+        let text = brief::issue::render(&value, limit);
+        return Ok((with_identity(value, &corpus), Some(text)));
+    }
     let view = research::frontier_view(args, &corpus, &frontier_root)?;
     let revision = retrieval::Revision::of(&args.root);
     let issues = issues(args, &revision)?;

@@ -1,0 +1,18 @@
+[batch]
+vocab = "TruthCore.Causality.ContingentRecipients"
+results = "TruthCore.Results.Causality.ContingentRecipients"
+
+[[statement]]
+id = "A necessary intermediary can directly supply every actual contingent recipient"
+lean = "CoverageControl"
+definitions = ["a1b2e330-388f-4120-bc5c-969642317792","822c9912-2313-584b-b2b7-77031da20107"]
+paraphrase = "On the existing chainG profile at false, d is an actual root and directly grounds the necessary g. The actual c is contingent. For every actual concrete contingent x, g directly grounds x and actually gives x being there. With only g selected by the naming predicate, universal finite ancestral reach to all actual concreta fails. This interpretation tests a proposed restriction on the recipients."
+
+[[argument]]
+id = "Test coverage of all contingent recipients at the necessary intermediary"
+theorem = "necessaryIntermediary"
+premises = []
+conclusion = "A necessary intermediary can directly supply every actual contingent recipient"
+axioms = []
+rule = "Inspect both worlds on the original three-being chain and apply named-root identification"
+meaning = "Both d and g exist in every accessible world. At false, g gives being to the contingent c, the only possible actual contingent recipient there. The incoming edge d to g leaves g derived. If the selected g reached every actual concretum, a finite path to the actual root d would identify g with d, contrary to the distinct constructors. The use of the naming predicate stipulates a candidate, without independently warranting its divine status."

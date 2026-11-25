@@ -1,0 +1,11 @@
+{
+  "id": "62568126-6e89-40b8-a786-2ec49fb7687e",
+  "label": "Identify an actual root from existence and source agreement on its grounding graph",
+  "argument_id": "eecd4933-e043-4087-88e2-6e345b5570f2",
+  "challenge_module": "TruthCore.Results.Causality.LocalSourceConfluence.Challenge",
+  "solution_module": "TruthCore.Results.Causality.LocalSourceConfluence.Solution",
+  "theorem": "TruthCore.Results.Causality.LocalSourceConfluence.uniqueActualOfSourceAgreement",
+  "comparator_config": "results/62568126-6e89-40b8-a786-2ec49fb7687e/comparator.json",
+  "status": "solution-present",
+  "description": "Instantiate the structural source-agreement premise on exactly ConcreteExistentialSupply.graph m w. The supplied actual root and any competing actual root of this profile are both sources of that graph, so their underlying bearers coincide. The same witness can be furnished by any route to actual root existence at this world."
+}

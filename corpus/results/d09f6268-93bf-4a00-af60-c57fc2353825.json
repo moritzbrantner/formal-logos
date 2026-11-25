@@ -1,0 +1,11 @@
+{
+  "id": "d09f6268-93bf-4a00-af60-c57fc2353825",
+  "label": "Derive the Second Way regress premise using finite ancestral labels",
+  "argument_id": "f609cd0d-96c8-4eb5-8ee5-abaac0193a15",
+  "challenge_module": "TruthCore.Results.Causality.StrictGroundRepresentation.Challenge",
+  "solution_module": "TruthCore.Results.Causality.StrictGroundRepresentation.Solution",
+  "theorem": "TruthCore.Results.Causality.StrictGroundRepresentation.foundedFromAncestralLabels",
+  "comparator_config": "results/d09f6268-93bf-4a00-af60-c57fc2353825/comparator.json",
+  "status": "solution-present",
+  "description": "Each per se predecessor remains in the same ancestral cone and moves strictly down among its labels by alignment and the selected consistent theory. Strict ground on this finite label set is transitive and irreflexive, hence well-founded. Induction yields accessibility of the effect for the original cause relation. The premises concern the same labels throughout."
+}

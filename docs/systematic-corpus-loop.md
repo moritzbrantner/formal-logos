@@ -247,9 +247,14 @@ one genuinely separate scoped successor. The existing root epic #143 remains
 the active handoff. The normal completed-issue rule above still applies to
 work that was actually delivered.
 
-**Dispatch and reconciliation.** The coordinator selects one live uncertainty
-and its file/graph ownership from the issue for a worker brief, allowing the
-worker to follow substantive dependencies without a fixed work cap. On
+**Dispatch and reconciliation.** Before assigning an issue, compare its requested
+outcome with the owning record on current `main` and any open PR delivering
+that outcome. If it is on `main`, link the evidence and close the completed
+issue. If a PR already delivers it, carry the issue through review and merge
+with that PR. An older worker handoff can be superseded by its own repairs.
+For unfinished work, give the worker the first undelivered acceptance item,
+its existing evidence and its file/graph ownership. A reopening condition
+in a reviewed result can remain in the owning record after the issue closes. On
 completion, reconcile the accepted findings against current `main`, update
 the existing issue's visible current status and links, and leave historical
 details in comments or canonical records. Do not treat issue closure, a PR,
