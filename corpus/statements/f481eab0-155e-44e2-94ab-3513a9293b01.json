@@ -1,0 +1,9 @@
+{
+  "id": "f481eab0-155e-44e2-94ab-3513a9293b01",
+  "label": "The named source has a nonempty productive path to every token in its covered history",
+  "paraphrase": "Each covered token for a given source is reached by a nonempty chain of actual contributor steps beginning at an event borne by that source. The endpoint is the very same token throughout. The source may contribute through different events across acquisitions. The reading requires no claim that it produced every other input.",
+  "lean_declaration": "TruthCore.Causality.AcquiredHistoryTransfer.CoveredAncestry",
+  "definition_ids": [
+    "7b20df90-a3d9-41c7-be8b-1d2beb5b995a"
+  ]
+}

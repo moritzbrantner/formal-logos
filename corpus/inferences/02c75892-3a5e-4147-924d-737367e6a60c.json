@@ -1,0 +1,12 @@
+{
+  "id": "02c75892-3a5e-4147-924d-737367e6a60c",
+  "label": "Whole-roster nontrapping from an actual root (inference)",
+  "input_statement_ids": [
+    "dc397705-d727-419e-92f9-65d44e1ff15d"
+  ],
+  "output_statement_id": "5c898d24-d1f7-5087-b09e-3287a723e787",
+  "rule": "The root is a source of the recorded actual-concrete graph, which contradicts the trap's no-source clause",
+  "meaning": "Strength order (backing result): if some actual concretum n has no actual concrete ground in the selected relation at w, the nonempty actual roster is not a borrowing trap, since n is a source of the recorded graph of that relation and a trap has no source. Same profile, selected relation and world; constructive. The Comparator configuration also checks deriveFromActualRoot: the quarta-via classical GOD_4 root (NecessaryClassicalGodRootAt) from an actual root, contingent grounding, excluded middle and the 21 shared inputs of NecessaryClassicalGodRoot.derive, which it applies once after obtaining population and whole-roster nontrapping from the root. That theorem is not registered as a corpus argument: its premise bundle repeats the base route's allowlisted POTENCY_CAPACITY_AND_POWER_ACROSS_ADOPTED mixing (a4d3261a is tagged DEF-POTENCY, c6d6379b DEF-INDEPENDENT-POTENCY, for one Lean parameter InPotency), which a new argument may not repeat without a genuine bridge. The converse fails: in a world with no actual concretum whole-roster nontrapping holds vacuously and no root exists; the certified difference is population plus stability of root existence.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

@@ -1,0 +1,20 @@
+{
+  "id": "08e6b43a-17a9-4199-a087-5a62402dd88d",
+  "label": "Not every actual root gives by total optimal output over fixed candidates with a unique optimum",
+  "paraphrase": "Analyst formulation, unattributed: the exact negation of the being-level one-best-effect rival for the given candidate set and quality scale: it is not the case that every actual root of the selected grounding relation G at w gives by total optimal output (at w and at every accessible world where it exists it gives being to something, and only to optimal candidates) with at most one optimal candidate. It does not say that the root does not prefer, choose or optimize in any other sense, nor that no best exists; ties, the absence of a best and world-level optimization over complete outputs are not excluded.",
+  "lean_declaration": "TruthCore.Causality.NarGrafts.NotEveryActualRootGivesUniqueOptimum",
+  "definition_ids": [
+    "1ef0f844-1a0d-4ce8-8f54-87c29e96ef76",
+    "2d069414-67f7-5bba-b750-830f06caf84d",
+    "4f503422-a3dc-51f3-8e1d-a1065ef6038e",
+    "62dfa893-b633-4513-9790-8f9a0a3087e0",
+    "c57e2682-08e6-527e-950f-0fa0a7ff11ef",
+    "a1b2e330-388f-4120-bc5c-969642317792",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ],
+  "disambiguation_ids": [
+    "2f096ab2-0d7d-5252-a361-4e601c64aeae",
+    "623ddbf6-9683-5361-bae4-e348a00ec680"
+  ]
+}

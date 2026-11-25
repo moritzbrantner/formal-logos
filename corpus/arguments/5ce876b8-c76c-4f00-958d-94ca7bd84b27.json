@@ -1,0 +1,19 @@
+{
+  "id": "5ce876b8-c76c-4f00-958d-94ca7bd84b27",
+  "label": "Thin belief reason from actual-force concession and consideration presentation",
+  "premise_statement_ids": [
+    "b391c809-50b9-488c-909d-6ba6658b989e",
+    "1b74e22c-3e2e-5328-b587-6dc2517f5e3f"
+  ],
+  "conclusion_statement_id": "f56b2ee7-c69e-5e3b-85b0-e671d907ba58",
+  "inference_ids": [
+    "284c7738-1929-450c-8de5-6c9d884d4311"
+  ],
+  "meaning": "Instantiation transcription. For the subject a and content p of the concession, the attributed consideration targets believe p. The reverse presentation implication at a,p yields Reason a p. Actual force, aim satisfaction and preference independence do no work in this projection. A general attitude about p does not supply the belief witness. F6 leaves p existential and does not identify p with the denial.",
+  "definition_ids": [
+    "d13c0241-320a-5d56-8927-341e46063e05"
+  ],
+  "disambiguation_ids": [
+    "339c6bf8-37f1-5d5e-9f26-3258957443cc"
+  ]
+}

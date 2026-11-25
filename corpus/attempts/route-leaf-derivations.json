@@ -15,6 +15,7 @@
   "blocker": "The derivation leaves the stated premise in place as a leaf of every route (a stated premise stays one leaf), so route costs do not fall; a lower cost needs a reduced root-route argument without STMT-PERFECTIONS-OF-EFFECT-PREEXIST-IN-CAUSE, or establishment of the four inputs. One InAct parameter forces a single formal-or-eminent reading across all four premises (DISAMB-IN-ACT).",
   "evidence": [
     "b4874a85-aa8c-55e4-a564-68c9b58fa631",
-    "a87100f8-a9c2-5205-97a3-41d487e0c357"
+    "a87100f8-a9c2-5205-97a3-41d487e0c357",
+    "PR-1187"
   ]
 }

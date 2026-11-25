@@ -1,0 +1,69 @@
+{
+  "id": "33e8bd50-6351-4ccd-916b-579d918ef470",
+  "label": "Simple priority is well-founded, from grounding well-founded on actual concreta",
+  "premise_statement_ids": [
+    "82cfaf26-fc86-54ab-8328-9a7b2bdbbe21",
+    "86efed1a-f353-5b5d-9431-df7fc643ace1",
+    "32d77f18-a9c2-5486-b51c-a24f32863af4"
+  ],
+  "conclusion_statement_id": "d85de8e1-2f7f-5b2f-ba1e-112a0799994c",
+  "inference_ids": [
+    "ef2c151e-ed8a-492f-b5b5-aa55a7bc1272"
+  ],
+  "meaning": "Non-transcription conditional derivation on one m and w, for the shared frame's simple-priority field F.PriorSimply (sense PRIOR_1). If grounding among actual concreta at w is well-founded (82cfaf26), whatever is simply prior to something other than itself is an actual concrete ground of it at w (86efed1a) and nothing is prior to itself (32d77f18), then simple priority is well-founded on the whole carrier (d85de8e1). Step: what is prior to x is other than x by irreflexivity, hence an actual concretum grounding x; well-foundedness transfers. Superseded assessment (docs/notes/one-dependence-order.md, section 'Sense splits'): the bound type is PRIOR_1, which DEF 1d9aa4d9 defines as priority in act in a respect, so it is not an unsplit relation with two readings; on that sense 86efed1a meets the hand-and-stick counterexample (reading the selected grounds existentially, and the hand as PRIOR_1 to the stick in the respect of moving; causal-dependence-support-investigation.md (e), row 1), and its positive warrant (priority in being) belongs to PRIOR_4, a separate sense since #1751. 86efed1a's own paraphrase records a second falsifier: a non-concrete or absent simply prior thing. The split is tested in specs/dependence-order-senses.toml: on PRIOR_4 (priority in being, already a sense) a weaker bridge among actual concreta carries well-founded grounding to PRIOR_4 among actual concreta, while this PRIOR_1 derivation keeps the counterexample to 86efed1a and its only consumer (e229bb2c) needs PRIOR_1. The existing chain from d85de8e1 to the secunda via premise 97f5850f (e229bb2c to 42890b45, then 438866fa with f10d5632) also needs the all-respects premise e078f07b, whose joint use with respect-free d85de8e1 is lane A's reciprocity case (row 21) and against which the hand-and-stick counterexample is kept; so this argument does not by itself carry well-founded grounding to the secunda via. The closed controls priorityControls give, for each input, a Bool interpretation in which the other two hold and priority is not well-founded (the irreflexivity omission is a self-loop, which the distinct-relata bridge does not see), and a nonvacuous interpretation.",
+  "definition_ids": [
+    "c86cc1d1-c09f-5296-8ab9-2e5ddf217dce",
+    "58fee8ed-9b44-5399-95c8-5d239bea898d",
+    "c57e2682-08e6-527e-950f-0fa0a7ff11ef",
+    "008cb21a-256c-5a90-822c-acd4591d699a",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "f8948e28-b13a-5244-95f1-41a05cd4fff2",
+    "e1ff44df-ed97-5990-8424-1abd720f23ea",
+    "baddf770-36bf-542f-bb3c-2297342d5452",
+    "7ac7fea6-5b3a-5e97-b687-c76569c58429",
+    "1d9aa4d9-18cc-5930-95fb-5af65e32c0f8",
+    "a1b2e330-388f-4120-bc5c-969642317792"
+  ],
+  "disambiguation_ids": [
+    "6e92c6e3-edf0-5d7e-b2b3-788b24b8b768",
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "623ddbf6-9683-5361-bae4-e348a00ec680",
+    "7507d645-874d-5434-add8-2f49c2801d36",
+    "b9adce48-6b86-5f58-b2ea-b25f51c70cbd",
+    "be54be36-3ce8-53f9-8168-50d1114e6c76",
+    "c529e8d3-43e3-53a8-a82f-3955e9815265",
+    "83264cf5-01fe-52fc-9a00-eeb024f6496e"
+  ],
+  "sense_bridges": [
+    {
+      "term": "NECESSARY",
+      "from": "8c881fa6-2b9f-44be-a32a-c8ef29c13643",
+      "to": "7af298fb-a2c4-4239-919b-7685f2e1f67a",
+      "statement_id": "82cfaf26-fc86-54ab-8328-9a7b2bdbbe21"
+    },
+    {
+      "term": "NONNECESSARY_VERSUS_CONTINGENT_ROOT",
+      "from": "cf6a8bb9-2a70-4e90-86bd-06f69106da2f",
+      "to": "9f9108e2-3cc3-45dd-be1d-d8fdaaced708",
+      "statement_id": "82cfaf26-fc86-54ab-8328-9a7b2bdbbe21"
+    },
+    {
+      "term": "WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT",
+      "from": "9232f675-db0a-474c-9f00-d8e5aba69ef7",
+      "to": "556515c9-1fcc-4ea0-b85d-2a4cad7eff79",
+      "statement_id": "82cfaf26-fc86-54ab-8328-9a7b2bdbbe21"
+    },
+    {
+      "term": "WELL_FOUNDEDNESS_OF_THE_SELECTED_RELATION",
+      "from": "2f42c0e7-46ae-4e2b-9ac4-95dcb865da61",
+      "to": "f4609d52-a878-4d09-9af3-083b1945770c",
+      "statement_id": "82cfaf26-fc86-54ab-8328-9a7b2bdbbe21"
+    }
+  ],
+  "strong_version_needed": {
+    "82cfaf26-fc86-54ab-8328-9a7b2bdbbe21": "The conclusion is full well-foundedness of a relation on the whole carrier, so the premise must exclude every infinite descending grounding chain among actual concreta. The weak versions do not: ConeWellFounded (1b1e3f09) constrains only the ancestor cone of one selected individual, ActualGroundingAsymmetric (39f7c63d) excludes only two-cycles, and closed-collection rootedness (aca3baa1) admits an infinite descending chain whose members also descend from a root (RootedInfiniteControl of ClosedEsseSource)."
+  }
+}

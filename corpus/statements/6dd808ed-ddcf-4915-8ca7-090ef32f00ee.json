@@ -1,0 +1,15 @@
+{
+  "id": "6dd808ed-ddcf-4915-8ca7-090ef32f00ee",
+  "label": "The actual giver applying this intermediate in its exercise receives downstream causal credit",
+  "paraphrase": "Open same-giver interface. On actual distinct esse links a to b and b to c, the specified giver's applying b in giving esse to c warrants causal responsibility of a for c's esse. Through a b c is a supplied relational primitive. No uniqueness, simultaneity or test of exercise identity is presupposed by its type.",
+  "lean_declaration": "TruthCore.Causality.GiverIndexedApplication.AppliedGiverComposes",
+  "definition_ids": [
+    "8163859b-95b3-4dd2-8a69-541bd332f32f",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "6b8ed953-9deb-4272-9e7b-a971be2119c3"
+  ],
+  "disambiguation_ids": [
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b"
+  ]
+}

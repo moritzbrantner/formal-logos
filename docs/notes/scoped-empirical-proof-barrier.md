@@ -8,7 +8,7 @@ are the unencoded q46a2 statement `STMT-WORLD-BEGINNING-NOT-DEMONSTRABLE`, open
 `STMT-HUME-INDUCTION-THEOLOGY-WITHHELD`. That verdict is an entitlement
 assessment, not an impossibility-of-proof theorem. The existing knowledge
 retorsion also already distinguishes universal ignorance from knowing it.
-None of these records is silently redefined here.
+None of these records is silently redefined here. [Research record](../../corpus/attempts/scoped-empirical-proof-barrier.json)
 
 ## One proof standard, with a structural barrier
 

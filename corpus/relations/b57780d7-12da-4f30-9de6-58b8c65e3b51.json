@@ -1,0 +1,11 @@
+{
+  "id": "b57780d7-12da-4f30-9de6-58b8c65e3b51",
+  "label": "The esse-cause bridge strengthens its actual-cause weak version",
+  "subject_kind": "statement",
+  "subject_id": "cb1cdea9-eb6c-578c-8008-84e0d4107fd3",
+  "predicate": "strengthens",
+  "object_kind": "statement",
+  "object_id": "b17a8954-c86b-4127-b816-102b93ed3bdd",
+  "verification_result_id": "a215884f-fac9-4d4d-933f-2096b165a53c",
+  "note": "Same Profile, world, CausesIn and esse. The weak version assumes that the cause is an actual concretum instead of concluding it; a world-free cause of being absent at w falsifies only the strong version. Strictness is not separately certified."
+}

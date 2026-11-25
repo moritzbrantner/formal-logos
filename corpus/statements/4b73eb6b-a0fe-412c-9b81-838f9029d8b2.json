@@ -1,0 +1,10 @@
+{
+  "id": "4b73eb6b-a0fe-412c-9b81-838f9029d8b2",
+  "label": "Sharp bounds for a named source's contribution to a patient's accounted expenditure",
+  "paraphrase": "In each balanced integer window, the possible named-inlet quantities used in the work run from the expenditure less the pooled opening stock and other receipts (truncated at zero) to the lesser of expenditure and named receipts, inclusive. Every fitting allocation gives the named receipt an actual productive step to that work exactly when expenditure exceeds the pool. The attribution concerns a conserved input used by the specified patient or process. It presupposes warranted boundaries, conservation and the given interpretation of productive use.",
+  "lean_declaration": "TruthCore.Causality.ReceiptAllocation.RangeCertificate",
+  "definition_ids": [
+    "cc5be5e2-5a9d-4831-86c9-32dd91482f5b",
+    "7b20df90-a3d9-41c7-be8b-1d2beb5b995a"
+  ]
+}

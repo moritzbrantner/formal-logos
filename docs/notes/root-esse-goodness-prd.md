@@ -1,5 +1,7 @@
 # PRD: Root-local goodness of an ultimate existential source
 
+[Original PR #1917](https://github.com/moritzbrantner/formal-logos/pull/1917)
+
 - **Project** Formal Logos (`moritzbrantner/formal-logos`)
 - **Date** 2026-11-24
 - **Status** Independently reviewed research specification merged in PR #1917 at `233857c34`. Formal implementation remains open.
@@ -305,3 +307,45 @@ Repository links use the inspected evidence baseline unless otherwise noted.
 - [RootPositiveIntellectWill](https://github.com/moritzbrantner/formal-logos/blob/0ce1e78ed5e42962586356631a778e24a832c546/TruthCore/Results/Causality/RootPositiveIntellectWill/Solution.lean), `TruthCore/Results/Causality/PerfectRootPositiveIntellectWill/Solution.lean`, `TruthCore/Results/Case/Catholicism/StageTwo/GodIsInfinite/Solution.lean`, `ClassicalAttributesIdentity/Solution.lean`.
 - `TruthCore/Latin/Aquinas/SummaTheologiae/PrimaPars/Question5/Article1.lean`, `Question5/UltimatePerfection.lean`, `Question48/Articles2and3.lean`, `InfinityEternity.lean`; `TruthCore/Causality/EsseReception.lean`.
 - `TruthCore/Case/Catholicism/DivineLoveBridge.lean`; [historical root route analysis](https://github.com/moritzbrantner/formal-logos/blob/0ce1e78ed5e42962586356631a778e24a832c546/docs/notes/root-route-modal-load.md).
+
+## Does a warranted judgment of improvement settle positive goodness?
+
+Fix the same eye, the same viewing task and the same otherwise suitable conditions. An independently specified success criterion is resolving a pair of lines as two at a fixed separation. Suppose an optical defect prevents this, and a correction restores it. The image formation and the discrimination task explain why the second condition fulfills a capacity of this eye. The two arrangements are equally real. The aberration is an actual optical configuration and a privation of the specified resolution in that task. Its reality licenses no inference that it realizes the missing excellence. Goodness in the fulfilled respect, goodness as an organism overall, and the moral goodness of an agent's choice have different subjects or standards here.
+
+Grant a stronger neutralist concession than an accurate functional description. Suppose both sides agree that restoration is *better* for this bearer in this respect. Does even this ordering settle that success is positively good? Compare two assignments to the actual performance states. In one, failure is neutral and attainment positive. In the other, failure is bad and attainment neutral. Both give all the same strict comparisons between performances. The second gives an intelligible reason to repair a defect while withholding a positive verdict on the restored state. A Thomist can readily judge both that failure is bad and attainment is good; nothing requires a local privation to be neutral. The first assignment isolates what is needed for the positive verdict, without purporting to exhaust the Thomistic position.
+
+The following local control uses three ordered marks, with 1 designated neutral, solely to test how much information those comparisons contain. Positivity represents one candidate evaluation of the single attained perfection. The same bearer exists in both conditions. The two checks use the actual biconditional and require no axioms. They make no assumption of additive metaphysical value.
+
+```lean
+import TruthCore.Latin.Aquinas.SummaTheologiae.PrimaPars.Question5.Article1
+open TruthCore.Latin.Aquinas.SummaTheologiae
+namespace FulfilledRespect
+-- One existing bearer and one respect, evaluated in two conditions.
+def attained (s : Bool) (_ _ : Unit) : Prop := s = true
+def mark (s : Bool) : Nat := if s then 1 else 0
+-- Ordered marks for deficiency (0), neutrality (1), and excellence (2).
+def good (score : Bool → Nat) (s : Bool) (_ _ : Unit) : Prop := 1 < score s
+theorem sameComparisons (s t : Bool) :
+    (mark s < mark t) ↔ (mark s + 1 < mark t + 1) := by
+  cases s <;> cases t <;> decide
+theorem differentVerdicts :
+    (∀ s, GoodnessIsActualityReading (good (fun t => mark t + 1) s) (attained s)) ∧
+    ¬ GoodnessIsActualityReading (good mark true) (attained true) := by
+  constructor
+  · intro s x p
+    cases s <;> unfold good attained mark <;> decide
+  · intro h
+    have bad := (h () ()).mpr rfl
+    exact (Nat.lt_irrefl 1) bad
+#print axioms sameComparisons
+#print axioms differentVerdicts
+end FulfilledRespect
+```
+
+**Judgment.** There is positive warrant for crediting the bearer with an excellence where a due capacity actually attains its own end. The attained discrimination supplies an intelligible object of pursuit and preservation even when we consider the successful operation itself, apart from the relief of a prior defect or any further use. This supports a primitive constitutive reading of goodness: attainment fulfills the bearer *in this respect*. The rival can grant the same restoration history, ranking and reason to avoid impairment, and identify normal success with meeting a requirement whose violation is bad. A ranking of repairs cannot decide between those accounts. A reason to pursue the realized operation for its own sake, identifiable independently of avoiding a loss or a further benefit, bears directly on the disputed positive attribution. Observed pursuit by itself also admits instrumental explanations.
+
+At the independently selected source, the relevant inference is narrower still: given its actuality in esse, ascribe goodness to that very source in esse. Argument `0011703b` uses just this forward instance of `00e962ae` for its goodness conjunct; its causal conjunct has its own premises. There is no defective-but-existing condition of the same subject in which it wholly lacks esse. One cannot carry over the eye's repair ranking by assigning nonexistence a score for the absent subject. The strongest affirmative rationale is internal: esse realizes this bearer as actual, and such constitutive realization is positively perfective of the bearer. A neutralist can accept the first step while denying evaluative force to that fulfillment. I favor the limited ontological ascription on the constitutive reading. Its warrant rests on that evaluative principle, and neither this case nor the root proof extends it to arbitrary determinations or morally right willing. The full biconditional retains its direct assumption and the due-actuality derivation with explicitly universal due coverage.
+
+## Research attempts citing this note
+
+- [Owner selected a proposition, superseding adopted-definition proposal](../../corpus/attempts/goodness-form-end-forks-1116.json)

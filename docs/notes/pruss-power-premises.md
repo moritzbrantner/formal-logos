@@ -6,7 +6,7 @@ route's power premises"), God-existence stage of the #143 root.
 **Batch.** `specs/pruss-power-premises.toml`; vocabulary
 `TruthCore.Modal.PrussPowerPremises`; results
 `TruthCore.Results.Modal.PrussPowerPremises`. Attempt
-`daf87aca-9ae5-44e0-b56c-b37712ec2710`.
+[`daf87aca-9ae5-44e0-b56c-b37712ec2710`](../../corpus/attempts/daf87aca-9ae5-44e0-b56c-b37712ec2710.json).
 
 **Target.** The route with Pruss's own premise of #1889
 (`docs/notes/modal-grounding-frameworks.md` §5): result `42da6b2d`
@@ -436,8 +436,11 @@ contingent giving.
   - a reason why the replacement reading of `q` is the only coherent one. Then
     the creator reading fails and the C2 link drops.
 - *For the will bridge:* a reason why chance cannot be exercised by a
-  patientless necessary being, for example if chance requires a chancy set-up
-  with contingent conditions. This would strengthen the Θ.5 bridge.
+  patientless necessary being. (The candidate "chance requires a chancy set-up
+  with contingent conditions" was examined in
+  [will-versus-chance.md](will-versus-chance.md) §5 and rejected: it names
+  set-up chance, CHANCE_2, and begs the question against an indeterministic
+  propensity, CHANCE_3.)
 - *For the transfer:* a derivation of the creator reading from P1′ together
   with a principle that a member's possible absence is grounded in power over
   its being. That would make the transfer warranted, but it would share PGP's
@@ -454,11 +457,15 @@ contingent giving.
   1. **Θ.5 bridge:** a necessary concrete being whose giving of being varies
      across accessible worlds where it exists, with no varying external
      condition, has will (HAS_WILL_1). It is blocked by the chance rival in §5.
+     Continued in [will-versus-chance.md](will-versus-chance.md): built for
+     sources with an invariant set-up (arguments C and D), with the restricted
+     Θ.5 premise shown to be exactly the denial of CHANCE_3 in its scope; an
+     intellect-and-one-power route discriminates without it.
   2. **Identification:** the holder is GOD_4 (uniqueness and the existing
      identification nodes).
 - **Related existing work:** #435 and #462 (models of a necessary source with
   varying activity on `Ontic.Causes`), #555 `SimplicityCollapse`, and #1737/#1875
-  `OptimalCreationChoice` (attempt `8ab7f5a1`). Those certify consistency by
+  `OptimalCreationChoice` (attempt [`8ab7f5a1`](../../corpus/attempts/divine-knowledge-choice-creation-1737.json)). Those certify consistency by
   models. This batch *derives* varying giving from a modal-grounding premise.
   Actual-root correspondence between `GivesAt` and those relations is not
   claimed.
@@ -485,7 +492,10 @@ is attributed. No statement says "God", "will", "choice" or "freedom".
 ## 9. Remaining gaps and next tests
 
 1. The Θ.5 bridge from two-way giving to will, and the chance rival (§5, §7).
-2. Identification of the holder with GOD_4.
+2. Identification of the holder with GOD_4. Built conditionally in
+   [holder-root-identification.md](holder-root-identification.md): every
+   holder is an actual root given existence at `w` and NAR (necessary actual
+   concreta are underived), then the common GOD_4 root or at most one root.
 3. A tensed variant over `IsAt` (from #1889 gap 2). Withholding in time,
    annihilation of something existing, is not represented; `GivesTo` is "at
    some moment".

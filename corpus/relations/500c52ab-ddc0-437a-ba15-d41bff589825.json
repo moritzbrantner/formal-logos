@@ -1,0 +1,10 @@
+{
+  "id": "500c52ab-ddc0-437a-ba15-d41bff589825",
+  "label": "The meditator thinks is the selected-bearer thinking premise on the idea frame",
+  "subject_kind": "statement",
+  "subject_id": "22954087-d5fb-4bd3-bcb7-5d5167016988",
+  "predicate": "logically_equivalent_to",
+  "object_kind": "statement",
+  "object_id": "b0fd6cc1-8907-5ec6-b0b4-598848314bf2",
+  "note": "The same proposition on the idea frame's carrier: MeditatorThinks I unfolds (through ThinkingRootFork.Thinks) to 'some episode e occurs and the meditator I.me bears e', which is SelectedBearsOccurringThought with Occurs := I.Occurs, Bears := I.Bears and the selected being := I.me. Verified for every idea frame as meditatorThinksIff (Iff.rfl), a Comparator-checked theorem of the restated-premise controls result. Same occurrence and bearer senses (DEF-THOUGHT-OCCURRENCE, DEF-THOUGHT-BEARER). The equivalence holds at that instantiation: the selected-bearer premise is stated for any occurrence and bearing relations and any selected being, the cogito premise for the meditator of an idea frame, so it is the selected-bearer premise with the selection fixed as the meditator, not a claim that every selected being is a meditator. The records stay distinct (Cartesian idea-of-the-infinite route and Round 3 cogito-base grounding route, different carriers, frozen Challenges); no argument is registered in either direction."
+}

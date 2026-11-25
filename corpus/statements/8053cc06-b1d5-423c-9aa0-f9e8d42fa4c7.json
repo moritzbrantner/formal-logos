@@ -1,0 +1,14 @@
+{
+  "id": "8053cc06-b1d5-423c-9aa0-f9e8d42fa4c7",
+  "label": "The cause of every SERIES_OF_CAUSES_4 link is itself efficiently caused in some respect",
+  "paraphrase": "OPEN analyst bridge, attribution deferred: whenever here and now c efficiently causes the being of x per se, as caused (SERIES_OF_CAUSES_4, definition 57348ddc), something here and now efficiently causes c in some respect (EfficientlyCausesIn d c r, DEF-EFFICIENT-CAUSING). AsCaused already says that c's own esse is caused, but in an unspecified mode; this premise closes the mode gap to the efficient, present causing the secunda via's per se ordering premise 8a22ae75 asks of a middle cause. Positive warrant: on the existential reading c's being is caused here and now, and a present cause of being is an efficient cause in the respect of being. No case of a non-efficiently caused existential link is on file. Its positive warrant is thin: it rests on reading 'caused in being here and now' as efficient causing, which the definitions of AsCaused and DEF-EFFICIENT-CAUSING do not settle.",
+  "lean_declaration": "TruthCore.Causality.DependenceOrderSenses.ExistentialLinkCauseIsEfficientlyCaused",
+  "definition_ids": [
+    "57348ddc-eaa0-4f0d-bf3f-ce358f452b53",
+    "69c0b23e-54c7-57a1-871f-839c6e5514c6",
+    "4bca086d-1fa5-4b0d-bf2b-a22f3f0ac740"
+  ],
+  "disambiguation_ids": [
+    "81c233d4-01b4-528c-8bbd-7da228443ffe"
+  ]
+}

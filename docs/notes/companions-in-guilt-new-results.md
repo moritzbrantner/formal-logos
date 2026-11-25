@@ -4,7 +4,7 @@ Analyst comparisons, attribution deferred. This note studies which objections
 transfer under the **same explicit standard**. Shared burden does not establish
 either position, equal evidence, equal posterior probability, consistency or
 moral adequacy. A rival's defect does not remove the target's defect. Existing
-source leads remain in the linked notes; no new source reading is claimed.
+source leads remain in the linked notes; no new source reading is claimed. [Research record](../../corpus/attempts/companions-in-guilt-new-results.json)
 
 ## Population aggregation: a proved common calibration burden
 

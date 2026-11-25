@@ -1,0 +1,29 @@
+{
+  "id": "3c556cdd-cf98-4211-a8c5-b89782d493b5",
+  "label": "Is every holder of the joint-absence power the selected root that the intellect routes reach?",
+  "date": "2026-11-24",
+  "statement_ids": [
+    "813a9181-8cce-45a0-a3f1-ad8cd2b281c6",
+    "0050b6ed-3c7d-4d6a-b97a-417837d76184",
+    "fdd2b1cf-503b-4241-aaa1-2e4a06db5723",
+    "66aecdd7-ea4e-55c6-9377-10db08893854",
+    "0a995309-2656-469b-81b1-3d70cbc3cab9",
+    "43651417-cd19-43d7-8f70-8def61acb0f0",
+    "b517ca3e-503e-4346-b0e0-7b99ad4e875d",
+    "5f93d4f0-3780-45f6-9d65-da8ced71c922",
+    "2146ebc9-d410-4e26-bfaf-327ae950eeb7"
+  ],
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "See docs/notes/holder-root-identification.md. Verified zero-axiom results: 88f1ee6e (every holder is an actual root of the selected grounding G on the frame's existence, from excluded middle, P2' 906f5c39, P3' a6906cab, holders existing at w and NAR, NECESSARY_2 actual concreta are roots), 1be2993c (813a9181 from that and the common GOD_4 root with intellect 0c27f65a), cb42e5e2 (every holder is GOD_4, the converse of 0050b6ed), 9b7683e1 (at most one holder from at most one actual root 49fdec01, whose uniqueness premise is a576300f, De ente's no-multiplication inventory), 834ddcfa (66aecdd7 from #1941's willed holder fdd2b1cf, 0050b6ed, at most one holder and 65e0179f). Law 1 derives the necessity of every holder from P2' and P3'. Main finding: uniqueness does not identify the holder; in the necessary-through-another model both uniqueness premises hold and the holder is a necessary being grounded by the root. The identification's crux is NAR. Frames joined only by FirstMoverNecessity.groundProfile; G is a parameter, not giving, causing, dependence or priority. Argument 5 shares the will-specific premise 090be689 with 571e36f0 and 13338e9c, so it adds no independent support for the will-follows-intellect step; its intellect input is the governor endpoint 0c27f65a, not 29818edd, and with 0050b6ed and at most one holder its premises jointly imply that every GOD_4 has that witness's intellect: an alternative intellect bundle, not a re-presentation of 571e36f0. Computed delta (base 87857479e): support alternatives added for 0a995309, 5c1aba17, 5f93d4f0, 66aecdd7, 813a9181 and fdd2b1cf; bare premises now reaching the root: 43651417 (NAR), b517ca3e (holders at w), 71fc097b and 9856239a (through argument B).",
+  "blocker": "Not blocked for the formal question. Open warrant: NAR (that a modally necessary actual concretum has no actual concrete ground). Its warrant is direct prima facie plausibility; no independent support was found (aseity restates it, free creation is theist-internal). Strongest rival: a NECESSARY_2 actual concretum with an actual concrete G-ground that holds the power (the shape of Avicenna's necessary through another, whose causal version bears on NAR only through cb1cdea9). Next test: derive NAR from (a) the root's giving to every G-grounded concretum is two-way and (b) a G-grounded concretum exists at v only if its G-ground gives it being at v (an explicit G-to-giving bridge). Premise (a) extends #1897's two-way profile to putatively necessary beings, which is what the rival denies and is close to theist-internal free creation; it relocates the question unless itself derived, e.g. from one power, an invariant set-up and simplicity giving a uniform mode of giving across effects (#555; #1897 gap 6).",
+  "evidence": [
+    "88f1ee6e-2c04-4f5b-8066-c5f1121bed74",
+    "1be2993c-d4f6-44a0-ac6e-c67dca042946",
+    "cb42e5e2-a78c-40d0-b344-181156c7fada",
+    "9b7683e1-962c-4a26-9815-864792234389",
+    "834ddcfa-8631-4bbc-8afc-6ae04ccc55d0",
+    "d8073ba0-ff27-479a-adbe-05086acb1da1",
+    "PR-1944"
+  ]
+}

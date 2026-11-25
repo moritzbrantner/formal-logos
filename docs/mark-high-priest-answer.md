@@ -5,7 +5,7 @@ It does not add independent attestation or establish a historical claim.
 Issue #381 remains open for historical defense, rival comparison and the
 remaining texts. The binding whole-system comparison guidance in
 [catholic-case.md](catholic-case.md) excludes certainty numbers and hidden
-trilemma assumptions.
+trilemma assumptions. [Research record](../corpus/attempts/mark-14-high-priest-answer.json)
 
 ## Verified witness and context
 

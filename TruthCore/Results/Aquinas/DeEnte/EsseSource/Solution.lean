@@ -2,6 +2,7 @@ module
 
 public import TruthCore.Latin.Aquinas.DeEnte.EsseSource
 public import TruthCore.Causality.RootPurity
+public import TruthCore.Logic.RootDescent
 
 /-!
 # De ente: one first being whose esse is its essence (#1628)
@@ -42,6 +43,7 @@ open TruthCore.Latin.Aquinas.SummaTheologiae.PrimaPars.Question3.Article4
 open TruthCore.Causality.EsseReception
   (EsseReceivedOnlyInOwnEssence NothingInReceptivePotencyToItself)
 open TruthCore.Logic (ExcludedMiddle)
+open TruthCore.Logic.RootDescent (acc_exists_transGen)
 
 variable {B P R : Type}
 
@@ -74,16 +76,13 @@ theorem distinctEsseHasEsseIsEssenceSource (p : Profile B P R)
     (hOther : DistinctEsseHasOtherActualCause p)
     (hRegress : NoInfiniteActualEsseCauseRegress p) (hEM : ExcludedMiddle) :
     EveryDistinctEsseHasEsseIsEssenceSource p := by
-  intro x
-  induction x using hRegress.induction with
-  | _ x ih =>
-    intro hx
-    obtain ⟨c, hcx, hc, hCause⟩ := hOther x hx
-    have hStep : ActualEsseCause p c x := ⟨hcx, hc, hx.1, hCause⟩
-    rcases hEM (p.esseOf c = p.essenceOf c) with hId | hDistinct
-    · exact ⟨c, hc, hId, Relation.TransGen.single hStep⟩
-    · obtain ⟨n, hn, hnId, hChain⟩ := ih c hStep ⟨hc, hDistinct⟩
-      exact ⟨n, hn, hnId, Relation.TransGen.tail hChain hStep⟩
+  intro x hx
+  obtain ⟨n, ⟨hn, hnId⟩, hChain⟩ := acc_exists_transGen
+    (Stop := fun n => p.InAct n p.esse ∧ p.esseOf n = p.essenceOf n)
+    (fun y hy => let ⟨c, hcy, hc, hCause⟩ := hOther y hy
+      ⟨c, ⟨hcy, hc, hy.1, hCause⟩, (hEM (p.esseOf c = p.essenceOf c)).imp (⟨hc, ·⟩) (⟨hc, ·⟩)⟩)
+    (hRegress.apply x) hx
+  exact ⟨n, hn, hnId, hChain⟩
 
 /-- A well-founded relation has no cycle through its transitive closure. -/
 theorem not_transGen_self {α : Type} {r : α → α → Prop} (hWF : WellFounded r) (a : α) :

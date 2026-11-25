@@ -77,7 +77,7 @@ pub const HELP: &str = "Usage: truth [--root PATH] [--json] status
        truth [--root PATH] [--json] evidence TARGET [--issues-from FILE] [--limit N]
        Research retrieval commands accept --full-evidence for complete node content and all edges.
        truth [--root PATH] [--json] issues --from FILE [--for ID]
-       truth [--root PATH] [--json] brief (TARGET | --question TEXT | --assessments-for ID,ID,...) [--issues-from FILE] [--limit N]
+       truth [--root PATH] [--json] brief (TARGET | '#ISSUE' | --question TEXT | --assessments-for ID,ID,...) [--issues-from FILE] [--limit N]
              [--frontier-json FILE] [--frontier-root STATEMENT]
        truth [--root PATH] [--json] novelty (TEXT | --statement STATEMENT) [--issues-from FILE] [--limit N]
              [--frontier-json FILE] [--frontier-root STATEMENT]
@@ -123,7 +123,8 @@ pub const HELP: &str = "Usage: truth [--root PATH] [--json] status
        truth [--root PATH] [--json] prove-sweep [--theorem NAME]... [--module MODULE]... [--heartbeats N]
              [--batch N]
        truth [--root PATH] [--json] discover (--target STATEMENT | --targets open-root|next-tests)...
-             [--module PREFIX]... [--premise-pool closed|proved|all] [--candidates N] [--limit N]
+             [--module PREFIX]... [--premise STATEMENT]... [--limit N]
+             [--premise-pool closed|proved|all] [--candidates N]
              [--heartbeats N] [--batch N] [--jobs N] [--zipperposition PATH] [--write-spec PATH]
 
 An ID, STATEMENT, TARGET or --target may be a uuid, a legacy id (STMT-...) or a label.

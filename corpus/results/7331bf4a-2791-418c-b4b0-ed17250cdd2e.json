@@ -1,0 +1,11 @@
+{
+  "id": "7331bf4a-2791-418c-b4b0-ed17250cdd2e",
+  "label": "Separate a forced aggregate source share from credit for either particular output",
+  "argument_id": "2602262c-980c-40b9-9968-3ea8c45c4432",
+  "challenge_module": "TruthCore.Results.Causality.ReceiptAllocation.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ReceiptAllocation.Solution",
+  "theorem": "TruthCore.Results.Causality.ReceiptAllocation.controls",
+  "comparator_config": "results/7331bf4a-2791-418c-b4b0-ed17250cdd2e/comparator.json",
+  "status": "solution-present",
+  "description": "The two positive-input cases distinguish the role of storage from compulsory consumption. In the exhausted two-output case the source must feed the combined work, but either individual outlet can receive the named unit."
+}

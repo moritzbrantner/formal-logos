@@ -10,7 +10,7 @@ were made.
 
 Formal home: `TruthCore/Latin/Aquinas/DeEnte/ExtrinsicSource.lean`, results in
 `TruthCore/Results/Aquinas/DeEnte/ExtrinsicSource/`, spec
-`specs/de-ente-extrinsic-source-1629.toml`, attempt `fbc68d10`.
+`specs/de-ente-extrinsic-source-1629.toml`, attempt [`fbc68d10`](../../corpus/attempts/fbc68d10-30e4-44b7-ad15-fa302bbad31e.json).
 
 ## The passage and its steps
 
@@ -394,3 +394,7 @@ this dated continuation and the coordinator conclusions found no substantive
 defects; no repair round was required. This supersedes the pending-review
 wording of this dated section. See the [integration record](unique-feedback-explanation-311.md#reviewed-owner-reply-integration-2026-11-17)
 for verification, source scope and unchanged formal status.
+
+## Research attempts citing this note
+
+- [Cluster reassessment of the composition, esse and necessity leaves of the prima via route](../../corpus/attempts/c7445224-d3aa-4364-b038-0853f2a95ce8.json)

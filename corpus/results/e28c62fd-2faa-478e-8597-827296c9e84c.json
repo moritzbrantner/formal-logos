@@ -1,0 +1,12 @@
+{
+  "id": "e28c62fd-2faa-478e-8597-827296c9e84c",
+  "label": "Restrict the exhaustive personal roster to its three origin candidates",
+  "argument_id": "90d02428-e3be-4939-80f4-e45162fa5af8",
+  "challenge_module": "TruthCore.Results.Case.Catholicism.ImmanentOrigins.Challenge",
+  "solution_module": "TruthCore.Results.Case.Catholicism.ImmanentOrigins.Solution",
+  "theorem": "TruthCore.Results.Case.Catholicism.ImmanentOrigins.restrictExact",
+  "comparator_config": "results/e28c62fd-2faa-478e-8597-827296c9e84c/comparator.json",
+  "status": "solution-present",
+  "description": "Strength comparison only. The iterated-origin control witnesses failure of the converse.",
+  "transcription": "single_application"
+}

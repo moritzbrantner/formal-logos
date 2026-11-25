@@ -1,0 +1,16 @@
+{
+  "id": "2dd1f217-77bd-42cd-9410-174b939b0e45",
+  "label": "Every actual root gives being at w to each being it grounds that exists at w",
+  "paraphrase": "OPEN bridge (b1), analyst formulation, unattributed: every actual root n of the selected grounding relation G at w gives being (GivesTo) at w to each being x that n grounds at w and that exists at w. The local G-to-giving bridge at the root (rigor contract 5 of #1926; #1626): grounding by the root read as productive dependence for being (the sustaining cause-of-being sense of 88a8fba7). Restricted to roots and to w, the weakest form arguments N2 and N3 use. Classical theism (conservation) and Avicenna's emanation both accept it; it fails if G is read as non-productive dependence (a singleton on its member).",
+  "lean_declaration": "TruthCore.Causality.NarDerivation.ActualRootsGiveGroundedHere",
+  "definition_ids": [
+    "c57e2682-08e6-527e-950f-0fa0a7ff11ef",
+    "a1b2e330-388f-4120-bc5c-969642317792",
+    "62dfa893-b633-4513-9790-8f9a0a3087e0",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ],
+  "disambiguation_ids": [
+    "623ddbf6-9683-5361-bae4-e348a00ec680"
+  ]
+}

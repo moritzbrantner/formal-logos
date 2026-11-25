@@ -1,0 +1,10 @@
+{
+  "id": "38618462-2a4f-4106-9ee9-962d9f3d59c2",
+  "label": "Determine all threshold gains and losses from the two source increments (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "54550834-0718-437e-8e24-e8533eb0ed35",
+  "rule": "Order and cancellation on integer gaps",
+  "meaning": "The positive readings of the strict comparison are the offsets below the signed gap. Two gaps agree if their strict lower sets agree, since the smaller gap separates any two different ones. Equality of the actual and residual gaps then cancels their common baseline and forces equality of the two increments.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

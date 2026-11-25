@@ -15,7 +15,8 @@
   "evidence": [
     "ef1815c4-25cc-5cbc-9ac5-3a64e9b7df65",
     "6971850e-d66f-5507-824d-a384dcb66714",
-    "afbe58e1-4d48-5ddd-b3fb-21b7f538c4b2"
+    "afbe58e1-4d48-5ddd-b3fb-21b7f538c4b2",
+    "PR-810"
   ],
   "blocker": "All philosophical application premises remain open. This connects local-ancestry results to an existing route premise; root route cost changes require coordinator frontier recomputation and must not be described as truth discharge."
 }

@@ -1,0 +1,46 @@
+{
+  "id": "fc809039-c470-4230-b16f-201a8615e80f",
+  "label": "Does the existential giver produce the particular effect through or with the secondary agent?",
+  "date": "2026-11-24",
+  "statement_ids": [
+    "b26c10a0-983d-5a88-aa03-cc601bc1ddc6",
+    "d851dbc6-c30f-4fc3-bf41-88fbbd780786",
+    "6dd808ed-ddcf-4915-8ca7-090ef32f00ee",
+    "b4987085-f7b0-4031-a795-364873d3c216",
+    "791fa216-ce40-5e7d-82c5-0bd5fe245446",
+    "7067553d-cad9-5d79-b6b2-912e35051530",
+    "91b81949-a6a5-4676-845e-35ac82140cce",
+    "b2c4bc00-9479-4480-b052-8e5bc05e3e0b"
+  ],
+  "kind": "reading",
+  "outcome": "blocked",
+  "summary": "See docs/notes/actuality-esse-research.md §11. Aquinas's De potentia q.3 a.7 and SCG III.66–70 defend application through the lower agent on the basis of being as proper effect and efficacy derived in this production. Molina, Concordia II, disp. 26 §§2–16, defends immediate cooperation in a numerically single operation and its effect. Both offer positive accounts of the same heating. Mere conservation also has a positive rival account in exercised intrinsic powers of sustained agents. An actively maintained angle and a setting maintained by a latch discriminate which agent is now responsible for the outgoing ray's location. A change of sustainer at a seam distinguishes the time of preservation from onset. The origination of one particular oscillation gives de re credit for the string starting to vibrate where the two descriptions identify the whole change. It gives no automatic credit for a contrast in pitch. The argument applies to a distinct dependent effect only with an identified efficient terminus. Nonsubsistent determinations leave the question at the patient. Actual contribution to a common operation gives local productive credit without requiring the giver to have acted on the secondary as agent.",
+  "blocker": "Universality for bearers' esse does not identify the same giver's efficient contribution to every actual respect from onset, still less a directional contribution to each secondary's exercise. The proper-effect argument also requires that the powers be ordered to the giver in their operation. Shared production under Molina's account already grants the disputed effect-side contribution. Neither agreement nor a finite interpretation settles the issue against the conservationist.",
+  "evidence": [
+    "PR-1921",
+    "PR-1922",
+    "PR-1923",
+    "a587f218-82d7-4080-b528-f6bc650cdf85",
+    "63aa606d-7980-4734-a6c8-3c00c97e90a4",
+    "9dfa0bbc-e343-41f0-895d-71b5f4b63c71",
+    "b49d3550-271c-49f2-bc3f-de9ac58b504f",
+    "PR-1924"
+  ],
+  "current_assessment": {
+    "date": "2026-11-24",
+    "statement_ids": [
+      "b26c10a0-983d-5a88-aa03-cc601bc1ddc6",
+      "d851dbc6-c30f-4fc3-bf41-88fbbd780786",
+      "b4987085-f7b0-4031-a795-364873d3c216"
+    ],
+    "scope": "Productive responsibility at the particular effect and application through its agent, §11.",
+    "assessment": "Effective contribution to the particular change warrants credit to the giver in that respect, including immediate cooperation with a secondary or application of its efficacy. The former supplies a positive account without requiring action on the secondary as agent. Conserved intrinsic powers in actual interaction explain why the conservationist can deny either further role. The evidence for universal application and for transfer to every actual respect remains underdetermining.",
+    "next_test": "Identify on independent grounds whether the maintained determination in this patient, including at onset, is a proper terminus of the named giver's efficient influence. For strict application also identify the direction of dependence in the exercise of the secondary power.",
+    "note": "docs/notes/actuality-esse-research.md#11-does-the-giver-act-through-the-secondary-agent-in-this-effect",
+    "supersedes": "The test in §10 which asked whether the giver acts through the secondary has been carried out. Effect-side concurrence supplies a second route for local credit. No change to §10's producer-onset verdict, the general assessment of transfer, or the assessment of composition at esse.",
+    "reviewed_revision": "dd8a190aa9e1482040a5225a68e794e1d244528e",
+    "review": "accepted_qualified",
+    "publication": "merged",
+    "evidence": "Independent semantic challenge of 90cc298771f177e863102ab92b83d6a5ebb51343 and targeted acceptance of dd8a190aa9e1482040a5225a68e794e1d244528e. The corrected §11 distinguishes joint production in the patient from dependence of the fire as agent. The challenge covered both ontologies, source locators, warrant, two exact theorem types and their scope for the existing targets. Merged in PR-1924 at 6ecc2d87c3576906cb32ea8dbbca22e7557cce6b."
+  }
+}

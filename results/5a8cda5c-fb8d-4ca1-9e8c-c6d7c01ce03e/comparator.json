@@ -1,0 +1,10 @@
+{
+  "challenge_module": "TruthCore.Results.Explanation.RepresentedOccurrence.Challenge",
+  "solution_module": "TruthCore.Results.Explanation.RepresentedOccurrence.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Explanation.RepresentedOccurrence.concretePopulation",
+    "TruthCore.Results.Explanation.RepresentedOccurrence.denialControl"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}

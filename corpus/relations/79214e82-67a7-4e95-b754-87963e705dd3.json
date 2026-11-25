@@ -1,0 +1,10 @@
+{
+  "id": "79214e82-67a7-4e95-b754-87963e705dd3",
+  "label": "The law-2 refutation refutes the unique-optimum optimizing root",
+  "subject_kind": "argument",
+  "subject_id": "0e335f77-4240-4a38-9d7a-7819c7a40778",
+  "predicate": "refutes",
+  "object_kind": "statement",
+  "object_id": "b72a790a-2b4a-45fd-8e90-4aec3db0fac6",
+  "note": "Conditional consequence-defeat: it rests on the open premises (b1), factive giving, the common root, necessary roots and some contingent concretum, so it does not count (#999). The rival's escapes: tied optima (G3's model keeps two-way giving), giving up optimal giving where no best exists, denial of the common root's direct reach (the mediated creator, chainG), or denial of another law-2 premise."
+}

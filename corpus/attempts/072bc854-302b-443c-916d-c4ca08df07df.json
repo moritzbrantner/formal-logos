@@ -1,0 +1,22 @@
+{
+  "id": "072bc854-302b-443c-916d-c4ca08df07df",
+  "label": "Reverse support between the two POTENCY_1 and privation analyses",
+  "statement_ids": [
+    "3c0b7bb3-1526-55a9-b71e-0d5fb3148782",
+    "7c3da33e-7ead-54f8-aace-ed3cf3a7bb02",
+    "c85e8ef5-3dc4-502d-90f8-da1429e33fd8"
+  ],
+  "date": "2026-11-24",
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "The November 13 reconstruction now has two result-backed directions at the existing generic statements. Given F (P iff capacity and lack of act), Q (privation iff lack of act on capable subjects) yields T (P iff capacity and privation), and T yields Q. The companion adoptedEquivalence substitutes the existing adopted function for every occurrence of P and uses AdoptedPotency.analysis, so only in that specialization can the equivalence omit F. Both argument records preserve the same freely supplied predicates and record F as their sense bridge. The proofs add conditional support choices. Because the only previous consumer of T and Q was their joint derivation of F, neither reverse rule gives an independent path into F. The fixed meanings and the prior conceptual warrant stand; the proof adds no observational or historical evidence. See docs/notes/potency-privation-support-investigation.md for the concrete First Way composition, fixed-point comparison, rival and revision tests.",
+  "evidence": [
+    "30f03b0e-b8e7-4749-89e3-f19d687263e6",
+    "ac7a46e7-8d1c-4b87-9ba2-42c56034de08",
+    "b39f5282-fa9a-5433-a9ef-eebcac297295",
+    "b9c3f090-3bf2-5c96-ae3e-c18a1d63cd3b",
+    "2814c3db-a02a-5cd8-87b4-4751c884ef1a",
+    "PR-1965"
+  ],
+  "blocker": "Application to a power retained during exercise would need a different interpretation: at C and A that power can persist, whereas F excludes P there. For stage-relative privation establish that capacity implies due possession at that stage, or restrict Q. Reopen the present application if a consumer changes the subject, respect, act or evaluation context, or a capable instance violates Q in its broad sense."
+}

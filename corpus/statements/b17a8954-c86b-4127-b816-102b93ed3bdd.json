@@ -1,0 +1,18 @@
+{
+  "id": "b17a8954-c86b-4127-b816-102b93ed3bdd",
+  "label": "An actual CAUSE_2 of esse between actual CONCRETE_6 individuals grounds it at w",
+  "paraphrase": "OPEN analyst bridge, attribution deferred, the weak version of cb1cdea9: at the selected world w, if c and x are both concrete and exist at w, c is distinct from x and c causes the esse of x (CausesIn c x esse, CAUSE_2), then c grounds x under the selected relation at w. Unlike cb1cdea9 it does not conclude that the cause is concrete or exists at w; it assumes both. So the scope condition on cb1cdea9 (a world-free, tenseless cause of being absent at w, such as an originating cause or cause of coming to be, row 14 of causal-dependence-support-investigation.md (e)) does not touch it. It still identifies a distinct cause of esse between actual concreta as a grounding step, which presupposes reading the selected relation as existential grounding of those concreta.",
+  "lean_declaration": "TruthCore.Causality.OneDependenceOrder.ActualEsseCauseIsActualGround",
+  "definition_ids": [
+    "9969dfc2-1f2e-50be-b5e6-1f9cd402c7a6",
+    "a1b2e330-388f-4120-bc5c-969642317792",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "008cb21a-256c-5a90-822c-acd4591d699a"
+  ],
+  "disambiguation_ids": [
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "896d4cb9-3c62-5230-a499-f23feae9d204"
+  ]
+}

@@ -7,7 +7,7 @@ not direct current research. Follow the
 [systematic research loop](../systematic-corpus-loop.md) to investigate warrant,
 compare the strongest rivals and record reasoned provisional judgments.
 Personal assent is not philosophical warrant. This qualification changes no
-corpus marking or computed closure.
+corpus marking or computed closure. [Research record](../../corpus/attempts/moorean-floor-candidates-1119.json)
 
 This is a reviewable **proposal batch**, requested in [#1119](https://github.com/moritzbrantner/truth-core/issues/1119), not a floor register or an approval. The authoritative register is the corpus's `self_evident` markings, projected by `corpus.py frontier --json` and the explorer. No marking, source claim, relation, definition or Lean theorem changes in this batch.
 
@@ -62,7 +62,7 @@ For items 1–3, the *potential downstream target* is the one revelation leaf sh
 
 **Exact scope/type:** `NaturalReasonIsSharedReading P := ∀ m, P.AffirmsNaturalKnowability m → P.AnswersToSharedReason m`. This is about which standards a move answers to, not a claim that everyone actually knows God, agrees on every inference, or occupies a view from no conceptual framework.
 
-**Recorded rival:** `STMT-NATURAL-REASON-WITHIN-THEOLOGICAL-HORIZON`: the tradition's natural reason is exercised within a theological horizon and may be internal to a theistic form of life. This rival is untyped. Non-Christian knowers are not thereby shown to stand outside every theological horizon; that rejected inference remains recorded in `ATTEMPT-LUMEN-NATURALE-WITNESSES-1010`. Choosing this candidate must not quietly replace “shared with outsiders to this practice” by the stronger “neutral to every form of life.”
+**Recorded rival:** `STMT-NATURAL-REASON-WITHIN-THEOLOGICAL-HORIZON`: the tradition's natural reason is exercised within a theological horizon and may be internal to a theistic form of life. This rival is untyped. Non-Christian knowers are not thereby shown to stand outside every theological horizon; that rejected inference remains recorded in [`ATTEMPT-LUMEN-NATURALE-WITNESSES-1010`](../../corpus/attempts/ATTEMPT-LUMEN-NATURALE-WITNESSES-1010.json). Choosing this candidate must not quietly replace “shared with outsiders to this practice” by the stronger “neutral to every form of life.”
 
 **Checked consequence:** the same `fideismFailsAsDescription` theorem derives the sharp pair's failure from the canon plus both bridges. `needsNaturalReasonIsShared` witnesses that a correct defined move can answer to no shared standard if this reading is dropped. It is a conditional incompatibility, not a retorsion proving this candidate independently.
 
@@ -96,7 +96,7 @@ Consequently, even hypothetical settlement of all three inputs establishes only 
 
 **Exact type:** `UniverseHasExistingCause o F w := ∃ c, o.ExistsAt w c ∧ o.Causes w c F.whole` in `TruthCore/Ontology/NaturalismConsequences.lean`.
 
-**Recorded rival:** `STMT-UNIVERSE-UNCAUSED`, which excludes **every** incoming causal edge. It is stronger than ¬U: the supplied `Ontic` need not make causal endpoints exist. `ATTEMPT-NATURALISM-NO-EXISTING-CAUSE-1117` preserves the counterexample to identifying these two denials. U does contradict the stronger uncaused-whole position, but ¬U must not be described as that position.
+**Recorded rival:** `STMT-UNIVERSE-UNCAUSED`, which excludes **every** incoming causal edge. It is stronger than ¬U: the supplied `Ontic` need not make causal endpoints exist. [`ATTEMPT-NATURALISM-NO-EXISTING-CAUSE-1117`](../../corpus/attempts/ATTEMPT-NATURALISM-NO-EXISTING-CAUSE-1117.json) preserves the counterexample to identifying these two denials. U does contradict the stronger uncaused-whole position, but ¬U must not be described as that position.
 
 **Checked rival consequence:** `CAUSED-UNIVERSE-REFUTES-N1` has four premises: U, `STMT-CAUSING-WHOLE-CAUSES-PARTS`, `STMT-NOTHING-IS-EFFICIENT-CAUSE-OF-ITSELF`, and `STMT-THESIS-CONTAINED-IN-SPACETIME`. Its logical contrapositive says that N1 with the *other three inputs* implies **no existing cause**. This is not a consequence of bare N1 alone. A spatial part-of-the-whole thesis makes containment definitional; occupant, relational and physical readings need their own bridge. N2 additionally uses the approved weak causal-concreteness floor item; N3 needs exercise-to-power and N3i needs the whole to satisfy the thesis. No premises may be dropped by grouping all variants as naturalism.
 
@@ -104,7 +104,7 @@ Consequently, even hypothetical settlement of all three inputs establishes only 
 
 ## Candidates deliberately not duplicated or promoted
 
-- **Meaningfulness of universal laws / negation closure:** `STRONG-VERIFICATIONISM-WITH-LAWS-FAILS` already derives its defeat from the approved weak negation-closure floor item. A new “laws are meaningful” approval is unnecessary for that existing defeat. This does not settle Carnap's V4 proposal reading: `VERIFICATIONISM-PROPOSAL-JOINT-SURVIVOR` and `ATTEMPT-CARNAP-V4-BRIDGE-1008` preserve its distinct pragmatic/analytic escapes.
+- **Meaningfulness of universal laws / negation closure:** `STRONG-VERIFICATIONISM-WITH-LAWS-FAILS` already derives its defeat from the approved weak negation-closure floor item. A new “laws are meaningful” approval is unnecessary for that existing defeat. This does not settle Carnap's V4 proposal reading: `VERIFICATIONISM-PROPOSAL-JOINT-SURVIVOR` and [`ATTEMPT-CARNAP-V4-BRIDGE-1008`](../../corpus/attempts/carnap-v4-bridge-1008.json) preserve its distinct pragmatic/analytic escapes.
 - **Something changes against McTaggart:** `MCTAGGART-BUNDLE-DEFEATED-BY-CHANGE` already uses approved F3. Its typed scope is the 1908 pair of theses, not every McTaggart-inspired restriction about opiners. No new floor item is requested.
 - **N1 excludes existing pure sets:** the naturalism showcase lists the required law/mathematics consequences as not yet encoded. The adopted abstract anchor is not itself a proof that an existing pure set is non-spatiotemporal in the selected sense. No floor proposal here claims that consequence has already been certified.
 - **Brute universe has no explanation of contingent existence:** `UniverseUncaused` excludes efficient causes of a selected whole, not all PSR reasons for contingent facts. A causal/explanatory bridge would be needed. No new “everything has an explanation” floor item is inferred from its name.
@@ -113,3 +113,7 @@ Consequently, even hypothetical settlement of all three inputs establishes only 
 ## Premise comparison and next action
 
 Actual delta: **no premise change**, no new bare premise, no floor proposal enacted. The target closure rule is a future counted defense of `STMT-REVELATION-POSSIBLE-AND-RECOGNIZABLE`; the immediate research action is to encode the conjunction/single-rival scopes and interpretation variants explicitly, then test their conditional consequences before claiming that a bridge decision can settle the recorded rival. An argument may cease to support a particular objection without its entire worldview being globally refuted. The coordinator may present items 1–3 as a precisely scoped package for discussion, with item 4 explicitly lower priority. No item should be submitted as a guaranteed route reduction or as already independently warranted.
+
+## Research attempts citing this note
+
+- [Owner request: source and defend the two open bridges of wf fails as description of catholic…](../../corpus/attempts/ATTEMPT-WF-BRIDGES-1010.json)

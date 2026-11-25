@@ -1,0 +1,79 @@
+[batch]
+vocab = "TruthCore.Causality.GiverIndexedApplication"
+results = "TruthCore.Results.Causality.GiverIndexedApplication"
+
+[[statement]]
+id = "Actual esse responsibility composes across an immediately following PER_SE_5 link"
+lean = "PerSeComposition"
+paraphrase = "Open analyst reading. For every actual distinct giver a of b's esse and every actual PER_SE_5 link from b to c, a is causally responsible for c's esse in the same profile. AsCaused b c classifies the outgoing link; applying the rule to every qualifying a is substantive. The profile has no exercise-time index."
+definitions = ["8163859b-95b3-4dd2-8a69-541bd332f32f","211a6432-8b8f-53ed-85e3-75173bb15b24","5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72","4bca086d-1fa5-4b0d-bf2b-a22f3f0ac740"]
+disambiguations = ["002f42cb-3015-5644-80b3-d408538394e6","00e0d443-eb39-56a3-9179-9c8852ca4a2b"]
+
+[[statement]]
+id = "The actual giver applying this intermediate in its exercise receives downstream causal credit"
+lean = "AppliedGiverComposes"
+paraphrase = "Open same-giver interface. On actual distinct esse links a to b and b to c, the specified giver's applying b in giving esse to c warrants causal responsibility of a for c's esse. Through a b c is a supplied relational primitive. No uniqueness, simultaneity or test of exercise identity is presupposed by its type."
+definitions = ["8163859b-95b3-4dd2-8a69-541bd332f32f","211a6432-8b8f-53ed-85e3-75173bb15b24","5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72","6b8ed953-9deb-4272-9e7b-a971be2119c3"]
+disambiguations = ["00e0d443-eb39-56a3-9179-9c8852ca4a2b"]
+
+[[statement]]
+id = "Every actual upstream giver applies the intermediate in the ensuing PER_SE_5 exercise"
+lean = "EachGiverApplies"
+paraphrase = "Open giver alignment. Given actual distinct esse links a to b and b to c with the latter classified as PER_SE_5, the particular preceding giver a applies b in its exercise towards c. This is universal over qualifying preceding givers, including when several distinct individuals give esse to b."
+definitions = ["8163859b-95b3-4dd2-8a69-541bd332f32f","211a6432-8b8f-53ed-85e3-75173bb15b24","5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72","4bca086d-1fa5-4b0d-bf2b-a22f3f0ac740","6b8ed953-9deb-4272-9e7b-a971be2119c3"]
+disambiguations = ["002f42cb-3015-5644-80b3-d408538394e6","00e0d443-eb39-56a3-9179-9c8852ca4a2b"]
+
+[[statement]]
+id = "Two-giver controls for existential application and same-giver composition"
+lean = "Control.Certificate"
+paraphrase = "Four distinct actual roles, with two givers of the producer's esse and a per se (PER_SE_5) producer-recipient link. In the two matched assignments AsCaused b c is exactly application by some actual upstream giver, caused causes cause as caused, and individually applied givers receive downstream credit. With the supporter alone applying the producer, source application and credit, universal giver alignment, restricted composition and general composition all fail. After adding both source application and source credit, alignment and both composition laws hold. With source credit retained but source application removed, existential projection and indexed credit still hold. Alignment fails although both composition laws hold. An assignment test about esse, without a temporal, historical or metaphysical possibility claim."
+definitions = ["8163859b-95b3-4dd2-8a69-541bd332f32f","211a6432-8b8f-53ed-85e3-75173bb15b24","5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72","4bca086d-1fa5-4b0d-bf2b-a22f3f0ac740","6b8ed953-9deb-4272-9e7b-a971be2119c3"]
+disambiguations = ["002f42cb-3015-5644-80b3-d408538394e6","00e0d443-eb39-56a3-9179-9c8852ca4a2b"]
+
+[[argument]]
+id = "Actual esse composition from the caused-as-caused bridge and PER_SE_5 composition"
+theorem = "composeOfPerSe"
+premises = ["ee4ab504-c8fe-59bc-bc96-7cbeefed6410","e74de400-fa5c-4bfa-b233-d6ec6add2975","Actual esse responsibility composes across an immediately following PER_SE_5 link"]
+conclusion = "b4987085-f7b0-4031-a795-364873d3c216"
+axioms = []
+rule = "Split the upstream identity and supply the caused intermediate as an actual witness"
+meaning = "Use the explicitly registered excluded-middle premise on a = b. When they coincide the second edge already gives the claimed responsibility. Otherwise actuality of a, actuality of b from the second link, distinctness and the original edge give an actual first link. That same a witnesses the caused-as-caused bridge for the second link; restricted composition then supplies the required edge for a. A conditional route to q44 source supply, sharing the open per se bridge with the regress route."
+
+[[argument]]
+id = "PER_SE_5 composition from indexed credit and alignment with every giver"
+theorem = "perSeOfApplication"
+premises = ["The actual giver applying this intermediate in its exercise receives downstream causal credit","Every actual upstream giver applies the intermediate in the ensuing PER_SE_5 exercise"]
+conclusion = "Actual esse responsibility composes across an immediately following PER_SE_5 link"
+transcription = "assembly"
+rule = "Project the downstream actual link and apply indexed causal credit to the specified giver"
+meaning = "Assembly that locates the commitment. The alignment premise yields application by this particular incoming giver. The indexed credit premise then assigns the downstream edge to the same giver. This assembly supplies no independent warrant for either input or for the binary composition law."
+axioms = []
+
+[[argument]]
+id = "Finite test of which actual giver applies the producing intermediate"
+theorem = "controls"
+premises = []
+conclusion = "Two-giver controls for existential application and same-giver composition"
+rule = "Exhaust the four roles with one or two appliers and vary the downstream credit"
+meaning = "In the first populated interpretation the named source and supporter both cause the producer's esse and only the supporter applies the producer. Existential projection, indexed credit and the caused-as-caused bridge hold, but composition fails for the source. Adding source application and matching credit restores the universal formulas on the same four roles. With the final edge retained and source application withheld, projection and indexed credit still hold and both composition laws survive despite failure of alignment. The cause table leaves any alternate mechanism for the edge unspecified."
+axioms = []
+
+[[argument]]
+id = "Restrict actual esse composition to a following PER_SE_5 link"
+theorem = "restrictComposition"
+premises = ["b4987085-f7b0-4031-a795-364873d3c216"]
+conclusion = "7648194d-042b-495d-a098-ce906bdc7005"
+transcription = "single_application"
+rule = "Restriction to a classified outgoing link and distinct actual incoming giver"
+meaning = "Scope projection. From an actual incoming link retain the upstream giver's actuality and causal edge; from the per se outgoing link retain its actual causal edge with the other guards. The full law applies without any use of excluded middle or the caused-as-caused bridge. This direction registers the order of assumptions."
+axioms = []
+
+[[relation]]
+id = "General actual esse composition strengthens PER_SE_5 restricted composition"
+subject_kind = "statement"
+subject_id = "b4987085-f7b0-4031-a795-364873d3c216"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "7648194d-042b-495d-a098-ce906bdc7005"
+verification_result_id = "Restrict actual esse composition to a following PER_SE_5 link"
+note = "The unrestricted law gives the restricted law on the same profile for any binary classification by dropping its extra guards. Under the separately listed caused-as-caused bridge and equality split, the reverse route also holds. No independent warrant for the full law is claimed from this projection."

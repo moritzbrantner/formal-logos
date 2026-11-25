@@ -1,0 +1,9 @@
+{
+  "challenge_module": "TruthCore.Results.Case.Catholicism.ImmanentOrigins.Challenge",
+  "solution_module": "TruthCore.Results.Case.Catholicism.ImmanentOrigins.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Case.Catholicism.ImmanentOrigins.controls"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}

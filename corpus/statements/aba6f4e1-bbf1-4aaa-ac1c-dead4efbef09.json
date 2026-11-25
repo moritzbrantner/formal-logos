@@ -1,0 +1,12 @@
+{
+  "id": "aba6f4e1-bbf1-4aaa-ac1c-dead4efbef09",
+  "label": "Every actual participant has at most the selected actual source's represented degree of esse",
+  "paraphrase": "Analyst formulation. The selected s is actual as to esse. Each actual q44 participant x satisfies degree(esse,x) ≤ degree(esse,s) in one fixed preorder. This is a positive weak bound on the represented scale and allows equal degrees. Passing to the primitive comparative, excluding ties, and extending the comparison to a different perfection each require additional warrant.",
+  "lean_declaration": "TruthCore.Causality.SoleEsseGiver.BoundsParticipatedEsse",
+  "definition_ids": [
+    "14d30c53-51c2-502d-b009-247dac0421e0",
+    "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "8323604a-2e7a-554c-9b32-d82e5201271d"
+  ]
+}

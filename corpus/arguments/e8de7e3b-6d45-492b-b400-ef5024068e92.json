@@ -1,0 +1,13 @@
+{
+  "id": "e8de7e3b-6d45-492b-b400-ef5024068e92",
+  "label": "Absolute identification by act of being rules out the candidate triad",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "ee804943-8b45-41bd-9c1d-143717d1615f",
+  "inference_ids": [
+    "6ec8d68e-a8b8-4846-9106-06108aa35423"
+  ],
+  "meaning": "Three bearers cannot each be numerically the same selected act if that identification is injective across persons. Equality of a common token under a non-injective map models the selected predication and still requires metaphysical interpretation.",
+  "definition_ids": [
+    "a02b41fb-2bf3-4109-898c-b2aca8aaeaec"
+  ]
+}

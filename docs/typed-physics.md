@@ -1,6 +1,6 @@
 # Typed *Physics*: motion, mover and moved (#401, item 1)
 
-Most *Physics* readings in the corpus take `Prop` atoms (`def X (P : Prop) : Prop := P`), so nothing can follow from them and they cannot follow from anything (audit B, #388). This note records the first typed batch: *Physics* III.3, VII.1 (the regress) and VIII.4-5, stated over the act/potency vocabulary of the *prima via* and #374. The Lean is in `TruthCore/Greek/Aristotle/Physics/Typed/Motion.lean`; the results are under `TruthCore/Results/Aristotle/Physics/Typed/`.
+Most *Physics* readings in the corpus take `Prop` atoms (`def X (P : Prop) : Prop := P`), so nothing can follow from them and they cannot follow from anything (audit B, #388). This note records the first typed batch: *Physics* III.3, VII.1 (the regress) and VIII.4-5, stated over the act/potency vocabulary of the *prima via* and #374. The Lean is in `TruthCore/Greek/Aristotle/Physics/Typed/Motion.lean`; the results are under `TruthCore/Results/Aristotle/Physics/Typed/`. [Original PR #404](https://github.com/moritzbrantner/formal-logos/pull/404)
 
 ## Method
 
@@ -100,3 +100,7 @@ analyst-only batch. For further integration, the missing bridge must specify
 how distinct performed operations are identified with mathematical cuts and
 whether their causal relation is temporal, essentially dependent or purely
 descriptive. `SU-REAL`, #310 and #311 remain open.
+
+## Research attempts citing this note
+
+- [The literal generator-or-remover reading yields a mover per se or per accidens, not a per-se mover…](../corpus/attempts/physics-viii4-literal-per-se.json)

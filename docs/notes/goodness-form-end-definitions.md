@@ -3,7 +3,7 @@
 The owner’s current direction in [#1116](https://github.com/moritzbrantner/truth-core/issues/1116)
 is to formulate “goodness is the actuality due to a thing’s form and end” as a
 proposition and investigate rival definitions. It supersedes the earlier idea
-of adopting the definition. No floor item or definition is adopted here.
+of adopting the definition. No floor item or definition is adopted here. [Research record](../../corpus/attempts/goodness-form-end-forks-1116.json)
 
 The analyst reconstruction is `STMT-GOODNESS-DUE-TO-FORM-AND-END`:
 
@@ -521,5 +521,5 @@ bearer argument; a shift to lineage maintenance must not silently replace
 `o` by its descendants. Nothing in this investigation closes a root premise,
 establishes categorical authority, or chooses between physical realization and
 an irreducible substantial principle. Attempt
-`499b26da-d46b-48ac-826e-347eab2568cf` records the source consultation,
+[`499b26da-d46b-48ac-826e-347eab2568cf`](../../corpus/attempts/499b26da-d46b-48ac-826e-347eab2568cf.json) records the source consultation,
 discriminating mechanism, bounded checks and remaining test.

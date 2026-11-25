@@ -1,0 +1,11 @@
+{
+  "id": "a215884f-fac9-4d4d-933f-2096b165a53c",
+  "label": "Actual esse cause between actual concreta grounds, from the esse-cause bridge",
+  "argument_id": "3f015bf0-ad77-480e-9b56-f2acfbc664be",
+  "challenge_module": "TruthCore.Results.Causality.OneDependenceOrder.Challenge",
+  "solution_module": "TruthCore.Results.Causality.OneDependenceOrder.Solution",
+  "theorem": "TruthCore.Results.Causality.OneDependenceOrder.actualEsseCauseIsActualGroundOfEsseCause",
+  "comparator_config": "results/a215884f-fac9-4d4d-933f-2096b165a53c/comparator.json",
+  "status": "solution-present",
+  "description": "Strength step: if a distinct cause of the esse of an actual concretum is an actual concrete ground of it at w (cb1cdea9), then a distinct cause of esse between actual concreta grounds it at w (the weak bridge). Same Profile, world, CausesIn and esse. The weak version adds the hypothesis that the cause is an actual concretum and keeps only the grounding conclusion. Strictness is not separately certified."
+}

@@ -1,0 +1,32 @@
+{
+  "snapshot": {
+    "kind": "web_snapshot",
+    "source_id": "3dba6cf4-271a-4cd9-8a18-7ff830520b32",
+    "source_url": "https://homepage.ruhr-uni-bochum.de/Michael.Renemann/suarez/d22.pdf",
+    "retrieved_at": "2026-11-24T09:44:55Z",
+    "sha256": "sha256:791e591b273bbc46c367f00e5e0b4c8d3706d478c9d66e20b8ec6f40fa9a8e95",
+    "wayback_url": "https://web.archive.org/web/20250917000805id_/https://homepage.ruhr-uni-bochum.de/Michael.Renemann/suarez/d22.pdf",
+    "wayback_sha256": "sha256:791e591b273bbc46c367f00e5e0b4c8d3706d478c9d66e20b8ec6f40fa9a8e95",
+    "encoding": "utf-8",
+    "language": "lat",
+    "license": "The Latin work is in the public domain. The Castellote–Renemann PDF credits the digital editors. No license for redistribution of their edition is asserted. The live PDF and the September 2025 archive capture match. Only metadata, hashes and a short incipit are committed."
+  },
+  "passages": [
+    {
+      "id": "dde24765-6aeb-457d-a4c7-aa9f44fea06d",
+      "label": "Francisco Suárez, Disputationes metaphysicae XXII.1 on dependence at production and conservation",
+      "locator": "DM XXII.1 §§7–9, printed and physical PDF p. 3 (also contains the end of §6 and §10)",
+      "claim_locator_prefixes": [
+        "DM XXII.1 §7",
+        "DM XXII.1 §8",
+        "DM XXII.1 §9"
+      ],
+      "pdf_pages": {
+        "first": 3,
+        "last": 3
+      },
+      "text_sha256": "sha256:8aed2266cec656d4e353bced38881bd78a30e2aba67e02b821ca0251b98b2984",
+      "incipit": "SECTIO I esse debeant acceperunt, in tantum moventur in quantum occulto"
+    }
+  ]
+}

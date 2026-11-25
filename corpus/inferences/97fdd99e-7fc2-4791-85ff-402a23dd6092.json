@@ -1,0 +1,12 @@
+{
+  "id": "97fdd99e-7fc2-4791-85ff-402a23dd6092",
+  "label": "Restrict actual esse composition to a following PER_SE_5 link (inference)",
+  "input_statement_ids": [
+    "b4987085-f7b0-4031-a795-364873d3c216"
+  ],
+  "output_statement_id": "7648194d-042b-495d-a098-ce906bdc7005",
+  "rule": "Restriction to a classified outgoing link and distinct actual incoming giver",
+  "meaning": "Scope projection. From an actual incoming link retain the upstream giver's actuality and causal edge; from the per se outgoing link retain its actual causal edge with the other guards. The full law applies without any use of excluded middle or the caused-as-caused bridge. This direction registers the order of assumptions.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

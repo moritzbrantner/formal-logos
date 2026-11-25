@@ -2,8 +2,10 @@
 module
 
 public import TruthCore.Results.Causality.AccidentalFeatureOrigin.Solution
+public import TruthCore.Results.Causality.AcquiredHistoryTransfer.Solution
 public import TruthCore.Results.Causality.ActPriorityAtFirst.Solution
 public import TruthCore.Results.Causality.ActPriorityThetaEight.Solution
+public import TruthCore.Results.Causality.ActualAncestralSource.Solution
 public import TruthCore.Results.Causality.ActualCommonRoot.Solution
 public import TruthCore.Results.Causality.ActualCoverNecessaryBeing.Solution
 public import TruthCore.Results.Causality.ActualCoverStrictness.Solution
@@ -60,6 +62,7 @@ public import TruthCore.Results.Causality.ComingToBeHorns.Solution
 public import TruthCore.Results.Causality.CommonPriority.ContingentGround.Solution
 public import TruthCore.Results.Causality.CommonPriority.Solution
 public import TruthCore.Results.Causality.CompactOperationCount.Solution
+public import TruthCore.Results.Causality.ComparativeFoundation.Solution
 public import TruthCore.Results.Causality.CompleteCauseContributorCover.Solution
 public import TruthCore.Results.Causality.CompleteCauseSourceUniqueness.Solution
 public import TruthCore.Results.Causality.CompleteCauseUnderivedSource.Solution
@@ -98,6 +101,7 @@ public import TruthCore.Results.Causality.ContingentAtomicity.Solution
 public import TruthCore.Results.Causality.ContingentBeingNode.Solution
 public import TruthCore.Results.Causality.ContingentBeingNodeReconciled.Solution
 public import TruthCore.Results.Causality.ContingentComingToBe.Solution
+public import TruthCore.Results.Causality.ContingentRecipients.Solution
 public import TruthCore.Results.Causality.ContingentTotalityCause.Solution
 public import TruthCore.Results.Causality.ContractiveBorrowedPower.Solution
 public import TruthCore.Results.Causality.ConvergentZenoSchedule.Solution
@@ -118,6 +122,7 @@ public import TruthCore.Results.Causality.DeiFiliusLordBlessed.Solution
 public import TruthCore.Results.Causality.DeiFiliusOperationFromIntellect.Solution
 public import TruthCore.Results.Causality.DeiFiliusUnifiedRoute.Solution
 public import TruthCore.Results.Causality.DependenceGroundingPriority.Solution
+public import TruthCore.Results.Causality.DependenceOrderSenses.Solution
 public import TruthCore.Results.Causality.DependenceStrictGroundMap.Solution
 public import TruthCore.Results.Causality.DependenceStrictGroundMapStrength.Solution
 public import TruthCore.Results.Causality.DerivativeJointPower.Solution
@@ -158,6 +163,7 @@ public import TruthCore.Results.Causality.EternityDefinitions.PrimitiveCompositi
 public import TruthCore.Results.Causality.EternityDefinitions.RecognitionStrength.Solution
 public import TruthCore.Results.Causality.EventIdentityProfiles.AccessibleTransport.Solution
 public import TruthCore.Results.Causality.EventIdentityProfiles.Solution
+public import TruthCore.Results.Causality.ExerciseContribution.Solution
 public import TruthCore.Results.Causality.ExistenceAccountIntegration.Solution
 public import TruthCore.Results.Causality.ExistenceSenseRoute.Solution
 public import TruthCore.Results.Causality.ExistentialSelfActualization.Solution
@@ -173,10 +179,12 @@ public import TruthCore.Results.Causality.FiniteNecessaryUnion.LocalWitness.Solu
 public import TruthCore.Results.Causality.FiniteNecessaryUnion.SourceBridge.Solution
 public import TruthCore.Results.Causality.FiniteReapersConsistent.Solution
 public import TruthCore.Results.Causality.FiniteRestriction.Solution
+public import TruthCore.Results.Causality.FiniteThroughput.Solution
 public import TruthCore.Results.Causality.FirstMoverNecessity.Solution
 public import TruthCore.Results.Causality.FixedDurationGrimReaper.Solution
 public import TruthCore.Results.Causality.FullFirstCause.Solution
 public import TruthCore.Results.Causality.FullnessCandidates.Solution
+public import TruthCore.Results.Causality.GiverIndexedApplication.Solution
 public import TruthCore.Results.Causality.GodMaximalCausal.Solution
 public import TruthCore.Results.Causality.GodNamingSenses.Solution
 public import TruthCore.Results.Causality.GradedSupportFoundation.Solution
@@ -191,6 +199,7 @@ public import TruthCore.Results.Causality.GroundingIdentityProfile.Solution
 public import TruthCore.Results.Causality.GroundingYieldsRegress.Solution
 public import TruthCore.Results.Causality.HeadlessCausalAncestry.Solution
 public import TruthCore.Results.Causality.HistoricalRemoval.Solution
+public import TruthCore.Results.Causality.HolderRootIdentification.Solution
 public import TruthCore.Results.Causality.HoldingMotion.Solution
 public import TruthCore.Results.Causality.IlluminationReceipt.Solution
 public import TruthCore.Results.Causality.IndexedSignalProvenance.Solution
@@ -205,6 +214,7 @@ public import TruthCore.Results.Causality.LifeBoundaryPotency.Solution
 public import TruthCore.Results.Causality.LiftingStrength.Solution
 public import TruthCore.Results.Causality.LocalFramePossibleExternalCause.Solution
 public import TruthCore.Results.Causality.LocalObservationSelectsSolution.Solution
+public import TruthCore.Results.Causality.LocalSourceConfluence.Solution
 public import TruthCore.Results.Causality.LocalTeleologyGodIntellect.Solution
 public import TruthCore.Results.Causality.LogicalNecessityProfiles.Solution
 public import TruthCore.Results.Causality.MaximalFromEsseSource.Solution
@@ -228,6 +238,8 @@ public import TruthCore.Results.Causality.ModalSenseSupport.Solution
 public import TruthCore.Results.Causality.MotionMapsBatch1.Solution
 public import TruthCore.Results.Causality.MotionMoverFork.Solution
 public import TruthCore.Results.Causality.NamingVeracityBatch1.Solution
+public import TruthCore.Results.Causality.NarDerivation.Solution
+public import TruthCore.Results.Causality.NarGrafts.Solution
 public import TruthCore.Results.Causality.NecessarilyUnderived.LiftFromBridges.Solution
 public import TruthCore.Results.Causality.NecessarilyUnderived.NonRefutationLift.Solution
 public import TruthCore.Results.Causality.NecessarilyUnderived.PositiveLift.Solution
@@ -238,6 +250,7 @@ public import TruthCore.Results.Causality.NecessaryBeingInAct.Solution
 public import TruthCore.Results.Causality.NecessaryClassicalGodCase.Solution
 public import TruthCore.Results.Causality.NecessaryClassicalGodRoot.Solution
 public import TruthCore.Results.Causality.NecessaryClassicalGodRootAtFirst.Solution
+public import TruthCore.Results.Causality.NecessaryClassicalGodRootBoxK.Solution
 public import TruthCore.Results.Causality.NecessaryClassicalGodRootByComposition.Solution
 public import TruthCore.Results.Causality.NecessaryClassicalGodRootControl.Solution
 public import TruthCore.Results.Causality.NecessaryClassicalGodRootFromAsymmetry.Solution
@@ -266,6 +279,7 @@ public import TruthCore.Results.Causality.NecessaryWholeReplacement.Solution
 public import TruthCore.Results.Causality.NecessaryWitnessConnection.Solution
 public import TruthCore.Results.Causality.NonlimitingConcreteExistence.Solution
 public import TruthCore.Results.Causality.OccurrenceUnderivedEssence.Solution
+public import TruthCore.Results.Causality.OneDependenceOrder.Solution
 public import TruthCore.Results.Causality.OriginDeletion.Solution
 public import TruthCore.Results.Causality.OriginExerciseBridge.SelfEdge.Solution
 public import TruthCore.Results.Causality.OriginExerciseBridge.Solution
@@ -274,6 +288,8 @@ public import TruthCore.Results.Causality.OwnerEndpointCalibration.Solution
 public import TruthCore.Results.Causality.ParityUnionRegress.Solution
 public import TruthCore.Results.Causality.PartFreePlurality.Solution
 public import TruthCore.Results.Causality.PartMediatedSelfMotion.Solution
+public import TruthCore.Results.Causality.ParticipatedEsseScale.Solution
+public import TruthCore.Results.Causality.ParticularActuality.Solution
 public import TruthCore.Results.Causality.PastResourceControls.Solution
 public import TruthCore.Results.Causality.PerAccidensResponses.Solution
 public import TruthCore.Results.Causality.PerfectRootIntellectFromGovernor.Solution
@@ -285,6 +301,7 @@ public import TruthCore.Results.Causality.PluralRootConfluence.Solution
 public import TruthCore.Results.Causality.PossessionSensitiveAppetite.Solution
 public import TruthCore.Results.Causality.PossibleCausalSourceNecessity.Solution
 public import TruthCore.Results.Causality.PossibleCauseBruteSurvival.Solution
+public import TruthCore.Results.Causality.PotencyPrivation.Solution
 public import TruthCore.Results.Causality.Power1392.Solution
 public import TruthCore.Results.Causality.Power1392Exercise.Solution
 public import TruthCore.Results.Causality.PowerExistenceBoundary.Solution
@@ -292,6 +309,7 @@ public import TruthCore.Results.Causality.PresentReceipt.Solution
 public import TruthCore.Results.Causality.PreservationMeaning.Solution
 public import TruthCore.Results.Causality.PrimaViaCertificates.Solution
 public import TruthCore.Results.Causality.PriorityInBeing.Solution
+public import TruthCore.Results.Causality.ProductiveDeletion.Solution
 public import TruthCore.Results.Causality.ProductiveStore.Solution
 public import TruthCore.Results.Causality.ProductiveSustained.Solution
 public import TruthCore.Results.Causality.ProtectiveProcess.Solution
@@ -301,8 +319,11 @@ public import TruthCore.Results.Causality.PureIndiscernibility.Solution
 public import TruthCore.Results.Causality.Q44EssentialSource.Solution
 public import TruthCore.Results.Causality.Q44SourceSupply.Solution
 public import TruthCore.Results.Causality.QuantitativeTransferPaths.Solution
+public import TruthCore.Results.Causality.ReceiptAllocation.Solution
+public import TruthCore.Results.Causality.ReceiptMatching.Solution
 public import TruthCore.Results.Causality.ReceivedEsseActualGiver.Solution
 public import TruthCore.Results.Causality.ReceptionLimitation.Solution
+public import TruthCore.Results.Causality.ReflectiveComprehension.Solution
 public import TruthCore.Results.Causality.ReflexiveActualFusionNecessaryBeing.Solution
 public import TruthCore.Results.Causality.ReflexiveDependenceScope.Solution
 public import TruthCore.Results.Causality.RegressAccessibilityExcludesSeries.Solution
@@ -310,6 +331,7 @@ public import TruthCore.Results.Causality.RegressAccessibilityUnboundedDepth.Sol
 public import TruthCore.Results.Causality.RegressReadingsCoincide.Solution
 public import TruthCore.Results.Causality.RegressRivalCoverage.Coverage.Solution
 public import TruthCore.Results.Causality.RelationalReceipt.Solution
+public import TruthCore.Results.Causality.RestatedPremises.Solution
 public import TruthCore.Results.Causality.RivalRefutationsRound2.Solution
 public import TruthCore.Results.Causality.RootEssenceIdentity.Solution
 public import TruthCore.Results.Causality.RootIntellectWill.Solution
@@ -323,6 +345,7 @@ public import TruthCore.Results.Causality.RootNonlimitationFromCompositionKinds.
 public import TruthCore.Results.Causality.RootPositiveIntellectWill.Solution
 public import TruthCore.Results.Causality.RootPositiveIntellectWillControl.Solution
 public import TruthCore.Results.Causality.RootPurity.Solution
+public import TruthCore.Results.Causality.RootSupplyInterface.Solution
 public import TruthCore.Results.Causality.RootWiring.Solution
 public import TruthCore.Results.Causality.RootWithoutLimitingPrinciple.Solution
 public import TruthCore.Results.Causality.RotatingBearerSenseComparison.Solution
@@ -344,6 +367,7 @@ public import TruthCore.Results.Causality.SelectedNecessaryRoute.Solution
 public import TruthCore.Results.Causality.SelfCausationPriority.Solution
 public import TruthCore.Results.Causality.SelfMotionSeparation.Solution
 public import TruthCore.Results.Causality.SelfOperationLife.Solution
+public import TruthCore.Results.Causality.SoleEsseGiver.Solution
 public import TruthCore.Results.Causality.SourceForest.Solution
 public import TruthCore.Results.Causality.SourceForestInterop.Solution
 public import TruthCore.Results.Causality.SourceFunctionalityWellFounded.Solution
@@ -352,6 +376,9 @@ public import TruthCore.Results.Causality.SourceWitness.Solution
 public import TruthCore.Results.Causality.SpineRivalsAttributes.Solution
 public import TruthCore.Results.Causality.SpineRivalsRootEsse.Solution
 public import TruthCore.Results.Causality.SpineRivalsStageOne.Solution
+public import TruthCore.Results.Causality.StrictEsseScale.Solution
+public import TruthCore.Results.Causality.StrictGroundInfiniteCauseSeries.Solution
+public import TruthCore.Results.Causality.StrictGroundRepresentation.Solution
 public import TruthCore.Results.Causality.StrictPriorityPureAct.Solution
 public import TruthCore.Results.Causality.StrictPriorityPureActControls.Solution
 public import TruthCore.Results.Causality.SubjectFocalRoles.Solution
@@ -400,6 +427,7 @@ public import TruthCore.Results.Causality.WholeRosterFoundation.Solution
 public import TruthCore.Results.Causality.WholeRosterFromMaximumAsymmetry.Solution
 public import TruthCore.Results.Causality.WholeRosterMaximalComparison.Solution
 public import TruthCore.Results.Causality.WholeRosterRootEquivalence.Solution
+public import TruthCore.Results.Causality.WillVersusChance.Solution
 public import TruthCore.Results.Causality.WitnessLocalTeleology.Solution
 public import TruthCore.Results.Causality.WorldIndexedSources.Solution
 public import TruthCore.Results.Causality.WorldLocalGroundingDoubling.Solution

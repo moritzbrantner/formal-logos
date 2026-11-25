@@ -1,0 +1,9 @@
+{
+  "id": "99ce5669-b1db-4613-9d17-2b57251129e4",
+  "label": "Application through a specified productive exercise in one context",
+  "term": "application through the same secondary exercise",
+  "definition": "ThroughAt m stroke result a b x requires that b bears stroke, x bears result, an actual productive path from an event of a ends at this very stroke, and stroke contributes by an exercised record to this very result. It locates the source's contribution on the exercise side of a joint production, with both event indices fixed. A productive path ending only at the result can bypass the stroke.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.ExerciseContribution.ThroughAt",
+  "note": "Candidate event-level interpretation of the existing giver-indexed application primitive for one selected exercise, with attribution deferred. The source may bring the stroke about mediately. Whether such a path realizes application in the intended metaphysical sense, and whether exercise-time, triggering and productive dependence have been distinguished adequately in a real case, require separate warrant. The interpretation does not restrict the source, agent and patient to distinct bearers in every instance. The finite press assigns distinct bearers. See docs/notes/actuality-esse-research.md."
+}

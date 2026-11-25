@@ -33,6 +33,8 @@ public import TruthCore.Results.Case.Catholicism.FromPrimaViaWithQ11Uniqueness.S
 public import TruthCore.Results.Case.Catholicism.FromQuartaViaWithClassicalAttributes.Solution
 public import TruthCore.Results.Case.Catholicism.FromQuartaViaWithoutTruthBridge.Solution
 public import TruthCore.Results.Case.Catholicism.GodIncorruptibility.Solution
+public import TruthCore.Results.Case.Catholicism.GodIsOneFromEsse.Solution
+public import TruthCore.Results.Case.Catholicism.ImmanentOrigins.Solution
 public import TruthCore.Results.Case.Catholicism.MaximalBeingCauseExclusion.Solution
 public import TruthCore.Results.Case.Catholicism.MaximeEnsIsGodStrength.Solution
 public import TruthCore.Results.Case.Catholicism.MaximumFirstByPriorCause.Solution

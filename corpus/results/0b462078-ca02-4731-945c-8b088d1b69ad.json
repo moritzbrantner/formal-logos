@@ -1,0 +1,11 @@
+{
+  "id": "0b462078-ca02-4731-945c-8b088d1b69ad",
+  "label": "Joint versus enabling realization survives the secondary-only transfer comparison",
+  "argument_id": "528743e5-6b05-4cc1-a7f0-96073ab096f1",
+  "challenge_module": "TruthCore.Results.Causality.ParticularActuality.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ParticularActuality.Solution",
+  "theorem": "TruthCore.Results.Causality.ParticularActuality.controls",
+  "comparator_config": "results/0b462078-ca02-4731-945c-8b088d1b69ad/comparator.json",
+  "status": "solution-present",
+  "description": "The same recipient and skill are tested in each variant. Suppressing the recipient's esse record keeps the producer's esse available and leaves only the enabler variant able to supply the skill. Suppressing the recipient's skill record spares its esse. The original effective-cause table is independently assigned and fails universal transfer even in the joint variant. A positive supply tree in the enabler variant is not an occurrence with an absent subject."
+}

@@ -1,0 +1,12 @@
+{
+  "id": "fb9eec5c-72e7-4c8e-a559-86fd16aecd94",
+  "label": "Trace covered productive ancestry from source-specific loss of inductive supply (inference)",
+  "input_statement_ids": [
+    "74574758-cf0e-4c7f-a284-5b29d0a70612"
+  ],
+  "output_statement_id": "f481eab0-155e-44e2-94ab-3513a9293b01",
+  "rule": "Transport an original supply derivation in the absence of a selected contributor path",
+  "meaning": "Induction on supply preserves every derivation with no positive selected path to its endpoint. A lost token therefore has such a path through groups with originally supplied contributors. Coherence on the exercised groups gives the actual occurrences needed for each Step, and ownership identifies the initial bearer. The existing covered-history transfer argument can consume this ancestry with its separate target coverage and causal-credit premises.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

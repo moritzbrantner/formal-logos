@@ -1,0 +1,9 @@
+{
+  "id": "4a52e22b-c56f-4814-9661-9ef540301cb4",
+  "label": "Adaptive experiment and stable observation matching",
+  "term": "adaptive experiment and stable observation matching",
+  "definition": "An Experiment on a state carrier S, action carrier A and observation carrier O supplies total deterministic functions readout:S→O and transition:S→A→S. A policy chooses the next action from the complete finite observation list. transcript records the initial readout and n successive readouts, after choosing each action from the preceding list. StableMatching e f r requires related states to have the same readout and their successors under every same permitted action to remain related. The relation may join different state representations. Mere initial readout equality does not entail it.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Science.AdaptiveHistoryAccess.StableMatching",
+  "note": "Analyst deterministic formalization of the future-intervention argument proposed in PR #1904, comment 7113063138 section 4; not an attribution to a historical author. Function fields are primitive mathematical inputs, not causal or epistemic relations. No extra transition, state sufficiency, unrestricted action repertoire, metaphysical admissibility or warrant is inferred. Applying the theorem to real histories requires complete coverage of relevant state and accessible interventions, together with defended output-preserving transition matching. Different observation kernels or a history-sensitive intervention can defeat that premise. See docs/notes/psr-self-application-756.md#containment-of-evidence-and-adaptive-calibration-2026-11-24."
+}

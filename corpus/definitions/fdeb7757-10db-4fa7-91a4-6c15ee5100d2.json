@@ -1,0 +1,9 @@
+{
+ "id": "fdeb7757-10db-4fa7-91a4-6c15ee5100d2",
+ "label": "One power: all active powers of y are one (OnePower), the power-level aspect of simplicity",
+ "term": "one power (OnePower)",
+ "definition": "OnePower A y: for all p and q, if PowerOf y p and PowerOf y q then p = q.",
+ "basis": "stipulative",
+ "lean_declaration": "TruthCore.Causality.WillVersusChance.OnePower",
+ "note": "Analyst definition, attribution deferred (docs/notes/will-versus-chance.md). ST I q.19 a.4 ad 4 (read in the materialized witness of passage 74e86e1a, navigation, no claim): knowledge directing, will commanding and power executing, 'Sed haec omnia in Deo unum sunt'. Example: on Aquinas's account, God. Non-example: a human, whose intellect, will and nutritive powers differ; the intellectual-chancer model, a necessary being with a rational and a non-rational power. Not implied by an invariant set-up."
+}

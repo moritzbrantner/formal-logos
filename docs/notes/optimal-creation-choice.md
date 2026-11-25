@@ -8,7 +8,7 @@ and dossier for `STMT-SELECTED-EFFECT-BRIDGE-CERTIFICATE` were inspected before
 new vocabulary; choice-context controls already distinguish fixed conditions
 from local functionality. The additional discrimination here concerns the
 internal structure of the choice rule: unique optimal option, tied best values,
-and absence of an achieved best value.
+and absence of an achieved best value. [Research record](../../corpus/attempts/optimal-creation-choice.json)
 
 ## Verified source readings
 
@@ -658,7 +658,7 @@ statement or result; exact modal and knowledge controls retained, no
 claim that the conceptual authorship sketch models full divine simplicity
 or that an epistemic end entails every historical belief. Canonical
 related/dossier/novelty and full checks unavailable in this session.
-Attempt 7d015c02 records the proposed checkpoint.
+Attempt [7d015c02](../../corpus/attempts/7d015c02-2e23-4b2e-a418-e23c943c3a5a.json) records the proposed checkpoint.
 
 
 ## Can direct intentional production be extrinsic without becoming brute? (2026-11-23)
@@ -1813,3 +1813,7 @@ thin versus recipient-directed scope at author level. No new
 pinned source claim. Independent semantic challenge and
 canonical CLI/CI remain required; no verified premise delta
 claimed.
+
+## Research attempts citing this note
+
+- [Issue 1737 same-source contingent creation, omission, and selection adequacy](../../corpus/attempts/divine-knowledge-choice-creation-1737.json)

@@ -1,6 +1,6 @@
 ---
 phase: batch-1
-premise: `STMT-NOTHING-MOVES-EXCEPT-AS-IN-ACT`
+premise: [`STMT-NOTHING-MOVES-EXCEPT-AS-IN-ACT`](https://github.com/moritzbrantner/formal-logos/blob/ec72649fb5a8ee3ac06d391b179cf1af7f75b304/corpus/statements/nothing-moves-except-as-in-act.json)
 rival: `STMT-CAUSE-MOVES-WITHOUT-BEING-IN-ACT` (emergentism)
 class: not yet attackable: bites only on the formal reading of act
 status: open; witness waiting (Broad 1925, #378)

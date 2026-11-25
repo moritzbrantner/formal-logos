@@ -1,0 +1,11 @@
+{
+  "id": "0631a3e7-f120-45fc-9b54-60254ff2282d",
+  "label": "A represented greatest degree of being from the participant bound and roster coverage",
+  "argument_id": "fa840507-1db4-497d-a47a-260bbcd25dbc",
+  "challenge_module": "TruthCore.Results.Causality.SoleEsseGiver.Challenge",
+  "solution_module": "TruthCore.Results.Causality.SoleEsseGiver.Solution",
+  "theorem": "TruthCore.Results.Causality.SoleEsseGiver.greatestOfCoverage",
+  "comparator_config": "results/0631a3e7-f120-45fc-9b54-60254ff2282d/comparator.json",
+  "status": "solution-present",
+  "description": "The selected source realizes its degree. Split each actual bearer on equality to it. Its own degree is reflexively bounded; all others participate by explicit roster coverage and therefore satisfy the weak bound. This yields the existing MAXIME_2 existence statement on the represented preorder. The proof permits multiple bearers to have the greatest degree; passing to primitive maximality takes its existing separate calibration."
+}

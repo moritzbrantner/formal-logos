@@ -6,6 +6,6 @@
   "locator": "IV–V, induction and practical inference",
   "priority": 110,
   "goal": "Investigate specific ordinary-science, cosmological and theological inferences to determine whether their relevant evidential bases match; E V.7 supplies a present-evidence constraint, not the same-basis premise.",
-  "reason": "Same logical form is insufficient. Equal evidence and an equal standard yield a conditional conflict; differing evidence supports the strongest Humean reply. No uncaused-cosmos thesis is attributed.",
+  "reason": "Same logical form is insufficient. Equal evidence and an equal standard yield a conditional conflict; differing evidence supports the strongest Humean reply. No uncaused-cosmos thesis is attributed. The equal-basis premise and differing-evidence reply are analyzed in docs/hume-induction.md#selective-skepticism-across-science-cosmology-and-theology. The target statement is 055f21e3-1018-52e7-a304-744d21663c7c.",
   "status": "candidate"
 }

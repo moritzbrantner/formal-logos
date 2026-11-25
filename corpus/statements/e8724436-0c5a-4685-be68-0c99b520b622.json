@@ -1,0 +1,19 @@
+{
+  "id": "e8724436-0c5a-4685-be68-0c99b520b622",
+  "label": "Restated-premise controls: three equivalences, grounding instances without the universal",
+  "paraphrase": "Closed controls. (1) For all parameters, ParticipatedHasOtherCause (2b25a78c, q.44 a.1 ad 1) and ParticipatedEsseHasDistinctCause (732302a1, q.44 a.1 co.) are the same proposition (Iff.rfl). (2) For every idea frame I, MeditatorThinks I (22954087) is SelectedBearsOccurringThought (b0fd6cc1) at I's occurrence, bearing and meditator fields (Iff.rfl). (3) For every causality frame F, concreteness predicate, grounding relation and world w, SomeContingentConcreteAt F concrete w (c76b6e2c) is SomeActualContingentAt (c94b5446) on the ground profile of F with the same concreteness predicate (Iff.rfl). Only these conjuncts are certified; each is a comparison of encodings and asserts none of the compared premises.",
+  "lean_declaration": "TruthCore.Causality.RestatedPremises.RestatedPremisesControls",
+  "definition_ids": [
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "c0cbef1c-060a-54d4-bb49-8d59da40caf3",
+    "ce8ccc1a-4f9a-5904-a10c-548778d79b66",
+    "14d30c53-51c2-502d-b009-247dac0421e0",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24"
+  ],
+  "disambiguation_ids": [
+    "623ddbf6-9683-5361-bae4-e348a00ec680",
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f"
+  ]
+}

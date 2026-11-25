@@ -1,0 +1,10 @@
+{
+  "id": "639d4012-3926-4f81-89bd-7f48d7747196",
+  "label": "Derive an upstream matching deficit by injectivity on a finite set of exports (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "c9545c29-5d97-4808-b343-8aaf87370479",
+  "rule": "Choose the local matches and use surjectivity of an injection on the finite ancestral export set",
+  "meaning": "If every upstream sender admits a matching, assign each of its exports its matched receipt. The resulting predecessor map stays among upstream exports and is injective because the receiver fixes the sender whose local matching was used. It cannot hit the marked transfer since that transfer's recipient lies outside this ancestry.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

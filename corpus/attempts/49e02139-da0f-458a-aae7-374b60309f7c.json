@@ -21,7 +21,10 @@
     "e6346573-7867-4467-bceb-116aadab619f",
     "c76bf052-c7a6-4438-b8e4-f7f26bac0fb2",
     "b99c558a-c902-4f16-b111-838d34fa820b",
-    "b24ee5bc-af84-4627-9bd2-926fb3a95289"
+    "b24ee5bc-af84-4627-9bd2-926fb3a95289",
+    "PR-1247",
+    "PR-1265",
+    "PR-1720"
   ],
   "blocker": "Actual openness and empirical nonresistance remain disputed; route identification is an open semantic premise. The qualified-reply and nontheistic rival models survive. Full delivered-head CI remains required before merge."
 }

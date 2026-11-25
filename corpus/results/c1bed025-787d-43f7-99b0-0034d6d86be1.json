@@ -1,0 +1,11 @@
+{
+  "id": "c1bed025-787d-43f7-99b0-0034d6d86be1",
+  "label": "Exact deletion test for a bypass of nonintrinsic bearer esse",
+  "argument_id": "4e18c667-ad37-420e-9f64-841ebffc49c4",
+  "challenge_module": "TruthCore.Results.Causality.ParticularActuality.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ParticularActuality.Solution",
+  "theorem": "TruthCore.Results.Causality.ParticularActuality.singleDeletion",
+  "comparator_config": "results/c1bed025-787d-43f7-99b0-0034d6d86be1/comparator.json",
+  "status": "solution-present",
+  "description": "The special deletion cuts the nonintrinsic bearer index by last-step inversion. Conversely a surviving derivation after an arbitrary cut that removes esse cannot use a last group producing esse at any node. Induction transports it to the special deletion, a contradiction. The equivalence is a theorem of the stipulated restriction semantics."
+}

@@ -4,7 +4,7 @@ This note reads "moving from world to world" as a **temporal path of states**
 inside one history, not causal travel among complete worlds. It asks whether
 explaining each transition explains why the complete actual path obtains. The
 outcome is a precise failed lift with a surviving rival. It does not refute an
-infinite regress, prove a first step or discharge a root premise.
+infinite regress, prove a first step or discharge a root premise. [Research record](../../corpus/attempts/explanatory-relocation-753.json)
 
 ## The result in one paragraph
 

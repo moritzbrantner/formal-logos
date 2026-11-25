@@ -1,0 +1,11 @@
+{
+  "id": "63aa606d-7980-4734-a6c8-3c00c97e90a4",
+  "label": "Actual esse composition from the caused-as-caused bridge and PER_SE_5 composition",
+  "argument_id": "85eeb70c-c7c3-4e4f-a645-4ecbb987b3ff",
+  "challenge_module": "TruthCore.Results.Causality.GiverIndexedApplication.Challenge",
+  "solution_module": "TruthCore.Results.Causality.GiverIndexedApplication.Solution",
+  "theorem": "TruthCore.Results.Causality.GiverIndexedApplication.composeOfPerSe",
+  "comparator_config": "results/63aa606d-7980-4734-a6c8-3c00c97e90a4/comparator.json",
+  "status": "solution-present",
+  "description": "Use the explicitly registered excluded-middle premise on a = b. When they coincide the second edge already gives the claimed responsibility. Otherwise actuality of a, actuality of b from the second link, distinctness and the original edge give an actual first link. That same a witnesses the caused-as-caused bridge for the second link; restricted composition then supplies the required edge for a. A conditional route to q44 source supply, sharing the open per se bridge with the regress route."
+}

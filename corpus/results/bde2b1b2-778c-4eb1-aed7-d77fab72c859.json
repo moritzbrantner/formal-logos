@@ -1,0 +1,11 @@
+{
+  "id": "bde2b1b2-778c-4eb1-aed7-d77fab72c859",
+  "label": "One principal giver of participated esse from local supply and common source selection",
+  "argument_id": "1a4f8730-c6d9-4be8-9b4e-dcd5bd320433",
+  "challenge_module": "TruthCore.Results.Causality.SoleEsseGiver.Challenge",
+  "solution_module": "TruthCore.Results.Causality.SoleEsseGiver.Solution",
+  "theorem": "TruthCore.Results.Causality.SoleEsseGiver.soleGiverOfSelection",
+  "comparator_config": "results/bde2b1b2-778c-4eb1-aed7-d77fab72c859/comparator.json",
+  "status": "solution-present",
+  "description": "Fix an actual participant. Local supply gives a distinct actual own-being source. Source selection identifies that supplier and every other relevant supplier with the same s. The population premise gives at least one instance of the causal role. Uniqueness is among own-being suppliers; the actual source may operate through secondary causes."
+}

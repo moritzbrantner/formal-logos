@@ -1,0 +1,20 @@
+{
+  "id": "b72a790a-2b4a-45fd-8e90-4aec3db0fac6",
+  "label": "Every actual root gives by total optimal output over fixed candidates with a unique optimum",
+  "paraphrase": "OPEN rival, analyst formulation, unattributed (a being-level one-best-effect variant): for a fixed candidate set of beings and a fixed partially ordered quality scale, every actual root n of the selected grounding relation G at w gives by total optimal output (OptimalOutputs on n's giving-output profile: at w and at every world accessible from w where n exists, n gives being to something, and every being it gives being is an optimal candidate), and at most one candidate is optimal. Since every given being is optimal and at most one is, a unique optimum makes each root give being to exactly one being at each accessible world where it exists; with (b1) and the common root's reach there is at most one actual concretum besides the root. Closer to ex uno non fit nisi unum than to Rowe's world-level argument (a perfectly good creator of the unique best world is not free), which is not represented here (navigation, not attributed). Without the common root's direct reach it is satisfiable by a mediated creator that gives being only to a necessary intermediary (#1947's chainG with candidates {g}). It conflicts with WN (0266eac2) only conditionally: with SS and a rational exercise toward a given being other than the root (G3 law 3).",
+  "lean_declaration": "TruthCore.Causality.NarGrafts.ActualRootsGiveUniqueOptimum",
+  "definition_ids": [
+    "1ef0f844-1a0d-4ce8-8f54-87c29e96ef76",
+    "2d069414-67f7-5bba-b750-830f06caf84d",
+    "4f503422-a3dc-51f3-8e1d-a1065ef6038e",
+    "62dfa893-b633-4513-9790-8f9a0a3087e0",
+    "c57e2682-08e6-527e-950f-0fa0a7ff11ef",
+    "a1b2e330-388f-4120-bc5c-969642317792",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ],
+  "disambiguation_ids": [
+    "2f096ab2-0d7d-5252-a361-4e601c64aeae",
+    "623ddbf6-9683-5361-bae4-e348a00ec680"
+  ]
+}

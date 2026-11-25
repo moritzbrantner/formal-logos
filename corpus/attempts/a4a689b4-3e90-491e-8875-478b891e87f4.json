@@ -28,7 +28,8 @@
     "a1104225-ebc9-4a42-99d1-d88d9dac0d34",
     "77881eaf-8685-48f1-9086-69bdd6820ab5",
     "fdd09678-af1d-477f-bf5a-1b894557d301",
-    "47d67745-e14c-4679-b671-a98316c46600"
+    "47d67745-e14c-4679-b671-a98316c46600",
+    "PR-1573"
   ],
   "blocker": "Five esse-only consumer siblings and wider #1519 inventory remain open. Final binding and CI state are reported with the PR; no independent warrant or global minimality is claimed. Next test: certify the five same-dictionary esse siblings and the populated cause-of-being control; preserve inclusive IN_ACT_3 and the capacity-rival boundary."
 }

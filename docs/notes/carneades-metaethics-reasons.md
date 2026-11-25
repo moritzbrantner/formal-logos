@@ -148,4 +148,4 @@ existing semantics and MP through structural invariance. It discharges no
 historical, psychological, semantic-adequacy or categorical-warrant obligation.
 The existing candidate `EXPRESSIVIST-LOGIC-OF-ATTITUDES-COST` remains open for
 that adequacy gap; caption acquisition is not its primary-witness fulfillment.
-The attempt record is `ATTEMPT-CARNEADES-METAETHICS-REASONS`.
+The attempt record is [`ATTEMPT-CARNEADES-METAETHICS-REASONS`](../../corpus/attempts/carneades-metaethics-reasons.json).

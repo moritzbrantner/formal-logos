@@ -1,0 +1,9 @@
+{
+  "id": "cc5be5e2-5a9d-4831-86c9-32dd91482f5b",
+  "label": "Allocation of conserved input to selected work and closing stock",
+  "term": "source allocation in a balanced window",
+  "definition": "An allocation fits a window when its four nonnegative integer entries distribute the named receipts and the pooled opening stock plus other receipts between the selected work and closing stock, reproducing both inlet and outlet totals. The model admits every allocation with those margins.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.ReceiptAllocation.Window.fits",
+  "note": "For one patient or process, justify the units, boundaries, exhaustive inlets and outlets, and the role of the expenditure in the target change. A corresponding productive step records actual use of a positive quantity of the named input. A buffer or other supplier may account for the work while new receipts go into closing stock. Timing and connection constraints can exclude margin-compatible allocations. Mere availability, maintenance of a power, immaterial efficacy and existence as such need independent interpretations. See docs/notes/actuality-esse-research.md."
+}

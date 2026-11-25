@@ -1,0 +1,41 @@
+{
+  "id": "fb42b3a5-1b41-4d7a-9d97-10b70373c7a0",
+  "date": "2026-11-24",
+  "label": "Does a conservationist deny the existential giver productive credit for the particular effect?",
+  "statement_ids": [
+    "b26c10a0-983d-5a88-aa03-cc601bc1ddc6",
+    "b4987085-f7b0-4031-a795-364873d3c216",
+    "d851dbc6-c30f-4fc3-bf41-88fbbd780786",
+    "4b73eb6b-a0fe-412c-9b81-838f9029d8b2",
+    "9f5c2560-1611-4dbb-a72c-c38a0338795e"
+  ],
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "Durand, redaction C II d.1 q.5 §§6,10–12,17, grants the same act to the giver and conserver of the exercised power mediately. This discriminates denial of immediate divine concurrence from denial of any productive causal credit. Suárez DM XXII.1 §§7–9 challenges a switch in causal mode solely on grounds of an effect’s age when the stated reason concerns its participated character. The bearer may be conserved immediately while the giver receives mediated credit for an acquired determination in both phases. Immediate conservation of substances still faces an onset question in substantial generation. Fixing the working spring charge screens off its actual winding. That supports the sufficiency of the intermediate, and cannot exclude historical mediated production. Replacing the active power, independent renewal and retained organization discriminate power from mere presence. Two certificates bound the actual source contribution within freely routable balanced integer accounts and exhibit the need for routing information to identify a particular output. See docs/notes/actuality-esse-research.md §12.",
+  "blocker": "The universal premise requires identifying the very existential giver as giving each relevant productive or constitutive principle. The arithmetic test applies to consumable inputs. A durable or acquired power and a relational determination require independent evidence of provenance and a respect-appropriate causal reading. The same two actual esse links required by b4987085 are also separate from power-mediated credit.",
+  "evidence": [
+    "PR-1924",
+    "9dfa0bbc-e343-41f0-895d-71b5f4b63c71",
+    "b49d3550-271c-49f2-bc3f-de9ac58b504f",
+    "18548e6e-ac9e-4fad-87cd-64feef80384a",
+    "7331bf4a-2791-418c-b4b0-ed17250cdd2e",
+    "PR-1931"
+  ],
+  "current_assessment": {
+    "date": "2026-11-24",
+    "statement_ids": [
+      "b26c10a0-983d-5a88-aa03-cc601bc1ddc6",
+      "b4987085-f7b0-4031-a795-364873d3c216",
+      "d851dbc6-c30f-4fc3-bf41-88fbbd780786"
+    ],
+    "scope": "Durand’s mediated agency and Suárez’s first-instant challenge as tests of the ordinary-effect reading, §12.",
+    "assessment": "Durand grants mediated responsibility for the very act to the giver who imparts and conserves the actually exercised power. His denial of immediate concurrence supplies no counterexample on that ground to the mediated reading of b26c10a0. The winding and allocation tests favor mediated credit for a traced operative contribution. Suárez’s onset symmetry is persuasive where the effect’s intrinsic character already requires immediate influence from this giver for persistence. For an acquired determination the rival can consistently affirm immediate conservation of the bearer and mediated responsibility for its determination in both phases. Immediate conservation of substances still raises the first-instant question for a newly generated substance. Neither coverage of every actual respect nor unrestricted composition at esse follows.",
+    "next_test": "For an acquired or relational feature, identify what realizes it and follow the actual causal history of that principle. Determine whether the same existential giver supplies it qua operative or constitutive principle, with a justified reading of effective responsibility for the bearer at that respect.",
+    "note": "docs/notes/actuality-esse-research.md#12-what-the-conservationist-grants-about-this-effect",
+    "supersedes": "Completes §11’s test of the conservationist explanation at onset for the two selected ontologies and distinguishes the previously unassigned Durand witness from the stronger zero-credit rival. The conditional judgments on b26c10a0 and b4987085 and the earlier finite comparisons retain their scope.",
+    "review": "accepted_qualified",
+    "publication": "merged",
+    "reviewed_revision": "18ec92bb591e28eea076d6fe3674c2f1072fb2d5",
+    "evidence": "Independent challenge of 51cc96a4c29eb148d86c28cfd483f84c47d9fbc0 and targeted acceptance of 18ec92bb591e28eea076d6fe3674c2f1072fb2d5. §12 distinguishes immediate conservation of a bearer from mediated responsibility for its determination, retains the generated-substance challenge, and specifies the indexed application claim. The reviewer checked the historical witnesses, two quantitative types and scoped synthesis. Merged in PR-1931 at e66eb9969956fdc14a5287299ea8ae90fdb731f4."
+  }
+}

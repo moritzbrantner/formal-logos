@@ -478,7 +478,7 @@ The eight-slot result above is now extended to **ten of the thirteen precisely
 selected candidate slots of one actual source**, WITHOUT claiming ten essential
 attributes in every metaphysically accessible world or a real full divine essence.
 The two extra slots are **immutability** and **eternity**, not knowledge,
-morally perfect freedom, or knowledge of creative possibilities.
+morally perfect freedom, or knowledge of creative possibilities. [Assessment record](../corpus/attempts/8ae3a9d2-46aa-4673-88bc-e2b4f1991864.json)
 
 **Prior art.** The registered argument `379399d1`
 (`NecessaryClassicalGodRootByComposition`) already derives, on the same
@@ -659,7 +659,7 @@ genuinely metaphysically possible complete necessary divine essence) and
 ¬C5 (there is no such admissible bearer), not merely the evidential
 fact that nobody has proved C5. The formal additions are in
 [DivineProfile](../TruthCore/Modal/DivineProfile.lean). All are analyst
-formulations without new Plantinga attribution.
+formulations without new Plantinga attribution. [Assessment record](../corpus/attempts/7c159d8e-6023-42fa-9cf6-989f3a1bf1fc.json)
 
 ### C1–C4 as a positive realizer route
 

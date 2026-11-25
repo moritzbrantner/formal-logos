@@ -1,0 +1,8 @@
+{
+  "id": "6b8ed953-9deb-4272-9e7b-a971be2119c3",
+  "label": "Application of a particular giver in the intermediate's exercise",
+  "term": "giver-indexed application in the production of esse",
+  "definition": "Through a b c means that a brings b's efficacy into exercise in b's production of c's esse, in the selected exercise context. The identity of a matters. Conserving b, giving b its power, and knowing that someone applies b's power each leave open which giver is active in this exercise. The downstream contribution of b is genuine. The ternary relation by itself asserts neither a separate time index nor that a is already credited with causing c's esse.",
+  "basis": "stipulative",
+  "note": "Analyst primitive supplied as the Through parameter of GiverIndexedApplication.AppliedGiverComposes and EachGiverApplies. No standalone Lean definition of its extension is claimed. The positive paradigm is an agent using an instrument to produce an effect; applying that paradigm to esse and identifying a particular giver in the exercise are open. Two givers of the intermediate with only one applying it distinguish this relation from bare causal ancestry. Effective causal credit for the application is a separate open premise. An explicit account grounding such application in causes of esse would warrant further calibration. See docs/notes/q44-inferential-dependency.md."
+}

@@ -1,0 +1,19 @@
+{
+  "id": "a12f2094-2b8f-4148-805e-c742324e423e",
+  "label": "Populated joint and enabling realization controls with secondary-only causal transfer assignment",
+  "paraphrase": "In the four-role secondary-only causal setting, the original transfer background and failure of universal transfer hold. All acts are classified as modes by reusing the same predicate. Every selected skill has a supplied joint realization requiring its bearer's esse and inherits all record cuts to its esse supply. In the enabling variant all events have original supply. With the recipient's esse record removed, its esse loses supply in both variants; its skill loses supply in the joint variant but retains supply in the enabling variant. Removing its skill record in the joint variant spares its esse and cuts skill supply. The control tests indexed supply separately from occurrence and respect-specific effective responsibility.",
+  "lean_declaration": "TruthCore.Causality.ParticularActuality.Control.Certificate",
+  "definition_ids": [
+    "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "42f8b601-09d6-5ad0-af5f-27af30b95166",
+    "ff8bf1d7-0bf9-5dda-8038-7127e3d46ec8",
+    "c9d479bb-308a-5a2b-9755-ddc0170d4e35",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "c19faf56-0908-5e6e-8c39-ccba40dce5d1"
+  ],
+  "disambiguation_ids": [
+    "dba7b1de-f3a0-57af-9af9-b2a4da3136fa",
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b"
+  ]
+}

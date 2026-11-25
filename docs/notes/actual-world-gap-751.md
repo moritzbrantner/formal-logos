@@ -4,7 +4,7 @@ Question: if each member of a complete history has a local causal record, does
 anything remain to explain about why this history obtains rather than a rival?
 Lean: `TruthCore/Explanation/ActualWorldGap.lean`, results
 `ACTUAL-WORLD-GAP-SCHEMA` and `ACTUAL-WORLD-GAP-CONTROLS`. This is a connection,
-not a discharge, and not a refutation of physicalism.
+not a discharge, and not a refutation of physicalism. [Research record](../../corpus/attempts/actual-world-gap-751.json)
 
 ## Finding
 

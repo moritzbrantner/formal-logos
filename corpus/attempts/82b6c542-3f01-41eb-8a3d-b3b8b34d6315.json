@@ -5,7 +5,9 @@
   "statement_ids": [
     "608a262d-08fe-4dfd-9413-67e2ecf35b84",
     "a3cd1a90-0715-5ddc-8239-823c5725b8f2",
-    "b4958f11-08b5-42ae-b09e-b674bb7551af"
+    "b4958f11-08b5-42ae-b09e-b674bb7551af",
+    "54fb5040-cbe9-4285-ab74-86cfaeac8628",
+    "62d59ef4-fc23-4f8f-86f6-9af03c4ecc1e"
   ],
   "kind": "derivation",
   "outcome": "blocked",
@@ -15,6 +17,27 @@
     "PR-739",
     "PR-1808",
     "PR-1809",
-    "PR-1874"
-  ]
+    "PR-1874",
+    "PR-1904",
+    "83edc309-1c34-402d-9394-4d095218244a",
+    "fe46786d-f478-4c90-a9c4-e9f31e00d6c9",
+    "PR-1927"
+  ],
+  "current_assessment": {
+    "date": "2026-11-24",
+    "statement_ids": [
+      "608a262d-08fe-4dfd-9413-67e2ecf35b84",
+      "54fb5040-cbe9-4285-ab74-86cfaeac8628",
+      "62d59ef4-fc23-4f8f-86f6-9af03c4ecc1e"
+    ],
+    "scope": "The deterministic finite-adaptive extension of apparent-past indistinguishability, its exact-classification controls, and its conditional relevance to historical-warrant objections against exceptions to local existential PSR. No assessment of an actual probability of historical replacement or universal skeptical conclusion.",
+    "assessment": "Stable output-preserving transition matching yields identical complete finite transcripts under every deterministic adaptive policy. The explicit two-bit surrogate preserves its hidden past marker under a blind but nonconstant interface; reuse of CorrectionCriterion.characterization excludes an exact transcript classifier. A supplied history-sensitive action preserves the selected equal initial readouts while breaking subsequent matching and restoring an exact classifier. These results formalize the deterministic subcase of the future-intervention argument already proposed in PR #1904 comment 7113063138 section 4; they do not establish the comment's stochastic-kernel or probability claims. The earlier present-evidence point extends to every permitted future intervention under the supplied full operational matching condition; the theorem gives a sufficient condition, not a converse. The bridge from a brute foundation to metaphysically admissible full replacement histories remains OPEN. So does loss of fallible or externalist warrant: possible counterfeits alone supply neither an adverse evidential weight nor actual unreliability. The comparison preserves the earlier moderate preference for adequate existential explanation E and suspension about universal determining explanation D; restricted primitive foundations with warranted constraints and reliable secondary processes remain surviving rivals. Classical theism has conditional additional explanatory content only if actual adequacy, productive agency and the relevant epistemic governance are warranted; necessary/person/good labels do not establish these bridges.",
+    "next_test": "Defend a positive full-history model that specifies identities, provenance and relevant operational states while preserving the commitments actually required by the selected interpretation; qualitative replacements may differ numerically and in historical origin. Other tests are to exhibit a justified history-sensitive restriction/intervention that defeats the supplied matching premise, or to assess a rival's actual fallible or externalist entitlement without demanding exact classification. Test the proposed divine nonfrustration norm on that same evidence domain. The deterministic recursion itself is resolved; repeated present-record examples or the already established strict-norm contradiction would not address the remaining application bridges.",
+    "note": "docs/notes/psr-self-application-756.md#containment-of-evidence-and-adaptive-calibration-2026-11-24",
+    "reviewed_revision": "9c9cf4fc1f1786f6201c0d453789936d399ee0cc",
+    "review": "accepted_qualified",
+    "publication": "published",
+    "evidence": "Independent semantic challenge of a6daf0148bc707e953610cc131ef78fcb249cff9 covered all four new result bundles, their definitions and controls, both new note sections, the complete comparative judgment and diagram, both current assessments and the PR summary. It found four P1 scope errors: strict forecasting versus explanatory parity, unnecessary preservation of historical identities/provenance, sufficient matching presented as necessary, and omitted wholly-future profile scope. These and the quantitative/common-record wording corrections were repaired. Targeted recheck 1 accepted the repaired scope at local 98818b057e9f557eec4b29112184ce8c26a23d13, whose exact tree is published as 9c9cf4fc1f1786f6201c0d453789936d399ee0cc. The recheck also accepted the primitive-list classifier proof repair, which preserves the frozen proposition and zero-axiom allowance. Both frozen Challenges are unchanged. Published in PR-1927; mechanical verification is recorded in its CI checks. Acceptance is of the qualified interpretation and synthesis, not metaphysical admissibility, premise establishment, skeptical defeat or root closure.",
+    "supersedes": "For the deterministic finite-adaptive scope only, supersedes the original summary's no-new-Lean status and the earlier unverified future-intervention proposal. The original summary is retained as historical evidence. The broad metaphysical-admissibility blocker, fallible-warrant qualifications and lack of a root-premise discharge remain unchanged. The earlier requirement for independent semantic challenge is not removed until a scoped final review is recorded. No change to the E/D or same-member absence assessment of attempt 9d7b8ae0-474d-4ae4-9d08-019cffbdea7b."
+  }
 }

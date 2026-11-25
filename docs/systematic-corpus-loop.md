@@ -29,6 +29,16 @@ flowchart TD
 
 Keep the readable case, judgments and rivals in the existing issue or linked case note; keep proofs, sources, countermodels and substantive attempts in their canonical records/dossiers. The current handoff links them. This policy adds no tracker, schema, truth-status field or numerical confidence score. Attempt outcomes describe work, not truth; their `evidence` field retains its existing result/claim/PR reference rules ([attempt format](premise-dossiers.md)).
 
+### When several arguments stop at the same premise
+
+When distinct arguments have been decomposed and still depend on the same open premise, make its **negation** the next research question. Name the arguments and the exact premise each uses. Retrieve earlier work on both sides, including the strongest surviving objection and its recorded reopening condition. If the routes use different senses or witnesses, investigate the bridge between them first.
+
+Write the denial with its original scope. For example, a single exception would defeat the claim that the giver of a recipient’s existence contributes productively to each of its operations. A rival can grant the gift of existence and claim that a secondary cause supplies one operation without that further contribution. The issue is whether the giver also contributes to that very operation. Evidence that the secondary cause is active fits both accounts.
+
+Apply the razors that can distinguish the accounts. Does performing the denial make its content false? Does its evidential rule undercut the proponent’s own basis for believing it? Does the view leave an internal reason to adopt it? Can the proponent retain the prerequisites of inquiry and their other stated commitments? For an alleged exception, apply the [same standard to both cases](principle-parity-challenges.md#test-for-a-genuine-parity-challenge). For an explanatory cost, identify a fact one side explains better and the evidence that favors that explanation. Give each side the same opportunity to defend a primitive.
+
+In the existing attempt, record which test discriminated, the assumptions doing the work, and what would reverse the judgment. Carry the finding back to every route that uses that premise, counting shared evidence once. If both sides pass, retain that result and pursue the next materially different test.
+
 ## Provisional judgments and premise warrant
 
 The master must state the current **overall epistemic assessment**, not merely list conditional results: for example, an interpretation is currently favored, a claim is provisionally supported, or the evidence remains underdetermined. Assess cumulative support across routes while exposing their shared dependencies. Do not manufacture a preference when the evidence does not discriminate. If a turn adds no relevant evidence, retain the prior assessment and say that it is unchanged.
@@ -140,7 +150,7 @@ Select work by the importance of the live question, the expected value of discri
 
 Default to reserving at least one of every five worker starts for a neglected plausible interpretation or a challenge to influential support. Record a reason when no such target is available, and raise the priority of repeatedly deferred relevant work. The coordinator may adjust this allocation to current research needs with an explicit rationale in the existing handoff; do not silently remove exploration capacity.
 
-After ten completed turns, at a substantive stopping point, or after a consequential revision, give a brief synthesis of the central question: what is now favored and why, which combinations were excluded, which bridges gained or lost support, and which shared dependencies remain decisive. Adjust the interval for short runs. Count broader meaningful coverage, alternative conditional support bundles, clearer distinctions, informative results, weakened assumptions, exposed dependencies and precise exhausted approaches as progress, including when open-premise or root-closure totals do not change. Node and argument counts describe scale; route cost describes expanded obligations. None is a quality score, quota or recurring complaint. Assess throughput by accepted meaningful findings per elapsed run, with their time/resource costs and dominant review, build or CI waits recorded in existing logs or the current handoff. Claim and PR counts are not substitutes for this evidence. Convergence means improving the assessment and locating remaining disagreement; it does not promise a final foundation or a monotonic increase in certainty.
+After ten completed turns, at a substantive stopping point, or after a consequential revision, give a brief synthesis of the central question: what is now favored and why, which combinations were excluded, which bridges gained or lost support, and which shared dependencies remain decisive. Adjust the interval for short runs. Count broader meaningful coverage, alternative conditional support bundles, clearer distinctions, informative results, weakened assumptions, exposed dependencies and precise exhausted approaches as progress, regardless of formal closure. Do not report aggregate bare- or open-premise counts, count deltas, or ratios in routine progress or status. Node and argument counts describe scale; route cost describes expanded obligations for an explicitly selected diagnostic. None is a quality score, quota or recurring complaint. Assess throughput by accepted meaningful findings per elapsed run, with their time/resource costs and dominant review, build or CI waits recorded in existing logs or the current handoff. Claim and PR counts are not substitutes for this evidence. Convergence means improving the assessment and locating remaining disagreement; it does not promise a final foundation or a monotonic increase in certainty.
 
 The [configuration elimination method](configuration-elimination-loop.md#certified-forks-for-selected-investigations) and [#565 pilot note](notes/argument-first-pilots-565.md) supply particular proof tactics, not mandatory preliminary stages for every turn.
 
@@ -247,9 +257,14 @@ one genuinely separate scoped successor. The existing root epic #143 remains
 the active handoff. The normal completed-issue rule above still applies to
 work that was actually delivered.
 
-**Dispatch and reconciliation.** The coordinator selects one live uncertainty
-and its file/graph ownership from the issue for a worker brief, allowing the
-worker to follow substantive dependencies without a fixed work cap. On
+**Dispatch and reconciliation.** Before assigning an issue, compare its requested
+outcome with the owning record on current `main` and any open PR delivering
+that outcome. If it is on `main`, link the evidence and close the completed
+issue. If a PR already delivers it, carry the issue through review and merge
+with that PR. An older worker handoff can be superseded by its own repairs.
+For unfinished work, give the worker the first undelivered acceptance item,
+its existing evidence and its file/graph ownership. A reopening condition
+in a reviewed result can remain in the owning record after the issue closes. On
 completion, reconcile the accepted findings against current `main`, update
 the existing issue's visible current status and links, and leave historical
 details in comments or canonical records. Do not treat issue closure, a PR,
@@ -357,11 +372,11 @@ from that philosophical assessment.
 
 ## Progress includes breadth, depth and connections
 
-Use `target/release/truth frontier --routes` and `--reaching-root` to report exactly what changed for root-facing open premises, including **no change** when appropriate. This is a separate formal-frontier report, not the verdict on the research: valuable exploration can add distinct propositions, rivals, arguments, interpretations or conditional routes while leaving the frontier unchanged. Give meaningful breadth its own credit and explain its purpose or connection plan.
+Use the computed `truth frontier-diff` to identify substantive changes to root-facing premise dependencies, including **no change** when appropriate. Do not report aggregate bare- or open-premise totals or count deltas; inspect `truth frontier --routes` for a selected structural route-cost question. This is a separate formal-frontier report, not the verdict on the research: valuable exploration can add distinct propositions, rivals, arguments, interpretations or conditional routes while leaving the frontier unchanged. Give meaningful breadth its own credit and explain its purpose or connection plan.
 
 - An open premise is **bare** (no source claim states or supports it), **supported** (only a `supports` relation backs it, its note recording the gap, or only a bibliographic citation without pinned bytes or a permanently unavailable witness states it) or **stated** (a claim on a pinned source states it); supported and stated premises are undefended (#987). These are source/closure descriptions, not an ordering of philosophical credibility or research priority.
 - A transcription (`opaque_atoms`, `single_application`, `assembly`, `instantiation`) does not close an open conclusion; it propagates closure only when **all** its premises are closed. An alleged refutation counts only when verified **and** all its premises are closed.
-- Replacing one open premise with narrower leaves ("relocation") is legitimate exploration even when it adds bare premises; `frontier-diff` lists them for visibility and `thickness` reports the derivations gained (owner decision 2026-11-07, superseding the no-bare rule of #987). Retain the direct-assumption option for the original premise alongside any derivations; do not rank added support negatively because an expanded route is longer. Report supported leaves as supported, not as stated.
+- Replacing one open premise with narrower leaves ("relocation") is legitimate exploration even when it adds bare premises; `frontier-diff` preserves individual status changes and `thickness` reports the derivations gained (owner decision 2026-11-07, superseding the no-bare rule of #987). Retain the direct-assumption option for the original premise alongside any derivations; do not rank added support negatively because an expanded route is longer. Report supported leaves as supported, not as stated.
 - **Account for connections.** Inspect disconnected verified families (`truth orphans`) as possible bridge targets. Every new family needs a root-route purpose or a specific connection plan and blocker. Report unconnected work honestly; connection alone does not discharge a premise. Use the priority policy above rather than automatically favoring idle work or a complete sense fork.
 - Neither source attribution, a conditional theorem, a narrative, nor an unverified model proves a premise. Preserve exact semantics, assumptions, and surviving rivals; see [configuration elimination](configuration-elimination-loop.md).
 

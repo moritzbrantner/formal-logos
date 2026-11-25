@@ -1,0 +1,12 @@
+{
+  "id": "5a8cda5c-fb8d-4ca1-9e8c-c6d7c01ce03e",
+  "label": "CONCRETE_6 population of the same world under its in-re esse contract",
+  "argument_id": "090a6b68-0f89-4298-9008-5475ef74e900",
+  "challenge_module": "TruthCore.Results.Explanation.RepresentedOccurrence.Challenge",
+  "solution_module": "TruthCore.Results.Explanation.RepresentedOccurrence.Solution",
+  "theorem": "TruthCore.Results.Explanation.RepresentedOccurrence.concretePopulation",
+  "comparator_config": "results/5a8cda5c-fb8d-4ca1-9e8c-c6d7c01ce03e/comparator.json",
+  "status": "solution-present",
+  "description": "Assembly transcription in the adopted esse reading. Select the inhabitant x and retain its actual existence while applying the one-way local existence-in-act contract to x. This supplies the concrete population premise for a grounding profile with the same ontic data and HasEsseInRe classification. It adds no independent defense of the contract. The companion interpretation realizes the very denial of concrete population, has an existing representative here and an empty other world, and fails the contract at that representative.",
+  "transcription": "assembly"
+}

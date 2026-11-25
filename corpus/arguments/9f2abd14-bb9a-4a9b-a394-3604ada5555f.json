@@ -1,0 +1,24 @@
+{
+  "id": "9f2abd14-bb9a-4a9b-a394-3604ada5555f",
+  "label": "PER_SE_5 composition from indexed credit and alignment with every giver",
+  "premise_statement_ids": [
+    "6dd808ed-ddcf-4915-8ca7-090ef32f00ee",
+    "d851dbc6-c30f-4fc3-bf41-88fbbd780786"
+  ],
+  "conclusion_statement_id": "7648194d-042b-495d-a098-ce906bdc7005",
+  "inference_ids": [
+    "a33de478-d544-45c5-ae93-f216963d53d0"
+  ],
+  "meaning": "Assembly that locates the commitment. The alignment premise yields application by this particular incoming giver. The indexed credit premise then assigns the downstream edge to the same giver. This assembly supplies no independent warrant for either input or for the binary composition law.",
+  "definition_ids": [
+    "4bca086d-1fa5-4b0d-bf2b-a22f3f0ac740",
+    "6b8ed953-9deb-4272-9e7b-a971be2119c3",
+    "8163859b-95b3-4dd2-8a69-541bd332f32f",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"
+  ],
+  "disambiguation_ids": [
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "002f42cb-3015-5644-80b3-d408538394e6"
+  ]
+}

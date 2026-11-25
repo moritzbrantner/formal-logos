@@ -5,7 +5,7 @@ an audit of the corpus. The exact record inventory, before hashes, reviewed
 hashes, dispositions and remaining reasons are in
 [classical-attributes-migration.json](classical-attributes-migration.json).
 The existing explorer displays those same 69 dispositions on result
-`CATHOLICISM-STAGE2-CLASSICAL-ATTRIBUTES`, with links and unresolved bridges.
+`CATHOLICISM-STAGE2-CLASSICAL-ATTRIBUTES`, with links and unresolved bridges. [Research record](../../corpus/attempts/classical-attributes-structure-migration.json)
 
 ## Brief and before-state
 
@@ -82,7 +82,7 @@ alone asserts neither the identity predicate at its parameter nor existence.
 bridge, and nine-attributes-to-field sufficiency remain independent premises.
 The unrestricted strict causal-ascent premise remains unattributed and stronger
 than Aristotle's sourced synonymous at-least reading. Reused
-`ATTEMPT-ARISTOTLE-SYNONYMOUS-CAUSE-SCOPE` and the degree-fork audit reject the
+[`ATTEMPT-ARISTOTLE-SYNONYMOUS-CAUSE-SCOPE`](../../corpus/attempts/aristotle-synonymous-cause-scope.json) and the degree-fork audit reject the
 silent replacement: shared defining accounts, strict comparison and ties matter.
 The formal/eminent `InAct` interpretation must be defended consistently across
 all premises. No open philosophical premise is classified as a defect merely
