@@ -1163,6 +1163,87 @@ defended God-description covers every actual recipient and which premise
 makes a God candidate actual in esse when no maximal witness is given.
 Attribution of the new compositions is deferred.
 
+### Do two modes of one resonator have a present common bearer?
+
+The GW170817 transient test traces signals back to their production. A resonator
+permits a different test while its output is being measured. Take as the two
+recipients the whispering-gallery optical resonance and the radial breathing
+resonance of a particular spoke-supported silica toroid. What present physical
+structure enables each to exist **as a localized mode of this device**?
+[Companion investigation](part-free-plurality.md)
+
+**Identifying the modes.** Verhagen et al. show the device by electron microscopy
+and describe forming its rim by reflowing a patterned silica disk. A weak optical
+probe resolves the cavity response as laser detuning varies. A separate
+low-power, room-temperature measurement on the same sample resolves mechanical
+thermal motion near 78 MHz using a 1550 nm optical readout. The mechanical
+identification is independent of fitting the strong-coupling spectrum, although
+both measurements use light. In the cryogenic experiment the phase of transmitted
+light carries the joint response. Both the driven response and the noise spectrum
+show an avoided crossing with a 5.7 MHz splitting. The displacement map in Fig.
+1b is a simulation. Fig. 2c reconstructs displacement from measured spectra and
+fitted parameters.
+[Verhagen et al., Figs. 1–3 and Appendix A2B–C, Figs. A4–A5](https://arxiv.org/pdf/1107.3761)
+
+The readout also picked up motion outside the toroid. With the fiber
+retracted, the researchers found fiber acoustic noise near the breathing
+frequency. Thinning the fiber shifted its acoustic peaks by about 30%, leaving a
+small residual background. Thus a peak near 78 MHz alone would be ambiguous. The
+separate sample characterization, measured detuning dependence and fiber control
+together favor coupling at the toroid over independent signals combined at
+detection.
+[Appendix A1, Fig. A2, and Fig. 3a–c](https://arxiv.org/pdf/1107.3761)
+
+**The shared relation.** For each mode the same particular resonator supplies
+material and boundary conditions that sustain its characteristic spatial pattern.
+Its dielectric rim confines the optical field. Its elastic rim and suspension
+admit radial displacement that changes the optical path length. Removing the rim
+while retaining the laser and detector would eliminate both *device-specific*
+resonances on this account. This is a physical counterfactual inferred from the
+mode assignments. The experiment varied detuning and coupling and characterized
+the fiber background. It did not perform that removal. The shared bearer explains
+the availability of the two modes during the run, even between excitations. The
+relation holds in the same sense for both at the level of supporting a
+device-specific resonance, through different dielectric and elastic properties.
+Optical excitation, thermal or driven motion, and conversion to a photocurrent
+each require further conditions. The optical field is a distinct degree of
+freedom from displacement of silica.
+
+**What a partition must concede.** A partition denying *any common present
+structure supporting these two localized modes* loses standing. A plural account
+can grant both local support relations, use the measured coupling to explain
+their joint output, and still deny one ultimate giver of the existence of the
+material and field. The device constrains the field configuration and provides
+the moving material. Neither fact traces the existence of the field or of the
+silica itself to a giver. The two upstream links therefore agree on present
+structural support. The two modes' contributions to the readout involve dynamical
+transduction. If the modes count as existing concrete patterns and their
+realization counts as existential grounding, the toroid is a candidate common
+ancestor for this pair. Treating the modes as immediate existential grounds of
+the measured output needs a further argument of its own. Reassigning the
+breathing response to a separately localized oscillator that reproduced both the
+independent calibration and the detuning series would reverse the local judgment.
+A trace identifying one productive source of both the field’s existence and the
+material’s existence would discriminate between common and separate supply at
+that deeper level.
+
+The actual-concrete graph argument still needs the relevant relata and edges on its grounding profile, joins at
+every fork, well-foundedness and weak connectivity for source agreement, and root
+existence for `62568126`. Turning finite ancestry into direct giving at esse requires
+a bridge both for the relation and for composition along a path.
+[Graph argument](part-free-plurality.md#when-immediate-co-suppliers-suffice-for-a-common-source)
+
+The actual-recipient premise `0881e859` needs one maximal giver reaching
+**every distinct actual** recipient. A missed actual recipient for each maximal candidate suffices to deny
+it, even if both modes have a shared bearer here. Identification of a named God
+with that giver (`d8529011`) retains God-maximality, ascent and the identity
+split. The existence argument `678ff65f` retains forward naming `1ec205ed` among
+its further premises. Perfection (`1c648123`) and goodness (`4c30239f`) retain
+actuality-to-being and their respective transfer premises. The assembly
+`827fa9cd` still requires its other six attribute arguments and sufficiency
+bridge. The carrier-wide naming converse `86d02b69` reaches even inactive
+carriers. [Attribute consumers and exact premises](root-route-modal-load.md#6-which-causal-reach-do-the-attributes-need-1937)
+
 ## Research attempts citing this note
 
 - [Batch certification of eight exploration maps deriving eight bare root-path premises from deeper…](../../corpus/attempts/round2-perfection-primacy.json)
