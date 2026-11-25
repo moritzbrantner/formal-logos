@@ -38,6 +38,7 @@ public import TruthCore.Logic.FixedPointSelection
 public import TruthCore.Logic.ForeknowledgeDiscrimination
 public import TruthCore.Logic.FormSelection
 public import TruthCore.Logic.GlobalThesisBoundaries
+public import TruthCore.Logic.InformationInvariance
 public import TruthCore.Logic.IntuitionisticKnowability
 public import TruthCore.Logic.Inversion
 public import TruthCore.Logic.Inversions.DivineVeracity1410AssertionTruthAContra2

@@ -1,6 +1,7 @@
 module
 
 public import TruthCore.Logic.DarwinianEpistemicDebunking.BasisDefeat
+public import TruthCore.Logic.InformationInvariance
 public import TruthCore.Results.Logic.DarwinianEpistemicDebunking.CrossHistory.Solution
 public import TruthCore.Results.Logic.GlobalThesisBoundaries.Solution
 
@@ -57,8 +58,11 @@ theorem calibratedSupervenience {X : Type} (p : DarwinianProfile) (F : p.Scenari
     PanelAccurate p panel →
     NoScenarioMismatch p := by
   intro supervenes stable covers accurate ⟨s, wrong⟩
-  obtain ⟨t, member, sameFactor⟩ := covers s
-  exact wrong ((stable s t sameFactor).trans
-    ((accurate t member).trans (supervenes s t sameFactor).symm))
+  exact wrong (TruthCore.Logic.InformationInvariance.of_representative
+    (fun s t => F s = F t) (fun s => p.verdict s = p.correct s) s
+    (fun t sameFactor => by rw [stable s t sameFactor, supervenes s t sameFactor])
+    (by
+      obtain ⟨t, member, sameFactor⟩ := covers s
+      exact ⟨t, sameFactor, accurate t member⟩))
 
 end TruthCore.Results.Logic.DarwinianEpistemicDebunking.BasisDefeat

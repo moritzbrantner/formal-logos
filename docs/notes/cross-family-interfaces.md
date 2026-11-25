@@ -298,3 +298,74 @@ commands in §10 and the four affected certificate IDs in §7.1; do not merge
 until those checks pass. No philosophical application or graph bridge is
 registered here; independent semantic review remains pending for such
 applications. Proof-body consolidation is not additional support for the case.
+
+## 12. Implementation checkpoint: information invariance
+
+The fixed-point checkpoint (head `276205beeffd832362d948a16347108d2c2f82f2`) passed [CI run 45647306508](https://github.com/moritzbrantner/formal-logos/actions/runs/45647306508).
+The next maintenance slice introduces prelude-only `TruthCore.Logic.InformationInvariance`:
+- `factor_iff`: move the existing CorrectionCriterion proof to a generic proposition-valued classification lemma, without changing its exported philosophical vocabulary.
+- `class_agreement`: symmetry and transitivity of a supplied relation give agreement on membership in an anchored class. Reflexivity is not needed for this transfer.
+- `of_representative`: transport truth from a related representative through invariance of the specified predicate; no universal coverage or equivalence-relation assumption is introduced.
+
+Five existing Solution bodies now use these:
+| Proof | Reuse and retained boundary |
+| --- | --- |
+| `CorrectionCriterion.characterization` | Exact classification iff fiber invariance; its finite controls and declaration are unchanged. |
+| `HistorySelection.characterization` | Invariance of the actual world's evidence class, with the old evidence relation and its existing symmetry/transitivity; result `4b8f07db-2a50-5826-ac09-083f0e088d64`. |
+| `InitialHistoryAuthenticity.sound_iff_uniform_witnesses` | Authenticity is transported from an admitted representative of the same positive observation; the relation explicitly retains admittedness. Existing authenticity result `84562a64-8e16-4fe0-92d2-6bd860b8b538` and identity bridge `3a404de1-a186-4700-89ec-afee90edcd1f` consume the original theorem. |
+| `DarwinianEpistemicDebunking.BasisDefeat.calibratedSupervenience` | Transfer correct calibration from a representative of the same factor value. Truth supervenience, verdict stability, panel coverage and panel accuracy are all retained. |
+| `ForeknowledgeDiscrimination.canonicalCertificate` | Related worlds agree on accessibility rows in the canonical selected-truth relation; the converse, factivity, and completeness conditions stay unchanged. |
+
+The exact existing `observation_evidence` and `evidenceOnly_iff_uniform` adapters remain in InitialHistoryAuthenticity. AdaptiveHistoryAccess continues to use the old CorrectionCriterion result rather than bypassing it.
+
+Executed finite diagnostics in the connector JavaScript runtime over two-element carriers: 16 observation/predicate profiles for factorization; 16 instances with a symmetric/transitive relation and related pair for class agreement; 32 cases satisfying the invariance/true-representative antecedents. All checks passed. These test only the finite logical patterns, not Lean or a metaphysical application. The Logic aggregator was regenerated from the complete pinned Git tree using the repository's exact render rule after byte-identical reproduction of the previous aggregate. No changed theorem types, corpus records, frozen Challenges, permitted axiom lists or new philosophical conclusions; verification of the new proof bodies and actual axiom lists is pending CI. Exact premise comparison remains pending at the new head.
+
+## 13. Additional patterns for the next maintenance/research slices
+
+The following are candidate interfaces based on inspected declaration bodies, not a claim of new certified results. Some extend earlier patterns rather than justify another library module.
+
+### 13.1 Local compatibility versus global amalgamation
+
+- `Logic/CollectivePossibilityRouteBoundary.lean`: `LocalShift`, `AllIndividuallyPossible`, `JointAbsenceImpossible`. A particular restricted shift can hold even when the unrestricted inference is invalid.
+- `Modal/FiniteHitting/Vocabulary.lean`: `FiniteOmission`, `Hitting`, `Survivor`; finite joint absences and global absence differ. Compactness and rigid roster policy are independent.
+- `Causality/GrimReaperPatchwork.lean`: `AdjacentPiecesCoPossible`, `ArrangementPossible`. Each pair of patches can coexist at some world without one world realizing the entire indexed arrangement.
+- `Explanation/JointContingencyLocalization.lean`: `Equivalence` on an existing fixed conjunction; classical localization of failure is not arbitrary recombination.
+
+The structural object is a family of subsets of one admitted witness space: individual, finite, adjacent and total intersections. Test implications with the same witness carrier, accessibility and all constraints. A finite witness space with constraints `x = 0` and `x = 1` has individually nonempty sets but empty intersection. The cofinite sets of Nat show finite intersection without global intersection. For finite-family or compactness conclusions use the existing mathematical lemmas, not a fresh metaphysical compactness axiom. Root destinations: the Third Way and the joint-absence power principle; distinct temporal, modal and causal admissibility premises stay open. This is a strengthening of the local/uniform witness survey, not a competing quantifier library.
+
+### 13.2 Conservative expansion and invariance under forgetting structure
+
+- `Explanation/ConservativeReasonExpansion.lean`: `canonical`, `CoverageAndGuardedStability`, `Certificate`; extend an arbitrary Ontic profile while keeping that profile unchanged.
+- `Explanation/TargetCopyExpansion.lean`: `copied`, `EntailingCoverage`, `Certificate`; explanatory-token truth can be copied from the very target it ostensibly explains, preserving the original dependence profile.
+- `Explanation/GroundingBaseline/Reduct.lean`: `GeneralInvariant`; queries on the shared modal reduct agree despite changes to omitted grounding relations.
+
+Common proof scheme: a projection from enriched profiles to base profiles; a lift witnessing that each base model has an admissible enrichment; invariance of the target under that projection. An expansion condition that every base profile admits cannot exclude any base profile on its own. This is about **expressed formal conditions**: it does not show that all real explanations are merely labels or circular. Reuse the existing expansion certificates rather than introduce a second ontology. A substantive productive or explanatory bridge must constrain the lift. This is a useful test for the existential PSR `608a262d` and the claimed adequacy of impersonal sources.
+
+### 13.3 All-premise production and closure traps
+
+- `Causality/DerivativeJointPower.lean`: `Supply` (intrinsic or an admitted rule whose entire contributor set is supplied), `Trap`, `Escape`, `LocalPower`.
+- `Logic/RegressDomains.lean`: `GeneratedWarrant`, inferential rule data and noninferential foundation; shares the inductive all-premise structure already identified in #1926.
+- `Explanation/ExplanatoryClosure.lean`: `Accounted`, `Closed`, `FullSupply`; `allMembers` explicitly moves enablers into the demanded contributors.
+- `Explanation/ActualExerciseExplanation.lean`: `OutputFounded`, `ProductiveCut`; tests when an adopted role and its product are both trapped.
+
+A general rule package can carry a conclusion, an entire prerequisite predicate and a permitted-rule flag. Preserve inductive versus locally closed/coinductive readings: a cycle can satisfy local equations while failing inductive generation. Preserve contributor versus enabler roles; an existential predecessor is not sufficient for all-premise support. Existing `Supply` is already reused by the explanatory closure module. First inspect adapters before abstracting constructors; do not introduce a third fixed-point implementation. Root destinations: supplier-complete foundations and rational warrant; a shared graph shape does not by itself justify transferring the foundational standard between domains.
+
+### 13.4 Scope transport and the actual-context index
+
+- `Modal/DesignatedValidity.lean`: `DiagonalValid`, `NecessitatedValid`, `SuccessorClosed`, `ContentTransport`. Truth at admissible designations is not automatically necessary with a fixed designated context.
+- `Logic/KnowledgeAdmissibility.lean`: `SupervenesAt`, `PhenomenalTwin`, `AdmissibilityLaw`. The existing Solution imports `PossibilityTransfer.box_transfer_iff` and uses frame inclusion; this is established implementation reuse, not a new proposed theorem.
+- `Logic/ScopedEmpiricalProofBarrier.lean`: `ObservationBarrier`, `DomainCalibration`, multiple domain classifications.
+- `Logic/NaturalTheologySemanticScope.lean`: `Meets` selects consequence, warrant or finite observation; `ConsequenceWarrantBridge` is explicitly open.
+
+Common distinction: restriction of the quantified domain can weaken a universal test, but transfer to a new domain or evaluation context requires inclusion and, for index-dependent content, a transport law. No automatic transfer from formal validity to warrant or from failed empirical verification to meaninglessness. Reuse the existing modal transfer lemmas. Root destinations: modal ontological reasoning, natural-theology applicability, F1/F6 inquiry standards. This complements information invariance; changing the admissible alternatives is not the same as observing equal information.
+
+### 13.5 Bearer, capacity, manifestation and effect
+
+- `Causality/PowerExistenceBoundary.lean`: `UnborrowedPowerAt`, `ExternallySupportedAt`, `Coherent`; exercised power and existential support are different typed relations.
+- `Modal/BearerExercise.lean`: `ManifestationRule`, `necessaryExercise`; necessity of capacity transfers to necessary exercise only by an explicit manifestation rule.
+- `Explanation/JointCooperation.lean`: `Compatible`, `Coordinated`, `NecessaryIn`, `MutualFit`; scenario covariation, actual cooperation and modal necessity are distinct.
+- `Explanation/ExistentialInheritance.lean`: `AbsenceInheritance`, `ActualResources`, `RulesPreserveTruth`; transfer of contingent failure through a fixed required bearer and truth-preservation under all group members.
+
+This extends the existing modal transmission and witness identity patterns with a useful role separation: availability, possession, actual exercise, realized effect, and supporting existence. Use existing shared frames and explicit cross-role maps; no new universal power ontology. Necessary possession does not entail a necessarily performed act, and necessary exercise of some power does not entail a rigid necessary effect. Root destinations: the impersonal-source, causal perfection and will arguments. Compare exact omission controls before proposing any new bridges.
+
+These five candidates should be investigated alongside the original eight rather than counted as thirteen disjoint abstract theorems. The first useful next slice is conservative expansion or local/global amalgamation, depending on actual proof reuse and dependency checks. No full corpus census, proof search, formal semantic review, or verified new graph connections have been performed here.
