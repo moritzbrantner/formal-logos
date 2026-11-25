@@ -350,9 +350,14 @@ pub fn report_for_root(
         None
     };
     let proof_section = if let Some(declaration) = &library {
+        let path = string(declaration, "path");
+        let label = if std::path::Path::new(path).ends_with("Challenge.lean") {
+            "Frozen Lean specification"
+        } else {
+            "Lean library declaration"
+        };
         format!(
-            "\n\nLean library declaration · {}:{}\n{}",
-            string(declaration, "path"),
+            "\n\n{label} · {path}:{}\n{}",
             declaration["line"],
             string(declaration, "source")
         )

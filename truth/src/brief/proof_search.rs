@@ -55,7 +55,7 @@ pub(super) fn qualified_name(query: &str) -> bool {
 /// name even when nobody has registered them as arguments in the graph.
 pub(super) fn library_declaration(root: &Path, query: &str) -> Option<Value> {
     let name = query.trim().trim_matches('`');
-    let (path, line, source) = LeanSource::new(root).qualified_block(name)?;
+    let (path, line, source) = LeanSource::new(root).implementation_block(name)?;
     Some(json!({"name":name,"path":path,"line":line,"source":source}))
 }
 

@@ -1985,6 +1985,30 @@ fn question_returns_frozen_lean_evidence_without_any_notes_or_assessments() {
         assert!(text.contains("Matching Lean results"));
         assert!(result["matches"].as_array().unwrap().is_empty());
     }
+    let companion = "namespace TruthCore.Results.Fixture\ntheorem paired : True := by\n  sorry\ntheorem pending : True := by\n  sorry\nend TruthCore.Results.Fixture\n";
+    write(&root, "TruthCore/Results/Fixture/Challenge.lean", companion);
+    write(
+        &root,
+        "TruthCore/Results/Fixture/Solution.lean",
+        "namespace TruthCore.Results.Fixture\ntheorem paired : True := by\n  trivial\nend TruthCore.Results.Fixture\n",
+    );
+    for (name, module, detail) in [
+        ("paired", "Solution", "trivial"),
+        ("pending", "Challenge", "Frozen Lean specification"),
+    ] {
+        let (lookup, text) = super::assessment_search::report_for_root(
+            &root,
+            &corpus,
+            &format!("TruthCore.Results.Fixture.{name}"),
+            1,
+        )
+        .unwrap();
+        assert_eq!(
+            lookup["lean_declaration"]["path"],
+            format!("TruthCore/Results/Fixture/{module}.lean")
+        );
+        assert!(text.contains(detail), "{text}");
+    }
     let (library, text) = super::assessment_search::report_for_root(
         &root,
         &corpus,
