@@ -64,6 +64,237 @@ At the baseline and in the fixed classical inference task, bare frequency/actual
 
 Next: instantiate the existing criterion characterization on the two sequents, test the omitted semantic/evidential and adoption conditions, and use the #1987 short proof as a selected actual proof-uptake case. Preserve the contrast between absence of reasons and lack of categorical force. This is a proposed assessment, not independently reviewed.
 
+## Proposed formalization: reuse the fixed-interpretation and criterion libraries
+
+The existing [criterion result](../../corpus/results/CORRECTION-CRITERION-EXACT-FACTORIZATION.json) `0590fe21` is the exact general theorem required; see [correctness and the private diary](wittgenstein-criterion-and-correctness.md). It proves that a classification from the specified data is exact iff correctness is invariant on the fibers of those data. Do not register another general characterization. Use `TruthCore.Logic.ReflectiveCoherence.Entails` (definition `0ff13cc6`), the same vocabulary as the two validity results from #1422. The proposed application supplies a nontrivial classical modus-ponens / affirming-consequent pair with all four valuations and composes `characterization`, rather than treating validity as an opaque predicate.
+
+The following complete Lean scratch candidate is **uncompiled**. The supplied data projection, equal-fiber hypothesis, fixed interpretation and exact-classification requirement define the scope of the test; their actual psychological applicability is not asserted. Its conclusion is nonexistence of an exact extensional classifier from the particular projection, not that the whole of psychology cannot realize the meaning of the inference. With distinct data, an exact classifier exists even if it is an arbitrary lookup table; extensional adequacy does not explain what makes an inference valid.
+
+```lean
+import TruthCore.Results.Logic.EpistemicUnderminers.Solution
+import TruthCore.Results.Logic.CorrectionCriterion.Solution
+import TruthCore.Results.Logic.EpistemicReasonBearer.Solution
+import TruthCore.Results.Logic.CaseNonContradiction.Solution
+import TruthCore.Results.Logic.TruthPilot.NotEveryPropositionFails.Solution
+
+namespace LogicalPsychologismProposal
+
+open TruthCore.Logic.ReflectiveCoherence
+open TruthCore.Logic.CorrectionCriterion
+open TruthCore.Logic.EpistemicReasons
+
+abbrev Valuation := Bool × Bool
+abbrev Content := Valuation → Bool
+
+def atomP : Content := fun w => w.1
+def atomQ : Content := fun w => w.2
+def impPQ : Content := fun w => (!w.1) || w.2
+
+def sem : Semantics Valuation Content where
+  trueAt := fun w p => p w = true
+  neg := fun p w => !(p w)
+  neg_true_iff := by
+    intro w p
+    change (!(p w) = true) ↔ ¬ (p w = true)
+    cases p w <;> decide
+
+inductive Rule | mp | ac deriving DecidableEq
+
+def premises : Rule → Worldview Content
+  | .mp => fun c => c = atomP ∨ c = impPQ
+  | .ac => fun c => c = atomQ ∨ c = impPQ
+
+def conclusion : Rule → Content
+  | .mp => atomQ
+  | .ac => atomP
+
+def valid (i : Rule) : Prop := Entails sem (premises i) (conclusion i)
+
+theorem mpValid : valid .mp := by
+  intro w hw
+  have hp : w.1 = true := hw atomP (Or.inl rfl)
+  have hi : ((!w.1) || w.2) = true := hw impPQ (Or.inr rfl)
+  change w.2 = true
+  simpa [hp] using hi
+
+theorem acInvalid : ¬ valid .ac := by
+  intro h
+  have hm : Models sem (premises .ac) (false, true) := by
+    intro c hc
+    change c = atomQ ∨ c = impPQ at hc
+    rcases hc with rfl | rfl <;> rfl
+  have hbad : false = true := h (false, true) hm
+  exact Bool.false_ne_true hbad
+
+-- A supplied psychological projection identifies the two rules.
+-- E may contain richer data than one acceptance bit.
+theorem equalDataNoCriterion {E : Type} (observe : Rule → E)
+    (same : observe .mp = observe .ac) :
+    ¬ AdmitsCriterion observe valid := by
+  intro h
+  have inv :=
+    (TruthCore.Results.Logic.CorrectionCriterion.characterization.1
+      Rule E observe valid).mp h
+  exact acInvalid ((inv .mp .ac same).mp mpValid)
+
+-- An acceptance-only projection can fail even if everybody approves.
+def allAccepted : Rule → Bool := fun _ => true
+def noneAccepted : Rule → Bool := fun _ => false
+
+theorem unanimityNoCriterion :
+    ¬ AdmitsCriterion allAccepted valid :=
+  equalDataNoCriterion allAccepted rfl
+
+theorem omissionControl :
+    allAccepted .mp ≠ noneAccepted .mp ∧ valid .mp ∧ ¬ valid .ac := by
+  exact ⟨by decide, mpValid, acInvalid⟩
+
+-- A richer projection distinguishes the two inputs; no metaphysical
+-- reduction or explanation is implied by this extensional classifier.
+theorem richerProjectionControl :
+    AdmitsCriterion (fun r : Rule => r) valid :=
+  ⟨valid, fun _ => Iff.rfl⟩
+
+-- F6 and pure semantic validity are separate. The empty/nonempty Reason
+-- fields are stipulated controls, not claims about actual human subjects.
+theorem f6OmissionControls :
+    valid .mp ∧ ¬ valid .ac ∧
+      ¬ ThereAreEpistemicReasons (fun (_ : Unit) (_ : Unit) => False) ∧
+      ThereAreEpistemicReasons (fun (_ : Unit) (_ : Unit) => True) := by
+  refine ⟨mpValid, acInvalid, ?_, ⟨(), (), trivial⟩⟩
+  rintro ⟨_, _, h⟩
+  exact h
+
+-- Reuse existing endpoints. No new result or direct link is claimed.
+#check TruthCore.Results.Logic.EpistemicUnderminers.identityExcludesNoValidInference
+#check TruthCore.Results.Logic.EpistemicUnderminers.f6ExcludesNihilism
+#check TruthCore.Results.Logic.EpistemicReasonBearer.reasonsFromWarrant
+#check TruthCore.Results.Logic.EpistemicReasonBearer.populationFromReasons
+#check TruthCore.Results.Logic.CaseNonContradiction.noCasePredicateContradiction
+#check TruthCore.Results.Logic.TruthPilot.NotEveryPropositionFails.notEveryPropositionFails
+
+end LogicalPsychologismProposal
+```
+
+The F1 result `a7ecf1fe` is already the exact classical rebuttal of the case-predicate contradiction. To apply it to a psychologistic verdict, use the **same** being x, respect r and predicate P, and the separate two one-way soundness conditions (the positive verdict implies P x r; the negative verdict implies ¬ P x r). The two verdicts together would produce the excluded existential. A control with both verdicts accepted and P true satisfies neither the negative soundness condition nor the claimed contradiction; merely allowing both beliefs is not the denial of F1. Do not register the application as an independent theorem about all psychological theories. The narrow implication is an instance of an existing theorem, and F1's Lean negation already excludes contradiction.
+
+The F6 control intentionally varies an uninterpreted relation. It therefore tests only the formal entailment from validity to the thin existential, not whether the empty relation represents an adequate philosophical account of rationality. The same separation applies to empirically correct or incorrect token acceptance. To obtain an actual reason witness, use the existing `reasonsFromWarrant` with the warranted-acceptance and two calibration premises listed above; to exclude global nihilism use `f6ExcludesNihilism` on that same Reason. Do not register a theorem that assumes an opaque bridge “if validity obtains then F6” and merely applies it.
+
+## Executable finite comparison (run in this session)
+
+This Python 3 standard-library check exhausts all four truth valuations, all four Boolean acceptance profiles, and all four Boolean classifiers on the acceptance bit for each profile. It confirms the countervaluation and tests equal-data impossibility versus restored discrimination. In the training-only control both rules really have true premises; there is no vacuous-success artifact. The final two one-agent controls simply vary the thin reason relation; they are structural surrogates, not a model of the full psychology of a reasoner.
+
+```python
+from itertools import product
+
+rules = ('MP', 'AC')
+valuations = tuple(product((False, True), repeat=2))
+
+def evaluate(rule, p, q):
+    implication = not p or q
+    return (p and implication, q) if rule == 'MP' else (q and implication, p)
+
+def failures(rule, worlds):
+    return [w for w in worlds if evaluate(rule, *w) == (True, False)]
+
+valid = {r: not failures(r, valuations) for r in rules}
+assert valid == {'MP': True, 'AC': False}
+assert failures('AC', valuations) == [(False, True)]
+assert failures('MP', valuations) == []
+assert all(not failures(r, [(True, True)]) for r in rules)
+# Both rules actually have true premises in the restricted trial.
+assert all(evaluate(r, True, True) == (True, True) for r in rules)
+for flags in product((False, True), repeat=2):
+    observed = dict(zip(rules, flags))
+    classifiers = [dict(zip((False, True), outputs))
+                   for outputs in product((False, True), repeat=2)]
+    exact = [c for c in classifiers if all(c[observed[r]] == valid[r] for r in rules)]
+    assert bool(exact) == (flags[0] != flags[1])
+    print(f'acceptance {flags}: {len(exact)} exact Boolean classifiers')
+# Thin F6 and a psychological acceptance relation can coexist or not.
+for reason in (False, True):
+    accepts = True
+    f6 = reason  # one-agent, one-content domain
+    nihilism = not reason
+    assert accepts and (f6 != nihilism)
+print('MP countervaluations:', failures('MP', valuations))
+print('AC countervaluations:', failures('AC', valuations))
+print('PASS: four valuations, four acceptance profiles, all four classifiers per profile; two F6 relation controls')
+```
+
+Actual output:
+
+```text
+acceptance (False, False): 0 exact Boolean classifiers
+acceptance (False, True): 1 exact Boolean classifiers
+acceptance (True, False): 1 exact Boolean classifiers
+acceptance (True, True): 0 exact Boolean classifiers
+MP countervaluations: []
+AC countervaluations: [(False, True)]
+PASS: four valuations, four acceptance profiles, all four classifiers per profile; two F6 relation controls
+```
+
+Run from the note without retyping the check:
+
+```sh
+python3 - <<'PY'
+from pathlib import Path
+note = Path("docs/notes/logical-psychologism.md").read_text()
+code = note.split("```python\n", 1)[1].split("\n```", 1)[0]
+exec(compile(code, "logical_psychologism_check.py", "exec"))
+PY
+```
+
+This is an exhaustive finite test of the analyst representation only. It does not run Lean, Comparator or NanoDa.
+
 ## Verification and handoff
 
-No new corpus statements or relations, no Lean verification or frontier change claimed. Full local CLI semantic preflight, independent challenge and verification are pending. This checkpoint precedes the exact proposed formalization and controls.
+[Attempt record](../../corpus/attempts/e1fa608e-9eb1-49ab-8c79-9d92cc499ecf.json). Draft #1990 continues #1989 and #1007; the other draft was left unchanged to avoid a cross-lane conflict. Main baseline `a9819b148bd4a7c089cff9dc07f95c209452511e`; initial checkpoint `9af0c608f434d05f52f5b72017e25e884a40c5ab`, rival and root mapping checkpoint `2584ab7214fa502d4db524ec9df92fca3845cffa`. Read exact F1/F6 records and declarations, the above Challenges/Solutions, authority controls, prior correction and basing notes, repository AGENTS and research skills. The exact registered proof `b41427d3` composes the existential from `SomePropositionHolds.somePropositionHolds` rather than re-proving the True witness in that theorem; selecting True is an explanatory instantiation in the proof-uptake task. No new attributed source claims.
+
+Available: finite Python comparison passed, existing GitHub definitions/results inspected. Unavailable: clone/network in execution container (GitHub DNS resolution failed), Lean, Lake, Cargo, warm-clone preview, independently delegated reviewer, CLI/dossier/novelty/semantics and full formal gates. No new registered result, no premise change intended; actual computed frontier delta pending. This is an unreviewed draft and is not a claim of formal verification.
+
+Resume in the prepared canonical checkout. Use the repository worker setup; commands for retrieval and scratch verification:
+
+```sh
+git fetch origin
+git switch research/logical-psychologism
+python3 scripts/worker_env.py --check
+cargo build --locked --release -p truth
+for target in c425f0c5 f56b2ee7; do
+  target/release/truth brief "$target"
+  target/release/truth related "$target"
+  target/release/truth dossier "$target"
+  target/release/truth semantics "$target"
+done
+target/release/truth novelty 'semantic validity does not factor through an equal psychological acceptance projection'
+for result in e03147fa b203c461 0590fe21 a7ecf1fe 146b502b b3ddb7c4 b50727e1 b41427d3; do
+  target/release/truth context "$result"
+done
+target/release/truth semantics --premise 6280fbf0 --premise 0e2bbd59 --premise 6b4e3331 --conclusion f56b2ee7
+python3 - <<'PY'
+from pathlib import Path
+note = Path("docs/notes/logical-psychologism.md").read_text()
+code = note.split("```lean\n", 1)[1].split("\n```", 1)[0]
+Path("Scratch/LogicalPsychologismProposal.lean").write_text(code + "\n")
+PY
+lake build TruthCore.Results.Logic.EpistemicUnderminers.Solution TruthCore.Results.Logic.CorrectionCriterion.Solution TruthCore.Results.Logic.EpistemicReasonBearer.Solution TruthCore.Results.Logic.CaseNonContradiction.Solution TruthCore.Results.Logic.TruthPilot.NotEveryPropositionFails.Solution
+python3 scripts/worker_env.py -- lake env lean Scratch/LogicalPsychologismProposal.lean
+base=$(git merge-base HEAD origin/main)
+git diff --check "$base"
+target/release/truth check
+target/release/truth attribution-check --base "$base"
+target/release/truth frontier-diff --base "$base"
+```
+
+Before registering anything, compare the local novelty output and the exact
+meaning of the two content roles, inspect the semantic fiber of the richest
+proposed psychological projection, and run the final independent semantic
+challenge. If registration is warranted rather than simple reuse, use the
+canonical batch generator (Challenge, records), build the affected modules,
+run `truth bind-check --affected --base "$base"`, `scripts/verify-result.sh
+<NEW-RESULT-ID>` for each new result and `scripts/verify-library.sh` (or the
+CI-selected NanoDa scope). Report actual computed frontier delta and review
+at the final head. This is an attempt with a blocked formal delivery, not a
+new verified result. The next philosophical test is the actual proof-uptake
+assessment and the proposed reduction of semantic truth conditions to
+functional facts, not additional truth-table examples alone.
