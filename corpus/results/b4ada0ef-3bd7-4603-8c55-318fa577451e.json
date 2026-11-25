@@ -1,0 +1,11 @@
+{
+  "id": "b4ada0ef-3bd7-4603-8c55-318fa577451e",
+  "label": "Calibrating a supervenience reply across selective histories",
+  "argument_id": "a623f59b-1802-4b64-8f0d-b3955c49ddf0",
+  "challenge_module": "TruthCore.Results.Logic.DarwinianEpistemicDebunking.BasisDefeat.Challenge",
+  "solution_module": "TruthCore.Results.Logic.DarwinianEpistemicDebunking.BasisDefeat.Solution",
+  "theorem": "TruthCore.Results.Logic.DarwinianEpistemicDebunking.BasisDefeat.calibratedSupervenience",
+  "comparator_config": "results/b4ada0ef-3bd7-4603-8c55-318fa577451e/comparator.json",
+  "status": "solution-present",
+  "description": "The relation horn admits a restricted reply if correctness supervenes on the selected factor, verdicts stay fixed at each factor value, and a covering comparison panel is accurate. The transported result concerns the represented cases. Supervenience supplies neither the direction of calibration nor a causal explanation of selection."
+}

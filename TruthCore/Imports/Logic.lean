@@ -19,6 +19,7 @@ public import TruthCore.Logic.ContrastiveWorldview
 public import TruthCore.Logic.CorrectionCriterion
 public import TruthCore.Logic.CorrelatedTestimony1396
 public import TruthCore.Logic.DarwinianEpistemicDebunking
+public import TruthCore.Logic.DarwinianEpistemicDebunking.BasisDefeat
 public import TruthCore.Logic.DistributedKnowledge
 public import TruthCore.Logic.EpistemicAccuracy
 public import TruthCore.Logic.EpistemicAuthority
