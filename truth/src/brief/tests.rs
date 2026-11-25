@@ -1969,10 +1969,17 @@ fn question_returns_frozen_lean_evidence_without_any_notes_or_assessments() {
         "TruthCore/Results/Fixture/Solution.lean",
         &source.replace("sorry", "exact h"),
     );
+    record(
+        &root,
+        "statements",
+        json!({"id":GOAL, "label":"Cardinality surcharge",
+        "paraphrase":"The goal follows."}),
+    );
     let corpus = Corpus::load(&root).unwrap();
     for question in [
         "TruthCore.Results.Fixture.goal",
         "goal from the open bridge",
+        "Cardinality surcharge",
     ] {
         let (result, text) =
             super::assessment_search::report_for_root(&root, &corpus, question, 2).unwrap();

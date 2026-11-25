@@ -89,10 +89,10 @@ pub(super) fn find(
     let db = Connection::open_in_memory()?;
     db.execute_batch(
         "CREATE VIRTUAL TABLE proofs USING fts5(
-        id UNINDEXED, name, argument, conclusion, tokenize='porter unicode61'
+        id UNINDEXED, name, argument, conclusion_label, paraphrase, tokenize='porter unicode61'
     )",
     )?;
-    let mut insert = db.prepare("INSERT INTO proofs VALUES (?1,?2,?3,?4)")?;
+    let mut insert = db.prepare("INSERT INTO proofs VALUES (?1,?2,?3,?4,?5)")?;
     for (id, result) in corpus.records_by_id("results") {
         let Some(argument) = corpus.get("arguments", field(result, "argument_id")) else {
             continue;
@@ -107,14 +107,15 @@ pub(super) fn find(
             id,
             name,
             field(argument, "label"),
+            conclusion.map(|s| field(s, "label")).unwrap_or_default(),
             conclusion
                 .map(|s| field(s, "paraphrase"))
                 .unwrap_or_default()
         ])?;
     }
     let mut ranked = db.prepare(
-        "SELECT id, name || ' ' || argument || ' ' || conclusion
-        FROM proofs WHERE proofs MATCH ?1 ORDER BY bm25(proofs,0,2,2,1), id",
+        "SELECT id, name || ' ' || argument || ' ' || conclusion_label || ' ' || paraphrase
+        FROM proofs WHERE proofs MATCH ?1 ORDER BY bm25(proofs,0,2,2,2,1), id",
     )?;
     let mut rows = ranked.query([terms])?;
     let mut hits = Vec::new();
