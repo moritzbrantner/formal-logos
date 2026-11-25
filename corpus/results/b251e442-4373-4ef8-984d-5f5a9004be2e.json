@@ -1,0 +1,11 @@
+{
+  "id": "b251e442-4373-4ef8-984d-5f5a9004be2e",
+  "label": "Test the strict-ground interpretation after identifying labels across two disjoint pairs",
+  "argument_id": "a8cec5bc-9c14-4d96-a2bc-5b64e2ee27fa",
+  "challenge_module": "TruthCore.Results.Causality.StrictGroundRepresentation.Challenge",
+  "solution_module": "TruthCore.Results.Causality.StrictGroundRepresentation.Solution",
+  "theorem": "TruthCore.Results.Causality.StrictGroundRepresentation.labelCycle",
+  "comparator_config": "results/b251e442-4373-4ef8-984d-5f5a9004be2e/comparator.json",
+  "status": "solution-present",
+  "description": "The four bearers have only two disjoint dependence edges. Their fixed labels preserve different endpoints on each dependence path while combining the edges into a two-cycle at the label level."
+}

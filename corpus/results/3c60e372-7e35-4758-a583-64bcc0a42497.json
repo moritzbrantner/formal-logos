@@ -1,0 +1,11 @@
+{
+  "id": "3c60e372-7e35-4758-a583-64bcc0a42497",
+  "label": "GOD_4 is one from GOD_4 maximality and distinct esse cause exclusion",
+  "argument_id": "d25980a4-270b-414f-9474-d7c016792ec0",
+  "challenge_module": "TruthCore.Results.Case.Catholicism.GodIsOneFromEsse.Challenge",
+  "solution_module": "TruthCore.Results.Case.Catholicism.GodIsOneFromEsse.Solution",
+  "theorem": "TruthCore.Results.Case.Catholicism.GodIsOneFromEsse.oneFromGodMaximal",
+  "comparator_config": "results/3c60e372-7e35-4758-a583-64bcc0a42497/comparator.json",
+  "status": "solution-present",
+  "description": "For any two Gods the first is maximal, and the second, if distinct, would give the first its esse in the same CausesIn relation. Exclusion and an identity split give equality. This route can take God-to-maximality directly without assuming an existing maximum. Deriving it by 14cbab05 reintroduces the witness and the two shared causal assumptions."
+}

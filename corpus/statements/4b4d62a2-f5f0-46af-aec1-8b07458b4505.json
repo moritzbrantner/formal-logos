@@ -1,0 +1,6 @@
+{
+  "id": "4b4d62a2-f5f0-46af-aec1-8b07458b4505",
+  "label": "Some selected transfer leaves its finite export ancestry without a return path",
+  "paraphrase": "OPEN application premise about the same class of transfer occurrences: some selected transfer has no return path from recipient to sender, and the selected events sent by anyone reaching that sender form a finite type. The sender itself is included by the empty path. This is a local finiteness claim about events, stronger than finite out-degree per sender.",
+  "lean_declaration": "TruthCore.Causality.ReceiptMatching.OneWayFiniteAncestry"
+}

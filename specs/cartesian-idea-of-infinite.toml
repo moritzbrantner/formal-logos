@@ -116,3 +116,20 @@ object_kind = "statement"
 object_id = "e81971f1-601c-57f5-be2d-c4b0624d0cad"
 verification_result_id = "The meditator thinks, therefore some thought episode occurs"
 note = "Same Occurs predicate, read through the idea frame's Occurs field. The strong version names a bearer, the designated meditator; the weak version names no bearer. No strictness result is registered here: the subjectless control 6cffb105 suggests strictness but is not certified for this pair (different vocabulary). A strength_comparison with a delta statement is a follow-up."
+
+[[statement]]
+id = "The distinct content cause IN_ACT_4 in INFINITE_3 has esse at the same witness"
+lean = "InfiniteCauseOfIdeaWithEsse"
+paraphrase = "For an occurring episode borne by the meditator and representing INFINITE_3, one being causes that very content, differs from the meditator, and is in act both in INFINITE_3 and in esse (IN_ACT_4 on one grades frame). This preserves the episode and the cause through the inference to being. No world-indexed existence or comparison in being is asserted."
+definitions = ["c0cbef1c-060a-54d4-bb49-8d59da40caf3", "ce8ccc1a-4f9a-5904-a10c-548778d79b66", "89b53040-ee5c-425b-aa77-388ddbb42dba", "d8e82792-9d80-4a6f-8181-b2fccc3f06af", "ef3ee5ec-1d44-4bd7-93f9-376c1cf6f6b3", "f356048e-c066-4e25-9dcc-4b6911c2e0b7", "5cbd5a0a-9055-4b69-af39-bd0bff1279fd", "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"]
+disambiguations = ["dba7b1de-f3a0-57af-9af9-b2a4da3136fa", "587c53cf-c2a8-51f6-b8c1-013e67756dc6"]
+
+[[argument]]
+id = "Act of esse at the very cause of the meditator's representation of INFINITE_3"
+theorem = "infiniteCauseWithEsse"
+premises = ["4c815f13-6b1a-42d7-b1a4-c3713eb2d3bc", "7067553d-cad9-5d79-b6b2-912e35051530"]
+conclusion = "The distinct content cause IN_ACT_4 in INFINITE_3 has esse at the same witness"
+comparator_theorems = ["distinctPossessorWithoutBearer", "surpassedCauseWithEsse", "causeWithoutEsse", "finiteRulesDiscriminateAboveEveryBound"]
+axioms = []
+rule = "Existential elimination and reintroduction preserving both witnesses, with actuality-to-being instantiated at the cause"
+meaning = "Extend the existing Meditation III result by applying actuality-to-being to its cause in the represented respect. The positive two-being control grants the full bundle while the meditator surpasses the cause at esse. The omission control retains all four Cartesian premises and a meditator with esse while the cause lacks esse. The weaker distinct-possessor endpoint uses occurrence and content independently of the bearer clause. A separate two-state mathematical control changes which lengths are accepted above every bound by changing a finite output rule. It illustrates determinate positive content in an unbounded domain; its subject matter is unary lengths."

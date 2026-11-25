@@ -306,3 +306,107 @@ checks/notGenus/notUniqueRoot report no axioms. Frozen Challenge SHA256:
 `7477a5302b3d80e13e5dbfdd6987d1bb91e3ba01397a2b11671f2ebb19c11125`.
 Final integrated binding, Comparator and NanoDa certification are coordinator-owned;
 no source premise is discharged by this control.
+
+## When immediate co-suppliers suffice for a common source
+
+Fix a world and restrict its selected existential grounding relation to beings
+that exist there and are concrete. A ground points to its dependent. Here
+“immediate” means one edge in the supplied relation. An edge can also have
+an intervening path unless the interpretation excludes such edges. Suppose
+every two immediate grounds of the same dependent can each be traced upstream
+to some one being, through finitely many steps of this relation. Either trace
+can have length zero. The joining being can be different at each fork. Under
+well-foundedness this suffices for the earlier requirement about **every pair
+of finite paths**. There can be many intermediate contributors to one effect.
+
+To see why, take two paths from a dependent. If one stays put, it can follow
+the other. Otherwise let the first suppliers be u and v and their common
+upstream witness be k. At u the induction hypothesis joins the first endpoint
+and k at p. There is now a path from v through k to p. At v the induction
+hypothesis joins p and the second endpoint. The final witness therefore
+extends both original paths. Induction uses well-foundedness at the two
+immediate suppliers. It requires neither a finite universe nor a uniform
+bound on path length. [Proof and exact statements](../../TruthCore/Results/Causality/LocalSourceConfluence/Solution.lean)
+
+On a weakly connected graph the existing source-agreement theorem then makes
+all sources equal. A source has nowhere further upstream to go. It follows,
+classically, that **two distinct sources in a connected well-founded graph
+require some dependent with two immediate suppliers having no common
+upstream node**. The obstruction can occur far from the particular effect
+under study. In the earlier five-being interpretation both rank-zero sources
+have an edge to the rank-two instrument, as well as a path through the
+rank-one constituent. At that constituent they also witness the obstruction
+if “immediate” requires no intervening rank. The two incoming edges certify
+a shared dependent. To explain it by irredundant cooperation, a pluralist
+would need a further account of why each power is required. Distinct powers
+acting in virtue of their own natures and primitive cooperation are live
+explanations to examine on that stronger reading.
+[Earlier joint interpretation](#upstream-confluence-on-the-same-interpretation-702)
+
+**Why the ancestry test matters.** Consider the earlier example of two drives
+on one load. Under the power-supply reading a common feeder identified by
+tracing both input connections gives local evidence of a common origin.
+Disconnecting an independent control signal could stop both drives even if
+their power inputs came from different feeders. The stoppage by itself
+does not identify the source of the power. For existential grounding the
+hoped-for analogue would trace the existence of both immediate suppliers
+to one actual bearer. For instance, if two contributors are dependent modes
+of the same existing substance, their individuation and their dependence
+for existence on that substance would give the required short paths for
+that pair, provided the modes qualify as actual concrete nodes in this
+profile. The inference can succeed locally even if that substance itself
+has a ground. If the contributors are distinct substances exercising powers,
+an account of what unites their activity still has to establish the common
+ancestry of the substances' existence. The change of relata matters.
+
+**A test of the foundation premise.** Give stage n two suppliers, stage n+1
+and one of two roots chosen by parity. Every stage receives immediately
+from a root. Its next stage can also trace back to that same root via stage
+n+2. Hence each immediate fork joins. The graph is connected and acyclic,
+but the relay path through successive stages continues indefinitely, and both
+roots are sources. The rival who grants some short source path for each being
+has thereby granted less than well-foundedness. This is a mathematical test
+of the inference. Applying either the ladder or a terminating graph to actual
+existential grounding takes further warrant. [Alternating-source certificate](../../corpus/results/cbc25f11-29fe-483a-8157-672c7703e6cd.json)
+
+**Where it enters the case.** Any argument that supplies an actual root at
+the selected world can now use source agreement on exactly this profile's
+actual grounding graph to identify that root with every other actual root.
+The specialization uses `m.grounds w` on existing concrete beings. The
+older structural records also describe `WorldSourceRegress.actualGraph`,
+which uses an ontic cause relation on all actual beings. The proof makes
+no identification between these relations or carriers.
+The composed theorem also checks the particular route through well-foundedness,
+weak connectivity and local joining. The existing De ente consumer can thereby
+identify its separately supplied first source with a separately supplied
+necessary, all-world-underived candidate. Each must independently qualify as an
+actual root here. Finite ancestral paths do not supply the stronger condition
+that the root *directly* grounds every other actual concretum. Its necessity,
+intellect and the application of GOD_4 have their own arguments.
+[Root agreement](../../corpus/results/62568126-6e89-40b8-a786-2ec49fb7687e.json)
+and [same-source consumer](../../corpus/results/c66eead8-8674-4d0c-b04f-423d51c34392.json)
+
+The computed premise comparison also exposes older ways to prove structural
+source agreement. One identifies beings by their strict ancestors. Two roots
+both have an empty strict ancestry, so applying that identity criterion to
+actual beings already constrains their individuation. Another route identifies
+complete producers through their participation and coverage premises. To
+use that route here, the actual-concrete grounding edges would have to meet
+its complete-production and parthood assumptions, and those very edges
+would have to weakly connect the carrier. Neither an argument on a
+different graph nor the mere listing of a route supplies that application.
+[Ancestor identity premise](../../corpus/statements/53cc2c53-1f9a-4e4a-8402-3ac464fa8352.json)
+and [complete-producer route](../../corpus/arguments/COMPLETE-CAUSE-CONNECTED-SOURCE-UNIQUENESS.json)
+
+**Provisional judgment.** This gives the common-source account a sufficient
+condition one could investigate at the actual sites of joint dependence. The
+five-being case prevents transferring the unity of an effect to its sources
+without further evidence. The remaining disagreement concerns collective
+supply at a fork, alongside the independent questions of connectivity and
+well-foundedness. Evidence that would discriminate is an account of a
+candidate pair of substantial co-suppliers that independently identifies what
+sustains each one's existence, and shows whether their ancestry meets.
+Universal application requires a reason the account covers every admissible
+pair. If every being is already assumed to reach one and the same source along
+a finite upstream path, that source witnesses every local join. Deriving
+local joining that way adds no reason for its universal reach.

@@ -1,0 +1,10 @@
+{
+  "id": "f9c334b4-5702-4bff-8658-ac8fc78b4e2b",
+  "label": "The mediated optimum has one root with a finite grounding path to every actual concretum",
+  "paraphrase": "At world false in the unchanged chainG profile, the earlier MediatedOptimum certificate holds, including the singleton optimum, failure of direct common-root coverage and the contingent concretum. On the same actual grounding graph d is the unique source and each actual concretum is reachable from it by a finite grounding path.",
+  "lean_declaration": "TruthCore.Causality.ActualAncestralSource.MediatedControl",
+  "definition_ids": [
+    "f64856c0-6d2c-5c5d-97ef-9895039d8c27",
+    "822c9912-2313-584b-b2b7-77031da20107"
+  ]
+}

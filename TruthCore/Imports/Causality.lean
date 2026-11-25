@@ -6,6 +6,7 @@ public import TruthCore.Causality.AccidentalFeatureOrigin
 public import TruthCore.Causality.AcquiredHistoryTransfer
 public import TruthCore.Causality.ActPriorityAtFirst
 public import TruthCore.Causality.ActPriorityThetaEight
+public import TruthCore.Causality.ActualAncestralSource
 public import TruthCore.Causality.ActualCommonRoot
 public import TruthCore.Causality.ActualCoverNecessaryBeing
 public import TruthCore.Causality.ActualCoverStrictness
@@ -64,6 +65,7 @@ public import TruthCore.Causality.ContingentAncestry
 public import TruthCore.Causality.ContingentAtomicity
 public import TruthCore.Causality.ContingentBeingNode
 public import TruthCore.Causality.ContingentComingToBe
+public import TruthCore.Causality.ContingentRecipients
 public import TruthCore.Causality.ContingentTotalityCause
 public import TruthCore.Causality.ContractiveBorrowedPower
 public import TruthCore.Causality.ConvergentSchedule
@@ -148,6 +150,7 @@ public import TruthCore.Causality.InterventionTransitivity
 public import TruthCore.Causality.JointGroups
 public import TruthCore.Causality.LifeBoundaryPotency
 public import TruthCore.Causality.LocalFramePossibleExternalCause
+public import TruthCore.Causality.LocalSourceConfluence
 public import TruthCore.Causality.LocalTeleologyGodIntellect
 public import TruthCore.Causality.LocalTransmission
 public import TruthCore.Causality.LogicalNecessityContrast
@@ -222,6 +225,7 @@ public import TruthCore.Causality.Q44EssentialSource
 public import TruthCore.Causality.Q44SourceSupply
 public import TruthCore.Causality.QuantitativeTransferPaths
 public import TruthCore.Causality.ReceiptAllocation
+public import TruthCore.Causality.ReceiptMatching
 public import TruthCore.Causality.ReceivedEsseActualGiver
 public import TruthCore.Causality.ReceptionLimitation
 public import TruthCore.Causality.ReflectiveComprehension
@@ -267,6 +271,7 @@ public import TruthCore.Causality.SpineRivalsRootEsse
 public import TruthCore.Causality.SpineRivalsStageOne
 public import TruthCore.Causality.StrictEsseScale
 public import TruthCore.Causality.StrictGroundInfiniteCauseSeries
+public import TruthCore.Causality.StrictGroundRepresentation
 public import TruthCore.Causality.StrictPriorityPureAct
 public import TruthCore.Causality.SubjectFocalRoles
 public import TruthCore.Causality.SubtractionArgument

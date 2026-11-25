@@ -703,10 +703,27 @@ pub fn read_snapshot(path: &str, head_epoch: Option<i64>) -> Result<Snapshot, St
     let (items, captured) = match value {
         Value::Array(items) => (items, None),
         Value::Object(mut object) => {
-            let items = match object.remove("items") {
-                Some(Value::Array(items)) => items,
-                _ => return Err("an issue snapshot object needs an \"items\" array".into()),
-            };
+            let mut items = Vec::new();
+            let mut has_array = false;
+            for key in ["items", "issues", "pull_requests"] {
+                if let Some(value) = object.remove(key) {
+                    let Value::Array(mut rows) = value else {
+                        return Err(format!("issue snapshot field {key} must be an array"));
+                    };
+                    has_array = true;
+                    if key == "pull_requests" {
+                        for row in rows.iter_mut().filter_map(Value::as_object_mut) {
+                            row.insert("kind".into(), Value::String("pull_request".into()));
+                        }
+                    }
+                    items.append(&mut rows);
+                }
+            }
+            if !has_array {
+                return Err(
+                    "an issue snapshot object needs an items, issues or pull_requests array".into(),
+                );
+            }
             let captured = match object.get("captured_at") {
                 Some(Value::String(text)) => Some(text.clone()),
                 None | Some(Value::Null) => None,
@@ -776,6 +793,7 @@ pub fn is_pull_request(issue: &Map<String, Value>) -> bool {
         .is_some_and(|url| url.contains("/pull/"))
         || issue.contains_key("mergedAt")
         || issue.contains_key("headRefName")
+        || issue.get("kind").and_then(Value::as_str) == Some("pull_request")
 }
 
 /// An issue's text units: title, body paragraphs and comment paragraphs,
