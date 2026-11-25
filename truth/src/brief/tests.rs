@@ -1569,6 +1569,36 @@ fn revision_consumers_are_tiered_grouped_and_screened_soundly() {
 }
 
 #[test]
+fn issue_brief_keeps_follow_ups_visible_on_busy_issues() {
+    let mut comments = vec![
+        json!({"body":"Compare independent standards of goodness.","author":{"login":"reviewer"},"authorAssociation":"OWNER"}),
+        json!({"body":"Test the practical inference.","author":{"login":"REPORTER"},"authorAssociation":"CONTRIBUTOR"}),
+        json!({"body":"## Follow-up: which conception of goodness actually generates the maximization objection?","url":"https://github.com/o/r/issues/1955#issuecomment-2"}),
+    ];
+    for i in 1..=10 {
+        comments.push(json!({"body":format!("Routine reply {i}.")}));
+    }
+    let report = json!({"number":1955, "issue":{"author":{"login":"reporter"}, "comments":comments},
+        "records":[], "note_sections":[], "pull_requests":[]});
+    let rendered = super::issue::render(&report, super::DEFAULT_LIMIT);
+    for excerpt in [
+        "@reviewer  (repository owner)",
+        "@REPORTER  (issue author)",
+        "Issue comment 3  https://github.com/o/r/issues/1955#issuecomment-2",
+        "which conception of goodness actually generates the maximization objection?",
+        "Routine reply 10.",
+        "More issue comments in --json.",
+    ] {
+        assert!(rendered.contains(excerpt), "{excerpt}");
+    }
+    assert_eq!(
+        rendered.matches("Issue comment ").count(),
+        super::DEFAULT_LIMIT
+    );
+    assert!(!rendered.contains("Routine reply 7."));
+}
+
+#[test]
 fn issue_brief_finds_review_and_delivery_while_issue_is_open() {
     let root = fixture("issue-handoff");
     let id = "73000000-0000-4000-8000-000000000012";
