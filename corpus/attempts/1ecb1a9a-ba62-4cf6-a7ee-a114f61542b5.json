@@ -36,10 +36,10 @@
     "assessment": "Bare assent and arbitrary permissions fail the fixed-content tests. Constrained implicit definition, primitive constitutive practice and indexed validity remain serious accounts; they preserve determinate application and preservation standards not fixed by each particular act of assent. Their ultimate convention-independent origin is unresolved. F1's full intended semantic reading is not established by these local tests; thin F6 can coexist with local reasons and the existing preference-independent authority gap. No new premise discharge or rival-defeat status. An S-based pro tanto reason for a dissenter conflicts with an adoption requirement for that very reason. Requiring adoption only for sufficient warrant permits that dissenter to have weaker evidence.",
     "next_test": "Compare the strongest complete-practice account's explanation of corrected error and community-wide error under one retained content assignment against a content-grounded primitive capacity; test same-content same-task uptake-independent reason for an actual dissenter without assuming answerability or replacing the target with an opaque bridge.",
     "note": "docs/notes/logical-conventionalism-932.md#proposed-overall-assessment-and-revision-conditions-unreviewed",
-    "reviewed_revision": "fcfe8ef9476d0753ad9861cb95ae7b3c2474ced8",
-    "review": "unreviewed",
-    "publication": "unpublished",
-    "evidence": "The finite comparison in the linked note reproduces the Boolean countervaluation, permission and application controls, and the K3/LP countervaluations. The registered regress, correction and closure results listed in this attempt supply the conditional background. PR-1991.",
+    "reviewed_revision": "cbe509e01437740d911d2a936bfc011646785761",
+    "review": "accepted_qualified",
+    "publication": "published",
+    "evidence": "The finite comparison in the linked note reproduces the Boolean countervaluation, permission and application controls, and the K3/LP countervaluations. The registered regress, correction and closure results listed in this attempt supply the conditional background. PR-1991. The independent recheck accepted the dissenter argument using the same pro tanto reason on both sides at cbe509e01437740d911d2a936bfc011646785761. PR-1991.",
     "supersedes": "None; scoped continuation, does not replace existing F1/F6 or #930 authority assessments."
   }
 }
