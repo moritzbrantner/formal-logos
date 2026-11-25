@@ -4,7 +4,7 @@ Outcome: **a certified inconsistent core with surviving branches**, not a verdic
 simplicity. Theorems `core`, `rootExposure`, `branchCosts` in
 `TruthCore.Results.Modal.SimplicityCollapse.Solution`, over `TruthCore.Modal.SimplicityCollapse`.
 They permit the Mathlib three through the #742 import. They establish conditional consequence and
-model verdicts. No model is claimed metaphysically possible.
+model verdicts. No model is claimed metaphysically possible. [Research record](../../corpus/attempts/simplicity-collapse-555.json)
 
 ## Investigation brief
 

@@ -2,7 +2,7 @@
 
 This strengthens the finite-control investigation in
 [necessary-simple-plurality.md](necessary-simple-plurality.md), retaining its
-source and individuation boundaries. It leaves PR #681's interpretation unchanged.
+source and individuation boundaries. It leaves PR #681's interpretation unchanged. [Research record](../../corpus/attempts/part-free-plurality-joint-control.json)
 
 The designated shared-vocabulary owner approved a task-local finite carrier
 rather than a new shared philosophical type. The fifth role is assignment data,
@@ -317,7 +317,7 @@ every two immediate grounds of the same dependent can each be traced upstream
 to some one being, through finitely many steps of this relation. Either trace
 can have length zero. The joining being can be different at each fork. Under
 well-foundedness this suffices for the earlier requirement about **every pair
-of finite paths**. There can be many intermediate contributors to one effect.
+of finite paths**. There can be many intermediate contributors to one effect. [Assessment record](../../corpus/attempts/plural-root-confluence.json)
 
 To see why, take two paths from a dependent. If one stays put, it can follow
 the other. Otherwise let the first suppliers be u and v and their common

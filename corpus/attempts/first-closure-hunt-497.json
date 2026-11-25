@@ -26,7 +26,8 @@
     "c528a52f-e379-5e00-a52b-66ac3a6c7041",
     "9636ade4-2225-5dd5-b4e6-45d86dd9cf59",
     "c558e6bc-a92e-5870-87df-740e16a9a977",
-    "3b61b433-0c67-542c-8a1e-9cb08b8a49f1"
+    "3b61b433-0c67-542c-8a1e-9cb08b8a49f1",
+    "PR-508"
   ],
   "blocker": "The cheapest first closure (STMT-SOMETHING-IS-MOVED-IN-THIS-WORLD) needs exactly one more closed premise, STMT-OPINION-IS-A-MOTION, or a replacement that links judging to being moved. Closing it non-circularly needs McTaggart's own answer on whether an appearance of change is a change (The Nature of Existence II, ch. 44, 1927; to pin) handled under a #500 criterion, or a sourced, non-circular argument that opining is a reduction from potency to act. Then: mark STMT-ELEATIC-THESIS-IS-OPINED (observation), record an argument and result for STMT-OPINION-IS-A-MOTION refuting STMT-CHANGE-UNREAL-BUT-APPEARS, and record the two refutes relations."
 }

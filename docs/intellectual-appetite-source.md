@@ -5,7 +5,7 @@ stage. `StageTwo.GodHasWill.godHasWill` already imports
 `StageTwo.GodHasIntellect.godHasIntellect`, then uses the universal source reading
 `WillFollowsIntellectReading`. There is no missing composition call. This change
 preserves source distinctions needed before replacing that input with a
-structural derivation; it adds no result or root route and closes no premise.
+structural derivation; it adds no result or root route and closes no premise. [Original PR #305](https://github.com/moritzbrantner/formal-logos/pull/305)
 
 ## Verified readings
 
@@ -392,3 +392,7 @@ comparison, state and test the intended love-to-good-appraisal calibration and
 give any non-transcription result its owning batch/spec and final verification.
 Original declaration completion count: one. New certified conditional support:
 zero. Root premise and closure change: none. Attribution remains deferred.
+
+## Research attempts citing this note
+
+- [#355: typed the q.19 a.1 argument with forms and inclinations so that will follows intellect is…](../corpus/attempts/will-from-intellectual-inclination.json)

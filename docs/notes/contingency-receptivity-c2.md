@@ -4,7 +4,7 @@ Follow-up to PR #1870 (gap 1 and next test 3), God-existence stage of the #143
 root. Batch `specs/c2-contingency-grounding.toml`, vocabulary module
 `TruthCore.Causality.ContingencyGrounding`, results module
 `TruthCore.Results.Causality.ContingencyGrounding`, attempt
-`137ac90d-d110-45db-a2a3-44e5f0406eea`. Analyst formulations, attribution
+[`137ac90d-d110-45db-a2a3-44e5f0406eea`](../../corpus/attempts/137ac90d-d110-45db-a2a3-44e5f0406eea.json). Analyst formulations, attribution
 deferred (logic first). Locators below are navigation only; no source claim is
 made and none of the cited texts was materialized or read for this slice.
 Repaired after the independent semantic challenge of head `470f90b80`.
@@ -389,7 +389,7 @@ premise is established.
    modality for existence at matching scope (the revision conditions).
    **Under way in #1887.** The reviewed matching-scope assessment (tests
    1–3) is in [foundational-absence-warrant.md](foundational-absence-warrant.md)
-   (attempt `d067722e`). It finds parity at the foundational being:
+   (attempt [`d067722e`](../../corpus/attempts/d067722e-015a-4e04-9ddc-63633eccdcd8.json)). It finds parity at the foundational being:
    - neither "`n` could be absent" nor PGP's necessity verdict has
      discriminating warrant there;
    - PGP's substantive content (completeness over incorruptibles) has the
@@ -404,7 +404,7 @@ premise is established.
    without a subject. The formal framework comparison and Pruss's argument
    (tests 4–5) are in
    [modal-grounding-frameworks.md](modal-grounding-frameworks.md)
-   (attempt `5ee2cbef`).
+   (attempt [`5ee2cbef`](../../corpus/attempts/5ee2cbef-95cc-49aa-9009-a18d0318a9ee.json)).
    - Each account's verdict at the foundational case is proved under exact
      extra commitments. PGP, B6 and unconditional essentialism give
      necessity. Existence-conditional essentialism and combinatorialism give
@@ -419,7 +419,7 @@ premise is established.
      its grounding premise is the same power theory applied globally, and
      under the open transfer bridge it yields PGP's verdict on concreta.
 2. Separate conserving from originating power in correlation by composing with
-   the existing sustaining-causation vocabulary (attempt `c94eed5b`) instead
+   the existing sustaining-causation vocabulary (attempt [`c94eed5b`](../../corpus/attempts/c94eed5b-935d-4882-aa84-2894ef066c5b.json)) instead
    of the tenseless `CausesIn` (the deist question).
 3. Defend or refute passive→receptive for a corruptible being without matter
    (`bareCorruptible`).
@@ -718,7 +718,7 @@ abstractum on this very n would be a separate sufficient route. A contingent
 foundation remains entitled to the joint-omission defense but needs positive
 warrant for that particular admissibility. The simple mathematical construction
 tests an explanation; it supplies no modal evidence directly for P. Attempt
-`91e562cc` records these tests. No formal premise changes.
+[`91e562cc`](../../corpus/attempts/91e562cc-dc0b-4678-8500-1c5ca2fdb743.json) records these tests. No formal premise changes.
 
 **Can a separability argument independently warrant P?** Apply Van Cleve's
 ordered-pair test in both directions. Let c be a companion disjoint from n.
@@ -1130,7 +1130,7 @@ move me toward P. Under the
 strict question that evidence must be consistent with P itself lacking a
 full metaphysical ground at actuality. These comparisons are analyst
 arguments, with existing formal results reused at their stated scope.
-Attempt `10c88ffa` records the findings.
+Attempt [`10c88ffa`](../../corpus/attempts/10c88ffa-9f84-4a95-b62a-98c81c2e1b84.json) records the findings.
 
 ### What can a group or a whole world show that one creature cannot?
 
@@ -1350,7 +1350,7 @@ if a primitive permission for n's absence helps make the outcome possible.
 If the admissible world instead *fully grounds* P at actuality, it conflicts
 with the question's strict no-ground stipulation. Nothing in the group
 argument treats absence in another world as an event that happens to n.
-Attempt `bb466836` records this assessment and its open premises.
+Attempt [`bb466836`](../../corpus/attempts/bb466836-efe9-4f4e-9b06-be8af37f304e.json) records this assessment and its open premises.
 
 ### When do adverse consequences count against possible absence?
 
@@ -1575,7 +1575,7 @@ actuality, it would revise the strict no-ground stipulation. An alternative
 admitted partly because P is already permitted can give evidence for P
 without being its prior ground. The strict question also requires that P
 itself lack any other full ground at actuality. These are philosophical
-assessments using the existing results. Attempt `27447619` records their scope.
+assessments using the existing results. Attempt [`27447619`](../../corpus/attempts/27447619-486e-4c98-bb0c-d614d87cbd4b.json) records their scope.
 
 
 ### What does possible absence have in common with an infinite regress?
@@ -1996,7 +1996,7 @@ the actuality of this very n is unconditionally determined, or evidence
 covering all the alternatives in the preceding assessment. I would revise
 toward P for independent evidence of an admissible, incompatible order,
 even if the permission inferred from it were metaphysically primitive.
-Attempt `2eb9960c` records the comparison.
+Attempt [`2eb9960c`](../../corpus/attempts/2eb9960c-5b57-4cef-bc29-9567e2f89ddb.json) records the comparison.
 
 
 ### Does depending on nothing identify one being as God?
@@ -2492,3 +2492,11 @@ raise the standing of the cognitive application on evidence that the source
 actually grasps its explanatory constitution and that even a recipient that
 knows its principal falls short on a specified further content at the same
 scope, with a reason the difference raises the selected grade. [Strict identity-giver result](../../corpus/results/1fd78e87-12d3-4144-96e4-4f6b5e138958.json)
+
+## Research attempts citing this note
+
+- [Can a whole unreceived act be absent? Joint omission, necessary population and individuation](../../corpus/attempts/71514b8a-b9a0-4745-a5e2-96a09c404a61.json)
+- [Comparing a reflective recipient and its giver on the grounds of their own present esse](../../corpus/attempts/0299cc44-5678-4dc9-9a7a-999efb640fba.json)
+- [Could a strictly ungrounded absence be recognized from a world or a dependent effect?](../../corpus/attempts/125af754-1a18-4be9-850e-8cad1a83837e.json)
+- [Testing whether an actual missing perfection separates limited and unlimited degrees](../../corpus/attempts/bffabfb2-260d-4882-a77c-158cc4af7680.json)
+- [Why can many creatures receive existence if subsistent existence itself is unique?](../../corpus/attempts/454ae2ae-b70d-488b-b4fb-71a1fcdbc1db.json)

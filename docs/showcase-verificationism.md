@@ -3,7 +3,7 @@
 This page is a worked example of the defeat-by-consequence method of #1007. It
 tests the recorded variants of a rival worldview, distinguishes source readings
 from analyst formulations, derives consequences in Lean, and says exactly which
-defeats count and what survives.
+defeats count and what survives. [Research record](../corpus/attempts/verificationism-sources-1008.json)
 
 - **Counted defeats:** a defeat counts only if it rests on established premises
   (#999). Two of the defeats rest on no premise at all, so they count.
@@ -300,7 +300,7 @@ gives no ground for a language-independent claim that theology is meaningless.
 The particular model below contains no theological proposition.
 
 **Search for a bridge against V4.** At the owner's request
-(`ATTEMPT-CARNAP-V4-BRIDGE-1008`, outcome: blocked), I tried three routes:
+([`ATTEMPT-CARNAP-V4-BRIDGE-1008`](../corpus/attempts/carnap-v4-bridge-1008.json), outcome: blocked), I tried three routes:
 
 - **The pragmatic-justification regress.** On what grounds is the proposal
   adopted? Carnap's sourced answer is that the grounds are factual questions
@@ -443,3 +443,7 @@ and no route leaf has a verificationist `alternative_to`.
   no admissible witness. SEP's Popper entries do not say it in those words.
 - **Church's review and Hempel 1950 themselves**: copyrighted and unhosted, so
   only the verbatim secondary quotations are pinned.
+
+## Research attempts citing this note
+
+- [Global thesis variants, scope and defeater transmission](../corpus/attempts/global-thesis-scope-and-defeaters.json)

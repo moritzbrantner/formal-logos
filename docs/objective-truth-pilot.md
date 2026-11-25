@@ -3,7 +3,7 @@
 The explorer's `/objective-truth/` reading guide groups a small set of canonical
 statements and shows their statuses from `truth frontier --json`. It is the
 research demonstration requested in #207, alongside the Catholicism campaign,
-not a new theory engine or a philosophical verdict.
+not a new theory engine or a philosophical verdict. [Original PR #241](https://github.com/moritzbrantner/formal-logos/pull/241)
 
 ## What is proved
 

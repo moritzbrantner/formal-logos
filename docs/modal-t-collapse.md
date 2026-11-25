@@ -3,7 +3,7 @@
 Issue #264 uses the existing modal fixture and the merged K results. Every model
 and atomic valuation here is stipulated mathematics. There is no source claim
 about Hume, no conceivability premise, and no claim that one of these models is
-metaphysically possible. These results close no Catholic-case frontier node.
+metaphysically possible. These results close no Catholic-case frontier node. [Original PR #288](https://github.com/moritzbrantner/formal-logos/pull/288)
 
 `MC F D w` says that each admissible predicate true at `w` persists along every
 edge from `w`. Actual, possible and necessary collapse mean respectively

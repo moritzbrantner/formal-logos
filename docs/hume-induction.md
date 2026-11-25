@@ -5,7 +5,7 @@ challenged** for the bounded practical/epistemic reconstruction; the normative d
 **unresolved**. The strong entitlement-denying reconstruction is conditionally
 incompatible with added certification/entitlement premises. That is not a
 verified refutation of historical Hume. Nothing here assumes Thomism, sufficient
-reason, Catholicism or an uncaused-cosmos thesis.
+reason, Catholicism or an uncaused-cosmos thesis. [Original PR #280](https://github.com/moritzbrantner/formal-logos/pull/280)
 
 ## Witnesses and interpretation
 

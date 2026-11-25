@@ -1,5 +1,7 @@
 # Agrippa's regress challenge: what is still owed?
 
+[Research record](../../corpus/attempts/agrippa-justificatory-adequacy.json)
+
 ## Question and source
 
 The owner asks why an infinite regress can fail to supply the justification or

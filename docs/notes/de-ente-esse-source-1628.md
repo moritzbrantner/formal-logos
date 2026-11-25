@@ -33,7 +33,7 @@ materialized text of capp. 3–4 was read in full before the claims were made.
 
 Formal home: `TruthCore/Latin/Aquinas/DeEnte/EsseSource.lean`, results in
 `TruthCore/Results/Aquinas/DeEnte/EsseSource/`, spec
-`specs/de-ente-esse-source-1628.toml`, attempt `9f771edb`.
+`specs/de-ente-esse-source-1628.toml`, attempt [`9f771edb`](../../corpus/attempts/9f771edb-fb20-4426-9ae2-82de322bbe5f.json).
 
 ## The passage's order
 
@@ -262,7 +262,7 @@ disagreement was left unresolved.
 
 Formal home: `TruthCore/Latin/Aquinas/DeEnte/RootInterface.lean`, results in
 `TruthCore/Results/Aquinas/DeEnte/RootInterface/`, spec
-`specs/de-ente-root-interface-1635.toml`, attempt `f41bcb00`. All results are
+`specs/de-ente-root-interface-1635.toml`, attempt [`f41bcb00`](../../corpus/attempts/f41bcb00-b6f7-4511-9170-e8f2061807fa.json). All results are
 zero-axiom; Comparator and NanoDa checked locally.
 
 ### Sense links repaired (#1524 in part)
@@ -961,8 +961,8 @@ were reconciled with main: #1635's interfaces are already delivered in
 caused-cause/per-se application is explicit. This slice changes none of those
 interfaces, the accepted foundation judgment, or the shared CCR library.
 Required context/dossier/related/brief/novelty retrieval reused the existing
-De ente attempts `9f771edb` and `f41bcb00`, CCR attempts `14fb7669` and
-`4da08bd8`, and the recent `5c898d24` assessment in
+De ente attempts `9f771edb` and `f41bcb00`, CCR attempts [`14fb7669`](../../corpus/attempts/14fb7669-48c1-4d38-b702-7ecdce2565b8.json) and
+[`4da08bd8`](../../corpus/attempts/4da08bd8-8375-40b7-b635-83012168ed6f.json), and the recent `5c898d24` assessment in
 [the foundation note](unique-feedback-explanation-311.md#current-foundation-judgment-on-the-existence-only-case-2026-11-17).
 
 Fix **one** q3a4 profile p, bearer domain, esse respect and represented essence
@@ -1686,7 +1686,7 @@ alternative at either root (premise counts unchanged); see the PR job
 summary for the batch's combined delta, which comes from the intellect
 result recorded in
 [teleology-first-mover.md](teleology-first-mover.md#same-witness-intellect-routes-and-the-will-consumer-1731-2026-11-18).
-Attempt: `a1b799fe-f75c-4e3e-994a-f4bb834f3ac7`.
+Attempt: [`a1b799fe-f75c-4e3e-994a-f4bb834f3ac7`](../../corpus/attempts/a1b799fe-f75c-4e3e-994a-f4bb834f3ac7.json).
 
 ## A GOD_4 consumer that keeps the De ente witness (#1731 slice 2, 2026-11-18)
 
@@ -1775,7 +1775,7 @@ intellect and capacity-level will. This is a two-line instantiation with no
 root consumer, so it was not registered. The intellect producers
 `b8394dbb` and `26e368d3`, and the will producer `13338e9c`, use
 God-to-maximality `4c79298d`. The modular will producer `571e36f0` does not
-use it directly, but consumes `29818edd`. Attempt: `e5a36b24-e0f4-4d9c-8cd4-cef767078a7e`.
+use it directly, but consumes `29818edd`. Attempt: [`e5a36b24-e0f4-4d9c-8cd4-cef767078a7e`](../../corpus/attempts/e5a36b24-e0f4-4d9c-8cd4-cef767078a7e.json).
 
 **2026-11-23 continuation (#1724 with #1616):** The supplier-complete
 actual-esse cone warrant, its explicit primitive stopping points, rival
@@ -1832,3 +1832,8 @@ theorem finiteAudit {B : Type} (S : Set B) (r : B → B → Prop) (level : B →
 #print axioms finiteAudit
 end SupplierAudit
 ```
+
+## Research attempts citing this note
+
+- [Cluster reassessment of the composition, esse and necessity leaves of the prima via route](../../corpus/attempts/c7445224-d3aa-4364-b038-0853f2a95ce8.json)
+- [Personal origins in Aquinas and the Greek creed](../../corpus/attempts/be52cbf3-b2f7-4616-b4aa-ceb6ee565d5b.json)

@@ -3,7 +3,7 @@
 The question is whether collapsing cycles or cutting causal groups preserves
 explanatory sufficiency. The checked answer is relative to `Supply`, the #734
 proposed inductive standard. Nothing here defends that standard as actual
-productive explanation. Root premise delta: none.
+productive explanation. Root premise delta: none. [Research record](../../corpus/attempts/scc-sufficiency-752.json)
 
 ## Meanings
 

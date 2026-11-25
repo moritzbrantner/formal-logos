@@ -12,7 +12,8 @@
   "summary": "Analyst finite normalized observer-conditioned model; selection and designer-calibration omissions separately reverse Bayes-factor direction. Nonvacuity and prior-odds control. Interpretation, calibration and theological bridges remain open. See docs/notes/fine-tuning-selection.md for rejected readings and exact boundaries.",
   "evidence": [
     "8bd85a69-2977-4e16-b4cd-5f0c1723e232",
-    "237e878c-e671-46b0-a10c-25890ec8d90d"
+    "237e878c-e671-46b0-a10c-25890ec8d90d",
+    "PR-1258"
   ],
   "blocker": "No actual sampling or likelihood estimate, actual designer inference or GOD_4 identification. Root connection remains planned."
 }

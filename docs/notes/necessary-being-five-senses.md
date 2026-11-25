@@ -1,5 +1,7 @@
 # Five readings of necessary existence, nature, explanation, and underivedness
 
+[Research record](../../corpus/attempts/ba5da429-c022-4029-8430-4ea7371291d7.json)
+
 Status: **analyst map / open bridges**, not a new historical attribution or a
 proof of the existence of God. Research issue: #1595. Related earlier work:
 #312, #319, #1590, #1593.
@@ -322,3 +324,7 @@ keeping its own commitments. Conversely, an independently admissible order
 omitting that individual would defeat its alleged necessity. The finite
 supplier test addresses the earlier question of access to a root. [Supplier completeness](de-ente-esse-source-1628.md#supplier-completeness-under-extension-of-an-audited-order) ·
 [Brute-root or non-well-founded alternative](../../corpus/results/BRUTE-ROOT-DISJUNCTION.json)
+
+## Research attempts citing this note
+
+- [Independently identifying a limiter and testing whether the same concrete root must exist](../../corpus/attempts/43c2d8f9-eef7-4e69-82f6-2b2896de2005.json)

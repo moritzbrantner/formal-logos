@@ -23,7 +23,8 @@
     "938bfd7f-27d5-47ed-b69b-11d8d2bf4584",
     "a79850a6-0a21-4a4d-afe7-df52e8df0a0d",
     "d86e618b-56d8-4e5d-9a30-1b4d20bdc82f",
-    "cc7dd608-8551-4045-8bfb-5a7643a9314a"
+    "cc7dd608-8551-4045-8bfb-5a7643a9314a",
+    "PR-1612"
   ],
   "blocker": "Next tests: (a) correct the WELL_FOUNDEDNESS sense links on STMT-ACTUAL-GROUNDING-ASYMMETRIC (and STMT-ACTUAL-GROUNDING-IS-DEPENDENCE) so the consumer sibling can be registered; (b) move the seven consumers of STMT-ACTUAL-DEPENDENCE-IS-GROUNDING that apply it only to distinct relata to the weak sibling a8298fbd, or record strong_version_needed; (c) decide whether DEF-DEPENDS-FOR-BEING's counterpossible semantics keeps the identity law (with the vacuist rival of attempt 1020b663); (d) assess the transitivity premise 09b88101, an OPEN claim about D as defined: the challenge is counterfactual non-transitivity (Lewis), the candidate warrant per se ordered composition (Second Way). Semantic challenge repairs on PR #1612: paraphrases copied into specs/round2-*.toml, doc comment aligned, c57e2682 links dropped from the two new grounding arguments."
 }

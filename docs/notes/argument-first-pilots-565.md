@@ -6,7 +6,7 @@ to the two pilot investigations, #564 and #563. The initial inventory reads
 existing records; later bounded refinements are identified separately below.
 The inventory changes no premise or frontier closure.
 Neither pilot currently lies on a root path: `corpus.py frontier --reaching-root`
-lists none of their statements.
+lists none of their statements. [Original PR #566](https://github.com/moritzbrantner/formal-logos/pull/566)
 
 ## Low-leverage splitting seen in recent work
 

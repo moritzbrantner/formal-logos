@@ -3,7 +3,7 @@
 Results: `BEARER-OUTCOME-COVERAGE`, `BEARER-PRIMARY-SUBSTANCE-TERMINUS`,
 `BEARER-REGRESS-CONTROLS`. Module: `TruthCore/Causality/BearerRegress.lean`.
 All premises other than the sourced Categories reading are analyst premises;
-none is attributed to a source and none is established.
+none is attributed to a source and none is established. [Research record](../../corpus/attempts/bearer-regress-562.json)
 
 ## The relation used
 

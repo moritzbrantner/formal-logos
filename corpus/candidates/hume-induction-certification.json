@@ -6,6 +6,6 @@
   "locator": "IV–V, induction and practical inference",
   "priority": 110,
   "goal": "Investigate whether any habit-persistence forecast is offered with the epistemic entitlement denied by a stronger skeptical rule, rather than as a conditional customary expectation. Read E IV.21, V.2, V.5 and T I.3.6.11.",
-  "reason": "Self-application needs positive certification and the stronger entitlement-denying reconstruction. Neither is established by the source account alone; mathematical counterhistories show finite observed persistence does not settle the next transition.",
+  "reason": "Self-application needs positive certification and the stronger entitlement-denying reconstruction. Neither is established by the source account alone; mathematical counterhistories show finite observed persistence does not settle the next transition. The certification premise in the self-application argument is analyzed in docs/hume-induction.md#self-application-to-habit-persistence. The target statement is dc6f1fd9-3c5b-56d7-bbce-606e02882b5b.",
   "status": "candidate"
 }

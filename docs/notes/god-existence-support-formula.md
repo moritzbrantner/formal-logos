@@ -411,7 +411,7 @@ This section records a sibling path to priority that uses neither `DependsForBei
 
 ### What is verified
 
-All results are in `TruthCore.Results.Causality.EsseCausePriority` (spec `specs/esse-cause-priority.toml`, attempt `520ea849-31eb-4f63-88b9-77bce198b63d`). Every premise is OPEN; each conclusion holds only under its listed premises.
+All results are in `TruthCore.Results.Causality.EsseCausePriority` (spec `specs/esse-cause-priority.toml`, attempt [`520ea849-31eb-4f63-88b9-77bce198b63d`](../../corpus/attempts/520ea849-31eb-4f63-88b9-77bce198b63d.json)). Every premise is OPEN; each conclusion holds only under its listed premises.
 
 | Result | Premises | Conclusion |
 | --- | --- | --- |
@@ -461,7 +461,7 @@ This section tests the route `ActualConcrete w c ∧ ActualConcrete w x ∧ Depe
 
 ### What is verified
 
-All results are in `TruthCore.Results.Causality.DependenceGroundingPriority` (spec `specs/dependence-grounding-priority.toml`, attempt `040e3b4e-f59c-4ef4-9b5a-7cc181b5bde4`). Every premise is OPEN. Each conclusion holds only under its listed premises.
+All results are in `TruthCore.Results.Causality.DependenceGroundingPriority` (spec `specs/dependence-grounding-priority.toml`, attempt [`040e3b4e-f59c-4ef4-9b5a-7cc181b5bde4`](../../corpus/attempts/040e3b4e-f59c-4ef4-9b5a-7cc181b5bde4.json)). Every premise is OPEN. Each conclusion holds only under its listed premises.
 
 | Result | Premises | Conclusion |
 | --- | --- | --- |
@@ -530,7 +530,7 @@ The scoped route is a valid conditional composition. On the root route it is bet
 
 ## Originating/sustaining split and the remaining H cut (#1626, research draft)
 
-**Evidence revision:** `4fffde08bae5fe5120a3ed7bebd072512cbe757a` (2026-11-14). This is a proposal for independent semantic challenge, **not** a new typed sense, registered theorem, formal countermodel or frontier change. Details are in attempt `a739dad6-ef53-49ea-b7dc-6d67c495c563`.
+**Evidence revision:** `4fffde08bae5fe5120a3ed7bebd072512cbe757a` (2026-11-14). This is a proposal for independent semantic challenge, **not** a new typed sense, registered theorem, formal countermodel or frontier change. Details are in attempt [`a739dad6-ef53-49ea-b7dc-6d67c495c563`](../../corpus/attempts/a739dad6-ef53-49ea-b7dc-6d67c495c563.json).
 
 ### Intended meanings, successful cases, exclusions
 
@@ -543,7 +543,7 @@ The scoped route is a valid conditional composition. On the root route it is bet
 
 These readings can overlap in particular cases; coverage and mutual exclusivity are **not** assumed. None is currently a separate Lean sense declaration. The causal reading is needed for a8298fbd and cb1cdea9; the constitutive reading would fail the sun/light bridge by analogy with #1600, not by an existing typed incompatibility. Selected-root premises `ActualGroundingWF`, `EveryContingentGroundedAt`, `ActualRoot`, `ActualGroundingAsymmetric` and `ActualGroundingIsSimplePriority` must use the **same** selected relation (or be connected by an explicit bridge). Neither asymmetry nor well-foundedness follows from `Profile.grounds` or ordinary examples. Constitutive relations may have different grounding/explanatory behavior and cannot be exchanged by a field name.
 
-The existing q.44 a.1 ad 2 claim `3ed36bec` supports c0d99549 only through a `supports` relation with an explicit all-respects gap. Q.104 a.1 co., ad 2 and ad 4 (claims `40aefb2e`, `da9c82ed`) positively distinguish causation of **becoming** from causation of **being**, and direct per-se conservation from preventing corruption. The distinction does not rule out *mediated* sustaining causes (q.104 a.2). This corroborates the already recorded issue, not a new source attribution fault. The stronger philosophical question is whether all relevant `CausesIn … esse` edges are sustaining ones (23e04ae5); Schmid's no-change existential-inertia rival and the concurrent-actualization/concurrence split remain live (attempt `05bc2722`).
+The existing q.44 a.1 ad 2 claim `3ed36bec` supports c0d99549 only through a `supports` relation with an explicit all-respects gap. Q.104 a.1 co., ad 2 and ad 4 (claims `40aefb2e`, `da9c82ed`) positively distinguish causation of **becoming** from causation of **being**, and direct per-se conservation from preventing corruption. The distinction does not rule out *mediated* sustaining causes (q.104 a.2). This corroborates the already recorded issue, not a new source attribution fault. The stronger philosophical question is whether all relevant `CausesIn … esse` edges are sustaining ones (23e04ae5); Schmid's no-change existential-inertia rival and the concurrent-actualization/concurrence split remain live (attempt [`05bc2722`](../../corpus/attempts/05bc2722-960f-4ea4-bf1a-f92bb9a77af9.json)).
 
 ### Graph-only test: H needs more than the replacement for E
 
@@ -564,3 +564,11 @@ Why consider it? Actual productive giving of the recipient's very esse differs f
 **Structural countermodel to automatic substitution:** two individuals, parent `p` and adult child `k`, with `EfficientlyCausesIn(p,k,generation)` and an **abstract, stipulated** sustaining edge `EfficientlyCausesIn(k,p,stipulated_sustaining)`, only the latter designated a present sustaining efficient act. It is **not** a claim that an adult child's biological care gives the parent's esse per se—ordinary care typically only prevents harm or corruption. Set sustaining `D(p,k)` true, `D(k,p)` false, selected causal grounds `k → p`, and simple priority `k → p`. The restricted bridge `EfficientlyCausesIn(c,x,r) ∧ Sustains(c,x) → D(x,c)` holds, as do no self-causing, distinct nonmutual D, a8298fbd, 7a63a3fe and priority requiring nonmutual D; unrestricted 47b151ca **fails** at `(p,k,generation)` because the originating parent is structurally dependent on the adult child. A local Python truth-table assertion checked this valuation with an isomorphic respect label `care`. This illustrates different formal directions of cause and dependence; it does **not** establish the stipulated esse edge's metaphysical possibility, a model of the full H theory, or a refutation of the old premise. Its role is strictly to prevent an unjustified *logical* inference from the restricted bridge to the old all-respects conclusion.
 
 **Next discriminating check:** register the two relation-sense families with distinct Lean declarations and explicit selected-profile links; keep old Challenges intact. In a separate sibling batch, test the esse-only anti-reception theorem and the parent/child omission model with Lean, bind-check, Comparator, NanoDa and a computed `frontier-diff`. Require independent review of the semantic reading, especially the scope of whole-being versus illumination, equal-grade or reciprocal esse causes, and whether `Profile.grounds` root laws remain plausible on its chosen causal interpretation. The overall judgment is **provisionally favorable to the scoped causal/essendi reading as a clearer formal target, but warrant underdetermined**, not established or a defeat of existential inertia.
+
+## Research attempts citing this note
+
+- [Classical root's PURE_ACT_1 from its simplicity, existence and the composition premise](../../corpus/attempts/383d23ad-bec6-442c-9fec-0112df1e1c97.json)
+- [Cluster reassessment of dependence, simple-priority and grounding leaves of the prima via (#1751)](../../corpus/attempts/9d71e28d-d492-4797-9221-45fa517a6e6b.json)
+- [Cluster reassessment of the modal-spine frame, uniting-cause, transfer and separability premises](../../corpus/attempts/dd24400b-cc87-4095-b4c4-df857e1edff5.json)
+- [Cluster reassessment of the sustaining, Dei Filius bridge and dependence premises (eternity path)](../../corpus/attempts/447838c8-601f-4a04-ad65-b50ef9dd3764.json)
+- [Modal countermodel and exact support audit for independence and separability](../../corpus/attempts/independence-separability-scope-audit.json)

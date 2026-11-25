@@ -5,7 +5,7 @@ one necessary being, see the [fixed-target coverage and gap audit](ultimate-adeq
 It distinguishes this note's fact-level target from #735's productive target2,
 retains token success and idle-necessary-being failure as criterion limits, and
 proposes one existing-theorem application rather than another model. It claims
-neither complete explanatory parity nor an automatic singular-NE victory.
+neither complete explanatory parity nor an automatic singular-NE victory. [Research record](../../corpus/attempts/explanatory-adequacy-750.json)
 
 Outcome: a **failed discriminator with a certified incompatible core**, not a defended
 standard. The theorems are `core` and `comparison` in
@@ -512,3 +512,7 @@ from the certified `Regularity.checks` bundle; their configs permit the required
 approved Mathlib three, since the imported existing vocabulary reaches Mathlib. No new axiom or dependency was introduced. The canonical
 corpus record service query succeeded on the worker clone with exact revision/input
 binding, independently of the stale Lean preview failure described above.
+
+## Research attempts citing this note
+
+- [Designed positive necessary-fact extraction by composing the existing #750 forced descent lemma…](../../corpus/attempts/necessary-fact-boundary-786.json)

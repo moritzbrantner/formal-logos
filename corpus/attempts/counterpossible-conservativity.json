@@ -12,6 +12,7 @@
   "outcome": "succeeded",
   "summary": "Inspected exact old intervention tables, strict absence enabling and modal-grounding/source-note boundaries. Imported natural agreement and active/idle sensitivity rather than re-proving them. Constructed one shared normal model on (true,u), with normally necessary PUBLIC a and contingent effect, and separate repairs clamping only that public input. Proved general normal-witness conservativity, predicate-interpretation agreement on all normal states, success and exact repair selection, then opposite public-a-off effect evaluations from old equations. Normal-only evaluation is vacuous for both consequents. Rejected equating public clamp with latent-source/bearer nonexistence: latent first stays true; frozen source identifiers are explicitly public labels. Enlarging modal access instead loses public-atom necessity. No real counterpossible truth, metaphysical possibility, full closest-world semantics, causal/grounding adequacy or root discharge follows. See docs/notes/counterpossible-conservativity.md.",
   "evidence": [
-    "d8355360-6ecc-5c8e-8a53-47a99f32e5d7"
+    "d8355360-6ecc-5c8e-8a53-47a99f32e5d7",
+    "PR-1087"
   ]
 }

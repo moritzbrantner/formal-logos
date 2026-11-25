@@ -15,7 +15,8 @@
     "b16198d5-565c-57f3-91a6-208dc8c46b02",
     "0e7eb377-59a3-5a95-ab2b-a05ca123e262",
     "0590fe21-edb9-5915-9837-62560c8f40e2",
-    "daa271be-cd04-5e03-bd3e-c7bad5c2eff3"
+    "daa271be-cd04-5e03-bd3e-c7bad5c2eff3",
+    "PR-676"
   ],
   "blocker": "The real instrument model, restrictions on signal/bias, actual availability and reliability of independent calibration, and any norm requiring uniform internal self-certification for epistemic entitlement remain open. This is no universal verdict on infinitism or externalism."
 }

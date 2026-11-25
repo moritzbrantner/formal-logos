@@ -1,6 +1,6 @@
 ---
 phase: batch-1
-premise: `STMT-ACT-SIMPLY-PRIOR-TO-POTENCY`
+premise: [`STMT-ACT-SIMPLY-PRIOR-TO-POTENCY`](https://github.com/moritzbrantner/formal-logos/blob/ec72649fb5a8ee3ac06d391b179cf1af7f75b304/corpus/statements/act-simply-prior-to-potency.json)
 rival: `STMT-POTENCY-PRIOR-TO-ACT` (*Met.* XII.6, 1071b22-28: the reputable view; theologians from Night); its sourced bundle `STMT-NIGHT-UNPRECEDED-POTENCY-ACTUALIZED` (the unpreceded potency is actualized)
 class: inconsistency, partial: Aristotle's reply covers only potencies being actualized (#352, finding 4)
 status: open; sourced; Night bundle eliminated given open {`STMT-NOTHING-REDUCED-TO-ACT-EXCEPT-BY-A-BEING-IN-ACT`, `STMT-NOTHING-MOVES-ITSELF-IN-SAME-RESPECT`, `STMT-ACTUAL-MOVER-IS-SIMPLY-PRIOR`} (`GENERATION-FROM-NIGHT-REFUTED`, #497); the bare rival survives as an unpreceded potency never actualized
@@ -280,3 +280,7 @@ is not declared exhausted. No statement, argument, result, definition, source
 claim, approval or proof status changes; **no premise change**. Existing proof
 checks remain reusable on unchanged inputs; offline record checks and final
 publication CI do not certify this philosophical judgment.
+
+## Research attempts citing this note
+
+- [Reuse NecessaryFirstBeing.necessaryFirst under its unchanged five inputs, preserving its actual…](../../../corpus/attempts/strict-priority-pure-act-20261031.json)

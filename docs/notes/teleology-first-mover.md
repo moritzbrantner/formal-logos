@@ -2,7 +2,7 @@
 
 Analyst reconstruction, attribution deferred; existing source claims are reused
 without changing their attribution. This is a research note, not a new tracker.
-The current coordination handoff remains #418.
+The current coordination handoff remains #418. [Research record](../../corpus/attempts/4d9cd347-0a0f-49f3-8d85-14e5cdb8dab0.json)
 
 Target: `STMT-THERE-IS-A-FIRST-UNMOVED-MOVER`, a root-route intermediate node.
 Reuse: all seven pre-uniqueness premises of the existing Fifth Way governor
@@ -532,7 +532,7 @@ hypotheses, bound to the listed premises (bind-check: 1 bound, 0 mismatch);
 it proves the existing existential tuple, whose witness is the supplied root
 (the type does not separately state that; the proof uses `⟨n, hn⟩` from
 `7abdee27`). Motion's respect carrier is the q.3 profile's `R`. Attempt:
-`a1b799fe-f75c-4e3e-994a-f4bb834f3ac7`.
+[`a1b799fe-f75c-4e3e-994a-f4bb834f3ac7`](../../corpus/attempts/a1b799fe-f75c-4e3e-994a-f4bb834f3ac7.json).
 
 ### Slice 2 update: witness consumer and the appetite application (2026-11-18)
 
@@ -561,7 +561,7 @@ result was registered. Next test: one explicit local response-capacity
 constraint restricted to the represented goods actually used, applied to a
 being that possesses its good. Test it against the existing `cognitiveOnly`
 and `selective` controls before any recognition by `HasWill`. Attempt:
-`e5a36b24-e0f4-4d9c-8cd4-cef767078a7e`.
+[`e5a36b24-e0f4-4d9c-8cd4-cef767078a7e`](../../corpus/attempts/e5a36b24-e0f4-4d9c-8cd4-cef767078a7e.json).
 
 ## Governor-root intellect capacity and GOD_4 stage (#1793, 2026-11-19)
 
@@ -731,3 +731,7 @@ Lean/Cargo toolchain to certify this draft. New target IDs and exact results
 are generated from the linked spec; failed/rejected paths and reopening
 conditions are recorded here and in the matched older attempts rather than
 as a new historical attribution.
+
+## Research attempts citing this note
+
+- [Pointwise governor identity, common-root coverage and GOD_4 naming (#1793)](../../corpus/attempts/ac68f95a-00fd-445e-b7de-d083ee6511b6.json)

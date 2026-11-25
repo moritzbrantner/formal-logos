@@ -1499,3 +1499,8 @@ when this continuation began; neither can validate the new
 head. Retain the draft and independent challenge requirement.
 
 Independent semantic challenge at b3c6d5a80027ad31875da8c9498d5343695e962e accepted the article 3 reading, tied-optima criterion, controls and qualified ultimate application. The targeted recheck accepted the operation-identity, optimizer and owned-rational-exercise repairs at 168aa3f495290991b982ea322533d5192ad6a878.
+
+## Research attempts citing this note
+
+- [Does the PSR-collapse family exclude a necessitating impersonal source at the will step?](../../corpus/attempts/24ae0211-148c-4400-9843-90eac4f25a59.json)
+- [What discriminates will from chance at a necessary source with an invariant set-up?](../../corpus/attempts/790d6d05-da9f-489c-b9f5-e4b66e2eab82.json)

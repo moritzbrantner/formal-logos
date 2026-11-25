@@ -4,7 +4,7 @@ This is an analyst investigation prompted by the owner's Sorites request, distin
 from the Ship of Theseus, river persistence, and the parthood theories in #325.
 No source-derived claim or historical interpretation is introduced. No primary
 source was consulted for attribution in this batch. The names describe explicit
-semantic profiles, not an author's whole position.
+semantic profiles, not an author's whole position. [Research record](../../corpus/attempts/sorites-boundary.json)
 
 ## Decisive constraint
 

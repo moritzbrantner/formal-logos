@@ -2,7 +2,7 @@
 
 Analyst formulation; attribution deferred. This does not complete original
 FRAME_CLOCK_SIMULTANEITY_GEOMETRIC_ORDER_4. Its allowance remains, and
-privileged presence (sense 3) is unchanged.
+privileged presence (sense 3) is unchanged. [Original PR #1347](https://github.com/moritzbrantner/formal-logos/pull/1347)
 
 `StationaryClockProtocol.System` has arbitrary event, instrument and location
 domains. An event has a location and real chart parameter. Each instrument has
@@ -58,3 +58,7 @@ physical admissibility/coverage specification before binding sense 4. The
 candidate is useful independently for testing synchronization omissions.
 No geometry, causal edges, privileged present, presentism or eternalism is
 inferred. No new source claim or original sense declaration is introduced.
+
+## Research attempts citing this note
+
+- [Inventory found no pinned Mathlib Minkowski/Lorentz notion; reused its actual…](../../corpus/attempts/relativity-simultaneity-controls.json)

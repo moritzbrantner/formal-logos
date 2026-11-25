@@ -3,7 +3,7 @@
 This batch supplies a conditional mathematical route, not a defense of causal
 finitism. All three new premises remain unattributed and open. It leaves #367
 open for the paradox structures, the abductive defense, and the stronger
-first-cause/necessary-existence arguments.
+first-cause/necessary-existence arguments. [Research record](../../corpus/attempts/pruss-koons-finite-history-reading.json)
 
 ## Verified primary evidence and reading limits
 
@@ -395,3 +395,7 @@ assuming global provenance. If it does not, the verified contradiction does not
 by itself rule out the original infinite causal history. Application from
 causal-power events to every existential-support edge remains a further
 obligation. No necessary-being root premise is discharged by these results.
+
+## Research attempts citing this note
+
+- [Modal spine A3′: a genuine Grim Reaper patchwork premise and its objection audit](../../corpus/attempts/ac336333-edfe-4599-b35e-1e78b81047e5.json)

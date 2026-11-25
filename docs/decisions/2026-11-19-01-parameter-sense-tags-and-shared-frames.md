@@ -21,5 +21,6 @@ declarations, so equivocation stays a type error, and bridges between fields
 remain explicit premises. Older modules receive adapters gradually, with no
 rewrite. (3) **A missing-bridge report** from the prover, owned by the prover
 work. None of these identifies two relations, proves a bridge or changes a
-binding, proof or closure rule. See `docs/corpus-model.md`, "Sense-indexed
-terms".
+binding, proof or closure rule. The [worked shared-frame example](https://github.com/moritzbrantner/formal-logos/blob/ec72649fb5a8ee3ac06d391b179cf1af7f75b304/Scratch/causality-frame/Demo.lean)
+gives the composition with `CausesOfBeingConcur` and a countermodel when that
+bridge is omitted. See `docs/corpus-model.md`, "Sense-indexed terms".

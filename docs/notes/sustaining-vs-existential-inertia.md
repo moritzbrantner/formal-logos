@@ -13,7 +13,7 @@ and `fc46b7f9` and on the dependence spine.
 2026-11-17/18 assessments of
 [eternity-dependence-connection.md](../eternity-dependence-connection.md)
 (Schmid 2021 and Feser 2021, pinned and read; ST I q.104 a.1, claims
-`40aefb2e`, `da9c82ed`), attempts `c94eed5b`, `05bc2722` and `447838c8`, the
+`40aefb2e`, `da9c82ed`), attempts [`c94eed5b`](../../corpus/attempts/c94eed5b-935d-4882-aa84-2894ef066c5b.json), [`05bc2722`](../../corpus/attempts/05bc2722-960f-4ea4-bf1a-f92bb9a77af9.json) and [`447838c8`](../../corpus/attempts/447838c8-601f-4a04-ad65-b50ef9dd3764.json), the
 controls `955ef523` (`ConcurrentActualization.controls`) and the cessation
 certificate `610e21dc`. Their classifications stand: extrinsic inertia is a
 kept substantive undercutting objection to `40a97664`; the common causal law on
@@ -212,7 +212,7 @@ On the fixed meanings (STRICT `GivesAt`, inclusive presence, tenseless
 `CausesIn`, DEF-DEPENDS-FOR-BEING), **no discriminating test is available at
 matching scope; both accounts stand, with prices**. This restates, and does not
 revise, the 2026-11-18 cluster judgment for `40a97664` and `ce55210c`. The
-price map and the `2068f91c` connection are added on top of it.
+price map and the `2068f91c` connection are added on top of it. [Assessment record](../../corpus/attempts/21883b61-1dec-454f-821e-e1c2fb0e37c4.json)
 
 - *Strongest warrant for sustaining:*
   - a coherent account in which a received act of being is a standing
@@ -273,7 +273,7 @@ price moves onto `da72ae93`, and the tense question resolves into the crux.)
 ## 5. Present-tense receipt and correlativity (the §4 next test, done)
 
 Module `TruthCore.Causality.PresentReceipt`, spec `specs/present-receipt.toml`,
-attempt `50e08b09`. Analyst formulations, attribution deferred.
+attempt [`50e08b09`](../../corpus/attempts/50e08b09-fc52-4cf1-9bd7-4bad25707dc6.json). Analyst formulations, attribution deferred.
 
 ### Vocabulary
 
@@ -455,7 +455,7 @@ The relational reading suggested by q.45 a.3 is the one candidate in view;
 ## 6. Receipt as a real relation to the principle of being (the §5 next test, done)
 
 Module `TruthCore.Causality.RelationalReceipt`, spec
-`specs/relational-receipt.toml`, attempt `c97afe42`. Analyst formulations,
+`specs/relational-receipt.toml`, attempt [`c97afe42`](../../corpus/attempts/c97afe42-c3d3-45be-8367-8ed76b47fe6c.json). Analyst formulations,
 attribution deferred: the texts below were read in their pinned witnesses, but
 no claim is recorded, because the Lean relation is indexed to moments and the
 texts do not index the creature's relation to moments.
@@ -1176,7 +1176,7 @@ an independently governing persistence law **under identical ultimate
 actuality standards**. Do not count the resulting formal implication as
 independent confirmation if it simply redescribes C3.
 
-**Record and review.** Attempt `c03f097e-1c78-4cba-8ba5-ea5746b90387`
+**Record and review.** Attempt [`c03f097e-1c78-4cba-8ba5-ea5746b90387`](../../corpus/attempts/c03f097e-1c78-4cba-8ba5-ea5746b90387.json)
 links this section and `c3ActualWorldControls` to `cb1cdea9`, `40a97664`,
 `ce55210c` and `23e04ae5`. An independent semantic challenge found the formal
 claims correct; its prose findings are repaired here.
@@ -1350,7 +1350,7 @@ of what happened to *this* object gives positive, defeasible grounds for
 identifying it again. Copying its structure can causally influence a second
 object without carrying the first object into the second. This distinction
 discriminates accounts of *which individual* survives. It leaves open whether
-the continuing individual's existence also requires a present productive source.
+the continuing individual's existence also requires a present productive source. [Assessment record](../../corpus/attempts/history-actuality-provenance-1801.json)
 
 ### Two verdicts with independently checkable grounds
 
@@ -1477,3 +1477,7 @@ root and grading premises. The tracked material x supplies neither that pair
 nor a necessary or underived source. The inference from identity to present
 production remains open, with no new support option or discharge.
 [Instances used by the esse-root routes](esse-root-leaves.md#b-where-the-fourteen-enter-which-instance-each-route-consumes-and-bypasses).
+
+## Research attempts citing this note
+
+- [Necessary origin with existential inertia against the esse-priority source bundle](../../corpus/attempts/4b051644-666b-451e-8e09-b5b9356932f9.json)

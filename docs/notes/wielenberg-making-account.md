@@ -36,12 +36,12 @@ selected natural profile. It does not preserve a single fixed substantive
 norm across those assignments. StrongImpliesWeak supplies only same-world
 instantiation, not making, explanation or normative warrant. The Boolean
 natural base is expressly selected and need not be complete. Reuse attempt
-`e2baa97d-dcff-4d9f-b3a3-b770e927a596`; do not relabel these controls as
+[`e2baa97d-dcff-4d9f-b3a3-b770e927a596`](../../corpus/attempts/e2baa97d-dcff-4d9f-b3a3-b770e927a596.json); do not relabel these controls as
 countermodels of Wielenberg's positive package.
 
 Read #1502's actual open head
 `2a540aec02d490e44d2b099056b168c2aa0a9dba` attempt via git show: its
-`cc9f51e3-529d-4e59-bc50-bc79d8eae6c0` record is absent here and the PR is
+[`cc9f51e3-529d-4e59-bc50-bc79d8eae6c0`](../../corpus/attempts/cc9f51e3-529d-4e59-bc50-bc79d8eae6c0.json) record is absent here and the PR is
 open. Its explicit boundary agrees with this investigation: thin F6 and
 preference-independent epistemic authority do not supply a moral instance or
 irreducible favoring. No branch-only evidence imported, and no #1500/#1508
@@ -357,7 +357,7 @@ child's good must explain. The evidence selects a proximate material source.
 An independently defended foundation for the child could select an underived
 ancestor of that very child. These two selections answer different questions.
 What would join them is evidence that the latter source gives or sustains the
-organization by which this child makes use of the material.
+organization by which this child makes use of the material. [Assessment record](../../corpus/attempts/e354e5df-72e0-43b1-8fe1-6a1855531dc4.json)
 
 ### One patient, a measured course of feeds, a separate duty
 

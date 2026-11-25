@@ -439,7 +439,7 @@ nine leaves assessed here: `95c5138f`, `1722a80f`, `17667565`, `d4ea5ebf`,
 `c2fa06f2`, `0ce7b6c5`, `e7cbb87f`, `1c8383f5` and `e4a7ef4b`. At this
 baseline `truth currentness` for the GOD_4 root reports 423 open premises
 (84 current, 158 legacy-only, 181 none); all nine are `none` (no attempt
-targets them). Attempt `55af5264-83a9-49b2-add6-d3dd994f7cf7` carries the
+targets them). Attempt [`55af5264-83a9-49b2-add6-d3dd994f7cf7`](../../corpus/attempts/55af5264-83a9-49b2-add6-d3dd994f7cf7.json) carries the
 compact current assessment.
 
 This note is the owner because its accepted 2026-11-17 assessment (attempt
@@ -604,7 +604,7 @@ hold only once the definitions named in (c) and (d) 1 say what they need, and
    `Lives` is otherwise unconstrained in Lean. The joint thinker-and-stone
    model (result `116a0e60`) satisfies all six premises of `bfaf6f92`.
 5. **Not a transcription.** `gradesFromCogito` derives the three existentials
-   by instantiation; the batch attempt `0b9ad38b` records that the literal
+   by instantiation; the batch attempt [`0b9ad38b`](../../corpus/attempts/motion-maps-batch1-20261107.json) records that the literal
    "one graded pair suffices" was rejected as a transcription and replaced by
    the convertibility of the comparative. No leaf is the conclusion restated.
 6. **Independence for `a9622441`.** The direct option for `a9622441` is its
