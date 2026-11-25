@@ -54,6 +54,7 @@ public import TruthCore.Explanation.PSRStrength
 public import TruthCore.Explanation.PairedInterventions
 public import TruthCore.Explanation.PathRelocation
 public import TruthCore.Explanation.PopulationEntry
+public import TruthCore.Explanation.PriorityOmission
 public import TruthCore.Explanation.SelectionCoverageBoundary
 public import TruthCore.Explanation.StoppingPoints
 public import TruthCore.Explanation.TargetCopyExpansion

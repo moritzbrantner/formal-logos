@@ -1,5 +1,7 @@
 //! Read the scoped judgments on a proposition alongside the actual registered
 //! arguments that produce and consume it. A shared citation is one record.
+pub mod argument;
+
 use crate::{
     Corpus, Record,
     context::{Lean, module_path},
@@ -455,7 +457,7 @@ impl Synthesis<'_> {
         };
 
         let mut lines = vec![format!(
-            "Illustrative argument ({}) — {}\n  truth context {}",
+            "Illustrative argument ({}) — {}\n  truth context {2}\n  Compare its premises: truth synthesis {2} --compare-premises",
             route.status, route.label, route.argument_id
         )];
         if let Some(witness) = witness {
@@ -491,7 +493,7 @@ impl Synthesis<'_> {
             .filter(|a| a.argument_id != route.argument_id);
         for other in alternatives.take(limit) {
             lines.push(format!(
-                "Alternative ({}) — {}  →  truth context {}",
+                "Alternative ({}) — {}  →  truth context {2}; truth synthesis {2}",
                 other.status, other.label, other.argument_id
             ));
         }

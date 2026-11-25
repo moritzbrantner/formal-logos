@@ -27,6 +27,8 @@ fn exact(record: &Record, query: &str) -> bool {
 fn witness(root: &Path, corpus: &Corpus, result: &Record) -> Value {
     let mut evidence = result_witness(root, result);
     if let Some(argument) = corpus.get("arguments", field(result, "argument_id")) {
+        evidence["argument_label"] = argument.fields["label"].clone();
+        evidence["argument_meaning"] = argument.fields["meaning"].clone();
         for key in [
             "conclusion_statement_id",
             "premise_statement_ids",

@@ -244,6 +244,8 @@ pub struct Args {
     /// `--profile-module MODULE` (`bridge-experiments`)
     pub profile_module: Option<String>,
     pub countermodel: CountermodelArgs,
+    pub without: Vec<String>,
+    pub compare_premises: bool,
     pub sweep: SweepArgs,
     pub discover: DiscoverArgs,
     /// `--module MODULE`, repeatable (`countermodel` takes one, `prove-sweep`
@@ -364,6 +366,8 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
         semantics: SemanticsArgs::default(),
         profile_module: None,
         countermodel: CountermodelArgs::default(),
+        without: Vec::new(),
+        compare_premises: false,
         sweep: SweepArgs::default(),
         discover: DiscoverArgs::default(),
         modules: Vec::new(),
@@ -560,6 +564,14 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
                     parsed.sweep.batch = value;
                 }
             }
+            "--without" => {
+                let value = args
+                    .next()
+                    .and_then(|v| v.to_str())
+                    .ok_or_else(|| usage("--without requires a statement ID"))?;
+                parsed.without.push(value.to_owned());
+            }
+            "--compare-premises" => parsed.compare_premises = true,
             "--omit" | "--module" | "--theorem" => {
                 let value = args
                     .next()

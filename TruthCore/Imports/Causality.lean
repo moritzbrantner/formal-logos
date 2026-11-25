@@ -271,6 +271,7 @@ public import TruthCore.Causality.SelfMotionSeparation
 public import TruthCore.Causality.SelfOperationLife
 public import TruthCore.Causality.SoleEsseGiver
 public import TruthCore.Causality.SourceForest
+public import TruthCore.Causality.SourceIntellectControls
 public import TruthCore.Causality.SourceScopedAscent
 public import TruthCore.Causality.SourceWitness
 public import TruthCore.Causality.SpineRivalsAttributes

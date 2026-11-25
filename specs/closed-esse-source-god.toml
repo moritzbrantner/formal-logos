@@ -1,0 +1,45 @@
+# Analyst formulation, attribution deferred.
+
+[batch]
+vocab = "TruthCore.Causality.SameSourceWitness"
+results = "TruthCore.Results.Causality.ClosedEsseSourceGod"
+
+[[argument]]
+id = "From a concrete existent to GOD_4 through a common uncaused source and a conditional premise about dependent beings"
+theorem = "godExistsFromClosedCollections"
+premises = [
+  "56f68b40-9737-59a0-8cac-5610980a1547",
+  "5c898d24-d1f7-5087-b09e-3287a723e787",
+  "ee4ab504-c8fe-59bc-bc96-7cbeefed6410",
+  "86efed1a-f353-5b5d-9431-df7fc643ace1",
+  "0436de86-6579-53f2-9ff5-2111ba44ebae",
+  "20babef7-6ae7-4b48-b72a-f417e8e63136",
+  "457698e4-eb21-4561-ab32-eccbfb0a992e",
+  "a576300f-4b01-45ae-902c-cfe3d0fbf2de",
+  "b4987085-f7b0-4031-a795-364873d3c216",
+  "8176a284-769b-4ed0-b90b-ff655b7fd864",
+  "cb1cdea9-eb6c-578c-8008-84e0d4107fd3",
+  "6c27657f-a2bf-5c1d-963c-c154b66bfa85",
+  "7067553d-cad9-5d79-b6b2-912e35051530",
+  "b26c10a0-983d-5a88-aa03-cc601bc1ddc6",
+  "09c6d5f0-d412-5038-85f9-75fffb935727",
+  "1ec205ed-b2a6-5384-bb5f-2565a9d325bf",
+]
+conclusion = "8626f8a5-9531-5da7-9ebd-f901e74b1129"
+sense_bridges = [
+  { term = "GOD", from = "GOD_1", to = "GOD_4", statement_id = "1ec205ed-b2a6-5384-bb5f-2565a9d325bf" },
+  { term = "MAXIMAL_IN_A_SELECTED_PERFECTION_GREATEST", from = "MAXIMAL_IN_A_SELECTED_PERFECTION_GREATEST_6", to = "MAXIMAL_IN_A_SELECTED_PERFECTION_GREATEST_1", statement_id = "6c27657f-a2bf-5c1d-963c-c154b66bfa85" },
+]
+axioms = []
+comparator_theorems = ["sameSourceIsGodFromClosedCollections"]
+rule = "Derive a common uncaused source from closed collections, identify it with the actual grounding root, and name that same source through the existing reduced description"
+meaning = """One concrete existent at w supplies an actual esse bearer via the existing-in-act bridge. The initial witness may itself be the source. The three source assumptions say that every nonempty collection closed under distinct actual esse suppliers has an uncaused member, that every actual bearer with distinct esse and essence has another actual esse cause, and that at most one actual bearer has esse identical with essence. Together with excluded middle, they give one actual identity bearer with no distinct actual cause of its esse and finite supplier paths to every other actual esse bearer.
+Composition gives an esse-cause edge from the source to each other actual bearer in the same relation. If the actual concrete grounding root supplied by whole-roster nontrapping were different, the esse-cause-to-ground bridge would give that root an actual concrete ground. Thus the root is the same bearer as the uncaused esse source. Ascent restricted to actual identity bearers makes every esse maximum that same source. The existing priority, grades, actuality, transfer, no-component and naming premises name it GOD_4 through the existing reduced description. The companion theorem retains the source, root, firstness and GOD_4 predication on one witness. The registered conclusion projects to GOD_4 existence.
+The formal cause mode is unspecified. The applicability of closed-collection rootedness to all actual suppliers, the world-indexed grounding bridges and the meaning and warrant of the divine naming premise remain live. Actual sourcehood here concerns distinct suppliers in this relation, and the endpoint asserts existence under the stated naming predicate. Attribution deferred."""
+description = "Conditional source-to-God argument on one esse profile and one selected world. A concrete existent supplies population, rooted closed supplier collections give one common uncaused esse source, and explicit grounding, comparative and naming premises identify that same source as GOD_4. The companion preserves the same witness through the full argument."
+
+[argument.strong_version_needed]
+"6c27657f-a2bf-5c1d-963c-c154b66bfa85" = "Retain the exact interface of the existing same-source naming theorem deEnteSourceIsGod. That theorem applies grades at esse only. The all-respects scope is retained for Lean reuse and carries no additional philosophical warrant here."
+"b4987085-f7b0-4031-a795-364873d3c216" = "Common ancestry gives paths in the mode-unspecified actual esse-cause relation. The PER_SE_5 weakening applies only to an outgoing link already classified as AsCaused. No such classification is assumed for these paths."
+"cb1cdea9-eb6c-578c-8008-84e0d4107fd3" = "The common source is in act at esse, while its concreteness and existence at the selected world are obtained only after identifying it with the actual grounding root. The weaker bridge would require those two source facts before the identification."
+"ee4ab504-c8fe-59bc-bc96-7cbeefed6410" = "Finite source access and whole-roster root selection use the existing explicit excluded-middle interfaces before any bearer has been identified as GOD_4. The attribute-local equality rules do not cover those case splits."

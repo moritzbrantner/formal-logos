@@ -10,6 +10,7 @@ import { ResultKindMark, StatementStateMark } from "@/components/state-mark";
 import { StatementLink } from "@/components/statement-link";
 import { TermsSection } from "@/components/terms-section";
 import { claimsForResult, comparatorForResult, findResult, findStatement, getCorpus, idOf, nameOf } from "@/lib/corpus";
+import { caseArgumentHref, GOD_EXISTS } from "@/lib/current-case";
 import { forkUses } from "@/lib/fork-use";
 import { theoremInModule } from "@/lib/lean-source";
 import { resultProjectionCorpus } from "@/lib/result-projection";
@@ -101,6 +102,9 @@ export default async function ResultPage({ params }: ResultPageProps) {
       </section>
 
       <p className="mt-6 max-w-4xl text-lg leading-8 text-[var(--muted)]">{result.meaning}</p>
+      {kind.kind === "derivation" && argument.conclusion_statement_id === GOD_EXISTS ? (
+        <Link className="link-quiet mt-3 inline-block" href={caseArgumentHref(argument.id)}>Compare premise assumptions for this argument</Link>
+      ) : null}
 
       <StrengthComparisons comparisons={comparisonsForResult(getStrengthComparisons(), result.id)} />
       <BundleAuditSection audit={getBundleAudit(result.id)} />

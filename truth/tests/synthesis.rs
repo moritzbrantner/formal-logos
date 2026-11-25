@@ -258,3 +258,64 @@ fn exact_argument_overlap_scoped_rivals_and_prior_work() {
     );
     assert_eq!(fixture.run(&["missing"]).status.code(), Some(3));
 }
+
+#[test]
+fn compare_a_selected_argument_without_bootstrapping_its_conclusion() {
+    let f = Fixture(
+        std::env::temp_dir().join(format!("truth-synthesis-replay-{}", std::process::id())),
+    );
+    for id in ["P", "Q", "K", "T", "X", "Y", "Z"] {
+        f.statement(id);
+    }
+    f.argument("chosen", &["P", "Q"], "T", false);
+    f.write("arguments",json!({"id":"chosen","label":"Chosen route","meaning":"Test","premise_statement_ids":["P","Q"],"commitment_statement_ids":["K"],"conclusion_statement_id":"T","inference_ids":["inference"]}));
+    f.argument("alternate", &["P", "K"], "T", true);
+    f.argument("recover_q", &["P"], "Q", false);
+    f.argument("cycle_entry", &["T"], "P", false);
+    f.argument("self", &["T"], "T", false);
+    f.argument("starts_x", &["Y"], "X", false);
+    f.argument("starts_y", &["X"], "Y", false);
+    f.argument("unfounded", &["X"], "T", false);
+    f.argument("proposed", &["Q"], "T", false);
+    f.write("results",json!({"id":"result-proposed","argument_id":"proposed","challenge_module":"Challenge","solution_module":"Solution","theorem":"proposed","comparator_config":"test","status":"proposed"}));
+    let output = f.run(&["chosen", "--compare-premises", "--json"]);
+    assert!(
+        output.status.success(),
+        "{}",
+        String::from_utf8_lossy(&output.stderr)
+    );
+    let report: Value = serde_json::from_slice(&output.stdout).unwrap();
+    assert_eq!(report["mode"], "argument");
+    assert_eq!(
+        report["supporting_arguments"],
+        json!(["alternate", "chosen"])
+    );
+    assert_eq!(report["derivation"], json!(["chosen"]));
+    assert_eq!(report["inputs"][2]["role"], "commitment");
+    let cases = report["comparisons"].as_array().unwrap();
+    let case = |id: &str| cases.iter().find(|c| c["withheld"] == json!([id])).unwrap();
+    assert_eq!(case("P")["reachable"], false);
+    assert_eq!(case("K")["reachable"], false);
+    assert_eq!(case("Q")["recovered_inputs"], json!(["Q"]));
+    assert_eq!(case("Q")["derivation"], json!(["recover_q", "chosen"]));
+    let single = f.run(&["chosen", "--without", "Q", "--json"]);
+    let single: Value = serde_json::from_slice(&single.stdout).unwrap();
+    assert_eq!(single["derivation"], case("Q")["derivation"]);
+    assert!(f.run(&["chosen", "--without", "Z"]).status.code().unwrap() != 0);
+    assert!(!f.run(&["T", "--without", "K"]).status.success());
+    assert!(
+        !f.run(&["--question", "Q", "--without", "K"])
+            .status
+            .success()
+    );
+    f.argument("weaker", &["Q"], "T", false);
+    let alternate: Value =
+        serde_json::from_slice(&f.run(&["chosen", "--without", "K", "--json"]).stdout).unwrap();
+    assert_eq!(alternate["selected_applicable"], false);
+    assert_eq!(alternate["supporting_arguments"], json!(["weaker"]));
+    f.argument("zero", &[], "K", false);
+    let recovered: Value =
+        serde_json::from_slice(&f.run(&["chosen", "--without", "K", "--json"]).stdout).unwrap();
+    assert_eq!(recovered["recovered_inputs"], json!(["K"]));
+    assert_eq!(recovered["derivation"], json!(["zero", "chosen"]));
+}
