@@ -168,10 +168,11 @@ test("state page counts the root's paths as truth frontier's reaching_root_state
     const expected = Object.entries(report.closed_statements).filter(([id, why]) => why === reason && onPath.has(id)).length;
     expect([reason, count]).toEqual([reason, String(expected)]);
   }
+  expect(await page.locator("[data-stage-open]").count()).toBe(0);
   const stagesShown = await page
     .locator("[data-stage]")
     .evaluateAll((rows) =>
-      rows.map((row) => ["stage", "stage-on-route", "stage-closed", "stage-open", "stage-off-route"].map((key) => row.getAttribute(`data-${key}`))),
+      rows.map((row) => ["stage", "stage-on-route", "stage-closed", "stage-off-route"].map((key) => row.getAttribute(`data-${key}`))),
     );
   expect(stagesShown).toEqual(
     report.stages.map(({ stage, statement_id: conclusion }) => {
@@ -182,7 +183,6 @@ test("state page counts the root's paths as truth frontier's reaching_root_state
         String(stage),
         String(onPath.has(conclusion)),
         String(members.filter((id) => onPath.has(id) && report.closed_statements[id]).length),
-        String(report.items.filter((item) => item.path_to_root && (report.statement_stages[item.statement_id] ?? []).includes(stage)).length),
         String(members.filter((id) => !onPath.has(id)).length),
       ];
     }),

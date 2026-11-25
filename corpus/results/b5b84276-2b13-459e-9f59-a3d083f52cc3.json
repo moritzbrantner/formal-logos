@@ -1,0 +1,11 @@
+{
+  "id": "b5b84276-2b13-459e-9f59-a3d083f52cc3",
+  "label": "Every giving by a one-power HAS_INTELLECT_1 being is by a rational power",
+  "argument_id": "b3806678-bfa2-4858-88f0-4adca14fe33c",
+  "challenge_module": "TruthCore.Results.Causality.WillVersusChance.Challenge",
+  "solution_module": "TruthCore.Results.Causality.WillVersusChance.Solution",
+  "theorem": "TruthCore.Results.Causality.WillVersusChance.oneIntellectualPowerGivesWilledGiving",
+  "comparator_config": "results/b5b84276-2b13-459e-9f59-a3d083f52cc3/comparator.json",
+  "status": "solution-present",
+  "description": "The intellect route to willed giving (argument A), a route found here that discriminates choice from chance without restating the chance rival's denial: at a source with one power, intellect with these bridges suffices to make every giving willed, so the chance rival must deny the source's intellect (controls, law 13). The converse is not proved: Rational has no content, so nothing shows that a source without intellect is not willed, and other warrants for will at the source that are independent of DNP_inv (e.g. the Fifth Way and governor routes, given the holder-root identification) would discriminate equally (law 6); argument D is not one, since its will comes from DNP_inv. Not a transcription. Establishes no premise; nothing about God or about which worlds y gives in. Omission models: without will following intellect, without will as a rational power, without giving as exercise."
+}

@@ -1,0 +1,50 @@
+{
+  "id": "f512c46b-24fb-4e29-8099-bbfe393d6f8b",
+  "label": "GOD_4 HAS_WILL_1, from the willed joint-absence holder and at most one holder",
+  "premise_statement_ids": [
+    "fdd2b1cf-503b-4241-aaa1-2e4a06db5723",
+    "0050b6ed-3c7d-4d6a-b97a-417837d76184",
+    "5f93d4f0-3780-45f6-9d65-da8ced71c922",
+    "65e0179f-55d4-4b77-98ba-4b5b26f2d404"
+  ],
+  "conclusion_statement_id": "66aecdd7-ea4e-55c6-9377-10db08893854",
+  "inference_ids": [
+    "7da34a87-b8d5-4d6f-b12f-49d695c6fc5b"
+  ],
+  "meaning": "Let g be GOD_4. By 0050b6ed g holds the power. fdd2b1cf gives a holder y that gives some x being at w by a rational power p; by 65e0179f y has will (HAS_WILL_1). At most one holder makes g = y. Constructive.",
+  "definition_ids": [
+    "582f44c3-7778-4806-b385-e1eff852ac5e",
+    "69d8aef9-b0d4-461d-9a48-ef0bb4fbd56f",
+    "88f9f6e8-997b-5f7d-afa1-c501954c3807",
+    "7c64b499-6dba-5e03-bdf3-5acea95d8836",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "b8061228-9131-40f2-83bd-cb7d719bd0a0",
+    "bf7eddca-8291-4744-8470-379babcd7781",
+    "de24ce2e-84e4-48d8-9cac-5f66ad532015"
+  ],
+  "disambiguation_ids": [
+    "8b3d47bc-7fee-4936-99ad-6561aedc657a",
+    "941efd70-d56f-53f9-b5f9-8acd36711a54",
+    "623ddbf6-9683-5361-bae4-e348a00ec680",
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f",
+    "c18f084e-bb0a-4edd-84d6-fdd1bb2ede87",
+    "e5417243-d6f3-4776-9694-40d85bb34ff4"
+  ],
+  "sense_bridges": [
+    {
+      "term": "WILL_CAPACITY_VERSUS_WILLED_GIVING",
+      "from": "9c62da92-c637-4f61-9bdc-4c5dc8d857cc",
+      "to": "916b63e7-d8d8-49ba-9d42-9ad19c1fa090",
+      "statement_id": "65e0179f-55d4-4b77-98ba-4b5b26f2d404",
+      "role": "premise"
+    },
+    {
+      "term": "POWER_FOR_VERSUS_ACTIVE_POWER",
+      "from": "f4417ed2-3be6-4d78-b2a6-c4db9ac640b3",
+      "to": "a252ca84-4442-435b-991c-a14f3cc3cedb",
+      "statement_id": "fdd2b1cf-503b-4241-aaa1-2e4a06db5723",
+      "role": "premise"
+    }
+  ]
+}

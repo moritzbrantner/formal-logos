@@ -1,0 +1,9 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.NecessaryClassicalGodRootBoxK.Challenge",
+  "solution_module": "TruthCore.Results.Causality.NecessaryClassicalGodRootBoxK.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.NecessaryClassicalGodRootBoxK.separator"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}

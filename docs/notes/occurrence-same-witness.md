@@ -1,5 +1,7 @@
 # Occurrence, necessary ancestry and the same underived individual (#701)
 
+[Research record](../../corpus/attempts/occurrence-same-witness-701.json)
+
 ## Exact bridge and result
 
 `OCCURRENCE-SAME-WITNESS-ESSENCE` joins the #536/#564 thinker-local

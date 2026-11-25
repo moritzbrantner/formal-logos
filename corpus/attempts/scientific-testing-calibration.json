@@ -26,7 +26,8 @@
     "0e7eb377-59a3-5a95-ab2b-a05ca123e262",
     "6b5655f1-ceb2-5e64-b70f-624e6cf7177c",
     "ab25ae9b-9fb4-5ed9-b755-e03aeb9a3a42",
-    "daa271be-cd04-5e03-bd3e-c7bad5c2eff3"
+    "daa271be-cd04-5e03-bd3e-c7bad5c2eff3",
+    "PR-672"
   ],
   "blocker": "The actual reliability of a calibration reference, constant bias and additive profile, exhaustive scientific alternatives, normative scientific judgment and any transition from empirical adequacy to ontological explanation remain open. Final CI verification is pending."
 }

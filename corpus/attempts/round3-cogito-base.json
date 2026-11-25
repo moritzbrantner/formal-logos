@@ -31,7 +31,9 @@
     "3ed5f330-638c-5fb3-92a4-b36058b79627",
     "b9c3f090-3bf2-5c96-ae3e-c18a1d63cd3b",
     "af7171b5-371a-497d-9486-c73b5b9d3002",
-    "d4cceb07-f9ff-4a49-a6d8-b5b59e693123"
+    "d4cceb07-f9ff-4a49-a6d8-b5b59e693123",
+    "PR-1219",
+    "PR-1354"
   ],
   "blocker": "New conditional support option only; original completion is 0. Real-world grounding/potential calibration, applicability of the original foundation premise, and temporal-stock clock/coverage/growth bridges remain OPEN. Shared legacy WF metadata pollution was not repaired in this bounded slice. Existing root closure rules remain unchanged."
 }

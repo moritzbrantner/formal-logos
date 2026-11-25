@@ -1,0 +1,11 @@
+{
+  "id": "8e620a09-68b7-42ab-a626-bc8161676076",
+  "label": "Test comprehension and reflective knowing on a common populated source and recipient",
+  "argument_id": "d7b06c75-975d-4cb8-927b-01abefcc7ee4",
+  "challenge_module": "TruthCore.Results.Causality.ReflectiveComprehension.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ReflectiveComprehension.Solution",
+  "theorem": "TruthCore.Results.Causality.ReflectiveComprehension.controls",
+  "comparator_config": "results/8e620a09-68b7-42ab-a626-bc8161676076/comparator.json",
+  "status": "solution-present",
+  "description": "Finite interpretations distinguish knowing some true content from reaching the object's knowability, and a higher particular knowing from a higher whole act. The positive interpretation realizes a strict pair without requiring the source's knowing of the recipient to exceed that recipient's knowability."
+}

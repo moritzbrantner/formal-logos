@@ -1,0 +1,14 @@
+{
+  "id": "3b35b86d-1802-42b0-8aa5-a4fef0129a31",
+  "label": "Self-comprehension calibrates whole act for comparison with a higher knowing (inference)",
+  "input_statement_ids": [
+    "7921f9c8-81f4-4af5-b945-d98787d12f42",
+    "7db53cde-911c-48ec-ab4f-054a00288148",
+    "2412c010-3246-4cb8-b8a1-e10340384261"
+  ],
+  "output_statement_id": "1aab2bd1-020d-4b61-a59b-dc97f6f8a72e",
+  "rule": "Close the self-comprehension inequalities and lift a strict intervening grade",
+  "meaning": "The recipient's act is below or equal to its knowability, which is below or equal to its witnessed self-knowing, which is bounded by that very recipient's act. A strictly higher knowing by s is bounded by s's act. Same-state calibration gives the strict comparison in represented esse.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

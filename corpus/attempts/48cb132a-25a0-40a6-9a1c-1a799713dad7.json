@@ -1,0 +1,18 @@
+{
+  "id": "48cb132a-25a0-40a6-9a1c-1a799713dad7",
+  "label": "Test a dependent secondary's contribution to the same giver's production of esse",
+  "date": "2026-11-24",
+  "statement_ids": [
+    "50da2b49-c914-4c44-a956-1cb134a399f8"
+  ],
+  "kind": "countermodel",
+  "outcome": "blocked",
+  "summary": "The local Lean controls in Scratch/sole-esse-giver/Cooperation.lean fix one actual own-being giver, two actual participants, universal efficient and causal reach of the giver, and a secondary efficient edge. Both disabling the principal and disabling the whole secondary stop delivery in the two compared histories. Removing only the secondary's own yield while retaining transmission tests whether every required productive input in the history is from the principal. The test is exact for the finite conjunctive recipes; the registered efficient-total premise holds in the transmitted interpretation and fails in the jointly supplemented interpretation. The calibrated pump and spring give an interpretation for force, not existential production. See docs/notes/causal-perfection-transfer.md#does-a-dependent-secondary-contribute-alongside-the-giver-of-esse. Whole-being scope in 5e281daf answers the presupposed-subject question; it needs actual-roster coverage and an exercise-level connection to the no-co-cause reading to support this premise. No new corpus argument or source attribution.",
+  "blocker": "For the initial esse of a particular living individual, identify whether the generator's contribution constitutes a required efficient input alongside the principal, transmits the principal's own productive gift, or specifies what receives it. Substantiate any transfer of attribution from the specified form under which the individual arises to its act of existing. Present maintenance alone supplies no tracing of the initial production. Where the principal also gives the patient's being, the presupposed matter supplies no external substrate, but the generator's exercised power still requires explanation. A supported pair would still need generalization to every pair within the statement's scope.",
+  "evidence": [
+    "72d4e276-03d8-4661-9371-a63606c6ea4b",
+    "bde2b1b2-778c-4eb1-aed7-d77fab72c859",
+    "dae70d8a-75ad-5b67-82cd-c1f7be320e93",
+    "PR-1952"
+  ]
+}

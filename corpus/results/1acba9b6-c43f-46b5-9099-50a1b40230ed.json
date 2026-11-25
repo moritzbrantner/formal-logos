@@ -1,0 +1,11 @@
+{
+  "id": "1acba9b6-c43f-46b5-9099-50a1b40230ed",
+  "label": "Recover the exact strict path relation of an acyclic dependence presentation",
+  "argument_id": "0d73df62-9be9-4112-aef4-c5d78e014b6c",
+  "challenge_module": "TruthCore.Results.Causality.StrictGroundRepresentation.Challenge",
+  "solution_module": "TruthCore.Results.Causality.StrictGroundRepresentation.Solution",
+  "theorem": "TruthCore.Results.Causality.StrictGroundRepresentation.identityRepresentation",
+  "comparator_config": "results/1acba9b6-c43f-46b5-9099-50a1b40230ed/comparator.json",
+  "status": "solution-present",
+  "description": "Proper inclusion of the predecessor sets at a and b puts a among the predecessors of b and excludes equality. Thus every derivable strict partial ground in the generated theory reflects a nonempty reversed dependence path. The earlier acyclicity theorem supplies the reverse implication."
+}

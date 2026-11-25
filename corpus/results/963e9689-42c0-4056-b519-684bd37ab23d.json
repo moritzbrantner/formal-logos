@@ -1,0 +1,11 @@
+{
+  "id": "963e9689-42c0-4056-b519-684bd37ab23d",
+  "label": "The withholding holder is a willed two-way giver, by its HAS_INTELLECT_1 and one power",
+  "argument_id": "02f427bf-43f8-4352-bad8-a9b1e082ec4f",
+  "challenge_module": "TruthCore.Results.Causality.WillVersusChance.Challenge",
+  "solution_module": "TruthCore.Results.Causality.WillVersusChance.Solution",
+  "theorem": "TruthCore.Results.Causality.WillVersusChance.actualAbsenceHolderGivesByWill",
+  "comparator_config": "results/963e9689-42c0-4056-b519-684bd37ab23d/comparator.json",
+  "status": "solution-present",
+  "description": "Argument B: #1897's withholding holder gives by will, not by chance, given its intellect and one power, with no Theta 5 principle. Not a transcription. Establishes no premise. Its omission models show what each premise carries: without the holder's intellect the chance rival (same frame, set-up and giving, non-rational power) satisfies every other premise; without one power, the intellectual chancer. It does not say that the holder is GOD_4 or unique, nor that the choice is contrastively explained. Connection plan: the holder's intellect premise needs the holder-root identification (#1897 note, gap 2); a consumer on the root route is the q.19 a.4 creation-by-will node a94c5dfc, which needs a bridge from exercising a rational power in giving to its Wills relation (not built)."
+}

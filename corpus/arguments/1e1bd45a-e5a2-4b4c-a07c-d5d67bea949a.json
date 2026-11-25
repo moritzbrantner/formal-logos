@@ -1,0 +1,71 @@
+{
+  "id": "1e1bd45a-e5a2-4b4c-a07c-d5d67bea949a",
+  "label": "PRIOR_4 well-founded among actual concreta, from grounding well-founded on them",
+  "premise_statement_ids": [
+    "82cfaf26-fc86-54ab-8328-9a7b2bdbbe21",
+    "bd305511-282b-479c-97b0-b3ec2291128f"
+  ],
+  "conclusion_statement_id": "522506d1-9e06-42c9-91a0-47ebcf50ba8e",
+  "inference_ids": [
+    "e7ed40d8-8d76-4965-bf99-c0970291383d"
+  ],
+  "meaning": "Non-transcription conditional derivation on one grounding profile m, one world w and one being-without relation CanBeWithout. If grounding among actual concreta at w is well-founded (82cfaf26) and, between actual concreta at w, what is PRIOR_4 to the other grounds it (the PRIOR_4 bridge), then PRIOR_4 among the actual concreta at w is well-founded. Unlike simplePriorityWFOfActualGroundingWF (#1942, PRIOR_1) it needs no irreflexivity premise, because PRIOR_4 is asymmetric by definition, and its bridge is not touched by the hand-and-stick case or by an absent or abstract prior thing. So PRIOR_4 among actual concreta joins the one dependence order. priorityConsumerLimit is a Bool interpretation in which the PRIOR_4 member holds nonvacuously (actual grounding, the PRIOR_4 bridge, PRIOR_4 well-founded among actual concreta and on the whole carrier, with the PRIOR_4 pair true -> false) together with the inputs of e229bb2c (57552dce, e078f07b) and 32d77f18, while d85de8e1, 42890b45, 86efed1a and the PRIOR_4 reading of e078f07b's shape fail; so the PRIOR_4 member does not entail d85de8e1, 42890b45 or that reading. That e078f07b fails on PRIOR_4 is the hand-and-stick argument (the stick can be without the hand), not something the control shows. In it a PRIOR_1 pair is not PRIOR_4, and its last conjunct (a second interpretation) gives a PRIOR_4 pair that is not PRIOR_1. priorityInBeingControls drop each input on Nat (PRIOR_4 is asymmetric, so an infinite ascent replaces the two-cycle) and give a nonvacuous Bool interpretation. Facts about these interpretations only.",
+  "term_senses": {
+    "PRIOR": "11d1b100-3b05-4695-9d63-31cb8d09a284"
+  },
+  "definition_ids": [
+    "c86cc1d1-c09f-5296-8ab9-2e5ddf217dce",
+    "58fee8ed-9b44-5399-95c8-5d239bea898d",
+    "c57e2682-08e6-527e-950f-0fa0a7ff11ef",
+    "d0b06beb-e8cb-5cb8-af2f-bc7f8cc004b2",
+    "008cb21a-256c-5a90-822c-acd4591d699a",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "f8948e28-b13a-5244-95f1-41a05cd4fff2",
+    "e1ff44df-ed97-5990-8424-1abd720f23ea",
+    "baddf770-36bf-542f-bb3c-2297342d5452",
+    "7ac7fea6-5b3a-5e97-b687-c76569c58429",
+    "a1b2e330-388f-4120-bc5c-969642317792",
+    "f4365b55-da11-4e27-b5b7-71024d9508be"
+  ],
+  "disambiguation_ids": [
+    "6e92c6e3-edf0-5d7e-b2b3-788b24b8b768",
+    "623ddbf6-9683-5361-bae4-e348a00ec680",
+    "7507d645-874d-5434-add8-2f49c2801d36",
+    "b9adce48-6b86-5f58-b2ea-b25f51c70cbd",
+    "be54be36-3ce8-53f9-8168-50d1114e6c76",
+    "c529e8d3-43e3-53a8-a82f-3955e9815265",
+    "83264cf5-01fe-52fc-9a00-eeb024f6496e"
+  ],
+  "strong_version_needed": {
+    "82cfaf26-fc86-54ab-8328-9a7b2bdbbe21": "The conclusion is full well-foundedness of PRIOR_4 among the actual concreta at w, so the premise must exclude every infinite descending grounding chain among them. The weak versions do not: ConeWellFounded (1b1e3f09) constrains only the ancestor cone of one selected individual, ActualGroundingAsymmetric (39f7c63d) excludes only two-cycles, and closed-collection rootedness (aca3baa1) admits an infinite descending chain whose members also descend from a root (RootedInfiniteControl of ClosedEsseSource)."
+  },
+  "sense_bridges": [
+    {
+      "term": "NECESSARY",
+      "from": "8c881fa6-2b9f-44be-a32a-c8ef29c13643",
+      "to": "7af298fb-a2c4-4239-919b-7685f2e1f67a",
+      "statement_id": "82cfaf26-fc86-54ab-8328-9a7b2bdbbe21"
+    },
+    {
+      "term": "NONNECESSARY_VERSUS_CONTINGENT_ROOT",
+      "from": "cf6a8bb9-2a70-4e90-86bd-06f69106da2f",
+      "to": "9f9108e2-3cc3-45dd-be1d-d8fdaaced708",
+      "statement_id": "82cfaf26-fc86-54ab-8328-9a7b2bdbbe21"
+    },
+    {
+      "term": "WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT",
+      "from": "9232f675-db0a-474c-9f00-d8e5aba69ef7",
+      "to": "556515c9-1fcc-4ea0-b85d-2a4cad7eff79",
+      "statement_id": "82cfaf26-fc86-54ab-8328-9a7b2bdbbe21"
+    },
+    {
+      "term": "WELL_FOUNDEDNESS_OF_THE_SELECTED_RELATION",
+      "from": "2f42c0e7-46ae-4e2b-9ac4-95dcb865da61",
+      "to": "f4609d52-a878-4d09-9af3-083b1945770c",
+      "statement_id": "82cfaf26-fc86-54ab-8328-9a7b2bdbbe21"
+    }
+  ]
+}

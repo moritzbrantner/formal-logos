@@ -1,0 +1,16 @@
+{
+  "id": "d164f730-95b4-4297-8978-9e5586f0b2ef",
+  "label": "Every actual root of the selected grounding relation is NECESSARY_2 at w",
+  "paraphrase": "OPEN (analyst formulation, unattributed): every actual root of the selected grounding relation G at w exists at every world accessible from w (NECESSARY_2, NecessaryAt). Universal over actual roots; with a common root, the necessity of that one root. Its warrant is that of the necessary-root routes; not assessed in this batch.",
+  "lean_declaration": "TruthCore.Causality.NarDerivation.ActualRootsNecessary",
+  "definition_ids": [
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "c57e2682-08e6-527e-950f-0fa0a7ff11ef",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ],
+  "disambiguation_ids": [
+    "83264cf5-01fe-52fc-9a00-eeb024f6496e",
+    "623ddbf6-9683-5361-bae4-e348a00ec680"
+  ]
+}

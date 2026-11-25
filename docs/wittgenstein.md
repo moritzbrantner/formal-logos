@@ -5,7 +5,7 @@ are recorded as readings, then classified as **rival**, **support** or
 **neutral** relative to the root routes' premises (their open leaves, `corpus.py
 frontier --routes`) and the floor items of #1007 (approved: F1, F3, F4, F6;
 F5 a candidate). A classification is a research judgment about bearing, not a
-defeat: defeats and support count only by #999, #1007, D-I and D-L.
+defeat: defeats and support count only by #999, #1007, D-I and D-L. [Research record](../corpus/attempts/ATTEMPT-WF-CATHOLIC-PRACTICE-DEFEAT-1010.json)
 
 Exegesis caution. Wittgenstein's texts are contested. Readings are recorded as
 readings, and a view developed by followers is not attributed to him. The four

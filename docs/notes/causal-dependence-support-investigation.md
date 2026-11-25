@@ -90,7 +90,7 @@ are current research readings, not new pinned corpus claims:
 ### What is new relative to the earlier causal investigation
 
 [Causal transitivity 1399](causal-transitivity-1399.md), attempt
-`56ae2547-ae69-46f4-93b5-4c8ee786ed13`, already investigated received actuality,
+[`56ae2547-ae69-46f4-93b5-4c8ee786ed13`](../../corpus/attempts/56ae2547-ae69-46f4-93b5-4c8ee786ed13.json), already investigated received actuality,
 the becoming/being distinction, existential inertia, impossible absence,
 same-bearer identity, and the all-respects scope problem. The present source
 reading corroborates those findings. It is not a new discovery that a heater's
@@ -316,6 +316,17 @@ instance, together with an independently motivated consistent theory of its
 grounds. A successful local bridge should be tested for extension of scope
 before registering the global premise. No termination assumption is needed.
 
+### Registration and infinite-series test (2026-11-24)
+
+P2-A subsequently landed. Result `40b8313e` takes consistency
+(`fea5942a`) and the distinct-edge interpretation map (`42756c07`) to P2
+(`0f49d71e`). Result `972ed7e5` consumes that exact P2, together with P8
+and no self-causation, to conclude that a cause is independent of its effect
+(`47b151ca`). Result `a01e0429` realizes the full package on a single series
+in which every member has a further cause. This locates the outstanding
+termination question at the per se regress premise (`97f5850f`).
+[Model, scope and warrant](distinct-dependence-strict-ground-route.md#the-infinite-series-at-the-efficient-cause-consumer)
+
 ## 6. P8: received esse, same-respect effects, and export to the bearer
 
 ### Positive conservation argument, with its premises exposed
@@ -497,7 +508,7 @@ premises (84 current, 158 legacy-only, 181 none); of the sixteen, nine are
 legacy-only (`c0d99549`, `42756c07`, `000e1f65`, `97fa3a0b`, `47aff057`,
 `09b88101`, `f10d5632`, `2e248016`, `402cf70f`) and seven have no attempt
 (`fea5942a`, `d85de8e1`, `3ef67739`, `71454b27`, `d6e558d0`, `57c5ed67`,
-`5dacb0db`). Attempt `9d71e28d-d492-4797-9221-45fa517a6e6b` carries the
+`5dacb0db`). Attempt [`9d71e28d-d492-4797-9221-45fa517a6e6b`](../../corpus/attempts/9d71e28d-d492-4797-9221-45fa517a6e6b.json) carries the
 compact current assessment.
 
 This note is the owner because it already holds the semantic contract for `D`,
@@ -507,7 +518,7 @@ and `42756c07`. The narrower priority note
 ([priority-independence-logic-support-investigation.md](priority-independence-logic-support-investigation.md))
 and the strict-ground note
 ([distinct-dependence-strict-ground-route.md](distinct-dependence-strict-ground-route.md))
-are reused, not repeated. `8ab3d114` is current in attempt `dd24400b` and is
+are reused, not repeated. `8ab3d114` is current in attempt [`dd24400b`](../../corpus/attempts/dd24400b-cc87-4095-b4c4-df857e1edff5.json) and is
 used here, not reassessed. Lane A owns the motion and causal-chain core
 (`6b9fedc2`, `57552dce`, `a594d8c4` and others); where a premise here shares a
 dependency with that core, the dependency is named and not assessed.
@@ -523,7 +534,7 @@ Lean-checked.
   x would not be if y were not, in the sense ST I q.44 a.1 ad 2 gives to an
   effect's relation to its agent cause, impossible antecedents included. A Lean
   parameter with no structural property. Two forks stay open: the diagonal
-  (reading (a) reflexive, reading (b) strict; attempt `a4d430a0`), and
+  (reading (a) reflexive, reading (b) strict; attempt [`a4d430a0`](../../corpus/attempts/a4d430a0-9711-4d04-b4a5-be385f92e757.json)), and
   originating versus sustaining dependence (#1626, open; the time-indexed split
   exists only for *cause of being*, disambiguation `88a8fba7`).
 - **Being able to be without** `W y x` (`CanBeWithout`, definition `d0b06beb`):
@@ -592,16 +603,16 @@ that is proposed for the formal owner and not certified.
 | Premise and Lean content | End state | Strongest positive warrant, or reason | Conditions and shared dependencies |
 | --- | --- | --- | --- |
 | `c0d99549` `∀ c x r, E c x r → D x c` | **Open, blocked by a kept counterexample** (row 1 of (e)). Judgment revised; see the supersession paragraph in (g). | Esse instance only: the received-esse argument of section 6 supports the sibling `2068f91c` (`c ≠ x`, `CausesIn c x esse`). Claim `3ed36bec` supports, and does not state, the all-respects form. | Analyst observation: `c0d99549` follows from `e078f07b` taken on its own claim `3ed048c0` and the first half of `47aff057` (`E c x r → P c x → D x c`). So the counterexample also bears on that pair; see (d) 4. On the route it enters only through `8c629064` and `1ffd6090`, both under `e078f07b`. |
-| `fea5942a` `Consistent S` | **Reducible:** with `42756c07`, for the selected `S` built from distinct-step `D`, it is equivalent to the open `702dc502` (distinct-step dependence has no finite cycle). One direction is `e86849cf`; the converse is proposed. | Analyst observation: for any relation R on atoms whose transitive closure is irreflexive, the set of strict sequents `a ≺ b` for `R a b` is PLG-consistent (interpret strict partial ground by the transitive closure of R and weak ground by its reflexive closure; every PLG rule is sound, and `a ≺ a` is never derivable). Take S to be that set for the distinct-step part of `D`, with the identity labelling; then `42756c07` holds by the assumption rule. | Hence, for some S and labelling, `fea5942a` with `42756c07` holds exactly when distinct-step `D` has no finite cycle: one direction is verified (result `e86849cf`, `mapForcesDistinctDependenceAcyclic`), the other is this proposal. An independently specified existence-fact theory would need its own soundness under Fine's semantics, which is not formalized. Off the route when `e078f07b` is taken directly ((d) 2). |
-| `42756c07` `∀ x y, x ≠ y → D x y → StrictlyGrounds S (e y) (e x)` | **Trivial under the selection of `fea5942a`'s row; for an independently specified existence-fact theory, open, blocked by an unfixed sense.** | Directed existential explanation: what supplies existence is not in turn supplied by its recipient (section 5). With `fea5942a` its formal content is acyclicity of distinct-step `D`, which is more than the nonmutuality `0f49d71e` it is used for (attempt `1020b663`). | The atoms are uninterpreted (disambiguation `23dd6f32`); the causal reading reduces to efficient-causal asymmetry, and the constitutive reading does not cover the sun and light paradigm. Rivals: rows 5–7. The direct option `0f49d71e` is weaker and needs no ground theory. Off the route when `e078f07b` is taken directly. |
+| `fea5942a` `Consistent S` | **Reducible for the edge theory:** on an inhabited bearer type with identity labels, consistency of the strict-edge theory is equivalent to distinct-step acyclicity `702dc502`. | The generated theory realizes its edge map by assumption. Under distinct-step acyclicity, result `1acba9b6` also identifies every strict partial ground it derives with a reversed finite dependence path. | For other fixed labels, the projected edges must be acyclic (`5ebdfbff`). Truth of independently interpreted existence facts remains open. [Proof and application](distinct-dependence-strict-ground-route.md#what-does-a-consistent-representation-add) |
+| `42756c07` `∀ x y, x ≠ y → D x y → StrictlyGrounds S (e y) (e x)` | **Trivial under the selection of `fea5942a`'s row; for an independently specified existence-fact theory, open, blocked by an unfixed sense.** | Directed existential explanation: what supplies existence is not in turn supplied by its recipient (section 5). With `fea5942a` its formal content is acyclicity of distinct-step `D`, which is more than the nonmutuality `0f49d71e` it is used for (attempt [`1020b663`](../../corpus/attempts/1020b663-7fe1-42d2-8b0c-8a767607a1ce.json)). | The atoms are uninterpreted (disambiguation `23dd6f32`); the causal reading reduces to efficient-causal asymmetry, and the constitutive reading does not cover the sun and light paradigm. Rivals: rows 5–7. The direct option `0f49d71e` is weaker and needs no ground theory. Off the route when `e078f07b` is taken directly. |
 | `000e1f65` `∀ x y, D x y → ¬W x y` | **Open, blocked by the originating/sustaining fork (#1626).** | On the sustaining or essential reading: strong prima facie (section 4, P1-A). Claims `95f41960` (n. 18) and `da9c82ed` (q.104 a.1) support it. | On the originating reading the living-parent case is a kept counterexample (row 2): the child would not be if the parent had not been, and the child can be while the parent is not. The section 4 standing for the sustaining scope is unchanged. With `8ab3d114` and excluded middle it gives `D ↔ ¬W` (section 7). Off the route when `e078f07b` is taken directly and `97f5850f` is bypassed ((d) 2). |
-| `97fa3a0b` `∀ y x, W y x → ¬W x y → P y x` | **Defended direct option, on concrete relata.** | Claim `ab5ec574` (In V Metaph. lect. 13 n. 15) supports the criterion for priority by nature in being (source statement `fa759767`); the transport to `P` is the open step (attempt `5cf65146`). | Scope condition, analyst observation, row 11: on a carrier with non-concrete candidates whose being is modally fixed, the criterion makes a non-concretum a `P`-relatum, which `57c5ed67` forbids. Restricting it to concrete relata, as in the n. 15 generation examples, removes the clash. No substantive objection to its sufficiency on concreta. Off the route when `e078f07b` is taken directly and `97f5850f` is bypassed. |
+| `97fa3a0b` `∀ y x, W y x → ¬W x y → P y x` | **Defended direct option, on concrete relata.** | Claim `ab5ec574` (In V Metaph. lect. 13 n. 15) supports the criterion for priority by nature in being (source statement `fa759767`); the transport to `P` is the open step (attempt [`5cf65146`](../../corpus/attempts/5cf65146-4ef8-4a22-be61-ff3d1dd4c9c7.json)). | Scope condition, analyst observation, row 11: on a carrier with non-concrete candidates whose being is modally fixed, the criterion makes a non-concretum a `P`-relatum, which `57c5ed67` forbids. Restricting it to concrete relata, as in the n. 15 generation examples, removes the clash. No substantive objection to its sufficiency on concreta. Off the route when `e078f07b` is taken directly and `97f5850f` is bypassed. |
 | `d85de8e1` `WellFounded P` | **Open, blocked; the substantive load-bearer of spine I as expanded, failing jointly with all-respects `e078f07b` on either reading of `P` ((f)).** | The instrumental-causation reasoning for no infinite per se series (moved movers move only as moved, `1e47e6db`, lane A; [borrowed-exercise-741.md](borrowed-exercise-741.md)). | Its support for `97f5850f` adds no discriminating warrant: the per se regress premise is its restriction to per se links, and whoever admits an infinite per se series denies both for the same reason (the statement says so). Its extra content, well-foundedness of all simple priority, has no separate warrant on file. Standing rival: row 4; joined with all-respects `e078f07b` on the causing reading, the kept counterexample of row 21. |
 | `47aff057` `∀ y x, P y x → D x y ∧ ¬D y x` | **Open, blocked by the respect fork in `P`** ((d) 4). | On priority in being: claim `95f41960` (n. 18) supports the direction, and the 2026-11-13 judgment ("good conceptual and textual support" for the directional principle, transport open) is unchanged. | The forward half suffices for `931319ea` and `1cb656a0`; both halves are used only in `6009e16f`, which (d) 2 removes from the route. Joined with `e078f07b` on one `P`, it implies `c0d99549` and inherits row 1. |
 | `09b88101` `∀ x y z, D x y → D y z → D x z` | **Open, and dispensable on this route.** | On the per se received-being reading: if x has its being only as received through y's own dependence on z, x depends on z (Second Way order). | Used only through `6009e16f` → `7ad36aca` → `113c01ef` → `37e9e7a0`, which (d) 2 bypasses. Row 8: Lewis's non-transitivity is kept only against the bare counterfactual clause. |
 | `f10d5632` `∀ y x, perSe y x → cause y x` | **Derivable by selection.** | The studied relation is a parameter: choosing it as the per se efficient-cause relation, or any relation containing it, makes the premise reflexive inclusion. | The content then moves to `57552dce` (lane A): every per se link is an efficient causing in some respect, which definition `4a101a4c` glosses ("c efficiently causes x only insofar as …"). Row 16: it is substantive only if the studied relation is an event network (disambiguation `bedfab81`). |
 | `3ef67739` `∀ x, AC x → ContingentAt x → ∃ y, AC y ∧ D x y` | **Open, blocked by the diagonal fork and by existential inertia.** | Supporting claim `7cd6850f` (CC100 #4, presentation): dependent beings depend on something. On the strict sustaining reading, a dependence principle for contingent concreta. | On reading (a) it holds trivially with `y = x`, and `dd7ee4b9` then grounds each contingent concretum in itself, which well-founded or distinct grounding excludes ((d) 3). On reading (b) it is substantive, and existential inertia is the standing rival (row 3). Repair: a distinct-relata sibling, used with `a8298fbd`. |
-| `2e248016` `∀ c x, AC x → AC c → D x c → grounds w c x` | **Open; avoidable by its distinct-relata sibling.** | On the causal reading of `grounds`, the sun and light paradigm (attempt `040e3b4e`). | `eddef85a` and `931319ea` apply it only to distinct relata (their conclusions have `c ≠ x`, `y ≠ x`), so `a8298fbd` suffices there (registered strength order, result `cc7dd608`). Only `dd7ee4b9` needs the unrestricted form, because `3ef67739` lacks distinctness. Row 2 (originating `D`) and the open causal/constitutive fork (#1626). Member of the inconsistent package in (d) 3. |
+| `2e248016` `∀ c x, AC x → AC c → D x c → grounds w c x` | **Open; avoidable by its distinct-relata sibling.** | On the causal reading of `grounds`, the sun and light paradigm (attempt [`040e3b4e`](../../corpus/attempts/040e3b4e-f59c-4ef4-9b5a-7cc181b5bde4.json)). | `eddef85a` and `931319ea` apply it only to distinct relata (their conclusions have `c ≠ x`, `y ≠ x`), so `a8298fbd` suffices there (registered strength order, result `cc7dd608`). Only `dd7ee4b9` needs the unrestricted form, because `3ef67739` lacks distinctness. Row 2 (originating `D`) and the open causal/constitutive fork (#1626). Member of the inconsistent package in (d) 3. |
 | `71454b27` `∀ c x, CausesNecessityOf c x → D x c` | **Defended direct option.** | Claims `3ed36bec` and `bd3767d3` (q.44 a.1 ad 2): a necessary effect has an efficient cause and would not be without it. Derivable alternative (analyst observation): from `8c8b1986` (a cause of necessity causes esse), `2068f91c`, and distinctness of a cause of necessity "from elsewhere" (aliunde). | No substantive objection to its truth identified. On a vacuist counterpossible semantics it holds trivially and carries no dependence information; the q.44 reading presupposes non-vacuous dependence counterfactuals. |
 | `d6e558d0` `∀ c x, CausesNecessityOf c x → AC c ∧ AC x` | **Defended primitive (domain stipulation).** | For the tertia via's causes of necessity among beings, only actual beings cause or are caused. Supporting claim `573a8ba8` (CC100 #10, presentation). | Row 12: q.44 a.1 ad 2 itself cites principles of demonstration causing the necessity of conclusions (claim `bd3767d3`), which are not concreta. The stipulation holds for the ontic sense only, and no record separates the two senses. |
 | `57c5ed67` `∀ y x, P y x → AC y ∧ AC x` | **Defended primitive (domain stipulation).** | The case's simple priority relates actual beings: only actual things are in act. | Price: the world-free `P` is tied to the reading world. Coherence conditions: `a4d3261a` (act prior to potency) then needs every bearer of a potency to be an actual concretum, and `97fa3a0b` needs the concrete restriction above. No substantive objection identified. |
@@ -716,7 +727,7 @@ with a named blocker 9 (`c0d99549`, `42756c07`, `000e1f65`, `d85de8e1`,
    currentness flag `consumer_on_sense_index_allowlist` on `2e248016`,
    `3ef67739`, `47aff057`, `57c5ed67`, `71454b27` and `d6e558d0` comes from the
    over-linked WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT senses on the conclusions of
-   `dd7ee4b9`, `eddef85a` and `931319ea` (attempts `a4d430a0`, `7b8e8975`),
+   `dd7ee4b9`, `eddef85a` and `931319ea` (attempts `a4d430a0`, [`7b8e8975`](../../corpus/attempts/7b8e8975-150f-410b-bc87-6b79352273c8.json)),
    whose types use neither sense. On `f10d5632` it comes from `b58472dd`,
    which uses four senses of one disambiguation by design. No equivocation was
    found in these flags. No premise of the sixteen has transcription-only
@@ -775,13 +786,13 @@ with a named blocker 9 (`c0d99549`, `42756c07`, `000e1f65`, `d85de8e1`,
 | --- | --- | --- |
 | 1 | Accidental-respect causing without existential dependence: the hand moving the stick; a heater heating water (section 6; [causal-transitivity-1399.md](causal-transitivity-1399.md), "Same endpoint test") | **Kept, newly as a counterexample.** *Target:* `c0d99549`'s quantifier over every r. *Mechanism:* c is here and now an efficient cause of x's being r, and x would still be if c were not. *Justification:* ordinary established cases; q.104 a.1 distinguishes causing becoming from causing being (claims `40aefb2e`, `da9c82ed`); claim `3ed048c0` itself names hand and stick as per se causes. *Relevance:* the premise is on the route and states the all-respects form. An established counterexample, not a hypothetical. It transfers to the pair `e078f07b` and the forward half of `47aff057` on one `P` ((d) 4). |
 | 2 | Origin dependence: a living parent and an adult child (attempt `040e3b4e`) | **Kept, conditional on the originating reading of `D` (#1626).** Against `2e248016` and `a8298fbd` as recorded, and classified here also against `000e1f65`: the child depends on the parent by origin and can be while the parent is not. No target on the sustaining reading. |
-| 3 | Existential inertia (attempts `56ae2547`, `a739dad6`, `05bc2722`; #1616) | **Kept** as the standing rival to `3ef67739` on the strict sustaining reading. *Mechanism:* a contingent concretum persists without any concurrent supplier of its existence, explained by its origin and the absence of destroyers. *Independent justification:* observed persistence of ordinary things in the absence of destroying conditions, and the practice of explaining persistence by conservation laws without positing a concurrent supplier (recorded in [causal-transitivity-1399.md](causal-transitivity-1399.md)). *Price:* it owes coverage of every existential loss by its destroying conditions (section 6). The premise owes that present received esse needs a concurrent actualizer. Neither burden is discharged. |
+| 3 | Existential inertia (attempts `56ae2547`, [`a739dad6`](../../corpus/attempts/a739dad6-ef53-49ea-b7dc-6d67c495c563.json), [`05bc2722`](../../corpus/attempts/05bc2722-960f-4ea4-bf1a-f92bb9a77af9.json); #1616) | **Kept** as the standing rival to `3ef67739` on the strict sustaining reading. *Mechanism:* a contingent concretum persists without any concurrent supplier of its existence, explained by its origin and the absence of destroyers. *Independent justification:* observed persistence of ordinary things in the absence of destroying conditions, and the practice of explaining persistence by conservation laws without positing a concurrent supplier (recorded in [causal-transitivity-1399.md](causal-transitivity-1399.md)). *Price:* it owes coverage of every existential loss by its destroying conditions (section 6). The premise owes that present received esse needs a concurrent actualizer. Neither burden is discharged. |
 | 4 | Source-free global structure, the strongest infinitist reply ([borrowed-exercise-741.md](borrowed-exercise-741.md), "Three rivals") | **Kept** against `d85de8e1` and the per se regress premise. *Mechanism:* a beginningless network of instruments, each powered by its predecessor and lawfully organized, is the whole explanation. *Independent justification:* the witnesses in borrowed-exercise-741 are coherent, jointly sufficient and locally powered, and demanding a source of supply begs the question against the reply. *Price:* it owes why the exercise occurs rather than the allowed all-off scenario. Unchanged. |
 | 5 | Modal co-existence of essentially inseparable constituents (attempt `1020b663`) | **Kept as a scope boundary** on `42756c07`: it restricts the map to oriented, source-dependent edges and has no target on the agent-cause reading. |
 | 6 | Symmetric metaphysical dependence (Barnes 2018, Thompson 2016; challenger-cited, attribution deferred) | **Restated.** The texts are unread here, and relevance to the selected efficient-causal sense of `D` is not shown; the cited cases are constitutive. No weight against `42756c07` on its selected sense. |
 | 7 | Vacuous counterpossibles (attempt `1020b663`) | **Boundary retained** as a semantic dependency of `42756c07` and `71454b27`, not an objection. The q.44 a.1 ad 2 reading of `D` (claims `3ed36bec`, `bd3767d3`) presupposes non-vacuous dependence counterfactuals. |
 | 8 | Lewis's non-transitivity of counterfactual dependence (statement `09b88101`; attempt `a4d430a0`) | **Kept** only against `09b88101` read by the bare counterfactual clause. No substantive objection identified against the per se received-being reading. |
-| 9 | A nearest-situation counterfactual with a remote replacement source (section 4; attempt `f798617c`) | **Restated** as the missing persistence and centering bridge of P1-A. Section 4 already says it is "not by itself evidence" of a replacement. No weight. |
+| 9 | A nearest-situation counterfactual with a remote replacement source (section 4; attempt [`f798617c`](../../corpus/attempts/f798617c-2bc7-4d34-9ba7-200927f7088c.json)) | **Restated** as the missing persistence and centering bridge of P1-A. Section 4 already says it is "not by itself evidence" of a replacement. No weight. |
 | 10 | Categories 12: causal priority with reciprocal implication (attempt `5cf65146`) | **No substantive objection identified** to `97fa3a0b`. The case bears on whether separability is necessary for priority, not on its sufficiency. |
 | 11 | Non-concrete candidates of fixed being status (this section, analyst observation) | **Scope condition** on the joint use of `97fa3a0b` and `57c5ed67`, not an objection to either alone. |
 | 12 | Demonstrative causes of necessity (claim `bd3767d3`) | **Kept as a scope boundary** on `d6e558d0`, conditional on reading `CausesNecessityOf` to include demonstrative causes. The tertia via's causes of necessity among beings are untouched. |
@@ -846,6 +857,17 @@ The other two points are the dependence principle for contingent concreta
 (`3ef67739`, against existential inertia) and the transport of priority in
 being to spine III. Nothing here is established, defeated or closed.
 
+Later derivation (#1926, 2026-11-24; [one-dependence-order.md](one-dependence-order.md),
+attempt [`b2cf0e2e`](../../corpus/attempts/b2cf0e2e-60c7-4af2-af5b-b45ad09712fc.json)): `d85de8e1` is now derived from `82cfaf26` (well-founded
+actual grounding), `86efed1a` and `32d77f18` (result
+`simplePriorityWFOfActualGroundingWF`), so it is formally closed from open
+premises rather than a bare leaf. This does not revise the judgment above: the
+derivation binds the unsplit PRIOR_1, `86efed1a` is supported only on priority
+in being and meets row 1's case on priority in causing, and the route to `42890b45`
+through `e229bb2c` still needs `e078f07b`. The "open with a named blocker"
+standing in (c) is unchanged as a warrant judgment; only its formal status
+moved.
+
 ### (g) Revision conditions and next tests
 
 This judgment would change with:
@@ -885,8 +907,9 @@ Cheap formal tests for the owner:
    inconsistent. Add a joint model of the repaired spine-II package
    (`a8298fbd`, a distinct `3ef67739`, `98efaa9e`) with a nonempty strict `D`.
 2. A sibling of `b58472dd` deriving `97f5850f` from `42890b45` and `f10d5632`.
-3. The PLG consistency lemma for acyclic strict-sequent sets (converse of
-   `e86849cf`).
+3. The PLG consistency test for the strict-edge theory is now checked in
+   `1acba9b6`. Its remaining application question is the interpretation of
+   the supplied labels and theory.
 
 **Supersession.** One judgment is revised. The standing of `c0d99549` changes
 from "poorly supported" and "underdetermined" to "faces a kept counterexample;
@@ -900,3 +923,10 @@ no earlier `current_assessment`. First grades are given here to `fea5942a`,
 `d85de8e1`, `3ef67739`, `71454b27`, `d6e558d0`, `57c5ed67`, `5dacb0db`,
 `402cf70f` and `f10d5632`. The classifications of rows 1, 2 (for `000e1f65`),
 11, 14 and 21 are new.
+
+## Research attempts citing this note
+
+- [Cluster assessment of esse-root and quarta-via leaves: reception, causal power, degrees](../../corpus/attempts/b1fa5613-099d-430d-be5a-1e168d7ffe8d.json)
+- [Distinct dependence through consistent strict existential grounding](../../corpus/attempts/eeec87c5-61fb-4327-89bc-e52dbfdd3ea0.json)
+- [Efficient cause dependence through an explicit esse scope bridge](../../corpus/attempts/0daeaa81-7136-4313-911b-ee4c892acbf8.json)
+- [Horizontal support for concurrent actualization: momentary PSR and time symmetry](../../corpus/attempts/9da52c33-4ac7-4bef-a37d-d85039a80251.json)

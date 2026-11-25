@@ -1,0 +1,11 @@
+{
+  "id": "012166ef-0b65-4785-a163-1900d60044c9",
+  "label": "Test coverage of all contingent recipients at the necessary intermediary",
+  "argument_id": "b18dc408-bdf5-42f0-8734-7254054b0ed0",
+  "challenge_module": "TruthCore.Results.Causality.ContingentRecipients.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ContingentRecipients.Solution",
+  "theorem": "TruthCore.Results.Causality.ContingentRecipients.necessaryIntermediary",
+  "comparator_config": "results/012166ef-0b65-4785-a163-1900d60044c9/comparator.json",
+  "status": "solution-present",
+  "description": "Both d and g exist in every accessible world. At false, g gives being to the contingent c, the only possible actual contingent recipient there. The incoming edge d to g leaves g derived. If the selected g reached every actual concretum, a finite path to the actual root d would identify g with d, contrary to the distinct constructors. The use of the naming predicate stipulates a candidate, without independently warranting its divine status."
+}

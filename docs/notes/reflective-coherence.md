@@ -2,7 +2,7 @@
 
 **Status:** owner-proposed conditional framework, not a sourced historical claim
 and not an established objective epistemic duty. Formal home:
-`TruthCore/Logic/ReflectiveCoherence.lean`.
+`TruthCore/Logic/ReflectiveCoherence.lean`. [Original PR #924](https://github.com/moritzbrantner/formal-logos/pull/924)
 
 > If I have an objective duty to believe in a consistent worldview, I should
 > believe in a worldview consistent with that duty and its necessary

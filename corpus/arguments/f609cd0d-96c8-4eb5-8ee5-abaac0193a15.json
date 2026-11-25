@@ -1,0 +1,32 @@
+{
+  "id": "f609cd0d-96c8-4eb5-8ee5-abaac0193a15",
+  "label": "Derive the Second Way regress premise using finite ancestral labels",
+  "premise_statement_ids": [
+    "fea5942a-b50c-4299-a5fe-80a5c2b8c0a9",
+    "42756c07-03cd-4b54-8ed6-ed6c1a5132aa",
+    "adb951c1-db12-48bf-be7b-a152b8e27021",
+    "c799dd6d-8a92-4caa-942a-5588e247f04d"
+  ],
+  "conclusion_statement_id": "97f5850f-62bc-5e43-a0c1-dd1033d08fc9",
+  "inference_ids": [
+    "5dc114ec-db0d-4906-af12-ebe85ebd31f5"
+  ],
+  "meaning": "Each per se predecessor remains in the same ancestral cone and moves strictly down among its labels by alignment and the selected consistent theory. Strict ground on this finite label set is transitive and irreflexive, hence well-founded. Induction yields accessibility of the effect for the original cause relation. The premises concern the same labels throughout.",
+  "definition_ids": [
+    "bf26b9b2-41ed-55b0-9557-dae90ab9b81f",
+    "4a101a4c-12de-53c8-80c6-de7a523ea9d9"
+  ],
+  "disambiguation_ids": [
+    "23dd6f32-b456-4963-adb3-7befbf0dc4fb",
+    "81c233d4-01b4-528c-8bbd-7da228443ffe"
+  ],
+  "sense_bridges": [
+    {
+      "term": "DEPENDENCE_FOR_BEING_VERSUS_STRICT_GROUND",
+      "from": "c6e310c2-a8c9-41cb-8d7e-18859802484d",
+      "to": "28212589-ee94-4eb0-b20e-f7cead4438b1",
+      "statement_id": "42756c07-03cd-4b54-8ed6-ed6c1a5132aa",
+      "role": "premise"
+    }
+  ]
+}

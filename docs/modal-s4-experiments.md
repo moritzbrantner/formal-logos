@@ -4,7 +4,7 @@ This is a stipulated mathematical experiment for #265 over the shared modal
 fixture. It does not identify metaphysical possibility, attribute a modal system
 to Hume, establish real-world contingency or prove a cosmological conclusion.
 The result statements have no external premises: their frame, domain and root
-hypotheses occur inside the quantified mathematical laws.
+hypotheses occur inside the quantified mathematical laws. [Original PR #289](https://github.com/moritzbrantner/formal-logos/pull/289)
 
 ## What follows, and why
 

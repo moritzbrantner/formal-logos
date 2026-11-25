@@ -1,0 +1,11 @@
+{
+  "id": "77778e6b-d42e-4591-8d90-82ff25cf09fb",
+  "label": "Lift a positive transfer path from a net exporter into grounded exercise",
+  "argument_id": "6cb6aeb6-13ec-4884-ad39-fef3ac2127ea",
+  "challenge_module": "TruthCore.Results.Causality.FiniteThroughput.Challenge",
+  "solution_module": "TruthCore.Results.Causality.FiniteThroughput.Solution",
+  "theorem": "TruthCore.Results.Causality.FiniteThroughput.groundedExerciseAtTransfer",
+  "comparator_config": "results/77778e6b-d42e-4591-8d90-82ff25cf09fb/comparator.json",
+  "status": "solution-present",
+  "description": "The no-return hypothesis selects the net-export witness. The intrinsic-input bridge starts the inductive construction and each positive entry transports it along an actual transmission."
+}

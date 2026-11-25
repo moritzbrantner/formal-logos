@@ -4,7 +4,7 @@ The verified results refute five **specified sufficiency inferences**, under
 explicit binary intervention semantics. They do not refute Hume's epistemology,
 Lewis's full-mosaic supervenience or the claim that spacetime is brute. A scoped
 brute account is consistent in the finite model but leaves a substantive
-explanatory challenge. No Catholic or Thomist premise enters these tests.
+explanatory challenge. No Catholic or Thomist premise enters these tests. [Original PR #281](https://github.com/moritzbrantner/formal-logos/pull/281)
 
 ## Evidence and readings
 

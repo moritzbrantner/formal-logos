@@ -1,6 +1,6 @@
 # Unrestricted futures and a stance's own predictive and practical standards
 
-Analyst conditional comparison for [#737](https://github.com/moritzbrantner/formal-logos/issues/737), the [deferred, unresolved #1415](https://github.com/moritzbrantner/formal-logos/issues/1415), and Hume's induction/self-application family. Baseline `main` is `4aab093cc06bc1924bdf8067bd5780e11f438770` (2026-11-19). The reusable formal interfaces are `TruthCore.Epistemology.UltimateExplanation` (#737), `TruthCore.Modern.Hume.Induction` (#269), and `TruthCore.Logic.SelfApplication` (#397). Source attribution is deferred; no historical view is assigned the analyst's unusually strong guarantee norm.
+Analyst conditional comparison for [#737](https://github.com/moritzbrantner/formal-logos/issues/737), the [deferred, unresolved #1415](https://github.com/moritzbrantner/formal-logos/issues/1415), and Hume's induction/self-application family. Baseline `main` is `4aab093cc06bc1924bdf8067bd5780e11f438770` (2026-11-19). The reusable formal interfaces are `TruthCore.Epistemology.UltimateExplanation` (#737), `TruthCore.Modern.Hume.Induction` (#269), and `TruthCore.Logic.SelfApplication` (#397). Source attribution is deferred; no historical view is assigned the analyst's unusually strong guarantee norm. [Original PR #1808](https://github.com/moritzbrantner/formal-logos/pull/1808)
 
 ## The precise adversarial position and conditional consequence
 

@@ -1,0 +1,25 @@
+{
+  "id": "bae627cd-f48f-4fa4-9845-6c36c144b15a",
+  "label": "Self-comprehension calibrates whole act for comparison with a higher knowing",
+  "premise_statement_ids": [
+    "7921f9c8-81f4-4af5-b945-d98787d12f42",
+    "7db53cde-911c-48ec-ab4f-054a00288148",
+    "2412c010-3246-4cb8-b8a1-e10340384261"
+  ],
+  "conclusion_statement_id": "1aab2bd1-020d-4b61-a59b-dc97f6f8a72e",
+  "inference_ids": [
+    "3b35b86d-1802-42b0-8aa5-a4fef0129a31"
+  ],
+  "meaning": "The recipient's act is below or equal to its knowability, which is below or equal to its witnessed self-knowing, which is bounded by that very recipient's act. A strictly higher knowing by s is bounded by s's act. Same-state calibration gives the strict comparison in represented esse.",
+  "definition_ids": [
+    "1218cc1e-e6ef-4f27-9036-d6e28cae67ad",
+    "431287d4-f1b4-4e18-ad6e-555f49f1e39a",
+    "5b196f1c-210d-450e-b3f1-33e214f9f45d",
+    "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "8323604a-2e7a-554c-9b32-d82e5201271d"
+  ],
+  "disambiguation_ids": [
+    "e151d506-c074-4e5d-a0f9-e9c51f1a73d7"
+  ]
+}

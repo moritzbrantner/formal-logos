@@ -1,0 +1,14 @@
+{
+  "id": "71fc097b-4039-4812-a498-2ad70fe08b98",
+  "label": "Whatever HAS_WILL_1 has a rational power",
+  "paraphrase": "OPEN bridge (analyst formulation): whatever has will (HAS_WILL_1, the inclination of an intellectual nature toward the good apprehended) has some active power of the rational class (Rational). It reads having that inclination as having a power of that class; HAS_WILL_1 and Rational are independent primitives, and without this bridge a being can have will and no rational power (controls).",
+  "lean_declaration": "TruthCore.Causality.WillVersusChance.WillIsRationalPower",
+  "definition_ids": [
+    "7c64b499-6dba-5e03-bdf3-5acea95d8836",
+    "b8061228-9131-40f2-83bd-cb7d719bd0a0",
+    "582f44c3-7778-4806-b385-e1eff852ac5e"
+  ],
+  "disambiguation_ids": [
+    "941efd70-d56f-53f9-b5f9-8acd36711a54"
+  ]
+}

@@ -5,7 +5,7 @@ The first section below (2026-10-27) records the derivation that replaced the
 bare bridge by four typed premises. The later sections are the earlier source
 scan (PR #421), kept as the record of verified witnesses and rejected
 shortcuts. The exact universal bridge, its Challenge types on the root routes
-and the root's `Founded` semantics are unchanged.
+and the root's `Founded` semantics are unchanged. [Original PR #421](https://github.com/moritzbrantner/formal-logos/pull/421)
 
 ## The case, its rivals and the decisive fork (derivation, 2026-10-27)
 
@@ -326,7 +326,7 @@ at Antioch.
 **Open.** Pinnable sources for the criterion and for John's independence (or
 dependence) were not found: archive.org was unreachable and the standard
 modern treatments are copyrighted and were not read
-(`ATTEMPT-GOVERNING-COMMISSION-ATTESTATION`).
+([`ATTEMPT-GOVERNING-COMMISSION-ATTESTATION`](../corpus/attempts/governing-commission-attestation.json)).
 
 **Premise effect.** No change. The conclusion is used by no argument reaching
 the root, so `frontier --reaching-root` and `--routes` are unchanged.
@@ -563,3 +563,7 @@ defense, no-bare-relocation progress or root closure. Further work must either
 defend a calibration/coverage within a specified profile, provide a distinct
 relevant calibration, or resolve the historical mandate/body scope. Previously
 verified source readings and claims above retain their exact content.
+
+## Research attempts citing this note
+
+- [Whole-corpus definition audit, Church cluster: the existing sourced visible/spiritual aspect…](../corpus/attempts/church-definition-calibration-audit.json)

@@ -3,7 +3,7 @@
 This is an analyst reconstruction of the owner's requested comparison: make
 worldview-dependent definitions explicit propositions, then determine what
 objections remain available. It adds no historical attribution. Existing source
-navigation remains in the O'Connor records and [the Rowe investigation](../rowe-evidential-evil.md).
+navigation remains in the O'Connor records and [the Rowe investigation](../rowe-evidential-evil.md). [Research record](../../corpus/attempts/evil-emotivism-use-boundary.json)
 
 ## What already follows, and what does not
 

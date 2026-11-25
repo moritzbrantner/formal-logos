@@ -1,5 +1,7 @@
 # Life-restricted composition: reciprocal regeneration and event persistence (#327)
 
+[Research record](../../corpus/attempts/6cbb7d0c-3efe-4192-a46b-6a619ffbeba5.json)
+
 ## Question and reuse
 
 Root purpose: investigate life-restricted composition as a serious alternative

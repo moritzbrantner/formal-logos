@@ -1,0 +1,18 @@
+{
+  "id": "24ae0211-148c-4400-9843-90eac4f25a59",
+  "label": "Does the PSR-collapse family exclude a necessitating impersonal source at the will step?",
+  "date": "2026-11-24",
+  "statement_ids": [
+    "66aecdd7-ea4e-55c6-9377-10db08893854",
+    "b8a2a9e1-0dda-48bc-a646-d4cb229ca62c",
+    "c76b6e2c-1ca0-47fd-a9d0-2c2faa3d1174",
+    "a065c332-940d-4ec3-b9da-a6127b088a8b"
+  ],
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "See docs/notes/will-versus-chance.md section 2. Already established before this slice: in each fixed sense of a necessitating source (strict efficacy of one rigid act, #555 rigid_core, the first clause of Core, with ModalSenseSupport.RivalNegations refuting NecessaryActStrictlyYieldsContingent outright; fixed giving, #1897 laws 3-4; necessitating reason, a fact-level analogue, PSRStrength.necessitating_reason_contingent) a necessary source of a contingent effect is excluded by K-closure. The brief's proposed joint-satisfiability test is therefore already answered negatively and was not re-proved. New only as a connection: the will step's set-up sense (SetupNecessitatedAt, DEF ca00e246), with set-up collapse only at a source with an invariant set-up (law 8; without invariance a giver whose set-up varies is vacuously set-up necessitated, e.g. theistG with varyingState), VG as set-up necessitation under excluded middle (law 9), the withholding holder not set-up necessitated whatever its power (law 10), and set-up necessitation as accessible-world fixed giving at an invariant source (law 14) (result ec6627bf). The exclusion is indifferent to personality: it excludes a necessitated will equally (laws 8 and 10), so it removes Spinozist emanation of the actual contingents only together with requiring the theist's will to be non-necessitating toward creatures. The four senses are joined by the NECESSITATE disambiguation 5836e1f6-ccce-4ce8-b9d6-c89afc7120bb.",
+  "evidence": [
+    "ec6627bf-e955-4532-8ee5-9345fd54fa9f",
+    "PR-1941"
+  ]
+}

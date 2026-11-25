@@ -1,0 +1,11 @@
+{
+  "id": "72d4e276-03d8-4661-9371-a63606c6ea4b",
+  "label": "The sole giver's represented degree bounds its participants by total-cause adequacy",
+  "argument_id": "dcec5717-3794-4b13-b463-f238112bb2a9",
+  "challenge_module": "TruthCore.Results.Causality.SoleEsseGiver.Challenge",
+  "solution_module": "TruthCore.Results.Causality.SoleEsseGiver.Solution",
+  "theorem": "TruthCore.Results.Causality.SoleEsseGiver.boundOfAdequacy",
+  "comparator_config": "results/72d4e276-03d8-4661-9371-a63606c6ea4b/comparator.json",
+  "status": "solution-present",
+  "description": "Use a witnessed actual participant to obtain actuality of s. At each actual participant, the source supplies the q3 causal edge, the separate bridge supplies its efficiency and totality, and 87f41688 yields the positive weak degree bound. The adequacy interface uses the original act predicate, esse and efficient esse relation; its primitive MoreIn and history are unused. Selection consistently fixes the bearer. A selected common supplier would suffice for the inequality even if there were other qualified givers. No strictness or causal converse is used."
+}

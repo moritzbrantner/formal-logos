@@ -3,7 +3,7 @@
 Proposed worker judgment, 2026-11-11; coordinator independent semantic challenge
 required before substantive integration. Analyst logic; attribution deferred.
 Target is the existing NamingVeracity analysis of recognizable revelation on
-stage-three route #380. No actual sign, God witness or root establishment.
+stage-three route #380. No actual sign, God witness or root establishment. [Research record](../../corpus/attempts/3ab6dac5-580f-4c5d-bb2e-27088840448e.json)
 
 ## Exact result and previous proof scope
 
@@ -24,7 +24,7 @@ another activity from producing the same observation. In all four new finite
 models one can leave the old power structure unchanged: adding a candidate
 situation is not giving its natural actor the original exclusive power.
 Thus these controls concern observational identification, not power refutation.
-Prior attempts ATTEMPT-NAMING-VERACITY-BATCH1 and ATTEMPT-WF-BRIDGES-1010,
+Prior attempts [ATTEMPT-NAMING-VERACITY-BATCH1](../../corpus/attempts/ATTEMPT-NAMING-VERACITY-BATCH1.json) and [ATTEMPT-WF-BRIDGES-1010](../../corpus/attempts/ATTEMPT-WF-BRIDGES-1010.json),
 and docs/wittgenstein.md's capability audit, already leave this bridge open.
 The existing practice results constrain predicates for correct recognition;
 they do not prove that a real recipient understood a real message.

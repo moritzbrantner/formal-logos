@@ -5,7 +5,7 @@ rigid necessary bearers must fit one well-founded priority order. The selected
 primary texts discuss materially different modal constraints. None of the selected
 arguments supplies the missing common-rank bridge, or the no-contingent-supporter
 premise. This is a result of these readings, not a proof that such a defense is
-impossible or that the authors reject common rank.
+impossible or that the authors reject common rank. [Research record](../../corpus/attempts/priority-invariance-950.json)
 
 ## Checked connections and countercontrols
 
@@ -184,7 +184,7 @@ The repaired possibility-warrant assessment in PR #1452, head `8e8dc08c`
 `context AUTONOMOUS-GROUND-NECESSARY-BEING`, and the selected-target
 actuality, autonomous-necessity, whole-ground-necessitation and coherence
 premise dossiers. The exact source/semantic findings of existing attempt
-`ca5904d0-1b3c-56a3-8665-930c43e42b59` remain unchanged: own-nature explanation,
+[`ca5904d0-1b3c-56a3-8665-930c43e42b59`](../../corpus/attempts/essence-modal-source-bridge-545.json) remain unchanged: own-nature explanation,
 necessary truth, autonomous fact and a concrete bearer are distinct.
 
 The existing pinned `LEIBNIZ-MONADOLOGY-31-45` was materialized and read in

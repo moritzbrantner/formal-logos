@@ -1,0 +1,114 @@
+# One dependence order (#1926 phase 3). Can the stage-one well-foundedness
+# premises over different relations (actual causes of being, simple priority,
+# per se efficient causes, ascent in being, actual grounding) be derived from one
+# well-foundedness principle over a shared relation, through explicit open
+# inclusion bridges? Analyst formulations, attribution deferred. Every proof is
+# constructive and axiom-free. Nothing identifies the relations by definition
+# (#1626, #1926 rigor contract 5); each passage is an existing or new OPEN
+# premise. Note: docs/notes/one-dependence-order.md.
+
+[batch]
+vocab = "TruthCore.Causality.OneDependenceOrder"
+results = "TruthCore.Results.Causality.OneDependenceOrder"
+definitions = []
+disambiguations = []
+
+# ---------------------------------------------------------------- statements
+
+[[statement]]
+id = "Every per se ordered efficient-cause link is a PER_SE_5 actual CAUSE_2 of being"
+lean = "PerSeEfficientCausesArePerSeEsseCauses"
+paraphrase = "OPEN analyst framework premise, attribution deferred: whenever c causes x as a caused cause (CausesAsCaused, sense SERIES_OF_CAUSES_3 of DEF 4a101a4c, the per se link of the secunda via's series of efficient causes), c is a per se actual cause of the being of x in the q.3 a.4 profile (PerSeActualEsseCause, PER_SE_5, DEF 4bca086d): c is other than x, both are in act as to being (ActualEsseCause, DEF 8163859b), c causes the esse of x (CausesIn c x esse, CAUSE_2, mode unspecified, tenseless), and it does so as caused (the primitive per se link AsCaused c x). It is not stated for accidentally ordered causes. Assessment: it fails on the bound sense SERIES_OF_CAUSES_3, which the proved statement c2880fe0 (PerSeMoverLinkIsPerSeCauseLinkReading, with stating claim 712924b7 on ST I q.46 a.2 ad 7) extends to per se mover links; with c2880fe0 it entails that every per se mover is a per se actual cause of the moved thing's esse. Ad 7 gives as per se series the stone moved by the stick, moved by the hand, and the generation of this man depending on this man, the elementary body and the sun ('ab hoc homine, et a corpore elementari, et a sole'), causes of motion and of coming to be. That the stick continues to be when the hand lets go is an analyst observation, not ad 7's. It is defensible only under an existential sense of CausesAsCaused; that sense is now SERIES_OF_CAUSES_4 (definition 57348ddc, an analyst sense), on which the premise is restated as a separate statement with its own derivations (specs/dependence-order-senses.toml); this statement keeps the bound sense SERIES_OF_CAUSES_3."
+definitions = ["4a101a4c-12de-53c8-80c6-de7a523ea9d9", "211a6432-8b8f-53ed-85e3-75173bb15b24", "4bca086d-1fa5-4b0d-bf2b-a22f3f0ac740", "8163859b-95b3-4dd2-8a69-541bd332f32f", "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"]
+disambiguations = ["81c233d4-01b4-528c-8bbd-7da228443ffe", "00e0d443-eb39-56a3-9179-9c8852ca4a2b", "57f80020-fa6f-5b69-be58-b4cf95b7226f"]
+
+[[statement]]
+id = "An actual CAUSE_2 of esse between actual CONCRETE_6 individuals grounds it at w"
+lean = "ActualEsseCauseIsActualGround"
+paraphrase = "OPEN analyst bridge, attribution deferred, the weak version of cb1cdea9: at the selected world w, if c and x are both concrete and exist at w, c is distinct from x and c causes the esse of x (CausesIn c x esse, CAUSE_2), then c grounds x under the selected relation at w. Unlike cb1cdea9 it does not conclude that the cause is concrete or exists at w; it assumes both. So the scope condition on cb1cdea9 (a world-free, tenseless cause of being absent at w, such as an originating cause or cause of coming to be, row 14 of causal-dependence-support-investigation.md (e)) does not touch it. It still identifies a distinct cause of esse between actual concreta as a grounding step, which presupposes reading the selected relation as existential grounding of those concreta."
+definitions = ["9969dfc2-1f2e-50be-b5e6-1f9cd402c7a6", "a1b2e330-388f-4120-bc5c-969642317792", "beb654a7-e204-5f4c-a7b4-45e886ba7109", "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72", "211a6432-8b8f-53ed-85e3-75173bb15b24", "008cb21a-256c-5a90-822c-acd4591d699a"]
+disambiguations = ["00e0d443-eb39-56a3-9179-9c8852ca4a2b", "896d4cb9-3c62-5230-a499-f23feae9d204"]
+
+# ---------------------------------------------------------------- arguments
+
+[[argument]]
+id = "Grounding well-founded on actual concreta, from the esse regress and ground-cause bridge"
+theorem = "actualGroundingWFOfEsseRegress"
+comparator_theorems = ["converseControls"]
+strong_version_needed = {"fd12ad3d-6729-4fa0-bb87-0121260df684" = "The ground-to-cause bridge 98efaa9e maps a grounding edge to an actual cause of being, not to a per se one, so the per se regress ea251340 says nothing about those edges; closed actual esse collections rooted (20babef7) admits an infinite descending chain of causes whose members also descend from an uncaused bearer. Full well-foundedness of grounding needs the unrestricted regress."}
+premises = ["fd12ad3d-6729-4fa0-bb87-0121260df684", "98efaa9e-1c91-4e52-8c0d-faf03d4f8372", "0436de86-6579-53f2-9ff5-2111ba44ebae"]
+conclusion = "82cfaf26-fc86-54ab-8328-9a7b2bdbbe21"
+sense_bridges = [
+  { term = "NECESSARY", from = "NECESSARY_11", to = "NECESSARY_2", statement_id = "82cfaf26-fc86-54ab-8328-9a7b2bdbbe21", role = "conclusion" },
+  { term = "NONNECESSARY_VERSUS_CONTINGENT_ROOT", from = "NONNECESSARY_VERSUS_CONTINGENT_ROOT_1", to = "NONNECESSARY_VERSUS_CONTINGENT_ROOT_2", statement_id = "82cfaf26-fc86-54ab-8328-9a7b2bdbbe21", role = "conclusion" },
+  { term = "WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT", from = "WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT_1", to = "WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT_2", statement_id = "82cfaf26-fc86-54ab-8328-9a7b2bdbbe21", role = "conclusion" },
+  { term = "WELL_FOUNDEDNESS_OF_THE_SELECTED_RELATION", from = "WELL_FOUNDEDNESS_OF_THE_SELECTED_RELATION_1", to = "WELL_FOUNDEDNESS_OF_THE_SELECTED_RELATION_2", statement_id = "82cfaf26-fc86-54ab-8328-9a7b2bdbbe21", role = "conclusion" },
+]
+axioms = []
+rule = "Well-foundedness along a subrelation of the inverse image (Subrelation.wf, InvImage.wf)"
+meaning = "Converse inclusion, non-transcription conditional derivation on one m, w and p. If there is no infinite regress of actual causes of being (fd12ad3d), an actual concrete ground of an actual concretum at w is distinct from it and a cause of its esse (98efaa9e) and whatever exists at w is in act of esse (0436de86), then grounding among actual concreta at w is well-founded (82cfaf26). Step: a grounding edge between actual concreta is, by 98efaa9e and 0436de86, an ActualEsseCause edge between the same beings. Diagnostic purpose: with the forward derivation esseRegressOfActualGroundingWFWeak (through the weak version of cb1cdea9), under all five bridges (cb1cdea9, 546975ef, 2d9807a5 forward; 98efaa9e, 0436de86 backward) the two relations are coextensive (lake-checked law actualEsseCause_iff_actualGround: an actual cause of being is exactly a grounding step between actual concreta), so 82cfaf26 and fd12ad3d are interderivable: on that package they are one assumption presented over two relations, the package's warrant is warrant for an extensional identification made through explicit open premises, and supporting one does not add independent evidence for the other. Without the backward bridge they come apart: the last conjunct of converseControls is a Bool interpretation in which grounding among actual concreta is a two-cycle while the forward bridges, the esse regress, irreflexivity, the priority bridge and well-founded priority hold, all vacuously because causes of being and simple priority are the empty relation there. The other conjuncts give, for each of the three inputs, an interpretation in which the other two hold and 82cfaf26 fails, and a nonvacuous interpretation. Facts about these interpretations only. This argument closes a support cycle with esseRegressOfActualGroundingWFWeak; the cycle adds no warrant by itself."
+
+[[argument]]
+id = "Simple priority is well-founded, from grounding well-founded on actual concreta"
+theorem = "simplePriorityWFOfActualGroundingWF"
+comparator_theorems = ["priorityControls"]
+strong_version_needed = {"82cfaf26-fc86-54ab-8328-9a7b2bdbbe21" = "The conclusion is full well-foundedness of a relation on the whole carrier, so the premise must exclude every infinite descending grounding chain among actual concreta. The weak versions do not: ConeWellFounded (1b1e3f09) constrains only the ancestor cone of one selected individual, ActualGroundingAsymmetric (39f7c63d) excludes only two-cycles, and closed-collection rootedness (aca3baa1) admits an infinite descending chain whose members also descend from a root (RootedInfiniteControl of ClosedEsseSource)."}
+premises = ["82cfaf26-fc86-54ab-8328-9a7b2bdbbe21", "86efed1a-f353-5b5d-9431-df7fc643ace1", "32d77f18-a9c2-5486-b51c-a24f32863af4"]
+conclusion = "d85de8e1-2f7f-5b2f-ba1e-112a0799994c"
+sense_bridges = [
+  { term = "NECESSARY", from = "NECESSARY_11", to = "NECESSARY_2", statement_id = "82cfaf26-fc86-54ab-8328-9a7b2bdbbe21" },
+  { term = "NONNECESSARY_VERSUS_CONTINGENT_ROOT", from = "NONNECESSARY_VERSUS_CONTINGENT_ROOT_1", to = "NONNECESSARY_VERSUS_CONTINGENT_ROOT_2", statement_id = "82cfaf26-fc86-54ab-8328-9a7b2bdbbe21" },
+  { term = "WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT", from = "WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT_1", to = "WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT_2", statement_id = "82cfaf26-fc86-54ab-8328-9a7b2bdbbe21" },
+  { term = "WELL_FOUNDEDNESS_OF_THE_SELECTED_RELATION", from = "WELL_FOUNDEDNESS_OF_THE_SELECTED_RELATION_1", to = "WELL_FOUNDEDNESS_OF_THE_SELECTED_RELATION_2", statement_id = "82cfaf26-fc86-54ab-8328-9a7b2bdbbe21" },
+]
+axioms = []
+rule = "Transfer well-foundedness along a predecessor inclusion (wellFounded_of_predecessorInclusion)"
+meaning = "Non-transcription conditional derivation on one m and w, for the shared frame's simple-priority field F.PriorSimply (sense PRIOR_1). If grounding among actual concreta at w is well-founded (82cfaf26), whatever is simply prior to something other than itself is an actual concrete ground of it at w (86efed1a) and nothing is prior to itself (32d77f18), then simple priority is well-founded on the whole carrier (d85de8e1). Step: what is prior to x is other than x by irreflexivity, hence an actual concretum grounding x; well-foundedness transfers. Superseded assessment (docs/notes/one-dependence-order.md, section 'Sense splits'): the bound type is PRIOR_1, which DEF 1d9aa4d9 defines as priority in act in a respect, so it is not an unsplit relation with two readings; on that sense 86efed1a meets the hand-and-stick counterexample (reading the selected grounds existentially, and the hand as PRIOR_1 to the stick in the respect of moving; causal-dependence-support-investigation.md (e), row 1), and its positive warrant (priority in being) belongs to PRIOR_4, a separate sense since #1751. 86efed1a's own paraphrase records a second falsifier: a non-concrete or absent simply prior thing. The split is tested in specs/dependence-order-senses.toml: on PRIOR_4 (priority in being, already a sense) a weaker bridge among actual concreta carries well-founded grounding to PRIOR_4 among actual concreta, while this PRIOR_1 derivation keeps the counterexample to 86efed1a and its only consumer (e229bb2c) needs PRIOR_1. The existing chain from d85de8e1 to the secunda via premise 97f5850f (e229bb2c to 42890b45, then 438866fa with f10d5632) also needs the all-respects premise e078f07b, whose joint use with respect-free d85de8e1 is lane A's reciprocity case (row 21) and against which the hand-and-stick counterexample is kept; so this argument does not by itself carry well-founded grounding to the secunda via. The closed controls priorityControls give, for each input, a Bool interpretation in which the other two hold and priority is not well-founded (the irreflexivity omission is a self-loop, which the distinct-relata bridge does not see), and a nonvacuous interpretation."
+
+[[argument]]
+id = "No infinite per se efficient-cause series, via PER_SE_5 actual causes of being"
+theorem = "perSeEfficientSeriesOfPerSeEsseRegress"
+comparator_theorems = ["secundaControls"]
+premises = ["ea251340-c89e-4535-a00f-6323cd8403a5", "Every per se ordered efficient-cause link is a PER_SE_5 actual CAUSE_2 of being"]
+conclusion = "97f5850f-62bc-5e43-a0c1-dd1033d08fc9"
+axioms = []
+rule = "Accessibility along a subrelation (Subrelation.accessible)"
+meaning = "Non-transcription conditional derivation on one q.3 a.4 profile p, one PER_SE_5 link AsCaused and one secunda via per se link CausesAsCaused. If there is no infinite chain of per se actual causes of being (ea251340, the weakest regress version that suffices) and every per se ordered efficient-cause link is a per se actual cause of being (the new OPEN framework premise e8664ab8), then no per se ordered series of efficient causes goes on to infinity (97f5850f). With esseRegressOfActualGroundingWFWeak and the existing strength relation ed411e36 (fd12ad3d to ea251340) it carries well-founded actual grounding to the secunda via's regress premise through esse causing. It names the exact missing inclusion. The new premise fails on the bound sense SERIES_OF_CAUSES_3, which c2880fe0 (sourced to ST I q.46 a.2 ad 7) extends to per se mover links: with c2880fe0 it makes every per se mover a per se actual cause of the moved thing's esse, which ad 7's own per se examples (stone, stick and hand; this man's generation from this man, the elementary body and the sun) do not support and the hand-and-stick case falsifies (that the stick continues to be when the hand lets go is an analyst observation). It is defensible only under an existential sense of CausesAsCaused; that sense is now SERIES_OF_CAUSES_4 (definition 57348ddc, an analyst sense), on which the premise is restated as a separate statement with its own derivations (specs/dependence-order-senses.toml); this statement keeps the bound sense SERIES_OF_CAUSES_3. This support option therefore currently rests on a premise with a kept counterexample. The closed controls secundaControls give, for each input, a Bool interpretation in which the other holds and the per se series has a two-cycle, and a nonvacuous interpretation."
+
+[[argument]]
+id = "No infinite actual esse-cause regress, via the weak esse-ground bridge"
+theorem = "esseRegressOfActualGroundingWFWeak"
+comparator_theorems = ["weakEsseRegressControls", "ascentLimit"]
+strong_version_needed = {"82cfaf26-fc86-54ab-8328-9a7b2bdbbe21" = "The conclusion is full well-foundedness of a relation on the whole carrier, so the premise must exclude every infinite descending grounding chain among actual concreta. The weak versions do not: ConeWellFounded (1b1e3f09) constrains only the ancestor cone of one selected individual, ActualGroundingAsymmetric (39f7c63d) excludes only two-cycles, and closed-collection rootedness (aca3baa1) admits an infinite descending chain whose members also descend from a root (RootedInfiniteControl of ClosedEsseSource)."}
+premises = ["82cfaf26-fc86-54ab-8328-9a7b2bdbbe21", "An actual CAUSE_2 of esse between actual CONCRETE_6 individuals grounds it at w", "546975ef-0614-5c0a-8f49-fab2cd2a2533", "2d9807a5-ebff-45fd-972f-e241f18713d4"]
+conclusion = "fd12ad3d-6729-4fa0-bb87-0121260df684"
+sense_bridges = [
+  { term = "NECESSARY", from = "NECESSARY_11", to = "NECESSARY_2", statement_id = "82cfaf26-fc86-54ab-8328-9a7b2bdbbe21" },
+  { term = "NONNECESSARY_VERSUS_CONTINGENT_ROOT", from = "NONNECESSARY_VERSUS_CONTINGENT_ROOT_1", to = "NONNECESSARY_VERSUS_CONTINGENT_ROOT_2", statement_id = "82cfaf26-fc86-54ab-8328-9a7b2bdbbe21" },
+  { term = "WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT", from = "WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT_1", to = "WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT_2", statement_id = "82cfaf26-fc86-54ab-8328-9a7b2bdbbe21" },
+  { term = "WELL_FOUNDEDNESS_OF_THE_SELECTED_RELATION", from = "WELL_FOUNDEDNESS_OF_THE_SELECTED_RELATION_1", to = "WELL_FOUNDEDNESS_OF_THE_SELECTED_RELATION_2", statement_id = "82cfaf26-fc86-54ab-8328-9a7b2bdbbe21" },
+]
+axioms = []
+rule = "Transfer well-foundedness along a predecessor inclusion (wellFounded_of_predecessorInclusion)"
+meaning = "Non-transcription conditional derivation on one profile m, one reading world w and one q.3 a.4 profile p over the same carrier of beings. If grounding among actual concreta at w is well-founded (82cfaf26), a distinct cause of esse between actual concreta grounds it at w (the new weak bridge b17a8954), whatever is in act of esse exists at w (546975ef) and whatever has esse in re is concrete in the profile (2d9807a5), then there is no infinite regress of actual causes of being (fd12ad3d). Step: for an actual cause c of x both c and x are in act, so by the two calibrations both are actual concreta, and the weak bridge makes c ground x; every actual-cause predecessor is a grounding predecessor among actual concreta, so well-foundedness transfers. The weak bridge follows from cb1cdea9 (strength result from cb1cdea9), which concludes rather than assumes that the cause is an actual concretum and so carries a scope condition (a world-free, tenseless cause of being absent at w, row 14 of causal-dependence-support-investigation.md (e); #1626) that the weak bridge avoids. The read-only survey's claim that one further inclusion bridge suffices is corrected: the derivation also needs the two actuality calibrations, which none of the other inputs supplies. Through the existing strength relation ed411e36 (its argument 80f81d44) it also gives the per se regress ea251340. The closed controls weakEsseRegressControls drop each input in a Bool interpretation and give a nonvacuous one. ascentLimit (attached here) is a Nat interpretation in which actual grounding, the esse regress, well-founded priority, the four inclusions cb1cdea9, 98efaa9e, 86efed1a and d96105fb (ground into more in esse) and the genus principle d9fad785 (vacuously, since the grade has no maximum) hold while the quarta via's no-infinite-ascent premise fails, even among actual concreta; grounding, causing and priority there are the single edge 1 -> 0. Facts about the stated interpretations only. The conclusion inherits whatever warrant 82cfaf26 and the three bridges have; it is a support option alongside fd12ad3d's direct and per se options, not a defence of any input."
+
+[[argument]]
+id = "Actual esse cause between actual concreta grounds, from the esse-cause bridge"
+theorem = "actualEsseCauseIsActualGroundOfEsseCause"
+premises = ["cb1cdea9-eb6c-578c-8008-84e0d4107fd3"]
+conclusion = "An actual CAUSE_2 of esse between actual CONCRETE_6 individuals grounds it at w"
+axioms = []
+rule = "Drop the concreteness and existence conclusions about the cause"
+meaning = "Strength step: if a distinct cause of the esse of an actual concretum is an actual concrete ground of it at w (cb1cdea9), then a distinct cause of esse between actual concreta grounds it at w (the weak bridge). Same Profile, world, CausesIn and esse. The weak version adds the hypothesis that the cause is an actual concretum and keeps only the grounding conclusion. Strictness is not separately certified."
+
+# ---------------------------------------------------------------- relations
+
+[[relation]]
+id = "The esse-cause bridge strengthens its actual-cause weak version"
+subject_kind = "statement"
+subject_id = "cb1cdea9-eb6c-578c-8008-84e0d4107fd3"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "An actual CAUSE_2 of esse between actual CONCRETE_6 individuals grounds it at w"
+verification_result_id = "Actual esse cause between actual concreta grounds, from the esse-cause bridge"
+note = "Same Profile, world, CausesIn and esse. The weak version assumes that the cause is an actual concretum instead of concluding it; a world-free cause of being absent at w falsifies only the strong version. Strictness is not separately certified."

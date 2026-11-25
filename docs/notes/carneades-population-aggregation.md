@@ -2,7 +2,7 @@
 
 Owner-authorized consequentialism lane, baseline `8bf7290b`, separate from
 root-frontier closure. This is a research note and independent mathematical
-test, not an attributed Parfit claim or certified historical reading.
+test, not an attributed Parfit claim or certified historical reading. [Research record](../../corpus/attempts/carneades-population-aggregation.json)
 
 ## Reading and source boundary
 

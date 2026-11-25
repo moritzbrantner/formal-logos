@@ -14,6 +14,11 @@ target/release/truth related <STMT-ID> --limit 10
 target/release/truth dossier <STMT-ID>
 ```
 
+When the starting point is a GitHub issue or a worker handoff naming one, use the
+[issue brief](../../../truth/README.md#starting-from-a-github-issue) first.
+Compare the requested outcome with the current checkout and the delivery PRs
+before reopening the underlying proposition.
+
 When the seed is an existing argument or result, first run
 `target/release/truth context <ARGUMENT-OR-RESULT-ID>` (add `--json` for every
 entry); then open dossiers only for the premises it reports open.

@@ -1,0 +1,26 @@
+{
+  "id": "e4c24e60-0d25-4170-a1f4-1b307fa1e2cb",
+  "label": "GOD_4 is one from reciprocal gifts of esse and nonmutual dependence",
+  "premise_statement_ids": [
+    "86d02b69-87eb-5594-9958-ccaa5fe6b685",
+    "2068f91c-1eeb-5dbb-a71a-f7b6a12bb495",
+    "0f49d71e-09e6-5a9c-b7e7-e0e9b8fe769c",
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410"
+  ],
+  "conclusion_statement_id": "33b18ae7-4578-54bc-a2b5-edce99b21fc2",
+  "inference_ids": [
+    "d1d71711-9085-4150-b205-3e9067e0e402"
+  ],
+  "meaning": "Two distinct Gods would each cause the other's esse. Applying the explicit effect-to-giver dependence premise twice violates nonmutuality for distinct beings. The only logical split is on identity. Strong God causality is shared with the maximality routes, while this derivation uses no order, maximum, genus causality, actual-ground frame, or prohibition on self-dependence.",
+  "definition_ids": [
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "bf26b9b2-41ed-55b0-9557-dae90ab9b81f",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "d8e2ed12-8089-5202-ae51-e807cf611c76",
+    "88f9f6e8-997b-5f7d-afa1-c501954c3807",
+    "d980bbd2-1a96-564c-bc0d-4065d7786715"
+  ],
+  "disambiguation_ids": [
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b"
+  ]
+}

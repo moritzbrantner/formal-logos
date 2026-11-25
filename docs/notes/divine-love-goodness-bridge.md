@@ -1,5 +1,7 @@
 # Divine love of all existing things: bounded q.20 bridge
 
+[Original PR #1458](https://github.com/moritzbrantner/formal-logos/pull/1458)
+
 ## Target and source reading
 
 This is an analyst reconstruction of Thomas Aquinas, *Summa theologiae* I q.20
@@ -601,3 +603,8 @@ foresight, self-willing and whole-order adoption while omitting object-specific
 adoption, or on a reason why intending a creature's existence does not count
 as willing that good to it. Per the owner stopping instruction, further #1459
 research requires a new assignment; this integration authorizes none.
+
+## Research attempts citing this note
+
+- [Group 7 integration: assembled assertion branches and registered q.20 love route (#1732)](../../corpus/attempts/e641ca1d-d06b-461a-8270-c9030fa4fc29.json)
+- [Intentional creation bridge route and emanation audit](../../corpus/attempts/intentional-creation-1459.json)

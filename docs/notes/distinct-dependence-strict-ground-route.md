@@ -52,12 +52,11 @@ The bundle is **stronger than the target**.
 that consistency plus the map already force distinct-step `D` to have **no
 finite cycle**, not only no 2-cycle. The formal warrant for the map is
 therefore a warrant for the acyclicity of `D`, and any rival who denies
-nonmutuality also denies acyclicity. This note does not verify, and nothing
-relies on, two further claims:
-
-- that the pulled-back relation is well-founded when `Atom` is finite (the
-  challenger's observation, from `consistentStrictGroundAcyclic`);
-- the converse, that every acyclic `D` admits such a consistent theory.
+nonmutuality also denies acyclicity. The
+[fixed-label and finite-ancestry tests](#what-does-a-consistent-representation-add)
+below establish both the converse for identity labels on an inhabited domain
+and a sufficient condition for well-foundedness using finitely many labels
+over each effect.
 
 ### Which "ground": the selected sense and the open readings
 
@@ -204,6 +203,54 @@ So the bundle is not satisfied only by an empty `D`. This is a formal
 interpretation only. It says nothing about real beings, and the model's
 infinite descent is an incidental property of this witness.
 
+## The infinite series at the efficient-cause consumer
+
+Consider the cause of member 0. Member 1 supplies it, independently of 0,
+and receives from member 2. At every later step the successor plays both
+roles. Independence **of this effect** leaves room for dependence on a
+further cause. What happens if this answer is available at every step?
+
+Result `a01e0429-1544-453d-973b-779f186c1654`,
+`strictGroundConsumerAllowsInfiniteCauses`, joins the earlier Fine descent
+and Second Way omission models on one carrier. The beings and PLG atoms are
+natural numbers with the identity labelling. There is one respect. Both the
+efficient cause and the per se link of each `x` are its successor. Set
+`D(x,y)` precisely when `x < y`. This includes indirect dependence on
+**every** later member. PLG strict transitivity extends the successor sequents
+to that entire relation. Thus the rival survives even when distinct-step
+dependence is transitive and excludes finite cycles.
+
+| Step in the existing argument | What holds in this model |
+|---|---|
+| Consistency and the distinct-edge map give P2 (`40b8313e`). | Every mapped edge is derivable in the same consistent theory. Here no number depends on itself. P2 itself leaves the diagonal open. |
+| P8, no self-causation and P2 give cause independence (`972ed7e5`). | For `c = x+1`, `x < c` and `¬ c < x`. Yet `c < c+1`. |
+| Effect dependence, cause independence and sufficiency of nonmutual dependence for priority give cause priority (`695c2113`). | Interpret `P(c,x)` by `x < c`. This makes the separate sufficiency bridge true for all pairs here. |
+| The Second Way separately requires accessibility of its per se relation (`97f5850f`). | Its order, cause-priority, irreflexivity and middle-cause premises all hold. Every candidate first cause `f` has the incoming cause `f+1`, so there is no first efficient cause and accessibility fails. |
+
+**Provisional judgment.** P2 has positive warrant wherever the source of a
+bearer's very existence can be identified independently of the recipient in
+that same respect. The light's dependence on the shining sun illustrates the
+intended causal direction. Applying the strict-ground result globally still
+requires a consistent theory and a defended assignment of existence facts to
+all distinct dependence edges. The witness supplies arithmetic labels. It
+specifies neither counterfactual truth conditions nor a metaphysics of
+production. Its single respect also leaves the hand-and-stick objection to P8's
+all-respects export intact. P2 remains available directly as the weaker
+commitment.
+
+As an explanation, the infinitist can take the entire organized series as
+given and cite a specific upstream supplier for each member. The founded
+account additionally explains supply by something whose own supply is
+underived. At issue is whether the local answers and the organization suffice
+to explain **why there is supply at all**. The borrowed-exercise comparison
+shows how relay constraints can admit both an active and an inactive series.
+Transferring that comparison to existence requires an account of admissible
+alternatives for the very same bearers and respect. This model fixes the edges
+and contains no such alternatives. A discriminating next test would show on
+those common alternatives either that the organization accounts for actual
+supply or that supply requires an underived source, with a reason independent
+of assuming termination. [Borrowed exercise, “Three rivals”](borrowed-exercise-741.md#three-rivals)
+
 ## Effect on the God-existence support graph
 
 The new proof creates another way to support one of the **nine inputs shared
@@ -247,7 +294,7 @@ existing independence premise only in the local context where it is used.
 Date: 2026-11-14. Batch spec `specs/reflexive-dependence-scope.toml`; Lean
 vocabulary `TruthCore/Causality/ReflexiveDependenceScope.lean`; results in
 `TruthCore/Results/Causality/ReflexiveDependenceScope/`. Attempt
-`a4d430a0-9711-4d04-b4a5-be385f92e757`.
+[`a4d430a0-9711-4d04-b4a5-be385f92e757`](../../corpus/attempts/a4d430a0-9711-4d04-b4a5-be385f92e757.json).
 
 ### The conflict, made exact
 
@@ -394,3 +441,85 @@ revise this:
   existence, which would remove the reflexive reading; or
 - a consumer that needs irreflexive `D` itself and cannot move the self case
   to its own relation.
+
+## What does a consistent representation add?
+
+Fix the beings, their dependence steps and the labels proposed for their
+existence facts. Project each distinct dependence step onto its labels in the
+direction from supplier to dependent. On a populated atom type, **some**
+consistent theory can realize these requirements exactly when the projected
+steps have no finite cycle. The construction starts with just those steps
+as strict sequents. Rank each label by the set of labels that reach it,
+including itself. Every step strictly enlarges this set: its target belongs
+to the later set, and membership in the earlier one would close a cycle.
+The existing rank interpretation of PLG then excludes strict self-grounding.
+Conversely any projected cycle would derive strict self-grounding in every
+theory that realized those steps. [Fixed-label theorem](../../corpus/results/5ebdfbff-f984-43d0-a7d7-ddc19286f39f.json) [Assessment record](../../corpus/attempts/1020b663-7fe1-42d2-8b0c-8a767607a1ce.json)
+
+When distinct-step dependence is acyclic and each bearer in an inhabited
+domain supplies its own label, the generated theory derives **exactly** the reversed nonempty finite dependence paths as
+strict partial grounds. Thus a successful retrospective fit gives exactly
+the structural information already in distinct-step acyclicity. One can also
+apply acyclicity directly to P2: two opposite dependence steps form a cycle.
+An independently selected theory or an independently defended account of
+which facts convey existence could still give evidence for the orientation
+of a contested edge. The retrospective construction grants that edge in its
+initial sequents. [Identity-label characterization](../../corpus/results/1acba9b6-c43f-46b5-9099-50a1b40230ed.json)
+· [Direct support for P2](../../corpus/results/41877473-3868-4cb5-bc90-b44d9ac811a7.json)
+
+**Why the choice of facts matters.** Take two independent pairs of bearers.
+In the first pair the supplier is labelled blue and the recipient amber. In
+the second the supplier is amber and the recipient blue. No bearer depends on
+itself, no path has equal endpoint labels, and the two pairs never interact.
+Yet the labels require both blue to strictly ground amber and amber to
+strictly ground blue. Even keeping distinct labels on every actual chain
+fails to ensure that combining the chains preserves strictness. The checked
+example concerns these four bearers and two labels. It supplies a test for
+any interpretation which identifies tokens across distinct cases by a shared
+description. [Four-bearer control](../../corpus/results/b251e442-4373-4ef8-984d-5f5a9004be2e.json)
+
+### When the labels can support the Second Way
+
+Assume the selected PLG theory is consistent and every distinct dependence
+step maps to a derivable strict ground under the supplied fact labels.
+Keep this theory and labelling fixed. Two additional things suffice. First,
+every per se efficient-cause link must supply the distinct dependence step in the specified respect. Second,
+for each effect, there must be only finitely many labels among it and all
+its upstream bearers. The set can differ from effect to effect. The number
+of bearers sharing a label can be infinite. Strict ground on the finite set
+of labels for one effect is transitive and irreflexive. Every upstream step
+remains in that set and descends strictly. Induction on its labels now proves
+accessibility for the **original cause relation** at this effect. Repeating
+the argument for each effect yields the exact Second Way regress premise.
+Its other premises still govern the inference to a first efficient cause.
+[Formal connection and four premises](../../corpus/results/d09f6268-93bf-4a00-af60-c57fc2353825.json)
+
+There is a concrete standard for what would warrant this kind of reasoning.
+In a specified feed-forward logic circuit, the inspected connections and the
+function of each gate can assign it a stage and establish that each selected
+signal input comes from an earlier stage or a primary input. An output can
+depend on many gates at the same stage. The finite stage argument explains
+why tracing those **logical signal dependencies** reaches inputs. The presence
+of two voltage levels alone would give no such explanation: a pair of
+inverting stages can repeat a voltage. Structural evidence about the circuit
+supplies the order that a mere count of states lacks. Its architecture
+does not tell us how many levels of existential supply lead to a being.
+
+**Provisional judgment.** The infinitist who accepts a consistent strict
+interpretation and distinct per se supply at every step must give up finite
+ancestral labels wherever a genuinely infinite upstream chain occurs. Along
+such a chain recurrence of any one label would give a projected cycle. The
+natural-number interpretation above does just what this requires. Its local
+explanation by successive suppliers remains coherent. The founded account
+can exclude it where a finite inventory of fact levels and strict passage
+between them have independent warrant. Ordinary examples of recipient and
+giver establish local direction much more readily than they establish such
+an inventory. No preference for either account of **unrestricted** existential
+supply follows from fitting the labels. Reopen the comparison on an
+independently delimited set of existential roles for an effect, with an
+argument that every further sustaining supplier belongs to the set and
+moves between its roles in the required direction.
+
+## Research attempts citing this note
+
+- [Cluster reassessment of dependence, simple-priority and grounding leaves of the prima via (#1751)](../../corpus/attempts/9d71e28d-d492-4797-9221-45fa517a6e6b.json)

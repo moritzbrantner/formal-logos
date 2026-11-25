@@ -1,0 +1,13 @@
+{
+  "id": "403a75c1-ed8b-442f-a0e5-778d8169902d",
+  "label": "POTENCY_1 under privation from unactualized capacity and capable-subject lack (inference)",
+  "input_statement_ids": [
+    "c85e8ef5-3dc4-502d-90f8-da1429e33fd8",
+    "7c3da33e-7ead-54f8-aace-ed3cf3a7bb02"
+  ],
+  "output_statement_id": "3c0b7bb3-1526-55a9-b71e-0d5fb3148782",
+  "rule": "Substitute equivalent privation and lack of act under the retained capacity hypothesis",
+  "meaning": "For the supplied potency predicate, the analysis F gives capacity and lack of act in the same respect. On precisely those capable subjects, Q exchanges lack of act for privation in either direction. This derives T. At the adopted function F is definitional. For an independently supplied predicate F is an explicit input.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

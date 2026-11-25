@@ -1,0 +1,16 @@
+{
+  "id": "522506d1-9e06-42c9-91a0-47ebcf50ba8e",
+  "label": "PRIOR_4 among the actual CONCRETE_6 individuals at w is well-founded",
+  "paraphrase": "OPEN analyst premise, attribution deferred, the restricted PRIOR_4 sibling of d85de8e1: there is no infinite descending chain of actual concreta at w each prior in being (PRIOR_4) to the one before. It constrains only chains among beings that are concrete and exist at w; it is weaker than well-foundedness of PRIOR_4 on the whole carrier. No current consumer on a root route takes it: the prima via chain from d85de8e1 (e229bb2c) needs PRIOR_1, because e078f07b makes every efficient cause, in any respect, prior to its effect, and an efficient cause in a respect is not in general PRIOR_4 to its effect (the stick can be without the hand).",
+  "lean_declaration": "TruthCore.Causality.DependenceOrderSenses.PriorityInBeingWFAmongActualConcreta",
+  "definition_ids": [
+    "f4365b55-da11-4e27-b5b7-71024d9508be",
+    "d0b06beb-e8cb-5cb8-af2f-bc7f8cc004b2",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "008cb21a-256c-5a90-822c-acd4591d699a"
+  ],
+  "disambiguation_ids": [
+    "be54be36-3ce8-53f9-8168-50d1114e6c76",
+    "623ddbf6-9683-5361-bae4-e348a00ec680"
+  ]
+}

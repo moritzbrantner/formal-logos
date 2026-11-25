@@ -5,7 +5,7 @@ audit. The older `DEF-OBJECTIVE-TRUTH` gloss says truth independent of attitudes
 and the existing comparison signature retains it as an independent predicate.
 The definition record now links that exact primitive projection, while the
 source claims and their frozen Challenges are preserved. No operational account
-below is attributed to their authors or adopted as all philosophical objectivity.
+below is attributed to their authors or adopted as all philosophical objectivity. [Research record](../../corpus/attempts/objective-truth-definition-fork-audit.json)
 
 ## Explicit alternatives and coverage
 

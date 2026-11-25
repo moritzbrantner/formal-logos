@@ -2,7 +2,7 @@
 
 Result `EXPLANATORY-CLOSURE-CERTIFICATE`, module `TruthCore.Explanation.ExplanatoryClosure`.
 Semantic profile: the #733 `Exercise` records, #734 `Supply`, the #755 arena. No source
-reading is claimed here. Rival names below orient the reader and are not attributions.
+reading is claimed here. Rival names below orient the reader and are not attributions. [Research record](../../corpus/attempts/explanatory-closure-745.json)
 
 ## Finding
 

@@ -1,0 +1,9 @@
+{
+ "id": "582f44c3-7778-4806-b385-e1eff852ac5e",
+ "label": "Giving by a power: y gives x being in a world, and that giving exercises y's power p",
+ "term": "giving by a power (GivesBy, PowerOf, Exercises)",
+ "definition": "GivesBy F A v y x p: GivesTo F v y x (DEF 62dfa893) and A.Exercises v y x p. PowerOf y p (world-independent) says p is an active power of y, a principle of its operation; Exercises v y x p says y's giving x being in v is an exercise of p. Both are primitives of the agency overlay; nothing requires an exercised power to be a power of the giver (that is the OPEN premise GivingExercisesOwnPower).",
+ "basis": "stipulative",
+ "lean_declaration": "TruthCore.Causality.WillVersusChance.GivesBy",
+ "note": "Analyst definition, attribution deferred (docs/notes/will-versus-chance.md). Examples: fire's heating as the exercise of its heating power. Non-examples: an effect produced by a concurring cause's power rather than y's. The overlay adds powers to the extensional giving relation of #1897; it does not type one Theta 2 potency for contraries (#1897 note, gap 5)."
+}

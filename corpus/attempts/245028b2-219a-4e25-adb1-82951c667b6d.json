@@ -1,0 +1,27 @@
+{
+  "id": "245028b2-219a-4e25-adb1-82951c667b6d",
+  "label": "Can NAR be derived from the root's withholding and a grounding-to-giving bridge?",
+  "date": "2026-11-24",
+  "statement_ids": [
+    "43651417-cd19-43d7-8f70-8def61acb0f0",
+    "fbd0a6d3-5ca6-4f17-8651-ed0d6989c747",
+    "2dd1f217-77bd-42cd-9410-174b939b0e45",
+    "eeccc832-02c7-426a-bb16-d269260751be",
+    "19f2e094-5740-4021-b3b4-13d7ed929355",
+    "0266eac2-3fad-43eb-a1f1-e784c5356105",
+    "85f3fea2-f0a3-424a-acb9-ec4ecd0cd4e1",
+    "d164f730-95b4-4297-8978-9e5586f0b2ef",
+    "06145e71-01c8-49d6-ae6a-e0b622076575"
+  ],
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "See docs/notes/nar-derivation.md. Verified zero-axiom results: 9c431f7b (N1: NAR 43651417 from the common root clauses of 0c27f65a, the root-restricted rigidity bridge (b2) eeccc832, every actual root gives each NECESSARY_2 being it grounds being at accessible worlds where the root exists, and (a) fbd0a6d3, every actual root withholds each grounded actual concretum at some accessible world; constructive), ab40dc6f (N2: (a) from uniformity at the root 19f2e094, the local root bridge (b1) 2dd1f217, factive giving 3ef41442, the common root, necessary roots d164f730 and some contingent c76b6e2c; the root's two-way profile toward a contingent is derived, law 2), d6588ea7 (N3: (a) from EM, 0c27f65a, #1941's willed giving 5c1aba17, one power at the root 06145e71, (b1), WN 0266eac2 and SS 85f3fea2; the structure of ST I q.19 a.3, navigation only). #1944 gap 1's general bridge (b) is not registered: the arguments use only (b1) and (b2), each at the root, and general rigidity faces the contingent-sustainer objection. Law 3 (relocation): with (b2), factive giving, a common root, necessary roots and EM, NAR is equivalent to (a), so (a) is NAR in the giving register; N2 and N3 are routes to (a) and neither restates NAR. Law 6: on the strict-modal reading of EndRequires, SS and a common root alone yield NAR, so EndRequires is fixed as the teleological means-to-end relation (DEF 90719cb5) and all WN/SS judgments are conditional on that reading. The holder-restricted NAR is not needed. N1 and N2 are registered with 0c27f65a rather than the bare common root a6b46d2e because a6b46d2e's legacy definition links make any new argument an unbridged sense mixing (#216); the Solution also proves N1 from a6b46d2e (nar_of_commonRoot). Computed frontier-diff (base the merge base with origin/main): support alternatives added for 43651417 (N1) and fbd0a6d3 (N2, N3); 43651417 moved bare -> closed (computed closure as the conclusion of a non-transcription result; not establishment); new bare premises reaching the root: 0266eac2, 06145e71, 19f2e094, 2dd1f217, 85f3fea2, d164f730, eeccc832.",
+  "blocker": "Not blocked for the formal question. On the means-to-end reading of EndRequires the crux moves to WN (a rational power is fixed toward a given being only if the giver's end requires it). Rivals: the necessary diffusion of the good (Plotinus; Avicenna's First as standardly reported), Rowe's argument, Kretzmann's Dionysian argument; Leibniz's moral necessity is not a metaphysical fixity. A rival granting the common root's direct reach, intellect, willed giving, one power, (b1) and SS must deny WN; which premise the historical Avicennian system denies is unresolved (unread): if its emanation is mediated (Ilahiyyat IX.4, navigation), it denies direct reach and is the mediated-creator variant, against which N3 does nothing. Next tests: a non-modal criterion for EndRequires; formalize selective necessary diffusion against WN; read Ilahiyyat IX.4; tag G as productive or non-productive at the root.",
+  "evidence": [
+    "9c431f7b-b990-4190-8fb6-e02aa467db30",
+    "ab40dc6f-40cf-4794-a480-c3892aa444a3",
+    "d6588ea7-768d-445c-b4d5-296c17bfc8ff",
+    "0cf250b9-9d73-4094-b28d-0a6f4f292a43",
+    "PR-1947"
+  ]
+}

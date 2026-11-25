@@ -1,0 +1,10 @@
+{
+  "id": "49c35a02-bd58-4a68-a403-9399ef1bb00e",
+  "label": "Hidden-history obstruction and history-sensitive audit control (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "62d59ef4-fc23-4f8f-86f6-9af03c4ecc1e",
+  "rule": "Instantiate the adaptive theorem, reuse CorrectionCriterion.characterization, and evaluate the audit operation",
+  "meaning": "The blind transition preserves equality of current readouts under either action; the adaptive theorem then supplies equal complete finite transcripts for the selected opposite-marker states. CorrectionCriterion.characterization turns that mismatch in correctness on an equal-data fiber into failure of exact classification. Direct evaluation verifies changing readouts under repeated toggles and shows the supplied history-sensitive audit recovers the marker after one step. The no-coupling assumption is exposed and removed in the positive control. No metaphysical possibility, source attribution, probabilistic estimate, infallibility norm or root-premise discharge is asserted.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

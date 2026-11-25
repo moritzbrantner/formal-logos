@@ -3,7 +3,7 @@
 The arena is one frame (`TruthCore/Alternatives/MindPhysicalism.lean`): occurrences
 that instantiate kinds, a target mental kind, physical kinds, and primitive `Causes`
 and `RealizedBy`. Lean checks consequence only. All premises stay open, and every
-model below is a finite formal interpretation, not a rival theory or a possibility claim.
+model below is a finite formal interpretation, not a rival theory or a possibility claim. [Research record](../../corpus/attempts/mind-physicalism-fork.json)
 
 ## Source reading
 
@@ -316,7 +316,7 @@ with baseline `a317b00dd638feb7c4c477f2e565720aeacf9ae6`. The proposal below is
 a comparative research judgment and two candidate connections, not a new
 registered derivation. The earlier distinct-thinking-ancestor assessment is
 unchanged. Source passages are inspected readings; no new canonical attribution
-or verified root edge is claimed.
+or verified root edge is claimed. [Assessment record](../../corpus/attempts/4eb61695-aaff-4417-8c2e-151cc00ea5fb.json)
 
 ### Use rational understanding as a positive starting point
 
@@ -516,7 +516,7 @@ from developed impersonal accounts? The result is positive explanatory
 unification with a limited comparative consideration, not an overall victory
 for a personal source. The earlier Route B and thinking-ancestor assessments
 are unchanged. This is a qualitative warrant assessment, with no new formal
-result or change to the registered propositions.
+result or change to the registered propositions. [Assessment record](../../corpus/attempts/9ee981ac-d0bf-4006-bfab-2ef8a5ff8dd7.json)
 
 ### Fix the purpose before accommodating the outcome
 
@@ -761,3 +761,175 @@ failure. This completion contributes a motivated, constrained theistic support
 option and rejects two tempting shortcuts. It supplies no new necessary-intellect
 conclusion and no specifically Catholic identification; the historical-stage
 boundaries stated above remain unchanged.
+
+## Does divided access identify the source of the experiencer? (2026-11-25)
+
+DDC's reports after callosal disconnection give a reason to take continuity of
+his experienced agency seriously. His performance also shows that access to an
+item depends on what he is asked to do with it. This tests the earlier R/T/X
+comparison against one human case. The question for #1792 is whether the best
+account of these two findings identifies a distinct thinker on which this
+very experiencer depends for existence. [Assessment record](../../corpus/attempts/2f24e4c3-e987-4e4d-8752-1ae3522b2c3d.json)
+
+### What changed with the task
+
+Pinto and colleagues studied two people with complete callosal section. DDC,
+whose anterior commissure was also largely sectioned, took part in the detailed
+comparisons. With central fixation monitored during brief stimulus presentation
+and an examiner unable to see the test stimuli, he could detect and locate a
+single target in either visual half-field by voice or with either hand. Catch
+trials contained no target. Yet when asked to compare two stimuli, his mean
+accuracy was 90.4% within one field and 55.4% across fields, the latter
+statistically indistinguishable from chance. DDC and DDV both described seeing
+the whole field, feeling in control of their bodies and experiencing continuity
+of conscious unity. That testimony is evidence about how agency felt to each
+speaker. A speaker's access to a second perspective, if there were one, is
+precisely what is in dispute. [Pinto et al. (2017), Methods, experiments 1–2,
+figures 2–3, and phenomenal reports on p.1235](https://pure.uva.nl/ws/files/21255810/Split_brain.pdf)
+
+A later test in **DDC himself** changed the information required for a correct
+answer. He often expressed high confidence in an unsuccessful simultaneous
+cross-field comparison. In a sequential task he saw a square or circle, then
+an X or a question mark. X called for reporting X. A question mark required
+reporting the *earlier shape*. Accuracy was 68.7% on those question-mark trials
+with the cue across fixation, significantly above the authors' chance baseline.
+Thus success on the full task cannot all be credited to trials permitting the
+first shape to be ignored. Eye position was checked at each presentation.
+In a simultaneous control with the same stimuli at the same positions as in
+the sequential task, DDC's cross-field same/different judgments stayed at
+chance. Stimulus identity and position therefore do not explain the difference
+by themselves. Timing and the response rule still changed together. The authors propose a slower
+route carrying more abstract information alongside impaired rapid visual
+integration. Their study does not identify that route's anatomy. A correct
+delayed answer requires less than simultaneous awareness of two detailed images.
+[Pinto et al. (2023), methods and results of experiments 1–2, figures 2–5 and
+general discussion](https://doi.org/10.3389/fnhum.2023.1278025)
+
+There is genuine contrary testimony. In Sperry's earlier series, a participant
+disclaimed authorship on seeing her own left-hand response. With different
+figures flashed in opposite fields, a hidden left hand could draw one while
+speech identified the other as the figure just drawn. Sperry favored two
+conscious streams and explicitly recorded individual exceptions. These reports
+have evidential weight against treating ordinary verbal self-description as an
+inventory of every perceptual discrimination or action. They came from other
+participants. [Sperry (1968), pp.725–726, 732–733](https://people.uncw.edu/puente/sperry/sperrypapers/60s/135-1968.pdf)
+
+The objections to a unified agent also have testable content. A gaze or body
+cue can make limited information available after a flash, and ipsilateral motor
+control could let a single hemisphere direct a simple pointing response.
+Pinto's team prevented hand-to-hand and cross-body contact, obtained fairly
+precise locations, and found no significant crossed-hand timing penalty in a
+speeded colour task. Those findings put pressure on a slow serial cue for every
+answer. Motor control alone leaves verbal answers unexplained. Conversely,
+fixation control during exposure does not exclude every cue during response,
+and a location signal can help pointing without carrying shape identity. The
+published disagreement concerns the route and amount of information available
+for particular tasks. Either route can operate within an account accepting
+real experiences. [Pinto et al. (2017), Discussion, pp.1235–1236](https://pure.uva.nl/ws/files/21255810/Split_brain.pdf)
+and [Volz et al. (2018), pp.1–3](https://doi.org/10.1093/brain/awx359)
+
+### What could individuate the owner?
+
+Grant the personal-constitution proponent the strongest starting point here:
+DDC experiences the successive demands as addressed to him, and can sometimes
+use an earlier item to answer a later question. That makes it reasonable to
+credit an actual point of view. An already experiencing whole offers a positive
+model for why an aspect can have subjective character at all. The
+nonidentity proposal extends that explanation to a *distinct subject's
+existence*. To test the extension, hold the larger subject U fixed and specify
+what singles out this finite perspective. Try a rule by which contents belong
+to the same local owner just when they can guide a common judgment. This is an
+analyst's test of a possible individuation rule. [Chalmers, *Idealism and the
+Mind-Body Problem*, pp.23–24, on the identity and nonidentity proposals](https://consc.net/papers/idealism.pdf)
+
+* **Immediate comparison** makes the boundary track stimulus placement and
+  report format. Taken as the criterion for a persisting subject, it would let
+  a failed comparison count against common ownership even within the life that
+  DDC experiences as continuous. What succeeded was a delayed verbal report
+  of the earlier shape after a cue in the opposite field. The request could
+  reach the side retaining the shape and prompt an answer there. The task
+  leaves open whether the shape information crossed and who owned the memory.
+  Neither result locates an occasion on which an experiencer came into being.
+* **Availability across time or by any route** explains how local channels
+  can serve one agent. But information also crosses between people by cues
+  while each retains a point of view. A rule using only successful transfer
+  therefore needs a principled boundary between communication and constitution.
+  Restricting the rule to the continuing organism gives an independent way to
+  track DDC across the tasks. An account on which DDC is that organized living
+  individual can use exactly the same boundary.
+* **Numerical identity with U** allows a single subject to have experiences
+  under modes with different access. It must explain which access restrictions
+  persist when the task changes. Even a successful explanation on that reading
+  gives U = x, whereas the distinct-ancestor premise requires a witness c ≠ x.
+
+Both accounts can identify DDC, the continuing embodied individual, as the
+bearer. Both can explain task performance through the same distinction between
+rapid visual comparison and the use of retained information for a later report.
+The organizational sufficiency thesis says the individual's organization and
+powers suffice for this subject to exist without a distinct thinking ground.
+On the personal constitution proposal, this same individual's existence as an
+experiencer depends on a distinct experiencing whole U. The latter proposal draws
+support for the familiar dependence of experiential
+aspects on a subject and for explicitly addressing the bearer. Its extra
+explanatory burden is why a restriction of U constitutes someone else who
+experiences at all. [Earlier whole-to-aspect and bonding comparison](#completed-comparison-one-subject-two-contents)
+
+A personal source would gain comparative warrant over a nonthinking one if
+its independently motivated way of individuating subjects explained both why
+this owner exists and which changes preserve it, where the organizational
+account gives a wrong identity verdict on independent grounds. One concrete
+test is to distinguish **continuing ownership of a remembered item** from
+**receiving enough information from its original owner to answer correctly**.
+The sequential task is a useful control against interpreting every correct
+answer as simultaneous comparison. It scores the answer in both ownership
+scenarios alike. Even first-person recognition of the item as previously seen
+would bear on experienced continuity. Moving from that recognition to a
+distinct constitutor would still require a reason why the bearer's existence
+depends on U. Partial constitution of something capable of a conscious quality
+likewise leaves open whether its *bearer* depends for being on a distinct
+episode-bearing subject. [Existing best-constitution statement](../../corpus/statements/cc100-123-god-mind-best-constitution.json)
+
+### Where the root inference would use the result
+
+In the selected profile and world let x bear an occurring thought. A capacity
+for cognition, a visual quality and a report occasion are each different from
+the actual being bearing the episode. For #1791, **P_med(x)** needs a distinct
+c bearing an occurring thought and a nonempty finite path from c to x whose
+steps are `ActualConcreteGround m w`. Each step requires an existing concrete
+source and `m.grounds w` relating it to the next being. Interpreting occurrence
+at w is part of the application, since `Occurs` itself has no world index.
+The constitutor's own occurrence, its distinctness, and dependence of x for
+*existence* along this very path would together supply the local instance.
+An organizational contributor to reports, a temporally earlier perceiver, or
+a fact partly constituted by U supplies no such path by itself. **P_dir(x)**
+requires direct existential support from a distinct thinker. A mediate path
+can end with a nonthinking intermediary. [Fixed dependence senses](../../corpus/disambiguations/1272a7e5-e3e1-4c91-a1d3-343018262841.json)
+and [formal predicates](../../TruthCore/Causality/ThinkingRootFork.lean)
+
+Even a successful local instance would leave the quantifier in
+`ThinkingBearerConeNoFresh`: for each eligible starting bearer and episode,
+*every* thinking member of its cone with an incoming G edge must have such a
+predecessor. With the cogito, bearer actuality and concreteness, accessibility
+of distinct thinking predecessors, contingent-thinker grounding and excluded
+middle, `necessaryThinkingRootOfThought` obtains one n that thinks, is a
+reflexive-or-transitive ancestor of the starting bearer b, is an actual G-root,
+and exists at every accessible world. The endpoint allows n = b. #1787's
+supplied-root continuation would have to retain that same n through the
+fixed-esse common-root argument. The existing `godOfRoot` helper also requires
+first-being priority, its causal and perfection premises and the naming premise
+at n. An occurrence in n does not settle its intellectual cognition or will.
+[No-fresh premise](../../corpus/statements/dc7e315d-a364-48f2-9e61-d2aaec966e80.json),
+[registered #1791 argument](../../corpus/arguments/a66aacdc-fe5b-4fc2-a6d3-00c639cbb6f4.json),
+[conditional result](../../corpus/results/60df7e87-ea14-4212-9749-4d4e0dd8576d.json)
+and [supplied-root naming helper](../../TruthCore/Results/Causality/DirectEsseRootGodExistence/Solution.lean)
+
+**Provisional judgment.** DDC provides positive evidence for experienced
+continuity with task-dependent access. Both metaphysical accounts share the
+explanatory credit for the task-specific access mechanism. The results leave
+open whether organization suffices for this embodied subject's existence
+without a distinct thinking ground.
+The access test thus reaches a definite limit. Reopen the ancestry question
+for an independently warranted criterion of subject constitution that makes
+the remembered-item distinction and explains why the same bearer's existence
+has the required ground. Further accuracy or confidence measurements alone
+would refine the account of access. This is a nonformal warrant assessment.

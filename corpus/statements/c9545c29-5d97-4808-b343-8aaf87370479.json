@@ -1,0 +1,6 @@
+{
+  "id": "c9545c29-5d97-4808-b343-8aaf87370479",
+  "label": "A one-way selected transfer has an upstream matching deficit on finite export ancestry",
+  "paraphrase": "For a marked token transfer, suppose its recipient has no finite selected path back to its sender and there are only finitely many selected exports from bearers who reach that sender. Then for some such upstream bearer there is no injection from its selected outgoing events into its selected incoming events. Bearers and unselected transactions need not be finite.",
+  "lean_declaration": "TruthCore.Causality.ReceiptMatching.UnmatchedUpstream"
+}

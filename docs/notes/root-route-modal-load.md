@@ -1,6 +1,6 @@
 # Is modal necessity load-bearing for the root? (2026-11-23)
 
-This is the first of four follow-up questions after #1887. All of the #1870 → #1884 → #1887 work (C2, power-grounded possibility, Pruss's argument, existence in essence) bears on one modal crux: whether a foundational, simple being's possible absence needs a ground. This note asks which routes to the root depend on modal necessity at all, and which depend on that crux in particular. It is a structural question about the graph and makes no claim about warrant.
+This is the first of four follow-up questions after #1887. All of the #1870 → #1884 → #1887 work (C2, power-grounded possibility, Pruss's argument, existence in essence) bears on one modal crux: whether a foundational, simple being's possible absence needs a ground. This note asks which routes to the root depend on modal necessity at all, and which depend on that crux in particular. It is a structural question about the graph and makes no claim about warrant. [Original PR #1902](https://github.com/moritzbrantner/formal-logos/pull/1902)
 
 ## Method
 

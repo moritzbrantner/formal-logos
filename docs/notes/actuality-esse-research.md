@@ -1,5 +1,7 @@
 # Research checkpoint: actuality entails being in esse
 
+[Original PR #1918](https://github.com/moritzbrantner/formal-logos/pull/1918)
+
 - **Repository** `moritzbrantner/formal-logos`
 - **Date** 2026-11-24
 - **Target** `7067553d-cad9-5d79-b6b2-912e35051530`, `ActualityOnlyInsofarAsBeingReading`
@@ -417,3 +419,70 @@ In two control histories the fixed rod stays at 2 units while the other goes fro
 **Assessment.** The absence of an intrinsic alteration at the named subject is a poor objection to causal responsibility for a real founded comparison. The other end can supply the decisive change. For acquired qualities, the preservation of a real contribution through practice, copying or active response is a better test than persistence of the bearer or sameness of the resulting quality. I favor these two forms of local attribution. For universal transfer this route needs at least one qualifying realization for each eligible bearer at each actual non-esse respect, with a contribution from that very existential source. Whether the histories cover that range, and whether the attribution applies to real relational respects, remains open. The same wax could receive its lettering twice. A path to the first impression warrants no inference by itself about who made the second. A case in which the alleged contribution is screened off by actual replacement, while preserving an independent route to the same observed outcome, would defeat that *specific attribution*. A reason why at least one such history for each eligible bearer and respect includes a source-supplied input would strengthen the universal case. Neither revision follows merely from adding actualities to the formal domain.
 
 **Independent semantic review.** The reviewer checked the sources, rival accounts, both formal tests, the press witness and the graph connections at `288d59eaa61436c6f94d7e54ce447049f6c6a899`. Review of the repairs at `45f329f3238a6fbfd5ae99f6fc3abe471b2c88b2` accepted the qualification about repeated occurrences, the distinction between causing a match and producing an intrinsic accident on each side, and the link to the external sense of causation. The next test concerns present responsibility for a retained determination after its producer ceases to act. [Reviewed dossier assessment](../../corpus/attempts/bc9f10d6-63ca-4493-94a8-49c282747f97.json)
+
+
+## Does surviving the loss of each determination establish the priority of esse?
+
+The bound sentence `7067553d` says that if this bearer is actual in any respect, this bearer is actual at esse. Consider the additional argument that the bearer can persist without each of its determinations, whereas none of those determinations can be realized *as its determination* without it. What explanatory priority does this asymmetry support?
+
+Distinguish the impeller from the circulation it maintains. The impeller can remain in place when the fluid comes to rest. It is possible to identify it there by its continuing material structure and to restart it. A circulating pattern can retain its history and connected flow while slowing or speeding up. On a process reading, if that organized circulation really ceases, the same parcel of water remaining in the vessel does not suffice for that very circulation to continue. The contrast uses independent criteria of persistence, rather than calling anything designated by a noun a substance. The process rival grants actual existence to the circulation throughout its operation and grounds its persistence in the continuing organization of the flow. It has a positive basis for allowing different particular profiles while requiring some organized motion.
+
+**A check on the quantifiers.** In a deliberately discrete example, one process has two alternative regimes and can cease. The profile stipulates the regime and whether the process exists separately from any claim about grounding. The original formula holds at each setting. For each particular regime there is a setting in which the process persists without that regime. There is no setting in which the process persists without any regime. These three local checks use no axioms. The two regimes exhaust the finite example by construction; they do not classify all physical flows.
+
+```lean
+import TruthCore.Latin.Aquinas.SummaTheologiae.PrimaPars.Question4.Article1
+namespace ProfileChange
+open TruthCore.Latin.Aquinas.SummaTheologiae
+-- none denotes cessation; the two live states are different regimes.
+def act (s : Option Bool) (_ : Unit) : Option Bool → Prop
+  | none => s.isSome = true
+  | some k => s = some k
+
+theorem importAt (s : Option Bool) :
+    ActualityOnlyInsofarAsBeingReading (act s) none := by
+  intro x r h
+  cases r with
+  | none => exact h
+  | some k => change s = some k at h; subst s; rfl
+
+theorem eachCanCease (k : Bool) :
+    ∃ s, act s () none ∧ ¬ act s () (some k) := by
+  cases k
+  · exact ⟨some true, rfl, by intro h; cases h⟩
+  · exact ⟨some false, rfl, by intro h; cases h⟩
+
+theorem neverAllAbsent :
+    ¬ ∃ s, act s () none ∧ ∀ k, ¬ act s () (some k) := by
+  rintro ⟨s, live, absent⟩
+  cases s with
+  | none => cases live
+  | some k => exact absent k rfl
+#print axioms importAt
+#print axioms eachCanCease
+#print axioms neverAllAbsent
+end ProfileChange
+```
+
+**Judgment.** For real exemplification, favor the original same-bearer premise: if the actual contribution being tracked is this impeller's operation, a description, duplicate or model of the impeller cannot do that work. With the adopted calibration from real existence to actuality at esse on that frame, this is enough for the [first mover's existential import](../../TruthCore/Results/Aquinas/SummaTheologiae/FirstMoverIsMaximeEns/Solution.lean). The proof takes the mover's actual exercise in one respect and retains that mover when it concludes actuality at esse. It does not ask what grounds the mover's existence. The [argument about all perfections](../../TruthCore/Results/Aquinas/SummaTheologiae/FirstMoverHasPerfectionsOfThings/Solution.lean) also requires the import for arbitrary actual possessors in its wider use.
+
+There is further warrant for a **constitutive contribution** where this independently identifiable subject is itself part of what realizes this very operation. Replacing the impeller with a duplicate can restore circulation while changing whose operation it is. To establish priority of the subject's esse over the whole range of ways in which it is actual, give a reason to treat the subject as a continuing constituent at that explanatory level. Survival across loss of each particular mode establishes less: the process example grants all of those survivals. The [registered inheritance test](../../TruthCore/Causality/ParticularActuality.lean) can distinguish explanations under specified constitutive records; the disputed work is justifying those records in the case at hand. Even a justified constitutive priority leaves open which efficient agent produces a given change. Revise the subject-first reading for a class where its identity is independently traced to a continuing organization and loss of that organization ends the subject itself. Revise the minimal premise only on showing actual realization by the *same* bearer in a respect although it lacks real being under the selected calibration.
+
+## Does knowing the source's own act disclose how this daughter began?
+
+Fix the source *s* and the daughter *x* in the division case. Suppose the right-hand daughter is new, a matter left open by the original counting argument. Compare two accounts of this very onset, keeping the parental lineage, precursor matter, location, time of division and resulting organization fixed. Both accounts grant that *s* gives *x* esse, apprehends its own giving and understands that *x* has its own working supply at separation. The question is who opened the right inlet in time. These are competing reconstructions of an event. Identifying individuals across metaphysically possible worlds would require a further individuation premise. [Generation at division](causal-perfection-transfer.md#what-does-the-generator-give-when-one-living-individual-becomes-two)
+
+The inlet opens on the first pulse and stays open. Both the parent and a neighboring secondary send a pulse. In one reconstruction the parent's arrives at the cut and the neighbor's later. In the other the arrivals are reversed. Remove the early pulse in either account and the inlet stays closed at the cut, then opens later. Remove the late pulse and the inlet is already open at the cut. This identifies a difference in productive contribution at onset even though the right-hand supply has the same routing at both observation times. Keep the preparation of the left side and the parent's other work fixed. The earlier renewal test explains why the routing matters to the constitution of a new unit. The pulse model tests who achieved the routing and presupposes the earlier substantial interpretation. It describes an idealized division, with no claim about the physiology of a species. [Renewal test](../../Scratch/sole-esse-giver/Division.lean) · [Arrival and uptake tests](../../Scratch/sole-esse-giver/DivisionHistory.lean)
+
+**What the source already knows.** On each account the same grounded self-content and the same grounded content about *x* satisfy both exemplar premises of `understandsCausedEffectsFromSelfAndExemplars`. Its conclusion requires some correct, apprehended content about each actual caused effect. The physical gate retains just its routing. A rule that identifies the parent from that routing must consequently give the same answer when the neighbor opened it. The source could of course know more. The counterexample concerns the sufficiency of the specified cognitive evidence. The difference matters to the explanation of how *x* first acquired its organization. It establishes neither that the successful secondary supplied efficacy independently of *s* at esse nor that *s* supplied all of that efficacy. For `50da2b49` one still needs the relation of the secondary's effective exercise to the existential giver. [Exemplar theorem](../../TruthCore/Results/Causality/IntentionalExemplarExtension/Solution.lean) · [Total giving premise](../../corpus/statements/50da2b49-c914-4c44-a956-1cb134a399f8.json)
+
+**Knowing an effective act from within.** Suppose instead that the source's own order releases one selected channel at the cut and holds the other until afterward. The source knows which channel it actually released. If the order governs arrival without substitution or delay, the selection distinguishes which secondary made the inlet open at onset. There is a reason for thinking the source could know the answer through its own act here. It exercises control over the very difference the question asks about. If its apprehension also encompasses how that order takes effect and it takes up the resulting true content about *x*, it knows the sender without a later inspection of the daughter. Lean checks the effective schedule and uses the existing grounded-uptake condition to conclude apprehension. Reversing the deliveries preserves the truth of “I ordered the parental channel” while making “the parent opened it” false. Application to the actual giver therefore needs grounds for effective control of that distinction and for intellectual grasp of its exercise. An alternative route would be grounded recognition of the actual secondary contribution. Nothing in the comparison requires the giver to undergo an intrinsic change or to learn by observation. [Effective order and reversed delivery](../../Scratch/sole-esse-giver/DivisionHistory.lean)
+
+**Which facts enter comprehension?** Who opened the inlet is a truth about *x*'s production. On a reading restricted to present intrinsic actuality, *x* can have the very same internal working organization whichever sender opened the inlet. A complete account of that organization can answer how it now works while leaving the sender open. On a reading that includes *x*'s becoming actual through this particular exercise, a knower claiming to grasp that productive explanation owes an answer about the operative secondary. A claim about *every* true extrinsic relation of *x* would reach further still. These readings need a criterion for what belongs to the selected participant's knowability. The change of sender is evidence of an explanatory difference at onset. By itself it sets no degree of knowability.
+
+For the `aba6f4e1` argument, a positive sufficient condition is available. Identify the features that exhaust *x* under the chosen reading, and assign each a required grade on the shared scale. Suppose *x*'s knowability is at most every upper bound of those grades, and a **single actual knowing** of *x* by *s*, at degree *d*, reaches them all. Then *x*'s knowability is at most *d*, which yields `ComprehendsByMeasure M s x`. The calculation uses only this half of a least-upper-bound calibration. Separate acts of knowing at a succession of ever higher grades need never attain their upper bound. What gives the proposal force in the division case is that the organization provides specific intelligible requirements, and an effective order can explain one of them all the way to its realization. To support the universal weak bound, one must justify exhaustion and calibration, realize a knowing at the required grade for each actual participant, and apply the existing bridges from act to knowability and from actual knowing to the knower's act on the same esse scale. The two routes through the inlet supply no measure of all actuality. [Calibration test](../../Scratch/sole-esse-giver/DivisionHistory.lean) · [Measured comprehension](../../TruthCore/Causality/ComprehensionByMeasure.lean) · [Weak participant bound](../../corpus/statements/aba6f4e1-bbf1-4aaa-ac1c-dead4efbef09.json)
+
+**Provisional assessment.** Knowledge of giving and genuine knowledge of this daughter's constitution survive both tests. Knowledge of a particular secondary origin has additional warrant where the source apprehends an effective selection that distinguishes that origin. For this division the equality of the resulting daughter profiles limits inference from the outcome. It supplies no evidence that an actual giver lacks origin-sensitive understanding. The next issue for total giving is whether the source supplies the efficacy of whichever trigger actually succeeds, even when the order in which the secondaries act is governed locally. For the cognitive bound, determine whether knowing the daughter's particular production belongs to fully explaining its received actuality, and what justifies grading such an explanation at the daughter's whole knowability. Merely asking another question about the daughter's history supplies neither answer.
+
+## Research attempts citing this note
+
+- [Test source self-knowledge against two productive histories of the same onset](../../corpus/attempts/228f289f-9ab9-460d-8294-baf7fd756510.json)

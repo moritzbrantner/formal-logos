@@ -1,0 +1,10 @@
+{
+  "id": "f11506dc-0eca-4912-a4ed-b69811eaf231",
+  "label": "Test coverage of all contingent recipients at the necessary intermediary (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "8852c6c8-4ae1-410c-9cc7-73f60215a967",
+  "rule": "Inspect both worlds on the original three-being chain and apply named-root identification",
+  "meaning": "Both d and g exist in every accessible world. At false, g gives being to the contingent c, the only possible actual contingent recipient there. The incoming edge d to g leaves g derived. If the selected g reached every actual concretum, a finite path to the actual root d would identify g with d, contrary to the distinct constructors. The use of the naming predicate stipulates a candidate, without independently warranting its divine status.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

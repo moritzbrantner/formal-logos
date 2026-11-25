@@ -4,7 +4,7 @@ This bounded science comparison contributes to #247/#363 and the owner's
 foundational investigation. Its question is what a failed or successful
 physical test can establish about a disputed hypothesis when instrumentation
 and other assumptions also enter its prediction and interpretation. It adds
-no root route and discharges no philosophical premise.
+no root route and discharges no philosophical premise. [Research record](../../corpus/attempts/scientific-testing-calibration.json)
 
 ## Actual witness and reading boundary
 

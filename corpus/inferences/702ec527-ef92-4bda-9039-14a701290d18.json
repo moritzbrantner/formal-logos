@@ -1,0 +1,14 @@
+{
+  "id": "702ec527-ef92-4bda-9039-14a701290d18",
+  "label": "Identify one ancestral source from GOD_4 existence, finite reach and an actual root (inference)",
+  "input_statement_ids": [
+    "8626f8a5-9531-5da7-9ebd-f901e74b1129",
+    "dc397705-d727-419e-92f9-65d44e1ff15d",
+    "75974d26-9483-4e1b-81a9-693a90ee9d0f"
+  ],
+  "output_statement_id": "8269797e-4c7b-4c33-8ed6-b1e5262885cc",
+  "rule": "Inspect the last step of a path ending at a root and preserve its identified source",
+  "meaning": "Choose a God g and an actual root n separately. A positive path from g into n would have a last incoming actual ground. Hence their path is empty and g equals n. This same argument applies to every actual root. Finite reach from this very g supplies all recipients' paths. The companion identifies any such named witness with any supplied root. GodExists is an input of this conditional application.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

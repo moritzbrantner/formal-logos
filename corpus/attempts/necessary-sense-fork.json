@@ -56,7 +56,12 @@
     "e1d881e0-ca93-44ba-9e38-442a8d147336",
     "bcada1c4-aec8-42d9-9671-ca5dd9b65b49",
     "abca2584-6f6a-40b8-bdc2-b37e01fe5008",
-    "060e925c-242a-4125-9bf9-8be486dda9cc"
+    "060e925c-242a-4125-9bf9-8be486dda9cc",
+    "PR-1230",
+    "PR-1254",
+    "PR-1290",
+    "PR-1330",
+    "PR-1342"
   ],
   "blocker": "Original NECESSARY_5 still lacks one specified full logic/admissible interpretation domain. Three explicit modal-language profiles and their root bridge are conditional options, not an identification with the original. A truth argument still needs an independently warranted theory/cone, same-bearer existence dictionary, RootFacts and intended-reading coverage/exclusivity; none is discharged by these comparisons. Next discriminating cell: independently supported theory entailment of the same existence formula, with selected-cone admission."
 }

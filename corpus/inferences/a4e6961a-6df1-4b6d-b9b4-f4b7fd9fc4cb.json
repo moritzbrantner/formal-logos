@@ -1,0 +1,14 @@
+{
+  "id": "a4e6961a-6df1-4b6d-b9b4-f4b7fd9fc4cb",
+  "label": "One principal giver of participated esse from local supply and common source selection (inference)",
+  "input_statement_ids": [
+    "f3e1d294-e677-41eb-9c28-7b4beebe24e1",
+    "de05072a-5db0-4a31-8e24-b18fedf01401",
+    "dcf4bcdd-4feb-4d97-a7e2-f6a08cdf4702"
+  ],
+  "output_statement_id": "eeb89ffe-5b61-4572-8b35-87adf541bcab",
+  "rule": "Identify each local own-being supplier with the same selected bearer",
+  "meaning": "Fix an actual participant. Local supply gives a distinct actual own-being source. Source selection identifies that supplier and every other relevant supplier with the same s. The population premise gives at least one instance of the causal role. Uniqueness is among own-being suppliers; the actual source may operate through secondary causes.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

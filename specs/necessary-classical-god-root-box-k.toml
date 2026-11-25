@@ -1,0 +1,58 @@
+# #1926 phase 0: the quarta-via classical-God root (STMT-NECESSARY-CLASSICAL-GOD-ROOT)
+# projected onto the box K node of the necessary-sense fork (STMT-NECESSARY-ROOT-BOX-K).
+# Same Signature, Profile and world; NecessaryAt is the box K existence by Iff.rfl.
+# An assembly (weakening) registered as a strength order, with a strictness
+# separator (two actual roots, only one GOD_4; fails only on selected-root
+# uniqueness). Analyst formulations, attribution deferred. Findings and the
+# cheapest-route packing analysis: attempts "Projection of the classical GOD_4
+# root onto the box K node of the fork route" (succeeded) and "Re-routing the
+# fork route's box K node off the packed GOD_4 leaf" (blocked), and
+# docs/notes/cheapest-route-packing.md.
+
+[batch]
+vocab = "TruthCore.Causality.NecessaryClassicalGodRootBoxK"
+results = "TruthCore.Results.Causality.NecessaryClassicalGodRootBoxK"
+disambiguations = ["DISAMB-NECESSARY"]
+
+[[statement]]
+id = "Strictness separator: the box K node holds and the classical GOD_4 root fails on one model"
+lean = "Separation.Separator"
+paraphrase = "Formal control on a two-point model: one world accessing itself and two candidates, both concrete and existing there, with nothing grounding anything, so both are actual roots; only one of them is GOD_4, and both have the signature's classical-attributes field. In the main model the q.3 a.4 profile puts every candidate in act, lets every candidate cause every candidate in the one respect (CausesIn, a relation distinct from grounding; no bridge between them is assumed) and identifies represented esse and essence; goodness, infinity, eternity, intellect and will are everywhere true, and the six relations potency, more-than, simple priority, component-of, composition and matter/form are empty, so immutability, maximum, firstness, remoteness, simplicity and matter/form exclusion hold vacuously at both candidates. On this model the box K node of the sense fork holds, with the GOD_4 candidate as witness, and the classical GOD_4 root fails. The classical root on this model is equivalent to: some candidate satisfies every other conjunct of the root's body and is the only actual root. The GOD_4 candidate satisfies every other conjunct, and the other candidate is a second actual root that is not GOD_4. A restored-relation control on the same signature and Profile (so the box K node still holds) makes these relations non-empty except component-of: the GOD_4 candidate is more in esse than the other and simply prior to it, causes it and only it, and only the other candidate is in potency, composite and composed of matter and form. There too the classical root fails, it is again equivalent to the rest of its body plus being the only actual root, the GOD_4 candidate satisfies the rest of its body, and maximum and firstness fail at the other candidate. So in both models the classical root fails only because its selected-root uniqueness conjunct (every actual root is the witness, inside PerfectRootAt) has no witness; the box K node asks only that its witness be the one GOD_4 (IsTheOneGod), which does not exclude a second, non-GOD_4 actual root. So the box K node does not entail the classical GOD_4 root. Non-degenerate in this sense: no supplied predicate is emptied so that an attribute fails, the failing conjunct uses ActualRoot, which both nodes contain, and the restored control shows the separation does not rest on the vacuous clauses (only remoteness stays vacuous there). Neither model separates the nodes on any other content (maximum, perfection, firstness, esse/essence identity, matter/form exclusion, remoteness or the case predicates other than IsTheOneGod); that further difference is a syntactic comparison of the two definitions only. A statement about this formal interpretation only; nothing is claimed about the actual world."
+definitions = ["DEF-KANT-MODAL-NECESSITY", "DEF-NECESSARY-IN-SENSE", "DEF-BRUTE-ROOT-RELATIVE-GROUNDING", "DEF-GOD-OF-CLASSICAL-THEISM", "DEF-ONE-GOD"]
+disambiguations = ["DISAMB-NECESSARY", "DISAMB-GOD"]
+
+[[argument]]
+id = "Box K node projected from the NECESSARY_2 classical GOD_4 root"
+label = "Box K node projected from the NECESSARY_2 classical GOD_4 root"
+theorem = "boxKOfClassicalGodRoot"
+premises = ["STMT-NECESSARY-CLASSICAL-GOD-ROOT"]
+conclusion = "STMT-NECESSARY-ROOT-BOX-K"
+weakening = true
+axioms = []
+rule = "Existential elimination and introduction, conjunction elimination, and the definitional identity of NecessaryAt with box-existence (necessaryAt_iff_boxExistsAt, Iff.rfl)"
+meaning = "Assembly (a weakening, not a substantive derivation): for the same signature, Profile m and world w, the witness n of NecessaryClassicalGodRootAt is an actual root (first conjunct of PerfectRootAt); its necessity NecessaryAt m.ontic w n is box-existence of the same n over the same frame m.ontic.frame (Iff.rfl, no bridge); n is GOD_4, is the one GOD_4 (IsTheOneGod, the fourth of the nine case predicates) and has the signature's classical attributes field. So the box K node holds for that n. The relation CN (causes the necessity of) is unconstrained and unused by the box K sense. Uniqueness of the selected root, maximum, perfection, firstness, esse/essence identity, matter/form exclusion, remoteness and the other eight case predicates are discarded; no converse is claimed (see the strictness separator). As an assembly it closes the box K node only if its premise is closed (invariant 16 fixpoint); it does not expand the box K node in the route-cost diagnostic."
+description = "Assembly (a weakening, not a substantive derivation): the classical GOD_4 root projects onto the box K node of the sense fork for the same signature, Profile and world, using necessaryAt_iff_boxExistsAt (Iff.rfl). It gives the box K node a closure path from every derivation of STMT-NECESSARY-CLASSICAL-GOD-ROOT (including its Dei Filius, underived-individual, act-priority-at-first, pure-act-by-composition, positive-root and asymmetry routes). As an assembly it closes the node only by rule (d), if its premise is closed. On the current corpus its premise is closed by rule (a), proved from open premises but not established, and the box K node was already closed by rule (a) through other derivations, so the assembly adds no closure; it never expands the box K node in the route-cost diagnostic, and every upstream premise keeps its status. A verified non-transcription derivation of the box K node from the same 25 quarta-via inputs already exists (argument a693bf86)."
+transcription = "assembly"
+senses = {GOD = "GOD_4"}
+
+[[argument]]
+id = "Strictness separator for the box K projection, checked"
+theorem = "separator"
+premises = []
+conclusion = "Strictness separator: the box K node holds and the classical GOD_4 root fails on one model"
+axioms = []
+rule = "One explicit finite model checked by unfolding"
+meaning = "On a two-point model where both candidates are actual roots (concrete, existing at the one self-accessing world, grounded by nothing) and only one is GOD_4, the box K node holds (witness: the GOD_4 candidate) and the classical GOD_4 root fails. The failure is located: on this model the classical root is equivalent to some candidate satisfying every other conjunct of its body and being the only actual root; the GOD_4 candidate satisfies every other conjunct, and the other candidate is a second actual root that is not GOD_4. So only the selected-root uniqueness conjunct of PerfectRootAt fails, while the box K node's IsTheOneGod (uniqueness among GOD_4 bearers) does not exclude a second, non-GOD_4 actual root. Non-degenerate in this sense: no supplied predicate is emptied so that an attribute fails. In the main model six relations are empty (InPotency, MoreIn, PriorSimply, ComponentOf, Composite, MatterForm), so immutability, maximum, firstness, remoteness, simplicity and matter/form exclusion hold vacuously at both candidates, and CausesIn is total. The failing conjunct uses ActualRoot, which both nodes contain. A restored-relation control on the same signature and Profile makes all of those relations non-empty except ComponentOf (the GOD_4 candidate more in esse than the other and simply prior to it, CausesIn only from it to the other, potency, composition and matter/form only at the other); the classical root still fails through uniqueness alone, its other conjuncts hold at the GOD_4 candidate, and maximum and firstness fail at the other. So the separation does not rest on the vacuous clauses. It replaces a draft separator that failed only by emptying HasIntellect, a free parameter the box K node does not mention. Other content differences are not model-separated here. Model-witnessed only; a statement about this formal interpretation."
+disambiguations = ["DISAMB-NECESSARY", "DISAMB-GOD"]
+senses = {GOD = "GOD_4"}
+
+[[relation]]
+id = "The NECESSARY_2 classical GOD_4 root strengthens the box K node"
+subject_kind = "statement"
+subject_id = "STMT-NECESSARY-CLASSICAL-GOD-ROOT"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "STMT-NECESSARY-ROOT-BOX-K"
+verification_result_id = "Box K node projected from the NECESSARY_2 classical GOD_4 root"
+strictness_result_id = "Strictness separator for the box K projection, checked"
+note = "Same signature, Profile m and world w; NecessaryAt m.ontic w n is box-existence over m.ontic.frame by Iff.rfl. Same witness n: keep that n is an actual root, box-exists, is GOD_4, the one GOD_4 and has the classical attributes field. Strictness (non-degenerate in this sense: no supplied predicate is emptied so that an attribute fails): the two-point separator has two actual roots of which only one is GOD_4; in its main model six relations are empty, so several attributes hold vacuously, and a restored-relation control with non-empty orders, causation, potency, composition and matter/form (component-of still empty) gives the same result; in both the strong version fails only through its selected-root uniqueness conjunct, which the weak version lacks (its IsTheOneGod is uniqueness among GOD_4 bearers only). Syntactically the strong version also adds maximum, perfection, esse/essence identity, firstness, matter/form exclusion, remoteness and eight further case predicates; the separator does not model-separate those. No certified difference (strength_comparison, #1598) is registered: the sense-fork precedents factor through a witness-independent frame condition, while here the added content constrains the witness of an existential, so a delta would need a new same-witness delta statement and its equivalence proof (not attempted)."

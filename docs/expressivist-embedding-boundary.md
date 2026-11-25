@@ -152,3 +152,8 @@ read its complete context before selecting declarations or changing an answer.
 The analyst derivation succeeds; the historical conditional and its
 psychological/metasemantic bridge remain separate source and modeling gaps.
 Keep #185 open for this gap and the other outstanding theory questions.
+
+## Research attempts citing this note
+
+- [A stipulated planning-language semantics derives acceptance-preserving modus ponens structurally…](../corpus/attempts/plan-state-embedding-control.json)
+- [The original consistency control uses primitive ValidMP and p = q, leaving compositional embedding…](../corpus/attempts/expressivist-embedding-primary-witness.json)

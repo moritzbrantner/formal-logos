@@ -16,7 +16,9 @@
     "8d203ef8-cfe0-5434-81d3-0ea7f7411162",
     "2b7a3431-5e29-5c91-a0ff-a23a0eb78fcb",
     "50c0a403-3cac-5aba-814b-4a19f6463c19",
-    "61b76df7-46c5-5c3f-887e-22a6639e3b13"
+    "61b76df7-46c5-5c3f-887e-22a6639e3b13",
+    "PR-675",
+    "PR-1336"
   ],
   "blocker": "Original physical scope, admissible signal/rate consistency and event coverage remain unselected for sense 4. Candidate is explicitly bounded; selected temporal history requires an additional domain/order dictionary. See docs/notes/stationary-clock-protocol-candidate.md. No past-finiteness or ontology conclusion."
 }

@@ -5,7 +5,7 @@ Outcome: **conditional separators with an omission model on each side**. The the
 `TruthCore.Alternatives.PhysicalGround`. They establish conditional consequence and model
 verdicts. They do not show that either ground exists or is metaphysically possible, and no
 root premise changes. A necessary being does not by itself mean God: that is a checked result
-below, not a concession in prose.
+below, not a concession in prose. [Research record](../../corpus/attempts/physical-ground-468.json)
 
 ## Investigation brief
 
@@ -488,3 +488,7 @@ nonrepresenting account of *the same* source-level excellence, or a failure
 of wisdom's pure-perfection classification, would weaken it. The current
 result is a code-level conditional connection and semantic controls, not
 a new registered argument or an attribute-establishment claim.
+
+## Research attempts citing this note
+
+- [Subsistent wisdom and same-source intrinsic self-understanding bridge test](../../corpus/attempts/d3a0e98a-8c92-4236-92bb-a3e22d49b172.json)
