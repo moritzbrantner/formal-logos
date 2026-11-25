@@ -67,6 +67,61 @@ The corpus directory must exist. Missing optional record collections are empty;
 unreadable collections, dangling collection links, and non-file JSON entries
 are errors rather than silently omitted records.
 
+## Statement synthesis
+
+`truth synthesis` opens the classical-theism God-existence statement. Give a
+statement UUID, legacy ID, exact label or Lean declaration to read another
+proposition, or search current judgments and earlier investigations in your
+own words. Both forms run offline and accept
+`--root PATH`.
+
+```sh
+target/release/truth synthesis STMT-GOD-EXISTS
+target/release/truth synthesis 0881e859-c4c3-53ff-9bec-b61294e12d51
+target/release/truth synthesis --question "Do observations identify a common giver?"
+target/release/truth --json synthesis STMT-GOD-EXISTS
+```
+
+An ambiguous Lean short name such as `GodExists` lists the matching declarations
+and a command for each meaning.
+
+The statement view gives the target’s meaning and formal status, quotes
+scoped judgments and a live test, and compares the actual premises of its
+immediate arguments. A complete illustrative route provides a command for each
+premise and separately listed commitment. Each quoted assessment retains its full wording, review
+state and source. The text shows two target judgments by default. Use
+`--limit N` to display more. The first example prefers reviewed records,
+a scope naming just the target, then an attempt citing a result for the
+target, then a smaller scope. A different review state gets the second slot
+when present. These rules select examples for reading. The scope written by
+the researcher governs the judgment, even when a record names just one
+statement. A question retrieves findings from the attempts and offers statement
+commands for following the argument. Results labeled as earlier investigations
+provide historical evidence. A current assessment carries its own scope and
+review state. When a question phrase is missing from the leading finding,
+the command can also quote a matching research note with its section and line.
+Question JSON returns that passage in `note_match` when available.
+
+The complete statement JSON includes these fields.
+
+| Field | What to read |
+| --- | --- |
+| `formal_status` | The frontier's ordinary closure, establishment and refutation for the target. A conditional proof may leave establishment false. |
+| `target_assessment_ids`, `assessments` | All current records explicitly indexing this target, and the deduplicated record dictionary for the target and its immediate premises. Each has the assessment, scope, live test, evidence, full note locator, review state, reviewed revision and publication state. |
+| `routes`, `results`, `premises` | Every registered producing argument, its ordinary premises and separate commitments, result witnesses, and the formal status and current assessment IDs of each immediate premise. Argument status distinguishes derivations, transcriptions and unverified proposals. |
+| `shared_premises`, `shared_assessments` | The exact argument IDs reusing an immediate premise and the exact premise and argument IDs linked to a single assessment. This identifies citation reuse. Distinct records can still share evidence. |
+| `objections` | Registered attacks, alternatives and refutation relations directed at the target or an immediate premise, with their original notes and paths. The relation alone does not establish defeat. |
+| `consumers`, `related_statements` | Downstream arguments with all co-premises, separate commitments and conclusion IDs, and the additional statement descriptions needed to read them. |
+| `target_attempt_paths` | Target-indexed investigations, including earlier attempts without a current assessment. An empty current-assessment list can coexist with substantial prior work. |
+
+`--limit` affects text display. JSON retains every matching assessment and
+every immediate argument. Read a premise with `truth synthesis PREMISE_ID` to
+continue down its branch. `truth dossier PREMISE_ID` includes historical
+attempts and source records. `truth support-graph STATEMENT` exports the
+complete backward slice of result-backed arguments. Direct consideration of a
+premise remains available alongside all conditional derivations. Neither the
+size of the route overlap nor the number of records grades warrant.
+
 ## Registered support graph
 
 `truth --json support-graph [STATEMENT ...]` exports the complete backward
@@ -831,7 +886,9 @@ status, judgment or record.
   existing brief section extraction (the reference graph is built only when
   revision declarations require impact analysis), with no reconciliation,
   endorsement or strength ranking. IDs/labels/aliases use the normal resolver.
-- `brief --question TEXT`: the notes the `truth index` FTS5 projection ranks
+- `brief --question TEXT` opens with matching judgments and investigations from
+  the same search used by `truth synthesis --question`. The broader brief also
+  includes the notes the `truth index` FTS5 projection ranks
   for any query word (by stem prefix) or identifier, each scored paragraph by
   paragraph and heading by heading (coverage = query items found in one
   unit), a note whose title covers half the question ranked first, with its best

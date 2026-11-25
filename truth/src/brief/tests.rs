@@ -1749,3 +1749,210 @@ fn issue_brief_finds_review_and_delivery_while_issue_is_open() {
     assert!(!root.join(".cache/truth-index.sqlite").exists());
     std::fs::remove_dir_all(root).unwrap();
 }
+
+#[test]
+fn question_synthesis_follows_the_assessment_scope_and_keeps_disagreement() {
+    let root = fixture("synthesis-question");
+    let write_judgment = |id: &str, review: &str, judgment: &str| {
+        write(&root, &format!("corpus/attempts/{id}.json"), &json!({
+            "id": id, "statement_ids":[GOAL, OPEN_PREMISE],
+            "summary": "Antiquarian search phrase unique to the retired handoff.",
+            "current_assessment": {
+                "statement_ids":[OPEN_PREMISE], "scope":"Common giver at the actual recipient",
+                "assessment":judgment, "next_test":"Identify both recipients on this relation.",
+                "note":"docs/notes/priority.md#common-giver","review":review,
+                "publication":"published","reviewed_revision":"1234567890123456789012345678901234567890"
+            }
+        }).to_string());
+    };
+    write_judgment(
+        "d0000000-0000-4000-8000-000000000091",
+        "accepted_qualified",
+        "One common giver fits the observations. Distinct sources also fit.",
+    );
+    write_judgment(
+        "d0000000-0000-4000-8000-000000000092",
+        "unreviewed",
+        "A common giver would explain the result if the causal bridge held.",
+    );
+    let corpus = Corpus::load(&root).unwrap();
+    let (report, text) = super::assessment_search::report(&corpus, "common giver", 1).unwrap();
+    let matches = report["matches"].as_array().unwrap();
+    assert_eq!(matches.len(), 2);
+    assert!(
+        matches
+            .iter()
+            .all(|m| m["targets"].as_array().unwrap().len() == 1
+                && m["targets"][0]["id"] == OPEN_PREMISE)
+    );
+    assert!(matches.iter().any(|m| m["review"] == "unreviewed"));
+    assert!(text.contains(&format!("truth synthesis {OPEN_PREMISE}")));
+    assert!(text.contains("1 further match"));
+    assert!(
+        super::assessment_search::matches(&corpus, "antiquarian")
+            .unwrap()
+            .is_empty()
+    );
+    assert!(
+        super::assessment_search::matches(&corpus, "what?")
+            .unwrap()
+            .is_empty()
+    );
+    std::fs::remove_dir_all(root).unwrap();
+}
+
+#[test]
+fn a_dedicated_prior_investigation_outweighs_an_incidental_current_match() {
+    let root = fixture("question-before-structured-assessments");
+    write(&root, "corpus/attempts/prior.json", &json!({
+        "id":"d0000000-0000-4000-8000-000000000093","label":"Evil and emotivism",
+        "statement_ids":[GOAL],"summary":"An emotivist can still press an internal objection from evil.",
+        "blocker":"What does the target concede?", "outcome":"succeeded"
+    }).to_string());
+    write(&root,"corpus/attempts/incidental.json",&json!({
+        "id":"d0000000-0000-4000-8000-000000000094","statement_ids":[OPEN_PREMISE],
+        "current_assessment":{"scope":"The problem of calendar dating","assessment":"A dated record survives.",
+        "statement_ids":[OPEN_PREMISE],"review":"accepted_qualified"}
+    }).to_string());
+    let corpus = Corpus::load(&root).unwrap();
+    let (result, text) = super::assessment_search::report(
+        &corpus,
+        "Does emotivism dissolve the problem of evil?",
+        1,
+    )
+    .unwrap();
+    let matches = result["matches"].as_array().unwrap();
+    assert_eq!(matches.len(), 1);
+    assert_eq!(matches[0]["kind"], "prior_investigation");
+    assert!(text.contains("internal objection from evil"));
+    assert!(!text.contains("accepted_qualified"));
+    std::fs::remove_dir_all(root).unwrap();
+}
+
+#[test]
+fn question_search_features_substantive_passages_and_keeps_locators_out_of_ranking() {
+    let root = fixture("question-evidence-passages");
+    let locator = "Read docs/notes/amber-shale-layers.md.";
+    let finding = "The amber inclusions precede both shale layers.";
+    let competing = "The shale layers contain amber inclusions of different ages.";
+    record(
+        &root,
+        "statements",
+        json!({"id":GOAL,"label":"Amber shale layers",
+        "paraphrase":"The amber is above both shale layers."}),
+    );
+    record(
+        &root,
+        "attempts",
+        json!({"id":"d0000000-0000-4000-8000-000000000095",
+        "label":"Field observations", "statement_ids":[GOAL],
+        "summary":format!("Sample Q.12 represents a second outcrop. {finding} {locator}")}),
+    );
+    record(
+        &root,
+        "attempts",
+        json!({"id":"d0000000-0000-4000-8000-000000000096",
+        "label":"An alternative timeline","statement_ids":[GOAL], "summary":competing}),
+    );
+    write(&root, "corpus/attempts/amber-shale-layers.json", &json!({
+        "id":"d0000000-0000-4000-8000-000000000097", "label":"Comparison index",
+        "statement_ids":[GOAL], "summary":format!("Measurements were taken at the shoreline. {locator}")}).to_string());
+    let corpus = Corpus::load(&root).unwrap();
+    let (report, prose) =
+        super::assessment_search::report(&corpus, "amber shale layers", 2).unwrap();
+    let matches = report["matches"].as_array().unwrap();
+    assert_eq!(matches.len(), 2);
+    assert!(prose.contains(finding));
+    assert!(prose.contains(competing));
+    assert!(!prose.contains(locator));
+    std::fs::remove_dir_all(root).unwrap();
+}
+
+#[test]
+fn search_retrieves_a_scoped_note_when_attempts_miss_the_question_phrase() {
+    let root = fixture("question-note-fallback");
+    record(
+        &root,
+        "attempts",
+        json!({"id":"d0000000-0000-4000-8000-000000000098",
+        "label":"Temporary equipment","summary":"The temporary sensors belong to the same apparatus.",
+        "statement_ids":[GOAL]}),
+    );
+    let note = "The sensors can be temporally coincident in this apparatus.";
+    write(
+        &root,
+        "docs/notes/experimental.md",
+        &format!("# Readings\n\n## Sensor timing\n\n{note}\n"),
+    );
+    let corpus = Corpus::load(&root).unwrap();
+    let (report, prose) = super::assessment_search::report_for_root(
+        &root,
+        &corpus,
+        "Are the sensors temporally coincident?",
+        2,
+    )
+    .unwrap();
+    assert_eq!(
+        report["note_match"]["section"],
+        "docs/notes/experimental.md#sensor-timing"
+    );
+    assert_eq!(report["note_match"]["passage"], note);
+    assert!(prose.contains(note));
+    assert!(!root.join(".cache/truth-index.sqlite").exists());
+    std::fs::remove_dir_all(root).unwrap();
+}
+
+#[test]
+fn a_generic_phrase_in_a_note_cannot_displace_a_more_specific_investigation() {
+    let root = fixture("question-note-competing-topic");
+    record(
+        &root,
+        "attempts",
+        json!({"id":"d0000000-0000-4000-8000-000000000099",
+        "label":"Museum acquisition", "statement_ids":[GOAL],
+        "summary":"Pottery fragments identify the missing archive."}),
+    );
+    write(
+        &root,
+        "docs/notes/funding.md",
+        "# Accounting\n\nThe grant covered public access.\n",
+    );
+    let corpus = Corpus::load(&root).unwrap();
+    let (report, prose) = super::assessment_search::report_for_root(
+        &root,
+        &corpus,
+        "Does pottery in the archive support public access?",
+        2,
+    )
+    .unwrap();
+    assert_eq!(report["matches"][0]["scope"], "Museum acquisition");
+    assert!(report.get("note_match").is_none());
+    assert!(!prose.contains("The grant covered"));
+    std::fs::remove_dir_all(root).unwrap();
+}
+
+#[test]
+fn a_conversational_introduction_preserves_the_displayed_question_and_the_topic_ranking() {
+    let root = fixture("question-conversational-introduction");
+    record(
+        &root,
+        "attempts",
+        json!({"id":"d0000000-0000-4000-8000-000000000100",
+        "label":"Cross section", "statement_ids":[GOAL], "summary":"The amber inclusions precede both shale layers."}),
+    );
+    record(
+        &root,
+        "attempts",
+        json!({"id":"d0000000-0000-4000-8000-000000000101",
+        "label":"Our reasons to believe", "statement_ids":[GOAL], "summary":"We currently have reason to believe the testimony."}),
+    );
+    let corpus = Corpus::load(&root).unwrap();
+    let q = "What do we currently have reason to believe about the amber inclusions?";
+    let (report, prose) = super::assessment_search::report(&corpus, q, 2).unwrap();
+    let direct = super::assessment_search::matches(&corpus, "the amber inclusions?").unwrap();
+    assert_eq!(report["matches"], json!(direct));
+    assert_eq!(report["matches"][0]["scope"], "Cross section");
+    assert_eq!(report["question"], q);
+    assert!(prose.contains(q));
+    std::fs::remove_dir_all(root).unwrap();
+}

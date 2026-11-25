@@ -15,6 +15,18 @@ The MVP deliberately keeps source evidence, proposition identity, source interpr
 
 The public Palomar registry currently targets research mathematics. This repository therefore uses Palomar's mechanical architecture without pretending that its philosophical entries are public Palomar registrations.
 
+## Read the current findings
+
+The [current case for God’s existence](https://moritzbrantner.github.io/formal-logos/case/god-exists/) brings together recorded judgments and the arguments that use them. From the repository root, build the CLI with `cargo build --locked --release -p truth`. Then try any of these commands.
+
+```bash
+target/release/truth synthesis
+target/release/truth synthesis --question "What supports one common giver for every actual recipient?" --limit 2
+target/release/truth synthesis STMT-MAXIME-ENS-CAUSES-BEING-OF-ALL
+```
+
+The question lookup gives the recorded assessment, its scope, the proposed next test and the statement IDs to explore. The statement synthesis connects current findings to the premises of specific arguments. When several routes reuse a premise, you can see which conclusions depend on it. The read-only MCP exposes these entry points through `research_synthesis`. [Research tools](docs/truth-mcp.md#tools)
+
 ## Research strategy: explore competing frameworks
 
 The overarching goal remains a rigorous investigation of the case for Catholicism and its strongest alternatives. In the foundational phase, Truth Core explores combinations of propositions, philosophical views, rules and semantic assumptions, including different routes toward a necessary concrete being. A framework's primitive commitments may be contested: they are explicit inputs to an investigation, **not questions that must all be independently settled before the investigation can proceed**.

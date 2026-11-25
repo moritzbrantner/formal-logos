@@ -1,3 +1,4 @@
+import type { JudgmentReading, RevisionImpact, ScopedAssessment } from "./current-judgments";
 import type { Corpus } from "./corpus";
 import type { PremiseDossier } from "./premise-dossier";
 import { resultKind, statementState, type FrontierReport } from "./site-state";
@@ -23,7 +24,11 @@ export type RecordedAssessment = {
   excerpt: string;
   matched_record_ids: string[];
 };
-export type AssessmentBatch = Record<string, RecordedAssessment[]>;
+export type AssessmentBatch = {
+  statements: Record<string, RecordedAssessment[]>;
+  current_assessments: ScopedAssessment[];
+  revision_impacts: RevisionImpact[];
+};
 
 /** Presentation only. No closure, philosophical ranking or prose synthesis. */
 export function currentCase({ corpus, report, dossiers, assessments, revision }: {
@@ -72,6 +77,49 @@ export function currentCase({ corpus, report, dossiers, assessments, revision }:
       }
     }
   }
+  const routes = bundles.filter((bundle) => bundle.conclusion_statement_id === GOD_EXISTS);
+  // Trace registered premise edges for each terminal argument. Reaching the root
+  // again through a cycle supplies no further premise use for that route.
+  const premisesByConclusion = new Map<string, Set<string>>();
+  for (const bundle of bundles) {
+    const ids = premisesByConclusion.get(bundle.conclusion_statement_id) ?? new Set<string>();
+    for (const id of bundle.premise_statement_ids) ids.add(id);
+    premisesByConclusion.set(bundle.conclusion_statement_id, ids);
+  }
+  const routeUses = routes.map((route) => {
+    const ids = new Set(route.premise_statement_ids);
+    for (const id of ids) {
+      if (id !== GOD_EXISTS) for (const input of premisesByConclusion.get(id) ?? []) ids.add(input);
+    }
+    return { route, ids };
+  });
+  const attemptsById = new Map(Object.values(dossiers).flatMap((d) => d.attempts).map((attempt) => [attempt.id, attempt]));
+  const readings: JudgmentReading[] = assessments.current_assessments
+    .filter((current) => current.statement_ids.some((id) => scoped.has(id)))
+    .map((current) => {
+      const attempt = attemptsById.get(current.attempt_id);
+      const groups = new Map<string, { propositionIds: string[]; routes: JudgmentReading["propositions"] }>();
+      for (const id of current.statement_ids) {
+        if (id === GOD_EXISTS) continue;
+        const uses = routeUses.filter(({ ids }) => ids.has(id)).map(({ route }) => route);
+        if (!uses.length) continue;
+        const key = uses.map((route) => route.id).join(",");
+        const group = groups.get(key) ?? {
+          propositionIds: [],
+          routes: uses.map((route) => ({ id: route.id, label: route.label ?? route.id, href: `/case/god-exists#argument-${route.id}` })),
+        };
+        group.propositionIds.push(id);
+        groups.set(key, group);
+      }
+      return {
+        current, title: attempt?.label ?? current.scope, blocker: attempt?.blocker,
+        propositions: current.statement_ids.map((id) => ({
+          id, label: statements.get(id)?.label ?? statements.get(id)?.paraphrase ?? id,
+          href: scoped.has(id) ? casePremiseHref(id) : `/dossiers/${id}`,
+        })),
+        routeGroups: [...groups.values()],
+      };
+    });
   const premises = [...scoped].flatMap((id) => {
     const statement = statements.get(id);
     if (!statement) {
@@ -86,7 +134,12 @@ export function currentCase({ corpus, report, dossiers, assessments, revision }:
       bundles: bundles.filter((bundle) => bundle.conclusion_statement_id === id),
       directAssumption: option?.direct_assumption_available ?? true,
       alternatives: option?.verified_alternative_bundles ?? [],
-      assessments: assessments[id] ?? [],
+      assessments: assessments.statements[id] ?? [],
+      readings: readings.filter(({ current }) => current.statement_ids.includes(id)),
+      revisions: assessments.revision_impacts.flatMap(({ attempt_id, change, consumers }) => {
+        const consumer = consumers.find((entry) => entry.consumer === `statements:${id}`);
+        return consumer || change.statement_ids.includes(id) ? [{ attempt_id, change, consumer }] : [];
+      }),
       attempts: dossiers[id]?.attempts ?? [],
       objections: corpus.relations.filter((relation) => relation.object_id === id && ["attacks", "alternative_to"].includes(relation.predicate)),
     }];
@@ -106,7 +159,7 @@ export function currentCase({ corpus, report, dossiers, assessments, revision }:
   const attempts = [...new Map(premises.flatMap((premise) => premise.attempts).map((attempt) => [attempt.id, attempt])).values()]
     .sort((a, b) => a.id.localeCompare(b.id));
   return { target, sense, revision, premises, bundles, attempts,
-    routes: bundles.filter((bundle) => bundle.conclusion_statement_id === GOD_EXISTS),
+    routes, readings,
     assessments: [...recorded.values()].sort((a, b) => a.assessment.section.localeCompare(b.assessment.section)),
     attributes: ATTRIBUTE_IDS.flatMap((id) => {
       const statement = statements.get(id);

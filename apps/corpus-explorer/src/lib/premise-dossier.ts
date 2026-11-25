@@ -1,3 +1,4 @@
+import { currentAssessment, type CurrentAssessment } from "./current-judgments";
 import { truthJson } from "./truth-cli";
 import type { CorpusStatement } from "./corpus";
 import type { ClosureReason } from "./site-state";
@@ -7,6 +8,8 @@ const attemptOutcomes = ["succeeded", "failed", "blocked", "superseded", "reject
 
 export type CorpusAttempt = {
   id: string;
+  label?: string;
+  current_assessment?: CurrentAssessment;
   statement_ids: string[];
   date: string;
   kind: (typeof attemptKinds)[number];
@@ -49,6 +52,8 @@ function oneOf<const T extends readonly string[]>(values: T, value: unknown): va
 }
 function attempt(value: unknown): value is CorpusAttempt {
   return record(value) && typeof value.id === "string" && strings(value.statement_ids)
+    && (value.label === undefined || typeof value.label === "string")
+    && (value.current_assessment === undefined || currentAssessment(value.current_assessment))
     && typeof value.date === "string" && oneOf(attemptKinds, value.kind) && oneOf(attemptOutcomes, value.outcome)
     && typeof value.summary === "string" && strings(value.evidence)
     && (value.blocker === undefined || typeof value.blocker === "string")

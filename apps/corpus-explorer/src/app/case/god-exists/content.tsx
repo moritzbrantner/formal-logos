@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { JudgmentReader } from "@/components/judgment-reader";
 import { treeHref } from "@/lib/argument-tree";
 import { casePremiseHref, type currentCase } from "@/lib/current-case";
 import { getBuildInfo, sourceUrl } from "@/lib/site-state";
@@ -38,7 +39,6 @@ function Assumption({ premise }: { premise: Premise }) {
 
 export function CaseOverview({ view }: { view: Case }) {
   const names = namesFor(view);
-  const target = view.premises.find((premise) => premise.statement.id === view.target.id);
   return <article className="max-w-5xl [overflow-wrap:anywhere]">
     <h1 className="font-serif text-4xl">The current case for God’s existence</h1>
     <p className="mt-4 text-xl">{view.target.paraphrase}</p>
@@ -49,9 +49,10 @@ export function CaseOverview({ view }: { view: Case }) {
       <p className="mt-3">{view.sense.definition}</p>
       <p className="mt-3"><Link className="link-quiet" href={`/definitions/${view.sense.id}`}>GOD_4 definition · {view.sense.id}</Link> · <a className="link-quiet" href={sourceUrl("corpus/disambiguations/god.json")}>Sense distinctions</a></p>
       <p className="mt-3">{view.established ? "Established under the recorded closure rules." : "God’s existence is not established under the recorded closure rules."} Conditional derivations establish their conclusions only under their premises.</p>
+      <p className="mt-3">Each provisional judgment below applies to its stated witnesses, assumptions and routes.</p>
       <p className="mt-3">Historical evidence and specifically Christian or Catholic identification remain deferred.</p>
-      <p className="mt-3">{target?.assessments.length ? `${target.assessments.length} recorded assessment excerpts are available.` : "Recorded assessment: unknown."} <Link className="link-quiet" href={`${casePremiseHref(view.target.id)}#assessments`}>Read assessments and rival analysis</Link>. These are separate research records, not a synthesized or endorsed overall judgment.</p>
     </section>
+    <JudgmentReader readings={view.readings} statementId={view.target.id} revision={view.revision} repositoryUrl={getBuildInfo().repositoryUrl} caseOverview />
     <section className="record-section" id="support-routes">
       <h2 className="eyebrow">Support routes</h2>
       <p className="mt-3">Directly assuming the target remains an explicit option alongside every conditional route below. Each bundle requires all its premises. Record order does not rank philosophical strength by cost, premise counts, source counts or dates.</p>
@@ -62,7 +63,7 @@ export function CaseOverview({ view }: { view: Case }) {
       <p className="mt-3">Every proposition in this case is linked below, with its complete support options, path to God’s existence, assessments and evidence. Order follows uses in this case; graph centrality is not philosophical warrant.</p>
       <ul className="mt-4">{view.premises.map((premise) => <li key={premise.statement.id} className="mt-3" id={`premise-${premise.statement.id}`}>
         <Link className="link-quiet" href={casePremiseHref(premise.statement.id)}>{premise.statement.label ?? premise.statement.paraphrase}</Link>
-        <p className="text-sm text-[var(--muted)]">{premise.usedBy.length} uses · {premise.established ? "Established" : "Not established"} · <Assumption premise={premise} /> · {premise.assessments.length ? "Recorded assessments available" : "Recorded assessment: unknown"}</p>
+        <p className="text-sm text-[var(--muted)]">{premise.usedBy.length} uses · {premise.established ? "Established" : "Not established"} · <Assumption premise={premise} /> · {premise.readings.length ? "Scoped research judgment available" : "No scoped current assessment"}</p>
       </li>)}</ul>
     </section>
     <section className="record-section">
@@ -82,6 +83,17 @@ export function CasePremiseDetail({ view, premise }: { view: Case; premise: Prem
     <Revision revision={view.revision} />
     <p className="mt-3">{premise.established ? "Established" : "Not established"} under the recorded closure rules. <Assumption premise={premise} /> Conditional derivations remain conditional on their premises.</p>
     <p className="mt-3"><Link className="link-quiet" href={`/dossiers/${premise.statement.id}`}>Full research dossier: sources, findings, objections, blockers and next tests</Link> · <Link className="link-quiet" href={treeHref(premise.statement.id)}>Explore connections</Link></p>
+    <JudgmentReader readings={premise.readings} statementId={premise.statement.id} revision={view.revision} repositoryUrl={getBuildInfo().repositoryUrl} />
+    {premise.revisions.length ? <section className="record-section">
+      <h2 className="eyebrow">Downstream reassessment</h2>
+      {premise.revisions.map(({ change, attempt_id, consumer }) => <div className="mt-3" key={`${attempt_id}/${change.revision}`}>
+        <h3 className="font-medium">{change.kind.replaceAll("_", " ")} · {change.revision}</h3>
+        <p className="mt-2">{change.reason}</p>
+        {change.statement_ids.includes(premise.statement.id) ? <p className="mt-2">This revision explicitly covers the proposition.</p> : null}
+        {consumer ? <p className="mt-2 text-sm">Recorded {consumer.tier === "premise_use" ? "premise use" : `potential use (${consumer.tier.replaceAll("_", " ")})`} · {consumer.disposition}. {consumer.reason}</p> : null}
+        <p className="mt-2 text-sm"><Link className="link-quiet" href={`/attempts/${attempt_id}`}>Declaring attempt</Link> · Earlier evidence: {change.previous}</p>
+      </div>)}
+    </section> : null}
     <section className="record-section">
       <h2 className="eyebrow">Connection to God’s existence</h2>
       <p className="mt-3">One exact path in the God-existence case; shared uses are listed separately. These connections do not rank warrant.</p>
@@ -113,16 +125,16 @@ export function CasePremiseDetail({ view, premise }: { view: Case; premise: Prem
       </li>)}</ul>
       {!premise.alternatives.length ? <p className="mt-3">No expanded verified alternative reported.</p> : null}
     </section>
-    <section className="record-section" id="assessments">
-      <h2 className="eyebrow">Recorded assessments and rival analysis</h2>
-      <p className="mt-3">Separate records remain separate, including competing judgments. A note mentioning this proposition or its argument supplies context; an excerpt need not assess every mentioned proposition. These are not synthesized or endorsed judgments. Follow the cited section for full reasons, objections and revision conditions. Dates do not rank warrant.</p>
+    <section className="record-section" id="note-excerpts">
+      <h2 className="eyebrow">Related note excerpts and rival analysis</h2>
+      <p className="mt-3">These notes mention a connected record. Follow each section for its position, reasons and objections within its own scope.</p>
       {premise.assessments.map((assessment) => <div className="mt-4" key={`${assessment.section}:${assessment.line}`}>
         <h3 className="font-medium">{assessment.heading} · {assessment.kind === "assessment" ? "Recorded assessment" : "Rival analysis"}</h3>
         <blockquote className="mt-2 whitespace-pre-wrap border-l border-[var(--line)] pl-4">{assessment.excerpt}</blockquote>
         <p className="mt-2 text-sm"><a className="link-quiet" href={sourceUrl(assessment.path, assessment.line)}>{assessment.section}, line {assessment.line}</a> · {assessment.date ?? "Undated"} ({assessment.dated_by})</p>
         <p className="text-sm">Explicitly mentioned records: {assessment.matched_record_ids.join(", ")}</p>
       </div>)}
-      {!premise.assessments.length ? <p className="mt-3">Recorded assessment: unknown. No matching excerpt retrieved; that absence says nothing about warrant.</p> : null}
+      {!premise.assessments.length ? <p className="mt-3">No matching note excerpt retrieved.</p> : null}
     </section>
     <section className="record-section">
       <h2 className="eyebrow">Recorded findings and objections</h2>

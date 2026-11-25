@@ -44,8 +44,8 @@ test("premise dossier: statement navigation, durable attempt evidence and route 
   const page = await browser.newPage({ viewport: { width: 1280, height: 900 } });
   const base = `${server.url}${basePath.replace(/^\//, "")}${basePath ? "/" : ""}`;
   await page.goto(`${base}statements/${premise}/`);
-  await page.getByRole("link", { name: "Research progress, senses, rivals and attempt log →", exact: true }).click();
-  await page.waitForURL((url) => url.pathname.endsWith(`/dossiers/${premise}/`) && url.hash === "#research-comparison");
+  await page.getByRole("link", { name: "Research judgments, senses, rivals and attempt log →", exact: true }).click();
+  await page.waitForURL((url) => url.pathname.endsWith(`/dossiers/${premise}/`) && url.hash === "#assessments");
   await page.getByRole("heading", { name: "Premise dossier", exact: true }).waitFor();
   expect(await page.getByRole("region", { name: "Current status", exact: true }).innerText()).toContain("not established");
   const attempts = page.getByRole("region", { name: "Attempt log", exact: true });
@@ -72,5 +72,27 @@ test("premise dossier: statement navigation, durable attempt evidence and route 
   await page.getByRole("heading", { name: "Attempt log", exact: true }).waitFor();
   await page.setViewportSize({ width: 390, height: 844 });
   expect(await page.locator("article").evaluate((element) => element.scrollWidth <= element.clientWidth + 1 && element.getBoundingClientRect().right <= window.innerWidth + 1)).toBe(true);
+  await page.close();
+}, 60000);
+
+test("switching case judgments exposes the common-giver rival, its next test and the premise’s existence routes", async () => {
+  const page = await browser.newPage({ viewport: { width: 390, height: 844 } });
+  const base = `${server.url}${basePath.replace(/^\//, "")}${basePath ? "/" : ""}`;
+  await page.goto(`${base}case/god-exists/`);
+  const reader = page.getByRole("region", { name: "Current research judgments" });
+  await reader.getByLabel("Choose a recorded judgment").selectOption("efe9809e-be74-5683-b722-c2694647b840");
+  await reader.getByText(/Distinct ultimate sources whose products interact/).waitFor();
+  await reader.getByText(/For the rim and spokes/).waitFor();
+  const premiseHref = `${basePath}/case/god-exists/premises/0881e859-c4c3-53ff-9bec-b61294e12d51/`;
+  await reader.locator(`a[href="${premiseHref}"]`).first().waitFor();
+  const route = reader.locator('a[href*="#argument-"]').first();
+  const href = await route.getAttribute("href");
+  expect(href).toBeTruthy();
+  const anchor = new URL(href!, page.url()).hash;
+  expect(await page.locator(anchor).count()).toBe(1);
+  expect(await reader.evaluate((section) => section.scrollWidth <= section.clientWidth + 1)).toBe(true);
+  await reader.locator(`a[href="${premiseHref}"]`).first().click();
+  await page.waitForURL((url) => url.pathname === premiseHref);
+  await page.getByRole("region", { name: "Current research judgments" }).getByText(/Distinct ultimate sources whose products interact/).waitFor();
   await page.close();
 }, 60000);

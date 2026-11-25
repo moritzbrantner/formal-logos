@@ -3,10 +3,8 @@ import { currentCase, GOD_EXISTS, type AssessmentBatch, type RecordedAssessment 
 import { getCorpus } from "./corpus";
 import { getDossiers } from "./premise-dossier";
 import { getBuildInfo, getFrontierReport } from "./site-state";
+import { currentAssessment, record, revisionImpact } from "./current-judgments";
 
-function record(value: unknown): value is Record<string, unknown> {
-  return typeof value === "object" && value !== null && !Array.isArray(value);
-}
 function assessment(value: unknown): value is RecordedAssessment {
   return record(value) && (value.kind === "assessment" || value.kind === "rival_analysis")
     && ["section", "path", "heading", "dated_by", "excerpt"].every((key) => typeof value[key] === "string")
@@ -15,17 +13,24 @@ function assessment(value: unknown): value is RecordedAssessment {
     && Array.isArray(value.matched_record_ids) && value.matched_record_ids.every((id) => typeof id === "string");
 }
 export function parseAssessmentBatch(value: unknown): AssessmentBatch {
-  if (!record(value) || !record(value.statements)) {
+  if (!record(value) || !record(value.statements) || !Array.isArray(value.current_assessments)
+    || !Array.isArray(value.revision_impacts) || !value.revision_impacts.every(revisionImpact)) {
     throw new Error("Invalid recorded-assessment report");
   }
-  const result: AssessmentBatch = {};
+  const statements: AssessmentBatch["statements"] = {};
   for (const [id, entries] of Object.entries(value.statements)) {
     if (!Array.isArray(entries) || !entries.every(assessment)) {
       throw new Error(`Invalid recorded assessments for ${id}`);
     }
-    result[id] = entries;
+    statements[id] = entries;
   }
-  return result;
+  const current_assessments = value.current_assessments.map((entry: unknown) => {
+    if (!currentAssessment(entry) || !("attempt_id" in entry) || typeof entry.attempt_id !== "string") {
+      throw new Error("Invalid scoped current assessment");
+    }
+    return { ...entry, attempt_id: entry.attempt_id };
+  });
+  return { statements, current_assessments, revision_impacts: value.revision_impacts };
 }
 
 /** One bounded batch: no full research brief or evidence graph per premise. */

@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { JudgmentReader } from "@/components/judgment-reader";
+import { getBuildInfo } from "@/lib/site-state";
 import { ResearchComparison } from "@/components/research-comparison";
 import { notFound } from "next/navigation";
 
@@ -28,6 +30,15 @@ export default async function DossierPage({ params }: { params: Promise<{ statem
   const arguments_ = corpus.arguments.filter((entry) => dossier.argument_ids.includes(entry.id));
   const relations = corpus.relations.filter((entry) => dossier.alternative_relation_ids.includes(entry.id) || dossier.objection_relation_ids.includes(entry.id));
   const status = dossier.closure ?? (dossier.frontier ? `open · ${dossier.frontier.depth}` : "not on the frontier");
+  const readings = dossier.attempts.flatMap((attempt) => {
+    const current = attempt.current_assessment;
+    if (!current?.statement_ids.includes(statementId)) return [];
+    return [{
+      current: { ...current, attempt_id: attempt.id }, title: attempt.label ?? current.scope, blocker: attempt.blocker,
+      propositions: current.statement_ids.map((id) => ({ id, label: nameOf(id), href: `/dossiers/${id}` })),
+    }];
+  }).sort((a, b) => b.current.date.localeCompare(a.current.date) || a.current.attempt_id.localeCompare(b.current.attempt_id));
+  const build = getBuildInfo();
   return (
     <article className="max-w-5xl [overflow-wrap:anywhere]">
       <Link className="link-quiet text-sm" href={`/statements/${statementId}`}>← Statement and proof context</Link>
@@ -41,6 +52,7 @@ export default async function DossierPage({ params }: { params: Promise<{ statem
         <p className="mt-3 font-mono text-sm break-all">{statement.lean_declaration ?? "No Lean declaration recorded."}</p>
         <p className="mt-3 text-sm text-[var(--muted)]">Attempts record work and its outcome. They do not prove a statement or change frontier closure.</p>
       </section>
+      <JudgmentReader readings={readings} statementId={statementId} revision={build.commit} repositoryUrl={build.repositoryUrl} />
       <section className="record-section" aria-labelledby="dossier-sources">
         <h2 id="dossier-sources" className="eyebrow">Source readings</h2>
         {claims.length ? <ul className="mt-4 grid gap-4">{claims.map((claim) => <li key={claim.id}>

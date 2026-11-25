@@ -6,6 +6,8 @@ import { currentCase, casePremiseHref, GOD_EXISTS, GOD_SENSE, ATTRIBUTE_IDS, typ
 import { getCorpus, type Corpus, type CorpusArgument } from "./corpus";
 import { truthJson } from "./truth-cli";
 import type { FrontierReport } from "./site-state";
+import type { ScopedAssessment } from "./current-judgments";
+import DossierPage from "../app/dossiers/[statementId]/page";
 import { getCurrentCase, parseAssessmentBatch } from "./current-case-data";
 
 const argument = (id: string, premises: string[], conclusion: string): CorpusArgument => ({
@@ -30,8 +32,9 @@ const report = truthJson(["frontier", "--fixture", "-", "--frontier-root", GOD_E
   transcription_flags: [{ result_id: "result-transcription", argument_id: "transcription", proof_steps: 1,
     single_application_of: "fixture", goal_consequent_premises: [] }],
 })) as FrontierReport;
+const emptyBatch = { statements: {}, current_assessments: [], revision_impacts: [] };
 const project = (overrides: Partial<Parameters<typeof currentCase>[0]> = {}) => currentCase({
-  corpus, report, dossiers: {}, assessments: {}, revision: "fixture-revision", ...overrides,
+  corpus, report, dossiers: {}, assessments: emptyBatch, revision: "fixture-revision", ...overrides,
 });
 const assessment = (excerpt: string, section: string): RecordedAssessment => ({
   kind: "assessment", section, path: "docs/notes/fixture.md", heading: "Provisional judgment", line: 4,
@@ -87,13 +90,56 @@ test("cost never ranks strength or removes routes", () => {
 
 test("conflicting assessments remain separate; absent assessments stay unknown", () => {
   const entries = [assessment("Positive warrant", "note#positive"), assessment("Premise disputed", "note#disputed")];
-  const view = project({ assessments: { shared: entries, "historical-evidence": [assessment("Downstream", "note#history")] } });
+  const view = project({ assessments: { ...emptyBatch, statements: { shared: entries, "historical-evidence": [assessment("Downstream", "note#history")] } } });
   expect(view.premises.find((premise) => premise.statement.id === "shared")?.assessments).toEqual(entries);
   expect(view.premises.find((premise) => premise.statement.id === "other")?.assessments).toEqual([]);
   expect(view.assessments).toHaveLength(2);
   expect(view.assessments.map((entry) => entry.assessment.excerpt).sort()).toEqual(["Positive warrant", "Premise disputed"]);
-  expect(parseAssessmentBatch({ statements: { shared: entries, other: [] } })).toEqual({ shared: entries, other: [] });
+  expect(parseAssessmentBatch({ ...emptyBatch, statements: { shared: entries, other: [] } })).toEqual({ ...emptyBatch, statements: { shared: entries, other: [] } });
   expect(() => parseAssessmentBatch({ statements: { shared: [{ excerpt: "Missing provenance" }] } })).toThrow();
+});
+
+test("explicit scopes drive the overview, premise judgments, shared routes and revision dispositions", () => {
+  const current: ScopedAssessment = {
+    attempt_id: "finding", statement_ids: ["shared", "other"], scope: "Two premise comparison",
+    assessment: "The common-source advantage depends on the producer. Partitioned sources survive.",
+    next_test: "Trace each actual contribution.", note: "docs/notes/fixture.md#common-source", date: "2026-11-03",
+    review: "accepted_qualified", publication: "published", reviewed_revision: "c".repeat(40),
+    evidence: "Reviewer accepted the scoped result.", supersedes: "Narrows the previous inference.",
+  };
+  const batch = parseAssessmentBatch({ statements: { shared: [assessment("Incidental excerpt only", "note#context")] },
+    current_assessments: [current, { ...current, attempt_id: "other-reading", assessment: "A different interpretation.", scope: "Alternative reading" }],
+    revision_impacts: [{ attempt_id: "revision-attempt", change: { kind: "judgment", revision: "narrower-scope",
+      previous: "Earlier record", reason: "The local case leaves the global bridge open.", statement_ids: ["foundation"] },
+      consumers: [{ consumer: "statements:shared", tier: "premise_use", disposition: "retained", reason: "The narrower claim suffices." }] }],
+  });
+  const view = project({ assessments: batch });
+  const overview = renderToStaticMarkup(createElement(CaseOverview, { view }));
+  expect(overview).toContain("No current assessment explicitly covers this proposition.");
+  expect(overview).toContain(current.assessment);
+  expect(overview).toContain(current.next_test);
+  expect(overview).toContain('value="other-reading"');
+  expect(overview.split('value="finding"')).toHaveLength(2);
+  expect(overview).not.toContain("Incidental excerpt only");
+  expect(view.readings[0].routeGroups?.map(({ propositionIds, routes }) => [propositionIds, routes.map((link) => link.id)]))
+    .toEqual([[["shared", "other"], ["route-a", "route-b"]]]);
+  const shared = view.premises.find((p) => p.statement.id === "shared")!;
+  expect(shared.readings).toHaveLength(2);
+  expect(view.premises.find((p) => p.statement.id === "foundation")?.readings).toEqual([]);
+  const html = renderToStaticMarkup(createElement(CasePremiseDetail, { view, premise: shared }));
+  for (const text of [current.assessment, current.scope, current.next_test, current.evidence, current.note,
+    "/attempts/finding", current.reviewed_revision, "The narrower claim suffices.", "The local case leaves the global bridge open."]) {
+    expect(html).toContain(text);
+    expect(html.indexOf(text)).toBeLessThan(html.indexOf("Incidental excerpt only"));
+  }
+  expect(view.premises.find((p) => p.statement.id === "foundation")?.revisions).toHaveLength(1);
+  expect(view.premises.find((p) => p.statement.id === "other")?.revisions).toEqual([]);
+  const proposed = project({ assessments: { ...emptyBatch, current_assessments: [{ ...current, review: "unreviewed" }] } });
+  const proposalHtml = renderToStaticMarkup(createElement(CaseOverview, { view: proposed }));
+  expect(proposalHtml).toContain("proposed revision");
+  expect(proposalHtml).not.toContain("reviewed revision");
+  expect(() => parseAssessmentBatch({ ...batch, current_assessments: [{ ...current, scope: undefined }] })).toThrow();
+  expect(() => parseAssessmentBatch({ ...batch, revision_impacts: [{ change: {} }] })).toThrow();
 });
 
 test("shared findings render once without dropping their premise associations", () => {
@@ -114,7 +160,7 @@ test("shared findings render once without dropping their premise associations", 
 
 
 test("compact overview links every proposition and preserves complete immediate root bundles", () => {
-  const view = project({ assessments: { shared: [assessment("Distinct recorded judgment", "note#judgment")] } });
+  const view = project({ assessments: { ...emptyBatch, statements: { shared: [assessment("Distinct recorded judgment", "note#judgment")] } } });
   const html = renderToStaticMarkup(createElement(CaseOverview, { view }));
   expect(html).not.toContain("<details");
   expect(html).not.toContain("Distinct recorded judgment");
@@ -131,7 +177,7 @@ test("compact overview links every proposition and preserves complete immediate 
 
 test("proposition pages expose all expanded bundles and provenance with canonical evidence links", () => {
   const entries = [assessment("Positive warrant", "note#positive"), assessment("Premise disputed", "note#disputed")];
-  const view = project({ assessments: { shared: entries } });
+  const view = project({ assessments: { ...emptyBatch, statements: { shared: entries } } });
   for (const premise of view.premises) {
     const html = renderToStaticMarkup(createElement(CasePremiseDetail, { view, premise }));
     expect(html).not.toContain("<details");
@@ -161,6 +207,11 @@ test("proposition pages expose all expanded bundles and provenance with canonica
 
 test("real case preserves destinations for every support and evidence record", () => {
   const view = getCurrentCase();
+  const commonGiver = "0881e859-c4c3-53ff-9bec-b61294e12d51";
+  const reading = view.premises.find((p) => p.statement.id === commonGiver)?.readings.find((item) => item.current.attempt_id === "efe9809e-be74-5683-b722-c2694647b840");
+  expect(reading).toBeDefined();
+  expect(reading?.current.note).toContain("root-route-modal-load.md");
+  expect(view.premises.find((p) => p.statement.id === GOD_EXISTS)?.readings.length).toBeGreaterThan(0);
   const corpus = getCorpus();
   const scope = new Set(view.premises.map((premise) => premise.statement.id));
   const resultIds = new Set(corpus.results.map((result) => result.id));
@@ -185,4 +236,15 @@ test("real case preserves destinations for every support and evidence record", (
       for (const attempt of premise.attempts) { expect(html).toContain(`href="/attempts/${attempt.id}"`); }
     }
   }
+}, 120_000);
+
+
+test("the ordinary premise dossier shows the current common-giver comparison and next test", async () => {
+  const statementId = "0881e859-c4c3-53ff-9bec-b61294e12d51";
+  const html = renderToStaticMarkup(await DossierPage({ params: Promise.resolve({ statementId }) }));
+  expect(html).toContain("Distinct ultimate sources whose products interact");
+  expect(html).toContain("Next test");
+  expect(html).toContain("For the rim and spokes");
+  expect(html).toContain('href="/attempts/efe9809e-be74-5683-b722-c2694647b840"');
+  expect(html.indexOf("Current research judgments")).toBeLessThan(html.indexOf("Source readings"));
 }, 120_000);
