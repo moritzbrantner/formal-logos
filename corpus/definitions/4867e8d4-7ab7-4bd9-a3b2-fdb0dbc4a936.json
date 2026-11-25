@@ -1,0 +1,9 @@
+{
+  "id": "4867e8d4-7ab7-4bd9-a3b2-fdb0dbc4a936",
+  "label": "Evidence about the production of a particular epistemic verdict",
+  "term": "Basis-specific audit of a verdict's production",
+  "definition": "For a supplied reliability frame an audit assigns each basis its cross-history judgment profile and a report about how that basis produced its verdict in the target class. The interpreted report says a cue determined the output while bypassing the specified comparison. A primitive relation says the subject actually uses a reporting basis for this report and the grounds it supplies are adequate without the operation under investigation. The audited-bypass condition requires acceptance and warrant for the report and an undefeated supporting basis standing in this relation. The policy adds fixed correctness and cross-history variation before it treats the target basis as undercut.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Logic.DarwinianEpistemicDebunking.BasisDefeat.Audit",
+  "note": "Analyst interpretation for #1615. The report is a supplied content. Neither its intended subject matter nor genuinely independent provenance follows from a label or different basis identity. The investigator must identify the operation, history variation, relied-on sources, residual proxy information and admissible case class. No undercut, distribution, reliability or global conclusion is built into report warrant."
+}

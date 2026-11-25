@@ -309,6 +309,7 @@ public import TruthCore.Results.Causality.PresentReceipt.Solution
 public import TruthCore.Results.Causality.PreservationMeaning.Solution
 public import TruthCore.Results.Causality.PrimaViaCertificates.Solution
 public import TruthCore.Results.Causality.PriorityInBeing.Solution
+public import TruthCore.Results.Causality.ProductiveDeletion.Solution
 public import TruthCore.Results.Causality.ProductiveStore.Solution
 public import TruthCore.Results.Causality.ProductiveSustained.Solution
 public import TruthCore.Results.Causality.ProtectiveProcess.Solution

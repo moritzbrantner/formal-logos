@@ -1,0 +1,11 @@
+{
+  "id": "63dccec0-fe07-4aee-8adf-c35d580bfb54",
+  "label": "Trace covered productive ancestry from source-specific loss of inductive supply",
+  "argument_id": "db9188dc-8203-4e7f-b7fc-17255e3da534",
+  "challenge_module": "TruthCore.Results.Causality.ProductiveDeletion.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ProductiveDeletion.Solution",
+  "theorem": "TruthCore.Results.Causality.ProductiveDeletion.ancestryFromLosses",
+  "comparator_config": "results/63dccec0-fe07-4aee-8adf-c35d580bfb54/comparator.json",
+  "status": "solution-present",
+  "description": "Induction on supply preserves every derivation with no positive selected path to its endpoint. A lost token therefore has such a path through groups with originally supplied contributors. Coherence on the exercised groups gives the actual occurrences needed for each Step, and ownership identifies the initial bearer. The existing covered-history transfer argument can consume this ancestry with its separate target coverage and causal-credit premises."
+}

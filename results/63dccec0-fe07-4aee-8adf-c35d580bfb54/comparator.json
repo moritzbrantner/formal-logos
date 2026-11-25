@@ -1,0 +1,16 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.ProductiveDeletion.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ProductiveDeletion.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.ProductiveDeletion.ancestryFromLosses",
+    "TruthCore.Results.Causality.ProductiveDeletion.pathOfLoss",
+    "TruthCore.Results.Causality.ProductiveDeletion.selfInputSurvives",
+    "TruthCore.Results.Causality.ProductiveDeletion.pressLoss"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "enable_nanoda": true
+}
