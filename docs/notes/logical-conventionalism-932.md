@@ -5,6 +5,7 @@ Draft analyst investigation, attribution deferred. Baseline main
 `eeb7e0e7225dd0dc37c851effa53467a62b0b6fe`. This branch is independent of
 the intake edit: the question is taken from it, not a dependency on its
 unmerged text. No new graph edge, floor or proof status is claimed.
+[Research attempt and scoped proposed assessment](../../corpus/attempts/1ecb1a9a-ba62-4cf6-a7ee-a114f61542b5.json).
 Local checkout, installed conventions, executable dossier/novelty/semantic
 checks and independent worker challenge are unavailable in this connector
 session. This is a provisional research draft, not an accepted judgment.
@@ -474,7 +475,7 @@ replacement instantiates at False and supplies no witness of False.
 The successful transition versus the attempted replacement is
 assessable in the fixed encoded logic; authority outside that logic,
 an actual subject's understanding and warrant require their own
-bridges. No inference to categorical F6, immaterial intellect, God
+bridges. No inference to categorical authority, immaterial intellect, God
 or a root premise discharge is delivered.
 
 ## Reproduction and handoff
