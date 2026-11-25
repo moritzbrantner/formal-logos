@@ -84,10 +84,11 @@ the complete bundle. Its first root need not be the thinker. God-existence
 in turn supplies one input of the Catholicism skeleton. [Direct-esse argument](../../corpus/arguments/fc46b7f9-32d0-416d-8f72-5bc908992f30.json)
 [Root skeleton](../../corpus/arguments/CATHOLICISM-SKELETON.json)
 
-**Provisional assessment.** A felt pain in deliberate reflection gives
-prima facie reason to ascribe that episode to someone because the pain is
-presented from a particular point of view. This supports a thin bearer reading in such
-cases. Extending it to every experienced thought requires a substantive
+**Provisional assessment.** Consider a conscious episode whose content is the denial
+“no thought is experienced.” The denial itself is presented from a particular
+point of view. That first-person
+presentation gives prima facie reason to ascribe this very thought to a bearer.
+Extending it to every experienced thought requires a substantive
 account of why having a point of view entails having a bearer. The impersonal
 event account locates perspective in the organization of the experiencing
 event itself. Denying an enduring self leaves the thin bearer premise intact
