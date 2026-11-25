@@ -3804,8 +3804,26 @@ and preserve their accepted history. The focused fresh slices address
 the owner's same three-argument question; they are not claimed as
 independent argument families. Author review checks the actual-source,
 same-recipient, good, modal and primitive-stopping boundaries above.
-Independent review of the complete integrated outcome and actual PR
-body is pending; prior accepted checkpoints retain their exact scope.
+Independent reviewer `/root/three_arguments_review` accepted the complete
+integrated outcome, both companion additions, all three current assessments
+and the actual proposed PR body with qualifications at local
+`e215162f2988e7386f99e6ec436ad429dff0f839`, tree
+`3692e0165b53c1e11821afc5104d2758aab2fff0`. No substantiated P1/P2 finding
+or semantic repair was required. The
+[published reviewed snapshot](https://github.com/moritzbrantner/formal-logos/commit/2f0c8a902e62efec133f776e7abe52e2bf7729d9)
+has exactly the same tree and preserves the prior PR head and current main
+as parents. Reviewed PR-body SHA-256:
+`4da631c4c7eed71af980a63864d0cbea19c69c90c38f8cf710afce4819f96ffc`.
+Later changes reconcile review/publication disposition only. Acceptance
+covers the conditional explanatory comparison, source interpretation and
+quantifier audit. It establishes neither ultimate constitution, actual
+practical governance, jointly admissible metaphysical alternatives,
+complete explanatory equivalence nor the exclusive intellectual bridge.
+The replacement table remains hand-checked and uncertified. Corpus,
+offline attribution, generated docs/imports, links/current references and
+whitespace checks pass; unchanged formal evidence is reused. Draft #1962
+records delivered-head CI separately. Prior accepted checkpoints retain
+their exact scope.
 
 ## Research attempts citing this note
 
