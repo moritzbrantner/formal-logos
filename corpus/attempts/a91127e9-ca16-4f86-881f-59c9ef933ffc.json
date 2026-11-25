@@ -18,5 +18,24 @@
     "PR-1742",
     "e167d4d4-2be0-5820-9cbc-8c6ccb2bf473",
     "PR-1966"
-  ]
+  ],
+  "current_assessment": {
+    "date": "2026-11-25",
+    "statement_ids": [
+      "a7bbd2fd-242c-5097-a9a3-581d25835890",
+      "20babef7-6ae7-4b48-b72a-f417e8e63136",
+      "dc397705-d727-419e-92f9-65d44e1ff15d",
+      "b19ffd92-01bd-5c0b-9643-e7407137ea5e",
+      "0bdcf366-29c7-5d45-b603-5c929dcad976"
+    ],
+    "scope": "Whole-first roothood and the intrinsic reason for existence",
+    "assessment": "A concrete whole supplying its parts qualifies as a relative root when it has no incoming cause in the relevant relation. A ground posterior to the whole in a strict priority order cannot explain that whole in the same order. The joint omission test leaves nonposterior intrinsic content open for both whole-first and subsistent-act accounts.",
+    "next_test": "The subsequent duet comparison individuates an activity by provenance. It leaves open whether this individual’s nature explains why its act is exercised. A whole supplying its parts qualifies as a relative root given that it has no incoming cause in the selected relation. Reopen on warranted existential nature-content for this bearer or independent evidence that a constituent supplies this whole’s existence. The connection from intrinsic adequacy a7bbd2fd to a God-existence argument remains planned.",
+    "note": "docs/notes/unique-feedback-explanation-311.md#checkpoint-d-existential-import-after-excluding-posterior-grounds",
+    "reviewed_revision": "7e50b076da6fca5837ba3497f5ac77da731f937a",
+    "review": "accepted_qualified",
+    "publication": "published",
+    "evidence": "Independent review of checkpoints A–D at cc4499f39f6a57ebc98ac80b8709c60729cc1f1d reproduced all four executable comparisons. Targeted review accepted the modal, joint-retention, whole-first, and comparative-warrant corrections at 7e50b076da6fca5837ba3497f5ac77da731f937a. The duet has its own reviewed disposition. PR-1969.",
+    "supersedes": "Records the completed scoped review of the earlier draft."
+  }
 }
