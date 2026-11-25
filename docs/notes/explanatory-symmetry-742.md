@@ -442,86 +442,15 @@ On the impersonal proposal the source of continued actuality is the concrete bas
 
 Take just the obstruction evidence. Use four equally weighted background ice configurations. In a specified lake history the ice route reaches the obstruction site in all four, as required by that particular reconstruction. In a marine history it does so in one of four, incidentally. A report classifies the route correctly in three of four equally weighted transmission conditions, independently of configuration. Both hypotheses permit both reports. Use initial lake:marine odds of 2:3. The counts and exclusive binary choice below are analyst inputs for testing a dependency. They estimate neither the geological background frequency nor Darwin's probabilities. Compare what a reliable route can accomplish *before* choosing any one successful outcome.
 
-```python
-from collections import Counter
-
-# Two lake copies, three sea copies; four terrain and four reporting states each.
-cases = []
-for cause in ("lake", "lake", "sea", "sea", "sea"):
-    for terrain in range(4):
-        crosses = cause == "lake" or terrain == 0
-        for noise in range(4):
-            report = crosses != (noise == 0)
-            cases.append((cause, report))
-counts = Counter(cases)
-
-def judgment(report):
-    return "lake" if counts["lake", report] > counts["sea", report] else "sea"
-
-# Actions available at the source: omit support, continue without a report,
-# or continue with a report. Only an already living recipient can continue.
-def episode(action, report, *, alive=True, supplied_answer=None):
-    if not alive or action == "omit":
-        return None
-    if supplied_answer is not None:
-        return supplied_answer  # the recipient takes the supplied answer directly
-    if action == "silent":
-        return "sea"   # retain the initial judgment
-    return judgment(report)
-
-def gain(action):
-    # Beneficiary-specific error repairs less new errors, relative to retaining "sea".
-    total = 0
-    for cause, report in cases:
-        answer = episode(action, report)
-        if answer is not None:
-            total += int(answer == cause) - int(cause == "sea")
-    return total
-
-options = ("omit", "silent", "open")
-scores = {action: gain(action) for action in options}
-best = {action for action in options if scores[action] == max(scores.values())}
-assert best == {"open"}  # unique for this table
-proposal, = best
-assert [gain(a) for a in options] == [0, 0, 6]
-assert [counts[c, r] for c in ("lake", "sea") for r in (True, False)] == [24, 8, 18, 30]
-
-# In the selected natural history, upkeep and transmission both operate.
-def natural(upkeep, transmission):
-    if not upkeep:
-        return "omit"
-    return "open" if transmission else "silent"
-
-def exercise(instruction, *, governed, upkeep=True, transmission=True):
-    if governed:
-        if instruction == "omit":
-            return "omit"
-        return natural(upkeep, transmission and instruction == "open")
-    return natural(upkeep, transmission)
-
-for governed in (False, True):
-    action = exercise(proposal, governed=governed)
-    assert [episode(action, r) for r in (True, False)] == ["lake", "sea"]
-    assert [episode(action, r, supplied_answer="lake") for r in (True, False)] == ["lake", "lake"]
-    assert episode(action, True, alive=False) is None
-    assert episode(exercise(proposal, governed=governed, transmission=False), True) == "sea"
-    assert episode(exercise(proposal, governed=governed, upkeep=False), True) is None
-assert episode(exercise("omit", governed=True), True) is None
-assert episode(exercise("omit", governed=False), True) == "lake"
-
-# An outside comparison can supply the same answers in every history.
-for _, report in cases:
-    cue = judgment(report)
-    assert episode("open", report, supplied_answer=cue) == episode("open", report)
-```
+The Lean model enumerates the 80 histories from those inputs. It counts corrections relative to retaining the marine answer and checks what changes when the recipient copies a verdict or the source bypasses its instruction. [Sample and scoring rules](../../TruthCore/History/GlenRoyCorrection.lean#L27) · [Report counts, gains and interventions](../../TruthCore/History/GlenRoyCorrection.lean#L77)
 
 A positive report moves lake:marine odds from 2:3 to 24:18, and a negative one to 8:30. The open policy repairs 24 initial errors and introduces 18. It can mislead in precisely the same way under either origin. If ice crosses just as often in marine histories as in lake histories, the reports have equal likelihoods and the initial marine preference survives. If the report is independent of the crossing under the same reporting process, it likewise gives no tilt. A recipient retaining the initial marine preference then gives the same answer with or without transmission. All three actions score zero, including omission by convention. The score gives no reason to withdraw upkeep or to select any one of the tied actions. A practical or biological function of believing one thing would leave both likelihoods unchanged. [Fallible correction and its independent feedback assumptions](fallible-correction-931.md#the-positive-result)
 
-The accuracy score also gives six net corrections if an outside observer evaluates each report and supplies the resulting answer to a recipient who simply repeats it. The last loop matches the outputs in all 80 histories. Fix the supplied answer at “lake” and change the report reaching the recipient: the recipient who repeats the answer keeps saying “lake,” whereas the one who compares the report changes judgment. The score therefore measures accuracy. Crediting the recipient with exercising judgment also requires evidence about how the answer was reached. This condition applies under either origin.
+The accuracy score also gives six net corrections if an outside observer evaluates each report and supplies the resulting answer to a recipient who simply repeats it. The `copiedVerdict` proof matches the outputs for every report, including all 80 histories in this comparison. Fix the supplied answer at “lake” and change the report reaching the recipient: the recipient who repeats the answer keeps saying “lake,” whereas the one who compares the report changes judgment. The score therefore measures accuracy. Crediting the recipient with exercising judgment also requires evidence about how the answer was reached. This condition applies under either origin.
 
 In the impersonal run, upkeep carries the same already individuated organism forward and transmission enables comparison. In the purposive run the governing instruction is computed by comparing effects on this recipient before individual outcomes are known in the calculation. It selects provision over omission and over sustaining him without access. The comparison scores the improvement in this recipient’s answers. It can favor providing a report even when the resulting judgment is false in a particular case. The broader proposed good includes Darwin exercising his own judgment. Whether he did so requires the evidence about his reasoning above. The no-recipient state scores zero for **this opportunity to repair error**. That convention assigns no overall value to a life or to its omission. Withdrawing upkeep versus interrupting the letter separates persistence from access. Both the organism's initial identity and the underlying productive ground are assumed. An action that permits continuing life in the model does not demonstrate metaphysical dependence for existence. The computation interprets only the displayed steps, including a simple majority estimate with calibrated counts. Personal apprehension, understanding and normative authority have to be defended in the two accounts.
 
-Holding the content of the report fixed while forcing the answer reproduces the observed concession. Vary the report under that bypass and the conclusion persists. Darwin's discriminating assessments provide positive evidence against *indiscriminate* uptake, without making this intervention a historical observation. At the source the same assessment of which continuation serves the good can accompany either production route. The ordinary impersonal run has no need to make this assessment at all. Replacing the instruction with omission blocks only the governed exercise. In the other run even an intellect accurately contemplating the proposal at this very source could accompany the independent productive disposition. The code tests which input the effect uses. It neither observes a switch in God nor requires that omission is a metaphysically possible divine act. A directly value-sensitive disposition could also select by the very same comparative gains in every offered case. Changing which plan suits the good would then discriminate the ordinary upkeep rule from that disposition, while leaving the disposition and practical knowledge aligned. The distinctive purposive claim concerns **what makes the exercise this exercise**, beyond output or reliable conformity. [Common-source control](#what-transfers-from-belief-to-action-to-an-origin) · [Limits on recovering a history from matched outputs](reason-response-history.md)
+Holding the content of the report fixed while forcing the answer reproduces the observed concession. Vary the report under that bypass and the conclusion persists. Darwin's discriminating assessments provide positive evidence against *indiscriminate* uptake, without making this intervention a historical observation. At the source the same assessment of which continuation serves the good can accompany either production route. The ordinary impersonal run has no need to make this assessment at all. Replacing the instruction with omission blocks only the governed exercise. In the other run even an intellect accurately contemplating the proposal at this very source could accompany the independent productive disposition. The source intervention tests which input the effect uses. It neither observes a switch in God nor requires that omission is a metaphysically possible divine act. A directly value-sensitive disposition could also select by the very same comparative gains in every offered case. Changing which plan suits the good would then discriminate the ordinary upkeep rule from that disposition, while leaving the disposition and practical knowledge aligned. The distinctive purposive claim concerns **what makes the exercise this exercise**, beyond output or reliable conformity. [Common-source control](#what-transfers-from-belief-to-action-to-an-origin) · [Limits on recovering a history from matched outputs](reason-response-history.md)
 
 ### What this correction warrants
 
