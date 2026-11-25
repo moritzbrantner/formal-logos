@@ -1,0 +1,75 @@
+[batch]
+vocab = "TruthCore.Logic.DarwinianEpistemicDebunking.BasisDefeat"
+results = "TruthCore.Results.Logic.DarwinianEpistemicDebunking.BasisDefeat"
+
+[[statement]]
+id = "The subject has an independently based warranted report of cue bypass"
+lean = "AuditedBypass"
+definitions = ["4867e8d4-7ab7-4bd9-a3b2-fdb0dbc4a936", "26cbf25d-f3d5-46ea-91e8-e2140a57b04d"]
+paraphrase = "The subject accepts and is warranted in accepting the report assigned to this basis. The subject uses an undefeated basis supplying adequate grounds for that report apart from the investigated operation. Interpreting that content as a process report about this same basis is an application premise."
+
+[[statement]]
+id = "Audited cue bypass under fixed truth and cross-history variation undercuts the producing basis"
+lean = "AuditedCrossHistoryPolicy"
+definitions = ["4867e8d4-7ab7-4bd9-a3b2-fdb0dbc4a936", "e17e93bf-eedf-45db-be80-ffac82ef7d98", "26cbf25d-f3d5-46ea-91e8-e2140a57b04d"]
+paraphrase = "OPEN normative policy. For every basis of the same subject, constant correctness, a verdict that varies across histories, and an independently based warranted bypass report jointly suffice to undercut the producing basis. Whether the cue retains information through another channel is the contested point."
+
+[[argument]]
+id = "Self-application of the audited cross-history defeat policy"
+theorem = "auditedSelfApplication"
+premises = ["Audited cue bypass under fixed truth and cross-history variation undercuts the producing basis", "898b25e5-8d32-4188-8c91-c51deca64529", "f94c7149-699e-4c13-a65e-c4aad5c2a9af", "The subject has an independently based warranted report of cue bypass", "ed122f4c-8a51-4310-813c-fe8db8a2f2d3", "fcd6fdc2-8a5e-4c71-a105-1fff691a0e95"]
+conclusion = "3db10140-06ed-43e2-8521-391acd2ec925"
+rule = "Apply the policy to the designated basis and eliminate the surviving support that warrant would require"
+meaning = "Taking the designated basis as the debunker’s own ground, the policy undercuts it if its profile and audit meet the stated conditions. If every supporting basis for the conclusion is this one and warrant requires undefeated support, the debunker lacks warrant for that conclusion. No production history, warrant for an actual report, truth value or contradiction follows."
+
+[[statement]]
+id = "Controls for reflexive defeat, a retained basis, alternative support and bare error"
+lean = "AuditedPolicyControls"
+definitions = ["4867e8d4-7ab7-4bd9-a3b2-fdb0dbc4a936", "e17e93bf-eedf-45db-be80-ffac82ef7d98", "26cbf25d-f3d5-46ea-91e8-e2140a57b04d"]
+paraphrase = "Four stipulated interpretations. The policy and its self-application premises can hold with a true unwarranted target. They can instead diverge at the policy despite a warranted report and a varying verdict. An undercut basis can coexist with warranted target content through other support. An actually incorrect constant verdict can coexist with the report, the policy and an undefeated basis."
+
+[[argument]]
+id = "Four controls for the audited defeat policy"
+theorem = "auditedPolicyControls"
+premises = []
+conclusion = "Controls for reflexive defeat, a retained basis, alternative support and bare error"
+rule = "Reuse cross-history and reliability controls and evaluate the subject’s report support and the targeted basis"
+meaning = "The controls exhibit the policy firing, its existential denial at one basis, other supporting grounds despite defeat, and its failure to fire on bare error. All report, provenance and warrant fields are stipulated. Different basis labels in these frames carry no empirical provenance certificate."
+
+[[statement]]
+id = "Correctness supervenes on a selected factor across the admitted histories"
+lean = "TruthSupervenesOn"
+definitions = ["e17e93bf-eedf-45db-be80-ffac82ef7d98"]
+paraphrase = "Equal values of the specified factor in any two represented scenarios require equal correctness of this scoped judgment. Its correct polarity is left open."
+
+[[statement]]
+id = "The selected verdict is stable at each factor value across the admitted histories"
+lean = "VerdictStableOn"
+definitions = ["e17e93bf-eedf-45db-be80-ffac82ef7d98"]
+paraphrase = "Whenever the factor values agree, the selected judgment has the same verdict. This covariation condition requires separate evidence for a selective causal mechanism."
+
+[[statement]]
+id = "The comparison panel covers every realized value of the selected factor"
+lean = "PanelCovers"
+definitions = ["e17e93bf-eedf-45db-be80-ffac82ef7d98"]
+paraphrase = "Each represented scenario matches some designated panel member on the selected factor. Whether the panel covers the intended class is an application question."
+
+[[statement]]
+id = "The selected verdict agrees with correctness throughout the comparison panel"
+lean = "PanelAccurate"
+definitions = ["e17e93bf-eedf-45db-be80-ffac82ef7d98"]
+paraphrase = "Each case in the designated panel has an accurate verdict on the same scoped content. Independent calibration of these verdicts is an open empirical and normative burden."
+
+[[statement]]
+id = "The scoped epistemic judgment has no incorrect verdict in the represented scenarios"
+lean = "NoScenarioMismatch"
+definitions = ["e17e93bf-eedf-45db-be80-ffac82ef7d98"]
+paraphrase = "There is no scenario in this profile whose verdict differs from its correctness."
+
+[[argument]]
+id = "Calibrating a supervenience reply across selective histories"
+theorem = "calibratedSupervenience"
+premises = ["Correctness supervenes on a selected factor across the admitted histories", "The selected verdict is stable at each factor value across the admitted histories", "The comparison panel covers every realized value of the selected factor", "The selected verdict agrees with correctness throughout the comparison panel"]
+conclusion = "The scoped epistemic judgment has no incorrect verdict in the represented scenarios"
+rule = "Transfer the verdict and correctness from an accurate panel representative at the same factor value"
+meaning = "The relation horn admits a restricted reply if correctness supervenes on the selected factor, verdicts stay fixed at each factor value, and a covering comparison panel is accurate. The transported result concerns the represented cases. Supervenience supplies neither the direction of calibration nor a causal explanation of selection."

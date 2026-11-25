@@ -1,0 +1,11 @@
+{
+  "id": "fddc2381-a88e-41b9-b799-16e834ad7217",
+  "label": "Four controls for the audited defeat policy",
+  "argument_id": "6a8e4fb8-776e-46c2-a8fb-0862b9a4f6ff",
+  "challenge_module": "TruthCore.Results.Logic.DarwinianEpistemicDebunking.BasisDefeat.Challenge",
+  "solution_module": "TruthCore.Results.Logic.DarwinianEpistemicDebunking.BasisDefeat.Solution",
+  "theorem": "TruthCore.Results.Logic.DarwinianEpistemicDebunking.BasisDefeat.auditedPolicyControls",
+  "comparator_config": "results/fddc2381-a88e-41b9-b799-16e834ad7217/comparator.json",
+  "status": "solution-present",
+  "description": "The controls exhibit the policy firing, its existential denial at one basis, other supporting grounds despite defeat, and its failure to fire on bare error. All report, provenance and warrant fields are stipulated. Different basis labels in these frames carry no empirical provenance certificate."
+}
