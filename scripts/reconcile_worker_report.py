@@ -167,14 +167,14 @@ def comparison(assessment, reported, publication_head, main):
     result["changed_report_paths"] = paths
     if paths:
         result["review_guidance"] = "Inspect the listed report-side changes for effects on the recorded scope."
-    elif base == reported:
-        result["review_guidance"] = ("Report already in publication or main history. Inspect changes since the "
-                                     "reviewed revision for effects on the recorded scope.")
-        delta = git("diff", "--name-only", "-z", reviewed, reported, "--")
-        if delta.returncode == 0:
-            result["integrated_paths_changed_since_review"] = delta.stdout.split("\0")[:-1]
     else:
         result["review_guidance"] = "No net report-side file changes against the comparison base."
+    if reviewed != base:
+        result["integrated_changes_command"] = f"git diff --stat {reviewed} {base}"
+        result["review_guidance"] += " Inspect intervening integration changes for effects on the same scope."
+        delta = git("diff", "--name-only", "-z", reviewed, base, "--")
+        if delta.returncode == 0:
+            result["integrated_paths_changed_since_review"] = delta.stdout.split("\0")[:-1]
     return result
 
 
@@ -188,19 +188,34 @@ def reconcile(args):
         gaps.append("Reported or main commit unavailable locally.")
     number = args.pr
     head = None
-    selected = {}
-    records = load_dir("attempts", Path.cwd())
-    for path, record in records:
-        name = path.relative_to(Path.cwd()).as_posix()
-        assessment = record.get("current_assessment")
-        if args.attempt:
-            if args.attempt not in (name, path.stem, record["id"], record.get("legacy_id"), record.get("label")):
+    selected = set()
+    checkout = commit("HEAD")
+    if args.attempt:
+        for path, record in load_dir("attempts", Path.cwd()):
+            name = path.relative_to(Path.cwd()).as_posix()
+            if args.attempt in (name, path.stem, record["id"], record.get("legacy_id"), record.get("label")):
+                selected.add(name)
+                try:
+                    assessment = assessment_at(checkout, name)
+                    if assessment:
+                        number = owning_pr(name, assessment, main)
+                except ValueError as exc:
+                    gaps.append(str(exc))
+                break
+    else:
+        # Discover explicit references in the same committed data we will cite.
+        for revision in dict.fromkeys((checkout, main)):
+            if not revision:
                 continue
-            if assessment:
-                selected[name] = (assessment, "checkout")
-                number = owning_pr(name, assessment, main)
-        elif assessment and number in scoped_prs(assessment):
-            selected[name] = (assessment, "checkout")
+            refs = git("grep", "-l", "-z", "-E", f"PR(-| #){number}([^0-9]|$)",
+                       revision, "--", "corpus/attempts/*.json")
+            if refs.returncode not in (0, 1):
+                gaps.append(f"PR citation lookup unavailable at {revision}.")
+            for match in refs.stdout.split("\0")[:-1]:
+                name = match.split(":", 1)[1]
+                assessment = assessment_at(revision, name)
+                if assessment and number in scoped_prs(assessment):
+                    selected.add(name)
     if number:
         try:
             row, source = publication(number, main, args.snapshot)
@@ -221,18 +236,37 @@ def reconcile(args):
             if row["state"] == "MERGED" and report["pr"]["merge_to_main"] not in ("same", "ancestor"):
                 gaps.append("The selected local main revision does not confirm integration of this merge.")
             if not args.attempt:
-                for path, assessment in pr_assessments(row).items():
-                    selected.setdefault(path, (assessment, row["headRefOid"]))
+                selected.update(pr_assessments(row))
         except (OSError, ValueError, KeyError, TypeError, subprocess.SubprocessError) as exc:
             gaps.append(f"PR #{number} lookup unresolved: {exc}")
     else:
         gaps.append("No unique published PR identified for the selected assessment. Supply --pr for a PR lookup.")
-    for name, (assessment, source) in selected.items():
-        entry = comparison(assessment, reported, head, main)
-        report["assessments"][name] = {"source": source, **entry}
-        if entry["reported_to_reviewed"] in ("unknown", "divergent"):
-            gaps.append(f"Coverage of the reported revision by {name} is unresolved.")
-    if not selected:
+    for name in sorted(selected):
+        versions = []
+        for role, revision in (("published_head", head), ("main", main), ("checkout_head", checkout)):
+            if not revision:
+                continue
+            try:
+                assessment = assessment_at(revision, name)
+            except ValueError as exc:
+                gaps.append(str(exc))
+                continue
+            if not assessment:
+                continue
+            same = next((v for v in versions if v["recorded"] == assessment), None)
+            if same is None:
+                same = comparison(assessment, reported, head, main)
+                same["sources"] = {}
+                versions.append(same)
+                if assessment["review"] != "accepted_qualified":
+                    same["review_guidance"] = (f"Recorded review is {assessment['review']}. "
+                                               "This record supplies no acceptance. " + same["review_guidance"])
+                if same["reported_to_reviewed"] in ("unknown", "divergent"):
+                    gaps.append(f"Coverage by {revision}:{name} is unresolved.")
+            same["sources"][role] = revision
+        if versions:
+            report["assessments"][name] = versions
+    if not report["assessments"]:
         gaps.append("No scoped assessment located for this lookup.")
     return report
 

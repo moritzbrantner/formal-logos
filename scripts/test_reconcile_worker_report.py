@@ -54,7 +54,7 @@ class WorkerReportTest(unittest.TestCase):
         return json.loads(output)
 
     def assessment_row(self, report):
-        return report["assessments"]["corpus/attempts/example.json"]
+        return report["assessments"]["corpus/attempts/example.json"][0]
 
     def test_old_report_and_corrected_review_through_main_merge(self):
         for selector in (["--pr", "42"], ["--attempt", "example-id"]):
@@ -93,6 +93,47 @@ class WorkerReportTest(unittest.TestCase):
         self.assertEqual(row["reported_to_reviewed"], "descendant")
         self.assertEqual(row["changed_report_paths"], [])
         self.assertEqual(row["integrated_paths_changed_since_review"], ["corpus/attempts/example.json"])
+
+    def test_conflicting_checkout_published_and_main_assessments_keep_source_commits(self):
+        def revise(review, text, evidence):
+            record = json.loads(self.path.read_text())
+            record["current_assessment"].update(review=review, assessment=text, evidence=evidence)
+            self.path.write_text(json.dumps(record))
+            return self.save(text)
+
+        self.git("switch", "-qc", "next-review")
+        stale = revise("unreviewed", "Pending review", "PR #43")
+        published = revise("accepted_qualified", "Revised publication", "PR #43")
+        self.git("switch", "-q", "main")
+        self.git("merge", "--no-ff", "-qm", "Merge pull request #43 from owner/next-review", "next-review")
+        on_main = revise("changes_requested", "Main reassessment", "Later review of the same scope")
+        self.git("switch", "-q", "--detach", stale)
+        report = self.lookup(self.reviewed, "--pr", "43")
+        rows = report["assessments"]["corpus/attempts/example.json"]
+        sources = {row["recorded"]["review"]: row["sources"] for row in rows}
+        self.assertEqual(sources, {
+            "unreviewed": {"checkout_head": stale},
+            "accepted_qualified": {"published_head": published},
+            "changes_requested": {"main": on_main},
+        })
+        for row in rows:
+            if row["recorded"]["review"] != "accepted_qualified":
+                self.assertIn("supplies no acceptance", row["review_guidance"])
+
+    def test_new_report_keeps_intervening_published_note_change_visible(self):
+        self.git("switch", "-qc", "updated-publication", self.head)
+        self.note.write_text("Intervening change to the qualified note")
+        published = self.save("Revise the note after review")
+        (self.root / "continuation.md").write_text("A new worker test")
+        reported = self.save("Continue from published revision")
+        snapshot = self.root / "snapshot.json"
+        snapshot.write_text(json.dumps({"number": 42, "baseRefOid": self.base,
+                                        "headRefOid": published, "state": "OPEN", "mergeCommit": None}))
+        row = self.assessment_row(self.lookup(reported, "--pr", "42", "--snapshot", str(snapshot)))
+        self.assertEqual(row["changed_report_paths"], ["continuation.md"])
+        self.assertIn("note.md", row["integrated_paths_changed_since_review"])
+        self.assertEqual(row["integrated_changes_command"], f"git diff --stat {self.reviewed} {published}")
+        self.assertIn("intervening integration changes", row["review_guidance"])
 
     def test_missing_report_and_divergence_remain_unresolved(self):
         missing = self.lookup("f" * 40, "--pr", "42")
