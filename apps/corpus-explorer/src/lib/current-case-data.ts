@@ -3,8 +3,8 @@ import { currentCase, GOD_EXISTS, type AssessmentBatch, type RecordedAssessment 
 import { getCorpus } from "./corpus";
 import { getDossiers } from "./premise-dossier";
 import { getBuildInfo, getFrontierReport } from "./site-state";
-
 import { currentAssessment, record, revisionImpact } from "./current-judgments";
+
 function assessment(value: unknown): value is RecordedAssessment {
   return record(value) && (value.kind === "assessment" || value.kind === "rival_analysis")
     && ["section", "path", "heading", "dated_by", "excerpt"].every((key) => typeof value[key] === "string")
