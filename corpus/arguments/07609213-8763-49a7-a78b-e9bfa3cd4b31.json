@@ -1,0 +1,14 @@
+{
+  "id": "07609213-8763-49a7-a78b-e9bfa3cd4b31",
+  "label": "Test common finite ancestry on the existing mediated-optimum creator profile",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "f9c334b4-5702-4bff-8658-ac8fc78b4e2b",
+  "inference_ids": [
+    "840ca423-88b2-4800-add9-35dad357217b"
+  ],
+  "meaning": "On chainG at false, d is a root, g receives an edge from d, and c receives one from g. No other actual root is possible. The imported MediatedOptimum retains the original giving model and the absence of any directly covering actual root. The graph does not interpret a new God predicate.",
+  "definition_ids": [
+    "822c9912-2313-584b-b2b7-77031da20107",
+    "f64856c0-6d2c-5c5d-97ef-9895039d8c27"
+  ]
+}

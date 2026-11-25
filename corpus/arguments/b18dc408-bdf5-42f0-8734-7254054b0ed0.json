@@ -1,0 +1,14 @@
+{
+  "id": "b18dc408-bdf5-42f0-8734-7254054b0ed0",
+  "label": "Test coverage of all contingent recipients at the necessary intermediary",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "8852c6c8-4ae1-410c-9cc7-73f60215a967",
+  "inference_ids": [
+    "f11506dc-0eca-4912-a4ed-b69811eaf231"
+  ],
+  "meaning": "Both d and g exist in every accessible world. At false, g gives being to the contingent c, the only possible actual contingent recipient there. The incoming edge d to g leaves g derived. If the selected g reached every actual concretum, a finite path to the actual root d would identify g with d, contrary to the distinct constructors. The use of the naming predicate stipulates a candidate, without independently warranting its divine status.",
+  "definition_ids": [
+    "822c9912-2313-584b-b2b7-77031da20107",
+    "a1b2e330-388f-4120-bc5c-969642317792"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "acc12ba2-a7e2-4146-bbed-f5c964602bbb",
+  "label": "Trace divine causal reach on actual concreta through the esse-to-ground correspondence",
+  "argument_id": "5c2c7fca-49ee-4a3b-a33f-a5b03e1e13da",
+  "challenge_module": "TruthCore.Results.Causality.ActualAncestralSource.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ActualAncestralSource.Solution",
+  "theorem": "TruthCore.Results.Causality.ActualAncestralSource.ancestralNamingOfDirectCausing",
+  "comparator_config": "results/acc12ba2-a7e2-4146-bbed-f5c964602bbb/comparator.json",
+  "status": "solution-present",
+  "description": "The carrier-wide causal naming premise and the bridge from a distinct esse cause of an actual concretum to actual grounding yield the ancestor reading. Excluded middle is used for identity. Other readings may warrant mediated reach without warranting the direct causal-and-grounding bundle."
+}

@@ -1,0 +1,11 @@
+{
+  "id": "273fb2d3-d2e8-404e-adad-f6ae2c821169",
+  "label": "Identify the unique actual root from finite common ancestry on its grounding graph",
+  "argument_id": "12623d34-7790-48e0-8254-4f6dab09e2c1",
+  "challenge_module": "TruthCore.Results.Causality.ActualAncestralSource.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ActualAncestralSource.Solution",
+  "theorem": "TruthCore.Results.Causality.ActualAncestralSource.uniqueOfGroundingAncestry",
+  "comparator_config": "results/273fb2d3-d2e8-404e-adad-f6ae2c821169/comparator.json",
+  "status": "solution-present",
+  "description": "The supplied graph is precisely the profile's selected grounding relation restricted to existing concrete endpoints. Its sources correspond in both directions to actual roots at this world. This projection uses the existence and agreement parts of RootedAtUniqueSource."
+}
