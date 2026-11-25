@@ -1418,6 +1418,54 @@ impl<'a> Frontier<'a> {
         reaching_root
     }
 
+    fn closure_reason(
+        &self,
+        statement: &str,
+        closure: &Closure<'_>,
+        floor_met: bool,
+    ) -> &'static str {
+        if closure.proved.contains(statement) {
+            "proved"
+        } else if floor_met {
+            "self_evident"
+        } else if self.defended(statement, &closure.refuted) {
+            "alternatives_refuted"
+        } else if closure.established_via_strength.contains_key(statement) {
+            "via_strength"
+        } else {
+            "via_transcription"
+        }
+    }
+
+    /// Selected statements under the ordinary frontier fixpoint. Skip the
+    /// unrelated upward walks, route expansion and full-corpus rendering.
+    pub(crate) fn formal_statuses(&self, ids: &BTreeSet<&str>) -> BTreeMap<String, Value> {
+        let closure = self.closure(None);
+        ids.iter()
+            .map(|&id| {
+                let reason = closure.closed.contains(id).then(|| {
+                    let floor_met = self.floor_markings.contains_key(id)
+                        && self
+                            .floor_reasons(id, &closure.established, &closure.refuted)
+                            .is_empty();
+                    self.closure_reason(id, &closure, floor_met)
+                });
+                (
+                    id.to_owned(),
+                    json!({
+                        "closure": reason,
+                        "established": closure.established.contains(id),
+                        "refuted": closure.refuted.contains(id),
+                    }),
+                )
+            })
+            .collect()
+    }
+
+    pub(crate) fn result_transcription(&self, id: &str) -> Option<&Value> {
+        self.kinds.get(id).map(|(kind, _)| kind)
+    }
+
     /// Python `frontier_report`; `next_steps` adds the next-work projection.
     pub fn report(&self, next_steps: bool) -> Value {
         let closure = self.closure(None);
@@ -1477,17 +1525,7 @@ impl<'a> Frontier<'a> {
         let mut sorted_closed: Vec<&str> = closed.iter().copied().collect();
         sorted_closed.sort_unstable();
         for statement in sorted_closed {
-            let reason = if closure.proved.contains(statement) {
-                "proved"
-            } else if floor_met.contains(statement) {
-                "self_evident"
-            } else if self.defended(statement, refuted) {
-                "alternatives_refuted"
-            } else if closure.established_via_strength.contains_key(statement) {
-                "via_strength"
-            } else {
-                "via_transcription"
-            };
+            let reason = self.closure_reason(statement, &closure, floor_met.contains(statement));
             closed_statements.insert(statement.to_owned(), json!(reason));
         }
 

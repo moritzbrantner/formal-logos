@@ -53,6 +53,7 @@ mod status;
 mod strength;
 mod structure;
 mod support_graph;
+mod synthesis;
 mod territory;
 mod thickness;
 mod tree;
@@ -86,6 +87,7 @@ pub const HELP: &str = "Usage: truth [--root PATH] [--json] status
        truth [--root PATH] [--json] next-steps [--frontier-root STATEMENT]
        truth [--root PATH] [--json] arguments
        truth [--root PATH] [--json] results
+       truth [--root PATH] [--json] synthesis [STATEMENT | --question TEXT] [--limit N]
        truth [--root PATH] [--json] support-graph [STATEMENT ...]
        truth [--root PATH] [--json] sort-lists
        truth [--root PATH] [--json] lexicon (show WORD | untraced | coverage | check | bootstrap | allowlist | ratchet --base REV) [--limit N] [--write]
@@ -185,6 +187,7 @@ pub const COMMANDS: &[Command] = &[
     structure::STRUCTURE,
     structure::REPORT,
     support_graph::COMMAND,
+    synthesis::COMMAND,
     strength::COMPARISONS,
     strength::REPORT,
     unused_premises::COMMAND,
@@ -245,9 +248,12 @@ pub fn run(args: &[OsString]) -> Output {
             Some(command) if args.index.flags && command.name != "index" => {
                 Err(usage("--left and --right apply only to index compare"))
             }
-            Some(command) if args.brief.flags && !["brief", "novelty"].contains(&command.name) => {
+            Some(command)
+                if args.brief.flags
+                    && !["brief", "novelty", "synthesis"].contains(&command.name) =>
+            {
                 Err(usage(
-                    "--question, --assessments-for and --statement apply only to brief and novelty",
+                    "--question, --assessments-for and --statement apply only to brief, novelty and synthesis (--question)",
                 ))
             }
             Some(command) if args.semantics.flags && command.name != "semantics" => Err(usage(

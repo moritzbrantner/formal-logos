@@ -41,6 +41,7 @@ pub mod strength;
 pub mod structure;
 pub mod subprocess;
 pub mod support_graph;
+pub mod synthesis;
 pub mod territory;
 pub mod thickness;
 mod transcription;
