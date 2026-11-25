@@ -1,0 +1,11 @@
+{
+  "id": "845202df-3632-41b4-9c8a-71e1aa03b8bf",
+  "label": "Finite source and attribute substitutions checked",
+  "argument_id": "f8317271-833a-4334-9fa9-093f60b43ed7",
+  "challenge_module": "TruthCore.Results.Case.Catholicism.AttributesFromEsse.Challenge",
+  "solution_module": "TruthCore.Results.Case.Catholicism.AttributesFromEsse.Solution",
+  "theorem": "TruthCore.Results.Case.Catholicism.AttributesFromEsse.controls",
+  "comparator_config": "results/845202df-3632-41b4-9c8a-71e1aa03b8bf/comparator.json",
+  "status": "solution-present",
+  "description": "The checked conjunction records nonvacuous naming, both directions separating general genus causation and carrier-wide God causation, and failures under the specified omissions. The empty relation makes several causal antecedents vacuous in the explicit omission models."
+}

@@ -1,0 +1,11 @@
+{
+  "id": "892a94f6-abed-402d-8612-5ea006a5a81f",
+  "label": "Perfection of GOD_4 at the actual universal source",
+  "argument_id": "1c648123-baca-4de1-999f-5edcaf292d91",
+  "challenge_module": "TruthCore.Results.Case.Catholicism.AttributesFromEsse.Challenge",
+  "solution_module": "TruthCore.Results.Case.Catholicism.AttributesFromEsse.Solution",
+  "theorem": "TruthCore.Results.Case.Catholicism.AttributesFromEsse.perfectFromSource",
+  "comparator_config": "results/892a94f6-abed-402d-8612-5ea006a5a81f/comparator.json",
+  "status": "solution-present",
+  "description": "Actuality in a respect entails actuality at esse by the explicit premise. Convergence fixes the same God as the universal source, and effect-perfection preexistence supplies its represented actuality."
+}
