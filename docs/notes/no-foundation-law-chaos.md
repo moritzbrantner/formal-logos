@@ -1643,7 +1643,7 @@ adherent or formal models of entire philosophies.
 
 | Candidate | What the granted account can explain or secure | Remaining question under the same ultimate standard |
 | --- | --- | --- |
-| Brute contingent physical foundation | Its nature can impose necessary constitutive constraints; actual powers and laws can explain every derivative locally; sound initial restrictions may be granted | The indispensable foundation's actuality is left primitive. This is a genuine stopping policy with a complete conditional order, but no complete answer to why that order has its actual existential input |
+| Brute contingent physical foundation | Its nature can impose necessary constitutive constraints; actual powers and laws can explain every derivative locally; sound initial restrictions may be granted | The indispensable foundation's actuality is left primitive. This is a genuine stopping policy with actual, potentially complete local derivative explanations; it does not answer the inclusive question covering that input |
 | Necessary impersonal foundation | Removes possible absence of that bearer; a substantive intrinsic nature may explain its actuality; real nonnecessitating production may explain contingent effects | Necessity alone supplies neither intrinsic explanation nor an account of a contingent exercise. If both are supplied at the accepted standard, this rival survives the present objection; intellect needs a further discriminating argument |
 | Necessary laws and brute initial conditions | Deterministic histories, invariant local laws, possibly unique coarse outcomes and reliable records | Mathematical restriction and derivation presuppose the actual initial instance. Reversibility retains alternatives; convergence need not explain the particular history or actual instantiation |
 | Humean account of a primitive mosaic | Grant its best-system description, stable regularities and admitted constraints; those can organize successful local explanations | If the mosaic is primitive, a description of its regularities does not thereby produce or ultimately explain its actuality. A Humean can decline the productive/ultimate demand; that is a stated difference of explanatory ambition, not an internal contradiction |
@@ -1652,9 +1652,11 @@ adherent or formal models of entire philosophies.
 
 The strongest brute rival has no immediate internal incoherence here. Its
 conditional disadvantage is the conceded unanswered question about the
-input, when a fuller actual-existence explanation is sought. The strongest
-necessary impersonal rival is stronger on that very criterion and should
-not inherit the brute contingent rival's defect by association. A
+input, when a fuller actual-existence explanation is sought. A necessary
+impersonal rival is stronger on that criterion if it supplies an adequate
+intrinsic account and actual production at the same scope;
+necessity alone is insufficient. It should not inherit the brute contingent
+rival's defect by association. A
 necessitarian likewise removes rather than answers a contingent contrast;
 this investigation does not assume contingency of the entire actual order
 against it. The comparative case changes if its denial conflicts with an
@@ -2202,6 +2204,39 @@ operative-practical-content, actual-channel, historical-target, adequacy and
 normative-policy application blockers described above. This publication is
 a reviewed research contribution, not a merge or an unconditional worldview
 conclusion.
+
+#### Single-brute continuation: complete for which question? (2026-11-25)
+
+The [#1968 comparison](explanatory-adequacy-750.md#one-brute-exception-derivative-completeness-and-principled-stopping-2026-11-25)
+preserves the six-worldview grants while distinguishing actual, locally
+complete derivative explanations from completeness covering the foundation
+or every indispensable existential input. The latter standard remains
+explicit; the resource certificate does not invalidate the former.
+
+Necessary role occupancy and the actual root's possible absence force a
+different occupant at that same absence world. This is possible substitution
+under the stipulated restrictions, not a license for additional simultaneous
+roots or arbitrary histories. The actual-root predicate and uniqueness do
+not themselves exclude intrinsic or noncausal reasons.
+
+The matched same-B diagnostic activates an already-present necessary
+background without replacing B or its derivatives. It isolates the step
+from necessary presence to an assigned actual reason; adequacy and
+productivity remain open. This control is not the single-concrete-root
+rival. A further explicit exercise-fact extension exposes a retained input
+under a deterministic resource account without identifying every
+nonnecessitating explanation with bruteness. The same scope standard applies
+to necessary personal and impersonal sources.
+
+The restricted brute rival remains a defensible primitive candidate and
+incomplete for the inclusive target. No contradiction, epistemic defeat,
+unrestricted recombination or new root-premise discharge is claimed.
+A necessary source gains the relevant advantage only if it answers the
+same existence question through warranted intrinsic intelligibility and
+actual production. The moderate preference for E and suspension about D
+are retained. Attempt eac309a0 and #1968 carry the current scoped review,
+verification and precise reopening conditions; the preceding #1933 review
+and its different application blockers are unchanged.
 
 ## Research attempts citing this note
 
