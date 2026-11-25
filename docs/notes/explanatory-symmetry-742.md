@@ -533,6 +533,50 @@ A further discriminator would be a ground for individuating **this giving of bei
 
 For the inferential destination, `5465fccb` concerns selection on fixed complete evidence. Here the two geological hypotheses differ in a relevant prediction under explicit conditions. At the origin `dd4dfa3b` separates eligibility from actual selection among orders. Enabling this correction gives no unique choice among all histories that permit it. Neither certificate turns the letter into evidence of its source's personhood. For #1731, `b5b84276` identifies the kind of power exercised given its one-power and intellect/will bridges. An actual de re purpose of that exercise still needs the practical-object bridge. The only-personal restriction concerns explanations of intentionality and mental causation. The impersonal account gives it a positive rival. Even an explanation of either phenomenon by a distinct thinker would still need the #1792 bridge to a dependence of the bearer for existence. Granting the source of concrete existence, identifying an intellect at that same source, and establishing *its purpose in sustaining this knower* are distinct God-existence-stage obligations. No graph edge or closure change follows. [Same-witness source and attribute conditions](de-ente-esse-source-1628.md#same-witness-identities-for-1731-2026-11-18) · [Restriction](../../corpus/statements/cc100-116-personal-explanation-restriction.json) · [Power result](../../corpus/results/b5b84276-2b13-459e-9f59-a3d083f52cc3.json)
 
+## What evidence distinguishes a producer's target from its forecast?
+
+The Glen Roy letters identify whose inquiry the geological evidence guided.
+The Apollo 13 records permit a further test. On the same rescue operation we
+can distinguish the return the controllers expected from the return they
+were trying to bring about. A successful splashdown alone would fit both
+descriptions.
+
+NASA's flight-control report records the alternatives considered before the
+principal return maneuver. The team rejected an earlier Pacific return that
+would have relied on a service module of uncertain structural integrity.
+A longer Indian Ocean return put consumables and recovery at greater risk.
+The adopted plan targeted a Pacific return at about 142 hours. Before the
+maneuver, ground communicator Joe Kerwin corrected pilot Fred Haise's
+understanding of one alignment contingency. Haise repeated the correction
+and the intended return target, and Kerwin confirmed it. This exchange
+documents uptake of the plan while implementation could still go wrong.
+[Flight Control Division report, III-22–23](https://www.nasa.gov/wp-content/uploads/static/history/alsj/a13/A13_MissionOpReport.pdf) · [Air-to-ground exchange at 070:55:52–070:57:32](https://apollojournals.org/afj/ap13fj/11day3-minimise-power.html)
+
+The same report records a revealing disagreement before the final course
+correction. One controller accepted the spacecraft's orientation. The
+retrofire officer objected because it would reduce the effective component
+of the planned maneuver. Guidance advised the flight director to use the
+prescribed orientation. A corrected estimate alone would have improved
+the forecast while leaving the trajectory where it was. Here the team
+used the discrepancy to direct the crew's action. The recovery constraints,
+discussion of options, transmitted target, objection and subsequent
+execution together warrant attributing a purposive contribution to the
+human participants. Their roles were distributed. No inference requires
+one controller to have chosen the end, communicated it and executed the
+maneuver alone. [Flight Control Division report, Appendix B, §E.1–2](https://www.nasa.gov/wp-content/uploads/static/history/alsj/a13/A13_MissionOpReport.pdf)
+
+An automatic controller could also steer toward a set point, even one
+originally selected by a person. Evidence of responsive steering therefore
+identifies an operative target while leaving open who understood and
+adopted it. In the rescue, the decision record and the crew's use of the
+message supply further evidence. The recipients already existed and the
+operation protected conditions for their survival. Applying this evidence
+to an ultimate giver requires a reason to attribute the practical
+specification to that giver's own act of sustaining this recipient.
+The outcome of that act supplies an example of the good under discussion.
+Both a giver acting for the good and one foreseeing its independently
+produced effect can agree on that outcome.
+
 ## Research attempts citing this note
 
 - [Locate discriminating input in agenda selection and compare motivated choice](../../corpus/attempts/d735348a-03f9-4a7e-8c48-323392ed704e.json)
