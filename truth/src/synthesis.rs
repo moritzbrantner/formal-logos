@@ -98,8 +98,9 @@ struct Investigation<'a> {
 fn previous_investigations<'a>(
     corpus: &'a Corpus,
     scope: &BTreeSet<&str>,
+    cited_result: Option<&str>,
 ) -> Vec<Investigation<'a>> {
-    if scope.is_empty() {
+    if scope.is_empty() && cited_result.is_none() {
         return Vec::new();
     }
     corpus
@@ -107,25 +108,25 @@ fn previous_investigations<'a>(
         .filter_map(|(attempt_id, record)| {
             let fields = &record.fields;
             let statement_ids = list(fields, "statement_ids");
-            statement_ids
-                .iter()
-                .any(|id| scope.contains(id))
-                .then(|| Investigation {
-                    attempt_id,
-                    path: &record.path,
-                    label: text(fields, "label"),
-                    date: text(fields, "date"),
-                    statement_ids,
-                    kind: text(fields, "kind"),
-                    outcome: text(fields, "outcome"),
-                    summary: text(fields, "summary"),
-                    blocker: fields.get("blocker"),
-                    evidence: list(fields, "evidence"),
-                    current_scope: fields
-                        .get("current_assessment")
-                        .and_then(Value::as_object)
-                        .map(|assessment| list(assessment, "statement_ids")),
-                })
+            let evidence = list(fields, "evidence");
+            (statement_ids.iter().any(|id| scope.contains(id))
+                || cited_result.is_some_and(|id| evidence.contains(&id)))
+            .then(|| Investigation {
+                attempt_id,
+                path: &record.path,
+                label: text(fields, "label"),
+                date: text(fields, "date"),
+                statement_ids,
+                kind: text(fields, "kind"),
+                outcome: text(fields, "outcome"),
+                summary: text(fields, "summary"),
+                blocker: fields.get("blocker"),
+                evidence,
+                current_scope: fields
+                    .get("current_assessment")
+                    .and_then(Value::as_object)
+                    .map(|assessment| list(assessment, "statement_ids")),
+            })
         })
         .collect()
 }
@@ -423,7 +424,7 @@ pub fn build<'a>(
             objections.push(value);
         }
     }
-    let previous_investigations = previous_investigations(corpus, &scoped);
+    let previous_investigations = previous_investigations(corpus, &scoped, None);
     let target_attempt_paths = previous_investigations
         .iter()
         .filter(|entry| entry.statement_ids.contains(&target.id))

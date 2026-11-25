@@ -417,3 +417,51 @@ fn compare_a_selected_argument_without_bootstrapping_its_conclusion() {
     assert_eq!(recovered["recovered_inputs"], json!(["K"]));
     assert_eq!(recovered["derivation"], json!(["zero", "chosen"]));
 }
+
+#[test]
+fn result_reference_selects_its_certificate_and_replays_its_argument() {
+    let fixture = Fixture(
+        std::env::temp_dir().join(format!("truth-synthesis-result-{}", std::process::id())),
+    );
+    fixture.statement("P");
+    fixture.statement("T");
+    fixture.argument("edge", &["P"], "T", false);
+    fixture.write(
+        "results",
+        json!({"id":"second-result","argument_id":"edge",
+        "challenge_module":"Challenge","solution_module":"Solution","theorem":"secondProof",
+        "comparator_config":"test","status":"solution-present"}),
+    );
+    for (id, reference) in [
+        ("direct-use", "second-result"),
+        ("sibling-use", "result-edge"),
+    ] {
+        fixture.write(
+            "attempts",
+            json!({"id":id, "statement_ids":["T"],
+            "summary":"Tracked the interpretation.", "evidence":[reference]}),
+        );
+    }
+    let output = fixture.run(&["second-result", "--without", "P", "--limit", "1", "--json"]);
+    assert!(
+        output.status.success(),
+        "{}",
+        String::from_utf8_lossy(&output.stderr)
+    );
+    let report: Value = serde_json::from_slice(&output.stdout).unwrap();
+    assert_eq!(report["selected_result_id"], "second-result");
+    assert_eq!(
+        report["previous_investigations"].as_array().unwrap().len(),
+        1
+    );
+    assert_eq!(
+        report["previous_investigations"][0]["attempt_id"],
+        "direct-use"
+    );
+    assert_eq!(report["argument"]["argument_id"], "edge");
+    assert_eq!(report["results"].as_array().unwrap().len(), 1);
+    assert_eq!(report["results"][0]["theorem"], "secondProof");
+    assert_eq!(report["selected_applicable"], false);
+    let argument: Value = serde_json::from_slice(&fixture.run(&["edge", "--json"]).stdout).unwrap();
+    assert_eq!(argument["results"].as_array().unwrap().len(), 2);
+}

@@ -87,7 +87,7 @@ pub const HELP: &str = "Usage: truth [--root PATH] [--json] status
        truth [--root PATH] [--json] next-steps [--frontier-root STATEMENT]
        truth [--root PATH] [--json] arguments
        truth [--root PATH] [--json] results
-       truth [--root PATH] [--json] synthesis [STATEMENT | ARGUMENT | --question TEXT] [--limit N]
+       truth [--root PATH] [--json] synthesis [STATEMENT | ARGUMENT | RESULT | --question TEXT] [--limit N]
              [--without STATEMENT]... [--compare-premises]
        truth [--root PATH] [--json] support-graph [STATEMENT ...]
        truth [--root PATH] [--json] sort-lists

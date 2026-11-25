@@ -91,7 +91,7 @@ target/release/truth --json synthesis STMT-GOD-EXISTS
 An ambiguous Lean short name such as `GodExists` lists the matching declarations
 and a command for each meaning.
 
-To inspect a particular argument, pass its ID. For example, try the closed-collection argument for a common uncaused source:
+To inspect a particular argument, pass its ID. A result ID from an investigation opens that result’s frozen Lean declaration alongside its owning argument. The report links investigations that cite that specific result and includes their complete findings in JSON. For example, try the closed-collection argument for a common uncaused source:
 
 ```sh
 truth synthesis 3de4bd49-567b-44de-8472-88a24ea1311a --without 20babef7-6ae7-4b48-b72a-f417e8e63136
