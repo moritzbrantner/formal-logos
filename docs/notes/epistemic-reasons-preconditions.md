@@ -1993,7 +1993,8 @@ with that aim. It can consistently deny preference-independent authority.
 The witness projection adds no new warrant for that authority or for choosing
 a divine explanation. The next discriminating application test is whether
 an actual investigator seeking the parity answer received evidence that
-distinguished the leftover-item alternatives. A record of the pairs alone,
-a copied tally, or a decision to investigate would leave that antecedent
-unmet. Testing force for an indifferent subject remains the separate #930
+distinguished the leftover-item alternatives. Under the equal-likelihood assumption above, a copy of the same
+residue-blind pair count offers no tilt toward either answer. An accurate
+copy of a checked tally that includes the residue can transmit the evidence.
+A decision to investigate alone leaves open what evidence the person received. Testing force for an indifferent subject remains the separate #930
 relevance question. [Earlier authority assessment](epistemic-authority.md)
