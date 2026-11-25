@@ -101,7 +101,7 @@ private theorem flatWF : CredentialWellFounded goalRelative flatData := by
   exact ⟨fun x => Acc.intro x (fun _ h => False.elim h)⟩
 
 private theorem streamThin : ThereAreEpistemicReasons streamFrame.Reason :=
-  ⟨(), 0, trivial⟩
+  ⟨(), (0 : Nat), trivial⟩
 
 private theorem streamPresentation : ConsiderationPresentation streamFrame := by
   intro _ _
@@ -109,19 +109,20 @@ private theorem streamPresentation : ConsiderationPresentation streamFrame := by
 
 private theorem streamCredential : UniversalCredential streamFrame streamData := by
   intro _ x _
-  exact ⟨x.2 + 1, rfl, trivial, trivial⟩
+  exact ⟨Nat.succ x.2, rfl, trivial, trivial⟩
 
 private theorem streamPrior : PriorCredentialReason streamFrame streamData := by
   intro a x c _ hc
-  have he : c = x.2 + 1 := hc.1
+  have he : c = Nat.succ x.2 := hc.1
   refine ⟨(), trivial, ?_⟩
-  change x.2 < c
-  exact he.symm ▸ Nat.lt_succ_self x.2
+  change Nat.lt x.2 c
+  rw [he]
+  exact Nat.lt_succ_self x.2
 
 private theorem streamNotWF : ¬ CredentialWellFounded streamFrame streamData := by
   intro hw
   exact noReasonsFromCredentials streamFrame streamData streamPresentation streamCredential
-    streamPrior hw () 0 trivial
+    streamPrior hw () (0 : Nat) trivial
 
 private theorem unpresentedNoPresentation : ¬ ConsiderationPresentation unpresented := by
   intro h

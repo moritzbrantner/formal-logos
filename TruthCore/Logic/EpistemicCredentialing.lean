@@ -106,8 +106,8 @@ def streamFrame : Frame where
 def streamData : CredentialData streamFrame where
   believes := fun _ _ => True
   warranted := fun _ _ => True
-  certifies := fun _ c x => c = x.2 + 1
-  prior := fun _ y x => x.2 < y.2
+  certifies := fun _ c x => c = Nat.succ x.2
+  prior := fun _ y x => Nat.lt x.2 y.2
 
 /-- Same carriers as the old frame with both reason extensions empty. -/
 def noReasonFrame : Frame :=
