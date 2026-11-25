@@ -135,4 +135,83 @@ theorem attenuationIffCountableAndClosedRooted (m : Profile W B) (w : W) :
   ⟨fun h => ⟨h.1, ClosedGroundingRoots.closedRootedOfAttenuation m w h⟩,
     fun h => attenuationOfClosedRooted m w h.1 h.2⟩
 
+open TruthCore.Causality.ClosedGroundingRoots.FixedAmounts
+
+/-- A recipient with just one supplier must have less of the specified amount. -/
+theorem amount_lt_sole_supplier {W B : Type} {m : Profile W B} {w : W}
+    {wt s P q M} (laws : AttenuationLaws m w wt s P q M)
+    (source recipient : {x // ActualConcrete m w x})
+    (supplies : m.grounds w source.1 recipient.1)
+    (sole : ∀ u : {x // ActualConcrete m w x}, m.grounds w u.1 recipient.1 → u = source) :
+    P recipient < P source := by
+  obtain ⟨_, hq, _, hw, hs, _, _, hr, _, hb, edge, own, positive⟩ := laws
+  have noWeight (u) (hne : u ≠ source) : wt recipient u = 0 := by
+    exact le_antisymm (le_of_not_gt fun h => hne (sole u (edge recipient u h))) (hw _ _)
+  have hsup : ActualConcreteGround m w source.1 recipient.1 :=
+    ⟨source.2.1, source.2.2, supplies⟩
+  have noOwn : s recipient = 0 := le_antisymm
+    (le_of_not_gt fun h => own recipient h source.1 hsup) (hs _)
+  have weightBound := hr recipient
+  rw [tsum_eq_single source noWeight] at weightBound
+  have balance := hb recipient
+  rw [noOwn, zero_add, tsum_eq_single source (fun u h => by rw [noWeight u h, zero_mul])] at balance
+  exact balance.trans_lt (by simpa using mul_lt_mul_of_pos_right (weightBound.trans_lt hq) (positive source))
+
+/-- With positive amounts fixed first, the full reception constraints on this graph
+admit a choice of weights, inputs and bounds exactly when the recipient has less. -/
+theorem fixedAmountCriterion : FixedAmounts.FixedAmountCriterion := by
+  intro P pos
+  constructor
+  · rintro ⟨wt, s, q, M, h⟩
+    exact amount_lt_sole_supplier h giver recipient ⟨rfl, rfl⟩
+      (fun _ hu => Subtype.ext hu.1)
+  · intro strict
+    classical
+    let q := P recipient / P giver
+    have nonneg : 0 ≤ q := (div_pos (pos _) (pos _)).le
+    have loss : q < 1 := (div_lt_one (pos giver)).2 strict
+    have transfer : q * P giver = P recipient := div_mul_cancel₀ _ (pos giver).ne'
+    let wt := fun (v u : Bearer) => if v = recipient ∧ u = giver then q else 0
+    let s := fun v : Bearer => if v = giver then P giver else 0
+    have exhaust (v : Bearer) : v = giver ∨ v = recipient := by
+      rcases v with ⟨_ | _, _⟩
+      · exact Or.inl rfl
+      · exact Or.inr rfl
+    have distinct : giver ≠ recipient := by decide
+    have single (v u : Bearer) (h : u ≠ giver) : wt v u = 0 := by simp [wt, h]
+    refine ⟨wt, s, q, P giver, nonneg, loss, (pos _).le, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, pos⟩
+    · intro v u
+      simp only [wt]
+      split <;> simp [nonneg]
+    · intro v
+      simp only [s]
+      split <;> simp [(pos giver).le]
+    · intro v
+      rcases exhaust v with rfl | rfl
+      · exact le_rfl
+      · exact strict.le
+    · intro v
+      exact Summable.of_finite
+    · intro v
+      rw [tsum_eq_single giver (single v)]
+      simp only [wt]
+      split <;> simp [nonneg]
+    · intro v
+      exact Summable.of_finite
+    · intro v
+      rw [tsum_eq_single giver (fun u h => by rw [single v u h, zero_mul])]
+      rcases exhaust v with rfl | rfl
+      · simp [s, wt, distinct]
+      · simp [s, wt, distinct.symm, transfer]
+    · intro v u h
+      by_cases hEdge : v = recipient ∧ u = giver
+      · rcases hEdge with ⟨rfl, rfl⟩
+        exact ⟨rfl, rfl⟩
+      · simp [wt, hEdge] at h
+    · intro v h y hy
+      by_cases hv : v = giver
+      · subst v
+        exact Bool.noConfusion hy.2.2.2
+      · simp [s, hv] at h
+
 end TruthCore.Results.Causality.AttenuationFit

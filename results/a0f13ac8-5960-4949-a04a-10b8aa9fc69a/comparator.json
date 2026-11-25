@@ -1,0 +1,13 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.AttenuationFit.Challenge",
+  "solution_module": "TruthCore.Results.Causality.AttenuationFit.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.AttenuationFit.attenuationIffCountableAndClosedRooted"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "enable_nanoda": true
+}

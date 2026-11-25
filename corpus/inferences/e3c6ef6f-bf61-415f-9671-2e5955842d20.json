@@ -1,0 +1,10 @@
+{
+  "id": "e3c6ef6f-bf61-415f-9671-2e5955842d20",
+  "label": "Characterize existence of an attenuation assignment on the actual grounding graph (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "16dc0aed-137c-41f4-8018-a40ea4a0738e",
+  "rule": "Construct the attenuation weights along shortest finite paths from actual roots and use the forward closed-collection theorem",
+  "meaning": "The equivalence applies to one fixed world and actual concrete grounding relation. The fitted amount halves with each step from a root and the choice of supplier can ignore other incoming edges. The construction gives no reason to assign those amounts to actual esse independently of rootedness.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

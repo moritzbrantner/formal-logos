@@ -1,0 +1,11 @@
+{
+  "id": "74c69bf9-9eaa-482e-9f77-158ef5761349",
+  "label": "Solve the fixed-amount reception constraints on the two-bearer grounding profile",
+  "argument_id": "7a0d6a30-92c1-40c6-af82-ff7133eaba30",
+  "challenge_module": "TruthCore.Results.Causality.AttenuationFit.Challenge",
+  "solution_module": "TruthCore.Results.Causality.AttenuationFit.Solution",
+  "theorem": "TruthCore.Results.Causality.AttenuationFit.fixedAmountCriterion",
+  "comparator_config": "results/74c69bf9-9eaa-482e-9f77-158ef5761349/comparator.json",
+  "status": "solution-present",
+  "description": "The actual graph, world, and two identities stay fixed while amounts range over positive assignments. Equal amounts are incompatible even on this rooted graph. A strict decrease suffices in the two-bearer profile. A general sole-supplier recipient satisfies the same necessary inequality."
+}
