@@ -3090,6 +3090,1155 @@ countermodel's target. The scoped assessment records the review as
 `changes_requested` on that head, with repairs pending the coordinator's
 re-check; it remains `unpublished`.
 
+
+## Closed-cone selection without a quantitative transfer ledger (2026-11-25)
+
+**Scope and baseline.** Continue #1724, #1616, #1882, #1964, #1965 and the
+still-open #1966, from main `e7073368fcd87fb5be224b6bb7971a55f5316f40`.
+This is an analyst reconstruction, not a source attribution or a registered
+Lean result. Targets: `20babef7` (all nonempty actual-esse-cause-closed
+collections rooted), `5c898d24` (whole actual-concrete roster nontrapping),
+`dc397705` (some actual-concrete ground-relative root). These are not
+interchangeable: the first fixes q3a4's tenseless `ActualEsseCause`; the
+latter two fix `m.grounds w` with actual-concrete endpoint guards.
+`ClosedEsseSource.esseCauseGraph` is an exact adapter on its own singleton
+index, not a bridge to an independently supplied world-relative profile.
+The selected relation must be exhaustive for the productive respect in
+question before a relation-relative root is called existentially underived.
+
+### Checkpoint A: delete a whole closed cone rather than the whole roster
+
+The all-state selection result of #1878 shows that an entirely borrowed
+activation rule admits the empty state. #1883 already shows why a global
+nonemptiness restriction changes that test, and #1964 distinguishes
+whole-roster nontrapping from actual-root existence and the stronger
+all-collections cut. Do not repeat these results. The new candidate test
+asks whether **a particular actual member** is forced by the productive
+rules when an unrelated, independently supplied component remains present.
+It avoids requiring uniqueness of the whole configuration, finiteness,
+strict descent, additive throughput or exclusive receipt use.
+
+Fix a nonempty actual roster A, and the selected actual supplier relation
+R on A. For the structural test let F : P(A) -> P(A) be a monotone
+activation operator (inclusion order). A is the designated fixed
+assignment. Other assignments are mathematical substates, not automatically
+possible worlds. Require this **uniform positive-input guard**:
+
+    for every U subset of A and every x in A with an incoming R-edge,
+    x in F(U) implies there is c in U with R(c,x).
+
+The guard is one-way, allowing real joint contributions, duplication and
+additional enabling conditions. It is stronger than coverage at the
+designated actual assignment: it freezes the potential supplier menu to
+actual R-edges and constrains every candidate assignment. A genuinely
+different producer in another state, or a change in the identity of the
+bearer, is not silently excluded in a metaphysical application.
+
+Let C be nonempty, closed under every incoming R-edge, and have no R-root.
+Put U = A minus C. If x in C were in F(U), the guard gives a predecessor in
+U, but closure puts that predecessor in C. Hence F(U) is a subset of U.
+
+There is a fixed assignment contained in U, including when A and C are
+infinite and R has cycles:
+
+1. Let V be the union of all S subset of U with S subset of F(S).
+2. Every such S is included in F(V) by monotonicity; therefore V is
+   included in F(V).
+3. F(V) is included in F(U), hence in U. By monotonicity it is itself
+   postfixed, so F(V) is included in V.
+4. Thus F(V) = V, and every x in C is absent from V.
+
+This is the greatest fixed substate contained in U. The union is legitimate
+on the stipulated powerset; the empty set is postfixed, so this argument
+does not presuppose an inhabited survivor. If there is a nonempty postfixed
+S0 contained in U, the very same V contains S0 and is populated. One
+independently activated outside bearer suffices (its singleton is postfixed).
+Neither a relative R-root by itself nor an independently named law entails
+this activation condition.
+
+**Consequences to check in Lean.** If an actual x is present in every fixed
+assignment in this test (or in every populated fixed assignment when an
+outside postfixed witness is given for the tested cone), no R-closed
+rootless C containing x is compatible with those assumptions. If that
+invariance holds for every actual x against all fixed assignments, every
+nonempty closed collection contains a root, classically. With the exact
+q3a4 R-adapter this is the proposed conditional application to 20babef7;
+with the actual-concrete relation and C=A it gives the whole-roster
+nontrapping conclusion, and population plus the appropriate stability/EM
+gives dc397705. C=A admits no nonempty outside witness; the populated-only
+version does not prove whole-roster nontrapping. These are proposed
+deductions, not verified corpus arrows. The direct premise options remain.
+
+The proof is a localized fixed-point bound, related to
+`Logic.Regress.Graph` and #1878, not an independent discovery of
+fixed-point existence. Its increment is the exact combination of
+**closed-cone deletion, monotone greatest survivor, and targeted invariance
+among even populated alternatives**. It can diagnose a rootless component
+beside an unrelated source, where whole-roster root existence and global
+nonemptiness cannot. The candidate invariance is weaker than uniqueness
+when other components may vary; it is not furnished by a local causal
+explanation or by the mere fact that x actually exists.
+
+**Claim/type self-sweep (informal).** The conclusion is existence of a
+fixed mathematical substate omitting C, not possible nonexistence, temporal
+destruction, a physically realizable intervention or an actuality-producing
+operation. If one asserts only uniqueness among a restricted admissibility
+class, the constructed substate must be independently admitted before
+using the contradiction. Monotonicity, actual relation closure, uniform
+input guard, and invariance are all explicit; the proof does not infer
+uniform guards from actual edges. Full collection rootedness needs
+invariance for all selected members, not merely one. Independent semantic
+challenge and Lean/Comparator/NanoDa/corpus verification are pending;
+no new corpus argument or philosophical establishment is claimed.
+
+
+### Checkpoint B: populated alternatives, guard boundaries and matched accounts
+
+**Strength refinement.** The argument actually needs only monotonicity of
+F restricted to subsets of U, once F(U) is included in U and the restricted
+operator maps these subsets into U. More generally it suffices to warrant
+existence of a fixed substate inside U by an independent method. It does not
+need full configuration uniqueness: for a particular C it is enough that
+every admissible fixed assignment **intersects C**, even if different members
+are present. This is a non-deletion rather than an all-member necessity
+standard. Requiring every individual in A to be invariant would amount to
+uniqueness on P(A); the weaker per-cone intersection standard need not do so.
+Neither standard is automatically true of a contingent actual order.
+An independent reason that a relevant cone cannot be entirely absent would
+be needed. This route provides a conditional discriminator, not a substitute
+for supplier completeness by fiat.
+
+**Controls on identical carriers (analyst models, not metaphysical
+interpretations).**
+
+- Independent root plus rootless regress: take A = {s} disjoint union Nat,
+  R(n+1,n), with no R-input to s and no edges between s and the chain.
+  Let F(U) contain s unconditionally, and n exactly when n+1 belongs to U.
+  This is monotone, obeys the uniform guard, and its only fixed states
+  are {s} and A: equality of membership at each pair of successive
+  natural numbers forces either all or none of Nat. The relation is acyclic,
+  and the strict transitive closure is irreflexive. Every natural number
+  has an incoming supplier at A; nonempty whole-roster roothood holds but
+  CCR fails on the closed Nat cone. Restricting to populated fixed states
+  does not repair the explanation of the chain's actuality. The greatest
+  fixed point selects A; whether that maximality is ontologically warranted
+  is an additional question. This extends the earlier #1883 whole-roster
+  tail control by preserving an independently activated outside bearer.
+- Root access with optional members: take A={s,a,b}; R contains s->a,
+  a->b, b->a. Let s be unconditional, a activated exactly when both s and
+  b are active, and b exactly when a is active. The two fixed assignments
+  are {s} and A; every nonempty R-closed subset contains s, hence every
+  fixed assignment intersects every such subset. This separates cone
+  intersection from unique fixedness. The model is not strict productive
+  priority, because the a/b edges cycle. Moreover, a has two necessary
+  inputs; finding a root path does not certify conjunctive inductive
+  supply of a or b. CCR is weaker than the all-input inductive standard.
+- Monotonicity cannot be dropped merely because the positive guard
+  survives. Let A={s,a,b}, R consist only of a->b and b->a. Define F(A)=A,
+  and for every other U let s be activated exactly when s is absent,
+  a exactly when b is present, and b exactly when a is present. F obeys
+  the uniform guard (s has no incoming edge); A is the unique fixed
+  assignment. The complement of C={a,b} contains s, and the restricted
+  map swaps empty and {s}; there is no fixed substate there. This is a
+  concrete failure of the unqualified no-deletion inference, not a
+  counterexample to the monotone theorem. It has a cycle and an
+  inhibitory rule, so it does not certify a productive strict-priority
+  metaphysics. A necessary global law could select by a different,
+  nonmonotone rule, but its existential import would need defense.
+
+**Bounded diagnostic performed here.** Enumerated all 20 monotone Boolean
+truth tables on three input bits, combined into 6,859 operators with the
+all-present state fixed; paired them with all distinct-edge three-node
+supplier menus, retaining the uniform guard. Across 74,088 eligible
+operator/relation pairs there were 15,317 nonempty closed rootless-cone
+cases. In each case there was a fixed assignment within the cone complement
+and the union of all such fixed assignments was itself fixed. In each of
+450 cases with a nonempty outside postfixed witness, that union was
+populated and contained every such witness. The finite two-cycle with
+unconditional s has fixed masks 1 and 7; the nonmonotone control has only
+7. These are Python exhaustive diagnostics on finite sets, not a Lean
+verification, a model-registry certificate or evidence for modal
+admissibility.
+
+Reproduction (bit masks; supplier menus exclude identity edges):
+```python
+from itertools import product
+sub = range(8)
+le = lambda a, b: a & b == a
+mono = [tuple((m >> u) & 1 for u in sub) for m in range(256)
+        if all(not ((m >> u) & 1) or ((m >> v) & 1)
+               for u in sub for v in sub if le(u, v))]
+menus = [[m for m in sub if not (m & (1 << i))] for i in range(3)]
+valid = cases = pop = 0
+for fs in product(mono, repeat=3):
+    if not all(f[7] for f in fs):
+        continue
+    f = tuple(sum(g[u] << i for i, g in enumerate(fs)) for u in sub)
+    for r in product(*menus):
+        if any(r[i] and f[u] & (1 << i) and not u & r[i]
+               for u in sub for i in range(3)):
+            continue
+        valid += 1
+        for c in range(1, 8):
+            if any(not r[i] or r[i] & ~c
+                   for i in range(3) if c & (1 << i)):
+                continue
+            u = 7 ^ c
+            cases += 1
+            assert le(f[u], u)
+            fixed = [v for v in sub if le(v, u) and f[v] == v]
+            assert fixed
+            greatest = 0
+            for v in fixed:
+                greatest |= v
+            assert f[greatest] == greatest
+            seeds = [v for v in sub if v and le(v, u) and le(v, f[v])]
+            if seeds:
+                pop += 1
+                assert greatest and all(le(v, greatest) for v in seeds)
+assert (valid, cases, pop) == (74088, 15317, 450)
+```
+
+**Why the guard may deserve positive warrant.** Distinguish (i) the
+existential condition on a producer actually exercising a power,
+(ii) its specific productive contribution to the recipient, and (iii)
+its role in selecting an entire configuration. If x receives esse in
+the strict per se productive sense, its real receipt requires at least
+one exercised productive input; the input is not just a description of
+x. Absence of all such inputs defeats that receipt as such. The
+existential guard is thus motivated by what receipt claims to be, rather
+than by conservation of a stuff called esse. However, to move from that
+local condition to the uniform guard needs a stable recipient identity,
+an exhaustive supplier menu across the selected alternatives and no
+activation of that recipient by a different mode. In particular the
+guard does not say every received contributor is intrinsically inert:
+one received power can make a proper contribution. The no-producer
+case must not be inferred from having no *recorded* producer.
+
+For monotonicity, adding true antecedents to a sufficient explanation
+preserves the entailment, with the same law, conditions and sense of
+sufficiency fixed. This is reason to examine a positive-input operator,
+not proof that the actual production law is monotone. Adding actual
+entities can introduce inhibiting conditions, competing production,
+or change what composite is being explained. Constitutive holistic
+constraints may also be nonmonotone. Establishing a monotone restricted
+operator therefore requires a fixed account of the relevant positive
+conditions, not just the assertion that existence is good or that
+causation is strict. The nonmonotone control isolates this cost.
+
+**Comparison at the same explanandum:** why the actual obtaining of
+the entire selected supplier-complete order is productive or otherwise
+adequately grounded, not just which cause accompanies each member.
+All accounts get credit for real local contributions if their proposed
+relation is independently warranted. None receives credit for actuality
+merely because it fits a mathematical configuration.
+
+| Account | Positive account of the same order | Residual obligation under the closed-cone test |
+| --- | --- | --- |
+| Hume–Edwards/distributive | Each actual member has its own sufficient actual cause; the obtaining of all members is no additional bearer needing a further cause | Explain why conjunction of mutually conditional local explanations is sufficient for actuality at this scope. A law permitting both the populated and unpopulated cone does not distinguish them. Denying a further explanandum is coherent but rejects this broader demand. |
+| Beginningless strict regress | Distinct upstream productive contributor for each member; no circular priority | Acyclicity and every local link are compatible with the Nat control. A populated cone needs a global selection/existence account or a justified non-deletion condition; an unrelated root does not help. Infinite descent itself is not the defect. |
+| Coinductive/holistic | Actuality belongs to the greatest fixed configuration, or a globally constituted fact whose parts are simultaneous | Greatestness provides a real mathematical selection rule, not yet existential import. Need warrant that maximal admissibility entails actual instantiation, and that the global fact is constitutively sufficient. The gfp account need not be inconsistent, especially if it rejects the independently proposed deletion alternatives. |
+| Priority monism / necessary composite whole | A necessarily actual concrete whole grounds its parts; necessary actuality of W may be offered as stopping point | If W is in the exhaustive selected relation as an underived supplier, it is not a counterexample to C1-bearer. Necessity alone does not entail roothood, simplicity, causal production or uniqueness; if W receives its actuality from its parts in the same productive respect, the strict-priority bridge would prohibit reciprocal dependence. Different respects require distinct evidence. |
+| Existential inertia | The same actual bearer persists without a new sustaining producer under a law, conditional on earlier actuality | This can be an adequate local persistence explanation; a beginningless actual history still needs its own actuality account at the expanded scope, unless the rival denies that demand or supplies a necessary history/whole. The model does not establish a contemporaneous sustaining cause or origin-to-sustaining bridge (#1616). |
+| Underived productive source | An actual source possesses the relevant act non-receptively, and its exercised power accounts for the derived recipients | Must justify source actuality, intrinsic productive sufficiency, same-respect coverage and the source's connection to the whole order. A contingent source plus its law may itself admit an empty alternative: non-deletion selection does not follow from roothood. A necessary source may warrant non-deletion only if its necessity and productive connections are established independently. |
+
+**What denial commits the rival to.** Relative to a fully specified
+productive R and nonempty closed actual cone, denial of CCR commits to
+a rootless closed cone. It does not alone entail modal arbitrariness,
+an epistemic collapse or logical contradiction. Under the uniform
+input guard and monotone restricted production, it has a cone-deleted
+fixed substate. If an independent outside postfixed assignment exists,
+even requiring global population cannot exclude that alternative.
+To maintain that the selected cone must obtain, the rival must either
+reject admissibility of the deletion, reject the uniform productive
+guard (e.g. alternative supplier or a constitutive/nonlocal input),
+reject restricted monotonicity/fixed substate existence, or give up
+the relevant non-deletion claim. This is a concrete disjunction of
+commitments under stated background, not an exhaustive taxonomy of
+worldviews. Coinductive maximality is a way of rejecting the selection
+standard while conceding the mathematical alternative. Underived-source
+accounts face the same existential-import test when they posit a
+necessary source. The useful burden is to name and warrant the positive
+actualizing/constitutive condition, not simply to posit a ban on the
+alternative.
+
+**Receipt and throughput interpretation (#1965/#1966).** Reuse #1965's
+finite-throughput ledger: finite summed positive edge throughput, a
+nonreturning transfer and receipt coverage at every actually grounded
+bearer force a relative root. The fitted-ledger equivalence rules out
+retrospective accounting as independent warrant. #1966's open PR uses
+finite upstream export ancestry plus injective matching to distinct
+receipts, avoiding a numerical magnitude but not the exclusive-use
+commitment. Individuating acts or recording provenance does not by
+itself imply injectivity: a received pattern or exercised ability can
+support several distinct contributions without being consumed. Counting
+recipient-specific *obligations* might make receipts distinct in a
+particular accounting semantics, but an upstream receipt need not be
+recipient-specific, and such bookkeeping does not establish existential
+exclusivity. No independent reason found for either finite summed esse
+throughput or the required existential receipt matching. The closed-cone
+proof uses neither a stock nor a conservation/exclusivity principle;
+it introduces the separate all-candidate guard and restricted fixed-point
+assumptions rather than solving those ledger bridges.
+
+**Connection to existing routes (no new graph arrow).**
+
+- For q3a4, with the exact R adapter, the all-cone conditional conclusion
+  is CCR (20babef7); the existing `c6d92415` derives `c35b1a5c` using
+  distinct-esse cause coverage `457698e4`, identity-bearer uniqueness
+  `a576300f`, actual population `78cffb8e`, and explicit EM `ee4ab504`.
+  A common first identity-bearing source here is connected by finite
+  directed ancestry, not automatically an immediate efficient giver.
+  Relative roothood alone does not establish its identity with esse.
+- For the actual-concrete grounding profile, apply the all-state version
+  to C=A. The existing #1964 factorization gives `5c898d24` as the
+  population-conditional double-negated root proposition and yields
+  `dc397705` with population and root-existence stability. Conversely a
+  root entails nontrapping. This equivalence is no fresh support when
+  used circularly. The populated-alternatives test diagnoses proper cones,
+  and is not itself the whole-roster proof.
+- With an actual root selected once, the existing contingent-grounding
+  commitment `c71c068c` (every contingent actual concretum has an actual
+  concrete ground) and the needed modal logical background exclude its
+  contingency and give the same necessary actual root, hence
+  `b19ffd92`. **Correction at checkpoint D:** this does NOT yield
+  `0bdcf366`, whose support exclusion ranges over every carrier world.
+  The latter needs a further all-world transport/underivedness argument,
+  e.g. the existing standing-ancestry/coverage routes mapped in
+  [conceptual-existence-boundary](conceptual-existence-boundary.md).
+  Neither result excludes unmodelled or nonconcrete explanations or other
+  necessary beings.
+- `ef632140` (unique actual root) uses actual population `56f68b40`,
+  `5c898d24`, EM, the actual/esse and distinct cause-to-ground
+  interfaces `0436de86`, `cb1cdea9`, cause coverage `457698e4`,
+  and identity uniqueness `a576300f`. It is not a consequence of bare
+  root existence. Reuse the same-witness route in
+  [De ente assessment](de-ente-esse-source-1628.md) and #1964's
+  unregistered `deriveFromActualRoot` (with its explicit contingent
+  grounding and shared classical-attribute premises; its sense mixing
+  registration blocker remains). No potency, simplicity, goodness,
+  intellect, will or GOD_4 bridge is discharged here.
+
+**Provisional judgment on exhaustive existential supply.** Retain the prior modest
+preference for nonreceived productive availability on an exhaustive
+per se existential-supply reading. Both accounts grant actual givers. The rival explains their availability
+through their jointly obtaining activity. The modest preference depends on
+a further judgment about receipt: when actuality is wholly received, the
+givings that account for its availability must reach an unreceived giver.
+The contrast between exercising borrowed power and supplying that power
+gives this judgment some warrant. Its application to every collection
+containing all its members’ suppliers remains open. The present discriminator
+improves specificity: even a populated rival with an unrelated
+underived root must explain how its rootless cone is selected, if
+its own activation account meets the test. It does not increase the
+strength of the prior judgment on the unrestricted mode-unspecified
+20babef7, nor refute coinductive or necessarily obtaining whole accounts.
+The strongest genuine denial remains a globally necessitated or
+primitive, bearerless constitutive fact with an independently defended
+admissibility/instantiation principle. A fundamental concrete whole
+that supplies its parts and itself has no incoming cause in the selected
+relation satisfies the narrow root conclusion. The positive source account must meet the same scope
+and cannot simply declare its own existence exempt while demanding
+a further reason from every rival.
+
+**Checkpoint B handoff (historical).** Work is partial; intended formal premise delta
+none. To proceed, use the prepared worker's canonical `truth related`,
+`dossier`, `brief`, `novelty`, `semantics` and `context` on the
+three targets and exact consumers; check existing fixed-point APIs in
+`TruthCore/Logic/Regress.lean` and `ClosedEsseSource`. Formalize the
+restricted monotone-operator lemma over the actual subtype and the
+guard as an explicit hypothesis, reuse existing adapters, distinguish
+local rootlessness from all-subsets borrowing Escape, and freeze a
+Challenge only after sense preflight. Certify the populated infinite
+control and the nonmonotone control with exact conjuncts and compare
+the weakest target non-deletion condition against existing strength
+records. Run the worker preflight, applicable Lean build, corpus,
+binding, Comparator and NanoDa checks and computed frontier-diff.
+Obtain a fresh independent semantic challenger for this final
+synthesis (particularly admissibility, rooted but noninductive control,
+conditional modality and comparative burden). Local clone fails DNS,
+there is no local Lean installation or independent worker facility in
+this session, and no installed convention checkout could be inspected
+beyond repository guidance fetched via GitHub. Hence this draft remains
+unreviewed and no Lean/Comparator/NanoDa or corpus success is claimed.
+No attribution, statement, definition, Challenge, Solution, result or
+argument records changed by this note. The attempt records the bounded
+blocked application without changing the current approved assessment.
+
+
+### Checkpoint C: what constitutive receipt does and does not warrant
+
+**Question.** Does the very nature of existential receipt justify the uniform
+positive-input guard and non-deletion principle, independently of assuming
+supplier completeness? Continue on the exact prior draft head
+`b0c8d2b37105566fad7206cd5c63806a1b278626`. Reuse #1878's all-candidate
+activation test, #1883's state-indexed controls, the [chain-instantiation
+controls](chain-instantiation-controls.md) (#704), [direct grounding
+audit](direct-grounding-warrant.md) (#1553), and the origin/sustaining
+distinction of #1616. This is new analyst reasoning, attribution deferred,
+not a registered result or a new sense record.
+
+**Baseline verification correction.** Reran the exact Python enumeration
+in checkpoint B: 20 monotone three-bit truth tables, 74,088 eligible
+operator/relation pairs, 15,317 closed rootless cone cases, and 450
+with a nonempty outside postfixed witness. All assertions passed.
+[CI run 45509404715](https://github.com/moritzbrantner/formal-logos/actions/runs/45509404715)
+on the preceding head succeeded. The corpus-and-lean job passed corpus,
+binding and the computed frontier comparison (`truth frontier-diff
+--base HEAD^1`: no change); comparator-plan and comparator-library
+succeeded, result shards and NanoDa were skipped. This confirms the
+unchanged registered corpus, not the new informal arguments. No independent
+semantic review is recorded on that head.
+
+#### 1. Warrant for a receipt guard; do not freeze the actual supplier menu
+
+Distinguish these four different claims, holding the productive respect
+and recipient identity fixed.
+
+1. A particular occurring receipt of esse from c is an effect of c's
+   exercised productive contribution. An unexercised possible cause or
+   a description of the effect is not that occurring receipt. Thus that
+   receipt presupposes actual exercise and an actual bearer of the
+   productive power, in the selected explanatory mode.
+2. The bearer's existence in a candidate realization must be constituted
+   by such a receipt, rather than merely having been originated by a cause,
+   persisting by inertia, or being independently actual while receiving
+   some additional perfection. This is a substantive essential-reception
+   premise; it is not obtained from the actuality of one received token.
+3. In a selected component C, every relevant realization of that
+   constitutive receipt uses some producer belonging to C. This is
+   **potential supplier closure at the level of the component**, not the
+   assertion that the same particular actual edges must be exercised in
+   every candidate realization. It is an open restriction for proper
+   components. For the whole candidate domain, no external producer is
+   available by construction, but exhaustiveness of that domain is
+   still an application premise.
+4. That component cannot be absent in the admissible alternatives.
+   This is a distinct positive existential import premise, not part of
+   the meaning of an actual receipt. A receipt is conditional on an
+   actual productive input; this does not assert that it occurs.
+
+(1) has strong direct conceptual warrant in the strictly productive
+reading: a reception from an exercised giver without any such giver
+is not that reception. This is more specific than material implication
+or covariance, and does not invoke a conserved stock or exclusive use.
+It does not prove that real existence always has that mode. (2) needs
+the origin-to-sustaining/existential-mode argument, rather than
+assuming the inertia rival false; (3) needs potential, not merely
+actual, completeness. Even all of (1)–(3) supply only a conditional
+requirement. The difference between (1) and (2) is crucial for the
+q3a4 actual-esse-cause graph; neither term alone implies a
+world-relative sustaining relation. A constitutive, non-efficient
+holist can accept the conditional existence of its relata while
+rejecting the productive interpretation in (1).
+
+#### 2. A weaker deletion test with changing suppliers and nonnecessitating production
+
+Instead of the deterministic monotone F of checkpoint A, use a relation
+D(S,T) on candidate input and output assignments S,T subset A. It can
+have many outputs, including none. Here D is an abstract admissible
+activation constraint, not temporal transition, modal accessibility,
+or an ontological explanation relation. A stable assignment satisfies
+D(S,S). A is actual in the interpretation being tested and D(A,A) holds.
+Set U = A minus C.
+
+A **component-level guard** G is enough:
+
+    D(S,T) and S disjoint from C imply T disjoint from C.
+
+The receipt analysis (1)–(3) motivates G when output occurrence means
+the constitutively received actuality and input membership indicates
+actual available productive relata. The interpretation requires a
+same-respect bridge; input and output cannot be silently treated as
+different moments. G does not name a particular predecessor and
+allows any eligible producer in C, arbitrary inhibiting conditions,
+alternative realizations and nonunique outcomes.
+
+A distinct **retained-realization condition** J at U says:
+
+    some T satisfies D(U,T) and U is a subset of T.
+
+Then D(U,U): G puts T inside U and J puts U inside T. In fact given G,
+J at U is equivalent to D(U,U). This exact strength is deliberate:
+renaming J is not independent warrant. To make J informative, exhibit
+a genuinely jointly sufficient realization of the retained entities
+whose actual required inputs and enabling conditions survive deletion.
+For example, with deterministic local signed rules, a sufficient
+actual rule instance for each retained x can survive if its positive
+inputs are retained and its negative conditions stay satisfied.
+Negative inhibition elsewhere need not be monotone. For a
+nondeterministic law the retained realization witnesses must be
+**jointly compatible**, not selected separately for each member.
+
+For C=A, U is empty and J reduces to existence of an allowed output
+at the empty input. G forces that output empty. No monotonicity,
+global well-foundedness, numerical transmission, receipt injection,
+fixed supplier identities or deterministic selection is required.
+For proper C, an independently functioning outside component witnesses
+J if it jointly realizes every retained member of U. A root elsewhere
+may keep just part of U active.
+Do not claim this proves modal accessibility of U. If a rival
+restricts its admissible configurations, it may reject J or the
+interpretation of D(U,U) as a metaphysically admissible alternative.
+If it says the necessary actual order is simply one of the stable
+assignments, the difference between stability and admissibility is
+exactly the remaining positive selection problem.
+
+A useful weaker diagnostic on J: fix nonempty U and suppose every
+retained member belongs to at least one allowed output at U. Under G
+all these outputs lie in U. For finite U, if the family of outputs
+is upward-directed **within the family** (for each two there is an
+allowed output containing both), finite induction constructs an
+allowed output containing all of U. For infinite U, finite joint
+realizability alone does not suffice: the family of all finite
+subsets of an infinite U is directed and covers U but omits U itself.
+A separate closure/compactness condition on the family suffices
+(e.g. if closed in the product topology on {0,1}^U, every basic
+neighborhood of the full assignment intersects it, by finite joint
+realizability, so the full assignment belongs to it). A genuine
+retained simultaneous productive exercise can warrant J directly;
+there is no reason to assume general compactness of metaphysical
+powers. These are candidate set-theoretic deductions, not Lean or
+configuration-registry results.
+
+#### 3. Structural separators: change the supplier and keep the component guard
+
+Take A={s,a,b,c,d} and C={a,b,c,d}. The input/output constraint is
+deterministic for this illustration. s activates unconditionally.
+a activates from c when both c and d are present (d is an enabling
+condition), or from b when c is absent. b activates from a; c and d
+activate from b. At A, the selected a-supplier is c, not b. In an
+input with only b, a activates through b despite c's absence. Adding
+c to that input without d prevents activation of a. Thus the fixed
+actual-menu positive guard from A and global monotonicity both fail,
+but the component guard holds for every input and the outside
+realization {s} remains fixed. All actual C members have incoming
+selected suppliers in C. This example allows cycles, is purely a
+formal activation interpretation, and does not restore a strict
+productive-priority premise. It shows why alternative suppliers
+inside C and inhibition need not invalidate this deletion test;
+it does not certify any metaphysical entity or productive exercise.
+
+For the nondeterministic join test, let U={p,q}; allowed outputs at U
+are exactly {p} and {q}. Each member has an individually admissible
+realization but neither outcome includes both; no D(U,U).
+This is the failure mechanism for an unjustified exchange of
+`forall x, exists realization` with `exists realization, forall x`.
+It does not claim no other fixed assignment survives. For infinite
+U the finite-subsets family makes the stronger finite-join/whole-join
+distinction. These are explicitly surrogate output relations.
+
+**New finite diagnostic, actually run in Python.** Exhausted every
+nonempty family of subsets of U for sizes 1, 2 and 3, tested individual
+coverage, directedness and full-union membership. At size 3, 218 of
+255 families cover every member, but 90 of those omit U. Every
+directed covering family (128) contains U. At size 2, 10 covering
+families include two failures of joint coverage. The following
+reproduces the finite test and varying-supplier control:
+
+```python
+for n in range(1, 4):
+    U = (1 << n) - 1
+    subsets = list(range(U + 1))
+    total = covered = fail = directed_covered = 0
+    for mask in range(1, 1 << len(subsets)):
+        T = [s for s in subsets if mask >> s & 1]
+        total += 1
+        cov = all(any(t & (1 << i) for t in T) for i in range(n))
+        directed = all(any(((a | b) & ~t) == 0 for t in T)
+                       for a in T for b in T)
+        if cov:
+            covered += 1
+            fail += U not in T
+            if directed:
+                directed_covered += 1
+                assert U in T
+    assert (total, covered, fail, directed_covered) == {
+        1: (3, 2, 0, 2), 2: (15, 10, 2, 8),
+        3: (255, 218, 90, 128)}[n]
+
+# s=1, a=2, b=4, c=8, d=16
+A, U = 31, 1
+C = A ^ U
+def F(S):
+    return (1 | (2 if ((S & 8 and S & 16) or
+                       (S & 4 and not S & 8)) else 0)
+            | (4 if S & 2 else 0) | (8 if S & 4 else 0)
+            | (16 if S & 4 else 0))
+assert F(A) == A and F(U) == U
+assert all(not (F(S) & C) or S & C for S in range(A + 1))
+assert F(4) & 2 and not F(4 | 8) & 2
+```
+
+#### 4. Why the non-deletion bridge is not a consequence of receipt
+
+Even exact essential-supplier identity, strict priority and local
+sufficiency do not supply positive existential import. On the
+existing Nat chain, let every n be present exactly when n+1 is
+present, with n+1 the fixed selected supplier of n. These two-way
+conditions are stronger than the receipt guard alone. They hold
+in the all-present and all-absent assignments. Strict reverse Nat
+ancestral priority is irreflexive and transitive. This is reuse of
+#704's equation and #1883's controls, not an additional independent
+regress theorem.
+
+There is a stronger rival reconstruction worth keeping: select
+two universally accessible candidate worlds, with all n present
+and the same successor causes in each, but differ in an
+irrelevant accidental feature of n=0. Each particular n is
+accessibility-necessary; it has the same necessary particular
+supplier in both worlds, and all actual bearers have a selected
+incoming cause. The selected cause relation is acyclic and all
+local two-way presence conditions hold. This stipulated frame
+admits no absent chain, although the empty assignment remains a
+solution of the conditional local equations outside that frame.
+Thus even **necessary particular received bearers** and stable
+supplier identity are compatible with a rootless graph in this
+structural surrogate. This is not new evidence that such a
+necessary concrete order really is metaphysically possible;
+its necessity is imposed by the accessible domain and it supplies
+no intrinsic existence reason, actual exercise or modal import
+for the laws. It defeats the attempted inference solely from the
+specified modal and relational conditions. The same warning applies
+to asserting necessity of a source without its positive nature.
+
+A useful general scope test does not need an activation operator:
+on the fixed candidate domain, every receiver-guarded law of the
+form 'for all actual x in C, [arbitrary condition about x]' is true
+when no C-member is actual. All source-triggered laws with only
+C-member actual-exercise triggers are then vacuous too, even if
+the consequent is complex, the laws are nonmonotone, or the
+suppliers vary between realizations. Thus a background permitting
+absence plus *only* these laws cannot entail C-population.
+For a proper C the other, outside-triggered or global clauses
+must be checked, not simply discarded; a necessary outside recipient
+depending essentially on C can exclude its absence, but this is
+not an independent positive origin of C's actuality. An
+unconditional existential principle or an independently actual
+outside input can break the vacuity. This is a logical import
+test, not a theorem that all possible metaphysical explanations
+must entail their explananda, nor that an actual causal explanation
+is just a universal conditional.
+
+#### 5. The discriminating demand at the actual order (not only modal selection)
+
+The strongest non-deletion premise is not generally defensible:
+a contingent derivative order may legitimately be absent. A
+nonnecessitating productive explanation can still explain why
+it actually obtains. Do not attempt to prove CCR by importing
+necessity of each actual contingent cone. Instead ask for a
+**positive account of the availability of the productive input**,
+distinct from its conditional operation given that it is available.
+
+For a Hume–Edwards or infinitist account, grant all actual local
+productive facts, not merely their conditional laws. These facts
+are stronger than the universal guarded theory, but their factual
+inputs already include the obtaining of actuality within C.
+They can explain x relative to its supplier without independently
+explaining why *any* C-member is actual. The exact unresolved
+question is whether the whole conjunction of those local
+explanations is adequate at this broader scope. That is a
+substantive explanatory standard, not a logical prohibition of
+entailment from ground to effect or of jointly grounding a whole
+by its parts. There is no proof here that the rival is internally
+contradictory. A constitutive holist can explicitly defend the
+whole fact's actuality without treating it as a productive bearer;
+a coinductivist can defend maximal actuality as a primitive
+principle. Both owe an explanation of existential import if they
+claim this broader explanatory scope.
+
+The positive source account has a concrete comparative advantage
+when explaining a **particular received cone of effects**: it
+offers actual productive input available without receipt from
+that cone, rather than beginning with a member whose very
+productive availability is conditional on received actuality
+within it. No conservation law or finite path length enters this
+reason. This advantage is conditional on warrant for nonreceived
+availability and an actual exercise relevant to the effect, not
+just an R-root or an abstract necessary law. For the enlarged
+explanandum of all actuality, which includes the source's own
+existence, a brute source incurs the same residual existential
+burden. An independently defended intrinsic existence reason,
+not bare accessibility-necessity or causal exemption, would
+break that parity. This comparison is compatible with a
+nonnecessitating sufficient reason; it does not impose deductive
+necessitation of every effect.
+
+**Provisional reassessment (not independently reviewed).** The
+direct productive-receipt conditional is strongly motivated
+within its intended sense. The fixed actual supplier menu and
+global monotonicity were unnecessarily demanding sufficient
+conditions for some deletion tests; the component guard plus a
+joint retained witness permits the displayed varying-supplier,
+nonmonotone control. The sufficient packages are not ordered in
+general: the monotone proof can preserve only a subset of U. For
+example, with a closed two-cycle C={a,b}, outside s activated
+unconditionally and outside t activated exactly by a, the full
+assignment is fixed, but deleting C makes t inactive. The earlier
+monotone proof finds {s}, while J for the entire U={s,t} fails.
+Thus the revised criterion trades a stronger retained-witness
+requirement for weaker assumptions about the operator. Nevertheless the essential-reception
+application, potential component closure, joint realization
+and modal/ontic import remain separate. In the two-world frame every chain member is present
+at both accessible worlds, so modal non-deletion holds even though
+the chain has no root. The same local receipt equations also admit the
+empty assignment when evaluated outside that frame. Which assignments
+count as accessible requires a further account. Supplier completeness is still modestly favored only
+at exhaustive genuinely productive explanatory scope by the
+mode-of-having rationale. No increase in warrant for the
+unrestricted mode-unspecified 20babef7 is asserted. A purely
+necessary global constitution with positive existential import,
+or a primitive whole obtaining fact, remains the strongest
+rootless competitor; a genuinely underived concrete whole is
+not a denial of the narrow foundation conclusion.
+
+**Checkpoint C handoff (historical).** This superseded the earlier draft's handoff,
+not its independently reviewed historical assessments. The next
+discriminating target is the intrinsic-existence-reason comparison:
+can the necessity of a necessary abstract/structural law or
+composite whole supply the actual existence of a concrete
+realizer without presupposing that realizer, and can the
+nonreceived-source account do better at the same scope?
+Reuse the existing necessary-being-five-senses assessment,
+`NecessaryRootFork`, and intrinsic-existence-reason work #1595;
+do not infer a positive existence reason from modal necessity.
+Before attempting registration, run canonical CLI retrieval and
+semantic preflight and check the precise same-witness consumer.
+Checkpoint C's deductions and controls are proposed proof
+obligations, not registered evidence. The local environment
+again failed GitHub DNS and has no Lean/lake/cargo; independent
+semantic challenge and installed-convention inspection are
+unavailable here. Keep this PR draft. Intended formal premise
+change remains none; the new head requires its own CI/frontier
+evidence. No changes to formal declarations or closure rules.
+
+
+### Checkpoint D: existential import after excluding posterior grounds
+
+**Question and evidence revision.** Can a necessary abstract structure or a
+necessary concrete composite whole provide an independently adequate reason
+for its own concrete actuality, without importing the very actuality it
+explains? Continue C at `9765c079c3b4d3490bfa31a581f9ab672c1b6b16`.
+Keep the identical question for the subsistent-esse proposal. This is an
+analyst derivation and comparison, not a new primary-source attribution.
+The central claim about intrinsic explanation is
+`a7bbd2fd-242c-5097-a9a3-581d25835890` (#1595/#319); its reviewed
+[assessment](intrinsic-existence-reason-1595.md#current-reviewed-assessment-2026-11-17)
+has **no registered God-root consumer**. The planned connections are the
+q3a4 source route and the actual-necessary-root/identity route, not a
+proof that an intrinsic reason already supplies a GOD_4 bearer. Reuse
+`IntrinsicReasonBoundary.ActualRecord` (one actual, nonempty full
+record), `selectedNatureRecord` (classification, not adequacy),
+`EssenceReasonSeparation` (necessity/essence/reason separation),
+`ExistenceIngredient` (joint records, not the sufficiency of individual
+ingredients), and `HistorySelection.characterization` (determination
+by a truth vector, not priority). No replacement explanation or ground
+registry is introduced.
+
+#### 1. Fix the explanandum and the three readings of a nature or structure
+
+Hold one actual bearer n, the positive existence fact E(n), a proposed
+nature-description, and the proposed explanation of derivative effects
+fixed. When comparing whole foundations, also include the actual
+constitution and exercise on which their proposed explanation relies.
+Do not credit an account for the explanatory import of a more restricted
+explanandum. Following #1595, mere accessibility-necessity, inclusion
+of an existence fact in a nature, equal represented essence/esse maps,
+and an adequate intrinsic existence reason are distinct.
+
+- **Abstract specification:** a formal relation, universal law, blueprint,
+  or essential conditional, whose truth is independent of whether there
+  is a real concrete instantiation. It may explain features conditional
+  on a realization; its being necessary is compatible with no concrete
+  realization if the independently specified theory admits such an
+  interpretation.
+- **Instantiated nature/structure:** the concrete whole has the nature,
+  organization, or exercise in question in reality. This fact is
+  existentially committing. Its truth implies actuality of its bearer,
+  but logical implication alone gives no direction of metaphysical
+  explanation. The instantiated organization may be explained by the
+  constituents or conversely; that is a further question.
+- **Unconditional existence-conveying nature:** the positive content
+  itself warrants the actuality of this very candidate, not merely a
+  conditional about instances, and is not a fact whose obtaining is
+  explanatorily posterior to the existence it is invoked to explain.
+  This is the live positive proposal of the subsistent-esse account,
+  but a rival can equally propose it for a necessary whole or a
+  nonproductive global ground. It must be tested, not stipulated as a
+  special consequence of the term 'esse'.
+
+The first and second readings make different claims. The common move
+from the mathematically necessary organization to a factive, actual
+organization changes the antecedent; it does not preserve the
+explanatory gain for free. For the third reading, an explicit positive
+concrete realization axiom can consistently rule out noninstantiation.
+Its semantic/ontological warrant, as distinct from its syntactic
+existential import, is the issue.
+
+#### 2. Filter actual candidate grounds by explanatory priority, then test their joint import
+
+The increment over C and #1595 is to apply **both** tests to the
+same complete record, without assuming one necessary particular part,
+well-foundedness, a numerical measure, or that every reason must be
+an efficient cause.
+
+At the selected actual standpoint, use a single strict transitive
+explanatory-priority relation P on true facts; a -> b means a is
+explanatorily prior to b. This is an OPEN interpretation of an order
+on facts, not automatically any of the repository's relations on
+bearers, exercise tokens, or causes. Strict priority of each
+indispensable full-ground ingredient relative to its effect is a
+substantive partial-to-full grounding policy, not a theorem about
+nonnecessitating reasons. Redundant ingredients may be removed before
+applying this policy; do not demand that irrelevant facts be strict
+grounds. It is sufficient that the selected record be nonempty and
+all its retained members strict contributors in this policy.
+
+Let e=E(n). Let H be the actually true candidate reason facts, with
+a fixed interpretation, in the specified explanatory scope. Define
+the excluded region D={e} union {f in H : P(e,f)} (intersection with
+H where needed), and the eligible region L=H minus D. A strict
+adequate full ground G, using this policy, must satisfy
+nonempty G subset L: any f=e would violate irreflexivity, and
+P(e,f) together with P(f,e) violates transitivity and
+irreflexivity. This necessary eligibility filter does not claim
+every f in L actually grounds e.
+
+Independently, choose a background theory/interpretation class
+K on which the proposed reason claims existential entailment. Keep
+the definitions and independently warranted reason-content fixed.
+K is a class of formal interpretations, not necessarily the modal
+worlds of the actual profile; an omitted n in this class is not
+automatically metaphysically possible. An actual interpretation
+satisfies the ground facts and e. For each target-absent
+interpretation v in K, let B(v) be the members of H true there.
+The sufficient-record condition over K is exactly
+
+    for every v with e false, some f in G is not in B(v).
+
+In other words the **same joint record** must exclude every
+target-absent interpretation. This is the elementary truth-vector
+test specialized to the eligible region; reuse the existing
+selection reasoning, rather than counting this equivalence as a
+second independent proof.
+
+**Combined discriminator.** If one target-absent v preserves every
+fact in L, no nonempty strict-eligible record from H can be
+existentially sufficient over K: every such record is contained in
+B(v). Conversely, when at least one target-absent interpretation
+exists, if every such interpretation omits at least one fact of L,
+then L itself is nonempty and entails e on K. This converse
+only exhibits a set of actually true eligible facts with the
+truth-entailment property, not an admitted, realizable, finite or
+metaphysically adequate full ground; the P(f,e) edges need their
+own warrant. For a finite nonempty set of omission interpretations,
+one can choose one eliminating eligible fact for each; this finite
+record also entails e. For an infinite set of omission interpretations,
+no finite record is guaranteed. If no omission interpretation exists,
+even empty/irrelevant records entail e, so this test cannot distinguish
+them. That is the exact necessity-vacuity boundary already noted in
+`IntrinsicReasonBoundary`.
+
+One must use a **common** omission interpretation for the forward
+obstruction, not one separately chosen for each ingredient. Two
+actually true eligible facts p and q may be jointly determining:
+one omission preserves p and omits q, another preserves q and
+omits p. Neither singleton determines e; {p,q} does. Thus even
+when neither abstract ingredient alone can entail existence, the
+whole record may have import. To reject all purely abstract
+records by the common-omission test requires an actual
+model-construction preserving their joint theory. This restriction
+prevents dismissing joint sufficient grounds just because each
+ingredient individually seems nonproductive.
+
+The priority exclusion is useful even without modal entailment:
+a proposed strict explanatory arrow from a posterior fact to its
+own explanatory ancestor contradicts the shared priority policy,
+whether or not the effect is necessitated. The second test applies
+only to a ground offered as entailing concrete actuality relative
+to K, not a universal requirement on all causal or nonnecessitating
+explanations. Necessity at accessible worlds does not license an
+arbitrary enlargement of K. A separate reason that K captures the
+independently warranted content, or a real modal bridge to K, is
+required before interpreting the omission as a philosophical
+counterexample.
+
+#### 3. Matched application to the necessary whole
+
+Reuse `WorldwiseCompositeGround.ReplacementCertificate` (#1097,
+result `e167d4d4-2be0-5820-9cbc-8c6ccb2bf473`): the same necessary
+whole with replaced contingent proper atoms in both worlds, actual
+fusion and strong supplementation, and whole-to-part grounding.
+The model grants concrete whole-first grounding and so concedes
+selected concrete roothood rather than denying it. Its worldwise
+mereology supplies neither the whole's intrinsic reason nor
+unrestricted existential independence. #1966's open PR already
+tests deficit of perfection and distinct esse, so no general
+composition-implies-reception premise is added here.
+
+For this very whole W at the selected world, suppose it is offered
+as existentially prior to all its proper parts. Use E(W), E(p) for
+the actual part, and K(W) for the actual instantiated constitution.
+The targeted extra assumptions are:
+
+- E(W) P E(p) (whole-to-part existential explanatory priority;
+  a bridge from the selected bearer grounding edge to fact priority);
+- E(p) P K(W) for at least one actual indispensable constitutive
+  input p (a partial fact-ground bridge, not mere essentiality,
+  co-existence, or parthood);
+- K(W) is a strict contributing ground of E(W) itself, not just of
+  its structural properties or of its being a whole of this kind.
+
+Then E(W) P K(W) and K(W) P E(W), impossible on the same strict
+transitive P. The proof tolerates arbitrarily many or replaced
+parts, indirect finite paths, and infinite derivative orders
+elsewhere. Only one actual constituent with the displayed priority
+path suffices. It requires neither all-world constancy of particular
+parts nor all-part priority in being. The first two arrows concern
+explanatory priority of positive facts, not a modal necessity of
+co-existence; the third is the specific alleged existential
+explanation. No source claim or existing checked theorem is
+asserted to supply these three interpretations jointly.
+
+**Positive warrant and limitation.** In ordinary realized assemblies,
+part states and their organized arrangement often make a structural
+fact obtain: remove a required realizing component without
+replacement and that specific organization no longer obtains.
+This gives a reason to investigate constituent realization as
+partial grounding. It does not prove strict priority of the
+particular part's existence over a fundamental whole's
+constitution. Whole-first functional integration gives a serious
+alternative direction (reuse the priority-monism framework),
+and merely requiring some part plurality essentially is a
+constraint, not an explanatory arrow. Even if the actual
+constitution is posterior, the whole could explain its
+actuality by another positive nature fact, not K(W); this is
+exactly where the candidate record filter is needed. The
+argument excludes a specific explanatory cycle, not all priority
+monism, mereological essentialism or necessarily composite wholes.
+
+If instead the whole's proposed explanation is an uninstantiated
+structure description B plus abstract laws L, the strict-priority
+cycle is absent but we need a separate positive existential
+import test. In a guarded interpretation with a fixed abstract
+domain and variable actual-concrete extension, preserve L and B
+and let W and its dependent parts be absent; any outsider can
+remain present. If that interpretation satisfies the independently
+specified theory, L and B are jointly insufficient for the target.
+This construction is legitimate for abstract-only statements and
+laws whose concrete obligations are all guarded by actual
+members of the removed order; it is not legitimate for an
+unconditionally existential, mixed bridge or independently
+warranted necessary-concrete theory. Such a rival must explain
+the import of that bridge, not merely demonstrate uniqueness of
+an abstract realization up to isomorphism.
+
+The key conditional alternative for a concrete whole is therefore:
+a reason using an instantiated constituent configuration that
+is posterior to W cannot strictly ground W; a description that
+survives a common omission cannot entail W; a genuinely
+nonposterior, existence-conveying nature remains a live third
+option. These are tests on candidate explanations, not an
+exhaustive disjunction of all metaphysical modes or a proof
+that the third option is empty. Nonnecessitating and nonstrict
+explanatory accounts need comparison on their own standards.
+
+#### 4. Apply the identical filter to subsistent esse
+
+Suppose n is independently actual and a relative root.
+`RootEssenceIdentity.identityOfActualRoot` derives the represented
+essence/esse equality from exactly: this same root, EM,
+`ExistingInActAt`, `EsseCauseIsActualConcreteGround`, the q3
+causal dichotomy, and no essential efficient self-causation.
+Do not infer the dichotomy from the priority filter above.
+In particular, an abstract/constitutive noncausal external reason
+can evade the efficient-only dichotomy.
+
+If the proposed intrinsic reason is just the fact 'n is in act as
+to esse', and that is identical in content to E(n), the strict
+ground reading supplies a self-arrow, not an explanation.
+If it describes a factive exercised act whose obtaining is
+explanatorily posterior to E(n), the same cycle objection applies.
+If it is only an abstract essence-description or equality of
+represented principle values, a common omission control in
+an independently justified interpretation class blocks entailment.
+The existing #1887 assessment already distinguishes these and
+records `565ccd6c`, the unconditional existence-in-essence
+bridge; do not silently treat that premise as established by the
+identity result. The positive alternative is nonreceived actuality
+as the independently warranted nature of this very actual source,
+with no posterior realizing condition. That is a substantive
+metaphysical proposal, not efficient self-production. If identity
+is itself proposed as a nonstrict explanatory stopping point,
+do not impose an extra strict ground arrow by definition.
+Then compare the stopping criterion against a fundamental
+composite's analogous proposal.
+
+There is a limited comparative advantage for the subsistent-esse
+proposal when the composite rival invokes a separately obtaining
+and explanatorily posterior organization while the former has no
+such realization requirement. This does not establish that the
+whole's nature is posterior, that all composition has an
+actualizing source, or that the subsistent act has adequate positive
+existential content. Conversely, an arbitrary tag or statement of
+necessity for the source cannot do the work it fails to do for
+the whole. The positive warrant for preferring a nonreceived act
+over wholly received productive input remains the mode-of-having
+argument from the preceding checkpoints, not an independent
+proof of unconditional intrinsic adequacy. Both accounts owe the
+explanation of their own existence, unless they defend a stopping
+rule under which no further explanation is apt.
+
+#### 5. Finite audit and same-witness correction
+
+The following Python diagnostic was actually run in this session.
+All n=1..3 nonempty families of target-absent rows were checked for
+every possible exclusion mask; n=4 checks all pairs of rows with
+repetition, not every family. Candidate facts are all actual, a row
+is a subset of them true when the target is absent, and masks D are
+stipulated priority exclusions. This tests the joint sufficiency/
+eligibility characterization only; it does not certify actual
+strict explanatory orders or metaphysical adequacy.
+
+```python
+from itertools import combinations_with_replacement
+for n in range(1, 5):
+    A = (1 << n) - 1
+    rows_n = 1 << n
+    families = ([tuple(v for v in range(rows_n) if mask >> v & 1)
+                 for mask in range(1, 1 << rows_n)]
+                if n <= 3 else
+                list(combinations_with_replacement(range(rows_n), 2)))
+    for rows in families:
+        for D in range(A + 1):
+            L = A ^ D
+            feasible = [g for g in range(1, A + 1)
+                        if g & D == 0 and all(g & ~r for r in rows)]
+            common = any(L & ~r == 0 for r in rows)
+            assert bool(feasible) == (not common)
+            if feasible:
+                assert L in feasible
+# Output (n, families, cases): (1,3,6), (2,15,60),
+# (3,255,2040), (4,136,2176). Total 4282 cases.
+# Candidate reason tokens for a selected necessary whole:
+law, blueprint, p, q, actual_shape, positive = [1 << i for i in range(6)]
+D = p | q | actual_shape
+absent = law | blueprint
+for g in range(1, 32):
+    assert not (bool(g & ~absent) and not (g & D))
+# A stipulated nonposterior positive nature token would pass both tests:
+assert positive & ~absent and not positive & D
+# Jointly eliminating record: neither singleton suffices, both do.
+assert all(not all(g & ~r for r in [1, 2]) for g in [1, 2])
+assert all(3 & ~r for r in [1, 2])
+```
+
+Self-sweep also caught a genuine previous draft scope error:
+roothood at w plus contingent-grounding and the necessary logical
+background proves an actual necessary root at w, hence
+`b19ffd92`, not the all-world underivedness clause of
+`0bdcf366`. The corrected paragraph at checkpoint B now names
+the missing transport. A two-world structural control (reuse
+the shape of the modal-grounding rotating-root controls) has
+two actual necessary concreta everywhere, a->b at world 0 and
+b->a at world 1, universal access. Each world has a root, all
+actual contingent-grounding obligations hold vacuously, but no
+one bearer has no incoming actual concrete ground at every world.
+This directly tests the invalid extension. It neither contradicts
+the existing all-world transport theorems nor implies that
+such rotating actual grounding is metaphysically admissible.
+The test executed:
+
+```python
+worlds = beings = range(2)
+exists = lambda w, x: True
+edge = lambda w, y, x: ((w == 0 and y == 0 and x == 1) or
+                         (w == 1 and y == 1 and x == 0))
+roots = [x for x in beings if exists(0,x) and
+         not any(exists(0,y) and edge(0,y,x) for y in beings)]
+assert roots == [0]
+assert all(all(exists(w,x) for w in worlds) for x in beings)
+assert not any(all(not edge(w,y,x) for w in worlds for y in beings)
+               for x in beings)
+```
+
+Earlier A/B/C finite diagnostics were rerun verbatim: 74,088
+eligible operator/relation pairs, 15,317 cone cases, 450 with a
+nonempty outside postfixed witness; 218 size-three covering
+families, 90 not containing U and 128 directed covering; both
+nonmonotone varying-supplier controls passed. This is local
+Python reproduction, not a new Lean/Comparator proof. CI run
+45512050386 for the preceding checkpoint C was still running
+at the baseline inspection; final-head CI remains outstanding.
+
+**Provisional judgment and current handoff.** The abstract-law
+account incurs a concrete-import burden when its joint abstract
+content survives the omission. The composite-whole account
+incurs a strict-priority conflict specifically when it uses an
+actual constitution posterior to the whole to explain that
+whole's existence. Neither conclusion is a general refutation:
+a positively existence-conveying, nonposterior whole-nature or
+noncausal global explanation remains live. The same combined
+filter excludes a copy or posterior act as an intrinsic reason
+for a simple source. The prior modest preference for nonreceived
+productive availability and suspension on unconditional intrinsic
+adequacy are retained; no new establishment, source attribution
+or checked support edge. No general composition-to-reception
+claim is made. For the root question, a concrete necessary
+whole that supplies its parts and has no incoming cause of its own
+in the selected relation qualifies as a relative root; identifying that root with subsistent esse continues to
+require the existing q3a4 inputs, including the causal exhaustiveness
+premise. An abstract reason would also require an actual productive
+bearer bridge to yield the root conclusion. For the necessity
+route, use the exact same actual root and the contingency
+coverage/EM, then separate modal support transport if all-world
+underivedness is the endpoint.
+
+Checkpoint D proposed the following test, taken up in the duet comparison below:
+**whether the act of existence
+itself can be positively characterized without presupposing an
+already actual recipient**, and whether the proposed absence
+of a limiting/receiving principle warrants nonposterior,
+unconditional existence-content (as opposed to a conditional
+identity). Reuse #1887's exercise-in-nature and act-fact analysis,
+#1595's intrinsic adequacy, and the #1966 deficit-of-perfection
+test on the same bearer. Seek a substantive constraint that
+distinguishes the existence-mode of a candidate whole from the
+subsistent-act account, rather than repeating necessity or a
+fixed-point model. A successful argument would give an explicit
+bridge to `565ccd6c` and/or the adequate intrinsic reason
+`a7bbd2fd`; it must not infer modal necessity or God naming
+from a mere equality of principle labels. Reopen on independently
+warranted nature-content/instantiation, or an actual partial
+ground link from a constituent to the whole's esse.
+
+The four executable comparisons were reproduced in independent review. These
+checkpoints give informal deductions under the stated assumptions. The
+merged receipt study and inertia control already cover the corresponding
+parts of #1616. Present productive supply, its relation to origin and to
+exemplar or final causation, and representative applications under #1724
+remain open. [Receipt study](https://github.com/moritzbrantner/formal-logos/pull/1966) · [Inertia control](https://github.com/moritzbrantner/formal-logos/pull/1891)
+
+### Can an individual act be identified without first identifying its recipient? (#1724)
+
+Fix one actual individual n, independently picked out as the candidate source of the selected effects. Both accounts owe an answer to the same question: **what about this individual accounts for its concrete existence?** On the subsistent-act proposal, n is itself a particular actuality in virtue of which the derivative bearers exist. The act is the individual to which the giving is attributed. An act of giving to another is an expression of its actuality. It need not be the act by which n exists. On the whole-first proposal the very same n is a concrete, intrinsically differentiated whole whose ways of acting depend on it. Grant both accounts the effects and grant the whole its claimed necessity for the comparison. Neither grant explains n's existence.
+
+**A test of what an act-description can identify.** Consider two ensembles independently playing the same duet. One recording takes both channels from the first performance. A second takes the upper voice from the first performance and the lower from the second. Grant exactly matching notes and timing. Trace the microphones back to the performers: in the first case the two voices belong to one coordinated playing, in the second the editor has combined voices from two playings. The score and the resulting pair of lines cannot settle which provenance is correct. The performers' actual coordination and the channel connections can. The players bear and exercise musical capacities. The coordinated playing constitutes a performance. Explaining which performance it is requires no independently actual performance to which playing belongs as a feature. The priority at issue is constitutive and applies even when players, playing and performance are simultaneous. This identifies an individual act through what is done together and distinguishes it from a repeatable specification. Its positive content includes a criterion that the second recording fails as evidence of a single joint origin.
+
+The example removes **one** reason for thinking that the subsistent-act proposal is empty. Individuating an actuality need not take the form “first find an already actual individual of this kind, then find the further act it received.” The performance has actual players and conditions of production. The test gives no instance of existentially underived activity. Its sharper lesson concerns the direction of explanation: tracing both channels to one playing can tell us *which* playing explains this recording. What explains *that the playing took place* is the musicians' execution. Counting the execution a second time as the performance's own intrinsic reason would misidentify that ground. The same distinction applies even if inquiry starts with an independently authenticated recording.
+
+**Application to n.** The positive grounding reason for subsistent act is that what actualizes an entire subject cannot operate merely as an acquired feature of a subject already actual in that very respect. Otherwise the proposed account already uses the actuality it was to confer. Identifying the concrete individual with its primary actuality gives a constitutive answer to why there is no further recipient at that level. It also makes sense of tracing genuine giving to this particular individual, if the productive links can be warranted independently. Singling out an act by the effects that manifest it is evidence *for* an actual source under those assumptions. The effects need not thereby be grounds *of* its existence. But asking why the individuated act is exercised still calls for more than citing the actual transaction that identified it.
+
+The concrete whole can meet precisely that challenge to a prior recipient. On its strongest reading, its integral activity constitutes one individual and its differentiated activities belong to that individual. The whole need never first stand ready to acquire its constitution. The duet illustrates how unity can belong to a differentiated activity, while the independently traced contributions in that example also explain its occurrence. A whole-first account cannot borrow the latter explanation if it makes the actuality of every contributor depend on n. It can instead take n's differentiated actuality as primitive. The simple-act account can take its singular actuality as primitive on the same terms. Each then has an intelligible bearer of further predications. An intrinsic reason for why the bearer exists requires a further argument on either reading. A concrete whole that actually supplies its parts without an incoming cause in the selected esse relation already concedes a relative root.
+
+**What discriminates.** Evidence that some constituent's *own actuality* contributes to n's existence independently of having received that actuality from n would discriminate against this whole-first explanation. Merely tracing an effect to one of n's internal operations establishes a contribution to the effect. It leaves the direction of existential support between n and that operation open. The same demand applies to a simple candidate identified through its manifestations. Conversely, the #1966 deficit test would count against own being for n if its constitution actually precluded an independently warranted perfection of being under the relevant possession relation and the fullness premise held. Two distinct ways of acting, or two separately traceable channels, demonstrate no such exclusion. [Same-whole deficit test on main](https://github.com/moritzbrantner/truth-core/blob/ec72649fb/docs/notes/priority-monism-framework.md#can-a-necessary-wholes-essential-differences-identify-a-receiver-of-its-esse-1811)
+
+**Provisional judgment.** A particular act admits a positive characterization without a recipient already actual *as that individual*. This answers a conceptual objection to nonreceived act. It gives neither account a comparative advantage in explaining why n exists. In particular, making exercise constitutive of what counts as **this act** tells us what an occurrence must be to be its exercise. It gives no reason internal to n for there to be such an occurrence. Suppose n’s represented esse equals its represented essence. Under #1887’s act–fact link, warrant for unconditional exercise in n’s nature would support the conclusion for n. A hyperintensional reading also needs grounds for substituting the existence fact within the essence claim. To derive `565ccd6c` this way, those grounds and the warrant for unconditional exercise must extend to every being whose represented esse equals its represented essence. For `a7bbd2fd`, the corresponding open question is what feature of n's real nature adequately explains its individual existence even on a nonproductive reading of explanation. The earlier modest preference for nonborrowed supply concerns received effects. The case for an unconditional intrinsic reason at n remains suspended. [Act–fact result and scope](existence-in-essence-identity.md#4-equivocation-check-esse-as-act-and-existence-as-fact) · [Intrinsic adequacy](intrinsic-existence-reason-1595.md#positive-argument-with-each-premise-defended-and-limited)
+
+This provisional comparison received independent semantic challenge. Reopen on an independently warranted account of the particular source's nature that explains its exercise without importing the obtaining of its manifestations, or on evidence that a particular constituent contributes to the whole's esse in the direction just specified. #1976's archive test discriminates dependencies of a complete history with a known writer. It leaves the actual-world act–essence question open. This continuation adds no premise to the CCR transfer `20babef7` → `c6d92415` → `c35b1a5c`, which also requires distinct-esse causal coverage, identity-bearer uniqueness, an actual bearer and excluded middle. Neither existence target is an input to that transfer. [Scope of the archive result on main](https://github.com/moritzbrantner/truth-core/blob/ec72649fb/docs/notes/foundational-absence-warrant.md#12-can-a-necessary-law-license-omission-of-the-unrestricted-bearer)
+
+Independent review of the duet comparison at 9cd00f0db30a12a3c8aa18fef5d13f95516c1691 accepted the rival comparison and reopening conditions. The targeted recheck accepted the individual-to-universal correction at 9f1bd047eee45694535f9757b61680a9a1b26d1a. This disposition covers the duet continuation only.
+
 ## Research attempts citing this note
 
 - [Actual hiddenness scope and explicit stage-one identification](../../corpus/attempts/49e02139-da0f-458a-aae7-374b60309f7c.json)

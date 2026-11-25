@@ -1,0 +1,11 @@
+{
+  "id": "a723340d-42b4-4cb1-84ad-3fbe8890d476",
+  "label": "Unity of GOD_4 from convergence on the actual universal source",
+  "argument_id": "d8529011-29d3-4b3f-8c40-da6f64d7bf73",
+  "challenge_module": "TruthCore.Results.Case.Catholicism.AttributesFromEsse.Challenge",
+  "solution_module": "TruthCore.Results.Case.Catholicism.AttributesFromEsse.Solution",
+  "theorem": "TruthCore.Results.Case.Catholicism.AttributesFromEsse.oneFromSource",
+  "comparator_config": "results/a723340d-42b4-4cb1-84ad-3fbe8890d476/comparator.json",
+  "status": "solution-present",
+  "description": "If a God were distinct from the universal source, it would receive esse and be outranked, contradicting its own maximality. Every God equals the same source."
+}

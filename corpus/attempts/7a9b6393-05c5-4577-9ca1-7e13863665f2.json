@@ -1,0 +1,40 @@
+{
+  "id": "7a9b6393-05c5-4577-9ca1-7e13863665f2",
+  "label": "Constitutive receipt and component-level positive existential import",
+  "date": "2026-11-25",
+  "statement_ids": [
+    "20babef7-6ae7-4b48-b72a-f417e8e63136",
+    "5c898d24-d1f7-5087-b09e-3287a723e787",
+    "dc397705-d727-419e-92f9-65d44e1ff15d"
+  ],
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "PR #1969 checkpoint C, note docs/notes/unique-feedback-explanation-311.md, continuation from b0c8d2b37105566fad7206cd5c63806a1b278626. A strictly productive receipt constitutively requires an exercised giver; existence of a bearer by that receipt in alternative realizations and potential closure of all such suppliers in C are separate open bridges. For arbitrary admissible input/output relation D on subsets of the actual roster, the component guard G (C-free input implies C-free allowed output) and a joint retained realization J (at U=A minus C there is an output containing U) imply D(U,U), since that output must equal U. Under G, J is equivalent to D(U,U); warrant needs a genuinely retained joint productive witness, not a restatement. For C=A, J is existence of an output at empty input. For a proper component, a retained realization must supply every member of U together. A varying-supplier nonmonotone finite control meets the weaker guard while violating the fixed actual supplier menu and monotonicity. Earlier monotone proof can find a proper survivor when J for U fails; sufficient packages are not generally ordered. Individually available outputs do not imply jointly available outputs: exhaustive Python diagnostic over all nonempty families of subsets of one to three retained members; at size three 90 of 218 covering families omit full U, while all 128 directed covering families contain U. Infinite finite-subsets family separates finite joint coverage from full realization. A reused strict successor-chain equation with necessary identity-fixed suppliers under a stipulated two-world frame shows the purely modal and relational conditions do not entail a root; modal non-deletion holds throughout that frame. The all-absent solution satisfies the same local equations outside the frame. Guarded receipt and source-triggered laws alone lack positive existential import on an otherwise admissible empty component. Non-deletion is not justified for all contingent effects; nonnecessitating actual explanation should instead explain availability of productive input. Source-relative explanatory advantage at the received-effect scope is conditional on genuine nonreceived availability and productive exercise; a brute necessary source incurs the same burden for its own actuality. No new registered proof or change to the prior scoped provisional assessment. Earlier checkpoint finite enumeration reproduced exactly; preceding CI 45509404715 succeeded and reported no premise change, with NanoDa and result shards skipped.",
+  "blocker": "Essential reception across alternatives, potential closure of the component, and existential import of the joint retained realization remain open. Checkpoint D compares the intrinsic ground of the same bearer on both accounts. The remaining test asks what warrants existence-conveying nature-content or a constituent’s contribution to that whole’s existence.",
+  "evidence": [
+    "PR-1969",
+    "PR-1878",
+    "PR-1883",
+    "PR-1882",
+    "PR-1964",
+    "PR-1965",
+    "PR-1966"
+  ],
+  "current_assessment": {
+    "date": "2026-11-25",
+    "statement_ids": [
+      "20babef7-6ae7-4b48-b72a-f417e8e63136",
+      "5c898d24-d1f7-5087-b09e-3287a723e787",
+      "dc397705-d727-419e-92f9-65d44e1ff15d"
+    ],
+    "scope": "Joint retention outside a derivative component and modal non-deletion",
+    "assessment": "The two-world rootless chain retains every bearer at every accessible world. The local equations alone also admit an empty chain. To retain the complement of a deleted proper component, one admissible realization must sustain all its retained members together. The modest preference for an unreceived giver depends on the further judgment that wholly received givings require such a source.",
+    "next_test": "Essential reception across alternatives, potential closure of the component, and existential import of the joint retained realization remain open. Checkpoint D compares the intrinsic ground of the same bearer on both accounts. The remaining test asks what warrants existence-conveying nature-content or a constituent’s contribution to that whole’s existence.",
+    "note": "docs/notes/unique-feedback-explanation-311.md#checkpoint-c-what-constitutive-receipt-does-and-does-not-warrant",
+    "reviewed_revision": "7e50b076da6fca5837ba3497f5ac77da731f937a",
+    "review": "accepted_qualified",
+    "publication": "published",
+    "evidence": "Independent review of checkpoints A–D at cc4499f39f6a57ebc98ac80b8709c60729cc1f1d reproduced all four executable comparisons. Targeted review accepted the modal, joint-retention, whole-first, and comparative-warrant corrections at 7e50b076da6fca5837ba3497f5ac77da731f937a. The duet has its own reviewed disposition. PR-1969.",
+    "supersedes": "Records the completed scoped review of the earlier draft."
+  }
+}

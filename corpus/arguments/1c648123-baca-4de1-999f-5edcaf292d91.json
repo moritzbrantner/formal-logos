@@ -1,0 +1,37 @@
+{
+  "id": "1c648123-baca-4de1-999f-5edcaf292d91",
+  "label": "Perfection of GOD_4 at the actual universal source",
+  "premise_statement_ids": [
+    "0881e859-c4c3-53ff-9bec-b61294e12d51",
+    "4c79298d-ee09-5e99-9ced-1be92c19b4cc",
+    "d5a94eb1-72d2-53e0-9a52-9787b5b61a8d",
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410",
+    "7067553d-cad9-5d79-b6b2-912e35051530",
+    "64498e7e-7f10-54a0-9ec0-c65e6076de1f"
+  ],
+  "conclusion_statement_id": "78b7c124-4419-4d55-8c2d-9cb8b37eb9b6",
+  "inference_ids": [
+    "4fe3ff1b-3015-497a-9e88-f5853d52a459"
+  ],
+  "meaning": "Actuality in a respect entails actuality at esse by the explicit premise. Convergence fixes the same God as the universal source, and effect-perfection preexistence supplies its represented actuality.",
+  "definition_ids": [
+    "5cbd5a0a-9055-4b69-af39-bd0bff1279fd",
+    "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "d8e2ed12-8089-5202-ae51-e807cf611c76",
+    "88f9f6e8-997b-5f7d-afa1-c501954c3807",
+    "a2a8de58-42e0-5481-b7fb-848ae8602036",
+    "5766de66-8a37-5b04-aa65-9eec53319f50",
+    "00bd3c0c-010a-559c-a2a0-b4fbf49cbaf1",
+    "5f851204-5991-5e16-87f1-e8b3ed729708"
+  ],
+  "disambiguation_ids": [
+    "3b0d67c5-59e4-5556-a728-26bd567f0fb1",
+    "d16b94fa-886f-54f3-85a3-7fc0c43d2b58",
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "dba7b1de-f3a0-57af-9af9-b2a4da3136fa",
+    "4f1d0cf6-88ba-59e3-814d-01450c2bf282",
+    "1795a62e-f78b-5f5b-94e7-9e7490824811"
+  ]
+}
