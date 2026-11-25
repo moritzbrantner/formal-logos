@@ -13,7 +13,7 @@
   "kind": "derivation",
   "outcome": "blocked",
   "summary": "Scoped analyst investigation continuing #1989/#932 and reusing #1084. At fixed interpreted contents and admitted cases, assent and permitted transformation do not suffice for competent actual rule application or soundness. A Boolean affirming-the-consequent countervaluation, incompatible unrestricted implicit-definition rules and their deletion controls, and an incomplete-data rule-application classifier witness distinguish stronger from modest readings; the finite enumeration passed in Python, not Lean. Existing interpretation-regress and all-premise generated-warrant results isolate the iterative and inductive assumptions; neither refutes primitive practice/grasp or infinitism without a further entitlement bridge. Existing K3/LP shared-closure results retain indexed closure and countervaluations. Local authority can grant F6 and withhold preference-independent force; a claim to bind a nonadopting recipient conflicts with its own local-only reason condition only when scope and reason relation match. Full findings, exact dependencies, countermodels and local commands: docs/notes/logical-conventionalism-932.md. No new source claim, graph edge or closure status. Draft, unreviewed.",
-  "blocker": "Canonical checkout, installed conventions, local Rust/Lean preflight and fresh worker/independent challenge unavailable in connector session. Philosophical gap: whether full norm-governed constitutive practice supplies determinate truth-directed rule application independent of current assent, and whether reason transfers across frameworks independent of uptake. The tests establish neither metaphysically nonconventional grounding nor categorical authority; no new corpus theorem is registered.",
+  "blocker": "whether full norm-governed constitutive practice supplies determinate truth-directed rule application independent of current assent, and whether reason transfers across frameworks independent of uptake. The tests establish neither metaphysically nonconventional grounding nor categorical authority; no new corpus theorem is registered.",
   "evidence": [
     "55f00e1a-848f-571d-bcf5-69bd96750d79",
     "74e00870-e0d4-5467-8c09-a75b2a922ce5",
@@ -34,14 +34,12 @@
     ],
     "scope": "Logical conventionalism only: fixed-content preservation, correct application, justificatory regress and authority beyond an adopted framework (#1989/#932/#1084).",
     "assessment": "Proposed, unreviewed. Bare assent and arbitrary permissions fail the fixed-content tests. Constrained implicit definition, primitive constitutive practice and indexed validity remain serious accounts; they preserve determinate application and preservation standards not fixed by each particular act of assent. Their ultimate convention-independent origin is unresolved. F1's full intended semantic reading is not established by these local tests; thin F6 can coexist with local reasons and the existing preference-independent authority gap. No new premise discharge or rival-defeat status.",
-    "next_test": "On a prepared checkout, resolve the existing definitions and proof contexts and challenge the actual proposed judgment. Compare the strongest complete-practice account's explanation of corrected error and community-wide error under one retained content assignment against a content-grounded primitive capacity; test same-content same-task uptake-independent reason for an actual dissenter without assuming answerability or replacing the target with an opaque bridge.",
+    "next_test": "Compare the strongest complete-practice account's explanation of corrected error and community-wide error under one retained content assignment against a content-grounded primitive capacity; test same-content same-task uptake-independent reason for an actual dissenter without assuming answerability or replacing the target with an opaque bridge.",
     "note": "docs/notes/logical-conventionalism-932.md#proposed-overall-assessment-and-revision-conditions-unreviewed",
     "reviewed_revision": "fcfe8ef9476d0753ad9861cb95ae7b3c2474ced8",
     "review": "unreviewed",
     "publication": "unpublished",
-    "evidence": [
-      "PR-1991"
-    ],
+    "evidence": "The finite comparison in the linked note reproduces the Boolean countervaluation, permission and application controls, and the K3/LP countervaluations. The registered regress, correction and closure results listed in this attempt supply the conditional background. PR-1991.",
     "supersedes": "None; scoped continuation, does not replace existing F1/F6 or #930 authority assessments."
   }
 }
