@@ -310,7 +310,16 @@ pub fn report_for_root(
     question: &str,
     limit: usize,
 ) -> Result<(Value, String), String> {
-    let (mut report, mut text) = report(corpus, question, limit)?;
+    let identifier = super::proof_search::qualified_name(question);
+    let (mut report, mut text) = if identifier {
+        (
+            json!({"schema_version":1, "mode":"question","question":question,"matches":[],
+            "input_identity":corpus.input_identity()}),
+            format!("Lean lookup: {question}"),
+        )
+    } else {
+        report(corpus, question, limit)?
+    };
     let query = topic(question);
     let requested = phrases(&query);
     let leading = &report["matches"][0];
@@ -318,7 +327,8 @@ pub fn report_for_root(
         .join(" ")
         .to_lowercase();
     let leading_words = words(&leading_text).join(" ");
-    if !requested.is_empty()
+    if !identifier
+        && !requested.is_empty()
         && !requested.iter().any(|p| leading_words.contains(p))
         && let Some(note) = note_passage(root, &query, &requested, &leading_text)?
     {
@@ -334,13 +344,10 @@ pub fn report_for_root(
     }
     let results =
         super::proof_search::find(root, corpus, &query, limit).map_err(|err| err.to_string())?;
-    let library = if results
-        .iter()
-        .any(|r| r["theorem"] == query.text.trim().trim_matches('`'))
-    {
-        None
-    } else {
+    let library = if identifier && results.is_empty() {
         super::proof_search::library_declaration(root, &query.text)
+    } else {
+        None
     };
     let proof_section = if let Some(declaration) = &library {
         format!(

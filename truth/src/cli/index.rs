@@ -27,8 +27,7 @@ use truth::index;
 
 pub const COMMAND: Command = Command { name: "index", run };
 
-const SUBCOMMANDS: &str =
-    "index requires build, search, show, duplicates, summary, parity, export, bundle or compare";
+const SUBCOMMANDS: &str = "index requires build, search, show, duplicates, formalization, summary, parity, export, bundle or compare";
 
 fn error(message: impl Into<String>) -> Failure {
     (1, json!({"code": "index_error", "message": message.into()}))
@@ -110,6 +109,32 @@ fn run(args: &Args, operands: &[&str]) -> Output {
             Ok((value, Some(text)))
         }
         ("show", [id]) => printed(index::show(&open(&root)?, id).map_err(error)?),
+        ("formalization", [] | ["check"]) => {
+            let rows = index::formalization::candidates(&root).map_err(error)?;
+            let check = rest == ["check"];
+            let selected: Vec<_> = rows
+                .iter()
+                .filter(|row| !check || row.kind == "lean_proof")
+                .collect();
+            let mut lines = vec![format!(
+                "Embedded proof and comparison blocks: {}",
+                selected.len()
+            )];
+            for row in &selected {
+                lines.push(format!(
+                    "{}:{}  {} ({})",
+                    row.path, row.line, row.kind, row.language
+                ));
+            }
+            let message = lines.join("\n");
+            if check && !selected.is_empty() {
+                return Err((
+                    1,
+                    json!({"code":"embedded_lean_proofs","message":message,"blocks":selected}),
+                ));
+            }
+            Ok((json!({"blocks":selected}), Some(message)))
+        }
         ("duplicates", []) => printed(json!(index::duplicates(&open(&root)?).map_err(error)?)),
         ("duplicates", ["notes"] | ["notes", "check"]) => {
             let groups = index::duplicate_note_sections(&root).map_err(error)?;

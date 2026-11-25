@@ -40,20 +40,21 @@ fn witness(root: &Path, corpus: &Corpus, result: &Record) -> Value {
     evidence
 }
 
-/// Local library theorems and definitions can be inspected by their qualified
-/// name even when nobody has registered them as arguments in the graph.
-pub(super) fn library_declaration(root: &Path, query: &str) -> Option<Value> {
+pub(super) fn qualified_name(query: &str) -> bool {
     let name = query.trim().trim_matches('`');
-    if !name.contains('.')
-        || !name.split('.').all(|part| {
-            !part.is_empty()
+    name.contains('.')
+        && name.split('.').all(|part| {
+            part.starts_with(|c: char| c.is_alphabetic() || c == '_')
                 && part
                     .chars()
                     .all(|c| c.is_alphanumeric() || c == '_' || c == '\'')
         })
-    {
-        return None;
-    }
+}
+
+/// Local library theorems and definitions can be inspected by their qualified
+/// name even when nobody has registered them as arguments in the graph.
+pub(super) fn library_declaration(root: &Path, query: &str) -> Option<Value> {
+    let name = query.trim().trim_matches('`');
     let (path, line, source) = LeanSource::new(root).qualified_block(name)?;
     Some(json!({"name":name,"path":path,"line":line,"source":source}))
 }
@@ -77,7 +78,7 @@ pub(super) fn find(
         .take(limit)
         .map(|(_, record)| witness(root, corpus, record))
         .collect();
-    if !exact_hits.is_empty() {
+    if !exact_hits.is_empty() || qualified_name(token) {
         return Ok(exact_hits);
     }
     let Some(terms) = super::assessment_search::expression(query) else {

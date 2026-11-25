@@ -1982,7 +1982,8 @@ fn question_returns_frozen_lean_evidence_without_any_notes_or_assessments() {
         assert_eq!(proofs[0]["premise_statement_ids"], json!([OPEN_PREMISE]));
         assert_eq!(proofs[0]["conclusion_statement_id"], GOAL);
         assert!(text.contains("goal (h : True) : True"), "{text}");
-        assert!(text.find("Matching Lean results") < text.find("No matching assessment"));
+        assert!(text.contains("Matching Lean results"));
+        assert!(result["matches"].as_array().unwrap().is_empty());
     }
     let (library, text) = super::assessment_search::report_for_root(
         &root,
@@ -2000,6 +2001,11 @@ fn question_returns_frozen_lean_evidence_without_any_notes_or_assessments() {
         library["lean_declaration"]["name"],
         library["lean_results"][0]["theorem"]
     );
+    let (wrong, _) =
+        super::assessment_search::report_for_root(&root, &corpus, "Wrong.Namespace.goal", 2)
+            .unwrap();
+    assert_eq!(wrong["lean_results"], json!([]));
+    assert!(wrong.get("lean_declaration").is_none());
     let (miss, _) =
         super::assessment_search::report_for_root(&root, &corpus, "xylophones", 2).unwrap();
     assert_eq!(miss["lean_results"], json!([]));

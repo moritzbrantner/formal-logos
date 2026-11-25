@@ -14,6 +14,7 @@ public import TruthCore.Modal.Convergence
 public import TruthCore.Modal.ConvergenceCertificate
 public import TruthCore.Modal.CounterpartNecessity
 public import TruthCore.Modal.CounterpossibleConservativity
+public import TruthCore.Modal.CreationDecisionComparison
 public import TruthCore.Modal.Cube
 public import TruthCore.Modal.DResearch.Language
 public import TruthCore.Modal.DResearch.Laws

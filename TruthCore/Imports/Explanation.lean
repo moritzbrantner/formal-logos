@@ -4,6 +4,7 @@ module
 public import TruthCore.Explanation.AccessibleAccountNecessaryBeing
 public import TruthCore.Explanation.ActualExerciseExplanation
 public import TruthCore.Explanation.ActualExistenceAdequacy
+public import TruthCore.Explanation.ActualPopulationApplications
 public import TruthCore.Explanation.ActualWorldGap
 public import TruthCore.Explanation.AdjacentPairContainment
 public import TruthCore.Explanation.AnselmCommonSourceAudit
@@ -30,6 +31,7 @@ public import TruthCore.Explanation.ExplanatoryAdequacy
 public import TruthCore.Explanation.ExplanatoryClosure
 public import TruthCore.Explanation.ExplanatorySymmetry
 public import TruthCore.Explanation.FixedConstituentNecessaryBeing
+public import TruthCore.Explanation.FoundationalExistenceApplications
 public import TruthCore.Explanation.GroundingBaseline
 public import TruthCore.Explanation.GroundingBaseline.Reduct
 public import TruthCore.Explanation.HistorySelection

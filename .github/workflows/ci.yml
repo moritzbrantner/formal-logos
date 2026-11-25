@@ -115,6 +115,8 @@ jobs:
           python3 scripts/affected_results.py check-research-metadata --base "$base" --head HEAD
       - name: Validate corpus metadata and source bindings
         run: target/release/truth check
+      - name: Keep research proofs in compiled Lean modules
+        run: target/release/truth index formalization check
       - name: Check for repeated research note sections
         run: target/release/truth index duplicates notes check
       # Label clean-up ratchet (#1233): the list of mechanical or compromised labels

@@ -10,6 +10,7 @@ public import TruthCore.Logic.CaseNonContradiction
 public import TruthCore.Logic.CertifiedCorrection
 public import TruthCore.Logic.CogitoConcrete
 public import TruthCore.Logic.CogitoEsse
+public import TruthCore.Logic.CogitoSeparation
 public import TruthCore.Logic.CogitoSubject
 public import TruthCore.Logic.CognitiveReplacement
 public import TruthCore.Logic.CollectivePossibilityRouteBoundary
@@ -34,7 +35,9 @@ public import TruthCore.Logic.ExcludedMiddle
 public import TruthCore.Logic.ExcludedMiddleAssertionBoundary
 public import TruthCore.Logic.ExperiencedThoughtBearer
 public import TruthCore.Logic.FallibleCorrection
+public import TruthCore.Logic.FinerContentCriterion
 public import TruthCore.Logic.FiniteValidationLogic
+public import TruthCore.Logic.FirstPrincipleControls
 public import TruthCore.Logic.FirstPrincipleRoles
 public import TruthCore.Logic.FitchKnowability
 public import TruthCore.Logic.FixedPointSelection
@@ -42,6 +45,7 @@ public import TruthCore.Logic.ForeknowledgeDiscrimination
 public import TruthCore.Logic.FormSelection
 public import TruthCore.Logic.GlobalThesisBoundaries
 public import TruthCore.Logic.InformationInvariance
+public import TruthCore.Logic.InquiryPresuppositions
 public import TruthCore.Logic.IntuitionisticKnowability
 public import TruthCore.Logic.Inversion
 public import TruthCore.Logic.Inversions.DivineVeracity1410AssertionTruthAContra2
@@ -69,6 +73,7 @@ public import TruthCore.Logic.ReflectiveCoherence
 public import TruthCore.Logic.Regress
 public import TruthCore.Logic.RegressDomains
 public import TruthCore.Logic.Relativism
+public import TruthCore.Logic.RetorsionApplications
 public import TruthCore.Logic.RevelationPositive
 public import TruthCore.Logic.RootDescent
 public import TruthCore.Logic.Scientism

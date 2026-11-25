@@ -33,6 +33,7 @@ use std::{
 
 type Obj = Map<String, Value>;
 
+pub mod formalization;
 mod note_duplicates;
 pub use note_duplicates::{NoteOccurrence, duplicate_note_sections};
 

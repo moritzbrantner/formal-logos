@@ -67,6 +67,8 @@ The corpus directory must exist. Missing optional record collections are empty;
 unreadable collections, dangling collection links, and non-file JSON entries
 are errors rather than silently omitted records.
 
+Use `truth index formalization` to locate documented Lean proofs and executable comparisons. Append `check` to flag embedded Lean proof bodies; queries such as `#check` and executable research diagnostics remain available.
+
 Use `truth index duplicates notes` to locate repeated research sections. Append `check` to return a failing status when copies are present.
 
 ## Statement synthesis

@@ -6,6 +6,7 @@ public import TruthCore.Case.Catholicism.CausalPerfectionTransfer
 public import TruthCore.Case.Catholicism.CauseOfBeingHasBeing
 public import TruthCore.Case.Catholicism.ClassicalAttributesJointWitness
 public import TruthCore.Case.Catholicism.ClassicalAttributesLocalLogic
+public import TruthCore.Case.Catholicism.ClassicalAttributesNaming
 public import TruthCore.Case.Catholicism.DivineLoveBridge
 public import TruthCore.Case.Catholicism.DivineLoveSenses
 public import TruthCore.Case.Catholicism.FoundingIndependence
@@ -15,6 +16,7 @@ public import TruthCore.Case.Catholicism.ImmanentOrigins
 public import TruthCore.Case.Catholicism.MaximalBeingCauseExclusion
 public import TruthCore.Case.Catholicism.MaximeEnsIsGodStrength
 public import TruthCore.Case.Catholicism.MaximumFirstByPriorCause
+public import TruthCore.Case.Catholicism.PartitionedEsseSource
 public import TruthCore.Case.Catholicism.PossessionConsumerReductions
 public import TruthCore.Case.Catholicism.PreexistenceWithoutTransfer
 public import TruthCore.Case.Catholicism.PrimaViaStrengthBoundaries
