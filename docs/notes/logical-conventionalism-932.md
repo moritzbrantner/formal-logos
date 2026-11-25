@@ -195,9 +195,7 @@ The following enumerates the new Boolean obstruction, its deletion
 controls, the complete conjunction table, coarse trace ambiguity and
 the original two #1084 countervaluations. The closure certificates remain
 the prior Lean results; this command does not prove them again.
-The initial finite enumeration (MP/AC, two-rule incompatibility,
-trace and matrix countervaluations) passed locally; see final checkpoint
-for extended verification.
+The complete displayed finite enumeration passed locally.
 
 ```sh
 python3 - <<'PY'
@@ -229,3 +227,313 @@ assert all(disj(q,neg(q))[0] for q in (T,F,B))
 print("finite convention witnesses passed")
 PY
 ```
+
+
+## Regress of justification is a separate thesis
+
+Determination says which application accords with a rule; justification
+says why adoption, retention or use of a rule is epistemically warranted.
+The two can come apart: a truth table can specify a perfectly determinate
+but unsound calculus, and an agent can competently apply a rule without
+having a further verbal reason for adopting it. The earlier regress
+theorem's two omission controls are exact: `needsOnlyThroughInterpretation`
+uses Unit, empty I, D always true; `needsNoEndless` uses Nat,
+I(i,a) iff i=a+1, D always true. They preserve determination while dropping
+one of the two named premises. Neither supplies a philosophical account of
+how D is fixed. No contradiction follows from a merely circular pattern of
+adoptions or a chain that has been stipulated to be determinate.
+
+For the justification reading reuse `REGRESS-SCHEMA-PACKAGE`
+(`74e00870-e0d4-5467-8c09-a75b2a922ce5`) and
+`TruthCore.Results.Logic.RegressSchema.justificationTransfer`.
+On the distinct `Justification` adapter, if every rule has a nonempty
+premise set and c has inductively `GeneratedWarrant`, there is a finite
+dependency path from c to a noninferential foundation. Every premise
+of a used rule must have generated warrant; the existence of **one**
+path is necessary, not sufficient (the all-premise control has Boolean
+claims, one rule with both true and false as premises and false as
+conclusion, only true as foundation; a path to true does not warrant
+false). For the source-free successor model, the rule for n has sole
+premise n+1, and there is no noninferential foundation. No n has
+generated warrant; the graph transmission with intrinsic=False can
+nevertheless have every node in its greatest fixed point. The package
+does not identify stipulated all-on membership with warrant.
+
+Apply only conditionally: a convention's justificatory claim is c; a
+rule expressing its dependence on further conventions has its actual
+necessary justificatory inputs as premises. The nonempty-premise
+condition and the use of inductively generated all-premise warrant are
+additional commitments; circular support is not a proof in that model.
+This adaptation needs a substantive bridge from the rival's alleged
+justification to `GeneratedWarrant`. It is **not** an assertion that
+actual rational justification must be finitely generated. An infinitist
+can deny that bridge, a coherentist can deny that warrant is merely
+transmitted along the edges and supply holistic evidence, and an
+externalist can supply a genuinely warrant-conferring formation without
+a further accessible convention. See
+[externalist entitlement](externalist-entitlement-and-regress.md).
+The price of a source-free infinitist account is a positive noninductive
+entitlement criterion; its all-on graph alone is no such criterion.
+Conversely, a convention-independent foundation is not entailed by the
+existence of an inductive foundation: it might be a primitive constitutive
+practice if the practice genuinely confers the relevant status.
+
+### Primitive grasp and the actual transition
+
+The strongest noninterpretive account need not represent each use of
+a rule by an additional proposition. Compare the already investigated
+[actual basing account](epistemic-underminer-boundaries.md#rational-basing-the-particular-transition-must-exercise-the-capacity).
+A person accepts p and p→q, understands their contents, and actively
+draws q on that basis. Another accepts those contents and produces the
+same q because a cue already fixed the output before checking the
+premises. Same accepted rules, premises and final sentence; only the
+first transition is stipulated to exercise the relevant inferential
+capacity. The second might still have an independent reason for q;
+the countercase concerns warrant from **this** inferential transition.
+An account of norm-guided practice can explain this difference by
+counterfactual correction and exercise of a learned capacity. A
+mechanical syntax checker can also implement a fully specified matching
+relation without an endless sequence of other checkers. Neither case
+settles whether correctness is grounded in social practice, the
+content relation, a primitive rational capacity or a combination.
+
+A token assent that the rule is in force is therefore not an explanation
+of whether or why it was correctly applied. A rich constitutive account
+that makes the relevant capacity and its standards primitive survives
+the interpretation regress by denying the iteration premise. It still
+has to distinguish being corrected from a change in what counts as
+correct, e.g. a mistaken antecedent match versus revising the rule
+so that affirming the consequent is permitted. This is not an objection
+requiring the agent to formulate another rule to grasp the first one;
+it asks for the ground of the distinction the constitutive account
+itself makes. A noninterpretive grasp can be convention-trained or
+socially realized. Treating it as primitive does not prove that its
+status is nonconventional in origin.
+
+## Rational choice and the conventionalist's own authority
+
+Use one task: preserve truth of the same old propositions, given fixed
+Boolean content and admissible valuations. Under this task the MP and AC
+rules above have unequal merits: at p=F,q=T, AC permits a true-to-false
+transition, MP never does. Hence any selection criterion requiring
+truth preservation of every permitted move rejects C+ under these
+inputs. It need not choose a unique calculus (a weaker sound calculus
+could also satisfy the criterion). Choosing notation for efficiency,
+a local derivability relation for a formal exercise, or a model class for
+a specific domain has a different goal; those choices need not be judged
+by the identical task. An instrumentalist can explain the selection:
+given the common accuracy aim, pick a preserving calculus; where goals
+differ, compare consequences but withhold categorical authority. This
+is a reasoned choice relative to an end rather than arbitrary fiat.
+
+The question recurs for the choice of the standard. Justifying an
+accuracy constraint by a further convention can explain its local
+acceptance or conditional policy consequence. It cannot establish
+that arbitrary replacement standards preserve the same old contents.
+If a meta-convention is accepted by both communities, the local
+argument may speak to both even if their object calculi differ.
+A defender can also merely describe which communities adopt what
+standards, without claiming that dissent is irrational. Neither
+account claims universal reasons for adoption.
+
+For a bounded self-application control let A accept a standard S and B
+not accept S. Fix the thesis t (the same content about conventions).
+Consider the exact **local-only** authority claim: S-based warrant to
+believe t obtains only for an audience that accepts S. Let the
+conventionalist's offered argument be S-based and let B reject S.
+Then the claim that this S-based argument supplies B an epistemic
+reason to believe t is incompatible with the local-only claim for B.
+The no-transfer model sets S-based reason true for A and false for B;
+it leaves t's truth unconstrained. Restoring B's acceptance removes
+this obstacle; a reason independent of S is a different route not
+denied by a restriction of S-based reasons alone. If t instead says
+**all** epistemic reasons derive solely from standards their recipients
+accept, then claiming any reason for B with no accepted supporting
+standard contradicts t, provided the same reason predicate, audience,
+content and scope are retained. Mere assertion to B is not the
+concession of a reason for B. The descriptive truth of t, locally
+reasoned belief in t, practical persuasion, framework-independent
+validity and binding force for a dissenter are different properties.
+This is a scope incompatibility, not a proof of t's falsity.
+
+The stronger assumption that an argument rationally compels every
+competent dissenter irrespective of adoption supplies exactly the
+cross-framework bridge at issue. Its truth-directed warrant is not
+shown by recording that the audience accepts S. The alternative of
+shared factual accuracy can discriminate C from C+ in the example even
+without both audiences endorsing accuracy as their goal; whether that
+gives B a reason to adopt C is a further normative question. This is
+the #932 authority gap, not a global truth retorsion.
+
+Reuse `TruthCore.Results.Logic.EpistemicAuthority.authorityFromAnswerability`:
+`ActualForceConcession f` + `BeliefAnswerability f` yield
+`SomePreferenceIndependentReason f`. The first requires an ordinary
+belief reason with force at the subject's actual preference; the second
+requires invariance of force under all supplied preferences with
+subject, consideration and content fixed. The goal-relative account
+with `IndifferenceAvailable` gives the opposite conclusion by
+`goalRelativeExcludesAuthority`; `authorityRivalBundleInconsistent`
+checks all four inputs cannot coexist. The goal-relative control has
+F6, consideration presentation, ordinary definition and an actual
+force concession but not answerability or the stronger existential.
+`indifferentAgent` preserves thin reasons without actual force;
+`forceless` preserves answerability without actual force. Restricting
+the comparison class by `ConstitutiveAim` can yield independence on
+that class; it does not give an indifferent subject a reason.
+See [#930 authority](epistemic-authority.md#formal-structure-and-registration-boundary);
+direct graph registrations of the two target-concluding lemmas are
+deferred there. Do not identify preference independence with
+framework independence: a person could hold preferences fixed and
+change logical conventions. The extra transfer from one standard to
+an unaccepting audience is still open, not proved by these controls.
+
+## Proposed overall assessment and revision conditions (unreviewed)
+
+Separate two meanings of "nonconventional": (i) not fixed by the
+particular act of assent, current consensus, or permission choice
+under investigation; (ii) not ultimately constituted by any
+convention or practice whatsoever. There is substantial positive
+warrant for (i) in ordinary truth-directed inquiry: participants
+can identify a mistake while retaining the rule, and fixed-content
+countervaluations constrain which rules preserve truth without a new
+decision each time. The common ability to distinguish the very same
+premise from a substitute, to recognize an instance, and to
+distinguish preservation from permission makes the comparison
+possible. The strong conclusion (ii) requires a further theory of
+the grounding of semantic content, correct recognition and authority.
+Analytic or conditional standards need not have metaphysically
+nonconventional origins. Both realist and sophisticated constitutive
+accounts explain why one move can be wrong without a fresh vote;
+the finite controls alone do not discriminate those accounts.
+
+| Version (analyst scope, not an exhaustive taxonomy) | Disposition and exact cost |
+| --- | --- |
+| Notational convention | Survives; shared translations can preserve content and consequence. |
+| Meaning-constituting convention / constrained implicit definition | Survives where the stipulation fixes content and meets claimed interpretation constraints. No arbitrary preservation guarantee; two-rule obstruction requires old cases, both rules, composability for conservativity. |
+| Conventional syntactic validity / complete stipulated rule matching | Survives; derivability or instancehood relative to adopted rules, not semantic soundness or skill in applying them. |
+| All adoption is sufficient for actual correct application | Fails for bare assent with fixed rule and an actual misapplication. A rich practice supplying the entire rule and token correctness criterion is a different, surviving thesis. |
+| Every determined application requires another determined conventional interpretation, with well-founded dependence | Incompatible with the determination existential by existing regressFork; rejecting either condition survives. |
+| All justification supplied by further conventions | A source-free chain fails under generated all-premise warrant; infinitist, coherentist, externalist and primitive entitlement accounts survive if they supply the specified positive conferrer. |
+| Arbitrary permitted rules preserve fixed old truth | Countervaluation under Boolean semantics; definition cannot rescue it without changing the claimed soundness, old meaning or case space. |
+| Framework-relative semantic validity / logical pluralism | Survives indexed cases and pools; not two incompatible verdicts of an identical full consequence relation. Common-pool joint closure adds C under the exact #1084 bundle. |
+| Primitive socially constituted rule grasp and correction | Serious surviving global grounding proposal. Can distinguish error within a practice and not require further interpretations. Its adequacy for determinate truth-directed content and its normative ground remain open. |
+| Local/goal-relative adoption authority | Survives; can grant thin F6 and actual reasons among aiming subjects while withholding authority for nonadopters. |
+| Universal rational authority solely from recipient-local acceptance | Incompatible when it claims S-based authority for an actual nonaccepting B under its own only-if. A shared meta-standard or independent reason is a different, potentially surviving account. Reasonless descriptive truth is not refuted. |
+
+Proposed assessment: a purely arbitrary adoption-sufficiency account
+does not explain truth-directed logical correctness in the fixed
+cases. The best conventionalist reply is not arbitrary adoption but
+meaning-constituting, norm-governed practice with primitive grasp and
+framework-indexed consequence and reason. It can survive the precise
+countermodels and need not deny F1 or F6. It must preserve substantive
+rational distinctions, not derive all of them from a succession of
+bare choices. Calling those distinctions nonconventional in sense
+(i) is warranted in the selected task. Calling them nonconventional
+in sense (ii) is not yet a demonstrated consequence. The remaining
+competition is between a truth-/content-grounded standard and an
+account where sufficiently rich practice constitutes the standard
+itself; test the latter's ability to explain publicly corrected error
+under unchanged meanings and a counterfactual community-wide error
+without silently redefining the intended contents. A realist has the
+parallel burden of explaining access to and exercise of its standard,
+not just naming it. A practice account with no full content assignment
+cannot be compared as if it preserves the complete assignment.
+
+F1 is exactly
+`TruthCore.Logic.CaseNonContradiction.CasePredicateNonContradiction`:
+for all beings, respects, predicates P, x, r, not (P x r and not P x r)
+inside Lean. Reuse `LOGIC-CASE-NON-CONTRADICTION-NOT-DENIABLE`
+(`a7ecf1fe-a234-5de6-bb72-bf76309c5ea3`), theorem
+`TruthCore.Results.Logic.CaseNonContradiction.noCasePredicateContradiction`.
+Both the proof and the ordinary application comparison require
+determinate distinctions; the latter does not establish this
+universal F1 interpretation, excluded middle, or classical logic.
+LP's object-language Both is not Lean's P∧¬P. The bridge from the
+thin distinction needed for this task to all same-respect case
+predicates in reality is not furnished by a Boolean countervaluation.
+
+F6 is exactly `ThereAreEpistemicReasons Reason := ∃ a p, Reason a p`.
+An ordinary aim-relative reason can be a witness; no categorical
+obligation is required. The accepted F6 does not assert that this
+conventionalist, this reason or this content instantiates it.
+`EPISTEMIC-NIHILISM-SELF-UNDERMINING`
+(`ec80b13d-0c87-5f71-bc70-16b42dc4c0e6`),
+`TruthCore.Results.Logic.EpistemicNihilismRetorsion.nihilismSelfUndermining`,
+`reasonedBeliefRefutesNihilism` and
+`nihilismConsistentAndUnbelievable` separate self-undermining and
+falsity. The last model has one agent and content, empty Reason,
+nihilism true. A conventionalist who grants actual local epistemic
+reasons does not deny F6 at all. If a variant denies every actual
+epistemic reason, reuse that scope test; do not infer a reason from
+mere performance. For the shared #1989 witness
+`TruthCore.Results.Logic.TruthPilot.NotEveryPropositionFails.notEveryPropositionFails`,
+the proof extracts a holding proposition P from the existing
+`somePropositionHolds` witness, instantiates universal failure at P,
+and applies the resulting negation to its witness. The invalid
+replacement instantiates at False and supplies no witness of False.
+The successful transition versus the attempted replacement is
+assessable in the fixed encoded logic; authority outside that logic,
+an actual subject's understanding and warrant require their own
+bridges. No inference to categorical F6, immaterial intellect, God
+or a root premise discharge is delivered.
+
+## Reproduction and handoff
+
+Full supplemental finite command above executed and returned
+`finite convention witnesses passed`. No new Lean module, result,
+definition, argument, source or relation is registered; no premise
+change intended (no computed frontier comparison available here).
+The exact old theorem types and existing countermodels are cited
+rather than repeated as new certificates. No new source reading is
+asserted. This draft's prose/type self-sweep checks fixed vs changed
+model class, preservation vs permission, determination vs generated
+warrant, local vs preference-independent vs categorical reason and
+each reuse boundary. Independent semantic challenge is **not done**.
+The new finite examples are checked only by the displayed exhaustive
+Python enumeration; they are not bound corpus results or certified
+interpretation profiles.
+
+Resume in a prepared canonical checkout of PR #1991; follow current
+AGENTS.md and installed conventions, coordinate with the originating
+worker/other lane, and run the prescribed preflight/issue briefs
+on current main before promoting any candidate to a record:
+
+```sh
+python3 scripts/worker_env.py --check
+cargo build --locked --release -p truth
+for n in 1989 932 1084; do
+  python3 scripts/issue_snapshot.py "$n" > "/tmp/truth-$n.json"
+  target/release/truth brief "#$n" --issues-from "/tmp/truth-$n.json"
+done
+for s in c425f0c5-6c3f-5115-ba04-3e61bd049e3b f56b2ee7-c69e-5e3b-85b0-e671d907ba58 2ca463c2-bd1f-5a13-a395-0e2c57a5ad8f 7c056d7f-d0b5-5315-bc54-068dcb618858 5218e5c6-d9fc-5ddb-9861-42e1bd00aef7 a132eba0-a11b-53da-a901-8d290dccf850; do
+  target/release/truth related "$s"
+  target/release/truth dossier "$s"
+  target/release/truth brief "$s"
+  target/release/truth semantics "$s"
+done
+target/release/truth novelty "Adoption alone does not ensure truth preservation of arbitrary rules on fixed interpreted contents"
+for result in WITTGENSTEIN-INTERPRETATION-REGRESS REGRESS-SCHEMA-PACKAGE CORRECTION-CRITERION-EXACT-FACTORIZATION PLURAL-CLOSURE-BOUNDARY LOGIC-CASE-NON-CONTRADICTION-NOT-DENIABLE EPISTEMIC-NIHILISM-SELF-UNDERMINING; do
+  target/release/truth context "$result"
+done
+git diff --check
+target/release/truth check
+python3 scripts/bundle_audit.py
+target/release/truth frontier-diff --base "$(git merge-base origin/main HEAD)"
+```
+
+The canonical worker wrapper is
+`python3 scripts/worker_env.py -- <command> <args...>`.
+Use semantic preflight (`truth semantics --premise … --conclusion …`)
+on exact existing endpoints of any proposed argument after reuse
+resolution. If a genuinely new result is needed, use the existing
+batch/frozen Challenge and zero-axiom or Mathlib policy, generate
+records and imports, then `lake build`, `target/release/truth bind-check`,
+`scripts/verify-result.sh <RESULT-ID>` (Comparator/NanoDa), and the final
+CI gates. Reuse unchanged verified inputs; do not weaken the existing
+gate. No such commands were run on this checkout-less session.
+The next discriminating step is the full-practice grounding test and
+the cross-standard reason bridge, with a fresh worker and independent
+review of the actual final proposed outcome; a new proof of the
+already-checked structural laws adds nothing. Keep #932 open and
+#1084 closed; this is an unmerged draft continuation of the intake
+#1989. No automatic F1/F6 status change.
