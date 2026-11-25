@@ -2536,8 +2536,10 @@ The immediate target is PSR 608a262d. Its exact predicate is contingent-being
 reason-token coverage, so translating the present adequate-reason question
 into it retains the interpretation bridge. Result 7bf9cb77 reaches B2
 8a8d00e9 only with BX1 6c6191dc and BX2 0e44041e. The C2 target 6508c239
-requires reception or the relevant distinct prior esse-cause; none is
-supplied by the diagnostic. Existential inheritance requires the same
+requires existential receptivity—received esse in a principle with the
+specified receptive potency, or matter–form composition—or the relevant
+distinct prior esse-cause; the diagnostic supplies none of these conditions.
+Existential inheritance requires the same
 bearer's essential/modal dependence; actual causation alone does not give
 it (replacementBoundary, 360411ab). The same-root necessity upgrade retains
 its contingent-grounding coverage. No claim of divine intellect, will,
