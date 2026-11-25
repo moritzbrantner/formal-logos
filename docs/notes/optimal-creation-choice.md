@@ -3023,6 +3023,226 @@ realization. The earlier §§23–30 review retains its original scope. The
 has exactly the same Git tree (`2dee7e703e85ac1daebffad008042770c82e07dd`)
 as that local review revision.
 
+## What gives a material thing its end? (2026-11-25)
+
+Continuation of §§37–44, prompted by the question why an impersonal source
+would give things finality and why material things would have purposes.
+The earlier comparison granted objective finality. This continuation
+investigates its positive grounding; it does not withdraw the grant by
+defining every end as an intention. The supporting investigations are
+[intrinsic finality and its source](teleology-first-mover.md#intrinsic-finality-and-the-source-of-its-order-2026-11-25)
+and [material function and source finality](goodness-form-end-definitions.md#from-material-function-to-source-finality-2026-11-25).
+They extend, rather than repeat, the existing first-source recognition audit
+and the organizational-function investigation of PR #1646.
+
+### 45. Three explanations that must stay apart
+
+Fix the same source n and recipient x, with a specified capacity and
+completion e. Three questions are different:
+
+1. What makes e a completion or good **for x**, rather than just an outcome
+   an observer happens to prefer?
+2. How does n produce and sustain a nature in x whose operations are
+   genuinely directed toward e?
+3. Does n produce x **because n apprehends that good**, making it a reason
+   that actually governs this productive exercise?
+
+The first concerns the recipient's standard; the second its productive
+ground; the third the source's practical reason. A producer can give a
+recipient a real capacity without exercising that capacity itself. Conversely,
+calling a capacity good does not explain its production. Neither transition
+is settled by the word “purpose.” The intellectual account has a substantive
+answer to the third question when actual governance is warranted, but cannot
+acquire that warrant merely from answers to the first two.
+
+| Selected sense | What must be explained | What that alone does not supply |
+| --- | --- | --- |
+| Causal directedness | Why this power has characteristic manifestations and operating conditions. | A standard distinguishing proper performance from another lawful outcome. |
+| Proper function or biological good-for | Why a contribution belongs to this bearer's organization or selected history, and how a token can fail at it. | Optimality in every respect, a moral obligation, or the producer's apprehension. |
+| Intrinsic finality | Why the recipient's form or activity is ordered to a characteristic completion, including impeded cases. | That this ordering must ultimately be possessed as known. |
+| Intentional purpose | Why an agent's apprehended end actually organizes the relevant exercise. | That the intention is good, that it determines every detail, or that this agent is the ultimate source. |
+
+These distinctions identify explanatory tasks; they do not declare mutually
+exclusive ontologies. A material organism may also be a hylomorphic whole,
+and a material realization does not establish exhaustive physicalism.
+Likewise an impersonal necessary source need not be matter or a composite
+biological mechanism. An objection to one of those narrower proposals must
+identify the bridge that makes it relevant to the strongest impersonal rival.
+
+### 46. What the material account now explains
+
+The repository already contains a positive account stronger than “the
+system tends to survive.” In the
+[organizational-function investigation](goodness-form-end-definitions.md#organism-organization-as-a-candidate-due-standard-2026-11-14),
+different structures replenish resources, preserve a boundary and renew one
+another. Capacity, current exercise, outside support and delayed compensation
+remain separate. Loss of a native capacity can leave actual survival intact
+while removing resilience to specified challenges. Conversely a competent
+capacity can be inactive because support makes its exercise unnecessary.
+Changing an incidental emission has no return path in the selected model.
+These differences are fixed by causal relations and interventions, not by
+adding a `Good` label to the successful trajectory.
+
+That investigation also preserves the selected-effect account's positive
+explanation of proper function, including defective tokens and present
+mechanisms. Current organizational contribution and historical selection can
+support different but overlapping claims; neither is merely “chance.” The
+finite recurrence is an analyst model with numerical checks, not an empirical
+organism or a newly Lean-certified theorem. The cited biological studies
+support particular distinctions between supported growth, photosynthetic
+competence and lower current output. They do not validate every model input
+or identify a metaphysical bearer.
+
+The evaluative step remains substantive: maintaining or restoring an
+appropriate capacity is a good **for this bearer in this respect**. It has
+positive warrant in the connection between loss of the capacity and loss of
+the bearer's characteristic activity. It is not an arbitrary preference, but
+neither is that warrant a proof that every persisting organization is good,
+that maximum persistence is its highest end, or that the selected reference
+class is correct. The existing `DueActualityThesis` keeps `GoodIn` independent
+of the supplied form/end and possession relations precisely so this claim
+can fail. No new definition erases that open application.
+
+Conflict makes indexing essential. A process may sustain one organization
+while damaging another. That does not make both causal descriptions false
+or all biological evaluation subjective; it blocks inferring one
+all-things-considered ordering from their separate local goods. Similarly,
+a contribution to an organism's maintenance is not automatically the
+Fifth Way's `Best x e`. Its registered reading concerns what is best **for
+the same x**. Changing x from an organ to the organism, its lineage, or the
+ultimate source changes the premise. No optimality or bearer switch is
+licensed by the observed benefit.
+
+The result is positive and limited: material organization supplies a
+substantive way in which nonknowing parts can have functions and fail at
+them. It challenges an argument that such functions are unintelligible
+unless the part apprehends its end. It does not establish that the
+organization has no intellectual cause, or that every kind of finality
+reduces to maintenance or selection.
+
+### 47. The strongest intellectual challenge and the exact impersonal reply
+
+An unrealized end need not act backward from the future. Present powers,
+form and organization can explain a directed process before its completion.
+The source reading in the teleology companion grants that positive
+intrinsic role. The stronger intellectual challenge is therefore about the
+**origin of the order**, not the temporal location of its later result:
+what makes heterogeneous means count as fitting for an independently
+specified completion, and makes impeded realization a failure?
+
+Apprehension supplies a positive answer. An agent can understand the
+recipient's good and the relevance of means, and make that understanding
+the productive measure. The same end can organize different means, and
+the measure need not be copied from the eventual outcome. Where this
+practical relation is evidenced, it explains more than a list of efficient
+transitions. At the ultimate-source scope, an understood recipient good
+also provides a reason for communication without a need in the producer.
+This is the strongest personal contribution, continuous with §§24–26.
+
+The proposed exclusion of the rival needs a further premise: every
+noncognitive instance of such ordering is received or executive, so
+underived original ordering must be intellectual. The natural-form rival
+targets that premise. Its generative power is intrinsically specified by
+the kinds of capacities and completions it produces; it does not first
+produce an indifferent object and then attach a purpose. A creature's
+failure under interference can follow from those same capacities and
+conditions. Its good-for standard belongs to the creature's nature,
+while that nature depends productively on n. This is a positive proposal
+for questions 1 and 2, with the ultimate application still to be warranted.
+It does not answer question 3 affirmatively, and cannot be credited with
+an apprehended reason by renaming its orientation.
+
+The biological mechanism cannot simply be promoted into this ultimate
+account. Its functional loop depends on parts maintaining a bearer that
+in turn maintains those parts. The retained underived, necessary and
+intrinsically invariant source does not depend on its contingent recipients
+to keep it in existence. This uses the underived-source commitment and
+the specified productive relation; necessity alone does not establish
+causal independence. Hence
+recipient-maintenance is not source-maintenance, and the latter cannot
+explain the source's production here. This is a specific failure of
+transfer, not a refutation of the local explanation. The strongest rival
+instead proposes that n's own productive nature gives recipients their
+forms and appropriate powers. Its recipient-directed profile is an
+additional metaphysical commitment, with local organization offering
+an intelligible explanatory analogy rather than an ultimate instance.
+
+Both candidates must therefore identify the **actual relevance** of
+recipient-good to n's production. A power characterized only as “whatever
+produced the observed good result” does not explain that relevance. A
+mind credited only with knowing all possible goods does not explain it
+either. The stronger proposals specify, respectively, a generative nature
+or an operative practical measure whose identity constrains the account
+of production, including possible deviations, independently of merely
+copying the actual outcome. Such constraints need not uniquely determine
+one total order: the same nonnecessitating causal scope is retained.
+
+The original-ordering principle remains available as a direct or
+cumulative intellectual commitment. Its conditional force is not erased
+because its ultimate application is contested. But the archer analogy,
+nonexistence of a future effect, local malfunction and lack of a need in n
+do not independently show that all intrinsic noncognitive specification
+is borrowed. Nor does a refusal of further explanation establish the
+impersonal account. Each ultimate stopping point must be assessed for
+its actual content, coherence and explanatory work, under the same rule.
+
+### 48. Revised comparison and the remaining discriminator
+
+The finality investigation improves the account of what each candidate
+must supply. It supports real local function without apprehension by the
+functional part, while denying that a local self-maintenance explanation
+automatically covers an underived source's production for others. It
+also strengthens the positive intellectual case by identifying what
+apprehended completion contributes as an operative measure. It does
+not establish the exclusivity of that ultimate grounding.
+
+| Proposed account or inference | Assessment on the tested requirement |
+| --- | --- |
+| Actual recurrence or persistence alone establishes proper purpose | Inadequate: it conflates functioning, compensated defect and supported inactivity, and does not fix the relevant bearer or good. |
+| Selected history plus current organization explains a specified biological function | Positively supported within its historical, causal and reference-class scope. It need not deny intellectual governance elsewhere. |
+| The same maintenance loop explains the necessary source's orientation toward recipient goods | Inapplicable as stated: the producer is not maintained by those recipients. The stronger generative-nature proposal must be assessed instead. |
+| Intellect understands the good, therefore it actually produces for that good | Inadequate: the nonoperative-intellect case still separates apprehension from formative governance. |
+| The recipient's independently specified good actually governs n's exercise as apprehended | A substantive personal explanation when warranted; it neither entails exhaustive determining contrast nor follows from a good output. |
+| An intrinsic noncognitive generative nature actually supplies the recipient's directed powers | A substantive ultimate rival, with its constitutive and application commitments explicit. The present tests do not defeat this strengthened proposal. |
+
+**Overall provisional judgment:** the argument that purely nonknowing
+material activity cannot sustain any real function is not supported by
+the inspected causal and biological evidence. The stronger claim that
+all original final ordering ultimately requires intellect remains
+positively motivated by practical intelligibility and the communication
+of understood good, but not established against the granted intrinsic
+generative rival. Neither the absence of an ultimate cognitive exclusion
+nor the positive local mechanisms proves that the two complete source
+explanations are equivalent. The prior ultimate-source underdetermination
+is retained with a more precise division of explanatory work.
+
+Upward revision for the intellectual case requires warrant that this
+source's productive specification is actually possessed and used as
+understood, or a defended original-ordering principle excluding the
+positive intrinsic rival at the shared scope. Upward revision for the
+impersonal case requires a constitution and application of its own
+generative orientation that explains the same recipient-relative
+standards and their failure conditions while retaining the necessary,
+invariant and nonnecessitating source. A contradiction with a shared
+constraint would count against either. A change in the independently
+justified bearer, due standard or relevant conditions can revise a local
+function attribution without deciding source cognition.
+
+The exact existing root bridge remains `65c409cc` together with
+`46326b43` and `4c79298d`, through `11628966`, to intellect `29818edd`.
+Local directedness does not supply the bundle's knowing director,
+same-end reduction to an intellectual unmoved director, or identity
+conditions. Actual practical direction remains additional even if that
+intellect conclusion is supplied. The existing teleonomy countermodels
+are scoped logical controls, and the due-goodness results are conditional
+on their full supplied standards. No new Lean result, source claim,
+definition, support edge or premise discharge is introduced here.
+
+This complete continuation and the updated existing attempts are proposed
+for independent semantic review. The previously accepted §§37–44 and
+their modal/simplicity controls retain their own review scope; their
+acceptance does not automatically cover this new finality assessment.
+
 ## Research attempts citing this note
 
 - [Issue 1737 same-source contingent creation, omission, and selection adequacy](../../corpus/attempts/divine-knowledge-choice-creation-1737.json)

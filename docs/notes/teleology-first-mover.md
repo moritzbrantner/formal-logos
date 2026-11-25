@@ -732,6 +732,252 @@ are generated from the linked spec; failed/rejected paths and reopening
 conditions are recorded here and in the matched older attempts rather than
 as a new historical attribution.
 
+## Intrinsic finality and the source of its order (2026-11-25)
+
+This research continuation starts from `78c722f5d00957b30b95848e1ffc29b83449e05c`
+and the strengthened impersonal candidate in
+[optimal-creation-choice §§37–44](optimal-creation-choice.md#can-objective-finality-explain-a-contingent-order-without-apprehension-2026-11-25).
+Grant a necessary, concrete, invariant productive source n, genuinely selective
+but nonnecessitating powers, objective goods, and actual rational recipients.
+The question is what grounds its finality. The
+[first-source recognition audit](../immaterial-intellect-reception.md#first-source-recognition-fixed-premises-and-allocation-boundary-2026-11-17)
+already examines the absent-end, fitting-means and principal-agent arguments.
+The addition here connects the existing account of due completion and defect
+to the separate question whether that recipient's good explains n's production.
+It neither repeats the local cognitive examples as new evidence nor withdraws
+the stronger rival's granted powers.
+
+### Present form can supply a positive ground of natural finality
+
+An end is explanatorily useful when it identifies a completion in relation to
+which intermediate activities make sense, including why a process can fail.
+It cannot simply mean the last event: destruction can terminate a process
+without completing its characteristic activity. The relevant claim is that
+the nature of this thing explains both its organized activity and the standard
+against which an impeded exercise is defective. That claim needs application
+evidence; calling the actual result its end supplies none.
+
+Aristotle's [*Physics* II.8](https://classics.mit.edu/Aristotle/physics.2.ii.html),
+199a30–199b4 and 199b18–33, connects finality with formal nature, an internal
+principle, characteristic completion and possible interference. II.9,
+200a5–15 and 200a30–200b9, distinguishes the material conditions needed for an
+end from the end's explanatory role. These passages support immanent finality;
+they do not make it depend on an observed deliberator. This is a hylomorphic
+proposal, not automatically reductive physicalism or a denial of intellectual
+causes. Its formal nature must be interpreted as an actual organizing principle,
+not an abstract description that is expected to produce its own instance.
+
+Aquinas likewise makes inclination to an end follow form in
+[ST I q.5 a.5 co.](https://www.newadvent.org/summa/1005.htm#article5).
+The preceding a.4 co. distinguishes final, efficient and formal explanation;
+ad 2 reads goodness's diffusion as final causality, not an abstract good's
+independent efficient production. In
+[I–II q.1 a.2 co.](https://www.newadvent.org/summa/2001.htm#article2),
+determination toward a particular effect is attributed to natural appetite in
+nonrational things. Thus causal determination gives a rationale for finality
+on his broad reading. It does not by itself supply apprehension or a judgment
+that every produced effect is good for every recipient. The article adds its
+intellectual-ordering argument separately.
+
+The [existing biological due-capacity comparison](goodness-form-end-definitions.md#organism-organization-as-a-candidate-due-standard-2026-11-14)
+gives this proposal more content than a stipulated `Best` flag. Its fixed
+bearer has differentiated renewal processes, a native capacity, backup
+compensation and environmental support. Compensation can preserve existence
+without restoring native competence; inactivity can occur with competence
+intact. The mechanism explains why those distinctions matter under specified
+challenges. Its reference class, bearer and due-good interpretation remain
+open, and its calculations are analyst controls rather than a metaphysical
+model. That positive account is reused here, not rechecked or redescribed as
+new evidence. If the organizational and hylomorphic accounts explain this same
+norm and activity, their agreement does not settle whether substantial form
+is reducible to organization.
+
+### The strongest original-ordering argument
+
+The positive intellectual proposal concerns the explanation of a real
+means–end order, not a hidden observer accompanying an otherwise complete
+process. As an analyst reconstruction:
+
+1. The independently characterized good e explains why these heterogeneous
+   activities belong together and what their successful completion would be.
+2. This order must have an actual formative principle. The later achieved
+   good cannot, merely by being later achieved, supply the present ordering.
+3. Apprehension of e and of the relevant means–end relations supplies one
+   positive principle: a producer can organize activity through an understood
+   good, including a good expressed in another being.
+4. **If a principle lacking intellectual apprehension can bear this final
+   specification only by receiving it, and the actual ordering has an original
+   source, that source must possess intellect.**
+
+The fourth step carries the disputed original-ordering premise. Its strongest
+rationale is that merely executing a fixed inclination does not determine why
+those means are appropriate to the end, whereas practical understanding can
+make that relevance the producer's own reason. The ordinary intentional cases
+give this explanatory form direct warrant. At a source independently warranted
+as universal and nonderivative, understanding offers a unified account of the
+intelligible specification and its production. These are positive direct and
+cumulative reasons for considering the premise; they are not invalidated merely
+because the premise has no separate proof. But an exclusively executive reading
+of every nonintellectual principle is precisely what the intrinsic-form rival denies.
+Neither being nonderivative nor having an intelligible effect settles that denial.
+
+The source texts make the extra commitment visible. ST I–II q.1 a.2 co. and
+ad 2–3 distinguish directing oneself from being directed and appeal to rational
+ordering of particular ends under a universal good. Aquinas's
+[*Physics* commentary II, lect.14, §268](https://isidore.co/aquinas/english/Physics2.htm)
+describes divine art as impressed within things, so that their own principles
+move them toward their ends. This is a positive account of mediated governance
+through intrinsic natures; it does not deny their efficacy. In
+[*SCG* III.24, nn.1–4](https://www.corpusthomisticum.org/scg3001.html),
+however, intellectual direction is carried through a celestial instrument from
+an intellectual mover already argued for in III.23. That passage supplies an
+account of inherited form, power and direction under those premises, not a
+fresh derivation of intellect from natural finality alone.
+
+### Why two shortcuts do not establish that premise
+
+**The absent future end.** Both proposals identify something actual now: an
+apprehended specification in one, an intrinsically directed nature in the other.
+The future mature organism need not already exist as a finished material
+individual for its present generative principle to have a determinate capacity.
+This does not prove that the capacity has the claimed final meaning; it shows
+where the immanent proposal locates it. Requiring an actual ground of direction
+therefore does not exclude that proposal without an additional argument about
+what an intrinsic power can explain. Ends can also be ongoing activities rather
+than future products; the inference must not assume futurity universally.
+
+**The archer.** In the selected example the target is not the arrow's own
+natural completion: an archer's aim explains why its trajectory has this
+particular target. That is evidence for intellectual direction in the example.
+The immanent case instead proposes that the organism's own form grounds its
+completion and the relevance of its activities. This difference matters because
+the original-ordering argument must establish that this intrinsic specification
+is received from an intellect. It cannot obtain that dependence by assimilating
+the organism's end to an externally assigned target. Conversely, intrinsic
+organization does not exclude a source that gives and governs it. The Fifth
+Way's [q.2 a.3 co. and ad 2](https://www.newadvent.org/summa/1002.htm#article3)
+can be read with governance through natures; the arrow is an illustration of
+the knowing-director premise, not an independent demonstration of its universal
+scope.
+
+### A recipient's good is not yet its producer's reason
+
+Three explanatory claims must remain separate: e is a due completion of x;
+x's actual organization tends toward e; n produces x through a principle
+directed toward that completion. The biological comparison supplies a positive
+candidate for the first two. Even if n supplies the whole organization, the
+further claim that its production is *for this good* needs the source's
+productive principle to make that good relevant. Mere causal ancestry and a
+favorable result do not establish this relation.
+
+The personal proposal supplies that relevance through n's apprehension of the
+recipient's perfection as a good and its actual use as formative measure.
+It gives a reason for production even when n needs no benefit from x.
+[ST I q.44 a.4 co., ad 1 and ad 3](https://www.newadvent.org/summa/1044.htm#article4)
+describes the first agent's communication of perfection without acquisition
+and explicitly allows natural appetite without knowledge. The article assumes
+the first divine agent; it does not prove that every communication without need
+must be intellectual.
+
+The strongest impersonal reply therefore locates finality in a generative
+power, not in n's self-maintenance. Its nature makes recipient forms and their
+characteristic perfections actual; it need not acquire the recipients' goods
+itself. The claim is that producing those forms is an expression of the source's
+own determinate efficacy. An objective end can be constitutive of that efficacy
+without being a motive apprehended by n. This answers the charge that the account
+has only an inert value or an indifferent cause. Its ultimate application still
+needs warrant, just as the personal account needs actual formative apprehension.
+Granting a primitive power or exercise to one account does not require endless
+prior selectors from the other. Impersonal also does not mean material: an
+underived noncognitive nature and a reductive material ontology are different
+proposals. The shared rival is already nonnecessitating: a determinate
+productive nature can constrain eligible manifestations without fixing one
+complete history. The natural-power argument in q.19 a.4 cannot exclude this
+rival merely by reading determination as necessitation; its stronger
+application needs its own warrant, as the
+[existing formative-causation comparison](will-versus-chance.md#from-universal-existential-supply-to-proper-formative-causation-2026-11-25)
+records.
+
+### A concrete application requirement and the exact remaining route
+
+Reuse the biological comparison's distinction between **restored native
+competence** and **continued existence through external support**. Fix the same
+bearer, class, stage and challenges before classifying either outcome. If e
+means the former, successful support alone cannot be counted as attainment of
+e. If e means continued existence, one cannot infer that restored competence
+was what the producer acted for. The same discipline applies to the admitted
+rational recipient: correct outputs alone do not instantiate its genuine
+understanding, already granted in the common explanandum.
+
+At n, ask whether the proposed productive principle explains the actual
+constitution relevant to the selected completion, including the distinction
+between a due capacity and a successful substitute. A candidate that explains
+only successful persistence has not yet explained production for competence.
+A generative nature whose own constitution supplies that distinction is a
+substantive immanent answer; a retrospective assignment of `Best` is not.
+Actual apprehension governing the same specification is the personal answer;
+unused knowledge is insufficient. This is a test of the proposed constitutive
+explanations, not an intervention that switches off a necessary feature of n,
+nor a demand that either source always maximize every recipient's good. The
+present corpus does not settle the ultimate constitution on either account.
+
+The connection stays with `65c409cc-eb7f-4d66-8e2d-60c8e5138ed6`,
+`WitnessLocalTeleology.Bundle`. Its **same** body x and end e satisfy
+`¬ Cog x`, `Body x ∧ Reg x e ∧ Best x e`, nonchance, the chance-or-tending
+conditional, knowing direction, unmoved intellectual reduction and
+directing-as-moving. `Tends` remains broad INTENTION_1; conscious purpose is
+not included in it. The intellect consumer instantiates `Intel` with the same
+HAS_INTELLECT_1 predicate. A due-capacity judgment does not automatically instantiate
+`Best`, and failure-tolerant natural finality does not automatically supply
+`Reg` on a selected dictionary. Nor may a rational person be substituted for
+the explicitly noncognitive x. The selection of a particular noncognitive
+process, its end and the observation remain application obligations.
+
+Even warranted local intellectual direction does not supply the sixth clause:
+every director of this x toward this e must reduce to an intellectual director
+moved in no respect. The existing recognition premise `acc06edc` concludes
+`HasCognition h ∧ Intelligent h`; its type does not say that h actually knows
+this e. Result `11628966-e479-418c-8107-dbe435608472` still needs both
+`46326b43-ec14-551a-8eaf-3230f57572c6` and
+`4c79298d-ee09-5e99-9ced-1be92c19b4cc` to attach the local witness's intellect
+to GOD_4. Its conclusion `29818edd` is `∀ g, IsGod g → HasIntellect g`.
+It neither provides GOD_4 existence nor encodes actual intellectual governance
+of this giving. No new definition, conditional theorem or graph edge is
+warranted merely by restating those gaps.
+
+**Provisional assessment.** Present immanent form is a positive candidate
+ground of objective finality, strengthened at the local level by the existing
+due-capacity work. That is more than non-entailment, but not a demonstrated
+noncognitive ultimate source. Original intellectual ordering retains positive
+explanatory warrant and its direct-assumption option. Its exclusive ultimate
+application still turns on whether a source's recipient-directed constitution
+requires apprehension. Neither the absence of a future product, the archer
+example, nor a recipient's own norm supplies that exclusion. The new
+contribution is this application boundary and the explicit competence-versus-
+support requirement, not a fresh verdict on the earlier recognition audit.
+Revise upward for intellect with a defended same-source account that makes
+apprehension constitutive of the actual ordering, or an argument excluding the
+immanent generative account under shared constraints. Revise toward that rival
+with a warranted unitary productive constitution that grounds the selected
+recipient completion without cognition. Mere profile matching, a cognition
+flag, or requiring a source only of the rival's primitive settles neither test.
+
+**Evidence boundary.** The complete existing pinned passages
+`AQUINAS-ST-I-Q2-A3`, `ARIST-PHYS-II-8` and `ARIST-PHYS-II-9` were materialized
+and read; the linked English translations supplied context. The cited portions
+of the additional Summa articles, commentary §268 with §§263–267, and SCG III.24
+with the close of III.23 were read at the linked online texts. These are research consultations,
+not new pinned claims. The Aristotle `NaturalTeleology` (`3a1510f9`),
+`NaturalErrorTeleology` (`226df198`) and `OrganismCosmosAsymmetry` (`cd80cf42`)
+results retain their explicit propositional bridges and transcription scope;
+they do not establish the immanent constitution or intellectual origin argued
+about here. `Teleonomy.Mechanisms` and `DirectorRivalBoundary` likewise retain
+their stipulated finite interpretations. The author sweep checks their scope,
+matched primitive permissions, beneficiary/source distinction, exact premises
+and capacity/exercise boundary. Integration and independent semantic challenge
+belong to the coordinator; no fresh Lean or model verification is claimed for
+this research-only extension.
+
 ## Research attempts citing this note
 
 - [Pointwise governor identity, common-root coverage and GOD_4 naming (#1793)](../../corpus/attempts/ac68f95a-00fd-445e-b7de-d083ee6511b6.json)

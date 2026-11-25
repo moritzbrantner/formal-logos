@@ -934,6 +934,10 @@ spec records this interface-reuse reason in `strong_version_needed`. Neither the
 proof nor its current premise bundle changes; no broader metaphysical necessity
 is claimed.
 
+### Draft continuation: esse comparative ascent (2026-11-24)
+
+The [reviewed comparative-ascent PRD](esse-comparative-ascent/PRD-esse-comparative-ascent.md) distinguishes preservation plus a giver-only realization from strict crossing of a recipient’s degree ceiling. Its [current same-pair test](esse-comparative-ascent/PRD-esse-comparative-ascent.md#127-current-provisional-assessment-and-next-test) follows the [equal-content assessment](maximum-definition-fork.md#can-a-receiving-constitution-itself-make-a-bearer-less-in-esse). Source-scoped ascent retains conditional warrant; calibration at equal actual content and the proposed causal-exclusion siblings remain open.
+
 ## Independent fullness candidates and rival comparison (2026-11-17)
 
 **Proposed judgment.** The positive participation/whole-power rationale remains

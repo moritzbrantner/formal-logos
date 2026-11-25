@@ -523,3 +523,208 @@ establishes categorical authority, or chooses between physical realization and
 an irreducible substantial principle. Attempt
 [`499b26da-d46b-48ac-826e-347eab2568cf`](../../corpus/attempts/499b26da-d46b-48ac-826e-347eab2568cf.json) records the source consultation,
 discriminating mechanism, bounded checks and remaining test.
+
+## From material function to source finality (2026-11-25)
+
+The preceding investigation already gives the positive local account needed
+here. Its renewal equations, reserve challenges and demand probe distinguish
+native competence, compensated defect, external support and healthy inactivity.
+The Chlamydomonas studies provide separate empirical discrimination; they do
+not validate the recurrence. Those findings are reused, not replaced by another
+`Function` or `Good` flag. The new question concerns their scope: what warrants
+passing from a materially realized organism's own functions to an ultimate
+producer's orientation toward its recipients' good?
+
+The root connection is the witness-local Fifth Way bundle `65c409cc` and its
+conditional intellect consumer `11628966`, concluding `29818edd` with the
+first-mover/maximum identity and God-to-maximality premises. This continuation
+tests the application of finality and the knowing-director bridge. It supplies
+none of those premises and does not infer actual productive governance from
+capacity-level intellect. The ultimate candidates retain the meanings and
+same-source comparison of [optimal creation choice, §§37–44](optimal-creation-choice.md#37-meanings-and-one-matched-candidate-construction).
+
+### What material organization positively explains
+
+The positive local account specifies how a capacity serves its bearer without
+making a representation of that service part of the mechanism; it leaves
+ultimate representation open. In the existing recurrence, replenishment
+supports the renewal of sites and barrier; those structures enable further
+replenishment. Removing native competence changes the challenged performance
+of this same bearer. Altering the incidental emission does not. These are
+different causal roles before anyone approves their outcomes. Calling the
+first role good for the bearer has a substantive proposed basis: it sustains
+the bearer’s characteristic activity under independently specified demands.
+The remaining evaluative and applicability commitments stay explicit in the
+earlier `DueFor` proposal.
+
+Historical selection supplies another explanation. An effect can account for
+the reproduction of a trait because ancestors producing that effect left
+descendants. The effect need not be anticipated. Wright's *Functions* (1973),
+[pp. 156–162](https://mechanism.ucsd.edu/bill/teaching/w10/wright.functions.%201973.pdf),
+connects a function both to a trait's causal presence and to an effect of its
+presence, distinguishing pumping from incidental heart noise. Millikan's
+*In Defense of Proper Functions* (1989),
+[pp. 288–289 and 294–295](https://joelvelasco.net/teaching/3334/millikan89-in_defense_proper_functions.pdf),
+adds reproductive history and derived functions, preserving functions of
+malformed tokens unable to perform them. These inspected primary ranges are
+consultation evidence, not new pinned source claims.
+
+Neither explanation is merely an assertion that useful results happened.
+But they answer different questions. Selection of an effect presupposes
+relevant prior performances or a producing mechanism with an appropriate
+history; it cannot make the future benefit cause the first occurrence.
+A novel token can nevertheless have a derived function, and a newly organized
+capacity can immediately contribute to present maintenance. It would therefore
+be wrong both to credit selection with explaining all initial directedness
+and to deny functions to every novel token. Nor does the historical account
+explain only origins: the earlier Neander consultation records how selected
+functions organize explanations of present mechanisms and defective variants.
+
+Material realization is also weaker than metaphysical exhaustiveness. A
+physiological explanation can be accepted by a physicalist, a powers realist
+or a hylomorphist. Its success does not establish that no irreducible formal
+principle or ultimate intelligence exists. Conversely, specifying an actual
+organization and its causal capacities is substantially more than describing
+bare matter without properties and asking how it could have ends.
+
+### The bearer, the standard and the competing good
+
+Three restrictions prevent this positive account from becoming an unrestricted
+purpose claim.
+
+**Persistence alone is insufficient.** A stable equilibrium is not thereby a
+functioning organism. The existing recurrence distinguishes continued
+replacement, differentiated causal contributions and competence under demands;
+it does not reward every stable state. Mossio, Saborido and Moreno's already
+consulted §§4.1–4.2, pp. 822–827, likewise distinguish minimal self-maintenance,
+including a flame, from the differentiated organization required by their
+account of component functions. Even that richer organization does not make
+its preservation an unconditional good. The bearer, developmental stage and
+challenge set must be warranted without selecting them simply because they
+deliver the desired verdict. The earlier equally robust reorganization test
+remains relevant to that obligation.
+
+**Contribution is weaker than optimum.** In
+`Article3QuintaVia.lean`, `Best x e` means that e is what is best for x.
+The renewal account supports a specified contribution or capacity standard;
+it does not establish that this end is best for the same x under the Fifth
+Way's selected standard. Best must not silently weaken to beneficial or
+strengthen to the greatest feasible good overall.
+Historical reproductive advantage is likewise neither universal optimality
+nor an all-things-considered benefit to every individual. The local Fifth Way
+still needs its actual `Best` interpretation and evidence. Moreover, x must
+stay fixed. Moving from the heart's role to the organism's benefit, or from
+an organism to its descendants, requires an explicit relation between those
+bearers. The scope of the good cannot change unnoticed.
+
+**Different organizations can have conflicting goods.** Tumor growth makes
+this a concrete challenge to the inference from causal maintenance to an
+unqualified good. Kim and colleagues (1993),
+[*Inhibition of vascular endothelial growth factor-induced angiogenesis suppresses tumour growth in vivo*](https://pubmed.ncbi.nlm.nih.gov/7683111/),
+abstract, report that VEGF-specific antibody treatment reduced vascular
+density and growth of transplanted human tumors in mice without reducing
+the tumor-cell growth rate in vitro. The consulted abstract supports a
+specific causal role for vascular support in that setting. It does not
+establish that every tumor is an organizationally closed individual or give
+the tumor's maintenance normative priority.
+
+The analyst application is conditional: where a tumor's organization has
+maintenance-serving processes, their success can support that organization
+while damaging the host. This does not make the relative causal facts
+subjective. It shows why specifying the beneficiary is indispensable. Host
+development, integration and capacities can ground a biological diagnosis of
+defect relative to the host, while somatic proliferation is successful at a
+different level. Neither verdict alone ranks all competing bearers or yields
+categorical moral authority. Relative dysfunction can be real independently
+of anyone's desire without making maintenance the highest, morally required
+or greatest feasible good. A pathological but stable organization exposes
+the missing beneficiary and priority premises in the simple *whatever
+maintains itself is good without qualification* shortcut; it does not defeat
+every biological good-for judgment.
+
+Reproduction requires the same discipline. Saborido, Mossio and Moreno's
+*Biological Organization and Cross-Generation Functions* (2011),
+[§3.3, pp. 598–602](https://www.ias-research.net/wp-content/uploads/2019/02/Saborido_41241903.pdf),
+proposes an organization extending across individual lifetimes through
+causal transmission and material continuity. This is an inspected positive
+extension beyond the individual-maintenance account, not a newly pinned
+claim or an established identity of organism and lineage. Its wider temporal
+bearer must be defended explicitly. It cannot silently replace the fixed o
+of the earlier recurrence.
+
+### Why the same explanation does not transfer unchanged to the source
+
+The organizational explanation concerns a dependent bearer: its parts help
+maintain the organization that produces and maintains them. The proposed
+ultimate source n has a different relation to its recipients. On the retained
+underived, invariant-source reading, n does not persist by replacing its parts
+through a return from contingent recipient x. Necessity alone is not being
+used to prove independence; the source's underived status and the specified
+productive relation do the relevant work. Applying the biological return
+loop to n would change that account.
+
+This identifies a particular failed transfer. The heart's contribution to
+the organism's persistence can explain its local function. That explanation
+does not show why n produces an organism, why this recipient's good governs
+n's production, or why n favors that good over a conflicting one. The
+beneficiary and causal role have changed. This limitation does not subtract
+anything from the local explanation or require it to explain the cosmos
+before it can explain circulation.
+
+The strongest impersonal reply preserves the difference. Its concrete nature
+actually produces organisms with differentiated powers and their own
+conditions of flourishing. On its organizational account, their ends are
+intrinsic to the resulting organization, rather than labels externally
+assigned by an observer. In this sense the source gives things finality by
+producing beings whose activities
+have such organization. It need not benefit from them, and it need not
+apprehend their goods for those goods to be real. Granting genuine reasoners
+among its effects also prevents an automatic slide from a noncognitive source
+to merely simulated reasoning in its recipients.
+
+This reply answers how recipient finality can be materially realized and
+causally produced without a represented purpose in each component. It leaves
+a further ultimate claim: n's own productive nature is selectively directed
+toward independently identified recipient goods. That profile needs positive
+content and warrant, beyond naming whichever output occurs good. The local
+examples motivate noncognitive directedness; they do not establish this
+underived productive profile, its full simplicity or its actual existence.
+The rival may defend that nature directly or cumulatively and may take its
+actual nonnecessitating exercise as primitive. Equal permission to stop does
+not imply equal evidence for every proposed stopping point.
+
+### Comparison and revision conditions
+
+Actual intellectual direction offers a distinct positive explanation: the
+source apprehends a recipient's good and that apprehension supplies the
+formative measure of its giving. Ordinary practical production gives this
+explanatory form defeasible warrant. The additional relation is informative
+where it is actually warranted; neither the creature's benefit nor the
+creature's own reason use establishes it at n. It also need not consist of
+an endless sequence of prior decisions. The personal and impersonal accounts
+receive the same opportunity to defend one actual directed exercise.
+
+The revised comparison is therefore more specific than generic parity.
+Materially embodied functions have positive local support from causal
+organization, historical explanation and discriminating interventions.
+Their transfer to an ultimate recipient-good-directed source remains open.
+Intellectual authorship has positive local support from actual practical
+agency; its transfer to this source and this productive exercise remains
+open too. Neither local account excludes the other at the ultimate level.
+The existing teleonomy countermodels establish their stated formal
+non-entailments; governed-mechanism compatibility is not a causal model of
+the experimental organisms, and neither certifies a whole metaphysics.
+
+Relative standing would change with a constrained constitution account that
+explains independently specified recipient goods or failures the strongest
+rival cannot explain, or with evidence that this source's apprehension
+actually governs this giving. Conversely, a proposed good-directed profile
+that merely follows the observed output loses its explanatory constraint;
+an alleged intention with no defended formative relevance does likewise.
+The next source-level test concerns that same productive relation and
+beneficiary, rather than another proof that a component can maintain a system.
+No new formal consequence, empirical reanalysis or root-premise discharge is
+claimed here. The earlier finite recurrence retains its recorded Python-only
+verification status; this continuation is a source-informed scope and warrant
+assessment requiring the normal independent semantic challenge before use
+as reviewed support.

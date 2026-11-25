@@ -1106,3 +1106,418 @@ source. The test can strengthen the source reply without proving every record
 true; a genuine tradeoff or surviving tied policy would weaken the proposed
 universal exclusion without defeating veracity itself. No further theorem
 about abstract token maps can settle these normative and application premises.
+
+## Recipient undertakings and truthful selective records (#1958, 2026-11-24)
+
+This is the complete proposed outcome of
+[#1958](https://github.com/moritzbrantner/formal-logos/issues/1958), on
+`main` revision `61acfd5629cab58221fe148b034340c7af9278ff`. The target remains
+individuated `ContentAssertionTruth`
+(`98f13d52-356c-440a-956a-c28df295fe73`), whose existing representation consumer
+is result `693522aa-3e98-49f8-bff6-b61390d02dc4`. That consumer and the further
+confirmation bridge to `c1deb2ee-770d-5030-9e5c-302e33028811` retain their
+complete original premises. This investigation identifies no historical
+revelation, evaluates no religious historical evidence, and changes no argument,
+definition, frozen Challenge or frontier status.
+
+The reviewed
+[PR #1933 continuation](https://github.com/moritzbrantner/formal-logos/pull/1933)
+was inspected at `e5dd8243c5690f5d9255a509da00111cbdc36c8e`, in the integrated
+research baseline `942f3547450289894b3acd2480598c4f6970a882`.
+Its `SourceEvidenceAdequacy` and initial-history fiber results were external
+to that main baseline. This integration inherits both families from #1933.
+The [scoped attempt](../../corpus/attempts/divine-veracity-1410.json)
+records the selective-disclosure finding and its original review. Its recipient-directed assessment remains: an actual historical
+epistemic end gives a conditional, defeasible reason against fabrication, with
+complete policy comparison, effective production and actual application still
+open. That assessment was accepted with qualifications at reviewed revision
+`5db0fd7bf98b6c9774edc6ea0272322251cbe228`; this section does not inherit that
+review. The present delta executes a more specific policy test and preserves
+the earlier moral, cognitive and divine-applicability assessments above.
+
+### Finding: protect the intended inference, not only the truth of records
+
+The consequential distinction is between **putting a content forward as true**,
+**taking responsibility for a specified inquiry practice**, and **providing a
+capacity for fallible inquiry**. Nonverbal assurance can fall under the first
+heading; merely causing an appearance does not. The strongest extension beyond
+assertion concerns knowingly manipulating a recipient's reasonable use of a
+practice the source has undertaken to support. It can apply even when every
+record the source supplies is true.
+
+For example, giving a reader one true entry while deliberately suppressing an
+earlier relevant entry can induce the false conclusion that no earlier event
+occurred. Record truth does not include the completeness premise needed by that
+absence inference. If the source instead genuinely asserts that the returned
+history is complete, the completeness content is another assertion: its truth
+is already governed by `ContentAssertionTruth`. These two cases must not be
+conflated to manufacture either a counterexample or an automatic scope bridge.
+
+| Undertaking by the same source to the same recipient | What faithful performance protects | What does not follow from it alone |
+| --- | --- | --- |
+| Put the specified historical content forward as true, including by an understood nonverbal sign | Truth of that very asserted content, conditional on the existing veracity premise and correctly identifying the assertion | Completeness or other historical conclusions not entailed by that very content |
+| Steward a specified truth-seeking practice by accepting responsibility for relevant access and intelligible limits while soliciting the recipient's reliance | A substantive reason against concealed manipulation of the covered inquiry, including selective true disclosure | Exceptionless success of each judgment, unrestricted disclosure, or a guarantee outside the protected domain and conditions |
+| Enable generally reliable, corrigible inquiry with finite recipients and other legitimate goods | Opportunities for knowledge, error detection, justified suspension and correction within the specified practice | A promise that each appearance, initial belief, memory or terminal verdict is true |
+
+These are policy comparisons, not new senses assigned to the existing Lean
+`Asserts`. A future promise to provide information is also distinct from a
+present assertion of that information: sincerity when promising does not alone
+establish fulfillment. An outcome guarantee needs the relevant fidelity and
+execution, or a genuinely asserted content whose truth already entails that
+outcome. Nothing is obtained by defining every created appearance as an assertion.
+
+### Selected primary readings and their exact contribution
+
+The following passages were read with their surrounding argument on 2026-11-24.
+These are examined primary-source interpretations in this note; no new pinned
+passage or attributed corpus claim is being published.
+
+- [Aquinas, ST II–II q.110](https://www.newadvent.org/summa/3110.htm), a.1 body
+  and reply 2, extends voluntary false signification beyond spoken words.
+  Article 3 replies 4–6 distinguishes withholding, fulfillment of promises under
+  changed circumstances, and figurative content understood by its recipients.
+  [Q.111 a.1](https://www.newadvent.org/summa/3111.htm), body and reply 4,
+  distinguishes false presentation through deeds from not displaying everything
+  about oneself. These passages support attention to communicative content and
+  responsibility; they do not identify every causal effect as a communication
+  or prohibit every omission. Nor does an author's privately intended figurative
+  reading by itself settle what recipients are being told.
+- [Grice, “Meaning” (1957)](https://wstarr.org/teaching/speech_acts/Grice-1957-Meaning.pdf),
+  printed pp.377–378 and 381–383, separates natural indication from communicated
+  meaning. His planted-evidence and photograph/drawing comparisons distinguish
+  causing a belief from intending recognition of an informative intention to
+  contribute to that belief. This is a concrete mechanism by which intentional
+  evidential manipulation can fail to be telling. The application here needs
+  neither acceptance of his analysis as exhaustive nor an inference that what
+  is not telling carries no moral responsibility.
+- [Descartes, Meditation VI, Haldane–Ross translation](https://en.wikisource.org/w/index.php?title=The_Philosophical_Works_of_Decartes/Volume_1/Meditations_on_First_Philosophy/Meditation_6&oldid=15763302),
+  corporeal-origin argument, subsequent nerve/thirst discussion, and concluding
+  cross-check paragraphs: the positive argument invokes a strong natural
+  inclination together with lack of a corrective faculty, rather than a literal
+  assertion. The same meditation allows particular natural errors through a
+  generally beneficial signal mapping, and invokes available correction. Its
+  final cross-check argument makes a stronger qualified assurance claim while
+  retaining ordinary error under time pressure. Thus the source itself does not
+  move from a good creator to every initial sensory verdict. This is a reading
+  of its proposed explanation, not endorsement of its physiology, proof of a
+  globally best design, or a historical reliability certificate.
+- [Reid, Inquiry VI.20 and VI.24, Bennett's explicitly modernized version](https://www.earlymoderntexts.com/assets/pdfs/reid1764.pdf),
+  pp.102–105 and 117–120: ordinary reliance need not wait for a proof of every
+  faculty, while a speaker's assurance of honesty cannot supply all the trust
+  already needed to understand and credit that assurance. Reid also permits
+  correction of initially natural trust. This supports investigating direct
+  entitlement and circular authentication separately. It supplies no measured
+  error rates or independently verified facts about an actual historical channel.
+
+### Why rational creation is relevant but is not yet an assurance
+
+The strongest positive reason is the recipient's epistemic agency. When a source
+knowingly invites another to use a procedure to learn about an independently
+specified subject, secretly arranging that procedure to defeat its acknowledged
+purpose uses the recipient's responsiveness to reasons against that purpose.
+The problem is not merely discomfort or an incorrect sentence. The recipient
+loses the opportunity to correct, suspend or redirect inquiry on the basis of
+the information the source has undertaken to make available. A source's actual
+adoption of true historical understanding as a good therefore gives a reason
+against making false historical confidence its intended substitute.
+
+This is stronger than the generic claim that a good source must do good. It
+specifies the beneficiary, protected activity, relevant truth-directed end and
+particular way the source can defeat it. In a comparison where truthful help
+preserves every other relevant good, intentional defeat of that end is strictly
+worse. A categorical prohibition in comparisons with genuine conflicting goods
+needs a defended priority or fiduciary constraint; the existence of the reason
+does not itself establish that priority.
+
+Creating a rational being supplies causal responsibility and, on a purposive
+account, may support attributing a concern for its successful agency. But a
+capacity to reason can operate over incomplete information, fictional exercises,
+uncertain histories and domains in which suspension is correct. Its existence
+does not specify which historical questions its maker has undertaken to answer,
+whether all relevant traces will be available, or whether the recipient has a
+right to every answer. Practical success is not identical to historical truth;
+neither is the gift of a general capacity an implicit assertion of every
+conclusion the recipient draws.
+
+This does **not** excuse a designer simply because the manipulation is causal
+rather than verbal. Knowingly engineering a recipient's reliance can create the
+very responsibility at issue. Whether an actual creator assumes a protected
+historical role is a normative and purposive application question, not something
+settled by the absence of a speech act. Conversely, mere foreknowledge of an
+error, permission of another agent's deception, and choosing the error as a
+means are different descriptions. The control below contains none of these
+intentions, and does not decide their moral classification.
+
+### Fixed source, recipient and history: the selective-disclosure test
+
+Fix an archive source `g`, one recipient `r`, and a specified interval and class
+of events. An earlier event A and a later event B occurred; event C did not.
+The source knows this history, holds accurate entries for A and B, and can
+effectively supply them. The question is whether anything in this class happened
+before B. The source, recipient, actual events, event meanings, cognitive
+abilities and execution abilities remain the same in every policy comparison.
+These are stipulated archival circumstances, not a replacement ontology for the
+actual universe or a demonstration of divine deception's metaphysical possibility.
+
+Fix one recipient policy across all four responses: on the ordinary, unqualified
+view, **treat a missing entry as an absent event**; on an intelligibly limited
+view, suspend that inference; on an explicitly provisional view, use the
+available correction procedure before giving a final answer. The response
+changes the recipient's information, not this policy or the recipient's
+abilities. In the misleading policy `g` supplies only the true B entry without
+a limitation notice, and `r` actually applies the absence rule to A. The returned
+negative verdict is false. This is not the
+claim that merely possible inference automatically constitutes uptake, or that
+a rational reader must use this rule on arbitrary incomplete evidence. The
+rule is appropriate only with warranted completeness; the normative question
+is whether `g` has invited and undertaken to protect that reliance. Without
+that context the example diagnoses an unjustified inference, not betrayal by
+the source.
+
+No statement that the list is complete is included among the stipulated
+assertions. If the actual context makes silence, a completion indicator or the
+act of handing over the list an assertion of completeness, that additional
+content must be included in `Attitudes.Asserts`. The misleading policy would
+then violate assertion truth itself. The alternative case concerns a duty to
+protect an inquiry without treating every procedural omission as an assertion.
+
+| Complete response policy | Delivered information and the fixed recipient's response | Relevant epistemic result |
+| --- | --- | --- |
+| Faithful disclosure | Supply A and B; apply the absence rule to the complete class | No false absence of A; absence of C is correctly inferable |
+| Concealed selection | Supply B only; allow the stipulated reliance to persist; give no later correction | Every supplied positive entry is true, but the actual negative verdict about A is false |
+| Candid limitation | Supply B with an intelligible, general notice that this service does not certify completeness; the recipient suspends the absence inference | Truthful information and retained control over inquiry, without an answer about A |
+| Corrigible access | Give a partial provisional view, with a usable procedure that later supplies A and B; the recipient completes that procedure before settling the question | Correct final answer despite incomplete initial evidence; no guarantee for premature verdicts |
+
+#### Reproducible finite diagnostic
+
+This core-Lean diagnostic represents the three event identities by `Fin 3`:
+0 is A, 1 is B, and 2 is C. It checks positive entry truth, the **computed**
+reader verdict, its falsity at the selected history, and completeness restoration.
+The generic helper gives the exact sufficient premise for an absence inference.
+It is local elaboration evidence, not a new registered Comparator result. It
+does not instantiate the divine signature, causal history, mental uptake,
+intentions, ethical priority or epistemic warrant. The fixed source and recipient
+belong to the explicit interpretation above, not hidden properties of `Fin 3`.
+
+```lean
+namespace HistoricalDisclosure1958
+
+abbrev Event := Fin 3
+def occurred (e : Event) : Prop := e.val < 2
+def selected : List Event := [1]
+def full : List Event := [0, 1]
+def sound (rows : List Event) : Prop :=
+  ∀ e, e ∈ rows → occurred e
+def complete (rows : List Event) : Prop :=
+  ∀ e, occurred e → e ∈ rows
+def inferAbsent (rows : List Event) (e : Event) : Bool :=
+  decide (e ∉ rows)
+
+theorem absence_of_complete {E : Type} (actual : E → Prop)
+    (rows : List E) (covers : ∀ e, actual e → e ∈ rows)
+    (e : E) (missing : e ∉ rows) : ¬ actual e :=
+  fun happened => missing (covers e happened)
+
+theorem selectiveTruthControl :
+    selected ≠ [] ∧ sound selected ∧
+    inferAbsent selected 0 = true ∧ occurred 0 ∧
+    ¬ complete selected ∧ sound full ∧ complete full ∧
+    inferAbsent full 0 = false ∧
+    inferAbsent full 2 = true ∧ ¬ occurred 2 := by
+  simp [sound, complete, Fin.forall_fin_succ,
+    occurred, selected, full, inferAbsent]
+
+#print axioms HistoricalDisclosure1958.absence_of_complete
+#print axioms HistoricalDisclosure1958.selectiveTruthControl
+end HistoricalDisclosure1958
+```
+
+Copy this block to a scratch `.lean` file and run the repository's prepared
+`python3 scripts/worker_env.py -- lean /absolute/path/to/file.lean`. On
+2026-11-24 it elaborated with pinned Lean 4.35.0: the helper has no axioms and
+the finite control uses only `propext`, `Classical.choice` and `Quot.sound`.
+This local check does not replace independent semantic review or certify the
+policy interpretation. It computes only the unmarked selected/full branches;
+the limitation and correction responses remain the explicit policy comparison.
+
+The diagnostic is nonempty and has both true and false event contents. It
+creates no probability measure and no competing possible world. Its failure
+is precisely loss of completeness, not a false supplied entry. Exact copying
+of the selected list would leave that failure untouched. This is why the
+truth-preserving and exact-copy channel distinctions in PR #1933 do not by
+themselves settle the recipient's broader historical conclusion.
+
+### Complete ends, feasible alternatives, mixed goods and ties
+
+**Unconflicted protected inquiry.** Suppose the complete relevant comparison
+contains the recipient's answer to this question, control over reliance, and
+other legitimate goods and constraints. Assume faithful disclosure is feasible,
+preserves those other goods, costs no more than concealed selection, and permits
+the same independent examination by `r`. Then it improves historical accuracy
+and removes deliberate defeat of protected reliance without sacrificing another
+good. Under the explicit norm against choosing a dominated policy, concealed
+selection is excluded. This is a substantive positive application: the extra
+information is the actual A entry, and the extra reason is fidelity to the
+specified epistemic service. The conclusion is conditional on this complete
+comparison, not on omnipotence or the availability of some true sentence.
+
+**A confidentiality constraint.** Keep `g`, `r`, the history and abilities fixed,
+but now suppose disclosure of A violates an independently justified constraint
+already governing this service. Full disclosure is then outside the permissible
+feasible set. A general notice that no completeness guarantee is given need not
+reveal whether any particular protected event occurred: issue the same notice
+for this class of query whether or not there is a protected entry. When that
+notice is feasible and preserves the same confidentiality and other goods,
+candid limitation protects the recipient from the negative inference without
+giving them the complete historical truth. Concealed selection is not rescued
+by merely naming privacy. Equally, epistemic stewardship does not require
+answering a question it cannot properly answer. This is a positive alternative
+to an error-free historical environment, not a claim that any actual divine
+concealment has been justified.
+
+**Corrigibility and competing epistemic goods.** If the undertaking protects
+successful completion of the named inquiry, a provisional incomplete view with
+accessible correction can fulfill it. If it protects every immediate verdict,
+the same policy may fail. Effort, independent checking and development can be
+legitimate goods, but the comparison does not stipulate that misleading a reader
+is their unique or best means. A truthful challenging task may preserve them.
+To defend deliberate temporary false inducement, establish what additional
+good it supplies, why candid uncertainty or a truthful task cannot supply it as
+well, and how this fits the actual undertaking. Merely allowing local error
+does not select that deceptive policy or establish its permissibility.
+
+**Ties.** Existing result `a1990e04-1e7d-565f-bd98-f2e64b570aa1`,
+`TruthCore.Results.Modal.OptimalCreationChoice.checks`, permits different
+candidates with equal greatest quality; `tiedOptimal` is its concrete witness.
+It is an order result, not an ethical permission theorem. Applied here, it means
+that equality of final answers alone does not exclude one response under an
+all-optima policy. If interim agency, protected reliance or epistemic injury
+differs, final-answer equality is not equality in the complete ordering. If the
+policies really tie on that full ordering, strict dominance is unavailable;
+exclusion must come from a defended constraint on the act. No weight or priority
+between conflicting goods is inferred from a bare goodness classification.
+
+The strongest surviving positive rival to a universal historical guarantee is
+therefore **limited but genuine epistemic stewardship**: preserve reliable
+routes to some historical knowledge, make material limits intelligible, allow
+correction and legitimate suspension, and respect other goods. It gives a
+truth-oriented account of inquiry without licensing wholesale covert
+fabrication. Its cost is inability to infer a guaranteed answer where its scope,
+coverage or correction conditions are not met. The more permissive beneficial
+deception rival above remains open, but now owes a comparison that defeats both
+faithful disclosure and candid limitation; an unspecified overriding reason
+does not meet that burden.
+
+### Historical warrant without a self-certifying history
+
+An independently warranted undertaking could help establish historical truth
+without using that very truth as a premise. For instance, a warranted guarantee
+of complete reporting for a specified class, correct identification of a
+received report, and sound interpretation can support an absence inference.
+The completeness obligation describes a procedure before its output is known;
+it is not defined as whatever makes the desired conclusion true. The warrant
+for applying it may be direct, conceptual, empirical or cumulative. There is
+no demand here for a disconnected proof of every input.
+
+What would not add a discriminator is inferring the source's protected scope
+only from the very record whose completeness is in question, then returning
+the source's reliability as a new guarantee for that record. A self-affirming
+message can be additional evidence under ordinary defeasible assumptions, but
+cannot exclude an expressly admitted alternative with exactly the same whole
+evidential message solely by reiterating that message. Reading a second document
+or repeating calibration helps only to the extent that the admitted dependency
+structure or information distinguishes the relevant alternative.
+
+The exact mathematical boundaries were already available. `HistorySelection`
+defines `SameEvidence` and `EvidenceOnly` on the whole supplied vector; its
+certificate does not grant arbitrary historical substitution. The PR #1933
+`InitialHistoryAuthenticity.sound_iff_fibers` and
+`sound_iff_uniform_witnesses` expose soundness as a condition on admitted
+observation fibers, with authentic witnesses distinct from uniformity.
+The existing `ReadingSelfCertification.certificate`, result
+`b16198d5-565c-57f3-91a6-208dc8c46b02`, gives the stronger concrete obstruction
+for unrestricted constant additive bias and shows how a supplied true signal
+anchor resolves that particular ambiguity. None says every actual history has
+a counterfeit counterpart, or that ordinary memory and historical inquiry
+lack warrant until infallibly certified.
+
+Direct memorial or perceptual entitlement and cumulative successful checking
+remain eligible foundations for fallible historical belief. The same faculties
+can be used in their assessment without automatically adding independent
+evidence against an expressly indistinguishable rival. The repository's
+`ReliabilityFrame` keeps warrant, truth, support and undercutting separate;
+failure to establish a global guarantee is not itself an undercutting rule.
+Conversely, a proposed metaphysical source argument is independent of the
+target history only insofar as its actual premises and their warrant do not
+already rely on that history's disputed reliability. Its claim to independence
+must be examined rather than inferred from its being metaphysical.
+
+### Equally reliable nonmental constitution at the same scope
+
+| Matched test | Knowledgeable source with the specified undertaking | Nonmental constitution with the same reliable process |
+| --- | --- | --- |
+| Positive records | Effective truthful production and preservation are needed | Accurate target-dependent production and preservation are needed |
+| Absence inference | Needs complete coverage of the event class, or a truthful limitation of the inquiry | Needs the same coverage; an exact copy of a partial archive is still partial |
+| Error and correction | Scoped undertaking can favor corrective access without guaranteeing every interim belief | A stable correction mechanism can have that same success profile |
+| Why this arrangement obtains | An independently warranted epistemic end adds purposive explanation of the source's choice | The relevant constitution may be intrinsically grounded, primitive or otherwise warranted; lack of an intention is not lack of a stable constraint |
+| Why this recipient may rely | Requires warranted application to the actual source, practice and protected scope | Requires warranted application to the actual process and its domain at the same epistemic standard |
+
+The intended epistemic good is real explanatory content if it explains an
+actual choice; it is not added evidence of record truth once the same reliable
+outcome is already granted to both accounts. The nonmental account's lack of
+assertoric obligations does not lower its functional reliability. Neither side
+must derive every primitive while the other may stipulate its nature. This
+comparison establishes neither equal probabilities nor a worldview ranking;
+those would require additional, genuinely discriminating grounds.
+
+### Current assessment, completed test and reopening
+
+The positive recipient-directed reply has become more precise. A source that
+adopts and protects an independently specified historical inquiry has a
+substantive reason against covertly defeating its recipients' use of that
+practice. With faithful alternatives that preserve the complete set of other
+goods, the source has a strict reason to prefer them. This applies to selective
+true evidence as well as false signs. Where contextual conduct genuinely
+asserts completeness, the existing assertion-truth target already applies;
+where it does not, a further responsibility norm is doing work and remains
+explicit. Mere causal authorship neither supplies that assertion nor removes
+responsibility for intentionally engineered misinformation.
+
+The completed two-event test answers the earlier generic request for a fixed
+policy comparison. It identifies a real additional inference boundary: even
+sound delivered records do not license absence claims without completeness.
+The strongest fallible alternative preserves truthful inquiry through disclosed
+limits and correction, and so survives the test without a blanket permission to
+deceive. No unconditional historical guarantee or advantage over an equally
+warranted nonmental mechanism follows. The earlier assertion, cognition and
+perfect-agency judgments are not reversed, and no root premise is discharged.
+
+The next discriminating application is **one particular absence inference**:
+fix its event class and interval, the recipient's actual inference rule, and the
+source's independently warranted coverage obligation or the mechanism's actual
+retention coverage. Determine whether the supplied information warrants
+completeness, only partial positive information, or suspension. For a normative
+extension beyond that case, test a specific reason alleged to defeat candid
+limitation under the same recipient and full feasible policies; do not repeat
+the equal-benefit argument. No actual historical channel was supplied for this
+assignment, so applying these conditions to one remains open. A new warranted
+coverage/priority argument, or a concrete countercase preserving the complete
+protected undertaking, would reopen the assessment. Another abstract token map,
+an unrestricted fabricated-past hypothesis, or an appeal to unknown reasons
+alone would not.
+
+**Review disposition.** Independent reviewer `/root/final_continuation_review`
+accepted this section, its scoped attempt assessment, the coordinator synthesis
+and the actual proposed PR body at
+`02b10877de416cff3858f9fdc3cbada5b267f216`, with qualifications and no
+substantiated defect. The reviewer independently read the cited primary
+passages and actual assertion/representation/confirmation consumers, inspected
+the diagnostic and reused its successful elaboration evidence. The five owned
+files were unchanged through main integration
+`94eff81001593764167d31a72915595282a6e94b`. Acceptance covers the stated
+semantic boundaries; it does not establish an actual source/channel, remove
+the coverage and normative commitments, or confer new formal certification.
+
+The reviewed local snapshot has the identical Git tree as published revision
+[`813aed9c`](https://github.com/moritzbrantner/formal-logos/commit/813aed9c2aa3251ba1a5e4c8d3970e321ed83640).
+The findings are published on `agent/source-independence-history`, not merged.
