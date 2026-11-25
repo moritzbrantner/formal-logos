@@ -57,8 +57,8 @@
     "note": "docs/notes/epistemic-underminer-boundaries.md#from-warranted-belief-to-an-actual-bearer-1007-2026-11-25",
     "reviewed_revision": "6d7a337fbb9be9f5bd09563631ab188f3c568456",
     "review": "accepted_qualified",
-    "publication": "published",
-    "evidence": "Independent challenge at 5d5e298be476d38a307a460f966d2332bb5f6ce1 accepted the derivations, controls and graph path from 1db47fd9. Targeted recheck at the reviewed revision accepted the proposed recount, the restricted application and the universal warrants on a wider frame.",
+    "publication": "merged",
+    "evidence": "Independent challenge at 5d5e298be476d38a307a460f966d2332bb5f6ce1 accepted the derivations, controls and graph path from 1db47fd9. Targeted recheck at the reviewed revision accepted the proposed recount, the restricted application and the universal warrants on a wider frame. PR #1980 merged as eb2347bd3a5c976db13ab549358ad9fef025b591.",
     "supersedes": "Adds the warranted-acceptance and selected-world applications to the prior case 10 assessment. The other epistemic challenges retain their scope."
   }
 }

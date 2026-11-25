@@ -43,8 +43,8 @@
     "note": "docs/causal-finite-branching-and-psr-syllogisms.md#can-the-denial-itself-supply-s2s-population-premise-1007",
     "reviewed_revision": "401cbd98394a839d8d2fe05dcf36a2cd420dfa1c",
     "review": "accepted_qualified",
-    "publication": "published",
-    "evidence": "Independent semantic review accepted the witness-preserving theorem, definitional specialization, concrete-emptiness control, both downstream premise bundles and the sole former orphan 46c875b1 at the reviewed revision.",
+    "publication": "merged",
+    "evidence": "Independent semantic review accepted the witness-preserving theorem, definitional specialization, concrete-emptiness control, both downstream premise bundles and the sole former orphan 46c875b1 at the reviewed revision. PR #1980 merged as eb2347bd3a5c976db13ab549358ad9fef025b591.",
     "supersedes": "Adds the performed-denial application to S2's population premise. The earlier S2 assessment of an explained existent retains its original scope."
   }
 }
