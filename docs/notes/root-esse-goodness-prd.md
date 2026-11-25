@@ -1,5 +1,7 @@
 # PRD: Root-local goodness of an ultimate existential source
 
+[Original PR #1917](https://github.com/moritzbrantner/formal-logos/pull/1917)
+
 - **Project** Formal Logos (`moritzbrantner/formal-logos`)
 - **Date** 2026-11-24
 - **Status** Independently reviewed research specification merged in PR #1917 at `233857c34`. Formal implementation remains open.
@@ -343,3 +345,7 @@ end FulfilledRespect
 **Judgment.** There is positive warrant for crediting the bearer with an excellence where a due capacity actually attains its own end. The attained discrimination supplies an intelligible object of pursuit and preservation even when we consider the successful operation itself, apart from the relief of a prior defect or any further use. This supports a primitive constitutive reading of goodness: attainment fulfills the bearer *in this respect*. The rival can grant the same restoration history, ranking and reason to avoid impairment, and identify normal success with meeting a requirement whose violation is bad. A ranking of repairs cannot decide between those accounts. A reason to pursue the realized operation for its own sake, identifiable independently of avoiding a loss or a further benefit, bears directly on the disputed positive attribution. Observed pursuit by itself also admits instrumental explanations.
 
 At the independently selected source, the relevant inference is narrower still: given its actuality in esse, ascribe goodness to that very source in esse. Argument `0011703b` uses just this forward instance of `00e962ae` for its goodness conjunct; its causal conjunct has its own premises. There is no defective-but-existing condition of the same subject in which it wholly lacks esse. One cannot carry over the eye's repair ranking by assigning nonexistence a score for the absent subject. The strongest affirmative rationale is internal: esse realizes this bearer as actual, and such constitutive realization is positively perfective of the bearer. A neutralist can accept the first step while denying evaluative force to that fulfillment. I favor the limited ontological ascription on the constitutive reading. Its warrant rests on that evaluative principle, and neither this case nor the root proof extends it to arbitrary determinations or morally right willing. The full biconditional retains its direct assumption and the due-actuality derivation with explicitly universal due coverage.
+
+## Research attempts citing this note
+
+- [Owner selected a proposition, superseding adopted-definition proposal](../../corpus/attempts/goodness-form-end-forks-1116.json)

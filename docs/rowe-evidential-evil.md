@@ -7,7 +7,7 @@ journal scan and byte-identical fixed 2016-09-09 Wayback capture are pinned in
 `ROWE-EVIL-ATHEISM-1979-FULL`; the entire article was materialized and read.
 Printed pp.336–339 carry the argument and reply. The PDF’s two-column extraction
 interleaves some text; the same verified bytes were additionally read with
-Poppler’s layout-preserving extraction. No article text is redistributed.
+Poppler’s layout-preserving extraction. No article text is redistributed. [Research record](../corpus/attempts/rowe-deductive-and-appearance-boundary.json)
 
 For the owner's later request to test the different meanings of evil, see the
 [sense-by-sense audit](#sense-by-sense-objection-audit-2026-11-17) below and the
@@ -471,3 +471,7 @@ this dated continuation and the coordinator conclusions found no substantive
 defects; no repair round was required. This supersedes the pending-review
 wording of this dated section. See the [integration record](notes/unique-feedback-explanation-311.md#reviewed-owner-reply-integration-2026-11-17)
 for verification, source scope and unchanged formal status.
+
+## Research attempts citing this note
+
+- [Owner-directed definition comparison, attribution deferred](../corpus/attempts/evil-emotivism-use-boundary.json)

@@ -2,7 +2,7 @@
 
 This #369 slice distinguishes positive proposals and their remaining bridges.
 It adds source commitments, not a proof of moral realism, an additional
-verified result, or a claim that a complete rival has been eliminated.
+verified result, or a claim that a complete rival has been eliminated. [Research record](../../corpus/attempts/natural-goodness-function-authority.json)
 
 ## Witnesses read
 
@@ -1485,7 +1485,7 @@ review delegation, source claim, formal sense, theorem or closure change occurs.
 
 ### Worker validation and return boundary
 
-Attempt `1e95fdf7-60ce-4fa6-9e43-114b0cc566b4` persists this delta. Offline
+Attempt [`1e95fdf7-60ce-4fa6-9e43-114b0cc566b4`](../../corpus/attempts/1e95fdf7-60ce-4fa6-9e43-114b0cc566b4.json) persists this delta. Offline
 `corpus.py check` passed with existing strength/sense warnings;
 `attribution-check --base f9df3e2f7caf5fca6b31a465cbff5e655fedc394` found no new
 or changed stating claim; diff hygiene passed. Claim/type self-sweep: no claims,
@@ -1868,4 +1868,8 @@ T2 holds, against the rival on which the same norm holds necessarily and
 impersonally. This is #1747's question restricted to one case; it should be
 assigned there rather than reopened here.
 
-Attempt `1e2e9af4-c46c-4f05-b8a8-5d6e0d067248` carries the current assessment.
+Attempt [`1e2e9af4-c46c-4f05-b8a8-5d6e0d067248`](../../corpus/attempts/1e2e9af4-c46c-4f05-b8a8-5d6e0d067248.json) carries the current assessment.
+
+## Research attempts citing this note
+
+- [Read Darwall and distinguish standing, demand validity and the hard-case reason](../../corpus/attempts/darwall-authority-concrete-demand-20261111.json)

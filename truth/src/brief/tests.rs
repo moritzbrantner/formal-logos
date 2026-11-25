@@ -1586,7 +1586,7 @@ fn issue_brief_finds_review_and_delivery_while_issue_is_open() {
     write(
         &root,
         "docs/notes/memory.md",
-        "# Memory\n\n## Repair (#12)\n\nControlled comparison.\n\n## Other (#120)\n\nA different case.\n",
+        "# Memory\n\n## Repair (#12)\n\nScoped reference: `STMT-FIX-SERIES`.\n\n## Other (#120)\n\nA different case.\n",
     );
     let section_id = "73000000-0000-4000-8000-000000000200";
     let other_id = "73000000-0000-4000-8000-000000000300";
@@ -1605,6 +1605,13 @@ fn issue_brief_finds_review_and_delivery_while_issue_is_open() {
             &linked.to_string(),
         );
     }
+    let pr_only_id = "73000000-0000-4000-8000-000000000500";
+    let pr_only = json!({"id":pr_only_id,"label":"Delivery history","evidence":["PR-41","PR-410"]});
+    write(
+        &root,
+        &format!("corpus/attempts/{pr_only_id}.json"),
+        &pr_only.to_string(),
+    );
     let snapshot = json!({"items":[
         {"number":12,"url":"https://github.com/o/r/issues/12","state":"OPEN","body":format!("Compare `{GOAL}`. See #40."),"crossReferences":["https://github.com/o/r/pull/41"]},
         {"number":40,"url":"https://github.com/o/r/pull/40","state":"MERGED"},
@@ -1646,6 +1653,15 @@ fn issue_brief_finds_review_and_delivery_while_issue_is_open() {
             .iter()
             .any(|row| row["id"] == GOAL && row["named_by_issue"] == true)
     );
+    let records = brief["records"].as_array().unwrap();
+    let indirect = records.iter().find(|r| r["id"] == pr_only_id).unwrap();
+    assert_eq!(indirect["cited_related_prs"], json!([41]));
+    assert_eq!(indirect["direct"], false);
+    let by_section = records.iter().find(|r| r["id"] == SERIES).unwrap();
+    assert_eq!(
+        by_section["named_by_sections"],
+        json!(["docs/notes/memory.md#repair-12"])
+    );
     let headings = brief["note_sections"].as_array().unwrap();
     assert!(headings.iter().any(|s| s["heading"] == "Repair (#12)"));
     assert!(!headings.iter().any(|s| s["heading"] == "Other (#120)"));
@@ -1684,6 +1700,7 @@ fn issue_brief_finds_review_and_delivery_while_issue_is_open() {
             .all(|r| r["id"] != other_id && r["id"] != file_id)
     );
     assert!(super::issue::render(&local, 2).contains("Check the section-specific prediction"));
+    assert!(records.iter().all(|r| r["id"] != pr_only_id));
     assert!(!root.join(".cache/truth-index.sqlite").exists());
     std::fs::remove_dir_all(root).unwrap();
 }

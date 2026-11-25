@@ -4,7 +4,7 @@ Draft consequential findings for the coordinator's independent semantic challeng
 Target: #364/#826 intellect attribute on the route consuming
 180f5ad2-a421-541a-85c9-9bca578b4a43. This batch does not connect relational
 completeness to that primitive intellectual power, identify the necessary root
-with a knower, or discharge any root obligation. Attribution is deferred.
+with a knower, or discharge any root obligation. Attribution is deferred. [Research record](../../corpus/attempts/foreknowledge-discrimination-1380.json)
 
 ## Exact mathematical result
 

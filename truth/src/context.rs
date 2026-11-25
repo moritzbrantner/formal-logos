@@ -1020,7 +1020,22 @@ pub fn context_pack(
             blocker: get(attempt, "blocker"),
         })
         .collect();
-    let mut by_length: Vec<&str> = ids.iter().copied().collect();
+    // Preserve the spelling actually used by the candidate. A shared legacy name
+    // can identify an argument/result pair when both belong to this context.
+    let aliases = corpus.aliases();
+    let mut spellings = ids.clone();
+    for id in &ids {
+        let legacy = aliases.legacy(id);
+        if legacy != *id
+            && aliases
+                .candidates(legacy, None)
+                .iter()
+                .all(|(_, target)| ids.contains(target.as_str()))
+        {
+            spellings.insert(legacy);
+        }
+    }
+    let mut by_length: Vec<&str> = spellings.into_iter().collect();
     by_length.sort_by_key(|id| std::cmp::Reverse(id.len()));
     let mut candidates_sorted = corpus.records("candidates");
     candidates_sorted.sort_by_key(|r| text(r, "id"));
@@ -2047,8 +2062,25 @@ mod tests {
                     result("BASE-SECOND", "OTHER", "TruthCore.Base", "Base.second"),
                 ],
             ),
+            (
+                "candidates",
+                vec![
+                    json!({"id":"CANDIDATE", "goal":"Read LEGACY-UP.", "source_id":"S", "locator":"chapter 1", "reason":"Follow the argument.", "status":"candidate", "priority":1}),
+                    json!({"id":"AMBIGUOUS", "goal":"Read a source.", "source_id":"S", "locator":"chapter 2", "reason":"Read SHARED-FRAME.", "status":"candidate", "priority":2}),
+                ],
+            ),
+            (
+                "statements",
+                vec![
+                    json!({"id":"P", "legacy_id":"SHARED-FRAME", "paraphrase":"Fixture premise."}),
+                    json!({"id":"Q", "legacy_id":"SHARED-FRAME", "paraphrase":"Other fixture premise."}),
+                ],
+            ),
         ] {
-            for record in records {
+            for mut record in records {
+                if record["id"] == "UP" {
+                    record["legacy_id"] = json!("LEGACY-UP");
+                }
                 write(
                     &format!("corpus/{kind}/{}.json", record["id"].as_str().unwrap()),
                     &record.to_string(),
@@ -2060,6 +2092,8 @@ mod tests {
         for module in ["TruthCore.Base.Solution", "TruthCore.Base.Challenge"] {
             write("TruthCore/Up/Solution.lean", &format!("import {module}\n"));
             let pack = context_pack(&root.0, &corpus, &report, "UP", &[], None);
+            assert_eq!(pack.candidates.len(), 1);
+            assert_eq!(pack.candidates[0].mentions, ["LEGACY-UP"]);
             let reused: Vec<_> = pack.lean[0]
                 .reused_results
                 .iter()

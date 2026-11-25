@@ -5,7 +5,7 @@ coherent counterpart matching and preserved local grounding structure establish
 one literally identical necessary concrete individual. The basic singleton
 counterpart counterexample is already certified by
 `STMT-COUNTERPART-NECESSITY-CONTROLS`; repeating it would add little. This result
-compares two profiles of the **same nontrivial source** and common roster.
+compares two profiles of the **same nontrivial source** and common roster. [Research record](../../corpus/attempts/grounding-identity-profile.json)
 
 ## Reuse and exact source assumptions
 
@@ -127,3 +127,7 @@ The result permits no axioms. Reproduce after the focused Solution build with
 and `python3 scripts/worker_env.py -- python3 scripts/corpus.py bind-check --result GROUNDING-IDENTITY-PROFILE`.
 Final CI covers the delivered revision. Shared engineering policy resolved at
 `625cb04ca568aebc8d45c90033e107a05e9bd2a0`.
+
+## Research attempts citing this note
+
+- [A quantified Lean construction takes any inhabited, well-founded one-world grounding structure…](../../corpus/attempts/world-local-grounding-doubling-20261027.json)

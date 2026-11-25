@@ -31,7 +31,10 @@
     "d9ece291-7871-4e25-b10e-ad0b28219b6c",
     "2af3ee50-031a-4170-a741-1dd707224f0d",
     "49eb8702-ac7a-54e9-90e1-bcd38601b40b",
-    "847ba0b4-6372-4015-a4f0-0132fd00198f"
+    "847ba0b4-6372-4015-a4f0-0132fd00198f",
+    "PR-1411",
+    "PR-1413",
+    "PR-1419"
   ],
   "blocker": "Epistemic-unit branch reassessment: record copies and administrative slicing leave a stipulated original assessment fixed, whereas genuine episodes alter the doxastic history and known protocol information. Extending invariance to them needs an independently defended epistemic-irrelevance premise. Additive episode accuracy needs equal reason-giving weight per actual episode and a policy-to-current-credence bridge; duration accuracy needs its own local unit/additivity/continuity warrant. Repeated distinct controls identify this same unit/applicability dependency; no accepted common norm or same-standard counterexample selects a winner. Reopen on a substantive defense/counterexample for one named premise or a justified assessment-identity criterion, applying the rival's same stated criterion and retaining the comparison-required assumptions, with population/protocol interventions transparently disclosed rather than forbidden. No new theorem, source, root premise or unavailable-evidence/owner-choice blocker. Complete prose synthesis passed independent challenge, including targeted reopening-condition repair (note8042984b/attempt5da85f7c); prior certificates/reviews remain unchanged. Delivered-head metadata CI remains required."
 }

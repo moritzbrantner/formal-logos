@@ -24,7 +24,9 @@
     "69ead222-999b-48fb-94d8-3f255fe1ec08",
     "bc769e84-ca67-403e-b14a-527e4a9c8a3b",
     "8900a666-7cc6-476c-9102-d5bc3dd742f0",
-    "73532b47-6f39-4b2c-a01f-47085da81c3f"
+    "73532b47-6f39-4b2c-a01f-47085da81c3f",
+    "PR-1835",
+    "PR-1949"
   ],
   "blocker": "Strictness of the strength orders (93dd9b29 and the two new ones) and certified strength_comparisons (#1598) are not registered; optional next tests: a strictness model for 93dd9b29 and one showing 634a80b8 strictly weaker than d5a94eb1 with c11369aa (a cause equal in degree to its effect). The mode-asymmetric sibling over ActFrame is not formalized. The objective-reality version of adequacy and the Meditation III argument are recorded in attempt 7e8fcf16."
 }

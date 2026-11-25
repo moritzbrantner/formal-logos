@@ -17,6 +17,9 @@ No new dependency, physical clock, source claim or global calibration is added.
 
 ## Time candidates
 
+The [time comparison and measurement result](../results/e9cd57b9-eec7-485f-88cb-26fad847f3f6.json)
+records the three interval controls.
+
 Segment stores a motion label, start and nonnegative natural extent. Joins
 requires the same motion, adjacent starts and summed extent. NoLonger compares
 extents independently of a proposed readout. Comparative requires BOTH directions
@@ -34,6 +37,11 @@ units and equal-duration cross-motion matching are not certified. Comparison
 adequacy alone is a separate interpretation, never advertised as full measure.
 
 ## Aevum candidates
+
+The [aevum result](../results/34acd995-28cc-48b2-9ea2-e90ab90ff900.json)
+records the admissible alternatives and the corruption control. The
+[exploration map](../../explorations/duration-measure-candidates.toml)
+identifies the open bridge from the two sets of controls to divine eternity.
 
 HoldingFrame fixes a subject/aspect/frame externally. Configurations include
 admissible alternatives and an actual subset, substantial identity, internal

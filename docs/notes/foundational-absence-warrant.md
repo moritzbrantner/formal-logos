@@ -21,7 +21,7 @@ parity result.
 same-witness endpoint `f9208664` and the C2 route `e5d49f99`
 ([contingency-receptivity-c2.md](contingency-receptivity-c2.md)). Warrant
 targets: PGP `20d5fecd`, and S2 (each concretum could fail to exist) at the
-candidate necessary being (attempt `03e1f49f`, checked incompatibility
+candidate necessary being (attempt [`03e1f49f`](../../corpus/attempts/03e1f49f-7074-4e78-abe5-79b89ed97ec5.json), checked incompatibility
 `6b12525b`).
 
 **Question.** At matching scope (the possible absence of a foundational,
@@ -592,7 +592,7 @@ question, not a cost.
 necessity; its node `b19ffd92` excludes S2 at its world, `6b12525b`), at the
 fixed meanings of §1. Criteria: the substantive objection standard, applied
 symmetrically, and explanatory comparison at matching scope (does an account
-deliver its verdict at `n` from content independently motivated *at `n`*?).
+deliver its verdict at `n` from content independently motivated *at `n`*?). [Assessment record](../../corpus/attempts/d067722e-015a-4e04-9ddc-63633eccdcd8.json)
 
 1. **Parity at `n`.** Neither the claim that `n` could be absent nor PGP's
    verdict that `n` is necessary has discriminating warrant at `n`.
@@ -966,7 +966,7 @@ possible absence.
 Merged #1914 gives conditional support for the move from received esse to
 a distinct actual cause and from limited esse to actual grounding. The
 giver's freedom and the same bearer's modal presence remain open. The
-positive-conceivability test below and attempt 91e562cc ask a different
+positive-conceivability test below and attempt [91e562cc](../../corpus/attempts/91e562cc-dc0b-4678-8500-1c5ca2fdb743.json) ask a different
 question: what warrants an exhaustive rigid roster that would exclude \(n\)?
 
 ### 11.3 Aristotle and Pruss: powers do not automatically cover absence
@@ -1403,3 +1403,7 @@ concrete to reach `b19ffd92`. Failure of this n to be necessary would
 still leave the existential endpoint open to another witness. The
 archive checks are local evidence about a constitutive rule. This
 continuation adds no Lean implication or source attribution.
+
+## Research attempts citing this note
+
+- [Reality-grounded possibility versus positive existential powers at the first being](../../corpus/attempts/c2e6cfda-09c9-4571-9f87-6c380d3e968a.json)

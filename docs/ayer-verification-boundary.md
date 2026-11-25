@@ -4,7 +4,7 @@ This is a blocked primary-source investigation for #185 and #363, not a
 refutation of Ayer, empiricism or expressivism. It adds no source claim,
 formal result, theory answer map, or root-path discharge. The existing
 `AYER-LTL-EMOTIVISM` candidate retains both the ethical reading and this
-verification obligation; neither issue is complete.
+verification obligation; neither issue is complete. [Research record](../corpus/attempts/ayer-verification-boundary.json)
 
 ## Conditional inference already available
 
@@ -121,3 +121,7 @@ resolves the source search above.
 
 - **Chapter VI and Ayer's "definition" reply.** Neither has an admissible
   witness.
+
+## Research attempts citing this note
+
+- [Global thesis variants, scope and defeater transmission](../corpus/attempts/global-thesis-scope-and-defeaters.json)

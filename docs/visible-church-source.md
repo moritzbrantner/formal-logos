@@ -6,7 +6,7 @@ directly supplies that commitment: Christ establishes and continually
 sustains the visible community, which has hierarchical organs, is entrusted to Peter and the apostles for
 pastoral government, and is established in perpetuity. Section 5 identifies the founder as Lord Jesus.
 The Latin chapter-I witness is pinned and materialized as
-`VATICAN-II-LUMEN-GENTIUM-I`; it reuses the existing document snapshot.
+`VATICAN-II-LUMEN-GENTIUM-I`; it reuses the existing document snapshot. [Original PR #298](https://github.com/moritzbrantner/formal-logos/pull/298)
 
 The source also describes the spiritual community and mystical body as the
 same complex Church. The linked definitions and disambiguation preserve

@@ -1,5 +1,7 @@
 # Personal identity under fission: conditional boundary (#1397)
 
+[Research record](../../corpus/attempts/personal-identity-fission-1397.json)
+
 ## Target, inventory and connection boundary
 
 This analyst investigation serves the proposed interpretation of **The dead
@@ -237,7 +239,7 @@ reviewed result intact. The target remains the UNBUILT interpretation bridge to
 soul/body account supplies a numerical-person criterion, or merely presupposes
 it. No change is made to the Creed primitive or shared soul/person definitions.
 
-Existing attempt `965c8b72-8b29-519b-894c-21e559de21a0` and
+Existing attempt [`965c8b72-8b29-519b-894c-21e559de21a0`](../../corpus/attempts/q75-causal-identity-rival-assessment.json) and
 `docs/human-intellect-rival-assessment.md` are material limits: the q.75 arguments
 leave cognitive interference, operation attribution and operation/existence
 correspondence open. Exact result

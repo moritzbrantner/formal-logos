@@ -294,7 +294,7 @@ existing independence premise only in the local context where it is used.
 Date: 2026-11-14. Batch spec `specs/reflexive-dependence-scope.toml`; Lean
 vocabulary `TruthCore/Causality/ReflexiveDependenceScope.lean`; results in
 `TruthCore/Results/Causality/ReflexiveDependenceScope/`. Attempt
-`a4d430a0-9711-4d04-b4a5-be385f92e757`.
+[`a4d430a0-9711-4d04-b4a5-be385f92e757`](../../corpus/attempts/a4d430a0-9711-4d04-b4a5-be385f92e757.json).
 
 ### The conflict, made exact
 
@@ -454,7 +454,7 @@ including itself. Every step strictly enlarges this set: its target belongs
 to the later set, and membership in the earlier one would close a cycle.
 The existing rank interpretation of PLG then excludes strict self-grounding.
 Conversely any projected cycle would derive strict self-grounding in every
-theory that realized those steps. [Fixed-label theorem](../../corpus/results/5ebdfbff-f984-43d0-a7d7-ddc19286f39f.json)
+theory that realized those steps. [Fixed-label theorem](../../corpus/results/5ebdfbff-f984-43d0-a7d7-ddc19286f39f.json) [Assessment record](../../corpus/attempts/1020b663-7fe1-42d2-8b0c-8a767607a1ce.json)
 
 When distinct-step dependence is acyclic and each bearer in an inhabited
 domain supplies its own label, the generated theory derives **exactly** the reversed nonempty finite dependence paths as
@@ -519,3 +519,7 @@ supply follows from fitting the labels. Reopen the comparison on an
 independently delimited set of existential roles for an effect, with an
 argument that every further sustaining supplier belongs to the set and
 moves between its roles in the required direction.
+
+## Research attempts citing this note
+
+- [Cluster reassessment of dependence, simple-priority and grounding leaves of the prima via (#1751)](../../corpus/attempts/9d71e28d-d492-4797-9221-45fa517a6e6b.json)

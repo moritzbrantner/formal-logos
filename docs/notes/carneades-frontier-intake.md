@@ -3,7 +3,7 @@
 Bounded owner-authorized source intake for #311/#312/#319/#320/#462/#467/#555.
 Repository comparison: `6926980efb1961753212cf4a43249a774c2724f2`, branch
 `research/carneades-intake`. This is a research note, not a source claim,
-formalization, proof certificate or handoff tracker. No premise change.
+formalization, proof certificate or handoff tracker. No premise change. [Research record](../../corpus/attempts/carneades-frontier-source-intake.json)
 
 ## Access and fidelity boundary
 

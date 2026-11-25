@@ -1,7 +1,7 @@
 # No ultimate foundation, radical law-change, and whole-history stability
 
 Current integrated assessment: [Metaphysical explosion and containment
-(2026-11-24)](#metaphysical-explosion-and-containment-2026-11-24).
+(2026-11-24)](#metaphysical-explosion-and-containment-2026-11-24). [Original PR #1809](https://github.com/moritzbrantner/formal-logos/pull/1809)
 
 This is an **ontic conditional** for the God-existence-stage explanation question
 in #735, extending the exact existing #736 history-selection, #737 predictive,
@@ -952,6 +952,8 @@ stipulating a new space of worlds.
 
 ## Metaphysical explosion and containment (2026-11-24)
 
+[Assessment record](../../corpus/attempts/a356db64-3277-4e41-b4c2-a6309c9f132e.json)
+
 This is the integrated assessment of the owner's research program, continuing
 #1872, #1874, #1808, #1809, #1904, #1908, #1910 and #1913. Its targets are the
 contingent-existence PSR `608a262d-08fe-4dfd-9413-67e2ecf35b84`, its B2 consumer
@@ -1312,3 +1314,8 @@ actual scope, explanatory adequacy, and epistemic applicability. The present
 checkpoint resolves the formal discrimination questions it undertakes and
 states the stronger metaphysical bridges rather than treating an unchanged
 root-premise count as failure.
+
+## Research attempts citing this note
+
+- [Finite recombination and prefix closure separate full-law arbitrariness](../../corpus/attempts/6d1c811e-ef70-4cc6-8e98-9e9dabc5547e.json)
+- [Weaken propagation assumptions to the exact observable obstruction](../../corpus/attempts/c3d8f7e1-e40c-407a-bad9-873a5e24b896.json)

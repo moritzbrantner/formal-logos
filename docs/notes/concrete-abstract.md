@@ -3,7 +3,7 @@
 The corpus took `concrete : B → Prop` as a free parameter in dozens of files.
 Several models set it to `True`, so the distinction no longer constrained
 anything and "abstract things cannot cause" could not even be stated. The
-shared vocabulary is `TruthCore/Ontology/ConcreteAbstract.lean`.
+shared vocabulary is `TruthCore/Ontology/ConcreteAbstract.lean`. [Original PR #1105](https://github.com/moritzbrantner/formal-logos/pull/1105)
 
 ## Adopted sense (owner decision, 2026-11-06)
 

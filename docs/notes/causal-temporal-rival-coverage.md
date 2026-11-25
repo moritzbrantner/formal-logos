@@ -3,7 +3,7 @@
 The rival audit distinguishes logical complements from stronger historical
 accounts and from interpretive disputes. This batch changes no source claim,
 original Challenge or approved floor. It adds explicit structural ORs where
-coverage can actually be checked, and leaves interpretation adequacy open.
+coverage can actually be checked, and leaves interpretation adequacy open. [Research record](../../corpus/attempts/causal-temporal-rival-coverage.json)
 
 ## General change and McTaggart's stronger bundle
 
@@ -352,3 +352,9 @@ certificates are reused unchanged; actual premise change is **none**. The
 updated existing scope attempt links this note and records the next
 warrant test. Delivered-head offline validation and final CI remain required;
 this note is not a substitute for them.
+
+## Research attempts citing this note
+
+- [Modal spine A2: inert emptiness from two grounding principles, objection and warrant audit](../../corpus/attempts/67abe57d-090b-46f2-9769-e941149e6d9b.json)
+- [Modal spine Arrival B: the sense of B1's beginning and its connection to the metric Grim Reaper](../../corpus/attempts/9d141c6c-7979-4d8b-a1b4-7b35ebc9fb21.json)
+- [Under rigid identity and classical accessibility, an actually existent concrete bearer outside all…](../../corpus/attempts/possible-causal-opportunity-scope-20261027.json)

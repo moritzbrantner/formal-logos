@@ -2,7 +2,7 @@
 
 Owner-authorized broad epistemology intake, 2026-10-28. This linked research
 note preserves the readings and rejected inferences for
-`ATTEMPT-CARNEADES-JUSTIFICATION-INTROSPECTION`. It is not a new handoff or an
+[`ATTEMPT-CARNEADES-JUSTIFICATION-INTROSPECTION`](../../corpus/attempts/carneades-justification-introspection.json). It is not a new handoff or an
 attributed corpus claim. Actual and intended root-premise delta: zero.
 
 ## Public readings and attribution boundary

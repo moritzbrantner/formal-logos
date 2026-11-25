@@ -53,7 +53,9 @@
     "40aefb2e-c9b3-5bb1-8802-96bbc4e2ed83",
     "da9c82ed-e886-5335-81c3-cebad9b27345",
     "7cd6850f-219f-5106-ac6d-f2e3422e5176",
-    "573a8ba8-067b-5972-86ec-585e47abd579"
+    "573a8ba8-067b-5972-86ec-585e47abd579",
+    "PR-1769",
+    "PR-1967"
   ],
   "blocker": "Open: the originating/sustaining fork of DependsForBeing (#1626) for 000e1f65, 2e248016 and 3ef67739; the diagonal fork of D (reflexive or strict) for 3ef67739, 5dacb0db and the inconsistent package with 8ab3d114; the respect fork in SIMPLY_PRIOR_1 (priority in act in a respect versus priority in being), unregistered, for 47aff057, c0d99549, d85de8e1 and e078f07b; the per se regress premise against the source-free infinitist structure; the dependence principle for contingent concreta (3ef67739) against existential inertia; the interpretation of the PLG atoms for 42756c07; the cross-world export of 402cf70f. Next test: bind spine I to 97f5850f directly, or to an e078f07b restricted to per se ordered causing, and not to respect-free d85de8e1.",
   "current_assessment": {

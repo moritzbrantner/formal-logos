@@ -6,7 +6,7 @@ standard. The theorems are `core` and `comparison` in
 `TruthCore.Explanation.ExplanatorySymmetry`, the #755 `Arena`, the #750 rivals and the #736
 `SameEvidence`. Each permits the Mathlib three, because the module uses Mathlib preorders and
 paths. They establish conditional consequence and model verdicts. They establish no
-standard, exclude no position unconditionally, and no model's metaphysical possibility.
+standard, exclude no position unconditionally, and no model's metaphysical possibility. [Research record](../../corpus/attempts/explanatory-symmetry-742.json)
 
 ## Investigation brief
 
@@ -248,8 +248,12 @@ and actual practical governance must be assessed in addition to output selection
 stated policy, one whose represented reason governs production and one where a
 separate mechanism fixes the output and the reason is merely reported afterward.
 Then examine tied cases without imposing unique determination as a definition
-of governance. This joins the basing work to
+of governance. Compare the [epistemic cases of exercised and bypassed inference](epistemic-underminer-boundaries.md#discriminating-cases-and-the-exact-condition-they-test) with
 [practical adoption](divine-love-goodness-bridge.md#practical-adoption-at-fixed-production-proposed-continuation)
 and #1297/#1459. Divine applicability, effect-specific coverage and recipient
 good remain the exact downstream bridges. This note neither resumes unrelated
 creation questions nor registers those proposed connections as existing routes.
+
+## Research attempts citing this note
+
+- [Locate discriminating input in agenda selection and compare motivated choice](../../corpus/attempts/d735348a-03f9-4a7e-8c48-323392ed704e.json)

@@ -1,5 +1,7 @@
 # Necessary bearer, capacity and exercise (#463)
 
+[Research record](../corpus/attempts/bearer-capacity-exercise.json)
+
 This diagnostic consumes the exact theorem
 `TruthCore.Results.Case.Catholicism.StageOne.NecessaryIndividual.CausalPowers.checks`
 and the existing `NecessaryVariableEffects` theorems. It does not build another

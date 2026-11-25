@@ -7,7 +7,7 @@ within a larger evidential network; it need not be a separate proof tree. A
 specific rival follows deductively only if the relevant alternatives are
 exhaustive and the other options have been excluded. A conflict with an act of
 assertion, a loss of warrant for a belief, and the absence of a reason to adopt
-a view each require their own conditions and conclusions.
+a view each require their own conditions and conclusions. [Research record](../../corpus/attempts/internal-adoption-reasons.json)
 
 These tests also inform *comparative* assessments short of deduction: a view
 failing a well-supported self-refutation, self-undermining, internal-adoption or
@@ -471,10 +471,14 @@ formalized here; nothing here shows that the extension fails to reach it.
 root before and after). F6 is a floor item that these results neither use nor
 threaten. The route to the case runs through warrant for accepting root-route
 premises, the #930 bridge that is still unbuilt. Attempt
-`a29f4411-ac87-42b2-bae3-48fa0882b41a`.
+[`a29f4411-ac87-42b2-bae3-48fa0882b41a`](../../corpus/attempts/a29f4411-ac87-42b2-bae3-48fa0882b41a.json).
 
 ## Follow-up investigations
 
 - [Putnam's brain-in-a-vat argument](https://github.com/moritzbrantner/truth-core/issues/1416)
 - [Moore's paradox](https://github.com/moritzbrantner/truth-core/issues/1417)
 - [Global explanatory skepticism](https://github.com/moritzbrantner/truth-core/issues/1415)
+
+## Research attempts citing this note
+
+- [Moral and epistemic parity: distinguish categorical force from irreducible favoring](../../corpus/attempts/cc9f51e3-529d-4e59-bc50-bc79d8eae6c0.json)

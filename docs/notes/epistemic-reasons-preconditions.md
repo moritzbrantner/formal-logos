@@ -5,7 +5,7 @@ Analyst investigation for [#930](https://github.com/moritzbrantner/truth-core/is
 Attribution is deferred. The conceptual arguments are offered for assessment,
 not claims about a historical author's view. The dated conditional-encoding
 section below now links checked logical and finite-model results, without
-certifying actual normative warrant.
+certifying actual normative warrant. [Research record](../../corpus/attempts/epistemic-reasons-preconditions-930.json)
 
 **Conclusion:** accepting epistemic reasons commits us to actual epistemic
 favoring: some consideration makes a belief or other relevant attitude better

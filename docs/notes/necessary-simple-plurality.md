@@ -3,7 +3,7 @@
 The live question in #319/#320 is whether the same underived actual witnesses
 can be simple and nevertheless numerically distinct. The answer below concerns
 an explicit subset of the current formal commitments. It does not establish the
-metaphysical possibility of two Gods or settle every sense of simplicity.
+metaphysical possibility of two Gods or settle every sense of simplicity. [Research record](../../corpus/attempts/necessary-simple-plurality-joint-control.json)
 
 ## One interpretation, not a mixture of omission witnesses
 
@@ -1861,3 +1861,12 @@ packages, and retains the same witness through the actual-root, necessity and
 God-consumer interfaces. It adds no foundation or individuation theorem and
 does not identify the different relation/nature/determination dictionaries.
 The existing warrant assessment and its reopening conditions remain here.
+
+## Research attempts citing this note
+
+- [Audited exact new same-witness endpoint and relevant dossiers…](../../corpus/attempts/unity-first-being-consumer-audit-20261031.json)
+- [Followed the Della Rocca PSR p.6 n.9 lead to A Rationalist Manifesto: Spinoza and the Principle of…](../../corpus/attempts/della-rocca-manifesto-numerical-unity-search.json)
+- [Ingested exactly one sustained primary spoken argument: Michael Gorman: Divine Unity and…](../../corpus/attempts/youtube-unity-gorman-20261031.json)
+- [Pinned six complete Latin SCTA chapter witnesses, materialized and read Monologion I–VI at…](../../corpus/attempts/anselm-common-principle-uniqueness.json)
+- [Read materialized Compendium I12–15 and newly pinned De ente et essentia capp.3–4](../../corpus/attempts/unreceived-esse-individuation-defense.json)
+- [Sought the weakest premise excluding the part-free two-root model and tested its independence](../../corpus/attempts/first-mover-plurality-residue.json)

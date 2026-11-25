@@ -23,7 +23,9 @@
     "1acba9b6-c43f-46b5-9099-50a1b40230ed",
     "b251e442-4373-4ef8-984d-5f5a9004be2e",
     "41877473-3868-4cb5-bc90-b44d9ac811a7",
-    "d09f6268-93bf-4a00-af60-c57fc2353825"
+    "d09f6268-93bf-4a00-af60-c57fc2353825",
+    "PR-1965",
+    "PR-1967"
   ],
   "blocker": "The map's interpretation is unresolved. Next tests: (a) type a restricted non-causal receives-esse relation with its own definition and Lean declaration, and test the map on it; (b) type a causal ordering of existence facts and compare its warrant with STMT-EFFICIENT-CAUSE-NOT-DEPENDENT-ON-EFFECT; (c) fix whether D's counterpossibles are vacuist or non-vacuist (related to #1593); (d) assess the Barnes/Thompson symmetric-dependence cases after reading the texts. For the infinite-series comparison the remaining discriminant is actual supply: on one sustaining interpretation, what explains occupation of the entire series? The arithmetic relations carry no supply/absence alternatives. See docs/notes/distinct-dependence-strict-ground-route.md, ‘The infinite series at the efficient-cause consumer’. The finite-label test now asks for a reason why one effect has only finitely many independently identified existential fact levels and why every sustaining link changes level in the required direction.",
   "current_assessment": {

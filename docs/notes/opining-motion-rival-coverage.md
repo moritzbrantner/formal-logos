@@ -4,7 +4,7 @@ The original `OpiningIsBeingMovedReading` says every actual opiner is moved in
 its supplied `asOpinion p` respect. The recorded raw rival
 `ChangeUnrealButAppearsReading` says nothing is moved and an opinion occurs.
 It genuinely opposes that norm, but is stronger than its exact failure: a local
-opiner may miss the designated motion while another being is moved.
+opiner may miss the designated motion while another being is moved. [Original PR #1160](https://github.com/moritzbrantner/formal-logos/pull/1160)
 
 The audit preserves the full raw rival and all existing retorsion, motion,
 general-change and source-reading results. It adds a precise analyst
@@ -44,3 +44,7 @@ not inferred from an argument count. Research findings and the rejected
 strong-roster-as-exhaustive assumption are also persisted in the existing
 McTaggart attempt. This closes this identified scope gap; it does not assert
 historical-theory exhaustion or independently establish the opining norm.
+
+## Research attempts citing this note
+
+- [Bundle elimination for something is moved in this world](../../corpus/attempts/mctaggart-bundle-elimination.json)

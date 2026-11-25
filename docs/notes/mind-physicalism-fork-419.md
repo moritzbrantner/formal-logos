@@ -3,7 +3,7 @@
 The arena is one frame (`TruthCore/Alternatives/MindPhysicalism.lean`): occurrences
 that instantiate kinds, a target mental kind, physical kinds, and primitive `Causes`
 and `RealizedBy`. Lean checks consequence only. All premises stay open, and every
-model below is a finite formal interpretation, not a rival theory or a possibility claim.
+model below is a finite formal interpretation, not a rival theory or a possibility claim. [Research record](../../corpus/attempts/mind-physicalism-fork.json)
 
 ## Source reading
 
@@ -316,7 +316,7 @@ with baseline `a317b00dd638feb7c4c477f2e565720aeacf9ae6`. The proposal below is
 a comparative research judgment and two candidate connections, not a new
 registered derivation. The earlier distinct-thinking-ancestor assessment is
 unchanged. Source passages are inspected readings; no new canonical attribution
-or verified root edge is claimed.
+or verified root edge is claimed. [Assessment record](../../corpus/attempts/4eb61695-aaff-4417-8c2e-151cc00ea5fb.json)
 
 ### Use rational understanding as a positive starting point
 
@@ -516,7 +516,7 @@ from developed impersonal accounts? The result is positive explanatory
 unification with a limited comparative consideration, not an overall victory
 for a personal source. The earlier Route B and thinking-ancestor assessments
 are unchanged. This is a qualitative warrant assessment, with no new formal
-result or change to the registered propositions.
+result or change to the registered propositions. [Assessment record](../../corpus/attempts/9ee981ac-d0bf-4006-bfab-2ef8a5ff8dd7.json)
 
 ### Fix the purpose before accommodating the outcome
 
@@ -769,7 +769,7 @@ his experienced agency seriously. His performance also shows that access to an
 item depends on what he is asked to do with it. This tests the earlier R/T/X
 comparison against one human case. The question for #1792 is whether the best
 account of these two findings identifies a distinct thinker on which this
-very experiencer depends for existence.
+very experiencer depends for existence. [Assessment record](../../corpus/attempts/2f24e4c3-e987-4e4d-8752-1ae3522b2c3d.json)
 
 ### What changed with the task
 

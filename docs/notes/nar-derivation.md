@@ -155,8 +155,8 @@ join `G` to giving (rigor contract 5; #1626).
 | N3 | `d6588ea7` | `rootWithholdingFromWill` | EM `ee4ab504`, `0c27f65a`, #1941's willed giving `5c1aba17`, one power `06145e71`, (b1), WN `0266eac2`, SS `85f3fea2` → (a) | none |
 | N4 | `0cf250b9` | `narDerivationControls` | premise-free laws and models | Mathlib three |
 
-Controls statement: `b8ee1a50`. Attempts: `245028b2` (derivations) and
-`e2ea61bc` (the uniformity limit and models).
+Controls statement: `b8ee1a50`. Attempts: [`245028b2`](../../corpus/attempts/245028b2-219a-4e25-adb1-82951c667b6d.json) (derivations) and
+[`e2ea61bc`](../../corpus/attempts/e2ea61bc-bfc9-41eb-aef4-461b9bf5aa82.json) (the uniformity limit and models).
 
 **Premise choice in N1 and N2.** The weakest common-root premise is
 `a6b46d2e` (`ActualCommonRootAt`). The Solution proves N1 from it
@@ -539,7 +539,7 @@ of length zero covers the source itself. Longer paths keep all contributors
 actual and concrete. No bound on their lengths or on other branches is needed.
 [Forward proof](../../corpus/results/0dcb0397-8a2a-4f8f-8550-4bbac1192c2b.json),
 [access projection](../../corpus/results/a53edd5b-49de-4251-855a-31aea94e58e1.json)
-and [uniqueness projection](../../corpus/results/273fb2d3-d2e8-404e-adad-f6ae2c821169.json)
+and [uniqueness projection](../../corpus/results/273fb2d3-d2e8-404e-adad-f6ae2c821169.json) [Assessment record](../../corpus/attempts/e0253e6b-0086-4081-a79e-a4de8f7b1ab2.json)
 
 The graph used here is `ConcreteExistentialSupply.graph m w`. Its contributors
 and recipients exist at w and are concrete, and an edge is `m.grounds w`.

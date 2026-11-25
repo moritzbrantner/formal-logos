@@ -245,7 +245,7 @@ transport meaning; a merely named coordinate correspondence is insufficient.
 No new opaque metaphysical primitive, content fork or strength fork is introduced.
 Physical interpretation obligations remain explicit prose because no physical
 account has been supplied to type, rather than because constraints have completed
-its definition. Existing dossiers and attempt 752c6644 retain the previous scope.
+its definition. Existing dossiers and attempt [752c6644](../../corpus/attempts/752c6644-d537-4efc-9e45-cbb08372be38.json) retain the previous scope.
 
 Disposition: Finding A's algebra, threshold and neutral screening are elaborated;
 its fixtures are preserved and the five-to-one screening fixture added. Its
@@ -295,7 +295,7 @@ Communication of goodness supplies a reason to create, but gives no ordering of
 this decade against adjacent observer-bearing alternatives. A narrower published
 purpose, maximizing the fraction of baryons becoming life, does give a testable
 ordering criterion. Its astrophysical inputs reach stars; its life yield is still
-undetermined. These are comparisons of the same density after observerhood.
+undetermined. These are comparisons of the same density after observerhood. [Assessment record](../../corpus/attempts/04f0d276-6dce-408e-a258-81b1d0b28944.json)
 
 ### One residual and its physical prediction
 

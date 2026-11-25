@@ -1,7 +1,7 @@
 # Carneades induction intake: predicate basis (2026-10-28)
 
 Scope: a bounded science/induction investigation, separate from higher-order
-justification and from the Catholicism root routes. No root premise change.
+justification and from the Catholicism root routes. No root premise change. [Research record](../../corpus/attempts/carneades-induction-predicate-basis.json)
 
 ## Consulted witness and attribution limits
 

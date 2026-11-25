@@ -124,5 +124,5 @@ root-reaching leaves and all eight route costs are retained. The six source
 readings remain open propositions, and no new root edge is added. The concrete
 advance is an explicit positive alternative to bare stopping and an isolated
 entitlement/priority dispute. `ARISTOTELIAN-IMMEDIATE-ENTITLEMENT` records the
-next access question; `ATTEMPT-ARISTOTELIAN-FIRST-PRINCIPLES-REGRESS` preserves
+next access question; [`ATTEMPT-ARISTOTELIAN-FIRST-PRINCIPLES-REGRESS`](../../corpus/attempts/aristotelian-first-principles-regress.json) preserves
 source reading, rejected identifications and exact proof boundaries.

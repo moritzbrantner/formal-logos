@@ -51,7 +51,8 @@
     "77882a3c-631f-4f49-84db-7750963fc724",
     "94271978-0448-47ad-b906-59d4a7bdbb5f",
     "PR-731",
-    "PR-1482"
+    "PR-1482",
+    "PR-1754"
   ],
   "blocker": "Next discriminating test: audit the 43 non-cycle consumers of f8ba2429 for whether they need nonuniversal scope or can consume b26c10a0. Then read q.45 a.5 and decide the c3c01e92 bridge, which fixes whether 10cd24ed is vacuous or a contentful premise whose warrant must be sought (q.115 a.4 lead). Reopen the fd2c8710/9eaa3b6e calibration only with a substantive eminent mode or intensity account on the same source.",
   "current_assessment": {

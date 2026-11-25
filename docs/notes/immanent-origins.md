@@ -1,5 +1,7 @@
 # Can self-knowledge and self-love distinguish three persons?
 
+[Research record](../../corpus/attempts/75d204e1-962f-4dbc-8a3a-868feb257e17.json)
+
 ## Proposed judgment
 
 A single living subject can understand itself truly and affirm its own good. Even a perfect act, understood as lacking error, ignorance or frustration concerning its object, leaves open **who subsists as its expression and love**. The proposal of an inner Word and a Love proceeding within one divine life offers an intelligible account of how real distinction could concern *from whom* while leaving *what each is* numerically one. Under a personal interpretation of the two origins, their opposition distinguishes a source from each term. It takes a further reason to distinguish the terms from one another, and further principles to conclude that these persons exhaust the divine persons. The three-person account has positive explanatory value conditional on these bridges. Knowledge and love alone give insufficient reason to prefer it over one personal subject of the same acts.

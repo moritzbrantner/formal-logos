@@ -21,9 +21,9 @@ The [acquired-quality and relational tests](actuality-esse-research.md#13-who-ca
 ## Source findings and fidelity
 
 Related discovery, the target dossier, the dossiers of all touched premise
-identities, and the attempts `ATTEMPT-RIVAL-SOURCING-PAPINEAU-HUME-512`,
-`ATTEMPT-FIRST-CLOSURE-HUNT-497` and
-`ATTEMPT-CLASSICAL-ATTRIBUTES-STRUCTURE-MIGRATION` were inspected. In particular,
+identities, and the attempts [`ATTEMPT-RIVAL-SOURCING-PAPINEAU-HUME-512`](../../corpus/attempts/rival-sourcing-papineau-hume-512.json),
+[`ATTEMPT-FIRST-CLOSURE-HUNT-497`](../../corpus/attempts/first-closure-hunt-497.json) and
+[`ATTEMPT-CLASSICAL-ATTRIBUTES-STRUCTURE-MIGRATION`](../../corpus/attempts/classical-attributes-structure-migration.json) were inspected. In particular,
 Papineau/Hume are silent on this precise transfer premise. The prior alternative
 note's Durandus attribution has no read witness and is not adopted here.
 
@@ -680,7 +680,7 @@ legacy not-both law or `Composite`, so the actualized-receptive-potency
 boundary above is kept. SUBSISTENT-INFINITY-RECEPTION-CONTROLS shows that each
 premise is needed. The two unattributed generalizations, and the question
 whether reception exhausts limitation, remain the open burdens
-(ATTEMPT-SUBSISTENT-INFINITY-FROM-RECEPTION-20261105).
+([ATTEMPT-SUBSISTENT-INFINITY-FROM-RECEPTION-20261105](../../corpus/attempts/subsistent-infinity-from-reception-20261105.json)).
 
 ## Recipient-relative limitation and source-scoped ascent (2026-11-17)
 
@@ -1462,7 +1462,7 @@ ascent `8176a284`. None of the four is an open GOD_4 leaf. Earlier sections stay
 unchanged under their own dates. This section restates their findings under the
 2026-11-10 provisional-judgment, 2026-11-12 cumulative-warrant and
 substantive-objection standards. It changes no theorem, Challenge, claim,
-definition, closure or formal status.
+definition, closure or formal status. [Assessment record](../../corpus/attempts/5c7bc356-a1dc-4781-8548-24ad1ce06f79.json)
 
 The source-selection detail for `11e24b50`, `cbb068e8`, `b4987085`, `6acd44eb`,
 `e2bfd1b1` and `dcf4bcdd` lives in
@@ -1528,8 +1528,8 @@ alongside any derivation. Conditionality does not erase that option.
 | `e2bfd1b1` selected identity witness | Supplied by the source-first existence route. | A witness premise. Its warrant is that of the common-source inputs outside the cluster. | Not independently assessed here. |
 | `dcf4bcdd` selection of all relevant sources | Derived from `6acd44eb`, `a576300f` and `e2bfd1b1` by a selector classified as a transcription. The selected route does not need it, because `8b8bb6df` suffices. | Not applicable. | Formal residue only; it needs no independent warrant. |
 | `86d02b69` GOD_4 causes the being of all others | q.44 a.1 co.: whatever is in any way is from God. Supporting claim `9b52e1a5` reads the q.2 a.3 naming conversely. On classical theism, creating and sustaining everything else belongs to the content of GOD_4. | Close to a conceptual component of GOD_4. The GOD_4 definition fixes content only through open premises. It is used after naming. | Strong as a commitment of classical theism. It asserts no existence. |
-| `10cd24ed` nonuniversal transfer | None on file (`3de52780`). A possible support is an instrumental bridge on which a particular cause of esse acts as an instrument of the universal cause (De potentia q.3 a.7 lead, unread). That bridge would attribute the perfections to the universal cause, not to the particular cause. | Bare. It would be vacuously true if only a universal cause causes esse (q.45 a.5 lead, unread). The q.104 a.1 sentence on heavenly bodies bears against that vacuity: they cause "a form as such" and so cause being, not only becoming. If `c3c01e92` brings that under `CausesIn … esse`, they are nonuniversal esse causes and `10cd24ed` has content (row 2). | Unsupported: no positive warrant on file, and also no substantive objection identified (row 2 below). It stays an open bare premise. |
-| Neighbour `b26c10a0` universal-scope transfer | Non-transcription derivation `dae70d8a` from three open analyst premises: `5e281daf` (a cause of every other being's being is the total cause of each such being), `2f6b9eff` (a total cause of being causes each mode of being) and `791fa216` (every perfection had in act is a mode of being, a reading of q.4 a.2). None of the three is assessed here; `791fa216` has no attempt. Participation plus concurrence is a prima facie direct option. | Conditional on `5e281daf`, `2f6b9eff` and `791fa216` (open, unassessed), plus a prima facie direct option. The q.105 a.5 concurrence warrant is God-indexed. Applying it before naming needs the open identification of the universal esse source with the subsistent first agent; otherwise it is circular (the OPEN paragraph under "Causal meaning"; the `74008d2a` blocker). That blocker, and the earlier demand for an independent defense of active application, are **retained**. | Not graded beyond that conditional standing. No change from the earlier record. |
+| `10cd24ed` nonuniversal transfer | None on file ([`3de52780`](../../corpus/attempts/3de52780-6816-4638-bdba-92598aff14cc.json)). A possible support is an instrumental bridge on which a particular cause of esse acts as an instrument of the universal cause (De potentia q.3 a.7 lead, unread). That bridge would attribute the perfections to the universal cause, not to the particular cause. | Bare. It would be vacuously true if only a universal cause causes esse (q.45 a.5 lead, unread). The q.104 a.1 sentence on heavenly bodies bears against that vacuity: they cause "a form as such" and so cause being, not only becoming. If `c3c01e92` brings that under `CausesIn … esse`, they are nonuniversal esse causes and `10cd24ed` has content (row 2). | Unsupported: no positive warrant on file, and also no substantive objection identified (row 2 below). It stays an open bare premise. |
+| Neighbour `b26c10a0` universal-scope transfer | Non-transcription derivation `dae70d8a` from three open analyst premises: `5e281daf` (a cause of every other being's being is the total cause of each such being), `2f6b9eff` (a total cause of being causes each mode of being) and `791fa216` (every perfection had in act is a mode of being, a reading of q.4 a.2). None of the three is assessed here; `791fa216` has no attempt. Participation plus concurrence is a prima facie direct option. | Conditional on `5e281daf`, `2f6b9eff` and `791fa216` (open, unassessed), plus a prima facie direct option. The q.105 a.5 concurrence warrant is God-indexed. Applying it before naming needs the open identification of the universal esse source with the subsistent first agent; otherwise it is circular (the OPEN paragraph under "Causal meaning"; the [`74008d2a`](../../corpus/attempts/causal-perfection-transfer.json) blocker). That blocker, and the earlier demand for an independent defense of active application, are **retained**. | Not graded beyond that conditional standing. No change from the earlier record. |
 | Neighbour `f8ba2429` unrestricted transfer | Derived by `a3d5fb1a` from `b26c10a0`, `10cd24ed`, `b62a64ab` and excluded middle. The q.4 a.2 and q.6 a.2 support claims concern the universal or subsistent source, which is `b26c10a0`'s scope. | Proved from open premises. A direct option exists but adds no warrant beyond its two transfer parts. | No stronger than its weakest part, `10cd24ed`. |
 | Neighbour `5a4afaa5` residual | Equivalent to `10cd24ed` given `b62a64ab` (unregistered lemma `residualIffNonuniversal`); no warrant of its own. | Not to be registered as supporting `10cd24ed` (cycle warning in `3de52780`). | Same standing as `10cd24ed`. |
 | Neighbour `8176a284` identity-source ascent | Derived by `62bd2829` from the eight reception, limitation and degree inputs of sub-bundles A and C, and from `cffad050` by restriction (`30c1203b`). Positive rationale: participation, under which an unreceived act is not contracted. | Direct primitive option retained. | Conditional on those inputs. It inherits the `fd2c8710`/`9eaa3b6e` calibration gap. |
@@ -1579,7 +1579,7 @@ Old framing replaced:
   "surviving substantive rival" as evidence of falsity. The section itself did not
   claim that; its non-entailment finding is retained;
 - "zero philosophical premise discharge" and the route-cost accounting;
-- the `f3722322` blocker's "stating claims leave route cost unchanged".
+- the [`f3722322`](../../corpus/attempts/source-hunt-scg-quarta-uniter-reception-20261105.json) blocker's "stating claims leave route cost unchanged".
 
 Stated and supported claims are positive warrant evidence. Leaf counts and route
 costs are diagnostics only. No evidence was deleted.
@@ -2230,7 +2230,7 @@ A direct impersonal model and the Plotinian supra-noetic first must not be confl
 
 ## C4: intrinsic objective exemplarity versus understanding (2026-11-23)
 
-**Question.** Does the *same necessary first source* intrinsically exercise intentional understanding because it eminently contains intellectual perfection? This is C4, not the earlier claim that an efficient cause can produce intelligent effects. The Lean-only ObjectiveEminence extension of IntentionalExemplarExtension and its result module test a stronger impersonal interpretation alongside an actual self-knower with at most one real constituent. This continues merged #1855, #1866, #1873 and #1879 without changing their registered arguments.
+**Question.** Does the *same necessary first source* intrinsically exercise intentional understanding because it eminently contains intellectual perfection? This is C4, not the earlier claim that an efficient cause can produce intelligent effects. The Lean-only ObjectiveEminence extension of IntentionalExemplarExtension and its result module test a stronger impersonal interpretation alongside an actual self-knower with at most one real constituent. This continues merged #1855, #1866, #1873 and #1879 without changing their registered arguments. [Assessment record](../../corpus/attempts/58750abd-e037-4902-b2f5-7c83e0f467a3.json)
 
 ### The distinctions C4 must preserve
 
@@ -2815,7 +2815,7 @@ print('Four selected controls pass')
 
 ## Operation origin, terminus and intrinsic completion (2026-11-24; draft continuation)
 
-**Target and scope.** Investigate `5bedb69b-8fbb-53b5-be2f-377d1331cf37`, following the PRD's R1 and R2, with the R3 purity question retained. Evidence base `016e61bd27aa0c498292b3c909f5e81f31c9b9d1`; the PRD checkpoint is `0f8dfc2b5401cf2ac59c1136d7b0e7bd9a176a6b`. Read `Round5Worklist`, its existing Solution, `SelfOperationLife`, `DeiFiliusLivingNineScope`, the operation and life definitions, the related attempt `38c1e7b1`, and [selected-effect bridge](selected-effect-bridge-462.md), [simplicity-collapse](simplicity-collapse-555.md) and `RelationalReceipt`. These already cover same-token variation and the asymmetric creation relation. Do not repeat their modal or sustaining-causality investigations. The present question concerns the kind of intrinsic act, not the necessity of any effect.
+**Target and scope.** Investigate `5bedb69b-8fbb-53b5-be2f-377d1331cf37`, following the PRD's R1 and R2, with the R3 purity question retained. Evidence base `016e61bd27aa0c498292b3c909f5e81f31c9b9d1`; the PRD checkpoint is `0f8dfc2b5401cf2ac59c1136d7b0e7bd9a176a6b`. Read `Round5Worklist`, its existing Solution, `SelfOperationLife`, `DeiFiliusLivingNineScope`, the operation and life definitions, the related attempt [`38c1e7b1`](../../corpus/attempts/38c1e7b1-7d5c-4774-87a1-b828a584f6b9.json), and [selected-effect bridge](selected-effect-bridge-462.md), [simplicity-collapse](simplicity-collapse-555.md) and `RelationalReceipt`. These already cover same-token variation and the asymmetric creation relation. Do not repeat their modal or sustaining-causality investigations. The present question concerns the kind of intrinsic act, not the necessity of any effect.
 
 ### 1. Source reading and exact dictionary
 
@@ -3040,7 +3040,7 @@ Priority is based on substantive leverage, not a leaf-count ranking of truth. Fo
 
 **Next discriminating test.** Start with `d164b1ff`. Independently characterize one positive mode and justify its classification as pure and, via `c4fb87a6`, OfBeing. Hold fixed the same actual source and OwnBeing assumptions across the comparison. If that source lacks the mode, test E (nature-based exclusion versus neutral absence) and L (real contraction versus kind-completeness), then test whether any real contraction needs a receiving principle under the same #1914 act/recipient account. A warranted non-contracting essential exclusion weakens fullness for that source. A supported chain from exclusion to real contraction and then to a receiver strengthens the same-source conditional case. Generalization to all OfBeing determinations remains open. Strict noncognitive life is secondary. If one candidate necessarily involves reception or composition, revise the purity classification of that candidate.
 
-Attempt `72a86cf4-baca-4a47-b157-7b0dd50ba12b` records this scoped provisional assessment. The initial semantic challenge requested changes to `35c03763084282b3b33bacf6b4ab274957180cbc` in PR #1916. The targeted re-review accepted the repaired checkpoint at `1d63f12806ed9984ea2ea8973295b1e6b1210d59`.
+Attempt [`72a86cf4-baca-4a47-b157-7b0dd50ba12b`](../../corpus/attempts/72a86cf4-baca-4a47-b157-7b0dd50ba12b.json) records this scoped provisional assessment. The initial semantic challenge requested changes to `35c03763084282b3b33bacf6b4ab274957180cbc` in PR #1916. The targeted re-review accepted the repaired checkpoint at `1d63f12806ed9984ea2ea8973295b1e6b1210d59`.
 
 ## Can credit for every determination extend to an additional giver of esse?
 
@@ -3167,3 +3167,17 @@ Grant the earlier conclusion on its intended reading. The actual source *g* appr
 Two alternatives locate the remaining work. An intellect can contemplate its own perfection and correctly explain its effects while their production follows from its nature. This grants the cognitive episode and supplies an account of the production without making the perceived perfection an operative reason of the subject. The [existing first-intellect rival](../../corpus/statements/2537adb1-fca8-4a76-93a7-18a688cb4507.json) disputes even source-level will. Alternatively, grant actual practical direction toward a good. A knower can act for goodness under a general description without taking *its own being as such* for its end. Even if the same source exemplifies complete goodness, substitution inside an intentional description needs warrant. The discriminating question is what the source itself treats as its ultimate practical reason. Showing only that all other goods depend on the source leaves both this question and the exercise dilemma open. [Practical and theoretical cognition](moral-governance-intellect-will.md)
 
 **Provisional judgment.** The earlier assessment favoring own-good willing as an open premise has a concrete rationale in the case of an already active rational appetite directed to its known and possessed end. I would retain self-love as a positive conditional interpretation on those grounds. Self-knowledge alone gives stronger reason for the intelligibility of the object than for an actual affective response to it. The most consequential further test is whether this very source's activity is guided by its own goodness *as its apprehended end*. Evidence for that would strengthen the self-love route even before introducing any personal distinction. A further test would still be needed for “Love proceeding.” A real exercise can consist in the lover's standing affirmation of the good. The beloved as intentional object, the exercise's dependence on the good as apprehended, and a subsistent personal term with a relation of origin each make a different claim. The one-subject example realizes the first kind of affirmation. The exercise interface gives no reason for counting a further person. [Prior assessment](../../corpus/attempts/e641ca1d-d06b-461a-8270-c9030fa4fc29.json) · [Creed destination](../../corpus/statements/creed-holy-spirit-lord-giver-of-life.json)
+
+## Research attempts citing this note
+
+- [Batch certification of eight exploration maps deriving eight bare root-path premises from deeper…](../../corpus/attempts/round2-perfection-primacy.json)
+- [Cartesian causal adequacy compared with q.4 a.2 preexistence and the cause-of-perfection premises](../../corpus/attempts/59336904-26c1-4562-a276-d7c4252ffb23.json)
+- [Distinguish grounding by the selected recipient from immanent life at the ultimate source](../../corpus/attempts/05c967c9-61b1-4090-b0dd-6556f974f46e.json)
+- [Does the actual self-knowing source affirm its own possessed goodness?](../../corpus/attempts/3648a6d9-446e-4afd-a319-294a358a065b.json)
+- [Immanent primary-object route to subsistent self-understanding](../../corpus/attempts/8e3a7c52-90f4-4a72-a88d-61321ef294bc.json)
+- [Locate the generator's work in the onset of a new individual at division](../../corpus/attempts/f78f9ad3-617f-4238-9e5d-c565a718740c.json)
+- [Read issue354,related/dossier/previous unreceived-esse attempt and InfinityEternity.lean…](../../corpus/attempts/subsistent-infinity-reception-audit-20261031.json)
+- [Same-source intentional exemplar and possessed-good appetite continuation](../../corpus/attempts/7e2915e5-31f2-4a16-9f29-8d0a8166eeb3.json)
+- [Test a dependent secondary's contribution to the same giver's production of esse](../../corpus/attempts/48cb132a-25a0-40a6-9a1c-1a799713dad7.json)
+- [Test intrinsic pure perfection against merely productive fullness and limitation of esse](../../corpus/attempts/521613fc-cbc8-4a88-8cca-51c0161bda6d.json)
+- [Universal-only perfection-transfer GOD_4 consumer and matched strictness control](../../corpus/attempts/52a8b4eb-df07-400d-8708-072a55a00baa.json)

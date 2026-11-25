@@ -30,7 +30,8 @@
     "4ff8cd35-2588-4c02-bfe3-b87220c3a9f9",
     "76e07e1a-3f82-42dd-8765-6c8560bf0e0f",
     "b0622871-a048-4549-b03b-c8534f1cb992",
-    "4bba0c41-85ce-45d6-8412-a45d7806a580"
+    "4bba0c41-85ce-45d6-8412-a45d7806a580",
+    "PR-1771"
   ],
   "blocker": "Not done here: the six-member CausesIn set on generic potency needs a POTENCY_1/POTENCY_2 bridge; registering 402cf70f's world-relative sense link (it links PresentEsseSupport while its Lean type uses the Profile relation) is a record question for its owner; the case premise 8d4502a7, the meaning postulate 6ad27c23 and the selection 6c084877 stay open. Next tests: slice 2 (respect fork of SIMPLY_PRIOR_1 into priority in causing and priority in being, re-binding spines and checking whether 3e2366b5 needs a new bridge); a non-factive, in-progress CausesIn reading for 6a0b545c or distinct relations for its two routes; inclusion-minimality of the self-dependence core (not tested)."
 }

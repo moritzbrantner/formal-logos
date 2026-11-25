@@ -5,7 +5,7 @@ second ontology of Forms. Both proofs construct arbitrarily long finite lists of
 numerically distinct Forms of **one admitted quality**. They neither assume an
 infinity premise nor infer that an infinite multiplicity is philosophically
 impossible. Numerical multiplication contradicts `UniqueForms`; by itself it
-refutes neither every Platonism nor Catholicism.
+refutes neither every Platonism nor Catholicism. [Original PR #283](https://github.com/moritzbrantner/formal-logos/pull/283)
 
 ## Source evidence and interpretation
 
