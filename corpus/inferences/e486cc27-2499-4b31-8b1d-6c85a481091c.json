@@ -1,0 +1,13 @@
+{
+  "id": "e486cc27-2499-4b31-8b1d-6c85a481091c",
+  "label": "Holders of the joint-absence power HAS_INTELLECT_1, from the common GOD_4 root (inference)",
+  "input_statement_ids": [
+    "0a995309-2656-469b-81b1-3d70cbc3cab9",
+    "0c27f65a-6a6b-438a-b96c-b2bab9f21ac3"
+  ],
+  "output_statement_id": "813a9181-8cce-45a0-a3f1-ad8cd2b281c6",
+  "rule": "A root that the common root does not ground is the common root",
+  "meaning": "0c27f65a gives one actual root n of G at w that directly grounds every other actual concretum and has HAS_INTELLECT_1. A holder y is an actual root (argument 1's conclusion), so it is an actual concretum; the reach clause gives y = n or a G-ground from n to y, and a root has no actual concrete ground. So y = n and y has intellect. Constructive.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

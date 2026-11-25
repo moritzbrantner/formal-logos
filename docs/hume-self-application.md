@@ -4,7 +4,7 @@ Issue #268 adds five analytical results to the existing #248 result. It does
 not refute Hume’s actual causal reasoning, complete campaign #247, or import
 Thomistic or Catholic premises. All conception relations and accessibility
 frames in the tests are stipulated. Their philosophical adequacy remains a
-separate question.
+separate question. [Original PR #292](https://github.com/moritzbrantner/formal-logos/pull/292)
 
 ## What the verified source supports
 

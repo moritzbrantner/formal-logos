@@ -4,7 +4,7 @@ Issue #397 adds a reusable self-application schema and applies it to
 relativism about truth (Plato, *Theaetetus* 170a–172b; Aristotle,
 *Metaphysics* IV.8) and to scientism. Every result below is constructive and
 checked with `permitted_axioms: []`. No statement is marked self-evident and
-no `refutes` relation is recorded (see "Refuted or surviving" below).
+no `refutes` relation is recorded (see "Refuted or surviving" below). [Original PR #403](https://github.com/moritzbrantner/formal-logos/pull/403)
 
 ## The schema (`TruthCore.Logic.SelfApplication`)
 
@@ -161,3 +161,7 @@ case. That objection is recorded here and in the candidate, not proved.
   he says and wrote it; sincerity is a separate open premise.
 - Aristotle's all-true exemption (the contrary alone not true) is symmetric to
   the encoded all-false exemption and is not separately formalized.
+
+## Research attempts citing this note
+
+- [The self-application analysis is formalized but the modern defender/critic readings remain…](../corpus/attempts/scientism-witnesses.json)

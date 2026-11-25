@@ -1,0 +1,10 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.DependenceOrderSenses.Challenge",
+  "solution_module": "TruthCore.Results.Causality.DependenceOrderSenses.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.DependenceOrderSenses.priorInBeingGroundOfDependence",
+    "TruthCore.Results.Causality.DependenceOrderSenses.priorityBridgeControls"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}

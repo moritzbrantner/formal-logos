@@ -1,0 +1,13 @@
+{
+  "id": "278df6b7-0947-4fc5-a2b9-d28d03e4c28d",
+  "label": "Join all finite upstream paths by joining immediate forks under well-foundedness (inference)",
+  "input_statement_ids": [
+    "25697a6f-d4f8-55c4-9e12-2d6b6710c119",
+    "9cd1588d-4416-439e-ac0c-190d46e6b753"
+  ],
+  "output_statement_id": "1a575754-6316-5d66-ac5b-db8fb4cf1aef",
+  "rule": "Well-founded induction on the common starting node and decomposition of the first upstream steps",
+  "meaning": "Both initial steps have a common extension by the local premise. Induction at the two immediate suppliers extends the original paths to a single node. The companion locates an unjoinable immediate fork somewhere in any weakly connected well-founded graph with two distinct sources, using classical logic to exhibit a failing instance. A second companion specializes the full chain to actual well-founded grounds, weak connectivity, universal local joining and a supplied actual root.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

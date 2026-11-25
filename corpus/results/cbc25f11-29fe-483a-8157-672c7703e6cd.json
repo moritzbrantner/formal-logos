@@ -1,0 +1,11 @@
+{
+  "id": "cbc25f11-29fe-483a-8157-672c7703e6cd",
+  "label": "Test local joining when every stage has a source but its relay chain continues",
+  "argument_id": "3e19440b-dbb7-42f7-a490-a9281ccae094",
+  "challenge_module": "TruthCore.Results.Causality.LocalSourceConfluence.Challenge",
+  "solution_module": "TruthCore.Results.Causality.LocalSourceConfluence.Solution",
+  "theorem": "TruthCore.Results.Causality.LocalSourceConfluence.alternatingSources",
+  "comparator_config": "results/cbc25f11-29fe-483a-8157-672c7703e6cd/comparator.json",
+  "status": "solution-present",
+  "description": "Each relay stage has both an immediate source and a further relay. Sources alternate, so the further relay reaches the initial source through one more relay. Opposite sources have no common extension. This tests substituting a short route to some source for well-foundedness in the local-fork argument."
+}

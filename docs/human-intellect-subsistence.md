@@ -4,7 +4,7 @@ The result `AQUINAS-ST-I-Q75-A2-INTELLECT-SUBSISTENCE` is a
 **transcription (instantiation)** of the remaining conditional inference.
 It composes the exact existing `intellectIsNotBody` and
 `intellectUsesNoBodilyOrgan` theorems. It does not establish the two further
-source principles, close a root obligation, or complete issue #419.
+source principles, close a root obligation, or complete issue #419. [Original PR #427](https://github.com/moritzbrantner/formal-logos/pull/427)
 
 ## Verified reading
 

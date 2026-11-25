@@ -1,0 +1,19 @@
+[batch]
+vocab = "TruthCore.Causality.ProductiveDeletion"
+results = "TruthCore.Results.Causality.ProductiveDeletion"
+
+[[statement]]
+id = "Covered realizations lose supply under deletion of exercised groups using inputs of the named giver"
+lean = "CoveredLosses"
+paraphrase = "The exercise record is coherent. For each covered source and token pair, all selected inputs for that pair belong to that source. The same token has original inductive supply and lacks supply after removing exercised groups with a selected contributor, keeping the intrinsic basis and surviving records fixed. The classification of operative contributors, the intrinsic basis and the fidelity of the exercise record require independent warrant. Bearer-esse survival is a separate application test."
+definitions = ["c9d479bb-308a-5a2b-9755-ddc0170d4e35", "7b20df90-a3d9-41c7-be8b-1d2beb5b995a", "ff8bf1d7-0bf9-5dda-8038-7127e3d46ec8"]
+
+[[argument]]
+id = "Trace covered productive ancestry from source-specific loss of inductive supply"
+theorem = "ancestryFromLosses"
+premises = ["Covered realizations lose supply under deletion of exercised groups using inputs of the named giver"]
+conclusion = "f481eab0-155e-44e2-94ab-3513a9293b01"
+rule = "Transport an original supply derivation in the absence of a selected contributor path"
+meaning = "Induction on supply preserves every derivation with no positive selected path to its endpoint. A lost token therefore has such a path through groups with originally supplied contributors. Coherence on the exercised groups gives the actual occurrences needed for each Step, and ownership identifies the initial bearer. The existing covered-history transfer argument can consume this ancestry with its separate target coverage and causal-credit premises."
+comparator_theorems = ["pathOfLoss", "selfInputSurvives", "pressLoss"]
+axioms = ["propext", "Classical.choice", "Quot.sound"]

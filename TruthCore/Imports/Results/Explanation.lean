@@ -60,6 +60,7 @@ public import TruthCore.Results.Explanation.PSRStrength.Solution
 public import TruthCore.Results.Explanation.PairedInterventions.Solution
 public import TruthCore.Results.Explanation.PathRelocation.Solution
 public import TruthCore.Results.Explanation.PopulationEntry.Solution
+public import TruthCore.Results.Explanation.RepresentedOccurrence.Solution
 public import TruthCore.Results.Explanation.SelectionCoverageBoundary.Controls.Solution
 public import TruthCore.Results.Explanation.SelectionCoverageBoundary.Coverage.Solution
 public import TruthCore.Results.Explanation.SelectionCoverageBoundary.FalseFactivityFailure.Solution

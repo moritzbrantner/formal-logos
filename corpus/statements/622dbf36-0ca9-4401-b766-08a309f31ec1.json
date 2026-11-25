@@ -1,0 +1,16 @@
+{
+  "id": "622dbf36-0ca9-4401-b766-08a309f31ec1",
+  "label": "A present efficient cause of another's being is an actual CAUSE_2 of its being",
+  "paraphrase": "OPEN analyst bridge, attribution deferred, the cross-vocabulary step without the per se link: if c is other than x and here and now c efficiently causes the being of x (EfficientlyCausesIn c x esse, DEF-EFFICIENT-CAUSING), then c is an actual cause of the being of x in the q.3 a.4 profile (ActualEsseCause, DEF 8163859b): both are in act as to being and CausesIn c x esse (CAUSE_2). Positive warrant: efficient causing is one mode of the mode-unspecified CausesIn; a present agent acts only as in act ('nihil agit nisi inquantum est actu'); an effect whose being is caused here and now has being. It relates the secunda via's here-and-now efficient causing to the q.3 a.4 cause of being, two distinct primitives; it is not the converse bridge (EsseCauseEfficiency.DistinctActualEsseCauseIsEfficient), which goes from a mode-unspecified to an efficient cause. No substantive objection identified.",
+  "lean_declaration": "TruthCore.Causality.DependenceOrderSenses.PresentEfficientEsseCauseIsActualEsseCause",
+  "definition_ids": [
+    "8163859b-95b3-4dd2-8a69-541bd332f32f",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "69c0b23e-54c7-57a1-871f-839c6e5514c6",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"
+  ],
+  "disambiguation_ids": [
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "57f80020-fa6f-5b69-be58-b4cf95b7226f"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "b3ddb7c4-683a-4127-8221-b30be7858f92",
+  "label": "Thin epistemic reasons from warranted acceptance and surviving evidential support",
+  "argument_id": "2c352e1f-bb7d-4db6-8a44-19f1be6c1e7d",
+  "challenge_module": "TruthCore.Results.Logic.EpistemicReasonBearer.Challenge",
+  "solution_module": "TruthCore.Results.Logic.EpistemicReasonBearer.Solution",
+  "theorem": "TruthCore.Results.Logic.EpistemicReasonBearer.reasonsFromWarrant",
+  "comparator_config": "results/b3ddb7c4-683a-4127-8221-b30be7858f92/comparator.json",
+  "status": "solution-present",
+  "description": "The two necessity and attribution assumptions recover a thin reason for the same subject and content as a warranted acceptance. If a specified basis was undercut for that subject, the surviving basis is distinct. Result 1db47fd9 supplies the acceptance conditionally but its eligible-uptake input already includes a reason. That producer adds no independent grounds for thin F6. Independently assessing an actual warranted acceptance is a separate application option."
+}

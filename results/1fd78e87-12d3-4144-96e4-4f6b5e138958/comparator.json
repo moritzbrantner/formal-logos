@@ -1,0 +1,9 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.StrictEsseScale.Challenge",
+  "solution_module": "TruthCore.Results.Causality.StrictEsseScale.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.StrictEsseScale.identityAscentFromCapacity"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}

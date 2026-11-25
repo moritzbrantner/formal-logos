@@ -1,0 +1,11 @@
+{
+  "id": "41877473-3868-4cb5-bc90-b44d9ac811a7",
+  "label": "Derive nonmutual dependence from the exclusion of finite distinct-step cycles",
+  "argument_id": "72bea8d7-1554-42ad-93aa-b9df42b7ba97",
+  "challenge_module": "TruthCore.Results.Causality.StrictGroundRepresentation.Challenge",
+  "solution_module": "TruthCore.Results.Causality.StrictGroundRepresentation.Solution",
+  "theorem": "TruthCore.Results.Causality.StrictGroundRepresentation.nonmutualOfAcyclic",
+  "comparator_config": "results/41877473-3868-4cb5-bc90-b44d9ac811a7/comparator.json",
+  "status": "solution-present",
+  "description": "Apply acyclicity to the two-step path. This conditional support for P2 uses D itself and requires neither PLG atoms nor a restriction on the diagonal."
+}

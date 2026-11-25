@@ -225,7 +225,7 @@ For the actual-root version, retain one world w:
 
 The no-potency step is already embodied in the classical-root composition
 `ef2c087e-9c68-4cf2-a2f9-27d8b4b74e4f` and its prior attempt
-`383d23ad-bec6-442c-9fec-0112df1e1c97`: the selected root's simplicity is
+[`383d23ad-bec6-442c-9fec-0112df1e1c97`](../../corpus/attempts/383d23ad-bec6-442c-9fec-0112df1e1c97.json): the selected root's simplicity is
 derived from the uniting-cause and esse-ground inputs, then
 `pureActOfSimpleExistent` contradicts any passive potency with that
 simplicity. This is a reuse finding, not a newly discovered proof route.
@@ -389,7 +389,7 @@ no-motion projections are offered for independent semantic challenge,
 not reported as newly certified. Existing result records are reused
 evidence; local Lean verification was unavailable in this continuation.
 The original four-bundle weakening remains open in
-`ATTEMPT-PRIMA-VIA-FULL-BUNDLE-WEAKENING-OPEN-1021`, now also recording the
+[`ATTEMPT-PRIMA-VIA-FULL-BUNDLE-WEAKENING-OPEN-1021`](../../corpus/attempts/ATTEMPT-PRIMA-VIA-FULL-BUNDLE-WEAKENING-OPEN-1021.json), now also recording the
 positive global route and the exact local-witness boundary.
 
 **Integration review (2026-11-17):** fresh independent semantic challenge of
@@ -404,7 +404,7 @@ for verification, source scope and unchanged formal status.
 `ed7c588a` to GOD_4 exists (`8626f8a5`) through the cheapest verified support
 of each open premise reaches 24 open leaves in the motion and causal-chain
 core of the prima via and in its God-naming bridge. This section assesses
-those 24 under the current standards (attempt `a82b06b6`). It sits in this
+those 24 under the current standards (attempt [`a82b06b6`](../../corpus/attempts/a82b06b6-f603-4084-a110-35765662fee9.json)). It sits in this
 note because the note already holds the First-Way strength audit and the
 2026-11-17 assessment of the relevance bridge `b3573a61`, and that bridge is
 the cluster's central contested commitment. The 2026-11-13 judgment of
@@ -418,10 +418,10 @@ below only as shared dependencies and are not assessed here.
 Baseline: main `df4909cb025d2e53fee6071a32defe9cf2721284`. Read: `currentness`
 at the GOD_4 root, the dossier of all 24 leaves, `context ed7c588a`, the 19
 consuming argument and result records, the Lean declarations of every leaf
-and of the closed nodes they support, and the legacy attempts `ab0f7e3a`,
-`f2f06fbe`, `f4bee7d7`, `3efb2e4b`, `c132609d`, `d1d58e1e`, `0b9ad38b`,
-`df5581ce`, `1032961a`, `0626cd3a`, `0b9378da`, `09f03f51`, `1d0d9d70`,
-`096c30cc`, `76b347ef`, `30c343f7`, `4746eaa2`, `a330f2e5` and `75c35dd5`. No
+and of the closed nodes they support, and the legacy attempts [`ab0f7e3a`](../../corpus/attempts/night-cosmogony-bundle-elimination.json),
+[`f2f06fbe`](../../corpus/attempts/met-ix-8-actual-mover-priority.json), [`f4bee7d7`](../../corpus/attempts/q4-a1-q5-a1-act-priority-reading.json), [`3efb2e4b`](../../corpus/attempts/act-prior-from-motion.json), [`c132609d`](../../corpus/attempts/act-prior-from-incorruptible.json), [`d1d58e1e`](../../corpus/attempts/rival-refutations-round2.json), [`0b9ad38b`](../../corpus/attempts/motion-maps-batch1-20261107.json),
+[`df5581ce`](../../corpus/attempts/causal-maps-batch1.json), `1032961a`, [`0626cd3a`](../../corpus/attempts/0626cd3a-7323-4820-aa75-bb4ca31e72f5.json), [`0b9378da`](../../corpus/attempts/0b9378da-6497-47f7-ab06-4b37382dd89b.json), [`09f03f51`](../../corpus/attempts/round4-source-support-unsupported.json), [`1d0d9d70`](../../corpus/attempts/round5-worklist-rejected-edges.json),
+[`096c30cc`](../../corpus/attempts/source-hunt-skeleton-bare-premises-20261105.json), [`76b347ef`](../../corpus/attempts/unity-first-being-consumer-audit-20261031.json), [`30c343f7`](../../corpus/attempts/ATTEMPT-WF-P1-REFERENCE-PARALLEL-1010.json), [`4746eaa2`](../../corpus/attempts/consecutive-mover-respects.json), [`a330f2e5`](../../corpus/attempts/respect-alternating-motion-cycle.json) and [`75c35dd5`](../../corpus/attempts/finite-model-registration.json). No
 new source was read; no claim, statement, argument, theorem or status changes.
 
 ### Where the leaves sit
@@ -506,7 +506,7 @@ The Lean column gives each statement's `lean_declaration` body.
 | `68172f57` | `∀ cause effect, IsCause cause effect → Material cause effect ∨ Formal cause effect ∨ SourceOfChange cause effect ∨ Final cause effect` | Defended primitive (sourced classification); dispensable | Stated by `58f68015` (Phys. II.3) and `178ded00` (II.7). Moderate. Its consumer is removable by bypass B1. |
 | `b3853b1b` | `∀ x, {y \| Material y x}.Finite ∧ … ∧ {y \| Final y x}.Finite` | Open: unsettled scope; dispensable | The falsifiers named in the paraphrase (infinitely many material parts or concurring agents) are hypothetical; no established actual case is on file, so they carry no evidential weight. No positive warrant on file either. Bypass B1 removes it. |
 | `57552dce` | `∀ y x, cause y x → ∃ r, EfficientlyCausesIn y x r` | Defended primitive (selection stipulation) | It selects the relation whose history is studied, and one may legitimately select it so. Its work in `113c01ef` and `e229bb2c` then rests on lane B's `e078f07b` and `d85de8e1` (shared). A studied relation containing reciprocal efficient edges contains a two-step loop. |
-| `1ad18c70` | `∀ c x r, f.Attributed c x r ↔ Current f c x r` (efficient activity at `f.now`) | Open: unselected calibration | Its only consumer, `fcb4b871`, is a calibration transcription to `27d15954`, which `dd24400b` found conditional, ungraded and dispensable. DISAMB-UNITING-CAUSE records that no source claim selects either calibration and that a checked route reaches the distinct-uniter conclusion with all-time no-self instead. It belongs to the modal-spine uniting-cause family, not the motion core. |
+| `1ad18c70` | `∀ c x r, f.Attributed c x r ↔ Current f c x r` (efficient activity at `f.now`) | Open: unselected calibration | Its only consumer, `fcb4b871`, is a calibration transcription to `27d15954`, which [`dd24400b`](../../corpus/attempts/dd24400b-cc87-4095-b4c4-df857e1edff5.json) found conditional, ungraded and dispensable. DISAMB-UNITING-CAUSE records that no source claim selects either calibration and that a checked route reaches the distinct-uniter conclusion with all-time no-self instead. It belongs to the modal-spine uniting-cause family, not the motion core. |
 | `a594d8c4` | `∀ f, IsFirstUnmovedMover f → PureAct f → (∀ g, IsFirstUnmovedMover g → g = f) → IsGod f` | Open: missing bridge (direct option retained, moderate) | Supporting claim `bf22a4a1` (q.2 a.3, *et hoc omnes intelligunt Deum*) is nominal. Positive warrant: the antecedent combines an outgoing moving, no being-moved in any respect, no potency in any respect (`PureAct`, after q.3 a.2 *purus actus*) and uniqueness; pure actuality is a defining classical-theist attribute. GOD_4's content is fixed only by the open premises that use `IsGod` (DEF `88f9f6e8`), including the classical-attributes premises. The identification therefore undertakes those attributes, intellect and will among them. Missing bridge: either same-bearer attribute derivations or a defended reference-fixing account, as in the parallel 2026-11-17 judgment on `1ec205ed` in [naming-first-mover-migration.md](naming-first-mover-migration.md#substantive-god_4-identification-on-the-existence-only-route-2026-11-17). Its antecedent needs the absolute first mover, so on this route it also depends on C* through `c1b68c21`. |
 
 ### One contested commitment, three presentations
@@ -775,3 +775,7 @@ this section supersedes four legacy wordings and no substantive judgment
 
 The 2026-11-13 potency/privation judgment, the 2026-11-17 assessment above
 and its integration record are retained unchanged. No revision is declared.
+
+## Research attempts citing this note
+
+- [Audit of the exact20 undeclared non-mandate consumers at5fcedc52:11 demonstrated redundancies,5…](../../corpus/attempts/ATTEMPT-PRIMA-VIA-STRENGTH-CONSUMERS-1021.json)

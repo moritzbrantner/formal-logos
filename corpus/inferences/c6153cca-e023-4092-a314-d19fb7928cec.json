@@ -1,0 +1,10 @@
+{
+  "id": "c6153cca-e023-4092-a314-d19fb7928cec",
+  "label": "Successor model for the strict-ground map at the efficient-cause consumer (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "2b1c8fbe-1c5c-4039-accd-bf69f097f4da",
+  "rule": "Extend the Fine successor sequents by strict transitivity, apply the P2 bridge and its actual consumer, and test firstness on the same series",
+  "meaning": "A joint model of the strict-ground package and the full cause-independence inference. Each efficient cause is independent of the effect it causes, while itself caused by its successor. The P2 package can therefore coexist with the failure of the separate per se regress premise, even for transitive dependence. No interpretation of arithmetic edges as actual suppliers of existence follows.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

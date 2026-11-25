@@ -63,7 +63,12 @@
     "cbc30caf-c329-4f25-b5e2-eedbb1befe28",
     "4f173774-99ca-4bc5-b02a-de7adc5a956f",
     "8de536c8-8d38-4787-acc6-fa01a94c72fc",
-    "b16198d5-565c-57f3-91a6-208dc8c46b02"
+    "b16198d5-565c-57f3-91a6-208dc8c46b02",
+    "PR-1412",
+    "PR-1414",
+    "PR-1421",
+    "PR-1425",
+    "PR-1437"
   ],
   "current_assessment": {
     "date": "2026-11-24",

@@ -1,0 +1,38 @@
+{
+  "id": "7dd54a71-a6d6-40ef-9af9-a710917c4066",
+  "label": "Optimizing-giving laws and a tied-optimum model, checked",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "4af88d02-602b-45d0-8144-82f01a7984e3",
+  "inference_ids": [
+    "77178f5a-fab3-469d-ac3c-15d003a4a427"
+  ],
+  "meaning": "Premise-free: five laws (stability under the giving-output adapter is fixity; a unique optimum makes a root fixed toward every effect and two-way toward none, so it cannot be a mixed-mode root; with SS a unique-optimum root exercising a rational power toward another given being makes WN fail; a unique-optimum root gives being to at most one being at w; with (b1) and reach it leaves at most one actual concretum besides itself) and two models (the tied optimum; the mediated optimum, where the rival holds without direct reach). Model-witnessed separations only; no premise is established and no reality claim is made.",
+  "definition_ids": [
+    "02aa24f8-e6cc-4d47-8b34-d3b7149e7ee8",
+    "1ef0f844-1a0d-4ce8-8f54-87c29e96ef76",
+    "582f44c3-7778-4806-b385-e1eff852ac5e",
+    "62dfa893-b633-4513-9790-8f9a0a3087e0",
+    "8c945061-acb2-47e1-9865-d10f8f925757",
+    "90719cb5-43c2-4677-8ad7-20e077e28ac9",
+    "1620ba7e-edb9-56c4-bd02-3ece55903b1c",
+    "c57e2682-08e6-527e-950f-0fa0a7ff11ef",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "4f503422-a3dc-51f3-8e1d-a1065ef6038e",
+    "2d069414-67f7-5bba-b750-830f06caf84d",
+    "c033d373-f381-504b-9674-c13fc9a96034",
+    "a1b2e330-388f-4120-bc5c-969642317792",
+    "b8061228-9131-40f2-83bd-cb7d719bd0a0"
+  ],
+  "disambiguation_ids": [
+    "5836e1f6-ccce-4ce8-b9d6-c89afc7120bb",
+    "623ddbf6-9683-5361-bae4-e348a00ec680",
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f",
+    "83264cf5-01fe-52fc-9a00-eeb024f6496e",
+    "2f096ab2-0d7d-5252-a361-4e601c64aeae",
+    "303c2298-fd1b-55f3-9754-398816a78514"
+  ],
+  "sense_mixing_control": true
+}

@@ -1,0 +1,23 @@
+[batch]
+vocab = "TruthCore.Causality.Round3CogitoBase"
+results = "TruthCore.Results.Causality.PotencyPrivation"
+disambiguations = ["508617ab-cf24-5f3b-a387-64b3991359ec"]
+
+[[argument]]
+id = "POTENCY_1 under privation from unactualized capacity and capable-subject lack"
+theorem = "capacityUnderPrivation"
+premises = ["c85e8ef5-3dc4-502d-90f8-da1429e33fd8", "7c3da33e-7ead-54f8-aace-ed3cf3a7bb02"]
+conclusion = "3c0b7bb3-1526-55a9-b71e-0d5fb3148782"
+rule = "Substitute equivalent privation and lack of act under the retained capacity hypothesis"
+meaning = "For the supplied potency predicate, the analysis F gives capacity and lack of act in the same respect. On precisely those capable subjects, Q exchanges lack of act for privation in either direction. This derives T. At the adopted function F is definitional. For an independently supplied predicate F is an explicit input."
+sense_bridges = [{term = "POTENCY_CAPACITY_AND_POWER_ACROSS_ADOPTED", from = "POTENCY_CAPACITY_AND_POWER_ACROSS_ADOPTED_1", to = "POTENCY_CAPACITY_AND_POWER_ACROSS_ADOPTED_3", statement_id = "c85e8ef5-3dc4-502d-90f8-da1429e33fd8", role = "premise"}]
+comparator_theorems = ["adoptedEquivalence"]
+
+[[argument]]
+id = "Privation on capable subjects from the two POTENCY_1 analyses"
+theorem = "lackInCapable"
+premises = ["c85e8ef5-3dc4-502d-90f8-da1429e33fd8", "3c0b7bb3-1526-55a9-b71e-0d5fb3148782"]
+conclusion = "7c3da33e-7ead-54f8-aace-ed3cf3a7bb02"
+rule = "Under the capacity hypothesis pass in each direction through the same potency instance"
+meaning = "At any capable subject and respect, T turns privation into potency and F turns potency into lack of act. Conversely, F turns capacity and lack of act into potency and T recovers privation. No constraint on incapable subjects follows. The calculation requires independent entry into the premises when offered as support."
+sense_bridges = [{term = "POTENCY_CAPACITY_AND_POWER_ACROSS_ADOPTED", from = "POTENCY_CAPACITY_AND_POWER_ACROSS_ADOPTED_1", to = "POTENCY_CAPACITY_AND_POWER_ACROSS_ADOPTED_3", statement_id = "c85e8ef5-3dc4-502d-90f8-da1429e33fd8", role = "premise"}]

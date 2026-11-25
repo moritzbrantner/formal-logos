@@ -29,6 +29,16 @@ flowchart TD
 
 Keep the readable case, judgments and rivals in the existing issue or linked case note; keep proofs, sources, countermodels and substantive attempts in their canonical records/dossiers. The current handoff links them. This policy adds no tracker, schema, truth-status field or numerical confidence score. Attempt outcomes describe work, not truth; their `evidence` field retains its existing result/claim/PR reference rules ([attempt format](premise-dossiers.md)).
 
+### When several arguments stop at the same premise
+
+When distinct arguments have been decomposed and still depend on the same open premise, make its **negation** the next research question. Name the arguments and the exact premise each uses. Retrieve earlier work on both sides, including the strongest surviving objection and its recorded reopening condition. If the routes use different senses or witnesses, investigate the bridge between them first.
+
+Write the denial with its original scope. For example, a single exception would defeat the claim that the giver of a recipient’s existence contributes productively to each of its operations. A rival can grant the gift of existence and claim that a secondary cause supplies one operation without that further contribution. The issue is whether the giver also contributes to that very operation. Evidence that the secondary cause is active fits both accounts.
+
+Apply the razors that can distinguish the accounts. Does performing the denial make its content false? Does its evidential rule undercut the proponent’s own basis for believing it? Does the view leave an internal reason to adopt it? Can the proponent retain the prerequisites of inquiry and their other stated commitments? For an alleged exception, apply the [same standard to both cases](principle-parity-challenges.md#test-for-a-genuine-parity-challenge). For an explanatory cost, identify a fact one side explains better and the evidence that favors that explanation. Give each side the same opportunity to defend a primitive.
+
+In the existing attempt, record which test discriminated, the assumptions doing the work, and what would reverse the judgment. Carry the finding back to every route that uses that premise, counting shared evidence once. If both sides pass, retain that result and pursue the next materially different test.
+
 ## Provisional judgments and premise warrant
 
 The master must state the current **overall epistemic assessment**, not merely list conditional results: for example, an interpretation is currently favored, a claim is provisionally supported, or the evidence remains underdetermined. Assess cumulative support across routes while exposing their shared dependencies. Do not manufacture a preference when the evidence does not discriminate. If a turn adds no relevant evidence, retain the prior assessment and say that it is unchanged.
@@ -247,9 +257,14 @@ one genuinely separate scoped successor. The existing root epic #143 remains
 the active handoff. The normal completed-issue rule above still applies to
 work that was actually delivered.
 
-**Dispatch and reconciliation.** The coordinator selects one live uncertainty
-and its file/graph ownership from the issue for a worker brief, allowing the
-worker to follow substantive dependencies without a fixed work cap. On
+**Dispatch and reconciliation.** Before assigning an issue, compare its requested
+outcome with the owning record on current `main` and any open PR delivering
+that outcome. If it is on `main`, link the evidence and close the completed
+issue. If a PR already delivers it, carry the issue through review and merge
+with that PR. An older worker handoff can be superseded by its own repairs.
+For unfinished work, give the worker the first undelivered acceptance item,
+its existing evidence and its file/graph ownership. A reopening condition
+in a reviewed result can remain in the owning record after the issue closes. On
 completion, reconcile the accepted findings against current `main`, update
 the existing issue's visible current status and links, and leave historical
 details in comments or canonical records. Do not treat issue closure, a PR,

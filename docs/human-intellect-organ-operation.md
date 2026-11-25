@@ -5,7 +5,7 @@ The second q.75 a.2 inference is distinct from the first result in
 `AQUINAS-ST-I-Q75-A2-INTELLECT-NONORGANIC` conditionally excludes a bodily
 instrument of intellectual exercise. It reuses `HumanIntellect.Model`,
 `UniversalBodilyCognition` and `BodilyDeterminacy`, without redefining the
-existing relations or restating the old conclusion as a premise.
+existing relations or restating the old conclusion as a premise. [Original PR #422](https://github.com/moritzbrantner/formal-logos/pull/422)
 
 ## Verified reading
 

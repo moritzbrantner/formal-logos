@@ -1,0 +1,11 @@
+{
+  "id": "8269797e-4c7b-4c33-8ed6-b1e5262885cc",
+  "label": "One actual concrete root at this world has a finite grounding path to every actual concretum",
+  "paraphrase": "On the selected profile and world there is an actual concrete root, every actual concrete root equals it, and every actual concretum has a finite path of actual concrete grounds from it. ConcreteExistentialSupply.graph uses m.grounds at the selected world for edges and actual concrete beings for both endpoints.",
+  "lean_declaration": "TruthCore.Causality.ActualAncestralSource.CommonActualGroundingAncestry",
+  "definition_ids": [
+    "a1b2e330-388f-4120-bc5c-969642317792",
+    "ea94e8dd-6f08-4099-9032-d302dd799a4e",
+    "822c9912-2313-584b-b2b7-77031da20107"
+  ]
+}

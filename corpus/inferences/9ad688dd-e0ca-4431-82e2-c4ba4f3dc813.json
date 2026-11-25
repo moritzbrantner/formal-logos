@@ -1,0 +1,13 @@
+{
+  "id": "9ad688dd-e0ca-4431-82e2-c4ba4f3dc813",
+  "label": "Identify an actual root from existence and source agreement on its grounding graph (inference)",
+  "input_statement_ids": [
+    "dc397705-d727-419e-92f9-65d44e1ff15d",
+    "861e20d6-7d65-5856-85cf-0cd0d0c167f3"
+  ],
+  "output_statement_id": "7ab0ddcb-cf48-5457-bee7-b6ea9c13b6b1",
+  "rule": "Lift the supplied actual roots into the actual-concrete subtype and project their equality",
+  "meaning": "Instantiate the structural source-agreement premise on exactly ConcreteExistentialSupply.graph m w. The supplied actual root and any competing actual root of this profile are both sources of that graph, so their underlying bearers coincide. The same witness can be furnished by any route to actual root existence at this world.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

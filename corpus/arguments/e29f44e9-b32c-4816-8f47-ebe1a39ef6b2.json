@@ -1,0 +1,28 @@
+{
+  "id": "e29f44e9-b32c-4816-8f47-ebe1a39ef6b2",
+  "label": "An actual reason bearer supplies CONCRETE_6 population under the selected esse contract",
+  "premise_statement_ids": [
+    "f56b2ee7-c69e-5e3b-85b0-e671d907ba58",
+    "ada25623-e1a6-4ec8-9fba-3368dddcd0a0",
+    "0436de86-6579-53f2-9ff5-2111ba44ebae"
+  ],
+  "conclusion_statement_id": "56f68b40-9737-59a0-8cac-5610980a1547",
+  "inference_ids": [
+    "4419a0ac-8210-446b-88a3-9e3169c43a3a"
+  ],
+  "meaning": "On the supplied subject representation, F6 supplies a bearer; the presence premise locates that very representative at the selected world, and 0436de86 gives its act in esse there. This instantiates the existing population input with concreteness as HasEsseInRe. No performance, full belief, causal inference or later divine identification follows from reasons alone.",
+  "definition_ids": [
+    "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168",
+    "008cb21a-256c-5a90-822c-acd4591d699a",
+    "dcbd9590-2c87-5550-a69c-b4af6e272fa4",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "fc6f0e12-470f-5717-8c5b-ece7a450fe59",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ],
+  "disambiguation_ids": [
+    "623ddbf6-9683-5361-bae4-e348a00ec680",
+    "6f1d1395-7c1d-5bd5-a45d-03380857aed6",
+    "dba7b1de-f3a0-57af-9af9-b2a4da3136fa"
+  ]
+}

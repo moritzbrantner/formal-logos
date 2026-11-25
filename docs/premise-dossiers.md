@@ -63,10 +63,23 @@ the original merged evidence and preserve its limitations.
   during `truth check`. PR references are syntax-checked and link to this
   repository; checking their remote existence is outside the offline validator.
   Neither a PR reference nor an attempt outcome is proof verification evidence.
+  When the delivery number is known, add it to the attempt that records the
+  finding. Keep earlier deliveries when a later PR extends the same attempt.
+  Link the attempt's JSON file from the note section reporting its findings and
+  use that section's anchor in the current assessment when one is recorded.
 
 IDs are stable. Correct an inaccurate attempt record in place; preserve earlier
 failed approaches as separate attempts when the approach genuinely differs.
 A later successful proof does not rewrite the earlier failure into success.
+
+To reconcile new work after a checkpoint, run
+`python3 scripts/attempt_deliveries.py --since <last-inspected-commit> --head origin/main`.
+It compares first-parent changes to findings and assessments with the PR references
+in the current checkout. Each lead gives the historical revision and record path.
+For an ordinary GitHub merge it also gives the PR number. For squash merges and
+other commit subjects, consult the host for the delivery. A retrospective record
+may already credit the earlier research. Read the change before adding a reference.
+The command reads local Git history and writes nothing.
 
 ## Explicit links, not semantic guesses
 

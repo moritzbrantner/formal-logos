@@ -1,0 +1,16 @@
+{
+  "id": "90d02428-e3be-4939-80f4-e45162fa5af8",
+  "label": "Restrict the exhaustive personal roster to its three origin candidates",
+  "premise_statement_ids": [
+    "82e0eaf5-affd-4e66-9bb5-4780de8ca999"
+  ],
+  "conclusion_statement_id": "025ee7e2-3841-439c-baf5-359d0a6e615b",
+  "inference_ids": [
+    "117a3429-f4c2-484e-b74d-e677a0b2e424"
+  ],
+  "meaning": "Strength comparison only. The iterated-origin control witnesses failure of the converse.",
+  "definition_ids": [
+    "a02b41fb-2bf3-4109-898c-b2aca8aaeaec"
+  ],
+  "weakening": true
+}

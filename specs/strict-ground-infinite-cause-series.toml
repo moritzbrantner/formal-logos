@@ -1,0 +1,33 @@
+[batch]
+vocab = "TruthCore.Causality.StrictGroundInfiniteCauseSeries"
+results = "TruthCore.Results.Causality.StrictGroundInfiniteCauseSeries"
+definitions = ["DEF-DEPENDS-FOR-BEING", "DEF-FINE-PLG-DERIVABILITY", "DEF-FINE-PLG-STRICT-PARTIAL-GROUND", "69c0b23e-54c7-57a1-871f-839c6e5514c6", "1d9aa4d9-18cc-5930-95fb-5af65e32c0f8", "4a101a4c-12de-53c8-80c6-de7a523ea9d9"]
+
+[[statement]]
+id = "Strict-ground dependence and efficient-cause independence in a series without a first cause"
+lean = "ConsumerModel"
+definitions = ["DEF-DEPENDS-FOR-BEING", "DEF-FINE-PLG-STRICT-PARTIAL-GROUND"]
+paraphrase = "On Nat with one respect, each successor causes its predecessor and acts as a per se link. Each number depends on every larger number, and priority runs from larger to smaller. Some consistent PLG theory realizes the distinct dependence map under identity labelling. P2, cause-to-dependence, no self-causation, and cause independence of its effect all hold. The Second Way's order, priority, irreflexivity and middle-cause premises hold. Its regress prohibition fails and no first efficient cause exists in this interpretation."
+
+[[argument]]
+id = "Successor model for the strict-ground map at the efficient-cause consumer"
+theorem = "strictGroundConsumerAllowsInfiniteCauses"
+conclusion = "Strict-ground dependence and efficient-cause independence in a series without a first cause"
+premises = []
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+disambiguations = ["23dd6f32-b456-4963-adb3-7befbf0dc4fb"]
+sense_bridges = [{ term = "DEPENDENCE_FOR_BEING_VERSUS_STRICT_GROUND", from = "DEPENDENCE_FOR_BEING_VERSUS_STRICT_GROUND_1", to = "DEPENDENCE_FOR_BEING_VERSUS_STRICT_GROUND_2", statement_id = "2b1c8fbe-1c5c-4039-accd-bf69f097f4da", role = "conclusion" }]
+rule = "Extend the Fine successor sequents by strict transitivity, apply the P2 bridge and its actual consumer, and test firstness on the same series"
+meaning = "A joint model of the strict-ground package and the full cause-independence inference. Each efficient cause is independent of the effect it causes, while itself caused by its successor. The P2 package can therefore coexist with the failure of the separate per se regress premise, even for transitive dependence. No interpretation of arithmetic edges as actual suppliers of existence follows."
+
+[[argument.research_comparisons]]
+target_statement_id = "0f49d71e-09e6-5a9c-b7e7-e0e9b8fe769c"
+rival_statement_id = "Strict-ground dependence and efficient-cause independence in a series without a first cause"
+sense_definition_id = "bf26b9b2-41ed-55b0-9557-dae90ab9b81f"
+outcome = "model-witnessed"
+conditions = "The certificate provides both PLG consistency and the distinct-edge map under the identity labelling, together with the cause-independence consumer on that same interpretation."
+scope = "Nat, Unit, D(x,y) iff x < y; E(c,x,()) and C(c,x) iff c = x+1; P(c,x) iff x < c. The atoms are labels."
+coverage = "All numbers and the sole respect in this model."
+exclusivity = "One strict instance of the diagonal-neutral P2. No exhaustive comparison of possible dependence relations."
+witness = "strictGroundConsumerAllowsInfiniteCauses; every f has cause f+1 even though each cause is independent of its effect."
+next_step = "Test a proposed independent ground of per se termination against the same locally supplied series."

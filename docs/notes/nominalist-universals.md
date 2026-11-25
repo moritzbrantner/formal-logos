@@ -3,7 +3,7 @@
 This bounded comparison supplies a positive nominalist/conceptualist resource
 for the Plato–Aristotle investigation. It is not a complete theory of every
 nominalism, a refutation of every realism, or an argument that Catholicism is
-true or false. The source readings remain open philosophical commitments.
+true or false. The source readings remain open philosophical commitments. [Research record](../../corpus/attempts/nominalist-universals-primary-comparison.json)
 
 ## Witness and reading limits
 

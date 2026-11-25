@@ -2,7 +2,7 @@
 
 Analyst reconstruction, 2026-11-10. Attribution deferred. Target root-route
 premise: `97f5850f-62bc-5e43-a0c1-dd1033d08fc9`. This is a mechanism-specific
-conditional test, not a universal physical law or a proof of causal regress.
+conditional test, not a universal physical law or a proof of causal regress. [Research record](../../corpus/attempts/8611a929-eb39-4dc6-bcd0-0d127b1e8f0a.json)
 
 ## Mechanism, quantities and recursive meaning
 

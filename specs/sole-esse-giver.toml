@@ -1,0 +1,66 @@
+[batch]
+vocab = "TruthCore.Causality.SoleEsseGiver"
+results = "TruthCore.Results.Causality.SoleEsseGiver"
+
+[[statement]]
+id = "At least one actual bearer participates in esse"
+lean = "ActualParticipantExists"
+paraphrase = "Analyst nonvacuity premise. Some bearer is actual in the selected esse respect and bears the q44 participation predicate. An actual source alone does not supply a recipient."
+definitions = ["14d30c53-51c2-502d-b009-247dac0421e0", "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168", "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"]
+
+[[statement]]
+id = "One selected own-being giver supplies every actual participant in esse and is unique in that role"
+lean = "SoleEssentialGiver"
+paraphrase = "Analyst formulation of the principal-giver reading. There is an actual participant. For every actual q44 participant x, the same selected s is distinct, actual, its own subsistent being and a cause of x's esse. Every distinct actual own-being giver of x's esse equals s. Principal giver here means a giver in precisely that qualified class; using the statement with a different account of principal giving needs a bridge. Secondary causes can act in producing an effect. The q3 cause relation is mode-unspecified. The selected source's efficiency, totality and degree remain distinct questions."
+definitions = ["5dc08b95-ca15-52ab-b8cd-2b558e9a13f7", "14d30c53-51c2-502d-b009-247dac0421e0", "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168", "211a6432-8b8f-53ed-85e3-75173bb15b24", "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72", "8163859b-95b3-4dd2-8a69-541bd332f32f"]
+
+[[statement]]
+id = "Relevant own-being giving of a participant's esse is efficient and total at esse"
+lean = "EssentialGivingIsEfficientAndTotal"
+paraphrase = "Open analyst premise. For an actual participant x, any distinct actual own-being giver of x's esse also efficiently gives it and needs no co-cause alongside it in this respect. The two consequent clauses use the tenseless efficient-esse relation and the Cartesian totality parameter at esse. The scope is the act of existing. Attribution, application to actual beings, and transfer to determinate forms remain separate."
+definitions = ["5dc08b95-ca15-52ab-b8cd-2b558e9a13f7", "14d30c53-51c2-502d-b009-247dac0421e0", "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168", "211a6432-8b8f-53ed-85e3-75173bb15b24", "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72", "8934912c-7997-4af7-9520-ec94ff221043", "33ebf451-eb02-48f5-b420-24a34da9b865"]
+
+[[statement]]
+id = "Every actual participant has at most the selected actual source's represented degree of esse"
+lean = "BoundsParticipatedEsse"
+paraphrase = "Analyst formulation. The selected s is actual as to esse. Each actual q44 participant x satisfies degree(esse,x) ≤ degree(esse,s) in one fixed preorder. This is a positive weak bound on the represented scale and allows equal degrees. Passing to the primitive comparative, excluding ties, and extending the comparison to a different perfection each require additional warrant."
+definitions = ["14d30c53-51c2-502d-b009-247dac0421e0", "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168", "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72", "8323604a-2e7a-554c-9b32-d82e5201271d"]
+
+[[statement]]
+id = "One total giver of participated esse permits a tied degree and does not entail degree adequacy"
+lean = "EqualDegreeControl"
+paraphrase = "Closed two-bearer interpretation with actual distinct giver true and recipient false, one own-being source, source represented identity and recipient represented distinction. Giving is efficient and total at esse. A constant natural-valued scale satisfies weak adequacy with a tie. Assigning the same recipient 2 and giver 1 instead makes adequacy fail on the same causal facts. This tests dependence on the degree premise. The assignments do not claim an actual metaphysical tie or reversal."
+definitions = ["5dc08b95-ca15-52ab-b8cd-2b558e9a13f7", "14d30c53-51c2-502d-b009-247dac0421e0", "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168", "211a6432-8b8f-53ed-85e3-75173bb15b24", "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72", "8323604a-2e7a-554c-9b32-d82e5201271d", "33ebf451-eb02-48f5-b420-24a34da9b865", "8934912c-7997-4af7-9520-ec94ff221043", "183b48d2-1753-583d-aef9-4199cff86231"]
+
+[[argument]]
+id = "One principal giver of participated esse from local supply and common source selection"
+theorem = "soleGiverOfSelection"
+premises = ["At least one actual bearer participates in esse", "de05072a-5db0-4a31-8e24-b18fedf01401", "dcf4bcdd-4feb-4d97-a7e2-f6a08cdf4702"]
+conclusion = "One selected own-being giver supplies every actual participant in esse and is unique in that role"
+rule = "Identify each local own-being supplier with the same selected bearer"
+meaning = "Fix an actual participant. Local supply gives a distinct actual own-being source. Source selection identifies that supplier and every other relevant supplier with the same s. The population premise gives at least one instance of the causal role. Uniqueness is among own-being suppliers; the actual source may operate through secondary causes."
+
+[[argument]]
+id = "The sole giver's represented degree bounds its participants by total-cause adequacy"
+theorem = "boundOfAdequacy"
+premises = ["One selected own-being giver supplies every actual participant in esse and is unique in that role", "Relevant own-being giving of a participant's esse is efficient and total at esse", "87f41688-c06f-4fe9-994b-0682a4be3038"]
+conclusion = "Every actual participant has at most the selected actual source's represented degree of esse"
+rule = "Apply degree adequacy to the same selected efficient total giver at esse"
+meaning = "Use a witnessed actual participant to obtain actuality of s. At each actual participant, the source supplies the q3 causal edge, the separate bridge supplies its efficiency and totality, and 87f41688 yields the positive weak degree bound. The adequacy interface uses the original act predicate, esse and efficient esse relation; its primitive MoreIn and history are unused. Selection consistently fixes the bearer. A selected common supplier would suffice for the inequality even if there were other qualified givers. No strictness or causal converse is used."
+
+[[argument]]
+id = "A represented greatest degree of being from the participant bound and roster coverage"
+theorem = "greatestOfCoverage"
+premises = ["Every actual participant has at most the selected actual source's represented degree of esse", "11e24b50-06bc-5e2e-b9b6-a4e4dc421237", "ee4ab504-c8fe-59bc-bc96-7cbeefed6410"]
+strong_version_needed = {"ee4ab504-c8fe-59bc-bc96-7cbeefed6410" = "The case split concerns equality to the selected giver. No nominal GOD_4 candidate has been identified for a local excluded-middle premise."}
+conclusion = "27fb3450-3bf6-57e1-acb0-11abf563b3d5"
+rule = "Exhibit the selected actual giver as a greatest-degree bearer"
+meaning = "The selected source realizes its degree. Split each actual bearer on equality to it. Its own degree is reflexively bounded; all others participate by explicit roster coverage and therefore satisfy the weak bound. This yields the existing MAXIME_2 existence statement on the represented preorder. The proof permits multiple bearers to have the greatest degree; passing to primitive maximality takes its existing separate calibration."
+
+[[argument]]
+id = "Test degree adequacy and strictness on a populated sole-giver interpretation"
+theorem = "equalDegree"
+premises = []
+conclusion = "One total giver of participated esse permits a tied degree and does not entail degree adequacy"
+rule = "Evaluate two degree assignments on the same fixed two-bearer causal profile"
+meaning = "A constant degree satisfies total-cause adequacy and gives the distinct giver and recipient equal degrees. On the same efficient total edge the assignment giver 1, recipient 2 violates adequacy. This tests formal entailment without treating unconstrained degree assignments as metaphysical counterexamples."

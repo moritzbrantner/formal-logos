@@ -1,0 +1,15 @@
+{
+  "id": "50da2b49-c914-4c44-a956-1cb134a399f8",
+  "label": "Relevant own-being giving of a participant's esse is efficient and total at esse",
+  "paraphrase": "Open analyst premise. For an actual participant x, any distinct actual own-being giver of x's esse also efficiently gives it and needs no co-cause alongside it in this respect. The two consequent clauses use the tenseless efficient-esse relation and the Cartesian totality parameter at esse. The scope is the act of existing. Attribution, application to actual beings, and transfer to determinate forms remain separate.",
+  "lean_declaration": "TruthCore.Causality.SoleEsseGiver.EssentialGivingIsEfficientAndTotal",
+  "definition_ids": [
+    "5dc08b95-ca15-52ab-b8cd-2b558e9a13f7",
+    "14d30c53-51c2-502d-b009-247dac0421e0",
+    "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "8934912c-7997-4af7-9520-ec94ff221043",
+    "33ebf451-eb02-48f5-b420-24a34da9b865"
+  ]
+}

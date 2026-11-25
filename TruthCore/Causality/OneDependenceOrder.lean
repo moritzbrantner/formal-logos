@@ -46,7 +46,7 @@ Mathlib-importing module not used here).
 **What the module adds.** Two OPEN premises:
 `PerSeEfficientCausesArePerSeEsseCauses` (every per se ordered efficient-cause
 link is a per se actual cause of being, PER_SE_5; it fails on the bound sense
-CAUSES_AS_CAUSED_3, see its doc comment) and `ActualEsseCauseIsActualGround`
+SERIES_OF_CAUSES_3, see its doc comment) and `ActualEsseCauseIsActualGround`
 (the weak version of cb1cdea9); the law `actualEsseCause_iff_actualGround`;
 and finite or `Nat` interpretations used by the controls of
 `TruthCore.Results.Causality.OneDependenceOrder`. Everything else the results
@@ -142,21 +142,22 @@ open TruthCore.Latin.Aquinas.DeEnte (PerSeActualEsseCause) in
 open TruthCore.Latin.Aquinas.SummaTheologiae.PrimaPars.Question3.Article4 in
 /-- OPEN analyst framework premise, attribution deferred: every per se ordered
 efficient-cause link (`CausesAsCaused c x`, the secunda via's "causes as a
-caused cause", sense CAUSES_AS_CAUSED_3) is a per se actual cause of being
+caused cause", sense SERIES_OF_CAUSES_3) is a per se actual cause of being
 (`PerSeActualEsseCause p AsCaused c x`, PER_SE_5): `c` is other than `x`, both
 are in act as to being, `c` causes the esse of `x` (`CausesIn c x esse`,
 CAUSE_2), and it does so as caused (`AsCaused c x`).
 
-It fails on the bound sense CAUSES_AS_CAUSED_3, which the proved statement
+It fails on the bound sense SERIES_OF_CAUSES_3, which the proved statement
 c2880fe0 (`PerSeMoverLinkIsPerSeCauseLinkReading`, sourced to ST I q.46 a.2
 ad 7) extends to per se mover links: with c2880fe0 it makes every per se mover
 a per se actual cause of the moved thing's esse. Ad 7 gives as per se series
 the stone moved by the stick, moved by the hand, and the generation of this
 man depending on this man, the elementary body and the sun (causes of motion
 and of coming to be). That the stick continues to be when the hand lets go is
-an analyst observation, not ad 7's. The premise is defensible only under a
-not-yet-existing existential sense of `CausesAsCaused`; the sense split is the
-next test. -/
+an analyst observation, not ad 7's. The premise is defensible only under an
+existential sense of `CausesAsCaused`, now SERIES_OF_CAUSES_4
+(`DependenceOrderSenses.CausesBeingAsCaused`), on which it is restated as
+`DependenceOrderSenses.PerSeEsseLinksArePerSeEsseCauses`. -/
 def PerSeEfficientCausesArePerSeEsseCauses {B P R : Type} (p : Profile B P R)
     (AsCaused CausesAsCaused : B → B → Prop) : Prop :=
   ∀ c x, CausesAsCaused c x → PerSeActualEsseCause p AsCaused c x

@@ -1,0 +1,10 @@
+{
+  "id": "bac963f3-2e98-433e-9a3b-6f8f9e8ee0f2",
+  "label": "Separate one-to-many ordinal preservation from a relay's additive balance (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "3188ec6a-e98c-45e7-86df-4ee2ef0995cf",
+  "rule": "Check all giver edges and all realized-level bounds, then compute the two finite ledgers",
+  "meaning": "The relay receives a higher-grade instance and gives two lower-grade ones. Only the numerical distance between the grades changes. The witness uses the existing realizedLevels definition, without claiming the assignment realizes every premise about an actual sole essential giver.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

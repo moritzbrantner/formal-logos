@@ -1,7 +1,7 @@
 # No ultimate foundation, radical law-change, and whole-history stability
 
 Current integrated assessment: [Actual exercise and evidence-channel bridges](#continuation-actual-exercise-and-evidence-channel-bridges).
-The earlier [metaphysical containment checkpoint](#metaphysical-explosion-and-containment-2026-11-24) retains its own scope.
+The earlier [metaphysical containment checkpoint](#metaphysical-explosion-and-containment-2026-11-24) retains its own scope. [Original PR #1809](https://github.com/moritzbrantner/formal-logos/pull/1809)
 
 The continuation [Existential inheritance under perfect containment](#existential-inheritance-under-perfect-containment-2026-11-24)
 grants the stable rival's restrictions in full. Its question is what remains
@@ -956,6 +956,8 @@ adjudicate those stronger, incompatible metaphysical commitments by
 stipulating a new space of worlds.
 
 ## Metaphysical explosion and containment (2026-11-24)
+
+[Assessment record](../../corpus/attempts/a356db64-3277-4e41-b4c2-a6309c9f132e.json)
 
 This is the integrated assessment of the owner's research program, continuing
 #1872, #1874, #1808, #1809, #1904, #1908, #1910 and #1913. Its targets are the
@@ -2200,3 +2202,8 @@ operative-practical-content, actual-channel, historical-target, adequacy and
 normative-policy application blockers described above. This publication is
 a reviewed research contribution, not a merge or an unconditional worldview
 conclusion.
+
+## Research attempts citing this note
+
+- [Finite recombination and prefix closure separate full-law arbitrariness](../../corpus/attempts/6d1c811e-ef70-4cc6-8e98-9e9dabc5547e.json)
+- [Weaken propagation assumptions to the exact observable obstruction](../../corpus/attempts/c3d8f7e1-e40c-407a-bad9-873a5e24b896.json)

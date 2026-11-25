@@ -1,0 +1,30 @@
+{
+  "id": "91fd0ff7-8238-4acb-b442-b69d7a9ebea5",
+  "label": "Holder-root identification controls checked",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "4c28b2d3-9ba9-4a29-a513-f912a0436a5f",
+  "inference_ids": [
+    "ea5bcc93-6ac4-4ea6-8947-b0382ab00926"
+  ],
+  "meaning": "Premise-free: three laws (holders are necessary; the dichotomy of root or necessary-through-another under a common root; identification with NAR) and finite models (theist nonvacuity, the necessary-through-another holder, omissions of argument 1, two roots, omissions of argument 5). Model-witnessed separations only; no premise is established and no reality claim is made.",
+  "definition_ids": [
+    "1620ba7e-edb9-56c4-bd02-3ece55903b1c",
+    "c57e2682-08e6-527e-950f-0fa0a7ff11ef",
+    "88f9f6e8-997b-5f7d-afa1-c501954c3807",
+    "88bc0655-9dd0-5879-ba1b-3fca9f86c1f4",
+    "7c64b499-6dba-5e03-bdf3-5acea95d8836",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "a1b2e330-388f-4120-bc5c-969642317792",
+    "b8061228-9131-40f2-83bd-cb7d719bd0a0",
+    "bf7eddca-8291-4744-8470-379babcd7781",
+    "de24ce2e-84e4-48d8-9cac-5f66ad532015"
+  ],
+  "disambiguation_ids": [
+    "8b3d47bc-7fee-4936-99ad-6561aedc657a",
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f",
+    "83264cf5-01fe-52fc-9a00-eeb024f6496e",
+    "e5417243-d6f3-4776-9694-40d85bb34ff4"
+  ],
+  "sense_mixing_control": true
+}

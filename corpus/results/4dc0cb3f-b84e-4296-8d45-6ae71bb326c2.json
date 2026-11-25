@@ -1,0 +1,11 @@
+{
+  "id": "4dc0cb3f-b84e-4296-8d45-6ae71bb326c2",
+  "label": "Test degree adequacy and strictness on a populated sole-giver interpretation",
+  "argument_id": "e27ee8c6-889c-4035-ab71-e31482ba2735",
+  "challenge_module": "TruthCore.Results.Causality.SoleEsseGiver.Challenge",
+  "solution_module": "TruthCore.Results.Causality.SoleEsseGiver.Solution",
+  "theorem": "TruthCore.Results.Causality.SoleEsseGiver.equalDegree",
+  "comparator_config": "results/4dc0cb3f-b84e-4296-8d45-6ae71bb326c2/comparator.json",
+  "status": "solution-present",
+  "description": "A constant degree satisfies total-cause adequacy and gives the distinct giver and recipient equal degrees. On the same efficient total edge the assignment giver 1, recipient 2 violates adequacy. This tests formal entailment without treating unconstrained degree assignments as metaphysical counterexamples."
+}

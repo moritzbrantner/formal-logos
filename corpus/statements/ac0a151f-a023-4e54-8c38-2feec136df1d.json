@@ -1,0 +1,11 @@
+{
+  "id": "ac0a151f-a023-4e54-8c38-2feec136df1d",
+  "label": "Every phenomenally experienced occurring thought has a bearer",
+  "paraphrase": "OPEN analyst premise. For each thought episode that occurs and is phenomenally experienced, some subject bears that episode. The bearer may vary with the episode. Unexperienced thoughts fall outside this requirement.",
+  "lean_declaration": "TruthCore.Logic.ExperiencedThoughtBearer.ExperiencedThoughtsHaveBearers",
+  "definition_ids": [
+    "663c48ce-4166-4632-86d9-85eeef0c258b",
+    "c0cbef1c-060a-54d4-bb49-8d59da40caf3",
+    "ce8ccc1a-4f9a-5904-a10c-548778d79b66"
+  ]
+}

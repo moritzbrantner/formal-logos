@@ -1,0 +1,11 @@
+{
+  "id": "0269173b-9dd1-43f9-909f-c2462710fb1a",
+  "label": "Identify one ancestral source from GOD_4 existence, finite reach and an actual root",
+  "argument_id": "1d047782-3993-41cf-ac0f-a54a6e8c3062",
+  "challenge_module": "TruthCore.Results.Causality.ActualAncestralSource.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ActualAncestralSource.Solution",
+  "theorem": "TruthCore.Results.Causality.ActualAncestralSource.groundingAncestryOfNamedSource",
+  "comparator_config": "results/0269173b-9dd1-43f9-909f-c2462710fb1a/comparator.json",
+  "status": "solution-present",
+  "description": "Choose a God g and an actual root n separately. A positive path from g into n would have a last incoming actual ground. Hence their path is empty and g equals n. This same argument applies to every actual root. Finite reach from this very g supplies all recipients' paths. The companion identifies any such named witness with any supplied root. GodExists is an input of this conditional application."
+}

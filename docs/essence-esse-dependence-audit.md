@@ -2,7 +2,7 @@
 
 This slice advances #319 (with #312 and #275 as separate inputs) by
 formalizing **the first proof in Aquinas, ST I q.3 a.4**, without assuming
-Thomism, an unrestricted PSR, or the existence of God.
+Thomism, an unrestricted PSR, or the existence of God. [Original PR #408](https://github.com/moritzbrantner/formal-logos/pull/408)
 
 ## Verified sources and exact scope
 

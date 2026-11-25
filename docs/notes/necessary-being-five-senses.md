@@ -1,5 +1,7 @@
 # Five readings of necessary existence, nature, explanation, and underivedness
 
+[Research record](../../corpus/attempts/ba5da429-c022-4029-8430-4ea7371291d7.json)
+
 Status: **analyst map / open bridges**, not a new historical attribution or a
 proof of the existence of God. Research issue: #1595. Related earlier work:
 #312, #319, #1590, #1593.
@@ -234,3 +236,95 @@ is established; rerun the support formula after changing any route.
   identification through an efficient-causal dilemma is already formalized
   elsewhere in the repository. Attribution of the five-column map to these
   authors is **not** claimed.
+
+## What would show that a limit belongs to the act of existing?
+
+Start with something actual. Grant that following the givers of its present
+existence reaches an actual concrete individual *n* with no actual concrete
+ground in the selected relation. Suppose this very *n* could have failed to
+exist. If every actual contingent concretum has an actual concrete ground
+(`c71c068c`), *n* has such a ground, contradicting the choice of *n*. At any
+accessible world, excluded middle gives two cases for this individual’s
+existence there. Its absence would supply the very contingency just excluded,
+so *n* exists there. This establishes necessity for the supplied root without
+requiring uniqueness. Taking *n* as witness gives `b19ffd92`, which says only
+that some actual concretum exists in every accessible world. The registered
+upgrade also preserves uniqueness when supplied. The alternative proof from
+an inhabited world uses well-foundedness restricted to actual concreta and
+excluded middle.
+[Same-root upgrade](../../corpus/results/ACTUAL-ROOT-NECESSITY-UPGRADE.json) ·
+[Restricted well-foundedness route](../../corpus/results/NECESSARY-CONCRETE-FROM-ACTUAL-GROUNDED.json)
+
+**Why think contingency calls for a ground?** Where a nature really receives
+an act, the nature specifies *what* is actual. Its own exercise of a power
+already requires it to be actual, so self-production cannot explain its
+existence. A distinct giver makes sense of how the recipient has what it
+cannot confer on itself. The registered inference from **limited esse**
+requires three commitments together. A limit of this kind entails reception
+in a principle (`1304b462`), reception has a distinct cause of esse
+(`4bc853db`), and this giver qualifies as an actual concrete ground at the
+selected world (`cb1cdea9`). These commitments can also be defended directly.
+To reach every contingent bearer by this route one still needs reason why
+possible absence implies such a limit, including for a bearer alleged to
+be primitively actual. [Limited-esse inference](../../corpus/results/1c21c205-1914-45d2-b543-fc524b72ed5e.json) ·
+[Contingency and reception](contingency-receptivity-c2.md#in-what-sense-is-unlimited-being-the-default)
+
+**A test of real limitation.** Consider an ideal projector. A small illuminated
+patch could come from a narrow incident beam or from a wide beam restricted by
+an aperture in the instrument. Measure the opening and the incident footprint
+on the same plane separately. Illuminate beyond one edge of the opening,
+then shift the aperture while holding the illumination fixed. The region
+transmitted at that plane is the intersection. Its edge follows the aperture
+where the incident beam extends farther, and follows the beam where the
+aperture extends farther. The two measurements predict the boundary even for
+a new offset. This gives a reason to attribute part of the restriction to a
+real constituent of the instrument independent of naming the output “limited.”
+It also explains why one bounded output alone cannot identify the limiter.
+
+The restriction identified here concerns the operation of an already existing
+instrument. Removing its aperture can change its output while the instrument
+continues to exist. A rival can grant every such dependence and take the
+existence of a basic bearer of determinate powers as primitive. It can use
+the powers to explain what the bearer does and expressly leave its obtaining
+unexplained. Participation offers a common reason for the actuality of
+recipients of different natures. Its comparative advantage for **existence**
+turns on identifying what fixes a bearer's mode of existing and why that
+principle requires actuality from another. A bound on an operation, even
+one traced to a real internal component, supplies neither step by itself.
+
+**Keep the root and its character fixed in the comparison.** Take two mutually
+accessible populated worlds. In the actual world *n* grounds *x*. At the other
+world compare (i) *n* grounding *y* and (ii) a different *t* grounding *y*.
+In each case the displayed pair exhausts the concrete inhabitants and the
+single edge exhausts the grounds at that world. Assign precisely the same
+power and limitation profile to the occupying root whenever it exists. Both
+assignments have a unique root in each world. In (i) the actual contingent
+*x* is grounded and *n* exists throughout. In (ii) both actual beings are
+contingent and *n* lacks a ground. No measurement of powers conditional on
+occupancy distinguishes these assignments without a further principle tying
+those powers to the existence of **this** individual. This comparison tests
+what follows from the description. Metaphysical admissibility of a replacement
+would need independent warrant. [Replacement test](contingency-receptivity-c2.md#testing-occupation-and-replacement) ·
+[Registered contingent-root control](../../corpus/results/21a28d4b-1b89-41c7-996b-dca0f5d9a291.json)
+
+**Provisional judgment.** I favor an underived giver on the reading where
+every exercised power to give esse in an exclusively derivative order is
+borrowed. More borrowers explain its transmission while presupposing that
+there is actual giving. The rootless rival can accept the whole productive
+order as primitively actual. A nonempty finite domain containing **all** actual suppliers
+of its members and a strict priority order on those links suffices to find
+a root in that domain. On the separate modal step, reception has positive
+warrant where constitutive dependence is independently identifiable. I
+would retain contingent grounding as a substantive direct premise and
+suspend on its exceptionless application to an intrinsically determinate
+first bearer. Reopen the latter judgment on an account that predicts a
+constraint on the *existence of that bearer*, from independently identified
+constitutive conditions, which the primitive account cannot match while
+keeping its own commitments. Conversely, an independently admissible order
+omitting that individual would defeat its alleged necessity. The finite
+supplier test addresses the earlier question of access to a root. [Supplier completeness](de-ente-esse-source-1628.md#supplier-completeness-under-extension-of-an-audited-order) ·
+[Brute-root or non-well-founded alternative](../../corpus/results/BRUTE-ROOT-DISJUNCTION.json)
+
+## Research attempts citing this note
+
+- [Independently identifying a limiter and testing whether the same concrete root must exist](../../corpus/attempts/43c2d8f9-eef7-4e69-82f6-2b2896de2005.json)

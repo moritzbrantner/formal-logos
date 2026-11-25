@@ -1,0 +1,9 @@
+{
+  "id": "6b4e3331-01ca-484b-bda1-460ebff1df35",
+  "label": "A surviving supporting basis gives its subject a thin belief reason",
+  "paraphrase": "OPEN pro tanto calibration. A basis supporting a content for a subject, and not undercut for that subject, supplies that subject a thin epistemic reason to believe that content. Sufficiency for belief or preference-independent force is not required.",
+  "lean_declaration": "TruthCore.Logic.EpistemicReasonBearer.SurvivingBasisGivesReason",
+  "definition_ids": [
+    "dcbd9590-2c87-5550-a69c-b4af6e272fa4"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "1c2e155f-72bc-4776-a676-7400fd0a92ac",
+  "label": "An actual root exists iff the roster is not trapped, is inhabited and root existence is stable",
+  "paraphrase": "For every profile and world: some actual concretum has no actual concrete ground in the selected relation if and only if the nonempty actual roster is not a borrowing trap, some concrete candidate exists at w, and root existence at w is stable (not-not root existence gives root existence). A premise-free comparison of encodings, proved without excluded middle; it asserts none of the statements compared.",
+  "lean_declaration": "TruthCore.Causality.RootSupplyInterface.RootExistsOverWholeRosterExact",
+  "definition_ids": [
+    "c57e2682-08e6-527e-950f-0fa0a7ff11ef",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87"
+  ],
+  "disambiguation_ids": [
+    "6e92c6e3-edf0-5d7e-b2b3-788b24b8b768",
+    "c529e8d3-43e3-53a8-a82f-3955e9815265",
+    "6f1d1395-7c1d-5bd5-a45d-03380857aed6"
+  ]
+}

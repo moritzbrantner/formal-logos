@@ -1,5 +1,7 @@
 # Which compositions require an actual uniting cause?
 
+[Research record](../../corpus/attempts/composition-causal-scope-comparison.json)
+
 ## Proper-part and union-to-esse audit (2026-11-22; independent review pending)
 
 **Selected node and downstream consequence.** The third proof of ST I q.3 a.7
@@ -11,7 +13,7 @@ The same-root simplicity consumer `379399d1` also uses a separate interface
 `cb1cdea9` from cause-in-esse to actual grounding. The existing
 `UnitingCausesPresent` and `UnitingCausesAreActual` restrictions must be
 defended before taking a non-world-indexed `CausesIn` edge to prohibit a
-selected-world underived source from being composite.
+selected-world underived source from being composite. [Assessment record](../../corpus/attempts/proper-part-union-esse-audit-20261122.json)
 
 ### A missing witness-preserving formal consequence
 
@@ -159,7 +161,7 @@ exhausted** by an earlier Bool omission certificate or by the existing
 conditional simplicty proof.
 
 **Scoped cumulative assessment.** The accepted-qualified 2026-11-18
-assessment in attempt `dd24400b` remains in force: direct/primitive
+assessment in attempt [`dd24400b`](../../corpus/attempts/dd24400b-cc87-4095-b4c4-df857e1edff5.json) remains in force: direct/primitive
 support and a restricted positive constitution argument are available,
 with `fbee7f15` the genuine shared open bridge. The new stronger
 certificate repairs an earlier evidential weakness and rules out the
@@ -672,7 +674,7 @@ this slice ends with those exact open dependencies recorded for reassessment.
 **Actual premise comparison and verification boundary:** no Lean, statement,
 claim, definition, inference, result, argument or frontier premise is changed.
 The changed files are this existing note and attempt
-`356fd6f9-6e1a-548b-a4be-a456f346463f`. Unchanged certificate evidence is reused;
+[`356fd6f9-6e1a-548b-a4be-a456f346463f`](../../corpus/attempts/composite-uniting-cause-from-union-20261105.json). Unchanged certificate evidence is reused;
 the complete philosophical assessment received qualified acceptance from fresh
 reviewer `review_composite_ground` at frozen head
 `71af7493628ea4632824a42cc36efc718c158f57`, with no repair required. The review
@@ -735,7 +737,60 @@ source campaign without a new discriminant is not justified.
 
 The complete proposed outcome, exact downstream consumers, retrieval links and
 claim/type self-sweep live in the linked modal-spine section and existing
-attempts 383d23ad, 520ea849, 712ea899 and 356fd6f9. These associations add no
+attempts [383d23ad](../../corpus/attempts/383d23ad-bec6-442c-9fec-0112df1e1c97.json), [520ea849](../../corpus/attempts/520ea849-31eb-4f63-88b9-77bce198b63d.json), [712ea899](../../corpus/attempts/712ea899-f58e-4bfa-a977-ead95a600518.json) and 356fd6f9. These associations add no
 entailment edges. No formal inputs, source claims or computed closure change;
 unchanged proof evidence is reused. Independent semantic review of this new
 consolidation and final integration CI remain coordinator-owned.
+
+## When the work of maintaining unity passes from an assembler to a constituent
+
+For `ca07cae9`, the relevant question is whether some individual **distinct from this whole** causes its being. The [registered formula](../../TruthCore/Latin/Aquinas/SummaTheologiae/PrimaPars/Question3/Article7Cause.lean) allows a proper part to be that individual, if it really exercises the requisite causation. It neither names an original assembler nor says the cause lies wholly outside the composite. The [witness-preserving derivation above](#a-missing-witness-preserving-formal-consequence) reaches the stronger same-uniter conclusion under its stated premises.
+
+Consider a pressure enclosure with a split shell. A jig initially holds the shell together under load. An integral locking collar engages before the jig is removed. Follow the **same enclosure** across the transfer by its uninterrupted pressure boundary and the continuity of the shell. Inspect two settled phases, before and after load transfer. In the first, release of the loaded jig separates the joint; in the second, the jig is gone, tension in the collar resists the separating force, and releasing the collar opens the joint. The force transmitted at the joint distinguishes a working support from a disconnected reserve or a sensor whose alarm merely coincides with an opening. A safety interlock that automatically closes another support on release would require tracking the actual load rather than treating survival as proof that the first support did nothing.
+
+Suppose the tracked individual is precisely this integrated pressure-holding unit and that destruction of the joint under the stated load terminates it. This gives a restricted reason to credit the working support with this unit's continuing realization. If the item is instead the material sum of these pieces, or an artifact allowed to persist in a broken condition, opening the shell can leave that item in existence. The measurement then tracks a lost operation or arrangement. The same release is evidence for a cause of esse only after an **independent identity and persistence criterion** settles which individual ceases. The enclosure is an analogy for this test, not evidence about the substantial status of enclosures.
+
+The finite control interprets the two settled phases. `holds` calculates cohesion when either support may be withdrawn. In this deliberately single-active-support setting, `supplies` tests selective loss of cohesion. Treating cohesion as the selected unit's existence is the explicit interpretation under test. The proper constituent is represented by the collar role. Each phase satisfies the corpus formula under this reading. The model has no one supplier across both phases, and its only late supplier is a constituent. These are limitations on witness selection from phase-local evidence. The formula itself has no time parameter; applying it at each phase already supplies extra interpretive structure. The three local Lean checks used no axioms.
+
+```lean
+import TruthCore.Latin.Aquinas.SummaTheologiae.PrimaPars.Question3.Article7Cause
+open TruthCore.Latin.Aquinas.SummaTheologiae
+namespace UnityHandoff
+inductive Role | whole | collar | jig deriving DecidableEq
+open Role
+def holds (late jigAvailable collarAvailable : Bool) :=
+  if late then collarAvailable else jigAvailable
+def composite (x : Role) := x = whole
+abbrev supplies (late : Bool) (c x : Role) (_ : Unit) : Prop :=
+  x = whole ∧ holds late true true = true ∧
+  holds late (decide (c ≠ jig)) (decide (c ≠ collar)) = false
+theorem pointwise (late : Bool) :
+    CompositeHasAUnitingCauseReading composite (supplies late) () := by
+  rintro x rfl
+  cases late
+  · exact ⟨jig, by decide, by decide⟩
+  · exact ⟨collar, by decide, by decide⟩
+theorem noFixed : ¬ ∃ c, ∀ late, supplies late c whole () := by
+  rintro ⟨c,h⟩
+  cases c with
+  | whole => exact (by decide : ¬ supplies false whole whole ()) (h false)
+  | collar => exact (by decide : ¬ supplies false collar whole ()) (h false)
+  | jig => exact (by decide : ¬ supplies true jig whole ()) (h true)
+theorem latePart (c : Role) (h : supplies true c whole ()) : c = collar := by
+  cases c with
+  | collar => rfl
+  | whole => exact False.elim ((by decide : ¬ supplies true whole whole ()) h)
+  | jig => exact False.elim ((by decide : ¬ supplies true jig whole ()) h)
+#print axioms pointwise
+#print axioms noFixed
+#print axioms latePart
+end UnityHandoff
+```
+
+**Provisional judgment.** The positive case for a substantial bearer is strongest where its independent criterion of life or unity identifies what disintegration destroys, and a numerically distinct contributor actually produces or sustains that constitution. A constituent need not produce the whole unaided to merit productive credit. Its role as an already organized part may itself depend on the whole. In that case its participation in maintenance leaves open the complete explanation of this system's first actuality. The strongest immanent rival offers the activity of the organized substance through its integrated constituents. It can grant both real upkeep by a part and the whole's persistence after its maker departs. It can also contest the inference to efficient esse when a causal test tracks only an operation of a bearer independently present throughout. A positive actuality grounded in received being would strengthen the existential-uniter route if the analysis identifies a distinct giver of this very actuality at the time in question. Diversity alone gives no such identification.
+
+I favor the restricted production inference for genuine cases of constituting activity. Across all kinds of composition, `fbee7f15` (from uniter to giver of esse) remains an open bridge. For the simplicity argument `379399d1`, an immanent contributor can matter if it is a distinct actual being furnishing an edge in the root's excluded relation. The handoff model supplies no such edge for the ultimate source. The next discriminating question for a purported fundamental composite is which independently identified constituent or external activity can explain the **whole's own positive actuality**, and what evidence distinguishes that role from sustaining one of its derivative operations.
+
+## Research attempts citing this note
+
+- [Inventoried the four composition senses and materialized/read full q3a5 and q3a7](../../corpus/attempts/composition-kinds-genus-cause.json)

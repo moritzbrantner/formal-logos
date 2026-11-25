@@ -6,7 +6,7 @@ philosophical warrant. Current research follows the
 [systematic research loop](../systematic-corpus-loop.md): compare reasons,
 applicability and rivals and record reasoned provisional judgments. Personal
 assent supplies no warrant. This qualification preserves the audit and its
-counterfactual results and changes no corpus record or runtime rule.
+counterfactual results and changes no corpus record or runtime rule. [Original PR #1152](https://github.com/moritzbrantner/formal-logos/pull/1152)
 
 The old causal-concreteness disagreement roster recorded four full-strength
 accounts as automatic alternatives to a commitment at one selected world. Its
@@ -150,3 +150,7 @@ implication as witness-preserving classification. The exact definition, proof,
 controls and conditional elimination were unchanged; the corrected prose now
 states their weaker quantifier scope. A universal per-countertuple coverage
 would be a separate stronger hypothesis, which this batch does not introduce.
+
+## Research attempts citing this note
+
+- [Registered an OPEN owner-proposed two-clause power/actual-causation-to-concreteness commitment…](../../corpus/attempts/causal-power-concreteness.json)

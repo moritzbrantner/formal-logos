@@ -1,0 +1,14 @@
+{
+  "id": "34dc5339-a5dc-4ead-a360-8646e88eff0d",
+  "label": "The sole giver's represented degree bounds its participants by total-cause adequacy (inference)",
+  "input_statement_ids": [
+    "eeb89ffe-5b61-4572-8b35-87adf541bcab",
+    "50da2b49-c914-4c44-a956-1cb134a399f8",
+    "87f41688-c06f-4fe9-994b-0682a4be3038"
+  ],
+  "output_statement_id": "aba6f4e1-bbf1-4aaa-ac1c-dead4efbef09",
+  "rule": "Apply degree adequacy to the same selected efficient total giver at esse",
+  "meaning": "Use a witnessed actual participant to obtain actuality of s. At each actual participant, the source supplies the q3 causal edge, the separate bridge supplies its efficiency and totality, and 87f41688 yields the positive weak degree bound. The adequacy interface uses the original act predicate, esse and efficient esse relation; its primitive MoreIn and history are unused. Selection consistently fixes the bearer. A selected common supplier would suffice for the inequality even if there were other qualified givers. No strictness or causal converse is used.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

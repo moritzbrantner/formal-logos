@@ -5,7 +5,7 @@ argument establishing a historical event. #381 remains open for Mark 14,
 Matthew 11, John 8 and 10, Philippians 2, 1 Corinthians 8, historical attribution
 and the comparison of rival accounts. Binding whole-worldview guidance in
 `catholic-case.md` governs this work; the issue's older probabilistic wording
-does not introduce certainty numbers or Bayesian machinery.
+does not introduce certainty numbers or Bayesian machinery. [Research record](../corpus/attempts/mark-2-forgiveness-authority.json)
 
 ## Witness and contextual reading
 
