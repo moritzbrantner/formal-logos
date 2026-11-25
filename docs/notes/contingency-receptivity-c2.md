@@ -2493,8 +2493,181 @@ actually grasps its explanatory constitution and that even a recipient that
 knows its principal falls short on a specified further content at the same
 scope, with a reason the difference raises the selected grade. [Strict identity-giver result](../../corpus/results/1fd78e87-12d3-4144-96e4-4f6b5e138958.json)
 
+## Does an actual producer exceed a ceiling on its recipient?
+
+**A physical crossing.** Take a neutral pion that decays into two real photons.
+Fix one daughter *x* by its outgoing direction, before comparing energies.
+ALICE reconstructed this decay from two separately resolved photons. Their
+measured energies and opening angle give a peak in the invariant mass after
+background subtraction. The peak supports the occurrence of genuine decays
+in the sample. It cannot authenticate each candidate or give exact energies
+for individual events. [ALICE, §4, eq. 3 and §4.1, figs. 3 and 5](https://doi.org/10.1140/epjc/s10052-017-4890-x)
+
+Use the rest frame of this parent and units with light speed one. Write *M*
+for its invariant mass. Momentum conservation makes the outgoing momenta
+equal in magnitude and opposite in direction. Each real photon's energy
+equals that magnitude. Energy conservation therefore fixes each daughter's
+energy at *M*/2, whatever the decay orientation. The parent actually had
+energy *M* (about 135 MeV, against about 67.5 MeV for *x*). The ceiling, including its strict crossing, follows from a
+two-body energy budget independently of any detector threshold or judgment
+about which being is better. It applies to either daughter of this decay.
+A boost changes the half-share, although the parent energy still exceeds
+either daughter's because the other carries positive energy. Another
+preparation can produce photons of higher energy. For an intrinsic physical comparison, the same
+on-shell photon has invariant mass zero and the parent has positive invariant
+mass. That crossing holds across frames, but only for invariant mass.
+
+**A second comparison on these very individuals.** Energy measures what can
+enter an energy balance. Momentum measures what can enter a recoil balance.
+Both are independently motivated by the same conservation law for
+four-momentum. In the same rest frame, the magnitude of momentum is zero for
+the parent and *M*/2 for *x*. The daughter ranks higher on this measure.
+There is no conflict with conservation. Its partner carries the opposite
+momentum. Ranking the parent and the *whole outgoing pair* by total
+four-momentum gives equality and changes the second term of the comparison.
+Nor does the pion survive to sustain *x* as it propagates. These are reasons
+to reject the inference from a physical producer's larger budget to its
+superiority as a whole. The evidence gives neither a pure perfection
+inventory preserved in one direction nor a common intensity of esse.
+
+**Why frequency conversion gives a weaker bound.** In Hübel and colleagues'
+cascade a heralded photon near 775 nm pumps a waveguide producing a pair near
+1510 and 1590 nm. The coincidence peak and its response to changes in input
+wavelength and crystal temperature support actual conversion. In the
+successful parametric channel the incident quantum is consumed. For each
+energy component of that channel the two positive output energies sum to the
+input. The lower-energy partner can receive at most half the input, but this
+rule selects that partner by rank. The measured central wavelengths, detection
+bands and coincidence gates give no hard upper bound below the pump for a
+particular output arm over every allowed energy split. A measured realized
+difference, a preparation that permits conversion, and a ceiling on the
+recipient are three different claims. The surviving waveguide facilitates
+conversion, while the converted input supplies the optical energy. Replacing
+that input with the entire apparatus changes the giver. [Hübel et al., eq. 1 and figs. 1–3](https://arxiv.org/pdf/1007.4967)
+
+The reverse type of production has also been observed. Guerreiro and
+colleagues combined independently heralded photons near 1560 and 1551 nm in
+a waveguide to produce one near 778 nm. The second input accounts for the
+output's excess over either input. The seeding used for alignment was removed
+for the heralded run. These are different tokens in another experiment.
+Reciprocal types of conversion give no instance of two individuals each
+giving the other its existence. [Guerreiro et al., figs. 2–4](https://arxiv.org/pdf/1403.2084)
+
+### Two ways to compare the proposed first giver with the same photon
+
+Keep *x* from the pion decay, taken as a distinct actual bearer during its
+flight. If a field excitation is only a determination of a more fundamental
+bearer, applying the argument to the field requires a new recipient and a
+new case for its reception. Now grant *s*, the proposed underived giver of
+*x*'s esse, on the participation argument's own warrant. Knowing what a
+photon is and how this pair is produced explains why this energy and recoil
+are realized together. The nature alone leaves open whether any such photon
+exists. If its act of existence is really received, the nature's exercising
+a power to produce that act would presuppose an already actual agent.
+A source actual in its own right supplies what a merely receptive principle
+cannot supply itself. This favors the own-being account where receipt is
+independently warranted. The intelligibility of a nature apart from its
+instantiation does not alone prove a real receiving constituent. The rival
+can take the concrete field's actuality as primitive and explain the
+excitation by its dynamics. Its remaining commitment is the actuality of
+that field. Neither account predicts a different decay spectrum merely by
+locating ultimate actuality differently. Aquinas's further reduction to a
+first cause is explicit in “omne, quod est per aliud, reducitur ad illud
+quod est per se sicut ad causam primam.” The corpus ancestry reading still
+needs a bridge to the principal's actual giving to this individual. For the
+comparison grant that direct edge, *s*'s essence–esse identity and *x*'s
+real reception. Even on a tenseless reading that admits an originating
+cause, no observation identifies the pion's essence with its esse. On a
+sustaining reading its disappearance is a further obstacle.
+[De ente, cap. 4, §69875](https://www.corpusthomisticum.org/oee.html#69875)
+· [First-source reconstruction](de-ente-esse-source-1628.md)
+· [Principal-giver supply](maximum-definition-fork.md#one-principal-giver-of-participated-existence)
+
+Apply the same test to both accounts: what positive actuality of each whole
+explains this very photon's existing, and what difference remains once its
+existence has been fully accounted for?
+
+| On the granted pair | Participation as an order of whole beings | Receipt with equal fulfillment of the respective natures |
+| --- | --- | --- |
+| What makes *x* actual? | *s* is actual through its own constituting act and gives esse to *x*. The receiving principle specifies the participant. The gift concerns the whole photon's existing, so the reason for preferring the source bears directly on esse. | The same gift fully actualizes this individual. Its dependence explains why it exists and why it cannot originate its own existence. While in flight *x* lacks nothing further in order actually to be this photon. |
+| What is unequal? | The source has in itself that by which it exists and can communicate actuality. In the recipient even the exercise of a positive power already draws on received act. The proposed excellence is intrinsic sufficiency in being actual, applicable to either bearer. | Intrinsic sufficiency distinguishes the two on the question *whence* each is actual. Fulfillment distinguishes an actually existing photon from an unrealized possibility on criteria supplied by its nature. Denying a further difference in degree leaves both that fulfillment and the direction of giving intelligible. |
+| What would the other account have to explain? | If degree measures actuality precisely insofar as a bearer has its constituting act through itself, a tie erases a real difference at the respect compared. A natural underived giver meeting the same conditions earns the same preference. | If degree measures actual attainment, selection of a higher grade requires identifying what positive attainment is contracted in this photon. Removing its receiving constitution would replace the individual. A tie in fulfillment alone also falls short of proving equality on a common scale across natures. |
+
+The partner gives a further check on what it means for the giver to preserve
+a perfection. Grant the same principal for both daughters. Their opposite
+momenta are actual together. A single physical bearer cannot have both as its
+own total momentum in the same frame at once. This rules out literal
+preservation of *every physical determination* in one source. The usual
+participation account has a principled reply. A directed momentum determines
+one mode of a corporeal being. Its precise value has no title to be a pure
+perfection. The reply preserves that account, but it also removes those
+values as witnesses of strict inclusion. A source which positively
+understands both directions could possess their intelligible content in one
+act. A source which produces the pair under a conservation law accounts for
+the same correlation without that understanding. Credit either source with
+production under the stated conditions. Credit either with understanding
+only on evidence that it actually grasps which daughter travels toward
+which detector. Conservation alone leaves this assignment invariant under
+exchanging the daughters' labels.
+
+I favor *s* in explanatory priority on the granted reading. I give the strict
+order of beings positive, qualified warrant from the fact that the same
+intrinsic act that constitutes *s* can account for the entire existence of
+another. The evidence for a higher intensity is weaker. Finite energy in
+*x* bounds neither everything actual about it nor anything energetic in
+*s*. Counting *s* as possessing every positive level simply because it
+causes *x* assumes the saturation premise under test. Intrinsic sufficiency
+could be one additional pure determination, but strict profile inclusion also
+requires preservation of the recipient's other admitted determinations.
+Even strict inclusion permits tied peak intensity. On explanatory priority
+the giver takes precedence given the direct gift and underived source. On
+energy the producer exceeds this photon in pion decay, whereas each input
+falls below its product in sum-frequency generation. Denying strict canonical
+MORE_1 at esse for *s* and *x* remains a substantive rival. Neither equal fulfillment nor causal priority alone
+decides that order. The earlier transverse-lock and reflective-recipient
+tests supply the same caution for capacity and explanatory understanding.
+[Accepted capacity test](../../corpus/arguments/bda1d345-a299-4595-bbf1-bb92374aebab.json)
+· [Measured comprehension](../../corpus/attempts/57d7b850-f476-4cb6-9e2a-3920ff006f92.json)
+
+**Consequence for maximality and naming.** The result sharpens which premise
+would do the work on the actual identity-source route (`8176a284`):
+nature-bound pure levels (`79dce8d6`), a realized crossing in that giver
+(`b4caa738`), common calibration (`6ab848a8`) and the degree-to-more bridge
+at esse (`9eaa3b6e`). The common-source consumer `47efe91a` retains its
+other premises, including composition. A proposed replacement using an
+underived anchor and the universal reach of *every maximum* still needs an
+independent warrant for that reach. A grant about *s* and this photon alone
+cannot supply it. In #1936 a distinct God would give
+esse **to** the attained maximum. Direct exclusion there can settle the
+identification; the version deriving exclusion by ascent still needs that
+ascent. The alternative from prohibited mutual existential dependence
+requires neither degree nor a maximum. These routes allow an empty God
+predicate. In #1938 the maximal universal giver gives esse **to** the
+already actual God candidate. It is superiority on that edge that conflicts
+with the candidate's maximality. The registered route retains `d5a94eb1`;
+using identity-scoped ascent there would additionally require identifying
+that giver as an identity bearer. Neither conversion direction supplies
+forward naming, represented perfection or goodness. [Consumer proofs and their respective premises](root-route-modal-load.md#6-which-causal-reach-do-the-attributes-need-1937)
+
+**Next discriminating test.** Hold *s* and this *x* fixed. Compare the act by
+which *s* understands this photon's determinate existence with its act of
+understanding the partner as a distinct individual. Predict what evidences
+grasp of the particular rather than a description satisfied by either
+daughter (opposite outgoing directions give a real distinction at equal rest-frame
+energies). On the proposed simple source, ask whether one act fully comprehends
+each and whether its measure exceeds the first object's *knowability*, the upper
+bound relevant to the measured-comprehension route. Knowing two truths can
+leave the intensity of one act unchanged. Mere ability to produce the
+correlated pair supplies no evidence of actually grasping either individual.
+Evidence for exhaustive grasp of *x* at the same measure would strengthen
+the weak bound; independent evidence of a source act above that ceiling and
+calibration to whole-bearer esse would strengthen strict ascent. This tests
+the substantive-eminent possession premise at this recipient without ranking
+more photons or repeating the conditional ceiling proof.
+
 ## Research attempts citing this note
 
+- [Comparative ascent at a fixed giver and recipient, including the physical ceiling test](../../corpus/attempts/round2-perfection-primacy.json)
 - [Can a whole unreceived act be absent? Joint omission, necessary population and individuation](../../corpus/attempts/71514b8a-b9a0-4745-a5e2-96a09c404a61.json)
 - [Comparing a reflective recipient and its giver on the grounds of their own present esse](../../corpus/attempts/0299cc44-5678-4dc9-9a7a-999efb640fba.json)
 - [Could a strictly ungrounded absence be recognized from a world or a dependent effect?](../../corpus/attempts/125af754-1a18-4be9-850e-8cad1a83837e.json)
