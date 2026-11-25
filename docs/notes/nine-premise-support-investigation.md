@@ -328,3 +328,32 @@ when there is a root and another actual bearer. The relative weakness of the
 infinite forwarding account appears only where throughput and the one-way
 transfer are independently fixed. Whether existential dependence bears those
 features remains open. [Infinite model](distinct-dependence-strict-ground-route.md#the-infinite-series-at-the-efficient-cause-consumer) · [Whole argument, competing accounts and reopening test](contractive-borrowed-power-1378.md#can-an-infinite-series-explain-a-one-way-transfer-by-forwarding-alone)
+
+### What a proposed first source explains in three matched tests
+
+The participation argument can rank one giver above or level with each
+recipient while leaving the relay’s balance open when it receives from an
+upstream giver and gives to multiple recipients. For the receipt-count argument,
+one selected transfer must have no return path, and the selected exports from
+all bearers reaching its sender must be finite. With those conditions, counting
+distinct receipts gives a conditional route to a grounding root even without
+numerical distances between grades. Its live application premise says that
+each grounded giver's selected exports can be matched to distinct receipts.
+A retained form can guide repeated productions after a single acquisition;
+any application to esse needs a reason to exclude that pattern in its own
+respect. [Calibration, positive matching argument and its rival](contractive-borrowed-power-1378.md#do-degrees-of-being-give-an-independently-warranted-measure-of-transfer)
+
+A necessary whole could itself be the root. The restriction argument reaches
+a distinct cause of this very whole where an independently identified
+perfection of being is absent and the fullness, reception and causal premises
+hold. Internal role differences alone do not exhibit the required absence.
+Likewise an iron tracer identifies material in one child's actual nourishment.
+An account that grounds this child's being still owes a connection to the
+activity that maintains its nutritive organization. An impersonal foundation
+with substantive norms can explain the specified good and assign a caregiver's
+duty under a responsibility principle. The tracer supplies no reason for
+attributing rational governance to the ground. The case for a personally
+intellectual first source turns on the source's own grasp and productive
+exercise, beyond having supplied material or ranked above an effect.
+[Whole-first test](priority-monism-framework.md#can-a-necessary-wholes-essential-differences-identify-a-receiver-of-its-esse-1811)
+· [Moral and material source test](wielenberg-making-account.md#does-a-childs-actual-nourishment-identify-its-underived-source-1812)
