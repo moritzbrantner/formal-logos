@@ -1,18 +1,24 @@
 {
   "id": "69a4a681-8caa-4b34-8fc4-84d8ae522e7b",
   "label": "Separated witnesses for existence, meaning, thought, experience and belief",
-  "date": "2026-11-11",
+  "date": "2026-11-25",
   "statement_ids": [
     "4ef2306a-42b9-442f-a774-674a2ab5e024",
     "82441670-8398-47fe-b0d8-b979bef07f87",
     "aee6dbdf-3d1b-444c-b28e-effe7bcc4dfe",
     "b1f30c51-eb79-43a1-891c-e7d180be2ec3",
     "e81971f1-601c-57f5-be2d-c4b0624d0cad",
-    "f56b2ee7-c69e-5e3b-85b0-e671d907ba58"
+    "f56b2ee7-c69e-5e3b-85b0-e671d907ba58",
+    "77e57686-d710-4505-9272-589cf5af6fe8",
+    "ac0a151f-a023-4e54-8c38-2feec136df1d",
+    "0315d471-5093-59e3-a435-b7beff4c48a4",
+    "a7040bf1-b15a-5ffb-b096-6b60411a066e",
+    "c821487b-9c5e-5836-bf27-dcb47f210c94",
+    "56f68b40-9737-59a0-8cac-5610980a1547"
   ],
   "kind": "derivation",
   "outcome": "succeeded",
-  "summary": "Analyst reconstruction, attribution deferred. The actual assertion and local realization premises produce the existing positive Cogito witness. Transport to existence needs a faithful episode representative in the selected existence extension. Transport to experience needs phenomenal classification of the realizing episode. A meaningful instance requires the local assertion-to-meaning bridge. A sincere assertion of the no-beliefs denial supplies a belief in its own content. The omission interpretations reject unconditional upgrades from markers to meaning or thought, from thought or represented existence to experience, and from assertion or even F6 with reason for the same denial to actual belief. The F6 control concerns the thin relation only. This evidence favors conditional, sense-matched self-defeat over the unrestricted claim that any attempt at denial guarantees the corresponding actual witness.",
+  "summary": "Analyst reconstruction, attribution deferred. The actual assertion and local realization premises produce the existing positive Cogito witness. Transport to existence needs a faithful episode representative in the selected existence extension. Transport to experience needs phenomenal classification of the realizing episode. A meaningful instance requires the local assertion-to-meaning bridge. A sincere assertion of the no-beliefs denial supplies a belief in its own content. The omission interpretations reject unconditional upgrades from markers to meaning or thought, from thought or represented existence to experience, and from assertion or even F6 with reason for the same denial to actual belief. The F6 control concerns the thin relation only. This evidence favors conditional, sense-matched self-defeat over the unrestricted claim that any attempt at denial guarantees the corresponding actual witness. In the #1007 follow-up the experienced thought instantiates a bearer premise scoped to experienced thoughts. A separate consumer combines the resulting single borne episode with the existing concreteness and world-existence bridges. A checked two-episode interpretation differentiates this route from the all-thought bearer principle. The original Cogito instantiation also feeds the consumer. Both formerly disconnected results now reach concrete population on the direct-esse route. See docs/notes/self-undermining-views.md for the provisional judgment and its revision condition.",
   "evidence": [
     "0c9d64e6-e29f-4b47-b974-5f38c1beb0eb",
     "2f466ae8-d226-4e3f-a8ff-8579bf8f645a",
@@ -20,7 +26,29 @@
     "46c875b1-286f-4bfb-a1c9-cd66acbfc7f6",
     "bec15d81-9f10-4b58-a280-2da08ef0c7ac",
     "cc1a4204-1315-46a8-bf0a-ac436b06b790",
-    "PR-1422"
+    "PR-1422",
+    "06ce17e9-ad97-487b-8bf4-e4e8d098dd38",
+    "6801590a-5ed5-4c90-bc85-2e72621ed0e0",
+    "d2cb9100-2980-5e83-a278-294346f7fb93",
+    "PR-1979"
   ],
-  "blocker": "For actual-world application identify an actual assertion, show its mental realization, and defend the relevant local interpretation. Cognitive meaning retorsion needs the selected content to express the denial in the same domain. Existence in re and the adopted esse contract remain separate for concrete root population. F6 supplies no reason-to-belief bridge; an independently warranted actual uptake premise would reopen that route."
+  "blocker": "For actual-world application identify an actual assertion, show its mental realization, and defend the relevant local interpretation. Cognitive meaning retorsion needs the selected content to express the denial in the same domain. Existence in re and the adopted esse contract remain separate for concrete root population. F6 supplies no reason-to-belief bridge; an independently warranted actual uptake premise would reopen that route. To assess the phenomenal bearer premise, compare a first-person attribution with an impersonal event account on the same episode, allowing a momentary bearer. The next distinct cluster is represented existence under the PSR world predicate. Its bare population specialization leaves the concrete classification of that representative open.",
+  "current_assessment": {
+    "date": "2026-11-25",
+    "statement_ids": [
+      "77e57686-d710-4505-9272-589cf5af6fe8",
+      "ac0a151f-a023-4e54-8c38-2feec136df1d",
+      "0315d471-5093-59e3-a435-b7beff4c48a4",
+      "56f68b40-9737-59a0-8cac-5610980a1547"
+    ],
+    "scope": "Issue #1007. The experienced denial and the original Cogito as routes to concrete population at the selected world.",
+    "assessment": "When the conscious episode presents the denial that any thought is experienced, its first-person presentation gives defeasible reason to ascribe that very thought to a bearer. An impersonal-event account can locate the perspective in the episode’s organization. Universal bearer coverage remains open. Either verified route supplies the same bearer and episode to the concrete-population inference under its classification and existence premises.",
+    "next_test": "Compare first-person attribution and an impersonal-event account on the same episode, allowing a momentary bearer. For the separate represented-existence result, test whether the representative witnesses the PSR world-population predicate.",
+    "note": "docs/notes/self-undermining-views.md#which-thought-supplies-the-concrete-population-premise-1007",
+    "reviewed_revision": "c5ffb86f9e876ed920f1709cc58c86fb87513144",
+    "review": "accepted_qualified",
+    "publication": "published",
+    "evidence": "Independent review accepted the formal connections and controls at 1fa4120deecb15748d9d4d95ad0f42f5fc7d1248. The targeted recheck at the reviewed revision accepted the corrected same-thought example, surviving impersonal alternative and limitation on universal coverage.",
+    "supersedes": "Adds the reviewed concrete-population application to the earlier witness analysis; the other denial cases retain their scope."
+  }
 }

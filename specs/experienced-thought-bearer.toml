@@ -1,0 +1,29 @@
+[batch]
+vocab = "TruthCore.Logic.ExperiencedThoughtBearer"
+results = "TruthCore.Results.Logic.ExperiencedThoughtBearer"
+
+[[statement]]
+id = "Every phenomenally experienced occurring thought has a bearer"
+lean = "ExperiencedThoughtsHaveBearers"
+definitions = ["Phenomenal occurrence among supplied episodes", "DEF-THOUGHT-OCCURRENCE", "DEF-THOUGHT-BEARER"]
+paraphrase = "OPEN analyst premise. For each thought episode that occurs and is phenomenally experienced, some subject bears that episode. The bearer may vary with the episode. Unexperienced thoughts fall outside this requirement."
+
+[[argument]]
+id = "A thinking subject from experienced thought and phenomenal bearer coverage"
+theorem = "subjectOfExperience"
+transcription = "instantiation"
+comparator_theorems = ["bearerScopeControl"]
+premises = ["Some occurring episode is phenomenally experienced", "Every phenomenally experienced occurring thought has a bearer"]
+conclusion = "STMT-COGITO-SOME-THINKING-SUBJECT"
+rule = "Existential instantiation on the experienced episode"
+meaning = "Transcription (instantiation). With Occurs interpreted as thought occurrence throughout, take the occurring experienced episode, obtain its bearer under the local principle, and retain that same episode in the thinking-subject witness. The control has two occurring thoughts and restricts both experience and bearing to one. The all-thought bearer principle fails there. Emptying the bearer relation leaves the same phenomenal occurrence without a thinking subject."
+
+[[argument]]
+id = "CONCRETE_AND_ABSTRACT_6 population from an already witnessed thinking subject"
+theorem = "populationOfThinkingSubject"
+premises = ["STMT-COGITO-SOME-THINKING-SUBJECT", "STMT-COGITO-BEARER-IS-CONCRETE", "STMT-COGITO-BEARER-EXISTS-AT-WORLD"]
+conclusion = "STMT-COGITO-INHABITED-CONCRETE-WORLD"
+disambiguations = ["16ea77ae-4ec7-59e4-8474-10f04efb5ddf"]
+sense_bridges = [{term = "A_THOUGHT_OCCURS_VERSUS_SOMETHING_CONCRETE", from = "A_THOUGHT_OCCURS_VERSUS_SOMETHING_CONCRETE_1", to = "A_THOUGHT_OCCURS_VERSUS_SOMETHING_CONCRETE_2", statement_id = "STMT-COGITO-BEARER-IS-CONCRETE"}]
+rule = "Conjunction at the witnessed bearer"
+meaning = "Eliminate the positive Cogito witness. Apply the two existing bridges at its bearer and occurring thought, giving both concreteness and existence at the selected world for one candidate. This consumer accepts a single borne episode even if other occurring thoughts have no bearer. It does not identify the candidate with the speaker, episode or its representative."
