@@ -740,3 +740,216 @@ The earlier diagnosis of no discovered mechanism defeating the *bare occurrence'
 **Next discriminating proposition:** does genuine epistemic support require the subject to have a further justified belief certifying the support relation, even when the subject directly apprehends the relevant occurrence and grasps its bearing? Compare the actual directly recognized instance against a concrete misleading higher-order assessor. Investigate the weakest possible credential principle, whether an already understood rule requires further independent application credentials, and whether the critic who imposes the credential requirement can coherently give a belief-directed reason for accepting it while denying all reasons. Reuse `LOGIC-JUSTIFICATION-INTROSPECTION` and the existing regress and rational-basing families; no automatic epistemic-to-ontic PSR transfer. Do not re-prove a general regress theorem or treat a surviving infinitist as reasonless. If the critic grants ordinary local epistemic reasons but disputes force for indifferent subjects, reallocate that stronger question to the existing #930 investigation.
 
 The downstream paths remain those already named: `6b4e3331` or the local ordinary-role/reverse-presentation application to F6, then `b50727e1` with `ada25623` and `0436de86` to concrete population `56f68b40` and `72391d4d`. The broader phenomenal occurrence interpretation is not a premise of the thought-specific bearer consumer. No new graph registrations, claims, definitions, floor markings or root discharge. The fourth checkpoint is explicitly unreviewed. No independent semantic challenger or prepared clone was available; local `git ls-remote` failed DNS and Lean/Lake/Cargo are absent. Run the existing preflight, including `truth context LOGIC-CONTRASTIVE-WORLDVIEW`, `truth context LOGIC-JUSTIFICATION-INTROSPECTION`, `truth context REGRESS-SCHEMA-PACKAGE`, and `truth novelty "higher-order report defeat versus directly presented existential and partial access"`, before any registration. Independent challenge should test the same subject and evidence across the profiles, the mixed-channel independence premise, the zero-mass boundary and the difference between support and normative force. Keep #1995 draft; no merge.
+
+
+## Continuation: must a reason have a further justified credential?
+
+2026-11-25, fifth checkpoint from `ed293a1318e21a47b24be5ab518dbc0a2e5cb0f1`. Target: whether an actual pro tanto reason requires a further justified belief certifying that it is a reason. Reuse the fixed F6 sense, not a categorical ought or the stronger notion of justified belief. Relevant prior work: [rational basing](epistemic-underminer-boundaries.md#rational-basing-the-particular-transition-must-exercise-the-capacity), [introspection](carneades-epistemology-introspection.md), [externalist entitlement](externalist-entitlement-and-regress.md), [Agrippa](agrippa-justificatory-adequacy.md), [infinitism](infinitist-justification-adequacy.md), and [self-certification](reading-only-self-certification.md). The earlier studies already establish the structural regress and knowledge-introspection boundaries; the present work tests the interface from *belief-directed reasons* to actual credential requirements, with the direct occurrence case as its positive warrant. No new historical attribution.
+
+### 1. The credential demand has several importantly different strengths
+
+Consider an actually experienced, competent inquiry into whether any phenomenal occurrence exists. Its presented occurrence is an instance of the existential Q; its truth does not require correct representation of a different object. The person might recognize that bearing before explicitly considering whether they have a reason, whether their reason is sufficient, or whether their cognitive method is reliable. Contrast this with an automatic verbal marker. The latter can reproduce the same answer without the relevant evidence or uptake.
+
+The strongest objection is not that metacognition is generally useful. It is that a consideration cannot be an epistemic reason for a subject unless the subject has already earned the epistemic right to employ it. A credible higher-order assessor can undermine the subject's confidence in a procedure or in the classification of the evidence. The proponent may therefore demand justified recognition of a reason's status. The following distinctions determine what that proposal actually entails:
+
+| Proposed condition on a reason | What it requires | What it does not entail |
+| --- | --- | --- |
+| Availability | The relevant consideration is accessible or appropriately available to the subject. | Explicit belief that it is a reason. |
+| Understanding / competent grasp | The subject recognizes its bearing on the question, possibly by exercising a capacity rather than forming a separate judgment about support. | A further proposition about epistemic status. |
+| Explicit metabelief | The subject believes a content certifying this consideration's support for this target. | Justification of the metabelief or independent prior support for it. |
+| Justified metabelief | That very credential belief is justified. | That its justification is inferential, has another belief-directed reason, or is independently prior. |
+| Reason-supported credential | An epistemic reason supports believing the credential. | An acyclic or well-founded ordering of these reason instances. |
+| Independently prior reason-supported credential | A genuine reason for the credential stands strictly prior in a supplied epistemic order to the reason being certified. | Well-foundedness of that order; it may descend indefinitely. |
+| Well-founded independently prior credentialing | The previous demand is imposed universally and the dependence is well-founded. | Compatibility with F6, as shown below. |
+
+These are selected distinctions, not a claim of a linear strength order among every theory of access or a historical school classification. In particular, some availability accounts need not require conscious understanding; some justified-metabelief accounts allow simultaneous support or a prior standing credential. A justified belief need not be true unless factivity is added. A true general belief about the reliability of a faculty does not guarantee the epistemic merit of each particular token. Neither a mere lack of reflective knowledge nor lack of an ability to verbalize one's reason establishes the absence of a reason. The existing `LOGIC-JUSTIFICATION-INTROSPECTION` result (`901bfc2f`) supplies a factive nontransitive control for higher-order ignorance with first-order justification; it does not itself establish or refute a reason-specific credential requirement.
+
+A further distinction concerns **possession versus employment**. A reason may be available without assent, use, actual belief or awareness of its sufficiency. A demand that one check credentials *before relying on* a belief in a high-stakes inquiry is a different condition from saying that no reason exists before the check. Evidence could supply a reason to check a method in the first place. Keep the proposed necessity precisely on the epistemic status the proponent intends.
+
+### 2. F6 and the exact strict-credential incompatibility
+
+Fix a subject. A reason instance is a consideration and a belief-content, not merely a content or a physical source. Use the existing `EpistemicReasonDefinitionFork.Frame.CountsAsReason a r (f.believe p)` to identify such an instance, and `ConsiderationPresentation` to relate this to thin `Reason a p`. A new credential proposition c is required to concern that very subject, consideration and target, not merely some reason somewhere. The fact that c is believed, justified, or supported by another consideration s remains separate. Let v=(s,c) be the reason instance for the credential and u=(r,p) the original instance.
+
+Separate the proposed inputs:
+
+- **C (universal credential)**: every actual belief-directed reason instance u has a believed and justified content c which certifies u. This is the higher-order requirement under investigation, not an accepted definition of reason.
+- **T (transmission to a prior reason)**: for such a credential, there is an actual belief-directed reason instance v for believing c, and v is strictly prior to u in the relevant epistemic dependency. This combines a reason-for-credential condition with a priority condition. Even if one believes that justification always has reasons, independent priority is an additional claim. Distinguish these in any future registered fork.
+- **W (well-foundedness)**: the selected priority relation has no inaccessible dependence, in the precise `WellFounded` sense. This is a premise about the reason-dependence interpretation, not a general consequence of F1 or F6. No causal or temporal PSR follows.
+
+Under C and T, each actual reason instance has a predecessor which is itself an actual reason instance of the *same* subject. Under W there cannot be any such instance. Proof: well-founded induction; assume an instance u is active. C supplies the justified credential c, T supplies an active predecessor v. By the induction hypothesis no predecessor is active, contradiction. Consequently the following is a **conditional incompatibility**:
+
+    F6 ∧ ConsiderationPresentation ∧ C ∧ T ∧ W.
+
+With F6 and the presentation fixed, at least one of C, T, W must fail. One can fix W only on a closed selected dependency subdomain containing the reason witness and all its required prior credential reasons. Without that closure, the reasoning does not exclude a credential reason outside the subdomain. If W and T are retained, C fails: there is no consistent universal demand that every reason be independently certified in this manner. This is not the stronger proposition that some reason is independent of all epistemic grounds, or that all knowledge has an irreducible foundation. A basic reason has an available ground; independence from a further credential is not being groundless.
+
+The proof uses the well-founded induction pattern already present in `TruthCore.Logic.Regress.Graph.controls_of_wellFounded` and `REGRESS-SCHEMA-PACKAGE` (`74e00870`). No need for a second structural regress library. The new work is the same-instance epistemic interface and the exact open requirements. A possible local Lean application, **proposed only, not elaborated or registered**:
+
+```lean
+import TruthCore.Logic.EpistemicReasonDefinitionFork
+import TruthCore.Logic.Regress
+open TruthCore.Logic.EpistemicReasons
+open TruthCore.Logic.EpistemicReasonDefinitionFork
+
+example (f : Frame)
+    (Believes Warrant : f.Agent → f.Content → Prop)
+    (Certifies : f.Agent → f.Content → (f.Consideration × f.Content) → Prop)
+    (prior : f.Agent → (f.Consideration × f.Content) →
+      (f.Consideration × f.Content) → Prop)
+    (hPresent : ConsiderationPresentation f)
+    (wf : ∀ a, WellFounded (prior a))
+    (credential : ∀ a r p, f.CountsAsReason a r (f.believe p) →
+      ∃ c, Certifies a c (r,p) ∧ Believes a c ∧ Warrant a c)
+    (transmit : ∀ a r p c, f.CountsAsReason a r (f.believe p) →
+      Certifies a c (r,p) → Believes a c → Warrant a c →
+      ∃ s, f.CountsAsReason a s (f.believe c) ∧ prior a (s,c) (r,p)) :
+    ¬ ThereAreEpistemicReasons f.Reason := by
+  rintro ⟨a, p, hp⟩
+  obtain ⟨r, hr⟩ := (hPresent a p).mp hp
+  have no (x : f.Consideration × f.Content) :
+      ¬ f.CountsAsReason a x.1 (f.believe x.2) := by
+    induction (wf a).apply x with
+    | intro y _ ih =>
+      intro hy
+      obtain ⟨c, hc, hb, hw⟩ := credential a y.1 y.2 hy
+      obtain ⟨s, hs, hprior⟩ := transmit a y.1 y.2 c hy hc hb hw
+      exact (ih (s,c) hprior) hs
+  exact no (r,p) hr
+```
+
+The type keeps the same witness, target and agent, and does not assert factivity or sufficiency of a credential. `Certifies` is an explicitly interpreted relation; the theorem does not establish that any actual content has this meaning. The proof would show incompatibility under its hypotheses, not a metaphysical fact that actual credential dependence is well-founded. The former `6b4e3331` (surviving basis counts as a reason) and `b3ddb7c4` (reasons from warranted acceptance and specified calibrations) are relevant but do not imply T's independent priority. No reverse inference from full warrant to a further justified metabelief is made.
+
+There is also a narrower finite-episode consequence that does not need an all-history well-foundedness thesis. If the rival requires a prior **actual use** of a reason for a credential before every actual use of a reason, and requires those earlier uses to occur in the same finite closed review trace, then a nonempty trace is impossible. Its earliest reason-use cannot have a prior reason-use within the trace. This is a direct finite minimality argument; an infinite sequence of dispositions or reasons that could be supplied on demand does not satisfy an actual-prior-use requirement. It does not follow that an actual subject has no standing reasons before the trace, that there is a first belief in their lifetime, or that a finite duration excludes infinitely many events. A standing credential from outside the trace is a genuine escape from this *local* obstruction, not proof of its own adequate support.
+
+### 3. Why the distinct-credential demand alone is not a regress proof
+
+The finite controls below show that serial dependence plus a nonempty active set requires a cycle in a finite carrier. Requiring each credential reason to be numerically distinct removes the self-loop but not a cycle of length two or more. These graphs are structural surrogates. A cycle of edges between reason instances need not be semantically realizable by claims which literally and separately certify each predecessor; that requires a content interpretation, and a cycle alone is not an adequate coherentist account.
+
+There is another difference between recursive propositional content and epistemic priority. If every certification must be a distinct, explicit higher-order content which embeds its certified content as a proper subexpression, ordinary finite syntax forces strictly increasing syntactic depth along the sequence. An infinite succession of available contents is then required by unrestricted repeated certification of even one reason. But this result uses the strict content-embedding requirement; a general rule about reasons can cover multiple instances and a belief about its applicability may be implicit or standing. The same general content might be used to certify several reason instances. The mere word "higher-order" does not establish syntactic increase, distinctness, or strict dependence. Syntactic growth is also not epistemic viciousness by itself: an infinitist can grant reasons of increasing depth without requiring occurrent construction of infinitely many beliefs.
+
+A more modest credential theorist can accept a standing general principle with local recognition of its application. The decisive question is whether they still require *another actual justified belief about reason status* at every application, or whether the standing principle and the subject's operative grasp suffice. The latter may be a genuine competence/access account rather than a strong explicit metabelief requirement. Do not force it into the strict-regress branch.
+
+### 4. A direct ground is not an arbitrary stopping point
+
+The Agrippan concern remains: why allow one endpoint but not its contrary? There is a positive difference between stopping with a bare proposition and stopping with the presented instance in the present inquiry.
+
+Use the earlier actual list of seven research labels and the selected visible item 1991. The narrow proposition "the displayed list is nonempty" follows from an identifiable displayed member. One need not first prove a general theory of testimony, certify every previous observation, or already believe "my observation constitutes an epistemic reason" in order to inspect that member. If the issue is whether the labels correctly report an actual repository's state, those further empirical questions matter; for the claim about the displayed collection itself, the member is directly relevant. The still weaker phenomenal case avoids dependence on the external text's reliability: an actual experienced instance satisfies the present existential whether its represented content is true or false.
+
+Compare two candidates: (i) the bare assertion that the list is nonempty with no presented member, and (ii) an identifiable actual member in the designated collection. The epistemically relevant difference is not that one assertion was labeled an axiom or is psychologically compelling. The latter gives a truth-condition witness for the existential. In the phenomenal case, preserving the actual experience while denying all experience removes the very witness that has been retained. The positive evidence thus discriminates the conclusion from its contrary in the same scope. This answers the equal-standing concern **for this ground**, not the sufficiency or ultimate justification of every basic belief.
+
+For the competent inquiry, actual recognition of the evidence's bearing is distinct from forming a justified separate belief about the epistemic status of that recognition. The rational-basing investigation already motivates the operative, content-guided exercise of a capacity as a positive account (and contrasts it with automatic association and bypass). A person can inspect the member, understand membership and infer the existential without articulating an epistemology. Their performance is evidence of an operative competence. The stronger rival may attribute an implicit metabelief even if they never articulate it. Lack of articulation alone does not refute that reading. To discriminate, ask whether the alleged metabelief has a separately assessable content and epistemic role: can its absence, suspension or acquisition vary while the same first-order evidence and competent grasp remain? If "implicit certification" simply means that the subject is able to apply the rule competently, the proposal has weakened to the grasp condition rather than demonstrated the necessity of a further justified belief. A nonconceptual sensation alone still does not show a propositionally available reason.
+
+A **general** credential ("this method correctly recognizes instances of Q") does not supply an instance. A **factive specific** evidential certificate ("this presented instance is an actual instance") can entail Q, but its relevance depends on the actual instance, not just on the independent fact of holding a credential belief. In this case there is a noncircular way for the same direct ground to support both the object conclusion and a judgment about its evidential bearing: the latter can arise from grasp of the presented instance and the existential rule, rather than inference from one's already held conclusion Q or an assumed justifiedness of that conclusion. That does not automatically justify the further normative proposition that the instance genuinely counts as a reason. Nor does it show that a separate explicit credential is always irrelevant. Shared evidence is not in itself circular epistemic dependence; a certificate whose only purported ground is the very unearned epistemic status it is supposed to confer presents a different problem. Applying the demand to an actual subject requires evidence about their actual basis and not just which statements are coextensive.
+
+This is the positive basis for the modest foundational claim: **a directly available instance can provide first-order pro tanto merit without a separately established metabelief about that merit**. The conclusion is a direct evaluative warrant judgment within the ordinary truth-directed reading, not a theorem from the semantic entailment alone. It does not assert that the subject always has sufficient warrant for assent, that a higher-order report never defeats access, or that every ultimate reason is noninferential. It preserves the prior #930 dispute over preference-independent force.
+
+### 5. Strongest surviving rivals and the self-application pressure
+
+- The reflective internalist can require justified recognition of one's grounds *for full rational acceptance*, yet allow the underlying pro tanto merit or standing reason to precede it. This is compatible with F6 and with the local case. Requiring a credential for sufficient warrant need not be a credential requirement for possessing every reason.
+- A stronger internalist may require the credential even for a genuine reason, but let the credential be noninferentially justified without an independently prior reason instance, or give it support simultaneously from the same directly available evidence. This rejects or weakens T, not F6. It still owes an account of why such a credential is necessary beyond the competent grasp.
+- An infinitist can retain C and T while denying W; potential availability of further reasons is not an actually completed finite trace. Their positive account of reason enhancement cannot simply be equated with independent prior certification of each reason. See the existing infinitist study; neither its structural compatibility nor the above proof settles adequacy.
+- A holistic account may give mutually dependent judgments standing from a specified nonlocal condition. This is not the assertion that a closed cycle of opaque reason labels confers warrant by itself. It must explain what distinguishes appropriate coherence from an equally coherent contrary belief system. Our controls test only seriality and cycle, not the adequacy of that account.
+
+The skeptical proponent cannot use C and T and W to conclude **global** reasonlessness while simultaneously conceding a genuine reason to believe C, T, W, their conjunction, or that conclusion. Any such reason is already an F6 witness; their own norm must then cover it if the scope is genuinely universal. This is the existing nihilism incompatibility (`146b502b`) plus the new explicit antecedent bundle, not an unconditional contradiction in the mere act of entertaining a view. A reason merely to suspend, a causal story about why someone withholds, or a restricted credential requirement for a particular kind of empirical report can survive. If the proponent exempts their own reason from the universal credential rule, that is a concrete scope concession, not by itself a refutation of a restricted rule. If they concede a reason but deny independent priority or well-foundedness, the incompatibility does not select which of those claims fails.
+
+The principal insight is not an unrestricted trilemma about all justification. It is that the universal strong demand cannot both **explain away every reason** and **be rationally warranted by a belief-directed reason** within a well-founded prior-credential interpretation. This gives a separate discriminating application of F6. The direct-occurrence case supplies positive warrant for not imposing that demand on every reason; a strong credential theorist can still reject that local normative attribution. The thin reason judgment is more defensible than the claim that every justified belief is basic or that every epistemic standard is universally binding.
+
+### 6. Reproducible structural controls (actually executed)
+
+```python
+from itertools import product
+
+# Each node represents a reason instance of one subject. An outgoing edge is
+# an independently supplied credential whose justified content has this reason.
+# An edge between active reason nodes is the combined credential/justification
+# link, not by itself a semantic certificate of either reason.
+def inspect(n, edges, active):
+    successor = lambda i: {j for j in active if (i,j) in edges}
+    serial = all(successor(i) for i in active)
+    distinct_serial = all(successor(i)-{i} for i in active)
+    cycle = False
+    for i in active:
+        frontier = set(successor(i)); reached = set()
+        while frontier-reached:
+            v = frontier-reached
+            reached |= v
+            frontier |= set().union(*(successor(j) for j in v))
+        cycle |= i in reached
+    return serial, distinct_serial, cycle
+
+profiles=serial_nonempty=distinct_nonempty=acyclic_nonempty=0
+for n in range(1,4):
+    E=tuple(product(range(n), repeat=2))
+    for bits in product((False,True),repeat=len(E)):
+        edges={e for e,x in zip(E,bits) if x}
+        for flags in product((False,True),repeat=n):
+            active={i for i,x in enumerate(flags) if x}
+            serial,distinct,cycle=inspect(n,edges,active)
+            profiles+=1
+            if active and serial:
+                serial_nonempty+=1
+                assert cycle
+            if active and distinct:
+                distinct_nonempty+=1
+                assert cycle and serial
+            if active and not cycle:
+                acyclic_nonempty+=1
+                assert any(not any((i,j) in edges for j in active) for i in active)
+print('finite dependency profiles:',profiles,'serial:',serial_nonempty,
+      'distinct serial:',distinct_nonempty,'nonempty acyclic:',acyclic_nonempty)
+assert inspect(1,{(0,0)},{0}) == (True,False,True)
+assert inspect(3,{(0,1),(1,2),(2,1)},{0,1,2}) == (True,True,True)
+assert inspect(3,{(0,1),(1,2)},{0,1,2}) == (False,False,False)
+
+trace_cases=0
+for n in range(1,11):
+    for flags in product((False,True),repeat=n):
+        uses=[i for i,x in enumerate(flags) if x]
+        if not uses: continue
+        earliest=uses[0]
+        assert not any(j<earliest for j in uses)
+        assert not all(any(j<i for j in uses) for i in uses)
+        # A prior standing credential outside the trace is a local escape.
+        assert all(any(j<i for j in [-1]+uses) for i in uses)
+        trace_cases+=1
+print('nonempty finite use traces:',trace_cases)
+
+status_cases=0
+for rq,bc,jc,rc in product((False,True), repeat=4):
+    justified_belief=bc and jc
+    require_credential=not rq or justified_belief
+    j_requires_reason=not justified_belief or rc
+    if rq and require_credential and j_requires_reason:
+        assert rc
+    if rq and not bc:
+        assert not require_credential
+    if rq and justified_belief and not rc:
+        assert require_credential and not j_requires_reason
+    status_cases+=1
+print('credential status cases:',status_cases)
+
+# General method validation and a presented instance have different truth
+# conditions. The specific factive evidential certificate is NOT a normative
+# reason attribution.
+worlds=[(q,v,a) for q,v,a in product((False,True),repeat=3) if not a or q]
+assert len(worlds)==6
+Q=lambda w:w[0]; V=lambda w:w[1]; A=lambda w:w[2]
+C=lambda w:V(w) and A(w)
+assert {Q(w) for w in worlds if V(w)}=={False,True}
+assert all(not A(w) or Q(w) for w in worlds)
+assert all(not C(w) or Q(w) for w in worlds)
+assert any(A(w) and not V(w) for w in worlds)
+assert any(V(w) and not A(w) for w in worlds)
+print('method/instance profiles:',len(worlds))
+```
+
+Executed with Python in the container: 4,164 finite dependency/active-set profiles, including 2,001 nonempty serial profiles (every one cyclic), 604 nonempty distinct-serial profiles (every one cyclic), and 1,101 nonempty acyclic profiles (every one has an active instance with no active credential successor). The 2,036 nonempty finite trace tests, 16 status assignments and six method/instance profiles passed. Counts include repeated active subgraphs within different carrier/edge assignments and are not distinct philosophical positions or research merit. The structural status controls explicitly assign the relevant normative fields; they do not establish any actual justified belief or actual agent. The trace test omits actual credential content and proves only the rank boundary for a finite closed prior-use roster. The six profiles allow actual instances without method validation and vice versa, not actual reason attribution absent a disputed calibration.
+
+### 7. Assessment, downstream and next discriminating question
+
+**Provisional assessment:** reject the unrestricted *independently prior reason-supported credential* requirement as a necessary condition for every reason if F6 and a well-founded credential interpretation are retained. The weaker requirement of competent access may be defensible without introducing another belief. The unrestricted justified-metabelief requirement alone has not been deductively refuted: one can allow basic metajustification, simultaneous or holistic support, or an infinite credential structure. The stronger positive warrant in the selected direct case comes from the actual instance discriminating the existential from its denial and the content-guided exercise of competence. It gives a concrete non-arbitrary stopping candidate; it does not prove that every foundational belief is justified or that the only adequate epistemology is foundationalism.
+
+The next decisive proposition is **whether direct recognition of the bearing of an actual presented instance itself provides a noninferential entitlement to treat that instance as a reason, without a prior justified metabelief**. Compare operative rule-grasp with a separately representable implicit credential on the same episode; require the latter to explain an independent epistemic contribution, not merely rename competence. A concrete misleading assessor can motivate checking one's access, but a reason to check and a reason for the existential may coexist. Distinguish prima facie support, all-things-considered justification, and the reason's own source from reasons to believe propositions about that source. The actual first-person application and independent challenge remain required before relying on the local judgment as reviewed support. If the credential theorist accepts the local reason and only disputes preference-independent force, the dispute returns to #930; if they accept the local reason but deny independent priority, pursue the adequacy of their proposed replacement, not a duplicate structural regress theorem.
+
+Downstream: F6 `f56b2ee7`, its exact global rival `38f44eff`, and the existing calibration `6b4e3331` retain their status. The new conditional incompatibility uses F6 as an input; do not use it to establish F6 against the rival circularly. For a positive actual reason witness, the existing `b50727e1` route to `56f68b40` and `72391d4d` still requires selected-world presence and esse; neither the well-founded credential comparison nor a possible basic epistemic reason implies a well-founded metaphysical causal order, an ontic PSR, necessary existence, or a personal source. No graph edge, claim, definition, proof registration or floor marking changed.
+
+The prior head's CI run 45639133212 completed successfully; that is prior-head evidence, not this checkpoint's CI or a certification of these proposed applications. Reconfirmed no local Lean/Lake/Cargo and GitHub DNS failure via `git ls-remote`; no prepared checkout or independent review worker. Full CLI preflight, local conventions verification and independent semantic challenge pending. On the prepared clone reuse `target/release/truth context LOGIC-JUSTIFICATION-INTROSPECTION`, `context REGRESS-SCHEMA-PACKAGE`, `context b3ddb7c4`, `dossier f56b2ee7`, `related f56b2ee7`, `brief f56b2ee7`, `semantics f56b2ee7`, and `novelty "belief-directed reason requires a separately justified prior credential"` before proof registration. No new mechanically checked conclusion or actual frontier delta is claimed; the proposed proof is an unelaborated local application. Self-sweep: C/T/W separate, no scope expansion from actual trace to lifetime, no assumption that justification always requires a prior reason, no model over-reading, no attribution beyond the existing notes, no categorical force or metaphysical grounding transfer. Keep #1995 draft; do not merge.
