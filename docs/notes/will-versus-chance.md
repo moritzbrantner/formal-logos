@@ -1197,7 +1197,7 @@ Do not repeat the modal-collapse or power-reclassification proofs.
 
 **Source reading, navigation only.** Read Thomas Aquinas, [De veritate q.3
 a.1 co., ad 5, 8, 11](https://catholiclibrary.org/library/view?chunk.id=00000069&docId=/Medieval-EN/XCT.024.html)
-and [q.3 a.5 co., ad 3–9](https://catholiclibrary.org/library/view?chunk.id=00000073&docId=/Medieval-EN/XCT.024.html),
+and [q.3 a.3 co., ad 3–9](https://catholiclibrary.org/library/view?chunk.id=00000073&docId=/Medieval-EN/XCT.024.html),
 in the English translation. In a.1 co. he distinguishes the agent's
 own formative principle, the form inhering in the effect, and the
 exemplar according to which it is made. He also separates coincidental
@@ -1212,7 +1212,7 @@ the knower-side medium from the object-side determination.
 The further argument in a.1 sed contra 4 appeals to a universal
 cause's appropriation to particular effects. It is a distinct rationale
 worth investigating, not a proved premise obtained from its placement
-in the article. Article 5 co. distinguishes actual practical knowledge,
+in the article. Article 3 co. distinguishes actual practical knowledge,
 virtual practical knowledge and two speculative cases, even of
 producible things. In its discussion of producibility it requires
 consideration of what must be jointly present for the thing to exist,
@@ -1362,7 +1362,7 @@ what would count as successful realization independently of which
 particular eligible x is produced. It need not be an earlier
 event, a distinct real form received from elsewhere, or an
 executive selector. This is the actual, rather than merely
-virtual, practical reading of De veritate q.3 a.5.
+virtual, practical reading of De veritate q.3 a.3.
 
 Test a concrete scope. Understanding the constitution of a
 two-part support relationship requires understanding the roles
