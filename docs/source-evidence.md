@@ -2,6 +2,8 @@
 
 `truth-core` keeps source integrity, source fidelity, and formal verification separate.
 
+[Formal Logos Sources](https://github.com/moritzbrantner/formal-logos-sources) catalogues works, editions and passage locators. Its ignored `local/formal-logos-cache/` can hold the original witness bytes and extracted passages shared by checkouts. Set `git config --local truth.sourceCache /absolute/path/to/formal-logos-sources/local/formal-logos-cache` or `TRUTH_SOURCE_CACHE_DIR` to use it. The extractor checks the same edition and passage hashes in either location. The default cache is `.cache/truth-core/`.
+
 ## Three verification boundaries
 
 1. **Source integrity** records which primary-source bytes were consulted. Offline checks validate the records; selected passage materialization checks acquired bytes against their pins. It does not require recurring reacquisition of every source.

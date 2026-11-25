@@ -30,12 +30,27 @@ except ImportError:
 ROOT = Path(__file__).resolve().parents[1]
 CORPUS = ROOT / "corpus"
 PASSAGES = CORPUS / "passages"
-CACHE = ROOT / ".cache" / "truth-core" / "sources"
-MEDIA_CACHE = ROOT / ".cache" / "truth-core" / "media"
-WEB_CACHE = ROOT / ".cache" / "truth-core" / "web"
-# Verified raw bytes of immutable repository witnesses, keyed by Git blob SHA,
-# so a worker can read the whole TEI file when pinning another range (#990).
-RAW_CACHE = ROOT / ".cache" / "truth-core" / "raw"
+
+
+def source_cache_root(root: Path) -> Path:
+    """Use a shared source library when explicitly configured for this checkout."""
+    override = os.environ.get("TRUTH_SOURCE_CACHE_DIR")
+    if not override and shutil.which("git") and (root / ".git").exists():
+        setting = subprocess.run(
+            ["git", "-C", str(root), "config", "--local", "--path", "--get", "truth.sourceCache"],
+            capture_output=True, text=True, check=False,
+        )
+        if setting.returncode == 0:
+            override = setting.stdout.rstrip("\n")
+    return root / Path(override).expanduser() if override else root / ".cache" / "truth-core"
+
+
+SOURCE_CACHE_ROOT = source_cache_root(ROOT)
+CACHE = SOURCE_CACHE_ROOT / "sources"
+MEDIA_CACHE = SOURCE_CACHE_ROOT / "media"
+WEB_CACHE = SOURCE_CACHE_ROOT / "web"
+# Immutable repository witnesses are keyed by their verified Git blob SHA.
+RAW_CACHE = SOURCE_CACHE_ROOT / "raw"
 SOURCE_DIAGNOSTICS = ROOT / ".cache" / "truth-core" / "source-diagnostics"
 SHA1_RE = re.compile(r"^[0-9a-f]{40}$")
 SHA256_RE = re.compile(r"^sha256:[0-9a-f]{64}$")
