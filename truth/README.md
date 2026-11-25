@@ -98,7 +98,9 @@ the researcher governs the judgment, even when a record names just one
 statement. A question retrieves findings from the attempts and offers statement
 commands for following the argument. Results labeled as earlier investigations
 provide historical evidence. A current assessment carries its own scope and
-review state.
+review state. When a question phrase is missing from the leading finding,
+the command can also quote a matching research note with its section and line.
+Question JSON returns that passage in `note_match` when available.
 
 The complete statement JSON includes these fields.
 
