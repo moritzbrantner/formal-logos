@@ -704,8 +704,10 @@ granted good and its actual normative application at the full agreed
 scope would strengthen that rival. A discovery that such an account
 borrows a distinct external ground, contradicts the fixed simplicity
 or requires necessitating efficacy would weaken it, but none follows
-from the present correction alone. This finding awaits the coordinator's
-independent semantic challenge; no formal premise or closure changes.
+from the present correction alone. The integrated independent semantic
+challenge accepted this scoped finding with the
+[recorded qualifications](goodness-standard-priority.md#work-and-review-disposition);
+no formal premise or closure changes.
 
 ## Research attempts citing this note
 
