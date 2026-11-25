@@ -255,7 +255,156 @@ state violated the beings' actual identity or required background. Open
 application bridges are not presented as defeated merely because they remain
 open. Conversely, agreement between reviewers is not proof of premise truth.
 
-## Verification and current handoff
+## How much has the existence case gained?
+
+The largest gain in these comparisons is a sharper argument about borrowed
+activity. On a fixed transfer ledger with finite total throughput, even an
+infinite network of intermediaries cannot fund a positive transfer out of
+its upstream region by forwarding alone. This removes a genuine escape
+available to the rival when the sum of the transfers is unrestricted. Its
+force for existence depends on a reason why giving being itself obeys that
+accounting. A discharging battery shows why an object with causes can supply
+a present output from stored resources. Choosing the ledger to fit a desired
+root would put the conclusion into the premise. [Positive cut argument and
+its application limits](contractive-borrowed-power-1378.md#can-an-infinite-series-explain-a-one-way-transfer-by-forwarding-alone)
+
+Counting the translations between potency and privation as fresh evidence
+would overstate the gain. So would counting an artifact's continuity twice
+because two accounts explain it. The necessary intermediary below is a
+different result. It realizes the rival's proposed universal gift to
+contingent beings while leaving the giver itself dependent. Across these
+cases I see a stronger argument against forwarding under specified
+conditions, and little change in the balance between a divine source and
+an impersonal foundation for actual existence. Further weight would come
+from a reason to accept or reject one disputed condition in the same case
+on terms both accounts recognize. The source's own dependence, the origin
+of its capacity to give, and the evidence identifying it across recipients
+are three places where a rival and a theist can give different answers.
+[Potency comparison](potency-privation-support-investigation.md) ·
+[Continuity and present giving](sustaining-vs-existential-inertia.md#10-which-later-individual-continues-the-earlier-bearer-1801-2026-11-25)
+
+### Where a rival loses explanatory standing
+
+For the question raised in [issue #1570](https://github.com/moritzbrantner/formal-logos/issues/1570),
+grant the strongest brute-foundation account its fixed laws, real derivative
+causes and reliable inquiry. Suppose the account requires some occupant of
+a foundational role. Its laws explain how things proceed once the occupant
+exists. If the same laws permit two different occupants, knowing that the
+role is filled leaves open why this occupant exists. Discovering which one
+exists can settle the observer's question while leaving its existence
+unexplained. That is a specific price of treating this contingent starting
+point as brute. It matters to a claim to explain the whole actual order.
+It is compatible with explaining its subsequent development. [Restricted
+bruteness, open draft #1968](https://github.com/moritzbrantner/formal-logos/pull/1968)
+
+The existing assessment moderately favors a genuine explanation of contingent
+concrete existence. In cases of production, identifying what was exercised
+can explain an actual result where describing a capacity leaves the result
+open. When a nature leaves its bearer’s existence open, describing that
+nature still leaves its actual instantiation to explain. Whether the point
+extends to a simple foundation that receives its existence from nothing
+else is disputed. A demand for explanation also carries across a shared feature
+if that feature was one's reason for making the demand. A theist who demands
+an explanation because an initial state is contingent incurs the same demand
+for a contingent divine choice when the demand applies to facts of that kind.
+A rival can reserve the demand for things that receive existence. That is a
+principled distinction. Its scope and the claim that the proposed foundation
+itself qualifies for exemption need warrant. The project suspends judgment
+on whether each actual contingent concrete being has some adequate reason,
+or combination of reasons, that rules out its absence.
+[Merged parity argument](https://github.com/moritzbrantner/formal-logos/pull/1872) ·
+[Warrant and strongest reply](psr-self-application-756.md#overall-provisional-judgment-and-downstream-consequences)
+
+A different weakness reaches an internal inconsistency. Suppose a view admits
+two continuations that agree on the entire observed record and give opposite
+answers to a particular forecast. If the view calls its forecast entitled
+only when correct in every admitted continuation, endorsing either answer
+violates its own standard. A fallibilist can give up the guarantee. A
+defender of fixed laws can deny that both continuations are admitted. One
+unexplained foundation alone does not license arbitrary futures. [Formal
+forecast test](no-foundation-practical-collapse.md) · [Completed admission
+test in issue #1867](https://github.com/moritzbrantner/formal-logos/issues/1867#issuecomment-7113023982)
+
+A necessary impersonal producer can share the advantage of actually
+explaining contingent things. To favor purposive production specifically,
+the question is whether a good apprehended by the source guided its very
+act of producing the effect. A purpose attached after the outcome supplies
+no such connection. If an impersonal productive power tracks the same goods across alternatives
+and favors the same outcomes, that evidence supports its selection just as
+well. Independent evidence of apprehension guiding the particular act would
+distinguish intentional selection.
+[Actual exercise and alternatives, open PR #1933](https://github.com/moritzbrantner/formal-logos/pull/1933) ·
+[Comparison of purposeful and impersonal production, draft #1971](https://github.com/moritzbrantner/formal-logos/pull/1971)
+
+A promise gives a local test of whose choice can matter. Before the agreed
+deadline the person to whom the promise was made can release the promisor.
+A bystander's identical words leave the claim intact. The benefit to the
+third party stays fixed. The difference favors an account that recognizes
+the parties' authority over an account that predicts the duty from that
+benefit alone. A general impersonal principle can recognize that same
+authority. Attributing its institution to a necessary mind requires further
+grounds. [Who can release the promisor?](moral-governance-intellect-will.md#who-can-release-a-promise-and-what-ends-at-expiry-2026-11-25)
+
+## From finite origins to one ancestral source
+
+If every actual concrete being has a finite path from some actual root,
+and the actual root is unique, the same source lies upstream of every
+recipient. In the existing mediated model the root gives being to a
+necessary intermediary and the intermediary gives being to the only
+actual contingent recipient. The first reaches all recipients. The second
+is necessary and gives being to every actual contingent being, yet itself
+has a ground. Explaining all contingent recipients can therefore leave the
+being of the proposed explainer outstanding. To identify an independently
+supplied God with an independently supplied root it suffices that the former
+reaches every actual concretum by finite existential grounding paths. A path
+ending at a root can only be empty. [Derivations, same-model comparison and
+reopening tests](nar-derivation.md#which-giver-reaches-all-the-way-to-the-recipients)
+
+## Unity of a proposed giver of being
+
+Sharing recipients leaves open whether each proposed giver is itself a
+recipient of the other. In the finite partition model each of two sources gives
+being to a different recipient. Neither gives being to the other source.
+If each source instead gave being to every other being, each would give
+being to the other. If receiving being in this respect entails dependence
+on the giver, and distinct bearers cannot depend for being on each other
+in that respect, the two sources could not be distinct. This route to at
+most one God uses no premise about degrees of perfection. Two further
+routes use the exclusion of a distinct cause of a maximal being's esse.
+The route beginning with a maximal witness can restrict divine causal
+reach to recipients in act in esse, because that witness is in act. The
+claims that a God exists and that the God-description has the asserted
+causal scope retain separate warrant requirements.
+[Arguments and model comparisons](maximum-definition-fork.md#can-two-distinct-gods-each-give-the-others-esse-1936)
+
+## Continuity of the recipient in a sustaining-cause argument
+
+The London plaster Diplodocus cast and the bronze made using its scan test
+two explanations of identity. The scan carried information specific to the
+earlier object into the design of a new one. The museum tracked the plaster
+cast itself through moves and changes in posture. These histories give
+different answers to “which object continued?” even though both involve a
+causal contribution from the earlier object. A persistence law can apply to
+the identified plaster cast. A conserving source could also sustain that very
+cast while its material history distinguishes it from the bronze. Both
+accounts can recover the identity judgment. Neither tracing the patient nor
+identifying a producer of its shape supplies a present giver of its existence,
+the premise needed by the sustaining-cause argument.
+[Case, rival commitments and test of present dependence](sustaining-vs-existential-inertia.md#10-which-later-individual-continues-the-earlier-bearer-1801-2026-11-25)
+
+## November 25 handoff
+
+The reviewed research on `research/persistence-and-divine-unity` ends at
+`101546617c42be0f990d4ebd0e4f727afaa48da6`. The individual attempts
+record the reviewed revisions for the museum comparison, unity, ancestral
+reach and the promise. The comparison of explanatory burdens was reviewed at
+`21e99e2722d393c9931fb7eed25db521a69a99e6`. Local proof checks cover the
+eleven registered result configurations. The pull request carries the exact
+premise comparison and the checks on the delivered revision. The next tests
+concern the proposed contingent exception for the first being in #1887 and
+the same bearer's perfection and goodness in #1937.
+
+## Verification of the original November 13 investigation
 
 The two research lanes used distinct families: act/privation and causal
 dependence. The coordinator investigated priority/separation and logical

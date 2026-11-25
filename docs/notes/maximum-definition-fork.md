@@ -1050,3 +1050,113 @@ inner expression or love must subsist in personal opposition to its origin
 would take the argument further.
 [Self-love finding](causal-perfection-transfer.md#from-self-understanding-to-love-of-ones-own-good)
 · [Aquinas and Augustine on personal origins](de-ente-esse-source-1628.md#from-one-divine-nature-to-personal-distinctions-2026-11-24)
+
+### Can two distinct Gods each give the other's esse? (#1936)
+
+On the GOD_4 reading, one maximal witness suffices to settle a question
+about **every** God candidate. Let `m` have esse with no one above it.
+If a God `g` differed from `m`, the causal converse of the naming
+description would make `g` give `m` its esse. Exclusion at that very
+maximum forbids the edge. Each God therefore equals the same `m`.
+The proof can use the weaker reading “each God gives esse to every
+distinct bearer actual in esse”: `m`'s actuality is the first conjunct
+of MAXIME_1. Neither reading supplies a God. In particular the argument
+does not license naming an arbitrary maximal bearer God.
+
+| Route to `33b18ae7` | What supplies the contradiction for distinct Gods? |
+| --- | --- |
+| Maximal witness, `e7278952` | `fad8af3e` supplies one witness, `86d02b69` sends an edge into it, and `18561596` excludes that edge. Result `8ba99a96` also checks the actual-recipient restriction. |
+| God-to-maximality, `d25980a4` | Take `4c79298d` directly and apply `18561596` to the first God under consideration. The second would give it esse by `86d02b69`. There is no existential input. Substituting #1928's `14cbab05` for `4c79298d` recovers the first route's substantive inputs. |
+| Distinct-step dependence, `e4c24e60` | By `86d02b69` each God would cause the other's esse. By `2068f91c` each would depend for its being on the other. That pair violates `0f49d71e`. This requires neither a maximal bearer nor a comparison of degrees. Self-dependence is immaterial. |
+
+Each registered route uses excluded middle (`ee4ab504`) only on an
+identity. In the first two routes, deriving exclusion by `8bbe817d`
+retains the comparison premise `d5a94eb1`. None uses general genus
+causality `d9fad785`. The older argument `bc0cff0b` excludes two
+maxima via genus causality. The q.11 argument `d602ba9e` uses a common
+nature, suppositum–nature identity and an incommunicable individuating
+basis. Direct-esse-root `c719249b` and necessary-root `969ae822` have
+their own root and naming premises. The dependence proof here never
+introduces an actual-ground relation. These distinctions matter when
+choosing which premise one has grounds to accept.
+
+**What the models test.** Control result `4f934468` supplies the following
+interpretations on fixed, world-free dictionaries. The single-God witness
+has an actual recipient distinct from God and a directed gift at esse.
+Both are in act at a second respect, with no comparison and no gift there,
+so genus causality fails while all three new bundles hold. Removing any one
+nonlogical premise of its listed bundle permits two Gods in the controls.
+For the witness and God-to-maximality omissions the cyclic comparison on
+two beings gives no maxima, making exclusion vacuous. For the exclusion
+omission, two maxima give each other esse. For the naming omission a flat
+order and empty cause relation leave both candidates maximal. A separate
+row keeps the two maximality bundles with two incomparable maxima and an
+empty God predicate. Indeed, if a God exists in the witness bundle, the
+pinning proof applies to **every** maximal bearer and they all coincide.
+The empty-predicate row cannot show multiplicity of maxima alongside a God
+under that bundle.
+
+Two further tests give the disagreement positive content.
+
+- In `Partition`, two sources each cause the esse of an actual recipient in
+  their own domain. Neither causes the other's esse. Both sources are
+  maximal. Exclusion, effect-to-cause dependence and nonmutuality all hold.
+  Counting both as Gods requires dropping the universal naming converse.
+  This shows why finding a giver for each recipient does not establish a
+  single universal giver. It supplies no evidence that reality is partitioned.
+- In `RecipientBoundary`, one interpretation has a unique actual God, a
+  second actual recipient, and an inactive carrier whose esse the God
+  does not cause. The actual-recipient converse holds and the carrier-wide
+  converse fails. In the other interpretation two candidates lie outside
+  actuality in esse. Both give esse to the same actual recipient; their
+  reciprocal gifts are never demanded by the restricted converse. Dependence
+  and nonmutuality hold. To use this restriction on the horizontal route one
+  must also reach each God candidate as a recipient, for example by showing
+  each is actual in esse. This omission is an artifact of unconstrained
+  predicates in the encoding, not evidence for nonactual gods.
+
+**Provisional assessment.** Unity follows for a universal giver of esse under either maximality and
+exclusion package, or under the two dependence premises. Universal giving
+alone allows reciprocal causation in the two-candidate control. The witness argument has
+the advantage that the recipient its proof uses is already actual. The
+dependence argument supplies a different reason to expect unity on the
+productive reading: if the power of each giver to give must already be available independently
+of receiving that very exercise from the other, reciprocal borrowing of the
+whole exercise supplies no such power. That priority requirement needs
+warrant at the two givers. The separate cause-to-dependence premise also
+requires the same effect to depend counterfactually on that agent under the
+relevant alternatives. Tracing an actual exercise leaves open whether a
+substitute would preserve the effect. Mere counterfactual inseparability
+can be reciprocal. Inferring nonmutuality from a strict ground ordering
+already chosen to prohibit cycles adds no independent warrant for the
+causal interpretation. The earlier dependence assessment distinguishes
+these readings. [Distinct dependence and strict ground](distinct-dependence-strict-ground-route.md)
+
+For separate givers, the domain account answers where particular recipients
+get their being; a common source additionally answers why both domains
+have one productive origin. The latter is an advantage only to the extent
+that an independently identified feature of their received esse calls for
+shared supply. Local dependence evidence by itself fits both accounts.
+The source-first case elsewhere in this note offers participation and
+unreceivedness as reasons to seek that supplier. Neither existential
+coverage for individual recipients nor applying GOD_4 to a source proves
+universal scope. Likewise, directing causal explanation from giver to
+recipient supports the direction of the dependence route more directly
+than it supports **strictly greater degree** in every cause of a perfection.
+The three options thus sharpen unity more than they settle the underlying
+naming and source-selection dispute.
+
+**Downstream and revision test.** Existing assembly `3769b87e` consumes
+`33b18ae7` alongside `8626f8a5` (existence) and `d5ac1620` (classical
+attributes). The auxiliary theorem `assembleFromWitness` actually passes
+the new result to that assembly at the same signature. Its `20a2b6a3`
+witness is the separately supplied existing God. Reopen the warrant
+assessment if the source-selection argument supplies a common giver across
+two independently populated domains, or if a rival supplies a productive
+account of **each giver's esse** that sustains both opposed gifts without
+presupposing either one's causal exercise. A joint effect, a feedback
+loop in different respects, or merely necessary co-existence does not meet
+that latter test. The next narrower naming test is whether the independently
+defended God-description covers every actual recipient and which premise
+makes a God candidate actual in esse when no maximal witness is given.
+Attribution of the new compositions is deferred.

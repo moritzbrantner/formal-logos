@@ -1,0 +1,9 @@
+{
+  "challenge_module": "TruthCore.Results.Case.Catholicism.GodIsOneFromEsse.Challenge",
+  "solution_module": "TruthCore.Results.Case.Catholicism.GodIsOneFromEsse.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Case.Catholicism.GodIsOneFromEsse.oneFromGodMaximal"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}

@@ -525,3 +525,91 @@ for this slice. Nothing from them is quoted; they are paraphrased.
 - `docs/notes/holder-root-identification.md` §10 gap 1: a pointer here.
 - Generated: `TruthCore/Imports/Causality.lean` and
   `TruthCore/Imports/Results/Causality.lean`.
+
+## Which giver reaches all the way to the recipients?
+
+At the selected world, suppose each actual concrete being can be traced by
+finitely many existential grounding steps to some actual concrete root.
+Suppose also that an actual root exists and all actual roots there coincide.
+Then the paths for all these beings lead to **the same source**. The first
+premise supplies a path for each recipient. The second identifies its initial
+bearer. Both premises can also be recovered from a finite path to one unique
+source for every actual node. These are translations on one profile. A path
+of length zero covers the source itself. Longer paths keep all contributors
+actual and concrete. No bound on their lengths or on other branches is needed.
+[Forward proof](../../corpus/results/0dcb0397-8a2a-4f8f-8550-4bbac1192c2b.json),
+[access projection](../../corpus/results/a53edd5b-49de-4251-855a-31aea94e58e1.json)
+and [uniqueness projection](../../corpus/results/273fb2d3-d2e8-404e-adad-f6ae2c821169.json)
+
+The graph used here is `ConcreteExistentialSupply.graph m w`. Its contributors
+and recipients exist at w and are concrete, and an edge is `m.grounds w`.
+In the same three-being example below, the ordinary causal relation
+`Ontic.Causes` is empty. Its three existing beings are isolated sources,
+whereas the grounding graph has a single root. This difference is why the
+corpus records the conclusion specifically for actual concrete grounding.
+The abstract graph argument must be instantiated on that relation. Results
+on ordered parts, past events or another causal relation need an explicit
+identification to apply. The return paths in the corpus preserve the option
+of directly accepting each premise. Using the forward and reverse arguments
+in a circle supplies no additional warrant for either existence or uniqueness.
+
+**An independent way to identify two proposed beings.** Suppose an argument
+supplies a being g satisfying GOD_4 and another argument supplies an actual
+root n. If the God-description entails that g reaches **every actual concrete
+being** by a finite path of existential grounds, then g reaches n. A nonempty
+path into n would have a last incoming ground, contradicting its roothood.
+The path is empty, so g is n. The inference applies to every actual root in
+this profile. It requires neither global well-foundedness nor a direct edge
+from g to every distinct recipient. Existence of a God is a premise here.
+This use identifies a candidate secured elsewhere. It adds no independent
+argument for that existence when the witnesses are obtained from a route
+that already presupposes the same identification.
+[Witness identification and finite reach](../../corpus/results/0269173b-9dd1-43f9-909f-c2462710fb1a.json)
+
+One way to warrant the path premise conditionally is the stronger causal
+reading that each God causes every other being's esse, together with the
+correspondence that a distinct esse cause of an actual concretum is an actual
+concrete ground. With explicit excluded middle for identity the path then
+has length zero or one. This is where an argument for that correspondence,
+including one from sustaining causation, can enter. Receipt of form or the
+transmission of material from an earlier patient would need further evidence
+to count as existential grounding here.
+[Direct-cause argument](../../corpus/results/acc12ba2-a7e2-4146-bbed-f5c964602bbb.json)
+
+**Test both claims on the earlier mediated creator.** At the actual world
+of `chainG`, d grounds g, and g grounds c. The existing optimum assignment
+allows the root d one immediate object of giving, g. The new result keeps
+that very assignment and exhibits finite grounding access from d to every
+actual concretum, including c. Its failure of direct common-root coverage
+persists. An explanation can thus trace every recipient to d through the
+intermediary while giving d no direct edge to c. Tracing each path supplies
+something stronger than merely observing a recipient. It does not establish
+that the ultimate source itself immediately gives being at every link.
+[Same-profile control](../../corpus/results/1e652b87-fba4-4653-801e-1911fbd4b957.json)
+
+Now consider g as the proposed universal source in **that same interpretation**.
+It exists at both accessible worlds. It directly grounds and gives being at
+the actual moment to **every actual contingent concretum**. There is one
+such recipient, c, which is absent from the other world. Yet d directly
+grounds g. The underlying model therefore distinguishes two candidates
+even after one grants necessity of the proposed giver and complete coverage
+of the contingent recipients. The predicate selecting g only designates a
+candidate for the test. Attributing Godhood to it would require independent
+warrant. Giving at a moment and the selected grounding edge are separately
+verified in this assignment. Their coincidence here proves no general law.
+[Contingent-recipient test](../../corpus/results/012166ef-0b65-4785-a163-1900d60044c9.json)
+
+**Provisional judgment.** Once an account supplies finite origins for the
+actual recipients and a reason for their roots to coincide, it has a positive
+explanation of common ancestry even where intermediate givers are real. A
+theory that merely identifies a necessary giver for all contingents still owes
+a reason why that giver is underived if it claims ultimacy for it. The mediated
+account permits the last gift to vary while the first source keeps the same
+immediate recipient. The two worlds exhibit this compatibility. Explaining *why* it varies,
+and whether one required act can admit that variation, needs a further account
+of the intermediary. The distinguishing test for the necessity inference is
+to determine what supplies the being of the putative necessary intermediary
+itself. For direct reach, identify what the first source contributes to the
+remote patient's own existence over and above sustaining an intermediary
+that gives being to it. The present comparison settles neither issue by naming
+the first source God.
