@@ -1828,3 +1828,76 @@ fn a_dedicated_prior_investigation_outweighs_an_incidental_current_match() {
     assert!(!text.contains("accepted_qualified"));
     std::fs::remove_dir_all(root).unwrap();
 }
+
+#[test]
+fn question_search_features_substantive_passages_and_keeps_locators_out_of_ranking() {
+    let root = fixture("question-evidence-passages");
+    let locator = "Read docs/notes/amber-shale-layers.md.";
+    let finding = "The amber inclusions precede both shale layers.";
+    let competing = "The shale layers contain amber inclusions of different ages.";
+    record(
+        &root,
+        "statements",
+        json!({"id":GOAL,"label":"Amber shale layers",
+        "paraphrase":"The amber is above both shale layers."}),
+    );
+    record(
+        &root,
+        "attempts",
+        json!({"id":"d0000000-0000-4000-8000-000000000095",
+        "label":"Field observations", "statement_ids":[GOAL],
+        "summary":format!("Sample Q.12 represents a second outcrop. {finding} {locator}")}),
+    );
+    record(
+        &root,
+        "attempts",
+        json!({"id":"d0000000-0000-4000-8000-000000000096",
+        "label":"An alternative timeline","statement_ids":[GOAL], "summary":competing}),
+    );
+    write(&root, "corpus/attempts/amber-shale-layers.json", &json!({
+        "id":"d0000000-0000-4000-8000-000000000097", "label":"Comparison index",
+        "statement_ids":[GOAL], "summary":format!("Measurements were taken at the shoreline. {locator}")}).to_string());
+    let corpus = Corpus::load(&root).unwrap();
+    let (report, prose) =
+        super::assessment_search::report(&corpus, "amber shale layers", 2).unwrap();
+    let matches = report["matches"].as_array().unwrap();
+    assert_eq!(matches.len(), 2);
+    assert!(prose.contains(finding));
+    assert!(prose.contains(competing));
+    assert!(!prose.contains(locator));
+    std::fs::remove_dir_all(root).unwrap();
+}
+
+#[test]
+fn search_retrieves_a_scoped_note_when_attempts_miss_the_question_phrase() {
+    let root = fixture("question-note-fallback");
+    record(
+        &root,
+        "attempts",
+        json!({"id":"d0000000-0000-4000-8000-000000000098",
+        "label":"Temporary equipment","summary":"The temporary sensors belong to the same apparatus.",
+        "statement_ids":[GOAL]}),
+    );
+    let note = "The sensors can be temporally coincident in this apparatus.";
+    write(
+        &root,
+        "docs/notes/experimental.md",
+        &format!("# Readings\n\n## Sensor timing\n\n{note}\n"),
+    );
+    let corpus = Corpus::load(&root).unwrap();
+    let (report, prose) = super::assessment_search::report_for_root(
+        &root,
+        &corpus,
+        "Are the sensors temporally coincident?",
+        2,
+    )
+    .unwrap();
+    assert_eq!(
+        report["note_match"]["section"],
+        "docs/notes/experimental.md#sensor-timing"
+    );
+    assert_eq!(report["note_match"]["passage"], note);
+    assert!(prose.contains(note));
+    assert!(!root.join(".cache/truth-index.sqlite").exists());
+    std::fs::remove_dir_all(root).unwrap();
+}
