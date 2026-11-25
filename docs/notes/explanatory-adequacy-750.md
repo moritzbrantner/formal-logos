@@ -1226,24 +1226,9 @@ into simple priority, and B1 makes that cause identical to f, contrary
 to distinctness. Excluded middle supplies existence at each v. There
 is no invocation of B2 for another bearer.
 
-A candidate weaker bridge for this specific route (analyst formulation,
-not a registered or independently verified theorem) would replace
-`hCause : ContingentHasDistinctEsseCause F w` by the hypothesis
+The localized proof asks for a distinct esse-cause only for a contingent first unmoved mover. It instantiates that premise at the selected f, with the same other hypotheses and conclusion as the original route. [`necessityFromCauseForFirstMover`](../../TruthCore/Explanation/FoundationalExistenceApplications.lean#L48)
 
-```lean
-hCauseForMover :
-  ∀ f, IsFirstUnmovedMover MovedIn F.MovesIn f →
-    ContingentAt F.history.ontic w f →
-    ∃ c, c ≠ f ∧ F.CausesIn c f F.esse
-```
-
-with the identical other premises and conclusion. The proof would use
-`hCauseForMover f hf ⟨hfw, v, hv, h⟩` in the one line above. This
-is a proposed strength restriction of the existing result, not a
-new proof of B2 or a claim of novelty. The actual declaration
-signature of `IsFirstUnmovedMover` and the existing related,
-novelty and semantics dossiers must be checked locally before
-registration. If already present, reuse it. The analogous
+The analogous
 restriction of the PSR/BX1/BX2 reasoning need only cover reasons
 for the same contingent mover, and must retain the distinction
 between the existence-token predicate and adequacy. B0, B1, B3,
@@ -1315,10 +1300,7 @@ by the proof inspection in this checkpoint.
 for `esseCauseFromExistenceReasons` and
 `firstMoverNecessaryByEsseCause` were inspected at the parent
 revision; the latter calls its universal B2 hypothesis once for f.
-The proposed restricted proof has not been elaborated or novelty-
-checked by the Truth CLI; no new Lean/corpus proof is registered.
-Keep the scoped route and both adequacy applications OPEN for
-independent semantic review and canonical verification.
+The restricted proof now compiles. Its premise about a contingent mover and both applications to an actual foundation remain open. This application has no registered argument edge.
 
 
 ## Restricted bruteness: intrinsic reason, actual application and fundamentality (2026-11-25)
@@ -1336,11 +1318,7 @@ contingent candidate foundation, not the independently necessary bearer in
 
 Fix the same bearer x throughout. The existing definition
 `TruthCore.Explanation.BruteContingencyParity.natureModel` assigns
-`(.intrinsic z)` as a reason for `(.fact x)` exactly when
-
-```lean
-z = x ∧ ¬ esseOf x ≠ essenceOf x
-```
+`(.intrinsic z)` as a reason for `(.fact x)` exactly when `z = x ∧ ¬ esseOf x ≠ essenceOf x`. [`natureModel`](../../TruthCore/Explanation/BruteContingencyParity.lean#L148)
 
 The world argument is ignored, and `essenceOf` and `esseOf` are world-free.
 This definition alone is not evidence of adequacy. The separately existing
@@ -1353,17 +1331,7 @@ existence in its world. Their combination has a precise consequence:
 3. Soundness then gives x's existence at every represented world, hence
    `NecessaryAt` relative to any selected accessibility standpoint.
 
-Proposed unelaborated Lean check (use the existing namespaces, not a new
-model or corpus record):
-
-```lean
-theorem ownNatureNecessaryOfSound {W B T R P : Type}
-    (F : CausalityFrame W B T R) (essenceOf esseOf : B → P)
-    (hSound : Sound (natureModel F essenceOf esseOf))
-    (x : B) (hIdentity : ¬ esseOf x ≠ essenceOf x) :
-    ∀ v, F.history.ontic.ExistsAt v x :=
-  fun v => hSound v x (.intrinsic x) ⟨rfl, hIdentity⟩
-```
+[Lean proof of `ownNatureNecessaryOfSound`](../../TruthCore/Explanation/FoundationalExistenceApplications.lean#L15)
 
 In particular, for an actual contingent x, an equality
 `esseOf x = essenceOf x` would yield the contradictory existence at its
@@ -1594,21 +1562,9 @@ about universal D are unchanged.
 The existing `esseCauseFromExistenceReasons` proof chooses a
 reason r from the local PSR, applies universal BX1 to r, and then
 BX2. It does not logically need the denial of *every* same-bearer
-reason token. One candidate weakening of BX1, while retaining
-the existing reason PSR and BX2, is:
+reason token. The weaker BX1 condition asks for one reason with a distinct source whenever a contingent bearer has any existence reason. BX1 supplies that reason by taking the existing witness. With local reason PSR and BX2, the weaker condition gives the required distinct cause of esse. Whether the selected reason adequately explains this individual's existence remains a further question. [`externalAvailableOfNoSelfExplanation`](../../TruthCore/Explanation/FoundationalExistenceApplications.lean#L72) · [`causeFromAvailableExternalReason`](../../TruthCore/Explanation/FoundationalExistenceApplications.lean#L79)
 
-```lean
-∀ x, ContingentAt m.ontic w x →
-  (∃ r, m.explains w r (.fact x)) →
-  ∃ r, m.explains w r (.fact x) ∧ source r ≠ x
-```
-
-This is an external-reason **availability** condition; it does
-not independently establish explanatory adequacy and, jointly
-with PSR and BX2, trivially supplies the required reason for B2.
-It is a proposed scope refinement, not independent evidence or
-a registered theorem. BX1 implies it constructively by taking the
-existing witness. The existing model 6 from B2SupportControls,
+The existing model 6 from B2SupportControls,
 `conserved` with `selfAndOccasion`, provides an exact control
 to inspect: the sole contingent bearer is f (true), and
 `occasion` supplies its distinct source x (false); an intrinsic
@@ -1658,8 +1614,7 @@ The world-free natureModel assumption, fact-versus-being scope,
 global Sound strengthening, co-truth without direction, explicit
 empty edge assignments and nonnecessitating/necessitating
 columns are disclosed. The finite diagnostic passed in the
-standalone runtime; the proposed Lean consequence and weaker
-BX1 are not elaborated or novelty-checked. No new source
+standalone runtime. The [nature-model consequence](../../TruthCore/Explanation/FoundationalExistenceApplications.lean#L15) now compiles. The weaker BX1 remains a proposed premise. No new source
 attribution or theorem registration. The later qualified semantic publication review is recorded at
 3186a2b205aa1149be61378c6faf9ace0d2a5e5e and in #1968. The proposed Lean
 extensions above remain unregistered; the standalone diagnostic does not
@@ -2205,26 +2160,7 @@ Comparator/NanoDa-certified corpus result. Its generic variables isolate
 the ordinary existence projection; applicability to a concrete foundation
 retains the stated role and modal premises.
 
-```lean
-/- Pure predicate diagnostic for the existing actual-root role.
-   No new corpus declaration, metaphysical axiom, or registered certificate. -/
-theorem occupiedRoleAtAbsence {W B : Type}
-    (access : W → W → Prop) (existsAt rootAt : W → B → Prop)
-    (w : W) (b : B)
-    (occupied : ∀ v, access w v → ∃ x, rootAt v x)
-    (rootExists : ∀ v x, rootAt v x → existsAt v x)
-    (absent : ∃ v, access w v ∧ ¬ existsAt v b) :
-    ∃ v, access w v ∧ ¬ existsAt v b ∧
-      ∃ x, rootAt v x ∧ x ≠ b := by
-  rcases absent with ⟨v, hv, hb⟩
-  rcases occupied v hv with ⟨x, hx⟩
-  refine ⟨v, hv, hb, x, hx, ?_⟩
-  intro h
-  subst x
-  exact hb (rootExists v b hx)
-
-#print axioms occupiedRoleAtAbsence
-```
+[Lean proof of `occupiedRoleAtAbsence`](../../TruthCore/Explanation/FoundationalExistenceApplications.lean#L22)
 
 If the exemption is world-general and follows the qualifying role, it must
 cover that permitted alternative occupant too. If it is rigidly reserved for

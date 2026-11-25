@@ -36,19 +36,9 @@ This specification contributes one scoped investigation to the open #1116. The g
 
 ## 3. Existing implementation and exact proof use
 
-The original proposition is:
+[`GoodnessIsActualityReading`](../../TruthCore/Latin/Aquinas/SummaTheologiae/PrimaPars/Question5/Article1.lean#L50) identifies goodness and actuality at each bearer and respect.
 
-```lean
-GoodnessIsActualityReading GoodIn InAct :=
-  ∀ x r, GoodIn x r ↔ InAct x r
-```
-
-The current endpoint in `TruthCore/Case/Catholicism/StageTwo.lean` is:
-
-```lean
-IsSupremelyGood InAct GoodIn CausesIn esse n :=
-  GoodIn n esse ∧ CausesEveryPerfectionOfOthers InAct CausesIn n
-```
+[`IsSupremelyGood`](../../TruthCore/Case/Catholicism/StageTwo.lean#L100) requires goodness at esse and causation of every perfection of the other bearers.
 
 `GodIsSupremelyGood` universally quantifies this over supplied `IsGod` witnesses. In the original `godIsSupremelyGood` proof, the entire use of the unrestricted goodness thesis is `(hGoodness g esse).mpr hMax.1`. The restricted causal-transfer sibling (`CausalPerfectionTransfer.goodness`) and `DirectEsseRootPerfectionGoodness.supremelyGoodOfMaximum` use the same goodness instance. Their causal premises differ.
 
@@ -122,18 +112,9 @@ Do not define the due standard as whatever the source actually possesses. That w
 
 The existing `GoodnessFormEnd.Frame` defines `Due f x p` by `DueFor` at that bearer's supplied form and end. `DueActualityThesis f` says `GoodIn x p ↔ Due f x p ∧ Has x p`. `GoodnessDueToUnrestricted.dueToUnrestricted` uses `AllActualitiesDue f` to recover `00e962ae`.
 
-Under the same thesis and `f.Has n f.substantial`, the exact narrower equivalence is:
+Given the thesis and substantial actuality at n, goodness at that respect is equivalent to due status. [`goodIffDueAtSubstantial`](../../TruthCore/Metaethics/FulfilledRespect.lean#L38)
 
-```lean
-f.GoodIn n f.substantial ↔ Due f n f.substantial
-```
-
-A further exact boundary is:
-
-```lean
-EsseGoodness f.Has f.GoodIn f.substantial ↔
-  (∀ x, f.Has x f.substantial → Due f x f.substantial)
-```
+Across bearers, the rule assigning goodness to every actual bearer at the substantial respect is equivalent to assigning due status there. [`substantialGoodnessIffDue`](../../TruthCore/Metaethics/FulfilledRespect.lean#L45)
 
 The latter is conditional on `DueActualityThesis f`. In the positive direction only, even the full biconditional is unnecessary: a local rule `Due f n f.substantial ∧ f.Has n f.substantial → f.GoodIn n f.substantial` suffices. Keep the full existing thesis as a support option; do not pretend the restricted normative bridge is established by writing it as a definition.
 
@@ -316,31 +297,7 @@ Grant a stronger neutralist concession than an accurate functional description. 
 
 The following local control uses three ordered marks, with 1 designated neutral, solely to test how much information those comparisons contain. Positivity represents one candidate evaluation of the single attained perfection. The same bearer exists in both conditions. The two checks use the actual biconditional and require no axioms. They make no assumption of additive metaphysical value.
 
-```lean
-import TruthCore.Latin.Aquinas.SummaTheologiae.PrimaPars.Question5.Article1
-open TruthCore.Latin.Aquinas.SummaTheologiae
-namespace FulfilledRespect
--- One existing bearer and one respect, evaluated in two conditions.
-def attained (s : Bool) (_ _ : Unit) : Prop := s = true
-def mark (s : Bool) : Nat := if s then 1 else 0
--- Ordered marks for deficiency (0), neutrality (1), and excellence (2).
-def good (score : Bool → Nat) (s : Bool) (_ _ : Unit) : Prop := 1 < score s
-theorem sameComparisons (s t : Bool) :
-    (mark s < mark t) ↔ (mark s + 1 < mark t + 1) := by
-  cases s <;> cases t <;> decide
-theorem differentVerdicts :
-    (∀ s, GoodnessIsActualityReading (good (fun t => mark t + 1) s) (attained s)) ∧
-    ¬ GoodnessIsActualityReading (good mark true) (attained true) := by
-  constructor
-  · intro s x p
-    cases s <;> unfold good attained mark <;> decide
-  · intro h
-    have bad := (h () ()).mpr rfl
-    exact (Nat.lt_irrefl 1) bad
-#print axioms sameComparisons
-#print axioms differentVerdicts
-end FulfilledRespect
-```
+[Lean proofs of `sameComparisons` and `differentVerdicts`](../../TruthCore/Metaethics/FulfilledRespect.lean#L21)
 
 **Judgment.** There is positive warrant for crediting the bearer with an excellence where a due capacity actually attains its own end. The attained discrimination supplies an intelligible object of pursuit and preservation even when we consider the successful operation itself, apart from the relief of a prior defect or any further use. This supports a primitive constitutive reading of goodness: attainment fulfills the bearer *in this respect*. The rival can grant the same restoration history, ranking and reason to avoid impairment, and identify normal success with meeting a requirement whose violation is bad. A ranking of repairs cannot decide between those accounts. A reason to pursue the realized operation for its own sake, identifiable independently of avoiding a loss or a further benefit, bears directly on the disputed positive attribution. Observed pursuit by itself also admits instrumental explanations.
 

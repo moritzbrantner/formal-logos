@@ -659,49 +659,9 @@ The target `d5a94eb1` says that for **every** distinct cause and recipient, caus
 
 **Warrant at the actual root use.** Strict superiority has good local warrant where an independently identified productive mechanism has a demonstrated degree-reducing condition. Mere dependence, dependence on a sole supplier, and common formal possession do not specify such a condition. I would reject the unrestricted rule on the ordinary efficient-production and same-formal-degree reading. Its direct participation reading remains a serious narrower option: if a source has undiminished a positive perfection genuinely restricted in its recipient, that difference can ground comparative ascent. Supplying the recipient's actuality does not of itself tell us that it lacks some positive content of that very source. This is decisive for the two uses at *esse* identified above. Neither tooth count nor solute balance calibrates the primitive `MoreIn esse`. Proving the local models excludes no existential giver. To reopen positive ascent at that scope, identify positive actual content belonging to the named source which the specific mode of reception excludes, and justify its ordering as a perfection of being while allowing equal positive content as a live control. For consumers needing only exclusion of an incoming cause, keep that weaker obligation separate. The investigation changes no registered support or closure.
 
-**Reproducible local control.** This Lean fragment checks the independent calibrations over rational assignments and an exact counterinterpretation of the bound statement. `outlet` is the sole-feed, zero-dilution response under replacement of the feed concentration. The selected causal edge records its direction and the recipient's response to that replacement. The proof uses a common contemporaneous actual concentration of one on the two roles. The interpretation of a productive process and its calibration are supplied by the preceding mechanisms; the Lean calculation certifies their consequences only.
+**Reproducible local control.** The Lean proofs check the independent calibrations over rational assignments and an exact counterinterpretation of the bound statement. `outlet` is the sole-feed, zero-dilution response under replacement of the feed concentration. The selected causal edge records its direction and the recipient's response to that replacement. The proof uses a common contemporaneous actual concentration of one on the two roles. The interpretation of a productive process and its calibration are supplied by the preceding mechanisms; the Lean calculation certifies their consequences only.
 
-```lean
-import Mathlib.Tactic.Linarith
-import TruthCore.Greek.Aristotle.Metaphysics
-namespace ProductiveDegree
-open TruthCore.Greek.Aristotle.Metaphysics
--- d and r are positive unsigned speeds. m and n are the tooth counts.
-theorem gear (m n d r : ℚ) (hm : 0 < m) (hr : 0 < r)
-    (mesh : m * d = n * r) : r < d ↔ m < n := by
-  constructor
-  · intro h
-    by_contra! hn
-    nlinarith [mul_pos hm (sub_pos.mpr h), mul_nonneg (sub_nonneg.mpr hn) hr.le]
-  · intro h
-    by_contra! hd
-    nlinarith [mul_pos (sub_pos.mpr h) hr, mul_nonneg hm.le (sub_nonneg.mpr hd)]
--- Steady balance for positive donor flow p, clear diluent flow q, donor
--- concentration d and outlet concentration r in a well-mixed tank.
-theorem dilution (p q d r : ℚ) (hp : 0 < p) (hq : 0 ≤ q) (hr : 0 < r)
-    (balance : (p+q)*r = p*d) : r < d ↔ 0 < q := by
-  constructor
-  · intro h
-    by_contra! hz
-    have z : q = 0 := le_antisymm hz hq
-    subst q
-    nlinarith [mul_pos hp (sub_pos.mpr h)]
-  · intro h
-    by_contra! hd
-    nlinarith [mul_pos h hr, mul_nonneg hp.le (sub_nonneg.mpr hd)]
--- Sole feed into a well-mixed tank; replacing its solute by clear carrier
--- at the same flow gives zero outlet concentration. Both actual degrees are 1.
-def outlet (donor : Nat) : Nat := donor
-def soleFeed (a b : Bool) (_ : Unit) : Prop :=
-  a = false ∧ b = true ∧ outlet 0 < outlet 1
-def sameConcentration (_ : Bool) : Nat := 1
-theorem tie : ¬ CauseOfQualityInAnotherIsMoreSuchReading soleFeed
-    (fun _ a b => sameConcentration b < sameConcentration a) := by
-  intro h
-  exact (Nat.lt_irrefl 1) (h false true () (by decide) ⟨rfl, rfl, by decide +revert⟩)
-end ProductiveDegree
-
-```
+[Lean proofs of `gear`, `dilution` and `tie`](../../TruthCore/Causality/ProductiveDegree.lean#L15)
 
 ### Can a receiving constitution itself make a bearer less in esse?
 
@@ -717,36 +677,9 @@ One tempting argument would subtract the condition of reception from `x` while r
 
 **Assessment.** Receiving esse alone gives insufficient warrant for strict superiority of its named giver (`cffad050`). On the subsistent-source reading, the constitutive argument gives qualified positive warrant to `8176a284` as a direct metaphysical premise: it compares the whole under the very act being explained. I would use it conditionally on that reading and suspend an unqualified strict judgment at equal content. Both accounts explain how the recipient can be completely actual in its kind. Only the constitutive account takes the difference in *how* to affect the degree of being of the whole. Reopen `fd2c8710` and the application of `9eaa3b6e` if a named bearer exhibits an independently identified actual perfection excluded by reception, or if another application of the same degree of esse can distinguish those whole-bearer modes with the grade-sensitive inventory held fixed. Consumers asking only whether an actual maximum can have a distinct incoming esse cause can use a separately warranted causal exclusion. Such a result supplies neither degree comparison nor perfection transfer. [Identity-source ascent](../../corpus/arguments/142d2d1d-b562-4b9f-b010-cbdcf4b14ff7.json) · [Source-first route audit](https://github.com/moritzbrantner/truth-core/blob/3d11caf5d29dd968e9cb31437b7e19481e44edd6/docs/notes/root-route-modal-load.md)
 
-The Lean fragment checks the two response ranges and the profile tie. It makes no assignment to the corpus's `MoreIn esse`.
+The Lean theorems check the two response ranges and the profile tie. It makes no assignment to the corpus's `MoreIn esse`.
 
-```lean
-namespace ReceptionCalibration
-abbrev Command := Bool × Bool
-def response (locked : Bool) (u : Command) : Command :=
-  (u.1, if locked then false else u.2)
-def reachable (locked : Bool) (v : Command) := ∃ u, response locked u = v
-def keepsHeading (locked : Bool) := ∀ u : Command, (response locked u).2 = false
-
-theorem actualTie : response true (true, false) = response false (true, false) := rfl
-theorem restrictedRange :
-    (∀ v, reachable true v → reachable false v) ∧
-    (reachable false (false, true) ∧ ¬ reachable true (false, true)) := by
-  refine ⟨?_, ⟨⟨(false, true), rfl⟩, ?_⟩⟩
-  · intro v _
-    exact ⟨v, rfl⟩
-  · rintro ⟨u, h⟩
-    exact Bool.noConfusion (congrArg Prod.snd h)
-theorem headingContrast : keepsHeading true ∧ ¬ keepsHeading false := by
-  exact ⟨fun _ => rfl, fun h => Bool.noConfusion (h (false, true))⟩
-
-theorem profileTie {Bearer Profile : Type} (positive : Bearer → Profile)
-    (above : Profile → Profile → Prop) (strict : ∀ p, ¬ above p p)
-    {c x : Bearer} (equalContent : positive c = positive x) :
-    ¬ above (positive c) (positive x) := by
-  rw [equalContent]
-  exact strict _
-end ReceptionCalibration
-```
+[Lean response and profile comparisons in `ReceptionCalibration`](../../TruthCore/Causality/ProductiveDegree.lean#L53)
 
 ### One principal giver of participated existence
 

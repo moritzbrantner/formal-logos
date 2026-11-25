@@ -612,31 +612,9 @@ the same Ontic, Concrete and actual standpoint w, choose w itself as the
 possibility witness. No new possible history, S5, causal production, or actual
 contingency principle is required.
 
-Locally elaborated application using the existing definitions (zero axioms):
+[Lean application `possibleFromActual`](../../TruthCore/Explanation/ActualPopulationApplications.lean#L17)
 
-```lean
-import TruthCore.Explanation.EmptyHistoryCausalAvailability
-
-open TruthCore.Explanation.PSRStrength (Arena)
-open TruthCore.Explanation.EmptyHistoryCausalAvailability
-open TruthCore.Causality.NecessarilyUnderived (ActualReflexive)
-open TruthCore.Logic.CogitoConcrete (InhabitedConcreteAt)
-
-example {W B F : Type} (A : Arena W B F)
-    (Concrete : B → Prop) (w : W)
-    (hActual : InhabitedConcreteAt A.ontic Concrete w)
-    (hReflexive : ActualReflexive A.ontic w) :
-    PossiblyInhabitedConcreteAt A Concrete w :=
-  ⟨w, hReflexive, hActual⟩
-```
-
-The composed application also elaborates against the existing
-[Solution](../../TruthCore/Results/Explanation/EmptyHistoryCausalAvailability/Solution.lean).
-Give the displayed example the local name `possibleFromActual`, import the
-Solution, and replace the final `hPositive` argument of `necessaryBeing`
-with `(possibleFromActual A Concrete w hActual hReflexive)`. Lean 4.35.0
-reports no axioms for either this composition or the modal fork below.
-The composition takes EM as a hypothesis. Under all six hypotheses of the
+[The composition `necessaryBeingFromActual`](../../TruthCore/Explanation/ActualPopulationApplications.lean#L29) applies the existing [`necessaryBeing`](../../TruthCore/Results/Explanation/EmptyHistoryCausalAvailability/Solution.lean#L58) using that same witness. The composition takes EM as a hypothesis. Under all six hypotheses of the
 original result, `necessaryConcrete` gives a single concrete individual c
 that exists at w and at every world accessible from w. In particular, c
 exists at the accessible coverage world v, contradicting literal concrete
@@ -893,31 +871,7 @@ individuals. The disjunction is conditional on the selected actual
 population and the explicit logic; it is not a theorem establishing
 a necessary individual unconditionally.
 
-Locally elaborated application (zero axioms, no registered edge):
-
-```lean
-import TruthCore.Causality.ContingentBeingNode
-import TruthCore.Logic.ExcludedMiddle
-
-open TruthCore.Causality.BruteFoundationBoundary
-open TruthCore.Causality.ContingentBeingNode
-open TruthCore.Logic.CogitoConcrete
-open TruthCore.Logic (ExcludedMiddle)
-
-example {W B : Type} (m : Profile W B) (w : W)
-    (hPop : InhabitedConcreteAt m.ontic m.concrete w)
-    (hEM : ExcludedMiddle) :
-    NecessaryConcreteAt m w ∨ SomeActualContingentAt m w := by
-  obtain ⟨x, hc, he⟩ := hPop
-  rcases hEM (∃ v, m.ontic.frame.access w v ∧
-      ¬ m.ontic.ExistsAt v x) with habs | hno
-  · exact Or.inr ⟨x, hc, he, habs⟩
-  · refine Or.inl ⟨x, hc, he, ?_⟩
-    intro v hv
-    rcases hEM (m.ontic.ExistsAt v x) with hx | hx
-    · exact hx
-    · exact False.elim (hno ⟨v, hv, hx⟩)
-```
+[Lean application `necessaryOrContingentFromActual`](../../TruthCore/Explanation/ActualPopulationApplications.lean#L43). This diagnostic has no registered graph edge.
 
 **Conditional rival comparison.** If a view retains actual concrete
 population but denies any necessary concrete individual on the same

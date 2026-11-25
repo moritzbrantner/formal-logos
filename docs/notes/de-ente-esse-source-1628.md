@@ -1797,41 +1797,9 @@ A simple physical interpretation shows how the two conditions could receive inde
 
 **Comparison and judgment.** A collection of borrowers, each of whose exercised giving is only received, supplies a conditional explanation of transmission. If the question includes why that activity obtains at all, listing further actual borrowers can repeat the datum to be explained. This supports the existing modest preference for a nonborrowed source on the exhaustive, per se productive reading. The strongest rival can grant every audited transmission and offer a primitive fact that the whole productive pattern obtains, or a necessarily obtaining concrete whole whose constitution explains its members. The former explicitly stops at global actuality. The latter must justify the whole's actuality and the constitutive passage to concrete members; if that whole is itself an unborrowed bearer under the selected relation, the accounts agree on the narrow existence of a root. The source account likewise owes genuine productive availability and a route from it to these borrowers. The finite test excludes a wholly borrowed *closed finite* order with the stated priority; it leaves the general metaphysical commitment open. The [existing quantitative comparison](contractive-borrowed-power-1378.md) provides a separate test under independent bounds and loss. Neither local success licenses importing heat flow, attenuation or finiteness into existence.
 
-The following local Lean checks reproduce the audit comparison and the finite sufficient condition. They add no registered argument or axiom allowance; the classical finite-minimum proof and arithmetic automation use Mathlib's standard logical background.
+The Lean theorems reproduce the audit comparison and the finite sufficient condition. They add no registered argument or axiom allowance; the classical finite-minimum proof and arithmetic automation use Mathlib's standard logical background.
 
-```lean
-import Mathlib.Data.Set.Finite.Lemmas
-import Mathlib.Tactic
-namespace SupplierAudit
-def endless (y x : Nat) := y = x + 1
-def sourced (n y x : Nat) := (x < n ∧ y = x + 1) ∨ (n < x ∧ y = n)
-theorem sameLists (n x y : Nat) (seen : x < n) :
-    sourced n y x ↔ endless y x := by unfold sourced endless; omega
-theorem endlessBorrower (x : Nat) : ∃ y, endless y x := ⟨x+1, rfl⟩
-theorem oneRoot (n x : Nat) : (∀ y, ¬ sourced n y x) ↔ x = n := by
-  constructor
-  · intro h
-    by_cases lt : x < n
-    · exact False.elim (h (x+1) (Or.inl ⟨lt,rfl⟩))
-    · by_contra ne
-      exact h n (Or.inr ⟨by omega, rfl⟩)
-  · rintro rfl y
-    unfold sourced
-    omega
--- Integer labels permit infinite descent on the full roster.
-theorem finiteAudit {B : Type} (S : Set B) (r : B → B → Prop) (level : B → Int)
-    (finite : S.Finite) (present : S.Nonempty)
-    (closed : ∀ x ∈ S, ∀ y, r y x → y ∈ S)
-    (drop : ∀ x ∈ S, ∀ y, r y x → level y < level x) :
-    ∃ x ∈ S, ∀ y, ¬ r y x := by
-  obtain ⟨x,hx,least⟩ := S.exists_min_image level finite present
-  exact ⟨x,hx,fun y hy => (not_lt_of_ge (least y (closed x hx y hy))) (drop x hx y hy)⟩
-#print axioms sameLists
-#print axioms endlessBorrower
-#print axioms oneRoot
-#print axioms finiteAudit
-end SupplierAudit
-```
+[Lean proofs of `sameLists`, `endlessBorrower`, `oneRoot` and `finiteAudit`](../../TruthCore/Causality/SupplierAudit.lean#L15)
 
 ## Research attempts citing this note
 

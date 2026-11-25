@@ -587,19 +587,7 @@ This check reuses exactly the reviewed `sourceAbove` and `domainGift`
 dictionaries. It adds no assumption that the four beings represent all of
 actual reality. [Partition control](../../TruthCore/Case/Catholicism/GodIsOneFromEsse.lean)
 
-```lean
-import TruthCore.Results.Case.Catholicism.GodIsOneFromEsse.Solution
-
-open TruthCore.Case.Catholicism.GodIsOneFromEsse
-open TruthCore.Latin.Aquinas.SummaTheologiae
-
-example : ¬ MaximeEnsCausesBeingOfAllReading
-    (fun (_ : Bool × Bool) (_ : Bool) => True) sourceAbove domainGift true := by
-  rintro ⟨⟨d, s⟩, _, gives⟩
-  have missed := gives (!d, false) (by cases d <;> simp) trivial
-  obtain ⟨_, _, same⟩ := missed
-  cases d <;> contradiction
-```
+[Lean proof of `noCommonGiver`](../../TruthCore/Case/Catholicism/PartitionedEsseSource.lean#L14)
 
 For the deeper De ente premise `c35b1a5c`, the precise denial says that
 no actual bearer whose represented esse equals its essence, and which
