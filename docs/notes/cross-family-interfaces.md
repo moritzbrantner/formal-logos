@@ -91,3 +91,168 @@ Use one small maintenance slice at a time; this note covers several independent 
 Before implementation, in a prepared clone: use `truth related`, `context`, `dossier`, `semantics`, `brief` and `novelty` for exact statement IDs; use the issue brief and current PRs to avoid overlap; inspect existing Solutions and frozen Challenges; establish the minimal proof signature and axiom baseline. For changed proofs run the affected build, `truth check`, `truth bind-check --affected --base <merge-base>`, affected `scripts/verify-result.sh <RESULT-ID>`, Comparator/NanoDa and `truth frontier-diff --base <merge-base>`. Run the bundle audit if modifying argument bundles or pinned definitions. No premise change is intended for pure factoring; report computed comparison and exact affected result identities. Consequential graph bridges remain separate research work subject to independent semantic challenge.
 
 This checkpoint uses GitHub read/write access only: no prepared clone or Lean/Rust verification tools are available in the current environment. The local retrieval and proof verification commands above have not run. The exact proof-body reuse, consumer reachability and novelty of candidate mathematical lemmas remain to be checked. Do not treat this note as certification.
+
+## 7. Second checkpoint: concrete proof-body migration candidates
+
+Inspection of the existing Solutions narrows the survey. The following is not a claim that the listed kernels are novel; check Lean core, Mathlib and the existing schema modules before naming another theorem. The snippets are **uncompiled candidate proof terms**, not registered consequences.
+
+### 7.1 Fixed points: smallest useful vertical slice
+
+The proof body of `TruthCore.Results.Science.InductionSelection.noUnique` is exactly the equality
+`(hn e).symm.trans (congrArg select hf)`. In `TruthCore.Mereology.Fission1397.no_choice`, the equality is oriented the other way:
+`(congrArg choose fixed).symm.trans (equiv d)`; its remaining proof is the case split over the admissible two alternatives. Neither proof needs invertibility. In `TruthCore.Results.Explanation.PathRelocation.symmetry_transfer`, uniqueness is applied to the transformed satisfying path. This is the set-valued form of the fixed-point constraint. The spatial proof `no_covariant_selector` first rewrites by `relative_shift`, then uses `fixed_iff`; it needs a body to exclude an empty absolute configuration.
+
+Proposed two local lemmas if equivalent existing ones are not available:
+
+```lean
+theorem fixed_output {E H : Sort _} (s : E → H)
+    (t : E → E) (u : H → H) (e : E)
+    (fixed : t e = e) (commutes : s (t e) = u (s e)) :
+    u (s e) = s e :=
+  commutes.symm.trans (congrArg s fixed)
+
+theorem unique_closed_fixed {H : Sort _} (P : H → Prop)
+    (u : H → H) (h : H) (member : P h)
+    (unique : ∀ x, P x → x = h) (closed : ∀ x, P x → P (u x)) :
+    u h = h :=
+  unique (u h) (closed h member)
+```
+
+| Existing proof to retain | Result ID and migration action |
+| --- | --- |
+| `InductionSelection.noUnique`, `symmetry` | `6cf4fc73-3265-5712-a0aa-c30a8cb3c299`; retain the recoding and neutrality premises; replace only the fixed-point step. |
+| `Fission1397.no_choice` | `d03376f9-9c91-4dc4-b529-62039d7c1fc4`; retain admissibility, swap and distinctness; use fixed-output equality before cases. |
+| `PathRelocation.symmetry_transfer` | `aaeed827-7dd7-5dc9-a199-52f68f131b74`; instantiate the closed-unique lemma with path precomposition. Preserve the time and arithmetic proof in its original module. |
+| `TranslationBoundary.no_covariant_selector` | `4e27fddd-212c-5c09-a2df-c05f4e740340`; fixed-input rewrite and no-fixed-point argument, with the existing inhabitedness control. |
+
+This small migration would demonstrate exact proof-body reuse, not introduce a universal selection profile or a new notion of symmetry. The mathematics is independent of whether a person, mechanism or law implements the selector. In particular, a unique result at the level of a **distribution** is not a unique realized outcome. For the impersonal-source investigation the precise next test is a fixed total determining setup, a substantive transformation of feasible outputs, and either an explicit covariance premise or a defended sufficient-reason standard implying it. Without these, the root-route application remains OPEN. Retain an asymmetric impersonal ranking and an invariant stochastic generator as separate cases.
+
+### 7.2 Information: reuse the existing connections first
+
+The audit initially treated several families as independent, but they already have meaningful reuse:
+
+- `TruthCore.Results.Science.AdaptiveHistoryAccess.historyControls` invokes `TruthCore.Results.Logic.CorrectionCriterion.characterization.1` directly with the transcript as observation and `PastOccurred` as the predicate. Keep that connection; the general `adaptiveAgreement` result is `83edc309-1c34-402d-9394-4d095218244a`.
+- `TruthCore.Results.Epistemology.InitialHistoryAuthenticity.observation_evidence` proves equality of observation iff `HistorySelection.SameEvidence` on equality tests. Its `evidenceOnly_iff_uniform` already restricts to admitted inputs with a subtype and uses this lemma. Do not replace it with an invented second evidence relation. `sound_iff_uniform_witnesses` supplies the separate authenticity witness per inhabited positive fiber.
+- `HistorySelection.characterization` constructs the predicate `fun w => SameEvidence truth basis w a` and proves constancy by reflexivity, symmetry and transitivity. Its `no_selection` is a direct use of that characterization. Result `4b8f07db-2a50-5826-ac09-083f0e088d64`.
+- `ForeknowledgeDiscrimination.core` uses selected truth agreement and factivity, not unrestricted knowledge. Result `067b5373-8169-42a6-8f80-cf7874761eb9`. Retain reflexivity when using agreement of epistemic rows; an empty accessibility row is complete in the thin semantics without providing factivity.
+
+The genuinely additional reuse target is the passage between equivalence-invariant predicates and exact determination for different projections, not another proof of the already-shared historical criterion. Prefer a proposition-valued construction (avoids demanding function extensionality or propositional extensionality to encode an entire truth vector as an equality). One useful constructive adapter signature is:
+
+```lean
+theorem matched_data_no_exact_classifier {S O : Sort _}
+    (observe : S → O) (P : S → Prop) (s t : S)
+    (same : observe s = observe t) (hs : P s) (ht : ¬ P t) :
+    ¬ ∃ C : O → Prop, ∀ x, C (observe x) ↔ P x := by
+  rintro ⟨C, exactC⟩
+  exact ht ((exactC t).mp (same ▸ (exactC s).mpr hs))
+```
+
+This is a consequence of the already-proved CorrectionCriterion characterization; use that theorem if its carrier and axiom boundaries fit, rather than registering this as a new philosophical result. The pure algebraic statement works with supplied equality and truth at the two states. The fact that a target is not determined by an observation alone does not prove the target unknowable given further evidence.
+
+### 7.3 Stable dynamics: relational matching versus coarse-graining
+
+`TruthCore.Results.Mereology.ArrangementDynamics.realization_iff` uses Mathlib's `Function.extend` to build a macro transition from `Function.FactorsThrough`. Its `histories` proves semiconjugacy along a finite word by list induction. `AdaptiveHistoryAccess.runAgreement` uses Nat induction with a shared policy, equal transcript, and matching successor states. These are related but not identical: the latter permits distinct state carriers and a general relation, and must additionally preserve observations and equal transcript-dependent actions.
+
+A safe adapter relates a micro-state `s` to a macro-state `m` exactly when `observe s = m`; each macro step agrees by the existing semiconjugacy hypothesis. If the macro readout is the identity, the resulting experiment matches the micro experiment's readout. Apply the existing adaptive theorem, rather than add a duplicate induction. Whether this gives an already-registered or useful new graph instance is not yet checked. No use of macro dynamics in the ontology follows merely from observational simulation. Preserve the current finite-history, deterministic-transition scope.
+
+## 8. Additional patterns found during Solution inspection
+
+### 8.1 Modal transmission and transport of failures
+
+`TruthCore.Results.Explanation.PSRStrength.necessitating_reason_contingent` takes an actual true reason, a contingent fact and a necessitation bridge; its proof carries the fact's accessible failure world back to failure of the reason. `bccf_contingent` uses the same move with the aggregate-to-conjunct bridge. `TruthCore.Results.Modal.SimplicityCollapse.rigid_core` takes the same act at every accessible world and strict efficacy, and uses the same contrapositive to exclude a contingent selected effect. The existing modal K-closure work in #1926 is the natural place to reuse this, not a new modality.
+
+Local schematic implication (uncompiled, constructive):
+
+```lean
+theorem failure_transport {W : Sort _} (R : W → W → Prop)
+    (a : W) (P Q : W → Prop)
+    (bridge : ∀ v, R a v → P v → Q v)
+    (actualP : P a) (failure : ∃ v, R a v ∧ ¬ Q v) :
+    P a ∧ ∃ v, R a v ∧ ¬ P v := by
+  obtain ⟨v, hv, hn⟩ := failure
+  exact ⟨actualP, v, hv, fun hp => hn (bridge v hv hp)⟩
+```
+
+This isolates the modal failure witness without introducing excluded middle or a reflexivity assumption. The forward necessity theorem needs the same accessible domain and implication at each accessible world; it is not enough that the reason happens to explain the actual fact. For `holder_necessary` in HolderRootIdentification, the move from not-contingent to necessary uses an explicit excluded-middle input and actual existence; do not erase that dependency. The source's necessary existence is also not the necessary performance of its particular act.
+
+Candidate applications: PSR-collapse, source-to-effect necessity, aggregate contingency, truthmaker necessitation and joint-absence holder identification. Coordinate existing #1941/#1942/#1947 and the necessary-source investigation; the common theorem transfers no philosophical warrant between their bridge premises.
+
+### 8.2 Same-witness property transfer and root-role inclusion
+
+The current `TruthCore.Results.Causality.HolderRootIdentification` contains an exact repeated proof family: `holdersHaveIntellectFromCommonRoot` and `holdersAreGodFromCommonRoot` extract the identical root witness, rewrite with `root_eq_commonRoot`, then apply its respective predicate. `atMostOneHolderFromAtMostOneRoot` uses predicate inclusion; `godHasWillFromWilledHolder` transfers will across equality derived from uniqueness.
+
+The following two proof shapes are candidates for reuse (prefer an existing lemma or direct equality elimination when shorter):
+
+- If every H-bearer is an R-bearer and R is at-most-one, H is at-most-one. This requires **no existence**; keep it separate from unique existence.
+- If a selected witness `n` has property `P` and every H-bearer is equal to `n`, then every H-bearer has `P`. Nothing follows about existence of an H-bearer. If `P` is one element of a conjunction, all projections still refer to the same witness.
+
+Candidate next migration: abstract just the repeated role-to-selected-root step if it reduces real repetition. Compare `TruthCore.Logic.Strength.UniqueExistence.AtMostOne` and `ExactDelta` for already-registered uniqueness machinery; reuse #1926's common-root interface and phase-3 uniqueness work. Preserve the existing `root_eq_commonRoot` proof's **direct** actual concrete ground relation. A transitive-ancestry version requires a separate premise. A root is not identified by being necessary or having one attribute. In particular, existence of an intellect-bearing source and a will-bearing source does not establish one source with both properties without a common-witness premise.
+
+These patterns are close to the user's current intellect/will investigation, but should not generate a fresh God-identification route merely by abstracting predicates. New sense-specific instances must bind to existing root-role claims with explicit application evidence.
+
+## 9. Executed finite diagnostic controls
+
+A local Python standard-library enumeration was run during this survey. It checks the small mathematical profiles only, independently of Lean and the corpus. It does not certify the candidate proof terms or prove any actual-world application.
+
+```python
+from itertools import product
+B = (0, 1)
+maps = list(product(B, repeat=2))
+n = 0
+for tr, mv, sel, e in product(maps, maps, maps, B):
+    if tr[e] == e and sel[tr[e]] == mv[sel[e]]:
+        assert mv[sel[e]] == sel[e]
+        n += 1
+assert n == 32
+n = 0
+for mv, p, h in product(maps, maps, B):
+    if (p[h] and all(not p[x] or x == h for x in B)
+            and all(not p[x] or p[mv[x]] for x in B)):
+        assert mv[h] == h
+        n += 1
+assert n == 4
+bad = 0
+for obs, p in product(maps, maps):
+    invariant = all(obs[s] != obs[t] or p[s] == p[t]
+                    for s, t in product(B, repeat=2))
+    factors = any(all(c[obs[s]] == p[s] for s in B) for c in maps)
+    assert invariant == factors
+    bad += not invariant
+assert bad == 4  # of 16 profiles
+gap = 0
+for r in product(B, repeat=4):
+    R = lambda i, x: r[2*i+x]
+    local = all(any(R(i, x) for x in B) for i in B)
+    uniform = any(all(R(i, x) for i in B) for x in B)
+    assert not uniform or local
+    gap += local and not uniform
+assert gap == 2  # of 16 relations: diagonal and antidiagonal
+n = 0
+for allowed, obs, pos, truth in product(maps, maps, maps,
+                                        product(B, repeat=4)):
+    I = [i for i in B if allowed[i] and pos[obs[i]]]
+    holds = lambda i: bool(truth[2*obs[i]+i])
+    sound = all(holds(i) for i in I)
+    uniform = all(obs[i] != obs[j] or holds(i) == holds(j)
+                  for i, j in product(I, repeat=2))
+    witnesses = all(any(obs[i] == obs[j] and holds(j) for j in I) for i in I)
+    assert sound == (uniform and witnesses)
+    n += 1
+assert n == 1024  # includes empty scopes; vacuity explicitly retained
+gap = 0
+for a, b in product(maps, maps):
+    factive = a[0] and b[0]
+    sufficient = all(not a[v] or b[v] for v in B)
+    if all(a) and sufficient:
+        assert all(b)
+    gap += factive and not sufficient
+assert gap == 1  # actual factivity alone permits failure of modal sufficiency
+```
+
+The actual run reported 32 fixed-selector antecedent instances, four closed-unique instances, 16 factorization profiles (four failures of factorability), 16 witness relations (two local-without-uniform cases), 1,024 restricted positive-fiber profiles, and one case of actual factivity without modal sufficiency. The finite witness and factorization failures are not philosophical counterexamples to the existence of a necessary source; they discriminate the proposed logical transitions. No broader closure computation has run.
+
+## 10. Handoff for first implementation
+
+Prioritize the precise §7.1 migration as a small independent maintenance slice if the novelty/context checks confirm it is not already covered. Use the existing four result IDs as inputs to `truth context`, inspect their frozen Challenges and Comparator configurations, and record the baseline axiom lists before moving proof bodies. Keep domain-specific lemmas and imports where they own genuine application work. The second slice should reuse the already-existing historical evidence adapter and target the outstanding relational/functional invariance boundary in §7.2–7.3. The modal and witness patterns in §8 should be handled through the corresponding existing #1926 work rather than duplicate it.
+
+The draft is a documentation checkpoint. A prepared repository checkout, installed conventions in the local toolchain, Lean elaboration, exact theorem binding/axiom comparisons and independent semantic review of consequential applications remain pending. No new corpus relation is written, no record is deleted, no proof body or frozen Challenge changes, and no premise change is intended. No claim of mechanically checked equivalence or new root support is made.
