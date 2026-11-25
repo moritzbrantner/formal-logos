@@ -3,7 +3,7 @@
 Issue #259 tests three objections without identifying numerical difference,
 independent existence, non-inherence and cognitive isolation. The interface in
 `TruthCore/Greek/Plato/Parmenides/ParticipationChallenges.lean` extends the shared
-`Forms.Vocabulary`; it changes none of its meanings or existing theories.
+`Forms.Vocabulary`; it changes none of its meanings or existing theories. [Original PR #282](https://github.com/moritzbrantner/formal-logos/pull/282)
 
 ## Source reading and boundaries
 

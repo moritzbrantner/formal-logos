@@ -11,7 +11,8 @@
   "evidence": [
     "95f41960-baf4-58ad-ba7f-b11b2f439f7c",
     "da9c82ed-e886-5335-81c3-cebad9b27345",
-    "47957c28-218a-58e4-94e4-5220a0c45795"
+    "47957c28-218a-58e4-94e4-5220a0c45795",
+    "PR-1592"
   ],
   "blocker": "The frozen D does not certify persistence across the full admitted possibility range. Need an independently defended essential requirement on this same source, an identity-preserving no-replacement argument or justified comparison restriction, and an explicit counterfactual/possibility dictionary. Impossible source absence remains a separate semantic issue. Draft is unregistered and unverified; configured verifier toolchain unavailable."
 }

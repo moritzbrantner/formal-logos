@@ -6,7 +6,7 @@ than a general refutation of naturalism. The result
 ST I q.75 a.2: the designated human intellectual principle is not a body.
 It does not derive the later claims of non-organic operation, per-se
 subsistence or immortality. Not being a body does not exclude every physical
-process, functional organization or physical realization of a capacity.
+process, functional organization or physical realization of a capacity. [Original PR #420](https://github.com/moritzbrantner/formal-logos/pull/420)
 
 ## Verified source and reuse
 

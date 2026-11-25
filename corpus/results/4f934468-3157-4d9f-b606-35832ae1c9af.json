@@ -1,0 +1,11 @@
+{
+  "id": "4f934468-3157-4d9f-b606-35832ae1c9af",
+  "label": "Finite controls on GOD_4 uniqueness by esse causation, checked",
+  "argument_id": "15db4e58-d914-4c08-9e32-3f742ebebf11",
+  "challenge_module": "TruthCore.Results.Case.Catholicism.GodIsOneFromEsse.Challenge",
+  "solution_module": "TruthCore.Results.Case.Catholicism.GodIsOneFromEsse.Solution",
+  "theorem": "TruthCore.Results.Case.Catholicism.GodIsOneFromEsse.controls",
+  "comparator_config": "results/4f934468-3157-4d9f-b606-35832ae1c9af/comparator.json",
+  "status": "solution-present",
+  "description": "Explicit finite models establish joint nonvacuity, individual nonlogical omissions and scope distinctions for the stated bundles. Partitioned causes each give a real edge in the model. With causation restricted to actual recipients the dependence route also needs to reach God candidates. For the maximal-witness proof the existing MAXIME_1 definition already supplies actuality at esse for the required recipient."
+}

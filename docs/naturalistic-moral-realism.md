@@ -6,7 +6,7 @@ It extends the question set and V/S/U/C vocabulary of
 [the metaethics comparison](../TruthCore/Comparison/Metaethics.lean) and the
 availability/content distinction in [AnswerMap](../TruthCore/Metaethics/AnswerMap.lean).
 There is no aggregate score, and a sourced answer counts as an answer even when
-its defense is open. The same rule applies to Catholic answers.
+its defense is open. The same rule applies to Catholic answers. [Original PR #271](https://github.com/moritzbrantner/formal-logos/pull/271)
 
 ## Primary witnesses and strongest versions
 
@@ -291,7 +291,7 @@ new result**. Their cited source support and the interpretation judgments remain
 separate from proof verification. Stronger conclusions about actual truth-tracking,
 realism's defeat, naturalism's defeat, or Catholicism do not follow. The substantive
 attempt and rejected formalization are recorded in
-`ATTEMPT-MORAL-ACCESS-EVOLUTIONARY-COMPARISON`.
+[`ATTEMPT-MORAL-ACCESS-EVOLUTIONARY-COMPARISON`](../corpus/attempts/moral-access-evolutionary-comparison.json).
 
 ## Reproducibility and fidelity sweep
 
@@ -721,3 +721,10 @@ compared and justified natural-base descriptions and moral-case content**;
 which base each can accept is part of the question. This expands the
 comparison, but establishes no source premise, rival defeat, categorical
 obligation or Catholic root leaf.
+
+## Research attempts citing this note
+
+- [Applied the existing exact criterion to finite moral prohibition assignments and three explicitly…](../corpus/attempts/moral-identical-evidence.json)
+- [Compared world-relative, cross-world and competent-verdict moral supervenience](../corpus/attempts/e2baa97d-dcff-4d9f-b3a3-b770e927a596.json)
+- [Materialized and read Railton Moral Realism pp. 201–204: he retains moral obligation even where a…](../corpus/attempts/hard-moral-case-railton-reason.json)
+- [Separated property, rational and conceptual moral-supervenience claims from primary evidence](../corpus/attempts/0c93e726-85fe-4dbe-a519-119c28d13fd5.json)

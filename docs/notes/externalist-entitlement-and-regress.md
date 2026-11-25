@@ -1,5 +1,7 @@
 # Externalist entitlement and the demand for further reasons
 
+[Research record](../../corpus/attempts/externalist-entitlement-adequacy.json)
+
 ## Question and source boundary
 
 Does an adequately justified belief require the subject to possess and be able to

@@ -1,0 +1,14 @@
+{
+  "challenge_module": "TruthCore.Results.Logic.BeliefReasonWitness.Challenge",
+  "solution_module": "TruthCore.Results.Logic.BeliefReasonWitness.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Logic.BeliefReasonWitness.reasonsFromConcession",
+    "TruthCore.Results.Logic.BeliefReasonWitness.reasonAtBelief",
+    "TruthCore.Results.Logic.BeliefReasonWitness.suspensionControl",
+    "TruthCore.Results.Logic.BeliefReasonWitness.independentSuspension",
+    "TruthCore.Results.Logic.BeliefReasonWitness.withoutPresentation",
+    "TruthCore.Results.Logic.BeliefReasonWitness.differentContent"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}

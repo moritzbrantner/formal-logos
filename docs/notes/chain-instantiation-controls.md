@@ -4,7 +4,7 @@ The checked target `ChainInstantiation.Controls` distinguishes three questions:
 can a structure satisfy its equations; are the claimed individuals and links
 actual; and do the actual grounds adequately explain the target? The target
 answers only the first question and proves two precise limits on an offered
-answer to the second. It supplies no source attribution or metaphysical verdict.
+answer to the second. It supplies no source attribution or metaphysical verdict. [Research record](../../corpus/attempts/chain-instantiation-controls.json)
 
 ## Exact comparison and reuse
 

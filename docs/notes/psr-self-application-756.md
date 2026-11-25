@@ -6,7 +6,7 @@ theorems are `stanceMap` and `bridgeLadder` in
 `TruthCore.Explanation.PSRSelfApplication`, which extends the #755 arena and the #397
 norm schema. Both are zero-axiom. They establish conditional consequence and the
 satisfiability of encoded bundles. They establish no PSR, exclude no brute foundation
-unconditionally, and discharge no premise on a root route.
+unconditionally, and discharge no premise on a root route. [Research record](../../corpus/attempts/psr-self-application.json)
 
 No source claim is added. Koons, Pruss, Della Rocca and their critics (#409) were not
 read for this work, so nothing below is attributed to them.
@@ -465,7 +465,7 @@ interpretations remain open; they are not new empirical verifications. An earlie
 proof lemma is excluded because its use does not supply the actuality of an
 object. Conversely a generator's presupposed material need not be a claim in a
 proof. The corpus's reflexive-requirement/strict-dependence investigation
-`a4d430a0-9711-4d04-b4a5-be385f92e757` independently warns against imposing a strict
+[`a4d430a0-9711-4d04-b4a5-be385f92e757`](../../corpus/attempts/a4d430a0-9711-4d04-b4a5-be385f92e757.json) independently warns against imposing a strict
 order merely from the word requirement. Existing argument
 `2adcc5ff-3c4e-4662-8827-ee32dc48bd4d` reaches the Catholicism root through an explicit
 priority-to-actual-dependence bridge, irreflexivity and distinct-relata grounding
@@ -631,7 +631,7 @@ own companion premises. The earlier report of prior subsistence/unity does not
 identify a registered historical rule chain. Same-source selection and the
 GOD_4 application remain explicit gaps, with no invented inferential edge or
 transfer to ontic requirement or efficient causation. Existing attempt
-`74008d2a-4029-53ec-a795-c07fee054f39` preserves this proposed outcome. No premise
+[`74008d2a-4029-53ec-a795-c07fee054f39`](../../corpus/attempts/causal-perfection-transfer.json) preserves this proposed outcome. No premise
 or formal-meaning completion is claimed by this consumer note.
 
 ## Brute contingency and parity (B2, 2026-11-23)
@@ -740,7 +740,7 @@ The map `a1056aab` (`13c05b6d`) records, for both sides:
   regress of contingents, each explained by its predecessor (#746 `cofinite`, no
   terminal fact), are not scene pictures; the regress faces the whole-series question
   (an aggregate of all contingent truths is a member of the #755 collapse core; the
-  whole-series standards of attempt a5958e25). Named gap.
+  whole-series standards of attempt [a5958e25](../../corpus/attempts/a5958e25-0904-46cb-a9e8-62ca5f3f5286.json)). Named gap.
 - *Scene-relative tallies, at the reading world, of the unexplained existents.* They
   rank nothing by themselves: a bare preference for fewer unexplained facts favours
   `copy bruteTerminus`, which gains a reason and loses independence (#746 count
@@ -816,7 +816,7 @@ existence (#750) is open. Circles and the endless regress of contingents are not
 scene. Next: test whether the necessary-root uniqueness and
 attributes results discriminate a self-explained God from a self-explained physical base
 at matching scope; seek a derivation of BX1 from contingent irreflexivity and B6.
-Attempt `b7860c60-202d-4ca7-9156-630a51a1e8b3`.
+Attempt [`b7860c60-202d-4ca7-9156-630a51a1e8b3`](../../corpus/attempts/b7860c60-202d-4ca7-9156-630a51a1e8b3.json).
 
 
 ## Does a contingent foundation merit exemption from determining explanation? (2026-11-23)
@@ -1181,7 +1181,7 @@ The formal evidence for these comparisons remains in the existing
 results. The review corrections concern the reason present in a
 picture, the absence witness required for n, the priority premise
 in the First Way application and the distinct witnesses in #942. Attempt
-`9d7b8ae0-474d-4ae4-9d08-019cffbdea7b` records the revised
+[`9d7b8ae0-474d-4ae4-9d08-019cffbdea7b`](../../corpus/attempts/9d7b8ae0-474d-4ae4-9d08-019cffbdea7b.json) records the revised
 provisional assessment and its open bridges.
 
 ## Containment of evidence and adaptive calibration (2026-11-24)
@@ -1410,7 +1410,12 @@ counterexample or re-proving the strict-norm contradiction would not answer it.
 The formal module is `TruthCore.Science.AdaptiveHistoryAccess`; its frozen
 Challenge and record specification are in the corresponding Results directory
 and `specs/adaptive-history-access.toml`. The current assessment of historical
-attempt `82b6c542-3f01-41eb-8a3d-b3b8b34d6315` records this exact scoped
+attempt [`82b6c542-3f01-41eb-8a3d-b3b8b34d6315`](../../corpus/attempts/82b6c542-3f01-41eb-8a3d-b3b8b34d6315.json) records this exact scoped
 assessment, verification boundary and review disposition. The assessment of
 `9d7b8ae0-474d-4ae4-9d08-019cffbdea7b` is unchanged: its same-member absence
 and adequate-reason tests remain open.
+
+## Research attempts citing this note
+
+- [Read backlog756/750 and reused existing first-principles, performed-denial and PSR stance evidence…](../../corpus/attempts/fundamental-principle-entitlement-20261031.json)
+- [Witness kleinschmidt reasoning without psr 64 79](../../corpus/attempts/psr-explanatory-virtue-312.json)

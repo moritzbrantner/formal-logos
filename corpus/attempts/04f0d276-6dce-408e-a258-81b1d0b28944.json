@@ -11,11 +11,28 @@
   ],
   "kind": "derivation",
   "outcome": "succeeded",
-  "summary": "Full-content service elaboration accepted exact rational factorization, threshold, screening and controls and general Mathlib measurable pushforward invariance. Final certification pending. Definition audit and proposed overall judgment with positive rivals and recursive warrant dependencies in docs/notes/fine-tuning-selection.md. Rejected raw-as-incremental updating, fresh-coordinate uniformity as transport, and unrestricted Sampling robustness. Continuous density illustration not separately certified.",
+  "summary": "Full-content service elaboration accepted exact rational factorization, threshold, screening and controls and general Mathlib measurable pushforward invariance. The earlier development checkpoint preceded merged PR #1385. Definition audit and proposed overall judgment with positive rivals and recursive warrant dependencies in docs/notes/fine-tuning-selection.md. Rejected raw-as-incremental updating, fresh-coordinate uniformity as transport, and unrestricted Sampling robustness. Continuous density illustration not separately certified. #1569 applies the distinction to the observed positive vacuum-density decade. Integrating Bousso et al. Fig. 8 gives about 0.34 or 0.43 for entropy-weighted centers. A late halo-entropy measure can lose the preferred scale. Communicating goodness supplies no bin weight. Under Page’s separate life-fraction objective, a stellar-mediated comparison requires about 1.17 times the life yield per stellar mass at the observed density to match a lower-density alternative in the Sorini et al. model. The note gives assumptions and figure locators.",
   "evidence": [
     "467dc8c9-9245-431e-9ab4-06cc797be652",
     "37179a1f-babd-4241-92cd-2915081b4930",
-    "847ba0b4-6372-4015-a4f0-0132fd00198f"
+    "847ba0b4-6372-4015-a4f0-0132fd00198f",
+    "PR-1385",
+    "PR-1967"
   ],
-  "blocker": "Actual application lacks a physical generative measure and observer-record sampling rule, independently supported designer goal/mechanism likelihoods, epistemic inference and God-identification bridges. Next discriminating tests require specified admissible measure/goal classes and residual predictions beyond viability; no such empirical or intentional model is supplied."
+  "blocker": "The homogeneous stellar CEP supplies a proxy distribution; its population prior, worldline/late-entropy weighting and applicability to sampled records need warrant. Page’s strict optimizer lacks life yields and a demonstrated optimum over the bin and its alternatives. Communicated goodness alone specifies neither that objective nor an implementation/selection distribution. Reopen on a calibrated physical record measure or an independently supported choice rule and same-background yield bounds across the observed decade. Epistemic inference and GOD_4 identification remain open.",
+  "current_assessment": {
+    "date": "2026-11-24",
+    "statement_ids": [
+      "6a84cd7a-e306-4fe3-9718-8d696083ae4c"
+    ],
+    "scope": "The observed positive vacuum-energy decade as residual evidence after conditioning on an observation record.",
+    "assessment": "The homogeneous causal-entropic model gives a quantitative fit conditional on its population prior and entropy proxy. A source that communicates goodness supplies no probability for this decade. Maximizing the baryon fraction becoming life gives an ordering criterion whose needed life yields are unknown. The comparative evidential direction remains open.",
+    "next_test": "Calibrate record weights across vacuum densities or bound the life yields and choice distribution for the same feasible worlds and centers.",
+    "note": "docs/notes/fine-tuning-selection.md#1569-which-vacuum-energy-decade-does-an-observer-find",
+    "reviewed_revision": "9351b7054318b11909e3e0e5613f8027937562d6",
+    "review": "accepted_qualified",
+    "publication": "published",
+    "evidence": "Independent challenge reproduced both Fig. 8 masses. It accepted the final ordinary-matter entropy weight, the attainable-maximum and tie-breaking scope, and the two-point yield threshold at 9351b7054. The reviewed outcome is published on research/comparing-explanatory-representations.",
+    "supersedes": "None. This assessment concerns the named models and the specified decade."
+  }
 }

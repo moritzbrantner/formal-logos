@@ -2,7 +2,7 @@
 
 This is the first mathematical control for #435. It leaves that issue open.
 It adds no attributed philosophical reading and no evidence that a necessary
-concrete individual actually exists or is metaphysically possible.
+concrete individual actually exists or is metaphysically possible. [Research record](../corpus/attempts/necessary-individual-quantifier-shift.json)
 
 ## Fixed roster and two distinct predicates
 

@@ -875,6 +875,44 @@ snapshot without closed items, or captured before the checkout's HEAD
 commit, is flagged. Errors: an unknown target exits 3; an unreadable
 snapshot exits 2; index errors exit 1. Python has no counterpart.
 
+### Starting from a GitHub issue
+
+Use the issue number when a worker returns an older finding or an open issue
+appears ready for assignment. Run the brief on the revision whose research
+you want to use. For dispatch, that is current `main`.
+
+```bash
+python3 scripts/issue_snapshot.py 1792 > /tmp/truth-1792.json
+target/release/truth brief '#1792' --issues-from /tmp/truth-1792.json
+```
+
+The first command reads the issue and its paginated GitHub timeline. It keeps
+the issue body, comments, and the same-repository issues and PRs that referenced
+it. It can find a merged delivery while the issue is still open. The second
+command runs offline. Read the assessment’s scope, reviewed revision, source
+note and next test alongside each relevant PR’s state. An issue mention can
+refer to an objection or an earlier draft. Compare what the PR delivered with
+the actual request before closing or dispatching it.
+
+An assessment can name the exact note section that mentions the issue. The
+brief follows that link even when the assessment omits the issue number.
+It also shows records explicitly named in that section and attempts citing a
+related PR in their `evidence`. Each result identifies the reference that led
+to it. A batch PR can deliver several investigations. Match the attempt's scope
+and the section containing the finding before treating it as the issue's answer.
+
+If a merged investigation is missing from a brief, compare its Git revision
+with the references currently recorded on its attempts. The
+[delivery audit](../docs/premise-dossiers.md#attempt-records) can inspect every
+attempt changed since the last checkpoint in one run.
+
+The text gives a bounded view. `--json` includes the original request and
+comments, all matching records and all directly referenced note sections.
+A previously captured snapshot can be reused. Without a snapshot, the issue
+brief can still find directly referenced checkout records. Outbound-only links,
+private or unreferenced work and changes since capture can require another
+source. A wider all-state issue/PR snapshot in the supported format also works.
+
 ## `issues` and `dossier --issues-from`
 
 `truth issues --from FILE [--for ID]` is `corpus.py issues --from FILE`: the

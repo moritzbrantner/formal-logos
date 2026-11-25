@@ -1,0 +1,11 @@
+{
+  "id": "690829e4-e0f3-444a-9242-71e1ca849d3c",
+  "label": "Characterize robust transfer coverage by counts at each grade threshold",
+  "argument_id": "8749954d-90aa-4d52-be8f-dc656a4d041f",
+  "challenge_module": "TruthCore.Results.Causality.ReceiptMatching.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ReceiptMatching.Solution",
+  "theorem": "TruthCore.Results.Causality.ReceiptMatching.allCalibrations",
+  "comparator_config": "results/690829e4-e0f3-444a-9242-71e1ca849d3c/comparator.json",
+  "status": "solution-present",
+  "description": "Each grade increment is multiplied by the count of all occurrences reaching its threshold. If one output count exceeds that input count, enlarge just that increment beyond the total of the input threshold counts. Conversely the count inequalities can be multiplied by each increment and summed."
+}

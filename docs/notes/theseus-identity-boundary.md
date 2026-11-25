@@ -5,7 +5,7 @@ necessity. The existing `Mereology.Vitalism` profile (`STMT-MEREO-SOUL-UNITY-IND
 explicitly treats operational continuity as distinct from numerical identity.
 Its life/soul predicates would add irrelevant assumptions here. Its checked
 independence theorem is not restated as a premise. No existing Theseus module
-or reassembly result was found.
+or reassembly result was found. [Research record](../../corpus/attempts/theseus-identity-boundary.json)
 
 ## Read source and rejected attribution
 

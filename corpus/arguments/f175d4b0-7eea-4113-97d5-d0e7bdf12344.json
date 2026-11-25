@@ -1,0 +1,33 @@
+{
+  "id": "f175d4b0-7eea-4113-97d5-d0e7bdf12344",
+  "label": "CONCRETE_AND_ABSTRACT_6 population from an already witnessed thinking subject",
+  "premise_statement_ids": [
+    "0315d471-5093-59e3-a435-b7beff4c48a4",
+    "a7040bf1-b15a-5ffb-b096-6b60411a066e",
+    "c821487b-9c5e-5836-bf27-dcb47f210c94"
+  ],
+  "conclusion_statement_id": "56f68b40-9737-59a0-8cac-5610980a1547",
+  "inference_ids": [
+    "cf62a1ba-c805-4a7d-b717-dab49fade5a4"
+  ],
+  "meaning": "Eliminate the positive Cogito witness. Apply the two existing bridges at its bearer and occurring thought, giving both concreteness and existence at the selected world for one candidate. This consumer accepts a single borne episode even if other occurring thoughts have no bearer. It does not identify the candidate with the speaker, episode or its representative.",
+  "definition_ids": [
+    "fd4d20b9-e6a1-5890-a2f5-f10d6c7441de",
+    "008cb21a-256c-5a90-822c-acd4591d699a",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "ce8ccc1a-4f9a-5904-a10c-548778d79b66",
+    "c0cbef1c-060a-54d4-bb49-8d59da40caf3"
+  ],
+  "disambiguation_ids": [
+    "16ea77ae-4ec7-59e4-8474-10f04efb5ddf"
+  ],
+  "sense_bridges": [
+    {
+      "term": "A_THOUGHT_OCCURS_VERSUS_SOMETHING_CONCRETE",
+      "from": "1c99ce91-24fc-4896-b1cc-ec13e1797d40",
+      "to": "16318101-d4c4-4ea8-a28e-406fc06ca152",
+      "statement_id": "a7040bf1-b15a-5ffb-b096-6b60411a066e"
+    }
+  ]
+}

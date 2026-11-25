@@ -7,7 +7,7 @@ context: physical PDF pages 104–120 and 120–135 in the cited Routledge editi
 Conventional citations below refer to its **printed** pages 61–92. The original
 lectures are distinguished from Pears’s introduction. No PDF text is committed.
 The consulted ranges extract identically with Poppler 24.02 and 26.01; both the
-response-byte hash and normalized extracted-text hashes are pinned.
+response-byte hash and normalized extracted-text hashes are pinned. [Original PR #293](https://github.com/moritzbrantner/formal-logos/pull/293)
 
 ## What the source commits to
 

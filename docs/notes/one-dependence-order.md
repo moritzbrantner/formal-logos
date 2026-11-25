@@ -7,7 +7,7 @@ accepted the derivations and controls subject to one P1 fix (the re-rating of
 `specs/one-dependence-order.toml`, module
 `TruthCore/Causality/OneDependenceOrder.lean`, results
 `TruthCore/Results/Causality/OneDependenceOrder/`. Attempt record
-`b2cf0e2e`.
+[`b2cf0e2e`](../../corpus/attempts/b2cf0e2e-60c7-4af2-af5b-b45ad09712fc.json).
 
 ## Question
 
@@ -310,7 +310,7 @@ Status: verified conditional derivations and controls on branch
 subject to P1 fixes, which are applied here together with its P2 repairs.
 Spec `specs/dependence-order-senses.toml`, module
 `TruthCore/Causality/DependenceOrderSenses.lean`, results
-`TruthCore/Results/Causality/DependenceOrderSenses/`, attempt `b204e708`.
+`TruthCore/Results/Causality/DependenceOrderSenses/`, attempt [`b204e708`](../../corpus/attempts/b204e708-8bf7-4a50-b657-4908240c827a.json).
 It takes up the first two next tests above.
 
 ### (i) The existential sense of the per se link

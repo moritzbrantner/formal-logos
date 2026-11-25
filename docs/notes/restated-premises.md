@@ -3,7 +3,7 @@
 Issue #1926, phase 2, slice 1 (2026-11-24). The #1926 survey reported several
 groups of open premises as restatements of one another. This note records,
 group by group, whether the premises coincide in sense, quantifier, world and
-carrier, and what was registered.
+carrier, and what was registered. [Research record](../../corpus/attempts/0596124f-4712-4c66-864b-a86a86bd19f8.json)
 
 - Spec: `specs/restated-premises-1926.toml`.
 - Lean: `TruthCore/Causality/RestatedPremises.lean` and `TruthCore/Results/Causality/RestatedPremises/`.

@@ -3,7 +3,7 @@
 The owner’s Agrippa/Münchhausen question asks whether a regress supplies the
 justification it owes. A structurally coherent infinite sequence does not settle
 that question. The positive infinitist reply also cannot be reduced to the claim
-that every belief has a predecessor.
+that every belief has a predecessor. [Research record](../../corpus/attempts/infinitist-availability-adequacy.json)
 
 ## Inspected source and scope
 

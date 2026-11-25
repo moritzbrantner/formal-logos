@@ -5,7 +5,7 @@ This develops the existing alternative from #179 and #251. Its identity remains
 paper below is attributed that whole philosophical thesis. In particular,
 explaining adaptation without an agent in the mechanism is weaker than denying
 any intelligent director of nature. The latter remains an explicit open
-commitment of the naturalistic rival.
+commitment of the naturalistic rival. [Original PR #276](https://github.com/moritzbrantner/formal-logos/pull/276)
 
 The strongest rival considered here combines inherited variation and differential
 reproduction, historical contingency and environmental constraint, local feedback

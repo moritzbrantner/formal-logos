@@ -3,9 +3,9 @@
 The cheapest root route is `8df2faad`, with cost 16. This note asks why it is so
 cheap, and whether the classical GOD_4 root `da3facd6` can take the place of the
 leaf that makes it cheap. It is a structural note about the graph and the
-route-cost diagnostic. It judges no premise's warrant. The attempt records are `6becc920`
+route-cost diagnostic. It judges no premise's warrant. The attempt records are [`6becc920`](../../corpus/attempts/6becc920-9c87-471e-9d86-23bacd33f722.json)
 ("Projection of the classical GOD_4 root onto the box K node of the fork
-route", succeeded) and `b3467390` ("Re-routing the fork route's box K node off
+route", succeeded) and [`b3467390`](../../corpus/attempts/b3467390-20e8-4feb-825c-766f44381eef.json) ("Re-routing the fork route's box K node off
 the packed GOD_4 leaf", blocked). The batch is
 `specs/necessary-classical-god-root-box-k.toml`.
 
@@ -191,3 +191,7 @@ Closure does apply it.
 
 The well-founded registration `577cd3b6` is the slice's non-circular new
 support option for `5c898d24`.
+
+## Research attempts citing this note
+
+- [Root-supply interface: variants into whole-roster nontrapping and one derivation from root existence](../../corpus/attempts/c389e363-02f8-4516-bba1-851ab8f2093d.json)

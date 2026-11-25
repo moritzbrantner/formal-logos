@@ -5,7 +5,7 @@ the Preface" (*Analysis* 25, 1965) and Bovens–Olsson, "Coherentism, Reliabilit
 and Bayesian Networks" (*Mind* 109, 2000) are navigation leads, not sourced
 claims. Formal home: `TruthCore/Logic/PrefaceConnectivity.lean`, results in
 `TruthCore/Results/Logic/PrefaceConnectivity/`, spec
-`specs/preface-connectivity-1584.toml`.
+`specs/preface-connectivity-1584.toml`. [Research record](../../corpus/attempts/f602c3fd-3dc2-401c-a0ef-312f660acbcf.json)
 
 **Connection:** a named connection plan to #930/#931/#934 (cumulative warrant,
 premise assessment, correction), not an established root route. No root premise

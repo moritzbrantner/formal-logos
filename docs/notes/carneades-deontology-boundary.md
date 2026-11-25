@@ -3,7 +3,7 @@
 Owner direction (2026-11-05, #1035): the following is a working logical
 reconstruction. Attribution remains deferred; no source acquisition or historical
 intention work is required for conditional investigation. Earlier caption notes
-below remain provisional research history, not certified attribution.
+below remain provisional research history, not certified attribution. [Research record](../../corpus/attempts/carneades-deontic-future-boundary.json)
 
 Read the complete English `en-orig` auto-caption recording of Carneades.org,
 [The Paradox of Kant's Law (Ought Implies Can)](https://www.youtube.com/watch?v=qjNs4t4GQ2A),
@@ -570,3 +570,7 @@ The computed `target/release/truth frontier-diff --base origin/main` remains
 402 -> 402 root-reaching open premises, 288 -> 288 support alternatives, no
 change. Convention sourceRevision: `625cb04ca568aebc8d45c90033e107a05e9bd2a0`.
 Final delivered-head CI and master semantic challenge remain pending.
+
+## Research attempts citing this note
+
+- [Ross weakening, weak permission and exact-content rival investigation](../../corpus/attempts/c68b6e45-1430-4250-a587-b0a83979d38b.json)

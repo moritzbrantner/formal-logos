@@ -390,3 +390,78 @@ coverage, necessity, intellect and will require further same-bearer premises.
 Reopen the comparison on an independently calibrated instance of existential
 transfer or on a non-quantitative account of participation which distinguishes
 derivative exercise from local origination. [Ledger equivalence](../../TruthCore/Results/Causality/FiniteThroughput/Solution.lean)
+
+## Do degrees of being give an independently warranted measure of transfer?
+
+The participation argument gives an order comparison. If the principal giver
+possesses the participant's relevant determinations and these calibrate each
+bearer's own degree by a least upper bound, the giver ranks at least as high
+as that participant. This is positive warrant for a comparison of **individual
+bearers** under its premises. Could those same comparisons justify covering
+the total exports of a grounded intermediary? [Participant bound and its four
+premises](maximum-definition-fork.md#when-does-what-is-communicated-fix-the-givers-own-degree-of-esse) [Assessment record](../../corpus/attempts/1975ad3e-ebdf-4095-a422-4753c9ae2326.json)
+
+**Keep the production and the bearers fixed.** A relay receives from a
+principal and gives to two recipients. Both upstream bearers possess a low
+and a high determination. Each downstream recipient possesses the low one.
+On every edge the giver possesses all the recipient's selected determinations.
+Assign degree by their greatest realized level, which exists here. Give the
+low level value two. Test the proposal that each edge conveys the recipient's
+degree. If the high level is three, the relay receives three and exports four.
+If it is five, the relay receives five and exports four. Both calibrations
+preserve every rank, every tie, and the very features that ground those
+comparisons. Only the numerical gap changes. This checks the preservation and
+least-upper-bound reasoning on a specified toy inventory. It assumes no
+physical units or universal giver. The result rules out inferring a signed
+balance from those rankings and this booking rule alone. It leaves the
+participant bound intact. [Model and proof](../../TruthCore/Results/Causality/ReceiptMatching/Solution.lean)
+
+**What can settle the sign without fixing the distances?** Fix the transfer
+occurrences and their finite ordered grades in advance. Count one occurrence
+at every threshold it reaches. For example, the relay above has two outgoing
+occurrences at or above the low threshold against one incoming, and none
+at or above the high threshold against one incoming. Each numerical gap
+between successive grades contributes that gap times the count reaching
+its threshold. Hence exports are covered on *every* strictly increasing
+positive-integer scale with absence fixed at zero exactly when outgoing counts
+never exceed incoming counts at any threshold. If one count fails, enlarging
+that gap alone eventually reverses the inequality against coverage. This
+criterion tells us what ordinal information can establish *once occurrences
+are independently counted and their values added*. It gives no principle for
+counting one occurrence twice or treating possession by a giver as expenditure.
+
+**A route using identifiable receipts.** Fix a class of transfers, such as
+transactions in separately serialized single-use items during a specified
+interval. Suppose a marked recipient has no path back to its sender in this
+class, and there are finitely many selected exports from bearers that can
+reach the sender. If every such bearer could pair each export with a different
+receipt, these pairings would give an injection of the finite set of upstream
+exports into itself: take an export to its matched receipt. The marked export
+would have no preimage because its recipient is outside the ancestry. Hence
+some upstream bearer lacks enough distinct receipts. This tolerates other
+classes of transfer and infinitely many bearers elsewhere. It neither
+requires summing degrees nor identifies the particular origin of a chosen
+item. If **every actually grounded bearer admits the matching in this same
+class**, the unmatched bearer supplies the existing actual-root conclusion
+on that grounding relation. [Precise premises and transfer class](../../TruthCore/Causality/ReceiptMatching.lean)
+· [Registered root argument](../../corpus/arguments/ac7d268f-8042-4c13-83a1-afcd7c6d8ba9.json)
+
+**Provisional judgment.** An explanation of the discharge of distinct sealed
+items by forwarding alone is answerable to such a count once opening stock,
+boundaries and receipts are independently accounted for. An explanation of
+repeated production from a retained form has a different prediction. A relay
+that learns a pattern once and imprints two workpieces can confer the pattern
+on both; it consumes two blanks, while both uses draw on the same pattern.
+That is a concrete reason to reject a distinct-receipt rule for pattern
+transmission. A strict giver–recipient order or the fact that each recipient
+has real being supplies no comparable reason to count a separate receipt at
+the giver for each act of giving. Enriching the participatory argument with
+ordinal comparisons therefore improves the test of causal adequacy but supplies
+no independent warrant for existential export coverage in general. The
+impersonal and theistic accounts both owe a token criterion if they invoke
+this argument. To reopen its application, identify a kind of existential
+contribution whose use in one recipient precludes counting that *same receipt*
+for a second recipient, or demonstrate independent upper-threshold count
+bounds in the grade model. The incorporation measurements across six feeds apply to
+the material. The capacity by which the child uses iron remains a different
+explanandum. [Nourishment case](wielenberg-making-account.md#does-a-childs-actual-nourishment-identify-its-underived-source-1812)

@@ -1,6 +1,6 @@
 # Strength-order audit (2026-11-12)
 
-Audit of the verified results whose argument has exactly one premise and no commitments and that no `strengthens` relation registered at main `1587e8313`: 209 results. Argument ids are shown by their first eight characters; `truth context <id>` expands them. The rule change is in [the decision](../decisions/2026-11-12-03-strength-registrations-reach.md); the contract is in [corpus model, Strength order](../corpus-model.md).
+Audit of the verified results whose argument has exactly one premise and no commitments and that no `strengthens` relation registered at main `1587e8313`: 209 results. Argument ids are shown by their first eight characters; `truth context <id>` expands them. The rule change is in [the decision](../decisions/2026-11-12-03-strength-registrations-reach.md); the contract is in [corpus model, Strength order](../corpus-model.md). [Original PR #1528](https://github.com/moritzbrantner/formal-logos/pull/1528)
 
 ## Criterion
 

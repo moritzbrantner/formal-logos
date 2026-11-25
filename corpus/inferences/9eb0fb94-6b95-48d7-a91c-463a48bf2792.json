@@ -1,0 +1,10 @@
+{
+  "id": "9eb0fb94-6b95-48d7-a91c-463a48bf2792",
+  "label": "Recover the exact strict path relation of an acyclic dependence presentation (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "0dd124a1-b5a4-4d1f-85b3-dc945d5065dd",
+  "rule": "Apply predecessor-set ranks to identity labels and strict PLG transitivity to every nonempty path",
+  "meaning": "Proper inclusion of the predecessor sets at a and b puts a among the predecessors of b and excludes equality. Thus every derivable strict partial ground in the generated theory reflects a nonempty reversed dependence path. The earlier acyclicity theorem supplies the reverse implication.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

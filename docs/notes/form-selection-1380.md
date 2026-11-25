@@ -2,7 +2,7 @@
 
 Draft for the coordinator's independent semantic challenge. Direct-main cluster;
 PR #1383 at 4eb72396f9343fd2a775c9e33b41907f25da5438 was read only.
-No result here establishes cognition, omniscience, freedom or a root premise.
+No result here establishes cognition, omniscience, freedom or a root premise. [Research record](../../corpus/attempts/form-selection-1380.json)
 
 ## Meaning audit and connection
 

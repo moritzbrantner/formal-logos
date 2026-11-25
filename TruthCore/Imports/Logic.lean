@@ -5,6 +5,7 @@ public import TruthCore.Logic.ActualPhysicalCompleteness
 public import TruthCore.Logic.AdaptivePrediction
 public import TruthCore.Logic.AssertionRetorsion
 public import TruthCore.Logic.AtomismIndependence
+public import TruthCore.Logic.BeliefReasonWitness
 public import TruthCore.Logic.CaseNonContradiction
 public import TruthCore.Logic.CertifiedCorrection
 public import TruthCore.Logic.CogitoConcrete
@@ -18,14 +19,17 @@ public import TruthCore.Logic.ContrastiveWorldview
 public import TruthCore.Logic.CorrectionCriterion
 public import TruthCore.Logic.CorrelatedTestimony1396
 public import TruthCore.Logic.DarwinianEpistemicDebunking
+public import TruthCore.Logic.DarwinianEpistemicDebunking.BasisDefeat
 public import TruthCore.Logic.DistributedKnowledge
 public import TruthCore.Logic.EpistemicAccuracy
 public import TruthCore.Logic.EpistemicAuthority
+public import TruthCore.Logic.EpistemicReasonBearer
 public import TruthCore.Logic.EpistemicReasonDefinitionFork
 public import TruthCore.Logic.EpistemicReasons
 public import TruthCore.Logic.EpistemicUnderminers
 public import TruthCore.Logic.ExcludedMiddle
 public import TruthCore.Logic.ExcludedMiddleAssertionBoundary
+public import TruthCore.Logic.ExperiencedThoughtBearer
 public import TruthCore.Logic.FallibleCorrection
 public import TruthCore.Logic.FiniteValidationLogic
 public import TruthCore.Logic.FirstPrincipleRoles

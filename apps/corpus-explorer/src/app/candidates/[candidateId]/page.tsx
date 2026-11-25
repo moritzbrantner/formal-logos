@@ -3,12 +3,20 @@ import { notFound } from "next/navigation";
 
 import { StatusMark } from "@/components/status-mark";
 import { findCandidate, findSource, getCorpus, idOf } from "@/lib/corpus";
+import { sourceUrl } from "@/lib/site-state";
 
 type CandidatePageProps = {
   params: Promise<{ candidateId: string }>;
 };
 
 const emptyQueueSentinel = "__empty__";
+
+function researchReferences(text: string) {
+  const path = /(?<![\w./-])((?:docs\/(?:[\w-]+\/)*[\w-]+\.md|corpus\/[\w-]+\/[\w-]+\.json)(?:#[\p{L}\p{N}_-]+)?)(?![\w/#-])/u;
+  return text.split(path).map((part, index) =>
+    index % 2 === 1 ? <a className="link-quiet" key={index} href={sourceUrl(part)}>{part}</a> : part,
+  );
+}
 
 export function generateStaticParams() {
   const candidates = getCorpus().candidates;
@@ -52,7 +60,7 @@ export default async function CandidatePage({ params }: CandidatePageProps) {
 
       <section className="record-section">
         <p className="eyebrow">Why this research is needed</p>
-        <p className="mt-4 text-lg leading-8">{candidate.reason}</p>
+        <p className="mt-4 break-words text-lg leading-8">{researchReferences(candidate.reason)}</p>
       </section>
 
       <details className="record-section details-panel">

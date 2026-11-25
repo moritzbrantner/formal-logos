@@ -2,7 +2,7 @@
 
 The original Parts 1–2 record the earlier definition-quality audit. Part 3 below
 records the owner’s later repository-wide competing-definition investigation;
-the older snapshot counts are not a claim of whole-corpus completion.
+the older snapshot counts are not a claim of whole-corpus completion. [Original PR #1115](https://github.com/moritzbrantner/formal-logos/pull/1115)
 
 This audit checks the established definitions in priority order. It starts
 with the concrete/abstract distinction (Part 1) and then covers the
