@@ -561,3 +561,303 @@ status of that relation. This is a new scoped judgment about the
 surviving accounts; it does not supersede the prior F1/F6 or #930
 authority judgments, and does not establish ontological irreducibility.
 No independent challenge has yet assessed this extension.
+
+
+### 7. Exact proposed theorem types and proof sketches
+
+The following Lean block extends the earlier scratch file (append it
+after its closing namespace). It reuses the actual semantic predicates
+rather than a new validity relation with an unconstrained name.
+This proposal is **not compiled or registered**. Before registration
+run local novelty and semantic preflight; if an existing scope theorem
+has the same type up to an adapter, reuse it. The general scope result
+derives an exhibited false positive, not an assumed adequacy bridge.
+
+```lean
+namespace LogicalPsychologismProposal
+
+open TruthCore.Logic.ReflectiveCoherence
+
+def restrictedEntails {W C : Type} (S : Semantics W C)
+    (scope : W → Prop) (Γ : Worldview C) (p : C) : Prop :=
+  ∀ w, scope w → Models S Γ w → S.trueAt w p
+
+theorem omittedValuationFalsePositive {W C : Type} (S : Semantics W C)
+    (scope : W → Prop) (top : C) (hTop : ∀ w, S.trueAt w top)
+    (v : W) (hMiss : ¬ scope v)
+    (hSeparate : ∃ q : C, ∀ w, S.trueAt w q ↔ w ≠ v) :
+    ∃ q : C,
+      restrictedEntails S scope (fun p => p = top) q ∧
+      ¬ Entails S (fun p => p = top) q := by
+  obtain ⟨q, hq⟩ := hSeparate
+  refine ⟨q, ?_, ?_⟩
+  · intro w hw _
+    apply (hq w).2
+    intro hEq
+    exact hMiss (hEq ▸ hw)
+  · intro h
+    have hm : Models S (fun p => p = top) v := by
+      intro p hp
+      subst p
+      exact hTop v
+    exact ((hq v).1 (h v hm)) rfl
+
+theorem separatingScopeExactIffCoverage {W C : Type} (S : Semantics W C)
+    (scope : W → Prop) (top : C) (hTop : ∀ w, S.trueAt w top)
+    (hSeparate : ∀ v : W, ∃ q : C, ∀ w, S.trueAt w q ↔ w ≠ v) :
+    (∀ (Γ : Worldview C) (q : C),
+      restrictedEntails S scope Γ q → Entails S Γ q) ↔
+      ∀ v, scope v := by
+  classical
+  constructor
+  · intro h v
+    by_contra hMiss
+    obtain ⟨q, hScoped, hNot⟩ :=
+      omittedValuationFalsePositive S scope top hTop v hMiss (hSeparate v)
+    exact hNot (h (fun p => p = top) q hScoped)
+  · intro h Γ q hScoped v hm
+    exact hScoped v (h v) hm
+
+-- The content is a truth function on the existing four-valuations carrier.
+-- The premise sets vary only by the selected connective's interpretation.
+def tableContent (f : Bool → Bool → Bool) : Content :=
+  fun w => f w.1 w.2
+
+def mpFor (f : Bool → Bool → Bool) : Prop :=
+  Entails sem (fun c => c = atomP ∨ c = tableContent f) atomQ
+
+def acFor (f : Bool → Bool → Bool) : Prop :=
+  Entails sem (fun c => c = atomQ ∨ c = tableContent f) atomP
+
+theorem mpForIff (f : Bool → Bool → Bool) :
+    mpFor f ↔ f true false = false := by
+  constructor
+  · intro h
+    cases hf : f true false with
+    | false => rfl
+    | true =>
+      have hm : Models sem
+          (fun c => c = atomP ∨ c = tableContent f) (true, false) := by
+        intro c hc
+        rcases hc with rfl | rfl
+        · rfl
+        · exact hf
+      exact (Bool.false_ne_true (h (true, false) hm)).elim
+  · intro hf w hm
+    have hp : w.1 = true := hm atomP (Or.inl rfl)
+    have hc : f w.1 w.2 = true := hm (tableContent f) (Or.inr rfl)
+    change w.2 = true
+    cases hq : w.2 with
+    | false =>
+      have hbad : false = true := by simpa [hp, hq, hf] using hc
+      exact hbad
+    | true => rfl
+
+theorem acForIff (f : Bool → Bool → Bool) :
+    acFor f ↔ f false true = false := by
+  constructor
+  · intro h
+    cases hf : f false true with
+    | false => rfl
+    | true =>
+      have hm : Models sem
+          (fun c => c = atomQ ∨ c = tableContent f) (false, true) := by
+        intro c hc
+        rcases hc with rfl | rfl
+        · rfl
+        · exact hf
+      exact (Bool.false_ne_true (h (false, true) hm)).elim
+  · intro hf w hm
+    have hq : w.2 = true := hm atomQ (Or.inl rfl)
+    have hc : f w.1 w.2 = true := hm (tableContent f) (Or.inr rfl)
+    change w.1 = true
+    cases hp : w.1 with
+    | false =>
+      have hbad : false = true := by simpa [hp, hq, hf] using hc
+      exact hbad
+    | true => rfl
+
+def materialTable (p q : Bool) : Bool := (!p) || q
+def equivalenceTable (p q : Bool) : Bool := p == q
+
+theorem diagonalAndMPFork (f : Bool → Bool → Bool)
+    (h00 : f false false = true) (h11 : f true true = true)
+    (hMP : mpFor f) :
+    f = materialTable ∨ f = equivalenceTable := by
+  have h10 := (mpForIff f).mp hMP
+  cases h01 : f false true with
+  | false =>
+    right
+    funext p q
+    cases p <;> cases q <;>
+      simp [equivalenceTable, h00, h01, h10, h11]
+  | true =>
+    left
+    funext p q
+    cases p <;> cases q <;>
+      simp [materialTable, h00, h01, h10, h11]
+
+theorem bothSoundSelectsEquivalence (f : Bool → Bool → Bool)
+    (h00 : f false false = true) (h11 : f true true = true)
+    (hMP : mpFor f) (hAC : acFor f) :
+    f = equivalenceTable := by
+  have h01 := (acForIff f).mp hAC
+  have h10 := (mpForIff f).mp hMP
+  funext p q
+  cases p <;> cases q <;>
+    simp [equivalenceTable, h00, h01, h10, h11]
+
+theorem offDiagonalSelectsMaterial (f : Bool → Bool → Bool)
+    (h00 : f false false = true) (h11 : f true true = true)
+    (h01 : f false true = true) (hMP : mpFor f) :
+    f = materialTable := by
+  have h10 := (mpForIff f).mp hMP
+  funext p q
+  cases p <;> cases q <;>
+    simp [materialTable, h00, h01, h10, h11]
+
+end LogicalPsychologismProposal
+```
+
+Claim/type sweep: the scope proof requires a supplied tautology and
+a content excluding the omitted world alone; the full coverage equivalence
+uses separation at every world, not arbitrary frame completeness. The
+truth-table lemmas quantify over all Boolean truth-functions; the two
+uniqueness results have different hypotheses. Soundness of MP/AC means
+actual semantic entailment, not acceptance or adherence. Those hypotheses
+therefore cannot be claimed as a derivation of semantic correctness from
+mere psychological acceptance. The proposed formalization proves no
+principle of psychological supervenience, actual empirical adequacy,
+metaphysical admissibility of a world, or reason-giving authority.
+The proof uses classical reasoning only for the coverage equivalence;
+the omitted-world construction itself is a direct counterexample.
+
+### 8. Executable follow-up comparison
+
+The following exact standard-library script ran successfully in the
+continuation's execution container. It enumerates all fourteen nonempty
+proper valuation subsets and all 256 singleton premise/conclusion
+truth-function pairs for each nonempty subset, all sixteen connective
+tables, all eight syntactic acceptance patterns, and exact rational
+reliability controls. The earlier Python comparison was also rerun
+successfully.
+
+```python
+from fractions import Fraction as F
+from itertools import product, combinations
+
+V = tuple(product((0, 1), repeat=2))
+T = tuple(product((0, 1), repeat=4))
+TOP = (1, 1, 1, 1)
+MP = lambda f: f[V.index((1, 0))] == 0
+AC = lambda f: f[V.index((0, 1))] == 0
+material = tuple(int(not p or q) for p, q in V)
+equivalence = tuple(int(p == q) for p, q in V)
+
+def entails(g, h, scope):
+    return all(not g[i] or h[i] for i in scope)
+
+full = tuple(range(4))
+proper = 0
+for n in range(1, 5):
+    for scope in combinations(full, n):
+        false_positives = [(g, h) for g in T for h in T
+                           if entails(g, h, scope) and not entails(g, h, full)]
+        assert bool(false_positives) == (scope != full)
+        if scope != full:
+            proper += 1
+            omitted = next(i for i in full if i not in scope)
+            target = tuple(int(i != omitted) for i in full)
+            assert entails(TOP, target, scope)
+            assert not entails(TOP, target, full)
+            assert all(TOP[i] for i in scope)
+print('Scope: 14 nonempty proper subsets each admit nonvacuous false positives; full scope admits none.')
+assert proper == 14
+
+# Total syntactic response map on all subsets of the three acceptance flags.
+# Premise flags concern accepted tokens, not their actual truth.
+def transition(flags):
+    p, q, c = flags
+    return (p or (q and c), q or (p and c), c)
+response = tuple(transition(x) for x in product((0, 1), repeat=3))
+assert len(response) == 8
+# Both interpretations give exactly the same truths in both diagonal cases.
+for p, q in ((0, 0), (1, 1)):
+    i = V.index((p, q))
+    assert material[i] == equivalence[i] == 1
+    assert transition((p, q, material[i])) == transition((p, q, equivalence[i]))
+assert MP(material) and MP(equivalence)
+assert not AC(material) and AC(equivalence)
+# Restrict to truth-functions with these two observed labels and MP soundness.
+compatible = [f for f in T if f[0] == f[3] == 1 and MP(f)]
+assert set(compatible) == {material, equivalence}
+assert [f for f in compatible if AC(f)] == [equivalence]
+assert [f for f in compatible if f[1] == 1] == [material]
+# A noncircular positive computation: once truth-functional calibration is
+# supplied, all sixteen truth tables satisfy the direct MP/AC characterizations.
+for f in T:
+    assert MP(f) == all(not(p and f[i]) or q for i, (p, q) in enumerate(V))
+    assert AC(f) == all(not(q and f[i]) or p for i, (p, q) in enumerate(V))
+print('Content: 16 tables and 8 total syntactic input patterns; diagonal labels plus MP leave two tables; AC soundness picks equivalence, off-diagonal true label picks material implication.')
+
+# Conditional failure probability of AC given actually true premises.
+# Every world has positive mass; error can be arbitrarily small without being zero.
+for n in (4, 10, 100, 1000, 1000000):
+    mass = (F(1,n), F(1,n), F(1,n), F(n-3,n))
+    assert sum(mass) == 1 and min(mass) > 0
+    eligible = [i for i,(p,q) in enumerate(V) if q and material[i]]
+    error = sum(mass[i] for i in eligible if not V[i][0]) / sum(mass[i] for i in eligible)
+    assert error == F(1,n-2) and error > 0
+    print(f'AC conditional error at n={n}: {error}')
+# In the finite full-support setting, an exact zero error mass among countervaluations
+# is equivalent to entailment; no conditional probability when premise mass is zero.
+mass = (F(1,4),)*4
+for g in T:
+    for h in T:
+        err = sum(m for i,m in enumerate(mass) if g[i] and not h[i])
+        assert (err == 0) == entails(g, h, full)
+print('PASS: scope, interpretation, and exact reliability controls')
+```
+
+Output:
+
+```text
+Scope: 14 nonempty proper subsets each admit nonvacuous false positives; full scope admits none.
+Content: 16 tables and 8 total syntactic input patterns; diagonal labels plus MP leave two tables; AC soundness picks equivalence, off-diagonal true label picks material implication.
+AC conditional error at n=4: 1/2
+AC conditional error at n=10: 1/8
+AC conditional error at n=100: 1/98
+AC conditional error at n=1000: 1/998
+AC conditional error at n=1000000: 1/999998
+PASS: scope, interpretation, and exact reliability controls
+```
+
+Both comparisons and both Lean blocks can be recovered together from the
+same canonical note. On the prepared clone, after the original worker
+preflight/build in the previous handoff:
+
+```sh
+python3 - <<'PY'
+from pathlib import Path
+note = Path("docs/notes/logical-psychologism.md").read_text()
+for i, part in enumerate(note.split("```python\n")[1:], 1):
+    code = part.split("\n```", 1)[0]
+    exec(compile(code, f"logical_psychologism_check_{i}.py", "exec"), {})
+lean = [part.split("\n```", 1)[0] for part in note.split("```lean\n")[1:]]
+assert len(lean) == 2
+Path("Scratch/LogicalPsychologismProposal.lean").write_text("\n\n".join(lean) + "\n")
+PY
+python3 scripts/worker_env.py -- lake env lean Scratch/LogicalPsychologismProposal.lean
+target/release/truth novelty 'restricted truth preservation is complete iff it covers every isolatable countervaluation'
+target/release/truth novelty 'inferential role soundness and truth-functional calibration determine a connective'
+target/release/truth frontier-diff --base "$(git merge-base HEAD origin/main)"
+```
+
+The previous PR head `4dc24d4f95d4bf45da08a53e2801ddaa9b50b123`
+had a completed successful CI workflow as observed before this extension;
+that evidence does not cover the present changes or the proposed scratch
+Lean blocks. New head checks, independent challenge, local CLI and Lean
+verification remain pending. The execution container again lacked Lean,
+Lake and Cargo, and GitHub DNS resolution prevented a repository clone.
+No new formal result or graph connection is claimed. The original
+proof-uptake application remains open.
