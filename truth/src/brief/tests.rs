@@ -1901,3 +1901,58 @@ fn search_retrieves_a_scoped_note_when_attempts_miss_the_question_phrase() {
     assert!(!root.join(".cache/truth-index.sqlite").exists());
     std::fs::remove_dir_all(root).unwrap();
 }
+
+#[test]
+fn a_generic_phrase_in_a_note_cannot_displace_a_more_specific_investigation() {
+    let root = fixture("question-note-competing-topic");
+    record(
+        &root,
+        "attempts",
+        json!({"id":"d0000000-0000-4000-8000-000000000099",
+        "label":"Museum acquisition", "statement_ids":[GOAL],
+        "summary":"Pottery fragments identify the missing archive."}),
+    );
+    write(
+        &root,
+        "docs/notes/funding.md",
+        "# Accounting\n\nThe grant covered public access.\n",
+    );
+    let corpus = Corpus::load(&root).unwrap();
+    let (report, prose) = super::assessment_search::report_for_root(
+        &root,
+        &corpus,
+        "Does pottery in the archive support public access?",
+        2,
+    )
+    .unwrap();
+    assert_eq!(report["matches"][0]["scope"], "Museum acquisition");
+    assert!(report.get("note_match").is_none());
+    assert!(!prose.contains("The grant covered"));
+    std::fs::remove_dir_all(root).unwrap();
+}
+
+#[test]
+fn a_conversational_introduction_preserves_the_displayed_question_and_the_topic_ranking() {
+    let root = fixture("question-conversational-introduction");
+    record(
+        &root,
+        "attempts",
+        json!({"id":"d0000000-0000-4000-8000-000000000100",
+        "label":"Cross section", "statement_ids":[GOAL], "summary":"The amber inclusions precede both shale layers."}),
+    );
+    record(
+        &root,
+        "attempts",
+        json!({"id":"d0000000-0000-4000-8000-000000000101",
+        "label":"Our reasons to believe", "statement_ids":[GOAL], "summary":"We currently have reason to believe the testimony."}),
+    );
+    let corpus = Corpus::load(&root).unwrap();
+    let q = "What do we currently have reason to believe about the amber inclusions?";
+    let (report, prose) = super::assessment_search::report(&corpus, q, 2).unwrap();
+    let direct = super::assessment_search::matches(&corpus, "the amber inclusions?").unwrap();
+    assert_eq!(report["matches"], json!(direct));
+    assert_eq!(report["matches"][0]["scope"], "Cross section");
+    assert_eq!(report["question"], q);
+    assert!(prose.contains(q));
+    std::fs::remove_dir_all(root).unwrap();
+}

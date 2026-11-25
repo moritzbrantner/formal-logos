@@ -6,6 +6,47 @@ use rusqlite::{Connection, params};
 use serde_json::{Value, json};
 use std::collections::{BTreeMap, BTreeSet};
 
+/// A conversational request for the state of research can introduce its real
+/// topic after "about". Preserve substantive restrictions in other questions.
+fn topic(question: &str) -> Query {
+    let tokens: Vec<_> = question.split_whitespace().collect();
+    if tokens
+        .first()
+        .is_some_and(|word| word.eq_ignore_ascii_case("what"))
+        && let Some(sep) = tokens
+            .iter()
+            .position(|word| word.eq_ignore_ascii_case("about"))
+        && sep + 1 < tokens.len()
+    {
+        let prefix = tokens[..sep].join(" ").to_lowercase();
+        if prefix
+            .split_whitespace()
+            .any(|word| matches!(word, "we" | "i" | "you"))
+            && Query::parse(&prefix).items.iter().all(|item| {
+                matches!(
+                    item.text.as_str(),
+                    "currently"
+                        | "now"
+                        | "know"
+                        | "think"
+                        | "believe"
+                        | "reason"
+                        | "reasons"
+                        | "tell"
+                        | "say"
+                        | "evidence"
+                        | "can"
+                        | "could"
+                        | "you"
+                )
+            })
+        {
+            return Query::parse(&tokens[sep + 1..].join(" "));
+        }
+    }
+    Query::parse(question)
+}
+
 /// Keep adjacent words from the user's question without inventing a phrase
 /// across dropped words. Reuse the same phrases to locate note passages.
 fn phrases(query: &Query) -> BTreeSet<String> {
@@ -95,7 +136,7 @@ fn sentences(text: &str) -> impl Iterator<Item = &str> {
 }
 
 pub fn matches(corpus: &Corpus, question: &str) -> rusqlite::Result<Vec<Value>> {
-    let query = Query::parse(question);
+    let query = topic(question);
     let Some(terms) = expression(&query) else {
         return Ok(Vec::new());
     };
@@ -190,7 +231,7 @@ pub fn render(question: &str, entries: &[Value], limit: usize) -> String {
         );
         return lines.join("\n");
     };
-    let query = Query::parse(question);
+    let query = topic(question);
     for (index, entry) in entries.iter().take(limit).enumerate() {
         let field = |key| string(entry, key);
         let current = entry["kind"] == "current_assessment";
@@ -270,7 +311,7 @@ pub fn report_for_root(
     limit: usize,
 ) -> Result<(Value, String), String> {
     let (mut report, mut text) = report(corpus, question, limit)?;
-    let query = Query::parse(question);
+    let query = topic(question);
     let requested = phrases(&query);
     let leading = &report["matches"][0];
     let leading_text = [string(leading, "scope"), string(leading, "passage")]
@@ -279,7 +320,7 @@ pub fn report_for_root(
     let leading_words = words(&leading_text).join(" ");
     if !requested.is_empty()
         && !requested.iter().any(|p| leading_words.contains(p))
-        && let Some(note) = note_passage(root, &query, &requested)?
+        && let Some(note) = note_passage(root, &query, &requested, &leading_text)?
     {
         let excerpt = format!(
             "\n\nResearch note · {}\n{}\n{} (line {})",
@@ -298,7 +339,14 @@ fn note_passage(
     root: &std::path::Path,
     query: &Query,
     requested: &BTreeSet<String>,
+    leading: &str,
 ) -> Result<Option<Value>, String> {
+    let coverage = |s| {
+        query
+            .content_coverage(&query.matched(s, &BTreeMap::new()))
+            .0
+    };
+    let leading_coverage = coverage(leading);
     let mut best = None;
     for path in crate::notes::inputs(root)? {
         let raw = std::fs::read_to_string(root.join(&path)).map_err(|e| format!("{path}: {e}"))?;
@@ -323,14 +371,15 @@ fn note_passage(
                     if hits == 0 {
                         continue;
                     }
-                    let coverage = |s| {
-                        query
-                            .content_coverage(&query.matched(s, &BTreeMap::new()))
-                            .0
-                    };
+                    // A shared phrase alone need not address the subject. Promote a
+                    // note only if the same sentence improves on the leading finding.
+                    let sentence_coverage = coverage(&plain);
+                    if sentence_coverage <= leading_coverage {
+                        continue;
+                    }
                     let score = (
+                        sentence_coverage,
                         hits,
-                        coverage(&plain),
                         coverage(&flat),
                         std::cmp::Reverse(flat.len()),
                     );
