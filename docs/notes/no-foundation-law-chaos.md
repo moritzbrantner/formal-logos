@@ -2238,6 +2238,191 @@ are retained. Attempt eac309a0 and #1968 carry the current scoped review,
 verification and precise reopening conditions; the preceding #1933 review
 and its different application blockers are unchanged.
 
+## Source independence and historical undertakings (#1957/#1958, 2026-11-24)
+
+This continuation answers two selected questions left by the reviewed
+[existential-inheritance checkpoint, PR #1933](https://github.com/moritzbrantner/formal-logos/pull/1933).
+That checkpoint's head `e5dd8243c5690f5d9255a509da00111cbdc36c8e` passed
+[CI run 45452272141](https://github.com/moritzbrantner/formal-logos/actions/runs/45452272141).
+That evidence was external when #1957 and #1958 were investigated. The
+[integration comparison](#integration-of-the-two-reviewed-deliveries)
+identifies its contribution to this delivery. The research baseline was
+`61acfd5629cab58221fe148b034340c7af9278ff`; publication integrates main
+`9c627028019a785fad5e147d5a919cd4a6bf14c9`. Its intervening esse-scale
+and transmission findings preserve the dependencies and qualifications used here.
+
+The two investigations are independent. [#1957](https://github.com/moritzbrantner/formal-logos/issues/1957)
+tests the inference from product-dependent specification to dependence of a
+simple source's being. [#1958](https://github.com/moritzbrantner/formal-logos/issues/1958)
+tests the scope of a source's undertaking toward historical inquiry. The first
+serves the existential PSR/B2 and same-source intellect/will questions; the
+second serves individuated veracity and its evidence application. Neither
+supplies the other's missing premises. The detailed findings, primary-source
+locators, rivals and scoped assessments are in the existing
+[PSR note](psr-self-application-756.md#source-specification-and-existential-grounding-1957-2026-11-24)
+and [veracity note](divine-veracity-1410.md#recipient-undertakings-and-truthful-selective-records-1958-2026-11-24).
+
+### What the two tests establish
+
+| Question | Finding and reason | Retained application |
+| --- | --- | --- |
+| Does dependence of an act transfer under simplicity? | If the product grounds the very intrinsic actuality identical with the source's esse, dependence follows that identity. When principles and beings are separately represented, the realization calibration must preserve that target and relation. Roothood or actual-grounding asymmetry then excludes the incoming ground under its full scope. | The objection must establish dependence of that intrinsic actuality. A relation's obtaining, an effect-relative description and the source's existence are different explanatory targets. |
+| Can the relational reply have positive content? | A source can be prior in production while the product is required for a completed recipient-relative predication. The source readings distinguish those orders; the distinction is more than omitting a return edge from a model. | Creator-denomination does not by itself explain actual operative intention. The same source's apprehended practical measure, its direction of this exercise and the act/esse application remain substantive. |
+| Do true records suffice for a true historical verdict? | A disclosed list can contain only true entries while omitting an actual event. A reader who treats that omission as evidence of absence returns a false verdict. Completeness of the specified reporting domain supplies the missing premise for that inference. | The finite diagnostic fixes the inference rule and its output. It does not establish that an actual recipient has that warrant, that the omission is intentional, or that a divine source can perform the stipulated policy. |
+| Does veracity cover nonverbal assurance? | If the context genuinely puts a completeness content forward as true, the existing assertion-truth standard applies to that content. A separate undertaking to protect inquiry can give reasons against manipulation even without such an assertion. | Creating an appearance alone does not identify an assurance. A protected inquiry, a general capacity for corrigible inquiry and guaranteed truth of every verdict have different scopes. |
+
+The historical comparison holds the source, recipient, actual history and
+abilities fixed while comparing complete response policies. Faithful disclosure
+can strictly improve the protected inquiry when it preserves every other
+relevant good. A confidentiality constraint can make full disclosure
+inappropriate while a general, intelligible limitation of the service still
+prevents the false inference. Corrigible access can fulfill a scoped undertaking
+without making every interim view complete. Equal final answers are not equal
+complete policies when protected reliance or interim epistemic injury differs.
+An exceptionless prohibition across real conflicts still needs its own warrant.
+
+The new local Lean diagnostic in the veracity note contains two actual events
+and one nonoccurring candidate, a nonempty truthful partial list, a computed
+false absence verdict and a complete-list restoration. The general helper
+isolates coverage of actual events as a sufficient premise for the negative
+inference. This is a reproducible diagnostic, not a new registered
+Comparator-certified argument. Existing history-fiber, information-selection,
+copying and tied-choice results retain their original theorem and application
+boundaries; no duplicate library or renamed cycle theorem is introduced.
+
+### Effect on the worldview comparison
+
+These findings preserve the distinction between **explaining actual existence**
+and **guaranteeing every historical judgment**. Under the adequate existential
+standard investigated in #1933, successfully restricting further possibilities
+does not supply the actuality of an indispensable brute input. That explanatory
+deficiency does not itself prove that any particular record is false or that
+ordinary historical knowledge is unavailable. Conversely, an order can provide
+reliable evidence while leaving its foundational actuality unexplained at that
+standard. Neither investigation invokes unrestricted metaphysical recombination.
+
+The source-independence result removes one overbroad objection to the classical
+proposal: an effect's role in relational specification alone is insufficient
+to establish that it grounds the source's being. The genuine intrinsic-grounding
+objection remains forceful. This is a limited gain for the relational/direct
+production account, available equally to an impersonal producer with the same
+structure. A personal source gains further purposive content only if the
+actual production is for its apprehended reason. Favorable outputs or a
+primitive agency label do not supply that claim.
+
+The historical result gives a recipient-directed end a specific role: it can
+explain why a source preserves access, communicates limitations or provides
+correction instead of soliciting false confidence. Any extension from source
+veracity to a historical conclusion must justify the intended inference and
+its domain. A necessary
+impersonal constitution may support the same truthful and complete reporting
+or corrective process. Its lack of an undertaking does not reduce that process's
+functional reliability. Direct, primitive and cumulative warrant are available
+to each account; neither must first derive every commitment from an independent
+proof tree.
+
+The earlier moderate provisional preference for adequate existential
+intelligibility E and suspension concerning a universal determining demand D
+remain. The new evidence supports the two narrower judgments above. It supplies
+no new overall ranking between the strongest necessary rational and necessary
+impersonal producers, and no universal historical guarantee. These limits are
+specific application questions, not a judgment that open commitments lack
+warrant merely because they remain open.
+
+### Connections, completed scope and current handoff
+
+The existential destination is `608a262d-08fe-4dfd-9413-67e2ecf35b84`.
+Its existing result `7bf9cb77-0418-4363-9298-266eac105edd` jointly consumes
+BX1 and BX2 to reach B2 `8a8d00e9-12b6-4cf0-b662-431cc4addd49`.
+C2 `6508c239-b36d-4010-b9e4-ff0cdd5757e5` and the other necessity-route
+premises are retained. Merged #1944 already supplies a conditional consumer
+from the willed-holder route to `66aecdd7`; #1947 adds NAR support through
+root withholding and explicit bridges. The PSR note preserves their complete
+bundles. They are not silently credited with an operative-D or esse-grounding
+identification.
+
+The historical destination remains `98f13d52-356c-440a-956a-c28df295fe73`,
+with its existing `693522aa` representation consumer and confirmation route
+to `c1deb2ee-770d-5030-9e5c-302e33028811`. The new policy assessment does
+not identify an actual divine message or evaluate religious historical evidence.
+
+The identity-promotion test and the specified disclosure-policy test are now
+delivered research findings. Two distinct applications remain:
+
+1. **Actual practical direction:** identify the positive reality that makes D
+   operative in the fixed source's production. Determine whether the effect
+   supplies that intrinsic actuality or enters as the term of an already
+   productive relation. The existing #1953/#1737 investigations own this
+   substantive continuation; another two-cycle or output-conformity test would
+   not answer it. The adjacent draft #1956 concerns superiority and intrinsic
+   perfection, a different question whose review status must be retained.
+2. **A particular absence inference:** specify the event class, interval,
+   recipient rule and independently warranted coverage undertaking or retention
+   mechanism. Determine whether it warrants completeness, partial positive
+   information or suspension. A purported override of candid limitation needs
+   a concrete complete-policy comparison. No actual source/channel with these
+   application commitments has been supplied by this research.
+
+The scoped assessments update existing attempts `9d7b8ae0` and
+`divine-veracity-1410`, preserving their earlier findings. Independent review
+of #1957 accepted checkpoint `70d83fcdf621078ef4766583fe7b57bec92afe27`
+and its validation paragraph with qualifications and no substantive finding.
+Independent reviewer `/root/final_continuation_review` accepted the historical
+delta, this combined synthesis and the actual proposed PR body at
+`02b10877de416cff3858f9fdc3cbada5b267f216`, with qualifications and no
+substantiated defect. The reviewer read the primary historical passages,
+actual assertion/representation/confirmation consumers and whole-vector
+evidence definitions, and checked the diagnostic against its elaboration log.
+The five owned files are unchanged through main integration
+`94eff81001593764167d31a72915595282a6e94b`. Refreshed corpus and frontier
+checks passed; no premise change is claimed. These reviews establish neither
+actual divine applicability nor a historical guarantee. The PR and the two
+selected issues own the publication and delivered-head CI disposition.
+No merge is requested.
+
+The accepted source and complete-outcome snapshots are durably published as
+[`d759ab6e`](https://github.com/moritzbrantner/formal-logos/commit/d759ab6e8dc07f2af13169f7468e85075e760a45)
+and [`813aed9c`](https://github.com/moritzbrantner/formal-logos/commit/813aed9c2aa3251ba1a5e4c8d3970e321ed83640),
+respectively. Each has the identical Git tree as its reviewed local snapshot.
+The [published branch](https://github.com/moritzbrantner/formal-logos/tree/agent/source-independence-history)
+contains the main integration and completed review dispositions; it is not merged.
+
+### Integration of the two reviewed deliveries
+
+The #1961 review snapshots above cover the two applications. The accepted
+#1933 integration at `b16659c99419cb3696be2a832c3f6def6cdacf16` supplies
+the antecedent formal evidence. Its exercise cut, exercised-route comparison
+and output bypass fix the productive-supply question. Its history-fiber,
+source-to-record and impersonal-copying controls fix the channel question.
+The distinct #1957 contribution is the same-target identity and grounding
+test. The distinct #1958 contribution is the false absence inference from
+truthful selective disclosure and its fixed-recipient policy comparison.
+The diagnostic has local Lean elaboration evidence. All registered
+certificates in these families belong to the earlier delivery.
+
+Compared with reviewed #1933 head `e5dd8243`, the vocabulary, frozen
+Challenges and Solutions for ActualExerciseExplanation, ExistentialInheritance,
+ContainedSelection, InitialHistoryAuthenticity and SourceEvidenceAdequacy
+are byte-identical at `b16659c9`. Their result records and Comparator
+configurations also match. The wider import closure did change. RootDescent
+now factors accessibility proofs used by BruteFoundationBoundary,
+NecessaryRootFork, SelectedAncestry and UnderivedRootRoute. The typed motion
+and two q.2 a.3 imports add well-foundedness equivalences. Those changes
+belong to the dependency’s own verification. They introduce no identification
+of productive adoption with esse or of observed content with an assertion.
+
+Compared with #1961’s research base `61acfd56`, the direct proof families
+for the actual-grounding and order calibrations, PSR/BX1/BX2, holder and NAR
+routes, assertion and confirmation consumers, optimal choice, history selection
+and reading self-certification retain their Lean sources, including local
+transitive imports. The later [finite-ancestry findings](nar-derivation.md)
+distinguish a common root from a direct giver. Main `f6040344` also
+records a [constructive-measure proposal and a unitary noncognitive rival](will-versus-chance.md#from-universal-existential-supply-to-proper-formative-causation-2026-11-25).
+The outstanding application requires evidence of the measure’s actual
+productive role in this same simple source. The live historical test still
+requires an independently warranted reporting domain or retention mechanism
+for one event class, interval and recipient inference.
+
 ## Research attempts citing this note
 
 - [Finite recombination and prefix closure separate full-law arbitrariness](../../corpus/attempts/6d1c811e-ef70-4cc6-8e98-9e9dabc5547e.json)
