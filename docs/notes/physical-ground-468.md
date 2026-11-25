@@ -489,6 +489,340 @@ of wisdom's pure-perfection classification, would weaken it. The current
 result is a code-level conditional connection and semantic controls, not
 a new registered argument or an attribute-establishment claim.
 
+## Constitutive cognitive and moral grounding: what would make the source personal? (2026-11-25; draft)
+
+**Scope.** Continue #1973 and the owner-directed questions in draft #1983
+and draft #1984, without taking either draft as reviewed evidence or making
+this branch depend on their merger. The prior main-derived note blob is
+`5c9fee417e78791ebafa894027599b8a0b9be2e6`. Reuse #1731, #1748, #1460, #1953 and the existing
+[causal-perfection](causal-perfection-transfer.md),
+[intentionality](intentionality-943.md),
+[rational basing](epistemic-underminer-boundaries.md) and
+[moral governance](moral-governance-intellect-will.md) findings. The question
+is whether a genuinely noncognitive source can constitute the cognitive
+and normative grounds of rational creatures without simply labeling
+the relevant relations. This is a proposed reading and analyst test,
+not historical attribution or a new registered theorem.
+
+### Precise proposed vocabulary, not competing primitives
+
+Reuse [HAS_INTELLECT_1](../../corpus/definitions/intellect.json)
+(`88bc0655`) and [HAS_WILL_1](../../corpus/definitions/will.json)
+(`7c64b499`). Use their selected capacity-level reading here; the first
+record's definition does not by itself settle aptitude versus exercise.
+Do not change the existing primitives or the open
+`IntellectIsCapacityToUnderstand` application. In particular, the
+capacity of an always-actual source need not be a passive potency or
+an unrealized future ability.
+
+At the same bearer n, with all properties evaluated under a fixed
+actual-world and ownership interpretation, propose these analytical
+abbreviations:
+
+```text
+PersonalCapacity(n) := HasIntellect(n) AND HasWill(n)
+StrictImpersonal(n) := NOT HasIntellect(n) AND NOT HasWill(n)
+NonpersonalCapacity(n) := NOT PersonalCapacity(n)
+```
+
+These are not equivalent negations: under classical logic the complement
+of the personal conjunction also includes intellect-only and formally
+will-only profiles. The latter is semantically suspect under intellectual
+appetite's intended meaning but is not forbidden by the two unconstrained
+Lean parameters alone. The existing `090be689` intellect-to-will premise
+excludes the intellect-only profile; do not make it true by definition.
+An unknown attribute is not a negative attribute. The personal-capacity
+label does not decide philosophical personhood generally or the
+individuation of Trinitarian persons.
+
+| Aspect | Positive meaning | Insufficient by itself |
+| --- | --- | --- |
+| Intellectual capacity | The subject's own aptitude for intelligible apprehension | Productive power, storage of facts, physical responsiveness |
+| Actual apprehension | A subject actually grasps intelligible content as such; distinct from the token or vehicle | Correct signal, external interpretation, causal production of a knower |
+| Knowledge | The relevant apprehension is true and appropriately grounded | A lucky correct output |
+| Will | Intellectual appetite for an apprehended good, including adherence to a possessed good | A disposition toward beneficial outcomes |
+| Operative intention | The subject adopts an apprehended end and its adoption guides the selected operation | Foreknowledge of its outcome, agreement with a goal |
+| Original jurisdiction | A rightful power over a specified normative matter not delegated by a prior holder | Ability to demand, enforce or prevent an action |
+| Moral goodness | Positive rightness of the agent's own orientation or action, in the selected moral sense | Mere personal capacity, ontic goodness, causal sovereignty |
+
+Personal production of e by n requires the source's own intellectual
+apprehension of its end, its own actual intellectual appetite/adoption,
+and productive agency guided by that adoption in this episode. Its
+mere possession of intellect and will does not meet that stronger
+hypothesis. Keep the existing `HasWill`/actual willing and
+`Rational` power interfaces separate; these prose criteria are not
+new encodings. No criterion requires a temporal change, learning,
+embodiment, emotion, discursive search, external sensory input, or
+a uniquely maximizing decision. Free creation is a further question.
+
+This makes a substrate-neutral distinction for rival comparison:
+if an account actually realizes the intellectual and appetitive
+roles in the **source itself**, it cannot insist that the source is
+strictly impersonal in this selected sense just because its realization
+is lawlike or physical. Whether it really realizes those roles is
+substantive, not settled by a functional label. Conversely, a whole
+which contains cognitive parts or gives being to cognizers need not
+itself be the subject of their acts. Do not define cognition as
+immateriality or irreducibility: that would preempt the very
+immateriality/intellect debate. A personal being can be morally
+defective; the classification is not a synonym for goodness,
+omniscience or legitimate authority.
+
+### A positive noncognitive constitutive candidate, tested at matched scope
+
+Continue #1984's first-agent example. Fix A, C and a bystander B;
+C is the patient, with an original claim against the specified
+unjustified harm. A and C have no earlier finite intentional grantor
+of that initial standing. Both actions are physically feasible.
+Assume the particular right is waivable by C, that a consent token
+by C is valid and one by B on B's own behalf is not, and that no
+competing justification is present. This is a bounded prospective
+claim, not a universal ethics of consent or a permission verdict
+about every other norm.
+
+A strong impersonal account offers:
+- a cognitive basis K in the creature's organized activity: its
+  representational roles have correctness conditions anchored in
+  the actual circumstances, can be incorrect, and the relevant
+  process uses those representations and an inferential procedure
+  in directing the creature's own action;
+- a normative basis J: a substantive standing principle linking
+  the patient's rational status and good to a right to refuse this
+  treatment. This is a constitutive normative claim, not an inference
+  from the patient's ability to utter words or exercise physical force.
+
+The prior [stable factual-guidance test](intentionality-943.md#multiple-functions-and-stable-factual-guidance-2026-11-14)
+gives a concrete functional account of accuracy which need not
+identify truth with a single benefit. The present test adds
+claimant-sensitive authorization, misrepresentation and the
+provenance of an actual decision. It is not a second generic
+accuracy-versus-reference theorem.
+
+Let actual harm and consent be separately fixed facts. The selected
+norm says there is a directed duty to refrain iff the harm is present
+and valid consent is absent. Represented harm and represented consent
+may each differ from the actual facts. A can prefer proceeding,
+without that preference changing the actual duty. Compare a mechanism
+which explicitly computes the represented duty and uses it to decide,
+a bypass directly keyed by the same inputs without a separately
+tokened duty conclusion, and a benefit-only mechanism ignoring
+authorization. All have access to the same represented facts where
+relevant. This does **not** encode consciousness, original meaning
+or metaphysically valid rights: the content interpretation and J
+are supplied to the program. It tests the positive replacement's
+functional contribution and its remaining burden rather than
+pretending to implement genuine thought in a small program.
+
+```python
+from itertools import product
+
+def case_duty(harm, consent):
+    return harm and consent != "C"
+
+def reason_route(represented_harm, represented_consent, wants_proceed):
+    valid_consent = represented_consent == "C"
+    conclusion = represented_harm and not valid_consent
+    return conclusion, (not conclusion and wants_proceed)
+
+def bypass(represented_harm, represented_consent, wants_proceed):
+    return wants_proceed and (
+        not represented_harm or represented_consent == "C")
+
+def benefit_only(represented_harm, wants_proceed):
+    return wants_proceed and not represented_harm
+
+rows = []
+for harm, consent, cue, report, wants_proceed in product(
+    (False, True), ("none", "B", "C"), (False, True),
+    ("none", "B", "C"), (False, True)
+):
+    actual = case_duty(harm, consent)
+    believed, action = reason_route(cue, report, wants_proceed)
+    assert action == bypass(cue, report, wants_proceed)
+    accurate = (harm, consent) == (cue, report)
+    if accurate:
+        assert believed == actual
+        assert not (actual and action)
+    rows.append((actual, believed, action,
+                 benefit_only(cue, wants_proceed), accurate))
+
+assert len(rows) == 72
+assert sum(x[4] for x in rows) == 12
+assert sum(x[0] != x[1] for x in rows) == 32
+assert sum(x[2] != x[3] for x in rows) == 6
+assert reason_route(True, "C", True) == (False, True)
+assert reason_route(True, "B", True) == (True, False)
+assert reason_route(True, "B", False) == (True, False)
+assert reason_route(False, "B", True) == (False, True)
+```
+
+Executed all 72 configurations locally. The reason-route and bypass
+outputs agree in every row, including errors. In all 12 accurate
+input rows the reason-route decision respects the stipulated duty.
+In 32 of the 72 rows the represented duty differs from the actual
+one. The benefit-only mechanism differs from the reason route in
+six rows: it fails to distinguish the relevant authorization in its
+choice policy. That failure is **not** proof that it commits a moral
+wrong in those rows; it refrains where the selected claim does not
+require refraining, and may do so for other good reasons. Counts
+describe the fixture, not frequencies in nature or world probabilities.
+
+The two routes have identical extensional functions. The displayed
+intermediate variable is evidence of a distinct *explicit
+factorization* of the implemented computation, not sufficient
+evidence of an apprehended reason, nor a proof that direct evaluation
+cannot be intellectual. Compiler inlining would not automatically
+destroy understanding; whether a real process exercises the
+subject's own content-guided power requires causal and semantic
+evidence beyond variable names. The implementation has an actual
+human/analyst designer; do not treat it as a demonstrated designer-free
+genesis, a metaphysically possible noncognitive first source, or a
+reduction of genuine understanding. This extends the prior basing
+distinction at a narrower matched moral target.
+
+### Where the strongest rival must make a substantive commitment
+
+The positive functional account explains several useful contrasts:
+truth versus error under supplied semantics, actual role of an
+intermediate computation, preference versus duty, and which speaker's
+authorization matters under the supplied rule. It does not establish
+that the state is intrinsically apprehended by A rather than only
+bearing derived content assigned by an interpreter. It does not
+establish the categorical force of J. It must give an account of
+both, not equate correct performance with the positive facts being
+explained.
+
+A semantic origin distinction supplies a more exact constraint.
+For an actually content-bearing token, distinguish content that is
+original to the cognizing bearer (rather than entirely assigned by
+another cognizer), content dependent upon an earlier actual
+interpreter, and the proposed noncognitive constitutive conditions
+of that original content. Original in this semantic sense is not
+uncreated, existentially independent or causally self-produced.
+A chain consisting solely of content borrowed from a prior
+interpreter cannot terminate in a noninterpreter if each borrowing
+requires actual intentional conferral. Under a separate well-founded
+chain assumption an actual original content bearer is needed.
+If the source is noncognitive and the selected first cognizer
+has no prior cognizer, that first cognizer must have nonborrowed
+content under this dichotomy. That conclusion is compatible with its
+being existentially derivative. A functional/constitutive rival
+offers precisely this original creaturely intentionality. An
+infinite or coinductive semantic account is not excluded merely by
+the definition. Nor is every genuine cognition a linguistic
+interpretation. Do not transfer the earlier esse-supplier no-regress
+premise to semantic dependence without a warranted adapter.
+
+Likewise, if all rightful powers are received only through a prior
+valid intentional conferral, a terminating chain cannot explain
+the first entitlement. Constitutive title is a real alternative
+to a further grant; it could belong to an existentially derivative
+person. The first patient need not be the creator to hold the right
+not to be wronged. C's original title does not prove that its ground
+is itself a claimant or rational lawgiver. A personal source can also
+establish genuine original creaturely cognition and derivative
+existence without separately interpreting every creaturely thought.
+A bare declaration of authority cannot supply the original
+legitimacy of the declarer.
+
+Thus the same-source question is sharper than whether all content or
+standing must be conferred by another person. A strong noncognitive
+rival may claim K and J are constitutive consequences of its essential
+nature, with the creature rather than the root instantiating
+subject-level cognition and relational title. This is not ruled out
+by semantics or by stipulating a sole concrete producer. A
+naturalistic rival must defend the proposed realization/identity;
+a robust-realist rival can instead supply necessary substantive
+standards, while a claim of *sole* explanatory grounding in n must
+explain how they belong to or follow from n's nature. Necessary
+principles are not automatically contingent brute facts or distinct
+concrete things. If K and J genuinely follow from a fixed necessary
+nature, varying their interpretation in a toy encoding does not
+show the rival admits arbitrarily varying norms. The corresponding
+personal account owes the same content and validity explanation:
+a knower who merely recognizes an independent norm is not thereby
+its ultimate ground, and a will that chooses a command does not
+make it right merely by choosing it.
+
+### Positive route, remaining crux and next discriminating test
+
+The strongest constructive route now targets intrinsic perfection
+rather than another output discriminator. Distinguish objective
+self-intelligibility, the positive actuality of apprehending as a
+subject, and a productive power that instantiates this actuality
+in a different subject. The first and third can be present in a
+noncognitive description without the second, as the existing C4
+objective-exemplarity controls show in their primitive profile.
+Calling the first wisdom would conceal the missing sense bridge.
+
+For a proposed own-being source n, the pure-perfection route
+(`d164b1ff`, `c4fb87a6`) plus an independently warranted classification
+of apprehension as a positive determination free of finite
+limitations would support real possession at that same n. The
+positive rationale is that ignorance, mistaken representation,
+receptive dependence and temporal search are defects or modes
+of creaturely learning, not the positive content of apprehension
+itself. A rival must be allowed to dispute whether subject-level
+apprehension can be realized without differentiated or receptive
+structure. If the positive content survives, a merely productive
+or externally exemplary substitute does not instantiate it. The
+separate own-being-to-fullness premise and the `Has` to
+HAS_INTELLECT_1 recognition remain required. The parallel
+`64498e7e` preexistence route needs its own intrinsic rather than
+power-inclusive recognition; `f8ba2429` alone gives causal
+responsibility, not the subject's own intellectual activity.
+Reuse the existing [CartesianAdequacy](../../TruthCore/Results/Causality/CartesianAdequacy/Solution.lean)
+and whole-power consumers, not a duplicate inference. At n,
+`HasIntellect(n)` excludes strict impersonal capacity. The
+universal `29818edd` additionally requires the unchanged GOD_4
+identity/application bundle, and `090be689` with
+`LocalTeleologyGodIntellect.godHasWill` reaches `66aecdd7` at the
+capacity level. Neither establishes operative creation or
+original jurisdiction.
+
+**Proposed judgment (unreviewed).** The explicit functional and
+normative candidate supplies genuine explanatory detail in the
+selected structural representation; it does not yet supply an
+account of original intentionality or the validity of original
+standing. The rival's essential constitutive K/J hypothesis is
+not self-contradictory in the selected semantics. The burden is
+positive warrant and application, not merely independent arguments
+for every primitive. The personal hypothesis can add a single
+source's actual rational authorship of the powers, if supported,
+but needs rightful title and an account of created subjecthood.
+No rival defeat or changed reviewed assessment follows.
+
+**Next test:** Can a source which is its own unrestricted actuality
+be intrinsically limited to *only* noncognitive modes of being?
+Test a positive account of the restriction to a noncognitive kind
+against the existing own-being/fullness argument, preserving
+the independently assessed pure positive content of understanding.
+Distinguish a source limited only in its effects, a source with
+a determinate but not necessarily receptive nature, and a source
+whose intrinsic act is genuinely restricted to noncognitive
+actuality. If the rival explains original creaturely K/J, this
+still leaves that distinct intrinsic-perfection issue. If
+apprehension is essentially receptive, the purity premise needs
+revision rather than stipulation. If the root is not uncontracted
+act, the scope of the existing own-being premise is the target.
+Evidence that n intrinsically apprehends eliminates strict
+impersonality, but only evidence of operative appetite and
+authorship reaches personal creation.
+
+**Verification and handoff.** Executed the diagnostic locally,
+including all assertions, and independently reran the four-row
+closure code displayed in draft #1984 (all assertions passed).
+This is a prose-only main-based draft, not changes to canonical
+definitions, proof records, generated files or root premises.
+No local repository clone/Lean or installed convention toolchain
+was available for canonical CLI reuse, binding/corpus checks,
+frontier-diff or independent semantic review. Keep the proposed
+abbreviations and judgment unregistered until those steps and
+the attempt/current-assessment reconciliation are complete.
+Use #1731/#1748/#1460 and the existing notes for reconciliation;
+no issue closure, new tracker or merge.
+
+
 ## Research attempts citing this note
 
 - [Subsistent wisdom and same-source intrinsic self-understanding bridge test](../../corpus/attempts/d3a0e98a-8c92-4236-92bb-a3e22d49b172.json)
