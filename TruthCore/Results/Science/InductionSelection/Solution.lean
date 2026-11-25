@@ -1,5 +1,6 @@
 module
 public import TruthCore.Science.InductionSelection
+public import TruthCore.Logic.FixedPointSelection
 public import TruthCore.Results.Science.PredicateRecoding.Solution
 public import TruthCore.Results.Modern.Hume.Induction.Solution
 @[expose] public section
@@ -15,12 +16,14 @@ theorem symmetry : SymmetryConstraint := by
     simpa only [hf] using hn e h
   refine ⟨closed, ?_⟩
   intro h hs
-  exact (hs (r.hypothesis h)).mp ((closed h).mpr ((hs h).mpr rfl))
+  exact TruthCore.Logic.FixedPointSelection.unique_closed_fixed
+    (answer e) r.hypothesis h ((hs h).mpr rfl)
+    (fun k hk => (hs k).mp hk) (fun k hk => (closed k).mpr hk)
 
 theorem noUnique : NoUniqueSelector := by
   intro E H r select e hf hn hm
   apply hm
-  exact (hn e).symm.trans (congrArg select hf)
+  exact TruthCore.Logic.FixedPointSelection.fixed_output select r.hypothesis hf (hn e)
 
 private theorem flip_moves (b : Bool) : flip b ≠ b := by
   cases b <;> decide

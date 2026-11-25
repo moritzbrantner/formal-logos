@@ -1,6 +1,7 @@
 module
 
 public import TruthCore.Logic.CorrectionCriterion
+public import TruthCore.Logic.InformationInvariance
 
 @[expose] public section
 
@@ -13,20 +14,7 @@ criterion's justification and settles no private-language or truth theory. -/
 theorem characterization : CriterionCharacterizationAndControls := by
   have factor : CriterionCharacterization := by
     intro State Evidence observe Correct
-    constructor
-    · rintro ⟨criterion, h⟩ s t same
-      calc
-        Correct s ↔ criterion (observe s) := (h s).symm
-        _ ↔ criterion (observe t) := by rw [same]
-        _ ↔ Correct t := h t
-    · intro invariant
-      refine ⟨(fun e => ∃ s, observe s = e ∧ Correct s), ?_⟩
-      intro t
-      constructor
-      · rintro ⟨s, same, correct⟩
-        exact (invariant s t same).mp correct
-      · intro correct
-        exact ⟨t, rfl, correct⟩
+    exact TruthCore.Logic.InformationInvariance.factor_iff observe Correct
   refine ⟨factor, rfl, ?_, ?_⟩
   · intro h
     have invariant := (factor Bool (Bool × Bool)

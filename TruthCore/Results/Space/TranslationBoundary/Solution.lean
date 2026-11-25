@@ -1,6 +1,7 @@
 module
 
 public import TruthCore.Space.TranslationBoundary
+public import TruthCore.Logic.FixedPointSelection
 
 @[expose] public section
 
@@ -47,9 +48,9 @@ theorem no_covariant_selector {B : Type} (b : B) :
     ¬ ∃ select : (B → B → ℝ) → Configuration B, Covariant select := by
   rintro ⟨select, h⟩
   let x : Configuration B := fun _ => 0
-  have hs := h 1 x
-  rw [relative_shift] at hs
-  have hz : (1 : ℝ) = 0 := (fixed_iff b 1 _).mp hs.symm
+  have hs := TruthCore.Logic.FixedPointSelection.fixed_output select (shift 1)
+    (relative_shift 1 x) (h 1 x)
+  have hz : (1 : ℝ) = 0 := (fixed_iff b 1 _).mp hs
   exact one_ne_zero hz
 
 theorem normalization {B : Type} (b : B) (a : ℝ) (x : Configuration B) :
