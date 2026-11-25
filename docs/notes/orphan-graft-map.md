@@ -196,10 +196,9 @@ principle for `d` from diffusion would sharpen the WN dispute.
 
 ## 6. Retorsion graft audit (#1926, #1963, #1007, #1008)
 
-Baseline: `5bf0ce3656c1b9b6c94807c1b862d621f451be68`. The roughly 40
-orphans in the original map are a historical estimate, not a fresh count.
-This is a draft semantic and relation audit of the named clusters, not a
-new Lean verification or a claim of exhaustive orphan coverage. Reuse
+The comparison uses main at `21a64a7ff`, including #1979, #1980 and #1985.
+The original estimate of roughly 40 results selected a cluster for investigation.
+For the scoped applications and controls below, see
 [self-undermining-views.md](self-undermining-views.md),
 [retorsion dilemmas](../retorsion-dilemmas.md),
 [verificationism showcase](../showcase-verificationism.md),
@@ -239,7 +238,7 @@ be independently defended by an argument that presupposes that very premise.
 | `2f466ae8` (`8cb04e80`) | No belief `b1f30c51` vs some belief `98f4c491` | Existing exact alternative/refutes; sincere actual assertion is required. Insincere utterance and reason without belief survive. Folk-taxonomy revision need not deny this belief relation. |
 | `0c9d64e6` (`397c1b44`) | No phenomenal occurrence `4ef2306a` vs some `77e57686` | Existing exact alternative/refutes under the occurrence and phenomenal realization premises. Nonphenomenal markers and taxonomy revision survive; no physicalism-wide refutation. |
 | `46c875b1` (`afc88915`) | Nothing exists in interpretation `82441670` vs some `43253cd8` | Existing exact alternative/refutes under occurrence and representation. Need world-specific existence; cannot infer concrete existence merely from a syntactic token. |
-| `cc1a4204` (`f93f2dfd`), COGITO-PERFORMED-DOUBT-SELF-REFUTING (`8697bb2d`) | No thought occurrence, exact negation of `e81971f1` in the same Occurs predicate | Actual assertion `b45ca9db` and realization `1edfc1d1` yield a thought. A performed denial can defeat its content, but the certificate does not supply a performance. Omission control `306fab99`; no blanket rivals on the assertion premises. |
+| `cc1a4204` (`f93f2dfd`), COGITO-PERFORMED-DOUBT-SELF-REFUTING (result `d7295336`, conclusion `8697bb2d`) | No thought occurrence, exact negation of `e81971f1` in the same Occurs predicate | Actual assertion `b45ca9db` and realization `1edfc1d1` yield a thought. A performed denial can defeat its content, but the certificate does not supply a performance. Omission control `306fab99`; no blanket rivals on the assertion premises. |
 | `bfda68fd`, controls `f7df7705`, `3fab8a6b` | Accurate performed denial of episode occurrence | Certificate rules out accurate denial in that profile. Empty and static controls prevent inferring existence or change unconditionally; F4 requires something actually moved in some respect. |
 
 The remaining underminer results in the existing boundary note are
@@ -257,151 +256,185 @@ calibrations and model boundaries are retained in that note and attempt
 | `64e1aa15`, `20ed92f4` | Requiring a known prior premise plus well-foundedness excludes knowledge; weak certificate or non-well-founded alternatives survive. |
 | `fe69aa38`, `eea262e9`; `60425b3c`, `92a88754` | Evolutionary and debunking challenges under their reliability/history conditions. Conditional, not a refutation of naturalism; retain the stated models and history alternatives. |
 
-### 6.2 Root-route alignment (no new substantive premise)
+### 6.2 Which witness reaches the existence argument?
 
-The actual root is `8626f8a5-9531-5da7-9ebd-f901e74b1129`. There are two
-already merged relevant derivations on this baseline, not proposed new work:
+The repository root is Catholicism `53964cbe`. At its God-existence stage
+`8626f8a5`, direct-esse argument `72391d4d` takes concrete population
+`56f68b40` together with its grounding, actuality and divine-identification
+premises. Three witness paths matter here.
 
-- #1979: assertion plus realization gives thought; phenomenal realization
-  gives experience. With the appropriate existing bearer premise the
-  episode yields a bearer (`06ce17e9`); the existing presence and esse
-  contract yield concrete population (`6801590a`, `56f68b40`). The
-  bearer must be of the relevant occurrence, not merely an arbitrary
-  asserting agent.
-- #1980: `1db47fd9` feeds warranted acceptance; `b3ddb7c4` under
-  AcceptedWarrantNeedsBasis and SurvivingBasisGivesReason supplies F6;
-  `b50727e1` under ReasonBearerPresentAt and the esse contract supplies
-  concrete population `56f68b40`. The direct-esse argument `72391d4d`
-  consumes this population on its way to the God-existence root. The
-  eligible-uptake argument already has a reason among its inputs, so the
-  full chain is not an independent proof of F6.
+- **Bearer of a thought (#1979).** Given an actual assertion, its occurring
+  realization and the phenomenal classification, `0c9d64e6` gives an
+  experienced occurring episode. With the phenomenal bearer premise `ac0a151f`,
+  `06ce17e9` gives a subject bearing that episode. Result `6801590a` takes
+  this borne episode, bearer concreteness `a7040bf1` and bearer presence
+  `c821487b`. Its population witness is that subject. An impersonal account
+  can locate the perspective in the organization of the event and contest
+  the bearer premise. The omission control holds experience fixed while
+  emptying the bearer relation.
+- **Representative of an episode (#1980).** `46c875b1` uses occurrence
+  `e81971f1` and episode representation `13b5b929`. With the existence
+  extension specialized to the selected world, the candidate is
+  `represent e`. The companion `RepresentedOccurrence.assertionWitness`
+  retains the asserting agent, selected content and realizing episode when
+  occurrence comes from an assertion. Its type does not equate the agent
+  with the candidate. The selected-world in-act contract `0436de86` then
+  classifies the existing candidate. The populated control has one existent
+  and a different classified candidate, so this last step can fail.
+- **Representative of a reason bearer (#1980).** `b3ddb7c4` eliminates an
+  actual warranted acceptance `6280fbf0` using the surviving-basis
+  requirement `0e2bbd59` and favorable-bearing bridge `6b4e3331`. The
+  resulting reason belongs to that agent for that content. `b50727e1`
+  applies presence `ada25623` to the same pair and `0436de86` at the same
+  world to the agent's representative. The producer `1db47fd9` starts
+  with eligible uptake of a reason. Following it back to F6 gives no
+  independent warrant for F6. The belief-specific concession `3f888d00`
+  also requires favorable force for believing the selected content. Force
+  for checking or withholding leaves that witness open.
 
-Thus the exact nihilism, occurrence and existence objections concern
-real root-path requirements, without assuming that the objections
-establish those requirements. F1 `c425f0c5` is classical case
-noncontradiction; its exact recorded rival `e5097538` and existing
-refutation are logic-relative. F4 `fbc516c1` is something moved in some
-respect; the two standing motion/judgment rivals remain distinct. No
-reason, belief, or semantic witness by itself supplies motion. Knowledge
-scepticism attacks a different notion from the existential fact observed.
+There is already a counted use of the *negative* Cogito result. From the
+realization premise `1722a80f`, `d7295336` gives the conditional
+`8697bb2d`. Result `a89475b3` applies it to an actual performed doubt
+`95c5138f` and uses excluded middle on occurrence `ee4ab504` to recover
+`e81971f1`. Reusing the positive realization witness gives the direct path
+with the same realization commitment. The bare predicate `NoEpisodeOccurs`
+has no standalone statement binding here. Its appearances inside the
+conditional and the empty control do not warrant another
+`alternative_to` or a premise-free refutation of its truth.
+The static occurrence control also leaves F4 `fbc516c1` open. F1
+`c425f0c5` already has its case-logic rival `e5097538`; the scoped
+absolute-truth dilemma supplies neither a new case contradiction nor its
+exclusion.
 
-### 6.3 Proposed semantic bridges and discriminating tests
+### 6.3 A nonempirical candidate with a checkable scope control
 
-These are reproduction targets, not newly certified Lean results or corpus
-premises. The arrows below preserve the same predicates and scope; a
-propositional implication is not a claim of its antecedent's actuality.
+Let *p* say that, on the one-token carrier, a performed denial cannot
+accurately deny **all episodes in the occurrence predicate to which its own
+token belongs**. Occurrence and denial may have any extensions on this
+carrier. The more general result `bfda68fd` proves *p* by specialization. There is positive warrant for this
+claim independent of endorsing an epistemic norm. Given a supposed
+counterexample, extract its token `e` and proof `hOccurs` of its
+occurrence. The accuracy clause `hNo` rules out exactly the witness
+`⟨e, hOccurs⟩`. This proves the universal by examining an arbitrary
+counterexample, with no observation of an actual episode and no F6 premise.
+[Existing two-line proof](../../TruthCore/Results/Logic/PerformedDenial/NoAccurateDenial/Solution.lean)
 
-1. **Occurrence:** with the exact shared `Occurs : Episode → Prop`,
-   `ThoughtOccurs Occurs → ¬ NoEpisodeOccurs Occurs` follows by applying
-   the negative existential to the witness. Check whether the exact
-   negation already has a statement ID before proposing a new statement
-   or relation. Reuse `cc1a4204` for actual occurrence from assertion and
-   realization; the empty and static controls defeat unconditional
-   occurrence and motion grafts. Do not add alternatives to
-   `b45ca9db` or `1edfc1d1` unless the rival really denies the
-   respective assertion or realization condition.
-2. **Scientism:** in one existing EpistemicFrame, for a content p,
-   `E.established p ∧ ¬ E.empiricallyEstablished p ∧ scope p →
-   ¬ ScopedScientism E scope`. This is direct norm application;
-   use the existing dilemma or witness-transfer route rather than a
-   duplicate derivation. The unresolved work is an independently
-   warranted nonempirical p and its scope membership. A Lean proof or
-   owner-approved premise is not by definition an actual established
-   claim in E. Test a logical theorem as p with explicit calibration,
-   and retain the model where the criterion is restricted to
-   empirical questions or the thesis lacks establishment.
-3. **Absolute truth:** if the content d is in scope and disquotes the
-   actual scoped denial, and the same profile asserts that d is
-   absolutely true, derive contradiction by the existing
-   self-application result. To use the global denial, show that the
-   scoped content actually expresses the global quantifier (not just
-   a restricted denial). An independent absolute-truth witness
-   `∃ p, trueAbs p` in the same profile directly contradicts global
-   absence. Negation of global absence alone is not constructively
-   such an existential. Do not identify the rival's relative truth
-   with attitude-independent truth or Lean's Prop.
-4. **Meaning:** reuse `MeaningDefinitionFork.Calibration`, which
-   connects the independent predicate M to criterion verdicts only
-   on its specified scope. For designated content g, a God-existence
-   application requires a content/world interpretation
-   `Holds(w,g) ↔ GodExists(σ)` and compatibility of negation,
-   scope, observation and world assignments. This is a proposed
-   semantic alignment, not a proof of GOD_4. V3's Church-observation
-   result can constrain criterion verdicts of g or its negation
-   in the matched profile; stronger closure supplies additional
-   consequences only with that closure. The actual meaning of g
-   cannot be inferred from a refuted criterion, and the truth of g
-   cannot be inferred from meaningfulness. Test restricted auxiliaries
-   and the existing V4 proposal survivor.
-5. **F6 / knowledge:** an actual reason for some p in the same R
-   directly contradicts `∀ a p, ¬ R a p`; `146b502b` already
-   implements this from F6. Do not elevate its attack to a counted
-   refutation of the rival on F6. A distinct known p (with the
-   factive knowledge predicate) contradicts universal ignorance,
-   but neither the no-knowledge certificate nor thin F6 produces
-   such a witness. For #1980, perform the matched recount described
-   in `7a269548`, observing the investigator and residual defeaters;
-   this can motivate the existing local calibrations without
-   postulating a new global epistemic law.
+Change just the extension targeted by the content: a speaking episode
+denies that anyone is singing. In the one-token interpretation
+`speaks () = True`, `deniesSinging () = True`, `sings () = False`,
+the token occurs and its denial of singing is accurate. This tests why the
+same-predicate condition matters. A local Lean replay checked the original
+theorem at the populated carrier `Unit` and the following counterexample to
+the changed inference. The original theorem reports zero axioms.
 
-### 6.4 Registered checkpoint and local reproduction
-
-Five new `attacks` relations reuse existing argument IDs and target
-statement IDs; no `alternative_to`, `refutes`, theorem, result, floor
-marking, or new philosophical assumption is introduced. Existing
-refutations, conditional refutations and surviving countermodels remain
-unchanged. The relation changes connect the rival comparison graph, not the counted
-orphan refutation-support walk. Static inspection: `truth/src/frontier.rs`
-separates attacks into its objections map, and `truth/src/orphans.rs`
-seeds refutation support only from verified argument `refutes` edges to
-recorded root-path alternatives. The existing regression
-`verified_refutation_support_connects_without_closing_open_premises`
-explicitly tests that an argument attack does not count as that support.
-Accordingly the predicted change is comparison visibility, not proof
-closure or newly connected results by this mechanism. This is a source
-inspection, not a computed numerical delta. All five committed relation
-files were reread as JSON and checked for the exact expected IDs,
-endpoint kinds, unique subject/object pairs, nonempty notes and predicate.
-
-Repository reads and endpoint/meaning inspection were possible via the
-GitHub connector. The local shell cannot fetch the repository or run
-Cargo/Lean/the project CLI. No independent semantic challenger was
-available. This is a draft checkpoint: full validation and independently
-reviewed scope alignment are required before promotion. In particular,
-no frontier or orphan delta is asserted, even if a relation-only change
-is expected not to change the counted frontier. No historical theorem
-has been reverified in this checkpoint.
-
-Run in a normal checkout, on the PR head; use the actual merge base for
-the final comparison:
-
-```bash
-gh pr checkout 1987
-git fetch origin main
-base=$(git merge-base HEAD origin/main)
-root=8626f8a5-9531-5da7-9ebd-f901e74b1129
-cargo build --locked --release -p truth
-truth=target/release/truth
-"$truth" check
-cargo test --locked -p truth verified_refutation_support_connects_without_closing_open_premises
-"$truth" bind-check --affected --base "$base" --head HEAD
-"$truth" --json frontier --reaching-root --routes --frontier-root "$root"
-"$truth" --json frontier-diff --base "$base" --head HEAD --frontier-root "$root"
-"$truth" --json orphans --frontier-root "$root" --by module
-"$truth" --json orphans --frontier-root "$root" --by family
-"$truth" --json orphans --base "$base" --frontier-root "$root"
-"$truth" --json frontier-diff --base "$base" --head HEAD
-"$truth" --json orphans --base "$base"
-"$truth" --json semantics "$root" --frontier-root "$root"
-"$truth" --json bind-check --result ec80b13d-0c87-5f71-bc70-16b42dc4c0e6 --result 146b502b-e5fd-40cf-8a39-9ed2d45e59bb --result 0a3d0ed8-773c-5878-8bbb-aaa61e654d3e --result 0bd651df-63c6-5b96-90df-4b488b1735f1 --result dbc2fb38-580c-5f0c-813d-767076523c8b
+```lean
+open TruthCore.Logic.PerformedDenial in
+example : ∃ (speaks sings deniesSinging : Unit → Prop) (e : Unit),
+    speaks e ∧ deniesSinging e ∧ NoEpisodeOccurs sings := by
+  exact ⟨fun _ => True, fun _ => False, fun _ => True, (), trivial, trivial,
+    fun ⟨_, h⟩ => h⟩
 ```
 
-Compare actual reaching sets, counted refutations, floor states, per-route
-leaves and support alternatives, not just cheapest cost or aggregate
-counts. Inspect dossier/semantics for F6, F1, F4 and the exact targets in
-§6.1; run the existing convention and CI gates. If any relation has a
-closure effect, explain the cause or withdraw it. Keep this PR draft
-until the scope audit and checks are complete. Subsequent independent
-research should prioritize the actual nonempirical witness and the
-specific same-profile reason/occurrence witness, rather than manufacturing
-new counted refutations from already proved conditionals.
+For an explicit two-claim comparison let *q* say that the cited Solution
+file contains the line `exact hNo ⟨e, hOccurs⟩`. Direct inspection establishes
+*q* about that file. In a frame classifying the **grounds used here**,
+deduction establishes *p* and inspection establishes *q*. Reading the file
+also helps one find the deduction. The difference in grounds is testable:
+changing the spelling in the file could falsify *q* while the same-witness
+proof of *p* would still go through. In this reading of
+`EpistemicFrame`, the norm on both claims fails at *p*. Restricting it to
+file observations retains *q* in a populated scope and removes the
+counterexample. This is direct application of `ScopedScientism` to a
+particular claim, distinct from applying the self-formulation dilemma
+`0a3d0ed8` to the scientistic thesis itself.
+
+The following replay makes the classification explicit. The two Bool
+values index claims. The first branch requires the proof of *p* and the
+second an input for the observed file fact. The empirical column records
+only the file inspection admitted in this exercise. This last assignment
+is a scope choice for the comparison. A reader's evidence can extend
+beyond it.
+
+```lean
+import TruthCore.Results.Logic.PerformedDenial.NoAccurateDenial.Solution
+import TruthCore.Logic.Scientism
+open TruthCore.Logic.Scientism TruthCore.Logic.PerformedDenial
+open TruthCore.Results.Logic.PerformedDenial.NoAccurateDenial
+
+-- Bool.true indexes the same-token theorem; Bool.false indexes the file report.
+example (FileReport : Prop) (readLine : FileReport) :
+    let E : EpistemicFrame Bool :=
+      ⟨(fun c => if c then ∀ O D : Unit → Prop, AccurateDenialImpossible O D else FileReport),
+       (fun c => c = false ∧ FileReport)⟩
+    SomeNonEmpiricalEstablished E ∧ ¬ ScopedScientism E (fun _ => True) ∧
+      ScopedScientism E (fun c => c = false) ∧ E.established false := by
+  dsimp only
+  have proofGround : ∀ O D : Unit → Prop, AccurateDenialImpossible O D := noAccurateDenial
+  exact ⟨⟨true, proofGround, fun h => Bool.noConfusion h.1⟩,
+    fun norm => Bool.noConfusion (norm true trivial proofGround).1,
+    fun _ inScope _ => ⟨inScope, readLine⟩, readLine⟩
+```
+
+**Provisional assessment.** The exhibited proof gives strong warrant for
+*p* on the fixed meanings and favors counting deduction as a sufficient
+ground in its own right. The strongest broader reading of the rival allows
+several sufficient grounds: testimony about a reliable checker could
+empirically establish that very theorem for someone who cannot reconstruct
+it. Having a sufficient deductive ground alone does not decide
+`¬ E.empiricallyEstablished p` on that reading. To transfer the result,
+fix the audience, whether the predicate tracks actual grounds or available
+routes, which reports it has and their reliability, and whether semantic
+claims like *p* lie in scope. A calibrated empirical report bearing on *p*
+would defeat the proposed negative classification for that audience.
+Likewise the proof report by itself supplies no warrant attribution to a
+particular believer and no representative at the selected world.
+
+The other retorsions retain distinct conditions. An absolute assertion must
+disquote to the same scoped denial. The global negative requires coverage
+of all contents. Denying that negative alone does not constructively
+supply an absolute-truth witness. An application of Church's criterion to
+a God-existence sentence *g* requires `MeaningDefinitionFork.Calibration`
+on the relevant scope, a content interpretation relating `Holds(w,g)` to
+`GodExists(σ)`, and matching negation, observations and worlds. A verdict
+about *g* or its negation does not deliver the existence witness. The V4 language proposal avoids the
+truth assertion tested by self-application. For global ignorance the missing
+witness is knowledge in the same factive profile. A reasonless nihilist can
+forgo offering epistemic grounds for nihilism without contradicting it.
+#1985's reviewed basis-defeat result `8f0f44e5` supplies a separate test of
+warrant loss for the specified debunker's basis, with actual reliance, other
+grounds and calibration still at issue. Its conclusion supplies no positive
+reason for believing a claim. [Basis-defeat assessment](self-undermining-views.md#when-does-a-genealogy-defeat-its-own-evidential-basis-1615-2026-11-25)
+
+### 6.4 Graph comparison and issue scope
+
+Relative to main `21a64a7ff`, all five argument-to-statement attacks in
+§6.1 add contextual objections. Each source argument concludes the stated
+conditional, incompatibility or self-undermining law. None of the five
+targets acquires an argument premise through this relationship.
+Comparing the sorted result IDs in the module-grouped orphan reports gives:
+
+| Root selected | Disconnected on main | Disconnected here | IDs entering | IDs leaving |
+| --- | ---: | ---: | --- | --- |
+| Catholicism `53964cbe` | 1,690 | 1,690 | none | none |
+| God exists `8626f8a5` | 1,814 | 1,814 | none | none |
+
+All five objection producers and the proof used for *p* remain in both
+disconnected sets. The computed premise comparisons give **no change**
+for both roots (verified support alternatives 661 → 661 and 568 → 568,
+respectively). The full reports agree on reaching statements, floor markings,
+refutations, statement statuses, support options and routes. Existing V1–V3 refutations and the positive population
+routes retain their premise bundles. Reproduce with `truth frontier-diff
+--base 21a64a7ff` and `truth orphans --base 21a64a7ff`, repeating with
+`--frontier-root 8626f8a5-9531-5da7-9ebd-f901e74b1129`. To compare IDs,
+run `truth --json orphans --by module` on each tree with the same root
+and sort `.groups[].results[].result_id`.
+
+This answers the retorsion part of #1963's proposed floor-graft search
+within #1926 and #1007. The concrete use of the orphan proof is the
+scientism comparison above. The same-predicate, actuality and epistemic
+conditions explain why promoting these objections to root support would
+misstate them. #1926 and #1007 retain their broader research scopes.
+#1008's verificationism showcase and #1615's debunking tests were already
+delivered. The next applicability test for F6 remains the matched
+investigator and evidential basis specified in the
+[existing attempt](../../corpus/attempts/7a269548-3bc6-4aa8-af8e-f4397ece9448.json).
