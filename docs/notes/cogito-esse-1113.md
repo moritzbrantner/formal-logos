@@ -757,20 +757,21 @@ means that this very experience obtains in re, a denial of *any* obtaining
 reality excludes the datum itself, not merely its interpretation. In the
 owner-adopted concrete sense (existing in re/in act of esse), a real episode
 is therefore a candidate population witness even if it has no distinct
-bearer. This is a semantic application proposal, not a new graph edge:
-one must show that the same episode can be represented in the existing
-being carrier and that the selected world's existence contract applies.
+bearer. The comparison below shows how the same episode represents itself in an
+event-inclusive being carrier and how the adopted existence contract
+applies at the world of its performance. It reuses #1980.
 A concrete-empty extension of an independent episode signature is not
 evidence that a real episode can be absent from reality; it exposes exactly
 the missing application. The occurrence-only rival can concede the
 positive datum without conceding substance, causal dependence, or an
 enduring subject.
 
-Next tests: distinguish actual understanding from representation, actual
-distinction from plural substances, actuality from unactualized possibility,
-temporal order from passage, and factive constitutive dependence from
-productive existential dependence. Reuse the existing results and compare
-same-witness interpretations. The downstream destinations are
+The comparisons below distinguish actual understanding from representation,
+actual distinction from plural substances, actuality from unactualized
+possibility, temporal order from passage, and factive constitutive
+dependence from productive existential dependence. They reuse the existing
+results and keep the witness fixed across interpretations. The downstream
+destinations are
 `56f68b40` (actual concrete population), the `CogitoEsse` ancestry and
 essence results, and the operation/act/perfection interfaces already
 identified above. No premise change at this checkpoint.
@@ -823,10 +824,11 @@ remains satisfied and the occurrence witness remains. Nevertheless
 `¬ ∃ b, Concrete(b) ∧ ExistsAt(w₀,b)` holds for every selected w₀.
 One may keep `ExistsAt` nonempty instead and still set Concrete empty.
 
-This is a general mathematical conservative-extension argument, pending
-Lean implementation and independent review; it is not just the existing
-Unit controls. It is inapplicable if L contains a semantic bridge to those
-predicates, directly or via a truth/representation dictionary. Merely adding
+This mathematical argument covers arbitrary episode-only theories under
+the stated language restriction. The generic Lean certificate and the
+separate abstract-truth control remain open under #543. The construction
+requires the new predicates to be independent of L, including any
+truth/representation dictionary. Merely adding
 a syntactic quotation of "nothing concrete exists" preserves the construction
 if interpretation of the quote is independent. If that quote is required to
 express the actual negation of concrete population, interpret its content at
@@ -849,9 +851,8 @@ the **same event-representation route** of #1980, not a new argument
 registration or an independent reason counted twice. The relevant warrant
 is local to a real occurrence. It does not justify the universal
 `13b5b929` under every occurrence predicate or classify a purely abstract
-proposition as a concrete event. The next implementation test is a
-witness-local specialization of the existing representation argument,
-not another independent ontology or an arbitrary new universal premise.
+proposition as a concrete event. The following comparison applies that
+representation to the first of two questionings.
 
 ### Which occurrence supplies the witness?
 
@@ -1009,14 +1010,14 @@ not new graph effects:
   actual thinking source, and pure intrinsic intellect are separate
   conclusions. Productive capacity alone is not actual intrinsic grasp.
 
-Next discriminating work, in order:
+### Remaining tests
 
-1. Compare an actual successful grasp with a token of its mere description
-   while preserving content, and specify the minimal actual-event
-   representation needed by `13b5b929`. Test the selected witness under
-   the adopted esse definition and contrast merely true abstract contents.
-   This is the first unmet #543 generic/control implementation and
-   positive applicability test; do not use a fresh duplicate proposition.
+1. Issue #543 still calls for a Lean proof that an episode-only theory
+   admits an expansion with empty fresh concrete-existence predicates, and
+   a separate control preserving a true abstract content in the absence of
+   concrete population. The [two questionings and unread quotation](#which-occurrence-supplies-the-witness)
+   resolve the local applicability question for e₀ under the event-inclusive
+   reading and the adopted esse contract.
 2. Test whether the content-appropriation of one grasp is an independently
    warranted nonidentity/ownership relation or an internal aspect of an
    event. A concrete criterion that rules out the strongest organized
@@ -1035,20 +1036,17 @@ Next discriminating work, in order:
    condition. Avoid upgrading fact-level dependence to productive esse
    receipt by terminology.
 
-**Handoff / verification:** read the existing attempts
-[cogito-esse-1113](../../corpus/attempts/cogito-esse-1113.json),
-[cogito-concrete-world-536](../../corpus/attempts/cogito-concrete-world-536.json)
-and [thought/change](../../corpus/attempts/cogito-physics-thought-change-subject.json).
-No new result or statement registration, no semantic/floor metadata change,
-no formal premise change intended. Local Git clone and Lean/Rust CLI
-unavailable (network DNS failure); no fresh worker or independent reviewer
-available in this session. The coordinator must independently challenge the
-full draft, not treat the above as an accepted revised assessment. On a
-prepared clone, run `truth related`, `dossier`, `brief`, `novelty` and
-`semantics` for the reused targets (especially e81971f1, 30e6e01c,
-56f68b40, 13b5b929, 7067553d), then the existing verification workflow,
-`target/release/truth check` and
-`target/release/truth frontier-diff --base bff18fce135d73ffe2e00933a56decdb2a1c89af`.
-If implementing the generic #543 theorem, freeze the exact Challenge
-and certify the result through Lean, bind-check, Comparator and NanoDa
-before registration as verified. The finite check above is not a substitute.
+### Review and verification
+
+The original handoff recorded that its author lacked a local checkout and
+could run only the finite Python control. The independent recheck subsequently
+accepted the [witness comparison](#which-occurrence-supplies-the-witness) at
+`c0b61e29bb71539f698497e5d7b74820a2330c35`. Its finding concerns this
+particular questioning at w₀. The [attempt](../../corpus/attempts/cogito-concrete-world-536.json)
+records the review and the remaining #543 obligations.
+
+The finite Python control checks the listed model properties. The existing
+[cogito/esse](../../corpus/attempts/cogito-esse-1113.json) and
+[thought/change](../../corpus/attempts/cogito-physics-thought-change-subject.json)
+results retain their reviewed scopes. This local application reuses #1980
+and leaves the formal premise frontier unchanged.
