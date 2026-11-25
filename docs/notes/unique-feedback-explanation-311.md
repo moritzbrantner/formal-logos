@@ -3091,7 +3091,7 @@ countermodel's target. The scoped assessment records the review as
 re-check; it remains `unpublished`.
 
 
-## Closed-cone selection without a quantitative transfer ledger (2026-11-25; draft)
+## Closed-cone selection without a quantitative transfer ledger (2026-11-25)
 
 **Scope and baseline.** Continue #1724, #1616, #1882, #1964, #1965 and the
 still-open #1966, from main `e7073368fcd87fb5be224b6bb7971a55f5316f40`.
@@ -3419,14 +3419,15 @@ assumptions rather than solving those ledger bridges.
   registration blocker remains). No potency, simplicity, goodness,
   intellect, will or GOD_4 bridge is discharged here.
 
-**Provisional judgment, pending challenge.** Retain the prior modest
+**Provisional judgment on exhaustive existential supply.** Retain the prior modest
 preference for nonreceived productive availability on an exhaustive
-per se existential-supply reading. It is supported by the distinction
-between received exercise and the positive availability presupposed by
-that exercise, together with the requirement that an explanation at
-this scope address obtaining rather than only conditional local
-transmission. This is a direct and comparative warrant for supplier
-completeness, not a deductive proof of it. The present discriminator
+per se existential-supply reading. Both accounts grant actual givers. The rival explains their availability
+through their jointly obtaining activity. The modest preference depends on
+a further judgment about receipt: when actuality is wholly received, the
+givings that account for its availability must reach an unreceived giver.
+The contrast between exercising borrowed power and supplying that power
+gives this judgment some warrant. Its application to every collection
+containing all its members’ suppliers remains open. The present discriminator
 improves specificity: even a populated rival with an unrelated
 underived root must explain how its rootless cone is selected, if
 its own activation account meets the test. It does not increase the
@@ -3435,8 +3436,8 @@ strength of the prior judgment on the unrestricted mode-unspecified
 The strongest genuine denial remains a globally necessitated or
 primitive, bearerless constitutive fact with an independently defended
 admissibility/instantiation principle. A fundamental concrete whole
-that really supplies its parts instead concedes the narrow root
-conclusion. The positive source account must meet the same scope
+that supplies its parts and itself has no incoming cause in the selected
+relation satisfies the narrow root conclusion. The positive source account must meet the same scope
 and cannot simply declare its own existence exempt while demanding
 a further reason from every rival.
 
@@ -3573,8 +3574,9 @@ For C=A, U is empty and J reduces to existence of an allowed output
 at the empty input. G forces that output empty. No monotonicity,
 global well-foundedness, numerical transmission, receipt injection,
 fixed supplier identities or deterministic selection is required.
-For proper C, J can be witnessed by an independently functioning
-outside component; a root elsewhere alone does not establish it.
+For proper C, an independently functioning outside component witnesses
+J if it jointly realizes every retained member of U. A root elsewhere
+may keep just part of U active.
 Do not claim this proves modal accessibility of U. If a rival
 restricts its admissible configurations, it may reject J or the
 interpretation of D(U,U) as a metaphysically admissible alternative.
@@ -3777,9 +3779,11 @@ monotone proof finds {s}, while J for the entire U={s,t} fails.
 Thus the revised criterion trades a stronger retained-witness
 requirement for weaker assumptions about the operator. Nevertheless the essential-reception
 application, potential component closure, joint realization
-and modal/ontic import remain separate. Non-deletion does not
-follow from even strict, necessary and identity-fixed local
-receipt. Supplier completeness is still modestly favored only
+and modal/ontic import remain separate. In the two-world frame every chain member is present
+at both accessible worlds, so modal non-deletion holds even though
+the chain has no root. The same local receipt equations also admit the
+empty assignment when evaluated outside that frame. Which assignments
+count as accessible requires a further account. Supplier completeness is still modestly favored only
 at exhaustive genuinely productive explanatory scope by the
 mode-of-having rationale. No increase in warrant for the
 unrestricted mode-unspecified 20babef7 is asserted. A purely
@@ -4181,8 +4185,8 @@ productive availability and suspension on unconditional intrinsic
 adequacy are retained; no new establishment, source attribution
 or checked support edge. No general composition-to-reception
 claim is made. For the root question, a concrete necessary
-whole with genuine whole-to-part support grants the relative
-root; identifying that root with subsistent esse continues to
+whole that supplies its parts and has no incoming cause of its own
+in the selected relation qualifies as a relative root; identifying that root with subsistent esse continues to
 require the existing q3a4 inputs, including the causal exhaustiveness
 premise. An abstract reason would also require an actual productive
 bearer bridge to yield the root conclusion. For the necessity
@@ -4190,7 +4194,8 @@ route, use the exact same actual root and the contingency
 coverage/EM, then separate modal support transport if all-world
 underivedness is the endpoint.
 
-Next substantive test: investigate **whether the act of existence
+Checkpoint D proposed the following test, taken up in the duet comparison below:
+**whether the act of existence
 itself can be positively characterized without presupposing an
 already actual recipient**, and whether the proposed absence
 of a limiting/receiving principle warrants nonposterior,
@@ -4207,16 +4212,12 @@ from a mere equality of principle labels. Reopen on independently
 warranted nature-content/instantiation, or an actual partial
 ground link from a constituent to the whole's esse.
 
-Prepared-clone CLI dossier, context, semantics and novelty
-retrieval, installed convention inspection, independent semantic
-challenge and formal registration remain unavailable in this
-session: GitHub DNS prevents a local clone, no Lean/lake/cargo
-are installed, and no independent worker is available. This
-is a draft with analyst reasoning and executable finite
-diagnostics. Do not merge; keep the existing reviewed
-assessments intact. No new formal statement, result or source
-claim changes; intended formal premise change none, new-head
-frontier comparison pending.
+The four executable comparisons were reproduced in independent review. These
+checkpoints give informal deductions under the stated assumptions. The
+merged receipt study and inertia control already cover the corresponding
+parts of #1616. Present productive supply, its relation to origin and to
+exemplar or final causation, and representative applications under #1724
+remain open. [Receipt study](https://github.com/moritzbrantner/formal-logos/pull/1966) · [Inertia control](https://github.com/moritzbrantner/formal-logos/pull/1891)
 
 ### Can an individual act be identified without first identifying its recipient? (#1724)
 
