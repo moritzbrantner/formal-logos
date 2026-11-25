@@ -790,6 +790,8 @@ Two follow-up investigations now use the same countervaluation: with p false and
 The next candidates from this intake are epistemic expressivism under embedding of the same content and equal validity of epistemic frameworks in the same task. The ten entries are research leads. The documented connections use the existing F1, F6, realization and population premises at their stated scopes.
 
 
+The targeted independent recheck accepted the proof description, the two delivered applications and the remaining intake questions at 221aac629cc723bb7b34437aca3f63c9a44b6cb6. PR-1989.
+
 ## Research attempts citing this note
 
 - [Moral and epistemic parity: distinguish categorical force from irreducible favoring](../../corpus/attempts/cc9f51e3-529d-4e59-bc50-bc79d8eae6c0.json)
