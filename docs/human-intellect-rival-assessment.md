@@ -4,7 +4,7 @@ The results merged in #420, #422 and #427 do not yet exclude a physically
 constituted thinker. The first two are conditional reductios with disputed
 interference premises. The subsistence composition is explicitly a transcription.
 This assessment supplies an affirmative rival source and a research target; it
-adds no theorem, changes no statement meaning, and claims no premise reduction.
+adds no theorem, changes no statement meaning, and claims no premise reduction. [Research record](../corpus/attempts/q75-causal-identity-rival-assessment.json)
 
 ## Consulted witnesses
 

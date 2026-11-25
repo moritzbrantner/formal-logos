@@ -2,11 +2,11 @@
 
 The common target is F6, `STMT-THERE-ARE-EPISTEMIC-REASONS`, which is the
 existence of an agent and content related by the supplied thin reason predicate.
-The existing corpus puts F6 on routes to `STMT-CATHOLICISM-TRUE`. The results
-below assess challenges to reasons or reasoning. Only case 9 uses F6 itself as
-a theorem premise. Each further link to F6 requires the specified bridge.
+The original cases below assess challenges to reasons or reasoning. Case 9
+uses F6 as a theorem premise. The [2026-11-25 integration](#from-warranted-belief-to-an-actual-bearer-1007-2026-11-25)
+connects case 10 through F6 to a God-existence-stage population premise.
 These are analyst readings. Existing source records retain their narrower
-attributions.
+attributions. [Research record](../../corpus/attempts/7a269548-3bc6-4aa8-af8e-f4397ece9448.json)
 
 | Case | Conditional consequence or exact reuse | Surviving alternative and condition for reassessment |
 | --- | --- | --- |
@@ -378,7 +378,7 @@ without establishing every instance or eliminating the direct prima facie route.
   to q.75's intellectual exercise and then to its bodily-sharing premise also
   remains explicit work.
 - **#1459:** knowing a content and possessing a capacity do not yet show that
-  the content guided a particular effect. That is a useful comparison for the
+  the content guided a particular effect. The [fixed-policy case](explanatory-symmetry-742.md#what-has-been-learned-about-the-agenda) asks which route produced a tied choice. That is a useful comparison for the
   proposed transition from divine knowledge of goods to actual willing. Applying
   it to divine action requires an appropriate account of intentional exercise;
   temporal deliberation, learned capacities and retraction tests from human
@@ -405,3 +405,129 @@ pending the unavailable Lean/verifier environment, and would still leave that
 application burden. The ordinary prima facie case remains available with these
 revision conditions. No current formal root premise is added, removed or
 discharged by this note and its attempt record.
+
+## From warranted belief to an actual bearer (#1007, 2026-11-25)
+
+At baseline `7a5a834d`, the floor record for F6 cited the retorsion and
+identified its rival. Neither citation was an argument-premise path to the
+God-existence stage. The four proposed results all appeared in `truth orphans`.
+One now has a consumer on such a path.
+
+| Prior result | What its witness or control contributes |
+| --- | --- |
+| `1db47fd9`, eligible uptake yields a warranted acceptance | Its conclusion `6280fbf0` is a premise of `b3ddb7c4`. In the reliability frame, let acceptance and warrant be the original theorem's belief and warrant predicates. If accepted warrant requires surviving support (`0e2bbd59`), choose an undefeated basis for the **same** subject and content. If such support counts pro tanto for belief (`6b4e3331`), that pair witnesses thin F6. When a specified basis was undercut, the companion `otherBasis` proves that the surviving basis differs from it. Distinctness does not certify a separate evidential source. |
+| `ec80b13d`, no epistemic reason for the denial on its own terms | Already cited in the F6 floor record. Universal absence of reasons removes the reason to believe the denial as well. The existing model satisfies the denial. A person who withholds assent need claim no warrant for it. This epistemic cost bears on advocating the denial as reasoned, and gives no contradiction. |
+| `146b502b`, F6 excludes thin nihilism | The rival `38f44eff` ranges over exactly the agents, contents and relation of F6. Universal absence denies its existential witness. The proof starts with F6. It supplies no grounds for choosing the existential over its rival. |
+| `cf896bd6`, calibration without an eligible case | Retains F6, belief and the sufficient calibration while every belief lacks warrant. It tests the converse of the proposed route. None of the three control or denial conclusions acquired a rooted consumer here. |
+
+**Where it reaches the case.** Result `b50727e1` takes F6 on its unrestricted
+subject and content carriers. Open application `ada25623` says that the
+ontic representative of each reason-bearing subject exists at the selected
+world. The existing one-way esse contract `0436de86` supplies act in the
+respect of being for that same representative. The resulting witness
+inhabits `56f68b40` with concreteness interpreted as
+`HasEsseInRe InAct esse`. In the stage-one argument `72391d4d` (result
+`fd5e32d4`), use that concrete predicate throughout its grounding profile.
+Its population input now has this support option. Its own `ExistingInActAt`
+input is the very same contract. All its further inputs, including
+whole-roster nontrapping, contingent grounding, causal correspondence,
+perfection transfer and the naming premise, still apply to reach
+`8626f8a5` (God exists). The witness delivered here is a reason bearer;
+the subsequent argument must find its own first root. This is a population
+route independent of any performed assertion or occurrence of thought as
+a *premise*. It gives no epistemic evidence for choosing a divine over an
+impersonal ground and supplies none of the open moral-authority bridges in
+the [Group 8 report case](natural-goodness-function-and-authority.md#group-8-integration-from-reasons-and-goods-to-moral-authority-and-god-1733-2026-11-18).
+
+The Lean application at the consumer is the following partial application
+(`hU` is the eligible uptake, `hCal` its warrant calibration). The resulting
+type still asks for the remaining premises of `godExists`.
+
+```lean
+DirectEsseRootGodExistence.godExists
+  (⟨m, HasEsseInRe act esse, grounds⟩ : Profile W B) w act more cause esse prior component god
+  (populationFromReasons reason rep m act esse w (reasonsFromWarrant f reason
+    (EpistemicUnderminers.eligibleReasonUptakeYieldsWarrant
+      reason f.accepts eligible f.warranted hU hCal) hN hC) hP hE)
+```
+
+**Warrant and shared dependencies.** Thin F6 retains its direct common-ground
+option. The matched recount is a proposed test. No actual warranted assent
+was observed. Fix one investigator and the claim that a specified collection
+has a particular total. Suppose the first worksheet transposed two digits.
+A fresh tally from the items themselves can favor the proposed total over
+the transcribed figure even if a discrepancy still warrants suspension.
+A copy of the worksheet inherits its transcription fault.
+
+To test bypass, trace the new tally to the items and check that the old
+figure was unavailable to the counter until the tally was recorded. To assess
+adequacy, check the collection's identity and completeness, omissions or
+double counting, and any outstanding explanation for the discrepancy. To
+assess assent, obtain the investigator's contemporaneous judgment about this
+total and the basis they actually used. Recording a tally is compatible
+with withholding judgment. A favorable recount supplies a candidate pro
+tanto reason; claiming warranted acceptance also requires sufficient,
+undefeated evidence and actual assent on that basis. If instead its only support is the prior
+eligible-uptake proof, premise `38eb1610` already contains an epistemic
+reason, and its warrant calibration `cf57c52c` is also required. Recycling
+that reason earns no additional warrant for F6.
+
+The strongest scope objection to the warrant condition is process-based
+entitlement, for example an ordinary perceptual judgment produced by a
+reliable competence when its subject lacks a separately available supporting
+consideration. A process itself can occupy the basis role **if** it meets
+the frame's interpretation of available support. The objection has force
+where warrant is granted and that condition fails. An instrumental account
+can also grant that the evidence distinguishes the answers while disputing
+its reason-giving force for an indifferent subject. In the proposed test, if the investigator aims at accuracy and receives
+a tally that discriminates between the answers, that account too can grant
+the local pro tanto attribution. It need take no position on a preference-independent
+duty to believe. The two calibrations are defensible on this ordinary
+evidential reading; their unrestricted application across cases remains open.
+
+**Withholding and standpoint.** In `warrantControls` remove all acceptance
+while keeping the original surviving support. On the interpretation that
+identifies a reason with undefeated support, F6 holds while the warranted
+acceptance input fails. In the other profiles, preserving warrant while
+emptying either reason attribution or the roster of support leaves F6
+unavailable from warrant alone. In the nihilist's own reasonless profile a
+silent subject need neither accept the denial nor purport to give a reason
+for it. Silence therefore settles neither F6 nor its negation.
+
+Having evidence *available to an actual investigator here* presupposes that
+investigator's presence here. Assessing what evidence a merely possible
+investigator would have is a legitimate different application.
+`standpointControl` locates its subject at one world with no inhabitant at
+the other; it preserves both thin F6 and the latter world's esse contract.
+For the proposed application, restrict the frame to this investigator, this
+claim, and the two indicated bases (the worksheet and the fresh tally).
+Restrict the thin reason relation to this subject and claim while retaining
+its pro tanto meaning. Each universal premise has a separate evidential test
+on that domain.
+
+- **AcceptedWarrantNeedsBasis.** For the single subject–claim pair, establishing
+  that the investigator had an available undefeated basis supplies the
+  consequent of the warrant condition. Warranted acceptance itself still
+  requires the separate evidence of assent and adequacy above. Relevant
+  defeaters outside the two proposed bases must inform the assessment of
+  undercutting and warrant.
+- **SurvivingBasisGivesReason.** Assess each basis. A demonstrated
+  transcription fault undercuts the worksheet as support for its recorded
+  total. If the fresh tally bypasses that fault, is available to the investigator
+  and genuinely discriminates between the totals, it counts in favor of the
+  corresponding answer. Suspension can remain appropriate.
+- **ReasonBearerPresentAt.** Identify the person who received the evidence
+  with their ontic representative at the selected world, for example through
+  an observed recount and contemporaneous record of receipt. This establishes
+  presence for the only subject in this application. One present representative
+  already suffices directly for concrete population under the existing esse
+  contract, independently of assent or the epistemic route.
+
+On a wider frame, one reason witness and one present investigator leave the
+three universal premises open for other accepted beliefs, supporting bases
+and reason bearers. Extending the route requires warrant for each premise
+over its wider domain. The proposed test concerns the local application.
+
+## Research attempts citing this note
+
+- [Actual content-sensitive exercise as a rational-basing account](../../corpus/attempts/fe2eb414-fe03-4768-831b-635d92062d1b.json)

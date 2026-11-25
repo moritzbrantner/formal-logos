@@ -1,0 +1,6 @@
+{
+  "id": "4e383231-761c-493f-8724-0a431ce292a3",
+  "label": "Every positive integer regrading covers exports exactly when all upper-grade counts do",
+  "paraphrase": "For two finite histograms on the same finite ordered grades, evaluate each grade by the sum of strictly positive integer increments up to it, with absence worth zero. Total output is at most total input for every such scale iff at every threshold there are at most as many output as input occurrences at or above that grade. This concerns an additive total of separately individuated occurrences.",
+  "lean_declaration": "TruthCore.Causality.ReceiptMatching.CoverageUnderRegrading"
+}

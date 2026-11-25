@@ -1,0 +1,15 @@
+{
+  "id": "9cd1588d-4416-439e-ac0c-190d46e6b753",
+  "label": "Every immediate pair of suppliers of one dependent has a common upstream node",
+  "paraphrase": "For each node and each pair of suppliers with one selected edge into that node, one node is reachable from each supplier by finitely many reversed edges of the selected relation, allowing an empty path. The joining node can vary by pair. An incoming edge may also have an intervening path. Open when applied to the actual concrete grounds of each dependent in a fixed world.",
+  "lean_declaration": "TruthCore.Causality.LocalSourceConfluence.LocalForksJoin",
+  "definition_ids": [
+    "f64856c0-6d2c-5c5d-97ef-9895039d8c27",
+    "1dff2d68-1348-5e7e-8ee7-248af63c8c53",
+    "822c9912-2313-584b-b2b7-77031da20107"
+  ],
+  "disambiguation_ids": [
+    "34ddfede-ff4d-59ad-9882-4bcb490df9bb",
+    "4b02d34a-9226-5009-9ac2-3b52f4222b21"
+  ]
+}

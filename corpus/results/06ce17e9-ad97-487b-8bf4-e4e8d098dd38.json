@@ -1,0 +1,12 @@
+{
+  "id": "06ce17e9-ad97-487b-8bf4-e4e8d098dd38",
+  "label": "A thinking subject from experienced thought and phenomenal bearer coverage",
+  "argument_id": "08cef374-8a3a-4025-9080-d5e6ec36873a",
+  "challenge_module": "TruthCore.Results.Logic.ExperiencedThoughtBearer.Challenge",
+  "solution_module": "TruthCore.Results.Logic.ExperiencedThoughtBearer.Solution",
+  "theorem": "TruthCore.Results.Logic.ExperiencedThoughtBearer.subjectOfExperience",
+  "comparator_config": "results/06ce17e9-ad97-487b-8bf4-e4e8d098dd38/comparator.json",
+  "status": "solution-present",
+  "description": "Transcription (instantiation). With Occurs interpreted as thought occurrence throughout, take the occurring experienced episode, obtain its bearer under the local principle, and retain that same episode in the thinking-subject witness. The control has two occurring thoughts and restricts both experience and bearing to one. The all-thought bearer principle fails there. Emptying the bearer relation leaves the same phenomenal occurrence without a thinking subject.",
+  "transcription": "instantiation"
+}

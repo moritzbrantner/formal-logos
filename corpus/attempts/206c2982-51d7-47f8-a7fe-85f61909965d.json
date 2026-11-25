@@ -22,7 +22,8 @@
   "c61ad6cc-a3a4-40eb-aa47-6c2f61e4bdf9",
   "2a5433d2-f78f-4897-9419-52cb113ae6a2",
   "119c9434-46e4-4572-80b7-e12527d488f8",
-  "40ec77b1-c79e-4308-9830-4d5a35fe8cb2"
+  "40ec77b1-c79e-4308-9830-4d5a35fe8cb2",
+  "PR-1510"
  ],
  "blocker": "Not blocked. Next tests: (1) joint satisfiability of the unified Dei Filius root bundle with the five new premises in place of bbac932e (the controls witness them together with bbac932e only; a conservative-extension lemma building measures from any model of bbac932e in which only intellects comprehend would settle it); (2) relate actDegree to the Fourth Way comparative MoreIn esse (a bridge: x more in being than y iff actDegree y < actDegree x), so the maximal-act premise could be derived from the quarta via maximum and the Prima/Quarta Via routes; (3) pin q.12 a.1, a.4 and a.7 and record supports relations for 7921f9c8 and 7db53cde; (4) derive ea1c35a5 from received esse (ReceptionLimitation: received esse is limited, with a bridge from limited esse to a non-maximal degree of act), parallel to the derivation of 18ca6f9d."
 }

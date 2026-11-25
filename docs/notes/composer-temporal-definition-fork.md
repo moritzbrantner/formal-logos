@@ -5,7 +5,7 @@ nothing about when its efficient cause acts. Its existing SCG I.18 attribution
 remains independent. The earlier absence of a time-neutral relation was an
 encoding gap, not a reason to defer conditional investigation. The analyst frame
 now supplies that independent attribution; selecting a temporal interpretation
-requires a separate proposition.
+requires a separate proposition. [Research record](../../corpus/attempts/composer-temporal-definition-audit.json)
 
 The selected-time definition identifies the attribution with activity at one
 supplied evaluation time. The existential-time definition identifies it with
@@ -78,3 +78,7 @@ investigate actual applicability and serious positive atemporal/sustaining
 accounts when they discriminate the case, rather than treating the supplied
 finite controls as an exhaustive theory census. The computed frontier comparison
 records the extra visible conditional inputs; none is a premise discharge.
+
+## Research attempts citing this note
+
+- [Cluster reassessment of the composition, esse and necessity leaves of the prima via route](../../corpus/attempts/c7445224-d3aa-4364-b038-0853f2a95ce8.json)

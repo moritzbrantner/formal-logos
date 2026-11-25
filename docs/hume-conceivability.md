@@ -4,7 +4,7 @@ This is the bounded contribution of #248 to Humeanism campaign #247 and the
 objective-truth investigation #207. It does not settle either campaign or
 show Humeanism false. `HUME-CONCEIVABILITY-TESTS` verifies the conjunction
 `TruthCore.Modern.Hume.Conceivability.Checks`, frozen in its Challenge module.
-No source commitment is a premise of that theorem.
+No source commitment is a premise of that theorem. [Original PR #255](https://github.com/moritzbrantner/formal-logos/pull/255)
 
 ## Source and fidelity
 

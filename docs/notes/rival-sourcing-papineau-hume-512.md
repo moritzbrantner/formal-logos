@@ -3,7 +3,7 @@
 This note records one reading pass over the two pinned rival-side sources. It
 creates no worldview bundle and labels nobody's overall position. It reads single
 passages into single claims, as the Aquinas claims do. Attempt record:
-`ATTEMPT-RIVAL-SOURCING-PAPINEAU-HUME-512`.
+[`ATTEMPT-RIVAL-SOURCING-PAPINEAU-HUME-512`](../../corpus/attempts/rival-sourcing-papineau-hume-512.json).
 
 ## Sources read
 

@@ -3,7 +3,7 @@
 This inquiry (#250) leaves the Kantian challenge open. The five current Lean tests (plus two preserved earlier results) test
 specified inferential bridges; they neither refute transcendental idealism nor
 establish a necessary being, God, or the Catholic root. The independently sourced
-counterreadings below also remain open philosophical commitments.
+counterreadings below also remain open philosophical commitments. [Original PR #256](https://github.com/moritzbrantner/formal-logos/pull/256)
 
 ## Consulted witnesses and locators
 
@@ -368,7 +368,7 @@ rigid foundation, and a rigid necessary natural foundation remains a live
 positive alternative. This is a new location for the independent-warrant question,
 not an answer smuggled into the word “real.” The existing own-nature/whole-world
 necessity and autonomous-fact/bearer distinctions in attempt
-`ca5904d0-1b3c-56a3-8665-930c43e42b59` must be retained; that work is not
+[`ca5904d0-1b3c-56a3-8665-930c43e42b59`](../corpus/attempts/essence-modal-source-bridge-545.json) must be retained; that work is not
 reopened or edited here.
 
 ### Exact formal and root connection boundary
@@ -432,3 +432,8 @@ fresh coordinator allocation; the present audit does not claim the broader
 question exhausted. Existing conditional proof evidence is reused; no Lean or
 proof dependency changed. Offline record checks and final delivered-head CI
 remain distinct from semantic review and source materialization.
+
+## Research attempts citing this note
+
+- [Existence as a predicate, parts 1 and 2: definitional truth, nuclear/encoding objects, Kant](../corpus/attempts/55c308c4-d7b5-4678-afab-050c07145e2c.json)
+- [Issue #437 mathematical slice, baseline 73dcbb1302e15fc79015c7d5d830c236c537901a](../corpus/attempts/necessary-if-existent-symmetry-437.json)

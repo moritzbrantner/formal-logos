@@ -14,7 +14,11 @@
   "evidence": [
     "bb4ba74e-4fbf-5e27-add4-5c38a1ddfa86",
     "5cd570dc-67af-5247-97d9-5f7ca51d09f4",
-    "530cc55d-b979-584d-bdec-3d76c6a60f44"
+    "530cc55d-b979-584d-bdec-3d76c6a60f44",
+    "PR-594",
+    "PR-609",
+    "PR-600",
+    "PR-1300"
   ],
   "blocker": "No local delivery blocker. Full integrated CI and the philosophical adequacy of these stipulated histories remain separate; no real-world or timeless-eternity conclusion is claimed."
 }

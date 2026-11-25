@@ -4,7 +4,7 @@ Question: do locally sufficient transfers of derivative power jointly explain th
 actual exercise of that power, or does an instrument need a source? The check
 result is a fork, not an answer. Formal module:
 `TruthCore/Explanation/BorrowedExercise.lean`, result
-`BORROWED-EXERCISE-CERTIFICATE`. Root delta: none.
+`BORROWED-EXERCISE-CERTIFICATE`. Root delta: none. [Research record](../../corpus/attempts/borrowed-exercise-741.json)
 
 ## Meaning of the relation
 
@@ -210,3 +210,9 @@ conditional conclusion. Keep existential dependence open on the
 constitutive and relation-mapping premises. This comparison is analyst
 reasoning with source locators for orientation and no new corpus
 attribution or Lean certificate.
+
+## Research attempts citing this note
+
+- [C* for caused movers on the prima via: meaning, unified derivation, retained-state test](../../corpus/attempts/b7e7af8c-0b41-4431-aa40-0543408ddb9d.json)
+- [Cluster reassessment of dependence, simple-priority and grounding leaves of the prima via (#1751)](../../corpus/attempts/9d71e28d-d492-4797-9221-45fa517a6e6b.json)
+- [Essential power and the scope of underivedness](../../corpus/attempts/essential-power-underivedness.json)

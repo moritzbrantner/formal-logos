@@ -1,0 +1,11 @@
+{
+  "id": "0139ae37-a8dc-43b3-83f3-16d129895d00",
+  "label": "Derive an upstream matching deficit by injectivity on a finite set of exports",
+  "argument_id": "d43347c2-b4c5-4449-b396-2eeffbba9aa0",
+  "challenge_module": "TruthCore.Results.Causality.ReceiptMatching.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ReceiptMatching.Solution",
+  "theorem": "TruthCore.Results.Causality.ReceiptMatching.unmatchedUpstream",
+  "comparator_config": "results/0139ae37-a8dc-43b3-83f3-16d129895d00/comparator.json",
+  "status": "solution-present",
+  "description": "If every upstream sender admits a matching, assign each of its exports its matched receipt. The resulting predecessor map stays among upstream exports and is injective because the receiver fixes the sender whose local matching was used. It cannot hit the marked transfer since that transfer's recipient lies outside this ancestry."
+}

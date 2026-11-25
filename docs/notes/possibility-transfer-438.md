@@ -33,7 +33,7 @@ corpus argument boundary. The closed theorem quantifies over profiles and
 contains conditional laws; it does not establish inclusion for actual knowledge
 or metaphysical possibility. Root-path open-premise change is exactly zero.
 Actual epistemic adequacy and metaphysical fidelity remain open research
-obligations. `ATTEMPT-MODAL-POSSIBILITY-TRANSFER` records the result and rejected
+obligations. [`ATTEMPT-MODAL-POSSIBILITY-TRANSFER`](../../corpus/attempts/modal-possibility-transfer.json) records the result and rejected
 interpretations; the generated dossier is not an independent authority.
 
 Challenge frozen before solution: SHA256
@@ -170,3 +170,7 @@ substantive acceptance work in [#1864](https://github.com/moritzbrantner/formal-
 is fixed divine attributes, real-world modal admissibility, an actual
 same-witness GOD_4 consumer, source fidelity and reviewed premise warrant.
 Issue #437 still owns the separate Collin 2022 symmetry-breaker reading.
+
+## Research attempts citing this note
+
+- [Plantinga-style possibility helpers: non-impossibility, incompatible bundles, same-bearer profile](../../corpus/attempts/0719c77a-3bae-48dc-afa8-f9f36cbf848e.json)

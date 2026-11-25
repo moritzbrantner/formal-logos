@@ -1,0 +1,12 @@
+{
+  "id": "790a8112-0c62-408a-b0c0-24d3181576be",
+  "label": "Whole-roster nontrapping from WELL_FOUNDEDNESS_OF_THE_SELECTED_RELATION_1 (inference)",
+  "input_statement_ids": [
+    "82cfaf26-fc86-54ab-8328-9a7b2bdbbe21"
+  ],
+  "output_statement_id": "5c898d24-d1f7-5087-b09e-3287a723e787",
+  "rule": "Accessibility induction: no accessible actual concretum lies in a trap, since each member of a trap has a ground in it",
+  "meaning": "Strength order (backing result): if the selected relation restricted to actual concreta is well-founded at w, the nonempty actual roster is not a borrowing trap: by induction on accessibility, no actual concretum belongs to a trap, because each trap member has an actual concrete ground that is again a trap member. Same profile, selected relation and world; constructive, no excluded middle. Whole-roster nontrapping concerns only the whole roster, well-foundedness every descending chain: a roster with a root and an infinite descending chain beside it satisfies the weak version and not the strong one (not model-certified in this slice). The sense bridges name 82cfaf26 itself, following the precedent of the well-founded to closed-collections registration (specs/closed-grounding-roots.toml); that only records that the statement's own definitions carry both senses, and is a weak bridge.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

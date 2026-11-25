@@ -1,0 +1,11 @@
+{
+  "id": "1dbcca44-1931-41a2-8777-32da0bd57f74",
+  "label": "Whole-roster nontrapping from an actual root",
+  "argument_id": "3756c4db-04d0-4658-afe4-0f54d810b3b2",
+  "challenge_module": "TruthCore.Results.Causality.RootSupplyInterface.Challenge",
+  "solution_module": "TruthCore.Results.Causality.RootSupplyInterface.Solution",
+  "theorem": "TruthCore.Results.Causality.RootSupplyInterface.wholeRosterOfActualRootExists",
+  "comparator_config": "results/1dbcca44-1931-41a2-8777-32da0bd57f74/comparator.json",
+  "status": "solution-present",
+  "description": "Strength order (backing result): if some actual concretum n has no actual concrete ground in the selected relation at w, the nonempty actual roster is not a borrowing trap, since n is a source of the recorded graph of that relation and a trap has no source. Same profile, selected relation and world; constructive. The Comparator configuration also checks deriveFromActualRoot: the quarta-via classical GOD_4 root (NecessaryClassicalGodRootAt) from an actual root, contingent grounding, excluded middle and the 21 shared inputs of NecessaryClassicalGodRoot.derive, which it applies once after obtaining population and whole-roster nontrapping from the root. That theorem is not registered as a corpus argument: its premise bundle repeats the base route's allowlisted POTENCY_CAPACITY_AND_POWER_ACROSS_ADOPTED mixing (a4d3261a is tagged DEF-POTENCY, c6d6379b DEF-INDEPENDENT-POTENCY, for one Lean parameter InPotency), which a new argument may not repeat without a genuine bridge. The converse fails: in a world with no actual concretum whole-roster nontrapping holds vacuously and no root exists; the certified difference is population plus stability of root existence."
+}

@@ -1,0 +1,11 @@
+{
+  "id": "177e3836-f990-4bb4-9446-1093c9d2fb0d",
+  "label": "GOD_4 is one from reciprocal gifts of esse and nonmutual dependence",
+  "argument_id": "e4c24e60-0d25-4170-a1f4-1b307fa1e2cb",
+  "challenge_module": "TruthCore.Results.Case.Catholicism.GodIsOneFromEsse.Challenge",
+  "solution_module": "TruthCore.Results.Case.Catholicism.GodIsOneFromEsse.Solution",
+  "theorem": "TruthCore.Results.Case.Catholicism.GodIsOneFromEsse.oneFromNonmutualDependence",
+  "comparator_config": "results/177e3836-f990-4bb4-9446-1093c9d2fb0d/comparator.json",
+  "status": "solution-present",
+  "description": "Two distinct Gods would each cause the other's esse. Applying the explicit effect-to-giver dependence premise twice violates nonmutuality for distinct beings. The only logical split is on identity. Strong God causality is shared with the maximality routes, while this derivation uses no order, maximum, genus causality, actual-ground frame, or prohibition on self-dependence."
+}

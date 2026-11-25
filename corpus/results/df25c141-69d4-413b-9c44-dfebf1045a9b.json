@@ -1,0 +1,11 @@
+{
+  "id": "df25c141-69d4-413b-9c44-dfebf1045a9b",
+  "label": "Whole-roster nontrapping from WELL_FOUNDEDNESS_OF_THE_SELECTED_RELATION_1",
+  "argument_id": "6e23e2ab-06d1-4238-b3ee-cee3a66455b1",
+  "challenge_module": "TruthCore.Results.Causality.RootSupplyInterface.Challenge",
+  "solution_module": "TruthCore.Results.Causality.RootSupplyInterface.Solution",
+  "theorem": "TruthCore.Results.Causality.RootSupplyInterface.wholeRosterOfActualGroundingWF",
+  "comparator_config": "results/df25c141-69d4-413b-9c44-dfebf1045a9b/comparator.json",
+  "status": "solution-present",
+  "description": "Strength order (backing result): if the selected relation restricted to actual concreta is well-founded at w, the nonempty actual roster is not a borrowing trap: by induction on accessibility, no actual concretum belongs to a trap, because each trap member has an actual concrete ground that is again a trap member. Same profile, selected relation and world; constructive, no excluded middle. Whole-roster nontrapping concerns only the whole roster, well-foundedness every descending chain: a roster with a root and an infinite descending chain beside it satisfies the weak version and not the strong one (not model-certified in this slice). The sense bridges name 82cfaf26 itself, following the precedent of the well-founded to closed-collections registration (specs/closed-grounding-roots.toml); that only records that the statement's own definitions carry both senses, and is a weak bridge."
+}

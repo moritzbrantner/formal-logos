@@ -3,7 +3,7 @@
 This is the approved formal baseline of #545, not delivery of its later P2-B
 argument from adequate explanation to real existential support. Every relation
 below is an analyst configuration. No historical reading or philosophical
-premise is established by compiling it. Source-derived claims are unchanged.
+premise is established by compiling it. Source-derived claims are unchanged. [Research record](../../corpus/attempts/grounding-baseline-545.json)
 
 ## Shared question and exact reuse
 

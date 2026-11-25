@@ -6,7 +6,7 @@ It compares mathematical dependency shapes without identifying borrowed power,
 explanation, existence-grounding and parthood. Those interpretations require
 separate bridges. All new formulations are analyst formulations; attribution
 is deferred. None of the controls establishes actual gunk, actual causal
-well-foundedness, uniqueness of an ultimate ground or a root premise.
+well-foundedness, uniqueness of an ultimate ground or a root premise. [Research record](../corpus/attempts/90acb324-1d17-4ddf-9d2a-51616732e5c6.json)
 
 Issue navigation: [#336](https://github.com/moritzbrantner/formal-logos/issues/336)
 connects [#299](https://github.com/moritzbrantner/formal-logos/issues/299),
@@ -600,3 +600,7 @@ results/636955de-a12b-40a4-b4c6-f2062b3a70ee/comparator.json
 results/bb3b3505-2876-4a11-acc0-0d9786d30b64/comparator.json
 specs/dependence-shapes-strength.toml
 ```
+
+## Research attempts citing this note
+
+- [Materialized and read Schaffer §§1.1–1.4 pp.33–44 from the author-hosted published PDF, with…](../corpus/attempts/priority-monism-framework.json)

@@ -4,7 +4,7 @@
 `STMT-GOD-IS-ONE` by the first proof of ST I q.11 a.3. It imports the existing
 `IsGod`/`GodIsOne` vocabulary rather than introducing another God predicate.
 It gives a distinct alternative to the maximum-in-being proof; it changes no
-selected `root_route`, old Challenge, or global definition.
+selected `root_route`, old Challenge, or global definition. [Original PR #303](https://github.com/moritzbrantner/formal-logos/pull/303)
 
 ## Source and reading
 

@@ -13,7 +13,7 @@ and `fc46b7f9` and on the dependence spine.
 2026-11-17/18 assessments of
 [eternity-dependence-connection.md](../eternity-dependence-connection.md)
 (Schmid 2021 and Feser 2021, pinned and read; ST I q.104 a.1, claims
-`40aefb2e`, `da9c82ed`), attempts `c94eed5b`, `05bc2722` and `447838c8`, the
+`40aefb2e`, `da9c82ed`), attempts [`c94eed5b`](../../corpus/attempts/c94eed5b-935d-4882-aa84-2894ef066c5b.json), [`05bc2722`](../../corpus/attempts/05bc2722-960f-4ea4-bf1a-f92bb9a77af9.json) and [`447838c8`](../../corpus/attempts/447838c8-601f-4a04-ad65-b50ef9dd3764.json), the
 controls `955ef523` (`ConcurrentActualization.controls`) and the cessation
 certificate `610e21dc`. Their classifications stand: extrinsic inertia is a
 kept substantive undercutting objection to `40a97664`; the common causal law on
@@ -212,7 +212,7 @@ On the fixed meanings (STRICT `GivesAt`, inclusive presence, tenseless
 `CausesIn`, DEF-DEPENDS-FOR-BEING), **no discriminating test is available at
 matching scope; both accounts stand, with prices**. This restates, and does not
 revise, the 2026-11-18 cluster judgment for `40a97664` and `ce55210c`. The
-price map and the `2068f91c` connection are added on top of it.
+price map and the `2068f91c` connection are added on top of it. [Assessment record](../../corpus/attempts/21883b61-1dec-454f-821e-e1c2fb0e37c4.json)
 
 - *Strongest warrant for sustaining:*
   - a coherent account in which a received act of being is a standing
@@ -273,7 +273,7 @@ price moves onto `da72ae93`, and the tense question resolves into the crux.)
 ## 5. Present-tense receipt and correlativity (the §4 next test, done)
 
 Module `TruthCore.Causality.PresentReceipt`, spec `specs/present-receipt.toml`,
-attempt `50e08b09`. Analyst formulations, attribution deferred.
+attempt [`50e08b09`](../../corpus/attempts/50e08b09-fc52-4cf1-9bd7-4bad25707dc6.json). Analyst formulations, attribution deferred.
 
 ### Vocabulary
 
@@ -455,7 +455,7 @@ The relational reading suggested by q.45 a.3 is the one candidate in view;
 ## 6. Receipt as a real relation to the principle of being (the §5 next test, done)
 
 Module `TruthCore.Causality.RelationalReceipt`, spec
-`specs/relational-receipt.toml`, attempt `c97afe42`. Analyst formulations,
+`specs/relational-receipt.toml`, attempt [`c97afe42`](../../corpus/attempts/c97afe42-c3d3-45be-8367-8ed76b47fe6c.json). Analyst formulations,
 attribution deferred: the texts below were read in their pinned witnesses, but
 no claim is recorded, because the Lean relation is indexed to moments and the
 texts do not index the creature's relation to moments.
@@ -1176,7 +1176,7 @@ an independently governing persistence law **under identical ultimate
 actuality standards**. Do not count the resulting formal implication as
 independent confirmation if it simply redescribes C3.
 
-**Record and review.** Attempt `c03f097e-1c78-4cba-8ba5-ea5746b90387`
+**Record and review.** Attempt [`c03f097e-1c78-4cba-8ba5-ea5746b90387`](../../corpus/attempts/c03f097e-1c78-4cba-8ba5-ea5746b90387.json)
 links this section and `c3ActualWorldControls` to `cb1cdea9`, `40a97664`,
 `ce55210c` and `23e04ae5`. An independent semantic challenge found the formal
 claims correct; its prose findings are repaired here.
@@ -1342,3 +1342,142 @@ claim, closure, registered result, or root-path premise is made. #1616's
 universal F2 treatment of non-efficient exemplar/final causes and the
 positive sense-3→5 argument remain open; the typed source-premise omission
 test addresses its narrower outstanding #1614 configuration.
+
+## 10. Which later individual continues the earlier bearer? (#1801, 2026-11-25)
+
+**Provisional judgment.** For familiar material objects, the history
+of what happened to *this* object gives positive, defeasible grounds for
+identifying it again. Copying its structure can causally influence a second
+object without carrying the first object into the second. This distinction
+discriminates accounts of *which individual* survives. It leaves open whether
+the continuing individual's existence also requires a present productive source. [Assessment record](../../corpus/attempts/history-actuality-provenance-1801.json)
+
+### Two verdicts with independently checkable grounds
+
+The Natural History Museum identifies its 1905 London plaster cast through
+wartime dismantling, a gallery move and changes in neck and tail posture. It
+also documents scanning the touring cast in 2021 to design Fern, a separately
+fabricated bronze. One can trace the handling of the plaster pieces and,
+separately, the data sent to the engineers and the fabrication of new pieces.
+These procedures answer which object was moved and which was manufactured
+without deciding anything about existential inertia. A rule that identifies
+the later object solely by a causal transmission of shape admits the bronze
+as well. A rule requiring invariant arrangement loses the London cast across
+its documented changes. The museum treats the cast as a collection artifact
+through dismantling. Its practice provides no verdict about whether a mounted
+structure existed throughout storage, much less about a living animal.
+[History of the cast, “War and peace”](https://www.nhm.ac.uk/discover/diplodocus-this-is-your-life.html)
+and [making Fern, “Improving on the original”](https://www.nhm.ac.uk/discover/the-making-of-fern-the-diplodocus-engineering-meets-natural-history.html).
+
+There are qualitative differences in this actual case. The argument for the
+*exact* duplicate is conditional. Improve the copy while leaving the original
+in custody. However accurate the copy becomes, it cannot be numerically
+identical to the original alongside a distinct continuing original: equality
+with both would identify the two. Destruction of the original after the copy
+has been made would remove a competitor without changing how the copy came
+into being. In the harder case of destruction *before* reconstruction, the
+two-candidate contradiction no longer applies. There the positive reason for
+counting a replacement is its fresh production history. Van Inwagen's
+manuscript example sharpens the point: the atoms and their arrangement alone cannot distinguish the writer's
+inscription from marks assembled later. Given the stipulated reconstruction,
+van Inwagen judges the reassembled manuscript a replacement. That is a thought experiment
+about a historically individuated artifact. Neither it nor the museum case
+proves a universal necessity of uninterrupted material composition.
+[Van Inwagen, “The Possibility of Resurrection,” pp. 117–119](https://www.andrewmbailey.com/pvi/Possibility_of_Resurrection.pdf).
+
+The defensible criterion here is a trace of the earlier bearer through the
+material changes appropriate to its kind. The actual custody and fabrication
+records distinguish transport from copying. Mere equality says that distinct
+successors cannot both be the original. It supplies neither the trace nor a
+cause of that trace. For a total break with only one successor, an account may
+take the individual's identity as primitive or invoke the source's intention
+towards that very individual. A specific intention could distinguish two
+intended outcomes even with qualitatively identical instructions for making
+them. To explain successful reidentification it still needs a reason why its
+execution restores the individual rather than faithfully making its intended
+likeness. Where only the end product and the assertion of success are given,
+the identity judgment remains conditional. The existing Theseus theorem
+`incompatible (b) : Gradual b → Material b → ¬ Distinct b` (with its
+hypotheses curried) already isolates the equality constraint for competing
+claims from gradual replacement and reassembly. Its premises leave the
+appropriate criterion open. [Theseus profile](theseus-identity-boundary.md).
+
+### Apply the criterion before varying the source's exercise
+
+Fix one actual history, its source s, the earlier material bearer x at t0,
+the recipient principle in which its esse is received, and s's originating
+contribution to x's esse. Keep s present at t1. Keep the interpretation of
+strict `GivesAt v s x t1` as productive giving of x's being. The question
+concerns x's own existence at t1. In each account identify the candidate for
+x by the same history of material continuation. The museum comparison
+calibrates that procedure. It does not identify a museum object's esse-giver.
+
+| Account applied to this one continuation | Identity verdict and explanatory commitment |
+| --- | --- |
+| Earlier actual x and an independently governing law of persistence in the absence of a cause of loss | Selects the materially continued x and allows a separately made copy to begin its own history. The law quantifies over an individual already identified. Applied to an uninterpreted pair of matching observations, it supplies no rule for assigning the later observation to x. Applied to the independently traced bearer, it gives a substantive conditional reason for its survival. Its sufficiency for x's **esse** remains disputed. |
+| Present giving to the continuously constituted x, with x's prior history contributing to which patient continues | Selects the same x. The source can keep this very patient actual while its history differentiates it from the copy. This avoids treating a prior stage as the efficient producer of its own present prerequisite. On the stronger joint account the prior contribution and present exercise are each indispensable for continuation. Observing their concurrence or tracing the patient establishes neither indispensability. |
+| Separate manufacture of a matching successor, even when x supplies the template, with resemblance sufficient for identity | Gives a wrong verdict in the hypothetical exact-copy coexistence control and lacks the provenance that distinguishes continuation from replication. This objection targets the proposed identity rule specifically. Even an account positing a sole producer of esse can retain an intrinsic historical criterion for *which* patient it produces or sustains. |
+
+The primary texts sharpen the disagreement. Feser explicitly appeals to
+substantial form and designated matter for the diachronic identity of
+substances, while defending conservation. On his account prior combination leaves a present
+actual combination to explain. Schmid's local deduction instead uses this
+bearer's prior presence, absence of a cessation inducer and a causal
+requirement on change. That deduction does explanatory work once the law
+covers existential loss. It does not identify one among rival candidates for
+the later bearer. Given the museum's independent artifact criterion, both
+reconstructed accounts accommodate its identification. The stronger
+principle that the earlier existence must itself *cause the later existence*,
+rather than contribute to individuation, would put pressure on exclusive
+production by the source. Even that principle allows jointly necessary
+causal contributions. [Feser, paragraphs beginning “This makes it sound”
+and “Rather, a critique,” passage a73919f4](../../corpus/passages/feser-inertia-reply-2021.json),
+[Schmid, paragraphs beginning “For S to fail” and “Here, we seem,” passage
+79716a2e](../../corpus/passages/schmid-inertia-reply-3.json), and
+[Vander Laan, “Persistence and divine conservation,” abstract](https://doi.org/10.1017/S0034412506008262).
+
+**What could discriminate the survivors?** Hold the earlier individual,
+source, ordinary material history through t0 and independently specified
+destructive conditions fixed. Compare an independently identified withdrawal of s's present exercise,
+with every other strict giver excluded, including self-giving. If the existential no-loss law applies independently to
+this case and withdrawal supplies no cause of loss, it predicts that x
+survives. If this exercise is indispensable to x's esse, x ceases even if a
+matching successor appears. Use the provenance test to distinguish the latter
+from survival whenever it can be applied. The missing evidence is an
+independent way to identify withdrawal of *existential* input and establish
+its effects at this bearer. Removing a mount can alter a posture while the
+plaster survives. Identifying withdrawal solely by x's disappearance would
+assume the dependence in dispute. Conversely, holding the entire successful
+continuation fixed in the withdrawal test assumes survival. Identity gives
+no new reason to prefer either survivor on this existential question. The
+strong case for historical contribution stands at the narrower scope.
+
+**Existing formal evidence and route.** Section 8's
+`c3ActualWorldControls : C3ActualWorld.Certificate` uses one rigid
+`false` in the same history with origin-only and sustained giving.
+PR #1895 varies withdrawal and the classification of loss. In #1899,
+`limitPersistenceControls : LimitCertificate` checks the interval law
+`∀ v x s t, s < t → h.IsAt v x s → ¬ h.IsAt v x t → ∃ u, s < u ∧ u ≤ t ∧ D v x u`.
+Its repeated x already designates the same individual. None of these types
+reconstructs a bearer from later observations. Another pair of giving
+assignments or a Boolean flag for material continuity would duplicate that
+assumption. [Withdrawal comparison](law-actuality-743.md#c3-law-preserving-withdrawal-test-for-the-same-existent-1801-2026-11-23)
+and [limit comparison](../eternity-dependence-connection.md#c3-from-finite-survival-to-survival-at-a-limit-2026-11-23).
+
+Weak C3 (`40a97664`) requires *some* giver at every present received-esse
+instance. Identity supplies no giver at t1. To get the specified esse-cause
+as sustainer, argument `366a6ea3` consumes C3 with reception `da72ae93` and
+concurrence `d7f5a528`, yielding `ce55210c`. With contact `c4661518` and
+the co-presence-to-dependence bridge `ffcb81fb` this supports `2068f91c`
+(§1), which also retains its direct option. Argument `57f22435` needs that
+dependence plus `c99f9d23`, `82eeeb3c` and `a8298fbd` for the actual
+concrete ground edge `cb1cdea9`. The GOD_4 routes `3367bf93` and
+`fc46b7f9` need the edge at their own maximum/root pair and the remaining
+root and grading premises. The tracked material x supplies neither that pair
+nor a necessary or underived source. The inference from identity to present
+production remains open, with no new support option or discharge.
+[Instances used by the esse-root routes](esse-root-leaves.md#b-where-the-fourteen-enter-which-instance-each-route-consumes-and-bypasses).
+
+## Research attempts citing this note
+
+- [Necessary origin with existential inertia against the esse-priority source bundle](../../corpus/attempts/4b051644-666b-451e-8e09-b5b9356932f9.json)

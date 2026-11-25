@@ -1,0 +1,10 @@
+{
+  "id": "d429c1f9-1703-4365-9dfa-bec92cf972c3",
+  "label": "Test local joining when every stage has a source but its relay chain continues (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "89f768e1-5c01-402e-a3aa-222d2c04af82",
+  "rule": "Construct upstream joins by parity and prove acyclicity by strict stage order",
+  "meaning": "Each relay stage has both an immediate source and a further relay. Sources alternate, so the further relay reaches the initial source through one more relay. Opposite sources have no common extension. This tests substituting a short route to some source for well-foundedness in the local-fork argument.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

@@ -18,7 +18,8 @@
     "c7b5a39f-c09c-5001-a6b2-d074983c1364",
     "a8aced0e-08dc-5224-9dbd-7bfb406fbc3a",
     "feddbc03-7ef5-5479-aa24-593c46d45023",
-    "aab03d1b-aeb5-5160-ad14-14624ed61600"
+    "aab03d1b-aeb5-5160-ad14-14624ed61600",
+    "PR-711"
   ],
   "blocker": "No implementation blocker; actual clock direction, event-to-real-mover semantics and substantive source-grounded sustaining adequacy remain philosophically unproved."
 }

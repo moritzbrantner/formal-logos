@@ -1,0 +1,10 @@
+{
+  "id": "adb951c1-db12-48bf-be7b-a152b8e27021",
+  "label": "Each per se cause supplies the distinct dependence step in the selected respect",
+  "paraphrase": "OPEN alignment premise. Every link from supplier y to effect x of the selected per se efficient-cause relation has distinct endpoints and satisfies D(x,y). Using it for existential supply requires the selected D to track dependence for being in that very respect.",
+  "lean_declaration": "TruthCore.Causality.StrictGroundRepresentation.PerSeDependenceLinks",
+  "definition_ids": [
+    "bf26b9b2-41ed-55b0-9557-dae90ab9b81f",
+    "4a101a4c-12de-53c8-80c6-de7a523ea9d9"
+  ]
+}

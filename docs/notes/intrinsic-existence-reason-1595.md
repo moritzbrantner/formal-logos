@@ -2,7 +2,7 @@
 
 ## Current reviewed assessment (2026-11-17)
 
-The qualified same-source synthesis is accepted as an informative boundary. Candidate classification, fixed-root identity, selected-output stability and history selection answer different questions; none supplies adequate intrinsic explanation or the missing same-bearer God-root edge. Personal superiority, complete explanatory parity and an exhaustive fork are not established.
+The qualified same-source synthesis is accepted as an informative boundary. Candidate classification, fixed-root identity, selected-output stability and history selection answer different questions; none supplies adequate intrinsic explanation or the missing same-bearer God-root edge. Personal superiority, complete explanatory parity and an exhaustive fork are not established. [Assessment record](../../corpus/attempts/intrinsic-existence-reason-1595.json)
 
 Reviewed scope: Same-source E(n)/N(n)/act/complete-order synthesis; candidate classification, actual adequacy and onward God connection distinguished. Worker `b0080a2`; independent reviewer `60f54727`
 reported no findings on delivered head `f9bdbb32f6239430213eb42ec2f42768e5154c0d`.
@@ -655,3 +655,8 @@ with `truth frontier-diff --base 67da43761d01df2bbabc80632458aacddbd3ec23
 root is unchanged. No issue comment, PR, push, watch or merge is part of this
 worker delivery; the coordinator records accepted delivery in #1730/#143 after
 challenge and integration.
+
+## Research attempts citing this note
+
+- [After the implementation prerequisites merged, composed the new all-contributor Supply semantics…](../../corpus/attempts/ultimate-adequacy-integration-735.json)
+- [Read materialized SCTA ST I q19 a3–5,7–8,10 and pinned Elwes Spinoza Ethics I…](../../corpus/attempts/necessary-act-free-creation-source-boundary.json)

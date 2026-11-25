@@ -1,0 +1,11 @@
+{
+  "id": "6801590a-5ed5-4c90-bc85-2e72621ed0e0",
+  "label": "CONCRETE_AND_ABSTRACT_6 population from an already witnessed thinking subject",
+  "argument_id": "f175d4b0-7eea-4113-97d5-d0e7bdf12344",
+  "challenge_module": "TruthCore.Results.Logic.ExperiencedThoughtBearer.Challenge",
+  "solution_module": "TruthCore.Results.Logic.ExperiencedThoughtBearer.Solution",
+  "theorem": "TruthCore.Results.Logic.ExperiencedThoughtBearer.populationOfThinkingSubject",
+  "comparator_config": "results/6801590a-5ed5-4c90-bc85-2e72621ed0e0/comparator.json",
+  "status": "solution-present",
+  "description": "Eliminate the positive Cogito witness. Apply the two existing bridges at its bearer and occurring thought, giving both concreteness and existence at the selected world for one candidate. This consumer accepts a single borne episode even if other occurring thoughts have no bearer. It does not identify the candidate with the speaker, episode or its representative."
+}

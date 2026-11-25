@@ -1,0 +1,14 @@
+{
+  "id": "0f98a4a8-57ab-44d5-a243-e0f0efa665fc",
+  "label": "Fixed labels admit a consistent strict-ground map exactly when their projected steps are acyclic",
+  "paraphrase": "For each relation D and fixed labelling into a populated atom type, some consistent PLG theory realizes all reversed distinct dependence steps exactly when no nonempty finite path of projected steps returns to its label. The theory can be chosen after the labelling and D.",
+  "lean_declaration": "TruthCore.Causality.StrictGroundRepresentation.FixedLabelCriterion",
+  "definition_ids": [
+    "bf26b9b2-41ed-55b0-9557-dae90ab9b81f",
+    "5d9a94e0-d64b-53ca-b9cc-504735060e0a",
+    "df5284cb-8f1f-5b61-9b1c-ee4c1544b469"
+  ],
+  "disambiguation_ids": [
+    "23dd6f32-b456-4963-adb3-7befbf0dc4fb"
+  ]
+}

@@ -3,7 +3,7 @@
 Issue #261 supplies shared mathematical infrastructure for the modal-system
 experiments indexed by #248. It introduces no metaphysical axiom, source reading,
 new modal logic, ontology, or solver service. The K/D/T/S4/B/S5 experiments remain
-separate work.
+separate work. [Original PR #279](https://github.com/moritzbrantner/formal-logos/pull/279)
 
 Import `TruthCore.Modal.ResearchFixture` for proposition domains and local collapse;
 import `TruthCore.Modal.ResearchFinite` for finite executable models. These reuse

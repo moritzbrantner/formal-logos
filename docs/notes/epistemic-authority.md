@@ -6,7 +6,7 @@ STMT-THERE-ARE-PREFERENCE-INDEPENDENT-EPISTEMIC-REASONS (`2ca463c2`), under
 its exact paraphrase (pro tanto, not overriding; no agent-neutrality or
 factivity). Analyst formulations; attribution deferred. Spec:
 `specs/epistemic-authority.toml`; Lean: `TruthCore/Logic/EpistemicAuthority.lean`,
-`TruthCore/Results/Logic/EpistemicAuthority/Solution.lean`.
+`TruthCore/Results/Logic/EpistemicAuthority/Solution.lean`. [Research record](../../corpus/attempts/424fad71-de10-4044-aac0-ab3f2bcb680b.json)
 
 The batch retains six theorem declarations and four corpus result registrations.
 The two lemmas concluding the target remain in Lean with their frozen types;

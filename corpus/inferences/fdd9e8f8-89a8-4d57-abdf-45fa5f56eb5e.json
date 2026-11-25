@@ -1,0 +1,12 @@
+{
+  "id": "fdd9e8f8-89a8-4d57-abdf-45fa5f56eb5e",
+  "label": "Lift a positive transfer path from a net exporter into grounded exercise (inference)",
+  "input_statement_ids": [
+    "34f9ad6f-fd45-44a6-951c-4ae54f3e3c62"
+  ],
+  "output_statement_id": "b2a6542d-f6e4-407f-9a6a-d98f28cf9066",
+  "rule": "Induction over the upstream witness path",
+  "meaning": "The no-return hypothesis selects the net-export witness. The intrinsic-input bridge starts the inductive construction and each positive entry transports it along an actual transmission.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

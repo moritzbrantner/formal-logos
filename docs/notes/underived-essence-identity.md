@@ -2,7 +2,7 @@
 
 This is a conditional connection for #319, under the owner's four-area
 foundation investigation. It does not defend the q3 premises, identify a
-being with God, or establish pure actuality or uniqueness.
+being with God, or establish pure actuality or uniqueness. [Research record](../../corpus/attempts/underived-essence-identity.json)
 
 ## Existing results and exact distinctions
 
@@ -1249,3 +1249,14 @@ supported, 46 stated), support alternatives 373 → 373, added 0, diagnostic cos
 16 → 16; no change. This reuses the CLI's underlying corpus semantics with a
 disk-backed task-specific TMPDIR. No Lean input changed, so existing proof evidence
 is reused; final CI is pending on the reviewable draft.
+
+## Research attempts citing this note
+
+- [Approved pointwise extraction of the delivered concrete modal-union tail](../../corpus/attempts/necessary-concrete-underived-from-necessity-20261101.json)
+- [Cluster reassessment of the sustaining, Dei Filius bridge and dependence premises (eternity path)](../../corpus/attempts/447838c8-601f-4a04-ad65-b50ef9dd3764.json)
+- [Import memberwise/joint necessity on the SAME complete autonomous ground record: every contributor…](../../corpus/attempts/autonomous-ground-necessity-20261101.json)
+- [J1 of the modal join weakened to its selected-world instance: strength order, route and controls](../../corpus/attempts/b7e250b6-39f2-4e16-8da4-0a1f7a21d83a.json)
+- [Lean derives constructive nonrefutation of an underived de re necessary bearer from necessary…](../../corpus/attempts/necessarily-underived-minimal-bridges.json)
+- [Materialized/read full aquinas de ente c3 4 and newly pinned publisher cc by Pearce 2025 witness…](../../corpus/attempts/essence-modal-source-bridge-545.json)
+- [Necessary-being integration: contingent-existence dependence and productive-receipt warrant](../../corpus/attempts/necessary-being-integration-786.json)
+- [Reuse audit found that the strong source PSR already supplies a full ground whose members are…](../../corpus/attempts/autonomous-existence-ingredient-extraction.json)

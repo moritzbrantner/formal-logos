@@ -5,7 +5,7 @@ certification or overall research judgment is claimed. Shared semantic baseline:
 `f9df3e2f7caf5fca6b31a465cbff5e655fedc394` (fetched main, 2026-11-12).
 The #1571 dependency map audited `d98066db300d5b02c2062c2a55d622a237ace49b`;
 its brief is reused, not silently treated as the newer revision's graph audit.
-Conventions sourceRevision: `15f348b072188255da837578eaafc8a98f12fdf0`.
+Conventions sourceRevision: `15f348b072188255da837578eaafc8a98f12fdf0`. [Original PR #1575](https://github.com/moritzbrantner/formal-logos/pull/1575)
 
 ## Exact reuse and case connection
 
@@ -26,8 +26,8 @@ as described in [the dependency map](spine-dependency-map.md). No transfer or
 modal-transport result is added here. Premise effect: **no premise change**.
 
 The controls result `66b54b88-8c2f-4d4b-8efe-ed67ed9b1e8c` and attempts
-`4da08bd8-8375-40b7-b635-83012168ed6f` and
-`14fb7669-48c1-4d38-b702-7ecdce2565b8` are reused. Existing proof evidence is
+[`4da08bd8-8375-40b7-b635-83012168ed6f`](../../corpus/attempts/4da08bd8-8375-40b7-b635-83012168ed6f.json) and
+[`14fb7669-48c1-4d38-b702-7ecdce2565b8`](../../corpus/attempts/14fb7669-48c1-4d38-b702-7ecdce2565b8.json) are reused. Existing proof evidence is
 not rerun or upgraded by this note. Inventory used `context 29398f60`,
 `related aca3baa1`, and dossiers for CCR, contingent grounding, borrowed
 reality, the supplier bridge and the join via `scripts/corpus.py` through

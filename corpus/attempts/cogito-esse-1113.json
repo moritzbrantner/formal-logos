@@ -75,7 +75,10 @@
     "bb9fdc32-6cf2-4012-a1b5-7bb9655210c8",
     "ef2c087e-9c68-4cf2-a2f9-27d8b4b74e4f",
     "0e932825-3249-4fa1-b2e7-b66c559b3e17",
-    "PR-1739"
+    "PR-1739",
+    "PR-1122",
+    "PR-1146",
+    "PR-1746"
   ],
   "blocker": "Selected local ancestor export is OPEN: retain minimality (the weak da31142e endpoint forgets it), defend/apply all-carrier-world coverage on the same grounding profile, and register a witness-preserving adapter if selected. ActualSupportIsConcreteGround and q3 interfaces do not themselves supply coverage or the remaining God attribute/naming bundle. Local foundation/anti-brute warrant remains deferred under #1556; reopen only on the changed evidence/tests specified in the linked note. Registered global population continuation remains conditional and may select a different source. Independent semantic review and final CI are coordinator-owned; no new proof or premise closure claimed.",
   "current_assessment": {

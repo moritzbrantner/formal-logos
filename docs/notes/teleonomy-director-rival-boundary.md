@@ -4,7 +4,7 @@ The existing director principle says that every noncognitive member tending to
 an end has some knowing intelligent director of it to that end. The predicates
 must retain the same meanings throughout the comparison. In particular,
 broad immanent tending is not conscious intention, historical reproductive
-function, local coupling, chance or random mutation.
+function, local coupling, chance or random mutation. [Research record](../../corpus/attempts/teleonomy-director-rival-boundary.json)
 
 The old alternative edge used the full, untyped global naturalistic summary.
 Its philosophical profile remains unchanged and open. It is not identified

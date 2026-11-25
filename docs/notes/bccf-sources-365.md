@@ -1,7 +1,7 @@
 # Van Inwagen's aggregate argument: sources and the derivative-facts reply (#365)
 
 Lean: `DerivativeReply` in `TruthCore.Explanation.BCCFDerivative`, proved as
-`derivativeReply` in `TruthCore.Results.Explanation.BCCFDerivative.Solution` with no
+[`derivativeReply`](../../corpus/results/BCCF-DERIVATIVE-REPLY.json) in `TruthCore.Results.Explanation.BCCFDerivative.Solution` with no
 axioms. It establishes conditional consequences and satisfiable encodings: no PSR, no
 reply, no premise on a root route and no model's metaphysical possibility.
 

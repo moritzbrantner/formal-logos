@@ -1,6 +1,6 @@
 # Semantic rivals: compatibility, exact negation and interpretive objection
 
-This analyst audit repairs four consequential `alternative_to` records found in the broader 57-edge inventory. It does not exhaust theories of truth, explanation, theological argument or private language. Existing source claims, source-supported propositions and frozen Challenges retain their meanings. Attribution of the new constructions is deferred.
+This analyst audit repairs four consequential `alternative_to` records found in the broader 57-edge inventory. It does not exhaust theories of truth, explanation, theological argument or private language. Existing source claims, source-supported propositions and frozen Challenges retain their meanings. Attribution of the new constructions is deferred. [Research record](../../corpus/attempts/semantic-rival-scope.json)
 
 ## Truth as provability and truth by composition
 

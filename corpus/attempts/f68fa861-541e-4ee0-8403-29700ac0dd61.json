@@ -22,6 +22,7 @@
   "outcome": "succeeded",
   "summary": "Hand-written finite models in TruthCore.Causality.HolderRootIdentification.Model, checked by result d8073ba0 (truth countermodel does not handle CausalityFrame parameters). Theist nonvacuity of arguments 1-5; the necessary-through-another holder (NAR fails while excluded middle, P2', P3', holders at w, 0c27f65a and 49fdec01 hold; every holder conclusion fails); omissions of holders at w, P2' and P3' in argument 1; two necessary underived holders (49fdec01 and 0c27f65a fail with argument 1's conclusion holding); a root holder beside a derived holder (49fdec01 holds, at most one holder fails); omissions of at most one holder, 65e0179f, 0050b6ed and fdd2b1cf (#1941's chance rival) in argument 5. Structural surrogates only; they show each premise is needed in its interpretation, not that any premise is false.",
   "evidence": [
-    "d8073ba0-ff27-479a-adbe-05086acb1da1"
+    "d8073ba0-ff27-479a-adbe-05086acb1da1",
+    "PR-1944"
   ]
 }

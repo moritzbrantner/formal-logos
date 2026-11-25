@@ -3,7 +3,7 @@
 The task is specific: establish that an instrument's constant additive offset
 is zero, uniformly over the stipulated model class. This is a deductive
 model-class guarantee. It is not the task of obtaining a fallibly justified
-belief, producing accurate predictions, or explaining why an instrument exists.
+belief, producing accurate predictions, or explaining why an instrument exists. [Research record](../../corpus/attempts/reading-only-self-certification.json)
 
 The new result is `SCIENCE-READING-SELF-CERTIFICATION`, bound to
 `TruthCore.Results.Science.ReadingSelfCertification.certificate`. It composes

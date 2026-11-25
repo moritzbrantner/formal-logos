@@ -111,6 +111,6 @@ open.
 `MCTAGGART-INDEXING-REGRESS-ADEQUACY` is the next bounded candidate: fix an
 explicit temporal/semantic profile, state which explanatory demand is owed,
 and test the disputed recurrence against the strongest tensed and tenseless
-replies. `ATTEMPT-TIME-PASSAGE-INDEXING-REGRESS` persists this reading and the
+replies. [`ATTEMPT-TIME-PASSAGE-INDEXING-REGRESS`](../../corpus/attempts/time-passage-indexing-regress.json) persists this reading and the
 rejected duplicate proof approaches. No source claims are converted to
 established premises by the attempt's successful outcome.

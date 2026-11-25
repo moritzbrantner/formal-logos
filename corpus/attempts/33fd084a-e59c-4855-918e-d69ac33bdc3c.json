@@ -17,6 +17,7 @@
   "blocker": "OPEN: warrant for the indexed self-edge bridge ca5d4eaa (strict self-giving of being in a history at a moment would be efficient self-causation there and then) and for the all-histories, all-moments Second Way premises 872ff8b6 and b402ca7b. Next tests: read ST I q.2 a.3 ('nec est possibile') in the pinned passage to decide whether a modal no-self-causation claim can be attributed (then a claim on 872ff8b6); register a strength comparison relating 872ff8b6 to 8b2561cd with the needed premises made explicit (the selected world accessible from itself, and 8b2561cd's unindexed relation read as EfficientlyCausesAt at the selected world and a selected moment); a comparison with the all-admitted-times d15ded6f would further need a correspondence between its time-indexed relation and EfficientlyCausesAt at the selected world for every admitted time.",
   "evidence": [
     "a59169d5-8fd0-4208-abe7-0533a3512dbb",
-    "9ed661bd-e8c7-4de3-9c2b-5e916d82589e"
+    "9ed661bd-e8c7-4de3-9c2b-5e916d82589e",
+    "PR-1863"
   ]
 }

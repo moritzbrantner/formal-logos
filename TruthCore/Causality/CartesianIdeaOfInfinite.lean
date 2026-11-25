@@ -179,4 +179,19 @@ def MeditationThreePremisesSatisfiable : Prop :=
     MeditatorHasIdeaOfInfinite I ∧ ObjectiveRealityIsCaused I ∧
       ObjectiveAdequacy F I ∧ MeditatorLacksInfinite F I
 
+/-- The cause from Meditation III, with act of esse predicated of that same being. -/
+def InfiniteCauseOfIdeaWithEsse (F : GradesFrame W B T R) (I : IdeaFrame B R Episode) : Prop :=
+  ∃ c e, I.Occurs e ∧ I.Bears I.me e ∧ I.Represents e I.inf ∧ I.ObjCause c e I.inf ∧
+    c ≠ I.me ∧ F.InAct c I.inf ∧ F.InAct c F.esse
+
+/-- A two-state recognizer on unary inputs. Zero starts in the accepting state;
+each mark flips the state. The input length indexes runs, not internal memory. -/
+def parityState : Nat → Bool
+  | 0 => true
+  | n + 1 => !(parityState n)
+
+/-- A single choice of output rule selects all lengths or just even lengths. -/
+def acceptsLength (evenOnly : Bool) (n : Nat) : Prop :=
+  evenOnly = false ∨ parityState n = true
+
 end TruthCore.Causality.CartesianIdeaOfInfinite

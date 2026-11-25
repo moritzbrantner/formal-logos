@@ -1,0 +1,9 @@
+{
+  "id": "02e6a360-1db2-4aa4-b5b4-340a83511918",
+  "label": "The selected verdict agrees with correctness throughout the comparison panel",
+  "paraphrase": "Each case in the designated panel has an accurate verdict on the same scoped content. Independent calibration of these verdicts is an open empirical and normative burden.",
+  "lean_declaration": "TruthCore.Logic.DarwinianEpistemicDebunking.BasisDefeat.PanelAccurate",
+  "definition_ids": [
+    "e17e93bf-eedf-45db-be80-ffac82ef7d98"
+  ]
+}

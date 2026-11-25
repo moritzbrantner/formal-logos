@@ -1,0 +1,9 @@
+{
+  "challenge_module": "TruthCore.Results.Logic.DarwinianEpistemicDebunking.BasisDefeat.Challenge",
+  "solution_module": "TruthCore.Results.Logic.DarwinianEpistemicDebunking.BasisDefeat.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Logic.DarwinianEpistemicDebunking.BasisDefeat.auditedPolicyControls"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}

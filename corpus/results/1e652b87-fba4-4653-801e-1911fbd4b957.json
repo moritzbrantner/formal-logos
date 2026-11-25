@@ -1,0 +1,11 @@
+{
+  "id": "1e652b87-fba4-4653-801e-1911fbd4b957",
+  "label": "Test common finite ancestry on the existing mediated-optimum creator profile",
+  "argument_id": "07609213-8763-49a7-a78b-e9bfa3cd4b31",
+  "challenge_module": "TruthCore.Results.Causality.ActualAncestralSource.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ActualAncestralSource.Solution",
+  "theorem": "TruthCore.Results.Causality.ActualAncestralSource.mediatedChain",
+  "comparator_config": "results/1e652b87-fba4-4653-801e-1911fbd4b957/comparator.json",
+  "status": "solution-present",
+  "description": "On chainG at false, d is a root, g receives an edge from d, and c receives one from g. No other actual root is possible. The imported MediatedOptimum retains the original giving model and the absence of any directly covering actual root. The graph does not interpret a new God predicate."
+}
