@@ -1,6 +1,6 @@
 # Is modal necessity load-bearing for the root? (2026-11-23)
 
-This is the first of four follow-up questions after #1887. All of the #1870 → #1884 → #1887 work (C2, power-grounded possibility, Pruss's argument, existence in essence) bears on one modal crux: whether a foundational, simple being's possible absence needs a ground. This note asks which routes to the root depend on modal necessity at all, and which depend on that crux in particular. It is a structural question about the graph and makes no claim about warrant. [Original PR #1902](https://github.com/moritzbrantner/formal-logos/pull/1902)
+This is the first of four follow-up questions after #1887. All of the #1870 → #1884 → #1887 work (C2, power-grounded possibility, Pruss's argument, existence in essence) bears on one modal crux: whether a foundational, simple being's possible absence needs a ground. This note asks which routes to the root depend on modal necessity at all, and which depend on that crux in particular. Sections through §5 retain the historical measurements and proposal. [The integrated #1937 checkpoint](#6-which-causal-reach-do-the-attributes-need-1937) gives the checked substitutions, present exclusion results and a provisional assessment of their premises. [Original PR #1902](https://github.com/moritzbrantner/formal-logos/pull/1902)
 
 ## Method
 
@@ -508,12 +508,219 @@ and coverage criteria. A common source does not by itself establish
 intellect, will, modal necessity or present sustaining causation. The
 perfection and attribute bridges remain substantial.
 
-**Next dispatch:** implement the source-first sibling within #1937,
-prefer the already registered actual-bearer dictionary to a new strong
-converse; check the exact `79252a71` and `fa24c576` consumers, and record
-computed exclusions and frontier-diff after certification. #1936 remains
-the separate #1928 uniqueness investigation. No independent challenge or
-Lean/CLI run is available in this session; the 4096-model diagnostic was
-executed and the section 1 diagnostic was rerun with matching counts.
-No change to registered proof status, corpus records or philosophical
-warrant is warranted by this draft.
+The following checkpoint tests the proposed arrows on the integrated draft.
+
+### 6. Which causal reach do the attributes need? (#1937)
+
+A named God can receive all nine stage-two predicates without the general
+maximum-in-genus law. The actual-source route identifies the giver *before*
+using perfection or goodness. Let *m* be the witness of `0881e859`. If a
+named *g* differed from *m*, the actuality conjunct of God-maximality
+`4c79298d` would put *g* among *m*'s recipients. Giving *g* esse would
+then make *m* more in being than *g* by causal ascent `d5a94eb1`,
+contradicting the other conjunct of God-maximality. With the explicit
+identity split `ee4ab504`, every such *g* equals *m*. Maximality here
+means actual and unexceeded. Several incomparable maxima can satisfy that
+definition. The argument uses the incoming causal edge to compare the
+specific two candidates. Identification uses ascent only at esse. The individual source arguments register the existing all-respect ascent premise, and both integrated assemblies retain it. [Proofs](../../TruthCore/Results/Case/Catholicism/AttributesFromEsse/Solution.lean) · [Exact premises](../../specs/attributes-from-esse.toml)
+
+| Consequence | Carrier-wide converse `86d02b69` | Actual-recipient source `0881e859` |
+|---|---|---|
+| At most one named God, `33b18ae7` | The assembly calls the reviewed maximal-exclusion proof of #1936 (`3c60e372`). Its witness and nonmutual-dependence alternatives remain available. | `d8529011` identifies each named God with the same *m* as above. The God candidate's maximality suffices for this identification. The source's own maximality is used in forward naming. |
+| Represented perfection, `78b7c124` | `ea6317cf` splits on whether the actual bearer *x* equals *g*. Equality transports actuality. Otherwise the converse supplies the esse edge and `64498e7e` transfers the very respect *r*. This needs neither maximality nor actuality-to-being. | `1c648123` uses the identification above. Here `7067553d` matters: actuality of *x* at *r* must put *x* in the domain of the esse giver. The transfer premise and equality split remain. |
+| Supreme goodness, `e0dae79f` | `bed2cc9f` uses the actuality conjunct of `4c79298d` and `00e962ae` for the giver's own goodness at esse. For each distinct recipient, `f8ba2429` extends the esse edge to the recipient's actual perfection. No identity decision is needed. | `4c30239f` also requires actuality-to-being. Once the actual universal giver is identified, `b26c10a0` supplies transfer precisely for its distinct effects. The integrated assembly obtains this special case from its existing `f8ba2429`. |
+
+Legacy perfection `2639f425` assigns both IN_ACT_1 and IN_ACT_2 to the
+conclusion itself. Normal sense preflight rejects both new arguments at
+that ID. The single-field sibling unfolds to `GodIsPerfect IsGod F.InAct`
+with IN_ACT_4 at both occurrences. Its respect type carries no intrinsic
+pure-perfection filter. Reading a perfection in a source formally or
+eminently requires a defensible interpretation of this one predicate in
+both bearers. An effect can receive what its producer has the power to
+produce without the producer exercising the effect's perfection. The
+preexistence bridge bears that burden. GOOD_4 here combines goodness at
+esse and causal responsibility for actual perfections of others. Moral
+value, benevolent intention and unlimited possession on a new scale each
+need additional premises. [Effect-to-source transfer](causal-perfection-transfer.md)
+
+**Same bearer and existence.** `65435527` packages the nine attribute
+conditionals at one *g* under the one-way sufficiency premise `818a73cc`
+(assembly transcription). The older `79252a71` instead derives attributes
+internally. Its actual-source sibling `827fa9cd` and carrier-wide sibling
+`0acc8761` run the six other attribute proofs on the same signature and
+potency relation. The former replaces genus causality with `0881e859`.
+Both also use the definitionally matching independent-potency priority
+record `3b2d2d46` in place of `a4d3261a`, whose adopted sense conflicts
+with `c6d6379b` in a new bundle. Each retains causal ascent, the
+remaining six attribute bridges and the original sufficiency implication.
+
+The checked `sameSignatureConsumers` applies the actual-source sibling
+to both `3769b87e` (unique classical God) and `fa24c576` (historical
+root). The former obtains existence by applying `678ff65f` to the source
+and its seven further premises, including forward naming `1ec205ed`.
+The latter applies its own same-signature root theorem with the seven
+stage-three inputs. At-most-one also holds for an empty God predicate.
+The forward naming step supplies the first named witness, and `4c79298d`
+remains a separate direct or derived input. The alternative derivation
+of that input from `86d02b69` would restore the carrier-wide burden.
+[Consumer check](../../results/2a5b1712-aeaa-4c30-83cc-04555d5d4833/comparator.json)
+
+#### What a partition denies
+
+Classically, the exact denial of the genus law is **one** respect, one
+maximal bearer there, and one distinct actual bearer of that respect
+whose actuality there it does not cause. At fixed esse the denial of
+`da09703b` requires such a missed actual recipient for **some** maximal
+bearer. The denial of the existential package `0881e859` requires one
+for **every** maximal bearer. This last denial can also hold when there
+are no maxima; `fad8af3e` excludes that case. Denying the carrier-wide
+naming converse instead requires a named God and a distinct carrier it
+does not give esse to, even if that carrier is inactive. Denying the
+actual-recipient naming converse requires that missed carrier to be actual
+at esse.
+
+The #1936 partition supplies two actual maximal givers. Each gives esse
+to a real recipient in its domain. For any proposed giver in domain *d*,
+the recipient in the opposite domain is distinct and actual and receives
+no esse from it. Thus even the narrower existential package fails here.
+This check reuses exactly the reviewed `sourceAbove` and `domainGift`
+dictionaries. It adds no assumption that the four beings represent all of
+actual reality. [Partition control](../../TruthCore/Case/Catholicism/GodIsOneFromEsse.lean)
+
+```lean
+import TruthCore.Results.Case.Catholicism.GodIsOneFromEsse.Solution
+
+open TruthCore.Case.Catholicism.GodIsOneFromEsse
+open TruthCore.Latin.Aquinas.SummaTheologiae
+
+example : ¬ MaximeEnsCausesBeingOfAllReading
+    (fun (_ : Bool × Bool) (_ : Bool) => True) sourceAbove domainGift true := by
+  rintro ⟨⟨d, s⟩, _, gives⟩
+  have missed := gives (!d, false) (by cases d <;> simp) trivial
+  obtain ⟨_, _, same⟩ := missed
+  cases d <;> contradiction
+```
+
+For the deeper De ente premise `c35b1a5c`, the precise denial says that
+no actual bearer whose represented esse equals its essence, and which
+has no actual esse cause, has a finite actual esse-cause path to every
+other actual bearer. There could be no such source, or each qualifying
+source could miss someone. A partition instantiates the second mechanism
+if its givers also meet those essence conditions. The four-being control
+itself assigns no essence dictionary. Upstream, both `3de4bd49` and
+`5ab6cc2b` can align local paths through identity-bearer uniqueness.
+The positive rationale for `75b5b027` is that subsistent esse without
+further determining content leaves no difference of whole nature to
+divide two candidates. Intrinsically different unreceived sources challenge
+that application. Assigning a different domain label alone gives no
+account of intrinsic difference. With common nature granted, a primitive
+numerical distinction challenges the multiplication account instead.
+These are different points of disagreement. [Source-selection assessment](de-ente-esse-source-1628.md)
+
+**Provisional judgment.** Productive relations give the source-first
+account more explanatory content than maximal degree alone. Once one
+origin is tracked across domains, the same independently identified
+bearer explains why their recipients are actual and why a distinct named
+maximum would be outranked. Local production by itself supports each
+side equally. A plural account can retain the same recipient coverage
+by assigning genuinely distinct productive powers to separate givers.
+Ontological economy favors one source only when its cross-domain power
+and the plural powers explain the same data equally well. A common-source
+account owes the reach across domains and a reason productive responsibility
+composes along the paths; a partition owes any boundary or coordination it
+invokes to explain effects in both domains. An isolated partition owes no
+coordination for effects confined to one domain. Counting names or graph
+routes settles neither cost. An impersonal common source also survives
+this causal test until the further naming, intellect and will conditions
+are warranted.
+
+The discriminating test is a recipient with positively identified
+contributors from the two proposed domains. Trace what gives the *being
+of each contributor* through the same productive relation. A common
+upstream giver for those two is local evidence for convergence. A common
+effect, synchronized activity or a shared control signal would leave the
+origins of the contributors open. Generalization needs coverage of all
+relevant forks. The existing connected, well-founded graph result turns
+local joining at each fork into source agreement; its alternating ladder
+shows why the existence of a short source path for every node cannot
+replace well-foundedness. Applying that grounding result to esse requires
+a domain and relation bridge, and producing the direct esse edges used
+here requires composition. Treat common coverage as a live positive
+conditional with an unresolved whole-domain warrant. [Fork test and ladder](part-free-plurality.md#when-immediate-co-suppliers-suffice-for-a-common-source)
+
+#### Exclusion fixpoint and full support options
+
+The cells count historical-root **arguments with derivable antecedents**
+on each corpus. Both #1902 leaf rules give the displayed results. The
+unrestricted denominator is 28. The final column withholds GodExists
+while deriving the antecedents of each first-existence argument.
+
+| Corpus or ablation | Omit `d9fad785` | Omit both genus formulations | Omit modal | Modal + `d9fad785` | Modal + both | First GOD_4 arguments, modal + both |
+|---|---:|---:|---:|---:|---:|---:|
+| #1902 `fd78b77e6` | 7 | 3 | 25 | 4 | 0 | 8 |
+| #1928 `b77e77f98` | 7 | 3 | 25 | 4 | 0 | 8 |
+| Reviewed unity `4ad2728c3` | 7 | 3 | 25 | 4 | 0 | 8 |
+| Assigned draft + main `040e782e3` | 7 | 3 | 25 | 4 | 0 | 8 |
+| Add individual attributes and source unity | 7 | 3 | 25 | 4 | 0 | 8 |
+| Include their field assemblies `8a1113e40` | 7 | 7 | 25 | 4 | **4** | **8** |
+
+The four recovered arguments are `1c5edad9`, `88671579`, `db31cea1`
+and `fa24c576`. Every one of the other 21 modal-free root arguments takes
+`d9fad785` directly. A generic Fourth Way derivation of the stage-one
+source can still consume it. The fixed-esse route in §5 survives via
+`f4df2153`, then `8c0cce46` with the separate maximal witness. Excluding
+only the old ID leaves `12dc2662` available. On the joint cut the field
+has the three surviving options listed above, and the modular unique-God
+target `20a2b6a3` has `3769b87e`. Additionally deleting ascent
+`d5a94eb1` blocks both derived assemblies and `fa24c576`. The ordinary
+leaf rule can still package individually supplied attributes for three
+roots. Under strict expansion no root survives that additional cut.
+
+With GodExists withheld, the eight first-existence arguments on the joint
+cut are `0489c24b`, `0e8e37dc`, `2bd7ee56`, `4f71236b`, `5d2b7c6e`,
+`678ff65f`, `c98328f1` and `ed7c588a`. The same **necessary**-root
+target `da3facd6` is itself modal. Its eight immediate arguments survive
+the two genus deletions with modality allowed. No new direct argument to
+either existence target was registered. The full before/after support-graph
+exports retain exactly the same immediate conjunctions (19 distinct, 15
+minimal for GodExists; eight distinct and minimal for the necessary-root
+target). Each non-target input retains its direct-assumption option.
+
+With only terminal inputs admitted, the exact support-formula runs before
+and after agree. The two minimal GodExists bundles are
+`{4da7f445, f0391cf0}` (description and unrestricted characterization)
+and `{89cbb0af, cdc7a58f}` (the supremely perfect God candidate and
+selected-world existence feature). Neither provides independent causal
+confirmation. No terminal bundle reaches `da3facd6`. For example, the
+terminal closure lacks eternity-from-immutability `0659227c` and the
+first-being noncomponent premise `09c6d5f0` for `379399d1`. The terminal
+test suppresses direct acceptance of derived inputs; the #1902 test has
+different, explicit stopping conditions.
+
+**Reproduction.** On each revision export `truth frontier --json` and use
+the leaves and modal-body classifier in **Method** above. For each cut,
+remove excluded statements from the seeds and repeatedly add each
+result-backed conclusion outside the cut whose complete premise set is
+known, until no statement is added. Include transcription edges.
+For the individual-only row withhold `0acc8761`, `65435527` and
+`827fa9cd` before calculating leaves and closing. For the last column
+also forbid `8626f8a5` throughout antecedent closure. The compiled-name
+classifier on the integrated dictionaries found 689 modal statements
+and resolved every current declaration; replay on the #1902 roster marks
+658 versus 656 in its historical scan and reproduces its 25 and four.
+For the full formulas, export `truth support-graph --json` and run
+`scripts/support_formula.py --graph <export> --output <report>` using
+the documented CUDD backend. [Support-formula method](god-existence-support-formula.md)
+
+`truth frontier-diff --base 040e782e3` reports four added root-reaching
+conditional alternatives: the two concrete assemblies for `d5ac1620`
+and the two goodness bundles for `e0dae79f`. This is an expanded
+support change; ordinary GodExists, the necessary-root target and the
+historical root gain no new immediate rule. The nine result configurations
+passed Comparator/NanoDa with empty permitted-axiom lists, including the
+same-signature consumer. Binding found nine matches. Those checks on local
+commit `2c37ad4c0` apply to the identical proof files, transitive Lean
+imports and configurations on `8a1113e40`. Corpus, record regeneration,
+the exclusion fixpoint and support exports were checked on the integrated
+draft. This is an analyst reconstruction; historical attribution is deferred.
+Independent semantic challenge and final integration CI remain with #1938.
