@@ -1,0 +1,23 @@
+{
+  "id": "f7c01af6-5a19-48b5-bf76-f5aae3a429b6",
+  "label": "Matched act-reason deletion separates existential from contingent-fact coverage",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "5bc4e4c1-ef43-4688-95a3-a7bbe894cedd",
+  "inference_ids": [
+    "b7296367-659d-400f-8754-896f7786500a"
+  ],
+  "meaning": "Use the exact #742 ActingReason constructors. The deleted target has no admitted reason, while all other original edges remain. Source-existence tokens still explain the contingent target bearer in the #312 projection, but the separate contingent act fact refutes contingent-fact coverage. A necessary source true at world 1 fails to necessitate the act or outcome. The result executes the prior #1910 matched comparison; it does not claim that admitted edges are adequate reasons or actual causes.",
+  "definition_ids": [
+    "9e6cdf50-baaa-46a2-917c-cc079bce38b3",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "fcb346d7-ddd2-50bb-a7c2-3d79d41b8eae",
+    "d513fb8a-64ee-5d49-ae56-4d695f93ca71",
+    "fe4b7da0-cbd6-5d1f-b589-953f9def12b7",
+    "c1ae0b54-f6f2-4f93-afdc-5d948c36c0d8",
+    "e7302a28-f9fc-4961-811f-bf58bd86c28d"
+  ],
+  "disambiguation_ids": [
+    "e63036c5-d9c0-55d3-9704-e23efcbed127",
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "eeb4a527-e4c9-432e-ab1b-b8350ca75aa0",
+  "label": "Semantic preservation is strictly weaker than identical decoded content",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "483f84e6-ddc0-4bc2-8034-574504a222b1",
+  "inference_ids": [
+    "55766b95-d5d0-458c-a2df-ad79bb718e1a"
+  ],
+  "meaning": "Explicit failure of the converse of transportWeakens, retaining actual causal tokens, positive observations and truth. No exact content identification is required by SourceGuarantee. This does not license arbitrary translation or infer epistemic access from semantic truth.",
+  "definition_ids": [
+    "16daa03a-e1d0-4e07-89ad-3ac67db8c66c",
+    "91414c1b-813a-4b1d-bab5-715394ccd0bc",
+    "9fcefb90-0cc3-4c0a-b964-cbf3585bc9c9",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "dd7b91ea-5284-4558-bac5-7a0759843b0c",
+    "e37c56c6-ac07-40d9-93df-6688593784e9"
+  ],
+  "sense_mixing_control": true,
+  "disambiguation_ids": [
+    "594c9ccf-e253-4585-8904-133281547321"
+  ]
+}

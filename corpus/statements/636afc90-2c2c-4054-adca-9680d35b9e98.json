@@ -1,0 +1,11 @@
+{
+  "id": "636afc90-2c2c-4054-adca-9680d35b9e98",
+  "label": "True encoded contents stay true under RECORD_TRANSPORT_2 in the admitted histories",
+  "paraphrase": "OPEN channel condition RECORD_TRANSPORT_2: at each admitted history, a true content in D remains true after coding, receipt and decoding, under one fixed individuated-content Semantics. Neither original content truth nor exact content identity nor actual token provenance is asserted.",
+  "lean_declaration": "TruthCore.Epistemology.SourceEvidenceAdequacy.TruthTransport",
+  "definition_ids": [
+    "16daa03a-e1d0-4e07-89ad-3ac67db8c66c",
+    "91414c1b-813a-4b1d-bab5-715394ccd0bc",
+    "9fcefb90-0cc3-4c0a-b964-cbf3585bc9c9"
+  ]
+}

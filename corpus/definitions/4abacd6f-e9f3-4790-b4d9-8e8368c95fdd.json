@@ -1,0 +1,12 @@
+{
+  "id": "4abacd6f-e9f3-4790-b4d9-8e8368c95fdd",
+  "label": "Actual token copying of an independently supplied target",
+  "term": "target-copying causal production",
+  "definition": "CopiesTarget h K g allowed target requires each token actually caused by g on the selected channel at an admitted history i to equal the specified encoding of target i. Covered separately ensures selected observations really come from such tokens, and ExactTransport recovers the target value. The target is fixed independently of the received record; the constraint is not defined by choosing the target to be whatever was observed.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Epistemology.SourceEvidenceAdequacy.CopiesTarget",
+  "definition_ids": [
+    "91414c1b-813a-4b1d-bab5-715394ccd0bc"
+  ],
+  "note": "Analyst process constraint, not a derived account of actual causal access. A copy mechanism reading a retained event descriptor can instantiate it; a mechanism stamping a fixed positive mark irrespective of that descriptor fails. Applying it to history requires warranted access to a genuine historical descriptor and a relevant model of interference. Mental states are neither assumed nor negated by the general theorem. The explicit no-attitude/no-plan control shows only that these represented predicates are not required for the same functional guarantee."
+}

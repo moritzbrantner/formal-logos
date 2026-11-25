@@ -1,0 +1,14 @@
+{
+  "id": "483f84e6-ddc0-4bc2-8034-574504a222b1",
+  "label": "Truth-preserving retagging changes content identity while records stay true",
+  "paraphrase": "On the same tagged-Boolean semantics and actual source tokens, the retagging channel satisfies RECORD_TRANSPORT_2 but fails RECORD_TRANSPORT_1. Every original content differs from its retagged content while their truth at that history agrees; causal record coverage and true decoded records persist. The tag is a structural content-identity surrogate, not a complete account of psychological content.",
+  "lean_declaration": "TruthCore.Epistemology.SourceEvidenceAdequacy.Control.SemanticTransportControl",
+  "definition_ids": [
+    "91414c1b-813a-4b1d-bab5-715394ccd0bc",
+    "dd7b91ea-5284-4558-bac5-7a0759843b0c",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "e37c56c6-ac07-40d9-93df-6688593784e9",
+    "16daa03a-e1d0-4e07-89ad-3ac67db8c66c",
+    "9fcefb90-0cc3-4c0a-b964-cbf3585bc9c9"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "841e7fc2-33b7-438b-845e-21a20e807e75",
+  "label": "Source veracity with causal coverage realization and transport guarantees decoded truth",
+  "argument_id": "80237c82-1978-4a12-8cb8-c7a28aafcb93",
+  "challenge_module": "TruthCore.Results.Epistemology.SourceEvidenceAdequacy.Challenge",
+  "solution_module": "TruthCore.Results.Epistemology.SourceEvidenceAdequacy.Solution",
+  "theorem": "TruthCore.Results.Epistemology.SourceEvidenceAdequacy.sourceGuarantee",
+  "comparator_config": "results/841e7fc2-33b7-438b-845e-21a20e807e75/comparator.json",
+  "status": "solution-present",
+  "description": "Conditional assembly of the existing ContentAssertionTruth target with the explicitly separated application conditions. The plan's individuated content is true by the SAME source's genuine assertion, and truth-preserving transport carries it to the observed decoded content. This supplies no independent warrant for trusting any source or channel. The informative dependency tests are the separate populated omission controls and the weaker transport comparison. No old proposition is declared true or actual.",
+  "transcription": "assembly"
+}

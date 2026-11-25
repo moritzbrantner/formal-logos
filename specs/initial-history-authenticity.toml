@@ -1,0 +1,66 @@
+[batch]
+vocab = "TruthCore.Epistemology.InitialHistoryAuthenticity"
+results = "TruthCore.Results.Epistemology.InitialHistoryAuthenticity"
+definitions = []
+disambiguations = []
+
+[[statement]]
+id = "Initial variation survives injective dynamics and complete trajectory formation"
+lean = "Dynamics"
+definitions = ["07fffca9-7d59-49b3-a85a-1c0345382f51"]
+paraphrase = "For any admitted initial states, an injective map on that admitted set preserves and reflects witnessed output variation. If each step of one fixed time-dependent deterministic law is injective, its evolution to every finite time is injective. The complete generated trajectory is injective in its initial state for every such law, even noninjective ones, because time zero retains the input. Hence complete trajectories preserve admitted initial variation. An observation at a selected time preserves and reflects initial variation under the explicit additional premise that this composite observation map is injective on admitted inputs. These are mathematical structural claims; no explanation, probability, metaphysical possibility or universal persistence of coarse-output uncertainty follows."
+
+[[argument]]
+id = "Initial variation under injective dynamics and complete trajectories"
+theorem = "dynamics"
+premises = []
+conclusion = "Initial variation survives injective dynamics and complete trajectory formation"
+axioms = []
+rule = "Admitted-witness transport, induction on time, and evaluation at time zero"
+meaning = "Derives the exact structural conservation boundary for a fixed law and admitted input class. Reversible finite evolution preserves distinctions; retaining time zero distinguishes complete histories even after later coalescence. Readout preservation requires its own injectivity. No unconditional conservation of ignorance, arbitrariness, lack of explanation or every observable is claimed. The law's necessity and the admitted class's metaphysical scope remain application commitments."
+
+[[statement]]
+id = "Authentic positive records require true content throughout their admitted observation fibers"
+lean = "Authenticity"
+definitions = ["dd7b91ea-5284-4558-bac5-7a0759843b0c", "c8c357e8-33d1-5468-858d-78f8493e353b"]
+paraphrase = "For every input class, observation map, positive-record predicate and historical-content truth condition, positive records are sound on all admitted inputs iff the inputs are contained in SafeInitial, iff every positive observation fiber intersected with the admitted inputs lies wholly in that record's content-truth set, and iff positive-fiber authenticity is uniform and each inhabited positive fiber has an authentic witness. With all records included, this uniformity is equivalent to the existing EvidenceOnly condition on the admitted subtype and its entire observation-equality vector. A uniformly false fiber is uniform but fails soundness and the authentic-witness condition. Empty fibers pass vacuously; no actual input, fallible warrant or metaphysical admissibility is supplied."
+
+[[argument]]
+id = "Positive record authenticity characterized by admitted fibers and authentic witnesses"
+theorem = "authenticity"
+premises = []
+conclusion = "Authentic positive records require true content throughout their admitted observation fibers"
+axioms = []
+rule = "Observation equality substitution, fiber witness transport, and EvidenceOnly reuse"
+meaning = "Locates the exact initial-admissibility condition needed for universal positive historical truth under any observation map, including a fixed deterministic evolution followed by a readout. Separates uniform authenticity from truth by the necessary authentic-witness conjunct. Composes existing SameEvidence and EvidenceOnly meanings instead of restating their selector-impossibility theorem. The primitive content relation's historical interpretation and warrant for the admitted restriction remain OPEN; no skeptical or PSR conclusion follows."
+
+[[statement]]
+id = "903db154-82f9-4561-8e94-b2d2104e56cd"
+label = "Identified bearers with essential origins reduce record soundness to authentic anchors"
+lean = "IdentityBridge"
+definitions = ["334ceafa-8848-4b4a-8713-3968e608b7da", "dd7b91ea-5284-4558-bac5-7a0759843b0c", "beb654a7-e204-5f4c-a7b4-45e886ba7109"]
+paraphrase = "For any supplied History and primitive origin descriptor, suppose the same bearer has the same origin wherever it exists, each admitted record bearer exists, and equal observations of admitted histories identify the same numerical bearer. For claims asserting a supplied origin value, positive record soundness is then equivalent to the existence of an authentic member in each inhabited positive observation fiber. Essential identity and correct identification make authenticity uniform; they do not determine that common verdict to be true. No mandatory bearer presence outside the admitted class, real origin law, epistemically available identification, or actual trustworthy evidence is inferred."
+
+[[argument]]
+id = "Essential origin and identified bearer reduce record soundness to authentic anchors"
+theorem = "identityBridge"
+premises = []
+conclusion = "903db154-82f9-4561-8e94-b2d2104e56cd"
+axioms = []
+rule = "Existence-qualified origin identity and observation equality, then authenticity factorization"
+meaning = "Derives the conditional identification bridge on the existing History/Ontic interface while preserving the same bearer and record content. The genuine historical reading of origin, the identification premise and authentic anchors are explicit application obligations. This is a structural conditional, not a proof that essential origins make replicas observable or that an arbitrary positive record is true."
+
+[[statement]]
+id = "Coalescence and record correction distinguish state certainty from historical authenticity"
+lean = "Controls"
+definitions = ["79595648-e618-4e5b-89d4-8ca0fc82291d", "07fffca9-7d59-49b3-a85a-1c0345382f51", "dd7b91ea-5284-4558-bac5-7a0759843b0c", "334ceafa-8848-4b4a-8713-3968e608b7da"]
+paraphrase = "Explicit Boolean structural controls: an erasing law makes every positive-time state false while complete trajectories still vary; a reversible toggling law preserves state variation while a Unit readout erases it; a two-input accurate restriction gives sound records without fixing one initial state; unrestricted true- and false-past inputs share a positive record, defeating soundness and uniformity despite essential origin markers and existing designated bearers on one unchanged populated roster; an inhabited uniformly false positive fiber is uniform but has no authentic witness and is unsound; a deterministic many-to-one copy rule corrects records by reading a retained past coordinate, whereas a rule stamping a positive record irrespective of that coordinate is unsound. These witnesses are mathematical assignments, not metaphysically possible fabricated histories or estimates of actual error."
+
+[[argument]]
+id = "Coalescence, essential identity, false positive fibers and correcting dynamics controls"
+theorem = "controls"
+premises = []
+conclusion = "Coalescence and record correction distinguish state certainty from historical authenticity"
+axioms = []
+rule = "Concrete admitted witnesses, Boolean disjointness, and the general dynamics and fiber laws"
+meaning = "Tests each consequential omission without unrestricted recombination, additional uncaused events or priors. A coarse or corrected output can genuinely become fixed or sound; that does not identify its entire trajectory or explain why its initial state obtains. Identity control fixes all bearer presences and uses a rigid stipulated origin marker; ordinary causes are empty, so no causal-origin or complete-metaphysical interpretation is certified. The positive correction mechanism requires actual access to the retained historical coordinate."

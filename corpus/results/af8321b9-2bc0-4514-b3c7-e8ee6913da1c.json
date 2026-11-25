@@ -1,0 +1,11 @@
+{
+  "id": "af8321b9-2bc0-4514-b3c7-e8ee6913da1c",
+  "label": "Contained explanatory resources expose the base without erasing proximate reasons",
+  "argument_id": "69373023-29d1-461f-ae0e-88a14295846f",
+  "challenge_module": "TruthCore.Results.Explanation.ExistentialInheritance.Challenge",
+  "solution_module": "TruthCore.Results.Explanation.ExistentialInheritance.Solution",
+  "theorem": "TruthCore.Results.Explanation.ExistentialInheritance.resourceInheritance",
+  "comparator_config": "results/af8321b9-2bc0-4514-b3c7-e8ee6913da1c/comparator.json",
+  "status": "solution-present",
+  "description": "Structural resource discrimination with unbounded finite layers, checked proximate explanations, a primitive-stop positive control and modal overlays. Reuses the existing FullSupply and trap_obstruction; no new inductive supply theory or opaque adequacy proposition. Shows the retained actual input, not a contradiction of brute contingency. No new registered edge to the root-facing existence PSR or C2."
+}

@@ -1,0 +1,10 @@
+{
+  "id": "55766b95-d5d0-458c-a2df-ad79bb718e1a",
+  "label": "Semantic preservation is strictly weaker than identical decoded content (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "483f84e6-ddc0-4bc2-8034-574504a222b1",
+  "rule": "Keep the truth coordinate and flip the independent identity tag",
+  "meaning": "Explicit failure of the converse of transportWeakens, retaining actual causal tokens, positive observations and truth. No exact content identification is required by SourceGuarantee. This does not license arbitrary translation or infer epistemic access from semantic truth.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

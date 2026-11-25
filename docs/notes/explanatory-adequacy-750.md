@@ -513,6 +513,289 @@ approved Mathlib three, since the imported existing vocabulary reaches Mathlib. 
 corpus record service query succeeded on the worker clone with exact revision/input
 binding, independently of the stale Lean preview failure described above.
 
+## Existential inheritance with a contained brute foundation (2026-11-24)
+
+**Scope and provisional conclusion.** Grant the strongest relevant containment
+reply: a fixed candidate ontology, necessary deterministic laws, stable actual
+conditions and no further spontaneous causes. Even granting its proximate
+explanations of the derivative order, a contingent foundation B remains an
+unexplained actual input to that account. The defensible inheritance
+claim concerns that retained input. It does not say every derivative has no
+reason, that arbitrary events become possible, or that a brute foundation is
+inconsistent. The proved modal-contingency transfer uses the same dependent
+bearer's requirement of that same foundation across the admitted worlds.
+
+The new batch is `specs/existential-inheritance.toml`; vocabulary is
+`TruthCore.Explanation.ExistentialInheritance`; proofs are in
+`TruthCore.Results.Explanation.ExistentialInheritance.Solution`. These are
+analyst formulations with no new historical attribution. The research serves
+the existence PSR `608a262d-08fe-4dfd-9413-67e2ecf35b84`, through the existing
+B2 route, with the missing explanatory-standard bridge retained **OPEN**.
+It follows the restriction/existence distinction of #1910 and the containment
+findings of #1874/#1913. The open #1927 is prior research context, not an imported
+dependency or a result assumed merged into this baseline.
+
+### Four different questions
+
+| Question | Exact interpretation and result |
+| --- | --- |
+| Could this bearer have been absent? | `ContingentAt` includes actual existence plus a witnessed accessible absence. `absenceInheritance` transfers one base-absence witness through `ModalRequiresExistence`. |
+| Does this bearer essentially require B? | The existing source-indexed `EssenceRequiresExistence` is primitive nature content. `EssenceAbsenceBridge` explicitly states the needed passage to modal co-requirement. Its encoding is not its defense. |
+| Does a derivative have a proximate reason? | In `Contained.arena`, each derivative existence fact has its immediate predecessor's existence fact as an admitted reason. Its base has none. Thus bruteness in the sense of no admitted reason does not propagate to every effect. |
+| Has the account eliminated its dependence on an unaccounted actual input? | `FullSupply` is reused as a derivation from specified factual resources. Without taking a derivative as primitive, any derivation of a derivative uses both base existence and the law as primitive resources. Whether those resources constitute an adequate ultimate account is a further question. |
+
+An explanation can answer why x exists given B and L, identify x's productive
+source, and support successful predictions without explaining why B actually
+exists. These achievements should be retained. Conversely, evidence that B
+exists does not by itself answer why B exists. The new result concerns actual
+ontic prerequisites, not justification for believing the observations; the
+epistemic inquiry remains separate.
+
+### The modal theorem and its exact warrant
+
+For the selected standpoint w and fixed identities x and B, the reused modal
+condition is:
+
+```
+∀ v, access w v → ExistsAt v x → ExistsAt v B
+```
+
+If x exists at w and B is absent at some accessible v, then x is absent at
+that very v. Nothing is recombined, added to an occupied world, or selected
+from an unrestricted history space. If a whole selected class of actual
+bearers satisfies this condition for the same B, the single witness v removes
+all members together. This is not a passage from each member's separate
+possible absence to possible absence of all. Nor does it imply that all
+concreta, all possible replacements, the background, or every possible
+dependent order are absent there.
+
+The proof also composes modal requirements through intermediate bearers at
+the same world and standpoint. It does not assert transitivity of every
+counterfactual, productive cause or metaphysical grounding relation. The
+semantic load lies in applying the selected existence requirement, not in the
+elementary contrapositive after that application is fixed.
+
+There is a conceptual reason to use this condition for a genuine requirement
+of the *same bearer*: if x could still exist in a world with no B, B's existence
+was not indispensable to x across that domain. This conditional understanding
+is stronger than actual production, temporal succession, or having a source
+of a particular kind. An origin-dependent artifact is an illustrative
+candidate, but whether a changed origin yields that same artifact is an
+independent identity question. The formal result neither establishes origin
+essentialism nor treats a familiar example as a proof about every existent.
+For source-indexed essence content, the bridge remains a philosophical
+commitment: nature membership is not defined by the modal conditional.
+
+The populated `Replacement.profile` exposes the consequential difference.
+At false, contingent base causes and provides an existence-reason token for
+target. At true, alternative supplies that same target. Background and target
+exist in both worlds, and target has a distinct existing cause in both. Thus
+actual causation and a supplied reason do not establish the modal requirement
+needed for inheritance. Replacement is the concrete failure mechanism; the
+model establishes the formal omission, not the metaphysical possibility of
+replacement for any particular substance. Its nature field is explicitly
+empty, so it is not a counterexample to an independently validated essential
+requirement. Existing `directedNature` is reused to show the converse caution:
+necessary co-presence can hold both ways while source-indexed nature content
+holds only one way. A necessary label supplies neither direction nor reason.
+
+### A resource test that retains the rival's explanation
+
+`Contained` uses a fixed background bearer, B and derivatives d₀, d₁, ... .
+It has a separate necessary law fact L. Its two worlds are both populated by
+background. In the contingent overlay B and every dₙ exist at the actual world
+and are absent at the other; in the necessary overlay all bearers exist in both.
+The same actual predecessor, reason and record structure is used in both.
+The model imposes no variation of laws and no additional source or free
+recombination. The natural number indexes a dependence layer, not an event time:
+no temporal-birth or physical-dynamics claim is encoded.
+
+The stipulated record for d₀ uses B's existence and L; the record for dₙ₊₁
+uses dₙ's existence and L. Both are required. The certificate checks actual
+truth of the prerequisites and effects, and preservation of truth by every
+record across the accessible worlds. It also checks that the base existence
+profile fixes every bearer's existence profile. This supplies explicit
+conditional determinacy in the interpretation; the name `law` alone does
+no work. The cause and reason assignments are separately checked: every
+derivative has a proximate reason and a distinct existing cause wherever it
+exists, while B's existence fact is unreasoned.
+
+The mathematical representation uses the existing `Groups` and `FullSupply`.
+Here a group is a record of factual prerequisites, and FullSupply is inductive
+derivability from a specified resource set. No `Exercise` or new primitive
+causal relation is introduced. An inductively generated proof of derivability
+is not a demonstration of real productive power, ultimate metaphysical
+well-foundedness or explanatory adequacy.
+
+Three checks discriminate what the records actually deliver:
+
+1. **Law and background alone:** the base-dependent facts form the existing
+   `Trap`. Every admitted rule for a member still needs another member, and
+   none is an admitted initial resource. The existing `trap_obstruction`
+   excludes FullSupply for every derivative. That theorem is reused, not
+   claimed as a new general result.
+2. **Base admitted as primitive:** every derivative has FullSupply. This is
+   the strongest stopping reply represented positively. Allowing B as an
+   actual input genuinely permits all the stipulated derivations; the
+   certificate does not forbid this policy.
+3. **Resource extraction:** for any resource set S that admits no derivative
+   existence as a primitive leaf, a FullSupply derivation of any dₙ entails
+   that S includes B's existence and L. Induction follows the submitted
+   derivation. It exposes the inputs retained by substitution through any
+   finite number of layers, without asserting an opaque `Adequate` premise.
+
+The extraction excludes taking dₙ itself, or another derivative, as a primitive
+answer; that exclusion is an explicit hypothesis, not a claim that such a
+primitive is impossible. Allowing a derivative as an unexplained leaf merely
+chooses a different unaccounted input. Additional genuinely explanatory
+routes could defeat the present resource obstruction, because the admitted
+records would then differ. A brute ancestor on *one* redundant route would
+not establish a defect in every account. The `Trap` condition quantifies over
+every admitted alternative, and applicability requires the account's relevant
+alternatives and prerequisites to have been represented faithfully.
+
+Changing B's modal status to necessary leaves the actual unreasoned input and
+the same resource obstruction. Therefore neither resource incompleteness nor
+ultimate explanatory concern is identical to modal contingency. The necessary
+overlay is not an adequate necessary-nature explanation: it changes a truth
+table and adds no reason for B. The exact earlier `ReasonClosed` results remain
+unchanged. Its `covered` clause excludes brute contingent members by
+stipulation, while `nonCopy` excludes coextensive contingent reasons even in
+these fixed deterministic records. Neither clause is promoted to the general
+meaning of explanation here.
+
+### Substantive warrant and the strongest surviving reply
+
+The positive warrant is the **retention of actual prerequisites** in an account
+offered at the same explanatory scope. If deriving x actually uses B, and B
+is treated as an independent input, further derivation of consequences from B
+does not provide a reason why B obtains. The resource theorem checks this for
+one explicit family of records; the broader philosophical rationale is that
+substitution of conditional explanations cannot by itself furnish the actual
+antecedent those explanations use. The objection is directed at a claim to
+have explained actual existence without an unaccounted contingent input, not
+at predictive success or local intelligibility.
+
+Ordinary explanations support this distinction without deciding universal
+PSR. Tracing a powered instrument through an actual supply and its operating
+conditions improves an account of its operation, but does not automatically
+explain why that supply exists. Conversely, knowing the supply's ultimate
+origin is often unnecessary for the local question. The extension to an
+ultimate existence question is warranted *if that is the account's claimed
+scope* and the selected conditions really are indispensable. It is not
+licensed merely by using the same word explanation in both tasks.
+
+The strongest brute rival accepts this distinction and rejects the additional
+demand. It posits B and fixed laws as primitives, grants substantive proximate
+explanations of derivatives, and says that no further explanation of B is
+owed. Necessary laws, identity conditions, exhaustively fixed coupling and
+no later spontaneous causes can all be granted in this debate. Their success
+at restricting possibilities does not itself answer why the allowed B exists,
+but a restriction need not promise to answer that question. There is no
+deductive contradiction in this stopping policy. Its price is the expressly
+retained actual-existence question, not arbitrary chaos or a general loss of
+inquiry.
+
+The independent reason for taking the remaining question seriously is that
+the same actual contingent existence used to explain the order is still an
+indispensable explanatory input, even after the reason for the *restriction*
+is supplied. Merely moving it to the foundation changes its role in the
+derivation; it does not exhibit a reason that its obtaining is self-explanatory
+or no longer an appropriate explanandum. This supports the prior moderate
+preference for adequate existential explanation E over an unexplained
+exception, while preserving direct and primitive warrant as legitimate
+options. It does not establish that every contingent being must receive an
+external productive cause, or that a necessary fact by itself answers why.
+
+The comparison is symmetric. A personal necessary source, an impersonal
+necessary source and a necessary physical base each must supply whatever
+actual relevance and exercise their proposed explanation claims. A word such
+as necessary, personal or primitive does not satisfy that burden. Likewise,
+neither side is required to derive every basic commitment indefinitely.
+Stopping can be defended by substantive content, actual practice or a
+successful comparative account; simple relabelling or the demand for a
+preferred conclusion is insufficient. This slice ranks no whole worldview
+and does not use tallies of unexplained facts as a score.
+
+### Connections, rejected routes and next test
+
+The destination is the same-world existence PSR for contingent beings,
+`608a262d-08fe-4dfd-9413-67e2ecf35b84`. The registered argument
+`a8823bd2-a474-4aeb-be9d-1a68fab09c0c` and result
+`7bf9cb77-0418-4363-9298-266eac105edd`
+(`esseCauseFromExistenceReasons`) combine that coverage with BX1 and BX2
+to B2 `8a8d00e9-12b6-4cf0-b662-431cc4addd49`. The First Way application
+`8cc169e3-7e88-48b1-b542-a6fdaaf8d41b` retains the same mover, its actual
+existence, B1 and the required priority bridge B3. This batch does not replace
+those hypotheses or introduce a new registered edge to them.
+
+The missing connection is precise. One must justify the existential
+explanatory demand over the relevant contingent bearers, relate the relevant
+adequate existential reasons to #312's tokens on the same ontology, and retain
+BX1/BX2 to infer a distinct esse-cause. Actual-resource closure can constrain
+an account *offered as complete*, but the theorem does not say every actual
+being has such an account. Nor does modal absence produce a reason token.
+These are **OPEN** application and coverage questions, not missing Lean
+proofs of a consequence already supplied by the certificate.
+
+C2 `6508c239-b36d-4010-b9e4-ff0cdd5757e5` remains compatible with the
+distinctions here: an actual contingent bearer may be receptive or have a
+prior distinct cause of esse while that cause's own obtaining remains
+unexplained. This is conceptual compatibility, not a newly certified joint
+model of C2 and the contained interpretation. Modal co-requirement,
+`DependsForBeing`, receptive potency and productive esse-causation remain
+different predicates. No inference to C2 or rejection of C2 is registered.
+
+Rejected routes were (a) reusing `ReasonClosed.covered` as if it independently
+excluded brute stopping; (b) inferring possible absence from determinism in
+the forward B-to-x direction; (c) calling every derivative individually
+brute; (d) reading FullSupply as actual causal production; (e) taking a
+necessary-law label to explain actual existence; (f) importing recombination
+or an empty comparison world; and (g) reproducing the general trap theorem
+under a new name. The new results instead expose the exact modal direction,
+shared witness, actual resource and permitted primitive stop.
+
+**Next discriminating test:** take a concrete proposed ultimate account of the
+same actual bearer, identify its full actual prerequisite set, and ask whether
+an allegedly independent explanation answers why those prerequisites obtain
+or only redescribes their permitted role. A real alternative route with
+independently warranted actual relevance can remove the obstruction; a
+defensible criterion admitting the actual contingent base as an adequate
+ultimate stop can change the comparative judgment. An unreasoned base's
+compatibility with fixed deterministic laws alone answers neither test.
+For modal inheritance, revise the application if the same target can exist
+with a replacement source, if its identity changes, or if the claimed
+foundation-absence world is not admitted. No further logical pressure on the
+unrestricted PSR follows without the coverage bridge.
+
+### Theorem bindings and claim/type self-sweep
+
+| Result | Exact bound proposition |
+| --- | --- |
+| `5acaabc5-4b22-4876-8243-ec7d3dbf0424` — `absenceInheritance` | `AbsenceInheritance`: four universal conditional statements with actual existence, fixed identities, common accessibility and the explicit essence bridge where used. |
+| `af8321b9-2bc0-4514-b3c7-e8ee6913da1c` — `resourceInheritance` | `ResourceInheritance`: the two explicit modal overlays, actual and truth-preserving records, per-derivative reasons/causes, trap obstruction, primitive-base positive control and extraction from every derivation without derivative primitive leaves. |
+| `360411ab-e8a1-43fe-9ecd-045f2fd382af` — `replacementBoundary` | `ReplacementBoundary`: actual contingent cause/reason source, same necessary target, populated alternative world with another existing cause, failure of modal requirement, and the exact earlier directedNature asymmetry. |
+
+The Challenge was frozen before the proofs at SHA256
+`2cae43951da3f22fd78f8ffeeee701d7fae5958bfb8cfdc6bb9f64386be202c5`.
+All three theorems compile under the supplied pinned Lean environment with
+no warnings, and Lean reports that each depends on no axioms. Their Comparator
+configurations permit zero axioms. Integration
+owns canonical binding, Comparator and NanoDa checks; development compilation
+is not advertised as completion of those gates. The batch regenerates without
+changes, its three sense preflights pass, and offline corpus validation passes
+with the repository's existing warning-mode backlogs.
+
+Self-sweep: no historical assertion is added; no individual-to-joint modal
+shift is hidden; actual existence and bearer identity are explicit; the
+replacement world is populated; both resource policies and the absence of
+temporal events are disclosed; the necessary overlay is not called adequate;
+the prior exact modal requirement and trap proof are reused; philosophical
+warrant is separated from theorem consequence; the root and C2 connection
+plans remain OPEN. Intended root-premise effect: no discharge and no new
+registered support route. The coordinator's computed frontier delta records
+the actual integrated effect.
+
 ## Research attempts citing this note
 
 - [Designed positive necessary-fact extraction by composing the existing #750 forced descent lemma…](../../corpus/attempts/necessary-fact-boundary-786.json)

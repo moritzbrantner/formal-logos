@@ -1161,7 +1161,9 @@ assuming aggregate coverage or denying contingency by definition.
 Move against D if an independently warranted genuinely contingent
 production or agency case provides complete existential explanation
 at the selected (not merely partial) adequacy standard without a
-necessitating basis. Start the next comparison with `acting` at world
+necessitating basis. The comparison proposed here is now completed in
+[the fixed-act test below](#the-fixed-act-test-and-the-contained-selection-boundary-2026-11-24).
+Its original specification starts with `acting` at world
 0. The contingent act `.member 0` is admitted as a reason for the
 distinct fact `.target`. They hold in exactly the same worlds, and
 the necessary `.source true` is an admitted reason for the act.
@@ -1414,6 +1416,541 @@ attempt [`82b6c542-3f01-41eb-8a3d-b3b8b34d6315`](../../corpus/attempts/82b6c542-
 assessment, verification boundary and review disposition. The assessment of
 `9d7b8ae0-474d-4ae4-9d08-019cffbdea7b` is unchanged: its same-member absence
 and adequate-reason tests remain open.
+
+**Checkpoint scope.** The unchanged assessment just noted concerns #1927's
+containment contribution. The #1933 continuations below record the completed
+fixed-act test and the subsequent productive-dependency tests. Those results
+preserve #1927's open historical-admissibility and epistemic-norm bridges.
+
+### The fixed-act test and the contained-selection boundary (2026-11-24)
+
+The exact next test from #1910 is now formalized in
+[`ContainedSelection`](../../TruthCore/Explanation/ContainedSelection.lean).
+The registered `ExerciseComparison` is statement
+`5bc4e4c1-ef43-4688-95a3-a7bbe894cedd`, result
+`31a48b76-871a-4205-9c51-58663787b64d`, theorem
+`TruthCore.Results.Explanation.ContainedSelection.exerciseComparison`.
+The companion `RestrictionBoundary` is statement
+`397cdbfa-16ca-428c-974c-de3c8b2155dd`, result
+`9a2c5f49-7c1d-4fbe-b4fb-8dbee1642f61`, theorem
+`TruthCore.Results.Explanation.ContainedSelection.restrictionBoundary`.
+Both certificates have no proposition premises: they prove the stated
+conditional tests and properties of expressly constructed interpretations,
+not the metaphysical adequacy of those interpretations. The
+[specification](../../specs/contained-selection.toml) records the complete
+bindings and selected vocabulary.
+
+The dependency audit distinguishes the two certificates. `restrictionBoundary`
+has no axioms. `ExerciseComparison` and the reused `ExplanatorySymmetry.acting`
+model already depend on `propext`; the dependency is present in the stored
+proposition, even before selecting a proof. Its result therefore uses the
+repository's exact permitted Mathlib set (`propext`, `Classical.choice`,
+`Quot.sound`), as the existing explanatory-symmetry comparison does. The
+measured dependency is only `propext`. This corrects the initially too-strict
+result configuration without altering the frozen statement, proof or model.
+No philosophical premise is introduced as an axiom; this certificate does not
+serve an argument against an intuitionist's withholding of excluded middle.
+
+At world 0, `unexplainedAct` retains `acting.arena`'s whole ontology,
+truth conditions and existence-fact assignment. The actual contingent act
+`.member 0` and actual contingent outcome `.target` are the same distinct
+facts as before. The act-to-outcome and direct source-to-outcome reasons
+remain. The only removed edge is the necessary source's reason for
+`.member 0`. The source and every other fact keep their truth conditions.
+This is a precise intervention on one represented explanation, not an
+assertion that metaphysical reasons can be freely recombined.
+
+| Test at world 0 | Original `acting.arena` | `unexplainedAct` |
+| --- | --- | --- |
+| Actual act and target, both contingent | Yes | Yes |
+| Act and direct source admitted as target reasons | Yes | Yes |
+| Actual act has a reason | Yes | No |
+| Every contingent fact has a reason | Yes | No |
+| Exact contingent-existence token PSR through `existenceView` | Yes | Yes |
+| Explanation necessitates its effect throughout the selected scope | No | No |
+
+`existenceView` is an explicit narrow adapter: a token about a bearer
+counts precisely when that bearer's existence fact is an admitted reason
+for the target bearer's existence fact. It does not translate every kind
+of adequate explanation into an existence token. The experiment therefore
+exhibits an actual gap between existential coverage and contingent-fact
+coverage in the reused vocabulary. It does not silently broaden E to
+acts, propositions or every contingent feature of an existent.
+
+The model has **two necessary sources** (`some true` and `some false`) and
+a contingent bearer (`none`); the act fact is not itself another concrete
+bearer in that domain. It includes admitted reasons, not a production
+relation, intellect, will, a proof of agency or the same divine individual
+in every role. Its reason assignments are factive at the relevant uses,
+but their adequacy remains open. One cannot identify this interpretation
+with classical theism, or infer that the original's source-to-act edge
+already solves the free-choice problem. A label on an edge supplies no
+such warrant.
+
+The philosophical gain is a precise extra obligation. A source-to-product
+existential explanation may remain intact while the actual exercise is
+unexplained under a broader standard. To claim an ultimate explanation
+covering that exercise, a proponent must supply its reason or defend the
+scope of a stopping policy. A nonnecessitating reason can be a legitimate
+answer if its actual explanatory direction and adequacy have substantive
+warrant. The same allowance and same demand apply to a necessary
+impersonal source. Neither side may demand determining contrast from its
+rival while accepting mere admitted reason coverage for itself.
+
+The companion restriction result is expressly about **determination**.
+`DeterminesFact` requires an actually obtaining condition which entails
+the target throughout accessible worlds where it obtains. If that
+condition is only a function of necessary restriction truths, it cannot
+determine a contingent target. `CompleteTruthFixed` excludes contingency
+of every represented fact but does not establish a single numerical world
+or an exhaustive representation of complete metaphysical possibilities.
+This reuses `HistorySelection.EvidenceOnly`; it is not a theorem that
+necessary reasons cannot explain contingent effects nonnecessitatingly.
+The advisory tactic sweep closes `restrictionBoundary` after unfolding
+and leaves `exerciseComparison` unresolved; both have hand-written Lean
+proofs. The former is a short structural boundary, not a newly established
+universal metaphysical PSR.
+
+**Current assessment.** The completed test supports keeping E, all-fact
+coverage and D distinct. It strengthens the explicit burden on an account
+which promises to explain both creation and the actual creative exercise,
+without settling whether a genuine agent explanation meets that burden.
+The moderate provisional preference for E and suspension about universal D
+remain as above. The broader comparison now grants perfect containment;
+see [existential inheritance and the six-worldview comparison](no-foundation-law-chaos.md#existential-inheritance-under-perfect-containment-2026-11-24).
+
+**Next unresolved test.** Connect this same exercise and outcome to a
+substantive productive-supply interpretation and to reasons carried by
+the same bearer; then evaluate the adequacy of its actual exercise at a
+nonnecessitating standard, with a matching impersonal candidate. Existing
+#942 results use different witnesses. No such bridge follows merely from
+this model's existential coverage or its admitted reason edges. The
+absence of that jointly warranted interpretation is the present blocker;
+rerunning the completed edge-removal test would not address it.
+
+### Actual productive exercise and the output-dependence test (2026-11-24)
+
+This continues the preceding next test, using baseline
+`b53683fda10350756d43a740296e86e264edd9fb`. The selected root-facing targets
+remain the existential PSR `608a262d-08fe-4dfd-9413-67e2ecf35b84`, its
+BX1/BX2 route to B2 `8a8d00e9-12b6-4cf0-b662-431cc4addd49`, and the
+same-bearer intellectual/volitional interpretation. The immediate question
+comes from [the practical-adoption investigation, §22](optimal-creation-choice.md#22-assessment-and-revision):
+can adoption genuinely guide this recipient's production if it is wholly
+dependent on that product? The new work tests the **productive dependency**
+in that objection. It does not repeat the preceding reason-edge deletion,
+infer agency from a selection table, or supply an unproved simplicity bridge.
+
+#### The two-sided claim which can actually be tested
+
+Fix source n, its actual operation o, the adoption role a, and the
+particular recipient's realization x. Operation and adoption have the same
+bearer n; x has the distinct recipient as bearer. The new vocabulary is
+[`ActualExerciseExplanation`](../../TruthCore/Explanation/ActualExerciseExplanation.lean),
+with the [batch specification](../../specs/actual-exercise-explanation.toml).
+It reuses `JointGroups.Exercise`, `DerivativeJointPower.Supply/Trap`,
+`ExerciseContribution.Step/Credit`, `Ontic`, and the shared
+`CausalityFrame`. No predicate is defined to mean “adequately explained.”
+
+| Certificate in `TruthCore.Results.Explanation.ActualExerciseExplanation` | Statement | Result |
+| --- | --- | --- |
+| `productiveCut` | `3a189449-ff46-497d-aced-e32deb01c760` | `08c4864c-8d48-4270-a21e-da87f43f80a4` |
+| `matchedComparison` | `140bca03-3ff5-4f3f-ba54-e4fea8f8d777` | `07a1a262-7645-47b7-9bd8-a9a1939d8656` |
+| `outputBypass` | `ceccf0e3-ac69-4ad5-ba16-506ca73b76c9` | `83d0e838-cfd4-4249-9cc5-620f19bc6321` |
+
+`OutputFounded m I a x` states four precise conditions: a and x are not
+independently supplied by I; every actually exercised supplying record for
+a needs x among its contributors; every such record for x needs a. These
+are requirements within **each** alternative, not a requirement that every
+available alternative be taken. The source may contribute too. With the
+record “o AND x supply a,” o is an additional conjunct. It does not replace
+the retained x prerequisite with an alternative route.
+
+The `productiveCut` theorem constructs the set {a, x} as a borrowing trap
+and applies the existing `DerivativeJointPower.trap_obstruction` to its
+two members. Neither has Supply under this standard. This is a narrow
+reuse application, not another proof of the general trap theorem. Its
+new role is to make the proposed adoption objection testable on the same
+actual exercise while checking the relevant restorations.
+
+Crucially, the interpretation is narrower than “a is extrinsic” or “a's
+description mentions x.” A semantic dependence can help individuate what
+an action is without being an input that produces that action. Nor does
+metaphysical grounding automatically coincide with the contributors of a
+productive exercise. Applying this result to a claim of grounding requires
+the further argument that the alleged grounding supplies an indispensable
+productive prerequisite **at this explanatory scope**. The formal theorem
+does not provide that bridge. It assumes neither temporal succession nor
+well-foundedness of every causal relation.
+
+#### Matched controls: actual support, not an available capacity
+
+The three interpretations in `Matched.Comparison` use exactly the same
+two worlds, occurrence function, event indices, bearers and actual world.
+The source exists and its operation occurs in both worlds. The particular
+recipient, adoption role and product event occur in the actual world
+only; the other world remains populated by the same source. Every actual
+supplying record has at least one contributor. The original two records
+are retained throughout: o AND x supply a, and a supplies x.
+
+| Actual record structure | Source path-credit for x | Supply under the stated independent basis | What changes |
+| --- | --- | --- | --- |
+| Circular records alone | Present | Absent; `I = {o}` | Every incoming route retains the mutual prerequisite |
+| Source-only route to a admitted, but not exercised | Present | Absent; `I = {o}` | A possible/allowed alternative is recorded; it makes no actual contribution |
+| Source-only route to a actually exercised | Present | Present; `I = {o}` | An independent productive alternative enters the pair |
+| Source-only route directly to x actually exercised | Present | Present; `I = {o}` | x is supplied independently of a, then can support an output-dependent a |
+| Original circular records; a also accepted as independently supplied | Present | Present; `I = {o, a}` | A direct-exercise stopping commitment changes the basis, without adding another event |
+
+The first three rows are `matchedComparison`; the fourth is
+`outputBypass`; the fifth is a separately exposed conjunct of
+`matchedComparison`. The two positive record controls retain the original
+cycle. The test therefore does not dismiss a whole account merely because
+its membership graph contains a cycle. What matters here is an actually
+supported alternative or an independently supplied contribution, under the
+selected standard. Conversely, merely naming a source, adding it as a
+contributor, or admitting a route is not that contribution.
+
+The shared frame interprets actual cause-of-esse credit by the existing
+nonempty contributor paths, and the existential-token adapter admits a
+circumstantial source token exactly when there is distinct-bearer actual
+credit for the recipient. Every one of the first three interpretations
+satisfies the exact local existential-token PSR and B2 on this
+interpretation. The circular one still lacks Supply. This exposes a
+specific limit of such a proposed adapter: path credit preserves the
+particular source, exercise and recipient, but an upstream path alone does
+not pay all the prerequisites of a joint record. The result does not
+discharge B2 or PSR in reality. The causal-credit interpretation itself
+still needs the warrant listed in its existing definition `7b20df90`.
+
+Necessary source existence is distinct from the actual exercise of the
+direct record. In the positive direct-adoption row, o is present in the
+alternative world while a and x are absent. Thus actual Supply is not
+scenario sufficiency. The direct record is explicitly **not** jointly
+sufficient over the entire world set. This is not a hidden weakened
+necessitarian explanation: the allegedly collapsing premise is precisely
+the promotion of the actual source's contribution to a world-invariant
+sufficient condition for the same directed exercise or same effect.
+The existing [same-act and strict-efficacy results](selected-effect-bridge-462.md)
+already govern that stronger package; no new collapse theorem is claimed.
+
+#### What the product bypass does and does not answer
+
+The output bypass is a substantive limit on the original objection.
+Every actual record supplying a still needs x, yet both have Supply,
+because an independent actual source route first supplies x. The
+two-sided obstruction fails at “every product supplier needs adoption.”
+Consequently the inference from output-grounded adoption **alone** to
+failed productive supply is invalid in this interpretation.
+
+That does not establish the requested intentional explanation. A source
+could actually produce x, after which an output-relative description of
+the source is true. Such a description may be accurate without being the
+practical specification under which the source acted. The productive
+account can succeed while a proposed explanation by antecedent rational
+guidance remains unsupported. Conversely, an exercise could be genuinely
+guided by a specification even if the truth of the description “successful
+producer of x” depends on x. The success-description and the operative
+specification are different explanatory roles. The [independently
+specified fulfillment test](optimal-creation-choice.md#12-the-practical-measure-test-a-stronger-candidate-than-output-matching)
+therefore remains relevant after production is supplied.
+
+The resulting test for the same n, a and x is more exact. Identify the
+source's apprehended distributive specification independently of which
+product happens to occur, and identify its actual, nondeviant role in
+production. Then ask whether x is an indispensable input to **that role's
+operation**, or merely to a true output-relative description. In the first
+case, check every real product route for dependence on that role; the cut
+applies only if both directions and the absence of independent exercise
+are warranted. In the second case there is no cut merely from semantic
+dependence, but the actual directive role still needs an account. No
+invented choosing-to-choose event follows from either analysis.
+
+The first-order existential scope remains fixed. In these controls n
+and the recipient are beings; adoption is a role-event of n, not an
+additional being. The existential-token PSR quantifies the former carrier.
+A demand for a substantive explanation of the actual practical relation
+therefore does not automatically add another existence-token obligation,
+or require an earlier choosing event. Extending E to every actual
+relation or exercise is an additional explanatory-scope commitment.
+
+#### Direct exercise, explanatory reasons and the alleged regress
+
+`exerciseBasis` keeps the same source, events and records and permits a
+itself as independently supplied. The product then has Supply. This is a
+precise direct-exercise option, not a proof that the option is adequate.
+The existing constructor name `Supply.intrinsic` means independently
+supplied contribution in this selected explanatory context. It does not
+mean a new metaphysical intrinsic accident of n, and it does not infer
+necessary occurrence from necessary existence.
+
+A regress of decisions requires an additional thesis: every actual
+exercise must be put into exercise by a further distinct decision or
+productive event. Neither the joint-supply rules nor an ordinary rational
+reason imposes that thesis. Reasons can specify why an agent does
+something and the content under which it does it; their explanatory role
+need not be another efficient production of the will. This is an analyst
+option already distinguished in the [necessary-act source investigation](selected-effect-bridge-462.md),
+not a new historical attribution. An actual direct exercise can be offered
+as a primitive, with explicit conditions and defeaters, rather than being
+defined as a further event caused by an earlier decision.
+
+This permission is symmetric. If a directly exercised personal source is
+allowed to stop the productive regress, a necessary impersonal producer
+may offer its direct exercise on the same terms. Conversely, if explaining
+the actual exercise requires more than the primitive's content and the
+offered reasons, both accounts must supply that explanation. Requiring a
+further determining event only from the impersonal rival would not be a
+discriminator. Requiring one from both is a stronger explanatory standard
+whose warrant remains a substantive question, not a theorem of PSR's
+existence-token formulation.
+
+#### Warrant and the strongest impersonal alternative
+
+The positive reason for the cut is limited and clear: an account offered
+as deriving an actual contribution from other supplied contributions
+cannot finish that derivation by presupposing that same still-unsupplied
+contribution. The formal test handles all represented alternatives and
+joint requirements, so it does not mistake an extra necessary contributor
+for completion. Its application depends on the prior classification of
+the roles as **wholly derivative**. A view taking the whole exercise or
+one constituent as primitive rejects that classification rather than
+contradicting the theorem. The control preserves this reply openly.
+
+The strongest impersonal candidate here is a necessary concrete producer
+with its own actually exercised power, a constrained range of permitted
+effects, and an independently productive, nonnecessitating exercise. Its
+restriction is not offered as a mathematical law that creates its own
+instances. Actual productivity is a primitive or supported commitment,
+just as it is in the personal proposal. The remaining contrast is whether
+the range and particular exercise are rationally guided by apprehended
+contents, or obtain through a noncognitive productive nature. Neither
+`Supply` nor a necessary-source label discriminates those interpretations.
+
+| Same criterion and scope | Personal direct-exercise proposal | Necessary impersonal producer |
+| --- | --- | --- |
+| Actual productive contribution | Must be independently exercised, or otherwise supplied | Same requirement |
+| Necessary source versus contingent exercise | Source necessity alone does not settle exercise | Same distinction |
+| Product-dependent explanatory role | Two-sided indispensable dependence triggers the cut | Same test |
+| Primitive or cumulative warrant | Eligible if its content and actual application are defensible | Equally eligible |
+| Rational explanation of this exercise | Needs source apprehension and nondeviant practical direction | A noncognitive candidate need not claim this; an intrinsic teleological candidate must articulate its own norm-guided alternative |
+| Complete determining contrast | Not supplied by necessary reasons which permit alternatives | Not supplied by necessary restrictions which permit alternatives |
+| Compatibility with strong simplicity | Still needs genuine nonintrinsic operative adoption, or a revised simplicity premise | Still needs a warranted relation between fixed necessary nature and contingent exercise |
+
+Ordinary productive activity supplies prima facie motivation for treating
+actual exercise as more than bare co-occurrence; intentional activity also
+motivates a distinction between working under a specification and merely
+matching it. These grounds are not observations of a necessary simple
+creator, nor a demonstration that an impersonal ultimate producer is
+impossible. The formal controls add a discriminating prerequisite test,
+not independent evidence for those cosmological extrapolations.
+
+#### Horizontal reuse: actual self-understanding does not yet adopt this specification
+
+The named horizontal candidate has now been inspected at its actual Lean
+types, rather than being left as a general request for an agency theory.
+The relevant existing modules are
+[`WholePowerPerfection`](../../TruthCore/Causality/WholePowerPerfection.lean)
+and [`IntentionalExemplarExtension`](../../TruthCore/Causality/IntentionalExemplarExtension.lean),
+with their existing Solution helpers. Attempt `8e3a7c52` records the
+immanent-primary-object investigation and its still-open interpretation
+burdens. These helpers do not have registered result/Comparator records
+at this baseline, so this reuse audit does not promote them to separately
+certified corpus edges.
+
+| Existing content | What the exact same-bearer type gives | What is absent for the present bridge |
+| --- | --- | --- |
+| `IntrinsicSelfKnowledge` and `intrinsicSelfKnowledgeFromWisdom` | A content about n, true of n, actually apprehended by n and cognitively grounded; the derivation retains wisdom/capacity, self-exercise and grounding premises | No content D about x is thereby selected or made operative in production |
+| `ImmanentSelfPresence` and `intrinsicSelfKnowledgeFromImmanentPrimaryForm` | Under its separate open principles, n's actual understanding has its own immediate form, primarily about n, apprehended by that same n | Self as the primary object does not determine which creature-directed specification is practically adopted |
+| `EffectExemplarCoverage` plus `CognitivelyTakesUpExemplar` | `understandsCausedEffectsFromSelfAndExemplars` supplies true, grounded apprehension by n of a content about each x already assumed actual and caused by n | The coverage premise uses x's actuality and causation as inputs; it neither covers all unproduced alternatives nor says that this content governed x's production |
+| `necessaryRootUnderstandsGroundedEffects` | Preserves the same given actual necessary root and, through `RootToEsseCauseAt`, obtains the preceding cognition for its actual grounded effects | No new root, cross-world identity of practical content, actual choice or directive operation is inferred |
+| `SelfKnownGoodIsRepresented` and `possessedGoodRestFromSameSource` | Under recognition, calibration and availability, an available response of resting in the possessed good is ranked above ignoring it | Availability and rank do not select or perform a creature-producing response |
+
+Two exact scope restrictions matter. First,
+`SelfCapacityExercisedOrPotent` applies to a content **about the source
+itself**. It cannot be instantiated as if every possible creature-making
+capacity must be exercised. Under the existing single-referent reading,
+`otherBeingNeedsOtherContent` requires distinct contents for distinct
+source and recipient. Second, the exemplar result's `Grounded` is a
+specified cognitive-grounding relation; it does not say that the output
+is a productive prerequisite of the cognition, and it does not prove the
+opposite. The content/apprehension parameters are world-free in these
+fixed-context statements. Their use at one w must not be silently read as
+cross-world intrinsic invariance, or as a model of varying grounded
+cognition under one invariant intrinsic actuality.
+
+The strongest available positive argument is therefore a **composition
+proposal with a specific remaining seam**. Independently actual immanent
+self-understanding could ground the source's knowledge of its productive
+power and intelligible specifications without borrowing that cognition
+from an already produced signal. Knowledge of all its powers or of
+unproduced specifications would itself need a further coverage premise:
+the existing self-knowledge conclusion only supplies some true self-content.
+Under the exemplary-coverage and uptake
+premises, the same source can also genuinely apprehend an actual effect's
+content. The expressive/distributive interpretation developed in the
+[particularity argument](optimal-creation-choice.md#21-a-narrower-constructive-particularity-argument)
+then supplies a possible account of intentionally producing this x under
+an adopted role, without identifying x as an already existent object
+before making it. Together these give a positive subject, content and
+production architecture. They do not yet imply its missing practical
+relation: **this apprehended D is actually operative as n's own standard
+in this production of x**. Knowing one's power, apprehending D and
+producing an instance of D are not the same claim as exercising power
+under D as one's practical measure.
+
+The substantive intrinsic-orientation objection targets precisely that
+seam. A subject can understand D and an incompatible E, know both are
+eligible, and yet practically adopt one rather than the other. What is
+actually adopted distinguishes its agency even when the repertoire and
+general end are the same. The earlier ordinary intention/error comparison
+gives a reason to distinguish this orientation from mere successful
+output: a performance may fail the actual intention while matching
+another known description. Those ordinary cases do not establish that
+every intentional source needs a new intrinsic determination, but they
+support the rival's demand for a real source-attributable practical
+orientation rather than an output-selected label.
+
+The positive reply remains that actual direction could specify the one
+source's exercise relationally without supplying a further intrinsic
+actuality. The fixed own form and multiple understood contents make the
+subject/content side of that proposal intelligible; they do not prove
+that the practical role can vary nonintrinsically. To use that reply here,
+one must defend the operative practical relation with the nonaccident and
+fulfillment conditions intact, and then assess its productive dependency
+using the two-sided cut and bypass controls. The horizontal audit thus
+locates the missing bridge **after actual cognition and before
+content-governed production**, not at a generic “has intellect” label.
+No new theorem duplicating the existing self-knowledge composition is
+needed to expose that boundary.
+
+#### Integration reuse: the will-versus-chance bridge (#1941)
+
+The integration refresh inspected merged #1941 at main
+`72b65088093c6c237f148bc7319a475ee4619c56`: the [will-versus-chance
+note](will-versus-chance.md), exact `WillVersusChance` vocabulary and
+Solution, and their result records. This supplies a relevant conditional
+bridge beyond the preceding self-cognition helpers. It changes which
+part of the practical question remains open, without changing any of the
+three frozen productive-support statements above.
+
+| Exact reuse | Contribution to the present same-source question | Boundary |
+| --- | --- | --- |
+| `oneIntellectualPowerGivesWilledGiving`, result `b5b84276-2b13-459e-9f59-a3d083f52cc3`, conclusion `5c1aba17-d224-49fd-a31c-728a54ac63a9` | If n has HAS_INTELLECT_1 and `OnePower`, then will following intellect, will as a rational power and giving as an exercise of n's own power make **that giving by n** an exercise of a rational power | The theorem identifies the exercised power with n's rational power; it has no argument for a specification D, apprehension of D, or D's directive role in this giving |
+| `actualAbsenceHolderGivesByWill`, result `963e9689-42c0-4056-b519-684bd37ab23d`, conclusion `fdd2b1cf-503b-4241-aaa1-2e4a06db5723` | Applies the previous conclusion to the same withholding holder under its intellect, one-power and invariant-set-up premises; the result is exercise-level willed two-way giving | Applying this to an independently selected existential root requires identifying that holder with the root; the conclusion neither supplies that identity nor the separate creation-by-will `Wills` relation |
+| `willVersusChanceControls`, result `ec6627bf-e955-4532-8ee5-9345fd54fa9f`, laws 5, 11 and 13 | The rational/non-rational flip preserves the other overlay data; DNP_inv is classically exactly absence of CHANCE_3 at invariant sources; one power, CHANCE_3, intellect, will following intellect and will as a rational power are jointly inconsistent | The first two facts do not independently warrant rational classification; the third makes the relevant independent intellect and simplicity evidence consequential |
+| The same controls, laws 8–10 and 14 | Necessary source existence, factive giving, invariant set-up and set-up necessitation yield necessary recipients; withholding excludes that necessitation irrespective of rational classification | Set-up invariance alone does not make the source's actual giving necessary; a varying intrinsic state is a different option whose explanation remains open |
+
+The first result is more than the availability of a cognitive capacity.
+Under its open bridges, the power exercised in the actual giving belongs
+to the very source whose intellect supplies will; `OnePower` identifies
+these powers. Thus an objection that the source's cognition could remain
+idle while a *different* power produces the effect is blocked under that
+premise. The existing intellectual-chancer control shows the precise
+alternative when one power is dropped. The result can be reused directly
+for an already fixed n once HAS_INTELLECT_1 and `OnePower` are established
+for n; using the withholding-holder result instead retains the additional
+holder/root identification burden.
+
+This does not yet establish that **this D** governs the exercise.
+`AgencyFrame.Rational` is a primitive classification of a power, with the
+stated interpretation of inclination following intellectual apprehension
+of the good. `GivesBy` is `GivesTo` conjoined with `Exercises`; neither
+contains an object of apprehension, a represented practical reason, an
+adopted specification, or its nondeviant role in production. Power identity
+can establish which power is exercised without establishing the content
+under which a particular exercise occurs. The remaining task is therefore
+more precise than connecting intellect to *any actual exercise*: it is
+connecting the same source's rational-power exercise to the independently
+specified D as its practical measure. This respects the positive force of
+the conditional bridge while retaining #1737's intention/fulfillment test.
+
+The overlay also does not construct `DerivativeJointPower.Supply` from
+mere giving. Our matched frames deliberately interpret `GivesAt` through
+actual contributor-path credit, which the circular control preserves
+despite failed source-rooted Supply. Treating that field as a genuinely
+supplied production needs the separate productive interpretation already
+tested above. Classifying its exercised power as rational cannot by itself
+remove an indispensable productive cycle. Conversely, the productive
+bypass can succeed while a rational-power classification still leaves the
+operative D unspecified. No new joint possibility model of all these
+premises is claimed here.
+
+This also refines the rival comparison. Under one power and the stated
+will bridges, a CHANCE_3 source cannot simultaneously retain the source's
+intellect (law 13). The impersonal rival must reject at least one member
+of that bundle; independent support for its members would count against
+it. Structural parity at the will step therefore does not insulate the
+rival from the horizontal intellect case. But DNP_inv
+(`55892476-1e99-444b-a6bd-5430b0f115c4`) supplies no additional independent
+discriminator merely by being another formulation of no CHANCE_3 in its
+scope. The new note's matched comparison explicitly leaves contrastive
+explanation untyped and good-directed order untested. It contains no
+type-level relation specifying which practical reasons govern a particular
+giving. Primitive or cumulative warrant remains eligible for
+both sides; the practical and simplicity bridge must be assessed on its
+content, and the independently supported intellect premises on theirs.
+
+**Current assessment.** The productive dependency objection has a precise,
+useful conditional core, but its one-sided “effect-grounded, therefore
+circular” version is too strong. Actual independent product supply can
+coexist with an output-dependent adoption role. Actual independent
+adoption supply can give the intended direction without a further
+decision event, while its rational character and metaphysical
+admissibility remain open. The direct primitive reply is available to
+both personal and impersonal sources. Retain the earlier moderate
+provisional preference for adequate existential explanation E over an
+unexplained exception, and suspension about universal determining
+explanation D. This test gives no new reason to rank the personal and
+strongest impersonal producer at the level of actual rational adoption.
+Merged #1941 now supplies a reusable conditional route from the same
+source's intellect and one power to rational-power exercise; its warrant
+and the further relation to this operative D remain distinct questions.
+
+**Precise next dependency.** Under the fixed strong-simplicity commitment,
+provide or defeat an account of the same source's *operative apprehension*
+of an independently specified distributive content in its production of
+this recipient. It must distinguish the actual guidance from both a
+merely available specification and a true description supplied after the
+product, while not hiding an additional contingent intrinsic actuality.
+The existing self-understanding and exemplar-uptake helpers supply
+conditional cognitive precursors, not this practical bridge or an
+independently warranted modal realization of it. Reuse #1941's
+`oneIntellectualPowerGivesWilledGiving` for the exercised-power step once
+its premises hold of this same n; do not duplicate it or count DNP_inv
+as separate evidence against the strongest impersonal rival. An account which
+meets it would reopen the personal comparison; a demonstrated intrinsic
+dependence of adoption would redirect the branch to the existing
+simplicity/efficacy alternatives. An equally warranted impersonal direct
+exercise keeps parity at the productive level. Another source-existence,
+path-credit, reason-token or output-matching table would not address this
+remaining dependency.
+
+**Verification and self-sweep.** The new vocabulary and complete Solution
+elaborate locally without warnings. The three certificate propositions and
+`productiveCut` use no axioms; `matchedComparison` and `outputBypass` use
+`propext` and `Quot.sound`. Their Comparator configurations respectively
+permit no axioms and the repository's exact Mathlib allowance
+(`propext`, `Classical.choice`, `Quot.sound`); permitted choice is not an
+actually used dependency. Before hand proofs, the advisory sweep tried
+all three frozen statements: each was unresolved, with no target error
+or likely-transcription flag. Its preliminary Lake import build failed
+in the isolated worker setup, separately from those probe outcomes.
+The corpus check, batch regeneration check and bundle audit pass locally.
+Binding, Comparator/NanoDa, generated imports and final hosted gates
+remain coordinator-owned; local elaboration is not their replacement.
+Independent semantic challenge of the complete proposed outcome is pending.
+
+The self-sweep keeps named model properties tied to their actual
+conjuncts and assignments, distinguishes source from role-event, preserves
+the same recipient, and states the unused empty shared fields. No actual
+cognition is inferred from cause names, and no all-world cognitive
+invariance is inferred from fixed-context parameters. Direct primitive
+exercise is eligible for either rival; output dependence is rejected only
+under the two-sided prerequisite bundle. No source attribution is added.
+The intended formal root-premise effect is none: these controls supply
+no adequate-reason coverage, adequacy-to-token, BX1/BX2 application or
+same-bearer intellect/will bridge. The coordinator's computed
+`frontier-diff` on the integrated head remains the authoritative delta.
 
 ## Research attempts citing this note
 

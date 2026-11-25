@@ -1,0 +1,10 @@
+{
+  "id": "cc2eb03f-9993-4c06-978d-346d82df4662",
+  "label": "Same-bearer absence inheritance without recombination (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "6f730349-8225-4749-9420-47b1ac546753",
+  "rule": "Reuse the base absence witness and compose the existing modal requirements",
+  "meaning": "A witness world lacking b cannot contain an x that requires that same b there. The single witness works for the whole selected class. Transitive composition preserves the same world, identity and accessibility standpoint. Essential interpretation uses the explicit EssenceAbsenceBridge. All philosophical conditions remain internal hypotheses of the universal certificate.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

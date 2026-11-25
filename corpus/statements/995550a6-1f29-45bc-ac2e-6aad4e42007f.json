@@ -1,0 +1,10 @@
+{
+  "id": "995550a6-1f29-45bc-ac2e-6aad4e42007f",
+  "label": "Authentic positive records require true content throughout their admitted observation fibers",
+  "paraphrase": "For every input class, observation map, positive-record predicate and historical-content truth condition, positive records are sound on all admitted inputs iff the inputs are contained in SafeInitial, iff every positive observation fiber intersected with the admitted inputs lies wholly in that record's content-truth set, and iff positive-fiber authenticity is uniform and each inhabited positive fiber has an authentic witness. With all records included, this uniformity is equivalent to the existing EvidenceOnly condition on the admitted subtype and its entire observation-equality vector. A uniformly false fiber is uniform but fails soundness and the authentic-witness condition. Empty fibers pass vacuously; no actual input, fallible warrant or metaphysical admissibility is supplied.",
+  "lean_declaration": "TruthCore.Epistemology.InitialHistoryAuthenticity.Authenticity",
+  "definition_ids": [
+    "dd7b91ea-5284-4558-bac5-7a0759843b0c",
+    "c8c357e8-33d1-5468-858d-78f8493e353b"
+  ]
+}

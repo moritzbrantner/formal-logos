@@ -1,0 +1,10 @@
+{
+  "id": "9f1fc402-b2a2-4919-9f8b-8f3552ae74da",
+  "label": "Positive record authenticity characterized by admitted fibers and authentic witnesses (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "995550a6-1f29-45bc-ac2e-6aad4e42007f",
+  "rule": "Observation equality substitution, fiber witness transport, and EvidenceOnly reuse",
+  "meaning": "Locates the exact initial-admissibility condition needed for universal positive historical truth under any observation map, including a fixed deterministic evolution followed by a readout. Separates uniform authenticity from truth by the necessary authentic-witness conjunct. Composes existing SameEvidence and EvidenceOnly meanings instead of restating their selector-impossibility theorem. The primitive content relation's historical interpretation and warrant for the admitted restriction remain OPEN; no skeptical or PSR conclusion follows.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

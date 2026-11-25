@@ -1,0 +1,10 @@
+{
+  "id": "7ce53400-c40c-46e6-baad-00d1041dae7f",
+  "label": "Restore a source-only product route while retaining product-dependent adoption (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "ceccf0e3-ac69-4ad5-ba16-506ca73b76c9",
+  "rule": "Construct product supply by the direct record, then adoption supply by its joint source-and-product record",
+  "meaning": "The restored actual route targets the product. It constructs Supply before the adoption role is supplied, although every actual adoption supplier still needs that product. This falsifies the proposed shortcut from output-dependent adoption alone to a productive borrowing trap, while leaving whether that adoption is a rational guide unresolved.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

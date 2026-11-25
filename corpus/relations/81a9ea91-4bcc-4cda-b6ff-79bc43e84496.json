@@ -1,0 +1,11 @@
+{
+  "id": "81a9ea91-4bcc-4cda-b6ff-79bc43e84496",
+  "label": "Exact recovery strengthens truth-preserving record transmission",
+  "subject_kind": "statement",
+  "subject_id": "c7c0ccda-a540-43f5-bad5-1e9b25eb2ca7",
+  "predicate": "strengthens",
+  "object_kind": "statement",
+  "object_id": "636afc90-2c2c-4054-adca-9680d35b9e98",
+  "verification_result_id": "7b9429c8-d870-4cf4-9904-554042cb3e69",
+  "note": "The sole-premise transportWeakens argument certifies the direction. No warrant ranking follows from logical strength."
+}

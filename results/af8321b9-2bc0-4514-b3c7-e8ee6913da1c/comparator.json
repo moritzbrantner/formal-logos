@@ -1,0 +1,9 @@
+{
+  "challenge_module": "TruthCore.Results.Explanation.ExistentialInheritance.Challenge",
+  "solution_module": "TruthCore.Results.Explanation.ExistentialInheritance.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Explanation.ExistentialInheritance.resourceInheritance"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}

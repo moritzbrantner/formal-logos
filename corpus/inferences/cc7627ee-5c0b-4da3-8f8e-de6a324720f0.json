@@ -1,0 +1,10 @@
+{
+  "id": "cc7627ee-5c0b-4da3-8f8e-de6a324720f0",
+  "label": "Actual copying and complete record provenance yield exact target recovery (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "12c60e82-fa46-434a-9c92-ec22ccdabcfd",
+  "rule": "Identify the actual causal token with its target code and apply the domain round-trip law",
+  "meaning": "A nonmental sufficient process bundle with the same causal coverage and transport standard. CopiesTarget constrains actual production relative to an independently given target; it is not assumed record soundness. The theorem derives exact-value record truth, while access to a genuine historical target and the mechanism's applicability remain OPEN. The explicit no-plan/no-attitude witness tests functional parity, not a complete impersonal worldview.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}
