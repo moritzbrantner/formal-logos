@@ -718,10 +718,9 @@ assessing actual proponents, not pinned source attribution. Scoped,
 modest and strengthened variants must not be conflated. Connector search
 found the indicated overlaps; it is not an exhaustive novelty check.
 
-The shared application is the proof of `NotEveryPropositionFails`
-(`b41427d3`) considered in #1987: a subject compares instantiation of
-universal falsity at True with an invalid attempt to instantiate at
-False and produce a witness of False. The comparison separates truth,
+The shared test uses the proof of `NotEveryPropositionFails` (`b41427d3`). Its imported existence proof supplies `True` and `True.intro`. Given a holding proposition P and its witness hP, universal falsity would supply a negation of P, which contradicts hP. Instantiating universal falsity at False is valid and gives only ¬False. To obtain a contradiction there one would also need a witness of False. A proposed subject who explains this difference could supply evidence of their grasp. The proof records no such observation. [Prior application in #1987](orphan-graft-map.md)
+
+The comparison separates truth,
 validity, psychological execution, available evidence, actual
 understanding, rational force and the subject's existence. F1
 `c425f0c5`, F6 `f56b2ee7`, assertion realization `1edfc1d1`, and
@@ -786,17 +785,10 @@ Distinguish a counterexample to the criterion, a conditional
 incompatibility, self-undermining and a merely explanatory deficit.
 A failing rival is not by itself a proof of its preferred alternative.
 
-Recommended first slices: logical psychologism and conventionalism
-(one shared rule-application task, separate predicate meanings),
-epistemic expressivism (same-content embedding), and equal validity of
-epistemic frameworks (same-task comparison). The first two should
-not be merged into scientism. A later slice can reuse the results for
-the epistemic authority/perfections question. Only register corpus
-relations or results after matching the exact endpoints and required
-verification/review. No new floor, statement, result, refutation or
-proof graph edge is asserted by this intake. No computed frontier
-change is claimed. A full local checkout and independent challenge
-are still required for a formal delivery.
+Two follow-up investigations now use the same countervaluation: with p false and q true, affirming the consequent takes true premises to a false conclusion. [Logical psychologism (#1990)](https://github.com/moritzbrantner/formal-logos/pull/1990) tests whether acceptance or restricted performance recovers fixed-content validity. Its remaining question is whether a specified functional account selects the intended truth conditions. [Logical conventionalism (#1991)](https://github.com/moritzbrantner/formal-logos/pull/1991) distinguishes permission, correct execution and soundness. Its remaining questions concern error within an unchanged practice and reasons for an actual dissenter. The shared countervaluation supplies one piece of evidence.
+
+The next candidates from this intake are epistemic expressivism under embedding of the same content and equal validity of epistemic frameworks in the same task. The ten entries are research leads. The documented connections use the existing F1, F6, realization and population premises at their stated scopes.
+
 
 ## Research attempts citing this note
 
