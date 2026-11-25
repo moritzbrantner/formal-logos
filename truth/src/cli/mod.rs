@@ -77,7 +77,7 @@ pub const HELP: &str = "Usage: truth [--root PATH] [--json] status
        truth [--root PATH] [--json] evidence TARGET [--issues-from FILE] [--limit N]
        Research retrieval commands accept --full-evidence for complete node content and all edges.
        truth [--root PATH] [--json] issues --from FILE [--for ID]
-       truth [--root PATH] [--json] brief (TARGET | --question TEXT | --assessments-for ID,ID,...) [--issues-from FILE] [--limit N]
+       truth [--root PATH] [--json] brief (TARGET | '#ISSUE' | --question TEXT | --assessments-for ID,ID,...) [--issues-from FILE] [--limit N]
              [--frontier-json FILE] [--frontier-root STATEMENT]
        truth [--root PATH] [--json] novelty (TEXT | --statement STATEMENT) [--issues-from FILE] [--limit N]
              [--frontier-json FILE] [--frontier-root STATEMENT]
