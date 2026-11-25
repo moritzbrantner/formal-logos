@@ -339,8 +339,7 @@ account claims universal reasons for adoption.
 
 For a bounded self-application control let A accept a standard S and B
 not accept S. Fix the thesis t (the same content about conventions).
-Consider the exact **local-only** authority claim: S-based warrant to
-believe t obtains only for an audience that accepts S. Let the
+The **local-only** thesis gives a necessary condition for even a pro tanto S-based epistemic reason: `SBasedReason(B,t) → Accepts(B,S)`. A weaker thesis restricting only sufficient warrant permits a nonadopter to have some S-based evidence for t while reasonably suspending judgment. Let the
 conventionalist's offered argument be S-based and let B reject S.
 Then the claim that this S-based argument supplies B an epistemic
 reason to believe t is incompatible with the local-only claim for B.
@@ -419,7 +418,7 @@ the finite controls alone do not discriminate those accounts.
 | Framework-relative semantic validity / logical pluralism | Survives indexed cases and pools; not two incompatible verdicts of an identical full consequence relation. Common-pool joint closure adds C under the exact #1084 bundle. |
 | Primitive socially constituted rule grasp and correction | Serious surviving global grounding proposal. Can distinguish error within a practice and not require further interpretations. Its adequacy for determinate truth-directed content and its normative ground remain open. |
 | Local/goal-relative adoption authority | Survives; can grant thin F6 and actual reasons among aiming subjects while withholding authority for nonadopters. |
-| Universal rational authority solely from recipient-local acceptance | Incompatible when it claims S-based authority for an actual nonaccepting B under its own only-if. A shared meta-standard or independent reason is a different, potentially surviving account. Reasonless descriptive truth is not refuted. |
+| Universal rational authority solely from recipient-local acceptance | Incompatible when it grants an S-based pro tanto reason for t to an actual B who rejects S while requiring acceptance of S for that very reason. A shared meta-standard or independent reason is a different, potentially surviving account. Reasonless descriptive truth is not refuted. |
 
 Proposed assessment: a purely arbitrary adoption-sufficiency account
 does not explain truth-directed logical correctness in the fixed
@@ -482,59 +481,15 @@ or a root premise discharge is delivered.
 
 Full supplemental finite command above executed and returned
 `finite convention witnesses passed`. No new Lean module, result,
-definition, argument, source or relation is registered; no premise
-change intended (no computed frontier comparison available here).
+definition, argument, source or relation is registered; the computed root premise comparison against the integration base reports no change.
 The exact old theorem types and existing countermodels are cited
 rather than repeated as new certificates. No new source reading is
 asserted. This draft's prose/type self-sweep checks fixed vs changed
 model class, preservation vs permission, determination vs generated
 warrant, local vs preference-independent vs categorical reason and
-each reuse boundary. Independent semantic challenge is **not done**.
+each reuse boundary. The attempt records the independent review and the scope of its dissenter correction.
 The new finite examples are checked only by the displayed exhaustive
 Python enumeration; they are not bound corpus results or certified
 interpretation profiles.
 
-Resume in a prepared canonical checkout of PR #1991; follow current
-AGENTS.md and installed conventions, coordinate with the originating
-worker/other lane, and run the prescribed preflight/issue briefs
-on current main before promoting any candidate to a record:
-
-```sh
-python3 scripts/worker_env.py --check
-cargo build --locked --release -p truth
-for n in 1989 932 1084; do
-  python3 scripts/issue_snapshot.py "$n" > "/tmp/truth-$n.json"
-  target/release/truth brief "#$n" --issues-from "/tmp/truth-$n.json"
-done
-for s in c425f0c5-6c3f-5115-ba04-3e61bd049e3b f56b2ee7-c69e-5e3b-85b0-e671d907ba58 2ca463c2-bd1f-5a13-a395-0e2c57a5ad8f 7c056d7f-d0b5-5315-bc54-068dcb618858 5218e5c6-d9fc-5ddb-9861-42e1bd00aef7 a132eba0-a11b-53da-a901-8d290dccf850; do
-  target/release/truth related "$s"
-  target/release/truth dossier "$s"
-  target/release/truth brief "$s"
-  target/release/truth semantics "$s"
-done
-target/release/truth novelty "Adoption alone does not ensure truth preservation of arbitrary rules on fixed interpreted contents"
-for result in WITTGENSTEIN-INTERPRETATION-REGRESS REGRESS-SCHEMA-PACKAGE CORRECTION-CRITERION-EXACT-FACTORIZATION PLURAL-CLOSURE-BOUNDARY LOGIC-CASE-NON-CONTRADICTION-NOT-DENIABLE EPISTEMIC-NIHILISM-SELF-UNDERMINING; do
-  target/release/truth context "$result"
-done
-git diff --check
-target/release/truth check
-python3 scripts/bundle_audit.py
-target/release/truth frontier-diff --base "$(git merge-base origin/main HEAD)"
-```
-
-The canonical worker wrapper is
-`python3 scripts/worker_env.py -- <command> <args...>`.
-Use semantic preflight (`truth semantics --premise … --conclusion …`)
-on exact existing endpoints of any proposed argument after reuse
-resolution. If a genuinely new result is needed, use the existing
-batch/frozen Challenge and zero-axiom or Mathlib policy, generate
-records and imports, then `lake build`, `target/release/truth bind-check`,
-`scripts/verify-result.sh <RESULT-ID>` (Comparator/NanoDa), and the final
-CI gates. Reuse unchanged verified inputs; do not weaken the existing
-gate. No such commands were run on this checkout-less session.
-The next discriminating step is the full-practice grounding test and
-the cross-standard reason bridge, with a fresh worker and independent
-review of the actual final proposed outcome; a new proof of the
-already-checked structural laws adds nothing. Keep #932 open and
-#1084 closed; this is an unmerged draft continuation of the intake
-#1989. No automatic F1/F6 status change.
+The first connector session supplied the finite diagnostic. The integration checkout reproduced it, checked the existing endpoints and validated the corpus record. The live question for #932 is whether a specific practice can explain corrected error with its meaning fixed and give a dissenter reason for the same task. #1084 supplies the checked common-closure theorem.
