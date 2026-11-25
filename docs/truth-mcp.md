@@ -23,7 +23,7 @@ Deployed at `https://mcp.moenarch.com/mcp` (health: `/healthz`).
 | `research_inspect` | `truth inspect ID` |
 | `research_history` | `truth issues --from OPEN-ISSUES --for ID` |
 
-Call `research_synthesis` with no arguments for the current God-existence case. For a particular question, pass `{"question":"Does one source give being to every actual recipient?","limit":2}`. Each matching judgment names its assessed statements. Passing one of their IDs as `target` brings up its support routes and their shared premises.
+Call `research_synthesis` with no arguments for the current God-existence case. For a particular question, pass `{"question":"Does one source give being to every actual recipient?","limit":2}`. Each result identifies a scoped judgment or an earlier investigation and names the associated statements. Passing one of their IDs as `target` brings up its support routes and their shared premises.
 
 Every result starts with its binding: repository commit and commit time, the
 exact command, and the issue snapshot's capture time and size, or "unknown"

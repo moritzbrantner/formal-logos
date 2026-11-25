@@ -103,7 +103,35 @@ pub fn matches(corpus: &Corpus, question: &str) -> rusqlite::Result<Vec<Value>> 
     let mut ranked = Vec::new();
     for row in rows {
         let (id, score) = row?;
-        let entry = entries.remove(id.as_str()).expect("indexed attempt");
+        let mut entry = entries.remove(id.as_str()).expect("indexed attempt");
+        let prose = [
+            string(&entry, "scope"),
+            string(&entry, "assessment"),
+            string(&entry, "summary"),
+            string(&entry, "path"),
+            &entry["targets"]
+                .as_array()
+                .into_iter()
+                .flatten()
+                .map(|s| string(s, "paraphrase"))
+                .collect::<Vec<_>>()
+                .join(" "),
+        ]
+        .join("\n");
+        let matched = query.matched(&prose, &BTreeMap::new());
+        let (covered, total) = query.content_coverage(&matched);
+        if total >= 3 && covered < 2 {
+            continue;
+        }
+        entry["matched_terms"] = json!(
+            query
+                .items
+                .iter()
+                .zip(&matched)
+                .filter(|(_, found)| **found)
+                .map(|(item, _)| &item.text)
+                .collect::<Vec<_>>()
+        );
         ranked.push((score, entry));
     }
     // Prefer an explicitly scoped judgment when it is a comparably close

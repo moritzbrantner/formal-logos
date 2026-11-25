@@ -1800,3 +1800,31 @@ fn question_synthesis_follows_the_assessment_scope_and_keeps_disagreement() {
     );
     std::fs::remove_dir_all(root).unwrap();
 }
+
+#[test]
+fn a_dedicated_prior_investigation_outweighs_an_incidental_current_match() {
+    let root = fixture("question-before-structured-assessments");
+    write(&root, "corpus/attempts/prior.json", &json!({
+        "id":"d0000000-0000-4000-8000-000000000093","label":"Evil and emotivism",
+        "statement_ids":[GOAL],"summary":"An emotivist can still press an internal objection from evil.",
+        "blocker":"What does the target concede?", "outcome":"succeeded"
+    }).to_string());
+    write(&root,"corpus/attempts/incidental.json",&json!({
+        "id":"d0000000-0000-4000-8000-000000000094","statement_ids":[OPEN_PREMISE],
+        "current_assessment":{"scope":"The problem of calendar dating","assessment":"A dated record survives.",
+        "statement_ids":[OPEN_PREMISE],"review":"accepted_qualified"}
+    }).to_string());
+    let corpus = Corpus::load(&root).unwrap();
+    let (result, text) = super::assessment_search::report(
+        &corpus,
+        "Does emotivism dissolve the problem of evil?",
+        1,
+    )
+    .unwrap();
+    let matches = result["matches"].as_array().unwrap();
+    assert_eq!(matches.len(), 1);
+    assert_eq!(matches[0]["kind"], "prior_investigation");
+    assert!(text.contains("internal objection from evil"));
+    assert!(!text.contains("accepted_qualified"));
+    std::fs::remove_dir_all(root).unwrap();
+}
