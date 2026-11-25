@@ -417,6 +417,8 @@ The observer-adjusted vacuum-density comparison answers a different,
 feature-level question. [Self-origin comparison](../principle-parity-challenges.md#first-worked-test-universe-versus-omnipotent-being-pp-01) ·
 [Vacuum-density result](fine-tuning-selection.md#1569-which-vacuum-energy-decade-does-an-observer-find)
 
+[Reviewed assessment and next test](../../corpus/attempts/d735348a-03f9-4a7e-8c48-323392ed704e.json)
+
 ## Research attempts citing this note
 
 - [Locate discriminating input in agenda selection and compare motivated choice](../../corpus/attempts/d735348a-03f9-4a7e-8c48-323392ed704e.json)

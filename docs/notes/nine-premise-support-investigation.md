@@ -415,6 +415,13 @@ the premise needed by the sustaining-cause argument.
 
 ## November 25 handoff
 
+The reviewed dispatch experiment for #1570 distinguishes following a reason
+from correctly reporting it afterward. Changing the recipient’s need also
+moves a responsive impersonal selector. To distinguish the proposed origins,
+the next test asks what warrants saying the giver of a particular knower’s
+existence acted for the sake of that knower’s capacity for error correction.
+[Comparison and controls](explanatory-symmetry-742.md#did-the-reason-guide-production-of-this-order-1570) · [Reviewed assessment](../../corpus/attempts/d735348a-03f9-4a7e-8c48-323392ed704e.json)
+
 The reviewed research on `research/persistence-and-divine-unity` ends at
 `101546617c42be0f990d4ebd0e4f727afaa48da6`. The individual attempts
 record the reviewed revisions for the museum comparison, unity, ancestral
