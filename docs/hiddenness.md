@@ -1,6 +1,6 @@
 # Divine hiddenness and nonresistant nonbelief
 
-This is the distinct argument of [#252](https://github.com/moritzbrantner/truth-core/issues/252), within [#143](https://github.com/moritzbrantner/truth-core/issues/143). It concerns missing access to conscious relationship, even where no suffering is alleged. That separates its immediate subject matter from the intense-suffering signature used for [Rowe's argument](rowe-evidential-evil.md), not from every broad problem of evil. It can be treated as a special case of deprivation and divine permission if the relational good, its being due, and the permission norm are made explicit. The [2026-11-17 mapping](#hiddenness-as-a-special-case-of-evil-2026-11-17) below states those conditions. Neither a generic answer to evil nor an argument for a first cause automatically supplies them.
+This is the distinct argument of [#252](https://github.com/moritzbrantner/truth-core/issues/252), within [#143](https://github.com/moritzbrantner/truth-core/issues/143). It concerns missing access to conscious relationship, even where no suffering is alleged. That separates its immediate subject matter from the intense-suffering signature used for [Rowe's argument](rowe-evidential-evil.md), not from every broad problem of evil. It can be treated as a special case of deprivation and divine permission if the relational good, its being due, and the permission norm are made explicit. The [2026-11-17 mapping](#hiddenness-as-a-special-case-of-evil-2026-11-17) below states those conditions. Neither a generic answer to evil nor an argument for a first cause automatically supplies them. [Original PR #277](https://github.com/moritzbrantner/formal-logos/pull/277)
 
 ## The strongest argument encoded here
 
@@ -315,3 +315,7 @@ this dated continuation and the coordinator conclusions found no substantive
 defects; no repair round was required. This supersedes the pending-review
 wording of this dated section. See the [integration record](notes/unique-feedback-explanation-311.md#reviewed-owner-reply-integration-2026-11-17)
 for verification, source scope and unchanged formal status.
+
+## Research attempts citing this note
+
+- [Actual hiddenness scope and explicit stage-one identification](../corpus/attempts/49e02139-da0f-458a-aae7-374b60309f7c.json)

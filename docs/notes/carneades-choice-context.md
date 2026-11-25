@@ -111,7 +111,7 @@ responsibility or actual physical laws. Definition and disambiguation records
 link these distinctions and the reused output semantics.
 
 Dossier inspected for `STMT-SELECTED-EFFECT-BRIDGE-CERTIFICATE` before work;
-`ATTEMPT-CARNEADES-CHOICE-CONTEXT` records the attempt and rejected readings.
+[`ATTEMPT-CARNEADES-CHOICE-CONTEXT`](../../corpus/attempts/carneades-choice-context.json) records the attempt and rejected readings.
 The shared persistent Lean service returned no diagnostics on the complete
 combined module/proof content, SHA256
 `48daeb35137b873750348f07c63667dc5b63ebe1f1730be71e96039a0d5602b0`,

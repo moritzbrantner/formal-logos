@@ -5,7 +5,7 @@ finite record, even after mathematical presence is represented explicitly.
 This is the new conditional discriminator. It establishes neither real concrete
 instantiation nor the impossibility of a justified, fallible law belief. The
 actuality of this order and independent epistemic access remain separate OPEN
-bridges for #735/#613; #467's why-this-actual-history question remains OPEN.
+bridges for #735/#613; #467's why-this-actual-history question remains OPEN. [Research record](../../corpus/attempts/law-actuality-743.json)
 
 ## Argument and exact new consequence
 
@@ -347,3 +347,7 @@ and `frame.PriorSimply` are unused placeholders, not substantive
 assignments. No issue acceptance is closed, no source attribution added, and
 the intended repository-computed frontier change is zero. Final proof/build
 and independent semantic review evidence belong to the linked PR.
+
+## Research attempts citing this note
+
+- [Beginningless existential provenance: replaceable anchors versus the positive actuality input](../../corpus/attempts/history-actuality-provenance-1801.json)

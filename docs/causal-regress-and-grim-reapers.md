@@ -5,7 +5,7 @@ Second Way claim interpreted as well-foundedness of `CausesAsCaused`. The curren
 corpus has a sourced reading but no independent proof of this claim. The result
 `AQUINAS-ST-I-Q2-A3-SECUNDA-VIA` uses it as a premise; it does **not** establish
 it. Likewise, an infinite chain of temporal causes *per accidens* is not the
-same claim as an essentially ordered chain exercising power *per se*.
+same claim as an essentially ordered chain exercising power *per se*. [Original PR #299](https://github.com/moritzbrantner/formal-logos/pull/299)
 
 ## 1. The no-first-deadline Grim Reaper test
 
@@ -1344,7 +1344,7 @@ profile-switch model would duplicate those controls.
 A materially different test is whether dependence in possession of an essential
 power reaches dependence of its bearer. The existing
 [essential-power investigation](notes/borrowed-exercise-741.md#does-derivation-of-an-essential-power-reach-the-bearer)
-and attempt `8eee1ef4-39f2-4cc8-8e31-e7dde1134c0a` already isolate the exact
+and attempt [`8eee1ef4-39f2-4cc8-8e31-e7dde1134c0a`](../corpus/attempts/essential-power-underivedness.json) already isolate the exact
 unmet node: externally grounded possession must be the SAME constitutive
 actuality partly grounding the bearer's existence, with composition of those
 grounding links and correspondence to the selected existential-support relation.
@@ -1636,3 +1636,9 @@ does a locally finite past entail a well-founded simultaneous
 grounding relation. The strongest rival permits source-free global causal
 structures or chronologically unbounded ancestry without a first event,
 and survives this compact-time theorem.
+
+## Research attempts citing this note
+
+- [Bounded #310 proof-search/reuse audit at main49b4589aa6744c91a6bc9adec13215d0e7245c9d](../corpus/attempts/actuality-fixedpoint-reuse-310.json)
+- [Graded foundation: positive argument tree and infinitist and coherentist rivals](../corpus/attempts/259de206-63df-48c3-bad1-b77755b21a5a.json)
+- [Typed analyst sibling constrains separate essential/historical relations: explicit…](../corpus/attempts/per-se-historical-series-distinction.json)

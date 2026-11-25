@@ -7,7 +7,7 @@ change, predictions fail, local conditional explanations are false, or every
 practical choice is unreasonable. Conversely, a source, a necessary being or
 a unique complete mathematical history does not supply an agent's entitlement
 to the laws. This advances the #736 → #735/#613 investigation without closing
-a #143 premise.
+a #143 premise. [Research record](../../corpus/attempts/ultimate-explanation-epistemic-737.json)
 
 ## The end-to-end argument and its strongest challenge
 
@@ -511,3 +511,7 @@ independently admissible history.
 declaration, source-attributed corpus claim, proposition, result, graph edge or premise.
 The two original analyst conditionals and their review are recorded in PR #1904.
 They have no Lean binding. The computed frontier comparison is linked in the PR.
+
+## Research attempts citing this note
+
+- [Apparent-past equivalence, calibration bootstrapping and the warrant for scientific laws](../../corpus/attempts/82b6c542-3f01-41eb-8a3d-b3b8b34d6315.json)

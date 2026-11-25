@@ -1,7 +1,7 @@
 # Showcase: naturalism, spatiotemporality and the caused universe (#1109)
 
 This page applies the defeat-by-consequence method of #1007 to naturalism as a
-complete worldview, in the format of `docs/showcase-verificationism.md`.
+complete worldview, in the format of `docs/showcase-verificationism.md`. [Research record](../corpus/attempts/ATTEMPT-NATURALISM-NO-EXISTING-CAUSE-1117.json)
 
 - **Counted defeats: none.** A defeat counts only if all its premises are
   established (#999). Every consequence-defeat here needs at least one open
@@ -350,7 +350,7 @@ deferred. Powers need a separate bearer/power-content interpretation; the
 mere word “instance” does not provide it. All these results are zero-axiom,
 with no new source claim, floor item, counted defeat or root-route closure.
 The substantive attempt and rejected readings are persisted in
-`ATTEMPT-NATURALISM-LAW-REPRESENTATIONS-1109`. The mathematical and additional
+[`ATTEMPT-NATURALISM-LAW-REPRESENTATIONS-1109`](../corpus/attempts/naturalism-law-representations-1109.json). The mathematical and additional
 logic/reason questions beyond the thin matched control remain active.
 
 ### 4.4 Pure-set representatives, foundation and object-level presence
@@ -385,7 +385,7 @@ location applicability remain OPEN. The theorem applies to represented pure
 sets only; it says nothing about every number, all mathematical entities, or
 sets with physical atoms. Existing source claims and the singleton `{2}` anchor
 are unchanged. The precise rejected inferences and remaining gaps are in
-`ATTEMPT-NATURALISM-SET-REPRESENTATIVES-1109`.
+[`ATTEMPT-NATURALISM-SET-REPRESENTATIVES-1109`](../corpus/attempts/naturalism-set-representatives-1109.json).
 
 All three results depend on `propext` and `Quot.sound` through the approved
 Mathlib quotient/foundation implementation. They are not zero-axiom results.
@@ -417,7 +417,7 @@ adequacy is claimed. The inherited candidate constructor `two` labels the
 old singleton anchor; it is not a proof about the number2 or every set. This
 is conditional compatibility inside the chosen logical signature, not a
 counted defeat of naturalism, a refutation of dialetheism, or a new floor
-approval. See `ATTEMPT-NATURALISM-MATCHED-LOGICAL-FLOOR-1109` for the exact
+approval. See [`ATTEMPT-NATURALISM-MATCHED-LOGICAL-FLOOR-1109`](../corpus/attempts/naturalism-matched-logical-floor-1109.json) for the exact
 rejected transfers and remaining gaps.
 
 ## 5. Status summary
@@ -461,3 +461,7 @@ Only if all of these were established would all four variants fall.
 
 **Frontier:** no change. Neither U nor the bridge is a root-route premise, and
 no route leaf gained a naturalist rival; see the PR's `frontier-diff`.
+
+## Research attempts citing this note
+
+- [Logic-first continuation of #1109 showcase §4, attribution deferred](../corpus/attempts/naturalism-mereological-contrasts-1109.json)

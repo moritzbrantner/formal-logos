@@ -1,5 +1,7 @@
 # Research checkpoint: actuality entails being in esse
 
+[Original PR #1918](https://github.com/moritzbrantner/formal-logos/pull/1918)
+
 - **Repository** `moritzbrantner/formal-logos`
 - **Date** 2026-11-24
 - **Target** `7067553d-cad9-5d79-b6b2-912e35051530`, `ActualityOnlyInsofarAsBeingReading`
@@ -480,3 +482,7 @@ The inlet opens on the first pulse and stays open. Both the parent and a neighbo
 For the `aba6f4e1` argument, a positive sufficient condition is available. Identify the features that exhaust *x* under the chosen reading, and assign each a required grade on the shared scale. Suppose *x*'s knowability is at most every upper bound of those grades, and a **single actual knowing** of *x* by *s*, at degree *d*, reaches them all. Then *x*'s knowability is at most *d*, which yields `ComprehendsByMeasure M s x`. The calculation uses only this half of a least-upper-bound calibration. Separate acts of knowing at a succession of ever higher grades need never attain their upper bound. What gives the proposal force in the division case is that the organization provides specific intelligible requirements, and an effective order can explain one of them all the way to its realization. To support the universal weak bound, one must justify exhaustion and calibration, realize a knowing at the required grade for each actual participant, and apply the existing bridges from act to knowability and from actual knowing to the knower's act on the same esse scale. The two routes through the inlet supply no measure of all actuality. [Calibration test](../../Scratch/sole-esse-giver/DivisionHistory.lean) · [Measured comprehension](../../TruthCore/Causality/ComprehensionByMeasure.lean) · [Weak participant bound](../../corpus/statements/aba6f4e1-bbf1-4aaa-ac1c-dead4efbef09.json)
 
 **Provisional assessment.** Knowledge of giving and genuine knowledge of this daughter's constitution survive both tests. Knowledge of a particular secondary origin has additional warrant where the source apprehends an effective selection that distinguishes that origin. For this division the equality of the resulting daughter profiles limits inference from the outcome. It supplies no evidence that an actual giver lacks origin-sensitive understanding. The next issue for total giving is whether the source supplies the efficacy of whichever trigger actually succeeds, even when the order in which the secondaries act is governed locally. For the cognitive bound, determine whether knowing the daughter's particular production belongs to fully explaining its received actuality, and what justifies grading such an explanation at the daughter's whole knowability. Merely asking another question about the daughter's history supplies neither answer.
+
+## Research attempts citing this note
+
+- [Test source self-knowledge against two productive histories of the same onset](../../corpus/attempts/228f289f-9ab9-460d-8294-baf7fd756510.json)

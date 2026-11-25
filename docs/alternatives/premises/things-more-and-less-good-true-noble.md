@@ -7,3 +7,7 @@ notes: link the existing metaethics rivals
 ---
 
 Floor check (#497 first-closure hunt, `ATTEMPT-FIRST-CLOSURE-HUNT-497`): no `alternative_to` relation is recorded, so an `observation` marking would pass `corpus.py` on the stating claim alone. It is not made. Grades of ontological truth and goodness are a theoretical reading (`DISAMB-TRUE`), not a manifest empirical fact, and the rivals above deny them. Recording those rivals would reopen any such marking.
+
+## Research attempts citing this note
+
+- [First-closure hunt, over the 49 root-path open premises at the merge of #503](../../../corpus/attempts/first-closure-hunt-497.json)

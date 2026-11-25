@@ -1,5 +1,7 @@
 # Belief truth and successful behavior: a bounded Plantinga-motivated control
 
+[Research record](../../corpus/attempts/plantinga-fitness-truth-boundary.json)
+
 ## Investigation and source evidence
 
 The downstream question is whether successful action supplies a sufficient bridge
@@ -87,3 +89,7 @@ no errors, only `#print axioms` information listing `propext`, `Quot.sound`.
 The request composed the exact definition and solution contents with the local
 import replaced by its content. Final delivered-file build/binding/Comparator/
 NanoDa remain the PR CI authority. Frozen Challenge bytes were preserved.
+
+## Research attempts citing this note
+
+- [Global thesis variants, scope and defeater transmission](../../corpus/attempts/global-thesis-scope-and-defeaters.json)

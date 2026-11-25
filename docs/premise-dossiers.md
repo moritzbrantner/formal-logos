@@ -63,6 +63,10 @@ the original merged evidence and preserve its limitations.
   during `truth check`. PR references are syntax-checked and link to this
   repository; checking their remote existence is outside the offline validator.
   Neither a PR reference nor an attempt outcome is proof verification evidence.
+  When the delivery number is known, add it to the attempt that records the
+  finding. Keep earlier deliveries when a later PR extends the same attempt.
+  Link the attempt's JSON file from the note section reporting its findings and
+  use that section's anchor in the current assessment when one is recorded.
 
 IDs are stable. Correct an inaccurate attempt record in place; preserve earlier
 failed approaches as separate attempts when the approach genuinely differs.

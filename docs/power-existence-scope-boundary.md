@@ -3,7 +3,7 @@
 `POWER-EXISTENCE-SIMPLICITY-SCOPE-BOUNDARY` is an original, finite
 countermodel result, not an interpretation of Aquinas, a positive argument for
 God, or a proof of metaphysical possibility. Its role is to identify exactly
-what the current finite power-grounding result does **not** prove.
+what the current finite power-grounding result does **not** prove. [Original PR #323](https://github.com/moritzbrantner/formal-logos/pull/323)
 
 ## Two models
 
@@ -2182,3 +2182,17 @@ conditional rationale and found one allocation P2. The repair above separates
 application from downstream connection and names the root-reaching receipt
 target; it adds no graph edge or philosophical premise. Unchanged semantic and
 mechanical evidence is reused; final integrated CI remains pending.
+
+## Research attempts citing this note
+
+- [Certified a fork for actual exercise under a supplied power profile, with regress and circle…](../corpus/attempts/borrowed-exercise-741.json)
+- [Cluster reassessment of dependence, simple-priority and grounding leaves of the prima via (#1751)](../corpus/attempts/9d71e28d-d492-4797-9221-45fa517a6e6b.json)
+- [Cluster reassessment of immaterial-intellect and director-recognition premises (#1751)](../corpus/attempts/386cc16c-8b34-416a-ab16-30bf3eaf949c.json)
+- [Inspected related search and dossiers for all seven retained inputs](../corpus/attempts/necessary-first-being-20261031.json)
+- [Integration inventory for #319 at 0f1059ba; inspected all five premise dossiers and existing typed…](../corpus/attempts/regress-simplicity-integration-reuse.json)
+- [Materialized and read full aquinas st i q104 a1 en and newly pinned complete author articles…](../corpus/attempts/conservation-existential-inertia-rival.json)
+- [On the user-requested research/lean-existential-self-actualization-20261031 branch…](../corpus/attempts/existential-self-actualization-reuse-20261031.json)
+- [Reread materialized plato phaedo 99 and full aquinas st i q104 a1 en; read Phaedo98 and Aristotle…](../corpus/attempts/existential-support-reality-correspondence-20261031.json)
+- [See docs/power-existence-scope-boundary.md, Same-witness noncomposition](../corpus/attempts/underived-noncomposite-connection.json)
+- [Shared-vocabulary inventory for the owner-prioritized four-area investigation at ae89a385](../corpus/attempts/foundation-interface-reuse-inventory.json)
+- [Witness-preserving composition of existing #495/#608 with #633](../corpus/attempts/underived-common-source-composition.json)

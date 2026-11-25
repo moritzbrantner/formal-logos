@@ -7,7 +7,7 @@ statements, or two vocabularies for one concept. Bridges never merge statement
 IDs (invariant 6). Each is a result with an inference, an argument, a frozen
 Challenge, a Solution and a Comparator config under
 `TruthCore/Results/Bridges/`; new vocabulary, if any, lives in
-`TruthCore/Bridges/`.
+`TruthCore/Bridges/`. [Original PR #405](https://github.com/moritzbrantner/formal-logos/pull/405)
 
 A bridge connects statements; it does not by itself defend its premises.
 Structured `transcription` fields distinguish instantiations and assembly from

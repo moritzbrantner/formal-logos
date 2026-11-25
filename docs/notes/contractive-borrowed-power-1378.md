@@ -399,7 +399,7 @@ bearer's own degree by a least upper bound, the giver ranks at least as high
 as that participant. This is positive warrant for a comparison of **individual
 bearers** under its premises. Could those same comparisons justify covering
 the total exports of a grounded intermediary? [Participant bound and its four
-premises](maximum-definition-fork.md#when-does-what-is-communicated-fix-the-givers-own-degree-of-esse)
+premises](maximum-definition-fork.md#when-does-what-is-communicated-fix-the-givers-own-degree-of-esse) [Assessment record](../../corpus/attempts/1975ad3e-ebdf-4095-a422-4753c9ae2326.json)
 
 **Keep the production and the bearers fixed.** A relay receives from a
 principal and gives to two recipients. Both upstream bearers possess a low

@@ -1,5 +1,7 @@
 # Maximality, greatest represented degree and strict supremacy
 
+[Research record](../../corpus/attempts/maximum-definition-fork-audit.json)
+
 > Source-fidelity update (2026-11-23, #1849): the source-attributed Metaphysics II.1 claim was narrowed; `5a948c37` remains an open analyst biconditional with only a `supports` relation. See [source-fidelity-1849.md](source-fidelity-1849.md). Historical status counts in older sections of this research snapshot are not current frontier reports.
 
 The source-shaped `GreatestDegreeCausesAllInGenusReading` and the old open
@@ -309,7 +311,7 @@ section's grades for `9eaa3b6e`, `10cd24ed` and `3c468121`, and the existing
 assessments of `e0088de9` and `cbb068e8`, are reused, not reassessed. No
 theorem, Challenge, claim, statement, definition, relation, closure or formal
 status changes. Earlier sections of both notes stay unchanged under their own
-dates.
+dates. [Assessment record](../../corpus/attempts/d0404154-09b5-45ce-9216-62f3e3bfe7b0.json)
 
 ### (a) Where the leaves enter, and which instances the route consumes
 
@@ -392,7 +394,7 @@ direct option, **O** open with a concrete blocker.
 
 | Leaf | End state | Content (Lean body) and strongest positive warrant | Reason to stop or blocker |
 | --- | --- | --- | --- |
-| `98755509` | P | `MoreIn r x y → deg r y < deg r x`. A meaning postulate of representing the comparative by degree. With `ed766869` and `ac72bbfe` its only content beyond `c11369aa` is acyclicity of each `MoreIn r`, which belongs to the meaning of "more". | Representation postulate. The q.3 a.5 ad 2 boundary that 921d2362 records (no proportioned measure) is not a defeater: the set-valued degree needs no common measure. |
+| `98755509` | P | `MoreIn r x y → deg r y < deg r x`. A meaning postulate of representing the comparative by degree. With `ed766869` and `ac72bbfe` its only content beyond `c11369aa` is acyclicity of each `MoreIn r`, which belongs to the meaning of "more". | Representation postulate. The q.3 a.5 ad 2 boundary that [921d2362](../../corpus/attempts/round3-fourth-way.json) records (no proportioned measure) is not a defeater: the set-valued degree needs no common measure. |
 | `ed766869` | P | `null ≤ deg r y`. A meaning postulate of DEF-NULL-DEGREE (lacking altogether is the lowest standing). | Analytic of the stipulated null. |
 | `ac72bbfe` | P | `null < deg r x → InAct x r`. Analytic under the fixed minimum-standard reading ("what has some heat is hot"). | On a relative-standard reading ("hot" means above a contextual threshold) comparatives do not entail positives. That is a different sense, not a failure mechanism under the fixed meaning. A consumer that read InAct as above-threshold would need a bridge. |
 | `f29a6b53` | P | `InAct x r → MoreIn r y x → ∃ c, c ≠ x ∧ CausesIn c x r`. Stating claim AQUINAS-SCG-II-15-LESSER-HAS-IT-FROM-ANOTHER-CAUSE (SCG II.15 n.3). Reading "alia causa" as a cause distinct from the bearer is the claim's interpretive step. The passage's own contrast motivates it: what belongs to x less than to others belongs to it not "ex sua natura tantum" but "ex alia causa". | Sourced, moderate to strong. The route consumes only the `verum` instance. No substantive objection identified. |
@@ -402,7 +404,7 @@ direct option, **O** open with a concrete blocker.
 | `dc619ad6` | O | `∀ r, GreatestDegreeCausesAllInGenusReading InAct CausesIn r (deg r)`. Supported by q.2 a.3 (greatest-degree reading per DISAMB-MAXIME-ENS). | **Missing bridge, unchanged:** the universal causal reach of a greatest bearer (the 2026-10-31 source-defense audit and owner ledger I). Its strongest positive argument is q.44 participation, which needs the four burdens recorded there. Its scope exceeds the route's use, which is `esse` only. The weaker selected-perfection and at-being siblings exist, but no `strengthens` relation is registered from `dc619ad6`. No new substantive objection: the q.2 a.3 fire illustration is not used as physics, and no established counterexample was found at the represented-degree reading. |
 | `e433b6f5` | P | `InAct x r → InAct y r → deg r y < deg r x → MoreIn r x y`. The bearer-restricted converse calibration. | Strong as a calibration, as for `9eaa3b6e` in slice 2. Its real load is which degree the argument instantiates. |
 | `88b2caf5` | P | Any two bearers of r have a bearer of r at a degree ≥ both. A structural postulate of grading, implied by comparability of bearer degrees. | Moderate at `esse`, where the Thomist hierarchy of kinds is comparable. Weak to moderate at every respect. Its most general warrant (approach to one primary, q.3 a.5 ad 2) presupposes a primary and is not used. Incomparability cases at other respects, such as knowledge, count against it only if no bearer has both, which presupposes the denial of the conclusion. No substantive objection identified. |
-| `efe134d4` | O | `c ≠ x → CausesIn c x r → ParticipatesIn x r`. The analyst's converse of q.44 a.1 ad 1. Attempt 09f03f51 found that no pinned text states it. | **Kept objection to its full scope (new).** Under DEF-PARTICIPATED-PERFECTION ("not through what x is"; non-example "whatever has r through its own essence"), a caused essential perfection is a counterinstance, provided substantial natures are among the respects and producing one falls under CausesIn. A substance has its specific nature through what it is, yet a distinct cause produces it. At `esse` the real distinction makes the instance moderate, and that is the instance the route consumes. Which participation sense is meant (effect participates cause versus not having r through its essence) is unregistered (see (e)). |
+| `efe134d4` | O | `c ≠ x → CausesIn c x r → ParticipatesIn x r`. The analyst's converse of q.44 a.1 ad 1. Attempt [09f03f51](../../corpus/attempts/round4-source-support-unsupported.json) found that no pinned text states it. | **Kept objection to its full scope (new).** Under DEF-PARTICIPATED-PERFECTION ("not through what x is"; non-example "whatever has r through its own essence"), a caused essential perfection is a counterinstance, provided substantial natures are among the respects and producing one falls under CausesIn. A substance has its specific nature through what it is, yet a distinct cause produces it. At `esse` the real distinction makes the instance moderate, and that is the instance the route consumes. Which participation sense is meant (effect participates cause versus not having r through its essence) is unregistered (see (e)). |
 | `9da93cd4` | P | `ParticipatesIn x r → ReceivedIn x r x`. Near-conceptual under participation as "partem capere". The candidate texts In De Hebd. lect. 2 and q.75 a.5 ad 1 are named in 09f03f51; they are unpinned and were not read here. | With the fixed gloss, a subsistent created form has its form through what it is, so it is not a participant there. The q.7 a.2 case below then does not reach this premise. Moderate to strong. |
 | `cdb79aa6` | P | `ReceivedIn y r z → LimitedBy y r z`. Generalizes q.7 a.1–2: form received in matter is contracted, and the esse of a subsistent created form "est receptum et contractum ad determinatam naturam" (q.7 a.2 co., materialized and read in this slice). | Moderate to strong on either reading of LimitedBy (see (e)). No substantive objection identified. |
 | `39a4c28c` | P | `LimitedBy y r z → ReceivedIn y r z`. Generalizes the q.7 a.1 esse reading. | Near-analytic on the **role** reading of LimitedBy (restriction actually imposed by z as recipient). False on the **measure** reading: falling within z's capacity is not being received in z. See package P1. |
@@ -526,10 +528,10 @@ Candidate strength pairs, unregistered:
 | 1 | 117344d0 (SCG II.80 n.13 attacks `3e890700`) | **Kept**, conditional on reading (a) of DISAMB-ESSE-RECEPTION, as in (c). |
 | 2 | Cross-reception audit `1de3bff1` | **Kept (extended).** It was kept against `7030af77` in slice 2. Now it is localized to `f6677834`/`39a4c28c` (P1) and recorded as a kept objection to `f6677834`. |
 | 3 | 09f03f51 source search (no stating text for `efe134d4`, `9da93cd4`, `3e890700`, `f6677834`, `2f6b9eff`) | **Restated** as an absence of source statement. It is not an objection. |
-| 4 | e1807bd1 (7), the non-concurrent profile, in which a universal source does not cause a producer's skill | **Restated** as a non-entailment fact about one interpretation. It is the concurrence question of `791fa216`. |
-| 5 | 1511d8a2 (2): the esse instance does not yield generalized reception and limitation | **Restated** as a scope boundary. |
-| 6 | 98a07968 / review on PR #982: well-founded modes can have a non-well-founded union | **Restated** as the reason `5cda1946` is unattributed. The new q.46 ad 7 objection is distinct. |
-| 7 | 339fab4c: cardinality does not discriminate regress | **Restated.** No objection to `5cda1946`. |
+| 4 | [e1807bd1](../../corpus/attempts/round2-perfection-primacy-rejected-edges.json) (7), the non-concurrent profile, in which a universal source does not cause a producer's skill | **Restated** as a non-entailment fact about one interpretation. It is the concurrence question of `791fa216`. |
+| 5 | [1511d8a2](../../corpus/attempts/causal-maps-batch1-rejected-edges.json) (2): the esse instance does not yield generalized reception and limitation | **Restated** as a scope boundary. |
+| 6 | [98a07968](../../corpus/attempts/ATTEMPT-QUARTA-VIA-GRADES-CAUSAL-ASCENT-341.json) / review on PR #982: well-founded modes can have a non-well-founded union | **Restated** as the reason `5cda1946` is unattributed. The new q.46 ad 7 objection is distinct. |
+| 7 | [339fab4c](../../corpus/attempts/ordering-cardinality-1003.json): cardinality does not discriminate regress | **Restated.** No objection to `5cda1946`. |
 | 8 | Omission controls: 31 hand-written models of the round 3 batch 921d2362, the round 2 and batch 1 models, and the `PerfectionOfBeing` certificate | **Restated.** Each shows a premise is needed in one stated interpretation. None counts against any premise's truth. |
 | 9 | The 2026-10-31 adversarial review: tied or incomparable maxima, and universal causal reach | **Restated** for `dc619ad6`, together with P2. |
 | 10 | Being-not-a-genus attack on `d9fad785` | **Restated** as answered by the broad GENUS_2 reading (DISAMB-GENUS). It does not reach `dc619ad6`. |
@@ -1061,7 +1063,7 @@ maximum forbids the edge. Each God therefore equals the same `m`.
 The proof can use the weaker reading “each God gives esse to every
 distinct bearer actual in esse”: `m`'s actuality is the first conjunct
 of MAXIME_1. Neither reading supplies a God. In particular the argument
-does not license naming an arbitrary maximal bearer God.
+does not license naming an arbitrary maximal bearer God. [Assessment record](../../corpus/attempts/4e4a3c81-3e59-4d2d-82f3-7668e7aa560e.json)
 
 | Route to `33b18ae7` | What supplies the contradiction for distinct Gods? |
 | --- | --- |
@@ -1160,3 +1162,9 @@ that latter test. The next narrower naming test is whether the independently
 defended God-description covers every actual recipient and which premise
 makes a God candidate actual in esse when no maximal witness is given.
 Attribution of the new compositions is deferred.
+
+## Research attempts citing this note
+
+- [Batch certification of eight exploration maps deriving eight bare root-path premises from deeper…](../../corpus/attempts/round2-perfection-primacy.json)
+- [Batch certification of three exploration maps](../../corpus/attempts/causal-maps-batch1.json)
+- [Deriving weak esse adequacy for participants from independently valued intrinsic determinations](../../corpus/attempts/8b5f1332-86a6-4d18-842b-27b88d814901.json)

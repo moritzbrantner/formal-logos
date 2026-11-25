@@ -4,7 +4,7 @@ This investigation advances the explanatory-selection question on #613/#735,
 with an informational discriminator and a stronger global-structure survivor.
 It does **not** establish that an infinite regress is impossible, that an
 ultimate adequate explanation must entail its outcome, or that metaphysical
-incompleteness defeats induction (#737).
+incompleteness defeats induction (#737). [Research record](../../corpus/attempts/explanatory-selection-736.json)
 
 ## Arena and exact new consequence
 

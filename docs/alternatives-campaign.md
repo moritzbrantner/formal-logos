@@ -1,6 +1,6 @@
 # Alternatives campaign (#387)
 
-Closure rule (c) (`docs/corpus-model.md`) closes an open premise when **every** recorded alternative is refuted, and at least one is recorded. Before this campaign the rule had closed nothing. The campaign records, for every open premise on a root path, the strongest rivals actually held in the literature, classifies how each could be refuted, and refutes in Lean where that is cheap and honest. Owner decisions on #387: no `self_evident` markings; strongest real rivals only, no strawmen; rivals that need copyrighted sources wait for bibliographic citations (#378) as candidates, with the statement and the classification recorded now.
+Closure rule (c) (`docs/corpus-model.md`) closes an open premise when **every** recorded alternative is refuted, and at least one is recorded. Before this campaign the rule had closed nothing. The campaign records, for every open premise on a root path, the strongest rivals actually held in the literature, classifies how each could be refuted, and refutes in Lean where that is cheap and honest. Owner decisions on #387: no `self_evident` markings; strongest real rivals only, no strawmen; rivals that need copyrighted sources wait for bibliographic citations (#378) as candidates, with the statement and the classification recorded now. [Original PR #406](https://github.com/moritzbrantner/formal-logos/pull/406)
 
 Classes, as in the issue: **self-application** (the rival undermines itself), **countermodel/inconsistency** (the rival is inconsistent with itself or with other results), **derivation** (the premise can be derived instead), **evidential/abductive** (a comparison of explanations), **not yet attackable** (the note says what is missing).
 
@@ -286,3 +286,7 @@ premise. This documentation change has no premise delta. The initial cycle's
 completion still requires the selected research and this reconciliation to be
 merged with required checks, updated handoff and a final requirement audit; this
 table alone is not a completion declaration.
+
+## Research attempts citing this note
+
+- [Bounded owner-authorized Carneades.org intake at 6926980e](../corpus/attempts/carneades-frontier-source-intake.json)

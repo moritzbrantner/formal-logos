@@ -7,7 +7,7 @@ Its exact original conclusion denies an injective infinite chain of the selected
 `LocalMovedMoverLink`. It does not assert well-foundedness or exclude finite
 cycles. The old `TouchingChainFormsOneReading` instead requires a whole for
 every injective touching chain, including chains unrelated to those links.
-The existing typed source comment already identifies that generalization.
+The existing typed source comment already identifies that generalization. [Research record](../../corpus/attempts/local-contact-composition-scope.json)
 
 `STMT-LOCAL-TOUCHING-MOVED-MOVER-CHAIN-FORMS-ONE` is an analyst weaker sibling.
 Its domain includes the same injectivity and touching conditions plus actual

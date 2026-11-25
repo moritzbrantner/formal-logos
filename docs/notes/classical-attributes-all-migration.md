@@ -4,7 +4,7 @@ Bounded Prompt 3 continuation from main `ea537f38d664ceb21dcc8afc1ab9a4b6b7814d4
 (integrated #728/#729). The prior [assembly audit](classical-attributes-migration.md)
 and its source/proof evidence are reused. The exact before hashes, reviewed hashes,
 record dispositions and limits are in [the inventory](classical-attributes-all-migration.json).
-The explorer shows this same inventory on each of the five scoped result pages.
+The explorer shows this same inventory on each of the five scoped result pages. [Original PR #730](https://github.com/moritzbrantner/formal-logos/pull/730)
 
 ## Brief and exact scope
 
@@ -816,3 +816,8 @@ end Population
 **Assessment.** The empty-name interpretation shows semantic freedom in the primitives. Relabelling alone gives no competing account of where things come from. The affirmative identification has independent content when the same candidate is exhibited as the unique maximal being, cause of the being and perfections of the others, and no constituent of them. The [full-description naming bridge](../../TruthCore/Case/Catholicism/StageOneQuartaVia.lean) (`1ec205ed`) supplies a reason for applying the name to the independently characterized occupant of that role. Each role condition, its selected meaning and their joint realization require separate warrant. A highest-ranked item inside a system could satisfy a comparison while failing universal causal reach or remoteness; the full description makes this a substantive distinction. Where the route instead starts with an underived actual source or a power holder, it must connect that *same source* to the naming conditions, including the appropriate uniqueness. Conditional identification of a holder with a root does not establish those conditions by itself.
 
 I favor the same-witness identification to the extent that this causal description is defended as an adequate criterion for GOD_4 and actually satisfied. The [existing same-witness route](../../corpus/arguments/CATHOLICISM-STAGES-ONE-TWO-SAME-WITNESS.json) uses independently supplied naming and attribute commitments. Invoking a prior proof of `∃ g, IsGod g` can identify which bearer has the attributes; using that move as the original proof that God exists would assume its conclusion. The next decisive check is to trace a proposed underived source to the universal-giver and unique-maximal conditions on one interpretation, preserving the same source through the intellect and will bridges. The local controls require no axioms and add no registered argument. Historical or confessional identification is outside this test.
+
+## Research attempts citing this note
+
+- [Bounded preservation/audit of catholicism stage2 classical attributes at 3cd9545a](../../corpus/attempts/classical-attributes-structure-migration.json)
+- [Fifteen-input same-witness composition](../../corpus/attempts/root-intellect-will-20261031.json)

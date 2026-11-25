@@ -1,5 +1,7 @@
 # Complete-history contrastive controls (#467)
 
+[Research record](../corpus/attempts/history-contrastive-memberwise-omission.json)
+
 The question is whether explaining every member of a contingent complete history
 also explains why that history obtains rather than a genuinely possible rival.
 `TruthCore.Modal.HistoryContrastive` isolates one missing bridge without assuming

@@ -1,5 +1,7 @@
 # What a finite thinker contributes to an idea of infinity
 
+[Original PR #1967](https://github.com/moritzbrantner/formal-logos/pull/1967)
+
 ## The positive content test
 
 A finite thinker can specify **all even natural numbers**. Start a switch in the accepting state and flip it at each mark of a unary numeral. Accept the input when the switch ends in the accepting state. Change only the final instruction to “always accept” and the specification picks out **all natural numbers**. For every proposed bound there is a greater length accepted by both rules whose successor only the second accepts. The two instructions therefore differ over arbitrarily large inputs even though “there is no last accepted input” describes both. The alternating rule conveys a positive structure of membership, including the predicted answer on a fresh input. The Lean companion `finiteRulesDiscriminateAboveEveryBound` checks that contrast. [Solution](../../TruthCore/Results/Causality/CartesianIdeaOfInfinite/Solution.lean)

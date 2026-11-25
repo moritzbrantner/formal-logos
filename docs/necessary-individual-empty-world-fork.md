@@ -5,7 +5,7 @@ the existing necessary-individual quantifier controls. It connects a shared
 foundation across histories with a modal empty-extension fork and a finite
 in-world causal relation. It does not formalize Graham Oppy's writings as a
 source claim: no pinned passage has been materialized for that purpose. Nor is
-either finite frame independently established to be metaphysically possible.
+either finite frame independently established to be metaphysically possible. [Research record](../corpus/attempts/necessary-individual-empty-world-fork.json)
 
 ## Exact intermediate result
 

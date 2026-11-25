@@ -4,7 +4,7 @@ The foundation for #257 uses one shared vocabulary in
 `TruthCore/Greek/Plato/Forms.lean` and five bundles in
 `TruthCore/Comparison/PlatonicForms.lean`. These are independently evaluable
 research readings, not a claim that Plato held every conjunct in every dialogue.
-No bundle entails an incompatibility with Catholicism by definition.
+No bundle entails an incompatibility with Catholicism by definition. [Original PR #278](https://github.com/moritzbrantner/formal-logos/pull/278)
 
 All requested ranges were read from materialized Burnet Greek witnesses at
 PerseusDL/canonical-greekLit revision
@@ -172,7 +172,7 @@ The existing candidates `PARTICIPATION-ESSENCE`,
 `PARTICIPATION-EXEMPLAR-CONTRIBUTION` and `PARTICIPATION-PRIMITIVE` retain the
 decisive selection/constitution, exemplar-contribution and primitive-tie
 questions. No candidate is closed merely because the Phaedo proposes a safe
-answer. `ATTEMPT-PLATONISM-PHAEDO-EXPLANATORY-SCOPE` records the exact source
+answer. [`ATTEMPT-PLATONISM-PHAEDO-EXPLANATORY-SCOPE`](../corpus/attempts/platonism-phaedo-explanatory-scope.json) records the exact source
 reading and rejected shortcuts.
 
 Premise comparison: **no existing premise added, removed or discharged** on

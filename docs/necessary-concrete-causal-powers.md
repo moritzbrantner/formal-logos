@@ -5,7 +5,7 @@ which a literal individual exists necessarily and meets a causal-capacity
 criterion of concreteness. It establishes **formal satisfiability of this
 specified theory**. It supplies no evidence that the worlds are metaphysically
 possible, that the bearer actually exists, or that necessary existence explains
-itself. The conclusion is not a duplicate of #445's quantifier countermodels.
+itself. The conclusion is not a duplicate of #445's quantifier countermodels. [Research record](../corpus/attempts/necessary-concrete-causal-capacity.json)
 
 ## Verified source assessment
 

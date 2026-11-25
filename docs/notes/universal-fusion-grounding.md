@@ -1,5 +1,7 @@
 # Universal fusion, causal externality and grounding
 
+[Research record](../../corpus/attempts/universal-fusion-grounding-boundary.json)
+
 Investigation: #328 / #325, with the open composition-to-dependence interface in
 #319. This is one bounded comparison, not completion of a worldview or issue.
 
@@ -302,7 +304,7 @@ All actual ontology, substance, composition-as-identity, applicability and
 modal/causal assumptions remain open. The existing modal decomposition theorem
 is untouched; its overlap-extensional premise is not independently discharged
 by conditional framework exploration. The successful attempt is recorded in
-`corpus/attempts/supplementation-fusion-1050.json`.
+[`corpus/attempts/supplementation-fusion-1050.json`](../../corpus/attempts/supplementation-fusion-1050.json).
 
 
 PR #1052 explorer-only repair: CI run 42133243925 passed corpus/Lean but the
@@ -448,7 +450,7 @@ modal existence, causation or a necessary being. Those bridges remain OPEN.
 The infinite witness is a Lean model, not a finite configuration registration.
 The frozen Challenge is
 `d0830818cbee155bba53fd73fdac5ca68060dcb238a66fec31d89cca03fe571e`.
-The four precise result records and `ATTEMPT-ATOMLESS-FUSION-PROFILE-1062` retain
+The four precise result records and [`ATTEMPT-ATOMLESS-FUSION-PROFILE-1062`](../../corpus/attempts/atomless-fusion-profile-1062.json) retain
 the proof/evidence boundaries; no source claim was introduced.
 
 ## Full fusion with world-relative actuality (#1071)
@@ -511,5 +513,9 @@ explicit causal-availability exclusion. Against base `7f688818`, root open
 items and routes are unchanged: 90 (30 bare, 18 supported, 42 stated), cheapest
 route cost 31. Final delivered-head CI and current-head review remain required.
 Findings and rejected readings are persisted in
-`corpus/attempts/actual-fusion-profile-1071.json`. Shared policy sourceRevision:
+[`corpus/attempts/actual-fusion-profile-1071.json`](../../corpus/attempts/actual-fusion-profile-1071.json). Shared policy sourceRevision:
 `625cb04ca568aebc8d45c90033e107a05e9bd2a0`.
+
+## Research attempts citing this note
+
+- [Issue #1054; analyst formulations, attribution deferred](../../corpus/attempts/sum1-complementation-1054.json)

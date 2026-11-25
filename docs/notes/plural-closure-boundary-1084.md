@@ -4,7 +4,7 @@ This analyst test isolates one additional bridge in the normativity/collapse
 discussion: require **one and the same selected belief pool** to be closed under
 both consequence relations. It proves a new joint consequence and each omitted
 input's control. It neither proves that this policy is obligatory nor that two
-logics have the same validities. Attribution is deferred.
+logics have the same validities. Attribution is deferred. [Research record](../../corpus/attempts/ATTEMPT-PLURAL-CLOSURE-BOUNDARY-1084.json)
 
 ## Reuse inventory and semantic boundary
 

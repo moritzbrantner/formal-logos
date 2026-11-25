@@ -4,7 +4,7 @@ A map of the verified results that do not reach the root, and of the ways they
 could join a root route. It is a research note, not a tracker. Counts describe
 corpus scale; they are not progress. The grafts implemented with this note are
 in `specs/nar-grafts.toml` (Lean: `TruthCore.Causality.NarGrafts`,
-`TruthCore.Results.Causality.NarGrafts`); attempt `e0253e6b`.
+`TruthCore.Results.Causality.NarGrafts`); attempt [`e0253e6b`](../../corpus/attempts/e0253e6b-0086-4081-a79e-a4de8f7b1ab2.json).
 
 Baseline: `main` at `61acfd56`, `truth --json orphans --by module|family`:
 1,676 of 2,481 verified results disconnected (1,420 non-transcription, 256

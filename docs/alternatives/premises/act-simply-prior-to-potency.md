@@ -280,3 +280,7 @@ is not declared exhausted. No statement, argument, result, definition, source
 claim, approval or proof status changes; **no premise change**. Existing proof
 checks remain reusable on unchanged inputs; offline record checks and final
 publication CI do not certify this philosophical judgment.
+
+## Research attempts citing this note
+
+- [Reuse NecessaryFirstBeing.necessaryFirst under its unchanged five inputs, preserving its actual…](../../../corpus/attempts/strict-priority-pure-act-20261031.json)

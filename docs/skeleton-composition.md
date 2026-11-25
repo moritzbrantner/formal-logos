@@ -4,7 +4,7 @@ The designated root proof is now
 `CATHOLICISM-FROM-EFFICIENT-REGRESS-WITH-CLASSICAL-ATTRIBUTES`. Its Lean theorem derives
 `STMT-CATHOLICISM-TRUE` from the existing philosophical and historical premises;
 it does not establish their truth. The previous root results and their frozen
-Challenges remain available.
+Challenges remain available. [Original PR #294](https://github.com/moritzbrantner/formal-logos/pull/294)
 
 Previously the root theorem imported the First Way and Stage1 full-description
 proof, then accepted `STMT-GOD-HAS-CLASSICAL-DIVINE-ATTRIBUTES` as a separate

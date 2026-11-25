@@ -4,7 +4,7 @@ Proposed outcome for independent semantic challenge, 2026-11-17. Baseline
 `d69634db451aabb99ba0be7f2c231747169a478f`; target definition
 `f114f527-20e2-5997-8219-df7f0457cf63`. Analyst dependency reconstruction;
 existing source readings reused, attribution deferred. This note does not
-certify a historical derivation or introduce a theological premise.
+certify a historical derivation or introduce a theological premise. [Original PR #1701](https://github.com/moritzbrantner/formal-logos/pull/1701)
 
 ## Parent and root connection
 
@@ -817,9 +817,9 @@ retrieval-reliability assignment; committed evidence remains available.
 **Scope and boundary.** Issue #1751, slice 3, drafted on main
 `95ed6125265252988b7a88ad14e42fed79e9d8ec` (PR #1754 merged). The coordinator
 counted 11 `legacy_only` GOD_4-route premises whose attempts cite this note: the
-open targets of legacy attempt `74008d2a`, which cites this note and
+open targets of legacy attempt [`74008d2a`](../../corpus/attempts/causal-perfection-transfer.json), which cites this note and
 [causal-perfection-transfer.md](causal-perfection-transfer.md). At this baseline
-all 11 are already `current` through slice 2's `5c7bc356`. Slice 2 left two
+all 11 are already `current` through slice 2's [`5c7bc356`](../../corpus/attempts/5c7bc356-a1dc-4781-8548-24ad1ce06f79.json). Slice 2 left two
 things open. It deferred the source-selection detail of six of them
 (`11e24b50`, `cbb068e8`, `b4987085`, `6acd44eb`, `e2bfd1b1`, `dcf4bcdd`) to this
 note. It also stated that it supplies "no numerical unity (`a576300f`,
@@ -828,7 +828,7 @@ note. It also stated that it supplies "no numerical unity (`a576300f`,
 four further open GOD_4-route inputs of that numerical unity and of the common
 source. Their currentness state is `none`: the multiplication inventory
 `2495a71d`, no added difference `f13d1cdd`, no matter `38ed105c` and the
-population `33f3c4c5`.
+population `33f3c4c5`. [Assessment record](../../corpus/attempts/1db2004a-5956-4c7e-994a-fd74c3b584a6.json)
 
 The cluster is therefore the q44 participation route as this note fixes it:
 
@@ -841,7 +841,7 @@ The cluster is therefore the q44 participation route as this note fixes it:
 The scoped assessment names the six deferred premises, the four new ones and the
 route nodes `a576300f`, `de05072a` and `8b8bb6df`, which are not open leaves. The
 other open inputs keep the assessments that actually assessed them, reused
-unchanged: `75b5b027` under `9f771edb` and the
+unchanged: `75b5b027` under [`9f771edb`](../../corpus/attempts/9f771edb-fb20-4426-9ae2-82de322bbe5f.json) and the
 [de ente source-selection judgment](de-ente-esse-source-1628.md#current-source-selection-judgment-identity-and-the-nature-being-multiplied-2026-11-17),
 and `6dfe01ab`, `7fcfcee8`, `14325c83`, `bc1810e5` and `86d02b69` under
 `5c7bc356`.
@@ -1250,3 +1250,8 @@ For the same explanandum, the positive source argument starts from the distincti
 **Reopening condition.** Hold fixed a particular participant whose actuality is independently warranted. Show either how an independently identified whole individuates and constitutes that bearer, or how a named giver contributes to that bearer's very existence with the secondary conditions specified. An independently justified reason that this very whole must be instantiated would strengthen the first explanation at total-order scope. Evidence for a productive gift applying across the complete cone would strengthen the second. Further constraints on the distribution of activities of already existing parts leave that question unchanged.
 
 The unregistered Lean diagnostic elaborates with `python3 scripts/worker_env.py -- lake env lean Scratch/q44-borrowed-supply/ConstrainedPopulation.lean`. It adds no formal premise change or historical attribution.
+
+## Research attempts citing this note
+
+- [Constitutive population from a concrete organization and the q44 own-being giver](../../corpus/attempts/e37eaee1-2907-4523-9164-b1b21f67dd41.json)
+- [Effective delivery through an interrupted borrower-only order and q44 source supply](../../corpus/attempts/0719304b-11a2-4b0b-851c-3b8d3371b5b6.json)
