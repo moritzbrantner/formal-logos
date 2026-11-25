@@ -460,11 +460,11 @@ def judgment(report):
 
 # Actions available at the source: omit support, continue without a report,
 # or continue with a report. Only an already living recipient can continue.
-def episode(action, report, *, alive=True, bypass=False):
+def episode(action, report, *, alive=True, supplied_answer=None):
     if not alive or action == "omit":
         return None
-    if bypass:
-        return "lake"  # independently fixed conclusion, even on a contrary report
+    if supplied_answer is not None:
+        return supplied_answer  # the recipient takes the supplied answer directly
     if action == "silent":
         return "sea"   # retain the initial judgment
     return judgment(report)
@@ -499,15 +499,22 @@ def exercise(instruction, *, governed, upkeep=True, transmission=True):
 for governed in (False, True):
     action = exercise(proposal, governed=governed)
     assert [episode(action, r) for r in (True, False)] == ["lake", "sea"]
-    assert [episode(action, r, bypass=True) for r in (True, False)] == ["lake", "lake"]
+    assert [episode(action, r, supplied_answer="lake") for r in (True, False)] == ["lake", "lake"]
     assert episode(action, True, alive=False) is None
     assert episode(exercise(proposal, governed=governed, transmission=False), True) == "sea"
     assert episode(exercise(proposal, governed=governed, upkeep=False), True) is None
 assert episode(exercise("omit", governed=True), True) is None
 assert episode(exercise("omit", governed=False), True) == "lake"
+
+# An outside comparison can supply the same answers in every history.
+for _, report in cases:
+    cue = judgment(report)
+    assert episode("open", report, supplied_answer=cue) == episode("open", report)
 ```
 
 A positive report moves lake:marine odds from 2:3 to 24:18, and a negative one to 8:30. The open policy repairs 24 initial errors and introduces 18. It can mislead in precisely the same way under either origin. If ice crosses just as often in marine histories as in lake histories, the reports have equal likelihoods and the initial marine preference survives. If reports are independent of the crossing, their discriminating force likewise disappears. This is a sensitivity condition on the reconstruction. A practical or biological function of believing one thing would leave both likelihoods unchanged. [Fallible correction and its independent feedback assumptions](fallible-correction-931.md#the-positive-result)
+
+The accuracy score also gives six net corrections if an outside observer evaluates each report and supplies the resulting answer to a recipient who simply repeats it. The last loop matches the outputs in all 80 histories. Fix the supplied answer at “lake” and change the report reaching the recipient: the recipient who repeats the answer keeps saying “lake,” whereas the one who compares the report changes judgment. The score therefore measures accuracy. Crediting the recipient with exercising judgment also requires evidence about how the answer was reached. This condition applies under either origin.
 
 In the impersonal run, upkeep carries the same already individuated organism forward and transmission enables comparison. In the purposive run the governing instruction is computed by comparing effects on this recipient before individual outcomes are known in the calculation. It selects provision over omission and over sustaining him without access. The comparison uses an independently stated good and can favor a provision that issues in a false judgment. The no-recipient state scores zero for **this opportunity to repair error**. That convention assigns no overall value to a life or to its omission. Withdrawing upkeep versus interrupting the letter separates persistence from access. Both the organism's initial identity and the underlying productive ground are assumed. An action that permits continuing life in the model does not demonstrate metaphysical dependence for existence. The computation interprets only the displayed steps, including a simple majority estimate with calibrated counts. Personal apprehension, understanding and normative authority have to be defended in the two accounts.
 
