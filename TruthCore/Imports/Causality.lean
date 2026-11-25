@@ -223,6 +223,7 @@ public import TruthCore.Causality.Q44EssentialSource
 public import TruthCore.Causality.Q44SourceSupply
 public import TruthCore.Causality.QuantitativeTransferPaths
 public import TruthCore.Causality.ReceiptAllocation
+public import TruthCore.Causality.ReceiptMatching
 public import TruthCore.Causality.ReceivedEsseActualGiver
 public import TruthCore.Causality.ReceptionLimitation
 public import TruthCore.Causality.ReflectiveComprehension

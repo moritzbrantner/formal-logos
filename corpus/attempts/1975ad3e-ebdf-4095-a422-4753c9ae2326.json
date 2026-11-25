@@ -16,11 +16,14 @@
     "4979a793-ef0f-47a7-99da-52dd74433afa",
     "dc397705-d727-419e-92f9-65d44e1ff15d",
     "00719dce-f127-43dd-b909-0333c9a18ff2",
-    "9968af58-0c48-435e-abc0-db9c500003d4"
+    "9968af58-0c48-435e-abc0-db9c500003d4",
+    "08ed59de-c83e-400f-a8ee-aef527cfc3e4",
+    "4b4d62a2-f5f0-46af-aec1-8b07458b4505",
+    "6ab848a8-9dc0-4b5e-a8f2-82dce793fd1a"
   ],
   "kind": "derivation",
   "outcome": "succeeded",
-  "summary": "Continuation proves weighted-network finite input paths, nonuniform vanishing-tail zero criterion, positive lower bounds on nonuniform cumulative products, whole-network binary/nonuniform/unbounded fixed points and finite shared-resource budget conservation. Conservative circulation survives finite resource accounting; universal aggregate loss and productive-input-to-independent-being remain without independent warrant. Full proposed judgment, exact scopes, failed unrestricted iteration, blockers and next discriminating test persist in docs/notes/contractive-borrowed-power-1378.md. No root discharge or new floor. Finite throughput plus one positive transfer without a return path now forces an upstream net exporter, even with infinite branching. Grounded export coverage on the actual roster yields a root. Allowing the ledger to be fitted freely gives exactly root existence with a second actual bearer. The same note compares the successor and swap rivals, physical storage, inventory and the outstanding existential applicability test.",
+  "summary": "Continuation proves weighted-network finite input paths, nonuniform vanishing-tail zero criterion, positive lower bounds on nonuniform cumulative products, whole-network binary/nonuniform/unbounded fixed points and finite shared-resource budget conservation. Conservative circulation survives finite resource accounting; universal aggregate loss and productive-input-to-independent-being remain without independent warrant. Full proposed judgment, exact scopes, failed unrestricted iteration, blockers and next discriminating test persist in docs/notes/contractive-borrowed-power-1378.md. No root discharge or new floor. Finite throughput plus one positive transfer without a return path now forces an upstream net exporter, even with infinite branching. Grounded export coverage on the actual roster yields a root. Allowing the ledger to be fitted freely gives exactly root existence with a second actual bearer. The same note compares the successor and swap rivals, physical storage, inventory and the outstanding existential applicability test. Ordinal comparison of giver and recipients fails to calibrate the export balance even under preservation and least-upper-bound degree assignment. For a finite histogram, coverage under every positive integer regrading is equivalent to coverage of all upper-threshold counts. The local receipt-matching root route dispenses with numerical distances but requires grounded bearers to admit distinct receipts and a one-way transfer with finite selected export ancestry. Repeated use of one form challenges the existential interpretation; see the same note.",
   "evidence": [
     "a6e858eb-6c79-493d-b5c4-3cfb37a78a61",
     "76278d0b-5585-49fc-a824-b4ba1f6223bd",
@@ -35,6 +38,27 @@
     "91e4b2c4-ea00-4026-8e97-e6de2bc2ef5a",
     "77778e6b-d42e-4591-8d90-82ff25cf09fb",
     "8177563b-0174-4cde-8560-94339cb35b8e",
-    "9a8c1cf9-e2be-4a9c-b123-a0043839a7a7"
-  ]
+    "9a8c1cf9-e2be-4a9c-b123-a0043839a7a7",
+    "0139ae37-a8dc-43b3-83f3-16d129895d00",
+    "ea7b7211-465f-4567-9fe9-132d7f80835d",
+    "690829e4-e0f3-444a-9242-71e1ca849d3c",
+    "531adda1-c6e7-4076-9c96-59ad97c10826"
+  ],
+  "current_assessment": {
+    "date": "2026-11-24",
+    "statement_ids": [
+      "00719dce-f127-43dd-b909-0333c9a18ff2",
+      "08ed59de-c83e-400f-a8ee-aef527cfc3e4",
+      "4b4d62a2-f5f0-46af-aec1-8b07458b4505"
+    ],
+    "scope": "Existential export coverage from ranked perfections or distinct selected receipts.",
+    "assessment": "Per-recipient preservation with least-upper-bound calibration leaves a relay’s balance open. Distinct-receipt coverage plus a finite selected export ancestry with a one-way exit suffices for a ground-relative root. Neither grade comparisons nor repeated use of a retained form establishes the distinct-receipt premise at esse.",
+    "next_test": "Identify an independently countable existential contribution whose use cannot be repeated across two recipients, or independent upper-grade count bounds.",
+    "note": "docs/notes/contractive-borrowed-power-1378.md#do-degrees-of-being-give-an-independently-warranted-measure-of-transfer",
+    "reviewed_revision": "ab8b7abc026c7aab2be51e5df421cfc4b2d95d01",
+    "review": "accepted_qualified",
+    "publication": "published",
+    "evidence": "Independent semantic challenge of the complete checkpoint, with targeted repairs reviewed at ab8b7abc0. Acceptance covers the selected transfer class and finite export ancestry, the same-whole deficit condition, and measured incorporation over six feeds. The synthesis identifies the relay’s supplying giver as upstream; its degree is equal in the control. Published in commit 02e78ce97adf5487a263ee31a7c52beed94104b3.",
+    "supersedes": "None. This is the assessment of the specified application only."
+  }
 }
