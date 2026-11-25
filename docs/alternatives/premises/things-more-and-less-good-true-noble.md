@@ -1,6 +1,6 @@
 ---
 phase: remaining
-premise: `STMT-THINGS-MORE-AND-LESS-GOOD-TRUE-NOBLE`
+premise: [`STMT-THINGS-MORE-AND-LESS-GOOD-TRUE-NOBLE`](https://github.com/moritzbrantner/formal-logos/blob/ec72649fb5a8ee3ac06d391b179cf1af7f75b304/corpus/statements/things-more-and-less-good-true-noble.json)
 rival: value anti-realism: error theory, emotivism, quasi-realism
 class: self-application/inconsistency for naive emotivism (Frege-Geach, `FREGE-GEACH-REFUTES-NAIVE-EMOTIVIST-MEANING`); quasi-realism not yet attackable
 notes: link the existing metaethics rivals
