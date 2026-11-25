@@ -208,6 +208,23 @@ pub fn report(
         }
     }
     prs.sort_by_key(|v| v["number"].as_u64());
+    let mut sections = Vec::new();
+    let mut section_keys = BTreeSet::new();
+    for (path, bytes) in notes::read_all(root)? {
+        let text = std::str::from_utf8(&bytes).map_err(|e| format!("{path}: {e}"))?;
+        if !text.contains(&digits) {
+            continue;
+        }
+        let note = notes::parse(&path, text);
+        for section in &note.sections {
+            if matches(&section.heading) || matches(&section.body) {
+                if !section.anchor.is_empty() {
+                    section_keys.insert(note.key(section));
+                }
+                sections.push(json!({"path":path,"line":section.line,"heading":section.heading,"anchor":section.anchor}));
+            }
+        }
+    }
     let mut records = Vec::new();
     for &kind in KINDS {
         for record in corpus.entries(kind) {
@@ -215,12 +232,17 @@ pub fn report(
             let id = fields.get("id").and_then(Value::as_str).unwrap_or_default();
             let named_by_issue = named_records.contains(&(kind.to_owned(), id.to_owned()));
             let mentions_issue = fields.values().any(|v| contains_ref(v, &matches));
-            if !named_by_issue && !mentions_issue {
+            let assessment_section = fields
+                .get("current_assessment")
+                .and_then(|assessment| assessment["note"].as_str())
+                .filter(|note| section_keys.contains(*note));
+            if !named_by_issue && !mentions_issue && assessment_section.is_none() {
                 continue;
             }
             records.push(json!({"kind":kind,"path":record.path,"id":fields.get("id"),
                 "label":fields.get("label").or_else(|| fields.get("paraphrase")),
                 "named_by_issue":named_by_issue, "mentions_issue":mentions_issue,
+                "assessment_section":assessment_section,
                 "scope_names_issue":fields.get("current_assessment").and_then(|v|v["scope"].as_str()).is_some_and(matches),
                 "current_assessment":fields.get("current_assessment"),"outcome":fields.get("outcome"),
                 "summary":fields.get("summary"),"blocker":fields.get("blocker")}));
@@ -229,22 +251,11 @@ pub fn report(
     records.sort_by_key(|r| {
         (
             !r["scope_names_issue"].as_bool().unwrap_or(false),
+            r["assessment_section"].is_null(),
             r["current_assessment"].is_null(),
             r["kind"] != "attempts",
         )
     });
-    let mut sections = Vec::new();
-    for (path, bytes) in notes::read_all(root)? {
-        let text = std::str::from_utf8(&bytes).map_err(|e| format!("{path}: {e}"))?;
-        if !text.contains(&digits) {
-            continue;
-        }
-        for section in notes::parse(&path, text).sections {
-            if matches(&section.heading) || matches(&section.body) {
-                sections.push(json!({"path":path,"line":section.line,"heading":section.heading,"anchor":section.anchor}));
-            }
-        }
-    }
     Ok(
         json!({"number":number,"revision":revision,"issue":target,"issue_history":issues,
         "pull_requests":prs,"records":records,"note_sections":sections,
@@ -320,6 +331,9 @@ pub fn render(report: &Value, limit: usize) -> String {
         .unwrap();
         let a = &row["current_assessment"];
         if !a.is_null() {
+            if let Some(section) = row["assessment_section"].as_str() {
+                writeln!(out, "    Assessment linked to issue section {section}").unwrap();
+            }
             for field in [
                 "scope",
                 "review",
@@ -331,7 +345,9 @@ pub fn render(report: &Value, limit: usize) -> String {
                 "next_test",
             ] {
                 if matches!(field, "assessment" | "supersedes" | "next_test")
-                    && !(row["scope_names_issue"] == true || row["named_by_issue"] == true)
+                    && !(row["scope_names_issue"] == true
+                        || row["named_by_issue"] == true
+                        || !row["assessment_section"].is_null())
                 {
                     continue;
                 }

@@ -894,6 +894,10 @@ note and next test alongside each relevant PR’s state. An issue mention can
 refer to an objection or an earlier draft. Compare what the PR delivered with
 the actual request before closing or dispatching it.
 
+An assessment can name the exact note section that mentions the issue. The
+brief follows that link even when the assessment omits the issue number.
+Other sections in the same file keep their own scope.
+
 The text gives a bounded view. `--json` includes the original request and
 comments, all matching records and all directly referenced note sections.
 A previously captured snapshot can be reused. Without a snapshot, the issue

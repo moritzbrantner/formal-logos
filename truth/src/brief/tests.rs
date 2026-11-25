@@ -1588,6 +1588,23 @@ fn issue_brief_finds_review_and_delivery_while_issue_is_open() {
         "docs/notes/memory.md",
         "# Memory\n\n## Repair (#12)\n\nControlled comparison.\n\n## Other (#120)\n\nA different case.\n",
     );
+    let section_id = "73000000-0000-4000-8000-000000000200";
+    let other_id = "73000000-0000-4000-8000-000000000300";
+    let file_id = "73000000-0000-4000-8000-000000000400";
+    for (id, note) in [
+        (section_id, "docs/notes/memory.md#repair-12"),
+        (other_id, "docs/notes/memory.md#other-120"),
+        (file_id, "docs/notes/memory.md"),
+    ] {
+        let linked = json!({"id":id,"label":"Section assessment",
+            "current_assessment":{"scope":"Same-bearer comparison","note":note,
+            "reviewed_revision":"linked456","next_test":"Check the section-specific prediction"}});
+        write(
+            &root,
+            &format!("corpus/attempts/{id}.json"),
+            &linked.to_string(),
+        );
+    }
     let snapshot = json!({"items":[
         {"number":12,"url":"https://github.com/o/r/issues/12","state":"OPEN","body":format!("Compare `{GOAL}`. See #40."),"crossReferences":["https://github.com/o/r/pull/41"]},
         {"number":40,"url":"https://github.com/o/r/pull/40","state":"MERGED"},
@@ -1657,6 +1674,16 @@ fn issue_brief_finds_review_and_delivery_while_issue_is_open() {
     assert_eq!(local["issue_history"]["availability"], "missing");
     assert!(local["pull_requests"].as_array().unwrap().is_empty());
     assert_eq!(local["records"][0]["id"], id);
+    let records = local["records"].as_array().unwrap();
+    assert!(records.iter().any(|r| r["id"] == section_id
+        && r["assessment_section"] == "docs/notes/memory.md#repair-12"
+        && r["mentions_issue"] == false));
+    assert!(
+        records
+            .iter()
+            .all(|r| r["id"] != other_id && r["id"] != file_id)
+    );
+    assert!(super::issue::render(&local, 2).contains("Check the section-specific prediction"));
     assert!(!root.join(".cache/truth-index.sqlite").exists());
     std::fs::remove_dir_all(root).unwrap();
 }
