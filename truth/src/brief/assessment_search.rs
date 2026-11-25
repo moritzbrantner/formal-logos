@@ -277,18 +277,19 @@ pub fn report_for_root(
         .join(" ")
         .to_lowercase();
     let leading_words = words(&leading_text).join(" ");
-    if !requested.is_empty() && !requested.iter().any(|p| leading_words.contains(p)) {
-        if let Some(note) = note_passage(root, &query, &requested)? {
-            let excerpt = format!(
-                "\n\nResearch note · {}\n{}\n{} (line {})",
-                string(&note, "heading"),
-                string(&note, "passage"),
-                string(&note, "section"),
-                note["line"]
-            );
-            text.insert_str(text.find('\n').unwrap_or(text.len()), &excerpt);
-            report["note_match"] = note;
-        }
+    if !requested.is_empty()
+        && !requested.iter().any(|p| leading_words.contains(p))
+        && let Some(note) = note_passage(root, &query, &requested)?
+    {
+        let excerpt = format!(
+            "\n\nResearch note · {}\n{}\n{} (line {})",
+            string(&note, "heading"),
+            string(&note, "passage"),
+            string(&note, "section"),
+            note["line"]
+        );
+        text.insert_str(text.find('\n').unwrap_or(text.len()), &excerpt);
+        report["note_match"] = note;
     }
     Ok((report, text))
 }
