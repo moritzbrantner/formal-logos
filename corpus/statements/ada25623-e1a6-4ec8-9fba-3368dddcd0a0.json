@@ -1,0 +1,10 @@
+{
+  "id": "ada25623-e1a6-4ec8-9fba-3368dddcd0a0",
+  "label": "Subjects with available epistemic reasons are represented as present at the selected world",
+  "paraphrase": "OPEN same-standpoint application. For each subject with an epistemic reason for a content, the ontic representative of that subject exists in re at the selected world. An evaluation of reasons for hypothetical subjects need not describe who exists here.",
+  "lean_declaration": "TruthCore.Logic.EpistemicReasonBearer.ReasonBearerPresentAt",
+  "definition_ids": [
+    "dcbd9590-2c87-5550-a69c-b4af6e272fa4",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ]
+}

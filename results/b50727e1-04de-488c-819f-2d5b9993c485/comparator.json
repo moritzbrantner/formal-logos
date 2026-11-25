@@ -1,0 +1,10 @@
+{
+  "challenge_module": "TruthCore.Results.Logic.EpistemicReasonBearer.Challenge",
+  "solution_module": "TruthCore.Results.Logic.EpistemicReasonBearer.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Logic.EpistemicReasonBearer.populationFromReasons",
+    "TruthCore.Results.Logic.EpistemicReasonBearer.standpointControl"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}

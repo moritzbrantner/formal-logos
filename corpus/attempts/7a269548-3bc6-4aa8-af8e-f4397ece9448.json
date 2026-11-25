@@ -10,13 +10,19 @@
     "8c6a14f8-5df6-4c29-916f-25185a160415",
     "034cb5d4-4e52-4c61-8b7b-708436f3a670",
     "b178b6e6-0115-4611-8fea-58dab5d69fed",
-    "b30587bf-d5c6-501a-b782-bb6529832a01"
+    "b30587bf-d5c6-501a-b782-bb6529832a01",
+    "6280fbf0-551a-46f5-8e0a-a65410c86a64",
+    "0e2bbd59-2b4c-438d-b792-0ca401eaf862",
+    "6b4e3331-01ca-484b-bda1-460ebff1df35",
+    "ada25623-e1a6-4ec8-9fba-3368dddcd0a0",
+    "0436de86-6579-53f2-9ff5-2111ba44ebae",
+    "56f68b40-9737-59a0-8cac-5610980a1547"
   ],
-  "date": "2026-11-11",
+  "date": "2026-11-25",
   "kind": "derivation",
   "outcome": "succeeded",
-  "summary": "Tested eight global epistemic challenges. Reused the canonical nihilism, performed-denial, goal-relative force and doubt results. Tested stronger readings with an eligibility omission model, opposite-truth and skewed benchmark comparisons, one valid and one invalid sequent in the same profile, and weak-certificate and non-well-founded strong-demonstration interpretations. The cases, precise assumptions and surviving rivals are in docs/notes/epistemic-underminer-boundaries.md.",
-  "blocker": "Apart from the explicit incompatibility with thin F6, these consequences need a calibrated bridge to actual reasons, actual warrant, or a warranted hinge. Strong prior demonstration alone admits an infinitist model, and denying preference-independent force leaves the goal-relative account available. No new source attribution or root premise closure.",
+  "summary": "Tested eight global epistemic challenges. Reused the canonical nihilism, performed-denial, goal-relative force and doubt results. Tested stronger readings with an eligibility omission model, opposite-truth and skewed benchmark comparisons, one valid and one invalid sequent in the same profile, and weak-certificate and non-well-founded strong-demonstration interpretations. The cases, precise assumptions and surviving rivals are in docs/notes/epistemic-underminer-boundaries.md. #1007 continuation from 7a5a834d: 1db47fd9 supplies warranted acceptance to b3ddb7c4 under the two evidential calibrations. F6 then supplies the bearer to b50727e1 under selected-world presence and the existing esse contract. Concrete population 56f68b40 feeds the direct-esse God-existence argument 72391d4d. Withholding, another-world application and warrant without surviving support separate the commitments. The note gives the candidate-by-candidate comparison.",
+  "blocker": "Case 10 now has a conditional route to F6. The original uptake premise already requires a reason. Independent application needs an actual warranted acceptance, its surviving available basis, pro tanto calibration and a faithful actual subject representation for the population step. Test a fresh recount against a copied result from an undercut source. Silence with surviving support leaves the direct reason option. The consistent reasonless denial survives without F6. The remaining cases retain their warrant, reliability, authority and hinge gaps in the note.",
   "evidence": [
     "146b502b-e5fd-40cf-8a39-9ed2d45e59bb",
     "1db47fd9-6ab1-4fa1-a9dd-0aa9457d8146",
@@ -28,6 +34,10 @@
     "64e1aa15-2487-4d17-94fc-51eae11a985d",
     "20ed92f4-766f-4bd6-b67d-9e5e37f9a209",
     "2b293d68-46e0-5e79-a37f-0cb416639a50",
-    "PR-1422"
+    "PR-1422",
+    "ec80b13d-0c87-5f71-bc70-16b42dc4c0e6",
+    "b3ddb7c4-683a-4127-8221-b30be7858f92",
+    "b50727e1-04de-488c-819f-2d5b9993c485",
+    "fd5e32d4-aa4f-57a8-8991-8d85ef14b25f"
   ]
 }
