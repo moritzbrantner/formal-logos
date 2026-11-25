@@ -190,3 +190,5 @@ target/release/truth frontier-diff --base "$(git merge-base HEAD origin/main)" -
 ```
 
 Use an isolated preview/local Lean run for the proposed projections if useful; if a substantive new argument is justified, freeze Challenge, implement Solution, and apply binding, Comparator and NanoDa before registering it. Independent review must challenge the final actual episode interpretation, the proposed merit-to-reason judgment, the fixed-content scope, and the downstream witness alignment. Self-sweep: no historical claims; no truth from assertion alone; controls have explicit carriers and force assignments; no normative strength from preference invariance; no local-to-universal upgrade; no root discharge claimed. Keep #930/#932/#1007 open and #1995 draft.
+
+[Research attempt and scoped unreviewed assessment](../../corpus/attempts/342199e6-8ad7-4835-873e-5bdab8fb3b82.json).
