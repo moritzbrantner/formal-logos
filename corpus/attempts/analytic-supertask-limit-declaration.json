@@ -16,7 +16,9 @@
   "evidence": [
     "ccff75b9-ff02-5af8-8d20-c89985958aca",
     "3b5c4d61-d2a3-4222-93c9-9465670c250e",
-    "d09f6268-93bf-4a00-af60-c57fc2353825"
+    "d09f6268-93bf-4a00-af60-c57fc2353825",
+    "PR-1301",
+    "PR-1972"
   ],
   "blocker": "No declaration semantic blocker. SU-REAL applicability/physical realization remains open; next work must specify that bridge, not infer it from mathematical convergence.",
   "current_assessment": {

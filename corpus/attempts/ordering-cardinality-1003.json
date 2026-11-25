@@ -26,7 +26,9 @@
     "ce424691-86d3-5348-b8a4-251a5daf0e1f",
     "a14447a6-57f9-55db-95b3-d237313270f6",
     "832a6827-e7d2-50f5-b58c-8640a2e03ce5",
-    "52fa2ae2-e92d-588c-9693-51eb48dc6a85"
+    "52fa2ae2-e92d-588c-9693-51eb48dc6a85",
+    "PR-1025",
+    "PR-1157"
   ],
   "blocker": "Deriving the existing real causal WF premise still needs independently defended arrangement-explanation relevance, actual causal admissibility, rejection of nonnecessitating/intrinsic rivals, and a further bridge from explanatory demand to impossible infinite regress. A demand for explanation alone is not nonexistence. The existing supported target remains open."
 }

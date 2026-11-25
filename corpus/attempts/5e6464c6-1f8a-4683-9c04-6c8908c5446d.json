@@ -20,7 +20,8 @@
     "10c1d8d1-a767-44f5-a03c-4ff7f7f2a4e8",
     "a2d5d89d-e3d6-4799-a486-43e9ccf29b3a",
     "3f0a91c1-695e-4ea8-a5ce-33375d86ae2d",
-    "23792412-934c-4ea1-a3a8-e9f5d37a94b0"
+    "23792412-934c-4ea1-a3a8-e9f5d37a94b0",
+    "PR-1637"
   ],
   "blocker": "The efficiency gap is not closed on the root route: the no-component-first-being arguments e7b4c683 and 358d8c6e apply 'an efficient cause is prior' (e078f07b) with the mode-unspecified CausesIn as its cause relation; connecting that step to 1ff08418 needs efficient siblings of 7561e216/2b25a78c and of those arguments. The efficient route into 33ad148b adds no support to it (33ad148b and 457698e4 are the same proposition, otherActualCauseIffExternalCause, relation logically_equivalent_to). The bridge 58e6ec63 and its unrestricted version 0cc3a136 are OPEN. Next tests: restrict the bridge to non-constituent causes (needs a constituency relation on the profile); derive it from a specify-versus-actualize principle; state the tense bridge from the secunda via's here-and-now EfficientlyCausesIn to EfficientlyCausesEsse so that 1ff08418 can feed the order of efficient causes."
 }
