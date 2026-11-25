@@ -1,0 +1,21 @@
+[batch]
+vocab = "TruthCore.Logic.EpistemicAccuracy.BayesianRefinement"
+results = "TruthCore.Results.Logic.EpistemicAccuracy.BayesianRefinement"
+
+[[statement]]
+id = "907aafab-960d-4290-bd08-b955f1f10f4c"
+label = "Bayesian likelihood contrast determines binary check accuracy gain"
+lean = "BayesianGainCertificate"
+paraphrase = "For a fixed binary target with nondegenerate prior p, a binary check with likelihoods a,b and nondegenerate predictive weight w, and conditional posteriors u,v satisfying the coherent joint equations, the pooled prior is p, w(1-w) times the binary-check accuracy gain equals the square of p(1-p)(a-b), and the gain is zero exactly when a=b. All likelihoods and posteriors are in [0,1]. The result describes expected accuracy gain, not actual calibration or an obligation to investigate."
+definitions = ["c89d6b19-0d84-5124-8289-99f130113c74","1683f712-7c0b-4b81-b6ba-82a2644de4e8"]
+
+[[argument]]
+id = "c6b3fd77-51b2-47d1-9e7c-6715853e15e1"
+label = "Bayesian likelihood contrast determines binary check accuracy gain"
+theorem = "bayesianGain"
+premises = ["99c8b610-ab86-4610-bfe0-27a4cd339a96"]
+conclusion = "907aafab-960d-4290-bd08-b955f1f10f4c"
+rule = "Joint-probability elimination and composition of the existing check-value certificate"
+meaning = "Use the existing binary-check accuracy certificate on the two conditional posteriors. Adding the joint equations recovers the prior. Eliminating the common pooled prior gives w(1-w)(u-v)=p(1-p)(a-b); substitution into the existing gain identity gives the scaled formula. The nondegenerate weights and prior make the zero-gain condition exactly equality of likelihoods. This real-valued joint-equation profile allows zero likelihoods with positive predictive masses, whereas the earlier contrastive rational Comparison has strictly positive likelihoods. It does not assign actual probabilities, establish reason attribution or supply a threshold of sufficient warrant."
+definitions = ["c89d6b19-0d84-5124-8289-99f130113c74","1683f712-7c0b-4b81-b6ba-82a2644de4e8"]
+axioms = ["propext", "Classical.choice", "Quot.sound"]

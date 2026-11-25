@@ -1,0 +1,15 @@
+{
+  "id": "6ebee4b2-361e-44fe-be58-d4d7a2898eea",
+  "label": "Thin reasons exclude universal credentialing given prior transfer and well-foundedness (inference)",
+  "input_statement_ids": [
+    "f56b2ee7-c69e-5e3b-85b0-e671d907ba58",
+    "1b74e22c-3e2e-5328-b587-6dc2517f5e3f",
+    "4e30a1c1-0402-4155-8a57-a1df8af7daf6",
+    "89607c0b-af1e-4dbd-ad30-a32bf0303261"
+  ],
+  "output_statement_id": "d008f164-5e50-480e-aa5c-888c5ca652ce",
+  "rule": "Compose credential exclusion with the existing thin nihilism refutation",
+  "meaning": "Assuming the universal credential requirement along with the supplied prior transfer, well-foundedness and presentation would produce thin global reasonlessness, contradicting the existing F6 witness in that very reason relation. The negation is conditional on all these premises; the result does not establish F6, well-foundedness, or refute a weaker credential requirement with no strictly prior reason.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

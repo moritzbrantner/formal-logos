@@ -1,0 +1,11 @@
+{
+  "id": "97736a08-f098-4525-88c0-d5a72dbe7e59",
+  "label": "Credentialing bundle incompatibility",
+  "argument_id": "c5705aac-035f-4e2a-998a-db5794a903ea",
+  "challenge_module": "TruthCore.Results.Logic.EpistemicCredentialing.Challenge",
+  "solution_module": "TruthCore.Results.Logic.EpistemicCredentialing.Solution",
+  "theorem": "TruthCore.Results.Logic.EpistemicCredentialing.credentialBundleInconsistent",
+  "comparator_config": "results/97736a08-f098-4525-88c0-d5a72dbe7e59/comparator.json",
+  "status": "solution-present",
+  "description": "The full five-member conjunction in one frame is inconsistent. The certificate packages the preceding argument and preserves consideration presentation as an independent member; it does not select a member or assert any philosophical premise."
+}
