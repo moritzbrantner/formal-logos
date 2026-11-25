@@ -1,0 +1,49 @@
+{
+  "id": "342199e6-8ad7-4835-873e-5bdab8fb3b82",
+  "label": "Actual inquiry: report fibers, distinct belief targets and thin epistemic reasons",
+  "statement_ids": [
+    "c425f0c5-6c3f-5115-ba04-3e61bd049e3b",
+    "f56b2ee7-c69e-5e3b-85b0-e671d907ba58",
+    "38f44eff-5a6b-5e0d-a332-353af432ba1a",
+    "3e6a8e08-7bac-47f2-b67c-00471dcbcf69",
+    "6b4e3331-01ca-484b-bda1-460ebff1df35",
+    "2ca463c2-bd1f-5a13-a395-0e2c57a5ad8f",
+    "56f68b40-9737-59a0-8cac-5610980a1547"
+  ],
+  "date": "2026-11-25",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "Inspected the actual displayed seven distinct research labels and executed the complete pairing with residue 1991. In the eight-prefix finite comparison, the full report nonvacuously and strictly entails odd parity; the pair-only report fails to entail either parity answer yet entails cardinality six or seven. This supplies a different belief content even when the original question remains unsettled, extending the prior hypothetical suspension comparison. The observed data and reproducible Python tests distinguish truth, intelligibility, local validity, correction, evidence-relative merit, normative favoring and preference-independent force. The three structural force assignments vary force while keeping the interpreted evidence fixed; they do not settle actual authority. F1 and thin F6 retain their scope and legacy status. Reused 146b502b and the same-relation nihilism distinction, 6b4e3331's support calibration and b50727e1's selected-world population route. Proposed elementary Lean projections are not registered or verified. No source claim, graph change, proof registration, new floor marking or root premise discharge. See docs/notes/actual-inquiry-presuppositions.md for exact scope, controls, derivations, commands and handoff.",
+  "evidence": [
+    "PR-1980",
+    "PR-1987",
+    "PR-1995",
+    "146b502b-e5fd-40cf-8a39-9ed2d45e59bb",
+    "ec80b13d-0c87-5f71-bc70-16b42dc4c0e6",
+    "b50727e1-04de-488c-819f-2d5b9993c485",
+    "e03147fa-7a1f-48d9-bac0-7aec0ee2b645",
+    "bec15d81-9f10-4b58-a280-2da08ef0c7ac"
+  ],
+  "blocker": "Actual subject access, grasp and the local support-to-reason attribution must be established for the same basis and content. The finite report test does not observe assent or establish a universal calibration. The goal-relative and rich realization/convention rivals preserve the local evidence contrast; transfer to genuine force at an indifferent preference needs a distinct argument. Full CLI preflight, Lean and fresh independent semantic challenge unavailable in this session.",
+  "current_assessment": {
+    "date": "2026-11-25",
+    "statement_ids": [
+      "c425f0c5-6c3f-5115-ba04-3e61bd049e3b",
+      "f56b2ee7-c69e-5e3b-85b0-e671d907ba58",
+      "38f44eff-5a6b-5e0d-a332-353af432ba1a",
+      "3e6a8e08-7bac-47f2-b67c-00471dcbcf69",
+      "6b4e3331-01ca-484b-bda1-460ebff1df35",
+      "2ca463c2-bd1f-5a13-a395-0e2c57a5ad8f",
+      "56f68b40-9737-59a0-8cac-5610980a1547"
+    ],
+    "scope": "Actual inquiry under a fixed truth and evidence interpretation: distinct content targets, F1/F6, and authority boundaries.",
+    "assessment": "The actual complete tally and its coarse projection provide directly inspectable instances of determinate truth and nontrivial semantic consequence. The coarse report underdetermines parity but entails a narrower count claim; reason for the latter does not require assent to parity. An actual accuracy-seeking investigator with undefeated access to this basis has a defensible local reason judgment. The attribution and actual cognitive uptake are not observed. The same fixed evidence is consistent with goal-relative or independent force under the respective structural interpretations. No new conclusion about categorical authority or an ultimate intellect follows.",
+    "next_test": "Have a selected investigator reconstruct the two coarse-report alternatives and the disjoint pairs plus residue. Identify their actual basis and target content and test the local reason attribution even if they withhold on parity; separate the indifferent-preference question. Run the full preflight and independent semantic challenge before registration.",
+    "note": "docs/notes/actual-inquiry-presuppositions.md#downstream-connections-and-proposed-assessment",
+    "reviewed_revision": "122a2cbceb4776159071731f026401dfe39e441e",
+    "review": "unreviewed",
+    "publication": "unpublished",
+    "evidence": "Python tally, five nonvacuous entailment comparisons, three fiber tests and three force-profile structural controls passed. Exact proposed scope at 122a2cbceb4776159071731f026401dfe39e441e in draft PR #1995. No independent worker or new Lean verification.",
+    "supersedes": "None; separate actual-episode and metacontent application, retaining the reviewed #1980 and #1987 findings."
+  }
+}
