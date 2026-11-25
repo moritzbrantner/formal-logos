@@ -148,3 +148,72 @@ unproved metaphysical bridge remains visible at the frontier.
 - [At a populated model world, well-founded causal predecessors yield an actual existent with no…](../corpus/attempts/psr-well-founded-explained-source.json)
 - [Formal infinite Nat reverse-successor interpretation satisfies a local source in every finite…](../corpus/attempts/finite-local-causal-sources-do-not-globalize.json)
 - [Mathlib finite union plus accessibility induction proves finite distinct ancestry from…](../corpus/attempts/causal-finite-branching-bridge.json)
+
+## Can the denial itself supply S2's population premise? (#1007)
+
+Yes, on the interpretation in which the episode realizing this actual assertion
+has its own representative in the existence extension of this world.
+Start with the agent asserting the selected content and take the occurring
+episode that realizes that agent's assertion. Apply the representation
+premise to **that episode**, with its map fixed and with
+`ExistsIn = m.ontic.ExistsAt w`. Then `represent e` exists at `w`.
+This argument needs neither a bearer distinct from the episode nor identity of
+the representative with the speaker. The companion `assertionWitness` retains
+all four facts together. The existential endpoints alone forget that provenance.
+The graph reuses the actual-assertion result `cc1a4204` and occurrence result
+`46c875b1`. The latter's `SomeExistent` specializes definitionally to
+`PopulatedAt` (result `a4c8b0ce`). Before this specialization the population
+statement had model witnesses and a direct working assumption, with no
+registered producing argument on the selected baseline.
+
+**Provisional assessment.** Performing a denial supplies a particularly strong
+local reason to accept that an assertion is taking place. For a considered
+denial, attending to the judgment also supports a realizing occurrence.
+A token interpretation representing that performance itself can count it among
+what exists here. This warrants the local instance more directly than the
+general representation premise about every occurring thought. A quotation, a
+merely possible assertion, or an abstract surrogate for the content would
+require independent evidence of an actual token. Revise the application if
+the alleged representative tracks repeatable content across performances
+without representing the token that occurred here.
+
+A denial *of concrete population* can concede this entire thin route under a
+broader reading of existence. The two-world `denialControl` has an assertion
+of the very proposition that no concrete individual exists here. Its thought
+occurs and has an existing representative here. Only the other, absent
+candidate has the stipulated esse classification. The denial is true under
+those assignments, and the second world is empty on the same model. This
+witnesses the logical cost of that reading: it gives up the selected-world
+`ExistingInActAt` contract at the representative. Calling the representative
+an abstract object is an additional interpretation. Simply failing the esse
+test establishes no positive theory of abstract objects. Under the adopted
+in-re reading, the extant individual is in act of esse by the existing
+contract `0436de86`. Retaining that same individual gives concrete population
+(`5a8cda5c`). This assembly adds no separate warrant for the contract. The
+bearer routes delivered under #536, #578 and #580 and the separate bearer
+analysis of #1979 require no change.
+
+Two different continuations matter. In S2, existence-PSR and causal
+well-foundedness still supply the explanation token and the existing-cause
+terminus. The Anselm argument `a7737a42` separately needs through-coverage,
+ultimate-source availability and source-side factivity. Its endpoint is an
+actual ultimate source for **one** through-fact. Neither result supplies a
+divine name. The registered route to `GodExists` here instead takes
+`43253cd8 → 43f09b83 → 56f68b40 → 8626f8a5`, the last step by argument
+`72391d4d` (result `fd5e32d4`). Instantiate its grounding profile at
+`CogitoEsse.profile m.ontic grounds InAct esse` and the same world. That
+step reuses the same existence-in-act contract and still needs whole-roster
+foundation, grounding of contingents, excluded middle, the priority-to-ground
+and esse-cause-to-ground bridges, causal maxima in a genus, grades approaching
+a maximum, actuality in the being respect, perfection transfer, first-being
+component exclusion and nominal identification of the fully described
+principle. The selected representative starts the argument. Its conclusion
+does not identify that representative with the divine source.
+
+On baseline `7a5a834d`, comparison of the computed orphan sets removes only
+`46c875b1-286f-4bfb-a1c9-cd66acbfc7f6`. The root premise comparison adds its
+existing support option for interpreted existence from occurrence plus
+representation. The representation premise `13b5b929` enters the expanded
+route. No premise was discharged. The discriminating question for an actual
+application is what warrants representing the performed token as existing
+in re in the selected ontology.
