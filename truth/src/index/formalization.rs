@@ -7,6 +7,8 @@ use std::{fs, path::Path};
 pub struct Candidate {
     pub path: String,
     pub line: usize,
+    pub section: String,
+    pub heading: String,
     pub language: String,
     pub kind: &'static str,
 }
@@ -25,24 +27,34 @@ fn classify(language: &str, body: &str) -> Option<&'static str> {
         });
         return (declaration && body.contains(":=")).then_some("lean_proof");
     }
+    if body.trim().is_empty() {
+        return None;
+    }
     let checked = match language {
         "python" | "python3" => body
             .lines()
             .any(|line| line.trim_start().starts_with("assert ")),
         "js" | "javascript" | "ts" | "typescript" => {
-            body.contains("assert") || body.contains("throw new Error")
+            body.contains("assert")
+                || body.contains("throw new Error")
+                || body.contains("throw Error(")
         }
-        _ => false,
+        _ => return None,
     };
-    checked.then_some("executable_comparison")
+    Some(if checked {
+        "executable_comparison"
+    } else {
+        "executable_example"
+    })
 }
 
-/// Reports both kinds with locations; an executable comparison may be an IO,
+/// Reports candidates with locations; an executable example may be an IO,
 /// historical replay or regression fixture rather than a mathematical claim.
 pub fn candidates(root: &Path) -> Result<Vec<Candidate>, String> {
     let mut rows = Vec::new();
     for path in notes::inputs(root)? {
         let text = fs::read_to_string(root.join(&path)).map_err(|e| format!("{path}: {e}"))?;
+        let note = notes::parse(&path, &text);
         let mut lines = text.lines().enumerate();
         while let Some((start, line)) = lines.next() {
             let Some((marker, width)) = notes::fence(line) else {
@@ -63,9 +75,16 @@ pub fn candidates(root: &Path) -> Result<Vec<Candidate>, String> {
                 body.push('\n');
             }
             if let Some(kind) = classify(language, &body) {
+                let section = note
+                    .sections
+                    .iter()
+                    .rfind(|s| s.line <= start + 1)
+                    .expect("parsed notes include a preamble");
                 rows.push(Candidate {
                     path: path.clone(),
                     line: start + 1,
+                    section: note.key(section),
+                    heading: section.heading.clone(),
                     language: language.to_owned(),
                     kind,
                 });
@@ -90,6 +109,18 @@ mod tests {
             classify("python", "assert count == 80"),
             Some("executable_comparison")
         );
+        assert_eq!(
+            classify(
+                "javascript",
+                "function check(ok) { if (!ok) throw Error('control failed'); }"
+            ),
+            Some("executable_comparison")
+        );
+        assert_eq!(
+            classify("python", "print(recommendation(p, q))"),
+            Some("executable_example")
+        );
+        assert_eq!(classify("python", "  "), None);
         assert_eq!(classify("sh", "lake build"), None);
     }
 }

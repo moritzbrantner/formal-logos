@@ -116,14 +116,16 @@ fn run(args: &Args, operands: &[&str]) -> Output {
                 .iter()
                 .filter(|row| !check || row.kind == "lean_proof")
                 .collect();
-            let mut lines = vec![format!(
-                "Embedded proof and comparison blocks: {}",
-                selected.len()
-            )];
+            let heading = if check {
+                "Embedded Lean proof blocks"
+            } else {
+                "Formalization candidates"
+            };
+            let mut lines = vec![format!("{heading}: {}", selected.len())];
             for row in &selected {
                 lines.push(format!(
-                    "{}:{}  {} ({})",
-                    row.path, row.line, row.kind, row.language
+                    "{}:{}  {} ({})  {}",
+                    row.path, row.line, row.kind, row.language, row.heading
                 ));
             }
             let message = lines.join("\n");
