@@ -3168,6 +3168,366 @@ Two alternatives locate the remaining work. An intellect can contemplate its own
 
 **Provisional judgment.** The earlier assessment favoring own-good willing as an open premise has a concrete rationale in the case of an already active rational appetite directed to its known and possessed end. I would retain self-love as a positive conditional interpretation on those grounds. Self-knowledge alone gives stronger reason for the intelligibility of the object than for an actual affective response to it. The most consequential further test is whether this very source's activity is guided by its own goodness *as its apprehended end*. Evidence for that would strengthen the self-love route even before introducing any personal distinction. A further test would still be needed for “Love proceeding.” A real exercise can consist in the lover's standing affirmation of the good. The beloved as intentional object, the exercise's dependence on the good as apprehended, and a subsistent personal term with a relation of origin each make a different claim. The one-subject example realizes the first kind of affirmation. The exercise interface gives no reason for counting a further person. [Prior assessment](../../corpus/attempts/e641ca1d-d06b-461a-8270-c9030fa4fc29.json) · [Creed destination](../../corpus/statements/creed-holy-spirit-lord-giver-of-life.json)
 
+## First rational agents: productive coverage, normative grounding and intrinsic intellectual perfection (2026-11-25; draft)
+
+**Question and scope.** Owner-directed continuation of #1973, #1748, #1460
+and #1731: can one strictly noncognitive ultimate source confer genuine
+intellectual and moral powers while lacking the corresponding intrinsic
+perfections? This is independent of the prose-only semantic proposal in
+#1983. Its premises stand independently of that proposed account of jurisdiction. This checkpoint is an analyst argument and finite
+structural test, not a source attribution, registered theorem, metaphysical
+possibility certificate or reviewed defeat.
+
+Retain HAS_INTELLECT_1 ([definition](../../corpus/definitions/intellect.json),
+`88bc0655`), HAS_WILL_1 ([definition](../../corpus/definitions/will.json),
+`7c64b499`), IN_ACT_4, CAUSE_2 and the pure-perfection definition
+([definition](../../corpus/definitions/pure-perfection.json), `65e38ffa`).
+Strict noncognition here denies source-owned intellectual cognition, not the
+actual existence of cognitive effects; the strict impersonal profile also
+denies intellectual appetite. Do not infer the general no-will thesis from
+noncognition alone unless the relevant meaning bridge is supplied.
+
+### Fix the first-agent case and separate what is conferred
+
+Let n be an independently supplied actual, necessary concrete root. Grant
+genuine productive responsibility for two distinct finite rational agents A
+and C, with no earlier finite rational grantor of their initial moral status
+(the word first can be read as explanatorily initial in the relevant chain,
+not necessarily a first clock time). A recognizes the avoidable injury that
+an unconsented procedure would inflict on C. Fix a case where C has an
+original claim not to be subjected to it, no superior competing duty and
+no valid authorization. This claim is a substantive normative input, not a
+consequence of stipulating injury. A actually reasons from the relevant
+content and refrains in recognition of C's claim. The two agents, content,
+validity, standing and actual response are held fixed across the explanatory
+comparison. Neither agent merely emits a correct sentence.
+
+The counterfactual control is an agent who has the same competence, sees
+and understands the same facts and exhibits the same refraining, but whose actual refraining
+is due to a physical impediment rather than the apprehended reason.
+This changes the token practical-basing relation, not the standing or
+external success. Reuse the existing [rational basing assessment](epistemic-underminer-boundaries.md#rational-basing-the-particular-transition-must-exercise-the-capacity)
+and its distinction between possession, actual exercise and nondeviant
+content-sensitive transition; no new claim that all reasoning requires a
+further reflective inference. That control motivates the content-guided
+explanandum, not its transfer to n.
+
+| Selected explanandum | Positive content which a sufficient account must address | Not inferred |
+| --- | --- | --- |
+| A and C exist | Actual productive/existential grounding of those bearers | The producer understands |
+| A possesses intellect | A's own power of intelligible apprehension, not only a reliable output pattern | A actually reasons in this episode |
+| A's true rational uptake | Truth conditions, relevant inferential content and actual exercise of A's power | The producer undergoes or owns A's token act |
+| C's original standing | A justified relation between C's status, the relevant good and authority to claim | An earlier intentional grant by a person |
+| A's directed duty | Substantive norm, C's standing and the actual circumstances | Mere causal prevention or C's power to enforce |
+| A's actual good-directed choice | A's apprehension and intellectual appetite operative in this action | The same uptake or appetite in n |
+
+The target is more than beneficial behavior. A producer can be responsible
+for the existence of a knower, its power, the actual exercise, and its
+rightness under the relevant truths without this description yet asserting
+a corresponding immanent exercise by the producer. Conversely, ownership
+of A's token act cannot be transferred to n: A really does understand and
+act, even under theistic secondary causality. The proposed pure-perfection
+recognition concerns preservation of positive *kind-content* in a higher
+mode, not identity of the subject, the token or the creaturely limitation.
+
+There is a parallel but **nonidentical** normative distinction. C's power
+to give or withhold consent in this relation is not identical to moral
+excellence as such. Even a personal creator who rightfully establishes
+that power need not itself be the vulnerable patient or holder of C's
+particular claim. Literal transfer of every relational title is therefore
+the wrong candidate for causal adequacy. The purer proposed excellence is
+apprehending and affirming the good as good, with a further separate
+question about rightful governance. A bare rightful status, its exercise,
+and goodness of the will must not be substituted for each other.
+
+### Ancestral coverage versus joint explanatory completeness
+
+#1973 proves facts about a common actual concrete grounding ancestor and
+notes that a necessary intermediary may reach every contingent recipient.
+The current question also concerns the *basis of truth-sensitive and
+normative powers*. A concrete grounding graph does not by itself quantify
+over all such facts. Reuse the distinction from [joint causal groups](joint-causal-groups-733.md),
+[inductive joint supply](derivative-joint-power-734.md) and
+[conjunctive sufficiency controls](scc-sufficiency-752.md): projecting
+each member of a jointly required group to a binary edge forgets the
+other members. Their productive relations are not being identified with
+normative or semantic grounding; the following is a finite **analogy
+at the level of explanatory support**, not a new supply calculus.
+
+Grant a noncognitive n with actual productive exercise E and an intrinsic
+nature N. A strong rival offers two substantive constitutive grounds:
+
+- K: the basis by which the actual cognitive organization is a genuine
+  intellectual power and by which the selected exercise constitutes
+  content-guided uptake. A constitutive account must distinguish content,
+  truth and appropriate exercise from bare covariance. K does not denote
+  an algorithm, a person or a bare true material implication.
+- J: the basis by which C's rational/person status gives original standing,
+  and by which the actual circumstances impose the directed obligation.
+  J is an explicit substantive normative ground, not a physical cause.
+
+K and J could each be accounted for in n's intrinsic nature (including
+a constitutive identity reading, for which the nature is itself the
+basis and no efficient self-production is asserted), or could be
+independent necessary standards. These are selected alternatives, not a
+claim that all grounding theories are finite or that independent necessary
+truths are contingent or brute. In the latter case the rival can still
+have one ultimate *concrete* producer, while the complete selected
+explanation uses further necessary principles. If n is alleged to be the
+sole adequate ground of both domains, these independent inputs matter.
+
+For the toy diagnostic, N and E are separate source-side resources at the
+selected actual episode: E is given as actual, not derived from n's
+necessary existence. This tests conditional adequacy of the actual basis,
+not modal necessity of its effects or explanation of the exercise itself.
+All rows hold the same actual recipients and their positive facts fixed.
+Each listed support group is treated as jointly sufficient in the chosen
+analyst encoding; neither its actuality nor its sufficiency is shown
+metaphysically.
+
+Nodes: A,C = actual agents; X = A's relevant organization; H = the actual
+harm/absence-of-consent circumstances; O = A's actual relevant procedure
+in operation, not a merely available capacity; I = A's intellectual
+capacity; T = C's original standing; D = the directed obligation;
+U = A's actual rational uptake about the relevant facts (not yet a
+practical choice); P = the joint target of explaining U and D, *not* a
+new choice inferred from knowing and owing.
+
+Use the listed groups, written as input sets -> target:
+
+```text
+{N,E} -> A, C, X, H, O  (five separate groups)
+{A,X,K} -> I
+{C,J} -> T
+{A,C,H,T,J} -> D
+{A,I,K,O} -> U
+{U,D} -> P
+{N} -> K   if the cognitive ground is source-based
+{N} -> J   if the normative ground is source-based
+```
+
+The first five groups stipulate actual productive/constitutive support,
+including support for the relevant exercise of secondary power, not
+determination of a free creature's act by n alone. P collects uptake and duty. In the physical-impediment control A still
+understands: O operates, so U, D and their conjunction P can all obtain.
+The impediment explains the outward result independently of A’s practical
+basing. A different control bypasses cognition itself: remove the support
+group producing O while keeping the other groups and grounds. D still follows,
+but the displayed groups cannot yield U or P. Neither control encodes choice.
+A more fine-grained model would
+also distinguish the constitution of the capacity from the epistemic
+warrant of a token, and the claim from its practical appropriation.
+
+Compute ordinary projected reachability and full-group least closure
+from {N,E}. Add the actual external K/J to the seeds only when not
+source-based; this restores the complete stipulated account on all four
+rows. Executed diagnostic:
+
+| K source-based | J source-based | Projected path to P | Full source support of I | Full source support of T | Full source support of P |
+| --- | --- | --- | --- | --- | --- |
+| no | no | yes | no | no | no |
+| no | yes | yes | no | yes | no |
+| yes | no | yes | yes | no | no |
+| yes | yes | yes | yes | yes | yes |
+
+```python
+from itertools import product
+
+def closure(seeds, groups, conjunctive):
+    seen = set(seeds)
+    while True:
+        nxt = seen | {y for xs, y in groups
+                      if (set(xs) <= seen if conjunctive else set(xs) & seen)}
+        if nxt == seen:
+            return seen
+        seen = nxt
+
+S = {'N', 'E'}
+common = [(('N', 'E'), y) for y in ('A', 'C', 'X', 'H', 'O')] + [
+    (('A', 'X', 'K'), 'I'), (('C', 'J'), 'T'),
+    (('A', 'C', 'H', 'T', 'J'), 'D'),
+    (('A', 'I', 'K', 'O'), 'U'), (('U', 'D'), 'P')]
+for k, j in product((False, True), repeat=2):
+    groups = common + ([(('N',), 'K')] if k else []) \
+                    + ([(('N',), 'J')] if j else [])
+    external = ({'K'} if not k else set()) | ({'J'} if not j else set())
+    reach = closure(S, groups, False)
+    full = closure(S, groups, True)
+    total = closure(S | external, groups, True)
+    assert {'A', 'C', 'I', 'T', 'D', 'U', 'P'} <= reach
+    assert {'A', 'C', 'I', 'T', 'D', 'U', 'P'} <= total
+    assert ('I' in full) == k and ('U' in full) == k
+    assert ('T' in full) == j and ('D' in full) == j
+    assert ('P' in full) == (k and j)
+```
+
+This is an application of the already investigated projection/conjunction
+distinction; do not register another generic closure theorem. The exact
+consequence is only for this selected support encoding. Since all required
+groups are displayed and there are no alternative groups for I/T/U/D,
+the source basis closes over the joint target iff both bridges are
+source-based. Other adequate support bundles or non-finite grounding
+accounts could change that conclusion. A missing path does not show an
+independent standard is false. The all-source-based row *stipulates*
+constitutive support from N to K and J; it is not a model verifying that
+a noncognitive nature can in reality provide such support. Neither
+projected reach nor even joint support closure asserts HasIntellect(n).
+Adding a predicate for source cognition freely would not solve the
+philosophical recognition problem. The diagnostic identifies the omission
+to investigate instead of settling it by Boolean assignments.
+
+### Positive argument for the relevant intrinsic perfection
+
+There is a more specific candidate than the indiscriminate rule that
+causes have their effects' properties. Genuine intellectual activity
+has a positive perfective content: a subject apprehends intelligible
+reality as such. Better cognition need not introduce a further sensory
+instrument, error, passivity, temporal search or dependence on an
+external interpreter. Insofar as these are limitations of a finite
+realization rather than the essence of understanding, removing them
+preserves and can improve the positive perfection. This gives a
+substantive reason to investigate understanding as a pure perfection
+independently of the producer. It does not prove an unrestricted or
+simple instance is coherent: a rival may argue that all intelligible
+apprehension constitutively requires receptive or differentiated
+structure. Distinguish the positive apprehension relation from its
+finite mode, its particular content and the disputed simplicity
+application.
+
+A producer with unlimited power to make knowers has actual efficacy,
+not necessarily its own apprehension. An objectively intelligible source
+which supplies the norm of a creature's thought also need not itself
+apprehend that norm. This repeats the **boundary**, not the old proof:
+the C4 objective-exemplarity control above already preserves actual
+correct self-knowledge at the effect, source-borne norming and an
+intelligible form without source uptake in its primitive profile.
+However, if the source substantively contains the positive excellence
+*of apprehending* in its own immanent act, reducing that containment to
+making something apprehend elsewhere changes the selected content.
+Thus a content-preserving, intrinsic higher-mode recognition premise
+is better motivated than a mere power-to-produce premise. What remains
+to warrant is that the ultimate source has *that* sort of containment
+or uncontracted fullness, rather than only productive/exemplary efficacy.
+Do not infer it from the word 'eminent'.
+
+This gives two distinct conditional reuse routes, neither registered anew:
+
+1. **Causal preexistence.** Preserve `64498e7e` and its uniform IN_ACT_4
+   reading. The already delivered
+   [CartesianAdequacy adapter](../../TruthCore/Results/Causality/CartesianAdequacy/Solution.lean)
+   `godContainsFromIntellectualExemplar` takes GOD_4 maximality in being,
+   the genus-maximum causal rule, actuality only insofar as being, and an
+   intellectual exemplar x. Excluded middle on x = g separates the exemplar
+   itself from a distinct effect. Intellectual possession is classified as
+   formal act in the selected respect. `FormalActEntersGrades` calibrates
+   that formal act on the effect side. For the distinct effect,
+   `FormalEffectPreexistsInclusively` gives formal or eminent possession
+   in the cause. Uniform IN_ACT_4 preexistence alone does not do this job.
+   The separate `intrinsicIntellectOfContainment` needs two implications
+   at GOD_4 bearers: formal possession implies intellect there, and eminent
+   possession implies intellect there. The second is disputed precisely
+   when production or objective exemplarity exhausts eminent possession.
+   Source-borne K or J is not a replacement for those premises.
+   `f8ba2429` concerns particular perfection responsibility and also
+   does not give that recognition by itself.
+2. **Own-being fullness.** If the root has own being, the selected
+   positive determination is independently classified Pure, and the
+   relevant real `Has`/OfBeing meanings apply, the existing
+   `OwnBeingLacksNoPerfectionOfBeing` (`d164b1ff`) plus
+   `PurePerfectionsPertainToBeing` (`c4fb87a6`) supports possession
+   of that same determination, without first deriving universal
+   causal-transfer coverage. The prior
+   [whole-power note](#intrinsic-perfection-versus-unrestricted-productive-power-2026-11-24-draft-unreviewed)
+   gives the full scope and unresolved limitation issue; apply the
+   unchanged `Has` to HAS_INTELLECT_1 recognition separately. This is
+   useful as an alternative to a universal all-effects transfer
+   commitment, not a disjoint proof or a discharge of fullness.
+
+If intrinsic intellect is obtained at n, the strict noncognitive
+profile is excluded at that witness. To reach the universal existing
+`29818edd` target, identify each relevant GOD_4 with that n using
+an independently warranted existing identity or repeat the derivation
+for each. The existing `090be689` will-follows-intellect reading and
+`LocalTeleologyGodIntellect.godHasWill` then conditionally reach
+`66aecdd7`. Neither capacity conclusion proves actual creation for
+a reason, rightful jurisdiction, or moral perfection. No new GOD_4
+support edge is claimed.
+
+### A distinct moral-perfection boundary
+
+The reviewed waiver comparison in [55bc6a0c](../../corpus/attempts/55bc6a0c-7cf3-4a97-a67d-e9ce755f4cad.json) (#1973) finds that local promise release tracks entitled
+standing rather than benefit alone. For the *first* rational agents
+the impersonal account must answer a different question: why is there
+original standing before any interpersonal grant? A constitutive account
+can answer that being a person with certain goods/relations is itself
+normatively sufficient for title. A personal account can answer that
+the creator intelligently institutes rational powers in an immanent
+order for their good. It must still defend original rightful
+jurisdiction: an act of conferral cannot bootstrap its own legitimacy,
+and bare power to produce a claimant does not establish that title.
+See [prior moral governance](moral-governance-intellect-will.md)
+and [necessary norms/making](wielenberg-making-account.md). Both
+must justify their substantive principle of standing; neither is
+defeated simply for having a primitive or essential normative
+commitment. Neither needs an infinite regress of personal conferrals.
+
+**Candidate normative pure perfection:** the intellectual affirmation
+of an apprehended good as good, rather than possessing a particular
+creature-relative claim or a bodily need. It is positive in the
+agent's own activity, and its fulfillment need not be acquiring
+an absent benefit. Yet absence of finite limitation in this
+activity and its application to an unlimited source still require
+the pure-perfection and intellectual-appetite arguments; ordinary
+finite justice does not entail a particular divine moral duty.
+Even actual apprehension and affection for good do not establish
+jurisdiction or that the source adopts this created order as an end.
+The moral route adds a genuinely different explanatory target
+(original standing) but shares the same-source cognition and
+goodness obligations with the perfection and creation routes.
+
+### Rival disposition and next discriminating investigation
+
+| Rival | Positive offered account | Specific remaining burden |
+| --- | --- | --- |
+| Noncognitive concrete producer with independent K and J | Actual persons, genuine minds and standing through necessary constitutive principles | It has not supplied the full joint normative/cognitive explanation *from n*; it may reject that stronger requirement |
+| Noncognitive producer with intrinsic K and J | Its determinate nature grounds actual rational powers and original standing without any source apprehension | Give positive content to both constitutive grounds and justify why source-side power/exemplarity suffices rather than intrinsic apprehension; no contradiction established by the diagram |
+| Intelligent but nonauthorial producer | Intrinsic cognition and perhaps will, while production follows a nonintentionally operative nature | Actual apprehension alone is not token intentional creation or institution |
+| Rational author of intrinsic good | The same source intrinsically grasps the relevant goods and intentionally institutes the powers, with rightful original title | Warrant actual apprehension, operative authorship, and jurisdiction rather than assume them; permit genuine secondary cognition and authority |
+
+**Provisional assessment.** The first-agent
+case sharpens the strongest impersonal profile. A complete account of
+concrete production is insufficient to establish complete cognitive and
+normative grounding, and even their source-based grounding does not by
+itself entail noesis in an abstract explanatory encoding. The strongest
+remaining rival is an intrinsically noncognitive but substantively
+good-sensitive source whose nature constitutes both K and J. Its
+positive account cannot be dismissed merely because it is impersonal.
+The best positive route to excluding it is a reason to accept the
+intrinsic, unreceived perfection of apprehension, preserving its
+subject-level content in the same source, rather than a claim that
+the creature's token acts or titles are transferred. This is not
+a defeat of emergence. A sufficiently defended noncognitive
+constitutive account would weaken the proposed intrinsic recognition
+route; an independently supported restriction/own-being argument or
+content-preserving intrinsic transfer would strengthen it.
+
+**Next decisive test:** Investigate whether the source can constitute
+K and J through its own noncognitive nature without leaving their
+specific cognitive/authority content unexplained. In particular,
+compare an explanation of why an act is a genuine apprehension
+rather than reliable covariance, and why an initial claimant
+has rightful standing rather than mere ability to demand.
+Test whether a concrete positive constitutive account supplies
+both distinctions, including their actual operation in the first
+agents, with the source's own uptake absent; then test the independent
+pure-perfection classification and restriction-to-kind premise.
+Do not require every explanatory principle to have another
+prior explanation or infer that all necessary standards are external
+objects. The distinct source-identity and intentional-creation
+questions remain open even if intrinsic intellect is established.
+
+The four closure rows passed their recorded assertions. The C4 record [58750abd](../../corpus/attempts/58750abd-e037-4902-b2f5-7c83e0f467a3.json) owns the first-agent test of intrinsic uptake: what makes the source itself a subject of apprehension if it grounds the agents’ cognition? The causal-adequacy record [59336904](../../corpus/attempts/59336904-26c1-4562-a276-d7c4252ffb23.json) distinguishes the premises for asymmetric containment from the subsequent recognition of intellect. These applications retain the original records’ assessment scopes.
+
 ## Research attempts citing this note
 
 - [Batch certification of eight exploration maps deriving eight bare root-path premises from deeper…](../../corpus/attempts/round2-perfection-primacy.json)
