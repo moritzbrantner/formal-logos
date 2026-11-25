@@ -1122,9 +1122,31 @@ unchanged formal results reused here. The PR remains draft and unmerged.
 
 ### Review of the owner follow-up
 
-The complete amended outcome includes the two new dependency/completeness
-investigations, their concrete controls, the exact locally checked Lean
-applications, the cumulative assessment and the updated actual PR body.
-It awaits a separate independent semantic challenge. The initial accepted
-review is retained as history and is not extended to these findings by
-publication or successful compilation alone.
+The independent reviewer `goodness_standard_review` accepted the complete
+amended outcome as **accepted_qualified**, with no substantiated P1/P2
+finding and no substantive repair requested. This second verdict covers
+both complete notes, their joint conclusions, the expanded assessment and
+preserved history, the controls, verification evidence and actual PR body.
+
+The checked local candidate was
+`0c0ef30ddeb5743a707c949d10f151467d602b51`, identical in tree
+(`d3763d6d08c9a4f5b5516aac725c39b4464dbfca`) to
+[reviewed candidate f5f691a0](https://github.com/moritzbrantner/formal-logos/commit/f5f691a095f756f6803e343b1fe0d44822fae916).
+The actual reviewed PR-body SHA256 was
+`55cc2f8650669107eeb0181d3f67b1cdfc109e5899092a86e69762bbc6879334`.
+The reviewer independently retrieved that body, reproduced the finite
+cycle and eligibility programs and the consent/tied/empty controls, and
+confirmed that the persisted Lean code matches the hashed application
+and successful no-axiom compilation log. The reviewer did not rerun the
+compiler or extend that bounded check to `ActualRoot`.
+
+Acceptance concerns the scoped assessment and conditional failure tests.
+It establishes neither a complete ultimate constitution nor global
+parity, source intellect, strongest-rival defeat or premise discharge.
+Actual return-dependence and a common explanatory order, complete data
+and admitted profiles, the positive joint source constitution, and
+possible-exemplar/practical-uptake applications remain open as specified
+above. Final changes record this review/publication disposition only.
+The initial accepted review remains separately preserved as history;
+its verdict was not extended merely by publication or compilation.
+The live PR records delivered-head CI. Keep the PR draft and unmerged.

@@ -948,7 +948,8 @@ application and companion strict-cycle application with pinned Lean
 [primary note](goodness-standard-priority.md) preserves that code and
 its scoped verification evidence. This is a local application check,
 not a new canonical result or Comparator/NanoDa certificate. The
-amendment's independent semantic review has a separate disposition.
+amendment was independently accepted with the separate qualified
+disposition recorded in the primary note.
 
 ## Research attempts citing this note
 
