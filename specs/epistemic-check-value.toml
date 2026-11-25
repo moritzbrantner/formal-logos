@@ -1,0 +1,21 @@
+[batch]
+vocab = "TruthCore.Logic.EpistemicAccuracy.Refinement"
+results = "TruthCore.Results.Logic.EpistemicAccuracy.Refinement"
+
+[[statement]]
+id = "99c8b610-ab86-4610-bfe0-27a4cd339a96"
+label = "Binary check gain is bounded and vanishes exactly on non-discriminating outcomes"
+lean = "CheckValueCertificate"
+paraphrase = "For any two outcome weights w and 1-w and conditional truth probabilities u and v in [0,1] for one binary target, using their pooled prior, expected reduction of optimal squared error is w(1-w)(u-v)^2. It is nonnegative, no greater than initial optimal error, which is at most 1/4, and zero exactly when an outcome has zero weight or the two conditional probabilities coincide."
+definitions = ["c89d6b19-0d84-5124-8289-99f130113c74","1683f712-7c0b-4b81-b6ba-82a2644de4e8"]
+
+[[argument]]
+id = "54d4730b-171b-4e11-9ab3-dde3fdfb32f2"
+label = "Binary check accuracy gain and its zero-gain boundary"
+theorem = "checkValue"
+premises = []
+conclusion = "99c8b610-ab86-4610-bfe0-27a4cd339a96"
+rule = "Polynomial identity, nonnegativity and zero-product law"
+meaning = "Expand the existing squared-error definition at the coherent pooled prior and both conditional assessments. Ring normalization gives the product formula, nonnegative factors give gain and budget bounds, and the zero-product law gives the exact zero condition. This is a conditional mathematical indicator for one target, not a calibrated actual probability, an obligation to check, a criterion of categorical warrant, or a new foundation premise."
+definitions = ["c89d6b19-0d84-5124-8289-99f130113c74","1683f712-7c0b-4b81-b6ba-82a2644de4e8"]
+axioms = ["propext", "Classical.choice", "Quot.sound"]

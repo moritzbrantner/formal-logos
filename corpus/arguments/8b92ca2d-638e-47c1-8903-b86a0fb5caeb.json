@@ -1,0 +1,18 @@
+{
+  "id": "8b92ca2d-638e-47c1-8903-b86a0fb5caeb",
+  "label": "Credential bundle omission controls",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "8f394797-785c-4494-aa49-3d493596b213",
+  "inference_ids": [
+    "389365fb-2434-4112-8f2c-25834f7f09ec"
+  ],
+  "meaning": "The five omission profiles isolate each member of the bundle. In particular the W omission has irreflexive transitive prior relation and indefinitely many successor credential contents, while a nonempty finite acyclic serial graph could not supply the same omission. All belief, warrant, certification and reason assignments are structural surrogates; the profiles do not establish actual infinitist or holistic epistemology.",
+  "definition_ids": [
+    "d13c0241-320a-5d56-8927-341e46063e05",
+    "15160f9d-a231-4a9f-834f-cc78a7523dc3",
+    "70ab36ea-a14c-413b-8f51-adfad1f01b3c"
+  ],
+  "disambiguation_ids": [
+    "339c6bf8-37f1-5d5e-9f26-3258957443cc"
+  ]
+}

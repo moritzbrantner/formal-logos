@@ -1,0 +1,14 @@
+{
+  "id": "d008f164-5e50-480e-aa5c-888c5ca652ce",
+  "label": "Universal justified credentialing of belief reasons fails",
+  "paraphrase": "It is false that every active attributed belief reason has a believed warranted credential for that instance. The precise negation of the universal credential requirement in this same frame. Does not assert that every reason is basic or that any reason lacks all epistemic grounds.",
+  "lean_declaration": "TruthCore.Logic.EpistemicCredentialing.UniversalCredentialFails",
+  "definition_ids": [
+    "d13c0241-320a-5d56-8927-341e46063e05",
+    "15160f9d-a231-4a9f-834f-cc78a7523dc3",
+    "70ab36ea-a14c-413b-8f51-adfad1f01b3c"
+  ],
+  "disambiguation_ids": [
+    "339c6bf8-37f1-5d5e-9f26-3258957443cc"
+  ]
+}

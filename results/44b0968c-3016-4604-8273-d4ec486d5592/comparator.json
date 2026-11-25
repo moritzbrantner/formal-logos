@@ -1,0 +1,13 @@
+{
+  "challenge_module": "TruthCore.Results.Logic.EpistemicAccuracy.Refinement.Challenge",
+  "solution_module": "TruthCore.Results.Logic.EpistemicAccuracy.Refinement.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Logic.EpistemicAccuracy.Refinement.checkValue"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "enable_nanoda": true
+}

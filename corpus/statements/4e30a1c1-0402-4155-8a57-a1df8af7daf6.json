@@ -1,0 +1,14 @@
+{
+  "id": "4e30a1c1-0402-4155-8a57-a1df8af7daf6",
+  "label": "Every justified credential of an active reason has a prior belief reason",
+  "paraphrase": "OPEN transfer and priority requirement. For each active attributed belief reason and each believed warranted credential certifying it, some consideration is an attributed reason of the same subject for believing that credential content and is related as prior to the original instance by the supplied epistemic priority. Well-foundedness is not assumed here; the intended independent-priority interpretation needs defense.",
+  "lean_declaration": "TruthCore.Logic.EpistemicCredentialing.PriorCredentialReason",
+  "definition_ids": [
+    "d13c0241-320a-5d56-8927-341e46063e05",
+    "15160f9d-a231-4a9f-834f-cc78a7523dc3",
+    "70ab36ea-a14c-413b-8f51-adfad1f01b3c"
+  ],
+  "disambiguation_ids": [
+    "339c6bf8-37f1-5d5e-9f26-3258957443cc"
+  ]
+}

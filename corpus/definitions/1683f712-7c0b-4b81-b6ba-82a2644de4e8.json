@@ -1,0 +1,9 @@
+{
+  "id": "1683f712-7c0b-4b81-b6ba-82a2644de4e8",
+  "label": "Expected accuracy gain from a binary check",
+  "term": "binary check accuracy gain",
+  "definition": "For a fixed binary target, outcome weight w and conditional truth probabilities u,v, all in [0,1], the pooled prior is w*u+(1-w)*v. Accuracy gain is error at the optimal pooled credence minus the outcome-weighted sum of optimal conditional squared errors. The weights and conditional probabilities must come from the same assessment. No actual calibration or normative predicate is supplied.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Logic.EpistemicAccuracy.Refinement.accuracyGain",
+  "note": "Uses the existing expected binary squared-error measure. A check is a refinement of the supplied assessment, not necessarily an experiment or a proof. Zero value for the target does not entail zero value for method reliability, evidence access, or another proposition."
+}

@@ -1,0 +1,15 @@
+{
+  "id": "def74a25-bfb9-4ce6-9268-c3ffc6dee18b",
+  "label": "Universal well-founded prior credentialing excludes thin belief reasons (inference)",
+  "input_statement_ids": [
+    "1b74e22c-3e2e-5328-b587-6dc2517f5e3f",
+    "ffb08b22-4304-472d-b9e7-a49d8d34fbd3",
+    "4e30a1c1-0402-4155-8a57-a1df8af7daf6",
+    "89607c0b-af1e-4dbd-ad30-a32bf0303261"
+  ],
+  "output_statement_id": "38f44eff-5a6b-5e0d-a332-353af432ba1a",
+  "rule": "Well-founded induction on same-subject reason instances",
+  "meaning": "From an assumed thin reason, presentation supplies a particular attributed consideration for that belief. Each active reason has a justified credential, and prior transfer supplies another active reason for its credential at the same subject, prior to the original. Well-founded induction excludes every such active instance. This is a conditional derivation of the existing thin nihilism proposition, not a defense of nihilism or a premise that all epistemic dependence is well-founded.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

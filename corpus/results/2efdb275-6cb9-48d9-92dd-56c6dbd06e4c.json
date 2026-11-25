@@ -1,0 +1,11 @@
+{
+  "id": "2efdb275-6cb9-48d9-92dd-56c6dbd06e4c",
+  "label": "Thin reasons exclude universal credentialing given prior transfer and well-foundedness",
+  "argument_id": "f7bd5674-105f-4af8-9f92-df930096f12e",
+  "challenge_module": "TruthCore.Results.Logic.EpistemicCredentialing.Challenge",
+  "solution_module": "TruthCore.Results.Logic.EpistemicCredentialing.Solution",
+  "theorem": "TruthCore.Results.Logic.EpistemicCredentialing.universalCredentialFails",
+  "comparator_config": "results/2efdb275-6cb9-48d9-92dd-56c6dbd06e4c/comparator.json",
+  "status": "solution-present",
+  "description": "Assuming the universal credential requirement along with the supplied prior transfer, well-foundedness and presentation would produce thin global reasonlessness, contradicting the existing F6 witness in that very reason relation. The negation is conditional on all these premises; the result does not establish F6, well-foundedness, or refute a weaker credential requirement with no strictly prior reason."
+}

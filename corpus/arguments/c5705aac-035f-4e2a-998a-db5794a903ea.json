@@ -1,0 +1,18 @@
+{
+  "id": "c5705aac-035f-4e2a-998a-db5794a903ea",
+  "label": "Credentialing bundle incompatibility",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "2d39f0cf-16c6-42b1-9552-0bd56dc2cabf",
+  "inference_ids": [
+    "37b33fb7-6310-4789-8767-daeddd5a66a9"
+  ],
+  "meaning": "The full five-member conjunction in one frame is inconsistent. The certificate packages the preceding argument and preserves consideration presentation as an independent member; it does not select a member or assert any philosophical premise.",
+  "definition_ids": [
+    "d13c0241-320a-5d56-8927-341e46063e05",
+    "15160f9d-a231-4a9f-834f-cc78a7523dc3",
+    "70ab36ea-a14c-413b-8f51-adfad1f01b3c"
+  ],
+  "disambiguation_ids": [
+    "339c6bf8-37f1-5d5e-9f26-3258957443cc"
+  ]
+}

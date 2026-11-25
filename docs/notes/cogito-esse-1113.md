@@ -719,3 +719,334 @@ doubt, with the adapter that keeps the realizing episode through the
 attempt; first grades are given here to all nine. No earlier judgment is
 revised. `e64d5241`'s assessment of `e81971f1` and `30e6e01c` is reused
 unchanged.
+
+## Actuality of thought and the ontological floor (2026-11-25, draft)
+
+Continuation of #543, #1792, #1979 and #1980; baseline
+`bff18fce135d73ffe2e00933a56decdb2a1c89af`. This is a local warrant investigation, not the global
+unconditional-closure audit in #1993. The existing attempt records the independent challenge of this extension and the earlier review at its original scope. No source attribution, new corpus registration, floor marking or
+verified premise discharge is claimed.
+
+Fix an actual performance of questioning, discriminating or entertaining
+a denial, not merely its text or a hypothetical performance. An actual
+occurrence is directly warranted in that performance. It does not require
+knowing which ontology of the occurrence is correct. The existential
+generalization "something actually obtains" uses the occurrence itself as a
+witness, rather than inferring an enduring subject from the grammar of "I".
+A denial of every occurrence made in thought falsifies its content; a
+sentence stored on disk is not such a performance. For a silent rival the
+retorsion has no witness until an actual performance is supplied.
+
+The current typed boundary is decisive. O `e81971f1` (some thought occurs)
+does not alone imply B `30e6e01c` (every occurring thought has a subject), the
+bearer existence E `c821487b`, or the concrete classification C
+`a7040bf1`. The existing
+`CogitoSubject.subjectlessControl` and
+`CogitoConcrete.omissionControls` demonstrate this with the predicates
+independent. #1979's `ac0a151f` is a weaker *phenomenally experienced*
+bearer principle, not a theorem from occurrence. Its `77e57686` endpoint
+requires actual experienced occurrence. #1980's `13b5b929` maps occurring
+thought to an existing representative, and `0436de86` classifies that
+same witness as in act of esse at the selected world. Its
+`RepresentedOccurrence.denialControl` preserves population while denying
+concrete population under an independent classification. Do not conflate
+the representative with a distinct personal bearer.
+
+Positive warrant for a **local** existential interpretation: if "actual"
+means that this very experience obtains in re, a denial of *any* obtaining
+reality excludes the datum itself, not merely its interpretation. In the
+owner-adopted concrete sense (existing in re/in act of esse), a real episode
+is therefore a candidate population witness even if it has no distinct
+bearer. The comparison below shows how the same episode represents itself in an
+event-inclusive being carrier and how the adopted existence contract
+applies at the world of its performance. It reuses #1980.
+A concrete-empty extension of an independent episode signature is not
+evidence that a real episode can be absent from reality; it exposes exactly
+the missing application. The occurrence-only rival can concede the
+positive datum without conceding substance, causal dependence, or an
+enduring subject.
+
+The comparisons below distinguish actual understanding from representation,
+actual distinction from plural substances, actuality from unactualized
+possibility, temporal order from passage, and factive constitutive
+dependence from productive existential dependence. They reuse the existing
+results and keep the witness fixed across interpretations. The downstream
+destinations are
+`56f68b40` (actual concrete population), the `CogitoEsse` ancestry and
+essence results, and the operation/act/perfection interfaces already
+identified above. No premise change at this checkpoint.
+
+### Direct warrant: local, not unrestricted, ontological commitments
+
+Here “direct” means warranted by attending to the datum itself; it is not a
+zero-hypothesis theorem for arbitrary interpretations. The distinctions below
+are analyst formulations, not new canonical statements. The act of reading a
+record does not witness its content, and a formal carrier may contain merely
+possible candidates. Preserve the first-person witness at the time/world of
+actual performance.
+
+| Target | Strongest warranted reading | Exact stronger thesis still open |
+| --- | --- | --- |
+| Something exists | Something genuinely obtains in reality, witnessed by this very episode. Denying this while actually thinking the denial defeats the denial, not by a general PSR but by its witness. | The typed `SomeExistent` `43253cd8` and selected-world `43f09b83` need the faithful representative/existence dictionary; concrete population `56f68b40` additionally uses the adopted esse sense. |
+| Something actual | The witnessed occurrence obtains, rather than being a merely described or possible-only occurrence. | A world-indexed esse classification of arbitrary act predicates, or a theory of what makes an entity actual. |
+| Actual understanding | In a successful present act of grasping (e.g. seeing why denial of all thought cannot be an actual thought and be true), the grasp is positively given, not inferred from mere syntax. Its content need not be a correct description of external objects. | `Occurs` and `Experienced` also permit confusion, rote repetition and nonintellectual sensation. The selected example needs actual comprehension; no universal occurrence-to-intellectual-exercise bridge follows. |
+| Bearer of understanding | The exercise is someone's or is realized by some actually obtaining cognitive organization, if “exercise” is taken in the subject-involving sense. The first-person perspective supports ownership of this act, without warranting a further substance. | The strict all-thought bearer premise `30e6e01c`, phenomenal bearer premise `ac0a151f` and identification of the subject with a bearer distinct from the act are not synonyms. The occurrence-only rival can locate ownership in the event itself. |
+| Genuine distinctions | Discriminating an assertion from its denial, or a grasp from a mere recitation, presents distinguishable contents or aspects. If the discrimination is successful, treating both in exactly the same respect as indistinguishable would destroy the datum. | Numerical diversity of distinct existent substances, independent instantiation of every conceptual distinction, real composition in one substance. |
+| Actuality versus possibility | Obtaining and being able to obtain are different explanatory/semantic roles: the actual witness is not merely possible. A possibility claim alone need not specify actual obtaining. | A real unactualized possibility, `◇p ∧ ¬p`, is not supplied by occurrence. Necessitarianism can collapse the extensions of true and possible propositions without equivocating between their roles. Reflexive accessibility suffices for actual-to-possible at the selected world; without an appropriate accessibility condition the implication need not hold. |
+| Positive perfection | Successful grasp realizes a positive cognitive achievement in the minimal respect of understanding that content; a mistaken grasp does not establish the truth of what is grasped. The actuality of an exercise is not merely its privation. | The act-to-perfection correspondence for every respect (`ca84f62d`), the value bridge `00e962ae`, pure rather than mixed perfection, complete realization of intellectual nature, or intrinsic possession by a cause. |
+| Change or succession | In a directly experienced discrimination of successive presentations (e.g. a question followed by its grasp), there is evidence of an ordered difference. Retain the distinction between experience of order and order of experiencing. | A single instantaneous state with apparent memories is a formal control; observation of one thought alone proves neither real succession nor passage, persistence, or Aristotelian potency. A fixed block containing real differently ordered stages can concede succession without a moving present. |
+| Dependence | At minimum a factive assertion that this very exercise occurs is true only if it occurs; the achievement of grasping *this* content requires that content in the selected sense. Constitutive inclusion is a truth/identity condition for this very exercise, not an inferred external supplier. | Strict existential support `PresentEsseSupport`, proper actual-concrete grounding, productive receipt of esse, causal well-foundedness, and transfer of an exercise to its cause. Subject-attribution alone does not supply even one proper grounding edge. |
+
+Two qualifications prevent strengthening by a verbal substitution. First,
+the local self-verifying datum “this thought occurs” may be known
+immediately by its occurrence, whereas the generic proposition `e81971f1`
+has a supplied `Occurs` interpretation and remains a corpus premise. We do
+not promote it by an owner approval or treat a Lean proof of a conditional
+as an occurrence in re. Second, understanding is more specific than thought:
+the relevant performance must actually grasp a distinction or inference,
+not simply mention understanding. A subject-involving sense of grasp yields
+a thin bearer by analysis of that sense, but using it to refute a subjectless
+account is dialectically circular unless the experience exhibits something
+that the occurrence-organization account cannot retain.
+
+### Generic conservative-extension argument for #543
+
+Let T be **any** theory in the episode-only language L (possibly with
+parameters, content, experience and assertion relations) and M a model of T
+with an occurring episode. Expand M to the larger language by retaining all
+L interpretations and carrier domains; choose the new predicates
+`Concrete(b) := False` and `ExistsAt(w,b) := False`. If extra carrier sorts
+are needed, choose singleton carriers (or any admitted nonempty carriers).
+For every L-formula its satisfaction is unchanged: the atomic clauses have
+unchanged interpretations; the logical connectives preserve this fact;
+quantifiers range over the same original carriers. Hence every sentence of T
+remains satisfied and the occurrence witness remains. Nevertheless
+`¬ ∃ b, Concrete(b) ∧ ExistsAt(w₀,b)` holds for every selected w₀.
+One may keep `ExistsAt` nonempty instead and still set Concrete empty.
+
+This mathematical argument covers arbitrary episode-only theories under
+the stated language restriction. The generic Lean certificate and the
+separate abstract-truth control remain open under #543. The construction
+requires the new predicates to be independent of L, including any
+truth/representation dictionary. Merely adding
+a syntactic quotation of "nothing concrete exists" preserves the construction
+if interpretation of the quote is independent. If that quote is required to
+express the actual negation of concrete population, interpret its content at
+the expanded model and separately verify the realization; the existing
+`RepresentedOccurrence.denialControl` from #1980 does so with a populated
+existence extension and a separate esse classifier. Arbitrary content
+theories with a built-in truthmaker/concreteness condition do not qualify.
+A true abstract proposition is not thereby a real concrete occurrence or a
+concrete truthmaker. Its truth can remain fixed when fresh concrete-existence
+predicates are empty, unless such a truthmaker condition is imposed.
+
+Positive application is exactly the reverse distinction. For a selected
+real experience the occurrence witness itself (not merely its propositional
+description) is available to the being carrier if that carrier includes
+actual events. Use the existing `represent` map of `13b5b929`; in the
+special case where Episode is the event part of Being, it is the inclusion.
+`Occurs e` in its factive in-re sense warrants `ExistsAt w (represent e)`
+for that occurrence. The one-way adopted `0436de86` then applies. This is
+the **same event-representation route** of #1980, not a new argument
+registration or an independent reason counted twice. The relevant warrant
+is local to a real occurrence. It does not justify the universal
+`13b5b929` under every occurrence predicate or classify a purely abstract
+proposition as a concrete event. The following comparison applies that
+representation to the first of two questionings.
+
+### Which occurrence supplies the witness?
+
+Consider the same question silently entertained twice by a reader, with an unread copy printed on the next page. Fix the first questioning as e₀ and the world of that performance as w₀. The reader’s present exercise, picked out by *this questioning now*, identifies the token in the proposed first-person application. A later recollection or a third party’s report would need evidence locating that first exercise. The second questioning realizes the same content on a different occasion. The printed copy can persist even if nobody performs either questioning.
+
+On the event-inclusive interpretation, the carrier of beings includes this occurring event itself. Interpret b = represent e₀ as that very exercise, using the same occasion to pick it out on both sides. Its occurrence at w₀ then warrants the local premise hE that b exists there. A map to the question’s repeatable content, the print token, or the second questioning would lack that identification. An ontology admitting only substances as concrete needs a different argument for an existing bearer. The local application requires neither global injectivity of represent nor a distinct thinker shared across occasions.
+
+For the adopted esse interpretation, `ExistingInActAt` gives hAct b hE. The witness of `InhabitedConcreteAt` is precisely `⟨b, hAct b hE, hE⟩`. The warrant for hE depends on the event-inclusive interpretation, and the wider classification contract retains its own scope. The existing [selected-world proof and assertion witness](../../TruthCore/Results/Explanation/RepresentedOccurrence/Solution.lean) preserve this distinction. This supplies population to the previously registered route; the explanation of the event’s existence remains open.
+
+### Matched rival controls
+
+The following are selected finite interpretation controls, not metaphysical
+possibility or source claims. The first four Lean controls are reused;
+the last two additional controls are mathematical assignments with their
+finite quantifiers checked in Python, not Lean-certified.
+
+- `CogitoSubject.subjectlessControl` and `nonSubstantialBearerModel`:
+  keep occurrence fixed, remove attribution or substance. For the
+  philosophically substantive event rival, ownership is constituted by
+  an organized first-person occurrence rather than a further subject.
+  A physical realization or an idealist experiential event can provide
+  this role. The open test is whether distinct token ownership is required
+  even for a single occurrence; the checked controls alone are not evidence
+  against the strong bearer premise.
+- `ExperiencedThoughtBearer.bearerScopeControl`: two thoughts, only one
+  phenomenally experienced and borne. A scoped phenomenal bearer premise
+  avoids needing a bearer for every candidate cognitive occurrence.
+- `CogitoConcrete.omissionControls`: a concrete episode may populate the
+  world without a bearer; an existing but nonconcrete bearer tests C and
+  a concrete but nonexisting bearer tests E. The adopted in-re contract
+  rules out the former classification of real existence, not the
+  occurrence-only case.
+- `ThoughtChangeSubject.NonChangingThoughtControl` and the corresponding
+  Solution omission certificate: occurrence is fixed and no changing
+  thought obtains; the Physics III.1 reading still holds. To make the
+  rival substantive, grant a standing act of understanding rather than
+  a process of learning. Our experience of learning is a different datum.
+- Contingent population with ordered stages: W = {0,1}, all worlds mutually
+  accessible, candidates a,b concrete, ExistsAt = {(0,a),(1,b)}. At w=0
+  a bears one actual grasp e, actual in esse and understanding respects.
+  At 0 it has two ordered state descriptions question/grasp. All proper
+  ground edges are empty. Each world is concretely populated but neither
+  candidate exists at every accessible world. Actual experience, bearer,
+  positive actual respect, state difference and even universal *de dicto*
+  population do not entail a de re necessary concretum or any proper
+  supplier. The local anti-brute input fails; accessibility of the empty
+  ground relation is trivial. This tests the force of the conclusion
+  relative to the listed commitments, not a philosophical defense of
+  brute actuality.
+- Necessitarian/event-only boundary: one concrete occurring e, no distinct
+  personal bearer, no proper ground, no substance predicate. All accessible
+  worlds have e and the same facts; possibility and actuality coincide in
+  their extensions. Its actuality and thin eventhood survive, while
+  unactualized possibilities, strict dependence and a further subject do
+  not follow. If the thicker bearer sense is required, use e itself as
+  thin bearer where the type/dictionary allows; it still supplies no
+  distinct subject. This is not a model of a thesis defining
+  intellectual exercise as attribution to a *distinct* bearer.
+
+Small executable check (analyst controls only; run with Python 3):
+
+```python
+from itertools import product
+W, B = {0, 1}, {"a", "b"}
+access = set(product(W, W))
+exists = {(0, "a"), (1, "b")}
+concrete = B
+occurs, understands = {"e"}, {"e"}
+bears = {("a", "e")}
+act = {("a", "esse"), ("a", "understanding")}
+grounds = set()
+state = {(0, "a", 0): "question", (0, "a", 1): "grasp"}
+assert all(any((w, b) in exists for b in concrete) for w in W)
+assert not any(all((v, b) in exists for v in W if (0, v) in access)
+               for b in concrete)
+assert any(e in understands and (b, e) in bears and (0, b) in exists
+           and (b, "understanding") in act and (b, "esse") in act
+           for e in occurs for b in B)
+assert state[0, "a", 0] != state[0, "a", 1] and not grounds
+actual = {"e"}
+possible = {"e"}
+assert actual and not (possible - actual)
+```
+
+Execution passed in the research environment. This checks the explicitly
+listed finite properties only, not arbitrary corpus predicates, theorem
+bindings or the general conservative-extension proof.
+
+### Provisional judgment and downstream destinations
+
+The **positive gain** is to make actual performance a warrant for a local
+existential witness without burdening it with the distinct-subject,
+substance, efficient-causation or change thesis. The occurrence-only,
+idealist and physicalist accounts can agree on real actuality and
+cognitive achievement. Their competing interpretations concern what the
+witness is and which realization/ownership facts hold. The strongest
+present case for a thin bearer is the first-person unity of a particular
+grasp, not the number of predicates predicated of it. #1792/#1972's
+divided-access result does not identify a distinct ontic owner or its
+ground: a physical organization can route access to the retaining
+component while the same person reports the retained content. The
+evidence presently does not discriminate that account from an actual
+mental owner grounding the same person.
+
+The following are the exact existing connections and remaining bridges,
+not new graph effects:
+
+- **Necessary being:** `56f68b40` is already consumed by the direct-esse
+  root route (#1979, #1980, `fc46b7f9`); `43253cd8` and `43f09b83`
+  are the bare existence/selected-world population route from #1980.
+  The local thinker alternative
+  `CogitoEsse.necessaryConcreteAncestor` still needs O, B, E, I,
+  `ThinkerGroundingAccessible`, `ThinkerAncestryGrounded`, and explicit
+  excluded middle on the same profile. The general population route can
+  instead use an event witness, but no bearer-free thinker theorem is
+  implied. Local accessibility and anti-brute coverage remain independent.
+  A reflexive ancestor can be the thinker itself; distinctness requires
+  a proper path.
+- **Pure actuality:** `CogitoEsse.sameWitnessEssence` retains the same
+  minimal ancestor and requires actual support-to-ground, cause
+  presence/type, esse/essence dichotomy and the remaining q3 inputs
+  listed in the earlier reconstruction. Neither existence nor act of
+  esse implies absence of every potency. The necessary-recipient control
+  in `OccurrenceUnderivedEssence` allows a necessary recipient with
+  distinct esse and incoming support. For a motion route,
+  `CogitoConcrete.somethingMovedOfThought` needs O+B+opining bridge+
+  opinion-as-motion. `ThoughtChangeSubject.ThoughtChangeBridge` and
+  `SuccessionPotency.SuccessionIsBeingMoved` are separate classifications.
+  Actual ordered difference does not bypass those interfaces.
+- **Causal perfection:** The selected success supplies an instance of
+  actuality in an intellectual respect only under the relevant
+  operation attribution. Existing `8cf54bde` + `3dd25039` +
+  `7067553d` give bearer concreteness through
+  `CogitoEsse.bearerConcreteOfOperation`. The local existential-import
+  rationale favors `7067553d` where `InAct` means *real exemplification*
+  by the same witness; applying it to all respects and modes of formal,
+  virtual or eminent possession remains open. See
+  [actuality/esse](actuality-esse-research.md) and
+  [causal transfer](causal-perfection-transfer.md). A productive source
+  of esse need not be the immediate cause of this exercise merely because
+  the exercise requires an existing bearer. `f8ba2429` (universal
+  transfer), `64498e7e` (preexistence in cause), and
+  `d5a94eb1` (causal superiority) remain substantive. The existing
+  `DirectEsseRootPerfectionGoodness.perfectOfMaximum` also needs its
+  maximum and universal-esse-cause premises; actual cognitive perfection
+  is a downstream target, not proof of maximality.
+- **Intellect:** `CogitoCapacityInterface.SelectedMapping` translates
+  a supplied selected capacity, but does not infer it from an actual
+  exercise. The stronger source claim #1791 needs the local no-fresh-
+  thinker premise along the very same actual-concrete grounding cone
+  (and #1787 the same-root join). The positive datum does not establish
+  this premise: a nonthinking support source can produce/enable the
+  exercise on an emergent or reductive account, while an idealist can
+  propose a thinking source. Actual understanding, capacity to understand,
+  actual thinking source, and pure intrinsic intellect are separate
+  conclusions. Productive capacity alone is not actual intrinsic grasp.
+
+### Remaining tests
+
+1. Issue #543 still calls for a Lean proof that an episode-only theory
+   admits an expansion with empty fresh concrete-existence predicates, and
+   a separate control preserving a true abstract content in the absence of
+   concrete population. The [two questionings and unread quotation](#which-occurrence-supplies-the-witness)
+   resolve the local applicability question for e₀ under the event-inclusive
+   reading and the adopted esse contract.
+2. Test whether the content-appropriation of one grasp is an independently
+   warranted nonidentity/ownership relation or an internal aspect of an
+   event. A concrete criterion that rules out the strongest organized
+   occurrence account, rather than presupposing distinct subjecthood,
+   would reopen #1792.
+3. Compare direct successive awareness against a static state whose content
+   represents order. Distinguish B-theoretic real succession from a
+   single-slice rival. A reliable witness of change in the same subject
+   plus the existing motion/potency dictionary is the exact prima-via
+   connection to pursue, not an assumption that all thoughts change.
+4. Investigate whether real particular exemplification is constitutively
+   dependent on that very existent under a **nontrivial** counterfactual
+   or essence condition, and whether the condition is distinct from
+   the reflexive existence requirement. Only after establishing a real
+   proper support relation test causal transfer and the no-fresh-thinker
+   condition. Avoid upgrading fact-level dependence to productive esse
+   receipt by terminology.
+
+### Review and verification
+
+The original handoff recorded that its author lacked a local checkout and
+could run only the finite Python control. The independent recheck subsequently
+accepted the [witness comparison](#which-occurrence-supplies-the-witness) at
+`c0b61e29bb71539f698497e5d7b74820a2330c35`. Its finding concerns this
+particular questioning at w₀. The [attempt](../../corpus/attempts/cogito-concrete-world-536.json)
+records the review and the remaining #543 obligations.
+
+The finite Python control checks the listed model properties. The existing
+[cogito/esse](../../corpus/attempts/cogito-esse-1113.json) and
+[thought/change](../../corpus/attempts/cogito-physics-thought-change-subject.json)
+results retain their reviewed scopes. This local application reuses #1980
+and leaves the formal premise frontier unchanged.

@@ -1,0 +1,11 @@
+{
+  "id": "1583ce3d-4c08-4a3b-a81a-50f2f52e9cdc",
+  "label": "Credential bundle omission controls",
+  "argument_id": "8b92ca2d-638e-47c1-8903-b86a0fb5caeb",
+  "challenge_module": "TruthCore.Results.Logic.EpistemicCredentialing.Challenge",
+  "solution_module": "TruthCore.Results.Logic.EpistemicCredentialing.Solution",
+  "theorem": "TruthCore.Results.Logic.EpistemicCredentialing.controls",
+  "comparator_config": "results/1583ce3d-4c08-4a3b-a81a-50f2f52e9cdc/comparator.json",
+  "status": "solution-present",
+  "description": "The five omission profiles isolate each member of the bundle. In particular the W omission has irreflexive transitive prior relation and indefinitely many successor credential contents, while a nonempty finite acyclic serial graph could not supply the same omission. All belief, warrant, certification and reason assignments are structural surrogates; the profiles do not establish actual infinitist or holistic epistemology."
+}

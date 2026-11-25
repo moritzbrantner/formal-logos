@@ -1,0 +1,18 @@
+{
+  "id": "06adb1ac-f53d-4aa8-9467-309354c2f38a",
+  "label": "Thin nihilism excludes warranted acceptance under evidential calibration",
+  "premise_statement_ids": [
+    "38f44eff-5a6b-5e0d-a332-353af432ba1a",
+    "0e2bbd59-2b4c-438d-b792-0ca401eaf862",
+    "6b4e3331-01ca-484b-bda1-460ebff1df35"
+  ],
+  "conclusion_statement_id": "cbe1661b-1b9e-4200-b97d-0b8464a323d8",
+  "inference_ids": [
+    "8e87ddf4-da38-40c7-b2f1-fb4a0c5eda3b"
+  ],
+  "meaning": "For the same ReliabilityFrame and Reason relation, if any actual acceptance is warranted, the existing requirement of an undefeated supporting basis and the surviving-basis reason calibration yield thin F6 (b3ddb7c4). This contradicts the supplied thin global nihilism by 146b502b. No conclusion about warranted acceptance follows from nihilism alone without both bridges. Composing with the credentialing exclusion requires the identical reason relation.",
+  "definition_ids": [
+    "15160f9d-a231-4a9f-834f-cc78a7523dc3",
+    "dcbd9590-2c87-5550-a69c-b4af6e272fa4"
+  ]
+}
