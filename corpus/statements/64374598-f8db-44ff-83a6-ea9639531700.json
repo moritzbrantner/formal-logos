@@ -1,0 +1,12 @@
+{
+  "id": "64374598-f8db-44ff-83a6-ea9639531700",
+  "label": "Coalescence and record correction distinguish state certainty from historical authenticity",
+  "paraphrase": "Explicit Boolean structural controls: an erasing law makes every positive-time state false while complete trajectories still vary; a reversible toggling law preserves state variation while a Unit readout erases it; a two-input accurate restriction gives sound records without fixing one initial state; unrestricted true- and false-past inputs share a positive record, defeating soundness and uniformity despite essential origin markers and existing designated bearers on one unchanged populated roster; an inhabited uniformly false positive fiber is uniform but has no authentic witness and is unsound; a deterministic many-to-one copy rule corrects records by reading a retained past coordinate, whereas a rule stamping a positive record irrespective of that coordinate is unsound. These witnesses are mathematical assignments, not metaphysically possible fabricated histories or estimates of actual error.",
+  "lean_declaration": "TruthCore.Epistemology.InitialHistoryAuthenticity.Controls",
+  "definition_ids": [
+    "79595648-e618-4e5b-89d4-8ca0fc82291d",
+    "07fffca9-7d59-49b3-a85a-1c0345382f51",
+    "dd7b91ea-5284-4558-bac5-7a0759843b0c",
+    "334ceafa-8848-4b4a-8713-3968e608b7da"
+  ]
+}

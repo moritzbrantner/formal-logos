@@ -1,0 +1,27 @@
+{
+  "id": "b31ee595-dc6e-47a4-88a9-1910a0092199",
+  "label": "Planned signs and their assertoric realization",
+  "term": "planned sign content, effective realization and assertoric scope",
+  "definition": "Intentions.Plans i g c primitively says that g plans in history i to produce a sign expressing the individuated content c. This need not present c as true: a fictional sign may be planned. AssertoricPlans explicitly maps each selected plan to the same bearer and content in the existing Attitudes.Asserts. RealizesPlans requires every caused token on this channel to be the specified encoding of some planned content in the named domain D. Thus planned content, actual causal output, and genuine assertion remain distinct and can fail to match.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Epistemology.SourceEvidenceAdequacy.Intentions",
+  "definition_ids": [
+    "91414c1b-813a-4b1d-bab5-715394ccd0bc",
+    "fa09d1dc-e38e-42ec-ac95-c510e8a87716"
+  ],
+  "note": "Plans is primitive; applicability to a divine source or an actual record is OPEN. The theorem does not establish the cognitive or moral inputs of existing veracity. It uses actual source truth at each admitted history, not capacity, a name, or an actual-world claim silently made necessary. In the controls a source with truthful complete cognition can cause a nonassertoric false sign or fail to realize its truthful plan. These are structural omission samples, not evidence that a perfect source actually has either behavior.",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "Plans identifies the source, history and individuated content of a plan to make a sign. It is neither an assertion attitude nor successful production.",
+    "examples_unavailable": "The selected source-to-historical-record channel has not been empirically identified. Planned fiction and truthful inscription are conceptual illustrations, not newly sourced observations.",
+    "exclusions": [
+      "An ordinary unplanned causal trace need not instantiate Plans.",
+      "Intending a true sign does not itself entail encoding or successful reception.",
+      "A plan does not by definition assert its content as true."
+    ],
+    "open_obligations": [
+      "Interpret the actual source plan and its content.",
+      "Defend the assertoric scope and effective production of the selected records."
+    ]
+  }
+}

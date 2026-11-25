@@ -1,0 +1,10 @@
+{
+  "id": "35fefdfc-aeac-425f-966c-c46a1b95a84c",
+  "label": "Initial variation under injective dynamics and complete trajectories (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "c378c2d2-fc8e-4125-af1a-a6763306d87a",
+  "rule": "Admitted-witness transport, induction on time, and evaluation at time zero",
+  "meaning": "Derives the exact structural conservation boundary for a fixed law and admitted input class. Reversible finite evolution preserves distinctions; retaining time zero distinguishes complete histories even after later coalescence. Readout preservation requires its own injectivity. No unconditional conservation of ignorance, arbitrariness, lack of explanation or every observable is claimed. The law's necessity and the admitted class's metaphysical scope remain application commitments.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

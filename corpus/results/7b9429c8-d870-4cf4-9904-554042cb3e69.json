@@ -1,0 +1,11 @@
+{
+  "id": "7b9429c8-d870-4cf4-9904-554042cb3e69",
+  "label": "Exact content recovery supplies truth-preserving record transport",
+  "argument_id": "39cafc45-b472-48a3-9851-65c780da5e45",
+  "challenge_module": "TruthCore.Results.Epistemology.SourceEvidenceAdequacy.Challenge",
+  "solution_module": "TruthCore.Results.Epistemology.SourceEvidenceAdequacy.Solution",
+  "theorem": "TruthCore.Results.Epistemology.SourceEvidenceAdequacy.transportWeakens",
+  "comparator_config": "results/7b9429c8-d870-4cf4-9904-554042cb3e69/comparator.json",
+  "status": "solution-present",
+  "description": "RECORD_TRANSPORT_1 implies RECORD_TRANSPORT_2 on the SAME channel and domain. The former is the sole Prop premise; allowed histories and content semantics are parameters. This is a strength comparison, not a defense of either transport condition or historical reliability. The retagging control witnesses failure of the converse."
+}

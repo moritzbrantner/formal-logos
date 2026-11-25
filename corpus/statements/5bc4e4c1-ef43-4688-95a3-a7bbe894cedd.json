@@ -1,0 +1,19 @@
+{
+  "id": "5bc4e4c1-ef43-4688-95a3-a7bbe894cedd",
+  "label": "Existential coverage survives removing the explanation of the same contingent act",
+  "paraphrase": "The fixed ExplanatorySymmetry.acting arena and its unexplainedAct variant have identical ontology, truth and existence-fact map. At world 0 the act member 0 and distinct target are contingent; both retain the act-to-target reason and the variant retains the direct source-to-target reason. Only the original has a reason for member 0 and contingent-fact PSR. Both satisfy the exact NoBruteContingentExistenceAt predicate through the explicitly restricted existenceView adapter. Neither explanation relation necessitates its outcomes. The inherited two necessary sources, assigned reason edges and nonexistential act distinguish formal scopes; they establish no personal agency, causal productivity, single divine source, explanatory adequacy or metaphysical possibility.",
+  "lean_declaration": "TruthCore.Explanation.ContainedSelection.ExerciseComparison",
+  "definition_ids": [
+    "c1ae0b54-f6f2-4f93-afdc-5d948c36c0d8",
+    "9e6cdf50-baaa-46a2-917c-cc079bce38b3",
+    "fe4b7da0-cbd6-5d1f-b589-953f9def12b7",
+    "e7302a28-f9fc-4961-811f-bf58bd86c28d",
+    "d513fb8a-64ee-5d49-ae56-4d695f93ca71",
+    "fcb346d7-ddd2-50bb-a7c2-3d79d41b8eae",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d"
+  ],
+  "disambiguation_ids": [
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f",
+    "e63036c5-d9c0-55d3-9704-e23efcbed127"
+  ]
+}

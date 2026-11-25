@@ -1,0 +1,15 @@
+{
+  "id": "d5bcfe22-d482-4efe-b405-131fa37b9d17",
+  "label": "Necessary restriction determination boundary by truth-vector invariance",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "397cdbfa-16ca-428c-974c-de3c8b2155dd",
+  "inference_ids": [
+    "e367a6eb-cba8-475d-afc2-6792b0ec8aa8"
+  ],
+  "meaning": "Necessary basis facts give the same complete selected evidence vector at actuality and the absence witness. EvidenceOnly transfers the actually true condition there; its determining clause contradicts the absence. CompleteTruthFixed directly excludes contingency. This is the fact-level application of the existing history-selection obstruction, not a new theorem that every adequate explanation must determine an outcome.",
+  "definition_ids": [
+    "66da8cf2-2e22-4107-b642-fc7ea657c7ed",
+    "fe4b7da0-cbd6-5d1f-b589-953f9def12b7",
+    "ef77f135-336d-420d-a6f2-6072e78a9f08"
+  ]
+}

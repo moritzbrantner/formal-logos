@@ -1,0 +1,12 @@
+{
+  "id": "1bdbcc53-fe5c-427a-8009-7642aeaf4578",
+  "label": "Exact content recovery supplies truth-preserving record transport (inference)",
+  "input_statement_ids": [
+    "c7c0ccda-a540-43f5-bad5-1e9b25eb2ca7"
+  ],
+  "output_statement_id": "636afc90-2c2c-4054-adca-9680d35b9e98",
+  "rule": "Substitute the recovered identical content in the unchanged truth interpretation",
+  "meaning": "RECORD_TRANSPORT_1 implies RECORD_TRANSPORT_2 on the SAME channel and domain. The former is the sole Prop premise; allowed histories and content semantics are parameters. This is a strength comparison, not a defense of either transport condition or historical reliability. The retagging control witnesses failure of the converse.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

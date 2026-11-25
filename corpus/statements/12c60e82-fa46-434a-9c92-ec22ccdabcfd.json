@@ -1,0 +1,13 @@
+{
+  "id": "12c60e82-fa46-434a-9c92-ec22ccdabcfd",
+  "label": "Actual target-copying production and exact transport guarantee exact-value records",
+  "paraphrase": "For any shared History, channel, source, admitted class, observation map, positive-record selection, independently supplied target value and message domain: if every source-caused token encodes that target, admitted target values lie in the domain, RECORD_TRANSPORT_1 recovers domain messages and selected records actually come from that same existing source, each selected decoded record equals its target. No intention, assent, assertion or God classification is a premise. No absence of mind, actual historical access or epistemic warrant follows from the schema.",
+  "lean_declaration": "TruthCore.Epistemology.SourceEvidenceAdequacy.CopyGuarantee",
+  "definition_ids": [
+    "91414c1b-813a-4b1d-bab5-715394ccd0bc",
+    "dd7b91ea-5284-4558-bac5-7a0759843b0c",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "4abacd6f-e9f3-4790-b4d9-8e8368c95fdd",
+    "e37c56c6-ac07-40d9-93df-6688593784e9"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "389db8f3-19c9-48c6-a6c7-c778f13895e2",
+  "label": "Truthful same-source assertions reach records through explicit production and transport",
+  "paraphrase": "For every shared History, channel, intentions, history-indexed individuated Attitudes and Semantics, fixed source g, admitted class, observation map, positive-record selection and content domain: if g has the existing GOD_4 and classical-attribute classifications, its assertions are true at each admitted history, selected plans genuinely assert the same content, all its selected causal tokens effectively encode plans in the domain, every positive observation is received from a token caused by that same existing source, and RECORD_TRANSPORT_2 preserves true content, then all selected admitted records have true decoded content. This is a conditional channel assembly. Source truth at one actual history alone is not the uniformly quantified premise; no actual channel, source classification or epistemic identification is supplied.",
+  "lean_declaration": "TruthCore.Epistemology.SourceEvidenceAdequacy.SourceGuarantee",
+  "definition_ids": [
+    "91414c1b-813a-4b1d-bab5-715394ccd0bc",
+    "dd7b91ea-5284-4558-bac5-7a0759843b0c",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "b31ee595-dc6e-47a4-88a9-1910a0092199",
+    "88f9f6e8-997b-5f7d-afa1-c501954c3807",
+    "9fcefb90-0cc3-4c0a-b964-cbf3585bc9c9",
+    "fa09d1dc-e38e-42ec-ac95-c510e8a87716",
+    "16daa03a-e1d0-4e07-89ad-3ac67db8c66c"
+  ]
+}

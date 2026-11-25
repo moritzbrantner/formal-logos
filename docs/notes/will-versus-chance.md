@@ -1671,10 +1671,16 @@ is claimed. Advisory novelty retrieval returned substantial prior work;
 the addition claims no new implication or graph edge. The seven author
 checks preserve finite-case boundaries, modal premise scope, the same
 bearer and full bundles, matched explanatory demands, the power versus
-formative-exercise senses, and the review/publication boundary. This new
-scope is proposed, with independent semantic review pending; prior
-reviewed findings and proof evidence retain their original scope. No
-new Lean theorem, definition, sourced claim or premise discharge.
+formative-exercise senses, and the review/publication boundary. Independent semantic review accepted this scope with qualifications at
+`ecd99e9fab1ffd743c35a5829b57405f04377184`, together with the complete
+integrated comparison and actual PR description. It repaired one
+sufficient-versus-necessary bridge overstatement; no unresolved
+substantiated finding remains. The existing attempt records the review
+and publication disposition; draft PR #1962 owns delivered-head CI.
+Prior findings and proof evidence retain their original scope. No new
+Lean theorem, definition, sourced claim or premise discharge. The
+[published reviewed snapshot](https://github.com/moritzbrantner/formal-logos/commit/ebe7aca0e20702feafd79c9273a8e1d43c41c130)
+has the identical Git tree as the named local review revision.
 
 ## Research attempts citing this note
 

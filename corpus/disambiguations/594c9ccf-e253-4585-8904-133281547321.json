@@ -1,0 +1,25 @@
+{
+  "id": "594c9ccf-e253-4585-8904-133281547321",
+  "label": "Exact content and truth-preserving record transmission",
+  "term": "exact content and truth-preserving record transmission",
+  "sense_definition_ids": [
+    "e37c56c6-ac07-40d9-93df-6688593784e9",
+    "16daa03a-e1d0-4e07-89ad-3ac67db8c66c"
+  ],
+  "senses": [
+    {
+      "id": "3d26300a-3f1f-4f88-b5ea-069b1225c822",
+      "label": "RECORD_TRANSPORT_1",
+      "definition_id": "e37c56c6-ac07-40d9-93df-6688593784e9",
+      "lean_declaration": "TruthCore.Epistemology.SourceEvidenceAdequacy.ExactTransport"
+    },
+    {
+      "id": "a937d92a-a3fc-4a62-8d30-b1c9ce4206de",
+      "label": "RECORD_TRANSPORT_2",
+      "definition_id": "16daa03a-e1d0-4e07-89ad-3ac67db8c66c",
+      "lean_declaration": "TruthCore.Epistemology.SourceEvidenceAdequacy.TruthTransport"
+    }
+  ],
+  "resolution": "Exact decoded-content identity and preservation of truth are distinct. SourceGuarantee uses only RECORD_TRANSPORT_2. CopyGuarantee has the exact-value target and uses RECORD_TRANSPORT_1 on the target range. transportWeakens explicitly derives sense 2 from sense 1 on one unchanged channel and domain; the retagging control refutes the converse in the stated structural model. Neither sense is epistemic entitlement or source identification.",
+  "term_label": "RECORD_TRANSPORT"
+}

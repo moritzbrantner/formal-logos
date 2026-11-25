@@ -1,0 +1,9 @@
+{
+  "id": "07fffca9-7d59-49b3-a85a-1c0345382f51",
+  "label": "Admitted initial variation under one deterministic rule and complete trajectories",
+  "term": "admitted initial variation and complete deterministic trajectory",
+  "definition": "evolve step i is the Nat-indexed trajectory with value i at zero and step n applied at each successor. step : Nat -> S -> S is one supplied deterministic, possibly time-dependent transition rule, with no later independent input. observed composes evolution at one time with a supplied readout. Varies allowed value requires two admitted inputs with distinct values of the selected map. Set.InjOn restricts injectivity to the admitted inputs. The same state carrier and transition rule serve all inputs; memory used by a law belongs in S. Complete trajectory means all states including time zero, not merely the present state, the selected readout, or the old SameHistory presence extension.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Epistemology.InitialHistoryAuthenticity.evolve",
+  "note": "Analyst scope for the existential-inheritance investigation, attribution deferred. allowed is an explicit selected class of initial states, not an established metaphysical modal range. Injectivity is equality-reflection, not a metaphysical explanation or an entropy claim. No magnitude or probability of arbitrariness is supplied. Constant dynamics is a counterexample to unconditional output-variation conservation; evaluation at zero preserves the distinction between its complete trajectories. This time-dependent recursion is not an iterate of one endofunction; no new generic mathematics library is introduced. Actual state completeness, deterministic lawhood or necessity, admissibility, and epistemic availability remain OPEN. See docs/notes/fixed-initial-history-535.md#initial-conditions-and-authentic-historical-evidence-2026-11-24."
+}
