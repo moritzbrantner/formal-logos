@@ -588,10 +588,12 @@ undefeated support for warrant gives loss of warrant. The first control
 realizes the entire bundle with a true target. A contradiction requires a
 further assertion of warrant for that same subject and target, or another
 premise implying it. Advocating the conclusion as warranted on grounds that
-one's own argument removes is epistemic self-undermining. Discovering one
-compromised ground while other grounds remain incurs only the loss of its
-contribution. The second control realizes the exact denial of P. The third
-retains P and target warrant through other support after defeat. The fourth
+one's own argument removes is epistemic self-undermining. Losing E can leave warrant intact if the remaining grounds adequately sustain
+the subject's acceptance. The theorem quantifies over all available supporting
+grounds. To draw the same conclusion about a person's belief from the grounds
+they actually used, we also need evidence of what their acceptance was based on.
+The second control realizes the exact denial of P. The third gives an example
+in which P, other support and target warrant all hold after E is defeated. The fourth
 keeps the report, P and a constantly wrong verdict while E remains undefeated.
 Bare falsity cannot activate P. Distinct basis labels in these examples
 stipulate a model; an actual case needs a provenance check for shared error.
