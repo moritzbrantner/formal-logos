@@ -86,4 +86,121 @@ theorem causeFromAvailableExternalReason {W B T R : Type} (F : CausalityFrame W 
   obtain ⟨r, hr, hne⟩ := hAvailable x hx (hPSR x hx)
   exact ⟨source r, hne, hSource x r hx hr hne⟩
 
+/-- Keep each reason exactly at worlds where its target bearer exists. -/
+def actualTargetReasons {W B T R : Type} (F : CausalityFrame W B T R)
+    (ex : W → Reason B → ExistenceFact B → Prop) :
+    W → Reason B → ExistenceFact B → Prop
+  | w, r, .fact x => ex w r (.fact x) ∧ F.history.ontic.ExistsAt w x
+
+theorem actualTargetReasonsSound {W B T R : Type} (F : CausalityFrame W B T R)
+    (ex : W → Reason B → ExistenceFact B → Prop) :
+    Sound (reasonModel F (actualTargetReasons F ex)) :=
+  fun _ _ _ h => h.2
+
+/-- The restriction leaves every token for an actual contingent bearer intact
+at the selected world. Contingency already includes occurrence there. -/
+theorem actualTargetReasonIff {W B T R : Type} (F : CausalityFrame W B T R)
+    (ex : W → Reason B → ExistenceFact B → Prop) (w : W) (x : B) (r : Reason B)
+    (hx : ContingentAt F.history.ontic w x) :
+    (reasonModel F (actualTargetReasons F ex)).explains w r (.fact x) ↔
+      (reasonModel F ex).explains w r (.fact x) :=
+  ⟨And.left, fun hr => ⟨hr, hx.1⟩⟩
+
+theorem actualTargetReasonsLocalPSRIff {W B T R : Type} (F : CausalityFrame W B T R)
+    (ex : W → Reason B → ExistenceFact B → Prop) (w : W) :
+    NoBruteContingentExistenceAt (reasonModel F (actualTargetReasons F ex)) w ↔
+      NoBruteContingentExistenceAt (reasonModel F ex) w := by
+  constructor
+  · intro h x hx
+    obtain ⟨r, hr⟩ := h x hx
+    exact ⟨r, (actualTargetReasonIff F ex w x r hx).mp hr⟩
+  · intro h x hx
+    obtain ⟨r, hr⟩ := h x hx
+    exact ⟨r, (actualTargetReasonIff F ex w x r hx).mpr hr⟩
+
+open TruthCore.Causality.FirstMoverNecessity.Model (bruteFirst conserved fContingent mk
+  noCause noPrior xCausesF xPriorF)
+open TruthCore.Explanation.BruteContingencyParity (occasion selfAndOccasion)
+
+private theorem firstMoverContingency
+    (causes : Bool → Bool → Bool → Prop) (prior : Bool → Bool → Prop) (x : Bool) :
+    ContingentAt (mk fContingent causes prior).history.ontic true x ↔ x = true := by
+  constructor
+  · intro hx
+    cases x with
+    | false =>
+      obtain ⟨_, v, _, habs⟩ := hx
+      exact (habs (Or.inl rfl)).elim
+    | true => rfl
+  · rintro rfl
+    refine ⟨Or.inr rfl, false, trivial, ?_⟩
+    rintro (h | h) <;> contradiction
+
+/-- Both tokens survive at the reading world in the sound conserved model.
+The local PSR, external availability and BX2 hold while universal BX1 fails. -/
+theorem soundMixedReasons :
+    let m := reasonModel conserved (actualTargetReasons conserved selfAndOccasion)
+    Sound m ∧
+      ContingentAt m.ontic true true ∧
+      m.explains true (.intrinsic true) (.fact true) ∧
+      m.explains true (.circumstance false) (.fact true) ∧
+      NoBruteContingentExistenceAt m true ∧
+      SomeExternalReasonAvailable m true ∧
+      ExistenceReasonSourceCausesEsse conserved m true ∧
+      ¬ ContingentExistenceNotSelfExplained m true := by
+  let ex := actualTargetReasons conserved selfAndOccasion
+  have hc : ContingentAt conserved.history.ontic true true :=
+    (firstMoverContingency xCausesF xPriorF true).mpr rfl
+  have intrinsic : ex true (.intrinsic true) (.fact true) := ⟨Or.inl rfl, hc.1⟩
+  have external : ex true (.circumstance false) (.fact true) := ⟨Or.inr ⟨rfl, rfl⟩, hc.1⟩
+  refine ⟨actualTargetReasonsSound conserved selfAndOccasion, hc, intrinsic, external,
+    ?_, ?_, ?_, ?_⟩
+  · intro x hx
+    obtain rfl := (firstMoverContingency xCausesF xPriorF x).mp hx
+    exact ⟨.circumstance false, external⟩
+  · intro x hx _
+    obtain rfl := (firstMoverContingency xCausesF xPriorF x).mp hx
+    exact ⟨.circumstance false, external, by decide⟩
+  · intro x r hx _ hne
+    obtain rfl := (firstMoverContingency xCausesF xPriorF x).mp hx
+    cases hSource : source r with
+    | false => exact ⟨rfl, rfl, rfl⟩
+    | true => exact (hne hSource).elim
+  · intro h
+    exact h true (.intrinsic true) hc intrinsic rfl
+
+/-- In the sound brute-first model the existing moved thing provides the
+circumstance token, while its existence and the token supply no esse-cause. -/
+theorem soundOccasionWithoutEsseCause :
+    let m := reasonModel bruteFirst (actualTargetReasons bruteFirst occasion)
+    Sound m ∧
+      ContingentAt m.ontic true true ∧
+      m.ontic.ExistsAt true false ∧
+      m.explains true (.circumstance false) (.fact true) ∧
+      NoBruteContingentExistenceAt m true ∧
+      SomeExternalReasonAvailable m true ∧
+      ¬ ExistenceReasonSourceCausesEsse bruteFirst m true ∧
+      (∀ c, ¬ bruteFirst.CausesIn c true bruteFirst.esse) ∧
+      ¬ ContingentHasDistinctEsseCause bruteFirst true := by
+  let ex := actualTargetReasons bruteFirst occasion
+  have hc : ContingentAt bruteFirst.history.ontic true true :=
+    (firstMoverContingency noCause noPrior true).mpr rfl
+  have external : ex true (.circumstance false) (.fact true) := ⟨⟨rfl, rfl⟩, hc.1⟩
+  have available : SomeExternalReasonAvailable (reasonModel bruteFirst ex) true := by
+    intro x hx _
+    obtain rfl := (firstMoverContingency noCause noPrior x).mp hx
+    exact ⟨.circumstance false, external, by decide⟩
+  have noEsseCause : ∀ c, ¬ bruteFirst.CausesIn c true bruteFirst.esse :=
+    fun _ h => h
+  refine ⟨actualTargetReasonsSound bruteFirst occasion, hc, Or.inl rfl, external,
+    ?_, available, ?_, noEsseCause, ?_⟩
+  · intro x hx
+    obtain rfl := (firstMoverContingency noCause noPrior x).mp hx
+    exact ⟨.circumstance false, external⟩
+  · intro h
+    exact noEsseCause false (h true (.circumstance false) hc external (by decide))
+  · intro h
+    obtain ⟨c, _, hcSource⟩ := h true hc
+    exact noEsseCause c hcSource
+
 end TruthCore.Explanation.FoundationalExistenceApplications

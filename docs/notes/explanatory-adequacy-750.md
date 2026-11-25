@@ -1564,19 +1564,26 @@ reason r from the local PSR, applies universal BX1 to r, and then
 BX2. It does not logically need the denial of *every* same-bearer
 reason token. The weaker BX1 condition asks for one reason with a distinct source whenever a contingent bearer has any existence reason. BX1 supplies that reason by taking the existing witness. With local reason PSR and BX2, the weaker condition gives the required distinct cause of esse. Whether the selected reason adequately explains this individual's existence remains a further question. [`externalAvailableOfNoSelfExplanation`](../../TruthCore/Explanation/FoundationalExistenceApplications.lean#L72) · [`causeFromAvailableExternalReason`](../../TruthCore/Explanation/FoundationalExistenceApplications.lean#L79)
 
-The existing model 6 from B2SupportControls,
-`conserved` with `selfAndOccasion`, provides an exact control
-to inspect: the sole contingent bearer is f (true), and
-`occasion` supplies its distinct source x (false); an intrinsic
-token also explains f, so universal BX1 fails. In that original
-assignment the occurrence of such tokens at the absent world
-also violates global Sound. Gating all edges by target existence
-retains the actual-world witness and BX1 failure while restoring
-Sound; this observation does not certify the new gated control
-in Lean. No causal inference about the natural source of a token
-is warranted without BX2. If adequate constitutive reasons are
-not faithfully represented by the two #312 constructors, an
-explicit adapter is still needed.
+The original `conserved` model with `selfAndOccasion` admits
+tokens for the mover even where it is absent. Intersecting the
+reason relation with target occurrence on the same frame gives
+global `Sound` and preserves exactly the tokens for any contingent
+bearer at the selected world, hence also the local PSR. In the
+restricted model the mover `true` retains both its intrinsic token
+and the circumstance token about the moved thing `false`.
+Local PSR, external availability and BX2 all hold while universal
+BX1 fails. On the restricted `bruteFirst` model with `occasion`,
+the moved thing also exists at the reading world and supplies an
+external token. Global `Sound`, local PSR and external availability
+all hold. The mover has no esse-cause, so BX2 and B2 fail. The
+comparison tests the factivity of the assigned tokens and leaves
+their explanatory adequacy and any adapter for constitutive
+reasons open.
+[`actualTargetReasonsSound`](../../TruthCore/Explanation/FoundationalExistenceApplications.lean#L95) ·
+[`actualTargetReasonIff`](../../TruthCore/Explanation/FoundationalExistenceApplications.lean#L102) ·
+[`actualTargetReasonsLocalPSRIff`](../../TruthCore/Explanation/FoundationalExistenceApplications.lean#L109) ·
+[`soundMixedReasons`](../../TruthCore/Explanation/FoundationalExistenceApplications.lean#L141) ·
+[`soundOccasionWithoutEsseCause`](../../TruthCore/Explanation/FoundationalExistenceApplications.lean#L174)
 
 The restriction to the very mover from checkpoint 4 and the
 restriction from universal prohibition to one suitable reason
