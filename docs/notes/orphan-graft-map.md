@@ -226,8 +226,8 @@ be independently defended by an argument that presupposes that very premise.
 | WITTGENSTEIN-UNIVERSAL-DOUBT-FAILS | Actual universal doubt `b30587bf`; failure `1994160a` (already related) | Given the exemption condition, active universal doubt fails. Not a refutation of suspension, ungrounded hinges or denial of sensory warrant. Does not imply F4. |
 | SCIENTISM-STRONG-DILEMMA `0a3d0ed8` (`98451a18`) | Scoped norm `d190bb85`; exact global negative existential `66e84d62` is already alternative to `70118ddd` | Two horns under `2faf3d39` (self in scope) and `aa9893e1` (self not empirically established). New attack `4feb048b` on scoped norm only. Truth without establishment, restricted scope and comparative scientism survive. |
 | SCIENTISM-SCOPE-GUARDED-NONEMPIRICAL-NEGATIVE `2a84bfbe` | Global absence of established nonempirical claims `66e84d62` | Scoped norm alone is insufficient; existing bridge `31cf9a3d` transfers a nonempirical witness into scope. Stronger scope premises `deea0f62` and `eb89527e` are not automatically established. |
-| Weak scientism demarcation / weak model | Restricted establishment norm | Survives the dilemma if the formulation is out of scope. No edge to F1/F4/F6 merely because a rival favors scientific methods. |
-| RELATIVISM-NO-ABSOLUTE-TRUTH-SELF-FALSIFYING `dbc2fb38` (`114d2581`) | Scoped no absolute truth `a249ccbc`; global `bff72296` already alternative to `f625ad83` | Under `5c18a8c4` (scope) and `de454f1e` (disquotation), the formulation cannot be absolutely true. New attack `322d4ccb` on scoped denial. Relative-private assertion and exemption survive. Neither objective truth nor classical noncontradiction follows. |
+| Weak scientism demarcation / weak model | Restricted establishment norm | A restricted empirical norm can exempt its own formulation. If that formulation lies within the broader norm’s domain and is established without empirical establishment, it witnesses `SomeNonEmpiricalEstablished` and defeats the broader norm. [Weak demarcation](../../TruthCore/Results/Logic/Scientism/WeakDemarcation/Challenge.lean) |
+| RELATIVISM-NO-ABSOLUTE-TRUTH-SELF-FALSIFYING `dbc2fb38` (`114d2581`) | Scoped no absolute truth `a249ccbc`; global `bff72296` already alternative to `f625ad83` | Under `5c18a8c4` (scope) and `de454f1e` (disquotation), the formulation cannot be absolutely true. New attack `322d4ccb` on scoped denial. An exempt formulation can be held true only relative to a speaker. If the formulation itself is absolutely true, it witnesses `SomeAbsoluteTruth` and defeats global denial. Given truth ascent and the restricted denial, every ascent iterate is also exempt, even when iterates coincide. [Exemption result](../../TruthCore/Results/Aristotle/Metaphysics/ExemptionRegress/Challenge.lean) |
 | TRUTH-NONTRIVIALITY-CORE; LOGIC-NOT-EVERY-PROPOSITION-FAILS / HOLDS | Every proposition is false or every proposition is true in the encoded logic | Logical controls distinguish true and false propositions. A transfer to a rival's object-language truth or negation needs semantic calibration. These are not refutations of every relative or paraconsistent logic. |
 | VERIFICATIONISM-SELF-APPLICATION-DILEMMA `0bd651df` (`a3c1988e`) | Scoped verification principle `12527c0e` | Conditional under `6dc3f04a`, `4e72c49e`, `18b8adb3` (scope, nonanalytic, nonverifiable). New attack `42900430`, not an unconditional exclusion. Criterion as proposal or scoped norm survives. |
 | V1 law exclusion (`32b3030e`) | V1 package `895fc3f2`; weak negation closure floor `3f979107` | Existing refutes relation; relies on approved weak closure and package conditions. Do not broaden to every verification criterion or all empirical inquiry. |
@@ -572,10 +572,14 @@ propositional consequences:
 1. **Absolute truth.** If the same object-language content c expresses
    the proved proposition and the truth predicate captures that content
    in the direction `NotEveryPropositionFails → T.trueAbs c`, an
-   absolute-truth witness follows constructively. This is a narrower
-   condition than global `Expressive T.trueAbs` or an unrestricted truth
-   schema. The other direction (disquotation) alone does not produce
-   a witness. This supplies an existential, unlike simply negating
+   absolute-truth witness follows constructively. Since
+   `NotEveryPropositionFails` is proved, this capture condition for the
+   designated c is equivalent to `T.trueAbs c`. Applying it requires an
+   independently justified interpretation identifying this very content and
+   licensing the truth attribution. A separate route uses
+   `Expressive T.trueAbs` at `True` to supply some absolutely true
+   content. That witness may differ from c. Disquotation alone supplies
+   neither witness. This supplies an existential, unlike simply negating
    global denial via its own formulation. The existing
    [TruthNontrivialityCore](../../corpus/arguments/TRUTH-NONTRIVIALITY-CORE.json)
    has conditional consequences via `GlobalDenialPrice`; a new
