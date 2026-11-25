@@ -1048,3 +1048,37 @@ Independent challenge must inspect the credential semantics, exact same-subject
 instance, prior-reason and warrant interpretations, omission controls and
 cross-frame composition. Do not mark the PR ready or merge without those
 checks. No new computed frontier delta is claimed.
+
+
+## Continuation: bounded epistemic limits and discriminating checks
+
+The previous universal credential comparison is a constraint on an unrestricted policy, not a license to stop arbitrarily. The question now is which further demand would actually improve a subject's grounds for a selected conclusion. Distinguish:
+
+- **Direct ground:** the particular fact or relation is genuinely presented and competently grasped; do not identify a fallible report of presentation with presentation itself. For the local Cogito case, an actual apprehended phenomenal occurrence bears on the existence of some experience regardless of the truth of its represented object. The reason attribution still needs the existing surviving-support calibration.
+- **Inferential ground:** premises have their own warrant and the inference is valid for fixed meanings. A valid cycle or the mere repetition of a premise is not a new source of warrant.
+- **Discriminating contribution:** specify a live contrary alternative, a substantive defeater, or an uncertainty about the ground, method or access, and show how the proposed check bears on that very uncertainty. Shared premises and non-independent evidence are not automatically worthless.
+- **Adequacy for purpose:** pro tanto support, justified acceptance, certainty, and the practical importance of investigating are different. A reason may survive a defeater without being sufficient for acceptance. No universal numerical acceptance threshold follows.
+- **Reopening:** further investigation is appropriate if new evidence, a credible undercutting mechanism, a relevant unresolved alternative, or a material change of question or stakes arises. Mere availability of another question does not show the original judgment unwarranted.
+
+A useful skeptical test is: *which previously live alternative would the next check distinguish, and what result would change the conclusion or the warrant?* Apply that question equally to one's own grounds and rivals. A new independent reason is helpful when it genuinely contributes, not simply because it is independent; non-independent evidence can contribute conditional information. Distinguish a rational stopping point (no further check required for this judgment on its current grounds) from infallibility or a refusal to consider a substantive objection. A justification for rejecting an arbitrary regress demand must not rely solely on the absence of a discovered counterexample.
+
+### Quantitative boundary for one selected target
+
+Reuse `TruthCore.Logic.EpistemicAccuracy.error(q,r)=q(1-r)^2+(1-q)r^2` and its existing accuracy comparison. In one supplied coherent probability assessment, let a proposed binary check have outcome weights w and 1-w, and conditional truth probabilities u and v for the SAME proposition. Its pooled prior is p=wu+(1-w)v. The prospective gain under optimal squared-error responses is
+
+    G = error(p,p) - [w error(u,u) + (1-w) error(v,v)]
+      = w(1-w)(u-v)^2.
+
+The identity and bounds are registered in [the check-value result](../../corpus/results/44b0968c-3016-4604-8273-d4ec486d5592.json), with [frozen challenge](../../TruthCore/Results/Logic/EpistemicAccuracy/Refinement/Challenge.lean) and [solution](../../TruthCore/Results/Logic/EpistemicAccuracy/Refinement/Solution.lean). For interval-valued inputs in the sense of each scalar lying in [0,1], G is nonnegative, at most p(1-p), which is at most 1/4; G=0 exactly when w=0, w=1, or u=v. Thus in a nondegenerate assessment, a check whose outcomes do not change the conditional probability of this target adds zero expected accuracy gain for this target. This is not a claim that the assessment is reliable, that the evidence is accessible, or that no check is worthwhile.
+
+Example: at p=1/2, balanced outcomes giving 3/4 and 1/4 yield gain 1/16, while outcomes both giving 1/2 yield zero. When p=1, every positive-weight conditional probability must also be one. This is saturation *within that assessment*, not an argument against a credible challenge to its calibration. When outcomes concern the reliability of the method rather than the original proposition, the relevant target changes.
+
+For repeated coherent refinements under the same measure and fixed target, expected optimal squared error telescopes. The sum of expected improvements over any finite number of steps cannot exceed the initial error, at most 1/4. Consequently for a fixed positive threshold epsilon there are at most initial error / epsilon steps with unconditional expected gain at least epsilon. This is an elementary summation consequence, not a separately registered Lean theorem; it does not bound the number of positive but diminishing gains, actual inquiry length, or practical costs. A new method-reliability question is not part of that same budget without a separately specified joint scoring objective.
+
+### Live rivals and revision
+
+The strongest standing higher-order rival can agree the first-order evidence supports the proposition and insist that competent epistemic use additionally needs a credential for access. It may supply an independently warranted reason to doubt that access, or require a prior justified metabelief as part of warrant rather than possession of a reason. The former is a discriminating new target; the latter is not excluded by the numerical identity. The existing C/T/W/F6 bundle incompatibility still requires its exact same-frame premises. Standing, holistic and infinitist alternatives remain open. An actual presented instance and competent grasp offer a non-arbitrary stopping candidate; the further question is whether that case itself meets the ordinary reason norm without a separate credential. Keep preference-independent authority and F6 independent warrant distinct; do not derive either from the score or use the F6-dependent exclusion circularly. The selected-world presence and esse conditions on the existing population route remain explicit.
+
+### Verification and handoff
+
+Earlier graph CI failed; the targeted repair at `d48fe8f8ea50ff805b42ce6734ff8e9c58e51154` is retained. The refinement Challenge was frozen in `1c1e8eaf778d98367ae580e627be2f0f27efbcd7` before writing Solution. The new result is solution-present only until CI and binding/Comparator/NanoDa pass. No floor or source-attribution changes and no computed root frontier delta claimed. Independent semantic challenge, actual case warrant and full local verification remain outstanding (no prepared clone or Lean/Lake/Cargo in this environment). The next discriminating work is to apply the qualitative test to an actual direct-ground case and the strongest credible higher-order undercutter, distinguish possession/use/sufficiency, and identify a concrete condition under which a requested additional credential supplies genuine warrant rather than renaming competence.

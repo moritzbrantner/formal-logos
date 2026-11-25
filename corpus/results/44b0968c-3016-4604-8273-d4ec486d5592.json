@@ -1,0 +1,11 @@
+{
+  "id": "44b0968c-3016-4604-8273-d4ec486d5592",
+  "label": "Binary check accuracy gain and its zero-gain boundary",
+  "argument_id": "54d4730b-171b-4e11-9ab3-dde3fdfb32f2",
+  "challenge_module": "TruthCore.Results.Logic.EpistemicAccuracy.Refinement.Challenge",
+  "solution_module": "TruthCore.Results.Logic.EpistemicAccuracy.Refinement.Solution",
+  "theorem": "TruthCore.Results.Logic.EpistemicAccuracy.Refinement.checkValue",
+  "comparator_config": "results/44b0968c-3016-4604-8273-d4ec486d5592/comparator.json",
+  "status": "solution-present",
+  "description": "Expand the existing squared-error definition at the coherent pooled prior and both conditional assessments. Ring normalization gives the product formula, nonnegative factors give gain and budget bounds, and the zero-product law gives the exact zero condition. This is a conditional mathematical indicator for one target, not a calibrated actual probability, an obligation to check, a criterion of categorical warrant, or a new foundation premise."
+}
