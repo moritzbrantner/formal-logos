@@ -1,0 +1,22 @@
+{
+  "id": "ceaee982-9528-43d0-ac9d-8a35f4594bea",
+  "label": "Self-application of the audited cross-history defeat policy",
+  "premise_statement_ids": [
+    "dc7d2e57-5d06-4f4a-a51f-b3b0ea7aec00",
+    "898b25e5-8d32-4188-8c91-c51deca64529",
+    "f94c7149-699e-4c13-a65e-c4aad5c2a9af",
+    "42290d09-f76f-41b9-8394-aefde1ca5619",
+    "ed122f4c-8a51-4310-813c-fe8db8a2f2d3",
+    "fcd6fdc2-8a5e-4c71-a105-1fff691a0e95"
+  ],
+  "conclusion_statement_id": "3db10140-06ed-43e2-8521-391acd2ec925",
+  "inference_ids": [
+    "c7d7ce8e-8e01-42ca-878a-dc67f28bdc2e"
+  ],
+  "meaning": "Taking the designated basis as the debunker’s own ground, the policy undercuts it if its profile and audit meet the stated conditions. If every supporting basis for the conclusion is this one and warrant requires undefeated support, the debunker lacks warrant for that conclusion. No production history, warrant for an actual report, truth value or contradiction follows.",
+  "definition_ids": [
+    "26cbf25d-f3d5-46ea-91e8-e2140a57b04d",
+    "4867e8d4-7ab7-4bd9-a3b2-fdb0dbc4a936",
+    "e17e93bf-eedf-45db-be80-ffac82ef7d98"
+  ]
+}

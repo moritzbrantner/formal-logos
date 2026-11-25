@@ -1,0 +1,15 @@
+{
+  "id": "6a8e4fb8-776e-46c2-a8fb-0862b9a4f6ff",
+  "label": "Four controls for the audited defeat policy",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "b8a3fa12-81b3-4c87-b7f2-e2179f7c9eb3",
+  "inference_ids": [
+    "a6944ec3-58e9-47c1-9e2d-25429ffdb8cb"
+  ],
+  "meaning": "The controls exhibit the policy firing, its existential denial at one basis, other supporting grounds despite defeat, and its failure to fire on bare error. All report, provenance and warrant fields are stipulated. Different basis labels in these frames carry no empirical provenance certificate.",
+  "definition_ids": [
+    "26cbf25d-f3d5-46ea-91e8-e2140a57b04d",
+    "4867e8d4-7ab7-4bd9-a3b2-fdb0dbc4a936",
+    "e17e93bf-eedf-45db-be80-ffac82ef7d98"
+  ]
+}
