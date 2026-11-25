@@ -1,0 +1,9 @@
+{
+  "id": "daeae08d-3a0b-46fc-b932-18eda7ff5f37",
+  "label": "Headcount advantage after every finite addition",
+  "term": "SurvivesEveryFiniteAddition",
+  "definition": "After adding any finite number of posits to the first inventory, its extended natural cardinality is still strictly smaller than the second inventory’s.",
+  "lean_declaration": "TruthCore.Logic.RegressHeadcount.SurvivesEveryFiniteAddition",
+  "basis": "stipulative",
+  "note": "Analyst comparison for a fixed counting unit. Applying it as a preference to competing explanations requires a reason to count those units and a comparison of their adequacy for the same evidence."
+}

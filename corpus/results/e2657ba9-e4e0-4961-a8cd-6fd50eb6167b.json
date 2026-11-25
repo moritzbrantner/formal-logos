@@ -1,0 +1,11 @@
+{
+  "id": "e2657ba9-e4e0-4961-a8cd-6fd50eb6167b",
+  "label": "Characterize infinite multiplicative preference by zero rival hypothesis weight",
+  "argument_id": "39515fc4-54c2-4a0b-a6e1-d3648d3a0e14",
+  "challenge_module": "TruthCore.Results.Causality.OccamRegress.Challenge",
+  "solution_module": "TruthCore.Results.Causality.OccamRegress.Solution",
+  "theorem": "TruthCore.Results.Causality.OccamRegress.unboundedPreference",
+  "comparator_config": "results/e2657ba9-e4e0-4961-a8cd-6fd50eb6167b/comparator.json",
+  "status": "solution-present",
+  "description": "The comparison uses multiplication and remains defined when the infinite rival has zero weight. Both weights are fixed real numbers and the finite rival has strictly positive weight. The result supplies no premise that the infinite regress has zero weight."
+}

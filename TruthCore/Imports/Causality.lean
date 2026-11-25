@@ -193,6 +193,7 @@ public import TruthCore.Causality.NecessarySupportActualScope
 public import TruthCore.Causality.NecessarySupportCoverage
 public import TruthCore.Causality.NecessarySupportPathConnection
 public import TruthCore.Causality.NonlimitingConcreteExistence
+public import TruthCore.Causality.OccamRegress
 public import TruthCore.Causality.OccurrenceUnderivedEssence
 public import TruthCore.Causality.OneDependenceOrder
 public import TruthCore.Causality.OperationLocalFiniteness
@@ -207,6 +208,7 @@ public import TruthCore.Causality.ParticipatedDuration
 public import TruthCore.Causality.ParticipatedEsseScale
 public import TruthCore.Causality.ParticularActuality
 public import TruthCore.Causality.PerAccidensResponses
+public import TruthCore.Causality.PerSeRegressCardinality
 public import TruthCore.Causality.PerfectionOfBeing
 public import TruthCore.Causality.PerfectionPreexistence
 public import TruthCore.Causality.PerfectionTransferGrounding

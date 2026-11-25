@@ -1,0 +1,6 @@
+{
+  "id": "e9b5b688-7a85-4fff-861c-b717fad30074",
+  "label": "Occam’s razor and infinite regress: one shared law allows positive hypothesis weight",
+  "paraphrase": "For each one-time charge c in (0,1], a prefix-weight profile has weight one at the empty prefix, c at the first step, and stays at c through all further steps. A whole-hypothesis weight of c satisfies every prefix bound. No uniform factor below one bounds every extension.",
+  "lean_declaration": "TruthCore.Causality.OccamRegress.SharedLawCharge"
+}

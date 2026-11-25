@@ -1,0 +1,10 @@
+{
+  "id": "39515fc4-54c2-4a0b-a6e1-d3648d3a0e14",
+  "label": "Characterize infinite multiplicative preference by zero rival hypothesis weight",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "7b3c4ab3-9453-4818-8791-4e63890dd84a",
+  "inference_ids": [
+    "da5539e7-9da7-4672-b8a9-c287993b6804"
+  ],
+  "meaning": "The comparison uses multiplication and remains defined when the infinite rival has zero weight. Both weights are fixed real numbers and the finite rival has strictly positive weight. The result supplies no premise that the infinite regress has zero weight."
+}

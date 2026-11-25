@@ -1,0 +1,11 @@
+{
+  "id": "0d877e2b-86df-4bed-8275-49c1a614e2c7",
+  "label": "Bound the whole regress hypothesis weight by geometrically decreasing prefix weights",
+  "argument_id": "d3076ab5-ee6e-433f-adc0-edcfdfe557d7",
+  "challenge_module": "TruthCore.Results.Causality.OccamRegress.Challenge",
+  "solution_module": "TruthCore.Results.Causality.OccamRegress.Solution",
+  "theorem": "TruthCore.Results.Causality.OccamRegress.uniformPrefixDiscount",
+  "comparator_config": "results/0d877e2b-86df-4bed-8275-49c1a614e2c7/comparator.json",
+  "status": "solution-present",
+  "description": "Independent primitive commitments with a uniformly bounded cost can supply the displayed recurrence. The comparison needs an upper bound for the weight of the whole rival in every prefix event of the same prior model. A product for an individual sequence does not bound a union of alternative regresses. The application requires a reason that the rival's additional commitments incur the stipulated uniform cost."
+}

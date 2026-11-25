@@ -1,0 +1,6 @@
+{
+  "id": "7b3c4ab3-9453-4818-8791-4e63890dd84a",
+  "label": "Occam’s razor and infinite regress: preference beyond every finite factor requires zero rival weight",
+  "paraphrase": "Fix a finite hypothesis with positive real weight and an infinite regress hypothesis with nonnegative real weight. The finite weight is at least every positive finite real multiple of the infinite weight exactly when the infinite hypothesis weight is zero.",
+  "lean_declaration": "TruthCore.Causality.OccamRegress.UnboundedPreference"
+}

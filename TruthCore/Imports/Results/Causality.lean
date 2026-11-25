@@ -281,6 +281,7 @@ public import TruthCore.Results.Causality.NecessarySupportPathConnection.Solutio
 public import TruthCore.Results.Causality.NecessaryWholeReplacement.Solution
 public import TruthCore.Results.Causality.NecessaryWitnessConnection.Solution
 public import TruthCore.Results.Causality.NonlimitingConcreteExistence.Solution
+public import TruthCore.Results.Causality.OccamRegress.Solution
 public import TruthCore.Results.Causality.OccurrenceUnderivedEssence.Solution
 public import TruthCore.Results.Causality.OneDependenceOrder.Solution
 public import TruthCore.Results.Causality.OriginDeletion.Solution
@@ -295,6 +296,7 @@ public import TruthCore.Results.Causality.ParticipatedEsseScale.Solution
 public import TruthCore.Results.Causality.ParticularActuality.Solution
 public import TruthCore.Results.Causality.PastResourceControls.Solution
 public import TruthCore.Results.Causality.PerAccidensResponses.Solution
+public import TruthCore.Results.Causality.PerSeRegressCardinality.Solution
 public import TruthCore.Results.Causality.PerfectRootIntellectFromGovernor.Solution
 public import TruthCore.Results.Causality.PerfectRootPositiveIntellectWill.Solution
 public import TruthCore.Results.Causality.PerfectionOfBeing.Solution

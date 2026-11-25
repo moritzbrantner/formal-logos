@@ -1,0 +1,11 @@
+{
+  "id": "e8f7aaef-0424-411f-bdc8-8a3671e3c932",
+  "label": "Count distinct posits along an acyclic regress against a finite alternative",
+  "argument_id": "7dbd42dd-c9d2-4808-ae15-3fa01321bb64",
+  "challenge_module": "TruthCore.Results.Logic.RegressHeadcount.Challenge",
+  "solution_module": "TruthCore.Results.Logic.RegressHeadcount.Solution",
+  "theorem": "TruthCore.Results.Logic.RegressHeadcount.headcountCriterion",
+  "comparator_config": "results/e8f7aaef-0424-411f-bdc8-8a3671e3c932/comparator.json",
+  "status": "solution-present",
+  "description": "This is a conditional application of cardinal parsimony. The headcount theorem fixes the charged carrier; charging beings as tokens and charging independent explanatory assumptions can produce different verdicts. With a common countably infinite inventory, the exact cardinalities of all objects agree in the displayed example. Empirical adequacy and philosophical preference require separate assessment."
+}

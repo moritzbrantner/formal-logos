@@ -1,0 +1,9 @@
+{
+  "id": "d899fe9f-2c8c-43aa-a2c4-2c8c2c06890b",
+  "label": "Occam's razor and the headcount of a finite explanation versus an infinite regress",
+  "paraphrase": "A headcount advantage surviving every finite addition is exactly a finite charged inventory against an infinite one. An acyclic regress supplies an infinite charged inventory if its visited bearers have distinct charges. A shared countable infinity of other objects can make two total inventories equipotent despite this advantage in additions.",
+  "lean_declaration": "TruthCore.Logic.RegressHeadcount.RegressHeadcountCriterion",
+  "definition_ids": [
+    "daeae08d-3a0b-46fc-b932-18eda7ff5f37"
+  ]
+}

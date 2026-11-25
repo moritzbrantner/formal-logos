@@ -92,6 +92,7 @@ public import TruthCore.Results.Logic.ReferenceAnchor.Solution
 public import TruthCore.Results.Logic.ReflectiveCoherence.Boundary.Solution
 public import TruthCore.Results.Logic.ReflectiveCoherence.Limits.Solution
 public import TruthCore.Results.Logic.ReflectiveCoherence.TruthDirected.Solution
+public import TruthCore.Results.Logic.RegressHeadcount.Solution
 public import TruthCore.Results.Logic.RegressSchema.Solution
 public import TruthCore.Results.Logic.Relativism.LocalSecondOrder.Solution
 public import TruthCore.Results.Logic.Relativism.Models.Solution

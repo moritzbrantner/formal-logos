@@ -1,0 +1,16 @@
+{
+  "id": "3fec9051-1d9f-4d9b-9e55-f17badc2361d",
+  "label": "Certify the Second Way successor and finite-cycle controls",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "36d2e4c0-3d45-467a-bf22-51eb0cc507ba",
+  "inference_ids": [
+    "c767cd4d-0a8a-4b67-bdf1-83c95a0fb6e9"
+  ],
+  "meaning": "Both Nat interpretations designate exactly the efficient edges with caused sources as per se and use the corresponding strict priority order. Decreasing Nat rank proves accessibility in the rooted interpretation, while f(n) = x + n gives each x an upstream chain in the converse interpretation. The latter chain is injective by the existing acyclic chain theorem. Alternating the two Boolean bearers of a cycle gives a repeated traversal with no self-edges and no injection from Nat into its carrier. These controls distinguish whether a descent repeats, how many bearers it needs, and whether a fixed roster has a first efficient cause. They test the exact regress premise 97f5850f-62bc-5e43-a0c1-dd1033d08fc9 in mathematical interpretations and do not establish causal applicability or equal explanatory adequacy.",
+  "definition_ids": [
+    "4a101a4c-12de-53c8-80c6-de7a523ea9d9"
+  ],
+  "disambiguation_ids": [
+    "81c233d4-01b4-528c-8bbd-7da228443ffe"
+  ]
+}

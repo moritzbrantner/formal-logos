@@ -1,0 +1,17 @@
+import TruthCore.Logic.RegressHeadcount
+import TruthCore.Results.Causality.WorldSourceRegress.Solution
+
+namespace TruthCore.Results.Logic.RegressHeadcount
+
+open TruthCore.Logic.RegressHeadcount
+
+theorem finiteAdditionCriterion (A B : Type) :
+    SurvivesEveryFiniteAddition A B ↔ Finite A ∧ Infinite B := by
+  sorry
+
+/-- The cardinal reading applies to bearer headcount, or to distinct
+independent posits when their assignment is injective along this regress. -/
+theorem headcountCriterion : RegressHeadcountCriterion := by
+  sorry
+
+end TruthCore.Results.Logic.RegressHeadcount

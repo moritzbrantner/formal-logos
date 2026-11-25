@@ -1,0 +1,13 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.OccamRegress.Challenge",
+  "solution_module": "TruthCore.Results.Causality.OccamRegress.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.OccamRegress.sharedLawCharge"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "enable_nanoda": true
+}
