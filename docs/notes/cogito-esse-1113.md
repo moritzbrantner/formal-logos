@@ -719,3 +719,61 @@ doubt, with the adapter that keeps the realizing episode through the
 attempt; first grades are given here to all nine. No earlier judgment is
 revised. `e64d5241`'s assessment of `e81971f1` and `30e6e01c` is reused
 unchanged.
+
+## Actuality of thought and the ontological floor (2026-11-25, draft)
+
+Continuation of #543, #1792, #1979 and #1980; baseline
+`bff18fce135d73ffe2e00933a56decdb2a1c89af`. This is a local warrant investigation, not the global
+unconditional-closure audit in #1993. The following is a **proposed assessment
+pending independent semantic challenge**; the reviewed assessment above is
+unchanged. No source attribution, new corpus registration, floor marking or
+verified premise discharge is claimed.
+
+Fix an actual performance of questioning, discriminating or entertaining
+a denial, not merely its text or a hypothetical performance. An actual
+occurrence is directly warranted in that performance. It does not require
+knowing which ontology of the occurrence is correct. The existential
+generalization "something actually obtains" uses the occurrence itself as a
+witness, rather than inferring an enduring subject from the grammar of "I".
+A denial of every occurrence made in thought falsifies its content; a
+sentence stored on disk is not such a performance. For a silent rival the
+retorsion has no witness until an actual performance is supplied.
+
+The current typed boundary is decisive. O `e81971f1` (some thought occurs)
+does not alone imply B `30e6e01c` (every occurring thought has a subject), the
+bearer existence E `c821487b`, or the concrete classification C
+`a7040bf1`. The existing
+`CogitoSubject.subjectlessControl` and
+`CogitoConcrete.omissionControls` demonstrate this with the predicates
+independent. #1979's `ac0a151f` is a weaker *phenomenally experienced*
+bearer principle, not a theorem from occurrence. Its `77e57686` endpoint
+requires actual experienced occurrence. #1980's `13b5b929` maps occurring
+thought to an existing representative, and `0436de86` classifies that
+same witness as in act of esse at the selected world. Its
+`RepresentedOccurrence.denialControl` preserves population while denying
+concrete population under an independent classification. Do not conflate
+the representative with a distinct personal bearer.
+
+Positive warrant for a **local** existential interpretation: if "actual"
+means that this very experience obtains in re, a denial of *any* obtaining
+reality excludes the datum itself, not merely its interpretation. In the
+owner-adopted concrete sense (existing in re/in act of esse), a real episode
+is therefore a candidate population witness even if it has no distinct
+bearer. This is a semantic application proposal, not a new graph edge:
+one must show that the same episode can be represented in the existing
+being carrier and that the selected world's existence contract applies.
+A concrete-empty extension of an independent episode signature is not
+evidence that a real episode can be absent from reality; it exposes exactly
+the missing application. The occurrence-only rival can concede the
+positive datum without conceding substance, causal dependence, or an
+enduring subject.
+
+Next tests: distinguish actual understanding from representation, actual
+distinction from plural substances, actuality from unactualized possibility,
+temporal order from passage, and factive constitutive dependence from
+productive existential dependence. Reuse the existing results and compare
+same-witness interpretations. The downstream destinations are
+`56f68b40` (actual concrete population), the `CogitoEsse` ancestry and
+essence results, and the operation/act/perfection interfaces already
+identified above. No premise change at this checkpoint.
+
