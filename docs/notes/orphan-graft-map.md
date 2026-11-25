@@ -350,8 +350,18 @@ Five new `attacks` relations reuse existing argument IDs and target
 statement IDs; no `alternative_to`, `refutes`, theorem, result, floor
 marking, or new philosophical assumption is introduced. Existing
 refutations, conditional refutations and surviving countermodels remain
-unchanged. The relation changes connect the rival comparison graph, not
-necessarily the root-reaching proof graph or counted orphan metric.
+unchanged. The relation changes connect the rival comparison graph, not the counted
+orphan refutation-support walk. Static inspection: `truth/src/frontier.rs`
+separates attacks into its objections map, and `truth/src/orphans.rs`
+seeds refutation support only from verified argument `refutes` edges to
+recorded root-path alternatives. The existing regression
+`verified_refutation_support_connects_without_closing_open_premises`
+explicitly tests that an argument attack does not count as that support.
+Accordingly the predicted change is comparison visibility, not proof
+closure or newly connected results by this mechanism. This is a source
+inspection, not a computed numerical delta. All five committed relation
+files were reread as JSON and checked for the exact expected IDs,
+endpoint kinds, unique subject/object pairs, nonempty notes and predicate.
 
 Repository reads and endpoint/meaning inspection were possible via the
 GitHub connector. The local shell cannot fetch the repository or run
@@ -373,6 +383,7 @@ root=8626f8a5-9531-5da7-9ebd-f901e74b1129
 cargo build --locked --release -p truth
 truth=target/release/truth
 "$truth" check
+cargo test --locked -p truth verified_refutation_support_connects_without_closing_open_premises
 "$truth" bind-check --affected --base "$base" --head HEAD
 "$truth" --json frontier --reaching-root --routes --frontier-root "$root"
 "$truth" --json frontier-diff --base "$base" --head HEAD --frontier-root "$root"
