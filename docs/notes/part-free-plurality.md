@@ -503,7 +503,7 @@ condition constitutive of each contributor's continued existence, together
 with grounds for both edges into the dependent, would favor a local join.
 Finding distinct immediate sustainers would move the test upstream. Showing
 a split requires grounds for excluding any common ancestor on that relation.
-[Actual-concrete graph](../../TruthCore/Causality/ConcreteExistentialSupply.lean)
+[Tracing two material parts back through fabrication](root-route-modal-load.md#two-domain-test-on-actual-contributors) · [Actual-concrete graph](../../TruthCore/Causality/ConcreteExistentialSupply.lean)
 
 Even one such join leaves the quantifier over **every** fork open. With that
 coverage, well-foundedness, weak connectivity and a separately supplied actual

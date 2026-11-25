@@ -634,7 +634,7 @@ routes settles neither cost. An impersonal common source also survives
 this causal test until the further naming, intellect and will conditions
 are warranted.
 
-The discriminating test is a recipient with positively identified
+The test proposed in #1937 used a recipient with positively identified
 contributors from the two proposed domains. Trace what gives the *being
 of each contributor* through the same productive relation. A common
 upstream giver for those two is local evidence for convergence. A common
@@ -657,6 +657,79 @@ reach is restricted. Here `4c79298d` supplies that actuality.
 
 Treat common coverage as a live positive
 conditional with an unresolved whole-domain warrant. [Fork test and ladder](part-free-plurality.md#when-immediate-co-suppliers-suffice-for-a-common-source)
+
+#### Two-domain test on actual contributors
+
+For one specified pair, the strongest partition claim says the two
+contributors have disjoint upstream ancestries on the selected relation. One
+identified shared ancestor on that relation defeats this claim for that
+pair. A distinct rival allows two ultimate sources whose products overlap
+downstream. It can grant that both contributors receive something from one
+intermediary and still ask what sustains the intermediary.
+
+The association of GW170817 with GRB 170817A favors one compact-binary
+coalescence in the productive history of the gravitational and gamma-ray
+signals. Timing and sky location provide evidence beyond their appearance in
+a joint report. What accounts for the two material bodies in the binary?
+The collaboration's progenitor study models populations, the second
+supernova and subsequent trajectories under specified formation assumptions.
+That analysis constrains histories compatible with this binary. It leaves
+open which individual producer, if any, gave rise to both compact bodies
+and what sustains them during inspiral.
+[Joint alert, signal traces and chance control](part-free-plurality.md#two-domain-test-at-gw170817-and-grb-170817a) · [Measured association, §3](https://arxiv.org/pdf/1710.05834) · [Progenitor study](https://dcc-llo.ligo.org/LIGO-P1700264/public)
+
+The optomechanical case lets us follow two concrete parts upstream. In the
+reported fabrication process, an oxide film on a silicon wafer is patterned
+into a disk with spokes. Reflow of the underetched disk forms its toroidal
+rim. For a specimen made by this process, the material of the rim and the
+material of the spokes trace to one precursor film. Treating the two parts
+as independently fabricated pieces later assembled would miss this
+evidence. The rim helps confine the optical field, and the spoke design
+affects the mechanical response. Their functions overlap. The physical
+domains here distinguish kinds of operation and imply no exclusive
+assignment of each piece of silica to one domain. The force of the
+material trace rests on the reported fabrication history, a different
+finding from the measured exchange of excitation between modes.
+[Mode identification and fiber control](maximum-definition-fork.md#do-two-modes-of-one-resonator-have-a-present-common-bearer) · [Verhagen et al., Fig. 1 and Appendix A2, especially Fig. A4](https://arxiv.org/pdf/1107.3761)
+
+The precursor film, finished resonator, and proposed giver of existence play
+three different roles. One film explains material continuity through shaping.
+One patterned device supplies current boundary conditions for both localized
+modes. Following those two successful explanations in sequence would change
+the relation halfway through the trace. To apply the existential-grounding
+theorem at this fork we would need grounds for both arrows on one
+interpretation of `m.grounds w`, including why the same candidate accounts
+for each bearer's being there. The experimental record supplies no such pair
+of arrows.
+
+**Comparative judgment.** Common production and common material support have
+positive warrant at the respective local scopes. A plural-foundation account
+can explain these findings through products of its foundations interacting
+in a shared physical system. A common ancestor defeats disjoint ancestry
+on the relation actually traced. If an ultimate source could also be traced
+upstream of that ancestor on the same relation, it would be a source for
+both descendants. Other ultimate contributors could still participate.
+A one-foundation account also permits divergent proximate histories. To favor either ultimate
+account by these observations would require some reason it makes the observed
+local convergence more likely. The chance-association calculation for the
+astronomical signals addresses independent transients. It supplies no such
+comparison between ultimate accounts.
+
+**What would change the assessment?** The earlier persistence study gives
+an identity test based on material history. Apply it separately to the
+silica portion and to the role of being this device's spoke. Detachment
+ends the latter relation by definition while allowing the traced portion
+to survive. Both a whole-first account and an account in which the silica
+supports the assembled device predict loss of that role. For the
+substantial claim the discriminating evidence would identify a contribution
+from the same whole to the continued existence of *each material bearer*,
+and distinguish its withdrawal from ordinary destruction, replacement and
+loss of function. Fabrication and resonance measurements supply no such
+withdrawal. If two such traces were established, they would support one
+local existential join. The known theorem would still require coverage
+of the other forks, weak connectivity and well-foundedness for global source
+agreement. Attributing direct giving to the maximal witness of `0881e859`
+also needs its own premises. [Identity and withdrawal comparison](sustaining-vs-existential-inertia.md#apply-the-criterion-before-varying-the-sources-exercise) · [Exact graph and proof](../../TruthCore/Results/Causality/LocalSourceConfluence/Solution.lean)
 
 #### Exclusion fixpoint and full support options
 

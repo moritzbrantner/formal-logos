@@ -1170,7 +1170,7 @@ permits a different test while its output is being measured. Take as the two
 recipients the whispering-gallery optical resonance and the radial breathing
 resonance of a particular spoke-supported silica toroid. What present physical
 structure enables each to exist **as a localized mode of this device**?
-[Companion investigation](part-free-plurality.md)
+[Merger signals and their common producer](part-free-plurality.md#two-domain-test-at-gw170817-and-grb-170817a) · [Material origins of the rim and spokes](root-route-modal-load.md#two-domain-test-on-actual-contributors)
 
 **Identifying the modes.** Verhagen et al. show the device by electron microscopy
 and describe forming its rim by reflowing a patterned silica disk. A weak optical
