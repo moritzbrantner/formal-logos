@@ -31,5 +31,23 @@
     "6801590a-5ed5-4c90-bc85-2e72621ed0e0",
     "d2cb9100-2980-5e83-a278-294346f7fb93"
   ],
-  "blocker": "For actual-world application identify an actual assertion, show its mental realization, and defend the relevant local interpretation. Cognitive meaning retorsion needs the selected content to express the denial in the same domain. Existence in re and the adopted esse contract remain separate for concrete root population. F6 supplies no reason-to-belief bridge; an independently warranted actual uptake premise would reopen that route. To assess the phenomenal bearer premise, compare a first-person attribution with an impersonal event account on the same episode, allowing a momentary bearer. The next distinct cluster is represented existence under the PSR world predicate. Its bare population specialization leaves the concrete classification of that representative open."
+  "blocker": "For actual-world application identify an actual assertion, show its mental realization, and defend the relevant local interpretation. Cognitive meaning retorsion needs the selected content to express the denial in the same domain. Existence in re and the adopted esse contract remain separate for concrete root population. F6 supplies no reason-to-belief bridge; an independently warranted actual uptake premise would reopen that route. To assess the phenomenal bearer premise, compare a first-person attribution with an impersonal event account on the same episode, allowing a momentary bearer. The next distinct cluster is represented existence under the PSR world predicate. Its bare population specialization leaves the concrete classification of that representative open.",
+  "current_assessment": {
+    "date": "2026-11-25",
+    "statement_ids": [
+      "77e57686-d710-4505-9272-589cf5af6fe8",
+      "ac0a151f-a023-4e54-8c38-2feec136df1d",
+      "0315d471-5093-59e3-a435-b7beff4c48a4",
+      "56f68b40-9737-59a0-8cac-5610980a1547"
+    ],
+    "scope": "Issue #1007. The experienced denial and the original Cogito as routes to concrete population at the selected world.",
+    "assessment": "When the conscious episode presents the denial that any thought is experienced, its first-person presentation gives defeasible reason to ascribe that very thought to a bearer. An impersonal-event account can locate the perspective in the episode’s organization. Universal bearer coverage remains open. Either verified route supplies the same bearer and episode to the concrete-population inference under its classification and existence premises.",
+    "next_test": "Compare first-person attribution and an impersonal-event account on the same episode, allowing a momentary bearer. For the separate represented-existence result, test whether the representative witnesses the PSR world-population predicate.",
+    "note": "docs/notes/self-undermining-views.md#which-thought-supplies-the-concrete-population-premise-1007",
+    "reviewed_revision": "c5ffb86f9e876ed920f1709cc58c86fb87513144",
+    "review": "accepted_qualified",
+    "publication": "published",
+    "evidence": "Independent review accepted the formal connections and controls at 1fa4120deecb15748d9d4d95ad0f42f5fc7d1248. The targeted recheck at the reviewed revision accepted the corrected same-thought example, surviving impersonal alternative and limitation on universal coverage.",
+    "supersedes": "Adds the reviewed concrete-population application to the earlier witness analysis; the other denial cases retain their scope."
+  }
 }
