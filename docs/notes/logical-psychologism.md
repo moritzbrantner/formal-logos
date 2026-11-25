@@ -40,7 +40,7 @@ The fixed inference is an ordered premise set and a conclusion, with its interpr
 
 Let H be the claim that an empirical pattern of acceptance is the sufficient standard of logical validity. Let a researcher infer H from observed data D using inference R. Distinguish (i) D caused acceptance of H, (ii) R was the rule normally used, (iii) D actually supports H through R, and (iv) the researcher has warrant to conclude H. A causal or sociological explanation of (i)-(ii) does not supply (iii). An empirical survey might support a generalization about actual acceptance, but this narrower conclusion is not H. The inference from observations to unrestricted validity needs both a generalization principle and a semantic bridge. Merely applying the favored rule to certify that it is favored does not provide the missing discrimination against a stable, differently favored rule.
 
-The objection is not that every reasoning procedure must be proved by a prior argument. A primitive rational grasp, reliable externalist entitlement or a rule-guided capacity can be a starting point; a complete survey can also be evidence about the populations surveyed. The objection is to a sufficient criterion failing its own proposed truth-directed task, and to H borrowing a notion of epistemic support it claims to eliminate. If its advocate offers no reasoned defense of H, H might still be true; that concession loses the status of an epistemically warranted rival, not its logical consistency. If the advocate keeps real support but identifies it with a truth-sensitive functional role, the rival is no longer an elimination of correctness. A psychological explanation of how a reasoner discovered a valid argument is perfectly compatible with the argument's validity.
+A primitive rational grasp, a reliable capacity or an empirical generalization can supply a starting point. The survey establishes an acceptance pattern. The countervaluation gives a reason to reject the identification of that pattern with truth preservation. H alone allows defeasible empirical support. A further self-application objection arises if the advocate also eliminates the very kind of support claimed for this defense. An advocate who offers no defense may have other grounds. The survey gives no evidence about those grounds.
 
 ### Evolution, ideal competence and objective success
 
@@ -56,6 +56,8 @@ An account that makes accuracy or fitting attitudes constitutive of the function
 
 For a constructive F6 application, use the short proof selected in #1989 and #1987: universal falsity cannot include True without contradiction; distinguish this from trying to derive False by applying the universal statement at False (which yields only ¬False). Ask whether one actual subject grasps the same content and valid transition, accepts the conclusion on surviving support, and has that support as a reason for believing it. A valid proof object by itself is not an actual investigator's uptake. Reuse [reasonsFromWarrant](../../corpus/results/b3ddb7c4-683a-4127-8221-b30be7858f92.json) with exact bundle `6280fbf0` (some warranted acceptance), `0e2bbd59` (accepted warrant needs surviving basis), `6b4e3331` (surviving basis gives reason). Its output is F6; eligibility via `1db47fd9` already includes a reason and cannot independently warrant F6. A fresh actual observed/assessed proof uptake, not the reason-dependent route, is the intended next test. The #930 authority result and controls do not upgrade F6 to preference-independent force.
 
+There is also a shorter application to F6. Fix the subject who encounters the proof, the content at issue and a particular basis. If that basis actually supports the content for that subject, survives undercutting, and surviving support supplies a reason under `6b4e3331`, that very subject has a reason for that content even while suspending judgment. The existential warranted-acceptance premise in the preceding route does not identify this witness. [Subject-level application in #1987](orphan-graft-map.md)
+
 The existing rooted consumer [populationFromReasons](../../corpus/results/b50727e1-04de-488c-819f-2d5b9993c485.json) requires F6, reason-bearer presence at the selected world `ada25623` and the existing esse contract `0436de86`; yields `56f68b40`. The direct-esse stage-one argument `72391d4d` requires all its further metaphysical premises. Nothing here directly derives GOD_4 or excludes an impersonal necessary source.
 
 ## Provisional assessment and next test
@@ -68,7 +70,7 @@ Next: instantiate the existing criterion characterization on the two sequents, t
 
 The existing [criterion result](../../corpus/results/CORRECTION-CRITERION-EXACT-FACTORIZATION.json) `0590fe21` is the exact general theorem required; see [correctness and the private diary](wittgenstein-criterion-and-correctness.md). It proves that a classification from the specified data is exact iff correctness is invariant on the fibers of those data. Do not register another general characterization. Use `TruthCore.Logic.ReflectiveCoherence.Entails` (definition `0ff13cc6`), the same vocabulary as the two validity results from #1422. The proposed application supplies a nontrivial classical modus-ponens / affirming-consequent pair with all four valuations and composes `characterization`, rather than treating validity as an opaque predicate.
 
-The following complete Lean scratch candidate is **uncompiled**. The supplied data projection, equal-fiber hypothesis, fixed interpretation and exact-classification requirement define the scope of the test; their actual psychological applicability is not asserted. Its conclusion is nonexistence of an exact extensional classifier from the particular projection, not that the whole of psychology cannot realize the meaning of the inference. With distinct data, an exact classifier exists even if it is an arbitrary lookup table; extensional adequacy does not explain what makes an inference valid.
+The following application was checked together with the later scope lemmas using the repository’s pinned Lean toolchain. The supplied data projection, equal-fiber hypothesis, fixed interpretation and exact-classification requirement define the scope of the test; their actual psychological applicability is not asserted. Its conclusion is nonexistence of an exact extensional classifier from the particular projection, not that the whole of psychology cannot realize the meaning of the inference. With distinct data, an exact classifier exists even if it is an arbitrary lookup table; extensional adequacy does not explain what makes an inference valid.
 
 ```lean
 import TruthCore.Results.Logic.EpistemicUnderminers.Solution
@@ -251,7 +253,7 @@ This is an exhaustive finite test of the analyst representation only. It does no
 
 [Attempt record](../../corpus/attempts/e1fa608e-9eb1-49ab-8c79-9d92cc499ecf.json). Draft #1990 continues #1989 and #1007; the other draft was left unchanged to avoid a cross-lane conflict. Main baseline `a9819b148bd4a7c089cff9dc07f95c209452511e`; initial checkpoint `9af0c608f434d05f52f5b72017e25e884a40c5ab`, rival and root mapping checkpoint `2584ab7214fa502d4db524ec9df92fca3845cffa`. Read exact F1/F6 records and declarations, the above Challenges/Solutions, authority controls, prior correction and basing notes, repository AGENTS and research skills. The exact registered proof `b41427d3` composes the existential from `SomePropositionHolds.somePropositionHolds` rather than re-proving the True witness in that theorem; selecting True is an explanatory instantiation in the proof-uptake task. No new attributed source claims.
 
-Available: finite Python comparison passed, existing GitHub definitions/results inspected. Unavailable: clone/network in execution container (GitHub DNS resolution failed), Lean, Lake, Cargo, warm-clone preview, independently delegated reviewer, CLI/dossier/novelty/semantics and full formal gates. No new registered result, no premise change intended; actual computed frontier delta pending. This is an unreviewed draft and is not a claim of formal verification.
+The initial connector session checked the Python comparison. The integrated Lean and Python verification is recorded at the end of this note.
 
 Resume in the prepared canonical checkout. Use the repository worker setup; commands for retrieval and scratch verification:
 
@@ -356,7 +358,7 @@ premise/target pair of truth-functions was enumerated.
 by restricted truth preservation is equivalent to the requirement that
 each globally invalid inference has at least one countervaluation in C.
 It need not include all valuations if the inference class cannot distinguish
-them. If a tautology and an isolating false-only-at-v content for every
+them. For the class containing only MP and AC, 01 alone exposes AC and supplies no countervaluation to MP. If a tautology and an isolating false-only-at-v content for every
 v are expressible and those sequents are included, coverage of every v is
 necessary, as the construction proves, and sufficient directly by restriction.
 Do not infer full coverage in an arbitrary infinite/non-separating language.
@@ -455,9 +457,7 @@ condition on definable counterexample sets.
 
 This sharpens #931 without contradicting its positive fallible
 guarantees. There is a difference between a rational, fallible basis
-for a belief and a deduction. The reliable-invalid rule might provide
-genuine probabilistic support for p after accepting q and the
-conditional. It does not prove p. A proponent can sensibly claim the
+for a belief and a deduction. With E the joint truth of q and the conditional, P(p|E) = (n−3)/(n−2) and P(p) = (n−2)/n. At n=4 the observation leaves the probability of p unchanged. For n>4 it raises the probability in this distribution. Warrant for an actual subject also depends on access to the evidence and its applicable calibration. It does not prove p. A proponent can sensibly claim the
 weaker warrant; it cannot use that concession to identify reliability
 with deductive validity.
 
@@ -560,15 +560,15 @@ to the interpretation/scope relation and, separately, the reason-giving
 status of that relation. This is a new scoped judgment about the
 surviving accounts; it does not supersede the prior F1/F6 or #930
 authority judgments, and does not establish ontological irreducibility.
-No independent challenge has yet assessed this extension.
+The review and its scope are recorded in the linked attempt.
 
 
-### 7. Exact proposed theorem types and proof sketches
+### 7. Lean checks of the scope and truth-function comparisons
 
 The following Lean block extends the earlier scratch file (append it
 after its closing namespace). It reuses the actual semantic predicates
 rather than a new validity relation with an unconstrained name.
-This proposal is **not compiled or registered**. Before registration
+Both displayed blocks elaborate in one Lean file. Before any registration
 run local novelty and semantic preflight; if an existing scope theorem
 has the same type up to an adapter, reuse it. The general scope result
 derives an exhibited false positive, not an assumed adequacy bridge.
@@ -611,7 +611,8 @@ theorem separatingScopeExactIffCoverage {W C : Type} (S : Semantics W C)
   classical
   constructor
   · intro h v
-    by_contra hMiss
+    apply Classical.byContradiction
+    intro hMiss
     obtain ⟨q, hScoped, hNot⟩ :=
       omittedValuationFalsePositive S scope top hTop v hMiss (hSeparate v)
     exact hNot (h (fun p => p = top) q hScoped)
@@ -649,8 +650,7 @@ theorem mpForIff (f : Bool → Bool → Bool) :
     change w.2 = true
     cases hq : w.2 with
     | false =>
-      have hbad : false = true := by simpa [hp, hq, hf] using hc
-      exact hbad
+      simp [hp, hq, hf] at hc
     | true => rfl
 
 theorem acForIff (f : Bool → Bool → Bool) :
@@ -673,8 +673,7 @@ theorem acForIff (f : Bool → Bool → Bool) :
     change w.1 = true
     cases hp : w.1 with
     | false =>
-      have hbad : false = true := by simpa [hp, hq, hf] using hc
-      exact hbad
+      simp [hp, hq, hf] at hc
     | true => rfl
 
 def materialTable (p q : Bool) : Bool := (!p) || q
@@ -808,6 +807,9 @@ for n in (4, 10, 100, 1000, 1000000):
     eligible = [i for i,(p,q) in enumerate(V) if q and material[i]]
     error = sum(mass[i] for i in eligible if not V[i][0]) / sum(mass[i] for i in eligible)
     assert error == F(1,n-2) and error > 0
+    prior = sum(mass[i] for i, (p, _) in enumerate(V) if p)
+    assert prior == F(n-2, n) and 1-error == F(n-3, n-2)
+    assert (1-error > prior) == (n > 4)
     print(f'AC conditional error at n={n}: {error}')
 # In the finite full-support setting, an exact zero error mass among countervaluations
 # is equivalent to entailment; no conditional probability when premise mass is zero.
@@ -853,11 +855,4 @@ target/release/truth novelty 'inferential role soundness and truth-functional ca
 target/release/truth frontier-diff --base "$(git merge-base HEAD origin/main)"
 ```
 
-The previous PR head `4dc24d4f95d4bf45da08a53e2801ddaa9b50b123`
-had a completed successful CI workflow as observed before this extension;
-that evidence does not cover the present changes or the proposed scratch
-Lean blocks. New head checks, independent challenge, local CLI and Lean
-verification remain pending. The execution container again lacked Lean,
-Lake and Cargo, and GitHub DNS resolution prevented a repository clone.
-No new formal result or graph connection is claimed. The original
-proof-uptake application remains open.
+Both Python comparisons passed, including the distinction between positive relevance and high conditional accuracy. Both Lean blocks elaborated together in the pinned toolchain. They are reproducible local proof checks. The registered correction, validity and reason results retain their individual certificates. The remaining application concerns a particular subject’s grounds and uptake.
