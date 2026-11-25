@@ -255,31 +255,41 @@ This is an exhaustive finite test of the analyst representation only. It does no
 
 The initial connector session checked the Python comparison. The integrated Lean and Python verification is recorded at the end of this note.
 
-Resume in the prepared canonical checkout. Use the repository worker setup; commands for retrieval and scratch verification:
+Run from the prepared checkout of this note with the release `truth` CLI and pinned worker toolchain:
 
 ```sh
-git fetch origin
-git switch research/logical-psychologism
-python3 scripts/worker_env.py --check
-cargo build --locked --release -p truth
-for target in c425f0c5 f56b2ee7; do
+for target in \
+  c425f0c5-6c3f-5115-ba04-3e61bd049e3b \
+  f56b2ee7-c69e-5e3b-85b0-e671d907ba58; do
   target/release/truth brief "$target"
   target/release/truth related "$target"
   target/release/truth dossier "$target"
   target/release/truth semantics "$target"
 done
 target/release/truth novelty 'semantic validity does not factor through an equal psychological acceptance projection'
-for result in e03147fa b203c461 0590fe21 a7ecf1fe 146b502b b3ddb7c4 b50727e1 b41427d3; do
+for result in \
+  e03147fa-7a1f-48d9-bac0-7aec0ee2b645 \
+  b203c461-805a-4572-b966-ba3a7886d561 \
+  0590fe21-edb9-5915-9837-62560c8f40e2 \
+  a7ecf1fe-a234-5de6-bb72-bf76309c5ea3 \
+  146b502b-e5fd-40cf-8a39-9ed2d45e59bb \
+  b3ddb7c4-683a-4127-8221-b30be7858f92 \
+  b50727e1-04de-488c-819f-2d5b9993c485 \
+  b41427d3-a0c7-55aa-b1cb-f4f90a14277c; do
   target/release/truth context "$result"
 done
-target/release/truth semantics --premise 6280fbf0 --premise 0e2bbd59 --premise 6b4e3331 --conclusion f56b2ee7
+target/release/truth semantics \
+  --premise 6280fbf0-551a-46f5-8e0a-a65410c86a64 \
+  --premise 0e2bbd59-2b4c-438d-b792-0ca401eaf862 \
+  --premise 6b4e3331-01ca-484b-bda1-460ebff1df35 \
+  --conclusion f56b2ee7-c69e-5e3b-85b0-e671d907ba58
 python3 - <<'PY'
 from pathlib import Path
 note = Path("docs/notes/logical-psychologism.md").read_text()
 code = note.split("```lean\n", 1)[1].split("\n```", 1)[0]
 Path("Scratch/LogicalPsychologismProposal.lean").write_text(code + "\n")
 PY
-lake build TruthCore.Results.Logic.EpistemicUnderminers.Solution TruthCore.Results.Logic.CorrectionCriterion.Solution TruthCore.Results.Logic.EpistemicReasonBearer.Solution TruthCore.Results.Logic.CaseNonContradiction.Solution TruthCore.Results.Logic.TruthPilot.NotEveryPropositionFails.Solution
+python3 scripts/worker_env.py -- lake build TruthCore.Results.Logic.EpistemicUnderminers.Solution TruthCore.Results.Logic.CorrectionCriterion.Solution TruthCore.Results.Logic.EpistemicReasonBearer.Solution TruthCore.Results.Logic.CaseNonContradiction.Solution TruthCore.Results.Logic.TruthPilot.NotEveryPropositionFails.Solution
 python3 scripts/worker_env.py -- lake env lean Scratch/LogicalPsychologismProposal.lean
 base=$(git merge-base HEAD origin/main)
 git diff --check "$base"
@@ -835,8 +845,7 @@ PASS: scope, interpretation, and exact reliability controls
 ```
 
 Both comparisons and both Lean blocks can be recovered together from the
-same canonical note. On the prepared clone, after the original worker
-preflight/build in the previous handoff:
+same canonical note. On the prepared clone, with the modules above already built:
 
 ```sh
 python3 - <<'PY'
