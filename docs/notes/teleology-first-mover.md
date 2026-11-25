@@ -1101,6 +1101,259 @@ records the exact reviewed local/published snapshots and the resolved
 modal repair. Acceptance does not establish an ultimate cognitive source,
 a complete simple-source realization or actual practical governance.
 
+## Joint specification and the finite measure of a whole order (2026-11-25; provisional)
+
+Continue the source-of-differences comparison above at
+`57ce3570ae1d7cf8c2c81ef8e772bba03dd8444a`. Negate the disputed premise
+at its proper scope: an underived noncognitive source could originally
+specify heterogeneous capacities **and their good-directed relations**.
+The opponent is not denying all rational ordering or proposing that
+independently given parts happen to fit. Retain the same necessary,
+simple, invariant, concretely productive n, its nonnecessitating
+efficacy, the actual order H and the genuine rational recipient of
+[the matched comparison](optimal-creation-choice.md#37-meanings-and-one-matched-candidate-construction).
+The question is whether the *joint* specification, particularly its
+finite due limits, defeats this stronger constitution.
+
+### Why an explanation of activities can omit their good measure
+
+[De veritate q.5 a.2 co.](https://www.corpusthomisticum.org/qdv05.html)
+(`[52594]`; [English translation](https://isidore.co/aquinas/english/QDdeVer5.htm))
+adds a useful argument. Heat explains an activity, but its beneficial
+limit and manner require more than that activity considered by itself.
+Aquinas proceeds from stable beneficial coordination to final direction,
+then adds the requirement of cognitive ordering. Replies 2–4 distinguish
+composition in a principle from its reach to many effects; replies 5
+and 10 locate natural determination in another. They do not present a
+separate proof against an underived noncognitive counterpart.
+[SCG II.24 [4]](https://isidore.co/aquinas/english/ContraGentiles2.htm)
+similarly identifies relations, proportions and their common end as
+what intellectual ordering understands. Its only-if claim is the
+contested application, not a consequence merely of there being relations.
+
+The stronger positive case is therefore about **why heterogeneous
+activities fit**, not how many forms a source produces:
+
+1. Fix a good D independently of whichever effects occur. Its
+   realization requires certain relations among the recipient's
+   capacities, their objects and their operating conditions.
+2. Explaining each item separately can leave this suitability
+   unexplained. An account of the complete order must also account
+   for the relations through which these items serve D.
+3. At the proposed original source, this coordination cannot be
+   borrowed from an independent arrangement whose specification the
+   source merely executes.
+4. Actual practical understanding offers a positive unifying account:
+   the source grasps D and the relevant dependencies, and their
+   apprehended relevance governs the production of the parts together.
+
+This last explanation is substantive. Understanding why a means is
+appropriate can make that relation the producer's own reason for
+establishing it. The familiar deliberate organization of a craft or
+inquiry supports this explanatory relation, with the
+[existing limits of that analogy](optimal-creation-choice.md#25-where-the-formative-relevance-premise-has-positive-warrant).
+At an independently warranted intellectual and productive source, it
+can join a cumulative account of the source's own unified activity.
+The original-ordering premise can also retain direct or prima facie
+warrant. Neither permission requires a separate proof of every
+commitment. The specific further claim under examination is that
+only apprehended relevance can be original.
+
+### The strongest rival supplies the relations together
+
+Take D to concern the recipient's genuine understanding of a selected
+subject matter, including an appropriate capacity to correct errors
+under specified challenges. This specializes the shared epistemic good;
+it does not replace understanding by accurate outputs. A genuine
+inquirer and genuine objects, each considered alone, do not suffice
+for this good. The inquirer must have the appropriate access to those
+objects, and the relevant evidence and inferential connections must
+support its cognitive activity. Call those required relations K.
+A thinker can remain genuinely rational while lacking access to one
+subject matter; its rationality alone does not supply D there.
+
+An account that supplies the thinker and objects but leaves their
+appropriate connection to an independently provided environment is
+incomplete at the stipulated whole-order scope. An account that lists
+their coexistence but never explains the connection is also incomplete
+as an explanation of this good. These are specific defects; they are
+not objections to every noncognitive source. K concerns genuine
+epistemic access and basing, not merely the wiring of a successful
+response device. The required cognitive reality remains in the
+recipient throughout the comparison.
+
+The strongest reply is that n's productive nature is directed toward
+the **joint manifestation D**. Its efficacy concerns the recipient
+with those constitutive relations, not independently specified items
+subsequently assembled. Where K is a necessary condition of D, a
+successful D-producing exercise must realize K. The source's
+characteristic orientation can therefore constrain several relations
+together through one manifestation kind. It need not posit an
+unrelated primitive for each coordination. This applies the
+[whole-and-required-parts distinction](optimal-creation-choice.md#51-one-differentiated-whole-is-not-one-homogeneous-effect)
+to the fit among parts, not only to their presence.
+
+The causal work remains with n's actual productive constitution.
+The logical dependence of D on K does not manufacture that constitution,
+produce an instance or establish its simplicity. Nor does naming the
+power after D establish that it really has the claimed final character.
+But, if the intrinsic finality is warranted, this supplies a positive
+reason why its manifestations have coordinated features: they are
+required for the very good to which the power is directed. D is not
+an external law that executes itself, and neither D nor K is defined
+by the arbitrary outputs of the source. Their content and failure
+conditions must be specified before crediting that account.
+
+This reply may be defended as a primitive constitutive proposal,
+assessed through its content and consequences. The personal account
+has the same permission for an actual exercise through an apprehended
+good. It adds the source's own grasp and practical use of the
+relations. The noncognitive proposal grants the relations' objective
+relevance and productive grounding while denying that further uptake.
+Explaining the joint requirements of a manifestation does not itself
+identify who apprehends them. Neither account is vindicated merely
+by this description, and equal primitive permission does not establish
+equal overall warrant.
+
+### Does finite due measure restrict an unrestricted source?
+
+The harder objection concerns the origin of finite measure. If n
+has no received determination and unrestricted active reach, why
+does its efficacy yield these bounded capacities and proportions?
+An apprehended specification supplies an intelligible answer: the
+source can understand and realize a finite form without becoming an
+instance of that finite nature. The
+[q.19 a.4 comparison](optimal-creation-choice.md#24-the-positive-argument-in-q19-a4-and-what-it-adds)
+already preserves this positive account and its practical-relevance
+condition; it is not a new result here.
+
+[ST I q.19 a.4 co., second argument](https://www.newadvent.org/summa/1019.htm#article4)
+relates natural determination of action to the agent's determinate
+being. It contrasts that with divine unrestricted being, arguing
+that finite determinate effects proceed through intellect and will.
+The [existing q.3 a.16 reading](will-versus-chance.md#b-could-the-per-se-effect-be-one-differentiated-whole)
+adds that infinite efficacy does not by itself select one inferior
+degree or one whole order; the requirements of a particular order
+follow conditionally upon its production. These are distinct
+contributions to the argument, not an attribution of the
+noncognitive rival to Aquinas.
+
+There are three limitations to distinguish:
+
+| Claim about limitation | Consequence for the matched source |
+| --- | --- |
+| n has a real received form or an intrinsic restriction that makes it incapable beyond a particular range. | Received actualization conflicts with the stipulated source independence or simplicity; a genuine capacity ceiling conflicts with an independently warranted unrestricted reach. |
+| This exercise produces finite recipients with finite capacities. | This identifies the products' measure. It does not by itself identify a receiver in n or the upper bound of n's power. |
+| Realizing D requires certain limits and relations in its recipients. | These constrain successful realization of D. They do not, by themselves, show that n cannot produce a different good or another admissible order. |
+
+The [q.7 limitation audit](necessary-simple-plurality.md#act-limitation-follow-up-q7-does-not-reverse-reception)
+prevents the first shortcut. Its reception argument begins with real
+esse/essence nonidentity in the relevant created form. It does not
+derive a receiver merely from a determinate description, much less
+from the determination of an effect in a different subject. Calling
+n's productive orientation determinate therefore does not establish
+received restriction in n. The rival must still defend that its
+positive nature is consistent with the shared simplicity, rather
+than treating the absence of that inference as a complete model.
+
+The second shortcut confuses unrestricted ability with exhaustive
+manifestation in every exercise. Even when unrestricted reach is
+granted, being able to produce beyond H does not mean that this
+exercise must produce beyond H. In the rival's proposal, the same
+one power has selective, nonnecessitating efficacy; this D-producing
+exercise is one application of it, not a second finite power added
+to n. The recipient's due measure is attributed to the jointly
+directed manifestation. No independent material limiter or prior
+selector has been introduced. This is its positive answer to the
+objection, not a demonstration that such ultimate efficacy is real.
+
+To exclude that answer, the relevant causal thesis must say why an
+original noncognitive source can produce a bounded manifestation
+only through received restriction or a genuine ceiling on its own
+power, whereas apprehension permits finite measure without either.
+The natural-necessity argument motivates that distinction through
+the way a determinate natural agent acts from its form. Applying
+it to the retained nonnecessitating, non-univocal universal source
+requires defending precisely that extension. Neither finite effects
+nor n's underived status supplies it. The positive intellectual
+account shows how understood finite measure could perform this
+work; that does not yet show that all intrinsic noncognitive final
+specification is incapable of it.
+
+This is an exact proposed discriminator. If the rival's actual
+constitution requires received intrinsic actualizers, or cannot
+ground finite due measure without a forbidden restriction, its
+strongest whole-order proposal fails. If the proposed natural
+efficacy genuinely supplies the jointly specified limits without
+those dependencies, this objection does not exclude it. An account
+that merely renames the limits as properties of n has not settled
+which condition holds. The same demand applies to an intellectual
+account whose alleged apprehended measure is merely listed and
+does not govern production.
+
+### Inquiry, assessment and the existing route
+
+The denial of original intellectual specification is not, on these
+commitments, a performative denial of genuine inquiry. The rational
+creature can apprehend reasons and correct its conclusions even
+though its producer is proposed as noncognitive. The
+[existing subject-index test](causal-perfection-transfer.md#the-discriminating-question)
+already shows why source-specific production of that apprehension
+does not change its subject to n. A warranted argument that the
+creature's rational basing requires n's own apprehension would be
+relevant; assuming that bridge would not be a self-refutation test
+of the granted rival. This is reuse, not a new perfection-transfer
+result.
+
+**Provisional assessment.** The measured-coordination argument
+identifies real explanatory work omitted by mere component
+production. Actual practical understanding provides a positive
+unified account of that work. The strongest rival answers with an
+intrinsically owned joint manifestation whose good constrains its
+constitutive relations. That answer is more specific than naming
+the universe one effect, and it avoids treating every relation as
+an unrelated primitive. The finite-measure and inquiry tests do
+not establish an incompatibility in it. They also do not establish
+a complete strictly simple noncognitive source or global equivalence
+of the accounts. Original intellectual ordering retains its direct
+and cumulative support options; its exclusivity is not established
+by this continuation.
+
+The changed application requirement is to account for K **as serving
+D in the same production**, in addition to accounting for the
+different parts. To revise the intellect judgment upward through
+this route, defend the stated exclusion of original noncognitive
+finite measure, or establish actual apprehension governing this
+joint specification. To revise toward the rival, substantiate its
+one-nature efficacy under the same simplicity and source scope.
+Repeating the number of forms, the finite character of the effects,
+or the assertion that natural order is received would repeat the
+tested steps without answering their application challenge.
+
+This bears on the knowing-direction application in `65c409cc`;
+it supplies neither that clause nor the further reduction of every
+relevant director to an intellectual mover unmoved in every respect.
+The rational recipient used to fix D cannot be substituted for the
+bundle's explicitly noncognitive body. The complete bundle,
+`46326b43` and `4c79298d` remain jointly required by `11628966` to
+reach `29818edd`, as detailed in the
+[existing route audit](#a-concrete-application-requirement-and-the-exact-remaining-route).
+No GOD_4 existence, actual practical governance, Lean declaration,
+formal support edge or premise discharge is added.
+
+**Evidence boundary.** Read the complete De veritate q.5 a.2 in the
+linked Latin and English texts, the complete SCG II.24 in the linked
+translation, ST I q.19 a.4 through its replies, and De potentia q.3
+a.16 co. (`[59134]`) in the linked Latin text. These are primary
+research consultations, not newly pinned passages or stating claims.
+The q.7, q.14–15, q.19, whole-order and source-specific findings above
+reuse the recorded evidence under their existing qualifications.
+The author sweep preserves the same source and recipient, real
+cognition, objective good, nonnecessitating power, complete-order
+scope and symmetric primitive permission. Conditional explanatory
+requirements are not presented as certified causal constitutions.
+Independent semantic review of this extension is pending.
+
 ## Research attempts citing this note
 
 - [Pointwise governor identity, common-root coverage and GOD_4 naming (#1793)](../../corpus/attempts/ac68f95a-00fd-445e-b7de-d083ee6511b6.json)
