@@ -26,5 +26,24 @@
     "a4c8b0ce-c6cd-4e0a-858c-fad90e6e0d72",
     "5a8cda5c-fb8d-4ca1-9e8c-c6d7c01ce03e",
     "fd5e32d4-aa4f-57a8-8991-8d85ef14b25f"
-  ]
+  ],
+  "current_assessment": {
+    "date": "2026-11-25",
+    "statement_ids": [
+      "13b5b929-dfc0-4ce0-8b3b-f00430024030",
+      "43253cd8-62be-4528-85e4-54806bd3fac0",
+      "43f09b83-776d-57b8-a5b3-b84715e48fc2",
+      "0436de86-6579-53f2-9ff5-2111ba44ebae",
+      "56f68b40-9737-59a0-8cac-5610980a1547"
+    ],
+    "scope": "Issue #1007. A performed denial as a witness to population at the selected world and its use by the direct-esse argument.",
+    "assessment": "If an episode realizes the actual assertion and its representative exists here, that representative witnesses population here. The performance gives local grounds for a token reading. Representing every occurrence requires the wider premise. The denial of concrete population can still be true when the existent fails the stipulated esse classification. Applying the selected world's existence-in-act contract to the same representative supplies concrete population.",
+    "next_test": "For a particular denial, check whether the representation identifies this performance in the selected ontology or merely the content shared by distinct performances. Examine whether existence in act applies to that representative.",
+    "note": "docs/causal-finite-branching-and-psr-syllogisms.md#can-the-denial-itself-supply-s2s-population-premise-1007",
+    "reviewed_revision": "401cbd98394a839d8d2fe05dcf36a2cd420dfa1c",
+    "review": "accepted_qualified",
+    "publication": "unpublished",
+    "evidence": "Independent semantic review accepted the witness-preserving theorem, definitional specialization, concrete-emptiness control, both downstream premise bundles and the sole former orphan 46c875b1 at the reviewed revision.",
+    "supersedes": "Adds the performed-denial application to S2's population premise. The earlier S2 assessment of an explained existent retains its original scope."
+  }
 }

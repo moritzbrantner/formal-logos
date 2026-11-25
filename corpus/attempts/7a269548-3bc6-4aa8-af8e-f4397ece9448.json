@@ -39,5 +39,25 @@
     "b3ddb7c4-683a-4127-8221-b30be7858f92",
     "b50727e1-04de-488c-819f-2d5b9993c485",
     "fd5e32d4-aa4f-57a8-8991-8d85ef14b25f"
-  ]
+  ],
+  "current_assessment": {
+    "date": "2026-11-25",
+    "statement_ids": [
+      "6280fbf0-551a-46f5-8e0a-a65410c86a64",
+      "0e2bbd59-2b4c-438d-b792-0ca401eaf862",
+      "6b4e3331-01ca-484b-bda1-460ebff1df35",
+      "f56b2ee7-c69e-5e3b-85b0-e671d907ba58",
+      "ada25623-e1a6-4ec8-9fba-3368dddcd0a0",
+      "56f68b40-9737-59a0-8cac-5610980a1547"
+    ],
+    "scope": "Issue #1007. Warranted acceptance as evidence of an epistemic reason and the presence of a reason bearer as a route to concrete population.",
+    "assessment": "A surviving basis that favors an answer gives its investigator a pro tanto reason under the stated evidential calibration. A fresh recount could bypass a transcription fault even when suspension is warranted. Actual assent and adequate surviving support remain to be shown. The eligible-uptake producer already assumes a reason. A broader frame requires grounds for the calibrations and the presence of every reason bearer throughout that frame.",
+    "next_test": "Trace a fresh tally and a copied tally to their sources. For the same person and claim, establish which fault the fresh tally bypassed, the quality of the remaining evidence and whether the investigator accepted the total on that basis.",
+    "note": "docs/notes/epistemic-underminer-boundaries.md#from-warranted-belief-to-an-actual-bearer-1007-2026-11-25",
+    "reviewed_revision": "6d7a337fbb9be9f5bd09563631ab188f3c568456",
+    "review": "accepted_qualified",
+    "publication": "unpublished",
+    "evidence": "Independent challenge at 5d5e298be476d38a307a460f966d2332bb5f6ce1 accepted the derivations, controls and graph path from 1db47fd9. Targeted recheck at the reviewed revision accepted the proposed recount, the restricted application and the universal warrants on a wider frame.",
+    "supersedes": "Adds the warranted-acceptance and selected-world applications to the prior case 10 assessment. The other epistemic challenges retain their scope."
+  }
 }
