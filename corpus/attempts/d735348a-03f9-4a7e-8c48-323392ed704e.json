@@ -16,7 +16,8 @@
     "PR-1646",
     "b5b84276-2b13-459e-9f59-a3d083f52cc3",
     "9598a73d-7db6-4fe3-8c9a-114e21dc1ed8",
-    "PR-1978"
+    "PR-1978",
+    "PR-1981"
   ],
   "current_assessment": {
     "date": "2026-11-25",
@@ -30,7 +31,7 @@
     "note": "docs/notes/explanatory-symmetry-742.md#why-did-darwin-give-up-the-marine-explanation-of-the-parallel-roads",
     "reviewed_revision": "826535a6cdc4c6f1b0ee94c17c2dc49dc569ff6b",
     "review": "accepted_qualified",
-    "publication": "unpublished",
+    "publication": "published",
     "evidence": "The original Glen Roy note was committed at fa333246066fe7c9fa76d99112adc85fc29bc227. Independent challenge of the complete draft at d88e02325f09e5f7a6cae5b50463d875aed9d510 accepted the historical assessment, counts, and transfer limits, and requested narrower claims about accuracy, instruction use and explanatory scope. The prior dispatch assessment was independently accepted at b559b9d12da12d91f44f093740eb81b38f562927. Independent recheck accepted the complete note and attempt at the reviewed revision. It reproduced all 80 matched answers under an external verdict and the zero-gain tie with an uninformative report, and accepted the limited historical and philosophical conclusion.",
     "supersedes": "Answers the previous next test about one knower who can detect and correct errors. The reviewed dispatch assessment and comparison of whole-order explanations retain their original scope."
   }
