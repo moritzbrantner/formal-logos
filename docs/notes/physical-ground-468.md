@@ -491,10 +491,7 @@ a new registered argument or an attribute-establishment claim.
 
 ## Constitutive cognitive and moral grounding: what would make the source personal? (2026-11-25; draft)
 
-**Scope.** Continue #1973 and the owner-directed questions in draft #1983
-and draft #1984, without taking either draft as reviewed evidence or making
-this branch depend on their merger. The prior main-derived note blob is
-`5c9fee417e78791ebafa894027599b8a0b9be2e6`. Reuse #1731, #1748, #1460, #1953 and the existing
+**Scope.** This continues the first-agent question in #1973, #1983 and #1984. It reuses #1731, #1748, #1460, #1953 and the existing
 [causal-perfection](causal-perfection-transfer.md),
 [intentionality](intentionality-943.md),
 [rational basing](epistemic-underminer-boundaries.md) and
@@ -780,7 +777,7 @@ identity/application bundle, and `090be689` with
 capacity level. Neither establishes operative creation or
 original jurisdiction.
 
-**Proposed judgment (unreviewed).** The explicit functional and
+**Provisional judgment.** The explicit functional and
 normative candidate supplies genuine explanatory detail in the
 selected structural representation; it does not yet supply an
 account of original intentionality or the validity of original
@@ -792,7 +789,7 @@ source's actual rational authorship of the powers, if supported,
 but needs rightful title and an account of created subjecthood.
 No rival defeat or changed reviewed assessment follows.
 
-**Next test:** Can a source which is its own unrestricted actuality
+**Question taken up below.** Can a source which is its own unrestricted actuality
 be intrinsically limited to *only* noncognitive modes of being?
 Test a positive account of the restriction to a noncognitive kind
 against the existing own-being/fullness argument, preserving
@@ -809,29 +806,16 @@ Evidence that n intrinsically apprehends eliminates strict
 impersonality, but only evidence of operative appetite and
 authorship reaches personal creation.
 
-**Verification and handoff.** Executed the diagnostic locally,
-including all assertions, and independently reran the four-row
-closure code displayed in draft #1984 (all assertions passed).
-This is a prose-only main-based draft, not changes to canonical
-definitions, proof records, generated files or root premises.
-No local repository clone/Lean or installed convention toolchain
-was available for canonical CLI reuse, binding/corpus checks,
-frontier-diff or independent semantic review. Keep the proposed
-abbreviations and judgment unregistered until those steps and
-the attempt/current-assessment reconciliation are complete.
-Use #1731/#1748/#1460 and the existing notes for reconciliation;
-no issue closure, new tracker or merge.
-
+The recorded diagnostics cover the 72 configurations above and the four closure rows of #1984. Their assertions passed under the displayed rules. Original intentionality and rightful standing remain substantive inputs.
 
 ## Unrestricted actuality and intellectual perfection: two connected local support arguments (2026-11-25; draft continuation)
 
-This continues the preceding constitutive K/J and personal-source test in
-draft #1986. Keep the prior reviewed judgments and original attempts intact.
+The constitutive comparison leaves open whether understanding belongs intrinsically to the producer.
 The source under examination is the same independently supplied actual root n;
 it is not defined as GOD_4 or as personal. This is a provisional analyst
 reconstruction, with a reproducible structural diagnostic, not a new registered
 argument or a claim that the remaining metaphysical premises are established.
-The previous branch note blob is `6c3eb9f145deeb611bc92168808bd4ee9bcba5a4`.
+
 
 ### 1. Reuse the existing unrestricted-perfection routes
 
@@ -900,10 +884,7 @@ Proposed local supporting argument, with independent jobs:
 1. A genuinely unrestricted act is not intrinsically surpassable in the
    selected positive-perfection comparison. This is an OPEN bridge from
    the actual source's absence of contraction, not a claim that a root is
-   maximal merely because it is underived. The previously argued
-   [strict esse comparison](contingency-receptivity-c2.md) supplies the
-   degree-order motivation, but still requires calibration; MoreIn and
-   profile inclusion are not the same relation.
+   maximal merely because it is underived. The [strict esse comparison](contingency-receptivity-c2.md) and [bffabfb2](../../corpus/attempts/bffabfb2-260d-4882-a77c-158cc4af7680.json) already distinguish strict inclusion from a scalar degree increase. On the least-upper-bound calibration, preserved profiles can tie even when one adds an item. The crossing result uses a realized giver level above a justified recipient ceiling, common calibration and the degree-to-MoreIn bridge for an actual giver/recipient pair. Its application to the proposed extension of this root needs a corresponding comparison domain, bound and crossing or a separately defended order.
 2. Intellectual apprehension of intelligible content as such, apart from
    its finite receptive mode, is a real positive determination w. This is
    the candidate purity claim, not an assertion that every human mental
@@ -977,7 +958,8 @@ The positive content is the subject's intelligible apprehension,
 not its prior ignorance or the transition out of that ignorance.
 This gives prima facie reason for considering nonacquisitive
 understanding rather than classifying all intellectual perfection as
-essentially receptive.
+essentially receptive. The completed learner may still depend on a received form.
+Persistence after learning gives no witness of understanding subsisting without reception.
 
 At the ultimate-source level, the nonacquisitive candidate is an immanent
 act of understanding whose own primary object is already actual in the
@@ -1025,7 +1007,9 @@ assignment does not enforce. The test identifies the needed additional
 bridge and makes its target more precise than "there are two words, so
 there are two things." Merely distinguishing the primary object's
 truth conditions or the subject and object roles does not establish
-real composition.
+real composition. Articulation could require a real distinction within the
+act without requiring a separate constituent for each content. The failed
+injection tests only the stronger, one-constituent-per-content thesis.
 
 There is a symmetric positive challenge to the blanket articulation
 objection. A putatively simple impersonal source is also intelligible
@@ -1091,9 +1075,13 @@ All assertions passed in the analyst JavaScript execution.
 The existing `godHasIntellectFromWisdomCapacity` in the whole-power
 solution requires the same GOD_4 witness's OwnBeing, the whole-power
 and purity inputs, WisdomSelfCapacity and a separate recognition of
-its self-directed capacity as HAS_INTELLECT_1. The stronger
-`godHasIntellectFromWholePowerWisdom` additionally needs actual
-pure act and the exercise and cognitive-grounding bridges. The
+its self-directed capacity as HAS_INTELLECT_1. The actual-self-knowledge route
+`godHasIntellectFromWholePowerWisdom` shares the wisdom and capacity
+inputs. With the exercise-or-potency premise and pure act at that bearer it
+derives actual self-apprehension. A further premise grounds this true
+apprehension cognitively in the bearer. Its final recognition premise takes
+this actual intrinsic self-knowledge to HAS_INTELLECT_1. Only the capacity
+route uses recognition from capacity. The
 local non-surpassability proposal could support the missing
 particular possession application without universal fullness, but
 substitution for any existing proof argument would require a new
@@ -1141,34 +1129,11 @@ noncontracting positive nature with a warranted incompatibility
 would count against that route. No earlier reviewed judgment is
 superseded.
 
-**Next discriminating test:** Take the strongest source-own-form
-account of one actual self-apprehension and develop the positive
-content of its truth-directed act. Investigate whether the
-subject/act/object distinctions are only intentional, or require
-intrinsic real differentiation, and whether any such differentiation
-is receptive composition in the SAME sense needed by
-`1304b462` and the root argument. Do not require a temporal
-thinking process or the separate existence of a represented object.
-In parallel compare the actual root's non-surpassability standard
-with the prior strict MoreIn and causal-superiority arguments,
-testing whether local no-loss preservation implies genuine strict
-perfection improvement without assuming that all pure
-determinations are commensurable. This is a better next premise
-target than repeating the general assertion of fullness.
+**Next discriminating test.** At the same actual root, specify the positive intrinsic determinations the wisdom-bearing comparison must preserve. Is an extension that realizes wisdom admissible with *all* of them? If so, identify the warranted comparison that would make this improvement strict in esse. The finite inclusion result and the calibrated crossing for actual giver/recipient pairs already stand. Applying either to these particular profiles needs evidence about the profiles and the ordering. [72a86cf4](../../corpus/attempts/72a86cf4-baca-4a47-b157-7b0dd50ba12b.json) · [bffabfb2](../../corpus/attempts/bffabfb2-260d-4882-a77c-158cc4af7680.json)
 
-**Status:** This continues the existing draft checkpoint, in its
-existing note. The 1,024 finite profile checks and explicit
-role/content control were executed in the tool environment. No
-canonical premise, definition, proof record or source claim
-changed. The earlier reviewed results are linked with their
-retained premises, not freshly Lean-verified. Canonical CLI
-reuse and novelty/semantics checks, installed-convention checks,
-independent challenge, binding/Lean/Comparator/NanoDa validation,
-computed frontier-diff and attempt/current-assessment
-reconciliation remain outstanding. The conditional argument and
-semantic proposals must not be registered or relied on as
-reviewed until these are done.
+For cognition, explain how the bearer itself grasps both its absence of receipt and its absence of composition through its own form. What grounds its understanding of each truth without receiving content? The role assignment stipulates that grasp. If genuine articulation requires an intrinsic distinction, test whether the distinction entails receptive composition in the sense used by `1304b462`. This leaves room for an account of articulation that requires fewer constituents than contents. [d3a0e98a](../../corpus/attempts/d3a0e98a-8c92-4236-92bb-a3e22d49b172.json) · [58750abd](../../corpus/attempts/58750abd-e037-4902-b2f5-7c83e0f467a3.json)
 
+The recorded profile and role diagnostics establish the displayed finite comparisons. The philosophical application still needs a wisdom-bearing realization, a justified strict ordering at this root, and a positive account of its own understanding. The earlier mode-completeness and self-capacity assessments retain their scopes.
 
 ## Research attempts citing this note
 
