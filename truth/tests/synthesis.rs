@@ -172,6 +172,13 @@ fn exact_argument_overlap_scoped_rivals_and_prior_work() {
     assert!(formal_evidence.contains("Solution.lean"));
     assert!(formal_evidence.contains("solution-present, solution registered"));
     assert!(!formal_evidence.contains("theorem companion"));
+    assert!(formal_evidence.contains("Alternative (transcription)"));
+    assert!(formal_evidence.contains("truth context b"));
+    assert!(formal_evidence.contains("Alternative (derivation)"));
+    assert!(formal_evidence.contains("truth context c"));
+    let limited = String::from_utf8(fixture.run(&["T", "--limit", "1"]).stdout).unwrap();
+    assert_eq!(limited.matches("Alternative (").count(), 1);
+    assert!(limited.contains("All 3 argument bundles are available in --json."));
     let unresolved = String::from_utf8(fixture.run(&["U"]).stdout).unwrap();
     let formal_evidence = &unresolved[..unresolved.find("A plausible proposal.").unwrap()];
     assert!(formal_evidence.contains("No Lean result is registered"));

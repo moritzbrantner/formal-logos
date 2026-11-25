@@ -422,7 +422,7 @@ impl Synthesis<'_> {
 
     /// Give a readable producer with its frozen declaration first. The number
     /// of inputs only breaks ties between otherwise comparable examples.
-    fn illustrative_argument(&self) -> String {
+    fn illustrative_argument(&self, limit: usize) -> String {
         let exemplar = self
             .routes
             .iter()
@@ -485,6 +485,22 @@ impl Synthesis<'_> {
                 "  Separate commitment — {label}  →  truth synthesis {id}"
             ));
         }
+        let alternatives = self
+            .routes
+            .iter()
+            .filter(|a| a.argument_id != route.argument_id);
+        for other in alternatives.take(limit) {
+            lines.push(format!(
+                "Alternative ({}) — {}  →  truth context {}",
+                other.status, other.label, other.argument_id
+            ));
+        }
+        if self.routes.len() - 1 > limit {
+            lines.push(format!(
+                "All {} argument bundles are available in --json.",
+                self.routes.len()
+            ));
+        }
         lines.join("\n")
     }
 
@@ -507,7 +523,7 @@ impl Synthesis<'_> {
         if let Some(name) = self.target.lean_declaration.and_then(Value::as_str) {
             paragraphs.push(format!("Lean proposition — {name}"));
         }
-        paragraphs.push(self.illustrative_argument());
+        paragraphs.push(self.illustrative_argument(limit));
         let positions = self.positions();
         let shown: BTreeSet<_> = positions.iter().copied().take(limit).collect();
         if positions.is_empty() {
