@@ -34,8 +34,9 @@ fn run(args: &Args, operands: &[&str]) -> Output {
     let (corpus, aliases, _) = load(args)?;
     if let Some(question) = question {
         let limit = args.research.limit.unwrap_or(5);
-        let (value, text) = assessment_search::report(&corpus, question, limit as usize)
-            .map_err(|error| input_error("synthesis", error))?;
+        let (value, text) =
+            assessment_search::report_for_root(&args.root, &corpus, question, limit as usize)
+                .map_err(|error| input_error("synthesis", error))?;
         return Ok((value, Some(text)));
     }
     let token = operands
