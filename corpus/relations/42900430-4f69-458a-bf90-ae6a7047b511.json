@@ -1,0 +1,10 @@
+{
+  "id": "42900430-4f69-458a-bf90-ae6a7047b511",
+  "label": "Self-application challenges scoped verificationism",
+  "subject_kind": "argument",
+  "subject_id": "a3c1988e-c9c3-544b-a8c0-14f27f650c49",
+  "predicate": "attacks",
+  "object_kind": "statement",
+  "object_id": "12527c0e-3a83-5639-91e4-3eab30b2ec23",
+  "note": "Conditional dilemma: if its own formulation is in scope, nonanalytic and unverifiable, a verification principle with those properties cannot count its own formulation as meaningful. No truth or actual meaningfulness witness follows from the dilemma alone. Preserve the proposal and restriction readings; no global refutation."
+}

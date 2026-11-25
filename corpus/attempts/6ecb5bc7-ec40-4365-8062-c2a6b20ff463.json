@@ -1,0 +1,65 @@
+{
+  "id": "6ecb5bc7-ec40-4365-8062-c2a6b20ff463",
+  "label": "Test rational exercise as formative rather than merely classified",
+  "statement_ids": [
+    "29818edd-9f5a-5414-baa2-9a7d0c8abf18",
+    "66aecdd7-ea4e-55c6-9377-10db08893854",
+    "5c1aba17-d224-49fd-a31c-728a54ac63a9",
+    "090be689-b77f-51a1-9d5d-caf339169e4b",
+    "2537adb1-fca8-4a76-93a7-18a688cb4507",
+    "a94c5dfc-c722-49fe-a242-dd39409b079d"
+  ],
+  "date": "2026-11-25",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "Continuation of PR-1971 and PR-1962. Note: docs/notes/will-versus-chance.md#can-the-same-intrinsic-actuality-understand-and-produce-blindly-2026-11-25. Inspected the existing agency overlay and actual theorem A (b5b84276): intellect, will bridge, rational-power bridge, owned exercise and one power yield rational power classification of actual giving. This excludes a separate non-rational exercised power conditional on those premises, not wholly blind actual governance on a thin Exercises reading. Read Aristotle Metaphysics Theta.2/5 and Aquinas ST I q.25 a.1 co./ad 3–4 and a.5 ad 1 in the linked primary translations for navigation; no registered attribution. The understood account is the distinctive formative rationale of productive art; actual exercising qua rational inclination gives direct conceptual warrant for an operative apprehended good at some scope, not determination of every effect. The actual application of this strong sense to giving is OPEN. Contrast a separate intrinsic blind constituent with a proposed one-actuality contemplative source knowing its own objective good-directed propensity; identity does not transfer relevance under intentional descriptions, and explanatory aspect distinction alone does not establish real constituents. Actual governance of the productive exercise and residual selection among permitted realizations have different explanatory scopes. A rival supplying only the latter given a genuinely directed giving is not a replacement for the former. Neither case is a strict-simple metaphysical model. Own-good love, recipient-directed good, full existential PSR, and same-source/holder bridges retain their independent obligations. No frozen dictionary or proof change, new formal consequence or attributed claim. The earlier qualified review is preserved in assessment_history. Follow-up on base 30a9820018644fe98d92b9f10874c3382340a9ee: docs/notes/will-versus-chance.md#does-practical-inactivity-divide-the-source-2026-11-25 reads ST I q.79 a.10 ad 3/a.11 and q.77 a.3 as a finite-power control: differing practical roles need not distinguish powers under the stated formal-object criterion. This is not a strict-simple-source model. The q.3 a.6–7 actualizer/receiver and real-constituent criteria discriminate a genuinely decomposed account, not a distinction of explanatory aspects; q.25 a.1 requires symmetric treatment of the personal account. Adding nonreceptive knowledge of the actual giving does not by itself identify the known content as its practical measure. Invariant knowledge of a fixed contingent truth plus factivity creates the same necessity pressure on either account; relational self-knowledge does not by itself establish reverse grounding or formative governance. Temporal immutability remains distinct from modal intrinsic invariance; the existing same-token collapse bundle is reused without alteration. Primary translations were read for research; no existing q.77/q.79 passage witness was found in the bounded locator/path search, so no materialization or pinned attribution is claimed. Advisory novelty retrieval identified the substantial prior treatments. No new formal consequence, graph edge or premise discharge; this extension remains unreviewed and unpublished.",
+  "blocker": "The generic inference from distinct practical roles to distinct powers lacks the required formal-object qualification; even a source with one actual intellectual power need not satisfy a content-indexed governance claim by identity alone. Establish a same-source productive determination received as a genuinely distinct actualizer, or distinct intrinsic constituents, if using composition against the contemplative rival. Alternatively establish that the actual existential giving exercises the intellectual inclination in its formative mode. Actual self-knowledge of the giving does not supply that application without explaining why its content is the productive measure. A defended unitary contemplative account with actual supply and content would strengthen the rival; a demonstrated received productive determination would weaken it under strict simplicity. Preserve the same n, x and causal respect, apply the criterion symmetrically, and retain separate recipient-good and modal-scope obligations.",
+  "evidence": [
+    "PR-1971",
+    "PR-1962",
+    "PR-1941",
+    "PR-1944"
+  ],
+  "current_assessment": {
+    "date": "2026-11-25",
+    "statement_ids": [
+      "29818edd-9f5a-5414-baa2-9a7d0c8abf18",
+      "66aecdd7-ea4e-55c6-9377-10db08893854",
+      "5c1aba17-d224-49fd-a31c-728a54ac63a9",
+      "090be689-b77f-51a1-9d5d-caf339169e4b",
+      "2537adb1-fca8-4a76-93a7-18a688cb4507",
+      "a94c5dfc-c722-49fe-a242-dd39409b079d"
+    ],
+    "scope": "Practical-role plurality and formative use at the same intellectual source",
+    "assessment": "The finite-power source account challenges a generic inference from practical-role difference to distinct powers; it does not model the strict-simple rival. Actualizer/receiver or genuinely distinct constituent relations could exclude a decomposed rival, but have not been established for the one-actuality contemplative proposal. Adding actual nonreceptive self-knowledge does not by itself establish formative use. The earlier underdetermination of actual governance is retained, with equal credit for matched actual supply and output.",
+    "next_test": "The generic inference from distinct practical roles to distinct powers lacks the required formal-object qualification; even a source with one actual intellectual power need not satisfy a content-indexed governance claim by identity alone. Establish a same-source productive determination received as a genuinely distinct actualizer, or distinct intrinsic constituents, if using composition against the contemplative rival. Alternatively establish that the actual existential giving exercises the intellectual inclination in its formative mode. Actual self-knowledge of the giving does not supply that application without explaining why its content is the productive measure. A defended unitary contemplative account with actual supply and content would strengthen the rival; a demonstrated received productive determination would weaken it under strict simplicity. Preserve the same n, x and causal respect, apply the criterion symmetrically, and retain separate recipient-good and modal-scope obligations.",
+    "note": "docs/notes/will-versus-chance.md#does-practical-inactivity-divide-the-source-2026-11-25",
+    "reviewed_revision": "0b731495feb6f5cbae5c30c535d0fbf2afd2941e",
+    "review": "unreviewed",
+    "publication": "unpublished",
+    "evidence": "The proposed source-control and self-knowledge assessment is in the note at 0b731495feb6f5cbae5c30c535d0fbf2afd2941e, before this attempt bookkeeping. Primary research readings and advisory novelty retrieval are complete; independent semantic review and delivered-head validation of this extension are pending. Prior qualified acceptance at 168aa3f495290991b982ea322533d5192ad6a878 is preserved verbatim in assessment_history and does not review the new scope.",
+    "supersedes": "Extends the previous Formative governance of this exercise next-test wording with the finite-power source control and actual-self-knowledge test. Retains its judgment that a rationally classified power leaves actual formative governance open; the earlier accepted_qualified publication disposition applies only to that preserved earlier scope."
+  },
+  "assessment_history": [
+    {
+      "date": "2026-11-25",
+      "statement_ids": [
+        "29818edd-9f5a-5414-baa2-9a7d0c8abf18",
+        "66aecdd7-ea4e-55c6-9377-10db08893854",
+        "5c1aba17-d224-49fd-a31c-728a54ac63a9",
+        "090be689-b77f-51a1-9d5d-caf339169e4b",
+        "2537adb1-fca8-4a76-93a7-18a688cb4507",
+        "a94c5dfc-c722-49fe-a242-dd39409b079d"
+      ],
+      "scope": "Formative governance of this exercise",
+      "assessment": "A power identified as rational leaves open whether the giver’s apprehended good specified this giving. A good-responsive impersonal producer retains equal credit for the matched output.",
+      "next_test": "Establish a same-source formative interpretation of actual existential giving as exercising its own rational inclination, not just the ownership/classification of the operative power; or construct a defended one-intrinsic-actuality contemplative propensity with actual supply and content under the same simplicity conditions. Do not use a hypothetical change of the necessary intrinsic state or classify a residual indeterminate outcome as a wholly blind exercise. Reassess recipient-specific willing separately.",
+      "note": "docs/notes/will-versus-chance.md#can-the-same-intrinsic-actuality-understand-and-produce-blindly-2026-11-25",
+      "reviewed_revision": "168aa3f495290991b982ea322533d5192ad6a878",
+      "review": "accepted_qualified",
+      "publication": "published",
+      "evidence": "Independent semantic challenge at b3c6d5a80027ad31875da8c9498d5343695e962e accepted the article 3 reading, tied-optima criterion, controls and qualified ultimate application. The targeted recheck accepted the operation-identity, optimizer and owned-rational-exercise repairs at 168aa3f495290991b982ea322533d5192ad6a878.",
+      "supersedes": "Updates the pending-review disposition for this scoped comparison."
+    }
+  ]
+}

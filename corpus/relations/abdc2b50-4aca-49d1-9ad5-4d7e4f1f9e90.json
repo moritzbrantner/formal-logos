@@ -1,0 +1,10 @@
+{
+  "id": "abdc2b50-4aca-49d1-9ad5-4d7e4f1f9e90",
+  "label": "Singleton identity challenges the denial of all semantic validity",
+  "subject_kind": "argument",
+  "subject_id": "17a2c392-3bc1-4b53-b9ba-9f5635f23490",
+  "predicate": "attacks",
+  "object_kind": "statement",
+  "object_id": "3e6a8e08-7bac-47f2-b67c-00471dcbcf69",
+  "note": "identityExcludesNoValidInference supplies a valid singleton sequent given a content p of the fixed claim type. Although no proposition premise is recorded, the theorem takes that content parameter; a bare empty carrier or a rival restricting actual inference or excluding identity is not refuted by it. Non-counting objection, not an establishment of the actual reliability of reasoning."
+}

@@ -2262,9 +2262,9 @@ Their article locators and passage identities remain unchanged. Aristotle
 and q.14 were read at the linked primary translations; they are research
 readings, not newly pinned claim bindings. Existing selected-effect,
 ExplanatorySymmetry, appetite and will results retain their own formal
-scope. The pending #1933 `ActualExerciseExplanation` at
-`e5dd8243c5690f5d9255a509da00111cbdc36c8e` is external branch evidence;
-its output-bypass control supplies no new premise on this branch.
+scope. At the §§23–30 baseline, #1933 `ActualExerciseExplanation` at
+`e5dd8243c5690f5d9255a509da00111cbdc36c8e` was external branch evidence;
+its output-bypass control supplied no new premise in that assessment.
 
 The current CLI was used for related, dossier, context, brief and novelty
 before drafting, including the supplied #1953/#1737 issue snapshot. Novelty
@@ -2279,9 +2279,11 @@ The author sweep retained all
 seven recurring checks: no metaphysical reading of structural controls;
 matched burdens; exact source scope; no prose extension of the types;
 explicit encoding limits; scoped C2/PSR labels; and external publication
-status. Independent review of the complete assessment and the publication
-description remains pending at this draft checkpoint. Delivered-head
-validation and that review belong to the coordinator's publication record.
+status. The initial draft left independent review of the complete assessment
+and publication description pending; the subsequent accepted review is
+recorded below. Its scope is §§23–30 and that proposed outcome, not later
+continuations. Delivered-head validation belongs to the coordinator's
+publication record.
 
 **Review and publication.** Independent reviewer `/root/final_operative_review`
 accepted the complete §§23–30 assessment, the full attempt delta and the actual
@@ -2298,6 +2300,716 @@ complete semantic bundles, offline attribution, new local links and whitespace
 checks passed; the computed frontier comparison has no change. The
 [publication branch](https://github.com/moritzbrantner/formal-logos/tree/agent/specification-coverage)
 is not merged; its PR owns the delivered-head CI disposition.
+
+## Effect superiority, practical excellence and intrinsic source perfection (#1955; 2026-11-24)
+
+This comparison continues
+[#1953](https://github.com/moritzbrantner/formal-logos/issues/1953) and #1737.
+Baseline: `61acfd5629cab58221fe148b034340c7af9278ff`. No new statement,
+source claim, definition, sense, Lean theorem, argument or result is registered.
+The existing optimal-output and selected-effect results remain unchanged.
+
+### 31. Fix the comparison before asking about superiority
+
+An effect can be a more valuable created product without its production being
+a better exercise of the producer's power. Conversely, flawless execution of
+a specification is compatible with a morally defective choice of specification.
+Distinguish four comparisons:
+
+- **E:** objective value of the resulting created order, holding the relevant
+  value criterion fixed. Comparing isolated products does not establish a
+  comparison of complete orders.
+- **F:** fidelity/excellence of execution relative to an independently
+  intelligible and adopted end, including appropriate means. No inference from
+  output matching alone to adoption or practical direction.
+- **A:** all-things-considered quality of the complete decision, including
+  selection of its end, obligations, opportunity costs and permissible
+  omission. This is not identical to F.
+- **P:** intrinsic perfection of the producer, including relevant power,
+  knowledge and intrinsic goodness. A further possible evaluation **R** of the
+  producer includes relational or historical excellences (which actual
+  decisions the producer makes). Do not identify P and R without argument.
+
+Use the same source, relevant background and feasible decision comparison
+throughout. A comparison between distinct sources, or a claim that another
+possible source would make a better choice, needs an additional bridge into
+the chosen scope. No actual alternative world is established by the comparisons.
+
+The earlier materialization of `AQUINAS-ST-I-Q25-A6-EN`, recorded above,
+already motivates the difference between a better thing and better making;
+reply 3 compares the present order considered as a whole with another order,
+not just an isolated improvement. The complete reply 1 distinguishes the
+wisdom/goodness of the maker from the manner of the thing made. In the
+public [ST I q25 a2 ad 2 and a6 ad 1–3](https://www.newadvent.org/summa/1025.htm)
+reading inspected for this checkpoint, a2 ad 2 also distinguishes power
+whose effect is its end from the divine power's relation to its effect.
+This is source orientation, not a newly bound claim; the prior pinned reading
+remains the authority for the corpus. The stronger contemporary objection
+is the action-to-agent surpassability step discussed in
+[SEP, Divine Freedom, section 2.2](https://plato.stanford.edu/entries/divine-freedom/#FreeGood):
+even permission to choose a less valuable creation need not establish the
+possibility of unsurpassable agency. The encyclopedia discussion was inspected;
+Rowe's full book and Adams's original paper were not materialized or read for
+this checkpoint. Do not attribute the following analyst model to them.
+
+### 32. Exact reflection obstruction
+
+For a nonempty comparison domain S, let E, A and P be ordinal maps into
+strictly ordered codomains (only their strict comparisons are used).
+Write E(i)>E(j) for a strict improvement of the represented outcome from j
+to i, and analogously for A and P. Consider the following four hypotheses:
+
+1. Some E comparison is strict.
+2. For every i,j, E(i)>E(j) implies A(i)>A(j).
+3. For every i,j, A(i)>A(j) implies P(i)>P(j).
+4. P is invariant across S.
+
+These are jointly inconsistent: instantiate 2 and 3 at the witness of 1;
+the resulting strict P comparison contradicts 4. In particular, under 4
+and 3, no strict A comparison is possible, even if there is strict E
+variation. Under 4 and 2, strict E variation forces a failure of 3 at
+some pair. Under 4 and 3, strict E variation forces a failure of 2.
+Neither of the reflection rules is a consequence of the definitions.
+Replacing A by F tests whether a better product requires better execution relative to the adopted end. Each reflection rule needs its own warrant.
+If P is replaced by R, invariance needs fresh warrant.
+
+The following matched controls use three labeled comparison situations.
+The tuple entries are grades, not quantities of being or moral utility.
+Each control negates precisely the indicated hypothesis of the four and
+retains the other three:
+
+| Omitted hypothesis | E | A | P |
+| --- | --- | --- | --- |
+| 1: strict effect variation | (0,0,0) | (0,0,0) | (0,0,0) |
+| 2: effect-to-act reflection | (0,0,1) | (0,0,0) | (0,0,0) |
+| 3: act-to-intrinsic-source reflection | (0,0,1) | (0,0,1) | (0,0,0) |
+| 4: invariant intrinsic perfection | (0,0,1) | (0,0,1) | (0,0,1) |
+
+The last control is not a model of a simple immutable being. The third
+control can rank an external decision outcome without ranking its producer's
+intrinsic state; it does not establish that its varying decisions are
+compatible with divine simplicity. The second stipulates equal A, not
+merely equal execution quality F, and therefore does not settle whether a
+lower-valued complete decision actually has equal merit.
+
+Reproduced exhaustive diagnostic (JavaScript; 27 ordinal maps per axis,
+19,683 triples). This is a nonmodal finite test of the four claims, not a
+count of admissible worlds, a probability, or evidence of metaphysical truth.
+
+```js
+const maps = [];
+for (let a=0;a<3;a++)
+  for (let b=0;b<3;b++)
+    for (let c=0;c<3;c++) maps.push([a,b,c]);
+const pairs = Array.from({length:9},(_,k)=>[Math.floor(k/3),k%3]);
+const gt = (f,i,j)=>f[i]>f[j];
+let total=0, full=0, deletions=[0,0,0,0];
+let invariantAndVariable=0, invariantAndVariableAndEA=0;
+for (const e of maps) for (const a of maps) for (const p of maps) {
+  const flags = [
+    pairs.some(([i,j])=>gt(e,i,j)),
+    pairs.every(([i,j])=>!gt(e,i,j)||gt(a,i,j)),
+    pairs.every(([i,j])=>!gt(a,i,j)||gt(p,i,j)),
+    p.every(v=>v===p[0])
+  ];
+  total++;
+  if (flags.every(Boolean)) full++;
+  for (let k=0;k<4;k++)
+    if (!flags[k]&&flags.every((x,i)=>i===k||x)) deletions[k]++;
+  if (flags[0]&&flags[3]) {
+    invariantAndVariable++;
+    if (flags[1]) invariantAndVariableAndEA++;
+  }
+}
+console.log({total,full,deletions,invariantAndVariable,
+  invariantAndVariableAndEA});
+```
+
+Observed: `total=19683`, `full=0`, `deletions=[27,216,288,312]`,
+`invariantAndVariable=1944`, `invariantAndVariableAndEA=288`.
+The universal proof is the two strict implications above, not induction
+from this enumeration. Under the appropriate strict-implication
+interpretation the same proof works on arbitrary comparison domains.
+This is a simple incompatibility diagnostic; do not register an open
+reflection premise or a transcription as an independently supported result.
+
+### 33. A positive nonexhaustion argument, and its limit
+
+Suppose a productive source has the power to actualize each of two
+specified ends. In each case the adopted end is fully and competently
+realized, but the realized ends differ in value or extent. For example,
+a capable maker can successfully execute either of two independently
+specified gifts. The smaller gift is not a failure to make the larger
+one if it was never part of the operative specification. Having the
+capacity to produce the greater gift is already a condition of its
+feasibility; the smaller effect therefore does not show a lack of that
+capacity. In an ordering solely by available productive capabilities,
+identical capability sets cannot be strictly ordered by inclusion.
+This establishes a limit of the proposed *inference from product
+to productive power*, not the equal moral quality of the decisions.
+
+A defect-of-execution test requires an intended or due end, a capacity
+to realize it and a shortfall relevant to its realization. Merely
+identifying another possible better product establishes none of these
+jointly. An intrinsic actuality need not gain a new perfection from
+communicating an already possessed good. These considerations supply
+positive warrant for rejecting a general E-to-F implication and for
+distinguishing F from P. They also fit the earlier expressive/acquisitive
+distinction in section 20. They do not entail rejection of E-to-A or
+A-to-R; an agent can exercise excellent technique for a wrong end, and
+the choice may itself exhibit deficient generosity, justice or rationality.
+
+The strongest maximization objection should grant this whole account of
+productive execution and attack the choice of specification:
+
+- If another complete feasible decision realizes a strictly greater
+  all-things-considered good with no relevant countervailing reason, and
+  a perfect chooser necessarily selects an undominated decision, then
+  the inferior decision is excluded. These are substantive premises.
+  Product superiority alone, a partial ordering, and a finite example
+  cannot establish them for the entire creative decision.
+- If all choices are strictly improvable in that complete decision
+  ordering, the same policy has no admissible choice. Reuse #689/#1953's
+  no-best and omission distinctions. This is not a proof that there is
+  no best possible world, or that a perfect chooser is impossible
+  independent of the policy premise.
+- If an agent has no unmet obligation to an actual beneficiary and does
+  not acquire an intrinsic good by producing the effect, some familiar
+  grounds for obligatory production are removed. A norm of impersonal
+  promotion or a norm of surpassability of the actual chooser may still
+  impose a stronger requirement. No-rights-violation is not a proof of
+  complete permissibility, equal A, or equal R.
+
+Conversely, if a defensible account of source perfection exhausts the
+relevant excellence in intrinsic actuality, and the creative exercise
+introduces no additional intrinsic completion, then a difference in
+external product cannot *by itself* introduce a difference in that
+excellence. The open metaphysical application is whether all the
+relevant goodness and excellence of choice really is intrinsic in
+that sense, and whether two distinct directed exercises can be actual
+without a difference of intrinsic actuality. Relationally individuated
+acts and the actual operative content must be defended, not stipulated
+away by assigning a constant P map. Ordinary productive agents are not
+witnesses of the strong simplicity claim.
+
+### 34. Symmetric assessment and root-facing consequences
+
+| Account or control | Execution | Complete decision / source burden |
+| --- | --- | --- |
+| Personal producer with optional expressive end | Can successfully realize distinct adopted ends | Warrant of permissible adoption, nondeviant guidance and sameness of intrinsic perfection is still needed |
+| Impersonal producer with nonnecessitating good-sensitive propensity | Can match the same product and policy ranks | Must warrant the same complete-decision constraints if claimed; extensional parity does not establish or defeat intentional explanation |
+| Producer with insufficient ability | Can fail a due or adopted specification | The failure may discriminate capability when alternatives and actual exercise are independently known; a less valuable result alone does not |
+| Producer knowingly executing a wrongful end flawlessly | High F is consistent with inferior A | A theory of perfection must address actual practical goodness, not identify it with technical success |
+
+The comparison is not an independent argument for the root's intellect
+or will. It can remove an overstrong maximization assumption from a
+*proposed* account of rational creation. It cannot alone give positive
+warrant for the actual same-source practical guidance. The existing
+#1941 route `b5b84276` / `963e9689` and target `66aecdd7` require
+their stated same-bearer bridges. The possibility of producing a
+greater external good is also not the converse of causal preexistence
+of perfections (`64498e7e`), existential transfer (`f8ba2429`) or
+actuality-goodness (`00e962ae`). Those principles compare different
+respects and relations; none currently supplies E-to-A or A-to-P.
+Retain all existing existential and simplicity-route obligations.
+
+Provisional assessment: the distinction between a better product and
+better execution has positive ordinary-agency and conceptual warrant.
+The claim that a complete decision's value need not alter intrinsic
+source perfection is credible under an intrinsic/extrinsic distinction
+but remains conditional on its metaphysical application. The stronger
+all-things-considered maximization and moral-person-surpassability
+objections are standing. An impersonal producer can retain parity on
+the extensional criterion. The next discriminating question is whether
+the act's choice of end is itself positively excellent without
+maximizing total produced good, and how a genuine operative intention
+can belong to the same source without adding intrinsic completion.
+A proved dominance or an intrinsic-choice essentiality premise would
+weaken the permissive proposal; a defensible criterion of due versus
+freely communicable good and an independently warranted actual
+practical-content bridge would strengthen it.
+
+### 35. What can make the choice of a smaller gift good?
+
+Consider a printer who has undertaken to make a single accessible edition
+for a particular reader by Friday. On the last available press shift she can
+honor that undertaking, print several standard copies for other readers,
+or leave the press idle. Assume that the standard copies yield more total
+reading benefit, that the accessible edition meets an actual need, and
+that the other readers have no comparable claim on this shift. All three
+options include the forgone uses of the shift. A wholly competent
+execution is possible for either printing option.
+
+The reader's claim gives the printer a positive reason to choose the
+accessible edition. It also explains why choosing this end can exhibit
+fidelity even if it yields less total benefit. If the reader releases the
+claim beforehand, the benefit ranking and printing ability stay fixed
+while that particular reason falls away. Serving the reader's need can
+still be generous. To rank that generosity above using the shift for the
+other readers requires a judgment about their competing goods. Likewise,
+a rule that tracks valid claims can select the same edition. Attributing
+fidelity as a motive requires evidence that the printer acted on her
+understanding of what she owed. [Earlier waiver comparison](moral-governance-intellect-will.md)
+
+For a proposed creator, a prior promise to an existing reader cannot justify
+creating that very reader in the first place. The comparison shows what a
+reason concerning this recipient can contribute when its basis is available.
+A case for freely communicating a good still needs a reason applicable
+before the proposed gift, an account of permission across the complete
+alternatives including omission, and evidence that the same giver acted
+for that reason. A source that necessarily understands the end but produces
+through an independently operative disposition still fits the output.
+The invariant-good comparison in #1962 and the policy test in #1971 locate
+those remaining questions. [Policy and end requirement](will-versus-chance.md#end-requirement-policy-requirement-and-productive-fixity-2026-11-25)
+
+### 36. Which account of goodness requires choosing the greatest feasible good? (#1955)
+
+Grant one producer four feasible complete decisions. Hold fixed what
+counts as care due to each created beneficiary and the ranking of
+created benefit among the outcomes in which all receive that care.
+
+| Decision | Outcome | Satisfies every actual beneficiary’s due claim | Also maximizes created benefit among the eligible options |
+| --- | --- | --- | --- |
+| O | Create no beneficiary | Yes | No |
+| A | Create one and provide due care | Yes | No |
+| B | Create two and provide due care to both | Yes | Yes |
+| C | Create two and withhold due care from one | No | No |
+
+The stipulated ranking is O < A < B. C is ineligible before the
+maximization comparison. A rule requiring due care for every actual
+beneficiary permits O, A and B on that criterion. Adding the obligation
+to select a greatest eligible outcome selects B. Withholding care in C
+has an existing patient. Including the interests of possible beneficiaries
+or imposing impersonal beneficence could change the comparison, given
+an argument for that wider standard. The table answers no question about
+the actual distribution of suffering.
+
+Now vary the proposed ground of goodness while preserving those four
+decisions, the ranking, and the due-care judgments. Someone who takes
+evaluative truths as necessary and primitive can endorse either policy.
+A proponent of divine-nature goodness likewise needs a reason why
+expressing that nature requires maximizing created value, or a reason
+why a nonmaximal expression can be wise and generous. Learning a
+beneficiary’s needs without theology concerns access to the good.
+Holding that a decree cannot make deprivation good concerns independence
+from voluntary choice. Either thesis can be held while attributing the
+good’s being to divine nature. Ontic independence from that nature is a
+third, substantive thesis. A necessary normative truth could constrain
+what counts as permissible without removing the producer’s capacity
+to perform the act. [Normative standing and the origin of a claim](moral-governance-intellect-will.md)
+
+The immanent due-good account has a concrete advantage in explaining
+what counts as a defect in C through the good of that recipient. A
+natural-kind account can use the same explanation of flourishing and
+still owes a reason why another agent must secure it. A realist about
+necessary norms can supply that practical requirement as a basic
+truth. Its primitiveness alone gives no argument against it. An account
+in terms of ideal attitudes owes a well-defined, nonempty class of
+competent assessors and grounds for trusting their verdicts here.
+Distinguishing preexisting goodness from command-grounded obligation
+also allows a theist to deny that arbitrary commands set the value
+ranking. The participation proposal can relate the good of the patient
+to the source of its being, conditional on the transfer premises.
+Coextension with actuality alone does not establish identity or moral
+benevolence. The same tests of scope and explanatory adequacy apply to
+each primitive commitment. [Finite goods and their source](wielenberg-making-account.md) · [Owner’s matched comparison](https://github.com/moritzbrantner/formal-logos/issues/1955#issuecomment-7143785792)
+
+The strongest remaining objection asks whether an unsurpassably good
+chooser could actually select A when B dominates it as a complete
+decision. Both accounts exclude A if they also grant that a perfect
+chooser must avoid dominated decisions. Showing B yields more created
+benefit establishes only the first ranking in the table. The next
+test is what about the source’s own end could make communicating good to
+this recipient positively excellent while permitting omission or a
+different gift. An independently warranted obligation of impersonal
+beneficence applying to those very alternatives would count against
+the permission. Identifying an actual operative reason for this giver
+is the further application pursued in #1953.
+
+## Can objective finality explain a contingent order without apprehension? (2026-11-25)
+
+This continuation assesses the strengthened impersonal rival on the same
+explanatory task as rational authorship. Baseline
+`30a9820018644fe98d92b9f10874c3382340a9ee` incorporates main
+`a9819b148bd4a7c089cff9dc07f95c209452511e`. The three continuations merged in
+[#1971](https://github.com/moritzbrantner/formal-logos/pull/1971) are substantive
+reuse: [end requirement versus policy requirement](will-versus-chance.md#end-requirement-policy-requirement-and-productive-fixity-2026-11-25),
+[rational classification versus formative exercise](will-versus-chance.md#can-the-same-intrinsic-actuality-understand-and-produce-blindly-2026-11-25),
+and [actual form-specific supply](will-versus-chance.md#from-universal-existential-supply-to-proper-formative-causation-2026-11-25).
+The [dispatch comparison from #1978](explanatory-symmetry-742.md#did-the-reason-guide-production-of-this-order-1570)
+and [Glen Roy application from #1981](explanatory-symmetry-742.md#why-did-darwin-give-up-the-marine-explanation-of-the-parallel-roads)
+already distinguish reasons available, reasons actually used, and the source
+of a reason-using subject. Their findings are retained, not presented as new
+tests. No new formal primitive, model or graph edge is introduced here.
+
+The dependency refresh also retains the related
+[source-specific manifestation comparison](causal-perfection-transfer.md#source-specific-manifestation-versus-intrinsic-understanding-2026-11-25-provisional),
+[personal-capacity and operative-purpose distinction](moral-governance-intellect-will.md#personal-and-impersonal-source-original-authority-institution-and-operative-purpose-2026-11-25-draft),
+and the adjacent [complete-decision comparison](#effect-superiority-practical-excellence-and-intrinsic-source-perfection-1955-2026-11-24).
+Their separate source-apprehension, actual-guidance and decision-quality
+obligations retain their stated scopes.
+
+### 37. Meanings and one matched candidate construction
+
+Fix the proposed necessary source n, its actual productive exercise, and the
+same actual contingent order H, including one actual rational recipient x.
+The shared explanandum is H's existence, intelligible organization, objective
+goods and the genuine rational activity of its creatures. It does not yet
+include n's having intended H. Objective purposiveness must not silently
+become intentional authorship in the statement of what needs explaining.
+
+| Term in this comparison | Selected meaning and boundary |
+| --- | --- |
+| Objective good-directedness | A real productive nature is directed toward independently assessable goods or success conditions. A pattern retrospectively called good is insufficient; apprehension is not included. |
+| Objective reason | A fact counting in favor of an end or exercise under a stated evaluative standard. Its existence alone neither causes the exercise nor makes it the source's motive. |
+| Apprehending a good as good | The source actually understands the relevant content in its evaluative bearing. A correct specification, capacity to produce thinkers, or merely available content is insufficient. Tacit understanding is allowed. |
+| Motivating reason | An apprehended consideration actually figures in the source's practical exercise under the relevant description. Neither explicit deliberation nor a separate executive event is required. |
+| Rational authorship | The source's own apprehension and inclination supply the formative measure of its productive exercise, and realization proceeds through that direction. This is stronger than ownership of a power classified as rational. |
+| Primitive exercise | An actual exercise taken as an explanatory stopping point, with its power and direction still specified. This does not mean uncaused product, unstructured production or complete explanation of the exercise's obtaining. |
+| Intrinsic invariance | The source has the same intrinsic actuality across the admitted modal alternatives. This is a cross-world claim, not merely absence of temporal change, and does not by itself fix every effect-directed relation. |
+| Adequacy | Adequacy for a specified question: productive dependence, kind-level organization, actual intentional direction, or exhaustive particular selection. Success at one is not automatically success at all four. |
+
+For a common candidate, let D specify an order enabling a finite knower to
+understand evidence and correct errors through its own activity. D is fixed
+by those fulfillment conditions, not by the name H. A history systematically
+depriving its supposed knowers of understanding or access to correction would
+not fulfill that description merely because their answers were accurate.
+Different complete histories could meet D if their metaphysical possibility
+is independently admitted. No such possibility follows from describing them.
+In the actual comparison x realizes the recipient role; D alone does not
+select x's rigid identity or every feature of H.
+
+The **impersonal candidate** has an underived, invariant concrete productive
+nature whose nonnecessitating power is genuinely directed toward D and other
+admitted goods. Its actual exercise supplies H's existence and form, including
+x's real cognitive powers. It is not a bare rule awaiting an external
+implementer, and an abstract value is not asked to instantiate itself. The
+source's concrete nature bears the directed power. The account must defend
+that nature and its efficacy; it does not obtain them by stipulating a
+successful output.
+
+The **personal candidate** supplies the same H and x. The source actually
+apprehends D as good, and this content is its adopted formative measure in
+the very exercise that produces H. The power, apprehension and inclination
+are proposed as aspects of one actuality, not successive internal events.
+The good can be expressed in a recipient without completing a deficiency in
+n. This is the positive direct-exercise account of §§24–26, with actual
+formative relevance included rather than inferred from a matching effect.
+Producing x under D need not mean willing x's own good to x in every respect;
+the recipient-specific bridge `a94c5dfc` remains separate.
+
+The **contemplative candidate** adds actual self-understanding and knowledge
+of D to the productive nature while denying that this knowledge supplies
+the practical measure of creation. One nature explains the agreement between
+what is known and what is produced. It need not postulate a second source or
+an independently existing blind subsystem. This is the hybrid examined in
+#1971, not a model established by assigning a cognition flag. All three
+constructions are substantive proposals with open ultimate application, not
+certified models of the full simplicity and contingency commitments.
+
+### 38. Can a reason explain the particular exercise without being apprehended?
+
+An objective fact can enter an explanation without being known by the
+producer. On the impersonal candidate, the productive nature's real relation
+to a good explains why its exercise has the corresponding organization.
+The fact that D is good does not alone do this work: the proposed nature must
+make that good relevant to its actual production. This supplies a positive
+noncognitive account of finality rather than an inference from desirability
+to existence. Whether such underived normative efficacy is actual remains
+an open commitment.
+
+Under the selected meaning, a motivating reason cannot explain this exercise
+*as the source's reason for acting* unless the source apprehends the
+consideration and acts through that apprehension. That is a distinction
+between explanatory relations, not a demonstration that all adequate
+production must have the second relation. Saying that n produced H
+"because D is good" must identify which relation is asserted. A personal
+explanation adds practical uptake; an objective teleological explanation
+adds a real good-directed productive nature. Neither follows from the value
+judgment alone.
+
+A particular exercise can be explained under a description that another
+exercise would also satisfy. If n's actually apprehended D governs its
+giving to x, the account explains this giving as realizing D even if D
+does not distinguish x from every alternative recipient. That is genuine
+token application of a reason, not exhaustive token selection. The same
+distinction credits an actual manifestation of a good-directed impersonal
+power while withholding a further explanation of every difference between
+H and another eligible history.
+
+The #1978 dispatch test already separates practical use from an accurate
+report and from a proxy. It also retains the direct impersonal selector that
+tracks the relevant condition itself. #1981 then gives grounds for actual
+reason use in the recipient's correction without inferring that the ultimate
+source used that reason. These results advance the comparison: a recipient's
+apprehension is part of the shared explanandum, while the source's uptake
+is the further claim to warrant. No general epistemic defeat follows from
+the source's being noncognitive when the recipient's real understanding and
+reason-sensitive activity are retained.
+
+### 39. Contingent selection and the same stopping criterion
+
+An invariant propensity can be a source of contingent effects without being
+indifferent to their character. Intrinsic invariance fixes the proposed power
+and its direction, not a uniquely necessitated manifestation. This is the
+stronger rival already admitted in #1971. Its actual exercise cannot be
+supplied merely by stating the range of its power or the goodness of D.
+The candidate posits actual production and takes the residual exercise as
+primitive where no further explanation is offered.
+
+In that sense the account avoids an unproduced or wholly unstructured H;
+it does not automatically avoid unexplained particular selection. An
+apprehended reason and an efficacious intention can likewise explain the
+character and implementation of H while leaving why this intention was
+exercised unsettled. A reason favoring H over H' can supply a partial contrast
+without necessitating H. A correspondingly grounded impersonal tendency
+deserves the same partial credit. If no relevant differentiating consideration
+is supplied, calling the actual token a choice does not complete the contrast.
+
+The stopping alternatives are consequently explicit. Under a standard
+accepting actual nonnecessitating production with an independently meaningful
+direction, either account may stop at a primitive exercise without losing
+all its explanation of the product. Under an exhaustive determining standard,
+both owe the residual differentiator. Citing a contingent endorsement or
+selector moves that obligation to the endorsement or selector if the standard
+also covers it. One need not demand an endless series of adoptions to accept
+actual practical agency; one may not demand that series only of its rival.
+
+Reuse [#742's exact core](explanatory-symmetry-742.md#the-incompatible-core):
+agreement on every member of the supplied base, base-fixed favoring,
+selection at both compared histories, and the stated outcome-field conditions cannot all be
+retained with the opposed outcomes. Its controls concern that encoding.
+They neither refute nonnecessitating explanation nor give personal choice
+an exemption. They also do not demonstrate a metaphysically possible
+impersonal first source. The current question concerns the warrant and scope
+of the stopping standard, not a missing additional selection table.
+
+### 40. What rational authorship adds, and the hybrid's limited equivalence
+
+Rational authorship adds the source's own apprehension and practical use of
+the good. An actual exercise under D answers, in that respect, what the
+source produced H *for*, not only which valuable organization its power
+realizes. Ordinary nondeviant practical production gives this form of explanation direct,
+defeasible warrant. The communication of an understood good gives the
+personal candidate a substantive motive, and §§24–25 give a cumulative
+one-actuality account of how apprehension, inclination and execution can
+belong together. A primitive directed exercise can retain that positive
+content without a separately caused act of choosing it.
+
+This difference is not an automatic advantage on the neutral explanandum.
+If actual intentional provision for x were independently warranted, a
+wholly noncognitive account of that very act would omit something real.
+If only x's benefit and H's ordered character are warranted, adding
+"intended provision" to the explanandum would assume the contested fact.
+The personal account may offer an informative explanation of those common
+facts through intentionality; its additional relation must still have
+positive warrant at n. Conversely, a merely possible nonintentional route
+does not defeat an intentional relation established as actually operative.
+
+The contemplative candidate can be treated as equivalent to the impersonal
+candidate **for the selected productive explanation** when the same good-directed
+nature and exercise do the same formative work, and the added knowledge
+contributes no practical governance in that scope. Their complete ontologies
+are then still different: one includes actual cognition. Equal outputs alone
+do not establish this limited explanatory equivalence. Nor does residual
+indeterminacy establish nonoperative cognition: an actually intended D can
+govern production while another tendency concerns only which D-realization
+occurs.
+
+The hybrid is not thereby an instance of formal `CHANCE_3`. The existing
+`oneIntellectualPowerGivesWilledGiving` result `b5b84276` obtains and identifies
+an owned rational power using its intellect/will and exercise premises. It
+does not encode an apprehended D governing the particular giving. #1971
+already preserves this distinction between rational classification and
+exercise *qua* intellectual inclination. The latter, when warranted, excludes
+a wholly blind explanation of that same exercise in that respect; relabeling
+the former does not establish the latter. A genuine constitutive explanation
+of formative use would strengthen the personal account even if observable
+outputs remained matched.
+
+### 41. Necessary rational source, contingent effects and exact incompatibilities
+
+Necessity of n does not itself entail necessity of H. Temporal immutability
+also differs from modal invariance: absence of change within a history does
+not assert identical intrinsic character in every possible history. The
+current stronger comparison grants intrinsic invariance. It must therefore
+locate any variable effect-directed determination without silently giving
+n a contingent intrinsic perfection.
+
+The [#555 rigid-act result](simplicity-collapse-555.md) fixes one act token a
+and one recipient x. `SameActEverywhere p w a`, `StrictEfficacy p w a x`,
+and contingency of x are incompatible. Source necessity together with
+`BeingCarriesAct p a` is one sufficient route to the first premise, not its
+only possible basis. That bridge must concern the same a whose strict
+efficacy concerns x. A description meaning "whatever n does"
+does not establish rigidity of a content-specific act. An invariant
+good or permissive policy does not establish strict efficacy for this x.
+The `optionalAct` and `inefficaciousAct` deletion controls exhibit the exact
+structural alternatives, not complete rational or impersonal metaphysics.
+
+The personal candidate can accordingly retain a necessary intrinsic
+actuality while proposing a contingent relation to a particular recipient,
+or deny that the same invariant act necessitates that recipient. It must
+give a positive intentional account of that relation rather than read
+the intention from the realized output. The impersonal candidate has the
+analogous obligation for its manifestation. Neither may retain all the
+incompatible #555 premises by changing the act or recipient between steps.
+The candidate account thus avoids an immediate inference from necessary
+source to necessary effect; it is not a demonstrated solution to every
+simplicity or complete-explanation demand.
+
+Actual knowledge of contingent contents adds the separate
+[#1380 constraint](foreknowledge-discrimination-1380.md#exact-mathematical-result).
+Within its selected epistemic semantics, factivity, completeness for the
+selected family, differing truth profiles, and equality of epistemic rows
+cannot coexist. The `Supervenes` bridge makes equal intrinsic projections
+give equal rows. A fixed rule with varying rows is not a fixed row, and
+temporal immutability supplies no such supervenience. Denying that bridge
+may leave a relational account available, but a matching relation is not
+yet genuine apprehension. This is an additional obligation for a source
+claimed to know actual contingent contents, not a theorem that a necessary
+source cannot have intellect. A merely contemplative source with only
+necessary self-content is not assigned contingent knowledge without this
+further commitment.
+
+### 42. Operative intentionality, unity and change
+
+The strongest personal account treats actual production through apprehended
+D as one actuality described intellectually, appetitively and productively.
+It need not posit three internal constituents or a transition from dormant
+capacity to acquired determination. A role-relative good can be expressed
+without an increase in the source's perfection. This gives a positive
+constitutive proposal rather than an unexplained sequence of inner selectors.
+Its ultimate application remains open: absence of a separately named
+constituent is not proof that the account realizes strict simplicity.
+
+Apply the same criterion to the rival. A real distinction between knowing
+a principle and that principle's production does not follow from their
+having different explanations, or from being distinguishable in ordinary
+composite agents. If the rival posits genuinely distinct intrinsic
+constituents, the accepted simplicity constraint applies to those constituents.
+If it proposes one actuality with different explanatory aspects, a further
+composition argument is needed. Numerical identity of power and intellect
+likewise does not establish that every exercise proceeds *in virtue of*
+intellectual apprehension.
+
+The companion [practical-inactivity analysis](will-versus-chance.md#does-practical-inactivity-divide-the-source-2026-11-25)
+tests this specific inference and its positive one-actuality alternative.
+Its finite-power source control permits practical-role differences within
+one power without thereby demonstrating a strictly simple hybrid. Complete
+self-knowledge also leaves the actual practical measure to be identified.
+This refines §29's earlier composition reopening condition; it must not be
+replaced by a fresh demand to infer real parts from descriptions. The
+remaining issue is whether an independently warranted constitutive account
+makes the understood form the measure of the actual exercise, or instead
+grounds nonoperative cognition and good-directed production together.
+Hypothetically switching off a necessary intrinsic feature of n while
+holding that very source fixed is not an available intervention.
+
+### 43. Three kinds of matching and positive discrimination
+
+**Actual-output matching** means that the candidates explain or accommodate
+the same observed H. It leaves their productive pathways, possible responses,
+and further commitments unsettled. #1978's inspected routes show why a proxy
+and a direct tracker can agree on an outcome and differ on another relevant
+case. The direct tracker survives the proxy test. One successful imitation
+does not establish complete equivalence.
+
+**Profile matching** means agreement across a specified evidential scope,
+including whatever dispositions or propensities are relevant to that
+comparison. Equal possibility sets alone are weaker than that condition.
+When the candidates genuinely match the admitted profile, those matching
+features provide no basis by themselves for preferring rational authorship.
+This is not a probability assignment over worldviews, equal-prior assumption,
+or judgment that their total warrant is equal. Constitutive explanation,
+source evidence or independently supported theoretical constraints could
+still discriminate. Accommodating every observation by an unconstrained
+post-hoc productive rule is a weakness; unrestricted appeals to unknown
+intentions deserve the same criticism.
+
+**Constitutive matching** concerns what actually realizes apprehension and
+practical governance. If a defended account of cognition is satisfied by
+the purportedly impersonal system's actual semantic and productive roles,
+that system qualifies for cognition under the same account. Its label must
+not exclude it. If apprehension includes further irreducible conditions,
+matching a productive profile leaves those conditions unresolved. Neither
+conclusion follows from sophistication alone. Behavioral equivalence does
+not establish absence of cognition, and a merely mental label does not
+establish cognition's operative role.
+
+The available discriminators are therefore concrete. Evidence for actual
+apprehension in this n, joined to evidence that the apprehended good measures
+this giving, would support personal authorship. A defended constitutive
+principle excluding the rival's proposed productive nature under the shared
+simplicity assumptions could also discriminate. A constrained account that
+successfully explains independently specified features that its strongest
+rival fails to explain would gain relative warrant. Each test must preserve
+the same source, actual exercise and recipient. Evidence for a creature's
+reason use, an outside interpreter's correct description, or a power's
+capacity label does not by itself satisfy any of these tests.
+
+### 44. Cumulative judgment, precise limits and revision conditions
+
+| Candidate | Positive warrant and explanatory contribution | Exact commitments still needed at n | What would change its relative standing |
+| --- | --- | --- | --- |
+| Actual rational authorship | Ordinary practical production warrants apprehension-directed explanation; communicating an understood good supplies a substantive motive. The constitutive proposal integrates understanding, inclination and production without requiring a further executive event. | Actual same-source cognition; formative relevance in this exercise; a defensible account of contingent termination under intrinsic invariance; recipient-specific scope where claimed. | Strengthens with a warranted account locating the actual formative measure in n's understanding. Weakens if that knowledge is shown to be nonoperative, or if its proposed intrinsic constitution violates the retained simplicity/efficacy bundle. |
+| Good-directed impersonal production | Noncognitive productive organization motivates the explanatory form; an intrinsically directed concrete power can account for goods and form rather than merely license them. Primitive production has the same stopping permission as personal exercise. | Reality and efficacy of the proposed ultimate good-directed nature; its unitary constitution; the claimed production of genuine rational subjects; actual manifestation rather than a bare range of possibilities. | Strengthens with a positive constitution account that explains the independently specified organization. Weakens if a required power contradicts the same accepted constraints, or if actual practical cognition of n is warranted and this very exercise is shown to be governed by it. |
+| One-actuality contemplative source | Knowledge without practical employment motivates the distinction, and a common nature can explain agreement between cognition and production without a second selector. It preserves more of an independent intellect case than the wholly noncognitive rival. | Joint compatibility of actual intellect, nonoperative production and the proposed simple actuality; a positive account of the productive aspect rather than a flag or two unacknowledged constituents. | Strengthens with that constitutive account. Weakens if the source's actual productive nature is independently identified as an intellectual inclination in exercise, or if real distinct constituents are demonstrated under the accepted criterion. |
+
+**Overall provisional assessment.** For the neutral explanandum, the
+strengthened impersonal proposal remains a substantive explanatory rival,
+not merely an unrefuted label. Its direct form-specific production and
+objective finality answer questions that an indifferent or merely permissive
+source leaves unanswered. Their ultimate realization is not established.
+The personal account retains positive direct and cumulative warrant for
+its richer explanatory form; its further intentional relation is neither
+empty nor automatically instantiated by the ordered product. Current
+evidence does not warrant an unconditional ranking between these strongest
+ultimate-source accounts. The hybrid sharpens, rather than resolves, the
+gap between cognition and actual formative use.
+
+Genuine relative inadequacy arises when one candidate fails an independently
+warranted requirement on this same exercise that the other meets: actual
+productive form, actual source apprehension and governance where evidenced,
+or a shared constitutive constraint. It does not arise merely because one
+omits a feature posited only by the other, leaves the same residual contrast
+primitive, or has more descriptive clauses. Limited equivalence is warranted
+only for the explanatory relations or evidential profile actually matched;
+it is not identity of ontology or explanation in every respect.
+
+This reconciles rather than displaces the earlier results. #1971's
+end/policy distinction prevents inferring obligatory creation or omission
+from a good alone; its formative analysis prevents inferring practical use
+from the classification of a power. #1978 and #1981 establish discriminating
+local basing questions and retain the impersonal account of the same
+reason-using recipient. They do not promote the recipient's reason to the
+source's motive. §§37–44 sharpen the assessment of the strengthened rival
+and supersede a generic instruction to repeat these completed tests. The
+unresolved classical-creation application in §29 remains unresolved.
+
+The next useful evidence is a defended constitution and application of the
+actual productive principle: cognition operating as its measure, or a
+unitary noncognitive replacement on the same conditions. Independent
+same-source intellect evidence can contribute without being counted twice
+as evidence of practical exercise. The root connections remain exactly
+those in §29: `29818edd` concerns intellect; `b5b84276` classifies the
+owned exercised power under its complete premises; `834ddcfa`, with
+`fdd2b1cf`, `0050b6ed`, `5f93d4f0` and `65e0179f`, reaches will `66aecdd7`.
+No prose step here supplies their open premises, enriches their frozen
+conclusions, or establishes the actual practical interpretation, the full
+existential PSR, or recipient-specific willing.
+
+**Evidence and review boundary.** This is an analyst synthesis in the
+existing note. The earlier source readings and reviewed consequences are
+reused within their stated scopes. The #555 and #1380 declarations and
+the #1941 solution were inspected for the exact bundles above; no new
+formal result or metaphysical possibility is certified. The source-specific
+simplicity continuation has its own evidence boundary. The author sweep
+checks matched stopping rules, neutral explanandum, same witnesses, full
+joint premises, scoped senses, and the separation of output matching from
+cognition and actual formative governance. Independent challenge of the
+complete integrated continuation and delivered-head validation remain
+pending; the accepted §§23–30 review does not cover this new synthesis.
 
 ## Research attempts citing this note
 
