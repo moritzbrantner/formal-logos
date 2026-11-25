@@ -904,42 +904,11 @@ or premise discharge is added by this substantive slice.
 
 ## Conditional applications checked with Lean
 
-The follow-up's strict-cycle application and option-indexed application
-of the existing exact-classification theorem were elaborated with the
-repository-pinned Lean **4.35.0**. The unchanged
-`TruthCore.Logic.CorrectionCriterion` and its `Solution` were compiled
-into an isolated scratch output directory, then the following complete
-application file was checked. No repository Lean source was edited.
+The follow-up applies strict priority to one three-edge cycle and exact classification to eligibility for a fixed option.
 
-```lean
-import TruthCore.Results.Logic.CorrectionCriterion.Solution
+[Three-edge priority cycle and option-indexed eligibility](../../TruthCore/Metaethics/GoodnessStandardPriority.lean#L18)
 
-open TruthCore.Logic.CorrectionCriterion
-
-namespace GoodnessStandardApplicationCheck
-
-theorem noStrictCycle {F : Type} (prior : F → F → Prop)
-    (trans : ∀ {x y z}, prior x y → prior y z → prior x z)
-    (irrefl : ∀ x, ¬ prior x x)
-    (a r d : F) (hAR : prior a r) (hRD : prior r d)
-    (hDA : prior d a) : False :=
-  irrefl a (trans (trans hAR hRD) hDA)
-
-theorem eligibilityOnEqualData {S E O : Type}
-    (data : S → E) (Good : S → O → Prop)
-    (h : ∀ o, AdmitsCriterion data (fun s => Good s o))
-    {s t : S} (same : data s = data t) (o : O) :
-    Good s o ↔ Good t o :=
-  ((TruthCore.Results.Logic.CorrectionCriterion.characterization.1
-    S E data (fun s => Good s o)).mp (h o)) s t same
-
-#print axioms noStrictCycle
-#print axioms eligibilityOnEqualData
-
-end GoodnessStandardApplicationCheck
-```
-
-Both declarations reported **no axioms**. The complete application file's
+The original check reported **no axioms** for these declarations. Its application file's
 SHA256 is
 `8d06415459f3d9a23db0aa7b8a637e00f682e42f418a1a2024f8fa925cea9dfa`.
 The reused source files are those at

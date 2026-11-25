@@ -538,56 +538,10 @@ The following focused controls were checked with `lake env lean` against those
 built inputs. They are reproducible semantic diagnostics, not registered
 Comparator/NanoDa results, metaphysical counterexamples or root discharges.
 An initial `by decide` version could not synthesize decidability through the
-opaque-to-typeclass-search definitions; the explicit proofs below repair the
+opaque-to-typeclass-search definitions; the linked constructive proofs repair the
 check without changing the definitions.
 
-```lean
-import TruthCore.Logic.FirstPrincipleRoles
-import TruthCore.Logic.RegressDomains
-
-open TruthCore.Logic.FirstPrincipleRoles
-open TruthCore.Explanation.PSRStrength
-open TruthCore.Logic.RegressDomains
-
-example {W B F : Type} {A : Arena W B F} {w : W} {f : F}
-    (h : LocalInexplicabilityRejection A w f) : ¬ A.holds w f :=
-  fun hf => h.unexplained (h.demand hf)
-
-example {W B F : Type} {A : Arena W B F} {w : W} {f : F}
-    (he : Explained A w f) : ¬ LocalInexplicabilityRejection A w f :=
-  fun h => h.unexplained he
-
-example {W B F : Type} {A : Arena W B F} {w : W} {f : F}
-    (ht : A.holds w f) (he : ¬ Explained A w f) :
-    ¬ (A.holds w f → Explained A w f) := fun hd => he (hd ht)
-
-def failedRequirement : OnticRequirements Unit Bool :=
-  ⟨fun _ c => c = true, fun _ d p => d = true ∧ p = false⟩
-example : ¬ RequirementsRespectedAt failedRequirement () := by
-  intro h
-  have bad : false = true := h true false ⟨rfl, rfl⟩ rfl
-  cases bad
-
-def allActual (edge : Bool) : OnticRequirements Unit Bool :=
-  ⟨fun _ _ => True, fun _ _ _ => edge = true⟩
-example : RequirementsRespectedAt (allActual true) () := fun _ _ _ _ => True.intro
-example : RequirementsRespectedAt (allActual false) () := fun _ _ _ _ => True.intro
-example : (allActual true).requires () true false ∧
-    ¬ (allActual false).requires () true false := by
-  constructor
-  · rfl
-  · intro h
-    cases h
-
-def mereRule : Justification Bool where
-  Rule := Unit
-  premise := fun _ p => p = true
-  conclusion := fun _ => false
-  noninferential := fun _ => False
-  justified := fun _ => False
-example : mereRule.inferential true false ∧ ¬ mereRule.justified false :=
-  ⟨⟨(), rfl, rfl⟩, fun h => h⟩
-```
+[Explanation demands, ontic requirements and justification controls](../../TruthCore/Logic/FirstPrincipleControls.lean#L21)
 
 The sweep retains the full local demand, the negated existential explanation
 condition, every rule's premise set, the performance quantifiers and the

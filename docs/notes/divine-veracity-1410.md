@@ -1299,42 +1299,9 @@ does not instantiate the divine signature, causal history, mental uptake,
 intentions, ethical priority or epistemic warrant. The fixed source and recipient
 belong to the explicit interpretation above, not hidden properties of `Fin 3`.
 
-```lean
-namespace HistoricalDisclosure1958
+[Coverage lemma and the three-event selective-disclosure control](../../TruthCore/History/SelectiveDisclosure.lean#L25)
 
-abbrev Event := Fin 3
-def occurred (e : Event) : Prop := e.val < 2
-def selected : List Event := [1]
-def full : List Event := [0, 1]
-def sound (rows : List Event) : Prop :=
-  ∀ e, e ∈ rows → occurred e
-def complete (rows : List Event) : Prop :=
-  ∀ e, occurred e → e ∈ rows
-def inferAbsent (rows : List Event) (e : Event) : Bool :=
-  decide (e ∉ rows)
-
-theorem absence_of_complete {E : Type} (actual : E → Prop)
-    (rows : List E) (covers : ∀ e, actual e → e ∈ rows)
-    (e : E) (missing : e ∉ rows) : ¬ actual e :=
-  fun happened => missing (covers e happened)
-
-theorem selectiveTruthControl :
-    selected ≠ [] ∧ sound selected ∧
-    inferAbsent selected 0 = true ∧ occurred 0 ∧
-    ¬ complete selected ∧ sound full ∧ complete full ∧
-    inferAbsent full 0 = false ∧
-    inferAbsent full 2 = true ∧ ¬ occurred 2 := by
-  simp [sound, complete, Fin.forall_fin_succ,
-    occurred, selected, full, inferAbsent]
-
-#print axioms HistoricalDisclosure1958.absence_of_complete
-#print axioms HistoricalDisclosure1958.selectiveTruthControl
-end HistoricalDisclosure1958
-```
-
-Copy this block to a scratch `.lean` file and run the repository's prepared
-`python3 scripts/worker_env.py -- lean /absolute/path/to/file.lean`. On
-2026-11-24 it elaborated with pinned Lean 4.35.0: the helper has no axioms and
+In the original Lean 4.35.0 check, the helper has no axioms and
 the finite control uses only `propext`, `Classical.choice` and `Quot.sound`.
 This local check does not replace independent semantic review or certify the
 policy interpretation. It computes only the unmarked selected/full branches;
