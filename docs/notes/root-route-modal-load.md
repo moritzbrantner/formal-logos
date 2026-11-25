@@ -518,8 +518,8 @@ using perfection or goodness. Let *m* be the witness of `0881e859`. If a
 named *g* differed from *m*, the actuality conjunct of God-maximality
 `4c79298d` would put *g* among *m*'s recipients. Giving *g* esse would
 then make *m* more in being than *g* by causal ascent `d5a94eb1`,
-contradicting the other conjunct of God-maximality. With the explicit
-identity split `ee4ab504`, every such *g* equals *m*. Maximality here
+contradicting the other conjunct of God-maximality. The proof instantiates general excluded middle
+`ee4ab504` on the identity of these two bearers and concludes that every such *g* equals *m*. Maximality here
 means actual and unexceeded. Several incomparable maxima can satisfy that
 definition. The argument uses the incoming causal edge to compare the
 specific two candidates. Identification uses ascent only at esse. The individual source arguments register the existing all-respect ascent premise, and both integrated assemblies retain it. [Proofs](../../TruthCore/Results/Case/Catholicism/AttributesFromEsse/Solution.lean) · [Exact premises](../../specs/attributes-from-esse.toml)
@@ -559,11 +559,11 @@ to both `3769b87e` (unique classical God) and `fa24c576` (historical
 root). The former obtains existence by applying `678ff65f` to the source
 and its seven further premises, including forward naming `1ec205ed`.
 The latter applies its own same-signature root theorem with the seven
-stage-three inputs. At-most-one also holds for an empty God predicate.
+remaining inputs for stages 3–6 and the final church and creed bridges. At-most-one also holds for an empty God predicate.
 The forward naming step supplies the first named witness, and `4c79298d`
 remains a separate direct or derived input. The alternative derivation
 of that input from `86d02b69` would restore the carrier-wide burden.
-[Consumer check](../../results/2a5b1712-aeaa-4c30-83cc-04555d5d4833/comparator.json)
+Result `845202df` checks an inhabited forward-naming case, examples separating the two causal laws in each direction, and the indicated premise omissions. [Substitution controls](../../corpus/results/845202df-3632-41b4-9c8a-71e1aa03b8bf.json) · [Consumer check](../../results/2a5b1712-aeaa-4c30-83cc-04555d5d4833/comparator.json)
 
 #### What a partition denies
 
@@ -645,7 +645,17 @@ local joining at each fork into source agreement; its alternating ladder
 shows why the existence of a short source path for every node cannot
 replace well-foundedness. Applying that grounding result to esse requires
 a domain and relation bridge, and producing the direct esse edges used
-here requires composition. Treat common coverage as a live positive
+here requires composition. Even tracing every actual recipient leaves the converse
+`86d02b69` open for inactive carriers. Its positive rationale is a causal
+reading of the naming description. Forward naming runs in the other direction.
+An independently justified restriction of the carrier to actual beings would
+close this particular scope gap. In the reviewed `RecipientBoundary` control
+the actual God misses an inactive carrier. The second model shows why the
+reciprocal-dependence proof also needs actuality of the God candidates when
+reach is restricted. Here `4c79298d` supplies that actuality.
+[Recipient controls](../../TruthCore/Case/Catholicism/GodIsOneFromEsse.lean#L90)
+
+Treat common coverage as a live positive
 conditional with an unresolved whole-domain warrant. [Fork test and ladder](part-free-plurality.md#when-immediate-co-suppliers-suffice-for-a-common-source)
 
 #### Exclusion fixpoint and full support options
@@ -690,15 +700,42 @@ With only terminal inputs admitted, the exact support-formula runs before
 and after agree. The two minimal GodExists bundles are
 `{4da7f445, f0391cf0}` (description and unrestricted characterization)
 and `{89cbb0af, cdc7a58f}` (the supremely perfect God candidate and
-selected-world existence feature). Neither provides independent causal
-confirmation. No terminal bundle reaches `da3facd6`. For example, the
+selected-world existence feature). The first bundle is unsatisfiable. In every
+frame the constantly false description defeats unrestricted characterization
+`f0391cf0`. The graph still lists it because this calculation follows argument
+dependencies. The second bundle requires a supremely perfect candidate and a
+feature coextensive with existence at the selected world. Its warrant depends
+on those assumptions. [Universal counterexample](../../corpus/results/64d7c005-b561-4209-b9bd-3a80eeee9466.json) No terminal bundle reaches `da3facd6`. For example, the
 terminal closure lacks eternity-from-immutability `0659227c` and the
 first-being noncomponent premise `09c6d5f0` for `379399d1`. The terminal
 test suppresses direct acceptance of derived inputs; the #1902 test has
 different, explicit stopping conditions.
 
-**Reproduction.** On each revision export `truth frontier --json` and use
-the leaves and modal-body classifier in **Method** above. For each cut,
+**Reproduction.** Each historical checkout contributes its own statement roster and
+frontier export. The replay projects a *single* classification in the integrated
+Lean environment (proof inputs at `8a1113e40`) onto those rosters. The classifier
+matches the final name component against `NecessaryAt`, `ContingentAt`, `access`,
+`Box`, `Diamond`, `box`, `diamond`, `NecessaryBeing`, `IsNecessary` and
+`NecessaryExistence`. Starting at depth two, it follows references to
+`TruthCore` constants in definition bodies. At depth zero it still tests the
+names directly referenced in that body. The established and ungrounded-cycle
+seeds come from each snapshot's uncut frontier and stay fixed before exclusions.
+[Classifier](../../Scratch/AttributesFromEsse/ModalBodies.lean) · [Closure calculation](../../Scratch/AttributesFromEsse/exclusions.py)
+
+From a built integrated checkout, these commands reproduce the current row.
+Reuse the same marker output with the historical checkout and its frontier
+to replay an earlier row. Add `--attributes-only` for the individual proofs
+before the field assemblies.
+
+```sh
+audit_dir=$(mktemp -d)
+jq -r '.lean_declaration // empty' corpus/statements/*.json | sort -u > "$audit_dir/names"
+lake env lean --run Scratch/AttributesFromEsse/ModalBodies.lean "$audit_dir/names" > "$audit_dir/markers"
+target/release/truth frontier --json > "$audit_dir/frontier.json"
+python3 Scratch/AttributesFromEsse/exclusions.py . "$audit_dir/frontier.json" "$audit_dir/markers" > "$audit_dir/arguments.json"
+jq '.rows["strict joint"]' "$audit_dir/arguments.json"
+```
+For each cut,
 remove excluded statements from the seeds and repeatedly add each
 result-backed conclusion outside the cut whose complete premise set is
 known, until no statement is added. Include transcription edges.
