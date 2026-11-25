@@ -2,7 +2,7 @@
 
 Complete proposed outcome for independent semantic challenge, 2026-11-11.
 Baseline e02bd650; final delivered revision is the PR head. This note records
-analyst reconstructions, not source-attributed corpus claims or established premises.
+analyst reconstructions, not source-attributed corpus claims or established premises. [Research record](../../corpus/attempts/divine-veracity-1410.json)
 
 ## Target, meaning and reuse
 
@@ -880,7 +880,7 @@ Status: complete proposed integration outcome for independent semantic
 challenge, baseline `354540f92e4139d445355f6e3f49374fdb151b39`. It reuses the
 sections above and adds composition and one joint witness only; no new
 primitive, premise, attribution or source reading. Love/goodness half:
-[divine love note](divine-love-goodness-bridge.md#group-7-integration-recipient-good-route-1732-2026-11-18).
+[divine love note](divine-love-goodness-bridge.md#group-7-integration-recipient-good-route-1732-2026-11-18). [Assessment record](../../corpus/attempts/e641ca1d-d06b-461a-8270-c9030fa4fc29.json)
 
 ### Assembled branches at one bearer, world and content profile
 

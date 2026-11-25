@@ -1,5 +1,7 @@
 # Correlated testimony: exact corroboration and process warrant (#1396)
 
+[Research record](../../corpus/attempts/7c59ffae-0a28-43c8-8e36-a06aa381fc9b.json)
+
 This is an analyst reconstruction of general report confirmation, connected to
 #934/#931 only by a **proposed, unbuilt epistemic-warrant bridge**. It is not an
 existing root route. The exact proposed parent is #934 standard

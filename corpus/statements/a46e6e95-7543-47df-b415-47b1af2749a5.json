@@ -1,0 +1,14 @@
+{
+  "id": "a46e6e95-7543-47df-b415-47b1af2749a5",
+  "label": "Two disjoint dependence steps can project to an inconsistent pair of grounds",
+  "paraphrase": "In the fixed four-bearer, two-label interpretation, the dependence relation is acyclic and every nonempty path has differently labelled endpoints. The two projected steps have opposite directions, so no consistent PLG theory realizes the map on this labelling.",
+  "lean_declaration": "TruthCore.Causality.StrictGroundRepresentation.Control.LabelCycle",
+  "definition_ids": [
+    "bf26b9b2-41ed-55b0-9557-dae90ab9b81f",
+    "5d9a94e0-d64b-53ca-b9cc-504735060e0a",
+    "df5284cb-8f1f-5b61-9b1c-ee4c1544b469"
+  ],
+  "disambiguation_ids": [
+    "23dd6f32-b456-4963-adb3-7befbf0dc4fb"
+  ]
+}

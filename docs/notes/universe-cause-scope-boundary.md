@@ -5,7 +5,7 @@ selected world. `UniverseUncaused o F w` denies every candidate edge to the
 selected whole. The latter genuinely contradicts the former, so its original
 full-strength brute-universe alternative is preserved. However it is stronger
 than the exact no-existing-cause complement on generic `Ontic`: the signature
-itself does not require the endpoints of a causal edge to exist.
+itself does not require the endpoints of a causal edge to exist. [Original PR #1155](https://github.com/moritzbrantner/formal-logos/pull/1155)
 
 The audit reuses the EXISTING `CausesHaveActualEndpointsAt` policy rather than
 adding actuality to `Ontic` by definition. A sole-premise checked strength
@@ -79,6 +79,6 @@ required on the final proof inputs. Strength restrictions, positive witness
 transport, projection and coverage are honestly transcriptions. The third-case
 contradiction and the finite controls test the advertised scope boundary.
 Source attributions and approvals are unchanged. Findings are also preserved
-in the existing `ATTEMPT-NATURALISM-NO-EXISTING-CAUSE-1117` attempt; the actual
+in the existing [`ATTEMPT-NATURALISM-NO-EXISTING-CAUSE-1117`](../../corpus/attempts/ATTEMPT-NATURALISM-NO-EXISTING-CAUSE-1117.json) attempt; the actual
 computed frontier delta is reported in the PR, not reconstructed from a count
 of added arguments.

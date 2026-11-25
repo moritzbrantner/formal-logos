@@ -7,7 +7,7 @@ operational content: life is present somewhere, has no beginning/end witness and
 has no succession witness in the admitted duration frame. The original module
 expressly leaves *perfecta* and *possessio* connotations partly unencoded. This
 batch preserves that limitation and does not rename its predicate as a complete
-historical definition of eternity.
+historical definition of eternity. [Research record](../../corpus/attempts/eternity-definition-fork-audit.json)
 
 The missing recognition commitment is now an explicit independent proposition:
 operational Boethian eternity suffices for this primitive Eternal attribution.

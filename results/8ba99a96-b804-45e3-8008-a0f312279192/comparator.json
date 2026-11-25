@@ -1,0 +1,11 @@
+{
+  "challenge_module": "TruthCore.Results.Case.Catholicism.GodIsOneFromEsse.Challenge",
+  "solution_module": "TruthCore.Results.Case.Catholicism.GodIsOneFromEsse.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Case.Catholicism.GodIsOneFromEsse.oneFromWitness",
+    "TruthCore.Results.Case.Catholicism.GodIsOneFromEsse.oneFromActualRecipients",
+    "TruthCore.Results.Case.Catholicism.GodIsOneFromEsse.assembleFromWitness"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}

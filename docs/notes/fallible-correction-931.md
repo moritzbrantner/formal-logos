@@ -3,7 +3,7 @@
 Analyst reconstruction, attribution deferred, 2026-11-06. No historical claim
 about Carneades.org or an author's intentions is made. This investigates how a
 method can improve inquiry without assuming exact classification or treating
-coherence, approval or an attractive result as truth.
+coherence, approval or an attractive result as truth. [Research record](../../corpus/attempts/fallible-correction-931.json)
 
 ## The positive result
 
@@ -391,3 +391,8 @@ heads, `SamplingCertificate` and `SelectionControls`; the sampling assumptions
 are universally scoped inside the former rather than hidden corpus premises.
 Only the new finite-validation vocabulary, results and records, this existing
 note, and generated import lists are changed. Source attribution is deferred.
+
+## Research attempts citing this note
+
+- [Related/dossiers and exact theorem/attempt search preceded this analyst formulation](../../corpus/attempts/adaptive-correction-boundary-1058.json)
+- [Related/dossiers and existing correction, adaptive-prediction, Hume and accuracy attempts…](../../corpus/attempts/finite-validation-1066.json)

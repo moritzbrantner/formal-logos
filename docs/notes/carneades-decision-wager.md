@@ -1,5 +1,7 @@
 # Carneades wager intake and restricted mixture control
 
+[Research record](../../corpus/attempts/carneades-infinite-wager-mixture.json)
+
 ## Public reading
 
 Read the complete English automatic-caption stream of Carneades.org,

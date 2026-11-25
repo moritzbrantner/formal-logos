@@ -1,0 +1,12 @@
+{
+  "id": "3b8cbe31-4035-4678-9bc6-57bd60d47e32",
+  "label": "Derive nonmutual dependence from the exclusion of finite distinct-step cycles (inference)",
+  "input_statement_ids": [
+    "702dc502-b64f-4d5c-b73d-331ea2e554b0"
+  ],
+  "output_statement_id": "0f49d71e-09e6-5a9c-b7e7-e0e9b8fe769c",
+  "rule": "Compose opposite dependence steps between distinct beings into a two-cycle",
+  "meaning": "Apply acyclicity to the two-step path. This conditional support for P2 uses D itself and requires neither PLG atoms nor a restriction on the diagonal.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

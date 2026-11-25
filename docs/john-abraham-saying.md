@@ -2,7 +2,7 @@
 
 This bounded reading for #381 records source attribution. It supplies no
 historical utterance, actual divine authority, divine identity or frontier
-closure. Issue #381 remains open for historical attribution and rival defense.
+closure. Issue #381 remains open for historical attribution and rival defense. [Research record](../corpus/attempts/john-8-abraham-saying.json)
 
 ## Consulted witness and context
 

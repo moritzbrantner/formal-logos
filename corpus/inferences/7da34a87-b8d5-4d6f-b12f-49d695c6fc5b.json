@@ -1,0 +1,15 @@
+{
+  "id": "7da34a87-b8d5-4d6f-b12f-49d695c6fc5b",
+  "label": "GOD_4 HAS_WILL_1, from the willed joint-absence holder and at most one holder (inference)",
+  "input_statement_ids": [
+    "fdd2b1cf-503b-4241-aaa1-2e4a06db5723",
+    "0050b6ed-3c7d-4d6a-b97a-417837d76184",
+    "5f93d4f0-3780-45f6-9d65-da8ced71c922",
+    "65e0179f-55d4-4b77-98ba-4b5b26f2d404"
+  ],
+  "output_statement_id": "66aecdd7-ea4e-55c6-9377-10db08893854",
+  "rule": "Each GOD_4 holds the power; the one holder gives by a rational power; a rational power is will",
+  "meaning": "Let g be GOD_4. By 0050b6ed g holds the power. fdd2b1cf gives a holder y that gives some x being at w by a rational power p; by 65e0179f y has will (HAS_WILL_1). At most one holder makes g = y. Constructive.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

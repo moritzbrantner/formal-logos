@@ -1,0 +1,18 @@
+{
+  "id": "a623f59b-1802-4b64-8f0d-b3955c49ddf0",
+  "label": "Calibrating a supervenience reply across selective histories",
+  "premise_statement_ids": [
+    "8fcf2cb8-abad-48bf-aa4d-1fb8916625ac",
+    "bdc633c9-5d33-4243-b4c4-009a4913de08",
+    "d240f1e1-752b-48dc-b7e5-8b681a2be308",
+    "02e6a360-1db2-4aa4-b5b4-340a83511918"
+  ],
+  "conclusion_statement_id": "49e0744d-3ddd-4d0e-9791-b0639e3b8073",
+  "inference_ids": [
+    "3ce3b96c-5119-4f96-9cb7-a85431383412"
+  ],
+  "meaning": "The relation horn admits a restricted reply if correctness supervenes on the selected factor, verdicts stay fixed at each factor value, and a covering comparison panel is accurate. The transported result concerns the represented cases. Supervenience supplies neither the direction of calibration nor a causal explanation of selection.",
+  "definition_ids": [
+    "e17e93bf-eedf-45db-be80-ffac82ef7d98"
+  ]
+}

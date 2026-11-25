@@ -1,0 +1,13 @@
+{
+  "id": "ca423121-e6fd-4183-9fbc-161b79ba7f8c",
+  "label": "Track every actual recipient to the same root using uniqueness and finite access (inference)",
+  "input_statement_ids": [
+    "7ab0ddcb-cf48-5457-bee7-b6ea9c13b6b1",
+    "a9a13d38-2b4e-4a0b-9549-875e5af10e20"
+  ],
+  "output_statement_id": "8269797e-4c7b-4c33-8ed6-b1e5262885cc",
+  "rule": "Induct on each finite access derivation and identify its initial root on the same profile",
+  "meaning": "On ConcreteExistentialSupply.graph m w, all nodes are the actual concreta of this world and all edges are its selected grounding edges. Each recipient's access derivation starts at a root. Uniqueness identifies every such initial node with the supplied root. This constructs a finite path for each recipient on the actual subtype. No common path length, direct coverage or universal termination is assumed.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

@@ -1,0 +1,21 @@
+{
+  "id": "011647ec-cabb-4ca7-870c-4d262505e190",
+  "label": "Measured comprehension compares the two bearers through the witnessed knowing",
+  "premise_statement_ids": [
+    "7921f9c8-81f4-4af5-b945-d98787d12f42",
+    "7db53cde-911c-48ec-ab4f-054a00288148"
+  ],
+  "conclusion_statement_id": "2924332c-a710-4a8d-95be-84d52082a3e5",
+  "inference_ids": [
+    "32e068a3-0fa7-425b-bb6f-0ddd6ee461db"
+  ],
+  "meaning": "Take the actual knowing that witnesses COMPREHEND_2. Its grade lies between the object's knowability and the knower's own act. Transitivity with the object's act-to-knowability comparison gives the weak order of acts.",
+  "definition_ids": [
+    "1218cc1e-e6ef-4f27-9036-d6e28cae67ad",
+    "431287d4-f1b4-4e18-ad6e-555f49f1e39a",
+    "5b196f1c-210d-450e-b3f1-33e214f9f45d"
+  ],
+  "disambiguation_ids": [
+    "e151d506-c074-4e5d-a0f9-e9c51f1a73d7"
+  ]
+}

@@ -1,7 +1,7 @@
 # Night actualization: adversarial audit
 
 This is the research evidence for
-`ATTEMPT-NIGHT-ACTUALIZATION-FORK-AUDIT`, against baseline
+[`ATTEMPT-NIGHT-ACTUALIZATION-FORK-AUDIT`](../../corpus/attempts/ATTEMPT-NIGHT-ACTUALIZATION-FORK-AUDIT.json), against baseline
 `9bdac2abf1579d485fb3086482c3ccf8ac1b0d4c`.
 
 ## Conditional type acceptance
@@ -81,7 +81,7 @@ Preserve the simple/temporal distinction. Hesiod and Orphic witnesses were
 not read here; these are Aristotle's reported positions. The partition adds
 no new attributed source reading.
 
-Corrected `ATTEMPT-NIGHT-COSMOGONY-BUNDLE-ELIMINATION` in place: its old prose
+Corrected [`ATTEMPT-NIGHT-COSMOGONY-BUNDLE-ELIMINATION`](../../corpus/attempts/night-cosmogony-bundle-elimination.json) in place: its old prose
 treated Plato's self-moving soul (1071b37–1072a3) as affirming the
 same-respect predicate and denying the corresponding no-self-motion premise.
 That transfer requires a bridge not supplied by the report. Whole/parts

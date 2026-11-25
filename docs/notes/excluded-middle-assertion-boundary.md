@@ -5,7 +5,7 @@ assertion markers: asserting an excluded-middle instance requires a marker
 for one side; some instance is unasserted somewhere; every instance is
 irrefutable. It is derived by an existing result from explicit intuitionist
 proof commitments and a separately open assertion-requires-proof input.
-Those statements, source claims and frozen proofs are unchanged.
+Those statements, source claims and frozen proofs are unchanged. [Research record](../../corpus/attempts/excluded-middle-assertion-boundary.json)
 
 Object-level `ExcludedMiddle` is `∀ p : Prop, p ∨ ¬ p`. It contains no stage,
 assertion or known-proof parameter. Without a bridge, holding and asserting

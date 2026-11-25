@@ -1,0 +1,13 @@
+{
+  "id": "34120e7e-cff8-43e7-b601-29c4d3178ad2",
+  "label": "Every SERIES_OF_CAUSES_4 link is PER_SE_5, from the present-cause bridge (inference)",
+  "input_statement_ids": [
+    "8b2561cd-3743-536d-a110-3352fdb0c6b9",
+    "622dbf36-0ca9-4401-b766-08a309f31ec1"
+  ],
+  "output_statement_id": "bb7e4426-c300-4719-a8c1-8e27edf59fb4",
+  "rule": "Discharge distinctness by no self-causation, then apply the cross-vocabulary bridge",
+  "meaning": "Non-transcription conditional derivation. If nothing is the efficient cause of itself in any respect (8b2561cd, ST I q.2 a.3) and a here-and-now efficient cause of the being of something other than itself is an actual cause of its being in the q.3 a.4 profile (the cross-vocabulary bridge), then every SERIES_OF_CAUSES_4 link is a PER_SE_5 actual cause of being. Step: the cause of an existential link is other than its effect by no self-causation; the bridge makes it an actual cause of being; the per se link is the same primitive AsCaused on both sides. The bridge used does not mention the per se link at all, so the restated bridge's only open content is the passage from present efficient causing of being to a distinct actual cause of being. presentCauseControls give, for each input, a Bool interpretation in which the other holds and the conclusion fails (an efficient self-loop; a two-cycle of efficient causing with no cause of being in the profile), and a nonvacuous one.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

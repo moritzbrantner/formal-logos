@@ -1,0 +1,18 @@
+{
+  "id": "08cef374-8a3a-4025-9080-d5e6ec36873a",
+  "label": "A thinking subject from experienced thought and phenomenal bearer coverage",
+  "premise_statement_ids": [
+    "77e57686-d710-4505-9272-589cf5af6fe8",
+    "ac0a151f-a023-4e54-8c38-2feec136df1d"
+  ],
+  "conclusion_statement_id": "0315d471-5093-59e3-a435-b7beff4c48a4",
+  "inference_ids": [
+    "94e65e60-0044-4b0c-89c4-e39829534217"
+  ],
+  "meaning": "Transcription (instantiation). With Occurs interpreted as thought occurrence throughout, take the occurring experienced episode, obtain its bearer under the local principle, and retain that same episode in the thinking-subject witness. The control has two occurring thoughts and restricts both experience and bearing to one. The all-thought bearer principle fails there. Emptying the bearer relation leaves the same phenomenal occurrence without a thinking subject.",
+  "definition_ids": [
+    "663c48ce-4166-4632-86d9-85eeef0c258b",
+    "ce8ccc1a-4f9a-5904-a10c-548778d79b66",
+    "c0cbef1c-060a-54d4-bb49-8d59da40caf3"
+  ]
+}

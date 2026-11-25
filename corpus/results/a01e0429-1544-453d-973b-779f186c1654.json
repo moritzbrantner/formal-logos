@@ -1,0 +1,25 @@
+{
+  "id": "a01e0429-1544-453d-973b-779f186c1654",
+  "label": "Successor model for the strict-ground map at the efficient-cause consumer",
+  "argument_id": "3baef5c7-1e36-4d80-9ea2-71ddd2580a49",
+  "challenge_module": "TruthCore.Results.Causality.StrictGroundInfiniteCauseSeries.Challenge",
+  "solution_module": "TruthCore.Results.Causality.StrictGroundInfiniteCauseSeries.Solution",
+  "theorem": "TruthCore.Results.Causality.StrictGroundInfiniteCauseSeries.strictGroundConsumerAllowsInfiniteCauses",
+  "comparator_config": "results/a01e0429-1544-453d-973b-779f186c1654/comparator.json",
+  "status": "solution-present",
+  "description": "A joint model of the strict-ground package and the full cause-independence inference. Each efficient cause is independent of the effect it causes, while itself caused by its successor. The P2 package can therefore coexist with the failure of the separate per se regress premise, even for transitive dependence. No interpretation of arithmetic edges as actual suppliers of existence follows.",
+  "research_comparisons": [
+    {
+      "target_statement_id": "0f49d71e-09e6-5a9c-b7e7-e0e9b8fe769c",
+      "rival_statement_id": "2b1c8fbe-1c5c-4039-accd-bf69f097f4da",
+      "sense_definition_id": "bf26b9b2-41ed-55b0-9557-dae90ab9b81f",
+      "outcome": "model-witnessed",
+      "conditions": "The certificate provides both PLG consistency and the distinct-edge map under the identity labelling, together with the cause-independence consumer on that same interpretation.",
+      "scope": "Nat, Unit, D(x,y) iff x < y; E(c,x,()) and C(c,x) iff c = x+1; P(c,x) iff x < c. The atoms are labels.",
+      "coverage": "All numbers and the sole respect in this model.",
+      "exclusivity": "One strict instance of the diagonal-neutral P2. No exhaustive comparison of possible dependence relations.",
+      "witness": "strictGroundConsumerAllowsInfiniteCauses; every f has cause f+1 even though each cause is independent of its effect.",
+      "next_step": "Test a proposed independent ground of per se termination against the same locally supplied series."
+    }
+  ]
+}

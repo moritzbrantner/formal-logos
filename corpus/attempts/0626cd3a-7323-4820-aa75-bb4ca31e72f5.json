@@ -15,7 +15,8 @@
     "a26e8e49-ca29-55f0-81e6-411d72543c25",
     "e374c69d-d5e5-547c-a8a1-f8de313e6f76",
     "b9c3f090-3bf2-5c96-ae3e-c18a1d63cd3b",
-    "2814c3db-a02a-5cd8-87b4-4751c884ef1a"
+    "2814c3db-a02a-5cd8-87b4-4751c884ef1a",
+    "PR-1592"
   ],
   "blocker": "Formal registration of the new adopted T/Q equivalence awaits the coordinator's usable Lean verification setup and semantic challenge. No further source search is required to state that exact conditional result. Applying it to a generic independent potency predicate still requires F; it must not be silently specialized by a label."
 }

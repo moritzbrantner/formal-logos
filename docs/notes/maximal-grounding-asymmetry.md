@@ -5,7 +5,7 @@ maximum/root helper in `WHOLE-ROSTER-FROM-MAXIMUM-ASYMMETRY` and both downstream
 consumers: `DIRECT-ESSE-ROOT-UNIQUENESS-FROM-ASYMMETRY` and
 `NECESSARY-CLASSICAL-GOD-ROOT-FROM-ASYMMETRY`. Their asymmetry applications always
 involve the SAME maximal-in-esse candidate supplied by the other premises.
-None needs to exclude reciprocal links between every pair of dependents.
+None needs to exclude reciprocal links between every pair of dependents. [Research record](../../corpus/attempts/maximal-target-grounding-asymmetry.json)
 
 `STMT-ACTUAL-GROUNDING-ASYMMETRIC-AT-MAXIMAL-TARGET` is a separate weaker
 framework input. For actual concrete a,b at the selected world, a grounding

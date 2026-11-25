@@ -1,5 +1,7 @@
 # Aristotle's H.6 unity explanation and the causal bridge
 
+[Research record](../../corpus/attempts/aristotle-h6-unity-comparison.json)
+
 ## Arena and witness
 
 This bounded comparison treats Aristotelianism as a positive explanatory proposal,

@@ -250,3 +250,9 @@ The coordinator additionally confirmed hosted-CI recovery on integrated main
 passed the full source verification with unchanged witness inputs. The older
 failed run is retained as failure evidence; no retry is needed to repeat the
 new successful check.
+
+## Research attempts citing this note
+
+- [Baseline 10460ef33c9b96a1b66756d5f5a6ee529e85f51b](../../corpus/attempts/modal-existence-degrees.json)
+- [Bounded primary-author witness search for issue #345 following the degree fork/core investigation](../../corpus/attempts/koons-fourth-way-2022-primary-reading.json)
+- [Re-materialized and read the pinned complete thirteen-step primary item](../../corpus/attempts/koons-modal-degree-profile-reading.json)

@@ -4,7 +4,7 @@ This is a **research category**, not a new truth status, source class, inference
 rule or proof of any worldview. It collects arguments of the form: *a proponent
 applies a standard to one case, but exempts a comparably situated case*. The
 important question is whether the standard really has the same meaning and
-scope in both cases, and whether a relevant difference explains the treatment.
+scope in both cases, and whether a relevant difference explains the treatment. [Original PR #1533](https://github.com/moritzbrantner/formal-logos/pull/1533)
 
 The `PP-xx` identifiers are stable **intake labels only**. Canonical
 propositions remain the existing independent corpus statements; these rows
@@ -825,7 +825,7 @@ The following readings must remain separate:
 | PP-01 universe origin / candidate divine self-origin | Simultaneous constituent production and part-to-whole causation, rather than an act borne by the whole; alternatively a necessary being with no first existence. | No same-proponent inconsistency shown. Smith/Newman's loop proposal cannot be combined with Oppy's contrary causal constraints as one person's commitments. Transfer to an agent-task ability and identity of productive origin remain OPEN. #1526's productive-exercise bridge is read-only conditional evidence, not an exclusion already accepted by the loop defender. |
 | PP-02 moral / epistemic reasons | Moral-only denial, with epistemic standards construed functionally; alternatively categorical epistemic reasons without a universal rejection of categorical reasons. | Accepting a genus instance in inquiry while rejecting a different moral instance is consistent without a cross-domain bridge. Draft #1502 (`a14ca664`, supplied semantic-pass checkpoint) leaves categorical warrant open. Its same-force framework does not supply a named proponent's universal denial. #1500 retains ownership. |
 | PP-05 realist reasons / divine authority | Basic rights and obligations as normative inputs, versus governance with standing to command; making, reliance responsibility and rescue can be further morally relevant relations. | Merged #1572 leaves making viable; draft #1574 (`17306d99`, supplied semantic-pass checkpoint) leaves richer realist rights versus governance warrant open. Neither establishes that one proponent exempts an inferentially identical authority bridge. Distinguish a request for a truth-maker from a request for directed authority and from a demand for an epistemic justification. #1508 retains ownership. |
-| PP-06 empirical establishment / the demarcation rule | Limit the empirical-establishment requirement to an independently specified domain and allow nonempirical warrant for the domain policy. | Existing populated model shows consistency of this restriction, not its warrant. A named defender's scope, self-application and warrant commitments are still missing; see attempt `277e1140-e4bc-5ca6-a5a4-31cd8d6d8bf9`. |
+| PP-06 empirical establishment / the demarcation rule | Limit the empirical-establishment requirement to an independently specified domain and allow nonempirical warrant for the domain policy. | Existing populated model shows consistency of this restriction, not its warrant. A named defender's scope, self-application and warrant commitments are still missing; see attempt [`277e1140-e4bc-5ca6-a5a4-31cd8d6d8bf9`](../corpus/attempts/scientism-witnesses.json). |
 
 The draft dependency checkpoints above are supplied review metadata, not fresh
 verification or source readings. No findings in their implementation packages

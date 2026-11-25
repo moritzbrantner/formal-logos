@@ -5,7 +5,7 @@ can connect an existence explanation to efficient causation or conserving
 dependence. It first reuses the existing definitions and finite results. The new
 finding is a **general conservative model expansion**, rather than another
 isolated countermodel. No adequate metaphysical explanation is thereby supplied
-or refuted, and no root premise is discharged.
+or refuted, and no root premise is discharged. [Research record](../../corpus/attempts/weak-explanation-conservative-expansion.json)
 
 ## Arena and exact reuse
 

@@ -1,0 +1,11 @@
+{
+  "id": "cb42e5e2-a78c-40d0-b344-181156c7fada",
+  "label": "Holders of the joint-absence power are GOD_4, from the common GOD_4 root",
+  "argument_id": "50ec8e94-72e7-40ea-ac09-c60678f9c836",
+  "challenge_module": "TruthCore.Results.Causality.HolderRootIdentification.Challenge",
+  "solution_module": "TruthCore.Results.Causality.HolderRootIdentification.Solution",
+  "theorem": "TruthCore.Results.Causality.HolderRootIdentification.holdersAreGodFromCommonRoot",
+  "comparator_config": "results/cb42e5e2-a78c-40d0-b344-181156c7fada/comparator.json",
+  "status": "solution-present",
+  "description": "Argument 3: the converse of the GOD_4 bridge 0050b6ed (every GOD_4 holds the power), so that with 0050b6ed the holders at w are exactly the GOD_4s that exist at w. Not a transcription. Establishes no premise. Same omission models as argument 2."
+}

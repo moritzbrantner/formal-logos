@@ -372,7 +372,12 @@ attributed; no claim record is added.
    route): a reason specific to invariant, patientless beings.
 2. **Holder-root identification** (#1897 gap 2), needed to carry the intellect
    routes' HAS_INTELLECT_1 to the holder (premise `813a9181`) and for argument
-   B's connection to the root.
+   B's connection to the root. Built conditionally in
+   [holder-root-identification.md](holder-root-identification.md): `813a9181`
+   is derived from `0c27f65a` through the premise that NECESSARY_2 actual
+   concreta are underived (NAR), which is the crux; argument B gets a consumer
+   at `66aecdd7` that shares only the will-follows-intellect premise
+   `090be689` with `571e36f0` and takes its intellect from `0c27f65a`.
 3. **Root consumer of argument B:** a bridge from exercising a rational power in
    giving to the `Wills` relation of the q.19 a.4 node `a94c5dfc`.
 4. **Certified difference** for the `strengthens` registration DNP′ → DNP_inv
@@ -396,3 +401,40 @@ attributed; no claim record is added.
   `5836e1f6`, POWER_FOR_VERSUS_ACTIVE_POWER `e5417243` and
   WILL_CAPACITY_VERSUS_WILLED_GIVING `8b3d47bc`, this note and three
   attempt records.
+
+## Would selection that tracks a good identify an intellectual and willing source?
+
+Fix the proposed ultimate bearer, its productive exercise and the order produced. Entertaining an intelligible end, possessing a power of will, and exercising that will in producing this order are three claims about that bearer. An agent can understand both alternatives and entrust their selection to a lottery. Conversely, a selector can reliably produce a beneficial result under a standing physical rule. The conditional [holder identification](holder-root-identification.md) prevents transferring predicates between different bearers only when its actual-root and modal premises hold, including the disputed necessary-actual-concreta-are-roots bridge. It supplies no new evidence that the common root is intellectual. Given the holder's intellect, one power and the stated will/power bridges, the registered willed-giving argument B already applies.
+
+**A matched good-directed probe.** Two feasible routes supply a destination; which route delivers more of a needed resource depends on an independently inspected blockage. Assign equal costs and keep the destination and supply fixed. The favoring fact is thus specified before looking at the selection. An agent might understand the blockage as a reason, adopt a route and use its own power to implement it. A weighted mechanical diverter can favor an open route from a pressure signal upstream of the junction, without evidence that it apprehends either route *as a means to that end*. A merely incidental correlation with pressure and a mechanism responsive to the actual obstruction are different rivals. The diverter is an example of a realizable selection rule, not an argument for a designer-free ultimate mechanism; being built by an engineer would bear on the engineer's authorship and need not make the valve intellectual. The actual pressure can also be sensed by an agent. The hypothesis being compared fixes how each uses it.
+
+In the following diagnostic, true selects route A; the Boolean fact indicates which route is favored. Four equiprobable tickets give transparent conditional likelihoods. A stipulated responsive policy selects the favored route on three tickets, and an insensitive fair selector on two. A pressure-guided policy has precisely the responsive table when pressure tracks the fact. Reverse the pressure indication while keeping the blockage fixed, and the pressure-guided selector succeeds on only one ticket. A chooser with independent accurate information about the blockage who retains the purpose and the responsive policy still succeeds on three. A chooser relying entirely on the misleading gauge might fare just like the valve. Equally, an impersonal detector which tracks the obstruction itself would retain three successes too. These are predictions for the specified information channels. No premise assigns independent repeated trials or prior probabilities to world creation.
+
+```lean
+namespace ChoiceEvidence
+-- Four equally weighted tickets in the order listed. True selects plan A.
+def tickets (a b c d : Bool) := [a,b,c,d]
+def responsive (favoursA : Bool) := tickets favoursA favoursA favoursA (!favoursA)
+def neutral := tickets true true false false
+def matchCount (fact : Bool) (xs : List Bool) := (xs.filter (· == fact)).length
+theorem discriminate (fact : Bool) :
+    matchCount fact (responsive fact) = 3 ∧ matchCount fact neutral = 2 ∧
+    matchCount fact (responsive (!fact)) = 1 := by cases fact <;> decide
+-- Under aligned inputs even the ordered plan outputs match, ticket by ticket.
+theorem aligned (fact cue : Bool) (h : fact = cue) :
+    responsive fact = responsive cue := by rw [h]
+#print axioms discriminate
+#print axioms aligned
+end ChoiceEvidence
+```
+
+Both checks elaborate locally without axioms. A favored result in the calibrated comparison has likelihood ratio (3/4)/(1/2) = 3/2 against the fair policy, and ratio 1 against the aligned responsive policy. Thus good-directed order can carry *relative* evidence against a specific indifferent propensity. Renaming the responsive distribution “will” adds no evidence against an equally responsive impersonal source. Nor does a single actual order establish either likelihood at a patientless invariant source. The two route settings serve as comparative probes; the computation makes no claim that God has external inputs, that the probes correspond to accessible worlds of a divine agent, or that authorship requires stochastic action.
+
+**Provisional judgment.** The positive case gains content where evidence identifies both an end whose fulfillment conditions can be assessed independently of success and this source's apprehension and adoption of that end guiding the actual production. This can explain why a suitable order was produced *for the sake of* a good, over and above its being selected by a good-sensitive tendency. In familiar agents, uptake of a corrected account of the blockage, use of the same end to devise previously unavailable means, and traced practical control of execution give defeasible grounds for attributing those roles. A new cue test can disfavor a particular physical proxy; behavioral flexibility alone does not establish ownership of reasons. A mechanism meeting a defensible functional account of apprehension and practical control would itself be a candidate for agency. [Existing authorship tests and limits](optimal-creation-choice.md#rational-authorship-versus-brute-selection-2026-11-23)
+
+Applied to the ultimate source, the impersonal rival pays for a productive propensity with the relevant ordering, and the personal account pays for intrinsic intelligible content and directed exercise with an appropriate fulfillment condition. Contingent production and order alone leave the first rival standing. Evidence independently grounding intentional content in this very source and tracing realization to its exercise would favor the personal account. An independent derivation of the common root's intellect followed by the holder and will bridges would also discriminate. The diagnostic establishes neither the root intellect premise `0c27f65a` nor `55892476` (every invariant-set-up withheld giving uses a rational power); the primitive rational-power classification in the latter carries a further application burden. Even will as capacity leaves the token exercise question open without an exercise bridge such as `5c1aba17`. This adds no graph edge or claim about historical authors.
+
+## Research attempts citing this note
+
+- [Does the PSR-collapse family exclude a necessitating impersonal source at the will step?](../../corpus/attempts/24ae0211-148c-4400-9843-90eac4f25a59.json)
+- [What discriminates will from chance at a necessary source with an invariant set-up?](../../corpus/attempts/790d6d05-da9f-489c-b9f5-e4b66e2eab82.json)

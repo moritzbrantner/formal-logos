@@ -11,7 +11,7 @@ Poppler includes fragments from adjacent cropped pages; the complete main
 paragraphs, including the continuation of I.265 on 94e, remain readable.
 No PDF or extracted translation is committed. Wayback's CDX search returned
 no status-200 PDF capture; the save request timed out without a response, so
-this witness has no archival fallback.
+this witness has no archival fallback. [Research record](../../corpus/attempts/wittgenstein-correctness-criterion-factorization.json)
 
 ## The argument read
 

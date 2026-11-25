@@ -6,7 +6,7 @@ It does not exclude physical vehicles with externally directed contents. All
 new propositions are stipulated configurations, under the owner’s logic-first
 direction of 2026-11-05. Historical attribution is deferred; no source or claim
 records are added. This is conditional configuration progress; no premise of
-the Catholic case is closed.
+the Catholic case is closed. [Research record](../../corpus/attempts/intentionality943-error-core.json)
 
 ## Consulted findings for deferred attribution
 
@@ -306,3 +306,7 @@ and compares competing function accounts with
 by itself supply eligible uptake, preference-independent epistemic force,
 categorical moral authority, incorporeality or an ultimate personal source.
 Those are named downstream questions, not new graph edges.
+
+## Research attempts citing this note
+
+- [Distinguish factual guidance from reassurance in a multifunction consumer](../../corpus/attempts/6a8cb87c-f5df-4380-bdd3-3c61a85a4636.json)

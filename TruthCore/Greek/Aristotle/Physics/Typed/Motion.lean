@@ -433,6 +433,15 @@ def NoInfiniteSeriesOfMoversMovedByAnotherReading {Being : Sort u} {Respect : So
     (MovesIn : Being → Being → Respect → Prop) : Prop :=
   ∀ x, Acc (MoverMovedByAnotherLink MovesIn) x
 
+/-- The reading in the generic form of `TruthCore.Logic.RootDescent`: it is
+exactly well-foundedness of `MoverMovedByAnotherLink`. A restatement, not a
+new premise. -/
+theorem noInfiniteSeriesOfMoversMovedByAnotherReading_iff_wellFounded
+    {Being : Sort u} {Respect : Sort v} (MovesIn : Being → Being → Respect → Prop) :
+    NoInfiniteSeriesOfMoversMovedByAnotherReading MovesIn ↔
+      WellFounded (MoverMovedByAnotherLink MovesIn) :=
+  TruthCore.Logic.RootDescent.wellFounded_iff_forall_acc.symm
+
 /-- There must be a mover that is not moved by another (*Physics* VIII.5,
 256a13-17: ἀνάγκη τι εἶναι κινοῦν ὃ οὐχ ὑπʼ ἄλλου πρῶτον).
 

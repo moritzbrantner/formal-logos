@@ -6,7 +6,7 @@ route's power premises"), God-existence stage of the #143 root.
 **Batch.** `specs/pruss-power-premises.toml`; vocabulary
 `TruthCore.Modal.PrussPowerPremises`; results
 `TruthCore.Results.Modal.PrussPowerPremises`. Attempt
-`daf87aca-9ae5-44e0-b56c-b37712ec2710`.
+[`daf87aca-9ae5-44e0-b56c-b37712ec2710`](../../corpus/attempts/daf87aca-9ae5-44e0-b56c-b37712ec2710.json).
 
 **Target.** The route with Pruss's own premise of #1889
 (`docs/notes/modal-grounding-frameworks.md` §5): result `42da6b2d`
@@ -465,7 +465,7 @@ contingent giving.
      identification nodes).
 - **Related existing work:** #435 and #462 (models of a necessary source with
   varying activity on `Ontic.Causes`), #555 `SimplicityCollapse`, and #1737/#1875
-  `OptimalCreationChoice` (attempt `8ab7f5a1`). Those certify consistency by
+  `OptimalCreationChoice` (attempt [`8ab7f5a1`](../../corpus/attempts/divine-knowledge-choice-creation-1737.json)). Those certify consistency by
   models. This batch *derives* varying giving from a modal-grounding premise.
   Actual-root correspondence between `GivesAt` and those relations is not
   claimed.
@@ -492,7 +492,10 @@ is attributed. No statement says "God", "will", "choice" or "freedom".
 ## 9. Remaining gaps and next tests
 
 1. The Θ.5 bridge from two-way giving to will, and the chance rival (§5, §7).
-2. Identification of the holder with GOD_4.
+2. Identification of the holder with GOD_4. Built conditionally in
+   [holder-root-identification.md](holder-root-identification.md): every
+   holder is an actual root given existence at `w` and NAR (necessary actual
+   concreta are underived), then the common GOD_4 root or at most one root.
 3. A tensed variant over `IsAt` (from #1889 gap 2). Withholding in time,
    annihilation of something existing, is not represented; `GivesTo` is "at
    some moment".

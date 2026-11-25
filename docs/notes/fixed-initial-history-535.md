@@ -5,7 +5,7 @@ Evidence baseline: `078c37fd5d77f77c661b0d6ad8a8de5fe22c5d7c` (policy and
 preview); implementation branch starts at origin/main `b363be68a7d41c30e95cc0aade4c7f41f2b9361d`. This note is an
 analyst reconstruction, not a new Oppy attribution or formal certificate.
 Target: necessary concrete being on the stage-one route to `STMT-GOD-EXISTS`;
-missing applicability bridges below prevent a new root connection.
+missing applicability bridges below prevent a new root connection. [Research record](../../corpus/attempts/fixed-initial-history-535-reassessment.json)
 
 ## What the original draft gets right, and what needs correction
 
@@ -1020,3 +1020,7 @@ The substantive change is the explicit source-to-record application test,
 its genuine sufficient copying mechanism and its comparative warrant analysis.
 It is not a discharge of source truth, a historical reliability premise, the
 existence PSR or the root.
+
+## Research attempts citing this note
+
+- [Fixed initial history and possibility transfer: inclusion edge and frugality assessed](../../corpus/attempts/173643ab-ebd3-4b3a-8ad9-19ad6f259ce2.json)

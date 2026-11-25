@@ -1,0 +1,13 @@
+[batch]
+vocab = "TruthCore.Logic.BeliefReasonWitness"
+results = "TruthCore.Results.Logic.BeliefReasonWitness"
+
+[[argument]]
+id = "Thin belief reason from actual-force concession and consideration presentation"
+theorem = "reasonsFromConcession"
+comparator_theorems = ["reasonAtBelief", "suspensionControl", "independentSuspension", "withoutPresentation", "differentContent"]
+transcription = "instantiation"
+premises = ["b391c809-50b9-488c-909d-6ba6658b989e", "1b74e22c-3e2e-5328-b587-6dc2517f5e3f"]
+conclusion = "f56b2ee7-c69e-5e3b-85b0-e671d907ba58"
+rule = "Project the attributed consideration at the belief witness and instantiate presentation in reverse"
+meaning = "Instantiation transcription. For the subject a and content p of the concession, the attributed consideration targets believe p. The reverse presentation implication at a,p yields Reason a p. Actual force, aim satisfaction and preference independence do no work in this projection. A general attitude about p does not supply the belief witness. F6 leaves p existential and does not identify p with the denial."

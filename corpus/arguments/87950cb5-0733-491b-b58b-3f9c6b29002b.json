@@ -1,0 +1,32 @@
+{
+  "id": "87950cb5-0733-491b-b58b-3f9c6b29002b",
+  "label": "POTENCY_1 under privation from unactualized capacity and capable-subject lack",
+  "premise_statement_ids": [
+    "c85e8ef5-3dc4-502d-90f8-da1429e33fd8",
+    "7c3da33e-7ead-54f8-aace-ed3cf3a7bb02"
+  ],
+  "conclusion_statement_id": "3c0b7bb3-1526-55a9-b71e-0d5fb3148782",
+  "inference_ids": [
+    "403a75c1-ed8b-442f-a0e5-778d8169902d"
+  ],
+  "meaning": "For the supplied potency predicate, the analysis F gives capacity and lack of act in the same respect. On precisely those capable subjects, Q exchanges lack of act for privation in either direction. This derives T. At the adopted function F is definitional. For an independently supplied predicate F is an explicit input.",
+  "definition_ids": [
+    "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168",
+    "00ab0133-e353-5a2e-a231-b24a5c85107a",
+    "9f874532-f37e-590b-bec9-a9affb2762ac",
+    "f605c9a9-f05c-52cf-a56f-c1ccd4cd45bc",
+    "00bd3c0c-010a-559c-a2a0-b4fbf49cbaf1"
+  ],
+  "disambiguation_ids": [
+    "508617ab-cf24-5f3b-a387-64b3991359ec"
+  ],
+  "sense_bridges": [
+    {
+      "term": "POTENCY_CAPACITY_AND_POWER_ACROSS_ADOPTED",
+      "from": "5252f7f4-95a7-42f3-a420-23770702a0f4",
+      "to": "02e3f1d0-4ba1-498f-b34d-40bdd348d8c4",
+      "statement_id": "c85e8ef5-3dc4-502d-90f8-da1429e33fd8",
+      "role": "premise"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "8f0f44e5-2a3b-497b-aee9-c38115992973",
+  "label": "Self-application of the audited cross-history defeat policy",
+  "argument_id": "ceaee982-9528-43d0-ac9d-8a35f4594bea",
+  "challenge_module": "TruthCore.Results.Logic.DarwinianEpistemicDebunking.BasisDefeat.Challenge",
+  "solution_module": "TruthCore.Results.Logic.DarwinianEpistemicDebunking.BasisDefeat.Solution",
+  "theorem": "TruthCore.Results.Logic.DarwinianEpistemicDebunking.BasisDefeat.auditedSelfApplication",
+  "comparator_config": "results/8f0f44e5-2a3b-497b-aee9-c38115992973/comparator.json",
+  "status": "solution-present",
+  "description": "Taking the designated basis as the debunker’s own ground, the policy undercuts it if its profile and audit meet the stated conditions. If every supporting basis for the conclusion is this one and warrant requires undefeated support, the debunker lacks warrant for that conclusion. No production history, warrant for an actual report, truth value or contradiction follows."
+}

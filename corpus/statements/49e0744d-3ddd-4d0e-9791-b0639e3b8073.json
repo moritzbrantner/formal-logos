@@ -1,0 +1,9 @@
+{
+  "id": "49e0744d-3ddd-4d0e-9791-b0639e3b8073",
+  "label": "The scoped epistemic judgment has no incorrect verdict in the represented scenarios",
+  "paraphrase": "There is no scenario in this profile whose verdict differs from its correctness.",
+  "lean_declaration": "TruthCore.Logic.DarwinianEpistemicDebunking.BasisDefeat.NoScenarioMismatch",
+  "definition_ids": [
+    "e17e93bf-eedf-45db-be80-ffac82ef7d98"
+  ]
+}

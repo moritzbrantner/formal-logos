@@ -18,7 +18,8 @@
     "b0585787-ad9b-4af8-a4f6-55bf721e436c",
     "8544b7a9-3f37-4b05-96d9-27b67a897686",
     "468cbe86-1bba-4a0c-9484-5feb910a22e6",
-    "7c839c5e-2b39-4c7e-af38-99bfc46c48b5"
+    "7c839c5e-2b39-4c7e-af38-99bfc46c48b5",
+    "PR-1470"
   ],
   "blocker": "Open semantic obligation: fix when a non-temporal agent is co-present to a moment under the inclusive IsAt reading (every moment of the history, or only where it gives being), ideally as a disambiguation of the presence reading used by A1-A3, A2ab and c4661518, then reassess A2ab's warrant on the second answer. F2' needs independently warranted world-independent admissibility and cross-world identity, or the origin-tolerance rival needs its impossibility and access justification; neither is on file."
 }

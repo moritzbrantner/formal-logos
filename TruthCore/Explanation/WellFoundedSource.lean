@@ -3,6 +3,7 @@ module
 public import Mathlib.Order.WellFounded
 public import TruthCore.Explanation.ExistencePSR
 public import TruthCore.Models.PSR
+public import TruthCore.Logic.RootDescent
 
 /-!
 # Existence-PSR, a causal source, and well-foundedness
@@ -20,6 +21,7 @@ divinity is encoded.
 namespace TruthCore.Explanation.WellFoundedSource
 
 open TruthCore.Explanation.ExistencePSR
+open TruthCore.Logic.RootDescent (acc_exists_unmarked)
 
 variable {World Being : Type}
 
@@ -53,18 +55,8 @@ theorem existingSource_of_wellFounded
     (hWF : WellFoundedCausesAt m w) :
     ∃ x, m.ontic.ExistsAt w x ∧ ¬ HasExistingCauseAt m w x := by
   obtain ⟨x, hx⟩ := hExists
-  suffices h : ∀ (z : Being), Acc (m.ontic.Causes w) z →
-      m.ontic.ExistsAt w z →
-      ∃ u, m.ontic.ExistsAt w u ∧ ¬ HasExistingCauseAt m w u from
-    h x (hWF.apply x) hx
-  intro z hAcc
-  induction hAcc with
-  | intro z _ ih =>
-    intro hz
-    by_cases hCause : HasExistingCauseAt m w z
-    · rcases hCause with ⟨y, hy, hEdge⟩
-      exact ih y hEdge hy
-    · exact ⟨z, hz, hCause⟩
+  exact acc_exists_unmarked (P := m.ontic.ExistsAt w) (Mark := HasExistingCauseAt m w)
+    (fun _ _ => Classical.em _) (fun _ _ ⟨y, hy, hEdge⟩ => ⟨y, hEdge, hy⟩) (hWF.apply x) hx
 
 /-- Genuine conditional syllogism: if some individual exists, existence-PSR
 provides a reason for every existent, and existing efficient causes are

@@ -5,7 +5,7 @@ one necessary being, see the [fixed-target coverage and gap audit](ultimate-adeq
 It distinguishes this note's fact-level target from #735's productive target2,
 retains token success and idle-necessary-being failure as criterion limits, and
 proposes one existing-theorem application rather than another model. It claims
-neither complete explanatory parity nor an automatic singular-NE victory.
+neither complete explanatory parity nor an automatic singular-NE victory. [Research record](../../corpus/attempts/explanatory-adequacy-750.json)
 
 Outcome: a **failed discriminator with a certified incompatible core**, not a defended
 standard. The theorems are `core` and `comparison` in
@@ -795,3 +795,7 @@ warrant is separated from theorem consequence; the root and C2 connection
 plans remain OPEN. Intended root-premise effect: no discharge and no new
 registered support route. The coordinator's computed frontier delta records
 the actual integrated effect.
+
+## Research attempts citing this note
+
+- [Designed positive necessary-fact extraction by composing the existing #750 forced descent lemma…](../../corpus/attempts/necessary-fact-boundary-786.json)

@@ -1,0 +1,11 @@
+{
+  "id": "87de8ed8-dfd7-4001-8396-e31008fb3641",
+  "label": "Self-comprehension calibrates whole act for comparison with a higher knowing",
+  "argument_id": "bae627cd-f48f-4fa4-9845-6c36c144b15a",
+  "challenge_module": "TruthCore.Results.Causality.ReflectiveComprehension.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ReflectiveComprehension.Solution",
+  "theorem": "TruthCore.Results.Causality.ReflectiveComprehension.reflectiveComparison",
+  "comparator_config": "results/87de8ed8-dfd7-4001-8396-e31008fb3641/comparator.json",
+  "status": "solution-present",
+  "description": "The recipient's act is below or equal to its knowability, which is below or equal to its witnessed self-knowing, which is bounded by that very recipient's act. A strictly higher knowing by s is bounded by s's act. Same-state calibration gives the strict comparison in represented esse."
+}

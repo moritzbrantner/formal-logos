@@ -1,0 +1,20 @@
+{
+  "id": "7bcafb49-09a3-4927-9776-fb43cc2a3336",
+  "label": "The distinct content cause IN_ACT_4 in INFINITE_3 has esse at the same witness",
+  "paraphrase": "For an occurring episode borne by the meditator and representing INFINITE_3, one being causes that very content, differs from the meditator, and is in act both in INFINITE_3 and in esse (IN_ACT_4 on one grades frame). This preserves the episode and the cause through the inference to being. No world-indexed existence or comparison in being is asserted.",
+  "lean_declaration": "TruthCore.Causality.CartesianIdeaOfInfinite.InfiniteCauseOfIdeaWithEsse",
+  "definition_ids": [
+    "c0cbef1c-060a-54d4-bb49-8d59da40caf3",
+    "ce8ccc1a-4f9a-5904-a10c-548778d79b66",
+    "89b53040-ee5c-425b-aa77-388ddbb42dba",
+    "d8e82792-9d80-4a6f-8181-b2fccc3f06af",
+    "ef3ee5ec-1d44-4bd7-93f9-376c1cf6f6b3",
+    "f356048e-c066-4e25-9dcc-4b6911c2e0b7",
+    "5cbd5a0a-9055-4b69-af39-bd0bff1279fd",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"
+  ],
+  "disambiguation_ids": [
+    "dba7b1de-f3a0-57af-9af9-b2a4da3136fa",
+    "587c53cf-c2a8-51f6-b8c1-013e67756dc6"
+  ]
+}

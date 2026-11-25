@@ -1,0 +1,29 @@
+{
+  "id": "b9f2bb06-adc7-4fe7-b6f5-d20165ebcf08",
+  "label": "Comprehension of actual participants bounds their esse by the selected giver's",
+  "premise_statement_ids": [
+    "eeb89ffe-5b61-4572-8b35-87adf541bcab",
+    "06410834-141f-4035-8a30-14f8a18c3139",
+    "2924332c-a710-4a8d-95be-84d52082a3e5",
+    "2412c010-3246-4cb8-b8a1-e10340384261"
+  ],
+  "conclusion_statement_id": "aba6f4e1-bbf1-4aaa-ac1c-dead4efbef09",
+  "inference_ids": [
+    "b7687d3f-6fa3-44d9-8e7a-71843d8bac98"
+  ],
+  "meaning": "The populated sole-giver premise supplies actuality of the designated s. Each actual participant is comprehended by that very s. Transfer the resulting weak order of acts through calibration on these two actual bearers. The cognitive comparison uses neither total-cause adequacy nor a ranking in other perfections.",
+  "definition_ids": [
+    "1218cc1e-e6ef-4f27-9036-d6e28cae67ad",
+    "5b196f1c-210d-450e-b3f1-33e214f9f45d",
+    "8163859b-95b3-4dd2-8a69-541bd332f32f",
+    "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "14d30c53-51c2-502d-b009-247dac0421e0",
+    "8323604a-2e7a-554c-9b32-d82e5201271d",
+    "5dc08b95-ca15-52ab-b8cd-2b558e9a13f7"
+  ],
+  "disambiguation_ids": [
+    "e151d506-c074-4e5d-a0f9-e9c51f1a73d7"
+  ]
+}

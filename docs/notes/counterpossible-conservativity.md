@@ -3,7 +3,7 @@
 Analyst reconstruction for #1085; attribution deferred. The result concerns a
 **normally necessary public atom**, not a necessary being's nonexistence. It
 asks whether shared normal-world data and ordinary possible-antecedent
-conditional evaluations fix what a separately interpreted public clamp implies.
+conditional evaluations fix what a separately interpreted public clamp implies. [Research record](../../corpus/attempts/counterpossible-conservativity.json)
 
 The designated public contributor is a in the existing
 `MechanismInterventionParity` interface. The latent background's first bit
@@ -141,3 +141,7 @@ Reproduce after focused build with
 and `python3 scripts/worker_env.py -- python3 scripts/corpus.py bind-check --result COUNTERPOSSIBLE-CONSERVATIVITY`.
 Final CI covers the delivered revision. Shared conventions resolved at
 `625cb04ca568aebc8d45c90033e107a05e9bd2a0`.
+
+## Research attempts citing this note
+
+- [Constructed a bounded three-way mechanism contrast after #974: active AND with two input-state…](../../corpus/attempts/mechanism-intervention-parity-20261104.json)

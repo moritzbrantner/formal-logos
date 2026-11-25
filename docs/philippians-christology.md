@@ -2,7 +2,7 @@
 
 This bounded #381 reading records the letter's assertions about Christ Jesus.
 It supplies neither Jesus's self-claim nor proof of his actual divinity. #381
-remains open. No argument, inference, result or transcription is introduced.
+remains open. No argument, inference, result or transcription is introduced. [Research record](../corpus/attempts/philippians-2-christology.json)
 
 ## Witness and context
 
