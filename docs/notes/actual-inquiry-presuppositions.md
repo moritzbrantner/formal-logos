@@ -953,3 +953,98 @@ The next decisive proposition is **whether direct recognition of the bearing of 
 Downstream: F6 `f56b2ee7`, its exact global rival `38f44eff`, and the existing calibration `6b4e3331` retain their status. The new conditional incompatibility uses F6 as an input; do not use it to establish F6 against the rival circularly. For a positive actual reason witness, the existing `b50727e1` route to `56f68b40` and `72391d4d` still requires selected-world presence and esse; neither the well-founded credential comparison nor a possible basic epistemic reason implies a well-founded metaphysical causal order, an ontic PSR, necessary existence, or a personal source. No graph edge, claim, definition, proof registration or floor marking changed.
 
 The prior head's CI run 45639133212 completed successfully; that is prior-head evidence, not this checkpoint's CI or a certification of these proposed applications. Reconfirmed no local Lean/Lake/Cargo and GitHub DNS failure via `git ls-remote`; no prepared checkout or independent review worker. Full CLI preflight, local conventions verification and independent semantic challenge pending. On the prepared clone reuse `target/release/truth context LOGIC-JUSTIFICATION-INTROSPECTION`, `context REGRESS-SCHEMA-PACKAGE`, `context b3ddb7c4`, `dossier f56b2ee7`, `related f56b2ee7`, `brief f56b2ee7`, `semantics f56b2ee7`, and `novelty "belief-directed reason requires a separately justified prior credential"` before proof registration. No new mechanically checked conclusion or actual frontier delta is claimed; the proposed proof is an unelaborated local application. Self-sweep: C/T/W separate, no scope expansion from actual trace to lifetime, no assumption that justification always requires a prior reason, no model over-reading, no attribution beyond the existing notes, no categorical force or metaphysical grounding transfer. Keep #1995 draft; do not merge.
+
+
+## Graph registration: credential incompatibility and the warrant consequence
+
+The owner requested reusable graph arguments. The Challenge was frozen in
+`2833b5f83d2564155af03e9735deb8a2eaaa687a` before the Solution;
+the registered graph checkpoint is `a9626d5d7da6205b4f7243395226e9ea470a7994`.
+See [batch specification](../../specs/epistemic-credentialing.toml) and
+[Solution](../../TruthCore/Results/Logic/EpistemicCredentialing/Solution.lean).
+These are solution-present **draft** registrations, pending kernel, binding,
+Comparator/NanoDa and independent semantic review, not established premises.
+
+| Statement/result | Exact content |
+| --- | --- |
+| [C](../../corpus/statements/ffb08b22-4304-472d-b9e7-a49d8d34fbd3.json) | Each active attributed belief reason has a believed, warranted credential about that instance. |
+| [T](../../corpus/statements/4e30a1c1-0402-4155-8a57-a1df8af7daf6.json) | Each such credential for an active reason has an actual prior attributed reason for its content, for the same subject. |
+| [W](../../corpus/statements/89607c0b-af1e-4dbd-ad30-a32bf0303261.json) | The supplied epistemic priority relation is well-founded for each subject. |
+| [134bb9d9](../../corpus/results/134bb9d9-335f-443b-a7c1-9ee8d5450bfa.json) | Existing consideration presentation `1b74e22c` + C + T + W entail existing thin nihilism `38f44eff`. |
+| [2efdb275](../../corpus/results/2efdb275-6cb9-48d9-92dd-56c6dbd06e4c.json) | F6 + presentation + T + W entail the exact negation of C (`d008f164`). The conditional refutation relation points to C. |
+| [97736a08](../../corpus/results/97736a08-f098-4525-88c0-d5a72dbe7e59.json) | The full five-member conjunction is incompatible. The result has no premises because its conclusion is the negation of that conjunction, not because any member is established. |
+| [25e0c5b2](../../corpus/results/25e0c5b2-ed95-4563-994f-1d103a96eade.json) | Thin nihilism + `0e2bbd59` (warrant requires surviving support) + `6b4e3331` (surviving support supplies a belief reason) entail `cbe1661b`, no warranted acceptance in that ReliabilityFrame. Composes existing `b3ddb7c4` and `146b502b`. |
+| [1583ce3d](../../corpus/results/1583ce3d-4c08-4a3b-a81a-50f2f52e9cdc.json) | Four finite omission interpretations and one infinite strict transitive successor-priority interpretation isolate each of the five members. |
+
+The new credential data extends the existing epistemic-reason Frame without
+redefining Reason or warrant. T uses the same subject and credential content;
+it does not follow from a justified credential alone. W is an explicit open
+order premise. The infinite omission is a structural surrogate: successor
+contents are assigned reason and warrant status, not proved to possess actual
+infinitist warrant. The other omissions are finite, including a thin reason
+without consideration presentation. The resulting incompatibility is not a
+pairwise contradiction between F6 and C.
+
+For later belief-warrant disputes, an opponent who demands indefinitely more
+independently prior reasons must distinguish a particular request for evidence
+from the universal credential policy. Under the latter policy, T, W and
+presentation, no thin belief reason survives. If their warrant account also
+requires the two existing calibrations, no warranted acceptance survives
+either. Conversely an actual warranted acceptance under those calibrations
+supports F6, and F6 excludes C when T, W and presentation hold. This composition
+requires matching agent/content carriers and the identical thin reason relation
+between the credential and reliability frames. It does not establish those
+calibrations, F6's independent warrant, or any metaphysical well-foundedness.
+Do not use the F6-dependent negation to defend F6 circularly. The new conditional
+refutation of C does not count as a defended floor conclusion merely because
+it was registered. No root premise or floor metadata is changed.
+
+The positive question remains whether actual direct grasp of a presented
+instance supplies a noninferential reason without an independently prior
+justified metabelief. The existing F6-to-concrete-population route remains
+separate. No unsupported arbitrary-frame executable configuration is added:
+the current configuration registry restricts admitted parameter profiles;
+the exact bundled theorem, named argument premises and omission controls
+provide the reusable comparison.
+
+Verification: the GitHub connector reread each of the five result, argument,
+inference and Comparator records. Their IDs, ordered premise lists, conclusion
+IDs, theorem names, empty permitted-axiom lists and NanoDa settings matched the
+intended declarations. Both relation endpoints and predicates were checked.
+Challenge/Solution declarations were preserved when replacing the five sorry
+bodies. This is a structural registration audit, not Lean verification.
+The local environment cannot resolve github.com and lacks a prepared clone,
+Lean/Lake/Cargo. The records and import lists were produced remotely according
+to the inspected batch schema and import-rendering rules; the canonical
+generators and local corpus tools could not run here. Before relying on this
+draft, on a prepared clone run:
+
+```sh
+python3 scripts/worker_env.py --check
+python3 scripts/argument_batch.py records specs/epistemic-credentialing.toml --write --fix
+scripts/root-imports.sh --write
+cargo build --locked --release -p truth
+lake build TruthCore.Results.Logic.EpistemicCredentialing.Solution
+target/release/truth check
+python3 scripts/bundle_audit.py
+target/release/truth bind-check --result 134bb9d9-335f-443b-a7c1-9ee8d5450bfa
+scripts/verify-result.sh 134bb9d9-335f-443b-a7c1-9ee8d5450bfa
+target/release/truth bind-check --result 2efdb275-6cb9-48d9-92dd-56c6dbd06e4c
+scripts/verify-result.sh 2efdb275-6cb9-48d9-92dd-56c6dbd06e4c
+target/release/truth bind-check --result 97736a08-f098-4525-88c0-d5a72dbe7e59
+scripts/verify-result.sh 97736a08-f098-4525-88c0-d5a72dbe7e59
+target/release/truth bind-check --result 25e0c5b2-ed95-4563-994f-1d103a96eade
+scripts/verify-result.sh 25e0c5b2-ed95-4563-994f-1d103a96eade
+target/release/truth bind-check --result 1583ce3d-4c08-4a3b-a81a-50f2f52e9cdc
+scripts/verify-result.sh 1583ce3d-4c08-4a3b-a81a-50f2f52e9cdc
+target/release/truth dossier ffb08b22-4304-472d-b9e7-a49d8d34fbd3
+target/release/truth dossier d008f164-5e50-480e-aa5c-888c5ca652ce
+target/release/truth context 134bb9d9-335f-443b-a7c1-9ee8d5450bfa
+target/release/truth context 25e0c5b2-ed95-4563-994f-1d103a96eade
+target/release/truth frontier-diff --base "$(git merge-base HEAD origin/main)"
+```
+
+Independent challenge must inspect the credential semantics, exact same-subject
+instance, prior-reason and warrant interpretations, omission controls and
+cross-frame composition. Do not mark the PR ready or merge without those
+checks. No new computed frontier delta is claimed.
