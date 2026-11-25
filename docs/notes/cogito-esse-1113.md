@@ -724,9 +724,7 @@ unchanged.
 
 Continuation of #543, #1792, #1979 and #1980; baseline
 `bff18fce135d73ffe2e00933a56decdb2a1c89af`. This is a local warrant investigation, not the global
-unconditional-closure audit in #1993. The following is a **proposed assessment
-pending independent semantic challenge**; the reviewed assessment above is
-unchanged. No source attribution, new corpus registration, floor marking or
+unconditional-closure audit in #1993. The existing attempt records the independent challenge of this extension and the earlier review at its original scope. No source attribution, new corpus registration, floor marking or
 verified premise discharge is claimed.
 
 Fix an actual performance of questioning, discriminating or entertaining
@@ -854,6 +852,14 @@ is local to a real occurrence. It does not justify the universal
 proposition as a concrete event. The next implementation test is a
 witness-local specialization of the existing representation argument,
 not another independent ontology or an arbitrary new universal premise.
+
+### Which occurrence supplies the witness?
+
+Consider the same question silently entertained twice by a reader, with an unread copy printed on the next page. Fix the first questioning as e₀ and the world of that performance as w₀. The reader’s present exercise, picked out by *this questioning now*, identifies the token in the proposed first-person application. A later recollection or a third party’s report would need evidence locating that first exercise. The second questioning realizes the same content on a different occasion. The printed copy can persist even if nobody performs either questioning.
+
+On the event-inclusive interpretation, the carrier of beings includes this occurring event itself. Interpret b = represent e₀ as that very exercise, using the same occasion to pick it out on both sides. Its occurrence at w₀ then warrants the local premise hE that b exists there. A map to the question’s repeatable content, the print token, or the second questioning would lack that identification. An ontology admitting only substances as concrete needs a different argument for an existing bearer. The local application requires neither global injectivity of represent nor a distinct thinker shared across occasions.
+
+For the adopted esse interpretation, `ExistingInActAt` gives hAct b hE. The witness of `InhabitedConcreteAt` is precisely `⟨b, hAct b hE, hE⟩`. The warrant for hE depends on the event-inclusive interpretation, and the wider classification contract retains its own scope. The existing [selected-world proof and assertion witness](../../TruthCore/Results/Explanation/RepresentedOccurrence/Solution.lean) preserve this distinction. This supplies population to the previously registered route; the explanation of the event’s existence remains open.
 
 ### Matched rival controls
 
