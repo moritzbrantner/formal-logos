@@ -901,6 +901,11 @@ related PR in their `evidence`. Each result identifies the reference that led
 to it. A batch PR can deliver several investigations. Match the attempt's scope
 and the section containing the finding before treating it as the issue's answer.
 
+If a merged investigation is missing from a brief, compare its Git revision
+with the references currently recorded on its attempts. The
+[delivery audit](../docs/premise-dossiers.md#attempt-records) can inspect every
+attempt changed since the last checkpoint in one run.
+
 The text gives a bounded view. `--json` includes the original request and
 comments, all matching records and all directly referenced note sections.
 A previously captured snapshot can be reused. Without a snapshot, the issue

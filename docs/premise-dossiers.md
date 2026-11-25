@@ -72,6 +72,15 @@ IDs are stable. Correct an inaccurate attempt record in place; preserve earlier
 failed approaches as separate attempts when the approach genuinely differs.
 A later successful proof does not rewrite the earlier failure into success.
 
+To reconcile new work after a checkpoint, run
+`python3 scripts/attempt_deliveries.py --since <last-inspected-commit> --head origin/main`.
+It compares first-parent changes to findings and assessments with the PR references
+in the current checkout. Each lead gives the historical revision and record path.
+For an ordinary GitHub merge it also gives the PR number. For squash merges and
+other commit subjects, consult the host for the delivery. A retrospective record
+may already credit the earlier research. Read the change before adding a reference.
+The command reads local Git history and writes nothing.
+
 ## Explicit links, not semantic guesses
 
 Countermodel attempts are linked by their target `statement_ids` and `kind`.
