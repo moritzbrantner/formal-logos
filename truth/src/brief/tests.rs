@@ -1749,3 +1749,54 @@ fn issue_brief_finds_review_and_delivery_while_issue_is_open() {
     assert!(!root.join(".cache/truth-index.sqlite").exists());
     std::fs::remove_dir_all(root).unwrap();
 }
+
+#[test]
+fn question_synthesis_follows_the_assessment_scope_and_keeps_disagreement() {
+    let root = fixture("synthesis-question");
+    let write_judgment = |id: &str, review: &str, judgment: &str| {
+        write(&root, &format!("corpus/attempts/{id}.json"), &json!({
+            "id": id, "statement_ids":[GOAL, OPEN_PREMISE],
+            "summary": "Antiquarian search phrase unique to the retired handoff.",
+            "current_assessment": {
+                "statement_ids":[OPEN_PREMISE], "scope":"Common giver at the actual recipient",
+                "assessment":judgment, "next_test":"Identify both recipients on this relation.",
+                "note":"docs/notes/priority.md#common-giver","review":review,
+                "publication":"published","reviewed_revision":"1234567890123456789012345678901234567890"
+            }
+        }).to_string());
+    };
+    write_judgment(
+        "d0000000-0000-4000-8000-000000000091",
+        "accepted_qualified",
+        "One common giver fits the observations. Distinct sources also fit.",
+    );
+    write_judgment(
+        "d0000000-0000-4000-8000-000000000092",
+        "unreviewed",
+        "A common giver would explain the result if the causal bridge held.",
+    );
+    let corpus = Corpus::load(&root).unwrap();
+    let (report, text) = super::assessment_search::report(&corpus, "common giver", 1).unwrap();
+    let matches = report["matches"].as_array().unwrap();
+    assert_eq!(matches.len(), 2);
+    assert!(
+        matches
+            .iter()
+            .all(|m| m["targets"].as_array().unwrap().len() == 1
+                && m["targets"][0]["id"] == OPEN_PREMISE)
+    );
+    assert!(matches.iter().any(|m| m["review"] == "unreviewed"));
+    assert!(text.contains(&format!("truth synthesis {OPEN_PREMISE}")));
+    assert!(text.contains("1 further match"));
+    assert!(
+        super::assessment_search::matches(&corpus, "antiquarian")
+            .unwrap()
+            .is_empty()
+    );
+    assert!(
+        super::assessment_search::matches(&corpus, "what?")
+            .unwrap()
+            .is_empty()
+    );
+    std::fs::remove_dir_all(root).unwrap();
+}
