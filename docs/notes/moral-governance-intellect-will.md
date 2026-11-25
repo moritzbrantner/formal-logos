@@ -179,6 +179,204 @@ The [Stage Two consumer](../../TruthCore/Results/Case/Catholicism/StageTwo/Class
 
 **Next source-identity test for #1747/#1460.** During the unreleased promise, a speaker purporting to act for the source that continuously sustains A and C tells A that A may close the workshop. C objects. Hold the general power to promise, C's standing and the relevant goods fixed. Could dispensing A extinguish what is owed to C, as distinct from preventing performance or giving A an overriding reason to close? Test two independent matters: what would justify a reserved power of dispensation over a private claim, and what would identify the author of this directive with n, or its speaker as authorized by n? A lawgiver might institute a protected private power without reserving any such dispensation. Total dependence alone settles neither question, and stipulating that n sent the message would already grant source cognition. Evidence for the speaker’s authority and the directive’s origin in n’s own deliberate act would support practical cognition in n on that occasion. Justified dispensation would also establish jurisdiction over this claim. An impersonal rule could grant n that jurisdiction. To attribute the institution of the promissory power itself to n, one would need grounds for tracing the creation of the general power, as distinct from the exercise of an office under an existing rule, to n’s own intention.
 
+## Personal and impersonal source: original authority, institution and operative purpose (2026-11-25; draft)
+
+Owner-directed continuation of the promise comparison in #1973, connected to
+#1460, #1748, #1731 and #1953. This is a proposed semantic refinement and
+analyst diagnostic, not a new registered theorem, source attribution, reviewed
+judgment or claim of rival defeat. The baseline is the main-derived branch
+whose prior note blob is `e8dfa14a446b843b573014f6e21a72e40f125a0e`.
+
+### Working vocabulary and rival profiles
+
+Reuse the existing [intellect definition](../../corpus/definitions/intellect.json)
+(`88bc0655`, HAS_INTELLECT_1) and [will definition](../../corpus/definitions/will.json)
+(`7c64b499`, HAS_WILL_1): intellectual cognition, not mere sensory or
+structural responsiveness, and intellectual appetite for an apprehended good,
+including rest in a possessed good. Both are existing primitive Lean predicates.
+Do not modify their meanings or make the existing will-follows-intellect
+reading `090be689` true by definition.
+
+For this comparison only, propose:
+
+- **Personal source (capacity sense):** the same source intrinsically has
+  intellect and will. This is a conjunctive classification, not a definition
+  of a Trinitarian person, a separate divine being, embodiment, temporal
+  deliberation, emotional life, omniscience or free creation.
+- **Strictly impersonal source:** the same source lacks both intrinsic
+  intellectual cognition and intellectual appetite. The negation of the
+  personal conjunction is broader: intellect without will and any other
+  partial profile must be handled rather than silently excluded. The existing
+  intellect-to-will premise, if warranted, excludes the intellect-only profile.
+- **Purpose in the effect:** an intelligible end-relative ordering of an
+  activity, capacity or nature. Distinguish proper end/function from an
+  evaluator's externally assigned goal, mere stable correlation and the
+  actual realized outcome.
+- **Operative intention:** the source itself apprehends an end as good, adopts
+  that end as to-be-realized (or maintained), and its adoption guides this
+  productive exercise. This does not require a temporal transition, an
+  intrinsic change, a unique optimal outcome or that the source lacks the good.
+- **Personal creation:** the source produces the selected actuality through
+  its own operative intention, not merely a personal source whose production
+  bypasses its intellect and will.
+- **Normative ground:** what makes a norm or standing obtain. **Original
+  jurisdiction:** a rightful power to settle a specified normative matter
+  not delegated by a prior holder. **Institution:** making a standing power
+  available, as distinct from exercising it. **Authorial institution:**
+  institution effected through a source's own operative intention; this is a
+  stronger hypothesis than grounding or institution simpliciter.
+
+Separate the existence modality of the bearer, modality of the productive
+exercise, intrinsic possession, actual uptake, and normative standing. A
+necessitating impersonal producer, a nonnecessitating indifferent producer, a
+nonnecessitating objectively good-sensitive producer, a personal but
+nonoperatively producing source, and a personal rational author have different
+commitments. A good-sensitive propensity is a serious positive rival rather
+than a synonym for indifferent chance. Necessary production does not by itself
+exclude intention, and contingent production does not by itself entail it.
+Where a functionalist claims that the operative organization itself constitutes
+genuine intellectual cognition, test that claim rather than stipulating the
+mechanism is impersonal. These proposed labels add no corpus definitions until
+CLI reuse and semantic challenge have been completed.
+
+### Test the origin of the promissory power rather than only its exercise
+
+Keep the #1973 undertaking, creditor, beneficiary and benefit fixed. Add a
+possible reserved release condition to its general rule before considering
+the intervention. Compare, within that agreed rule, a claimant's release, an
+automatic condition being met (without a new discretionary act), a rightful
+source-level deliberate dispensation, and a rule whose automatic lapse was
+itself authored by the source. A natural event could trigger a condition;
+causing that event is not itself exercising the creditor's normative power.
+If the reserved power is not independently legitimate, causing the event or
+asserting the release does not make it legitimate. A mere overriding reason
+to depart from performance is not necessarily the extinction of the claim.
+
+A bounded analyst control uses the following explicit rule for a *live*
+prospective claim: extinguished = valid automatic condition OR authorized
+release. SourceOperative requires the source to act, understand and adopt the end,
+and for that adoption actually to guide this token act. Coincidence of the
+first three conditions leaves guidance open. For this toy rule, the displayed values are stipulated,
+not evidence of actual moral authority or metaphysical possibility.
+
+| Variant | Valid automatic condition | Authorized release | SourceOperative at release | Source authored general rule | Extinguished |
+| --- | --- | --- | --- | --- | --- |
+| Creditor releases | no | yes | no | no | yes |
+| Automatic lapse | yes | no | no | no | yes |
+| Source deliberately dispenses under standing jurisdiction | no | yes | yes | no | yes |
+| Source-authored automatic rule | yes | no | no | yes | yes |
+
+The third row grants legitimate jurisdiction to the source and actual
+guidance of this dispensation by the end it apprehends and adopts. The
+identical extinction verdict in the other rows gives no evidence of that guidance. It can be
+jurisdiction under an antecedent rule, not proof of authorship. The fourth
+row concerns an authored rule without a fresh act at its application.
+SourceAuthored denotes a separate intentional institution, not a conjunction
+over the release episode. In every row, the result is compatible with the
+displayed premises. In an unauthorized-only control with no automatic
+condition, the claim persists. The earlier four-row check reproduced these extinction and authorship values.
+The guidance condition is stipulated in the deliberate row. Holding action,
+understanding and adoption fixed while bypassing the adopted end makes
+SourceOperative false even if a valid automatic condition extinguishes the claim.
+
+This gives a structural separation: the normative verdict does not specify
+the bearer or the episode of its authorial explanation. It does not show
+that an impersonal metaphysics can really ground normative force. A candidate
+positive impersonal account is a necessary productive nature whose normative
+principle makes competent agents entitled by their status and voluntary
+assurances. Finite persons exercise that power; an objectively specified
+condition can end it. A positive personal account instead makes the power
+part of the root's own wise ordinance, allowing genuinely delegated powers
+and automatic applications without fresh decisions. Both must explain
+original legitimate jurisdiction and the content/priority of the norms, not
+just match the verdict.
+
+C's title to release this claim, a grantor's authority to confer such a
+title, and C's actual exercise of it answer three different questions.
+The holder/bystander control in #1973 supports the first distinction in
+practice. The same release by C can exercise either constitutive or
+conferred title, leaving the grantor question open.
+
+**Origination constraint.** An authorizing act that validly confers a power
+presupposes a relevant power or standing to make the conferral; the two
+powers need not be identical. Hence a universal claim that *every* rightful
+power is obtained by prior valid intentional conferral is incompatible with
+a finite chain of conferrals terminating in original jurisdiction. An ultimate
+lawgiver cannot solve this by a bare declaration of its own authority:
+validity of the declaration is precisely what requires grounding. This is a
+conditional analysis of well-founded conferrals, not a theorem excluding
+infinite or non-conferral normative grounding. It applies symmetrically to
+theist and impersonal accounts. A more promising route is that some title is
+constituted by a bearer’s intrinsic nature and relevant relations, without an
+external superior. The rival can propose constitutive title for finite
+persons; the theist can propose original title grounded in the creator's
+goodness, wisdom and ordered relation to creatures. Bare causal origination,
+unique existence, perfect power and beneficial outcomes do not separately
+prove rightful title.
+
+### Connect creation, purposiveness and intrinsic goodness
+
+The cumulative discriminator is not the quantity of complexity. Even a simple
+rule may generate complex structures, and an impersonal selective propensity
+may match a good-directed outcome. Use independently specified goods,
+fulfillment and failure conditions, the provenance of the particular
+productive activity, and the place of cognition in its explanation. Three
+distinct questions are:
+1. Why do the goods, powers and norm-applying rational beings actually exist?
+   Reuse the existential supplier and causal-transfer routes, including
+   `f8ba2429`, with their full premise bundles.
+2. Does the producer intrinsically possess the relevant perfective content,
+   rather than merely its production power? Reuse the causal-perfection
+   comparison (`64498e7e` and its formal/eminent recognition tests).
+   Actual finite understanding is a stronger candidate explanandum than
+   mere complexity; the strong emergence rival still contests the
+   possession bridge. This is independent of whether the root exercises
+   legitimate jurisdiction.
+3. Is that source's apprehension and adoption of goods operative in creation,
+   including the institution of moral powers? Reuse #1953 and the
+   [will versus chance](will-versus-chance.md) matched propensity controls.
+   A necessary source which intrinsically grasps a good need not have
+   produced this effect in virtue of that grasp. The additional evidence
+   must connect the token act to the actual operative content.
+
+These are not three independent proofs: (1) and (2) share causal and same-root
+premises, and (3) needs positive intentional provenance. If a justified
+intrinsic cognition bridge yields HasIntellect(n), the strict impersonal
+profile is excluded at that witness; if the will-follows-intellect reading
+also holds, the proposed personal-capacity classification follows. The
+universal existing targets `29818edd` and `66aecdd7` still require the
+same-bearer GOD_4 application; actual intentional creation remains separate.
+The linked causal-perfection and holder identification notes own those
+formal derivations; no duplicate edge is proposed here.
+
+**Provisional outcome.** the original
+dispensation case discriminates ordinary causal efficacy from a rightful
+exercise of authority, not original impersonal normative grounding from
+personal authorship. The strong impersonal account remains a positive
+replacement if its constitutive standing and good-directed power are
+defensible. A personal explanation adds actual uptake of the relevant good
+and the source's reason-guided institution only when those are warranted;
+the good in the outcome or the new label alone supplies neither. The
+theistic account must defend jurisdiction and actual guidance, rather than
+receiving them gratis. No change to the prior reviewed moral-case judgment,
+no premise change and no historical attribution is intended.
+
+**Next test:** Can constitutive standing (including the first moral agents'
+standing, not merely delegated promissory power) arise as a consequence of
+their rational nature and relations without the source's intentional
+institution? Fix the same actual root, natures, goods, claimants and moral
+verdict, grant a genuine necessary impersonal normative principle, and ask
+whether the full source gives actual intellectual agency and authority or
+only conditions that track their obtaining. Test the independently defended
+pure-perfection recognition and practical-authority bridges, not the
+stipulation that all authority is legislation. A positive source-side
+cognition result would exclude strict impersonal capacity; a positive
+operative-institution result would additionally support personal creation.
+Conversely, an adequate constitutive account of title plus a positive
+noncognitive production account would preserve the rival on this test.
+
+The owning record [55bc6a0c](../../corpus/attempts/55bc6a0c-7cf3-4a97-a67d-e9ce755f4cad.json) retains the reviewed #1973 waiver and expiry assessment. This continuation tests the reserved-power case under an explicit rule. The next test concerns the title of the first agents and what could warrant its intentional institution by the same root.
+
 ## Research attempts citing this note
 
 - [SCG I.44 instrumental priority and contingent-effect source scope (#1747)](../../corpus/attempts/b50e08a5-1d89-449c-a260-3585bd7fc1b4.json)

@@ -1,0 +1,11 @@
+{
+  "id": "c1f2d127-7daa-47bc-8e29-54af2178fc10",
+  "label": "Supreme goodness of GOD_4 from its gift of esse to each other carrier",
+  "argument_id": "bed2cc9f-b981-43fb-8595-aaa7f8517bdf",
+  "challenge_module": "TruthCore.Results.Case.Catholicism.AttributesFromEsse.Challenge",
+  "solution_module": "TruthCore.Results.Case.Catholicism.AttributesFromEsse.Solution",
+  "theorem": "TruthCore.Results.Case.Catholicism.AttributesFromEsse.goodFromGodCause",
+  "comparator_config": "results/c1f2d127-7daa-47bc-8e29-54af2178fc10/comparator.json",
+  "status": "solution-present",
+  "description": "Only the actuality conjunct of maximality supplies the bearer’s goodness at esse. Every other represented actuality is caused under the explicit transfer rule."
+}

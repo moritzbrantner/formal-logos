@@ -1,0 +1,12 @@
+{
+  "id": "616bcddc-32ff-45ce-a080-46051ebe9b57",
+  "label": "Classical attribute field from nine attributes of every named GOD_4",
+  "argument_id": "65435527-e463-4895-8cec-e71bb4545736",
+  "challenge_module": "TruthCore.Results.Case.Catholicism.AttributesFromEsse.Challenge",
+  "solution_module": "TruthCore.Results.Case.Catholicism.AttributesFromEsse.Solution",
+  "theorem": "TruthCore.Results.Case.Catholicism.AttributesFromEsse.fromNine",
+  "comparator_config": "results/616bcddc-32ff-45ce-a080-46051ebe9b57/comparator.json",
+  "status": "solution-present",
+  "description": "For each g satisfying the signature’s IsGod, apply all nine attribute premises to g itself and the supplied sufficiency implication to that conjunction.",
+  "transcription": "assembly"
+}

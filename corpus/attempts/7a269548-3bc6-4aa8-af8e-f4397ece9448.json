@@ -21,7 +21,7 @@
   "date": "2026-11-25",
   "kind": "derivation",
   "outcome": "succeeded",
-  "summary": "Tested eight global epistemic challenges. Reused the canonical nihilism, performed-denial, goal-relative force and doubt results. Tested stronger readings with an eligibility omission model, opposite-truth and skewed benchmark comparisons, one valid and one invalid sequent in the same profile, and weak-certificate and non-well-founded strong-demonstration interpretations. The cases, precise assumptions and surviving rivals are in docs/notes/epistemic-underminer-boundaries.md. #1007 continuation from 7a5a834d: 1db47fd9 supplies warranted acceptance to b3ddb7c4 under the two evidential calibrations. F6 then supplies the bearer to b50727e1 under selected-world presence and the existing esse contract. Concrete population 56f68b40 feeds the direct-esse God-existence argument 72391d4d. Withholding, another-world application and warrant without surviving support separate the commitments. The note gives the candidate-by-candidate comparison.",
+  "summary": "Tested eight global epistemic challenges. Reused the canonical nihilism, performed-denial, goal-relative force and doubt results. Tested stronger readings with an eligibility omission model, opposite-truth and skewed benchmark comparisons, one valid and one invalid sequent in the same profile, and weak-certificate and non-well-founded strong-demonstration interpretations. The cases, precise assumptions and surviving rivals are in docs/notes/epistemic-underminer-boundaries.md. #1007 continuation from 7a5a834d: 1db47fd9 supplies warranted acceptance to b3ddb7c4 under the two evidential calibrations. F6 then supplies the bearer to b50727e1 under selected-world presence and the existing esse contract. Concrete population 56f68b40 feeds the direct-esse God-existence argument 72391d4d. Withholding, another-world application and warrant without surviving support separate the commitments. The note gives the candidate-by-candidate comparison. The #1987 audit in docs/notes/orphan-graft-map.md §6 traces the episode, bearer and reason-bearer representatives and the existing double-negation elimination a89475b3. Seven attacks record the scoped objections, including global absolute-truth denial and denial of semantic validity. Comparing result IDs against 21a64a7ff yields identical orphan sets and unchanged premise frontiers at Catholicism and God-existence. The performed-denial proof bfda68fd provides a candidate for nonempirical establishment under the grounds actually used. A one-token speaking/singing control distinguishes the two occurrence predicates. In a two-claim frame the proof supplies the logical witness and inspection supplies a file report. The restricted observation norm survives. An empirical report could also support the logical claim under a wider reading. The #1985 basis-defeat assessment is separately recorded under #1615.",
   "blocker": "The matched recount is a proposed test. No actual warranted assent was observed. Trace a fresh tally to the original items without access to the faulty transcription, check coverage, duplicates and residual defeaters, and obtain the investigator’s contemporaneous judgment and its basis. Bypassing the fault gives the tally relative weight even when suspension remains appropriate. For the one investigator, one claim and two bases, warrant AcceptedWarrantNeedsBasis by establishing surviving support, SurvivingBasisGivesReason by assessing each basis for defeat and favorable bearing, and ReasonBearerPresentAt by identifying the investigator with a present representative at the selected world. This presence alone yields concrete population under the existing esse contract. One reason witness and one investigator do not establish those universals on a wider frame. The original eligible uptake already includes a reason; the reasonless denial survives without F6. The remaining warrant, reliability, authority and hinge gaps are detailed in the note.",
   "evidence": [
     "146b502b-e5fd-40cf-8a39-9ed2d45e59bb",
@@ -39,7 +39,13 @@
     "b3ddb7c4-683a-4127-8221-b30be7858f92",
     "b50727e1-04de-488c-819f-2d5b9993c485",
     "fd5e32d4-aa4f-57a8-8991-8d85ef14b25f",
-    "PR-1980"
+    "PR-1980",
+    "0a3d0ed8-773c-5878-8bbb-aaa61e654d3e",
+    "0bd651df-63c6-5b96-90df-4b488b1735f1",
+    "dbc2fb38-580c-5f0c-813d-767076523c8b",
+    "PR-1987",
+    "bfda68fd-6fd2-5a26-afe5-1ac99eb01ba3",
+    "a89475b3-be1e-5df3-bbc6-6243434aa107"
   ],
   "current_assessment": {
     "date": "2026-11-25",
