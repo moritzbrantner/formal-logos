@@ -823,6 +823,353 @@ Use #1731/#1748/#1460 and the existing notes for reconciliation;
 no issue closure, new tracker or merge.
 
 
+## Unrestricted actuality and intellectual perfection: two connected local support arguments (2026-11-25; draft continuation)
+
+This continues the preceding constitutive K/J and personal-source test in
+draft #1986. Keep the prior reviewed judgments and original attempts intact.
+The source under examination is the same independently supplied actual root n;
+it is not defined as GOD_4 or as personal. This is a provisional analyst
+reconstruction, with a reproducible structural diagnostic, not a new registered
+argument or a claim that the remaining metaphysical premises are established.
+The previous branch note blob is `6c3eb9f145deeb611bc92168808bd4ee9bcba5a4`.
+
+### 1. Reuse the existing unrestricted-perfection routes
+
+The exact common intermediate conclusion is
+[argument 7d8bbdcb](../../corpus/arguments/root-perfection-from-whole-power.json)'s
+`fe67d766` (ActualRootHasEveryPureDetermination), with the selected real
+determination Has/Pure interpretation. Two existing producers of this
+conclusion have different premise bundles:
+
+| Route | Existing dependency and result | Warrant still needed |
+| --- | --- | --- |
+| Whole power | [7d8bbdcb](../../corpus/arguments/root-perfection-from-whole-power.json), [c23092e4](../../corpus/results/ROOT-PERFECTION-FROM-WHOLE-POWER.json), `rootPerfectionFromWholePower` | The linked eleven-input bundle, including the eight represented-nonlimitation inputs, `26e8e6ed` (UnlimitedIsOwnBeing), `d164b1ff` (OwnBeingLacksNoPerfectionOfBeing), `c4fb87a6` (PurePerfectionsPertainToBeing) |
+| Finitude/dependence | [bc17c420](../../corpus/arguments/bc17c420-5276-461f-abdb-8fa1e76e73cc.json), [586275e6](../../corpus/results/586275e6-d7b0-47a1-9180-5e245d6d4de1.json), `rootPerfectionFromFiniteDependence` | `08178314` (limited actual esse has a grounding giver), `be1289df` (unlimited implies infinite), `122b112e` (infinite has every pure perfection) |
+
+The first producer explicitly proves absence of the selected limiting-principle
+disjunction at each actual root. The second excludes Limited via the root's
+lack of an incoming concrete ground. Neither proves that any root exists.
+In particular the two antecedents called "unlimited" are not definitionally
+identical: one excludes represented composition, esse/essence nonidentity and
+distinct simple predecessors; the other denies the primitive Limited
+predicate. Do not use the first as the second without a meaning bridge.
+
+The finite-dependence route already has a substantive decomposition:
+`154517c6` in [the existing spec](../../specs/finite-esse-dependence.toml)
+composes `1304b462` (limited esse requires reception), `4bc853db` (received
+esse has a distinct giver) and `cb1cdea9` (esse cause to actual ground).
+`8088f47d` in the same spec supports received-esse coverage from actual
+receipt, identity-scoped reception, receptive potency, its irreflexivity,
+and q.3 a.4 external-cause coverage. Preserve each listed premise and the
+distinction between a receiving principle and a concrete giver. This is a
+better foundation for discussing why a *real intrinsic limitation* requires
+dependence than a new opaque limitation-implies-cause rule.
+
+The prior [reception solution](../../TruthCore/Results/Causality/ReceptionLimitation/Solution.lean)
+`unlimitedIsOwnBeing` likewise composes identity-scoped reception, receptive
+potency and irreflexivity with UnreceivedEsseIsOwnBeing. Its argument is not
+that a being without an external giver has all positive modes by definition.
+These are existing conditional consequences. Neither their presence in Lean
+nor a successful derivation determines their philosophical warrant.
+
+The narrower local application to understanding can use the existing
+`rootUnlimited` consequence without first applying the *universal* infinity
+to fullness bridge `122b112e`. That is the point of the next proposal, not
+another universal definition of perfection.
+
+### 2. Local fullness from intrinsic non-surpassability
+
+The previous [reviewed mode-completeness investigation](causal-perfection-transfer.md#intrinsic-completion-versus-kind-completeness-2026-11-24-draft-continuation)
+(assessment `72a86cf4`, PR #1916) distinguishes no due deficiency within a
+kind from unrestricted possession across kinds. Merely calling noncognition
+a natural exclusion does not yet distinguish neutral absence from contracted
+esse. Conversely, a negative predicate alone is not a limiting principle.
+
+A concrete support candidate compares intrinsic *positive content*, without
+yet making it a numerical scale or replacing the registered MoreIn relation.
+Let P(n) be the selected set of real intrinsic pure determinations of n.
+An admissible comparison profile Q strictly improves P(n) in this respect
+when it preserves every determination of P(n) and adds at least one
+genuine pure determination. This is a partial order on the selected
+profile inventory, not a measure of total value or a comparison of created
+effects. An improvement must not count two descriptions of one actuality
+as two actualities. It must also preserve all relevant intrinsic positives,
+not mask an independently significant loss outside the chosen inventory.
+
+Proposed local supporting argument, with independent jobs:
+1. A genuinely unrestricted act is not intrinsically surpassable in the
+   selected positive-perfection comparison. This is an OPEN bridge from
+   the actual source's absence of contraction, not a claim that a root is
+   maximal merely because it is underived. The previously argued
+   [strict esse comparison](contingency-receptivity-c2.md) supplies the
+   degree-order motivation, but still requires calibration; MoreIn and
+   profile inclusion are not the same relation.
+2. Intellectual apprehension of intelligible content as such, apart from
+   its finite receptive mode, is a real positive determination w. This is
+   the candidate purity claim, not an assertion that every human mental
+   state is pure or that a source has to receive a new cognitive faculty.
+3. There is an independently defensible admissible intrinsic realization
+   Q with w and every positive determination of P(n). This is a **local
+   joint-compatibility/no-loss** claim; it is not the stronger claim that
+   all separately conceivable perfections are jointly realizable. Here
+   admissibility means feasibility of the relevant intrinsic mode for the
+   explanatory comparison, not that some other ultimate being exists or
+   that this rigid necessary source can change its essential nature in
+   another accessible world. A merely syntactic profile does not establish
+   such admissibility.
+4. If w were absent from P(n), Q would be a strict intrinsic improvement.
+   This contradicts (1), so w is present in P(n).
+
+The conditional fourth step is elementary set inclusion. The substantive
+warrant lies in (1)-(3). (1) has a positive rationale: an intrinsic
+contracting principle explains why an otherwise positive mode is not
+realized, whereas no such principle has been identified for a subsistent
+unrestricted act. If a genuine no-loss improvement can be made, absence
+is a real deficit relative to that across-mode standard, rather than
+merely absence of a perfection not due to a specific finite kind. The
+rival can still deny that unlimited esse licenses this standard, or
+offer a positive incompatibility of the source's mode with intellect.
+Thus this is not a relabeling of "all pure perfections are possessed":
+it shifts the universal burden to a comparative standard and the
+particular joint-compatibility claim. It is not claimed to be weaker
+than the original premise under every interpretation.
+
+The selected noncognitive root need not lack every good, and an actual
+finite intellectual effect need not exceed it in *all* intrinsic
+respects. Consider two profile families with independent positive
+determinations power, unity and wisdom (esse fixed in all profiles).
+Let the selected candidate have power and unity:
+- If the only further candidate has unity and wisdom, both can be
+  maximal in the inclusion order; neither dominates the other. This
+  explains precisely why an actual intellect elsewhere or separate
+  feasibility of wisdom does not establish the necessary extension.
+- If the other candidate has power, unity and wisdom, then the first
+  candidate is surpassed in the selected profile. The extension
+  preserves everything specified and adds wisdom.
+
+For this finite roster, all nonempty families and all member profiles
+were tested. The 1,024 family/member configurations include 80 where a
+maximal profile omits wisdom even though another profile possesses it.
+Every one of the 376 configurations omitting wisdom but allowing a
+preserving extension fails maximality. These are counts of a toy
+encoding, not probabilities, real metaphysical alternatives, or evidence
+that there are this many possible worlds.
+
+This yields a useful three-way research target for a noncognitive
+source. If the source's alleged nature positively excludes w by
+contracting its esse, the finitude/dependence route applies conditional
+on its existing bundle. If the exclusion is genuinely non-contracting,
+the account must distinguish within-kind actuality from the defended
+non-surpassability standard. If there is no positive exclusion and a
+no-loss extension really is admissible, the local argument applies.
+These are diagnostic branches, not a proved exhaustive partition of
+metaphysical grounds of absence. A rival can challenge admissibility
+itself without invoking an additional recipient or brute contingency.
+
+### 3. Support the purity/compatibility premise without assuming a personal source
+
+Use an actual subject's immediate self-apprehension as the positive
+content, rather than the acquisition of information. In familiar
+cognition, acquisition, use of a sensory intermediary, and understanding
+what is acquired are distinct jobs. A learner who succeeds in
+understanding does not cease to understand upon completing the search.
+The positive content is the subject's intelligible apprehension,
+not its prior ignorance or the transition out of that ignorance.
+This gives prima facie reason for considering nonacquisitive
+understanding rather than classifying all intellectual perfection as
+essentially receptive.
+
+At the ultimate-source level, the nonacquisitive candidate is an immanent
+act of understanding whose own primary object is already actual in the
+subject. The source need not make a second bearer actual in order to
+know itself. This avoids the inference from the capacity to produce a
+knower to the source's own intellectual actuality. Reuse the existing
+[whole-power wisdom result](../../TruthCore/Results/Causality/WholePowerPerfection/Solution.lean)
+`actualRootSelfKnowledgeFromWisdom` and the
+[primary-object route](../../TruthCore/Results/Causality/IntentionalExemplarExtension/Solution.lean);
+neither derives this interpretation from a Boolean flag for cognition.
+Both require the explicitly supplied cognitive bridges.
+
+The strongest relevant objection says that real noesis is intrinsically
+articulated: a subject grasps an intelligible object, possibly under
+distinct contents, and such articulation is incompatible with strict
+simplicity. The existing C4 controls separate the *constitutive* version
+of this objection (`SourceNoesisRequiresRealPlurality`) from the broader
+Plotinian-style challenge. The present extension tests the roles more
+directly; it does not import the historical One into the Thomistic
+ActualRoot domain.
+
+Fix one actual source in a toy interpretation, identify its subject,
+primary object, form and operation references, and retain one real
+constituent. Use two distinct self-directed contents with separately
+specified truth conditions: the absence of receipt and the absence of
+composition. On the selected actual profile both are true; across
+comparison profiles their truth conditions differ. The probes are
+alternative assignments for semantic comparison, not accessible worlds
+of this necessary source. Both contents can be associated with the same
+act reference without identifying the contents, truth conditions, or
+their distinct intentional roles. All references are actual by
+stipulation in the selected interpretation. The source's own
+apprehension, veridicality and nonreceptive realization are also
+stipulated; no proof of genuine noesis is obtained from these assignments.
+
+A general claim that different true apprehended contents require
+different real constituents entails an injection from the apprehended
+content inventory into the real-constituent inventory. In this
+interpretation the two content references map to the one act; the
+injection fails while the indicated roles and truth-condition
+distinctions hold. This does not prove the broader claim false of
+real noesis: the opponent may supply a metaphysical necessity of
+distinct intentional modes or constitutive constituents which the
+assignment does not enforce. The test identifies the needed additional
+bridge and makes its target more precise than "there are two words, so
+there are two things." Merely distinguishing the primary object's
+truth conditions or the subject and object roles does not establish
+real composition.
+
+There is a symmetric positive challenge to the blanket articulation
+objection. A putatively simple impersonal source is also intelligible
+under different descriptions and may exercise one power with several
+determinate effects. If every distinction of intelligible role as such
+implies real internal multiplicity, that general reason threatens the
+simplicity of the impersonal producer as well. An opponent can instead
+defend a specifically *intrinsic cognitive* articulation principle,
+distinguishing it from extrinsic causal relations and a finite
+observer's descriptions. That is a serious substantive reply. The
+personal account must then explain one act's intrinsic apprehension
+of distinct intelligible aspects, not merely appeal to multiple
+descriptions by observers. The toy control neither equates intentional
+roles with causal roles nor shows either account metaphysically possible.
+
+### 4. Executed local diagnostics
+
+The following JavaScript reproduces the checked comparison. Bit masks
+only encode the selected inventory. The same-realizer assignments test
+only structural consistency of the displayed conditions, not metaphysical
+possibility, actuality of a proposed first being, or any existing Lean
+theorem's validity.
+
+```javascript
+const assert=(b,msg)=>{if(!b)throw Error(msg)};
+const vals=[0,1,2,3,4,5,6,7], wisdom=4;
+const subset=(a,b)=>(a&b)===a;
+let cases=0,strict=0,local=0,cross=0;
+for(let mask=1;mask<256;mask++){
+  const F=vals.filter(x=>mask&(1<<x));
+  for(const b of F){
+    const max=!F.some(t=>t!==b&&subset(b,t));
+    const ext=F.some(t=>subset(b|wisdom,t));
+    const elsewhere=F.some(t=>t&wisdom);
+    assert(!max||!ext||!!(b&wisdom),"maximal + local compatibility implies wisdom");
+    if(!(b&wisdom)&&max&&elsewhere&&!ext)cross++;
+    if(!(b&wisdom)&&ext){assert(!max,"extension not maximal");local++}
+    if(max)strict++;
+    cases++;
+  }
+}
+const probes=[{received:false,composed:false},{received:true,composed:false},
+  {received:false,composed:true},{received:true,composed:true}];
+const contents=[p=>!p.received,p=>!p.composed];
+assert(probes.some(p=>contents[0](p)!==contents[1](p)),"distinct truth conditions");
+assert(contents.every(f=>f(probes[0])),"actual both true");
+const n="source", bearer=n, object=n, form=n, operation=n, constituents=[n];
+const aware=contents.map((f,i)=>({content:i,truth:f(probes[0]),
+  subject:bearer,object,form,operation,realizer:n}));
+assert(aware.every(r=>r.subject===r.object&&r.object===r.form&&
+  r.form===r.operation&&r.truth),"same bearer, act, object, form");
+assert(aware.length===2&&new Set(aware.map(r=>r.realizer)).size===1&&
+  constituents.length===1,"non-injective content realization");
+console.log({cases,strict,local,cross,probeRows:probes.map(p=>contents.map(f=>f(p)))});
+```
+
+Results: cases = 1024, strict (maximal profile cases) = 369,
+local = 376, cross = 80; truth-condition rows TT, FT, TF, FF.
+All assertions passed in the analyst JavaScript execution.
+
+### 5. Connect the support proposal to the personal-source endpoint
+
+The existing `godHasIntellectFromWisdomCapacity` in the whole-power
+solution requires the same GOD_4 witness's OwnBeing, the whole-power
+and purity inputs, WisdomSelfCapacity and a separate recognition of
+its self-directed capacity as HAS_INTELLECT_1. The stronger
+`godHasIntellectFromWholePowerWisdom` additionally needs actual
+pure act and the exercise and cognitive-grounding bridges. The
+local non-surpassability proposal could support the missing
+particular possession application without universal fullness, but
+substitution for any existing proof argument would require a new
+scoped registration and its complete semantic and verification gates.
+No such proof edge has been added.
+
+There is an existing alternative direct immateriality route:
+[RootIntellectWill.ofNonlimitation](../../TruthCore/Results/Causality/RootIntellectWill/Solution.lean)
+preserves the existentially supplied necessary root through
+noncomposition, matter-form exclusion, remoteness,
+ImmaterialIsIntellectualReading and WillFollowsIntellectReading.
+It is not independent evidence of the existence of this source
+or a proof that a merely immaterial being is intellectual without
+that last intellect-recognition premise. This is a distinct
+cognitive recognition route alongside the whole-power and causal
+preexistence options, with shared same-source inputs.
+
+At the selected n the weakest target needed to exclude strict
+impersonality is intrinsic intellect. The positive conjunction of
+intellect and will is the scoped personal-capacity sense above,
+using `090be689` for the existing intellect-to-will support.
+Identifying n with the relevant GOD_4 bearer(s) is a separate
+consumer obligation for `29818edd` and `66aecdd7`. Actual
+intellectual appetite guiding production is still required for
+personal creation, and original rightful jurisdiction is still
+required for moral governance. None follows merely from the positive
+classification as personal. In particular the case does not turn
+causal origin into authority or an objectively intelligible cause
+into a rational agent by a label change.
+
+**Provisional assessment.** The direct possession argument for the
+selected pure intellectual determination has a positive rationale
+independent of counting complex created outcomes. The
+nonacquisitive self-apprehension comparison strengthens the
+motivation for testing intellectual purity and the compatibility of
+knowledge with other intrinsic excellences. The local
+non-surpassability proposal identifies a narrower conditional route
+to the one intellectual determination. The decisive open
+metaphysical issue is whether nonreceptive subject-level apprehension
+is a genuine admissible mode compatible with the root's actual
+positive intrinsic determinations (not just with an uninterpreted
+Boolean definition of simplicity), and why actual unlimited esse
+excludes a genuine no-loss intrinsic improvement. A concrete
+noncontracting positive nature with a warranted incompatibility
+would count against that route. No earlier reviewed judgment is
+superseded.
+
+**Next discriminating test:** Take the strongest source-own-form
+account of one actual self-apprehension and develop the positive
+content of its truth-directed act. Investigate whether the
+subject/act/object distinctions are only intentional, or require
+intrinsic real differentiation, and whether any such differentiation
+is receptive composition in the SAME sense needed by
+`1304b462` and the root argument. Do not require a temporal
+thinking process or the separate existence of a represented object.
+In parallel compare the actual root's non-surpassability standard
+with the prior strict MoreIn and causal-superiority arguments,
+testing whether local no-loss preservation implies genuine strict
+perfection improvement without assuming that all pure
+determinations are commensurable. This is a better next premise
+target than repeating the general assertion of fullness.
+
+**Status:** This continues the existing draft checkpoint, in its
+existing note. The 1,024 finite profile checks and explicit
+role/content control were executed in the tool environment. No
+canonical premise, definition, proof record or source claim
+changed. The earlier reviewed results are linked with their
+retained premises, not freshly Lean-verified. Canonical CLI
+reuse and novelty/semantics checks, installed-convention checks,
+independent challenge, binding/Lean/Comparator/NanoDa validation,
+computed frontier-diff and attempt/current-assessment
+reconciliation remain outstanding. The conditional argument and
+semantic proposals must not be registered or relied on as
+reviewed until these are done.
+
+
 ## Research attempts citing this note
 
 - [Subsistent wisdom and same-source intrinsic self-understanding bridge test](../../corpus/attempts/d3a0e98a-8c92-4236-92bb-a3e22d49b172.json)
