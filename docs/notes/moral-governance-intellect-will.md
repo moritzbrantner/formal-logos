@@ -377,6 +377,336 @@ noncognitive production account would preserve the rival on this test.
 
 The owning record [55bc6a0c](../../corpus/attempts/55bc6a0c-7cf3-4a97-a67d-e9ce755f4cad.json) retains the reviewed #1973 waiver and expiry assessment. This continuation tests the reserved-power case under an explicit rule. The next test concerns the title of the first agents and what could warrant its intentional institution by the same root.
 
+## Does an inquiry standard require an original normative author? (2026-11-25; draft #1998)
+
+This continuation answers the normative-ownership part of the
+[goodness-standard question](goodness-standard-priority.md), on main
+`1d84cb4b461b7a0aa8c1b6219b92556497c61bd7` and charter
+`4db87c7a9c5e147907163b0dc733a3aab1bb3b32`. It reuses the
+[original-authority analysis](#personal-and-impersonal-source-original-authority-institution-and-operative-purpose-2026-11-25-draft)
+above and the [three-argument synthesis in draft #1962](https://github.com/moritzbrantner/formal-logos/blob/5c0c0f22c5b8bb74f0a36fc40b43d17c4087777e/docs/notes/optimal-creation-choice.md#three-arguments-about-one-productive-principle-2026-11-25).
+The latter is evidence from an **unmerged** draft, not a result already on
+main. This is a proposed analyst finding and source comparison, not a new
+formal support edge or an independent-review disposition.
+
+Retain actual rational creatures, objective goods, and the same necessary,
+simple, intrinsically invariant, concretely productive n with
+nonnecessitating efficacy. The strong rival grants objective epistemic
+standards and genuine reasoning in x. It denies that their original source
+must apprehend and adopt the standard. It is therefore not the global
+nihilist, an output-only imitation of thought, or the aim-relative opponent
+in #930. This comparison does not reopen that investigation's exhausted
+preference-independent-force inference. The question here is whether the
+**granted standard's independence from a produced judgment** establishes
+a standard ontically outside n, or intellect and operative intention in n.
+
+### A correction performed without changing the question
+
+Use the existing [paired-count question](epistemic-reasons-preconditions.md#a-test-on-one-question-about-a-count):
+does this collection have even cardinality? A calculation in this inquiry
+used the literal lists `[a,b]` and `[a,b,c]`. A first
+procedure reports only complete pairs; its proposed reconstruction of the
+original count is twice that report. A second retains the leftover as well.
+The reference question remains the parity of **all** listed items.
+For the correction itself hold the second list and the proposition that
+it has even cardinality fixed; the first list is a contrast exposing the
+information lost by the report, not a replacement subject of inquiry.
+
+| Input | Actual count | Complete-pair report | Reconstruction from pairs alone | Actual parity | Residue retained by the correction |
+| --- | --- | --- | --- | --- | --- |
+| `[a,b]` | 2 | 1 | 2, hence even | even | 0 |
+| `[a,b,c]` | 3 | 1 | 2, hence even | odd | 1 |
+
+The JavaScript calculation used `pairs = Math.floor(items.length / 2)`,
+`residue = items.length - 2 * pairs`, and `proposedCount = 2 * pairs`.
+It returned the identical pair report and opposite actual parity for the
+two inputs; `residue === 0` agreed with `items.length % 2 === 0` in both.
+These are executed arithmetic checks on displayed data, not assigned
+correctness flags. They are not a Lean certificate, evidence that n
+malfunctions, or a model of simplicity, ultimate causation or rational
+agency. The retained real rational creatures are not inferred from the
+program's behavior.
+
+The failure has a definite mechanism: discarding a leftover loses
+information relevant to the unchanged question. No classifier using only
+that pair report can give the correct answer on both inputs. This is an
+instance of the already registered
+[`CorrectionCriterion.characterization`](../../TruthCore/Results/Logic/CorrectionCriterion/Challenge.lean):
+an exact classification from specified data requires correctness to be
+invariant on their equal-data fibers. That theorem supplies no warrant,
+normative authority, access guarantee or theory of ultimate standards.
+The arithmetic here identifies a particular lost distinction; it adds
+no new theorem.
+
+An account that makes whichever answer this procedure produces correct
+cannot preserve the displayed content and this failure. Redefining the
+question as the parity of the reconstructed count changes the target.
+The successful correction instead retains the original target and adds
+the missing information. Thus the independence demanded by correction is
+independence from the **particular answer and defective procedure**, not
+independence from every fact about the collection, the meaning of even,
+or the nature of an ability to count. A constitutive account can distinguish
+the capacity's fulfillment from this defective exercise. Nothing in this
+argument locates a further substance, superior agent or efficient cause
+outside the source of those capacities and their objects.
+
+This does not reduce the granted objective good to a neutral score.
+Accurately or warrantably answering the question is retained as a good
+for the rational subject, with the objective epistemic force granted in
+this comparison. The calculation tests **which response meets the fixed
+criterion**; it does not prove that good or force from arithmetic. Its
+discriminating result is against identifying success with the produced
+answer. Both the strong personal and strong noncognitive accounts can
+recognize the error and its repair.
+
+### What the standard does, and who acts for it
+
+Four facts must remain separate in applying that result. The subject's
+truth-apt capacity has a success condition; n causes or sustains the
+subject and capacity; an objectively warranted response is good or
+reason-giving for the subject; and some agent actually apprehends that
+reason and acts because of it. Neither causal origination nor the first
+two facts alone supplies the latter two. Conversely, a norm's application
+and an agent's uptake of it are distinct: having a reason need not mean
+that the person is presently reasoning from it. The source-level claim
+adds a further bearer, n, whose uptake is at issue.
+
+The [rational-basing investigation](epistemic-underminer-boundaries.md#rational-basing-the-particular-transition-must-exercise-the-capacity)
+offers a positive local test: available content, an intelligible
+procedure, its actual contribution to this conclusion, and its place in
+the person's reconsiderable activity. It also explains how someone can
+understand and apply a defective procedure. Adequate evidence and an
+undefeated rule remain additional conditions of warrant. An agent who
+understands why the leftover matters and actually uses it can thereby
+correct this inference. The mere possession of that understanding, or
+its occurrence somewhere in a belief's causal history, does not establish
+that it guided the token correction. This is the same distinction between
+standing cognition and operative uptake required at n; it gives no
+transfer from cognition in x to cognition in n.
+
+The [conceptual-role and function comparison](self-undermining-views.md#what-the-existing-authority-evidence-actually-excludes)
+already preserves objective defect without treating a function standard
+as an optional desire. It separately asks whether that defect gives its
+bearer a categorical reason. Here the stronger normative commitment is
+granted, so the remaining question is its ground and original ownership.
+An account denying that any answer is assessable would lose the contrast
+that this inquiry actually uses. The present rival accepts it. Likewise,
+[`nihilismSelfUndermining`](../../TruthCore/Results/Logic/EpistemicNihilismRetorsion/Challenge.lean)
+concerns the absence of a reason to believe the universal denial of the
+same reason relation; it does not show that accepting reasons commits one
+to an original normative author.
+
+For **jurisdiction**, return to the existing promise rather than adding
+another correctness predicate. The claimant can release the prospective
+claim; the unauthorized bystander cannot; the stipulated term can expire
+without a new decision. Correctly understanding any of these facts does
+not give the bystander the claimant's power. The calculation's epistemic
+criterion therefore cannot supply rightful directive authority merely
+because someone understands it. A practical exercise of authority does
+involve an entitled agent, but the rule constituting that entitlement need
+not itself exercise an office or issue a directive. Nor does n's causing
+the entitled creature establish a **delegation** from n. Constitutive title,
+valid conferral and causal production remain the distinct mechanisms
+identified above.
+
+### Source readings that sharpen the positive personal account
+
+Three selected primary passages were read for this continuation. They
+support a coherent personal reconstruction while exposing where that
+reconstruction already uses source intellect.
+
+- [Cudworth, *Treatise concerning Eternal and Immutable Morality*, book I,
+  chapter II §§1–6 and chapter III §§1–8, printed pp.13–37](https://www.cambridge-platonism.divinity.cam.ac.uk/view/texts/normalised/Cudworth1731-excerpt001):
+  chapter II distinguishes producing a thing from supplying its formal
+  nature, and makes the force of promises and commands depend on natural
+  justice. Chapter III §§7–8 directly denies that independence from God's
+  arbitrary will implies independence from God: immutable wisdom and
+  essential goodness belong to the same divine reality. His positive
+  explanation is personal and includes creaturely participation in divine
+  wisdom. The text therefore supplies a reply to the external-standard
+  objection within that account. It does not demonstrate that every
+  impersonal constitutive account is impossible; that exclusivity is not
+  established by his assertion of participation.
+- [Aquinas, ST I q.16 a.1, including replies](https://www.newadvent.org/summa/1016.htm#article1):
+  the article distinguishes a thing's dependence on an architect's
+  intellect from its being knowable by another person. It places natural
+  things in relation to divine exemplars. Reply 3 nevertheless distinguishes
+  the thing's being, which causes truth in our intellect, from its being
+  called true. This is useful evidence against transferring a predicate
+  univocally from an effect to its cause merely because the effect depends
+  on it. The passage's intellectual-source account is substantive; its
+  existence is not recovered simply from our ability to correct a judgment.
+- [Aquinas, ST I–II q.91 aa.1–2, including replies](https://www.newadvent.org/summa/2091.htm#article1):
+  article 1 begins with providential government and identifies its divine
+  rational ordering as eternal law. Reply 3 places its end in God and
+  denies that the law is distinct from him. Article 2 distinguishes the
+  ruler's measure from participation in those ruled, including rational
+  creatures' own providence. This supports an internally grounded,
+  authorial natural-law account. Reading participation backwards as a
+  deduction of divine understanding from any natural inclination would
+  omit the governing-intelligence premise already used by the text.
+
+These are readings of the linked public texts on 2026-11-25, not newly
+materialized pinned witnesses or corpus claim bindings. No claim, passage
+or source record is added. The earlier Hart findings and the existing
+Wielenberg-type comparison retain their recorded source scope; neither
+whole work was newly read here. Cudworth's quoted representation of
+Descartes is evidence of Cudworth's objection, not an independent audit
+of Descartes's position.
+
+### The strongest constitutions at the same scope
+
+**Personal constitution.** The source's nature is essentially good; its
+wisdom apprehends that good and the recipient-relative forms in which it
+can be communicated. The productive act is specified by that apprehended
+good. Thus a real distinction between knowledge and error, and between
+well-founded and defective inquiry, can belong to the content the source
+intends rational creatures to attain. On this account the standard is
+neither invented by whatever gets produced nor imposed by a superior
+legislator. Its epistemic independence from a creature's answer is
+compatible with its ontic grounding in the same n.
+
+This proposal explains a joint fit: the question has a determinate
+content, the subject can understand it, evidence bears on its answer,
+and a suitable procedure can recover a missed distinction. An
+apprehended end can intelligibly specify those relations together.
+Ordinary content-guided correction gives a positive analogy for that
+kind of explanation, rather than just a label for matching outputs.
+Applying it to original production still requires warrant that **n's**
+apprehension actually specifies the giving. The granted goodness of the
+end is not supplied by the fact that n thinks about it; actual self-love
+alone does not show that this recipient good is the operative object.
+Likewise, essential goodness, wisdom and the creator–creature relation
+can be proposed as the ground of original rightful jurisdiction, but
+knowing what is correct does not itself confer that title. The
+source-institution and jurisdiction bridges remain distinct.
+
+**Noncognitive constitution.** The source's intrinsic generative nature
+is directed to genuine rational fulfillment, including the relations
+between capacities, objects and evidence that fulfillment requires.
+It produces real thinkers, not merely successful report generators.
+Their capacity to assess the unchanged question has a constitutive
+success condition: a total missing the leftover is not an accurate
+count of this collection. The corresponding epistemic good and reason
+may be defended as natural constitutive facts, or retained as irreducible
+normative facts with direct or cumulative warrant. Neither move equates
+correctness with whichever belief the causal process happens to produce.
+The source provides the actual productive realization; a normative
+truth is not asked to act as an additional efficient producer.
+
+Two scopes of this reply must not be conflated. The weaker reply leaves
+necessary normative truths independent of n while treating n as the
+concrete productive source. The existing
+[`ActualRoot`](../../TruthCore/Causality/NecessaryRootFork.lean) alone does
+not exclude that independence: it excludes actual concrete grounds in
+its supplied relation, not every abstract standard or unmodeled
+explanation. If the comparison additionally requires n to
+ground the whole relevant normative order, citing an independent
+truth does not meet that stronger demand. The stronger impersonal
+proposal instead makes the original appropriateness and its productive
+relevance constitutive of n's own nature, with norms applying to the
+recipient in virtue of the recipient's actual nature and relations.
+This is a substantive proposed constitution, not a result derived from
+the bare fact that n causes x. It needs a defensible account of that
+same-source ground just as the personal proposal needs one; no causal
+to normative-grounding transitivity is assumed here.
+
+The concrete correction favors a content-sensitive standard over
+output-indexed correctness. It does not discriminate those two strong
+constitutions, both of which preserve the error. A function account
+that supplies only a neutral success ranking is insufficient for the
+**granted objective good**; the fuller noncognitive account explicitly
+retains that normative content. A personal account that supplies only
+awareness of the standard is similarly insufficient for **operative
+productive guidance**. These are identified omissions, not failures
+attributed to the strongest accounts that repair them. Neither complete
+ultimate constitution has received a joint metaphysical model here.
+
+### Independence, identity and the precise remaining bridge
+
+No account earns an explanation by saying that an answer is correct
+because it is correct, or that n has jurisdiction because n decrees
+that it has jurisdiction. But one bearer can instantiate distinct
+facts: having an essentially good nature, understanding a particular
+good, and acting for that understood good are different claims. Their
+common bearer does not turn every proposed explanation between them
+into `p` grounding `p`. Conversely, if divine simplicity is expressed
+by property or reality identity, that identity alone gives no reflexive
+causal or grounding arrow. An asymmetric ground explanation must state
+which facts it relates and defend that direction; an essential identity
+claim may instead be offered as a constitutive stopping point. Neither
+proposal is ruled out just because it has no further external ground.
+
+The standard has priority **as what makes the particular answer
+correct**. It has authority for this subject only under the relevant
+normative commitment, retained in the present comparison. It functions
+as the source's **operative reason** only if the source apprehends and
+acts for it. Promoting the first priority into the third supplies the
+disputed cognitive condition, rather than deriving it. A demand that
+all standards be intentionally instituted would also leave the first
+institutor's legitimate standard unexplained unless a noninstituted
+constitutive norm is admitted. Admitting that stopping point for n
+does not by itself establish its noncognitive counterpart, but prevents
+rejecting the latter merely because its standard is original.
+
+The exact existing destination remains
+[`GodHasIntellect`](../../corpus/statements/god-has-intellect.json)
+and
+[`GodHasWill`](../../corpus/statements/god-has-will.json).
+Result `11628966` takes the complete witness-local Fifth-Way bundle
+`65c409cc`, first-mover/maximum identity `46326b43`, and GOD_4-to-maximum
+premise `4c79298d`, with the same intellectual predicate throughout.
+The local bundle includes its knowing-director and reduction premises;
+the correction case supplies none of those merely by containing a
+reasoner. Result `dd55f57a` takes the **universal** intellect claim and
+will-follows-intellect premise `090be689` to obtain the universal
+capacity-level will claim. The
+[frozen consumer](../../TruthCore/Results/Causality/LocalTeleologyGodIntellect/Challenge.lean)
+asserts no current willing, free selection or recipient-directed love.
+
+The proposed moral-governance connection instead needs a warranted
+identification of this original norm-giving order with n's **own
+apprehended and operative measure**, then identification of each
+relevant GOD_4 bearer with that n, or an argument applying to every
+such bearer. The first is an **OPEN** source-application bridge, not
+a consequence of standards in x. The earlier LORD_3 consumer already
+uses recipient-directed willing; reading it backwards would assume
+the intention being sought. No new graph edge is claimed by this
+note's references to those routes.
+
+**Provisional assessment.** Independence from a produced answer is
+warranted by the preserved-content correction. It vindicates the
+correctness distinction used in this inquiry, but does not establish a
+standard ontically outside n or an intellectual owner of that standard
+at n. The positive personal account can make goodness internal and
+apprehended goodness operative without a superior lawgiver. The strong
+noncognitive account retains the same objective standards and
+genuine rational recipients; its proposed original constitution is
+not defeated by this inquiry test. The previous promise/expiry and
+#1500/#1733 assessments are unchanged. This is a narrower judgment
+about the standard-to-author inference, not explanatory equivalence
+of complete worldviews.
+
+**Failed approaches and reopening.** Equating correctness with production
+fails the executed pair-count case. Inferring jurisdiction from accurate
+understanding fails the existing claimant/bystander contrast. Transferring
+the creature's reasoning to its cause changes the bearer; appealing to
+the nihilism retorsion changes the rival. Treating a standard internal
+to n as automatically self-caused confuses identity with grounding.
+No further output-equivalent example would resolve these same gaps.
+Reopen this branch with a substantive constitutive argument that this
+original normative specification requires **n's** apprehension, or with
+evidence that the relevant norm was actually instituted through n's
+reason-guided act. A claimed intervention must establish its source
+and rightful scope, not merely its causal effectiveness. Conversely,
+a worked account of how n's noncognitive intrinsic nature grounds the
+granted good and its actual normative application at the full agreed
+scope would strengthen that rival. A discovery that such an account
+borrows a distinct external ground, contradicts the fixed simplicity
+or requires necessitating efficacy would weaken it, but none follows
+from the present correction alone. This finding awaits the coordinator's
+independent semantic challenge; no formal premise or closure changes.
+
 ## Research attempts citing this note
 
 - [SCG I.44 instrumental priority and contingent-effect source scope (#1747)](../../corpus/attempts/b50e08a5-1d89-449c-a260-3585bd7fc1b4.json)
