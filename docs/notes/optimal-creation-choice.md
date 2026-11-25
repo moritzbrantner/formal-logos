@@ -3238,10 +3238,18 @@ are scoped logical controls, and the due-goodness results are conditional
 on their full supplied standards. No new Lean result, source claim,
 definition, support edge or premise discharge is introduced here.
 
-This complete continuation and the updated existing attempts are proposed
-for independent semantic review. The previously accepted §§37–44 and
-their modal/simplicity controls retain their own review scope; their
-acceptance does not automatically cover this new finality assessment.
+Independent reviewer `/root/finality_semantic_review` accepted this complete
+continuation, both companion additions, all three current assessments and
+the actual PR body with qualifications at `a66f3ff30e42a0325b0dba7105e32e45dedf69cc`.
+There are no unresolved substantiated P1/P2 findings. The
+[published reviewed snapshot](https://github.com/moritzbrantner/formal-logos/commit/908a69490a97fa8508e37f58f030a27da8678eab)
+has the identical Git tree `ef45be721eeef221406edc55f46356433d9a41c1`.
+The reviewed PR-body SHA-256 is `725101db5f6d5fd0a831dcb039275c7c3dde1ead9d1dca85e0920234742c40ca`;
+later edits reconcile disposition and publication bookkeeping only. This
+acceptance does not establish either ultimate-source account or discharge
+a premise. The previously accepted §§37–44 and their modal/simplicity
+controls retain their own review scope. Current scoped checks pass; draft
+PR #1962 records the delivered-head CI disposition separately.
 
 ## Research attempts citing this note
 
