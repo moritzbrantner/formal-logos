@@ -1,0 +1,10 @@
+{
+  "challenge_module": "TruthCore.Results.Explanation.ExternalExistenceReason.Challenge",
+  "solution_module": "TruthCore.Results.Explanation.ExternalExistenceReason.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Explanation.ExternalExistenceReason.distinctCause",
+    "TruthCore.Results.Explanation.ExternalExistenceReason.mixedReasons"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}

@@ -1,0 +1,16 @@
+{
+  "id": "6bac95a7-17cc-4e96-8fed-569d02f21223",
+  "label": "An explained contingent bearer has an external existence reason at w",
+  "paraphrase": "Open analyst premise. For a bearer x that exists here and is absent in some accessible world (MODAL_CONTINGENCY_1), if any reason token explains x's existence here, at least one such token is about a bearer other than x. An additional token about x itself is permitted. The premise supplies neither unconditional reason coverage nor a causal reading of a token.",
+  "lean_declaration": "TruthCore.Explanation.FoundationalExistenceApplications.SomeExternalReasonAvailable",
+  "definition_ids": [
+    "7cff4318-201a-430d-9680-10f5148a3b01",
+    "d513fb8a-64ee-5d49-ae56-4d695f93ca71",
+    "fcb346d7-ddd2-50bb-a7c2-3d79d41b8eae",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ],
+  "disambiguation_ids": [
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f"
+  ]
+}

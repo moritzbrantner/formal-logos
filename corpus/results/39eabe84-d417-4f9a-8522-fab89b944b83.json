@@ -1,0 +1,12 @@
+{
+  "id": "39eabe84-d417-4f9a-8522-fab89b944b83",
+  "label": "External existence-reason availability from universal exclusion of self-explanation",
+  "argument_id": "7b5103a0-c767-4dd3-b0a6-9df0ffa412df",
+  "challenge_module": "TruthCore.Results.Explanation.ExternalExistenceReason.Challenge",
+  "solution_module": "TruthCore.Results.Explanation.ExternalExistenceReason.Solution",
+  "theorem": "TruthCore.Results.Explanation.ExternalExistenceReason.externalAvailable",
+  "comparator_config": "results/39eabe84-d417-4f9a-8522-fab89b944b83/comparator.json",
+  "status": "solution-present",
+  "description": "Weakens BX1 while preserving the bearer, token and selected world. The mixedReasons control in the companion result witnesses strictness.",
+  "transcription": "instantiation"
+}

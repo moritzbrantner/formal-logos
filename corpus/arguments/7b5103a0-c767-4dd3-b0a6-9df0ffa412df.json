@@ -1,0 +1,23 @@
+{
+  "id": "7b5103a0-c767-4dd3-b0a6-9df0ffa412df",
+  "label": "External existence-reason availability from universal exclusion of self-explanation",
+  "premise_statement_ids": [
+    "6c6191dc-082d-4417-b675-b32d4fab4573"
+  ],
+  "conclusion_statement_id": "6bac95a7-17cc-4e96-8fed-569d02f21223",
+  "inference_ids": [
+    "9e7f48b2-a956-40b3-9cc6-73a62bdf47c0"
+  ],
+  "meaning": "If every explanation of a contingent bearer's existence has a distinct source, an available explanation witnesses the existence of one with a distinct source.",
+  "definition_ids": [
+    "7cff4318-201a-430d-9680-10f5148a3b01",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "fcb346d7-ddd2-50bb-a7c2-3d79d41b8eae",
+    "d513fb8a-64ee-5d49-ae56-4d695f93ca71"
+  ],
+  "disambiguation_ids": [
+    "13843b8b-4ef3-500e-949d-27e78b9dfaf9",
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f"
+  ]
+}

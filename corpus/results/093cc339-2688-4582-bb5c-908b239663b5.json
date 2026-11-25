@@ -1,0 +1,11 @@
+{
+  "id": "093cc339-2688-4582-bb5c-908b239663b5",
+  "label": "Distinct cause of esse from an available external existence reason",
+  "argument_id": "204098e1-469f-4697-9c56-fe5857046fe0",
+  "challenge_module": "TruthCore.Results.Explanation.ExternalExistenceReason.Challenge",
+  "solution_module": "TruthCore.Results.Explanation.ExternalExistenceReason.Solution",
+  "theorem": "TruthCore.Results.Explanation.ExternalExistenceReason.distinctCause",
+  "comparator_config": "results/093cc339-2688-4582-bb5c-908b239663b5/comparator.json",
+  "status": "solution-present",
+  "description": "Alternative support for B2 under a strictly weaker middle premise. The conserved-mover model has a contingent mover with both its intrinsic reason and the moved thing as an external circumstance. The proposed bundle holds and the universal BX1 fails. Application to actual contingent beings still requires both reason premises and BX2."
+}

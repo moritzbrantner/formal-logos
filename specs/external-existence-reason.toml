@@ -1,0 +1,30 @@
+[batch]
+vocab = "TruthCore.Explanation.FoundationalExistenceApplications"
+results = "TruthCore.Results.Explanation.ExternalExistenceReason"
+
+[[statement]]
+id = "An explained contingent bearer has an external existence reason at w"
+lean = "SomeExternalReasonAvailable"
+paraphrase = "Open analyst premise. For a bearer x that exists here and is absent in some accessible world (MODAL_CONTINGENCY_1), if any reason token explains x's existence here, at least one such token is about a bearer other than x. An additional token about x itself is permitted. The premise supplies neither unconditional reason coverage nor a causal reading of a token."
+definitions = ["7cff4318-201a-430d-9680-10f5148a3b01", "DEF-PSR-REASON", "DEF-PSR-EXISTENCE-FACT", "DEF-KANT-MODAL-CONTINGENCY", "DEF-KANT-ONTOLOGICAL-MODEL"]
+disambiguations = ["DISAMB-KANT-CONTINGENCY"]
+
+[[argument]]
+id = "External existence-reason availability from universal exclusion of self-explanation"
+theorem = "externalAvailable"
+transcription = "instantiation"
+premises = ["6c6191dc-082d-4417-b675-b32d4fab4573"]
+conclusion = "An explained contingent bearer has an external existence reason at w"
+rule = "Keep an available token and apply the universal exclusion to that token"
+meaning = "If every explanation of a contingent bearer's existence has a distinct source, an available explanation witnesses the existence of one with a distinct source."
+description = "Weakens BX1 while preserving the bearer, token and selected world. The mixedReasons control in the companion result witnesses strictness."
+
+[[argument]]
+id = "Distinct cause of esse from an available external existence reason"
+theorem = "distinctCause"
+premises = ["608a262d-08fe-4dfd-9413-67e2ecf35b84", "An explained contingent bearer has an external existence reason at w", "0e44041e-4591-4aad-857a-f6748032f142"]
+conclusion = "8a8d00e9-12b6-4cf0-b662-431cc4addd49"
+rule = "Apply the local PSR, select an external explanatory token, and apply the causal bridge to its bearer"
+meaning = "For each contingent x at w the local PSR supplies a reason. Availability gives a reason for that same x whose source differs from x. BX2 applies to this selected token and identifies its source as a distinct CAUSE_2 of x's esse."
+description = "Alternative support for B2 under a strictly weaker middle premise. The conserved-mover model has a contingent mover with both its intrinsic reason and the moved thing as an external circumstance. The proposed bundle holds and the universal BX1 fails. Application to actual contingent beings still requires both reason premises and BX2."
+comparator_theorems = ["mixedReasons"]

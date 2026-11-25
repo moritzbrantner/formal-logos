@@ -1,0 +1,14 @@
+{
+  "id": "6601cb01-1a3c-4966-9ec5-90303121db3d",
+  "label": "Distinct cause of esse from an available external existence reason (inference)",
+  "input_statement_ids": [
+    "608a262d-08fe-4dfd-9413-67e2ecf35b84",
+    "6bac95a7-17cc-4e96-8fed-569d02f21223",
+    "0e44041e-4591-4aad-857a-f6748032f142"
+  ],
+  "output_statement_id": "8a8d00e9-12b6-4cf0-b662-431cc4addd49",
+  "rule": "Apply the local PSR, select an external explanatory token, and apply the causal bridge to its bearer",
+  "meaning": "For each contingent x at w the local PSR supplies a reason. Availability gives a reason for that same x whose source differs from x. BX2 applies to this selected token and identifies its source as a distinct CAUSE_2 of x's esse.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}
