@@ -3583,77 +3583,29 @@ manifestation-directed power avoids the extra-detector objection by putting
 the determinant in the source's actual nature. It remains a serious rival
 to the inference from complete production to intrinsic understanding.
 
-### Small structural comparison (executed Python, not Lean certification)
+### Content selection and actual source uptake
 
-The following diagnostic varies only the stipulated provenance of the
-response rule and whether the source itself has and exercises the selected
-intellectual determination. Its two inputs are stimulus alternatives within
-one specified response table, **not** worlds with different necessary laws.
-There are two actual distinct bearers, a populated esse edge, a recipient's
-own actual apprehension with true content and stipulated cognitive grounding,
-and source productive coverage. The response table is truth-aligned at both
-inputs in each profile; no apprehension or epistemic grounding is inferred
-from this. The selected inventory stipulates purity, rather than proving it.
-The provenance flag denotes a source-grounded manifestation specification
-versus a separately posited rule; it is not a demonstrated causal model.
-The source's actual intellectual exercise is also stipulated, not defined
-from the rule. These are structural surrogates, not full GradesFrame models.
+The stronger dependency model below subsumes the earlier two-by-two
+comparison of rule provenance and actual source uptake. The model keeps a
+selected actual root, a distinct dependent recipient and the same esse edge.
+Two contents about the recipient are stipulated true. With the recipient
+exercising its capacity, each content selection admits both presence and
+absence of source uptake. The selected intrinsic intellectual determination
+is true, cognitively grounded apprehension by the bearer. In this comparison
+the two option slots are independent by construction. Whether they are
+independent for actual metaphysical sources is open.
 
-```python
-from itertools import product
-
-for grounded_rule, source_understands in product((False, True), repeat=2):
-    actual = {'g', 'x'}
-    own = {'g'}
-    participants = {'x'}
-    esse_edges = {('g', 'x')}
-    pure = {'esse', 'understanding'}
-    has = {
-        'g': {'esse'} | ({'understanding'} if source_understands else set()),
-        'x': {'esse', 'understanding'},
-    }
-    response = {0: 0, 1: 1}
-    truth = {0: 0, 1: 1}
-    actual_input = 1
-    apprehends = {('x', response[actual_input])}
-    if source_understands:
-        apprehends.add(('g', response[actual_input]))
-    cognitive_ground = set(apprehends)  # stipulated, not inferred
-    virtual = {('g', 'esse'), ('g', 'understanding')}
-    norms = {(0, 0), (1, 1)}
-    assert esse_edges == {('g', 'x')}
-    assert own == {'g'} and participants == {'x'}
-    assert all(has[b] <= pure and 'esse' in has[b] for b in actual)
-    assert all(response[s] == truth[s] and (s, response[s]) in norms
-               for s in (0, 1))
-    assert ('x', 1) in apprehends and ('x', 1) in cognitive_ground
-    assert all(('g', d) in virtual for d in has['x'])
-    source_specific_rule = grounded_rule
-    inclusion = has['x'] <= has['g']
-    assert inclusion == source_understands
-    assert (('g', 1) in apprehends) == source_understands
-    print(grounded_rule, source_understands, inclusion, source_specific_rule)
-```
-
-| Source-grounded manifestation rule | Source actual understanding | Pure feature inclusion | Source-specific rule |
-| --- | --- | --- | --- |
-| No | No | No | No |
-| No | Yes | Yes | No |
-| Yes | No | No | Yes |
-| Yes | Yes | Yes | Yes |
-
-The executed Boolean comparison returned all four rows. The positive
-control restores source-side exercise; the separately grounded rule can
-also be restored without it. Inclusion follows from the chosen roster,
-and the two variable slots are independent by construction. This is a
-test of the distinction, **not** proof of metaphysical independence of
-source-grounding and noesis. It does not encode a necessitating law,
-actual efficient-total attribution, pure act, an admissible account of
-the cognitive grounding, a source's true essence/esse identity or
-`OwnBeing` beyond the stipulated roster. The next formal version should
-reuse the existing content/subject interfaces, retain the same actual
-root and secondary, and explicitly encode the dependency of the rule
-and exercise rather than substituting a flag for explanatory grounding.
+In `selectedContentProfiles`, the recipient grasps a true self-content
+when enabled. The objective-eminence clause requires this actual effect and
+the owned rule. The source knows a true self-content exactly when actual
+source uptake is supplied. Thus even the owned branch with its objectively
+normed and genuinely cognitive effect leaves the source's own knowledge open.
+Each bearer retains its own subject matter, as required by the inherited
+`IntrinsicSelfKnowledge` interface. Correctness and cognitive grounding in
+each bearer are assigned in the comparison. In the two-slot inventory of esse and the selected intellectual
+determination, `selectedInclusionIffSourceUptake` proves that the recipient's
+profile is included in the source's just when the source grasps a truth.
+The determination's purity remains a separate premise. [Lean model](../../TruthCore/Causality/SourceIntellectControls.lean)
 
 ### Same-standard comparison and downstream
 
@@ -3687,7 +3639,11 @@ With k in the selected inventory, `Pure k` and `Has x k`, the conclusion
 is `Has g k`. An eminent reading owes an account of g's own apprehension
 that satisfies this very `Has`. The source-specific power governing x's
 uptake supplies a reason for attributing production to g. Recognizing
-g's own uptake requires evidence about g's operation. [Preservation premise](../../TruthCore/Causality/ParticipatedEsseScale.lean)
+g's own uptake requires evidence about g's operation. The theorem
+`subjectGroundedApprehensionPreserved` states this preservation application
+with the same bearer-indexed realization at both endpoints.
+[Preservation premise](../../TruthCore/Causality/ParticipatedEsseScale.lean) ·
+[Lean application](../../TruthCore/Causality/SourceIntellectControls.lean)
 
 This instance gives no coverage of the other pure determinations or of
 other actual roots quantified over by `fe67d766`. Set inclusion also
@@ -3750,87 +3706,24 @@ records the remaining question.
 
 ### Dependency-explicit restoration: a root contribution to the content
 
-The four-slot diagnostic above leaves rule provenance as an independent
-primitive. The following stronger local test replaces that flag's bare
-interpretation with different dependency equations. Two distinct content
-targets are stipulated true in the same domain. Keep the source and
-recipient actual and their esse edge fixed in every assignment. A
-secondary exercise is required for the recipient's cognitive episode.
-A source mode and a separately supplied rule are distinguished by which
-one determines the target of the secondary exercise.
+The equations distinguish which input to the explanation fixes the
+recipient's apprehended truth. At a baseline where both inputs select the
+first truth, varying the source's mode selects the second truth exactly
+when the rule is source-owned. Varying the separately supplied rule selects
+the second truth exactly in the other branch. The recipient's episode
+requires its own exercise in either case. The theorem `recipientDependence`
+covers both source-uptake options, and `sourceContent` shows that none of
+these modelled contrasts alters the source's own uptake. [Lean model](../../TruthCore/Causality/SourceIntellectControls.lean)
 
-```python
-from itertools import product
-
-def profile(owned, mode, rule, enabled, root_noesis):
-    actual = {'g', 'x'}
-    esse_edge = ('g', 'x')
-    content = mode if owned else rule
-    truth = {0, 1}  # two distinct true content targets
-    cognition = {('x', content)} if enabled else set()
-    cognition |= {('g', 0)} if root_noesis else set()
-    grounded = set(cognition)  # stipulated cognitive grounding
-    assert all(c in truth for _, c in cognition)
-    return actual, esse_edge, cognition, grounded
-
-for owned, root_noesis in product((False, True), repeat=2):
-    p = profile(owned, 0, 0, True, root_noesis)
-    mode = profile(owned, 1, 0, True, root_noesis)
-    rule = profile(owned, 0, 1, True, root_noesis)
-    stopped = profile(owned, 0, 0, False, root_noesis)
-
-    def xs(p):
-        return {c for b, c in p[2] if b == 'x'}
-
-    assert all(q[:2] == p[:2] for q in (mode, rule, stopped))
-    assert xs(p) == {0}
-    assert (xs(mode) != xs(p)) == owned
-    assert (xs(rule) != xs(p)) == (not owned)
-    assert xs(stopped) == set()
-    assert bool({c for b, c in p[2] if b == 'g'}) == root_noesis
-    print(owned, root_noesis, xs(mode) != xs(p),
-          xs(rule) != xs(p), xs(stopped) == set())
-```
-
-Executed output (columns: owned rule, root noesis, root mode determines
-different effect content, separate rule determines different effect
-content, stopping secondary exercise stops the recipient episode):
-
-```text
-False False False True True
-False True  False True True
-True  False True  False True
-True  True  True  False True
-```
-
-These parameter variations compare descriptions, not metaphysically
-possible changes in a necessary source or law. The actual source and
-effect, same edge and actual baseline recipient episode are nonempty.
-The source-intrinsic orientation really controls the selected recipient
-content **in the equation** in the owned-rule branch. The alternative
-orientation is irrelevant there. In the other branch the separate rule
-does the selecting. Secondary exercise is not dispensed with in either
-branch. The difference is therefore not merely that one root has been
-labelled a productive cause and the other has not. Nevertheless the
-equations stipulate cognitive grounding, mode ownership and the kind
-of causal dependence; the model neither supplies a metaphysical account
-of those nor verifies the efficient-total giver premise. In particular,
-it does not prove that withholding a secondary exercise while holding
-the recipient's esse fixed is metaphysically possible. It isolates
-attribution to the determination, not the totality of the giving.
-
-The two profiles show how one might look for positive evidence of
-source-level productive responsibility for the distinctive perfection
-instead of treating every causal edge at esse as automatically
-carrying all respects. In the source-owned branch the specification of
-the manifestation's content is intrinsic to the source by hypothesis,
-and a change in that specification changes which content is apprehended
-by the recipient. Even that stronger dependence is compatible in this
-encoding with an empty root-side apprehension relation. Restoring root
-noesis leaves the effect-side dependencies unchanged; this is not a
-claim that intellectual and impersonal sources are equally explanatory
-in metaphysics, because no explanation of the root's own cognitive
-episode or the origin of its mode is represented.
+The parameter changes compare descriptions of the dependency. They do not
+assert a possible variation in a necessary source or law, or establish that
+the recipient's esse could be held fixed without the secondary exercise.
+The inherited esse edge and stipulated cognition give this structural
+comparison actual roles in the selected model. Efficient-total attribution
+and the source's metaphysical ownership of the mode still need warrant.
+The contrast gives a way to test productive responsibility for the
+recipient's distinctive apprehension without moving its act to another
+subject.
 
 **Further discriminator for the whole-being route.** Compare a source
 that instantiates its own directed manifestation profile to a source
@@ -3869,10 +3762,8 @@ restrictions of the source's own act is the next step for the
 owns a rational end or actually wills; the will/goodness interfaces
 remain downstream and conditional.
 
-This second diagnostic was executed locally with the output above.
-It is a structural test of the exact equations, not a Lean or
-Comparator result. No newly attributed claims or registered proofs.
-
+These are compiled comparisons in the selected interpretation. No newly
+attributed claims or registered proofs.
 
 ## Essential exclusion and positive-nature completeness (2026-11-25; provisional)
 
@@ -4032,98 +3923,36 @@ source proposed as having just a stipulated roster.
 
 ### Diagnostic: positive constraints, pairwise compossibility and totality
 
-The following executed Python test fixes two actual bearers g and x
-with an esse edge, and stipulates source productive coverage of the
-effect. The source role, actuality and the effect's target
-determination are fixed across all compared descriptions. The profiles
-are sets of selected features of g, not constituents of g. Symbols a
-and b are **abstract** pure-candidate slots; k is a stipulated pure
-candidate, not a demonstration of the purity of noesis. The rules are
-stipulated constraints, not metaphysical compatibility theorems.
-Neither source necessity nor real composition is proved by the model.
+The theorem `exclusionIffNoCompatibleExtension` proves the equivalence
+for any family of admitted descriptions and any positive requirements.
+`possessedIfCompatibleAndOmissionFixed` gives the narrower conditional
+argument for actual possession, with the obligation that an actual omission
+would entail exclusion over the family explicit. The former script tested
+3,072 family cases on a three-element carrier. The generic theorem replaces
+that finite enumeration. [Lean theorems](../../TruthCore/Causality/SourceIntellectControls.lean)
 
-```python
-from itertools import combinations
+The four model cases in `profileComparisons` compare selected source
+features with the actual source role and the effect's esse and cognitive
+determination held fixed. The slots a and b are abstract pure candidates.
+Noesis is also classified as pure by stipulation. The constraints imposed
+on admitted descriptions stand for the compared claims. They leave real
+causation, cognitive uptake, reception and metaphysical compossibility open.
+[Lean models](../../TruthCore/Causality/SourceIntellectControls.lean)
 
-e, a, b, k, l = 'esse', 'a', 'b', 'noesis', 'limiter'
-U = frozenset({e, a, b, k, l})
-pure = frozenset({e, a, b, k})
-P = frozenset({e, a, b})
-profiles = {frozenset(v) for n in range(len(U) + 1)
-            for v in combinations(U, n) if e in v}
-roster = {'g', 'x'}
-edge = {('g', 'x')}
-effect = frozenset({e, k})
-assert effect <= pure and k in effect
-assert roster == {'g', 'x'} and edge == {('g', 'x')}
-
-scenarios = {
-    'open': (P, lambda q: l not in q),
-    'finite-mode blocker': (P | {l}, lambda q: not {l, k} <= q),
-    'joint pure conflict': (P, lambda q: l not in q and not {a,b,k} <= q),
-    'exact closure': (P, lambda q: q == P),
-}
-rows = []
-for name, (observed, rule) in scenarios.items():
-    F = {q for q in profiles if rule(q)}
-    assert observed in F and k not in observed
-    extension = any(observed <= q and k in q for q in F)
-    fixes_absence = all(k not in q for q in F if observed <= q)
-    assert extension != fixes_absence
-    strict_purity = observed <= pure
-    pairwise = all(any({u, v} <= q for q in F)
-                   for u, v in combinations(pure, 2))
-    rows.append((name, strict_purity, pairwise, extension, fixes_absence))
-assert rows == [
-    ('open', True, True, True, False),
-    ('finite-mode blocker', False, True, False, True),
-    ('joint pure conflict', True, True, False, True),
-    ('exact closure', True, False, False, True),
-]
-for row in rows:
-    print(*row)
-
-# Check the exact conditional in every nonempty family on a small carrier.
-small = [frozenset(v) for n in range(4)
-         for v in combinations(range(3), n)]
-checks = 0
-for n in range(1, len(small) + 1):
-    for family_tuple in combinations(small, n):
-        F = set(family_tuple)
-        for P0 in F:
-            for d in range(3):
-                omission = d not in P0
-                extension = any(P0 <= q and d in q for q in F)
-                fixes_absence = all(d not in q for q in F if P0 <= q)
-                assert fixes_absence == (not extension)
-                if (not omission or fixes_absence) and extension:
-                    assert d in P0
-                checks += 1
-print(checks)  # 3072
-```
-
-| Constraints | Actual source has only admitted pure features | Every pair jointly permitted somewhere | P plus k permitted | Positive requirements + constraints fix absence |
+| Constraints | Actual source has only admitted pure features | Every pair jointly permitted somewhere | P plus k permitted | Requirements fix absence |
 | --- | --- | --- | --- | --- |
 | Open | yes | yes | yes | no |
 | Finite-mode blocker | no | yes | no | yes |
 | Joint pure conflict | yes | yes | no | yes |
 | Exact closure | yes | no | no | yes |
 
-The pairwise test is deliberately quantified over each pair having
-*some* admitted profile, not all pairs in one profile. The joint
-conflict is independent of any one pair in this encoding, so
-pairwise compossibility cannot replace a whole-positive-profile
-application. The finite-mode blocker explicitly adds nonpure l to
-the actual source and prevents the joint occurrence of l and k;
-it cannot serve as a strict-pure source control. Exact closure fixes
-the omission by construction and contributes no independent evidence
-for the closure constraint. The open profile is an omission witness
-against inference from strict purity and the stipulated role alone.
-All four assignments stipulate the original source and effect
-rather than encode actual causation, cognition, receipt or the complete
-existing metaphysical frames. The structural models say nothing about
-the metaphysical possibility of the negative profiles, a real source,
-or the truth of `d164b1ff`.
+`jointConflictPairwise` constructs an admitted profile for each pure pair.
+The three-way constraint prevents those pairwise witnesses from extending
+the actual requirements P with the target. The finite-mode blocker has a
+nonpure limiter in the actual profile and so falls outside strict purity.
+Exact closure fixes omission by specifying the full actual roster. The
+open profile shows that the stipulated role and strict purity can leave
+possession open even when a compatible completion is admitted.
 
 ### A narrower argument and its actual philosophical burden
 
@@ -4445,84 +4274,32 @@ intellect by analogy. The coverage premise above is specifically
 stronger than the premise that every conscious experience is
 monitored; ordinary higher-order accounts can reject it.
 
-### 4. Executed structural checks
+### 4. Compiled structural checks
 
-The following code, executed locally, checks both the role-to-token
-lift and the finite complete-coverage obstruction. It adds no
-Lean or corpus result. All selected knowledge/grounding labels
-are stipulated; it is not a cognitive simulation or a new
-formal model of the full `CausalityFrame`. The roster and esse
-edge in the final controls are fixed but do not constrain the
-graph theorem, so those controls do not certify actual causal
-production or a metaphysical source.
+`roleLiftIff` proves for any token carrier that both displayed role arrows
+can be realized by one irreflexive transitive relation precisely when
+neither prior role denotes the act. The subject and object can denote the
+same token. If only object-to-act must lift, the contradiction arises when
+those two referents coincide. [Lean theorem](../../TruthCore/Causality/SourceIntellectControls.lean)
 
-```python
-from itertools import product
+`coverageExcludesMediationAtMaximal` handles a supplied maximal act.
+`coverageExcludesFiniteStrictMediation` obtains the result for any finite
+nonempty act roster. `completeFiniteCoverageHasCycle` proves the graph
+version directly for coverage edges. The earlier diagnostic checked 27
+assignments of three role referents to three labels and all 530 binary
+relations on one to three labelled acts, including 353 with complete
+coverage. The Lean theorems replace those bounded enumerations.
+[Lean theorems](../../TruthCore/Causality/SourceIntellectControls.lean)
 
-def acyclic(nodes, edges):
-    remaining = set(nodes)
-    while remaining:
-        terminal = {a for a in remaining
-                    if not any(u == a and v in remaining for u, v in edges)}
-        if not terminal:
-            return False
-        remaining -= terminal
-    return True
-
-roles = ('subject', 'act', 'object')
-semantic = {('subject', 'act'), ('object', 'act')}
-role_maps = 0
-for values in product(range(3), repeat=3):
-    den = dict(zip(roles, values))
-    lifted = {(den[u], den[v]) for u, v in semantic}
-    all_distinct_from_act = (den['subject'] != den['act'] and
-                             den['object'] != den['act'])
-    assert acyclic(set(values), lifted) == all_distinct_from_act
-    role_maps += 1
-assert role_maps == 27
-
-# K(a,b): actual act b truly and groundedly apprehends act a.
-checks = complete = 0
-for n in (1, 2, 3):
-    acts = set(range(n))
-    pairs = [(a,b) for a in acts for b in acts]
-    for flags in product((False, True), repeat=len(pairs)):
-        K = {p for p, on in zip(pairs, flags) if on}
-        covered = all(any(a == u for u,v in K) for a in acts)
-        if covered:
-            complete += 1
-            assert not acyclic(acts, K)
-        checks += 1
-assert checks == 530 and complete == 353
-
-actual = {'g', 'x'}
-esse_edges = {('g','x')}
-assert len(actual) == 2 and esse_edges == {('g','x')}
-assert not acyclic({0}, {(0,0)})  # reading K as strict priority
-assert acyclic({0}, set())       # K need not be read as priority
-assert acyclic({0,1}, {(0,1)})   # partial monitoring
-assert not all(any(a==u for u,v in {(0,1)}) for a in {0,1})
-assert not acyclic({0,1}, {(0,1),(1,0)})  # cyclic coverage
-print(role_maps, checks, complete)  # 27 530 353
-```
-
-The 27 maps are assignments of the three role referents to
-three token labels (not three necessarily distinct constituents).
-The test supposes both displayed role arrows are required to lift;
-requiring only object-to-act yields a correspondingly weaker
-contradiction when those two referents coincide. The 530 act
-tables exhaust all binary relations on one, two and three
-labelled acts, including 353 with complete outgoing coverage;
-all covered tables contain a cycle. The general finite result
-comes from the maximal-member proof, not extrapolation from
-these finite tests. The positive self-directed control assigns
-K(a,a) and an empty *strict priority* relation; it does not
-identify that absence of priority with real simplicity or prove
-an intentional episode. An objective-but-noncognitive assignment
-can also have empty strict priority, and would lack the K edge.
-The partial-monitoring control drops complete coverage, not
-factivity. In the cyclic control K is complete but cannot
-itself be a strict priority relation.
+`soleActApprehendsItself` connects coverage and a one-act roster to the
+same act's self-apprehension. `finiteMediationControls` supplies the
+same-act case with empty strict priority, partial monitoring that omits
+the monitor itself, and cyclic coverage. `infiniteMediationControl`
+supplies complete coverage along strict priority on the natural numbers
+even with well-foundedness in the predecessor direction. The factivity
+and cognitive grounding of the knowledge edges enter as part of their
+intended interpretation. Those controls leave real simplicity and
+productive causation unverified. [Lean controls](../../TruthCore/Causality/SourceIntellectControls.lean)
 
 ### 5. Same-standard assessment and graph destination
 
@@ -4585,11 +4362,11 @@ the exclusion-to-limitation argument or a warranted application of
 preservation. Neither outcome settles fullness over all pure modes.
 
 **Review scope.** The independent challenge of the published #1970
-comparison accepted the structural counts: 3,072 family cases, 27 role
-maps and 530 act tables, including 353 with complete coverage. These
-results concern the stated finite interpretations. The repairs to the
-shared determination, graph scope and resulting next test await targeted
-recheck. [Scoped assessment record](../../corpus/attempts/521613fc-cbc8-4a88-8cca-51c0161bda6d.json)
+comparison accepted the structural counts. The targeted recheck accepted
+the repaired shared determination, graph scope and remaining test at
+`c1374f275296bf35626537d00a260448109b4e26`. The Lean conversion validates
+the stated model consequences with these scopes. The recorded assessment
+remains provisional. [Scoped assessment record](../../corpus/attempts/521613fc-cbc8-4a88-8cca-51c0161bda6d.json)
 
 ## Research attempts citing this note
 
