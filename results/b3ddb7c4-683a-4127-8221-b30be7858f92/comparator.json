@@ -1,0 +1,11 @@
+{
+  "challenge_module": "TruthCore.Results.Logic.EpistemicReasonBearer.Challenge",
+  "solution_module": "TruthCore.Results.Logic.EpistemicReasonBearer.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Logic.EpistemicReasonBearer.reasonsFromWarrant",
+    "TruthCore.Results.Logic.EpistemicReasonBearer.otherBasis",
+    "TruthCore.Results.Logic.EpistemicReasonBearer.warrantControls"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}

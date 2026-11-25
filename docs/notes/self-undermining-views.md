@@ -101,13 +101,12 @@ revise this assessment. [Existing bearer investigation](../../corpus/attempts/co
 
 At baseline `7a5a834d` the orphan report lists both `0c9d64e6` (phenomenal
 occurrence) and `d2cb9100` (the original Cogito instantiation). Both now reach
-the root via the single-bearer consumer. The existence-representative,
-meaning and belief results and the original omission controls retain their
-previous status. A next question for the existence cluster is whether the
-representative in `46c875b1` belongs to the exact world-existence extension
-of the PSR population premise `43f09b83`. With those predicates identified,
-the same candidate witnesses bare population by specialization; an abstract
-representative still leaves concrete population unresolved. [Assertion attempt](../../corpus/attempts/69a4a681-8caa-4b34-8fc4-84d8ae522e7b.json)
+the root via the single-bearer consumer. The separate represented-existence result
+`46c875b1` now supplies the PSR population premise `43f09b83` when its
+existence predicate is the selected world's existence extension. For a
+particular denial, the open question is whether its representative tracks
+the performance itself. The same individual witnesses concrete population
+under the selected world's existence-in-act contract. [Represented-occurrence proof and control](../causal-finite-branching-and-psr-syllogisms.md#can-the-denial-itself-supply-s2s-population-premise-1007) · [Assertion attempt](../../corpus/attempts/69a4a681-8caa-4b34-8fc4-84d8ae522e7b.json)
 
 ## Internal reasons to adopt a view
 

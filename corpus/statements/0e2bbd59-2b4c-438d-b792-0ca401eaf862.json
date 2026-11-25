@@ -1,0 +1,9 @@
+{
+  "id": "0e2bbd59-2b4c-438d-b792-0ca401eaf862",
+  "label": "Warrant for accepted beliefs requires an undefeated supporting basis",
+  "paraphrase": "OPEN evidential warrant condition. At each acceptance in this reliability frame, warrant requires a supporting basis available to that subject for that content which is not undercut for the subject.",
+  "lean_declaration": "TruthCore.Logic.EpistemicReasonBearer.AcceptedWarrantNeedsBasis",
+  "definition_ids": [
+    "15160f9d-a231-4a9f-834f-cc78a7523dc3"
+  ]
+}

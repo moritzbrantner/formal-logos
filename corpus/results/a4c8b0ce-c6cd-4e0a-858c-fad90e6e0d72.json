@@ -1,0 +1,12 @@
+{
+  "id": "a4c8b0ce-c6cd-4e0a-858c-fad90e6e0d72",
+  "label": "Population by specialization to the selected world's existence extension",
+  "argument_id": "351b9698-90ce-4a81-864f-647dddae767b",
+  "challenge_module": "TruthCore.Results.Explanation.RepresentedOccurrence.Challenge",
+  "solution_module": "TruthCore.Results.Explanation.RepresentedOccurrence.Solution",
+  "theorem": "TruthCore.Results.Explanation.RepresentedOccurrence.population",
+  "comparator_config": "results/a4c8b0ce-c6cd-4e0a-858c-fad90e6e0d72/comparator.json",
+  "status": "solution-present",
+  "description": "Instantiation transcription. Use SomeExistent with ExistsIn fixed to m.ontic.ExistsAt w. Both sides say that this extension has a member. In the occurrence argument that member is the selected episode's own representative. The companion theorem retains the asserting agent, claim, realizing episode and representative together under the three existing assertion, realization and world-indexed representation inputs. A reading about the actual denial requires those inputs to hold of the performance here.",
+  "transcription": "instantiation"
+}
