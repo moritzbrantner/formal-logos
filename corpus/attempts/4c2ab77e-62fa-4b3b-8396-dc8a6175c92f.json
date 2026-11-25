@@ -1,0 +1,45 @@
+{
+  "id": "4c2ab77e-62fa-4b3b-8396-dc8a6175c92f",
+  "label": "Test universal existential supply as proper formative causation",
+  "statement_ids": [
+    "29818edd-9f5a-5414-baa2-9a7d0c8abf18",
+    "66aecdd7-ea4e-55c6-9377-10db08893854",
+    "5c1aba17-d224-49fd-a31c-728a54ac63a9",
+    "5e281daf-e8a5-5995-bc3f-94e142319e28",
+    "b26c10a0-983d-5a88-aa03-cc601bc1ddc6",
+    "64498e7e-7f10-54a0-9ec0-c65e6076de1f",
+    "564ce19b-c9df-5031-b20e-3cb1baee124f"
+  ],
+  "date": "2026-11-25",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "Continuation of PR-1971 and PR-1962. Note: docs/notes/will-versus-chance.md#from-universal-existential-supply-to-proper-formative-causation-2026-11-25. Read De veritate q.3 a.1 co., sed contra 4, ad 5,8,11 and a.3 co., ad 3–9 plus SCG II.24 arguments 1–3 in linked primary translations (navigation, no new pinned attribution). Distinguish form from which an effect proceeds, inherent form, and exemplar as intended measure; actual and virtual practical knowledge and speculative understanding of producible effects. Grant direct total actual formative supply of two simultaneous recipients in distinct constitutive respects: a uniform univocal single-kind operation cannot account for their diversity, but this does not exclude one noncognitive concrete power with differentiated jointly supplied roles. Bare constraints and general existential enabling are weaker than actual formative causation. A constructive intelligible specification can be the nonreceptive source's actual formative measure and explain recipient organization under that end, conditional on its productive relevance qua understood and adopted; knowledge of producibility or possession of an exemplar is insufficient. Underived objective teleology is not the same as externally imposed ends or intellectual self-adoption. Existing actual-cause, formal/eminent possession, objective Norms, rational-power exercise, holder identity, PSR and recipient-specific willing retain separate obligations. No new graph edge or metaphysical model claim. Preliminary author semantic sweep; local CLI, Lean and independent semantic challenge unavailable.",
+  "blocker": "Establish actual productive relevance of the source's nonreceptive understanding of a constructive specification qua intelligibly adopted measure, or defend a unitary noncognitive concrete productive structure with equivalent formative supply. Investigate whether the structured directedness of the rival's intrinsic power needs really distinct constituents or further grounding; do not infer composition from distinct descriptions or from multiple output roles. Distinguish direct from mediated supply and preserve the existing objective-eminence and director-rival boundaries.",
+  "evidence": [
+    "PR-1971",
+    "PR-1962",
+    "PR-1941",
+    "PR-1944"
+  ],
+  "current_assessment": {
+    "date": "2026-11-25",
+    "statement_ids": [
+      "29818edd-9f5a-5414-baa2-9a7d0c8abf18",
+      "66aecdd7-ea4e-55c6-9377-10db08893854",
+      "5c1aba17-d224-49fd-a31c-728a54ac63a9",
+      "5e281daf-e8a5-5995-bc3f-94e142319e28",
+      "b26c10a0-983d-5a88-aa03-cc601bc1ddc6",
+      "64498e7e-7f10-54a0-9ec0-c65e6076de1f",
+      "564ce19b-c9df-5031-b20e-3cb1baee124f"
+    ],
+    "scope": "Direct formative production of different recipient kinds",
+    "assessment": "One operation directly supplying both recipients in the compared respects cannot be restricted to univocally reproducing one kind if their kinds differ. Productive application of an intellectual exemplar requires actual direction of this giving.",
+    "next_test": "Establish actual productive relevance of the source's nonreceptive understanding of a constructive specification qua intelligibly adopted measure, or defend a unitary noncognitive concrete productive structure with equivalent formative supply. Investigate whether the structured directedness of the rival's intrinsic power needs really distinct constituents or further grounding; do not infer composition from distinct descriptions or from multiple output roles. Distinguish direct from mediated supply and preserve the existing objective-eminence and director-rival boundaries.",
+    "note": "docs/notes/will-versus-chance.md#from-universal-existential-supply-to-proper-formative-causation-2026-11-25",
+    "reviewed_revision": "168aa3f495290991b982ea322533d5192ad6a878",
+    "review": "accepted_qualified",
+    "publication": "published",
+    "evidence": "Independent semantic challenge at b3c6d5a80027ad31875da8c9498d5343695e962e accepted the article 3 reading, tied-optima criterion, controls and qualified ultimate application. The targeted recheck accepted the operation-identity, optimizer and owned-rational-exercise repairs at 168aa3f495290991b982ea322533d5192ad6a878.",
+    "supersedes": "Updates the pending-review disposition for this scoped comparison."
+  }
+}
