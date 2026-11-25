@@ -134,6 +134,10 @@ test("explicit scopes drive the overview, premise judgments, shared routes and r
   }
   expect(view.premises.find((p) => p.statement.id === "foundation")?.revisions).toHaveLength(1);
   expect(view.premises.find((p) => p.statement.id === "other")?.revisions).toEqual([]);
+  const proposed = project({ assessments: { ...emptyBatch, current_assessments: [{ ...current, review: "unreviewed" }] } });
+  const proposalHtml = renderToStaticMarkup(createElement(CaseOverview, { view: proposed }));
+  expect(proposalHtml).toContain("proposed revision");
+  expect(proposalHtml).not.toContain("reviewed revision");
   expect(() => parseAssessmentBatch({ ...batch, current_assessments: [{ ...current, scope: undefined }] })).toThrow();
   expect(() => parseAssessmentBatch({ ...batch, revision_impacts: [{ change: {} }] })).toThrow();
 });

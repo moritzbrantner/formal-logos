@@ -43,7 +43,7 @@ export function JudgmentReader({ readings, statementId, repositoryUrl, revision,
       <h4 className="mt-4 font-medium">Next test</h4>
       <p className="mt-1 whitespace-pre-wrap">{current.next_test}</p>
       <p className="mt-3 text-sm"><a className="link-quiet" href={`${repositoryUrl}/blob/${revision}/${current.note}`}>Research note</a> · <Link className="link-quiet" href={`/attempts/${current.attempt_id}`} title={selected.title}>Attempt and evidence</Link> · {current.date}</p>
-      <p className="mt-2 text-sm">{review} · {current.publication} · <a className="link-quiet" href={`${repositoryUrl}/commit/${current.reviewed_revision}`}>reviewed revision {current.reviewed_revision.slice(0, 9)}</a></p>
+      <p className="mt-2 text-sm">{review} · {current.publication} · <a className="link-quiet" href={`${repositoryUrl}/commit/${current.reviewed_revision}`}>{current.review === "unreviewed" ? "proposed revision" : "reviewed revision"} {current.reviewed_revision.slice(0, 9)}</a></p>
       <p className="mt-1 text-sm">{current.evidence}</p>
       <p className="mt-2 text-sm"><strong>Earlier assessment. </strong>{current.supersedes}</p>
       <h4 className="mt-3 text-sm font-medium">Propositions in this assessment</h4>
