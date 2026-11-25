@@ -23,8 +23,9 @@ def context(cwd: Path) -> str:
     supplied = ", ".join(f"{key}={value}" for key, value in service.items() if value)
     return (
         f"Truth Core checkout: {root}; HEAD {head}.\n"
-        "For repository research use .agents/skills/truth-core-research/SKILL.md and the supplied "
-        "four-line brief. AGENTS.md remains the policy authority; docs/agent-service.md describes "
+        "For repository research use .agents/skills/truth-core-research/SKILL.md. Start from the "
+        "brief's named result or closest prior evidence and the open question that could change "
+        "its assessment (AGENTS.md, Worker brief and handoff). docs/agent-service.md describes "
         "the shared preview protocol.\n"
         f"Local service settings: {supplied or 'not configured; use the coordinator-supplied explicit flags'}. "
         "These are configuration values, not health or verification evidence.\n"

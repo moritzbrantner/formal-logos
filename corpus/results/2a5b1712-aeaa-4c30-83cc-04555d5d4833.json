@@ -1,0 +1,11 @@
+{
+  "id": "2a5b1712-aeaa-4c30-83cc-04555d5d4833",
+  "label": "All nine classical attributes of GOD_4 via the actual maximal source",
+  "argument_id": "827fa9cd-2bfc-46b2-b8b4-476c18e85af1",
+  "challenge_module": "TruthCore.Results.Case.Catholicism.AttributesFromEsse.Challenge",
+  "solution_module": "TruthCore.Results.Case.Catholicism.AttributesFromEsse.Solution",
+  "theorem": "TruthCore.Results.Case.Catholicism.AttributesFromEsse.fromSource",
+  "comparator_config": "results/2a5b1712-aeaa-4c30-83cc-04555d5d4833/comparator.json",
+  "status": "solution-present",
+  "description": "The actual source supplies unity, perfection and goodness. The remaining six use the retained stage-two readings on the same signature and independent potency relation. Every bearer satisfying IsGod receives the primitive attribute field under the one-way nine-attribute sufficiency premise."
+}

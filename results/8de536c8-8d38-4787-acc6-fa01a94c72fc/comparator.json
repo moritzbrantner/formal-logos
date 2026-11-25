@@ -1,0 +1,9 @@
+{
+  "challenge_module": "TruthCore.Results.Epistemology.SourceEvidenceAdequacy.Challenge",
+  "solution_module": "TruthCore.Results.Epistemology.SourceEvidenceAdequacy.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Epistemology.SourceEvidenceAdequacy.nonmentalControl"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}

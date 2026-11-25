@@ -1,0 +1,11 @@
+{
+  "id": "027d38f9-449e-445c-bb64-3dff1abd439d",
+  "label": "Coalescence, essential identity, false positive fibers and correcting dynamics controls",
+  "argument_id": "b66e2b8b-6015-4e2d-b045-01ce71898828",
+  "challenge_module": "TruthCore.Results.Epistemology.InitialHistoryAuthenticity.Challenge",
+  "solution_module": "TruthCore.Results.Epistemology.InitialHistoryAuthenticity.Solution",
+  "theorem": "TruthCore.Results.Epistemology.InitialHistoryAuthenticity.controls",
+  "comparator_config": "results/027d38f9-449e-445c-bb64-3dff1abd439d/comparator.json",
+  "status": "solution-present",
+  "description": "Tests each consequential omission without unrestricted recombination, additional uncaused events or priors. A coarse or corrected output can genuinely become fixed or sound; that does not identify its entire trajectory or explain why its initial state obtains. Identity control fixes all bearer presences and uses a rigid stipulated origin marker; ordinary causes are empty, so no causal-origin or complete-metaphysical interpretation is certified. The positive correction mechanism requires actual access to the retained historical coordinate."
+}

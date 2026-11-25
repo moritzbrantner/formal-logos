@@ -1,0 +1,11 @@
+{
+  "id": "cbc30caf-c329-4f25-b5e2-eedbb1befe28",
+  "label": "Four source-to-channel omissions break record guarantees",
+  "argument_id": "8930d16c-12f7-4b44-9003-ff503e72ddf5",
+  "challenge_module": "TruthCore.Results.Epistemology.SourceEvidenceAdequacy.Challenge",
+  "solution_module": "TruthCore.Results.Epistemology.SourceEvidenceAdequacy.Solution",
+  "theorem": "TruthCore.Results.Epistemology.SourceEvidenceAdequacy.omissionControls",
+  "comparator_config": "results/cbc30caf-c329-4f25-b5e2-eedbb1befe28/comparator.json",
+  "status": "solution-present",
+  "description": "Tests the source-to-record inference beyond sincerity and accurate complete cognition. Each countertuple identifies a concrete mechanism and retains actual causal tokens, a fixed populated roster and genuine source assertion. These controls justify conditional premise dependence only, not an adverse likelihood or a complete metaphysical rival. The positive control restores the full conditions on the same carriers."
+}

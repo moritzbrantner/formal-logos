@@ -1,0 +1,11 @@
+{
+  "id": "5acaabc5-4b22-4876-8243-ec7d3dbf0424",
+  "label": "Same-bearer absence inheritance without recombination",
+  "argument_id": "e7b30cd3-924c-4310-8e9d-f73e797ae22e",
+  "challenge_module": "TruthCore.Results.Explanation.ExistentialInheritance.Challenge",
+  "solution_module": "TruthCore.Results.Explanation.ExistentialInheritance.Solution",
+  "theorem": "TruthCore.Results.Explanation.ExistentialInheritance.absenceInheritance",
+  "comparator_config": "results/5acaabc5-4b22-4876-8243-ec7d3dbf0424/comparator.json",
+  "status": "solution-present",
+  "description": "Constructive same-witness modal consequences, including a common absence witness for a selected dependent class. Does not establish the essential bridge, a metaphysical possibility, a PSR, causation or a necessary being. Connection plan to existence PSR 608a262d-08fe-4dfd-9413-67e2ecf35b84 remains OPEN: absence inheritance supplies no actual reason."
+}

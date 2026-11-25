@@ -1,7 +1,7 @@
 {
   "id": "521613fc-cbc8-4a88-8cca-51c0161bda6d",
   "label": "Test intrinsic pure perfection against merely productive fullness and limitation of esse",
-  "date": "2026-11-24",
+  "date": "2026-11-25",
   "statement_ids": [
     "64498e7e-7f10-54a0-9ec0-c65e6076de1f",
     "fe67d766-3e9f-57b5-bbff-c3e2c50c56fd",
@@ -10,14 +10,31 @@
   ],
   "kind": "reading",
   "outcome": "blocked",
-  "summary": "See docs/notes/causal-perfection-transfer.md#intrinsic-perfection-versus-unrestricted-productive-power-2026-11-24-draft-unreviewed. Distinguish intrinsic real determination from productive virtual possession and substantive higher-mode realization. Reuse #1914 rootUnlimited: nature-based exclusion of an independently classified pure perfection, if it constitutes limitation of esse, contradicts the supplied root under the finite-giver clause. The missing-mode-to-exclusion and exclusion-to-limitation bridges are separate open commitments. The combined bridge can restate fullness by contraposition. Eight local structural variants separate neutral omission, non-contracting essential exclusion and a brute limited root while preserving the same productive witnesses. The preexistence formula survives without intrinsic fullness in the local power-inclusive interpretation of InAct. Registered 64498e7e applies one mode-open IN_ACT_4 predicate uniformly at cause and effect. The tested inventory is restricted to actual witnesses. The historical comparison examines noncognitive life, unity, ontological goodness and active efficacy. The initial challenge of PR #1916 at 35c03763084282b3b33bacf6b4ab274957180cbc reproduced the note's embedded operation and due-scope controls and requested scope repairs. The targeted re-review accepted the repaired checkpoint at 1d63f12806ed9984ea2ea8973295b1e6b1210d59. Attempt 72a86cf4 records the current scoped assessment.",
-  "blocker": "A defense of whole-power fullness needs a reason to treat absence of an independently warranted pure OfBeing mode on the same OwnBeing source as a real restriction of its esse. A rival would need to account for the essential exclusion as non-contracting on that same source. Generalization beyond actual witnesses and across the Has/InAct and D/R mappings remains open.",
+  "summary": "See docs/notes/causal-perfection-transfer.md#intrinsic-perfection-versus-unrestricted-productive-power-2026-11-24-draft-unreviewed. Distinguish intrinsic real determination from productive virtual possession and substantive higher-mode realization. Reuse #1914 rootUnlimited: nature-based exclusion of an independently classified pure perfection, if it constitutes limitation of esse, contradicts the supplied root under the finite-giver clause. The missing-mode-to-exclusion and exclusion-to-limitation bridges are separate open commitments. The combined bridge can restate fullness by contraposition. Eight local structural variants separate neutral omission, non-contracting essential exclusion and a brute limited root while preserving the same productive witnesses. The preexistence formula survives without intrinsic fullness in the local power-inclusive interpretation of InAct. Registered 64498e7e applies one mode-open IN_ACT_4 predicate uniformly at cause and effect. The tested inventory is restricted to actual witnesses. The historical comparison examines noncognitive life, unity, ontological goodness and active efficacy. The initial challenge of PR #1916 at 35c03763084282b3b33bacf6b4ab274957180cbc reproduced the note's embedded operation and due-scope controls and requested scope repairs. The targeted re-review accepted the repaired checkpoint at 1d63f12806ed9984ea2ea8973295b1e6b1210d59. Attempt 72a86cf4 records the reviewed across-mode assessment. In #1970 the two four-profile diagnostics trace how a source-owned disposition selects the content actually apprehended by a distinct recipient. The exclusion tests distinguish neutral omission, a real nonpure obstruction, joint incompatibility, and primitive closure. Pairwise compatibility is insufficient. Strict priority cannot be lifted from roles to identical real referents. With a maximal act in a nonempty finite roster, complete act-directed self-knowledge conflicts with universally strict mediation. Ordinary predecessor well-foundedness alone gives no maximal member. Complete act coverage is stronger than IntrinsicSelfKnowledge. Independent challenge accepted the structural comparisons (3,072 family cases, 27 role maps and 530 act tables, including 353 complete-coverage tables).",
+  "blocker": "Purity of actual subject-grounded apprehension and its coherent non-received realization at this source need independent warrant. Productive specificity explains selection in the secondary. Establishing possession in the source still needs a warranted same-content preservation premise or a reason its essential exclusion would contract this source’s esse. The strongest remaining articulation objection needs a positive account of the distinct real contribution required by the subject’s own uptake and of why it conflicts with the specified unity.",
   "evidence": [
     "PR-1518",
     "PR-1855",
     "PR-1892",
     "PR-1914",
     "586275e6-d7b0-47a1-9180-5e245d6d4de1",
-    "PR-1916"
-  ]
+    "PR-1916",
+    "PR-1970"
+  ],
+  "current_assessment": {
+    "date": "2026-11-25",
+    "statement_ids": [
+      "d164b1ff-ad31-5fbc-8ef9-eb0db51ebd96",
+      "fe67d766-3e9f-57b5-bbff-c3e2c50c56fd"
+    ],
+    "scope": "Application of intrinsic whole-power possession to the one cognitive determination k at the same actual source, its preservation from an actual participant, and the strict-mediation and non-priority articulation objections.",
+    "assessment": "A source-owned manifestation rule accounts for which truth a secondary apprehends. Its operation as a rule gives no evidence of the source’s own uptake. The act/recipient account motivates testing whether the source can apprehend in an unreceived mode. The shared k is actual, true, subject-grounded apprehension. Given independent purity, Has x k, an actual participated x, efficient giving of x’s esse by g and totality there, 191395d0 yields Has g k. This instance leaves the full coverage of fe67d766 open. The wisdom route to universal 29818edd needs each GOD_4 bearer in the same interpretation identified with the applied root or the reasoning supplied at each. With OwnBeing and possession of wisdom, WisdomSelfCapacity supplies self-directed capacity. Capacity recognition takes it to HAS_INTELLECT_1. The stronger route instead adds pure act, exercise-or-potency, cognitive grounding and recognition from actual intrinsic self-knowledge. The finite strict-mediation conflict leaves non-priority differentiation open.",
+    "next_test": "Use #1986’s two truths about one realizer (absence of receipt and absence of composition) and #1984’s distinct first-agent uptake. What in this subject’s own operation grounds apprehension under each truth condition? If it requires a distinct constituent, identify the independent contribution and explain why the one reality cannot supply it. Establish separately whether any non-prior real distinction entails reception or incompatible composition. A positive same-act account supports compatibility for k. Possession still needs preservation or a warranted exclusion-to-limitation bridge.",
+    "note": "docs/notes/causal-perfection-transfer.md#source-uptake-and-real-articulation",
+    "reviewed_revision": "c1374f275296bf35626537d00a260448109b4e26",
+    "review": "accepted_qualified",
+    "publication": "published",
+    "evidence": "Independent review of de7fdad427c4fef58f979f95ef0d1ed437753c72 reproduced all three diagnostics. The targeted recheck at c1374f275296bf35626537d00a260448109b4e26 accepted the shared apprehension, nonreceived source mode, and distinct capacity and exercise routes, with coverage of every named God needed for the universal conclusion. PR-1970.",
+    "supersedes": "Replaces the sequence of pending tests within the #1970 continuation of this attempt. Retains the #1916 assessment in 72a86cf4 and the independently scoped judgments on causal containment and objective exemplarity."
+  }
 }

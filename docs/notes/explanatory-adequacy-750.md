@@ -513,6 +513,2108 @@ approved Mathlib three, since the imported existing vocabulary reaches Mathlib. 
 corpus record service query succeeded on the worker clone with exact revision/input
 binding, independently of the stale Lean preview failure described above.
 
+## Existential inheritance with a contained brute foundation (2026-11-24)
+
+**Scope and provisional conclusion.** Grant the strongest relevant containment
+reply: a fixed candidate ontology, necessary deterministic laws, stable actual
+conditions and no further spontaneous causes. Even granting its proximate
+explanations of the derivative order, a contingent foundation B remains an
+unexplained actual input to that account. The defensible inheritance
+claim concerns that retained input. It does not say every derivative has no
+reason, that arbitrary events become possible, or that a brute foundation is
+inconsistent. The proved modal-contingency transfer uses the same dependent
+bearer's requirement of that same foundation across the admitted worlds.
+
+The new batch is `specs/existential-inheritance.toml`; vocabulary is
+`TruthCore.Explanation.ExistentialInheritance`; proofs are in
+`TruthCore.Results.Explanation.ExistentialInheritance.Solution`. These are
+analyst formulations with no new historical attribution. The research serves
+the existence PSR `608a262d-08fe-4dfd-9413-67e2ecf35b84`, through the existing
+B2 route, with the missing explanatory-standard bridge retained **OPEN**.
+It follows the restriction/existence distinction of #1910 and the containment
+findings of #1874/#1913. The open #1927 is prior research context, not an imported
+dependency or a result assumed merged into this baseline.
+
+### Four different questions
+
+| Question | Exact interpretation and result |
+| --- | --- |
+| Could this bearer have been absent? | `ContingentAt` includes actual existence plus a witnessed accessible absence. `absenceInheritance` transfers one base-absence witness through `ModalRequiresExistence`. |
+| Does this bearer essentially require B? | The existing source-indexed `EssenceRequiresExistence` is primitive nature content. `EssenceAbsenceBridge` explicitly states the needed passage to modal co-requirement. Its encoding is not its defense. |
+| Does a derivative have a proximate reason? | In `Contained.arena`, each derivative existence fact has its immediate predecessor's existence fact as an admitted reason. Its base has none. Thus bruteness in the sense of no admitted reason does not propagate to every effect. |
+| Has the account eliminated its dependence on an unaccounted actual input? | `FullSupply` is reused as a derivation from specified factual resources. Without taking a derivative as primitive, any derivation of a derivative uses both base existence and the law as primitive resources. Whether those resources constitute an adequate ultimate account is a further question. |
+
+An explanation can answer why x exists given B and L, identify x's productive
+source, and support successful predictions without explaining why B actually
+exists. These achievements should be retained. Conversely, evidence that B
+exists does not by itself answer why B exists. The new result concerns actual
+ontic prerequisites, not justification for believing the observations; the
+epistemic inquiry remains separate.
+
+### The modal theorem and its exact warrant
+
+For the selected standpoint w and fixed identities x and B, the reused modal
+condition is:
+
+```
+∀ v, access w v → ExistsAt v x → ExistsAt v B
+```
+
+If x exists at w and B is absent at some accessible v, then x is absent at
+that very v. Nothing is recombined, added to an occupied world, or selected
+from an unrestricted history space. If a whole selected class of actual
+bearers satisfies this condition for the same B, the single witness v removes
+all members together. This is not a passage from each member's separate
+possible absence to possible absence of all. Nor does it imply that all
+concreta, all possible replacements, the background, or every possible
+dependent order are absent there.
+
+The proof also composes modal requirements through intermediate bearers at
+the same world and standpoint. It does not assert transitivity of every
+counterfactual, productive cause or metaphysical grounding relation. The
+semantic load lies in applying the selected existence requirement, not in the
+elementary contrapositive after that application is fixed.
+
+There is a conceptual reason to use this condition for a genuine requirement
+of the *same bearer*: if x could still exist in a world with no B, B's existence
+was not indispensable to x across that domain. This conditional understanding
+is stronger than actual production, temporal succession, or having a source
+of a particular kind. An origin-dependent artifact is an illustrative
+candidate, but whether a changed origin yields that same artifact is an
+independent identity question. The formal result neither establishes origin
+essentialism nor treats a familiar example as a proof about every existent.
+For source-indexed essence content, the bridge remains a philosophical
+commitment: nature membership is not defined by the modal conditional.
+
+The populated `Replacement.profile` exposes the consequential difference.
+At false, contingent base causes and provides an existence-reason token for
+target. At true, alternative supplies that same target. Background and target
+exist in both worlds, and target has a distinct existing cause in both. Thus
+actual causation and a supplied reason do not establish the modal requirement
+needed for inheritance. Replacement is the concrete failure mechanism; the
+model establishes the formal omission, not the metaphysical possibility of
+replacement for any particular substance. Its nature field is explicitly
+empty, so it is not a counterexample to an independently validated essential
+requirement. Existing `directedNature` is reused to show the converse caution:
+necessary co-presence can hold both ways while source-indexed nature content
+holds only one way. A necessary label supplies neither direction nor reason.
+
+### A resource test that retains the rival's explanation
+
+`Contained` uses a fixed background bearer, B and derivatives d₀, d₁, ... .
+It has a separate necessary law fact L. Its two worlds are both populated by
+background. In the contingent overlay B and every dₙ exist at the actual world
+and are absent at the other; in the necessary overlay all bearers exist in both.
+The same actual predecessor, reason and record structure is used in both.
+The model imposes no variation of laws and no additional source or free
+recombination. The natural number indexes a dependence layer, not an event time:
+no temporal-birth or physical-dynamics claim is encoded.
+
+The stipulated record for d₀ uses B's existence and L; the record for dₙ₊₁
+uses dₙ's existence and L. Both are required. The certificate checks actual
+truth of the prerequisites and effects, and preservation of truth by every
+record across the accessible worlds. It also checks that the base existence
+profile fixes every bearer's existence profile. This supplies explicit
+conditional determinacy in the interpretation; the name `law` alone does
+no work. The cause and reason assignments are separately checked: every
+derivative has a proximate reason and a distinct existing cause wherever it
+exists, while B's existence fact is unreasoned.
+
+The mathematical representation uses the existing `Groups` and `FullSupply`.
+Here a group is a record of factual prerequisites, and FullSupply is inductive
+derivability from a specified resource set. No `Exercise` or new primitive
+causal relation is introduced. An inductively generated proof of derivability
+is not a demonstration of real productive power, ultimate metaphysical
+well-foundedness or explanatory adequacy.
+
+Three checks discriminate what the records actually deliver:
+
+1. **Law and background alone:** the base-dependent facts form the existing
+   `Trap`. Every admitted rule for a member still needs another member, and
+   none is an admitted initial resource. The existing `trap_obstruction`
+   excludes FullSupply for every derivative. That theorem is reused, not
+   claimed as a new general result.
+2. **Base admitted as primitive:** every derivative has FullSupply. This is
+   the strongest stopping reply represented positively. Allowing B as an
+   actual input genuinely permits all the stipulated derivations; the
+   certificate does not forbid this policy.
+3. **Resource extraction:** for any resource set S that admits no derivative
+   existence as a primitive leaf, a FullSupply derivation of any dₙ entails
+   that S includes B's existence and L. Induction follows the submitted
+   derivation. It exposes the inputs retained by substitution through any
+   finite number of layers, without asserting an opaque `Adequate` premise.
+
+The extraction excludes taking dₙ itself, or another derivative, as a primitive
+answer; that exclusion is an explicit hypothesis, not a claim that such a
+primitive is impossible. Allowing a derivative as an unexplained leaf merely
+chooses a different unaccounted input. Additional genuinely explanatory
+routes could defeat the present resource obstruction, because the admitted
+records would then differ. A brute ancestor on *one* redundant route would
+not establish a defect in every account. The `Trap` condition quantifies over
+every admitted alternative, and applicability requires the account's relevant
+alternatives and prerequisites to have been represented faithfully.
+
+Changing B's modal status to necessary leaves the actual unreasoned input and
+the same resource obstruction. Therefore neither resource incompleteness nor
+ultimate explanatory concern is identical to modal contingency. The necessary
+overlay is not an adequate necessary-nature explanation: it changes a truth
+table and adds no reason for B. The exact earlier `ReasonClosed` results remain
+unchanged. Its `covered` clause excludes brute contingent members by
+stipulation, while `nonCopy` excludes coextensive contingent reasons even in
+these fixed deterministic records. Neither clause is promoted to the general
+meaning of explanation here.
+
+### Substantive warrant and the strongest surviving reply
+
+The positive warrant is the **retention of actual prerequisites** in an account
+offered at the same explanatory scope. If deriving x actually uses B, and B
+is treated as an independent input, further derivation of consequences from B
+does not provide a reason why B obtains. The resource theorem checks this for
+one explicit family of records; the broader philosophical rationale is that
+substitution of conditional explanations cannot by itself furnish the actual
+antecedent those explanations use. The objection is directed at a claim to
+have explained actual existence without an unaccounted contingent input, not
+at predictive success or local intelligibility.
+
+Ordinary explanations support this distinction without deciding universal
+PSR. Tracing a powered instrument through an actual supply and its operating
+conditions improves an account of its operation, but does not automatically
+explain why that supply exists. Conversely, knowing the supply's ultimate
+origin is often unnecessary for the local question. The extension to an
+ultimate existence question is warranted *if that is the account's claimed
+scope* and the selected conditions really are indispensable. It is not
+licensed merely by using the same word explanation in both tasks.
+
+The strongest brute rival accepts this distinction and rejects the additional
+demand. It posits B and fixed laws as primitives, grants substantive proximate
+explanations of derivatives, and says that no further explanation of B is
+owed. Necessary laws, identity conditions, exhaustively fixed coupling and
+no later spontaneous causes can all be granted in this debate. Their success
+at restricting possibilities does not itself answer why the allowed B exists,
+but a restriction need not promise to answer that question. There is no
+deductive contradiction in this stopping policy. Its price is the expressly
+retained actual-existence question, not arbitrary chaos or a general loss of
+inquiry.
+
+The independent reason for taking the remaining question seriously is that
+the same actual contingent existence used to explain the order is still an
+indispensable explanatory input, even after the reason for the *restriction*
+is supplied. Merely moving it to the foundation changes its role in the
+derivation; it does not exhibit a reason that its obtaining is self-explanatory
+or no longer an appropriate explanandum. This supports the prior moderate
+preference for adequate existential explanation E over an unexplained
+exception, while preserving direct and primitive warrant as legitimate
+options. It does not establish that every contingent being must receive an
+external productive cause, or that a necessary fact by itself answers why.
+
+The comparison is symmetric. A personal necessary source, an impersonal
+necessary source and a necessary physical base each must supply whatever
+actual relevance and exercise their proposed explanation claims. A word such
+as necessary, personal or primitive does not satisfy that burden. Likewise,
+neither side is required to derive every basic commitment indefinitely.
+Stopping can be defended by substantive content, actual practice or a
+successful comparative account; simple relabelling or the demand for a
+preferred conclusion is insufficient. This slice ranks no whole worldview
+and does not use tallies of unexplained facts as a score.
+
+### Connections, rejected routes and next test
+
+The destination is the same-world existence PSR for contingent beings,
+`608a262d-08fe-4dfd-9413-67e2ecf35b84`. The registered argument
+`a8823bd2-a474-4aeb-be9d-1a68fab09c0c` and result
+`7bf9cb77-0418-4363-9298-266eac105edd`
+(`esseCauseFromExistenceReasons`) combine that coverage with BX1 and BX2
+to B2 `8a8d00e9-12b6-4cf0-b662-431cc4addd49`. The First Way application
+`8cc169e3-7e88-48b1-b542-a6fdaaf8d41b` retains the same mover, its actual
+existence, B1 and the required priority bridge B3. This batch does not replace
+those hypotheses or introduce a new registered edge to them.
+
+The missing connection is precise. One must justify the existential
+explanatory demand over the relevant contingent bearers, relate the relevant
+adequate existential reasons to #312's tokens on the same ontology, and retain
+BX1/BX2 to infer a distinct esse-cause. Actual-resource closure can constrain
+an account *offered as complete*, but the theorem does not say every actual
+being has such an account. Nor does modal absence produce a reason token.
+These are **OPEN** application and coverage questions, not missing Lean
+proofs of a consequence already supplied by the certificate.
+
+C2 `6508c239-b36d-4010-b9e4-ff0cdd5757e5` remains compatible with the
+distinctions here: an actual contingent bearer may be receptive or have a
+prior distinct cause of esse while that cause's own obtaining remains
+unexplained. This is conceptual compatibility, not a newly certified joint
+model of C2 and the contained interpretation. Modal co-requirement,
+`DependsForBeing`, receptive potency and productive esse-causation remain
+different predicates. No inference to C2 or rejection of C2 is registered.
+
+Rejected routes were (a) reusing `ReasonClosed.covered` as if it independently
+excluded brute stopping; (b) inferring possible absence from determinism in
+the forward B-to-x direction; (c) calling every derivative individually
+brute; (d) reading FullSupply as actual causal production; (e) taking a
+necessary-law label to explain actual existence; (f) importing recombination
+or an empty comparison world; and (g) reproducing the general trap theorem
+under a new name. The new results instead expose the exact modal direction,
+shared witness, actual resource and permitted primitive stop.
+
+**Next discriminating test:** take a concrete proposed ultimate account of the
+same actual bearer, identify its full actual prerequisite set, and ask whether
+an allegedly independent explanation answers why those prerequisites obtain
+or only redescribes their permitted role. A real alternative route with
+independently warranted actual relevance can remove the obstruction; a
+defensible criterion admitting the actual contingent base as an adequate
+ultimate stop can change the comparative judgment. An unreasoned base's
+compatibility with fixed deterministic laws alone answers neither test.
+For modal inheritance, revise the application if the same target can exist
+with a replacement source, if its identity changes, or if the claimed
+foundation-absence world is not admitted. No further logical pressure on the
+unrestricted PSR follows without the coverage bridge.
+
+### Theorem bindings and claim/type self-sweep
+
+| Result | Exact bound proposition |
+| --- | --- |
+| `5acaabc5-4b22-4876-8243-ec7d3dbf0424` — `absenceInheritance` | `AbsenceInheritance`: four universal conditional statements with actual existence, fixed identities, common accessibility and the explicit essence bridge where used. |
+| `af8321b9-2bc0-4514-b3c7-e8ee6913da1c` — `resourceInheritance` | `ResourceInheritance`: the two explicit modal overlays, actual and truth-preserving records, per-derivative reasons/causes, trap obstruction, primitive-base positive control and extraction from every derivation without derivative primitive leaves. |
+| `360411ab-e8a1-43fe-9ecd-045f2fd382af` — `replacementBoundary` | `ReplacementBoundary`: actual contingent cause/reason source, same necessary target, populated alternative world with another existing cause, failure of modal requirement, and the exact earlier directedNature asymmetry. |
+
+The Challenge was frozen before the proofs at SHA256
+`2cae43951da3f22fd78f8ffeeee701d7fae5958bfb8cfdc6bb9f64386be202c5`.
+All three theorems compile under the supplied pinned Lean environment with
+no warnings, and Lean reports that each depends on no axioms. Their Comparator
+configurations permit zero axioms. Integration
+owns canonical binding, Comparator and NanoDa checks; development compilation
+is not advertised as completion of those gates. The batch regenerates without
+changes, its three sense preflights pass, and offline corpus validation passes
+with the repository's existing warning-mode backlogs.
+
+Self-sweep: no historical assertion is added; no individual-to-joint modal
+shift is hidden; actual existence and bearer identity are explicit; the
+replacement world is populated; both resource policies and the absence of
+temporal events are disclosed; the necessary overlay is not called adequate;
+the prior exact modal requirement and trap proof are reused; philosophical
+warrant is separated from theorem consequence; the root and C2 connection
+plans remain OPEN. Intended root-premise effect: no discharge and no new
+registered support route. The coordinator's computed frontier delta records
+the actual integrated effect.
+
+
+## Restricted bruteness: local success versus exact-order explanation (2026-11-25)
+
+**Historical checkpoint, included in the #1968 qualified publication review recorded at 3186a2b205aa1149be61378c6faf9ace0d2a5e5e.** Continuation of
+#1872, #1908, #1910, #1927 and #1933 at
+`e5dd8243c5690f5d9255a509da00111cbdc36c8e`. This is an analyst formulation,
+not a new registered result or a change of the reviewed judgment above.
+The question is narrower than the general trap theorem: which explanandum
+does the strongest contained rival actually answer? Grant necessary immutable
+laws, a restricted ontology, reliable cognitive processes and exactly one
+brute contingent bearer at actuality. Grant substantive local explanations,
+not just labels on arrows. Do not assume recombination, a new coupling, an
+empty world, or arbitrary law variation.
+
+### Four distinct explanatory questions
+
+Fix actual contingent B, actual derivatives D, and a fixed description L of
+the necessary restrictions. The actual existence fact of B is b. Distinguish:
+
+| Question | What would answer it? | Contained rival's position |
+| --- | --- | --- |
+| Why does a particular derivative exist, given B? | Actual production or another adequate local reason | Granted |
+| Why is the order structured and governed in this way? | Constitutive and law-level explanation of its organization | Granted to the extent L supplies it |
+| Why is a foundational role occupied at all? | Explanation of role occupancy, not necessarily this occupant | May be necessary; not assumed brute |
+| Why does this actual order, including B and its dependent members, obtain? | An adequate actual answer covering the actual existence of B as well as what follows from it | No answer for b by stipulation |
+
+The last question concerns a plural or conjunctive explanandum, not an
+additional concrete being. There is no need to count an extra brute entity.
+Even if all derivative existence facts are explained by B, and the
+conjunction of them is explained by the very same B and L, those answers
+need not explain b. The deficiency is inherited in the scope of the
+unconditional answer, not multiplied into independent failures of the
+individual explanations.
+
+**Minimal scope principle (OPEN as an application):** an account advertised
+as an adequate explanation of the actual existence of all members of a
+specified order, including B, must provide an adequate answer for B's
+actual existence, whether directly or through a genuinely explanatory
+whole. This is a scope-of-question requirement, not unrestricted
+conjunction elimination for a generic explanation relation. Explaining a
+pattern, an existentially quantified role, a distribution, or the
+existence of at least one member does not commit one to explaining each
+member. A structural explanation of a balanced distribution, for example,
+can leave the individual allocations open. Such a weaker explanandum
+cannot silently substitute for the explicitly inclusive existence
+question.
+
+**Non-borrowing test (OPEN as a metaphysical application):** when an account
+uses b as an unaccounted actual prerequisite, its consequences cannot
+supply the missing answer merely by being derived from b. This does not
+ban every holistic, constitutive, or reciprocal explanation. It rules out
+treating the same unaccounted input as if its obtaining had been supplied
+by the conditional derivation. If a holistic reason really explains B
+without the relevant borrowing, the brute stipulation for B has been
+withdrawn. If the whole is itself an unexplained contingent input, a
+further deficit arises when the demand covers the whole or requires
+an answer for every indispensable input. A brute non-being fact
+would not by itself falsify the being-level PSR; inspect the domain before
+drawing that conclusion.
+
+The argument is thus:
+
+1. B is an actual contingent member of the selected order and has no
+   adequate actual existential reason (the rival's grant).
+2. The question is the actual existence of the order including B, not just
+   its conditional functioning or generic instantiation.
+3. An adequate answer to that explicitly inclusive question must answer
+   B's actual existence, possibly through an adequate whole-level reason.
+4. Therefore this rival has no adequate answer to that inclusive
+   question. It may have excellent answers to the other three.
+
+Step 3 makes the conclusion partly conceptual; the substantive
+philosophical work is in whether the question is legitimate and worth
+answering, and what qualifies as an answer. It does not demonstrate that
+the question *must* have an answer in reality. Compare the exact
+`resourceInheritance` certificate (specs/existential-inheritance.toml),
+which proves a prerequisite obstruction under a particular inductive
+resource policy, not this unrestricted philosophical principle. Do not
+promote this argument to a new Lean theorem by defining completeness as
+the conclusion.
+
+### Direct warrant, and the rival's strongest reply
+
+A reason to ask about b is not simply that it is contingent. Its actual
+existence is precisely what is used to explain the rest of the order.
+An account of why the order is actual that leaves that very actual input
+unanswered leaves a specific part of its announced explanandum
+unanswered. Ordinary cases distinguish a fully adequate local account
+of a machine's operation from the different question of why there is
+that machine and supply. The distinction warrants the scope test, not a
+universal causal principle.
+
+The rival can reasonably restrict its explanatory ambition: foundational
+existence is an ontic primitive; derivative existence and lawful structure
+are explained. A directly warranted distinction between fundamental and
+derivative kinds could justify treating different explanatory questions
+differently. There is no contradiction unless it also claims that its
+explanation covers B's actual existence, or endorses a genuinely uniform
+ontic demand which applies to B. This is not merely a hypothetical
+objection: the populated replacement and primitive-resource controls
+already witness the difference between local coverage and the stronger
+supply/coverage condition in their respective formal interpretations.
+
+For the question that includes this very B, a competing account gains an
+advantage if it supplies an adequate reason for b. Replacing B with a
+necessary source leaves that question unanswered. Replacement can be
+compared on a different question: why do these same derivatives exist?
+That comparison requires their identities and dependencies to be preserved.
+Where D0 essentially depends on B0, replacing B0 also loses D0. Neither the number of explained facts nor
+the word necessary makes that alternative adequate. Direct, conceptual
+or cumulative warrant for a primitive restriction is compatible with
+leaving the actuality of its contingent occupant unexplained; an
+epistemically justified theory is not automatically a theory that gives
+the desired ontic reason.
+
+### Immediate root-facing connection and limit
+
+The target `608a262d-08fe-4dfd-9413-67e2ecf35b84` is the local #312
+reason-token existence PSR for *all beings contingent at the selected
+world*, not the adequacy or whole-order thesis. Its exact definition is
+`BruteContingencyParity.NoBruteContingentExistenceAt`. The rival falsifies
+it only when B has no token, rather than merely lacking a reason that
+meets a stronger adequacy standard. A positive argument still needs both
+a warrant for existential reason coverage and the interpretation/domain
+bridge to that predicate. The existing `esseCauseFromExistenceReasons`
+result `7bf9cb77-0418-4363-9298-266eac105edd` additionally requires BX1
+`6c6191dc` (no same-bearer reason for a contingent's existence) and BX2
+`0e44041e` (other-bearing reason source causes its esse) to reach B2
+`8a8d00e9-12b6-4cf0-b662-431cc4addd49`. Do not infer either bridge from
+scope completeness or from reason-token availability. The First Way
+same-mover application `8cc169e3` retains its own B0/B1/B3 and fixed
+witness conditions. Necessary impersonal sources remain live rivals.
+
+No new statement, result or registered graph edge is introduced. Intended
+premise effect: none. The existing accepted-qualified moderate preference
+for E and suspension about universal D are retained, not superseded.
+The next test is the strongest role/occupant restriction, including
+necessary occupancy, self-application and the effect of granting perfect
+epistemic reliability. This is a proposed continuation, not an independent
+semantic review of its own claims.
+
+
+### Checkpoint 2: necessary occupancy, exemption and epistemic selection
+
+A restricted-foundation rival can make the **role** necessary without
+making this occupant necessary. Reuse `RestrictionBoundary` in
+`specs/contained-selection.toml`: invariant necessary truth-vector
+conditions cannot determine a represented genuinely contingent fact.
+Here the additional issue is which kind of knowledge of the occupant
+is compatible with essential dependence. The following finite
+structural surrogate makes the commitments explicit.
+
+| World (both accessible from actuality) | Actual contingent bearers in that world | Local existence-reason and cause assignment | Inquirer |
+| --- | --- | --- | --- |
+| w0 (actual) | B0, D0 | B0 gives D0; B0 has no reason or cause | D0 |
+| w1 | B1, D1 | B1 gives D1; B1 has no reason or cause | D1 |
+
+The signatures of the four bearers are fixed, including their
+distinct identities. The invariant constraints at both worlds are:
+exactly one B occupies the foundational role; exactly one D exists;
+each D_i exists iff its own B_i exists; the existing B_i supplies
+the local reason and distinct cause of D_i. No other contingent
+being exists in either world. Treat these as stipulated necessary
+constraints in the two-world interpretation, not as an actual
+metaphysical ontology. The assignments stipulate candidate reasons,
+not independent evidence of their causal adequacy. The abstraction
+does not encode temporal events, complete physical laws or actual
+psychological reliability.
+
+The generic role is occupied in both worlds; a complete necessary
+restriction may guarantee that much. B0's actual existence remains
+undetermined by that restriction, even though the selected B0 is
+indispensable for D0. Strengthening the restriction to require B0 in
+every accessible world removes B0's contingency. Strengthening it
+only to require B0 whenever the role is filled either has that same
+effect (if occupancy is necessary), or permits a vacancy witness.
+A rule identifying a unique permitted occupant conditional on a
+contingent condition merely moves attention to that condition; if it
+is itself actually adequately explained, this can be a real
+explanatory advance. Necessary role restrictions can provide partial,
+structural or conditional explanations; the existing necessary-basis
+result rules out determination, not every kind of nonnecessitating
+explanation by a necessary ground.
+
+#### Self-application without equivocation
+
+Evaluate an exemption rule R: foundational contingent bearers are
+exempt from an otherwise general demand for existential reasons.
+
+- If R is necessary, a contingent-being PSR does not demand an
+  existential reason for the rule's truth. R can receive direct or
+  conceptual warrant. No regress follows just because R is primitive.
+- If R is contingent, its truth is a further contingent **fact**.
+  A fact-level PSR would address that fact; the exact target
+  `608a262d` does not quantify over facts as such. If R is embodied
+  in a contingent bearer, the being-level rule applies to that bearer
+  only under the rule's stated domain conditions. Do not infer that a
+  law, proposition or relation is a new brute being.
+- A boundary specified as "whatever has no reason" is circular
+  *as a defense of the exemption*: it classifies actual exemptions
+  by the very lack of reason that needs defense. It is not a
+  contradictory definition. A positive foundational discriminator
+  (for example priority in a specified dependence order) avoids
+  that definitional circularity. Priority alone says where a
+  dependence chain stops, not whether its terminal being is
+  intelligible by nature, has a noncausal reason, or has no reason.
+- Evidence for R may arise from observations made by derivative
+  inquirers. Their ontic dependence on B does not by itself make
+  the inference to R epistemically circular. A problematic
+  self-application needs a specified failure of calibration,
+  discriminatory evidence or inferential warrant; invoking an
+  actual truth as data is not automatically borrowing it as an
+  ontic explanation of itself.
+
+This is the strongest coherent reply to the parity argument of #1872:
+reject uniformity across a relevant foundational/derivative
+distinction and give a positive criterion for that distinction.
+The next substantive demand is not independent proof of every
+primitive. It is whether the actual feature that differentiates the
+two classes supplies reason for *waiving* the existence question,
+rather than simply identifying the case left unanswered. If the
+rival already demands an ontic reason for another target sharing
+its own claimed relevant feature, the existing parity result
+`6e7f5afd` applies under its precise uniformity and shared-feature
+premises. A newly invented feature is not automatically relevant,
+but a genuine discriminator is not excluded by logic.
+
+#### Epistemic result and its exact boundary
+
+Keep cognitive rules invariant. Give D_i a reliable identity
+observation returning its own index i and a decoder that reports
+B_i as its foundation. The decoder is correct at both worlds.
+D_i's existence can have an adequate local reason on the rival's
+own interpretation. This structural surrogate simultaneously
+preserves necessary role occupancy, one brute contingent input per
+world, local reason coverage of every derivative, and uniformly
+correct identification of the role occupant by the resident
+observer. At w0 the answer to "which base exists?" can be known
+without an ontic reason why B0 exists. Thus no universal loss of
+cognitive reliability follows merely from the stipulated lack of a
+foundation reason. It is a control on an inference, not a proof
+that the entire rival metaphysics is possible.
+
+Now remove only the index from the *specified observation*,
+leaving the common signal "a foundation is present." No
+role-only decoder of that observation has the correct occupant
+identity at both worlds. This is the existing observation-fiber
+principle (see #1933's `InitialHistoryAuthenticity`), applied to
+role identity rather than a new history theorem. Its consequence
+is limited: no uniformly exact decoder of this one observation.
+It neither falsifies actual-world reliability nor removes other
+warrant, and it compares observations of different resident
+inquirers. A stronger claim about the same inquirer would require
+a common observer witness compatible with the essential-dependence
+premises.
+
+There is also an important positive screening control. Conditioning
+on *the actual inquirer D0 exists* removes w1, because the actual
+inquirer's own essential dependence requires B0. Correctly knowing
+that one is D0 and knowing that dependency can therefore identify
+the foundational occupant. Generic observer existence, present in
+both worlds, does not do the same work. This is not unrestricted
+anthropic reasoning: identity and the essential dependence are
+explicit, and the conditioning does not provide an ontic reason
+for either D0 or B0. Essential dependence can reduce epistemic
+underdetermination even while the actual existential question
+remains unanswered.
+
+For a probability-based inquiry, give the two accessible worlds
+positive prior weights p and 1-p. The role-only observation has
+likelihood 1 in each world; its posterior for w0 is p. A stipulated
+actual-identity observation D0, with likelihood 1 at w0 and 0 at
+w1, makes the posterior 1 when p is positive. The role-only signal
+therefore supplies no update to the occupant odds; any claimed
+calibrated probability needs some other warranted distribution
+or information. No principle here asserts that metaphysical
+alternatives have an objective probability, a natural uniform
+prior, or an actual frequency of foundational draws. There is no
+universal defeater for inquiry. An additional epistemic cost is
+conditional on an actual inquiry needing to distinguish admitted
+possibilities whose relevant evidence does not distinguish them,
+and on the absence of other relevant warrant.
+
+The exact finite assignments and rational arithmetic were checked
+with the following standalone Python diagnostic (not a Lean
+certificate or a repository corpus check):
+
+```python
+from fractions import Fraction
+worlds = {0: {"B0", "D0"}, 1: {"B1", "D1"}}
+reasons = {0: {("B0", "D0")}, 1: {("B1", "D1")}}
+bases, derivatives = {"B0", "B1"}, {"D0", "D1"}
+for w, entities in worlds.items():
+    assert len(entities & bases) == len(entities & derivatives) == 1
+    for i in range(2):
+        b, d = f"B{i}", f"D{i}"
+        assert (b in entities) == (d in entities)
+        if d in entities:
+            assert (b, d) in reasons[w]
+        if b in entities:
+            assert all(t != b for _, t in reasons[w])
+    assert all(s in entities and t in entities for s, t in reasons[w])
+    assert all(any(x not in other for other in worlds.values())
+               for x in entities)
+    assert next(iter(entities & derivatives)).replace("D", "B") == next(
+        iter(entities & bases)
+    )
+assert all(not all(guess in e for e in worlds.values()) for guess in bases)
+assert [w for w, e in worlds.items() if "D0" in e] == [0]
+for p in [Fraction(1, 10), Fraction(1, 2), Fraction(9, 10)]:
+    prior = {0: p, 1: 1-p}
+    assert prior[0] / sum(prior.values()) == p
+    assert prior[0] / sum(prior[w] for w, e in worlds.items() if "D0" in e) == 1
+```
+
+The diagnostic checks the stated assignment and decoder at the
+two worlds and three sample positive priors; the general
+probability identity above follows by the displayed algebra. The
+reason pairs are also the stipulated cause pairs in this
+surrogate; they are not a new mechanistic causality certificate.
+No semantic challenge or formal certification is implied.
+
+### Checkpoint 3: matched comparison with nonnecessitating explanation
+
+The following is a proposed discriminating comparison, not an
+assertion that a rational or impersonal necessary source has
+already been shown to exist.
+
+| Account | Actual recipient existence | Why this source exists | Why this particular exercise/outcome obtains | Remaining issue |
+| --- | --- | --- | --- | --- |
+| Restricted brute contingent B | Granted adequate local production | No adequate reason for B by stipulation | Laws plus B may determine all derivatives | Inclusive actual existence remains unanswered |
+| Necessary impersonal direct producer | If actual adequate production is supplied | Requires warranted intrinsic intelligibility, not a necessity label | Actual nonnecessitating production may be a legitimate stopping point; full contrastive determination not granted | Actual productive relevance and adequacy |
+| Necessary rational direct producer | Same actual production standard | Same source-intelligibility standard | If actually operative, intelligible reasons for this production can explain it without determining a unique permitted outcome | Same-source practical-content bridge and adequacy |
+
+The difference between the first and the other two is not
+that one account has a contingent fact and the others have none.
+It is whether the actual contingent **being** has a genuinely
+explanatory source. The prior `ExerciseComparison` control already
+shows that deleting the reason for an act-fact can preserve
+being-level existence-token coverage. Do not read that as showing
+that a token is adequate. A contingent act may not itself be a
+being; if it is a being in the selected ontology, it must be
+included in the being-level comparison. If the exercise is a separate
+fact, explaining the existence of every member does not by itself
+require explaining why that exercise occurs. A demand covering the
+exercise, or every indispensable input fact when the exercise is such
+an input, does require an answer. This applies equally to a necessary
+producer's contingent exercise and a primitive application fact.
+A direct exercise need not
+be the effect of an earlier choosing event, but labelling it
+"direct", "free" or "rational" does not provide its positive
+explanatory warrant. A reason explaining actual selection need not
+uniquely determine it, whereas a reason that is just compatible
+with any output, or reconstructed after the output, need not
+explain the selection at all.
+
+**Proposed test of nonnecessitating explanatory relevance.**
+Use an independently specified practical content that supplies
+a positive reason for the actual outcome (e.g. a definite end and
+a feasible means that realizes it). Verify that the very
+exercising source apprehends that content, that the content is
+actually operative in this productive episode, and that the
+outcome nonaccidentally realizes it. Compare to the same source
+with the same available content and output, but independent
+production and merely retrospective recognition of the end.
+The availability, matching or retrospective recognition of
+content is not enough. This is a test of an actual explanatory
+relation, not a demand that the content necessitate the outcome.
+A blind impersonal producer can meet productive adequacy without
+meeting the purposive criterion; an impersonal teleological
+proposal may challenge the criterion's allegedly personal
+interpretation. Compare its positive mechanism at the same
+scope; do not rule it out by definition. This narrows application
+of the existing #1933 productiveCut/outputBypass and #1941
+rational-power exercise result; the strong-simplicity realization
+of an operative content remains OPEN.
+
+**Provisional synthesis (unreviewed; prior accepted judgment
+unchanged).** The strongest rival can confine the lack of local reasons
+to its foundation in the displayed interpretation and may contain epistemic
+underdetermination. It cannot answer the inclusive actuality
+question while insisting that its included B has no adequate
+existential reason. A necessary source would improve the answer to that question if
+it adequately explains this B. A source proposed in B's place
+can compete on the derivative order insofar as it preserves the
+derivatives. Neither comparison turns on a count of reasons.
+The prior moderate preference for E and suspension about D
+remain appropriate. No unconditional contradiction,
+epistemic self-undermining, unique personal source, PSR or B2
+has been demonstrated.
+
+**Next discriminating bridge:** assess a positively specified
+fundamentality criterion in the existing B2 rival
+`b36104ba`: is the criterion itself a genuine warrant for
+treating contingent existence as an eligible explanatory
+primitive, or does it only identify where production terminates?
+A concrete criterion of actual self-intelligibility might
+defeat the comparative objection or strengthen the move to E;
+its interpretation must then be connected to the #312 reason
+tokens without assuming BX1 or BX2. In parallel, the outstanding
+operative-practical-content question remains as stated in #1933.
+Reopen the epistemic objection only for an identified inquiry
+whose admitted alternatives, evidence equivalence and lack of
+other warrant are supplied.
+
+**Self-sweep:** no unrestricted recombination or arbitrary
+behavior assumed; no claim about same-observer alternative
+histories from a role-level control; fixed identities and
+populated worlds; role occupancy distinct from occupant;
+necessity distinct from adequacy; observed truth distinct from
+ontic reason; rules/facts distinct from concrete bearers;
+asymmetric explanatory demands rejected; no new source
+attribution, result, definition, or registered edge; no
+supersession of a reviewed judgment. Independent challenge
+and hosted validation remain pending.
+
+
+### Checkpoint 4: a narrower root-facing burden and fundamentality test
+
+The existing B2 proof uses a universal premise; the downstream proof uses
+only its instance for the same first mover. Inspect the actual
+`firstMoverNecessaryByEsseCause` Solution:
+`TruthCore/Results/Causality/FirstMoverNecessity/Solution.lean`. It obtains
+f from `hThere`, obtains actual existence via B0, carries pure act, then
+for any accessible v in which f is absent invokes
+`hCause f ⟨hfw, v, hv, h⟩`. B3 converts the resulting distinct esse-cause
+into simple priority, and B1 makes that cause identical to f, contrary
+to distinctness. Excluded middle supplies existence at each v. There
+is no invocation of B2 for another bearer.
+
+A candidate weaker bridge for this specific route (analyst formulation,
+not a registered or independently verified theorem) would replace
+`hCause : ContingentHasDistinctEsseCause F w` by the hypothesis
+
+```lean
+hCauseForMover :
+  ∀ f, IsFirstUnmovedMover MovedIn F.MovesIn f →
+    ContingentAt F.history.ontic w f →
+    ∃ c, c ≠ f ∧ F.CausesIn c f F.esse
+```
+
+with the identical other premises and conclusion. The proof would use
+`hCauseForMover f hf ⟨hfw, v, hv, h⟩` in the one line above. This
+is a proposed strength restriction of the existing result, not a
+new proof of B2 or a claim of novelty. The actual declaration
+signature of `IsFirstUnmovedMover` and the existing related,
+novelty and semantics dossiers must be checked locally before
+registration. If already present, reuse it. The analogous
+restriction of the PSR/BX1/BX2 reasoning need only cover reasons
+for the same contingent mover, and must retain the distinction
+between the existence-token predicate and adequacy. B0, B1, B3,
+excluded middle, existence of a first unmoved mover and the pure-act
+premise remain as in the existing theorem. This does not identify the
+rival's B with f.
+
+This restriction has a substantive methodological implication. In
+comparing the first mover with a brute ultimate source, it is not
+necessary to prove that every contingent entity in every ontology
+has an adequate existential reason before examining why the relevant
+candidate first mover would have one. But the exemption is precisely
+what the rival claims about that candidate. A scope reduction may
+therefore reduce irrelevant commitments without resolving the
+disagreement.
+
+Consider the following positive candidate criteria for a primitive
+existential stop, instead of defining the foundation as just
+whatever lacks an explanation.
+
+| Proposed criterion | What it contributes | What would be needed for the actuality question |
+| --- | --- | --- |
+| Dependence-priority or no productive predecessors | Identifies a terminus in the selected order | The implication from that priority to eligible existential primitivity; noncausal reason or an independent intrinsic account is not yet excluded |
+| Invariant intrinsic constitution, if the bearer exists | Explains or fixes constitution conditional on the bearer | An actual existentially relevant reason, not just a conditional description of the bearer |
+| A uniquely possible bearer of a necessarily occupied role | Gives necessary existence of the same bearer, if uniqueness is rigid and all accessible worlds are covered | Warrant for the rigidity and necessary occupancy; necessary existence alone is still not an adequate why |
+| Intrinsic self-intelligibility not borrowing actual existence | Could directly answer the existential question | Content and warrant of the nature-to-existence relation; this is incompatible with stipulated complete absence of a reason, but not by definition with nonnecessitating explanation |
+
+This identifies a more precise burden than "why is the foundation
+fundamental?" If fundamentality supplies an adequate existential
+reason, the proposed rival is no longer brute in that sense.
+If it supplies a principled license for not seeking such a reason,
+the rival can retain bruteness without contradiction; the license
+must be evaluated as a methodological or ontological claim in its
+own right. If it supplies only a terminus label, it does not
+settle either question. Direct warrant for a stopping criterion
+remains a legitimate option. No demonstrated contradiction follows
+from dependence-priority and modal contingency alone.
+
+This also isolates BX1 and BX2 rather than smuggling them into E.
+A productive self-explanation by an already actual bearer is
+problematic as an explanation of that very actuality: if it needs
+that actuality as an unaccounted input, the non-borrowing test
+applies. A constitutive reason explaining a bearer's intrinsic
+profile may be perfectly adequate for the profile without
+explaining why the bearer exists. A nature that entails the
+bearer's existence at every accessible world would remove its
+contingency, given the relevant warrant and modal interpretation.
+These cases provide reasons for a restricted no-self-explanation
+demand, but do not yet rule out every admissible noncausal,
+nonnecessitating intrinsic reason token (BX1's exact scope).
+Similarly, a reason token about another bearer need not
+automatically describe that bearer's productive giving of esse;
+BX2 remains a substantive interpretation bridge. Reason
+coverage alone supplies neither causal priority nor the First
+Way's identification conditions.
+
+The most useful next step is a scoped comparison of the
+foundation's own nature as a proposed *existence* reason versus
+a merely conditional essence, on the existing B6 and C2
+frames. Test the same bearer, not an independently necessary
+substitute; examine both direct intrinsic warrant and the
+rival's license for a brute stop. Reuse the existing
+`natureModel` in `BruteContingencyParity` and the existing
+reception/esse-identity results before creating any statement.
+No further philosophical judgment or formal status is changed
+by the proof inspection in this checkpoint.
+
+**Verification disposition:** the actual existing Solution bodies
+for `esseCauseFromExistenceReasons` and
+`firstMoverNecessaryByEsseCause` were inspected at the parent
+revision; the latter calls its universal B2 hypothesis once for f.
+The proposed restricted proof has not been elaborated or novelty-
+checked by the Truth CLI; no new Lean/corpus proof is registered.
+Keep the scoped route and both adequacy applications OPEN for
+independent semantic review and canonical verification.
+
+
+## Restricted bruteness: intrinsic reason, actual application and fundamentality (2026-11-25)
+
+**Historical #1968 continuation; its original pending disposition is superseded by the qualified publication review recorded at 3186a2b205aa1149be61378c6faf9ace0d2a5e5e.** Reuses
+#1595 and #1621's typed distinction between essential content, existence and
+intrinsic explanatory adequacy; #1872's exact B2 controls; #1933's fixed
+exercise and prerequisite controls; and #790/#1526's productive self-
+actualization boundary. See also #1638/#1810 for the separate real-distinct-
+esse and constitutive-causation applications. This slice concerns an actually
+contingent candidate foundation, not the independently necessary bearer in
+#1621. No new historical attribution or formal registration is made.
+
+### 1. The exact natureModel has a stronger consequence under soundness
+
+Fix the same bearer x throughout. The existing definition
+`TruthCore.Explanation.BruteContingencyParity.natureModel` assigns
+`(.intrinsic z)` as a reason for `(.fact x)` exactly when
+
+```lean
+z = x ∧ ¬ esseOf x ≠ essenceOf x
+```
+
+The world argument is ignored, and `essenceOf` and `esseOf` are world-free.
+This definition alone is not evidence of adequacy. The separately existing
+`ExistencePSR.Sound` requires an assigned existence reason to imply actual
+existence in its world. Their combination has a precise consequence:
+
+1. Grant `¬ esseOf x ≠ essenceOf x`, at the same x.
+2. The intrinsic token explains x at **every represented world** by the
+   definition of natureModel.
+3. Soundness then gives x's existence at every represented world, hence
+   `NecessaryAt` relative to any selected accessibility standpoint.
+
+Proposed unelaborated Lean check (use the existing namespaces, not a new
+model or corpus record):
+
+```lean
+theorem ownNatureNecessaryOfSound {W B T R P : Type}
+    (F : CausalityFrame W B T R) (essenceOf esseOf : B → P)
+    (hSound : Sound (natureModel F essenceOf esseOf))
+    (x : B) (hIdentity : ¬ esseOf x ≠ essenceOf x) :
+    ∀ v, F.history.ontic.ExistsAt v x :=
+  fun v => hSound v x (.intrinsic x) ⟨rfl, hIdentity⟩
+```
+
+In particular, for an actual contingent x, an equality
+`esseOf x = essenceOf x` would yield the contradictory existence at its
+absence witness. Thus the combination gives
+`FirstMoverNecessity.ContingentHasDistinctEsse` (B6) constructively:
+assume equality and use the witness. This is a consequence of the strong
+global application assigned to this token, **not an independent proof
+of real essence–esse distinction**. Global soundness for this specific
+model effectively assumes that the world-free nature condition has the
+required existential import. The existing #1872 B2SupportControls already
+relates BX1 and B6 for natureModel; this draft does not claim a novel
+registered implication.
+
+Compare its existing model 2: `reasonModel bruteFirst selfNature`
+assigns own-nature tokens independently of world even to the contingent
+first mover. It satisfies the selected-world token coverage and fails
+BX1/B2; it **does not satisfy global Sound**, since true (the mover)
+is absent at world false. The original certified control does not assert
+Sound. Strengthening that exact assignment with Sound is therefore not
+legitimate. A repair is to gate the same token by `ExistsAt w x`.
+This preserves selected-world coverage, failure of B2 and factivity
+of the existence reason, but now the reason is admitted exactly in
+the worlds that contain its bearer. This restores a structural surrogate,
+not a substantive intrinsic explanation. The gate itself uses the very
+existence question as an input.
+
+### 2. A weaker modal restriction than general explanatory necessitation
+
+Let m be any existing #312 reason model, x a selected actual contingent
+bearer and w the selected world. Restrict attention to **one reason token**
+r, which explains x at w. Two conditions suffice to exclude an accessible
+absence of x:
+
+- Soundness at the worlds in question.
+- Transport of this particular explaining relation from w to every
+  accessible v: `m.explains w r (.fact x) → m.explains v r (.fact x)`.
+
+Apply transport at the absence witness and use Sound. No universal
+necessitating-PSR law, S5, external cause or complete fact coverage is
+needed for this local deduction. It is a consequence of soundness
+and an invariant edge, not a proof of the transport premise. A
+reason's *content* being necessary, fixed, or essential is not the same
+as the actual explaining relation persisting. For a purely nature-based
+account, positive warrant for transport would be that the stipulated
+reason's entire relevant basis is identical and no changing application
+condition participates in the explanation. That warrant is stronger
+than knowing that the kind's definition is rigid. The previous
+RestrictionBoundary result covers the corresponding determining
+truth-vector test. The present check isolates the narrower exact
+reason-edge commitment and its interaction with target soundness.
+
+A sound nonnecessitating account must, at an accessible absence
+witness, withhold this edge while retaining the content if the content
+is necessary. It need not change the identity of the nature or source,
+or posit a new contingent being. The interesting question is **what
+makes the reason actually explanatory here**, rather than a possible
+reason in all worlds. The existence of an actual application relation
+does not itself establish that it is an independently obtaining
+explanatory fact or a productive act. There is no automatic demand
+for another choosing event.
+
+### 3. Same truth profiles, different explanatory directions
+
+The following matched finite diagnostic uses a populated two-world
+frame. Actuality contains Q and B; the other world contains Q only.
+Q is necessary and B is contingent. Fixed necessary nature content n
+is true in both worlds. A separate represented fact a is true exactly
+where B exists, as is b (the existence fact of B). The q fact records
+Q's existence. No other being is introduced; n and a are represented
+facts, not additional bearers. Each comparison has the same truth
+profile and varies only its admitted fact-level explanation edges.
+An arrow goes from reason to explained fact. All edges listed below
+occur only at actuality; the alternative world has no edges.
+
+| Variant | Actual edges | b covered? | a covered? | Cycle? | Necessitating? |
+| --- | --- | --- | --- | --- | --- |
+| Brute stop | none | no | no | no | vacuously yes |
+| Borrowed application | b → a, a → b | yes | yes | yes | yes |
+| Primitive application | a → b | yes | no | no | yes |
+| Direct nature reason | n → b | yes | no | no | no |
+| Nature explains application | n → a, a → b | yes | yes | no | no |
+
+All five are factive in the exact `PSRStrength.Factive` sense at
+both worlds. The last column uses its `Necessitating` predicate:
+an edge's reason true at an accessible v must entail truth of its
+target there. Neither direct nonnecessitating variant meets that
+predicate. The graph-theoretic cycles here are fact-level; they are
+not a test of a concrete bearer-level cause or the full `FullSupply`
+certificate. The q and n facts have no admitted reasons in every
+row; no row claims unrestricted fact PSR. The last row covers the two
+contingent facts in this represented inventory at actuality. No
+explanation graph itself proves that its assigned edges are adequate.
+
+This comparison tests the strongest repair, rather than defining
+every coextensive reason to be circular. Modal co-obtaining of a and b
+is compatible with either direction or both. A substantive constitutive
+ground could be prior without being modally separable. To exclude
+the borrowed variant one needs a real same-sense dependence
+`b → a` and a noncircularity standard, not just b iff a. This
+preserves the concern about #790's explicit productive-priority
+hypotheses: an owned productive exercise that requires the whole
+bearer's own actuality cannot then give that actuality under the
+same strict priority relation. A nonproductive nature-fact is not
+automatically such an exercise.
+
+The **primitive application** row allows a reason for the existence
+of B without another being producing B. If the application is an
+unexplained contingent fact, a demand expressly covering a, or all
+indispensable input facts when a is one, still has an unanswered input.
+A demand for the existence of every member covers b. If a adequately
+explains b, it answers that part of the demand even while a remains
+primitive. The displayed ontology treats a as a separate fact. The
+same distinction applies to a necessary producer's contingent exercise.
+Conversely, the nature-explains-application row shows why even the stronger represented contingent-fact coverage
+does not, by itself, force necessitation. A positive nonnecessitating
+intrinsic ground remains a live proposal. It would require actual
+relevance and direction, not an assertion that a fixed conceptual
+description has somehow selected the actual outcome. The matched
+interpretation does not settle that metaphysical warrant.
+
+The finite assignments and truth/edge tests were independently run
+as a standalone Python diagnostic, not as a registered Lean model:
+
+```python
+from itertools import product
+W = (0, 1)
+E = {0: {"Q", "B"}, 1: {"Q"}}
+valid = []
+for e0, e1 in product((False, True), repeat=2):
+    edge = {0: e0, 1: e1}
+    sound = all(not edge[w] or "B" in E[w] for w in W)
+    if sound and edge[0]:
+        valid.append((e0, e1))
+assert valid == [(True, False)]
+for identity in (False, True):
+    rigid = {w: identity for w in W}
+    assert all(not rigid[w] or "B" in E[w] for w in W) == (not identity)
+    gated = {w: identity and "B" in E[w] for w in W}
+    assert all(not gated[w] or "B" in E[w] for w in W)
+    assert gated[0] == identity
+T = {0: {"n", "a", "b", "q"}, 1: {"n", "q"}}
+cases = [
+    (set(), False, False, False, True),
+    ({("b", "a"), ("a", "b")}, True, True, True, True),
+    ({("a", "b")}, True, False, False, True),
+    ({("n", "b")}, True, False, False, False),
+    ({("n", "a"), ("a", "b")}, True, True, False, False),
+]
+for edges, bc, ac, cycle, necessitating in cases:
+    assert all(s in T[0] and t in T[0] for s, t in edges)
+    assert any(t == "b" for s, t in edges) == bc
+    assert any(t == "a" for s, t in edges) == ac
+    reach = set(edges)
+    while True:
+        nxt = reach | {(x, z) for x, y in reach for u, z in reach if y == u}
+        if nxt == reach:
+            break
+        reach = nxt
+    assert any(x == y for x, y in reach) == cycle
+    assert all(s not in T[v] or t in T[v]
+               for s, t in edges for v in W) == necessitating
+```
+
+The direct nature row is intentionally an assignment of an
+explanatory relation. It is **not** a concrete mechanism for a
+fundamental contingent being to explain its own actuality. To supply
+one, compare independent intrinsic content, actual constituents
+and nonnecessitating application against the same explanatory target.
+No identity of the fact-level nature descriptor with a #312 reason
+source is presupposed.
+
+### 4. What would make the exemption genuinely justified?
+
+The restricted rival's most promising positive policy is not
+"explain everything except my chosen base." It is a primitive
+**distinction of explanatory kinds**: positive actual beings whose
+actuality is received demand a giver; the independent actuality of
+a nonreceiving foundation is a basic principle of the theory.
+This is not identical to the modal-contingency classification. It
+can be defended by conceptual warrant for the distinction and
+independent evidence of the base's real nonreceipt. It does not
+require an independent proof of every primitive.
+
+Three standards must be held apart:
+
+- **Ontic reason:** why does this concrete B actually exist?
+- **License for primitive stopping:** is it reasonable to regard B's
+  existence as basic given the best available actual explanation and
+  theory of the relevant dependence relation?
+- **Epistemic identification:** do we have evidence that this actual B
+  really has the relevant fundamental character?
+
+No inference from lack of a producer to lack of any reason is
+valid across these standards. Fundamentality as a positive
+nonreceipt property might justify a causal stopping point, yet
+leave a noncausal why available. Conversely, epistemic evidence that
+an account cannot presently find a source does not itself establish
+nonreceipt or the impossibility of an adequate answer.
+
+Apply the test symmetrically. An intrinsic necessary nature with a
+genuine existence-conveying reason could answer the question; a
+necessary but brute source would merely remove the contingent
+counterinstance and retain the broader #312 existence question.
+The existing #1621 note tests necessary nature adequacy separately.
+A contingent nonreceiving nature could be licensed as primitive
+under the rival's policy, but that license is not itself a
+reason why it exists. If the rival grants that *all actual
+contingent existence* is received, it loses this particular
+exemption: this is the exact open contingency→receipt bridge
+(R1/C2 family), not a consequence of the word fundamental.
+
+The substantive positive pressure is now a matched scope
+comparison: consider whether an independently warranted
+nature-based explanation or productive/constitutive source
+actually answers the very same existence question, whereas
+the primitive-stop theory only answers why one need not seek
+another cause. If no adequate positive alternative is supplied,
+the latter can remain a reasonable stopping policy. If an adequate
+answer is supplied at matched scope without comparable unresolved
+inputs, it is an explanatory advantage. This is cumulative
+warrant for pursuing E, not proof that the rival is inconsistent,
+or an inference from evidence for the foundation to ontic explanation.
+The previously accepted moderate preference for E and suspension
+about universal D are unchanged.
+
+### 5. A more precise root burden: select one adequate external reason
+
+The existing `esseCauseFromExistenceReasons` proof chooses a
+reason r from the local PSR, applies universal BX1 to r, and then
+BX2. It does not logically need the denial of *every* same-bearer
+reason token. One candidate weakening of BX1, while retaining
+the existing reason PSR and BX2, is:
+
+```lean
+∀ x, ContingentAt m.ontic w x →
+  (∃ r, m.explains w r (.fact x)) →
+  ∃ r, m.explains w r (.fact x) ∧ source r ≠ x
+```
+
+This is an external-reason **availability** condition; it does
+not independently establish explanatory adequacy and, jointly
+with PSR and BX2, trivially supplies the required reason for B2.
+It is a proposed scope refinement, not independent evidence or
+a registered theorem. BX1 implies it constructively by taking the
+existing witness. The existing model 6 from B2SupportControls,
+`conserved` with `selfAndOccasion`, provides an exact control
+to inspect: the sole contingent bearer is f (true), and
+`occasion` supplies its distinct source x (false); an intrinsic
+token also explains f, so universal BX1 fails. In that original
+assignment the occurrence of such tokens at the absent world
+also violates global Sound. Gating all edges by target existence
+retains the actual-world witness and BX1 failure while restoring
+Sound; this observation does not certify the new gated control
+in Lean. No causal inference about the natural source of a token
+is warranted without BX2. If adequate constitutive reasons are
+not faithfully represented by the two #312 constructors, an
+explicit adapter is still needed.
+
+The restriction to the very mover from checkpoint 4 and the
+restriction from universal prohibition to one suitable reason
+can be combined after the related/novelty/semantics preflight.
+This lets the investigation ask whether there is one adequate
+reason of the required sort for the selected contingent first
+mover, rather than attempting to refute every candidate intrinsic
+explanation in the universe. It does not resolve the decisive
+case: a source that has no other-bearing reason whatsoever.
+
+**Next discriminating bridge.** In the actual first-mover
+case, take a candidate primitive nonreceiving actuality and
+test whether its real positive character (as opposed to the
+assertion of modal contingency) supplies an actual reason
+that does not borrow its existence. The live comparison is
+between (i) an independently characterized nature-fact with
+adequate nonnecessitating existential relevance, (ii) a
+constitutive actual ground with a specified explanatory
+direction and full actual inputs, and (iii) a nonreceipt
+stopping license which offers no such reason. Reuse #1621,
+#1810, #1638 and the C2/B6 reception results, rather than
+re-proving fixed-law or token assignment boundaries. A
+successful (i) would challenge a blanket BX1; (ii) might
+support the external-reason/CAUSE_2 bridge only after matching
+the existing senses; (iii) remains the direct rival to
+adequate existential coverage. The remaining root route is
+the existing PSR + BX1 + BX2 → B2 result, with its own
+additional first-mover premises. No closure, source
+identification, or God-existence proof is claimed.
+
+**Claim/type sweep and verification.** Actual source files,
+#1872's controls and #312's Sound/PSR definitions, plus #1621's
+prior case and exact existing downstream proof, were inspected.
+The world-free natureModel assumption, fact-versus-being scope,
+global Sound strengthening, co-truth without direction, explicit
+empty edge assignments and nonnecessitating/necessitating
+columns are disclosed. The finite diagnostic passed in the
+standalone runtime; the proposed Lean consequence and weaker
+BX1 are not elaborated or novelty-checked. No new source
+attribution or theorem registration. The later qualified semantic publication review is recorded at
+3186a2b205aa1149be61378c6faf9ace0d2a5e5e and in #1968. The proposed Lean
+extensions above remain unregistered; the standalone diagnostic does not
+confer formal certification.
+
+
+## Restricted bruteness: what limits an unreceived act? (2026-11-25)
+
+**Historical continuation, accepted with qualifications by the targeted recheck at 3186a2b205aa1149be61378c6faf9ace0d2a5e5e.** Continue
+the actual-order and intrinsic-reason checkpoints above. Reuse #1881's
+explicit R1 decomposition, the
+[unreceived whole-nature comparison](de-ente-esse-source-1628.md#unreceived-esse-and-the-two-questions-about-plurality-2026-11-17),
+[the existing C2 assessment](contingency-receptivity-c2.md), the
+[esse-root limitation assessment](esse-root-leaves.md), and #1811's
+whole-first alternative. This is the contingent-bearer slice of the
+limitation/reception question, not a new proof of uniqueness, simplicity or
+the necessity of all pure acts. No new source attribution.
+
+### 1. Separate the two bridges that #1881 already identified
+
+On the SAME world-relative bearer x, let C be actual modal contingency,
+L be the existing qualitative limitation of the act of esse
+(LIMITED_ESSE_1, definition `6ced5205`), and R be reception of that
+act in some principle. The proposed participation route is
+
+```text
+C  -- OPEN modal-to-real calibration --> L
+L  -- 1304b462 (q.7 reading, open warrant) --> R
+R  -- with scoped R3, receptive potency, irreflexivity --> B6
+R  -- with reception/CAUSE_2 coverage --> distinct cause of esse
+```
+
+R1 is the composite coverage `ContingentReceivesEsse`, statement
+`ae9d9473-34f1-4b51-8f13-41d340d64ad1`. The exact existing
+`contingentDistinctEsseFromReception` proof (`c4bc08b3`) uses
+R1, R3 (`65f3d0c7`), De ente's receiving-principle potency law
+(`7fcfcee8`) and receptive irreflexivity (`14325c83`) to derive
+B6 (`96971e31-4782-4478-95b8-b6863a6a9412`).
+A recipient is a principle, not automatically an external causal bearer.
+The separate result `8d8920ac` additionally needs
+`4bc853db` (coverage by a distinct CAUSE_2 of esse) and
+`7ce040a2` (that cause's presence at the selected world), yielding
+`2f9b4acb`; its projection `d2d55c9b` supplies B2. Neither receipt
+nor limitation alone gives the latter.
+
+A defense of L → R, even a decisive one, would **not** establish C → L.
+No degree of actual qualitative perfection is lost within x merely because
+x is absent in an accessible world; there is no x in that world whose
+qualitative grade has diminished. Conversely an actual finite grade
+need not vary or be absent in any accessible world. Do not identify
+this distinction with "non-being is a degree of being" without a real
+metaphysical calibration.
+
+The earlier `natureModel` result is a distinct route. Soundness of an
+actually adequate world-independent intrinsic existence reason yields the
+bearer's necessity. Being unreceived and having one's own stable
+intrinsic profile do not themselves supply that reason.
+
+### 2. Content for limitation independent of the reception predicate
+
+There are at least three testable meanings of a restriction. Their
+distinction matters precisely at the current frontier; none is silently
+made a new definition of `EsseLimited`.
+
+| Candidate discriminator | Content independent of receipt | Missing calibration |
+| --- | --- | --- |
+| Actual lower grade | A real, positive perfection is realized in a greater degree by a comparable actual bearer | Same respect and measure; being outdone in the selected population need not be intrinsic finitude |
+| Intrinsic qualitative ceiling | A real positive level in the relevant perfection domain is outside the bearer-kind's admissible realized range, not merely absent on this occasion | Positive characterization of the domain, real realizability of the higher level, and its bearing on formal perfection of esse rather than a particular power |
+| Existence-conditional nature | The bearer has a fixed nature whenever it exists, and it is actually present but absent at another accessible world | This is contingency plus essential predication, not an independently observed qualitative limitation |
+
+The second is the strongest candidate for investigating formal limitation
+without defining it by receipt. A mere missing property is not yet a ceiling.
+A mere ceiling on the number of effects, the length of a trajectory, a
+spatial measure or a specialized operation is not yet a ceiling on being
+as act. Treating a pure perfection as a missing element also needs the
+same-sense formal/virtual/eminent distinctions from #1855/#1949.
+See #1952's actual common-giver level comparison (`identityAscentFromCapacity`):
+its receipt ceiling, higher level realized by the same giver, and common
+degree calibration are independently required. Do not use a conclusion
+about degree as evidence that those inputs already hold.
+
+A bounded positive profile nevertheless offers a substantive rival mechanism.
+A primitive typed actuality could have positive essential determinations
+which explain exactly its range of powers. In that ontology the act is
+not a more general power externally curtailed by a recipient. The limit
+of the operation follows from what that primitive power is. The
+existential question remains: why is there an actual bearer of that
+primitive power? This is not an account of limited **esse** without
+receipt, but it explains why an inference from definite character or
+limited operation to a separate limiting principle would be unsound.
+The rival must extend its account to formal perfection of actuality
+itself, not merely to limited powers.
+
+### 3. Matched structural controls: local restriction is not modal vulnerability
+
+The following finite diagnostic extends the populated role-occupancy control
+above. At actuality world 0, B0 and its derivative D0 exist. Every world
+contains exactly one foundational bearer Bi and its essential derivative Di.
+The same fixed law requires Di iff Bi and assigns the local reason and cause
+Bi → Di. No source reason, reception or esse-cause of Bi is assigned.
+In the necessary overlay, world 1 also contains B0 and D0; in the
+contingent overlay, world 1 contains B1 and D1 instead. Identity is
+fixed, both worlds are populated, there is no independent existence of
+a derivative or variable law. Each present derivative has a distinct
+actual source. No claim about temporal dynamics is encoded.
+
+Use an independently specified two-feature comparison domain
+K = {u,v} and positive profile P(B0) = {u} or K, fixed wherever the
+same B0 exists. Give each B a fixed operation which returns the
+intersection of an input request with its profile, so every permitted
+input has a definite response. Every profile is finite. The varied
+predicate is proper-subset coverage of K, measured by which requested
+features the operation returns. The comparison domain is **stipulated**;
+its features are not certified pure perfections, its full profile is not
+metaphysical infinity, and the map of that positive profile to the
+existing qualitative `EsseLimited` is OPEN.
+
+| Profile of the same actual B0 | Occupants at 0 and 1 | Absence witness for B0? | Actual recipient of B0's esse? |
+| --- | --- | --- | --- |
+| All represented features | B0, B0 | no | none assigned |
+| All represented features | B0, B1 | yes | none assigned |
+| Proper subset of represented features | B0, B0 | no | none assigned |
+| Proper subset of represented features | B0, B1 | yes | none assigned |
+
+This is a matched non-entailment at the specified signature, not a new
+metaphysical model. Comparing rows with the same profile keeps all
+actual local behavior fixed while the absence witness changes.
+Comparing rows with the same modal overlay changes the positive
+operational coverage without changing contingency. The response gives
+no warrant for reception of the bearer's existence. Receivers and root reasons
+are absent **by construction**. If the comparison predicate were
+admitted as a real instance of L, the lower rows would violate the
+open limitation-to-reception principle; the full-profile contingent
+row would still require a bridge that makes C imply genuine L.
+Granting one bridge does not repair the other. The upper rows are
+not evidence that any concrete being possesses every pure perfection.
+
+A second control tests a positive mechanism for operational limitation.
+For all subset inputs q of K, compare the restricted-reception
+implementation `q ∩ A ∩ R`, with A=K and R={u}, to an intrinsically
+typed implementation `q ∩ P`, with P={u}. All four input probes have
+the same output. An independently specified change in R to K
+holding A fixed separates those implementations: the first now
+admits v and the second still does not. This is a discriminating
+test *if the same A and the independently alterable receiver
+are already established*. It is not evidence for either architecture
+from fixed outputs alone. An altered derivative filter may change
+observed output without changing the fundamental act's nature.
+The point is the identifiability of a positive limiting principle,
+not the assumption that the act of being is a numerical quantity,
+conserved input or transferable common stock.
+
+Reproduction (the finite checks ran in standalone Python; no registered
+Lean certificate):
+
+```python
+from itertools import product, combinations
+K = frozenset({"u", "v"})
+queries = [frozenset(s) for i in range(3) for s in combinations(K, i)]
+for limited, contingent in product((False, True), repeat=2):
+    profiles = {0: frozenset({"u"}) if limited else K, 1: K}
+    occupants = {0: 0, 1: 1 if contingent else 0}
+    exists = {w: {("B", i), ("D", i)} for w, i in occupants.items()}
+    reasons = {w: {(("B", i), ("D", i))} for w, i in occupants.items()}
+    for w in (0, 1):
+        assert len([b for b in exists[w] if b[0] == "B"]) == 1
+        assert len([d for d in exists[w] if d[0] == "D"]) == 1
+        for i in (0, 1):
+            assert (("B", i) in exists[w]) == (("D", i) in exists[w])
+        assert all(s in exists[w] and t in exists[w] for s, t in reasons[w])
+        assert all(any(s == ("B", d[1]) and t == d for s, t in reasons[w])
+                   for d in exists[w] if d[0] == "D")
+        assert all(t[0] != "B" for s, t in reasons[w])
+    b = ("B", 0)
+    assert ((b in exists[0]) and any(b not in E for E in exists.values())) == contingent
+    assert (profiles[0] < K) == limited
+    assert all((q & profiles[0]) == frozenset(v for v in q if v in profiles[0])
+               for q in queries)
+    if not contingent:
+        assert all(occupants[w] == 0 for w in (0, 1))
+A, R, primitive = K, frozenset({"u"}), frozenset({"u"})
+assert all(q & A & R == q & primitive for q in queries)
+assert any(q & A & K != q & primitive for q in queries)
+```
+
+### 4. The positive metaphysical comparison: real determinant versus primitive typed act
+
+The strongest participation argument is not that every real positive
+difference entails an added constituent. It is a claim about the
+explanatory role of **this** act: if actualization in the relevant sense
+is real and supplies actuality as such, while a genuinely different
+intrinsic determinant explains why that very actuality is possessed in
+one mode rather than another, a real distinction between act and
+determinant has explanatory content. Insofar as the determinant is a
+recipient of that act, the existing receptive-potency analysis applies.
+An independent way to identify the determinant's explanatory role, not
+just a different term used to describe the act, would support this
+analysis. For example, in a suitable independently established
+actualization mechanism, a receiving condition may delimit the same
+actualizing source while the source's wider active scope is fixed. This
+illustrates a kind of evidence; it is not by itself a demonstration
+of the real essence–esse distinction in an ultimate source. Causation
+by a giver is not numerical identity of its act with a received act.
+
+The strongest primitive-nature rival instead says that an actual act
+is intrinsically of a definite kind. The positive type explains the
+scope of its capacities without another principle delimiting an
+otherwise common act. It need not define the type by lack of a cause.
+This preserves the conceptual distinction between the question *what
+it is* and *that it is* without conceding that they mark real
+constituents. The Thomistic account has a coherent answer to why many
+different kinds are actually real; the rival offers the different
+answer that actuality is not a shared real factor separable from type.
+The logical distinction or common use of "is" cannot decide the two
+ontologies. Nor does the rival's positive explanation of operation
+explain the actual existence of its basic bearer. The proposed
+limitation-only-through-reception premise `1304b462` is therefore
+substantive, not made analytic by this comparison.
+
+There is a narrower objection against a **whole-first** variant of the
+primitive nature proposal (#1811). Suppose that the actual existence
+of a real internal mode m is existentially explained by the whole x.
+That mode may explain how x is characterized. If the rival then uses
+the actual existence of that very mode as a full existential
+ground of x, under the same asymmetric dependence relation, the
+two directions are incompatible. This is an instance of the existing
+non-borrowing and mixed-priority tests, not a new theorem or a
+prohibition of every immanent explanation. The relevant assumption
+is a real explanatory dependence on the whole, not just coexistence
+of x and m. It does not apply to independently actual constituents
+that constitute a composite from below, an autonomous essence-fact
+that does not borrow actuality, or a non-strict, nonproductive
+intrinsic explanation on a different relation. For the latter
+options the adequacy and full-actual-input question remains.
+Under the restricted variant that all internal determinations are
+derivative from x, explanatory detail about those determinations
+cannot itself be a new independent supply of x's existence.
+This sharpens which part of the strongest whole-first reply needs
+positive warrant without inferring composition simply from
+determinate character.
+
+For the contingent but genuinely nonreceiving source, two live
+accounts now remain sharply distinct:
+
+- A finite typed act, with independently warranted finite
+  character and primitive actual instantiation. It must deny
+  the reception analysis of a real limit *if* its limit is shown
+  to be at esse, rather than a limit merely in operation.
+- A source whose positive actuality is unrestricted in the
+  relevant qualitative sense, but whose possible total absence
+  is a primitive modal fact. Even if the limitation-to-reception
+  principle is accepted, this account is not excluded until
+  one explains why such possible absence requires some real
+  existential vulnerability or why the source's own actuality
+  is intrinsically an adequate, invariant existence reason.
+
+The latter is a stronger test than another finite root model:
+it isolates an alternative that does not need to deny q.7's
+limitation principle at all. A principle saying that necessary
+existence is itself a pure perfection would help only with its
+own warrant. If that classification rests on the C2 power
+account of existential vulnerability, it is not an independent
+route against denial of C2. If it rests on an intrinsically
+adequate world-invariant nature reason, it reuses the preceding
+checkpoint's applicability premise. If modal necessity is
+simply included in the meaning of "unrestricted", the alleged
+derivation is definitional. Keep actual positive perfection,
+absence of dependence, and box-existence distinct.
+
+### 5. Horizontal support and the weakest root-facing application
+
+A second way to test finite typed actuality does not ask why
+every contingent bearer is limited. Hold an actual ultimate
+giver g and one of its actual effects e fixed. Suppose e
+actually possesses a genuine pure perfection lacking in g in
+the very intrinsic sense at issue. If the existing
+causal-perfection argument can establish that this same giver
+possesses that perfection formally or in an independently
+warranted intrinsic higher mode, the candidate g is excluded
+with respect to that particular proposed limit. Compare
+#1855's containment/recognition distinction, #1949's
+productive-capacity versus possession question, and the
+existing `64498e7e`, `f8ba2429`, `d5a94eb1` frontier.
+A general power to produce the perfection is not automatically
+its intrinsic possession. The causal account must actually
+connect the source and the given effect in the required sense.
+This is a horizontal application plan, not a registered new
+edge or a claim that every actual or possible pure perfection
+is possessed by the source. If successful it restricts the
+rival's actual repertoire independently of the argument
+from contingency; it still leaves the unlimited-but-contingent
+rival. Avoid counting the same causal-adequacy premise twice
+through this and the attribute route.
+
+For the first-mover necessity question, the conditional
+participation route need only establish reception for the
+same selected f on its actual contingency hypothesis (rather
+than for every being), retaining the existing source of f
+and all other Route C inputs. The exact
+`firstMoverNecessaryByEsseIdentity` proof (`e874589f`) uses
+B6 only on that f, so the proposed localized R1/B6 application
+can proceed as follows:
+
+1. f is the actual first mover supplied by the existing
+   premises, pure act and simple on the route's existing
+   senses; assume an accessible world lacks f.
+2. Obtain receipt of f's esse from the selected-case
+   application of the two open limitation premises (or another
+   reception route).
+3. The same f's represented essence–esse identity, scoped R3,
+   recipient-to-act potency and irreflexivity exclude that receipt.
+4. The absent-world assumption contradicts the bundle; explicit
+   excluded middle gives `NecessaryAt` for this f. Carry the
+   original pure-act and actual-existence conditions.
+
+This is the proof already supplied by #1877 and Route C
+specialized to a witness, not a new certified conclusion.
+It does not require universal B2, BX1/BX2, external causal
+coverage or B3 on this route; it retains the independent
+`FirstUnmovedMoverIsSimpleReading`, existence of a first
+unmoved mover, B0, pure act and EM from `e874589f`.
+The scope refinement must be checked for existing variants
+and formalized under the canonical preflight before
+registration. The other B2 route still requires its own
+premises. Neither route identifies an independently selected
+root with this f without a same-witness bridge.
+
+**Provisional synthesis (unreviewed).** The earlier moderate
+preference for adequate existential intelligibility E,
+suspension about universal D, and C2's suspension at the
+foundational case are retained. The real act/recipient
+analysis has positive explanatory content conditional on
+its ontology, but independently characterizing a limited
+operation does not settle real limitation of esse. The
+new scope distinction shows why defending only L → R would
+not defeat the strongest rival: an unlimited yet contingently
+actual source would reject the different C → L bridge.
+Its compatibility in a structural surrogate is not proof
+of real possibility. A nonreceiving source whose finite
+typed act has genuine explanatory content could challenge
+L → R, but even a successful account of the nature's
+determination leaves the brute existence question unless
+it supplies a positive existential reason.
+
+**Absence of the unrestricted bearer.** The necessary-law test has
+already been carried out. At the same observable output, the archive
+control distinguishes a history that requires a particular parent from
+one independently constructed without it. Its writer and medium are
+supplied in both cases. At foundational scope, even reproducing every
+effect can leave n present as an idle or additional bearer. Separate
+permissions to omit individual effects do not establish their joint
+omissibility, and even their joint absence leaves n's absence open.
+The comparison retains suspension about the possible absence of this
+particular unrestricted n. [Foundational absence warrant, §12](foundational-absence-warrant.md#12-can-a-necessary-law-license-omission-of-the-unrestricted-bearer)
+
+Reopen on independent grounds for one complete realization excluding n
+even as an additional bearer, compatible with every retained dependence.
+One such realization suffices, whether populated or concrete-empty.
+In the other direction, show that a law required in every order entails
+an indispensable exercise by this very n. Required occupancy by some
+governor leaves the occupant open. Apply either result to the selected
+mover only with the same witness. In the finite-typed branch, reopen
+the limitation principle on a
+same-sense positive determination of formal esse, or an
+actual pure-perfection witness excluded from the source
+under independently warranted causal adequacy. Preserve
+the prior intrinsic-reason and PSR/B2 adequacy questions
+and #1933's separate operational-content blockers.
+
+**Validation/scope:** inspected #1881, #1870/#1877's exact
+R1/B6 and same-mover Solution, #1952's degree calibration,
+#1811's positive whole-first proposal and existing notes.
+Four populated finite overlays and the four input probes
+passed the standalone diagnostic; the last test witnesses
+different outputs on the stipulated receiver variation.
+No new Lean declaration, corpus proof or source claim is
+added. No new modal or metaphysical possibility, no proof
+of C → L or L → R, no causal reach or closure is asserted.
+The qualified recheck at 3186a2b205aa1149be61378c6faf9ace0d2a5e5e
+accepted the three scope corrections, as recorded in #1968. Existing formal
+certificates retain their own verification evidence; these diagnostic
+assignments introduce no new certificate. The preceding history remains
+available and the new scoped assessment below preserves its unresolved bridges.
+
+## One brute exception: derivative completeness and principled stopping (2026-11-25)
+
+**Qualified assessment for the present #1968 continuation, independently
+challenged with the disposition recorded below.** The inspected remote baselines are #1933 at
+b16659c99419cb3696be2a832c3f6def6cdacf16 and #1968 at
+ce5b79e3a620105b98473714ad26a977db9894a8. The integration checkout adds main
+a9819b148bd4a7c089cff9dc07f95c209452511e without changing their explanatory
+definitions or proofs. This section answers the owner's ten-part
+single-brute-foundation comparison. It reuses the earlier controls rather
+than reopening the fixed-law or unrestricted-recombination campaigns.
+
+**Assessment.** A principled primitive foundation can coexist with actual,
+locally complete derivative explanations. An explanation expressly covering
+the existence of that very foundation remains incomplete by the stipulated
+absence of an adequate reason for it. Extending this incompleteness to
+each derivative requires an additional standard about explaining its
+indispensable inputs. Neither contradiction, epistemic self-undermining nor
+further simultaneous brute exceptions follows from the granted bundle.
+The positive necessary-source alternative earns an advantage only insofar
+as it supplies an adequate answer at the same scope; modal necessity alone
+does not do that.
+
+### 1. Actual derivative explanation and the scope of completeness
+
+Grant actual B, actual derivatives, invariant laws, genuine local production
+and reliable inquiry. Do not replace this grant with the weaker statement
+that derivatives *would* follow if B existed. A reason can actually explain
+its target while its own obtaining is unexplained. The restriction in
+scope concerns the target of explanation, not whether the explanation is
+real.
+
+| Selected question | What the strongest rival may supply | What remains outside that answer |
+| --- | --- | --- |
+| Why does this derivative exist? | An actual adequate cause, with its actual requisite conditions and operation | Why that cause and its inputs exist |
+| Why do all these derivatives occur in this connected pattern? | One actual law-governed generative account, if the account explains their joint organization as well as each member | The foundation's actuality when it is outside the selected target |
+| Why does this actual order, explicitly including B, obtain? | The preceding derivative and structural explanations | B's existence, expressly left without an adequate reason |
+| Why is this derivative actual with every indispensable existential input also accounted for? | Its local explanation and the dependency inventory | The unexplained input under this stronger, ancestral completeness standard |
+| Must some foundational and dependent order exist? | Necessary occupancy and production restrictions, if independently warranted at that modal scope | Which occupant and which particular history obtain |
+
+Memberwise reason coverage alone does not entail an explanation of a
+conjunction, common structure or distribution. The second row grants the
+stronger common generative account when the rival actually supplies it;
+it is not an inference from a quantifier interchange. The existing
+PSRStrength.strengthMap explicitly separates memberwise, aggregate and
+common-reason coverage.
+
+The **strongest argument for local completeness** is that the offered
+mechanism contains all the causes and conditions relevant to the specified
+derivative production. Explaining why a cause exists is a further question;
+its unanswered status does not remove the mechanism or its actual operation.
+A rival may consistently reserve that further question for a primitive
+foundational kind. Ordinary causal inquiry supports the legitimacy of
+specified explanatory scope; it does not establish this ultimate stopping
+policy as true.
+
+The **strongest argument against inclusive completeness** is more direct:
+B belongs to the target and lacks the answer that would explain its actual
+existence. No new collective substance, unrestricted fact PSR or metaphysical
+explosion premise is needed. Saying that B need not be explained offers a
+license to stop; it does not supply the missing answer. This exposes an
+unanswered intelligible question. It does not prove that reality must answer
+every such question.
+
+The proposed ancestral standard has a positive rationale: when a supposedly
+ultimate account of D uses an existential prerequisite that it cannot account
+for, the account has not completed its expressly ultimate explanatory task.
+Its strongest objection is that this extends the task beyond adequate
+production of D. Success in ordinary local explanation does not adjudicate
+that extension. The standard is therefore explicit and open; it is not
+inserted into the meaning of every adequate local explanation.
+
+Exact reuse: ExistentialInheritance.resourceInheritance, result
+af8321b9-2bc0-4514-b3c7-e8ee6913da1c, preserves actual reasons and distinct
+existing causes for every derivative. Its fixedResources policy cannot
+derive a derivative, whereas admitting the base as a primitive resource
+restores FullSupply for every finite dependence layer. The theorem exposes
+the retained input under the supplied rules. It neither makes the local
+reasons disappear nor establishes that withBase is philosophically
+illegitimate. A dependence index is not a moment of time.
+
+### 2. A principled exception and its self-application
+
+The strongest proposed discriminator is:
+
+> Received actuality requires a supplier. Independently identified
+> nonreceived actuality may be accepted as primitive. Necessary constitutive
+> restrictions determine the permitted dependence structure and exclude
+> additional unsupported derivatives.
+
+This criterion refers to a positive dependence distinction, rather than
+defining the exempt class as whatever happens to have no explanation.
+Evidence that the supposed foundation actually receives its actuality would
+defeat its application. The conceptual fit between receipt and a supplier
+is positive warrant for a causal demand on receivers. It does not establish
+that contingency as such is receipt, or that every nonreceiver must lack
+every noncausal existential reason.
+
+The criterion consequently has three separate jobs:
+
+1. Identify the actual foundation's nonreceipt at the relevant sense.
+2. Justify a stopping policy for that explanatory kind.
+3. Explain why that actual bearer exists.
+
+Success at the first two need not perform the third. A primitively
+warranted restriction can legitimately rule out other unsupported beings
+without producing its own instance. Conversely, a successful intrinsic
+existential reason would answer the third question and withdraw bruteness
+in that sense, even if the bearer remained uncaused.
+
+Apply the distinction to the criterion itself. Its necessary truth is
+not a further brute contingent existence. Its acceptance by an actual
+inquirer may have an ordinary derivative causal history and epistemic
+warrant. A contingent rule fact does not become a new concrete being merely
+by being represented. PSR 608a262d concerns contingent beings, not all
+propositions or all acts of acceptance. Extending it to those facts needs
+the appropriate scope bridge.
+
+Observation and reasoning can positively justify restrictions through
+conceptual fit, explanatory integration, discriminating evidence or direct
+warrant. The observer's ontic dependence on B does not make every such
+inference epistemically circular. The defect would arise if an argument
+purporting to *explain B's existence* used an unexplained derivative whose
+very existence it already obtained from B, or if a claimed evidential test
+could not distinguish the alternatives it professed to discriminate.
+These are different defects. Given the owner's grant of reliable cognition,
+neither may be assumed merely from dependence.
+
+The parity results 6e7f5afd and 8fba6dd2 remain conditional on the stance's
+actual uniform-demand and shared-feature commitments. A rule treating
+received and nonreceived actuality differently need not accept that
+uniformity. If the rival demands an existential explanation for a competitor
+solely because it is contingent while exempting its own equally contingent
+base, the existing parity test becomes applicable only after establishing
+those very demand and feature premises. No new universal parity premise is
+introduced.
+
+### 3. Necessary occupancy forces an alternative occupant, not proliferation
+
+Preserve the earlier populated B0/D0 versus B1/D1 control, with fixed
+identities, one root per world, no unexplained derivative, invariant
+production restrictions and its explicitly checked resident-observer decoder.
+It is a structural surrogate, not a certificate of real laws, psychology or
+the entire rival worldview. The prior populated
+BruteFoundationBoundary.boundaryRival supplies the corresponding
+root/derivative boundary in the existing formal library.
+
+There is a narrow consequence stronger than just displaying that example.
+Suppose every world accessible from actuality contains a role occupant,
+occupying the role entails existence there, and this actual B is absent
+at some accessible world. At **that same absence world** there is an
+occupant different from B. Uniqueness is not needed for this deduction;
+retaining uniqueness excludes multiple simultaneous occupants.
+
+The following pure predicate diagnostic elaborates under pinned Lean
+4.35.0 and reports no axioms. It specializes to the existing ActualRoot
+predicate because ActualRoot includes ActualConcrete and hence existence.
+It is not a new definition of a metaphysical root or a registered
+Comparator/NanoDa-certified corpus result. Its generic variables isolate
+the ordinary existence projection; applicability to a concrete foundation
+retains the stated role and modal premises.
+
+```lean
+/- Pure predicate diagnostic for the existing actual-root role.
+   No new corpus declaration, metaphysical axiom, or registered certificate. -/
+theorem occupiedRoleAtAbsence {W B : Type}
+    (access : W → W → Prop) (existsAt rootAt : W → B → Prop)
+    (w : W) (b : B)
+    (occupied : ∀ v, access w v → ∃ x, rootAt v x)
+    (rootExists : ∀ v x, rootAt v x → existsAt v x)
+    (absent : ∃ v, access w v ∧ ¬ existsAt v b) :
+    ∃ v, access w v ∧ ¬ existsAt v b ∧
+      ∃ x, rootAt v x ∧ x ≠ b := by
+  rcases absent with ⟨v, hv, hb⟩
+  rcases occupied v hv with ⟨x, hx⟩
+  refine ⟨v, hv, hb, x, hx, ?_⟩
+  intro h
+  subst x
+  exact hb (rootExists v b hx)
+
+#print axioms occupiedRoleAtAbsence
+```
+
+If the exemption is world-general and follows the qualifying role, it must
+cover that permitted alternative occupant too. If it is rigidly reserved for
+B alone and every occupant must qualify, necessary occupancy makes B
+necessary. One exempt position is therefore different from one individually
+privileged bearer.
+
+This does not establish that the alternative occupant is itself contingent
+or brute. A separate absence witness and the relevant world-general
+reason-exemption policy would be required. The diagnostic below includes a
+control in which C exists at both worlds, depends on B at actuality and
+becomes the only root at B's absence world. It refutes the stronger inference
+to C's contingency in that formal signature. It is not a counterexample to
+a stronger rival that additionally requires its root to be contingent in
+every world.
+
+The pressure for further exceptions is thus precisely bounded: **possible
+substitution under the rival's own criteria**, not extra actual foundations,
+arbitrary entities or altered laws. Likewise, disappearance of every
+actual D_i with B0 does not imply a world with no derivatives at all:
+different D_i can accompany the alternative occupant. Necessary generic
+occupancy may secure some order without selecting this order.
+
+The actual-root bridge remains distinct. UniqueActualRootAt concerns one
+world and one grounding relation. The existing same-root upgrade
+b63a1f75-e355-541f-a462-43f079a8b73c requires
+EveryContingentGroundedAt and excluded middle. The former excludes the very
+contingent-root exception at issue; root uniqueness alone is not its warrant.
+Moreover, ActualRoot excludes an actual concrete ground in its selected
+relation, not every possible intrinsic or noncausal reason. These meanings
+must not be collapsed.
+
+### 4. The necessary source under the identical explanatory standard
+
+The strongest positive account proposes a source N whose actuality is
+intrinsically intelligible through its positive nature, which does not
+borrow its own existence as an earlier productive input, and which actually
+accounts for B or the selected derivative order. Intrinsic explanation is
+not productive self-causation. The existing own-nature/necessity
+disambiguation and the #1621 investigation retain the missing warrant for
+that existence-conveying content.
+
+This account can improve the same question in two ways: explain the
+actual existence of the **same B**, or explain the same derivatives through
+another source where their identities permit replacement. The latter route
+cannot replace an essentially indispensable B while silently retaining D.
+Neither route is secured merely by describing a source as necessary.
+
+| Common standard | Principled brute B | Necessary-source proposal |
+| --- | --- | --- |
+| Actual adequate local production | Granted; B and its operations are actual | Requires actual production, not merely a capacity or necessary presence |
+| Reason for this B's existence | Deliberately absent | Can be supplied by N without replacing B, if this actual relation is adequate |
+| Reason for the ultimate source's own existence | Primitive at the stipulated scope | Requires substantive intrinsic intelligibility; necessity alone is a modal profile |
+| Existence coverage of all contingent beings | Fails for B if its absent reason is also absent in the exact token semantics | May hold with contingent effects and a necessary source, under the existing bridges |
+| Explanation of every indispensable contingent act-fact | Not guaranteed by an entity-level inventory | Not guaranteed by an entity-level inventory either |
+| Determining explanation from an invariant complete basis | Cannot determine a represented genuinely contingent target | Has the same limitation if the whole sufficient basis is stipulated invariant |
+| Reliable inquiry and principled restrictions | Granted, without an automatic global defeater | Must be supported at the same scope; a personal label supplies no guarantee |
+
+Necessary intrinsic content can remain compatible with nonnecessitating
+production. Adequacy must then concern the actual exercise and its
+explanatory relevance; it cannot be replaced by entailment from the
+unchanged source alone. The existing PSRStrength.ground controls and
+strengthMap already separate a necessary nonnecessitating ground, its own
+reason and contingent-fact coverage. The ContainedSelection fixed-act
+comparison (31a48b76) further preserves contingent-being coverage when a
+separate contingent act fact loses its reason. There is no automatic
+modal-collapse objection to adequate nonnecessitating explanation.
+
+For an account advertised as determining this outcome from its complete
+basis, the exact additional burden is unavoidable: an identical necessary
+basis obtaining in an admitted absence world cannot entail the target.
+That is the existing restrictionBoundary (9a2c5f49) issue. A contingent
+exercise can supply an additional actual input. If its obtaining is
+primitive, a demand expressly covering that act or every indispensable
+input still has a gap. A being-level PSR alone need not cover the act.
+The same qualification applies to personal and impersonal production.
+It neither demands a prior decision event for every act nor dismisses
+nonnecessitating reasons as mere randomness.
+
+### 5. Matched same-B control and its limits
+
+The following finite audit retains the worlds, B, derivatives 0 through 3,
+existence profiles, law, and immediate derivative causes and reasons of the
+existing Contained false interpretation. It compares the original assignment
+with activation of its **already present necessary background N** as an
+assigned cause and existence reason for the same B. No B or derivative is
+replaced, and none becomes necessary.
+
+This background is an explicit limitation of the test: it is a control on
+explanatory relevance **once N is granted**, not a model of a rival that
+permits only one actual concrete root, nor evidence that the strongest rival
+must admit N. For the rival without that idle necessary bearer use the
+populated B0/D0–B1/D1 control above.
+
+| Checked assignment at actuality | Before activation | After activation |
+| --- | --- | --- |
+| Every represented derivative has an actual distinct existing cause and reason | Yes | Yes |
+| Same identities, existence profiles and immediate derivative production | Yes | Yes |
+| B and all represented derivatives remain contingent | Yes | Yes |
+| B has an admitted existence reason | No | Yes |
+| Some represented contingent being lacks a reason | B | None |
+| N has a reason for its own existence | No | No |
+
+The added edge is factive and nonnecessitating. It is existence-gated by
+construction; assigning it does not demonstrate adequate explanation,
+actual productive power or the CAUSE_2 bridge. Necessary presence by
+itself leaves the original gap.
+
+A disclosed six-step readout uses one fixed transition and fixed initial
+values in both cases; it is separate from the dependence-layer index.
+A further disclosed extension represents an exercise as a fact, not a being.
+The rule from N, law and exercise to B is truth preserving; N and law
+alone cannot derive B or the derivatives, while adding the exercise restores
+the finite derivation. The displayed rules supply no reason for that
+exercise. This is a result about the chosen resource rules, not a universal
+failure of nonnecessitating explanation.
+
+The standalone Python diagnostic passes. It is reproduced in full so that
+the model, omitted adequacy conditions and distinct scopes remain inspectable.
+It is not a Lean certificate or a complete metaphysical counterworld.
+
+```python
+"""Finite matched audit of ExistentialInheritance.Contained false.
+
+This is a Python diagnostic, not a Lean certificate or a metaphysical model.
+The two Bool worlds, existence assignment, parent and Step are the existing
+Contained definitions, restricted to the derivative prefix 0..3.  Source
+activation changes only a causal/reason edge to the SAME base.  Assigned edges
+do not demonstrate productive or explanatory adequacy.  The optional clock
+trace and act-fact extension are disclosed additions, not existing Lean fields.
+"""
+
+from itertools import product
+
+
+W = (False, True)  # false is actual, as in Contained
+N, B = "background", "base"
+D = tuple(f"derivative:{n}" for n in range(4))
+BEINGS = {N, B, *D}
+LAW, ACT = "law", "exercise"
+
+
+def ex(x):
+    return ("exists", x)
+
+
+def present(w):
+    return {N} if w else BEINGS.copy()
+
+
+def parent(n):
+    return B if n == 0 else D[n - 1]
+
+
+def causes(active, w):
+    old = set() if w else {(parent(n), d) for n, d in enumerate(D)}
+    return old | ({(N, B)} if active and not w else set())
+
+
+def reasons(active, w):
+    return {(ex(s), ex(t)) for s, t in causes(active, w)}
+
+
+def truths(w, *, with_act=False):
+    return {LAW, *(ex(x) for x in present(w))} | (
+        {ACT} if with_act and not w else set()
+    )
+
+
+def contingent(x):
+    return x in present(False) and any(x not in present(v) for v in W)
+
+
+def closure(seed, rules):
+    result = set(seed)
+    while True:
+        following = result | {effect for members, effect in rules if members <= result}
+        if following == result:
+            return result
+        result = following
+
+
+old_rules = [({LAW, ex(parent(n))}, ex(d)) for n, d in enumerate(D)]
+for active, w in product((False, True), W):
+    edges = causes(active, w)
+    # Factive reason facts, distinct existing cause endpoints, unchanged D edges.
+    assert all(s in present(w) and t in present(w) and s != t for s, t in edges)
+    assert all(r in truths(w) and f in truths(w) for r, f in reasons(active, w))
+    assert {(s, t) for s, t in edges if t in D} == causes(False, w)
+    assert all(any(t == d for _, t in edges) for d in D if d in present(w))
+    assert all(not members <= truths(w) or effect in truths(w)
+               for members, effect in old_rules)
+    # Optional deterministic readout: dependence depth is NOT time.  This
+    # separate finite-state trace uses one fixed transition and fixed initial
+    # value n mod 3, not a new contingent initial-state fact.
+    for n, d in enumerate(D):
+        trace = tuple((n + t) % 3 for t in range(6)) if d in present(w) else ()
+        assert all(trace[t + 1] == (trace[t] + 1) % 3
+                   for t in range(len(trace) - 1))
+        assert trace == (tuple((n + t) % 3 for t in range(6)) if not w else ())
+
+for active in (False, True):
+    unexplained_contingents = {
+        x for x in BEINGS if contingent(x)
+        and not any(f == ex(x) for _, f in reasons(active, False))
+    }
+    assert unexplained_contingents == (set() if active else {B})
+    # Necessary presence itself supplies no admitted reason for N.
+    assert all(N in present(w) for w in W)
+    assert not any(f == ex(N) for _, f in reasons(active, False))
+    assert all(contingent(x) for x in {B, *D})
+
+# N's added reason is actually factive but not necessitating: N remains at
+# the SAME world's absence witness of the SAME B.  No derivative is replaced.
+assert (ex(N), ex(B)) in reasons(True, False)
+assert ex(N) in truths(True) and ex(B) not in truths(True)
+
+# All old prerequisite rules are truth preserving.  A deterministic extra
+# rule from necessary N+law alone to B would fail at the absence world.
+necessary_seed = {LAW, ex(N)}
+assert necessary_seed <= truths(True) and ex(B) not in truths(True)
+
+# Represent an actual exercise as an additional fact, not an additional being.
+# Its explicit inclusion restores truth preservation but leaves it a necessary
+# input of this finite derivation.  The diagnostic provides no reason for ACT.
+activated_rules = [*old_rules, ({LAW, ex(N), ACT}, ex(B))]
+for w in W:
+    assert all(not members <= truths(w, with_act=True)
+               or effect in truths(w, with_act=True)
+               for members, effect in activated_rules)
+assert not {ex(B), *(ex(d) for d in D)} & closure(necessary_seed, activated_rules)
+assert {ex(B), *(ex(d) for d in D)} <= closure(necessary_seed | {ACT}, activated_rules)
+assert {ex(d) for d in D} <= closure(necessary_seed | {ex(B)}, old_rules)
+assert not any(effect == ACT for _, effect in activated_rules)
+
+# Forced replacement at the same absence world.  Root entails actual presence.
+# This first control has one root and one essentially dependent child per world.
+rosters = {0: {"B0", "D0"}, 1: {"B1", "D1"}}
+links = {0: {("B0", "D0")}, 1: {("B1", "D1")}}
+roots = {w: {x for x in roster if not any(t == x for _, t in links[w])}
+         for w, roster in rosters.items()}
+assert all(len(r) == 1 for r in roots.values())
+assert "B0" not in rosters[1] and roots[1] == {"B1"}
+assert all(r <= rosters[w] for w, r in roots.items())
+# A world-general root-exemption policy licenses the alternative OCCUPANT,
+# while never licensing two roots at once.  No recombination rule is used.
+exempt = roots
+assert exempt[0] == {"B0"} and exempt[1] == {"B1"}
+
+# Generic forced replacement does NOT imply that the other root is contingent:
+# C is present at both worlds, dependent at 0 and the sole root at 1.
+rosters2 = {0: {"B", "C"}, 1: {"C"}}
+links2 = {0: {("B", "C")}, 1: set()}
+roots2 = {w: {x for x in roster if not any(t == x for _, t in links2[w])}
+          for w, roster in rosters2.items()}
+assert roots2 == {0: {"B"}, 1: {"C"}}
+assert "B" not in rosters2[1] and all("C" in r for r in rosters2.values())
+
+print("PASS: same-B finite audit; fixed derivative rules and deterministic readout;")
+print("      factive nonnecessitating source edge; residual exercise input;")
+print("      forced alternative occupant; no forced further simultaneous exception.")
+```
+
+### 6. Adequacy, determining explanation, warrant and sufficiency
+
+The comparison now distinguishes four claims rather than counting
+unexplained leaves:
+
+- **Adequate existential explanation:** an actual reason genuinely answers
+  why this bearer exists at the specified scope. Mere token assignment,
+  modal co-truth or a causal label does not establish this.
+- **Determining explanation:** the stated complete basis rules out the
+  selected alternative. An invariant necessary basis cannot perform this
+  task for a genuinely contingent target in the represented modal domain.
+  This is stronger than the previous adequacy claim.
+- **Primitive warrant:** direct, conceptual, practical or cumulative grounds
+  make acceptance of a proposition or stopping policy reasonable. They need
+  not be an ontic cause or explanation of what is accepted. Their legitimacy
+  does not require an endlessly prior independent proof.
+- **Metaphysical sufficiency:** the proposed concrete nature, source and
+  exercise really provide what the explanation claims. An admitted-world
+  model checks a formal structure; it does not certify this applicability.
+  Conversely, a necessary proposition may entail another without explaining
+  or producing it.
+
+The principled primitive defense is strongest on the third claim and on
+granted local explanation. The positive necessary-source defense is
+potentially stronger on the first at ultimate scope. Neither gains the
+second or fourth just through its label. The comparison therefore supports
+a moderate preference for pursuing adequate existential intelligibility E,
+while retaining suspension about universal determining D. It does not
+establish the superiority of an actual necessary-source theory whose
+intrinsic adequacy and exercise remain unprovided.
+
+### 7. Outcome, root connections and concrete reopening conditions
+
+| Requested classification | Finding at the granted scope |
+| --- | --- |
+| Contradictory | No contradiction is established. A claim both that B has no adequate existential reason and that the account supplies one would contradict itself; the strongest rival makes no such claim. |
+| Self-undermining | No general epistemic defeat follows. A specific conflict with the rival's own uniform explanatory or evidential commitments would need those commitments and the actual violating case. |
+| Explanatorily inferior | Incomplete for the inclusive existence target; inferior to a competitor only when that competitor actually answers the same target under a warranted common standard. Local derivative explanations remain intact. |
+| Defensible primitive | A coherent, principled stopping candidate with positive scope-based warrant. Its real nonreceipt, modal restrictions and permission to lack every adequate reason remain substantive commitments, not results of the finite models. |
+
+The comparison remains connected to existing rival-worldview analyses
+through [the six-worldview assessment](no-foundation-law-chaos.md#the-same-standards-for-six-worldviews)
+and the existing attempt eac309a0. It changes no formal graph edge.
+
+The immediate target is PSR 608a262d. Its exact predicate is contingent-being
+reason-token coverage, so translating the present adequate-reason question
+into it retains the interpretation bridge. Result 7bf9cb77 reaches B2
+8a8d00e9 only with BX1 6c6191dc and BX2 0e44041e. The C2 target 6508c239
+requires existential receptivity—received esse in a principle with the
+specified receptive potency, or matter–form composition—or the relevant
+distinct prior esse-cause; the diagnostic supplies none of these conditions.
+Existential inheritance requires the same
+bearer's essential/modal dependence; actual causation alone does not give
+it (replacementBoundary, 360411ab). The same-root necessity upgrade retains
+its contingent-grounding coverage. No claim of divine intellect, will,
+historical veracity or philosophical defeat is added.
+
+**What further work would discriminate.** For a proposed real foundation,
+identify its positive nonreceipt feature and test whether that feature
+licenses only a causal stop or also the absence of every adequate
+existential reason. A complete inventory of causes alone cannot settle the
+latter without a justified restriction on kinds of reasons. For the
+positive competitor, supply an intrinsically existentially adequate nature
+and actual nonnecessitating production of the same target, then state
+whether its promised completeness includes the act fact. Independent
+evidence for that relevance or a conflict with the rival's own accepted
+standard would change the comparison. Repeating another fixed-law model,
+counting primitives, or relabeling an unexplained exercise would not.
+
+The earlier limitation/reception and unrestricted-bearer tests remain
+available under their exact reopening conditions. This scoped synthesis
+does not replace their unresolved C-to-L/L-to-R bridges or #1933's
+operative-content and historical-channel questions. The present comparative
+assessment is delivered; unconditional PSR and rival defeat remain blocked
+by those substantive adequacy, domain and warrant issues.
+
+### 8. Primary orientation and verification boundary
+
+The following primary texts were read online on 2026-11-25 as orientation;
+no new source, passage, attributed claim or source-derived Lean record is
+introduced.
+
+In Hume's [Dialogues, IX.3 and IX.9](https://davidhume.org/texts/d/9),
+Demea presses the explanation of the entire succession, while Cleanthes
+argues that explaining each member suffices for the collection. The latter
+does not by itself answer the present inclusive target: this B is one
+member whose explanation is deliberately absent. It does motivate taking
+derivative coverage seriously at its own scope. This application is our
+comparison, not an attribution of the present single-brute model to Hume.
+Demea's stronger modal-admissibility assertion is not imported.
+
+Leibniz's [On the Ultimate Origin of Things, opening paragraphs and section 2](https://www.wehd.com/373/911.html)
+uses successive copies of a book to distinguish reasons within a succession
+from its ultimate reason. The adjacent text also distinguishes hypothetical
+necessity from metaphysical necessity and allows inclining reasons.
+This motivates the target distinction without establishing the present
+ancestral-completeness premise. The stronger optimal-world argument and
+its perfection assumptions are not adopted here.
+
+Canonical reuse checks inspected related, dossier, brief, semantics and
+the PSR-to-B2 argument context. The advisory novelty query found partially
+recorded material, so no philosophical novelty or new certified theorem
+is claimed for the occupancy consequence. The small core Lean proof reports
+zero axioms; the Python model checks pass. Existing certificate evidence
+is reused for unchanged modules; neither diagnostic claims Comparator or
+NanoDa certification. Corpus, attribution, generated-file and premise-delta
+checks and the independent final-outcome review are recorded in #1968.
+The claim/type sweep covers local versus inclusive scope, fixed versus
+arbitrary inputs, actual versus possible source exercise, necessary
+occupancy versus a necessary individual, the extra background in the matched
+control, fact versus being, and exactly what the finite assignments assert.
+
+**Independent semantic disposition: accepted with qualifications.** The
+fresh challenger inspected the complete comparison, scoped attempt,
+six-worldview revision, proposed PR body and current-handoff text against
+their definitions, proofs, model assignments and the two primary passages.
+The initial candidate was 61cd34c989ebe9e31f2a26a7b6323709ace4795f.
+One claim/type mismatch was found: the C2 summary omitted the matter–form
+alternative within existential receptivity. The repair at
+7799949bec0e5a45f54b88fbf71b32226449b8ce, tree
+1961043cbd2777d29b24c76cd633ef8ac7753662, restores that alternative.
+One targeted recheck accepted the correction; no P1 or P2 findings remain.
+The challenger also reproduced both diagnostics. The acceptance preserves
+all stated adequacy, interpretation and warrant limits; it establishes no
+open premise, adds no registered certificate and authorizes no merge.
+
+
 ## Research attempts citing this note
 
 - [Designed positive necessary-fact extraction by composing the existing #750 forced descent lemma…](../../corpus/attempts/necessary-fact-boundary-786.json)

@@ -1,0 +1,13 @@
+{
+  "id": "91414c1b-813a-4b1d-bab5-715394ccd0bc",
+  "label": "Source-token channel and existing causal provenance",
+  "term": "encoded source tokens, receipt, decoding and causal coverage",
+  "definition": "Channel supplies a token-bearer map, an encoder from messages to tokens, a receiver from tokens to observations, and a decoder back to messages. CausedToken h K i g r requires the same source g and token bearer K.bearer r to exist in history i and the unchanged h.ontic.Causes relation to link them. Covered requires each selected positive observation to equal receipt of such a token from that same g. These conditions do not identify which actual source made an observed trace or imply intentional assertion. They use existing History/Ontic existence and causation, rather than introduce a second causal relation.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Epistemology.SourceEvidenceAdequacy.Channel",
+  "definition_ids": [
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "dd7b91ea-5284-4558-bac5-7a0759843b0c"
+  ],
+  "note": "Analyst channel interface; the maps are independent primitives. A conceptual example is a source making an inscribed token, a receiver reading it and an interpreter recovering the asserted content. A copied, altered or independently made token can fail the same-source premise. An ordinary causal trace need not be an assertion. No immediacy, deterministic causal law or epistemic identification is inferred from Causes. Actual historical content, causal provenance, admissible history class and access to the token remain OPEN. See docs/notes/fixed-initial-history-535.md#source-veracity-to-observed-evidence-2026-11-24."
+}

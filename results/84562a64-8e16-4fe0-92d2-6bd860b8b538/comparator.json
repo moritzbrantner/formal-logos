@@ -1,0 +1,9 @@
+{
+  "challenge_module": "TruthCore.Results.Epistemology.InitialHistoryAuthenticity.Challenge",
+  "solution_module": "TruthCore.Results.Epistemology.InitialHistoryAuthenticity.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Epistemology.InitialHistoryAuthenticity.authenticity"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}

@@ -1,0 +1,13 @@
+{
+  "challenge_module": "TruthCore.Results.Explanation.ActualExerciseExplanation.Challenge",
+  "solution_module": "TruthCore.Results.Explanation.ActualExerciseExplanation.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Explanation.ActualExerciseExplanation.outputBypass"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "enable_nanoda": true
+}

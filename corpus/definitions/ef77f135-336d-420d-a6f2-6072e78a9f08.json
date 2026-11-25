@@ -1,0 +1,9 @@
+{
+  "id": "ef77f135-336d-420d-a6f2-6072e78a9f08",
+  "label": "Actually obtaining condition determining one represented fact",
+  "term": "actually obtaining determining condition",
+  "definition": "DeterminesFact A a p f means p holds at the selected actual world a and, at every world accessible from a, p entails the truth of f. The actual-truth clause excludes a false condition that vacuously entails anything. This is informational modal determination, not a definition of causal production or explanatory adequacy.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Explanation.ContainedSelection.DeterminesFact",
+  "note": "Uses the existing PSRStrength.Arena and accessibility. NecessaryBase says every selected basis fact is true at actuality and every accessible world; EvidenceOnly says a condition cannot distinguish worlds agreeing on the whole selected truth vector, including arbitrary infinitary dependence. Those existing definitions supply the exact scope of RestrictionBoundary. A fixed constraint may restrict alternatives without producing any bearer. Actual metaphysical scope and adequate explanation remain separate open questions; attribution deferred."
+}

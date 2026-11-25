@@ -1,0 +1,50 @@
+[batch]
+vocab = "TruthCore.Explanation.ActualExerciseExplanation"
+results = "TruthCore.Results.Explanation.ActualExerciseExplanation"
+
+[[statement]]
+id = "Mutual productive dependence of adoption and product blocks their joint supply"
+lean = "ProductiveCut"
+definitions = ["5ca99e27-f5bf-45a2-b9b4-102c223e7f59", "DEF-JOINT-CAUSAL-GROUPS", "DEF-DERIVATIVE-JOINT-SUPPLY", "a8172538-204c-45f5-9ee0-9e9d7b437660"]
+paraphrase = "For every existing Exercise, independent-contribution predicate and selected adoption/product roles: if neither role is independently supplied, every actual supplier of adoption requires product as a joint contributor, and every actual supplier of product requires adoption, then neither role has inductive Supply. An additional source contributor outside the pair does not discharge the retained conjunctive prerequisite. This is a specialization of the existing borrowing-trap obstruction, not a new theorem against mere semantic output-dependence, not an adequacy criterion and not a real-world exclusion."
+
+[[statement]]
+id = "Same-source exercise controls separate actual path credit from productive supply"
+lean = "Matched.Comparison"
+definitions = ["5ca99e27-f5bf-45a2-b9b4-102c223e7f59", "593f2143-517b-4d4b-98cd-462daf9f36b1", "DEF-JOINT-CAUSAL-GROUPS", "DEF-DERIVATIVE-JOINT-SUPPLY", "DEF-JOINT-SCENARIO-SUFFICIENCY", "7b20df90-a3d9-41c7-be8b-1d2beb5b995a", "DEF-KANT-ONTOLOGICAL-MODEL", "DEF-KANT-MODAL-CONTINGENCY", "DEF-CAUSE-OF-PERFECTION", "e7302a28-f9fc-4961-811f-bf58bd86c28d", "DEF-PSR-REASON", "DEF-PSR-EXISTENCE-FACT"]
+paraphrase = "All three named interpretations have coherent nonempty exercised records, one necessary source, the same contingent recipient, operation and adoption borne by the same source, actual contributor paths in both directions between adoption and product, path credit from source to recipient, and local existential-token coverage and B2 through the stated path-credit adapter. The source operation does not scenario-suffice for adoption or product. The circular route and the route admitting but not exercising a source-only alternative lack Supply. Exercising that alternative supplies adoption and product while retaining the circular alternative. Alternatively accepting adoption as independently supplied yields product Supply on the original event carrier. These are finite structural controls; they prove no rational guidance, real esse efficacy, explanatory adequacy, compatibility with strong simplicity or metaphysical possibility."
+
+[[statement]]
+id = "Direct product supply permits product-dependent adoption without the mutual supply obstruction"
+lean = "Matched.OutputBypass"
+definitions = ["5ca99e27-f5bf-45a2-b9b4-102c223e7f59", "593f2143-517b-4d4b-98cd-462daf9f36b1", "DEF-JOINT-CAUSAL-GROUPS", "DEF-DERIVATIVE-JOINT-SUPPLY", "7b20df90-a3d9-41c7-be8b-1d2beb5b995a"]
+paraphrase = "The named outputExercise preserves the same bearer and occurrence functions and is coherent. Every actual supplier of adoption still needs the product, but an exercised source-only record directly supplies that product. Product and adoption both have Supply and OutputFounded fails. Thus productive dependence of adoption on product by itself is insufficient for the two-sided obstruction. The supplied adoption role need not be an antecedent rational guide, and neither rational authorship nor its denial is established."
+
+[[argument]]
+id = "Apply the existing joint borrowing trap to the adoption-product pair"
+theorem = "productiveCut"
+premises = []
+conclusion = "Mutual productive dependence of adoption and product blocks their joint supply"
+rule = "Construct the two-role borrowing trap and reuse its existing obstruction theorem"
+meaning = "The selected pair contains no independently supplied role. Each actual record entering it requires the opposite role within it, even if a necessary source is another contributor. Apply DerivativeJointPower.trap_obstruction to both members. This is a narrow reuse application whose new research role is fixed by the matched restoration controls; it does not independently defend inductive supply or identify semantic dependence with productive prerequisites."
+axioms = []
+
+[[argument]]
+id = "Compare circular supply with admitted and exercised source-only alternatives"
+theorem = "matchedComparison"
+premises = []
+conclusion = "Same-source exercise controls separate actual path credit from productive supply"
+rule = "Evaluate fixed actual contributor records and modal witnesses, then use trap obstruction and supply constructors"
+meaning = "At true the source operation and adoption share their bearer and product is the same recipient's event. Actual nonempty paths survive in every route and induce the explicitly selected causal-credit and existential-token interpretations. The circular prerequisite pair blocks Supply in the first two routes; merely admitted alternatives are not exercised suppliers. An exercised alternative with only the independently supplied source operation constructs Supply for adoption and product. A rival primitive exercise seed restores Supply without adding a decision event. The accessible false world preserves source operation while lacking adoption/product, so actual exercise is not scenario sufficiency."
+sense_mixing_control = true
+disambiguations = ["a375e21b-420a-5ee5-9e64-c816eacd74d4", "79644a0a-db5b-5497-bb47-9f96d14cdae7"]
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+
+[[argument]]
+id = "Restore a source-only product route while retaining product-dependent adoption"
+theorem = "outputBypass"
+premises = []
+conclusion = "Direct product supply permits product-dependent adoption without the mutual supply obstruction"
+rule = "Construct product supply by the direct record, then adoption supply by its joint source-and-product record"
+meaning = "The restored actual route targets the product. It constructs Supply before the adoption role is supplied, although every actual adoption supplier still needs that product. This falsifies the proposed shortcut from output-dependent adoption alone to a productive borrowing trap, while leaving whether that adoption is a rational guide unresolved."
+axioms = ["propext", "Classical.choice", "Quot.sound"]

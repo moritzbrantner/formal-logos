@@ -9,6 +9,7 @@ class IssueSnapshotTests(unittest.TestCase):
         target = {
             "number": 12, "title": "Does the case distinguish the rival?",
             "html_url": "https://github.com/research/project/issues/12",
+            "user": {"login": "reporter"},
             "body": "Original scope", "state": "open", "repository_url": repo,
             "updated_at": "2026-11-25T00:00:00Z",
         }
@@ -28,6 +29,7 @@ class IssueSnapshotTests(unittest.TestCase):
         foreign = {**merged, "repository_url": repo + "-other"}
         comment = {
             "event": "commented", "html_url": target["html_url"] + "#issuecomment-123",
+            "user": {"login": "coordinator"}, "author_association": "OWNER",
             "body": "Narrowed scope", "created_at": target["updated_at"],
         }
         result = snapshot(target, [
@@ -37,7 +39,11 @@ class IssueSnapshotTests(unittest.TestCase):
         issue, prior, delivered = result["items"]
         self.assertEqual([issue["number"], prior["number"], delivered["number"]], [12, 28, 30])
         self.assertEqual(issue["body"], "Original scope")
-        self.assertEqual(issue["comments"][0]["body"], "Narrowed scope")
+        self.assertEqual(issue["author"], {"login": "reporter"})
+        self.assertEqual(issue["comments"][0], {
+            "author": {"login": "coordinator"}, "authorAssociation": "OWNER",
+            "url": comment["html_url"], "body": "Narrowed scope", "createdAt": comment["created_at"],
+        })
         self.assertEqual(issue["crossReferences"], [closed["html_url"], merged["html_url"]])
         self.assertEqual(prior["state"], "CLOSED")
         self.assertEqual(delivered["state"], "MERGED")

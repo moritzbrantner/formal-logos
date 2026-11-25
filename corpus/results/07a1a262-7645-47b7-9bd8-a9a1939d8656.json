@@ -1,0 +1,11 @@
+{
+  "id": "07a1a262-7645-47b7-9bd8-a9a1939d8656",
+  "label": "Compare circular supply with admitted and exercised source-only alternatives",
+  "argument_id": "272c8062-dfd3-4389-ad1d-8729019c95c5",
+  "challenge_module": "TruthCore.Results.Explanation.ActualExerciseExplanation.Challenge",
+  "solution_module": "TruthCore.Results.Explanation.ActualExerciseExplanation.Solution",
+  "theorem": "TruthCore.Results.Explanation.ActualExerciseExplanation.matchedComparison",
+  "comparator_config": "results/07a1a262-7645-47b7-9bd8-a9a1939d8656/comparator.json",
+  "status": "solution-present",
+  "description": "At true the source operation and adoption share their bearer and product is the same recipient's event. Actual nonempty paths survive in every route and induce the explicitly selected causal-credit and existential-token interpretations. The circular prerequisite pair blocks Supply in the first two routes; merely admitted alternatives are not exercised suppliers. An exercised alternative with only the independently supplied source operation constructs Supply for adoption and product. A rival primitive exercise seed restores Supply without adding a decision event. The accessible false world preserves source operation while lacking adoption/product, so actual exercise is not scenario sufficiency."
+}

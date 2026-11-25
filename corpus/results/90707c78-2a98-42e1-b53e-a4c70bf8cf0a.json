@@ -1,0 +1,11 @@
+{
+  "id": "90707c78-2a98-42e1-b53e-a4c70bf8cf0a",
+  "label": "All nine classical attributes of GOD_4 from its carrier-wide gift of esse",
+  "argument_id": "0acc8761-d1a5-45c7-9e66-5dbd92fe7a83",
+  "challenge_module": "TruthCore.Results.Case.Catholicism.AttributesFromEsse.Challenge",
+  "solution_module": "TruthCore.Results.Case.Catholicism.AttributesFromEsse.Solution",
+  "theorem": "TruthCore.Results.Case.Catholicism.AttributesFromEsse.fromGodCause",
+  "comparator_config": "results/90707c78-2a98-42e1-b53e-a4c70bf8cf0a/comparator.json",
+  "status": "solution-present",
+  "description": "For each named God, causal ascent excludes any distinct cause of its esse at a maximum. The reviewed unity derivation uses this exclusion and the carrier-wide converse. Perfection and goodness use the same giver directly. The six remaining attribute proofs and the one-way sufficiency bridge apply at that same bearer. The logical equality splits retain excluded middle."
+}

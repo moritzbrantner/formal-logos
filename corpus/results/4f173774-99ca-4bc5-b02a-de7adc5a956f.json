@@ -1,0 +1,11 @@
+{
+  "id": "4f173774-99ca-4bc5-b02a-de7adc5a956f",
+  "label": "Semantic preservation is strictly weaker than identical decoded content",
+  "argument_id": "eeb4a527-e4c9-432e-ab1b-b8350ca75aa0",
+  "challenge_module": "TruthCore.Results.Epistemology.SourceEvidenceAdequacy.Challenge",
+  "solution_module": "TruthCore.Results.Epistemology.SourceEvidenceAdequacy.Solution",
+  "theorem": "TruthCore.Results.Epistemology.SourceEvidenceAdequacy.semanticTransportControl",
+  "comparator_config": "results/4f173774-99ca-4bc5-b02a-de7adc5a956f/comparator.json",
+  "status": "solution-present",
+  "description": "Explicit failure of the converse of transportWeakens, retaining actual causal tokens, positive observations and truth. No exact content identification is required by SourceGuarantee. This does not license arbitrary translation or infer epistemic access from semantic truth."
+}

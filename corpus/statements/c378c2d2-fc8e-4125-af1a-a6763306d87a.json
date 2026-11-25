@@ -1,0 +1,9 @@
+{
+  "id": "c378c2d2-fc8e-4125-af1a-a6763306d87a",
+  "label": "Initial variation survives injective dynamics and complete trajectory formation",
+  "paraphrase": "For any admitted initial states, an injective map on that admitted set preserves and reflects witnessed output variation. If each step of one fixed time-dependent deterministic law is injective, its evolution to every finite time is injective. The complete generated trajectory is injective in its initial state for every such law, even noninjective ones, because time zero retains the input. Hence complete trajectories preserve admitted initial variation. An observation at a selected time preserves and reflects initial variation under the explicit additional premise that this composite observation map is injective on admitted inputs. These are mathematical structural claims; no explanation, probability, metaphysical possibility or universal persistence of coarse-output uncertainty follows.",
+  "lean_declaration": "TruthCore.Epistemology.InitialHistoryAuthenticity.Dynamics",
+  "definition_ids": [
+    "07fffca9-7d59-49b3-a85a-1c0345382f51"
+  ]
+}

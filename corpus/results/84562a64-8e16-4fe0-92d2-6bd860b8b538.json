@@ -1,0 +1,11 @@
+{
+  "id": "84562a64-8e16-4fe0-92d2-6bd860b8b538",
+  "label": "Positive record authenticity characterized by admitted fibers and authentic witnesses",
+  "argument_id": "ca956e67-0f8a-451d-bc10-efeaedb09195",
+  "challenge_module": "TruthCore.Results.Epistemology.InitialHistoryAuthenticity.Challenge",
+  "solution_module": "TruthCore.Results.Epistemology.InitialHistoryAuthenticity.Solution",
+  "theorem": "TruthCore.Results.Epistemology.InitialHistoryAuthenticity.authenticity",
+  "comparator_config": "results/84562a64-8e16-4fe0-92d2-6bd860b8b538/comparator.json",
+  "status": "solution-present",
+  "description": "Locates the exact initial-admissibility condition needed for universal positive historical truth under any observation map, including a fixed deterministic evolution followed by a readout. Separates uniform authenticity from truth by the necessary authentic-witness conjunct. Composes existing SameEvidence and EvidenceOnly meanings instead of restating their selector-impossibility theorem. The primitive content relation's historical interpretation and warrant for the admitted restriction remain OPEN; no skeptical or PSR conclusion follows."
+}

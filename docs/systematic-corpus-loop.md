@@ -261,10 +261,27 @@ work that was actually delivered.
 outcome with the owning record on current `main` and any open PR delivering
 that outcome. If it is on `main`, link the evidence and close the completed
 issue. If a PR already delivers it, carry the issue through review and merge
-with that PR. An older worker handoff can be superseded by its own repairs.
-For unfinished work, give the worker the first undelivered acceptance item,
-its existing evidence and its file/graph ownership. A reopening condition
-in a reviewed result can remain in the owning record after the issue closes. On
+with that PR. When a worker returns an older handoff, run the
+[revision lookup](../truth/README.md#checking-a-returned-worker-revision)
+with its commit and PR or owning attempt. Read the scope and disposition of
+the recorded review. If the returned work is already included and that finding
+was accepted, carry its qualifications forward. If the revisions differ,
+check what changed in the finding or its dependencies and send only the
+affected claims through the existing repair procedure. Treat an unresolved
+revision match as a reason to inspect the cited records.
+
+For unfinished work, give the worker the first undelivered acceptance item
+in the [worker brief](../AGENTS.md#worker-brief-and-handoff). For example, the
+starting result for the comparative-ascent question in #1919 is `1fd78e87`.
+On the common scale, a giver that realizes a level above the recipient's
+ceiling ranks higher in esse under the stated bridge from degree to being.
+Can we independently identify that ceiling and a level this very giver actually
+realizes above it for one actual giver–recipient pair? Such a finding would
+support the comparison for that pair. An extra determination below the ceiling
+can leave their peak degrees tied. [Registered result](../corpus/results/1fd78e87-12d3-4144-96e4-4f6b5e138958.json) · [Application](notes/contingency-receptivity-c2.md#when-does-a-missing-perfection-make-a-bearer-strictly-less)
+
+A reopening condition in a reviewed result can remain in the owning record
+after the issue closes. On
 completion, reconcile the accepted findings against current `main`, update
 the existing issue's visible current status and links, and leave historical
 details in comments or canonical records. Do not treat issue closure, a PR,

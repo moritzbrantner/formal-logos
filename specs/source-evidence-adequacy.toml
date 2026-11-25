@@ -1,0 +1,133 @@
+# Source-to-record application of existing individuated veracity.
+# Analyst reconstruction, attribution deferred. Root destination 98f13d52;
+# no actual historical channel or source identification is asserted.
+
+[batch]
+vocab = "TruthCore.Epistemology.SourceEvidenceAdequacy"
+results = "TruthCore.Results.Epistemology.SourceEvidenceAdequacy"
+
+[[statement]]
+id = "Exact decoded-content recovery RECORD_TRANSPORT_1 on the selected domain"
+lean = "ExactTransport"
+paraphrase = "OPEN channel condition RECORD_TRANSPORT_1: for each message in the supplied domain D, decoding receipt of its specified code recovers that identical message. This neither says the message is true nor identifies an actual source."
+definitions = ["e37c56c6-ac07-40d9-93df-6688593784e9", "91414c1b-813a-4b1d-bab5-715394ccd0bc"]
+
+[[statement]]
+id = "True encoded contents stay true under RECORD_TRANSPORT_2 in the admitted histories"
+lean = "TruthTransport"
+paraphrase = "OPEN channel condition RECORD_TRANSPORT_2: at each admitted history, a true content in D remains true after coding, receipt and decoding, under one fixed individuated-content Semantics. Neither original content truth nor exact content identity nor actual token provenance is asserted."
+definitions = ["16daa03a-e1d0-4e07-89ad-3ac67db8c66c", "91414c1b-813a-4b1d-bab5-715394ccd0bc", "9fcefb90-0cc3-4c0a-b964-cbf3585bc9c9"]
+
+[[argument]]
+id = "Exact content recovery supplies truth-preserving record transport"
+theorem = "transportWeakens"
+premises = ["Exact decoded-content recovery RECORD_TRANSPORT_1 on the selected domain"]
+conclusion = "True encoded contents stay true under RECORD_TRANSPORT_2 in the admitted histories"
+axioms = []
+rule = "Substitute the recovered identical content in the unchanged truth interpretation"
+meaning = "RECORD_TRANSPORT_1 implies RECORD_TRANSPORT_2 on the SAME channel and domain. The former is the sole Prop premise; allowed histories and content semantics are parameters. This is a strength comparison, not a defense of either transport condition or historical reliability. The retagging control witnesses failure of the converse."
+strong_version_needed = {"Exact decoded-content recovery RECORD_TRANSPORT_1 on the selected domain" = "The strong condition is the subject of this strength comparison; the main assertion-to-record assembly uses only the weaker truth-preserving condition."}
+sense_bridges = [{term = "RECORD_TRANSPORT", from = "RECORD_TRANSPORT_1", to = "RECORD_TRANSPORT_2", statement_id = "True encoded contents stay true under RECORD_TRANSPORT_2 in the admitted histories", role = "conclusion"}]
+
+[[relation]]
+id = "Exact recovery strengthens truth-preserving record transmission"
+subject_kind = "statement"
+subject_id = "Exact decoded-content recovery RECORD_TRANSPORT_1 on the selected domain"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "True encoded contents stay true under RECORD_TRANSPORT_2 in the admitted histories"
+verification_result_id = "Exact content recovery supplies truth-preserving record transport"
+note = "The sole-premise transportWeakens argument certifies the direction. No warrant ranking follows from logical strength."
+
+[[statement]]
+id = "Truthful same-source assertions reach records through explicit production and transport"
+lean = "SourceGuarantee"
+paraphrase = "For every shared History, channel, intentions, history-indexed individuated Attitudes and Semantics, fixed source g, admitted class, observation map, positive-record selection and content domain: if g has the existing GOD_4 and classical-attribute classifications, its assertions are true at each admitted history, selected plans genuinely assert the same content, all its selected causal tokens effectively encode plans in the domain, every positive observation is received from a token caused by that same existing source, and RECORD_TRANSPORT_2 preserves true content, then all selected admitted records have true decoded content. This is a conditional channel assembly. Source truth at one actual history alone is not the uniformly quantified premise; no actual channel, source classification or epistemic identification is supplied."
+definitions = ["91414c1b-813a-4b1d-bab5-715394ccd0bc", "dd7b91ea-5284-4558-bac5-7a0759843b0c", "beb654a7-e204-5f4c-a7b4-45e886ba7109", "b31ee595-dc6e-47a4-88a9-1910a0092199", "88f9f6e8-997b-5f7d-afa1-c501954c3807", "9fcefb90-0cc3-4c0a-b964-cbf3585bc9c9", "fa09d1dc-e38e-42ec-ac95-c510e8a87716", "16daa03a-e1d0-4e07-89ad-3ac67db8c66c"]
+
+[[argument]]
+id = "Source veracity with causal coverage realization and transport guarantees decoded truth"
+theorem = "sourceGuarantee"
+premises = []
+conclusion = "Truthful same-source assertions reach records through explicit production and transport"
+axioms = []
+transcription = "assembly"
+rule = "Follow the same source-token witness through planned assertion encoding receipt and decoding"
+meaning = "Conditional assembly of the existing ContentAssertionTruth target with the explicitly separated application conditions. The plan's individuated content is true by the SAME source's genuine assertion, and truth-preserving transport carries it to the observed decoded content. This supplies no independent warrant for trusting any source or channel. The informative dependency tests are the separate populated omission controls and the weaker transport comparison. No old proposition is declared true or actual."
+
+[[statement]]
+id = "Actual target-copying production and exact transport guarantee exact-value records"
+lean = "CopyGuarantee"
+paraphrase = "For any shared History, channel, source, admitted class, observation map, positive-record selection, independently supplied target value and message domain: if every source-caused token encodes that target, admitted target values lie in the domain, RECORD_TRANSPORT_1 recovers domain messages and selected records actually come from that same existing source, each selected decoded record equals its target. No intention, assent, assertion or God classification is a premise. No absence of mind, actual historical access or epistemic warrant follows from the schema."
+definitions = ["91414c1b-813a-4b1d-bab5-715394ccd0bc", "dd7b91ea-5284-4558-bac5-7a0759843b0c", "beb654a7-e204-5f4c-a7b4-45e886ba7109", "4abacd6f-e9f3-4790-b4d9-8e8368c95fdd", "e37c56c6-ac07-40d9-93df-6688593784e9"]
+
+[[argument]]
+id = "Actual copying and complete record provenance yield exact target recovery"
+theorem = "copyGuarantee"
+premises = []
+conclusion = "Actual target-copying production and exact transport guarantee exact-value records"
+axioms = []
+rule = "Identify the actual causal token with its target code and apply the domain round-trip law"
+meaning = "A nonmental sufficient process bundle with the same causal coverage and transport standard. CopiesTarget constrains actual production relative to an independently given target; it is not assumed record soundness. The theorem derives exact-value record truth, while access to a genuine historical target and the mechanism's applicability remain OPEN. The explicit no-plan/no-attitude witness tests functional parity, not a complete impersonal worldview."
+
+[[statement]]
+id = "An informed truthful source has actual sound varying records on a populated channel"
+lean = "Control.PositiveControl"
+paraphrase = "The explicit tagged-Boolean control has one fixed source, necessarily present in its universal frame, and an actual caused record token in each of two histories. The source genuinely asserts, is sincere, fully accurate and complete on represented contents, never asserts a counter-belief, and has true assertions. Assertoric plans, realization, same-source record coverage and RECORD_TRANSPORT_1 all hold; decoded records are true and the two observations differ. Primitive GOD_4/attribute classifications are only skeleton labels, not a model of all classical perfections or divine cognition."
+definitions = ["91414c1b-813a-4b1d-bab5-715394ccd0bc", "dd7b91ea-5284-4558-bac5-7a0759843b0c", "beb654a7-e204-5f4c-a7b4-45e886ba7109", "b31ee595-dc6e-47a4-88a9-1910a0092199", "88f9f6e8-997b-5f7d-afa1-c501954c3807", "9fcefb90-0cc3-4c0a-b964-cbf3585bc9c9", "fa09d1dc-e38e-42ec-ac95-c510e8a87716", "e37c56c6-ac07-40d9-93df-6688593784e9"]
+
+[[argument]]
+id = "Populated truthful-production positive control"
+theorem = "positiveControl"
+premises = []
+conclusion = "An informed truthful source has actual sound varying records on a populated channel"
+axioms = []
+rule = "Evaluate populated causal and cognitive assignments with the existing content-veracity route"
+meaning = "Restores the full source-to-record bundle without empty source populations, empty causal relations or constant observations. The assigned source and all token bearers exist throughout; cognitive attitudes vary with history. Structural satisfiability only: no actual source, metaphysical model or probability is established."
+
+[[statement]]
+id = "Source truth survives while four distinct record application conditions fail"
+lean = "Control.OmissionControls"
+paraphrase = "Four explicit same-carrier controls retain the informed genuinely asserting truthful source. First, planned false signs are effectively produced and transmitted but the plans are not assertions. Second, true assertoric plans fail to describe the actually caused false tokens. Third, true coded tokens are actually received through a corrupting channel that violates RECORD_TRANSPORT_2. Fourth, a correctly decoded false token comes from another source while the proposed truthful source still causes its correct token. Each corresponding record family is unsound; the other displayed bundle conditions hold. These are omissions in the selected structural interpretation, not evidence that a perfect source actually deceives or that global fabrication is metaphysically possible."
+definitions = ["91414c1b-813a-4b1d-bab5-715394ccd0bc", "dd7b91ea-5284-4558-bac5-7a0759843b0c", "beb654a7-e204-5f4c-a7b4-45e886ba7109", "b31ee595-dc6e-47a4-88a9-1910a0092199", "88f9f6e8-997b-5f7d-afa1-c501954c3807", "9fcefb90-0cc3-4c0a-b964-cbf3585bc9c9", "fa09d1dc-e38e-42ec-ac95-c510e8a87716", "16daa03a-e1d0-4e07-89ad-3ac67db8c66c"]
+
+[[argument]]
+id = "8930d16c-12f7-4b44-9003-ff503e72ddf5"
+label = "Four source-to-channel omissions break record guarantees"
+theorem = "omissionControls"
+premises = []
+conclusion = "Source truth survives while four distinct record application conditions fail"
+axioms = []
+rule = "Witness one failed application condition at a concrete caused and observed token"
+meaning = "Tests the source-to-record inference beyond sincerity and accurate complete cognition. Each countertuple identifies a concrete mechanism and retains actual causal tokens, a fixed populated roster and genuine source assertion. These controls justify conditional premise dependence only, not an adverse likelihood or a complete metaphysical rival. The positive control restores the full conditions on the same carriers."
+
+[[statement]]
+id = "Truth-preserving retagging changes content identity while records stay true"
+lean = "Control.SemanticTransportControl"
+paraphrase = "On the same tagged-Boolean semantics and actual source tokens, the retagging channel satisfies RECORD_TRANSPORT_2 but fails RECORD_TRANSPORT_1. Every original content differs from its retagged content while their truth at that history agrees; causal record coverage and true decoded records persist. The tag is a structural content-identity surrogate, not a complete account of psychological content."
+definitions = ["91414c1b-813a-4b1d-bab5-715394ccd0bc", "dd7b91ea-5284-4558-bac5-7a0759843b0c", "beb654a7-e204-5f4c-a7b4-45e886ba7109", "e37c56c6-ac07-40d9-93df-6688593784e9", "16daa03a-e1d0-4e07-89ad-3ac67db8c66c", "9fcefb90-0cc3-4c0a-b964-cbf3585bc9c9"]
+
+[[argument]]
+id = "Semantic preservation is strictly weaker than identical decoded content"
+theorem = "semanticTransportControl"
+premises = []
+conclusion = "Truth-preserving retagging changes content identity while records stay true"
+axioms = []
+sense_mixing_control = true
+rule = "Keep the truth coordinate and flip the independent identity tag"
+meaning = "Explicit failure of the converse of transportWeakens, retaining actual causal tokens, positive observations and truth. No exact content identification is required by SourceGuarantee. This does not license arbitrary translation or infer epistemic access from semantic truth."
+
+[[statement]]
+id = "The same necessary source and copying channel work without represented plans or attitudes"
+lean = "Control.NonmentalControl"
+paraphrase = "On the same populated two-history causal model, the same fixed source is necessarily present and actually causes its target-coded token in each history. All represented plans, assertions and assents are absent in the separate no-mental profile; actual copying, same-source coverage, RECORD_TRANSPORT_1 and exact target recovery hold, and the decoded historical-bit contents are true. This is functional parity for the specified predicates, not a proof of complete mindlessness, a defended necessary impersonal ontology or a source's actual existence."
+definitions = ["91414c1b-813a-4b1d-bab5-715394ccd0bc", "dd7b91ea-5284-4558-bac5-7a0759843b0c", "beb654a7-e204-5f4c-a7b4-45e886ba7109", "b31ee595-dc6e-47a4-88a9-1910a0092199", "4abacd6f-e9f3-4790-b4d9-8e8368c95fdd", "e37c56c6-ac07-40d9-93df-6688593784e9", "9fcefb90-0cc3-4c0a-b964-cbf3585bc9c9", "fa09d1dc-e38e-42ec-ac95-c510e8a87716"]
+
+[[argument]]
+id = "The unchanged causal copying mechanism admits an attitude-free control"
+theorem = "nonmentalControl"
+premises = []
+conclusion = "The same necessary source and copying channel work without represented plans or attitudes"
+axioms = []
+rule = "Retain the same causes and channel while interpreting all represented attitudes and plans as empty"
+meaning = "Applies the same exact-value production guarantee without attributing cognition or assertion to the source. The empty mental relations are explicitly disclosed and not mistaken for empty causation; the positive cognitive control restores them. Necessity is stipulated on a universal frame and is not what proves record truth. Comparison beyond these functional conditions remains a philosophical application question."
