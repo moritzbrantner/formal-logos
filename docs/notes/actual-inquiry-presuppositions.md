@@ -192,3 +192,167 @@ target/release/truth frontier-diff --base "$(git merge-base HEAD origin/main)" -
 Use an isolated preview/local Lean run for the proposed projections if useful; if a substantive new argument is justified, freeze Challenge, implement Solution, and apply binding, Comparator and NanoDa before registering it. Independent review must challenge the final actual episode interpretation, the proposed merit-to-reason judgment, the fixed-content scope, and the downstream witness alignment. Self-sweep: no historical claims; no truth from assertion alone; controls have explicit carriers and force assignments; no normative strength from preference invariance; no local-to-universal upgrade; no root discharge claimed. Keep #930/#932/#1007 open and #1995 draft.
 
 [Research attempt and scoped unreviewed assessment](../../corpus/attempts/342199e6-8ad7-4835-873e-5bdab8fb3b82.json).
+
+
+## Continuation: inquiry supplies a truth about its own actual occurrence
+
+2026-11-25, second investigation from `4947b39822c77d1d08e5eaf85a08bcb2f1a62223`. This is a narrower epistemic use of the Cogito, not a competing bearer/actuality research branch. It addresses F6 and the global undercutter, using the existing actual-thought proposition `e81971f1-601c-57f5-be2d-c4b0624d0cad`.
+
+The previous tally supports a narrower conclusion even when it cannot resolve its external target. Can a conscious inquiry itself provide a basis that survives doubt about *every external target*, including deceptive reports and a fabricated past? Unlike the tally application, the proposed evidential ground is the currently apprehended questioning, not the accuracy of a record or memory of earlier successful reasoning.
+
+### 1. The precise challenge and direct warrant
+
+Consider actually attending to one's present conscious questioning of some proposition p, without trying to settle p. The proposed positive judgment is **some thought is occurring**, not "p is true", "I am a substantial enduring self", or "my faculties are generally reliable". In this case the very occurrence which is attended to supplies the fact whose absence is denied. There is no prior inference from a statistically reliable indicator of thought to an unobserved thought.
+
+The relevant distinction is between:
+
+- **Occurrence presented in the activity itself:** genuine present conscious questioning, apprehended as such. The subject need not remember an earlier episode. Being mistaken about the subject matter of the questioning does not turn the questioning into a nonoccurrence.
+- **A representation or report of occurrence:** a transcript, memory, belief, computational verdict, or other sign that such an episode is occurring. Its truth conditions need not be satisfied by its production. Such a report can be generated in the absence of the relevant conscious episode.
+
+The first description takes actual conscious acquaintance as a specific application input, not as a conclusion from behavior, nor as a definition of all representations. It is available in first-person inquiry; the present session cannot inspect the owner's private experience or attest a machine's phenomenology. A bare sensation that is not a thought supports the weaker occurrence claim, not `ThoughtOccurs`. Use the cognitive questioning case to apply the latter. A genuine appearance of something as conscious can be an occurrence without settling its classification as a particular kind of thought.
+
+The exact positive warrant for `ThoughtOccurs` is therefore indexical and noninferential at its core: attend to the episode rather than infer it from a source history. The simple existential inference then preserves that very witness. This is evidence of **actual** occurrence, not merely the logical theorem that if an episode occurs, it occurs. The availability of that application is the remaining first-person premise. Compare [the prior Cogito premise assessment](cogito-esse-1113.md) (`95c5138f`, `1722a80f`, `e81971f1`), [first-person access in the receptivity study](contingency-receptivity-c2.md), and the older [historical counterfeit boundary](ultimate-explanation-and-knowledge-737.md). The new comparison concerns the effect of representational defeat on a different use of a current episode as evidence; it does not reprove the existing performed-denial result or turn a contingent actual occurrence into necessary existence.
+
+### 2. A skeptical alternative cannot preserve every kind of evidence
+
+Let W be a comparison domain, e a possible episode witness, Occurs(w,e) the existing thought-occurrence reading at a supplied index, and Seen(w,e) the proposed *factive first-person acquaintance with that episode as a present thought*. This is a proposed local interpretation of evidence, not an independently registered predicate. Its two application conditions are:
+
+1. At the actual index w0, some episode is so apprehended: ∃e, Seen(w0,e).
+2. Throughout the comparison, Seen(w,e) implies Occurs(w,e) for that witness.
+
+Write A(w) for ∃e, Seen(w,e), and Q(w) for ∃e, Occurs(w,e). A counterfactual need preserve the evidence-kind A, not the numerical identity of the particular episode across worlds. Then A entails Q everywhere in the specified comparison, and Q obtains at w0. A counterexample to Q cannot be in A's evidence cell. The counterpart can preserve A while making the original external proposition p false. A report-only comparison can preserve the text and make Q false, because that comparison lacks the factive evidence bridge. If the skeptic allows that very case, the question is whether the selected evidence is merely a report or an actually apprehended episode.
+
+This is a same-domain, nontrivial restriction: there are states with no thought at all and states with thought but no questioning of p. It is not the vacuous assertion that all worlds have the target occurrence. The distinction also does not rely on how probable the deceptive alternative is.
+
+**Proposed Lean check**, using the existing `CogitoSubject.ThoughtOccurs` rather than adding an ontology or a proof registration:
+
+```lean
+import TruthCore.Logic.CogitoSubject
+open TruthCore.Logic.CogitoSubject
+
+example {W E : Type} (Occurs Seen : W → E → Prop) (w0 : W)
+    (actualAccess : ∃ e, Seen w0 e)
+    (accessFactive : ∀ w e, Seen w e → Occurs w e) :
+    ThoughtOccurs (Occurs w0) ∧
+      ¬ ∃ w, (∃ e, Seen w e) ∧ ¬ ThoughtOccurs (Occurs w) := by
+  have witness (w : W) : (∃ e, Seen w e) → ThoughtOccurs (Occurs w) := by
+    rintro ⟨e, he⟩
+    exact ⟨e, accessFactive w e he⟩
+  refine ⟨witness w0 actualAccess, ?_⟩
+  rintro ⟨w, ha, hn⟩
+  exact hn (witness w ha)
+```
+
+The proof is conditional on explicitly factive access; it would be a simple witness projection and not a substantive new theorem by itself. The philosophical work is the local ground interpretation and discriminating scope of the skeptical defeater. The result says no comparison state with A lacks Q, not that no conceivable state lacks Q. It does not infer accessibility, knowledge, actuality of thought or modal necessity from a Lean carrier. F1 excludes Q and its same-sense Lean negation at a fixed index; no general dialectical defeat of nonclassical logics is involved.
+
+### 3. Why one defeated representation need not destroy all epistemic support
+
+Reuse the exact `ReliabilityFrame` in `TruthCore/Logic/GlobalThesisBoundaries.lean` (definition `26cbf25d`). It indexes undercutters by subject and **basis**, not by subject, basis and target. Hence care is needed in translating a content-specific defeat. One episode can give two grounds, distinguished by their evidential roles:
+
+- bExternal: use the episode's representation as evidence for an external proposition p.
+- bOccurrence: use the present apprehension of the episode itself as evidence for Q.
+
+These need not be independent physical sources, two episodes, or even two observations. A single experience may ground both. Their distinctness in the frame represents the distinct epistemic grounds, not a guarantee of independent epistemic warrant. If Basis is instead defined as the raw episode token, the old frame has no content-specific undercut relation; the proposed separation is not legitimate under that reading without an interpretation bridge. The two-use interpretation is justified here by different dependencies: bExternal needs a connection from representational content to subject matter; bOccurrence needs the episode's present occurrence and its apprehension.
+
+The familiar defeater theorem `bab6bc66` (`undercutSoleBasisPrecludesWarrant`) requires sole-basis dependence and warrant-needs-undefeated-support. The #1615 audited defeat result `8f0f44e5` additionally requires its actual process audit and specified policy. Neither says that a defect in an external representation defeats every use of the episode. A counterfeiting scenario can falsify p while satisfying both the occurrence and the acquaintance; it cannot by itself be a counterexample to that acquaintance's bearing on Q. An undercutting objection that challenges the very presence or identification of the acquaintance is different from a representational rebutter and remains a live test.
+
+Under the local reason calibration of `6b4e3331`, an available non-undercut bOccurrence gives Reason(a,Q) and F6, even if the first basis is defeated and every external answer remains suspended. Thus the epistemic dispute moves from general reliability of a faculty to **whether this present, directly apprehended occurrence counts for the belief that some thought occurs**. This attribution is a substantive local evaluative judgment, not a definition of an episode or a consequence of correctness alone. `b3ddb7c4`'s warranted-acceptance route is not needed when using the direct surviving basis; no prior belief or knowledge of Q is required. The exact inference, proposed on existing declarations:
+
+```lean
+import TruthCore.Logic.EpistemicReasonBearer
+open TruthCore.Logic.GlobalThesisBoundaries
+open TruthCore.Logic.EpistemicReasonBearer
+open TruthCore.Logic.EpistemicReasons
+
+example (f : ReliabilityFrame) (R : f.Agent → f.Content → Prop)
+    (a : f.Agent) (bExternal bOccurrence : f.Basis) (q : f.Content)
+    (bad : f.undercuts a bExternal)
+    (good : f.supports a bOccurrence q)
+    (retained : ¬ f.undercuts a bOccurrence)
+    (counts : SurvivingBasisGivesReason f R) :
+    bExternal ≠ bOccurrence ∧ UndefeatedSupport f a q ∧
+      R a q ∧ ThereAreEpistemicReasons R := by
+  have hr := counts a bOccurrence q good retained
+  refine ⟨?_, ⟨bOccurrence, good, retained⟩, hr, ⟨a, q, hr⟩⟩
+  intro heq
+  exact retained (heq ▸ bad)
+```
+
+The distinctness is a consequence *inside that interpretation*, because one basis is undercut and the other is not. It does not prove actual separation, availability or retention, and does not assume that an independently justified warrant for the audit is supplied. The formal witness projection is only an unelaborated application sketch, not a new registered result. In particular, do not infer survival of bOccurrence from the fact that bExternal was defeated.
+
+### 4. Executed finite comparisons
+
+The preceding checkpoint's Python reproduction was rerun successfully. The new reproduction below enumerates twelve states and every subset containing the selected actual state (2048 restrictions), of which 1024 admit the specified deceptive comparison state. It also checks eight explicit reason/defeat structural profiles. The finite states represent a fixed comparison interpretation, not exhaustive metaphysical possibilities or an actual report of someone's inner life.
+
+```python
+from itertools import product
+# Episode-kind, external truth, public marker of inquiry.
+W = tuple(product(('none', 'asks-p', 'other-thought'),
+                  (False, True), (False, True)))
+w0 = ('asks-p', True, True)
+counterfeit = ('asks-p', False, True)
+report_only = ('none', True, True)
+A = lambda w: w[0] == 'asks-p'
+Q = lambda w: w[0] != 'none'
+P = lambda w: w[1]
+T = lambda w: w[2]
+assert A(w0) and Q(w0) and P(w0) and T(w0)
+assert A(counterfeit) and Q(counterfeit) and not P(counterfeit)
+assert T(report_only) and not A(report_only) and not Q(report_only)
+assert all(not A(w) or Q(w) for w in W)
+assert any(Q(w) and not A(w) for w in W)
+assert any(not Q(w) for w in W)
+other = tuple(w for w in W if w != w0)
+count = deceptive = 0
+for include in product((False, True), repeat=len(other)):
+    H = (w0,) + tuple(w for w,i in zip(other,include) if i)
+    F = tuple(w for w in H if A(w))
+    assert F and all(Q(w) for w in F)
+    assert not any(A(w) and not Q(w) for w in H)
+    count += 1
+    if counterfeit in H:
+        assert any(P(w) for w in F) and any(not P(w) for w in F)
+        deceptive += 1
+assert (count, deceptive) == (2048, 1024)
+assert not all(not T(w) or Q(w) for w in W)
+
+# Distinct uses of a source, not independent source tokens.
+B = ('ext', 'occ')
+C = ('P', 'Q')
+support = {('ext', 'P'), ('occ', 'Q')}
+profiles = []
+for ext_defeat, occ_defeat in product((False, True), repeat=2):
+    defeated = {'ext': ext_defeat, 'occ': occ_defeat}
+    survivor = {p for p in C
+        if any((b,p) in support and not defeated[b] for b in B)}
+    assert ('P' in survivor) == (not ext_defeat)
+    assert ('Q' in survivor) == (not occ_defeat)
+    for calibrate in (False, True):
+        R = survivor if calibrate else set()
+        assert bool(R) == (calibrate and bool(survivor))
+        if ext_defeat and not occ_defeat and calibrate:
+            assert R == {'Q'}
+        profiles.append((ext_defeat, occ_defeat, calibrate, tuple(sorted(R))))
+assert len(profiles) == 8
+```
+
+A encodes actual episode-kind, not an independently tested first-person access mechanism; matching A is a structural surrogate for the factive access profile, which additionally requires actual apprehension in the philosophical reading. A ⇒ Q holds by the explicit classification, not by a numerical experiment proving introspection reliable. The reason profiles assign the support and defeat relations; the calibration-off control empties R deliberately and does not prove no reason in an actual subject. Both undercutters can be set true together; the experiment thus leaves wholesale defeat coherent at this purely structural level. It isolates the *additional* conditions needed to carry the observed external error across to the occurrence ground.
+
+### 5. A sharper fork for universal epistemic skepticism
+
+| Claim or rival | Test | Result |
+| --- | --- | --- |
+| Every actual evidence basis has an evidence-preserving possible error about its own target | Compare the directly apprehended current thought against Q. | In the factive-access reading, false in the comparison domain: any ¬Q state lacks A. A mere-report reading survives; it must contest the actual-access interpretation. |
+| All external appearances, traces and histories may mislead | Preserve A and flip p. | Compatible with Q. It is not a mechanism for falsifying the occurrence conclusion; no general external-world knowledge inferred. |
+| All cognitive faculties may be unreliable | Distinguish prediction, representation, inference, and direct presence. | Lack of general predictive reliability does not establish defeat of every particular basis; a broader objection must target the ability to recognize the present episode. |
+| There are no epistemic reasons | Apply the local ordinary reason judgment for Q. | If the subject has a reason to believe Q, the universal denial contradicts F6's witness. A reasonless-truth view survives the formal controls without the reason calibration; if it seeks rational adoption it still incurs the existing self-undermining consequence. |
+| All metaphysical facts are inaccessible through rational inquiry | Q is about actual thought occurrence, not just a formal truth or a report. | On a scope including this modest ontological fact and on the actual-awareness/warrant reading, the denial encounters a counterinstance. A restriction to unexperienced external entities, ultimate grounds or substantial bearers survives; no necessary-being theorem follows. |
+| Preference-independent authority fails | Preserve the occurrence and evidence while varying desire and interest in accuracy. | The evidence's bearing on Q survives; the goal-relative account can still withdraw force for an indifferent subject. This comparison does not establish categorical obligation. |
+
+The important pressure is that a skeptic who admits an actual conscious, directly apprehended inquiry cannot retain the **same evidence** while removing all occurrence of thought. Merely saying "the thought is deceptive" changes the target of the objection from the existence of the act to its content or epistemic adequacy. To deny this local positive reason requires a substantive further theory, for example global defeat of even immediate acquaintance or the claim that only accuracy-dependent instrumental force counts. The latter can grant F6 for actual accuracy-directed inquiry. A report-only account must explain why first-person conscious awareness is absent or nonfactive; the report-only control cannot settle that actual question.
+
+This provides a more direct positive route to thin F6 than requiring a subject to master the external count. It is also a cross-family warrant for the Cogito occurrence input `e81971f1`: its first-person application is directly defensible even under wide external skepticism. The remaining metaphysical steps are still precisely those in #1979/#1980: occurrence-to-representation, bearer and selected-world presence/esse. In particular, neither the factive access hypothesis nor the existence of a propositional content identifies a substantial bearer or demonstrates a pure perfection of intellect in the ultimate ground.
+
+**Proposed judgment and next discriminating test.** The limited epistemic invulnerability of *the occurrence conclusion to representational falsity* is well supported by the same-witness distinction. It is not invulnerability to every undercutter. The stronger judgment that the selected subject actually has a reason for Q is supported prima facie by immediate acquaintance and the direct accuracy distinction, without appealing to past success; its first-person application is not observed in this session. A substantive challenger should provide a concrete account of the remaining local undercutter: can it leave genuine conscious acquaintance intact while defeating epistemic support for bare occurrence, rather than replacing acquaintance with a mere seeming/report of acquaintance? Compare externalist, internalist and nihilist accounts at that exact witness. The next independent test should also distinguish the fact that the episode occurs from the correct classification of that episode as *thought*, retaining the weaker phenomenal occurrence if classification fails. Do not repeat a generic countermodel with all reason predicates empty as if it answered that question. The selected goal-relative force rival remains viable, and the stronger end-independent relevance problem remains open.
+
+No changes to corpus closure, proof registrations or attribution. Local DNS failure and absent Lean/Lake/Cargo reconfirmed; no independent challenge worker. The new proof sketches are not elaborated. Retain the required preflight and verification commands above; add `truth related e81971f1`, `truth dossier e81971f1`, `truth brief e81971f1`, `truth semantics e81971f1`, `truth context bab6bc66`, `truth context 8f0f44e5`, and `truth novelty "present acquaintance and distinct evidential uses under global representational defeat"` (using target/release/truth). Reopen the current handoff after an independently challenged interpretation and actual first-person application; this checkpoint does not settle #930, #932 or #1007.
