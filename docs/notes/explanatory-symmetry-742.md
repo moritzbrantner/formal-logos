@@ -533,6 +533,171 @@ A further discriminator would be a ground for individuating **this giving of bei
 
 For the inferential destination, `5465fccb` concerns selection on fixed complete evidence. Here the two geological hypotheses differ in a relevant prediction under explicit conditions. At the origin `dd4dfa3b` separates eligibility from actual selection among orders. Enabling this correction gives no unique choice among all histories that permit it. Neither certificate turns the letter into evidence of its source's personhood. For #1731, `b5b84276` identifies the kind of power exercised given its one-power and intellect/will bridges. An actual de re purpose of that exercise still needs the practical-object bridge. The only-personal restriction concerns explanations of intentionality and mental causation. The impersonal account gives it a positive rival. Even an explanation of either phenomenon by a distinct thinker would still need the #1792 bridge to a dependence of the bearer for existence. Granting the source of concrete existence, identifying an intellect at that same source, and establishing *its purpose in sustaining this knower* are distinct God-existence-stage obligations. No graph edge or closure change follows. [Same-witness source and attribute conditions](de-ente-esse-source-1628.md#same-witness-identities-for-1731-2026-11-18) · [Restriction](../../corpus/statements/cc100-116-personal-explanation-restriction.json) · [Power result](../../corpus/results/b5b84276-2b13-459e-9f59-a3d083f52cc3.json)
 
+## What evidence distinguishes a producer's target from its forecast?
+
+The Glen Roy letters identify whose inquiry the geological evidence guided.
+The Apollo 13 records permit a further test. On the same rescue operation we
+can distinguish the return the controllers expected from the return they
+were trying to bring about. A successful splashdown alone would fit both
+descriptions.
+
+NASA's flight-control report records the alternatives considered before the
+principal return maneuver. The team rejected an earlier Pacific return that
+would have relied on a service module of uncertain structural integrity.
+A longer Indian Ocean return put consumables and recovery at greater risk.
+The adopted plan targeted a Pacific return at about 142 hours. Before the
+maneuver, ground communicator Joe Kerwin corrected pilot Fred Haise's
+understanding of one alignment contingency. Haise repeated the correction
+and the intended return target, and Kerwin confirmed it. This exchange
+documents uptake of the plan while implementation could still go wrong.
+[Flight Control Division report, III-22–23](https://www.apollojournals.org/alsj/a13/A13_MissionOpReport.pdf) · [Air-to-ground exchange at 070:55:52–070:57:32](https://apollojournals.org/afj/ap13fj/11day3-minimise-power.html#0705552)
+
+The same report records a revealing disagreement before the final course
+correction. One controller accepted the spacecraft's orientation. The
+retrofire officer objected because it would reduce the effective component
+of the planned maneuver. Guidance advised the flight director to use the
+prescribed orientation. A corrected estimate alone would have improved
+the forecast while leaving the trajectory where it was. Here the team
+used the discrepancy to direct the crew's action. The recovery constraints,
+discussion of options, transmitted target, objection and subsequent
+execution together warrant attributing a purposive contribution to the
+human participants. Their roles were distributed. No inference requires
+one controller to have chosen the end, communicated it and executed the
+maneuver alone. [Flight Control Division report, Appendix B, p. B-12, §E.1–2](https://www.apollojournals.org/alsj/a13/A13_MissionOpReport.pdf)
+
+The records have different evidential roles. The flight directors’ joint postflight narrative describes the
+selection meeting. Haise's own readback distinguishes Earth/Sun from Earth/Moon
+alignment and identifies the intended Pacific return. This is participant
+evidence of his understanding of the instructions. It gives little reason to
+credit him personally with choosing the Pacific option. The retrofire team’s joint
+postflight report gives the on-duty officer’s operational reason for the no-go
+call. The four signatories do not identify which of them wrote that passage. These are distinct
+perspectives on a shared operation, and both written accounts belong to one
+official report. A well-calibrated automatic controller can use the target in
+steering, while a human who understands the target and accurately predicts the
+burn can contribute nothing to steering. The reason to credit the officer with
+a practical contribution is what he **did with the estimate** in his assigned
+role. Even a perfectly executed burn would leave that evidence intact.
+
+Nor did the choice of trajectory select these three people for existence.
+“Return whoever is aboard alive” identifies the beneficiaries once the roster
+is fixed. A change of roster preserves that mission objective while changing
+the people who benefit. The evidence supports concern for the actual crew.
+It does not settle whether a particular crew member's identity was itself
+among the reasons for selecting this trajectory.
+
+### What would make this recipient the practical object of a simple giver?
+
+Fix the same ultimate giver, Darwin, his continued existence and his exercise
+of geological judgment. Grant for this comparison that the giver originates
+the whole order, including the conditions that distinguish Darwin from another
+knower. The good in question can be specified independently of the successful
+correction. It is an opportunity for Darwin to weigh evidence himself. A true
+verdict copied from somebody else misses that good, and another geologist's
+exercise of the same skill leaves Darwin out. These tests distinguish the
+content of the proposed end. Both producers can meet it. What would make this
+content a reason **on which the giver acts**?
+
+The strongest argument from original adoption begins with this constraint.
+If something is an instruction *for this exercise*, some feature of the
+producer or its circumstances must account for its authority over execution.
+The existence of a correct description of the result cannot confer that
+authority. An executive can inherit it from a planner, as in the rescue.
+At an ultimate source of the entire order that answer runs out. **If the
+giving has the character of carrying out an understood specification**, the
+giver must itself own that specification as practical. Another command to
+adopt it would simply reopen the same question about the authority of the
+command. Original adoption can therefore be a primitive exercise of agency.
+Its positive warrant comes from the intelligibility of an agent settling
+which eligible good to pursue and thereby explaining what its means are for.
+The local evidence supports that form of explanation. The conditional's
+antecedent is the disputed step at the ultimate source.
+
+There is a stronger way to defend that step than projecting successive
+planning onto God. Aquinas argues that effects proceed from their cause in
+the mode in which they pre-exist there. Given his identification of divine
+being with intellect, this makes the conceived form directive in production.
+He distinguishes direction by knowledge, command by will and execution by
+power, adding “But in God all these things are one.” His next article locates
+the order of means to end within what is willed in one act. It requires no
+earlier volition causing a later one. The account of productive knowledge
+likewise requires an inclination toward the effect. This yields an argument
+about **how** the source gives, stronger than the bare numerical identity of
+its powers. [ST I q.19 a.4, third argument and reply 4](https://www.newadvent.org/summa/1019.htm#article4) · [a.5, answer and reply 1](https://www.newadvent.org/summa/1019.htm#article5) · [ST I q.14 a.8](https://www.newadvent.org/summa/1014.htm#article8)
+
+Test the inference by granting a contemplating source as much as possible.
+Suppose its one productive nature grounds both the actual order and its
+complete understanding of how that order proceeds from itself. It then knows
+Darwin through its own actuality, without learning anything from an external
+creature or waiting for a result. That answers the objection that a forecaster
+must borrow its information from elsewhere. The remaining dispute about the
+mode of pre-existence is exact. Does the intelligible content specify the
+production **insofar as understood**, or does the source understand precisely
+what its nature specifies productively? Both explanations put the ultimate
+ground in the giver. Only the former makes the understood good a measure
+of the giving. Even that answer needs a further distinction. A giver can
+intentionally produce the complete order, know that Darwin benefits, and aim
+at a good of the whole for which his benefit is incidental. To infer provision
+*for him*, the order of means to end within the act must include his good as
+a reason for sustaining him. This neither requires him to be the sole end nor
+makes his goodness a prior cause of the giver's willing.
+
+| Test on the same actual giving | Giver acting for Darwin's good | Reason-responsive impersonal producer | Contemplating, independently productive giver |
+| --- | --- | --- | --- |
+| What fixes the opportunity independently of success? | Darwin's own appraisal rather than a copied verdict | The same difference in his activity | The same difference, perfectly understood |
+| What accounts for provision of that opportunity? | The giver takes this good as a reason for sustaining him | The producer's own disposition realizes conditions enabling appraisal in response to their value for this recipient | The productive nature supplies those conditions and grounds true understanding of their value |
+| What fixes the status of his good as an end? | The giver includes it among the ends of this exercise | His good can directly order production without representing a command | The giver knows that ordering. Knowing it is compatible with production independent of that knowledge |
+
+The impersonal proposal owes an account of why its disposition is sensitive
+to the difference between genuine and copied appraisal. A rule fitted only
+to the actual successful verdict supplies none. A disposition directed to
+preserving the exercise of the recipient's capacity has a principled answer:
+supplying an answer can defeat that exercise even when the answer is correct.
+That same distinction constrains the personal proposal. An intention merely
+to bring about true belief cannot explain provision *for Darwin's own
+judgment*. With several eligible recipients, protecting the good of whichever
+exists also leaves open why this person receives existence. Both sides may
+take the determinate exercise as primitive. Each must say what it settles.
+A general ranking tied between recipients cannot by itself settle the identity
+on either account.
+
+**Provisional judgment.** Original practical authority is a genuine
+discriminator if there is independent reason to identify the exercise as
+production according to an understood end. In Apollo 13 the announced objective,
+readback and reason given for a control decision supply such evidence for
+particular human contributions. Perfect success would preserve the distinction
+between a forecast answerable to the burn and a burn directed by the target.
+No divine error, temporal revision or separately existing executive is needed
+for that distinction either. But removing the external planner eliminates
+*delegated* authority, leaving open whether production has an intentional
+standard at all. The comparison supports the intelligibility of ultimate
+authorship and its conditional explanation of action for someone's sake. It
+gives neither ultimate account an evidential advantage from successful
+recipient-specific provision alone.
+
+Reopen on a reason to accept or reject transmission of the **intellectual
+mode** from source containment to actual production, and on evidence that
+this recipient's own good belongs among the ends of the act. Under strict
+intrinsic invariance the account must locate what makes that relation
+determinate for this contingent person. A relation specified only by which
+person actually exists obtains equally on the impersonal account. Conversely,
+if a constitutive account of practical understanding is independently warranted
+that the value-sensitive producer itself satisfies, count it as exercising
+such understanding. Calling it impersonal would cease to distinguish it on
+that criterion. The unpublished comparison of original specification and
+source containment supplies the starting alternatives for this test.
+[Draft #1962, §§37–53 at the examined revision](https://github.com/moritzbrantner/formal-logos/blob/673f66f45673bcb51f02141128e3f8450303bb7f/docs/notes/optimal-creation-choice.md#37-meanings-and-one-matched-candidate-construction)
+
+For #1731, the fixed giver must have intellect and one power. Given that will
+follows intellect, having will entails having a rational power, and each giving
+exercises a power of its giver, uniqueness identifies the exercised power with
+the rational one. The result supplies no practical object for this exercise.
+For #1792, explaining a knower's mental activity still needs a bridge to the
+dependence of that very bearer for existence. Here we granted that dependence
+to compare its proposed explanations. The remaining attribute bridge is from
+the same giver's actual exercise to its being governed by its apprehension of
+this recipient's good. No premise change. [Power result](../../corpus/results/b5b84276-2b13-459e-9f59-a3d083f52cc3.json) · [Same-witness obligations](de-ente-esse-source-1628.md#same-witness-identities-for-1731-2026-11-18)
+
 ## Research attempts citing this note
 
 - [Locate discriminating input in agenda selection and compare motivated choice](../../corpus/attempts/d735348a-03f9-4a7e-8c48-323392ed704e.json)
