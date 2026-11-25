@@ -323,3 +323,190 @@ formal changes, and report the computed
 `target/release/truth frontier-diff --base <merge-base>` for both root
 targets. The current note is not a new theorem, floor approval or completed
 corpus-wide semantic audit.
+
+
+## Checkpoint 3: logical witnesses, semantic transfer and SCC inspection
+
+This expands the selected implication audit by 27 registered argument/result
+pairs at the same pinned base. All pairs were read from their actual records
+and the result status was `solution-present`; this is not a fresh verification.
+The exact premises are graph premises, not the full Lean proof-import or
+theorem-internal dependencies. For the central truth-pilot, retorsion and
+truth-nontriviality results, the frozen Challenges, definitions and relevant
+Solutions were also inspected. No new claim about the adequacy of a historical
+reading is made.
+
+The related actual-inquiry draft #1995 and conventionalism / psychologism drafts
+#1991/#1990 own their wider epistemological arguments. The present lane audits
+logical and semantic consequences rather than reopening those research topics.
+For the existing absolute-truth, F6 and scientism grafts, reuse
+[orphan-graft-map.md](orphan-graft-map.md); its one-witness examples have
+already been checked in Lean there. This is not a second claim to that work.
+
+| Registered result file | Conclusion statement ID | Argument ID | Result ID | Recorded premises | Scope, warrant or control |
+| --- | --- | --- | --- | --- | --- |
+| [LOGIC-NON-CONTRADICTION](../../corpus/results/LOGIC-NON-CONTRADICTION.json) | `e02e6c70-fbc0-59e2-8cef-edd44715b893` | `fcee262a-dfba-56d4-95b6-e35bbff475dc` | `436b5818-6d34-5f15-b828-a9a7b56fbc31` | none | Constructive Prop noncontradiction, not unrestricted adequacy of a rival’s negation. |
+| [LOGIC-EXCLUDED-MIDDLE-IRREFUTABLE](../../corpus/results/LOGIC-EXCLUDED-MIDDLE-IRREFUTABLE.json) | `be102c88-1680-5837-9bf3-8491dd3280f2` | `79cc7b1f-1df3-5383-9f3f-92d1efa71742` | `3be6adf4-216f-53a0-b69b-084ac5fc7e48` | none | Every instance has double negation, not positive EM. |
+| [LOGIC-EXCLUDED-MIDDLE-NOT-DENIABLE](../../corpus/results/LOGIC-EXCLUDED-MIDDLE-NOT-DENIABLE.json) | `293a58b8-5aa4-5a1d-bd2a-686cb047591f` | `0236e896-2141-5a43-a84b-274a143204ae` | `d36bd424-9fe4-5a67-a109-7d0c5c419e06` | none | No consistent denial of a particular instance; withholding survives. |
+| [LOGIC-EXCLUDED-MIDDLE-IFF-DNE](../../corpus/results/LOGIC-EXCLUDED-MIDDLE-IFF-DNE.json) | `cd460425-9160-545e-92db-e8902c09e384` | `869f1010-b1d1-5937-bdff-a73583f36fd2` | `e2d8d9a4-ecab-5d32-8c57-4109df41dbb6` | none | Constructive equivalence of EM and DNE; neither asserted. |
+| [EXCLUDED-MIDDLE-ASSERTION-BOUNDARY-CONTROLS](../../corpus/results/EXCLUDED-MIDDLE-ASSERTION-BOUNDARY-CONTROLS.json) | `f2b40ced-dfee-5795-a457-318f9c524d0a` | `335968ac-c307-56d5-bec1-8535ab8482ad` | `e369dd43-f8ce-5330-8701-0d355ac2865c` | `ee4ab504-c8fe-59bc-bc96-7cbeefed6410` | Object-level EM can coexist with withholding the assertion; marker controls only. |
+| [INTUITIONISM-ENTAILS-EXCLUDED-MIDDLE-WITHHELD](../../corpus/results/INTUITIONISM-ENTAILS-EXCLUDED-MIDDLE-WITHHELD.json) | `dd9921a6-cea1-5cb5-ac08-512a4a5b1813` | `46b46d58-747d-53a3-81d9-59945c34d014` | `66c58475-265b-5466-975d-24ea5731d7e7` | `702d4c9b-3828-5d83-8687-91d6ccdb8fa6`, `1bd98cda-fec3-5ecc-ad0c-b8b11c2b6462`, `0db3a62e-90ec-59a3-8599-f3843f636af1`, `be102c88-1680-5837-9bf3-8491dd3280f2` | Positive proof/assertion-policy rival; irrefutability is available but the other theory commitments remain inputs. |
+| [ARIST-MET-1012A-THOUGHT-BIVALENCE-IFF-EXCLUDED-MIDDLE](../../corpus/results/ARIST-MET-1012A-THOUGHT-BIVALENCE-IFF-EXCLUDED-MIDDLE.json) | `90445a81-be2c-549a-b190-ceb1d1362b30` | `4c33e093-4aba-5a4d-88c3-08b1cb931925` | `13c88303-6931-5e84-bfab-6457b6cd9db3` | `62fbdad9-babe-5e3d-877e-c618858b2b19`, `b7f66357-c688-5bad-bf34-14ef9f3a87aa`, `ee440511-1103-5020-8a39-d2a6b96e5397` | Bivalence of thought under these calibrations is EM-equivalent, not independent evidence against withholding. |
+| [BRIDGE-IV7-CONTRADICTORY-PAIR-FROM-EXCLUDED-MIDDLE](../../corpus/results/BRIDGE-IV7-CONTRADICTORY-PAIR-FROM-EXCLUDED-MIDDLE.json) | `78842acb-e26c-5d26-9995-cdb26e5ce9eb` | `6351bf87-7563-5c19-9720-9f160a740b3c` | `29fe4476-ee77-5eda-97eb-6a1d4d852daa` | `ee4ab504-c8fe-59bc-bc96-7cbeefed6410` | Declared instantiation. Declared instantiation of EM in a state predicate. |
+| [BRIDGE-IV7-EXCLUDED-MIDDLE-AFFIRMING-OR-DENYING-TRUE-OR-FALSE](../../corpus/results/BRIDGE-IV7-EXCLUDED-MIDDLE-AFFIRMING-OR-DENYING-TRUE-OR-FALSE.json) | `44dd6cf2-2f7b-5c90-9258-c9b39e3ba87e` | `237a0195-b15a-5556-9bbd-7a34ef3ad11d` | `35d98410-6cd9-5d34-912d-968ac7385870` | `ee4ab504-c8fe-59bc-bc96-7cbeefed6410`, `b7f66357-c688-5bad-bf34-14ef9f3a87aa` | Thought bivalence still needs truth-by-composition. |
+| [BRIDGE-TERTIA-NECESSITY-CAUSE-OR-NOT-FROM-EXCLUDED-MIDDLE](../../corpus/results/BRIDGE-TERTIA-NECESSITY-CAUSE-OR-NOT-FROM-EXCLUDED-MIDDLE.json) | `1e3e2501-3bec-5509-b865-705209477c57` | `12f07b36-55ac-555e-aefb-db911e5816c7` | `083d31cc-f4ad-561a-818f-d91ecda3379a` | `ee4ab504-c8fe-59bc-bc96-7cbeefed6410` | Declared instantiation. Case split of necessary being’s cause of necessity; no inhabitant of the necessary class asserted. |
+| [LOGIC-SOME-PROPOSITION-HOLDS](../../corpus/results/LOGIC-SOME-PROPOSITION-HOLDS.json) | `15c9ec9b-ec22-52bf-9fdc-89e83c1b0a2a` | `9ea473d3-5375-50b0-8d0b-20c4209ee77f` | `7bcb4ebe-20c5-5221-85ca-2d47bd7236a7` | none | Direct True constructor; independent entry to reciprocal graph support. |
+| [LOGIC-SOME-PROPOSITION-FAILS](../../corpus/results/LOGIC-SOME-PROPOSITION-FAILS.json) | `1c2b66ce-c7f0-5845-a84b-bf399126025e` | `2b1ff68f-8dfc-53ee-b1b2-43608e09b547` | `657c9b85-fbae-5828-a854-576617f76205` | none | False witness and its negation. |
+| [LOGIC-NOT-ALL-FAIL-ENTAILS-SOME-HOLDS](../../corpus/results/LOGIC-NOT-ALL-FAIL-ENTAILS-SOME-HOLDS.json) | `15c9ec9b-ec22-52bf-9fdc-89e83c1b0a2a` | `c5c9ff49-a3ec-557c-a25a-ae360a25d478` | `e630f67c-488b-56f1-8d05-d2b9e19b88a0` | `8efdfe70-cb76-575f-a13c-16a35cfb7c9e` | Witness the proved proposition not-all-fail itself; not existential elimination for arbitrary predicates. |
+| [LOGIC-SOME-HOLDS-ENTAILS-NOT-ALL-FAIL](../../corpus/results/LOGIC-SOME-HOLDS-ENTAILS-NOT-ALL-FAIL.json) | `8efdfe70-cb76-575f-a13c-16a35cfb7c9e` | `ec000eff-7de6-5ffc-b126-0b9bc328b741` | `71ac7c71-9ea4-5cf0-a92a-25e01d79a9d2` | `15c9ec9b-ec22-52bf-9fdc-89e83c1b0a2a` | Eliminate the witness against the universal denial. |
+| [LOGIC-NO-GLOBAL-PROPOSITIONAL-COLLAPSE](../../corpus/results/LOGIC-NO-GLOBAL-PROPOSITIONAL-COLLAPSE.json) | `a919f81e-d9ff-5b7a-be38-c9473c042e8e` | `6a7f2ea8-64a3-5c84-905e-97f2a4ac0dd1` | `f79ddcf6-2f42-5f55-a249-1e509705955f` | none | Not all Props are logically equivalent; uses the two witnessed poles inside Lean. |
+| [TRUTH-COLLAPSE-CONTROLS](../../corpus/results/TRUTH-COLLAPSE-CONTROLS.json) | `e6f8513b-4ed5-58a8-831a-2cf3b2293d1f` | `657ed546-c5c0-5ce1-abc5-7c6ae02c0d8e` | `e67a42c3-c904-58bd-8d4b-e9f2b8e51edc` | none | Model certificate: one-point uninterpreted structure, local/global profile controls, glut and relative/nihilist controls; no actual-world model selection. |
+| [TRUTH-ACCOUNT-COMPATIBILITY](../../corpus/results/TRUTH-ACCOUNT-COMPATIBILITY.json) | `f64df602-bf01-563b-826f-9752feb75293` | `5ef7bff1-57b7-5905-87a8-cbe63286e341` | `74f123ce-4e4f-5d02-b505-95a0d8a5e4ce` | none | Encoded intuitionist and signed thought-composition accounts are jointly witnessed, not actual truth. |
+| [LOGIC-EMPTY-EPISODE-CONTROL](../../corpus/results/LOGIC-EMPTY-EPISODE-CONTROL.json) | `81a85cbd-3661-5b1b-bff3-f2f3b43edc56` | `f6846c20-a34a-5ece-b7d0-8fce84bcf510` | `f7df7705-20a4-5236-9378-69d9ea187194` | none | Model with no actual performance; retorsion alone cannot supply occurrence. |
+| [LOGIC-STATIC-EPISODE-CONTROL](../../corpus/results/LOGIC-STATIC-EPISODE-CONTROL.json) | `d0f04b5b-5c5f-5397-86ca-432de73877c7` | `d9f68331-16fa-59bd-b546-e374f40526fb` | `3fab8a6b-ed9a-5851-b6a0-656bd076278a` | none | One occurrence with constant state; no succession inferred. |
+| [LOGIC-PERFORMED-DENIAL-RETORSION](../../corpus/results/LOGIC-PERFORMED-DENIAL-RETORSION.json) | `17f2fdc1-4dcf-564b-afc3-9bdad891966e` | `768cabc8-a429-532b-b11c-457e203f12ca` | `bfda68fd-6fd2-5a26-afe5-1ac99eb01ba3` | none | No accurate performed universal denial in its own episode class; no actual token supplied. |
+| [OBJECTIVE-TRUTH-ACTUAL-STABLE-TO-TRUTH-COMPONENT](../../corpus/results/OBJECTIVE-TRUTH-ACTUAL-STABLE-TO-TRUTH-COMPONENT.json) | `40840c3d-90da-5237-b2a3-8ea9519b5c9c` | `ef2848bf-d993-51a1-bb0b-19a473296054` | `489f716a-6306-5e51-be37-f46df5448b3f` | `326adc2f-b56d-58af-802e-9bf3a6f46c61` | Actual-and-stable calibration implies truth component, not either calibration's applicability. |
+| [OBJECTIVE-TRUTH-DEFINITION-CONTROLS](../../corpus/results/OBJECTIVE-TRUTH-DEFINITION-CONTROLS.json) | `ccea0d68-5dbd-5120-acd6-83222ab4a0b4` | `480e3afc-c9b8-5806-8dec-f532d05464f3` | `b0ae9897-6c8e-57de-8b92-d852600f9cf8` | none | Finite definition controls; actual-truth, invariance and classification differ. |
+| [OBJECTIVE-TRUTH-DEFINITION-FORK](../../corpus/results/OBJECTIVE-TRUTH-DEFINITION-FORK.json) | `dac67701-e7fc-538e-a33a-45e1349fb088` | `3adb1eff-7827-554f-b33e-7837a0eea329` | `7cd27d15-79aa-5a39-bcd2-48115f91f44a` | `ee4ab504-c8fe-59bc-bc96-7cbeefed6410` | Declared instantiation. EM case split includes remainder; does not establish named exhaustiveness. |
+| [OBJECTIVE-TRUTH-EXTERNAL-BRIDGE-NEEDED](../../corpus/results/OBJECTIVE-TRUTH-EXTERNAL-BRIDGE-NEEDED.json) | `eac971d2-9af3-5709-b053-71cfa55cf89b` | `a0939704-3326-5c06-b962-f081792e5002` | `3475369c-9c70-576e-96fa-8b1e62e15f55` | none | Stably false content separates profile invariance from actual truth; limits external-evil argument. |
+| [OBJECTIVE-TRUTH-FROM-NAMED-ELIMINATION](../../corpus/results/OBJECTIVE-TRUTH-FROM-NAMED-ELIMINATION.json) | `326adc2f-b56d-58af-802e-9bf3a6f46c61` | `a3281a44-78c4-5b61-aa37-852a619d4fbb` | `3081f575-fefa-55d0-97f3-cef393309611` | `6cdc4062-245e-5f84-9b1c-117673045506`, `d792059e-0b01-56a9-9bde-6abcd158024b`, `266890f6-6b38-5d42-8fa9-57e6d731c4b8` | Declared instantiation. Named coverage and both exclusions are open; elimination transcription. |
+| [RELATIVISM-NO-ABSOLUTE-TRUTH-MODELS](../../corpus/results/RELATIVISM-NO-ABSOLUTE-TRUTH-MODELS.json) | `3ecdf33e-621c-5f6f-99a3-1ad2f079fe9e` | `fcf2e749-76a3-5da6-9ebf-74d0bef5d2a0` | `6fee2b02-5bb9-534f-830d-81694aacfc33` | none | Relative assertion and exempt absolute assertion have models; no general proof of relativism. |
+| [RELATIVISM-NO-ABSOLUTE-TRUTH-SELF-FALSIFYING](../../corpus/results/RELATIVISM-NO-ABSOLUTE-TRUTH-SELF-FALSIFYING.json) | `13490096-3453-5792-a4a8-d8e2f7a0fe4c` | `114d2581-ae65-50b8-9001-1154c0f31de6` | `dbc2fb38-580c-5f0c-813d-767076523c8b` | `5c18a8c4-c908-5397-b429-44c20b48c87e`, `de454f1e-652d-5ab3-8888-3259bc829b60` | Requires own scope and disquotation; rejects absolute assertion, not the relative-only model. |
+
+### Executed expanded sample and regression controls
+
+The union of the original fourteen rules and these 27 rules has **41 distinct
+argument IDs**. Using least-fixed-point chaining with complete conjunctions,
+the selected registered rules give:
+
+| Basis | Newly reached conclusion IDs |
+| --- | ---: |
+| Empty input | 23 |
+| Eight floor markings supplied hypothetically | 29 |
+| Same hypothetical floor, omit four explicitly declared instantiation edges | 26 |
+
+These are counts of this induced sample, not whole-corpus counts, philosophical
+establishment, fresh verification or the canonical frontier's computed
+closure. Full heuristic transcription filtering remains pending. The
+empty-input conclusions include the existence of finite control models
+and universal conditional laws; those must retain their types. A
+`commitment_statement_ids` bundle is not automatically a new truth seed.
+
+The directed premise-to-conclusion projection of these 41 rules contains one
+nontrivial strongly connected component, with two members:
+
+- `15c9ec9b-ec22-52bf-9fdc-89e83c1b0a2a`, SomePropositionHolds.
+- `8efdfe70-cb76-575f-a13c-16a35cfb7c9e`, NotEveryPropositionFails.
+
+The internal edges are arguments `c5c9ff49-a3ec-557c-a25a-ae360a25d478`
+and `ec000eff-7de6-5ffc-b126-0b9bc328b741`. Two registered zero-premise
+arguments enter this SCC, `9ea473d3-5375-50b0-8d0b-20c4209ee77f` and
+`83208e1e-e6bf-53e7-a0a6-eeb481d6f22f`. Reading the Solutions is important:
+the second actually imports and consumes the first, so these are not two
+independent grounds. The independent entry is the direct `True` constructor
+in [SomePropositionHolds/Solution.lean](../../TruthCore/Results/Logic/TruthPilot/SomePropositionHolds/Solution.lean).
+
+Two deletion controls were executed on the selected **graph edges**, not on
+the Lean library. Removing the second zero-input rule alone retains the
+independent first and derives NotEveryPropositionFails in round two.
+Removing both zero-input rules makes neither SCC member reachable from
+the empty input, despite both reciprocal implications. The underlying
+Lean theorems are not invalidated by these graph counterfactuals.
+
+Reproduce the selected sample in a checkout: parse the UUID columns in the
+two tables, select these exact argument IDs from the exported support graph,
+and use `support_formula.forward_closure` and the existing NetworkX SCC
+projection from the whole-corpus recipe above. Verify the four recorded
+instantiation flags against their result records; the sample omits only
+declared transcriptions for the third row, not heuristic flags. For each
+deletion control keep the remaining graph and the empty seed set fixed.
+No SCC is supplied as an input.
+
+### Semantic findings and live decisions
+
+**1. Nontrivial logic has a genuine constructive floor, not an unrestricted
+metaphysics.** The proof of SomePropositionHolds constructs `True`; the
+proof of SomePropositionFails exhibits `False` with its negation. The
+noncollapse result combines the two and therefore establishes a difference
+in truth/equivalence inside the encoded `Prop` domain. The exact
+`UndifferentiatedStructureModel` conjunct of
+[TruthCollapseControls](../../TruthCore/Logic/TruthNontriviality.lean)
+has that noncollapse together with a nonempty one-point carrier, an identity
+step function and an empty relation. It is a control on the **lack of a
+formal connection** from propositional noncollapse to numerical multiplicity
+of beings, change or causal relations. It does not establish that the actual
+world has those features. The performed-denial static control gives a
+different, already recorded reason that occurrence alone does not yet
+supply the prima via's change premise. Hence do not infer actual
+metaphysical composition or productive dependency just from logical
+noncollapse. This bears on both impersonal and theistic worldviews equally.
+
+**2. The logical case split used by the tertia via is floor-relative, not a
+proof of the existence of its subject.** The exact instantiation result
+`083d31cc` concludes `1e3e2501` from excluded middle, not from the
+constructively proved irrefutability `be102c88`. Excluding a denied
+instance or establishing EM-equivalent bivalence does not derive EM.
+The universe of necessary beings can be empty for a universal
+cause-of-necessity dichotomy. The existing route therefore needs a
+population/necessary-being witness and the causal/necessity bridges
+separately. No new modal or causal assumption follows by the case split.
+
+**3. Absolute truth is an application test, not a new lemma search.**
+The authoritative target `f625ad83-909e-52e2-b74a-92b0725c1629` uses
+`Relativism.SomeAbsoluteTruth T := ∃ p, T.trueAbs p`, not Lean's
+`SomePropositionHolds`. Its rival `bff72296-915a-543f-8903-182edf096dfc`
+denies this in the same content domain. The existing `TruthNontrivialityCore`
+has the disquotation-plus-capture exclusion of the global denial and the
+expressivity condition; the stronger relative-only control explicitly
+satisfies global no-absolute-truth while preserving expressive relative
+predicates. The proof of `NotEveryPropositionFails` is real, but its
+capture in a specified actual-language absolute truth predicate is not
+provided by that proof. The existing orphan note already derives the
+one-content capture and F6 applications and identifies the difference
+between an empirical establishment predicate and exclusive empirical
+origin. Do not register a second derivation whose only new premise restates
+its conclusion. The next positive test is semantic: take the particular
+proved proposition, determine whether the rival can express its very
+truth without changing its content or restricting the truth predicate's
+scope, and distinguish (a) local content truth, (b) context-independent
+truth of that content, (c) a mind-independent truthmaker, and (d) a
+world-independent modal necessity. These are not interchangeable.
+The indexed search on current main returned no argument record mentioning
+the full target ID `f625ad83` (nor a consumer of `61f64a70` beyond its
+producer); this is an indexed discovery result, not exhaustive proof
+of absence, and the checked applications and contextual attacks already
+exist. Use the canonical dossier and novelty/semantics commands before
+any registration.
+
+**4. Objective truth and absolute truth are distinct targets.** The
+existing `ObjectiveTruthDefinitionFork` records a stable-false control:
+profile invariance by itself cannot yield actual truth. Neither
+`HasTruthComponent` nor `ActualStableDefinition` asserts that any
+objective content is instantiated. The objective-truth named elimination
+requires named coverage (not the EM split containing a remainder) and
+the other two exclusions. These distinctions also constrain the
+external moral-evil argument; do not transfer the truth-pilot's logical
+noncollapse into actual moral realism or the pure-perfection argument.
+The formal controls are strong scope separators, not evidence that
+ordinary speakers use “objectively true” for stably false propositions.
+
+**Provisional reassessment.** Favor the directly witnessed constructive
+logical core and distinguish it from every extra semantic or existential
+application. For rejecting a global skeptical denial, actual meaningful
+use of a matched content may give first-person or cumulative warrant
+without an independently demonstrated universal semantic calibration.
+Keep that warrant inquiry open; no skeptical position is eliminated
+merely by adding an abstract control, and no arbitrary skeptical rival
+is introduced. The strongest standing cases in this slice are already
+recorded: proof-relative withholding, scoped/relative truth, modelled
+no-episode/constant-state controls. Their existence is formal compatibility,
+not a claim of equal philosophical warrant. Reopening condition: a
+justified same-content actual witness, or a proof in the already fixed
+truth/episode semantics that transfers that witness without packing the
+target into a premise. Independent semantic challenge remains pending.
+
+The working environment still cannot resolve github.com for a local
+checkout, and the public deployed graph manifest was inaccessible to
+the retrieval tool. The complete canonical closure, verified current
+floor, all-corpus SCCs and application review still require the local
+replay. No corpus records or floor markings are changed in this checkpoint.
