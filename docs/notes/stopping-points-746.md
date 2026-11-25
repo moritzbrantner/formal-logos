@@ -1,6 +1,6 @@
 # One standard for every explanatory stopping point (#746)
 
-The theorems are `stoppingMap` and `foundationNormTest` in
+The theorems are [`stoppingMap`](../../corpus/results/STOPPING-POINT-MAP.json) and [`foundationNormTest`](../../corpus/results/NO-BRUTE-FOUNDATION-NORM-TEST.json) in
 `TruthCore.Results.Explanation.StoppingPoints.Solution`, over
 `TruthCore.Explanation.StoppingPoints`, which extends the #755 arena and the #756 stance
 vocabulary. Both are zero-axiom. They establish conditional consequence and the

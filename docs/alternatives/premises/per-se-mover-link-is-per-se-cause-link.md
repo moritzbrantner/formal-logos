@@ -1,6 +1,6 @@
 ---
 phase: batch-1
-premise: `STMT-PER-SE-MOVER-LINK-IS-PER-SE-CAUSE-LINK`
+premise: [`STMT-PER-SE-MOVER-LINK-IS-PER-SE-CAUSE-LINK`](https://github.com/moritzbrantner/formal-logos/blob/ec72649fb5a8ee3ac06d391b179cf1af7f75b304/corpus/statements/per-se-mover-link-is-per-se-cause-link.json)
 rival: `STMT-OCCASIONALIST-MOVER-LINK-WITHOUT-CAUSE` (Malebranche, al-Ghazali)
 class: self-application candidate: SCG III.69 (knowledge of natures from effects)
 status: open; witnesses waiting

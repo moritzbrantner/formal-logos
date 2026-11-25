@@ -75,7 +75,7 @@ Each entry says what blocks it. None of these was done in batch 1.
 - **Plato's Forms (27-statement component) to the quarta via and *Met.* II.1,
   993b24-26.** `ExplanatoryParticipation` and `UniformSelfPredication` look
   like the cause-of-quality premise, but the Forms vocabulary has no `MoreIn`
-  and no causal relation; `DISAMB-PLATONIC-CAUSE` forbids identifying the
+  and no causal relation; [`DISAMB-PLATONIC-CAUSE`](https://github.com/moritzbrantner/formal-logos/blob/ec72649fb5a8ee3ac06d391b179cf1af7f75b304/corpus/disambiguations/platonic-cause.json) forbids identifying the
   exemplar with a maker or cause. A bridge needs an explicit, sourced bridge
   premise mapping `Explains` to `CausesIn` (e.g. Aquinas on participation,
   ST I q.44 a.1). The Fourth Way files are under repair (#386).
@@ -89,27 +89,27 @@ Each entry says what blocks it. None of these was done in batch 1.
   It derives route nonexistence conditionally, and its omission model preserves an
   inhabited route predicate with all four actual hiddenness premises. The bridge
   is now explicit and tested, not discharged. No identity is inferred by spelling.
-- **Physics VII.1 (`STMT-MOVED-MOVER-SERIES-CANNOT-LACK-FIRST`,
-  `STMT-EVERY-MOVING-THING-MOVED-BY-SOMETHING`) to the prima via
-  (`STMT-NO-INFINITE-PER-SE-MOVER-SERIES`,
-  `STMT-WHATEVER-IS-MOVED-IS-MOVED-BY-ANOTHER`).** The Physics readings are opaque
+- **Physics VII.1 ([`STMT-MOVED-MOVER-SERIES-CANNOT-LACK-FIRST`](https://github.com/moritzbrantner/formal-logos/blob/ec72649fb5a8ee3ac06d391b179cf1af7f75b304/corpus/statements/moved-mover-series-cannot-lack-first.json),
+  [`STMT-EVERY-MOVING-THING-MOVED-BY-SOMETHING`](https://github.com/moritzbrantner/formal-logos/blob/ec72649fb5a8ee3ac06d391b179cf1af7f75b304/corpus/statements/every-moving-thing-moved-by-something.json)) to the prima via
+  ([`STMT-NO-INFINITE-PER-SE-MOVER-SERIES`](https://github.com/moritzbrantner/formal-logos/blob/ec72649fb5a8ee3ac06d391b179cf1af7f75b304/corpus/statements/no-infinite-per-se-mover-series.json),
+  [`STMT-WHATEVER-IS-MOVED-IS-MOVED-BY-ANOTHER`](https://github.com/moritzbrantner/formal-logos/blob/ec72649fb5a8ee3ac06d391b179cf1af7f75b304/corpus/statements/whatever-is-moved-is-moved-by-another.json)).** The Physics readings are opaque
   atoms; wait for the typed re-formalization (#401 item 1).
-- **Prima via metatheorems.** `STMT-ABSOLUTE-UNMOVED-MOVER-ENTAILS-RELATIVE` and
-  `STMT-STRONG-PRIMA-VIA-PREMISES-ENTAIL-WEAK-PREMISES` are singletons. Composing
-  them (e.g. `STMT-FIRST-UNMOVED-MOVER-CANNOT-BE-LACKING` with the first to give
-  `STMT-RELATIVELY-UNMOVED-MOVER-CANNOT-BE-LACKING`) connects them, but both
+- **Prima via metatheorems.** [`STMT-ABSOLUTE-UNMOVED-MOVER-ENTAILS-RELATIVE`](https://github.com/moritzbrantner/formal-logos/blob/ec72649fb5a8ee3ac06d391b179cf1af7f75b304/corpus/statements/absolute-unmoved-mover-entails-relative.json) and
+  [`STMT-STRONG-PRIMA-VIA-PREMISES-ENTAIL-WEAK-PREMISES`](https://github.com/moritzbrantner/formal-logos/blob/ec72649fb5a8ee3ac06d391b179cf1af7f75b304/corpus/statements/strong-prima-via-premises-entail-weak-premises.json) are singletons. Composing
+  them (e.g. [`STMT-FIRST-UNMOVED-MOVER-CANNOT-BE-LACKING`](https://github.com/moritzbrantner/formal-logos/blob/ec72649fb5a8ee3ac06d391b179cf1af7f75b304/corpus/statements/first-unmoved-mover-cannot-be-lacking.json) with the first to give
+  [`STMT-RELATIVELY-UNMOVED-MOVER-CANNOT-BE-LACKING`](https://github.com/moritzbrantner/formal-logos/blob/ec72649fb5a8ee3ac06d391b179cf1af7f75b304/corpus/statements/relatively-unmoved-mover-cannot-be-lacking.json)) connects them, but both
   endpoints are already in the giant component and the proof is two steps.
 - **Resurrection pilot reading bridges.** `STMT-PILOT-BRIDGE-*` with the reports
-  `STMT-PILOT-REPORT-*` give E0-E5 (`STMT-PILOT-E0` to `-E5`) by modus ponens.
+  `STMT-PILOT-REPORT-*` give E0-E5 ([`STMT-PILOT-E0`](https://github.com/moritzbrantner/formal-logos/blob/ec72649fb5a8ee3ac06d391b179cf1af7f75b304/corpus/statements/stmt-pilot-e0.json) to `-E5`) by modus ponens.
   Each would be a transcription (the bridge's consequent is the conclusion) and
   the E-findings do not reach stage 4, so they would form six new small
   components rather than join the giant one.
-- **Grim Reaper to a finite past.** `STMT-GRIM-REAPER-NO-FIRST-SCHEDULE-IMPOSSIBLE`
-  bears on `STMT-PAST-IS-FINITE` only through a sourced premise that an
+- **Grim Reaper to a finite past.** [`STMT-GRIM-REAPER-NO-FIRST-SCHEDULE-IMPOSSIBLE`](https://github.com/moritzbrantner/formal-logos/blob/ec72649fb5a8ee3ac06d391b179cf1af7f75b304/corpus/statements/grim-reaper-no-first-schedule-impossible.json)
+  bears on [`STMT-PAST-IS-FINITE`](https://github.com/moritzbrantner/formal-logos/blob/ec72649fb5a8ee3ac06d391b179cf1af7f75b304/corpus/statements/past-is-finite.json) only through a sourced premise that an
   infinite past permits such a schedule (Koons, Pruss).
-- **Gödel/Scott singletons.** `STMT-SCOTT-EMPTY-PROPERTY-NOT-ESSENCE` against
-  `STMT-GOEDEL-1970-EMPTY-PROPERTY-IS-ESSENCE` (two essence definitions) and
-  `STMT-GOEDEL-1970-POSITIVE-CLOSED-UNDER-CONJUNCTION`: a bridge lemma between
+- **Gödel/Scott singletons.** [`STMT-SCOTT-EMPTY-PROPERTY-NOT-ESSENCE`](https://github.com/moritzbrantner/formal-logos/blob/ec72649fb5a8ee3ac06d391b179cf1af7f75b304/corpus/statements/scott-empty-property-not-essence.json) against
+  [`STMT-GOEDEL-1970-EMPTY-PROPERTY-IS-ESSENCE`](https://github.com/moritzbrantner/formal-logos/blob/ec72649fb5a8ee3ac06d391b179cf1af7f75b304/corpus/statements/goedel-1970-empty-property-is-essence.json) (two essence definitions) and
+  [`STMT-GOEDEL-1970-POSITIVE-CLOSED-UNDER-CONJUNCTION`](https://github.com/moritzbrantner/formal-logos/blob/ec72649fb5a8ee3ac06d391b179cf1af7f75b304/corpus/statements/goedel-1970-positive-closed-under-conjunction.json): a bridge lemma between
   the two `Essence` definitions would connect the two AFP vocabularies.
 
 
@@ -123,12 +123,12 @@ Each entry says what blocks it. None of these was done in batch 1.
   a new theory, not source-preserving reuse. See the existing Scott audit.
 - **Modal research fixtures.** `TruthCore.Modal.S5Research` and
   `TruthCore.Isabelle.AFP.GoedelGod` each define frames; a frame-translation
-  lemma would connect `STMT-MODAL-S5-CONCEIVED-COLLAPSE` with
-  `STMT-SCOTT-MODAL-COLLAPSE` (invariant 17).
-- **Excluded-middle family.** `STMT-EXCLUDED-MIDDLE-NOT-DENIABLE`,
-  `STMT-EXCLUDED-MIDDLE-IFF-DOUBLE-NEGATION-ELIMINATION` and the intuitionism
+  lemma would connect [`STMT-MODAL-S5-CONCEIVED-COLLAPSE`](https://github.com/moritzbrantner/formal-logos/blob/ec72649fb5a8ee3ac06d391b179cf1af7f75b304/corpus/statements/modal-s5-conceived-collapse.json) with
+  [`STMT-SCOTT-MODAL-COLLAPSE`](https://github.com/moritzbrantner/formal-logos/blob/ec72649fb5a8ee3ac06d391b179cf1af7f75b304/corpus/statements/scott-modal-collapse.json) (invariant 17).
+- **Excluded-middle family.** [`STMT-EXCLUDED-MIDDLE-NOT-DENIABLE`](https://github.com/moritzbrantner/formal-logos/blob/ec72649fb5a8ee3ac06d391b179cf1af7f75b304/corpus/statements/excluded-middle-not-deniable.json),
+  [`STMT-EXCLUDED-MIDDLE-IFF-DOUBLE-NEGATION-ELIMINATION`](https://github.com/moritzbrantner/formal-logos/blob/ec72649fb5a8ee3ac06d391b179cf1af7f75b304/corpus/statements/excluded-middle-iff-double-negation-elimination.json) and the intuitionism
   component are premise-free theorems or rival-theory records; a bridge from
-  `STMT-EXCLUDED-MIDDLE` would re-prove what is already proved. Relations only.
+  [`STMT-EXCLUDED-MIDDLE`](https://github.com/moritzbrantner/formal-logos/blob/ec72649fb5a8ee3ac06d391b179cf1af7f75b304/corpus/statements/excluded-middle.json) would re-prove what is already proved. Relations only.
 - **Q11 countermodels** (`STMT-Q11-UNIQUENESS-FAILS-WITHOUT-*`) and **Kant
   countermodels** show premise independence; there is no relation predicate for
   independence, and they imply nothing in the giant component.
