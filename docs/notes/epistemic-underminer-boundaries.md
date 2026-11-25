@@ -452,15 +452,22 @@ DirectEsseRootGodExistence.godExists
 ```
 
 **Warrant and shared dependencies.** Thin F6 retains its direct common-ground
-option. In ordinary inquiry, a competent recount can give an investigator a
-consideration in favor of an answer even while a discrepancy makes suspension
-reasonable overall. The positive warrant is the recount's bearing on the
-answer and its availability to this investigator. If a disputed original
-count was undercut, a fresh count that survives the undercutter can support
-the answer. Copying the original figure under a second name would inherit
-the same problem. The warrant consumer makes the surviving basis inspectable.
-One can assess a warranted acceptance directly; that option needs evidence
-of actual assent and warrant. If instead its only support is the prior
+option. The matched recount is a proposed test. No actual warranted assent
+was observed. Fix one investigator and the claim that a specified collection
+has a particular total. Suppose the first worksheet transposed two digits.
+A fresh tally from the items themselves can favor the proposed total over
+the transcribed figure even if a discrepancy still warrants suspension.
+A copy of the worksheet inherits its transcription fault.
+
+To test bypass, trace the new tally to the items and check that the old
+figure was unavailable to the counter until the tally was recorded. To assess
+adequacy, check the collection's identity and completeness, omissions or
+double counting, and any outstanding explanation for the discrepancy. To
+assess assent, obtain the investigator's contemporaneous judgment about this
+total and the basis they actually used. Recording a tally is compatible
+with withholding judgment. A favorable recount supplies a candidate pro
+tanto reason; claiming warranted acceptance also requires sufficient,
+undefeated evidence and actual assent on that basis. If instead its only support is the prior
 eligible-uptake proof, premise `38eb1610` already contains an epistemic
 reason, and its warrant calibration `cf57c52c` is also required. Recycling
 that reason earns no additional warrant for F6.
@@ -472,9 +479,9 @@ consideration. A process itself can occupy the basis role **if** it meets
 the frame's interpretation of available support. The objection has force
 where warrant is granted and that condition fails. An instrumental account
 can also grant that the evidence distinguishes the answers while disputing
-its reason-giving force for an indifferent subject. On the actual
-accuracy-directed recount, even that account has grounds for the local
-pro tanto attribution. It need take no position on a preference-independent
+its reason-giving force for an indifferent subject. In the proposed test, if the investigator aims at accuracy and receives
+a tally that discriminates between the answers, that account too can grant
+the local pro tanto attribution. It need take no position on a preference-independent
 duty to believe. The two calibrations are defensible on this ordinary
 evidential reading; their unrestricted application across cases remains open.
 
@@ -492,19 +499,34 @@ investigator's presence here. Assessing what evidence a merely possible
 investigator would have is a legitimate different application.
 `standpointControl` locates its subject at one world with no inhabitant at
 the other; it preserves both thin F6 and the latter world's esse contract.
-The case for applying the presence premise rests on identifying a real
-subject in the evidential episode. That identification already gives prima
-facie warrant for population, so the argument articulates that commitment
-without giving a second observation of existence. Revising the world or
-subject assignment reopens it.
+For the proposed application, restrict the frame to this investigator, this
+claim, and the two indicated bases (the worksheet and the fresh tally).
+Restrict the thin reason relation to this subject and claim while retaining
+its pro tanto meaning. Each universal premise has a separate evidential test
+on that domain.
 
-The next discriminating test is the matched recount: for the same investigator
-and answer, identify whether the purported second basis bypasses the specific
-fault in the first, whether the investigator accepted or suspended, and
-whether the surviving basis was available to that person. Suspension with
-surviving evidence supports the direct reason option; a warranted acceptance
-can additionally instantiate the new consumer. A copied count or a merely
-hypothetical investigator blocks the corresponding application.
+- **AcceptedWarrantNeedsBasis.** For the single subject–claim pair, establishing
+  that the investigator had an available undefeated basis supplies the
+  consequent of the warrant condition. Warranted acceptance itself still
+  requires the separate evidence of assent and adequacy above. Relevant
+  defeaters outside the two proposed bases must inform the assessment of
+  undercutting and warrant.
+- **SurvivingBasisGivesReason.** Assess each basis. A demonstrated
+  transcription fault undercuts the worksheet as support for its recorded
+  total. If the fresh tally bypasses that fault, is available to the investigator
+  and genuinely discriminates between the totals, it counts in favor of the
+  corresponding answer. Suspension can remain appropriate.
+- **ReasonBearerPresentAt.** Identify the person who received the evidence
+  with their ontic representative at the selected world, for example through
+  an observed recount and contemporaneous record of receipt. This establishes
+  presence for the only subject in this application. One present representative
+  already suffices directly for concrete population under the existing esse
+  contract, independently of assent or the epistemic route.
+
+On a wider frame, one reason witness and one present investigator leave the
+three universal premises open for other accepted beliefs, supporting bases
+and reason bearers. Extending the route requires warrant for each premise
+over its wider domain. The proposed test concerns the local application.
 
 ## Research attempts citing this note
 
