@@ -1,0 +1,20 @@
+module
+
+public import TruthCore.Latin.Aquinas.DeEnte.AttenuatedEsseReception
+public import TruthCore.Results.Causality.ClosedGroundingRoots.Solution
+
+@[expose] public section
+
+namespace TruthCore.Results.Aquinas.DeEnte.AttenuatedEsseReception
+
+open TruthCore.Latin.Aquinas.DeEnte.AttenuatedEsseReception (AttenuatedActualEsseReception)
+open TruthCore.Latin.Aquinas.DeEnte.ClosedEsseSource
+open TruthCore.Latin.Aquinas.SummaTheologiae.PrimaPars.Question3.Article4 (Profile)
+
+/-- Specialize the closed-grounding theorem to the actual esse-cause graph. -/
+theorem closedOfAttenuation {B P R : Type} (p : Profile B P R)
+    (h : AttenuatedActualEsseReception p) : ClosedActualEsseCollectionsRooted p :=
+  TruthCore.Results.Causality.ClosedGroundingRoots.closedRootedOfAttenuation
+    (esseCauseGraph p) () h
+
+end TruthCore.Results.Aquinas.DeEnte.AttenuatedEsseReception

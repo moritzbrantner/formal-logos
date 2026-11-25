@@ -1,0 +1,11 @@
+{
+  "id": "3046383c-4a67-42d3-bd71-a39e178534c3",
+  "label": "Actual esse reception has uniform loss and a common bound on the fixed esse-cause graph",
+  "paraphrase": "OPEN analyst premise, attribution deferred. On one fixed q3a4 profile, the actual esse bearers are countable and each has a strictly positive real amount P of esse bounded by a common nonnegative M. The amount is at most its nonnegative own input s plus the weighted sum of its suppliers' amounts, with summable nonnegative weight and weighted-amount rows, and every weight row sums to at most the same 0 ≤ q < 1. Positive weights are allowed only from distinct actual causes of the recipient's esse. Positive own input requires that the bearer have no distinct actual cause of its esse, including causes with zero assigned weight. The world index of the graph adapter is bookkeeping. There is no proposed calibration of these numbers or change to the cause mode.",
+  "lean_declaration": "TruthCore.Latin.Aquinas.DeEnte.AttenuatedEsseReception.AttenuatedActualEsseReception",
+  "definition_ids": [
+    "14e3be39-e587-4d9a-a48e-c48885ecd260",
+    "8163859b-95b3-4dd2-8a69-541bd332f32f",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"
+  ]
+}

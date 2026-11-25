@@ -465,3 +465,43 @@ for a second recipient, or demonstrate independent upper-threshold count
 bounds in the grade model. The incorporation measurements across six feeds apply to
 the material. The capacity by which the child uses iron remains a different
 explanandum. [Nourishment case](wielenberg-making-account.md#does-a-childs-actual-nourishment-identify-its-underived-source-1812)
+
+## Attenuation on the De ente cause order
+
+`closedRootedOfAttenuation` on `esseCauseGraph p` gives the exact
+closed-collection premise of the De ente God argument. Its sole input is the
+quantitative reception profile on the same countable actual esse bearers. The
+God argument separately requires its world-relative roster and bridges. The
+positive weights may cover a subset of actual causes, but the restriction on
+positive own input applies to every actual cause of that bearer, even one
+assigned weight zero. [Specialization](../../corpus/results/d35b997a-5f6a-441a-9e8b-4b4a571e3d5d.json)
+[Closed-collection premise](../../corpus/statements/20babef7-6ae7-4b48-b72a-f417e8e63136.json)
+[De ente argument](../../corpus/arguments/8df25074-38c2-4672-a9e7-3f4cc2a97367.json)
+
+The balance is consistent with actual weighted reception in a mathematical
+interpretation. Take two actual bearers with the sole cause arrow from the
+first to the second, own inputs 1 and 0, amounts 1 and 1/2, and the one
+positive weight 1/2. Both balances are equalities, with common bound 1,
+and only the actual root has positive own input. In the checked
+`stateIndexedTail` with every natural number active, `n+1` is the sole actual
+cause of `n`. Putting unit weight on that arrow, zero on all others, and zero
+own input makes the constant unit assignment balance. The incoming weight sum
+is one, so this assignment fails uniform contraction. The existing `halfFixed`
+and `nonuniformTail` controls identify the distinct failures of the common
+bound and cumulative loss. These are mathematical interpretations of
+forwarding. [Actual esse tail](../../TruthCore/Results/Aquinas/DeEnte/ClosedEsseSource/Solution.lean)
+[Quantitative controls](../../TruthCore/Results/Causality/QuantitativeTransferPaths/Solution.lean)
+
+The theorem gives a conditional reason to expect an actual source where the
+amounts, bounds and losses are independently warranted for the same esse
+relation. If the countable bearers are already known to have finite root access,
+the quantities can be fitted to that access. Assign amount `(1/2)^d` at minimum
+upstream distance `d` to a root, with a single half-weight toward a nearer
+bearer and input one at each root. An impersonal whole can play the source role
+if it is an uncaused bearer in the same profile and has an actual supply path
+to this recipient. Taking the populated whole as primitive leaves that
+productive path to be shown if claimed. A proposed independent divine source
+owes the same account of actual supply, in addition to its existence or
+capacity. Reopen the comparison on an independently motivated existential
+quantity and a bounded loss law for its actual transmission. Ordinal
+comparisons of esse leave that quantitative interpretation open.

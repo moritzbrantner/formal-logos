@@ -1,0 +1,19 @@
+[batch]
+vocab = "TruthCore.Latin.Aquinas.DeEnte.AttenuatedEsseReception"
+results = "TruthCore.Results.Aquinas.DeEnte.AttenuatedEsseReception"
+
+[[statement]]
+id = "Actual esse reception has uniform loss and a common bound on the fixed esse-cause graph"
+lean = "AttenuatedActualEsseReception"
+paraphrase = "OPEN analyst premise, attribution deferred. On one fixed q3a4 profile, the actual esse bearers are countable and each has a strictly positive real amount P of esse bounded by a common nonnegative M. The amount is at most its nonnegative own input s plus the weighted sum of its suppliers' amounts, with summable nonnegative weight and weighted-amount rows, and every weight row sums to at most the same 0 ≤ q < 1. Positive weights are allowed only from distinct actual causes of the recipient's esse. Positive own input requires that the bearer have no distinct actual cause of its esse, including causes with zero assigned weight. The world index of the graph adapter is bookkeeping. There is no proposed calibration of these numbers or change to the cause mode."
+definitions = ["14e3be39-e587-4d9a-a48e-c48885ecd260", "8163859b-95b3-4dd2-8a69-541bd332f32f", "DEF-ESSE"]
+
+[[argument]]
+id = "Attenuated actual esse reception implies rooted closed esse collections"
+theorem = "closedOfAttenuation"
+premises = ["Actual esse reception has uniform loss and a common bound on the fixed esse-cause graph"]
+conclusion = "20babef7-6ae7-4b48-b72a-f417e8e63136"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Instantiate closedRootedOfAttenuation on esseCauseGraph p at the singleton index"
+meaning = "Uses solely the quantitative premise on the fixed actual esse-cause graph. The finite path to positive own input from any member stays in its supplier-closed collection and ends at a bearer with no distinct actual cause of esse. The result is the exact closed-collection premise used by the existing De ente God argument. The specialization uses neither preselected source nor separate audited world-relative roster. The separate roster, world-grounding, common-source and naming obligations of that argument retain their own premises. The quantitative hypothesis has no independent existential calibration."
+transcription = "instantiation"
