@@ -407,10 +407,11 @@ reason for believing a claim. [Basis-defeat assessment](self-undermining-views.m
 
 ### 6.4 Graph comparison and issue scope
 
-Relative to main `21a64a7ff`, all five argument-to-statement attacks in
-§6.1 add contextual objections. Each source argument concludes the stated
-conditional, incompatibility or self-undermining law. None of the five
-targets acquires an argument premise through this relationship.
+Relative to main `21a64a7ff`, the five argument-to-statement attacks in
+§6.1 and the two in §6.5 add contextual objections. The identity argument takes a content in the
+fixed semantics, and the nontriviality certificate constrains globally
+denied absolute truth. These entries describe what threatens a rival.
+The actual premise bundles remain those of the seven source arguments.
 Comparing the sorted result IDs in the module-grouped orphan reports gives:
 
 | Root selected | Disconnected on main | Disconnected here | IDs entering | IDs leaving |
@@ -418,8 +419,8 @@ Comparing the sorted result IDs in the module-grouped orphan reports gives:
 | Catholicism `53964cbe` | 1,690 | 1,690 | none | none |
 | God exists `8626f8a5` | 1,814 | 1,814 | none | none |
 
-All five objection producers and the proof used for *p* remain in both
-disconnected sets. The computed premise comparisons give **no change**
+All seven objection producers and the two logical witnesses `bfda68fd` and
+`b41427d3` remain in both disconnected sets. The computed premise comparisons give **no change**
 for both roots (verified support alternatives 661 → 661 and 568 → 568,
 respectively). The full reports agree on reaching statements, floor markings,
 refutations, statement statuses, support options and routes. Existing V1–V3 refutations and the positive population
@@ -430,11 +431,271 @@ run `truth --json orphans --by module` on each tree with the same root
 and sort `.groups[].results[].result_id`.
 
 This answers the retorsion part of #1963's proposed floor-graft search
-within #1926 and #1007. The concrete use of the orphan proof is the
-scientism comparison above. The same-predicate, actuality and epistemic
+within #1926 and #1007. The orphan proofs supply the scope comparison above and the three
+applications in §6.5. The same-predicate, actuality and epistemic
 conditions explain why promoting these objections to root support would
 misstate them. #1926 and #1007 retain their broader research scopes.
 #1008's verificationism showcase and #1615's debunking tests were already
 delivered. The next applicability test for F6 remains the matched
 investigator and evidential basis specified in the
 [existing attempt](../../corpus/attempts/7a269548-3bc6-4aa8-af8e-f4397ece9448.json).
+
+### 6.5 One proof, three applications
+
+The live question is whether a single adequately grasped deductive proof gives
+a nonempirical case of establishment, an epistemic reason and an absolute
+truth, without assuming a whole theory of knowledge. This is a shared
+application test, not an identification of the three predicates. Fix the
+existing proposition `TruthCore.Logic.TruthPilot.NotEveryPropositionFails`:
+not every proposition fails in the encoded logic. The actual existing
+[solution](../../TruthCore/Results/Logic/TruthPilot/NotEveryPropositionFails/Solution.lean)
+(`b41427d3`) imports the witnessed `SomePropositionHolds` proof. That
+[proof](../../TruthCore/Results/Logic/TruthPilot/SomePropositionHolds/Solution.lean)
+uses `True` and its constructor. If all propositions failed, True would fail,
+contradicting its constructor. The proof is constructive; no measurement,
+induction from sampled cases, or observation proposition enters the logical
+derivation. It is inspectable by a person without trusting the empirical
+performance of a particular proof checker. This is positive, content-specific
+warrant for the theorem in the encoded logic, not a general proof that
+all our logical intuitions are reliable.
+
+Distinguish four questions in the application:
+
+| Question | Positive finding | What remains to establish |
+| --- | --- | --- |
+| Truth in the fixed logic | An existing proof of the selected proposition, with explicit True witness. | Interpretation of that content in the rival's object language and its absolute truth predicate. |
+| Rational access | A competent subject can inspect the witness and contradiction and compare an invalid replacement. | Actual availability and adequate grasp by the selected subject, not just existence of a proof file. |
+| Basis of establishment | No indispensable observational proposition in the derivation. | Whether the subject's sufficient warrant genuinely rests on grasp of the proof rather than solely testimony about a tool's output. |
+| Scope | Universal empirical-only scientism quantifies over logic as well as observational questions. | The actual selected scope of any weaker claim. Restricted empirical standards remain compatible with this proof. |
+
+#### Scientism: existential empirical sufficiency versus exclusivity
+
+The nearby [empirical-proof barrier](scoped-empirical-proof-barrier.md)
+already supplies an essential control: `ConclusivelyVerifiable` admits a
+tautology from **empty** observations when the world type is inhabited.
+Hence proving a tautology deductively does not show that its conclusive
+verifiability predicate fails. Also, an empirical learning history or
+embodied implementation is compatible with a proof whose epistemically
+indispensable premises are not empirical. Do not conflate these.
+
+For a fixed set of available adequate bases, write `S(p,b)` for basis b
+being sufficient for establishment of p, and `O(b)` for a basis with an
+indispensable observational premise. This is a proposed analyst
+classification of bases, not a new corpus definition of knowledge, nor
+an assumption that every basis has either tag in advance. Hold content,
+subject, meaning and relevant defeaters fixed.
+
+- **Existential reading:** every established content has at least one
+  sufficient observation-dependent basis. In the existing `EpistemicFrame`,
+  interpret established as `∃ b, S(p,b)` and empiricallyEstablished as
+  `∃ b, S(p,b) ∧ O(b)`. One deductive basis does not refute this reading:
+  a second, empirical basis might be sufficient too.
+- **Exclusive-origin reading:** every sufficient basis for every in-scope
+  content is observation-dependent. This is the stronger thesis that
+  empirical evidence is indispensable to every sufficient justification.
+  A single in-scope sufficient basis with no indispensable observational
+  premise defeats this reading, even if the same conclusion also has
+  empirical support.
+- **Actual-basing reading:** the subject's particular establishment is
+  produced by an empirical basis. Assess the actual episode. The mere
+  existence of a valid deduction does not prove that a particular person
+  knows the conclusion via that deduction.
+- **Analytic exemption / restricted science:** allow deduction of logical
+  truths and confine the exclusive norm to some empirical questions.
+  This preserves a genuine role for empirical inquiry but gives up a
+  universal ban on establishment by nonempirical justification. A
+  broad use of "science" including mathematics and deduction can likewise
+  concede the present point without conceding any controversial metaphysical
+  proposition.
+
+The exact old global negative `66e84d62` is not automatically the
+exclusive-origin rival: its meaning depends on the calibration of
+`empiricallyEstablished`. Under the existential reading a sufficient
+nonempirical basis and an empirical one may coexist. Do not rewrite the
+old frame to choose the stronger rival.
+
+For the actual proof example, compare the same content p and the proposed
+sufficient basis D (grasp of the proof) with an experimental/testimonial
+basis O (e.g. a report that a program accepted it). Suppose for the moment
+that D suffices and contains no indispensable observational premise.
+An empirical origin requirement can survive only by denying that D
+suffices as justification, assigning an indispensable empirical premise,
+or excluding p from scope. A rival can coherently contend that formal
+manipulation of stipulated rules is all that occurs and that no actual
+knowledge is conferred; then it must explain what rational status its own
+accepted inferences have. Simply observing that D was learned or expressed
+through sensory means does not identify an indispensable epistemic premise
+of the conclusion. A claim that empirical evidence warrants a global
+methodological norm also needs a rationale connecting those observations
+to the normative restriction, not just successful applications of the
+method. These are live disputes, not refutations of all empiricism.
+
+**Finite discriminating test (executed in Python, not Lean).** Take two
+contents L (the logical claim), Q (an observational claim), and two bases
+D (non-observation-dependent), O (observation-dependent). Fix S(L,D)
+and S(Q,O) true, vary the two remaining sufficiency entries, and vary
+scope between both contents and Q only. The fixed assignments are
+controls for the proposed profile, not empirical findings about a subject.
+The eight cases were enumerated:
+
+| S(L,O) | S(Q,D) | Global existential norm | Global exclusive norm | Q-only existential norm | Q-only exclusive norm |
+| --- | --- | --- | --- | --- | --- |
+| 0 | 0 | false | false | true | true |
+| 0 | 1 | false | false | true | false |
+| 1 | 0 | true | false | true | true |
+| 1 | 1 | true | false | true | false |
+
+Reproduce the finite test (no dependencies):
+
+```python
+from itertools import product
+for lo, qd, global_scope in product((False, True), repeat=3):
+    S = {"L": {"D": True, "O": lo}, "Q": {"D": qd, "O": True}}
+    scope = ("L", "Q") if global_scope else ("Q",)
+    exists = all(not any(S[p].values()) or S[p]["O"] for p in scope)
+    exclusive = all(not S[p]["D"] for p in scope)
+    assert exists == (lo if global_scope else True)
+    assert exclusive == (False if global_scope else not qd)
+```
+
+In particular, L having both bases and Q having its empirical basis is
+a populated control for why a deductive proof alone does not contradict
+the existential reading. This is a finite Boolean check of the proposed
+basis split, not verification of an actual philosophical calibration.
+
+#### One witness, three separately calibrated projections
+
+The logical proof provides a candidate for three nearby bridges, with
+no new general philosophical assumption required for the proposed
+propositional consequences:
+
+1. **Absolute truth.** If the same object-language content c expresses
+   the proved proposition and the truth predicate captures that content
+   in the direction `NotEveryPropositionFails → T.trueAbs c`, an
+   absolute-truth witness follows constructively. This is a narrower
+   condition than global `Expressive T.trueAbs` or an unrestricted truth
+   schema. The other direction (disquotation) alone does not produce
+   a witness. This supplies an existential, unlike simply negating
+   global denial via its own formulation. The existing
+   [TruthNontrivialityCore](../../corpus/arguments/TRUTH-NONTRIVIALITY-CORE.json)
+   has conditional consequences via `GlobalDenialPrice`; a new
+   `attacks` edge `b98c8b29` records that objection to the exact
+   global rival `bff72296`. The relative-only model, in which capture
+   fails, remains. No inference from the encoded `Prop` to truth
+   independent of minds or endorsement is assumed.
+2. **F6.** In the existing `ReliabilityFrame`, the person who grasps
+   the proof can have a supporting basis available without already
+   assenting to the conclusion. The existing pro tanto calibration
+   `6b4e3331` (`SurvivingBasisGivesReason`) yields F6 from one
+   actual supporting, non-undercut basis. No requirement for a warranted
+   acceptance is needed on this direct route; neither
+   `AcceptedWarrantNeedsBasis` nor eligible uptake is required.
+   The prior #1980 warrant route is retained. A proof existing in
+   a file is not yet evidence that an actual subject has an available
+   non-undercut basis. If the selected subject judges an invalid
+   rival proof and recognizes precisely why its inference fails, the
+   contrast is evidence bearing on this local attribution. Actual
+   subject, access, content and basis calibration remain open.
+   F6 is not independently defended by using it to refute its denial.
+3. **Scientism.** An established content c failing empirical
+   establishment in the exact existing frame yields `70118ddd`
+   and the failure of `66e84d62`; if c is in scope, it excludes
+   `ScopedScientism` directly. This is the local specialization
+   of the already registered norm and scope results, not a new
+   theorem claimed on the graph. An adequate deductive basis lacking an indispensable observational
+   premise challenges exclusive empirical origin for a claim in scope, but to use this existing
+   frame under the existential reading one must additionally exclude
+   other sufficient empirical bases.
+
+The four examples below passed Lean on the existing declarations. The
+first supplies the proved content to an explicit capture assumption. The
+second takes the subject, basis and content as inputs, the third takes an
+established in-scope witness, and the fourth tests the exclusive-origin
+reading. These are local checks of the applications.
+
+```lean
+import TruthCore.Results.Logic.TruthPilot.NotEveryPropositionFails.Solution
+import TruthCore.Logic.TruthNontriviality
+import TruthCore.Logic.EpistemicReasonBearer
+import TruthCore.Logic.ScientismScopeBoundary
+
+open TruthCore.Logic.TruthPilot
+open TruthCore.Logic.SelfApplication
+open TruthCore.Logic.Relativism
+open TruthCore.Logic.GlobalThesisBoundaries
+open TruthCore.Logic.EpistemicReasonBearer
+open TruthCore.Logic.EpistemicReasons
+open TruthCore.Logic.Scientism
+open TruthCore.Logic.ScientismScopeBoundary
+
+-- Only the capture direction for one proved content is needed.
+example {Agent Content : Type} (T : TruthSemantics Agent Content)
+    (c : Content) (capture : NotEveryPropositionFails → T.trueAbs c) :
+    SomeAbsoluteTruth T ∧ ¬ GlobalNoAbsoluteTruth T := by
+  have hc := capture
+    TruthCore.Results.Logic.TruthPilot.NotEveryPropositionFails.notEveryPropositionFails
+  exact ⟨⟨c, hc⟩, fun h => h c hc⟩
+
+-- No prior actual acceptance or warrant needed; the evidence is available.
+example (f : ReliabilityFrame) (R : f.Agent → f.Content → Prop)
+    (a : f.Agent) (b : f.Basis) (p : f.Content)
+    (hs : f.supports a b p) (hu : ¬ f.undercuts a b)
+    (hCounts : SurvivingBasisGivesReason f R) :
+    ThereAreEpistemicReasons R :=
+  ⟨a, p, hCounts a b p hs hu⟩
+
+-- Witness to the exact negation and, when in scope, failure of the norm.
+example {Claim : Type} (E : EpistemicFrame Claim) (scope : Claim → Prop)
+    (c : Claim) (he : E.established c)
+    (hn : ¬ E.empiricallyEstablished c) (hi : scope c) :
+    SomeNonEmpiricalEstablished E ∧
+      ¬ NoNonEmpiricalEstablished E ∧ ¬ ScopedScientism E scope := by
+  have hw : SomeNonEmpiricalEstablished E := ⟨c, he, hn⟩
+  exact ⟨hw, fun h => h hw, fun h => hn (h c hi he)⟩
+
+-- The separate exclusive-origin reading; not the existing norm by fiat.
+example {Claim Basis : Type} (S : Claim → Basis → Prop)
+    (O : Basis → Prop) (scope : Claim → Prop)
+    (p : Claim) (b : Basis) (hi : scope p) (hs : S p b) (hn : ¬ O b) :
+    ¬ (∀ p b, scope p → S p b → O b) := by
+  intro h
+  exact hn (h p b hi hs)
+```
+
+The direct evidence comparison can use the same logical statement with two
+candidate proof tokens. A correct reconstruction instantiates the universal
+denial at True and applies it to True.intro. An invalid reconstruction
+instantiates at False and tries to obtain an inhabitant of False without
+any additional premise. Distinguish identifying the bad step from simply
+observing the proof checker's acceptance of one string. The rival may deny
+that the successful reconstruction constitutes knowledge, while conceding
+that it supports belief more than the failed one. In that case F6 remains
+the thinner application, and the stronger knowledge claim remains open.
+
+The second relation `abdc2b50` records the existing singleton-identity
+argument `17a2c392` (`e03147fa`) as an attack on the exact
+`NoValidInference` rival `3e6a8e08`. Its frozen theorem takes a
+content parameter `p : Claim` even though its record has no proposition
+premises. It does not cover an empty content carrier: with `Claim = Empty`,
+the denial of every entailment is vacuous. More importantly, a rival
+restricting actual or ampliative inference is not thereby refuted.
+Use the existing validity and invalidity control `b203c461` and
+the above actual inference comparison; no `refutes` edge is added.
+
+**Provisional assessment:** the strongest specific objection to universal
+empirical-origin exclusivity is the actual deductive basis, provided it
+is adequate for a subject. The same available, non-undercut basis offers
+a concrete positive case for thin epistemic reasons. Those two local
+calibrations deserve priority over yet another global self-application
+certificate. The existential-empirical reading, logic-exempt empirical
+practice, reasonless truth and relative-only interpretations survive the
+formal tests as stated; they owe different positive accounts, and their
+falsity does not follow solely from lacking a reason for adoption.
+No conclusion here establishes the PSR, divine attributes, or GOD_4.
+
+For an actual F6 application, the discriminating evidence would be the
+selected subject's access to the proof, their performance on the valid
+and invalid reconstructions, and the status of any defeaters for that
+basis. For an absolute-truth application, defend the direction of capture
+for that very content. Neither the replay nor the Boolean enumeration
+measures a person's grasp or licenses the proposed capture.
