@@ -136,18 +136,7 @@ A safe adapter relates a micro-state `s` to a macro-state `m` exactly when `obse
 
 `TruthCore.Results.Explanation.PSRStrength.necessitating_reason_contingent` takes an actual true reason, a contingent fact and a necessitation bridge; its proof carries the fact's accessible failure world back to failure of the reason. `bccf_contingent` uses the same move with the aggregate-to-conjunct bridge. `TruthCore.Results.Modal.SimplicityCollapse.rigid_core` takes the same act at every accessible world and strict efficacy, and uses the same contrapositive to exclude a contingent selected effect. The existing modal K-closure work in #1926 is the natural place to reuse this, not a new modality.
 
-Local schematic implication (uncompiled, constructive):
-
-```lean
-theorem failure_transport {W : Sort _} (R : W → W → Prop)
-    (a : W) (P Q : W → Prop)
-    (bridge : ∀ v, R a v → P v → Q v)
-    (actualP : P a) (failure : ∃ v, R a v ∧ ¬ Q v) :
-    P a ∧ ∃ v, R a v ∧ ¬ P v := by
-  obtain ⟨v, hv, hn⟩ := failure
-  exact ⟨actualP, v, hv, fun hp => hn (bridge v hv hp)⟩
-```
-
+The compiled [failure transport theorem](../../TruthCore/Explanation/PSRStrength.lean#L29) supplies the common step in `necessitating_reason_contingent` and `bccf_contingent`. Both keep the accessible failure world as their witness.
 This isolates the modal failure witness without introducing excluded middle or a reflexivity assumption. The forward necessity theorem needs the same accessible domain and implication at each accessible world; it is not enough that the reason happens to explain the actual fact. For `holder_necessary` in HolderRootIdentification, the move from not-contingent to necessary uses an explicit excluded-middle input and actual existence; do not erase that dependency. The source's necessary existence is also not the necessary performance of its particular act.
 
 Candidate applications: PSR-collapse, source-to-effect necessity, aggregate contingency, truthmaker necessitation and joint-absence holder identification. Coordinate existing #1941/#1942/#1947 and the necessary-source investigation; the common theorem transfers no philosophical warrant between their bridge premises.
