@@ -90,7 +90,8 @@ ordering uses one successor rule. [Distinctness proof](../../corpus/results/WORL
 For accounts equally adequate to the same evidence, a headcount razor gives a
 finite inventory an advantage that survives **every finite addition** against
 an infinite inventory. If the units counted are independent explanatory posits,
-that inference requires distinct charges for distinct members of the regress.
+assigning a distinct charge to each bearer suffices. Charging each successive
+pair once also yields infinitely many distinct charges.
 The choice of baseline also matters. Against a shared countably infinite
 background, adding one thing or countably many yields equally large total
 inventories, despite the difference in additions. [Headcount criterion](../../corpus/results/e8f7aaef-0424-411f-bdc8-8a3671e3c932.json)
@@ -98,13 +99,17 @@ inventories, despite the difference in additions. [Headcount criterion](../../co
 In a two-hypothesis probability comparison, equal positive likelihoods leave
 the prior odds unchanged. Preference beyond every finite factor requires zero
 weight for the **whole** regress hypothesis. A uniform further discount at
-every depth yields that zero if the regress hypothesis entails every prefix.
+every depth yields zero for the whole class if the same sequence of depth
+events contains **every admitted regress alternative** in one prior model.
+For fair coin tosses, fixing one infinite sequence gives prefixes of weight
+`2⁻ⁿ`; the class of all infinite sequences has weight one.
 Strict discounts can still leave weight over: the earlier product
 with factors `1 − 1/(n+2)²` stays at least `1/2` at every depth from zero.
 Charging once for a shared generating law also permits positive weight at every
-depth. The open application is whether explaining this recipient requires a
-fresh independent commitment at each step, and whether a finite account
-explains the same production. A generating law needs grounds for applying to
+depth. I therefore favor the finitely committed account when both accounts explain
+the same production and the rival incurs infinitely many independent
+commitments. The actual no-regress premise remains open. Applying the preference
+turns on which commitments this recipient’s explanation requires. A generating law needs grounds for applying to
 this actual series. A proposed source needs grounds for its productive role
 in it. [Odds](../../corpus/results/07aaa585-ecf4-4584-a679-c9f02d294fcf.json)
 [Unbounded preference](../../corpus/results/e2657ba9-e4e0-4961-a8cd-6fd50eb6167b.json)

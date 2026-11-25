@@ -36,4 +36,17 @@ theorem headcountCriterion : RegressHeadcountCriterion := by
       ⟨finiteAlternative, Infinite.of_injective _ injects⟩
   · rw [Cardinal.mk_eq_aleph0, Cardinal.mk_eq_aleph0]
 
+/-- Billing each pair together still incurs infinitely many distinct charges. -/
+theorem pairedCharges :
+    ¬ Function.Injective (fun n : ℕ => n / 2) ∧
+      SurvivesEveryFiniteAddition Unit (Set.range (fun n : ℕ => n / 2)) := by
+  constructor
+  · intro injects
+    have equal : (0 : ℕ) = 1 := injects (show 0 / 2 = 1 / 2 by decide)
+    omega
+  · let onePerPair (n : ℕ) : Set.range (fun k : ℕ => k / 2) :=
+      ⟨n, 2 * n, by change 2 * n / 2 = n; omega⟩
+    have injects : Function.Injective onePerPair := fun _ _ h => congrArg Subtype.val h
+    exact (finiteAdditionCriterion _ _).2 ⟨inferInstance, Infinite.of_injective _ injects⟩
+
 end TruthCore.Results.Logic.RegressHeadcount

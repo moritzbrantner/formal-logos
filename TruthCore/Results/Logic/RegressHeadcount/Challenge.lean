@@ -14,4 +14,10 @@ independent posits when their assignment is injective along this regress. -/
 theorem headcountCriterion : RegressHeadcountCriterion := by
   sorry
 
+/-- Billing each pair together still incurs infinitely many distinct charges. -/
+theorem pairedCharges :
+    ¬ Function.Injective (fun n : ℕ => n / 2) ∧
+      SurvivesEveryFiniteAddition Unit (Set.range (fun n : ℕ => n / 2)) := by
+  sorry
+
 end TruthCore.Results.Logic.RegressHeadcount
