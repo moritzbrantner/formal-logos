@@ -608,8 +608,8 @@ root's own end, distinguish these tests:
 The third plus actual rational giving of d suffices to rule out fixity of d;
 the first two give positive reasons to seek it, but are not that bridge.
 To obtain WN on the scope of actual root givings, one needs this accessible
-omission for each non-end-required recipient, not realization of every
-possible complete output. Claiming availability by the definition of
+omission for each non-end-required recipient toward whom the root actually
+exercises an owned rational power. This leaves other complete outputs open. Claiming availability by the definition of
 freedom would just restate WN on that scope. The genuine warrant would
 come from a defensible specific nonnecessitating exercise principle,
 coupled with the first two tests, and not from moral permission alone.
@@ -699,7 +699,7 @@ place of the productive principle.
 | Objective propensity | Direct supply; a nonnecessitating invariant tendency favoring independently grounded goods | Actual exercise can be primitive; no actual apprehension as a reason. The personal account must meet the same stopping standard. |
 | Impersonal teleology | Genuine ends, independently specified fulfillment, productive directedness | Explain the ground of directedness and actual exercise. Not defeated by good-directed order or normative policy alone. |
 | Selective necessary diffusion | Positive reason for an invariant core of gifts and contingent exercise toward others | Must ground invariant communication or its necessary policy rather than infer it from the source's having a good. Not defeated by one power, SS or freedom toward another effect alone. |
-| Complete-output optimizer | Objective whole-decision ranking; ties allow contingency; strict improvement can fix individual recipients | Needs warranted feasibility, ranking, existence of an optimum, a binding maximizing norm and invariant compliance. Due-perfection permission does not prove metaphysical withholding. |
+| Complete-output optimizer | Objective whole-decision ranking; ties allow contingency; strict improvement can fix individual recipients | Needs warrant for the feasible outputs, their ranking, an optimum, and production of an optimal output at every relevant world. An intrinsic productive disposition could explain that pattern. An account appealing to obligation also needs a binding maximizing norm and a reason the source invariably complies. Due-perfection permission does not prove metaphysical withholding. |
 | Noncognitive productive powers | Intrinsic power produces intelligent or purposive effects, including mediated production | Intrinsic intellectual adequacy is a distinct open causal-perfection question, not resolved by either output intelligence or labels of power. |
 | Rational direct authorship | Actual intellectual content, nondeviant practical governance and existential supply; good-directed finite exercise not requiring self-improvement | Same-source intellect and formative bridges, exact-exercise sufficiency, defensible policy and compatibility with strict simplicity. A uniquely determining reason is not assumed. |
 
@@ -1279,8 +1279,9 @@ reading without repeating a modal-collapse theorem:
   source must account for both actual determinations. Merely
   identifying one uniform existential enabler, or listing forms
   compatible with being supplied, is not yet that account.
-* If every such direct natural operation can only reproduce a
-  single kind univocally, both actual determinations would be
+* Grant that one and the same operation directly supplies both recipients
+  in the respects compared. If that operation can only reproduce a single
+  kind univocally, both actual determinations would be
   instances of that one kind in the relevant comparison. The
   granted diversity contradicts that narrower natural-operation
   premise. This inference concerns simultaneous products, not
