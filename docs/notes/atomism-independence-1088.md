@@ -3,7 +3,7 @@
 This analyst comparison distinguishes individual variation, pairwise variation,
 full joint realization and a choice of elementary basis. Attribution is deferred.
 It is not an exegesis or refutation of Wittgenstein, nor a claim that every
-proposition must be an independent elementary fact.
+proposition must be an independent elementary fact. [Research record](../../corpus/attempts/ATTEMPT-ATOMISM-INDEPENDENCE-1088.json)
 
 ## Exact reuse and remaining gap
 

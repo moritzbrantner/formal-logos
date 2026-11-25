@@ -1,0 +1,12 @@
+{
+  "id": "c659bc89-b01b-4c51-8020-4039f55351ba",
+  "label": "Every actual root is NECESSARY_2, from the unique necessary actual root (inference)",
+  "input_statement_ids": [
+    "91b085c4-f1c7-5ada-9848-8e7dc753313a"
+  ],
+  "output_statement_id": "d164f730-95b4-4297-8978-9e5586f0b2ef",
+  "rule": "Every actual root is the unique necessary one",
+  "meaning": "Instantiate the selected profile at groundProfile F concrete G. There is an actual root n necessary at w with every actual root equal to n; so any actual root m is n and is NECESSARY_2 at w. Constructive.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

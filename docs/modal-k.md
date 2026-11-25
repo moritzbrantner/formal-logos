@@ -5,7 +5,7 @@ Issue #262 investigates the **stipulated mathematical semantics** of
 identifies a formal state with a genuine metaphysical possibility, establishes
 real-world contingency, or attributes an unrestricted bridge to Hume. The
 source-fidelity investigation remains #268. No Catholic or Thomistic premise,
-Scott positivity axiom, external solver or additional Lean dependency is used.
+Scott positivity axiom, external solver or additional Lean dependency is used. [Original PR #286](https://github.com/moritzbrantner/formal-logos/pull/286)
 
 ## What follows without frame conditions
 

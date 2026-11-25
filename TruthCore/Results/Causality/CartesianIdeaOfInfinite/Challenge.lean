@@ -69,4 +69,48 @@ theorem thoughtOccursOfMeditatorThinks {B R Episode : Type} (I : IdeaFrame B R E
     (hThinks : MeditatorThinks I) : ThoughtOccurs I.Occurs := by
   sorry
 
+/-- Apply actuality-to-being to the very cause and respect supplied by the original result. -/
+theorem infiniteCauseWithEsse {W B T R Episode : Type} (F : GradesFrame W B T R)
+    (I : IdeaFrame B R Episode) (hCause : InfiniteCauseOfIdea F I)
+    (hBeing : TruthCore.Latin.Aquinas.SummaTheologiae.ActualityOnlyInsofarAsBeingReading
+      F.InAct F.esse) : InfiniteCauseOfIdeaWithEsse F I := by
+  sorry
+
+/-- The weaker endpoint requires only impersonal occurrence with this content.
+The designated meditator still occurs in the lack and distinctness clauses. -/
+theorem distinctPossessorWithoutBearer {W B T R Episode : Type} (F : GradesFrame W B T R)
+    (I : IdeaFrame B R Episode) (hRep : ∃ e, I.Occurs e ∧ I.Represents e I.inf)
+    (hCaused : ObjectiveRealityIsCaused I) (hAdequacy : ObjectiveAdequacy F I)
+    (hFinite : MeditatorLacksInfinite F I) : ∃ c, c ≠ I.me ∧ F.InAct c I.inf := by
+  sorry
+
+/-- Positive model with a surpassed cause. Both beings have esse; the meditator
+strictly surpasses the unique content cause at esse. This isolates the extra
+maximality commitment even after the actuality-to-being premise is granted. -/
+theorem surpassedCauseWithEsse :
+    ∃ (F : GradesFrame Unit Bool Unit Bool) (I : IdeaFrame Bool Bool Unit),
+      MeditatorHasIdeaOfInfinite I ∧ ObjectiveRealityIsCaused I ∧ ObjectiveAdequacy F I ∧
+      MeditatorLacksInfinite F I ∧ TruthCore.Causality.Grades.ActualityOnlyInsofarAsBeing F ∧
+      InfiniteCauseOfIdeaWithEsse F I ∧
+      (∀ c, F.InAct c I.inf → F.MoreIn F.esse I.me c) ∧ ¬ InfiniteIsMaximalInBeing F I := by
+  sorry
+
+/-- Dropping actuality-to-being can lose esse specifically at the cause:
+the meditator has esse, the only infinite cause lacks it. -/
+theorem causeWithoutEsse :
+    ∃ (F : GradesFrame Unit Bool Unit Bool) (I : IdeaFrame Bool Bool Unit),
+      MeditatorHasIdeaOfInfinite I ∧ ObjectiveRealityIsCaused I ∧ ObjectiveAdequacy F I ∧
+      MeditatorLacksInfinite F I ∧ F.InAct I.me F.esse ∧ InfiniteCauseOfIdea F I ∧
+      ¬ InfiniteCauseOfIdeaWithEsse F I := by
+  sorry
+
+/-- Both finite rules accept lengths above every bound. At the next length
+only the unrestricted rule accepts. The mark stream and transition stay fixed.
+This is a mathematical content control, with no metaphysical interpretation
+of an input length as a being or perfection. -/
+theorem finiteRulesDiscriminateAboveEveryBound (k : Nat) :
+    ∃ n, k < n ∧ acceptsLength false n ∧ acceptsLength true n ∧
+      acceptsLength false (n + 1) ∧ ¬ acceptsLength true (n + 1) := by
+  sorry
+
 end TruthCore.Results.Causality.CartesianIdeaOfInfinite

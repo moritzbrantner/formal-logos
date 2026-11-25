@@ -665,7 +665,8 @@ def signals(finding: dict, options: dict) -> dict:
         "vacuous": lean.get("vacuous"), "literal": lean.get("literal_negation"),
         "by_name": lean.get("domain_identified_by_name") or [],
         "bridges": lean.get("bridges") or [],
-        "truncated": len(finding.get("candidates", [])) >= options.get("candidates", 8),
+        "truncated": options.get("premise_selection") != "exact"
+                     and len(finding.get("candidates", [])) >= options.get("candidates", 8),
     }
 
 

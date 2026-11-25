@@ -5,7 +5,7 @@ modal-system family in #248 under Hume campaign #247. `Frame`, `MC`, `Dia`,
 `Box`, domains and the finite evaluator are the shared #261 semantics. K's
 proved equality characterization is imported, not assumed again. Nothing here
 attributes a view to Hume or identifies formal world labels with metaphysical
-possibilities. No Catholic-case frontier premise is discharged.
+possibilities. No Catholic-case frontier premise is discharged. [Original PR #290](https://github.com/moritzbrantner/formal-logos/pull/290)
 
 ## Positive theorem and exact assumptions
 

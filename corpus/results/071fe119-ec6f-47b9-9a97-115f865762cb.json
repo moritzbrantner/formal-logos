@@ -1,0 +1,11 @@
+{
+  "id": "071fe119-ec6f-47b9-9a97-115f865762cb",
+  "label": "Comprehension of actual participants bounds their esse by the selected giver's",
+  "argument_id": "b9f2bb06-adc7-4fe7-b6f5-d20165ebcf08",
+  "challenge_module": "TruthCore.Results.Causality.ReflectiveComprehension.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ReflectiveComprehension.Solution",
+  "theorem": "TruthCore.Results.Causality.ReflectiveComprehension.participantBound",
+  "comparator_config": "results/071fe119-ec6f-47b9-9a97-115f865762cb/comparator.json",
+  "status": "solution-present",
+  "description": "The populated sole-giver premise supplies actuality of the designated s. Each actual participant is comprehended by that very s. Transfer the resulting weak order of acts through calibration on these two actual bearers. The cognitive comparison uses neither total-cause adequacy nor a ranking in other perfections."
+}

@@ -4,7 +4,7 @@
 theorem, premise, adequacy criterion, or certification. No change to the root
 frontier is claimed. The experiment cards below were checked against the
 existing argument, result, attempt, Lean-import and dossier records; they do
-not replace source reading, Lean type checking, or Comparator verification.
+not replace source reading, Lean type checking, or Comparator verification. [Original PR #973](https://github.com/moritzbrantner/formal-logos/pull/973)
 
 ## Discovery: the small first slice
 
@@ -24,9 +24,9 @@ At the implementation snapshot the anchor appeared in **six** attempt evidence
 lists, but only **one** surviving experiment had (a) an unresolved recorded
 blocker, (b) both result conclusions in the attempt's explicit statement focus,
 (c) a direct import of the source Solution, and (d) the selected profile module
-in both Solution import closures: `ATTEMPT-JOINT-COOPERATION-744`.
+in both Solution import closures: [`ATTEMPT-JOINT-COOPERATION-744`](../../corpus/attempts/joint-cooperation-744.json).
 
-This matters: `ATTEMPT-NECESSARY-BEING-INTEGRATION-786` cites the #735 result
+This matters: [`ATTEMPT-NECESSARY-BEING-INTEGRATION-786`](../../corpus/attempts/necessary-being-integration-786.json) cites the #735 result
 and has consumer imports, but its statement focus does **not** include
 `STMT-ULTIMATE-ADEQUACY-COMPARISON`. The integration question is about a
 fact-level reason being an actual *existential support*, not the same #735
@@ -129,7 +129,7 @@ slice until that bridge is explicit.
 ## Priority 3, lower value now: local law versus selected actual history
 
 **Existing evidence:** `HISTORY-SELECTION-CERTIFICATE`,
-`ULTIMATE-EXPLANATION-SELECTION`, `ATTEMPT-ACTUAL-WORLD-GAP-751`.
+`ULTIMATE-EXPLANATION-SELECTION`, [`ATTEMPT-ACTUAL-WORLD-GAP-751`](../../corpus/attempts/actual-world-gap-751.json).
 The existing comparison already distinguishes locally satisfied rules from
 global selection; a source-free unique global-solution construction is a
 positive mathematical counterweight, not productive actuality. Re-running

@@ -2,6 +2,7 @@ module
 
 public import TruthCore.Explanation.StoppingPoints
 public import TruthCore.Results.Explanation.PSRStrength.Solution
+public import TruthCore.Logic.RootDescent
 
 @[expose] public section
 
@@ -10,6 +11,7 @@ open TruthCore.Explanation.PSRStrength
 open TruthCore.Explanation.PSRSelfApplication
 open TruthCore.Explanation.StoppingPoints
 open TruthCore.Results.Explanation.PSRStrength
+open TruthCore.Logic.RootDescent (not_of_inherited not_of_notNot_inherited)
 
 variable {W B F : Type}
 
@@ -18,16 +20,14 @@ variable {W B F : Type}
 theorem core_necessitating (A : Arena W B F) (a : W) (c : F) (hc : Contingent A a c)
     (hb : NoBrute A a) (hf : Factive A) (hn : Necessitating A)
     (hwf : WellFounded (A.explains a)) : False :=
-  hwf.induction (C := fun f => Contingent A a f → False) c
-    (fun f ih hcf => hb ⟨f, hcf, fun ⟨r, he⟩ =>
-      ih r he (necessitating_reason_contingent A hn he (hf a r f he).1 hcf)⟩) hc
+  not_of_notNot_inherited (P := Contingent A a) hwf
+    (fun f hcf hNoUp => hb ⟨f, hcf, fun ⟨r, he⟩ =>
+      hNoUp ⟨r, he, necessitating_reason_contingent A hn he (hf a r f he).1 hcf⟩⟩) c hc
 
 theorem core_unrestricted (A : Arena W B F) (a : W) (t : F) (ht : A.holds a t)
     (hp : FactPSR A a) (hf : Factive A) (hwf : WellFounded (A.explains a)) : False :=
-  hwf.induction (C := fun f => A.holds a f → False) t
-    (fun f ih hh => by
-      obtain ⟨r, he⟩ := hp f hh
-      exact ih r he (hf a r f he).1) ht
+  not_of_inherited (P := A.holds a) hwf
+    (fun f hh => let ⟨r, he⟩ := hp f hh; ⟨r, he, (hf a r f he).1⟩) t ht
 
 theorem work_contingent (A : Arena W B F) (w : W) (s t : F) (hf : Factive A)
     (he : A.explains w s t) (hc : Contingent A w t) (hw : WorkNecessitates A w s) :
@@ -85,19 +85,18 @@ theorem norm_implication (A : Arena W B F) (a : W) (t : F) (hc : Contingent A a 
     (hx : Explained A a t) (hs : SingleStop A a t) (hf : Factive A) (hn : Necessitating A)
     (hwf : WellFounded (A.explains a)) (hnorm : NoBruteFoundation A a) : False := by
   obtain ⟨r₀, he₀⟩ := hx
-  have hdown : ∀ f, Contingent A a f → Strict A a f t → False := fun f =>
-    hwf.induction (C := fun f => Contingent A a f → Strict A a f t → False) f
-      (fun f ih hcf hst => by
-        have hne : ¬ Explained A a f := fun ⟨r, he⟩ => by
-          apply ih r he (necessitating_reason_contingent A hn he (hf a r f he).1 hcf)
-          obtain ⟨q, hq, hsup⟩ := hst
-          exact ⟨q, hq, supplied_back A a he hsup⟩
-        have hterm : Terminal A a f := ⟨hcf.1, fun r hr => (hne ⟨r, hr⟩).elim⟩
-        refine hnorm f t ⟨hterm, hst, fun hsup => ?_⟩ ⟨hcf, hne⟩
-        obtain ⟨x, ⟨hxt, hxn⟩, hp⟩ := supplied_pick A a hsup
-        exact hxn (hs x f hxt hterm hp (strict_supplied A a hst)))
-  exact hdown r₀ (necessitating_reason_contingent A hn he₀ (hf a r₀ t he₀).1 hc)
-    ⟨r₀, he₀, .base rfl⟩
+  have hdown : ∀ f, ¬ (Contingent A a f ∧ Strict A a f t) :=
+    not_of_notNot_inherited hwf fun f ⟨hcf, hst⟩ hNoUp => by
+      have hne : ¬ Explained A a f := fun ⟨r, he⟩ => by
+        refine hNoUp ⟨r, he, necessitating_reason_contingent A hn he (hf a r f he).1 hcf, ?_⟩
+        obtain ⟨q, hq, hsup⟩ := hst
+        exact ⟨q, hq, supplied_back A a he hsup⟩
+      have hterm : Terminal A a f := ⟨hcf.1, fun r hr => (hne ⟨r, hr⟩).elim⟩
+      refine hnorm f t ⟨hterm, hst, fun hsup => ?_⟩ ⟨hcf, hne⟩
+      obtain ⟨x, ⟨hxt, hxn⟩, hp⟩ := supplied_pick A a hsup
+      exact hxn (hs x f hxt hterm hp (strict_supplied A a hst))
+  exact hdown r₀ ⟨necessitating_reason_contingent A hn he₀ (hf a r₀ t he₀).1 hc,
+    ⟨r₀, he₀, .base rfl⟩⟩
 
 theorem wf_rank {α : Type} {R : α → α → Prop} (rank : α → Nat)
     (h : ∀ r f, R r f → rank r < rank f) : WellFounded R :=

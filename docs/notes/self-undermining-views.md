@@ -7,7 +7,7 @@ within a larger evidential network; it need not be a separate proof tree. A
 specific rival follows deductively only if the relevant alternatives are
 exhaustive and the other options have been excluded. A conflict with an act of
 assertion, a loss of warrant for a belief, and the absence of a reason to adopt
-a view each require their own conditions and conclusions.
+a view each require their own conditions and conclusions. [Research record](../../corpus/attempts/internal-adoption-reasons.json)
 
 These tests also inform *comparative* assessments short of deduction: a view
 failing a well-supported self-refutation, self-undermining, internal-adoption or
@@ -45,6 +45,68 @@ provisional judgment, not as automatic frontier closure.
 
 The [epistemic-underminer analysis](epistemic-underminer-boundaries.md) records the
 warrant, benchmark and prior-demonstration assumptions in more detail.
+
+## Which thought supplies the concrete-population premise? (#1007)
+
+Suppose someone actually asserts “no thought is experienced.” The assertion
+result requires a thought realizing that assertion and the classification of
+the speaker's realizing thoughts for this content as experienced. It supplies an
+occurring, experienced thought that falsifies the asserted universal. The
+thesis considered in silence supplies no performance. Nothing in this test
+evaluates the speaker's warrant. [Assertion result](../../corpus/results/0c9d64e6-e29f-4b47-b974-5f38c1beb0eb.json)
+
+For the further Cogito step, fix the occurrence predicate to thought episodes.
+If each experienced occurring thought has a bearer, apply that principle to
+the witnessed episode. This gives a bearer together with the thought it
+bears. It need not be the asserting agent. The bearer step is an
+instantiation. In the checked two-episode interpretation both thoughts
+occur, only one is experienced and borne, and the all-thought
+bearer premise fails. Holding occurrence and experience fixed while emptying
+the bearer relation removes every thinking-subject witness. This control tests
+the inference's scope and supplies no evidence for actual subjectless experience.
+[Scoped result and control](../../corpus/results/06ce17e9-ad97-487b-8bf4-e4e8d098dd38.json)
+
+A separate consumer takes **any** already witnessed subject and its occurring
+thought. The existing bearer-concreteness and bearer-existence-at-world
+premises apply to that very pair. Together they give a concrete inhabitant
+of the selected world. The earlier Cogito consumer obtained the pair by
+applying the bearer principle for all occurring thoughts. Both routes
+remain available. The new consumer also accepts the direct single-bearer
+assumption. [Population result](../../corpus/results/6801590a-5ed5-4c90-bc85-2e72621ed0e0.json)
+[Original Cogito result](../../corpus/results/COGITO-SUBJECT-FROM-OCCURRENCE.json)
+
+The direct-esse argument takes this population at the same world and
+concreteness interpretation. Reaching its God-existence conclusion still
+requires the whole-roster and contingent-grounding premises, excluded middle,
+the principles connecting existence, grades and causation in esse, firstness
+and component exclusion, and the nominal bridge. The argument record gives
+the complete bundle. Its first root need not be the thinker. God-existence
+in turn supplies one input of the Catholicism skeleton. [Direct-esse argument](../../corpus/arguments/fc46b7f9-32d0-416d-8f72-5bc908992f30.json)
+[Root skeleton](../../corpus/arguments/CATHOLICISM-SKELETON.json)
+
+**Provisional assessment.** Consider a conscious episode whose content is the denial
+“no thought is experienced.” The denial itself is presented from a particular
+point of view. That first-person
+presentation gives prima facie reason to ascribe this very thought to a bearer.
+Extending it to every experienced thought requires a substantive
+account of why having a point of view entails having a bearer. The impersonal
+event account locates perspective in the organization of the experiencing
+event itself. Denying an enduring self leaves the thin bearer premise intact
+if the event or a momentary bundle qualifies as its bearer. The disagreement
+concerns cases in which the account accepts the phenomenal occurrence and
+denies *any* such attribution. The formal control separates those claims.
+It does not decide which account fits first-person experience. An independent
+criterion for attributing a particular experienced thought to a bearer would
+revise this assessment. [Existing bearer investigation](../../corpus/attempts/cogito-subject-consolidation.json)
+
+At baseline `7a5a834d` the orphan report lists both `0c9d64e6` (phenomenal
+occurrence) and `d2cb9100` (the original Cogito instantiation). Both now reach
+the root via the single-bearer consumer. The separate represented-existence result
+`46c875b1` now supplies the PSR population premise `43f09b83` when its
+existence predicate is the selected world's existence extension. For a
+particular denial, the open question is whether its representative tracks
+the performance itself. The same individual witnesses concrete population
+under the selected world's existence-in-act contract. [Represented-occurrence proof and control](../causal-finite-branching-and-psr-syllogisms.md#can-the-denial-itself-supply-s2s-population-premise-1007) · [Assertion attempt](../../corpus/attempts/69a4a681-8caa-4b34-8fc4-84d8ae522e7b.json)
 
 ## Internal reasons to adopt a view
 
@@ -471,10 +533,14 @@ formalized here; nothing here shows that the extension fails to reach it.
 root before and after). F6 is a floor item that these results neither use nor
 threaten. The route to the case runs through warrant for accepting root-route
 premises, the #930 bridge that is still unbuilt. Attempt
-`a29f4411-ac87-42b2-bae3-48fa0882b41a`.
+[`a29f4411-ac87-42b2-bae3-48fa0882b41a`](../../corpus/attempts/a29f4411-ac87-42b2-bae3-48fa0882b41a.json).
 
 ## Follow-up investigations
 
 - [Putnam's brain-in-a-vat argument](https://github.com/moritzbrantner/truth-core/issues/1416)
 - [Moore's paradox](https://github.com/moritzbrantner/truth-core/issues/1417)
 - [Global explanatory skepticism](https://github.com/moritzbrantner/truth-core/issues/1415)
+
+## Research attempts citing this note
+
+- [Moral and epistemic parity: distinguish categorical force from irreducible favoring](../../corpus/attempts/cc9f51e3-529d-4e59-bc50-bc79d8eae6c0.json)

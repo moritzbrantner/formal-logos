@@ -4,7 +4,7 @@ The earlier objection in `DISAMB-ESSE-RECEPTION` and the linked soul/body attack
 had a precise undecided interpretation: does communication of the united soul's
 esse to the body count as the canonical `EsseReceivedIn` relation used by the
 infinity proof? That uncertainty now becomes separate propositions and checked
-consequences. No source sense is selected before conditional investigation.
+consequences. No source sense is selected before conditional investigation. [Original PR #1143](https://github.com/moritzbrantner/formal-logos/pull/1143)
 
 The full SCG II.80 n.13 source statement retains its own meaning, including the
 body-dependence and separated-state contrasts. Its pinned paragraph [25287] was
@@ -82,3 +82,7 @@ true. Calibration/interpretation transport, scope projections and structural
 coverage are marked transcriptions. Actual applicability, source alignment and
 independent warrant remain OPEN; all prior Challenges and model fixtures are
 preserved.
+
+## Research attempts citing this note
+
+- [This follows up subsistent infinity reception audit 20261031 for issue #354](../../corpus/attempts/subsistent-infinity-from-reception-20261105.json)

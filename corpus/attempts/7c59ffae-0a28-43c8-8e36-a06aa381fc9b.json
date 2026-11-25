@@ -14,7 +14,9 @@
   "evidence": [
     "1239fd26-9a00-4f5c-9090-4b760e2db81d",
     "08000a5e-d133-4cd7-aecf-198447a1ee3f",
-    "6fd4d06c-f5e9-479c-a674-5e142515646a"
+    "6fd4d06c-f5e9-479c-a674-5e142515646a",
+    "PR-1423",
+    "PR-1431"
   ],
   "blocker": "The literal Comparator/NanoDa success-message pair is nested and does not instantiate the strictly positive four-cell model; a statistical reformulation lacks specified error population, observation/selection policy and both-hypothesis calibration. Kernel diversity and complementary checks support conditional engineering assurance without statistical independence or interpretation warrant. Proposed #934/root bridge remains UNBUILT; reopen on a concrete layer mismatch, changed pipeline/event meaning or independently established calibration and policy-to-warrant evidence."
 }

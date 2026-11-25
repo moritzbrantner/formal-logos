@@ -351,3 +351,12 @@ its unbounded counterpart. Independent semantic review covers the proposed
 reasoning and interpretation limits. Repository corpus checks validate the
 attempt references. No statement, result, argument, floor, or source-claim
 status is changed by this investigation.
+
+## Research attempts citing this note
+
+- [Cluster reassessment of dependence, simple-priority and grounding leaves of the prima via (#1751)](../../corpus/attempts/9d71e28d-d492-4797-9221-45fa517a6e6b.json)
+- [Cluster reassessment of the modal-spine frame, uniting-cause, transfer and separability premises](../../corpus/attempts/dd24400b-cc87-4095-b4c4-df857e1edff5.json)
+- [Excluded middle support and local decision alternatives](../../corpus/attempts/b4af6b1e-c47d-4daa-bfa0-f1be2f6ada7d.json)
+- [Independence support from realizable dependency closure](../../corpus/attempts/8ba4d04f-f4c2-41a2-8420-e61dafd29109.json)
+- [Natural priority support and the simple priority transport](../../corpus/attempts/5cf65146-4ef8-4a22-be61-ff3d1dd4c9c7.json)
+- [Priority support through source scope and consumer halves](../../corpus/attempts/63e65ca6-c359-43b3-9d2f-5d9d939fc8cd.json)

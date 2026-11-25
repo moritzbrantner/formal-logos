@@ -1,0 +1,11 @@
+{
+  "id": "02d310f0-101e-4647-8a89-debab38104ba",
+  "label": "Join all finite upstream paths by joining immediate forks under well-foundedness",
+  "argument_id": "8ab61634-f5a8-466f-be94-e1938fe817a2",
+  "challenge_module": "TruthCore.Results.Causality.LocalSourceConfluence.Challenge",
+  "solution_module": "TruthCore.Results.Causality.LocalSourceConfluence.Solution",
+  "theorem": "TruthCore.Results.Causality.LocalSourceConfluence.confluenceOfLocalForks",
+  "comparator_config": "results/02d310f0-101e-4647-8a89-debab38104ba/comparator.json",
+  "status": "solution-present",
+  "description": "Both initial steps have a common extension by the local premise. Induction at the two immediate suppliers extends the original paths to a single node. The companion locates an unjoinable immediate fork somewhere in any weakly connected well-founded graph with two distinct sources, using classical logic to exhibit a failing instance. A second companion specializes the full chain to actual well-founded grounds, weak connectivity, universal local joining and a supplied actual root."
+}

@@ -6,7 +6,7 @@ by the existing frontier computation; it supplies no independent philosophical
 warrant. Current research follows the
 [systematic research loop](../systematic-corpus-loop.md), assessing reasons,
 applicability and rivals through reasoned provisional judgments. This
-qualification changes no approval record or computed closure.
+qualification changes no approval record or computed closure. [Research record](../../corpus/attempts/causal-power-concreteness.json)
 
 The owner's working proposition is: “only concrete things have power and can do
 things, abstract things cannot do or cause things.” This note registers its

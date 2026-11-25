@@ -1,6 +1,7 @@
 module
 
 public import TruthCore.German.Kant.CosmologicalInference
+public import TruthCore.Logic.RootDescent
 
 /-!
 # A contingent brute root survives a boundary-exception causal law
@@ -25,6 +26,7 @@ is not automatically efficient causation of a temporally first event.
 namespace TruthCore.Causality.BruteFoundationBoundary
 
 open TruthCore.German.Kant.CosmologicalInference
+open TruthCore.Logic.RootDescent (acc_exists_unmarked acc_exists_minimal)
 
 /-- Concrete existence, with a world-relative grounding relation. The carrier
 contains candidate individuals, including those absent from a given world.
@@ -63,22 +65,16 @@ theorem necessaryConcreteOfGroundedContingents
     (hWF : WellFounded (m.grounds w))
     (hDep : EveryContingentGroundedAt m w) :
     NecessaryConcreteAt m w := by
-  have walk : ∀ x : B, m.concrete x → m.ontic.ExistsAt w x →
-      NecessaryConcreteAt m w := by
-    intro x
-    induction x using hWF.induction with
-    | h x ih =>
-      intro hc he
-      by_cases hCont : ContingentAt m.ontic w x
-      · rcases hDep x hc he hCont with ⟨y, hyConcrete, hyExists, hyGrounds⟩
-        exact ih y hyGrounds hyConcrete hyExists
-      · refine ⟨x, hc, he, ?_⟩
-        intro v hv
-        by_cases hExists : m.ontic.ExistsAt v x
-        · exact hExists
-        · exact False.elim (hCont ⟨he, ⟨v, hv, hExists⟩⟩)
   rcases hPop with ⟨x, hc, he⟩
-  exact walk x hc he
+  obtain ⟨n, ⟨hnc, hne⟩, hCont⟩ := acc_exists_unmarked
+    (P := fun y => m.concrete y ∧ m.ontic.ExistsAt w y) (Mark := ContingentAt m.ontic w)
+    (fun _ _ => Classical.em _)
+    (fun y hy hm => let ⟨z, hzc, hze, hz⟩ := hDep y hy.1 hy.2 hm; ⟨z, hz, hzc, hze⟩)
+    (hWF.apply x) ⟨hc, he⟩
+  refine ⟨n, hnc, hne, fun v hv => ?_⟩
+  by_cases hExists : m.ontic.ExistsAt v n
+  · exact hExists
+  · exact False.elim (hCont ⟨hne, ⟨v, hv, hExists⟩⟩)
 
 /-- The exact four-premise contradictory configuration: an inhabited actual
 world; a well-founded grounding relation; all contingent concrete existents
@@ -115,24 +111,12 @@ theorem contingentBruteRootOfNoNecessary
       (∀ y, m.concrete y → m.ontic.ExistsAt w y →
         ¬ m.grounds w y root) := by
   classical
-  have findRoot : ∀ x : B, m.concrete x → m.ontic.ExistsAt w x →
-      ∃ root, m.concrete root ∧ m.ontic.ExistsAt w root ∧
-        (∀ y, m.concrete y → m.ontic.ExistsAt w y →
-          ¬ m.grounds w y root) := by
-    intro x
-    induction x using hWF.induction with
-    | h x ih =>
-      intro hxConcrete hxExists
-      by_cases hp : ∃ y, m.concrete y ∧
-          m.ontic.ExistsAt w y ∧ m.grounds w y x
-      · rcases hp with ⟨y, hyConcrete, hyExists, hyGround⟩
-        exact ih y hyGround hyConcrete hyExists
-      · refine ⟨x, hxConcrete, hxExists, ?_⟩
-        intro y hyConcrete hyExists hyGround
-        exact hp ⟨y, hyConcrete, hyExists, hyGround⟩
   rcases hPop with ⟨x, hxConcrete, hxExists⟩
-  rcases findRoot x hxConcrete hxExists with
-    ⟨root, hrConcrete, hrExists, hrMinimal⟩
+  obtain ⟨root, ⟨hrConcrete, hrExists⟩, hrNone⟩ := acc_exists_minimal
+    (P := fun y => m.concrete y ∧ m.ontic.ExistsAt w y) (fun _ _ => Classical.em _)
+    (hWF.apply x) ⟨hxConcrete, hxExists⟩
+  have hrMinimal : ∀ y, m.concrete y → m.ontic.ExistsAt w y → ¬ m.grounds w y root :=
+    fun y hyConcrete hyExists hyGround => hrNone y hyGround ⟨hyConcrete, hyExists⟩
   have hrCont : ContingentAt m.ontic w root := by
     by_cases hCont : ContingentAt m.ontic w root
     · exact hCont

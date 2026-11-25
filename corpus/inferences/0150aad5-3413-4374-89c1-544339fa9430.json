@@ -1,0 +1,16 @@
+{
+  "id": "0150aad5-3413-4374-89c1-544339fa9430",
+  "label": "Holders of the joint-absence power are actual roots, from P2', P3', presence and NAR (inference)",
+  "input_statement_ids": [
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410",
+    "906f5c39-2a63-4dc2-955d-a00cfd8a976b",
+    "a6906cab-59c4-4938-b6d1-991369e8ffb0",
+    "b517ca3e-503e-4346-b0e0-7b99ad4e875d",
+    "43651417-cd19-43d7-8f70-8def61acb0f0"
+  ],
+  "output_statement_id": "0a995309-2656-469b-81b1-3d70cbc3cab9",
+  "rule": "A holder is never absent from an accessible world, else it would be contingent while present at a world lacking every actual contingent; a necessary actual concretum is a root",
+  "meaning": "Let y hold the power. By P3' it is concrete; by the existence premise it exists at w. For an accessible v, by excluded middle y exists at v or not; if not, y is contingent at w, but P2' puts y at an accessible world where every concrete being contingent at w is absent, a contradiction. So y is NECESSARY_2 at w, and NAR makes it an actual root of G at w.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

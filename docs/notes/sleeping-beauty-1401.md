@@ -5,7 +5,7 @@ proposed outcome for independent semantic challenge, not a reviewed victory for
 a halfer or thirder. The frozen statements are in
 [the batch](../../specs/sleeping-beauty-1401.toml); the substantive argument and
 revision conditions below belong to the same outcome. Source leads in #1401
-are navigation only: no new historical claim, passage or witness is introduced.
+are navigation only: no new historical claim, passage or witness is introduced. [Research record](../../corpus/attempts/sleeping-beauty-1401.json)
 
 ## Question and reuse
 

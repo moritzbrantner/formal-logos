@@ -3,7 +3,7 @@
 Research slice for #1595 / #319, connected to the D → E question in the
 necessary-being God route. This is an **analyst reconstruction** and a typed
 test, **not a new historical source claim**: no chapter-specific SCG I.22
-`corpus/passages/` record has been materialized and read in this branch.
+`corpus/passages/` record has been materialized and read in this branch. [Research record](../../corpus/attempts/835a927b-b13d-4ed8-839f-6b532d7e5193.json)
 
 Primary navigation: [Latin *SCG* I.22, oldid 132346](https://la.wikisource.org/w/index.php?title=Summa_contra_Gentiles/Liber_I/Caput_XXII&oldid=132346),
 also [Corpus Thomisticum, lib. I cap. 22, nn.2–4](https://www.corpusthomisticum.org/scg1014.html)
@@ -228,7 +228,7 @@ NanoDa checks run in CI on PR #1602.
 Follow-up slice: `TruthCore.Latin.Aquinas.SummaContraGentiles.BookI.Chapter22SecondCase`,
 results in `TruthCore.Results.Aquinas.SummaContraGentiles.Chapter22SecondCase`,
 records from `specs/scg-i22-second-case.toml`, attempt
-`d614232c-11fe-48ce-8a7e-500f1a532c8f`. Still an analyst reconstruction,
+[`d614232c-11fe-48ce-8a7e-500f1a532c8f`](../../corpus/attempts/d614232c-11fe-48ce-8a7e-500f1a532c8f.json). Still an analyst reconstruction,
 attribution deferred; the same orientation witness was re-read for nn.2–6.
 
 **Senses.** Disambiguation `a4b9e53e-d4d9-4f15-bc7f-e5fa913a96ea`
@@ -542,3 +542,7 @@ potential/actual immanent-unity mechanism therefore incurs a **second**
 independent conditional objection at a pure-act root, even if it escapes a
 third uniter. The actual scope and warrant for `e ≠ q → potency in the
 same first x` must be defended, not inferred from two Principle labels.
+
+## Research attempts citing this note
+
+- [SCG I.22 n.6 main causal premise, self-source horns and intrinsic unity rival](../../corpus/attempts/9bc2b3f0-b827-422d-aaaf-47138eb8f2e4.json)

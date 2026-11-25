@@ -1,0 +1,11 @@
+{
+  "id": "16002747-35ec-4509-830e-5c38b0224dba",
+  "label": "The restricted Theta 5 principle, from the strong one",
+  "argument_id": "675b35e7-4dda-4fca-8f24-1a4f9fc93645",
+  "challenge_module": "TruthCore.Results.Causality.WillVersusChance.Challenge",
+  "solution_module": "TruthCore.Results.Causality.WillVersusChance.Solution",
+  "theorem": "TruthCore.Results.Causality.WillVersusChance.sameSetupVariationIsRationalWeakens",
+  "comparator_config": "results/16002747-35ec-4509-830e-5c38b0224dba/comparator.json",
+  "status": "solution-present",
+  "description": "Backs the strength order DNP-prime strengthens DNP_inv. Establishes no premise. Strictness: controls, three-world model (a chancy being whose set-up varies elsewhere satisfies DNP_inv and violates DNP-prime)."
+}

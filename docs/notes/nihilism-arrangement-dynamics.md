@@ -1,5 +1,7 @@
 # Arrangement dynamics and the nihilist alternative (#326)
 
+[Research record](../../corpus/attempts/mereo-nihilist-arrangement.json)
+
 ## Question and research boundary
 
 Can an arrangement-only account reproduce a nonlinear collective response over

@@ -3,7 +3,7 @@
 This note owns the investigation of **C\***: a caused mover is itself being
 moved, whenever it moves, in a respect relevant to that moving. The reviewed
 lane-A assessment (PR #1768, accepted after an independent challenge, not yet
-merged; attempt `a82b06b6` on that branch) located the absolute First-Way
+merged; attempt [`a82b06b6`](../../corpus/attempts/a82b06b6-f603-4084-a110-35765662fee9.json) on that branch) located the absolute First-Way
 conclusion's contested load in C\* and its three recorded forms. That
 assessment is cited as in-flight evidence, not as established.
 
@@ -235,7 +235,7 @@ DEF-CAPACITY-TO-BE or a causal capacity, not to adopted unactualized potency.
 | --- | --- | --- |
 | T1. Concurrence: the creature's power is presently applied to act (ST I q.105 a.5 co. and ad 3, read: God "applies them to act") | The relevant present mover is the applier | God-indexed: it presupposes the being whose existence the route concludes. Its non-God-indexed content, that every creaturely exercise is presently *caused* by another, is a CAUSE_2 or sustaining claim, not MOTION_1 being moved. Under POTENCY_1 an exercise already in act is not being reduced (control 1). A sense bridge from "presently caused in its exercise" to "moved in it" would be needed and is not on file. Not available for C\*; see S below. |
 | T2. Operation is an accident distinct from the power (ST I q.25 a.1 ad 2 and ad 3, read: in creatures power is a principle of action, and where act differs from power it is nobler; q.54 not read) | The exercise is a further actuality the agent has | Accepted as a distinction. It shows the exercise is a second act distinct from the first. It does not show that the agent is *being reduced* to it while it already exercises it. This is the gap between onset and steady exercise. Aquinas's own text closes this reply: SCG I.13 [10] (`92bd0343`, read) takes motion "strictly", not as Plato's "any given operation". A broad receptive-potency or operation reading would need a sense passage from POTENCY_1 to DEF-RECEPTIVE-POTENCY or POTENCY_3, and the latter refutes the no-self-motion step (DISAMB-POTENCY). |
-| T3. Conservation of the retained quality | The iron's heat persists only as conserved | Conservation is not MOTION_1 (`0b9ad38b`, reused). It supports the sustaining option S, not C\*. Aquinas's own text closes this reply too. Q.104 a.1 ad 4: conservation is without motion. Q.104 a.1 co.: heated water retains heat after the fire ceases. SCG I.13 [10]: the demonstration uses motion strictly. A broad receptive-potency reading would need the same sense passage to DEF-RECEPTIVE-POTENCY or POTENCY_3. |
+| T3. Conservation of the retained quality | The iron's heat persists only as conserved | Conservation is not MOTION_1 ([`0b9ad38b`](../../corpus/attempts/motion-maps-batch1-20261107.json), reused). It supports the sustaining option S, not C\*. Aquinas's own text closes this reply too. Q.104 a.1 ad 4: conservation is without motion. Q.104 a.1 co.: heated water retains heat after the fire ceases. SCG I.13 [10]: the demonstration uses motion strictly. A broad receptive-potency reading would need the same sense passage to DEF-RECEPTIVE-POTENCY or POTENCY_3. |
 | T4. *Virtus impressa*: the iron acts as instrument of the fire that heated it | Instrumental dependence on the original agent | That agent is not acting now, so this is sense (iii). It does not carry the regress warrant (section 1). |
 | T5. Count the cooling as relevant | Relevance as R1, or as a counterfactual reading that counts reaction | Self-defeating on this route (control 2). |
 | T6. Celestial motion presently moves terrestrial agents (SCG I.13 [12]–[13] and [31], read: every body that moves is moved while moving, and the demonstrations presuppose a self-moved heavenly body; ST I q.115 a.3 navigation only, not read) | A present celestial lender for every terrestrial mover | Non-God-indexed and R2 in form. Fails: established physics gives heat transfer and collisions no dependence on celestial motion. |
@@ -436,7 +436,7 @@ New open statements: `631e014f-685d-434c-86b7-4a683a507b4d`,
 `7bf380c6-fcdd-4b14-bae5-d5a5acdebd5c`,
 `e3afc8a3-b51b-4f44-a093-ce27cf8e1f0a` and
 `4f6ac439-627d-43f2-9364-2700cd4a49d2`. Attempt
-`b7e7af8c-0b41-4431-aa40-0543408ddb9d`. No theorem, Challenge, claim,
+[`b7e7af8c-0b41-4431-aa40-0543408ddb9d`](../../corpus/attempts/b7e7af8c-0b41-4431-aa40-0543408ddb9d.json). No theorem, Challenge, claim,
 definition, argument or formal status changed. Scratch controls 1-4 are not
 repository evidence until registered.
 
@@ -448,7 +448,7 @@ on that reading, and under which bridge? Does the rest of the First Way survive
 in it? Analyst reformulation, attribution deferred (Feser's existential reading
 of the First Way is the known contemporary version, not read here). SCG I.13
 [10] takes motion strictly (section 3), so this is a **sibling route, not a
-repair of ST I q.2 a.3**.
+repair of ST I q.2 a.3**. [Assessment record](../../corpus/attempts/092c7439-9de3-4cf5-8123-a3d394ea275a.json)
 
 **Fixed meaning.** MOTION_3, appended to DISAMB-MOTION: `HeldMotion InAct H x r`
 (DEF `ea1904bc`) says that x is in act in r and something other than x

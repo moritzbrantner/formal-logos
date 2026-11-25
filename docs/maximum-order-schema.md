@@ -3,7 +3,7 @@
 Issue #412, schema 2, isolates one consequence of the Fourth Way's degree
 reasoning: **if every distinct cause of a degree is strictly higher in that
 same order, a maximal member has no distinct cause of that degree**. This is
-not the converse assertion that a maximum causes everything below it.
+not the converse assertion that a maximum causes everything below it. [Research record](../corpus/attempts/maximum-order-schema.json)
 
 `TruthCore.Logic.MaximumOrder.System` holds a chosen cause-of-degree relation
 on a Mathlib `Preorder`. Its `CausesRaiseDegree` condition is separate data:

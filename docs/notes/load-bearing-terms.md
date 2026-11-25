@@ -2,7 +2,7 @@
 
 Audit of 2026-11-07 (owner direction: "have different theories for a term and
 then use this exhaustive enum stuff to say that ONE OF THEM must apply").
-Analyst work, attribution deferred.
+Analyst work, attribution deferred. [Research record](../../corpus/attempts/term-sense-forks-20261107.json)
 
 ## Method
 
@@ -271,7 +271,7 @@ node or reaches one through a named bridge. Vocabulary
 `TruthCore.Causality.TermSenseForks3`, results
 `TruthCore.Results.Causality.TermSenseForks3`, spec
 `specs/term-sense-forks-3.toml`, maps `explorations/term-sense-forks-3-*.toml`,
-attempt ATTEMPT-TERM-SENSE-FORKS-3-20261108.
+attempt [ATTEMPT-TERM-SENSE-FORKS-3-20261108](../../corpus/attempts/term-sense-forks-3-20261108.json).
 
 ### maxime ens (DISAMB-MAXIME-ENS) → STMT-MAXIMUM-IN-BEING-CAUSES-ALL-BEINGS
 
@@ -351,7 +351,7 @@ DISAMB-EXISTENCE-ESSE-SUPPORT (35).
 Vocabulary `TruthCore.Causality.TermSenseForks4`, results
 `TruthCore.Results.Causality.TermSenseForks4`, spec
 `specs/term-sense-forks-4.toml`, maps `explorations/term-sense-forks-4-*.toml`,
-attempt ATTEMPT-TERM-SENSE-FORKS-4-20261108.
+attempt [ATTEMPT-TERM-SENSE-FORKS-4-20261108](../../corpus/attempts/term-sense-forks-4-20261108.json).
 
 ### mutable (DISAMB-POTENCY-IN-SUBJECT-VS-IN-ANOTHER) → STMT-LIFE-BOUNDARY-REQUIRES-POTENCY
 
@@ -570,3 +570,7 @@ The remaining encoding needs a faithful four-mode interpretation and explicit
 coverage alignment, followed by substantive sense typing and negative controls;
 adding opaque wrappers would not solve that task. No new proof or truth claim
 is made, and no existing Challenge or premise set changes.
+
+## Research attempts citing this note
+
+- [Sense forks batch 2, restructured per the owner's sense-indexed terms direction: one argument per…](../../corpus/attempts/term-sense-forks-2-20261107.json)

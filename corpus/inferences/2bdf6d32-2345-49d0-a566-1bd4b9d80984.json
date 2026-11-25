@@ -1,0 +1,14 @@
+{
+  "id": "2bdf6d32-2345-49d0-a566-1bd4b9d80984",
+  "label": "Every SERIES_OF_CAUSES_4 link is a SERIES_OF_CAUSES_3 link, from the per se ordering (inference)",
+  "input_statement_ids": [
+    "8a22ae75-4198-5a32-ae52-bad2848a50a5",
+    "8b2561cd-3743-536d-a110-3352fdb0c6b9",
+    "8053cc06-b1d5-423c-9aa0-f9e8d42fa4c7"
+  ],
+  "output_statement_id": "e81ec2fe-d10e-47e0-bdcf-8f1faf972ab8",
+  "rule": "Discharge distinctness by no self-causation, then apply the per se ordering premise",
+  "meaning": "Non-transcription conditional derivation, a support option for the sense bridge. If an efficient cause other than its effect that is itself efficiently caused causes only as caused (8a22ae75, the secunda via's per se ordering premise on its strong reading A), nothing is the efficient cause of itself (8b2561cd), and the cause of every SERIES_OF_CAUSES_4 link is itself efficiently caused here and now in some respect (the new bridge, which closes the mode gap between AsCaused, caused in an unspecified mode, and DEF 4a101a4c's efficiently caused middle cause), then every SERIES_OF_CAUSES_4 link is a SERIES_OF_CAUSES_3 link. 8a22ae75 is a strong premise: on reading A any efficient cause caused in any respect is a middle cause; the weaker relevant-respect reading is not used. inclusionSupportControls give, for each input, a Bool interpretation in which the other two hold and the conclusion fails (a two-cycle of efficient causing with no per se link; an efficient self-loop; one existential link whose cause nothing causes), and a nonvacuous one with an existential link.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

@@ -1,8 +1,8 @@
 ---
 ---
-**Gödel/Scott singletons.** `STMT-SCOTT-EMPTY-PROPERTY-NOT-ESSENCE` against
-`STMT-GOEDEL-1970-EMPTY-PROPERTY-IS-ESSENCE` (two essence definitions) and
-`STMT-GOEDEL-1970-POSITIVE-CLOSED-UNDER-CONJUNCTION`: a bridge lemma between
+**Gödel/Scott singletons.** [`STMT-SCOTT-EMPTY-PROPERTY-NOT-ESSENCE`](https://github.com/moritzbrantner/formal-logos/blob/ec72649fb5a8ee3ac06d391b179cf1af7f75b304/corpus/statements/scott-empty-property-not-essence.json) against
+[`STMT-GOEDEL-1970-EMPTY-PROPERTY-IS-ESSENCE`](https://github.com/moritzbrantner/formal-logos/blob/ec72649fb5a8ee3ac06d391b179cf1af7f75b304/corpus/statements/goedel-1970-empty-property-is-essence.json) (two essence definitions) and
+[`STMT-GOEDEL-1970-POSITIVE-CLOSED-UNDER-CONJUNCTION`](https://github.com/moritzbrantner/formal-logos/blob/ec72649fb5a8ee3ac06d391b179cf1af7f75b304/corpus/statements/goedel-1970-positive-closed-under-conjunction.json): a bridge lemma between
 the two `Essence` definitions would connect the two AFP vocabularies.
 
 

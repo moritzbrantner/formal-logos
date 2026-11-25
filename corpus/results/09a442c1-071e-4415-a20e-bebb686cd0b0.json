@@ -1,0 +1,11 @@
+{
+  "id": "09a442c1-071e-4415-a20e-bebb686cd0b0",
+  "label": "Interpret the personal origin bridges on one through four bearers",
+  "argument_id": "39c1cdfc-3daa-4187-8e6d-3d96bb4afe6d",
+  "challenge_module": "TruthCore.Results.Case.Catholicism.ImmanentOrigins.Challenge",
+  "solution_module": "TruthCore.Results.Case.Catholicism.ImmanentOrigins.Solution",
+  "theorem": "TruthCore.Results.Case.Catholicism.ImmanentOrigins.controls",
+  "comparator_config": "results/09a442c1-071e-4415-a20e-bebb686cd0b0/comparator.json",
+  "status": "solution-present",
+  "description": "The single-bearer control populates the inherited intrinsic self-knowledge predicate and recipient-good interpretation of actual self-love on the same act-of-being witness. The two-, three- and four-bearer fixtures test the subsequent personal origins alone. A model is evidence of formal compatibility or insufficiency at the stated interpretation. It confers no metaphysical actuality or attribution."
+}

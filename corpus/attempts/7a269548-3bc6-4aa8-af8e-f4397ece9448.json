@@ -10,13 +10,19 @@
     "8c6a14f8-5df6-4c29-916f-25185a160415",
     "034cb5d4-4e52-4c61-8b7b-708436f3a670",
     "b178b6e6-0115-4611-8fea-58dab5d69fed",
-    "b30587bf-d5c6-501a-b782-bb6529832a01"
+    "b30587bf-d5c6-501a-b782-bb6529832a01",
+    "6280fbf0-551a-46f5-8e0a-a65410c86a64",
+    "0e2bbd59-2b4c-438d-b792-0ca401eaf862",
+    "6b4e3331-01ca-484b-bda1-460ebff1df35",
+    "ada25623-e1a6-4ec8-9fba-3368dddcd0a0",
+    "0436de86-6579-53f2-9ff5-2111ba44ebae",
+    "56f68b40-9737-59a0-8cac-5610980a1547"
   ],
-  "date": "2026-11-11",
+  "date": "2026-11-25",
   "kind": "derivation",
   "outcome": "succeeded",
-  "summary": "Tested eight global epistemic challenges. Reused the canonical nihilism, performed-denial, goal-relative force and doubt results. Tested stronger readings with an eligibility omission model, opposite-truth and skewed benchmark comparisons, one valid and one invalid sequent in the same profile, and weak-certificate and non-well-founded strong-demonstration interpretations. The cases, precise assumptions and surviving rivals are in docs/notes/epistemic-underminer-boundaries.md.",
-  "blocker": "Apart from the explicit incompatibility with thin F6, these consequences need a calibrated bridge to actual reasons, actual warrant, or a warranted hinge. Strong prior demonstration alone admits an infinitist model, and denying preference-independent force leaves the goal-relative account available. No new source attribution or root premise closure.",
+  "summary": "Tested eight global epistemic challenges. Reused the canonical nihilism, performed-denial, goal-relative force and doubt results. Tested stronger readings with an eligibility omission model, opposite-truth and skewed benchmark comparisons, one valid and one invalid sequent in the same profile, and weak-certificate and non-well-founded strong-demonstration interpretations. The cases, precise assumptions and surviving rivals are in docs/notes/epistemic-underminer-boundaries.md. #1007 continuation from 7a5a834d: 1db47fd9 supplies warranted acceptance to b3ddb7c4 under the two evidential calibrations. F6 then supplies the bearer to b50727e1 under selected-world presence and the existing esse contract. Concrete population 56f68b40 feeds the direct-esse God-existence argument 72391d4d. Withholding, another-world application and warrant without surviving support separate the commitments. The note gives the candidate-by-candidate comparison.",
+  "blocker": "The matched recount is a proposed test. No actual warranted assent was observed. Trace a fresh tally to the original items without access to the faulty transcription, check coverage, duplicates and residual defeaters, and obtain the investigator’s contemporaneous judgment and its basis. Bypassing the fault gives the tally relative weight even when suspension remains appropriate. For the one investigator, one claim and two bases, warrant AcceptedWarrantNeedsBasis by establishing surviving support, SurvivingBasisGivesReason by assessing each basis for defeat and favorable bearing, and ReasonBearerPresentAt by identifying the investigator with a present representative at the selected world. This presence alone yields concrete population under the existing esse contract. One reason witness and one investigator do not establish those universals on a wider frame. The original eligible uptake already includes a reason; the reasonless denial survives without F6. The remaining warrant, reliability, authority and hinge gaps are detailed in the note.",
   "evidence": [
     "146b502b-e5fd-40cf-8a39-9ed2d45e59bb",
     "1db47fd9-6ab1-4fa1-a9dd-0aa9457d8146",
@@ -27,6 +33,32 @@
     "2930b66a-b5e3-4f3f-b2d3-758d84c0e54d",
     "64e1aa15-2487-4d17-94fc-51eae11a985d",
     "20ed92f4-766f-4bd6-b67d-9e5e37f9a209",
-    "2b293d68-46e0-5e79-a37f-0cb416639a50"
-  ]
+    "2b293d68-46e0-5e79-a37f-0cb416639a50",
+    "PR-1422",
+    "ec80b13d-0c87-5f71-bc70-16b42dc4c0e6",
+    "b3ddb7c4-683a-4127-8221-b30be7858f92",
+    "b50727e1-04de-488c-819f-2d5b9993c485",
+    "fd5e32d4-aa4f-57a8-8991-8d85ef14b25f",
+    "PR-1980"
+  ],
+  "current_assessment": {
+    "date": "2026-11-25",
+    "statement_ids": [
+      "6280fbf0-551a-46f5-8e0a-a65410c86a64",
+      "0e2bbd59-2b4c-438d-b792-0ca401eaf862",
+      "6b4e3331-01ca-484b-bda1-460ebff1df35",
+      "f56b2ee7-c69e-5e3b-85b0-e671d907ba58",
+      "ada25623-e1a6-4ec8-9fba-3368dddcd0a0",
+      "56f68b40-9737-59a0-8cac-5610980a1547"
+    ],
+    "scope": "Issue #1007. Warranted acceptance as evidence of an epistemic reason and the presence of a reason bearer as a route to concrete population.",
+    "assessment": "A surviving basis that favors an answer gives its investigator a pro tanto reason under the stated evidential calibration. A fresh recount could bypass a transcription fault even when suspension is warranted. Actual assent and adequate surviving support remain to be shown. The eligible-uptake producer already assumes a reason. A broader frame requires grounds for the calibrations and the presence of every reason bearer throughout that frame.",
+    "next_test": "Trace a fresh tally and a copied tally to their sources. For the same person and claim, establish which fault the fresh tally bypassed, the quality of the remaining evidence and whether the investigator accepted the total on that basis.",
+    "note": "docs/notes/epistemic-underminer-boundaries.md#from-warranted-belief-to-an-actual-bearer-1007-2026-11-25",
+    "reviewed_revision": "6d7a337fbb9be9f5bd09563631ab188f3c568456",
+    "review": "accepted_qualified",
+    "publication": "merged",
+    "evidence": "Independent challenge at 5d5e298be476d38a307a460f966d2332bb5f6ce1 accepted the derivations, controls and graph path from 1db47fd9. Targeted recheck at the reviewed revision accepted the proposed recount, the restricted application and the universal warrants on a wider frame. PR #1980 merged as eb2347bd3a5c976db13ab549358ad9fef025b591.",
+    "supersedes": "Adds the warranted-acceptance and selected-world applications to the prior case 10 assessment. The other epistemic challenges retain their scope."
+  }
 }

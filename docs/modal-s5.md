@@ -6,7 +6,7 @@ possibilities. The modal operators are the existing Gödel/Scott embedding's
 `Box` and `Dia`; no positivity, essence, necessary-existence or theological axiom
 is a premise. The separate Scott modal-collapse theorem establishes its own
 conditional consequence from its own axioms. It supplies neither metaphysical
-possibility nor a warrant for the unrestricted conceivability bridge here.
+possibility nor a warrant for the unrestricted conceivability bridge here. [Original PR #291](https://github.com/moritzbrantner/formal-logos/pull/291)
 
 ## Full predicates and the component
 

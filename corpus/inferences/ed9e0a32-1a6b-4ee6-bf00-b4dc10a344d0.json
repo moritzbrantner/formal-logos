@@ -1,0 +1,10 @@
+{
+  "id": "ed9e0a32-1a6b-4ee6-bf00-b4dc10a344d0",
+  "label": "Separate one-bit, pair and finite-pattern freedom with constant and parity suffixes (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "a447ad3e-a72e-4afe-93d3-eb5a4d976aaa",
+  "rule": "Construct all Boolean seeds, check the three phase cases, and contradict the recurrence with a prescribed three-bit prefix",
+  "meaning": "Constant suffixes separate single-coordinate freedom from joint pair freedom. The three-periodic XOR construction gives each adjacent pair by a suitable seed choice, but one fixed two-step equation forbids three consecutive true values. Matching the two seed coordinates fixes every admitted trace. Thus the exact first-order Profile obstruction does not exclude deterministic higher-order regularity or show unrestricted history recombination. #1874 independently supplies the finite-versus-infinite strictness control; it is reused rather than recreated.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

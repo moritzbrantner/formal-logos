@@ -14,7 +14,8 @@
     "858b9d75-065d-491c-bb54-419ff9337515",
     "c3b8a89f-5c3d-4a0e-9b62-bbc5e397616d",
     "dd6869af-f37c-4e49-b1e7-81f1574ab9ee",
-    "a59937a6-d8b9-4245-9b2c-677f8ede89c0"
+    "a59937a6-d8b9-4245-9b2c-677f8ede89c0",
+    "PR-1404"
   ],
   "blocker": "Actual application remains open: deterministic access discipline excludes successful guessing and is not warranted by ordinary secrecy. Actual transmission/history integrity, exclusivity, alternative coverage, understanding, uptake and reverse calibration remain unestablished. Next materially different test needs an independently grounded production restriction or actual evidence defending an explanatory ordering; more equal-token examples cannot supply it. Master reassessment and new semantic challenge required."
 }

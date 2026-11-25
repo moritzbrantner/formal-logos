@@ -1,0 +1,15 @@
+{
+  "id": "b7687d3f-6fa3-44d9-8e7a-71843d8bac98",
+  "label": "Comprehension of actual participants bounds their esse by the selected giver's (inference)",
+  "input_statement_ids": [
+    "eeb89ffe-5b61-4572-8b35-87adf541bcab",
+    "06410834-141f-4035-8a30-14f8a18c3139",
+    "2924332c-a710-4a8d-95be-84d52082a3e5",
+    "2412c010-3246-4cb8-b8a1-e10340384261"
+  ],
+  "output_statement_id": "aba6f4e1-bbf1-4aaa-ac1c-dead4efbef09",
+  "rule": "Transfer a measured comparison to the fixed esse scale on the actual roster",
+  "meaning": "The populated sole-giver premise supplies actuality of the designated s. Each actual participant is comprehended by that very s. Transfer the resulting weak order of acts through calibration on these two actual bearers. The cognitive comparison uses neither total-cause adequacy nor a ranking in other perfections.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

@@ -1,0 +1,11 @@
+{
+  "id": "1be2993c-d4f6-44a0-ac6e-c67dca042946",
+  "label": "Holders of the joint-absence power HAS_INTELLECT_1, from the common GOD_4 root",
+  "argument_id": "3f84c592-6fd9-4302-91ef-1b65ce215b71",
+  "challenge_module": "TruthCore.Results.Causality.HolderRootIdentification.Challenge",
+  "solution_module": "TruthCore.Results.Causality.HolderRootIdentification.Solution",
+  "theorem": "TruthCore.Results.Causality.HolderRootIdentification.holdersHaveIntellectFromCommonRoot",
+  "comparator_config": "results/1be2993c-d4f6-44a0-ac6e-c67dca042946/comparator.json",
+  "status": "solution-present",
+  "description": "Argument 2, the second half of the identification, with uniqueness from the common root's reach (uniqueness through a common upstream). It derives #1941's open premise 813a9181 from the existing governor route's endpoint 0c27f65a. Not a transcription. Establishes no premise. The holder's intellect is the root's: this adds no warrant for intellect at the root, and the chance rival must now deny 0c27f65a's intellect or reach, or argument 1's premises (note section 6). Omission models: without argument 1's conclusion (the necessary-through-another holder), without 0c27f65a (two roots)."
+}

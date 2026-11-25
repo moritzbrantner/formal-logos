@@ -1,0 +1,13 @@
+{
+  "id": "2ad81f87-18c8-4821-b1d1-83907b454dc8",
+  "label": "At most one holder of the joint-absence power, from at most one actual root (inference)",
+  "input_statement_ids": [
+    "0a995309-2656-469b-81b1-3d70cbc3cab9",
+    "49fdec01-cb92-48cf-90c5-9de7761121f2"
+  ],
+  "output_statement_id": "5f93d4f0-3780-45f6-9d65-da8ced71c922",
+  "rule": "Two holders are two actual roots of one relation at one world",
+  "meaning": "Two holders y and z are actual roots of G at w (argument 1's conclusion); at most one actual root (49fdec01) makes them the same. Constructive; a two-step composition of universally quantified premises.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

@@ -319,3 +319,149 @@ expanded-route diagnostic (lowest cost): Catholicism is true: the Catholic Churc
 distinct verified support alternatives: 288 -> 288
 verified support alternatives added: 0
 no change
+
+## Can an infinite series explain a one-way transfer by forwarding alone?
+
+Fix one positive transfer from a sender to a recipient. Entries measure a
+common quantity over the same interval or at the same instant. Add up what
+passes over **edges**. A unit routed through ten stages counts ten times in
+throughput even if it belongs to one conserved inventory. Allow splitting,
+merging and cycles elsewhere. The question is whether every supplier upstream
+of this particular sender can cover its exports from its receipts.
+
+**Cut argument.** Take the sender and everything that reaches it by a finite
+path of positive transfers. Every positive receipt into that set comes from
+inside it. If the recipient cannot reach the sender, the selected transfer
+leaves the set. Consequently exports from the set, counting internal transfers
+on both sides, strictly exceed receipts when total edge throughput is finite.
+If each member exported at most its receipts, summing those very inequalities
+would give the opposite result. Some identifiable upstream bearer therefore
+exports more than it receives. The argument tolerates loss, perfect forwarding
+and infinitely many contributors. It needs neither a fixed percentage loss
+per stage nor an assumption that all chains terminate. The path establishes
+reachability. In a mixed pool it does not trace an individual unit of excess
+to the selected recipient. [Cut proof and exercise bridge](../../TruthCore/Results/Causality/FiniteThroughput/Solution.lean)
+
+**Test the strongest rival on the same series.** In the [Second Way successor
+model](distinct-dependence-strict-ground-route.md#the-infinite-series-at-the-efficient-cause-consumer),
+each stage has a further cause. Assign one unit to each transfer from stage
+n+1 to stage n. Each sender receives exactly the unit it forwards; no transfer
+admits a return path. This mathematical account pays an infinite sum of edge
+throughputs, despite a finite unit at each stage. Choosing geometrically
+smaller amounts upstream can make the sum finite, but then some stages must
+contribute beyond receipts. For example, on edge n+1 to n put
+2 raised to the power −(n+1). Stage n+1 receives half what it exports. These
+are additional ledgers on the model's immediate-cause graph. The original
+model assigns no amounts. The earlier two-node swap gives the rival another
+option: finite balanced throughput with a real return edge. The obstruction
+discriminates among these accounts without ruling out infinite causal order.
+
+**Where this helps the existence argument.** For a fixed ledger over actual
+concreta at one world, suppose each bearer with an actual concrete ground
+covers its exports from receipts. Then the upstream net exporter has no actual
+concrete ground in that same relation. This supplies the existing actual-root
+premise directly. The hypothesis does substantive work. Over a fixed interval
+a discharging battery can deliver electrical energy through its two-terminal
+port without receiving charging energy, while its existence depends on its
+components. Its chemical store decreases. Counting the opening store explains
+the output, but changes the ledger. To apply the proof to existential giving,
+identify an independently motivated additive measure, positive one-way exercise,
+finite summed throughput, and a reason grounded bearers cannot originate any
+net amount of that quantity. Strict priority by itself gives no magnitude.
+Even for an ordinary incompressible steady flow at a positive rate, inserting
+more bookkeeping cross-sections increases summed throughput while leaving
+the physical stock fixed. A metaphysical application needs a reason for which
+distinct transfers count. The weaker exercise result only needs an interpretation
+of positive transfers as productive links and of net exporters as intrinsic
+contributors to the selected activity. [Exact premises](../../TruthCore/Causality/FiniteThroughput.lean)
+
+**Can a fitted ledger count as independent evidence?** With complete freedom
+to choose amounts, the existence of a fitting ledger is equivalent to a root
+and a second, distinct actual bearer. Given those beings, put one unit from
+the root to the other and zero elsewhere. Every grounded bearer then exports
+zero. Conversely the cut supplies the root and the nonreturning edge ensures
+two distinct endpoints. Retrospective fitting thus repackages the desired
+root together with plurality. This is a reason to favor an independently
+specified source of input over mere forwarding in a measured, finite,
+one-way system, and to withhold an evidential preference between subsistent
+esse and a primitive or infinitely ordered concrete reality on this test
+alone. A ground-relative root can itself be an impersonal whole. Common
+coverage, necessity, intellect and will require further same-bearer premises.
+Reopen the comparison on an independently calibrated instance of existential
+transfer or on a non-quantitative account of participation which distinguishes
+derivative exercise from local origination. [Ledger equivalence](../../TruthCore/Results/Causality/FiniteThroughput/Solution.lean)
+
+## Do degrees of being give an independently warranted measure of transfer?
+
+The participation argument gives an order comparison. If the principal giver
+possesses the participant's relevant determinations and these calibrate each
+bearer's own degree by a least upper bound, the giver ranks at least as high
+as that participant. This is positive warrant for a comparison of **individual
+bearers** under its premises. Could those same comparisons justify covering
+the total exports of a grounded intermediary? [Participant bound and its four
+premises](maximum-definition-fork.md#when-does-what-is-communicated-fix-the-givers-own-degree-of-esse) [Assessment record](../../corpus/attempts/1975ad3e-ebdf-4095-a422-4753c9ae2326.json)
+
+**Keep the production and the bearers fixed.** A relay receives from a
+principal and gives to two recipients. Both upstream bearers possess a low
+and a high determination. Each downstream recipient possesses the low one.
+On every edge the giver possesses all the recipient's selected determinations.
+Assign degree by their greatest realized level, which exists here. Give the
+low level value two. Test the proposal that each edge conveys the recipient's
+degree. If the high level is three, the relay receives three and exports four.
+If it is five, the relay receives five and exports four. Both calibrations
+preserve every rank, every tie, and the very features that ground those
+comparisons. Only the numerical gap changes. This checks the preservation and
+least-upper-bound reasoning on a specified toy inventory. It assumes no
+physical units or universal giver. The result rules out inferring a signed
+balance from those rankings and this booking rule alone. It leaves the
+participant bound intact. [Model and proof](../../TruthCore/Results/Causality/ReceiptMatching/Solution.lean)
+
+**What can settle the sign without fixing the distances?** Fix the transfer
+occurrences and their finite ordered grades in advance. Count one occurrence
+at every threshold it reaches. For example, the relay above has two outgoing
+occurrences at or above the low threshold against one incoming, and none
+at or above the high threshold against one incoming. Each numerical gap
+between successive grades contributes that gap times the count reaching
+its threshold. Hence exports are covered on *every* strictly increasing
+positive-integer scale with absence fixed at zero exactly when outgoing counts
+never exceed incoming counts at any threshold. If one count fails, enlarging
+that gap alone eventually reverses the inequality against coverage. This
+criterion tells us what ordinal information can establish *once occurrences
+are independently counted and their values added*. It gives no principle for
+counting one occurrence twice or treating possession by a giver as expenditure.
+
+**A route using identifiable receipts.** Fix a class of transfers, such as
+transactions in separately serialized single-use items during a specified
+interval. Suppose a marked recipient has no path back to its sender in this
+class, and there are finitely many selected exports from bearers that can
+reach the sender. If every such bearer could pair each export with a different
+receipt, these pairings would give an injection of the finite set of upstream
+exports into itself: take an export to its matched receipt. The marked export
+would have no preimage because its recipient is outside the ancestry. Hence
+some upstream bearer lacks enough distinct receipts. This tolerates other
+classes of transfer and infinitely many bearers elsewhere. It neither
+requires summing degrees nor identifies the particular origin of a chosen
+item. If **every actually grounded bearer admits the matching in this same
+class**, the unmatched bearer supplies the existing actual-root conclusion
+on that grounding relation. [Precise premises and transfer class](../../TruthCore/Causality/ReceiptMatching.lean)
+· [Registered root argument](../../corpus/arguments/ac7d268f-8042-4c13-83a1-afcd7c6d8ba9.json)
+
+**Provisional judgment.** An explanation of the discharge of distinct sealed
+items by forwarding alone is answerable to such a count once opening stock,
+boundaries and receipts are independently accounted for. An explanation of
+repeated production from a retained form has a different prediction. A relay
+that learns a pattern once and imprints two workpieces can confer the pattern
+on both; it consumes two blanks, while both uses draw on the same pattern.
+That is a concrete reason to reject a distinct-receipt rule for pattern
+transmission. A strict giver–recipient order or the fact that each recipient
+has real being supplies no comparable reason to count a separate receipt at
+the giver for each act of giving. Enriching the participatory argument with
+ordinal comparisons therefore improves the test of causal adequacy but supplies
+no independent warrant for existential export coverage in general. The
+impersonal and theistic accounts both owe a token criterion if they invoke
+this argument. To reopen its application, identify a kind of existential
+contribution whose use in one recipient precludes counting that *same receipt*
+for a second recipient, or demonstrate independent upper-threshold count
+bounds in the grade model. The incorporation measurements across six feeds apply to
+the material. The capacity by which the child uses iron remains a different
+explanandum. [Nourishment case](wielenberg-making-account.md#does-a-childs-actual-nourishment-identify-its-underived-source-1812)

@@ -4,7 +4,7 @@ Bounded Prompt 3 continuation from main `ea537f38d664ceb21dcc8afc1ab9a4b6b7814d4
 (integrated #728/#729). The prior [assembly audit](classical-attributes-migration.md)
 and its source/proof evidence are reused. The exact before hashes, reviewed hashes,
 record dispositions and limits are in [the inventory](classical-attributes-all-migration.json).
-The explorer shows this same inventory on each of the five scoped result pages.
+The explorer shows this same inventory on each of the five scoped result pages. [Original PR #730](https://github.com/moritzbrantner/formal-logos/pull/730)
 
 ## Brief and exact scope
 
@@ -759,3 +759,65 @@ zero files to write. Corpus, all pinned bundle inventories, attribution, label
 and sense ratchets, and whitespace checks pass. The PR carries the freshly
 computed frontier delta against `062424944`; the repair itself adds no logical
 support or truth discharge. Final delivered-head CI remains required.
+
+
+### Can the nine attributes identify the God of the existence argument?
+
+Fix one candidate `g` throughout. The exact conclusion of `818a73cc` is the signature's `HasClassicalAttributes g`. As a classification of an already identified bearer, the bridge has substantial warrant when the nine predicates carry the classical senses agreed for the route. The joint predication conveys much more than nine predicates scattered across different beings. The distinct question is what warrants calling **this** bearer GOD_4. The [stage-one-and-two conclusion](../../TruthCore/Case/Catholicism/StagesOneTwo.lean) explicitly asks for `IsGod g`, uniqueness and classical attributes together.
+
+**Exact residual.** In the adopted assembly, the fourth predicate means that every being to which `IsGod` applies is identical with this bearer. If *some* being independently qualifies, equality transports its identification to this very bearer. If none qualifies, the fourth predicate is vacuously satisfied. The following two local Lean checks isolate the residual assumption. The second changes only the name predicate of the [two-being joint assignment](../../TruthCore/Case/Catholicism/ClassicalAttributesJointWitness.lean), keeping its other individual, causal comparisons and concrete attribute definitions. The selected being satisfies all nine predicates in that assignment; the sufficiency bridge in its equivalent uncurried form holds as well. This control concerns the nine and the sufficiency bridge. It deliberately omits the stage-one naming premise and makes no claim that the full named route can fail under all its premises.
+
+```lean
+import TruthCore.Case.Catholicism.ClassicalAttributesJointWitness
+import TruthCore.Case.Catholicism.StagesOneTwo
+open TruthCore.Case.Catholicism
+namespace Population
+theorem identify (σ : Signature) (g : σ.Being)
+    (one : IsTheOneGod σ.IsGod g) (attrs : σ.HasClassicalAttributes g) :
+    UniqueClassicalGodExists σ ↔ ∃ h, σ.IsGod h := by
+  constructor
+  · rintro ⟨h, god, _⟩
+    exact ⟨h, god⟩
+  · rintro ⟨h, god⟩
+    exact ⟨g, one h god ▸ god, one, attrs⟩
+open ClassicalAttributesJointWitness
+def unnamed : Signature := { σ with IsGod := fun _ => False }
+abbrev Nine (g : Being) :=
+  NineClassicalAttributes (IsSimple Composite) (IsPerfect InAct)
+    (IsSupremelyGood InAct GoodIn CausesIn esse) (IsTheOneGod unnamed.IsGod)
+    Infinite (IsImmutable InPotency) Eternal HasIntellect HasWill g
+theorem missingName : Nine false ∧
+    (∀ g : Being, Nine g → unnamed.HasClassicalAttributes g) ∧
+    ¬ UniqueClassicalGodExists unnamed := by
+  refine ⟨?_, ?_, ?_⟩
+  · refine ⟨?_, ?_, ?_, ?_, rfl, ?_, rfl, rfl, rfl⟩
+    · intro h
+      exact Bool.noConfusion h
+    · intro _ r _
+      exact Or.inl rfl
+    · refine ⟨Or.inl rfl, ?_⟩
+      intro x r hx _
+      cases x
+      · exact False.elim (hx rfl)
+      · exact ⟨rfl,rfl⟩
+    · intro h hh
+      exact False.elim hh
+    · intro r hr
+      exact Bool.noConfusion hr.1
+  · intro g h
+    exact h.2.2.2.2.1
+  · rintro ⟨_, h, _⟩
+    exact h
+#print axioms identify
+#print axioms missingName
+end Population
+```
+
+**Assessment.** The empty-name interpretation shows semantic freedom in the primitives. Relabelling alone gives no competing account of where things come from. The affirmative identification has independent content when the same candidate is exhibited as the unique maximal being, cause of the being and perfections of the others, and no constituent of them. The [full-description naming bridge](../../TruthCore/Case/Catholicism/StageOneQuartaVia.lean) (`1ec205ed`) supplies a reason for applying the name to the independently characterized occupant of that role. Each role condition, its selected meaning and their joint realization require separate warrant. A highest-ranked item inside a system could satisfy a comparison while failing universal causal reach or remoteness; the full description makes this a substantive distinction. Where the route instead starts with an underived actual source or a power holder, it must connect that *same source* to the naming conditions, including the appropriate uniqueness. Conditional identification of a holder with a root does not establish those conditions by itself.
+
+I favor the same-witness identification to the extent that this causal description is defended as an adequate criterion for GOD_4 and actually satisfied. The [existing same-witness route](../../corpus/arguments/CATHOLICISM-STAGES-ONE-TWO-SAME-WITNESS.json) uses independently supplied naming and attribute commitments. Invoking a prior proof of `∃ g, IsGod g` can identify which bearer has the attributes; using that move as the original proof that God exists would assume its conclusion. The next decisive check is to trace a proposed underived source to the universal-giver and unique-maximal conditions on one interpretation, preserving the same source through the intellect and will bridges. The local controls require no axioms and add no registered argument. Historical or confessional identification is outside this test.
+
+## Research attempts citing this note
+
+- [Bounded preservation/audit of catholicism stage2 classical attributes at 3cd9545a](../../corpus/attempts/classical-attributes-structure-migration.json)
+- [Fifteen-input same-witness composition](../../corpus/attempts/root-intellect-will-20261031.json)

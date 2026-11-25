@@ -1,0 +1,36 @@
+{
+  "id": "4a05a3dd-ab75-478d-9a0e-5db94629ffc5",
+  "label": "Every SERIES_OF_CAUSES_4 link is a SERIES_OF_CAUSES_3 link, from the per se ordering",
+  "premise_statement_ids": [
+    "8a22ae75-4198-5a32-ae52-bad2848a50a5",
+    "8b2561cd-3743-536d-a110-3352fdb0c6b9",
+    "8053cc06-b1d5-423c-9aa0-f9e8d42fa4c7"
+  ],
+  "conclusion_statement_id": "e81ec2fe-d10e-47e0-bdcf-8f1faf972ab8",
+  "inference_ids": [
+    "2bdf6d32-2345-49d0-a566-1bd4b9d80984"
+  ],
+  "meaning": "Non-transcription conditional derivation, a support option for the sense bridge. If an efficient cause other than its effect that is itself efficiently caused causes only as caused (8a22ae75, the secunda via's per se ordering premise on its strong reading A), nothing is the efficient cause of itself (8b2561cd), and the cause of every SERIES_OF_CAUSES_4 link is itself efficiently caused here and now in some respect (the new bridge, which closes the mode gap between AsCaused, caused in an unspecified mode, and DEF 4a101a4c's efficiently caused middle cause), then every SERIES_OF_CAUSES_4 link is a SERIES_OF_CAUSES_3 link. 8a22ae75 is a strong premise: on reading A any efficient cause caused in any respect is a middle cause; the weaker relevant-respect reading is not used. inclusionSupportControls give, for each input, a Bool interpretation in which the other two hold and the conclusion fails (a two-cycle of efficient causing with no per se link; an efficient self-loop; one existential link whose cause nothing causes), and a nonvacuous one with an existential link.",
+  "definition_ids": [
+    "4bca086d-1fa5-4b0d-bf2b-a22f3f0ac740",
+    "57348ddc-eaa0-4f0d-bf3f-ce358f452b53",
+    "69c0b23e-54c7-57a1-871f-839c6e5514c6",
+    "4a101a4c-12de-53c8-80c6-de7a523ea9d9"
+  ],
+  "disambiguation_ids": [
+    "81c233d4-01b4-528c-8bbd-7da228443ffe",
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b"
+  ],
+  "sense_bridges": [
+    {
+      "term": "SERIES_OF_CAUSES",
+      "from": "be30bf4e-59fd-43b8-8c85-905ec7c86387",
+      "to": "4455d83d-d0be-4361-9a14-8e59dcc46eaf",
+      "statement_id": "e81ec2fe-d10e-47e0-bdcf-8f1faf972ab8",
+      "role": "conclusion"
+    }
+  ],
+  "strong_version_needed": {
+    "8a22ae75-4198-5a32-ae52-bad2848a50a5": "Reading B needs RelevantTo c x esse r' for the respect in which c is caused; the third premise gives only 'caused in some respect', so B does not suffice with these premises. A B-variant would need the stronger premise that the cause of every existential link is efficiently caused in a respect relevant to its causing x's being."
+  }
+}

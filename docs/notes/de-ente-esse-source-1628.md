@@ -33,7 +33,7 @@ materialized text of capp. 3–4 was read in full before the claims were made.
 
 Formal home: `TruthCore/Latin/Aquinas/DeEnte/EsseSource.lean`, results in
 `TruthCore/Results/Aquinas/DeEnte/EsseSource/`, spec
-`specs/de-ente-esse-source-1628.toml`, attempt `9f771edb`.
+`specs/de-ente-esse-source-1628.toml`, attempt [`9f771edb`](../../corpus/attempts/9f771edb-fb20-4426-9ae2-82de322bbe5f.json).
 
 ## The passage's order
 
@@ -262,7 +262,7 @@ disagreement was left unresolved.
 
 Formal home: `TruthCore/Latin/Aquinas/DeEnte/RootInterface.lean`, results in
 `TruthCore/Results/Aquinas/DeEnte/RootInterface/`, spec
-`specs/de-ente-root-interface-1635.toml`, attempt `f41bcb00`. All results are
+`specs/de-ente-root-interface-1635.toml`, attempt [`f41bcb00`](../../corpus/attempts/f41bcb00-b6f7-4511-9170-e8f2061807fa.json). All results are
 zero-axiom; Comparator and NanoDa checked locally.
 
 ### Sense links repaired (#1524 in part)
@@ -665,6 +665,87 @@ newly warranted candidate-domain or real-nature bridge; keep the current
 ascent/degree test as the distinct next input. Director descent/termination
 still supplies no new cognition inference, and no intellect/UI record is edited.
 
+### From one divine nature to personal distinctions (2026-11-24)
+
+The q11 theorem counts beings satisfying `IsGod`. Its domain stipulation
+leaves personal distinctions open. If the one God knows and loves himself,
+what would distinguish the Word and Love from descriptions of that same
+subject? Aquinas addresses precisely this difference. The knower and what he
+knows in self-knowledge are the same. What introduces a real relation, on
+his account, is the Word's **origin** from the knower. Likewise, loving God
+belongs to the divine essence. “Love” names the Spirit personally when it
+designates what proceeds through love. This distinction prevents the premise
+that God loves himself from already containing a second or third person.
+[Q11 domain stipulation](../../corpus/definitions/q11-divine-person-outside-domain.json)
+· [ST I q28 a4 ad 1](https://www.newadvent.org/summa/1028.htm#article4)
+· [q37 a1, body](https://www.newadvent.org/summa/1037.htm#article1)
+
+**Why these two origins?** Aquinas starts with Scripture's language of
+procession. An inner word expresses what is understood and remains in the
+knower. In divine self-understanding the act is the knower's very substance.
+Aquinas uses this to explain why a Word proceeding as the living likeness of
+its source subsists in the same nature and is called Son. Love has another
+mode of origin. It inclines the lover toward a good already understood. Its
+order after the Word concerns origin, without temporal succession. Aquinas
+restricts immanent divine operations to intellect and will. Power accounts
+for external effects, and goodness is the object of will. A single act
+comprehends all God knows and a single act all he wills, so repetition of
+either procession would add nothing to its first perfect expression.
+[ST I q27 aa1–2, especially a2 ad 2](https://www.newadvent.org/summa/1027.htm#article2)
+· [aa3–4](https://www.newadvent.org/summa/1027.htm#article3)
+· [a5, body and replies](https://www.newadvent.org/summa/1027.htm#article5)
+· [q42 aa2–3, coeternity and order](https://www.newadvent.org/summa/1042.htm#article2)
+
+**Why three persons?** Each origin has two relational directions. Aquinas
+calls the resulting relations paternity, filiation, spiration and procession.
+Paternity and filiation oppose one another. In God, a relation of origin
+subsists because its reality is the divine essence, while its reference to
+another distinguishes it from its opposite. On Aquinas's Latin account, the
+order of Word and Love puts Father and Son together on the originating side
+of spiration. This relation belongs to both and cannot constitute a fourth
+person. The Spirit is distinguished as the one proceeding. Counting three
+presupposes this ordering and the account of what constitutes a person.
+[ST I q28 aa1–4](https://www.newadvent.org/summa/1028.htm#article1)
+· [q29 a4, body](https://www.newadvent.org/summa/1029.htm#article4)
+· [q30 a2, body and ad 1](https://www.newadvent.org/summa/1030.htm#article2)
+
+Augustine gives a reason to take the analogy seriously and a way to test
+its reach. In *De Trinitate* IX.12.18 the mind's knowledge of itself can
+express what it knows adequately, as an inward word, and the mind can love
+the very good it knows. The terms of comparison come from one life. In
+XV.7.11–12 and XV.22.42 he asks who actually remembers, understands and
+loves in the image. One human person does all three. Distributing the
+faculties among the divine persons would even deprive the Father of his
+own understanding or love. The analogy thus gives content to expression
+and love while leaving a difference in personal origin to be justified.
+[Augustine, *On the Trinity* IX, ch. 12](https://www.newadvent.org/fathers/130109.htm)
+· [XV, chs. 7 and 22](https://www.newadvent.org/fathers/130115.htm)
+
+**What the argument warrants.** Aquinas says natural reason can reach God's
+unity from creatures. Their existence points to creative power, common to
+all three persons, and therefore supplies no distinction of personal
+origins. He treats the analogy of the mind as a reason for finding the
+revealed doctrine fitting. Human and divine intellect differ in their manner
+of understanding, so the analogy cannot demonstrate that real relations of
+origin obtain in God. This leaves a precise question for a philosophical
+derivation. What feature of perfect self-understanding requires a personally
+distinct expression of it? Simplicity bears on the status of a Word once an
+immanent origin is granted. Using it at that step still leaves the origin
+itself to be justified. [ST I q32 a1, body and ad 2](https://www.newadvent.org/summa/1032.htm#article1)
+
+The Greek creed professes the Son's generation before all ages and his
+consubstantiality with the Father. It says the Spirit proceeds from the
+Father and is worshipped and glorified together with Father and Son. Common
+spiration is a further feature of Aquinas's explanation. An exclusive
+claim about the source of the Spirit would also add to the Greek wording.
+The creed's text was checked in the materialized Greek transcription of
+DS 150, articles 2 and 8 in the repository division. The Aquinas readings
+above use the English Dominican translation (1920) and are recorded here as
+research notes. The two existing corpus claims bind the creed clauses only.
+[Greek witness](https://corpuscoranicum.de/en/intertexts/47)
+· [Son claim](../../corpus/claims/creed-c381-art-02.json)
+· [Spirit claim](../../corpus/claims/creed-c381-art-08.json)
+
 ## Unreceived esse and the two questions about plurality (2026-11-17)
 
 **Target and scope.** Shared nature `75b5b027-21f1-400a-8b21-775bb6d47983`,
@@ -880,8 +961,8 @@ were reconciled with main: #1635's interfaces are already delivered in
 caused-cause/per-se application is explicit. This slice changes none of those
 interfaces, the accepted foundation judgment, or the shared CCR library.
 Required context/dossier/related/brief/novelty retrieval reused the existing
-De ente attempts `9f771edb` and `f41bcb00`, CCR attempts `14fb7669` and
-`4da08bd8`, and the recent `5c898d24` assessment in
+De ente attempts `9f771edb` and `f41bcb00`, CCR attempts [`14fb7669`](../../corpus/attempts/14fb7669-48c1-4d38-b702-7ecdce2565b8.json) and
+[`4da08bd8`](../../corpus/attempts/4da08bd8-8375-40b7-b635-83012168ed6f.json), and the recent `5c898d24` assessment in
 [the foundation note](unique-feedback-explanation-311.md#current-foundation-judgment-on-the-existence-only-case-2026-11-17).
 
 Fix **one** q3a4 profile p, bearer domain, esse respect and represented essence
@@ -1605,7 +1686,7 @@ alternative at either root (premise counts unchanged); see the PR job
 summary for the batch's combined delta, which comes from the intellect
 result recorded in
 [teleology-first-mover.md](teleology-first-mover.md#same-witness-intellect-routes-and-the-will-consumer-1731-2026-11-18).
-Attempt: `a1b799fe-f75c-4e3e-994a-f4bb834f3ac7`.
+Attempt: [`a1b799fe-f75c-4e3e-994a-f4bb834f3ac7`](../../corpus/attempts/a1b799fe-f75c-4e3e-994a-f4bb834f3ac7.json).
 
 ## A GOD_4 consumer that keeps the De ente witness (#1731 slice 2, 2026-11-18)
 
@@ -1694,7 +1775,7 @@ intellect and capacity-level will. This is a two-line instantiation with no
 root consumer, so it was not registered. The intellect producers
 `b8394dbb` and `26e368d3`, and the will producer `13338e9c`, use
 God-to-maximality `4c79298d`. The modular will producer `571e36f0` does not
-use it directly, but consumes `29818edd`. Attempt: `e5a36b24-e0f4-4d9c-8cd4-cef767078a7e`.
+use it directly, but consumes `29818edd`. Attempt: [`e5a36b24-e0f4-4d9c-8cd4-cef767078a7e`](../../corpus/attempts/e5a36b24-e0f4-4d9c-8cd4-cef767078a7e.json).
 
 **2026-11-23 continuation (#1724 with #1616):** The supplier-complete
 actual-esse cone warrant, its explicit primitive stopping points, rival
@@ -1702,3 +1783,57 @@ constitutive/holistic and past-law accounts, the finite same-r two-bearer
 control, and the exact reuse boundaries are consolidated in the
 [canonical existential-supply comparison](unique-feedback-explanation-311.md#complete-existential-supply-comparison-supplier-cones-and-actual-constitution-1724-1616-2026-11-23).
 This adds no new premise discharge, naming bridge or world-ground equivalence.
+
+
+### Supplier completeness under extension of an audited order
+
+Fix one world, the actual bearers, one sense of giving esse and the direction from supplier to recipient. Suppose we have identified **every immediate supplier** of each bearer examined so far. How much of the foundation conclusion does that evidence support? Here an audit is an inventory of recipients together with the full incoming list for each. An actual bearer may appear on an incoming list before its own suppliers have been examined.
+
+For any finite audit on a roster indexed by the natural numbers, choose N above all the examined recipient indices. Compare two assignments on that *same* populated roster. In both, every x below N has precisely x+1 as supplier. In the first, N has no supplier and supplies every x above N; following the suppliers of any x below N eventually reaches N. In the second, every x, including N, receives from x+1. Both are acyclic: distance to N strictly decreases when tracing suppliers in the first; indices strictly increase in the second. Both can also have an integer priority label strictly decreasing toward the supplier (distance to N in the first, minus the index in the second). The full lists at the audited recipients coincide, including the identities of suppliers. Supplied status at every inspected recipient and strict priority on the links therefore fail to distinguish the two. N depends on the audit: this does not give one rooted model agreeing everywhere with the endless one. These are assignments to a productive-relation candidate. The second gives no independent reason for its infinite positive order to obtain.
+
+**What would discriminate?** A nonempty, genuinely finite domain independently verified to contain every actual supplier of every member, together with an independently calibrated strictly earlier priority for each such supplier, gives a sufficient test. Choose a member of least priority label in the domain. An incoming supplier would have to lie in the domain at a smaller label. The test yields a bearer with no incoming supplier *in the selected relation*. It needs no seed term, global rank into a well-order, prohibition of infinite chains elsewhere, or definition of giving by finite generation. The integer labels used below can descend forever on an infinite roster. Replacing finiteness by the mere fact that the investigation has so far examined finitely many bearers breaks the argument.
+
+A simple physical interpretation shows how the two conditions could receive independent warrant in a narrower domain. Consider a fixed finite set of bodies with a verified insulating boundary and only passive conductive contacts. For the selected instantaneous transfer of heat, contact and positive heat flux identify a supplier; independent temperature measurements and the passive-conduction law order each such edge from hotter to cooler. A hottest member receives no heat by the specified route from another body. A body there may still have stored heat, an earlier heater and an existential giver. Neither counting bodies in a bounded apparatus nor reading a thermometer supplies an exhaustive inventory or a strict priority calibration of *esse* givers. For the existential order it would advance the case to identify an independently delimited complete cone and an independently warranted priority on its actual supply links. One finite cone yields one relative root; the collection principle `45890c84` quantifies over **every** eligible collection. The [existing localized bridge](../../TruthCore/Causality/ConcreteRootAccess.lean) and its other inputs remain necessary for the stated CCR route when nonconcrete suppliers are allowed.
+
+**Comparison and judgment.** A collection of borrowers, each of whose exercised giving is only received, supplies a conditional explanation of transmission. If the question includes why that activity obtains at all, listing further actual borrowers can repeat the datum to be explained. This supports the existing modest preference for a nonborrowed source on the exhaustive, per se productive reading. The strongest rival can grant every audited transmission and offer a primitive fact that the whole productive pattern obtains, or a necessarily obtaining concrete whole whose constitution explains its members. The former explicitly stops at global actuality. The latter must justify the whole's actuality and the constitutive passage to concrete members; if that whole is itself an unborrowed bearer under the selected relation, the accounts agree on the narrow existence of a root. The source account likewise owes genuine productive availability and a route from it to these borrowers. The finite test excludes a wholly borrowed *closed finite* order with the stated priority; it leaves the general metaphysical commitment open. The [existing quantitative comparison](contractive-borrowed-power-1378.md) provides a separate test under independent bounds and loss. Neither local success licenses importing heat flow, attenuation or finiteness into existence.
+
+The following local Lean checks reproduce the audit comparison and the finite sufficient condition. They add no registered argument or axiom allowance; the classical finite-minimum proof and arithmetic automation use Mathlib's standard logical background.
+
+```lean
+import Mathlib.Data.Set.Finite.Lemmas
+import Mathlib.Tactic
+namespace SupplierAudit
+def endless (y x : Nat) := y = x + 1
+def sourced (n y x : Nat) := (x < n ∧ y = x + 1) ∨ (n < x ∧ y = n)
+theorem sameLists (n x y : Nat) (seen : x < n) :
+    sourced n y x ↔ endless y x := by unfold sourced endless; omega
+theorem endlessBorrower (x : Nat) : ∃ y, endless y x := ⟨x+1, rfl⟩
+theorem oneRoot (n x : Nat) : (∀ y, ¬ sourced n y x) ↔ x = n := by
+  constructor
+  · intro h
+    by_cases lt : x < n
+    · exact False.elim (h (x+1) (Or.inl ⟨lt,rfl⟩))
+    · by_contra ne
+      exact h n (Or.inr ⟨by omega, rfl⟩)
+  · rintro rfl y
+    unfold sourced
+    omega
+-- Integer labels permit infinite descent on the full roster.
+theorem finiteAudit {B : Type} (S : Set B) (r : B → B → Prop) (level : B → Int)
+    (finite : S.Finite) (present : S.Nonempty)
+    (closed : ∀ x ∈ S, ∀ y, r y x → y ∈ S)
+    (drop : ∀ x ∈ S, ∀ y, r y x → level y < level x) :
+    ∃ x ∈ S, ∀ y, ¬ r y x := by
+  obtain ⟨x,hx,least⟩ := S.exists_min_image level finite present
+  exact ⟨x,hx,fun y hy => (not_lt_of_ge (least y (closed x hx y hy))) (drop x hx y hy)⟩
+#print axioms sameLists
+#print axioms endlessBorrower
+#print axioms oneRoot
+#print axioms finiteAudit
+end SupplierAudit
+```
+
+## Research attempts citing this note
+
+- [Cluster reassessment of the composition, esse and necessity leaves of the prima via route](../../corpus/attempts/c7445224-d3aa-4364-b038-0853f2a95ce8.json)
+- [Personal origins in Aquinas and the Greek creed](../../corpus/attempts/be52cbf3-b2f7-4616-b4aa-ceb6ee565d5b.json)

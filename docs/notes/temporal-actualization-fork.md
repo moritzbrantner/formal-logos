@@ -182,7 +182,7 @@ reports are compared at the delivered batch; final CI owns build, binding,
 Comparator and NanoDa, including the frozen Challenges.
 
 Development evidence and rejected proof attempts are persisted in
-`ATTEMPT-TEMPORAL-ACTUALIZATION-FORK`; source findings above are not temporary logs.
+[`ATTEMPT-TEMPORAL-ACTUALIZATION-FORK`](../../corpus/attempts/temporal-actualization-fork.json); source findings above are not temporary logs.
 
 Focused development evidence: corrected combined definitions and all three
 Solutions accepted at preview `db603d3140e92c4b1ca653ab2098a0189a70653f`,
@@ -251,3 +251,7 @@ needs a defended premise that some slice first mover is unmoved at every time, o
 a reading on which the time-free vocabulary is not a clock slice. The feedback
 model shows the first does not follow from these premises. Root-route delta is
 zero; `DISAMB-UNMOVED-AT-A-TIME` keeps the two senses apart.
+
+## Research attempts citing this note
+
+- [Instantiated the exact imported primaVia at each clock time and case-split the imported direction…](../../corpus/attempts/first-way-slice-fork-use-718.json)

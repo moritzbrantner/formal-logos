@@ -1,0 +1,69 @@
+[batch]
+vocab = "TruthCore.Causality.ReflectiveComprehension"
+results = "TruthCore.Results.Causality.ReflectiveComprehension"
+
+[[statement]]
+id = "On the actual roster measured whole act agrees with represented esse"
+lean = "MeasuredActAgreesWithEsse"
+paraphrase = "Open analyst calibration. In a single state and preorder, for every bearer actual at the distinguished respect esse, its represented degree at esse and its measured degree of whole act each bound the other. It leaves comparisons between distinct bearers open. The identification includes the intellectual perfections actually present in this state. Equivalence need not be identity of scale elements."
+definitions = ["5b196f1c-210d-450e-b3f1-33e214f9f45d", "8323604a-2e7a-554c-9b32-d82e5201271d", "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168", "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"]
+
+[[statement]]
+id = "The selected source comprehends each actual participant to its own knowability"
+lean = "ComprehendsParticipants"
+paraphrase = "Open analyst premise. Each actual q.44 participant x is known by the same selected s at a witnessed degree reaching x's knowability in itself (COMPREHEND_2). The source need not know itself for this premise, and x may lack cognition. Actuality and the source role of s are supplied separately when this premise is applied."
+definitions = ["1218cc1e-e6ef-4f27-9036-d6e28cae67ad", "5b196f1c-210d-450e-b3f1-33e214f9f45d", "14d30c53-51c2-502d-b009-247dac0421e0", "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168", "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"]
+disambiguations = ["e151d506-c074-4e5d-a0f9-e9c51f1a73d7"]
+
+[[statement]]
+id = "Measured comprehension bounds the object's whole act by the knower's"
+lean = "ComprehensionOrdersAct"
+paraphrase = "For every s and x, if s knows x at some degree reaching x's knowability in itself, the measured act of x is at most that of s. Mutual measured comprehension therefore gives inequalities in both directions. No cognitive or causal relation is asserted to obtain."
+definitions = ["1218cc1e-e6ef-4f27-9036-d6e28cae67ad", "5b196f1c-210d-450e-b3f1-33e214f9f45d"]
+disambiguations = ["e151d506-c074-4e5d-a0f9-e9c51f1a73d7"]
+
+[[argument]]
+id = "Measured comprehension compares the two bearers through the witnessed knowing"
+theorem = "ordersAct"
+premises = ["7921f9c8-81f4-4af5-b945-d98787d12f42", "7db53cde-911c-48ec-ab4f-054a00288148"]
+conclusion = "Measured comprehension bounds the object's whole act by the knower's"
+rule = "Compose the lower bound on knowability, its attainment and the knower's act bound"
+meaning = "Take the actual knowing that witnesses COMPREHEND_2. Its grade lies between the object's knowability and the knower's own act. Transitivity with the object's act-to-knowability comparison gives the weak order of acts."
+
+[[argument]]
+id = "Comprehension of actual participants bounds their esse by the selected giver's"
+theorem = "participantBound"
+premises = ["eeb89ffe-5b61-4572-8b35-87adf541bcab", "The selected source comprehends each actual participant to its own knowability", "Measured comprehension bounds the object's whole act by the knower's", "On the actual roster measured whole act agrees with represented esse"]
+conclusion = "aba6f4e1-bbf1-4aaa-ac1c-dead4efbef09"
+rule = "Transfer a measured comparison to the fixed esse scale on the actual roster"
+meaning = "The populated sole-giver premise supplies actuality of the designated s. Each actual participant is comprehended by that very s. Transfer the resulting weak order of acts through calibration on these two actual bearers. The cognitive comparison uses neither total-cause adequacy nor a ranking in other perfections."
+
+[[statement]]
+id = "A self-comprehending recipient sets a threshold for strict comparison at esse"
+lean = "ReflectiveComparison"
+paraphrase = "On one actual recipient x, if x knows itself at a degree a reaching its knowability, both its own measured act and its knowability are equivalent to a in the preorder. If an actual s knows any y at b strictly above that very a, x has strictly lower represented degree of esse than s. A selected giver may instantiate s. The statement asserts no such knowing, no strict difference for all recipients and no primitive comparative."
+definitions = ["1218cc1e-e6ef-4f27-9036-d6e28cae67ad", "5b196f1c-210d-450e-b3f1-33e214f9f45d", "8323604a-2e7a-554c-9b32-d82e5201271d", "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168", "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"]
+disambiguations = ["e151d506-c074-4e5d-a0f9-e9c51f1a73d7"]
+
+[[argument]]
+id = "Self-comprehension calibrates whole act for comparison with a higher knowing"
+theorem = "reflectiveComparison"
+premises = ["7921f9c8-81f4-4af5-b945-d98787d12f42", "7db53cde-911c-48ec-ab4f-054a00288148", "On the actual roster measured whole act agrees with represented esse"]
+conclusion = "A self-comprehending recipient sets a threshold for strict comparison at esse"
+rule = "Close the self-comprehension inequalities and lift a strict intervening grade"
+meaning = "The recipient's act is below or equal to its knowability, which is below or equal to its witnessed self-knowing, which is bounded by that very recipient's act. A strictly higher knowing by s is bounded by s's act. Same-state calibration gives the strict comparison in represented esse."
+
+[[statement]]
+id = "True cognition of an effect and asymmetric comprehension test different degree comparisons"
+lean = "Control.Controls"
+paraphrase = "Closed two-bearer tests. At the selected world the source causes the actual recipient and apprehends grounded true effect-content. The same uptake admits higher source self-knowing with tied whole acts, or a lower whole act in the source, while it knows the effect below comprehension. One-way full comprehension can also coexist with tied whole acts. A populated sole-giver interpretation separately realizes both cognitive laws, full source comprehension of its participant, calibration, recipient self-comprehension and a strictly higher source self-knowing."
+definitions = ["1218cc1e-e6ef-4f27-9036-d6e28cae67ad", "5b196f1c-210d-450e-b3f1-33e214f9f45d", "14d30c53-51c2-502d-b009-247dac0421e0", "8323604a-2e7a-554c-9b32-d82e5201271d", "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168", "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"]
+disambiguations = ["e151d506-c074-4e5d-a0f9-e9c51f1a73d7"]
+
+[[argument]]
+id = "Test comprehension and reflective knowing on a common populated source and recipient"
+theorem = "controls"
+premises = []
+conclusion = "True cognition of an effect and asymmetric comprehension test different degree comparisons"
+rule = "Evaluate the measured knowings and content-indexed uptake on a two-degree scale"
+meaning = "Finite interpretations distinguish knowing some true content from reaching the object's knowability, and a higher particular knowing from a higher whole act. The positive interpretation realizes a strict pair without requiring the source's knowing of the recipient to exceed that recipient's knowability."

@@ -6,7 +6,7 @@ This bounded continuation starts at integrated #730 main
 is displayed on the eleven affected result pages. The existing
 [attribute audit](classical-attributes-all-migration.md) supplies unchanged
 attribute, interpretation and countermodel evidence. The one current handoff
-remains in [proposition-structure.md](../proposition-structure.md).
+remains in [proposition-structure.md](../proposition-structure.md). [Original PR #731](https://github.com/moritzbrantner/formal-logos/pull/731)
 
 ## Brief and inventory before editing
 
@@ -418,7 +418,7 @@ both from the fuller naming `1ec205ed` plus transfer and remoteness premises.
 They sit in this naming note because both leaves concern how the name used on
 the route is tied to the maximum in being; the prima via naming bridge
 `a594d8c4` is assessed elsewhere (see below). Baseline `df4909cb0`. Attempt
-`8477d51d-6439-4c4f-9876-fba83a8f439b` carries the compact assessment.
+[`8477d51d-6439-4c4f-9876-fba83a8f439b`](../../corpus/attempts/8477d51d-6439-4c4f-9876-fba83a8f439b.json) carries the compact assessment.
 
 ### Fixed meanings
 
@@ -687,3 +687,8 @@ dropped *remotum* objection live.
 
 *Delta.* No theorem, Challenge, claim, statement, definition, relation or
 formal status changes. Premise change: none.
+
+## Research attempts citing this note
+
+- [Bounded preservation/audit of catholicism stage2 classical attributes at 3cd9545a](../../corpus/attempts/classical-attributes-structure-migration.json)
+- [Reused the inspected prior GodExists/root/premise dossiers, refreshed related GodExists search and…](../../corpus/attempts/direct-esse-root-god-existence-20261031.json)

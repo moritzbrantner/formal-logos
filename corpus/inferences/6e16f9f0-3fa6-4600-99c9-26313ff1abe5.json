@@ -1,0 +1,14 @@
+{
+  "id": "6e16f9f0-3fa6-4600-99c9-26313ff1abe5",
+  "label": "Derive an actual root from one-way throughput and grounded export coverage (inference)",
+  "input_statement_ids": [
+    "34f9ad6f-fd45-44a6-951c-4ae54f3e3c62",
+    "9968af58-0c48-435e-abc0-db9c500003d4",
+    "00719dce-f127-43dd-b909-0333c9a18ff2"
+  ],
+  "output_statement_id": "dc397705-d727-419e-92f9-65d44e1ff15d",
+  "rule": "Apply the ledger obstruction to the selected actual roster",
+  "meaning": "Use the net exporter on the ancestry of the transfer. An actual ground for this same exporter would violate its strict excess by the supplied coverage inequality. Every carrier in the ledger is actual and concrete by its type. The root is relative to this grounding relation. The accounting-to-grounding bridge is open.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

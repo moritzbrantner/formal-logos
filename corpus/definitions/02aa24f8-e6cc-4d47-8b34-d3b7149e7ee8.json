@@ -1,0 +1,9 @@
+{
+ "id": "02aa24f8-e6cc-4d47-8b34-d3b7149e7ee8",
+ "label": "NECESSITATE_5, fixed toward one effect: y gives x being at w and wherever accessible y exists",
+ "term": "fixed toward one effect (FixedTowardAt)",
+ "definition": "FixedTowardAt F w y x: y gives x being at w (GivesTo, DEF 62dfa893-b633-4513-9790-8f9a0a3087e0) and at every world accessible from w where y exists. The per-effect, accessible-world form of fixed giving: NECESSITATE_2 (FixedGiver, DEF 7bc1d667-fda2-4744-b055-9ba6cbe7f648) fixes all of a giver's effects across all worlds where it exists; this fixes one effect from w.",
+ "basis": "stipulative",
+ "lean_declaration": "TruthCore.Causality.NarDerivation.FixedTowardAt",
+ "note": "Analyst definition, attribution deferred (docs/notes/nar-derivation.md). Example: on Avicenna's account (navigation only), the First giving being to the first intelligence in every world. Non-example: a craftsman's building of one house; a creator who could have refrained from creating x. A giver can be fixed toward one effect and two-way toward another (TwoWayTowardAt, DEF 8c945061-acb2-47e1-9865-d10f8f925757); the mixed-mode model of TruthCore.Causality.NarDerivation.Model shows this with one power and an invariant set-up. Distinct from NECESSITATE_3 (set-up necessitation, DEF ca00e246-197c-4107-97a7-ca51448b0247), which concerns worlds with the same set-up, and from NECESSITATE_1 (strict efficacy of one act token)."
+}

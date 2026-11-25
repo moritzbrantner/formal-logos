@@ -4,7 +4,7 @@ Issue #223 implements `QSET-RESURRECTION-PILOT` with the existing proposition,
 argument and `AnswerMap` model. The six systems face the same fifteen
 questions. A system can leave a question unexplained; the name of a
 resurrection hypothesis supplies no metaphysics automatically. No modern
-proponent is attributed one of these bundles.
+proponent is attributed one of these bundles. [Original PR #254](https://github.com/moritzbrantner/formal-logos/pull/254)
 
 The implementation is in `TruthCore/History/Resurrection.lean`,
 `TruthCore/Comparison/Resurrection.lean` and

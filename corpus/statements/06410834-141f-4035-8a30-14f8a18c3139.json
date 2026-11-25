@@ -1,0 +1,16 @@
+{
+  "id": "06410834-141f-4035-8a30-14f8a18c3139",
+  "label": "The selected source comprehends each actual participant to its own knowability",
+  "paraphrase": "Open analyst premise. Each actual q.44 participant x is known by the same selected s at a witnessed degree reaching x's knowability in itself (COMPREHEND_2). The source need not know itself for this premise, and x may lack cognition. Actuality and the source role of s are supplied separately when this premise is applied.",
+  "lean_declaration": "TruthCore.Causality.ReflectiveComprehension.ComprehendsParticipants",
+  "definition_ids": [
+    "1218cc1e-e6ef-4f27-9036-d6e28cae67ad",
+    "5b196f1c-210d-450e-b3f1-33e214f9f45d",
+    "14d30c53-51c2-502d-b009-247dac0421e0",
+    "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"
+  ],
+  "disambiguation_ids": [
+    "e151d506-c074-4e5d-a0f9-e9c51f1a73d7"
+  ]
+}

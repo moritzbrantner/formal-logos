@@ -1,0 +1,26 @@
+{
+  "id": "b3806678-bfa2-4858-88f0-4adca14fe33c",
+  "label": "Every giving by a one-power HAS_INTELLECT_1 being is by a rational power",
+  "premise_statement_ids": [
+    "090be689-b77f-51a1-9d5d-caf339169e4b",
+    "71fc097b-4039-4812-a498-2ad70fe08b98",
+    "495a40ad-9bd4-4d1f-bf37-e89587432e12"
+  ],
+  "conclusion_statement_id": "5c1aba17-d224-49fd-a31c-728a54ac63a9",
+  "inference_ids": [
+    "acc3d093-196e-4f23-a583-ef4c335045eb"
+  ],
+  "meaning": "An intellectual y has will (will follows intellect), hence some rational power q; each giving of y exercises some power p of y; with one power, p = q, so the giving exercises a rational power. Constructive.",
+  "definition_ids": [
+    "582f44c3-7778-4806-b385-e1eff852ac5e",
+    "62dfa893-b633-4513-9790-8f9a0a3087e0",
+    "88bc0655-9dd0-5879-ba1b-3fca9f86c1f4",
+    "7c64b499-6dba-5e03-bdf3-5acea95d8836",
+    "b8061228-9131-40f2-83bd-cb7d719bd0a0",
+    "fdeb7757-10db-4fa7-91a4-6c15ee5100d2"
+  ],
+  "disambiguation_ids": [
+    "941efd70-d56f-53f9-b5f9-8acd36711a54",
+    "1d765cae-eca9-558f-9542-8291df359058"
+  ]
+}

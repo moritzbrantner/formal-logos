@@ -1,0 +1,9 @@
+{
+ "id": "e0179074-ab4e-4078-8ecb-a7ae9696fd11",
+ "label": "CHANCE_1, incidental: the giving varies along with some other being's role as a condition",
+ "term": "chance, incidental sense (IncidentalVariationAt)",
+ "definition": "IncidentalVariationAt F A w y: y exists at w, and at some world v accessible from w where y exists, y's giving differs (not GivingSameIn F y w v) and some being z distinct from y is an external condition of y's giving at one of w, v and not at the other.",
+ "basis": "stipulative",
+ "lean_declaration": "TruthCore.Causality.WillVersusChance.IncidentalVariationAt",
+ "note": "Analyst definition, attribution deferred (docs/notes/will-versus-chance.md). A surrogate for Aristotle's chance (Physics II.5-6, navigation): it types only a necessary condition of incidental causation (a varying concurring cause); 'for the sake of something' and 'not always or for the most part' are not typed. Example: a debt repaid because the creditor happened to go to the market. Excluded at an invariant set-up (Model.Laws 1). Aquinas's chance is of this per accidens kind."
+}

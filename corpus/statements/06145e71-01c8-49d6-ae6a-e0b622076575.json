@@ -1,0 +1,15 @@
+{
+  "id": "06145e71-01c8-49d6-ae6a-e0b622076575",
+  "label": "Every actual root of the selected grounding relation has one power",
+  "paraphrase": "OPEN (analyst formulation, unattributed): every actual root of the selected grounding relation G at w has one power (OnePower: any two of its active powers are the same). The power-level aspect of simplicity at the root; the root counterpart of #1941's holder premise 9856239a.",
+  "lean_declaration": "TruthCore.Causality.NarDerivation.ActualRootsOnePower",
+  "definition_ids": [
+    "fdeb7757-10db-4fa7-91a4-6c15ee5100d2",
+    "c57e2682-08e6-527e-950f-0fa0a7ff11ef",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87"
+  ],
+  "disambiguation_ids": [
+    "e5417243-d6f3-4776-9694-40d85bb34ff4",
+    "623ddbf6-9683-5361-bae4-e348a00ec680"
+  ]
+}

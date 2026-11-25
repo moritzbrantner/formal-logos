@@ -9,7 +9,7 @@ any grounding principle, the metaphysical possibility of any model, or any premi
 root route. No source claim is added. The grounding literature listed on #485 (Merlo,
 Trogdon, Leuenberger, Richardson) and the Pruss and van Inwagen material on the Big
 Conjunctive Contingent Fact were not read for this work, so nothing below is attributed
-to them.
+to them. [Research record](../../corpus/attempts/disjunction-ground-485.json)
 
 ## The question
 
@@ -350,3 +350,8 @@ route 31 before/after and no route changes. The incompatible core constrains
 joint acceptance of E/T/I; it selects no preferred rejection. Abstract, absence,
 totality and reified-proposition replies remain live against concrete emptiness
 without ConcreteMaker; the external reply additionally rejects local immanence.
+
+## Research attempts citing this note
+
+- [Dedicated bearer MakesTrue semantics retains PSR arena literally and distinguishes…](../../corpus/attempts/truthmaker-theories-941.json)
+- [Reused exact negativeMap pointwise proof and already-certified negativeArena omission controls…](../../corpus/attempts/empty-truthmaker-554.json)

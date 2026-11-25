@@ -12,7 +12,7 @@ while its prose also adds a divine re-creation story. New consequences and forks
 therefore use a precise analyst `Countertuple` sibling. A one-way projection
 records only the old formal envelope; it licenses no reverse derivation of the
 full historical view. The new exact countertuple is an unrefuted alternative,
-so refuting that stronger story alone cannot exhaust opposition.
+so refuting that stronger story alone cannot exhaust opposition. [Original PR #1153](https://github.com/moritzbrantner/formal-logos/pull/1153)
 
 The prior successful Megarian capacity core and the refutation from actual
 motion, incomplete actuality and capacity remain unchanged. Their old attempt
@@ -82,3 +82,7 @@ the guarded actual countertuple, its contradiction with the universal and the
 finite boundaries establish the stated conditional consequences. The actual
 computed root-frontier comparison belongs in the PR. This is a connection and
 semantic endpoint repair, not an independent premise discharge.
+
+## Research attempts citing this note
+
+- [Incompatibility clean-up pass, first slice](../../corpus/attempts/megarian-capacity-core-cleanup.json)

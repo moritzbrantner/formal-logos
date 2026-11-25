@@ -1,5 +1,7 @@
 # Exact robust-truth rival and the moral-domain boundary
 
+[Research record](../../corpus/attempts/metaethics-truth-apt-rival-boundary.json)
+
 The source statements remain unchanged:
 
 - Quasi-realist reading: every moral content is minimally truth-apt and lacks

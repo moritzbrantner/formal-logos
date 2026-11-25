@@ -1,0 +1,12 @@
+{
+  "id": "6cb6aeb6-13ec-4884-ad39-fef3ac2127ea",
+  "label": "Lift a positive transfer path from a net exporter into grounded exercise",
+  "premise_statement_ids": [
+    "34f9ad6f-fd45-44a6-951c-4ae54f3e3c62"
+  ],
+  "conclusion_statement_id": "b2a6542d-f6e4-407f-9a6a-d98f28cf9066",
+  "inference_ids": [
+    "fdd9e8f8-89a8-4d57-abdf-45fa5f56eb5e"
+  ],
+  "meaning": "The no-return hypothesis selects the net-export witness. The intrinsic-input bridge starts the inductive construction and each positive entry transports it along an actual transmission."
+}

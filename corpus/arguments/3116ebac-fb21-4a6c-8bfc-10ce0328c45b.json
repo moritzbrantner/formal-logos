@@ -1,0 +1,10 @@
+{
+  "id": "3116ebac-fb21-4a6c-8bfc-10ce0328c45b",
+  "label": "Separate one-to-many ordinal preservation from a relay's additive balance",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "3188ec6a-e98c-45e7-86df-4ee2ef0995cf",
+  "inference_ids": [
+    "bac963f3-2e98-433e-9a3b-6f8f9e8ee0f2"
+  ],
+  "meaning": "The relay receives a higher-grade instance and gives two lower-grade ones. Only the numerical distance between the grades changes. The witness uses the existing realizedLevels definition, without claiming the assignment realizes every premise about an actual sole essential giver."
+}

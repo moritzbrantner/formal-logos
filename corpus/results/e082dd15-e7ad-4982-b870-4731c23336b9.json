@@ -1,0 +1,11 @@
+{
+  "id": "e082dd15-e7ad-4982-b870-4731c23336b9",
+  "label": "Every SERIES_OF_CAUSES_4 link is a SERIES_OF_CAUSES_3 link, from the per se ordering",
+  "argument_id": "4a05a3dd-ab75-478d-9a0e-5db94629ffc5",
+  "challenge_module": "TruthCore.Results.Causality.DependenceOrderSenses.Challenge",
+  "solution_module": "TruthCore.Results.Causality.DependenceOrderSenses.Solution",
+  "theorem": "TruthCore.Results.Causality.DependenceOrderSenses.perSeEsseLinkIsPerSeCauseLinkOfOrdering",
+  "comparator_config": "results/e082dd15-e7ad-4982-b870-4731c23336b9/comparator.json",
+  "status": "solution-present",
+  "description": "Non-transcription conditional derivation, a support option for the sense bridge. If an efficient cause other than its effect that is itself efficiently caused causes only as caused (8a22ae75, the secunda via's per se ordering premise on its strong reading A), nothing is the efficient cause of itself (8b2561cd), and the cause of every SERIES_OF_CAUSES_4 link is itself efficiently caused here and now in some respect (the new bridge, which closes the mode gap between AsCaused, caused in an unspecified mode, and DEF 4a101a4c's efficiently caused middle cause), then every SERIES_OF_CAUSES_4 link is a SERIES_OF_CAUSES_3 link. 8a22ae75 is a strong premise: on reading A any efficient cause caused in any respect is a middle cause; the weaker relevant-respect reading is not used. inclusionSupportControls give, for each input, a Bool interpretation in which the other two hold and the conclusion fails (a two-cycle of efficient causing with no per se link; an efficient self-loop; one existential link whose cause nothing causes), and a nonvacuous one with an existential link."
+}

@@ -1,0 +1,11 @@
+{
+  "id": "75974d26-9483-4e1b-81a9-693a90ee9d0f",
+  "label": "Each GOD_4 is a finite grounding ancestor of every actual concretum at this world",
+  "paraphrase": "Open application of the causal interpretation of GOD_4. For every g satisfying the supplied God predicate and every actual concretum x at one world, a finite path of actual concrete grounds goes from g to x. The empty path is allowed for g itself. Each nonfinal node actually exists and is concrete because it supplies the next edge. The application neither posits a God nor requires one direct edge to each distinct recipient.",
+  "lean_declaration": "TruthCore.Causality.ActualAncestralSource.GodReachesActualConcreta",
+  "definition_ids": [
+    "88f9f6e8-997b-5f7d-afa1-c501954c3807",
+    "a1b2e330-388f-4120-bc5c-969642317792",
+    "822c9912-2313-584b-b2b7-77031da20107"
+  ]
+}

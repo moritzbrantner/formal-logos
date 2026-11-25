@@ -1,0 +1,11 @@
+{
+  "id": "8905b511-f4c7-414f-a4a2-fa531e71995f",
+  "label": "Absolute identification by act of being rules out the candidate triad",
+  "argument_id": "e8de7e3b-6d45-492b-b400-ef5024068e92",
+  "challenge_module": "TruthCore.Results.Case.Catholicism.ImmanentOrigins.Challenge",
+  "solution_module": "TruthCore.Results.Case.Catholicism.ImmanentOrigins.Solution",
+  "theorem": "TruthCore.Results.Case.Catholicism.ImmanentOrigins.collapse",
+  "comparator_config": "results/8905b511-f4c7-414f-a4a2-fa531e71995f/comparator.json",
+  "status": "solution-present",
+  "description": "Three bearers cannot each be numerically the same selected act if that identification is injective across persons. Equality of a common token under a non-injective map models the selected predication and still requires metaphysical interpretation."
+}

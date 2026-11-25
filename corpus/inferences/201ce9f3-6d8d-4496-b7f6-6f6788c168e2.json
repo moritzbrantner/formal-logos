@@ -1,0 +1,12 @@
+{
+  "id": "201ce9f3-6d8d-4496-b7f6-6f6788c168e2",
+  "label": "Characterize unrestricted ledger fitting by constructing a single transfer from a root (inference)",
+  "input_statement_ids": [
+    "34f9ad6f-fd45-44a6-951c-4ae54f3e3c62"
+  ],
+  "output_statement_id": "b6f48876-e5d7-44e8-ab51-cad440ceff59",
+  "rule": "Apply the cut and construct a one-edge converse witness",
+  "meaning": "The endpoints of a return-free transfer differ, so one differs from the root supplied by the cut. Conversely assign one unit only from the given root to the distinct actual bearer. Every grounded bearer exports zero; the single edge has no return.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

@@ -1,6 +1,7 @@
 module
 
 public import TruthCore.Causality.CogitoNecessaryConcrete
+public import TruthCore.Logic.RootDescent
 
 /-!
 # Well-founded actual ancestry: necessary concretum or nonnecessary root (#553)
@@ -44,6 +45,7 @@ open TruthCore.Causality.CogitoNecessaryConcrete
 open TruthCore.German.Kant.CosmologicalInference (Ontic NecessaryAt ContingentAt)
 open TruthCore.Logic (ExcludedMiddle)
 open TruthCore.Logic.CogitoConcrete (InhabitedConcreteAt)
+open TruthCore.Logic.RootDescent
 
 variable {W B : Type}
 
@@ -89,19 +91,24 @@ def withCauses (m : Profile W B) : Profile W B :=
 
 /-! ## Descent -/
 
+/-- `ActualGroundingWF` in the generic form of `TruthCore.Logic.RootDescent`:
+well-foundedness of the restriction to actual concreta is accessibility of
+every actual concretum under `ActualConcreteGround`, whose grounds are actual
+concreta. A restatement, not a new premise. -/
+theorem actualGroundingWF_iff_acc (m : Profile W B) (w : W) :
+    ActualGroundingWF m w ↔
+      ∀ x, ActualConcrete m w x → Acc (ActualConcreteGround m w) x :=
+  ⟨fun h x hx => acc_of_subtype (fun _ _ _ hy => ⟨⟨hy.1, hy.2.1⟩, hy.2.2⟩) ⟨x, hx⟩ (h.apply _),
+    fun h => ⟨fun a => acc_of_map Subtype.val (fun y _ hyx => ⟨y.2.1, y.2.2, hyx⟩) (h a.1 a.2)⟩⟩
+
 /-- An inhabited world with well-founded actual grounding has an actual root. -/
 theorem actualRootExists (m : Profile W B) (w : W) (hEM : ExcludedMiddle)
     (hPop : InhabitedConcreteAt m.ontic m.concrete w) (hWF : ActualGroundingWF m w) :
     ∃ x, ActualRoot m w x := by
   obtain ⟨x, hc, he⟩ := hPop
-  have walk : ∀ a : {x // ActualConcrete m w x}, ∃ x, ActualRoot m w x := by
-    intro a
-    induction a using hWF.induction with
-    | _ a ih =>
-      rcases hEM (∃ y, ActualConcreteGround m w y a.1) with ⟨y, hy⟩ | hnone
-      · exact ih ⟨y, hy.1, hy.2.1⟩ hy.2.2
-      · exact ⟨a.1, a.2, fun y hy => hnone ⟨y, hy⟩⟩
-  exact walk ⟨x, hc, he⟩
+  obtain ⟨n, hn, hnone⟩ := acc_exists_minimal (P := ActualConcrete m w) (fun _ _ => hEM _)
+    ((actualGroundingWF_iff_acc m w).mp hWF x ⟨hc, he⟩) ⟨hc, he⟩
+  exact ⟨n, hn, fun y hy => hnone y hy ⟨hy.1, hy.2.1⟩⟩
 
 /-- Constructive core: no hypothesis of excluded middle. Under inhabitedness and
 well-founded actual grounding, denying both a necessary concretum and a
@@ -112,13 +119,11 @@ theorem notNotNonnecessaryRoot (m : Profile W B) (w : W)
     ¬¬ NonnecessaryRootAt m w := by
   intro hNone
   obtain ⟨x, hc, he⟩ := hPop
-  have walk : ∀ a : {x // ActualConcrete m w x}, False := by
-    intro a
-    induction a using hWF.induction with
-    | _ a ih =>
-      refine hNone ⟨a.1, ⟨a.2, fun y hy => ih ⟨y, hy.1, hy.2.1⟩ hy.2.2⟩, ?_⟩
-      exact fun hn => hNoNec ⟨a.1, a.2.1, a.2.2, hn⟩
-  exact walk ⟨x, hc, he⟩
+  refine acc_notNot_exists_unmarked (P := ActualConcrete m w)
+    (Mark := fun y => ∃ z, ActualConcreteGround m w z y) (fun _ _ ⟨z, hz⟩ => ⟨z, hz, hz.1, hz.2.1⟩)
+    ((actualGroundingWF_iff_acc m w).mp hWF x ⟨hc, he⟩) ⟨hc, he⟩ ?_
+  rintro ⟨n, hn, hnone⟩
+  exact hNone ⟨n, ⟨hn, fun y hy => hnone ⟨y, hy⟩⟩, fun hnec => hNoNec ⟨n, hn.1, hn.2, hnec⟩⟩
 
 /-- The coverage theorem. Compare `contingentBruteRootOfNoNecessary`, which has
 whole-carrier well-foundedness and a contingent root. -/

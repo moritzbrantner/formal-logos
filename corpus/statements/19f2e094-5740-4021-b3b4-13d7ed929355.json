@@ -1,0 +1,16 @@
+{
+  "id": "19f2e094-5740-4021-b3b4-13d7ed929355",
+  "label": "Every actual root gives in a uniform mode: two-way toward one effect, two-way toward each",
+  "paraphrase": "OPEN (analyst formulation, unattributed): every actual root of the selected grounding relation G at w gives in a uniform mode (UniformGivingModeAt): if it is two-way toward some effect at w (gives it being at w and withholds it at an accessible world where the root exists), it is two-way toward every being it gives being at w. Excludes a mixed-mode root, fixed toward one effect and two-way toward another. Not entailed by one power, an invariant set-up and willed exercise (controls, mixed-mode root).",
+  "lean_declaration": "TruthCore.Causality.NarDerivation.ActualRootsGiveUniformly",
+  "definition_ids": [
+    "1c4078eb-5afd-4684-b67c-b3b4d44c064a",
+    "8c945061-acb2-47e1-9865-d10f8f925757",
+    "c57e2682-08e6-527e-950f-0fa0a7ff11ef",
+    "62dfa893-b633-4513-9790-8f9a0a3087e0",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87"
+  ],
+  "disambiguation_ids": [
+    "623ddbf6-9683-5361-bae4-e348a00ec680"
+  ]
+}

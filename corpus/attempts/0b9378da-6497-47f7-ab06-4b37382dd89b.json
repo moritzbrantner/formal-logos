@@ -14,7 +14,8 @@
     "2f6d414c-c6f0-5960-809d-5a98f9858d27",
     "b5453aa4-3390-5878-9836-91ff6c8c0492",
     "b39f5282-fa9a-5433-a9ef-eebcac297295",
-    "b9c3f090-3bf2-5c96-ae3e-c18a1d63cd3b"
+    "b9c3f090-3bf2-5c96-ae3e-c18a1d63cd3b",
+    "PR-1592"
   ],
   "blocker": "A corpus attribution to the newly read De principiis naturae passage would need a materialized witness under existing source rules; its actual live reading and exact locators are already preserved in the note. A stricter due-now privation sense would require a CanBe-to-due-now bridge before replacing this target. Formalizing the proposed apt-subject route also requires coordinated vocabulary and the unavailable verification setup."
 }

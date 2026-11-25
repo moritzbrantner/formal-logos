@@ -14,7 +14,8 @@
     "4a78e02d-4681-5eaa-b88e-6eb4ba1cc744",
     "1fd6148b-e36c-509b-bf8e-ba60f0179242",
     "4d0385c3-e6d5-5a39-bb11-bb7571860ea8",
-    "545b035a-1fdb-5887-a91a-7ae32371881c"
+    "545b035a-1fdb-5887-a91a-7ae32371881c",
+    "PR-1104"
   ],
   "blocker": "CI stability of the English pages is checked only by this PR's runs. If a later verification reports byte drift, the witness check fails and must be repaired (re-pin after a fidelity re-read) or the affected claims and supports withdrawn; the frontier does not downgrade the premise by itself. A Latin witness remains the upgrade."
 }

@@ -1,0 +1,9 @@
+{
+ "id": "69d8aef9-b0d4-461d-9a48-ef0bb4fbd56f",
+ "label": "Same set-up of a giving: the giver's intrinsic states and external conditions agree in two worlds",
+ "term": "set-up of a giving (SetupSameIn)",
+ "definition": "SetupSameIn A y u v: for every state s, y has s in u iff in v (StateAt, intrinsic non-relational states: qualities, dispositions, propensity values, mental states), and for every being z, z is an external condition of y's giving in u iff in v (ConditionOf: patients, occasions, concurring causes). StateAt and ConditionOf are primitives of the agency overlay.",
+ "basis": "stipulative",
+ "lean_declaration": "TruthCore.Causality.WillVersusChance.SetupSameIn",
+ "note": "Analyst definition, attribution deferred (docs/notes/will-versus-chance.md). Examples: a coin with the same bias and the same initial conditions in two tosses; an agent with the same intention and circumstances. Non-examples of an intrinsic state: a relation to what y gives being (an extrinsic denomination, e.g. 'creator of c'). Distinct from GivingSameIn (DEF 62dfa893 basis), which compares outputs, not the giver. Structure: an equivalence relation on worlds for fixed y (reflexive, symmetric, transitive by the iff clauses)."
+}

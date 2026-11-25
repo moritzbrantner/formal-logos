@@ -4,7 +4,7 @@ This note persists the conditional investigation and its proof packaging.
 The shared population-closure vocabulary in PR #614 is now merged. Baseline: `origin/main`
 `0f1059ba`; required API: #614 head
 `a4e46117af7c9734ad16fa0002905e1ed83d4e09`, `PopulationClosure.lean`.
-The branch owns no copy of that API. No source attribution is claimed.
+The branch owns no copy of that API. No source attribution is claimed. [Research record](../../corpus/attempts/finite-population-cover-533.json)
 
 `TruthCore/Results/Case/Catholicism/StageOne/FinitePopulationCover/Proof.lean`
 contains finite-list omission induction, full-cover joint absence, constructive
@@ -183,3 +183,7 @@ introduced. Closedness/applicability and terminal-outcome commitments remain
 OPEN. Intended root-premise discharge: zero; the actual computed frontier delta
 is reported in the PR/CI. Shared convention sourceRevision:
 `625cb04ca568aebc8d45c90033e107a05e9bd2a0`.
+
+## Research attempts citing this note
+
+- [Reuse the exact existing Nat-tail presence and certified tail controls; prove genuine Mathlib…](../../corpus/attempts/limit-admission-486.json)

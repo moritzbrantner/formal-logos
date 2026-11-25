@@ -4,6 +4,7 @@ module
 public import TruthCore.Results.Logic.AdaptivePrediction.Solution
 public import TruthCore.Results.Logic.AssertionRetorsion.Solution
 public import TruthCore.Results.Logic.AtomismIndependence.Solution
+public import TruthCore.Results.Logic.BeliefReasonWitness.Solution
 public import TruthCore.Results.Logic.CaseNonContradiction.Solution
 public import TruthCore.Results.Logic.CertifiedCorrection.Solution
 public import TruthCore.Results.Logic.CogitoConcrete.Solution
@@ -25,6 +26,7 @@ public import TruthCore.Results.Logic.EpistemicAccuracy.Solution
 public import TruthCore.Results.Logic.EpistemicAccuracy.Statewise.Solution
 public import TruthCore.Results.Logic.EpistemicAuthority.Solution
 public import TruthCore.Results.Logic.EpistemicNihilismRetorsion.Solution
+public import TruthCore.Results.Logic.EpistemicReasonBearer.Solution
 public import TruthCore.Results.Logic.EpistemicReasonDefinitions.Boundary.Solution
 public import TruthCore.Results.Logic.EpistemicReasonDefinitions.DefinitionFork.Solution
 public import TruthCore.Results.Logic.EpistemicReasonDefinitions.IndependentFromThin.Solution
@@ -37,6 +39,7 @@ public import TruthCore.Results.Logic.ExcludedMiddleAssertionBoundary.ExactPolic
 public import TruthCore.Results.Logic.ExcludedMiddleIffDne.Solution
 public import TruthCore.Results.Logic.ExcludedMiddleIrrefutable.Solution
 public import TruthCore.Results.Logic.ExcludedMiddleNotDeniable.Solution
+public import TruthCore.Results.Logic.ExperiencedThoughtBearer.Solution
 public import TruthCore.Results.Logic.FallibleCorrection.Solution
 public import TruthCore.Results.Logic.FiniteValidationLogic.Solution
 public import TruthCore.Results.Logic.FitchKnowability.Solution
