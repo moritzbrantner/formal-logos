@@ -24,9 +24,9 @@ const NOTE: &str = "docs/notes/mover-act.md";
 struct Scratch(PathBuf);
 
 impl Scratch {
-    fn new() -> Self {
+    fn new(name: &str) -> Self {
         let path =
-            std::env::temp_dir().join(format!("truth-retrieval-smoke-{}", std::process::id()));
+            std::env::temp_dir().join(format!("truth-retrieval-{name}-{}", std::process::id()));
         let _ = fs::remove_dir_all(&path);
         fs::create_dir_all(&path).expect("scratch directory");
         Self(path)
@@ -104,8 +104,61 @@ fn ids(values: &Value, field: &str) -> Vec<String> {
 }
 
 #[test]
+fn duplicate_note_sections_report_each_location_and_check_the_current_checkout() {
+    let scratch = Scratch::new("duplicate-notes");
+    let root = &scratch.0;
+    let body = "This argument requires an independently established premise. ".repeat(10);
+    // Quotes (including lazy continuations), code, navigation, and the
+    // generated reference list can repeat without duplicating an assessment.
+    let shared = format!(
+        "## Excerpt\n> A witness wrote\n{body}\n\n## Sample\n~~~~\n{body}\n~~~~\n\n\
+         ## Link\nSee [the assessment](first.md).\n\n\
+         ## Research attempts citing this note\n- [Record](a.md) {body}\n"
+    );
+    write(
+        root,
+        "docs/first.md",
+        &format!("# First\n{body}\n\n{shared}"),
+    );
+    write(
+        root,
+        "docs/notes/second.md",
+        &format!("# Second\n\n## Elsewhere\n{body}\n\n{shared}"),
+    );
+    let report = truth(root, &["index", "duplicates", "notes"]);
+    assert_eq!(
+        report,
+        serde_json::json!([[
+            {"path":"docs/first.md","line":1,"heading":"First"},
+            {"path":"docs/notes/second.md","line":3,"heading":"Elsewhere"}
+        ]])
+    );
+    let check = || {
+        Command::new(BINARY)
+            .arg("--root")
+            .arg(root)
+            .args(["--json", "index", "duplicates", "notes", "check"])
+            .output()
+            .unwrap()
+    };
+    let failed = check();
+    assert_eq!(failed.status.code(), Some(1));
+    assert_eq!(
+        serde_json::from_slice::<Value>(&failed.stdout).unwrap(),
+        report
+    );
+    write(root, "docs/notes/second.md", &format!("# Second\n{shared}"));
+    let clean = check();
+    assert!(clean.status.success());
+    assert_eq!(
+        serde_json::from_slice::<Value>(&clean.stdout).unwrap(),
+        serde_json::json!([])
+    );
+}
+
+#[test]
 fn index_brief_novelty_dossier_context() {
-    let scratch = Scratch::new();
+    let scratch = Scratch::new("smoke");
     let root = scratch.0.as_path();
     fixture(root);
 

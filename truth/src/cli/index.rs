@@ -8,6 +8,8 @@
 //!   records that reference it and the notes that name it; `show
 //!   docs/notes/x.md[#anchor]` — a note or one of its sections;
 //! - `duplicates`, `summary` — exact duplicate argument bundles, inventory;
+//! - `duplicates notes [check]` — repeated complete Markdown sections with at
+//!   least 50 prose words; `check` exits 1 if any are found;
 //! - `parity` — every corpus file and record against the index;
 //! - `export PATH` — one indexed corpus file's original bytes;
 //! - `bundle --case ID [--premise S]...`, `compare --case ID [--left S]...
@@ -109,6 +111,29 @@ fn run(args: &Args, operands: &[&str]) -> Output {
         }
         ("show", [id]) => printed(index::show(&open(&root)?, id).map_err(error)?),
         ("duplicates", []) => printed(json!(index::duplicates(&open(&root)?).map_err(error)?)),
+        ("duplicates", ["notes"] | ["notes", "check"]) => {
+            let groups = index::duplicate_note_sections(&root).map_err(error)?;
+            let mut text = format!("Repeated note sections: {}", groups.len());
+            for group in &groups {
+                text.push('\n');
+                for location in group {
+                    text.push_str(&format!(
+                        "\n  {}:{}  {}",
+                        location.path, location.line, location.heading
+                    ));
+                }
+            }
+            let value = json!(groups);
+            if rest.ends_with(&["check"]) && !groups.is_empty() {
+                let report = if args.machine {
+                    value.to_string()
+                } else {
+                    text
+                };
+                return Err(raw(1, format!("{report}\n")));
+            }
+            Ok((value, Some(text)))
+        }
         ("summary", []) => printed(index::summary(&open(&root)?).map_err(error)?),
         ("parity", []) => {
             let report = index::parity(&open(&root)?, &root).map_err(error)?;

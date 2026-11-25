@@ -33,6 +33,9 @@ use std::{
 
 type Obj = Map<String, Value>;
 
+mod note_duplicates;
+pub use note_duplicates::{NoteOccurrence, duplicate_note_sections};
+
 /// The table layout (`research_index.SCHEMA`).
 pub const SCHEMA: &str = "3";
 /// The projection semantics; bump it when a change must invalidate every

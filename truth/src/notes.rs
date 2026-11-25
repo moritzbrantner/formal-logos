@@ -339,7 +339,7 @@ pub fn slug(heading: &str) -> String {
         .collect()
 }
 
-fn fence(line: &str) -> Option<(char, usize)> {
+pub(crate) fn fence(line: &str) -> Option<(char, usize)> {
     let trimmed = line.trim_start();
     if line.len() - trimmed.len() > 3 {
         return None;

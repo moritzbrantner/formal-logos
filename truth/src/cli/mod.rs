@@ -111,7 +111,7 @@ pub const HELP: &str = "Usage: truth [--root PATH] [--json] status
              [--materialize-edge KEY]
        truth [--root PATH] [--json] tree --out-dir DIR STATEMENT... [--down N] [--up N] [--budget N]
        truth [--root PATH] [--json] attribution-check --base REV [--materialize] [--max-chars N]
-       truth [--root PATH] [--json] index (build | search WORDS [--limit N] | show ID | duplicates | summary
+       truth [--root PATH] [--json] index (build | search WORDS [--limit N] | show ID | duplicates [notes [check]] | summary
              | parity | export PATH | bundle --case ID [--premise STATEMENT]...
              | compare --case ID [--left STATEMENT]... [--right STATEMENT]...)
        truth [--root PATH] [--json] senses (report [--write] | allowlist [--write] | ratchet --base REV)
