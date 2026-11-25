@@ -341,7 +341,7 @@ fn note_passage(
     requested: &BTreeSet<String>,
     leading: &str,
 ) -> Result<Option<Value>, String> {
-    let coverage = |s| {
+    let coverage = |s: &str| {
         query
             .content_coverage(&query.matched(s, &BTreeMap::new()))
             .0
