@@ -1883,3 +1883,117 @@ no change
 Intended and actual formal premise effects: **none**. The outcome is improved
 response coverage, an explicit attitude map and a precise exhausted authority
 inference, with reallocation recommended rather than another duplicate branch.
+
+## Which consideration gives a reason to believe this content? (#1007, 2026-11-25)
+
+The actual-force concession `b391c809` identifies a subject *a*, a
+consideration *r* and a content *p*. Its attribution already targets
+`f.believe p`. Under consideration presentation `1b74e22c`, that very
+subject has a thin reason to believe that very content. Only the reverse
+implication of presentation at *a,p* is needed, together with the attribution
+at that belief. The favoring and actual-force conjuncts can both be dropped
+from the projection. If a witness is given at an arbitrary attitude *t*, an
+identification *t = f.believe p* suffices. Knowing *f.about t = p* does less.
+The registered result `decf920c` is an instantiation transcription using
+the two existing premises. Its companion `reasonAtBelief` keeps *a,p* fixed
+before F6 existentially quantifies them. [Frozen theorem types](../../TruthCore/Results/Logic/BeliefReasonWitness/Challenge.lean)
+
+### A test on one question about a count
+
+Consider the investigator in the earlier [proposed recount](epistemic-underminer-boundaries.md#from-warranted-belief-to-an-actual-bearer-1007-2026-11-25).
+Fix the question *p*: does the collection have even parity? Suppose a
+counter records only complete pairs and discards any final unpaired item
+without reporting it. The same pair count then occurs with or without a
+last item. Assume the report is equally likely on the two parity hypotheses. If those are the two live alternatives and the investigator
+has no other evidence bearing on parity, that report gives no tilt toward
+either answer. Knowing how the counter works can give the accuracy-seeking
+investigator a positive reason to withhold on *p* and inspect the residue.
+Now change the reporting procedure: record the leftover separately and give
+the investigator the complete, independently checked tally. A report of an
+empty residue now discriminates in favor of *p*. It can count pro tanto even
+if some other evidence still makes full assent inappropriate. These are
+proposed cases. The frame interprets favorable bearing directly and does
+not model a device, a probability calculation, actual assent or an observed tally.
+
+| Same question and evidence | Actual force conditional on an accuracy aim | Force independent of preference |
+| --- | --- | --- |
+| Pair count hides the residue | Can favor withholding for the investigator who wants an accurate answer. | Can favor the same withholding across preferences. Neither verdict attributes a belief reason for parity. |
+| Complete tally favors even | Can concede actual force for believing *p*. With the belief attribution and presentation this supplies F6. | Can grant the same local reason. The successful tally does not discriminate between the two accounts of its force. |
+| Keep the favorable evidence, vary only the preference to comfort without an accuracy aim | The selected goal-relative rule withdraws force. | Answerability carries the conceded force over. This is the existing #930 disagreement. |
+
+The new `suspensionControl` interprets both belief and suspension about
+each of two contents. A subject, a count and positive ordinary favoring
+and actual force for suspension on parity are present. For `accuracyAim`
+the goal-relative rule holds, with accuracy at the actual preference and
+comfort available. Presentation holds while the thin belief-reason relation
+is empty: no attributed attitude is in the image of `believe`. Even force
+at *every* supplied preference for the same suspension
+(`independentSuspension`, using `allAim`) leaves that fact unchanged.
+This latter setting has no aim-lacking alternative. Neither model denies
+reasons to withhold, extends the domain to beliefs about the report itself,
+or records someone actually suspending. The model establishes non-entailment
+from the stated attitude premises. The paired-count example explains why the
+distinction matters to inquiry. [Frames](../../TruthCore/Logic/BeliefReasonWitness.lean)
+
+Conversely, `withoutPresentation` keeps the old goal-relative model's ordinary
+belief attribution, actual force and populated carriers while emptying only
+its thin relation. It separates the two interpretations formally. If *Reason*
+already means the belief attribution presented by considerations, the reverse
+link is justified by that interpretation. On a reading where *CountsAsReason*
+only records someone's endorsement, actual endorsement can track a reward,
+as in #930's production/reward controls. Additional warrant for the normative
+reading then matters. The existing `goalRelative` control supplies the
+positive belief case with presentation, actual force and an indifferent
+alternative. The new `differentContent` varies its truth field so the second
+content expresses global denial. The first content has a reason and nobody
+has a reason for the second. The first attribution is a counterinstance to global denial.
+A reason **to believe the denial itself** would be a different attribution. To obtain the latter would require
+a belief-targeted attribution at that particular content. [Checked projections and controls](../../TruthCore/Results/Logic/BeliefReasonWitness/Solution.lean)
+
+### Graph connection, warrant and reopening
+
+- Result `3f888d00` takes goal-relative force `0c1a5185` **and** an
+  ordinary belief reason for a subject whose actual preference satisfies
+  the aim `d92ee0fc`. Its conclusion `b391c809` together with
+  presentation gives F6 `f56b2ee7` by `decf920c`. Existing result
+  `146b502b` then excludes epistemic nihilism for that very relation.
+  For global normative denial, the F6 relation must be its epistemic kind
+  (argument `fe175c53`). The nihilist who accepts only an instrumentally
+  effective procedure can dispute the initial normative attribution. The
+  target-specific retorsion still allows true, unreasoned denial in its own
+  reasonless interpretation. No unconditional defeat follows.
+- Result `73f46094` constructs a belief witness from **hThin**, presentation
+  and the independent calibration. Its exported conclusion `2ca463c2` forgets
+  the belief restriction. The weakening to ordinary witness `bea77d88`
+  forgets universal force too. Ordinary-from-thin `6a79d62a` and the named
+  elimination `451490a9` likewise consume F6. Reading a particular proof's
+  constructed belief witness back into its weaker conclusion would both
+  generalize incorrectly and recycle the initial F6 on those paths. The two
+  authority lemmas deferred in #1374 supply no registered edges. The separate
+  warranted-acceptance producer `b3ddb7c4` remains available under its
+  calibrations. When its warrant comes through `1db47fd9`, eligible uptake
+  already includes a reason. The present concession route requires neither
+  assent nor warrant, but its aiming-belief antecedent already contains the
+  attribution. The goal-relative force rule adds no evidence for that witness.
+- Downstream, `e29f44e9` additionally needs selected-world presence of the
+  reason bearer's representative `ada25623` and the esse contract
+  `0436de86` to reach `56f68b40`, the population input of `72391d4d`.
+  All later grounding, actuality and identification premises still apply.
+  At baseline `b4de99833`, exactly the existing result `3f888d00` leaves
+  the disconnected set with this new registration. Direct F6 and the
+  direct-concession options remain available.
+
+**Provisional judgment.** A verified parity-discriminating tally available
+to an accuracy-seeking investigator gives a defensible case for actual
+pro tanto belief-directed force on either account. An inconclusive pair
+count supplies a different response to the same question. The strongest
+survivor concedes actual epistemic force where the evidence favors belief
+and the investigator values accuracy, while restricting force to preferences
+with that aim. It can consistently deny preference-independent authority.
+The witness projection adds no new warrant for that authority or for choosing
+a divine explanation. The next discriminating application test is whether
+an actual investigator seeking the parity answer received evidence that
+distinguished the leftover-item alternatives. A record of the pairs alone,
+a copied tally, or a decision to investigate would leave that antecedent
+unmet. Testing force for an indifferent subject remains the separate #930
+relevance question. [Earlier authority assessment](epistemic-authority.md)
