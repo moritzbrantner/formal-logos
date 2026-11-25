@@ -1,0 +1,17 @@
+{
+  "id": "4fe3ff1b-3015-497a-9e88-f5853d52a459",
+  "label": "Perfection of GOD_4 at the actual universal source (inference)",
+  "input_statement_ids": [
+    "0881e859-c4c3-53ff-9bec-b61294e12d51",
+    "4c79298d-ee09-5e99-9ced-1be92c19b4cc",
+    "d5a94eb1-72d2-53e0-9a52-9787b5b61a8d",
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410",
+    "7067553d-cad9-5d79-b6b2-912e35051530",
+    "64498e7e-7f10-54a0-9ec0-c65e6076de1f"
+  ],
+  "output_statement_id": "78b7c124-4419-4d55-8c2d-9cb8b37eb9b6",
+  "rule": "Transfer actualities from the distinct actual recipients of the identified source",
+  "meaning": "Actuality in a respect entails actuality at esse by the explicit premise. Convergence fixes the same God as the universal source, and effect-perfection preexistence supplies its represented actuality.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

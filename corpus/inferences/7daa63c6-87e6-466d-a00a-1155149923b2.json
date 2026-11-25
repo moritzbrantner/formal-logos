@@ -1,0 +1,21 @@
+{
+  "id": "7daa63c6-87e6-466d-a00a-1155149923b2",
+  "label": "Classical attribute field from nine attributes of every named GOD_4 (inference)",
+  "input_statement_ids": [
+    "818a73cc-249d-5f9b-9c34-aee1f2cbf333",
+    "9f4e5f17-e808-5c58-9eac-faacbb5c3a56",
+    "78b7c124-4419-4d55-8c2d-9cb8b37eb9b6",
+    "e0dae79f-c042-5a08-a148-725d0468df91",
+    "33b18ae7-4578-54bc-a2b5-edce99b21fc2",
+    "b0132989-4810-58d9-8aa3-1c9c7a0dfa28",
+    "fb3802a8-d04c-5486-95a5-b7ab57857396",
+    "5bec93b3-9950-5e46-b243-cf5a4658b929",
+    "29818edd-9f5a-5414-baa2-9a7d0c8abf18",
+    "66aecdd7-ea4e-55c6-9377-10db08893854"
+  ],
+  "output_statement_id": "d5ac1620-1de5-5cd8-862e-cfdfd6d8b8a5",
+  "rule": "Instantiate the nine attribute conditionals on a single bearer",
+  "meaning": "For each g satisfying the signature’s IsGod, apply all nine attribute premises to g itself and the supplied sufficiency implication to that conjunction.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}
