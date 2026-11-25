@@ -56,7 +56,7 @@ strong-supplementation and fusion meanings.
 
 Original frozen Challenge SHA256:
 `38708db9e203c1d95ed1c10d3d32d3009f1fa280e35065096cfb5ad04b8e4e80`.
-The rejected stub declared `checks : Certificate` with a placeholder proof. The [current Challenge](../../TruthCore/Results/Causality/WorldwiseCompositeGround/Challenge.lean#L6) and [proved replacement](../../TruthCore/Results/Causality/WorldwiseCompositeGround/Solution.lean#L86) use the revised type.
+The rejected stub declared `checks : Certificate` with a placeholder proof. The [current Challenge](../../TruthCore/Results/Causality/WorldwiseCompositeGround/Challenge.lean#L6) and [proved replacement](../../TruthCore/Results/Causality/WorldwiseCompositeGround/Solution.lean#L86) use the revised type. The [archived original stub](https://github.com/moritzbrantner/formal-logos/blob/0895006f12ee9a69700fd68208656a8b6c0c5e7b/docs/notes/worldwise-composite-ground.md#L61-L69) preserves the rejected input.
 
 The revised analyst statement is `ReplacementCertificate`. Its ordinary
 Challenge was frozen before revised Solution work at SHA256

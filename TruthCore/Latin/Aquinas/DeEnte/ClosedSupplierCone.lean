@@ -276,6 +276,72 @@ theorem guardedInhibitionWithoutOutsideFixed :
     rw [inhibitedTailRule, ite_eq_right (hNotRoster hV)] at h
     exact (fun hn => hn (h.mp hn)) (fun hn => (h.mpr hn) hn)
 
+namespace VaryingSupplier
+
+/-- The five bearers of the varying-supplier example; only s lies outside the component. -/
+inductive Bearer where
+  | s | a | b | c | d
+  deriving DecidableEq
+
+open Bearer
+
+/-- The selected supplier of a can switch from c (enabled by d) to b when c is absent. -/
+def supplies (state : Set Bearer) : Bearer → Bearer → Prop
+  | .c, .a => c ∈ state ∧ d ∈ state
+  | .b, .a => b ∈ state ∧ c ∉ state
+  | .a, .b => a ∈ state
+  | .b, .c | .b, .d => b ∈ state
+  | _, _ => False
+
+def output (state : Set Bearer) : Set Bearer :=
+  {x | x = s ∨ ∃ y, supplies state y x}
+
+private theorem supplierPresent {state : Set Bearer} {y x : Bearer}
+    (h : supplies state y x) : y ∈ state ∧ y ≠ s := by
+  cases y <;> cases x <;> simp_all [supplies]
+
+/-- Every activated component member has an internal supplier. Both the whole roster
+and its outside singleton are fixed. The witness at a changes with the input;
+enlarging the input can inhibit a even though its former supplier remains present. -/
+theorem componentGuardWithChangingSupplier :
+    SupplierStateFixed output Set.univ ∧ SupplierStateFixed output ({s} : Set Bearer) ∧
+    (∀ state x, x ≠ s → x ∈ output state → ∃ y ∈ state, y ≠ s ∧ supplies state y x) ∧
+    (∀ y, supplies Set.univ y a ↔ y = c) ∧
+    supplies {b} b a ∧ a ∈ output {b} ∧ a ∉ output {b, c} ∧ ¬ Monotone output := by
+  have guard : ∀ state x, x ≠ s → x ∈ output state →
+      ∃ y ∈ state, y ≠ s ∧ supplies state y x := by
+    intro state x inside active
+    obtain eq | ⟨y, hy⟩ := active
+    · exact (inside eq).elim
+    · exact ⟨y, (supplierPresent hy).1, (supplierPresent hy).2, hy⟩
+  have fromB : supplies {b} b a := by simp [supplies]
+  have active : a ∈ output {b} := Or.inr ⟨b, fromB⟩
+  have inhibited : a ∉ output {b, c} := by
+    rintro (eq | ⟨y, hy⟩)
+    · cases eq
+    · cases y <;> simp_all [supplies]
+  refine ⟨?_, ?_, guard, ?_, fromB, active, inhibited, ?_⟩
+  · intro x
+    refine ⟨fun _ => Set.mem_univ x, fun _ => ?_⟩
+    cases x with
+    | s => exact Or.inl rfl
+    | a => exact Or.inr ⟨c, trivial, trivial⟩
+    | b => exact Or.inr ⟨a, trivial⟩
+    | c | d => exact Or.inr ⟨b, trivial⟩
+  · intro x
+    constructor
+    · rintro (eq | ⟨y, hy⟩)
+      · exact eq
+      · obtain ⟨hs, hne⟩ := supplierPresent hy
+        exact (hne hs).elim
+    · exact fun hx => Or.inl hx
+  · intro y
+    cases y <;> simp [supplies]
+  · intro mono
+    exact inhibited (mono (by simp : ({b} : Set Bearer) ⊆ {b, c}) active)
+
+end VaryingSupplier
+
 /-- The family of singleton outputs covers both retained members, while
 no one output covers them jointly. -/
 theorem individualRetentionWithoutJoint :

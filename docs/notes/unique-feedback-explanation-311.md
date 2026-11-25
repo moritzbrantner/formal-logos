@@ -3599,10 +3599,9 @@ U the finite-subsets family makes the stronger finite-join/whole-join
 distinction. These are explicitly surrogate output relations.
 
 [`Control.individualRetentionWithoutJoint`](../../TruthCore/Latin/Aquinas/DeEnte/ClosedSupplierCone.lean)
-checks the two singleton outputs directly. In the historical finite audit at
+checks the two singleton outputs directly. In the [historical finite audit](https://github.com/moritzbrantner/formal-logos/blob/0895006f12ee9a69700fd68208656a8b6c0c5e7b/docs/notes/unique-feedback-explanation-311.md#L3639-L3670) at
 size three, 218 of the 255 nonempty output families covered U, 90 of those
-omitted U, and all 128 directed covering families contained U. The separate
-five-bearer varying-supplier example above was also checked in that audit.
+omitted U, and all 128 directed covering families contained U. The [five-bearer Lean control](../../TruthCore/Latin/Aquinas/DeEnte/ClosedSupplierCone.lean#L306) checks both fixed states and the component guard for every input. It also identifies c as a’s supplier at the full roster, b as its supplier when only b is present, and the loss of activation when c is added without d.
 
 #### 4. Why the non-deletion bridge is not a consequence of receipt
 
