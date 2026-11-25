@@ -254,6 +254,171 @@ and #1297/#1459. Divine applicability, effect-specific coverage and recipient
 good remain the exact downstream bridges. This note neither resumes unrelated
 creation questions nor registers those proposed connections as existing routes.
 
+## Did the reason guide production of this order? (#1570)
+
+A reason can explain the production of a particular outcome under a description
+that also fits another outcome. The distinction turns on what the producer
+used. A reason that explains why an order was worth producing has a further
+job to do if it is to explain why the source produced it. The following test
+separates these jobs while holding the advertised reason and the ordinary
+outcome fixed.
+
+### One dispatch, two explanations of its success
+
+An editor is to send an instruction in a language its recipient can read.
+Two versions, A and B, give the same instruction. Both can always be sent, and at least one is readable in every case tested.
+The recipient's confirmed languages determine which versions meet the end.
+The booking code normally agrees with the recipient's language. In one
+implementation the editor's instruction, issued on inspecting the confirmed
+languages, releases the version. In the other an automatic dispatch uses
+the booking code. The editor can give the very same accurate explanation of
+the version's suitability after dispatch. The booking can determine both the
+automatically dispatched version and the language shown on the editor's initial brief.
+Even perfect agreement across bookings could have this shared upstream cause.
+
+Here is the complete Python 3 test. A return of A or B is the simulated
+dispatch of that version. Disconnecting the instruction leaves the reported
+end, booking, confirmed languages and available versions fixed. The third
+implementation reads the confirmed languages directly.
+
+```python
+def select(readable, tie):
+    return tie if tie in readable else readable[0]
+
+def dispatch(readable, booking, tie, connected):
+    instruction = select(readable, tie)
+    edited = instruction if connected else None
+    automatic = booking
+    direct = select(readable, tie)
+    return edited, automatic, direct
+
+def report(version, readable):
+    return f"{version} was readable" if version in readable else "unreadable"
+
+for version in "AB":
+    sent = dispatch(version, version, version, True)
+    assert sent == (version,) * 3
+    assert all(report(item, version) == f"{version} was readable" for item in sent)
+assert dispatch("A", "A", "A", False) == (None, "A", "A")
+assert dispatch("B", "A", "A", True) == ("B", "A", "B")
+assert dispatch("AB", "A", "A", True) == ("A", "A", "A")
+assert dispatch("AB", "A", "B", True) == ("B", "A", "B")
+```
+
+In the default A case all three can truthfully report “A was readable.”
+Only the first dispatch used the editor's instruction. Disconnecting it
+prevents that dispatch while the other two proceed. The second test changes
+the confirmed language independently of the booking, as when the addressee
+changes after booking. It separates reliance on the booking from reliance
+on actual readability. It leaves the editorial and direct impersonal policies
+together. At a tie either version serves the very same reason. The supplied
+`tie` settles execution in the simulation. Its value can record a particular
+endorsement or an agenda entry. The calculation explains neither its origin
+nor why an agent had to endorse that version. A purposive choice could
+terminate the contrast there, as could a chance realization under a policy.
+
+These are results about the displayed implementations. The editor's personal
+basing has additional positive grounds **in the case as described**: the
+editor understands the instruction and the recipient's need, checks a
+correction against that need, and uses the resulting assessment in issuing
+the command that was executed. Disconnecting a button alone would also stop
+a clerk pressing it blindly. Program execution tests the routing part of
+the account; the description supplies the human understanding. The direct
+selector has precisely the same rule for readable versions. It earns equal
+credit for delivering a readable instruction without requiring apprehension.
+If a system independently satisfies an account of understanding and practical
+control, its physical implementation gives no reason to withhold that credit.
+
+### What transfers from belief to action to an origin
+
+| Fixed target | Evidence for the reason's actual role | Limit of the transfer |
+| --- | --- | --- |
+| Formation of this belief that q | An agent understands p and p→q and actually uses the inference in forming q. A separate cue that fixed q before the calculation gives the opposite verdict for that formation. A later calculation can subsequently sustain q. | Valid support concerns what one has reason to believe. Two active sufficient bases can each contribute even if removing either leaves belief intact. An intervention on the instruction is therefore a sufficient diagnostic in the dispatch circuit shown, never a universal requirement for basing. [Basing cases](epistemic-underminer-boundaries.md#discriminating-cases-and-the-exact-condition-they-test) · [Evidence and its epistemic force](epistemic-reasons-930.md#what-counts-as-a-reason-here) · [Matched episode and its evidence limit](epistemic-reasons-preconditions.md#actual-case-blocker-and-substantive-reassessment) |
+| Production of this practical effect under the adopted description | The same agent apprehends the good, takes the effect as an end or means, and directs the productive exercise accordingly. The dispatch test traces the last step. Similarly, a lamp's light can serve as the signal a maker set out to produce, or be a foreseen side effect of making the instrument work. | A prediction or a later justification supplies no contribution to the earlier exercise. Intending an order as a whole leaves open which effects enter its specification. Even intending an effect can serve another recipient's good. [Fixed-production comparison](divine-love-goodness-bridge.md#practical-adoption-at-fixed-production-proposed-continuation) · [Same present response, different histories](reason-response-history.md#what-differs-and-what-information-cannot-recover-it) |
+| Production of this actual contingent order W by a proposed necessary source n | To transfer the positive verdict, identify the very n that supplies W, give a good with fulfillment conditions intelligible independently of W, and show that n's own apprehension of that good specifies its actual exercise under the claimed description. To transfer the bypass verdict, show instead that the attribution of purpose reads off what an independently operative power produced, with no contribution by the apprehension to that production. | No external switch, earlier divine deliberation or possible divine error is given. “Afterward” here means that the attribution depends explanatorily on the product. An atemporal apprehension can be practical or contemplative. Reliable conformity alone decides neither verdict. [Practical measure and divine nonfailure](optimal-creation-choice.md#12-the-practical-measure-test-a-stronger-candidate-than-output-matching) |
+
+The dispatch is an example of how independently known production paths can
+license opposite verdicts. In the absence of an intervention at the origin,
+there is also a **constitutive** line of argument. Suppose there are grounds
+for identifying this exercise as the source's realization of an apprehended
+specification D. Then which outcomes fulfill the exercise *as intended* is
+assessable from D, including when several realize D. If all that grounds
+“adopts D” is that W exists and fits D, a value-sensitive propensity producing
+W explains those data as well. The direction from n to W in bare production
+does not establish the additional direction from apprehended D to the way n
+produces W. This is a precise limit even on accepting a one-power intellectual
+giver: result `b5b84276` uses will following intellect, will being a rational
+power, and giving exercising an owned power to identify the exercised power.
+Its conclusion supplies no D specifying this particular exercise. The
+same source could contemplate the good while its productive nature directly
+tracks it; the common source explains the agreement without making
+contemplation the practical measure. The rival need not posit two beings or
+two intrinsic parts. [Power and actual exercise](will-versus-chance.md#4-results) ·
+[Practical specification at the same source](optimal-creation-choice.md#17-a-substantive-comparison-purpose-selection-and-the-real-relation)
+
+### Comparative verdict for the same W
+
+| Origin → production → W | What the stopping point explains | Live dependency under the same standard |
+| --- | --- | --- |
+| Brute contingent actuality → this initial reality → lawful development | The account can explain later dispatch-like selections, including rational agency within W. It takes the actuality of the initial occupant as primitive, or W itself as primitive on the whole-totality reading. | Under a demand for the actuality of the whole, laws conditional on the occupant's existence leave that very input unexplained. A restriction of the demand to beings with received existence is a substantive defense. It needs grounds for treating the proposed starting point as exempt. |
+| Necessary impersonal origin → fixed initial history and productive dynamics → W | Oppy's restricted modality fixes the initial state across its worlds and admits chance divergence later. A separate value-sensitive proposal can favor a class of goods by a directed law. Even changes tracking the relevant good across alternatives can be explained this way. | The restricted modal domain needs warrant. The value-sensitive proposal needs an actual productive law and grounds for its direction. Neither a distribution nor a class preference settles which tied token was realized under a determining standard. No value-directed law is attributed to Oppy. |
+| Necessary purposive origin → n's exercise for an apprehended good → W | Communication of goodness gives a positive motive at kind level. If it actually measures the exercise, it explains what W was produced *for*. Ordinary directed production gives this explanatory form prima facie warrant. The source may act for that reason at a tie. | Establish n's actuality and its operative apprehension at the asserted scope. A reason shared by W and W′ does not discriminate their residual difference. Even a deliberate lottery explains employing that policy while leaving its particular draw to the lottery. |
+
+**Overall provisional judgment.** Retain the moderate preference for an
+account that explains the actuality of contingent concrete existence over
+stopping at a contingent occupant. Identifying a producer's actual exercise
+answers a question that stating its capacity or the conditional laws leaves
+open. Either productive origin could earn that advantage. At the level of
+the end served, the edited dispatch outperforms the booking rule when the
+booking and the actual need diverge. An impersonal rule responsive to the
+need earns the same improvement. At the level of authorship, an apprehended
+end actually used gives a further explanation of acting *for* that end, which
+a matching retrospective report cannot give. Familiar purposive production
+supports the intelligibility of that claim. It supplies no observation that
+the ultimate source so acted. Current evidence leaves personal and genuinely
+good-sensitive impersonal origins underdetermined for actual W. Under a
+strict demand for a determining contrast, both a primitive endorsement and a
+chance realization still owe the differentiator. Under a nonnecessitating
+standard, both can explain an actual production without determining that
+contrast. [Whole-order warrant](nine-premise-support-investigation.md#where-a-rival-loses-explanatory-standing) ·
+[Three-way stress test and Oppy's positive alternative](../principle-parity-challenges.md#third-worked-test-does-the-source-select-this-contingent-world-pp-03) ·
+[Impersonal value-sensitive proposals](mind-physicalism-fork-419.md#test-whether-value-sensitive-production-requires-representation)
+
+For a concrete application, take as the proposed good that finite knowers
+can discover and correct their errors. A world with knowers systematically
+denied access to correction would frustrate that end, even if its inhabitants
+reported confidence. Our capacity to correct mistakes illustrates the good.
+It does not reveal who, if anyone, adopted it. Both a directed impersonal
+law and an agent producing an order for that good have resources at this
+scope. Nor does that end distinguish two histories equally hospitable to
+correction. [Comparison on the cognitive order](mind-physicalism-fork-419.md#overall-judgment-and-consequence-for-the-case)
+
+The strongest next test is to take the proposed source's giving existence
+to **one such knower**. What warrants saying its apprehension of this
+recipient's capacity for correction specifies this very giving?
+Compare the claim against one intrinsically intellectual source whose
+contemplation and directed productivity agree because of its nature. A
+defended constitutive dependence that the latter lacks would strengthen the
+personal explanation even without different output frequencies. A
+derivation that identifies only the owner or kind of power leaves the tie
+intact. This is an application burden on an explanation of W, upstream of
+an identification with GOD_4. No new graph edge or premise change.
+
+Two earlier boundaries continue to matter. The checked `noUnique` obstruction
+above concerns a fixed **complete** input, equivariance and a moved output;
+`1b478d58` forgets an already supplied agenda selection while preserving the
+same modeled exercise. Neither proves agency from ties. For PP-01,
+`9598a73d` combines the self-edge bridge `83ec280a` with no existential
+self-production `8550ca62` for the CAUSE_4 reading. Turning reciprocal
+constituent production into such a self-edge, or into an agent's ability to
+originate its own first existence, needs its own map. Oppy's anti-circle
+view and a Newman-style loop remain different proponents' accounts.
+The observer-adjusted vacuum-density comparison answers a different,
+feature-level question. [Self-origin comparison](../principle-parity-challenges.md#first-worked-test-universe-versus-omnipotent-being-pp-01) ·
+[Vacuum-density result](fine-tuning-selection.md#1569-which-vacuum-energy-decade-does-an-observer-find)
+
+[Reviewed assessment and next test](../../corpus/attempts/d735348a-03f9-4a7e-8c48-323392ed704e.json)
+
 ## Research attempts citing this note
 
 - [Locate discriminating input in agenda selection and compare motivated choice](../../corpus/attempts/d735348a-03f9-4a7e-8c48-323392ed704e.json)
