@@ -535,3 +535,208 @@ If the competent actual inquirer makes the local reason attribution, the existin
 The live next comparison is narrower: **does a higher-order defeater remove the competent inquirer's access to the existential bearing, or does it preserve that access and reject the reason-giving force of a fully available presented instance?** Seek an actual counterexample with the subject grasping the instance and its bearing, not a report-only example or a mere skeptical stipulation. A theory which conditions reasons on such access, rather than requiring general faculty validation, can grant the thin reason while disputing full warrant. If no substantive defeating mechanism is supplied, preserve the positive local judgment; do not treat absence of a discovered objection as a proof. The separate normative relevance transfer to wholly indifferent preferences is the already isolated #930 problem, not another consequence of this episode. A reader's actual self-application could supply direct first-person evidence, but the repository cannot certify that subjective fact for everyone.
 
 No new proof registrations or source attributions. Full local conventions/preflight and Lean verification remain unavailable (no Lean/Lake/Cargo, no GitHub DNS in the container, no warm checkout); no fresh independent challenge worker is available. The proposed semantic assessment is unreviewed. In addition to the previous handoff run `target/release/truth related 77e57686`, `dossier 77e57686`, `brief 77e57686`, `semantics 77e57686`, `context 08cef374`, `context 0c9d64e6` and `novelty "nonfactive phenomenal seeming and renewed skeptical challenge instantiate the weaker present occurrence"` with the same CLI. Challenge review must focus on the scope of occurrence, the difference between actual presence and propositional access, the role-to-reason reading, and not treating the finite control as a proof of the latter. Self-sweep: no imported historical position; same-scope witnesses; report-only and access-loss alternatives retained; no probability claim about actual histories; no generalization to every subject or force at an indifferent preference; no reuse of the thought-specific consumer under the broader reading. Keep #1995 draft.
+
+
+## Continuation: higher-order defeat, partial access and surviving local reasons
+
+2026-11-25, fourth checkpoint from `d84beef90a2db244abb3b9782eb962f55b6bcbd2`. The target is F6's positive local application, particularly the claim that a higher-order defeater can eliminate **every** belief-directed reason even when a subject has a direct presented instance of the existential under investigation. Retain the earlier distinctions between phenomenal occurrence, thought, the reason relation, sufficient warrant, and preference-independent force. This checkpoint is not a new grounding or psychological-competence theory.
+
+### 1. Give the higher-order skeptic a positive replacement account
+
+Consider the same question Q: does any experience occur in the present inquiry scope? A subject has what appears to be a direct instance and is informed by an otherwise credible assessor that their current procedure confuses automatic introspective reports with actual presentations. This is a constructed analogue of the misleading higher-order testimony discussed in the existing [externalist entitlement study](externalist-entitlement-and-regress.md), not a claim about an actual clinical intervention, its prevalence or the source author's verdict on the Cogito.
+
+The mechanism is not just that an alternative might be possible. The assessor's evidence could supply grounds to doubt the subject's recognition of which procedure is currently operative. A genuinely competent subject can be misled *about their own competence in a particular episode*. This is a substantive kind of objection to an inference from actual access to sufficient warrant. The older `LOGIC-JUSTIFICATION-INTROSPECTION` (`901bfc2f`) already separates actual first-order knowledge/justification from knowledge of justification in its nontransitive profile; the current question concerns the reverse demand for a higher-order status as a prerequisite even of a pro tanto reason. Do not assume either knowledge, positive introspection, or perfect reflection from genuine access.
+
+Distinguish three targets:
+
+- Q: the weak present existential, not truth of the presented external content, not an accurate classification as thought, not an enduring subject.
+- M: a fallible marker (a report, verdict or appearance-*report* of access). Its occurrence as a marker is not stipulated to be an experienced episode.
+- A: an actual phenomenal instance available as such. A subject's justified recognition that their available basis is of type A rather than M is a distinct assessment. D is another actually experienced episode of considering the challenge. If D is present within the same scope, it supplies the existential even when the primary A was misidentified.
+
+The credible higher-order report H can change the subject's assessment of M or their confidence that the basis is A. The truth of what H says is not the occurrence of H. A public report about the procedure, even a report asserting that there are no experiences, can be false. If the subject genuinely experiences considering H, that act is D, not merely H. A model allowing H with no Q therefore represents a report-level comparison, not a subject who actually experiences considering H.
+
+There is a precise, testable difference between the rival's informational explanation of defeat of M and normative defeat of genuinely available A. The latter might be a theory of warranted access or sufficient justification even when first-order evidence is real; it must not be misrepresented as an actual counterexample to Q. The former can be explicitly realized.
+
+### 2. Three mechanisms of report-level defeat and their effect on the reason target
+
+Use the existing positive-likelihood comparison of [#934](contrastive-worldview-934.md), `TruthCore.Results.Logic.ContrastiveWorldview.updateConstraints` (`82e41e84` certificate), and the conditional-likelihood comparison of [#1396](correlated-testimony-1396.md), rather than proposing a new Bayesian library. An assigned non-dogmatic prior is distinct from an actual investigator's warranted credence. In the following profiles Q and ¬Q are the binary hypotheses. H is a higher-order report flag, M a positive marker. The row totals for H are 8 in Q and 24 in ¬Q; the row totals outside H are 24 in Q and 8 in ¬Q. Outside H, M is present in 18 of the Q cases and 2 of the ¬Q cases. Vary only the number of positive markers inside H as specified:
+
+| Profile | Q,H,M / ¬Q,H,M weights | Pr(Q) | Pr(Q given M) | Pr(Q given H) | Pr(Q given H,M) |
+| --- | --- | --- | --- | --- | --- |
+| Attenuation / net rebuttal | 4 / 6 | 1/2 | 11/15 | 1/4 | 2/5 |
+| Neutralization of M | 2 / 6 | 1/2 | 5/7 | 1/4 | 1/4 |
+| Reversal of M | 2 / 12 | 1/2 | 10/17 | 1/4 | 1/7 |
+
+All eight original cells are positive in all three profiles. H is adverse evidence in each; M alone favors Q in each. Holding H fixed, in the first profile M still increases the probability of Q above 1/4, even though the joint posterior falls below the original 1/2 and also below the posterior on M alone. In the second M is neutral given H, and in the third it becomes adverse given H. These are distinct informational effects. A lower joint posterior, or a justified decision not to accept Q, does not show the complete cancellation of every pro tanto supporting consideration. For accounts that identify pro tanto merit with positive conditional bearing, the first case has a positive consideration that survives the adverse evidence. For accounts with a different basing or defeat criterion, that attribution remains a substantive interpretation.
+
+Now refine the Q,H,M cell of each profile with two nonempty, disjoint evidence cases A and D, each of unit weight, leaving any remaining cases without established access. Neither A nor D occurs in a ¬Q cell. This is not a probability of actual human experience; it is an explicit structural comparison between report-only and direct-presence interpretations. In every profile the marginal report-level result stays unchanged. The conditional probability of Q given H,M,A, or H,M,D, is one. These examples exhibit actual access in the selected positive cell with both reports, and report-only ¬Q cells; they do not claim that a subject can access A in the latter cells.
+
+The general reason is independent of the chosen weights: whenever an event E consists of actual presented phenomenal instances in this scope, E is included in Q. For any further information set H with positive joint mass Pr(E∩H)>0,
+
+    Pr(Q | E∩H) = Pr(Q∩E∩H) / Pr(E∩H) = 1.
+
+If 0 < Pr(Q | H) < 1, then Pr(E | ¬Q,H)=0 and Pr(E | Q,H)>0, hence E strictly favors Q conditional on H. If Pr(Q | H)=1, E adds no strict probability increase but that is saturation, not evidence for ¬Q. If Pr(E∩H)=0, conditioning is undefined: the selected probability model has excluded the joint evidence (or assigned zero mass to it), not exhibited a state preserving positive-mass E,H in which Q is false. The last two cases matter; it is incorrect to infer a new strictly supporting reason merely from every posterior equal to one, or to identify a zero-probability cell with metaphysical impossibility.
+
+The strict-positivity premises in `ContrastiveWorldview.Comparison` and `CorrelatedTestimony1396.Row` exclude the factive event's zero false-positive likelihood. The elementary event inclusion above treats that boundary directly; it is not advertised as an application of those theorems at an inadmissible argument. A finite enumeration checks the arithmetic below, not a new verified corpus result.
+
+This comparison clarifies the strongest surviving higher-order reply. H can provide a genuine reason for doubting that one's apparent access is actually of type A, and a conciliatory/internalist theory may consequently withhold sufficient warrant even when actual A is present. The objection can concern the person's entitlement to employ A as evidence, not the logical bearing of A under the retained interpretation. Showing that H cannot alter the latter does not prove that it cannot alter entitlement. Conversely, the mere report-level defeater does not establish cancellation of the actual evidence's pro tanto normative bearing. That requires a further principle of defeat with that scope.
+
+### 3. Access uncertainty does not automatically neutralize apparent evidence
+
+The previous checkpoint compared known factive access against a mere report. A more demanding rival can deny justified certainty that the current basis is genuine access while retaining some credence in it. Test that case explicitly, rather than assume either perfect or no access.
+
+Fix H and a non-dogmatic Q prior. In a supplied mixed channel, a latent mode C is capable of giving a genuine access-based positive verdict E; the alternative mode is a fallible report. In C a positive E occurs only when Q, with sensitivity t=Pr(E|Q,C,H)>0. C need not produce E in every Q case. The other mode produces E with likelihoods mQ,mN under Q,¬Q. Here E is the **output or apparent access report** of the mixed channel, not itself the phenomenal presentation A. Assume the mode probabilities given Q,H and ¬Q,H are equal to alpha (conditional independence of the mode and Q in the H profile). It is not assumed that actual phenomenal access is independent of occurrence. Only the choice of channel mode is so modeled.
+
+Then
+
+    lQ = alpha*t + (1-alpha)*mQ
+    lN = (1-alpha)*mN
+    lQ - lN = alpha*t - (1-alpha)*(mN-mQ).
+
+For a nonzero likelihood of the report, the sign of this difference is the sign of the report's posterior shift relative to the H-conditional prior (direct Bayes algebra at zero likelihoods if needed).
+
+- If the fallback marker is neutral (mQ=mN), alpha>0 and t>0 imply a strict positive likelihood difference. A skeptic who merely reduces confidence in genuine access need not eliminate all support from the apparent report. The effect can be arbitrarily small as alpha approaches zero; no sufficiency threshold follows.
+- If the fallback is reverse-diagnostic (delta=mN-mQ>0), support is positive exactly when alpha>delta/(t+delta), neutral at equality, and adverse below the threshold. This is an explicit mechanism by which uncertainty plus an adverse alternative can cancel the informational bearing of the appearance-report.
+- The conditional mode-independence premise is consequential. With distinct alphaQ and alphaN, a neutral fallback m yields difference alphaQ*(t-m)+alphaN*m. A low-sensitivity access-capable mode can be more common in Q states, and the neutral fallback more common in ¬Q states. With alphaQ=3/4, alphaN=1/4, t=1/4 and m=3/4, the likelihoods are 3/8 and 9/16. The neutral-fallback conclusion fails. This is a concrete selection mechanism, not evidence that it actually operates in present reflection.
+
+This is a narrower but more informative rival comparison: an account questioning access must specify whether its alternative is merely noninformative, negatively diagnostic, or subject to a selection mechanism. The first does not suffice for neutralization under the stated equal-mode condition. No claim is made that an actual higher-order skeptic must assign these priors, that all epistemic reasons are likelihood gains, or that the genuine occurrence itself has a probability of being false. The mixture models a subject's *uncertainty about access*, with fallible report states, not a counterexample to an actually available and correctly understood phenomenal instance. The degenerate all-zero likelihood combinations are included in the algebraic sign enumeration but excluded from any posterior claim.
+
+### 4. Reassess the reason bridge, not just belief or warrant
+
+The existing `ReliabilityFrame` uses a basis-specific undercut relation; `WarrantNeedsUndefeatedSupport` is a necessity direction, not sufficiency. `SurvivingBasisGivesReason` (`6b4e3331`) is the open pro tanto calibration. The existing definition of thin F6 is existential and does not require belief, truth of the supported content, sufficient warrant, or an all-preference force condition. In particular a reason need not be factive just because the present proposed ground happens to be so.
+
+Use the following fixed case contrasts before treating any new claim as an argument for F6:
+
+| Subject's epistemic position | Strongest local positive account | Strongest remaining objection |
+| --- | --- | --- |
+| Genuine presentation, understands its existential bearing, no applicable access defeater | The actual presented instance supplies a positive reason for the existential; no general introspective reliability or independent certification premise is needed for this local recognition. | Nihilism denies reason-giving merit even here. An account requiring an additional reflective credential must justify its relevance to the local reason, rather than just to certainty or knowledge. |
+| Genuine access and correct grasp, credible misleading higher-order testimony about one's capacities | A reason for the conclusion can remain while there is a competing reason to doubt the method or withhold full assent. The testimony does not produce an actual present negative instance. | A higher-order internalist can require the subject's warranted recognition of the basis as a condition of epistemic reason status, not merely of sufficient warrant. This is a substantive normative calibration proposal; the information result alone does not decide it. |
+| Only a fallible marker is legitimately accessible, plus higher-order information | Conditional support can persist or be neutralized or reversed, as in the three concrete profiles. F6 does not require a factive source. | Subject may have no positive belief-directed reason for Q when the marker is neutralized; need warrant for the actual channel/selection model and the reason interpretation. |
+| Mere uncertainty about access, with no independently supported adverse calibration | Uncertainty by itself need not cancel support; the mixed-channel comparison exhibits the precise conditional persistence and failure cases. | Lack of entitlement to use any favorable model can still be contested. No stipulated probability licenses an actual attribution. |
+| Global reasonlessness urged as a result of the higher-order inquiry | If the assessor supplies a genuine reason to believe the adverse calibration or the defeating proposition, F6 obtains for that subject and that content, even if no Q reason survives. | The critic may offer only a rule of suspension, a causal explanation, or withhold rational endorsement of their own policy. Existing belief/suspension and nihilism controls leave those positions coherent. |
+
+**A narrower challenge to the restrictive calibration.** Suppose someone proposes that every reason to believe requires a separately justified proposition certifying the reliability of that reason's basis. This is stronger than requiring competent grasp, and stronger than an assessment of adequate warrant for accepting a conclusion. To defend this restriction as rationally warranted by an offered belief-directed reason already grants F6; it cannot be used to establish global absence of all reasons while the defender grants that very attribution. Merely pointing out the need for an independent credential in one particular case does not show that the restriction holds universally. On the other hand, a nonnormative presentation of the policy can remain consistent with global reasonlessness, and an infinitist can accept reasons in an unending structure. Neither an anti-regress argument nor `REGRESS-SCHEMA-PACKAGE` (`74e00870`) automatically refutes the latter: that package concerns explicit well-founded/inductively generated warrant profiles, not a general equivalence of reason and higher-order certification. Do not install the controversial universal prerequisite in the definition of F6. The existing #930 and #1007 distinction between a reason to believe and a reason merely to suspend remains.
+
+The local positive warrant is thus not just the absence of discovered objections. There is an actual-instance-to-existential evidential relationship, and it has a robust conditional comparison even under adverse higher-order reports. The rival's own strongest mechanism is represented rather than dismissed: it may remove access, undermine higher-order entitlement, or neutralize a fallible cue. On the ordinary pro tanto interpretation, it is reasonable to retain a local positive reason judgment in the competent actual inquiry with no defeating access mechanism. The additional claim that higher-order access is mandatory **even for a pro tanto reason** still requires substantive defense. A goal-relative account can grant this reason to a subject actually seeking the answer. A global nihilist can reject the evaluative bridge altogether; it does not follow from the probability calculation that such a position is false. F1 and F6's existing markings remain unchanged.
+
+### 5. Executed reproducible tests
+
+```python
+from fractions import Fraction as F
+from itertools import product
+
+def report_profile(h_q_m, h_n_m):
+    # Q, H (higher-order report), M (first-order marker), multiplicity.
+    return [(True,True,True,h_q_m), (True,True,False,8-h_q_m),
+            (False,True,True,h_n_m), (False,True,False,24-h_n_m),
+            (True,False,True,18), (True,False,False,6),
+            (False,False,True,2), (False,False,False,6)]
+
+def prob(rows, predicate, cond=lambda _: True):
+    denominator = sum(w[-1] for w in rows if cond(w))
+    if not denominator:
+        return None
+    return F(sum(w[-1] for w in rows if cond(w) and predicate(w)), denominator)
+
+Q = lambda w: w[0]
+H = lambda w: w[1]
+M = lambda w: w[2]
+HM = lambda w: H(w) and M(w)
+for name, a, b, expected in [('attenuation',4,6,F(2,5)),
+                             ('neutralization',2,6,F(1,4)),
+                             ('reversal',2,12,F(1,7))]:
+    rows = report_profile(a,b)
+    assert all(w[-1]>0 for w in rows)
+    prior, first, higher, combined = (prob(rows,Q),prob(rows,Q,M),
+                                    prob(rows,Q,H),prob(rows,Q,HM))
+    assert prior == F(1,2) and first > prior and higher == F(1,4)
+    assert combined == expected and combined < prior
+    assert (combined > higher, combined == higher, combined < higher) == {
+        'attenuation':(True,False,False), 'neutralization':(False,True,False),
+        'reversal':(False,False,True)}[name]
+    print(name, prior, first, higher, combined)
+    # Refine the Q,H,M cell with two distinct experienced grounds.
+    # H and M are markers only. Not all Q worlds supply access.
+    refined=[]
+    for q,h,m,n in rows:
+        if q and h and m:
+            refined += [(q,h,m,True,False,1),(q,h,m,False,True,1)]
+            if n>2: refined += [(q,h,m,False,False,n-2)]
+        else: refined += [(q,h,m,False,False,n)]
+    assert prob(refined,Q,HM)==combined
+    A=lambda w: w[3]
+    D=lambda w: w[4]
+    for E in (A,D,lambda w:A(w) or D(w)):
+        assert prob(refined,Q,lambda w:HM(w) and E(w)) == 1
+    assert any(Q(w) and not A(w) and D(w) for w in refined)
+    assert any(not Q(w) and HM(w) for w in refined)
+
+# Seven states (Q,A,D,H); actual A or D entails Q.
+S=((True,True,False,True), (True,False,True,True),
+   (True,False,False,True), (False,False,False,True),
+   (True,True,False,False), (True,False,False,False),
+   (False,False,False,False))
+count=excluded=dogmatic=strict=0
+for weights in product(range(3),repeat=len(S)):
+    if not any(weights): continue
+    rows=[(*w,n) for w,n in zip(S,weights)]
+    for flag in (False,True):
+        cond=lambda w: w[3]==flag
+        pre=prob(rows,Q,cond)
+        if pre is None: continue
+        for E in (lambda w:w[1],lambda w:w[2],lambda w:w[1] or w[2]):
+            post=prob(rows,Q,lambda w:cond(w) and E(w))
+            if post is None:
+                excluded+=1; continue
+            assert post==1
+            if pre==1:
+                dogmatic+=1
+            else:
+                assert post>pre
+                assert prob(rows,E,lambda w:cond(w) and not Q(w))==0
+                assert prob(rows,E,lambda w:cond(w) and Q(w))>0
+                strict+=1
+            count+=1
+assert count==dogmatic+strict
+print('conditional restrictions:',count,'zero mass:',excluded,'already certain:',dogmatic,'strict support:',strict)
+for rq,rh,susp,wq in product((False,True),repeat=4):
+    f6=rq or rh
+    assert not (f6 and not rq and not rh)
+    if rh: assert f6
+    if not rq and not rh and susp: assert not f6
+    if rq and not wq: assert f6
+print('reason/warrant/suspension controls:',16)
+
+# Mixed channel for apparent rather than established access.
+grid=[F(i,8) for i in range(9)]
+strict=neutral=reverse=0
+for alpha,t,mq,mn in product(grid,repeat=4):
+    lq=alpha*t+(1-alpha)*mq
+    ln=(1-alpha)*mn
+    delta=mn-mq
+    assert lq-ln==alpha*t-(1-alpha)*delta
+    if mq==mn and alpha>0 and t>0:
+        assert lq>ln
+    if delta>0 and t+delta>0:
+        assert (lq>ln)==(alpha>delta/(t+delta))
+        assert (lq==ln)==(alpha==delta/(t+delta))
+    if lq>ln: strict+=1
+    elif lq==ln: neutral+=1
+    else: reverse+=1
+assert strict+neutral+reverse==9**4
+print('mixed-channel controls:',strict,neutral,reverse)
+a_q,a_n,t,m=F(3,4),F(1,4),F(1,4),F(3,4)
+lq=a_q*t+(1-a_q)*m; ln=(1-a_n)*m
+assert (lq,ln)==(F(3,8),F(9,16)) and lq<ln
+print('dependent-mode control:',lq,ln)
+```
+
+Executed in the container with Python exact fractions: the three reported posteriors passed; 7,776 positive-mass conditioning comparisons passed (5,184 strict gains, 2,592 saturated at one; 5,022 joint zero-mass cases recorded separately, not counted as conditioning); 16 structural reason/warrant/suspension assignments and 6,561 mixed-channel likelihood-sign comparisons passed (4,871 positive, 305 equal, 1,385 negative; signs alone do not certify a defined posterior when both likelihoods vanish). The explicit dependent-mode counterexample passed. These checks support the displayed arithmetic and controls, not actual normative attributions, exhaustive rival coverage or Lean verification.
+
+### 6. Handoff: the next crux after informational defeat
+
+The earlier diagnosis of no discovered mechanism defeating the *bare occurrence's informational bearing while retaining the actual presented instance* is retained within its scope. Revise the stronger informal reading that no higher-order objection can matter when the original episode is real: misleading higher-order evidence can undermine entitlement or access without making the original state false. We have now given that rival a positive model and separated three kinds of informational defeat. A theory that demands higher-order credentialing even for a pro tanto reason remains a live restrictive normative alternative, not a demonstrated rebuttal to the present local merit judgment. The narrower mathematical claim is that H cannot make actual E favor ¬Q in the specified positive-mass event comparison while retaining E⊆Q. The mixed-channel result extends the investigation to fallible apparent access with explicit conditions, without assuming epistemic transparency.
+
+**Next discriminating proposition:** does genuine epistemic support require the subject to have a further justified belief certifying the support relation, even when the subject directly apprehends the relevant occurrence and grasps its bearing? Compare the actual directly recognized instance against a concrete misleading higher-order assessor. Investigate the weakest possible credential principle, whether an already understood rule requires further independent application credentials, and whether the critic who imposes the credential requirement can coherently give a belief-directed reason for accepting it while denying all reasons. Reuse `LOGIC-JUSTIFICATION-INTROSPECTION` and the existing regress and rational-basing families; no automatic epistemic-to-ontic PSR transfer. Do not re-prove a general regress theorem or treat a surviving infinitist as reasonless. If the critic grants ordinary local epistemic reasons but disputes force for indifferent subjects, reallocate that stronger question to the existing #930 investigation.
+
+The downstream paths remain those already named: `6b4e3331` or the local ordinary-role/reverse-presentation application to F6, then `b50727e1` with `ada25623` and `0436de86` to concrete population `56f68b40` and `72391d4d`. The broader phenomenal occurrence interpretation is not a premise of the thought-specific bearer consumer. No new graph registrations, claims, definitions, floor markings or root discharge. The fourth checkpoint is explicitly unreviewed. No independent semantic challenger or prepared clone was available; local `git ls-remote` failed DNS and Lean/Lake/Cargo are absent. Run the existing preflight, including `truth context LOGIC-CONTRASTIVE-WORLDVIEW`, `truth context LOGIC-JUSTIFICATION-INTROSPECTION`, `truth context REGRESS-SCHEMA-PACKAGE`, and `truth novelty "higher-order report defeat versus directly presented existential and partial access"`, before any registration. Independent challenge should test the same subject and evidence across the profiles, the mixed-channel independence premise, the zero-mass boundary and the difference between support and normative force. Keep #1995 draft; no merge.
