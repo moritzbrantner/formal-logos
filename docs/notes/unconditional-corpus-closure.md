@@ -4,6 +4,36 @@ Continues #497, #1007, #1565, #1926, #1987 and #1989. Initial baseline:
 `8a8dcdbed7c2c1501b74c9ae8aa408ec5fa25c26`. Draft research checkpoint; no floor marking, relation, proof,
 definition, or closure rule is changed here. No new status registry.
 
+## What reaches the God-existence stage
+
+**Actual inquiry supports a local starting point.** Someone who is undergoing a conscious question has first-person warrant that an episode occurs, even if its represented object is fictitious. Actual assertion plus cognitive realization supplies actual thought in the registered Cogito argument. A thin reason for belief (F6) supplies a different entry to the same population premise when its subject is represented as present and that representation carries concrete existence at the selected world. Merely entertaining the descriptions supplies neither witness. Identifying a distinct thinker, a universal act-to-being law or accessible absence of this very individual would each require further evidence. The positive judgment here is local and defeasible. A merely reported episode or an occurrence without grasp of the evidential content cannot do the work of the corresponding first-person or belief-directed application. [Cogito and esse](cogito-esse-1113.md) · [ontological-floor investigation, #1994](https://github.com/moritzbrantner/truth-core/pull/1994) · [F6-to-population result](../../corpus/results/b50727e1-04de-488c-819f-2d5b9993c485.json) · [inquiry investigation, #1995](https://github.com/moritzbrantner/truth-core/pull/1995)
+
+**The closure calculation reaches substantive prerequisites but stops before a divine witness.** With floor markings removed, the canonical stage-one backward slice contains exactly four established statements. They are F1 in its case-predicate interpretation (`c425f0c5`), the conditional immensity result (`15df9d91`), and two conditional finite-transfer constraints (`34f9ad6f`, `c9545c29`). F1 is defended by refutation of its recorded rival. The immensity theorem requires the attribute package, and the transfer results require a matching transfer profile. Each is usable within its stated interpretation. The stage-one target `8626f8a5` has status `proved` in every canonical run because it has conditional derivations. It is absent from every established set below, as are thought occurrence, actual concrete population, necessary concrete population and the Catholicism root.
+
+Admitting the criteria-met floor adds EM and the first-mover existence and identity *disjunctions* (`ca075552`, `ddf12c91`) to that stage-one intersection. The recorded policy additionally admits motion F4, F6 and the productive-concreteness commitment (`e27489c3`) with its capacity and activity projections (`61b6e188`, `bc2af29f`). F3 is met under the recorded policy but lies outside the stage-one backward slice. These distinctions explain what the floor actually contributes. The existence disjunction supplies no first mover, and F6 alone supplies no concrete epistemic subject on the adopted ontic interpretation. Population is an actual input to [the direct-esse God-existence route](../../corpus/arguments/direct-esse-root-god-existence.json). Its other inputs still include principles governing actual esse causation, maximality and the divine identification.
+
+**What changes the assessment.** The two Lean applications below narrow the question to the interpretation of the witness. Actual population at a self-accessible world suffices for possible population in the empty-history argument. Actual population and explicit EM yield necessary **or** contingent concrete population. Holding fixed an actual bearer while varying only its states cannot supply its accessible absence. Conversely, even a necessary bearer has yet to be shown underived, unique or divine. In the existing plural-root control, a well-founded connected support graph has two rank-zero sources whose joint contribution never joins upstream. The live discriminating question is whether actual immediate co-suppliers trace to a common upstream source under that same relation. Additional examples of shared effects alone do not answer it. The contingency restrictions and the confluence test bear on different premises and may be combined only on matching profiles. [Confluence comparison](part-free-plurality.md#when-immediate-co-suppliers-suffice-for-a-common-source) · [plural-root attempt](../../corpus/attempts/plural-root-confluence.json)
+
+### Corpus-wide replay
+
+The current corpus is main `e0ef62da6`, audited on clean merged head `e1163a8ff5b680358749113667c93280ef616848`. The complete export covers 5,074 statements and 2,570 result-backed arguments. Each result has recorded status `solution-present`. Support-graph SHA-256 is `4a48d0181f245e1b434ac70babc598f6720a48de94210f1ebbcd3fa52d1262d4`, and frontier input identity is `fnv1a64:5758b8433be6e43a`. The table reports sizes of reproducible statement-ID sets including supplied seeds. A zero graph input leaves the theorem's binders, antecedents, Lean logic and definitions in place.
+
+| External floor basis | All result-backed positive rules | Screened positive rules | Canonical established |
+| --- | ---: | ---: | ---: |
+| No markings, no supplied statement | 958 | 924 | 960 |
+| Remove explicit approvals, retain criteria-met F1 and legacy EM | 1,024 | 959 | 1,024 |
+| Recorded met floor, eight statements | 1,037 | 970 | 1,037 |
+
+The first two columns use the maintained forward oracle. The screen retains 2,139 result-backed rules after removing commitment-bearing arguments and canonically flagged transcriptions. An unflagged result can still be a theorem *about* a model or a conditional schema. The canonical column runs the existing Rust frontier, including counted refutations, defense against all recorded alternatives, strength and registered deductions. With no markings it adds exactly F1 and its downstream adopted-potency nonoverlap consequence (`ef721eab`) to the unfiltered positive closure. With floor seeds the unfiltered and canonical established **sets** coincide on these inputs. This agreement is a measured property of this revision. A closed statement, a status label, and membership in the established set answer different questions.
+
+All eight recorded markings have `met=true`. Seven carry explicit approval. Removing those approvals leaves F1's retorsion criterion satisfied and EM admitted under its legacy basis, which returns no criterion objections. The weak and strong negation closures, F6 and productive concreteness each have a recorded denying rival. F3 lacks a justification claim stating it and has an unrefuted skeptical rival. F4 also has unrefuted skeptical rivals. The fixture recomputes those criteria at the new fixed point. Neither an empty list of criterion reasons for legacy EM nor a registered contrary to F6 settles the independent warrant of either.
+
+**Cycles.** With all result-backed rules there are 33 cyclic components in the premise-to-conclusion projection. Eight have no rule entering from wholly outside, 24 have outside rules whose complete inputs never become available even under the recorded floor, and one has actual zero-input entry. In the screened graph the corresponding groups are seven, twelve and one. The reached component is the two-node truth cycle described below. The modal T-schema/reflexivity pair (`cb456382`, `806c3f89`) illustrates a screened cycle without an entry. The screened component containing God-existence, necessary concrete existence and the unique actual root has 12 members and 50 outside rules. For example, entry `05541bd2` requires both actual-root identity and the actual-root reading of the De ente source (`49fdec01`, `ce7edf53`). No member is canonically established. Restoring the screened-out registrations expands the all-rule component containing God-existence to 26 members. Its projected paths record dependence, and none of its members fires even with the recorded floor in the all-rule positive closure.
+
+**Direct assumption comparisons.** Admitting actual thought or actual concrete population singly to the screened graph adds just the supplied statement to its empty-input set. Supplying F6 together with its two representation premises (`ada25623`, `0436de86`) adds actual population and the two thin denial exclusions. Supplying actual concrete contingency (`c94b5446`) adds actual noncollapse, denial of universal concrete necessity and the strict act-token exclusion. Restoring declared transcription `32c7d630` also projects population from contingency. None of these conditional comparisons chooses a floor policy. The empty-history possible-population premise (`5a12e877`) has no result-backed producer and its necessary-being conclusion (`c778a6ca`) is outside the current stage-one backward slice. The new-edge semantics preflight flags both NECESSARY_11 and NECESSARY_2 on the target record itself. Its application below is a mathematical connection to a necessary-being investigation. The direct-esse population consumer already has the indicated graph connection to stage one.
+
+The three inventory tables also replay against the **original** `8a8dcdbed7c2c1501b74c9ae8aa408ec5fa25c26` blobs. Matching conclusion, argument, result and complete premise set for each of the 83 distinct rules reproduces 41 conclusions from empty inputs, 47 beyond the eight seeds, and 42 beyond the seeds using the 74 rules whose result lacks a declared transcription. Those figures describe that fixed sample. The corpus-wide calculations above use the current revision.
+
 ## Question and evidence boundary
 
 Which exact existing propositions follow without disputed substantive
@@ -53,27 +83,6 @@ implication hyperedge fires only when every required premise has a witness.
   actual truth of the model's commitments. A universal conditional can itself
   be logically established while its consequent at an actual witness is open.
 
-## Reproduction and completion boundary
-
-In a prepared checkout, run the existing worker preflight and build, then
-`target/release/truth --json frontier` (no `--reaching-root` or `--routes`),
-`target/release/truth --json orphans` for the default root and for
-`--frontier-root STMT-GOD-EXISTS`. Use the complete statement inventory rather
-than limiting the audit to either backward slice. Preserve input identity,
-result and argument IDs, precise Lean types and every required premise.
-Use the existing support-graph export for focused backward slices and
-`truth context`, `truth dossier`, `truth semantics` for application checks.
-Compare `established_statements` with met floor bases and a zero-input
-least-fixed-point computation, explicitly separating consistency witnesses,
-transcriptions and actual application conditions.
-
-The current connector environment can read and write individual GitHub files
-but cannot check out the corpus (network DNS fails) or run its Rust/Lean
-verification. This initial note is not the exhaustive computation, and no
-numerical corpus result or new verified argument is asserted. Complete the
-full reproducible projection and semantic review before relying on this
-audit for new premise establishment. Independent semantic challenge pending.
-
 ## Pinned record audit (checkpoint 2)
 
 At the initial base, the Git tree lists 5,074 entries under
@@ -83,9 +92,7 @@ not a proof or establishment count. Reading thousands of individual blobs
 through the connector is not a substitute for a complete checked-out graph.
 The eight floor-marked records below were found by indexed search for
 `self_evident` in the statements directory and all eight blobs were read at
-the pinned base. The authoritative `floor[].met` and `criterion_reasons`
-must still be exported from the current CLI; a marking alone is not evidence
-that every criterion is met. No current floor is changed.
+the pinned base. The current CLI evaluation of each marking is reported above.
 
 | Exact statement ID | Recorded basis | Warrant / justification | Scope, live objection and use |
 | --- | --- | --- | --- |
@@ -104,9 +111,8 @@ Read the following fourteen argument and result records directly at the
 baseline, confirming argument/result correspondence and each result's
 `solution-present` status. The table records the **conclusion statement**,
 argument and result UUIDs separately. These are recorded results, not new
-kernel/Comparator/NanoDa checks; the full canonical transcription heuristic,
-actual proof axiom audit, sense/dossier checks and semantic review remain
-pending. For this selected calculation, include each implication as
+kernel/Comparator/NanoDa checks; the corpus-wide screen above applies the canonical transcription heuristic.
+The sample itself supplies no new axiom audit or independent semantic review. For this selected calculation, include each implication as
 registered, not as a promotion to philosophical truth. The least fixed
 point with no input gives eight conclusion IDs; with the eight recorded
 floor markings hypothetically supplied as seeds, it gives ten new IDs
@@ -141,7 +147,7 @@ world's concrete individual. The three added seeds are hypothetical for
 this computation, not new floor judgments. See the existing #1979/#1980
 research before extending this route.
 
-### Whole-corpus reproduction (read-only, pending full run)
+### Reproducing the corpus-wide audit
 
 Use the existing Rust CLI and the maintained forward-chaining oracle
 `scripts/support_formula.py` rather than creating a new closure authority.
@@ -151,7 +157,6 @@ the latter emits only the routes object. Store disposable exports under
 `target/`, not a checked-in truth-status register.
 
 ```sh
-python3 scripts/worker_env.py --check
 python3 scripts/worker_env.py -- cargo build --locked --release -p truth
 target/release/truth check
 mkdir -p target/unconditional-audit
@@ -162,9 +167,8 @@ target/release/truth --json orphans --frontier-root STMT-GOD-EXISTS > target/unc
 
 The existing support-graph exporter accepts any number of statement IDs.
 Export all statement IDs at once on Linux (not merely its default two
-targets). The script below is a proposed reproducible projection, to be
-executed locally; it neither writes corpus records nor changes frontier
-rules. It uses the existing pinned analysis dependencies and computes
+targets). The following projection ran on the merged corpus. Its outputs stay under
+`target/unconditional-audit/`. It uses the existing pinned analysis dependencies and computes
 the **direct implication** closure separately from canonical
 `established_statements` (which includes floor, recorded refutations and
 strength). Status-qualified, non-transcription, non-model rules are a
@@ -301,29 +305,56 @@ report = {
 PY
 ```
 
-Review every entry in the zero-input set before interpreting it as a
-substantive proposition. Preserve theorem-internal antecedents, axiom
-footprints, consistency witnesses and the exact scope of intended
-interpretations. Run `truth context ARGUMENT-ID`, `truth dossier STMT-ID`,
-`truth brief STMT-ID`, `truth semantics STMT-ID` and the semantic preflight
-for any proposed graft. The generated inventory links all registered supporting and consuming rules
-and separately records rules eligible for the direct-implication diagnostic.
-An eligible support in the completed fixed point is not necessarily an
-acyclic derivation witness on its own: replay from the selected seeds to
-identify a firing order. Semantic review is intentionally pending.
-Prioritize zero-input results that are disconnected under both root views,
-then actual observation / first-person and necessary inquiry applications
-with selected witnesses; separately compare common ground for each named
-rival bundle. A proof that depends on a conclusion it purports to defend
-must not count as establishing that conclusion. Do not promote an
-`alternative_to` set to an exhaustive partition unless certified.
+Replay the canonical policy comparison with the same input records and
+transcription flags. The unchanged fixture must match the real frontier
+before interpreting either counterfactual. Record IDs, rather than
+equal totals, are the comparison.
 
-Run the repository's normal verification and review gates for any later
-formal changes, and report the computed
-`target/release/truth frontier-diff --base <merge-base>` for both root
-targets. The current note is not a new theorem, floor approval or completed
-corpus-wide semantic audit.
+```sh
+python3 - <<'PYTHON'
+import copy
+import json
+import subprocess
+from pathlib import Path
 
+out = Path("target/unconditional-audit")
+frontier = json.loads((out / "frontier.json").read_text())
+base = {}
+for kind in ("statements", "arguments", "results", "relations", "claims", "inferences"):
+    files = sorted((Path("corpus") / kind).glob("*.json"))
+    base[kind] = [json.loads(path.read_text()) for path in files]
+base["transcription_flags"] = frontier["transcription_flags"]
+
+for policy in ("recorded", "criteria", "no-markings"):
+    fixture = copy.deepcopy(base)
+    for statement in fixture["statements"]:
+        marking = statement.get("self_evident")
+        if marking and policy == "criteria":
+            marking.pop("owner_approval", None)
+        if policy == "no-markings":
+            statement.pop("self_evident", None)
+    command = ["target/release/truth", "--json", "frontier", "--fixture", "-",
+               "--frontier-root", frontier["root"]]
+    raw = subprocess.check_output(command, input=json.dumps(fixture), text=True)
+    report = json.loads(raw)
+    if policy == "recorded":
+        for key in ("established_statements", "closed_statements", "refuted_statements",
+                    "statement_statuses", "floor"):
+            assert report[key] == frontier[key], key
+    (out / (policy + ".json")).write_text(raw)
+    print(policy, len(report["established_statements"]))
+PYTHON
+```
+
+For each policy file, use `forward_closure([f["statement_id"] for f in
+report["floor"] if f["met"]], graph["rules"])` for the unfiltered-positive
+column; substitute the screened `rules` for the adjacent column. The SCC
+projection above can likewise be run with `graph["rules"]` for the
+all-rule comparison. A projected outside entry is a rule whose conclusion
+belongs to the component and all premises lie outside. A firing entry
+also needs all those premises in the selected least fixed point. A
+final-set list of eligible supports may include cycles; the oracle starts
+from the specified seeds and zero-premise conclusions only.
 
 ## Checkpoint 3: logical witnesses, semantic transfer and SCC inspection
 
@@ -387,7 +418,7 @@ the selected registered rules give:
 
 These are counts of this induced sample, not whole-corpus counts, philosophical
 establishment, fresh verification or the canonical frontier's computed
-closure. Full heuristic transcription filtering remains pending. The
+closure. The corpus-wide screen above also uses heuristic flags. The
 empty-input conclusions include the existence of finite control models
 and universal conditional laws; those must retain their types. A
 `commitment_statement_ids` bundle is not automatically a new truth seed.
@@ -505,13 +536,6 @@ justified same-content actual witness, or a proof in the already fixed
 truth/episode semantics that transfers that witness without packing the
 target into a premise. Independent semantic challenge remains pending.
 
-The working environment still cannot resolve github.com for a local
-checkout, and the public deployed graph manifest was inaccessible to
-the retrieval tool. The complete canonical closure, verified current
-floor, all-corpus SCCs and application review still require the local
-replay. No corpus records or floor markings are changed in this checkpoint.
-
-
 ## Checkpoint 4: actuality, modal certificates and concrete contingency
 
 Pinned to the same baseline as checkpoints 2–3. The current main had moved
@@ -585,7 +609,7 @@ Concrete and actual standpoint w, choose w itself as the possibility
 witness. No new possible history, S5, causal production, or actual
 contingency principle is required.
 
-Uncompiled local candidate, using only existing definitions:
+Locally elaborated application using the existing definitions (zero axioms):
 
 ```lean
 import TruthCore.Explanation.EmptyHistoryCausalAvailability
@@ -603,13 +627,30 @@ example {W B F : Type} (A : Arena W B F)
   ⟨w, hReflexive, hActual⟩
 ```
 
+The composed application also elaborates against the existing
+[Solution](../../TruthCore/Results/Explanation/EmptyHistoryCausalAvailability/Solution.lean).
+Give the displayed example the local name `possibleFromActual`, import the
+Solution, and replace the final `hPositive` argument of `necessaryBeing`
+with `(possibleFromActual A Concrete w hActual hReflexive)`. Lean 4.35.0
+reports no axioms for either this composition or the modal fork below.
+The composition still takes EM as a hypothesis. Its output forgets the
+causal role and concreteness of the witness; the existing helper
+`necessaryConcrete` preserves concreteness but still gives a cause of
+the negative fact only in its caused-fact branch.
+
 The exact definition is an existential over accessible worlds with the
-same `InhabitedConcreteAt` predicate. Current-main indexed search found
-the target ID only in the empty-history consumer and the Lean declaration
-in that module, its result and its count control; this is not exhaustive
-novelty evidence. Run the normal `truth related`, `truth dossier`,
-`truth novelty`, and `truth semantics` checks on the three full IDs
-before registering a graft. This is a witness instantiation and may be
+same `InhabitedConcreteAt` predicate. The complete result-backed graph has no rule concluding
+`5a12e877`. The empty-history result touches the God-existence backward
+slice at reflexivity, Euclidean access and EM. Its conclusion is outside
+that slice.
+
+The preflight `truth semantics --premise 56f68b40-9737-59a0-8cac-5610980a1547
+--premise 2b20b5af-d653-56ba-8001-35903fb3d1ea --conclusion
+5a12e877-ef76-5763-b149-1fe063f8384e` reports unbridged NECESSARY_11
+and NECESSARY_2, both on the conclusion. The displayed term only uses
+accessibility and population. Registering this as a new edge would require
+a defensible single-sense formulation or an explicit bridge. The existing
+consumer's registration cannot supply that semantic judgment. This is a witness instantiation and may be
 classified as a transcription, not a substantive new theorem or
 independent metaphysical warrant.
 
@@ -733,12 +774,6 @@ the universal act-to-being principle. Coordinate these tests with the
 existing actuality and contingency research, not an overlapping
 formalization. No new floor status or corpus record has been added.
 
-The environment was rechecked: `git ls-remote` failed with
-"Could not resolve host: github.com", and neither cargo nor lake was
-available on PATH. Full local closure, heuristic transcription/axiom
-audit, local compilation of the example, and independent semantic
-challenge remain pending.
-
 ### Exact added rule inventory and reproduction
 
 All 42 pairs below were read at the pinned baseline, with matching argument/result
@@ -850,7 +885,7 @@ individuals. The disjunction is conditional on the selected actual
 population and the explicit logic; it is not a theorem establishing
 a necessary individual unconditionally.
 
-Uncompiled example for verification (no registered edge):
+Locally elaborated application (zero axioms, no registered edge):
 
 ```lean
 import TruthCore.Causality.ContingentBeingNode
@@ -921,9 +956,9 @@ for bits in product((False, True), repeat=10):
 assert cases == {(True, False), (False, True), (True, True)}
 ```
 
-This is a selected follow-up outside the 83-rule sample. The full
-corpus novelty/dossier check and independent semantic challenge are
-still required. If already supplied by another registered consequence,
-reuse that record; otherwise consider registering the direct
-conditional implications only if they have a substantive consumer.
-Do not add a new registry or promote either horn to the floor.
+These applications fall outside the historical sample. The two candidate
+horns can coexist. Neither disjunct can be entered separately as an
+established statement. Formal application has been checked locally; source
+attribution, a new registered derivation and a real-world modal
+interpretation are separate tasks. Independent semantic challenge should
+concentrate on the first-person and modal application judgments above.
