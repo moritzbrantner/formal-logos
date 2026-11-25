@@ -24,7 +24,8 @@
     "af233664-eb54-4e03-b828-4773fe75e881",
     "3c795147-96e9-4c19-87f6-e0c8bb5787bb",
     "fb8fba1e-a8ea-4323-a0ab-e17b7fdff7bc",
-    "27599762-5de1-4a3e-96d2-ffe77346e6d2"
+    "27599762-5de1-4a3e-96d2-ffe77346e6d2",
+    "PR-1774"
   ],
   "blocker": "Not done:\n- The respect-sense uses e078f07b, 6ca87431 and a4d3261a keep PRIOR_1. A respect-indexed relation (priority in act in respect r) is not introduced. The respect-free PRIOR_1 still meets the slice-1 reciprocity certificates.\n- The bridge 954fe018 is open; given c51a07a1 it is the content of 74eb9113, so the pure-act crux is unchanged in content. Its strongest positive warrant on file is n. 18, omnia priora aliquo modo possunt esse sine posterioribus; aliquo modo suggests a single unindexed CanBeWithout is too coarse.\n- An alternative bridge was not formalized: a PRIOR_4 reading of act's priority ('whatever is in POTENCY_1 in r has something in act in r prior to it in being'). It would make the bridge unnecessary, but it faces reciprocal cross-respect moving.\n- Spine II's 931319ea (47aff057 with PRIOR_1) and the order statements 7ad36aca and 32d77f18 have no PRIOR_4 siblings yet.\nNext tests:\n- Test the n. 18 reduction with a CanBeWithout indexed by mode or respect. In the firstWayDoesNotYieldPureAct model of afd52425 the bridge holds only if some other being is PRIOR_4 to the first mover; with c51a07a1 it excludes the model.\n- Re-bind spine II to PRIOR_4."
 }

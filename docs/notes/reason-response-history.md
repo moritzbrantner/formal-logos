@@ -3,7 +3,7 @@
 This analyst reconstruction belongs to #1082 under #945, which remains open.
 Attribution is deferred. It does not introduce a theory of free will. The target
 is a specific inference: does the entire present reason-response function fix
-which earlier input can change the action by changing acquisition?
+which earlier input can change the action by changing acquisition? [Research record](../../corpus/attempts/reason-response-history.json)
 
 ## Reuse and the existing boundaries
 
@@ -551,3 +551,8 @@ exploration map marks these edges mapped pending that certification. Claim/type
 self-sweep: every port consequence matches its wrapper and frozen Challenge;
 no actual understanding, historical ownership, freedom or physicalist defeat is
 advertised. The only new normative bridge is explicitly defeasible and unproved.
+
+## Research attempts citing this note
+
+- [Agency history: effective revision, echoed endorsement and the installed-standards gap](../../corpus/attempts/55bbe842-3d34-4b1f-a886-9fe68899f624.json)
+- [Read the complete public free-will article and full KODJicKd5ps English auto captions](../../corpus/attempts/carneades-choice-context.json)

@@ -6,7 +6,7 @@ The existing corpus puts F6 on routes to `STMT-CATHOLICISM-TRUE`. The results
 below assess challenges to reasons or reasoning. Only case 9 uses F6 itself as
 a theorem premise. Each further link to F6 requires the specified bridge.
 These are analyst readings. Existing source records retain their narrower
-attributions.
+attributions. [Research record](../../corpus/attempts/7a269548-3bc6-4aa8-af8e-f4397ece9448.json)
 
 | Case | Conditional consequence or exact reuse | Surviving alternative and condition for reassessment |
 | --- | --- | --- |
@@ -378,7 +378,7 @@ without establishing every instance or eliminating the direct prima facie route.
   to q.75's intellectual exercise and then to its bodily-sharing premise also
   remains explicit work.
 - **#1459:** knowing a content and possessing a capacity do not yet show that
-  the content guided a particular effect. That is a useful comparison for the
+  the content guided a particular effect. The [fixed-policy case](explanatory-symmetry-742.md#what-has-been-learned-about-the-agenda) asks which route produced a tied choice. That is a useful comparison for the
   proposed transition from divine knowledge of goods to actual willing. Applying
   it to divine action requires an appropriate account of intentional exercise;
   temporal deliberation, learned capacities and retraction tests from human
@@ -405,3 +405,7 @@ pending the unavailable Lean/verifier environment, and would still leave that
 application burden. The ordinary prima facie case remains available with these
 revision conditions. No current formal root premise is added, removed or
 discharged by this note and its attempt record.
+
+## Research attempts citing this note
+
+- [Actual content-sensitive exercise as a rational-basing account](../../corpus/attempts/fe2eb414-fe03-4768-831b-635d92062d1b.json)

@@ -79,8 +79,9 @@ inequality or timeless recognition introduced. Exact removable missing-declarati
 
 ## Delivered interpretation after owner decision
 
-`TruthCore.Causality.EndlessTemporalDuration.FutureUnending` binds both the
-existing sense and definition directly. Its type is
+[`TruthCore.Causality.EndlessTemporalDuration.FutureUnending`](../../TruthCore/Causality/EndlessTemporalDuration.lean)
+binds the [eternity sense](../disambiguations/eternity-and-temporal-perpetuity.json)
+and its [definition](endless-temporal-duration.json) directly. Its type is
 `{Time : Type u} -> [Preorder Time] -> (Time -> Prop) -> Prop`, with body
 `(exists t, present t) and forall t, present t -> exists u, t < u and present u`.
 The supplied preorder makes strict comparison irreflexive and transitive;

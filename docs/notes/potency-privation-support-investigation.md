@@ -388,3 +388,8 @@ Checks performed for this note and its two attempts:
   reported no new or changed stating claim. Diff hygiene is checked before
   handoff. No new Lean theorem, source-claim attribution or premise-closure
   change is claimed.
+
+## Research attempts citing this note
+
+- [Potency under privation gains an exact adopted-sense support bridge](../../corpus/attempts/0626cd3a-7323-4820-aa75-bb4ca31e72f5.json)
+- [Privation as apt-subject absence gains direct source and conceptual support](../../corpus/attempts/0b9378da-6497-47f7-ab06-4b37382dd89b.json)

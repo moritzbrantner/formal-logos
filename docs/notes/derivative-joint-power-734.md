@@ -8,7 +8,7 @@ complete group and existential graph grounding of every event do not provide
 an inductive derivation supplying every contributor. This does not refute the
 strongest globally coherent/selected rival. The actual exercise-to-supply and
 physical-to-existential bridges remain **OPEN**. Intended and actual root delta:
-zero premises added, removed or discharged.
+zero premises added, removed or discharged. [Research record](../../corpus/attempts/derivative-joint-power-734.json)
 
 ## One context and the meanings being compared
 

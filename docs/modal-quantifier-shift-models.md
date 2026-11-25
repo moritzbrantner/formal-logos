@@ -439,3 +439,10 @@ open premises remain 90 (30 bare, 18 supported, 42 stated); cheapest route
 remains cost 31. No existing root premise is added, removed, relabeled or
 closed. The new off-root theorem characterizes conditional rule policies;
 #467 and #464 are not closed by it.
+
+## Research attempts citing this note
+
+- [Certified modal variable effects and modal fixed effect both have a necessarily existing source…](../corpus/attempts/modal-variable-effect-shift.json)
+- [Certified psr worldwise alternating satisfies the existing existence-PSR and soundness conditions…](../corpus/attempts/modal-psr-stable-reason-shift.json)
+- [Related/dossier and exact theorem inventory preceded the bounded analyst formalization](../corpus/attempts/designated-necessitation-1049.json)
+- [Reused #481 alternating countermodel and #599 fixed-roster actualist membership convention rather…](../corpus/attempts/actual-reason-anchor-overlap.json)

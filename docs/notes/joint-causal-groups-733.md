@@ -2,7 +2,7 @@
 
 This is an analyst-defined vertical slice for #613/#311 and a reusable input
 for #734/#735. It does not deliver those later investigations or establish an
-actual complete ground. The premise delta is zero.
+actual complete ground. The premise delta is zero. [Research record](../../corpus/attempts/joint-causal-groups-733.json)
 
 ## Meaning, real examples, and limits
 

@@ -142,3 +142,9 @@ Principle for reassembly: prove the implication; give its *smallest* explicit
 premise set; search for omission countermodels; then separately justify the
 premises. Every validated node is reusable by later arguments, and every
 unproved metaphysical bridge remains visible at the frontier.
+
+## Research attempts citing this note
+
+- [At a populated model world, well-founded causal predecessors yield an actual existent with no…](../corpus/attempts/psr-well-founded-explained-source.json)
+- [Formal infinite Nat reverse-successor interpretation satisfies a local source in every finite…](../corpus/attempts/finite-local-causal-sources-do-not-globalize.json)
+- [Mathlib finite union plus accessibility induction proves finite distinct ancestry from…](../corpus/attempts/causal-finite-branching-bridge.json)

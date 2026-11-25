@@ -1,6 +1,6 @@
 # Necessary existence in the Scott and Gödel 1970 embeddings
 
-Working comparison for [existence phase B, #274](https://github.com/moritzbrantner/truth-core/issues/274). Source witnesses are the pinned AFP [Scott `GoedelGod.thy`](../corpus/passages/afp-goedelgod.json) and [Gödel 1970 `GoedelVariantHOML1.thy`](../corpus/passages/afp-notes-goedel-homl1.json). They document *formalizations*, not unpinned original manuscript intentions.
+Working comparison for [existence phase B, #274](https://github.com/moritzbrantner/truth-core/issues/274). Source witnesses are the pinned AFP [Scott `GoedelGod.thy`](../corpus/passages/afp-goedelgod.json) and [Gödel 1970 `GoedelVariantHOML1.thy`](../corpus/passages/afp-notes-goedel-homl1.json). They document *formalizations*, not unpinned original manuscript intentions. [Original PR #324](https://github.com/moritzbrantner/formal-logos/pull/324)
 
 ## Separately established results
 

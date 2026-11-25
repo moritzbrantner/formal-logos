@@ -13,7 +13,10 @@
   "evidence": [
     "daa271be-cd04-5e03-bd3e-c7bad5c2eff3",
     "1b478d58-8b1e-448b-85f2-5953c71e84e9",
-    "49e1d2c6-9546-492f-a687-8a4fc6c707ce"
+    "49e1d2c6-9546-492f-a687-8a4fc6c707ce",
+    "PR-1297",
+    "PR-1312",
+    "PR-1334"
   ],
   "label": "Q3a4 essential efficient sufficiency and whole-series reason declaration blockers"
 }

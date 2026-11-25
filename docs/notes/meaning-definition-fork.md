@@ -3,7 +3,7 @@
 This analyst batch makes competing meaning accounts independently available as
 propositions, rather than asking the owner to choose a sense. Attribution is
 deferred. It reuses `Verificationism.Language`, `Frame`, the three existing
-verifiability criteria, and the exact existing V2 and V3 results.
+verifiability criteria, and the exact existing V2 and V3 results. [Research record](../../corpus/attempts/meaning-definition-fork-audit.json)
 
 ## What is already encoded
 
@@ -98,3 +98,7 @@ conditionally studied without independently settling their warrant first.
 Admissibility, named philosophical exhaustion and real cognitive significance
 remain explicit research gaps. Historical source authentication remains a
 separate deferred question and does not block these conditional results.
+
+## Research attempts citing this note
+
+- [Existing generic results cover the conditional inference and failure without scope](../../corpus/attempts/ayer-verification-boundary.json)

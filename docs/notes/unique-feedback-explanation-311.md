@@ -7,7 +7,7 @@ with the other held true. These are logical constraints. They are not
 world-local causal edges, temporal evolution, pure copying of plans, or
 borrowed instrumental powers. Sensitivity is a truth-table property, not
 an assertion that each single-bit perturbation at the solution changes
-both outputs.
+both outputs. [Research record](../../corpus/attempts/unique-feedback-explanation.json)
 
 | a | b | First equation | Second equation |
 |---|---|---|---|
@@ -2565,7 +2565,7 @@ underived source exists necessarily; **C3**, the source is one.
 - **C1 does not give C2.** CCR, the common cause and every control above are
   modality-free; an actual root is not an all-world underived being. The
   existing necessity steps (45988f36; c66eead8 and 8e3b89c9 via attempt
-  a1b799fe) and the open root-to-ground bridge cb1cdea9 of #1616 remain
+  [a1b799fe](../../corpus/attempts/a1b799fe-f75c-4e3e-994a-f4bb834f3ac7.json)) and the open root-to-ground bridge cb1cdea9 of #1616 remain
   separate.
 - **C2 strengthens one warrant for C1, not the other.** Within the
   `RegressDomains` activation-law model, the selection point discriminates
@@ -3070,10 +3070,10 @@ registered results, not these unregistered helpers. Full-library
 verification is separately tracked by PR CI. PR #1878 has meanwhile merged
 at `68619469fb7aba91f0818b3f69e52fdb7eb18624`.
 
-**Current scoped assessment:** `corpus/attempts/6eb9024b-2310-42b1-bc4e-e75031ca2a54.json`
+**Current scoped assessment:** [`corpus/attempts/6eb9024b-2310-42b1-bc4e-e75031ca2a54.json`](../../corpus/attempts/6eb9024b-2310-42b1-bc4e-e75031ca2a54.json)
 owns the #1724 state-indexed holistic-selection interpretation and its
 explicit remaining test; it does **not** displace the #1729 source-identity
-assessment in attempt `9f771edb`. This is a standard corpus attempt,
+assessment in attempt [`9f771edb`](../../corpus/attempts/9f771edb-fb20-4426-9ae2-82de322bbe5f.json). This is a standard corpus attempt,
 not a duplicate statement, graph path or tracker.
 
 **Independent semantic challenge (2026-11-23, head `e967a177f`).** Two P1
@@ -4237,3 +4237,17 @@ The concrete whole can meet precisely that challenge to a prior recipient. On it
 This provisional comparison received independent semantic challenge. Reopen on an independently warranted account of the particular source's nature that explains its exercise without importing the obtaining of its manifestations, or on evidence that a particular constituent contributes to the whole's esse in the direction just specified. #1976's archive test discriminates dependencies of a complete history with a known writer. It leaves the actual-world act–essence question open. This continuation adds no premise to the CCR transfer `20babef7` → `c6d92415` → `c35b1a5c`, which also requires distinct-esse causal coverage, identity-bearer uniqueness, an actual bearer and excluded middle. Neither existence target is an input to that transfer. [Scope of the archive result on main](https://github.com/moritzbrantner/truth-core/blob/ec72649fb/docs/notes/foundational-absence-warrant.md#12-can-a-necessary-law-license-omission-of-the-unrestricted-bearer)
 
 Independent review of the duet comparison at 9cd00f0db30a12a3c8aa18fef5d13f95516c1691 accepted the rival comparison and reopening conditions. The targeted recheck accepted the individual-to-universal correction at 9f1bd047eee45694535f9757b61680a9a1b26d1a. This disposition covers the duet continuation only.
+
+## Research attempts citing this note
+
+- [Actual hiddenness scope and explicit stage-one identification](../../corpus/attempts/49e02139-da0f-458a-aae7-374b60309f7c.json)
+- [C1: complete derivative systems, totality esse-cause route and the Hume-Edwards rival (#1724)](../../corpus/attempts/1e6ff223-838c-43f8-ab94-6d93c1056cfa.json)
+- [Closed a precisely delimited Lean formalization gap, not P2/P3](../../corpus/attempts/existential-self-actualization-priority-20261031.json)
+- [De ente nature-or-extrinsic inference: intrinsic-actuality reply and current root connection](../../corpus/attempts/fbc68d10-30e4-44b7-ad15-fa302bbad31e.json)
+- [Owner renewed the Agrippa/Münchhausen challenge to explanatory regress](../../corpus/attempts/explanatory-regress-adequacy-311.json)
+- [Owner-directed definition comparison, attribution deferred](../../corpus/attempts/evil-emotivism-use-boundary.json)
+- [Pinned and materialized the full primary 1979 article with byte-identical Wayback fallback](../../corpus/attempts/rowe-deductive-and-appearance-boundary.json)
+- [Re-materialized/read Aristotle Met IV.4, II.2, and Aquinas ST I q104 a1 corpus/ad4, retaining…](../../corpus/attempts/foundation-entitlement-20261031.json)
+- [Relative First-Way witness boundary and the common-esse reduction to all-respect unmovedness](../../corpus/attempts/ATTEMPT-PRIMA-VIA-FULL-BUNDLE-WEAKENING-OPEN-1021.json)
+- [Scope correction prompted by owner: no-self-justifying whole borrowed structure is no longer…](../../corpus/attempts/whole-roster-foundation-20261031.json)
+- [Self-origination assessed through the existing existential-production proof](../../corpus/attempts/no-self-origin-warrant-20261112.json)

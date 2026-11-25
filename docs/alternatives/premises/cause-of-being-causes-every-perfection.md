@@ -1,6 +1,6 @@
 ---
 phase: remaining
-premise: `STMT-CAUSE-OF-BEING-CAUSES-EVERY-PERFECTION`
+premise: [`STMT-CAUSE-OF-BEING-CAUSES-EVERY-PERFECTION`](https://github.com/moritzbrantner/formal-logos/blob/ec72649fb5a8ee3ac06d391b179cf1af7f75b304/corpus/statements/cause-of-being-causes-every-perfection.json)
 rival: existential conservation without primary causal responsibility for each particular actuality
 class: shared-background rival witnessed; metaphysical applicability open
 notes: docs/notes/causal-perfection-transfer.md

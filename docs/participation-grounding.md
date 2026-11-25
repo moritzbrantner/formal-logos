@@ -4,7 +4,7 @@ A participation account can consistently classify some candidate beings as F
 and others as not F. A classification is not yet an account of why those
 beings participate. The four formal tests here isolate that gap and the extra
 commitments that would address it. They do not refute Platonism, establish the
-truth of a premise, or decide that every explanation must have another ground.
+truth of a premise, or decide that every explanation must have another ground. [Original PR #285](https://github.com/moritzbrantner/formal-logos/pull/285)
 
 ## Source evidence and reading boundaries
 
@@ -170,7 +170,7 @@ The participation schema and its three separately proved Plato, Proclus and
 Aquinas adapters remain **unimplemented**. This audit supplies source evidence
 and identifies rejected shortcuts; it registers no `instance_of_schema`
 relation. It does not prove that a substantive common theorem is impossible.
-`ATTEMPT-PARTICIPATION-SCHEMA-SOURCE-REUSE-AUDIT` records this bounded outcome.
+[`ATTEMPT-PARTICIPATION-SCHEMA-SOURCE-REUSE-AUDIT`](../corpus/attempts/participation-schema-source-reuse-audit.json) records this bounded outcome.
 
 The complete materialized ranges read for this audit were `PLATO-PHAEDO-100`,
 `AQUINAS-ST-I-Q3-A8`, `AQUINAS-ST-I-Q4-A2`, `AQUINAS-ST-I-Q4-A3`,

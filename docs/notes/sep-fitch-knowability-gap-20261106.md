@@ -2,7 +2,7 @@
 
 Inventory base: public main `92ccf46217c8e4aa65c5235938e5411a0c8adeda`.
 Analyst reconstruction; attribution deferred. No new historical/source claim,
-Lean theorem, verification evidence or root-premise discharge is supplied here.
+Lean theorem, verification evidence or root-premise discharge is supplied here. [Research record](../../corpus/attempts/sep-fitch-knowability-gap-20261106.json)
 
 Navigation read: [SEP, Fitch’s Paradox of Knowability](https://plato.stanford.edu/entries/fitch-paradox/),
 §2 proof, §§3.2–3.4 constructive limits, all of §4 semantic restrictions, and
@@ -339,3 +339,7 @@ Both exact Comparator and independent NanoDa checks passed with the approved
 Mathlib trio. Computed root-frontier90→90 (30bare18supported42stated), cheapest
 route31→31; no added, removed or discharged root premises. Final delivered-head
 CI and current-head review remain required.
+
+## Research attempts citing this note
+
+- [Issue1065 supplies a deliberately different logical semantic profile, not a counterexample to old…](../../corpus/attempts/intuitionistic-knowability-1065.json)

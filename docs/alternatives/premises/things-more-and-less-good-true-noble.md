@@ -1,9 +1,13 @@
 ---
 phase: remaining
-premise: `STMT-THINGS-MORE-AND-LESS-GOOD-TRUE-NOBLE`
+premise: [`STMT-THINGS-MORE-AND-LESS-GOOD-TRUE-NOBLE`](https://github.com/moritzbrantner/formal-logos/blob/ec72649fb5a8ee3ac06d391b179cf1af7f75b304/corpus/statements/things-more-and-less-good-true-noble.json)
 rival: value anti-realism: error theory, emotivism, quasi-realism
 class: self-application/inconsistency for naive emotivism (Frege-Geach, `FREGE-GEACH-REFUTES-NAIVE-EMOTIVIST-MEANING`); quasi-realism not yet attackable
 notes: link the existing metaethics rivals
 ---
 
 Floor check (#497 first-closure hunt, `ATTEMPT-FIRST-CLOSURE-HUNT-497`): no `alternative_to` relation is recorded, so an `observation` marking would pass `corpus.py` on the stating claim alone. It is not made. Grades of ontological truth and goodness are a theoretical reading (`DISAMB-TRUE`), not a manifest empirical fact, and the rivals above deny them. Recording those rivals would reopen any such marking.
+
+## Research attempts citing this note
+
+- [First-closure hunt, over the 49 root-path open premises at the merge of #503](../../../corpus/attempts/first-closure-hunt-497.json)

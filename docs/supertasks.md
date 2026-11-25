@@ -1,5 +1,7 @@
 # Supertasks: can an endless task finish?
 
+[Original PR #317](https://github.com/moritzbrantner/formal-logos/pull/317)
+
 **Question.** A *supertask* is commonly proposed as a sequence of infinitely
 many distinct operations carried out during a finite interval. An objection
 is that an **endless task cannot end**. That slogan has at least two meanings:
@@ -508,7 +510,7 @@ updates of one closed quantum memory, even when adjacent states overlap.
 The relevant observation is the reader's advantage over guessing which of
 two adjacent states it received. A task that requires only a terminal value
 or a continuous change need never produce such an advantage. This extends
-the orthogonal-transition test in the [issue checkpoint](https://github.com/moritzbrantner/truth-core/issues/1859).
+the orthogonal-transition test in the [issue checkpoint](https://github.com/moritzbrantner/truth-core/issues/1859). [Assessment record](../corpus/attempts/analytic-supertask-limit-declaration.json)
 
 ### What the reader gets
 
@@ -628,3 +630,7 @@ records. The present operational test supplies a conditional SU-REAL
 objection for readable serial memories. It supplies no premise discharge
 for `97f5850f` and no verdict on simultaneous dependence or Reaper
 recombination in general. [Exact local-label premise](../TruthCore/Causality/StrictGroundRepresentation.lean)
+
+## Research attempts citing this note
+
+- [Bounded owner-approved resource slice after read-only infinite-past audit; clean base a6648878](../corpus/attempts/bounded-past-resource.json)

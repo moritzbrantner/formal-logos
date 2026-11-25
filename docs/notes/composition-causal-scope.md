@@ -1,5 +1,7 @@
 # Which compositions require an actual uniting cause?
 
+[Research record](../../corpus/attempts/composition-causal-scope-comparison.json)
+
 ## Proper-part and union-to-esse audit (2026-11-22; independent review pending)
 
 **Selected node and downstream consequence.** The third proof of ST I q.3 a.7
@@ -11,7 +13,7 @@ The same-root simplicity consumer `379399d1` also uses a separate interface
 `cb1cdea9` from cause-in-esse to actual grounding. The existing
 `UnitingCausesPresent` and `UnitingCausesAreActual` restrictions must be
 defended before taking a non-world-indexed `CausesIn` edge to prohibit a
-selected-world underived source from being composite.
+selected-world underived source from being composite. [Assessment record](../../corpus/attempts/proper-part-union-esse-audit-20261122.json)
 
 ### A missing witness-preserving formal consequence
 
@@ -159,7 +161,7 @@ exhausted** by an earlier Bool omission certificate or by the existing
 conditional simplicty proof.
 
 **Scoped cumulative assessment.** The accepted-qualified 2026-11-18
-assessment in attempt `dd24400b` remains in force: direct/primitive
+assessment in attempt [`dd24400b`](../../corpus/attempts/dd24400b-cc87-4095-b4c4-df857e1edff5.json) remains in force: direct/primitive
 support and a restricted positive constitution argument are available,
 with `fbee7f15` the genuine shared open bridge. The new stronger
 certificate repairs an earlier evidential weakness and rules out the
@@ -672,7 +674,7 @@ this slice ends with those exact open dependencies recorded for reassessment.
 **Actual premise comparison and verification boundary:** no Lean, statement,
 claim, definition, inference, result, argument or frontier premise is changed.
 The changed files are this existing note and attempt
-`356fd6f9-6e1a-548b-a4be-a456f346463f`. Unchanged certificate evidence is reused;
+[`356fd6f9-6e1a-548b-a4be-a456f346463f`](../../corpus/attempts/composite-uniting-cause-from-union-20261105.json). Unchanged certificate evidence is reused;
 the complete philosophical assessment received qualified acceptance from fresh
 reviewer `review_composite_ground` at frozen head
 `71af7493628ea4632824a42cc36efc718c158f57`, with no repair required. The review
@@ -735,7 +737,7 @@ source campaign without a new discriminant is not justified.
 
 The complete proposed outcome, exact downstream consumers, retrieval links and
 claim/type self-sweep live in the linked modal-spine section and existing
-attempts 383d23ad, 520ea849, 712ea899 and 356fd6f9. These associations add no
+attempts [383d23ad](../../corpus/attempts/383d23ad-bec6-442c-9fec-0112df1e1c97.json), [520ea849](../../corpus/attempts/520ea849-31eb-4f63-88b9-77bce198b63d.json), [712ea899](../../corpus/attempts/712ea899-f58e-4bfa-a977-ead95a600518.json) and 356fd6f9. These associations add no
 entailment edges. No formal inputs, source claims or computed closure change;
 unchanged proof evidence is reused. Independent semantic review of this new
 consolidation and final integration CI remain coordinator-owned.
@@ -788,3 +790,7 @@ end UnityHandoff
 **Provisional judgment.** The positive case for a substantial bearer is strongest where its independent criterion of life or unity identifies what disintegration destroys, and a numerically distinct contributor actually produces or sustains that constitution. A constituent need not produce the whole unaided to merit productive credit. Its role as an already organized part may itself depend on the whole. In that case its participation in maintenance leaves open the complete explanation of this system's first actuality. The strongest immanent rival offers the activity of the organized substance through its integrated constituents. It can grant both real upkeep by a part and the whole's persistence after its maker departs. It can also contest the inference to efficient esse when a causal test tracks only an operation of a bearer independently present throughout. A positive actuality grounded in received being would strengthen the existential-uniter route if the analysis identifies a distinct giver of this very actuality at the time in question. Diversity alone gives no such identification.
 
 I favor the restricted production inference for genuine cases of constituting activity. Across all kinds of composition, `fbee7f15` (from uniter to giver of esse) remains an open bridge. For the simplicity argument `379399d1`, an immanent contributor can matter if it is a distinct actual being furnishing an edge in the root's excluded relation. The handoff model supplies no such edge for the ultimate source. The next discriminating question for a purported fundamental composite is which independently identified constituent or external activity can explain the **whole's own positive actuality**, and what evidence distinguishes that role from sustaining one of its derivative operations.
+
+## Research attempts citing this note
+
+- [Inventoried the four composition senses and materialized/read full q3a5 and q3a7](../../corpus/attempts/composition-kinds-genus-cause.json)

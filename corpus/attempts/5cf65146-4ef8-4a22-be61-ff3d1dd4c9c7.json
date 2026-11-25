@@ -10,6 +10,7 @@
   "summary": "Read materialized Aquinas In V Metaph. lect.13 nn.15–18 with the full lecture and Aristotle Categories12 in the Edghill translation. Existing n.15 supports a sufficient natural-priority criterion. A precise proposed composition uses that source statement plus a separate natural-priority-to-simple-priority bridge. Categories12 distinguishes nonreciprocal implication from causal priority compatible with reciprocal implication; its truth/fact example is not a two-concrete-bearer counterexample to the exact target. Provisional assessment retains the natural criterion as well motivated while leaving its act/potency application explicit. Neither source makes every explanatory priority modally separable. Preserve direct acceptance, the independent explanatory route and the same domain, respect and modality. See docs/notes/priority-independence-logic-support-investigation.md, section 3. No source claim or graph edge added.",
   "evidence": [
     "ab5ec574-cd80-5c16-b391-328245425d21",
-    "47957c28-218a-58e4-94e4-5220a0c45795"
+    "47957c28-218a-58e4-94e4-5220a0c45795",
+    "PR-1592"
   ]
 }

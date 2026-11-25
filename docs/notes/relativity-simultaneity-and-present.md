@@ -1,5 +1,7 @@
 # Two coordinate frames, simultaneity and an additional present
 
+[Research record](../../corpus/attempts/relativity-simultaneity-controls.json)
+
 ## Question and fixed profile
 
 Can one relation agree exactly with simultaneity in every frame, and does a

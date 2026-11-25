@@ -18,7 +18,8 @@
     "0e15cd53-82be-5483-8216-258a118d1a1b",
     "6828b60a-3b7d-5099-a6d1-eafd75e4eab9",
     "25f65c4f-2cdc-5b6d-bfb6-a666d4180e8d",
-    "6b5655f1-ceb2-5e64-b70f-624e6cf7177c"
+    "6b5655f1-ceb2-5e64-b70f-624e6cf7177c",
+    "PR-1060"
   ],
   "blocker": "No actual environment/rule-class restriction, good-expert calibration, normative authority or root premise is established. A broader arbitrary finite-pool lower bound is not proved by the two-expert numerical corollary. #931 remains open."
 }

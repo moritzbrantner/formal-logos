@@ -2,7 +2,7 @@
 
 This is a small, axiom-free **model-theoretic test**, not an assertion that the
 principle of sufficient reason is true. It advances the distinction in #312 and
-retains the separate causation and explanation questions in #310 and #311.
+retains the separate causation and explanation questions in #310 and #311. [Original PR #316](https://github.com/moritzbrantner/formal-logos/pull/316)
 
 ## Reuse and formal boundary
 
@@ -461,3 +461,9 @@ no corpus speedup is claimed. Retain the shared service for warm edits and its
 binding checks; final delivered-head CI owns build, binding, Comparator and
 NanoDa. Reproduce after build with
 `scripts/verify-result.sh TARGET-COPY-ENTAILING-EXPANSION`.
+
+## Research attempts citing this note
+
+- [Certified psr worldwise alternating satisfies the existing existence-PSR and soundness conditions…](../corpus/attempts/modal-psr-stable-reason-shift.json)
+- [Inventory rejected duplicate necessary-reason transfer and history-discrimination lemmas](../corpus/attempts/target-copy-entailing-expansion-698.json)
+- [Owner renewed the Agrippa/Münchhausen challenge to explanatory regress](../corpus/attempts/explanatory-regress-adequacy-311.json)

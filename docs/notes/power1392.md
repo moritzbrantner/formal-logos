@@ -1,5 +1,7 @@
 # Active power, joint exercise and essential truthfulness (#1392)
 
+[Research record](../../corpus/attempts/329b66d7-8cae-4026-8c8f-322ad4bf6da7.json)
+
 ## Scope and reuse
 
 Target: d61eda33-7f6c-52a8-a905-e16661520f23 on the NamingVeracity →

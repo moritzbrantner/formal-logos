@@ -124,7 +124,7 @@ New statements:
 - holders are GOD_4: `2146ebc9`;
 - controls: `4c28b2d3`.
 
-Attempts: `3c556cdd` (derivation) and `f68fa861` (models).
+Attempts: [`3c556cdd`](../../corpus/attempts/3c556cdd-cf98-4211-a8c5-b89782d493b5.json) (derivation) and [`f68fa861`](../../corpus/attempts/f68fa861-541e-4ee0-8403-29700ac0dd61.json) (models).
 
 **Computed premise delta** (`truth frontier-diff`, base `87857479e`):
 

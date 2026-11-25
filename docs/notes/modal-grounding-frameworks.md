@@ -12,7 +12,7 @@ This note was repaired after the independent semantic challenge of head
   premise; results module `TruthCore.Results.Modal.ModalGroundingActualAbsence`).
 
 Both use the vocabulary module `TruthCore.Modal.ModalGrounding`. The attempt
-is `5ee2cbef-95cc-49aa-9009-a18d0318a9ee`.
+is [`5ee2cbef-95cc-49aa-9009-a18d0318a9ee`](../../corpus/attempts/5ee2cbef-95cc-49aa-9009-a18d0318a9ee.json).
 
 **Evidence level.** Analyst formulations, attribution deferred (logic first).
 Locators are navigation only, and no source claim is made. Pruss's wording
@@ -352,7 +352,7 @@ excluded.
   - (ii) is `f9b26559` → `39df9612`.
   - The deciding question is formalized as laws 3–4. `Essential` is now
     registered as ESSENCE_5, and `565ccd6c` is `f9b26559`'s sense bridge.
-- **F5:** already exists (attempt `03e1f49f`; `ContingentRecombinationAt` in
+- **F5:** already exists (attempt [`03e1f49f`](../../corpus/attempts/03e1f49f-7074-4e78-abe5-79b89ed97ec5.json); `ContingentRecombinationAt` in
   the theist S5 model; subtraction law 9). Law 2 here adds the same at the
   foundational case. The parthood clause is not modelled.
 - **#1888 gap 4 (Pruss's joint-absence premise against Van Cleve):** answered

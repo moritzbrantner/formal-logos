@@ -5,7 +5,7 @@ theorems are `collapseCore` and `strengthMap` in
 `TruthCore.Results.Explanation.PSRStrength.Solution`, over the vocabulary of
 `TruthCore.Explanation.PSRStrength`. Both are zero-axiom. They establish conditional
 consequence and the satisfiability of encoded bundles. They do not establish any PSR,
-the metaphysical possibility of any model, or any premise on a root route.
+the metaphysical possibility of any model, or any premise on a root route. [Research record](../../corpus/attempts/psr-strength-map.json)
 
 No source claim is added. Pruss, Koons, Gale–Pruss, Leibniz, van Inwagen and Oppy
 (#409, #365) were not read for this work, so no row below is attributed to them.
@@ -235,6 +235,6 @@ source and no previous source interpretation is changed.
 
 The new certificate closes no root premise. The root frontier remains subject
 to the computed `frontier-diff`; its eventual PR records that exact delta.
-The attempt `ATTEMPT-PSR-LATER-AXES-942` preserves the rejected identification of
+The attempt [`ATTEMPT-PSR-LATER-AXES-942`](../../corpus/attempts/psr-later-axes-942.json) preserves the rejected identification of
 ordinal favouring with probability and the remaining support, exercise,
 relevance, agency and adequacy bridges.

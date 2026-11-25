@@ -2,7 +2,7 @@
 
 Analyst reconstruction; attribution deferred. This note proposes the complete
 worker judgment for the coordinator's independent semantic challenge. It is
-not an independently challenged final philosophical conclusion.
+not an independently challenged final philosophical conclusion. [Research record](../../corpus/attempts/56ae2547-ae69-46f4-93b5-4c8ee786ed13.json)
 
 ## Case connection and reuse
 
@@ -626,3 +626,7 @@ Self-sweep: note/attempt only; no definition, source claim, frozen Challenge,
 proof or result changed. The law comparison is provisional prose reasoning,
 not a certified strict-premise comparison or actual-world counterexample.
 Reuse unchanged formal certificates; final delivered-head CI remains required.
+
+## Research attempts citing this note
+
+- [Cluster reassessment of dependence, simple-priority and grounding leaves of the prima via (#1751)](../../corpus/attempts/9d71e28d-d492-4797-9221-45fa517a6e6b.json)
