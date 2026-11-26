@@ -1,0 +1,16 @@
+{
+  "id": "73173379-46f7-4261-b4a7-c448e5d9b157",
+  "label": "A crossed cumulative budget forces named replenishment after the cut",
+  "premise_statement_ids": [
+    "133b5366-c519-4df2-8d44-17d8fb94ee39"
+  ],
+  "conclusion_statement_id": "a2c5ea55-c818-45a3-ace9-5bc2e86f3d51",
+  "inference_ids": [
+    "e2ba46c2-cd07-4786-ab7c-32e9b2387597"
+  ],
+  "meaning": "The existing cumulative energy bound limits output by initial stock and the sum of both feeds. The initial stock and other feed upper bounds then give a lower bound on the total named feed over the prefix. If the lower bound is positive, at least one interval in that prefix has positive named feed.",
+  "definition_ids": [
+    "4826b5ea-c643-44f1-ba1f-4247175f4d76",
+    "e5cefbf6-0c52-47d9-b9a6-66c0ebf65e73"
+  ]
+}

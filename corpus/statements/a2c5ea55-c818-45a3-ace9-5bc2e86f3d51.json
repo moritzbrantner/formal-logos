@@ -1,0 +1,9 @@
+{
+  "id": "a2c5ea55-c818-45a3-ace9-5bc2e86f3d51",
+  "label": "An output deficit after a cut forces replenishment from the named feed",
+  "paraphrase": "In every compatible finite energy ledger after a cut, the named feed supplies at least the prefix's lower total output minus the bound on initial stored energy and the prefix's upper total other feed. A positive difference forces positive named replenishment in some interval of that prefix.",
+  "lean_declaration": "TruthCore.Causality.PostCutStore.CandidateReplenishmentBound",
+  "definition_ids": [
+    "4826b5ea-c643-44f1-ba1f-4247175f4d76"
+  ]
+}

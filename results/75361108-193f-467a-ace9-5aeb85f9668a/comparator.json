@@ -1,0 +1,13 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.PostCutStore.Challenge",
+  "solution_module": "TruthCore.Results.Causality.PostCutStore.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.PostCutStore.zeroCandidateCriterion"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "enable_nanoda": true
+}

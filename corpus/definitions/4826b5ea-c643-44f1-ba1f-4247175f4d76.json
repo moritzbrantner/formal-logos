@@ -1,0 +1,12 @@
+{
+  "id": "4826b5ea-c643-44f1-ba1f-4247175f4d76",
+  "label": "Finite energy ledger after a cut",
+  "kind": "stipulative",
+  "lean_declaration": "TruthCore.Causality.PostCutStore.ObservationLedger",
+  "term": "Finite energy ledger after a cut",
+  "definition": "Time zero marks the cut. One identified store has nonnegative stored energy through the final observed boundary, and its initial stock is at most the given bound. In each observed interval, output is the energy leaving as work and heat. The candidate feed is one named boundary input and other feed is the sum of all remaining boundary inputs. All flows are nonnegative. Output meets its given lower bound, other feed stays below its given upper bound, and final stock plus output equals initial stock plus both feeds in each interval. The quantities share one energy unit. A prefix consists of the first n intervals.",
+  "basis": "stipulative",
+  "note": "Analyst extension of the finite flywheel energy ledger. The initial upper bound applies at time zero only. Applying the split to a system requires identifying the same store and a complete boundary accounting.",
+  "claim_ids": [],
+  "definition_ids": ["e5cefbf6-0c52-47d9-b9a6-66c0ebf65e73"]
+}

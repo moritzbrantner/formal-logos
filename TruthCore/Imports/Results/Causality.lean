@@ -307,6 +307,7 @@ public import TruthCore.Results.Causality.PluralRootConfluence.Solution
 public import TruthCore.Results.Causality.PossessionSensitiveAppetite.Solution
 public import TruthCore.Results.Causality.PossibleCausalSourceNecessity.Solution
 public import TruthCore.Results.Causality.PossibleCauseBruteSurvival.Solution
+public import TruthCore.Results.Causality.PostCutStore.Solution
 public import TruthCore.Results.Causality.PotencyPrivation.Solution
 public import TruthCore.Results.Causality.Power1392.Solution
 public import TruthCore.Results.Causality.Power1392Exercise.Solution
