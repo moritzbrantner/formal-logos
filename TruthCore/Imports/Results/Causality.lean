@@ -198,6 +198,7 @@ public import TruthCore.Results.Causality.GrimReaperFiniteTests.Solution
 public import TruthCore.Results.Causality.GrimReaperImpossible.Solution
 public import TruthCore.Results.Causality.GrimReaperPatchwork.Solution
 public import TruthCore.Results.Causality.GroundedBeginnings.Solution
+public import TruthCore.Results.Causality.GroundedOccupantRegress.Solution
 public import TruthCore.Results.Causality.GroundingAllowsRegress.Solution
 public import TruthCore.Results.Causality.GroundingIdentityProfile.Solution
 public import TruthCore.Results.Causality.GroundingYieldsRegress.Solution
@@ -371,6 +372,7 @@ public import TruthCore.Results.Causality.ScenarioNecessaryWitness.Solution
 public import TruthCore.Results.Causality.ScopedActualCausality.Solution
 public import TruthCore.Results.Causality.SelectedAncestry.Solution
 public import TruthCore.Results.Causality.SelectedAncestryUnique.Solution
+public import TruthCore.Results.Causality.SelectedConeRegress.Solution
 public import TruthCore.Results.Causality.SelectedNecessaryRoute.Solution
 public import TruthCore.Results.Causality.SelfCausationPriority.Solution
 public import TruthCore.Results.Causality.SelfMotionSeparation.Solution

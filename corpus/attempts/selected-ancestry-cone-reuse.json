@@ -46,6 +46,7 @@
     "review": "unreviewed",
     "publication": "unpublished",
     "evidence": "The earlier selected-cone result and controls retain their original review. The local exclusion and cycle comparison are the proposed extension.",
-    "supersedes": "None. This extends the existing selected-cone result with a sufficient condition for its foundation premise."
+    "supersedes": "None. This extends the existing selected-cone result with a sufficient condition for its foundation premise.",
+    "reviewed_revision": "af7ad7833e96b6956a4fedeffd819ac4640d9d5d"
   }
 }
