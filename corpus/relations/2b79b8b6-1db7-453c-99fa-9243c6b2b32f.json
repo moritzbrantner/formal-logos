@@ -1,0 +1,10 @@
+{
+  "id": "2b79b8b6-1db7-453c-99fa-9243c6b2b32f",
+  "label": "Test by Finite interpretations for the seven derivations of caus for A caused perfection is ha (1)",
+  "subject_kind": "result",
+  "subject_id": "86d080aa-4c6e-5f85-a86e-333c805d0093",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "67aa5b5c-694b-50a1-90e5-d843234db924",
+  "note": "Tests omitting this premise in the encoded causeOfBeingHasWhatItGives argument, with the other premises retained and the conclusion false in each corresponding control."
+}

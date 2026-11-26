@@ -1,0 +1,10 @@
+{
+  "id": "964aa774-7cb7-41cd-8e15-11f964eae4ed",
+  "label": "Test by Uniform singleton obstruction control",
+  "subject_kind": "result",
+  "subject_id": "5ca0a824-2d4c-433d-ad24-648e1ad63c85",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "980a800d-57a6-4e5e-9c0f-363bce4c1842",
+  "note": "Tests uniform definability of the fixed true singleton in the parameter-free Bool marker signature over all interpretations."
+}

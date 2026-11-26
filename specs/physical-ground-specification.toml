@@ -99,3 +99,43 @@ axioms = []
 conclusion = "Forbidden parameters have no syntax variable"
 rule = "Direct construction or Mathlib first-order interpretation transport"
 meaning = "The subtype of permitted parameters is empty when all parameters are forbidden, so no arbitrary parameter can be inserted as a syntax variable. This is not a proof of nondefinability by every formula."
+
+[[relation]]
+id = "Test by Local description control"
+label = "Test by Local description control"
+subject_kind = "result"
+subject_id = "bccd668f-50b3-4b45-a101-5d7352a60356"
+predicate = "tests"
+object_kind = "statement"
+object_id = "446e5de8-6477-460d-8288-a4c294c36d83"
+note = "Tests nonvacuity of local name-free definability on Bool with a unary marker selecting true."
+
+[[relation]]
+id = "Test by Uniform singleton obstruction control"
+label = "Test by Uniform singleton obstruction control"
+subject_kind = "result"
+subject_id = "5ca0a824-2d4c-433d-ad24-648e1ad63c85"
+predicate = "tests"
+object_kind = "statement"
+object_id = "980a800d-57a6-4e5e-9c0f-363bce4c1842"
+note = "Tests uniform definability of the fixed true singleton in the parameter-free Bool marker signature over all interpretations."
+
+[[relation]]
+id = "Test by Part-free description control"
+label = "Test by Part-free description control"
+subject_kind = "result"
+subject_id = "d8fdd4e6-71d8-48ae-8f90-207095991567"
+predicate = "tests"
+object_kind = "statement"
+object_id = "446e5de8-6477-460d-8288-a4c294c36d83"
+note = "Tests compatibility of local name-free definability with an independently assigned false composition predicate on the named Bool witness."
+
+[[relation]]
+id = "Test by Permitted parameter control"
+label = "Test by Permitted parameter control"
+subject_kind = "result"
+subject_id = "c96a618f-aaca-466b-986f-818e7a803bec"
+predicate = "tests"
+object_kind = "statement"
+object_id = "980a800d-57a6-4e5e-9c0f-363bce4c1842"
+note = "Tests nonvacuity of uniform definability in a nonempty interpretation class by equality to the one permitted Bool parameter."

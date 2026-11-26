@@ -247,3 +247,173 @@ predicate = "supports"
 object_kind = "statement"
 object_id = "STMT-SELF-MOVER-MOVES-BY-A-DISTINCT-PART"
 note = "Physics VIII.4 says a self-moved animal is moved by something, the question being how to distinguish mover and moved in it; the claim reads the mover as the moving part but leaves open which being it is and does not assert that it is other than the whole. That the mover is a part distinct from the whole is the analyst's reading of VIII.5 (257b-258a), which is not pinned. Audit correction: the target actually has diagonal MovesIn x x r as antecedent (SELF_MOTION_1), while this claim uses independent whole/parts SelfMovedIn (SELF_MOTION_2). This support link records only a research lead, not same-sense entailment. Both the source-sense-to-diagonal bridge and distinct-part identification remain OPEN."
+
+[[relation]]
+id = "Test by Finite interpretations for the seven derivations of caus for Nothing gives what it doe (1)"
+label = "Test by Finite interpretations for the seven derivations of caus for Nothing gives what it doe (1)"
+subject_kind = "result"
+subject_id = "86d080aa-4c6e-5f85-a86e-333c805d0093"
+predicate = "tests"
+object_kind = "statement"
+object_id = "376d6a5a-c179-5090-b57c-f9a371222899"
+note = "Tests omitting this premise in the encoded causeOfQualityMoreSuch argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the seven derivations of caus for For every y, perfection r (1)"
+label = "Test by Finite interpretations for the seven derivations of caus for For every y, perfection r (1)"
+subject_kind = "result"
+subject_id = "86d080aa-4c6e-5f85-a86e-333c805d0093"
+predicate = "tests"
+object_kind = "statement"
+object_id = "39a4c28c-4a75-5918-96bf-16a5acd8e783"
+note = "Tests omitting this premise in the encoded causeOfQualityMoreSuch argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the seven derivations of caus for If y is SIMPLY_PRIOR_1 to (1)"
+label = "Test by Finite interpretations for the seven derivations of caus for If y is SIMPLY_PRIOR_1 to (1)"
+subject_kind = "result"
+subject_id = "86d080aa-4c6e-5f85-a86e-333c805d0093"
+predicate = "tests"
+object_kind = "statement"
+object_id = "47aff057-35ef-5418-930b-fef72e1104d2"
+note = "Tests omitting this premise in the encoded nothingPriorToItself argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the seven derivations of caus for An efficient cause does n (1)"
+label = "Test by Finite interpretations for the seven derivations of caus for An efficient cause does n (1)"
+subject_kind = "result"
+subject_id = "86d080aa-4c6e-5f85-a86e-333c805d0093"
+predicate = "tests"
+object_kind = "statement"
+object_id = "47b151ca-f500-5a7c-80d4-33bb90247ee3"
+note = "Tests omitting this premise in the encoded efficientCausePrior, nothingEfficientCauseOfItself, noMutualEfficientCausation arguments, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the seven derivations of caus for Every perfection of a thi (1)"
+label = "Test by Finite interpretations for the seven derivations of caus for Every perfection of a thi (1)"
+subject_kind = "result"
+subject_id = "86d080aa-4c6e-5f85-a86e-333c805d0093"
+predicate = "tests"
+object_kind = "statement"
+object_id = "64498e7e-7f10-54a0-9ec0-c65e6076de1f"
+note = "Tests omitting this premise in the encoded causeOfBeingHasWhatItGives argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the seven derivations of caus for A caused perfection is ha (1)"
+label = "Test by Finite interpretations for the seven derivations of caus for A caused perfection is ha (1)"
+subject_kind = "result"
+subject_id = "86d080aa-4c6e-5f85-a86e-333c805d0093"
+predicate = "tests"
+object_kind = "statement"
+object_id = "67aa5b5c-694b-50a1-90e5-d843234db924"
+note = "Tests omitting this premise in the encoded causeOfBeingHasWhatItGives argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the seven derivations of caus for Whatever moves a thing in (1)"
+label = "Test by Finite interpretations for the seven derivations of caus for Whatever moves a thing in (1)"
+subject_kind = "result"
+subject_id = "86d080aa-4c6e-5f85-a86e-333c805d0093"
+predicate = "tests"
+object_kind = "statement"
+object_id = "6a0b545c-d3bb-52d1-b0b7-c3ea48febb92"
+note = "Tests omitting this premise in the encoded nothingMovesExceptInAct argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the seven derivations of caus for If c has r not limited by (1)"
+label = "Test by Finite interpretations for the seven derivations of caus for If c has r not limited by (1)"
+subject_kind = "result"
+subject_id = "86d080aa-4c6e-5f85-a86e-333c805d0093"
+predicate = "tests"
+object_kind = "statement"
+object_id = "7030af77-c1d4-5f67-bc0c-875048d1b55c"
+note = "Tests omitting this premise in the encoded causeOfQualityMoreSuch argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the seven derivations of caus for Every SELF_MOTION_1 has a (1)"
+label = "Test by Finite interpretations for the seven derivations of caus for Every SELF_MOTION_1 has a (1)"
+subject_kind = "result"
+subject_id = "86d080aa-4c6e-5f85-a86e-333c805d0093"
+predicate = "tests"
+object_kind = "statement"
+object_id = "99470e3f-81ac-5cf2-8a0e-69429f98fd0c"
+note = "Tests omitting this premise in the encoded nothingMovesExceptInAct argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the seven derivations of caus for A perfection caused in an (1)"
+label = "Test by Finite interpretations for the seven derivations of caus for A perfection caused in an (1)"
+subject_kind = "result"
+subject_id = "86d080aa-4c6e-5f85-a86e-333c805d0093"
+predicate = "tests"
+object_kind = "statement"
+object_id = "a9036c3c-adc4-564e-b3ba-44a0c558c0ae"
+note = "Tests omitting this premise in the encoded causeOfQualityMoreSuch argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the seven derivations of caus for OPEN analyst premise: if (1)"
+label = "Test by Finite interpretations for the seven derivations of caus for OPEN analyst premise: if (1)"
+subject_kind = "result"
+subject_id = "86d080aa-4c6e-5f85-a86e-333c805d0093"
+predicate = "tests"
+object_kind = "statement"
+object_id = "bf93f259-29b4-53df-ae5b-ac7f522ea33d"
+note = "Tests omitting this premise in the encoded efficientCausePrior argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the seven derivations of caus for Whatever c efficiently ca (1)"
+label = "Test by Finite interpretations for the seven derivations of caus for Whatever c efficiently ca (1)"
+subject_kind = "result"
+subject_id = "86d080aa-4c6e-5f85-a86e-333c805d0093"
+predicate = "tests"
+object_kind = "statement"
+object_id = "c0d99549-799c-5a01-9b59-75fe88550b26"
+note = "Tests omitting this premise in the encoded efficientCausePrior, nothingEfficientCauseOfItself, noMutualEfficientCausation arguments, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the seven derivations of caus for Whatever is more such tha (1)"
+label = "Test by Finite interpretations for the seven derivations of caus for Whatever is more such tha (1)"
+subject_kind = "result"
+subject_id = "86d080aa-4c6e-5f85-a86e-333c805d0093"
+predicate = "tests"
+object_kind = "statement"
+object_id = "c11369aa-7c3d-5dea-8421-535d5b4b3104"
+note = "Tests omitting this premise in the encoded nothingMovesExceptInAct argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the seven derivations of caus for Every received perfection (1)"
+label = "Test by Finite interpretations for the seven derivations of caus for Every received perfection (1)"
+subject_kind = "result"
+subject_id = "86d080aa-4c6e-5f85-a86e-333c805d0093"
+predicate = "tests"
+object_kind = "statement"
+object_id = "cdb79aa6-eaff-5fd8-b094-410d9df021c0"
+note = "Tests omitting this premise in the encoded causeOfQualityMoreSuch argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the seven derivations of caus for If c, distinct from x, ca (1)"
+label = "Test by Finite interpretations for the seven derivations of caus for If c, distinct from x, ca (1)"
+subject_kind = "result"
+subject_id = "86d080aa-4c6e-5f85-a86e-333c805d0093"
+predicate = "tests"
+object_kind = "statement"
+object_id = "d0b76fb9-5374-5cbf-93b6-2b5444dab441"
+note = "Tests omitting this premise in the encoded causeOfQualityMoreSuch argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the seven derivations of caus for Whatever causes a quality (1)"
+label = "Test by Finite interpretations for the seven derivations of caus for Whatever causes a quality (1)"
+subject_kind = "result"
+subject_id = "86d080aa-4c6e-5f85-a86e-333c805d0093"
+predicate = "tests"
+object_kind = "statement"
+object_id = "d5a94eb1-72d2-53e0-9a52-9787b5b61a8d"
+note = "Tests omitting this premise in the encoded nothingMovesExceptInAct argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the seven derivations of caus for A whole is in act in a re (1)"
+label = "Test by Finite interpretations for the seven derivations of caus for A whole is in act in a re (1)"
+subject_kind = "result"
+subject_id = "86d080aa-4c6e-5f85-a86e-333c805d0093"
+predicate = "tests"
+object_kind = "statement"
+object_id = "f1a124b6-5df4-5488-9411-5f85f9fee173"
+note = "Tests omitting this premise in the encoded nothingMovesExceptInAct argument, with the other premises retained and the conclusion false in each corresponding control."

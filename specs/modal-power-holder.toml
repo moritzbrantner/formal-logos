@@ -71,3 +71,23 @@ conclusion = "Finite equivalence-frame controls for joint absence and replacemen
 axioms = ["propext", "Classical.choice", "Quot.sound"]
 rule = "Restrict to the three populated profiles and reuse the two-world replacement model"
 meaning = "Universal access permits every populated Boolean profile. The actual roster has two contingents, with a world omitting each. The positive conjunction can fail but no accessible profile omits both. In the reused swapped model the one actual contingent is absent at the other world and a distinct contingent exists there, so the joint-absence and global claims separate."
+
+[[relation]]
+id = "Test by Joint absence and replacement controls on finite equivalence frames"
+label = "Test by Joint absence and replacement controls on finite equivalence frames"
+subject_kind = "result"
+subject_id = "4eda66b6-a2c1-439e-984f-f22a0c747727"
+predicate = "tests"
+object_kind = "statement"
+object_id = "90b222c4-376f-4dab-8a20-adf639316685"
+note = "Tests omission of roster amalgamation in the populated Boolean profiles with finite roster, accessible individual absences and no joint absence."
+
+[[relation]]
+id = "Test by Joint absence and replacement controls on finite equival for No newcomer is CONTINGENC (1)"
+label = "Test by Joint absence and replacement controls on finite equival for No newcomer is CONTINGENC (1)"
+subject_kind = "result"
+subject_id = "4eda66b6-a2c1-439e-984f-f22a0c747727"
+predicate = "tests"
+object_kind = "statement"
+object_id = "9574ad92-9949-40ee-baf3-e8aec590dc7d"
+note = "Tests omission of coverage against replacement contingents in the swapped equivalence-frame model where actual-roster absence holds."

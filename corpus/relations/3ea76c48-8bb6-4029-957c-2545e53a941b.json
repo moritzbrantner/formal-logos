@@ -1,0 +1,10 @@
+{
+  "id": "3ea76c48-8bb6-4029-957c-2545e53a941b",
+  "label": "Test by Time-symmetry and momentary-PSR controls checked for Whatever has received esse has an (1)",
+  "subject_kind": "result",
+  "subject_id": "f49ba264-a7b0-4915-82ef-b2ba8bb0f002",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "9a14bdd8-65f8-4fe5-97b7-9fbbcde73e5b",
+  "note": "Tests omission of momentary PSR on the empty explanation assignment where the bridge alone is satisfied."
+}

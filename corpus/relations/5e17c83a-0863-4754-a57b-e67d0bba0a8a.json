@@ -1,0 +1,10 @@
+{
+  "id": "5e17c83a-0863-4754-a57b-e67d0bba0a8a",
+  "label": "Test by Time-local form mate exclusivity does not ensure all-time stability",
+  "subject_kind": "result",
+  "subject_id": "23d2d521-1024-4ee3-bb04-80ace39cfd1f",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "cde66fea-13d4-40e5-b849-adc7b5176d15",
+  "note": "Tests the converse strength implication in the registered interpretation. Sole-premise universal specialization; the changed-mate profile in the closed certificate retains UniqueAt but violates StableMate. Both use the same attachment relation parameters. Source and person applicability remain open."
+}

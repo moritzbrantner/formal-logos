@@ -1,0 +1,10 @@
+{
+  "id": "248a4abd-0d9d-4c13-b56d-756453a9ece4",
+  "label": "Test by Finite interpretations for the eleven derivations of rou for Simple priority is well-f (1)",
+  "subject_kind": "result",
+  "subject_id": "133783a4-07b1-5727-9fca-7f9fb474db54",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "d85de8e1-2f7f-5b2f-ba1e-112a0799994c",
+  "note": "Tests omitting this premise in the encoded wellFoundedFromPriority argument, with the other premises retained and the conclusion false in each corresponding control."
+}

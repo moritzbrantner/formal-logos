@@ -1,0 +1,10 @@
+{
+  "id": "fdd46b66-ccd8-4778-9509-2dc2786f33f2",
+  "label": "Test by Total-holding controls checked",
+  "subject_kind": "result",
+  "subject_id": "727d5a3f-5af7-4dcc-9e8d-5a9897b23135",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "9c7ad646-c69d-4dc8-bd95-e8ba8c49c673",
+  "note": "Tests omission of the potency-to-lackable-being clause in the giver interpretation where the esse-side bundle holds and pure act fails."
+}

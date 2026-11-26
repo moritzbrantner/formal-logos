@@ -1,0 +1,10 @@
+{
+  "id": "99f9c2b0-087d-47ab-8adb-656c23d6d041",
+  "label": "Test by One universally accessible two-world, two-individual model has a Boolean-generated fragment…",
+  "subject_kind": "result",
+  "subject_id": "fdb1ee3f-e332-5041-b60d-638a999dbd2e",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "f062ef5f-82a4-58d4-86bc-b1eb0d8943a1",
+  "note": "Tests the Boolean generated admissibility filter on a two-world universal frame, where one bearer satisfies filtered NE and a second does not."
+}

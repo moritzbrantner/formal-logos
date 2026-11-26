@@ -125,3 +125,53 @@ object_kind = "statement"
 object_id = "Whatever has received esse and is homogeneous is given being whenever it is present"
 verification_result_id = "Concurrent actualization entails it for homogeneous things"
 note = "Same history, giving relation and reception predicate; the weak version restricts its subjects to things homogeneous in the history relative to the supplied facts. Strict: Control part 4 (begun inertia), where the homogeneous version holds because the begun thing is not homogeneous, and 40a97664 fails."
+
+[[relation]]
+id = "Test by Time-symmetry and momentary-PSR controls checked"
+label = "Test by Time-symmetry and momentary-PSR controls checked"
+subject_kind = "result"
+subject_id = "f49ba264-a7b0-4915-82ef-b2ba8bb0f002"
+predicate = "tests"
+object_kind = "statement"
+object_id = "488263b0-a833-4ec1-9a62-eb79fe755ac8"
+note = "Tests omission of giving time-symmetry by restricting giving to time zero while keeping exercise of the cause."
+
+[[relation]]
+id = "Test by Time-symmetry and momentary-PSR controls checked for A cause of another's being gives (1)"
+label = "Test by Time-symmetry and momentary-PSR controls checked for A cause of another's being gives (1)"
+subject_kind = "result"
+subject_id = "f49ba264-a7b0-4915-82ef-b2ba8bb0f002"
+predicate = "tests"
+object_kind = "statement"
+object_id = "7005560a-4542-4d11-a0c8-1d221e74ecc1"
+note = "Tests omission of causal exercise with no giving on the eternal profile despite an assigned cause."
+
+[[relation]]
+id = "Test by Time-symmetry and momentary-PSR controls checked for Whatever has received esse has an (1)"
+label = "Test by Time-symmetry and momentary-PSR controls checked for Whatever has received esse has an (1)"
+subject_kind = "result"
+subject_id = "f49ba264-a7b0-4915-82ef-b2ba8bb0f002"
+predicate = "tests"
+object_kind = "statement"
+object_id = "9a14bdd8-65f8-4fe5-97b7-9fbbcde73e5b"
+note = "Tests omission of momentary PSR on the empty explanation assignment where the bridge alone is satisfied."
+
+[[relation]]
+id = "Test by Time-symmetry and momentary-PSR controls checked for Any explanation of a received-ess (1)"
+label = "Test by Time-symmetry and momentary-PSR controls checked for Any explanation of a received-ess (1)"
+subject_kind = "result"
+subject_id = "f49ba264-a7b0-4915-82ef-b2ba8bb0f002"
+predicate = "tests"
+object_kind = "statement"
+object_id = "d86c9de9-25be-488b-b3b7-69f5f4eb80b8"
+note = "Tests the productive explanation bridge using the eternal inertial profile with momentary explanation and no giving."
+
+[[relation]]
+id = "Test by Under the momentary PSR the productive bridge is concurrent actualization, checked"
+label = "Test by Under the momentary PSR the productive bridge is concurrent actualization, checked"
+subject_kind = "result"
+subject_id = "2b8b48d1-2f51-4596-a17f-d4c5a0222ca6"
+predicate = "tests"
+object_kind = "statement"
+object_id = "40a97664-e481-42d7-8458-78374a61aa26"
+note = "Checks the exact dependence of the productive explanation bridge on concurrent actualization once momentary PSR is held fixed."

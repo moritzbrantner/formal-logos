@@ -32,3 +32,23 @@ conclusion = "A contingent receiver admits opposite giving assignments under the
 axioms = ["propext", "Classical.choice", "Quot.sound"]
 rule = "Reuse the necessary-origin witness and evaluate both giving assignments at the same moments"
 meaning = "A model comparison with the explanation relation, presence, receiver and standing receipt held fixed. Contingency is witnessed by non-origination in the accessible alternative, without any instance of existential loss."
+
+[[relation]]
+id = "Test by Matched giving assignments for an undestroyed contingent receiver"
+label = "Test by Matched giving assignments for an undestroyed contingent receiver"
+subject_kind = "result"
+subject_id = "a638195c-6867-44e9-a6d7-680f22a187d8"
+predicate = "tests"
+object_kind = "statement"
+object_id = "52b05849-88b3-4f44-b81b-768850f9ed12"
+note = "Tests standing-receipt correlativity on the same actual history, holding receipt and origin-or-inertia explanation fixed and varying only concurrent giving."
+
+[[relation]]
+id = "Test by Matched giving assignments for an undestroyed contingent for Any explanation of a rece (1)"
+label = "Test by Matched giving assignments for an undestroyed contingent for Any explanation of a rece (1)"
+subject_kind = "result"
+subject_id = "a638195c-6867-44e9-a6d7-680f22a187d8"
+predicate = "tests"
+object_kind = "statement"
+object_id = "d86c9de9-25be-488b-b3b7-69f5f4eb80b8"
+note = "Tests the productive explanation bridge with the same positive momentary explanation and contrasting origin-only and sustaining assignments."

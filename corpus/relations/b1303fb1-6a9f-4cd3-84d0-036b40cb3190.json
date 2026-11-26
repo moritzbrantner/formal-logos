@@ -1,0 +1,10 @@
+{
+  "id": "b1303fb1-6a9f-4cd3-84d0-036b40cb3190",
+  "label": "Test by FO embeds into restricted reachability language",
+  "subject_kind": "result",
+  "subject_id": "29541ab7-d199-41ce-a82d-d144d1a4f6be",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "3ff52bf2-165b-497b-b7ad-4acf1ca8bee5",
+  "note": "Checks definability after embedding first-order formulas into the restricted path language on the same indexed profile."
+}

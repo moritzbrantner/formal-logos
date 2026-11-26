@@ -1,0 +1,10 @@
+{
+  "id": "d614ecc7-99c8-4d5b-858b-b147cfda4393",
+  "label": "Test by Interpretations for the twelve derivations of the round- for Any two bearers of the se (1)",
+  "subject_kind": "result",
+  "subject_id": "f67bf7a3-78dd-5e01-8c50-d99012a8ba63",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "a59a925d-b58f-5188-9573-94d251233d61",
+  "note": "Tests omitting this premise in the encoded directedFromComparableDegrees argument, with the other premises retained and the conclusion false in each corresponding control."
+}

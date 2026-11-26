@@ -198,3 +198,63 @@ object_kind = "statement"
 object_id = "Whatever is IMMENSE_2 and present to all whenever they are is IMMENSE_1"
 verification_result_id = "The narrowed immensity sense bridge from the immensity sense bridge"
 note = "Same InAct, CausesIn, esse, Infinite and Immense; the narrowed form adds a history and giving relation and the antecedent that g is present to all whenever they are in every history. Strictness is not checked."
+
+[[relation]]
+id = "Test by Sustaining-causation controls checked"
+label = "Test by Sustaining-causation controls checked"
+subject_kind = "result"
+subject_id = "b12b253b-7031-41f3-ac3f-42b7bad3d166"
+predicate = "tests"
+object_kind = "statement"
+object_id = "140544c4-3152-4543-9590-9567acf874a2"
+note = "Tests the presence-to-act bridge in the finite IMMENSE_2 presence derivation."
+
+[[relation]]
+id = "Test by Sustaining-causation controls checked for A concrete thing that begins to be present h (1)"
+label = "Test by Sustaining-causation controls checked for A concrete thing that begins to be present h (1)"
+subject_kind = "result"
+subject_id = "b12b253b-7031-41f3-ac3f-42b7bad3d166"
+predicate = "tests"
+object_kind = "statement"
+object_id = "16828262-4ec0-46e8-b5cb-3f6b7ed2186d"
+note = "Tests the beginning-to-sustaining-cause bridge in the finite sustaining lasting-ground derivation."
+
+[[relation]]
+id = "Test by Sustaining-causation controls checked for Every CAUSE_OF_BEING_2 sustaining cause of a (1)"
+label = "Test by Sustaining-causation controls checked for Every CAUSE_OF_BEING_2 sustaining cause of a (1)"
+subject_kind = "result"
+subject_id = "b12b253b-7031-41f3-ac3f-42b7bad3d166"
+predicate = "tests"
+object_kind = "statement"
+object_id = "1d4d9b13-9be3-403b-bce2-35102ab1bd34"
+note = "Tests the sustaining-cause-to-ground bridge in the finite sustaining lasting-ground derivation."
+
+[[relation]]
+id = "Test by Sustaining-causation controls checked for Every cause of a thing's being is a CAUSE_OF (1)"
+label = "Test by Sustaining-causation controls checked for Every cause of a thing's being is a CAUSE_OF (1)"
+subject_kind = "result"
+subject_id = "b12b253b-7031-41f3-ac3f-42b7bad3d166"
+predicate = "tests"
+object_kind = "statement"
+object_id = "23e04ae5-98ed-4464-8f9b-dc0dfbad0caa"
+note = "Tests the sustaining interpretation by comparing the models of the presence and lasting-ground routes with originating-only causation."
+
+[[relation]]
+id = "Test by Sustaining-causation controls checked for A concrete thing present at two moments is p (1)"
+label = "Test by Sustaining-causation controls checked for A concrete thing present at two moments is p (1)"
+subject_kind = "result"
+subject_id = "b12b253b-7031-41f3-ac3f-42b7bad3d166"
+predicate = "tests"
+object_kind = "statement"
+object_id = "7a41ea33-cbc1-4b74-9437-5d222ed9b633"
+note = "Tests temporal convexity in the originating lasting-ground derivation using the separated time slices."
+
+[[relation]]
+id = "Test by Sustaining-causation controls checked for Whatever gives a thing being at a moment is (1)"
+label = "Test by Sustaining-causation controls checked for Whatever gives a thing being at a moment is (1)"
+subject_kind = "result"
+subject_id = "b12b253b-7031-41f3-ac3f-42b7bad3d166"
+predicate = "tests"
+object_kind = "statement"
+object_id = "c4661518-33cc-4a53-ae55-cb986be9c2b5"
+note = "Tests giver presence in the finite sustaining lasting-ground derivation."

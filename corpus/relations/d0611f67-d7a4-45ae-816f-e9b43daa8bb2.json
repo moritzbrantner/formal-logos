@@ -1,0 +1,10 @@
+{
+  "id": "d0611f67-d7a4-45ae-816f-e9b43daa8bb2",
+  "label": "Test by Finite interpretations for the seven derivations of caus for If y is SIMPLY_PRIOR_1 to (1)",
+  "subject_kind": "result",
+  "subject_id": "86d080aa-4c6e-5f85-a86e-333c805d0093",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "47aff057-35ef-5418-930b-fef72e1104d2",
+  "note": "Tests omitting this premise in the encoded nothingPriorToItself argument, with the other premises retained and the conclusion false in each corresponding control."
+}

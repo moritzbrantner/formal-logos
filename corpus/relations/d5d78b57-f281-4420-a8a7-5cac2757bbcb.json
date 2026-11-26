@@ -1,0 +1,10 @@
+{
+  "id": "d5d78b57-f281-4420-a8a7-5cac2757bbcb",
+  "label": "Test by Finite SAME-profile controls: endless life permits successive life-states and need not be…",
+  "subject_kind": "result",
+  "subject_id": "6bc09f0b-0702-50ec-b96a-3ec213f17564",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "0659227c-0979-579c-910b-03a1967f49c5",
+  "note": "Tests how the weak typed eternity inputs and lack of primitive eternity can coexist in the populated missing-recognition profile."
+}

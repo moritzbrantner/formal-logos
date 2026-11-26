@@ -1,0 +1,10 @@
+{
+  "id": "a07b4c03-0e13-4834-9207-acdd6afb65ca",
+  "label": "Test by Finite interpretations for the round 3 Cogito/existence- for In a subject capable of r (1)",
+  "subject_kind": "result",
+  "subject_id": "b9c3f090-3bf2-5c96-ae3e-c18a1d63cd3b",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "7c3da33e-7ead-54f8-aace-ed3cf3a7bb02",
+  "note": "Tests omitting this premise in the encoded potencyIsUnactualizedCapacityFromPrivation argument, with the other premises retained and the conclusion false in each corresponding control."
+}

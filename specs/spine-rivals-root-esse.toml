@@ -528,3 +528,123 @@ predicate = "alternative_to"
 object_kind = "statement"
 object_id = "STMT-CONCRETE-NECESSARY-UNION-WF"
 note = "Same Profile and selected world. Stronger than the negation: an endless descending chain would also negate the premise. Neither is established."
+
+[[relation]]
+id = "Test by Abstract-only rival of concrete population survives, checked"
+label = "Test by Abstract-only rival of concrete population survives, checked"
+subject_kind = "result"
+subject_id = "3ece0128-00db-428a-a8f5-c781c072fcfb"
+predicate = "tests"
+object_kind = "statement"
+object_id = "56f68b40-9737-59a0-8cac-5610980a1547"
+note = "Tests the selected premise in the following setting. Same Ontic model, concrete predicate and selected world as the premise; one world, one candidate. Control.abstractOnly in Control.AbstractOnlySurvives; abstractOnlySurvives proves the listed conjuncts. Control.abstractOnly at its one world: the rival and excluded middle hold; NecessaryRootTrilemma fails. Consumer tested: NecessaryRootFork.necessaryRootTrilemma."
+
+[[relation]]
+id = "Test by Non-concrete-priority rival of the simple-priority bridge survives, checked"
+label = "Test by Non-concrete-priority rival of the simple-priority bridge survives, checked"
+subject_kind = "result"
+subject_id = "6b135d43-0592-451b-81c7-de48e761cf2b"
+predicate = "tests"
+object_kind = "statement"
+object_id = "86efed1a-f353-5b5d-9431-df7fc643ace1"
+note = "Tests the selected premise in the following setting. Same Profile, selected world and PriorSimply as the premise; one world, two candidates. Control.abstractPrior in Control.AbstractPriorSurvives; abstractPriorSurvives proves the listed conjuncts. Control.abstractPrior at its one world with abstractPriorTo: the rival, concrete population, WholeRosterNotTrapped, EveryContingentGroundedAt and excluded middle hold; NecessaryActualFirstAt fails. Consumer tested: NecessaryFirstBeing.necessaryFirst."
+
+[[relation]]
+id = "Test by Bottomless-grounding rival of whole-roster nontrapping survives, checked"
+label = "Test by Bottomless-grounding rival of whole-roster nontrapping survives, checked"
+subject_kind = "result"
+subject_id = "35de6bba-d517-4107-a1e0-4b72dad4c739"
+predicate = "tests"
+object_kind = "statement"
+object_id = "5c898d24-d1f7-5087-b09e-3287a723e787"
+note = "Tests the selected premise in the following setting. Same Profile, selected relation and selected world as the premise; two mutually accessible worlds, natural-number candidates, all concrete. Control.descent in Control.BottomlessSurvives; bottomlessSurvives proves the listed conjuncts. Control.descent at world false: the rival, concrete population, contingent dependence and excluded middle hold; NecessaryConcreteAt fails. Consumer tested: WholeRosterFoundation.necessaryConcrete."
+
+[[relation]]
+id = "Test by Contingent-root rival of contingent dependence survives, checked"
+label = "Test by Contingent-root rival of contingent dependence survives, checked"
+subject_kind = "result"
+subject_id = "21a28d4b-1b89-41c7-996b-dca0f5d9a291"
+predicate = "tests"
+object_kind = "statement"
+object_id = "c71c068c-bbae-5ed5-a99d-70b155c8d239"
+note = "Tests the selected premise in the following setting. Same Profile, selected relation and selected world as the premise; two mutually accessible worlds, one candidate. Control.bruteRoot in Control.ContingentRootSurvives; contingentRootSurvives proves the listed conjuncts. Control.bruteRoot at world false: the rival, a unique actual root and excluded middle hold; UniqueNecessaryActualRootAt fails. Consumer tested: ActualRootNecessityUpgrade.upgrade."
+
+[[relation]]
+id = "Test by Contingent-support rival of the no-contingent-support premise survives, checked"
+label = "Test by Contingent-support rival of the no-contingent-support premise survives, checked"
+subject_kind = "result"
+subject_id = "87d3249e-9016-4929-a409-d7050c14375e"
+predicate = "tests"
+object_kind = "statement"
+object_id = "dd41c165-129a-59d3-84ce-bd13c0944901"
+note = "Tests the selected premise in the following setting. Same Profile, selected relation and selected world as the premise; two mutually accessible worlds, three candidates, all concrete. Control.sustainedWhole in Control.ContingentSupportSurvives; contingentSupportSurvives proves the listed conjuncts. Control.sustainedWhole at world false: the rival, concrete population, ActualGroundingWF, EveryContingentGroundedAt, ActualReflexive, ConcreteNecessaryUnionWF and excluded middle hold; NecessaryConcreteUnderivedAt fails. Consumer tested: NecessaryConcreteUnderived.checks."
+
+[[relation]]
+id = "Test by Exceeded-god rival of God's maximality in being survives, checked"
+label = "Test by Exceeded-god rival of God's maximality in being survives, checked"
+subject_kind = "result"
+subject_id = "fcabe1f1-8e44-4660-866d-32eb0d7026ca"
+predicate = "tests"
+object_kind = "statement"
+object_id = "4c79298d-ee09-5e99-9ced-1be92c19b4cc"
+note = "Tests the selected premise in the following setting. Same IsGod, InAct, MoreIn and esse as the premise; two members, one respect. Control.demiurgeGod with demiurgeAct, demiurgeMore, demiurgeCause in Control.ExceededGodSurvives; exceededGodSurvives proves the listed conjuncts. Control.demiurgeGod, demiurgeAct, demiurgeMore, demiurgeCause, with Composite := demiurgeGod: the rival, CompositeHasAUnitingCauseReading and CauseOfQualityInAnotherIsMoreSuchReading hold; GodIsSimple fails. Consumer tested: StageTwo.GodIsSimple.godIsSimple."
+
+[[relation]]
+id = "Test by Idle-maximum rival of the genus principle at being survives, checked"
+label = "Test by Idle-maximum rival of the genus principle at being survives, checked"
+subject_kind = "result"
+subject_id = "37ad5dfc-0fd9-4ff7-85e0-a9ddd5791c0f"
+predicate = "tests"
+object_kind = "statement"
+object_id = "da09703b-0b1e-5dca-9dd7-6c0c8d1610d7"
+note = "Tests the selected premise in the following setting. Same InAct, MoreIn, CausesIn and esse parameters as the premise; three members strictly ranked. Control.Tier with tierAct, tierMore, tierCause in Control.IdleMaximumSurvives; idleMaximumSurvives proves the listed conjuncts. Control.tierAct, tierMore, tierCause at the one respect: the rival and SomeBeingMaximalInBeing hold; MaximeEnsCausesBeingOfAllReading fails. Consumer tested: TermSenseForks3.maximeEnsCausesAllMaximal."
+
+[[relation]]
+id = "Test by Mere-conservation rival of universal perfection transfer survives, checked"
+label = "Test by Mere-conservation rival of universal perfection transfer survives, checked"
+subject_kind = "result"
+subject_id = "cf59b546-0dfe-4a34-ab95-334a04690d9e"
+predicate = "tests"
+object_kind = "statement"
+object_id = "b26c10a0-983d-5a88-aa03-cc601bc1ddc6"
+note = "Tests the selected premise in the following setting. Same InAct, CausesIn and esse as the premise; three members, two respects. Control.Tier with conserveAct and conserveCause in Control.MereConservationSurvives; mereConservationSurvives proves the listed conjuncts. Control.conserveAct and conserveCause with esse = false: the rival and ResidualPerfectionTransfer hold; CauseOfBeingCausesEveryPerfection fails. Consumer tested: CausalPerfectionTransfer.reconstruction."
+
+[[relation]]
+id = "Test by Mutual-support rival of well-founded necessary support survives, checked"
+label = "Test by Mutual-support rival of well-founded necessary support survives, checked"
+subject_kind = "result"
+subject_id = "f88dfacf-5cb4-466b-a0ee-0c93231f9fd0"
+predicate = "tests"
+object_kind = "statement"
+object_id = "d149d238-2eeb-5c8b-a136-f95d7aa5c721"
+note = "Tests the selected premise in the following setting. Same Profile, selected relation and selected world as the premise; two mutually accessible worlds, two candidates, both concrete and necessary. Control.mutualPair in Control.MutualSupportSurvives; mutualSupportSurvives proves the listed conjuncts. Control.mutualPair at world false: the rival, concrete population, ActualGroundingWF, EveryContingentGroundedAt, ActualReflexive, NoContingentConcreteSupport and excluded middle hold; NecessaryConcreteUnderivedAt fails. Consumer tested: NecessaryConcreteUnderived.checks."
+
+[[relation]]
+id = "Test by Non-concrete-cause rival of the esse-cause bridge survives, checked"
+label = "Test by Non-concrete-cause rival of the esse-cause bridge survives, checked"
+subject_kind = "result"
+subject_id = "3abf7cd9-99f2-4d45-80ee-dc7295e4bce8"
+predicate = "tests"
+object_kind = "statement"
+object_id = "cb1cdea9-eb6c-578c-8008-84e0d4107fd3"
+note = "Tests the selected premise in the following setting. Same Profile, selected world, CausesIn and esse as the premise; two mutually accessible worlds, two candidates. Control.formCause in Control.NonConcreteEsseCauseSurvives; nonConcreteEsseCauseSurvives proves the listed conjuncts. Control.formCause at world false with formCauses and formParticipates: the rival, ContingentConcretumParticipatesEsse and ParticipatedEsseHasDistinctCause hold; EveryContingentGroundedAt fails. Consumer tested: Round2Grounding.contingentGroundedViaParticipation."
+
+[[relation]]
+id = "Test by Thin-existence rival of the existence-to-act contract survives, checked"
+label = "Test by Thin-existence rival of the existence-to-act contract survives, checked"
+subject_kind = "result"
+subject_id = "ea247cb9-5aef-4901-951b-d7e3a620257b"
+predicate = "tests"
+object_kind = "statement"
+object_id = "0436de86-6579-53f2-9ff5-2111ba44ebae"
+note = "Tests the selected premise in the following setting. Same Ontic model, InAct, esse and selected world as the premise; one world, one candidate, one respect. Control.thinOntic with thinAct and thinAttribution in Control.ThinExistenceSurvives; thinExistenceSurvives proves the listed conjuncts. Control.thinOntic, thinAct, thinAttribution at the one world: the rival and IntellectualExerciserExistsAt hold; IntellectualExerciseRequiresAct fails. Consumer tested: Round2ExistenceAct.intellectualExerciseRequiresActFromExistence."
+
+[[relation]]
+id = "Test by Unbounded-grades rival of grades-to-maximum at being survives, checked"
+label = "Test by Unbounded-grades rival of grades-to-maximum at being survives, checked"
+subject_kind = "result"
+subject_id = "37926b79-6c4e-4bda-ac51-52c5da707711"
+predicate = "tests"
+object_kind = "statement"
+object_id = "e4e6b0cd-f61a-5605-a302-573c67cf063a"
+note = "Tests the selected premise in the following setting. Same InAct, MoreIn and esse as the premise; one world, natural-number candidates, strict order with no top. Control.ascent in Control.UnboundedGradesSurvive; unboundedGradesSurvive proves the listed conjuncts. Control.ascent at its one world with ascentAct, ascentMore, ascentCause and selected being 0: the rival, NecessaryRootAncestor, excluded middle, MaximumInBeingCausesAllBeingsReading, ExistingInActAt and EsseCauseIsActualConcreteGround hold; UniqueNecessaryActualRootAt fails. Consumer tested: SelectedAncestryUnique.uniqueRoot."

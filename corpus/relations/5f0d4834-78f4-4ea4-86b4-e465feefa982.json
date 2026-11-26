@@ -1,0 +1,10 @@
+{
+  "id": "5f0d4834-78f4-4ea4-86b4-e465feefa982",
+  "label": "Test by Finite interpretations for the ten derivations of round for Every power satisfying the (1)",
+  "subject_kind": "result",
+  "subject_id": "d3dd4601-36f0-51a2-a5f4-29fc87e49e84",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "fc2912b3-613c-52cc-84d3-9135cc456efe",
+  "note": "Tests omitting this premise in the encoded teachingInclusiveFromBounds, namedGovernanceCoverageFromBounds, institutionLinkFromTeachingGrant arguments, with the other premises retained and the conclusion false in each corresponding control."
+}

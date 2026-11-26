@@ -1,0 +1,10 @@
+{
+  "id": "e1cdd24b-56b8-4024-9b0a-473fd34dbb26",
+  "label": "Test by Finite interpretations for the fourteen derivations of r for Nothing has actuality exc (1)",
+  "subject_kind": "result",
+  "subject_id": "7ebb0ab0-4022-5113-9810-67b4afa60cfc",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "7067553d-cad9-5d79-b6b2-912e35051530",
+  "note": "Tests omitting this premise in the encoded existingInActAtFromSomeAct, existingInActAtFromEleaticPower, bearerExistsFromOperationAndEsse arguments, with the other premises retained and the conclusion false in each corresponding control."
+}

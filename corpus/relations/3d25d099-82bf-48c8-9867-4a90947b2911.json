@@ -1,0 +1,10 @@
+{
+  "id": "3d25d099-82bf-48c8-9867-4a90947b2911",
+  "label": "Test by Efficient-priority controls",
+  "subject_kind": "result",
+  "subject_id": "b7e3cc74-1009-4157-8246-61cabb77bc9a",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "1ff08418-e7a8-473f-9348-f2fe83b4d00e",
+  "note": "Tests the efficiently typed external-esse condition on the model retaining all mode-unspecified inputs with a component still first."
+}

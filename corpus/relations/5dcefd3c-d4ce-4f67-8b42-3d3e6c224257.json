@@ -1,0 +1,10 @@
+{
+  "id": "5dcefd3c-d4ce-4f67-8b42-3d3e6c224257",
+  "label": "Test by Finite interpretations for the seven derivations of caus for OPEN analyst premise: if (1)",
+  "subject_kind": "result",
+  "subject_id": "86d080aa-4c6e-5f85-a86e-333c805d0093",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "bf93f259-29b4-53df-ae5b-ac7f522ea33d",
+  "note": "Tests omitting this premise in the encoded efficientCausePrior argument, with the other premises retained and the conclusion false in each corresponding control."
+}

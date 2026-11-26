@@ -1,0 +1,10 @@
+{
+  "id": "483753ed-c208-458a-99d7-dab679f25843",
+  "label": "Test by Finite models for the maxime ens and potency sense forks for In potency is read as POT (1)",
+  "subject_kind": "result",
+  "subject_id": "06f23500-cdaa-5797-b9a2-fe6d47e24a34",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "887dea7d-64aa-54bb-8890-c105cd573f47",
+  "note": "Tests omitting potency sense coverage with exclusivity on the selected Unit profile."
+}

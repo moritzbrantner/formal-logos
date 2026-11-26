@@ -1,0 +1,10 @@
+{
+  "id": "31957ab3-8978-47cf-8551-be5ac8e05520",
+  "label": "Test by Thin-existence rival of the existence-to-act contract survives, checked",
+  "subject_kind": "result",
+  "subject_id": "ea247cb9-5aef-4901-951b-d7e3a620257b",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "0436de86-6579-53f2-9ff5-2111ba44ebae",
+  "note": "Tests the selected premise in the following setting. Same Ontic model, InAct, esse and selected world as the premise; one world, one candidate, one respect. Control.thinOntic with thinAct and thinAttribution in Control.ThinExistenceSurvives; thinExistenceSurvives proves the listed conjuncts. Control.thinOntic, thinAct, thinAttribution at the one world: the rival and IntellectualExerciserExistsAt hold; IntellectualExerciseRequiresAct fails. Consumer tested: Round2ExistenceAct.intellectualExerciseRequiresActFromExistence."
+}

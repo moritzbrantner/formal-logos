@@ -1,0 +1,10 @@
+{
+  "id": "4c9a9a49-7baf-45a1-a325-ee06bf56acc4",
+  "label": "Test by Finite interpretations for the ten derivations of round for For any being g, if Jesus (1)",
+  "subject_kind": "result",
+  "subject_id": "d3dd4601-36f0-51a2-a5f4-29fc87e49e84",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "1bd154e6-6ff4-5810-baff-e10433d1766a",
+  "note": "Tests omitting this premise in the encoded institutionLinkFromTeachingGrant argument, with the other premises retained and the conclusion false in each corresponding control."
+}

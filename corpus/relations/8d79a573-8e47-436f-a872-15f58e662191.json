@@ -1,0 +1,10 @@
+{
+  "id": "8d79a573-8e47-436f-a872-15f58e662191",
+  "label": "Test by Four nonempty schema controls explicitly export matched religious content and truth/fact…",
+  "subject_kind": "result",
+  "subject_id": "39b9055d-770a-54c8-b5f6-77cb61742fa1",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "05790be0-984b-55cc-9f0f-802d4b4cc80c",
+  "note": "Tests coverage in the two nonempty schema cases of isolated belief-assertion and descriptive-role failures, with the explicitly retained clauses."
+}

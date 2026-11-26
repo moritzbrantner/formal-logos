@@ -1,0 +1,10 @@
+{
+  "id": "5106a73a-f4c7-4447-a3fe-c4dcebb47159",
+  "label": "Test by Same profile witness weak-bridge sibling omission certif for An incoming direct existe (1)",
+  "subject_kind": "result",
+  "subject_id": "d7aa6bca-01a7-4c42-a9f6-9be3b430ca8d",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "bd983df2-058a-5503-89a1-bbebe87f958b",
+  "note": "Tests omission of this premise from sameWitnessUnderivedFromBridges in the shared-witness interpretation retaining the other inputs but leaving the selected exemplar derived."
+}

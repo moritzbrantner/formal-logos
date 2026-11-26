@@ -196,3 +196,33 @@ delta_statement_id = "Every concrete candidate with a distinct possible concrete
 evidence_result_ids = { implication = "Unrestricted free absence strengthens free absence for candidates that could be absent", equivalence = "Unrestricted free absence factors into contingent free absence and companioned absence" }
 statement_parameter_indices = { stronger = [0, 1, 2, 3], weaker = [0, 1, 2, 3], delta = [0, 1, 2, 3] }
 note = "Difference of unrestricted and contingent free absence on the same profile and world: the strong version adds exactly that every concrete candidate with a distinct possible concrete companion could be absent. With companions this difference excludes any concrete candidate existing at every accessible world (controls, law 9), so recombination supports S2 for a candidate necessary being only through this difference. Strictness is witnessed by the theist model."
+
+[[relation]]
+id = "Test by Subtraction argument controls checked"
+label = "Test by Subtraction argument controls checked"
+subject_kind = "result"
+subject_id = "7c5984f9-2424-428e-b1d7-539b490d8eba"
+predicate = "tests"
+object_kind = "statement"
+object_id = "cdf897a8-5490-561a-b9d2-507486a3f192"
+note = "Tests the selected premise in the following setting. One profile and world: universal two-world frame (S5), God existing at both worlds and one creature at one, the two-being signature's stipulated divine fields. theistProfile with pairSignature at world true: the box K, S5 and stage-one nodes, S1, S3 throughout, contingent free absence and companions hold; S2 at w, unrestricted free absence and 'possibly no concrete object' fail. Models, item 5: no hypotheses; the theist profile at world true."
+
+[[relation]]
+id = "Test by Subtraction argument controls checked for Unrestricted free absence among distinct con (1)"
+label = "Test by Subtraction argument controls checked for Unrestricted free absence among distinct con (1)"
+subject_kind = "result"
+subject_id = "7c5984f9-2424-428e-b1d7-539b490d8eba"
+predicate = "tests"
+object_kind = "statement"
+object_id = "ff30c214-d193-4501-a6a8-0a5bdeb80477"
+note = "Tests the converse strength implication in the registered interpretation. Same profile and world. Strict: in the theist model (God at both worlds, one creature at one world, universal access) free absence for candidates that could be absent holds and unrestricted free absence fails, at x the creature and y God (controls)."
+
+[[relation]]
+id = "Test by Unrestricted free absence factors into contingent free absence and companioned absence"
+label = "Test by Unrestricted free absence factors into contingent free absence and companioned absence"
+subject_kind = "result"
+subject_id = "542c595e-08e3-4b71-8799-dc23fb26c5d9"
+predicate = "tests"
+object_kind = "statement"
+object_id = "ff30c214-d193-4501-a6a8-0a5bdeb80477"
+note = "Checks the exact decomposition of the stronger statement into the weaker version and the registered delta under the comparison's shared interpretation."

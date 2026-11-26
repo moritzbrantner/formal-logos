@@ -1,0 +1,10 @@
+{
+  "id": "fa95cf88-4973-4a22-99be-c3e4c948851e",
+  "label": "Test by Finite interpretations for the thirteen derivations of r for Being more in any perfect (1)",
+  "subject_kind": "result",
+  "subject_id": "59d1be21-3572-5381-8674-06d17ec79c97",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "a4814f25-84b0-560e-870a-eb3a23a6a35b",
+  "note": "Tests omitting this premise in the encoded asymmetricViaGrades argument, with the other premises retained and the conclusion false in each corresponding control."
+}

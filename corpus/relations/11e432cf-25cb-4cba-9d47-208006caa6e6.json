@@ -1,0 +1,10 @@
+{
+  "id": "11e432cf-25cb-4cba-9d47-208006caa6e6",
+  "label": "Test by Four source-to-channel omissions break record guarantees",
+  "subject_kind": "result",
+  "subject_id": "cbc30caf-c329-4f25-b5e2-eedbb1befe28",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "389db8f3-19c9-48c6-a6c7-c778f13895e2",
+  "note": "Tests whether an informed truthful asserting source suffices while independently varying assertoric plans, causal realization, exact truth transport and coverage in populated histories."
+}

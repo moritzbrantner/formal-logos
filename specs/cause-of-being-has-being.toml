@@ -196,3 +196,103 @@ object_kind = "statement"
 object_id = "STMT-CAUSE-OF-BEING-HAS-WHAT-IT-GIVES"
 verification_result_id = "Nothing gives what it lacks entails its cause-of-being restriction"
 note = "Same InAct and CausesIn; the weak version restricts to causes of the effect's being. Strict: control 15."
+
+[[relation]]
+id = "Test by Giver-of-being controls, checked"
+label = "Test by Giver-of-being controls, checked"
+subject_kind = "result"
+subject_id = "cd075a84-bb64-4c05-a592-21072621d30f"
+predicate = "tests"
+object_kind = "statement"
+object_id = "0436de86-6579-53f2-9ff5-2111ba44ebae"
+note = "Tests omission of existence-to-act on the profile with all bearers existent, one concretum, and no act."
+
+[[relation]]
+id = "Test by Giver-of-being controls, checked for Every existent at the selected world is CONCRETE_6"
+label = "Test by Giver-of-being controls, checked for Every existent at the selected world is CONCRETE_6"
+subject_kind = "result"
+subject_id = "cd075a84-bb64-4c05-a592-21072621d30f"
+predicate = "tests"
+object_kind = "statement"
+object_id = "0e02cd69-8fb0-4859-8287-937440c84b5b"
+note = "Tests omission of existence-to-concreteness on a profile assigning one abstract cause despite universal existence."
+
+[[relation]]
+id = "Test by Giver-of-being controls, checked for If c, distinct from x, causes x's esse, then x de (1)"
+label = "Test by Giver-of-being controls, checked for If c, distinct from x, causes x's esse, then x de (1)"
+subject_kind = "result"
+subject_id = "cd075a84-bb64-4c05-a592-21072621d30f"
+predicate = "tests"
+object_kind = "statement"
+object_id = "2068f91c-1eeb-5dbb-a71a-f7b6a12bb495"
+note = "Tests omission of the causal dependence bridge in the profile with empty dependence and grounding but a nonempty cause-of-being relation."
+
+[[relation]]
+id = "Test by Giver-of-being controls, checked for Whatever has esse in re is CONCRETE_6 in the profile"
+label = "Test by Giver-of-being controls, checked for Whatever has esse in re is CONCRETE_6 in the profile"
+subject_kind = "result"
+subject_id = "cd075a84-bb64-4c05-a592-21072621d30f"
+predicate = "tests"
+object_kind = "statement"
+object_id = "2d9807a5-ebff-45fd-972f-e241f18713d4"
+note = "Tests omission of the esse-to-concreteness implication on the profile with every bearer actual and only one concretum."
+
+[[relation]]
+id = "Test by Giver-of-being controls, checked for If an actual concretum x depends for its being on (1)"
+label = "Test by Giver-of-being controls, checked for If an actual concretum x depends for its being on (1)"
+subject_kind = "result"
+subject_id = "cd075a84-bb64-4c05-a592-21072621d30f"
+predicate = "tests"
+object_kind = "statement"
+object_id = "2e248016-f8bf-5d8a-931e-7f9ebbb13e42"
+note = "Tests omission of dependence-to-grounding with the universal dependence assignment and empty grounding."
+
+[[relation]]
+id = "Test by Giver-of-being controls, checked for Nothing gives being that it does not have"
+label = "Test by Giver-of-being controls, checked for Nothing gives being that it does not have"
+subject_kind = "result"
+subject_id = "cd075a84-bb64-4c05-a592-21072621d30f"
+predicate = "tests"
+object_kind = "statement"
+object_id = "4a5a43a5-bb4d-4a87-828a-d913a1f0422e"
+note = "Tests omission in the direct cause-of-being profile whose giver lacks the act of being."
+
+[[relation]]
+id = "Test by Giver-of-being controls, checked for Whatever is in act of esse exists at the selected world"
+label = "Test by Giver-of-being controls, checked for Whatever is in act of esse exists at the selected world"
+subject_kind = "result"
+subject_id = "cd075a84-bb64-4c05-a592-21072621d30f"
+predicate = "tests"
+object_kind = "statement"
+object_id = "546975ef-0614-5c0a-8f49-fab2cd2a2533"
+note = "Tests omission of act-to-existence on a finite profile with all bearers in act and only one existent."
+
+[[relation]]
+id = "Test by Giver-of-being controls, checked for Nothing has actuality except insofar as it is: wh (1)"
+label = "Test by Giver-of-being controls, checked for Nothing has actuality except insofar as it is: wh (1)"
+subject_kind = "result"
+subject_id = "cd075a84-bb64-4c05-a592-21072621d30f"
+predicate = "tests"
+object_kind = "statement"
+object_id = "7067553d-cad9-5d79-b6b2-912e35051530"
+note = "Tests omission of the actuality-only-insofar-as-being principle with act fixed to the selected bearer or the further respect."
+
+[[relation]]
+id = "Test by Giver-of-being controls, checked for At the reading world w, whatever causes the esse (1)"
+label = "Test by Giver-of-being controls, checked for At the reading world w, whatever causes the esse (1)"
+subject_kind = "result"
+subject_id = "cd075a84-bb64-4c05-a592-21072621d30f"
+predicate = "tests"
+object_kind = "statement"
+object_id = "c99f9d23-3f05-5c3c-9279-44a59e445a14"
+note = "Tests omission of giver existence on a profile with an absent cause and the remaining actual-grounding bridge inputs."
+
+[[relation]]
+id = "Test by Giver-of-being controls, checked for Whatever causes the being of something is in act (1)"
+label = "Test by Giver-of-being controls, checked for Whatever causes the being of something is in act (1)"
+subject_kind = "result"
+subject_id = "cd075a84-bb64-4c05-a592-21072621d30f"
+predicate = "tests"
+object_kind = "statement"
+object_id = "ef068f46-6d3f-4a7a-b1b9-36e52d9fe867"
+note = "Tests omission of cause-of-being in-act in the profile with only one bearer in act."

@@ -1,0 +1,10 @@
+{
+  "id": "5580119d-e588-4d0a-bf85-25128feb7210",
+  "label": "Test by Moral intervention and grounding finite comparisons",
+  "subject_kind": "result",
+  "subject_id": "70c14b36-1cc6-4d1d-86d7-56afbeae0bba",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "1a786096-6f33-4f5c-9725-73cc0bbfebd4",
+  "note": "Tests omission of grounding stability using a finite profile with actual truth, no attitude grounds and variation across admitted interventions."
+}

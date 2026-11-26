@@ -1,0 +1,10 @@
+{
+  "id": "369ebaaf-6dd9-4d0d-897e-91897b2c161d",
+  "label": "Test by Dependence-to-priority controls, checked for If an actual CONCRETE_6 individual depend (1)",
+  "subject_kind": "result",
+  "subject_id": "abc7b1bc-6695-42da-ae22-d1a57e77d9d2",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "a8298fbd-f3c5-480d-95e9-8316889c327f",
+  "note": "Tests omitting grounding of distinct actual dependents in the bare Bool profile, where dependence and the ground-to-priority rule hold but priority fails."
+}

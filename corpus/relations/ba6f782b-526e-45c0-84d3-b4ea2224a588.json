@@ -1,0 +1,10 @@
+{
+  "id": "ba6f782b-526e-45c0-84d3-b4ea2224a588",
+  "label": "Test by Giver-of-being controls, checked for If c, distinct from x, causes x's esse, then x de (1)",
+  "subject_kind": "result",
+  "subject_id": "cd075a84-bb64-4c05-a592-21072621d30f",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "2068f91c-1eeb-5dbb-a71a-f7b6a12bb495",
+  "note": "Tests omission of the causal dependence bridge in the profile with empty dependence and grounding but a nonempty cause-of-being relation."
+}

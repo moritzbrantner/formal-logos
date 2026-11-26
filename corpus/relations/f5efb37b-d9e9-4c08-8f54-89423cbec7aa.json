@@ -1,0 +1,10 @@
+{
+  "id": "f5efb37b-d9e9-4c08-8f54-89423cbec7aa",
+  "label": "Test by Stable, vacuous and ground-status omission controls",
+  "subject_kind": "result",
+  "subject_id": "9d9c1993-6809-494d-99ce-866614f6037a",
+  "predicate": "tests",
+  "object_kind": "argument",
+  "object_id": "50ff5c59-61b4-48d9-bda7-259ee444dd45",
+  "note": "Tests the roles of suffix admission and inhabited evidence cells using stable and empty cells, with independent assignments to scope grounding."
+}

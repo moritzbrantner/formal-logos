@@ -89,3 +89,13 @@ object_kind = "statement"
 object_id = "Ordered-love reading (q.20 a.2 ad 3): GOD_4 wills a non-rational effect's esse as ordered to others"
 verification_result_id = "Strong exclusive ordered-love variant entails the ad 3 ordered-love reading"
 note = "Same IsGod, HasWill, Rational, InAct, CausesIn, ordered willing and esse; the strong version adds the denial of recipient-directed willing. Strict: the compatibility witness satisfies the weak reading and not the strong one."
+
+[[relation]]
+id = "Test by Weak ordered-love reading is compatible with recipient-directed causal willing"
+label = "Test by Weak ordered-love reading is compatible with recipient-directed causal willing"
+subject_kind = "result"
+subject_id = "ef387145-4954-474f-be1a-f00be2fea2b9"
+predicate = "tests"
+object_kind = "statement"
+object_id = "1dd68893-7e41-4909-9f17-1dbb342a7d95"
+note = "Tests the exclusive ordered-love reading in the two-being interpretation where the rational source wills esse to the actual non-rational effect under the weaker reading."

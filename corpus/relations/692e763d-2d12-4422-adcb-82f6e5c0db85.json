@@ -1,0 +1,10 @@
+{
+  "id": "692e763d-2d12-4422-adcb-82f6e5c0db85",
+  "label": "Test by Finite interpretations for the round 3 Cogito/existence- for Every performed doubt whe (1)",
+  "subject_kind": "result",
+  "subject_id": "b9c3f090-3bf2-5c96-ae3e-c18a1d63cd3b",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "1722a80f-47a4-5605-8b66-b3534e457bcb",
+  "note": "Tests omitting this premise in the encoded thoughtOccursFromPerformedDoubt, performedDoubtSelfRefuting arguments, with the other premises retained and the conclusion false in each corresponding control."
+}

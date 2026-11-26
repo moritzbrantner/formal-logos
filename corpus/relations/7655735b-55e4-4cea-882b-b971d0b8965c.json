@@ -1,0 +1,10 @@
+{
+  "id": "7655735b-55e4-4cea-882b-b971d0b8965c",
+  "label": "Test by Root bundle immutability witness and omission controls for Act is SIMPLY_PRIOR_1 to PO (1)",
+  "subject_kind": "result",
+  "subject_id": "c198d4da-f06c-4f22-b532-89103d100e6c",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "a4d3261a-3239-5b44-9953-64ab1b0ed762",
+  "note": "Tests omission from the unchanged immutability bundle by restoring the original simple-priority assignment while keeping the modified act and potency tables."
+}

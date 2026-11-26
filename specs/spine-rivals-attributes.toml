@@ -341,3 +341,143 @@ predicate = "alternative_to"
 object_kind = "statement"
 object_id = "STMT-CLASSICAL-ATTRIBUTES-SUFFICE"
 note = "Same Signature and nine predicates. The rival is the exact negation of the premise; which further attribute is missing is not formalized. Model-witnessed alongside the other non-logical premises of godHasClassicalAttributes; neither is established and no refutation is recorded. Objection audit 2026-11-12 (attempt b6384b6b-ef1a-405e-8237-0c2127d86b5f): no substantive objection identified. Warrant gap: the premise is a stipulated bridge to the primitive HasClassicalAttributes field with no derivation; Dei Filius ch. 1 motivates it, and missing derivations of its further members are not evidence of failure."
+
+[[relation]]
+id = "Test by Rivals of the fourteen stage-two attribute premises survive in finite tests"
+label = "Test by Rivals of the fourteen stage-two attribute premises survive in finite tests"
+subject_kind = "result"
+subject_id = "120dd28f-c1e6-4fa2-8acf-26d0c1d5162a"
+predicate = "tests"
+object_kind = "statement"
+object_id = "00e962ae-f109-55f7-a7fd-f107ce0dea6b"
+note = "Tests the selected premise in the following setting. Same GoodIn and InAct predicates; one being, one respect. Control.actualityWithoutGoodness in Control.Certificate. Other four premises of StageTwo.GodIsSupremelyGood.godIsSupremelyGood hold: God is maximal in being, the maximum in a genus causes all in it, actuality only insofar as being, the cause of being causes every perfection. Its conclusion (God is supremely good) fails."
+
+[[relation]]
+id = "Test by Rivals of the fourteen stage-two attribute premises surv for What is altogether IMMUTA (1)"
+label = "Test by Rivals of the fourteen stage-two attribute premises surv for What is altogether IMMUTA (1)"
+subject_kind = "result"
+subject_id = "120dd28f-c1e6-4fa2-8acf-26d0c1d5162a"
+predicate = "tests"
+object_kind = "statement"
+object_id = "0659227c-0979-579c-910b-03a1967f49c5"
+note = "Tests the selected premise in the following setting. Same InPotency predicate and primitive Eternal predicate (ETERNAL_1, timeless); one being, one respect. No temporal structure is modelled. Control.immutableInTime in Control.Certificate. Other four premises of StageTwo.GodIsEternal.godIsEternal hold: God is maximal in being, the maximum in being is first, act is simply prior to potency, nothing is in act and potency in the same respect. Its conclusion (God is eternal) fails."
+
+[[relation]]
+id = "Test by Rivals of the fourteen stage-two attribute premises surv for Whatever HAS_INTELLECT_1 (1)"
+label = "Test by Rivals of the fourteen stage-two attribute premises surv for Whatever HAS_INTELLECT_1 (1)"
+subject_kind = "result"
+subject_id = "120dd28f-c1e6-4fa2-8acf-26d0c1d5162a"
+predicate = "tests"
+object_kind = "statement"
+object_id = "090be689-b77f-51a1-9d5d-caf339169e4b"
+note = "Tests the selected premise in the following setting. Same HasIntellect and HasWill predicates; one being, one respect. Control.intellectWithoutWill in Control.Certificate. Other seven premises of StageTwo.GodHasWill.godHasWill hold, including that what is altogether immaterial has intellect. Its conclusion (God has will) fails."
+
+[[relation]]
+id = "Test by Rivals of the fourteen stage-two attribute premises surv for No component of anything (1)"
+label = "Test by Rivals of the fourteen stage-two attribute premises surv for No component of anything (1)"
+subject_kind = "result"
+subject_id = "120dd28f-c1e6-4fa2-8acf-26d0c1d5162a"
+predicate = "tests"
+object_kind = "statement"
+object_id = "09c6d5f0-d412-5038-85f9-75fffb935727"
+note = "Tests the selected premise in the following setting. Same ComponentOf and PriorSimply relations; one world, two concrete ungrounded beings, one respect. Control.firstBeingComponent in Control.Certificate. Other three premises of NecessaryFirstAttributes.attributesFromFirst hold: one actual root is necessary, first and potency-free; composites are posterior to components; every composite has a component other than itself. Its conclusion fails: no actual root is first and a component of nothing."
+
+[[relation]]
+id = "Test by Rivals of the fourteen stage-two attribute premises surv for What is ALTOGETHER_IMMATE (1)"
+label = "Test by Rivals of the fourteen stage-two attribute premises surv for What is ALTOGETHER_IMMATE (1)"
+subject_kind = "result"
+subject_id = "120dd28f-c1e6-4fa2-8acf-26d0c1d5162a"
+predicate = "tests"
+object_kind = "statement"
+object_id = "180f5ad2-a421-541a-85c9-9bca578b4a43"
+note = "Tests the selected premise in the following setting. Same ComposedOfMatterAndForm, HasIntellect and ComponentOf predicates; two beings, one respect. Control.materialIntellect in Control.Certificate. Other six premises of StageTwo.GodHasIntellect.godHasIntellect hold: God is maximal in being, composites have a uniting cause, a cause is more such, the two kinds of composition compose, no component is first, the maximum in being is first. A material being with intellect exists. The conclusion (God has intellect) fails."
+
+[[relation]]
+id = "Test by Rivals of the fourteen stage-two attribute premises surv for Open premise, the fuller (1)"
+label = "Test by Rivals of the fourteen stage-two attribute premises surv for Open premise, the fuller (1)"
+subject_kind = "result"
+subject_id = "120dd28f-c1e6-4fa2-8acf-26d0c1d5162a"
+predicate = "tests"
+object_kind = "statement"
+object_id = "1ec205ed-b2a6-5384-bb5f-2565a9d325bf"
+note = "Tests the selected premise in the following setting. Same full nominal description and proper-sense predicate; one being, one respect, one name. Control.namingFails in Control.Certificate. Other two premises of NameApplicationTransfer.Description.properDescriptionExcluded hold: the practice's name refers to no being, and proper application is preserved by practice reference. A unique fully described being exists, so the theorem's conclusion (the full description is excluded) fails."
+
+[[relation]]
+id = "Test by Rivals of the fourteen stage-two attribute premises surv for Every perfection of a thi (1)"
+label = "Test by Rivals of the fourteen stage-two attribute premises surv for Every perfection of a thi (1)"
+subject_kind = "result"
+subject_id = "120dd28f-c1e6-4fa2-8acf-26d0c1d5162a"
+predicate = "tests"
+object_kind = "statement"
+object_id = "64498e7e-7f10-54a0-9ec0-c65e6076de1f"
+note = "Tests the selected premise in the following setting. Same InAct and CausesIn predicates and esse respect; two beings, two respects. Control.emergentPerfection in Control.Certificate. Other premise of CausalMapsBatch1.causeOfBeingHasWhatItGives holds: whatever is caused in a thing is had by it. Its conclusion (a cause of being has every perfection it causes) fails."
+
+[[relation]]
+id = "Test by Rivals of the fourteen stage-two attribute premises surv for Nothing has actuality exc (1)"
+label = "Test by Rivals of the fourteen stage-two attribute premises surv for Nothing has actuality exc (1)"
+subject_kind = "result"
+subject_id = "120dd28f-c1e6-4fa2-8acf-26d0c1d5162a"
+predicate = "tests"
+object_kind = "statement"
+object_id = "7067553d-cad9-5d79-b6b2-912e35051530"
+note = "Tests the selected premise in the following setting. Same InAct predicate and esse respect; one world, one being, two respects. Control.actualityWithoutBeing in Control.Certificate, first conjunct of controls. Other premise of Round2ExistenceAct.existingInActAtFromSomeAct holds: every existent at the one world is in act in some respect. Its conclusion (every existent is in act in esse) fails."
+
+[[relation]]
+id = "Test by Rivals of the fourteen stage-two attribute premises surv for What is its own subsisten (1)"
+label = "Test by Rivals of the fourteen stage-two attribute premises surv for What is its own subsisten (1)"
+subject_kind = "result"
+subject_id = "120dd28f-c1e6-4fa2-8acf-26d0c1d5162a"
+predicate = "tests"
+object_kind = "statement"
+object_id = "75a37a91-732d-510c-9abc-b37c988c5c63"
+note = "Tests the selected premise in the following setting. Same essenceOf/esseOf maps and Infinite predicate; one being, one respect, one principle, one determination. Control.finiteSubsistent in Control.Certificate. Other two non-logical premises of WholePowerPerfection.firstMoverPerfectionFromInfinity hold: the first unmoved mover is simple, and what is infinite has every pure perfection. Its conclusion (the first mover has every pure perfection) fails. The theorem's excluded-middle premise is general logic and is not checked."
+
+[[relation]]
+id = "Test by Rivals of the fourteen stage-two attribute premises surv for A being that is SIMPLE_4, (1)"
+label = "Test by Rivals of the fourteen stage-two attribute premises surv for A being that is SIMPLE_4, (1)"
+subject_kind = "result"
+subject_id = "120dd28f-c1e6-4fa2-8acf-26d0c1d5162a"
+predicate = "tests"
+object_kind = "statement"
+object_id = "818a73cc-249d-5f9b-9c34-aee1f2cbf333"
+note = "Tests the selected premise in the following setting. Same Signature with its primitive HasClassicalAttributes field and the theorem's own nine predicate instances; one being, one respect. Control.attributesFallShort in Control.Certificate. Other thirteen non-logical premises of StageTwo.ClassicalAttributes.godHasClassicalAttributes hold, including the five separately supplied attribute conclusions. Its conclusion (whatever is God has the classical attributes) fails. The theorem's excluded-middle premise is general logic and is not checked."
+
+[[relation]]
+id = "Test by Rivals of the fourteen stage-two attribute premises surv for Act is SIMPLY_PRIOR_1 to (1)"
+label = "Test by Rivals of the fourteen stage-two attribute premises surv for Act is SIMPLY_PRIOR_1 to (1)"
+subject_kind = "result"
+subject_id = "120dd28f-c1e6-4fa2-8acf-26d0c1d5162a"
+predicate = "tests"
+object_kind = "statement"
+object_id = "a4d3261a-3239-5b44-9953-64ab1b0ed762"
+note = "Tests the selected premise in the following setting. Same InAct, InPotency and PriorSimply predicates; one being, one respect. Control.potencyPrior in Control.Certificate. Other premise of FirstBeingNoPotency.firstBeingNoPotency holds: nothing is in act and in potency in the same respect. Its conclusion (a first being is in potency in no respect) fails."
+
+[[relation]]
+id = "Test by Rivals of the fourteen stage-two attribute premises surv for Nothing is simultaneously (1)"
+label = "Test by Rivals of the fourteen stage-two attribute premises surv for Nothing is simultaneously (1)"
+subject_kind = "result"
+subject_id = "120dd28f-c1e6-4fa2-8acf-26d0c1d5162a"
+predicate = "tests"
+object_kind = "statement"
+object_id = "c6d6379b-6a9b-55b5-a701-3df289dfcca4"
+note = "Tests the selected premise in the following setting. Same InAct, InPotency and PriorSimply predicates; one being, one respect; PriorSimply is reflexive in this model. Control.actAndPotency in Control.Certificate. Other premise of FirstBeingNoPotency.firstBeingNoPotency holds: act is simply prior to potency (the being in act prior to the potential being is that being itself). Its conclusion (a first being is in potency in no respect) fails."
+
+[[relation]]
+id = "Test by Rivals of the fourteen stage-two attribute premises surv for Every composite has a cau (1)"
+label = "Test by Rivals of the fourteen stage-two attribute premises surv for Every composite has a cau (1)"
+subject_kind = "result"
+subject_id = "120dd28f-c1e6-4fa2-8acf-26d0c1d5162a"
+predicate = "tests"
+object_kind = "statement"
+object_id = "ca07cae9-6102-564e-a7fd-efb013744b3d"
+note = "Tests the selected premise in the following setting. Same Composite and CausesIn predicates and esse respect; one being, one respect. Control.uncausedComposite in Control.Certificate. Other two premises of StageTwo.GodIsSimple.godIsSimple hold: God is maximal in being, and a cause of a quality in another is more such. Its conclusion (God is not composite) fails."
+
+[[relation]]
+id = "Test by Rivals of the fourteen stage-two attribute premises surv for Whatever is composed of m (1)"
+label = "Test by Rivals of the fourteen stage-two attribute premises surv for Whatever is composed of m (1)"
+subject_kind = "result"
+subject_id = "120dd28f-c1e6-4fa2-8acf-26d0c1d5162a"
+predicate = "tests"
+object_kind = "statement"
+object_id = "d7741cdc-881b-5bda-85ce-d70223162f78"
+note = "Tests the selected premise in the following setting. Same ComposedOfMatterAndForm and Composite predicates and essenceOf/esseOf maps; two beings, one respect, two principles. Control.differenceWithoutComposition in Control.Certificate. Other four premises of FirstMoverSimple.firstMoverSimple hold: no body moves unless moved, the first unmoved mover is the first being, composites are posterior to components, every composite has a component other than itself. Its conclusion fails at the clause that the first mover's esse is not other than its essence."

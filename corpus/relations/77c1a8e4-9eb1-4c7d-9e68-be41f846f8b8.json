@@ -1,0 +1,10 @@
+{
+  "id": "77c1a8e4-9eb1-4c7d-9e68-be41f846f8b8",
+  "label": "Test by Interpretations for the twelve derivations of the round- for Some bearer of the select (1)",
+  "subject_kind": "result",
+  "subject_id": "f67bf7a3-78dd-5e01-8c50-d99012a8ba63",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "3b078622-0815-5f3c-9bc0-703de1c53a68",
+  "note": "Tests omitting this premise in the encoded directedFromGreatestBearer argument, with the other premises retained and the conclusion false in each corresponding control."
+}

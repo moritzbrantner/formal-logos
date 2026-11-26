@@ -44,3 +44,13 @@ rule = "Bound each finite panel and choose a recipient above any proposed univer
 meaning = "In the exact natural-number interpretation the successor of the finite panel's supremum gives esse directly to each member, while a proposed global giver fails at its own successor. The finite-pivot result with the checked #561 package then rules out any finite pivot in this same interpretation. This is a formal deletion witness for the finite-pivot premise."
 axioms = ["propext", "Classical.choice", "Quot.sound"]
 senses = {MAXIMAL_IN_A_SELECTED_PERFECTION_GREATEST = "9bea9a43-3a87-4d62-86de-e5873aea62f8"}
+
+[[relation]]
+id = "Test by Infinite actual roster witnesses omission of the finite giver pivot"
+label = "Test by Infinite actual roster witnesses omission of the finite giver pivot"
+subject_kind = "result"
+subject_id = "8353b4b6-b22b-45d2-8216-a32b12df5707"
+predicate = "tests"
+object_kind = "statement"
+object_id = "0881e859-c4c3-53ff-9bec-b61294e12d51"
+note = "Tests strengthening finite panels to universal giving in the Nat candidate graph where each giver reaches only smaller recipients."

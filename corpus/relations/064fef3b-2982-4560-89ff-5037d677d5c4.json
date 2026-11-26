@@ -1,0 +1,10 @@
+{
+  "id": "064fef3b-2982-4560-89ff-5037d677d5c4",
+  "label": "Test by Relational-receipt controls checked for The term of the origin relation at a moment gi (1)",
+  "subject_kind": "result",
+  "subject_id": "584bac58-203a-4083-821e-a3c46daac8e3",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "6da7d94a-abc4-4092-96c1-9469af548f87",
+  "note": "Tests omission of contemporaneous giving by the origin term in the history with a persisting relation and onset-only giving."
+}

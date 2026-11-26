@@ -1,0 +1,10 @@
+{
+  "id": "cdfeab06-0b33-48f6-8659-665fc90d771c",
+  "label": "Test by One being in POTENCY_1 in no respect",
+  "subject_kind": "result",
+  "subject_id": "206ec7c6-9a7d-501a-8e4d-27055a5f50f9",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "38aa1327-b28a-5ac8-b70d-6b2fdbedf554",
+  "note": "Tests omission of this premise from pureActLives in the one-being interpretation that is nowhere in potency but lacks life when the corresponding premise is dropped."
+}

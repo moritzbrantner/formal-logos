@@ -1,0 +1,10 @@
+{
+  "id": "d942ef56-6b4d-4015-9858-4ed10764ce9e",
+  "label": "Test by Grim Reaper patchwork controls checked for Co-possible Grim Reaper pieces along a coin (1)",
+  "subject_kind": "result",
+  "subject_id": "f93bd2da-d55b-4e08-8867-6dd399a32049",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "7d17a839-f29b-4d16-a70c-5e3d3bd77c25",
+  "note": "Tests coinitial patchwork on the integer pivot profile retaining both local-piece premises and coinitiality."
+}

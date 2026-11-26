@@ -1,0 +1,10 @@
+{
+  "id": "24623875-a288-47cb-ac70-3c26c36232fa",
+  "label": "Test by Unbounded-grades rival of grades-to-maximum at being survives, checked",
+  "subject_kind": "result",
+  "subject_id": "37926b79-6c4e-4bda-ac51-52c5da707711",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "e4e6b0cd-f61a-5605-a302-573c67cf063a",
+  "note": "Tests the selected premise in the following setting. Same InAct, MoreIn and esse as the premise; one world, natural-number candidates, strict order with no top. Control.ascent in Control.UnboundedGradesSurvive; unboundedGradesSurvive proves the listed conjuncts. Control.ascent at its one world with ascentAct, ascentMore, ascentCause and selected being 0: the rival, NecessaryRootAncestor, excluded middle, MaximumInBeingCausesAllBeingsReading, ExistingInActAt and EsseCauseIsActualConcreteGround hold; UniqueNecessaryActualRootAt fails. Consumer tested: SelectedAncestryUnique.uniqueRoot."
+}

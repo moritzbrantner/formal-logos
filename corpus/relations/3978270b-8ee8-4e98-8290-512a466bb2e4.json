@@ -1,0 +1,10 @@
+{
+  "id": "3978270b-8ee8-4e98-8290-512a466bb2e4",
+  "label": "Test by Rivals of the fourteen stage-two attribute premises survive in finite tests",
+  "subject_kind": "result",
+  "subject_id": "120dd28f-c1e6-4fa2-8acf-26d0c1d5162a",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "00e962ae-f109-55f7-a7fd-f107ce0dea6b",
+  "note": "Tests the selected premise in the following setting. Same GoodIn and InAct predicates; one being, one respect. Control.actualityWithoutGoodness in Control.Certificate. Other four premises of StageTwo.GodIsSupremelyGood.godIsSupremelyGood hold: God is maximal in being, the maximum in a genus causes all in it, actuality only insofar as being, the cause of being causes every perfection. Its conclusion (God is supremely good) fails."
+}

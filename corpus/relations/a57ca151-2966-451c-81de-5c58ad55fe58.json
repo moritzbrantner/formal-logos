@@ -1,0 +1,10 @@
+{
+  "id": "a57ca151-2966-451c-81de-5c58ad55fe58",
+  "label": "Test by Replenishment permits constant nondepleting interval work, by temporal energy accounting",
+  "subject_kind": "result",
+  "subject_id": "a73311f6-c3b4-4712-96a6-449af9771ebe",
+  "predicate": "tests",
+  "object_kind": "argument",
+  "object_id": "47c33df4-4c8f-40be-93c5-6006f751b6a1",
+  "note": "Tests omitting closure in the uniform demand case by restoring one unit of input in each admissible constant-stock ledger."
+}

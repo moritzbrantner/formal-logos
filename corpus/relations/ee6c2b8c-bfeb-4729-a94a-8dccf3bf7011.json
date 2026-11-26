@@ -1,0 +1,10 @@
+{
+  "id": "ee6c2b8c-bfeb-4729-a94a-8dccf3bf7011",
+  "label": "Test by Matched three-bearer control for universal-only transfer to GOD_4",
+  "subject_kind": "result",
+  "subject_id": "fcc91ba5-c1ce-4a8e-b405-22d8912f9032",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "f8ba2429-b4f1-5712-a4d3-798213963d34",
+  "note": "Tests whether the restricted transfer input entails unrestricted transfer using the Fin 3 and Bool source and effects profile."
+}

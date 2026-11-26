@@ -1,0 +1,10 @@
+{
+  "id": "e8a76a2e-f429-4262-9746-711c0f9f98a7",
+  "label": "Test by Restore a source-only product route while retaining product-dependent adoption",
+  "subject_kind": "result",
+  "subject_id": "83d0e838-cfd4-4249-9cc5-620f19bc6321",
+  "predicate": "tests",
+  "object_kind": "argument",
+  "object_id": "4df18b31-1b44-4d5c-abef-15d203c6c2f7",
+  "note": "Tests omission of the product-needs-adoption condition in the output-bypass exercise, holding the adoption prerequisite fixed."
+}

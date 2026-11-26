@@ -1,0 +1,10 @@
+{
+  "id": "6a17e7be-08b8-4cf6-9c80-1223f72381cf",
+  "label": "Test by Assertion retorsion controls for the five separate bridges",
+  "subject_kind": "result",
+  "subject_id": "306fab99-55eb-456d-ae19-28afcc6703d6",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "13b5b929-dfc0-4ce0-8b3b-f00430024030",
+  "note": "Tests omitted representation as existing in the interpretation with a thought and an empty existence extension."
+}

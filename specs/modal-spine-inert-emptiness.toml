@@ -93,3 +93,33 @@ predicate = "alternative_to"
 object_kind = "statement"
 object_id = "Possibly, contingent concrete things are absent at a moment and present at a later one"
 note = "Same carrier and selected world; the rival is the negation of the possibility premise. Recorded as the initial-state view; neither is established."
+
+[[relation]]
+id = "Test by Inert-emptiness controls checked"
+label = "Test by Inert-emptiness controls checked"
+subject_kind = "result"
+subject_id = "ed27d6ae-685d-434e-b00f-b3c8121a3709"
+predicate = "tests"
+object_kind = "statement"
+object_id = "0cb07f05-5268-4685-8213-0eefa9ec4255"
+note = "Tests omission of this premise from necessaryConcrete in the separate typed history controls retaining the modal frame conditions and both other history premises."
+
+[[relation]]
+id = "Test by Inert-emptiness controls checked for A concrete-empty moment is followed only by concr (1)"
+label = "Test by Inert-emptiness controls checked for A concrete-empty moment is followed only by concr (1)"
+subject_kind = "result"
+subject_id = "ed27d6ae-685d-434e-b00f-b3c8121a3709"
+predicate = "tests"
+object_kind = "statement"
+object_id = "395cb0f6-0352-47b1-8996-918468cc716a"
+note = "Tests omission of this premise from necessaryConcrete in the separate typed history controls retaining the modal frame conditions and both other history premises."
+
+[[relation]]
+id = "Test by Inert-emptiness controls checked for Every individual temporally present at any time i (1)"
+label = "Test by Inert-emptiness controls checked for Every individual temporally present at any time i (1)"
+subject_kind = "result"
+subject_id = "ed27d6ae-685d-434e-b00f-b3c8121a3709"
+predicate = "tests"
+object_kind = "statement"
+object_id = "85497562-9d71-558a-9a1e-e4b7c321488a"
+note = "Tests omission of this premise from necessaryConcrete in the separate typed history controls retaining the modal frame conditions and both other history premises."

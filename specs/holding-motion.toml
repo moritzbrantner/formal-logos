@@ -185,3 +185,13 @@ axioms = ["propext", "Classical.choice", "Quot.sound"]
 sense_mixing_control = true
 rule = "Explicit finite interpretations checked by case analysis; two facts over all interpretations"
 meaning = "C* in the holding sense entails neither the respect-general concurrent actualization nor its esse instance (stick); the esse instance with the actualizer premise and the lackable-being bridge does not give C* without accident-inclusive conservation (iron); mutual holding is consistent with concurrent actualization and C* (cards); MOTION_1's potency premise fails for MOTION_3 whenever anything is held, and, where that premise holds of the MOTION_1 relation with a shared act predicate, no being is moved in one respect in both senses (all interpretations); the holding First Way's premises with C* and the respect-general concurrent actualization hold while the absolute first-unmoved-mover form fails (crossed; the esse-side bridges are not in that model). A finite countermodel shows a premise is needed in that interpretation, not that it is false."
+
+[[relation]]
+id = "Test by Holding controls checked for Nothing is moved except insofar as it is in POTENCY_1 to (1)"
+label = "Test by Holding controls checked for Nothing is moved except insofar as it is in POTENCY_1 to (1)"
+subject_kind = "result"
+subject_id = "8eeebe1a-ec1f-4c81-a406-a75d887b02d4"
+predicate = "tests"
+object_kind = "statement"
+object_id = "4be9a4ac-699a-5adc-88d4-bbd958fa1576"
+note = "Tests importing the motion-to-potency commitment into the holding interpretation when there is an actual held thing."

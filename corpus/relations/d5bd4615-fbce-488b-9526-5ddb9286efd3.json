@@ -1,0 +1,10 @@
+{
+  "id": "d5bd4615-fbce-488b-9526-5ddb9286efd3",
+  "label": "Test by Finite models for the modal-principle branches of the NE for 5 schema: whatever is pos (1)",
+  "subject_kind": "result",
+  "subject_id": "ee82c652-d18e-5583-ac14-8982ddc3ac9c",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "6f474aba-fda0-57fa-8330-6246de589f63",
+  "note": "Tests omission of this premise from forkS5 in the corresponding hand-written modal frames for the S5 fork."
+}

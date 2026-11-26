@@ -1,0 +1,10 @@
+{
+  "id": "bbd810f9-012f-4cf0-a6b1-8e6a90725d1e",
+  "label": "Test by Four controls for the audited defeat policy for Audited cue bypass under fixed truth a (1)",
+  "subject_kind": "result",
+  "subject_id": "fddc2381-a88e-41b9-b799-16e834ad7217",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "dc7d2e57-5d06-4f4a-a51f-b3b0ea7aec00",
+  "note": "Tests omission of the audited defeat policy in a stipulated model retaining warranted audit and verdict variation."
+}

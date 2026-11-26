@@ -1,0 +1,10 @@
+{
+  "id": "3f01745d-57df-4de8-9f44-e7fdf185bcb2",
+  "label": "Test by Finite models for the modal-principle branches of the NE for The route's 'necessary be (1)",
+  "subject_kind": "result",
+  "subject_id": "ee82c652-d18e-5583-ac14-8982ddc3ac9c",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "1c0a4898-0c89-5b37-b4c8-ba80d4bd0a41",
+  "note": "Tests omission of this premise from forkKTB in the corresponding hand-written modal frames for the KTB fork."
+}

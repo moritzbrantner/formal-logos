@@ -32,3 +32,13 @@ premises = []
 conclusion = "Registered local equality configuration model controls"
 rule = "Reuse of the checked finite inhabited interpretation"
 meaning = "The transparent wrappers preserve the old control formulas definitionally. The Unit interpretation witnesses an actual God candidate and all nonsufficiency inputs. Empty causal and potency relations can make their antecedents vacuous; no philosophical premise is defended."
+
+[[relation]]
+id = "Test by Registered local equality model controls certificate"
+label = "Test by Registered local equality model controls certificate"
+subject_kind = "result"
+subject_id = "893f4e2d-32b0-4e03-ad21-09640f0ac357"
+predicate = "tests"
+object_kind = "argument"
+object_id = "6c6549ae-1181-42b5-9702-ce826bc3b924"
+note = "Tests the local fragment and weak-maximality wrappers on the Unit bearer fixture, including the branch with the attribute-assembly premise omitted."

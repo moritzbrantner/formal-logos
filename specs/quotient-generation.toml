@@ -121,3 +121,23 @@ coverage = "Only the extensional quotient-generated analyst candidate CONCRETE_A
 exclusivity = "This cell explicitly selects sense 9. It does not assume that extensions of numbered senses are disjoint or establish intended-reading exclusivity."
 witness = "TruthCore.Ontology.QuotientGeneration.Control.presentation, selected, InAct true, ontic true, power true; TruthCore.Results.Ontology.QuotientGeneration.controls. The certificate includes generation, fixed anchors, owner commitment and selected productive power."
 next_step = "Specify a substantive admissibility condition that excludes this concrete presentation while retaining intended abstractions; do not replace it with constitutive essence by assertion."
+
+[[relation]]
+id = "Test by Fixed quotient image and representative range agree"
+label = "Test by Fixed quotient image and representative range agree"
+subject_kind = "result"
+subject_id = "13f3d286-eff5-43c3-915f-cbdd6c779a2b"
+predicate = "tests"
+object_kind = "statement"
+object_id = "64b877b5-dff5-4fd0-a84b-ceb37e3595de"
+note = "Checks that the range of the designated quotient presentation is exactly the value class obtained from representatives."
+
+[[relation]]
+id = "Test by Unrestricted quotient generation loses the concrete-abstract contrast"
+label = "Test by Unrestricted quotient generation loses the concrete-abstract contrast"
+subject_kind = "result"
+subject_id = "ec0e9808-a86a-4d94-b906-85a85dfc4189"
+predicate = "tests"
+object_kind = "statement"
+object_id = "64b877b5-dff5-4fd0-a84b-ceb37e3595de"
+note = "Tests dropping the fixed-presentation requirement by constructing a faithful one-class presentation for any chosen bearer."

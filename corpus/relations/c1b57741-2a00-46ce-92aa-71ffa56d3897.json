@@ -1,0 +1,10 @@
+{
+  "id": "c1b57741-2a00-46ce-92aa-71ffa56d3897",
+  "label": "Test by Initial history transfer 1588 finite model checked",
+  "subject_kind": "result",
+  "subject_id": "ea476f80-caae-431c-8205-328d57441bd7",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "77a76499-f2df-467f-b685-919f8b110d89",
+  "note": "Tests joint variation of rigidity, bearer omission and transfer on the four-history surrogate, comparing rigid and qualitative accessibility."
+}

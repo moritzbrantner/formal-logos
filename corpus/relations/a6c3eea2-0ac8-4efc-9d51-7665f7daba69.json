@@ -1,0 +1,10 @@
+{
+  "id": "a6c3eea2-0ac8-4efc-9d51-7665f7daba69",
+  "label": "Test by Omission controls for the three refutations of rival ref for In ordered efficient caus (1)",
+  "subject_kind": "result",
+  "subject_id": "7a63e2f1-8dce-5657-bfa9-4711d9990308",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "8a22ae75-4198-5a32-ae52-bad2848a50a5",
+  "note": "Tests omission of this premise from noMoverLinkWithoutCauseLink in the finite mover-link rival profile retaining the other premises of the refutation."
+}

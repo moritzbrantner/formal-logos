@@ -1,0 +1,10 @@
+{
+  "id": "f166f915-f56a-4cdc-bc8a-0d6355901446",
+  "label": "Test by Controls for the typed IMMENSE_2 and INCOMPREHENSIBLE_2 for Whatever is INFINITE_1 is (1)",
+  "subject_kind": "result",
+  "subject_id": "ccba9330-f025-4a69-af2d-82f7c50ab01c",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "fa3f08a8-aa2f-4385-8c72-4343eb5409c0",
+  "note": "Tests the converse strength implication in the registered interpretation. Same Infinite and Incomprehensible. The strong version gives INCOMPREHENSIBLE_1 to every INFINITE_1 being; the weak one only to such a being that no caused intellect comprehends. Control part 3: an infinite being comprehended by a caused intellect satisfies the weak version and falsifies the strong one. The order concerns the sense bridge alone: given infinity, the weak version together with 'Whatever has its being caused by another is not INFINITE_1' and 'No intellect that is not INFINITE_1 comprehends an INFINITE_1 being' entails the strong version again, so the route through the weak version splits the old commitment into finer premises rather than weakening it in total."
+}

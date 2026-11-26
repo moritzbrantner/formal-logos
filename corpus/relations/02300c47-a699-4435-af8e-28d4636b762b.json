@@ -1,0 +1,10 @@
+{
+  "id": "02300c47-a699-4435-af8e-28d4636b762b",
+  "label": "Test by Composes merged HistorySelection.Certificate",
+  "subject_kind": "result",
+  "subject_id": "ebada8bd-f596-5e9a-a1da-ba0c5071f0cd",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "83bad780-5acf-5235-a30b-8572b3d2cb2a",
+  "note": "Tests the evidence-cell prediction result on the same coarse occupancy projection of the source-free and rooted global histories."
+}

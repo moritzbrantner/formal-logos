@@ -171,3 +171,23 @@ object_id = "A NECESSARY_2 concretum supported anywhere is supported by an actua
 verification_result_id = "Coverage, from same-supporter presence"
 strictness_result_id = "Rotating triangle, rooted pair and uncovered edge controls, checked"
 note = "Same Profile, selected relation and selected world. Presence keeps the very supporter at w for any candidates; coverage asks only for some concrete supporter at w, for concrete supporters and targets. Control.rootedPair satisfies coverage while presence fails."
+
+[[relation]]
+id = "Test by Rotating triangle, rooted pair and uncovered edge controls, checked"
+label = "Test by Rotating triangle, rooted pair and uncovered edge controls, checked"
+subject_kind = "result"
+subject_id = "38963a9d-3db2-4d60-8b78-949e53693acd"
+predicate = "tests"
+object_kind = "statement"
+object_id = "1f61f12c-2b5c-5871-bf56-03c65844ae30"
+note = "Tests the converse strength implication in the registered interpretation. Same Profile, selected relation and selected world. Presence keeps the very supporter at w for any candidates; coverage asks only for some concrete supporter at w, for concrete supporters and targets. Control.rootedPair satisfies coverage while presence fails."
+
+[[relation]]
+id = "Test by Rotating triangle, rooted pair and uncovered edge contro for The existing union of sel (1)"
+label = "Test by Rotating triangle, rooted pair and uncovered edge contro for The existing union of sel (1)"
+subject_kind = "result"
+subject_id = "38963a9d-3db2-4d60-8b78-949e53693acd"
+predicate = "tests"
+object_kind = "statement"
+object_id = "d149d238-2eeb-5c8b-a136-f95d7aa5c721"
+note = "Tests the selected premise in the following setting. Same Profile, selected relation and selected world as the premise; two mutually accessible worlds, three candidates, all concrete and necessary. Control.rootedPair in Control.RootedPairCompatible; controls proves the listed conjuncts. Control.rootedPair at world false: the rival, EveryWorldGroundingWF, concrete population, ActualGroundingWF, EveryContingentGroundedAt, ActualReflexive, NoContingentConcreteSupport, coverage and excluded middle hold; ConcreteNecessaryUnionWF, NoNovelNecessarySupport and NecessarySupportIsPresent fail; NecessaryConcreteUnderivedAt holds."

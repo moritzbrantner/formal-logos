@@ -1,0 +1,10 @@
+{
+  "id": "0312f241-b6b5-4e5d-b335-97b3a46287a9",
+  "label": "Test by For every mathematical linear order and shared x,y, equa for For the supplied mathemat (1)",
+  "subject_kind": "result",
+  "subject_id": "a53b181f-da51-515f-a574-579081bec447",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "51bb0eeb-f3fb-5ce1-9e11-a127788f8506",
+  "note": "Tests the admitted cases and equality boundary of the strict order condition in the supplied linear order."
+}

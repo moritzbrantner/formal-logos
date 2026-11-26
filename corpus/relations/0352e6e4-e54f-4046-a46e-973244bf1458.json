@@ -1,0 +1,10 @@
+{
+  "id": "0352e6e4-e54f-4046-a46e-973244bf1458",
+  "label": "Test by Finite models for the maxime ens and potency sense forks",
+  "subject_kind": "result",
+  "subject_id": "06f23500-cdaa-5797-b9a2-fe6d47e24a34",
+  "predicate": "tests",
+  "object_kind": "argument",
+  "object_id": "09164174-022e-57fc-a241-9da629576ccb",
+  "note": "Tests mixing the potency readings with coverage but without exclusivity in the finite Unit profile."
+}

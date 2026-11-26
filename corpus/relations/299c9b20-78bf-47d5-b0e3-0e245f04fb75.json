@@ -1,0 +1,10 @@
+{
+  "id": "299c9b20-78bf-47d5-b0e3-0e245f04fb75",
+  "label": "Test by The exact original PartFreePlurality joint model and fir for The proposed constitutive (1)",
+  "subject_kind": "result",
+  "subject_id": "c0159bdf-0113-5e26-b340-eebedd3d0fa5",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "dad1a21d-f65c-5d9e-99d2-59c9f248a0b0",
+  "note": "Tests omission of this premise from checks in the same part-free plurality ontology, with either copied act rows or the separate injective row code."
+}

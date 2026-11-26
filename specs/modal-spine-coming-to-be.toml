@@ -52,3 +52,13 @@ predicate = "alternative_to"
 object_kind = "statement"
 object_id = "Possibly, every contingent concrete thing comes to be in a history with a founded past"
 note = "Not the negation of the premise: the two are incompatible by the checked derivation of the possible contingent-free past, and both can fail together. Recorded because the initial-state view is the position that must deny the premise; neither is established."
+
+[[relation]]
+id = "Test by Founded coming-to-be controls checked"
+label = "Test by Founded coming-to-be controls checked"
+subject_kind = "result"
+subject_id = "8489d28f-2a58-4103-b274-7c2b7bd9c185"
+predicate = "tests"
+object_kind = "statement"
+object_id = "78a44599-dc67-4d1f-988a-ed84b8c517f9"
+note = "Tests the two omitted conjuncts of founded coming-to-be by an endless all-generated past and a founded past with a never-generated contingent being, with inert emptiness retained."

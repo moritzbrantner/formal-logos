@@ -1,0 +1,10 @@
+{
+  "id": "7b16337f-575e-434e-ad88-c5434a1ed5de",
+  "label": "Test by Controls for the nine-restricted self-operation premises for Whatever is in potency in (1)",
+  "subject_kind": "result",
+  "subject_id": "64165d34-9103-4fbf-8d6a-0421768baf91",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "45030701-91da-588f-b602-dca6c15e761a",
+  "note": "Tests the converse strength implication in the registered interpretation. Same InPotency and Operates. The strong version constrains every pure act; the weak one only pure acts that also have the other eight of the nine (including intellect and will). Control.Controls part 1: an inert pure act without intellect satisfies the weak version and falsifies the strong one."
+}

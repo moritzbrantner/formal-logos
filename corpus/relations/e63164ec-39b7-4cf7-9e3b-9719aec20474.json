@@ -1,0 +1,10 @@
+{
+  "id": "e63164ec-39b7-4cf7-9e3b-9719aec20474",
+  "label": "Test by Cross-history horn finite controls",
+  "subject_kind": "result",
+  "subject_id": "641cb6d7-e7bf-4cb6-8179-fb768a4e9b33",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "f94c7149-699e-4c13-a65e-c4aad5c2a9af",
+  "note": "Tests omission of verdict variation in the fixed-true selective-history interpretation."
+}

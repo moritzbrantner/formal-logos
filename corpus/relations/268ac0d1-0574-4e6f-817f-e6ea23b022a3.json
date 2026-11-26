@@ -1,0 +1,10 @@
+{
+  "id": "268ac0d1-0574-4e6f-817f-e6ea23b022a3",
+  "label": "Test by Tautology factors as K validity plus truth-functionality",
+  "subject_kind": "result",
+  "subject_id": "3f38adba-0028-4d03-8437-4b6bcdfa5a05",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "72861c3a-fff5-4149-bb9d-43985330b4c6",
+  "note": "Checks the exact decomposition of the stronger statement into the weaker version and the registered delta under the comparison's shared interpretation."
+}

@@ -1,0 +1,10 @@
+{
+  "id": "037a3a4f-8eff-4624-8296-429bc3584933",
+  "label": "Test by Controls for the MUTABLE and GOD sense forks",
+  "subject_kind": "result",
+  "subject_id": "6df6e803-d83f-5fca-b4ca-3b714defa5a1",
+  "predicate": "tests",
+  "object_kind": "argument",
+  "object_id": "8a29551f-afa7-5336-a699-fa534a0d0143",
+  "note": "Tests mixing the naming and root God predicates while keeping sense coverage and omitting exclusivity in a finite described-principle profile."
+}

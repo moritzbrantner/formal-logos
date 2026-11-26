@@ -1,0 +1,10 @@
+{
+  "id": "089bc5ba-57c0-4fa6-9e24-73336de19240",
+  "label": "Test by In the stated varying-domain alternative, each world has for A genuine name must name (1)",
+  "subject_kind": "result",
+  "subject_id": "a121e5ff-3443-5d54-8f2b-b9660c7eb201",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "15f1f3dc-9dbb-52d0-bdab-7209c8db74b1",
+  "note": "Tests the context restriction in a varying-domain model where naming depends on actual presence at the selected world and fails for an unchanged token at another world."
+}

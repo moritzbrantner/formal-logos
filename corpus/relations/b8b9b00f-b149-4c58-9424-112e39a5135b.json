@@ -1,0 +1,10 @@
+{
+  "id": "b8b9b00f-b149-4c58-9424-112e39a5135b",
+  "label": "Test by Omission controls for the three refutations of rival ref for What is being moved towar (2)",
+  "subject_kind": "result",
+  "subject_id": "7a63e2f1-8dce-5657-bfa9-4711d9990308",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "811fe80c-3bdd-5e41-9f1b-f94bec9178ef",
+  "note": "Tests omission of this premise from noMovedNotPotentCountertuple in the finite moved-not-potent rival profile retaining the other premises of the refutation."
+}

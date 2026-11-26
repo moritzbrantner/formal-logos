@@ -1,0 +1,10 @@
+{
+  "id": "d9d41aa8-d2fc-4910-9382-2268741d731b",
+  "label": "Test by Finite feedback and an unbounded chain test exercise lifting",
+  "subject_kind": "result",
+  "subject_id": "88a50d6f-636a-40bb-b952-fe811a9bf6b9",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "4bd2d25b-27c6-4cfe-9b5f-bfa11511c176",
+  "note": "Tests the backward prior-exercise lifting in an acyclic actual-identity cause interpretation and checks how separate acyclic chains behave."
+}

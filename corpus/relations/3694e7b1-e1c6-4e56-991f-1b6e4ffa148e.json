@@ -1,0 +1,10 @@
+{
+  "id": "3694e7b1-e1c6-4e56-991f-1b6e4ffa148e",
+  "label": "Test by Finite interpretations for the seven derivations of caus for Every perfection of a thi (1)",
+  "subject_kind": "result",
+  "subject_id": "86d080aa-4c6e-5f85-a86e-333c805d0093",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "64498e7e-7f10-54a0-9ec0-c65e6076de1f",
+  "note": "Tests omitting this premise in the encoded causeOfBeingHasWhatItGives argument, with the other premises retained and the conclusion false in each corresponding control."
+}

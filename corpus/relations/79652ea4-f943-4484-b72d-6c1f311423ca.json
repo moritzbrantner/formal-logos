@@ -1,0 +1,10 @@
+{
+  "id": "79652ea4-f943-4484-b72d-6c1f311423ca",
+  "label": "Test by The exact original PartFreePlurality joint model and fir for Every first UNMOVED_2 mov (1)",
+  "subject_kind": "result",
+  "subject_id": "c0159bdf-0113-5e26-b340-eebedd3d0fa5",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "55890498-a250-5f23-9277-bd563a557378",
+  "note": "Tests omission of this premise from checks in the same part-free plurality ontology, with either copied act rows or the separate injective row code."
+}

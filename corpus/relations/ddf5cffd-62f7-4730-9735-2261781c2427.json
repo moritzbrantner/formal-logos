@@ -1,0 +1,10 @@
+{
+  "id": "ddf5cffd-62f7-4730-9735-2261781c2427",
+  "label": "Test by Finite one-world interpretations; excluded middle is not asserted",
+  "subject_kind": "result",
+  "subject_id": "e58c6980-912a-582d-8237-7549bfed8e69",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "c78c77da-91b0-5928-bd5f-ba670a6f3660",
+  "note": "Tests omitting the noncomposition and represented-identity-to-purity bridge in the one-world root purity controls."
+}

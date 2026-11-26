@@ -1,0 +1,10 @@
+{
+  "id": "b749b4ab-141f-46bd-9393-6980489d81b4",
+  "label": "Test by Subtraction argument controls checked",
+  "subject_kind": "result",
+  "subject_id": "7c5984f9-2424-428e-b1d7-539b490d8eba",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "cdf897a8-5490-561a-b9d2-507486a3f192",
+  "note": "Tests the selected premise in the following setting. One profile and world: universal two-world frame (S5), God existing at both worlds and one creature at one, the two-being signature's stipulated divine fields. theistProfile with pairSignature at world true: the box K, S5 and stage-one nodes, S1, S3 throughout, contingent free absence and companions hold; S2 at w, unrestricted free absence and 'possibly no concrete object' fail. Models, item 5: no hypotheses; the theist profile at world true."
+}

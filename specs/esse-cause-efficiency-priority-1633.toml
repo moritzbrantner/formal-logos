@@ -85,3 +85,23 @@ axioms = []
 sense_mixing_control = true
 rule = "Explicit finite interpretations on Bool"
 meaning = "Closed controls for the efficient sibling route to 09c6d5f0: one interpretation in which every mode-unspecified input of the existing routes and the priority of efficient causes of esse hold, while priority over CausesIn, the efficient q.3 a.4 reading and the efficient participation premise fail and a component is first; one in which every input of the sibling route, the secunda via priority, the tense bridge and the conclusion hold; and one in which the secunda via priority holds while the tense bridge and tenseless priority fail. Logical independence under the encoded predicates only."
+
+[[relation]]
+id = "Test by Efficient-priority controls"
+label = "Test by Efficient-priority controls"
+subject_kind = "result"
+subject_id = "b7e3cc74-1009-4157-8246-61cabb77bc9a"
+predicate = "tests"
+object_kind = "statement"
+object_id = "1ff08418-e7a8-473f-9348-f2fe83b4d00e"
+note = "Tests the efficiently typed external-esse condition on the model retaining all mode-unspecified inputs with a component still first."
+
+[[relation]]
+id = "Test by Efficient-priority controls for Whatever has being by participation has an efficient c (1)"
+label = "Test by Efficient-priority controls for Whatever has being by participation has an efficient c (1)"
+subject_kind = "result"
+subject_id = "b7e3cc74-1009-4157-8246-61cabb77bc9a"
+predicate = "tests"
+object_kind = "statement"
+object_id = "811c2e98-bd52-440b-8379-dd7534fc9c4d"
+note = "Tests the efficient participation input on the model preserving mode-unspecified participation and the other listed controls."

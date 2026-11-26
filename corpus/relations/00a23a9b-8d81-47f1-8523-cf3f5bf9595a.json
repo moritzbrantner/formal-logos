@@ -1,0 +1,10 @@
+{
+  "id": "00a23a9b-8d81-47f1-8523-cf3f5bf9595a",
+  "label": "Test by Finite interpretations for the fourteen derivations of r for Every cause is in act in (1)",
+  "subject_kind": "result",
+  "subject_id": "7ebb0ab0-4022-5113-9810-67b4afa60cfc",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "4cd75e82-3338-5ef6-9636-da518844a519",
+  "note": "Tests omitting this premise in the encoded intellectualExerciseRequiresActFromProduction argument, with the other premises retained and the conclusion false in each corresponding control."
+}

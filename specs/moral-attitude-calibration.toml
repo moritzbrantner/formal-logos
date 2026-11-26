@@ -34,3 +34,23 @@ rule = "Disjunction introduction and existing calibration theorem"
 meaning = "Inject the selected calibration into the corresponding branch of calibrationTruth and extract actual truth. No implication between candidates or original-sense completion."
 senses = {MIND_INDEPENDENT = "MIND_INDEPENDENT_4"}
 
+
+[[relation]]
+id = "Test by Grounding calibration supplies the POE truth component"
+label = "Test by Grounding calibration supplies the POE truth component"
+subject_kind = "result"
+subject_id = "ebb9a5d9-f95f-4f92-9eb7-db53e6751d7d"
+predicate = "tests"
+object_kind = "statement"
+object_id = "40840c3d-90da-5237-b2a3-8ea9519b5c9c"
+note = "Checks the truth-component condition for the grounding calibration on arbitrary profiles using the grounding branch of the disjunctive lemma."
+
+[[relation]]
+id = "Test by Intervention calibration supplies the POE truth component"
+label = "Test by Intervention calibration supplies the POE truth component"
+subject_kind = "result"
+subject_id = "a5f8477d-05a9-42ad-a077-1afd65fe7b1b"
+predicate = "tests"
+object_kind = "statement"
+object_id = "40840c3d-90da-5237-b2a3-8ea9519b5c9c"
+note = "Checks the truth-component condition for intervention calibration on arbitrary profiles using the intervention branch of the disjunctive lemma."

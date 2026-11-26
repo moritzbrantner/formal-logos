@@ -1,0 +1,10 @@
+{
+  "id": "6a7b27f8-bed3-4840-8b9a-9e1d18f54caf",
+  "label": "Test by Finite interpretations for the ten derivations of round 6: for each premise except excluded…",
+  "subject_kind": "result",
+  "subject_id": "d3dd4601-36f0-51a2-a5f4-29fc87e49e84",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "0075b6ed-766b-51af-88f4-b6c4a91ba6a0",
+  "note": "Tests omitting this premise in the encoded churchJointFromAspects, namedChurchCoverageFromAspects arguments, with the other premises retained and the conclusion false in each corresponding control."
+}

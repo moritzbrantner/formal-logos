@@ -1,0 +1,10 @@
+{
+  "id": "fa2c101e-63c8-4ae0-b0cd-3e8a576444f7",
+  "label": "Test by Rigid profile actualist population adapter omission cert for Actualist necessary exemp (1)",
+  "subject_kind": "result",
+  "subject_id": "9a4e34cf-1357-4edf-a2be-2160695a6024",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "93804e57-d09d-4d9b-908b-29b0d86eeef7",
+  "note": "Tests omitting necessary population of the selected profile on the alternating two-world fixture, retaining actual exemplification and uniqueness."
+}

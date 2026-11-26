@@ -62,3 +62,33 @@ conclusion = "Reciprocal distinct production can preclude a common strict mixed 
 axioms = []
 rule = "Use the four-edge closed walk through both Boolean bearers and acts"
 meaning = "The fixed Bool interpretation has only distinct production edges and still has a mixed cycle. It separates the conclusion of noSelf from the global common-order hypothesis."
+
+[[relation]]
+id = "Test by Required-edge acyclicity characterizes strict extension"
+label = "Test by Required-edge acyclicity characterizes strict extension"
+subject_kind = "result"
+subject_id = "d8585999-be0f-491d-abc6-ecc8e6afa08c"
+predicate = "tests"
+object_kind = "argument"
+object_id = "e267588f-2746-484f-a3fd-155a809591a8"
+note = "Checks the strict-order extension used by the self-production inference for arbitrary fixed bearer and production data."
+
+[[relation]]
+id = "Test by Distinct reciprocal production obstructs common strict extension"
+label = "Test by Distinct reciprocal production obstructs common strict extension"
+subject_kind = "result"
+subject_id = "e61a7881-72cc-4aad-98d7-07b17501cb9d"
+predicate = "tests"
+object_kind = "statement"
+object_id = "1d1f5ac4-011e-461a-b8bd-14409b5dddf9"
+note = "Tests sufficiency of locally distinct production for mixed-edge acyclicity on the two-Bool reciprocal production interpretation."
+
+[[relation]]
+id = "Test by Separate strict-order control for the two mixed interfaces"
+label = "Test by Separate strict-order control for the two mixed interfaces"
+subject_kind = "result"
+subject_id = "7f355eb0-7687-4b20-8aed-2ba9f15978fa"
+predicate = "tests"
+object_kind = "statement"
+object_id = "8550ca62-92d1-5ef0-af17-9de5bf272262"
+note = "Tests replacing one common strict priority relation by two separate ones on the Unit bearer and Unit act, whose union contains a closed walk."

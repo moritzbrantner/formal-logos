@@ -1,0 +1,10 @@
+{
+  "id": "e2dcccba-8ede-4f88-9ea8-04123f712c87",
+  "label": "Test by Sustaining-dependence and onset-parity controls checked for Every cause of another thi (1)",
+  "subject_kind": "result",
+  "subject_id": "886615a9-9c8d-4b74-a52f-723e046108a1",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "ce55210c-d3b5-4720-bd83-a3f63c5dc884",
+  "note": "Tests the sustaining-cause premise in the finite inertial history."
+}

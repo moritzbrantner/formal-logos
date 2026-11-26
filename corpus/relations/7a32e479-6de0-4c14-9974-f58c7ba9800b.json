@@ -1,0 +1,10 @@
+{
+  "id": "7a32e479-6de0-4c14-9974-f58c7ba9800b",
+  "label": "Test by A schema model has nonempty global GOD_4/founding antece for Bridge premise: for any G (1)",
+  "subject_kind": "result",
+  "subject_id": "ac65a3bd-e353-5e65-9ed0-1fb02c830e9d",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "a04f711a-53cc-59c5-902e-86b605fb73b4",
+  "note": "Tests the universal founding bridge under the four weakened premises with a populated stage antecedent."
+}

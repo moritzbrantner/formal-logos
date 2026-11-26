@@ -1,0 +1,10 @@
+{
+  "id": "e3777830-b89f-4b7e-bfe4-3916d8410158",
+  "label": "Test by Esse-cause priority controls, checked for A distinct esse CAUSE_2 of an actual CONCRET (1)",
+  "subject_kind": "result",
+  "subject_id": "0de15acc-6313-4111-a6a5-9ef5487f1a0f",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "b50fb858-ca2e-48fa-a111-84ac761976d3",
+  "note": "Tests omitting the caused-esse input of the distinct-cause priority inference in the dedicated scope interpretation."
+}

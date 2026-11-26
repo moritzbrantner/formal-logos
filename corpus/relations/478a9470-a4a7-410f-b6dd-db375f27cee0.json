@@ -1,0 +1,10 @@
+{
+  "id": "478a9470-a4a7-410f-b6dd-db375f27cee0",
+  "label": "Test by Finite models for the CONTINGENT_1 node and its modal-collapse refutations",
+  "subject_kind": "result",
+  "subject_id": "3e1d8dfa-b732-5e4b-84ee-374fafe05f66",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "6f474aba-fda0-57fa-8330-6246de589f63",
+  "note": "Tests omission of the 5 schema on the order frame with the T schema, the contingency node and collapse at world true."
+}

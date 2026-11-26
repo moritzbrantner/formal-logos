@@ -85,3 +85,23 @@ sense_bridges = [{term = "DEPENDENCE_FOR_BEING_VERSUS_STRICT_GROUND", from = "DE
 axioms = ["propext", "Classical.choice", "Quot.sound"]
 rule = "Induct on derivable strict ground restricted to the finite label image over the chosen effect"
 meaning = "Each per se predecessor remains in the same ancestral cone and moves strictly down among its labels by alignment and the selected consistent theory. Strict ground on this finite label set is transitive and irreflexive, hence well-founded. Induction yields accessibility of the effect for the original cause relation. The premises concern the same labels throughout."
+
+[[relation]]
+id = "Test by Test the strict-ground interpretation after identifying labels across two disjoint pairs"
+label = "Test by Test the strict-ground interpretation after identifying labels across two disjoint pairs"
+subject_kind = "result"
+subject_id = "b251e442-4373-4ef8-984d-5f5a9004be2e"
+predicate = "tests"
+object_kind = "argument"
+object_id = "337ecbd2-673d-4b71-9282-b0eee4efd697"
+note = "Tests why acyclicity of bearer steps alone does not suffice for fixed labels in the four-bearer projection with a two-label cycle."
+
+[[relation]]
+id = "Test by Classify exactly the fixed labels admitting the distinct-dependence PLG map"
+label = "Test by Classify exactly the fixed labels admitting the distinct-dependence PLG map"
+subject_kind = "result"
+subject_id = "5ebdfbff-f984-43d0-a7d7-ddc19286f39f"
+predicate = "tests"
+object_kind = "statement"
+object_id = "42756c07-03cd-4b54-8ed6-ed6c1a5132aa"
+note = "Tests existence of a consistent selected strict-ground interpretation on fixed labels via the criterion excluding closed walks in the projected steps."

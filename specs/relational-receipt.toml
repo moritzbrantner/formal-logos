@@ -132,3 +132,83 @@ axioms = ["propext", "Classical.choice", "Quot.sound"]
 senses = {RECEIVES_ESSE_AT = "RECEIVES_ESSE_AT_3"}
 rule = "Explicit one-world interpretations over natural-number times with two individuals, checked by case analysis and linear arithmetic"
 meaning = "With a creator present throughout who gives being at onset only and a persisting relation, foundation, irreflexivity, non-mutuality, accompaniment, coexistence of the term, received onset given and the relational present-tense reading hold while giving by the term, relational correlativity and 40a97664 fail; with the relation at onset only (an analyst variant), giving by the term and relational correlativity hold while accompaniment and 40a97664 fail; with the term absent after onset, coexistence of the term fails; with sustaining giving all hold together; with another giver (the thing itself) 40a97664 holds while giving by the term fails. A finite countermodel shows a premise is needed in that interpretation, not that it is false. Model claims concern these interpretations only."
+
+[[relation]]
+id = "Test by Coexisting term does not entail concurrent actualization, checked"
+label = "Test by Coexisting term does not entail concurrent actualization, checked"
+subject_kind = "result"
+subject_id = "b9920133-2f71-4ea0-8b08-13c422c239fd"
+predicate = "tests"
+object_kind = "statement"
+object_id = "40a97664-e481-42d7-8458-78374a61aa26"
+note = "Tests concurrence when the creator coexists throughout and gives only at onset, preserving the named relational premises."
+
+[[relation]]
+id = "Test by Relational-receipt controls checked"
+label = "Test by Relational-receipt controls checked"
+subject_kind = "result"
+subject_id = "584bac58-203a-4083-821e-a3c46daac8e3"
+predicate = "tests"
+object_kind = "statement"
+object_id = "52b05849-88b3-4f44-b81b-768850f9ed12"
+note = "Tests omission of correlativity in the history with reception preserved but no post-onset giving."
+
+[[relation]]
+id = "Test by Relational-receipt controls checked for The term of the origin relation at a moment gi (1)"
+label = "Test by Relational-receipt controls checked for The term of the origin relation at a moment gi (1)"
+subject_kind = "result"
+subject_id = "584bac58-203a-4083-821e-a3c46daac8e3"
+predicate = "tests"
+object_kind = "statement"
+object_id = "6da7d94a-abc4-4092-96c1-9469af548f87"
+note = "Tests omission of contemporaneous giving by the origin term in the history with a persisting relation and onset-only giving."
+
+[[relation]]
+id = "Test by Relational-receipt controls checked for Whatever has received esse is receiving it at (1)"
+label = "Test by Relational-receipt controls checked for Whatever has received esse is receiving it at (1)"
+subject_kind = "result"
+subject_id = "584bac58-203a-4083-821e-a3c46daac8e3"
+predicate = "tests"
+object_kind = "statement"
+object_id = "964928dc-9067-45d4-8de3-c91e27cbe1c6"
+note = "Tests omission of present receipt when the given esse is expressed by a persisting relational predicate and an onset receipt."
+
+[[relation]]
+id = "Test by Relational-receipt controls checked for Whatever has received esse bears the origin re (1)"
+label = "Test by Relational-receipt controls checked for Whatever has received esse bears the origin re (1)"
+subject_kind = "result"
+subject_id = "584bac58-203a-4083-821e-a3c46daac8e3"
+predicate = "tests"
+object_kind = "statement"
+object_id = "9fecbef4-0094-4e99-ab9d-98b9c1b916f1"
+note = "Tests omission of relational accompaniment when the origin relation holds at onset alone."
+
+[[relation]]
+id = "Test by On RECEIVES_ESSE_AT_3 present-tense reception is accompaniment, checked"
+label = "Test by On RECEIVES_ESSE_AT_3 present-tense reception is accompaniment, checked"
+subject_kind = "result"
+subject_id = "42590821-3376-49be-9c87-e8e6d752d910"
+predicate = "tests"
+object_kind = "statement"
+object_id = "964928dc-9067-45d4-8de3-c91e27cbe1c6"
+note = "Tests replacing primitive present receipt by existential relation-to-origin receipt on the stated histories by checking its exact equivalence to accompaniment."
+
+[[relation]]
+id = "Test by RECEIVES_ESSE_AT_3 correlativity is concurrent actualization, checked"
+label = "Test by RECEIVES_ESSE_AT_3 correlativity is concurrent actualization, checked"
+subject_kind = "result"
+subject_id = "1637b89a-9ef5-470e-b439-6da628f829cc"
+predicate = "tests"
+object_kind = "statement"
+object_id = "40a97664-e481-42d7-8458-78374a61aa26"
+note = "Checks the exact relation between concurrent giving and relational correlativity under the supplied accompaniment hypothesis."
+
+[[relation]]
+id = "Test by Founded origin relation with a giving term iff concurrent actualization, checked"
+label = "Test by Founded origin relation with a giving term iff concurrent actualization, checked"
+subject_kind = "result"
+subject_id = "b5e9b376-d79a-4f0d-8b94-782bc0915122"
+predicate = "tests"
+object_kind = "statement"
+object_id = "40a97664-e481-42d7-8458-78374a61aa26"
+note = "Checks whether existence of some relation satisfying the stated relationship gives more than concurrence on the same received-esse history."

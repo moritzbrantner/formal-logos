@@ -1,0 +1,10 @@
+{
+  "id": "c4b9c359-2233-4d5d-a4d0-2d95c34bc5b9",
+  "label": "Test by Finite controls: departed-builder production satisfies t for Efficient-cause attributi (1)",
+  "subject_kind": "result",
+  "subject_id": "db60a52a-da4e-5e93-9767-774629d36119",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "1ad18c70-4db9-50a0-8605-fa860709a10a",
+  "note": "Tests whether present composer attribution needs the temporal reading when the builder is absent now but prior causal production holds."
+}

@@ -1,0 +1,10 @@
+{
+  "id": "d2fe48e5-7d75-49a3-83ca-eb00c63b4a6b",
+  "label": "Test by Finite models for the maxime ens and potency sense forks for Maxime ens is read as MAX (1)",
+  "subject_kind": "result",
+  "subject_id": "06f23500-cdaa-5797-b9a2-fe6d47e24a34",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "89a4b3a6-c839-5599-b627-c55c2ba25b5f",
+  "note": "Tests omitting MAXIME sense coverage with exclusivity on the selected degree profile."
+}

@@ -1,0 +1,10 @@
+{
+  "id": "bcc14e1e-7b18-44fd-9a75-cc208a73f3a3",
+  "label": "Test by Universal origin bridge is the self-edge sibling plus the distinct-relata clause",
+  "subject_kind": "result",
+  "subject_id": "b50802b2-a4d9-4682-9af6-990f8be04cf3",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "be90bb15-c2ce-44cd-ae2d-5ec6dc4c24c9",
+  "note": "Checks the exact decomposition of the stronger statement into the weaker version and the registered delta under the comparison's shared interpretation."
+}

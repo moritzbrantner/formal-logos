@@ -132,3 +132,13 @@ conclusion = "Individuated veracity structural controls"
 axioms = ["propext", "Classical.choice", "Quot.sound"]
 rule = "Content-preserving conditional composition and interpreted negation"
 meaning = "Restored content identities preserve both conditional routes and a standing cognitive rival. Tagged co-truth across all modeled worlds permits selective assent and precludes any exact Prop-attitude factorization. Domain gaps expose missing coverage or negation closure. Utility, moral permission and full theism are not modeled."
+
+[[relation]]
+id = "Test by Existential attitude erasure has one-way assertion representation"
+label = "Test by Existential attitude erasure has one-way assertion representation"
+subject_kind = "result"
+subject_id = "e64407b8-46c1-4a46-b54f-2355e31c377c"
+predicate = "tests"
+object_kind = "statement"
+object_id = "f221d6c6-3a49-4a98-bf05-a12450d1fac7"
+note = "Checks the one-way assertion representation condition for the explicitly induced existential erasure of individuated contents into propositions."

@@ -85,3 +85,13 @@ sense_mixing_control = true
 axioms = ["propext", "Classical.choice", "Quot.sound"]
 rule = "Apply the strict-step and return-path tests to the two labels"
 meaning = "The weak-only and strict-forward presentations each consist of one full sequent. The return control adds exactly one reverse weak full sequent and keeps both labels and the dependence edge fixed. These are formal tests of the encoded premises."
+
+[[relation]]
+id = "Test by Classify consistency of a supplied PLG presentation by strict steps and weak returns"
+label = "Test by Classify consistency of a supplied PLG presentation by strict steps and weak returns"
+subject_kind = "result"
+subject_id = "00f2cd7c-c0a7-4eef-b57a-e59bde59b204"
+predicate = "tests"
+object_kind = "argument"
+object_id = "4bd8457a-2c92-4d47-bcb6-d32fda38af75"
+note = "Checks the sufficiency and exact boundary of the no-return criterion for consistency of the supplied theory, with predecessor-set ranks in the positive direction."

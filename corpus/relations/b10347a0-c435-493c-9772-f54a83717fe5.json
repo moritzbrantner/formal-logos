@@ -1,0 +1,10 @@
+{
+  "id": "b10347a0-c435-493c-9772-f54a83717fe5",
+  "label": "Test by First mover necessity controls checked",
+  "subject_kind": "result",
+  "subject_id": "2b71a3ad-7dc9-405c-aae8-783c850ff2b0",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "3c9d683b-7ecf-4e35-b2cf-2997fbc1a3b2",
+  "note": "Tests the contingent-to-potency-or-cause alternatives on the finite Bool frames of the first-mover necessity batch, with potency and distinct causes assigned separately."
+}

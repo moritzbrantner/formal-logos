@@ -1,0 +1,10 @@
+{
+  "id": "e848acfa-4259-4dda-95c0-6b70c1fe7a38",
+  "label": "Test by Existential attitude erasure has one-way assertion representation",
+  "subject_kind": "result",
+  "subject_id": "e64407b8-46c1-4a46-b54f-2355e31c377c",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "f221d6c6-3a49-4a98-bf05-a12450d1fac7",
+  "note": "Checks the one-way assertion representation condition for the explicitly induced existential erasure of individuated contents into propositions."
+}

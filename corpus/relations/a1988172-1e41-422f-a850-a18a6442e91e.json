@@ -1,0 +1,10 @@
+{
+  "id": "a1988172-1e41-422f-a850-a18a6442e91e",
+  "label": "Test by Excluded middle holds if and only if double-negation elimination holds",
+  "subject_kind": "result",
+  "subject_id": "e2d8d9a4-ecab-5d32-8c57-4109df41dbb6",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "ee4ab504-c8fe-59bc-bc96-7cbeefed6410",
+  "note": "Checks the constructive equivalence of global excluded middle and universal double-negation elimination in Lean logic."
+}

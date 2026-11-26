@@ -1,0 +1,10 @@
+{
+  "id": "40a53038-577d-4f67-8f39-bb9f6c42365a",
+  "label": "Test by There is a Kripke model with at least one world, a symme for Scott's theorem T3: neces (1)",
+  "subject_kind": "result",
+  "subject_id": "2eb7b827-5266-5824-9a2b-c129bc29badd",
+  "predicate": "tests",
+  "object_kind": "argument",
+  "object_id": "83236cf0-31ab-50b8-ac73-055f6c0a7216",
+  "note": "Tests joint satisfiability of Scott's T3 assumptions in the stated interpretation with at least one world."
+}

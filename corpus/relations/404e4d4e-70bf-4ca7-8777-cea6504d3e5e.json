@@ -1,0 +1,10 @@
+{
+  "id": "404e4d4e-70bf-4ca7-8777-cea6504d3e5e",
+  "label": "Test by Addressed echo positive witness and four history omission controls by construction",
+  "subject_kind": "result",
+  "subject_id": "a59937a6-d8b9-4245-9b2c-677f8ede89c0",
+  "predicate": "tests",
+  "object_kind": "argument",
+  "object_id": "514b965e-292b-42fc-a443-a559f30f1373",
+  "note": "Tests the candidate-attribution conditions in genuine, forgery, replay, insertion and guess histories with the same visible response."
+}

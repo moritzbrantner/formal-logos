@@ -38,3 +38,13 @@ conclusion = "Surrogate controls locating local versus global Euclidean access"
 axioms = ["propext", "Classical.choice", "Quot.sound"]
 rule = "Explicit three-world frames, checked by case analysis"
 meaning = "Two checked frame controls: clustered satisfies F2' at actual, fails local axiom 4 there, and has the non-Euclidean successor near; appendix satisfies F2', local axiom 4 and reflexivity at actual while global Euclidean access fails at unreachable far. Thus a global failure need not force local transitivity to fail. These are STRUCTURAL SURROGATES: no potentiality, representation, tolerance-origin or impossible-world interpretation is encoded. No classification or defeat of philosophical rivals follows from these controls."
+
+[[relation]]
+id = "Test by Surrogate controls for local versus global Euclidean access checked"
+label = "Test by Surrogate controls for local versus global Euclidean access checked"
+subject_kind = "result"
+subject_id = "9bfd7ece-248f-48e9-8671-2c741e669351"
+predicate = "tests"
+object_kind = "statement"
+object_id = "d65fb12b-7a85-479a-8c40-4b10f8b3c7c8"
+note = "Tests whether actual-only Euclidean access gives local transitivity in the clustered counterframe, with the appendix keeping local transitivity despite global Euclidean failure."

@@ -1,0 +1,10 @@
+{
+  "id": "e2819e44-71e4-4cff-aa5c-026708561ea2",
+  "label": "Test by Finite interpretations for the fourteen derivations of r for At the selected world eve (1)",
+  "subject_kind": "result",
+  "subject_id": "7ebb0ab0-4022-5113-9810-67b4afa60cfc",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "adf07168-21a9-5ea3-83b1-7d404f3f6421",
+  "note": "Tests omitting this premise in the encoded existingInActAtFromSomeAct argument, with the other premises retained and the conclusion false in each corresponding control."
+}

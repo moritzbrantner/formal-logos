@@ -16,3 +16,33 @@ conclusion = "Exact exception witnesses for six selected-world giving-plan princ
 axioms = ["propext", "Classical.choice", "Quot.sound"]
 rule = "Use satisfaction of the governing standard to isolate the omitted role"
 meaning = "Given a governing plan, all its requirements are realized. Its edited description therefore still meets the standard exactly when none of the removed clauses was required. Apply this fact and classical quantifier duality within each principle's own restrictions."
+
+[[relation]]
+id = "Test by Recover the missing requirements and exact witnesses from each giving-plan denial"
+label = "Test by Recover the missing requirements and exact witnesses from each giving-plan denial"
+subject_kind = "result"
+subject_id = "839a93fa-8011-46c7-9215-b126b93d40e7"
+predicate = "tests"
+object_kind = "statement"
+object_id = "4be0f774-2c0a-4691-9088-6e790940960a"
+note = "Checks the exact failure condition for operative plan coverage at a selected world with fixed rational giving."
+
+[[relation]]
+id = "Test by Recover the missing requirements and exact witnesses fro for A giving plan rejects wit (1)"
+label = "Test by Recover the missing requirements and exact witnesses fro for A giving plan rejects wit (1)"
+subject_kind = "result"
+subject_id = "839a93fa-8011-46c7-9215-b126b93d40e7"
+predicate = "tests"
+object_kind = "statement"
+object_id = "b1d7825e-a1ae-4f86-af2e-1b9819055e0f"
+note = "Checks when the end-placement requirement fails in the governing-plan interpretation."
+
+[[relation]]
+id = "Test by Recover the missing requirements and exact witnesses fro for A GOD_4 giving plan rejec (1)"
+label = "Test by Recover the missing requirements and exact witnesses fro for A GOD_4 giving plan rejec (1)"
+subject_kind = "result"
+subject_id = "839a93fa-8011-46c7-9215-b126b93d40e7"
+predicate = "tests"
+object_kind = "statement"
+object_id = "df6c64a6-02dc-414a-be8e-dccd035b8872"
+note = "Checks the exact failure condition for universal benefit omission in the governing-plan interpretation."

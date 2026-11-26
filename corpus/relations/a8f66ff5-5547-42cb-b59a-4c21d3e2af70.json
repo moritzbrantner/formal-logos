@@ -1,0 +1,10 @@
+{
+  "id": "a8f66ff5-5547-42cb-b59a-4c21d3e2af70",
+  "label": "Test by The same fixed singleA extension and common fact-truth a for Additional modern suffici (1)",
+  "subject_kind": "result",
+  "subject_id": "d1309e99-3fab-5432-9c76-fed8f433ba3d",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "cddd7a46-1279-5e14-b565-03c3bdb95def",
+  "note": "Tests whether the fixed singleA extension determines grounding in two sound asymmetric expansions with the same truth map and different edges."
+}

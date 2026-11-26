@@ -1,0 +1,10 @@
+{
+  "id": "8323b7b9-a515-46a8-9362-05dd8ef640ca",
+  "label": "Test by Frame-to-schema strictness controls, checked for The accessibility relation of the rou (1)",
+  "subject_kind": "result",
+  "subject_id": "ee7281ec-bb0c-4ee0-9161-f127f6a9ad31",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "873d057f-e58e-53cc-a054-093f7c5a4238",
+  "note": "Tests the converse strength implication in the registered interpretation. Same route Profile and frame. The 5 schema is equivalent to the Euclidean condition (5 correspondence of the ConvergenceCertificate); S5 adds reflexivity (the KT frame premise, equivalently the T schema). The one-world frame with no edge validates 5 and is not S5. Verified with o instantiated as m.ontic."
+}

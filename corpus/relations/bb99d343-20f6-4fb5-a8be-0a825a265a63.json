@@ -1,0 +1,10 @@
+{
+  "id": "bb99d343-20f6-4fb5-a8be-0a825a265a63",
+  "label": "Test by Selected root to Fourth Way finite controls",
+  "subject_kind": "result",
+  "subject_id": "e34557ac-d366-49ba-a5a9-2af8426f681c",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "7abdee27-8abc-59d9-9b20-740616a1a8dd",
+  "note": "Tests omission of this premise from derive in the respective finite controls of the selected-root Fourth Way interface."
+}
