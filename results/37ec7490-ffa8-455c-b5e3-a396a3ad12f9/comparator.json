@@ -1,0 +1,9 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.CounterfactualWitnessCoverage.Challenge",
+  "solution_module": "TruthCore.Results.Causality.CounterfactualWitnessCoverage.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.CounterfactualWitnessCoverage.full_coverage_preserves_witnesses"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}

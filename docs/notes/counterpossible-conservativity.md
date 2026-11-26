@@ -145,3 +145,103 @@ Final CI covers the delivered revision. Shared conventions resolved at
 ## Research attempts citing this note
 
 - [Constructed a bounded three-way mechanism contrast after #974: active AND with two input-state…](../../corpus/attempts/mechanism-intervention-parity-20261104.json)
+
+## Selection, intervention and the dependence-to-impossibility bridge (#2052)
+
+The selection core takes a world and the extension of an antecedent and returns
+a set of worlds. `Would` requires the consequent at every member of that set.
+Success gives the identity law. Weak centering gives modus ponens when the
+antecedent is true at the origin. Conjunction of consequents and consequence
+weakening use only the universal clause. Nonemptiness for normally possible
+antecedents is a separate condition. A selected witness rules out truth of both
+polarities, whereas an empty selection admits both vacuously.
+
+In the ordered profiles lower ranks are closer. At the same origin a supplied
+Stalnaker-style single choice obeys conditional excluded middle (classically).
+With two tied least antecedent worlds that disagree on the consequent, retaining
+both makes both polarities fail. When least worlds exist, the Lewis-style
+strict-comparison clause and the least-world universal agree. The integer
+control uses all integers, ordered by their values. Every candidate has a
+strictly closer antecedent world, so the least-world universal makes even the
+empty consequent true by vacuity. The strict-comparison clause rejects it.
+The three-world control also excludes antecedent strengthening and conditional
+transitivity at one fixed origin. With actual < near < far, the closest away
+world is near, but the closest away-and-far world is far. Away selects a member
+of {actual, near}, which in turn selects actual. Away itself fails to select
+actual. These are laws of specified profiles, with no completeness or
+historical attribution claim.
+
+### Matched explanatory rivals
+
+The test is whether the same effect survives the public-input clamp in the same
+origin context. Both the active AND mechanism and the idle lookup produce the
+same natural observations at every normal context. The latent first bit stays
+true, the origin context sets the second bit true, and the operation clamps the
+same public input to false in both. The intervention adapter selects the outcome
+only when it realizes the antecedent. The existing normal-first repair selector
+agrees with accessible-only selection when the antecedent has a normal witness,
+and agrees with the intervention selector for this public-off antecedent.
+Accessible-only evaluation makes both consequent polarities true vacuously in
+both mechanisms. At the supplied repair, the AND effect disappears because it
+reads the clamped input, whereas the idle effect remains because it reads the
+unmodified background bits. One response measurement under that operation would
+distinguish these two equations. Admissibility of the operation and empirical
+reach are open. This compares normal-model impossibility with a consistent
+off-normal repair. The controlled variable is a public contributor and supplies
+no model of annihilating a necessary bearer. Identical extensions over the entire
+evaluation domain remain indistinguishable to this extensional selector.
+
+### God-existence route and next test
+
+The conditional arguments target `000e1f65`, dependence excluding the real
+possibility of being without the source. They feed the existing route from
+nonmutual dependence to simple priority (`75f11492`) and the priority-in-being
+consumer (`2e96d2fa`). Both use the shared `DependsForBeing` primitive in
+`DEF-DEPENDS-FOR-BEING`, sense 1 of `23dd6f32`. The full-coverage argument assumes
+one-way soundness of selected absence for that primitive at a designated origin,
+coverage of every accessible source-absence world by selection, and realization
+of any real being-without contrast by an accessible witness in the same frame.
+The original argument is retained because full antecedent coverage is
+a consequent-independent selection policy. It can be specified without knowing
+which effect or consequent is at issue. Its sibling uses only
+`PreservesAccessibleAbsenceWitnesses`: if an accessible contrast exists with
+the effect present and source absent, at least one accessible contrast for that
+pair is selected. Realization gives an accessible witness, preservation gives
+a selected witness, and soundness excludes the effect there.
+`full_coverage_preserves_witnesses` registers the implication from full
+coverage alone. `witness_coverage_strictness` keeps every contrast witness in
+the same three-world replacement frame while omitting the accessible near
+world, where neither being exists. The weaker policy holds and full coverage
+fails on that selector. This comparison makes no soundness claim for that
+selector.
+
+`SustainingRemovalTest` compares an actual effect and agent, with a supplied
+giving-of-being edge at the designated moment, to a supplied outcome where
+both are absent. The theorem equates passing this test with the corresponding
+nonempty intervention counterfactual and the same origin conditions. The
+operation is a proposed interpretation. Whether it holds the appropriate
+background fixed, whether existence at the origin is presence at the designated
+moment, and whether the test is adequate for the shared dependence primitive
+remain open. The local sun-and-light example motivates a sustaining reading
+within its specified illumination conditions. The originating/sustaining fork
+and the diagonal convention of the primitive remain as assessed in the
+[causal dependence investigation](causal-dependence-support-investigation.md).
+The adapter assumes no general transitivity, asymmetry or well-foundedness.
+
+In the checked replacement control the agent is present at actual only. The
+same effect is present at actual where a giving edge is supplied, drops in the
+near removal outcome, and remains at far under a stipulated backup condition.
+Both absence worlds are accessible. Soundness at the closest absence and
+accessible witness realization hold in this interpretation, while coverage
+and the existing dependence-to-impossibility conclusion fail. This isolates
+a formal gap even with a nonempty removal test. It leaves the metaphysical
+availability of such a replacement and identity of the effect across scenarios
+open. The next test is to fix an effect individuation criterion and compare
+identity-preserving replacement with essential source dependence under the
+same accessibility profile. Determine whether any genuine being-without
+witness could be omitted by the candidate selector. `42756c07`, the parent
+map to strict grounding of existence facts, still needs independently
+interpreted labels and warranted strict-ground edges. Neither an ordered
+conditional nor the causal removal adapter supplies those edges.
+
+[Recorded attempt](../../corpus/attempts/f9d65e23-d6a2-4259-98e9-0dc4fe418956.json).

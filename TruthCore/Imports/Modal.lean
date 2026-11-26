@@ -12,6 +12,8 @@ public import TruthCore.Modal.BoundedMetricPastControl
 public import TruthCore.Modal.ChoiceContext
 public import TruthCore.Modal.Convergence
 public import TruthCore.Modal.ConvergenceCertificate
+public import TruthCore.Modal.CounterfactualSelection
+public import TruthCore.Modal.CounterfactualSelectionControls
 public import TruthCore.Modal.CounterpartNecessity
 public import TruthCore.Modal.CounterpossibleConservativity
 public import TruthCore.Modal.CreationDecisionComparison

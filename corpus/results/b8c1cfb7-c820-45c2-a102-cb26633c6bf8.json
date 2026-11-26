@@ -1,0 +1,11 @@
+{
+  "id": "b8c1cfb7-c820-45c2-a102-cb26633c6bf8",
+  "label": "Accessible absence coverage rules out being without a source of dependence",
+  "argument_id": "18a75892-5c49-409a-b297-5cbb7a644222",
+  "challenge_module": "TruthCore.Results.Causality.CounterfactualDependence.Challenge",
+  "solution_module": "TruthCore.Results.Causality.CounterfactualDependence.Solution",
+  "theorem": "TruthCore.Results.Causality.CounterfactualDependence.dependence_excludes_being_without",
+  "comparator_config": "results/b8c1cfb7-c820-45c2-a102-cb26633c6bf8/comparator.json",
+  "status": "solution-present",
+  "description": "Conditional support for the existing dependence-to-real-impossibility premise. If x depends for its being on y and could exist without y, the realization premise supplies an accessible contrast world. Coverage selects it, so soundness implies x is absent there, contradicting the witness. The three assumptions are explicit. Accessibility stays distinct from intervention outcomes, and the argument leaves the shared dependence primitive and the strict-ground map untouched."
+}

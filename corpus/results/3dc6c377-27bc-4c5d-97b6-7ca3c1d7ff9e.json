@@ -1,0 +1,11 @@
+{
+  "id": "3dc6c377-27bc-4c5d-97b6-7ca3c1d7ff9e",
+  "label": "Accessible witness preservation rules out being without a source of dependence",
+  "argument_id": "0a971de7-df41-4e36-8c1e-796ced799e2d",
+  "challenge_module": "TruthCore.Results.Causality.CounterfactualWitnessCoverage.Challenge",
+  "solution_module": "TruthCore.Results.Causality.CounterfactualWitnessCoverage.Solution",
+  "theorem": "TruthCore.Results.Causality.CounterfactualWitnessCoverage.dependence_excludes_being_without_of_witnesses",
+  "comparator_config": "results/3dc6c377-27bc-4c5d-97b6-7ca3c1d7ff9e/comparator.json",
+  "status": "solution-present",
+  "description": "Conditional support at the same origin. If a dependent effect could exist without its source, realization gives an accessible contrast witness. Preservation supplies a selected accessible contrast witness for the same pair. Dependence soundness excludes the effect there, contradicting its presence. This uses only witness preservation alongside the original realization and soundness premises."
+}
