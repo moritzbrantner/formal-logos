@@ -1,0 +1,23 @@
+{
+  "id": "b58e7a06-252d-40a3-9a09-5acc0feb096c",
+  "label": "Excluding a return through the shared identity ancestor gives a common first giver",
+  "premise_statement_ids": [
+    "3d01134d-0b03-4469-a81a-a18d6e179fa0",
+    "a576300f-4b01-45ae-902c-cfe3d0fbf2de",
+    "78cffb8e-da95-4459-8058-45e0953cdde8",
+    "41c858ee-07ee-41db-9693-b5fef6154efe",
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410"
+  ],
+  "conclusion_statement_id": "c35b1a5c-6405-449b-993b-8196b2457e08",
+  "inference_ids": [
+    "053e7ba7-c400-4f3b-b1d8-2ab81eb73403"
+  ],
+  "meaning": "Fixed q3a4 profile throughout. Distinct-esse ancestry supplies a finite nonempty path to each actual recipient whose represented essence differs from its esse. Unique actual identity and one actual bearer select n. Every other actual bearer falls under that ancestry premise, so n reaches it. Any supplier of n would complete a nonempty return through n. Conversely, with uniqueness, a common first giver excludes every such return. The companion reuses the existing model with a supplierless common source and an infinite branch. Global well-foundedness is unnecessary. Deriving ancestry from well-foundedness or closed-collection rootedness inherits those commitments. Further bridges identify the source with a world-relative grounding root and with God.",
+  "definition_ids": [
+    "8163859b-95b3-4dd2-8a69-541bd332f32f",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "183b48d2-1753-583d-aef9-4199cff86231",
+    "d8e2ed12-8089-5202-ae51-e807cf611c76",
+    "0ea9feb8-1f92-5b11-aa74-2f2e567c6106"
+  ]
+}

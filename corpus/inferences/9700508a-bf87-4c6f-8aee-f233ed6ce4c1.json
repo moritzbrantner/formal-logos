@@ -1,0 +1,12 @@
+{
+  "id": "9700508a-bf87-4c6f-8aee-f233ed6ce4c1",
+  "label": "Uniqueness bounds the identity bearers upstream of each actual recipient (inference)",
+  "input_statement_ids": [
+    "a576300f-4b01-45ae-902c-cfe3d0fbf2de"
+  ],
+  "output_statement_id": "b2b289ed-74a7-4c1c-88c0-26f213a6e6c3",
+  "rule": "All actual identity ancestors of the selected actual recipient form a subsingleton set",
+  "meaning": "Apply actual identity-bearer uniqueness to any two members of the same recipient's upstream set. The set may be empty. Other upstream bearers may be infinite in number. Whether the stated identity is instantiated in reality, and whether it singles out at most one bearer, require separate warrant.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}
