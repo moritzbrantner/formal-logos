@@ -689,6 +689,13 @@ allows readers of the Pruss and necessary-root routes to find the shared
 condition without identifying their independently supplied frames. The proof
 asserts the equivalences for every supplied profile.
 
+The [no-dead-end argument](../../corpus/results/da5001d2-3f90-449b-a772-8e3964a03375.json)
+adds a route to the accessible world needed for finite-roster amalgamation.
+Excluded middle supplies a successor from the global frame condition at the
+selected world. The existing self-access route still supplies its own
+witness. The new route needs global absence of dead ends and leaves
+the application of that frame condition open.
+
 The mover fork remains a priority for bridge research. Its common conclusion
 provides a mover in some respect, while the reduction premise of the prima
 via asks for a mover in the very respect in which the subject moves. A bridge
@@ -699,3 +706,4 @@ accidental-mover coverage to actual reductions in the stated domain.
 - [Q14 pointwise foreign-form reception connection plan](../../corpus/attempts/8098a6d6-afc1-467c-8b3b-5e74e52f632f.json)
 - [Procedurally selected whole-series exercise connection plan](../../corpus/attempts/9c67743d-c18c-4663-87bf-6978ca7f85ad.json)
 - [Respect-free mover fork connection plan](../../corpus/attempts/b9061349-cd4e-4378-bef4-9cbdcab219d9.json)
+- [No-dead-end frame gives a selected successor](../../corpus/attempts/3702a4c0-b6a9-446d-b55f-f06d32ad609e.json)

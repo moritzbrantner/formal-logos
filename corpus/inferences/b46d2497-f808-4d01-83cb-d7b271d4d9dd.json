@@ -1,0 +1,13 @@
+{
+  "id": "b46d2497-f808-4d01-83cb-d7b271d4d9dd",
+  "label": "An accessible successor from the no-dead-end frame condition (inference)",
+  "input_statement_ids": [
+    "0166c188-85b1-53c0-b844-d9a3ec6cf1fa",
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410"
+  ],
+  "output_statement_id": "390ac3ab-48ec-596e-9890-4d2364e81cf9",
+  "rule": "Apply excluded middle to successor existence and contradict the no-dead-end condition in the negative case",
+  "meaning": "For one frame and selected world w, if all worlds satisfy the no-dead-end condition and excluded middle holds, there exists a world accessible from w. This gives the world witness used in finite roster amalgamation without assuming that w accesses itself. The witness need not be distinct or populated. The global no-dead-end premise is incomparable with self-access at a single selected world.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

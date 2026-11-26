@@ -20,6 +20,7 @@ public import TruthCore.Results.Case.Catholicism.AttributesFromEsse.Solution
 public import TruthCore.Results.Case.Catholicism.CausalFinitism.Solution
 public import TruthCore.Results.Case.Catholicism.CauseOfBeingHasBeing.Solution
 public import TruthCore.Results.Case.Catholicism.ClassicalAttributesJointWitness.Solution
+public import TruthCore.Results.Case.Catholicism.DeadEndFreeSuccessor.Solution
 public import TruthCore.Results.Case.Catholicism.DivineLoveRoute.Solution
 public import TruthCore.Results.Case.Catholicism.DivineLoveSenseRoute.Solution
 public import TruthCore.Results.Case.Catholicism.FirstSourceIdentification.Controls

@@ -1,14 +1,13 @@
 {
   "id": "b2aff06e-1761-4d05-8e97-0852637106ef",
-  "label": "Gödel seriality and empty property connection plan",
+  "label": "Gödel empty-property connection plan",
   "statement_ids": [
-    "0166c188-85b1-53c0-b844-d9a3ec6cf1fa",
     "649e7f30-2410-5cc1-b7c4-222f96cfb7dd"
   ],
   "date": "2026-11-26",
   "kind": "derivation",
   "outcome": "blocked",
-  "summary": "B does not imply a nonempty successor set by itself. Empty-property positivity needs Gödel's specific positive-property laws. Review an exact consumer under the chosen frame and avoid a naming bridge from positive properties to GOD_4.",
+  "summary": "EmptyPropertyNotPositive uses the specific positive-property predicate of the Gödel formalization. A God-existence application would need a property vocabulary shared with the actual GOD_4 criterion and a downstream consumer of that exclusion. The frame-only no-dead-end condition has a separate successor result.",
   "evidence": [
     "PR-2086"
   ],
@@ -22,5 +21,5 @@
       "pr": "PR-2086"
     }
   ],
-  "blocker": "Connection target 938650b0-ff50-5c60-8b70-5b7dc600eaaf. The scoped bridge described in the summary remains open."
+  "blocker": "No premise of the case identifies Gödel positivity with the attributes in the GOD_4 witness."
 }
