@@ -16,13 +16,13 @@ note = "Ayer distinguishes conclusive establishment from experiential confirmati
 
 [[relation]]
 id = "b1a0b7bb-6ab5-4aa2-99c4-bfee58ba973f"
-label = "Source support for 46132461 from reading 51650477"
+label = "Source qualification for 46132461 from reading 51650477"
 subject_kind = "claim"
 subject_id = "d1776e9a-03de-509a-b7dd-69562b8be02c"
-predicate = "supports"
+predicate = "qualifies"
 object_kind = "statement"
 object_id = "46132461-9a9b-498f-b3d9-304e2f3ac57e"
-note = "Ayer attests that some positivists proposed conclusive verifiability for significance. Mapping the reported position requires fixing the case's scope and proving the formulation itself is covered before applying the self-test. The report is evidence of the position's use, not Ayer's endorsement."
+note = "Ayer attests that some positivists proposed conclusive verifiability for significance. Mapping the reported position requires fixing the case's scope and proving the formulation itself is covered before applying the self-test. The report is evidence of the position's use, not Ayer's endorsement, and gives no warrant that every meaningful sentence in scope satisfies conclusive verification; it identifies a historically proposed interpretation of the criterion."
 
 [[relation]]
 id = "1d2fa160-7e98-4064-bc2e-dcdfb50f4c60"
@@ -426,13 +426,13 @@ note = "Hume's prediction of the principle's continued influence depends on unch
 
 [[relation]]
 id = "f9feaf2e-b4dc-4fba-9126-54874fbef5a5"
-label = "Source support for bc260b57 from reading 7a397053"
+label = "Source qualification for bc260b57 from reading 7a397053"
 subject_kind = "claim"
 subject_id = "69f35326-6563-57ce-92fc-8838ba1983c2"
-predicate = "supports"
+predicate = "qualifies"
 object_kind = "statement"
 object_id = "bc260b57-ed4c-5298-afb5-5e3056c0a241"
-note = "Hume explains what the customary transition contributes by observing that without it we could not adjust means to ends based on experience. Applying that argument requires the formal trigger and expectation to track the relevant transitions, without turning a necessary condition for adjustment into sufficient practical entitlement."
+note = "Hume explains what the customary transition contributes by observing that without it we could not adjust means to ends based on experience. Applying that argument requires the formal trigger and expectation to track the relevant transitions, without turning a necessary condition for adjustment into sufficient practical entitlement. The passage explains why some customary transitions are indispensable; it does not give a reason that the transition occurs in every repeated, triggered case, which the target's universal form requires. That reason remains the missing bridge."
 
 [[relation]]
 id = "7f973cef-a33d-40c4-8841-93441910ca80"
@@ -1686,13 +1686,13 @@ note = "The passage specifies absence of beginning and end and of succession. Th
 
 [[relation]]
 id = "918adbe7-cc92-4822-8f14-8ef3ffa64294"
-label = "Source support for 7d6a77be from reading 532947e4"
+label = "Source qualification for 7d6a77be from reading 532947e4"
 subject_kind = "claim"
 subject_id = "1be8c83a-edef-57a7-a4c3-56e2f5cb699a"
-predicate = "supports"
+predicate = "qualifies"
 object_kind = "statement"
 object_id = "7d6a77be-86d9-519b-a40f-49f332a2e989"
-note = "Aquinas gives a reason to deny that endless time captures proper eternity: succession remains even if time has no start or finish. To witness failure of the case calibration one still needs a being in the supplied profile that has the relevant endless-life conditions and fails primitive Eternal, or the converse mismatch."
+note = "Aquinas gives a reason to deny that endless time captures proper eternity: succession remains even if time has no start or finish. To witness failure of the case calibration one still needs a being in the supplied profile that has the relevant endless-life conditions and fails primitive Eternal, or the converse mismatch. Succession in endless time is a claim about time, not about a bearer in the supplied frame: Eternal and EndlessLife can agree on every bearer even if time is endless and successive, so the passage qualifies the calibration and does not by itself supply the mismatch."
 
 [[relation]]
 id = "6b32277e-e909-4952-a369-31e7167bd431"
@@ -1716,13 +1716,13 @@ note = "Aquinas explicitly includes loving and delighting in possessed good with
 
 [[relation]]
 id = "c5a3de19-5c2e-46d3-a80c-94d4fd7f0c31"
-label = "Source support for a94c5dfc from reading aa15f6c2"
+label = "Source qualification for a94c5dfc from reading aa15f6c2"
 subject_kind = "claim"
 subject_id = "1513d7a2-c790-5a53-b857-8173814f3179"
-predicate = "supports"
+predicate = "qualifies"
 object_kind = "statement"
 object_id = "a94c5dfc-c722-49fe-a242-dd39409b079d"
-note = "Aquinas takes willing to permit communication of an already possessed good and applies it to divine will. The case needs more than compatibility: giving the recipient esse must itself be willing that same recipient's actual GOOD_4, with the same giver and recipient."
+note = "Aquinas takes willing to permit communication of an already possessed good and applies it to divine will. The case needs more than compatibility: giving the recipient esse must itself be willing that same recipient's actual GOOD_4, with the same giver and recipient. The passage establishes the capacity to communicate a possessed good through willing; whether causing this recipient's esse is thereby willing the good to that recipient is the disputed premise, which the passage leaves open."
 
 [[relation]]
 id = "23726705-0f4c-455a-afba-1414ac642edd"
@@ -1942,12 +1942,12 @@ note = "The survey's nominal test combines possible causal capability and imposs
 
 [[relation]]
 id = "34a69bcd-671c-4adf-b85e-882fedc48bb3"
-label = "Source qualification for 849086f4 from reading 9f9b341f"
+label = "Source qualification for f54cc1ad from reading 9f9b341f"
 subject_kind = "claim"
 subject_id = "b75776db-ebfc-5eb0-98b3-ac323c9c4726"
 predicate = "qualifies"
 object_kind = "statement"
-object_id = "849086f4-532e-50a1-9590-eec583a4873c"
+object_id = "f54cc1ad-8913-52ec-abf1-be30f76a03bc"
 note = "Sellars's restriction is directed at describing and explaining the world. A conclusion that every existent is natural additionally requires delimiting which entities count as scientific and defending why that domain exhausts the ontology in the case's sense."
 
 # Zachary D. Blount and colleagues, Genomic and phenotypic evolution of Escherichia coli in a novel…
