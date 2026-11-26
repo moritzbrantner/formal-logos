@@ -36,7 +36,11 @@ def observe(receiver, feed_depth, cut=None, *, isolate_feed=False, buffered=Fals
             feed_writer.shutdown(socket.SHUT_WR)
         token = secrets.token_hex(16).encode("ascii")
         if bypass:
-            edges[0][1].sendall(token)
+            try:
+                edges[0][1].sendall(token)
+            except BrokenPipeError:
+                if cut != 0:
+                    raise
         try:
             feed_writer.sendall(token)
         except BrokenPipeError:
@@ -71,6 +75,20 @@ def main():
         received, token = observe(receiver, 6, 3, isolate_feed=True, bypass=True)
         assert received == token
         print("Isolating feed 2 after cut 2 stopped its output. Cut 3 passed the buffer and bypass controls.")
+
+        # Both arrangements have the side writer through link 0. The second
+        # also sends the same fresh token from depth 4.
+        counts = []
+        for isolate_feed in (True, False):
+            row = []
+            for cut in range(6):
+                received, token = observe(receiver, 4, cut, isolate_feed=isolate_feed, bypass=True)
+                count = received.count(token)
+                assert received == token * count
+                row.append(count)
+            counts.append(row)
+        assert counts == [[0, 1, 1, 1, 1, 1], [0, 1, 1, 1, 2, 2]]
+        print(f"One and two live inputs, copies at the receiver: {counts}")
 
 
 if __name__ == "__main__":
