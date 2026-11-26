@@ -400,6 +400,7 @@ public import TruthCore.Results.Causality.SupertaskUnitCostDiverges.Solution
 public import TruthCore.Results.Causality.SupertaskUrnPointwise.Solution
 public import TruthCore.Results.Causality.SupplierAuditCertificates.Solution
 public import TruthCore.Results.Causality.SupplierAuditLikelihood.Solution
+public import TruthCore.Results.Causality.SupplierAuditVisibility.Solution
 public import TruthCore.Results.Causality.SurveyCapabilityProfiles.Solution
 public import TruthCore.Results.Causality.SurveyProductiveSource.Solution
 public import TruthCore.Results.Causality.SurveySourceEndpointControls.Solution
