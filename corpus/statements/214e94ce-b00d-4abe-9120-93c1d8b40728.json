@@ -1,0 +1,9 @@
+{
+  "id": "214e94ce-b00d-4abe-9120-93c1d8b40728",
+  "label": "No countable catalogue covers all activity profiles of countably many intact successor rays",
+  "paraphrase": "For every natural-number-indexed catalogue of total activity predicates on countably many intact successor rays, there is a predicate satisfying local transmission that disagrees with each entry i at position zero of ray i. The catalogue can contain arbitrary predicates. The result concerns coverage of all admissible profiles under this assumed topology and rule.",
+  "lean_declaration": "TruthCore.Causality.ParallelPowerTransmission.CountableCatalogueMisses",
+  "definition_ids": [
+    "e1b95906-8d38-59c3-abee-0ccc1c9d333b"
+  ]
+}

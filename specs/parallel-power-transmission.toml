@@ -1,0 +1,33 @@
+[batch]
+vocab = "TruthCore.Causality.ParallelPowerTransmission"
+results = "TruthCore.Results.Causality.ParallelPowerTransmission"
+
+[[statement]]
+id = "Local transmission on parallel successor rays is determined by which surviving tails are active"
+lean = "ActivityClassification"
+definitions = ["e1b95906-8d38-59c3-abee-0ccc1c9d333b"]
+paraphrase = "On any family of disjoint successor rays with arbitrary intact incoming links, the local transmission rule holds exactly when a position is active iff some position on its ray is active and every incoming link at or upstream of the position is intact. Every selection of rays is realized by activating the intact tail of each selected ray. A surviving tail contributes one freely selectable on/off alternative, whereas a ray with no intact tail contributes none. Any upstream cut forces the position off in every solution. The all-off solution is the only pointwise solution exactly when no intact tail exists anywhere, in particular when cuts occur at or above every position."
+
+[[statement]]
+id = "No countable catalogue covers all activity profiles of countably many intact successor rays"
+lean = "CountableCatalogueMisses"
+definitions = ["e1b95906-8d38-59c3-abee-0ccc1c9d333b"]
+paraphrase = "For every natural-number-indexed catalogue of total activity predicates on countably many intact successor rays, there is a predicate satisfying local transmission that disagrees with each entry i at position zero of ray i. The catalogue can contain arbitrary predicates. The result concerns coverage of all admissible profiles under this assumed topology and rule."
+
+[[argument]]
+id = "Classify every parallel-ray solution and characterize when cuts force inactivity"
+theorem = "activityClassification"
+premises = []
+conclusion = "Local transmission on parallel successor rays is determined by which surviving tails are active"
+rule = "Reduce to one possible supplier, propagate along each ray and realize arbitrary selected intact tails"
+meaning = "For a populated ray, activity propagates upstream and requires every upstream link to be intact. Any position on the intact tail can recover activity from a common upstream position with the known active one, by repeated use of the local rule in the downstream direction. Conversely, each chosen tail satisfies that rule by splitting off its first intact link. Taking all rays as selected witnesses activity whenever a tail survives; any upstream cut forces inactivity in all assignments. The model stipulates transmission topology and link availability, and does not identify local activity with metaphysical efficient power or argue that an actual physical or metaphysical system has this shape."
+axioms = []
+
+[[argument]]
+id = "Diagonalize along the bottom positions of countably many intact successor rays"
+theorem = "countableCatalogueMisses"
+premises = ["Local transmission on parallel successor rays is determined by which surviving tails are active"]
+conclusion = "No countable catalogue covers all activity profiles of countably many intact successor rays"
+rule = "Realize a common ray value opposite each catalogue entry at its indexed bottom position"
+meaning = "Select ray i when entry i is false at (i, 0). Every link is intact, so the classification's realization satisfies local transmission. Agreement of entry i and the constructed value at (i, 0) would equate the entry with its own negation. The result concerns coverage of the space of allowed assignments and gives no complexity bound for an individual assignment, such as the uniformly active one."
+axioms = []

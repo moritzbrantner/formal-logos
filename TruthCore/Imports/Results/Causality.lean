@@ -289,6 +289,7 @@ public import TruthCore.Results.Causality.OriginExerciseBridge.SelfEdge.Solution
 public import TruthCore.Results.Causality.OriginExerciseBridge.Solution
 public import TruthCore.Results.Causality.OriginToleranceIdentity.Solution
 public import TruthCore.Results.Causality.OwnerEndpointCalibration.Solution
+public import TruthCore.Results.Causality.ParallelPowerTransmission.Solution
 public import TruthCore.Results.Causality.ParityUnionRegress.Solution
 public import TruthCore.Results.Causality.PartFreePlurality.Solution
 public import TruthCore.Results.Causality.PartMediatedSelfMotion.Solution

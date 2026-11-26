@@ -1,0 +1,12 @@
+{
+  "id": "32c7b94a-f80e-4121-b619-fd6f9b6ee503",
+  "label": "Diagonalize along the bottom positions of countably many intact successor rays (inference)",
+  "input_statement_ids": [
+    "c98408fd-f39e-4f47-a104-36b4c52ef617"
+  ],
+  "output_statement_id": "214e94ce-b00d-4abe-9120-93c1d8b40728",
+  "rule": "Realize a common ray value opposite each catalogue entry at its indexed bottom position",
+  "meaning": "Select ray i when entry i is false at (i, 0). Every link is intact, so the classification's realization satisfies local transmission. Agreement of entry i and the constructed value at (i, 0) would equate the entry with its own negation. The result concerns coverage of the space of allowed assignments and gives no complexity bound for an individual assignment, such as the uniformly active one.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

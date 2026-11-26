@@ -1,0 +1,15 @@
+{
+  "id": "94ec39c9-8fe0-420c-a9c0-75c0ffc18a0a",
+  "label": "Diagonalize along the bottom positions of countably many intact successor rays",
+  "premise_statement_ids": [
+    "c98408fd-f39e-4f47-a104-36b4c52ef617"
+  ],
+  "conclusion_statement_id": "214e94ce-b00d-4abe-9120-93c1d8b40728",
+  "inference_ids": [
+    "32c7b94a-f80e-4121-b619-fd6f9b6ee503"
+  ],
+  "meaning": "Select ray i when entry i is false at (i, 0). Every link is intact, so the classification's realization satisfies local transmission. Agreement of entry i and the constructed value at (i, 0) would equate the entry with its own negation. The result concerns coverage of the space of allowed assignments and gives no complexity bound for an individual assignment, such as the uniformly active one.",
+  "definition_ids": [
+    "e1b95906-8d38-59c3-abee-0ccc1c9d333b"
+  ]
+}

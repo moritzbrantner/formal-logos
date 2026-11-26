@@ -201,6 +201,7 @@ public import TruthCore.Causality.OriginDeletion
 public import TruthCore.Causality.OriginExerciseBridge
 public import TruthCore.Causality.OriginToleranceIdentity
 public import TruthCore.Causality.OwnerEndpointCalibration
+public import TruthCore.Causality.ParallelPowerTransmission
 public import TruthCore.Causality.ParityUnionRegress
 public import TruthCore.Causality.PartFreePlurality
 public import TruthCore.Causality.PartMediatedSelfMotion
