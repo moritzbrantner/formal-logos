@@ -36,6 +36,32 @@ theorem auditsOfIdentityAncestry (p : Profile B P R)
     EveryActualEsseBearerHasFiniteRootAudit p := by
   sorry
 
+/-- A minimal identity ancestor has no incoming supplier. Any supplier is
+itself an identity bearer or has an identity ancestor strictly before the
+chosen one. -/
+theorem auditsOfFiniteAcyclicIdentityAncestry (p : Profile B P R)
+    (finite : ActualIdentityAncestorSetsFinite p)
+    (acyclic : ActualIdentityAncestryAcyclic p)
+    (ancestry : EveryDistinctEsseHasEsseIsEssenceSource p)
+    (em : ExcludedMiddle) :
+    EveryActualEsseBearerHasFiniteRootAudit p := by
+  sorry
+
+/-- The certificates yield closed-collection rootedness on the same profile. -/
+theorem closedOfFiniteAcyclicIdentityAncestry (p : Profile B P R)
+    (finite : ActualIdentityAncestorSetsFinite p)
+    (acyclic : ActualIdentityAncestryAcyclic p)
+    (ancestry : EveryDistinctEsseHasEsseIsEssenceSource p)
+    (em : ExcludedMiddle) :
+    ClosedActualEsseCollectionsRooted p := by
+  sorry
+
+/-- In the three-bearer chain, an actual identity supplies the distinct
+recipient and is itself supplied by the underived actual identity. -/
+theorem finiteAcyclicIdentityAncestryAllowsSupply :
+    FiniteAcyclicIdentityAncestryAllowsSupply := by
+  sorry
+
 /-- The distinct bearer receives internally and has the identity bearer as
 an actual cause. It also supplies the identity bearer, whose esse is never
 received internally. Every bearer therefore has an incoming supplier. -/

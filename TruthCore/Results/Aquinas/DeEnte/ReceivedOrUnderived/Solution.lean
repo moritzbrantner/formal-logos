@@ -52,6 +52,89 @@ theorem auditsOfIdentityAncestry (p : Profile B P R)
     exact ⟨r, actualRoot, (positiveCertificate (ActualEsseCause p) r x).mp
       ⟨path.to_reflTransGen, underived r actualRoot identity⟩⟩
 
+/-- A minimal identity ancestor has no incoming supplier. Any supplier is
+itself an identity bearer or has an identity ancestor strictly before the
+chosen one. -/
+theorem auditsOfFiniteAcyclicIdentityAncestry (p : Profile B P R)
+    (finite : ActualIdentityAncestorSetsFinite p)
+    (acyclic : ActualIdentityAncestryAcyclic p)
+    (ancestry : EveryDistinctEsseHasEsseIsEssenceSource p)
+    (em : ExcludedMiddle) :
+    EveryActualEsseBearerHasFiniteRootAudit p := by
+  intro x actual
+  have identityAncestor (y : B) (active : p.InAct y p.esse) :
+      (actualIdentityAncestors p y).Nonempty := by
+    rcases em (p.esseOf y = p.essenceOf y) with identity | distinct
+    · exact ⟨y, active, identity, .refl⟩
+    · obtain ⟨a, activeAncestor, identity, path⟩ := ancestry y ⟨active, distinct⟩
+      exact ⟨a, activeAncestor, identity, path.to_reflTransGen⟩
+  let Ancestors := actualIdentityAncestors p x
+  let upstream (a b : Ancestors) := Relation.TransGen (ActualEsseCause p) a.val b.val
+  let : Finite Ancestors := finite x actual
+  let : IsTrans Ancestors upstream := ⟨fun _ _ _ h₁ h₂ => h₁.trans h₂⟩
+  let : Std.Irrefl upstream := ⟨fun a => acyclic a.val a.property.1 a.property.2.1⟩
+  have wf := Finite.wellFounded_of_trans_of_irrefl upstream
+  obtain ⟨a, belongs⟩ := identityAncestor x actual
+  obtain ⟨r, _, minimal⟩ := wf.has_min Set.univ ⟨⟨a, belongs⟩, Set.mem_univ _⟩
+  have underived (c : B) (edge : ActualEsseCause p c r.val) : False := by
+    obtain ⟨b, active, identity, path⟩ := identityAncestor c edge.2.1
+    have before : Relation.TransGen (ActualEsseCause p) b r.val :=
+      Relation.TransGen.trans_right path (.single edge)
+    let ancestor : Ancestors := ⟨b, active, identity,
+      before.to_reflTransGen.trans r.property.2.2⟩
+    exact minimal ancestor (Set.mem_univ _) before
+  exact ⟨r.val, r.property.1, (positiveCertificate (ActualEsseCause p) r.val x).mp
+    ⟨r.property.2.2, underived⟩⟩
+
+/-- The certificates yield closed-collection rootedness on the same profile. -/
+theorem closedOfFiniteAcyclicIdentityAncestry (p : Profile B P R)
+    (finite : ActualIdentityAncestorSetsFinite p)
+    (acyclic : ActualIdentityAncestryAcyclic p)
+    (ancestry : EveryDistinctEsseHasEsseIsEssenceSource p)
+    (em : ExcludedMiddle) :
+    ClosedActualEsseCollectionsRooted p := by
+  exact closedOfFiniteRootAudits p (auditsOfFiniteAcyclicIdentityAncestry p finite acyclic ancestry em)
+
+private def chain : Profile (Fin 3) Bool Unit where
+  InAct := fun _ _ => True
+  CausesIn := fun c x _ => c.val + 1 = x.val
+  essenceOf := fun _ => false
+  esseOf := fun x => x == 2
+  essentialPrinciplesAloneSufficeForEsse := fun _ => False
+  esse := ()
+
+private theorem chainIncreasing {a b : Fin 3}
+    (path : Relation.TransGen (ActualEsseCause chain) a b) : a.val < b.val := by
+  induction path with
+  | single edge =>
+    have step : _ + 1 = _ := edge.2.2.2
+    exact step ▸ Nat.lt_succ_self _
+  | tail _ edge ih =>
+    have step : _ + 1 = _ := edge.2.2.2
+    exact ih.trans (step ▸ Nat.lt_succ_self _)
+
+/-- In the three-bearer chain, an actual identity supplies the distinct
+recipient and is itself supplied by the underived actual identity. -/
+theorem finiteAcyclicIdentityAncestryAllowsSupply :
+    FiniteAcyclicIdentityAncestryAllowsSupply := by
+  have rootToMiddle : ActualEsseCause chain 0 1 := ⟨by decide, trivial, trivial, rfl⟩
+  have middleToEnd : ActualEsseCause chain 1 2 := ⟨by decide, trivial, trivial, rfl⟩
+  have finite : ActualIdentityAncestorSetsFinite chain := fun _ _ => Set.toFinite _
+  have acyclic : ActualIdentityAncestryAcyclic chain :=
+    fun _ _ _ path => (Nat.lt_irrefl _) (chainIncreasing path)
+  have ancestry : EveryDistinctEsseHasEsseIsEssenceSource chain := by
+    intro x distinct
+    fin_cases x
+    · exact (distinct.2 rfl).elim
+    · exact (distinct.2 rfl).elim
+    · exact ⟨1, trivial, rfl, .single middleToEnd⟩
+  refine ⟨chain, 0, 1, 2, rfl, ?_, rfl, rootToMiddle, by decide, middleToEnd,
+    finite, acyclic, ancestry, auditsOfFiniteAcyclicIdentityAncestry chain finite acyclic ancestry
+      Classical.em, ?_⟩
+  · intro c edge
+    exact (Nat.not_lt_zero c.val) (chainIncreasing (.single edge))
+  · exact fun underived => underived 1 trivial rfl 0 rootToMiddle
+
 private def cycle : Profile Bool Bool Unit :=
   { sourceFreeFiniteCircle with esseOf := Bool.not }
 
