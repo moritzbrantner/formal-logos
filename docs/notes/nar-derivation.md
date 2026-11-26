@@ -686,3 +686,5 @@ control of a jointly noncreating output at the same intrinsic setup,
 or give independent grounds for a rational requirement that excludes it.
 Where the application to NAR is intended, also show that the selected
 universal giver is the relevant actual root of the same grounding profile.
+
+[Attempt and assessment](../../corpus/attempts/7dcdad80-8e13-4f30-94b4-26ae3e058e74.json)

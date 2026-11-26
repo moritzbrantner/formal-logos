@@ -1,0 +1,43 @@
+{
+  "id": "7dcdad80-8e13-4f30-94b4-26ae3e058e74",
+  "label": "Does the universal rational giver have a choice cell that withholds creation?",
+  "date": "2026-11-26",
+  "statement_ids": [
+    "fbd0a6d3-5ca6-4f17-8651-ed0d6989c747",
+    "83d8a0e0-9866-48d3-b582-9082c9cfeac8"
+  ],
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "Admissible withholding cells supply per-effect accessible withholding in the existing NAR route. Dstit production excludes fixity only with the world alignment used in the proof. The same actual rational exercise plus a feasible withholding cell with aligned worlds and invariant setup supplies WilledTwoWayAt. The matched finite assignment preserves dstit under restriction of metaphysical access while retaining fixity, so historical variation alone was rejected as a test of NECESSITATE_5. The fixed ThroughWill and BenefitPlanWitness model preserves rational exercise and a governing beneficiary requirement with no two-way giving. The exclusive-output control rejects the inference from per-recipient ability to a jointly noncreating choice.",
+  "blocker": "An admissible controlled cell that jointly withholds all creation under the same setup remains open. For application to NAR, identify the selected universal giver as the actual root in the same grounding profile.",
+  "evidence": [
+    "5ce72737-3acd-4b56-994f-9292d96e55b5",
+    "PR-2090"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2090"
+    }
+  ],
+  "current_assessment": {
+    "date": "2026-11-26",
+    "statement_ids": [
+      "fbd0a6d3-5ca6-4f17-8651-ed0d6989c747",
+      "83d8a0e0-9866-48d3-b582-9082c9cfeac8"
+    ],
+    "scope": "Choice, fixity and same-setup withholding in the universal rational giving and NAR routes.",
+    "assessment": "The strongest positive finding is compatibility of the modeled rational exercise with an admissible cell that guarantees withholding from a fixed setup. Rational exercise and recipient-directed governing content also admit fixed giving in the reused control. Rational necessitarianism survives on the account that the admissible complete outputs all create. Pointwise withholding and joint refraining need separate warrant.",
+    "next_test": "Warrant admissibility and agential control of a jointly noncreating output with the same intrinsic states and external conditions, or identify the rationally necessary requirement that rules it out. For NAR, retain the actual root identity in the same grounding profile.",
+    "note": "docs/notes/nar-derivation.md#choice-cells-and-the-scope-of-withholding-2059",
+    "reviewed_revision": "712d29a44bd19dfc734a5fa90a657b6a6508b443",
+    "review": "unreviewed",
+    "publication": "published",
+    "evidence": "Draft PR-2090 and the compiled worldAlignment, rootWithholdingAlignment, governingBenefitWithFixedGiving, pointwiseNotJoint and tiedNoEmptyChoice declarations. Independent semantic review is pending.",
+    "supersedes": "None. This is a new typed comparison and preserves the earlier ThroughWill and NAR assessments."
+  }
+}
