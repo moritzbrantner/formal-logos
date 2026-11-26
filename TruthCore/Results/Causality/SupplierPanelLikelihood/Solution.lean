@@ -1,4 +1,8 @@
-import TruthCore.Causality.SupplierPanelLikelihood
+module
+
+public import TruthCore.Causality.SupplierPanelLikelihood
+
+@[expose] public section
 
 namespace TruthCore.Results.Causality.SupplierPanelLikelihood
 
