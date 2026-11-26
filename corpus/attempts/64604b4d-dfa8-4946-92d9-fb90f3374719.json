@@ -1,0 +1,58 @@
+{
+  "id": "64604b4d-dfa8-4946-92d9-fb90f3374719",
+  "label": "Same-performer bearing and actual-world existence from assertion or doubt",
+  "date": "2026-11-26",
+  "statement_ids": [
+    "b45ca9db-0bf2-40d3-819c-44dc4e2cef5c",
+    "1edfc1d1-34d4-4f3e-99e6-e07a6ba58ffc",
+    "95c5138f-e3cc-552d-9846-ab8dc84502f4",
+    "1722a80f-47a4-5605-8b66-b3534e457bcb",
+    "c2fa06f2-cf36-5958-b69a-ef274b45014c",
+    "eb7c7da6-f772-5cda-a70d-260ce466e54e",
+    "f8b47cda-5ebf-532d-b951-b4f756076cc9",
+    "0436de86-6579-53f2-9ff5-2111ba44ebae",
+    "43253cd8-62be-4528-85e4-54806bd3fac0",
+    "56f68b40-9737-59a0-8cac-5610980a1547"
+  ],
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "The asserter and the doubter each have an existence assembly in the selected world's occurrence slice. The explicit agency premise connects the performer of the matched act to bearing the realizing episode. Occurrence at the selected world and bearing there allow the world-presence rule to supply the same candidate's existence. A separate esse contract classifies that candidate as CONCRETE_6 in the witness companions. The world calibration theorem transports the same doubt realization when occurrence predicates are independent. Finite controls isolate no bearer, failed classification, realization only elsewhere, and absence at the selected world despite local bearing. They test the stipulated interpretation. The registered conclusion is selected-extension existence for the existing population and direct-esse route. The computed root frontier reports no premise change.",
+  "blocker": "Applying this proof to an actual performance requires faithful selection of content, act, performer and world. An accessible world lacking that very bearer is a further input for contingency. Grounding and anti-brute coverage require separate evidence.",
+  "evidence": [
+    "6085452e-de8c-421d-a0e6-ee8fac0700b4",
+    "f825c058-5e5e-4cd6-bc57-05c2da758c51",
+    "PR-2034"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2034"
+    }
+  ],
+  "current_assessment": {
+    "date": "2026-11-26",
+    "statement_ids": [
+      "b45ca9db-0bf2-40d3-819c-44dc4e2cef5c",
+      "1edfc1d1-34d4-4f3e-99e6-e07a6ba58ffc",
+      "95c5138f-e3cc-552d-9846-ab8dc84502f4",
+      "1722a80f-47a4-5605-8b66-b3534e457bcb",
+      "c2fa06f2-cf36-5958-b69a-ef274b45014c",
+      "eb7c7da6-f772-5cda-a70d-260ce466e54e",
+      "f8b47cda-5ebf-532d-b951-b4f756076cc9",
+      "0436de86-6579-53f2-9ff5-2111ba44ebae"
+    ],
+    "scope": "Attribution and world-relative presence of the performer of one actual assertion or doubt",
+    "assessment": "Actual questioning warrants a realizing occurrence under the broad cognitive reading. The integration of asking, following and correcting that exercise provisionally favors attribution to a thin inquirer, which may itself be an organized process. Given genuine attribution to that bearer here, existential import is strongly supported at the same world. The selected-world esse contract remains conditional on its in-re interpretation, and the token does not warrant the universal occurrence calibration independently. The rival that organizes the whole episode without any further subject remains live against substantial or distinct ownership.",
+    "next_test": "Test whether the organized occurrence account can explain retention and correction of the same inquiry while excluding the realizing process itself as the thin agent. For the contingent-witness application, test accessible absence of that particular bearer on the same frame.",
+    "note": "docs/notes/cogito-esse-1113.md#retaining-the-performer-of-this-assertion-or-doubt-2026-11-26",
+    "reviewed_revision": "c0ee8f47bcc11a0a1b14d0e2216bccbe5ad51091",
+    "review": "unreviewed",
+    "publication": "published",
+    "evidence": "PR-2034 draft and the compiled witness and control declarations at c0ee8f47. Independent semantic review is pending.",
+    "supersedes": "None. This scope tests performer identity and world presence in one token. The earlier occurrence, event representation and ancestry assessments retain their own scopes."
+  }
+}

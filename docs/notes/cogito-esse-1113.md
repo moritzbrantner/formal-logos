@@ -1150,3 +1150,9 @@ or the mere conceivability of absence is insufficient. Neither the selected
 performance nor its existence supplies an actual grounding edge. The new
 assemblies provide conditional routes and leave the live performance and
 ontology warrants open.
+
+The [same-performer attempt](../../corpus/attempts/64604b4d-dfa8-4946-92d9-fb90f3374719.json)
+records the local assessment and its reopening conditions. The
+[alternative witness attempt](../../corpus/attempts/4f86edaa-2700-42ec-8b66-2f08ff44c138.json)
+records the separate applications of designated meditation, modification,
+representation and phenomenal bearing.
