@@ -1,0 +1,25 @@
+{
+  "id": "1f04c41c-c549-4941-96c8-ad22aa1e4c08",
+  "label": "Root links from Wilfrid Sellars, Empiricism and the Philosophy of Mind",
+  "statement_ids": [
+    "9f9b341f-d127-5483-b6aa-f1a777f74f00"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "IX §41, closing sentence: Sellars's restriction is directed at describing and explaining the world. A conclusion that every existent is natural additionally requires delimiting which entities count as scientific and defending why that domain exhausts the ontology in the case's sense.",
+  "evidence": [
+    "b75776db-ebfc-5eb0-98b3-ac323c9c4726",
+    "PR-2085"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2085"
+    }
+  ]
+}

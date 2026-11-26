@@ -125,3 +125,15 @@ resolves the source search above.
 ## Research attempts citing this note
 
 - [Global thesis variants, scope and defeater transmission](../corpus/attempts/global-thesis-scope-and-defeaters.json)
+
+## Verification tests and their limits (2026-11-26)
+
+The pinned 1936 Ayer witness distinguishes strong and weak tests and records the
+cost to universal laws under a conclusive rule. The 1946 test as reported
+restricts auxiliaries, while Church's reported construction tests that
+restriction with independent observations. Hempel's reported negation argument
+requires negation closure, and Schlick's possibility criterion is expressly
+rule-governed. Application of the general retorsion requires the scope and exact
+verification test of the formulation at issue.
+
+[A. J. Ayer reading attempt](../corpus/attempts/ce4a0606-edc2-42f0-8718-30b3acb01d9d.json), [Jennifer Hart Weed reading attempt](../corpus/attempts/8af92885-33aa-468a-86f1-a102d785a21e.json), [James H. Fetzer reading attempt](../corpus/attempts/1ba72963-95fc-409d-a5ac-fe0791a5ee97.json), [Moritz Schlick reading attempt](../corpus/attempts/2c0d92c3-ed25-46af-b5ab-d5bb0bd3f7e9.json), [Thomas Uebel reading attempt](../corpus/attempts/efd79558-e605-4cbb-922f-e2da51a7262e.json).

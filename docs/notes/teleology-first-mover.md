@@ -1363,3 +1363,16 @@ ultimate constitution.
 ## Research attempts citing this note
 
 - [Pointwise governor identity, common-root coverage and GOD_4 naming (#1793)](../../corpus/attempts/ac68f95a-00fd-445e-b7de-d083ee6511b6.json)
+
+## One director and the reach of local mechanisms (2026-11-26)
+
+ST I q.2 a.3 describes a single intelligent director. The case still needs that
+witness to be the first unmoved mover. Darwin's selection mechanism applies
+where relevant heritable variants affect fitness. The wing-disc and droplet
+studies give distinct local mechanisms for producing patterns, with specific
+domain and model constraints. They bear on the teleonomy proposal if the
+measured or modelled outcomes are ends in its sense. The evolved-population
+refinement study also limits a generalization from selection to uniform
+optimality.
+
+[Thomas Aquinas reading attempt](../../corpus/attempts/e1970646-f032-4195-b150-e6aeeae51420.json), [Charles Darwin reading attempt](../../corpus/attempts/2603f170-503e-464d-ac69-53e547298272.json), [Natalie A. Dye and colleagues reading attempt](../../corpus/attempts/bf3cf017-f0f7-4430-8e6e-2d0bd088b432.json), [Nathan Tompkins and colleagues reading attempt](../../corpus/attempts/920c9e5b-922e-4c1e-ad0e-45bc9cbe2346.json), [Zachary D. Blount and colleagues reading attempt](../../corpus/attempts/b888c0a0-f4cc-48f3-8642-d45da505bd0a.json).

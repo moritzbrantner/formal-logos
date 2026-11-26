@@ -1,0 +1,29 @@
+{
+  "id": "f351b097-eac7-41d4-aa7c-f810a035aa77",
+  "label": "Root links from Stephan Leuenberger, Grounding and Necessity",
+  "statement_ids": [
+    "fee31960-8a8c-59e3-8251-045668016382",
+    "b46f5a59-54ea-501d-8301-b3e26ed2e3a6",
+    "fb4670ed-f742-5122-9a89-eec55fff72a9"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "PDF p. 19 (article p.16), section III: Leuenberger's proposed blocker-blocker case retains the original facts while changing what is required for their grounding role. It tests persistence of the full-ground relation despite their truth. It is not by itself a case where the selected grounds hold and the target is false. PDF p. 20 (article p.17), Supervenience of Grounding: The proposed supervenience claim compares worlds agreeing on all obtaining facts. The case compares selected complete-ground facts across worlds which can differ elsewhere, so restricting the agreement to that record requires a locality premise not given by the proposed principle. PDF p. 8 (article p.5), Entailment, Factivity, Internality: The source distinguishes modal consequence for the target from preservation of grounding when its relata both hold. The route can use joint necessitation without warranting internality; carrying the same ground assignment across worlds needs the separate persistence condition.",
+  "evidence": [
+    "71ad3d96-1833-5800-8d8f-c9feeea19486",
+    "188159b7-91d3-5f1c-a6c0-a3ba15e4a0f1",
+    "44b715b0-95b3-5996-8a30-d31184c58dd2",
+    "PR-2085"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2085"
+    }
+  ]
+}

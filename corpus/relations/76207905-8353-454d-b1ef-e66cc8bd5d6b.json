@@ -1,0 +1,10 @@
+{
+  "id": "76207905-8353-454d-b1ef-e66cc8bd5d6b",
+  "label": "Source qualification for 49542121 from reading 79154228",
+  "subject_kind": "claim",
+  "subject_id": "b69319d1-c5d9-5d35-aea5-88763147f3c8",
+  "predicate": "qualifies",
+  "object_kind": "statement",
+  "object_id": "49542121-caa6-576e-aa84-3a1546397388",
+  "note": "Russell's test for the existence of a singular described individual requires both a satisfier and uniqueness. If the route really uses such a description, the application needs both conditions for the same descriptor. Naming from a satisfied profile alone does not implement that semantic analysis."
+}

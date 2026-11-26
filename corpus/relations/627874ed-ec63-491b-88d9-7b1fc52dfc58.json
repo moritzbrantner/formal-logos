@@ -1,0 +1,10 @@
+{
+  "id": "627874ed-ec63-491b-88d9-7b1fc52dfc58",
+  "label": "Source qualification for 4424ec00 from reading ce65a71f",
+  "subject_kind": "claim",
+  "subject_id": "e3d3acfc-58f2-5dcd-a6e3-6a074081016f",
+  "predicate": "qualifies",
+  "object_kind": "statement",
+  "object_id": "4424ec00-c125-52df-9386-6743880a8be2",
+  "note": "The methodological passage calls for testing agreement of consequences and seeking a higher sufficient hypothesis when an account of the assumption is needed. It qualifies treating the agreement on Forms in the dialogue as independent proof of that hypothesis."
+}

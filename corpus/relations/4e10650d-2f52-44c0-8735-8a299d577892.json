@@ -1,0 +1,10 @@
+{
+  "id": "4e10650d-2f52-44c0-8735-8a299d577892",
+  "label": "Source qualification for 438caf34 from reading e201a777",
+  "subject_kind": "claim",
+  "subject_id": "49a7eb22-c519-597e-894c-4be70cb80be6",
+  "predicate": "qualifies",
+  "object_kind": "statement",
+  "object_id": "438caf34-80d5-51bf-806a-d5e7c127e088",
+  "note": "Hume also defines cause using the transition in thought after an object's appearance. The test's observational and intervention predicates do not capture that mental transition without a further interpretation. The result about laboratory regularity leaves this reading open."
+}

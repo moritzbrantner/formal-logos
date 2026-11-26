@@ -1,0 +1,10 @@
+{
+  "id": "7952265d-88c6-411e-bc15-6fa10d86a9cf",
+  "label": "Source qualification for 93824f63 from reading c6ebeb52",
+  "subject_kind": "claim",
+  "subject_id": "bba12efe-1e7f-515e-b1de-919c971a6e58",
+  "predicate": "qualifies",
+  "object_kind": "statement",
+  "object_id": "93824f63-3964-50ec-a029-057102888f72",
+  "note": "T1 is the possible-exemplification step for any positive property. Its application needs positivity of God-like and the subsequent theorem's assumptions to yield necessary exemplification. Its scope remains the embedded property's domain."
+}

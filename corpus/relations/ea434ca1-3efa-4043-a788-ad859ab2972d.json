@@ -1,0 +1,10 @@
+{
+  "id": "ea434ca1-3efa-4043-a788-ad859ab2972d",
+  "label": "Source qualification for 21d6f7cc from reading 81089332",
+  "subject_kind": "claim",
+  "subject_id": "13b1e98d-e2ba-5bd9-b0d6-2dc3744d9e16",
+  "predicate": "qualifies",
+  "object_kind": "statement",
+  "object_id": "21d6f7cc-1af2-54c8-8202-2b443ebb9bef",
+  "note": "This version re-asks the defeasible default under the automatic-actuality classification. It can transfer the original default only if the revised contingency class and the possible first contingent preserve the evidence supporting the original induction and its exceptions."
+}

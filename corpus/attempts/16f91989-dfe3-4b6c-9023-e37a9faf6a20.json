@@ -1,0 +1,31 @@
+{
+  "id": "16f91989-dfe3-4b6c-9023-e37a9faf6a20",
+  "label": "Root links from Ludwig Wittgenstein, Philosophische Untersuchungen",
+  "statement_ids": [
+    "3d046008-2fbb-5eb9-974a-cc67a7ea4985",
+    "37a8abd3-a0bb-5020-ac3a-182e50a4ed59",
+    "a587c03c-3ee5-5b6c-ad37-ea93ee853649",
+    "55d54d49-73e2-5cd7-af20-8261d75b3990"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "§202, Darum ist ›der Regel folgen‹ eine Praxis: Wittgenstein distinguishes genuinely following a rule from merely thinking one does, locating the distinction in practice. A case application needs to identify the rule-governed role of its selected expressions and the relevant practice and criterion of correctness. §258, in unserm Falle habe ich ja kein Kriterium für die Richtigkeit: The private sign example identifies a missing distinction between seeming right and being right. To reach the general reading one needs the case to represent the proposed private language, and correctness to be unavailable under each relevant private criterion, not just this setup. §304, Sie ist kein Etwas, aber auch nicht ein Nichts: Wittgenstein's rejection of a forced object-and-designation grammar preserves the difference between behaviour with pain and behaviour without it. This limits reading the critique of private language as denial of sensation. The target concerns a language proposal, with no inference to ontological elimination. §308, Und so scheinen wir also die geistigen Vorgänge geleugnet zu haben. Und wollen sie doch natürlich nicht leugnen: The later remark explains the appearance of denying mental processes and explicitly avoids that inference. The target's rejection of a private-language proposal needs no denial of occurring mental processes.",
+  "evidence": [
+    "bb808034-54c6-53f0-8fca-de213b98bfba",
+    "b1180750-26b0-584f-b001-775b46bb6166",
+    "91a59acc-6f04-5ba9-b24d-08c74c840690",
+    "bc9cee87-3991-5af2-bed8-95a4896f9d67",
+    "PR-2085"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2085"
+    }
+  ]
+}

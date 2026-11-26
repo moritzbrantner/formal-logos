@@ -1,0 +1,10 @@
+{
+  "id": "1362d98a-6d9e-40a8-9e44-c2d10d72e35e",
+  "label": "Source qualification for 849086f4 from reading a4686b65",
+  "subject_kind": "claim",
+  "subject_id": "f288d9ba-ca52-5e10-956b-d50f2a538257",
+  "predicate": "qualifies",
+  "object_kind": "statement",
+  "object_id": "849086f4-532e-50a1-9590-eec583a4873c",
+  "note": "Wittgenstein treats 'physical object' here as a logical concept and distinguishes teaching its use from making an empirical assertion that objects exist. To apply that limit needs a semantic analysis of the case's natural predicate and of whether its existential claim expresses a comparable framework-level use."
+}

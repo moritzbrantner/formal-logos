@@ -1,0 +1,10 @@
+{
+  "id": "dc251bf2-6528-433b-b7c9-bc19e8ff87a7",
+  "label": "Source qualification for 96d8342a from reading 9cdba00e",
+  "subject_kind": "claim",
+  "subject_id": "9c34b71a-b9c7-5e64-997b-811f2426ee6a",
+  "predicate": "qualifies",
+  "object_kind": "statement",
+  "object_id": "96d8342a-f88f-5edf-8792-00d4f6d556ca",
+  "note": "The 1970 conjunction axiom differs from closure under necessary inclusion. Using it within that axiom package does not make it follow from the inclusion clause alone, and the application needs the same world-indexed positive-property interpretation."
+}

@@ -9,7 +9,8 @@
   "outcome": "succeeded",
   "summary": "15.44 (Christus sentence): Tacitus locates Christus's execution under Pilate during Tiberius's rule. The premise requires identifying Christus with the case's Jesus, assessing the provenance of the report, and establishing crucifixion as the means of execution.",
   "evidence": [
-    "b38cfd6f-0ced-5ca1-8847-34bf18139311"
+    "b38cfd6f-0ced-5ca1-8847-34bf18139311",
+    "PR-2085"
   ],
   "workers": [
     {
@@ -17,7 +18,8 @@
       "provider": "codex",
       "model": "gpt-6.2-sol",
       "effort": "high",
-      "date": "2026-11-26"
+      "date": "2026-11-26",
+      "pr": "PR-2085"
     }
   ]
 }

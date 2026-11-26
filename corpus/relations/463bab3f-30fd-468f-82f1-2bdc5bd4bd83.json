@@ -1,0 +1,10 @@
+{
+  "id": "463bab3f-30fd-468f-82f1-2bdc5bd4bd83",
+  "label": "Source support for 94e04d71 from reading 0b6cc470",
+  "subject_kind": "claim",
+  "subject_id": "e287801d-cc36-5088-8dd3-6fc9b8ba5ed5",
+  "predicate": "supports",
+  "object_kind": "statement",
+  "object_id": "94e04d71-f5e3-5d0b-99fd-1fa01df090e9",
+  "note": "The source's first reason treats genus and constituting difference as taken from what stands as potency and act. The application needs every proper genus inclusion in the case to work that way and the same GOD_4 witness to lack the relevant potency."
+}

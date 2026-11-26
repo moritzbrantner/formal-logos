@@ -1,0 +1,10 @@
+{
+  "id": "5783a9e2-362d-48ee-bd00-30fca9cf5a78",
+  "label": "Source qualification for b241b5ca from reading 4f1bea90",
+  "subject_kind": "claim",
+  "subject_id": "64f115bf-4568-52c9-9c39-4c8462a152e8",
+  "predicate": "qualifies",
+  "object_kind": "statement",
+  "object_id": "b241b5ca-e790-5145-bc9a-4154e266bb55",
+  "note": "Hume distinguishes excluding all causes from self-production or treating nothing as a producer. The distinction blocks an inference from no self-origination alone to an external originator. The case needs an independent causal applicability claim before excluding the self case yields another cause."
+}

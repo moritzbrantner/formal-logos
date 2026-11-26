@@ -1,0 +1,10 @@
+{
+  "id": "7bbeeb8b-b678-4b62-a573-7c85b934c2b8",
+  "label": "Source qualification for 5f9430cf from reading fb4670ed",
+  "subject_kind": "claim",
+  "subject_id": "44b715b0-95b3-5996-8a30-d31184c58dd2",
+  "predicate": "qualifies",
+  "object_kind": "statement",
+  "object_id": "5f9430cf-099b-58ce-895f-ca7681ac3ecc",
+  "note": "The source distinguishes modal consequence for the target from preservation of grounding when its relata both hold. The route can use joint necessitation without warranting internality; carrying the same ground assignment across worlds needs the separate persistence condition."
+}

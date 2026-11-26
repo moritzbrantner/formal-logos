@@ -13,7 +13,8 @@
   "evidence": [
     "39808ea5-6960-524b-9017-a7e87c9ad718",
     "40544f6f-9d36-5053-812d-0b4dac17d06d",
-    "e3435238-9f47-5bf4-8caa-523fa89e1a68"
+    "e3435238-9f47-5bf4-8caa-523fa89e1a68",
+    "PR-2085"
   ],
   "workers": [
     {
@@ -21,7 +22,8 @@
       "provider": "codex",
       "model": "gpt-6.2-sol",
       "effort": "high",
-      "date": "2026-11-26"
+      "date": "2026-11-26",
+      "pr": "PR-2085"
     }
   ]
 }

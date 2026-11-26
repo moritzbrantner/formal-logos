@@ -1,0 +1,25 @@
+{
+  "id": "3efaaac8-51fc-4b4b-a9f0-147acaca8f98",
+  "label": "Unlinked readings from Ludwig Wittgenstein, Logisch-philosophische Abhandlung / Tractatus Logico-Ph",
+  "statement_ids": [
+    "6ddb4cc1-7ed8-5759-acb8-b386060cb889"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "rejected",
+  "summary": "TLP 6.44, Nicht wie die Welt ist, ist das Mystische, sondern dass sie ist: The contrast between how the world is and that it is marks an attitude toward existence. It supplies neither a positive account of why the world exists nor a premise about revelation or about whether a God proposition is cognitively meaningful.",
+  "evidence": [
+    "e05a0ed0-e356-5bbd-9a36-47b6ec207e15",
+    "PR-2085"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2085"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "id": "bf3cf017-f0f7-4430-8e6e-2d0bd088b432",
+  "label": "Root links from Natalie A. Dye and colleagues, Self-organized patterning of cell morphology via mec",
+  "statement_ids": [
+    "1c0d7e9d-007f-5d87-b832-0dc210147bab"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "Abstract, continuum theory and MyoVI knockdown: The developmental study supplies a specified local patterning mechanism and perturbation evidence. To support the selected teleonomy position further, the relevant pattern must count as an end and the proposed local mechanism must be adequate for it. Ultimate direction of the mechanism remains a separate issue.",
+  "evidence": [
+    "251c5348-404b-5a04-ad4d-9f1ca653c382",
+    "PR-2085"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2085"
+    }
+  ]
+}

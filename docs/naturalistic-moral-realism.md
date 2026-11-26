@@ -728,3 +728,15 @@ obligation or Catholic root leaf.
 - [Compared world-relative, cross-world and competent-verdict moral supervenience](../corpus/attempts/e2baa97d-dcff-4d9f-b3a3-b770e927a596.json)
 - [Materialized and read Railton Moral Realism pp. 201–204: he retains moral obligation even where a…](../corpus/attempts/hard-moral-case-railton-reason.json)
 - [Separated property, rational and conceptual moral-supervenience claims from primary evidence](../corpus/attempts/0c93e726-85fe-4dbe-a519-119c28d13fd5.json)
+
+## Independence, truth and reasons (2026-11-26)
+
+Railton and Boyd each defend appraiser-independent evaluative facts compatible
+with a natural relational basis. Their accounts require matching the natural
+basis to the property actually ascribed and assessing the causal or explanatory
+link. Indifference or lack of motivation leaves open whether an instrumental
+reason exists for the very act under assessment. Campbell and van Roojen clarify
+how minimal truth or mistake-talk may work without supplying a robust
+representational knowledge claim.
+
+[Peter Railton reading attempt](../corpus/attempts/3a3fc228-e32b-4fe7-b0d5-09e2e5b2971b.json), [Richard N. Boyd reading attempt](../corpus/attempts/47351d71-ee81-4dc1-bfe9-d4ff8898a6d4.json), [Richmond Campbell reading attempt](../corpus/attempts/e35d15f6-2030-42ba-829a-7bbc6f83413c.json), [Mark van Roojen reading attempt](../corpus/attempts/88051a30-51f1-4c5a-9230-393be9944ef4.json).

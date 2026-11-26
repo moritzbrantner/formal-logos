@@ -1,0 +1,29 @@
+{
+  "id": "ecdc3c51-778b-4be2-a327-64d3bc9a48ba",
+  "label": "Root links from Ludwig Wittgenstein, Logisch-philosophische Abhandlung / Tractatus Logico-Philosoph",
+  "statement_ids": [
+    "6d829efb-2ff6-5de2-b801-bfa0b469764f",
+    "c3d75af6-6182-5e2d-a259-c584c36dd5ee",
+    "8faf1c3e-5223-5eef-bd96-b96f519c8153"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "TLP 6.42, Darum kann es auch keine Sätze der Ethik geben: The Tractatus locates value outside the world of contingent facts and thereby denies ethical propositions in its picture account. A clash with the target requires moral facts in its domain to be the kind of value claims the Tractatus excludes, and a defense of that restriction on propositions. TLP 6.522, Es gibt allerdings Unaussprechliches: The literal reading of 6.522 retains something inexpressible that shows itself. It qualifies the scope of the target's exclusion of meaningful God assertions. The relevant distinction is between saying and showing, and the ladder reading keeps the literal interpretation disputed. TLP 7, Wovon man nicht sprechen kann, darüber muss man schweigen: The closing imperative applies to what cannot be said. It does not say which God sentences fall on that side. Application requires a sentence-specific criterion and an account of whether the Tractatus's purported boundary applies to the case's language.",
+  "evidence": [
+    "4da1a2cf-e205-527d-8d5c-f03c950ea34b",
+    "3182ffbf-c8b4-5855-a36d-16e91780f938",
+    "9d26a999-369f-5e40-a5c8-6c2b1fd71ef8",
+    "PR-2085"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2085"
+    }
+  ]
+}

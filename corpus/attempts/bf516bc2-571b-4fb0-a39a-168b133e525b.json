@@ -1,0 +1,33 @@
+{
+  "id": "bf516bc2-571b-4fb0-a39a-168b133e525b",
+  "label": "Root links from Christoph Benzmüller and Bruno…, Gödel's God in Isabelle/HOL",
+  "statement_ids": [
+    "a6232540-0d24-5ffb-86ae-32134169d6e3",
+    "d82dc8d8-3190-53bc-9ffd-f842ec907264",
+    "81d437cf-deea-5f51-b9c4-7f487c0d1f87",
+    "c6ebeb52-a198-55c8-b132-08fba8d3838f",
+    "5eee7ede-db6b-58de-a249-29ba04a17827"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "GoedelGod.thy, C2: \"[∃ G]\": C2 records worldwise ordinary existential exemplification after T3 in the reflexive setting. The actual existence claim requires the accessibility application at that world. Neither the ordinary existential nor T3 identifies one individual across worlds or equates God-like with the case profile. GoedelGod.thy, C: \"[◇ (∃ G)]\": C obtains possible exemplification of the positive God-like property at each world. The theorem of necessary exemplification additionally needs the essence and necessary-existence steps and the modal transfer. Possibility does not identify a rigid divine witness. GoedelGod.thy, Flawlessness: \"[∀(λΦ. ∀(λx. (G x m→ (m¬ (P Φ) m→ m¬ (Φ x)))))]\": Flawlessness uses the positive-negation axiom and the God-like definition to exclude exemplification of nonpositive properties by a God-like individual. The result concerns individuals satisfying the definition under those axioms. It gives no independent evidence that being God-like is positive. GoedelGod.thy, T1: \"[∀(λΦ. P Φ m→ ◇ (∃ Φ))]\": T1 is the possible-exemplification step for any positive property. Its application needs positivity of God-like and the subsequent theorem's assumptions to yield necessary exemplification. Its scope remains the embedded property's domain. GoedelGod.thy, T2: \"[∀(λx. G x m→ G ess x)]\": T2 identifies God-like as an essence of each God-like individual in Scott's sense. To yield T3 one still needs possible exemplification of God-like, the positive status of necessary existence and the modal propagation, with each step using the same embedding.",
+  "evidence": [
+    "6f085ceb-1dc3-52f2-b37d-933505bffe7a",
+    "e1dbd268-9668-5c82-be90-e7b97505d084",
+    "5c3007c0-2978-5108-b64c-c0dfd05cec02",
+    "bba12efe-1e7f-515e-b1de-919c971a6e58",
+    "8bd136ec-bb55-55af-a607-4e81fe8da266",
+    "PR-2085"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2085"
+    }
+  ]
+}

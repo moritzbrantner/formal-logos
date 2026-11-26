@@ -1,0 +1,10 @@
+{
+  "id": "3b0d4398-79e3-4ff0-b198-2802e53f9eed",
+  "label": "Source qualification for 705934a4 from reading 9bef7771",
+  "subject_kind": "claim",
+  "subject_id": "7cf7e1f0-9d8f-5586-b43a-af4d6b4ce375",
+  "predicate": "qualifies",
+  "object_kind": "statement",
+  "object_id": "705934a4-2f65-52bd-8628-e85da04ec78d",
+  "note": "Russell treats universe nonemptiness and the number of things as empirical questions. Reading the case's two-bearer assertion this way requires matching its selected-world candidate domain to that empirical inventory. Formal possibility of two inhabitants does not supply the actual observations."
+}

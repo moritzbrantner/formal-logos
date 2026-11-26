@@ -9,7 +9,8 @@
   "outcome": "succeeded",
   "summary": "14.63-64: The high priest's charge places the preceding sayings in a reported context of contested religious authority. The charge does not fix which assertion was taken as blasphemous, and the route still needs the historical sayings and an interpretation of their joint force as a divine-authority claim.",
   "evidence": [
-    "035330a7-2dc1-5d39-a655-b9f0309bfd83"
+    "035330a7-2dc1-5d39-a655-b9f0309bfd83",
+    "PR-2085"
   ],
   "workers": [
     {
@@ -17,7 +18,8 @@
       "provider": "codex",
       "model": "gpt-6.2-sol",
       "effort": "high",
-      "date": "2026-11-26"
+      "date": "2026-11-26",
+      "pr": "PR-2085"
     }
   ]
 }

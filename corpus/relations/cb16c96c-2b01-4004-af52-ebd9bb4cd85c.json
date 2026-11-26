@@ -1,0 +1,10 @@
+{
+  "id": "cb16c96c-2b01-4004-af52-ebd9bb4cd85c",
+  "label": "Source qualification for 49542121 from reading 47defcba",
+  "subject_kind": "claim",
+  "subject_id": "895e2b81-1869-5674-86c0-1e65e0a57e63",
+  "predicate": "qualifies",
+  "object_kind": "statement",
+  "object_id": "49542121-caa6-576e-aa84-3a1546397388",
+  "note": "Russell withholds a transfer from existential satisfaction of a description to predicating existence of a genuinely named individual. The naming route needs an explicit transition from its nominal description to the same proper referent before drawing that stronger predicative conclusion."
+}

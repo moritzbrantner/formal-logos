@@ -1,0 +1,25 @@
+{
+  "id": "c6549f7c-fc20-4b5a-95e1-08635a146c8d",
+  "label": "Unlinked readings from Thomas Aquinas, De ente et essentia",
+  "statement_ids": [
+    "3f7a0f4d-c281-560c-be1f-e28b6352e6b1"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "rejected",
+  "summary": "cap.1 [69872]: ens per se dicitur dupliciter, uno modo quod dividitur per decem genera, alio modo quod significat propositionum veritatem: The contrast distinguishes categorical being from affirmative propositional truth even about privation. A case bridge would have to map the ten-category sense to esse in re rather than simply treat the two proposed divisions as the same.",
+  "evidence": [
+    "21acfed4-51ca-5c5d-b218-b3c7a4922873",
+    "PR-2085"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2085"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "f56ee86d-3df3-4a1b-9a1d-784f3b11df5d",
+  "label": "Source qualification for b90c4dd1 from reading c70e0bd4",
+  "subject_kind": "claim",
+  "subject_id": "cee01f60-096c-5374-a4e7-2f56d490e2ca",
+  "predicate": "qualifies",
+  "object_kind": "statement",
+  "object_id": "b90c4dd1-88d9-4afe-8455-4152d7836c99",
+  "note": "Hume describes representing absence at one moment and presence at the next without representing a productive principle. This limits any argument for the originating-cause clause based solely on the inseparability of the ideas. To bear on truth in the formal histories, imaginative separation would have to warrant an admissible history with an originating moment and no cause there."
+}

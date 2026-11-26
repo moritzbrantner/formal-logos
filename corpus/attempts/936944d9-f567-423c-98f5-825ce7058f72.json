@@ -1,0 +1,27 @@
+{
+  "id": "936944d9-f567-423c-98f5-825ce7058f72",
+  "label": "Root links from Rudolf Carnap, \"Empiricism",
+  "statement_ids": [
+    "6f3121b6-0782-5463-b5f2-73f052d79cbf",
+    "3c931390-d63d-5f4f-830e-cdc2fb8c8721"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "§II, p. 4, \"not a theoretical question as their formulation seems to suggest, but rather a practical question\": Carnap challenges the slide from using an existence framework to asserting the theoretical reality of the framework from outside it. The case's object-level existence-feature claim would be subject to this restriction only if shown to be external in his sense. §II, p. 6, \"This is a matter of fact, based upon the content of our experiences.\": Carnap distinguishes empirical reasons to adopt an efficient framework from evidence for the reality of the framework's world. Transferring that restriction requires deciding whether the case makes an external framework claim or asserts a feature internally, with a fixed domain and interpretation.",
+  "evidence": [
+    "e9ddfb3a-d40f-596b-9932-265e785499e1",
+    "80203a87-5d80-544e-b1f9-330102c300a7",
+    "PR-2085"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2085"
+    }
+  ]
+}

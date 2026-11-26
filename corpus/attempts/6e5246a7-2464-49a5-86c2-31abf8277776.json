@@ -1,0 +1,39 @@
+{
+  "id": "6e5246a7-2464-49a5-86c2-31abf8277776",
+  "label": "Root links from David Hume, An Enquiry concerning Human Understanding",
+  "statement_ids": [
+    "2fc8df1f-b579-500a-8a6b-97fde8908559",
+    "77c2a0e5-3cda-54a9-8210-9cf7fb6fd87d",
+    "fa766632-ba7c-5b6e-9ec6-8353f80a0411",
+    "7a397053-3b54-5e81-967d-8fe06d68d20c",
+    "ef798211-3359-5264-8061-1102cba09a4f",
+    "e201a777-ff5d-5473-8e1e-f78ad1995ee3",
+    "7833f762-b6c0-5bf0-a6d7-18e54bc69a35",
+    "d86969ae-819d-5e25-8fbc-4716ec47c744"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "IV, §18 (SBN 35): Hume distinguishes correspondence found so far from uniformity of unobserved instances, which he denies can be demonstrated. His changed-course examples explain why observed agreement alone cannot demonstrate the corresponding future claim. IV, §19 (SBN 35–36): An experiential defense of uniformity already assumes the reliability of the move from observed to unobserved. This limits upgrading the recorded past correspondence to general entitlement on that basis. A different epistemic bridge would need its own warrant. V, §2 (SBN 41–42): Hume's prediction of the principle's continued influence depends on unchanged human nature. The conditional qualifies a diachronic extension of the custom account. It supplies neither persistence of that nature nor authority for relying on the prediction. V, §6 (SBN 44–45): Hume explains what the customary transition contributes by observing that without it we could not adjust means to ends based on experience. Applying that argument requires the formal trigger and expectation to track the relevant transitions, without turning a necessary condition for adjustment into sufficient practical entitlement. VII, §29 (SBN 76–77): Hume's wording includes a counterfactual gloss alongside succession of similar cases. Transferring results about the test's intervention semantics to that gloss requires a defended interpretation of dependence and a comparison of the relata and interventions. The gloss does not identify the two. VII, §29 (SBN 76–77): Hume also defines cause using the transition in thought after an object's appearance. The test's observational and intervention predicates do not capture that mental transition without a further interpretation. The result about laboratory regularity leaves this reading open. VII, §29 (SBN 76–77): The first definition adds temporal succession and similar-object recurrence. The observational equality part of the test uses a supplied repeatable record and does not encode those requirements by itself. An application needs the same relata, succession and similarity classes. VII, §6 (SBN 63): The reported difference between seeing conjunction and seeing a binding power qualifies observational warrant for an originating giver. The route would need an independent inference to actual production at the concrete beginning. The limits of a single observation do not deny a giver.",
+  "evidence": [
+    "fe72c44e-616c-55e4-ba62-468d0b75aeae",
+    "717c400e-f6b8-52a9-acf0-b86469607519",
+    "b7a37962-52c1-5fde-bc2f-c613c6cb07d6",
+    "69f35326-6563-57ce-92fc-8838ba1983c2",
+    "3c17915b-386e-5257-b5f6-8484d7248435",
+    "49a7eb22-c519-597e-894c-4be70cb80be6",
+    "927fc397-906d-5f6e-b17c-d01781c0362e",
+    "ab7ecc51-d88d-549b-a822-4f94b3b7d4c1",
+    "PR-2085"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2085"
+    }
+  ]
+}

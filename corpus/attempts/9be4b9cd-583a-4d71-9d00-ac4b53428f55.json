@@ -1,0 +1,33 @@
+{
+  "id": "9be4b9cd-583a-4d71-9d00-ac4b53428f55",
+  "label": "Root links from Richard Amesbury, Fideism",
+  "statement_ids": [
+    "ed08678e-b8e3-5143-8398-37da4ae38fcc",
+    "0a855093-d672-5697-80e3-2e34b74c0033",
+    "98cb409f-a883-5f05-b788-6c56ae74f159",
+    "943eea12-1d82-5d4b-9853-07f6ca06069a",
+    "fe3ed69b-f4cd-50da-95a1-68777fb49b3e"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "§2.2.4, 'all that I and others have denied is their conception': Phillips's reported rejoinder accepts connections and criticism while disputing the critics' account of them. The sharper case thesis requires a denial of shared reasons in the selected practice. That cannot be read off this methodological disagreement. §2.2.4, 'not generally the relation between conclusions and their justification': Late Phillips as reported allows constitutive dependence on nonreligious life and denies a general premise-to-conclusion account of that dependence. It leaves individual instances of shared evidential justification open, so an application to sharp cut-off would need a stronger exclusion premise. §4, A different reading, advanced by, inter alia, Danièle Moyal-Sharrock: The reported reading takes hinges as descriptions of practical animal certainty rather than warranted propositions at the bottom of a regress. Transfer to the case requires identifying a practice supplying credentials and explaining the status of such descriptions in the particular inquiry. §4, Pritchard calls his own position quasi-fideism: Pritchard's reported account puts religious and other beliefs under a shared kind of rational assessment against hinge commitments. It competes with sharp isolation without establishing that particular religious or secular claims are warranted, or that the actual Catholic practice uses the same hinges. §4, Some interpreters of Wittgenstein, like Rupert Read and Alice Crary: The reported rival takes the words used as hinges to lack any application, in place of making them practically warranted basic beliefs. The case needs an account of which initial commitments are assertions, which are practices, and how either can authorize the particular reasons under examination.",
+  "evidence": [
+    "5b0f49f2-f6a2-5d22-9e41-23243022966c",
+    "76f71662-72d7-56c9-a008-e55b54243159",
+    "83353a54-0aa3-5224-8c22-cb949381b8e6",
+    "942580c4-bf30-5497-a6c2-ada6c086d93b",
+    "352e7177-e035-56e0-961c-f14da3b81ea1",
+    "PR-2085"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2085"
+    }
+  ]
+}

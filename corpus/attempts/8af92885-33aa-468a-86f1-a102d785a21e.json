@@ -1,0 +1,29 @@
+{
+  "id": "8af92885-33aa-468a-86f1-a102d785a21e",
+  "label": "Root links from Jennifer Hart Weed, Religious Language",
+  "statement_ids": [
+    "73a7f1a7-f98b-5c7c-b030-546655506784",
+    "ee185100-4283-5bf3-bb0f-27a78c5849b5",
+    "7b0fcb04-0562-5621-993e-8b2aa9354eb4"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "§2a, \"A statement is directly verifiable if it is either itself an observation-statement\": Ayer's reported 1946 definition separates direct from indirect verifiability and restricts the premises permitted in the indirect case. The case's generic requirement needs an interpretation of those conditions and of the scope before the retorsion applies to that formulation. §2a, \"But the notion of a person whose essential attributes are non-empirical is not an intelligible notion at all.\": On the reported Ayer criterion a word used as if it named a nonempirical person can symbolize something only in empirically verifiable propositions. Applying this to the case requires showing that its naming use falls under that requirement and whether its form and evidence meet it. §2a, \"we may show of any statement S whatever that either it or its negation is verifiable\": Church's reported construction uses suitably independent observation statements to arrange verification of an arbitrary statement or its negation under the 1946 rule, undermining its power to demarcate cognitive significance. This diagnosis qualifies using that particular verification test if the construction's observation and independence assumptions are met.",
+  "evidence": [
+    "ba54dd07-1052-5e1c-b6c4-8551f280b792",
+    "239b07b1-84fa-5ea8-9256-c7caa0bae0e6",
+    "e9b942ad-581e-5833-acca-86d70e434ab6",
+    "PR-2085"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2085"
+    }
+  ]
+}

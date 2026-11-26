@@ -11,7 +11,8 @@
   "summary": "2.6: Paul attributes divine form and a stance toward equality to Christ. The case's authority premise is about Jesus's own claim, and the conciliar stage is about the council's act of teaching. 2.9-11: Exaltation, the bestowed name and universal homage do not specify the event of rising from death or a self-ascription by Jesus. No current stage uses this specific exaltation as an input.",
   "evidence": [
     "17349a64-690f-50c7-8d2b-593b7265d642",
-    "7b67a2b1-9386-5f2e-a299-87d868f6bda7"
+    "7b67a2b1-9386-5f2e-a299-87d868f6bda7",
+    "PR-2085"
   ],
   "workers": [
     {
@@ -19,7 +20,8 @@
       "provider": "codex",
       "model": "gpt-6.2-sol",
       "effort": "high",
-      "date": "2026-11-26"
+      "date": "2026-11-26",
+      "pr": "PR-2085"
     }
   ]
 }

@@ -1,0 +1,29 @@
+{
+  "id": "c4f67499-cda8-46c5-b860-038b1fb22461",
+  "label": "Root links from Albert Einstein, On the Electrodynamics of Moving Bodies",
+  "statement_ids": [
+    "51b7dabe-a4db-5a62-93d5-f9bee9c8c7aa",
+    "ea7a327d-65e8-5048-a457-40c0007f7671",
+    "fee2b4f5-eec7-5b58-b2a1-04401f7b6c2e"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "§1, paragraphs beginning “But it is not possible without further assumption” and “We assume that this definition”, ending “the time of the stationary system”: Einstein's distant synchronization procedure compares remote event times within a selected inertial system under specified light-signal assumptions. Reading the case clock as such a physical clock requires choosing and justifying a frame for both tokens rather than assuming a coordinate-independent equal time. §2, first two postulates and final paragraphs beginning “We imagine further that with each clock” and “So we see”: The rod-end example gives a difference between inertial observers in whether spatially separated clocks are synchronous. Transfer requires the case tokens to admit that sort of separation and the equal-clock premise to be invariant or expressly frame relative. The example does not establish frame dependence of every causal pair. §3, opening paragraphs through “linear on account of the properties of homogeneity”, and paragraph beginning “The wave under consideration”: The same event receives different coordinate descriptions linked by a transformation preserving light speed. A case application comparing clocks must preserve the event tokens and establish equality or invariance of their ordering under the relevant transformation, not just light-speed invariance.",
+  "evidence": [
+    "2b7a3431-5e29-5c91-a0ff-a23a0eb78fcb",
+    "50c0a403-3cac-5aba-814b-4a19f6463c19",
+    "61b76df7-46c5-5c3f-887e-22a6639e3b13",
+    "PR-2085"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2085"
+    }
+  ]
+}

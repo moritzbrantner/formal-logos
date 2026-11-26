@@ -1,0 +1,27 @@
+{
+  "id": "67ce2ac2-7aaa-442e-bb4d-9e3d0d650fa5",
+  "label": "Root links from Michael Scott, Religious Language",
+  "statement_ids": [
+    "77450096-9f7f-5094-9a62-6b66a954f077",
+    "071e51dd-b863-51c5-ab8f-5b8e1e30417b"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "§4.2, 'minimalists can allow that empirical evidence is part of the justification': Religious minimalism as reported admits some shared historical or empirical evidence as relevant within religious justification, illustrated by possible evidence of a miracle-report hoax. This competes with sharp insulation and leaves open whether the selected Catholic practice uses the proposed evidential interface. §4.2, 'reasons look entirely different from normal reasons': Scott's reading of student notes limits the hypothesis model of reasons in religious belief. Inferring sharp insulation in the case would require showing this exhausts the role of every shared consideration and applies to the Catholic definitions and practice under examination.",
+  "evidence": [
+    "95dc651b-d407-5721-8460-d60ad9249cca",
+    "631d3d2d-5b2a-5f92-9377-d0720da40b73",
+    "PR-2085"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2085"
+    }
+  ]
+}

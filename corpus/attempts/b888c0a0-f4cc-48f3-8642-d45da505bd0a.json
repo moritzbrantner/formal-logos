@@ -1,0 +1,25 @@
+{
+  "id": "b888c0a0-f4cc-48f3-8642-d45da505bd0a",
+  "label": "Root links from Zachary D. Blount and colleagues, Genomic and phenotypic evolution of Escherichia c",
+  "statement_ids": [
+    "d326d98b-b8b6-5d6b-a196-c2a0dcdb5180"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "Abstract, adaptation and mismatch: Refinement in the reported populations occurs alongside fitness declines or persistent physiological mismatch in some cases. The mechanism can explain local adaptive refinement without giving a uniform optimality principle. Application needs a match from the measured traits to the specified natural end.",
+  "evidence": [
+    "719e994c-cd98-5f48-bd7c-cbacbbc4b8e5",
+    "PR-2085"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2085"
+    }
+  ]
+}

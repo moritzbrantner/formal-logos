@@ -9,7 +9,8 @@
   "outcome": "succeeded",
   "summary": "18.17-18: Matthew attributes referral to the assembly and binding and loosing to Jesus's instructions. The route needs those instructions to instantiate the selected judging and binding powers and to go back to Jesus, together with the Matthew 28 commission.",
   "evidence": [
-    "c72d0bbe-9133-53cb-bc95-3f1307db4d70"
+    "c72d0bbe-9133-53cb-bc95-3f1307db4d70",
+    "PR-2085"
   ],
   "workers": [
     {
@@ -17,7 +18,8 @@
       "provider": "codex",
       "model": "gpt-6.2-sol",
       "effort": "high",
-      "date": "2026-11-26"
+      "date": "2026-11-26",
+      "pr": "PR-2085"
     }
   ]
 }

@@ -2,6 +2,508 @@
 
 [batch]
 
+# A. J. Ayer, Language
+
+[[relation]]
+id = "65c42e72-74fb-4f81-81a1-6fffceeb264f"
+label = "Source qualification for 46132461 from reading 0d05ed0f"
+subject_kind = "claim"
+subject_id = "89a07946-a362-51aa-9fc3-59b29934ec19"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "46132461-9a9b-498f-b3d9-304e2f3ac57e"
+note = "Ayer distinguishes conclusive establishment from experiential confirmation. The case's verification predicate must select one of these tests with a stated scope before the self-application argument can assess its own formulation."
+
+[[relation]]
+id = "b1a0b7bb-6ab5-4aa2-99c4-bfee58ba973f"
+label = "Source support for 46132461 from reading 51650477"
+subject_kind = "claim"
+subject_id = "d1776e9a-03de-509a-b7dd-69562b8be02c"
+predicate = "supports"
+object_kind = "statement"
+object_id = "46132461-9a9b-498f-b3d9-304e2f3ac57e"
+note = "Ayer attests that some positivists proposed conclusive verifiability for significance. Mapping the reported position requires fixing the case's scope and proving the formulation itself is covered before applying the self-test. The report is evidence of the position's use, not Ayer's endorsement."
+
+[[relation]]
+id = "1d2fa160-7e98-4064-bc2e-dcdfb50f4c60"
+label = "Source qualification for 46132461 from reading fdaf52d6"
+subject_kind = "claim"
+subject_id = "ee4d07ac-30bd-584e-8041-b8a9b1b5ba6b"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "46132461-9a9b-498f-b3d9-304e2f3ac57e"
+note = "The reported strong-verification reply accepts the loss of literal significance for universal laws while retaining their practical importance. Applying the rule in the case therefore needs the selected scope and a defense of this consequence where ordinary law claims are used."
+
+[[relation]]
+id = "e9c1d02a-886a-4e2d-ada8-46fafd9de211"
+label = "Source objection for 46132461 from reading a59382df"
+subject_kind = "claim"
+subject_id = "47807db0-ade3-5be0-80e2-2c6967018684"
+predicate = "attacks"
+object_kind = "statement"
+object_id = "46132461-9a9b-498f-b3d9-304e2f3ac57e"
+note = "On the conclusive reading and inclusion of unrestricted laws, any finite confirming experience leaves their further cases open, although ordinary scientific laws are treated as cognitively significant. This challenges that scoped criterion. It does not reach a weaker confirmation reading or a proposal that explicitly excludes laws from significance."
+
+[[relation]]
+id = "1e0c5e20-dd85-4ced-9868-5b2b4ee2c342"
+label = "Source qualification for 46132461 from reading 0caaf0d8"
+subject_kind = "claim"
+subject_id = "07ff4c32-130b-55b9-8bc9-3af9680c27b5"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "46132461-9a9b-498f-b3d9-304e2f3ac57e"
+note = "Ayer's 1936 criterion tests whether adding a sentence changes experiential consequences relative to auxiliary premises. Applying the self-test requires representing that contrast and identifying which auxiliaries and sentences are allowed, including the criterion's own statement."
+
+[[relation]]
+id = "4b962b3c-c219-48b6-bf89-3899c8bb7e7b"
+label = "Source qualification for cdc7a58f from reading 2875c885"
+subject_kind = "claim"
+subject_id = "83f3e0b4-ce49-581f-a152-e0eea077dda7"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "cdc7a58f-0c17-41d9-8d9d-18b6ad5c6cc6"
+note = "Ayer treats strong claims about the unreality of all sense experience and the number of substances as devoid of factual significance by his criterion. Applying that treatment to the proposed metaphysical existence feature requires showing that the case formulation fails his experiential test and is subject to the same rule."
+
+# Albert Einstein, On the Electrodynamics of Moving Bodies
+
+[[relation]]
+id = "7fa5675d-be53-47e2-af06-c151d9cfd345"
+label = "Source qualification for da9bddcf from reading 51b7dabe"
+subject_kind = "claim"
+subject_id = "2b7a3431-5e29-5c91-a0ff-a23a0eb78fcb"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "da9bddcf-ef37-54b4-9ce5-b109d6f1d2c3"
+note = "Einstein's distant synchronization procedure compares remote event times within a selected inertial system under specified light-signal assumptions. Reading the case clock as such a physical clock requires choosing and justifying a frame for both tokens rather than assuming a coordinate-independent equal time."
+
+[[relation]]
+id = "cdfa6416-2753-4b3d-89ee-48fe918be468"
+label = "Source qualification for da9bddcf from reading ea7a327d"
+subject_kind = "claim"
+subject_id = "50c0a403-3cac-5aba-814b-4a19f6463c19"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "da9bddcf-ef37-54b4-9ce5-b109d6f1d2c3"
+note = "The rod-end example gives a difference between inertial observers in whether spatially separated clocks are synchronous. Transfer requires the case tokens to admit that sort of separation and the equal-clock premise to be invariant or expressly frame relative. The example does not establish frame dependence of every causal pair."
+
+[[relation]]
+id = "941d8f3b-81e3-4e5f-88ea-595ce211f641"
+label = "Source qualification for da9bddcf from reading fee2b4f5"
+subject_kind = "claim"
+subject_id = "61b76df7-46c5-5c3f-887e-22a6639e3b13"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "da9bddcf-ef37-54b4-9ce5-b109d6f1d2c3"
+note = "The same event receives different coordinate descriptions linked by a transformation preserving light speed. A case application comparing clocks must preserve the event tokens and establish equality or invariance of their ordering under the relevant transformation, not just light-speed invariance."
+
+# Alexander Bird, Antidotes all the way down? Theoria 19
+
+[[relation]]
+id = "0b617e9a-d15c-4290-9def-c20755735466"
+label = "Recorded rival for 34ffdbd8 from reading aa6a9f58"
+subject_kind = "statement"
+subject_id = "aa6a9f58-a800-50ca-aa74-201d13efbbe4"
+predicate = "alternative_to"
+object_kind = "statement"
+object_id = "34ffdbd8-07eb-5c1d-b38d-1a917c8f901b"
+note = "Bird proposes explaining suitable laws through dispositions essential to natural properties and conditions for their manifestation. This is a rival account of lawhood to best-system regularities. Applying it to the same laws would require defending dispositional essentialism and the specified exception conditions. No defeat of best-system lawhood is asserted."
+
+[[relation]]
+id = "11139b6a-f3bd-47af-baf0-671bccfabf32"
+label = "Source qualification for 60e9b099 from reading e025d0f1"
+subject_kind = "claim"
+subject_id = "9290ec2e-f570-5f51-ac8c-174454877af5"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "60e9b099-2bc0-5a8c-86d8-821d04f5b16c"
+note = "Bird's fink and antidote cases show that possession of a disposition can fail to yield manifestation in the triggering conditions. This matters when treating the case's possession and exercise predicates as equivalent. The inverse from power to causing needs a manifestation bridge free of the relevant blockers."
+
+# Allan Gibbard, Reply to Commentators
+
+[[relation]]
+id = "11f50f64-c4b5-4cdd-9cac-8ff3ab32f664"
+label = "Source qualification for 2aeed907 from reading 393081a1"
+subject_kind = "claim"
+subject_id = "add2d90b-631c-571d-a2ae-70d30fd6a1b4"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "2aeed907-013b-5c13-8bfb-c66d25734bc8"
+note = "Gibbard uses indicative conditionals with false antecedents to distinguish expanded full truth from more permissive senses while allowing appropriate belief or assertion. Application to this quasi-realist comparison requires showing which of those senses is the case's minimal truth and that the relevant moral sentence has the same features."
+
+[[relation]]
+id = "5728942d-425e-47b8-be81-611238c311ca"
+label = "Source qualification for bed6b857 from reading 8ea56025"
+subject_kind = "claim"
+subject_id = "dcca546d-6976-5eb8-a60a-750d73983cb8"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "bed6b857-dcb0-5f8e-a859-d21cfaa0b31b"
+note = "The proposal construes permission attitudes through settling what to permit to oneself, and distinguishes this from choosing among options already eligible. Testing the constant-meaning expressivist premise requires a common role for that permission attitude in embedded and standalone uses. The explanation of planning by itself does not supply it."
+
+# Anat Biletzki and Anat Matar, Ludwig Wittgenstein
+
+[[relation]]
+id = "6a28142b-f19a-49bf-82d0-40fc7a025a5f"
+label = "Source qualification for a0747bd7 from reading 84af6e34"
+subject_kind = "claim"
+subject_id = "31b04d2e-8e89-5c29-ac3f-4179a23d5ca7"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "a0747bd7-56eb-5413-b598-f9cfbbce056a"
+note = "The reported resolute reading discards the ladder and saying/showing framework. This qualifies the target's explicit reliance on the traditional reading. Both readings can reject literal metaphysical assertions, so the disagreement concerns the status of talk about what is shown."
+
+[[relation]]
+id = "aa85df0e-d0ed-4163-a04c-f07bce272ccb"
+label = "Source support for a0747bd7 from reading 48336917"
+subject_kind = "claim"
+subject_id = "55623738-68e0-5e39-a775-0caacd3eb9f1"
+predicate = "supports"
+object_kind = "statement"
+object_id = "a0747bd7-56eb-5413-b598-f9cfbbce056a"
+note = "The entry's traditional reading permits an unsayable mystical domain while excluding metaphysical assertions from literal sense. The target needs God sentences in that excluded domain under the intended criterion and an account of whether showing can convey relevant content."
+
+# Bertrand Russell, The Philosophy of Logical Atomism
+
+[[relation]]
+id = "7fb764e9-9592-4fec-b001-81829b70d6a3"
+label = "Source qualification for cdc7a58f from reading 909948e9"
+subject_kind = "claim"
+subject_id = "da14fe0e-1845-544c-8830-2b1d57790743"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "cdc7a58f-0c17-41d9-8d9d-18b6ad5c6cc6"
+note = "Russell explains general existence by some value satisfying a propositional function. Using this account against the case's proposed object-level existence feature requires treating that feature as exhausted by the same quantificational reading. It does not deny that the function is exemplified."
+
+[[relation]]
+id = "c4c1ee51-6d1b-441f-a855-31c9e785b0b7"
+label = "Source qualification for cdc7a58f from reading bcdb9a97"
+subject_kind = "claim"
+subject_id = "c580477d-db12-5177-ae41-d633d3530ae2"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "cdc7a58f-0c17-41d9-8d9d-18b6ad5c6cc6"
+note = "Russell acknowledges existential and general facts without a complete analysis of them by the formula. His limitation prevents treating the propositional-function paraphrase alone as an exhaustive account of a case existence fact. A further connection between those facts and the case's reality feature is open."
+
+[[relation]]
+id = "0553aeda-8082-4d5c-8c37-9a640295b366"
+label = "Source qualification for 705934a4 from reading 9bef7771"
+subject_kind = "claim"
+subject_id = "7cf7e1f0-9d8f-5586-b43a-af4d6b4ce375"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "705934a4-2f65-52bd-8628-e85da04ec78d"
+note = "Russell treats universe nonemptiness and the number of things as empirical questions. Reading the case's two-bearer assertion this way requires matching its selected-world candidate domain to that empirical inventory. Formal possibility of two inhabitants does not supply the actual observations."
+
+[[relation]]
+id = "dd0b01a7-a395-4df0-bef6-f443c3384798"
+label = "Source qualification for cdc7a58f from reading 550cc92a"
+subject_kind = "claim"
+subject_id = "fbc90e34-7cf4-570c-868e-7855e101346a"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "cdc7a58f-0c17-41d9-8d9d-18b6ad5c6cc6"
+note = "Russell denies meaningful predication of the same existence notion of an actually named object. Comparison requires identifying the case's reality feature with Russell's quantifier reading and the bearer with a genuinely named object, rather than treating his claim as a denial of every object-level notion of esse."
+
+[[relation]]
+id = "cbfd7941-e7a4-4e66-ab82-6ad21360354c"
+label = "Source qualification for 49542121 from reading 15f1f3dc"
+subject_kind = "claim"
+subject_id = "966b6704-f97d-53ee-b364-bdde909ecadb"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "49542121-caa6-576e-aa84-3a1546397388"
+note = "Russell takes a genuine name to have a referent, and treats a significant denial of existence such as the Romulus example through a description. Applying the doctrine to the naming route needs to establish whether the target term is a proper name in this strict sense or a name introduced by a nominal description."
+
+[[relation]]
+id = "e1f15d6a-abcb-4a76-8fd0-da4f3cb0f498"
+label = "Source qualification for 49542121 from reading 79154228"
+subject_kind = "claim"
+subject_id = "b69319d1-c5d9-5d35-aea5-88763147f3c8"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "49542121-caa6-576e-aa84-3a1546397388"
+note = "Russell's test for the existence of a singular described individual requires both a satisfier and uniqueness. If the route really uses such a description, the application needs both conditions for the same descriptor. Naming from a satisfied profile alone does not implement that semantic analysis."
+
+[[relation]]
+id = "c968968c-6989-44b9-8a6c-201ccc8da65c"
+label = "Source qualification for 49542121 from reading 47defcba"
+subject_kind = "claim"
+subject_id = "895e2b81-1869-5674-86c0-1e65e0a57e63"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "49542121-caa6-576e-aa84-3a1546397388"
+note = "Russell withholds a transfer from existential satisfaction of a description to predicating existence of a genuinely named individual. The naming route needs an explicit transition from its nominal description to the same proper referent before drawing that stronger predicative conclusion."
+
+# Charles Darwin, On the Origin of Species
+
+[[relation]]
+id = "74f2517b-524f-45d1-a0a0-fd84d5f67300"
+label = "Source support for 552054cf from reading 55b34b5f"
+subject_kind = "claim"
+subject_id = "7c58152a-efbf-5722-b9a0-494622ec63c8"
+predicate = "supports"
+object_kind = "statement"
+object_id = "552054cf-6a9d-56f6-bd5f-7e7f377793c5"
+note = "Differential survival and reproduction of useful heritable variations give a positive mechanism for some adaptive patterns. Applying it to the target requires establishing the effectiveness of this mechanism in the selected biological cases. Its local scope leaves the independent question of ultimate direction and nonbiological regularity open."
+
+[[relation]]
+id = "3ce67345-3122-4074-9870-e87297caf2e0"
+label = "Source qualification for 552054cf from reading 9ab464ba"
+subject_kind = "claim"
+subject_id = "b1ad0240-bc4d-53d3-af63-7da3d5368833"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "552054cf-6a9d-56f6-bd5f-7e7f377793c5"
+note = "Darwin leaves variations neither useful nor injurious outside the action of natural selection. To credit adaptation to that mechanism in the case one needs fitness effects in the relevant circumstances, rather than classifying any regular trait as selected."
+
+[[relation]]
+id = "400fce53-0337-498c-959e-d35da4abadcc"
+label = "Source qualification for 552054cf from reading 00ad618f"
+subject_kind = "claim"
+subject_id = "882f06f1-7c33-5ceb-b511-e8cfdb9b65e3"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "552054cf-6a9d-56f6-bd5f-7e7f377793c5"
+note = "Darwin's mechanism requires favourable variations to occur. An application needs to establish the supply and inheritance of relevant variations for the outcome, independently of what selection can subsequently preserve."
+
+# Christoph Benzmüller and Bruno…, Gödel's God in Isabelle/HOL
+
+[[relation]]
+id = "37984865-6da1-4dcb-9c3d-49fe5c255718"
+label = "Source qualification for 93824f63 from reading a6232540"
+subject_kind = "claim"
+subject_id = "6f085ceb-1dc3-52f2-b37d-933505bffe7a"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "93824f63-3964-50ec-a029-057102888f72"
+note = "C2 records worldwise ordinary existential exemplification after T3 in the reflexive setting. The actual existence claim requires the accessibility application at that world. Neither the ordinary existential nor T3 identifies one individual across worlds or equates God-like with the case profile."
+
+[[relation]]
+id = "d75fd583-4560-4b40-ac2b-e9e585b235a9"
+label = "Source qualification for 93824f63 from reading d82dc8d8"
+subject_kind = "claim"
+subject_id = "e1dbd268-9668-5c82-be90-e7b97505d084"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "93824f63-3964-50ec-a029-057102888f72"
+note = "C obtains possible exemplification of the positive God-like property at each world. The theorem of necessary exemplification additionally needs the essence and necessary-existence steps and the modal transfer. Possibility does not identify a rigid divine witness."
+
+[[relation]]
+id = "bef4c9b0-a64a-47da-a25c-41d9c0dd568d"
+label = "Source qualification for a6b42d40 from reading 81d437cf"
+subject_kind = "claim"
+subject_id = "5c3007c0-2978-5108-b64c-c0dfd05cec02"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "a6b42d40-6d62-5fbb-85e4-5a37c6ca4a3e"
+note = "Flawlessness uses the positive-negation axiom and the God-like definition to exclude exemplification of nonpositive properties by a God-like individual. The result concerns individuals satisfying the definition under those axioms. It gives no independent evidence that being God-like is positive."
+
+[[relation]]
+id = "980f3dae-b65e-4980-bacd-b873d7f9a5ec"
+label = "Source qualification for 93824f63 from reading c6ebeb52"
+subject_kind = "claim"
+subject_id = "bba12efe-1e7f-515e-b1de-919c971a6e58"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "93824f63-3964-50ec-a029-057102888f72"
+note = "T1 is the possible-exemplification step for any positive property. Its application needs positivity of God-like and the subsequent theorem's assumptions to yield necessary exemplification. Its scope remains the embedded property's domain."
+
+[[relation]]
+id = "b16ecdae-3053-4bb4-8f04-48da7fdd66ce"
+label = "Source qualification for 93824f63 from reading 5eee7ede"
+subject_kind = "claim"
+subject_id = "8bd136ec-bb55-55af-a607-4e81fe8da266"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "93824f63-3964-50ec-a029-057102888f72"
+note = "T2 identifies God-like as an essence of each God-like individual in Scott's sense. To yield T3 one still needs possible exemplification of God-like, the positive status of necessary existence and the modal propagation, with each step using the same embedding."
+
+# Christoph Benzmüller and Dana Scott, Notes on Gödel's and Scott's Variants of the Ontological…
+
+[[relation]]
+id = "ac6b5382-9a19-4c4c-aefe-6790f3223235"
+label = "Source qualification for 96d8342a from reading 9cdba00e"
+subject_kind = "claim"
+subject_id = "9c34b71a-b9c7-5e64-997b-811f2426ee6a"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "96d8342a-f88f-5edf-8792-00d4f6d556ca"
+note = "The 1970 conjunction axiom differs from closure under necessary inclusion. Using it within that axiom package does not make it follow from the inclusion clause alone, and the application needs the same world-indexed positive-property interpretation."
+
+[[relation]]
+id = "c07e8515-ee39-43c5-96b5-29f796051900"
+label = "Source qualification for e29fa057 from reading ce92c0a9"
+subject_kind = "claim"
+subject_id = "cf494304-602a-574e-9903-6735dad045eb"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "e29fa057-3742-5de8-85b7-7066ffadb538"
+note = "Th1 supplies the 1970 antecedent-to-essence step using its actualist necessary inclusion. To reach Th3 one still needs the necessary-existence axiom and the accessible occurrence of an existing God-like individual in the same embedding."
+
+[[relation]]
+id = "3ac6dfb7-1dc6-4528-9428-eba06526689b"
+label = "Source qualification for e29fa057 from reading 9828ffa7"
+subject_kind = "claim"
+subject_id = "158993d7-0e40-5fe8-8ee9-6e6983abc671"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "e29fa057-3742-5de8-85b7-7066ffadb538"
+note = "Th2 starts from God-likeness at the given world and yields necessary actualist exemplification. Th3 adds the modal passage from a possibly existing witness using the frame law. The existing possibility boundary still applies, so a proof of Th2 gives no existing God-like witness."
+
+# David Hume, A Treatise of Human Nature
+
+[[relation]]
+id = "bb52e20f-2a7f-47dc-a7a2-aa3881148a1c"
+label = "Source qualification for b90c4dd1 from reading c70e0bd4"
+subject_kind = "claim"
+subject_id = "cee01f60-096c-5374-a4e7-2f56d490e2ca"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "b90c4dd1-88d9-4afe-8455-4152d7836c99"
+note = "Hume describes representing absence at one moment and presence at the next without representing a productive principle. This limits any argument for the originating-cause clause based solely on the inseparability of the ideas. To bear on truth in the formal histories, imaginative separation would have to warrant an admissible history with an originating moment and no cause there."
+
+[[relation]]
+id = "a391c1b3-23c3-4d4f-8f37-0e9d6fce8ecc"
+label = "Source qualification for b90c4dd1 from reading b92eeb0b"
+subject_kind = "claim"
+subject_id = "1610c5ed-7430-59ed-a338-7d9858b8107d"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "b90c4dd1-88d9-4afe-8455-4152d7836c99"
+note = "The §3 conclusion withholds refutation of uncaused beginning by mere ideas. Its immediate consequence concerns an a priori defense of this premise. Falsifying the concrete originating-cause clause requires an uncaused concrete beginning in the operative history semantics."
+
+[[relation]]
+id = "29f4b250-efdd-45e9-9290-0fb2fb6b0c39"
+label = "Source qualification for b90c4dd1 from reading 7591bf88"
+subject_kind = "claim"
+subject_id = "21ef805c-edc0-51c3-968c-2f113675f8a9"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "b90c4dd1-88d9-4afe-8455-4152d7836c99"
+note = "Hume rejects treating the alleged absurdity of an uncaused determinate onset as independent proof of the absurdity of uncaused existence. A defense of the case's first-moment cause needs a noncircular reason why onset at that moment requires a giver."
+
+[[relation]]
+id = "ff0bfa9e-fcc3-4dfb-aad8-e7b17ca7ad4d"
+label = "Source qualification for b90c4dd1 from reading d93fadf4"
+subject_kind = "claim"
+subject_id = "69e5b21b-eead-5310-93e5-d745fd30fe96"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "b90c4dd1-88d9-4afe-8455-4152d7836c99"
+note = "Hume withholds intuitive certainty from the maxim under his comparison-of-ideas account and allows a further infallible relation to be proposed. Other defenses of the originating-cause premise, including the adequacy of its concrete witness and first-moment requirements, remain separate."
+
+[[relation]]
+id = "5abd6f8f-f077-4709-afcc-b9eda4ed5c63"
+label = "Source qualification for b241b5ca from reading 4f1bea90"
+subject_kind = "claim"
+subject_id = "64f115bf-4568-52c9-9c39-4c8462a152e8"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "b241b5ca-e790-5145-bc9a-4154e266bb55"
+note = "Hume distinguishes excluding all causes from self-production or treating nothing as a producer. The distinction blocks an inference from no self-origination alone to an external originator. The case needs an independent causal applicability claim before excluding the self case yields another cause."
+
+[[relation]]
+id = "61609962-b844-4459-9921-f791ce66080e"
+label = "Source qualification for bc260b57 from reading de8e3d60"
+subject_kind = "claim"
+subject_id = "d64c357d-9af9-52c1-b8df-4c0d47f6d63c"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "bc260b57-ed4c-5298-afb5-5e3056c0a241"
+note = "The Treatise denies rational proof of the move from observed conjunction to unobserved cases even if power is granted. This bears on the explanatory role of custom. It does not show that all relevant transitions occur or that reliance under the formal trigger conditions is entitled."
+
+[[relation]]
+id = "e52f7a0e-5e0e-4dcc-938a-7a0192f43ef3"
+label = "Source qualification for bc260b57 from reading b05c83c3"
+subject_kind = "claim"
+subject_id = "b480f466-5489-5738-bae8-65219c87e496"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "bc260b57-ed4c-5298-afb5-5e3056c0a241"
+note = "Hume explicitly allows sustained attention without the associated transition. This restricts a reading of the causal role of association as exceptionless. To transfer the example one must compare that general association with the case's repeated-conjunction trigger and expectation predicate."
+
+# David Hume, An Enquiry concerning Human Understanding
+
+[[relation]]
+id = "8d13f8fb-d57a-4c60-83da-1dc7145b5a8b"
+label = "Source qualification for cb54120b from reading 2fc8df1f"
+subject_kind = "claim"
+subject_id = "fe72c44e-616c-55e4-ba62-468d0b75aeae"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "cb54120b-cafc-5d53-85f7-64ee2e3e33d3"
+note = "Hume distinguishes correspondence found so far from uniformity of unobserved instances, which he denies can be demonstrated. His changed-course examples explain why observed agreement alone cannot demonstrate the corresponding future claim."
+
+[[relation]]
+id = "d821a7b0-b225-4ff4-963e-6c02380cee14"
+label = "Source qualification for cb54120b from reading 77c2a0e5"
+subject_kind = "claim"
+subject_id = "717c400e-f6b8-52a9-acf0-b86469607519"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "cb54120b-cafc-5d53-85f7-64ee2e3e33d3"
+note = "An experiential defense of uniformity already assumes the reliability of the move from observed to unobserved. This limits upgrading the recorded past correspondence to general entitlement on that basis. A different epistemic bridge would need its own warrant."
+
+[[relation]]
+id = "6c5e3399-4b2e-40db-84a1-e03091d0aeb3"
+label = "Source qualification for bc260b57 from reading fa766632"
+subject_kind = "claim"
+subject_id = "b7a37962-52c1-5fde-bc2f-c613c6cb07d6"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "bc260b57-ed4c-5298-afb5-5e3056c0a241"
+note = "Hume's prediction of the principle's continued influence depends on unchanged human nature. The conditional qualifies a diachronic extension of the custom account. It supplies neither persistence of that nature nor authority for relying on the prediction."
+
+[[relation]]
+id = "f9feaf2e-b4dc-4fba-9126-54874fbef5a5"
+label = "Source support for bc260b57 from reading 7a397053"
+subject_kind = "claim"
+subject_id = "69f35326-6563-57ce-92fc-8838ba1983c2"
+predicate = "supports"
+object_kind = "statement"
+object_id = "bc260b57-ed4c-5298-afb5-5e3056c0a241"
+note = "Hume explains what the customary transition contributes by observing that without it we could not adjust means to ends based on experience. Applying that argument requires the formal trigger and expectation to track the relevant transitions, without turning a necessary condition for adjustment into sufficient practical entitlement."
+
+[[relation]]
+id = "7f973cef-a33d-40c4-8841-93441910ca80"
+label = "Source qualification for 438caf34 from reading ef798211"
+subject_kind = "claim"
+subject_id = "3c17915b-386e-5257-b5f6-8484d7248435"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "438caf34-80d5-51bf-806a-d5e7c127e088"
+note = "Hume's wording includes a counterfactual gloss alongside succession of similar cases. Transferring results about the test's intervention semantics to that gloss requires a defended interpretation of dependence and a comparison of the relata and interventions. The gloss does not identify the two."
+
+[[relation]]
+id = "0591dc68-8f34-496d-80de-f44cda1787af"
+label = "Source qualification for 438caf34 from reading e201a777"
+subject_kind = "claim"
+subject_id = "49a7eb22-c519-597e-894c-4be70cb80be6"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "438caf34-80d5-51bf-806a-d5e7c127e088"
+note = "Hume also defines cause using the transition in thought after an object's appearance. The test's observational and intervention predicates do not capture that mental transition without a further interpretation. The result about laboratory regularity leaves this reading open."
+
+[[relation]]
+id = "426f3973-d7fc-4032-b94b-9ba2c0e37398"
+label = "Source qualification for 438caf34 from reading 7833f762"
+subject_kind = "claim"
+subject_id = "927fc397-906d-5f6e-b17c-d01781c0362e"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "438caf34-80d5-51bf-806a-d5e7c127e088"
+note = "The first definition adds temporal succession and similar-object recurrence. The observational equality part of the test uses a supplied repeatable record and does not encode those requirements by itself. An application needs the same relata, succession and similarity classes."
+
+[[relation]]
+id = "39fafe08-9dca-4f15-a583-fc66b03502c8"
+label = "Source qualification for b90c4dd1 from reading d86969ae"
+subject_kind = "claim"
+subject_id = "ab7ecc51-d88d-549b-a822-4f94b3b7d4c1"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "b90c4dd1-88d9-4afe-8455-4152d7836c99"
+note = "The reported difference between seeing conjunction and seeing a binding power qualifies observational warrant for an originating giver. The route would need an independent inference to actual production at the concrete beginning. The limits of a single observation do not deny a giver."
+
 # First Council of Constantinople, Nicene-Constantinopolitan Creed
 
 [[relation]]
@@ -94,6 +596,518 @@ object_kind = "statement"
 object_id = "828bbf3f-cb29-5dc2-ac2b-731a81fe2226"
 note = "The Creed explicitly confesses the one, holy, catholic and apostolic Church. The remaining inference requires the reading of the four marks in the case article, attribution of the pinned form to the council, and treating the confession as teaching this article as revealed. This passage supplies one article of the universal premise."
 
+# Gottfried Wilhelm Leibniz and Samuel…, A Collection of Papers
+
+[[relation]]
+id = "41261cd3-de0c-4601-8e3c-de013f459a13"
+label = "Source qualification for bd0a956c from reading 8b0aa573"
+subject_kind = "claim"
+subject_id = "875927bf-0787-51b8-b5d4-be60f25d3663"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "bd0a956c-149e-5d7d-9771-b974da72fd3a"
+note = "Clarke's proposed numerically distinct yet alike absolute places differentiate structural likeness from identity. For this to challenge the case premise the places would need to be case bearers with identical real determinations that are all pure. The source does not supply that bridge."
+
+[[relation]]
+id = "f182ccf9-1840-4595-86dc-3289344c0ce6"
+label = "Source qualification for dd4dfa3b from reading 81ec01fe"
+subject_kind = "claim"
+subject_id = "f7025438-a715-5745-ac98-8fa68c90166c"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "dd4dfa3b-1bf0-4125-a27b-069cb1110893"
+note = "Clarke offers the agent's willing as a sufficient reason among indifferent alternatives. The formal policy comparison can apply only after identifying those alternatives with a tied order and deciding whether an adequacy standard admits a reason in the exercise of will itself."
+
+[[relation]]
+id = "05e17a7a-e0e5-4b4e-bbb5-40ebbd9cd3ef"
+label = "Source qualification for bd0a956c from reading 1f56b796"
+subject_kind = "claim"
+subject_id = "9f49c161-11f3-5a1c-9768-b5304c17e537"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "bd0a956c-149e-5d7d-9771-b974da72fd3a"
+note = "Leibniz's relative-order account gives a reason to treat preserved relations on a globally relocated material arrangement as the same order. Transferring that to the case needs the represented pure real determinations to be exhaustively fixed by the relations, and identity of the bearer rather than only of the order."
+
+[[relation]]
+id = "a8833e24-e8ed-4c50-ac9b-8fca4deffa04"
+label = "Source qualification for dd4dfa3b from reading 7dd2af35"
+subject_kind = "claim"
+subject_id = "cec9588c-0830-570c-9e2f-4fe264739851"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "dd4dfa3b-1bf0-4125-a27b-069cb1110893"
+note = "A global translation on uniform absolute space preserves internal relative situations. Leibniz argues that this leaves no reason for the selected placement if the bare will is inadequate. The case policy comparison requires fixing which placement facts are distinct, what counts as adequacy, and how that inadequacy applies to the selected whole."
+
+# Gottfried Wilhelm Leibniz, Monadology
+
+[[relation]]
+id = "e0278ce8-5e1b-4afc-b86b-3093750d8683"
+label = "Source support for 26e8e6ed from reading fd0230f2"
+subject_kind = "claim"
+subject_id = "ec3bfcb9-5529-5447-8a8e-5adc9d9d91c8"
+predicate = "supports"
+object_kind = "statement"
+object_id = "26e8e6ed-964e-55ef-a9fd-756164aad6a7"
+note = "Leibniz appeals to a necessary universal substance on which all else depends in arguing to unlimited reality. Applying the argument to the target requires showing that its same esse-identical, noncomposite bearer realizes that universal dependence and that Leibniz's absence of limits entails the target's specified perfection bounds."
+
+# Graham Oppy, The Universe Does Not Have a Cause
+
+[[relation]]
+id = "deab4391-269f-4ffc-8142-f12c214c810d"
+label = "Source support for b3968a11 from reading dc3e4a6d"
+subject_kind = "claim"
+subject_id = "24ecb146-8e23-5ffe-9be1-7097270ae78d"
+predicate = "supports"
+object_kind = "statement"
+object_id = "b3968a11-82d8-584b-8c04-772b7e157a8b"
+note = "Oppy's natural-only causal reality supplies a position in which every participant in an actual causal relation is natural, compatible in his account with either a natural initial cause or regress. The case uses possession of causal power, so applying it requires the account to cover unexercised power and to match Oppy's natural and the selected-world predicates."
+
+# Immanuel Kant, Critique of Pure Reason
+
+[[relation]]
+id = "4d71d6fb-dfed-4bfe-a227-80ce854c6c32"
+label = "Source qualification for b90c4dd1 from reading 3b5198a8"
+subject_kind = "claim"
+subject_id = "5fa97f31-dc20-5b2a-a0f2-9cf08fa8fbe7"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "b90c4dd1-88d9-4afe-8455-4152d7836c99"
+note = "Kant's limit on objectively valid synthetic cognition through categories restricts causal claims crossing the bounds of possible experience under his account. To apply it here one must identify the proposed originating relation with that categorical use and show which applications exceed possible experience, rather than infer absence of causal power."
+
+[[relation]]
+id = "90403410-fcc7-46e9-809d-50ced39bea8c"
+label = "Source qualification for b90c4dd1 from reading eaa3ec6d"
+subject_kind = "claim"
+subject_id = "b1c57851-d6e4-5321-bb85-661051489029"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "b90c4dd1-88d9-4afe-8455-4152d7836c99"
+note = "Kant's distinction between transcendental meaning and determining transcendental use qualifies an application that takes pure causal concepts to determine supersensible objects. The case requires a separate warrant for a cause outside possible sensible experience and a match of the causal senses."
+
+[[relation]]
+id = "ecef6fd1-6e19-41c3-b6be-05b78ea2792a"
+label = "Source qualification for bd0a956c from reading e2f4b27c"
+subject_kind = "claim"
+subject_id = "40a923af-9b72-57ce-a6c3-6b82c5273b89"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "bd0a956c-149e-5d7d-9771-b974da72fd3a"
+note = "Kant's reported conversion invokes nondifference among most-real beings. The uniqueness step still needs qualitative nondifference in all selected real determinations, their purity, and the identity principle for the relevant bearers."
+
+# Isaac Newton, Philosophiae naturalis principia mathematica
+
+[[relation]]
+id = "e12923d3-bf78-4628-a35c-17a492174a6f"
+label = "Source support for 33fc6c10 from reading df1eb9e2"
+subject_kind = "claim"
+subject_id = "5018b210-25d9-5f4d-89a1-201c3775cdf3"
+predicate = "supports"
+object_kind = "statement"
+object_id = "33fc6c10-b5b4-50b5-86fe-75a73a894ed3"
+note = "Newton describes uniform rectilinear motion as a state retained unless impressed forces change it. To bear on the target, the state/transition distinction must track being moved in the specified respect. The law's form does not supply an actual force-free body or rule out sustaining causes of being."
+
+# J. B. Hartle and S. W. Hawking, Wave function of the Universe
+
+[[relation]]
+id = "7a183a60-f5a7-449e-beb7-9a08148ff326"
+label = "Source qualification for 0d563c5b from reading 50c2b918"
+subject_kind = "claim"
+subject_id = "e6300451-980d-504b-8f6e-911b6ef787e7"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "0d563c5b-413a-5463-b556-adbb34bf458e"
+note = "The compact Euclidean histories in the Hartle–Hawking proposal supply a concrete contrast with ordinary prior-time causation. Application to the case would require an adequate history of the selected spacetime whole and a reason why lacking an earlier physical boundary excludes the specified broader causal relation."
+
+# J. L. Schellenberg, Précis
+
+[[relation]]
+id = "ba5a7225-f483-4aff-90c1-2916c5eb5ea0"
+label = "Source qualification for 80f4e2eb from reading 179b4b92"
+subject_kind = "claim"
+subject_id = "e5ea7363-3c70-5d99-bc6b-02bbabefdabb"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "80f4e2eb-800b-57eb-8cf8-7f0e1cff1459"
+note = "Schellenberg limits the proposed conclusion to the perfect personal ultimate targeted by hiddenness and explicitly leaves nonpersonal ultimates open. An inference to naturalism would also need to exclude those alternatives."
+
+# James H. Fetzer, Carl Hempel
+
+[[relation]]
+id = "6a95d105-aa4e-4188-a8b5-9f38e61ed12f"
+label = "Source qualification for 46132461 from reading afa7a288"
+subject_kind = "claim"
+subject_id = "53f64561-9829-5283-bd46-8d921d97bd9e"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "46132461-9a9b-498f-b3d9-304e2f3ac57e"
+note = "The reported Hempel argument adds negation closure to the verification criterion. Its stronger reading applies to every meaningful sentence. Any argument against the case criterion using negated laws must declare this as an extra assumption and preserve the sense of meaningfulness."
+
+[[relation]]
+id = "888e3fb9-c1da-4941-ae5a-d8a9f2cf7eec"
+label = "Source qualification for 46132461 from reading 3f979107"
+subject_kind = "claim"
+subject_id = "7ac3d198-dba6-518c-8592-a7407fa62cb1"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "46132461-9a9b-498f-b3d9-304e2f3ac57e"
+note = "The analyst's weaker reading of Hempel uses the negation step only on already negated sentences. It can test the law example when the negated law is counted meaningful. It gives no unrestricted closure law and the passage's biconditional does not identify just this local weakening as Hempel's thesis."
+
+[[relation]]
+id = "6366d57a-6ae9-4080-a000-21de950667c5"
+label = "Source objection for 46132461 from reading c40631a3"
+subject_kind = "claim"
+subject_id = "544a5f43-0617-516e-8b7a-dcdc89c83bcd"
+predicate = "attacks"
+object_kind = "statement"
+object_id = "46132461-9a9b-498f-b3d9-304e2f3ac57e"
+note = "Hempel's reported criticism challenges a verification scope including universal laws: a finite observation can verify particular existential examples while leaving universals open, and meaning closure under negation cannot then be combined with the resulting particular/universal split. The objection requires that interpretation of verification and the extra negation assumption."
+
+# Jennifer Hart Weed, Religious Language
+
+[[relation]]
+id = "ea271ff1-5df8-4af6-ab54-8dd06ca9c130"
+label = "Source qualification for 46132461 from reading 73a7f1a7"
+subject_kind = "claim"
+subject_id = "ba54dd07-1052-5e1c-b6c4-8551f280b792"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "46132461-9a9b-498f-b3d9-304e2f3ac57e"
+note = "Ayer's reported 1946 definition separates direct from indirect verifiability and restricts the premises permitted in the indirect case. The case's generic requirement needs an interpretation of those conditions and of the scope before the retorsion applies to that formulation."
+
+[[relation]]
+id = "8054db6a-57c0-4c2b-be31-9db6c1af0737"
+label = "Source qualification for 49542121 from reading ee185100"
+subject_kind = "claim"
+subject_id = "239b07b1-84fa-5ea8-9256-c7caa0bae0e6"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "49542121-caa6-576e-aa84-3a1546397388"
+note = "On the reported Ayer criterion a word used as if it named a nonempirical person can symbolize something only in empirically verifiable propositions. Applying this to the case requires showing that its naming use falls under that requirement and whether its form and evidence meet it."
+
+[[relation]]
+id = "fc0959c4-cc12-44df-a05d-21539e18bd16"
+label = "Source qualification for 46132461 from reading 7b0fcb04"
+subject_kind = "claim"
+subject_id = "e9b942ad-581e-5833-acca-86d70e434ab6"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "46132461-9a9b-498f-b3d9-304e2f3ac57e"
+note = "Church's reported construction uses suitably independent observation statements to arrange verification of an arbitrary statement or its negation under the 1946 rule, undermining its power to demarcate cognitive significance. This diagnosis qualifies using that particular verification test if the construction's observation and independence assumptions are met."
+
+# Kelly Trogdon, Grounding
+
+[[relation]]
+id = "a16a5068-1467-4815-9bf4-c310e1c87bd6"
+label = "Source support for 5f9430cf from reading 9222f54b"
+subject_kind = "claim"
+subject_id = "4b4bc558-0d05-5e6c-b6c6-0a4a16928c4a"
+predicate = "supports"
+object_kind = "statement"
+object_id = "5f9430cf-099b-58ce-895f-ca7681ac3ecc"
+note = "Trogdon articulates necessitation from jointly sufficient full grounds. Instantiating it requires the case's admitted complete-ground set to be such a plurality, truth at its accessible worlds to track the corresponding propositions, and the modal necessity used here to constrain those worlds."
+
+[[relation]]
+id = "81ff5588-a6d9-439a-9db8-2c70f64f9ca2"
+label = "Source qualification for 5f9430cf from reading 82624d0f"
+subject_kind = "claim"
+subject_id = "010967dd-85e0-599b-b8f2-2d0e532edc5d"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "5f9430cf-099b-58ce-895f-ca7681ac3ecc"
+note = "Trogdon illustrates why necessity of the target lets even merely partial grounds entail it. The route may draw the necessitation direction from complete grounds but needs separate completeness evidence for the converse."
+
+[[relation]]
+id = "4e621611-01af-4a0a-97d8-19fae3fbee0a"
+label = "Source support for 5f9430cf from reading dfccfdac"
+subject_kind = "claim"
+subject_id = "d359e09c-45f2-59cd-8ddb-79f99d5b25d2"
+predicate = "supports"
+object_kind = "statement"
+object_id = "5f9430cf-099b-58ce-895f-ca7681ac3ecc"
+note = "The source's essence argument offers a reason for full-ground necessitation using the significance of the joint account and the necessity of the essential truths. The case needs those essence and significance claims for its selected full-ground records before applying the proposed modal conclusion."
+
+# Kevin Richardson, Grounding is Necessary and Contingent
+
+[[relation]]
+id = "d37fedf7-c681-4fda-bff1-2dd3777a67cf"
+label = "Source qualification for 5f9430cf from reading b3b979bc"
+subject_kind = "claim"
+subject_id = "1c6a18df-8623-5c21-8496-3341eb8cb86f"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "5f9430cf-099b-58ce-895f-ca7681ac3ecc"
+note = "Richardson's what-grounding makes necessity part of the real-definition explanation. This warrants testing the case premise on that reading. The admitted complete-ground relations must realize such real definitions before that defense transfers."
+
+[[relation]]
+id = "999e5a9b-7072-401e-9d2b-33a4177e8f9f"
+label = "Recorded rival for 5f9430cf from reading 6573cc65"
+subject_kind = "statement"
+subject_id = "6573cc65-79ab-549f-88c9-47700a2678ee"
+predicate = "alternative_to"
+object_kind = "statement"
+object_id = "5f9430cf-099b-58ce-895f-ca7681ac3ecc"
+note = "Richardson proposes contrastive why-explanation as a different ground relation. On it, difference-making can hold without necessitation. This is a positive rival if the case records track why-explanation. Its applicability to those records and their modal scope remains open."
+
+# Ludwig Wittgenstein, A Lecture on Ethics
+
+[[relation]]
+id = "2551eb48-1595-43e3-b80e-0121f008e332"
+label = "Source qualification for a0747bd7 from reading d5b316f2"
+subject_kind = "claim"
+subject_id = "a9968524-0232-5cd7-85ec-58b71996db5e"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "a0747bd7-56eb-5413-b598-f9cfbbce056a"
+note = "The later lecture argues from the failure to state the supposed literal counterpart of a religious simile. This identifies a reason to question certain religious expressions, separate from an unrestricted test of all case God sentences. Transfer requires showing the specific expressions behave like those similes."
+
+[[relation]]
+id = "d53f8ab1-4cf0-4035-bd66-e0faeaba9cca"
+label = "Source qualification for e0ebb8a8 from reading 12f53e30"
+subject_kind = "claim"
+subject_id = "fc318450-8503-5be4-b0c8-ac972cefa7e6"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "e0ebb8a8-e8ae-59c1-80e4-bcbb97a9c291"
+note = "Wittgenstein distinguishes relative evaluative judgments from absolute value judgments and denies that a description of facts implies the latter. To bear on naturalistic moral ascription, the selected moral judgment would have to use that absolute sense and the proposed natural basis would have to be merely descriptive in the relevant respect."
+
+[[relation]]
+id = "20c8d828-744f-4f43-b30e-3c99621bd01e"
+label = "Source qualification for a0747bd7 from reading 95a7894d"
+subject_kind = "claim"
+subject_id = "1745aa7a-031c-5d65-8bd8-4798f7b87970"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "a0747bd7-56eb-5413-b598-f9cfbbce056a"
+note = "The lecture regards ethics and religion in their absolute-value and ultimate-meaning use as a tendency to run against language's limits. The target's wider account of God sentences still needs scope and a reason this proposed limitation applies to its metaphysical assertions."
+
+# Ludwig Wittgenstein, Logisch-philosophische Abhandlung / Tractatus Logico-Philosophicus
+
+[[relation]]
+id = "23e8b3a3-045e-449f-8ec9-f1a3802b72f4"
+label = "Source qualification for 58e8a6b6 from reading 6d829efb"
+subject_kind = "claim"
+subject_id = "4da1a2cf-e205-527d-8d5c-f03c950ea34b"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "58e8a6b6-8cc5-5b17-83b4-918295222606"
+note = "The Tractatus locates value outside the world of contingent facts and thereby denies ethical propositions in its picture account. A clash with the target requires moral facts in its domain to be the kind of value claims the Tractatus excludes, and a defense of that restriction on propositions."
+
+[[relation]]
+id = "e7225700-77b0-4dec-803e-d8477b8df8f7"
+label = "Source qualification for a0747bd7 from reading c3d75af6"
+subject_kind = "claim"
+subject_id = "3182ffbf-c8b4-5855-a36d-16e91780f938"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "a0747bd7-56eb-5413-b598-f9cfbbce056a"
+note = "The literal reading of 6.522 retains something inexpressible that shows itself. It qualifies the scope of the target's exclusion of meaningful God assertions. The relevant distinction is between saying and showing, and the ladder reading keeps the literal interpretation disputed."
+
+[[relation]]
+id = "d410d0e9-613b-4e38-89e6-c5b95a369e5d"
+label = "Source qualification for a0747bd7 from reading 8faf1c3e"
+subject_kind = "claim"
+subject_id = "9d26a999-369f-5e40-a5c8-6c2b1fd71ef8"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "a0747bd7-56eb-5413-b598-f9cfbbce056a"
+note = "The closing imperative applies to what cannot be said. It does not say which God sentences fall on that side. Application requires a sentence-specific criterion and an account of whether the Tractatus's purported boundary applies to the case's language."
+
+# Ludwig Wittgenstein, Philosophische Untersuchungen
+
+[[relation]]
+id = "2866a45d-c443-4dea-8f7b-8b65bd157884"
+label = "Source support for ed9d582d from reading 3d046008"
+subject_kind = "claim"
+subject_id = "bb808034-54c6-53f0-8fca-de213b98bfba"
+predicate = "supports"
+object_kind = "statement"
+object_id = "ed9d582d-fe3a-5350-a3fe-05cbfa6d94cd"
+note = "Wittgenstein distinguishes genuinely following a rule from merely thinking one does, locating the distinction in practice. A case application needs to identify the rule-governed role of its selected expressions and the relevant practice and criterion of correctness."
+
+[[relation]]
+id = "b9bd2667-91d5-4f68-a7b3-c91b06a2e133"
+label = "Source support for 096e6131 from reading 37a8abd3"
+subject_kind = "claim"
+subject_id = "b1180750-26b0-584f-b001-775b46bb6166"
+predicate = "supports"
+object_kind = "statement"
+object_id = "096e6131-a286-57d1-af74-c8a285e39b15"
+note = "The private sign example identifies a missing distinction between seeming right and being right. To reach the general reading one needs the case to represent the proposed private language, and correctness to be unavailable under each relevant private criterion, not just this setup."
+
+[[relation]]
+id = "ecfa9745-c22d-43ce-8c29-fe5af56dc6f5"
+label = "Source qualification for 096e6131 from reading a587c03c"
+subject_kind = "claim"
+subject_id = "91a59acc-6f04-5ba9-b24d-08c74c840690"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "096e6131-a286-57d1-af74-c8a285e39b15"
+note = "Wittgenstein's rejection of a forced object-and-designation grammar preserves the difference between behaviour with pain and behaviour without it. This limits reading the critique of private language as denial of sensation. The target concerns a language proposal, with no inference to ontological elimination."
+
+[[relation]]
+id = "892b1fd0-44fd-4c76-bb5b-0b98dc8edb08"
+label = "Source qualification for 096e6131 from reading 55d54d49"
+subject_kind = "claim"
+subject_id = "bc9cee87-3991-5af2-bed8-95a4896f9d67"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "096e6131-a286-57d1-af74-c8a285e39b15"
+note = "The later remark explains the appearance of denying mental processes and explicitly avoids that inference. The target's rejection of a private-language proposal needs no denial of occurring mental processes."
+
+# Ludwig Wittgenstein, Tractatus Logico-Philosophicus
+
+[[relation]]
+id = "de2c5fa9-1acf-4fc0-b87c-7c166cbe608e"
+label = "Source support for a0747bd7 from reading 29eb8c46"
+subject_kind = "claim"
+subject_id = "3e8600a1-b38e-5263-9a7f-b748a5d84222"
+predicate = "supports"
+object_kind = "statement"
+object_id = "a0747bd7-56eb-5413-b598-f9cfbbce056a"
+note = "The proposed method limits what is said to scientific propositions and diagnoses certain signs as lacking assigned meaning. Applying it to the target requires deciding what the method claims of the selected God-language signs and whether its scope includes every case sentence under discussion."
+
+[[relation]]
+id = "a5fc1059-8c7d-4524-b281-aa6b4d614ba4"
+label = "Source qualification for a0747bd7 from reading 01991d29"
+subject_kind = "claim"
+subject_id = "961d3f49-e6e0-58cc-9686-0615058043ef"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "a0747bd7-56eb-5413-b598-f9cfbbce056a"
+note = "The ladder remark applies to the book's own elucidations. A target that reads the limits of God sentences as a substantive asserted doctrine must account for this self-application, including the traditional and resolute options."
+
+# Ludwig Wittgenstein, Über Gewißheit
+
+[[relation]]
+id = "b1d1495b-7186-452b-bd35-f73360641ffc"
+label = "Source qualification for d008f164 from reading 3288a854"
+subject_kind = "claim"
+subject_id = "b4fe21b5-de80-59b6-8f95-c8e4dcaa7710"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "d008f164-5e50-480e-aa5c-888c5ca652ce"
+note = "The Moore example distinguishes what investigators hold fixed as part of doubting from knowledge grounded by another belief. It provides a possible account of a stopping point for credentialing. Transfer needs those hinge-like practices to count as an active reason in the case and an independent reason for accepting that stopping policy."
+
+[[relation]]
+id = "3605a18a-53bd-49c9-8c4b-559661f9b9d7"
+label = "Recorded rival for 4e30a1c1 from reading 3643f318"
+subject_kind = "statement"
+subject_id = "3643f318-3f71-51d0-84b3-a5f8c91fa29f"
+predicate = "alternative_to"
+object_kind = "statement"
+object_id = "4e30a1c1-0402-4155-8a57-a1df8af7daf6"
+note = "Wittgenstein gives a positive stopping point for justification in acting rather than a further prior belief. It rivals the universal prior-belief requirement if applied to the same reasons. The case needs to show which practices provide usable credentials in the selected inquiry."
+
+[[relation]]
+id = "338cabdd-d7d4-4449-aaf0-01ad6d66ddb6"
+label = "Source qualification for d008f164 from reading 17db4fcc"
+subject_kind = "claim"
+subject_id = "bd00e33d-144d-50cf-97b0-941676699bea"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "d008f164-5e50-480e-aa5c-888c5ca652ce"
+note = "The passage distinguishes the ground of an epistemic practice from what the practice grounds only on the supposition that truth is grounded. An application to credentialing needs an interpretation of that antecedent and a reason for treating the ground here as outside truth-aptness. It supplies no categorical denial."
+
+[[relation]]
+id = "946a352a-f609-419c-bba3-f1d0bb0e8196"
+label = "Source qualification for d008f164 from reading 2385080d"
+subject_kind = "claim"
+subject_id = "9af031b3-7cef-519a-b3b4-fcd304819daf"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "d008f164-5e50-480e-aa5c-888c5ca652ce"
+note = "An inherited, changeable background helps establish which claims are judged true or false without itself being adopted by prior conviction of correctness. The credentialing application must identify which such background is indispensable to the particular inquiry and distinguish revising it from revising claims within it."
+
+[[relation]]
+id = "06280c12-f0bb-4b21-8196-e2d8069c3ab3"
+label = "Source qualification for 849086f4 from reading a4686b65"
+subject_kind = "claim"
+subject_id = "f288d9ba-ca52-5e10-956b-d50f2a538257"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "849086f4-532e-50a1-9590-eec583a4873c"
+note = "Wittgenstein treats 'physical object' here as a logical concept and distinguishes teaching its use from making an empirical assertion that objects exist. To apply that limit needs a semantic analysis of the case's natural predicate and of whether its existential claim expresses a comparable framework-level use."
+
+# Mark van Roojen, Moral Cognitivism vs
+
+[[relation]]
+id = "1db5244a-5b92-4a8a-aebf-97afcbfefcb5"
+label = "Source qualification for 4557cd02 from reading 58901e0a"
+subject_kind = "claim"
+subject_id = "184911f4-00c4-549e-a6f6-497fb1e5fc5f"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "4557cd02-11b8-5847-bf15-3575678e6c71"
+note = "The source explains how a quasi-realist can discuss a moral judgment as mistaken from within moral theorizing. It gives the intended role for error in the formal comparison. Applying the model requires its truth and error predicates to express that role, which leaves a stronger robust-error interpretation open."
+
+# Michael Scott, Religious Language
+
+[[relation]]
+id = "81ddc0b7-099a-4303-b9cf-a07fb7be7b11"
+label = "Recorded rival for 12605639 from reading 77450096"
+subject_kind = "statement"
+subject_id = "77450096-9f7f-5094-9a62-6b66a954f077"
+predicate = "alternative_to"
+object_kind = "statement"
+object_id = "12605639-82ad-5434-9171-7c30107b3dfd"
+note = "Religious minimalism as reported admits some shared historical or empirical evidence as relevant within religious justification, illustrated by possible evidence of a miracle-report hoax. This competes with sharp insulation and leaves open whether the selected Catholic practice uses the proposed evidential interface."
+
+[[relation]]
+id = "99bbe892-3245-4fcf-9bb1-8bc994e8a9b0"
+label = "Source qualification for 12605639 from reading 071e51dd"
+subject_kind = "claim"
+subject_id = "631d3d2d-5b2a-5f92-9377-d0720da40b73"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "12605639-82ad-5434-9171-7c30107b3dfd"
+note = "Scott's reading of student notes limits the hypothesis model of reasons in religious belief. Inferring sharp insulation in the case would require showing this exhausts the role of every shared consideration and applies to the Catholic definitions and practice under examination."
+
+# Moritz Schlick, "Meaning and Verification"
+
+[[relation]]
+id = "5fb22a91-85af-4d89-9d25-846a0b7672a2"
+label = "Source qualification for 46132461 from reading da259323"
+subject_kind = "claim"
+subject_id = "6851c68b-7a16-5f6a-a980-b33f8034cbca"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "46132461-9a9b-498f-b3d9-304e2f3ac57e"
+note = "Schlick equates specifying rules of use with specifying a way to verify or falsify. The case must show that the selected rule amounts to its empirical predicate and covers the formulation of the principle, rather than counting every grammatical rule as an empirical claim."
+
+[[relation]]
+id = "3f01b25e-6673-4a8f-9bd6-891c90aa2906"
+label = "Source qualification for 46132461 from reading b1f1f52d"
+subject_kind = "claim"
+subject_id = "2a67385a-8faa-5e9a-956c-fd4f0d40299c"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "46132461-9a9b-498f-b3d9-304e2f3ac57e"
+note = "Schlick's criterion invokes logical possibility of verification under linguistic rules independently of laws of nature. Identifying it with the case's empirical predicate requires a bridge from that rule-governed possibility to the proposed empirical test, including scope over the principle itself."
+
+# Natalie A. Dye and colleagues, Self-organized patterning of cell morphology via mechanosensitive…
+
+[[relation]]
+id = "1e102806-63a4-4c9f-8f9f-4fc5002e485e"
+label = "Source qualification for 552054cf from reading 1c0d7e9d"
+subject_kind = "claim"
+subject_id = "251c5348-404b-5a04-ad4d-9f1ca653c382"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "552054cf-6a9d-56f6-bd5f-7e7f377793c5"
+note = "The developmental study supplies a specified local patterning mechanism and perturbation evidence. To support the selected teleonomy position further, the relevant pattern must count as an end and the proposed local mechanism must be adequate for it. Ultimate direction of the mechanism remains a separate issue."
+
+# Nathan Tompkins and colleagues, Testing Turing’s theory of morphogenesis in chemical cells
+
+[[relation]]
+id = "c7de1166-6b19-4efb-bc9d-718b8f5d23ad"
+label = "Source qualification for 552054cf from reading 31ef93be"
+subject_kind = "claim"
+subject_id = "6b8a5e69-0906-5ebd-b014-8a5b6a3f1e62"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "552054cf-6a9d-56f6-bd5f-7e7f377793c5"
+note = "The coupled droplets instantiate abiotic pattern formation under diffusion and reaction, with unexpected patterns requiring model extension. Applying this to the selected teleonomy premise needs the patterns to count as end-directed in the relevant sense and a bridge from laboratory setup to the relevant natural domain."
+
 # New Testament, John
 
 [[relation]]
@@ -162,6 +1176,474 @@ object_kind = "statement"
 object_id = "e26f46c8-82df-546f-afb0-8b195c196400"
 note = "Paul's account of Christ's self-abasement explicitly culminates in death on a cross. Application to the historical premise requires accepting this testimony about the same Jesus and the event, independently of the letter's account of his self-abasement."
 
+# Peter Railton, Moral Realism
+
+[[relation]]
+id = "29c9c255-8bf2-4b3f-8afe-8329d1a295ca"
+label = "Source support for 58e8a6b6 from reading f7dcdd86"
+subject_kind = "claim"
+subject_id = "f7dcdd86-cd3d-579b-ab74-542db73363f0"
+predicate = "supports"
+object_kind = "statement"
+object_id = "58e8a6b6-8cc5-5b17-83b4-918295222606"
+note = "Railton describes a relational natural basis for evaluative facts that can differ from what appraisers believe about them. Applying this to the target requires the relevant moral facts to have that independence with respect to the selected appraisers and attitudes, as distinct from independence from every fact about people."
+
+[[relation]]
+id = "1411e77c-a91b-45e5-a720-02771dd60580"
+label = "Source support for dad9ae00 from reading 5f15a9b4"
+subject_kind = "claim"
+subject_id = "6b8e734b-1119-546c-8ef4-e81a63574557"
+predicate = "supports"
+object_kind = "statement"
+object_id = "dad9ae00-e470-51e8-b2df-16b4d8557373"
+note = "Railton's reduction basis makes objective-interest ascriptions correct and explains the idealized response. Extending that direction to the case's moral thought and talk requires mapping the interests to the selected moral property and establishing the same explanatory order there."
+
+[[relation]]
+id = "8d031597-7d56-4569-89c6-16b2f40fed49"
+label = "Source qualification for 6452783d from reading f5d0ade5"
+subject_kind = "claim"
+subject_id = "25d94c29-59a7-5b98-ab47-8694d2d59cf6"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "6452783d-e671-5e40-921d-53018c03caf2"
+note = "Railton's account gives a reason to separate instrumental rationality for a particular agent from moral obligation. Applying it to the formal example needs a genuinely obligatory act under impartial justification and an agent lacking an instrumental reason for that very act."
+
+[[relation]]
+id = "0426092b-860b-4b71-b914-201c1086fb94"
+label = "Source qualification for e0ebb8a8 from reading ca79fcde"
+subject_kind = "claim"
+subject_id = "817f6760-b841-5db3-a714-3a8c1e609390"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "e0ebb8a8-e8ae-59c1-80e4-bcbb97a9c291"
+note = "Railton treats the adequacy of a proposed reduction as answerable to its evaluative role and empirical explanatory success. The formal ascription clause still needs a defended identification of the ascribed natural property with the appropriate evaluative fact."
+
+# Peter van Inwagen, Précis of Material Beings (1993)
+
+[[relation]]
+id = "087f8916-1479-4d41-85b3-c168d5f76590"
+label = "Recorded rival for 523917cf from reading 76f32ae6"
+subject_kind = "statement"
+subject_id = "76f32ae6-dc8a-4d83-8d48-59d420fb9dc5"
+predicate = "alternative_to"
+object_kind = "statement"
+object_id = "523917cf-d978-5a15-87fc-61186d7e59de"
+note = "Van Inwagen offers a substantive restriction on the existence of composite objects: components must jointly constitute a life. For an application to oppose the actual fusion premise, the selected parts would have to fail that life condition and the formal sum must require composition in this sense. No exclusion of the selected fusion is established here."
+
+# Plato, Parmenides
+
+[[relation]]
+id = "b3a4d163-728f-4821-a261-dd1b5c456dc9"
+label = "Source qualification for 4557ccdd from reading b6b45b7f"
+subject_kind = "claim"
+subject_id = "b76d461e-f52f-5738-a4dd-70ec419ce951"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "4557ccdd-956d-5645-82d5-9c4701556636"
+note = "Socrates distinguishes opposed predications of participants from claims that the Forms themselves are contradictory. The case needs separately indexed qualities and an account of how the same participant bears each, rather than transferring a joint predication to a Form."
+
+[[relation]]
+id = "029f2fa7-5c29-4c21-aa4c-61c15ccb3d46"
+label = "Source qualification for 1eeadd04 from reading 702126ae"
+subject_kind = "claim"
+subject_id = "3a221563-077a-525e-9ba9-006d06051de4"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "1eeadd04-81f5-5c53-b6b4-21ae4190f434"
+note = "Socrates agrees to some classes of Forms and hesitates or declines others in the dialogue. The admitted quality domain must be specified before the formation rule applies. The passage does not give a general admission rule for natural kinds, artifacts or every common predicate."
+
+[[relation]]
+id = "0cef251b-9638-4d94-a0e6-277cbce2bda3"
+label = "Source qualification for 269b8098 from reading 71b729b3"
+subject_kind = "claim"
+subject_id = "4114b7da-d5b1-5dec-9369-fa64bd5c4cb6"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "269b8098-1bd0-5759-a187-3a03001fe929"
+note = "Socrates's day analogy supplies a way of conceiving presence in many places without dividing the item present. It qualifies a move from multiple participation to distributed constitutiveness. Applying the analogy requires an account of the relevant shared presence and why it involves neither parts of the Form nor constitution of the participants."
+
+[[relation]]
+id = "9c9b69d5-445f-483c-b106-0f3354b5534d"
+label = "Source qualification for 62aae403 from reading 1b520a04"
+subject_kind = "claim"
+subject_id = "ecf771c4-adeb-5137-8b9a-f4098cfca882"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "62aae403-5e8e-50db-a90d-ed382bea63e1"
+note = "Parmenides adds problems for the specific divided-part proposals for largeness, equality and smallness. Extending the objections to the general indivisibility premise needs a common interpretation of proper parts of Forms and an independent reason that the size relations apply to every admitted Form."
+
+[[relation]]
+id = "f8ef4925-33df-418e-9bbc-bb30d8075728"
+label = "Source support for f3b1d362 from reading ccafa6f6"
+subject_kind = "claim"
+subject_id = "1264a994-eb69-5245-a8f3-9ef828f5415d"
+predicate = "supports"
+object_kind = "statement"
+object_id = "f3b1d362-7af3-566a-8a5d-83ef93831e13"
+note = "At 132a–b Parmenides invites the same comparison over Greatness itself and other great things, and obtains another Form. Extending this move to arbitrary eligible lists needs a stable same-kind predication and eligibility rule, including repeated introductions without a change of quality."
+
+[[relation]]
+id = "782aa92e-6f47-4b1b-912d-ec2966c0e157"
+label = "Recorded rival for 448dfeda from reading 47e76508"
+subject_kind = "statement"
+subject_id = "47e76508-e0fe-5fea-beae-17c91caffbf1"
+predicate = "alternative_to"
+object_kind = "statement"
+object_id = "448dfeda-94f9-5185-a702-a799e24b4ff3"
+note = "Socrates tentatively proposes Forms as thoughts present only in souls, offering unity by a different account of their existence. The case needs a defended theory of intentional objects and participation to determine whether the proposal survives Parmenides's questions and really replaces independent Forms."
+
+[[relation]]
+id = "91b25918-c3e9-4937-ab3b-c6c30139ed48"
+label = "Source qualification for 9671be2f from reading 0466bde5"
+subject_kind = "claim"
+subject_id = "a558cfb0-6fa3-5da7-8663-ee5a6187b779"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "9671be2f-191d-4c1e-b3c5-6faed1b34f28"
+note = "On the dialogue's strong isolation reading, knowledge relates only to objects on its own side. This identifies a restriction that would block cross-domain knowing. It would need independent warrant and an application to divine knowledge through its essence before it could count against the Thomistic claim."
+
+[[relation]]
+id = "22ee8abe-558c-4aa1-88f2-7ad45fa65842"
+label = "Source qualification for c87ffcb8 from reading f1eda342"
+subject_kind = "claim"
+subject_id = "3141c202-951a-59ea-b72e-f50b4e355d94"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "c87ffcb8-9a44-5e02-a68b-13d0282ae930"
+note = "The human mode in this Platonic isolation argument is on the non-intelligible side. A challenge to shared knowability would require treating human natural reasoning here as subject to the same domain closure, including a defense against reasoning from effects without direct apprehension of Forms."
+
+[[relation]]
+id = "eeaaabfc-ff36-4c95-b1a4-c67875d67df5"
+label = "Source qualification for 9671be2f from reading 20457010"
+subject_kind = "claim"
+subject_id = "8a75b851-29a3-5b9c-9de4-4ef7562ab702"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "9671be2f-191d-4c1e-b3c5-6faed1b34f28"
+note = "The dialogue considers divine knowledge as belonging to the most exact domain. The hypothesized mode must be shown to have exclusive domain closure and be the knowing through essence of the same God before it has consequences for knowledge of creatures."
+
+# Plato, Phaedo
+
+[[relation]]
+id = "437277f1-242d-4dea-8bad-b83a9d2ad5d7"
+label = "Source qualification for 32412d8c from reading c99ff530"
+subject_kind = "claim"
+subject_id = "1f059445-2495-5b63-ac68-86b9f50ca5b2"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "32412d8c-527c-520f-980f-308c25bae653"
+note = "The source permits a literal beauty self-predication reading, while the target takes 'beautiful itself' as essential characterization. Deciding between them requires a reason that the predication about the Form uses the same exemplification relation as the predication about participants."
+
+[[relation]]
+id = "a0f63fee-e106-427c-a8ab-afd77b44687f"
+label = "Source qualification for 4424ec00 from reading ce65a71f"
+subject_kind = "claim"
+subject_id = "e3d3acfc-58f2-5dcd-a6e3-6a074081016f"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "4424ec00-c125-52df-9386-6743880a8be2"
+note = "The methodological passage calls for testing agreement of consequences and seeking a higher sufficient hypothesis when an account of the assumption is needed. It qualifies treating the agreement on Forms in the dialogue as independent proof of that hypothesis."
+
+[[relation]]
+id = "888a228c-c7ff-450b-972f-40839377c44e"
+label = "Source qualification for 3e8c05d4 from reading c272a798"
+subject_kind = "claim"
+subject_id = "01fe4ce3-40fa-5091-8d37-46b535a0cfd8"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "3e8c05d4-c42c-5e6b-86da-1c1f3ea18f6b"
+note = "The recollection proposal distinguishes the Equal itself from the sensed sticks and stones that occasion thought of it. Applying it to the general intelligibility premise requires a bridge across admitted qualities and a reason the proposed recollection accesses a genuinely distinct object."
+
+[[relation]]
+id = "f3d1fe89-87e1-4e06-b87f-dfcd079740cb"
+label = "Source qualification for 4424ec00 from reading 95bd78ea"
+subject_kind = "claim"
+subject_id = "3ae838ba-4a69-55d8-9351-6a7d2b1f059d"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "4424ec00-c125-52df-9386-6743880a8be2"
+note = "The turn to accounts introduces the method of using the strongest hypothesis under consideration. Its methodological status qualifies a reading that the forms hypothesis comes already established by that turn itself."
+
+# Plato, Republic
+
+[[relation]]
+id = "049e3de5-a4a9-4efa-beda-03f223f5a348"
+label = "Source support for 3e8c05d4 from reading f66c7282"
+subject_kind = "claim"
+subject_id = "878aa108-7bb7-5fd6-af1c-8ca3ecf92c74"
+predicate = "supports"
+object_kind = "statement"
+object_id = "3e8c05d4-c42c-5e6b-86da-1c1f3ea18f6b"
+note = "The Republic contrasts the shifting appearance of sensible instances with the stable intelligible objects being discussed. Applying this contrast to the case needs a reason the apparent variability cannot be explained only by changing comparison respects, and a scope bridge to its admitted Forms."
+
+[[relation]]
+id = "ff753d7a-b86c-45d3-aa99-1eb2c374480b"
+label = "Source qualification for e2f7efca from reading a2680104"
+subject_kind = "claim"
+subject_id = "4db6b358-fa4d-57e6-aed6-7c9dcc5c674f"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "e2f7efca-ab71-5e46-aecf-13d31844d6d0"
+note = "The painter imitates the appearance of an artifact rather than its Form or the artifact as it is. The example distinguishes kinds of directed imitation and qualifies any move from resemblance or appearance-copying alone to the target's reliance on an intelligible exemplar."
+
+# Plato, Theaetetus
+
+[[relation]]
+id = "c98cba40-5ce8-45d4-85b0-e8151be00e95"
+label = "Source qualification for 534a41b0 from reading f8105408"
+subject_kind = "claim"
+subject_id = "07d148d5-ad03-5639-8019-34733e163311"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "534a41b0-1001-5824-8d35-938bdaef3e2f"
+note = "Socrates's restricted defense gives up unrestricted application in favour of a demarcated domain of appearances and city determinations. The universal retorsion must be retested for whether the thesis and its denial themselves fall in that restricted domain."
+
+[[relation]]
+id = "9a520cf9-382a-4ade-a7d8-04ea3cd731a8"
+label = "Source qualification for 534a41b0 from reading 4675f288"
+subject_kind = "claim"
+subject_id = "ce141265-737e-5932-b182-ca3b7ed61efd"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "534a41b0-1001-5824-8d35-938bdaef3e2f"
+note = "The defense distinguishes the just and holy as held by cities from what turns out advantageous. Applying the universal countercase to it requires showing that the disputed content falls in the conventional domain, with a fixed city and time."
+
+# Plato, Timaeus
+
+[[relation]]
+id = "14fe7d23-90fd-45ed-9c71-4949d7018424"
+label = "Source support for e2f7efca from reading 272eaae2"
+subject_kind = "claim"
+subject_id = "456e6897-4418-5b5c-89de-51ab9ec7ff89"
+predicate = "supports"
+object_kind = "statement"
+object_id = "e2f7efca-ab71-5e46-aecf-13d31844d6d0"
+note = "Timaeus distinguishes maker and stable model, offering a case where dependence on a model is intelligible without making the model the producer. Transfer needs the same relation for the admitted particulars, beyond the craft analogy's selected work and standard of beauty."
+
+[[relation]]
+id = "c19f51de-0265-4128-86d9-37ba145a4eb0"
+label = "Source support for e2f7efca from reading d77d31cf"
+subject_kind = "claim"
+subject_id = "0d39ec95-2dd8-536b-a555-b1e0e74d7adf"
+predicate = "supports"
+object_kind = "statement"
+object_id = "e2f7efca-ab71-5e46-aecf-13d31844d6d0"
+note = "Plato proposes the cosmos as made according to a stable exemplar, distinct in role from the maker. To apply this instance to the general premise, the case needs metaphysical warrant for that cosmological model and a justified scope beyond this one proposed cosmos."
+
+[[relation]]
+id = "9a2ca64c-27c4-4d4e-bbef-903d16bb689b"
+label = "Source support for 448dfeda from reading edff6235"
+subject_kind = "claim"
+subject_id = "a611ecd8-b941-57ea-945e-7c7dd8120c18"
+predicate = "supports"
+object_kind = "statement"
+object_id = "448dfeda-94f9-5185-a702-a799e24b4ff3"
+note = "Timaeus gives a conditional argument for Forms in themselves from the difference between understanding and true opinion. The target needs the cognitive distinction to be valid, an account of why it entails independent objects, and applicability to each admitted quality."
+
+[[relation]]
+id = "7df83a18-d385-4d88-9111-ecfa3a44f8ed"
+label = "Source qualification for e2f7efca from reading 8f11af80"
+subject_kind = "claim"
+subject_id = "29e71914-4da3-5534-931a-bb9b897f1144"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "e2f7efca-ab71-5e46-aecf-13d31844d6d0"
+note = "The passage distinguishes intelligible exemplar and sensible image while retaining a third role for receptacle. Mapping the exemplar relation alone does not model how the image's location and coming-to-be depend on that third kind."
+
+# Richard Amesbury, Fideism
+
+[[relation]]
+id = "4cf9bc12-805a-4203-b844-d4ff5fd46878"
+label = "Source qualification for 12605639 from reading ed08678e"
+subject_kind = "claim"
+subject_id = "5b0f49f2-f6a2-5d22-9e41-23243022966c"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "12605639-82ad-5434-9171-7c30107b3dfd"
+note = "Phillips's reported rejoinder accepts connections and criticism while disputing the critics' account of them. The sharper case thesis requires a denial of shared reasons in the selected practice. That cannot be read off this methodological disagreement."
+
+[[relation]]
+id = "281fa98d-3476-4ffe-890b-cc872d823b56"
+label = "Source qualification for 12605639 from reading 0a855093"
+subject_kind = "claim"
+subject_id = "76f71662-72d7-56c9-a008-e55b54243159"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "12605639-82ad-5434-9171-7c30107b3dfd"
+note = "Late Phillips as reported allows constitutive dependence on nonreligious life and denies a general premise-to-conclusion account of that dependence. It leaves individual instances of shared evidential justification open, so an application to sharp cut-off would need a stronger exclusion premise."
+
+[[relation]]
+id = "e99998d9-124b-4257-9c88-4ebfa062ee23"
+label = "Source qualification for d008f164 from reading 98cb409f"
+subject_kind = "claim"
+subject_id = "83353a54-0aa3-5224-8c22-cb949381b8e6"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "d008f164-5e50-480e-aa5c-888c5ca652ce"
+note = "The reported reading takes hinges as descriptions of practical animal certainty rather than warranted propositions at the bottom of a regress. Transfer to the case requires identifying a practice supplying credentials and explaining the status of such descriptions in the particular inquiry."
+
+[[relation]]
+id = "5b803f1c-9006-4794-a83e-5a373d047389"
+label = "Recorded rival for 12605639 from reading 943eea12"
+subject_kind = "statement"
+subject_id = "943eea12-1d82-5d4b-9853-07f6ca06069a"
+predicate = "alternative_to"
+object_kind = "statement"
+object_id = "12605639-82ad-5434-9171-7c30107b3dfd"
+note = "Pritchard's reported account puts religious and other beliefs under a shared kind of rational assessment against hinge commitments. It competes with sharp isolation without establishing that particular religious or secular claims are warranted, or that the actual Catholic practice uses the same hinges."
+
+[[relation]]
+id = "7445b3dd-b48d-40d8-bd92-2341cb145e77"
+label = "Source qualification for d008f164 from reading fe3ed69b"
+subject_kind = "claim"
+subject_id = "352e7177-e035-56e0-961c-f14da3b81ea1"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "d008f164-5e50-480e-aa5c-888c5ca652ce"
+note = "The reported rival takes the words used as hinges to lack any application, in place of making them practically warranted basic beliefs. The case needs an account of which initial commitments are assertions, which are practices, and how either can authorize the particular reasons under examination."
+
+# Richard N. Boyd, How to be a Moral Realist
+
+[[relation]]
+id = "fae6880d-9032-4b58-a41f-f92668422d8f"
+label = "Source support for 58e8a6b6 from reading 1736393d"
+subject_kind = "claim"
+subject_id = "1736393d-5e66-512b-9226-a2089d35303f"
+predicate = "supports"
+object_kind = "statement"
+object_id = "58e8a6b6-8cc5-5b17-83b4-918295222606"
+note = "Boyd's naturalist realism allows objective evaluative facts whose bases involve people and circumstances while the facts remain independent of appraisers' views. The application needs the target's moral facts and exact appraiser-attitude independence to correspond to that account."
+
+[[relation]]
+id = "bcb70f91-c348-43ae-8fc3-97ec99b51c15"
+label = "Source qualification for 0893ecbc from reading 19766eb9"
+subject_kind = "claim"
+subject_id = "8b78c43d-1742-55b6-ac18-8dffb49da81f"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "0893ecbc-dfff-56e4-8b4a-32fb906a767f"
+note = "Boyd allows an informed yet indifferent agent and treats ordinary motivational links as contingent. Applying this separation to the case's good act requires showing that lack of motivation also means lack of the specified instrumental reason for that act. The proposed psychology alone does not entail that reason claim."
+
+[[relation]]
+id = "70a03031-0b70-4f59-b669-83fedb95655d"
+label = "Source support for e0ebb8a8 from reading b5554e65"
+subject_kind = "claim"
+subject_id = "bf097963-af60-531a-9c75-25a36a3d5199"
+predicate = "supports"
+object_kind = "statement"
+object_id = "e0ebb8a8-e8ae-59c1-80e4-bcbb97a9c291"
+note = "Boyd's causal-reference account proposes that diverse conceptions can refer to one naturally defined moral goodness without analytic synonymy. The application needs a successful link from the selected ascription to that referent and independent warrant that the natural property realizes the relevant moral role."
+
+# Richmond Campbell, Moral Epistemology
+
+[[relation]]
+id = "f82776ed-ab58-49db-9fa9-84369658833b"
+label = "Source support for 2aeed907 from reading d728a751"
+subject_kind = "claim"
+subject_id = "70765690-d51e-5da6-b39d-46de64a4d5cf"
+predicate = "supports"
+object_kind = "statement"
+object_id = "2aeed907-013b-5c13-8bfb-c66d25734bc8"
+note = "Campbell records the route from justification of expressed attitudes to deflationary true moral beliefs. Applying it requires that the case's truth predicate plays that deflationary role and that its ascriptions do not require accuracy of representation."
+
+[[relation]]
+id = "47285d2d-f9a2-4538-8769-aea7f11b0ebe"
+label = "Source qualification for 2aeed907 from reading 380c8ee2"
+subject_kind = "claim"
+subject_id = "3863e501-0034-53b5-9350-7bff3ad39ded"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "2aeed907-013b-5c13-8bfb-c66d25734bc8"
+note = "Campbell's epistemology uses roughly justified true belief construed as putatively reliable representation. Deflationary truth alone under the quasi-realist view therefore leaves open whether a putative moral belief meets this knowledge criterion."
+
+# Rosalie Iemhoff, Intuitionism in the Philosophy of Mathematics
+
+[[relation]]
+id = "2526bf15-b717-4095-86a8-48971912d922"
+label = "Source qualification for 0db3a62e from reading 94b82989"
+subject_kind = "claim"
+subject_id = "3368c027-2f31-5c09-a17d-0d05a6a4dcf1"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "0db3a62e-90ec-59a3-8599-f3843f636af1"
+note = "The reported intuitionist reading distinguishes knowing a truth from admitting an arbitrary assertion. To use knowing-as-proof for the case's assertion condition, the selected assertions must be knowledge-assertions in the mathematical practice and require proof in the relevant system."
+
+[[relation]]
+id = "533bda0c-2c80-41a6-8d8b-5fee33aad44c"
+label = "Source qualification for 0db3a62e from reading fe6414bf"
+subject_kind = "claim"
+subject_id = "a622ecc3-dd59-593e-a8f9-18f80f91159e"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "0db3a62e-90ec-59a3-8599-f3843f636af1"
+note = "The reported Dummett reading ties mathematical understanding to recognition of a proof when presented. An actual assertion still needs to carry a proof in the selected setting, a stronger condition than the speaker being able to recognize one."
+
+# Rudolf Carnap, "Empiricism
+
+[[relation]]
+id = "2a695908-a262-4a20-85bf-8756c6a2bcd5"
+label = "Source qualification for cdc7a58f from reading 6f3121b6"
+subject_kind = "claim"
+subject_id = "e9ddfb3a-d40f-596b-9932-265e785499e1"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "cdc7a58f-0c17-41d9-8d9d-18b6ad5c6cc6"
+note = "Carnap challenges the slide from using an existence framework to asserting the theoretical reality of the framework from outside it. The case's object-level existence-feature claim would be subject to this restriction only if shown to be external in his sense."
+
+[[relation]]
+id = "e2a53c22-3845-4db9-a3e8-2d7036b75a6f"
+label = "Source qualification for cdc7a58f from reading 3c931390"
+subject_kind = "claim"
+subject_id = "80203a87-5d80-544e-b1f9-330102c300a7"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "cdc7a58f-0c17-41d9-8d9d-18b6ad5c6cc6"
+note = "Carnap distinguishes empirical reasons to adopt an efficient framework from evidence for the reality of the framework's world. Transferring that restriction requires deciding whether the case makes an external framework claim or asserts a feature internally, with a fixed domain and interpretation."
+
+# Rudolf Carnap, "Überwindung der Metaphysik durch logische Analyse der Sprache"
+
+[[relation]]
+id = "183e0f9a-6b53-4872-ba19-cd18c37a7078"
+label = "Source qualification for f7ae7feb from reading 366b8be6"
+subject_kind = "claim"
+subject_id = "54bd32fa-88a3-5598-8792-6b213c885c0f"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "f7ae7feb-2505-503e-8f42-5e422fd909fd"
+note = "Carnap supplies a different demarcation mechanism: look for unassigned meanings or violation of the relevant syntax in a purported sentence. To reach the case's specific philosophical claims, that test must be applied in a specified language rather than presuming the whole scope from the label metaphysical."
+
+# Stephan Leuenberger, Grounding and Necessity
+
+[[relation]]
+id = "c9575cb0-f91d-4adc-92c7-395f8c86cdce"
+label = "Source qualification for 5f9430cf from reading fee31960"
+subject_kind = "claim"
+subject_id = "71ad3d96-1833-5800-8d8f-c9feeea19486"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "5f9430cf-099b-58ce-895f-ca7681ac3ecc"
+note = "Leuenberger's proposed blocker-blocker case retains the original facts while changing what is required for their grounding role. It tests persistence of the full-ground relation despite their truth. It is not by itself a case where the selected grounds hold and the target is false."
+
+[[relation]]
+id = "893d25b4-6d64-4ca3-a791-30425b90ebb7"
+label = "Source qualification for 0af47160 from reading b46f5a59"
+subject_kind = "claim"
+subject_id = "188159b7-91d3-5f1c-a6c0-a3ba15e4a0f1"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "0af47160-bf4d-5817-9fbd-3745b6058388"
+note = "The proposed supervenience claim compares worlds agreeing on all obtaining facts. The case compares selected complete-ground facts across worlds which can differ elsewhere, so restricting the agreement to that record requires a locality premise not given by the proposed principle."
+
+[[relation]]
+id = "00ee2f41-609a-40a6-9ffb-a43974dbf303"
+label = "Source qualification for 5f9430cf from reading fb4670ed"
+subject_kind = "claim"
+subject_id = "44b715b0-95b3-5996-8a30-d31184c58dd2"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "5f9430cf-099b-58ce-895f-ca7681ac3ecc"
+note = "The source distinguishes modal consequence for the target from preservation of grounding when its relata both hold. The route can use joint necessitation without warranting internality; carrying the same ground assignment across worlds needs the separate persistence condition."
+
 # Tacitus, Annals
 
 [[relation]]
@@ -173,3 +1655,339 @@ predicate = "supports"
 object_kind = "statement"
 object_id = "e26f46c8-82df-546f-afb0-8b195c196400"
 note = "Tacitus locates Christus's execution under Pilate during Tiberius's rule. The premise requires identifying Christus with the case's Jesus, assessing the provenance of the report, and establishing crucifixion as the means of execution."
+
+# Thomas Aquinas, De ente et essentia
+
+[[relation]]
+id = "ee41ab12-c8c9-42ba-8502-a63d3f1704d8"
+label = "Source support for 6496fa98 from reading 8768c05a"
+subject_kind = "claim"
+subject_id = "62e0ab77-2a80-5e4d-8712-f333894bdd7d"
+predicate = "supports"
+object_kind = "statement"
+object_id = "6496fa98-8b7b-5948-830d-90910b8aa39a"
+note = "Aquinas distinguishes the existence of a nature in individuals from its existence in thought, assigning the species account to the latter. The target needs the account of species to apply to the selected mental or conventional sign and needs an account of how the sign expresses the individual nature without constituting it."
+
+# Thomas Aquinas, In octo libros Physicorum Aristotelis expositio
+
+[[relation]]
+id = "5aabd78a-a3e7-486d-af1f-3c9f3a503b1e"
+label = "Source support for 5588083c from reading 19b68341"
+subject_kind = "claim"
+subject_id = "cc55748d-85e1-5038-996d-a15adfc6628e"
+predicate = "supports"
+object_kind = "statement"
+object_id = "5588083c-55e5-57ce-91ff-67db25fe80fc"
+note = "Aquinas's commentary argues that a divisible mobile whose whole motion depends on motion of the parts cannot move itself primarily and per se. The case needs a bridge from that analysis to each indexed respect of the routed movement, including which intrinsic mover counts as distinct from what moves in that respect."
+
+# Thomas Aquinas, Summa contra gentiles
+
+[[relation]]
+id = "5b8d187e-42b6-4996-b46b-06a3ab546754"
+label = "Source support for 3b078622 from reading 18085727"
+subject_kind = "claim"
+subject_id = "b41fab98-4429-5308-94e4-48f1748a7cdd"
+predicate = "supports"
+object_kind = "statement"
+object_id = "3b078622-0815-5f3c-9bc0-703de1c53a68"
+note = "SCG I.28 proposes a most-perfect measure within each genus and treats God as measure of beings on the premise that God is his own esse. The route needs its selected perfection to admit a measure of that kind, and approach to the measure must track the represented degrees with the measure among the selected bearers."
+
+# Thomas Aquinas, Summa theologiae
+
+[[relation]]
+id = "13ec8fd7-4016-4b4e-b2c5-5183b35ebd5f"
+label = "Source support for 73f4b6c6 from reading dfbaeaed"
+subject_kind = "claim"
+subject_id = "841b6e42-ae00-5818-b1b3-59b10cde61c9"
+predicate = "supports"
+object_kind = "statement"
+object_id = "73f4b6c6-ba85-5b1a-9c8a-bf07587de5ce"
+note = "Aquinas accepts the Boethian definition and insists that what is truly eternal lives. Applying it to the case predicate requires both directions of calibration, including how perfect possession is represented by life with no beginning, end or succession in the supplied frame."
+
+[[relation]]
+id = "7c132f15-d8af-4fca-940b-ade65106b2cd"
+label = "Source support for 73f4b6c6 from reading 28cd336a"
+subject_kind = "claim"
+subject_id = "3a64544a-d0b1-54aa-9974-188de3d01df7"
+predicate = "supports"
+object_kind = "statement"
+object_id = "73f4b6c6-ba85-5b1a-9c8a-bf07587de5ce"
+note = "The passage specifies absence of beginning and end and of succession. The case still needs the living witness and an interpretation of the three frame predicates sufficient for perfect possession of life, with both directions of the proposed calibration."
+
+[[relation]]
+id = "918adbe7-cc92-4822-8f14-8ef3ffa64294"
+label = "Source support for 7d6a77be from reading 532947e4"
+subject_kind = "claim"
+subject_id = "1be8c83a-edef-57a7-a4c3-56e2f5cb699a"
+predicate = "supports"
+object_kind = "statement"
+object_id = "7d6a77be-86d9-519b-a40f-49f332a2e989"
+note = "Aquinas gives a reason to deny that endless time captures proper eternity: succession remains even if time has no start or finish. To witness failure of the case calibration one still needs a being in the supplied profile that has the relevant endless-life conditions and fails primitive Eternal, or the converse mismatch."
+
+[[relation]]
+id = "6b32277e-e909-4952-a369-31e7167bd431"
+label = "Source support for 73f4b6c6 from reading 0986e1be"
+subject_kind = "claim"
+subject_id = "531999e9-d92d-5494-91b2-61345636aaf0"
+predicate = "supports"
+object_kind = "statement"
+object_id = "73f4b6c6-ba85-5b1a-9c8a-bf07587de5ce"
+note = "The aevum example specifies why all-at-once in an underlying duration is insufficient when change can accompany it. The case needs its NoLifeSuccession predicate to test the relevant succession of the whole life, and the remaining life, boundary and perfect-possession conditions must calibrate primitive Eternal."
+
+[[relation]]
+id = "10be142b-1935-414b-81bd-40e3cac18e6f"
+label = "Source support for aa1cf2f4 from reading 90ce7aae"
+subject_kind = "claim"
+subject_id = "01005f7f-b540-5f1b-96af-05efa6650f83"
+predicate = "supports"
+object_kind = "statement"
+object_id = "aa1cf2f4-d13f-49ed-8d8e-8fc684b3503e"
+note = "Aquinas explicitly includes loving and delighting in possessed good within the will. Applying the claim requires identifying the resting in the target with that kind of enjoyment of an intellectually apprehended good, and separately accounting for the seeking disjunct."
+
+[[relation]]
+id = "c5a3de19-5c2e-46d3-a80c-94d4fd7f0c31"
+label = "Source support for a94c5dfc from reading aa15f6c2"
+subject_kind = "claim"
+subject_id = "1513d7a2-c790-5a53-b857-8173814f3179"
+predicate = "supports"
+object_kind = "statement"
+object_id = "a94c5dfc-c722-49fe-a242-dd39409b079d"
+note = "Aquinas takes willing to permit communication of an already possessed good and applies it to divine will. The case needs more than compatibility: giving the recipient esse must itself be willing that same recipient's actual GOOD_4, with the same giver and recipient."
+
+[[relation]]
+id = "23726705-0f4c-455a-afba-1414ac642edd"
+label = "Source support for f43962a3 from reading 358a2a59"
+subject_kind = "claim"
+subject_id = "7c42db53-e261-5d07-9b09-ed5af73427db"
+predicate = "supports"
+object_kind = "statement"
+object_id = "f43962a3-1a34-593b-8856-a97336e8ce18"
+note = "The Fifth Way concludes that one intelligent being orders all natural things to an end. The case needs natural bodies and their end-direction to instantiate the stated scope and relation, and the directing witness itself to be a first mover moved by none."
+
+[[relation]]
+id = "9660bb9b-f4f5-485a-bf6d-fe7019d813a4"
+label = "Source support for 4615d95c from reading 7f0df03a"
+subject_kind = "claim"
+subject_id = "c88cb1d6-9e9b-524c-abce-df00ec09fece"
+predicate = "supports"
+object_kind = "statement"
+object_id = "4615d95c-073d-531f-a130-a9622474bdb0"
+note = "The Third Way calls what is necessary through itself and causes necessity in others God. Applying the conclusion to the case requires its first NECESSARY_1 bearer to be this same cause, and the relevant source of necessity to count as first cause in the GOD_2 naming sense."
+
+[[relation]]
+id = "bd26a750-1904-4e2e-8bea-e29ddbe47014"
+label = "Source qualification for 1f2dec4f from reading b46de3b7"
+subject_kind = "claim"
+subject_id = "7de04d7f-9cde-536a-a61a-82cc226bf9d0"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "1f2dec4f-e494-50f7-a1df-ffd84f4f5c3c"
+note = "Objection 1 argues from infinite goodness to the absence of any evil. The Rowe-frame challenge concerns a more specific permission constraint. The earlier objection tests a stricter interpretation, requiring an independent link between goodness and nonpermission that addresses Aquinas’s reply about goods from permitted evils."
+
+[[relation]]
+id = "114256ba-9135-4e67-bce6-165059b489b4"
+label = "Source support for 94e04d71 from reading 0b6cc470"
+subject_kind = "claim"
+subject_id = "e287801d-cc36-5088-8dd3-6fc9b8ba5ed5"
+predicate = "supports"
+object_kind = "statement"
+object_id = "94e04d71-f5e3-5d0b-99fd-1fa01df090e9"
+note = "The source's first reason treats genus and constituting difference as taken from what stands as potency and act. The application needs every proper genus inclusion in the case to work that way and the same GOD_4 witness to lack the relevant potency."
+
+[[relation]]
+id = "70b6ced4-b153-4e7e-a8c0-1efa1bdcadae"
+label = "Source support for 94e04d71 from reading 7e4d96db"
+subject_kind = "claim"
+subject_id = "ed34b6e5-95e6-5964-be7c-aefc34545118"
+predicate = "supports"
+object_kind = "statement"
+object_id = "94e04d71-f5e3-5d0b-99fd-1fa01df090e9"
+note = "The source argues that the members of a genus share generic quiddity but differ in their acts of being. The application needs the resulting esse–essence distinction for every proper generic member and identity of represented esse and essence for the same GOD_4 witness."
+
+[[relation]]
+id = "40f1b56b-d421-4294-b192-bab6649ef3c8"
+label = "Source support for 700215cd from reading bd823369"
+subject_kind = "claim"
+subject_id = "e246cc99-d2fd-5d00-8054-d60117167f12"
+predicate = "supports"
+object_kind = "statement"
+object_id = "700215cd-e9b9-465c-9075-fd6583f197eb"
+note = "Aquinas distinguishes grasping an object as being from the suitably good aspect under which appetite bears on it. This bears on the target's good-as-apprehended reading. It leaves open that this same divine intellectual act apprehends a good through a form and that the form actualizes in the selected sense."
+
+[[relation]]
+id = "e6272447-5780-4962-99ed-1ee9d592aa61"
+label = "Source support for 2f9b4acb from reading 2ff8536f"
+subject_kind = "claim"
+subject_id = "d80b7c61-6454-5aff-a67e-d2c54667ede5"
+predicate = "supports"
+object_kind = "statement"
+object_id = "2f9b4acb-4bd5-4adb-91ac-8935f46f2e69"
+note = "Aquinas attributes the continued esse of creatures to the creator's current action, distinguishing power in another from intrinsic mutability. To use it here, the contingent bearers at w must all fall under its creature scope and the continuing giver must instantiate the distinct actual CAUSE_2 relation at that same w."
+
+[[relation]]
+id = "8c4675fe-9b6c-48bf-84d3-b7a06019a006"
+label = "Source support for d3719938 from reading 1da5a2cf"
+subject_kind = "claim"
+subject_id = "5e35ca62-df61-539a-81b4-f0d7f106a888"
+predicate = "supports"
+object_kind = "statement"
+object_id = "d3719938-01ef-58f8-8ffb-d4fc88c7aa28"
+note = "The passage places primary precepts in practical reason and its ensuing explanation grounds the first in the good. Application requires matching the source's pursuit and avoidance imperatives and practically apprehended good to the target's selected vocabulary."
+
+# Thomas Uebel, Vienna Circle
+
+[[relation]]
+id = "b7992e0c-96ca-45c7-bd9b-d6ce2e44f82e"
+label = "Source qualification for 46132461 from reading 3d17ecdd"
+subject_kind = "claim"
+subject_id = "68b62c1a-d4e9-592a-b656-f1796741ef65"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "46132461-9a9b-498f-b3d9-304e2f3ac57e"
+note = "The report identifies Hempel's abandonment of a purely deductive observation-sentence test following the difficulties of overexclusion and trivial verification. It qualifies retaining that implementation of the case criterion. It gives no reason by itself to discard every non-deductive notion of empirical relevance."
+
+# Unattributed website author, Necessary Being interactive survey
+
+[[relation]]
+id = "95c4d966-6294-42f1-8341-19f5f0f80fd4"
+label = "Source qualification for 21d6f7cc from reading d9f0874e"
+subject_kind = "claim"
+subject_id = "51ae5d09-3fd6-5520-b8da-99edf27fc83f"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "21d6f7cc-1af2-54c8-8202-2b443ebb9bef"
+note = "The proposed negative size answer removes one candidate class distinction on the reconsideration path. Applying the causal default still needs an actual reason to extend the observations across sizes and to the selected first contingent, with counter-reasons retained."
+
+[[relation]]
+id = "259f4841-23ab-4328-b3a3-faa0a710c6f7"
+label = "Source qualification for 21d6f7cc from reading 73038871"
+subject_kind = "claim"
+subject_id = "6fb88b40-8e35-59d3-b3e6-a125631de5fb"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "21d6f7cc-1af2-54c8-8202-2b443ebb9bef"
+note = "The proposed negative shape answer removes a candidate class distinction on this path. It leaves the empirical warrant for size and shape irrelevance and the applicability of the default to a selected first contingent open."
+
+[[relation]]
+id = "8d2abd86-43ed-4a11-a2f4-8f9ea378bc90"
+label = "Source qualification for 21d6f7cc from reading d52637d4"
+subject_kind = "claim"
+subject_id = "c9f76aad-a86e-5658-88c1-a885e2d4bc5c"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "21d6f7cc-1af2-54c8-8202-2b443ebb9bef"
+note = "The negative parts answer is one survey branch, alongside affirmative and uncertain answers. The default still needs support for disregarding part structure in the relevant causal domain, and an applicability bridge for the first contingent."
+
+[[relation]]
+id = "1ea6868e-add4-4e41-8a8a-fc3eeef613df"
+label = "Source qualification for 21d6f7cc from reading e5bc0254"
+subject_kind = "claim"
+subject_id = "9915bc2a-70a8-562b-a9eb-8511233a1adb"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "21d6f7cc-1af2-54c8-8202-2b443ebb9bef"
+note = "The survey tests whether the respondent would extend causal expectation to a hypothetical beginning of a partless angel. Using the affirmative answer requires independent reason for the conditional and then for applying it to other partless contingents, including the selected case."
+
+[[relation]]
+id = "6610899a-757b-4c21-8954-d5934b349c22"
+label = "Source qualification for 21d6f7cc from reading 20512890"
+subject_kind = "claim"
+subject_id = "663ce43d-1352-5612-9023-fcccd8e085a0"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "21d6f7cc-1af2-54c8-8202-2b443ebb9bef"
+note = "The conditional generalization is proposed for respondents on the hypothetical angel path. Assessing it requires evidence that the relevant cause applies across other partless things and that a first contingent falls in that reference class."
+
+[[relation]]
+id = "21853296-1442-4c21-adcc-7b5176413038"
+label = "Source qualification for f8df66df from reading 81910509"
+subject_kind = "claim"
+subject_id = "6df9a65c-e512-569b-83c9-23a635d87312"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "f8df66df-2114-583d-8e36-9617f356442e"
+note = "The arbitrary-X prompt elicits a defeasible default and explicitly invites dissent or uncertainty. Its application to a first contingent requires representative selection with respect to causal eligibility and a reason why the selection of the first case does not defeat that default."
+
+[[relation]]
+id = "246559ce-5527-4bbc-91d9-ac185d037158"
+label = "Source qualification for 21d6f7cc from reading 81089332"
+subject_kind = "claim"
+subject_id = "13b1e98d-e2ba-5bd9-b0d6-2dc3744d9e16"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "21d6f7cc-1af2-54c8-8202-2b443ebb9bef"
+note = "This version re-asks the defeasible default under the automatic-actuality classification. It can transfer the original default only if the revised contingency class and the possible first contingent preserve the evidence supporting the original induction and its exceptions."
+
+[[relation]]
+id = "5b65a90c-169d-41c4-9c49-d5ef42fbaa89"
+label = "Source qualification for d8a1fb16 from reading be9715f8"
+subject_kind = "claim"
+subject_id = "be9715f8-e6d8-5c86-9e36-3d122d3dfa36"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "d8a1fb16-ce20-542f-9e3b-d9350468e331"
+note = "The A1 proof explicitly assumes the respondent's unqualified causal report and applies it to the alleged contingent sum. The case needs the same contingent class and qualifying cause in the selected world. The report itself supplies no independent evidence of that global actual coverage."
+
+[[relation]]
+id = "a6e2d86f-ac80-4599-88e1-208cf75bf175"
+label = "Source support for b241b5ca from reading 49958bf6"
+subject_kind = "claim"
+subject_id = "194b1e45-e217-5eef-877f-7ab8a8233e5f"
+predicate = "supports"
+object_kind = "statement"
+object_id = "b241b5ca-e790-5145-bc9a-4154e266bb55"
+note = "The survey excludes self-causation of coming to exist and separately excludes production solely by one's own parts. Applying the first clause requires the survey's cause of coming to exist to match the case's originating relation on the same bearer. The parts clause would require a further mereological bridge."
+
+[[relation]]
+id = "acfd4174-a483-46d6-bad2-8c06d00f48e4"
+label = "Source qualification for d8a1fb16 from reading 8895a07f"
+subject_kind = "claim"
+subject_id = "8895a07f-e4e1-5bd5-acff-83196f9c804b"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "d8a1fb16-ce20-542f-9e3b-d9350468e331"
+note = "A2 invokes the earlier unqualified report to classify a possible uncaused chain head as noncontingent. Its use for the selected actual coverage claim needs a bridge from the survey's qualified cause and contingent classes to existing individuals and their existing causes at that world."
+
+[[relation]]
+id = "270c910f-45aa-47bf-aa71-f732c2924103"
+label = "Source qualification for 91aa6a43 from reading 46880625"
+subject_kind = "claim"
+subject_id = "ed1ca28e-7565-5355-bc26-99691dbbb589"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "91aa6a43-053f-58ef-8483-711d1c4dd5cd"
+note = "The survey stipulates N implying necessarily N. A10's possibility-to-actuality step still requires the axiom at the relevant accessible world, a suitable return accessibility law, and a bridge between the base nominal definition and A10's selected notion of a necessary being."
+
+[[relation]]
+id = "0c1cddec-b35d-4c64-923b-386c27724be6"
+label = "Source qualification for 0e9c1b46 from reading 374b2de5"
+subject_kind = "claim"
+subject_id = "7bb7c49b-a06a-59f7-bdde-88adc1c788b1"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "0e9c1b46-9752-5c59-a7ad-5b937ee1061b"
+note = "The survey's nominal test combines possible causal capability and impossibility of ever failing to exist. Transferring A1's conclusion to the case requires deriving the case's rigid-world necessity and actual existence for the same cause of the whole. The source's temporal and modal clauses alone do not identify that witness."
+
+# Wilfrid Sellars, Empiricism and the Philosophy of Mind
+
+[[relation]]
+id = "34a69bcd-671c-4adf-b85e-882fedc48bb3"
+label = "Source qualification for 849086f4 from reading 9f9b341f"
+subject_kind = "claim"
+subject_id = "b75776db-ebfc-5eb0-98b3-ac323c9c4726"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "849086f4-532e-50a1-9590-eec583a4873c"
+note = "Sellars's restriction is directed at describing and explaining the world. A conclusion that every existent is natural additionally requires delimiting which entities count as scientific and defending why that domain exhausts the ontology in the case's sense."
+
+# Zachary D. Blount and colleagues, Genomic and phenotypic evolution of Escherichia coli in a novel…
+
+[[relation]]
+id = "2512240c-6427-4abc-8c3f-354721de7bbb"
+label = "Source qualification for 552054cf from reading d326d98b"
+subject_kind = "claim"
+subject_id = "719e994c-cd98-5f48-bd7c-cbacbbc4b8e5"
+predicate = "qualifies"
+object_kind = "statement"
+object_id = "552054cf-6a9d-56f6-bd5f-7e7f377793c5"
+note = "Refinement in the reported populations occurs alongside fitness declines or persistent physiological mismatch in some cases. The mechanism can explain local adaptive refinement without giving a uniform optimality principle. Application needs a match from the measured traits to the specified natural end."

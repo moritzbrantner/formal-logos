@@ -1,0 +1,10 @@
+{
+  "id": "568acd38-fc40-4815-a52d-8284903161ea",
+  "label": "Source support for 2f9b4acb from reading 2ff8536f",
+  "subject_kind": "claim",
+  "subject_id": "d80b7c61-6454-5aff-a67e-d2c54667ede5",
+  "predicate": "supports",
+  "object_kind": "statement",
+  "object_id": "2f9b4acb-4bd5-4adb-91ac-8935f46f2e69",
+  "note": "Aquinas attributes the continued esse of creatures to the creator's current action, distinguishing power in another from intrinsic mutability. To use it here, the contingent bearers at w must all fall under its creature scope and the continuing giver must instantiate the distinct actual CAUSE_2 relation at that same w."
+}

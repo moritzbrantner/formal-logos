@@ -1,0 +1,10 @@
+{
+  "id": "a094abbb-a9f3-43c1-82d4-c077c2645db4",
+  "label": "Source qualification for 21d6f7cc from reading d52637d4",
+  "subject_kind": "claim",
+  "subject_id": "c9f76aad-a86e-5658-88c1-a885e2d4bc5c",
+  "predicate": "qualifies",
+  "object_kind": "statement",
+  "object_id": "21d6f7cc-1af2-54c8-8202-2b443ebb9bef",
+  "note": "The negative parts answer is one survey branch, alongside affirmative and uncertain answers. The default still needs support for disregarding part structure in the relevant causal domain, and an applicability bridge for the first contingent."
+}

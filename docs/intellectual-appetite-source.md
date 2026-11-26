@@ -578,3 +578,13 @@ specialization, `directionOfPracticalSpecification`, from the broader
 effect-wise result. It has no additional evidential independence from
 coverage, rejection and recognition. The governing end may differ by
 effect, and the benefit and authority conclusions have separate bridges.
+
+## Willing a possessed good (2026-11-26)
+
+ST I q.19 includes delight in possessed good and argues that already having a
+good allows communication of it to others. The case would still need the same
+divine giver to will the recipient's esse as the recipient's good. The
+distinction in q.80 between apprehension and appetite helps fix what the
+good-as-apprehended means, while leaving actualizing form as a separate premise.
+
+[Thomas Aquinas reading attempt](../corpus/attempts/e1970646-f032-4195-b150-e6aeeae51420.json).

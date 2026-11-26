@@ -1,0 +1,10 @@
+{
+  "id": "d0d40350-0355-43d8-a2a5-fa227ef967f1",
+  "label": "Source qualification for 552054cf from reading d326d98b",
+  "subject_kind": "claim",
+  "subject_id": "719e994c-cd98-5f48-bd7c-cbacbbc4b8e5",
+  "predicate": "qualifies",
+  "object_kind": "statement",
+  "object_id": "552054cf-6a9d-56f6-bd5f-7e7f377793c5",
+  "note": "Refinement in the reported populations occurs alongside fitness declines or persistent physiological mismatch in some cases. The mechanism can explain local adaptive refinement without giving a uniform optimality principle. Application needs a match from the measured traits to the specified natural end."
+}

@@ -1,0 +1,10 @@
+{
+  "id": "642487b8-a637-4f35-bd55-67510ba76638",
+  "label": "Source qualification for 46132461 from reading 0caaf0d8",
+  "subject_kind": "claim",
+  "subject_id": "07ff4c32-130b-55b9-8bc9-3af9680c27b5",
+  "predicate": "qualifies",
+  "object_kind": "statement",
+  "object_id": "46132461-9a9b-498f-b3d9-304e2f3ac57e",
+  "note": "Ayer's 1936 criterion tests whether adding a sentence changes experiential consequences relative to auxiliary premises. Applying the self-test requires representing that contrast and identifying which auxiliaries and sentences are allowed, including the criterion's own statement."
+}

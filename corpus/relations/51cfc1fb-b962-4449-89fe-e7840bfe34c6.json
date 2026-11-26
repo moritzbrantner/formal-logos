@@ -1,0 +1,10 @@
+{
+  "id": "51cfc1fb-b962-4449-89fe-e7840bfe34c6",
+  "label": "Source qualification for 1eeadd04 from reading 702126ae",
+  "subject_kind": "claim",
+  "subject_id": "3a221563-077a-525e-9ba9-006d06051de4",
+  "predicate": "qualifies",
+  "object_kind": "statement",
+  "object_id": "1eeadd04-81f5-5c53-b6b4-21ae4190f434",
+  "note": "Socrates agrees to some classes of Forms and hesitates or declines others in the dialogue. The admitted quality domain must be specified before the formation rule applies. The passage does not give a general admission rule for natural kinds, artifacts or every common predicate."
+}

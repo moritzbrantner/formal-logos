@@ -1,0 +1,10 @@
+{
+  "id": "20e0cc2f-e3f6-487f-90d0-c6d115d50e6d",
+  "label": "Source qualification for 46132461 from reading afa7a288",
+  "subject_kind": "claim",
+  "subject_id": "53f64561-9829-5283-bd46-8d921d97bd9e",
+  "predicate": "qualifies",
+  "object_kind": "statement",
+  "object_id": "46132461-9a9b-498f-b3d9-304e2f3ac57e",
+  "note": "The reported Hempel argument adds negation closure to the verification criterion. Its stronger reading applies to every meaningful sentence. Any argument against the case criterion using negated laws must declare this as an extra assumption and preserve the sense of meaningfulness."
+}

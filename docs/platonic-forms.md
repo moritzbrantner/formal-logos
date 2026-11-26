@@ -181,3 +181,15 @@ clarify the positive proposal and its limits; they introduce no argument,
 result, axiom or new dependency. Source integrity, source fidelity and formal
 consequence remain separate. The bounded Phaedo investigation does not close
 #360 or adjudicate all Platonism.
+
+## Participation, predication and access (2026-11-26)
+
+The Parmenides separates opposing predications of participants from predication
+of the Forms and considers several admission and participation rules. The Phaedo
+treats Forms as hypotheses and offers recollection as a specific account of
+access. The Timaeus distinguishes the stable model from maker and receptacle.
+Using these readings requires preserving which relation and sort of object a
+particular test concerns. The strongest knowledge-isolation reading would need
+its own closure and scope before challenging divine knowledge of creatures.
+
+[Plato reading attempt](../corpus/attempts/62f2f15a-1c94-4af3-b771-fef59967535f.json), [Plato reading attempt](../corpus/attempts/2cf1b5f9-93cc-46db-9eb7-610aa3c97d41.json), [Plato reading attempt](../corpus/attempts/0fb0af7b-95f1-4e97-a6b6-fc288202be14.json), [Plato reading attempt](../corpus/attempts/6d2f9f85-3091-44c4-a6ca-95a92b47e73e.json).

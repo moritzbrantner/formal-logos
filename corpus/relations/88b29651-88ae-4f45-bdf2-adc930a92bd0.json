@@ -1,0 +1,10 @@
+{
+  "id": "88b29651-88ae-4f45-bdf2-adc930a92bd0",
+  "label": "Source qualification for 5f9430cf from reading b3b979bc",
+  "subject_kind": "claim",
+  "subject_id": "1c6a18df-8623-5c21-8496-3341eb8cb86f",
+  "predicate": "qualifies",
+  "object_kind": "statement",
+  "object_id": "5f9430cf-099b-58ce-895f-ca7681ac3ecc",
+  "note": "Richardson's what-grounding makes necessity part of the real-definition explanation. This warrants testing the case premise on that reading. The admitted complete-ground relations must realize such real definitions before that defense transfers."
+}
