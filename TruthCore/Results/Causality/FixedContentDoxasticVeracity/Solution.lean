@@ -25,9 +25,9 @@ theorem accurateFromFixedContent (σ : Signature) (V : Veracity σ) {W Content :
   have believed := calibrated.2 g god attributes k contentAssent
   exact names ▸ aligned (believed c.actual (access g god attributes))
 
-open TruthCore.Causality.DivineVeracityContent1410.Control (σ semantics a selective)
+open TruthCore.Causality.DivineVeracityContent1410.Control (σ a selective)
 open TruthCore.Causality.FixedContentDoxasticVeracity.Control
-  (pointed veracity always alwaysAssents)
+  (semantics pointed veracity always alwaysAssents)
 
 private theorem positiveCalibration :
     FixedAssentCalibration σ (veracity True) (pointed false) semantics (fun _ => True) selective := by

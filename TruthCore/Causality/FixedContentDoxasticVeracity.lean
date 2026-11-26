@@ -33,7 +33,17 @@ def FixedAssentCalibration (σ : Signature) (V : Veracity σ) {W Content : Type}
 
 namespace Control
 
-open TruthCore.Causality.DivineVeracityContent1410.Control (σ semantics a selective)
+open TruthCore.Causality.DivineVeracityContent1410.Control (σ a selective)
+
+/-- The existing tagged truth table with a constructive negation certificate.
+This keeps the finite controls within the zero-axiom verifier policy. -/
+def semantics : Semantics Bool (Bool × Bool × Bool) where
+  trueAt w k := (if w then k.2.1 else k.1) = true
+  neg k := (!k.1, !k.2.1, k.2.2)
+  neg_true_iff := by
+    intro w k
+    obtain ⟨atFalse, atTrue, tag⟩ := k
+    cases w <;> cases atFalse <;> cases atTrue <;> cases tag <;> decide
 
 def pointed (actual : Bool) : Context σ.Being Bool :=
   ⟨fun _ => fixed (· = false), actual⟩
