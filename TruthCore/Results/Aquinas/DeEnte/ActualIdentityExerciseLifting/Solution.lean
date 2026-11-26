@@ -58,23 +58,44 @@ private theorem exerciseFeedbackEdge (c x : Bool) :
 private theorem alternatingSuccessor (n : ℕ) :
     alternatingExerciseBearer (n + 1) ≠ alternatingExerciseBearer n := by
   unfold alternatingExerciseBearer
-  by_cases parity : n % 2 = 0
-  · have next : (n + 1) % 2 ≠ 0 := by omega
-    simp [next, parity]
-  · have next : (n + 1) % 2 = 0 := by omega
-    simp [next, parity]
+  have next := (Nat.mod_add_mod n 2 1).symm
+  rcases Nat.mod_two_eq_zero_or_one n with even | odd
+  · rw [even] at next
+    rw [next, even]
+    decide
+  · rw [odd] at next
+    rw [next, odd]
+    decide
 
 /-- The existing finite feedback example fails lifting. An unbounded
 alternating chain still projects to the same bearer return even when
 every eligible exercise has the required supplier exercise. -/
 theorem exerciseLiftingControls : ExerciseLiftingControls := by
-  have controls := TruthCore.Results.Causality.TemporalActualization.Controls.controls
-  obtain ⟨_, acyclicFeedback, aToB, bToA⟩ := controls.1
-  obtain ⟨_, acyclicChain, _⟩ := controls.2.2.2.1
+  have feedbackIncreasing {e f : Fin 3} (path : Relation.TransGen feedbackC e f) :
+      e.val < f.val := by
+    induction path with
+    | single edge =>
+      exact Nat.lt_of_succ_le (Nat.le_of_eq edge)
+    | tail _ edge ih =>
+      exact Nat.lt_trans ih (Nat.lt_of_succ_le (Nat.le_of_eq edge))
+  have acyclicFeedback : EventAcyclic feedbackC :=
+    fun e path => Nat.lt_irrefl e.val (feedbackIncreasing path)
+  have chainDecreasing {e f : ℕ} (path : Relation.TransGen unboundedExerciseSupply e f) :
+      f < e := by
+    induction path with
+    | single edge =>
+      change _ = _ + 1 at edge
+      exact Nat.lt_of_succ_le (Nat.le_of_eq edge.symm)
+    | tail _ edge ih =>
+      change _ = _ + 1 at edge
+      exact Nat.lt_trans (Nat.lt_of_succ_le (Nat.le_of_eq edge.symm)) ih
+  have acyclicChain : EventAcyclic unboundedExerciseSupply :=
+    fun e path => Nat.lt_irrefl e (chainDecreasing path)
   have identityExactly (r : Bool) :
       exerciseFeedbackProfile.InAct r exerciseFeedbackProfile.esse ∧
         exerciseFeedbackProfile.esseOf r = exerciseFeedbackProfile.essenceOf r ↔ r = true := by
-    cases r <;> simp [exerciseFeedbackProfile, sourceFreeFiniteCircle]
+    change (True ∧ Bool.not r = false) ↔ r = true
+    cases r <;> decide
   have returns : ¬ ActualIdentityAncestryAcyclic exerciseFeedbackProfile := by
     intro acyclic
     exact acyclic true trivial rfl
@@ -87,12 +108,14 @@ theorem exerciseLiftingControls : ExerciseLiftingControls := by
       have different := edge.1
       cases c <;> cases x
       · exact (different rfl).elim
-      · exact aToB
-      · exact bToA
+      · exact ⟨0, 1, rfl, rfl, rfl⟩
+      · exact ⟨1, 2, rfl, rfl, rfl⟩
       · exact (different rfl).elim
     · rintro ⟨e, f, rfl, rfl, edge⟩
       apply (exerciseFeedbackEdge _ _).2
-      fin_cases e <;> fin_cases f <;> simp_all [feedbackC, feedbackBearer]
+      have distinctBearers : ∀ e f : Fin 3, e.val + 1 = f.val →
+          decide (e.val = 1) ≠ decide (f.val = 1) := by decide
+      exact distinctBearers e f edge
   have finiteFibres : ActualIdentityExerciseFibresFiniteNonempty
       exerciseFeedbackProfile feedbackBearer := by
     intro r active identity
@@ -103,17 +126,15 @@ theorem exerciseLiftingControls : ExerciseLiftingControls := by
       exerciseFeedbackProfile feedbackBearer feedbackC := by
     intro lift
     obtain ⟨e, _, edge⟩ := lift true false ((exerciseFeedbackEdge true false).2 (by decide)) 0 rfl
-    have impossible : e.val + 1 = 0 := edge
-    omega
+    exact Nat.succ_ne_zero e.val edge
   have infiniteLift : BackwardActualEsseExerciseLifting exerciseFeedbackProfile
       alternatingExerciseBearer unboundedExerciseSupply := by
     intro c x edge f target
     refine ⟨f + 1, ?_, rfl⟩
     have opposite := alternatingSuccessor f
     rw [target] at opposite
-    have different := edge.1
-    cases c <;> cases x <;> cases prior : alternatingExerciseBearer (f + 1) <;>
-      simp_all
+    have uniqueOther : ∀ c x e : Bool, c ≠ x → e ≠ x → e = c := by decide
+    exact uniqueOther c x (alternatingExerciseBearer (f + 1)) edge.1 opposite
   have infiniteProjection (c x : Bool) :
       ActualEsseCause exerciseFeedbackProfile c x ↔
         BeingEdge alternatingExerciseBearer unboundedExerciseSupply c x := by
@@ -131,11 +152,9 @@ theorem exerciseLiftingControls : ExerciseLiftingControls := by
   have infiniteFibre : { e | alternatingExerciseBearer e = true }.Infinite := by
     apply Set.infinite_of_injective_forall_mem (f := fun n : ℕ => 2 * n)
     · intro n m equal
-      change 2 * n = 2 * m at equal
-      omega
+      exact Nat.eq_of_mul_eq_mul_left (by decide : 0 < 2) equal
     · intro n
-      have even : (2 * n) % 2 = 0 := by omega
-      simp [alternatingExerciseBearer, even]
+      exact decide_eq_true (Nat.mul_mod_right 2 n)
   exact ⟨identityExactly, returns, ⟨acyclicFeedback, finiteProjection, finiteFibres, finiteNoLift⟩,
     ⟨acyclicChain, infiniteProjection, infiniteLift, infiniteFibre, ⟨0, rfl⟩⟩⟩
 
