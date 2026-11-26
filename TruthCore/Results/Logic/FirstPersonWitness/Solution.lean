@@ -182,8 +182,8 @@ theorem nonconcretePerformerControl :
   exact ⟨⟨(), trivial, trivial⟩, fun _ _ _ => ⟨(), rfl, trivial⟩, fun _ _ _ => trivial,
     fun _ _ _ here _ => here, trivial, rfl, fun classify => classify () rfl, fun ⟨_, h, _⟩ => h⟩
 
-/-- The performed-act and realization markers hold in the other slice, where
-the performer exists. The selected slice has no realizing occurrence.
+/-- The marked act has a realizer whose occurrence is confined to the other world,
+where its assigned performer exists. The selected slice has no realizing occurrence.
 Bearing and world-local existential import are both retained. -/
 theorem elsewherePerformerControl :
     DoubtIsPerformed marked marked ∧

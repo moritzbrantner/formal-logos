@@ -1041,7 +1041,11 @@ remains separate from this dictionary.
    grounds the local realization of `1722a80f` when thought includes cognitive
    questioning. Alternatively, intentionally assert a selected content, fixing
    the assertion of that content and its cognitive realizer
-   (`b45ca9db`, `1edfc1d1`). Reading a quotation aloud or observing a speech
+   (`b45ca9db`, `1edfc1d1`). Attending to one act warrants the instance for
+   that act. The registered agency inputs quantify over every asserter of the
+   content, or every performed doubt of the kind, in the supplied
+   interpretation; an application that restricts them to this occasion must
+   say so explicitly. Reading a quotation aloud or observing a speech
    marker can supply the same words without this assertion. In either
    application `OccursAt w` must track the actual standpoint of the
    performance. A report about a different occasion needs independent grounds
@@ -1086,7 +1090,12 @@ occurrence and bearing on the aligned Cartesian dictionary, as recorded in
 [the consolidation](../../corpus/attempts/0596124f-4712-4c66-864b-a86a86bd19f8.json).
 To use either for this application, identify the designated candidate with the
 actual inquirer, and apply the presence and classification steps to their
-episode. The modification premise `5581cd7f` supplies a different path, via
+episode. That identification fixes the bearer, but these inputs say only that
+this bearer bears some occurring thought, which could be a different thought at
+the same world. For local existence, locating the supplied episode at `w` and
+applying presence suffices. For the same-performance conclusion, one must
+additionally establish that this episode realizes the selected assertion or
+doubt, or supply bearing directly for that realizer. The modification premise `5581cd7f` supplies a different path, via
 the thesis that modifications have bearers. It is dispensable for the
 performance path. Likewise, `bbfacacc` and `ac0a151f` can route a realized
 assertion through experienced occurrence to a bearer. They require
@@ -1102,7 +1111,7 @@ representative with the performer needs a separate reason.
 | Thin performer | One cognitive event with this content, present access, and an actual agent exercising it. | Correcting and continuing the very inquiry supplies positive warrant for thin, token-level attribution. An organized inquirer can satisfy this role on several ontologies. |
 | Impersonal thought, the Lichtenberg-style alternative | The questioning occurs, with the same content and cognitive function. | Treat the apparent subject expression as an impersonal way to register an occurrence, as in reporting a flash. The grammar therefore cannot warrant `c2fa06f2` or the bearer existential. This supplies an undercutter of an inference from grammatical self-reference, while leaving open whether the performance itself has an agent. |
 | Organized bundle | Present questioning, answer and correction are related occurrences. | Their continuity can come from retention of the question and integration with the next response. This challenges `5581cd7f` read as requiring a substrate, because the organization does explanatory work that positing an additional bare owner alone does not explain. If the organized process counts as the performer it also grants thin bearing. A strictly bearerless bundle needs a reason why its integrated activity never qualifies as thin bearing. |
-| Illusion of a substantial self | There is questioning and a representation attributing it to a unified self. | A self-model can bind question, memory and response, while simplifying or misidentifying the process doing the work. This undercuts inferring a persistent or simple self from how an episode appears. It can reject a reading of `22954087` on which the meditator is that represented substantial self. The mechanism still permits an actual process as the bearer. Phenomenal illusionism is a separate challenge to the `bbfacacc` branch when phenomenal classification means intrinsic qualitative properties. |
+| Illusion of a substantial self | There is questioning and a representation attributing it to a unified self. | A self-model can bind question, memory and response, while simplifying or misidentifying the process doing the work. This undercuts inferring a persistent or simple self from how an episode appears. It can reject a reading of `22954087` on which the meditator is that represented substantial self. The mechanism still permits an actual process as the bearer. Phenomenal illusionism concerns a different reading, of `Experienced` in the `bbfacacc` branch; this mechanism gives no independent ground for failure of that premise, so it is recorded as an untested reading with no adverse weight. |
 
 These are proposed replacement mechanisms for the same local exercise,
 with historical attribution deferred. Orientation only: Lichtenberg,

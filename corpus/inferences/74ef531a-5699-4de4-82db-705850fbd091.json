@@ -9,7 +9,7 @@
   ],
   "output_statement_id": "43253cd8-62be-4528-85e4-54806bd3fac0",
   "rule": "Instantiate the bearing and world-existence rules at the asserter and realizing episode",
-  "meaning": "Assembly transcription, attribution deferred. Take an agent actually asserting the selected content and an episode realizing that assertion at the selected world. The realization premise uses the selected world's occurrence slice. Instantiate the agency premise with this asserter and their matching occurrence and realization. This explicitly requires that the matching asserter bears the episode. The world-indexed presence bridge puts that bearer into the selected existence extension. The exported conclusion is existence in that extension; the companion witness adds the in-re esse contract for concreteness of the same bearer.",
+  "meaning": "Assembly transcription, attribution deferred. The frozen agency input quantifies over every asserter of the selected content in the supplied interpretation; OccursAt w localizes the required episodes but does not restrict that quantifier to this performance. Take an agent actually asserting the selected content and an episode realizing that assertion at the selected world. The realization premise uses the selected world's occurrence slice. Instantiate the agency premise with this asserter and their matching occurrence and realization. This explicitly requires that the matching asserter bears the episode. The world-indexed presence bridge puts that bearer into the selected existence extension. The exported conclusion is existence in that extension; the companion witness adds the in-re esse contract for concreteness of the same bearer.",
   "assumption_statement_ids": [],
   "discharged_statement_ids": []
 }

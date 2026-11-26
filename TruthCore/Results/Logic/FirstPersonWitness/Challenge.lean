@@ -149,8 +149,8 @@ theorem nonconcretePerformerControl :
     ¬ InhabitedConcreteAt (ontic false) (HasEsseInRe (inAct False) ()) false := by
   sorry
 
-/-- The performed-act and realization markers hold in the other slice, where
-the performer exists. The selected slice has no realizing occurrence.
+/-- The marked act has a realizer whose occurrence is confined to the other world,
+where its assigned performer exists. The selected slice has no realizing occurrence.
 Bearing and world-local existential import are both retained. -/
 theorem elsewherePerformerControl :
     DoubtIsPerformed marked marked ∧
