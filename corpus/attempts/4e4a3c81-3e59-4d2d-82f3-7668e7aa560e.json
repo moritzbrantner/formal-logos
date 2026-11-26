@@ -25,7 +25,8 @@
     "4f934468-3157-4d9f-b606-35832ae1c9af",
     "PR-1973",
     "83352ac5-6ec3-48e1-a91f-3e9379e59f3b",
-    "8353b4b6-b22b-45d2-8216-a32b12df5707"
+    "8353b4b6-b22b-45d2-8216-a32b12df5707",
+    "PR-2007"
   ],
   "current_assessment": {
     "date": "2026-11-26",
@@ -39,10 +40,10 @@
     "assessment": "Under the causal naming converse, exclusion of a distinct esse cause at a maximum yields unity with either a supplied maximal witness or the maximality of each God candidate. The dependence route requires both dependence of the effect on its esse cause and exclusion of mutual dependence between distinct bearers. Two universal givers would violate that exclusion. Each proof uses the stated identity case split. Evidence of a giver for each recipient fits both universal and partitioned supply. The maximal witness is actual in esse, which permits the restriction of the naming premise to actual recipients in that proof. A common maximal giver on every finite panel and one exhaustively finite panel population yield one giver for every actual recipient. A flat infinite order passes every finite test while each candidate misses its successor. With an independently underived maximum fixed, testing its pairs is equivalent to its direct coverage. Complete factorization and a closed impression record illustrate how an exhaustive inventory could be warranted in their respective domains.",
     "next_test": "Track what gives the being of recipients in two proposed domains. For the dependence argument with restricted scope, establish actuality in esse of each God candidate or justify causal reach to both candidates. For one actual recipient, establish which maximal candidates could directly give it esse and what excludes any further one. Include the recipient itself when maximal.",
     "note": "docs/notes/maximum-definition-fork.md#can-finite-panels-identify-the-same-actual-giver-of-esse",
-    "reviewed_revision": "a505d9c76046c00931028cbd56a5f71102a0afd9",
-    "review": "unreviewed",
-    "publication": "unpublished",
-    "evidence": "The independent challenge checked the three complete unity arguments, models and same-signature assembly. The final review retained the actual-recipient scope of the maximal-witness argument and both dependence premises. Four configurations passed Comparator and NanoDa. The prior disposition applies to the earlier scope at 4ad2728c3588178de0771e0504ac42254b543242. Additional proposed findings and checked declarations are linked in the new section.",
+    "reviewed_revision": "d9e45e107032f1b64a48d7fea3306b17c0c4aaf0",
+    "review": "accepted_qualified",
+    "publication": "published",
+    "evidence": "The independent challenge checked the three complete unity arguments, models and same-signature assembly. The final review retained the actual-recipient scope of the maximal-witness argument and both dependence premises. Four configurations passed Comparator and NanoDa. The prior disposition applies to the earlier scope at 4ad2728c3588178de0771e0504ac42254b543242. The independent challenge accepted the fixed-dictionary finite-hitting application, sharp bound for every positive candidate count, underived pair criterion and infinite omission. The actual existence of an exhaustive panel roster and direct productive reach remain open. Targeted recheck accepted d9e45e107032f1b64a48d7fea3306b17c0c4aaf0. PR #2007.",
     "supersedes": "Extends the previous assessment at 4ad2728c3588178de0771e0504ac42254b543242 with finite candidate tests for a maximal direct giver on the same actual dictionary."
   }
 }
