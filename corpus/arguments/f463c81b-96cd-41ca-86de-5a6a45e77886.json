@@ -1,0 +1,15 @@
+{
+  "id": "f463c81b-96cd-41ca-86de-5a6a45e77886",
+  "label": "Characterize a shared setting and realize it on the same disjoint ray family",
+  "premise_statement_ids": [
+    "c98408fd-f39e-4f47-a104-36b4c52ef617"
+  ],
+  "conclusion_statement_id": "166fd469-2bfa-4e82-a96e-84dcac10f7f9",
+  "inference_ids": [
+    "5b31a007-c87b-4258-8843-459db6782af9"
+  ],
+  "meaning": "With one shared setting, every live observation reads the same bit and cut positions report off. In the reverse direction use any live reading as the setting, or off if there are no live readings. The parallel-ray realization gives this setting simultaneously to the distinct rays while leaving their local supplier relation fixed. The companion shows that two live observations on distinct rays have immediate suppliers and cannot have a common immediate supplier in this graph. The stipulation that the readings are synchronized supplies no metaphysical efficient-cause identity.",
+  "definition_ids": [
+    "e1b95906-8d38-59c3-abee-0ccc1c9d333b"
+  ]
+}

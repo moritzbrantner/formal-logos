@@ -1,0 +1,12 @@
+{
+  "id": "dac5aead-46bd-4cda-8543-d91274e4f144",
+  "label": "Count panel reports by assigning a Boolean to each observed live ray (inference)",
+  "input_statement_ids": [
+    "2b807b2a-85e0-48ab-bc51-d8aaf6d24aad"
+  ],
+  "output_statement_id": "1c0c612e-9e2c-45e8-b0ca-aa721af9e512",
+  "rule": "Use the bijection between feasible reports and Boolean assignments indexed by the live ray image",
+  "meaning": "Assign one bit to each ray in the image of the live observations, reading it at each live position and reporting off elsewhere. Each live ray has a representative observation, so different assignments give different reports. Every feasible report supplies a well-defined bit on each observed live ray by within-ray agreement. Apply the finite function-space cardinality formula. This measures possible reports, with no frequency or probability law assumed.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

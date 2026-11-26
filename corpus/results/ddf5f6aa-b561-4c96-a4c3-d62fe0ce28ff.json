@@ -1,0 +1,11 @@
+{
+  "id": "ddf5f6aa-b561-4c96-a4c3-d62fe0ce28ff",
+  "label": "Characterize a shared setting and realize it on the same disjoint ray family",
+  "argument_id": "f463c81b-96cd-41ca-86de-5a6a45e77886",
+  "challenge_module": "TruthCore.Results.Causality.RayObservation.Challenge",
+  "solution_module": "TruthCore.Results.Causality.RayObservation.Solution",
+  "theorem": "TruthCore.Results.Causality.RayObservation.sharedSwitchCharacterization",
+  "comparator_config": "results/ddf5f6aa-b561-4c96-a4c3-d62fe0ce28ff/comparator.json",
+  "status": "solution-present",
+  "description": "With one shared setting, every live observation reads the same bit and cut positions report off. In the reverse direction use any live reading as the setting, or off if there are no live readings. The parallel-ray realization gives this setting simultaneously to the distinct rays while leaving their local supplier relation fixed. The companion shows that two live observations on distinct rays have immediate suppliers and cannot have a common immediate supplier in this graph. The stipulation that the readings are synchronized supplies no metaphysical efficient-cause identity."
+}

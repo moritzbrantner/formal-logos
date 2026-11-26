@@ -1,0 +1,11 @@
+{
+  "id": "bfceed8b-1f6e-48d0-a9c4-500037d5fa69",
+  "label": "Count panel reports by assigning a Boolean to each observed live ray",
+  "argument_id": "ce0d9876-e07a-4f19-bce3-7ad18d10a39c",
+  "challenge_module": "TruthCore.Results.Causality.RayObservation.Challenge",
+  "solution_module": "TruthCore.Results.Causality.RayObservation.Solution",
+  "theorem": "TruthCore.Results.Causality.RayObservation.finiteRayReportCount",
+  "comparator_config": "results/bfceed8b-1f6e-48d0-a9c4-500037d5fa69/comparator.json",
+  "status": "solution-present",
+  "description": "Assign one bit to each ray in the image of the live observations, reading it at each live position and reporting off elsewhere. Each live ray has a representative observation, so different assignments give different reports. Every feasible report supplies a well-defined bit on each observed live ray by within-ray agreement. Apply the finite function-space cardinality formula. This measures possible reports, with no frequency or probability law assumed."
+}
