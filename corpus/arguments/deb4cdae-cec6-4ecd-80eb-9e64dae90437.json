@@ -1,0 +1,29 @@
+{
+  "id": "deb4cdae-cec6-4ecd-80eb-9e64dae90437",
+  "label": "Selected-world CONCRETE_6 fork from the esse-to-CONCRETE_6 direction",
+  "premise_statement_ids": [
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410",
+    "2d9807a5-ebff-45fd-972f-e241f18713d4"
+  ],
+  "conclusion_statement_id": "ed5aa44a-3dcc-54fd-aee3-8db5aed71f9c",
+  "inference_ids": [
+    "51b39cc9-8375-4cc7-a28e-91e7011a2466"
+  ],
+  "meaning": "Excluded middle splits on the selected countercase. When it is absent, each power holder or candidate with an outgoing causal edge at the selected world must have esse in re, since its absence would witness a selected countercase. The one-direction calibration then classifies that same candidate as concrete. The supplied grounds field has no role.",
+  "definition_ids": [
+    "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168",
+    "d662ee50-cdd3-517b-bd8a-024dca5929d0",
+    "008cb21a-256c-5a90-822c-acd4591d699a",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "d8e2ed12-8089-5202-ae51-e807cf611c76",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ],
+  "disambiguation_ids": [
+    "32416dd1-c3ce-5180-bf06-1cabab088be7",
+    "623ddbf6-9683-5361-bae4-e348a00ec680",
+    "dba7b1de-f3a0-57af-9af9-b2a4da3136fa"
+  ],
+  "strong_version_needed": {
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "Cases decide whether the selected countercase occurs and whether individual power holders or causers have esse in re. ca432e24 covers only specific equality formulas against a GOD_4 candidate."
+  }
+}

@@ -17,5 +17,8 @@
   "disambiguation_ids": [
     "623ddbf6-9683-5361-bae4-e348a00ec680",
     "32416dd1-c3ce-5180-bf06-1cabab088be7"
-  ]
+  ],
+  "strong_version_needed": {
+    "0c1b8438-fef8-5e2e-b42a-49d9d2e1f2df": "counterFailure uses .mp to turn the owner's concreteness conclusion for the selected holder or causer into esse in re, contradicting the no-esse witness. The esse-to-concrete sibling supplies the opposite direction."
+  }
 }

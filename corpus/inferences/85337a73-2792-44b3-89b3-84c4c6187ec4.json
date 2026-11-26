@@ -1,0 +1,12 @@
+{
+  "id": "85337a73-2792-44b3-89b3-84c4c6187ec4",
+  "label": "Esse calibration supplies its CONCRETE_6 direction (inference)",
+  "input_statement_ids": [
+    "0c1b8438-fef8-5e2e-b42a-49d9d2e1f2df"
+  ],
+  "output_statement_id": "2d9807a5-ebff-45fd-972f-e241f18713d4",
+  "rule": "Specialize the biconditional to a bearer and apply its reverse implication",
+  "meaning": "Assembly by projection on the supplied Frame. Retain f.ontic, f.concrete, f.InAct and f.esse in the receiving profile. Any grounding predicate on that carrier can accompany the profile because the conclusion never reads it. The projected direction takes esse in re to CONCRETE_6, with the same HasEsseInRe predicate. No power, causal, or actual-world existence condition is supplied.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

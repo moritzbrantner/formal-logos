@@ -42,6 +42,7 @@ public import TruthCore.Results.Case.Catholicism.MaximeEnsIsGodStrength.Solution
 public import TruthCore.Results.Case.Catholicism.MaximumFirstByPriorCause.Solution
 public import TruthCore.Results.Case.Catholicism.PossessionConsumerReductions.Solution
 public import TruthCore.Results.Case.Catholicism.PreexistenceWithoutTransfer.Solution
+public import TruthCore.Results.Case.Catholicism.PremiseRestrictions.Solution
 public import TruthCore.Results.Case.Catholicism.Q11NatureUniqueness.Solution
 public import TruthCore.Results.Case.Catholicism.QuartaViaClassicalWitness.FromMaximeEns
 public import TruthCore.Results.Case.Catholicism.QuartaViaClassicalWitness.Solution
@@ -90,3 +91,4 @@ public import TruthCore.Results.Case.Catholicism.StrengthConsumers.RootFull.Solu
 public import TruthCore.Results.Case.Catholicism.StrengthConsumers.RootIdentity.Solution
 public import TruthCore.Results.Case.Catholicism.StrengthConsumers.RootQ11.Solution
 public import TruthCore.Results.Case.Catholicism.StrengthConsumers.StageOneFull.Solution
+public import TruthCore.Results.Case.Catholicism.WeakEsseCalibration.Solution

@@ -1,0 +1,28 @@
+{
+  "id": "c7817ba6-5ad8-44ed-8d36-0503446bf54c",
+  "label": "Esse calibration supplies its CONCRETE_6 direction",
+  "premise_statement_ids": [
+    "0c1b8438-fef8-5e2e-b42a-49d9d2e1f2df"
+  ],
+  "conclusion_statement_id": "2d9807a5-ebff-45fd-972f-e241f18713d4",
+  "inference_ids": [
+    "85337a73-2792-44b3-89b3-84c4c6187ec4"
+  ],
+  "meaning": "Assembly by projection on the supplied Frame. Retain f.ontic, f.concrete, f.InAct and f.esse in the receiving profile. Any grounding predicate on that carrier can accompany the profile because the conclusion never reads it. The projected direction takes esse in re to CONCRETE_6, with the same HasEsseInRe predicate. No power, causal, or actual-world existence condition is supplied.",
+  "definition_ids": [
+    "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168",
+    "c789e1fb-e4fc-5d7c-b594-58b3761067ab",
+    "008cb21a-256c-5a90-822c-acd4591d699a",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ],
+  "disambiguation_ids": [
+    "32416dd1-c3ce-5180-bf06-1cabab088be7",
+    "623ddbf6-9683-5361-bae4-e348a00ec680",
+    "dba7b1de-f3a0-57af-9af9-b2a4da3136fa"
+  ],
+  "strong_version_needed": {
+    "0c1b8438-fef8-5e2e-b42a-49d9d2e1f2df": "This result registers the projection from the stronger statement."
+  },
+  "weakening": true
+}

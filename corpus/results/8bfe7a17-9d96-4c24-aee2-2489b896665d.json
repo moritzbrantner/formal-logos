@@ -1,0 +1,11 @@
+{
+  "id": "8bfe7a17-9d96-4c24-aee2-2489b896665d",
+  "label": "A common first esse giver from one actual bearer and well-founded causes",
+  "argument_id": "042c14f6-0050-43f7-b2ba-72dde5a2f0ef",
+  "challenge_module": "TruthCore.Results.Case.Catholicism.PremiseRestrictions.Challenge",
+  "solution_module": "TruthCore.Results.Case.Catholicism.PremiseRestrictions.Solution",
+  "theorem": "TruthCore.Results.Case.Catholicism.PremiseRestrictions.commonSourceOfOne",
+  "comparator_config": "results/8bfe7a17-9d96-4c24-aee2-2489b896665d/comparator.json",
+  "status": "solution-present",
+  "description": "Keep the ancestry principle, at-most-one identity bearer, well-foundedness and excluded middle of 5ab6cc2b. One actual bearer suffices: if it has represented esse–essence identity, use it directly, and if distinct, use its supplied identity ancestor. The inherited one-bearer argument identifies the selected identity bearer as the common source and excludes actual incoming supply by ruling out a nonempty return path. All premises are recorded explicitly. The conclusion supplies only the common source in the fixed esse profile."
+}

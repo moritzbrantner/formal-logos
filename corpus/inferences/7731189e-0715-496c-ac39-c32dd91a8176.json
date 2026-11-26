@@ -1,0 +1,18 @@
+{
+  "id": "7731189e-0715-496c-ac39-c32dd91a8176",
+  "label": "Necessary holder of global-absence power with selected-world Euclidean access (inference)",
+  "input_statement_ids": [
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410",
+    "1b1462e6-c285-448c-87e2-3053bc05a341",
+    "94393b5b-8950-4a52-aef1-50cd09232e64",
+    "fffa0693-d04d-4387-b43d-514e092f72d1",
+    "2d2be120-ac0a-405f-b4b3-7cc68be1f320",
+    "0dc833c1-3b2f-4769-a09e-531f0da12455",
+    "c76b6e2c-1ca0-47fd-a9d0-2c2faa3d1174"
+  ],
+  "output_statement_id": "84d02356-5dac-4ce5-9f9e-4cebf12f96f2",
+  "rule": "Use two successors of w to test contingency of the same power-holder at its initiating history",
+  "meaning": "The global-absence power-content, grounding, initiating-history and concreteness predicates are unchanged. The global absence possibility and actual contingency give a holder at w. Initiator presence puts that holder in a successor v with no contingent concrete beings. If any successor u of w lacked it, the edge from v to u given by EuclideanAt at w would make it contingent at v. Excluded middle gives necessary existence at w. The result keeps the global power content.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

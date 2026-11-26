@@ -1,0 +1,12 @@
+{
+  "id": "a3aec1ef-cca5-4500-bdc1-7dd27fdf8305",
+  "label": "Finite nonempty identity exercise fibres give inhabited fibres",
+  "argument_id": "fa383cda-c593-4051-8558-53c29e55b6b5",
+  "challenge_module": "TruthCore.Results.Case.Catholicism.PremiseRestrictions.Challenge",
+  "solution_module": "TruthCore.Results.Case.Catholicism.PremiseRestrictions.Solution",
+  "theorem": "TruthCore.Results.Case.Catholicism.PremiseRestrictions.inhabitedOfFiniteNonempty",
+  "comparator_config": "results/a3aec1ef-cca5-4500-bdc1-7dd27fdf8305/comparator.json",
+  "status": "solution-present",
+  "description": "Assembly by projection. For each actual identity bearer in the fixed q3a4 profile, take a witness from the nonempty fibre of the same eligible exercise bearer map. Actuality and represented esse–essence identity are the same guards on both sides.",
+  "transcription": "assembly"
+}
