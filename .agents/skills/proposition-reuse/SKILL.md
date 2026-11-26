@@ -42,6 +42,20 @@ target/release/truth brief <STMT-ID>          # or: brief --question "..."
 target/release/truth novelty "<claim>"        # or: novelty --statement <STMT-ID>
 ```
 
+**Reuse gate before writing a theorem or model.** Also run
+`target/release/truth synthesis --question "<formal goal in ordinary words>"`
+with the load-bearing terms (and known Lean identifiers). Inspect both the
+registered results and the Lean library candidates, including off-route
+helpers. For example, search "contingent necessary ancestor descent" before
+reconstructing a regress argument. Open the exact declarations, compare their
+hypotheses, conclusion, sense and witness, and apply or import the existing
+result if it already answers the question. If it does not, name the exact
+missing premise or adapter; do not re-prove the common logical skeleton or
+recreate existing controls. A missing CLI or a failed lexical search is a
+retrieval limitation, not evidence of novelty; inspect the relevant Lean
+modules directly before proposing new proof code. Report the existing proof
+and the remaining philosophical application separately.
+
 Add `--issues-from FILE` with an offline `gh issue list`/`gh pr list --state all
 --json number,title,body,url,state,comments,updatedAt` snapshot where available. Both are
 advisory: a missing hit or snapshot is not evidence that no prior work exists.
