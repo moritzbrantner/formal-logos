@@ -1,0 +1,28 @@
+{
+  "id": "e7fe1c6a-f223-4060-8b0a-7ed26560c075",
+  "label": "Meaningful and arguable natural theology connection plan",
+  "statement_ids": [
+    "563c5fc9-76dd-5d21-b936-3c4a5b82332c",
+    "7969efe1-0d11-553d-bccb-6afe1758df88",
+    "b74c90bd-fa08-5e72-b687-ab8bfc589fae"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "An admitted argument for a meaningful divine content needs the actual case conclusion represented as that content, an admitted argument roster, and world-grounded premises. Formal consequence, independent warrant and finite observation proof are separate profile standards. Certify one candidate representation under its chosen standard before assessing the exact negative. Introduced in a4571a738.",
+  "evidence": [
+    "PR-2086",
+    "d0b1c36d-f2c8-5594-a94f-e47bed6545b0"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
+    }
+  ],
+  "blocker": "Connection target 8626f8a5-9531-5da7-9ebd-f901e74b1129. The scoped bridge described in the summary remains open."
+}

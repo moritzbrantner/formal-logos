@@ -1,0 +1,25 @@
+{
+  "id": "511a2d50-be61-4dea-8b1e-5019967c6972",
+  "label": "Finite population cover application connection plan",
+  "statement_ids": [
+    "b9bf4eb8-ccac-5960-a8c7-c01bf24fbb33"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "Reuse finite_cover_deRe on the exact Frame/ExistsAt signature. Bind a finite cover at the same base world with reachable-successor existence, absence amalgamation, de dicto population and excluded middle. Applying its witness to God existence additionally needs the route's actual concrete root condition.",
+  "evidence": [
+    "PR-2086"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
+    }
+  ],
+  "blocker": "Connection target b62deb46-c451-5971-a569-cc5c0f44a398. The scoped bridge described in the summary remains open."
+}

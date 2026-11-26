@@ -1,0 +1,25 @@
+{
+  "id": "4a389529-42fc-48e8-987c-e40cebd3e605",
+  "label": "Unranked actual grounding connectivity finding",
+  "statement_ids": [
+    "a68b219e-9ebc-475f-9a6b-9088f5468418"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "Typed exact denial of the same graph's Nat rank, with a standing reverse-successor interpretation and a conditional uniform-potential exclusion. Connected to 47e323f2-3405-5caf-a192-201eb1e02f76.",
+  "evidence": [
+    "PR-2086",
+    "af7171b5-371a-497d-9486-c73b5b9d3002"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
+    }
+  ]
+}

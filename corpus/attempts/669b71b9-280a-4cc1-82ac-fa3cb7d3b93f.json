@@ -1,0 +1,27 @@
+{
+  "id": "669b71b9-280a-4cc1-82ac-fa3cb7d3b93f",
+  "label": "Available per-accidens exercise connection plan",
+  "statement_ids": [
+    "b767da06-4865-4ab1-a43e-e9b8f6a51c0c",
+    "e53ac959-9bd6-4bee-9b43-00dab238ae2c"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "Availability converts universal continued exercise to an existential removal witness. The case still needs an interpretation of removal that tracks the nominated active support rather than an unrelated absent cause. Establish that relation and contrast retained power with retained exercise on the same event. Introduced in ddcfa884a.",
+  "evidence": [
+    "6b6e4a07-7079-4d75-ad6f-97df7bb6749b",
+    "PR-2086"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
+    }
+  ],
+  "blocker": "Connection target 97f5850f-62bc-5e43-a0c1-dd1033d08fc9. The scoped bridge described in the summary remains open."
+}

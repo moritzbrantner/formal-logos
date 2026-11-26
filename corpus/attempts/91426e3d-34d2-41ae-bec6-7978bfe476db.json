@@ -1,0 +1,25 @@
+{
+  "id": "91426e3d-34d2-41ae-bec6-7978bfe476db",
+  "label": "Strict maximum calibration connection plan",
+  "statement_ids": [
+    "a22e4d97-1bec-53bc-82f9-1135b05b9bde"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "Strict supremacy excludes tied maxima. Show that the given degree representation preserves MoreIn in the selected respect and establish pointwise comparison for distinct maximal bearers before treating the calibration as the route's meaning.",
+  "evidence": [
+    "PR-2086"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
+    }
+  ],
+  "blocker": "Connection target a4814f25-84b0-560e-870a-eb3a23a6a35b. The scoped bridge described in the summary remains open."
+}

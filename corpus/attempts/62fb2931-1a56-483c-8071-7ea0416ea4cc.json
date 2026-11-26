@@ -1,0 +1,25 @@
+{
+  "id": "62fb2931-1a56-483c-8071-7ea0416ea4cc",
+  "label": "Population and root existence stability connection plan",
+  "statement_ids": [
+    "fcea3f8b-e991-4d2c-8bdb-6eb8ef4ccff1"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "Population is substantive on the actual roster. The other conjunct is stability of the very existence proposition, available from excluded middle when that premise is accepted. Align the actual profile and demonstrate a consumer where the narrower stability law replaces the wider logical input.",
+  "evidence": [
+    "PR-2086"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
+    }
+  ],
+  "blocker": "Connection target c71c068c-bbae-5ed5-a99d-70b155c8d239. The scoped bridge described in the summary remains open."
+}

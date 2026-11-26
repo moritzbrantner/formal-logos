@@ -1,0 +1,29 @@
+{
+  "id": "7464ab8b-3e03-4b3f-a94b-c82dcbc4b002",
+  "label": "Humean selective theological withholding connection plan",
+  "statement_ids": [
+    "055f21e3-1018-52e7-a304-744d21663c7c",
+    "149769ba-e647-5a26-90c3-a1f2211df637",
+    "7c1fdce9-5065-5444-a9ac-ec9fe31c4778",
+    "9be6fea1-4c23-5462-a26b-d8ebb45adb9d"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "The equality-of-standard theorem needs both a positive science verdict and identical relevant evidential bases. Compare one actual causal-law inference with one specific causal route premise at the same scope; preserve a possible difference between repeatable trials and a whole-order explanation. Introduced in 9098aaa6b.",
+  "evidence": [
+    "PR-2086",
+    "b12998e1-aa83-5fff-9809-428de36162f8"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
+    }
+  ],
+  "blocker": "Connection target 8626f8a5-9531-5da7-9ebd-f901e74b1129. The scoped bridge described in the summary remains open."
+}

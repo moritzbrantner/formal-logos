@@ -1,0 +1,25 @@
+{
+  "id": "588421a7-2233-4a70-8046-ec6272a86128",
+  "label": "Victim-directed moral claim connection plan",
+  "statement_ids": [
+    "681f5b58-90e7-5379-bc29-8ca3b2d9feab"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "The victim's own standing is stronger than there being a claim by someone. A downstream use needs an independently justified authority covering the selected gratuitous injury and a bridge to the exact moral evil premise.",
+  "evidence": [
+    "PR-2086"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
+    }
+  ],
+  "blocker": "Connection target 1aa52dcb-7d39-507c-89ce-73629cdc0abd. The scoped bridge described in the summary remains open."
+}

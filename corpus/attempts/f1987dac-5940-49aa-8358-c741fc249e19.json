@@ -1,0 +1,27 @@
+{
+  "id": "f1987dac-5940-49aa-8358-c741fc249e19",
+  "label": "Ranked Platonic explanation connection plan",
+  "statement_ids": [
+    "421753f3-8c96-5aff-a9cc-ec0fdd7a5fd7",
+    "a6e152ba-96fe-5f86-8ef0-a9ff9a85155a"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "Transport requires the Parmenides interpretation's Ground relation to preserve the direction and both actual-concreta guards of the selected actual grounding relation. Rank proves asymmetry in each matching representation, but the quality-indexed explanation vocabulary does not identify those relations. Introduced in e661dcb7c.",
+  "evidence": [
+    "PR-2086",
+    "e25f2bd1-915e-52e6-ace1-6cc13e62fa96"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
+    }
+  ],
+  "blocker": "Connection target 39f7c63d-b372-564c-b18a-ed09d02dda9a. The scoped bridge described in the summary remains open."
+}

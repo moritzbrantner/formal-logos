@@ -1,0 +1,43 @@
+{
+  "id": "a0f5bc3a-646d-487d-9069-36d14ed01cd7",
+  "label": "Meaning and negation-closure comparisons connection plan",
+  "statement_ids": [
+    "2c0d4ee4-42f9-5a4f-a65c-b4ca29d26889",
+    "6550c86d-c9a9-5552-a9cd-99c709066bd8",
+    "741649d4-028a-5f24-a694-4fea2dc472c1",
+    "7a6a60f5-1cdd-52bc-9ea3-f213214c277a",
+    "81956ae5-7b73-5203-8031-4c5d84834fc5",
+    "895fc3f2-83a4-564f-9b27-c65869369e30",
+    "8addbebd-9f1c-5726-ac12-02c4272f8b01",
+    "a7a75d73-0695-50aa-a2ef-10f43bb48aa6",
+    "b533a399-dd04-5993-8218-fcbbed81c631",
+    "c22d6c3f-a3c5-5835-a973-bf81114972ab",
+    "ce0e7645-7a7b-5a83-af85-8696ac079c70",
+    "d7f2fa30-9254-5214-9714-cc7909c1d7ca",
+    "ed056065-c976-5bb2-920c-779dd97f45eb"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "The V1/V2/V3 rejections test supplied meaning calibrations. A live objection to the God-existence case requires interpreting its exact GOD_4 content in the same language, applying one of the calibrations to that content and defending that criterion on that scope. The scoped rejections do not supply those interpretation and warrant commitments. Introduced in c23db91c4, f68605f0c.",
+  "evidence": [
+    "02b50f9d-694f-5dc1-a6ba-0fb995150cf7",
+    "1730c593-657b-5491-93a1-f6c52098665f",
+    "6c7eaa48-8c27-5b01-80a1-669ad9567110",
+    "8aa484b7-c76f-50a2-975f-0e4340e439f6",
+    "903d12fa-9d4b-59a0-b403-8b774f08e7d8",
+    "PR-2086",
+    "ea1fb669-24ae-51c3-b4cc-3830354f26fb"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
+    }
+  ],
+  "blocker": "Connection target 8626f8a5-9531-5da7-9ebd-f901e74b1129. The scoped bridge described in the summary remains open."
+}

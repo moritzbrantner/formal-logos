@@ -694,3 +694,8 @@ provides a mover in some respect, while the reduction premise of the prima
 via asks for a mover in the very respect in which the subject moves. A bridge
 must supply that alignment for the respect-free constructor and connect
 accidental-mover coverage to actual reductions in the stated domain.
+
+- [Unranked actual grounding connectivity finding](../../corpus/attempts/4a389529-42fc-48e8-987c-e40cebd3e605.json)
+- [Q14 pointwise foreign-form reception connection plan](../../corpus/attempts/8098a6d6-afc1-467c-8b3b-5e74e52f632f.json)
+- [Procedurally selected whole-series exercise connection plan](../../corpus/attempts/9c67743d-c18c-4663-87bf-6978ca7f85ad.json)
+- [Respect-free mover fork connection plan](../../corpus/attempts/b9061349-cd4e-4378-bef4-9cbdcab219d9.json)

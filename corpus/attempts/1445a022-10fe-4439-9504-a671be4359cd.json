@@ -1,0 +1,26 @@
+{
+  "id": "1445a022-10fe-4439-9504-a671be4359cd",
+  "label": "Teleonomy as a Fifth-Way rival connection plan",
+  "statement_ids": [
+    "4f5017ba-3ff6-5502-bd79-1727283d9e9a",
+    "9ecddae6-90d2-536e-bb26-11ab29751f4a"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "Use the nonliving physical-law proposal on one directed natural process and test whether it specifies its particular end, rather than recurrence alone. An explanatory stopping point about laws is separable from their truth and from denying a knowing director.",
+  "evidence": [
+    "PR-2086"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
+    }
+  ],
+  "blocker": "Connection target 564ce19b-c9df-5031-b20e-3cb1baee124f. The scoped bridge described in the summary remains open."
+}
