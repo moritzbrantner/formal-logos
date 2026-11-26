@@ -3,7 +3,8 @@ vocab = "TruthCore.Causality.BenefitPlanWitness"
 results = "TruthCore.Results.Causality.BenefitPlanWitness"
 
 [[statement]]
-id = "At least one governing plan rejects omission of the distinct recipient's esse as its good"
+id = "1733629b-f6d4-4804-9a9b-1af74e2747c0"
+label = "If a plan governs GOD_4 giving to a distinct actual recipient, one rejects omitting its esse credit"
 lean = "SomeGoverningPlanRejectsBenefitOmission"
 paraphrase = "OPEN, analyst formulation. At w, for each GOD_4 giver and each distinct recipient in act in esse for which some plan governs successfully, at least one successfully governing plan rejects the assessment with just the recipient's esse credit as its own good removed. It can be a different plan from the first witness. The edit keeps the bare output and every other role fixed."
 definitions = ["DEF-GOD-OF-CLASSICAL-THEISM", "DEF-ESSE", "fbd163ad-ec01-45d1-a749-f90a1de6ea37", "a84afabf-d6e6-424d-a792-2fa874c466a5"]
@@ -18,7 +19,7 @@ definitions = ["DEF-ESSE", "DEF-GOD-OF-CLASSICAL-THEISM", "DEF-HAS-INTELLECT", "
 id = "A beneficiary requirement in every governing plan suffices for one witness"
 theorem = "someFromEvery"
 premises = ["df6c64a6-02dc-414a-be8e-dccd035b8872"]
-conclusion = "At least one governing plan rejects omission of the distinct recipient's esse as its good"
+conclusion = "1733629b-f6d4-4804-9a9b-1af74e2747c0"
 axioms = []
 rule = "Use the existing governing plan as the omission witness"
 meaning = "For the same actual distinct recipient, obtain a governing plan from the antecedent. Since the universal rejection test applies to it, this plan witnesses the existential test."
@@ -26,7 +27,7 @@ meaning = "For the same actual distinct recipient, obtain a governing plan from 
 [[argument]]
 id = "One governing beneficiary standard suffices for GOD_4 recipient willing"
 theorem = "recipientOfSomeGoverningPlan"
-premises = ["4be0f774-2c0a-4691-9088-6e790940960a", "At least one governing plan rejects omission of the distinct recipient's esse as its good", "437438f0-183c-48e5-8d84-f82b94fabf3e"]
+premises = ["4be0f774-2c0a-4691-9088-6e790940960a", "1733629b-f6d4-4804-9a9b-1af74e2747c0", "437438f0-183c-48e5-8d84-f82b94fabf3e"]
 conclusion = "3655f59f-9ab4-4c5d-8fb2-474810d29418"
 axioms = ["propext", "Classical.choice", "Quot.sound"]
 rule = "Extract the required benefit from one operative plan"
@@ -48,6 +49,6 @@ subject_kind = "statement"
 subject_id = "df6c64a6-02dc-414a-be8e-dccd035b8872"
 predicate = "strengthens"
 object_kind = "statement"
-object_id = "At least one governing plan rejects omission of the distinct recipient's esse as its good"
+object_id = "1733629b-f6d4-4804-9a9b-1af74e2747c0"
 verification_result_id = "A beneficiary requirement in every governing plan suffices for one witness"
 note = "At the same g, x, w and plan interpretation, the universal test applies to any existing witness. The mixed-plan control displays why the reverse implication can fail."

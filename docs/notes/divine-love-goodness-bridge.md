@@ -935,8 +935,9 @@ constitutive account.
 
 ## Which operative standard needs to count the recipient's esse? (2026-11-26)
 
-The love route needs one successfully governing plan that treats the distinct
-recipient's esse as its good. It can tolerate other governing standards for
+For the plan-based derivation of `3655f59f`, one successfully governing plan
+that requires crediting the distinct recipient's esse as its good suffices,
+given coverage and benefit recognition. It can tolerate other governing standards for
 the same production that require only output and placement in a wider order.
 The weaker omission test, [1733629b][one-plan], applies to a GOD_4 giver and
 a distinct recipient in act in esse at the selected world. Its antecedent
@@ -990,11 +991,14 @@ a whole fixes an obligatory place for each effect in it. These leads
 supply no new corpus attribution or support edge here. I q.22 a.1 co. and
 ad 2–3 already give a pinned distinction between the conception of order,
 a willed end and execution. I q.22 a.2 co. and ad 1 give the scope
-argument from universal causality. Its illustrated exclusion of an
-interfering cause outside the producer's order does not settle what
-belongs to the practical specification when the first cause itself
-has an incidental effect. To sustain end omission (b1d7825e), one needs
-a required role for x in the actual order, even if the role is subordinate.
+argument from universal causality, and ad 1 treats an effect fortuitous
+relative to a particular cause as provided for relative to the universal
+cause. Inclusion of every effect in the providential order still leaves open
+whether each successfully governing plan for this giving requires some
+end-placement of this recipient, which is the quantifier in end omission
+(b1d7825e). A role required by one governing plan does not yet meet that
+universal test. To sustain end omission, one needs a required role for x in
+every such plan, even if the role is subordinate.
 The semantics permits an end shared across effects. For end recognition
 (f8cd0849), adopting and realizing x's place supplies prima facie grounds
 under the case's directing sense. An observer's correct assignment of

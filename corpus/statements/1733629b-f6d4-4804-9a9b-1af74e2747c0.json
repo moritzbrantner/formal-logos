@@ -1,6 +1,6 @@
 {
   "id": "1733629b-f6d4-4804-9a9b-1af74e2747c0",
-  "label": "At least one governing plan rejects omission of the distinct recipient's esse as its good",
+  "label": "If a plan governs GOD_4 giving to a distinct actual recipient, one rejects omitting its esse credit",
   "paraphrase": "OPEN, analyst formulation. At w, for each GOD_4 giver and each distinct recipient in act in esse for which some plan governs successfully, at least one successfully governing plan rejects the assessment with just the recipient's esse credit as its own good removed. It can be a different plan from the first witness. The edit keeps the bare output and every other role fixed.",
   "lean_declaration": "TruthCore.Causality.BenefitPlanWitness.SomeGoverningPlanRejectsBenefitOmission",
   "definition_ids": [
