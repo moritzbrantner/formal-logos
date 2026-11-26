@@ -1,0 +1,10 @@
+{
+  "id": "e12fa246-fff3-4b98-95a2-64861ad5eef6",
+  "label": "Distinct reciprocal production obstructs common strict extension (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "78ad36f6-821e-486c-9342-277fc8f0bf6d",
+  "rule": "Use the four-edge closed walk through both Boolean bearers and acts",
+  "meaning": "The fixed Bool interpretation has only distinct production edges and still has a mixed cycle. It separates the conclusion of noSelf from the global common-order hypothesis.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

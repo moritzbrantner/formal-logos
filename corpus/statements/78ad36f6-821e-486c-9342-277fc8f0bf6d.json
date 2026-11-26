@@ -1,0 +1,10 @@
+{
+  "id": "78ad36f6-821e-486c-9342-277fc8f0bf6d",
+  "label": "Reciprocal distinct production can preclude a common strict mixed order",
+  "paraphrase": "On Bool bearers and Bool acts, all acts occur, each is borne by the matching Boolean, and each produces just the other bearer. No occurring act produces its own bearer, but there is no common strict mixed order satisfying both interfaces.",
+  "lean_declaration": "TruthCore.Causality.ExistentialPriorityOrder.ReciprocalProductionControl",
+  "definition_ids": [
+    "d6aed40f-2703-4cf5-852a-369fbacd085c",
+    "eee784e7-d27d-5ccd-835b-2e03b344b7f8"
+  ]
+}

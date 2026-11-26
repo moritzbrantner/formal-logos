@@ -1,0 +1,64 @@
+[batch]
+vocab = "TruthCore.Causality.ExistentialPriorityOrder"
+results = "TruthCore.Results.Causality.ExistentialPriorityOrder"
+
+[[statement]]
+id = "Required bearer and production edges have no finite closed walk"
+lean = "RequiredEdgesAcyclic"
+paraphrase = "OPEN analyst premise for the given occurrence, bearer and production-of-being data. The union of the required bearer-to-occurring-act and occurring-productive-act-to-product edges has no nonempty finite closed walk on Sum B E."
+definitions = ["Required existential-production edges and their acyclicity", "Required existential-production edge"]
+
+[[statement]]
+id = "A strict mixed order exists exactly when the required edges are acyclic"
+lean = "ExactExtensionCriterion"
+paraphrase = "For all typed occurrence, bearer and production data, some transitive irreflexive relation on Sum B E satisfies both original priority interfaces exactly when the required edges have no nonempty finite closed walk. This tests the mathematical existence of an extension."
+definitions = ["Required existential-production edges and their acyclicity", "Required existential-production edge", "Common strict order for the required mixed edges"]
+
+[[statement]]
+id = "Separate strict priorities allow one occurring act to produce its own bearer"
+lean = "SplitPriorityControl"
+paraphrase = "On Unit bearers and Unit acts the sole act occurs and produces the sole bearer. The bearer and product priority requirements each hold in an irreflexive transitive relation, using separate relations. The required edge relation is irreflexive and nontransitive, and no common irreflexive transitive extension exists."
+definitions = ["Required existential-production edges and their acyclicity", "Required existential-production edge", "Common strict order for the required mixed edges", "DEF-NO-EXISTENTIAL-SELF-PRODUCTION"]
+
+[[statement]]
+id = "Reciprocal distinct production can preclude a common strict mixed order"
+lean = "ReciprocalProductionControl"
+paraphrase = "On Bool bearers and Bool acts, all acts occur, each is borne by the matching Boolean, and each produces just the other bearer. No occurring act produces its own bearer, but there is no common strict mixed order satisfying both interfaces."
+definitions = ["Common strict order for the required mixed edges", "DEF-NO-EXISTENTIAL-SELF-PRODUCTION"]
+
+[[argument]]
+id = "Required-edge acyclicity characterizes strict extension"
+theorem = "exactExtension"
+premises = []
+conclusion = "A strict mixed order exists exactly when the required edges are acyclic"
+axioms = []
+rule = "Compose each finite path inside any proposed strict order; in the reverse direction take the transitive closure of the required edges"
+meaning = "For arbitrary fixed exercise data, every strict extension contains the nonempty finite paths. Irreflexivity excludes their diagonal. If the required edges are acyclic, their transitive closure is itself an irreflexive transitive extension. No semantic identification of other priority relations follows."
+
+[[argument]]
+id = "Acyclic required edges exclude existential self-production"
+theorem = "noSelfOfAcyclic"
+parameters = "{B E : Type} (Occurs : E → Prop) (bearer : E → B) (produces : E → B → Prop)"
+premises = ["Required bearer and production edges have no finite closed walk"]
+conclusion = "STMT-NO-EXISTENTIAL-SELF-PRODUCTION"
+axioms = []
+rule = "Construct the strict order from acyclicity and apply the existing noSelf result on the same data"
+meaning = "For the same occurrence, bearer and production data, acyclicity supplies a common extension for the earlier conditional proof. The open acyclicity premise excludes longer cycles too. The result feeds the existing CAUSE_4 self-edge route."
+
+[[argument]]
+id = "Separate strict-order control for the two mixed interfaces"
+theorem = "splitControl"
+premises = []
+conclusion = "Separate strict priorities allow one occurring act to produce its own bearer"
+axioms = []
+rule = "Use a one-edge relation in each direction; the union contains a two-edge closed walk"
+meaning = "The one-bearer, one-act control satisfies the two interfaces on separate strict relations. On the same data their required union is irreflexive but fails transitivity, and self-production holds. This is an abstract separation of relations."
+
+[[argument]]
+id = "Distinct reciprocal production obstructs common strict extension"
+theorem = "reciprocalControl"
+premises = []
+conclusion = "Reciprocal distinct production can preclude a common strict mixed order"
+axioms = []
+rule = "Use the four-edge closed walk through both Boolean bearers and acts"
+meaning = "The fixed Bool interpretation has only distinct production edges and still has a mixed cycle. It separates the conclusion of noSelf from the global common-order hypothesis."

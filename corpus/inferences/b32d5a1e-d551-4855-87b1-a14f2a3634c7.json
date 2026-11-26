@@ -1,0 +1,12 @@
+{
+  "id": "b32d5a1e-d551-4855-87b1-a14f2a3634c7",
+  "label": "Acyclic required edges exclude existential self-production (inference)",
+  "input_statement_ids": [
+    "1d1f5ac4-011e-461a-b8bd-14409b5dddf9"
+  ],
+  "output_statement_id": "8550ca62-92d1-5ef0-af17-9de5bf272262",
+  "rule": "Construct the strict order from acyclicity and apply the existing noSelf result on the same data",
+  "meaning": "For the same occurrence, bearer and production data, acyclicity supplies a common extension for the earlier conditional proof. The open acyclicity premise excludes longer cycles too. The result feeds the existing CAUSE_4 self-edge route.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

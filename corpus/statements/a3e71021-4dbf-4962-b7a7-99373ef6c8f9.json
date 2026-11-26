@@ -1,0 +1,11 @@
+{
+  "id": "a3e71021-4dbf-4962-b7a7-99373ef6c8f9",
+  "label": "A strict mixed order exists exactly when the required edges are acyclic",
+  "paraphrase": "For all typed occurrence, bearer and production data, some transitive irreflexive relation on Sum B E satisfies both original priority interfaces exactly when the required edges have no nonempty finite closed walk. This tests the mathematical existence of an extension.",
+  "lean_declaration": "TruthCore.Causality.ExistentialPriorityOrder.ExactExtensionCriterion",
+  "definition_ids": [
+    "57a30b7d-c51e-4b28-83ac-b7e924b7ace4",
+    "20a4bee8-3701-40ed-a63e-bf683ca4eb14",
+    "d6aed40f-2703-4cf5-852a-369fbacd085c"
+  ]
+}

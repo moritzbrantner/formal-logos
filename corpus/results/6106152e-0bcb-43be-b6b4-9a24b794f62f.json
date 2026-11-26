@@ -1,0 +1,11 @@
+{
+  "id": "6106152e-0bcb-43be-b6b4-9a24b794f62f",
+  "label": "Acyclic required edges exclude existential self-production",
+  "argument_id": "e267588f-2746-484f-a3fd-155a809591a8",
+  "challenge_module": "TruthCore.Results.Causality.ExistentialPriorityOrder.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ExistentialPriorityOrder.Solution",
+  "theorem": "TruthCore.Results.Causality.ExistentialPriorityOrder.noSelfOfAcyclic",
+  "comparator_config": "results/6106152e-0bcb-43be-b6b4-9a24b794f62f/comparator.json",
+  "status": "solution-present",
+  "description": "For the same occurrence, bearer and production data, acyclicity supplies a common extension for the earlier conditional proof. The open acyclicity premise excludes longer cycles too. The result feeds the existing CAUSE_4 self-edge route."
+}

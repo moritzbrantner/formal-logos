@@ -1,0 +1,9 @@
+{
+  "id": "d6aed40f-2703-4cf5-852a-369fbacd085c",
+  "label": "Common strict order for the required mixed edges",
+  "term": "common strict order for bearer and production edges",
+  "definition": "Some single irreflexive transitive relation on Sum B E satisfies BearerPrior and ProductPrior for the same occurrence, bearer and production data.",
+  "basis": "stipulative",
+  "note": "The four interface clauses are the existing ones in DISAMB-MIXED-EXISTENTIAL-PRIORITY. This existence test places no constraints on the order beyond those four clauses. An interpretation as a specific metaphysical priority would require further warrant.",
+  "lean_declaration": "TruthCore.Causality.ExistentialPriorityOrder.CommonStrictOrder"
+}

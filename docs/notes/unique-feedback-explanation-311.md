@@ -4159,6 +4159,119 @@ An actual concrete whole with no incoming cause in the selected relation that su
 
 **Reviewed provisional finding.** The shell weakens the objection that a whole must borrow a particular local token's actuality to explain a local existential claim. For the actual series, independence from *which* givers occur leaves open explanatory independence from *their joint occurrence*. Reopen on a specified global condition for this series which survives replacement: which distribution of actual exercises does its character rule out, why does it require an exercise in this cone, and what warrants its obtaining or a primitive stop there? Evidence that a constituent's own received actuality grounds that very condition would bear against a strict whole-first answer. Evidence that its realizer is a concrete underived giver exercising into this cone would support the narrow source conclusion. Apply the same exercise and priority tests to a simple source identified through its effects. Another constraint on already actual material would leave this existential question unchanged. No formal premise change.
 
+## Can bearer and production priority share one strict order? (2026-11-26)
+
+Fix a single exercise profile. `inl x` labels the existence of bearer `x`
+and `inr a` labels the occurrence of exercise `a`. The recorded proof
+`e60831c7` already composes `x → a → x` when an occurring exercise produces
+its own bearer. The actual-bearer and product edges are required on the
+same `Prior`, and transitivity then gives the diagonal forbidden by
+irreflexivity. For CAUSE_4 self-origination the existing result `9598a73d`
+needs just the diagonal origin-to-exercise premise `83ec280a`. Its
+certified specialization from the universal `be90bb15` is `4421bfcd`.
+The diagonal still assumes a whole-borne exercise producing the same
+individual's being when that individual causes its own coming-to-be.
+
+**Exact structural test.** For these fixed data, put into a graph just the
+edges required by `d07314a3` and `66b7ac36`, with their occurrence guards.
+Every common transitive extension must include each nonempty path. If the
+graph has no nonempty finite closed walk, its transitive closure gives a
+common irreflexive transitive extension. This adds a conditional route via
+acyclicity of the required edges. A particular metaphysical interpretation
+still needs to validate the two embeddings and the composed comparisons.
+The construction assumes no total order, temporal precedence or
+well-foundedness. [Exact criterion and root-path consumer](../../TruthCore/Results/Causality/ExistentialPriorityOrder/Challenge.lean)
+
+The one-bearer control puts bearer-to-act and act-to-product in different
+strict relations on the same tokens. Each contains just one edge, so its
+transitivity has no composable pair to test. Self-production holds and
+the union is irreflexive but nontransitive. In the two-bearer control
+each occurring exercise produces only the other bearer. No act produces
+its own bearer, yet the four-edge closed walk obstructs every common
+strict extension. Global acyclicity thus makes a further commitment
+even when direct self-production is excluded. The earlier omission
+controls also show how a transitive relation with diagonal edges can
+admit reciprocal mixed edges. These are structural interpretations of
+the typed predicates. They leave whether such production occurs or is
+metaphysically possible open. [New controls](../../TruthCore/Results/Causality/ExistentialPriorityOrder/Solution.lean) · [Earlier controls](../../TruthCore/Results/Causality/ExistentialSelfActualization/Solution.lean)
+
+### Shared interpretation and candidate primitives
+
+- **Bearer-to-act, `d07314a3`.** An actual exercise of a power requires
+  the power to be available in its concrete bearer. This warrants the
+  bearer as an enabling condition. Strict explanatory precedence has
+  stronger prima facie support where the same bearer and power are
+  independently available whether or not that particular exercise occurs.
+  Co-actuality establishes that the bearer is actual during the exercise.
+  Smith's challenge adds that the bearer receives its first actuality
+  through the same productive loop. If warranted, that return path defeats
+  the shared strict order. Inseparability alone leaves the direction
+  undecided.
+- **Act-to-product, `66b7ac36`.** In genuine giving of being, the exercise
+  supplies the product's actuality. This gives a reason for directional
+  priority when the exercise can be accounted for independently of the
+  actuality it supplies. An essential relational act with an effect
+  internally specified can be conceptually inseparable from that effect.
+  Reference to the product in the account of the act carries no verdict
+  on which actuality is supplied by which. A model in which each exercise
+  receives its enabling actuality back through the effects it supplies
+  challenges strict priority on the same dependence reading.
+- **Irreflexivity, `e9da0216`, and transitivity, `37ae2e51`.** Strict
+  dependence understood as what must already be supplied in the
+  existential explanation excludes treating the same unfinished task
+  as its own input. For one such explanatory order, the input needed for
+  another input is a prerequisite of the final result, which warrants
+  composition. Both are defensible candidate structural commitments
+  on that reading. Mere involvement in an explanation, evidence for
+  existence, and direct productive contribution do not furnish that
+  transitive relation. A supported cyclic or constitutive account on
+  the same existential data would defeat at least one of the strict
+  edge embeddings or structural laws. At the local diagonal, exclusion
+  needs only absence of the reciprocal priority pair. The earlier
+  Lean asymmetry proof and its three-cycle separator give the weaker
+  structural option. Its separate registration still needs a repair
+  to the legacy classification of the four interfaces as senses.
+
+The same-`Prior` reading in the original theorem is an explicit analyst
+commitment. PRIOR_1 currently takes the case's simple priority in act
+in a respect on beings. PRIOR_4 treats being-without and has its own
+domain and defeaters. Neither identifier supplies comparisons involving
+an exercise occurrence on the mixed carrier. PRIOR_5, proposed in #2024
+([declaration at that revision](https://github.com/moritzbrantner/formal-logos/blob/b427cb4d131596c7f59a1bfc36b5f5de75b08059/TruthCore/Greek/Aristotle/MetaphysicsIX.lean#L56)), concerns
+reference to the corresponding activity in the account of a capacity.
+That relation takes capacity and activity inputs. Neither the existence
+of the bearer nor the existence of the produced individual is supplied
+as an input of that kind. Applying PRIOR_5 here would first require
+identity-preserving assignments for those tokens and then a reason that
+the account-reference edges imply comparisons of existential dependence.
+The finite split control concerns two arbitrary strict relations, without
+representing PRIOR_1 or PRIOR_5. [Priority sense record](../../corpus/disambiguations/priority-simple-or-in-time.json) · [Aristotle, Metaphysics IX.8, Ross translation](https://classics.mit.edu/Aristotle/metaphysics.9.ix.html)
+
+### Rivals at the scope of production of being
+
+| Candidate | Positive account and exact pressure on the route |
+| --- | --- |
+| Spinoza's *causa sui* | In *Ethics* I, def. 1 and prop. 7 with prop. 8 schol. 2, substance has existence through its own nature. Prop. 7 appeals to the impossibility of producing substance externally as argued in prop. 6 and its corollary. This targets the identification of an intrinsic reason with an origin edge requiring an existentially productive exercise. To apply `83ec280a`, one would need an additional argument that existence through essence gives `CausesOrigin x x` and then a token exercise of that substance. The strength of the intrinsic account depends separately on warrant for the nature's existence-involving content. [Elwes translation, Part I](https://capone.mtsu.edu/rbombard/RB/Spinoza/ethica1.html) |
+| Constitutive or holistic self-explanation | An intrinsically organized fact could explain which local exercises must occur via a global constraint that survives replacement of those exercises. This uses constitutive explanation in place of identifying the whole as performing one of its component exercises. To challenge `d07314a3` directly it must retain a whole-borne productive act and establish that the bearer's actuality is a joint outcome of that act with its recipients. Constraints on already instantiated activity explain its distribution, leaving the inclusive actuality input to be warranted. [Actual shell and transfer test](#can-the-instantiated-whole-explain-why-there-are-actual-givings-in-this-series) |
+| Smith's simultaneous origins and Newman's whole-causation argument | In the example above, simultaneous producers supply one another's beginning, and a part-to-whole causal principle extends that account to the totality. Taken as production of being on the same bearer tokens, their reciprocal first-existence supply obstructs common strict extension before any whole-to-itself step. To challenge the diagonal result as applied to that totality, show that the parts' productive contribution constitutes an occurring exercise of the same whole and produces that whole's being. The distinct reciprocal control isolates the extra inference to a directly self-producing exercise. [Newman, §§3–5](https://www.cambridge.org/core/journals/journal-of-the-american-philosophical-association/article/causal-loops-and-direct-selfcausation/5B4DE9F9DEA48B8B58D923665700EA14) |
+| Gott–Li's cyclic cosmology | The self-consistency of fields and spacetime in their closed-timelike-curve models gives a concrete reason to distinguish event succession from global strict explanatory priority. Their baby-universe proposal would require the reidentification of phases with one universe. An event loop only challenges existential order if its links transmit being for the same bearer tokens. If granted, a finite return path defeats the common strict order. The physical construction and the hypothesized reidentification leave that transfer open. [Gott and Li, Can the Universe Create Itself?](https://arxiv.org/abs/astro-ph/9712344) |
+
+**Provisional judgment.** The two directions have positive warrant as one
+strict dependence order when an independently available actuality enables
+the producing exercise and the product receives its being through that
+exercise. The global extension to arbitrary production lacks equivalent
+warrant. Reciprocal origination gives a precise live challenge and has
+yet to supply a whole-borne exercise for the diagonal route. Intrinsic
+explanation through essence or through a global constraint deserves its
+own evaluation at the same existential scope. A candidate common order
+becomes stronger if both edge types can be mapped to a single independently
+defended existential prerequisite relation. It loses warrant if a
+specified simultaneous-origin account supplies the actual powers and
+the identity-preserving finite cycle on those same required edges.
+The original four-premise and direct-assumption options remain available
+for the local exclusion. The global graph condition supplies a conditional
+route and is itself open. [Investigation record](../../corpus/attempts/befe92b7-2bf7-483d-856f-1f106eec8c7e.json)
+
 ## Research attempts citing this note
 
 - [Actual hiddenness scope and explicit stage-one identification](../../corpus/attempts/49e02139-da0f-458a-aae7-374b60309f7c.json)

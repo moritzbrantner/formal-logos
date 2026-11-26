@@ -170,6 +170,7 @@ public import TruthCore.Results.Causality.EventIdentityProfiles.Solution
 public import TruthCore.Results.Causality.ExerciseContribution.Solution
 public import TruthCore.Results.Causality.ExistenceAccountIntegration.Solution
 public import TruthCore.Results.Causality.ExistenceSenseRoute.Solution
+public import TruthCore.Results.Causality.ExistentialPriorityOrder.Solution
 public import TruthCore.Results.Causality.ExistentialSelfActualization.Solution
 public import TruthCore.Results.Causality.ExistsSenseMeaning.Solution
 public import TruthCore.Results.Causality.ExternalCandidateNecessity.Solution

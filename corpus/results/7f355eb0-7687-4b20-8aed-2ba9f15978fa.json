@@ -1,0 +1,11 @@
+{
+  "id": "7f355eb0-7687-4b20-8aed-2ba9f15978fa",
+  "label": "Separate strict-order control for the two mixed interfaces",
+  "argument_id": "60dbb9d7-e4b6-4bf5-a4e5-b179b9818194",
+  "challenge_module": "TruthCore.Results.Causality.ExistentialPriorityOrder.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ExistentialPriorityOrder.Solution",
+  "theorem": "TruthCore.Results.Causality.ExistentialPriorityOrder.splitControl",
+  "comparator_config": "results/7f355eb0-7687-4b20-8aed-2ba9f15978fa/comparator.json",
+  "status": "solution-present",
+  "description": "The one-bearer, one-act control satisfies the two interfaces on separate strict relations. On the same data their required union is irreflexive but fails transitivity, and self-production holds. This is an abstract separation of relations."
+}

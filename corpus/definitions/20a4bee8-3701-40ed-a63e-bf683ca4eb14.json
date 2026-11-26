@@ -1,0 +1,9 @@
+{
+  "id": "20a4bee8-3701-40ed-a63e-bf683ca4eb14",
+  "label": "Required existential-production edge",
+  "term": "required existential-production edge",
+  "definition": "A mixed edge from the bearer of an occurring act to that act, or from an occurring act to a bearer whose existence it produces. There are no same-sort edges.",
+  "basis": "stipulative",
+  "note": "This graph adapter records only the comparisons required by the existing two priority interfaces. It uses the occurrence guard and production-of-being predicate of DEF-NO-EXISTENTIAL-SELF-PRODUCTION. It is stipulative and its edges need not themselves compose.",
+  "lean_declaration": "TruthCore.Causality.ExistentialPriorityOrder.RequiredEdge"
+}
