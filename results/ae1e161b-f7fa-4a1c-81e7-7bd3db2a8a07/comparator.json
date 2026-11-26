@@ -1,0 +1,9 @@
+{
+  "challenge_module": "TruthCore.Results.Case.Catholicism.FirstSourceIdentification.Challenge",
+  "solution_module": "TruthCore.Results.Case.Catholicism.FirstSourceIdentification.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Case.Catholicism.FirstSourceIdentification.usageFromCommonMaximum"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}

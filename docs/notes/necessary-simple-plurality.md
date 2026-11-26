@@ -1880,3 +1880,99 @@ The source assembly compares the uniqueness packages and states which additional
 - [Pinned six complete Latin SCTA chapter witnesses, materialized and read Monologion I–VI at…](../../corpus/attempts/anselm-common-principle-uniqueness.json)
 - [Read materialized Compendium I12–15 and newly pinned De ente et essentia capp.3–4](../../corpus/attempts/unreceived-esse-individuation-defense.json)
 - [Sought the weakest premise excluding the part-free two-root model and tested its independence](../../corpus/attempts/first-mover-plurality-residue.json)
+
+### Which individuation principle does first-source identification need?
+
+The pinned ST I q.11 a.3 respondeo gives separate simplicity, perfection
+and order arguments. In the simplicity argument Aquinas takes the
+individuating basis to be incommunicable and identifies what makes God
+*this* bearer with what makes him divine. The perfection argument uses
+a further discernibility step: a difference between two gods would mean one
+has a privation or the other lacks a perfection. The explicit move from
+difference to a distinguishing determination belongs to this second
+argument. It should not be substituted silently for the first argument's
+incommunicable basis and identity with nature.
+
+For stage-one candidates, [the Q11 result](../../TruthCore/Results/Case/Catholicism/Q11NatureUniqueness/Solution.lean)
+gives the minimal mechanism used by that route. On the candidate domain,
+equality of the represented individuating basis must imply bearer identity.
+Two further premises connect that implication to the case: each candidate's
+basis equals its nature, and the candidates have one represented nature.
+The implementation uses globally incommunicable bases. The proof only
+applies that implication to pairs of candidates. The same result module
+checks finite omissions of each of the three inputs.
+
+[The root multiplication result](../../TruthCore/Results/Causality/RootMultiplication/Solution.lean)
+applies the mechanism to a first mover with represented esse/essence
+identity, simplicity and first-being priority. The firstness and simplicity
+conditions exclude the three represented limiting principles. The
+`fb3315ca` bridge is still needed to turn their absence into common
+represented nature. In particular, its scope is all pairs of unlimited
+beings, while its conclusion is equality of nature values. The earlier
+part-free model and constant-nature variants exhibit two distinct first
+movers when the common-nature or individuation inputs are omitted.
+Equating `suppositumOf` and `esseOf` would still require justification
+that esse supplies an incommunicable individuating basis. The alternative
+`3581ee6a` identifies the basis with nature directly. Simplicity motivates
+this only on a reading where there is no additional principle of
+individuation and the nature itself does that work. The rival can deny
+the latter step without adding a formal part.
+
+The [De ente theorem](../../TruthCore/Results/Aquinas/DeEnte/EsseSource/Solution.lean)
+gives a second conditional route on **actual esse–essence identity
+bearers**. Its domain is beings actual at `p.esse` whose represented esse
+equals their represented essence. The first-mover theorem instead ranges over
+`IsFirstUnmovedMover Moved Moves`; its simplicity premise supplies the
+represented equality, but its signature has no `p.InAct` or distinguished
+`p.esse`. Applying De ente uniqueness to those first movers therefore requires
+matching the profiles and supplying actuality at esse for each candidate. In
+the De ente theorem, `75b5b027` (`hShare`) concludes only that two qualifying
+bearers stand in the separate `SharesNature` relation. The three-mode
+multiplication inventory is a distinct premise
+(`PlurificationOnlyByThreeModesReading`, `hModes`) that uses shared nature;
+neither compares represented nature values. A bare-thisness rival can concede
+shared nature and dispute the inventory. The positive rationale is that an unreceived act of being has no
+additional quidditative differentiator. Individually equating represented
+esse with represented essence leaves open whether there is one nature in
+this further sense. The existing two-source model isolates that omission.
+For a route through constitutive content, `55890498` also requires agreement
+in both directions between nature content and the actuality predicate.
+Perfection possessed eminently could be present without being formally
+constitutive, so inferring that agreement from causal possession would
+require a same-respect analysis of those two predicates.
+
+The [first-mover thisness result](../../TruthCore/Results/Causality/PureActThisness/Solution.lean)
+and [actual-root result](../../TruthCore/Results/Causality/PureActRoot/Solution.lean)
+already check the perfection route with explicit assumptions. Strict
+purity and unrestricted perfection give every selected individual the
+same real determinations. The stronger `62ea1e7a` and `f8b58a9b` say each
+candidate has a determination shared by no being in the domain. Only
+discernibility within the candidate pairs is needed once their profiles
+agree. The existing `bareRival` and two-root controls exhibit the precise
+failure of numerical uniqueness when primitive numerical difference is
+allowed. On the alternative with a real non-pure thisness the cost is
+rejection of strict purity. On the alternative with a differentiating
+pure determination the cost is rejection of unrestricted perfection.
+The bare account instead takes being this individual as primitive, with
+the same real intrinsic determinations for both. It supplies no further
+qualitative mechanism for their numerical difference and must reject the
+requirement that such difference be grounded in a real determination.
+That requirement needs warrant from a theory of individuation. The finite
+encoding supplies the logical separation and does not establish the
+metaphysical admissibility of a bare individual.
+
+Provisional assessment, pending independent challenge. The unity inference
+has conditional support in these explicit constitution and perfection
+profiles. The no-addition rationale favors the common-nature premise
+if pure esse fixes the complete nature. It remains open whether this
+rationale excludes intrinsically distinct unreceived whole natures and
+whether complete real profile suffices for identity. Seek a reason,
+applying equally to both candidates, why a different whole nature would
+require a receiver, limiting determination or priority relation.
+Separately test whether the explanatory standard for numerical distinction
+requires a real difference. Preserve the scope distinction from #2016.
+Its `necessaryNonroot` witness checks two distinct necessary individuals
+with only one actual selected root. A causal convergence result about the
+root leaves open numerical uniqueness over a wider class of necessary beings.
+
+[Individuation research attempt](../../corpus/attempts/a59c3215-0415-4720-8ff1-32362466029b.json)

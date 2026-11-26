@@ -1,0 +1,34 @@
+{
+  "id": "e4c90277-86eb-4201-9f61-d7edd9028682",
+  "label": "GOD_3 to GOD_4 by reference to a common maximum",
+  "premise_statement_ids": [
+    "082974c4-f613-42fe-83dd-bb5d0186d943",
+    "4c79298d-ee09-5e99-9ced-1be92c19b4cc",
+    "5a594b1e-09b6-592c-862d-473874a6c49c",
+    "8626f8a5-9531-5da7-9ebd-f901e74b1129"
+  ],
+  "conclusion_statement_id": "6d85b363-58ec-5a8a-9e20-58a93d188ea5",
+  "inference_ids": [
+    "cdb2abbb-21e0-492a-9932-5f9705aeb0d2"
+  ],
+  "meaning": "Assume a GOD_4 bearer exists, both the actual use of the selected community and GOD_4 select only maxima in the same sense and profile, and any two maxima are identical. Every GOD_3 bearer is then identical with the existing GOD_4 bearer and is GOD_4. Using the result to support GOD_4 existence through the same bridge would be circular.",
+  "definition_ids": [
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "88f9f6e8-997b-5f7d-afa1-c501954c3807",
+    "e68a730e-ff16-5998-ac2b-f6f08728009b",
+    "a2a8de58-42e0-5481-b7fb-848ae8602036"
+  ],
+  "disambiguation_ids": [
+    "205a39c3-915d-5fe4-8076-a9ff91329e08",
+    "4f1d0cf6-88ba-59e3-814d-01450c2bf282"
+  ],
+  "sense_bridges": [
+    {
+      "term": "GOD",
+      "from": "b7754ffd-e139-42d1-bf84-77579fa650cf",
+      "to": "52c2ebac-0a71-4dd4-8a21-804c1dd0847a",
+      "statement_id": "6d85b363-58ec-5a8a-9e20-58a93d188ea5",
+      "role": "conclusion"
+    }
+  ]
+}

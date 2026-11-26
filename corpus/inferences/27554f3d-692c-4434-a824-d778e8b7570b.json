@@ -1,0 +1,15 @@
+{
+  "id": "27554f3d-692c-4434-a824-d778e8b7570b",
+  "label": "GOD_2 to GOD_4 by reference to a common maximum (inference)",
+  "input_statement_ids": [
+    "f790dfca-0617-476d-b946-3d2e936062fe",
+    "4c79298d-ee09-5e99-9ced-1be92c19b4cc",
+    "5a594b1e-09b6-592c-862d-473874a6c49c",
+    "8626f8a5-9531-5da7-9ebd-f901e74b1129"
+  ],
+  "output_statement_id": "e165f4aa-e872-5e2f-8211-52d40df114cc",
+  "rule": "Existential elimination, uniqueness of a maximum and substitution",
+  "meaning": "Assume a GOD_4 bearer exists, both predicates select only maxima in the same sense and profile, and any two maxima are identical. An arbitrary GOD_2 bearer is then identical with the existing GOD_4 bearer and is GOD_4. This gives the stated direction of the sense bridge. Using the result to support GOD_4 existence through the same bridge would be circular.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

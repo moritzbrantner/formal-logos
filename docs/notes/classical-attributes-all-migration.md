@@ -777,3 +777,74 @@ I favor the same-witness identification to the extent that this causal descripti
 
 - [Bounded preservation/audit of catholicism stage2 classical attributes at 3cd9545a](../../corpus/attempts/classical-attributes-structure-migration.json)
 - [Fifteen-input same-witness composition](../../corpus/attempts/root-intellect-will-20261031.json)
+
+## First-source identification through a common maximum
+
+The case target is `STMT-GOD-EXISTS` (GOD_4). The two sense bridges into
+the full-description naming premise have a conditional co-reference proof.
+Fix the same `InAct`, `MoreIn` and `esse` for both readings of
+`IsMaximumIn`. Assume at most one maximum, an independently supplied GOD_4
+bearer, and that every GOD_4 bearer is a maximum. If the other predicate
+applies only to maxima, each of its bearers equals the supplied GOD_4 witness.
+The theorems preserve the witness by equality and derive the existing bridge
+in each direction **into GOD_4**. They give no converse inclusion or
+nonemptiness of the stage-one name. The dependency on GOD_4 existence makes
+this a test of agreement with an independently identified bearer. Feeding
+either result back into its own proof of GOD_4 existence would be circular.
+
+| Sense | Selected meaning and Lean declaration |
+| --- | --- |
+| GOD_1 | Bearer of the full nominal description, including maximum uniqueness, causal reach and remoteness. `TermSenseForks.NominalGod`. Its bridge to GOD_4 is the open full-description sufficiency premise, equivalent to the classical full-description naming premise. |
+| GOD_2 | `God` of the older stage-one maximum routes. Registered anchor `Catholicism.GodNamesTheUniqueMaximeEns`. The forward naming premise gives this predicate for the candidate selected by the reduced description. Restricting its whole extension to maxima is a separate commitment. |
+| GOD_3 | The community uses this divine name of the bearer. Registered anchor `SummaTheologiae.FirstUnmovedMoverIsWhatAllUnderstandAsGodReading`, with the typed usage relation `TermSenseForks.CalledGod`. The forward full-description naming premise is empirical or contextual, even when the description itself is fixed. |
+| GOD_4 | God of classical theism in the case signature, `Catholicism.Signature.IsGod`. This is a primitive field distinct from `Signature.HasClassicalAttributes`. |
+| GOD_5, GOD_6 | Scott's and Gödel's 1970 world-indexed positivity readings respectively. Both use `GoedelGod.GodLike` at their own positivity constants. They have no registered bridge in this comparison. |
+
+The GOD_2 converse restriction has its best rationale in adopting a
+precisely scoped technical usage in which the older route's predicate selects
+only the bearer of the Fourth Way description. A premise that names the
+maximum supplies only the forward inclusion. A broader predicate covering
+other bearers is left open by that forward inclusion. GOD_3 has less warrant
+without specifying the community, context and referent-fixing practice. The
+full-description usage premise can be true when the word is also applied to
+a different being. That mechanism is checked on a two-individual profile in
+which both individuals are in act at esse, false is the unique maximum and
+satisfies the full nominal description, and the name is applied to both. The
+same roster supplies a control with an empty classical extension and both
+stage-one name predicates nonempty and restricted to the unique maximum.
+A positive application uses the same roster with the two names and GOD_4
+all holding of the maximum.
+
+The Dei Filius dictionary `dfc3cbae` sends the typed Dei Filius conjunction
+to `HasClassicalAttributes`. Its best warrant is an explicit interpretation
+of the primitive field. For the nine-attribute interpretation, the projection
+`nineOfDeiFilius` gives the nine, and `fieldOfSuffice` applies the existing
+nine-to-field sufficiency premise. For a field interpreted as the full
+Dei Filius conjunction, the dictionary states the forward inclusion under
+that interpretation. The existing controls allow the primitive field to
+differ from the typed conjunction when this interpretation is absent. Even
+the Dei Filius bundle's unity field is universal over the GOD_4 extension,
+and can be vacuous when that extension is empty. The causal reach additions
+in #2016 and the attribute work in #2017–#2021 improve the description or
+its derivation on a fixed witness. In particular #2017–#2018 provide source
+support, and #2019–#2021 derive stages of rational giving, recipient willing
+and direction under explicit assumptions. The target of none of those
+steps is a universal restriction on either name or a dictionary from the
+joint attribute predicates to `IsGod`.
+
+Provisional assessment, pending independent challenge. The same-witness
+attribute route remains stronger evidence for the candidate's substantive
+description than the mere fact of communal naming. Retain the explicit
+GOD_2/GOD_3 bridges as interpretation options, with co-reference derivations
+available where a classical witness is independently supplied. To advance
+existence directly, seek independently warranted sufficiency of a fully
+specified description for GOD_4 and check whether one first-source witness
+satisfies it in the same vocabulary. To warrant the usage restriction, look
+for evidence that a scoped use excludes alternative bearers, not just
+evidence that it includes one correct bearer.
+
+[Sense definitions](../../corpus/disambiguations/god.json) ·
+[Co-reference proofs](../../TruthCore/Results/Case/Catholicism/FirstSourceIdentification/Solution.lean) ·
+[Finite controls](../../TruthCore/Results/Case/Catholicism/FirstSourceIdentification/Controls.lean)
+
+[Naming and attribute-field research attempt](../../corpus/attempts/18f489ec-e8f8-4c93-989f-8ba2da416c45.json)
