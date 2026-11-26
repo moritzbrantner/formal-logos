@@ -1,0 +1,18 @@
+{
+  "id": "2189aa65-c297-49a5-91b8-a72dc6519b4c",
+  "label": "Matched discrete and reflected Zeno clocks test the interval premise bundle",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "e0a11835-79e7-4c1f-ab4f-540299051fd9",
+  "inference_ids": [
+    "4c5b00e5-0a73-4df3-9be4-68ddc1aa234a"
+  ],
+  "meaning": "Use the existing two-actual-bearer reciprocal esse-supply model, alternating exercise bearer map, and n+1 → n exercise graph. Every even n lies on the identity fibre and receives a path from n+2 via n+1. The discrete clock inherits local finiteness from the negative natural clock, while the even indices give arbitrarily negative times. The reflected Zeno clock sends those infinitely many even indices into [0,1], where local finiteness would force a finite number of indices. This certifies that neither a lower bound alone nor indexed local finiteness alone yields a minimal exercise even with inhabited identity fibres, strict forwardness and backward lifting. The clocks are mathematical controls on that interpretation.",
+  "definition_ids": [
+    "1710226f-8899-4d75-b553-f0e40fc7db1d",
+    "2d94381e-1133-4e5b-9841-0dee609aca01",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "183b48d2-1753-583d-aef9-4199cff86231",
+    "4ffdfea6-0a5a-513c-a710-050648c260bf",
+    "cc5eed1d-8e75-473a-9714-f2c04bd75d0f"
+  ]
+}

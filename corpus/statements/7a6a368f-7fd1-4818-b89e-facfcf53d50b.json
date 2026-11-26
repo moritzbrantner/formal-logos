@@ -1,0 +1,9 @@
+{
+  "id": "7a6a368f-7fd1-4818-b89e-facfcf53d50b",
+  "label": "Every selected exercise edge advances the exercise clock strictly",
+  "paraphrase": "On the fixed type of eligible exercise tokens and the selected clock, every interpreted exercise edge C e f places the clock value of e strictly below that of f. This is a premise on C throughout its domain, including intermediate exercises borne by nonidentity bearers.",
+  "lean_declaration": "TruthCore.Causality.TemporalActualization.StrictForward",
+  "definition_ids": [
+    "1710226f-8899-4d75-b553-f0e40fc7db1d"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "ac67df43-3c49-447d-8912-077ecfe99898",
+  "label": "Bounded and locally finite real times give a minimal identity exercise",
+  "argument_id": "f1a48632-1b02-4a76-93c9-a95487895283",
+  "challenge_module": "TruthCore.Results.Aquinas.DeEnte.BoundedIdentityExercise.Challenge",
+  "solution_module": "TruthCore.Results.Aquinas.DeEnte.BoundedIdentityExercise.Solution",
+  "theorem": "TruthCore.Results.Aquinas.DeEnte.BoundedIdentityExercise.minimalExerciseOfBoundedLocallyFiniteClock",
+  "comparator_config": "results/ac67df43-3c49-447d-8912-077ecfe99898/comparator.json",
+  "status": "solution-present",
+  "description": "Fix one q3a4 profile, eligible exercise roster, bearer map, relation C and real clock. For each actual identity bearer, take its lower bound and the clock value of a chosen eligible exercise. Indexed local finiteness makes this nonempty compact interval contain finitely many exercise tokens of the bearer. A token achieving the minimum among them has no same-bearer predecessor via any nonempty C-path because strict forwardness along that path would put the predecessor in the same interval with a smaller clock value. The interval argument permits infinitely many later exercises and needs no uniform bound or gap size. A physical application requires independently identifying eligible esse-supply exercises, assigning real clock values to those same tokens, and justifying the quantitative and strict-edge conditions there. Its use to exclude an actual esse-supplier return further requires backward lifting on the same interpretation."
+}

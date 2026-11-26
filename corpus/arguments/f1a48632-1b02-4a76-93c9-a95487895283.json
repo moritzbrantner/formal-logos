@@ -1,0 +1,23 @@
+{
+  "id": "f1a48632-1b02-4a76-93c9-a95487895283",
+  "label": "Bounded and locally finite real times give a minimal identity exercise",
+  "premise_statement_ids": [
+    "d8796eaa-52f7-4731-9ab4-28783abe2dcc",
+    "e77ab943-3e7f-4b62-9a30-e8ce281f3849",
+    "89af9204-e06f-4563-95a0-eff26dfb5812",
+    "7a6a368f-7fd1-4818-b89e-facfcf53d50b"
+  ],
+  "conclusion_statement_id": "004ded49-94d4-42ff-a58b-1fc592e72a02",
+  "inference_ids": [
+    "a5a409b9-6074-4bf8-be00-d883ec54c12b"
+  ],
+  "meaning": "Fix one q3a4 profile, eligible exercise roster, bearer map, relation C and real clock. For each actual identity bearer, take its lower bound and the clock value of a chosen eligible exercise. Indexed local finiteness makes this nonempty compact interval contain finitely many exercise tokens of the bearer. A token achieving the minimum among them has no same-bearer predecessor via any nonempty C-path because strict forwardness along that path would put the predecessor in the same interval with a smaller clock value. The interval argument permits infinitely many later exercises and needs no uniform bound or gap size. A physical application requires independently identifying eligible esse-supply exercises, assigning real clock values to those same tokens, and justifying the quantitative and strict-edge conditions there. Its use to exclude an actual esse-supplier return further requires backward lifting on the same interpretation.",
+  "definition_ids": [
+    "1710226f-8899-4d75-b553-f0e40fc7db1d",
+    "2d94381e-1133-4e5b-9841-0dee609aca01",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "183b48d2-1753-583d-aef9-4199cff86231",
+    "4ffdfea6-0a5a-513c-a710-050648c260bf",
+    "b14674c2-b20b-42ea-b5dd-9f9d6ebc304e"
+  ]
+}
