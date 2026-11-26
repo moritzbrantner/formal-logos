@@ -42,10 +42,7 @@
       "d5a94eb1-72d2-53e0-9a52-9787b5b61a8d",
       "b2337d92-cfcf-416c-af91-cd5d68a65f06"
     ],
-    "evidence": [
-      "a18f7922-65fa-4d86-80cf-4201aa58e44c",
-      "53348c1f-37d4-44b0-9ddf-07330c1a56e0"
-    ],
+    "evidence": "The selected-source result a18f7922 proves termination, equal lengths and the necessary-ancestor composition under their stated premises. Its controls include a genuine diamond, a common-source regress and a three-bearer change of edge scope. The same-giver result 53348c1f includes a secondary esse giver in a model of the two Thomistic premises. The linked Git parent records provide a separate check on the local-to-global inference.",
     "reviewed_revision": "04f4d86c097874bb5c32694a3bf6d1cd066788ca",
     "review": "unreviewed",
     "publication": "unpublished",
