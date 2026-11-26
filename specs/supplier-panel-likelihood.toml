@@ -1,0 +1,19 @@
+[batch]
+vocab = "TruthCore.Causality.SupplierPanelLikelihood"
+results = "TruthCore.Results.Causality.SupplierPanelLikelihood"
+
+[[statement]]
+id = "Likelihood of an all-on supplier panel counts each distinct live ray once"
+lean = "PanelProbabilities"
+definitions = ["e1b95906-8d38-59c3-abee-0ccc1c9d333b", "15e3a4d1-a972-4809-b80b-f6f915ae0f5a", "629f2837-b2dd-44f5-a05e-7271405d6923"]
+paraphrase = "Observe the activity of specified positions on parallel supplier chains. Assign one local coordinate to each distinct observed ray with an intact tail, and one shared coordinate to all rays. Under a finite discrete product model, every sampled report extends to a full local transmission state. An upstream cut at any requested position gives the all-positive event probability zero. For an all-live panel with n distinct rays its probability is one at n=0 and κ(G) times ν(C)^n otherwise. Taking ν(C)=1 gives a single shared random setting in the observation model. Taking κ(G)=1 gives independent local settings. A sampling plan fixed before consulting outcomes and a calibrated dependence model are needed to use these likelihoods as evidence."
+
+[[argument]]
+id = "03166094-e157-49b4-ba28-7100fcd68989"
+label = "Calculate the likelihood of an all-on supplier panel on distinct rays"
+theorem = "probabilitiesOfObservedRays"
+premises = ["2b807b2a-85e0-48ab-bc51-d8aaf6d24aad", "574f00bd-c6fe-45f5-8208-a9421b601182"]
+conclusion = "Likelihood of an all-on supplier panel counts each distinct live ray once"
+rule = "Extend sampled reports and evaluate their intersection on the distinct observed rays"
+meaning = "The numbering is a bijection from the ray identities actually observed on intact tails. Duplicated positions read the same sampled coordinate. The intersection covers every coordinate in that numbering. A blocked observation makes the all-positive event empty, including when there are no live rays. The sample is a shared coordinate and an independent product of local coordinates. This gives a likelihood for a fixed observation under an explicit law, while causal ancestry and how the actual settings arose remain separate questions."
+axioms = ["propext", "Classical.choice", "Quot.sound"]
