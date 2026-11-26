@@ -1,0 +1,10 @@
+{
+  "id": "9349e94e-574a-49c8-bde5-55c951b2923d",
+  "label": "Classify consistency of a supplied PLG presentation by strict steps and weak returns (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "c439d41f-c063-4ff8-adb1-c9d9f85ac1ab",
+  "rule": "Compose strict steps with weak returns and construct a predecessor-set model",
+  "meaning": "A forbidden return yields strict self-grounding and explosion. In its absence, predecessor-set ranks validate every member of the supplied theory. The comparison fixes S rather than replacing it with a theory generated from D.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

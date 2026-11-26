@@ -1,0 +1,12 @@
+{
+  "id": "4ed8afbd-4308-4b3b-bdf1-cc1c15858369",
+  "label": "Derive the distinct dependence map from strict-step paths in the selected assumptions (inference)",
+  "input_statement_ids": [
+    "b6784d40-65cb-444d-9027-b93a074592ac"
+  ],
+  "output_statement_id": "42756c07-03cd-4b54-8ed6-ed6c1a5132aa",
+  "rule": "Derive weak partial grounds along both subpaths and compose across the strict step",
+  "meaning": "For the same S, D and labels throughout, use identity for an empty weak subpath, the partial subsumption rules on initial full sequents, and weak and mixed transitivity to derive the target strict partial sequent. No assumption about the well-foundedness of D or consistency of S is needed for this implication. The initial paths are an explicit alignment premise about uninterpreted labels.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

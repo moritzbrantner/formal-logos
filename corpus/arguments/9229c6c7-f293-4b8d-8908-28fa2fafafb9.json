@@ -1,0 +1,13 @@
+{
+  "id": "9229c6c7-f293-4b8d-8908-28fa2fafafb9",
+  "label": "Classify consistency of a supplied PLG presentation by strict steps and weak returns",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "c439d41f-c063-4ff8-adb1-c9d9f85ac1ab",
+  "inference_ids": [
+    "9349e94e-574a-49c8-bde5-55c951b2923d"
+  ],
+  "meaning": "A forbidden return yields strict self-grounding and explosion. In its absence, predecessor-set ranks validate every member of the supplied theory. The comparison fixes S rather than replacing it with a theory generated from D.",
+  "definition_ids": [
+    "df5284cb-8f1f-5b61-9b1c-ee4c1544b469"
+  ]
+}

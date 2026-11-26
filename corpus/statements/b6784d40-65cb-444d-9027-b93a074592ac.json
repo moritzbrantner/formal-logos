@@ -1,0 +1,14 @@
+{
+  "id": "b6784d40-65cb-444d-9027-b93a074592ac",
+  "label": "Each distinct dependence edge has a strict-step path in the selected PLG assumptions",
+  "paraphrase": "OPEN formal bridge on the supplied dependence relation, labels and assumptions. For each distinct pair with D(x,y), the selected set contains antecedent-to-consequent steps making a finite path from the label of y to the label of x. At least one step comes from a strict full or partial sequent. The labels have no encoded metaphysical interpretation.",
+  "lean_declaration": "TruthCore.Causality.SelectedPlgTheory.DependenceHasStrictPaths",
+  "definition_ids": [
+    "bf26b9b2-41ed-55b0-9557-dae90ab9b81f",
+    "5d9a94e0-d64b-53ca-b9cc-504735060e0a",
+    "df5284cb-8f1f-5b61-9b1c-ee4c1544b469"
+  ],
+  "disambiguation_ids": [
+    "23dd6f32-b456-4963-adb3-7befbf0dc4fb"
+  ]
+}

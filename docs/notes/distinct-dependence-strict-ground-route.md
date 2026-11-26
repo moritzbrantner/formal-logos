@@ -68,8 +68,10 @@ Disambiguation `23dd6f32-b456-4963-adb3-7befbf0dc4fb`
   is "the light in the air depends on the shining sun".
 - "Ground" takes sense 2 only: Fine's formal strict partial ground on
   uninterpreted atoms.
-- The argument passes from sense 1 to sense 2 only through the OPEN map
-  premise, which is listed as a `sense_bridges` premise.
+- The direct-assumption route crosses from sense 1 to sense 2 at the OPEN map
+  premise `42756c07`. The strict-path route assumes the OPEN alignment
+  `b6784d40` as its crossing premise and derives the map by PLG rules. Both leave
+  the interpretation of the labels as existence facts open.
 - The `controls` argument (missing map) shows that the two senses do not mix
   without that premise.
 
@@ -523,3 +525,120 @@ moves between its roles in the required direction.
 ## Research attempts citing this note
 
 - [Cluster reassessment of dependence, simple-priority and grounding leaves of the prima via (#1751)](../../corpus/attempts/9d71e28d-d492-4797-9221-45fa517a6e6b.json)
+
+## Testing a supplied PLG theory
+
+Date 2026-11-26. This test fixes the exact assumption set `S`, the bearer
+relation `D` and the fact labelling. The existing representation result chooses
+a theory to fit the projected dependence steps. The new results can inspect an
+independently supplied theory without replacing any of its assumptions.
+[Formal attempt](../../corpus/attempts/59b796b6-d240-43f1-b8c2-25c79e8a07b7.json)
+
+Read a full sequent as contributing an arrow from **each** antecedent to its
+consequent for this test. A partial sequent contributes its one arrow. Arrows
+from strict sequents count as both strict and weak. An empty full antecedent
+contributes no arrow. The two tests are:
+
+1. **Consistency on a populated atom type.** No strict arrow may have a finite
+   return path using arrows of any kind. A return of length zero counts. An
+   all-weak cycle does not violate this test. For each atom, its rank is the set
+   of atoms reaching it by zero or more weak steps. All members of `S` satisfy
+   the rank interpretation: weak steps preserve inclusion and strict steps
+   increase it properly because the target cannot reach back. Rank soundness
+   covers every encoded PLG rule, so any strict self-sequent is underivable.
+   A strict arrow with a return instead derives a strict self-sequent and
+   hence every sequent. [Consistency criterion](../../corpus/results/00f2cd7c-c0a7-4eef-b57a-e59bde59b204.json)
+2. **Dependence map.** Each distinct `D(x,y)` must have a finite path from
+   `label(y)` to `label(x)` with at least one strict step. The path suffices
+   by the PLG subsumption and transitivity rules. Consistency makes the
+   condition necessary too: induction on derivations tracks which initial
+   paths reach the consequent from each antecedent. Cut composes weak paths,
+   reverse subsumption requires strict paths for each antecedent, and
+   consistency rules out using explosion. [Strict derivability criterion](../../corpus/results/006f49e8-4c68-424d-9403-9f025185b555.json)
+
+The consistency argument records population as a separate premise. An empty atom
+type satisfies the no-return condition vacuously but has no sequent to witness
+consistency. On the stated domain, the two tests give support options for `fea5942a` and `42756c07` in
+the nonmutuality and Second Way consumers. On the same fixed `S`, the map
+orients every distinct step, consistency excludes strict self-grounding,
+and PLG composes successive strict grounds transitively. This need not make
+`D` itself transitive: the target can derive composite grounds even if
+`D` records only direct steps. The existing natural-number witness shows
+that an infinite descent can satisfy the two conditions. On the diagonal,
+mapping a self-dependence step would demand a strict self-sequent and
+contradict consistency. The four-bearer control above shows why keeping
+distinct labels on individual paths still allows collisions across paths.
+[Consistency support](../../corpus/results/ac062be2-1f2b-4481-8f91-852dcdd33bb7.json)
+· [Map support](../../corpus/results/945d3606-d6ac-4e5e-a9fd-d95d1dd508e1.json)
+
+The two-label control holds `D(true,false)` and identity labelling fixed.
+With just the weak full sequent `{false} ≤ true`, the theory is consistent
+but cannot map that edge. With just `{false} < true` it is consistent and
+does map the edge. Adding `{true} ≤ false` preserves the map and makes the
+theory inconsistent. The third case cannot be detected by looking for cycles
+among strict assumptions alone. These are results about the stated formal
+presentations. [Boolean control](../../corpus/results/1ea2f628-a121-4e37-a21c-5f4af77f0321.json)
+
+### Warrant at matching scope
+
+For the same proposed supplier and effect in one respect, ask what explains
+why the effect exists there and whether the supply runs in one direction.
+The case for a strict reading is strongest when the effect's very existence
+can be traced to the supplier's operation and the same account of the
+supplier's existence does not refer back to the effect. The observed
+light-supply example gives a local reason to look for an oriented relation.
+This reason does not select constitutive grounding, a global theory of
+existence facts, or a bound on its ancestry.
+
+- **Modal existence requirement.** The positive account is preservation
+  of the implication from the existence of the dependent to that of the
+  required being across the selected worlds. The existing
+  `ModalRequiresExistence` lemma shows that a necessary being is required
+  by any bearer in that sense. Two distinct necessary bearers therefore
+  require one another while strict PLG in a consistent theory cannot map
+  the pair both ways. This challenges the map when the sole warrant for
+  a strict step is modal co-instantiation. It leaves efficient-causal
+  `D` distinct: using the result against that `D` would require a reason
+  to identify the causal reading with the purely modal one. Modal
+  implication captures constraints on co-existence and supplies no
+  directional account of actual production in the light case.
+- **Causal explanation without constitutive grounding.** In a sustaining
+  illumination case, tracing the emitter's operation and the resulting
+  light explains why that light is present. The supplier's existence
+  by itself does not suffice for that causal account: the operation
+  matters. A local grounding skeptic can accept this directional causal
+  account and reject the claim that there is in addition a constitutive
+  ground between bare existence facts. This targets the interpretation
+  of the strict paths and their labels, even if the causal direction and
+  the syntax are granted. It leaves open whether an interpretation in
+  causal supply is adequate for the selected class of existence facts.
+  The local account gives no explanation of why there is an entire
+  upstream series of suppliers.
+
+**Provisional assessment.** The exact test separates an omission of an
+orientation in `S` from an incompatible combination of assumptions in
+`S`. A separately motivated strict presentation could add support to
+particular dependence edges. A presentation containing those edges by
+construction transfers the burden to the input orientation and its warrant.
+The repository has supplied examples of particular theories, but the root
+argument takes an arbitrary `S` and no independently specified existence-fact
+presentation is bound there. Both original claims remain available as direct
+options. Apply the tests next to a specified effect and a theory whose fact
+labels and assumptions are justified independently of the target dependence
+edge, including any weak sequents that could return from the effect. A path
+supported by actual same-respect supply would favor the causal reading.
+Evidence for constitutive explanation at that same scope could change the
+assessment of the stronger reading.
+
+### Adjacent premises in the triage cluster
+
+[Cluster attempt](../../corpus/attempts/473bd726-59d1-495f-9178-8efb6f33da8b.json)
+
+| Premise | Finding and remaining condition |
+|---|---|
+| `adb951c1` | Per se alignment needs distinct endpoints and evidence that the effect's *being* depends on this supplier. The hand can move the stick through a per se instrumental series while the stick continues to exist when it is released. A reading restricted to per se causes of esse avoids that example, with alignment still to be supplied on that narrower relation. |
+| `f10d5632` | Selecting the history relation to be the per se relation makes inclusion reflexive. Evidence of finite distinct ancestry and absence of loops must then concern that same selected history. An independently selected history needs a same-carrier inclusion check. |
+| `2e248016` | The direction from world-local dependence to actual-concrete grounding requires a reason to export `D` to the profile's selected relation. The unrestricted statement also maps `D(x,x)`; with actual grounding irreflexive it excludes reflexive `D` on a populated actual-concrete domain. The existing distinct sibling `a8298fbd` avoids that diagonal commitment. |
+| `0f5b53ef` | A quality-level explanation challenges the converse export only if the profile admits bearer-to-bearer grounding edges on that basis. For a profile restricted to existential grounds, the question is whether those grounds entail the selected dependence-for-being counterfactual. |
+| `7a63a3fe` | The priority bridge targets the profile's world-local ground and `PRIOR_1`. A strict order on PLG labels yields no such bridge. The required calibration is actual grounding to priority in act in the relevant respect on the same bearers. |
+| `2047d14b` | Self-grounding is excluded on a strict explanatory reading. In the world-local profile, any transfer from PLG would still need an explicit ground-to-PLG bridge **on the diagonal**, which the distinct map never supplies. The existing reflexive-requirement controls locate the competing reading. |
