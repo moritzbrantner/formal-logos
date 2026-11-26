@@ -421,7 +421,9 @@ theorem routeDenial (use : B → B → R → Prop) :
   classical
   simp [NothingCausesItselfInRouteSense]
 
-theorem coverageDenial {U : Type} (select : CauseSense → Prop)
+universe occurrenceLevel
+
+theorem coverageDenial {U : Sort occurrenceLevel} (select : CauseSense → Prop)
     (use : U → B → B → R → Prop) :
     ¬ CauseSensesExhaustive F select use ↔
       ∃ u, ∀ s, select s → use u ≠ F.CausesBy s := by
