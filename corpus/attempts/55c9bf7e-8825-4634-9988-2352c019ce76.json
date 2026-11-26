@@ -13,5 +13,23 @@
   "evidence": [
     "6a0df6b9-d7d5-4612-8dc0-ee12b98dfbb5",
     "PR-2020"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2020"
+    },
+    {
+      "role": "review",
+      "provider": "codex",
+      "model": "gpt-6.2-astra",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2020"
+    }
   ]
 }

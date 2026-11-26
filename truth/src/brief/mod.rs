@@ -789,7 +789,7 @@ pub fn statement_brief(
         .iter()
         .map(|attempt| {
             let id = text(attempt, "id");
-            json!({
+            let mut entry = json!({
                 "id": id,
                 "label": text(attempt, "label"),
                 "date": attempt.get("date"),
@@ -798,7 +798,11 @@ pub fn statement_brief(
                 "summary": attempt.get("summary"),
                 "blocker": attempt.get("blocker"),
                 "path": corpus.get("attempts", id).map(|record| record.path.clone()),
-            })
+            });
+            if let Some(workers) = attempt.get("workers") {
+                entry["workers"] = workers.clone();
+            }
+            entry
         })
         .collect();
     attempts.reverse(); // historical attempt order; explicit current assessments are separate
@@ -2047,6 +2051,9 @@ pub fn format_brief(brief: &Value, aliases: &Aliases, limit: usize) -> String {
                     .unwrap_or_default(),
                 clip(&attempt["summary"], 200)
             ));
+            for worker in attempt["workers"].as_array().into_iter().flatten() {
+                lines.push(format!("    worker: {}", crate::workers::line(worker)));
+            }
         }
         more(&mut lines, attempts.len(), limit);
         let sections = brief["notes"]["sections"]

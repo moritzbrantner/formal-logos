@@ -67,6 +67,21 @@ the original merged evidence and preserve its limitations.
   finding. Keep earlier deliveries when a later PR extends the same attempt.
   Link the attempt's JSON file from the note section reporting its findings and
   use that section's anchor in the current assessment when one is recorded.
+- `workers` (optional; owner direction, 2026-11-26) records which agents worked
+  on the attempt, so that work by one model can later be revisited with another.
+  It is a non-empty list of objects with `role` (`author`, `repair` or `review`),
+  non-empty `provider` (for example `codex` or `claude`) and `model`, an optional
+  non-empty `effort`, a `date` in `YYYY-MM-DD` form and an optional `pr`
+  (`PR-<positive number>`); no other fields and no duplicate entries are allowed.
+  Each worker that creates or updates the attempt appends its own entry; earlier
+  entries are never rewritten. Older attempts without the field are valid and
+  read as "no author recorded". For example:
+  `{"role": "author", "provider": "codex", "model": "gpt-6.2-sol", "effort": "high", "date": "2026-11-26", "pr": "PR-2020"}`.
+  `truth dossier`, `truth context` and `truth brief` show one line per entry
+  (`author codex/gpt-6.2-sol (high) 2026-11-26 PR-2020`); `truth workers` lists,
+  per statement with attempts, the latest attempt's outcome and the models that
+  authored attempts on it (`truth/README.md`). A worker entry records who did the
+  work; it is not evidence about the targets.
 
 IDs are stable. Correct an inaccurate attempt record in place; preserve earlier
 failed approaches as separate attempts when the approach genuinely differs.

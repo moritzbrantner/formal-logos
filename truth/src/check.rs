@@ -1276,18 +1276,12 @@ fn validate_attempt(
     if !string(attempt, "summary").is_some_and(|summary| !summary.trim().is_empty()) {
         return Err("summary must be a non-empty string".into());
     }
-    let pr = |reference: &str| {
-        reference.strip_prefix("PR-").is_some_and(|number| {
-            number.starts_with(|c: char| ('1'..='9').contains(&c))
-                && number.chars().all(|c| c.is_ascii_digit())
-        })
-    };
     let references = attempt.get("evidence").and_then(Value::as_array);
     if !references.is_some_and(|references| {
         references.iter().all(|reference| {
             reference
                 .as_str()
-                .is_some_and(|reference| evidence.contains(reference) || pr(reference))
+                .is_some_and(|reference| evidence.contains(reference) || pr_reference(reference))
         })
     }) {
         return Err(
@@ -1304,6 +1298,90 @@ fn validate_attempt(
     }
     if string(attempt, "outcome") == Some("blocked") && blocker.is_none() {
         return Err("blocked attempts require a blocker".into());
+    }
+    if let Some(workers) = attempt.get("workers") {
+        validate_attempt_workers(workers)?;
+    }
+    Ok(())
+}
+
+/// A `PR-<positive number>` reference.
+fn pr_reference(reference: &str) -> bool {
+    reference.strip_prefix("PR-").is_some_and(|number| {
+        number.starts_with(|c: char| ('1'..='9').contains(&c))
+            && number.chars().all(|c| c.is_ascii_digit())
+    })
+}
+
+const WORKER_ROLES: &[&str] = &["author", "repair", "review"];
+const WORKER_FIELDS: &[&str] = &["role", "provider", "model", "effort", "date", "pr"];
+
+/// The optional attempt `workers` list (owner direction, 2026-11-26): who
+/// worked on the attempt, one appended entry per agent and role.
+fn validate_attempt_workers(workers: &Value) -> Res<()> {
+    let workers = workers
+        .as_array()
+        .filter(|workers| !workers.is_empty())
+        .ok_or("workers must be a non-empty list when present")?;
+    for (index, worker) in workers.iter().enumerate() {
+        let at = format!("workers[{index}]");
+        let worker = worker
+            .as_object()
+            .ok_or_else(|| format!("{at} must be an object"))?;
+        if let Some(field) = worker
+            .keys()
+            .find(|key| !WORKER_FIELDS.contains(&key.as_str()))
+        {
+            return Err(format!(
+                "{at} has unknown field {field}; allowed: {}",
+                WORKER_FIELDS.join(", ")
+            ));
+        }
+        let nonempty = |field: &str| {
+            worker
+                .get(field)
+                .and_then(Value::as_str)
+                .is_some_and(|text| !text.trim().is_empty())
+        };
+        if !worker
+            .get("role")
+            .and_then(Value::as_str)
+            .is_some_and(|role| WORKER_ROLES.contains(&role))
+        {
+            return Err(format!(
+                "{at}.role must be one of {}",
+                WORKER_ROLES.join(", ")
+            ));
+        }
+        for field in ["provider", "model"] {
+            if !nonempty(field) {
+                return Err(format!("{at}.{field} must be a non-empty string"));
+            }
+        }
+        if worker.contains_key("effort") && !nonempty("effort") {
+            return Err(format!(
+                "{at}.effort must be a non-empty string when present"
+            ));
+        }
+        if !worker
+            .get("date")
+            .and_then(Value::as_str)
+            .is_some_and(iso_date)
+        {
+            return Err(format!(
+                "{at}.date must be an ISO calendar date (YYYY-MM-DD)"
+            ));
+        }
+        if let Some(pr) = worker.get("pr")
+            && !pr.as_str().is_some_and(pr_reference)
+        {
+            return Err(format!(
+                "{at}.pr must be a PR-<positive number> reference when present"
+            ));
+        }
+    }
+    if !distinct(workers) {
+        return Err("workers must not contain duplicate entries".into());
     }
     Ok(())
 }
@@ -4548,6 +4626,90 @@ mod tests {
             let mut relations = registrations.clone();
             relations.push(comparison(extra));
             assert_eq!(strength_difference_warnings(&refs(&relations)).len(), 3);
+        }
+    }
+
+    fn attempt_with(workers: Option<serde_json::Value>) -> Obj {
+        let mut attempt = obj(serde_json::json!({
+            "id": "0299cc44-5678-4dc9-9a7a-999efb640fba",
+            "statement_ids": ["S"],
+            "date": "2026-11-26",
+            "kind": "derivation",
+            "outcome": "succeeded",
+            "summary": "A derivation.",
+            "evidence": ["PR-1"],
+        }));
+        if let Some(workers) = workers {
+            attempt.insert("workers".into(), workers);
+        }
+        attempt
+    }
+
+    #[test]
+    fn attempt_workers_are_optional_and_validated() {
+        let statements = HashSet::from(["S"]);
+        let evidence = HashSet::new();
+        let validate = |workers| validate_attempt(&attempt_with(workers), &statements, &evidence);
+        assert_eq!(validate(None), Ok(()));
+        let author = serde_json::json!({"role": "author", "provider": "codex",
+            "model": "gpt-6.2-sol", "effort": "high", "date": "2026-11-26", "pr": "PR-2020"});
+        let repair = serde_json::json!({"role": "repair", "provider": "claude",
+            "model": "claude-opus-5-5", "date": "2026-11-26"});
+        assert_eq!(validate(Some(serde_json::json!([author, repair]))), Ok(()));
+        for (workers, error) in [
+            (
+                serde_json::json!([]),
+                "workers must be a non-empty list when present",
+            ),
+            (
+                serde_json::json!({"role": "author"}),
+                "workers must be a non-empty list when present",
+            ),
+            (
+                serde_json::json!(["author"]),
+                "workers[0] must be an object",
+            ),
+            (
+                serde_json::json!([author, {"role": "writer", "provider": "codex",
+                    "model": "m", "date": "2026-11-26"}]),
+                "workers[1].role must be one of author, repair, review",
+            ),
+            (
+                serde_json::json!([{"role": "review", "provider": " ", "model": "m",
+                    "date": "2026-11-26"}]),
+                "workers[0].provider must be a non-empty string",
+            ),
+            (
+                serde_json::json!([{"role": "review", "provider": "codex",
+                    "date": "2026-11-26"}]),
+                "workers[0].model must be a non-empty string",
+            ),
+            (
+                serde_json::json!([{"role": "review", "provider": "codex", "model": "m",
+                    "effort": "", "date": "2026-11-26"}]),
+                "workers[0].effort must be a non-empty string when present",
+            ),
+            (
+                serde_json::json!([{"role": "review", "provider": "codex", "model": "m",
+                    "date": "2026-11-31"}]),
+                "workers[0].date must be an ISO calendar date (YYYY-MM-DD)",
+            ),
+            (
+                serde_json::json!([{"role": "review", "provider": "codex", "model": "m",
+                    "date": "2026-11-26", "pr": "2020"}]),
+                "workers[0].pr must be a PR-<positive number> reference when present",
+            ),
+            (
+                serde_json::json!([{"role": "review", "provider": "codex", "model": "m",
+                    "date": "2026-11-26", "agent": "astra"}]),
+                "workers[0] has unknown field agent; allowed: role, provider, model, effort, date, pr",
+            ),
+            (
+                serde_json::json!([author, author]),
+                "workers must not contain duplicate entries",
+            ),
+        ] {
+            assert_eq!(validate(Some(workers)), Err(error.to_owned()));
         }
     }
 }
