@@ -1,0 +1,9 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.GivingChoiceNar.Challenge",
+  "solution_module": "TruthCore.Results.Causality.GivingChoiceNar.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.GivingChoiceNar.rigidity_excludes_admissible_withholding_cell"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}

@@ -700,3 +700,52 @@ Where the application to NAR is intended, also show that the selected
 universal giver is the relevant actual root of the same grounding profile.
 
 [Attempt and assessment](../../corpus/attempts/7dcdad80-8e13-4f30-94b4-26ae3e058e74.json)
+
+### The necessary-recipient test at the NAR inputs
+
+Fix one actual root `g`, a NECESSARY_2 actual concretum `x` it grounds at
+`w`, and the same grounding profile, STIT moment and history-to-world map.
+A representative `k` of a withholding cell maps to a world where `g` does
+not give `x` being: `k` is in its own cell by reflexivity. If that world
+is accessible from `w` and `g` exists there, (b2) requires the very same
+giving there. This excludes the cell for this pair under (b2), using
+admissibility only at `k`. Conversely, exhibiting such a cell with an
+admissible representative for that pair would falsify (b2).
+[Cell exclusion result](../../corpus/results/a8fe73bf-f45e-4e17-b14b-5f3268682d4e.json)
+
+Together `0dd78706` and `46a468b2` entail per-recipient withholding
+`fbd0a6d3` by the existing cell-to-world result. At the level of accessible
+worlds, that withholding witness also contradicts (b2) for the fixed pair.
+The registered STIT proof factors the same N1 reasoning at the cell:
+the common-root premise `0c27f65a` gives the root and its reach, so a
+necessary actual concretum either is that root or falls under the
+cell exclusion. The latter clashes with the cell supplied by both
+STIT premises. Discharging the exclusion via (b2) uses the same
+expanded assumptions as composing the existing cell-to-world result
+with `narFromRootWithholding`. The formal test uses `GivesTo` and
+NECESSARY_2. It needs neither a same-setup comparison nor a bridge
+from absence of giving to absence of the recipient. SCM withdrawal
+`¬GivesAt` and worlds lacking the agent `¬ExistsAt g` have different
+conditions. The result supplies no joint refraining cell.
+[NAR result](../../corpus/results/5b4d6b33-0b00-4b93-8878-5b05ff6c18fa.json)
+
+**Provisional assessment.** The controlled STIT example supports
+admissible withholding for the contingent recipient it models. Extending
+that warrant to a putatively necessary recipient would require evidence
+for the very cell that (b2) excludes. A contingent-only cell premise
+would omit the grounded NECESSARY_2 case that this NAR proof needs.
+The existing `mixedModeRoot` assignment gives a positive rival account:
+one rational power, a stable setup, a contingent effect that can be
+withheld, and a necessary grounded recipient given being at every
+accessible world retaining the root. The tied-optima control shows how
+a recipient common to all represented optimal outputs can persist even when
+the outputs differ. Neither structural example establishes a rational
+requirement on the actual universal giver. Reassess the application
+if there is independent reason that every admissible output for that
+giver must give this specific recipient being, or a warranted cell
+with an accessible, giver-present representative withholding it.
+Both tests require identifying the proposed universal giver as the
+actual root of the same profile. A proposed governing requirement
+would also need to constrain the represented feasible outputs to
+settle this recipient's giving.
+[Research attempt](../../corpus/attempts/7dcdad80-8e13-4f30-94b4-26ae3e058e74.json)
