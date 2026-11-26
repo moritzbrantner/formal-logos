@@ -35,10 +35,10 @@
     "assessment": "A prefix whose output exceeds available initial stock and other inputs forces a contribution from the named feed by that endpoint. If all prefixes fit the independent bounds, a zero-feed ledger exists. Rumford’s chip comparison bears on a specific proposed heat store. The boiling time by itself sets no capacity bound. Under a fixed proper prior over finite reserves and positive class weights, sustained unit output eventually favors replenishment by each prescribed finite factor if its likelihood stays bounded below and the storage likelihood is at most the mass of reserves that fit. When each stored reserve delivers one unit per interval until empty, a full-support geometric capacity prior gives positive storage likelihood at every finite length. The receiver may have stored an earlier contribution, and its energy supplier may itself depend on another bearer for existence.",
     "next_test": "Apply the prefix test to a receiver with independently calibrated initial stock, output, and bounds on every other feed. A comparison without an exhaustive stock bound needs independently calibrated reserve and supplied predictions. To use the result for the Second Way, trace giving in the very respect of the receiver’s existence.",
     "note": "docs/notes/productive-store-1378.md#when-does-finite-output-require-a-particular-feed",
-    "review": "unreviewed",
-    "reviewed_revision": "14c2987425ed9775434c05bb8bffe952613cf563",
-    "publication": "unpublished",
-    "evidence": "Three registered Lean results. The original friction report and edition are linked in the research note.",
+    "review": "accepted_qualified",
+    "reviewed_revision": "f03eb49c4118f48869647d8aa2084ca0a85db915",
+    "publication": "published",
+    "evidence": "Independent review of the three registered results, the fixed and changing observations, the source application and the power/esse boundary at 9536c80f6. Targeted recheck accepted the historical and deterministic-reserve qualifications at f03eb49c4. The historical edition is preserved in formal-logos-sources PR #18. PR #2005.",
     "supersedes": "Extends the earlier finite-store and sustained-demand comparisons and retains their energy and existence qualifications."
   }
 }
