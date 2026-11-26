@@ -1478,7 +1478,7 @@ nor a necessary or underived source. The inference from identity to present
 production remains open, with no new support option or discharge.
 [Instances used by the esse-root routes](esse-root-leaves.md#b-where-the-fourteen-enter-which-instance-each-route-consumes-and-bypasses).
 
-## 11. What turns received esse into giving at the same moment? (2026-12-02)
+## 11. What turns received esse into giving at the same moment? (2026-11-26)
 
 Fix one history, the same received-esse bearer, and a moment of its presence.
 `EsseReceivedIn x z` is receiver-to-received-act composition. Neither the
@@ -1531,7 +1531,7 @@ takes the same bearer's earlier actuality, no inducer of its loss, and a
 law requiring an inducer for existential cessation. If the bearer were
 absent later, that would be a loss and hence would require an inducer.
 This supplies a conditional explanation of the particular later fact and
-targets the necessity of a productive explanation in `d86c9de9` and the
+targets, in `d86c9de9`, the requirement that some giver act at that same moment whenever the received bearer's presence is explained, and the
 equivalent productive burden on standing receipt. The positive rationale
 is the causal requirement on changes and the familiar difference between
 producing something and keeping it, illustrated by Aquinas's own builder
@@ -1547,8 +1547,10 @@ and §§7–10 above. [Beaudoin's publisher abstract](https://doi.org/10.1007/s1
 identifies a narrower scope, the universe's fundamental material; extension
 to all received-esse bearers would require a further argument. The
 Mackie-style distinction between an earlier origin and a concurrent
-sustaining series is used here as an analyst contrast; the model uses
-Schmid's reconstruction, with no new attribution record for either author.
+sustaining series is used here as an analyst contrast. Schmid supplies the
+later-persistence explanation the model uses; the originating-giver branch
+at the first moment is this repository's addition. No new attribution record
+is created for either author.
 
 **Provisional assessment.** The strongest positive warrant for concurrent
 giving is the direct conservation account in I q.104 a.1 co. and ad 4:

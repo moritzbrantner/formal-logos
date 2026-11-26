@@ -20,7 +20,7 @@ id = "One onset-only giving history supports explanation, origin and RECEIVES_ES
 lean = "Control.JointInertia"
 paraphrase = "Finite control: one history has two beings present at both supplied moments, with the recipient's esse received and the distinct originator giving the recipient being at moment 0 only. Momentary explanation by origin or inertia, the cessation law, origin accompaniment, foundation, irreflexivity, term coexistence, standing receipt at each moment, scoped non-self-giving, contact and concurrence hold. The explanation-to-giving bridge, giving by the term, receipt-giving correlativity, weak concurrent actualization and the universal sustaining reading fail."
 definitions = ["DEF-ESSE-RECEIVED-IN", "158301bc-9585-4145-be60-34f08c9f922c", "DEF-TEMPORAL-HISTORY-NOW-SLICE", "DEF-ESSE", "261516e9-9e57-4750-a6ba-f0ea64ff09bf", "8c20c988-31fd-4b59-acf2-db230a6ea32e", "7b28be97-9a3c-444f-af46-fe410092c3ee", "181bb18f-72a4-4cb1-b5c0-9a70f5af2bb5", "211a6432-8b8f-53ed-85e3-75173bb15b24", "56989bd0-a232-56ea-9093-c89350effff4"]
-disambiguations = ["DISAMB-ESSE-RECEPTION", "71d3bdb7-92cc-4023-b0ca-1739914628e4"]
+disambiguations = ["DISAMB-ESSE-RECEPTION", "71d3bdb7-92cc-4023-b0ca-1739914628e4", "88a8fba7-f1a1-4340-8a7f-41dd39bbbe7d"]
 
 [[statement]]
 id = "Onset-only giving satisfies RECEIVES_ESSE_AT_1 correlativity and onset receipt"
@@ -65,7 +65,7 @@ theorem = "jointInertia"
 premises = []
 conclusion = "One onset-only giving history supports explanation, origin and RECEIVES_ESSE_AT_2"
 axioms = ["propext", "Classical.choice", "Quot.sound"]
-senses = {RECEIVES_ESSE_AT = "RECEIVES_ESSE_AT_2"}
+senses = {RECEIVES_ESSE_AT = "RECEIVES_ESSE_AT_2", CAUSE_OF_BEING = "CAUSE_OF_BEING_2"}
 rule = "Evaluate the propositions on the explicit two-moment causality frame"
 meaning = "Closed control over a single interpretation. Onset-only giving is compatible there with momentary explanation, origin accompaniment, standing receipt, non-self-giving, contact and concurrence, as well as the cessation law, foundation, irreflexivity and term coexistence. The three productive bridges, weak concurrent actualization and the universal sustaining reading all fail in that frame."
 
