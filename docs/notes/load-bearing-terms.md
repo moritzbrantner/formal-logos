@@ -714,3 +714,5 @@ attributions.
 ## Research attempts citing this note
 
 - [Sense forks batch 2, restructured per the owner's sense-indexed terms direction: one argument per…](../../corpus/attempts/term-sense-forks-2-20261107.json)
+
+- [No-self-cause scope and distinct witness routes](../../corpus/attempts/01b3a726-463c-4d0f-8317-828b60818e0a.json)
