@@ -1195,3 +1195,35 @@ outputs is a positive response whose adequacy turns on its ability to
 distinguish correction for a reason from mere difference of output.
 Phenomenal classification occurs in none of these seven denial tests.
 Source attribution remains deferred.
+
+The [compiled scope controls](../../TruthCore/Results/Logic/FirstPersonWitness/Solution.lean)
+test the seven denials in three interpretations:
+
+- `realizedTokenWithFailedBridges` fixes one content and two candidates.
+  Both qualify in each of the assertion and doubt interpretations. The first
+  has a realization here and the second lacks one. Consequently both universal
+  bridges fail, no-occurrence is false here, and no-occurrence is true at
+  the other world. The two interpretations share a realization relation by
+  stipulation. The model assigns no semantic content to a token. Calling
+  the performance a denial of no-occurrence requires that additional reading.
+- `otherContentWithoutSelectedPerformance` witnesses an assertion of another
+  content with an occurring realization, alongside the absence of both an
+  assertion of the selected content and a performed doubt about thought.
+  Reasoning about the two absences need not instantiate either missing act.
+- `otherBearerAttribution` gives the sole occurring episode to the candidate
+  distinct from the designated meditator. Assigning agency to the meditator
+  falsifies the alignment rule, and the empty modification classification
+  falsifies the modification rule. In particular, `5581cd7f` has the unary
+  conclusion `Modification e`; it takes a separate rule to infer a bearer.
+  The example stipulates the relations. Observing an integrated episode
+  favors thin attribution only if the tracking evidence identifies which
+  candidate actually exercises the revision.
+
+A warranted stopping point is recognition of this present exercise while
+one is genuinely reconsidering a reason. No selected propositional content,
+universal rule of agency, phenomenal classification or substantial owner is
+a necessary condition of inquiry established by these tests. The exact next
+discriminator for the existence route is whether tracking who retains and
+corrects this token independently identifies its bearer at this world.
+Presence, concrete classification and the cosmological ancestry premises
+retain their own obligations.
