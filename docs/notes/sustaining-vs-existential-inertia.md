@@ -1611,3 +1611,101 @@ The same judgment bears on the sustaining reading used by the per se Second Way,
 ## Research attempts citing this note
 
 - [Necessary origin with existential inertia against the esse-priority source bundle](../../corpus/attempts/4b051644-666b-451e-8e09-b5b9356932f9.json)
+
+## Finite interventions and the productive bridge
+
+Issue #2053 targets the productive bridge
+[`d86c9de9`](../../corpus/statements/d86c9de9-25be-488b-b3b7-69f5f4eb80b8.json).
+With the momentary PSR it feeds weak concurrent actualization `40a97664`,
+then the sustaining-cause reading `ce55210c` and the esse-dependence premise
+`2068f91c`. These are links already in the graph. The [attempt record](../../corpus/attempts/176d45ae-c023-4c72-b2bb-86a09326b798.json)
+tracks the open calibration.
+
+[StructuralCausalModel](../../TruthCore/Causality/StructuralCausalModel.lean)
+uses directed parent slots and well-founded recursion. A surgery forces a
+chosen equation to a constant, keeping the context and remaining equations
+fixed. This captures selective experimental control, for example turning off
+a represented lamp input while holding the rest of the circuit fixed. An
+observationally correlated switch position can instead be a record of a shared
+controller. The graph bounds equation reads and can include idle slots. Even
+active paths can cancel, as in `BinaryButFor.ancestry_without_butFor`, with
+`Y = X` and `Z = (X == Y)`. Each parent is below its child in the selected
+recursive evaluation. This warrants well-foundedness of the model's input
+relation and leaves well-foundedness of any actual giving relation open.
+
+[Identification](../../TruthCore/Causality/StructuralCausalIdentification.lean)
+fixes one pair of Boolean reports and the same finite context law. A fair
+bit and a uniform four-way draw have factored point masses. The draw flips
+a bit with probability one quarter. The forward model sends the fair bit
+through a noisy equation from X to Y, the reverse model sends it from Y to X,
+and the confounded model reads the fair bit in both equations. The joint
+reports agree in law and all four pairs have positive mass. At
+`do(X = true)` the Y masses at true are respectively 3/4, 1/2 and 1/2. The
+common observational conditional is 3/4. The first two mechanisms use
+separate exogenous inputs for root and child; the confounded mechanism shares
+one input even though the two context coordinates are independent. Acyclicity,
+full observational support and independence of the distinct noise coordinates
+therefore leave the direction open. Identifying the forward effect from its
+observational conditional here relies on the forward equation structure and
+independence of the X-generating bit from the disturbance in the Y equation.
+The intervention separates forward from both controls under the same context
+law and surgical readout. The reverse and confounded controls share that
+particular intervention outcome.
+
+[Adapters](../../TruthCore/Causality/StructuralCausalAdapters.lean) preserve
+the old Boolean but-for test, the two public settings in the response-parity
+example, and both paired switches for each selected report. The actual-graph
+adapter takes the shared frame, actual carriers, causal adjacency,
+well-foundedness, and equations as distinct inputs. The
+[productive-deletion adapter](../../TruthCore/Causality/StructuralCausalDeletion.lean)
+cuts gates of existing contributor records and preserves the intrinsic basis.
+The supply readout is exactly the old inductive supply test on the restricted
+groups, in the finite acyclic fragment. Cutting a record's effect on supply
+and forcing an event absent are different operations.
+
+**OPEN connection to strict esse-giving.** At a selected later moment, keep
+the same received-esse bearer, earlier presence, original origin and absence
+of independently specified loss inducers fixed. The matched surrogate uses
+the first input as earlier presence, the second as the current operation and
+the output as later presence. In `Mechanism.responsive` the output reads
+both inputs. In `Mechanism.background` it computes `u.first && u.second`
+from the unchanged context: it tracks the earlier-presence bit only when the
+second background bit is true, and at `⟨true, false⟩` it returns false
+despite earlier presence. The model has no loss-inducer predicate.
+`Mechanism.single_channel_contrast` checks their agreement under natural
+observation. At the selected all-true context, the background output retains
+the earlier-presence value after the cut, while the responsive model loses
+it. Interpreting that response as inertia requires independent grounds for
+applying the persistence law to this bearer and interval, including grounds
+for treating withdrawal as inducer-free. The old positive inertia account
+proposes such a law; its application to existential loss remains the open
+question of the preceding section. A mere latent lookup is evidence of
+formal underdetermination, while the persistence law would do the
+explanatory work in the inertia interpretation.
+
+The missing bridge would map the natural and cut responses to two admissible
+histories of one `CausalityFrame`, agreeing about earlier presence
+`history.IsAt w x earlier`, receipt and the loss-inducer background. It
+would identify the current channel with the strict exercise
+`F.GivesAt w g x later`, prove its selective removal independently of the
+recipient readout, exclude alternative strict givers at that moment, and
+identify the readout with `history.IsAt w x later` for the same bearer.
+The immediate test is whether the bearer persists in such a cut history.
+Continuing presence with the momentary explanation and independently excluded
+givers would bear directly against the productive bridge in that instance.
+Loss would discriminate the stated models yet would still require the
+strict-giving interpretation and a scope argument to support the universal
+premise. Lamp behavior concerns illumination and supplies neither calibration.
+The possibility of a strict-giver cut and the preservation of the
+background remain the live blockers. The provisional assessment of the
+productive bridge therefore remains open at the warrant recorded above.
+
+The [PR #2089 selector](https://github.com/moritzbrantner/formal-logos/pull/2089)
+is reused by `selection_forced`. In the context-and-valuation worlds of the
+SCM, a forced value gives a nonempty selection for that antecedent, and
+`Would` evaluates the consequent in the recomputed outcome. The missing
+history calibration would extend this use to `W` in the shared frame.
+For the persistence test the antecedent is absence of the **operation** at
+the selected moment. The specialized agent-absence test requires a separate
+bridge to the agent's ontic nonexistence. Identifying either absence with a
+Boolean assignment requires its own interpretation.

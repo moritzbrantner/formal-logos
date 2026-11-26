@@ -311,6 +311,10 @@ public import TruthCore.Causality.StrictEsseScale
 public import TruthCore.Causality.StrictGroundInfiniteCauseSeries
 public import TruthCore.Causality.StrictGroundRepresentation
 public import TruthCore.Causality.StrictPriorityPureAct
+public import TruthCore.Causality.StructuralCausalAdapters
+public import TruthCore.Causality.StructuralCausalDeletion
+public import TruthCore.Causality.StructuralCausalIdentification
+public import TruthCore.Causality.StructuralCausalModel
 public import TruthCore.Causality.SubjectFocalRoles
 public import TruthCore.Causality.SubtractionArgument
 public import TruthCore.Causality.SuccessionPotency
