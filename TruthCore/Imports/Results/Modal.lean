@@ -44,6 +44,7 @@ public import TruthCore.Results.Modal.LimitationPossibility.Solution
 public import TruthCore.Results.Modal.LimitationSeparation.Solution
 public import TruthCore.Results.Modal.ModalGrounding.Solution
 public import TruthCore.Results.Modal.ModalGroundingActualAbsence.Solution
+public import TruthCore.Results.Modal.ModalPowerHolder.Solution
 public import TruthCore.Results.Modal.NecessaryBeingMeasure.Solution
 public import TruthCore.Results.Modal.NecessaryIfConnectivity.Solution
 public import TruthCore.Results.Modal.NecessaryIfExistent.Solution

@@ -1,0 +1,40 @@
+{
+  "id": "b7b07c5e-e867-460f-8015-cf87978163f2",
+  "label": "Joint absence on the fixed actual roster and the global replacement gap",
+  "statement_ids": [
+    "18e5bd4e-8178-468e-b867-fbaf9c5988ad",
+    "0dc833c1-3b2f-4769-a09e-531f0da12455",
+    "90b222c4-376f-4dab-8a20-adf639316685",
+    "df77cf26-558f-48ce-a2b2-343561d0a3f5",
+    "9574ad92-9949-40ee-baf3-e8aec590dc7d"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "Finite omission on the subtype of actual contingent concreta supplies joint absence under a successor, a finite list cover and projected population amalgamation. At an accessible joint-absence world, coverage of locally contingent concreta and local transitivity suffice for absence of all local contingents. Two equivalence-frame controls rule out deriving either scope change from the frame axioms alone. The positive existence conjunction can be contingent without joint absence. See docs/notes/pruss-power-premises.md, section 11.",
+  "blocker": "Independent warrant for metaphysical population amalgamation and for excluding contingent replacements at the selected absence world remains open. Transfer to an empty earlier time of the actual history requires another bridge.",
+  "evidence": [
+    "e165bc1e-b947-4b8d-a787-136661f39dbe",
+    "7eb6cabd-d805-4db9-8b18-1f73d45553f5",
+    "4eda66b6-a2c1-439e-984f-f22a0c747727",
+    "PR-2022",
+    "PR-2033"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2033"
+    },
+    {
+      "role": "repair",
+      "provider": "claude",
+      "model": "claude-opus-5-5",
+      "date": "2026-11-26",
+      "pr": "PR-2033"
+    }
+  ]
+}

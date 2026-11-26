@@ -1,0 +1,11 @@
+{
+  "id": "4eda66b6-a2c1-439e-984f-f22a0c747727",
+  "label": "Joint absence and replacement controls on finite equivalence frames",
+  "argument_id": "a75b68ac-f8e3-4ac5-8045-bb53e0e8abc0",
+  "challenge_module": "TruthCore.Results.Modal.ModalPowerHolder.Challenge",
+  "solution_module": "TruthCore.Results.Modal.ModalPowerHolder.Solution",
+  "theorem": "TruthCore.Results.Modal.ModalPowerHolder.controls",
+  "comparator_config": "results/4eda66b6-a2c1-439e-984f-f22a0c747727/comparator.json",
+  "status": "solution-present",
+  "description": "Universal access permits every populated Boolean profile. The actual roster has two contingents, with a world omitting each. The positive conjunction can fail but no accessible profile omits both. In the reused swapped model the one actual contingent is absent at the other world and a distinct contingent exists there, so the joint-absence and global claims separate."
+}

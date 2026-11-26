@@ -1,0 +1,14 @@
+{
+  "id": "36bdddd1-3b2b-4410-aa75-0d66c78ea138",
+  "label": "Joint absence by amalgamating a finite actual contingent roster (inference)",
+  "input_statement_ids": [
+    "390ac3ab-48ec-596e-9890-4d2364e81cf9",
+    "90b222c4-376f-4dab-8a20-adf639316685",
+    "df77cf26-558f-48ce-a2b2-343561d0a3f5"
+  ],
+  "output_statement_id": "18e5bd4e-8178-468e-b867-fbaf9c5988ad",
+  "rule": "Apply finite omission to the fixed subtype of actual contingent concreta",
+  "meaning": "Every listed actual contingent concretum has an accessible absence witness by its membership condition. Starting with an accessible successor, finite omission combines the witnesses using containment in both roster populations. The resulting world lacks every member by the roster's finite enumeration.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

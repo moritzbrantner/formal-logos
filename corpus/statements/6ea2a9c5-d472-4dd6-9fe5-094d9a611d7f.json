@@ -1,0 +1,16 @@
+{
+  "id": "6ea2a9c5-d472-4dd6-9fe5-094d9a611d7f",
+  "label": "Every holder of actual-roster absence power gives some member of that roster being at w",
+  "paraphrase": "Open analyst premise. Each holder at w of a power for the joint absence of the actual contingent concrete roster gives being at w to at least one member of that roster. Giving at a world means giving at some time in that world. The recipient can depend on the holder.",
+  "lean_declaration": "TruthCore.Modal.ModalPowerHolder.ActualAbsenceHoldersGiveSome",
+  "definition_ids": [
+    "bf7eddca-8291-4744-8470-379babcd7781",
+    "62dfa893-b633-4513-9790-8f9a0a3087e0",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ],
+  "disambiguation_ids": [
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f",
+    "623ddbf6-9683-5361-bae4-e348a00ec680"
+  ]
+}

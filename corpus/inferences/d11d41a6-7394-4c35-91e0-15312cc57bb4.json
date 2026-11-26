@@ -1,0 +1,14 @@
+{
+  "id": "d11d41a6-7394-4c35-91e0-15312cc57bb4",
+  "label": "The holder gives differently when it gives at least one actual contingent being (inference)",
+  "input_statement_ids": [
+    "906f5c39-2a63-4dc2-955d-a00cfd8a976b",
+    "6ea2a9c5-d472-4dd6-9fe5-094d9a611d7f",
+    "3ef41442-431a-4bed-83bd-4458ed623f5f"
+  ],
+  "output_statement_id": "5cf75a6b-c3be-4ed5-acdf-c163383dd7f2",
+  "rule": "Use factive giving to exclude the chosen actual giving at the initiator-presence world",
+  "meaning": "For each holder, pick an actual contingent recipient of its giving. At the accessible world of joint absence where that holder exists, this recipient is absent. Factivity rules out the same giving there, so the recipients of its giving differ between these worlds. The result uses the same holder and recipient without requiring actual giving to the rest of the roster.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}
