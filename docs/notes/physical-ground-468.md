@@ -610,50 +610,10 @@ are supplied to the program. It tests the positive replacement's
 functional contribution and its remaining burden rather than
 pretending to implement genuine thought in a small program.
 
-```python
-from itertools import product
+Lean checks all configurations of the actual conditions, cue, report
+and preference. [Consent census](../../TruthCore/Causality/PhysicalGroundControls.lean#L46) · [Selected cases](../../TruthCore/Causality/PhysicalGroundControls.lean#L55)
 
-def case_duty(harm, consent):
-    return harm and consent != "C"
-
-def reason_route(represented_harm, represented_consent, wants_proceed):
-    valid_consent = represented_consent == "C"
-    conclusion = represented_harm and not valid_consent
-    return conclusion, (not conclusion and wants_proceed)
-
-def bypass(represented_harm, represented_consent, wants_proceed):
-    return wants_proceed and (
-        not represented_harm or represented_consent == "C")
-
-def benefit_only(represented_harm, wants_proceed):
-    return wants_proceed and not represented_harm
-
-rows = []
-for harm, consent, cue, report, wants_proceed in product(
-    (False, True), ("none", "B", "C"), (False, True),
-    ("none", "B", "C"), (False, True)
-):
-    actual = case_duty(harm, consent)
-    believed, action = reason_route(cue, report, wants_proceed)
-    assert action == bypass(cue, report, wants_proceed)
-    accurate = (harm, consent) == (cue, report)
-    if accurate:
-        assert believed == actual
-        assert not (actual and action)
-    rows.append((actual, believed, action,
-                 benefit_only(cue, wants_proceed), accurate))
-
-assert len(rows) == 72
-assert sum(x[4] for x in rows) == 12
-assert sum(x[0] != x[1] for x in rows) == 32
-assert sum(x[2] != x[3] for x in rows) == 6
-assert reason_route(True, "C", True) == (False, True)
-assert reason_route(True, "B", True) == (True, False)
-assert reason_route(True, "B", False) == (True, False)
-assert reason_route(False, "B", True) == (False, True)
-```
-
-Executed all 72 configurations locally. The reason-route and bypass
+Lean checks all 72 configurations. The reason-route and bypass
 outputs agree in every row, including errors. In all 12 accurate
 input rows the reason-route decision respects the stipulated duty.
 In 32 of the 72 rows the represented duty differs from the actual
@@ -1025,50 +985,20 @@ of distinct intelligible aspects, not merely appeal to multiple
 descriptions by observers. The toy control neither equates intentional
 roles with causal roles nor shows either account metaphysically possible.
 
-### 4. Executed local diagnostics
+### 4. Finite diagnostics checked in Lean
 
-The following JavaScript reproduces the checked comparison. Bit masks
-only encode the selected inventory. The same-realizer assignments test
-only structural consistency of the displayed conditions, not metaphysical
-possibility, actuality of a proposed first being, or any existing Lean
-theorem's validity.
+Lean checks all nonempty families of profiles on the three inventory bits.
+It verifies the wisdom condition for a maximal profile when the relevant
+extension exists, and counts 1,024 profile cases, 369 maximal cases, 376
+local extensions without prior wisdom and 80 cross-profile separators.
+The four probes distinguish the assigned truth conditions (TT, FT, TF, FF).
+Two true contents share the same subject, object, form, operation and
+realizer in the one-constituent fixture.
+[Inventory census](../../TruthCore/Causality/PhysicalGroundControls.lean#L88) · [Articulation control](../../TruthCore/Causality/PhysicalGroundControls.lean#L119)
 
-```javascript
-const assert=(b,msg)=>{if(!b)throw Error(msg)};
-const vals=[0,1,2,3,4,5,6,7], wisdom=4;
-const subset=(a,b)=>(a&b)===a;
-let cases=0,strict=0,local=0,cross=0;
-for(let mask=1;mask<256;mask++){
-  const F=vals.filter(x=>mask&(1<<x));
-  for(const b of F){
-    const max=!F.some(t=>t!==b&&subset(b,t));
-    const ext=F.some(t=>subset(b|wisdom,t));
-    const elsewhere=F.some(t=>t&wisdom);
-    assert(!max||!ext||!!(b&wisdom),"maximal + local compatibility implies wisdom");
-    if(!(b&wisdom)&&max&&elsewhere&&!ext)cross++;
-    if(!(b&wisdom)&&ext){assert(!max,"extension not maximal");local++}
-    if(max)strict++;
-    cases++;
-  }
-}
-const probes=[{received:false,composed:false},{received:true,composed:false},
-  {received:false,composed:true},{received:true,composed:true}];
-const contents=[p=>!p.received,p=>!p.composed];
-assert(probes.some(p=>contents[0](p)!==contents[1](p)),"distinct truth conditions");
-assert(contents.every(f=>f(probes[0])),"actual both true");
-const n="source", bearer=n, object=n, form=n, operation=n, constituents=[n];
-const aware=contents.map((f,i)=>({content:i,truth:f(probes[0]),
-  subject:bearer,object,form,operation,realizer:n}));
-assert(aware.every(r=>r.subject===r.object&&r.object===r.form&&
-  r.form===r.operation&&r.truth),"same bearer, act, object, form");
-assert(aware.length===2&&new Set(aware.map(r=>r.realizer)).size===1&&
-  constituents.length===1,"non-injective content realization");
-console.log({cases,strict,local,cross,probeRows:probes.map(p=>contents.map(f=>f(p)))});
-```
-
-Results: cases = 1024, strict (maximal profile cases) = 369,
-local = 376, cross = 80; truth-condition rows TT, FT, TF, FF.
-All assertions passed in the analyst JavaScript execution.
+The bit masks encode the selected inventory. The shared realizer tests
+the consistency of this structural assignment. Metaphysical possibility
+and the actuality of a first being still require separate evidence.
 
 ### 5. Connect the support proposal to the personal-source endpoint
 
