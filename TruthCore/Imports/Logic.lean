@@ -40,6 +40,7 @@ public import TruthCore.Logic.ExperiencedThoughtBearer
 public import TruthCore.Logic.FallibleCorrection
 public import TruthCore.Logic.FinerContentCriterion
 public import TruthCore.Logic.FiniteValidationLogic
+public import TruthCore.Logic.FirstPersonWitness
 public import TruthCore.Logic.FirstPrincipleControls
 public import TruthCore.Logic.FirstPrincipleRoles
 public import TruthCore.Logic.FitchKnowability
