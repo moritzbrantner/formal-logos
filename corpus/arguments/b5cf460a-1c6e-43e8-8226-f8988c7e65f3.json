@@ -1,0 +1,26 @@
+{
+  "id": "b5cf460a-1c6e-43e8-8226-f8988c7e65f3",
+  "label": "Finite pair checks admit an untested MAXIME_ENS_1 universal giver",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "584862e5-b41b-4a3b-a494-7f04b719553c",
+  "inference_ids": [
+    "a4d21637-8a99-4271-b8db-40f22aa85c1d"
+  ],
+  "meaning": "Use Option Nat as the rigid roster and keep every bearer in act at esse. In the baseline profile, the distinguished bearer none has rank zero and every other bearer has rank one. In each alternative with a different giver h, h has rank zero, none rank one and all other bearers rank two. An actual esse cause goes from smaller to larger rank, and that same comparison interprets MoreIn at the sole respect. A finite set of pairs mentions only finitely many bearers. Pick h outside both projections and different from none. The comparisons on the tested pairs are unchanged and h supplies none in the alternative. Both profiles thus fit the same finite yes/no record while retaining well-foundedness, closed-collection rootedness, causal ascent and their own unique actual maximal universal direct giver. Complete incoming lists at the selected giver and the traced bearer can provide the certificate in each profile. Those lists contain information beyond the tested pairs. The MoreIn assignment varies with the giver, so a separate observation that fixes the maximality of none is outside the compared record. The construction interprets the mode-unspecified actual esse relation and makes no application to real productive causes or divine naming.",
+  "definition_ids": [
+    "23ae8d63-1351-4e7c-9ab1-ed85d9695b22",
+    "5b19527d-9418-441e-820c-3c659ba7cb12",
+    "8163859b-95b3-4dd2-8a69-541bd332f32f",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "05a2afda-c654-5f6b-a0f7-796c5dc1be2e",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "a2a8de58-42e0-5481-b7fb-848ae8602036",
+    "5766de66-8a37-5b04-aa65-9eec53319f50",
+    "c15c1634-6d70-4ecb-8b5b-5592df955223"
+  ],
+  "disambiguation_ids": [
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "4f1d0cf6-88ba-59e3-814d-01450c2bf282",
+    "1795a62e-f78b-5f5b-94e7-9e7490824811"
+  ]
+}

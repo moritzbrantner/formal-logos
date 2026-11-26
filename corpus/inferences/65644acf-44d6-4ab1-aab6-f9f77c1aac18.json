@@ -1,0 +1,14 @@
+{
+  "id": "65644acf-44d6-4ab1-aab6-f9f77c1aac18",
+  "label": "Certify an identity ancestor by pair checks along a mediated esse path (inference)",
+  "input_statement_ids": [
+    "3d01134d-0b03-4469-a81a-a18d6e179fa0",
+    "74231a5c-5cc1-4714-a715-b5408e076c42",
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410"
+  ],
+  "output_statement_id": "cc70608d-dc96-4808-b89f-17aa297008e7",
+  "rule": "Apply the finite pair certificate criterion to an identity ancestor without eligible donors",
+  "meaning": "An actual recipient either is an identity bearer or has a finite path from one under the ancestry premise. Excluding actual supply at identity makes the eligibility restriction sound. At that same identity bearer the eligibility rule leaves zero candidate donors, so the checked finite pair criterion applies to the actual path. The case split uses excluded middle. In the alternate hidden-giver models the baseline bearer's represented identity persists even as it receives esse. That assignment pinpoints the disputed exclusion. An interpretation allowing external production of a bearer with the represented identity must supply some other warrant for underivedness.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

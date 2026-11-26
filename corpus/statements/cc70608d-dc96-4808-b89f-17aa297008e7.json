@@ -1,0 +1,13 @@
+{
+  "id": "cc70608d-dc96-4808-b89f-17aa297008e7",
+  "label": "Finite pair checks identify an actual identity ancestor under the reception restriction",
+  "paraphrase": "Every actual esse gift is eligible under the rule that its distinct actual donor gives to an actual recipient whose represented esse differs from its essence. For each actual bearer there is a particular actual identity bearer and finitely many observed donor-recipient pairs such that every eligible relation matching those answers makes that identity bearer a supplierless ancestor of the recipient. The selected bearer, path and tests may vary by recipient. There is no requirement of a maximum or a direct gift to every recipient.",
+  "lean_declaration": "TruthCore.Latin.Aquinas.DeEnte.IdentityPairAudit.FiniteIdentityPairAudits",
+  "definition_ids": [
+    "8163859b-95b3-4dd2-8a69-541bd332f32f",
+    "c15c1634-6d70-4ecb-8b5b-5592df955223",
+    "3e9fb252-3f0b-4ed4-a683-7c36d255c357",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"
+  ]
+}

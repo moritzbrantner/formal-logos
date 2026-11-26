@@ -301,6 +301,7 @@ public import TruthCore.Causality.SupplierAudit
 public import TruthCore.Causality.SupplierAuditCertificates
 public import TruthCore.Causality.SupplierAuditLikelihood
 public import TruthCore.Causality.SupplierAuditVisibility
+public import TruthCore.Causality.SupplierPairAudit
 public import TruthCore.Causality.SupplierPanelLikelihood
 public import TruthCore.Causality.SurveyCapabilityControls
 public import TruthCore.Causality.SurveyCapabilityProfiles

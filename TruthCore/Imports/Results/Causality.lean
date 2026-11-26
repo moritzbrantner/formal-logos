@@ -408,6 +408,7 @@ public import TruthCore.Results.Causality.SupertaskUrnPointwise.Solution
 public import TruthCore.Results.Causality.SupplierAuditCertificates.Solution
 public import TruthCore.Results.Causality.SupplierAuditLikelihood.Solution
 public import TruthCore.Results.Causality.SupplierAuditVisibility.Solution
+public import TruthCore.Results.Causality.SupplierPairAudit.Solution
 public import TruthCore.Results.Causality.SupplierPanelLikelihood.Solution
 public import TruthCore.Results.Causality.SurveyCapabilityProfiles.Solution
 public import TruthCore.Results.Causality.SurveyProductiveSource.Solution

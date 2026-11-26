@@ -1,0 +1,28 @@
+[batch]
+vocab = "TruthCore.Latin.Aquinas.DeEnte.RankedGiverAudit"
+results = "TruthCore.Results.Aquinas.DeEnte.RankedGiverAudit"
+
+[[statement]]
+id = "One fixed actual maximum can be certified as the same root of every recipient by testing its gift"
+lean = "RankedGiverCertificates"
+paraphrase = "Fix one actual esse relation, the actuality of each bearer and the comparison MoreIn at esse on the same roster. Every actual edge is eligible: its donor is distinct, actual and strictly higher at esse than the actual recipient. Some one actual maximum s has the following property for every actual x. All subrelations of the eligible pairs agreeing with the actual answer about (s,x) make s a supplierless ancestor of x. For x = s the test uses the empty set of questions. For every distinct recipient it uses only the direct pair (s,x). This is availability conditional on the fixed admissibility rule and the actual answers."
+definitions = ["5b19527d-9418-441e-820c-3c659ba7cb12", "c15c1634-6d70-4ecb-8b5b-5592df955223", "3e9fb252-3f0b-4ed4-a683-7c36d255c357", "211a6432-8b8f-53ed-85e3-75173bb15b24", "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72", "DEF-ESSE"]
+
+[[argument]]
+id = "Certify one maximal giver for each actual recipient by testing its gift"
+theorem = "rankedCertificates"
+comparator_theorems = ["emptyReportAtMaximum"]
+premises = ["0881e859-c4c3-53ff-9bec-b61294e12d51", "cffad050-e86d-48b8-b04b-be47fcc1352d"]
+conclusion = "One fixed actual maximum can be certified as the same root of every recipient by testing its gift"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Exclude incoming pairs by the given maximum and fixed ascent, and preserve one tested positive edge"
+meaning = "Strict ascent at esse makes every actual donor eligible. At the same actual maximum no eligible donor remains. Its actual gift to each distinct actual recipient then supplies one observed positive edge to that very recipient. The checked fixed-pair criterion gives the same root and ancestry for all matching alternatives. For the maximum itself the zero-step path needs no query. For a distinct recipient an empty report permits the empty relation, so establishing which bearer supplies it still requires evidence. The alternatives preserve the comparative and its application to donors, and may omit the actual direct gift."
+
+[[argument]]
+id = "Recover finite complete-list root audits from ranked pair certificates"
+theorem = "rowAuditsOfRankedCertificates"
+premises = ["One fixed actual maximum can be certified as the same root of every recipient by testing its gift"]
+conclusion = "3008c7db-0236-4b03-9da7-f41ea8d8cac1"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Apply the matching-pair certificate to the actual relation, then use the finite incoming-list theorem"
+meaning = "The actual relation agrees with its own answers. For the same actual bearer and each actual recipient the certificate therefore gives actual supplierlessness and a finite path. The existing positive complete-list theorem constructs a finite audit in its own broader frame retaining this very source. The number of pair queries and the number of complete incoming lists describe different acts of observation. This route supplies the existing local certificate premise used by the closed-collection argument."
