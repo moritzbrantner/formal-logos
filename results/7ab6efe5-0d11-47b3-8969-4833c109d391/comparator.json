@@ -1,0 +1,14 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.SupplierAuditCertificates.Challenge",
+  "solution_module": "TruthCore.Results.Causality.SupplierAuditCertificates.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.SupplierAuditCertificates.positiveCertificate",
+    "TruthCore.Results.Causality.SupplierAuditCertificates.positiveCertificateAt"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "enable_nanoda": true
+}

@@ -1,0 +1,9 @@
+{
+  "id": "5b19527d-9418-441e-820c-3c659ba7cb12",
+  "label": "Supplier audit by complete incoming lists",
+  "term": "supplier audit accessibility",
+  "definition": "auditFrame supplies audited makes a world v accessible from w when their supplier relations agree on every possible supplier to each audited recipient. The bearer type and identities are shared. The audit asks no questions about incoming edges at unaudited recipients.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.SupplierAudit.auditFrame",
+  "note": "The unrestricted instance takes the worlds to be all binary relations on one bearer type and supplies to be identity. Finiteness counts audited recipients. An incoming list can contain infinitely many suppliers, and agreement includes absence of each possible incoming edge. Applying this idealized information condition to actual evidence requires independent warrant."
+}

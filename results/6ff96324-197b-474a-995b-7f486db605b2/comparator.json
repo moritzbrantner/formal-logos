@@ -1,0 +1,15 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.SupplierAuditCertificates.Challenge",
+  "solution_module": "TruthCore.Results.Causality.SupplierAuditCertificates.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.SupplierAuditCertificates.negativeCertificate",
+    "TruthCore.Results.Causality.SupplierAuditCertificates.negativeCertificateAt",
+    "TruthCore.Results.Causality.SupplierAuditCertificates.acyclicConeCannotHaveNegativeCertificate"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "enable_nanoda": true
+}

@@ -1,0 +1,11 @@
+{
+  "id": "6ff96324-197b-474a-995b-7f486db605b2",
+  "label": "Characterize finite certificates excluding all supplierless ancestors",
+  "argument_id": "2205b336-52a0-43f1-b4d3-b65a878ad07f",
+  "challenge_module": "TruthCore.Results.Causality.SupplierAuditCertificates.Challenge",
+  "solution_module": "TruthCore.Results.Causality.SupplierAuditCertificates.Solution",
+  "theorem": "TruthCore.Results.Causality.SupplierAuditCertificates.negativeCertificate",
+  "comparator_config": "results/6ff96324-197b-474a-995b-7f486db605b2/comparator.json",
+  "status": "solution-present",
+  "description": "A given audit excludes all supplierless ancestors exactly when it covers the actual cone and that cone has no supplierless member. Deleting incoming edges at an unaudited ancestor preserves a path from it by discarding any prefix that returns to it. Full coverage of a finite cone supplies the converse certificate. An acyclic actual cone therefore admits no finite negative certificate. The deletion alternatives are part of the unrestricted information model."
+}

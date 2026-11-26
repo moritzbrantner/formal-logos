@@ -1,0 +1,9 @@
+{
+  "id": "c15c1634-6d70-4ecb-8b5b-5592df955223",
+  "label": "A supplierless ancestor with fixed identity",
+  "term": "specified supplierless ancestor",
+  "definition": "RootAncestor root target supplies holds if the designated root belongs to the full supplier predecessor cone of target and no bearer in the entire shared bearer type supplies root in the selected relation.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.SupplierAuditCertificates.RootAncestor",
+  "note": "The root identity stays fixed across the audit alternatives. Supplierlessness and ancestry are relative to the selected relation. The zero-edge path permits the target itself as the designated root."
+}

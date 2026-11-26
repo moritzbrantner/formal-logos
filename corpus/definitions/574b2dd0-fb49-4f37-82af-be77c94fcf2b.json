@@ -1,0 +1,9 @@
+{
+  "id": "574b2dd0-fb49-4f37-82af-be77c94fcf2b",
+  "label": "A supplierless member in a selected set",
+  "term": "existence of a supplierless member",
+  "definition": "HasRootIn S supplies holds if some bearer in S has no incoming supplier from anywhere in the entire bearer type. The restriction to S applies to the witness, while absence of incoming edges is global in the selected relation.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.SupplierAudit.HasRootIn",
+  "note": "When S is the full predecessor cone of a target, this is existence of an ancestor without suppliers. Each alternative has its own cone and may have a different witness."
+}
