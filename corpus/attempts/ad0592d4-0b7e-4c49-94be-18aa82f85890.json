@@ -14,5 +14,30 @@
   "blocker": "For lordship, show why the route's generic causation warrants real subjection. For the naming routes prove identification of the same stage-one witness with the classical profile or defend the independent rule governing community usage.",
   "evidence": [
     "99241327-82c2-4880-b437-d08625a58b40"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2018"
+    },
+    {
+      "role": "review",
+      "provider": "codex",
+      "model": "gpt-6.2-astra",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2018"
+    },
+    {
+      "role": "repair",
+      "provider": "claude",
+      "model": "claude-opus-5-5",
+      "date": "2026-11-26",
+      "pr": "PR-2018"
+    }
   ]
 }

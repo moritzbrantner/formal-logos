@@ -21,5 +21,23 @@
     "e9ec97c2-ecf7-414e-906d-c15e7de65888",
     "78b94fbf-e025-4084-a529-2102fd8b98a8",
     "7ab92b2d-2471-43f6-af1b-a8dee675ec50"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2019"
+    },
+    {
+      "role": "review",
+      "provider": "codex",
+      "model": "gpt-6.2-astra",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2019"
+    }
   ]
 }

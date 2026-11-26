@@ -47,6 +47,7 @@ pub mod thickness;
 mod transcription;
 pub mod tree;
 pub mod unused_premises;
+pub mod workers;
 
 use serde_json::{Map, Value};
 use std::{collections::BTreeMap, fs, path::Path};

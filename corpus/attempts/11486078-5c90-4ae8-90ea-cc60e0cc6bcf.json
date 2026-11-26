@@ -13,5 +13,30 @@
   "blocker": "To infer AllActualitiesDue, defend independent grounds for excluding actual non-due perfections in the fixed form-and-end profile. The article itself gives a narrower classification of perfections.",
   "evidence": [
     "ca4e711d-ed9d-4345-8780-70d1a53b915d"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2018"
+    },
+    {
+      "role": "review",
+      "provider": "codex",
+      "model": "gpt-6.2-astra",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2018"
+    },
+    {
+      "role": "repair",
+      "provider": "claude",
+      "model": "claude-opus-5-5",
+      "date": "2026-11-26",
+      "pr": "PR-2018"
+    }
   ]
 }

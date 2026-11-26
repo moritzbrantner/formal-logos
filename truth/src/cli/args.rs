@@ -212,6 +212,17 @@ pub struct SemanticsArgs {
     pub definitions: Vec<String>,
 }
 
+/// The `workers` options.
+#[derive(Default)]
+pub struct WorkerArgs {
+    /// Whether any of them was given.
+    pub flags: bool,
+    /// `--authored-only-by MODEL`
+    pub authored_only_by: Option<String>,
+    /// `--open`
+    pub open: bool,
+}
+
 /// Every option of every command, parsed in one pass in token order.
 pub struct Args {
     pub machine: bool,
@@ -251,6 +262,7 @@ pub struct Args {
     /// `--module MODULE`, repeatable (`countermodel` takes one, `prove-sweep`
     /// any number).
     pub modules: Vec<String>,
+    pub workers: WorkerArgs,
 }
 
 /// The `countermodel` options (`--all` is the shared research flag).
@@ -371,6 +383,7 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
         sweep: SweepArgs::default(),
         discover: DiscoverArgs::default(),
         modules: Vec::new(),
+        workers: WorkerArgs::default(),
     };
     let mut args = args.iter();
     while let Some(arg) = args.next() {
@@ -572,6 +585,20 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
                 parsed.without.push(value.to_owned());
             }
             "--compare-premises" => parsed.compare_premises = true,
+            "--open" => {
+                parsed.workers.flags = true;
+                parsed.workers.open = true;
+            }
+            "--authored-only-by" => {
+                parsed.workers.flags = true;
+                parsed.workers.authored_only_by = Some(
+                    args.next()
+                        .and_then(|value| value.to_str())
+                        .filter(|value| !value.trim().is_empty())
+                        .ok_or_else(|| usage("--authored-only-by requires a model name"))?
+                        .to_owned(),
+                );
+            }
             "--omit" | "--module" | "--theorem" => {
                 let value = args
                     .next()
@@ -819,7 +846,7 @@ impl Args {
         }
         if !accepts.frontier_root && self.frontier_root_set() {
             return Err(usage(
-                "--frontier-root applies only to thickness, frontier, frontier-diff, next-steps, orphans, dossier, context and unused-premises",
+                "--frontier-root applies only to thickness, frontier, frontier-diff, next-steps, orphans, dossier, context, unused-premises and workers",
             ));
         }
         if !accepts.orphans && (self.senses || self.group_by.is_some()) {
