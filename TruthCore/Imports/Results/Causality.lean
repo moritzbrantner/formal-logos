@@ -194,6 +194,7 @@ public import TruthCore.Results.Causality.FiniteRestriction.Solution
 public import TruthCore.Results.Causality.FiniteThroughput.Solution
 public import TruthCore.Results.Causality.FirstMoverNecessity.Solution
 public import TruthCore.Results.Causality.FirstMoverUnderived.Solution
+public import TruthCore.Results.Causality.FixedContentDoxasticVeracity.Solution
 public import TruthCore.Results.Causality.FixedDurationGrimReaper.Solution
 public import TruthCore.Results.Causality.FullFirstCause.Solution
 public import TruthCore.Results.Causality.FullnessCandidates.Solution

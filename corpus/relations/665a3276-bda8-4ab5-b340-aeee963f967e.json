@@ -1,0 +1,10 @@
+{
+  "id": "665a3276-bda8-4ab5-b340-aeee963f967e",
+  "label": "Fixed-content models test use of actual access in divine assent accuracy",
+  "subject_kind": "argument",
+  "subject_id": "23d737da-bd38-4089-903c-080d4985d479",
+  "predicate": "tests",
+  "object_kind": "argument",
+  "object_id": "5649f573-fdcb-4167-8b20-94e4fbf0d839",
+  "note": "The contingent omission preserves fixed-content calibration and KD45 and falsifies the accuracy conclusion when actual access is dropped. The invariant-content profile gives accuracy without the self-edge, so the edge is a uniform sufficient condition and not necessary for accuracy on a restricted family."
+}

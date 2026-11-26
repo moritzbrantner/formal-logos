@@ -94,6 +94,16 @@ theorem distributedKnownImpliesBelieved {Time : Type}
   obtain ⟨a, t, hk⟩ := known
   exact ⟨a, knownImpliesBelieved c a (epistemic a t) (included a t) p hk⟩
 
+/-- One self-edge characterizes local factivity over all world predicates. -/
+theorem actualAccessIffAllFactive (c : Context Agent W) (a : Agent) :
+    (c.belief a).access c.actual c.actual ↔
+      ∀ p, Believes c a p c.actual → p c.actual := by
+  constructor
+  · intro access p believed
+    exact believed c.actual access
+  · intro factive
+    exact factive ((c.belief a).access c.actual) (fun _ access => access)
+
 /-- A fixed core selects the same alternatives at every world. -/
 def fixed (core : W → Prop) : Frame W := ⟨fun _ v => core v⟩
 

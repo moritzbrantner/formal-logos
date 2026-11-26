@@ -11,6 +11,23 @@ open TruthCore.Causality.DivineVeracity1410 (GodAssentAccurate)
 open TruthCore.Causality.DoxasticVeracity
 open TruthCore.Logic.Doxastic
 
+/-- Structural boundary: an unconstrained predicate can be manufactured from
+the accessible set and the proposition. No content interpretation is identified. -/
+theorem unrestrictedRepresentationIff (σ : Signature) (V : Veracity σ) {W : Type}
+    (c : Context σ.Being W) :
+    AssentRepresented σ V c ↔
+      ∀ g, σ.IsGod g → σ.HasClassicalAttributes g → ∀ p, V.Believes g p →
+        ((c.belief g).access c.actual c.actual → p) := by
+  constructor
+  · intro represented g god attributes p assent access
+    obtain ⟨_, alignment, believed⟩ := represented g god attributes p assent
+    exact alignment.mp (believed c.actual access)
+  · intro conditional g god attributes p assent
+    refine ⟨fun w => (c.belief g).access c.actual w ∨ p, ?_, fun _ access => Or.inl access⟩
+    exact ⟨fun h => h.elim (conditional g god attributes p assent) id, Or.inr⟩
+
+/-- Structural consequence of the old unrestricted existential. The
+fixed-content argument has its own calibration and proof. -/
 theorem accurateFromActualAccess (σ : Signature) (V : Veracity σ) {W : Type}
     (c : Context σ.Being W) (represented : AssentRepresented σ V c)
     (access : DivineActualAccess σ c) : GodAssentAccurate σ V := by

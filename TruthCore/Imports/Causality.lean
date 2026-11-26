@@ -131,6 +131,7 @@ public import TruthCore.Causality.FiniteReserveOdds
 public import TruthCore.Causality.FiniteRestriction
 public import TruthCore.Causality.FiniteThroughput
 public import TruthCore.Causality.FirstMoverNecessity
+public import TruthCore.Causality.FixedContentDoxasticVeracity
 public import TruthCore.Causality.FixedDurationGrimReaper
 public import TruthCore.Causality.Frame
 public import TruthCore.Causality.FrameAdapters

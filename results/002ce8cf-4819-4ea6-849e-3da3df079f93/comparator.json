@@ -1,9 +1,0 @@
-{
-  "challenge_module": "TruthCore.Results.Causality.DoxasticVeracity.Challenge",
-  "solution_module": "TruthCore.Results.Causality.DoxasticVeracity.Solution",
-  "theorem_names": [
-    "TruthCore.Results.Causality.DoxasticVeracity.accurateFromActualAccess"
-  ],
-  "permitted_axioms": [],
-  "enable_nanoda": true
-}

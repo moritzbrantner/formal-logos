@@ -1,0 +1,9 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.FixedContentDoxasticVeracity.Challenge",
+  "solution_module": "TruthCore.Results.Causality.FixedContentDoxasticVeracity.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.FixedContentDoxasticVeracity.controls"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}
