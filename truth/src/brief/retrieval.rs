@@ -1098,7 +1098,7 @@ fn extract(lines: &[&str], start: usize) -> String {
 }
 
 /// Searchable spelling of Lean identifiers, retaining exact names as well.
-fn expanded_identifiers(text: &str) -> String {
+pub(super) fn expanded_identifiers(text: &str) -> String {
     let mut out = String::with_capacity(text.len());
     let mut previous: Option<char> = None;
     for ch in text.chars() {
