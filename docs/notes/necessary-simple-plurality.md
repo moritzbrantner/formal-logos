@@ -1920,10 +1920,18 @@ the latter step without adding a formal part.
 
 The [De ente theorem](../../TruthCore/Results/Aquinas/DeEnte/EsseSource/Solution.lean)
 gives a second conditional route on **actual esse–essence identity
-bearers**, with a wider candidate class than the first-mover theorem. Its
-`75b5b027` uses the separate `SharesNature` relation and the three-mode
-multiplication inventory, rather than equality of represented nature
-values. The positive rationale is that an unreceived act of being has no
+bearers**. Its domain is beings actual at `p.esse` whose represented esse
+equals their represented essence. The first-mover theorem instead ranges over
+`IsFirstUnmovedMover Moved Moves`; its simplicity premise supplies the
+represented equality, but its signature has no `p.InAct` or distinguished
+`p.esse`. Applying De ente uniqueness to those first movers therefore requires
+matching the profiles and supplying actuality at esse for each candidate. In
+the De ente theorem, `75b5b027` (`hShare`) concludes only that two qualifying
+bearers stand in the separate `SharesNature` relation. The three-mode
+multiplication inventory is a distinct premise
+(`PlurificationOnlyByThreeModesReading`, `hModes`) that uses shared nature;
+neither compares represented nature values. A bare-thisness rival can concede
+shared nature and dispute the inventory. The positive rationale is that an unreceived act of being has no
 additional quidditative differentiator. Individually equating represented
 esse with represented essence leaves open whether there is one nature in
 this further sense. The existing two-source model isolates that omission.
