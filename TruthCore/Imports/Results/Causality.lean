@@ -117,6 +117,7 @@ public import TruthCore.Results.Causality.CountCauseTimeOpportunity.Solution
 public import TruthCore.Results.Causality.CountTemporalControls.Solution
 public import TruthCore.Results.Causality.CountTemporalNecessity.Solution
 public import TruthCore.Results.Causality.CounterfactualDependence.Solution
+public import TruthCore.Results.Causality.CounterfactualWitnessCoverage.Solution
 public import TruthCore.Results.Causality.CreatureSenses.Solution
 public import TruthCore.Results.Causality.DeEnteSourceGod.Solution
 public import TruthCore.Results.Causality.DefinitionDictionaryConnections.Solution

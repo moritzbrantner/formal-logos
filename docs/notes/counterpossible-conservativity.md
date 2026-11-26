@@ -193,19 +193,27 @@ evaluation domain remain indistinguishable to this extensional selector.
 
 ### God-existence route and next test
 
-The new conditional argument targets `000e1f65`, dependence excluding the real
-possibility of being without the source. It feeds the existing route from
+The conditional arguments target `000e1f65`, dependence excluding the real
+possibility of being without the source. They feed the existing route from
 nonmutual dependence to simple priority (`75f11492`) and the priority-in-being
-consumer (`2e96d2fa`). It uses the shared `DependsForBeing` primitive in
-`DEF-DEPENDS-FOR-BEING`, sense 1 of `23dd6f32`. Its three assumptions are
+consumer (`2e96d2fa`). Both use the shared `DependsForBeing` primitive in
+`DEF-DEPENDS-FOR-BEING`, sense 1 of `23dd6f32`. The full-coverage argument assumes
 one-way soundness of selected absence for that primitive at a designated origin,
 coverage of every accessible source-absence world by selection, and realization
 of any real being-without contrast by an accessible witness in the same frame.
-The witness would be selected by coverage, so soundness excludes the effect
-there, contrary to what the witness realizes. Full antecedent coverage is a
-consequent-independent sufficient policy. For this inference alone it could be
-weakened to preservation of at least one accessible counterexample to the
-consequent whenever there is one.
+The original argument is retained because full antecedent coverage is
+a consequent-independent selection policy. It can be specified without knowing
+which effect or consequent is at issue. Its sibling uses only
+`PreservesAccessibleAbsenceWitnesses`: if an accessible contrast exists with
+the effect present and source absent, at least one accessible contrast for that
+pair is selected. Realization gives an accessible witness, preservation gives
+a selected witness, and soundness excludes the effect there.
+`full_coverage_preserves_witnesses` registers the implication from full
+coverage alone. `witness_coverage_strictness` keeps every contrast witness in
+the same three-world replacement frame while omitting the accessible near
+world, where neither being exists. The weaker policy holds and full coverage
+fails on that selector. This comparison makes no soundness claim for that
+selector.
 
 `SustainingRemovalTest` compares an actual effect and agent, with a supplied
 giving-of-being edge at the designated moment, to a supplied outcome where

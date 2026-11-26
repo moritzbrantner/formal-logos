@@ -292,6 +292,16 @@ theorem omission_of_coverage :
   · intro h
     exact h false true ⟨rfl, rfl⟩ ⟨far, Or.inr rfl, farNoAgent⟩
 
+/-- Omit near, where neither being exists, from every accessible selection. -/
+def skipEmptyWorld : Selector World :=
+  fun w A v => v ∈ accessibleSelection causalFrame.history.ontic.frame w A ∧ v ≠ near
+
+/-- The same frame, selector and origin witness failure of the reverse
+strength implication. Neither soundness nor real-world warrant is asserted. -/
+def WitnessCoverageStrictness : Prop :=
+  PreservesAccessibleAbsenceWitnesses causalFrame skipEmptyWorld actual ∧
+    ¬ CoversAccessibleAbsence causalFrame skipEmptyWorld actual
+
 end Replacement
 
 end TruthCore.Modal.CounterfactualSelectionControls

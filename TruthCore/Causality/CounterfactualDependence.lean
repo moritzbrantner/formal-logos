@@ -84,4 +84,14 @@ def BeingWithoutHasAccessibleWitness (f : CausalityFrame W B T R)
   ∀ x y, CanBeWithout x y → ∃ v, f.history.ontic.frame.access w v ∧
     f.history.ontic.ExistsAt v x ∧ v ∈ absent f y
 
+/-- For each effect and putative source, preserve at least one accessible
+contrast with the effect still present whenever such a contrast exists. -/
+def PreservesAccessibleAbsenceWitnesses (f : CausalityFrame W B T R)
+    (select : Selector W) (w : W) : Prop :=
+  ∀ x y,
+    (∃ v, f.history.ontic.frame.access w v ∧
+      f.history.ontic.ExistsAt v x ∧ v ∈ absent f y) →
+    ∃ v, f.history.ontic.frame.access w v ∧ f.history.ontic.ExistsAt v x ∧
+      v ∈ absent f y ∧ v ∈ select w (absent f y)
+
 end TruthCore.Causality.CounterfactualDependence

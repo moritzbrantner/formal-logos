@@ -1,0 +1,10 @@
+{
+  "id": "27c228be-407a-459c-a428-b5bc6e84baf9",
+  "label": "Three-world strictness model for accessible absence coverage (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "e495db9a-29dc-4953-8ca3-9f6043b530e1",
+  "rule": "Omit a world with no existing beings from the accessible selector",
+  "meaning": "In the existing three-world replacement interpretation, filter out the near world. That world has no existing effect for any candidate pair, so every accessible contrast witness remains eligible. The near world is nevertheless accessible and lacks the agent, defeating full coverage for that agent. Both results use the same frame, selector and origin.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

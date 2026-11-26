@@ -1,0 +1,12 @@
+{
+  "id": "8ab91e0c-f448-423a-9bdb-e0653c05e243",
+  "label": "Full accessible absence coverage entails witness preservation (inference)",
+  "input_statement_ids": [
+    "06047f4c-ce98-4a33-a3f2-84fcf476d86e"
+  ],
+  "output_statement_id": "31bcb75e-22ea-4ca9-a9f5-a71da9bfc3f1",
+  "rule": "Apply full coverage to the accessible witness for the given effect and source",
+  "meaning": "For the same frame, selector and origin, an accessible effect-present source-absence witness lies among the worlds selected by full coverage. The same witness satisfies the weaker premise. Full coverage is the sole premise.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}
