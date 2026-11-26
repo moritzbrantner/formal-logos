@@ -1,0 +1,12 @@
+{
+  "id": "4d776849-4271-4bbf-b5e9-72e631f50193",
+  "label": "Restrict the parallel-ray solution classification to an observation panel (inference)",
+  "input_statement_ids": [
+    "c98408fd-f39e-4f47-a104-36b4c52ef617"
+  ],
+  "output_statement_id": "2b807b2a-85e0-48ab-bc51-d8aaf6d24aad",
+  "rule": "Project each global solution to the panel and realize the ray selections indicated by its live positive readings",
+  "meaning": "The classification makes activity imply an intact tail and gives each live observation the populated status of its ray. For the converse, select every ray with a live positive reading. Assign all selected rays their intact tails. Cut positions and live agreement then reproduce the whole report, including repeated observations.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

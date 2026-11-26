@@ -1,0 +1,9 @@
+{
+  "id": "2b807b2a-85e0-48ab-bc51-d8aaf6d24aad",
+  "label": "Parallel-ray reports require cut positions off and live agreement within each ray",
+  "paraphrase": "For any panel of positions on parallel successor rays, a Boolean report extends to a global solution of the local transmission rule exactly when observations at positions with an upstream cut report off, and every pair of observations with intact tails on the same ray gives the same reading. A panel can repeat positions or observe several positions on a ray.",
+  "lean_declaration": "TruthCore.Causality.RayObservation.RayReportCharacterization",
+  "definition_ids": [
+    "e1b95906-8d38-59c3-abee-0ccc1c9d333b"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "id": "e8d2e788-c5ea-4d00-a105-79968ba6d540",
+  "label": "Mixed live readings are feasible across distinct rays and exclude a shared setting",
+  "paraphrase": "For two live observations in the same panel, a locally feasible report with the first on and the second off exists exactly when the observations have different ray identities. Any report with those opposite live readings is incompatible with a shared setting.",
+  "lean_declaration": "TruthCore.Causality.RayObservation.MixedLiveRayReport",
+  "definition_ids": [
+    "e1b95906-8d38-59c3-abee-0ccc1c9d333b"
+  ]
+}

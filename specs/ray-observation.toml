@@ -1,0 +1,65 @@
+[batch]
+vocab = "TruthCore.Causality.RayObservation"
+results = "TruthCore.Results.Causality.RayObservation"
+
+[[statement]]
+id = "2b807b2a-85e0-48ab-bc51-d8aaf6d24aad"
+label = "Parallel-ray reports require cut positions off and live agreement within each ray"
+lean = "RayReportCharacterization"
+definitions = ["e1b95906-8d38-59c3-abee-0ccc1c9d333b"]
+paraphrase = "For any panel of positions on parallel successor rays, a Boolean report extends to a global solution of the local transmission rule exactly when observations at positions with an upstream cut report off, and every pair of observations with intact tails on the same ray gives the same reading. A panel can repeat positions or observe several positions on a ray."
+
+[[statement]]
+id = "A finite panel has two to the power of its distinct live ray count feasible reports"
+lean = "FiniteRayReportCount"
+definitions = ["e1b95906-8d38-59c3-abee-0ccc1c9d333b"]
+paraphrase = "For every finite panel, the number of feasible Boolean reports equals two raised to the number of distinct ray identities observed at intact tails. Duplicate observations and observations of cut positions do not add choices. This includes the empty panel and panels with no live observations, each of which has one feasible report, and applies with an arbitrary family of rays."
+
+[[statement]]
+id = "One shared setting requires live report agreement and extends to synchronized disjoint rays"
+lean = "SharedSwitchCharacterization"
+definitions = ["e1b95906-8d38-59c3-abee-0ccc1c9d333b"]
+paraphrase = "A panel report has one shared Boolean setting exactly when every position with an upstream cut reports off and all live readings agree across the panel. Every compatible report extends to a global activity profile on the same disjoint successor rays, where an intact tail is active exactly when the common setting is on."
+
+[[statement]]
+id = "Mixed live readings are feasible across distinct rays and exclude a shared setting"
+lean = "MixedLiveRayReport"
+definitions = ["e1b95906-8d38-59c3-abee-0ccc1c9d333b"]
+paraphrase = "For two live observations in the same panel, a locally feasible report with the first on and the second off exists exactly when the observations have different ray identities. Any report with those opposite live readings is incompatible with a shared setting."
+
+[[argument]]
+id = "Restrict the parallel-ray solution classification to an observation panel"
+theorem = "rayReportCharacterization"
+premises = ["c98408fd-f39e-4f47-a104-36b4c52ef617"]
+conclusion = "2b807b2a-85e0-48ab-bc51-d8aaf6d24aad"
+rule = "Project each global solution to the panel and realize the ray selections indicated by its live positive readings"
+meaning = "The classification makes activity imply an intact tail and gives each live observation the populated status of its ray. For the converse, select every ray with a live positive reading. Assign all selected rays their intact tails. Cut positions and live agreement then reproduce the whole report, including repeated observations."
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+
+[[argument]]
+id = "Count panel reports by assigning a Boolean to each observed live ray"
+theorem = "finiteRayReportCount"
+premises = ["2b807b2a-85e0-48ab-bc51-d8aaf6d24aad"]
+conclusion = "A finite panel has two to the power of its distinct live ray count feasible reports"
+rule = "Use the bijection between feasible reports and Boolean assignments indexed by the live ray image"
+meaning = "Assign one bit to each ray in the image of the live observations, reading it at each live position and reporting off elsewhere. Each live ray has a representative observation, so different assignments give different reports. Every feasible report supplies a well-defined bit on each observed live ray by within-ray agreement. Apply the finite function-space cardinality formula. This measures possible reports, with no frequency or probability law assumed."
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+
+[[argument]]
+id = "Characterize a shared setting and realize it on the same disjoint ray family"
+theorem = "sharedSwitchCharacterization"
+premises = ["c98408fd-f39e-4f47-a104-36b4c52ef617"]
+conclusion = "One shared setting requires live report agreement and extends to synchronized disjoint rays"
+comparator_theorems = ["distinctLiveSuppliers"]
+rule = "Read one common bit at every live position and select all rays or none to realize it globally"
+meaning = "With one shared setting, every live observation reads the same bit and cut positions report off. In the reverse direction use any live reading as the setting, or off if there are no live readings. The parallel-ray realization gives this setting simultaneously to the distinct rays while leaving their local supplier relation fixed. The companion shows that two live observations on distinct rays have immediate suppliers and cannot have a common immediate supplier in this graph. The stipulation that the readings are synchronized supplies no metaphysical efficient-cause identity."
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+
+[[argument]]
+id = "Test the shared setting by varying just one of two observed live rays"
+theorem = "mixedLiveRayReport"
+premises = ["2b807b2a-85e0-48ab-bc51-d8aaf6d24aad", "One shared setting requires live report agreement and extends to synchronized disjoint rays"]
+conclusion = "Mixed live readings are feasible across distinct rays and exclude a shared setting"
+rule = "Enable the ray of the first reading and leave other rays off"
+meaning = "A feasible mixed pair cannot come from one ray, by live within-ray agreement. Across distinct rays, turning on just the first ray yields a full feasible report with the second reading off. Such a pair contradicts agreement under a single shared Boolean setting. The exclusion concerns this shared-setting model, whose settings are transmitted unchanged along each intact tail."
+axioms = ["propext", "Classical.choice", "Quot.sound"]
