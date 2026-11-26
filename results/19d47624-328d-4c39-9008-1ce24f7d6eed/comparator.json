@@ -1,0 +1,9 @@
+{
+  "challenge_module": "TruthCore.Results.Modal.WitnessPreservationIndividuation.Challenge",
+  "solution_module": "TruthCore.Results.Modal.WitnessPreservationIndividuation.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Modal.WitnessPreservationIndividuation.origin_preserves"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}
