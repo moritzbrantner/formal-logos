@@ -11,7 +11,8 @@
   "blocker": "Apply the example to the same performance of doubting whether thought occurs. A universal result needs an occurring Realizes witness for each act in the selected domain, whose definition must exclude a merely unexercised disposition.",
   "evidence": [
     "PR-2024",
-    "6f7adcbf-d5f1-4933-be9c-e5601c5957b2"
+    "6f7adcbf-d5f1-4933-be9c-e5601c5957b2",
+    "PR-2044"
   ],
   "workers": [
     {
@@ -27,7 +28,8 @@
       "provider": "codex",
       "model": "gpt-6.2-sol",
       "effort": "high",
-      "date": "2026-11-26"
+      "date": "2026-11-26",
+      "pr": "PR-2044"
     }
   ]
 }

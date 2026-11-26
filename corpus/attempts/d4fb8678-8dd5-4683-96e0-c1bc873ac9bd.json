@@ -11,7 +11,8 @@
   "blocker": "Determine which modes fall under ParticipatesIn and show that the participant itself is the potency receiving the same perfection for every relevant ReceivedIn instance.",
   "evidence": [
     "PR-2024",
-    "03e73ae6-6d82-4e21-86f8-1ad06bf5a648"
+    "03e73ae6-6d82-4e21-86f8-1ad06bf5a648",
+    "PR-2044"
   ],
   "workers": [
     {
@@ -27,7 +28,8 @@
       "provider": "codex",
       "model": "gpt-6.2-sol",
       "effort": "high",
-      "date": "2026-11-26"
+      "date": "2026-11-26",
+      "pr": "PR-2044"
     }
   ]
 }

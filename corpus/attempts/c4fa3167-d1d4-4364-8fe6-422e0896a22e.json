@@ -14,7 +14,8 @@
   "blocker": "Match the fixed giver and same receiver to the indexed exercise and show that withholding would terminate the receiver’s esse for each pair covered by the type. The article gives no general grounding of global or roster-relative joint absence in a bearer’s power, and no distribution principle from a collective power to power over each member.",
   "evidence": [
     "988f35e6-a728-4955-9561-bc8c266bde57",
-    "9f1c968f-ba49-4181-ba42-08bbc34ff1cf"
+    "9f1c968f-ba49-4181-ba42-08bbc34ff1cf",
+    "PR-2044"
   ],
   "workers": [
     {
@@ -45,7 +46,8 @@
       "provider": "codex",
       "model": "gpt-6.2-sol",
       "effort": "high",
-      "date": "2026-11-26"
+      "date": "2026-11-26",
+      "pr": "PR-2044"
     }
   ]
 }

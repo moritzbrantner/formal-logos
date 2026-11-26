@@ -11,7 +11,8 @@
   "blocker": "Show that every occurring episode in the typed domain is among the modes of a thinking thing in the relevant sense, and that this dependence makes it a Modification in the modeled ontology.",
   "evidence": [
     "PR-2024",
-    "bffbe4cf-d80f-4cb7-bf30-2e9a75e8057e"
+    "bffbe4cf-d80f-4cb7-bf30-2e9a75e8057e",
+    "PR-2044"
   ],
   "workers": [
     {
@@ -27,7 +28,8 @@
       "provider": "codex",
       "model": "gpt-6.2-sol",
       "effort": "high",
-      "date": "2026-11-26"
+      "date": "2026-11-26",
+      "pr": "PR-2044"
     }
   ]
 }
