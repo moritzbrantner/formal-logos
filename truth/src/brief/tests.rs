@@ -2144,6 +2144,42 @@ fn contingent_descent_retrieves_the_existing_necessary_ancestor_implementation()
 }
 
 #[test]
+fn registered_proof_search_uses_theorem_words_and_result_descriptions() {
+    let root = fixture("question-result-description");
+    std::fs::remove_dir_all(root.join("docs")).unwrap();
+    std::fs::remove_dir_all(root.join("corpus/attempts")).unwrap();
+    record(
+        &root,
+        "results",
+        json!({
+            "id": RESULT,
+            "label": "Goal result",
+            "argument_id": ARGUMENT,
+            "challenge_module": "TruthCore.Results.Fixture.Challenge",
+            "solution_module": "TruthCore.Results.Fixture.Solution",
+            "theorem": "TruthCore.Results.Fixture.necessaryAncestor",
+            "comparator_config": "results/x/comparator.json",
+            "status": "solution-present",
+            "description": "Contingent founded descent along actual inputs."
+        }),
+    );
+    let corpus = Corpus::load(&root).unwrap();
+    let (report, _) = super::assessment_search::report_for_root(
+        &root,
+        &corpus,
+        "contingent necessary ancestor descent",
+        5,
+    )
+    .unwrap();
+    assert_eq!(report["lean_results"][0]["id"], RESULT);
+    assert_eq!(
+        report["lean_results"][0]["theorem"],
+        "TruthCore.Results.Fixture.necessaryAncestor"
+    );
+    std::fs::remove_dir_all(root).unwrap();
+}
+
+#[test]
 fn exact_lean_lookup_uses_comparator_names_and_frozen_locations() {
     let root = fixture("question-comparator-companions");
     let second = "c0000000-0000-4000-8000-000000000002";
