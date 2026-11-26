@@ -165,6 +165,43 @@ class IdempotenceTest(unittest.TestCase):
                     argument_batch.READ_CACHE = None
 
 
+class ConnectionPlanTest(unittest.TestCase):
+    """A `[statement.connection_plan]` table survives `records --write` and `--check`."""
+
+    def test_plan_is_emitted_and_regenerates_unchanged(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            corpus = root / "corpus"
+            for kind in ("statements", "definitions", "disambiguations"):
+                (corpus / kind).mkdir(parents=True)
+            target = str(uuid.uuid4())
+            (corpus / "statements" / f"{target}.json").write_text(
+                json.dumps({"id": target, "label": "A root-route target", "paraphrase": "T"}))
+            spec_path = root / "spec.toml"
+            spec_path.write_text(
+                '[batch]\nvocab = "TruthCore.Test"\nresults = "TruthCore.Results.Test"\n'
+                '[[statement]]\nid = "A planned island"\nparaphrase = "P"\n'
+                '[statement.connection_plan]\ntarget_statement_id = "A root-route target"\n'
+                'missing_bridge = "P implies T."\nblocker = "No shared vocabulary yet."\n')
+            with patch.object(argument_batch, "ROOT", root), patch.object(argument_batch, "CORPUS", corpus):
+                spec = argument_batch.tomllib.loads(spec_path.read_text())
+                self.assertTrue(argument_batch.build_records(spec, True))
+                written = [json.loads(p.read_text()) for p in (corpus / "statements").glob("*.json")]
+                planned = next(r for r in written if r["id"] != target)
+                self.assertEqual(planned["connection_plan"], {
+                    "target_statement_id": target, "missing_bridge": "P implies T.",
+                    "blocker": "No shared vocabulary yet."})
+                try:
+                    self.assertEqual(argument_batch.check_specs([spec_path]), 0)
+                    spec_path.write_text(spec_path.read_text().replace('"P implies T."', '"Other."'))
+                    self.assertEqual(argument_batch.check_specs([spec_path]), 1)
+                finally:
+                    argument_batch.READ_CACHE = None
+                spec["statement"][0]["connection_plan"]["issue"] = "1"
+                with self.assertRaises(SystemExit):
+                    argument_batch.build_records(spec, False)
+
+
 class CommandSmokeTests(unittest.TestCase):
     def test_empty_map(self):
         with tempfile.TemporaryDirectory() as directory:
