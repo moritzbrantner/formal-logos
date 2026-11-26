@@ -47,3 +47,73 @@ predicate = "tests"
 object_kind = "argument"
 object_id = "ad5ad184-ba6e-4187-96f5-0f369f0d52ac"
 note = "Tests nonvacuity of the seven teleology premises on the one-directs configuration and compares the no-director variants."
+
+[[relation]]
+id = "Test by Seven Fifth Way omission controls for What a thing attains always or for the most part (1)"
+label = "Test by Seven Fifth Way omission controls for What a thing attains always or for the most part (1)"
+subject_kind = "result"
+subject_id = "65ac635d-f5c7-481a-9f70-b882f0502477"
+predicate = "tests"
+object_kind = "statement"
+object_id = "070cef3e-cabc-56a5-9f78-af671d9ad194"
+note = "Tests omission of this premise from firstMover in the corresponding finite no-director, two-archer, or no-moves fixture, with the remaining inputs retained."
+
+[[relation]]
+id = "Test by Seven Fifth Way omission controls for Whatever directs a natural body to an end, that (1)"
+label = "Test by Seven Fifth Way omission controls for Whatever directs a natural body to an end, that (1)"
+subject_kind = "result"
+subject_id = "65ac635d-f5c7-481a-9f70-b882f0502477"
+predicate = "tests"
+object_kind = "statement"
+object_id = "11914511-b067-55d3-b8cc-094311021d08"
+note = "Tests omission of this premise from firstMover in the corresponding finite no-director, two-archer, or no-moves fixture, with the remaining inputs retained."
+
+[[relation]]
+id = "Test by Seven Fifth Way omission controls for What lacks cognition tends to an end only if som (1)"
+label = "Test by Seven Fifth Way omission controls for What lacks cognition tends to an end only if som (1)"
+subject_kind = "result"
+subject_id = "65ac635d-f5c7-481a-9f70-b882f0502477"
+predicate = "tests"
+object_kind = "statement"
+object_id = "564ce19b-c9df-5031-b20e-3cb1baee124f"
+note = "Tests omission of this premise from firstMover in the corresponding finite no-director, two-archer, or no-moves fixture, with the remaining inputs retained."
+
+[[relation]]
+id = "Test by Seven Fifth Way omission controls for There are natural bodies, and every natural body (1)"
+label = "Test by Seven Fifth Way omission controls for There are natural bodies, and every natural body (1)"
+subject_kind = "result"
+subject_id = "65ac635d-f5c7-481a-9f70-b882f0502477"
+predicate = "tests"
+object_kind = "statement"
+object_id = "658814de-ffeb-5824-afdd-2797e5cdad42"
+note = "Tests omission of this premise from firstMover in the corresponding finite no-director, two-archer, or no-moves fixture, with the remaining inputs retained."
+
+[[relation]]
+id = "Test by Seven Fifth Way omission controls for Whatever regularly attains what is best for it a (1)"
+label = "Test by Seven Fifth Way omission controls for Whatever regularly attains what is best for it a (1)"
+subject_kind = "result"
+subject_id = "65ac635d-f5c7-481a-9f70-b882f0502477"
+predicate = "tests"
+object_kind = "statement"
+object_id = "b43528e2-7188-56e9-941c-0d0cea7c03fb"
+note = "Tests omission of this premise from firstMover in the corresponding finite no-director, two-archer, or no-moves fixture, with the remaining inputs retained."
+
+[[relation]]
+id = "Test by Seven Fifth Way omission controls for To direct a thing to an end is to move it in som (1)"
+label = "Test by Seven Fifth Way omission controls for To direct a thing to an end is to move it in som (1)"
+subject_kind = "result"
+subject_id = "65ac635d-f5c7-481a-9f70-b882f0502477"
+predicate = "tests"
+object_kind = "statement"
+object_id = "ee9e3056-7bc5-5c35-9fe3-bf8550f8c136"
+note = "Tests omission of this premise from firstMover in the corresponding finite no-director, two-archer, or no-moves fixture, with the remaining inputs retained."
+
+[[relation]]
+id = "Test by Seven Fifth Way omission controls for Natural bodies lack cognition"
+label = "Test by Seven Fifth Way omission controls for Natural bodies lack cognition"
+subject_kind = "result"
+subject_id = "65ac635d-f5c7-481a-9f70-b882f0502477"
+predicate = "tests"
+object_kind = "statement"
+object_id = "efda546f-c3e5-5a68-990b-73f96258f75c"
+note = "Tests omission of this premise from firstMover in the corresponding finite no-director, two-archer, or no-moves fixture, with the remaining inputs retained."

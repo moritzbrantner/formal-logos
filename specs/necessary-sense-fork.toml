@@ -419,3 +419,33 @@ object_kind = "statement"
 object_id = "STMT-NECESSARY-ROOT-BOX-B"
 verification_result_id = "NECESSARY-ROOT-BOX-S5-STRENGTHENS-BOX-B"
 note = "Strength registration: the S5 node implies the KTB node, applying the existing Cube theorem s5_implies_ktb."
+
+[[relation]]
+id = "Test by Formal controls: on any frame, box-existence gives actua for The chosen actual world a (1)"
+label = "Test by Formal controls: on any frame, box-existence gives actua for The chosen actual world a (1)"
+subject_kind = "result"
+subject_id = "53ca8e9d-dfad-5b55-b395-6ecb4c3e46bf"
+predicate = "tests"
+object_kind = "statement"
+object_id = "2b20b5af-d653-56ba-8001-35903fb3d1ea"
+note = "Tests separating actual existence from box-existence on the Boolean step frame without a self-edge at false."
+
+[[relation]]
+id = "Test by Formal controls: on any frame, box-existence gives actua for 4 schema: whatever is NEC (1)"
+label = "Test by Formal controls: on any frame, box-existence gives actua for 4 schema: whatever is NEC (1)"
+subject_kind = "result"
+subject_id = "53ca8e9d-dfad-5b55-b395-6ecb4c3e46bf"
+predicate = "tests"
+object_kind = "statement"
+object_id = "b5fea0e6-a058-512f-bf11-ca740ebd3f06"
+note = "Tests iterated box-existence on the reflexive nontransitive chain where box-existence holds but its box does not."
+
+[[relation]]
+id = "Test by Formal controls: on any frame, box-existence gives actua for Fork node: the intended r (1)"
+label = "Test by Formal controls: on any frame, box-existence gives actua for Fork node: the intended r (1)"
+subject_kind = "result"
+subject_id = "53ca8e9d-dfad-5b55-b395-6ecb4c3e46bf"
+predicate = "tests"
+object_kind = "statement"
+object_id = "bed94ec2-ebd9-59e0-8c68-2d5eee6009e3"
+note = "Tests the differences among box, de dicto, actualist and per se readings on separate explicit frames before matching any root sense."

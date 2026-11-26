@@ -1,0 +1,10 @@
+{
+  "id": "be8272e4-b889-4a31-9a62-f6c967e1b5aa",
+  "label": "Test by Seven Fifth Way omission controls for To direct a thing to an end is to move it in som (1)",
+  "subject_kind": "result",
+  "subject_id": "65ac635d-f5c7-481a-9f70-b882f0502477",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "ee9e3056-7bc5-5c35-9fe3-bf8550f8c136",
+  "note": "Tests omission of this premise from firstMover in the corresponding finite no-director, two-archer, or no-moves fixture, with the remaining inputs retained."
+}

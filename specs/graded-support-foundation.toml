@@ -247,3 +247,33 @@ object_kind = "statement"
 object_id = "No infinite ascent in esse among NECESSARY_2 concreta"
 verification_result_id = "No infinite ascent among necessary concreta, from no infinite ascent in being"
 note = "Same comparative and respect. The weak version constrains only concreta necessary from the selected world. Strictness is not certified here."
+
+[[relation]]
+id = "Test by Graded-foundation controls, checked"
+label = "Test by Graded-foundation controls, checked"
+subject_kind = "result"
+subject_id = "5dbba779-432b-4d3a-bd4a-11b14086ef63"
+predicate = "tests"
+object_kind = "statement"
+object_id = "78945dde-2e6b-4e40-9383-ecb615208930"
+note = "Tests existence of a compatible well-founded ascending grade in the rotating triangle and rooted pair, both of which contain cross-world return paths."
+
+[[relation]]
+id = "Test by Graded-foundation controls, checked for An incoming direct existential-support edge be (1)"
+label = "Test by Graded-foundation controls, checked for An incoming direct existential-support edge be (1)"
+subject_kind = "result"
+subject_id = "5dbba779-432b-4d3a-bd4a-11b14086ef63"
+predicate = "tests"
+object_kind = "statement"
+object_id = "bd983df2-058a-5503-89a1-bbebe87f958b"
+note = "Tests whether rigid grade ascent suffices for actual edge transport with the only support edge at the nonactual world."
+
+[[relation]]
+id = "Test by Graded-foundation controls, checked for Whenever an actual concretum a grounds an actu (1)"
+label = "Test by Graded-foundation controls, checked for Whenever an actual concretum a grounds an actu (1)"
+subject_kind = "result"
+subject_id = "5dbba779-432b-4d3a-bd4a-11b14086ef63"
+predicate = "tests"
+object_kind = "statement"
+object_id = "d96105fb-8c4d-5e56-b3c7-2cb77a447c2b"
+note = "Tests whether well-founded grounding and a well-founded grade suffice for actual-edge ascent by reversing the grade on the same two-world profile."

@@ -1,0 +1,10 @@
+{
+  "id": "aaae33bd-4d92-45ef-9b47-82f10f84cceb",
+  "label": "Test by Formal controls: on any frame, box-existence gives actua for The chosen actual world a (1)",
+  "subject_kind": "result",
+  "subject_id": "53ca8e9d-dfad-5b55-b395-6ecb4c3e46bf",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "2b20b5af-d653-56ba-8001-35903fb3d1ea",
+  "note": "Tests separating actual existence from box-existence on the Boolean step frame without a self-edge at false."
+}

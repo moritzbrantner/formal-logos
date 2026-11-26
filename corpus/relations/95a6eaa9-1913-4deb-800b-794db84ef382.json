@@ -1,0 +1,10 @@
+{
+  "id": "95a6eaa9-1913-4deb-800b-794db84ef382",
+  "label": "Test by Holder-root identification controls checked for A power for the actual contingent conc (1)",
+  "subject_kind": "result",
+  "subject_id": "d8073ba0-ff27-479a-adbe-05086acb1da1",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "906f5c39-2a63-4dc2-955d-a00cfd8a976b",
+  "note": "Tests holder necessity with the contingent holder c under the remaining step-one inputs."
+}
