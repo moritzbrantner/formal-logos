@@ -1,6 +1,7 @@
 module
 
 public import TruthCore.Explanation.ExistentialInheritance
+public import TruthCore.Explanation.BruteContingencyParity
 public import TruthCore.Results.Causality.DerivativeJointPower.Solution
 
 @[expose] public section
@@ -215,5 +216,149 @@ theorem replacementBoundary : ReplacementBoundary := by
   · exact modal_requirement_of_necessary directedNature false true false (fun _ _ => trivial)
   · intro h
     exact Bool.noConfusion h.1
+
+/-! ## Contingent-existence demand pilot (#750, #1007)
+
+Reuse the actual existence-reason model and the ontic stance, not a score or a
+new notion of adequacy. A selected reason is a token admitted for the target;
+the step tracks the being the token is about. Its selection and the norm
+requiring an explanation of that being's existence are distinct commitments.
+-/
+namespace DemandPilot
+
+open TruthCore.Explanation.ExistencePSR (Model Reason ExistenceFact)
+open TruthCore.Explanation.BruteContingencyParity
+  (WhyStance WhyHonors NoBruteContingentExistenceAt)
+
+/-- A chosen admitted reason for x is about a contingent being y. This is
+not yet a proof that y is an indispensable productive cause of x. -/
+def SelectedContingentReason (m : Model W B) (w : W)
+    (selected : B → Reason B → Prop) (x y : B) : Prop :=
+  ∃ r, selected x r ∧ m.explains w r (.fact x) ∧
+    TruthCore.Explanation.BruteContingencyParity.source r = y ∧
+    ContingentAt m.ontic w y
+
+/-- OPEN norm: the demand to explain the existence of a target extends to
+the existence of a contingent bearer of its chosen reason. Only chosen
+admitted reasons are tested; no universal PSR is a definition here. -/
+def DemandPropagates (m : Model W B) (w : W)
+    (selected : B → Reason B → Prop)
+    (S : WhyStance (ExistenceFact B ⊕ Reason B)) : Prop :=
+  ∀ x y, SelectedContingentReason m w selected x y →
+    S.requiresWhy ((ofModel m).exist x) →
+    S.requiresWhy ((ofModel m).exist y)
+
+/-- An honored, accepted existence-demand supplies a #312 reason token, not
+merely a reason for belief or a bare fact in another arena. -/
+theorem reasonOfHonoredDemand (m : Model W B) (w : W)
+    (S : WhyStance (ExistenceFact B ⊕ Reason B)) (x : B)
+    (hHonors : WhyHonors S (ofModel m) w)
+    (hReq : S.requiresWhy ((ofModel m).exist x))
+    (hAccept : S.accepts ((ofModel m).exist x)) :
+    ∃ r, m.explains w r (.fact x) := by
+  obtain ⟨r, hr⟩ := hHonors _ hReq hAccept
+  cases r with
+  | inl f =>
+    exact False.elim hr
+  | inr r =>
+    exact ⟨r, hr⟩
+
+/-- Finite reach transports the demand, not the truth of the target. -/
+theorem demandAlongSelectedReasons (m : Model W B) (w : W)
+    (selected : B → Reason B → Prop)
+    (S : WhyStance (ExistenceFact B ⊕ Reason B)) {x y : B}
+    (hProp : DemandPropagates m w selected S)
+    (hPath : Relation.ReflTransGen (SelectedContingentReason m w selected) x y)
+    (hReq : S.requiresWhy ((ofModel m).exist x)) :
+    S.requiresWhy ((ofModel m).exist y) := by
+  induction hPath with
+  | refl => exact hReq
+  | tail _ hStep ih => exact hProp _ _ hStep ih
+
+/-- The actual target of this pilot, 608a262d. Coverage by finite paths from
+demanded existences is a separate open hypothesis. Neither path coverage nor
+demand propagation is claimed to follow merely from undertaking inquiry. -/
+theorem psrFromDemandCoverage (m : Model W B) (w : W)
+    (selected : B → Reason B → Prop)
+    (S : WhyStance (ExistenceFact B ⊕ Reason B))
+    (hHonors : WhyHonors S (ofModel m) w)
+    (hAccept : ∀ x, ContingentAt m.ontic w x → S.accepts ((ofModel m).exist x))
+    (hProp : DemandPropagates m w selected S)
+    (hCover : ∀ x, ContingentAt m.ontic w x → ∃ t,
+      S.requiresWhy ((ofModel m).exist t) ∧
+      Relation.ReflTransGen (SelectedContingentReason m w selected) t x) :
+    NoBruteContingentExistenceAt m w := by
+  intro x hx
+  obtain ⟨t, ht, hPath⟩ := hCover x hx
+  exact reasonOfHonoredDemand m w S x hHonors
+    (demandAlongSelectedReasons m w selected S hProp hPath ht) (hAccept x hx)
+
+/-- Local test of the rival: an accepted unexplained bearer reached from a
+demanded existence forces a failure of the propagation norm if the stance
+honors its own demands. It does not entail a contradiction without that norm. -/
+theorem bruteForcesDemandBreak (m : Model W B) (w : W)
+    (selected : B → Reason B → Prop)
+    (S : WhyStance (ExistenceFact B ⊕ Reason B)) {x y : B}
+    (hHonors : WhyHonors S (ofModel m) w)
+    (hPath : Relation.ReflTransGen (SelectedContingentReason m w selected) x y)
+    (hReq : S.requiresWhy ((ofModel m).exist x))
+    (hAccept : S.accepts ((ofModel m).exist y))
+    (hNone : ¬ ∃ r, m.explains w r (.fact y)) :
+    ¬ DemandPropagates m w selected S := by
+  intro hProp
+  exact hNone (reasonOfHonoredDemand m w S y hHonors
+    (demandAlongSelectedReasons m w selected S hProp hPath hReq) hAccept)
+
+/-- Same existing contained-bruteness model: no alteration to its ontology
+or reason tokens. The stance accepts actual truths but demands a reason for
+the first derivative only. -/
+def containedModel : Model Bool Contained.Being :=
+  (Contained.profile false).explanation
+
+def containedStance : WhyStance (ExistenceFact Contained.Being ⊕ Reason Contained.Being) where
+  accepts := fun f => (ofModel containedModel).holds false f
+  core := fun _ => False
+  demands := fun _ => False
+  requiresWhy := fun f => f = (ofModel containedModel).exist (.derivative 0)
+
+def allSelected (_ : Contained.Being) (_ : Reason Contained.Being) : Prop := True
+
+/-- The rival really honors its restricted local demand and denies the exact
+PSR. Its selected reason for the derivative is about the same accepted
+contingent base that it exempts. The exemption violates propagation, not
+logical consistency by itself. -/
+theorem containedExemption :
+    WhyHonors containedStance (ofModel containedModel) false ∧
+    ¬ NoBruteContingentExistenceAt containedModel false ∧
+    SelectedContingentReason containedModel false allSelected (.derivative 0) .base ∧
+    containedStance.requiresWhy ((ofModel containedModel).exist (.derivative 0)) ∧
+    containedStance.accepts ((ofModel containedModel).exist .base) ∧
+    ¬ containedStance.requiresWhy ((ofModel containedModel).exist .base) ∧
+    ¬ DemandPropagates containedModel false allSelected containedStance := by
+  have hBase : ContingentAt containedModel.ontic false .base :=
+    ⟨Or.inl rfl, true, trivial, ContainedProof.false_overlay_absent⟩
+  have hNone : ¬ ∃ r, containedModel.explains false r (.fact .base) := by
+    rintro ⟨r, hr⟩
+    change Contained.enabled false false ∧ ∃ n,
+      r = .circumstance (Contained.parent n) ∧
+        ExistenceFact.fact Contained.Being.base = .fact (.derivative n) at hr
+    obtain ⟨_, n, _, hn⟩ := hr
+    cases hn
+  have hHonors : WhyHonors containedStance (ofModel containedModel) false := by
+    intro f hf _
+    change f = (ofModel containedModel).exist (.derivative 0) at hf
+    subst f
+    exact ⟨Sum.inr (.circumstance .base), ⟨Or.inl rfl, 0, rfl, rfl⟩⟩
+  have hStep : SelectedContingentReason containedModel false allSelected
+      (.derivative 0) .base :=
+    ⟨.circumstance .base, trivial, ⟨Or.inl rfl, 0, rfl, rfl⟩, rfl, hBase⟩
+  have hReq : containedStance.requiresWhy ((ofModel containedModel).exist (.derivative 0)) := rfl
+  have hAccept : containedStance.accepts ((ofModel containedModel).exist .base) := hBase.1
+  have hNot : ¬ containedStance.requiresWhy ((ofModel containedModel).exist .base) :=
+    fun h => hNone (reasonOfHonoredDemand containedModel false containedStance .base hHonors h hAccept)
+  exact ⟨hHonors, fun h => hNone (h .base hBase), hStep, hReq, hAccept,
+    hNot, fun h => hNot (h _ _ hStep hReq)⟩
+
+end DemandPilot
 
 end TruthCore.Results.Explanation.ExistentialInheritance
