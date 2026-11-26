@@ -10,7 +10,7 @@
   "date": "2026-11-26",
   "kind": "countermodel",
   "outcome": "succeeded",
-  "summary": "On the shared GradesFrame, a fully calibrated finite linear scale leaves the recipient capacity bridge open, even with each bearer self-limited. A product-order model separates capacity comparability from the within-capacity interpretation of limitation. A distinct cause, participating bearer and cross-recipient coexist with the same linear scale while the three causal/reception links fail, using explicitly assigned predicates. The models test formal non-entailment only. The existing scope and source judgments are retained. See docs/notes/maximum-definition-fork.md#capacity-reception-and-participation-in-the-same-comparison-domain. Second pass: equalCapacityOnCausalPair places equal degrees and capacities on the designated cause and effect while the effect does not limit the cause. The endpoint fork leaves both receptive bridges independently assignable. Generation challenges the universal converse on the originating reading. Mere exemplar resemblance fails the registered participation criterion and supplies no same-sense objection at esse.",
+  "summary": "On the shared GradesFrame, a fully calibrated finite linear scale leaves the recipient capacity bridge open, even with each bearer self-limited. A product-order model separates capacity comparability from the within-capacity interpretation of limitation. A distinct cause, participating bearer and cross-recipient coexist with the same linear scale while the three causal/reception links fail, using explicitly assigned predicates. The models test formal non-entailment only. The existing scope and source judgments are retained. See docs/notes/maximum-definition-fork.md#capacity-reception-and-participation-in-the-same-comparison-domain. Second pass: equalCapacityOnCausalPair places equal degrees and capacities on the designated cause and effect while the effect does not limit the cause. The endpoint fork shows both receptive bridges jointly variable at fixed order and causal edge. Generation conditionally challenges the universal converse on the originating reading: only if the generator causes the bearer's being r in the CausesIn sense and the bearer has r through what it is, for which no concrete case is recorded. Mere exemplar resemblance fails the registered participation criterion and supplies no same-sense objection at esse.",
   "blocker": "The cause–effect role needs warrant for the inference from lying within the effect's capacity to actual limitation by that effect. The participation-to-reception application also needs the edition-level In De hebdomadibus witness and an interpretation of its reception modes, as recorded in PR #2024. Test whether an effect receiving its very esse at the giver’s degree would itself limit the giver. The capacity comparison requires that exact role bridge. See the premise judgments and their revision conditions in docs/notes/maximum-definition-fork.md, 2026-11-26.",
   "evidence": [
     "PR-1772",
@@ -39,6 +39,13 @@
       "provider": "codex",
       "model": "gpt-6.2-astra",
       "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2039"
+    },
+    {
+      "role": "repair",
+      "provider": "claude",
+      "model": "claude-opus-5-5",
       "date": "2026-11-26",
       "pr": "PR-2039"
     }
