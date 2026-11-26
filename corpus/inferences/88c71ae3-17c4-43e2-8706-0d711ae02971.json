@@ -1,0 +1,13 @@
+{
+  "id": "88c71ae3-17c4-43e2-8706-0d711ae02971",
+  "label": "Possession and exact esse calibration give strict degree tracking (inference)",
+  "input_statement_ids": [
+    "38cf20d9-1069-5d7c-a366-21b5f6e08bfe",
+    "c11369aa-7c3d-5dea-8421-535d5b4b3104"
+  ],
+  "output_statement_id": "c323e046-067c-5228-a4a8-55df7bdeb397",
+  "rule": "Specialize possession at esse and take the forward direction of the exact calibration",
+  "meaning": "For the same comparison at esse and the same supplied value map, possession supplies the left bearer's having esse and the forward direction of exact calibration supplies its strictly greater degree. The lesser comparand need not have esse.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

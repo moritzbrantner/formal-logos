@@ -66,6 +66,7 @@ public import TruthCore.Results.Causality.CommonPriority.ContingentGround.Soluti
 public import TruthCore.Results.Causality.CommonPriority.Solution
 public import TruthCore.Results.Causality.CompactOperationCount.Solution
 public import TruthCore.Results.Causality.ComparativeFoundation.Solution
+public import TruthCore.Results.Causality.ComparativePerfectionScale.Solution
 public import TruthCore.Results.Causality.CompleteCauseContributorCover.Solution
 public import TruthCore.Results.Causality.CompleteCauseSourceUniqueness.Solution
 public import TruthCore.Results.Causality.CompleteCauseUnderivedSource.Solution

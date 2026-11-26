@@ -4,6 +4,7 @@ module
 public import TruthCore.Models.ActPotency
 public import TruthCore.Models.ActPotencyRemaining
 public import TruthCore.Models.BoundedOmission
+public import TruthCore.Models.ComparativePerfectionScale
 public import TruthCore.Models.ConstitutiveConfiguration
 public import TruthCore.Models.ContingentAncestry
 public import TruthCore.Models.CountTemporalControls

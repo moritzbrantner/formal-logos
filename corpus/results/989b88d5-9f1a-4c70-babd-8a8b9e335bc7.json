@@ -1,0 +1,12 @@
+{
+  "id": "989b88d5-9f1a-4c70-babd-8a8b9e335bc7",
+  "label": "Possession and exact esse calibration give strict degree tracking",
+  "argument_id": "b58caae7-4227-47f7-8a62-a0097cb654c4",
+  "challenge_module": "TruthCore.Results.Causality.ComparativePerfectionScale.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ComparativePerfectionScale.Solution",
+  "theorem": "TruthCore.Results.Causality.ComparativePerfectionScale.moreInBeingTracksDegreeOfExactCalibration",
+  "comparator_config": "results/989b88d5-9f1a-4c70-babd-8a8b9e335bc7/comparator.json",
+  "status": "solution-present",
+  "description": "For the same comparison at esse and the same supplied value map, possession supplies the left bearer's having esse and the forward direction of exact calibration supplies its strictly greater degree. The lesser comparand need not have esse.",
+  "transcription": "assembly"
+}

@@ -1194,3 +1194,166 @@ The measured toroid provides grounds for a shared physical bearer. To apply the 
 - [Batch certification of eight exploration maps deriving eight bare root-path premises from deeper…](../../corpus/attempts/round2-perfection-primacy.json)
 - [Batch certification of three exploration maps](../../corpus/attempts/causal-maps-batch1.json)
 - [Deriving weak esse adequacy for participants from independently valued intrinsic determinations](../../corpus/attempts/8b5f1332-86a6-4d18-842b-27b88d814901.json)
+
+## One scale for the comparative and null conditions (2026-11-26)
+
+The earlier [cluster assessment](#current-cluster-assessment-under-the-substantive-objection-standard-2026-11-18)
+left joint representation open. A single ordinal construction supplies the two
+comparative directions at their recorded scopes and the two null conditions. For
+each perfection (r), assign (x) the set of bearers of (r) who either are
+(x) or whom (x) exceeds in (r). Compare these sets by inclusion. The
+empty set is the null even on an actualist domain in which every member has
+esse. Where someone lacks (r), their set is empty. Every bearer has itself
+in its set.
+
+[The formalization](../../TruthCore/Causality/ComparativePerfectionScale.lean)
+takes the existing `GradesFrame` and reuses the four existing predicates in
+`Represents`. For each (r), existence of a common representation is
+equivalent to three qualitative conditions on that same frame
+(`representationIffComparativeOrder`):
+
+1. A strict comparative implies that the exceeding relatum has (r) (`c11369aa`).
+2. No relatum exceeds itself.
+3. The comparative is transitive on triples of bearers.
+
+If (x) exceeds (y), (y)'s set is included in (x)'s. The witness
+(x) belongs only to the larger set, by irreflexivity and transitivity on
+bearers. For the reverse implication among bearers, (y) belongs to its own
+set, so proper inclusion puts (y) in (x)'s set and rules out (x=y).
+Any preorder representation of the four conditions yields the three qualitative
+conditions. The converse constructs a specific partial order, with shared
+codomain and null, and never compares values of different perfections.
+Neither a realized maximum nor even a bearer is assumed.
+
+| Target | Consequence and scope |
+| --- | --- |
+| `98755509`, `ed766869`, `ac72bbfe` | The one assignment gives forward calibration for all ordered pairs, a lower bound on represented values, and possession strictly above null. In this construction, possession and strict positivity are equivalent. The original [omission proofs](../../TruthCore/Results/Causality/Round3FourthWay/Solution.lean) show that each of the three can fail separately for a **supplied** map and designated null. |
+| `e433b6f5` | The same assignment gives the reverse direction **among bearers**. The [finite controls](../../TruthCore/Models/ComparativePerfectionScale.lean) include a supplied scale with strictly positive unequal degrees and an empty comparative. It satisfies forward calibration vacuously and fails this reverse direction. |
+| `38cf20d9` | Exact reflection for every pair at one respect follows from the four conditions when the comparison domain consists entirely of bearers of that respect. On a mixed domain the representation can strictly rank a bearer above a nonbearer even when the primitive comparative omits that pair. The two-element control keeps all four conditions on that one scale and fails global calibration for the supplied map. |
+| `c323e046` | On the same supplied esse value map, existing exact calibration at esse (`38cf20d9`) with the more-such possession premise (`c11369aa`) gives both possession and higher degree for the exceeding relatum. [Registered assembly](../../corpus/arguments/b58caae7-4227-47f7-8a62-a0097cb654c4.json) feeds the existing [MAXIME_2 to MAXIME_1 argument](../../corpus/arguments/greatest-in-being-maximal-from-degree-tracking.json). It uses the forward half of the exact calibration. The family-wide forward condition `98755509` has a different scope: all respects with one supplied family of maps. |
+
+This answers an existence question about a representation built **from** the
+primitive comparative and possession. For the more-such argument
+`cf4db879` the construction assumes the very possession rule that the
+existing argument concludes. Its proof gives a precise consistency and
+dependency test. An independent route through `cf4db879` still needs warrant
+for a supplied value map and null, or for the possession rule on its direct
+option. The strongest positive warrant for the mathematical construction
+is that for a fixed respect with transitive comparative judgments, recording
+all lower bearers preserves those judgments and fixes the absence case without
+counting or weighting lower bearers. The abstraction to esse remains open:
+an independent interpretation must identify the possession and comparison
+criteria at esse, including which comparisons cross kinds. The same
+representation by itself supplies neither the directed/attained upper
+comparison used by `c70736c4` nor the separately recorded universal causal
+reach. [Calibration attempt](../../corpus/attempts/fb3c2c1c-1b1c-45b4-9233-8d934dce0468.json).
+
+### Capacity, reception and participation in the same comparison domain
+
+`f6677834` needs a further bridge even with an exact linear scale.
+`exceedsCapacityOfWithinImpliesLimited` takes two explicit inputs: for a haver
+of (r), lying within (z)'s capacity implies actual limitation by (z),
+and the degree and capacity are comparable on that tuple. A linear order
+supplies comparability. In a two-bearer linear model each bearer is limited
+by itself, both are positive and one strictly exceeds the other. The smaller
+bearer is unimpeded by the larger although its degree lies within the larger's
+capacity. The other finite control makes limitation exactly the within-capacity
+relation, with incomparable product degrees and capacities. Not being within
+then does not imply being strictly beyond.
+
+The first control formalizes the same role-versus-measure mechanism
+identified in the earlier receiver audit. On the role reading, limitation
+tracks a particular recipient that constrains a received act. Two creatures
+receiving esse in their own principles give the positive reason to distinguish
+the intrinsic limiting role from falling within an unrelated recipient's
+capacity. On the measure reading, the bridge is definitional but the inference
+from limited to received (`39a4c28c`) requires its own defense. The finite
+controls test the dependency. They do not identify these two readings, or
+model esse as metaphysically received. The route consumes the capacity step
+at the cause and its effect. An example with unrelated recipients diagnoses the
+unrestricted quantifier and leaves the narrower inference open.
+
+The same positive linear calibration also survives a control in which the
+distinct effect does not participate, the other bearer participates but
+has its possession received in the effect only, and dependence is empty. These independently
+assigned fields isolate what the scale leaves open. The existing objection to
+`efe134d4` has a stronger application than the model: if generating a
+substance is causing it to have its essential perfection in the relevant
+sense, then it can have that perfection through what it is even though another
+generated it. For esse the real distinction may support the narrower
+application. ST I q.44 a.1 ad 1 is already recorded in the converse direction.
+For `9da93cd4`, receiving a share motivates the reading, but the modes of
+participation have to be matched to reception of that same perfection in the
+participant. The [PR #2024 witness attempt](../../corpus/attempts/d4fb8678-8dd5-4683-96e0-c1bc873ac9bd.json)
+identifies the unpinned `In De hebdomadibus`, lect. 2, text and the missing
+edition-level witness. For `3e890700`, the earlier united-soul example
+(`117344d0`) remains relevant if subject-reception counts as the receiving
+relation. Receipt of a given perfection would have to constrain the haver's
+very being, as opposed to merely how that perfection is communicated.
+[Capacity and reception attempt](../../corpus/attempts/32287fe0-d7e7-44f0-bf2f-9a62a3c900f6.json).
+
+### Rival accounts at the same scope
+
+- **Partial or multidimensional comparison.** A positive alternative for a
+  respect such as demonstrated competence is dominance on independently
+  assessed tasks: one candidate does at least as well on each task and better
+  on one. A candidate who is stronger on one task and weaker on another has
+  no strict ordering against the first under that rule. A three-profile
+  example ((2,1), (1,1), (0,2)) gives exactly one strict comparison.
+  Under exact linear reflection incomparable pairs would have to tie,
+  but then the tied candidates would have identical comparisons with every
+  third candidate. The [finite control](../../TruthCore/Models/ComparativePerfectionScale.lean)
+  uses that strict relation and witnesses a partial representation with no
+  exact linear representation of the relation. It bears on the inference
+  from real gradation to one exact numerical ranking when the fixed respect
+  aggregates independent aspects. A defensible weighting or a demonstration
+  that the respect is already governed by one criterion would change the
+  comparison. Within-respect incomparability does not itself challenge
+  forward-only preservation or the four-clause partial representation.
+- **Relative comparisons with no possession boundary.** For ordinary
+  relative-temperature comparisons Celsius zero is a reference point, and
+  subzero values remain temperatures. The relative adjective “hot” can
+  shift with the comparison class while the pairwise hotter ordering stays
+  fixed. This explains why a meaningful comparative can leave open both a
+  null interpreted as absence and a stable threshold for possession. The
+  mechanism targets export from an arbitrary empirical scale to
+  `ed766869` and `ac72bbfe`; it does not reach a specified intrinsic
+  perfection whose null already means absence and whose possession predicate
+  means some degree of that perfection. A conventional origin and an
+  unattained bottom are distinct issues. If every member has esse, an
+  unrepresented bottom in the codomain is sufficient for the formal
+  construction, while its philosophical application still needs a criterion
+  for possessing esse and for differing in it.
+- **Kenny's scale and maximum objections.** The comparison of something good
+  at one activity and deficient at another gives a reason to question a
+  global ranking of unqualified goodness. His distinction between actual
+  and ideal maxima also identifies a separate premise about attainment. The
+  existing [unbounded Fourth Way control](../../TruthCore/Results/Causality/Round3FourthWay/Solution.lean)
+  illustrates why ordinal comparison need not yield an attained maximal
+  bearer. This objection targets a derivation of maximality from gradation
+  alone. The registered route has further premises for maximality and for
+  causation. The partial representation keeps the former question independent
+  of numerical order. [Kenny, *The Five Ways*, ch. V, pp. 80–82](https://www.scribd.com/document/907308229/Anthony-Kenny-Studies-in-5-Ways-of-Aquinas).
+- **Davies's cross-kind reading and the remaining objection.** On Davies's
+  reconstruction, different kinds can be compared in ontological goodness
+  through their actuality. Goodness relative to different activities
+  therefore need not settle the disputed ordering. The test for this response
+  is whether the common respect of actuality supplies a determinate and
+  transitive comparison across kinds without deriving it from the selected
+  primary. Davies treats the causal principle as a claim about the agent's
+  power to produce the effect, which can differ from literal possession of
+  the effect's sensible feature. An effect's degree alone gives no such
+  account of productive power. This leaves the capacity and causal bridges
+  substantive even when the scale is granted. [Davies, *Thomas Aquinas's
+  Summa Theologiae*, §3.4.5, pp. 43–46](https://www.scribd.com/document/494774714/DAVIES-Brian-Thomas-Aquinas-s-Summa-Theologiae-a-Guide-and-Commentary).
+
+The provisional judgment is that an ordinal calibration has strong conditional
+warrant where the three qualitative conditions are defensible. It gives no
+independent warrant for a numerical ranking of esse or for the causal and
+receptive threshold. The next discriminating test is to fix an independently
+motivated cross-kind comparison at esse, preserve the same act and degree
+inputs, and ask whether two acknowledged comparisons entail a third on the
+actual bearer domain. For the cause–effect application, the next test is
+whether the effect's degree being within the candidate recipient's capacity
+gives evidence that the recipient actually limits the cause's possession.
+The earlier warrant assessments and source bindings stand at their recorded scopes.
