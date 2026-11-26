@@ -5,6 +5,7 @@ public import TruthCore.Explanation.AccessibleAccountNecessaryBeing
 public import TruthCore.Explanation.ActualExerciseExplanation
 public import TruthCore.Explanation.ActualExistenceAdequacy
 public import TruthCore.Explanation.ActualPopulationApplications
+public import TruthCore.Explanation.ActualPopulationCensus
 public import TruthCore.Explanation.ActualWorldGap
 public import TruthCore.Explanation.AdjacentPairContainment
 public import TruthCore.Explanation.AnselmCommonSourceAudit

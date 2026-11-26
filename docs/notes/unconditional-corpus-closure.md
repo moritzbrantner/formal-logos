@@ -652,35 +652,17 @@ history correspondence remains open, as do admission and causal
 availability of the negative fact. A fact is not an individual and
 CauseFact is not Ontic.Causes.
 
-**Executed finite boundary test (Python, not Lean).** The following
-enumeration ran across 128 assignments of concreteness for one candidate,
-existence at two labels, and four accessibility edges. All forward
-implications held; all four omission/separation controls were found.
-
-```python
-from itertools import product
-controls = set()
-for c, e0, e1, a00, a01, a10, a11 in product((False, True), repeat=7):
-    e = [e0, e1]
-    a = [[a00, a01], [a10, a11]]
-    actual = c and e0
-    reflexive = a00
-    possible = any(a[0][v] and c and e[v] for v in range(2))
-    contingent = actual and any(a[0][v] and not e[v] for v in range(2))
-    necessary = all(not a[0][v] or e[v] for v in range(2))
-    assert not (actual and reflexive) or possible
-    assert not contingent or actual
-    assert not (contingent and necessary)
-    if actual and not reflexive and not possible:
-        controls.add("omit reflexivity")
-    if reflexive and not actual and not possible:
-        controls.add("omit actual population")
-    if possible and reflexive and not actual:
-        controls.add("reverse fails")
-    if actual and reflexive and necessary and not contingent:
-        controls.add("contingency does not follow")
-assert len(controls) == 4
-```
+**Finite boundary census (Lean checked).** All 128 assignments of
+concreteness for one candidate, existence at two labels, and four
+accessibility edges satisfy the forward implications: actual population
+with reflexivity gives possible population, contingency gives actual
+population, and contingency excludes necessity. All four separation
+controls occur: omitting reflexivity, omitting actual population, the
+failed reverse inference from possible to actual population, and actual
+reflexive necessary population without contingency. The evaluators are
+proved to coincide with `InhabitedConcreteAt`, `ActualReflexive`,
+`PossiblyInhabitedConcreteAt`, `SomeActualContingentAt` and `NecessaryAt`.
+[Census](../../TruthCore/Explanation/ActualPopulationCensus.lean#L38)
 
 These are finite controls of the stipulated predicate shapes, not
 substantive philosophical objections or metaphysical possibility
@@ -890,33 +872,15 @@ necessity, or rule out brute or circular grounding. It clarifies what
 can be investigated on either modal horn without requiring a disputed
 contingency thesis in advance.
 
-**Executed finite scope test (not Lean):** all 1,024 profiles with two
+**Finite scope census (Lean checked):** all 1,024 profiles with two
 candidate individuals and two world labels, varying two concreteness
-bits, four presence bits and four accessibility bits, satisfied
+bits, four presence bits and four accessibility bits, satisfy
 population iff necessary-population or contingent-population. Each
-exclusive horn and coexistence were witnessed. The enumeration also
-confirmed the conditional no-necessary-to-contingent transfer.
-
-```python
-from itertools import product
-cases = set()
-for bits in product((False, True), repeat=10):
-    c = list(bits[:2])
-    e = [list(bits[2:4]), list(bits[4:6])]
-    a = [list(bits[6:8]), list(bits[8:10])]
-    pop = any(c[x] and e[0][x] for x in range(2))
-    nec = any(c[x] and e[0][x] and
-              all(not a[0][v] or e[v][x] for v in range(2))
-              for x in range(2))
-    cont = any(c[x] and e[0][x] and
-               any(a[0][v] and not e[v][x] for v in range(2))
-               for x in range(2))
-    assert pop == (nec or cont)
-    assert not (pop and not nec) or cont
-    if pop:
-        cases.add((nec, cont))
-assert cases == {(True, False), (False, True), (True, True)}
-```
+exclusive horn and coexistence are witnessed. The census also
+confirms the conditional no-necessary-to-contingent transfer. The
+evaluators are proved to coincide with `InhabitedConcreteAt`,
+`NecessaryConcreteAt` and `SomeActualContingentAt`.
+[Census](../../TruthCore/Explanation/ActualPopulationCensus.lean#L115)
 
 These applications fall outside the historical sample. The two candidate
 horns can coexist. Neither disjunct can be entered separately as an
