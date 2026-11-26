@@ -72,6 +72,48 @@ fn dpll() {
 }
 
 #[test]
+fn nested_structure_certificate_reuses_field_tables_and_binder_order() {
+    let predicate = "«countermodel field 0»";
+    let flag = "«countermodel field 1»";
+    let keep = "p.inner.relation x";
+    let omit = "p.inner.flag x = true";
+    let value = json!({
+        "theorem": "Example.consumer",
+        "carriers": ["A"],
+        "constants": [{"name": "x", "sort": "A"}],
+        "predicates": [{"name": predicate, "args": ["A"]}, {"name": flag, "args": ["A"]}],
+        "structures": [{
+            "name": "p",
+            "lean_type": "Example.Outer A",
+            "lean_value": format!("(@Example.Outer.mk A (@Example.Inner.mk A {predicate} (fun x => decide ({flag} x))))"),
+        }],
+        "application": ["A", "p", "x", "«countermodel premise 0»", "«countermodel premise 1»"],
+        "premises": [
+            {"name": "hKeep", "lean": keep, "formula": atom(predicate, &["x"])},
+            {"name": "hFlag", "lean": omit, "formula": atom(flag, &["x"])},
+        ],
+        "conclusion": {"lean": omit, "formula": atom(flag, &["x"])},
+        "unfolded": [],
+    });
+    let skeleton = Skeleton::parse(&value, "Example").unwrap();
+    let omissions = ["hFlag".to_owned()];
+    let reports = run(&skeleton, Some(&omissions), 1, false, None).unwrap();
+    let [report] = reports.as_slice() else {
+        panic!("expected one omission report");
+    };
+    assert_eq!(report.status, "candidate");
+    let certificate = report.lean.as_ref().unwrap();
+    assert!(certificate.contains(&format!("abbrev {predicate} : A → Prop := fun _ => True")));
+    assert!(certificate.contains(&format!("abbrev {flag} : A → Prop := fun _ => False")));
+    assert!(certificate.contains(&format!("@Example.Inner.mk A {predicate}")));
+    assert!(
+        certificate
+            .contains("@Example.consumer A p x «countermodel premise 0» «countermodel premise 1»")
+    );
+    assert!(certificate.contains(&format!("({keep}) ∧\n    ¬ ({omit})")));
+}
+
+#[test]
 fn sizes_smallest_total_first() {
     let carriers = vec!["A".to_owned(), "B".to_owned()];
     let order: Vec<Vec<usize>> = size_assignments(&carriers, 2)

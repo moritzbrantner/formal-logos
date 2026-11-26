@@ -94,6 +94,13 @@ pub struct UnaryFunction {
     pub codomain: String,
 }
 
+/// A structure parameter reconstructed from the same field tables the solver uses.
+struct Structure {
+    name: String,
+    lean_type: String,
+    lean_value: String,
+}
+
 /// The first-order skeleton of a theorem, as `scripts/Countermodel.lean`
 /// writes it (plus the module it was read from).
 pub struct Skeleton {
@@ -102,6 +109,9 @@ pub struct Skeleton {
     pub predicates: Vec<(String, Vec<Sort>)>,
     pub constants: Vec<(String, String)>,
     pub functions: Vec<UnaryFunction>,
+    structures: Vec<Structure>,
+    /// Arguments of the unchanged theorem in binder order, including proof variables.
+    application: Vec<String>,
     pub premises: Vec<Premise>,
     pub conclusion_lean: String,
     pub conclusion: Formula,
@@ -233,6 +243,21 @@ impl Skeleton {
                 })
                 .collect::<Result<Vec<_>, String>>()?,
         };
+        let (structures, application) = if value.get("structures").is_some() {
+            let structures = list(value, "structures")?
+                .iter()
+                .map(|s| {
+                    Ok(Structure {
+                        name: text(s, "name")?,
+                        lean_type: text(s, "lean_type")?,
+                        lean_value: text(s, "lean_value")?,
+                    })
+                })
+                .collect::<Result<Vec<_>, String>>()?;
+            (structures, strings(value, "application")?)
+        } else {
+            (Vec::new(), Vec::new())
+        };
         let skeleton = Skeleton {
             theorem: text(value, "theorem")?,
             carriers: strings(value, "carriers")?,
@@ -253,6 +278,8 @@ impl Skeleton {
                 .map(|c| Ok((text(c, "name")?, text(c, "sort")?)))
                 .collect::<Result<_, String>>()?,
             functions,
+            structures,
+            application,
             premises: list(value, "premises")?
                 .iter()
                 .map(|p| {
@@ -1202,6 +1229,12 @@ pub fn render_model(skeleton: &Skeleton, model: &Model) -> Vec<String> {
         let table = model.tables.get(name).unwrap_or(&empty);
         lines.push(render_predicate(name, sorts, table, model));
     }
+    for structure in &skeleton.structures {
+        lines.push(format!(
+            "abbrev {} : {} := {}",
+            structure.name, structure.lean_type, structure.lean_value
+        ));
+    }
     lines
 }
 
@@ -1256,6 +1289,30 @@ pub fn render_certificate(
         format!("/-! {what} Candidate from `truth countermodel`; checked by `decide`. -/"),
     ];
     lines.extend(render_model(skeleton, model));
+    if !skeleton.structures.is_empty() {
+        // Type-check the reconstructed vocabulary and printed propositions against
+        // the original theorem before proving the facts about the finite model.
+        let mut implication: Vec<_> = skeleton
+            .premises
+            .iter()
+            .map(|premise| format!("({})", premise.lean))
+            .collect();
+        implication.push(format!("({})", skeleton.conclusion_lean));
+        let application = format!("@{} {}", skeleton.theorem, skeleton.application.join(" "));
+        let proof = if skeleton.premises.is_empty() {
+            application
+        } else {
+            let binders = (0..skeleton.premises.len())
+                .map(|index| format!("«countermodel premise {index}»"))
+                .collect::<Vec<_>>()
+                .join(" ");
+            format!("fun {binders} => {application}")
+        };
+        lines.push(format!(
+            "example : {} :=\n  {proof}",
+            implication.join(" →\n    ")
+        ));
+    }
     lines.push(format!("theorem certificate :\n    {statement} := by"));
     lines.push(format!("{delta}  refine ⟨{holes}⟩ <;> {closer}"));
     lines.push(format!("end {label}"));
