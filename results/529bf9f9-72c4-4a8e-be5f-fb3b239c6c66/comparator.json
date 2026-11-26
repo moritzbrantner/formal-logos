@@ -1,0 +1,16 @@
+{
+  "challenge_module": "TruthCore.Results.Ontology.NamedRootLocation.Challenge",
+  "solution_module": "TruthCore.Results.Ontology.NamedRootLocation.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Ontology.NamedRootLocation.derive",
+    "TruthCore.Results.Ontology.NamedRootLocation.actualRootUnlocated",
+    "TruthCore.Results.Ontology.NamedRootLocation.occupantNaturalismFails",
+    "TruthCore.Results.Ontology.NamedRootLocation.separation"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "enable_nanoda": true
+}

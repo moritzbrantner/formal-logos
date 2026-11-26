@@ -1,0 +1,11 @@
+{
+  "id": "76c39b25-2ab8-4987-b8c5-9e57999fb0c1",
+  "label": "The unlocated actual root on the recipient's path refutes occupant N2",
+  "argument_id": "d01da14e-9bca-4579-a8d1-70e2dd7aaeea",
+  "challenge_module": "TruthCore.Results.Causality.GroundedOccupantRegress.Challenge",
+  "solution_module": "TruthCore.Results.Causality.GroundedOccupantRegress.Solution",
+  "theorem": "TruthCore.Results.Causality.GroundedOccupantRegress.concreteNaturalismFails_of_unlocatedRoot",
+  "comparator_config": "results/76c39b25-2ab8-4987-b8c5-9e57999fb0c1/comparator.json",
+  "status": "solution-present",
+  "description": "The actual concrete root on the selected recipient's path contradicts occupant N2 when that thesis uses the same Profile.ontic, Profile.concrete, world and Located F. The recipient need not be the counterinstance. This conclusion is scoped to dimensive occupation in the supplied frame."
+}

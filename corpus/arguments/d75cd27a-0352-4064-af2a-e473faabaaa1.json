@@ -1,0 +1,34 @@
+{
+  "id": "d75cd27a-0352-4064-af2a-e473faabaaa1",
+  "label": "Selected cone well-foundedness from acyclicity and anchored regress denial",
+  "premise_statement_ids": [
+    "5e002319-3828-4de8-96bc-98ebf34072d7",
+    "018456e8-cd2e-46e1-9c13-fa06e6f4dde9"
+  ],
+  "conclusion_statement_id": "1b1e3f09-f2e9-5949-9c3b-8f7fce26a403",
+  "inference_ids": [
+    "ca3e052b-e3ef-4022-96eb-f69528b6afed"
+  ],
+  "meaning": "Keep the same actual recipient, world and actual concrete Profile.grounds graph. Acyclicity makes a descending chain injective, so denying an injective chain gives accessibility at the recipient. Accessibility propagates to its finite actual concrete ancestors, which gives well-foundedness on the complete selected cone. The converse excludes an anchored regress without assuming acyclicity of the full actual concrete graph. The two-cycle control has a repeating descending chain and fails cone well-foundedness while satisfying injective regress denial. Composition with the existing SelectedAncestry.necessaryRootAncestor theorem retains the recipient's actual-concrete witness, cone-local contingent grounding and excluded middle. The result supplies one conditional support option for cone well-foundedness, without assuming location coverage or establishing the higher premises.",
+  "term_senses": {
+    "FULL_ANCESTRY_FOUNDATION_VERSUS_CONTINGENT_ONLY": "959c30ea-70e8-47ba-931b-2054a080ea7e"
+  },
+  "definition_ids": [
+    "008cb21a-256c-5a90-822c-acd4591d699a",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "e1ff44df-ed97-5990-8424-1abd720f23ea",
+    "9c6e4314-2e35-52ff-951e-db752a3c8ce2",
+    "264e5668-fdd0-5ee3-98d1-6dc9925056c4",
+    "7b0fa9c6-f1fa-5b46-8a8b-31187fa3a28b",
+    "99f27f99-cf28-58bb-9e08-eb3fe8e752c1",
+    "a1b2e330-388f-4120-bc5c-969642317792"
+  ],
+  "disambiguation_ids": [
+    "623ddbf6-9683-5361-bae4-e348a00ec680",
+    "7507d645-874d-5434-add8-2f49c2801d36",
+    "09a5b009-3548-5a02-80b6-9eafc755a10e",
+    "c529e8d3-43e3-53a8-a82f-3955e9815265"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.GroundedOccupantRegress.Challenge",
+  "solution_module": "TruthCore.Results.Causality.GroundedOccupantRegress.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.GroundedOccupantRegress.unlocatedRoot_of_noRegress"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}

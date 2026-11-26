@@ -90,8 +90,12 @@ ordering uses one successor rule. [Distinctness proof](../../corpus/results/WORL
 For accounts equally adequate to the same evidence, a headcount razor gives a
 finite inventory an advantage that survives **every finite addition** against
 an infinite inventory. If the units counted are independent explanatory posits,
-assigning a distinct charge to each bearer suffices. Charging each successive
-pair once also yields infinitely many distinct charges.
+it suffices that each posit actually used accounts for only finitely many
+positions on the endless chain. The group sizes can grow without bound. A finite
+list of such posits could cover only a finite union of finite groups. Charging
+each successive pair once is an example. The converse fails: one reusable posit
+can cover every even position while infinitely many different posits cover the
+odd positions. What matters is the set of posits actually required.
 The choice of baseline also matters. Against a shared countably infinite
 background, adding one thing or countably many yields equally large total
 inventories, despite the difference in additions. [Headcount criterion](../../corpus/results/e8f7aaef-0424-411f-bdc8-8a3671e3c932.json)
@@ -477,3 +481,5 @@ obligation. No necessary-being root premise is discharged by these results.
 ## Research attempts citing this note
 
 - [Modal spine A3′: a genuine Grim Reaper patchwork premise and its objection audit](../../corpus/attempts/ac336333-edfe-4599-b35e-1e78b81047e5.json)
+
+For a particular actual recipient there is a precise way to use the no-regress premise. On an acyclic graph of actual concrete existential grounds, excluding an infinite chain of distinct grounds starting at this recipient makes its entire upstream cone well-founded. Conversely, well-foundedness of that cone excludes the chain even if things elsewhere form cycles. A two-bearer loop shows why acyclicity matters in the forward direction. This lets the existing necessary-ancestor argument use the local exclusion: it still needs every contingent actual bearer in that cone to have a ground, together with excluded middle. The necessary ancestor is a root relative to the selected world's grounding relation. The headcount preference above provides a reason to examine the exclusion when commitments really accumulate; establishing it for this recipient requires evidence about actual supply. [Lean composition and cycle control](../../TruthCore/Results/Causality/SelectedConeRegress/Solution.lean) · [Spatial application](spatial-translation-and-reason.md#can-an-extended-bearer-end-a-grounding-regress)

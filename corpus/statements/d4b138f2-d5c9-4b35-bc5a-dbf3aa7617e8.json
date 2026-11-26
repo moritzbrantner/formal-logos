@@ -1,0 +1,16 @@
+{
+  "id": "d4b138f2-d5c9-4b35-bc5a-dbf3aa7617e8",
+  "label": "The selected recipient has an unlocated actual root path or an injective grounding regress",
+  "paraphrase": "In the selected world's graph of actual concreta, the same recipient either has a finite upstream grounding path to an actual root that occupies no region of the supplied frame or anchors an infinite upstream grounding chain of distinct actual concreta. Both horns may hold. A path from the recipient to itself may have length zero when it is an unlocated root.",
+  "lean_declaration": "TruthCore.Causality.GroundedOccupantRegress.UnlocatedRootOrRegress",
+  "definition_ids": [
+    "a1b2e330-388f-4120-bc5c-969642317792",
+    "52352824-6be9-53c6-83d4-82fed9a08cbb",
+    "822c9912-2313-584b-b2b7-77031da20107",
+    "e9e031af-665e-5888-9328-f7637b5a2677",
+    "ddde7152-b698-5a85-8060-b8c6c9905758"
+  ],
+  "disambiguation_ids": [
+    "1ea8b036-7a66-540a-be38-301a8db9077c"
+  ]
+}

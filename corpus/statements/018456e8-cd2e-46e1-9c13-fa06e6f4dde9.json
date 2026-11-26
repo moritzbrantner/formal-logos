@@ -1,0 +1,9 @@
+{
+  "id": "018456e8-cd2e-46e1-9c13-fa06e6f4dde9",
+  "label": "No injective actual concrete grounding regress starts at the selected recipient",
+  "paraphrase": "At the selected world no injective Nat-indexed chain of actual concrete Profile.grounds edges starts at this actual concrete recipient and follows those edges upstream. This local denial does not exclude chains anchored elsewhere or assert whole-graph well-foundedness.",
+  "lean_declaration": "TruthCore.Causality.GroundedOccupantRegress.NoAnchoredConcreteGroundingRegress",
+  "definition_ids": [
+    "a1b2e330-388f-4120-bc5c-969642317792"
+  ]
+}

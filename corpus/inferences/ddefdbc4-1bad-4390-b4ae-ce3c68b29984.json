@@ -1,0 +1,13 @@
+{
+  "id": "ddefdbc4-1bad-4390-b4ae-ce3c68b29984",
+  "label": "Recipient-local regress denial selects a finite unlocated root path (inference)",
+  "input_statement_ids": [
+    "d4b138f2-d5c9-4b35-bc5a-dbf3aa7617e8",
+    "018456e8-cd2e-46e1-9c13-fa06e6f4dde9"
+  ],
+  "output_statement_id": "d5770df2-5877-4d04-a3d9-faf0ae525649",
+  "rule": "same-recipient disjunctive elimination",
+  "meaning": "Deny the exact injective chain horn at the same recipient and world for which the classification was proved. Roothood is relative to actual concrete grounds. The unlocated root need not be uniquely sourced or necessary.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

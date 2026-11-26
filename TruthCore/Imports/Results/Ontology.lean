@@ -6,6 +6,7 @@ public import TruthCore.Results.Ontology.EncodingAndRealPredicates.Solution
 public import TruthCore.Results.Ontology.EsseDichotomy.Solution
 public import TruthCore.Results.Ontology.ExistenceInEssence.Solution
 public import TruthCore.Results.Ontology.ExistencePredicate.Solution
+public import TruthCore.Results.Ontology.NamedRootLocation.Solution
 public import TruthCore.Results.Ontology.Naturalism.Atemporal.Solution
 public import TruthCore.Results.Ontology.Naturalism.Independence.Solution
 public import TruthCore.Results.Ontology.Naturalism.Loop.Solution

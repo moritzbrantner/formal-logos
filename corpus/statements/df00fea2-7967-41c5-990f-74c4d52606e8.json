@@ -1,0 +1,9 @@
+{
+  "id": "df00fea2-7967-41c5-990f-74c4d52606e8",
+  "label": "An injective actual concrete grounding regress starts at the selected recipient",
+  "paraphrase": "An infinite Nat-indexed chain starts at this actual concrete recipient and follows Profile.grounds edges upstream. Its bearers are pairwise distinct and are actual concreta at the same selected world. The indexing counts link positions and does not represent elapsed time.",
+  "lean_declaration": "TruthCore.Causality.GroundedOccupantRegress.AnchoredConcreteGroundingRegress",
+  "definition_ids": [
+    "a1b2e330-388f-4120-bc5c-969642317792"
+  ]
+}

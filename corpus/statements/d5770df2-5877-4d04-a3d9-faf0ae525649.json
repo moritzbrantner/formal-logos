@@ -1,0 +1,16 @@
+{
+  "id": "d5770df2-5877-4d04-a3d9-faf0ae525649",
+  "label": "The selected recipient has a finite actual concrete grounding path to an unlocated root",
+  "paraphrase": "A finite path leads upstream from this same actual concrete recipient to an actual root of Profile.grounds restricted to the actual concreta of the selected world. This root occupies no region of the supplied frame in the SPATIOTEMPORAL_2 sense. If the recipient is itself an unlocated root, the path may have length zero.",
+  "lean_declaration": "TruthCore.Causality.GroundedOccupantRegress.UnlocatedRootPath",
+  "definition_ids": [
+    "a1b2e330-388f-4120-bc5c-969642317792",
+    "52352824-6be9-53c6-83d4-82fed9a08cbb",
+    "822c9912-2313-584b-b2b7-77031da20107",
+    "e9e031af-665e-5888-9328-f7637b5a2677",
+    "ddde7152-b698-5a85-8060-b8c6c9905758"
+  ],
+  "disambiguation_ids": [
+    "1ea8b036-7a66-540a-be38-301a8db9077c"
+  ]
+}

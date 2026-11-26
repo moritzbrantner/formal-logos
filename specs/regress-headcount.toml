@@ -11,9 +11,14 @@ definitions = ["Headcount advantage after every finite addition"]
 [[argument]]
 id = "Count distinct posits along an acyclic regress against a finite alternative"
 theorem = "headcountCriterion"
-comparator_theorems = ["finiteAdditionCriterion", "pairedCharges"]
+comparator_theorems = [
+  "finiteAdditionCriterion",
+  "pairedCharges",
+  "finiteFibersChargeInfinitely",
+  "mixedChargeFibers",
+]
 premises = []
 conclusion = "Occam's razor and the headcount of a finite explanation versus an infinite regress"
 axioms = ["propext", "Classical.choice", "Quot.sound"]
 rule = "Compose injectivity of a descending acyclic chain with separate charges, then compare extended natural and exact cardinalities"
-meaning = "This is a conditional application of cardinal parsimony. The headcount theorem fixes the charged carrier; charging beings as tokens and charging independent explanatory assumptions can produce different verdicts. With a common countably infinite inventory, the exact cardinalities of all objects agree in the displayed example. Empirical adequacy and philosophical preference require separate assessment."
+meaning = "This is a conditional application of cardinal parsimony. The headcount theorem fixes the charged carrier; charging beings as tokens and charging independent explanatory assumptions can produce different verdicts. With a common countably infinite inventory, the exact cardinalities of all objects agree in the displayed example. The finite-fiber companion counts only visited charges: finitely many positions per charge force infinitely many charges on an infinite sequence, even without a common bound on group sizes. Pairwise billing is an existing example; mixed even/odd billing shows that an infinite group can coexist with infinitely many charges. Empirical adequacy and philosophical preference require separate assessment."

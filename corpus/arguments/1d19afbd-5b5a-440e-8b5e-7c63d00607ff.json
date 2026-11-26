@@ -1,0 +1,30 @@
+{
+  "id": "1d19afbd-5b5a-440e-8b5e-7c63d00607ff",
+  "label": "Occupant N2 selects an injective grounding regress at the same classified recipient",
+  "premise_statement_ids": [
+    "d4b138f2-d5c9-4b35-bc5a-dbf3aa7617e8",
+    "41ae1d27-391f-530e-a65c-4e2b2ef4b08e"
+  ],
+  "conclusion_statement_id": "df00fea2-7967-41c5-990f-74c4d52606e8",
+  "inference_ids": [
+    "fa05c65c-ec0c-411e-bb94-2af612dcf0a4"
+  ],
+  "meaning": "Under occupant N2, coverage and actual concrete acyclicity, an injective regress follows at each selected actual concrete recipient in the supplied world. Occupant N2 applies once more to every actual concrete node of this chain, so each occupies some region of the same frame. Distinct actual ground bearers do not establish distinct rules or independent explanatory posits.",
+  "term_senses": {
+    "NATURALISM": "478eae4e-600e-4818-b27a-0527faaafa8d",
+    "SPATIOTEMPORAL": "ae03bf93-e554-4f40-a32b-12b55f87cf54"
+  },
+  "definition_ids": [
+    "52352824-6be9-53c6-83d4-82fed9a08cbb",
+    "008cb21a-256c-5a90-822c-acd4591d699a",
+    "822c9912-2313-584b-b2b7-77031da20107",
+    "0f3ffba6-5882-5d97-80be-9129f75c7264",
+    "e9e031af-665e-5888-9328-f7637b5a2677",
+    "ddde7152-b698-5a85-8060-b8c6c9905758",
+    "a1b2e330-388f-4120-bc5c-969642317792"
+  ],
+  "disambiguation_ids": [
+    "726527df-c7a8-5be7-9f30-2bc23b115982",
+    "1ea8b036-7a66-540a-be38-301a8db9077c"
+  ]
+}

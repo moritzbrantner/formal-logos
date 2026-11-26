@@ -1,0 +1,9 @@
+{
+  "id": "5e002319-3828-4de8-96bc-98ebf34072d7",
+  "label": "Actual concrete grounding at the selected world is acyclic",
+  "paraphrase": "The graph whose nodes are actual concreta at the selected world and whose edges are Profile.grounds at that world has no nonempty finite return path. Other worlds, other grounding relations and chains through nonconcreta or absent candidates are outside the premise.",
+  "lean_declaration": "TruthCore.Causality.GroundedOccupantRegress.ActualConcreteGroundingAcyclicAt",
+  "definition_ids": [
+    "a1b2e330-388f-4120-bc5c-969642317792"
+  ]
+}

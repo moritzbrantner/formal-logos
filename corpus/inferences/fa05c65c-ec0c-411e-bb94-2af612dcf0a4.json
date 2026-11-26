@@ -1,0 +1,13 @@
+{
+  "id": "fa05c65c-ec0c-411e-bb94-2af612dcf0a4",
+  "label": "Occupant N2 selects an injective grounding regress at the same classified recipient (inference)",
+  "input_statement_ids": [
+    "d4b138f2-d5c9-4b35-bc5a-dbf3aa7617e8",
+    "41ae1d27-391f-530e-a65c-4e2b2ef4b08e"
+  ],
+  "output_statement_id": "df00fea2-7967-41c5-990f-74c4d52606e8",
+  "rule": "universal occupant N2 excludes the unlocated root horn",
+  "meaning": "Under occupant N2, coverage and actual concrete acyclicity, an injective regress follows at each selected actual concrete recipient in the supplied world. Occupant N2 applies once more to every actual concrete node of this chain, so each occupies some region of the same frame. Distinct actual ground bearers do not establish distinct rules or independent explanatory posits.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

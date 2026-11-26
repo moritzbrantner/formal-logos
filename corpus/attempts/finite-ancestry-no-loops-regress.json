@@ -18,7 +18,7 @@
   "date": "2026-10-26",
   "kind": "derivation",
   "outcome": "succeeded",
-  "summary": "A genuine finite-set and acyclic-transitive-closure route derives accessibility and transfers it by explicit per-se edge inclusion. Each hypothesis has an omission model. This does not identify finite distinct ancestors with no infinite histories, defend the premises, supply the event/being map, or close the root frontier. Proof verification status is recorded in the linked result, not inferred from this attempt. An acyclic infinite regress visits infinitely many distinct bearers. Reversing the same successor edge on the same infinite roster changes whether there is a first cause. Occam’s headcount comparison favors finite additional commitments under equal explanatory adequacy when the regress requires infinitely many distinct posits. Billing each bearer, or each successive pair, suffices. In a probability comparison, preference beyond every finite factor requires zero weight for the regress hypothesis. Uniformly discounted depth events covering every member of the regress class in one model force zero weight for that class. Discounting one specific infinite sequence does not suffice. A single charge for a shared law permits positive weight. At matched adequacy the finite commitments merit preference on this headcount criterion. Whether an actual first cause exists remains open. Application depends on what each account must independently assume to explain the same recipient. See docs/notes/causal-finitism-367.md#does-occams-razor-favor-a-finite-account-of-an-infinite-regress.",
+  "summary": "A genuine finite-set and acyclic-transitive-closure route derives accessibility and transfers it by explicit per-se edge inclusion. Each hypothesis has an omission model. This does not identify finite distinct ancestors with no infinite histories, defend the premises, supply the event/being map, or close the root frontier. Proof verification status is recorded in the linked result, not inferred from this attempt. An acyclic infinite regress visits infinitely many distinct bearers. Reversing the same successor edge on the same infinite roster changes whether there is a first cause. Occam’s headcount comparison favors finite additional commitments under equal explanatory adequacy when the regress requires infinitely many distinct posits. Each posit may cover any finite number of positions on the endless chain. The used inventory is still infinite even without a uniform bound on group sizes. Infinite reuse of one posit is compatible with infinitely many others, as the even/odd control shows. In a probability comparison, preference beyond every finite factor requires zero weight for the regress hypothesis. Uniformly discounted depth events covering every member of the regress class in one model force zero weight for that class. Discounting one specific infinite sequence does not suffice. A single charge for a shared law permits positive weight. At matched adequacy the finite commitments merit preference on this headcount criterion. Whether an actual first cause exists remains open. Application depends on what each account must independently assume to explain the same recipient. See docs/notes/causal-finitism-367.md#does-occams-razor-favor-a-finite-account-of-an-infinite-regress.",
   "evidence": [
     "a4558f9c-3063-5d3b-b8a3-164e26160ed2",
     "98991434-ec43-5e9c-b3d3-bdca82e57366",
@@ -32,7 +32,8 @@
     "0d877e2b-86df-4bed-8275-49c1a614e2c7",
     "3cb00ff1-e0c9-4874-badf-d7f499a49f92",
     "d1c3835a-f5c9-4acf-8664-aa7720ccbd45",
-    "PR-2005"
+    "PR-2005",
+    "PR-2009"
   ],
   "current_assessment": {
     "date": "2026-11-26",
@@ -41,13 +42,13 @@
       "d899fe9f-2c8c-43aa-a2c4-2c8c2c06890b"
     ],
     "scope": "Occam’s razor applied to finitely or infinitely many independent commitments to explain the same recipient in the Second Way.",
-    "assessment": "At matched explanatory adequacy, a finite account is preferable on headcount grounds when the competing explanation needs infinitely many independent posits. The number of bearers alone leaves open whether there is a first cause. The whole regress hypothesis retains its prior odds against a finite alternative under equal positive likelihoods. Preference beyond every finite factor in the probability comparison requires zero weight for the whole rival.",
+    "assessment": "At matched explanatory adequacy, a finite account is preferable on headcount grounds when the competing explanation needs infinitely many independent posits. This headcount advantage already follows if each independent posit accounts for finitely many positions on the infinite chain, even with no common bound on these group sizes. The number of bearers alone leaves open whether there is a first cause. The whole regress hypothesis retains its prior odds against a finite alternative under equal positive likelihoods. Preference beyond every finite factor in the probability comparison requires zero weight for the whole rival.",
     "next_test": "For the same recipient, identify what each account must independently assume for productive supply. Determine whether the regress needs infinitely many distinct commitments or one instantiated law, and whether the proposed source explains the same production.",
     "note": "docs/notes/causal-finitism-367.md#does-occams-razor-favor-a-finite-account-of-an-infinite-regress",
     "review": "accepted_qualified",
-    "reviewed_revision": "c33ff837bdf7d5d8a8133647fa99ebb2f9ef8454",
+    "reviewed_revision": "8b892c5b48de01a1a66293d9e2f9ffafb04e765d",
     "publication": "published",
-    "evidence": "Independent review of the six formal results at e85b5f23b. The targeted recheck at c33ff837b accepted the paired-charge example, the whole-class probability condition and the provisional application. PR #2005.",
-    "supersedes": "Adds the parsimony assessment to the earlier finite-ancestry derivation and its omission controls."
+    "evidence": "Independent review at e85b5f23b and targeted acceptance at c33ff837b covered the original six results, paired charges, whole-class probability and provisional application (merged #2005). A separate review at 8b892c5b4 verified the finite-fiber and mixed infinite-reuse companions and their interpretation. Delivered in PR #2009.",
+    "supersedes": "Extends the original #2005 headcount assessment from distinct and paired charges to arbitrary finite fibers. Its whole-hypothesis probability assessment and the prior finite-ancestry derivation remain applicable."
   }
 }

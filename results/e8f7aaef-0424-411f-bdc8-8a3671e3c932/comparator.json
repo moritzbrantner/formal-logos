@@ -4,7 +4,9 @@
   "theorem_names": [
     "TruthCore.Results.Logic.RegressHeadcount.headcountCriterion",
     "TruthCore.Results.Logic.RegressHeadcount.finiteAdditionCriterion",
-    "TruthCore.Results.Logic.RegressHeadcount.pairedCharges"
+    "TruthCore.Results.Logic.RegressHeadcount.pairedCharges",
+    "TruthCore.Results.Logic.RegressHeadcount.finiteFibersChargeInfinitely",
+    "TruthCore.Results.Logic.RegressHeadcount.mixedChargeFibers"
   ],
   "permitted_axioms": [
     "propext",

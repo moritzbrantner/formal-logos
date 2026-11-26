@@ -170,7 +170,7 @@ presence through the selected times, not cross-world necessity or proper
 Boethian timelessness. The new result never uses any of these as implicit
 ontological bridges.
 
-### Nonvacuity, omission and root integration
+### Nonvacuity, omission and root integration in the November 22 result
 
 **Joint model.** `jointModel` (a companion Comparator theorem of the same
 result) checks that the four premises of `derive` are jointly satisfiable
@@ -197,7 +197,7 @@ proof of `STMT-GOD-EXISTS` or discharge of any root premise. The existing
 `NecessaryClassicalGodRootFromUnderived.derive` carries one root witness
 through stage-two attributes, but the public existential result does not
 identify the newly unlocated witness with the classical `GOD_4` bearer, and
-conjoining two different existential conclusions is invalid. The gap is
+conjoining two different existential conclusions is invalid. At that revision the gap was
 narrower than rethreading `derive`: `selectedUnlocated` is pointwise and is
 the reusable entry point. A `GOD_4` consumer needs only that its own bearer
 `n` satisfies `UnderivedConcreteAt m w n` in the same `m` and `w`, together
@@ -224,9 +224,17 @@ wording P1 (esse versus the selected `Profile.grounds` relation) and four P2s
 consumer gap); they are repaired above. Its two companion controls,
 `jointModel` and `unrestrictedInconsistent`, were appended to the Challenge as
 new declarations before their proofs, leaving the three original Challenge
-theorems unchanged. The registered result requires final Lean, binding,
-Comparator and NanoDa verification. Formal validity, metaphysical applicability and identification with
-the root's GOD_4 witness must be assessed separately.
+theorems unchanged. The [subsequent application](#can-an-extended-bearer-end-a-grounding-regress) preserves the named witness and tests which spatial premises reach it.
+
+## Can an extended bearer end a grounding regress?
+
+Fix one actual concrete recipient and count distinct bearers on its upstream grounding paths. Suppose every located actual concretum has an actual concrete existential ground, and the actual grounding relation is acyclic. Lean then gives either a finite path from an unlocated root to this recipient or an infinite sequence of distinct grounds starting at this recipient. Both paths can occur in a branching graph. If every actual concretum is located (occupant N2), the infinite path follows. One successor rule suffices to generate it. A two-bearer control models the field-first reply. Treat a located field as fundamental and its mode as grounded by it. Both occupy the single region in the model; the model stipulates this grounding assignment and represents no physical dynamics. It satisfies occupant N2 and acyclicity while denying the universal grounding premise. The finite and infinite interpretations therefore disagree about what explains the bearer, as well as about the number of bearers. [Fork and controls](../../TruthCore/Results/Causality/GroundedOccupantRegress/Solution.lean) · [Occam comparison](causal-finitism-367.md#does-occams-razor-favor-a-finite-account-of-an-infinite-regress)
+
+Two measurements give positive evidence that particular patterns are realized in a material medium. Ramanathan et al. detected the sodium cloud in preparations with surviving circulation and in preparations where circulation had ceased. Figure 2(b) compares terminal images across trials. In an ideal uniform ring, doubling its circumference at fixed winding halves the phase gradient, whereas zero winding permits unchanged density with the flow absent. Viermann et al. went further by configuring the density of a potassium condensate and measuring how a phonon wave packet propagated. Their hyperbolic configuration reproduced the predicted trajectory, and the hyperbolic and spherical configurations showed contrasting wavefronts. Density profiles and scattering lengths formed part of the preparations. This gives an independent way to identify and manipulate a material realizer of the geometry experienced by these excitations. Counting a pattern as an actual concrete bearer, and its realization as grounding its existence in the selected relation, are further interpretive premises. The laboratory and the gas already occupy space in both configurations. [Sodium experiment, Fig. 2(b)](https://link.aps.org/accepted/10.1103/PhysRevLett.106.130401) · [Potassium experiment, Figs. 1–2](https://arxiv.org/pdf/2202.10399v2) · [Source editions](https://github.com/moritzbrantner/formal-logos-sources/pull/21)
+
+For the extended field itself, changes of measured geometry support variation in its state. They leave open what accounts for its existence. A basic field can supply spatial comparisons and derivative modes through its own activity. A second account can take spatial order to arise from connections between degrees of freedom. A finding in favor of existential dependence would independently identify another concrete system and show why its activity is required for **this field to occur at all**. Conversely, identifying the field by its own continuing dynamics across a change in all the spatial relations attributed to it would support the field as the bearer of different geometries. An independently grounding system could persist throughout. To test the field’s existential priority, the comparison must also vary the availability of its proposed realizer and track that same field. The present experiments support material realization of the measured patterns. An inference from occupation alone to an incoming ground for every actual bearer still lacks that evidence.
+
+The named God argument answers a separate question. Given the same necessary classical God and actual root, a concrete actual spatial whole that can fail to exist must be distinct from that bearer. If the whole existentially grounds every distinct located actual concretum, locating this God would give it an incoming ground at the actual world. Hence it occupies no region of the supplied frame. A checked model lets the very same named bearer receive a ground at another accessible world. The theorem preserves the encoded classical attributes of this very bearer. The model tests those predicates with a fixed location frame and empty spatial relation and parthood predicates. An interpretation requiring essential aseity would separately rule out the off-world incoming ground. Nonoccupation of an actual concrete bearer supplies a counterexample to universal occupation in this frame. Calling the underlying source physical is compatible with this inference unless physicality implies occupation. A thesis about all bearers of causal power additionally requires power at the counterexample. [Named-root proof and control](../../TruthCore/Results/Ontology/NamedRootLocation/Solution.lean) · [Naturalism predicates](../../TruthCore/Ontology/Naturalism.lean)
 
 ## Research attempts citing this note
 

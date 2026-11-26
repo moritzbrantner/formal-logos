@@ -20,4 +20,20 @@ theorem pairedCharges :
       SurvivesEveryFiniteAddition Unit (Set.range (fun n : ℕ => n / 2)) := by
   sorry
 
+/-- An infinite bill with finitely many positions per visited charge requires
+infinitely many distinct charges, regardless of how large the finite groups are. -/
+theorem finiteFibersChargeInfinitely {Position Posit Alternative : Type} [Infinite Position]
+    (billing : Position → Posit)
+    (finitePerCharge : ∀ posit ∈ Set.range billing, (billing ⁻¹' {posit}).Finite)
+    (finiteAlternative : Finite Alternative) :
+    SurvivesEveryFiniteAddition Alternative (Set.range billing) := by
+  sorry
+
+/-- An infinite group can coexist with infinitely many distinct visited charges. -/
+theorem mixedChargeFibers :
+    let billing := fun n : ℕ => if n % 2 = 0 then 0 else n
+    (billing ⁻¹' {0}).Infinite ∧
+      SurvivesEveryFiniteAddition Unit (Set.range billing) := by
+  sorry
+
 end TruthCore.Results.Logic.RegressHeadcount
