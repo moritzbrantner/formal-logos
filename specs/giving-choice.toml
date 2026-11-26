@@ -24,4 +24,3 @@ conclusion = "fbd0a6d3-5ca6-4f17-8651-ed0d6989c747"
 axioms = []
 rule = "Apply setoid reflexivity and map the withholding representative to an admissible world"
 meaning = "For the same actual root and grounded actual concretum, the representative belongs to its own withholding cell by reflexivity. The map sends it to an accessible world where the root exists and where it does not give that concretum being. Neither uniformity across effects nor a fixed setup is a premise of this per-effect conclusion."
-

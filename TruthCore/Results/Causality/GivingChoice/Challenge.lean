@@ -17,4 +17,3 @@ theorem root_withholding_of_cells
   sorry
 
 end TruthCore.Results.Causality.GivingChoice
-
