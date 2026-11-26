@@ -2,6 +2,7 @@
   "challenge_module": "TruthCore.Results.Causality.PracticalSpecification.Challenge",
   "solution_module": "TruthCore.Results.Causality.PracticalSpecification.Solution",
   "theorem_names": [
+    "TruthCore.Results.Causality.PracticalSpecification.effectDirectionOfPracticalSpecification",
     "TruthCore.Results.Causality.PracticalSpecification.directionOfPracticalSpecification"
   ],
   "permitted_axioms": [

@@ -897,12 +897,21 @@ the description of x in the plan. It would still require knowing by the
 same giver, evaluative apprehension, and actual use. No formal inference
 from that separate knowledge statement is made here.
 
-The conditional derivations target 3655f59f and de6a0f86 directly. Those feed
-the existing #2019 applications to a94c5dfc and 123d394b. The frontier reports
-the two direct targets as proved and the downstream targets as closed via
-transcription. The dossier reports all four as philosophically unestablished.
-End-directed
-government supports the LORD_2 antecedent, and the love route supports the
+The recipient derivation targets 3655f59f, feeding the existing #2019
+application to a94c5dfc. The direction derivation targets 2f9a99cc. It uses
+actual rational exercise alone in the antecedent. Composing it with
+83d8a0e0, which supplies exercise for each distinct actual effect of the
+qualifying universal cause, gives the assembly route to 123d394b.
+The original Lean specialization at de6a0f86 has possession and actual
+exercise as separate antecedents. Its proof uses exercise and does not
+infer it from capacity. The specialization remains in the frozen
+Challenge and Comparator check. The sense validator cannot represent
+co-occurrence of these antecedents without a bridge, so the graph
+records the stronger exercise-only theorem and the direct assembly
+consumer. The frontier reports 3655f59f and 2f9a99cc as proved, and
+a94c5dfc and 123d394b as closed via transcription. Their philosophical
+establishment remains open. End-directed government supports the LORD_2
+antecedent, and the love route supports the
 benevolent willing input of LORD_3. Even their conjunction leaves the
 authority-to-dispose premise open. Knowing how creation serves the governed
 can strengthen a rationale for authority but does not establish normative

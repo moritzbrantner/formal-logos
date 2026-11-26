@@ -1,0 +1,9 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.PracticalSpecification.Challenge",
+  "solution_module": "TruthCore.Results.Causality.PracticalSpecification.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.PracticalSpecification.directsAllFromExerciseDirection"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}

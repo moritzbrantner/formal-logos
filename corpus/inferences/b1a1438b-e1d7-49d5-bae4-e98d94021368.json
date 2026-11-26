@@ -1,12 +1,12 @@
 {
-  "id": "249c8a2a-10dc-47b8-bf0d-f398db333cda",
-  "label": "Universal rational giving directs each actual effect, from the operative standard (inference)",
+  "id": "b1a1438b-e1d7-49d5-bae4-e98d94021368",
+  "label": "Direction of each rationally given actual effect, from the operative standard (inference)",
   "input_statement_ids": [
     "4be0f774-2c0a-4691-9088-6e790940960a",
     "b1d7825e-a1ae-4f86-af2e-1b9819055e0f",
     "f8cd0849-e401-4c45-8820-2cd9fc08b8e7"
   ],
-  "output_statement_id": "de6a0f86-dfc5-4941-be2c-dfe3ad81a9a8",
+  "output_statement_id": "2f9a99cc-6cd4-4253-a112-e31dad6cd686",
   "rule": "Extract a particular end-placement by testing omission of the entire class of end-placements",
   "meaning": "Choose the operative standard for the same giver and effect. If there were no case-directed end, any requirement for an end-placement of that effect would contradict the recognition premise. Every requirement would survive the edit, against rejection. This yields some end for the effect in the direction relation. No common end or recipient-directed benefit is needed.",
   "assumption_statement_ids": [],

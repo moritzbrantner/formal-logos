@@ -94,6 +94,12 @@ def RequiredEndIsDirected (M : Plan W B R E K) (Directs : B → B → E → Prop
     (w : W) : Prop :=
   ∀ g x k e, Governing M w g x k → M.Requirement k (.toward x e) → Directs g x e
 
+/-- Direction from the rational exercise of actually giving esse. Capacity,
+intellect and universal causal coverage are unnecessary for this implication. -/
+def RationalGivingDirects (F : CausalityFrame W B T R) (A : AgencyFrame W B S P)
+    (InAct : B → R → Prop) (Directs : B → B → E → Prop) (w : W) : Prop :=
+  ∀ g x, x ≠ g → InAct x F.esse → RationallyGivesAt F A w g x → ∃ e, Directs g x e
+
 namespace Control
 
 open TruthCore.Causality.ThroughWill (DivineRationalGivingWillsEsseFor RationalUniversalGivingDirects)

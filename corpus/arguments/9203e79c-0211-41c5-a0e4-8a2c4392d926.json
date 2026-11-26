@@ -1,36 +1,24 @@
 {
-  "id": "25714970-90d3-4746-aa02-658fc043a45e",
-  "label": "Universal rational giving directs each actual effect, from the operative standard",
+  "id": "9203e79c-0211-41c5-a0e4-8a2c4392d926",
+  "label": "Direction of each rationally given actual effect, from the operative standard",
   "premise_statement_ids": [
     "4be0f774-2c0a-4691-9088-6e790940960a",
     "b1d7825e-a1ae-4f86-af2e-1b9819055e0f",
     "f8cd0849-e401-4c45-8820-2cd9fc08b8e7"
   ],
-  "conclusion_statement_id": "de6a0f86-dfc5-4941-be2c-dfe3ad81a9a8",
+  "conclusion_statement_id": "2f9a99cc-6cd4-4253-a112-e31dad6cd686",
   "inference_ids": [
-    "249c8a2a-10dc-47b8-bf0d-f398db333cda"
+    "b1a1438b-e1d7-49d5-bae4-e98d94021368"
   ],
   "meaning": "Choose the operative standard for the same giver and effect. If there were no case-directed end, any requirement for an end-placement of that effect would contradict the recognition premise. Every requirement would survive the edit, against rejection. This yields some end for the effect in the direction relation. No common end or recipient-directed benefit is needed.",
+  "term_senses": {
+    "WILL_CAPACITY_VERSUS_WILLED_GIVING": "438df309-f7a6-4c68-bd90-c44a960900f9"
+  },
   "definition_ids": [
-    "92c03350-6809-497d-b123-2ffb11c0e0c1",
     "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
     "c53b5fbe-121a-5d59-8e29-0f9f7eea85b1",
-    "88bc0655-9dd0-5879-ba1b-3fca9f86c1f4",
-    "7c64b499-6dba-5e03-bdf3-5acea95d8836",
     "a84afabf-d6e6-424d-a792-2fa874c466a5",
     "bace3032-dfa4-4193-9408-30f584e6fe6d",
     "fbd163ad-ec01-45d1-a749-f90a1de6ea37"
-  ],
-  "sense_bridges": [
-    {
-      "term": "WILL_CAPACITY_VERSUS_WILLED_GIVING",
-      "from": "916b63e7-d8d8-49ba-9d42-9ad19c1fa090",
-      "to": "438df309-f7a6-4c68-bd90-c44a960900f9",
-      "statement_id": "de6a0f86-dfc5-4941-be2c-dfe3ad81a9a8",
-      "role": "conclusion"
-    }
-  ],
-  "disambiguation_ids": [
-    "8b3d47bc-7fee-4936-99ad-6561aedc657a"
   ]
 }
