@@ -1,0 +1,27 @@
+{
+  "snapshot": {
+    "kind": "web_snapshot",
+    "source_id": "14f373d9-8abe-42b8-8180-25e8299cf3f9",
+    "source_url": "https://archive.org/download/oeuvresdedesca08desc/oeuvresdedesca08desc.pdf",
+    "retrieved_at": "2026-11-26T15:31:47Z",
+    "sha256": "sha256:f626a3f9f6ab9b2d58c0209122d872f8e198032dbbab22a0a83299729e50af0c",
+    "encoding": "utf-8",
+    "language": "lat",
+    "license": "Published 1905; public domain in the US. The Internet Archive item records no access restriction. Image scan with OCR text layer (long s often read as f). Witness bytes from Formal Logos Sources PR #26; retrieved_at records the UTC timestamp of local object receipt. No matching Wayback fallback was supplied with this witness."
+  },
+  "passages": [
+    {
+      "id": "d5a8a72a-de6a-4e83-b077-4e8d006c8f96",
+      "label": "Principles I §§51–54 in the Adam–Tannery scan",
+      "locator": "Principia I §§51–54, AT VIII-1 24–25",
+      "claim_locator_prefixes": [
+        "Principia I §§52–53, AT VIII-1 25"
+      ],
+      "pdf_pages": {
+        "first": 50,
+        "last": 51
+      },
+      "text_sha256": "sha256:0a4c4e02bd840cb2569f0974b27c68b11839b42c5482ec92237eb9918bb6e83d"
+    }
+  ]
+}

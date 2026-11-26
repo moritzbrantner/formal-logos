@@ -1,0 +1,36 @@
+{
+  "snapshot": {
+    "kind": "web_snapshot",
+    "source_id": "8ac0e273-75c8-4229-8e61-b3ad1507b9ff",
+    "source_url": "https://en.wikisource.org/w/index.php?title=The_Philosophical_Works_of_Decartes/Volume_1/Meditations_on_First_Philosophy/Meditation_3&oldid=15762447",
+    "retrieved_at": "2026-11-26T15:31:51Z",
+    "sha256": "sha256:479e8d24f4fbc68c20c147cbfa0e4470d8d2a456ef94ff9320b3f7fbf313754e",
+    "encoding": "utf-8",
+    "language": "eng",
+    "license": "Translation published 1911; public domain in the US. Wikisource page text under CC BY-SA 4.0. Local research copy. Witness bytes from Formal Logos Sources PR #26; retrieved_at records the UTC timestamp of local object receipt. No matching Wayback fallback was supplied with this witness.",
+    "translation": {
+      "translator": "Elizabeth S. Haldane and G. R. T. Ross",
+      "year": 1911,
+      "edition": "The Philosophical Works of Descartes, vol. I"
+    }
+  },
+  "passages": [
+    {
+      "id": "d48781e0-cbef-4cec-914a-57f89c83207b",
+      "label": "Meditation III in the Haldane–Ross translation",
+      "locator": "Meditation III, Haldane–Ross I 162–167 (Wikisource oldid 15762447)",
+      "claim_locator_prefixes": [
+        "Meditation III, Haldane–Ross I 162–167 (Wikisource oldid 15762447)"
+      ],
+      "html_selector": {
+        "from": {
+          "anchor": "162"
+        },
+        "to": {
+          "anchor": "168"
+        }
+      },
+      "text_sha256": "sha256:95822a4ec3f3bf5588077094149e6f312e2a418f49f5f677e2012fcc64d7ac6b"
+    }
+  ]
+}

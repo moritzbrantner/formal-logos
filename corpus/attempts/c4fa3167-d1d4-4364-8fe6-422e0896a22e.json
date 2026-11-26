@@ -10,10 +10,12 @@
   "date": "2026-11-26",
   "kind": "reading",
   "outcome": "succeeded",
-  "summary": "The offline Dominican translation of I q.104 a.3 co. gives God's free production and preservation of creatures and says withdrawal of continual giving would annihilate them. Ad 1 and ad 3 distinguish withdrawal from an action with non-being as its direct effect. The admitted SCTA revision has no q.104 witness and the existing New Advent pin covers a.1, so no new q.104 claim was registered. In the pinned Latin, I q.19 a.10 co. and ad 2 provides the narrower divine freedom as to whether a thing is. I q.19 a.7 ad 4 distinguishes suppositional fixity of the will from absolute necessity. I q.19 a.8 co. and replies ascribe contingency or necessity of effects to the efficacy of the divine will and different proximate causes. None states a principle grounding global modal possibility in a bearer’s power or deriving per-creature power from a power for joint absence.",
-  "blocker": "Match divine freedom to a fixed giver and indexed exercise of giving. A global absence inference additionally needs an explicit principle grounding joint possibility and a distribution principle for the same set of creatures. Direct q.104 claim work needs an admitted article-level witness.",
+  "summary": "The earlier comparison with the Dominican translation is now checked in the pinned Corpus Thomisticum Leonine witness of I q.104 a.3. In the body God freely produces creatures, conserves them by continuing to give being, and can withdraw that giving. If he withdrew it, the creatures concerned would cease to be. Ad 1 and ad 3 distinguish withdrawal from an action with non-being as its direct effect. In the separately pinned Latin I q.19 a.10 co. and ad 2 supplies divine free choice about whether a creature is, a.7 ad 4 distinguishes suppositional fixity from absolute necessity, and a.8 co. and replies ascribe contingency or necessity of effects to the efficacy of divine will and different proximate causes.",
+  "blocker": "Match the fixed giver and same receiver to the indexed exercise and show that withholding would terminate the receiver’s esse for each pair covered by the type. The article gives no general grounding of global or roster-relative joint absence in a bearer’s power, and no distribution principle from a collective power to power over each member.",
   "evidence": [
-    "988f35e6-a728-4955-9561-bc8c266bde57"
+    "988f35e6-a728-4955-9561-bc8c266bde57",
+    "9f1c968f-ba49-4181-ba42-08bbc34ff1cf",
+    "PR-2044"
   ],
   "workers": [
     {
@@ -38,6 +40,14 @@
       "model": "claude-opus-5-5",
       "date": "2026-11-26",
       "pr": "PR-2018"
+    },
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2044"
     }
   ]
 }

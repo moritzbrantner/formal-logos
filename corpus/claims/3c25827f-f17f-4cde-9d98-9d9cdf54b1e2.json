@@ -1,0 +1,13 @@
+{
+  "id": "3c25827f-f17f-4cde-9d98-9d9cdf54b1e2",
+  "label": "Descartes: The meditator has a genuine idea of infinite substance",
+  "statement_id": "cb34926c-df15-4d91-8db1-e88b053912a4",
+  "source_id": "8ac0e273-75c8-4229-8e61-b3ad1507b9ff",
+  "locator": "Meditatio III, AT VII 45–47, §§22–27",
+  "interpretation": "Sections 22–25 distinguish positive apprehension from defining the infinite through negation of the finite, and allow apprehension without exhaustive comprehension. Section 27 distinguishes actual infinity from knowledge still capable of increase.",
+  "status": "formalized",
+  "attribution": "The passage states that the meditator has a genuine idea of infinite substance through which he apprehends the infinite positively, which is the premise.",
+  "definition_ids": [
+    "00b9c1e2-ffb1-420b-9d4b-aba8ec6d81bf"
+  ]
+}

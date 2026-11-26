@@ -1,0 +1,13 @@
+{
+  "id": "6f7adcbf-d5f1-4933-be9c-e5601c5957b2",
+  "label": "Descartes: The meditator’s present doubting is part of his thinking",
+  "statement_id": "cf38f59b-3fde-4b81-ab47-592971f567cb",
+  "source_id": "8ac0e273-75c8-4229-8e61-b3ad1507b9ff",
+  "locator": "Meditatio II, AT VII 28–29, §§7–9",
+  "interpretation": "Section 8 gives the list, and §9 applies it to the meditator’s own present exercise under the dream and deception suppositions.",
+  "status": "formalized",
+  "attribution": "The passage states that the meditator lists doubting among the exercises of a thinking thing and identifies the doubting he is now doing as inseparable from his thinking, which is the premise.",
+  "definition_ids": [
+    "484a006a-653d-4158-b161-ecc3dc8514d6"
+  ]
+}

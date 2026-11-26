@@ -1,0 +1,13 @@
+{
+  "id": "03e73ae6-6d82-4e21-86f8-1ad06bf5a648",
+  "label": "Aquinas: Air participates in sunlight by receiving it at lesser brightness",
+  "statement_id": "395c6d93-9342-4371-b003-b96c465211ea",
+  "source_id": "92f270ed-d812-4f0e-bb9d-e8c9af009833",
+  "locator": "Lectio 2, discussion of participare (anchor 84829)",
+  "interpretation": "This illustrates participation of an effect in its cause, especially when the effect falls short of the cause’s power. The same discussion also distinguishes particular to universal and subject to accident or matter to form.",
+  "status": "formalized",
+  "attribution": "The passage states that air participates in the sun’s light by receiving it at less brightness than the light has in the sun, which is the premise.",
+  "definition_ids": [
+    "5cd53e09-c5f2-43a5-ad7c-88880ce0650d"
+  ]
+}

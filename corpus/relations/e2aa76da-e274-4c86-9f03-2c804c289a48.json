@@ -1,0 +1,10 @@
+{
+  "id": "e2aa76da-e274-4c86-9f03-2c804c289a48",
+  "label": "Source support for PerformedDoubtIsThought",
+  "subject_kind": "claim",
+  "subject_id": "6f7adcbf-d5f1-4933-be9c-e5601c5957b2",
+  "predicate": "supports",
+  "object_kind": "statement",
+  "object_id": "1722a80f-47a4-5605-8b66-b3534e457bcb",
+  "note": "This is an exercised case of doubting as thinking. Extend the classification to every performed doubt whether thought occurs in the model, and show that the same doubt supplies an occurring episode related to the performance by Realizes."
+}

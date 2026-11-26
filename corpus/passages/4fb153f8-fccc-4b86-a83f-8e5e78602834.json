@@ -7,7 +7,9 @@
     "sha256": "sha256:72db77bdacd6501d9ec1bac1df614a4d84386c15e22ec062a056ade7f3c110b5",
     "encoding": "utf-8",
     "language": "eng",
-    "license": "Copyright2013 American Society for Microbiology; consulted PMC full-text witness. No redistribution permission asserted. Repeated fetches have varying page byte hashes but identical RESULTS extraction hashes; exact consulted bytes cached by hash. No matching Wayback witness pinned; live snapshot fragile. No article text committed."
+    "license": "Copyright2013 American Society for Microbiology; consulted PMC full-text witness. No redistribution permission asserted. Repeated fetches have varying page byte hashes but identical RESULTS extraction hashes; exact consulted bytes cached by hash. Wayback capture 20250327163937 pinned (matching selected text for all three passages; formal-logos issue #2013, 2026-11-26). Only metadata and short incipits are committed.",
+    "wayback_url": "https://web.archive.org/web/20250327163937id_/https://pmc.ncbi.nlm.nih.gov/articles/PMC3676066/",
+    "wayback_sha256": "sha256:38180033e9fb476d893aa822f7c308b28dbebaf938ed6bdedb90286b7fab850c"
   },
   "passages": [
     {
