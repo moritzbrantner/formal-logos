@@ -17,6 +17,7 @@ public import TruthCore.Latin.Aquinas.DeEnte.IdentitySupplierSingleton
 public import TruthCore.Latin.Aquinas.DeEnte.RankedGiverAudit
 public import TruthCore.Latin.Aquinas.DeEnte.ReceivedOrUnderived
 public import TruthCore.Latin.Aquinas.DeEnte.RootInterface
+public import TruthCore.Latin.Aquinas.DeEnte.UniversalGiverFork
 public import TruthCore.Latin.Aquinas.DeEnte.UnobservedGiver
 public import TruthCore.Latin.Aquinas.InMetaphysicam.BookII
 public import TruthCore.Latin.Aquinas.InMetaphysicam.BookIX

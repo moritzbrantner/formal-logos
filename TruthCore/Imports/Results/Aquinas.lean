@@ -15,6 +15,7 @@ public import TruthCore.Results.Aquinas.DeEnte.IdentitySourceCycle.Solution
 public import TruthCore.Results.Aquinas.DeEnte.RankedGiverAudit.Solution
 public import TruthCore.Results.Aquinas.DeEnte.ReceivedOrUnderived.Solution
 public import TruthCore.Results.Aquinas.DeEnte.RootInterface.Solution
+public import TruthCore.Results.Aquinas.DeEnte.UniversalGiverFork.Solution
 public import TruthCore.Results.Aquinas.DeEnte.UnobservedGiver.Solution
 public import TruthCore.Results.Aquinas.InMetaphysicam.PrimumMovensPureAct.Solution
 public import TruthCore.Results.Aquinas.SummaContraGentiles.Chapter22Conjunction.Solution

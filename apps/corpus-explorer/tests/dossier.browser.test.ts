@@ -97,5 +97,12 @@ test("switching case judgments exposes the common-giver rival, its next test and
   await premiseReader.getByLabel("Choose a recorded judgment").selectOption("efe9809e-be74-5683-b722-c2694647b840");
   await premiseReader.getByText(/Distinct ultimate sources whose products interact/).waitFor();
   await premiseReader.getByText(/For the rim and spokes/).waitFor();
+  await premiseReader.getByLabel("Choose a recorded judgment").selectOption("4e4a3c81-3e59-4d2d-82f3-7668e7aa560e");
+  await premiseReader.getByText(/A flat infinite order passes every finite test/).waitFor();
+  const nextTest = premiseReader.getByRole("heading", { name: "Next test", exact: true }).locator("+ p");
+  await nextTest.filter({ hasText: /For one actual recipient, establish which maximal candidates/ }).waitFor();
+  await premiseReader.getByRole("link", { name: "Attempt and evidence" }).waitFor();
+  expect(await premiseReader.getByRole("link", { name: "Attempt and evidence" }).getAttribute("href"))
+    .toBe(`${basePath}/attempts/4e4a3c81-3e59-4d2d-82f3-7668e7aa560e/`);
   await page.close();
 }, 60000);

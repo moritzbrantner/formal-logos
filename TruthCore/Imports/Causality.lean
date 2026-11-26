@@ -142,6 +142,7 @@ public import TruthCore.Causality.GrimReaperFiniteTests
 public import TruthCore.Causality.GrimReaperPatchwork
 public import TruthCore.Causality.GroundedBeginnings
 public import TruthCore.Causality.GroundedOccupantRegress
+public import TruthCore.Causality.GroundingEdgeScope
 public import TruthCore.Causality.GroundingIdentityProfile
 public import TruthCore.Causality.GroundingLimits
 public import TruthCore.Causality.GroundingRegress
@@ -278,6 +279,7 @@ public import TruthCore.Causality.SameSourceWitness
 public import TruthCore.Causality.ScopedActualCausality
 public import TruthCore.Causality.SelectedAncestry
 public import TruthCore.Causality.SelectedAncestryUniqueControl
+public import TruthCore.Causality.SelectedSourcePath
 public import TruthCore.Causality.SelfCausationPriority
 public import TruthCore.Causality.SelfMotionSeparation
 public import TruthCore.Causality.SelfOperationLife

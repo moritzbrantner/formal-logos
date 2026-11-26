@@ -1,0 +1,20 @@
+[batch]
+vocab = "TruthCore.Latin.Aquinas.DeEnte.UniversalGiverFork"
+results = "TruthCore.Results.Aquinas.DeEnte.UniversalGiverFork"
+
+[[statement]]
+id = "A maximal universal giver and strict joins permit only its own esse gift at the recipient"
+lean = "SameGiverForkCriterion"
+paraphrase = "One actual maximal giver causes the esse of every distinct actual recipient. On the graph of these actual esse gifts, for each selected actual recipient every fork in its complete ancestry joins in one step if and only if every incoming gift to that recipient comes from this same giver. Which acts count as giving esse remains an application premise."
+definitions = ["a2a8de58-42e0-5481-b7fb-848ae8602036", "211a6432-8b8f-53ed-85e3-75173bb15b24", "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72", "9c6e4314-2e35-52ff-951e-db752a3c8ce2"]
+disambiguations = ["4f1d0cf6-88ba-59e3-814d-01450c2bf282"]
+
+[[argument]]
+id = "Test one-step joining against a universal giver and a secondary esse cause"
+theorem = "sameGiverCriterionAtEsse"
+comparator_theorems = ["sameGiverCriterion", "secondaryGiverControl"]
+premises = ["0881e859-c4c3-53ff-9bec-b61294e12d51", "cffad050-e86d-48b8-b04b-be47fcc1352d"]
+conclusion = "A maximal universal giver and strict joins permit only its own esse gift at the recipient"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Apply maximality at esse to an alleged common supplier of the two givers"
+meaning = "Ascent at esse alone excludes any distinct actual cause of this maximal giver's esse. Every other actual recipient is given esse by it. An additional actual esse giver at that same recipient would form a fork with the maximum, which has no incoming supplier. Conversely, when all incoming gifts there are from the maximum, the complete cone consists only of the recipient and at most the maximum, so there is no distinct fork. A three-bearer control admits the maximum, ascent and an additional actual esse-cause edge to the same recipient simultaneously. The formal edge records CausesIn in the esse respect with both actuality guards; applying the strict rule to that whole relation and interpreting an edge as immediate production are separate philosophical commitments. The conclusion poses no objection to secondary causes of another respect."

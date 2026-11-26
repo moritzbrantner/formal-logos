@@ -1,0 +1,11 @@
+{
+  "id": "6462fc19-f997-4166-8d6c-c60836e4383f",
+  "label": "A finite path from the selected actual concrete bearer reaches a source of its grounding cone",
+  "paraphrase": "Starting at the specified actual concrete bearer, some finite upstream path of the selected world's immediate Profile.grounds edges in the complete actual concrete cone ends at a source. The endpoint has no incoming edge from any cone member, including itself. Closure of the cone under actual concrete grounds gives the same source test on the whole actual concrete grounding graph. The path can have length zero and says nothing about other branches on its own.",
+  "lean_declaration": "TruthCore.Causality.SelectedSourcePath.HasSelectedSourcePath",
+  "definition_ids": [
+    "9c6e4314-2e35-52ff-951e-db752a3c8ce2",
+    "822c9912-2313-584b-b2b7-77031da20107",
+    "52352824-6be9-53c6-83d4-82fed9a08cbb"
+  ]
+}

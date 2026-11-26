@@ -5,6 +5,7 @@ import { CaseOverview, CasePremiseDetail } from "../app/case/god-exists/content"
 import { currentCase, casePremiseHref, GOD_EXISTS, GOD_SENSE, ATTRIBUTE_IDS, type RecordedAssessment } from "./current-case";
 import { getCorpus, type Corpus, type CorpusArgument } from "./corpus";
 import { truthJson } from "./truth-cli";
+import { getDossier } from "./premise-dossier";
 import type { FrontierReport } from "./site-state";
 import type { ScopedAssessment } from "./current-judgments";
 import DossierPage from "../app/dossiers/[statementId]/page";
@@ -239,7 +240,7 @@ test("real case preserves destinations for every support and evidence record", (
 }, 120_000);
 
 
-test("the ordinary premise dossier shows the finite-panel comparison and retains the two-domain judgment", async () => {
+test("the ordinary premise dossier displays the current judgment and links its own evidence and next test", async () => {
   const statementId = "0881e859-c4c3-53ff-9bec-b61294e12d51";
   const html = renderToStaticMarkup(await DossierPage({ params: Promise.resolve({ statementId }) }));
   const judgmentsStart = html.indexOf('id="assessments"');
@@ -247,10 +248,21 @@ test("the ordinary premise dossier shows the finite-panel comparison and retains
   expect(judgmentsStart).toBeGreaterThanOrEqual(0);
   expect(sourcesStart).toBeGreaterThan(judgmentsStart);
   const judgments = html.slice(judgmentsStart, sourcesStart);
-  expect(judgments).toContain("Evidence of a giver for each recipient fits both universal and partitioned supply.");
-  expect(judgments).toContain("A flat infinite order passes every finite test while each candidate misses its successor.");
+  const attempts = getDossier(statementId).attempts;
+  const selectedId = judgments.match(/<option value="([^"]+)" selected=""/)?.[1];
+  expect(selectedId).toBeDefined();
+  const selected = attempts.find((attempt) => attempt.id === selectedId)?.current_assessment;
+  if (!selected) throw new Error("The displayed judgment lacks an assessment in this dossier");
+  expect(selected.statement_ids).toContain(statementId);
+  const scopedDates = attempts.flatMap(({ current_assessment }) =>
+    current_assessment?.statement_ids.includes(statementId) ? [current_assessment.date] : []);
+  expect(selected.date).toBe(scopedDates.sort().at(-1));
+  expect(judgments).toContain(renderToStaticMarkup(selected.assessment));
   expect(judgments).toContain("Next test");
-  expect(judgments).toContain("For one actual recipient, establish which maximal candidates could directly give it esse and what excludes any further one.");
-  expect(judgments).toContain('href="/attempts/4e4a3c81-3e59-4d2d-82f3-7668e7aa560e"');
-  expect(judgments).toContain('<option value="efe9809e-be74-5683-b722-c2694647b840">');
+  expect(judgments).toContain(renderToStaticMarkup(selected.next_test));
+  expect(judgments).toContain(renderToStaticMarkup(selected.evidence));
+  expect(judgments).toContain(`href="/attempts/${selectedId}"`);
+  for (const id of ["4e4a3c81-3e59-4d2d-82f3-7668e7aa560e", "efe9809e-be74-5683-b722-c2694647b840"]) {
+    expect(judgments).toContain(`<option value="${id}"`);
+  }
 }, 120_000);

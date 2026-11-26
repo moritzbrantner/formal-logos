@@ -1,0 +1,9 @@
+{
+  "id": "34816fb7-0ec2-4f2e-9634-7fd7e8b7f3bd",
+  "label": "Distinct immediate suppliers in the selected cone always have a common immediate supplier",
+  "paraphrase": "For every bearer in the complete selected actual concrete cone, any two distinct immediate suppliers of that bearer have one actual concrete supplier in the cone with an immediate Profile.grounds edge into both, at the same world. The joining supplier may vary by fork. The premise demands exactly one edge from the common supplier to each branch, and is vacuous at nodes with at most one immediate supplier.",
+  "lean_declaration": "TruthCore.Causality.SelectedSourcePath.SelectedForksJoinInOneStep",
+  "definition_ids": [
+    "9c6e4314-2e35-52ff-951e-db752a3c8ce2"
+  ]
+}

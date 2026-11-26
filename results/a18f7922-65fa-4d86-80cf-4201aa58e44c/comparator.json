@@ -1,0 +1,22 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.SelectedSourcePath.Challenge",
+  "solution_module": "TruthCore.Results.Causality.SelectedSourcePath.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.SelectedSourcePath.coneWellFounded_of_sourcePath",
+    "TruthCore.Results.Causality.SelectedSourcePath.accessibleOfSourcePath",
+    "TruthCore.Results.Causality.SelectedSourcePath.maximalPathsAgree",
+    "TruthCore.Results.Causality.SelectedSourcePath.necessaryRootAncestor_of_sourcePath",
+    "TruthCore.Results.Causality.SelectedSourcePath.oneStepForks_of_uniquePredecessor",
+    "TruthCore.Results.Causality.SelectedSourcePath.diamondAllowsBranching",
+    "TruthCore.Results.Causality.SelectedSourcePath.commonSourceAllowsRegress",
+    "TruthCore.Results.Causality.SelectedSourcePath.ancestralForkCriterion",
+    "TruthCore.Results.Causality.SelectedSourcePath.ancestralEdgeControl",
+    "TruthCore.Results.Causality.SelectedSourcePath.infiniteWidthControl"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "enable_nanoda": true
+}
