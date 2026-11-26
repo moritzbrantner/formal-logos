@@ -1,5 +1,0 @@
-cargo:rustc-env=TRUTH_PRODUCER_SHA256=b8b09407b8c887e69698f9e7376665df036a2a4aef7d685757afac63e99b4ca3
-cargo:rerun-if-changed=src
-cargo:rerun-if-changed=Cargo.toml
-cargo:rerun-if-changed=build.rs
-cargo:rerun-if-changed=../Cargo.lock
