@@ -64,119 +64,15 @@ The existing rooted consumer [populationFromReasons](../../corpus/results/b50727
 
 At the baseline and in the fixed classical inference task, bare frequency/actual practice as the entire truth-preservation criterion is inadequate: the countervaluation is an explicit checkable failure, not a preference for a different school. The same is true of any proposed classifier that ignores that distinction while making the two inferences observationally identical. This favors a standard of correctness not exhausted by the examined descriptive features. It gives cumulative warrant for the ordinary-role F6 interpretation insofar as valid content-sensitive inquiry really supplies favorable bearing; it does not establish the actual existential or categorical authority from a mathematical truth table. F1 remains unchanged. No substantive objection to the finite comparison within its semantics is identified; the strongest scope objections are the fixed-meaning restriction, richer truth-sensitive inputs, and nonclassical or rule-constituted contents. A reduction that independently explains those semantic constraints and correct error discrimination would weaken the stronger anti-reduction judgment; a genuinely complete comparison that preserves all proposed reducing facts while correctness differs would strengthen it. Such a comparison has not been supplied.
 
-Next: instantiate the existing criterion characterization on the two sequents, test the omitted semantic/evidential and adoption conditions, and use the #1987 short proof as a selected actual proof-uptake case. Preserve the contrast between absence of reasons and lack of categorical force. This is a proposed assessment, not independently reviewed.
+The Lean comparison below instantiates the criterion characterization on the two sequents. The proposed use of the #1987 short proof still requires evidence about a particular subject’s access to an undefeated basis and uptake. The continuation records the reviewed assessment of that application.
 
 ## Proposed formalization: reuse the fixed-interpretation and criterion libraries
 
-The existing [criterion result](../../corpus/results/CORRECTION-CRITERION-EXACT-FACTORIZATION.json) `0590fe21` is the exact general theorem required; see [correctness and the private diary](wittgenstein-criterion-and-correctness.md). It proves that a classification from the specified data is exact iff correctness is invariant on the fibers of those data. Do not register another general characterization. Use `TruthCore.Logic.ReflectiveCoherence.Entails` (definition `0ff13cc6`), the same vocabulary as the two validity results from #1422. The proposed application supplies a nontrivial classical modus-ponens / affirming-consequent pair with all four valuations and composes `characterization`, rather than treating validity as an opaque predicate.
+The existing [criterion result](../../corpus/results/CORRECTION-CRITERION-EXACT-FACTORIZATION.json) `0590fe21` is the exact general theorem required; see [correctness and the private diary](wittgenstein-criterion-and-correctness.md). It proves that a classification from the specified data is exact iff correctness is invariant on the fibers of those data. Do not register another general characterization. Use `TruthCore.Logic.ReflectiveCoherence.Entails` (definition `0ff13cc6`), the same vocabulary as the two validity results from #1422. The application compares classical modus ponens with affirming the consequent over all four valuations, using `characterization` to test the proposed data projection.
 
-The following application was checked together with the later scope lemmas using the repository’s pinned Lean toolchain. The supplied data projection, equal-fiber hypothesis, fixed interpretation and exact-classification requirement define the scope of the test; their actual psychological applicability is not asserted. Its conclusion is nonexistence of an exact extensional classifier from the particular projection, not that the whole of psychology cannot realize the meaning of the inference. With distinct data, an exact classifier exists even if it is an arbitrary lookup table; extensional adequacy does not explain what makes an inference valid.
+The supplied data projection, equal-fiber hypothesis, fixed interpretation and exact-classification requirement define the scope of the test; their actual psychological applicability is not asserted. Its conclusion is nonexistence of an exact extensional classifier from the particular projection, not that the whole of psychology cannot realize the meaning of the inference. With distinct data, an exact classifier exists even if it is an arbitrary lookup table; extensional adequacy does not explain what makes an inference valid.
 
-```lean
-import TruthCore.Results.Logic.EpistemicUnderminers.Solution
-import TruthCore.Results.Logic.CorrectionCriterion.Solution
-import TruthCore.Results.Logic.EpistemicReasonBearer.Solution
-import TruthCore.Results.Logic.CaseNonContradiction.Solution
-import TruthCore.Results.Logic.TruthPilot.NotEveryPropositionFails.Solution
-
-namespace LogicalPsychologismProposal
-
-open TruthCore.Logic.ReflectiveCoherence
-open TruthCore.Logic.CorrectionCriterion
-open TruthCore.Logic.EpistemicReasons
-
-abbrev Valuation := Bool × Bool
-abbrev Content := Valuation → Bool
-
-def atomP : Content := fun w => w.1
-def atomQ : Content := fun w => w.2
-def impPQ : Content := fun w => (!w.1) || w.2
-
-def sem : Semantics Valuation Content where
-  trueAt := fun w p => p w = true
-  neg := fun p w => !(p w)
-  neg_true_iff := by
-    intro w p
-    change (!(p w) = true) ↔ ¬ (p w = true)
-    cases p w <;> decide
-
-inductive Rule | mp | ac deriving DecidableEq
-
-def premises : Rule → Worldview Content
-  | .mp => fun c => c = atomP ∨ c = impPQ
-  | .ac => fun c => c = atomQ ∨ c = impPQ
-
-def conclusion : Rule → Content
-  | .mp => atomQ
-  | .ac => atomP
-
-def valid (i : Rule) : Prop := Entails sem (premises i) (conclusion i)
-
-theorem mpValid : valid .mp := by
-  intro w hw
-  have hp : w.1 = true := hw atomP (Or.inl rfl)
-  have hi : ((!w.1) || w.2) = true := hw impPQ (Or.inr rfl)
-  change w.2 = true
-  simpa [hp] using hi
-
-theorem acInvalid : ¬ valid .ac := by
-  intro h
-  have hm : Models sem (premises .ac) (false, true) := by
-    intro c hc
-    change c = atomQ ∨ c = impPQ at hc
-    rcases hc with rfl | rfl <;> rfl
-  have hbad : false = true := h (false, true) hm
-  exact Bool.false_ne_true hbad
-
--- A supplied psychological projection identifies the two rules.
--- E may contain richer data than one acceptance bit.
-theorem equalDataNoCriterion {E : Type} (observe : Rule → E)
-    (same : observe .mp = observe .ac) :
-    ¬ AdmitsCriterion observe valid := by
-  intro h
-  have inv :=
-    (TruthCore.Results.Logic.CorrectionCriterion.characterization.1
-      Rule E observe valid).mp h
-  exact acInvalid ((inv .mp .ac same).mp mpValid)
-
--- An acceptance-only projection can fail even if everybody approves.
-def allAccepted : Rule → Bool := fun _ => true
-def noneAccepted : Rule → Bool := fun _ => false
-
-theorem unanimityNoCriterion :
-    ¬ AdmitsCriterion allAccepted valid :=
-  equalDataNoCriterion allAccepted rfl
-
-theorem omissionControl :
-    allAccepted .mp ≠ noneAccepted .mp ∧ valid .mp ∧ ¬ valid .ac := by
-  exact ⟨by decide, mpValid, acInvalid⟩
-
--- A richer projection distinguishes the two inputs; no metaphysical
--- reduction or explanation is implied by this extensional classifier.
-theorem richerProjectionControl :
-    AdmitsCriterion (fun r : Rule => r) valid :=
-  ⟨valid, fun _ => Iff.rfl⟩
-
--- F6 and pure semantic validity are separate. The empty/nonempty Reason
--- fields are stipulated controls, not claims about actual human subjects.
-theorem f6OmissionControls :
-    valid .mp ∧ ¬ valid .ac ∧
-      ¬ ThereAreEpistemicReasons (fun (_ : Unit) (_ : Unit) => False) ∧
-      ThereAreEpistemicReasons (fun (_ : Unit) (_ : Unit) => True) := by
-  refine ⟨mpValid, acInvalid, ?_, ⟨(), (), trivial⟩⟩
-  rintro ⟨_, _, h⟩
-  exact h
-
--- Reuse existing endpoints. No new result or direct link is claimed.
-#check TruthCore.Results.Logic.EpistemicUnderminers.identityExcludesNoValidInference
-#check TruthCore.Results.Logic.EpistemicUnderminers.f6ExcludesNihilism
-#check TruthCore.Results.Logic.EpistemicReasonBearer.reasonsFromWarrant
-#check TruthCore.Results.Logic.EpistemicReasonBearer.populationFromReasons
-#check TruthCore.Results.Logic.CaseNonContradiction.noCasePredicateContradiction
-#check TruthCore.Results.Logic.TruthPilot.NotEveryPropositionFails.notEveryPropositionFails
-
-end LogicalPsychologismProposal
-```
+The checked application uses the countervaluation `(false, true)` for affirming the consequent. `equalDataNoCriterion` applies that difference to any projection that gives the two rules the same data. [Lean definitions, proofs and omission controls](../../TruthCore/Logic/LogicalPsychologism.lean)
 
 The F1 result `a7ecf1fe` is already the exact classical rebuttal of the case-predicate contradiction. To apply it to a psychologistic verdict, use the **same** being x, respect r and predicate P, and the separate two one-way soundness conditions (the positive verdict implies P x r; the negative verdict implies ¬ P x r). The two verdicts together would produce the excluded existential. A control with both verdicts accepted and P true satisfies neither the negative soundness condition nor the claimed contradiction; merely allowing both beliefs is not the denial of F1. Do not register the application as an independent theorem about all psychological theories. The narrow implication is an instance of an existing theorem, and F1's Lean negation already excludes contradiction.
 
@@ -283,14 +179,6 @@ target/release/truth semantics \
   --premise 0e2bbd59-2b4c-438d-b792-0ca401eaf862 \
   --premise 6b4e3331-01ca-484b-bda1-460ebff1df35 \
   --conclusion f56b2ee7-c69e-5e3b-85b0-e671d907ba58
-python3 - <<'PY'
-from pathlib import Path
-note = Path("docs/notes/logical-psychologism.md").read_text()
-code = note.split("```lean\n", 1)[1].split("\n```", 1)[0]
-Path("Scratch/LogicalPsychologismProposal.lean").write_text(code + "\n")
-PY
-python3 scripts/worker_env.py -- lake build TruthCore.Results.Logic.EpistemicUnderminers.Solution TruthCore.Results.Logic.CorrectionCriterion.Solution TruthCore.Results.Logic.EpistemicReasonBearer.Solution TruthCore.Results.Logic.CaseNonContradiction.Solution TruthCore.Results.Logic.TruthPilot.NotEveryPropositionFails.Solution
-python3 scripts/worker_env.py -- lake env lean Scratch/LogicalPsychologismProposal.lean
 base=$(git merge-base HEAD origin/main)
 git diff --check "$base"
 target/release/truth check
@@ -306,10 +194,7 @@ canonical batch generator (Challenge, records), build the affected modules,
 run `truth bind-check --affected --base "$base"`, `scripts/verify-result.sh
 <NEW-RESULT-ID>` for each new result and `scripts/verify-library.sh` (or the
 CI-selected NanoDa scope). Report actual computed frontier delta and review
-at the final head. This is an attempt with a blocked formal delivery, not a
-new verified result. The next philosophical test is the actual proof-uptake
-assessment and the proposed reduction of semantic truth conditions to
-functional facts, not additional truth-table examples alone.
+at the final head. The module builds as part of the Lean library. The graph still uses the existing registered results. Applying the comparison to actual proof uptake or to a reduction of semantic truth conditions to functional facts requires the further evidence examined below.
 
 
 ## Continuation: pressure-testing the non-eliminative accounts (2026-11-25)
@@ -575,158 +460,7 @@ The review and its scope are recorded in the linked attempt.
 
 ### 7. Lean checks of the scope and truth-function comparisons
 
-The following Lean block extends the earlier scratch file (append it
-after its closing namespace). It reuses the actual semantic predicates
-rather than a new validity relation with an unconstrained name.
-Both displayed blocks elaborate in one Lean file. Before any registration
-run local novelty and semantic preflight; if an existing scope theorem
-has the same type up to an adapter, reuse it. The general scope result
-derives an exhibited false positive, not an assumed adequacy bridge.
-
-```lean
-namespace LogicalPsychologismProposal
-
-open TruthCore.Logic.ReflectiveCoherence
-
-def restrictedEntails {W C : Type} (S : Semantics W C)
-    (scope : W → Prop) (Γ : Worldview C) (p : C) : Prop :=
-  ∀ w, scope w → Models S Γ w → S.trueAt w p
-
-theorem omittedValuationFalsePositive {W C : Type} (S : Semantics W C)
-    (scope : W → Prop) (top : C) (hTop : ∀ w, S.trueAt w top)
-    (v : W) (hMiss : ¬ scope v)
-    (hSeparate : ∃ q : C, ∀ w, S.trueAt w q ↔ w ≠ v) :
-    ∃ q : C,
-      restrictedEntails S scope (fun p => p = top) q ∧
-      ¬ Entails S (fun p => p = top) q := by
-  obtain ⟨q, hq⟩ := hSeparate
-  refine ⟨q, ?_, ?_⟩
-  · intro w hw _
-    apply (hq w).2
-    intro hEq
-    exact hMiss (hEq ▸ hw)
-  · intro h
-    have hm : Models S (fun p => p = top) v := by
-      intro p hp
-      subst p
-      exact hTop v
-    exact ((hq v).1 (h v hm)) rfl
-
-theorem separatingScopeExactIffCoverage {W C : Type} (S : Semantics W C)
-    (scope : W → Prop) (top : C) (hTop : ∀ w, S.trueAt w top)
-    (hSeparate : ∀ v : W, ∃ q : C, ∀ w, S.trueAt w q ↔ w ≠ v) :
-    (∀ (Γ : Worldview C) (q : C),
-      restrictedEntails S scope Γ q → Entails S Γ q) ↔
-      ∀ v, scope v := by
-  classical
-  constructor
-  · intro h v
-    apply Classical.byContradiction
-    intro hMiss
-    obtain ⟨q, hScoped, hNot⟩ :=
-      omittedValuationFalsePositive S scope top hTop v hMiss (hSeparate v)
-    exact hNot (h (fun p => p = top) q hScoped)
-  · intro h Γ q hScoped v hm
-    exact hScoped v (h v) hm
-
--- The content is a truth function on the existing four-valuations carrier.
--- The premise sets vary only by the selected connective's interpretation.
-def tableContent (f : Bool → Bool → Bool) : Content :=
-  fun w => f w.1 w.2
-
-def mpFor (f : Bool → Bool → Bool) : Prop :=
-  Entails sem (fun c => c = atomP ∨ c = tableContent f) atomQ
-
-def acFor (f : Bool → Bool → Bool) : Prop :=
-  Entails sem (fun c => c = atomQ ∨ c = tableContent f) atomP
-
-theorem mpForIff (f : Bool → Bool → Bool) :
-    mpFor f ↔ f true false = false := by
-  constructor
-  · intro h
-    cases hf : f true false with
-    | false => rfl
-    | true =>
-      have hm : Models sem
-          (fun c => c = atomP ∨ c = tableContent f) (true, false) := by
-        intro c hc
-        rcases hc with rfl | rfl
-        · rfl
-        · exact hf
-      exact (Bool.false_ne_true (h (true, false) hm)).elim
-  · intro hf w hm
-    have hp : w.1 = true := hm atomP (Or.inl rfl)
-    have hc : f w.1 w.2 = true := hm (tableContent f) (Or.inr rfl)
-    change w.2 = true
-    cases hq : w.2 with
-    | false =>
-      simp [hp, hq, hf] at hc
-    | true => rfl
-
-theorem acForIff (f : Bool → Bool → Bool) :
-    acFor f ↔ f false true = false := by
-  constructor
-  · intro h
-    cases hf : f false true with
-    | false => rfl
-    | true =>
-      have hm : Models sem
-          (fun c => c = atomQ ∨ c = tableContent f) (false, true) := by
-        intro c hc
-        rcases hc with rfl | rfl
-        · rfl
-        · exact hf
-      exact (Bool.false_ne_true (h (false, true) hm)).elim
-  · intro hf w hm
-    have hq : w.2 = true := hm atomQ (Or.inl rfl)
-    have hc : f w.1 w.2 = true := hm (tableContent f) (Or.inr rfl)
-    change w.1 = true
-    cases hp : w.1 with
-    | false =>
-      simp [hp, hq, hf] at hc
-    | true => rfl
-
-def materialTable (p q : Bool) : Bool := (!p) || q
-def equivalenceTable (p q : Bool) : Bool := p == q
-
-theorem diagonalAndMPFork (f : Bool → Bool → Bool)
-    (h00 : f false false = true) (h11 : f true true = true)
-    (hMP : mpFor f) :
-    f = materialTable ∨ f = equivalenceTable := by
-  have h10 := (mpForIff f).mp hMP
-  cases h01 : f false true with
-  | false =>
-    right
-    funext p q
-    cases p <;> cases q <;>
-      simp [equivalenceTable, h00, h01, h10, h11]
-  | true =>
-    left
-    funext p q
-    cases p <;> cases q <;>
-      simp [materialTable, h00, h01, h10, h11]
-
-theorem bothSoundSelectsEquivalence (f : Bool → Bool → Bool)
-    (h00 : f false false = true) (h11 : f true true = true)
-    (hMP : mpFor f) (hAC : acFor f) :
-    f = equivalenceTable := by
-  have h01 := (acForIff f).mp hAC
-  have h10 := (mpForIff f).mp hMP
-  funext p q
-  cases p <;> cases q <;>
-    simp [equivalenceTable, h00, h01, h10, h11]
-
-theorem offDiagonalSelectsMaterial (f : Bool → Bool → Bool)
-    (h00 : f false false = true) (h11 : f true true = true)
-    (h01 : f false true = true) (hMP : mpFor f) :
-    f = materialTable := by
-  have h10 := (mpForIff f).mp hMP
-  funext p q
-  cases p <;> cases q <;>
-    simp [materialTable, h00, h01, h10, h11]
-
-end LogicalPsychologismProposal
-```
+The coverage proof constructs a false positive when a valuation is omitted and the language can isolate that valuation. The connective proofs use the same entailment relation to test the conditions under which both rules preserve truth. [Coverage and truth-function proofs](../../TruthCore/Logic/LogicalPsychologism.lean)
 
 Claim/type sweep: the scope proof requires a supplied tautology and
 a content excluding the omitted world alone; the full coverage equivalence
@@ -844,8 +578,7 @@ AC conditional error at n=1000000: 1/999998
 PASS: scope, interpretation, and exact reliability controls
 ```
 
-Both comparisons and both Lean blocks can be recovered together from the
-same canonical note. On the prepared clone, with the modules above already built:
+To rerun both Python comparisons and build the Lean module from a prepared checkout:
 
 ```sh
 python3 - <<'PY'
@@ -854,14 +587,11 @@ note = Path("docs/notes/logical-psychologism.md").read_text()
 for i, part in enumerate(note.split("```python\n")[1:], 1):
     code = part.split("\n```", 1)[0]
     exec(compile(code, f"logical_psychologism_check_{i}.py", "exec"), {})
-lean = [part.split("\n```", 1)[0] for part in note.split("```lean\n")[1:]]
-assert len(lean) == 2
-Path("Scratch/LogicalPsychologismProposal.lean").write_text("\n\n".join(lean) + "\n")
 PY
-python3 scripts/worker_env.py -- lake env lean Scratch/LogicalPsychologismProposal.lean
+python3 scripts/worker_env.py -- lake build TruthCore.Logic.LogicalPsychologism
 target/release/truth novelty 'restricted truth preservation is complete iff it covers every isolatable countervaluation'
 target/release/truth novelty 'inferential role soundness and truth-functional calibration determine a connective'
 target/release/truth frontier-diff --base "$(git merge-base HEAD origin/main)"
 ```
 
-Both Python comparisons passed, including the distinction between positive relevance and high conditional accuracy. Both Lean blocks elaborated together in the pinned toolchain. They are reproducible local proof checks. The registered correction, validity and reason results retain their individual certificates. The remaining application concerns a particular subject’s grounds and uptake.
+Both Python comparisons passed, including the distinction between positive relevance and high conditional accuracy. The pinned toolchain checks the Lean comparisons together in the library build. The registered correction, validity and reason results retain their individual certificates. The remaining application concerns a particular subject’s grounds and uptake.

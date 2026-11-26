@@ -1,0 +1,12 @@
+{
+  "id": "9e7f48b2-a956-40b3-9cc6-73a62bdf47c0",
+  "label": "External existence-reason availability from universal exclusion of self-explanation (inference)",
+  "input_statement_ids": [
+    "6c6191dc-082d-4417-b675-b32d4fab4573"
+  ],
+  "output_statement_id": "6bac95a7-17cc-4e96-8fed-569d02f21223",
+  "rule": "Keep an available token and apply the universal exclusion to that token",
+  "meaning": "If every explanation of a contingent bearer's existence has a distinct source, an available explanation witnesses the existence of one with a distinct source.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

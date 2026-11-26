@@ -121,36 +121,9 @@ Use the existing reason bearer and content from the latter witness. The followin
 - F6 neither decides the truth of p nor requires actual belief or warrant; the reason may be pro tanto or defeated by stronger contrary reasons. It supplies no reason for the denial itself, no reason to believe every consequence, and no general truth-predicate interpretation.
 - An actual truth-directed episode that supplies no belief reason (merely wishing, asking a question without information, or suspending on the target) does not contradict F6 as long as some other content/subject has a reason. Nor does actual occurrence imply any F6 witness under a reasonless interpretation without a substantive reason-attribution judgment.
 
-Illustrative Lean projections on the existing declarations; **proposed only**, not elaborated or registered in this connector session. They identify the exact weak content of the claimed deductions.
+The first three projections expose the subject and content of the same reason witness.
 
-```lean
-import TruthCore.Logic.EpistemicReasons
-import TruthCore.Logic.CaseNonContradiction
-open TruthCore.Logic.EpistemicReasons
-open TruthCore.Logic.CaseNonContradiction
-universe u v
-example {A : Sort u} {C : Sort v} {R : A → C → Prop}
-    (h : ThereAreEpistemicReasons R) :
-    Nonempty A ∧ Nonempty C ∧
-    (∃ a, ¬ ∀ p, ¬ R a p) ∧ (∃ p, ¬ ∀ a, ¬ R a p) := by
-  obtain ⟨a, p, hr⟩ := h
-  exact ⟨⟨a⟩, ⟨p⟩, ⟨a, fun hn => hn p hr⟩,
-    ⟨p, fun hn => hn a hr⟩⟩
-
-example {A : Sort u} {C : Sort v} {R : A → C → Prop}
-    {Holds : C → Prop} {n : C}
-    (h : ThereAreEpistemicReasons R)
-    (hexpr : ExpressesNihilism R Holds n) : ¬ Holds n := by
-  obtain ⟨a, p, hr⟩ := h
-  exact fun ht => (hexpr.mp ht) a p hr
-
-example {A : Sort u} {C : Sort v} {R : A → C → Prop}
-    (h : ThereAreEpistemicReasons R)
-    (nc : CasePredicateNonContradiction.{u,v}) :
-    ∃ a p, R a p ∧ ¬ (R a p ∧ ¬ R a p) := by
-  obtain ⟨a, p, hr⟩ := h
-  exact ⟨a, p, hr, nc A C R a p⟩
-```
+[Inhabitation, nihilism, and noncontradiction at a reason witness](../../TruthCore/Logic/InquiryPresuppositions.lean#L31)
 
 The most promising application is not one of these elementary projections. It uses the actual parity/disjunction proof and `SurvivingBasisGivesReason` at an observed accessible basis. At a fixed subject a, basis b and content q (Q for the complete report, M for the coarse report), the existing theorem needs `f.supports a b q` and `¬ f.undercuts a b` and the reason-calibration. The latter's registered form is universal over the frame; for this single proposed application only the local implication is needed. Do not generalize the local judgment to that universal. If the local attribution is granted, F6 follows immediately; treating it as a proof of the calibration would be circular. Positive warrant for the attribution comes from the transparent information distinction and the ordinary epistemic sense of 'counts in favor', not the existential introduction itself.
 
@@ -165,7 +138,7 @@ Proposed provisional judgment: the directly inspectable episode strongly support
 
 ## Handoff and validation
 
-No new Lean module, corpus statement, argument, result, relation, definition, attribution or floor marking is registered. No premise change intended; the actual computed frontier comparison is pending. The Python evidence checks above passed locally; exact floor declarations, the relevant merged attempts, #1987's scoped audit and #1989/#1990/#1991 draft summaries were inspected via the GitHub connector. The repository clone failed to resolve github.com from the container; Lean, Lake, Cargo, the local installed toolchain and a fresh independent semantic challenge worker are unavailable. The linked repository-local reuse skill and canonical work-loop were inspected remotely. This is an unreviewed research checkpoint, not a mechanically verified new theorem or a completed research program.
+The initial handoff added no Lean module or corpus record. The witness applications now build with the linked inquiry module. No premise change intended; the actual computed frontier comparison is pending. The Python evidence checks above passed locally; exact floor declarations, the relevant merged attempts, #1987's scoped audit and #1989/#1990/#1991 draft summaries were inspected via the GitHub connector. The repository clone failed to resolve github.com from the container; Lean, Lake, Cargo, the local installed toolchain and a fresh independent semantic challenge worker are unavailable. The linked repository-local reuse skill and canonical work-loop were inspected remotely. This is an unreviewed research checkpoint, not a mechanically verified new theorem or a completed research program.
 
 Next concrete test: ask the selected investigator (not a stipulation that every rational agent succeeds) to reconstruct the two compatible lengths from the coarse report, then distinguish the exhaustive full tally from the invalid inference. Record whether the subject understood the basis, which conclusion it supported, and whether an actual reason was conceded; assent to parity is not necessary. If the subject grants the evidence-relative judgment but disputes genuine force, test the explicit local favoring/Reason calibration, not another generic retorsion. The separate indifferent-preference transfer remains the #930 normative relevance question. No further categorical authority conclusion should be registered from the present controls.
 
@@ -226,26 +199,11 @@ Write A(w) for ∃e, Seen(w,e), and Q(w) for ∃e, Occurs(w,e). A counterfactual
 
 This is a same-domain, nontrivial restriction: there are states with no thought at all and states with thought but no questioning of p. It is not the vacuous assertion that all worlds have the target occurrence. The distinction also does not rely on how probable the deceptive alternative is.
 
-**Proposed Lean check**, using the existing `CogitoSubject.ThoughtOccurs` rather than adding an ontology or a proof registration:
+The occurrence proof uses the existing `CogitoSubject.ThoughtOccurs` predicate.
 
-```lean
-import TruthCore.Logic.CogitoSubject
-open TruthCore.Logic.CogitoSubject
+[Occurrence from factive access](../../TruthCore/Logic/InquiryPresuppositions.lean#L53)
 
-example {W E : Type} (Occurs Seen : W → E → Prop) (w0 : W)
-    (actualAccess : ∃ e, Seen w0 e)
-    (accessFactive : ∀ w e, Seen w e → Occurs w e) :
-    ThoughtOccurs (Occurs w0) ∧
-      ¬ ∃ w, (∃ e, Seen w e) ∧ ¬ ThoughtOccurs (Occurs w) := by
-  have witness (w : W) : (∃ e, Seen w e) → ThoughtOccurs (Occurs w) := by
-    rintro ⟨e, he⟩
-    exact ⟨e, accessFactive w e he⟩
-  refine ⟨witness w0 actualAccess, ?_⟩
-  rintro ⟨w, ha, hn⟩
-  exact hn (witness w ha)
-```
-
-The proof is conditional on explicitly factive access; it would be a simple witness projection and not a substantive new theorem by itself. The philosophical work is the local ground interpretation and discriminating scope of the skeptical defeater. The result says no comparison state with A lacks Q, not that no conceivable state lacks Q. It does not infer accessibility, knowledge, actuality of thought or modal necessity from a Lean carrier. F1 excludes Q and its same-sense Lean negation at a fixed index; no general dialectical defeat of nonclassical logics is involved.
+The proof projects a witness under the stated factivity premise. The philosophical work is the local ground interpretation and discriminating scope of the skeptical defeater. The result says no comparison state with A lacks Q, not that no conceivable state lacks Q. It does not infer accessibility, knowledge, actuality of thought or modal necessity from a Lean carrier. F1 excludes Q and its same-sense Lean negation at a fixed index; no general dialectical defeat of nonclassical logics is involved.
 
 ### 3. Why one defeated representation need not destroy all epistemic support
 
@@ -258,29 +216,11 @@ These need not be independent physical sources, two episodes, or even two observ
 
 The familiar defeater theorem `bab6bc66` (`undercutSoleBasisPrecludesWarrant`) requires sole-basis dependence and warrant-needs-undefeated-support. The #1615 audited defeat result `8f0f44e5` additionally requires its actual process audit and specified policy. Neither says that a defect in an external representation defeats every use of the episode. A counterfeiting scenario can falsify p while satisfying both the occurrence and the acquaintance; it cannot by itself be a counterexample to that acquaintance's bearing on Q. An undercutting objection that challenges the very presence or identification of the acquaintance is different from a representational rebutter and remains a live test.
 
-Under the local reason calibration of `6b4e3331`, an available non-undercut bOccurrence gives Reason(a,Q) and F6, even if the first basis is defeated and every external answer remains suspended. Thus the epistemic dispute moves from general reliability of a faculty to **whether this present, directly apprehended occurrence counts for the belief that some thought occurs**. This attribution is a substantive local evaluative judgment, not a definition of an episode or a consequence of correctness alone. `b3ddb7c4`'s warranted-acceptance route is not needed when using the direct surviving basis; no prior belief or knowledge of Q is required. The exact inference, proposed on existing declarations:
+Under the local reason calibration of `6b4e3331`, an available non-undercut bOccurrence gives Reason(a,Q) and F6, even if the first basis is defeated and every external answer remains suspended. Thus the epistemic dispute moves from general reliability of a faculty to **whether this present, directly apprehended occurrence counts for the belief that some thought occurs**. This attribution is a substantive local evaluative judgment, not a definition of an episode or a consequence of correctness alone. `b3ddb7c4`'s warranted-acceptance route is not needed when using the direct surviving basis; no prior belief or knowledge of Q is required. The checked inference retains the same subject, basis and content.
 
-```lean
-import TruthCore.Logic.EpistemicReasonBearer
-open TruthCore.Logic.GlobalThesisBoundaries
-open TruthCore.Logic.EpistemicReasonBearer
-open TruthCore.Logic.EpistemicReasons
+[Distinct bases and the surviving occurrence reason](../../TruthCore/Logic/InquiryPresuppositions.lean#L65)
 
-example (f : ReliabilityFrame) (R : f.Agent → f.Content → Prop)
-    (a : f.Agent) (bExternal bOccurrence : f.Basis) (q : f.Content)
-    (bad : f.undercuts a bExternal)
-    (good : f.supports a bOccurrence q)
-    (retained : ¬ f.undercuts a bOccurrence)
-    (counts : SurvivingBasisGivesReason f R) :
-    bExternal ≠ bOccurrence ∧ UndefeatedSupport f a q ∧
-      R a q ∧ ThereAreEpistemicReasons R := by
-  have hr := counts a bOccurrence q good retained
-  refine ⟨?_, ⟨bOccurrence, good, retained⟩, hr, ⟨a, q, hr⟩⟩
-  intro heq
-  exact retained (heq ▸ bad)
-```
-
-The distinctness is a consequence *inside that interpretation*, because one basis is undercut and the other is not. It does not prove actual separation, availability or retention, and does not assume that an independently justified warrant for the audit is supplied. The formal witness projection is only an unelaborated application sketch, not a new registered result. In particular, do not infer survival of bOccurrence from the fact that bExternal was defeated.
+The distinctness is a consequence *inside that interpretation*, because one basis is undercut and the other is not. It does not prove actual separation, availability or retention, and does not assume that an independently justified warrant for the audit is supplied. The witness projection is a library application of the stated calibration. In particular, do not infer survival of bOccurrence from the fact that bExternal was defeated.
 
 ### 4. Executed finite comparisons
 
@@ -357,7 +297,7 @@ This provides a more direct positive route to thin F6 than requiring a subject t
 
 **Proposed judgment and next discriminating test.** The limited epistemic invulnerability of *the occurrence conclusion to representational falsity* is well supported by the same-witness distinction. It is not invulnerability to every undercutter. The stronger judgment that the selected subject actually has a reason for Q is supported prima facie by immediate acquaintance and the direct accuracy distinction, without appealing to past success; its first-person application is not observed in this session. A substantive challenger should provide a concrete account of the remaining local undercutter: can it leave genuine conscious acquaintance intact while defeating epistemic support for bare occurrence, rather than replacing acquaintance with a mere seeming/report of acquaintance? Compare externalist, internalist and nihilist accounts at that exact witness. The next independent test should also distinguish the fact that the episode occurs from the correct classification of that episode as *thought*, retaining the weaker phenomenal occurrence if classification fails. Do not repeat a generic countermodel with all reason predicates empty as if it answered that question. The selected goal-relative force rival remains viable, and the stronger end-independent relevance problem remains open.
 
-No changes to corpus closure, proof registrations or attribution. Local DNS failure and absent Lean/Lake/Cargo reconfirmed; no independent challenge worker. The new proof sketches are not elaborated. Retain the required preflight and verification commands above; add `truth related e81971f1`, `truth dossier e81971f1`, `truth brief e81971f1`, `truth semantics e81971f1`, `truth context bab6bc66`, `truth context 8f0f44e5`, and `truth novelty "present acquaintance and distinct evidential uses under global representational defeat"` (using target/release/truth). Reopen the current handoff after an independently challenged interpretation and actual first-person application; this checkpoint does not settle #930, #932 or #1007.
+No changes to corpus closure, proof registrations or attribution. Local DNS failure and absent Lean/Lake/Cargo reconfirmed; no independent challenge worker. The proofs from that session now build in the inquiry module linked above. Retain the required preflight and verification commands above; add `truth related e81971f1`, `truth dossier e81971f1`, `truth brief e81971f1`, `truth semantics e81971f1`, `truth context bab6bc66`, `truth context 8f0f44e5`, and `truth novelty "present acquaintance and distinct evidential uses under global representational defeat"` (using target/release/truth). Reopen the current handoff after an independently challenged interpretation and actual first-person application; this checkpoint does not settle #930, #932 or #1007.
 
 
 ## Continuation: can immediate awareness fail to supply an epistemic reason?
@@ -378,30 +318,9 @@ A genuine cognitive judgment would also be an occurrence of thought on the exist
 
 Use `ExperienceOccurs Occurs Experienced` for the existential shape. Here the occurrence carrier/predicate includes phenomenal episodes generally, not just thought. The consumer `08cef374` of the same record uses *thought* occurrence and the experienced-thought bearer principle `ac0a151f`; the present weaker interpretation must **not** be plugged into that consumer. If the selected experienced episode is actual questioning in the cognitive sense, the stronger typed application remains available with that classification. Otherwise it is an explicit missing bridge. The separate F6-to-reason-bearer consumer `b50727e1` does not identify the reason bearer with the episode itself.
 
-Proposed constructive Lean application of the existing declaration (not elaborated or registered):
+The constructive occurrence proof uses the same world for either episode.
 
-```lean
-import TruthCore.Logic.AssertionRetorsion
-open TruthCore.Logic.AssertionRetorsion
-
-example {W E : Type}
-    (Occurs Experienced Primary Challenge : W → E → Prop) (w0 : W)
-    (hActual : (∃ e, Primary w0 e) ∨ (∃ e, Challenge w0 e))
-    (hPrimary : ∀ w e, Primary w e → Occurs w e ∧ Experienced w e)
-    (hChallenge : ∀ w e, Challenge w e → Occurs w e ∧ Experienced w e) :
-    ExperienceOccurs (Occurs w0) (Experienced w0) ∧
-      ¬ ∃ w, ((∃ e, Primary w e) ∨ (∃ e, Challenge w e)) ∧
-        NoExperienceOccurs (Occurs w) (Experienced w) := by
-  have witness (w : W)
-      (h : (∃ e, Primary w e) ∨ (∃ e, Challenge w e)) :
-      ExperienceOccurs (Occurs w) (Experienced w) := by
-    rcases h with ⟨e, he⟩ | ⟨e, he⟩
-    · exact ⟨e, hPrimary w e he⟩
-    · exact ⟨e, hChallenge w e he⟩
-  refine ⟨witness w0 hActual, ?_⟩
-  rintro ⟨w, he, hn⟩
-  exact hn (witness w he)
-```
+[Experience from a primary episode or a challenge](../../TruthCore/Logic/InquiryPresuppositions.lean#L78)
 
 The two bridges record actual phenomenality of the evidence-producing episodes, not factivity of their contents. This is an elementary witness projection, not by itself a new philosophical proof. It could fail as an application if the alleged primary or challenge episode were only a report. The new warrant comparison concerns the weaker target which remains true despite that misrepresentation of content; it still needs actual experience and the content interpretation.
 
@@ -784,39 +703,9 @@ Under C and T, each actual reason instance has a predecessor which is itself an 
 
 With F6 and the presentation fixed, at least one of C, T, W must fail. One can fix W only on a closed selected dependency subdomain containing the reason witness and all its required prior credential reasons. Without that closure, the reasoning does not exclude a credential reason outside the subdomain. If W and T are retained, C fails: there is no consistent universal demand that every reason be independently certified in this manner. This is not the stronger proposition that some reason is independent of all epistemic grounds, or that all knowledge has an irreducible foundation. A basic reason has an available ground; independence from a further credential is not being groundless.
 
-The proof uses the well-founded induction pattern already present in `TruthCore.Logic.Regress.Graph.controls_of_wellFounded` and `REGRESS-SCHEMA-PACKAGE` (`74e00870`). No need for a second structural regress library. The new work is the same-instance epistemic interface and the exact open requirements. A possible local Lean application, **proposed only, not elaborated or registered**:
+The registered credentialing result now carries out the induction on the same subject’s credential priority. Its credential data bundle the belief, warrant, certification and priority fields of this comparison.
 
-```lean
-import TruthCore.Logic.EpistemicReasonDefinitionFork
-import TruthCore.Logic.Regress
-open TruthCore.Logic.EpistemicReasons
-open TruthCore.Logic.EpistemicReasonDefinitionFork
-
-example (f : Frame)
-    (Believes Warrant : f.Agent → f.Content → Prop)
-    (Certifies : f.Agent → f.Content → (f.Consideration × f.Content) → Prop)
-    (prior : f.Agent → (f.Consideration × f.Content) →
-      (f.Consideration × f.Content) → Prop)
-    (hPresent : ConsiderationPresentation f)
-    (wf : ∀ a, WellFounded (prior a))
-    (credential : ∀ a r p, f.CountsAsReason a r (f.believe p) →
-      ∃ c, Certifies a c (r,p) ∧ Believes a c ∧ Warrant a c)
-    (transmit : ∀ a r p c, f.CountsAsReason a r (f.believe p) →
-      Certifies a c (r,p) → Believes a c → Warrant a c →
-      ∃ s, f.CountsAsReason a s (f.believe c) ∧ prior a (s,c) (r,p)) :
-    ¬ ThereAreEpistemicReasons f.Reason := by
-  rintro ⟨a, p, hp⟩
-  obtain ⟨r, hr⟩ := (hPresent a p).mp hp
-  have no (x : f.Consideration × f.Content) :
-      ¬ f.CountsAsReason a x.1 (f.believe x.2) := by
-    induction (wf a).apply x with
-    | intro y _ ih =>
-      intro hy
-      obtain ⟨c, hc, hb, hw⟩ := credential a y.1 y.2 hy
-      obtain ⟨s, hs, hprior⟩ := transmit a y.1 y.2 c hy hc hb hw
-      exact (ih (s,c) hprior) hs
-  exact no (r,p) hr
-```
+[Credentialing and well-founded prior reasons exclude a reason witness](../../TruthCore/Results/Logic/EpistemicCredentialing/Solution.lean#L19)
 
 The type keeps the same witness, target and agent, and does not assert factivity or sufficiency of a credential. `Certifies` is an explicitly interpreted relation; the theorem does not establish that any actual content has this meaning. The proof would show incompatibility under its hypotheses, not a metaphysical fact that actual credential dependence is well-founded. The former `6b4e3331` (surviving basis counts as a reason) and `b3ddb7c4` (reasons from warranted acceptance and specified calibrations) are relevant but do not imply T's independent priority. No reverse inference from full warrant to a further justified metabelief is made.
 

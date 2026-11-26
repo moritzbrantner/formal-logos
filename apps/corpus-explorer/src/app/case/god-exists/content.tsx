@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { JudgmentReader } from "@/components/judgment-reader";
 import { treeHref } from "@/lib/argument-tree";
-import { casePremiseHref, type currentCase } from "@/lib/current-case";
+import { caseArgumentHref, casePremiseHref, GOD_EXISTS, type currentCase } from "@/lib/current-case";
 import { getBuildInfo, sourceUrl } from "@/lib/site-state";
 
 type Case = ReturnType<typeof currentCase>;
@@ -21,12 +21,17 @@ function Bundles({ bundles, names }: { bundles: Case["bundles"]; names: Map<stri
   return <ul>{bundles.map((bundle) => <li key={bundle.id} className="mt-5" id={`argument-${bundle.id}`}>
     <h3 className="font-medium">{bundle.label ?? bundle.id}</h3>
     <p className="text-sm">{bundle.status === "verified" ? "Verified conditional derivation" : bundle.status === "transcription" ? "Transcription only" : "Verification required"}</p>
+    {bundle.proofs.map(({ id, theorem }) => <Link key={id} className="link-quiet mt-2 block font-mono text-sm" href={`/results/${id}#lean-evidence`}>{theorem}</Link>)}
     <p className="mt-2">All premises required together:</p>
     <ul className="ml-5 list-disc">{bundle.premise_statement_ids.map((id) => <li key={id}>
       <Link className="link-quiet" href={casePremiseHref(id)}>{names.get(id) ?? id}</Link>
     </li>)}</ul>
     {!bundle.premise_statement_ids.length ? <p>No premises recorded.</p> : null}
-    <p className="mt-2 text-sm">{bundle.resultIds.map((id) => <Link key={id} className="link-quiet mr-4" href={`/results/${id}`}>Result {id}</Link>)}</p>
+    {bundle.status === "verified" && bundle.conclusion_statement_id === GOD_EXISTS ? (
+      <p className="mt-3">
+        <Link className="link-quiet font-medium" href={caseArgumentHref(bundle.id)}>Inspect argument and compare premises</Link>
+      </p>
+    ) : null}
     <Link className="link-quiet text-sm" href={`${casePremiseHref(bundle.conclusion_statement_id)}#argument-${bundle.id}`}>Argument context and expanded support</Link>
   </li>)}</ul>;
 }
@@ -49,15 +54,14 @@ export function CaseOverview({ view }: { view: Case }) {
       <p className="mt-3">{view.sense.definition}</p>
       <p className="mt-3"><Link className="link-quiet" href={`/definitions/${view.sense.id}`}>GOD_4 definition · {view.sense.id}</Link> · <a className="link-quiet" href={sourceUrl("corpus/disambiguations/god.json")}>Sense distinctions</a></p>
       <p className="mt-3">{view.established ? "Established under the recorded closure rules." : "God’s existence is not established under the recorded closure rules."} Conditional derivations establish their conclusions only under their premises.</p>
-      <p className="mt-3">Each provisional judgment below applies to its stated witnesses, assumptions and routes.</p>
       <p className="mt-3">Historical evidence and specifically Christian or Catholic identification remain deferred.</p>
     </section>
-    <JudgmentReader readings={view.readings} statementId={view.target.id} revision={view.revision} repositoryUrl={getBuildInfo().repositoryUrl} caseOverview />
     <section className="record-section" id="support-routes">
       <h2 className="eyebrow">Support routes</h2>
       <p className="mt-3">Directly assuming the target remains an explicit option alongside every conditional route below. Each bundle requires all its premises. Record order does not rank philosophical strength by cost, premise counts, source counts or dates.</p>
       <Bundles bundles={view.routes} names={names} />
     </section>
+    <JudgmentReader readings={view.readings} statementId={view.target.id} revision={view.revision} repositoryUrl={getBuildInfo().repositoryUrl} caseOverview />
     <section className="record-section">
       <h2 className="eyebrow">Premises and connections</h2>
       <p className="mt-3">Every proposition in this case is linked below, with its complete support options, path to God’s existence, assessments and evidence. Order follows uses in this case; graph centrality is not philosophical warrant.</p>
@@ -83,6 +87,11 @@ export function CasePremiseDetail({ view, premise }: { view: Case; premise: Prem
     <Revision revision={view.revision} />
     <p className="mt-3">{premise.established ? "Established" : "Not established"} under the recorded closure rules. <Assumption premise={premise} /> Conditional derivations remain conditional on their premises.</p>
     <p className="mt-3"><Link className="link-quiet" href={`/dossiers/${premise.statement.id}`}>Full research dossier: sources, findings, objections, blockers and next tests</Link> · <Link className="link-quiet" href={treeHref(premise.statement.id)}>Explore connections</Link></p>
+    <section className="record-section">
+      <h2 className="eyebrow">Complete immediate support bundles</h2>
+      <Bundles bundles={premise.bundles} names={names} />
+      {!premise.bundles.length ? <p className="mt-3">No argument concludes this proposition in the current case.</p> : null}
+    </section>
     <JudgmentReader readings={premise.readings} statementId={premise.statement.id} revision={view.revision} repositoryUrl={getBuildInfo().repositoryUrl} />
     {premise.revisions.length ? <section className="record-section">
       <h2 className="eyebrow">Downstream reassessment</h2>
@@ -102,11 +111,6 @@ export function CasePremiseDetail({ view, premise }: { view: Case; premise: Prem
         const bundle = view.bundles.find((entry) => entry.id === id);
         return bundle ? <li key={id}><Link className="link-quiet" href={`${casePremiseHref(bundle.conclusion_statement_id)}#argument-${id}`}>{bundle.label ?? id}</Link></li> : null;
       })}</ul>
-    </section>
-    <section className="record-section">
-      <h2 className="eyebrow">Complete immediate support bundles</h2>
-      <Bundles bundles={premise.bundles} names={names} />
-      {!premise.bundles.length ? <p className="mt-3">No argument concludes this proposition in the current case.</p> : null}
     </section>
     {premise.bundles.some((bundle) => bundle.openLeaves !== null) ? <section className="record-section">
       <h2 className="eyebrow">Expanded open premises on routes to God’s existence</h2>

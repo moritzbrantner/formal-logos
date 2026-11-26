@@ -2,5 +2,6 @@
 module
 
 public import TruthCore.German.Kant.CosmologicalInference
+public import TruthCore.German.Kant.TrianglePossibility
 public import TruthCore.German.Wittgenstein.OnCertainty
 public import TruthCore.German.Wittgenstein.RuleFollowing

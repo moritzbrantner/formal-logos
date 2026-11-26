@@ -854,52 +854,18 @@ is recorded with the final validation below; no premise establishment is claimed
 
 ### Reproducible finer-content diagnostic
 
-Save the following block to a temporary `.lean` file; from this checkout run
-`python3 scripts/worker_env.py -- lake env lean /tmp/intellect-horizontal.lean`.
-It is a checked local application of the existing factorization theorem,
+This comparison is a compiled application of the existing factorization theorem,
 **not a new registered result or an independently certified corpus argument**.
 The success data are idealized propositions; no computability or epistemic
 accessibility is asserted.
 
-```lean
-import TruthCore.Results.Logic.CorrectionCriterion.Solution
-
-open TruthCore.Logic.CorrectionCriterion
-
--- First coordinate: task-relevant location. Second: finer chemical kind.
-abbrev Situation := Bool × Bool
-
-def taskData (r : Bool) (s : Situation) : Prop × Prop :=
-  (r = s.1, (!r) ≠ s.1)
-
-def fineMatch (r : Bool) (s : Situation) : Prop := r = s.1 ∧ s.2 = true
-
-example (r : Bool) (s : Situation) : (r = s.1) ↔ ((!r) ≠ s.1) := by
-  cases r <;> cases s with | mk place chemical => cases place <;> cases chemical <;> decide
-
-example (r : Bool) : AdmitsCriterion (taskData r) (fun s => r = s.1) := by
-  exact ⟨Prod.fst, fun _ => Iff.rfl⟩
-
-example (r : Bool) : ¬ AdmitsCriterion (taskData r) (fineMatch r) := by
-  intro h
-  have invariant :=
-    (TruthCore.Results.Logic.CorrectionCriterion.characterization.1
-      Situation (Prop × Prop) (taskData r) (fineMatch r)).mp h
-  have same : taskData r (r, false) = taskData r (r, true) := rfl
-  have bad := (invariant (r, false) (r, true) same).mpr ⟨rfl, rfl⟩
-  exact Bool.noConfusion bad.2
-
-example (r : Bool) :
-    AdmitsCriterion (fun s : Situation => (taskData r s, s.2)) (fineMatch r) := by
-  exact ⟨fun data => data.1.1 ∧ data.2 = true, fun _ => Iff.rfl⟩
-```
+[Coarse and refined criteria on the two-coordinate situation](../TruthCore/Logic/FinerContentCriterion.lean#L25).
 
 ### Delivered local validation and computed premise comparison
 
 On the final proof inputs, direct module build, one-result binding
 (`1 bound, 0 mismatch`), Comparator and its independent NanoDa check pass;
-the result permits no axioms. The diagnostic block above also elaborates
-without `sorry`. Offline source-manifest/claim-binding validation and
+the result permits no axioms. Offline source-manifest/claim-binding validation and
 attribution-check pass; no stating claim changed. The batch spec regenerates
 unchanged and corpus checking passes. These are scoped local checks, not
 independent semantic acceptance or the coordinator's delivered-head CI.

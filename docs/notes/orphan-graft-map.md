@@ -327,13 +327,7 @@ same-predicate condition matters. A local Lean replay checked the original
 theorem at the populated carrier `Unit` and the following counterexample to
 the changed inference. The original theorem reports zero axioms.
 
-```lean
-open TruthCore.Logic.PerformedDenial in
-example : ∃ (speaks sings deniesSinging : Unit → Prop) (e : Unit),
-    speaks e ∧ deniesSinging e ∧ NoEpisodeOccurs sings := by
-  exact ⟨fun _ => True, fun _ => False, fun _ => True, (), trivial, trivial,
-    fun ⟨_, h⟩ => h⟩
-```
+[Speaking while accurately denying that one sings](../../TruthCore/Logic/RetorsionApplications.lean#L31)
 
 For an explicit two-claim comparison let *q* say that the cited Solution
 file contains the line `exact hNo ⟨e, hOccurs⟩`. Direct inspection establishes
@@ -355,25 +349,7 @@ only the file inspection admitted in this exercise. This last assignment
 is a scope choice for the comparison. A reader's evidence can extend
 beyond it.
 
-```lean
-import TruthCore.Results.Logic.PerformedDenial.NoAccurateDenial.Solution
-import TruthCore.Logic.Scientism
-open TruthCore.Logic.Scientism TruthCore.Logic.PerformedDenial
-open TruthCore.Results.Logic.PerformedDenial.NoAccurateDenial
-
--- Bool.true indexes the same-token theorem; Bool.false indexes the file report.
-example (FileReport : Prop) (readLine : FileReport) :
-    let E : EpistemicFrame Bool :=
-      ⟨(fun c => if c then ∀ O D : Unit → Prop, AccurateDenialImpossible O D else FileReport),
-       (fun c => c = false ∧ FileReport)⟩
-    SomeNonEmpiricalEstablished E ∧ ¬ ScopedScientism E (fun _ => True) ∧
-      ScopedScientism E (fun c => c = false) ∧ E.established false := by
-  dsimp only
-  have proofGround : ∀ O D : Unit → Prop, AccurateDenialImpossible O D := noAccurateDenial
-  exact ⟨⟨true, proofGround, fun h => Bool.noConfusion h.1⟩,
-    fun norm => Bool.noConfusion (norm true trivial proofGround).1,
-    fun _ inScope _ => ⟨inScope, readLine⟩, readLine⟩
-```
+[The performed-denial result and an empirical file report](../../TruthCore/Logic/RetorsionApplications.lean#L37)
 
 **Provisional assessment.** The exhibited proof gives strong warrant for
 *p* on the fixed meanings and favors counting deduction as a sufficient
@@ -611,60 +587,13 @@ propositional consequences:
    frame under the existential reading one must additionally exclude
    other sufficient empirical bases.
 
-The four examples below passed Lean on the existing declarations. The
+The four applications use the existing declarations. The
 first supplies the proved content to an explicit capture assumption. The
 second takes the subject, basis and content as inputs, the third takes an
 established in-scope witness, and the fourth tests the exclusive-origin
 reading. These are local checks of the applications.
 
-```lean
-import TruthCore.Results.Logic.TruthPilot.NotEveryPropositionFails.Solution
-import TruthCore.Logic.TruthNontriviality
-import TruthCore.Logic.EpistemicReasonBearer
-import TruthCore.Logic.ScientismScopeBoundary
-
-open TruthCore.Logic.TruthPilot
-open TruthCore.Logic.SelfApplication
-open TruthCore.Logic.Relativism
-open TruthCore.Logic.GlobalThesisBoundaries
-open TruthCore.Logic.EpistemicReasonBearer
-open TruthCore.Logic.EpistemicReasons
-open TruthCore.Logic.Scientism
-open TruthCore.Logic.ScientismScopeBoundary
-
--- Only the capture direction for one proved content is needed.
-example {Agent Content : Type} (T : TruthSemantics Agent Content)
-    (c : Content) (capture : NotEveryPropositionFails → T.trueAbs c) :
-    SomeAbsoluteTruth T ∧ ¬ GlobalNoAbsoluteTruth T := by
-  have hc := capture
-    TruthCore.Results.Logic.TruthPilot.NotEveryPropositionFails.notEveryPropositionFails
-  exact ⟨⟨c, hc⟩, fun h => h c hc⟩
-
--- No prior actual acceptance or warrant needed; the evidence is available.
-example (f : ReliabilityFrame) (R : f.Agent → f.Content → Prop)
-    (a : f.Agent) (b : f.Basis) (p : f.Content)
-    (hs : f.supports a b p) (hu : ¬ f.undercuts a b)
-    (hCounts : SurvivingBasisGivesReason f R) :
-    ThereAreEpistemicReasons R :=
-  ⟨a, p, hCounts a b p hs hu⟩
-
--- Witness to the exact negation and, when in scope, failure of the norm.
-example {Claim : Type} (E : EpistemicFrame Claim) (scope : Claim → Prop)
-    (c : Claim) (he : E.established c)
-    (hn : ¬ E.empiricallyEstablished c) (hi : scope c) :
-    SomeNonEmpiricalEstablished E ∧
-      ¬ NoNonEmpiricalEstablished E ∧ ¬ ScopedScientism E scope := by
-  have hw : SomeNonEmpiricalEstablished E := ⟨c, he, hn⟩
-  exact ⟨hw, fun h => h hw, fun h => hn (h c hi he)⟩
-
--- The separate exclusive-origin reading; not the existing norm by fiat.
-example {Claim Basis : Type} (S : Claim → Basis → Prop)
-    (O : Basis → Prop) (scope : Claim → Prop)
-    (p : Claim) (b : Basis) (hi : scope p) (hs : S p b) (hn : ¬ O b) :
-    ¬ (∀ p b, scope p → S p b → O b) := by
-  intro h
-  exact hn (h p b hi hs)
-```
+[Designated truth, a surviving reason, and the two scope objections](../../TruthCore/Logic/RetorsionApplications.lean#L50)
 
 The direct evidence comparison can use the same logical statement with two
 candidate proof tokens. A correct reconstruction instantiates the universal

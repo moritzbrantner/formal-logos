@@ -27,7 +27,7 @@ use std::{
 };
 
 /// The note directory, relative to the checkout.
-pub const DIRECTORY: &str = "docs/notes";
+pub const DIRECTORY: &str = "docs";
 /// Legacy-ID prefixes that mark a token as an intended record reference, so
 /// an unknown one is reported as unresolved.
 const RESERVED: &[&str] = &[
@@ -273,12 +273,12 @@ pub fn inputs(root: &Path) -> Result<Vec<String>, String> {
         }
         Ok(())
     }
-    let directory = root.join("docs");
+    let directory = root.join(DIRECTORY);
     if !directory.is_dir() {
         return Ok(Vec::new());
     }
     let mut found = Vec::new();
-    let mut parts: Vec<String> = vec!["docs".to_owned()];
+    let mut parts: Vec<String> = vec![DIRECTORY.to_owned()];
     walk(&directory, &mut parts, &mut found)?;
     found.sort();
     Ok(found.into_iter().map(|parts| parts.join("/")).collect())
@@ -339,7 +339,7 @@ pub fn slug(heading: &str) -> String {
         .collect()
 }
 
-fn fence(line: &str) -> Option<(char, usize)> {
+pub(crate) fn fence(line: &str) -> Option<(char, usize)> {
     let trimmed = line.trim_start();
     if line.len() - trimmed.len() > 3 {
         return None;
@@ -608,7 +608,7 @@ mod tests {
     #[test]
     fn large_notes_remain_discoverable() {
         let root = std::env::temp_dir().join(format!("truth-large-notes-{}", std::process::id()));
-        let directory = root.join("docs");
+        let directory = root.join(DIRECTORY);
         fs::create_dir_all(&directory).unwrap();
         let body = format!("{}\nSTMT-A\n", "x".repeat((1 << 20) + 1));
         fs::write(directory.join("large.md"), &body).unwrap();

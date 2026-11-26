@@ -48,6 +48,8 @@ tens of megabytes).
   in place of it requires `Authorization: Bearer <token>`. The server refuses to
   start with neither.
 
+To inspect a particular argument, pass its ID to `research_synthesis` as `target`. Supply `without` as an array of its premise or commitment IDs to see which registered arguments reach the conclusion by statement ID using the remaining inputs. The response includes the selected theorem, an ordered list of applicable argument IDs when available, and recorded assessments covering withheld inputs.
+
 ## Data and refresh
 
 The image contains only the binaries. `deploy/truth-mcp/refresh.sh` clones the

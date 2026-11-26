@@ -1157,10 +1157,37 @@ impl LeanSource {
     /// as a frozen Challenge and its Solution), or `None` when it is not
     /// declared.
     pub fn qualified_block(&mut self, declaration: &str) -> Option<(String, usize, String)> {
+        self.exact_block(declaration, false)
+    }
+
+    /// Return the implementing source for a paired result when available.
+    pub(super) fn implementation_block(
+        &mut self,
+        declaration: &str,
+    ) -> Option<(String, usize, String)> {
+        self.exact_block(declaration, true)
+    }
+
+    fn exact_block(
+        &mut self,
+        declaration: &str,
+        prefer_solution: bool,
+    ) -> Option<(String, usize, String)> {
         if self.index.is_none() {
             self.build_index();
         }
-        let (path, start) = self.index.as_ref()?.get(declaration)?.first()?.clone();
+        let places = self.index.as_ref()?.get(declaration)?;
+        let first = places.first()?;
+        let location = if prefer_solution && first.0.ends_with("Challenge.lean") {
+            let sibling = first.0.with_file_name("Solution.lean");
+            places
+                .iter()
+                .find(|(path, _)| *path == sibling)
+                .unwrap_or(first)
+        } else {
+            first
+        };
+        let (path, start) = location.clone();
         let text = self.file(&path)?;
         let lines: Vec<&str> = text.lines().collect();
         Some((

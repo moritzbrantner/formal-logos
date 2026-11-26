@@ -752,40 +752,7 @@ Suppose the tracked individual is precisely this integrated pressure-holding uni
 
 The finite control interprets the two settled phases. `holds` calculates cohesion when either support may be withdrawn. In this deliberately single-active-support setting, `supplies` tests selective loss of cohesion. Treating cohesion as the selected unit's existence is the explicit interpretation under test. The proper constituent is represented by the collar role. Each phase satisfies the corpus formula under this reading. The model has no one supplier across both phases, and its only late supplier is a constituent. These are limitations on witness selection from phase-local evidence. The formula itself has no time parameter; applying it at each phase already supplies extra interpretive structure. The three local Lean checks used no axioms.
 
-```lean
-import TruthCore.Latin.Aquinas.SummaTheologiae.PrimaPars.Question3.Article7Cause
-open TruthCore.Latin.Aquinas.SummaTheologiae
-namespace UnityHandoff
-inductive Role | whole | collar | jig deriving DecidableEq
-open Role
-def holds (late jigAvailable collarAvailable : Bool) :=
-  if late then collarAvailable else jigAvailable
-def composite (x : Role) := x = whole
-abbrev supplies (late : Bool) (c x : Role) (_ : Unit) : Prop :=
-  x = whole ∧ holds late true true = true ∧
-  holds late (decide (c ≠ jig)) (decide (c ≠ collar)) = false
-theorem pointwise (late : Bool) :
-    CompositeHasAUnitingCauseReading composite (supplies late) () := by
-  rintro x rfl
-  cases late
-  · exact ⟨jig, by decide, by decide⟩
-  · exact ⟨collar, by decide, by decide⟩
-theorem noFixed : ¬ ∃ c, ∀ late, supplies late c whole () := by
-  rintro ⟨c,h⟩
-  cases c with
-  | whole => exact (by decide : ¬ supplies false whole whole ()) (h false)
-  | collar => exact (by decide : ¬ supplies false collar whole ()) (h false)
-  | jig => exact (by decide : ¬ supplies true jig whole ()) (h true)
-theorem latePart (c : Role) (h : supplies true c whole ()) : c = collar := by
-  cases c with
-  | collar => rfl
-  | whole => exact False.elim ((by decide : ¬ supplies true whole whole ()) h)
-  | jig => exact False.elim ((by decide : ¬ supplies true jig whole ()) h)
-#print axioms pointwise
-#print axioms noFixed
-#print axioms latePart
-end UnityHandoff
-```
+[Compiled phase-specific uniter, handoff and late-part proofs](../../TruthCore/Causality/UnityHandoff.lean#L26).
 
 **Provisional judgment.** The positive case for a substantial bearer is strongest where its independent criterion of life or unity identifies what disintegration destroys, and a numerically distinct contributor actually produces or sustains that constitution. A constituent need not produce the whole unaided to merit productive credit. Its role as an already organized part may itself depend on the whole. In that case its participation in maintenance leaves open the complete explanation of this system's first actuality. The strongest immanent rival offers the activity of the organized substance through its integrated constituents. It can grant both real upkeep by a part and the whole's persistence after its maker departs. It can also contest the inference to efficient esse when a causal test tracks only an operation of a bearer independently present throughout. A positive actuality grounded in received being would strengthen the existential-uniter route if the analysis identifies a distinct giver of this very actuality at the time in question. Diversity alone gives no such identification.
 

@@ -2371,7 +2371,7 @@ variation. Under 4 and 2, strict E variation forces a failure of 3 at
 some pair. Under 4 and 3, strict E variation forces a failure of 2.
 Neither of the reflection rules is a consequence of the definitions.
 Replacing A by F tests whether a better product requires better execution relative to the adopted end. Each reflection rule needs its own warrant.
-If P is replaced by R, invariance needs fresh warrant.
+If P is replaced by R, invariance needs fresh warrant. [Lean proof for arbitrary comparison domains](../../TruthCore/Modal/CreationDecisionComparison.lean#L40) · [Independent execution and complete-decision rankings](../../TruthCore/Modal/CreationDecisionComparison.lean#L67).
 
 The following matched controls use three labeled comparison situations.
 The tuple entries are grades, not quantities of being or moral utility.
@@ -2392,44 +2392,16 @@ compatible with divine simplicity. The second stipulates equal A, not
 merely equal execution quality F, and therefore does not settle whether a
 lower-valued complete decision actually has equal merit.
 
-Reproduced exhaustive diagnostic (JavaScript; 27 ordinal maps per axis,
-19,683 triples). This is a nonmodal finite test of the four claims, not a
-count of admissible worlds, a probability, or evidence of metaphysical truth.
+The four displayed rows each violate exactly their designated hypothesis.
+Lean reproduces the original JavaScript enumeration of all 19,683 triples of
+three-grade maps on the three situations. Zero satisfy all four hypotheses.
+The numbers satisfying exactly the other three are 27, 216, 288 and 312 in row order. Of the 1,944
+triples with a strict effect comparison and fixed intrinsic perfection, 288 also
+preserve effect improvements at the decision level. These counts describe the
+stipulated finite assignments. The general contradiction follows from the two
+strict implications and the impossibility of a strict improvement over oneself.
+[Lean witnesses for the four omission rows](../../TruthCore/Modal/CreationDecisionComparison.lean#L53) · [Executable enumeration](../../TruthCore/Modal/CreationDecisionComparison.lean#L116).
 
-```js
-const maps = [];
-for (let a=0;a<3;a++)
-  for (let b=0;b<3;b++)
-    for (let c=0;c<3;c++) maps.push([a,b,c]);
-const pairs = Array.from({length:9},(_,k)=>[Math.floor(k/3),k%3]);
-const gt = (f,i,j)=>f[i]>f[j];
-let total=0, full=0, deletions=[0,0,0,0];
-let invariantAndVariable=0, invariantAndVariableAndEA=0;
-for (const e of maps) for (const a of maps) for (const p of maps) {
-  const flags = [
-    pairs.some(([i,j])=>gt(e,i,j)),
-    pairs.every(([i,j])=>!gt(e,i,j)||gt(a,i,j)),
-    pairs.every(([i,j])=>!gt(a,i,j)||gt(p,i,j)),
-    p.every(v=>v===p[0])
-  ];
-  total++;
-  if (flags.every(Boolean)) full++;
-  for (let k=0;k<4;k++)
-    if (!flags[k]&&flags.every((x,i)=>i===k||x)) deletions[k]++;
-  if (flags[0]&&flags[3]) {
-    invariantAndVariable++;
-    if (flags[1]) invariantAndVariableAndEA++;
-  }
-}
-console.log({total,full,deletions,invariantAndVariable,
-  invariantAndVariableAndEA});
-```
-
-Observed: `total=19683`, `full=0`, `deletions=[27,216,288,312]`,
-`invariantAndVariable=1944`, `invariantAndVariableAndEA=288`.
-The universal proof is the two strict implications above, not induction
-from this enumeration. Under the appropriate strict-implication
-interpretation the same proof works on arbitrary comparison domains.
 This is a simple incompatibility diagnostic; do not register an open
 reflection premise or a transcription as an independently supported result.
 
@@ -2472,7 +2444,7 @@ productive execution and attack the choice of specification:
   ordering, the same policy has no admissible choice. Reuse #689/#1953's
   no-best and omission distinctions. This is not a proof that there is
   no best possible world, or that a perfect chooser is impossible
-  independent of the policy premise.
+  independent of the policy premise. [Existing no-optimum theorem](../../TruthCore/Results/Modal/OptimalCreationChoice/Solution.lean#L28).
 - If an agent has no unmet obligation to an actual beneficiary and does
   not acquire an intrinsic good by producing the effect, some familiar
   grounds for obligatory production are removed. A norm of impersonal
@@ -2583,6 +2555,12 @@ has an existing patient. Including the interests of possible beneficiaries
 or imposing impersonal beneficence could change the comparison, given
 an argument for that wider standard. The table answers no question about
 the actual distribution of suffering.
+
+In the formal comparison, the list of actual beneficiaries and the list of those
+receiving care determine eligibility. The existing `Optimal` predicate then
+applies to eligible decisions. For every partially ordered benefit scale with
+O < A < B, B is its unique optimal decision, whatever value C has. Selecting
+the optimum still requires a norm obliging the producer to choose it. [Due-care test for the four decisions](../../TruthCore/Modal/CreationDecisionComparison.lean#L143) · [Unique optimum on the eligible set](../../TruthCore/Modal/CreationDecisionComparison.lean#L148).
 
 Now vary the proposed ground of goodness while preserving those four
 decisions, the ranking, and the due-care judgments. Someone who takes

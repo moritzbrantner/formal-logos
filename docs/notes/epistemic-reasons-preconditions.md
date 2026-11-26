@@ -1468,30 +1468,11 @@ The following focused consequences of unchanged vocabulary were elaborated
 with Lean. They keep the **same** subject, count and belief in the first check,
 and explicitly exhaust both supplied preferences. The earlier direct `decide`
 draft failed to synthesize decidability for the wrapped profile propositions;
-the constructive proof below checks the same advertised claim without adding
+the linked constructive proof checks the same advertised claim without adding
 an axiom or changing a definition. This is a local declaration audit, not a
 new registered result or a new Comparator/NanoDa certificate.
 
-```lean
-import TruthCore.Logic.EpistemicReasonDefinitionFork
-
-open TruthCore.Logic.EpistemicReasonDefinitionFork
-
-example :
-    IndependentInstance independent () Consideration.count
-      (independent.believe Content.even) ∧
-    ¬ independent.Holds (independent.about (independent.believe Content.even)) := by
-  refine ⟨⟨?_, ?_⟩, ?_⟩
-  · exact ⟨⟨rfl, rfl⟩, trivial, trivial, rfl, rfl⟩
-  · intro d
-    cases d <;> exact ⟨rfl, rfl⟩
-  · intro h
-    cases h
-
-example (t : independent.Attitude) :
-    ∃ p : independent.Content, independent.believe p = t := by
-  exact ⟨t, rfl⟩
-```
+[A preference-independent reason with false content and the belief-only profile](../../TruthCore/Logic/InquiryPresuppositions.lean#L96)
 
 These are consequences of the existing false-count profile and its identity
 belief constructor, not evidence that an actual person has a warranted error.
@@ -1608,12 +1589,7 @@ its witness fixed across the entire declared class. Suspension is not swapped
 in for the successful belief. No new source claim, corpus proposition, opaque
 normative predicate, registered theorem or closure change is introduced.
 
-Verification: the persisted Lean block elaborated without diagnostics after
-the decidability repair described above, using
-`flock /tmp/moenarch/truth-core-heavy.lock python3 scripts/worker_env.py --
-lake env lean /tmp/epistemic-930-application-audit.lean`. The file contained
-the displayed imports/examples; the block is retained here for reproduction.
-No library module or proof input was edited. This focused Lean check is not
+The original focused check elaborated both claims after the decidability repair. This focused Lean check is not
 Comparator/NanoDa verification or evidence of an actual human application.
 Corpus validation, offline attribution check (no changed stating claims),
 documentation/import generator checks and whitespace validation passed.
@@ -1691,22 +1667,7 @@ negation must also be established in the selected episode. Disjoint token
 constructors alone do not show that an agent lacks another simultaneous
 attitude; the sum type by itself supplies no negation or adoption semantics.
 
-```lean
-import TruthCore.Logic.EpistemicReasonDefinitionFork
-
-def responseAbout {C : Type} : Sum C C → C
-  | .inl p => p
-  | .inr p => p
-
-example {C : Type} (p : C) :
-    responseAbout (Sum.inl p : Sum C C) = p ∧
-    responseAbout (Sum.inr p : Sum C C) = p := ⟨rfl, rfl⟩
-
-example {C : Type} (p q : C) :
-    (Sum.inr p : Sum C C) ≠ Sum.inl q := by
-  intro h
-  cases h
-```
+[Believing and suspending about the same content](../../TruthCore/Logic/InquiryPresuppositions.lean#L111)
 
 No full `Frame` is manufactured by assigning `force := True` or adding a new
 eligibility flag. The displayed choices specify its attitude/content fields;
@@ -1858,11 +1819,7 @@ claim, corpus proposition, proof registration or opaque normative predicate is
 introduced. All consequential findings here are proposed for fresh independent
 challenge.
 
-Verification: the displayed structural mapping elaborated without diagnostics
-using `flock /tmp/moenarch/truth-core-heavy.lock python3 scripts/worker_env.py
--- lake env lean /tmp/epistemic-930-nonfactive-attitudes.lean`. The displayed
-block preserves its substantive contents for reproduction. No library module
-changed; this is not a new registered result or Comparator/NanoDa certificate.
+The structural mapping was checked in the pinned toolchain and is reproduced in the inquiry module. The corpus records continue to describe the registered results.
 Corpus validation, offline attribution check (no changed stating claims),
 documentation/import generator checks and whitespace validation passed.
 No previous finite calculation, full proof gate or source acquisition was

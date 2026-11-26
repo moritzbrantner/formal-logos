@@ -1797,41 +1797,11 @@ A simple physical interpretation shows how the two conditions could receive inde
 
 **Comparison and judgment.** A collection of borrowers, each of whose exercised giving is only received, supplies a conditional explanation of transmission. If the question includes why that activity obtains at all, listing further actual borrowers can repeat the datum to be explained. This supports the existing modest preference for a nonborrowed source on the exhaustive, per se productive reading. The strongest rival can grant every audited transmission and offer a primitive fact that the whole productive pattern obtains, or a necessarily obtaining concrete whole whose constitution explains its members. The former explicitly stops at global actuality. The latter must justify the whole's actuality and the constitutive passage to concrete members; if that whole is itself an unborrowed bearer under the selected relation, the accounts agree on the narrow existence of a root. The source account likewise owes genuine productive availability and a route from it to these borrowers. The finite test excludes a wholly borrowed *closed finite* order with the stated priority; it leaves the general metaphysical commitment open. The [existing quantitative comparison](contractive-borrowed-power-1378.md) provides a separate test under independent bounds and loss. Neither local success licenses importing heat flow, attenuation or finiteness into existence.
 
-The following local Lean checks reproduce the audit comparison and the finite sufficient condition. They add no registered argument or axiom allowance; the classical finite-minimum proof and arithmetic automation use Mathlib's standard logical background.
+**What the observer can know.** In the Lean model, an alternative is accessible exactly when it preserves all incoming edges at the audited recipients. Any finite selection of recipients with the endless record admits both the endless assignment and a sourced assignment whose root lies beyond the audit. The latter root reaches every bearer. The observer therefore knows neither that the traced bearer's predecessor cone contains a root nor that it lacks one. The same holds for the whole roster. This tests what follows from those lists alone. The assignments do not establish that either supply structure is metaphysically realized.
 
-```lean
-import Mathlib.Data.Set.Finite.Lemmas
-import Mathlib.Tactic
-namespace SupplierAudit
-def endless (y x : Nat) := y = x + 1
-def sourced (n y x : Nat) := (x < n ∧ y = x + 1) ∨ (n < x ∧ y = n)
-theorem sameLists (n x y : Nat) (seen : x < n) :
-    sourced n y x ↔ endless y x := by unfold sourced endless; omega
-theorem endlessBorrower (x : Nat) : ∃ y, endless y x := ⟨x+1, rfl⟩
-theorem oneRoot (n x : Nat) : (∀ y, ¬ sourced n y x) ↔ x = n := by
-  constructor
-  · intro h
-    by_cases lt : x < n
-    · exact False.elim (h (x+1) (Or.inl ⟨lt,rfl⟩))
-    · by_contra ne
-      exact h n (Or.inr ⟨by omega, rfl⟩)
-  · rintro rfl y
-    unfold sourced
-    omega
--- Integer labels permit infinite descent on the full roster.
-theorem finiteAudit {B : Type} (S : Set B) (r : B → B → Prop) (level : B → Int)
-    (finite : S.Finite) (present : S.Nonempty)
-    (closed : ∀ x ∈ S, ∀ y, r y x → y ∈ S)
-    (drop : ∀ x ∈ S, ∀ y, r y x → level y < level x) :
-    ∃ x ∈ S, ∀ y, ¬ r y x := by
-  obtain ⟨x,hx,least⟩ := S.exists_min_image level finite present
-  exact ⟨x,hx,fun y hy => (not_lt_of_ge (least y (closed x hx y hy))) (drop x hx y hy)⟩
-#print axioms sameLists
-#print axioms endlessBorrower
-#print axioms oneRoot
-#print axioms finiteAudit
-end SupplierAudit
-```
+A nonempty finite roster closed under the selected supplier relation, with a strict rank decreasing toward suppliers, gives knowledge of a root when every accessible world has such a certificate. This is de dicto: the certificate and witness can vary by world. The two-world example admits just two sourced completions that agree on recipient zero. Both have the supplier-closed collection `{0, 1, 2}` with strict ranks, and their roots differ. Closure and rank are properties of those stipulated alternatives beyond the audited list. If the observer already knows a fixed roster has a root and audits every member, some particular member is known to be a root because its empty incoming list is shared. Other members may also be roots. For a traced bearer, select its entire predecessor cone, including the bearer itself via the zero-length path, to get the ancestor conclusion. For the universal actual-esse premise `20babef7` used by `3de4bd49` and `8df25074`, a one-cone certificate leaves the independent application to every eligible closed collection open.
+
+[Lean proofs of finite-audit underdetermination, known existence from finite rank, and particular-root identification](../../TruthCore/Causality/SupplierAudit.lean#L45)
 
 ## Research attempts citing this note
 

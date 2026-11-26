@@ -87,7 +87,8 @@ pub const HELP: &str = "Usage: truth [--root PATH] [--json] status
        truth [--root PATH] [--json] next-steps [--frontier-root STATEMENT]
        truth [--root PATH] [--json] arguments
        truth [--root PATH] [--json] results
-       truth [--root PATH] [--json] synthesis [STATEMENT | --question TEXT] [--limit N]
+       truth [--root PATH] [--json] synthesis [STATEMENT | ARGUMENT | --question TEXT] [--limit N]
+             [--without STATEMENT]... [--compare-premises]
        truth [--root PATH] [--json] support-graph [STATEMENT ...]
        truth [--root PATH] [--json] sort-lists
        truth [--root PATH] [--json] lexicon (show WORD | untraced | coverage | check | bootstrap | allowlist | ratchet --base REV) [--limit N] [--write]
@@ -111,7 +112,7 @@ pub const HELP: &str = "Usage: truth [--root PATH] [--json] status
              [--materialize-edge KEY]
        truth [--root PATH] [--json] tree --out-dir DIR STATEMENT... [--down N] [--up N] [--budget N]
        truth [--root PATH] [--json] attribution-check --base REV [--materialize] [--max-chars N]
-       truth [--root PATH] [--json] index (build | search WORDS [--limit N] | show ID | duplicates | summary
+       truth [--root PATH] [--json] index (build | search WORDS [--limit N] | show ID | duplicates [notes [check]] | summary
              | parity | export PATH | bundle --case ID [--premise STATEMENT]...
              | compare --case ID [--left STATEMENT]... [--right STATEMENT]...)
        truth [--root PATH] [--json] senses (report [--write] | allowlist [--write] | ratchet --base REV)
@@ -254,6 +255,14 @@ pub fn run(args: &[OsString]) -> Output {
             {
                 Err(usage(
                     "--question, --assessments-for and --statement apply only to brief, novelty and synthesis (--question)",
+                ))
+            }
+            Some(command)
+                if command.name != "synthesis"
+                    && (!args.without.is_empty() || args.compare_premises) =>
+            {
+                Err(usage(
+                    "--without and --compare-premises apply only to synthesis",
                 ))
             }
             Some(command) if args.semantics.flags && command.name != "semantics" => Err(usage(

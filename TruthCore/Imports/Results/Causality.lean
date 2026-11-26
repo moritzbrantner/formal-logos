@@ -55,6 +55,7 @@ public import TruthCore.Results.Causality.ChainInstantiation.Solution
 public import TruthCore.Results.Causality.ClassicalGodAssembly.Solution
 public import TruthCore.Results.Causality.ClassicalGodFromPositiveRoot.Solution
 public import TruthCore.Results.Causality.ClassicalGodRevelationBoundary.Solution
+public import TruthCore.Results.Causality.ClosedEsseSourceGod.Solution
 public import TruthCore.Results.Causality.ClosedGroundingRoots.Solution
 public import TruthCore.Results.Causality.CogitoCapacityInterface.Solution
 public import TruthCore.Results.Causality.CogitoNecessaryConcrete.Solution
@@ -181,6 +182,7 @@ public import TruthCore.Results.Causality.FiniteReapersConsistent.Solution
 public import TruthCore.Results.Causality.FiniteRestriction.Solution
 public import TruthCore.Results.Causality.FiniteThroughput.Solution
 public import TruthCore.Results.Causality.FirstMoverNecessity.Solution
+public import TruthCore.Results.Causality.FirstMoverUnderived.Solution
 public import TruthCore.Results.Causality.FixedDurationGrimReaper.Solution
 public import TruthCore.Results.Causality.FullFirstCause.Solution
 public import TruthCore.Results.Causality.FullnessCandidates.Solution

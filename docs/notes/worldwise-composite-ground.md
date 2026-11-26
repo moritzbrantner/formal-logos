@@ -56,22 +56,11 @@ strong-supplementation and fusion meanings.
 
 Original frozen Challenge SHA256:
 `38708db9e203c1d95ed1c10d3d32d3009f1fa280e35065096cfb5ad04b8e4e80`.
-Its exact unpublished stub is preserved here:
-
-```lean
-import TruthCore.Causality.WorldwiseCompositeGround
-
-namespace TruthCore.Results.Causality.WorldwiseCompositeGround
-open TruthCore.Causality.WorldwiseCompositeGround
-
-theorem checks : Certificate := by sorry
-
-end TruthCore.Results.Causality.WorldwiseCompositeGround
-```
+The rejected stub declared `checks : Certificate` with a placeholder proof. The [current Challenge](../../TruthCore/Results/Causality/WorldwiseCompositeGround/Challenge.lean#L6) and [proved replacement](../../TruthCore/Results/Causality/WorldwiseCompositeGround/Solution.lean#L86) use the revised type. The [archived original stub](https://github.com/moritzbrantner/formal-logos/blob/0895006f12ee9a69700fd68208656a8b6c0c5e7b/docs/notes/worldwise-composite-ground.md#L61-L69) preserves the rejected input.
 
 The revised analyst statement is `ReplacementCertificate`. Its ordinary
 Challenge was frozen before revised Solution work at SHA256
 `ac9681f8668ed4f276090b3530b8b0eef7c9cc545e3d7d074ae3fc7d257dc7ce`.
 No prior published Challenge is changed. This is one revised result, not two
-model counts. The original `Certificate` identifier in the archived stub is
+model counts. The original `Certificate` identifier in the rejected stub is
 historical, not a current Lean declaration or proof obligation.

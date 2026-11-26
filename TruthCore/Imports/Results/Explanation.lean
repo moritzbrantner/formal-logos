@@ -30,6 +30,7 @@ public import TruthCore.Results.Explanation.ExistentialInheritance.Solution
 public import TruthCore.Results.Explanation.ExplanatoryAdequacy.Solution
 public import TruthCore.Results.Explanation.ExplanatoryClosure.Solution
 public import TruthCore.Results.Explanation.ExplanatorySymmetry.Solution
+public import TruthCore.Results.Explanation.ExternalExistenceReason.Solution
 public import TruthCore.Results.Explanation.FixedConstituentNecessaryBeing.Solution
 public import TruthCore.Results.Explanation.GroundingBaseline.Core.Solution
 public import TruthCore.Results.Explanation.GroundingBaseline.Reduct.Solution

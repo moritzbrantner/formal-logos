@@ -2,6 +2,7 @@
 module
 
 public import TruthCore.Results.Aquinas.DeEnte.AggregateEsseCause.Solution
+public import TruthCore.Results.Aquinas.DeEnte.AttenuatedEsseReception.Solution
 public import TruthCore.Results.Aquinas.DeEnte.ClosedEsseSource.Solution
 public import TruthCore.Results.Aquinas.DeEnte.EsseSource.Solution
 public import TruthCore.Results.Aquinas.DeEnte.ExtrinsicSource.Solution

@@ -1,0 +1,20 @@
+# Analyst formulation, attribution deferred.
+
+[batch]
+vocab = "TruthCore.Causality.FirstMoverNecessity"
+results = "TruthCore.Results.Causality.FirstMoverUnderived"
+
+[[argument]]
+id = "NECESSARY_2 first mover underived, from actual root and support coverage"
+theorem = "underivedOfFirstMoverRoot"
+premises = ["11958874-aa8f-4b09-97ba-4f6028d26cd9", "df42581f-5fff-4b5f-8b40-6e16d2b890f2"]
+conclusion = "0bdcf366-29c7-5d45-b603-5c929dcad976"
+sense_bridges = [
+  { term = "NECESSARY", from = "NECESSARY_11", to = "NECESSARY_2", statement_id = "11958874-aa8f-4b09-97ba-4f6028d26cd9" },
+  { term = "WORLD_RELATIVE_EXISTENCE_METAPHYSICAL_ESSE_NECESSITY", from = "WORLD_RELATIVE_EXISTENCE_METAPHYSICAL_ESSE_NECESSITY_1", to = "WORLD_RELATIVE_EXISTENCE_METAPHYSICAL_ESSE_NECESSITY_3", statement_id = "df42581f-5fff-4b5f-8b40-6e16d2b890f2" },
+]
+axioms = []
+comparator_theorems = ["sameMoverUnderived", "uncoveredFirstMoverControl"]
+rule = "A concrete supporter anywhere would give the same bearer an actual concrete supporter, contradicting its actual rootedness"
+meaning = "Take the first mover f from the actual necessary root premise. On the same groundProfile F concrete grounds and selected world w, coverage turns an incoming selected edge from an existing concrete candidate at any admitted world into an incoming edge to f from a concrete candidate existing at w. The actual root conjunct excludes that edge. The companion sameMoverUnderived keeps f's status as a first mover moved by none, actual rootedness, accessible-world existence, firstness in being and pure act together with the all-admitted-world exclusion. The registered conclusion projects this same f to the existing underivedness node consumed by 8f956c81. The coverage step needs no new root selection and adds no well-foundedness, J1, reflexive access or excluded-middle input."
+description = "Conditional support for the existing underivedness node from the First Way's necessary actual root and concrete support coverage. Necessity is accessible-world existence. The support exclusion ranges over all admitted worlds and is relative to the selected relation and existing concrete supporters. The uncovered-edge control has a necessary actual first mover with an incoming concrete supporter at another world, while a different individual is underived. This is a structural test of witness preservation without coverage."

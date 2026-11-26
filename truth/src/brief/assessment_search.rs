@@ -66,7 +66,7 @@ fn phrases(query: &Query) -> BTreeSet<String> {
         .collect()
 }
 
-fn expression(query: &Query) -> Option<String> {
+pub(super) fn expression(query: &Query) -> Option<String> {
     // FTS's Porter tokenizer folds inflections. Prefixing a cropped stem
     // would also retrieve different words such as "temporary" for "temporally".
     let terms: Vec<_> = query
@@ -310,7 +310,16 @@ pub fn report_for_root(
     question: &str,
     limit: usize,
 ) -> Result<(Value, String), String> {
-    let (mut report, mut text) = report(corpus, question, limit)?;
+    let identifier = super::proof_search::qualified_name(question);
+    let (mut report, mut text) = if identifier {
+        (
+            json!({"schema_version":1, "mode":"question","question":question,"matches":[],
+            "input_identity":corpus.input_identity()}),
+            format!("Lean lookup: {question}"),
+        )
+    } else {
+        report(corpus, question, limit)?
+    };
     let query = topic(question);
     let requested = phrases(&query);
     let leading = &report["matches"][0];
@@ -318,7 +327,8 @@ pub fn report_for_root(
         .join(" ")
         .to_lowercase();
     let leading_words = words(&leading_text).join(" ");
-    if !requested.is_empty()
+    if !identifier
+        && !requested.is_empty()
         && !requested.iter().any(|p| leading_words.contains(p))
         && let Some(note) = note_passage(root, &query, &requested, &leading_text)?
     {
@@ -331,6 +341,58 @@ pub fn report_for_root(
         );
         text.insert_str(text.find('\n').unwrap_or(text.len()), &excerpt);
         report["note_match"] = note;
+    }
+    let results =
+        super::proof_search::find(root, corpus, &query, limit).map_err(|err| err.to_string())?;
+    let library = if identifier && results.is_empty() {
+        super::proof_search::library_declaration(root, &query.text)
+    } else {
+        None
+    };
+    let proof_section = if let Some(declaration) = &library {
+        let path = string(declaration, "path");
+        let label = if std::path::Path::new(path).ends_with("Challenge.lean") {
+            "Frozen Lean specification"
+        } else {
+            "Lean library declaration"
+        };
+        format!(
+            "\n\n{label} · {path}:{}\n{}",
+            declaration["line"],
+            string(declaration, "source")
+        )
+    } else if results.is_empty() {
+        "\n\nNo registered Lean result matched this question.".to_owned()
+    } else {
+        let rendered = results
+            .iter()
+            .enumerate()
+            .map(|(i, r)| {
+                let mut entry = format!(
+                    "{}\n{}",
+                    string(r, "argument_label"),
+                    crate::synthesis::format_result_witness(r)
+                );
+                if i == 0 && !string(r, "argument_meaning").is_empty() {
+                    entry.push_str(&format!(
+                        "\nRecorded interpretation — {}",
+                        string(r, "argument_meaning")
+                    ));
+                }
+                entry.push_str(&format!(
+                    "\nInspect or withhold a premise — truth synthesis {}",
+                    string(r, "argument_id")
+                ));
+                entry
+            })
+            .collect::<Vec<_>>()
+            .join("\n\n");
+        format!("\n\nMatching Lean results\n{rendered}")
+    };
+    text.insert_str(text.find('\n').unwrap_or(text.len()), &proof_section);
+    report["lean_results"] = json!(results);
+    if let Some(declaration) = library {
+        report["lean_declaration"] = declaration;
     }
     Ok((report, text))
 }

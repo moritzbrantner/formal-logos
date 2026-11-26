@@ -17,6 +17,17 @@ import source_evidence as se
 
 
 class SourceCommandsTest(unittest.TestCase):
+    def test_selected_source_library_overrides_the_checkout_cache(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp, mock.patch.dict(se.os.environ, {}, clear=True):
+            root = Path(tmp)
+            self.assertEqual(se.source_cache_root(root), root / ".cache" / "truth-core")
+            se.subprocess.run(["git", "init", "-q", str(root)], check=True)
+            library = root / "source library"
+            se.subprocess.run(["git", "-C", str(root), "config", "truth.sourceCache", str(library)], check=True)
+            self.assertEqual(se.source_cache_root(root), library)
+            with mock.patch.dict(se.os.environ, {"TRUTH_SOURCE_CACHE_DIR": str(root / "override")}):
+                self.assertEqual(se.source_cache_root(root), root / "override")
+
     def test_bulk_verification_is_not_a_source_command(self) -> None:
         with contextlib.redirect_stderr(io.StringIO()), self.assertRaises(SystemExit) as error:
             se.parser().parse_args(["verify"])

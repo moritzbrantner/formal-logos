@@ -73,6 +73,25 @@ export default async function StatementPage({ params }: StatementPageProps) {
       </div>
       <h1 className="mt-5 font-serif text-4xl leading-[1.02] tracking-[-0.04em] sm:text-5xl">{statement.paraphrase}</h1>
 
+      <section className="record-section">
+        <p className="eyebrow">Lean declaration</p>
+        {statement.lean_declaration ? (
+          <>
+            <p className="mt-3 font-mono text-sm break-all">{statement.lean_declaration}</p>
+            {lean ? (
+              <>
+                <pre className="lean-snippet">{lean.snippet}</pre>
+                <a className="link-quiet mt-2 inline-block text-sm" href={lean.sourceUrl ?? sourceUrl(lean.file, lean.line)} rel="noreferrer" target="_blank">
+                  {lean.file}:{lean.line} ↗
+                </a>
+              </>
+            ) : null}
+          </>
+        ) : (
+          <p className="mt-3 text-sm text-[var(--muted)]">No Lean declaration is recorded for this statement.</p>
+        )}
+      </section>
+
       <Link className="link-quiet mt-4 inline-block text-sm" href={`/dossiers/${statement.id}#assessments`}>Research judgments, senses, rivals and attempt log →</Link>
       <Link className="link-quiet mt-2 block text-sm" href={treeHref(statement.id)}>Argument tree with this proposition as root →</Link>
 
@@ -335,24 +354,6 @@ export default async function StatementPage({ params }: StatementPageProps) {
         </section>
       ) : null}
 
-      <section className="record-section">
-        <p className="eyebrow">Lean declaration</p>
-        {statement.lean_declaration ? (
-          <>
-            <p className="mt-3 font-mono text-sm break-all">{statement.lean_declaration}</p>
-            {lean ? (
-              <>
-                <pre className="lean-snippet">{lean.snippet}</pre>
-                <a className="link-quiet mt-2 inline-block text-sm" href={lean.sourceUrl ?? sourceUrl(lean.file, lean.line)} rel="noreferrer" target="_blank">
-                  {lean.file}:{lean.line} ↗
-                </a>
-              </>
-            ) : null}
-          </>
-        ) : (
-          <p className="mt-3 text-sm text-[var(--muted)]">No Lean declaration is recorded for this statement.</p>
-        )}
-      </section>
     </article>
   );
 }

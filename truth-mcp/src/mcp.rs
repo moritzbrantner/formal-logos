@@ -64,15 +64,20 @@ Returns ranked records and note sections with their IDs and paths.",
     },
     Tool {
         name: "research_synthesis",
-        description: "Read the current findings for a statement, its premise judgments, shared dependencies and next tests. Supply a question to find assessed propositions by wording, a target for the graph-based synthesis, or neither for the God-existence case.",
+        description: "Read registered Lean theorem signatures, proof sources and record status for a statement or question, followed by scoped research findings. Search a theorem by name or ask in ordinary language. Omit both fields for God-existence.",
         schema: || {
             json!({ "type":"object", "additionalProperties":false, "properties":{
-            "target":id_schema("Statement UUID, legacy ID or exact label."),
+            "target":id_schema("Statement or argument UUID, legacy ID or exact label."),
+            "without":{"type":"array","maxItems":MAX_LIST,"items":id_schema("Withhold a premise or commitment of the selected argument.")},
             "question":{"type":"string","maxLength":1000,"description":"Research question in ordinary language."},
             "limit":limit_schema() } })
         },
         build: |args, _| {
             let mut argv = vec!["synthesis".to_owned()];
+            let without = texts(args, "without", 300)?;
+            if !without.is_empty() && text(args, "target", 300)?.is_none() {
+                return Err("without requires a target argument".into());
+            }
             match (text(args, "target", 300)?, text(args, "question", 1000)?) {
                 (Some(target), None) => argv.push(target),
                 (None, Some(question)) => argv.extend(["--question".into(), question]),
@@ -80,6 +85,9 @@ Returns ranked records and note sections with their IDs and paths.",
                 (Some(_), Some(_)) => {
                     return Err("give target or question, or omit both for God-existence".into());
                 }
+            }
+            for input in without {
+                argv.extend(["--without".into(), input]);
             }
             argv.extend(limit(args)?);
             Ok(argv)
@@ -638,6 +646,21 @@ mod tests {
                 "--limit",
                 "2"
             ]
+        );
+        assert_eq!(
+            build(
+                "research_synthesis",
+                json!({"target":"ARG", "without":["P","Q"]})
+            )
+            .unwrap(),
+            ["synthesis", "ARG", "--without", "P", "--without", "Q"]
+        );
+        assert!(
+            build(
+                "research_synthesis",
+                json!({"question":"origin", "without":["P"]})
+            )
+            .is_err()
         );
         assert!(build("research_synthesis", json!({"target":"X", "question":"Y"})).is_err());
     }

@@ -2,7 +2,9 @@
 module
 
 public import TruthCore.Latin.Aquinas.DeEnte.AggregateEsseCause
+public import TruthCore.Latin.Aquinas.DeEnte.AttenuatedEsseReception
 public import TruthCore.Latin.Aquinas.DeEnte.ClosedEsseSource
+public import TruthCore.Latin.Aquinas.DeEnte.ClosedSupplierCone
 public import TruthCore.Latin.Aquinas.DeEnte.EsseReception
 public import TruthCore.Latin.Aquinas.DeEnte.EsseSource
 public import TruthCore.Latin.Aquinas.DeEnte.ExtrinsicSource

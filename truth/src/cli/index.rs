@@ -8,6 +8,8 @@
 //!   records that reference it and the notes that name it; `show
 //!   docs/notes/x.md[#anchor]` — a note or one of its sections;
 //! - `duplicates`, `summary` — exact duplicate argument bundles, inventory;
+//! - `duplicates notes [check]` — repeated complete Markdown sections with at
+//!   least 50 prose words; `check` exits 1 if any are found;
 //! - `parity` — every corpus file and record against the index;
 //! - `export PATH` — one indexed corpus file's original bytes;
 //! - `bundle --case ID [--premise S]...`, `compare --case ID [--left S]...
@@ -25,8 +27,7 @@ use truth::index;
 
 pub const COMMAND: Command = Command { name: "index", run };
 
-const SUBCOMMANDS: &str =
-    "index requires build, search, show, duplicates, summary, parity, export, bundle or compare";
+const SUBCOMMANDS: &str = "index requires build, search, show, duplicates, formalization, summary, parity, export, bundle or compare";
 
 fn error(message: impl Into<String>) -> Failure {
     (1, json!({"code": "index_error", "message": message.into()}))
@@ -108,7 +109,58 @@ fn run(args: &Args, operands: &[&str]) -> Output {
             Ok((value, Some(text)))
         }
         ("show", [id]) => printed(index::show(&open(&root)?, id).map_err(error)?),
+        ("formalization", [] | ["check"]) => {
+            let rows = index::formalization::candidates(&root).map_err(error)?;
+            let check = rest == ["check"];
+            let selected: Vec<_> = rows
+                .iter()
+                .filter(|row| !check || row.kind == "lean_proof")
+                .collect();
+            let heading = if check {
+                "Embedded Lean proof blocks"
+            } else {
+                "Formalization candidates"
+            };
+            let mut lines = vec![format!("{heading}: {}", selected.len())];
+            for row in &selected {
+                lines.push(format!(
+                    "{}:{}  {} ({})  {}",
+                    row.path, row.line, row.kind, row.language, row.heading
+                ));
+            }
+            let message = lines.join("\n");
+            if check && !selected.is_empty() {
+                return Err((
+                    1,
+                    json!({"code":"embedded_lean_proofs","message":message,"blocks":selected}),
+                ));
+            }
+            Ok((json!({"blocks":selected}), Some(message)))
+        }
         ("duplicates", []) => printed(json!(index::duplicates(&open(&root)?).map_err(error)?)),
+        ("duplicates", ["notes"] | ["notes", "check"]) => {
+            let groups = index::duplicate_note_sections(&root).map_err(error)?;
+            let mut text = format!("Repeated note sections: {}", groups.len());
+            for group in &groups {
+                text.push('\n');
+                for location in group {
+                    text.push_str(&format!(
+                        "\n  {}:{}  {}",
+                        location.path, location.line, location.heading
+                    ));
+                }
+            }
+            let value = json!(groups);
+            if rest.ends_with(&["check"]) && !groups.is_empty() {
+                let report = if args.machine {
+                    value.to_string()
+                } else {
+                    text
+                };
+                return Err(raw(1, format!("{report}\n")));
+            }
+            Ok((value, Some(text)))
+        }
         ("summary", []) => printed(index::summary(&open(&root)?).map_err(error)?),
         ("parity", []) => {
             let report = index::parity(&open(&root)?, &root).map_err(error)?;

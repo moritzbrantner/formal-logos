@@ -222,7 +222,7 @@ test("real case preserves destinations for every support and evidence record", (
     for (const bundle of premise.bundles) {
       expect(argumentIds.has(bundle.id)).toBe(true);
       for (const id of bundle.premise_statement_ids) { expect(scope.has(id)).toBe(true); }
-      for (const id of bundle.resultIds) { expect(resultIds.has(id)).toBe(true); }
+      for (const proof of bundle.proofs) { expect(resultIds.has(proof.id)).toBe(true); expect(proof.theorem).toBeTruthy(); }
       for (const id of bundle.openLeaves ?? []) { expect(scope.has(id)).toBe(true); }
     }
     for (const bundle of premise.alternatives) {

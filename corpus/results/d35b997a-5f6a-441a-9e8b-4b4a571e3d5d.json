@@ -1,0 +1,12 @@
+{
+  "id": "d35b997a-5f6a-441a-9e8b-4b4a571e3d5d",
+  "label": "Attenuated actual esse reception implies rooted closed esse collections",
+  "argument_id": "3d03b286-43fc-4aea-b9eb-8243daba03b4",
+  "challenge_module": "TruthCore.Results.Aquinas.DeEnte.AttenuatedEsseReception.Challenge",
+  "solution_module": "TruthCore.Results.Aquinas.DeEnte.AttenuatedEsseReception.Solution",
+  "theorem": "TruthCore.Results.Aquinas.DeEnte.AttenuatedEsseReception.closedOfAttenuation",
+  "comparator_config": "results/d35b997a-5f6a-441a-9e8b-4b4a571e3d5d/comparator.json",
+  "status": "solution-present",
+  "description": "Uses solely the quantitative premise on the fixed actual esse-cause graph. The finite path to positive own input from any member stays in its supplier-closed collection and ends at a bearer with no distinct actual cause of esse. The result is the exact closed-collection premise used by the existing De ente God argument. The specialization uses neither preselected source nor separate audited world-relative roster. The separate roster, world-grounding, common-source and naming obligations of that argument retain their own premises. The quantitative hypothesis has no independent existential calibration.",
+  "transcription": "instantiation"
+}

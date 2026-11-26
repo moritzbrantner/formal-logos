@@ -3095,8 +3095,8 @@ re-check; it remains `unpublished`.
 
 **Scope and baseline.** Continue #1724, #1616, #1882, #1964, #1965 and the
 still-open #1966, from main `e7073368fcd87fb5be224b6bb7971a55f5316f40`.
-This is an analyst reconstruction, not a source attribution or a registered
-Lean result. Targets: `20babef7` (all nonempty actual-esse-cause-closed
+This analyst reconstruction has kernel-checked structural consequences linked
+below. Targets: `20babef7` (all nonempty actual-esse-cause-closed
 collections rooted), `5c898d24` (whole actual-concrete roster nontrapping),
 `dc397705` (some actual-concrete ground-relative root). These are not
 interchangeable: the first fixes q3a4's tenseless `ActualEsseCause`; the
@@ -3156,40 +3156,47 @@ independently activated outside bearer suffices (its singleton is postfixed).
 Neither a relative R-root by itself nor an independently named law entails
 this activation condition.
 
-**Consequences to check in Lean.** If an actual x is present in every fixed
-assignment in this test (or in every populated fixed assignment when an
-outside postfixed witness is given for the tested cone), no R-closed
-rootless C containing x is compatible with those assumptions. If that
-invariance holds for every actual x against all fixed assignments, every
-nonempty closed collection contains a root, classically. With the exact
-q3a4 R-adapter this is the proposed conditional application to 20babef7;
-with the actual-concrete relation and C=A it gives the whole-roster
-nontrapping conclusion, and population plus the appropriate stability/EM
-gives dc397705. C=A admits no nonempty outside witness; the populated-only
-version does not prove whole-roster nontrapping. These are proposed
-deductions, not verified corpus arrows. The direct premise options remain.
+**Exact connection to the root predicate.** [`ClosedSupplierCone.greatestOutsideClosedCone`](../../TruthCore/Latin/Aquinas/DeEnte/ClosedSupplierCone.lean)
+uses the existing `GroundClosedActual (esseCauseGraph p) () C`, restricted
+monotonicity and a guard at the deleted input. The proof works even
+without assuming the full roster is itself a fixed state. It exhibits one fixed
+substate of the actual roster outside C that contains every outside
+postfixed witness. An independent nonempty postfixed witness therefore
+makes this same substate populated.
 
-The proof is a localized fixed-point bound, related to
-`Logic.Regress.Graph` and #1878, not an independent discovery of
-fixed-point existence. Its increment is the exact combination of
-**closed-cone deletion, monotone greatest survivor, and targeted invariance
-among even populated alternatives**. It can diagnose a rootless component
-beside an unrelated source, where whole-roster root existence and global
-nonemptiness cannot. The candidate invariance is weaker than uniqueness
-when other components may vary; it is not furnished by a local causal
-explanation or by the mere fact that x actually exists.
+[`closedIffConeRetention`](../../TruthCore/Latin/Aquinas/DeEnte/ClosedSupplierCone.lean)
+uses excluded middle, roster preservation, the uniform supplier guard and
+monotonicity outside each rootless cone. Under those hypotheses,
+`ConeRetention` is equivalent to `20babef7`. The retention condition says
+every roster-bounded fixed assignment containing all outside postfixed
+witnesses must intersect the tested nonempty closed rootless cone. If CCR
+already holds, no such cone exists and retention holds for any rule.
+The equivalence contributes a test of what retention requires. Independent
+support requires a separate argument for why the modeled assignments are
+admissible alternatives and why the actual productive account excludes
+the omitted configuration.
 
-**Claim/type self-sweep (informal).** The conclusion is existence of a
+Applying [`commonSourceOfClosed`](../../TruthCore/Results/Aquinas/DeEnte/ClosedEsseSource/Solution.lean)
+to that CCR consequence also requires distinct-esse causal coverage,
+identity-bearer uniqueness, actual population and excluded middle on the
+same profile. The general fixed-point result can be instantiated with a
+separately specified actual-concrete relation for a whole-roster test.
+That instantiation gives no bridge between the two relations. For C=A,
+there is no nonempty outside witness, so retention imposed only on
+populated states cannot prove whole-roster nontrapping.
+
+**Claim/type self-sweep.** The conclusion is existence of a
 fixed mathematical substate omitting C, not possible nonexistence, temporal
 destruction, a physically realizable intervention or an actuality-producing
 operation. If one asserts only uniqueness among a restricted admissibility
 class, the constructed substate must be independently admitted before
 using the contradiction. Monotonicity, actual relation closure, uniform
 input guard, and invariance are all explicit; the proof does not infer
-uniform guards from actual edges. Full collection rootedness needs
-invariance for all selected members, not merely one. Independent semantic
-challenge and Lean/Comparator/NanoDa/corpus verification are pending;
-no new corpus argument or philosophical establishment is claimed.
+uniform guards from actual edges. Full collection rootedness needs a test
+for every nonempty closed rootless cone. The Lean build checks these
+structural consequences, and their actual application requires the stated
+interpretive premises. The lemmas leave registered arguments and
+philosophical establishment unchanged.
 
 
 ### Checkpoint B: populated alternatives, guard boundaries and matched accounts
@@ -3246,58 +3253,19 @@ interpretations).**
   metaphysics. A necessary global law could select by a different,
   nonmonotone rule, but its existential import would need defense.
 
-**Bounded diagnostic performed here.** Enumerated all 20 monotone Boolean
-truth tables on three input bits, combined into 6,859 operators with the
-all-present state fixed; paired them with all distinct-edge three-node
-supplier menus, retaining the uniform guard. Across 74,088 eligible
-operator/relation pairs there were 15,317 nonempty closed rootless-cone
-cases. In each case there was a fixed assignment within the cone complement
-and the union of all such fixed assignments was itself fixed. In each of
-450 cases with a nonempty outside postfixed witness, that union was
-populated and contained every such witness. The finite two-cycle with
-unconditional s has fixed masks 1 and 7; the nonmonotone control has only
-7. These are Python exhaustive diagnostics on finite sets, not a Lean
-verification, a model-registry certificate or evidence for modal
-admissibility.
+**Checked controls.** [`Control.strictTailOmission`](../../TruthCore/Latin/Aquinas/DeEnte/ClosedSupplierCone.lean)
+extends the existing roster-only profile with an activation rule and checks
+the strict successor priority, actual supplier guard, monotonicity, both
+fixed assignments and the failure of CCR beside an isolated root.
+`Control.guardedInhibitionWithoutOutsideFixed` uses that same strict
+profile and preserves the supplier guard and full fixed roster. Its
+prefixed outside singleton has no fixed substate because the bearer
+toggles there.
 
-Reproduction (bit masks; supplier menus exclude identity edges):
-```python
-from itertools import product
-sub = range(8)
-le = lambda a, b: a & b == a
-mono = [tuple((m >> u) & 1 for u in sub) for m in range(256)
-        if all(not ((m >> u) & 1) or ((m >> v) & 1)
-               for u in sub for v in sub if le(u, v))]
-menus = [[m for m in sub if not (m & (1 << i))] for i in range(3)]
-valid = cases = pop = 0
-for fs in product(mono, repeat=3):
-    if not all(f[7] for f in fs):
-        continue
-    f = tuple(sum(g[u] << i for i, g in enumerate(fs)) for u in sub)
-    for r in product(*menus):
-        if any(r[i] and f[u] & (1 << i) and not u & r[i]
-               for u in sub for i in range(3)):
-            continue
-        valid += 1
-        for c in range(1, 8):
-            if any(not r[i] or r[i] & ~c
-                   for i in range(3) if c & (1 << i)):
-                continue
-            u = 7 ^ c
-            cases += 1
-            assert le(f[u], u)
-            fixed = [v for v in sub if le(v, u) and f[v] == v]
-            assert fixed
-            greatest = 0
-            for v in fixed:
-                greatest |= v
-            assert f[greatest] == greatest
-            seeds = [v for v in sub if v and le(v, u) and le(v, f[v])]
-            if seeds:
-                pop += 1
-                assert greatest and all(le(v, greatest) for v in seeds)
-assert (valid, cases, pop) == (74088, 15317, 450)
-```
+The historical three-node audit checked 74,088 eligible operator/relation
+pairs, including 15,317 cone cases and 450 with a populated outside
+postfixed witness. The general proof covers those fixed-point consequences
+for arbitrary carriers.
 
 **Why the guard may deserve positive warrant.** Distinguish (i) the
 existential condition on a producer actually exercising a power,
@@ -3598,8 +3566,10 @@ neighborhood of the full assignment intersects it, by finite joint
 realizability, so the full assignment belongs to it). A genuine
 retained simultaneous productive exercise can warrant J directly;
 there is no reason to assume general compactness of metaphysical
-powers. These are candidate set-theoretic deductions, not Lean or
-configuration-registry results.
+powers. The finite case is checked by [`jointRetentionOfFiniteDirected`](../../TruthCore/Latin/Aquinas/DeEnte/ClosedSupplierCone.lean).
+It finds a single output containing all of U; `stableOutsideIffRetained`
+uses the component guard to identify that output with U, and
+`Control.finiteOutputsWithoutInfiniteJoint` checks the infinite separator.
 
 #### 3. Structural separators: change the supplier and keep the component guard
 
@@ -3628,47 +3598,10 @@ It does not claim no other fixed assignment survives. For infinite
 U the finite-subsets family makes the stronger finite-join/whole-join
 distinction. These are explicitly surrogate output relations.
 
-**New finite diagnostic, actually run in Python.** Exhausted every
-nonempty family of subsets of U for sizes 1, 2 and 3, tested individual
-coverage, directedness and full-union membership. At size 3, 218 of
-255 families cover every member, but 90 of those omit U. Every
-directed covering family (128) contains U. At size 2, 10 covering
-families include two failures of joint coverage. The following
-reproduces the finite test and varying-supplier control:
-
-```python
-for n in range(1, 4):
-    U = (1 << n) - 1
-    subsets = list(range(U + 1))
-    total = covered = fail = directed_covered = 0
-    for mask in range(1, 1 << len(subsets)):
-        T = [s for s in subsets if mask >> s & 1]
-        total += 1
-        cov = all(any(t & (1 << i) for t in T) for i in range(n))
-        directed = all(any(((a | b) & ~t) == 0 for t in T)
-                       for a in T for b in T)
-        if cov:
-            covered += 1
-            fail += U not in T
-            if directed:
-                directed_covered += 1
-                assert U in T
-    assert (total, covered, fail, directed_covered) == {
-        1: (3, 2, 0, 2), 2: (15, 10, 2, 8),
-        3: (255, 218, 90, 128)}[n]
-
-# s=1, a=2, b=4, c=8, d=16
-A, U = 31, 1
-C = A ^ U
-def F(S):
-    return (1 | (2 if ((S & 8 and S & 16) or
-                       (S & 4 and not S & 8)) else 0)
-            | (4 if S & 2 else 0) | (8 if S & 4 else 0)
-            | (16 if S & 4 else 0))
-assert F(A) == A and F(U) == U
-assert all(not (F(S) & C) or S & C for S in range(A + 1))
-assert F(4) & 2 and not F(4 | 8) & 2
-```
+[`Control.individualRetentionWithoutJoint`](../../TruthCore/Latin/Aquinas/DeEnte/ClosedSupplierCone.lean)
+checks the two singleton outputs directly. In the [historical finite audit](https://github.com/moritzbrantner/formal-logos/blob/0895006f12ee9a69700fd68208656a8b6c0c5e7b/docs/notes/unique-feedback-explanation-311.md#L3639-L3670) at
+size three, 218 of the 255 nonempty output families covered U, 90 of those
+omitted U, and all 128 directed covering families contained U. The [five-bearer Lean control](../../TruthCore/Latin/Aquinas/DeEnte/ClosedSupplierCone.lean#L306) checks both fixed states and the component guard for every input. It also identifies c as a’s supplier at the full roster, b as its supplier when only b is present, and the loss of activation when c is added without d.
 
 #### 4. Why the non-deletion bridge is not a consequence of receipt
 
@@ -4089,87 +4022,29 @@ proof of unconditional intrinsic adequacy. Both accounts owe the
 explanation of their own existence, unless they defend a stopping
 rule under which no further explanation is apt.
 
-#### 5. Finite audit and same-witness correction
+#### 5. Joint omission and the same-witness correction
 
-The following Python diagnostic was actually run in this session.
-All n=1..3 nonempty families of target-absent rows were checked for
-every possible exclusion mask; n=4 checks all pairs of rows with
-repetition, not every family. Candidate facts are all actual, a row
-is a subset of them true when the target is absent, and masks D are
-stipulated priority exclusions. This tests the joint sufficiency/
-eligibility characterization only; it does not certify actual
-strict explanatory orders or metaphysical adequacy.
+[`PriorityOmission.excludingRecordIffNoCommonOmission`](../../TruthCore/Explanation/PriorityOmission.lean)
+replaces the finite audit with an arbitrary family of target-absent rows.
+Given at least one omission row, it proves an eligible nonempty record can
+exclude every omission exactly when no single omission preserves all
+eligible facts. `individualOmissionsWithoutCommon` checks the two-row
+separator. The original audit evaluated 4,282 combinations of row families
+and exclusion masks. `priorExcludesSelfAndPosterior` and
+`constitutionNotPriorOfWholeFirst` verify the strict-priority filter and
+the conditional whole-first cycle on the same fact relation. These
+consequences establish eligibility or truth entailment in the specified
+class. They supply neither the actual priority links nor substantive
+existential warrant for a particular nature.
 
-```python
-from itertools import combinations_with_replacement
-for n in range(1, 5):
-    A = (1 << n) - 1
-    rows_n = 1 << n
-    families = ([tuple(v for v in range(rows_n) if mask >> v & 1)
-                 for mask in range(1, 1 << rows_n)]
-                if n <= 3 else
-                list(combinations_with_replacement(range(rows_n), 2)))
-    for rows in families:
-        for D in range(A + 1):
-            L = A ^ D
-            feasible = [g for g in range(1, A + 1)
-                        if g & D == 0 and all(g & ~r for r in rows)]
-            common = any(L & ~r == 0 for r in rows)
-            assert bool(feasible) == (not common)
-            if feasible:
-                assert L in feasible
-# Output (n, families, cases): (1,3,6), (2,15,60),
-# (3,255,2040), (4,136,2176). Total 4282 cases.
-# Candidate reason tokens for a selected necessary whole:
-law, blueprint, p, q, actual_shape, positive = [1 << i for i in range(6)]
-D = p | q | actual_shape
-absent = law | blueprint
-for g in range(1, 32):
-    assert not (bool(g & ~absent) and not (g & D))
-# A stipulated nonposterior positive nature token would pass both tests:
-assert positive & ~absent and not positive & D
-# Jointly eliminating record: neither singleton suffices, both do.
-assert all(not all(g & ~r for r in [1, 2]) for g in [1, 2])
-assert all(3 & ~r for r in [1, 2])
-```
-
-Self-sweep also caught a genuine previous draft scope error:
-roothood at w plus contingent-grounding and the necessary logical
-background proves an actual necessary root at w, hence
-`b19ffd92`, not the all-world underivedness clause of
-`0bdcf366`. The corrected paragraph at checkpoint B now names
-the missing transport. A two-world structural control (reuse
-the shape of the modal-grounding rotating-root controls) has
-two actual necessary concreta everywhere, a->b at world 0 and
-b->a at world 1, universal access. Each world has a root, all
-actual contingent-grounding obligations hold vacuously, but no
-one bearer has no incoming actual concrete ground at every world.
-This directly tests the invalid extension. It neither contradicts
-the existing all-world transport theorems nor implies that
-such rotating actual grounding is metaphysically admissible.
-The test executed:
-
-```python
-worlds = beings = range(2)
-exists = lambda w, x: True
-edge = lambda w, y, x: ((w == 0 and y == 0 and x == 1) or
-                         (w == 1 and y == 1 and x == 0))
-roots = [x for x in beings if exists(0,x) and
-         not any(exists(0,y) and edge(0,y,x) for y in beings)]
-assert roots == [0]
-assert all(all(exists(w,x) for w in worlds) for x in beings)
-assert not any(all(not edge(w,y,x) for w in worlds for y in beings)
-               for x in beings)
-```
-
-Earlier A/B/C finite diagnostics were rerun verbatim: 74,088
-eligible operator/relation pairs, 15,317 cone cases, 450 with a
-nonempty outside postfixed witness; 218 size-three covering
-families, 90 not containing U and 128 directed covering; both
-nonmonotone varying-supplier controls passed. This is local
-Python reproduction, not a new Lean/Comparator proof. CI run
-45512050386 for the preceding checkpoint C was still running
-at the baseline inspection; final-head CI remains outstanding.
+Roothood at w plus contingent-grounding and the necessary logical
+background proves an actual necessary root at w, hence `b19ffd92`.
+The all-world underivedness clause of `0bdcf366` needs the separate
+transport premise. [`UnderivedRootRoute.rotating_root`](../../TruthCore/Causality/UnderivedRootRoute.lean)
+already checks the two-world control: both concreta exist necessarily,
+the single support arrow reverses between worlds, and an actual necessary
+root coexists with failure of necessarily underived existence. This is a
+control on the selected support relation and stipulated frame.
 
 **Provisional judgment and current handoff.** The abstract-law
 account incurs a concrete-import burden when its joint abstract
@@ -4212,8 +4087,9 @@ from a mere equality of principle labels. Reopen on independently
 warranted nature-content/instantiation, or an actual partial
 ground link from a constituent to the whole's esse.
 
-The four executable comparisons were reproduced in independent review. These
-checkpoints give informal deductions under the stated assumptions. The
+Independent review reproduced the four historical executable comparisons.
+The linked Lean declarations cover the structural consequences described
+above under their stated assumptions. The
 merged receipt study and inertia control already cover the corresponding
 parts of #1616. Present productive supply, its relation to origin and to
 exemplar or final causation, and representative applications under #1724

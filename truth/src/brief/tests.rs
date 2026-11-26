@@ -1956,3 +1956,82 @@ fn a_conversational_introduction_preserves_the_displayed_question_and_the_topic_
     assert!(prose.contains(q));
     std::fs::remove_dir_all(root).unwrap();
 }
+
+#[test]
+fn question_returns_frozen_lean_evidence_without_any_notes_or_assessments() {
+    let root = fixture("proof-question");
+    std::fs::remove_dir_all(root.join("docs")).unwrap();
+    std::fs::remove_dir_all(root.join("corpus/attempts")).unwrap();
+    let source = "namespace TruthCore.Results.Fixture\ntheorem goal (h : True) : True := by\n  sorry\nend TruthCore.Results.Fixture\n";
+    write(&root, "TruthCore/Results/Fixture/Challenge.lean", source);
+    write(
+        &root,
+        "TruthCore/Results/Fixture/Solution.lean",
+        &source.replace("sorry", "exact h"),
+    );
+    let corpus = Corpus::load(&root).unwrap();
+    for question in [
+        "TruthCore.Results.Fixture.goal",
+        "goal from the open bridge",
+    ] {
+        let (result, text) =
+            super::assessment_search::report_for_root(&root, &corpus, question, 2).unwrap();
+        let proofs = result["lean_results"].as_array().unwrap();
+        assert_eq!(proofs.len(), 1);
+        assert_eq!(proofs[0]["id"], RESULT);
+        assert_eq!(proofs[0]["premise_statement_ids"], json!([OPEN_PREMISE]));
+        assert_eq!(proofs[0]["conclusion_statement_id"], GOAL);
+        assert!(text.contains("goal (h : True) : True"), "{text}");
+        assert!(text.contains("Matching Lean results"));
+        assert!(result["matches"].as_array().unwrap().is_empty());
+    }
+    let companion = "namespace TruthCore.Results.Fixture\ntheorem paired : True := by\n  sorry\ntheorem pending : True := by\n  sorry\nend TruthCore.Results.Fixture\n";
+    write(&root, "TruthCore/Results/Fixture/Challenge.lean", companion);
+    write(
+        &root,
+        "TruthCore/Results/Fixture/Solution.lean",
+        "namespace TruthCore.Results.Fixture\ntheorem paired : True := by\n  trivial\nend TruthCore.Results.Fixture\n",
+    );
+    for (name, module, detail) in [
+        ("paired", "Solution", "trivial"),
+        ("pending", "Challenge", "Frozen Lean specification"),
+    ] {
+        let (lookup, text) = super::assessment_search::report_for_root(
+            &root,
+            &corpus,
+            &format!("TruthCore.Results.Fixture.{name}"),
+            1,
+        )
+        .unwrap();
+        assert_eq!(
+            lookup["lean_declaration"]["path"],
+            format!("TruthCore/Results/Fixture/{module}.lean")
+        );
+        assert!(text.contains(detail), "{text}");
+    }
+    let (library, text) = super::assessment_search::report_for_root(
+        &root,
+        &corpus,
+        "TruthCore.Fixture.Priority.DependenceExcludesBeingWithout",
+        2,
+    )
+    .unwrap();
+    assert_eq!(
+        library["lean_declaration"]["path"],
+        "TruthCore/Fixture/Priority.lean"
+    );
+    assert!(text.contains("∀ x y, DependsForBeing x y"));
+    assert_ne!(
+        library["lean_declaration"]["name"],
+        library["lean_results"][0]["theorem"]
+    );
+    let (wrong, _) =
+        super::assessment_search::report_for_root(&root, &corpus, "Wrong.Namespace.goal", 2)
+            .unwrap();
+    assert_eq!(wrong["lean_results"], json!([]));
+    assert!(wrong.get("lean_declaration").is_none());
+    let (miss, _) =
+        super::assessment_search::report_for_root(&root, &corpus, "xylophones", 2).unwrap();
+    assert_eq!(miss["lean_results"], json!([]));
+    std::fs::remove_dir_all(root).unwrap();
+}

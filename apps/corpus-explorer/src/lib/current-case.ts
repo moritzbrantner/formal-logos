@@ -60,7 +60,7 @@ export function currentCase({ corpus, report, dossiers, assessments, revision }:
       if (results.length) {
         status = results.some((result) => resultKind(report, result.id).kind === "derivation") ? "verified" : "transcription";
       }
-      return { ...argument, status, resultIds: results.map((result) => result.id),
+      return { ...argument, status, proofs: results.map(({ id, theorem }) => ({ id, theorem })),
         openLeaves: route?.open_premise_statement_ids ?? null };
     })
     .sort((a, b) => a.id.localeCompare(b.id));
@@ -173,4 +173,8 @@ export function currentCase({ corpus, report, dossiers, assessments, revision }:
 /** Stable static destinations, derived from proposition identity, never a registry. */
 export function casePremiseHref(statementId: string) {
   return `/case/god-exists/premises/${encodeURIComponent(statementId)}`;
+}
+
+export function caseArgumentHref(argumentId: string) {
+  return `/case/god-exists/arguments/${encodeURIComponent(argumentId)}`;
 }

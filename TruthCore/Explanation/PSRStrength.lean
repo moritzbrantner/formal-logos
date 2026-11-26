@@ -25,6 +25,15 @@ namespace TruthCore.Explanation.PSRStrength
 
 open TruthCore.German.Kant.CosmologicalInference
 
+/-- An accessible failure of a necessary consequence also witnesses failure of its antecedent. -/
+theorem failure_transport {W : Sort _} (R : W → W → Prop)
+    (a : W) (P Q : W → Prop)
+    (bridge : ∀ v, R a v → P v → Q v)
+    (actualP : P a) (failure : ∃ v, R a v ∧ ¬ Q v) :
+    P a ∧ ∃ v, R a v ∧ ¬ P v := by
+  obtain ⟨v, hv, hn⟩ := failure
+  exact ⟨actualP, v, hv, fun hp => hn (bridge v hv hp)⟩
+
 /-- The comparison arena. `ontic` reuses the existing world, accessibility,
 existence and causal vocabulary. Facts are a separate sort from beings: `exist x`
 is the fact that `x` exists, and other facts need not concern existence. Reasons

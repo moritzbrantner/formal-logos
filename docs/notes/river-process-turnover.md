@@ -18,10 +18,4 @@ Focused shared-session development diagnostic: workspace HEAD `f2db33e8273b214f1
 
 ## Material coincidence comparison
 
-[Material constitution scope](material-constitution-scope.md) compares the same
-two-time material history as enduring bearers and as overlapping nonempty
-temporal occurrence wholes. It preserves existence and constituent observations
-at every represented time, while distinguishing slice coincidence from global
-extensionality and equality of all mereological parts. The new certificate
-composes the existing results; physical and persistence applicability remain
-OPEN, and no root premise is discharged.
+The later comparison uses turnover to test what persists when the enduring carrier and its time-indexed constituents are represented separately. [Material coincidence and the scope of extensionality](material-constitution-scope.md)

@@ -18,15 +18,15 @@ the reason is necessary is needed. -/
 theorem necessitating_reason_contingent (A : Arena W B F) (hn : Necessitating A)
     {w : W} {r f : F} (he : A.explains w r f) (hr : A.holds w r)
     (hc : Contingent A w f) : Contingent A w r := by
-  obtain ⟨_, v, hv, hf⟩ := hc
-  exact ⟨hr, v, hv, fun hrv => hf (hn w r f he v hv hrv)⟩
+  exact failure_transport (Access A) w (fun v => A.holds v r) (fun v => A.holds v f)
+    (hn w r f he) hr hc.2
 
 /-- The aggregate of all contingent truths is itself contingent as soon as one
 contingent truth exists. -/
 theorem bccf_contingent (A : Arena W B F) (hs : ConjunctSound A) {a : W} {t c : F}
     (ht : BCCFAt A a t) (hc : Contingent A a c) : Contingent A a t := by
-  obtain ⟨hca, v, hv, hcv⟩ := hc
-  exact ⟨ht.1, v, hv, fun htv => hcv (hs c t v (ht.2 c ⟨hca, v, hv, hcv⟩) htv)⟩
+  exact failure_transport (Access A) a (fun v => A.holds v t) (fun v => A.holds v c)
+    (fun v _ => hs c t v (ht.2 c hc)) ht.1 hc.2
 
 /-- The collapse through distribution and contingent irreflexivity. -/
 theorem collapse_distribution (A : Arena W B F) (a : W) (t c : F)

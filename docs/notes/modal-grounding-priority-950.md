@@ -449,18 +449,9 @@ record changed, and no full-source network check was run.
 ### What fixes the answer
 
 In a Euclidean plane with a common unit, issue two straight segments from O at right angles, of lengths 3 and 4. Call the endpoints A and B. No drawing, observer or physical instance is among the inputs. Write the displacement vectors as u and v. Squared Euclidean distance between their endpoints is the inner product of their difference with itself. Bilinearity gives
-`AB² = ⟨u,u⟩ + ⟨v,v⟩ − 2⟨u,v⟩`. The measured lengths fix the first two terms at 9 and 16, and perpendicularity fixes the third at zero. That is why 5 is forced. Nothing in the construction assigned AB a length. An exact witness in ordinary coordinate mathematics uses the following integer calculation, where all coordinates are in fifths of the common unit.
+`AB² = ⟨u,u⟩ + ⟨v,v⟩ − 2⟨u,v⟩`. The measured lengths fix the first two terms at 9 and 16, and perpendicularity fixes the third at zero. That is why 5 is forced. Nothing in the construction assigned AB a length. In fifths of the common unit, the vectors (9, 12) and (−16, 12) have squared lengths 225 and 400, dot product zero and squared endpoint distance 625. Lean checks those coordinates in `coordinateWitness` and proves the distance for arbitrary vectors satisfying the length and orthogonality hypotheses in `thirdSide`. [Euclidean proofs](../../TruthCore/German/Kant/TrianglePossibility.lean#L18)
 
-```python
-def dot(u, v):
-    return sum(a * b for a, b in zip(u, v))
-
-u, v = (9, 12), (-16, 12)
-gap = tuple(b - a for a, b in zip(u, v))
-assert (dot(u, u), dot(v, v), dot(u, v), dot(gap, gap)) == (225, 400, 0, 625)
-```
-
-Two controls give different verdicts. Append `AB = 6` to the original inputs and the specification demands both squared distances 25 and 36. It has no Euclidean instance. Alternatively, **change only the ambient geometry**. On a round sphere of radius 6/π in the same unit, start at the north pole along meridians 90° apart and travel the same geodesic lengths 3 and 4. A lies on the equator. The plane of B's meridian is perpendicular to the radius through A, so the central angle between A and B is 90°. Their shortest surface distance is 3. Both legs are shorter than a semicircle and the included angle is still right. There is a consistent construction with a different prediction. The Euclidean rule for subtracting planar displacements made a substantive difference even though no one drew either figure.
+Two controls give different verdicts. Append `AB = 6` to the original inputs and the specification demands both squared distances 25 and 36. It has no Euclidean instance. Alternatively, **change only the ambient geometry**. On a round sphere of radius 6/π in the same unit, start at the north pole along meridians 90° apart and travel the same geodesic lengths 3 and 4. A lies on the equator. The plane of B's meridian is perpendicular to the radius through A, so the central angle between A and B is 90°. Their shortest surface distance is 3. Both legs are shorter than a semicircle and the included angle is still right. There is a consistent construction with a different prediction. The Euclidean rule for subtracting planar displacements made a substantive difference even though no one drew either figure. Lean checks the incompatibility with 6, the two meridian tangents at the pole, and all three spherical distances using the round metric’s shorter-arc formula, radius times the principal angle between unit radii. [Euclidean exclusion](../../TruthCore/German/Kant/TrianglePossibility.lean#L35) · [Meridians and spherical lengths](../../TruthCore/German/Kant/TrianglePossibility.lean#L59)
 
 ### Which actuality premise is at stake?
 

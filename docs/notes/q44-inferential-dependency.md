@@ -1096,23 +1096,7 @@ The [comparison of application, immediate concurrence and conservation](actualit
 
 Fix the named giver, secondary producer and patient in one actual occasion. Two questions are at issue. Does the giver contribute to the patient's result? Does its contribution to that result enter **through this producer's exercise**? The second question matters to `d851dbc6`, which extends the attribution to *every* qualifying upstream giver. Its q3 type has no occasion parameter. Applying it to a particular exercise requires a reading under which the selected relation concerns that exercise; agreement about the bearers alone cannot pick a repeated occurrence.
 
-**Test with the actual corpus meanings.** Give the proponent even unrestricted composition of actual esse causes (`b4987085`), the binary caused-cause bridge (`e74de400`), and credit whenever a named giver applies the intermediate (`6dd808ed`). These statements pass the sense preflight together. All three are true in the **same** four-role interpretation of the existing [control certificate](../../TruthCore/Results/Causality/GiverIndexedApplication/Solution.lean). The source gives esse to the producer and the recipient. The supporter applies the producer in its per se production of the recipient. The source does not. The distinction survives even when the binary marker is exactly the projection of application by some actual upstream giver. The following projection from the existing proof type-checks locally without axioms. It identifies an invalid inference at the declared meanings; which interpretation applies to a real existential giver remains open.
-
-```lean
-import TruthCore.Results.Causality.GiverIndexedApplication.Solution
-open TruthCore.Latin.Aquinas.DeEnte
-open TruthCore.Causality.Q44SourceSupply
-open TruthCore.Causality.GiverIndexedApplication
-open TruthCore.Causality.GiverIndexedApplication.Control
-theorem exactBundleControl :
-    CausedEsseCauseCausesAsCaused (profile true) asCaused ∧
-    AppliedGiverComposes (profile true) (through false) ∧
-    ActualEsseCauseComposes (profile true) ∧
-    ¬ EachGiverApplies (profile true) asCaused (through false) := by
-  obtain ⟨_, _, _, _, _, _, bg, _, _, _, _, comp, _, credit, failure⟩ :=
-    TruthCore.Results.Causality.GiverIndexedApplication.controls
-  exact ⟨bg.2.2.2.2.2.1, credit, comp, failure⟩
-```
+**Test with the actual corpus meanings.** Give the proponent even unrestricted composition of actual esse causes (`b4987085`), the binary caused-cause bridge (`e74de400`), and credit whenever a named giver applies the intermediate (`6dd808ed`). These statements pass the sense preflight together. All three are true in the **same** four-role interpretation of [the control certificate](../../TruthCore/Results/Causality/GiverIndexedApplication/Solution.lean#L53). The source gives esse to the producer and the recipient. The supporter applies the producer in its per se production of the recipient. The source does not. The distinction survives even when the binary marker is exactly the projection of application by some actual upstream giver. It identifies an invalid inference at the declared meanings; which interpretation applies to a real existential giver remains open. The assignment uses `profile true` and `through false`.
 
 On revision `ba741f5cd`, Duper ran with 10,000 heartbeats, one job and a batch size of one. Ranked discovery (`--premise-pool all --candidates 8`) retrieved all three exact-bundle members among its eight candidates. The exact run explicitly supplied `e74de400`, `6dd808ed`, `b4987085` in that order. Both ran one goal, returned unresolved and reported no setup errors. Both reports include name-based binder identifications. The independent Lean projection fixes the profile and relations explicitly and establishes non-entailment for the exact three premises. The search outcomes alone do not establish non-entailment for the ranked eight or for other candidate bundles.
 
@@ -1123,25 +1107,9 @@ On revision `ba741f5cd`, Duper ran with 10,000 heartbeats, one job and a batch s
 | Through the producer | `s = g ∧ p` | `y = s` | Stroke and mark cease | Mark occurs |
 | At the patient alongside the producer | `s = p` | `y = g ∧ s` | Stroke persists, mark ceases | Mark ceases |
 
-Thus, even selective loss of the mark and an actual observed stroke give the same answers before locating the path. Observing what happens **at the stroke** under selective withdrawal already distinguishes these mechanisms. If the stroke can instead be driven independently, the last column tests whether the mark still needs the giver's input when the stroke is supplied. Both tests assume the other working conditions and patient response can be held fixed. This reuses the [controlled direct effect distinction](causal-transitivity-1399.md) for the named-source question. It complements the [previous press cases](actuality-esse-research.md#11-does-the-giver-act-through-the-secondary-agent-in-this-effect) by giving the rivals the same entire endpoint response table. A local Lean check of the finite equations uses no axioms:
+Thus, even selective loss of the mark and an actual observed stroke give the same answers before locating the path. Observing what happens **at the stroke** under selective withdrawal already distinguishes these mechanisms. If the stroke can instead be driven independently, the last column tests whether the mark still needs the giver's input when the stroke is supplied. Both tests assume the other working conditions and patient response can be held fixed. This reuses the [controlled direct effect distinction](causal-transitivity-1399.md) for the named-source question. It complements the [previous press cases](actuality-esse-research.md#11-does-the-giver-act-through-the-secondary-agent-in-this-effect) by giving the rivals the same entire endpoint response table. The finite equations are checked without axioms.
 
-```lean
-namespace ExerciseEndpoint
--- g is a selected working input. p is the producer's local readiness.
-def mediatedStroke (g p : Bool) := g && p
-def jointStroke (_g p : Bool) := p
-def mediatedEffect (stroke : Bool) := stroke
-def jointEffect (g stroke : Bool) := g && stroke
-theorem endpointAgreement (g p : Bool) :
-    mediatedEffect (mediatedStroke g p) = jointEffect g (jointStroke g p) := rfl
-theorem actualAgreement : mediatedStroke true true = jointStroke true true := rfl
-theorem discriminate : mediatedStroke false true ≠ jointStroke false true ∧
-    mediatedEffect true ≠ jointEffect false true := by decide
-#print axioms endpointAgreement
-#print axioms actualAgreement
-#print axioms discriminate
-end ExerciseEndpoint
-```
+[Compiled endpoint, stroke and withdrawal comparisons](../../TruthCore/Causality/ExerciseEndpointControls.lean#L22).
 
 **Provisional assessment.** Actual transmission traced from this giver into this producer's exercise is positive evidence of named application, even where other agents share the work. Credit at the endpoint and knowledge that the giver sustains both bearers leave its role in the producer unresolved. The controlled comparison establishes the limits of that evidence even after granting functional dependence of the endpoint on a selective working input. It gives no reason to posit a second action where the agent's operation and the patient's change are numerically one. In that reading the stroke/mark manipulation may be unavailable. The remaining test is to identify a source-specific contribution to the producer *as exercising its power*, for example a measured transmission at its working interface, or an independently warranted account of why receiving this power entails receiving its actual employment in this occasion from the same giver. Showing only that the producer received its nature or that the patient received the result would repeat the existing evidence. The restricted composition assembly `9f2abd14` retains its two explicit inputs. Extension to every respect under `b26c10a0` still requires coverage and an interpretation of each productive contribution in the target profile.
 
@@ -1151,39 +1119,13 @@ Grant the stronger starting point. The same giver *a* now sustains the producer 
 
 **The positive inference.** Specify what passes from giver to producer. When the giver's current activity produces or maintains the operative feature, and that feature's actual operation productively shapes this stroke, the giver can act through the producer in that respect. Another agent may supply the occasion, release or patient. The giver need not turn on and off, select the time or do all the work. This is especially strong when a change of the feature during operation changes the stroke in the predicted way and the transmission of that influence can be traced. Conversely the mere truth of “the power was present and was exercised” does not yet identify the giver's continuing activity as a constituent of its execution. A standing power denotes an ability even while idle; an actual process bearing or transmitting its influence can serve as a contributor in an exercised record. Introducing an event named *power* cannot supply this interpretation.
 
-There is an exact conditional reading of this inference using the existing [productive-path interface](../../TruthCore/Causality/ExerciseContribution.lean). Take an occurring giver event, an occurring realization of the operative power, the producer's stroke and its particular result. Given exercised contributor steps linking them in that order, the actual named giver satisfies `ThroughAt`. The result allows mediated influence. It neither requires another feed into the stroke nor identifies a new activating event. The proof below also spells out its boundary: the step from operative realization to stroke is a **productive contributor** premise, stronger than membership among the stroke's enabling conditions. Temporal coincidence with a present gift must be supplied in the interpretation. Applying the conclusion as the q3 `Through` further needs the episode and esse links used in `d851dbc6`.
+There is an exact conditional reading of this inference using the existing [productive-path interface](../../TruthCore/Causality/ExerciseContribution.lean). Take an occurring giver event, an occurring realization of the operative power, the producer's stroke and its particular result. Given exercised contributor steps linking them in that order, the actual named giver satisfies `ThroughAt`. The result allows mediated influence. It neither requires another feed into the stroke nor identifies a new activating event. The path proof requires an additional condition. The step from operative realization to stroke is a **productive contributor** premise, stronger than membership among the stroke's enabling conditions. Temporal coincidence with a present gift must be supplied in the interpretation. Applying the conclusion as the q3 `Through` further needs the episode and esse links used in `d851dbc6`.
 
 **What if an operative power manifests whenever the trigger arrives?** Consider a producer with a variable response gain: how far its output moves for a standard release. In both mechanisms a named station maintains that very gain, including under load. A variable-ratio transmission whose linkage the station holds in position illustrates the maintained characteristic. Release is controlled elsewhere. In one arrangement the local system supplies the running work. In the other the same station also supplies the running work. A common station shutdown removes its gain-setting action and any running supply from it. These are mechanical analogues of distinct contributions to an operation. They do not identify a basic natural power with an acquired adjustable setting or equate productive agency with energy transfer.
 
-In the simplified equations below the gain is a nonnegative integer, `trigger` is the release, and `feed` means running work is available. The output is a normalized stroke magnitude; take an otherwise fixed patient that records it. With an intact local running supply, `feed = true`. With a running supply coupled to the station, `feed = giver`. For **every** giver state, trigger setting and gain, both arrangements have the same actual gain and stroke magnitude. Even measuring the producer as well as the patient while varying these inputs leaves that additional role undecided. Now keep the gain-setting action on, release the producer, and selectively isolate the station's running line. In the first arrangement the local supply remains; in the second there is no running supply. At positive gain the strokes diverge. The comparison requires independent access to the running line and continued operation of the gain setter under load. It identifies an additional motive contribution where those conditions hold. The station can already deserve productive credit for the profile in **both** arrangements. These equations are therefore not an omission model of `ThroughAt` or a counterexample to `EachGiverApplies`.
+In the compiled equations the gain is a nonnegative integer, `trigger` is the release, and `feed` means running work is available. The output is a normalized stroke magnitude; take an otherwise fixed patient that records it. With an intact local running supply, `feed = true`. With a running supply coupled to the station, `feed = giver`. For **every** giver state, trigger setting and gain, both arrangements have the same actual gain and stroke magnitude. Even measuring the producer as well as the patient while varying these inputs leaves that additional role undecided. Now keep the gain-setting action on, release the producer, and selectively isolate the station's running line. In the first arrangement the local supply remains; in the second there is no running supply. At positive gain the strokes diverge. The comparison requires independent access to the running line and continued operation of the gain setter under load. It identifies an additional motive contribution where those conditions hold. The station can already deserve productive credit for the profile in **both** arrangements. These equations are therefore not an omission model of `ThroughAt` or a counterexample to `EachGiverApplies`.
 
-```lean
-import TruthCore.Causality.ExerciseContribution
-namespace NativeResponse
--- cap is the response gain currently sustained by the named giver.
-def cap (giver : Bool) (gain : Nat) : Nat := if giver then gain else 0
-def run (power : Nat) (trigger feed : Bool) : Nat :=
-  if trigger && feed then power else 0
-theorem coupled (giver trigger : Bool) (gain : Nat) :
-    run (cap giver gain) trigger true = run (cap giver gain) trigger giver := by
-  cases giver <;> cases trigger <;> rfl
-theorem isolate (gain : Nat) :
-    run (cap true (gain+1)) true true ≠ run (cap true (gain+1)) true false := by
-  intro h; exact Nat.noConfusion h
-open TruthCore.Causality.ExerciseContribution
-open TruthCore.Causality.JointGroups (Exercise)
-theorem viaOperativePower {B E G S : Type} (m : Exercise B E G S)
-    (gift operative stroke result : E) (a b x : B)
-    (ha : m.bearer gift = a) (hb : m.bearer stroke = b)
-    (hx : m.bearer result = x) (give : Step m gift operative)
-    (usePower : Step m operative stroke) (finish : Step m stroke result) :
-    ThroughAt m stroke result a b x :=
-  ⟨hb, hx, ⟨gift, ha, .tail (.single give) usePower⟩, finish⟩
-#print axioms coupled
-#print axioms isolate
-#print axioms viaOperativePower
-end NativeResponse
-```
+[Compiled coupled-feed and isolation tests, including the three-step productive path](../../TruthCore/Causality/ExerciseEndpointControls.lean#L40).
 
 These three local checks use no axioms. The two equations give no independent evidence that a psychological or metaphysical power has distinct supply lines. They sharpen the appeal to a sufficient local nature. If the law “this power in these circumstances manifests” ranges only over ordinarily sustained operation, both arrangements satisfy it. If it ranges over an independently justified variation with the further working input withdrawn and the power and triggering conditions intact, a case that still manifests excludes **indispensability** of that input to that manifestation under the test. A second contribution could be redundant, or inseparable from the act of giving the operative principle. Neither the mere absence of a second switch nor identity of the giver's conserving act across its roles tells us which termini it has. An indivisible-act account can earn affirmative warrant by showing why the giver's activity realizes the very operation of this producer as well as its ability, under an independently supported account of that activity.
 

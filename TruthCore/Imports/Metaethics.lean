@@ -7,9 +7,11 @@ public import TruthCore.Metaethics.DescriptivePlanBoundary
 public import TruthCore.Metaethics.EvilObjection
 public import TruthCore.Metaethics.ExplanationOrder
 public import TruthCore.Metaethics.ExplanationRivalBoundary
+public import TruthCore.Metaethics.FulfilledRespect
 public import TruthCore.Metaethics.GoodnessCorrectSupport
 public import TruthCore.Metaethics.GoodnessFormEnd
 public import TruthCore.Metaethics.GoodnessFormEndIdealConsensus
+public import TruthCore.Metaethics.GoodnessStandardPriority
 public import TruthCore.Metaethics.InternalCounterfactual
 public import TruthCore.Metaethics.MeaningRivalBoundary
 public import TruthCore.Metaethics.NaturalisticRealism

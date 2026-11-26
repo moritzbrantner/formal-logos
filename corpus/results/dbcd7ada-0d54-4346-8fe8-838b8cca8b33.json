@@ -1,0 +1,11 @@
+{
+  "id": "dbcd7ada-0d54-4346-8fe8-838b8cca8b33",
+  "label": "GOD_4 via CONCRETE_6, common uncaused source and a conditional rule on dependent beings",
+  "argument_id": "8df25074-38c2-4672-a9e7-3f4cc2a97367",
+  "challenge_module": "TruthCore.Results.Causality.ClosedEsseSourceGod.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ClosedEsseSourceGod.Solution",
+  "theorem": "TruthCore.Results.Causality.ClosedEsseSourceGod.godExistsFromClosedCollections",
+  "comparator_config": "results/dbcd7ada-0d54-4346-8fe8-838b8cca8b33/comparator.json",
+  "status": "solution-present",
+  "description": "Conditional source-to-God argument on one esse profile and one selected world. A concrete existent supplies population, rooted closed supplier collections give one common uncaused esse source, and explicit grounding, comparative and naming premises identify that same source as GOD_4. The companion preserves the same witness through the full argument."
+}

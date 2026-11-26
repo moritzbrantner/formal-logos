@@ -1,0 +1,12 @@
+{
+  "id": "543a10ba-d5a8-4492-812a-9cda54201af2",
+  "label": "Attenuated actual esse reception implies rooted closed esse collections (inference)",
+  "input_statement_ids": [
+    "3046383c-4a67-42d3-bd71-a39e178534c3"
+  ],
+  "output_statement_id": "20babef7-6ae7-4b48-b72a-f417e8e63136",
+  "rule": "Instantiate closedRootedOfAttenuation on esseCauseGraph p at the singleton index",
+  "meaning": "Uses solely the quantitative premise on the fixed actual esse-cause graph. The finite path to positive own input from any member stays in its supplier-closed collection and ends at a bearer with no distinct actual cause of esse. The result is the exact closed-collection premise used by the existing De ente God argument. The specialization uses neither preselected source nor separate audited world-relative roster. The separate roster, world-grounding, common-source and naming obligations of that argument retain their own premises. The quantitative hypothesis has no independent existential calibration.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

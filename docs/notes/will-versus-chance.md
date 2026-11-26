@@ -408,25 +408,9 @@ Fix the proposed ultimate bearer, its productive exercise and the order produced
 
 **A matched good-directed probe.** Two feasible routes supply a destination; which route delivers more of a needed resource depends on an independently inspected blockage. Assign equal costs and keep the destination and supply fixed. The favoring fact is thus specified before looking at the selection. An agent might understand the blockage as a reason, adopt a route and use its own power to implement it. A weighted mechanical diverter can favor an open route from a pressure signal upstream of the junction, without evidence that it apprehends either route *as a means to that end*. A merely incidental correlation with pressure and a mechanism responsive to the actual obstruction are different rivals. The diverter is an example of a realizable selection rule, not an argument for a designer-free ultimate mechanism; being built by an engineer would bear on the engineer's authorship and need not make the valve intellectual. The actual pressure can also be sensed by an agent. The hypothesis being compared fixes how each uses it.
 
-In the following diagnostic, true selects route A; the Boolean fact indicates which route is favored. Four equiprobable tickets give transparent conditional likelihoods. A stipulated responsive policy selects the favored route on three tickets, and an insensitive fair selector on two. A pressure-guided policy has precisely the responsive table when pressure tracks the fact. Reverse the pressure indication while keeping the blockage fixed, and the pressure-guided selector succeeds on only one ticket. A chooser with independent accurate information about the blockage who retains the purpose and the responsive policy still succeeds on three. A chooser relying entirely on the misleading gauge might fare just like the valve. Equally, an impersonal detector which tracks the obstruction itself would retain three successes too. These are predictions for the specified information channels. No premise assigns independent repeated trials or prior probabilities to world creation.
+In the ticket comparison, true selects route A; the Boolean fact indicates which route is favored. Four equiprobable tickets give transparent conditional likelihoods. A stipulated responsive policy selects the favored route on three tickets, and an insensitive fair selector on two. A pressure-guided policy has precisely the responsive table when pressure tracks the fact. Reverse the pressure indication while keeping the blockage fixed, and the pressure-guided selector succeeds on only one ticket. A chooser with independent accurate information about the blockage who retains the purpose and the responsive policy still succeeds on three. A chooser relying entirely on the misleading gauge might fare just like the valve. Equally, an impersonal detector which tracks the obstruction itself would retain three successes too. These are predictions for the specified information channels. No premise assigns independent repeated trials or prior probabilities to world creation.
 
-```lean
-namespace ChoiceEvidence
--- Four equally weighted tickets in the order listed. True selects plan A.
-def tickets (a b c d : Bool) := [a,b,c,d]
-def responsive (favoursA : Bool) := tickets favoursA favoursA favoursA (!favoursA)
-def neutral := tickets true true false false
-def matchCount (fact : Bool) (xs : List Bool) := (xs.filter (· == fact)).length
-theorem discriminate (fact : Bool) :
-    matchCount fact (responsive fact) = 3 ∧ matchCount fact neutral = 2 ∧
-    matchCount fact (responsive (!fact)) = 1 := by cases fact <;> decide
--- Under aligned inputs even the ordered plan outputs match, ticket by ticket.
-theorem aligned (fact cue : Bool) (h : fact = cue) :
-    responsive fact = responsive cue := by rw [h]
-#print axioms discriminate
-#print axioms aligned
-end ChoiceEvidence
-```
+[Compiled ticket counts and agreement under an aligned cue](../../TruthCore/Causality/ChoiceEvidence.lean#L18).
 
 Both checks elaborate locally without axioms. A favored result in the calibrated comparison has likelihood ratio (3/4)/(1/2) = 3/2 against the fair policy, and ratio 1 against the aligned responsive policy. Thus good-directed order can carry *relative* evidence against a specific indifferent propensity. Renaming the responsive distribution “will” adds no evidence against an equally responsive impersonal source. Nor does a single actual order establish either likelihood at a patientless invariant source. The two route settings serve as comparative probes; the computation makes no claim that God has external inputs, that the probes correspond to accessible worlds of a divine agent, or that authorship requires stochastic action.
 

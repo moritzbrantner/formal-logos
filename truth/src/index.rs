@@ -33,6 +33,10 @@ use std::{
 
 type Obj = Map<String, Value>;
 
+pub mod formalization;
+mod note_duplicates;
+pub use note_duplicates::{NoteOccurrence, duplicate_note_sections};
+
 /// The table layout (`research_index.SCHEMA`).
 pub const SCHEMA: &str = "3";
 /// The projection semantics; bump it when a change must invalidate every
@@ -1374,6 +1378,24 @@ mod tests {
         .unwrap();
         fs::write(fixture.0.join("docs/notes/data.json"), "{}").unwrap();
         fixture
+    }
+
+    #[test]
+    fn formalization_candidates_open_the_indexed_section_anywhere_in_docs() {
+        let fixture = note_fixture("formalization-section");
+        fs::write(
+            fixture.0.join("docs/research.md"),
+            "# Cases\n## Observation\nAn earlier case.\n## Observation\n```python\nprint(total)\n```\n",
+        ).unwrap();
+        let [candidate] = &formalization::candidates(&fixture.0).unwrap()[..] else {
+            panic!("expected one executable example");
+        };
+        assert_eq!(candidate.kind, "executable_example");
+        assert_eq!(candidate.line, 5);
+        assert_eq!(candidate.section, "docs/research.md#observation-1");
+        let db = fixture.open();
+        let page = show(&db, &candidate.section).unwrap();
+        assert_eq!(page["sections"][0]["section"], candidate.section);
     }
 
     #[test]

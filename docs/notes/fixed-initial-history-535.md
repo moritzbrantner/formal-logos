@@ -15,7 +15,7 @@ scope. They do not discriminate the metaphysical adequacy of those stipulations.
 | Original proposal | Current evidence / remaining obligation |
 | --- | --- |
 | Source witness and interpretation | Existing claim `c5de6a2a-9b29-56ed-87d2-8160e7fa390e`, statement `22fceba9-3b18-5924-956a-05cc311beba6`, and definition `b78d124b-53ea-53fb-bf02-a744a79f9364` already separate the proposal from rigid identity and modal exhaustiveness. No new source work or attribution is needed for this analyst task. |
-| RIGID-INIT conditional | The service-elaborated schema below works on arbitrary access, without reflexivity or S5. It is witness propagation, likely transcription rather than substantive support. It is NOT yet a registered frozen Challenge/Solution certificate. |
+| RIGID-INIT conditional | The registered propagation theorem works on arbitrary access, without reflexivity or S5. It is witness propagation, likely transcription rather than substantive support. The frozen theorem keeps the initial witness. |
 | QUAL-INIT control | `PhysicalGround.rotating` and `CounterpartNecessity.alternating` already separate necessary exemplification from rigid necessary existence (#445). `GroundingIdentityProfile.Certificate` strengthens this to matching local grounding data. None encodes a complete initial qualitative description or laws-of-nature theory. |
 | CHANCE-VAR | `PhysicalGround`'s existing signature/ladder and `NecessaryConcreteUnderived.witnessProfile` retain a necessary bearer with a contingent other. These are modal variation controls, not stochastic processes: no probabilities or objective-chance dynamics are supplied. The temporal word “later” requires another interpretation bridge. |
 | Different initial histories | The doubling construction permits different numerical bearers under identical local data. It does not itself certify different qualitative initial descriptions R/S, because no such description predicate is supplied. |
@@ -190,36 +190,9 @@ No joint countermodel to the COMPLETE root bridge assumption bundle is claimed.
 
 ## Development check, not a certificate
 
-The following full source was elaborated twice in the supplied shared preview;
-second submission added the incoming-support control and axiom queries. Both
-returned no errors; both declarations reported no axioms. This tiny support
-control uses unconstrained primitive support, so it witnesses only non-entailment
-from presence, not a well-founded metaphysical dependence theory. The richer
-existing #495 controls should carry that comparison.
+The early two-bearer check distinguished accessible existence from freedom from incoming support. The registered propagation theorem retains the initial witness. Its actuality follows from roster soundness at the selected world and its accessible presence from roster preservation. In the final dependent profile both the supporter and that same necessary bearer exist at each world.
 
-```lean
-import TruthCore.German.Kant.CosmologicalInference
-namespace FixedHistory535
-open TruthCore.German.Kant.CosmologicalInference
--- InitialAt is a primitive selected initial roster, not a temporal definition.
-theorem rigid_initial {W B : Type} (m : Ontic W B) (a : W)
-    (initial : B → W → Prop)
-    (populated : ∃ b, initial b a)
-    (sound : ∀ b w, initial b w → m.ExistsAt w b)
-    (preserved : ∀ b w, m.frame.access a w → initial b a → initial b w) :
-    NecessaryBeing m a := by
-  obtain ⟨b, hb⟩ := populated
-  exact ⟨b, sound b a hb, fun w hw => sound b w (preserved b w hw hb)⟩
--- The same necessary bearer need not lack an incoming support edge.
-theorem incoming_support_control :
-    (∀ w : Bool, (fun (_ : Bool) (_ : Bool) => True) w false) ∧
-    (fun (_ : Bool) (source target : Bool) => source = true ∧ target = false)
-      false true false := by
-  exact ⟨fun _ => True.intro, rfl, rfl⟩
-#print axioms rigid_initial
-#print axioms incoming_support_control
-end FixedHistory535
-```
+[Roster hypotheses and dependent profile](../../TruthCore/Modal/FixedInitial535.lean#L17) · [Propagation and the incoming-support control](../../TruthCore/Results/Modal/FixedInitial535/Solution.lean#L9)
 
 Preview: clean `078c37fd5d77f77c661b0d6ad8a8de5fe22c5d7c`, session
 `research-master-20261110`, path `Scratch/fixedhistory535/Edit.lean`.
