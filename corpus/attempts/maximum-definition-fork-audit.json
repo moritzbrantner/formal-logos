@@ -38,7 +38,8 @@
     "8318ddd4-006f-4a9b-8fde-440d0542b331",
     "a1a40d62-ef24-4ee4-a76d-2ba51e30f58d",
     "c27ec66c-8efb-42b4-bb20-47ece171e1b4",
-    "fb2603c6-8c07-40d2-93b9-b622e4a8dfd9"
+    "fb2603c6-8c07-40d2-93b9-b622e4a8dfd9",
+    "PR-2011"
   ],
   "blocker": "Conditional bridge resolved; actual common-source coverage, narrow causal composition and causal ascent remain substantive inputs. Next discriminating warrant target is existing De ente shared-nature premise75b5b027, which supports uniqueness/source selection. Tenseless ancestry also needs a current productive-esse application before use as present support. Reopen maximal bridge on a positively warranted multiple-unreceived-source, tied universal-source or noncomposing operative-esse account; formal assignments alone do not provide such warrant.",
   "current_assessment": {
@@ -56,8 +57,8 @@
     "next_test": "Hold the actual donor, the recipient, and its attained degree fixed. What feature of the recipient establishes reception in a really distinct principle when the rival allows receiving existence from a donor without such internal reception? On the competing degree route, test whether the independently justified upper bound and crossing extend to the whole bearer in the respect of being.",
     "note": "docs/notes/de-ente-esse-source-1628.md#which-individual-supplier-checks-can-identify-a-first-giver",
     "review": "accepted_qualified",
-    "publication": "unpublished",
-    "evidence": "Six result bindings with the fixed-maximum and mediated identity applications and the matching finite-pair rival. The sender_identity.py trial uses kernel-supplied credentials on received datagrams. The prior proof from reception to underivedness is e2fae76f. Independent semantic challenge accepted the fixed-rank and per-recipient paths and reproduced both datagram senders. Targeted review at 3a55e1013 accepted the additional limit that the hidden giver also loses distinct-esse ancestry.",
+    "publication": "published",
+    "evidence": "Six result bindings with the fixed-maximum and mediated identity applications and the matching finite-pair rival. The sender_identity.py trial uses kernel-supplied credentials on received datagrams. The prior proof from reception to underivedness is e2fae76f. Independent semantic challenge accepted the fixed-rank and per-recipient paths and reproduced both datagram senders. Targeted review at 3a55e1013 accepted the additional limit that the hidden giver also loses distinct-esse ancestry. PR #2011.",
     "supersedes": "Extends the earlier maximum-definition and source-first investigations to single-pair observations. The complete-list and visibility assessment in attempt 4da08bd8 retains its existing scope.",
     "reviewed_revision": "3a55e1013dc8e8a07473f1a1035188d486a3ed86"
   }
