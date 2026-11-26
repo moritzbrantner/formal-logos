@@ -1,0 +1,10 @@
+{
+  "id": "e76fe8d4-fd16-4b93-a106-605103e65a36",
+  "label": "Test by The shared duplicate-label B frame has modal-language MC for Symmetry propagates possi (1)",
+  "subject_kind": "result",
+  "subject_id": "0c3e85d3-c3ae-52e5-b5bc-25e0997e392b",
+  "predicate": "tests",
+  "object_kind": "argument",
+  "object_id": "5cc9b388-18b4-5291-9e43-548c993f7fe1",
+  "note": "Tests the separate excluded-middle, negation and extensionality conditions of the restricted-to-full upgrade in the symmetric-frame scope."
+}

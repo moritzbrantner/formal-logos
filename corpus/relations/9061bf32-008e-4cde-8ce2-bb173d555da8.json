@@ -1,0 +1,10 @@
+{
+  "id": "9061bf32-008e-4cde-8ce2-bb173d555da8",
+  "label": "Test by Semantic preservation is strictly weaker than identical decoded content",
+  "subject_kind": "result",
+  "subject_id": "4f173774-99ca-4bc5-b02a-de7adc5a956f",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "c7c0ccda-a540-43f5-bad5-1e9b25eb2ca7",
+  "note": "Tests necessity of exact content transport using the same two histories with a flipped tag, unchanged truth and sound readout."
+}

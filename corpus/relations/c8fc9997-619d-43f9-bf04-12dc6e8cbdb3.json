@@ -1,0 +1,10 @@
+{
+  "id": "c8fc9997-619d-43f9-bf04-12dc6e8cbdb3",
+  "label": "Test by On a reflexive frame, □H conflicts with either C or C. A for The existing ordinary sel (1)",
+  "subject_kind": "result",
+  "subject_id": "02591d77-40c3-5a10-a2e6-9d34f7a974e9",
+  "predicate": "tests",
+  "object_kind": "argument",
+  "object_id": "310b916d-ee16-56c4-9ae4-9c5613ef9376",
+  "note": "Checks whether a separate actual-H assumption is needed in the reflexive frame variant when necessary H is given."
+}

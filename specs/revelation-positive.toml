@@ -53,3 +53,13 @@ predicate = "tests"
 object_kind = "statement"
 object_id = "f2504092-91c0-53f1-a59b-2402ccb7b0a7"
 note = "Tests whether positive observation evidence gives full classification using the same-domain ambiguity, distinctive-sign, full discrimination and added imitator controls."
+
+[[relation]]
+id = "Test by Conditional interface from positive evidence to recognizable capability by construction"
+label = "Test by Conditional interface from positive evidence to recognizable capability by construction"
+subject_kind = "result"
+subject_id = "c3b8a89f-5c3d-4a0e-9b62-bbc5e397616d"
+predicate = "tests"
+object_kind = "statement"
+object_id = "f2504092-91c0-53f1-a59b-2402ccb7b0a7"
+note = "Checks the explicit ability-evidence, uptake and full-calibration hypotheses needed for the encoded recognition bridge."
