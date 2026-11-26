@@ -1,0 +1,13 @@
+{
+  "id": "b4ad9f51-e1e9-4b1a-9596-db64e457e02e",
+  "label": "Calculate the likelihood of an all-on supplier panel on distinct rays (inference)",
+  "input_statement_ids": [
+    "2b807b2a-85e0-48ab-bc51-d8aaf6d24aad",
+    "574f00bd-c6fe-45f5-8208-a9421b601182"
+  ],
+  "output_statement_id": "7579c0b7-0579-4d74-a67f-aa35cc85b581",
+  "rule": "Extend sampled reports and evaluate their intersection on the distinct observed rays",
+  "meaning": "The numbering is a bijection from the ray identities actually observed on intact tails. Duplicated positions read the same sampled coordinate. The intersection covers every coordinate in that numbering. A blocked observation makes the all-positive event empty, including when there are no live rays. The sample is a shared coordinate and an independent product of local coordinates. This gives a likelihood for a fixed observation under an explicit law, while causal ancestry and how the actual settings arose remain separate questions.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

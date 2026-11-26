@@ -1,0 +1,11 @@
+{
+  "id": "8f9e70c0-b85c-44b4-9bff-362a3fa7cd2c",
+  "label": "Calculate the likelihood of an all-on supplier panel on distinct rays",
+  "argument_id": "03166094-e157-49b4-ba28-7100fcd68989",
+  "challenge_module": "TruthCore.Results.Causality.SupplierPanelLikelihood.Challenge",
+  "solution_module": "TruthCore.Results.Causality.SupplierPanelLikelihood.Solution",
+  "theorem": "TruthCore.Results.Causality.SupplierPanelLikelihood.probabilitiesOfObservedRays",
+  "comparator_config": "results/8f9e70c0-b85c-44b4-9bff-362a3fa7cd2c/comparator.json",
+  "status": "solution-present",
+  "description": "The numbering is a bijection from the ray identities actually observed on intact tails. Duplicated positions read the same sampled coordinate. The intersection covers every coordinate in that numbering. A blocked observation makes the all-positive event empty, including when there are no live rays. The sample is a shared coordinate and an independent product of local coordinates. This gives a likelihood for a fixed observation under an explicit law, while causal ancestry and how the actual settings arose remain separate questions."
+}

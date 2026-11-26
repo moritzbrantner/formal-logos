@@ -1,0 +1,11 @@
+{
+  "id": "6da2cd1a-e840-40f1-9840-0137a95b5372",
+  "label": "Restrict the parallel-ray solution classification to an observation panel",
+  "argument_id": "29c471da-6249-4c5c-9634-31693fed8781",
+  "challenge_module": "TruthCore.Results.Causality.RayObservation.Challenge",
+  "solution_module": "TruthCore.Results.Causality.RayObservation.Solution",
+  "theorem": "TruthCore.Results.Causality.RayObservation.rayReportCharacterization",
+  "comparator_config": "results/6da2cd1a-e840-40f1-9840-0137a95b5372/comparator.json",
+  "status": "solution-present",
+  "description": "The classification makes activity imply an intact tail and gives each live observation the populated status of its ray. For the converse, select every ray with a live positive reading. Assign all selected rays their intact tails. Cut positions and live agreement then reproduce the whole report, including repeated observations."
+}

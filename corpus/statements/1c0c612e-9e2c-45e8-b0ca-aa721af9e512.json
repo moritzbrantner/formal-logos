@@ -1,0 +1,9 @@
+{
+  "id": "1c0c612e-9e2c-45e8-b0ca-aa721af9e512",
+  "label": "A finite panel has two to the power of its distinct live ray count feasible reports",
+  "paraphrase": "For every finite panel, the number of feasible Boolean reports equals two raised to the number of distinct ray identities observed at intact tails. Duplicate observations and observations of cut positions do not add choices. This includes the empty panel and panels with no live observations, each of which has one feasible report, and applies with an arbitrary family of rays.",
+  "lean_declaration": "TruthCore.Causality.RayObservation.FiniteRayReportCount",
+  "definition_ids": [
+    "e1b95906-8d38-59c3-abee-0ccc1c9d333b"
+  ]
+}
