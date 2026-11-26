@@ -641,7 +641,7 @@ supports the forward direction. The converse requires dependence on this
 very giver, so it can fail if the recipient is independently sustained.
 Under the biconditional, an actual cell ensuring existence and an available
 cell ensuring absence give dstit for production and a cell ensuring
-nonproduction. To exclude NECESSITATE_5, the compared histories must map
+nonproduction. The theorem excluding NECESSITATE_5 maps the compared histories
 to accessible worlds where the same giver exists. Restricting access to
 the producing world preserves dstit in the finite comparison and restores
 NECESSITATE_5. To obtain WILL_CAPACITY_VERSUS_WILLED_GIVING_2 from the
