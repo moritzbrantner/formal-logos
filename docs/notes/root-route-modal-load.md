@@ -118,45 +118,19 @@ logic reading retain `ee4ab504` as needed for equality; the proposed
 direct #1928-bundle proof may use the same classical background as #1928,
 subject to the repository's logic-floor and unused-premise checks.
 
-**Small-model diagnostic (not Lean checked).** Exhaustive Python evaluation
-of the definitions for two individuals, one respect, all four Boolean
-predicates/relations (IsGod and InAct: two bits each; MoreIn and CausesIn:
-four bits each) tested all 4096 structures. 172 satisfied all three premises,
-56 of these had at least one God, and zero falsified at-most-one-God.
-Zero joint models had both a God and two maxima. Dropping exactly one of the
-three premises admitted 60, 196 and 116 two-God structures respectively
-(in exclusion, maximal-existence, causal-converse order). This checks the
-finite encoding, not philosophical necessity or global minimality.
-
-Reproduction (standalone Python; not a new repository tool):
-
-```python
-from itertools import product
-D = range(2)
-def bits(n):
-    return list(product([False, True], repeat=n))
-joint = nonvacuous = failures = multi_max = 0
-omissions = [0, 0, 0]
-for G, A, M, C in product(bits(2), bits(2), bits(4), bits(4)):
-    maxima = [m for m in D if A[m] and not any(M[y*2+m] for y in D)]
-    H = [
-        all(not C[c*2+m] for m in maxima for c in D if c != m),
-        bool(maxima),
-        all(C[g*2+y] for g in D if G[g] for y in D if y != g),
-    ]
-    if all(H):
-        joint += 1
-        nonvacuous += any(G)
-        failures += sum(G) > 1
-        multi_max += any(G) and len(maxima) > 1
-    for i in range(3):
-        omissions[i] += (
-            sum(G) > 1 and not H[i] and all(H[j] for j in range(3) if j != i)
-        )
-assert (joint, nonvacuous, failures, multi_max, omissions) == (
-    172, 56, 0, 0, [60, 196, 116]
-)
-```
+**Small-model census (Lean checked).** Exhaustive evaluation of the
+definitions for two individuals and one respect covers all 4096 structures
+(IsGod and InAct: two bits each; MoreIn and CausesIn: four bits each).
+172 satisfy all three premises, 56 of these have at least one God, and none
+falsifies at-most-one-God. No joint model has both a God and two maxima.
+Dropping exactly one of the three premises admits 60, 196 and 116 two-God
+structures respectively (in exclusion, maximal-existence, causal-converse
+order). The Boolean evaluators are proved to coincide with the corpus
+definitions, so these are counts of models of `MaximumHasNoDistinctEsseCause`,
+`SomeBeingMaximalInBeing` and `GodCausesBeingOfAllOthers`. This checks the
+finite encoding, not philosophical necessity or global minimality; the general
+entailment is `GodIsOneFromEsse.oneFromWitness`.
+[Evaluators and their definitions](../../TruthCore/Case/Catholicism/GodUniquenessCensus.lean#L35) · [Census](../../TruthCore/Case/Catholicism/GodUniquenessCensus.lean#L215)
 
 Concrete two-actual-bearer controls, with identity interpreted normally and
 unlisted relation entries false: the positive model has God = {0},
@@ -167,8 +141,10 @@ For omission of causal converse, both are Gods and both relations empty.
 These are structural surrogates: the omitted exclusion model need not
 satisfy causal superiority; the omitted maximal-existence model permits
 mutual comparison; the omitted causal-converse model has no causation.
-Certify relevant controls in Lean and inspect stronger background models
-before interpreting them as rival metaphysics.
+The three omission models are certified as
+[`GodIsOneFromEsse.MaximalControls`](../../TruthCore/Case/Catholicism/GodIsOneFromEsse.lean#L43).
+Inspect stronger background models before interpreting them as rival
+metaphysics.
 
 ### 2. Three substitutions in the same attribute assembly
 
@@ -243,7 +219,8 @@ God = {0}; unlisted facts false):
   causal superiority hold; genus causality fails at r, since both actual
   bearers are maximal there but no distinct causal edges hold.
 
-These are finite definition evaluations, not checked Lean certificates.
+Both controls are checked in Lean against the corpus definitions, each
+with a nonempty IsGod. [Independence controls](../../TruthCore/Case/Catholicism/GodUniquenessCensus.lean#L265)
 The first model's nonactual carrier and the second model's unrestricted
 respect are essential to the displayed failure. If the intended application
 makes every carrier actual at esse, the first contrast is not admissible
@@ -280,7 +257,8 @@ registered proof or an established premise.
 
 **Blockers:** no prepared checkout, Lean, truth CLI, or independent semantic
 challenger was available for this draft. The two-bearer diagnostic was
-executed in Python; source definitions and the all-attributes proof were
+first executed in Python and is now checked in Lean
+(`GodUniquenessCensus`); source definitions and the all-attributes proof were
 read at the stated main revision. No formal result or premise change is
 claimed. The independent final challenge and CI on the final proposed
 formal content remain required. Retain these issues until the promised
@@ -365,43 +343,13 @@ carrier individuals as well). It can be kept local to the consumer; register
 a separate proposition only if reuse warrants it. This avoids replacing an
 all-genus law by a God-specific axiom with unmotivated carrier-wide scope.
 
-**Finite diagnostic, executed in Python.** Exhaust all 4096 structures with
+**Finite census (Lean checked).** Exhaust all 4096 structures with
 two individuals and one respect. With M and U as above, test the three
-substantive inputs, ordinary classical equality, and the conjunction of
-at-most-one-God and actual-bearer God-causality:
-
-```python
-from itertools import product
-D = range(2)
-def bits(n):
-    return list(product([False, True], repeat=n))
-joint = nonempty = failures = strong_failures = 0
-omission_failures = [0, 0, 0]
-for G, A, M, C in product(bits(2), bits(2), bits(4), bits(4)):
-    maxima = [m for m in D if A[m] and not any(M[y*2+m] for y in D)]
-    def U(m):
-        return all(C[m*2+x] for x in D if x != m and A[x])
-    H = [
-        any(U(m) for m in maxima),
-        all(not C[c*2+x] or M[c*2+x] for c in D for x in D if c != x),
-        all(not G[g] or g in maxima for g in D),
-    ]
-    conclusion = sum(G) <= 1 and all(U(g) for g in D if G[g])
-    if all(H):
-        joint += 1
-        nonempty += any(G)
-        failures += not conclusion
-        strong_failures += any(
-            G[g] and not C[g*2+x] for g in D for x in D if g != x
-        )
-    for i in range(3):
-        omission_failures[i] += (
-            not conclusion and not H[i] and all(H[j] for j in range(3) if j != i)
-        )
-assert (joint, nonempty, failures, omission_failures, strong_failures) == (
-    128, 64, 0, [36, 20, 128], 32
-)
-```
+substantive inputs (`MaximeEnsCausesBeingOfAllReading`,
+`CauseOfBeingIsMoreInBeing`, `GodIsMaximalInBeing`) and the conjunction of
+at-most-one-God and actual-bearer God-causality. Equality on the two
+carriers is decidable, so no separate excluded-middle input is needed.
+[Census](../../TruthCore/Case/Catholicism/GodUniquenessCensus.lean#L239)
 
 All 128 joint models satisfy the candidate conclusion; 64 have at least
 one God. The three omission counts refer to falsification of the **joint**
@@ -411,9 +359,13 @@ A nontrivial three-carrier illustration: 0 and 1 are actual at esse, 2 is
 inactive; God = {0}, MoreIn and CausesIn at esse = {(0,1)}.
 Then 0 is the sole maximum and universal actual source, but causes no
 inactive carrier 2. If all carriers are assumed actual at esse, that
-separator is unavailable. These are structural diagnostics only. Re-run
-with intended carrier constraints, include the full naming premise in a
-nonvacuous control, and certify relevant models in Lean.
+separator is unavailable. A four-carrier version of this separator is the
+second row of the certified
+[`GodIsOneFromEsse.RecipientBoundary`](../../TruthCore/Case/Catholicism/GodIsOneFromEsse.lean#L86),
+and the general convergence proof is `AttributesFromEsse.oneFromSource`.
+These remain structural diagnostics. Re-run with intended carrier
+constraints and include the full naming premise in a nonvacuous control
+before reading the counts as more than this encoding.
 
 #### Candidate attribute integration using actual-bearer scope
 
