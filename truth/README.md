@@ -121,6 +121,10 @@ provide historical evidence. A current assessment carries its own scope and
 review state. When a question phrase is missing from the leading finding,
 the command can also quote a matching research note with its section and line.
 Question JSON returns that passage in `note_match` when available.
+Results explicitly cited by a matching investigation appear in `cited_lean_results`.
+When several cited conclusions belong to the same current assessment, the question’s
+terms rank their registered descriptions before the display limit is applied.
+A direct result that the investigation also cites carries its provenance in `cited_by`.
 
 The complete statement JSON includes these fields.
 

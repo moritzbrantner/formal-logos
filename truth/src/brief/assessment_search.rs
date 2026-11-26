@@ -345,7 +345,8 @@ pub fn report_for_root(
     let mut results =
         super::proof_search::find(root, corpus, &query, limit).map_err(|err| err.to_string())?;
     let matches = report["matches"].as_array().map_or(&[][..], Vec::as_slice);
-    let cited = super::proof_search::cited_results(root, corpus, matches, &mut results, limit);
+    let cited =
+        super::proof_search::cited_results(root, corpus, matches, &query, &mut results, limit);
     let library = if identifier && results.is_empty() {
         super::proof_search::library_declaration(root, &query.text)
     } else {

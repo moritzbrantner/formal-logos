@@ -4,7 +4,7 @@ use crate::{Corpus, Record, synthesis::result_witness};
 use rusqlite::{Connection, params};
 use serde::Serialize;
 use serde_json::{Value, json};
-use std::{collections::BTreeMap, path::Path};
+use std::{cmp::Reverse, collections::BTreeMap, path::Path};
 
 fn field<'a>(record: &'a Record, key: &str) -> &'a str {
     record
@@ -55,6 +55,7 @@ pub(super) fn cited_results(
     root: &Path,
     corpus: &Corpus,
     attempts: &[Value],
+    query: &Query,
     direct: &mut [Value],
     limit: usize,
 ) -> Vec<Value> {
@@ -79,13 +80,31 @@ pub(super) fn cited_results(
         if matched["kind"] == "current_assessment"
             && let Some(targets) = matched["statement_ids"].as_array()
         {
-            // Keep earlier evidence accessible while giving this assessment's
-            // conclusions first place within the same investigation.
+            // Several conclusions can belong to the same assessment. Break
+            // ties by the registered proof's relevance before clipping its
+            // evidence history. Equal matches keep their recorded order.
+            let aliases = BTreeMap::new();
             evidence.sort_by_cached_key(|result| {
-                !corpus
-                    .get("arguments", field(result, "argument_id"))
-                    .and_then(|argument| argument.fields.get("conclusion_statement_id"))
-                    .is_some_and(|conclusion| targets.contains(conclusion))
+                let argument = corpus.get("arguments", field(result, "argument_id"));
+                let conclusion_id = argument.and_then(|a| a.fields.get("conclusion_statement_id"));
+                let in_scope = conclusion_id.is_some_and(|id| targets.contains(id));
+                let conclusion = conclusion_id
+                    .and_then(Value::as_str)
+                    .and_then(|id| corpus.get("statements", id));
+                let labels = [
+                    field(result, "label"),
+                    argument.map_or("", |a| field(a, "label")),
+                    conclusion.map_or("", |s| field(s, "label")),
+                ]
+                .join(" ");
+                let coverage =
+                    |text: &str| query.content_coverage(&query.matched(text, &aliases)).0;
+                let paraphrase = conclusion.map_or("", |s| field(s, "paraphrase"));
+                (
+                    !in_scope,
+                    Reverse(coverage(&labels)),
+                    Reverse(coverage(paraphrase)),
+                )
             });
         }
         for result in evidence {
