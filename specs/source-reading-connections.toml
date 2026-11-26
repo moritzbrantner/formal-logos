@@ -1,0 +1,175 @@
+# Relations from the non-Aristotelian source reading audit.
+
+[batch]
+
+# First Council of Constantinople, Nicene-Constantinopolitan Creed
+
+[[relation]]
+id = "1c7ef603-360c-49ac-828d-f9633b83df83"
+label = "Source support for 828bbf3f from reading d07d4341"
+subject_kind = "claim"
+subject_id = "d8010bfe-9ce9-5844-bf36-bf902a01f523"
+predicate = "supports"
+object_kind = "statement"
+object_id = "828bbf3f-cb29-5dc2-ac2b-731a81fe2226"
+note = "The Creed explicitly confesses one baptism for forgiveness. The remaining inference requires the mapping from the baptism confession to the article's predicate, attribution of the pinned form to the council, and treating the confession as teaching this article as revealed. This passage supplies one article of the universal premise."
+
+[[relation]]
+id = "6b28124d-f313-4f4d-aad7-af7cfad8f6e6"
+label = "Source support for 828bbf3f from reading e7f93592"
+subject_kind = "claim"
+subject_id = "29d17277-63ab-5a18-a4b6-5478b1edfd0c"
+predicate = "supports"
+object_kind = "statement"
+object_id = "828bbf3f-cb29-5dc2-ac2b-731a81fe2226"
+note = "The Creed explicitly confesses expectation of the resurrection of the dead. The remaining inference requires the mapping from the future resurrection confessed here to the article's predicate, attribution of the pinned form to the council, and treating the confession as teaching this article as revealed. This passage supplies one article of the universal premise."
+
+[[relation]]
+id = "fcd9f5a6-b5f9-4ece-a3fc-a8bd23564a95"
+label = "Source support for 828bbf3f from reading 469bdfbc"
+subject_kind = "claim"
+subject_id = "a924328d-ce63-54e5-b2d1-637854d83a09"
+predicate = "supports"
+object_kind = "statement"
+object_id = "828bbf3f-cb29-5dc2-ac2b-731a81fe2226"
+note = "The Creed explicitly confesses expectation of life in the age to come. The remaining inference requires the mapping from this future-life confession to the article's predicate, attribution of the pinned form to the council, and treating the confession as teaching this article as revealed. This passage supplies one article of the universal premise."
+
+[[relation]]
+id = "26942f4f-ee39-4612-9e0c-6ab9dbcf4598"
+label = "Source support for 828bbf3f from reading 3efa2202"
+subject_kind = "claim"
+subject_id = "6f490f26-ba30-5fd9-bbe4-895721ca4fbc"
+predicate = "supports"
+object_kind = "statement"
+object_id = "828bbf3f-cb29-5dc2-ac2b-731a81fe2226"
+note = "The Creed explicitly confesses the Son's descent and incarnation for human salvation. The remaining inference requires the mapping of the full confession, including its stated purpose and the Holy Spirit and Mary, to the case article, attribution of the pinned form to the council, and treating the confession as teaching this article as revealed. This passage supplies one article of the universal premise."
+
+[[relation]]
+id = "78ebb003-40e8-47a1-b57f-3bf9c942de2b"
+label = "Source support for 828bbf3f from reading 3a083e51"
+subject_kind = "claim"
+subject_id = "4c4a00ae-f818-5e72-80e0-ce9d8a417475"
+predicate = "supports"
+object_kind = "statement"
+object_id = "828bbf3f-cb29-5dc2-ac2b-731a81fe2226"
+note = "The Creed explicitly confesses the Son's crucifixion under Pilate, suffering and burial. The remaining inference requires the mapping of this compound confession to the case article, attribution of the pinned form to the council, and treating the confession as teaching this article as revealed. This passage supplies one article of the universal premise."
+
+[[relation]]
+id = "f35cd723-219e-4686-b9cc-0a8b0b1fa5a4"
+label = "Source support for 828bbf3f from reading 92cd7235"
+subject_kind = "claim"
+subject_id = "7eaaad5d-55d1-5c28-a614-45b51dc7376f"
+predicate = "supports"
+object_kind = "statement"
+object_id = "828bbf3f-cb29-5dc2-ac2b-731a81fe2226"
+note = "The Creed explicitly confesses the Son's rising on the third day according to the Scriptures. The remaining inference requires the mapping of that qualified resurrection confession to the case article, attribution of the pinned form to the council, and treating the confession as teaching this article as revealed. This passage supplies one article of the universal premise."
+
+[[relation]]
+id = "8f4acee6-b783-484e-bd6d-dac2f0a87854"
+label = "Source support for 828bbf3f from reading f36af321"
+subject_kind = "claim"
+subject_id = "cc247c83-17a4-50ee-bfb2-426b21cea497"
+predicate = "supports"
+object_kind = "statement"
+object_id = "828bbf3f-cb29-5dc2-ac2b-731a81fe2226"
+note = "The Creed explicitly confesses the Son's ascent and session at the Father's right hand. The remaining inference requires the mapping of the ascent and session confession to the case article, attribution of the pinned form to the council, and treating the confession as teaching this article as revealed. This passage supplies one article of the universal premise."
+
+[[relation]]
+id = "e6a3f1f9-52eb-42ee-b67c-7ba7533d6755"
+label = "Source support for 828bbf3f from reading 77ccf3bc"
+subject_kind = "claim"
+subject_id = "c7539707-2b98-5957-833b-429351de667a"
+predicate = "supports"
+object_kind = "statement"
+object_id = "828bbf3f-cb29-5dc2-ac2b-731a81fe2226"
+note = "The Creed explicitly confesses the Son's return to judge and his unending kingdom. The remaining inference requires the mapping of all parts of this future-directed confession to the case article, attribution of the pinned form to the council, and treating the confession as teaching this article as revealed. This passage supplies one article of the universal premise."
+
+[[relation]]
+id = "050e795a-e98f-4e6a-a234-827200085f0d"
+label = "Source support for 828bbf3f from reading dac44df8"
+subject_kind = "claim"
+subject_id = "a82f0020-94cd-54d0-83b5-6408c99c8c80"
+predicate = "supports"
+object_kind = "statement"
+object_id = "828bbf3f-cb29-5dc2-ac2b-731a81fe2226"
+note = "The Creed explicitly confesses the one, holy, catholic and apostolic Church. The remaining inference requires the reading of the four marks in the case article, attribution of the pinned form to the council, and treating the confession as teaching this article as revealed. This passage supplies one article of the universal premise."
+
+# New Testament, John
+
+[[relation]]
+id = "7af8c2cb-19bc-47b2-b94b-812e43e9880c"
+label = "Source support for da573220 from reading 733c6742"
+subject_kind = "claim"
+subject_id = "39808ea5-6960-524b-9017-a7e87c9ad718"
+predicate = "supports"
+object_kind = "statement"
+object_id = "da573220-03c0-5361-a1d7-e117e78e2b77"
+note = "John reports Jesus sending the assembled disciples and speaking of sins being forgiven or retained. The route needs this speech to be a grant of the specified power and its substance to go back to Jesus. It also needs the Matthew 28 commission."
+
+[[relation]]
+id = "7fe94d7c-4f88-4928-8e59-56d63eafe06b"
+label = "Source support for da573220 from reading 5cc55853"
+subject_kind = "claim"
+subject_id = "40544f6f-9d36-5053-812d-0b4dac17d06d"
+predicate = "supports"
+object_kind = "statement"
+object_id = "da573220-03c0-5361-a1d7-e117e78e2b77"
+note = "John attributes the repeated sheep charge to Jesus addressing Simon. The route needs to identify this charge with the selected shepherding power, establish that Jesus gave it, and establish the Matthew 28 commission."
+
+[[relation]]
+id = "7e5d87f2-415f-4658-a228-61b5ad2f9038"
+label = "Source support for 6931fa67 from reading 868ee1a8"
+subject_kind = "claim"
+subject_id = "e3435238-9f47-5bf4-8caa-523fa89e1a68"
+predicate = "supports"
+object_kind = "statement"
+object_id = "6931fa67-bd22-591a-8abb-7273aba9cb90"
+note = "John reports an explicit first-person attribution of Jesus's mission to God. To establish the case claim, the saying must go back to Jesus and the sending asserted here must carry authority to speak or act for God in the selected sense."
+
+# New Testament, Mark
+
+[[relation]]
+id = "3827bd35-b9b2-432b-8f29-49b23c26314e"
+label = "Source support for ca658204 from reading 62d0292d"
+subject_kind = "claim"
+subject_id = "035330a7-2dc1-5d39-a655-b9f0309bfd83"
+predicate = "supports"
+object_kind = "statement"
+object_id = "ca658204-d3b4-5ecd-a1fe-1a37d033c615"
+note = "The high priest's charge places the preceding sayings in a reported context of contested religious authority. The charge does not fix which assertion was taken as blasphemous, and the route still needs the historical sayings and an interpretation of their joint force as a divine-authority claim."
+
+# New Testament, Matthew
+
+[[relation]]
+id = "092b2afa-6bdf-4a0f-bb7a-33cb25ce2dc4"
+label = "Source support for da573220 from reading 3841df54"
+subject_kind = "claim"
+subject_id = "c72d0bbe-9133-53cb-bc95-3f1307db4d70"
+predicate = "supports"
+object_kind = "statement"
+object_id = "da573220-03c0-5361-a1d7-e117e78e2b77"
+note = "Matthew attributes referral to the assembly and binding and loosing to Jesus's instructions. The route needs those instructions to instantiate the selected judging and binding powers and to go back to Jesus, together with the Matthew 28 commission."
+
+# Paul, Philippians
+
+[[relation]]
+id = "01fe83e9-30c8-4569-89c8-f6540ecfc93d"
+label = "Source support for e26f46c8 from reading 4f7d7fa3"
+subject_kind = "claim"
+subject_id = "9aaa55d7-89fb-5716-8f7c-b1629af12df4"
+predicate = "supports"
+object_kind = "statement"
+object_id = "e26f46c8-82df-546f-afb0-8b195c196400"
+note = "Paul's account of Christ's self-abasement explicitly culminates in death on a cross. Application to the historical premise requires accepting this testimony about the same Jesus and the event, independently of the letter's account of his self-abasement."
+
+# Tacitus, Annals
+
+[[relation]]
+id = "2f930943-2788-411c-a2a8-3f044544e1c5"
+label = "Source support for e26f46c8 from reading ffdaf8a0"
+subject_kind = "claim"
+subject_id = "b38cfd6f-0ced-5ca1-8847-34bf18139311"
+predicate = "supports"
+object_kind = "statement"
+object_id = "e26f46c8-82df-546f-afb0-8b195c196400"
+note = "Tacitus locates Christus's execution under Pilate during Tiberius's rule. The premise requires identifying Christus with the case's Jesus, assessing the provenance of the report, and establishing crucifixion as the means of execution."

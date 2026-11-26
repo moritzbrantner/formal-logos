@@ -1,0 +1,39 @@
+{
+  "id": "c55a062a-3452-4d6c-93ef-0771667da4ff",
+  "label": "Root links from First Council of Constantinople, Nicene-Constantinopolitan Creed",
+  "statement_ids": [
+    "d07d4341-e485-5cb5-80ed-4a23f32e0893",
+    "e7f93592-0ba1-53e3-a632-5c404f55a827",
+    "469bdfbc-258a-5549-9100-b6676aeab618",
+    "3efa2202-1f12-5e8f-b378-b9e5f85b63dd",
+    "3a083e51-dc19-5564-add6-26c3d62274dd",
+    "92cd7235-06cf-5d33-b88c-4eed9724a3ea",
+    "f36af321-1aba-53e2-884e-c94db8a10167",
+    "77ccf3bc-066a-5438-ad3b-039aaf0e539c",
+    "dac44df8-a012-5e1f-baef-9d8fd1b2f568"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "art. 10 (ὁμολογοῦμεν ἓν βάπτισμα): The Creed explicitly confesses one baptism for forgiveness. The remaining inference requires the mapping from the baptism confession to the article's predicate, attribution of the pinned form to the council, and treating the confession as teaching this article as revealed. This passage supplies one article of the universal premise. art. 11 (προσδοκοῦμεν ἀνάστασιν νεκρῶν): The Creed explicitly confesses expectation of the resurrection of the dead. The remaining inference requires the mapping from the future resurrection confessed here to the article's predicate, attribution of the pinned form to the council, and treating the confession as teaching this article as revealed. This passage supplies one article of the universal premise. art. 12 (καὶ ζωὴν τοῦ μέλλοντος αἰῶνος): The Creed explicitly confesses expectation of life in the age to come. The remaining inference requires the mapping from this future-life confession to the article's predicate, attribution of the pinned form to the council, and treating the confession as teaching this article as revealed. This passage supplies one article of the universal premise. art. 3 (τὸν δι' ἡμᾶς τοὺς ἀνθρώπους): The Creed explicitly confesses the Son's descent and incarnation for human salvation. The remaining inference requires the mapping of the full confession, including its stated purpose and the Holy Spirit and Mary, to the case article, attribution of the pinned form to the council, and treating the confession as teaching this article as revealed. This passage supplies one article of the universal premise. art. 4 (σταυρωθέντα τε ὑπὲρ ἡμῶν): The Creed explicitly confesses the Son's crucifixion under Pilate, suffering and burial. The remaining inference requires the mapping of this compound confession to the case article, attribution of the pinned form to the council, and treating the confession as teaching this article as revealed. This passage supplies one article of the universal premise. art. 5 (καὶ ἀναστάντα τῇ τρίτῃ ἡμέρᾳ): The Creed explicitly confesses the Son's rising on the third day according to the Scriptures. The remaining inference requires the mapping of that qualified resurrection confession to the case article, attribution of the pinned form to the council, and treating the confession as teaching this article as revealed. This passage supplies one article of the universal premise. art. 6 (καὶ ἀνελθόντα εἰς τοὺς οὐρανούς): The Creed explicitly confesses the Son's ascent and session at the Father's right hand. The remaining inference requires the mapping of the ascent and session confession to the case article, attribution of the pinned form to the council, and treating the confession as teaching this article as revealed. This passage supplies one article of the universal premise. art. 7 (καὶ πάλιν ἐρχόμενον μετὰ δόξης): The Creed explicitly confesses the Son's return to judge and his unending kingdom. The remaining inference requires the mapping of all parts of this future-directed confession to the case article, attribution of the pinned form to the council, and treating the confession as teaching this article as revealed. This passage supplies one article of the universal premise. art. 9 (εἰς μίαν, ἁγίαν, καθολικὴν καὶ ἀποστολικὴν ἐκκλησίαν): The Creed explicitly confesses the one, holy, catholic and apostolic Church. The remaining inference requires the reading of the four marks in the case article, attribution of the pinned form to the council, and treating the confession as teaching this article as revealed. This passage supplies one article of the universal premise.",
+  "evidence": [
+    "d8010bfe-9ce9-5844-bf36-bf902a01f523",
+    "29d17277-63ab-5a18-a4b6-5478b1edfd0c",
+    "a924328d-ce63-54e5-b2d1-637854d83a09",
+    "6f490f26-ba30-5fd9-bbe4-895721ca4fbc",
+    "4c4a00ae-f818-5e72-80e0-ce9d8a417475",
+    "7eaaad5d-55d1-5c28-a614-45b51dc7376f",
+    "cc247c83-17a4-50ee-bfb2-426b21cea497",
+    "c7539707-2b98-5957-833b-429351de667a",
+    "a82f0020-94cd-54d0-83b5-6408c99c8c80"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26"
+    }
+  ]
+}

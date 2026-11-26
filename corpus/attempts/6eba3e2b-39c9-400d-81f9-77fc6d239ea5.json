@@ -1,0 +1,23 @@
+{
+  "id": "6eba3e2b-39c9-400d-81f9-77fc6d239ea5",
+  "label": "Unlinked readings from Josephus, Jewish Antiquities",
+  "statement_ids": [
+    "637431f0-503b-5dd3-a4a8-7f531fa8af5c"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "rejected",
+  "summary": "20.200 (20.9.1): The reported execution identifies James by kinship. The existing conversion premise requires pre- and post-event belief evidence, and the Pauline report concerns a different event.",
+  "evidence": [
+    "24f13297-9d53-5954-b51a-0ee69f5f5388"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "id": "545ce036-9db4-4e85-845a-2c9cb8a7b621",
+  "label": "Unlinked readings from Second Vatican Council, Lumen gentium",
+  "statement_ids": [
+    "404c0c99-c749-5add-9082-2a11acac2ba3",
+    "543b9cb9-9523-5512-8dd6-83b73b24b6e1"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "rejected",
+  "summary": "§16, sentence beginning Nec divina Providentia auxilia: The promise of salvific aid to people without explicit knowledge of God concerns an end and means distinct from the hiddenness test's present conscious reciprocal access. §16, sentence beginning Qui enim Evangelium Christi: The qualified possibility of salvation concerns the fate of a class of people. It supplies neither the existence of an actual capable nonresister nor their present conscious access.",
+  "evidence": [
+    "f881d182-92e3-5783-bcdb-e44e6592cb87",
+    "18a3e579-ef56-5036-9afe-eb6804009965"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26"
+    }
+  ]
+}

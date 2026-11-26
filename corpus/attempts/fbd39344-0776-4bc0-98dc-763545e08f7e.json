@@ -1,0 +1,27 @@
+{
+  "id": "fbd39344-0776-4bc0-98dc-763545e08f7e",
+  "label": "Unlinked readings from New Testament, John",
+  "statement_ids": [
+    "777e1ba1-f952-51e7-9001-f92ecd31ac6b",
+    "1ff54b8e-8bc4-52d4-8226-3cb2fe99c3bc",
+    "18ef68d7-6dac-579d-b0a3-872185de40af"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "rejected",
+  "summary": "8.58: The before-Abraham contrast has no current report-level consumer. A bridge from the saying to a claim of divine authority needs a defended reading of the first-person formula in this context. 8.59: The reported resort to stones is a reaction. Neither the reason for the reaction nor the intended force of the preceding saying is specified by this clause. 9.8-9: The formerly blind man's ordinary self-identification is a useful lexical control. The case has no Johannine inference from those words alone for it to test.",
+  "evidence": [
+    "34998c55-6f2c-50b6-8fa4-5a0f614ab730",
+    "cd8d1b26-b5e3-5f1a-b73a-22b996d086b9",
+    "0a68fc5d-34d3-593b-8efe-f5a44dcdb48a"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26"
+    }
+  ]
+}

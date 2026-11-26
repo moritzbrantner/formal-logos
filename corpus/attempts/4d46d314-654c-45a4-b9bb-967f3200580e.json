@@ -1,0 +1,27 @@
+{
+  "id": "4d46d314-654c-45a4-b9bb-967f3200580e",
+  "label": "Root links from New Testament, John",
+  "statement_ids": [
+    "733c6742-234e-5513-b966-b39a1b7fe404",
+    "5cc55853-4845-586c-8457-9e1456834571",
+    "868ee1a8-5a52-5a95-8edb-010806c80339"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "20.21-23: John reports Jesus sending the assembled disciples and speaking of sins being forgiven or retained. The route needs this speech to be a grant of the specified power and its substance to go back to Jesus. It also needs the Matthew 28 commission. 21.15-17: John attributes the repeated sheep charge to Jesus addressing Simon. The route needs to identify this charge with the selected shepherding power, establish that Jesus gave it, and establish the Matthew 28 commission. 8.42: John reports an explicit first-person attribution of Jesus's mission to God. To establish the case claim, the saying must go back to Jesus and the sending asserted here must carry authority to speak or act for God in the selected sense.",
+  "evidence": [
+    "39808ea5-6960-524b-9017-a7e87c9ad718",
+    "40544f6f-9d36-5053-812d-0b4dac17d06d",
+    "e3435238-9f47-5bf4-8caa-523fa89e1a68"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26"
+    }
+  ]
+}
