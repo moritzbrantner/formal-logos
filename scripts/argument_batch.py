@@ -64,6 +64,12 @@ The spec format:
     paraphrase = "..."
     definitions = ["DEF-..."]
     disambiguations = ["DISAMB-..."]
+    # (optional) a statement outside the root's component records its plan
+    # (docs/corpus-model.md, "Connection plans"; `truth connectivity --base`):
+    [statement.connection_plan]
+    target_statement_id = "STMT-..."   # statement handle, written as its uuid
+    missing_bridge = "..."
+    blocker = "..."
 
     [[argument]]
     id = "..."
@@ -303,6 +309,18 @@ def build_records(spec: dict, write: bool) -> list[str]:
             record["definition_ids"] = refs("definition", s["definitions"])
         if s.get("disambiguations"):
             record["disambiguation_ids"] = refs("disambiguation", s["disambiguations"])
+        if "connection_plan" in s:
+            # docs/corpus-model.md, "Connection plans": the target is a statement handle.
+            plan = s["connection_plan"]
+            fields = {"target_statement_id", "missing_bridge", "blocker"}
+            if set(plan) != fields:
+                raise SystemExit(f"statement {s['id']}: connection_plan needs exactly the fields "
+                                 f"{', '.join(sorted(fields))}; it has {', '.join(sorted(plan))}")
+            record["connection_plan"] = {
+                "target_statement_id": handles.ref("statement", plan["target_statement_id"]),
+                "missing_bridge": plan["missing_bridge"],
+                "blocker": plan["blocker"],
+            }
         dump(record_path(existing["statements"], "statements", sid), record, write, planned)
 
     def senses(statement_id: str, key: str) -> list[str]:

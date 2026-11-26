@@ -164,6 +164,15 @@ fn the_connectivity_gate_fails_on_new_disconnection_only() {
         "corpus/statements/new.json",
         &format!(r#"{{"id": "{NEW}", "label": "NEW", "paraphrase": "NEW"}}"#),
     );
+    // An attempt naming NEW together with the connected A is not typed
+    // contact: the gate still fails.
+    write(
+        root,
+        "corpus/attempts/attempt.json",
+        &format!(
+            r#"{{"id": "66666666-6666-4666-8666-666666666666", "statement_ids": ["{A}", "{NEW}"]}}"#
+        ),
+    );
     let output = Command::new(BINARY)
         .args(["--root"])
         .arg(root)
@@ -198,13 +207,15 @@ fn an_unreadable_base_revision_is_a_revision_error() {
     let directory = TempDir::new("error");
     let root = directory.0.as_path();
     fixture(root);
-    let output = Command::new(BINARY)
-        .args(["--json", "--root"])
-        .arg(root)
-        .args(["frontier-diff", "--base", "NO-SUCH-REVISION"])
-        .output()
-        .unwrap();
-    assert_eq!(output.status.code(), Some(1));
-    let error: Value = serde_json::from_slice(&output.stderr).unwrap();
-    assert_eq!(error["error"]["code"], "revision_error");
+    for command in ["frontier-diff", "connectivity"] {
+        let output = Command::new(BINARY)
+            .args(["--json", "--root"])
+            .arg(root)
+            .args([command, "--base", "NO-SUCH-REVISION"])
+            .output()
+            .unwrap();
+        assert_eq!(output.status.code(), Some(1), "{command}");
+        let error: Value = serde_json::from_slice(&output.stderr).unwrap();
+        assert_eq!(error["error"]["code"], "revision_error", "{command}");
+    }
 }

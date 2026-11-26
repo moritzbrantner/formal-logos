@@ -230,9 +230,11 @@ jobs:
         if: always() && github.event_name == 'pull_request'
         run: target/release/truth orphans --base HEAD^1 | tee -a "$GITHUB_STEP_SUMMARY"
       # Cohesive-graph goal (owner direction, 2026-11-26): the report shows statements
-      # with no recorded contact with the root (counts are not a score). On a PR the
-      # gate fails when a statement new since the base (HEAD^1), or moved out of the
-      # root component, is outside it without a connection_plan (docs/corpus-model.md).
+      # with no recorded contact with the root (counts are not a score) and every
+      # connection plan. On a PR (checkout is the merge commit, so HEAD^1 is the base)
+      # the gate fails when a statement new since the base, moved out of the root's
+      # typed component, or planned at the base, is outside that component (attempt
+      # co-citation excluded) without a valid connection_plan (docs/corpus-model.md).
       - name: Gate new graph disconnection
         if: always()
         env:
@@ -245,7 +247,7 @@ jobs:
             target/release/truth connectivity --list-isolated 20 || true
             echo '```'
           } | tee -a "$GITHUB_STEP_SUMMARY"
-          if [[ "$EVENT" == pull_request ]] && git rev-parse --verify HEAD^1 >/dev/null 2>&1; then
+          if [[ "$EVENT" == pull_request ]]; then
             {
               echo "### Connectivity gate (\`truth connectivity --base HEAD^1\`)"
               echo '```text'
