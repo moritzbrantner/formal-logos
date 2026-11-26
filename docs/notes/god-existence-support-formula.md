@@ -565,6 +565,46 @@ Why consider it? Actual productive giving of the recipient's very esse differs f
 
 **Next discriminating check:** register the two relation-sense families with distinct Lean declarations and explicit selected-profile links; keep old Challenges intact. In a separate sibling batch, test the esse-only anti-reception theorem and the parent/child omission model with Lean, bind-check, Comparator, NanoDa and a computed `frontier-diff`. Require independent review of the semantic reading, especially the scope of whole-being versus illumination, equal-grade or reciprocal esse causes, and whether `Profile.grounds` root laws remain plausible on its chosen causal interpretation. The overall judgment is **provisionally favorable to the scoped causal/essendi reading as a clearer formal target, but warrant underdetermined**, not established or a defeat of existential inertia.
 
+## Automated checks on stage 1–2 premises (2026-11-26)
+
+The sweep used corpus revision `1c9e6607bc6e004abc94cdb41426dbd26d4a0e97`.
+It selected the 40 eligible open root-route premises with the most transitive
+dependent arguments, breaking ties by statement UUID. It excluded the six
+gradation-calibration premises and records touched by #2032, #2035, #2036
+and #2038. All 40 serve both examined stages. A separate dossier pass
+identified three eligible premises specific to stage 2 outside the cohort.
+`12dc2662` links universal weak maximality to causing other actual bearers.
+`0730d46f` and `bf422bd7` concern shared nature and suppositum–nature
+identity. Their existing dossiers supply the reuse starting points for a
+separate check of the exclusively attribute-stage premises.
+
+Discovery with the proved pool left 32 trials unresolved and skipped seven
+targets at retrieval. The sole closure used the prohibition on self-origin
+to make the productive self-origin bridge vacuous. It also identified the
+carriers and cause frame across modules by name. The existing consumer
+already uses the bridge to derive that prohibition together with the
+no-self-production premise. The reverse trial adds no substantive support
+for the bridge. The proof-term audit identified no unused selected premise.
+All consuming Challenges already had Solutions. The tactic probe closed
+three of four existing flagged consumers, with zero folded
+single-premise-application hits. The corpus's assembly and instantiation
+classifications apply a different test.
+
+Of 58 consuming results, 33 yielded 51 Lean-checked omission certificates;
+extraction stopped before model search on the other 25, covering 35 requests. The [omission attempt](../../corpus/attempts/11adaaa5-7e9a-4855-8fcd-275421fa2067.json)
+links the corresponding existing controls and the
+[19 retained certificates](../../TruthCore/Case/Catholicism/DiscoverySweepControls.lean).
+For example, the omitted dependence requirement in
+`reciprocityIncompatibleViaDependence` permits two beings to move each
+other and each to be prior to the other while the dependence relation is
+empty. This is non-entailment from the remaining typed assumptions.
+It gives no evidence that the selected dependency relation is empty in
+reality. The [extraction attempt](../../corpus/attempts/808d2c82-bd33-4d34-a307-e2d027f77b67.json)
+records the other 35 omission requests, including the first unsupported
+binder or formula for each consumer. A fresh search needs either a relevant
+explicit proved bundle for a retrieval gap or an interpretation that
+supports the consumer's original structured vocabulary.
+
 ## Research attempts citing this note
 
 - [Classical root's PURE_ACT_1 from its simplicity, existence and the composition premise](../../corpus/attempts/383d23ad-bec6-442c-9fec-0112df1e1c97.json)
@@ -572,3 +612,7 @@ Why consider it? Actual productive giving of the recipient's very esse differs f
 - [Cluster reassessment of the modal-spine frame, uniting-cause, transfer and separability premises](../../corpus/attempts/dd24400b-cc87-4095-b4c4-df857e1edff5.json)
 - [Cluster reassessment of the sustaining, Dei Filius bridge and dependence premises (eternity path)](../../corpus/attempts/447838c8-601f-4a04-ad65-b50ef9dd3764.json)
 - [Modal countermodel and exact support audit for independence and separability](../../corpus/attempts/independence-separability-scope-audit.json)
+- [Proved-pool trials and retrieved bundles](../../corpus/attempts/01a04e4a-9e8c-4886-9559-a9c6d97b7213.json)
+- [Targets skipped at proved-pool retrieval](../../corpus/attempts/4b35db72-847b-4a41-b2ec-582c74be6236.json)
+- [Rejected self-origin converse](../../corpus/attempts/853663da-b50c-452b-814b-8f58edc0c852.json)
+- [Tactic probes on existing Challenges](../../corpus/attempts/b3bdaa86-3f9d-4a3d-b292-c7c0d39722bc.json)
