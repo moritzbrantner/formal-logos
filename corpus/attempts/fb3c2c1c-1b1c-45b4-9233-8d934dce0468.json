@@ -14,8 +14,18 @@
   "outcome": "succeeded",
   "summary": "The existing GradesFrame has a common set-valued rank satisfying the forward comparison, both null conditions and reverse comparison among bearers exactly when strict comparison implies possession, is irreflexive and is transitive on bearer triples. The checked construction counts the candidate itself only when it possesses the perfection. With a supplied map, the existing omission models and the new reverse and mixed-domain controls distinguish the individual assumptions. Exact calibration for every pair follows when every member is a bearer. Exact calibration at esse plus possession assembles the selected tracking premise consumed by 87f32a9c. See docs/notes/maximum-definition-fork.md#one-scale-for-the-comparative-and-null-conditions-2026-11-26.",
   "blocker": "For independent application, justify the primitive comparative and possession criteria at esse on the same bearer domain. The constructed representation assumes the possession rule and cannot independently warrant it. An externally supplied degree map needs calibration evidence of its own.",
-  "evidence": ["989b88d5-9f1a-4c70-babd-8a8b9e335bc7"],
+  "evidence": [
+    "989b88d5-9f1a-4c70-babd-8a8b9e335bc7",
+    "PR-2027"
+  ],
   "workers": [
-    {"role": "author", "provider": "codex", "model": "gpt-6.2-sol", "effort": "high", "date": "2026-11-26"}
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2027"
+    }
   ]
 }
