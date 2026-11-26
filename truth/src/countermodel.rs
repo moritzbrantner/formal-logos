@@ -34,6 +34,40 @@ pub const EXTRACTOR: &str = "scripts/Countermodel.lean";
 const BUILD_TIMEOUT: Duration = Duration::from_secs(3600);
 const EXTRACT_TIMEOUT: Duration = Duration::from_secs(300);
 const CHECK_TIMEOUT: Duration = Duration::from_secs(600);
+// Audit the local certificates and consumer applications, including their
+// dependencies on imported constants and Lean's generated auxiliary proofs.
+const AXIOM_AUDIT: &str = r#"
+  let env ← getEnv
+  let mut foundCertificate := false
+  for (name, info) in env.constants.map₂.toList do
+    let .thmInfo _ := info | continue
+    let .str _ leaf := name | continue
+    unless leaf == "certificate" || leaf == "consumer_application" do continue
+    if leaf == "certificate" then foundCertificate := true
+    let disallowed := (← Lean.collectAxioms name).filter (!allowed.contains ·)
+    unless disallowed.isEmpty do
+      throwError "{name} depends on disallowed axioms: {disallowed}"
+  unless foundCertificate do
+    throwError "countermodel axiom audit found no certificate"
+"#;
+
+// Lean's standard Decidable instance for a Fin existential uses axioms.
+// Search the head and tail directly so zero-axiom certificates can use decide.
+const CONSTRUCTIVE_EXISTS: &str = r"local instance (priority := high) «countermodel decidable exists»
+    {n : Nat} (P : Fin n → Prop) [DecidablePred P] : Decidable (∃ i, P i) :=
+  match n, P, ‹DecidablePred P› with
+  | 0, _, _ => isFalse fun ⟨i, _⟩ => i.elim0
+  | n+1, P, decideP =>
+    match decideP ⟨0, Nat.zero_lt_succ n⟩ with
+    | isTrue h => isTrue ⟨⟨0, Nat.zero_lt_succ n⟩, h⟩
+    | isFalse h =>
+      match @«countermodel decidable exists» n (fun i => P i.succ) (fun i => decideP i.succ) with
+      | isTrue htail => isTrue (htail.elim fun i hi => ⟨i.succ, hi⟩)
+      | isFalse htail => isFalse (by
+        rintro ⟨⟨k, hk⟩, hp⟩
+        cases k with
+        | zero => exact h hp
+        | succ k => exact htail ⟨⟨k, Nat.lt_of_succ_lt_succ hk⟩, hp⟩)";
 
 // --- skeleton ----------------------------------------------------------------
 
@@ -112,6 +146,7 @@ pub struct Skeleton {
     structures: Vec<Structure>,
     /// Arguments of the unchanged theorem in binder order, including proof variables.
     application: Vec<String>,
+    permits_classical: Option<bool>,
     pub premises: Vec<Premise>,
     pub conclusion_lean: String,
     pub conclusion: Formula,
@@ -280,6 +315,7 @@ impl Skeleton {
             functions,
             structures,
             application,
+            permits_classical: value.get("permits_classical").and_then(Value::as_bool),
             premises: list(value, "premises")?
                 .iter()
                 .map(|p| {
@@ -334,6 +370,12 @@ impl Skeleton {
 
     pub fn premise_names(&self) -> Vec<&str> {
         self.premises.iter().map(|p| p.name.as_str()).collect()
+    }
+
+    fn render_constructively(&self) -> bool {
+        // Legacy skeletons keep their rendering. Missing policy metadata still
+        // grants no axiom permissions during checking.
+        self.permits_classical == Some(false)
     }
 
     /// Whether any formula quantifies over `Prop` (closed by `Classical.em`).
@@ -1125,11 +1167,21 @@ fn lean_type(sort: &Sort) -> String {
     }
 }
 
+fn render_element(value: usize, constructive: bool) -> String {
+    if constructive {
+        // Fin's OfNat instance introduces propext through its bound proof.
+        format!("(⟨{value}, by decide⟩)")
+    } else {
+        value.to_string()
+    }
+}
+
 fn render_predicate(
     name: &str,
     sorts: &[Sort],
     table: &BTreeSet<Vec<Val>>,
     model: &Model,
+    constructive: bool,
 ) -> String {
     if sorts.is_empty() {
         let body = if table.is_empty() { "False" } else { "True" };
@@ -1163,12 +1215,16 @@ fn render_predicate(
             let mut parts = Vec::new();
             for ((var, sort), value) in params.iter().zip(sorts).zip(row) {
                 match (sort, value) {
-                    (Sort::Carrier(_), Val::Elem(value)) => parts.push(format!("{var} = {value}")),
+                    (Sort::Carrier(_), Val::Elem(value)) => {
+                        parts.push(format!("{var} = {}", render_element(*value, constructive)));
+                    }
                     (Sort::Set(carriers), Val::Set(members)) => {
                         let lengths: Vec<usize> = carriers.iter().map(|c| model.size(c)).collect();
                         for point in product(&lengths) {
-                            let coordinates: Vec<String> =
-                                point.iter().map(usize::to_string).collect();
+                            let coordinates: Vec<String> = point
+                                .iter()
+                                .map(|&value| render_element(value, constructive))
+                                .collect();
                             let app = format!("{var} {}", coordinates.join(" "));
                             parts.push(if members.contains(&point) {
                                 app
@@ -1191,16 +1247,18 @@ fn render_predicate(
     }
 }
 
-fn render_function(function: &UnaryFunction, table: &[usize]) -> String {
+fn render_function(function: &UnaryFunction, table: &[usize], constructive: bool) -> String {
     let (last, earlier) = table
         .split_last()
         .expect("nonempty function table of a valid finite model");
     let signature = format!("{} → {}", function.domain, function.codomain);
+    let mut body = render_element(*last, constructive);
     if earlier.iter().all(|value| value == last) {
-        return format!("abbrev {} : {signature} := fun _ => {last}", function.name);
+        return format!("abbrev {} : {signature} := fun _ => {body}", function.name);
     }
-    let mut body = last.to_string();
     for (index, value) in earlier.iter().enumerate().rev() {
+        let index = render_element(index, constructive);
+        let value = render_element(*value, constructive);
         body = format!("if x = {index} then {value} else {body}");
     }
     format!("abbrev {} : {signature} := fun x => {body}", function.name)
@@ -1210,6 +1268,7 @@ fn render_function(function: &UnaryFunction, table: &[usize]) -> String {
 /// `find_model` produces valid tables; `evaluate` checks externally supplied
 /// function tables before evaluating a formula.
 pub fn render_model(skeleton: &Skeleton, model: &Model) -> Vec<String> {
+    let constructive = skeleton.render_constructively();
     let mut lines: Vec<String> = skeleton
         .carriers
         .iter()
@@ -1218,16 +1277,20 @@ pub fn render_model(skeleton: &Skeleton, model: &Model) -> Vec<String> {
     for (name, sort) in &skeleton.constants {
         lines.push(format!(
             "abbrev {name} : {sort} := {}",
-            model.constants[name]
+            render_element(model.constants[name], constructive)
         ));
     }
     for function in &skeleton.functions {
-        lines.push(render_function(function, &model.functions[&function.name]));
+        lines.push(render_function(
+            function,
+            &model.functions[&function.name],
+            constructive,
+        ));
     }
     let empty = BTreeSet::new();
     for (name, sorts) in &skeleton.predicates {
         let table = model.tables.get(name).unwrap_or(&empty);
-        lines.push(render_predicate(name, sorts, table, model));
+        lines.push(render_predicate(name, sorts, table, model, constructive));
     }
     for structure in &skeleton.structures {
         lines.push(format!(
@@ -1288,6 +1351,9 @@ pub fn render_certificate(
         format!("namespace {label}"),
         format!("/-! {what} Candidate from `truth countermodel`; checked by `decide`. -/"),
     ];
+    if skeleton.render_constructively() && !skeleton.carriers.is_empty() {
+        lines.push(CONSTRUCTIVE_EXISTS.to_owned());
+    }
     lines.extend(render_model(skeleton, model));
     if !skeleton.structures.is_empty() {
         // Type-check the reconstructed vocabulary and printed propositions against
@@ -1298,7 +1364,11 @@ pub fn render_certificate(
             .map(|premise| format!("({})", premise.lean))
             .collect();
         implication.push(format!("({})", skeleton.conclusion_lean));
-        let application = format!("@{} {}", skeleton.theorem, skeleton.application.join(" "));
+        let application = format!(
+            "@_root_.{} {}",
+            skeleton.theorem,
+            skeleton.application.join(" ")
+        );
         let proof = if skeleton.premises.is_empty() {
             application
         } else {
@@ -1309,7 +1379,7 @@ pub fn render_certificate(
             format!("fun {binders} => {application}")
         };
         lines.push(format!(
-            "example : {} :=\n  {proof}",
+            "theorem consumer_application : {} :=\n  {proof}",
             implication.join(" →\n    ")
         ));
     }
@@ -1609,13 +1679,25 @@ pub fn extract(root: &Path, theorem: &str, module: Option<&str>) -> Result<Skele
     Skeleton::parse(&value, &module)
 }
 
-/// Lean's verdict on `snippet` after `import <module>`: accepted (exit 0 and
-/// no `error` in the output), and the output.
+/// Lean's verdict and output after elaborating the snippet and auditing its
+/// transitive axiom dependencies against the module's allowlist.
 pub fn lean_check(root: &Path, skeleton: &Skeleton, snippet: &str) -> (bool, String) {
     let directory = scratch("truth-countermodel-check");
     let path = directory.join("CountermodelCheck.lean");
-    let written = fs::create_dir_all(&directory)
-        .and_then(|()| fs::write(&path, format!("import {}\n\n{snippet}\n", skeleton.module)));
+    let allowed = if skeleton.permits_classical == Some(true) {
+        "#[`propext, `Classical.choice, `Quot.sound]"
+    } else {
+        "#[]"
+    };
+    let written = fs::create_dir_all(&directory).and_then(|()| {
+        fs::write(
+            &path,
+            format!(
+                "import Lean\nimport {}\n\n{snippet}\nopen Lean in\nrun_meta do\n  let allowed : Array Name := {allowed}\n{AXIOM_AUDIT}",
+                skeleton.module
+            ),
+        )
+    });
     let result = match written {
         Err(error) => (false, os_error(&error, &path)),
         Ok(()) => match lake(

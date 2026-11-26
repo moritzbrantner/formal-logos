@@ -47,11 +47,12 @@ target/release/truth countermodel THEOREM --module TruthCore.X.Solution   # skip
    rendered as Lean `abbrev`s and a
    `certificate` theorem
    `¬ Pₖ ∧ P₁ ∧ … ∧ ¬ C`, proved by `delta <unfolded definitions>; decide`.
-   For a structure model, Lean also checks an application of the unchanged
-   consumer theorem with the reconstructed values and the printed premises
-   and conclusion. A premise quantified over `Prop` is closed by
-   `Classical.em`. Unless
-   `--no-check` is given, Lean checks every certificate. Statuses: `lean-checked`,
+   For a structure model, Lean also checks a named application of the
+   root-qualified consumer theorem with the reconstructed values and the
+   printed premises and conclusion. The checker can try `Classical.em` for
+   premises quantified over `Prop`. Unless `--no-check` is given, Lean
+   checks every certificate and audits its transitive axiom dependencies,
+   including those of the named consumer application. Statuses: `lean-checked`,
    `lean-rejected` (with the Lean output), `candidate` (not checked) or
    `unresolved`. `--all` adds a joint witness in which every premise and the
    conclusion hold.
@@ -67,6 +68,13 @@ this tool searches for countermodels.
 ## Boundaries
 
 - The solver proposes; Lean decides. An unchecked candidate is not evidence.
+  A certificate that depends on an axiom is rejected unless the consumer's
+  defining module imports Mathlib or Duper and the axiom is one of `propext`,
+  `Classical.choice` or `Quot.sound`. This applies to both generated
+  theorems, including dependencies reached through imports. See the
+  [axiom policy](axiom-policy.md).
+  For zero-axiom modules, generated models construct `Fin` elements with
+  explicit bounds and decide finite existential quantifiers by recursion.
 - `unresolved` means that the completed search found no model within the encoded
   size bound. Unsupported vocabulary and function-table dimension or cardinality
   overflow are errors, not `unresolved` results. A bounded negative result does

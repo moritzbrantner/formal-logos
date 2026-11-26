@@ -106,10 +106,9 @@ fn nested_structure_certificate_reuses_field_tables_and_binder_order() {
     assert!(certificate.contains(&format!("abbrev {predicate} : A → Prop := fun _ => True")));
     assert!(certificate.contains(&format!("abbrev {flag} : A → Prop := fun _ => False")));
     assert!(certificate.contains(&format!("@Example.Inner.mk A {predicate}")));
-    assert!(
-        certificate
-            .contains("@Example.consumer A p x «countermodel premise 0» «countermodel premise 1»")
-    );
+    assert!(certificate.contains(
+        "@_root_.Example.consumer A p x «countermodel premise 0» «countermodel premise 1»"
+    ));
     assert!(certificate.contains(&format!("({keep}) ∧\n    ¬ ({omit})")));
 }
 

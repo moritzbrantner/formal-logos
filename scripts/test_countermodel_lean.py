@@ -6,6 +6,7 @@ The existing CI Python suite discovers this file; metadata-only jobs skip Lean.
 """
 
 import json
+import os
 from pathlib import Path
 import shutil
 import subprocess
@@ -17,6 +18,7 @@ from lean_test_support import requires_built
 
 ROOT = Path(__file__).resolve().parents[1]
 TOOL = ROOT / "scripts" / "Countermodel.lean"
+CLI = ROOT / "target" / "release" / "truth"
 PREFIX = "COUNTERMODEL-JSON "
 NS = "CountermodelFixture."
 FIXTURE = r"""
@@ -40,6 +42,15 @@ structure Frame where
 theorem sharedFrame (frame : Frame) (h : ∃ x, frame.relation x x) :
     ∃ x, frame.relation x x := h
 
+structure TrivialLaw : Prop where
+
+structure WithLaw (A : Type) where
+  relation : A → Prop
+  law : TrivialLaw
+
+theorem proofField {A : Type} (p : WithLaw A) (x : A)
+    (h : p.relation x) : p.relation x := h
+
 structure Inner (A : Type) where
   relation : A → Prop
   flag : A → Bool
@@ -50,7 +61,19 @@ structure Outer (A : Type) where
 
 theorem nestedFields {A : Type} (p : Outer A) (x : A)
     (h : p.left.relation x ∧ p.right.flag x) :
-    p.right.flag x ≠ false ∧ p.left.relation x := ⟨by simpa [h.2], h.1⟩
+    p.right.flag x ≠ false ∧ p.left.relation x :=
+  ⟨fun absent => Bool.noConfusion (h.2.symm.trans absent), h.1⟩
+
+axiom forbidden {A : Type} (p : Outer A) (x : A) :
+    p.left.relation x → p.left.relation x
+
+theorem importedAxiom {A : Type} (p : Outer A) (x : A)
+    (h : p.left.relation x) : p.left.relation x := forbidden p x h
+
+theorem emWitness (h : ∀ p : Prop, p ∨ ¬ p) : ∀ p : Prop, p ∨ ¬ p := h
+
+theorem splitExtension {A : Type} (p : A → Prop)
+    (h : (∃ a, p a) ∧ (∃ a, ¬ p a)) : (∃ a, p a) ∧ (∃ a, ¬ p a) := h
 
 structure UnsupportedField (A : Type) where
   relation : A → Prop
@@ -66,11 +89,24 @@ theorem classParameter {A : Type} [p : Vocabulary A] (x : A)
     (h : p.relation x) : p.relation x := h
 
 end CountermodelFixture
+"""
 
+SHADOW = r"""
+namespace Countermodel.nestedFields.omit_h.CountermodelFixture
+
+axiom nestedFields {A : Type} (p : _root_.CountermodelFixture.Outer A) (x : A)
+    (h : p.left.relation x ∧ p.right.flag x) :
+    p.right.flag x ≠ false ∧ p.left.relation x
+
+end Countermodel.nestedFields.omit_h.CountermodelFixture
+"""
+
+PROBE = r"""
 run_meta do
   for name in #[``CountermodelFixture.explicitNested,
       ``CountermodelFixture.implicitInput, ``CountermodelFixture.binaryInput,
       ``CountermodelFixture.functionEquality, ``CountermodelFixture.sharedFrame,
+      ``CountermodelFixture.proofField,
       ``CountermodelFixture.nestedFields, ``CountermodelFixture.unsupportedField,
       ``CountermodelFixture.classParameter] do
     let result ← try Countermodel.run name
@@ -88,7 +124,7 @@ class CountermodelExtractionTests(unittest.TestCase):
     def setUpClass(cls):
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory) / "CountermodelFixture.lean"
-            path.write_text(TOOL.read_text() + "\n" + FIXTURE)
+            path.write_text(TOOL.read_text() + "\n" + FIXTURE + PROBE)
             completed = subprocess.run(
                 [sys.executable, "scripts/worker_env.py", "--", "lake", "env", "lean", str(path)],
                 cwd=ROOT, capture_output=True, text=True, timeout=120,
@@ -131,6 +167,10 @@ class CountermodelExtractionTests(unittest.TestCase):
         self.assertIn("unsupported structure field frame.Carrier",
                       self.reports["sharedFrame"]["error"])
 
+    def test_structure_cannot_supply_a_proof_field(self):
+        self.assertIn("unsupported proof-valued structure field p.law",
+                      self.reports["proofField"]["error"])
+
     def test_nested_relations_have_distinct_field_tables(self):
         report = self.reports["nestedFields"]
         self.assertNotIn("error", report)
@@ -151,6 +191,59 @@ class CountermodelExtractionTests(unittest.TestCase):
 
     def test_typeclass_parameter_stays_unsupported(self):
         self.assertIn("unsupported parameter p", self.reports["classParameter"]["error"])
+
+
+@requires_built()
+@unittest.skipUnless(shutil.which("lake") or (Path.home() / ".elan/bin/lake").exists(),
+                     "Lean integration requires lake")
+@unittest.skipUnless(CLI.is_file() or os.environ.get("CI"), "needs cargo build --release -p truth")
+class CountermodelCertificateTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        directory = tempfile.TemporaryDirectory()
+        cls.addClassCleanup(directory.cleanup)
+        cls.project = Path(directory.name)
+        (cls.project / "lean-toolchain").write_text((ROOT / "lean-toolchain").read_text())
+        (cls.project / "lakefile.toml").write_text(
+            'name = "fixture"\n\n[[lean_lib]]\nname = "CountermodelFixture"\n'
+        )
+        (cls.project / "CountermodelFixture.lean").write_text(FIXTURE + SHADOW)
+        scripts = cls.project / "scripts"
+        scripts.mkdir()
+        for name in ("worker_env.py", "Countermodel.lean"):
+            (scripts / name).symlink_to(ROOT / "scripts" / name)
+
+    def replay(self, theorem, *flags, size=1):
+        completed = subprocess.run(
+            [str(CLI), "--root", str(self.project), "--json", "countermodel", NS + theorem,
+             "--module", "CountermodelFixture", "--omit", "h", "--size", str(size), *flags],
+            cwd=ROOT, capture_output=True, text=True, timeout=120,
+        )
+        self.assertTrue(completed.stdout, completed.stderr)
+        return completed.returncode, json.loads(completed.stdout)["reports"]
+
+    def test_imported_disallowed_axiom_is_rejected(self):
+        code, (report,) = self.replay("importedAxiom")
+        self.assertEqual((code, report["status"]), (1, "lean-rejected"))
+        self.assertIn("consumer_application depends on disallowed axioms: [CountermodelFixture.forbidden]",
+                      report["lean_output"])
+
+    def test_consumer_application_ignores_shadowing_declaration(self):
+        code, (report,) = self.replay("nestedFields")
+        self.assertEqual((code, report["status"]), (0, "lean-checked"), report)
+
+    def test_certificate_rejects_classical_axioms_without_mathlib_or_duper(self):
+        code, (omission, witness) = self.replay("emWitness", "--all")
+        self.assertEqual((code, omission["status"], witness["status"]),
+                         (1, "unresolved", "lean-rejected"))
+        self.assertIn("witness.certificate depends on disallowed axioms:", witness["lean_output"])
+        self.assertIn("Classical.choice", witness["lean_output"])
+
+    def test_constructive_finite_existentials_and_nonconstant_predicate(self):
+        code, (omission, witness) = self.replay("splitExtension", "--all", size=2)
+        self.assertEqual((code, omission["status"], witness["status"]),
+                         (0, "lean-checked", "lean-checked"), (omission, witness))
+        self.assertEqual(witness["sizes"], {"A": 2})
 
 
 if __name__ == "__main__":

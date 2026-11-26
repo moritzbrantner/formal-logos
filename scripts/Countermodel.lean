@@ -229,6 +229,24 @@ def fieldRelationArgs (ctx : Ctx) (ty : Expr) : MetaM (Option (Array String × B
       args := args.push carrier
     return some (args, isBool)
 
+/-- Use the consumer's defining module, even if the CLI opened it through an
+umbrella import with a wider dependency set. -/
+def permitsClassical (env : Environment) (consumer : Name) : Bool := Id.run do
+  let some root := env.getModuleIdxFor? consumer | return false
+  let mut pending := #[root]
+  let mut seen : NameSet := {}
+  while let some index := pending.back? do
+    pending := pending.pop
+    let some mod := env.header.modules[index.toNat]? | continue
+    if seen.contains mod.module then continue
+    if mod.module.getRoot == `Mathlib || mod.module.getRoot == `Duper then return true
+    seen := seen.insert mod.module
+    let some data := env.header.moduleData[index.toNat]? | continue
+    for dep in data.imports do
+      if let some next := env.getModuleIdx? dep.module then
+        pending := pending.push next
+  return false
+
 /-- Extract only structures over the already declared carriers. Each leaf adds
 one ordinary solver predicate, so nested fields use the same finite search. -/
 partial def structureValue (ctx : Ctx) (preds : Array Json) (root : FVarId)
@@ -245,8 +263,10 @@ partial def structureValue (ctx : Ctx) (preds : Array Json) (root : FVarId)
       if vars.isEmpty then s!"(decide {call})"
       else s!"(fun {String.intercalate " " vars} => decide ({call}))"
     return (ctx, preds, rendered)
-  let env ← getEnv
   let what := if path.isEmpty then s!"parameter {label}" else s!"structure field {label}"
+  if ← isProp ty then
+    throwError "unsupported proof-valued {what} : {← ppExpr ty}"
+  let env ← getEnv
   let some head := ty.getAppFn.constName? | throwError "unsupported {what} : {← ppExpr ty}"
   if !isStructure env head || (← isClass? ty).isSome then
     throwError "unsupported {what} : {← ppExpr ty}"
@@ -335,11 +355,13 @@ def run (n : Name) : MetaM Json := do
           ("lean", str (← ppFull ty))])
       let c ← formula ctx concl
       let st ← get
+      let classical := permitsClassical (← getEnv) n
       return Json.mkObj [("theorem", str n.toString), ("carriers", Json.arr carriers),
         ("predicates", Json.arr preds), ("constants", Json.arr consts),
         ("functions", Json.arr funcs),
         ("structures", Json.arr structures),
         ("application", Json.arr application),
+        ("permits_classical", Json.bool classical),
         ("premises", Json.arr premises),
         ("conclusion", Json.mkObj [("formula", c), ("lean", str (← ppFull concl))]),
         ("unfolded", Json.arr (st.unfolded.map (str ·.toString)))]
