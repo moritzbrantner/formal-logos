@@ -1,0 +1,46 @@
+[batch]
+vocab = "TruthCore.Causality.FiniteGiverPanels"
+results = "TruthCore.Results.Causality.FiniteGiverPanels"
+
+[[statement]]
+id = "Every finite panel of actual recipients has a common actual maximal giver of esse"
+lean = "EveryPanelCovered"
+paraphrase = "Open analyst premise. Fix one actual dictionary and the respect esse. Every finite set of actual recipients, including the empty set, has an actual candidate unsurpassed in esse across the full bearer carrier (MAXIME_1). The same candidate within a panel either is a selected recipient or directly gives that recipient esse. The candidate can vary between panels."
+definitions = ["a2a8de58-42e0-5481-b7fb-848ae8602036", "211a6432-8b8f-53ed-85e3-75173bb15b24", "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"]
+disambiguations = ["4f1d0cf6-88ba-59e3-814d-01450c2bf282"]
+
+[[statement]]
+id = "Some finite panel of actual recipients has only finitely many eligible maximal givers of esse"
+lean = "FinitePivot"
+paraphrase = "Open analyst premise on the same actual dictionary. Some finite set of actual recipients admits an exhaustive finite population of actual MAXIME_1 candidates, each of which is or directly gives esse to every recipient on that panel. The population can be empty under this premise alone, and the finite bound is on the whole passing population of this one panel."
+definitions = ["a2a8de58-42e0-5481-b7fb-848ae8602036", "211a6432-8b8f-53ed-85e3-75173bb15b24", "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"]
+disambiguations = ["4f1d0cf6-88ba-59e3-814d-01450c2bf282"]
+
+[[statement]]
+id = "Natural numbers cover every finite giver panel without a finite pivot or a universal giver"
+lean = "NatPanelBoundary"
+paraphrase = "Omission control in one exact Fourth Way dictionary. All natural numbers are actual and MAXIME_1 under an empty strict comparison. A giver has a direct esse edge precisely to each smaller natural number. Every finite panel has a larger candidate, every panel's full passing population is infinite, and no candidate gives esse to every other actual recipient."
+definitions = ["a2a8de58-42e0-5481-b7fb-848ae8602036", "211a6432-8b8f-53ed-85e3-75173bb15b24", "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"]
+disambiguations = ["4f1d0cf6-88ba-59e3-814d-01450c2bf282"]
+
+[[argument]]
+id = "Finite actual panels and one finite pivot yield one maximal direct giver of esse"
+theorem = "universalGiver"
+comparator_theorems = ["boundedRefutation", "cyclicSharpness", "underivedPivotPairs"]
+premises = ["35ea71e7-c17d-5e83-a8d9-3d3dc666ea59", "Every finite panel of actual recipients has a common actual maximal giver of esse", "Some finite panel of actual recipients has only finitely many eligible maximal givers of esse"]
+conclusion = "0881e859-c4c3-53ff-9bec-b61294e12d51"
+rule = "Apply the registered finite-hitting law to panel unions and take singleton panels"
+meaning = "Use the one-finite-population projection of the checked #561 package. Finite recipient panels index the universal component and actual maximal givers form its fixed roster. Union gives a subintersection of the two passing populations. Every-panel coverage supplies population and the pivot supplies finiteness; the resulting fixed candidate passes every singleton in the original actual dictionary. Equality exempts the giver and all distinct actual recipients have direct esse edges."
+description = "Conditional support for the existing weak-maximal Fourth Way conclusion. Both empirical or metaphysical application premises remain open. The modal package supplies a mathematical consequence on panel indices; the argument uses no premise about the actual constitution of possible worlds."
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+senses = {MAXIMAL_IN_A_SELECTED_PERFECTION_GREATEST = "9bea9a43-3a87-4d62-86de-e5873aea62f8"}
+
+[[argument]]
+id = "Infinite actual roster witnesses omission of the finite giver pivot"
+theorem = "natPanelBoundary"
+premises = []
+conclusion = "Natural numbers cover every finite giver panel without a finite pivot or a universal giver"
+rule = "Bound each finite panel and choose a recipient above any proposed universal giver"
+meaning = "In the exact natural-number interpretation the successor of the finite panel's supremum gives esse directly to each member, while a proposed global giver fails at its own successor. The finite-pivot result with the checked #561 package then rules out any finite pivot in this same interpretation. This is a formal deletion witness for the finite-pivot premise."
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+senses = {MAXIMAL_IN_A_SELECTED_PERFECTION_GREATEST = "9bea9a43-3a87-4d62-86de-e5873aea62f8"}
