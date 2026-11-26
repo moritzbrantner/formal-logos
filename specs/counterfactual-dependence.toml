@@ -29,6 +29,7 @@ label = "Accessible absence coverage rules out being without a source of depende
 theorem = "dependence_excludes_being_without"
 premises = ["2bdb0be1-85dc-45a6-a8d0-c45fe46bb361", "The selector covers every accessible absence world", "Being able to be without another has an accessible existence witness"]
 conclusion = "STMT-DEPENDENCE-EXCLUDES-BEING-WITHOUT"
+strong_version_needed = {"The selector covers every accessible absence world" = "Full coverage is a consequent-independent selection policy: it is specified without knowing which effect is at issue. The weaker witness-preservation premise suffices for the conclusion and is used by the sibling argument (docs/notes/counterpossible-conservativity.md)."}
 # The sense is selected by the linked definition and tagged frame projection.
 # The optional bind-time constant check expects EffectDependsOnEfficientCause;
 # this inference uses DependsForBeing without the distinct efficient-cause law.

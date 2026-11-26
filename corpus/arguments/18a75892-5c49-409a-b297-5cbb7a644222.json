@@ -18,5 +18,8 @@
   ],
   "disambiguation_ids": [
     "23dd6f32-b456-4963-adb3-7befbf0dc4fb"
-  ]
+  ],
+  "strong_version_needed": {
+    "06047f4c-ce98-4a33-a3f2-84fcf476d86e": "Full coverage is a consequent-independent selection policy: it is specified without knowing which effect is at issue. The weaker witness-preservation premise suffices for the conclusion and is used by the sibling argument (docs/notes/counterpossible-conservativity.md)."
+  }
 }
