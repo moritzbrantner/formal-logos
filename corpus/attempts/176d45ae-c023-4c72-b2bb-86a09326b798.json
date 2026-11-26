@@ -31,15 +31,24 @@
       "effort": "high",
       "date": "2026-11-26",
       "pr": "PR-2094"
+    },
+    {
+      "role": "repair",
+      "provider": "claude",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2094"
     }
   ],
   "current_assessment": {
     "date": "2026-11-26",
     "statement_ids": [
-      "d86c9de9-25be-488b-b3b7-69f5f4eb80b8"
+      "d86c9de9-25be-488b-b3b7-69f5f4eb80b8",
+      "76d2cc96-14a0-48bc-bd0b-a5c0ca853265"
     ],
     "scope": "Finite strict-giver withdrawal for a begun received-esse bearer, with both histories calibrated in one frame at fixed onset, origin and independently characterized loss conditions.",
-    "assessment": "The checked contrast makes the test precise. Explained inducer-free survival with every giver absent supplies a counterinstance to the productive bridge in the calibrated frame. Inducer-free loss instead supplies a counterinstance to the cessation law in that frame. Direct conservation remains positively motivated for direct causes of being, and the inertia account retains its case from earlier actuality and an independently warranted law of cessation. The Boolean contrast leaves their relative warrant open in the absence of an independently justified calibration.",
+    "assessment": "The checked contrast makes the test precise. Explained inducer-free survival with no one exercising strict giving to that bearer at the cut endpoint supplies a counterinstance to the productive bridge in the calibrated frame. Inducer-free loss instead supplies a counterinstance to the cessation law in that frame. Direct conservation remains positively motivated for direct causes of being, and the inertia account retains its case from earlier actuality and an independently warranted law of cessation. The Boolean contrast leaves their relative warrant open in the absence of an independently justified calibration. For concurrent actualization 76d2cc96: a calibrated present received bearer with no giver at that endpoint would falsify both the weak and the strong form there; that inference needs no explanation witness, which is needed only to falsify d86c9de9. Inducer-free loss alone establishes neither form of concurrent actualization. The earlier assessment of 76d2cc96 keeps its independent scope.",
     "next_test": "Identify one begun received bearer across an admissible pair, fix its onset and origin, and justify detection of nonexercise of strict giving independent of the later presence report. Exclude competing givers and loss inducers at the matching scope. Explained survival would revise the productive bridge in that interpretation. Inducer-free loss would favor sustaining for that case; broader warrant needs a scope bridge.",
     "note": "docs/notes/sustaining-vs-existential-inertia.md#13-finite-interventions-and-the-productive-bridge",
     "reviewed_revision": "dfbea133f53da25380f908d9a6694730498739b2",
