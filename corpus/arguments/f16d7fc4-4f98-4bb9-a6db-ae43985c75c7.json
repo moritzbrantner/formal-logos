@@ -1,0 +1,20 @@
+{
+  "id": "f16d7fc4-4f98-4bb9-a6db-ae43985c75c7",
+  "label": "Finite root audits imply rooted closed esse collections",
+  "premise_statement_ids": [
+    "3008c7db-0236-4b03-9da7-f41ea8d8cac1"
+  ],
+  "conclusion_statement_id": "20babef7-6ae7-4b48-b72a-f417e8e63136",
+  "inference_ids": [
+    "5dbefc60-7e3f-4504-bc85-6ebab21e05d4"
+  ],
+  "meaning": "On the same q3a4 profile, the actual relation agrees with every audit of itself. The particular audited r is therefore an actual supplierless ancestor of the same x. Each actual cause edge retains both actuality guards and its supplier-to-recipient direction in esseCauseGraph p. A closed collection containing x must contain r by the finite path. This gives an alternative structural formulation of the existing rootedness premise and makes the data for a local positive certificate explicit; applicability of that premise remains open.",
+  "definition_ids": [
+    "23ae8d63-1351-4e7c-9ab1-ed85d9695b22",
+    "5b19527d-9418-441e-820c-3c659ba7cb12",
+    "8163859b-95b3-4dd2-8a69-541bd332f32f",
+    "05a2afda-c654-5f6b-a0f7-796c5dc1be2e",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "c15c1634-6d70-4ecb-8b5b-5592df955223"
+  ]
+}
