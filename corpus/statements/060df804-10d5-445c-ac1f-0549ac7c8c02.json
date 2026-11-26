@@ -1,0 +1,17 @@
+{
+  "id": "060df804-10d5-445c-ac1f-0549ac7c8c02",
+  "label": "All single primary relay cuts can leave a specified feed's intrinsic sourcehood unresolved",
+  "paraphrase": "At every depth d, the same specified token actually supplies primary zero by a finite path in two uncut worlds on the same carrier. The token is intrinsic in one world and receives from auxiliary zero in the other. The complete incoming inventory at the token is empty in the sourced world and contains exactly auxiliary zero in the borrowed world. Every selected profile satisfies the local rule with intrinsic supply or an active linked supplier. The borrowed profiles have no intrinsic stages and obey the existing source-free transmission rule. Primary zero is finitely grounded in the sourced baseline and lacks finite grounding in the borrowed baseline. Both recipients are active in the baseline, and both selected response families report activity exactly for cuts i at or above d. No exact classifier from the full primary response record recovers the specified token's intrinsic status. Cutting the auxiliary entrance alone distinguishes the selected profiles. If the primary incoming link at d is cut, activity at primary zero agrees with activity at the feed for every profile satisfying the local law. Cutting the auxiliary entrance as well makes recipient activity equivalent to intrinsic power at the feed in every such profile.",
+  "lean_declaration": "TruthCore.Causality.RelaySourceRecognition.PrimaryCutSourceComparison",
+  "definition_ids": [
+    "f0bdc622-1770-455d-9c83-0b57bf0af456",
+    "e1b95906-8d38-59c3-abee-0ccc1c9d333b",
+    "febac82d-1ca3-5773-89ec-0401f1bac7a0",
+    "822c9912-2313-584b-b2b7-77031da20107",
+    "a6e1ef95-8138-5cfc-8fe2-1202ba3b9a5c"
+  ],
+  "disambiguation_ids": [
+    "ba851630-7eec-5851-8ad2-d8eff7430e41",
+    "4b02d34a-9226-5009-9ac2-3b52f4222b21"
+  ]
+}
