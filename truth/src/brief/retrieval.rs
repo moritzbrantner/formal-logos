@@ -1102,9 +1102,7 @@ fn expanded_identifiers(text: &str) -> String {
     let mut out = String::with_capacity(text.len());
     let mut previous: Option<char> = None;
     for ch in text.chars() {
-        if ch.is_uppercase()
-            && previous.is_some_and(|p| p.is_lowercase() || p.is_ascii_digit())
-        {
+        if ch.is_uppercase() && previous.is_some_and(|p| p.is_lowercase() || p.is_ascii_digit()) {
             out.push(' ');
         }
         out.push(if ch == '_' { ' ' } else { ch });
@@ -1216,7 +1214,12 @@ impl LeanSource {
         excluded: &BTreeSet<String>,
         limit: usize,
     ) -> Vec<Value> {
-        if limit == 0 || query.content_coverage(&vec![true; query.items.len()]).1 == 0 {
+        if limit == 0
+            || !query
+                .items
+                .iter()
+                .any(|item| matches!(item.kind, "word" | "identifier" | "symbol"))
+        {
             return Vec::new();
         }
         if self.index.is_none() {
