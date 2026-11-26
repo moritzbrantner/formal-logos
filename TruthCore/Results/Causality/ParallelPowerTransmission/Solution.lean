@@ -59,7 +59,9 @@ theorem populatedRay {intact active : Nat → Prop}
       | step h ih =>
         exact ih.trans ⟨fun hx => ((equation _).mp hx).2,
           fun hx => (equation _).mpr ⟨tail _ h, hx⟩⟩
-    exact (agree (Nat.le_max_left n i)).mpr (propagate (Nat.le_max_right n i) hi)
+    rcases Nat.le_total n i with hni | hin
+    · exact (agree hni).mpr hi
+    · exact propagate hin hi
 
 private theorem parallelEquation {K : Type} (intact : K → Nat → Prop)
     (active : K × Nat → Prop) :
