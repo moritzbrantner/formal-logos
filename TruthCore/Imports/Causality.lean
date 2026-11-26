@@ -232,6 +232,7 @@ public import TruthCore.Causality.PrimaViaCertificates
 public import TruthCore.Causality.PriorityInBeing
 public import TruthCore.Causality.ProductiveDegree
 public import TruthCore.Causality.ProductiveDeletion
+public import TruthCore.Causality.ProductiveDeletionCensus
 public import TruthCore.Causality.ProductiveStore
 public import TruthCore.Causality.ProtectiveProcess
 public import TruthCore.Causality.PureActRoot
