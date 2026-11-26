@@ -1,0 +1,12 @@
+{
+  "id": "a8dd7143-4aee-4d6d-8b22-861352156ce6",
+  "label": "All-recipient cells entail NECESSARY_2 recipient cells (inference)",
+  "input_statement_ids": [
+    "0dd78706-e6f7-40a6-9232-eac3df1c0ae9"
+  ],
+  "output_statement_id": "e1c6cc9b-1bd3-470e-a42a-5404ddf60577",
+  "rule": "Restrict the universal coverage of withholding cells to necessary recipients",
+  "meaning": "On the same world map and profile, each NECESSARY_2 grounded actual recipient is covered by all-recipient withholding. This single-application weakening certifies the strength order.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

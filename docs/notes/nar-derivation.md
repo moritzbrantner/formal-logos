@@ -700,3 +700,71 @@ Where the application to NAR is intended, also show that the selected
 universal giver is the relevant actual root of the same grounding profile.
 
 [Attempt and assessment](../../corpus/attempts/7dcdad80-8e13-4f30-94b4-26ae3e058e74.json)
+
+### The necessary-recipient test at the NAR inputs
+
+Fix one actual root `g`, a NECESSARY_2 actual concretum `x` it directly
+grounds at `w`, and one STIT frame and history-to-world map in the same
+grounding profile. An alleged withholding cell contains its own representative
+`k` by reflexivity, so `g` does not give `x` being at `world k`. If
+`world k` is accessible from `w` and retains `g`, (b2) requires that
+same giving there. The cell and its representative's admissibility would
+therefore falsify (b2) if independently warranted for this pair.
+[Cell exclusion result](../../corpus/results/a8fe73bf-f45e-4e17-b14b-5f3268682d4e.json)
+
+**Joint consequence.** Given the existence of this pair, cell coverage
+(`0dd78706` or its necessary-only sibling), root-history admissibility
+`46a468b2`, and necessary-recipient rigidity `eeccc832` are jointly
+unsatisfiable. The three premises supply the cell, accessibility with the
+same root present, and giving at that same world. This contradiction needs
+no common-root premise. Common-root reach is needed for the NAR inference:
+every necessary actual concretum either is the common root or is directly
+grounded by it and so falls under the incompatibility.
+[Checked incompatibility](../../TruthCore/Results/Causality/GivingChoiceNecessary/Solution.lean)
+
+The original `0dd78706` and `46a468b2` also yield the accessible-world
+premise `fbd0a6d3`, which conflicts with (b2) given the same pair. The
+existing all-recipient proof remains useful for that conclusion, which
+covers contingent recipients as well. NAR uses only the necessary-recipient
+restriction. The sibling result takes bare `ActualCommonRootAt` in Lean.
+Its registered wrapper gets that input from `0c27f65a` because the bare
+record `a6b46d2e` has legacy sense links that fail the new-argument
+sense check. The formal comparison concerns per-recipient `GivesTo`
+and retains the giver. SCM withdrawal `¬GivesAt`, worlds lacking the
+agent `¬ExistsAt g`, and a joint refraining cell have separate conditions.
+
+**Provisional assessment.** The controlled STIT example supports a
+withholding cell for the contingent recipient it models. Evidence for
+a putatively necessary recipient needs a cell for that specific recipient.
+The mixed-mode world model keeps a necessary grounded recipient fixed
+while contingent giving varies, with one rational power and a stable
+setup. The tied-optima model shows how a recipient can appear in every
+represented optimal output even when other recipients vary. Both are
+structural examples. Applying either requires identifying the proposed
+universal giver with the actual root in the same profile.
+
+At least one member of the bundle must be rejected for that pair. The
+proof leaves the choice open:
+
+- **Cell coverage (`0dd78706` or the necessary-only sibling).** Evidence
+  for a cell must show that every history in the cell withholds giving
+  to this recipient. A governing requirement would challenge coverage
+  if it entails giving to that recipient across the represented feasible
+  outputs. Contingent examples do not supply either result.
+- **Admissibility (`46a468b2`).** Check whether the mapped representative
+  is metaphysically accessible from `w` and retains the same actual root.
+  A represented history can fail either condition. The exclusion only
+  needs admissibility at the chosen representative.
+- **Giving rigidity (`eeccc832`).** Independent grounds that every
+  accessible root-present world involves this giving would support (b2).
+  A warranted admissible withholding representative for this very pair
+  would defeat it. Recipient existence across the accessible worlds by
+  itself leaves open whether this root is the giver in every world.
+- **The pair's existence.** A putatively necessary-through-another case
+  needs evidence of NECESSARY_2 existence and direct grounding by this
+  actual root at `w`. An accessible absence world would challenge that
+  necessity. Evidence of a mediated dependence alone leaves the direct
+  edge to be shown. Independent reasons to exclude every such pair
+  would also resolve the conflict.
+
+[Research attempt](../../corpus/attempts/7dcdad80-8e13-4f30-94b4-26ae3e058e74.json)

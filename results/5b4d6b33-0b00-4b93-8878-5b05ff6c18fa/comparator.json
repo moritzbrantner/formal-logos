@@ -1,0 +1,9 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.GivingChoiceNar.Challenge",
+  "solution_module": "TruthCore.Results.Causality.GivingChoiceNar.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.GivingChoiceNar.nar_of_admissible_cells_and_recipient_exclusion"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}
