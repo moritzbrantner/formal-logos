@@ -1,0 +1,48 @@
+[batch]
+vocab = "TruthCore.Causality.DoxasticVeracity"
+results = "TruthCore.Results.Causality.DoxasticVeracity"
+
+[[statement]]
+id = "Actual divine assents have a truth-aligned doxastic representation"
+lean = "AssentRepresented"
+paraphrase = "OPEN analyst representation. For each actual assent of a GOD_4 with classical attributes, a world predicate is believed in that bearer's supplied frame at actuality and has the assented truth value there. The supplied profile is shared across contents. The representation is one-way from assent and need not be injective."
+definitions = ["88f9f6e8-997b-5f7d-afa1-c501954c3807", "f2c09ae8-848d-5a3b-ab79-92c2b01d414c"]
+
+[[statement]]
+id = "A divine bearer's belief alternatives at actuality include the actual world"
+lean = "DivineActualAccess"
+paraphrase = "OPEN analyst access condition. For each GOD_4 with classical attributes, that same bearer's belief alternatives from actuality include actuality. No global reflexivity or knowledge bridge is assumed."
+definitions = ["88f9f6e8-997b-5f7d-afa1-c501954c3807", "f2c09ae8-848d-5a3b-ab79-92c2b01d414c"]
+
+[[statement]]
+id = "Represented KD45 divine assent can fail accuracy without actual access"
+lean = "ActualAccessOmission"
+paraphrase = "In a finite case-signature interpretation, every relevant assent is represented and the world frames are KD45. Actual access fails, and a GOD_4-classified bearer assents to a false proposition. This is a structural model of the case vocabulary."
+definitions = ["88f9f6e8-997b-5f7d-afa1-c501954c3807", "f2c09ae8-848d-5a3b-ab79-92c2b01d414c"]
+
+[[argument]]
+id = "Divine assent accuracy from represented assent and access to actuality"
+theorem = "accurateFromActualAccess"
+premises = ["Actual divine assents have a truth-aligned doxastic representation", "A divine bearer's belief alternatives at actuality include the actual world"]
+conclusion = "7dd8a624-b04d-4ea0-9ecf-2d9e5cab95ad"
+axioms = []
+rule = "Eliminate the content witness and instantiate belief at the accessible actual world"
+meaning = "For a fixed bearer and assent, take its represented world predicate. The belief box entails that predicate at the actual world by the supplied actual edge. Actual truth alignment yields the original proposition. The endpoint is the existing accuracy premise of the sincerity and assertion truth route."
+
+[[argument]]
+id = "Two-world represented KD45 assent witnesses the actual-access omission"
+theorem = "actualAccessOmission"
+premises = []
+conclusion = "Represented KD45 divine assent can fail accuracy without actual access"
+axioms = []
+rule = "Explicit two-world Kripke countermodel with one selected alternative"
+meaning = "Supply a classified bearer and an unconstrained assent relation accepting every Prop. The same frame selects only the nonactual alternative. Each p is represented by the event holding there or when p is true. False is assented to and its representing event is false at actuality. The proof gives no claim about the possibility of such a divine subject."
+
+[[relation]]
+id = "The false-assent control tests the actual access premise of divine assent accuracy"
+subject_kind = "argument"
+subject_id = "Two-world represented KD45 assent witnesses the actual-access omission"
+predicate = "tests"
+object_kind = "argument"
+object_id = "Divine assent accuracy from represented assent and access to actuality"
+note = "The omission model retains the representation premise in the same scope and adds KD45. It drops actual access and has false assent, testing the need for the edge in this argument."

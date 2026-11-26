@@ -1,0 +1,11 @@
+{
+  "id": "e796f4f0-3518-4d9c-afd0-5e8b7ce9da81",
+  "label": "Two-world represented KD45 assent witnesses the actual-access omission",
+  "argument_id": "56f75214-7d1b-4afb-946f-e841a42c4338",
+  "challenge_module": "TruthCore.Results.Causality.DoxasticVeracity.Challenge",
+  "solution_module": "TruthCore.Results.Causality.DoxasticVeracity.Solution",
+  "theorem": "TruthCore.Results.Causality.DoxasticVeracity.actualAccessOmission",
+  "comparator_config": "results/e796f4f0-3518-4d9c-afd0-5e8b7ce9da81/comparator.json",
+  "status": "solution-present",
+  "description": "Supply a classified bearer and an unconstrained assent relation accepting every Prop. The same frame selects only the nonactual alternative. Each p is represented by the event holding there or when p is true. False is assented to and its representing event is false at actuality. The proof gives no claim about the possibility of such a divine subject."
+}

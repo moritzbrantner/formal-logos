@@ -1,0 +1,10 @@
+{
+  "id": "c57fa7ef-b554-407b-bbad-ed31c67729b5",
+  "label": "The false-assent control tests the actual access premise of divine assent accuracy",
+  "subject_kind": "argument",
+  "subject_id": "56f75214-7d1b-4afb-946f-e841a42c4338",
+  "predicate": "tests",
+  "object_kind": "argument",
+  "object_id": "4aaf4909-617f-45ab-aeb9-b6e32bf51690",
+  "note": "The omission model retains the representation premise in the same scope and adds KD45. It drops actual access and has false assent, testing the need for the edge in this argument."
+}

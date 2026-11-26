@@ -1,0 +1,10 @@
+{
+  "id": "49b97407-d6d7-497e-92bf-752e9a7bf0e1",
+  "label": "Two-world represented KD45 assent witnesses the actual-access omission (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "08e7be98-cf38-45fd-83fc-1035051c5c26",
+  "rule": "Explicit two-world Kripke countermodel with one selected alternative",
+  "meaning": "Supply a classified bearer and an unconstrained assent relation accepting every Prop. The same frame selects only the nonactual alternative. Each p is represented by the event holding there or when p is true. False is assented to and its representing event is false at actuality. The proof gives no claim about the possibility of such a divine subject.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}
