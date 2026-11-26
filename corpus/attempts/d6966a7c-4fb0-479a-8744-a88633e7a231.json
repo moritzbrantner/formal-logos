@@ -1,0 +1,28 @@
+{
+  "id": "d6966a7c-4fb0-479a-8744-a88633e7a231",
+  "label": "Naming in the Fourth Way and common maximum",
+  "statement_ids": [
+    "082974c4-f613-42fe-83dd-bb5d0186d943",
+    "f790dfca-0617-476d-b946-3d2e936062fe"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "blocked",
+  "summary": "082974c4-f613-42fe-83dd-bb5d0186d943 (Bridge): e4c90277 requires every bearer called God by the selected community to satisfy IsMaximumIn at esse. The rule assigning the name to a described source only provides the opposite direction. Community use across multiple traditions or descriptions can extend beyond that source without contradicting correct naming of it. Identify the same community and actual named witness, then test whether its usage excludes all nonmaximal bearers or supports only naming that witness.\n\nf790dfca-0617-476d-b946-3d2e936062fe (Bridge): 31e93031 requires every bearer of the supplied GOD_2 predicate to satisfy the same weak-maximal condition. The reverse inclusion from maxima to GOD_2 leaves other God bearers open. A proof specific to GOD_4 cannot be carried back along the very identification this premise serves. Extract the GOD_2 individuation conditions independently and test whether they rule out a bearer with a strictly superior esse candidate.",
+  "evidence": [
+    "ae1e161b-f7fa-4a1c-81e7-7bd3db2a8a07",
+    "0a62d923-f704-4dc7-8496-24614a5ce14b",
+    "PR-2048"
+  ],
+  "blocker": "The restriction on each use of the God predicate needs evidence in the selected comparison profile.",
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2048"
+    }
+  ]
+}

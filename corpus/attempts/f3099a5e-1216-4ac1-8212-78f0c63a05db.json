@@ -1,0 +1,30 @@
+{
+  "id": "f3099a5e-1216-4ac1-8212-78f0c63a05db",
+  "label": "Intellectual creation and the exercise of will",
+  "statement_ids": [
+    "5835e3ac-9e52-419c-8682-cdbbc815fbe7",
+    "6bcb6b1a-6a4a-423d-864e-2d02368bd5c7",
+    "a0abeef8-30ea-432c-9bfb-07d2179151f2"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "5835e3ac-9e52-419c-8682-cdbbc815fbe7 (Derivable): For 15aec982, a distinct PRIOR_1 predecessor of the universal giver exists at w under 57c5ed67 and is in act at esse under 0436de86. The universal giver causes that predecessor's esse. ee74c678 gives reverse priority, and 47aff057 makes the two dependence claims inconsistent. Excluded middle supplies identity in the remaining case. The Lean theorem reuses these same-world formulas for the same bearer. Assess the existence-of-priority-relata premise on the chosen PRIOR_1 interpretation, especially the admission of formal or non-concrete priorities.\n\n6bcb6b1a-6a4a-423d-864e-2d02368bd5c7 (Bridge): 405eaef0 swaps the priority premises for at most one active power in every qualifying giver. Owning intellect and will does not by itself identify powers or prove that their acts use a numerically single principle. Reapply the divine simplicity analysis to the active-power carrier, checking whether it distinguishes real powers from descriptive roles of the same power.\n\na0abeef8-30ea-432c-9bfb-07d2179151f2 (Bridge): 15aec982 also needs a distinct prior intellect for each giving by an owned non-rational power. ST I q.19 a.4 co. is a lead for the ordering of determinate natural action to an end by intellect; a distinct PRIOR_1 witness for the exact productive esse act is additional. Test the scope on mediated teleology and whether same-agent rational direction would defeat the claimed distinct prior witness.",
+  "evidence": [
+    "fde3e9d8-0358-44f5-a1a2-823a880a8331",
+    "bc375179-5b86-4094-87e1-96ef9a39780f",
+    "e916eae9-a493-408f-b3d0-9ef91b4be3ad",
+    "PR-2048"
+  ],
+  "blocker": "The one-power and non-rational-giving variants still require independent scope bridges for the same giver and application profile.",
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2048"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+[batch]
+vocab = "TruthCore.Case.Catholicism.StageOne.NecessaryIndividual.FinitePopulationCover"
+results = "TruthCore.Results.Case.Catholicism.AccessibleSuccessor"
+
+[[argument]]
+id = "An accessible successor from selected-world reflexivity"
+theorem = "accessibleSuccessorOfActualReflexive"
+premises = ["2b20b5af-d653-56ba-8001-35903fb3d1ea"]
+conclusion = "390ac3ab-48ec-596e-9890-4d2364e81cf9"
+rule = "Choose the actual world as its own accessible witness"
+meaning = "On the very same frame and at the same base world, self-access witnesses existence of an accessible successor. No distinct successor, populated world or general frame law follows."
