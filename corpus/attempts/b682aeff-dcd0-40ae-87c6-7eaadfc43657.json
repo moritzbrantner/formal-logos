@@ -19,7 +19,12 @@
     "20babef7-6ae7-4b48-b72a-f417e8e63136",
     "65f3d0c7-cc3d-4ce3-a4a9-6fa38bf722cb",
     "7fcfcee8-86ab-5a16-84ad-124cf5e8f9b2",
-    "14325c83-1c3f-5afb-b63f-52b0c2b2a326"
+    "14325c83-1c3f-5afb-b63f-52b0c2b2a326",
+    "b2b289ed-74a7-4c1c-88c0-26f213a6e6c3",
+    "41c858ee-07ee-41db-9693-b5fef6154efe",
+    "a576300f-4b01-45ae-902c-cfe3d0fbf2de",
+    "c35b1a5c-6405-449b-993b-8196b2457e08",
+    "f5b34578-280d-45af-a761-fe744b7a3c11"
   ],
   "kind": "derivation",
   "outcome": "succeeded",
@@ -34,7 +39,11 @@
     "PR-1504",
     "e2fae76f-54df-4e93-8163-31bd4b377f2e",
     "38e6a68e-1d0d-4c43-bff8-3d1df65b7b68",
-    "PR-2006"
+    "PR-2006",
+    "61bdee91-208d-4c51-b3ca-edccb910ad00",
+    "00602c1a-1684-4841-a8d8-3941497c1a74",
+    "7a970bf6-1168-4c45-bf3c-9a0a1e4a8615",
+    "5974deb7-b95b-4f2f-942b-5c4dc77d943d"
   ],
   "blocker": "Not blocked. Next tests: (0) Scotus on esse and essence (Suárez DM XXXI now assessed below), aimed at the reception premises (29e71e43 and its sense-fixed sibling ea2c4745 at CREATURE_1, and 7de89edb) rather than at a general caused-esse bridge; (1) 29e71e43 still generalizes q.7 a.2 from a subsistent created form to every CREATURE_1: a material composite's esse could be read as received through its form in matter (q.7 a.1), a candidate derivation; (2) uniqueness of the universal cause is not built into CREATURE_1, and no current downstream use needs it; the spine's root uniqueness results could tie the g of CREATURE_1 to the selected root if a later argument needs it. Observation (informal, not lake-checked): combining the Round 2 premises at CREATURE_1 (29e71e43 and STMT-PRIMARY-ESSE-UNRECEIVED for the primary p) with 0e242e29 forces p = m whenever p is in act as to being: otherwise m causes p's being, p is CREATURE_1, so p's esse is received, contrary to PrimaryEsseUnreceived. Control model 3 has no primary p, so it does not witness that combination; (3) the earlier open tests (2)-(4) of attempt 170d6a5e remain.",
   "current_assessment": {
@@ -44,16 +53,21 @@
       "3008c7db-0236-4b03-9da7-f41ea8d8cac1",
       "da72ae93-5c8d-4717-8c17-97eeb8037317",
       "3d01134d-0b03-4469-a81a-a18d6e179fa0",
-      "20babef7-6ae7-4b48-b72a-f417e8e63136"
+      "20babef7-6ae7-4b48-b72a-f417e8e63136",
+      "b2b289ed-74a7-4c1c-88c0-26f213a6e6c3",
+      "41c858ee-07ee-41db-9693-b5fef6154efe",
+      "a576300f-4b01-45ae-902c-cfe3d0fbf2de",
+      "c35b1a5c-6405-449b-993b-8196b2457e08",
+      "f5b34578-280d-45af-a761-fe744b7a3c11"
     ],
-    "scope": "Whether an actual bearer whose represented essence equals its esse can have an external cause of its existence, and when this gives each recipient a finite root certificate.",
-    "assessment": "Four reception premises exclude an incoming actual cause at an identity bearer. This gives a reason for underivedness on the intrinsic act-and-potency account. Suárez grants external giving by God and argues that the same created reality is thereby actual. On his reading finitude can follow from what the giver communicates and what the bearer is. External giving alone therefore supplies no common warrant for internal reception. In Lean the other reception laws and finite identity ancestry survive in a two-bearer circle without rootedness. Adding underivedness to finite identity ancestry and excluded middle suffices for finite root certificates. The existing proofs of that ancestry use rootedness itself or stronger well-foundedness.",
-    "next_test": "At the simple created substance in DM XXXI.XIII.18, hold its giver and finite degree of actuality fixed. What does a really distinct intrinsic receiver explain beyond the creature’s nature and the perfection communicated? For an actual root certificate also trace the recipient to an actual identity bearer independently of rootedness or well-foundedness.",
-    "note": "docs/notes/de-ente-esse-source-1628.md#can-an-identity-of-essence-and-existence-rule-out-a-supplier",
-    "review": "accepted_qualified",
-    "reviewed_revision": "f130a8cf50682e438921d785df1a893a0f415115",
-    "publication": "published",
-    "evidence": "Lean results e2fae76f and 38e6a68e, including the two-bearer control. Suárez, DM XXXI.I.13 and XIII.17–18, PDF pp. 5 and 81, formal-logos-sources edition suarez-dm-xxxi-castellote-renemann-2020-09. Independent semantic review accepted the checked scope at f130a8cf5 after verifying the live premise, the strict-priority limit on the cyclic control, and the comparison with the same simple created substance.",
-    "supersedes": "Adds a checked application and resolves the earlier Suárez reading lead. The prior CREATURE sense split and its review retain their original scope."
+    "scope": "Whether an actual bearer whose represented essence equals its esse can have an external cause of its existence, and when this gives each recipient a finite root certificate. Count the actual identity bearers upstream of each actual recipient and test the return path at a unique common ancestor.",
+    "assessment": "Four reception premises exclude an incoming actual cause at an identity bearer. This gives a reason for underivedness on the intrinsic act-and-potency account. Suárez grants external giving by God and argues that the same created reality is thereby actual. On his reading finitude can follow from what the giver communicates and what the bearer is. External giving alone therefore supplies no common warrant for internal reception. In Lean the other reception laws and finite identity ancestry survive in a two-bearer circle without rootedness. Adding underivedness to finite identity ancestry and excluded middle suffices for finite root certificates. The existing proofs of that ancestry use rootedness itself or stronger well-foundedness. Finite identity ancestry per recipient and absence of a return through any actual identity bearer suffice for finite root certificates under distinct-esse ancestry and excluded middle. Given that ancestry, uniqueness, one actual bearer and excluded middle, excluding identity returns is exactly what the common-source conclusion requires. I favor this exclusion when the productive prerequisites have strict priority in the same respect. A uniform successor law and one represented essence value allow an infinite rootless ancestry of individuals. Evidence that a realized order requires infinitely many independent commitments still matters to its assessment on grounds of parsimony.",
+    "next_test": "At the simple created substance in DM XXXI.XIII.18, hold its giver and finite degree of actuality fixed. What does a really distinct intrinsic receiver explain beyond the creature’s nature and the perfection communicated? For an actual root certificate also trace the recipient to an actual identity bearer independently of rootedness or well-foundedness. Given a proposed common ancestor, examine the alleged supplier of its own existence. Does the return require the very same exercise to be productively prior to itself, or are the dependencies between different exercises or respects?",
+    "note": "docs/notes/de-ente-esse-source-1628.md#which-bearers-must-be-finite-for-a-first-giver",
+    "review": "unreviewed",
+    "publication": "unpublished",
+    "evidence": "Lean results e2fae76f and 38e6a68e, including the two-bearer control. Suárez, DM XXXI.I.13 and XIII.17–18, PDF pp. 5 and 81, formal-logos-sources edition suarez-dm-xxxi-castellote-renemann-2020-09. Independent semantic review accepted the checked scope at f130a8cf5 after verifying the live premise, the strict-priority limit on the cyclic control, and the comparison with the same simple created substance. Reviewed reception evidence retains its original scope. New Lean results 61bdee91, 00602c1a, 7a970bf6 and 5974deb7 test finite identity bearers, uniqueness, identity returns and the shared-value successor control.",
+    "supersedes": "Extends the reception judgment accepted at f130a8cf5 with structural alternatives that admit externally supplied identities. The original warrant and its Suárez comparison are retained.",
+    "reviewed_revision": "43653179e236ae0036e70cbbc71d82dee034b0fa"
   }
 }
