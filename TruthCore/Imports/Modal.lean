@@ -60,6 +60,7 @@ public import TruthCore.Modal.RevisionUptake
 public import TruthCore.Modal.RigidDesignation
 public import TruthCore.Modal.S4Research
 public import TruthCore.Modal.S5Research
+public import TruthCore.Modal.STIT
 public import TruthCore.Modal.SelectedEffectBridge
 public import TruthCore.Modal.SimplicityCollapse
 public import TruthCore.Modal.StandardCorrespondenceCertificate

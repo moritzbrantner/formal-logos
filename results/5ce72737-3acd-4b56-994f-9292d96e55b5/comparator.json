@@ -1,0 +1,9 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.GivingChoice.Challenge",
+  "solution_module": "TruthCore.Results.Causality.GivingChoice.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.GivingChoice.root_withholding_of_cells"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}

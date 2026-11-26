@@ -1,0 +1,23 @@
+{
+  "id": "19a0417f-3e44-4500-83c2-4dac473922ac",
+  "label": "Admissible root withholding cells supply accessible per-effect withholding",
+  "premise_statement_ids": [
+    "46a468b2-8132-4ef4-bd31-6e8292013f3b",
+    "0dd78706-e6f7-40a6-9232-eac3df1c0ae9"
+  ],
+  "conclusion_statement_id": "fbd0a6d3-5ca6-4f17-8651-ed0d6989c747",
+  "inference_ids": [
+    "0a01f834-5ec0-4b7e-a17a-559826affdd9"
+  ],
+  "meaning": "For the same actual root and grounded actual concretum, the representative belongs to its own withholding cell by reflexivity. The map sends it to an accessible world where the root exists and where it does not give that concretum being. Neither uniformity across effects nor a fixed setup is a premise of this per-effect conclusion.",
+  "definition_ids": [
+    "62dfa893-b633-4513-9790-8f9a0a3087e0",
+    "c57e2682-08e6-527e-950f-0fa0a7ff11ef",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "a1b2e330-388f-4120-bc5c-969642317792"
+  ],
+  "disambiguation_ids": [
+    "623ddbf6-9683-5361-bae4-e348a00ec680"
+  ]
+}

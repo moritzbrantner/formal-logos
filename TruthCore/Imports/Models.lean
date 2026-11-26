@@ -40,6 +40,7 @@ public import TruthCore.Models.QuartaViaCausalAscent
 public import TruthCore.Models.QuartaViaDegreeFork
 public import TruthCore.Models.QuartaViaMaximumControls
 public import TruthCore.Models.RespectAlternatingMotionCycle
+public import TruthCore.Models.STITControls
 public import TruthCore.Models.Scott
 public import TruthCore.Models.SelectedAncestry
 public import TruthCore.Models.SelectedPlgNegations

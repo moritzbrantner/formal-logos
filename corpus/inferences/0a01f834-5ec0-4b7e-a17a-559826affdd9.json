@@ -1,0 +1,13 @@
+{
+  "id": "0a01f834-5ec0-4b7e-a17a-559826affdd9",
+  "label": "Admissible root withholding cells supply accessible per-effect withholding (inference)",
+  "input_statement_ids": [
+    "46a468b2-8132-4ef4-bd31-6e8292013f3b",
+    "0dd78706-e6f7-40a6-9232-eac3df1c0ae9"
+  ],
+  "output_statement_id": "fbd0a6d3-5ca6-4f17-8651-ed0d6989c747",
+  "rule": "Apply setoid reflexivity and map the withholding representative to an admissible world",
+  "meaning": "For the same actual root and grounded actual concretum, the representative belongs to its own withholding cell by reflexivity. The map sends it to an accessible world where the root exists and where it does not give that concretum being. Neither uniformity across effects nor a fixed setup is a premise of this per-effect conclusion.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

@@ -1,0 +1,27 @@
+[batch]
+vocab = "TruthCore.Causality.GivingChoice"
+results = "TruthCore.Results.Causality.GivingChoice"
+
+[[statement]]
+id = "Actual root choice histories map to accessible worlds retaining the same root"
+lean = "RootHistoriesAdmissible"
+paraphrase = "OPEN, analyst formulation. For every actual root g of the selected grounding relation at w, each history through the selected decision moment maps to a world accessible from w where g exists. The map need not cover every accessible world or fix the setup."
+definitions = ["c57e2682-08e6-527e-950f-0fa0a7ff11ef", "DEF-KANT-ONTOLOGICAL-MODEL"]
+disambiguations = ["DISAMB-CONCRETE-ABSTRACT-CRITERIA"]
+
+[[statement]]
+id = "Each grounded actual concretum has a root choice cell that withholds giving it being"
+lean = "RootsHaveWithholdingCells"
+paraphrase = "OPEN, analyst formulation. For each actual root g and actual concretum x it grounds at w, some cell of g's partition at the selected moment contains only histories that map to a world where g does not give x being. The cell may depend on x. The world map is shared with the accessibility premise."
+definitions = ["c57e2682-08e6-527e-950f-0fa0a7ff11ef", "a1b2e330-388f-4120-bc5c-969642317792", "62dfa893-b633-4513-9790-8f9a0a3087e0", "1b8baf77-84fa-5513-a138-7fa14840dd87", "DEF-KANT-ONTOLOGICAL-MODEL"]
+disambiguations = ["DISAMB-CONCRETE-ABSTRACT-CRITERIA"]
+
+[[argument]]
+id = "Admissible root withholding cells supply accessible per-effect withholding"
+theorem = "root_withholding_of_cells"
+premises = ["Actual root choice histories map to accessible worlds retaining the same root", "Each grounded actual concretum has a root choice cell that withholds giving it being"]
+conclusion = "fbd0a6d3-5ca6-4f17-8651-ed0d6989c747"
+axioms = []
+rule = "Apply setoid reflexivity and map the withholding representative to an admissible world"
+meaning = "For the same actual root and grounded actual concretum, the representative belongs to its own withholding cell by reflexivity. The map sends it to an accessible world where the root exists and where it does not give that concretum being. Neither uniformity across effects nor a fixed setup is a premise of this per-effect conclusion."
+

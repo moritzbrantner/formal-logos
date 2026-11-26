@@ -613,3 +613,76 @@ itself. For direct reach, identify what the first source contributes to the
 remote patient's own existence over and above sustaining an intermediary
 that gives being to it. The present comparison settles neither issue by naming
 the first source God.
+
+## Choice cells and the scope of withholding (#2059)
+
+The question is whether the universal giver of the ThroughWill priority route
+can refrain under the same setup. A decision moment in the STIT comparison
+indexes histories sharing a decision point. It need not locate deliberation
+or change in a tenseless source. A choice cell says which continuations the
+same action leaves possible. In the product model, choosing the left
+coordinate leaves both values of the right coordinate open. The observed
+right-coordinate success therefore fails cstit for that agent. A settled
+outcome satisfies cstit and fails dstit. The disjunctive output model has
+dstit but every cell still leaves success possible, so dstit alone supplies
+no cell that ensures failure. Independence and the constraint against
+splitting undivided histories are additional properties tested on the
+finite frame. The deontic comparison uses an ideal and a distinct feasible
+relation, with overlap exactly when Ought implies Can for every valuation.
+A responsibility or blame inference would need an account of the relevant
+control, the obligation and the agent's epistemic and excusing conditions.
+[Core semantics](../../TruthCore/Modal/STIT.lean) ·
+[Checked controls](../../TruthCore/Models/STITControls.lean)
+
+The giving interpretation evaluates the existing `GivesTo` in each mapped
+world of the shared temporal history. Giving and a recipient's existence
+agree only under `TracksExistence` on the represented worlds. Factivity
+supports the forward direction. The converse requires dependence on this
+very giver, so it can fail if the recipient is independently sustained.
+Under the biconditional, an actual cell ensuring existence and an available
+cell ensuring absence give dstit for production and a cell ensuring
+nonproduction. To exclude NECESSITATE_5, the compared histories must map
+to accessible worlds where the same giver exists. Restricting access to
+the producing world preserves dstit in the finite comparison and restores
+NECESSITATE_5. To obtain WILL_CAPACITY_VERSUS_WILLED_GIVING_2 from the
+actual exercise in sense _3, the withholding witness must also retain
+the giver's intrinsic states and external conditions. Even the resulting
+world witness is silent about contrastive explanation of the selected
+exercise. No identification of the senses or modalities is assumed.
+[Typed giving interpretation](../../TruthCore/Causality/GivingChoice.lean)
+
+The graph uses two open premises, admissibility of the mapped histories
+(`46a468b2`) and a withholding cell for each grounded actual concretum
+(`0dd78706`). Their common world map and decision frame are bound in
+`root_withholding_of_cells`. Reflexivity supplies a history in its own
+withholding cell. This yields NAR premise (a) (`fbd0a6d3`), used by
+`narFromRootWithholding` with factivity and (b2) to support `43651417`.
+The result neither needs rational exercise nor supplies it. Its
+nonvacuity control keeps the same grounding edge and withholding cell when
+access is blocked, which removes admissibility and premise (a). A cell per
+recipient can vary with the recipient. The two exclusive nonempty output
+cells demonstrate that even pointwise omissibility for every recipient
+does not imply that any cell entirely refrains. The reused tied-optima table
+makes a further distinction: contingent outputs can share a fixed
+recipient across all the represented optimal cells.
+[Registered result](../../corpus/results/5ce72737-3acd-4b56-994f-9292d96e55b5.json)
+
+**Provisional judgment.** The strongest support here for the conditional
+freedom reading is the controlled alternative: the same rational giver
+can have a producing cell and an available withholding cell while its
+recorded setup stays fixed. This establishes structural compatibility.
+The fixed-rational control reuses ThroughWill and the BenefitPlanWitness
+model. A governing standard that requires the recipient's benefit is
+compatible with fixed giving to that very recipient. PracticalSpecification
+and BenefitPlanWitness omission tests compare requirements for fulfillment
+of a plan already at work. They supply no rival plan or option not to act.
+A rational necessitarian can instead hold that the feasible complete
+outputs must satisfy a rationally required condition and that every such
+output creates. The tied table exhibits the mechanism even with plural
+optimal outputs. Whether any such unrestricted rational requirement binds
+the universal giver, or whether empty creation is a live option, remains
+open. The discriminating next test is to warrant the admissibility and
+control of a jointly noncreating output at the same intrinsic setup,
+or give independent grounds for a rational requirement that excludes it.
+Where the application to NAR is intended, also show that the selected
+universal giver is the relevant actual root of the same grounding profile.
