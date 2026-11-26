@@ -1,0 +1,10 @@
+{
+  "id": "a4d21637-8a99-4271-b8db-40f22aa85c1d",
+  "label": "Finite pair checks admit an untested MAXIME_ENS_1 universal giver (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "584862e5-b41b-4a3b-a494-7f04b719553c",
+  "rule": "Choose a giver outside the finite union of both projections and the baseline giver, then compare ranks on the tested pairs",
+  "meaning": "Use Option Nat as the rigid roster and keep every bearer in act at esse. In the baseline profile, the distinguished bearer none has rank zero and every other bearer has rank one. In each alternative with a different giver h, h has rank zero, none rank one and all other bearers rank two. An actual esse cause goes from smaller to larger rank, and that same comparison interprets MoreIn at the sole respect. A finite set of pairs mentions only finitely many bearers. Pick h outside both projections and different from none. The comparisons on the tested pairs are unchanged and h supplies none in the alternative. Both profiles thus fit the same finite yes/no record while retaining well-foundedness, closed-collection rootedness, causal ascent and their own unique actual maximal universal direct giver. Complete incoming lists at the selected giver and the traced bearer can provide the certificate in each profile. Those lists contain information beyond the tested pairs. The MoreIn assignment varies with the giver, so a separate observation that fixes the maximality of none is outside the compared record. The construction interprets the mode-unspecified actual esse relation and makes no application to real productive causes or divine naming.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

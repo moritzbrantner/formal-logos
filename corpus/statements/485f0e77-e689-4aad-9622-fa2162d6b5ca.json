@@ -1,0 +1,11 @@
+{
+  "id": "485f0e77-e689-4aad-9622-fa2162d6b5ca",
+  "label": "A finite pair audit certifies a root ancestor exactly with finitely many eligible suppliers",
+  "paraphrase": "Fix a bearer roster, an allowed supplier relation, an actual subrelation, a proposed root and a target. A finite set of yes/no supplier-pair queries certifies that same bearer as a supplierless ancestor exactly when it actually is one and has only finitely many allowed incoming suppliers. The alternatives are all subrelations of the allowed relation that agree with the actual answers. A zero-edge path is permitted when the root is the target.",
+  "lean_declaration": "TruthCore.Causality.SupplierPairAudit.FiniteCertificateCriterion",
+  "definition_ids": [
+    "3e9fb252-3f0b-4ed4-a683-7c36d255c357",
+    "c15c1634-6d70-4ecb-8b5b-5592df955223",
+    "05a2afda-c654-5f6b-a0f7-796c5dc1be2e"
+  ]
+}

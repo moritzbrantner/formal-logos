@@ -1,0 +1,13 @@
+{
+  "challenge_module": "TruthCore.Results.Aquinas.DeEnte.IdentityPairAudit.Challenge",
+  "solution_module": "TruthCore.Results.Aquinas.DeEnte.IdentityPairAudit.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Aquinas.DeEnte.IdentityPairAudit.listAuditsOfIdentityPairs"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "enable_nanoda": true
+}

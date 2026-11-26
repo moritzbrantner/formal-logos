@@ -1,0 +1,13 @@
+{
+  "id": "5c8aad7a-1969-4925-bef5-57b3b07f4eff",
+  "label": "Certify one maximal giver for each actual recipient by testing its gift (inference)",
+  "input_statement_ids": [
+    "0881e859-c4c3-53ff-9bec-b61294e12d51",
+    "cffad050-e86d-48b8-b04b-be47fcc1352d"
+  ],
+  "output_statement_id": "f58d91ff-b5e5-4b99-b73e-0947a102848b",
+  "rule": "Exclude incoming pairs by the given maximum and fixed ascent, and preserve one tested positive edge",
+  "meaning": "Strict ascent at esse makes every actual donor eligible. At the same actual maximum no eligible donor remains. Its actual gift to each distinct actual recipient then supplies one observed positive edge to that very recipient. The checked fixed-pair criterion gives the same root and ancestry for all matching alternatives. For the maximum itself the zero-step path needs no query. For a distinct recipient an empty report permits the empty relation, so establishing which bearer supplies it still requires evidence. The alternatives preserve the comparative and its application to donors, and may omit the actual direct gift.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

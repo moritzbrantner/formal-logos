@@ -1,0 +1,12 @@
+{
+  "id": "fe8b6101-d185-46f2-8933-7bc3b5113843",
+  "label": "Recover finite complete-list root audits from identity-ancestor pair certificates (inference)",
+  "input_statement_ids": [
+    "cc70608d-dc96-4808-b89f-17aa297008e7"
+  ],
+  "output_statement_id": "3008c7db-0236-4b03-9da7-f41ea8d8cac1",
+  "rule": "Transfer each particular identity ancestor to its actual complete-list certificate",
+  "meaning": "At each actual recipient, the recorded pair answers are true of the actual esse relation. The existing root-ancestor theorem gives a finite complete-list certificate for that same identity witness and recipient. The earlier reception route already uses the same metaphysical premises for actual source access. The new comparison determines which finite observations could identify its source.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

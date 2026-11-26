@@ -1,0 +1,10 @@
+{
+  "id": "ea5b32ad-c763-4992-ab45-9122d6be8997",
+  "label": "Characterize finite pair certificates for a specified supplierless ancestor (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "485f0e77-e689-4aad-9622-fa2162d6b5ca",
+  "rule": "Use the greatest agreeing admissible relation for supplierlessness and the least agreeing admissible relation for ancestry",
+  "meaning": "For a fixed set of tested pairs, all allowed incoming pairs at the root must be tested and answered negatively, and a path to the target must consist entirely of tested positive edges. The greatest agreeing relation can add an untested allowed supplier at the root. The least retains just the tested positive edges. Each query checks one ordered pair, whereas a complete incoming-list audit gives one response containing all actual suppliers of that recipient. A finite certificate uses all allowed incoming pairs at the root and the edges of one finite actual path. On an infinite roster allowing every pair, finite certification of any specified root is impossible. On the natural-number roster with bearer 2 the only allowed supplier of bearer 0, querying (2, 0) and (0, 1) certifies zero as a supplierless ancestor of one in the one-edge example, even though any bearer is allowed to supply one.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}
