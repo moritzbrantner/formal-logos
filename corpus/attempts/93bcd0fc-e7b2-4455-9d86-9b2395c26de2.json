@@ -1,0 +1,37 @@
+{
+  "id": "93bcd0fc-e7b2-4455-9d86-9b2395c26de2",
+  "label": "One actual bearer suffices for the well-founded common esse source",
+  "statement_ids": [
+    "33f3c4c5-ccd6-4e8e-9cfb-0b231bb0e38f",
+    "78cffb8e-da95-4459-8058-45e0953cdde8",
+    "c35b1a5c-6405-449b-993b-8196b2457e08"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "The existing population result projects either member of the distinct pair on the same q3a4 profile. In the well-founded route the selected actual bearer either already has represented esse–essence identity, or the antecedent on distinct bearers supplies its identity ancestor. Well-foundedness excludes an actual return to an identity bearer, so the existing one-bearer no-return theorem gives the common first giver. No distinct actual pair is required for this new route. Well-foundedness identifies the original route being specialized. The existing identity-return sibling weakens that condition as well. The arbitrary actual bearer's identity case split exceeds the GOD_4-candidate equality logic of ca432e24.",
+  "evidence": [
+    "51d52108-92b8-4a17-b4df-eca74836d218",
+    "7a970bf6-1168-4c45-bf3c-9a0a1e4a8615",
+    "8bfe7a17-9d96-4c24-aee2-2489b896665d",
+    "PR-2022"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2022"
+    },
+    {
+      "role": "repair",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2022"
+    }
+  ]
+}

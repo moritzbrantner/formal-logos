@@ -1,0 +1,16 @@
+{
+  "id": "09e30456-9405-47fc-93c7-960c6dbac362",
+  "label": "A common first esse giver from one actual bearer and well-founded causes (inference)",
+  "input_statement_ids": [
+    "3d01134d-0b03-4469-a81a-a18d6e179fa0",
+    "a576300f-4b01-45ae-902c-cfe3d0fbf2de",
+    "78cffb8e-da95-4459-8058-45e0953cdde8",
+    "fd12ad3d-6729-4fa0-bb87-0121260df684",
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410"
+  ],
+  "output_statement_id": "c35b1a5c-6405-449b-993b-8196b2457e08",
+  "rule": "Use well-foundedness to exclude an identity return and apply the existing one-bearer source theorem",
+  "meaning": "Keep the ancestry principle, at-most-one identity bearer, well-foundedness and excluded middle of 5ab6cc2b. One actual bearer suffices: if it has represented esse–essence identity, use it directly, and if distinct, use its supplied identity ancestor. The inherited one-bearer argument identifies the selected identity bearer as the common source and excludes actual incoming supply by ruling out a nonempty return path. All premises are recorded explicitly. The conclusion supplies only the common source in the fixed esse profile.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

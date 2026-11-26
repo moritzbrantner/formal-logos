@@ -115,6 +115,7 @@ meaning = "Stage (c) of De ente c.3 [69874] (Baur/Koch; Leonine c.4), non-transc
 [[argument]]
 id = "One being whose esse is its essence is first cause of all others, from De ente"
 theorem = "commonEsseIsEssenceSource"
+strong_version_needed = { "33f3c4c5-ccd6-4e8e-9cfb-0b231bb0e38f" = "The frozen proof uses distinctness to select a distinct-esse bearer. Sibling result 8bfe7a17-9d96-4c24-aee2-2489b896665d uses a case split and only one actual bearer." }
 premises = [
   "Every actual distinct esse descends via actual causes of being from one whose esse is its essence",
   "At most one actual being has its esse identical with its essence",

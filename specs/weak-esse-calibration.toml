@@ -1,0 +1,23 @@
+[batch]
+vocab = "TruthCore.Causality.CausalConcreteRivalBoundary"
+results = "TruthCore.Results.Case.Catholicism.WeakEsseCalibration"
+
+[[argument]]
+id = "Selected-world CONCRETE_6 fork from the esse-to-CONCRETE_6 direction"
+theorem = "structuralCoverage"
+premises = ["ee4ab504-c8fe-59bc-bc96-7cbeefed6410","2d9807a5-ebff-45fd-972f-e241f18713d4"]
+conclusion = "ed5aa44a-3dcc-54fd-aee3-8db5aed71f9c"
+axioms = ["propext","Classical.choice","Quot.sound"]
+rule = "Split on the selected no-esse countercase and classify each active candidate"
+meaning = "Excluded middle splits on the selected countercase. When it is absent, each power holder or candidate with an outgoing causal edge at the selected world must have esse in re, since its absence would witness a selected countercase. The one-direction calibration then classifies that same candidate as concrete. The supplied grounds field has no role."
+strong_version_needed = { "ee4ab504-c8fe-59bc-bc96-7cbeefed6410" = "Cases decide whether the selected countercase occurs and whether individual power holders or causers have esse in re. ca432e24 covers only specific equality formulas against a GOD_4 candidate." }
+
+[[argument]]
+id = "Selected-world CONCRETE_6 from weak calibration and named elimination"
+theorem = "namedElimination"
+premises = ["ee4ab504-c8fe-59bc-bc96-7cbeefed6410","2d9807a5-ebff-45fd-972f-e241f18713d4","d75fefb5-07e7-590b-bba9-693dabd9da9d","488eb991-a56a-506e-bc04-dd0abf33b80f"]
+conclusion = "e27489c3-7419-5123-8476-386633e62532"
+axioms = ["propext","Classical.choice","Quot.sound"]
+rule = "Apply the restricted structural fork and eliminate each covered countercase"
+meaning = "Keep the same supplied causal frame, power and concreteness predicates. The fork either supplies the owner condition or a selected countercase. Named coverage takes that countercase to a named one, and named failure excludes each of the three cases. The one-direction calibration is used in the structural fork. The grounds field has no role."
+strong_version_needed = { "ee4ab504-c8fe-59bc-bc96-7cbeefed6410" = "Cases decide whether the selected countercase occurs and whether individual power holders or causers have esse in re. ca432e24 covers only specific equality formulas against a GOD_4 candidate." }

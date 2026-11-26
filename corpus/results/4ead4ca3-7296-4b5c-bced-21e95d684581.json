@@ -1,0 +1,12 @@
+{
+  "id": "4ead4ca3-7296-4b5c-bced-21e95d684581",
+  "label": "Esse calibration supplies its CONCRETE_6 direction",
+  "argument_id": "c7817ba6-5ad8-44ed-8d36-0503446bf54c",
+  "challenge_module": "TruthCore.Results.Case.Catholicism.PremiseRestrictions.Challenge",
+  "solution_module": "TruthCore.Results.Case.Catholicism.PremiseRestrictions.Solution",
+  "theorem": "TruthCore.Results.Case.Catholicism.PremiseRestrictions.concreteOfCalibration",
+  "comparator_config": "results/4ead4ca3-7296-4b5c-bced-21e95d684581/comparator.json",
+  "status": "solution-present",
+  "description": "Assembly by projection on the supplied Frame. Retain f.ontic, f.concrete, f.InAct and f.esse in the receiving profile. Any grounding predicate on that carrier can accompany the profile because the conclusion never reads it. The projected direction takes esse in re to CONCRETE_6, with the same HasEsseInRe predicate. No power, causal, or actual-world existence condition is supplied.",
+  "transcription": "assembly"
+}

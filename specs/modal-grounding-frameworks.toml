@@ -177,6 +177,7 @@ description = "The standing rival's verdict 'possibly absent', with its exact co
 [[argument]]
 id = "A necessary concrete power-holder for no contingent concretum, by Aristotelian modality"
 theorem = "prussNecessaryPowerHolder"
+strong_version_needed = { "62b4a40a-919e-5da4-998c-131c386b7361" = "Historical global-frame interface. Sibling result 316fa523-efe7-49c1-839e-6faa96ba6ae9 uses selected-world Euclidean access, retaining the same global power content." }
 premises = ["STMT-EXCLUDED-MIDDLE", "STMT-EUCLIDEAN-FRAME", "94393b5b-8950-4a52-aef1-50cd09232e64", "A power for there being no contingent concretum issues in a world where its holder exists", "Whatever has at w a power for there being no contingent concretum is concrete", "0dc833c1-3b2f-4769-a09e-531f0da12455", "Some concrete being is CONTINGENCY_1 at w"]
 conclusion = "Some necessary concrete being at w has a power for there being no contingent concretum"
 sense_bridges = [{term = "NECESSARY", from = "NECESSARY_11", to = "NECESSARY_2", statement_id = "Some necessary concrete being at w has a power for there being no contingent concretum", role = "conclusion"}]
