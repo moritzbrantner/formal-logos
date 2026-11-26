@@ -4202,10 +4202,11 @@ metaphysically possible open. [New controls](../../TruthCore/Results/Causality/E
   bearer as an enabling condition. Strict explanatory precedence has
   stronger prima facie support where the same bearer and power are
   independently available whether or not that particular exercise occurs.
-  A simultaneous first-actualization proposal grants co-actuality and
-  challenges this independence. A constitutive account of an essential
-  activity could instead construe the occurrence and the bearer as
-  inseparable, which also leaves the strict comparison unwarranted.
+  Co-actuality establishes that the bearer is actual during the exercise.
+  Smith's challenge adds that the bearer receives its first actuality
+  through the same productive loop. If warranted, that return path defeats
+  the shared strict order. Inseparability alone leaves the direction
+  undecided.
 - **Act-to-product, `66b7ac36`.** In genuine giving of being, the exercise
   supplies the product's actuality. This gives a reason for directional
   priority when the exercise can be accounted for independently of the
@@ -4235,7 +4236,8 @@ The same-`Prior` reading in the original theorem is an explicit analyst
 commitment. PRIOR_1 currently takes the case's simple priority in act
 in a respect on beings. PRIOR_4 treats being-without and has its own
 domain and defeaters. Neither identifier supplies comparisons involving
-an exercise occurrence on the mixed carrier. PRIOR_5 from #2024 concerns
+an exercise occurrence on the mixed carrier. PRIOR_5, proposed in #2024
+([declaration at that revision](https://github.com/moritzbrantner/formal-logos/blob/b427cb4d131596c7f59a1bfc36b5f5de75b08059/TruthCore/Greek/Aristotle/MetaphysicsIX.lean#L56)), concerns
 reference to the corresponding activity in the account of a capacity.
 That relation takes capacity and activity inputs. Neither the existence
 of the bearer nor the existence of the produced individual is supplied

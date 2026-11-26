@@ -51,7 +51,6 @@ theorem = "splitControl"
 premises = []
 conclusion = "Separate strict priorities allow one occurring act to produce its own bearer"
 axioms = []
-sense_mixing_control = true
 rule = "Use a one-edge relation in each direction; the union contains a two-edge closed walk"
 meaning = "The one-bearer, one-act control satisfies the two interfaces on separate strict relations. On the same data their required union is irreflexive but fails transitivity, and self-production holds. This is an abstract separation of relations."
 
