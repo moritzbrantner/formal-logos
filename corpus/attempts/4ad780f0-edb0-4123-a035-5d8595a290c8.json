@@ -1,0 +1,31 @@
+{
+  "id": "4ad780f0-edb0-4123-a035-5d8595a290c8",
+  "label": "Scoped empirical proof barriers connection plan",
+  "statement_ids": [
+    "0552498a-ee5b-573b-bea2-20637b3ada49",
+    "546b513a-8dd7-5bdd-a8f2-d5d19f219e98",
+    "839339f5-ade2-58d5-8ba4-9176ca273e74",
+    "bf6085cc-a8ad-5298-b358-3062679fe884",
+    "dc97026d-b4c1-5196-8d13-6acc61db7cf3",
+    "df9bf7c6-210c-56bf-a52d-056ced797c13",
+    "e211ba7c-8ce3-5790-b11a-3230bad522cc"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "Identify the same theological target by subject, premise origin or method of revelation. The named domain choices can diverge. Adequacy requires a precise scope and an argument linking actual unprovability to the proposed observation barrier.",
+  "evidence": [
+    "PR-2086"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
+    }
+  ],
+  "blocker": "Connection target 102172a9-d6ae-5370-a0c8-f1c3437cef1e. The scoped bridge described in the summary remains open."
+}

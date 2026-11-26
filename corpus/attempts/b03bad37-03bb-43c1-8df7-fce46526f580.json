@@ -1,0 +1,30 @@
+{
+  "id": "b03bad37-03bb-43c1-8df7-fce46526f580",
+  "label": "Platonic theory variants connection plan",
+  "statement_ids": [
+    "394b584e-bedd-53d7-a970-e8ad96fba42f",
+    "634689e8-c35b-5ff3-84ce-0a989c9ba9cc",
+    "77d5b4aa-444a-5c8d-80f7-3440c628cfa2",
+    "94bbcc9f-5c15-59e1-af40-d8c49b5e7df2",
+    "c67354f7-b405-5fc6-b4c7-e2b8f274d259",
+    "d6c32c7b-df08-5748-a79d-dac1f627a47a"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "Explain whether an exemplar, a constituent, or a maker is doing the work for a named perfection. The typed theory packages have different assumptions about separation, self-predication and selection. Their mere overlap with causal vocabulary does not support current transfer.",
+  "evidence": [
+    "PR-2086"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
+    }
+  ],
+  "blocker": "Connection target 64498e7e-7f10-54a0-9ec0-c65e6076de1f. The scoped bridge described in the summary remains open."
+}

@@ -1,0 +1,27 @@
+{
+  "id": "39218640-89a7-41b3-bf06-c22af7f3983f",
+  "label": "Moral-attitude grounding and intervention connection plan",
+  "statement_ids": [
+    "1a786096-6f33-4f5c-9725-73cc0bbfebd4",
+    "e77adb31-cf6c-45f3-9ed3-3a1e9d13cf29"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "Stability of varied non-attitudinal grounds lets an intervention condition follow from the grounding candidate. Test one admitted moral evil premise with explicit grounding data and an independently calibrated intervention family before carrying the relation into the external evil comparison. Introduced in 7b161c722.",
+  "evidence": [
+    "PR-2086",
+    "f1afc73a-c982-49dc-8fe3-45113509047c"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
+    }
+  ],
+  "blocker": "Connection target 1aa52dcb-7d39-507c-89ce-73629cdc0abd. The scoped bridge described in the summary remains open."
+}

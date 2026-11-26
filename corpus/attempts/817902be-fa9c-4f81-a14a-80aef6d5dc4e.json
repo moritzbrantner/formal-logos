@@ -1,0 +1,25 @@
+{
+  "id": "817902be-fa9c-4f81-a14a-80aef6d5dc4e",
+  "label": "Truth necessitation along support edges connection plan",
+  "statement_ids": [
+    "1b339f3d-b323-59b1-b6be-d7bd11a0bf0e"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "The direction of modal necessitation on existence facts need not match grounding priority, especially for necessary relata. To use it, show rational comparison or a directional counterpart invariant on the very actual-grounding edges.",
+  "evidence": [
+    "PR-2086"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
+    }
+  ],
+  "blocker": "Connection target 39f7c63d-b372-564c-b18a-ed09d02dda9a. The scoped bridge described in the summary remains open."
+}

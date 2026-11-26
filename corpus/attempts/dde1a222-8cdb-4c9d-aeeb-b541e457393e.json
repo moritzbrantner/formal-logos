@@ -1,0 +1,27 @@
+{
+  "id": "dde1a222-8cdb-4c9d-aeeb-b541e457393e",
+  "label": "Agreement on participant selectors connection plan",
+  "statement_ids": [
+    "3853b2e6-69f9-512b-b1f1-63922cad06a0",
+    "46d0520b-a32a-51ec-a32e-cff46ea90ef0"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "The theorem relates exemplification classifiers when their independently supplied base features match extensionally. An exemplar/perfection route requires a shared actual perfection and a justified map from that classifier to the formally-or-eminently precontained perfection; agreement on classification supplies no production or causal transfer. Introduced in 18b6b89f5.",
+  "evidence": [
+    "PR-2086",
+    "eb4ae28f-0663-585f-8cc2-34df1f202d0e"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
+    }
+  ],
+  "blocker": "Connection target 64498e7e-7f10-54a0-9ec0-c65e6076de1f. The scoped bridge described in the summary remains open."
+}

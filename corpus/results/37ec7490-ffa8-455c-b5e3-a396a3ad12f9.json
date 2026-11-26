@@ -1,0 +1,11 @@
+{
+  "id": "37ec7490-ffa8-455c-b5e3-a396a3ad12f9",
+  "label": "Full accessible absence coverage entails witness preservation",
+  "argument_id": "af135053-5ba5-47f2-8582-66e517887548",
+  "challenge_module": "TruthCore.Results.Causality.CounterfactualWitnessCoverage.Challenge",
+  "solution_module": "TruthCore.Results.Causality.CounterfactualWitnessCoverage.Solution",
+  "theorem": "TruthCore.Results.Causality.CounterfactualWitnessCoverage.full_coverage_preserves_witnesses",
+  "comparator_config": "results/37ec7490-ffa8-455c-b5e3-a396a3ad12f9/comparator.json",
+  "status": "solution-present",
+  "description": "For the same frame, selector and origin, an accessible effect-present source-absence witness lies among the worlds selected by full coverage. The same witness satisfies the weaker premise. Full coverage is the sole premise."
+}

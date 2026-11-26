@@ -1,0 +1,32 @@
+{
+  "id": "adcab4ff-68f1-4e98-b1b1-156d2d0ea13e",
+  "label": "Goodness account selection by admissibility and adequacy",
+  "statement_ids": [
+    "40420659-5692-5b9c-ab26-36941f0a1a97",
+    "4c22019a-12c3-5cf6-adff-7288a3741e1a",
+    "cb290349-4d73-5a87-a049-a58c24537b23",
+    "d742a8cd-45e2-5292-88ba-cedd482cbf45"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "40420659-5692-5b9c-ab26-36941f0a1a97 (Bridge): 290de287 and f3f88b37 require some admissible account to match the selected GoodIn extension across both carriers. Neither a menu nor an extension defined from GoodIn supplies a genuinely admissible account. Demanding a correct named account instead may assume the desired exclusion work. Give a positive correctness criterion and show the admissible class permits realizing it on this profile without constructing the answer by stipulation.\n\n4c22019a-12c3-5cf6-adff-7288a3741e1a (Bridge): The same consumers exclude the named feature candidate only. The existing feature-criterion boundary gives a concrete test: equal supplied data with different GoodIn status rules out any classifier confined to that data. Feature failure need not follow if the feature carrier already tracks the relevant form and end. Look for that same-profile pair and justify the different due-actuality judgments independently of the disputed feature account.\n\ncb290349-4d73-5a87-a049-a58c24537b23 (Variant): 4f391388 uses identity of candidate objects to project weak semantic named coverage. The core 290de287 route needs the semantic coverage for correct admissible options without candidate-object identity, so distinct but coextensive proposals are harmless there. Retain the strong candidate-identity comparison.\n\nd742a8cd-45e2-5292-88ba-cedd482cbf45 (Variant): 44f804e1 obtains extensional agreement by substituting identical supplied property referents. The downstream agreement is also addressed by extensional routes that do not identify the referents; coextension gives no independent reason for identity. Retain the stronger intensional route for comparison.",
+  "evidence": [
+    "9005815b-b469-5ee6-b252-546f11f12d8c",
+    "d36ad9c0-59fc-589a-a86b-89803ffd8342",
+    "c3d7e98f-fe13-5dd2-85f9-2a93b55cbd50",
+    "826023e5-670e-5afc-8619-8f329eff6008",
+    "PR-2048"
+  ],
+  "blocker": "The fixed profile needs independent evidence that its admissible class contains a correct account and that the particular feature account fails.",
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2048"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "id": "591c0a14-4d9e-470a-8ba1-c1e4e27b8f64",
+  "label": "Necessary-root symmetry delta connectivity finding",
+  "statement_ids": [
+    "986bd9f3-c737-413a-82a7-7add8d47451a"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "Exact equivalence of the necessary-root delta and symmetry on the selected profile frame, Comparator theorem nodeDelta. Connected to 938650b0-ff50-5c60-8b70-5b7dc600eaaf.",
+  "evidence": [
+    "79564d3e-e0b9-4311-aafb-a8bf97d52831",
+    "PR-2086"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
+    }
+  ]
+}

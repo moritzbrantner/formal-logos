@@ -1,0 +1,25 @@
+{
+  "id": "93cc5c5a-dd5e-4661-92cd-83f27a193aa7",
+  "label": "Q14 calibration remainder connectivity finding",
+  "statement_ids": [
+    "aab4aa90-053d-5f11-853a-45a923e92610"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "Same-profile failure of every candidate in the existing menu. The model only supplies a comparison setting. Connected to aefa1bf1-099b-575c-958e-05cff58df51c.",
+  "evidence": [
+    "PR-2086",
+    "9d6490e1-971c-5ba3-b093-e3a5210d2e58"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
+    }
+  ]
+}

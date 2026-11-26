@@ -1,0 +1,26 @@
+{
+  "id": "f9bb1dc5-6948-4185-879c-2e0e86862392",
+  "label": "Local variable religious truth connection plan",
+  "statement_ids": [
+    "1d39a92e-59b1-5a33-9e60-09b5994a8e86",
+    "a2b4be4c-0fd7-51a0-9048-64d416602fa1"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "The configuration has local face-value status with an actual matched religious contrast. A difference anywhere in discourse may be nonreligious. Apply only after a selected religious content and its two discourse assignments are identified.",
+  "evidence": [
+    "PR-2086"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
+    }
+  ],
+  "blocker": "Connection target 37cd0028-0bd2-518c-a69c-13ffb8aebdc6. The scoped bridge described in the summary remains open."
+}

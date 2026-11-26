@@ -1,0 +1,25 @@
+{
+  "id": "2a4ce406-2191-4a1a-a6be-09a4a00ff2cd",
+  "label": "S5 conceived-collapse assumption connection plan",
+  "statement_ids": [
+    "383fc8d0-cdaf-54f0-8035-767bf47cc8d3"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "The positive assumption and projected exclusion apply to the same conception map but require an accessible contingency witness and a mapping from conception to accessibility to matter to the necessary-root route.",
+  "evidence": [
+    "PR-2086"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
+    }
+  ],
+  "blocker": "Connection target 7089ce3d-3855-5bfb-a3c3-c202e8ff458a. The scoped bridge described in the summary remains open."
+}

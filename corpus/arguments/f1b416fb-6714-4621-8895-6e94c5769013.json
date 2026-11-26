@@ -1,0 +1,36 @@
+{
+  "id": "f1b416fb-6714-4621-8895-6e94c5769013",
+  "label": "Global contingent grounding excludes a contingent root in the selected cone",
+  "premise_statement_ids": [
+    "c71c068c-bbae-5ed5-a99d-70b155c8d239"
+  ],
+  "conclusion_statement_id": "0db4d734-2323-572f-b81b-a1448ae78296",
+  "inference_ids": [
+    "b4884d04-a6cc-4ed2-a244-a0aa1be794bd"
+  ],
+  "meaning": "The existing scope comparison gives an actual concrete ground for each contingent cone member at the same world and under the same grounding relation. Any purported contingent root in that cone has no such ground, a contradiction. The restriction neither supplies a root nor constrains support at any other world.",
+  "definition_ids": [
+    "c57e2682-08e6-527e-950f-0fa0a7ff11ef",
+    "008cb21a-256c-5a90-822c-acd4591d699a",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "f8948e28-b13a-5244-95f1-41a05cd4fff2",
+    "e1ff44df-ed97-5990-8424-1abd720f23ea",
+    "9c6e4314-2e35-52ff-951e-db752a3c8ce2",
+    "264e5668-fdd0-5ee3-98d1-6dc9925056c4"
+  ],
+  "disambiguation_ids": [
+    "623ddbf6-9683-5361-bae4-e348a00ec680",
+    "7507d645-874d-5434-add8-2f49c2801d36",
+    "c529e8d3-43e3-53a8-a82f-3955e9815265"
+  ],
+  "sense_bridges": [
+    {
+      "term": "WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT",
+      "from": "556515c9-1fcc-4ea0-b85d-2a4cad7eff79",
+      "to": "1e18ccd2-b582-4d6e-9c55-324d19151ce8",
+      "statement_id": "0db4d734-2323-572f-b81b-a1448ae78296",
+      "role": "conclusion"
+    }
+  ]
+}

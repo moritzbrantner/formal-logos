@@ -1,0 +1,11 @@
+{
+  "challenge_module": "TruthCore.Results.Logic.Strength.RouteSymmetryIdentity.Challenge",
+  "solution_module": "TruthCore.Results.Logic.Strength.RouteSymmetryIdentity.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Logic.Strength.RouteSymmetryIdentity.sameRouteSymmetry",
+    "TruthCore.Results.Logic.Strength.RouteSymmetryIdentity.nodeDelta",
+    "TruthCore.Results.Logic.Strength.RouteSymmetryIdentity.frameDelta"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}

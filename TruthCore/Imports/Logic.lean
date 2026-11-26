@@ -18,6 +18,7 @@ public import TruthCore.Logic.CognitiveReplacement
 public import TruthCore.Logic.CollectivePossibilityRouteBoundary
 public import TruthCore.Logic.CommonKnowerScopes
 public import TruthCore.Logic.Configuration
+public import TruthCore.Logic.ContentInterpretation
 public import TruthCore.Logic.ContrastiveWorldview
 public import TruthCore.Logic.CorrectionCriterion
 public import TruthCore.Logic.CorrelatedTestimony1396
@@ -92,6 +93,7 @@ public import TruthCore.Logic.SoritesBoundary
 public import TruthCore.Logic.Strength.Cause
 public import TruthCore.Logic.Strength.NecessaryFrames
 public import TruthCore.Logic.Strength.Order
+public import TruthCore.Logic.Strength.RouteSymmetryIdentity
 public import TruthCore.Logic.Strength.UniqueExistence
 public import TruthCore.Logic.StrengthComparison
 public import TruthCore.Logic.TemporalPastCoverage

@@ -1,0 +1,12 @@
+{
+  "id": "77562a40-ef29-41c3-88a2-61f1a5a5e01d",
+  "label": "An accessible successor from selected-world reflexivity (inference)",
+  "input_statement_ids": [
+    "2b20b5af-d653-56ba-8001-35903fb3d1ea"
+  ],
+  "output_statement_id": "390ac3ab-48ec-596e-9890-4d2364e81cf9",
+  "rule": "Choose the actual world as its own accessible witness",
+  "meaning": "On the very same frame and at the same base world, self-access witnesses existence of an accessible successor. No distinct successor, populated world or general frame law follows.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

@@ -1,0 +1,11 @@
+{
+  "id": "7d450da7-c3e7-42e3-b49c-06fce72b6953",
+  "label": "An accessible successor from selected-world reflexivity",
+  "argument_id": "55605537-8f8d-49a7-b1e2-d003174ffd35",
+  "challenge_module": "TruthCore.Results.Case.Catholicism.AccessibleSuccessor.Challenge",
+  "solution_module": "TruthCore.Results.Case.Catholicism.AccessibleSuccessor.Solution",
+  "theorem": "TruthCore.Results.Case.Catholicism.AccessibleSuccessor.accessibleSuccessorOfActualReflexive",
+  "comparator_config": "results/7d450da7-c3e7-42e3-b49c-06fce72b6953/comparator.json",
+  "status": "solution-present",
+  "description": "On the very same frame and at the same base world, self-access witnesses existence of an accessible successor. No distinct successor, populated world or general frame law follows."
+}

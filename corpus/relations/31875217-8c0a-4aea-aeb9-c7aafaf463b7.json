@@ -1,0 +1,10 @@
+{
+  "id": "31875217-8c0a-4aea-aeb9-c7aafaf463b7",
+  "label": "Unranked actual grounding is the Nat-rank rival",
+  "subject_kind": "statement",
+  "subject_id": "a68b219e-9ebc-475f-9a6b-9088f5468418",
+  "predicate": "alternative_to",
+  "object_kind": "statement",
+  "object_id": "47e323f2-3405-5caf-a192-201eb1e02f76",
+  "note": "ActualGroundingUnranked m w is the exact negation of ActualGroundingFiniteRank m w on the same selected world and actual concrete grounding relation. The existing potential result excludes it under the three open numerical calibrations. The reverse-successor interpretation supplies a mathematical example of the rival, without settling its metaphysical application or the weaker well-foundedness premise."
+}

@@ -1,0 +1,28 @@
+{
+  "id": "cf377e1c-b5d3-4eba-bcc1-85e637089527",
+  "label": "Russell realization and explanatory projection connection plan",
+  "statement_ids": [
+    "416665a5-2905-5f36-91a8-9e08bf200651",
+    "a4e42954-c3ed-5456-869e-7fb7e27acd18",
+    "d79f317c-59c2-584b-a4e2-0ea0e216e084"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "A satisfying candidate yields a grounded satisfying candidate only with the instance-to-basis law. For the actual contingent grounding node, identify the witness with a selected actually existing concretum and the basis with a distinct actual concrete existential ground; extension membership alone supplies neither. Introduced in d6c8c2fdd.",
+  "evidence": [
+    "8b5d9eff-30f3-563d-8170-0ff8b446e87a",
+    "PR-2086"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
+    }
+  ],
+  "blocker": "Connection target c71c068c-bbae-5ed5-a99d-70b155c8d239. The scoped bridge described in the summary remains open."
+}

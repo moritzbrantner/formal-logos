@@ -1,0 +1,9 @@
+{
+  "id": "3c8a1915-481e-4451-aaf2-0d1bc3b88c73",
+  "label": "The route symmetry deltas both express B on the same frame",
+  "paraphrase": "For any supplied profile of the route signature, each of the two named symmetry deltas holds iff the accessibility relation of that very profile's frame is symmetric.",
+  "lean_declaration": "TruthCore.Logic.Strength.RouteSymmetryIdentity.SameRouteSymmetry",
+  "definition_ids": [
+    "f8948e28-b13a-5244-95f1-41a05cd4fff2"
+  ]
+}

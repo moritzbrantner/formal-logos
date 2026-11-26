@@ -1,0 +1,25 @@
+{
+  "id": "50bfbd64-a317-498b-a955-264b4ca51cf7",
+  "label": "Grounding by extension alone connection plan",
+  "statement_ids": [
+    "cddd7a46-1279-5e14-b565-03c3bdb95def"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "The finite extension can admit distinct asymmetric grounding expansions. An application needs a justified determination constraint on that very extension, as well as identification of basis and witness with actual existential ground and contingent bearer.",
+  "evidence": [
+    "PR-2086"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
+    }
+  ],
+  "blocker": "Connection target c71c068c-bbae-5ed5-a99d-70b155c8d239. The scoped bridge described in the summary remains open."
+}

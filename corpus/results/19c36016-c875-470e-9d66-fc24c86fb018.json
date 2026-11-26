@@ -1,0 +1,11 @@
+{
+  "id": "19c36016-c875-470e-9d66-fc24c86fb018",
+  "label": "Three-world strictness model for accessible absence coverage",
+  "argument_id": "e14f0d60-1b96-4a1e-86d4-274568a20bc0",
+  "challenge_module": "TruthCore.Results.Causality.CounterfactualWitnessCoverage.Challenge",
+  "solution_module": "TruthCore.Results.Causality.CounterfactualWitnessCoverage.Solution",
+  "theorem": "TruthCore.Results.Causality.CounterfactualWitnessCoverage.witness_coverage_strictness",
+  "comparator_config": "results/19c36016-c875-470e-9d66-fc24c86fb018/comparator.json",
+  "status": "solution-present",
+  "description": "In the existing three-world replacement interpretation, filter out the near world. That world has no existing effect for any candidate pair, so every accessible contrast witness remains eligible. The near world is nevertheless accessible and lacks the agent, defeating full coverage for that agent. Both results use the same frame, selector and origin."
+}

@@ -164,7 +164,7 @@ jobs:
         if: needs.comparator-plan.outputs.lean == 'true'
         run: target/release/truth unused-premises --strict
       # `truth countermodel` (docs/countermodels.md) rediscovers the hand-written
-      # omission certificates of five results and Lean accepts every one; the solver
+      # omission certificates of unchanged consumers; Lean accepts every one. The solver
       # and its golden replays run offline in the truth-cli job.
       - name: Rediscover omission countermodels with Lean
         if: needs.comparator-plan.outputs.lean == 'true'
@@ -184,6 +184,14 @@ jobs:
             --module TruthCore.Results.Logic.AssertionRetorsion.Solution --all --size 2 \
             | jq -e '.reports | length == 3 and all(.status == "lean-checked")' >/dev/null \
             || { echo "unary-function countermodel rediscovery failed"; exit 1; }
+          target/release/truth --json countermodel \
+            TruthCore.Results.Causality.Round2ExistenceAct.existentInActFromEleaticPower \
+            --module TruthCore.Results.Causality.Round2ExistenceAct.Solution --omit hAct --size 2 \
+            | jq -e '.reports | length == 1 and all(.omitted == "hAct" and .status == "lean-checked")'
+          target/release/truth --json countermodel \
+            TruthCore.Results.Causality.DependenceGroundingPriority.simplyPriorGroundViaDistinctDependence \
+            --module TruthCore.Results.Causality.DependenceGroundingPriority.Solution --omit hReq --size 2 \
+            | jq -e '.reports | length == 1 and all(.omitted == "hReq" and .status == "lean-checked")'
       # Duper (owner decision 2026-11-19, docs/axiom-policy.md): its reconstructed proofs
       # stay within the three classical axioms, and `truth discover` (docs/discover.md)
       # finds, minimizes and certifies one known derivation end to end (a fixed target,
