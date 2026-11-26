@@ -1,0 +1,12 @@
+{
+  "id": "2e69fa9d-733f-4ef8-9e1f-22dbc2e820bf",
+  "label": "No admitted efficient self-edge occurs on a self-uniting tuple",
+  "paraphrase": "OPEN analyst premise on the temporal composer frame. For every tuple in which the uniter is identical to the united bearer, that bearer does not efficiently cause itself in any respect at any admitted time.",
+  "lean_declaration": "TruthCore.Case.Catholicism.NoSelfCauseScope.NoTemporalSelfUniter",
+  "definition_ids": [
+    "c20f04bb-c069-5be5-b2c1-691fc994dcb9"
+  ],
+  "disambiguation_ids": [
+    "57f80020-fa6f-5b69-be58-b4cf95b7226f"
+  ]
+}

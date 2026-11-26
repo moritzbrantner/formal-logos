@@ -42,6 +42,7 @@ public import TruthCore.Results.Case.Catholicism.ImmanentOrigins.Solution
 public import TruthCore.Results.Case.Catholicism.MaximalBeingCauseExclusion.Solution
 public import TruthCore.Results.Case.Catholicism.MaximeEnsIsGodStrength.Solution
 public import TruthCore.Results.Case.Catholicism.MaximumFirstByPriorCause.Solution
+public import TruthCore.Results.Case.Catholicism.NoSelfCauseScope.Solution
 public import TruthCore.Results.Case.Catholicism.PossessionConsumerReductions.Solution
 public import TruthCore.Results.Case.Catholicism.PreexistenceWithoutTransfer.Solution
 public import TruthCore.Results.Case.Catholicism.PremiseRestrictions.Solution

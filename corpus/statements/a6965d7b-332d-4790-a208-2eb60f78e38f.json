@@ -1,0 +1,13 @@
+{
+  "id": "a6965d7b-332d-4790-a208-2eb60f78e38f",
+  "label": "Each efficient self-edge has a distinct incoming cause or a CAUSE_4 self-origin",
+  "paraphrase": "OPEN analyst bridge. At the selected time, if a bearer efficiently causes itself in a respect, then either it is efficiently caused by a distinct bearer in some respect, or it is the originating cause of itself. The two alternatives need not be exclusive.",
+  "lean_declaration": "TruthCore.Case.Catholicism.NoSelfCauseScope.SelfEfficientHasAlternativeOrOrigin",
+  "definition_ids": [
+    "69c0b23e-54c7-57a1-871f-839c6e5514c6",
+    "05dc1385-d245-5137-bf8b-dbdb1d3d9a7a"
+  ],
+  "disambiguation_ids": [
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "a80c9987-8eca-4b4a-9462-0b6d49a5559a",
+  "label": "A selected actual mover supplies another MOTION_1 mover",
+  "argument_id": "11fff6b8-4613-4cf7-9026-85a5476736d8",
+  "challenge_module": "TruthCore.Results.Case.Catholicism.NoSelfCauseScope.Challenge",
+  "solution_module": "TruthCore.Results.Case.Catholicism.NoSelfCauseScope.Solution",
+  "theorem": "TruthCore.Results.Case.Catholicism.NoSelfCauseScope.anotherMoverOfActualMover",
+  "comparator_config": "results/a80c9987-8eca-4b4a-9462-0b6d49a5559a/comparator.json",
+  "status": "solution-present",
+  "description": "The patient lacks the completed actuality in the specified respect. The selected mover has it. Identity of the bearers would contradict this under the same act predicate. Neither whole actuality from part actuality nor universal exclusion of diagonal motion is used."
+}

@@ -24,5 +24,8 @@
   "disambiguation_ids": [
     "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
     "57f80020-fa6f-5b69-be58-b4cf95b7226f"
-  ]
+  ],
+  "strong_version_needed": {
+    "0a2f1846-e8cd-5082-9566-39b4ae8082fc": "The origin branch must rule out every efficient diagonal. The weaker bridge allows an efficient diagonal to coexist with a distinct incoming edge. For distinct incoming coverage as the endpoint, see argument 2e28021c."
+  }
 }

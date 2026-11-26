@@ -571,6 +571,167 @@ coverage alignment, followed by substantive sense typing and negative controls;
 adding opaque wrappers would not solve that task. No new proof or truth claim
 is made, and no existing Challenge or premise set changes.
 
+## No-self-cause scope in the two Ways and temporal composition (2026-11-26)
+
+The operative question is which causal role a bearer occupies in the
+inference. The existing predicates keep three roles apart:
+
+| Reading | Positive account | Exact boundary |
+|---|---|---|
+| CAUSE_4 origin | An exercise produces the being of a bearer. For example, on the local productive-priority account an already available source exercises a power whose product receives its existence through that exercise. | The [diagonal origin result](unique-feedback-explanation-311.md#rivals-at-the-scope-of-production-of-being) needs the same bearer and the exercise that produces its being. #2022 restricts exercise coverage to that diagonal. #2026 proves that acyclicity of the mixed bearer/act graph suffices for excluding self-production, and that it is equivalent to existence of a common strict extension. The reciprocal production control separates the local exclusion from global acyclicity. The priority warrant and application conditions are evaluated there. |
+| CAUSE_2 of a perfection | The subject understood as actual is productively responsible in a qualified sense for a proper accident. The subject receives in its potential role. Aquinas uses the powers of the soul as his example and specifies natural resultance without change. | [The pinned source claim](../../corpus/claims/afac47a6-76ad-4b1f-9c1f-48be6246f6c3.json) supports `5e76cbf7`. Its open application is fixing an actual respect and the same bearer at both ends of `CausesIn x x r`. Neither the same-bearer encoding nor an `EfficientlyCausesIn` edge follows from the source record. |
+| SELF_MOTION_3 through parts | An organism initiates its own displacement through a moving part and a distinct moved part. One can ascribe the coordinated exercise to the organism and retain the component as the immediate mover. | The whole-level attribution can create a diagonal in a coarse relation even when the immediate mover and patient differ. A positive part-based account challenges the unrestricted actuality-transfer move from the component's operative act to the whole's completed achieved state. [Physics VIII.4–5, Hardie and Gaye translation](https://classics.mit.edu/Aristotle/physics.8.viii.html) |
+
+Here-and-now efficient causing in the Second Way has its own
+`EfficientlyCausesIn` parameter (EFFICIENT_CAUSING_2). CAUSE_3 labels
+Aristotle's four-mode account in the corpus. It does not label the efficient
+branch of `CauseSense`. No general identification of efficient causing with
+any of the three roles above is used.
+
+**First Way.** The textbook deduction uses a single act predicate, bearer,
+respect and evaluation context. A candidate who supplies the very actuality
+that the patient lacks must differ numerically from the patient in that
+inference. The [new argument](../../corpus/arguments/11fff6b8-4613-4cf7-9026-85a5476736d8.json)
+uses one mover in act (`6b9fedc2`) and the moved patient's lack of the completed
+actuality (`811fe80c`), yielding `5588083c`. The existing full
+[`primaViaFromBeingInAct` result](../../corpus/results/d337ab29-f593-5b30-b830-ebbc093d6e33.json)
+already bypasses the universal mover-actuality derivations via a different
+bundle. The assignment of `InAct` must remain fixed across each chosen bundle.
+An organism's active motor and its undergoing displacement have different
+roles. This supplies a mechanism for whole self-motion and a case where
+lifting the producer's actuality to the whole would conflate those roles.
+The distinct-mover step does not require a mover outside the organism.
+
+The existing [SELF_MOTION reconstruction certificate](../../corpus/results/857ed537-1e5e-413d-b0ce-5595c7256a11.json)
+derives the part-to-whole mover interface from `0181cf7b` and `3209ff59`.
+It requires constitutive integration of the internal event and a separate
+patient lift to the whole. An aggregate diagonal by itself leaves the
+reconstruction open, and internal displacement by itself leaves the
+whole-motion attribution open. Those bridges and the further whole-actuality
+transfer `f1a124b6` remain available as distinct questions about the older
+universal-actuality route.
+
+**Second Way.** The [distinct incoming coverage route](../../corpus/arguments/4b7b5edf-7212-4fb5-85c2-f44b3f689e21.json)
+preserves the original efficient relation, per se premise and well-founded
+descent. At each effect it takes one distinct efficient antecedent, possibly
+in a different respect from the edge that made the current bearer an effect.
+If that antecedent is caused in any admitted respect, the original per se
+premise puts it on the same descent. If it has no incoming edge at all in the
+selected relation, it is first in the original sense. The conclusion stays
+double-negated. The new premise is strictly weaker than universal diagonal
+exclusion for the same relation. The original priority route remains a
+direct way to exclude every diagonal in a strict productive ordering.
+The Second Way endpoint `6105565d` has no registered downstream consumer
+toward GOD_4. The existing root routes that use the efficient regress apply
+it to movers through a separate link bridge. Connecting this endpoint would
+require a same-witness interface from an uncaused efficient agent in the
+selected respect roster to the stage-one existential dependence vocabulary,
+and a separately supported necessity premise. Neither distinct incoming
+coverage nor the descent supplies that interface.
+
+The [origin branch](../../corpus/arguments/2e28021c-05ec-415a-ab45-d6f052e85fda.json)
+uses CAUSE_4 exclusion, explicit excluded middle, and the weaker sibling
+of `0a2f1846`. The frozen proof uses excluded middle only to decide equality
+of the endpoints of a witnessed efficient edge. The local assumption
+`∀ c x r, E c x r → c = x ∨ c ≠ x` would suffice for that step. The registered
+classical-attributes restriction does not give this disjunction for arbitrary
+endpoints of the efficient relation. A diagonal efficient edge must have a
+distinct incoming alternative or an origin diagonal. The former can hold even when the
+original effect can operate on itself in another respect. Absence of an
+origin diagonal supplies no distinct efficient witness by itself. The live
+test is a bearer with only diagonal incoming efficient activity on the
+selected relation. A case in which that activity reshapes an independently
+existing agent would pressure the weak bridge if it really had no distinct
+incoming cause whatsoever in the same relation. Conversely, a restriction
+to production of the bearer's very being would need evidence that the
+Second Way's observation and per se premises concern that same relation.
+
+**Temporal composition.** In the [restricted composition route](../../corpus/arguments/157a5c52-33fe-4454-bbeb-ce896f755992.json),
+the efficient activity is still at some admitted time. The restriction of
+`d15ded6f` concerns only a diagonal on an actual self-uniting tuple.
+The conclusion uses the same uniter as the cause of esse through the
+independent uniter-to-esse premise. In a builder case the builder may have
+ceased building, so selected-time exclusion alone cannot take the place of
+the restriction. A genuine self-assembly case would need to show that the
+same whole which owes its being to union is itself the actual uniter in that
+tuple. An already existing whole reorganizing its parts gives no such
+transfer to the original acquisition of being.
+
+**Reading audit.** `048eac8a` is the existing fork's coverage assumption.
+The actual efficient endpoint theorem instantiates it with one use of one
+route relation indexed by Unit. It does not inspect or classify multiple
+word occurrences in either historical text. `cc5c7105` is irreflexivity of
+the supplied route relation. Its content changes when that relation is
+chosen. A self-perfection directly contradicts that premise on the CAUSE_2
+branch, but conflicts with efficient irreflexivity only under an inclusion
+or a coarse interpretation that classifies the self-perfection as efficient
+activity. For the same reason, `3715f518` needs an account turning each
+relevant efficient self-edge into a reduction from potency to act. Qualified
+resultance without change supplies a reason to reject that transfer for
+the proposed inclusive reading. This reasoning leaves the fixed strict
+productive reading open to separate evaluation.
+
+**Rivals and provisional assessment.** Spinoza's *causa sui* explains
+substance's existence through an existence-involving nature. The positive
+case runs through the impossibility of external production of substance in
+*Ethics* I, props. 6–8. The scholium to prop. 25 then ties this sense of cause
+to substance's causation of things by the necessity of its nature. This
+pressures an unrestricted identification of self-explanation with
+production of one's own existence by an occurring exercise. On the
+production reading, a competing account would have to supply that exercise
+and either reject its prior dependence on its bearer or furnish a coherent
+reciprocal existential dependency on the same tokens. The qualified
+proper-accident and organism accounts have positive reasons within their
+respective domains. Neither is evidence of an existential origin diagonal.
+An agent-causal account that takes the persisting organism as the producer
+of its act also distinguishes the agent and the act. A diagonal only arises
+if the effect is projected onto the agent as bearer of the new state. For an
+unmediated whole-level case, the remaining test is whether that projection
+preserves the single respect and causal role used by the First Way. [Spinoza,
+*Ethics* I, definition 1, props. 6–8 and prop. 25 scholium](https://en.wikisource.org/wiki/Ethics_(Spinoza)/Part_1)
+
+Provisionally, use the narrower distinct-witness routes when the phenomenon
+is same-respect motion or the descent to a first efficient cause. Keep the
+productive origin exclusion for production of being. The strongest warrant
+for strict exclusion is the need for the producing power to be available to
+exercise, together with the product's dependence on the exercise, within a
+defended priority ordering. Extension to qualified resultance, aggregate
+agency or all admitted times requires further grounds. Revision would
+require a fixed witness and interpretation that forces a challenged diagonal
+on the actual source relation or shows why the local alternatives cannot
+cover actual cases. The shared per se, regress and esse-bridge obligations
+retain their previous warrant.
+
+The [finite certificate](../../corpus/results/0505143b-7a9a-4236-a53c-7c5a5f2aa5d0.json)
+uses supplied structural interpretations. In the motion row, `InternalMotion`
+holds of the whole's displacement. `PatientLift` gives a distinct actual
+motor and `AggregateLift` gives a whole-level diagonal in the same motion
+roster. The separate [reconstruction certificate](../../corpus/results/857ed537-1e5e-413d-b0ce-5595c7256a11.json)
+checks the stronger `WholeParts` reading with `Integrated`. In the Boolean
+accident row, the distinct and diagonal efficient edges carry different
+respect indices. The distinct efficient edge and the binary origin edge
+have the same ordered bearer pair by stipulation. The accident perfection
+edge has the same respect as the efficient diagonal. The motion relation is
+empty, and the distinct efficient cause has no incoming edge, so the per
+se relation can be empty there. This fixed model exhibits a witness. The
+general Second Way result concludes only `¬¬ ∃ f, IsFirstEfficientCause E f`.
+The temporal model puts both activities in the past, with only
+the distinct pair on the uniting relation. These checks do not model how a
+proper accident emanates, whether an animal's whole is the immediate source
+of motion, or whether Spinoza's substance exists. The passage links provide
+reading context. This batch adds analyst propositions and no new source
+attributions. The finite certificate links the motion, selected-time
+efficient and per se definitions in its record. Adding the perfection and
+origin definitions would combine CAUSE_1, CAUSE_2 and CAUSE_4, and adding the
+perfection or temporal profile would combine distinct UNITING_CAUSE_VERSUS_EFFICIENT_CAUSE
+senses. The certificate evaluates separate predicates and supplies no bridge
+between those senses. The remaining definitions are linked here for navigation.
+[Perfection](../../corpus/definitions/cause-of-perfection.json) ·
+[Origin](../../corpus/definitions/cause-of-origin.json) ·
+[Temporal profile](../../corpus/definitions/composer-temporal-profile.json)
+
 ## Research attempts citing this note
 
 - [Sense forks batch 2, restructured per the owner's sense-indexed terms direction: one argument per…](../../corpus/attempts/term-sense-forks-2-20261107.json)
+
+- [No-self-cause scope and distinct witness routes](../../corpus/attempts/01b3a726-463c-4d0f-8317-828b60818e0a.json)

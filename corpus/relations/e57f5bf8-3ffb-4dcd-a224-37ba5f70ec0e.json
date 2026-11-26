@@ -1,0 +1,11 @@
+{
+  "id": "e57f5bf8-3ffb-4dcd-a224-37ba5f70ec0e",
+  "label": "All-time efficient irreflexivity strengthens its self-uniter restriction",
+  "subject_kind": "statement",
+  "subject_id": "d15ded6f-1895-5d2d-b967-a14165c49bda",
+  "predicate": "strengthens",
+  "object_kind": "statement",
+  "object_id": "2e69fa9d-733f-4ef8-9e1f-22dbc2e820bf",
+  "verification_result_id": "64b6c09f-2712-4e73-8b8d-4f61e6b8014f",
+  "note": "The restriction retains all admitted times but narrows to self-uniting tuples. The pastEdges control witnesses strictness."
+}

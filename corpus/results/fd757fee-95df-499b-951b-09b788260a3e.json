@@ -1,0 +1,11 @@
+{
+  "id": "fd757fee-95df-499b-951b-09b788260a3e",
+  "label": "Distinct efficient incoming coverage from no CAUSE_4 self-origin",
+  "argument_id": "2e28021c-05ec-415a-ab45-d6f052e85fda",
+  "challenge_module": "TruthCore.Results.Case.Catholicism.NoSelfCauseScope.Challenge",
+  "solution_module": "TruthCore.Results.Case.Catholicism.NoSelfCauseScope.Solution",
+  "theorem": "TruthCore.Results.Case.Catholicism.NoSelfCauseScope.distinctOfNoOrigin",
+  "comparator_config": "results/fd757fee-95df-499b-951b-09b788260a3e/comparator.json",
+  "status": "solution-present",
+  "description": "A distinct incoming edge already witnesses the consequent. If the selected witness is diagonal, the explicit bridge gives either another incoming cause or a CAUSE_4 diagonal. The origin exclusion removes the latter; the proof leaves the original efficient self-edge intact."
+}

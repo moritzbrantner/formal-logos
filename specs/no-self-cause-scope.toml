@@ -1,0 +1,137 @@
+[batch]
+vocab = "TruthCore.Case.Catholicism.NoSelfCauseScope"
+results = "TruthCore.Results.Case.Catholicism.NoSelfCauseScope"
+
+[[statement]]
+id = "Every efficient effect has a distinct EFFICIENT_CAUSING_2 cause"
+lean = "EffectsHaveDistinctCauses"
+paraphrase = "OPEN analyst premise. At the selected time, if a bearer is efficiently caused in some respect, it has at least one numerically distinct efficient cause in some respect. The two respects may differ. This is an incoming-witness requirement."
+definitions = ["DEF-EFFICIENT-CAUSING"]
+
+[[statement]]
+id = "Each efficient self-edge has a distinct incoming cause or a CAUSE_4 self-origin"
+lean = "SelfEfficientHasAlternativeOrOrigin"
+paraphrase = "OPEN analyst bridge. At the selected time, if a bearer efficiently causes itself in a respect, then either it is efficiently caused by a distinct bearer in some respect, or it is the originating cause of itself. The two alternatives need not be exclusive."
+definitions = ["DEF-EFFICIENT-CAUSING", "05dc1385-d245-5137-bf8b-dbdb1d3d9a7a"]
+disambiguations = ["DISAMB-CAUSE"]
+
+[[statement]]
+id = "No admitted efficient self-edge occurs on a self-uniting tuple"
+lean = "NoTemporalSelfUniter"
+paraphrase = "OPEN analyst premise on the temporal composer frame. For every tuple in which the uniter is identical to the united bearer, that bearer does not efficiently cause itself in any respect at any admitted time."
+definitions = ["DEF-COMPOSER-TEMPORAL-PROFILE"]
+disambiguations = ["DISAMB-UNITING-CAUSE"]
+
+[[statement]]
+id = "05ef524c-8e43-4155-adc7-5bb5ada27b8b"
+lean = "Control.Boundaries"
+label = "Finite controls for scoped causal diagonals"
+definitions = ["DEF-MOTION-AS-REDUCTION", "DEF-EFFICIENT-CAUSING", "DEF-PER-SE-EFFICIENT-CAUSE-LINK"]
+disambiguations = ["DISAMB-CAUSE", "DISAMB-UNITING-CAUSE"]
+paraphrase = "Three fixed structural controls. The motion interpretation satisfies InternalMotion for the whole in displacement. PatientLift supplies an actual distinct mover and AggregateLift supplies a whole-level diagonal. On the stipulated Boolean interpretation the binary origin shares a bearer pair with the distinct efficient edge. The efficient edges differ in respect, and the diagonal efficient edge shares its respect with the self-directed perfection. These coexist with distinct incoming coverage and a first efficient cause with the per se and regress premises, while both broad efficient-self bridges fail on the stipulated efficient relation. An actual temporal uniting tuple has past distinct activity, and a past diagonal outside that tuple falsifies the all-time ban while the restricted ban and selected-time exclusion hold. These are comparisons of supplied interpretations."
+
+[[argument]]
+id = "A selected actual mover supplies another MOTION_1 mover"
+theorem = "anotherMoverOfActualMover"
+premises = ["STMT-NOTHING-REDUCED-TO-ACT-EXCEPT-BY-A-BEING-IN-ACT", "STMT-WHAT-IS-BEING-MOVED-TO-R-IS-NOT-YET-R"]
+conclusion = "STMT-WHATEVER-IS-MOVED-IS-MOVED-BY-ANOTHER"
+rule = "Extract the actual mover and rule out its identity with the patient"
+meaning = "The patient lacks the completed actuality in the specified respect. The selected mover has it. Identity of the bearers would contradict this under the same act predicate. Neither whole actuality from part actuality nor universal exclusion of diagonal motion is used."
+
+[[argument]]
+id = "Global efficient no-self-cause supplies distinct incoming coverage"
+theorem = "distinctOfNoSelf"
+premises = ["STMT-NOTHING-IS-EFFICIENT-CAUSE-OF-ITSELF"]
+conclusion = "Every efficient effect has a distinct EFFICIENT_CAUSING_2 cause"
+weakening = true
+transcription = "assembly"
+strong_version_needed = {"STMT-NOTHING-IS-EFFICIENT-CAUSE-OF-ITSELF" = "This argument registers the strength comparison; the new descent consumes the weaker incoming coverage."}
+rule = "Keep an arbitrary incoming witness after excluding its diagonal"
+meaning = "A witness for the antecedent is itself distinct under the global ban, so it can be retained with its same respect."
+
+[[relation]]
+id = "Global efficient no-self-cause strengthens distinct incoming coverage"
+subject_kind = "statement"
+subject_id = "STMT-NOTHING-IS-EFFICIENT-CAUSE-OF-ITSELF"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "Every efficient effect has a distinct EFFICIENT_CAUSING_2 cause"
+verification_result_id = "Global efficient no-self-cause supplies distinct incoming coverage"
+note = "On the same selected-time relation the weak premise allows a diagonal when a distinct incoming edge is also present. The accident control witnesses strictness."
+
+[[argument]]
+id = "Self-origin transfer supplies the CAUSE_4 disjunct"
+theorem = "alternativeOrOriginOfOrigin"
+premises = ["0a2f1846-e8cd-5082-9566-39b4ae8082fc"]
+conclusion = "Each efficient self-edge has a distinct incoming cause or a CAUSE_4 self-origin"
+weakening = true
+transcription = "assembly"
+strong_version_needed = {"0a2f1846-e8cd-5082-9566-39b4ae8082fc" = "This argument registers the strength comparison only."}
+rule = "Insert the original conclusion as the second disjunct"
+meaning = "Apply the old diagonal implication to the same bearer and respect, then introduce the origin disjunct. No identification of efficient causing with origin follows."
+
+[[relation]]
+id = "Unrestricted efficient self-origin transfer strengthens the alternative-or-origin version"
+subject_kind = "statement"
+subject_id = "0a2f1846-e8cd-5082-9566-39b4ae8082fc"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "Each efficient self-edge has a distinct incoming cause or a CAUSE_4 self-origin"
+verification_result_id = "Self-origin transfer supplies the CAUSE_4 disjunct"
+note = "The weak bridge can hold via a distinct incoming edge alone. The accident control witnesses strictness."
+
+[[argument]]
+id = "Distinct efficient incoming coverage from no CAUSE_4 self-origin"
+theorem = "distinctOfNoOrigin"
+strong_version_needed = {"STMT-EXCLUDED-MIDDLE" = "The frozen argument uses the existing excluded-middle interface to decide c = x for a witnessed edge E c x r. It only needs that local equality disjunction; the existing classical-attributes restriction does not supply it for an arbitrary cause and effect in this frame."}
+premises = ["Each efficient self-edge has a distinct incoming cause or a CAUSE_4 self-origin", "STMT-NOTHING-ORIGINATES-ITSELF", "STMT-EXCLUDED-MIDDLE"]
+conclusion = "Every efficient effect has a distinct EFFICIENT_CAUSING_2 cause"
+rule = "Split identity of the selected witness and eliminate the self-origin disjunct"
+meaning = "A distinct incoming edge already witnesses the consequent. If the selected witness is diagonal, the explicit bridge gives either another incoming cause or a CAUSE_4 diagonal. The origin exclusion removes the latter; the proof leaves the original efficient self-edge intact."
+
+[[argument]]
+id = "Second Way from distinct efficient incoming witnesses"
+theorem = "firstEfficientOfDistinct"
+strong_version_needed = {"8a22ae75-4198-5a32-ae52-bad2848a50a5" = "Descent knows only that the distinct antecedent is efficiently caused in some respect. The weaker sibling 446e3f2a also needs evidence that this incoming respect is relevant to its outgoing activity. The frozen premises give no such relevance witness."}
+premises = ["STMT-ORDER-OF-EFFICIENT-CAUSES-FOUND", "Every efficient effect has a distinct EFFICIENT_CAUSING_2 cause", "STMT-SECOND-EFFICIENT-CAUSES-CAUSE-ONLY-AS-CAUSED", "STMT-NO-INFINITE-PER-SE-EFFICIENT-CAUSE-SERIES"]
+conclusion = "STMT-FIRST-EFFICIENT-CAUSE-CANNOT-BE-LACKING"
+rule = "Well-founded descent on effects using a distinct incoming witness at each step"
+meaning = "Given an effect, choose a distinct incoming cause. If it has no incoming cause of any kind in the same efficient relation it is first. Otherwise the per se premise makes it a predecessor that is also an effect. Well-foundedness contradicts the absence of any first cause, using the observed effect to begin. The endpoint is double-negated."
+
+[[argument]]
+id = "All-time efficient irreflexivity gives its self-uniter restriction"
+theorem = "uniterOfAllTime"
+premises = ["d15ded6f-1895-5d2d-b967-a14165c49bda"]
+conclusion = "No admitted efficient self-edge occurs on a self-uniting tuple"
+weakening = true
+transcription = "assembly"
+strong_version_needed = {"d15ded6f-1895-5d2d-b967-a14165c49bda" = "This argument registers the restriction on the same temporal frame."}
+rule = "Instantiate the global exclusion at the witnessed time"
+meaning = "Any temporal edge is witnessed at an admitted time. Apply the old ban there, including when the bearer is a self-uniter."
+
+[[relation]]
+id = "All-time efficient irreflexivity strengthens its self-uniter restriction"
+subject_kind = "statement"
+subject_id = "d15ded6f-1895-5d2d-b967-a14165c49bda"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "No admitted efficient self-edge occurs on a self-uniting tuple"
+verification_result_id = "All-time efficient irreflexivity gives its self-uniter restriction"
+note = "The restriction retains all admitted times but narrows to self-uniting tuples. The pastEdges control witnesses strictness."
+
+[[argument]]
+id = "Composite cause of being from the restricted temporal self-uniter ban"
+theorem = "compositionOfNoSelfUniter"
+sense_bridges = [{term = "UNITING_CAUSE_VERSUS_EFFICIENT_CAUSE", from = "UNITING_CAUSE_VERSUS_EFFICIENT_CAUSE_1", to = "UNITING_CAUSE_VERSUS_EFFICIENT_CAUSE_4", statement_id = "STMT-UNITING-CAUSE-EFFICIENT-AT-SOME-TIME"}, {term = "UNITING_CAUSE_VERSUS_EFFICIENT_CAUSE", from = "UNITING_CAUSE_VERSUS_EFFICIENT_CAUSE_1", to = "UNITING_CAUSE_VERSUS_EFFICIENT_CAUSE_3", statement_id = "fbee7f15-f54b-5a67-9773-3c09ca7015f4"}]
+premises = ["6b80cfe4-82e1-53d3-9c7c-6564e52a25de", "58445bd6-264b-53cf-8951-d052022f8e47", "STMT-UNITING-CAUSE-EFFICIENT-AT-SOME-TIME", "fbee7f15-f54b-5a67-9773-3c09ca7015f4", "No admitted efficient self-edge occurs on a self-uniting tuple"]
+conclusion = "STMT-COMPOSITE-HAS-A-UNITING-CAUSE"
+rule = "Extract the uniter, exclude identity on its actual tuple, and apply the esse bridge"
+meaning = "Two distinct components give a uniter. If it is the composite, temporal composer coverage gives precisely the diagonal excluded on its tuple. The same distinct uniter then causes the composite's esse by the separate uniting-to-esse premise."
+
+[[argument]]
+id = "Finite boundaries of the self-cause exclusions"
+theorem = "boundaries"
+premises = []
+conclusion = "05ef524c-8e43-4155-adc7-5bb5ada27b8b"
+rule = "Construct finite populated relation interpretations and discharge each stated clause"
+meaning = "A proper motor supplies an actual patient-lift edge while an aggregate lift supplies a whole diagonal and the patient lacks completed act. In the Boolean control the two efficient edges carry different respect indices. The distinct efficient edge and the binary origin edge have the same ordered bearer pair by stipulation. The second efficient edge is a self-diagonal and also has a stipulated perfection edge at that respect. The motion relation is empty. The same efficient roster satisfies the new full Second Way bundle with the distinct original cause first. The temporal control puts both activities in the past and selects only the distinct uniter."

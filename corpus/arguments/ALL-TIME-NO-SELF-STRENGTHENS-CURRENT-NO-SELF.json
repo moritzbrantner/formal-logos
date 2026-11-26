@@ -15,5 +15,8 @@
   ],
   "disambiguation_ids": [
     "57f80020-fa6f-5b69-be58-b4cf95b7226f"
-  ]
+  ],
+  "strong_version_needed": {
+    "d15ded6f-1895-5d2d-b967-a14165c49bda": "This argument registers the projection to blanket selected-time exclusion. The temporal self-uniter restriction alone permits selected-time diagonals away from those tuples."
+  }
 }

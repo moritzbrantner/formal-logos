@@ -21,6 +21,6 @@
     "57f80020-fa6f-5b69-be58-b4cf95b7226f"
   ],
   "strong_version_needed": {
-    "d15ded6f-1895-5d2d-b967-a14165c49bda": "The efficient-activity witness may occur at any admitted time. The selected-time-only ban admits the checked past-self countermodel with all other premises and a composite present."
+    "d15ded6f-1895-5d2d-b967-a14165c49bda": "This frozen proof applies the unrestricted ban at the witnessed activity time. The selected-time ban alone admits the past-self control. Argument 157a5c52 gives the same composite conclusion using the weaker temporal self-uniter restriction."
   }
 }

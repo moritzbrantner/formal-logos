@@ -188,6 +188,7 @@ meaning = "Coverage and exclusivity block equivocation on 'prior': each use is t
 [[argument]]
 id = "CAUSE-SENSE-FORK-NO-SELF-EFFICIENT-CAUSE"
 theorem = "noSelfEfficientCauseBySenseFork"
+strong_version_needed = {"0a2f1846-e8cd-5082-9566-39b4ae8082fc" = "The origin branch must rule out every efficient diagonal. The weaker bridge allows an efficient diagonal to coexist with a distinct incoming edge. For distinct incoming coverage as the endpoint, see argument 2e28021c."}
 premises = ["STMT-CAUSE-SENSES-EXHAUSTIVE", "STMT-NOTHING-CAUSES-ITSELF-IN-ROUTE-SENSE", "STMT-SOME-SUBJECT-CAUSES-ITS-OWN-PERFECTION", "STMT-SELF-EFFICIENT-CAUSATION-IS-SELF-MOVING", "STMT-SELF-EFFICIENT-CAUSATION-IS-SELF-ORIGINATION"]
 conclusion = "STMT-NOTHING-IS-EFFICIENT-CAUSE-OF-ITSELF"
 rule = "Proof by cases over the sense enum (disjunctive syllogism), modus ponens"
@@ -212,6 +213,7 @@ meaning = "Per-sense result for the moving branch of 'cause': Aristotle's readin
 [[argument]]
 id = "NO-SELF-EFFICIENT-CAUSE-FROM-NO-SELF-ORIGIN"
 theorem = "noSelfEfficientCauseFromOrigin"
+strong_version_needed = {"0a2f1846-e8cd-5082-9566-39b4ae8082fc" = "The conclusion forbids every efficient diagonal. The weaker bridge permits a diagonal when a distinct incoming edge is also present. Argument 2e28021c uses that weaker bridge to derive distinct incoming coverage."}
 premises = ["STMT-NOTHING-ORIGINATES-ITSELF", "STMT-SELF-EFFICIENT-CAUSATION-IS-SELF-ORIGINATION"]
 conclusion = "STMT-NOTHING-IS-EFFICIENT-CAUSE-OF-ITSELF"
 rule = "Universal instantiation and modus tollens"

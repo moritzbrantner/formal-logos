@@ -1,0 +1,11 @@
+{
+  "id": "694554bd-8363-48ef-addb-89b867de5e82",
+  "label": "Unrestricted efficient self-origin transfer strengthens the alternative-or-origin version",
+  "subject_kind": "statement",
+  "subject_id": "0a2f1846-e8cd-5082-9566-39b4ae8082fc",
+  "predicate": "strengthens",
+  "object_kind": "statement",
+  "object_id": "a6965d7b-332d-4790-a208-2eb60f78e38f",
+  "verification_result_id": "8ac465c5-632c-42c1-85c2-be9a46486357",
+  "note": "The weak bridge can hold via a distinct incoming edge alone. The accident control witnesses strictness."
+}

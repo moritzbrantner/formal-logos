@@ -1,0 +1,12 @@
+{
+  "id": "8ac465c5-632c-42c1-85c2-be9a46486357",
+  "label": "Self-origin transfer supplies the CAUSE_4 disjunct",
+  "argument_id": "059a5054-1be9-4756-8426-ec6289fb17b0",
+  "challenge_module": "TruthCore.Results.Case.Catholicism.NoSelfCauseScope.Challenge",
+  "solution_module": "TruthCore.Results.Case.Catholicism.NoSelfCauseScope.Solution",
+  "theorem": "TruthCore.Results.Case.Catholicism.NoSelfCauseScope.alternativeOrOriginOfOrigin",
+  "comparator_config": "results/8ac465c5-632c-42c1-85c2-be9a46486357/comparator.json",
+  "status": "solution-present",
+  "description": "Apply the old diagonal implication to the same bearer and respect, then introduce the origin disjunct. No identification of efficient causing with origin follows.",
+  "transcription": "assembly"
+}
