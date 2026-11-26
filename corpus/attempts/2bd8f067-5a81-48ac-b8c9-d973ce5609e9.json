@@ -18,7 +18,7 @@
   "date": "2026-11-26",
   "kind": "derivation",
   "outcome": "succeeded",
-  "summary": "Section 11 of docs/notes/sustaining-vs-existential-inertia.md. Three explicit assemblies reach distinct same-moment giving: momentary PSR with the productive bridge, occurrence of the origin relation with term giving, and present receipt with correlativity. The first and third use scoped non-self-giving; the second uses origin irreflexivity. The shared two-moment countermodel grants the explanatory demand, origin accompaniment with an existing distinct originator, and standing receipt at the later moment. It falsifies the corresponding productive bridges there. The passion variant grants correlativity and receipt at onset only. The countermodel also grants concurrence when there is giving, and contact when giving, while the sustaining reading fails. This locates the failure of each proposed implication in the stated formal interpretation. It gives no actual example of a strict giver withdrawing while the same bearer persists.",
+  "summary": "Section 11 of docs/notes/sustaining-vs-existential-inertia.md. Three explicit assemblies reach distinct same-moment giving: momentary PSR with the productive bridge, occurrence of the origin relation with term giving, and present receipt with correlativity. The first and third use scoped non-self-giving; the second uses origin irreflexivity. The shared two-moment countermodel grants the explanatory demand, origin accompaniment with an existing distinct originator, and standing receipt at the later moment. It falsifies the corresponding productive bridges there. The passion variant grants correlativity and receipt at onset only. The countermodel also grants concurrence when there is giving, and contact when giving, while the sustaining reading fails. This locates the failure of each proposed implication in the stated formal interpretation. It gives no actual example of a strict giver withdrawing while the same bearer persists. Section 12 tests the negation independently. The all-interval loss law is classically equivalent to survival over inducer-free intervals. With no possible inducer in either supplied world, a contingent recipient can originate in one and never originate in the other. Holding that history, standing receipt and the momentary explanation fixed, origin-only and sustained giving respectively falsify and satisfy both productive tests. A nonempty conditional origin-essentialist dictionary for the same recipient does not entail existence. The rival offers genuine continuation warrant; neither contingency, receipt nor momentary PSR discriminates. Q.104 retains positive warrant for conservation on the strict cause-of-being reading. The open test concerns independently identified withdrawal at the same bearer, not non-origination in another world.",
   "blocker": "Q.104 a.1 supports a distinct timeless conserver of participated being. Application still needs coverage of the route receivers and the effect-side GivesAt calibration. The same-bearer discriminating test is to hold the initial origin, identity and intrinsic conditions fixed and justify whether loss follows from withdrawal of productive giving. An argument for the inertia law must cover existential cessation and justify the absence of an inducer independently of assuming inertia. Row 51 adds a separate same-cause burden if the result is used for sustained giving by a designated cause. The q.8 immediate-contact calibration remains open.",
   "evidence": [
     "5ec9a3bc-55b6-48ed-9f22-98403a488d9c",
@@ -28,7 +28,11 @@
     "62877563-d97a-4f44-9890-bf0bc739731c",
     "da9c82ed-e886-5335-81c3-cebad9b27345",
     "b246de60-51d3-4e7c-ba3f-0683f169b92f",
-    "PR-2029"
+    "PR-2029",
+    "ea0b5e2e-48a7-41b2-90ae-8a9284c5ddd6",
+    "a638195c-6867-44e9-a6d7-680f22a187d8",
+    "24a6beb5-9cf6-4f7d-95fd-0776ccff9102",
+    "PR-2036"
   ],
   "workers": [
     {
@@ -45,6 +49,14 @@
       "model": "claude-opus-5-5",
       "date": "2026-11-26",
       "pr": "PR-2029"
+    },
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-astra",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2036"
     }
   ]
 }
