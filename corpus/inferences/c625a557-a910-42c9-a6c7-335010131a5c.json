@@ -1,0 +1,14 @@
+{
+  "id": "c625a557-a910-42c9-a6c7-335010131a5c",
+  "label": "One governing beneficiary standard suffices for GOD_4 recipient willing (inference)",
+  "input_statement_ids": [
+    "4be0f774-2c0a-4691-9088-6e790940960a",
+    "1733629b-f6d4-4804-9a9b-1af74e2747c0",
+    "437438f0-183c-48e5-8d84-f82b94fabf3e"
+  ],
+  "output_statement_id": "3655f59f-9ab4-4c5d-8fb2-474810d29418",
+  "rule": "Extract the required benefit from one operative plan",
+  "meaning": "Coverage supplies some governing plan, so the weaker omission premise supplies a governing plan rejecting the edited assessment. If this latter plan did not require the credit, each of its required clauses would survive the edit. Recognition of the required credit in the latter plan yields recipient willing.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

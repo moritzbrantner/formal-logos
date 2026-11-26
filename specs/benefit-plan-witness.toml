@@ -1,0 +1,53 @@
+[batch]
+vocab = "TruthCore.Causality.BenefitPlanWitness"
+results = "TruthCore.Results.Causality.BenefitPlanWitness"
+
+[[statement]]
+id = "At least one governing plan rejects omission of the distinct recipient's esse as its good"
+lean = "SomeGoverningPlanRejectsBenefitOmission"
+paraphrase = "OPEN, analyst formulation. At w, for each GOD_4 giver and each distinct recipient in act in esse for which some plan governs successfully, at least one successfully governing plan rejects the assessment with just the recipient's esse credit as its own good removed. It can be a different plan from the first witness. The edit keeps the bare output and every other role fixed."
+definitions = ["DEF-GOD-OF-CLASSICAL-THEISM", "DEF-ESSE", "fbd163ad-ec01-45d1-a749-f90a1de6ea37", "a84afabf-d6e6-424d-a792-2fa874c466a5"]
+
+[[statement]]
+id = "Two governing-plan profiles separate beneficiary credit, intrinsic goodness and recipient willing"
+lean = "Control.Comparison"
+paraphrase = "In the fixed two-world rational exercise, the same distinct recipient actually has esse and is good in that respect. Both profiles can retain recipient willing, an end-directed governing plan and both recognition rules. The instrumental plan defeats the universal benefit test in both profiles. Using the second plan supplies an existential benefit witness. Apprehending and fulfilling it without using it leaves even that existential test false, including when recipient willing is assigned. With willing removed just at the distinct recipient, benefit recognition still holds in the instrumental-only profile and fails in the two-plan profile, and the recipient bridge fails."
+definitions = ["DEF-ESSE", "DEF-GOD-OF-CLASSICAL-THEISM", "DEF-HAS-INTELLECT", "DEF-HAS-WILL", "92c03350-6809-497d-b123-2ffb11c0e0c1", "bace3032-dfa4-4193-9408-30f584e6fe6d", "08b826db-2d9c-48e5-b69c-d4ac54088518", "DEF-GOVERNMENT-DIRECTION-TO-END", "fbd163ad-ec01-45d1-a749-f90a1de6ea37", "a84afabf-d6e6-424d-a792-2fa874c466a5", "4c8f0e6b-7ef6-5be5-851c-cdf4f0301546", "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168"]
+
+[[argument]]
+id = "A beneficiary requirement in every governing plan suffices for one witness"
+theorem = "someFromEvery"
+premises = ["df6c64a6-02dc-414a-be8e-dccd035b8872"]
+conclusion = "At least one governing plan rejects omission of the distinct recipient's esse as its good"
+axioms = []
+rule = "Use the existing governing plan as the omission witness"
+meaning = "For the same actual distinct recipient, obtain a governing plan from the antecedent. Since the universal rejection test applies to it, this plan witnesses the existential test."
+
+[[argument]]
+id = "One governing beneficiary standard suffices for GOD_4 recipient willing"
+theorem = "recipientOfSomeGoverningPlan"
+premises = ["4be0f774-2c0a-4691-9088-6e790940960a", "At least one governing plan rejects omission of the distinct recipient's esse as its good", "437438f0-183c-48e5-8d84-f82b94fabf3e"]
+conclusion = "3655f59f-9ab4-4c5d-8fb2-474810d29418"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Extract the required benefit from one operative plan"
+meaning = "Coverage supplies some governing plan, so the weaker omission premise supplies a governing plan rejecting the edited assessment. If this latter plan did not require the credit, each of its required clauses would survive the edit. Recognition of the required credit in the latter plan yields recipient willing."
+
+[[argument]]
+id = "Evaluate matched controls for existential and universal benefit omission"
+theorem = "controls"
+premises = []
+conclusion = "Two governing-plan profiles separate beneficiary credit, intrinsic goodness and recipient willing"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+sense_mixing_control = true
+rule = "Evaluate use of shared practical standards and recognition in the same fixed giving"
+meaning = "The second plan's operative use is switched while the requirements, apprehension, assignment of realization, goodness, direction and willing for the same g and x are held fixed. The final checks switch off willing for the distinct recipient while preserving self-willing. These are structural non-entailment and joint-satisfiability tests in the assignment."
+
+[[relation]]
+id = "Universal benefit omission strengthens existence of one benefit-omission witness"
+subject_kind = "statement"
+subject_id = "df6c64a6-02dc-414a-be8e-dccd035b8872"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "At least one governing plan rejects omission of the distinct recipient's esse as its good"
+verification_result_id = "A beneficiary requirement in every governing plan suffices for one witness"
+note = "At the same g, x, w and plan interpretation, the universal test applies to any existing witness. The mixed-plan control displays why the reverse implication can fail."

@@ -932,3 +932,213 @@ constitutive account.
 
 [Derivation attempt](../../corpus/attempts/3fdc09ec-1d28-4b3e-b7aa-a1db6fff0456.json) ·
 [Rejected direct inference](../../corpus/attempts/55c9bf7e-8825-4634-9988-2352c019ce76.json)
+
+## Which operative standard needs to count the recipient's esse? (2026-11-26)
+
+The love route needs one successfully governing plan that treats the distinct
+recipient's esse as its good. It can tolerate other governing standards for
+the same production that require only output and placement in a wider order.
+The weaker omission test, [1733629b][one-plan], applies to a GOD_4 giver and
+a distinct recipient in act in esse at the selected world. Its antecedent
+supplies some governing plan, and its consequent supplies a governing plan
+whose requirements reject the edited description. The two witnesses can
+coincide. Coverage (4be0f774) supplies the antecedent for each rational
+giving. The rejection entails a required benefit clause, to which benefit
+recognition (437438f0) applies. This supports 3655f59f, the recipient-willing
+input of the existing route to a94c5dfc. [Lean solution][benefit-proof]
+
+### From determinate production to operative use
+
+There are three different questions about the same giving at w. The #2019
+priority theorem answers which kind of power is exercised under its premises.
+Its data identify the giver, the effect and the exercised power. They contain
+no content by which to distinguish success from failure. The prior controls
+show that fixing these data together with correct appraisal and fulfillment
+allows the plan-use relation to fail. A defense limited to GOD_4 or qualifying
+universal givers could support a narrower coverage premise. The registered
+4be0f774 ranges over every distinct actual rational giving at w.
+[Prior rational-exercise proof][through-will] ·
+[Prior plan controls][prior-controls]
+
+In I q.19 a.4 co., the third reason gives the stronger starting point:
+the effect preexists intelligibly, and the source's inclination is to
+realize what is thus conceived. The fourth reply assigns direction to the
+intelligible form of the work, command to will, and execution to power.
+This offers a way to identify content before checking the output. For a
+particular effect, an independently specified form of the work sets what
+would count as realization even in a description in which the production
+falls short. The further claim is that **this** giving is the proper
+exercise of an inclination toward realizing **this** conceived form.
+On that account the form governs the successful production through the
+inclination, without a temporally prior decision or a second productive
+event. Correct representation of x, even by the giver itself, gives
+no such evidence by itself. A prediction of a house left by someone who
+builds for another plan and an adopted building specification can both
+fit the completed house. Only the latter explains the building under
+the intended form. Transfer to giving esse is open: the house example
+presupposes material and a bounded operation. The application here needs
+evidence that the very act conferring esse instantiates the apprehended
+form, and that the selected assessment of fulfillment concerns that
+act. It would be circular to individuate the act's adopted form solely
+by the finished product. [Pinned I q.19 a.4][q19] ·
+[Same-source cognition and its uptake premise][exemplars] · [Productive supply test][supply]
+
+I q.14 a.8 and I q.15 aa.1–2 are navigation for a possible continuation.
+The two questions to test there are whether joined knowledge and will fix
+the productive exercise for the particular effect, and whether an idea of
+a whole fixes an obligatory place for each effect in it. These leads
+supply no new corpus attribution or support edge here. I q.22 a.1 co. and
+ad 2–3 already give a pinned distinction between the conception of order,
+a willed end and execution. I q.22 a.2 co. and ad 1 give the scope
+argument from universal causality. Its illustrated exclusion of an
+interfering cause outside the producer's order does not settle what
+belongs to the practical specification when the first cause itself
+has an incidental effect. To sustain end omission (b1d7825e), one needs
+a required role for x in the actual order, even if the role is subordinate.
+The semantics permits an end shared across effects. For end recognition
+(f8cd0849), adopting and realizing x's place supplies prima facie grounds
+under the case's directing sense. An observer's correct assignment of
+an end or a post hoc classification has neither feature. The q.22
+distinction also gives reason to check that a proposed application
+identifies the case's direction relation instead of silently importing
+execution of government or normative jurisdiction. [Pinned I q.22 aa.1–2][q22]
+
+### Recipient good and the matched comparisons
+
+Actuality-goodness coextension warrants describing esse as a good of its
+bearer, directly relevant to what could count as benefit. I q.20 a.2 co.
+argues from divine will causing the creature's esse to a good willed
+to that creature. The account is stronger than merely saying the creature
+happens to benefit. Its ad 3 also gives a reason to allow orders to God
+or rational creatures without requiring friendship with irrational
+creatures. To infer the omission criterion one still needs evidence
+that the recipient-directed content is borne by a standard actually
+governing the same giving. Neither the primitive willing relation nor
+the goodness coextension requires that link in Lean. The finite comparison
+even grants CREATURE_WILLING_1 at the same giver, recipient and esse.
+It models no claim that this recipient-directed willing is causally idle
+in Aquinas's metaphysics. The direct option of defending that willing
+without a plan decomposition remains available. [Pinned I q.5 a.1][q5] ·
+[Pinned I q.20 a.2][q20] · [Existing source claim][q20-claim]
+
+The two profiles keep the same finite giving, two plan contents, their
+apprehension, their fulfilled clauses, the goodness-actuality coextension,
+and the assignments of willing and direction. Both plans require the
+same output and its placement toward one end. One also requires benefit
+credit. The only change in those profiles is whether the benefit
+standard governs. In each, the instrumental standard passes the omission
+test as an edited assessment, so the universal rejection claim fails.
+With both standards governing, the benefit standard rejects the edit.
+With it only apprehended and satisfied, even the existential rejection
+claim fails. With the distinct recipient's willing assignment switched
+off, the instrumental-only profile also falsifies the recipient bridge
+while satisfying benefit recognition. With both plans operative that
+same change falsifies benefit recognition. Self-willing stays populated.
+The no-coverage control in #2020 lacks a governing witness and has the
+universal rejection condition vacuously. The strength theorem gives it
+the weaker rejection condition too. Together these tests isolate coverage,
+benefit omission and recognition. They compare assessments in a model
+with given assignments to the practical and volitional relations.
+The edited assessments are not worlds. [Matched controls][benefit-proof] ·
+[Prior coverage control][prior-controls]
+
+Applying the mixed profile requires evidence that both standards govern the
+giving. Projecting a subset of the requirements of an existing plan produces
+a description it satisfies, with no automatic entitlement to call that
+description a second operative standard. If the interpretation admits just
+one governing plan per giving, the two omission tests have the same scope
+for that giving.
+
+| Account of the same distinct actual esse | What supplies the specific output | What must be defended about its practical role |
+| --- | --- | --- |
+| Apprehended form with recipient credit | The source's actual inclination realizes the work as conceived. The proposed form sets a standard of fulfillment independently of its execution. | The bearer-relative perfection must matter to the giving as a criterion for at least one operative standard. The end of the whole can still govern the same giving. Someone who intends to restore functioning to a patient as one means to another good recognizes the functioning as the patient's own good. To apply the rationale here one needs evidence that the esse exercise expresses that kind of concern at this recipient. |
+| Instrumental placement alone | An operative plan requires the same recipient and its role in the wider order. A production process can require a functioning component owing to its contribution to a further result. | It can grant intrinsic goodness in esse. Its substantive denial is that the producer counts that goodness to the recipient in any governing standard for the giving. The finite result leaves that account and a mixed account distinct. A single genuinely operative beneficiary standard would answer the purely instrumental account at this recipient even if instrumental placement also explains why the effect is produced. |
+| Intrinsic diffusion with self-directed volition | The source's intrinsic generative orientation determines the distinct output, with source-directed willing fulfilled by its own goodness. The prior comparison supplies the inner and outward activity mechanism. | The production law or disposition has to discriminate the determinate effect or determinate order. Calling its source infinite supplies no such selection. A determinate intrinsic law is a positive alternative if the rival can justify it from the source without inferring it only from the effect or borrowing an independent producer. Simply locating a determinate secondary cause within the order leaves the question of why the first dependent effect takes its form. |
+
+Q.19 a.4's second reason presses intrinsic diffusion at precisely this
+point. Aquinas moves from the determinate effect of a natural agent acting
+in virtue of what it is to the need for intellectual-volitional determination
+in a source unlimited in being. To rule out the rival by that route, the
+move needs a substantive transfer principle tying the range of a nature's
+external effects to its own intrinsic determination. The rival can deny
+this transfer by positing a determinate outward mode whose source remains
+unlimited in being. It owes a ground for that mode and a reason it belongs
+to the source's productive nature. A primitive structured mode is a live
+stopping point only if its content and warrant can be stated independently
+of the already produced effect. The intellectual account owes comparable
+grounds for actual apprehension and uptake of its determinate standard.
+Giving under a fixed basis can give necessity **on supposition of that
+basis and its exercise**. Absolute necessity of an effect would need
+further premises about the basis, its exercise and their invariance.
+The selected-world tests decide neither kind of necessity. [Pinned I q.19 a.4][q19]
+
+### Upstream obligations and draft assessment
+
+- For c65f64de, ongoing esse dependence has a positive rationale when
+  the cause is the actual giver sustaining the same dependent being.
+  A cause of coming-to-be can explain why a product exists while its
+  continued being has a different causal basis. The case's tenseless CAUSE_2
+  assertion alone does not place the same producer's giving at any moment
+  of w. The existing actual-giver endpoint supplies presence and a
+  world-free cause of a contingent bearer. Transferring it here would
+  additionally need the same g, a same-world exercise in the esse respect,
+  and coverage beyond its contingent restriction. [Presence result's vocabulary][actual-giver]
+- For 012f5c10, excluded middle can classify any supplied exercise in
+  classical logic. The unresolved content is a witnessed power that is
+  both owned by this giver and exercised for this effect, even if the
+  giving is temporally invariant. Execution by a distinct agent supplies no
+  ownership of its power by this giver. Standing ownership supplies no
+  exercise for this effect. The prior priority theorem excludes a
+  non-rational exercise under its prior-intellect premise and firstness.
+  The one-power route provides a separate conditional option. Both routes
+  still need the same giving at w. [Through-will proof][through-will]
+- For 437438f0, actual adoption of a standard that requires the good to
+  count **for x** gives conceptual warrant for the thin recipient relation,
+  including subordinate goods. The key semantic check is whether the
+  proposed application credits that good to x in the productive act.
+  A merely useful component or a benevolent attitude elsewhere leaves the
+  application open. For LORD_1, even a plan that governs and benefits x
+  requires a separate premise for original authority to dispose. Causal
+  subjection and successful direction identify the subject and the work
+  of government, while the standing to impose its order still requires
+  a normative account. [Original standing][standing]
+
+The strongest current support for coverage is the proper-exercise account
+of an intelligibly specified inclination at the same giving. It warrants the
+conditional option, with actual productive uptake and universal scope open.
+Keep beneficiary credit as a candidate primitive about the purpose of
+the giving, in its weaker one-witness form where sufficient. Its prima
+facie warrant comes from willing communication of a real perfection to
+its bearer. The objective goodness of esse and the theological willing
+claim cannot specify that practical role unaided. Instrumental placement
+remains a substantive alternative to required credit. Intrinsic diffusion
+remains live at coverage so long as a defensible account of determinate
+outward activity is available. The next discriminating test should fix one
+determinate effect or aspect of the order and identify its success
+criterion independently of the product. Trace its realization either
+to appraisal shaping actual exercise or to a justified intrinsic
+productive specification. Then test whether fulfillment depends on what
+the recipient gains as its own good or only on the operation it contributes.
+The results give a conditional love route and structural controls.
+The proposed warrant assessment is for independent semantic review.
+
+[Derivation attempt][success-attempt] ·
+[Coverage attempt][coverage-attempt] ·
+[Recipient and end assessment][credit-attempt]
+
+[one-plan]: ../../corpus/statements/1733629b-f6d4-4804-9a9b-1af74e2747c0.json
+[benefit-proof]: ../../TruthCore/Results/Causality/BenefitPlanWitness/Solution.lean
+[through-will]: ../../TruthCore/Results/Causality/ThroughWill/Solution.lean
+[prior-controls]: ../../TruthCore/Results/Causality/PracticalSpecification/Solution.lean
+[q19]: ../../corpus/passages/aquinas-summa-theologiae-q19.json
+[q22]: ../../corpus/passages/aquinas-summa-theologiae-q22.json
+[q5]: ../../corpus/passages/aquinas-summa-theologiae-q5.json
+[q20]: ../../corpus/passages/aquinas-summa-theologiae-q20.json
+[q20-claim]: ../../corpus/claims/78b94fbf-e025-4084-a529-2102fd8b98a8.json
+[exemplars]: ../../TruthCore/Causality/IntentionalExemplarExtension.lean
+[supply]: ../../TruthCore/Explanation/ActualExerciseExplanation.lean
+[actual-giver]: ../../TruthCore/Causality/ReceivedEsseActualGiver.lean
+[standing]: natural-goodness-function-and-authority.md#group-8-integration-from-reasons-and-goods-to-moral-authority-and-god-1733-2026-11-18
+[success-attempt]: ../../corpus/attempts/af2d4e1e-c278-4511-b5e3-2913d6b1767f.json
+[coverage-attempt]: ../../corpus/attempts/83bd8a2c-ab08-4c82-baca-2cdd78605dd9.json
+[credit-attempt]: ../../corpus/attempts/96d761b7-3432-4cb8-a811-2b6469f124a8.json
