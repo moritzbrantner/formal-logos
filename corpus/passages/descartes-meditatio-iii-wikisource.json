@@ -1,0 +1,27 @@
+{
+  "snapshot": {
+    "kind": "web_snapshot",
+    "source_id": "8ac0e273-75c8-4229-8e61-b3ad1507b9ff",
+    "source_url": "https://la.wikisource.org/w/index.php?title=Meditationes_de_prima_philosophia_(Adam_et_Tannery)/Meditatio_III&oldid=87717",
+    "retrieved_at": "2026-11-26T15:31:50Z",
+    "sha256": "sha256:33ed96692e1cf480d5228fa4b56145149df60873d031f0b58bde578ba8a423d5",
+    "encoding": "utf-8",
+    "language": "lat",
+    "license": "Latin text public domain; Wikisource page text under CC BY-SA 4.0. Local research copy. Witness bytes from Formal Logos Sources PR #26; retrieved_at records the UTC timestamp of local object receipt."
+  },
+  "passages": [
+    {
+      "id": "2cc58a4e-ff9b-4be1-97f3-1cf8b71a220c",
+      "label": "Meditation III in the Latin Wikisource transcription",
+      "locator": "Meditatio III, AT VII 34–52 (Wikisource oldid 87717)",
+      "claim_locator_prefixes": [
+        "Meditatio III, AT VII 40–42, §§13–16",
+        "Meditatio III, AT VII 45–47, §§22–27"
+      ],
+      "html_selector": {
+        "element_id": "mw-content-text"
+      },
+      "text_sha256": "sha256:1d2fdd0bdb5ec5b710c6c233ac09aef69b9fd621ecac1a3cfde5741246af626e"
+    }
+  ]
+}

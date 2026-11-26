@@ -1,16 +1,17 @@
 {
   "id": "289354fc-8e08-43fd-9123-11960dd56a4e",
-  "label": "Waiting for Descartes’s account of substance and thought modes",
+  "label": "Reading Descartes on determinate modes of thinking",
   "statement_ids": [
     "5581cd7f-43b3-5aa1-b18d-36b8a44a9681"
   ],
   "date": "2026-11-26",
   "kind": "source-search",
-  "outcome": "blocked",
-  "summary": "The unpinned French Principes I §§52–53 identifies thought as the thinking substance’s principal attribute. Imagining, sensing and willing depend on a thinking thing. The lead’s identification of thought itself as a mode of the substance conflates the principal attribute with its determinate modes. The dependence of those modes still bears on the episode target.",
-  "blocker": "Admit an edition-level pinned witness of the cited range and recheck the reading before registering any claim. Show that every occurring thought episode in the typed domain is one of the dependent modes. The positive dependence claim and the rejected principal-attribute identification have different scopes.",
+  "outcome": "succeeded",
+  "summary": "The AT VIII-1 scan and Veitch translation of Principles I §§52–53 distinguish thought as the thinking substance’s principal attribute from its dependent modes. The determinate examples are imagining, sensing and willing. The original lead’s reading of thought itself as a mode conflates two separate levels.",
+  "blocker": "Show that every occurring episode in the typed domain is among the modes of a thinking thing in the relevant sense, and that this dependence makes it a Modification in the modeled ontology.",
   "evidence": [
-    "PR-2024"
+    "PR-2024",
+    "bffbe4cf-d80f-4cb7-bf30-2e9a75e8057e"
   ],
   "workers": [
     {
@@ -20,6 +21,13 @@
       "effort": "high",
       "date": "2026-11-26",
       "pr": "PR-2024"
+    },
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26"
     }
   ]
 }

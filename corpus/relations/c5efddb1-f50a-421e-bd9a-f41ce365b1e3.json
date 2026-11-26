@@ -1,0 +1,10 @@
+{
+  "id": "c5efddb1-f50a-421e-bd9a-f41ce365b1e3",
+  "label": "Source support for ObjectiveAdequacy",
+  "subject_kind": "claim",
+  "subject_id": "4bbbf389-5cea-44ee-8862-8df801fb2ba1",
+  "predicate": "supports",
+  "object_kind": "statement",
+  "object_id": "3845020d-f64b-4a4f-8734-e8069a80e36a",
+  "note": "This supplies formal-or-eminent containment at an adequate cause. The modeled conclusion requires InAct c r for every ObjCause c e r, including partial causes. Either independently extend containment to those causes and match it to InAct in the same respect, or use a separate adequate-cause premise and supply its witness."
+}

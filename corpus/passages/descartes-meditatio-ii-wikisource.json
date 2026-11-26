@@ -1,0 +1,26 @@
+{
+  "snapshot": {
+    "kind": "web_snapshot",
+    "source_id": "8ac0e273-75c8-4229-8e61-b3ad1507b9ff",
+    "source_url": "https://la.wikisource.org/w/index.php?title=Meditationes_de_prima_philosophia_(Adam_et_Tannery)/Meditatio_II&oldid=87716",
+    "retrieved_at": "2026-11-26T15:31:49Z",
+    "sha256": "sha256:11b44e4bb92a13e70991e9802b223437ea93e6c884800130622939cbeb475389",
+    "encoding": "utf-8",
+    "language": "lat",
+    "license": "Latin text public domain; Wikisource page text under CC BY-SA 4.0. Local research copy. Witness bytes from Formal Logos Sources PR #26; retrieved_at records the UTC timestamp of local object receipt."
+  },
+  "passages": [
+    {
+      "id": "00409f40-f3fc-4340-85d9-6a9d5605d1eb",
+      "label": "Meditation II in the Latin Wikisource transcription",
+      "locator": "Meditatio II, AT VII 23–34 (Wikisource oldid 87716)",
+      "claim_locator_prefixes": [
+        "Meditatio II, AT VII 28–29, §§7–9"
+      ],
+      "html_selector": {
+        "element_id": "mw-content-text"
+      },
+      "text_sha256": "sha256:ded16237d3ddd7140df16d872eab665d90c8f4b377dcafe5a907e0cf9a8a802a"
+    }
+  ]
+}

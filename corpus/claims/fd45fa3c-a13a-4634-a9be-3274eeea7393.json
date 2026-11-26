@@ -1,0 +1,15 @@
+{
+  "id": "fd45fa3c-a13a-4634-a9be-3274eeea7393",
+  "label": "Descartes: We lack formal or eminent possession of the reality presented by the idea of God",
+  "statement_id": "ec9659ff-2300-4e28-8f75-30d7c045f268",
+  "source_id": "8ac0e273-75c8-4229-8e61-b3ad1507b9ff",
+  "locator": "Second Replies, AT VII 167, Proposition II, demonstration",
+  "interpretation": "Descartes uses this as an input in Proposition II’s demonstration, citing axiom VI on degrees of reality. Meditation III §§23–27 identifies the meditator as finite and distinguishes actual infinity from indefinitely increasing knowledge.",
+  "status": "formalized",
+  "attribution": "The passage states that the objective reality presented by the idea of God we have is contained in us neither formally nor eminently, which is the premise.",
+  "definition_ids": [
+    "e4b40a41-13ee-4272-b38a-1c992776ab4e",
+    "705f28fe-7a8c-46c2-b0f2-f414ae8e8f73",
+    "00b9c1e2-ffb1-420b-9d4b-aba8ec6d81bf"
+  ]
+}

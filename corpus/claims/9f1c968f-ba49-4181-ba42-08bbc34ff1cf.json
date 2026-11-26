@@ -1,0 +1,13 @@
+{
+  "id": "9f1c968f-ba49-4181-ba42-08bbc34ff1cf",
+  "label": "Aquinas: God can withhold the giving that keeps a creature in being",
+  "statement_id": "dc9530b3-27f0-441e-bd82-98822fec2b33",
+  "source_id": "c77377cf-501b-56c6-be40-b518e9aad101",
+  "locator": "I q.104 a.3 co. (anchor 32779)",
+  "interpretation": "The replies to objections 1 and 3 distinguish withholding this exercise from an action whose direct effect is non-being. The body asserts the power and states the effect conditionally.",
+  "status": "formalized",
+  "attribution": "The passage states that after producing creatures by free will, God can cease giving them the being by which he conserves them, in which case they would cease to be, which is the premise.",
+  "definition_ids": [
+    "5e082e74-6bfa-444e-9988-809804249002"
+  ]
+}

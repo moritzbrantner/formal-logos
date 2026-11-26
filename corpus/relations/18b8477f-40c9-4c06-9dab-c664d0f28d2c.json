@@ -1,0 +1,10 @@
+{
+  "id": "18b8477f-40c9-4c06-9dab-c664d0f28d2c",
+  "label": "Source support for WithheldGivingIsPowerOverEsse",
+  "subject_kind": "claim",
+  "subject_id": "9f1c968f-ba49-4181-ba42-08bbc34ff1cf",
+  "predicate": "supports",
+  "object_kind": "statement",
+  "object_id": "d1593e5c-38ff-46a9-9bbb-cede6f825bc9",
+  "note": "This supplies a case of power to unmake by withholding the same giving on which the creature continues to depend. The type ranges over any y and x with GivesTo at w and an accessible world where y exists without GivesTo. For each such pair, show that withholding the same giver’s contribution would terminate x’s being and so supplies PowerOver y x at esse. The article supplies neither the modal grounding of joint absence nor the transfer from collective power to each creature."
+}
