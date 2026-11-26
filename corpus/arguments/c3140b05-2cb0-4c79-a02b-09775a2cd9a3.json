@@ -1,0 +1,10 @@
+{
+  "id": "c3140b05-2cb0-4c79-a02b-09775a2cd9a3",
+  "label": "Classical interval equivalence for existential cessation",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "3f5d3750-0f2b-4f53-9330-5ea679463820",
+  "inference_ids": [
+    "eec8e8b3-4a0c-44f7-a9c9-6555e8fdc903"
+  ],
+  "meaning": "The two universal constraints are classically equivalent. Neither supplies warrant for the law or its inducer interpretation."
+}

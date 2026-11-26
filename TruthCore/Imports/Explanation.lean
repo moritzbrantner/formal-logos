@@ -38,6 +38,8 @@ public import TruthCore.Explanation.FoundationalExistenceApplications
 public import TruthCore.Explanation.GroundingBaseline
 public import TruthCore.Explanation.GroundingBaseline.Reduct
 public import TruthCore.Explanation.HistorySelection
+public import TruthCore.Explanation.InducerFreePersistence
+public import TruthCore.Explanation.InertialReceiverNature
 public import TruthCore.Explanation.IntrinsicReasonBoundary
 public import TruthCore.Explanation.JointCondition
 public import TruthCore.Explanation.JointContingencyLocalization

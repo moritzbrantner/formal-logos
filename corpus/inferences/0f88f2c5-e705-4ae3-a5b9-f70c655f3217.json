@@ -1,0 +1,10 @@
+{
+  "id": "0f88f2c5-e705-4ae3-a5b9-f70c655f3217",
+  "label": "Conditional origin as a nonempty nature of the contingent receiver (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "23084bcb-4de2-43fd-b408-409c642f3c13",
+  "rule": "Extend the matched control with the origin conditional and evaluate entailment at the absent world",
+  "meaning": "A consistency witness using EXISTENCE_IN_ESSENCE_5. The stipulated nature dictionary represents one conditional truth and need not exhaust any actual creature's nature.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

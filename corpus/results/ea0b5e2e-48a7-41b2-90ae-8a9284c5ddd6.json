@@ -1,0 +1,11 @@
+{
+  "id": "ea0b5e2e-48a7-41b2-90ae-8a9284c5ddd6",
+  "label": "Classical interval equivalence for existential cessation",
+  "argument_id": "c3140b05-2cb0-4c79-a02b-09775a2cd9a3",
+  "challenge_module": "TruthCore.Results.Explanation.InducerFreePersistence.Challenge",
+  "solution_module": "TruthCore.Results.Explanation.InducerFreePersistence.Solution",
+  "theorem": "TruthCore.Results.Explanation.InducerFreePersistence.intervalEquivalence",
+  "comparator_config": "results/ea0b5e2e-48a7-41b2-90ae-8a9284c5ddd6/comparator.json",
+  "status": "solution-present",
+  "description": "The two universal constraints are classically equivalent. Neither supplies warrant for the law or its inducer interpretation."
+}

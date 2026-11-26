@@ -1,0 +1,11 @@
+{
+  "id": "24a6beb5-9cf6-4f7d-95fd-0776ccff9102",
+  "label": "Conditional origin as a nonempty nature of the contingent receiver",
+  "argument_id": "8c2eee64-b1ef-4e4e-bc94-12fa0863d847",
+  "challenge_module": "TruthCore.Results.Explanation.InertialReceiverNature.Challenge",
+  "solution_module": "TruthCore.Results.Explanation.InertialReceiverNature.Solution",
+  "theorem": "TruthCore.Results.Explanation.InertialReceiverNature.receiverNature",
+  "comparator_config": "results/24a6beb5-9cf6-4f7d-95fd-0776ccff9102/comparator.json",
+  "status": "solution-present",
+  "description": "A consistency witness using EXISTENCE_IN_ESSENCE_5. The stipulated nature dictionary represents one conditional truth and need not exhaust any actual creature's nature."
+}
