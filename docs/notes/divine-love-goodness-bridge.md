@@ -623,7 +623,9 @@ The new conditional support concerns the mode of giving **each distinct actual
 effect** of the same universal esse cause, with intellect and will held fixed.
 [Rational exercise](../../TruthCore/Causality/ThroughWill.lean) means that the
 cause gives the effect being at some moment of the selected world, and that this
-giving exercises an owned rational power. The agency dictionary reads rational
+giving exercises an owned rational power (WILL_CAPACITY_VERSUS_WILLED_GIVING_3).
+This can hold with fixed output. Sense 1 is possession of will, and sense 2
+adds accessible withholding with the same set-up. The agency dictionary reads rational
 power as an inclination that follows intellectual apprehension of good. It
 classifies the power using a primitive. Practical content and its governance of
 this effect remain open. A builder deliberately constructing a shelter
@@ -675,7 +677,9 @@ from the First's self-intellection and accounts for subsequent multiplicity
 through the derived intellects' distinct objects or aspects of intellection.
 This offers a mechanism for derivative determinate effects from a simple
 source and disputes the second q.19 a.4 reason's claim that natural necessity
-in an infinite cause would require an undetermined or infinite effect.
+in an infinite cause would require an effect indeterminate and infinite in
+being. The point of disagreement is whether a determinate first effect can
+proceed in this way.
 Whether the proposal also denies rational exercise depends on what work the
 First's intellection and approval do in production and whether the derived
 effects satisfy the case's universal CAUSE_2 coverage. Further source
@@ -719,12 +723,13 @@ rational giving alone supplies neither condition.
   to authority to dispose.
   [Providence witness](../../corpus/passages/aquinas-summa-theologiae-q22.json)
   [Lordship witness](../../corpus/passages/aquinas-summa-theologiae-q13-a7.json)
-- **Recipient-directed willing.** The new result reaches a94c5dfc and thereby
-  the existing LORD_3 willing input. The causal conjunct of supreme goodness
-  supplies universal esse coverage, and the GOD_4 intellect premise supplies
-  intellect at that same giver. The recipient-good application is separate.
-  The frontier records a94c5dfc as proved from open premises, with
-  establishment still false.
+- **Recipient-directed willing.** The assembly transcription applies the open
+  recipient-good bridge to a94c5dfc, which feeds the existing LORD_3 willing
+  input. The causal conjunct of supreme goodness supplies universal esse
+  coverage, and the GOD_4 intellect premise supplies intellect at that same
+  giver. These inputs supply the bridge's antecedent. The bridge itself
+  supplies the recipient-directed content. The frontier keeps a94c5dfc open
+  with source support.
   I q.20 a.2 co. uses divine will causing esse to argue that God wills good
   to each creature. The ordered-love reading of ad 3 treats irrational
   creatures under quasi-desire in their order to rational creatures and God.

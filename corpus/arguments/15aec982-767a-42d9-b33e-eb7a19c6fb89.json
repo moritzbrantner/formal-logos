@@ -24,5 +24,17 @@
     "1d9aa4d9-18cc-5930-95fb-5af65e32c0f8",
     "b8061228-9131-40f2-83bd-cb7d719bd0a0",
     "bace3032-dfa4-4193-9408-30f584e6fe6d"
+  ],
+  "sense_bridges": [
+    {
+      "term": "WILL_CAPACITY_VERSUS_WILLED_GIVING",
+      "from": "916b63e7-d8d8-49ba-9d42-9ad19c1fa090",
+      "to": "438df309-f7a6-4c68-bd90-c44a960900f9",
+      "statement_id": "83d8a0e0-9866-48d3-b582-9082c9cfeac8",
+      "role": "conclusion"
+    }
+  ],
+  "disambiguation_ids": [
+    "8b3d47bc-7fee-4936-99ad-6561aedc657a"
   ]
 }

@@ -18,5 +18,9 @@
     "7c64b499-6dba-5e03-bdf3-5acea95d8836",
     "1d9aa4d9-18cc-5930-95fb-5af65e32c0f8",
     "bace3032-dfa4-4193-9408-30f584e6fe6d"
+  ],
+  "sense_mixing_control": true,
+  "disambiguation_ids": [
+    "8b3d47bc-7fee-4936-99ad-6561aedc657a"
   ]
 }
