@@ -14,7 +14,7 @@ open TruthCore.Latin.Aquinas.DeEnte.ActualIdentityExerciseLifting
 open TruthCore.Latin.Aquinas.DeEnte.FirstIdentityExercise
 open TruthCore.Latin.Aquinas.SummaTheologiae.PrimaPars.Question3.Article4 (Profile)
 open TruthCore.Results.Aquinas.DeEnte.ActualIdentityExerciseLifting (liftActualEssePath)
-open TruthCore.Causality.TemporalActualization (EventAcyclic)
+open TruthCore.Causality.TemporalActualization (EventAcyclic feedbackBearer feedbackC)
 
 variable {B P R E : Type}
 
@@ -76,5 +76,30 @@ theorem minimalWithInfiniteFibreAndOtherCycle :
     have a : C (some false, 0) (some true, 0) := ⟨xy, rfl⟩
     have b : C (some true, 0) (some false, 0) := ⟨yx, rfl⟩
     exact acyclic _ ((Relation.TransGen.single a).tail b)
+
+/-- Checking every incoming supplier at the identity bearer's own exercises
+still misses a break in the return at an intermediate bearer. -/
+theorem liftingOnlyAtIdentityAllowsReturn :
+    ActualIdentityHasMinimalExercise exerciseFeedbackProfile feedbackBearer feedbackC ∧
+      (∀ c x, exerciseFeedbackProfile.InAct x exerciseFeedbackProfile.esse →
+        exerciseFeedbackProfile.esseOf x = exerciseFeedbackProfile.essenceOf x →
+        ActualEsseCause exerciseFeedbackProfile c x →
+        ∀ f, feedbackBearer f = x → ∃ e, feedbackBearer e = c ∧ feedbackC e f) ∧
+      ¬ ActualIdentityAncestryAcyclic exerciseFeedbackProfile := by
+  have controls := TruthCore.Results.Aquinas.DeEnte.ActualIdentityExerciseLifting.exerciseLiftingControls
+  have onlyOne : ∀ f : Fin 3, feedbackBearer f = true → f = 1 := by decide
+  refine ⟨?_, ?_, controls.2.1⟩
+  · intro x hx hi
+    obtain rfl := (controls.1 x).mp ⟨hx, hi⟩
+    refine ⟨1, by decide, ?_⟩
+    intro e he path
+    obtain rfl := onlyOne e he
+    exact controls.2.2.1.1 1 path
+  · intro c x hx hi edge f hf
+    obtain rfl := (controls.1 x).mp ⟨hx, hi⟩
+    obtain rfl := onlyOne f hf
+    cases c with
+    | false => exact ⟨0, by decide, rfl⟩
+    | true => exact (edge.1 rfl).elim
 
 end TruthCore.Results.Aquinas.DeEnte.FirstIdentityExercise

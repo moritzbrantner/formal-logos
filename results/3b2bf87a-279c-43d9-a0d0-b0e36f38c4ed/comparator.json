@@ -4,7 +4,8 @@
   "theorem_names": [
     "TruthCore.Results.Aquinas.DeEnte.FirstIdentityExercise.noReturnOfMinimalExercise",
     "TruthCore.Results.Aquinas.DeEnte.FirstIdentityExercise.minimalExerciseOfNoReturn",
-    "TruthCore.Results.Aquinas.DeEnte.FirstIdentityExercise.minimalWithInfiniteFibreAndOtherCycle"
+    "TruthCore.Results.Aquinas.DeEnte.FirstIdentityExercise.minimalWithInfiniteFibreAndOtherCycle",
+    "TruthCore.Results.Aquinas.DeEnte.FirstIdentityExercise.liftingOnlyAtIdentityAllowsReturn"
   ],
   "permitted_axioms": [
     "propext",
