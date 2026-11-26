@@ -1,0 +1,10 @@
+{
+  "id": "0bdb3180-8e60-4ee5-b4c3-abafce2ef5a4",
+  "label": "Source qualification for f7ae7feb from reading 366b8be6",
+  "subject_kind": "claim",
+  "subject_id": "54bd32fa-88a3-5598-8792-6b213c885c0f",
+  "predicate": "qualifies",
+  "object_kind": "statement",
+  "object_id": "f7ae7feb-2505-503e-8f42-5e422fd909fd",
+  "note": "Carnap supplies a different demarcation mechanism: look for unassigned meanings or violation of the relevant syntax in a purported sentence. To reach the case's specific philosophical claims, that test must be applied in a specified language rather than presuming the whole scope from the label metaphysical."
+}

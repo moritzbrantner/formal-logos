@@ -1,0 +1,26 @@
+{
+  "id": "a7a7c5de-089e-4402-9f02-ae9926874e84",
+  "label": "Witness access for Alex O'Connor, Could God Be Evil?",
+  "statement_ids": [
+    "ae52c054-f888-5f79-b534-d9792dc1bccf"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "blocked",
+  "summary": "Alex O'Connor, \"Could God Be Evil?\" (Alex O'Connor, 2020-12-04), 00:18–00:47: if a good god existed he would want to remove all evil and would have the power to do so: The original caption span requires a matching export from producer revision 13eba74e. The supplied cache has no such export.",
+  "evidence": [
+    "70798e70-c4a8-5418-82cc-e62dad99cc11",
+    "PR-2085"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2085"
+    }
+  ],
+  "blocker": "Inspect the required pinned passage before deciding its relation to the case."
+}

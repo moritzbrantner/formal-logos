@@ -1,0 +1,10 @@
+{
+  "id": "c19d7ef6-e712-43ff-b384-c6bf183fd635",
+  "label": "Source support for 73f4b6c6 from reading 0986e1be",
+  "subject_kind": "claim",
+  "subject_id": "531999e9-d92d-5494-91b2-61345636aaf0",
+  "predicate": "supports",
+  "object_kind": "statement",
+  "object_id": "73f4b6c6-ba85-5b1a-9c8a-bf07587de5ce",
+  "note": "The aevum example specifies why all-at-once in an underlying duration is insufficient when change can accompany it. The case needs its NoLifeSuccession predicate to test the relevant succession of the whole life, and the remaining life, boundary and perfect-possession conditions must calibrate primitive Eternal."
+}

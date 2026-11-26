@@ -1,0 +1,25 @@
+{
+  "id": "445645cd-52ce-43bf-839b-149fe7e9a0ef",
+  "label": "Root links from Thomas Aquinas, De ente et essentia",
+  "statement_ids": [
+    "8768c05a-e9d9-57f6-a864-c3f7795f506b"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "cap.2 [69873]: Haec autem natura duplex habet esse, unum in singularibus et aliud in anima: Aquinas distinguishes the existence of a nature in individuals from its existence in thought, assigning the species account to the latter. The target needs the account of species to apply to the selected mental or conventional sign and needs an account of how the sign expresses the individual nature without constituting it.",
+  "evidence": [
+    "62e0ab77-2a80-5e4d-8712-f333894bdd7d",
+    "PR-2085"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2085"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "id": "8536c265-7158-4f8f-933f-03b188019ccb",
+  "label": "Root links from Paul, Philippians",
+  "statement_ids": [
+    "4f7d7fa3-5fce-575c-9753-411aa370644d"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "2.7-8: Paul's account of Christ's self-abasement explicitly culminates in death on a cross. Application to the historical premise requires accepting this testimony about the same Jesus and the event, independently of the letter's account of his self-abasement.",
+  "evidence": [
+    "9aaa55d7-89fb-5716-8f7c-b1629af12df4",
+    "PR-2085"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2085"
+    }
+  ]
+}

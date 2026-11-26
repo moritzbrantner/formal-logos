@@ -1,0 +1,35 @@
+{
+  "id": "73f14e51-59bc-4575-8bc1-85d0fec6defb",
+  "label": "Retained readings from Thomas Aquinas, Summa contra gentiles",
+  "statement_ids": [
+    "eaf00668-46f2-5817-9f45-51a4010701e7",
+    "28a9010e-a564-5397-8b73-5386d828b15c"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "I.12 [6]–[9]: SCG I.12 is used in docs/kant-cosmological-inference.md for the different epistemic roles of effects and prior knowledge of quiddity. Application to an existing causal route requires identifying a supplied effect and validating the demonstration from that effect to the same witness. I.16 [7]: some being that is only in act and in no wise in potency: The existing motion-to-pure-act candidate preserves this SCG I.16 existential conclusion. The case requires this very first mover to be pure act in every relevant respect. The identity of the witnesses needs a bridge.",
+  "evidence": [
+    "1e26da17-2577-510d-87f8-74375b445269",
+    "7ed243d6-0711-51ab-9019-cbda6c1eb0ca",
+    "PR-2085"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2085"
+    },
+    {
+      "role": "repair",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2085"
+    }
+  ]
+}

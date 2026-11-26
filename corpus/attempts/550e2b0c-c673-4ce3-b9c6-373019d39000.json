@@ -1,0 +1,25 @@
+{
+  "id": "550e2b0c-c673-4ce3-b9c6-373019d39000",
+  "label": "Root links from J. L. Schellenberg, Précis",
+  "statement_ids": [
+    "179b4b92-73e4-5926-a58a-9c3c9c6afe81"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "Précis (2025), pp. 7–8, paragraph beginning A final point for this summary: Schellenberg limits the proposed conclusion to the perfect personal ultimate targeted by hiddenness and explicitly leaves nonpersonal ultimates open. An inference to naturalism would also need to exclude those alternatives.",
+  "evidence": [
+    "e5ea7363-3c70-5d99-bc6b-02bbabefdabb",
+    "PR-2085"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2085"
+    }
+  ]
+}

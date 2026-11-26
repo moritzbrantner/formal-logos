@@ -1,0 +1,10 @@
+{
+  "id": "031f1fdb-7060-4ea4-b776-c771d8f4396d",
+  "label": "Source objection for 46132461 from reading c40631a3",
+  "subject_kind": "claim",
+  "subject_id": "544a5f43-0617-516e-8b7a-dcdc89c83bcd",
+  "predicate": "attacks",
+  "object_kind": "statement",
+  "object_id": "46132461-9a9b-498f-b3d9-304e2f3ac57e",
+  "note": "Hempel's reported criticism challenges a verification scope including universal laws: a finite observation can verify particular existential examples while leaving universals open, and meaning closure under negation cannot then be combined with the resulting particular/universal split. The objection requires that interpretation of verification and the extra negation assumption."
+}

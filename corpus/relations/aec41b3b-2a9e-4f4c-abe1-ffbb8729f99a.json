@@ -1,0 +1,10 @@
+{
+  "id": "aec41b3b-2a9e-4f4c-abe1-ffbb8729f99a",
+  "label": "Source qualification for d8a1fb16 from reading be9715f8",
+  "subject_kind": "claim",
+  "subject_id": "be9715f8-e6d8-5c86-9e36-3d122d3dfa36",
+  "predicate": "qualifies",
+  "object_kind": "statement",
+  "object_id": "d8a1fb16-ce20-542f-9e3b-d9350468e331",
+  "note": "The A1 proof explicitly assumes the respondent's unqualified causal report and applies it to the alleged contingent sum. The case needs the same contingent class and qualifying cause in the selected world. The report itself supplies no independent evidence of that global actual coverage."
+}

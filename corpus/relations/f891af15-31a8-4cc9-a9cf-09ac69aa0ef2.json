@@ -1,0 +1,10 @@
+{
+  "id": "f891af15-31a8-4cc9-a9cf-09ac69aa0ef2",
+  "label": "Source qualification for 6452783d from reading f5d0ade5",
+  "subject_kind": "claim",
+  "subject_id": "25d94c29-59a7-5b98-ab47-8694d2d59cf6",
+  "predicate": "qualifies",
+  "object_kind": "statement",
+  "object_id": "6452783d-e671-5e40-921d-53018c03caf2",
+  "note": "Railton's account gives a reason to separate instrumental rationality for a particular agent from moral obligation. Applying it to the formal example needs a genuinely obligatory act under impartial justification and an agent lacking an instrumental reason for that very act."
+}

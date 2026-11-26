@@ -1,0 +1,26 @@
+{
+  "id": "0ba9326c-43c3-4b95-b21a-e56c91216ab2",
+  "label": "Witness access for Alex O'Connor, Christianity's Biggest Problem",
+  "statement_ids": [
+    "a0f60ad9-737f-59fa-9a4b-54cf0af736a6"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "blocked",
+  "summary": "Alex O'Connor, \"Christianity's Biggest Problem\" (Alex O'Connor, 2021-03-08), 00:51–01:46: why would an all-powerful god who truly loves us permit such suffering to overwhelm our living existence: The original caption span requires a matching export from producer revision 13eba74e. The supplied cache has no such export.",
+  "evidence": [
+    "184200eb-403d-5d7e-9ada-893680952a95",
+    "PR-2085"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2085"
+    }
+  ],
+  "blocker": "Inspect the required pinned passage before deciding its relation to the case."
+}

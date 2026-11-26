@@ -83,3 +83,13 @@ bridges and direct witnesses for the global/local/epistemic theses. The page
 links these precise blockers to the synchronized graph and existing candidate
 queue. The pilot closes no philosophical frontier node on the Catholicism root
 path merely by adding these logical results and models.
+
+## A restricted measure claim (2026-11-26)
+
+The Theaetetus defense distinguishes how perceptual qualities seem and what a
+city deems just or holy from whether an arrangement turns out advantageous. The
+universal measure test applies to this reading only if the relevant thesis and
+denial themselves fall in that demarcated domain. A local city judgment needs a
+fixed city and period.
+
+[Plato reading attempt](../corpus/attempts/a8c7250d-9a65-4794-a97b-40263e2b0f6d.json).

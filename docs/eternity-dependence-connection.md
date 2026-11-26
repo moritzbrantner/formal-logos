@@ -1665,3 +1665,14 @@ or warrant promotion.
 ## Research attempts citing this note
 
 - [Reread materialized plato phaedo 99 and full aquinas st i q104 a1 en; read Phaedo98 and Aristotle…](../corpus/attempts/existential-support-reality-correspondence-20261031.json)
+
+## Aquinas on three kinds of duration (2026-11-26)
+
+ST I q.10 distinguishes proper eternity from even beginningless and endless
+time, and distinguishes aevum from both. The case needs to map absence of
+succession to the whole life of the selected bearer, keep the living-witness
+requirement, and defend its calibration of primitive Eternal. The q.9
+distinction also leaves the relation between received esse and a creature's
+intrinsic mutability open.
+
+[Thomas Aquinas reading attempt](../corpus/attempts/e1970646-f032-4195-b150-e6aeeae51420.json), [Thomas Aquinas unlinked attempt](../corpus/attempts/2455b4fd-b607-44e0-bf73-308ca00e0051.json).

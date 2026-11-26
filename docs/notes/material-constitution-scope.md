@@ -108,3 +108,13 @@ Shared engineering policy resolved at source revision
 
 - [Pinned/materialized/read Perrin translation of Plutarch Theseus23 and adjacent22/24 context…](../../corpus/attempts/theseus-identity-boundary.json)
 - [Reused Vitalism turnover fixture and scenario_has_turnover, derived changed-member obstruction to…](../../corpus/attempts/river-process-turnover.json)
+
+## A biological restriction on composition (2026-11-26)
+
+Van Inwagen's proposed answer admits composite material objects when the
+relevant collective activity constitutes a life. The same life event supplies
+its test of persistence. Comparing this with the actual fusion premise requires
+matching the formal sum to material composition and determining whether the
+selected members jointly constitute such a life.
+
+[Peter van Inwagen reading attempt](../../corpus/attempts/9981d86c-6b2c-4c60-b240-49005880573e.json).

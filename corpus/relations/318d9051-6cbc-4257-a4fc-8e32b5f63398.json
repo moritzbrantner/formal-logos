@@ -1,0 +1,10 @@
+{
+  "id": "318d9051-6cbc-4257-a4fc-8e32b5f63398",
+  "label": "Source qualification for f8df66df from reading 81910509",
+  "subject_kind": "claim",
+  "subject_id": "6df9a65c-e512-569b-83c9-23a635d87312",
+  "predicate": "qualifies",
+  "object_kind": "statement",
+  "object_id": "f8df66df-2114-583d-8e36-9617f356442e",
+  "note": "The arbitrary-X prompt elicits a defeasible default and explicitly invites dissent or uncertainty. Its application to a first contingent requires representative selection with respect to causal eligibility and a reason why the selection of the first case does not defeat that default."
+}

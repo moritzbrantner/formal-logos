@@ -1,0 +1,10 @@
+{
+  "id": "5a100121-8063-46ca-8af0-802aa3b38240",
+  "label": "Source qualification for dd4dfa3b from reading 81ec01fe",
+  "subject_kind": "claim",
+  "subject_id": "f7025438-a715-5745-ac98-8fa68c90166c",
+  "predicate": "qualifies",
+  "object_kind": "statement",
+  "object_id": "dd4dfa3b-1bf0-4125-a27b-069cb1110893",
+  "note": "Clarke offers the agent's willing as a sufficient reason among indifferent alternatives. The formal policy comparison can apply only after identifying those alternatives with a tied order and deciding whether an adequacy standard admits a reason in the exercise of will itself."
+}

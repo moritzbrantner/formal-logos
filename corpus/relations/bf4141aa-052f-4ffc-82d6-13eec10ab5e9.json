@@ -1,0 +1,10 @@
+{
+  "id": "bf4141aa-052f-4ffc-82d6-13eec10ab5e9",
+  "label": "Source qualification for cdc7a58f from reading 909948e9",
+  "subject_kind": "claim",
+  "subject_id": "da14fe0e-1845-544c-8830-2b1d57790743",
+  "predicate": "qualifies",
+  "object_kind": "statement",
+  "object_id": "cdc7a58f-0c17-41d9-8d9d-18b6ad5c6cc6",
+  "note": "Russell explains general existence by some value satisfying a propositional function. Using this account against the case's proposed object-level existence feature requires treating that feature as exhausted by the same quantificational reading. It does not deny that the function is exemplified."
+}

@@ -1,0 +1,10 @@
+{
+  "id": "fedb7c17-4181-4bac-890c-a190a859c98f",
+  "label": "Source qualification for 4424ec00 from reading 95bd78ea",
+  "subject_kind": "claim",
+  "subject_id": "3ae838ba-4a69-55d8-9351-6a7d2b1f059d",
+  "predicate": "qualifies",
+  "object_kind": "statement",
+  "object_id": "4424ec00-c125-52df-9386-6743880a8be2",
+  "note": "The turn to accounts introduces the method of using the strongest hypothesis under consideration. Its methodological status qualifies a reading that the forms hypothesis comes already established by that turn itself."
+}

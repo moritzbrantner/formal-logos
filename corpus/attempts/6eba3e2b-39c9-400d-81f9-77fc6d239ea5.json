@@ -1,0 +1,33 @@
+{
+  "id": "6eba3e2b-39c9-400d-81f9-77fc6d239ea5",
+  "label": "Unlinked readings from Josephus, Jewish Antiquities",
+  "statement_ids": [
+    "637431f0-503b-5dd3-a4a8-7f531fa8af5c"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "rejected",
+  "summary": "20.200 (20.9.1): The reported execution identifies James by kinship. The existing conversion premise requires pre- and post-event belief evidence, and the Pauline report concerns a different event. The report predicate JosephusJamesStoned in Antiquities.lean uses the .josephusJamesStoned constructor in ResurrectionVocabulary.lean. Any approved retirement would need to account for both vocabulary declarations. The statement UUID and alias, claim UUID and alias, and Lean predicate and constructor were screened against definitions, candidates, documentation, research comparisons, inference records, and Lean hypotheses. The historical comparison cites the report as a distinct event in this PR. The register and label inventory retain it, and the search found no substantive proof or comparison that consumes it as an input.",
+  "evidence": [
+    "24f13297-9d53-5954-b51a-0ee69f5f5388",
+    "PR-2085"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2085"
+    },
+    {
+      "role": "repair",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2085"
+    }
+  ]
+}

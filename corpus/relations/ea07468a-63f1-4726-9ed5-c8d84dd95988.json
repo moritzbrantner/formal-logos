@@ -1,0 +1,10 @@
+{
+  "id": "ea07468a-63f1-4726-9ed5-c8d84dd95988",
+  "label": "Source qualification for 21d6f7cc from reading d9f0874e",
+  "subject_kind": "claim",
+  "subject_id": "51ae5d09-3fd6-5520-b8da-99edf27fc83f",
+  "predicate": "qualifies",
+  "object_kind": "statement",
+  "object_id": "21d6f7cc-1af2-54c8-8202-2b443ebb9bef",
+  "note": "The proposed negative size answer removes one candidate class distinction on the reconsideration path. Applying the causal default still needs an actual reason to extend the observations across sizes and to the selected first contingent, with counter-reasons retained."
+}

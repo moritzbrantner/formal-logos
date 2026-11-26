@@ -1,0 +1,10 @@
+{
+  "id": "5caf2d74-280c-4f38-8952-f021dd8e950b",
+  "label": "Source qualification for cdc7a58f from reading 6f3121b6",
+  "subject_kind": "claim",
+  "subject_id": "e9ddfb3a-d40f-596b-9932-265e785499e1",
+  "predicate": "qualifies",
+  "object_kind": "statement",
+  "object_id": "cdc7a58f-0c17-41d9-8d9d-18b6ad5c6cc6",
+  "note": "Carnap challenges the slide from using an existence framework to asserting the theoretical reality of the framework from outside it. The case's object-level existence-feature claim would be subject to this restriction only if shown to be external in his sense."
+}

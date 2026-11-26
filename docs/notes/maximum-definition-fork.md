@@ -1465,3 +1465,12 @@ remain joint inputs to the [effect-reception argument](../../corpus/arguments/ca
 The endpoint examples address the
 [maximum-at-being premise](../../corpus/statements/grades-to-maximum-at-being.json)
 on the stipulated orders. They supply no cross-kind application at esse.
+
+## Aquinas on common measures (2026-11-26)
+
+SCG I.28 describes approach to a most-perfect measure and applies it to being
+when God is his own esse. The selected scale still needs a greatest bearer among
+the represented degrees and a reason that those degrees track approach to the
+measure.
+
+[Thomas Aquinas reading attempt](../../corpus/attempts/1534f774-3375-4a3b-8f39-54d2158ddb79.json).

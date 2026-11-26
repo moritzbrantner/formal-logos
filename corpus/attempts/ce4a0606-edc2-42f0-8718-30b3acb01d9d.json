@@ -1,0 +1,35 @@
+{
+  "id": "ce4a0606-edc2-42f0-8718-30b3acb01d9d",
+  "label": "Root links from A. J. Ayer, Language",
+  "statement_ids": [
+    "0d05ed0f-2ec5-59d9-bee5-9b49dda8c364",
+    "51650477-20ba-595f-b006-12be0d9c9985",
+    "fdaf52d6-cf34-5ca1-b42f-7e74047f43ca",
+    "a59382df-c66f-5a26-a747-4b4160734995",
+    "0caaf0d8-bf46-5fe5-ac41-fcaf7ff5b529",
+    "2875c885-59e0-5a53-9f86-3bc196ad16f0"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "ch. I, p. 18, \"A proposition is said to be verifiable, in the strong sense of the term, if, and only if, its truth could be conclusively established in experience.\": Ayer distinguishes conclusive establishment from experiential confirmation. The case's verification predicate must select one of these tests with a stated scope before the self-application argument can assess its own formulation. ch. I, p. 18, \"if we adopt conclusive verifiability as our criterion of significance, as some positivists have proposed\": Ayer attests that some positivists proposed conclusive verifiability for significance. Mapping the reported position requires fixing the case's scope and proving the formulation itself is covered before applying the self-test. The report is evidence of the position's use, not Ayer's endorsement. ch. I, p. 18, \"some positivists have adopted the heroic course of saying that these general propositions are indeed pieces of nonsense\": The reported strong-verification reply accepts the loss of literal significance for universal laws while retaining their practical importance. Applying the rule in the case therefore needs the selected scope and a defense of this consequence where ordinary law claims are used. ch. I, p. 18, \"they cannot, even in principle, be verified conclusively\": On the conclusive reading and inclusion of unrestricted laws, any finite confirming experience leaves their further cases open, although ordinary scientific laws are treated as cognitively significant. This challenges that scoped criterion. It does not reach a weaker confirmation reading or a proposal that explicitly excludes laws from significance. ch. I, p. 20, \"some experiential propositions can be deduced from it in conjunction with certain other premises without being deducible from those other premises alone\": Ayer's 1936 criterion tests whether adding a sentence changes experiential consequences relative to auxiliary premises. Applying the self-test requires representing that contrast and identifying which auxiliaries and sentences are allowed, including the criterion's own statement. ch. I, p. 21, \"is saying something which, according to our criterion of significance, is literally nonsensical\": Ayer treats strong claims about the unreality of all sense experience and the number of substances as devoid of factual significance by his criterion. Applying that treatment to the proposed metaphysical existence feature requires showing that the case formulation fails his experiential test and is subject to the same rule.",
+  "evidence": [
+    "89a07946-a362-51aa-9fc3-59b29934ec19",
+    "d1776e9a-03de-509a-b7dd-69562b8be02c",
+    "ee4d07ac-30bd-584e-8041-b8a9b1b5ba6b",
+    "47807db0-ade3-5be0-80e2-2c6967018684",
+    "07ff4c32-130b-55b9-8bc9-3af9680c27b5",
+    "83f3e0b4-ce49-581f-a152-e0eea077dda7",
+    "PR-2085"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2085"
+    }
+  ]
+}

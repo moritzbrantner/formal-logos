@@ -1,0 +1,25 @@
+{
+  "id": "920c9e5b-922e-4c1e-ad0e-45bc9cbe2346",
+  "label": "Root links from Nathan Tompkins and colleagues, Testing Turing’s theory of morphogenesis in chemica",
+  "statement_ids": [
+    "31ef93be-6f54-5245-82ae-c2e721d35130"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "p. 4397, abstract, introduction and Significance: The coupled droplets instantiate abiotic pattern formation under diffusion and reaction, with unexpected patterns requiring model extension. Applying this to the selected teleonomy premise needs the patterns to count as end-directed in the relevant sense and a bridge from laboratory setup to the relevant natural domain.",
+  "evidence": [
+    "6b8a5e69-0906-5ebd-b014-8a5b6a3f1e62",
+    "PR-2085"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2085"
+    }
+  ]
+}

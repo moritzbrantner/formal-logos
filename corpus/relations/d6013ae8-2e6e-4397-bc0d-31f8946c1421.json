@@ -1,0 +1,10 @@
+{
+  "id": "d6013ae8-2e6e-4397-bc0d-31f8946c1421",
+  "label": "Source qualification for 0af47160 from reading b46f5a59",
+  "subject_kind": "claim",
+  "subject_id": "188159b7-91d3-5f1c-a6c0-a3ba15e4a0f1",
+  "predicate": "qualifies",
+  "object_kind": "statement",
+  "object_id": "0af47160-bf4d-5817-9fbd-3745b6058388",
+  "note": "The proposed supervenience claim compares worlds agreeing on all obtaining facts. The case compares selected complete-ground facts across worlds which can differ elsewhere, so restricting the agreement to that record requires a locality premise not given by the proposed principle."
+}

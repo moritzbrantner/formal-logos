@@ -1,0 +1,25 @@
+{
+  "id": "88051a30-51f1-4c5a-9230-393be9944ef4",
+  "label": "Root links from Mark van Roojen, Moral Cognitivism vs",
+  "statement_ids": [
+    "58901e0a-5716-52a5-afe8-031c1319e0df"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "§4.3, 'Non-cognitivists claim that whether or not a moral judgment is mistaken is itself a matter for moral theorizing.': The source explains how a quasi-realist can discuss a moral judgment as mistaken from within moral theorizing. It gives the intended role for error in the formal comparison. Applying the model requires its truth and error predicates to express that role, which leaves a stronger robust-error interpretation open.",
+  "evidence": [
+    "184911f4-00c4-549e-a6f6-497fb1e5fc5f",
+    "PR-2085"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2085"
+    }
+  ]
+}

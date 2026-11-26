@@ -35,3 +35,12 @@ New profile siblings explicitly separate meaningfulness, divine/higher subject, 
 Existing floors are unchanged. The engine still treats all recorded alternatives as exhaustive for its finite-rival defense path; this batch repairs these concrete relations and does not establish generic semantic coverage or rewrite that authority. Conditional philosophical forks require independent ordinary coverage/derivation records; no collection of named schools here is advertised as exhaustive. Refuting the exact negation of a proposition is a distinct logical matter from refuting a stronger source account, and does not identify that source with a complement.
 
 Claim/type self-sweep: compatibility is only the exact joint encoded predicate package; explanation controls retain population/asymmetry as bound conjuncts; the natural-theology projection is marked transcription; populated candidate, consequence, missing world-premise and warrant failures are all retained by its bound Controls proposition. No new claims, passages, source attributions, philosophical identity relations, floors, or root-closure approvals are introduced.
+
+## Proof and mathematical understanding (2026-11-26)
+
+The intuitionist witness as reported relates knowing truth to proof and
+Dummett's mathematical understanding to recognizing a proof. Applying either to
+the case's proof requirement for assertion needs the same mathematical practice
+and an account of which assertions claim knowledge in that practice.
+
+[Rosalie Iemhoff reading attempt](../../corpus/attempts/78afce41-1d70-48ee-8d6a-4d698518badd.json).

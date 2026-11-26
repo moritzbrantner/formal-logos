@@ -1,0 +1,25 @@
+{
+  "id": "9981d86c-6b2c-4c60-b240-49005880573e",
+  "label": "Root links from Peter van Inwagen, Précis of Material Beings (1993)",
+  "statement_ids": [
+    "76f32ae6-dc8a-4d83-8d48-59d420fb9dc5"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "p.684 proposed answer and p.685 identity/existence indeterminacy: Van Inwagen offers a substantive restriction on the existence of composite objects: components must jointly constitute a life. For an application to oppose the actual fusion premise, the selected parts would have to fail that life condition and the formal sum must require composition in this sense. No exclusion of the selected fusion is established here.",
+  "evidence": [
+    "de002d15-467d-4421-bc09-915712e4e7fa",
+    "PR-2085"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2085"
+    }
+  ]
+}

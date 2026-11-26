@@ -1,0 +1,10 @@
+{
+  "id": "9d5dce48-d310-4f40-b406-23e82ad41296",
+  "label": "Source qualification for cb54120b from reading 2fc8df1f",
+  "subject_kind": "claim",
+  "subject_id": "fe72c44e-616c-55e4-ba62-468d0b75aeae",
+  "predicate": "qualifies",
+  "object_kind": "statement",
+  "object_id": "cb54120b-cafc-5d53-85f7-64ee2e3e33d3",
+  "note": "Hume distinguishes correspondence found so far from uniformity of unobserved instances, which he denies can be demonstrated. His changed-course examples explain why observed agreement alone cannot demonstrate the corresponding future claim."
+}

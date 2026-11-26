@@ -1,0 +1,10 @@
+{
+  "id": "f4b9780a-ebf8-43eb-b546-8e68b886fdda",
+  "label": "Source qualification for e2f7efca from reading 8f11af80",
+  "subject_kind": "claim",
+  "subject_id": "29e71914-4da3-5534-931a-bb9b897f1144",
+  "predicate": "qualifies",
+  "object_kind": "statement",
+  "object_id": "e2f7efca-ab71-5e46-aecf-13d31844d6d0",
+  "note": "The passage distinguishes intelligible exemplar and sensible image while retaining a third role for receptacle. Mapping the exemplar relation alone does not model how the image's location and coming-to-be depend on that third kind."
+}

@@ -1,0 +1,10 @@
+{
+  "id": "e0dce936-df40-4eab-8ce1-3113c72189dc",
+  "label": "Source qualification for d008f164 from reading 17db4fcc",
+  "subject_kind": "claim",
+  "subject_id": "bd00e33d-144d-50cf-97b0-941676699bea",
+  "predicate": "qualifies",
+  "object_kind": "statement",
+  "object_id": "d008f164-5e50-480e-aa5c-888c5ca652ce",
+  "note": "The passage distinguishes the ground of an epistemic practice from what the practice grounds only on the supposition that truth is grounded. An application to credentialing needs an interpretation of that antecedent and a reason for treating the ground here as outside truth-aptness. It supplies no categorical denial."
+}

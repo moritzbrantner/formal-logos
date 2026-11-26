@@ -1,0 +1,10 @@
+{
+  "id": "116f8df9-515a-478b-93dd-32e58d8336c7",
+  "label": "Source qualification for d008f164 from reading 2385080d",
+  "subject_kind": "claim",
+  "subject_id": "9af031b3-7cef-519a-b3b4-fcd304819daf",
+  "predicate": "qualifies",
+  "object_kind": "statement",
+  "object_id": "d008f164-5e50-480e-aa5c-888c5ca652ce",
+  "note": "An inherited, changeable background helps establish which claims are judged true or false without itself being adopted by prior conviction of correctness. The credentialing application must identify which such background is indispensable to the particular inquiry and distinguish revising it from revising claims within it."
+}

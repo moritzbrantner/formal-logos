@@ -255,3 +255,14 @@ zero; `DISAMB-UNMOVED-AT-A-TIME` keeps the two senses apart.
 ## Research attempts citing this note
 
 - [Instantiated the exact imported primaVia at each clock time and case-split the imported direction…](../../corpus/attempts/first-way-slice-fork-use-718.json)
+
+## Physical clocks and the simultaneity premise (2026-11-26)
+
+Einstein's light-signal synchronization and the rod-end example specify which
+inertial system assigns coordinate times to spatially separated events. Using
+that clock reading for an equal-time case edge requires mapping the same event
+tokens and fixing the frame or defending invariance for the relevant edges.
+Newton's first law instead informs the separate distinction between a persistent
+state of motion and a change under force.
+
+[Albert Einstein reading attempt](../../corpus/attempts/c4f67499-cda8-46c5-b860-038b1fb22461.json), [Isaac Newton reading attempt](../../corpus/attempts/4518e21a-9861-4843-aef4-76c2ee13f8bc.json).

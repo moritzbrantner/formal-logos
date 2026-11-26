@@ -1,0 +1,29 @@
+{
+  "id": "eb0e691b-4c95-4660-9067-8a57518bd27d",
+  "label": "Root links from Kelly Trogdon, Grounding",
+  "statement_ids": [
+    "9222f54b-c6a2-551a-a763-3ad2974bd199",
+    "82624d0f-1afe-587f-82f6-9cca9de0b8a8",
+    "dfccfdac-4ec0-5590-9a06-f77873b20036"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "PDF p. 2 (printed p.466), introduction distinction (i)–(iii) and necessity: Trogdon articulates necessitation from jointly sufficient full grounds. Instantiating it requires the case's admitted complete-ground set to be such a plurality, truth at its accessible worlds to track the corresponding propositions, and the modal necessity used here to constrain those worlds. PDF p. 3 (printed p.467), paragraph beginning It is worth noting: Trogdon illustrates why necessity of the target lets even merely partial grounds entail it. The route may draw the necessitation direction from complete grounds but needs separate completeness evidence for the converse. PDF p. 3 (printed p.467), significance/essence and argument (1)–(5): The source's essence argument offers a reason for full-ground necessitation using the significance of the joint account and the necessity of the essential truths. The case needs those essence and significance claims for its selected full-ground records before applying the proposed modal conclusion.",
+  "evidence": [
+    "4b4bc558-0d05-5e6c-b6c6-0a4a16928c4a",
+    "010967dd-85e0-599b-b8f2-2d0e532edc5d",
+    "d359e09c-45f2-59cd-8ddb-79f99d5b25d2",
+    "PR-2085"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2085"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "05360754-4fca-49fe-8334-f55af8458c80",
+  "label": "Source qualification for da9bddcf from reading fee2b4f5",
+  "subject_kind": "claim",
+  "subject_id": "61b76df7-46c5-5c3f-887e-22a6639e3b13",
+  "predicate": "qualifies",
+  "object_kind": "statement",
+  "object_id": "da9bddcf-ef37-54b4-9ce5-b109d6f1d2c3",
+  "note": "The same event receives different coordinate descriptions linked by a transformation preserving light speed. A case application comparing clocks must preserve the event tokens and establish equality or invariance of their ordering under the relevant transformation, not just light-speed invariance."
+}

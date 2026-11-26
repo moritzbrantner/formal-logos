@@ -1,0 +1,10 @@
+{
+  "id": "6094624d-88c0-491b-9fab-e7c2bfdb83a1",
+  "label": "Source qualification for 32412d8c from reading c99ff530",
+  "subject_kind": "claim",
+  "subject_id": "1f059445-2495-5b63-ac68-86b9f50ca5b2",
+  "predicate": "qualifies",
+  "object_kind": "statement",
+  "object_id": "32412d8c-527c-520f-980f-308c25bae653",
+  "note": "The source permits a literal beauty self-predication reading, while the target takes 'beautiful itself' as essential characterization. Deciding between them requires a reason that the predication about the Form uses the same exemplification relation as the predication about participants."
+}

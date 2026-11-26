@@ -1,0 +1,10 @@
+{
+  "id": "a40bf9b9-65cb-4962-9e2d-a364387e5c70",
+  "label": "Source support for e26f46c8 from reading ffdaf8a0",
+  "subject_kind": "claim",
+  "subject_id": "b38cfd6f-0ced-5ca1-8847-34bf18139311",
+  "predicate": "supports",
+  "object_kind": "statement",
+  "object_id": "e26f46c8-82df-546f-afb0-8b195c196400",
+  "note": "Tacitus locates Christus's execution under Pilate during Tiberius's rule. The premise requires identifying Christus with the case's Jesus, assessing the provenance of the report, and establishing crucifixion as the means of execution."
+}

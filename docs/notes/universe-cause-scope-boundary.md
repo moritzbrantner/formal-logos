@@ -82,3 +82,14 @@ Source attributions and approvals are unchanged. Findings are also preserved
 in the existing [`ATTEMPT-NATURALISM-NO-EXISTING-CAUSE-1117`](../../corpus/attempts/ATTEMPT-NATURALISM-NO-EXISTING-CAUSE-1117.json) attempt; the actual
 computed frontier delta is reported in the PR, not reconstructed from a count
 of added arguments.
+
+## Senses of causal reality and first boundaries (2026-11-26)
+
+Oppy's natural-only causal reality includes actual participants. Moving to the
+case's causal-power thesis requires coverage of unexercised capacities. The
+Hartle–Hawking model provides a distinct boundary proposal for certain physical
+histories. Application to the case requires a reason to exclude its selected
+causal relation, beyond the proposal's treatment of an earlier physical
+boundary.
+
+[Graham Oppy reading attempt](../../corpus/attempts/71f0ac5e-08ec-4626-9399-5e07bdbd79d5.json), [J. B. Hartle and S. W. Hawking reading attempt](../../corpus/attempts/58166df2-01f8-46c0-a9cb-dfe975e51b36.json).

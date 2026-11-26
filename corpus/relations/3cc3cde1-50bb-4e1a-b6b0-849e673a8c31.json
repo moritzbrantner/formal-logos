@@ -1,0 +1,10 @@
+{
+  "id": "3cc3cde1-50bb-4e1a-b6b0-849e673a8c31",
+  "label": "Source qualification for 21d6f7cc from reading 73038871",
+  "subject_kind": "claim",
+  "subject_id": "6fb88b40-8e35-59d3-b3e6-a125631de5fb",
+  "predicate": "qualifies",
+  "object_kind": "statement",
+  "object_id": "21d6f7cc-1af2-54c8-8202-2b443ebb9bef",
+  "note": "The proposed negative shape answer removes a candidate class distinction on this path. It leaves the empirical warrant for size and shape irrelevance and the applicability of the default to a selected first contingent open."
+}

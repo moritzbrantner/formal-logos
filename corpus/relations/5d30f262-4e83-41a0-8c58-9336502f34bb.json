@@ -1,0 +1,10 @@
+{
+  "id": "5d30f262-4e83-41a0-8c58-9336502f34bb",
+  "label": "Source qualification for b90c4dd1 from reading d93fadf4",
+  "subject_kind": "claim",
+  "subject_id": "69e5b21b-eead-5310-93e5-d745fd30fe96",
+  "predicate": "qualifies",
+  "object_kind": "statement",
+  "object_id": "b90c4dd1-88d9-4afe-8455-4152d7836c99",
+  "note": "Hume withholds intuitive certainty from the maxim under his comparison-of-ideas account and allows a further infallible relation to be proposed. Other defenses of the originating-cause premise, including the adequacy of its concrete witness and first-moment requirements, remain separate."
+}

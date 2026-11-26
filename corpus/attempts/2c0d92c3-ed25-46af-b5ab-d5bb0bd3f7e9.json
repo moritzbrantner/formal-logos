@@ -1,0 +1,27 @@
+{
+  "id": "2c0d92c3-ed25-46af-b5ab-d5bb0bd3f7e9",
+  "label": "Root links from Moritz Schlick, \"Meaning and Verification\"",
+  "statement_ids": [
+    "da259323-2431-5864-a0a3-0d98fbafb128",
+    "b1f1f52d-d8a9-57aa-bc68-9b2fe68ed818"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "p. 342, \"The meaning of a proposition is the method of its verification.\": Schlick equates specifying rules of use with specifying a way to verify or falsify. The case must show that the selected rule amounts to its empirical predicate and covers the formulation of the principle, rather than counting every grammatical rule as an empirical claim. pp. 350-353, \"Verifiability, which is the sufficient and necessary condition of meaning, is a possibility of the logical order\": Schlick's criterion invokes logical possibility of verification under linguistic rules independently of laws of nature. Identifying it with the case's empirical predicate requires a bridge from that rule-governed possibility to the proposed empirical test, including scope over the principle itself.",
+  "evidence": [
+    "6851c68b-7a16-5f6a-a980-b33f8034cbca",
+    "2a67385a-8faa-5e9a-956c-fd4f0d40299c",
+    "PR-2085"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2085"
+    }
+  ]
+}

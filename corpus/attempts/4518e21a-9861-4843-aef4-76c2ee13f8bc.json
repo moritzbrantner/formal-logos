@@ -1,0 +1,25 @@
+{
+  "id": "4518e21a-9861-4843-aef4-76c2ee13f8bc",
+  "label": "Root links from Isaac Newton, Philosophiae naturalis principia mathematica",
+  "statement_ids": [
+    "df1eb9e2-95aa-5f12-a780-4d9ae91ede03"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "Axiomata, Lex I: Corpus omne perseverare in statu suo quiescendi vel movendi uniformiter in directum, nisi quatenus a viribus impressis cogitur statum illum mutare: Newton describes uniform rectilinear motion as a state retained unless impressed forces change it. To bear on the target, the state/transition distinction must track being moved in the specified respect. The law's form does not supply an actual force-free body or rule out sustaining causes of being.",
+  "evidence": [
+    "5018b210-25d9-5f4d-89a1-201c3775cdf3",
+    "PR-2085"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2085"
+    }
+  ]
+}
