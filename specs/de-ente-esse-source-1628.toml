@@ -170,3 +170,43 @@ conclusion = "De ente esse-source controls: regress, uncaused, two-source and no
 axioms = []
 rule = "Explicit finite and infinite interpretations with case analysis and accessibility proofs"
 meaning = "Closed controls for the De ente esse-source route: the regress premise (infinite regress on Nat), the #1629 other-cause step (uncaused distinct esse), the shared-nature premise and at-most-one (two sources), and one interpretation satisfying every input and conclusion. They witness logical underdetermination under the encoded predicates only."
+
+[[relation]]
+id = "Test by De ente esse-source controls"
+label = "Test by De ente esse-source controls"
+subject_kind = "result"
+subject_id = "04212a3f-ba3c-4102-978f-c551b5ad8600"
+predicate = "tests"
+object_kind = "statement"
+object_id = "457698e4-eb21-4561-ab32-eccbfb0a992e"
+note = "Tests omission of this premise from distinctEsseHasEsseIsEssenceSource in the De ente cause-of-being profile, using the uncaused distinct esse or the descending Nat cause chain respectively."
+
+[[relation]]
+id = "Test by De ente esse-source controls for Any two actual beings whose esse is their essence sha (1)"
+label = "Test by De ente esse-source controls for Any two actual beings whose esse is their essence sha (1)"
+subject_kind = "result"
+subject_id = "04212a3f-ba3c-4102-978f-c551b5ad8600"
+predicate = "tests"
+object_kind = "statement"
+object_id = "75b5b027-21f1-400a-8b21-775bb6d47983"
+note = "Tests omission of this premise from atMostOneEsseIsEssenceFromPlurification in the De ente two-source interpretation, with the multiplication inventory and other constraints retained."
+
+[[relation]]
+id = "Test by De ente esse-source controls for At most one actual being has its esse identical with (1)"
+label = "Test by De ente esse-source controls for At most one actual being has its esse identical with (1)"
+subject_kind = "result"
+subject_id = "04212a3f-ba3c-4102-978f-c551b5ad8600"
+predicate = "tests"
+object_kind = "statement"
+object_id = "a576300f-4b01-45ae-902c-cfe3d0fbf2de"
+note = "Tests omission of this premise from commonEsseIsEssenceSource in the De ente two-source interpretation with the other composition inputs retained."
+
+[[relation]]
+id = "Test by De ente esse-source controls for There is no infinite descending chain of actual cause (1)"
+label = "Test by De ente esse-source controls for There is no infinite descending chain of actual cause (1)"
+subject_kind = "result"
+subject_id = "04212a3f-ba3c-4102-978f-c551b5ad8600"
+predicate = "tests"
+object_kind = "statement"
+object_id = "fd12ad3d-6729-4fa0-bb87-0121260df684"
+note = "Tests omission of this premise from distinctEsseHasEsseIsEssenceSource in the De ente cause-of-being profile, using the uncaused distinct esse or the descending Nat cause chain respectively."

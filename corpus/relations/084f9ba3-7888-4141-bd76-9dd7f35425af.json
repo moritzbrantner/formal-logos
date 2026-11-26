@@ -1,0 +1,10 @@
+{
+  "id": "084f9ba3-7888-4141-bd76-9dd7f35425af",
+  "label": "Test by Omission controls for the three refutations of rival ref for Whenever y moves x as mov (1)",
+  "subject_kind": "result",
+  "subject_id": "7a63e2f1-8dce-5657-bfa9-4711d9990308",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "9c252f24-3d84-5246-9551-2637c0fe6379",
+  "note": "Tests omission of this premise from noMoverLinkWithoutCauseLink in the finite mover-link rival profile retaining the other premises of the refutation."
+}

@@ -1,0 +1,10 @@
+{
+  "id": "f0920c63-063c-4306-8f62-79a00f85b989",
+  "label": "Test by Comparison and omission bundle for Every bearer of an occurring thought is CONCRETE_AN (1)",
+  "subject_kind": "result",
+  "subject_id": "a94fd849-9264-5497-b9d1-1828cf81744a",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "a7040bf1-b15a-5ffb-b096-6b60411a066e",
+  "note": "Tests omission of this premise from necessaryConcreteAncestor in the assigned thinker or ancestry profile retaining the other nonlogical inputs and with no necessary concrete ancestor."
+}

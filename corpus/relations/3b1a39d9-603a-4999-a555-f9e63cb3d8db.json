@@ -1,0 +1,10 @@
+{
+  "id": "3b1a39d9-603a-4999-a555-f9e63cb3d8db",
+  "label": "Test by Conceptual existence boundary finite separations",
+  "subject_kind": "result",
+  "subject_id": "b5b39d22-7a92-4bc1-9d42-60af1a486aee",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "0884890e-5576-447e-8800-51613abcc9a5",
+  "note": "Tests omission of this premise from existingExemplar in the finite feature and Unit candidate interpretations of the existence account."
+}

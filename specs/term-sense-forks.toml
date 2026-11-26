@@ -272,3 +272,113 @@ object_kind = "statement"
 object_id = "STMT-NOTHING-MOVES-ITSELF-IN-SAME-RESPECT"
 verification_result_id = "SAME-RESPECT-NO-SELF-MOTION-FROM-NO-SELF-MOVER"
 note = "Strength order within the moving sense of 'cause'. No strictness control in this batch; a self-mover that moves itself in a respect in which it is not being moved separates them."
+
+[[relation]]
+id = "Test by Finite interpretations for the two sense forks: for each for Every use of 'cause' on t (1)"
+label = "Test by Finite interpretations for the two sense forks: for each for Every use of 'cause' on t (1)"
+subject_kind = "result"
+subject_id = "f6e67b12-0e1a-512f-a34b-c05112ecef6c"
+predicate = "tests"
+object_kind = "statement"
+object_id = "048eac8a-c325-52ad-9627-3f5431eea846"
+note = "Tests omission of this premise from noSelfEfficientCauseBySenseFork in the finite causation interpretation selecting the sense branch that the omitted input would have closed."
+
+[[relation]]
+id = "Test by Finite interpretations for the two sense forks: for each for Whatever efficiently caus (1)"
+label = "Test by Finite interpretations for the two sense forks: for each for Whatever efficiently caus (1)"
+subject_kind = "result"
+subject_id = "f6e67b12-0e1a-512f-a34b-c05112ecef6c"
+predicate = "tests"
+object_kind = "statement"
+object_id = "0a2f1846-e8cd-5082-9566-39b4ae8082fc"
+note = "Tests omission of this premise from noSelfEfficientCauseBySenseFork in the finite causation interpretation selecting the sense branch that the omitted input would have closed."
+
+[[relation]]
+id = "Test by Finite interpretations for the two sense forks: for each for Act is prior to POTENCY_1 (1)"
+label = "Test by Finite interpretations for the two sense forks: for each for Act is prior to POTENCY_1 (1)"
+subject_kind = "result"
+subject_id = "f6e67b12-0e1a-512f-a34b-c05112ecef6c"
+predicate = "tests"
+object_kind = "statement"
+object_id = "197ac723-487c-5fa2-8800-4b441d322014"
+note = "Tests omission of this premise from actSimplyPriorBySenseFork in the finite priority interpretation selecting the sense branch that the omitted input would have closed."
+
+[[relation]]
+id = "Test by Finite interpretations for the two sense forks: for each for Whatever efficiently caus (2)"
+label = "Test by Finite interpretations for the two sense forks: for each for Whatever efficiently caus (2)"
+subject_kind = "result"
+subject_id = "f6e67b12-0e1a-512f-a34b-c05112ecef6c"
+predicate = "tests"
+object_kind = "statement"
+object_id = "3715f518-89a7-5815-8416-990fb686a837"
+note = "Tests omission of this premise from noSelfEfficientCauseBySenseFork in the finite causation interpretation selecting the sense branch that the omitted input would have closed."
+
+[[relation]]
+id = "Test by Finite interpretations for the two sense forks: for each for Some being before which n (1)"
+label = "Test by Finite interpretations for the two sense forks: for each for Some being before which n (1)"
+subject_kind = "result"
+subject_id = "f6e67b12-0e1a-512f-a34b-c05112ecef6c"
+predicate = "tests"
+object_kind = "statement"
+object_id = "42008b33-62b5-564b-875b-ff91957ddd46"
+note = "Tests omission of this premise from actSimplyPriorBySenseFork in the finite priority interpretation selecting the sense branch that the omitted input would have closed."
+
+[[relation]]
+id = "Test by Finite interpretations for the two sense forks: for each for Some subject causes a per (1)"
+label = "Test by Finite interpretations for the two sense forks: for each for Some subject causes a per (1)"
+subject_kind = "result"
+subject_id = "f6e67b12-0e1a-512f-a34b-c05112ecef6c"
+predicate = "tests"
+object_kind = "statement"
+object_id = "5e76cbf7-9033-549c-9ec3-328746219b46"
+note = "Tests omission of this premise from noSelfEfficientCauseBySenseFork in the finite causation interpretation selecting the sense branch that the omitted input would have closed."
+
+[[relation]]
+id = "Test by Finite interpretations for the two sense forks: for each for Whatever is prior to x in (1)"
+label = "Test by Finite interpretations for the two sense forks: for each for Whatever is prior to x in (1)"
+subject_kind = "result"
+subject_id = "f6e67b12-0e1a-512f-a34b-c05112ecef6c"
+predicate = "tests"
+object_kind = "statement"
+object_id = "9226c6af-c824-5f54-8937-79e5726ce3a4"
+note = "Tests omission of this premise from actSimplyPriorBySenseFork in the finite priority interpretation selecting the sense branch that the omitted input would have closed."
+
+[[relation]]
+id = "Test by Finite interpretations for the two sense forks: for each for Every use of 'prior' on t (1)"
+label = "Test by Finite interpretations for the two sense forks: for each for Every use of 'prior' on t (1)"
+subject_kind = "result"
+subject_id = "f6e67b12-0e1a-512f-a34b-c05112ecef6c"
+predicate = "tests"
+object_kind = "statement"
+object_id = "c3ae2148-fa13-57e9-a233-d6ad67f159a8"
+note = "Tests omission of this premise from actSimplyPriorBySenseFork in the finite priority interpretation selecting the sense branch that the omitted input would have closed."
+
+[[relation]]
+id = "Test by Finite interpretations for the two sense forks: for each for Nothing causes itself in (1)"
+label = "Test by Finite interpretations for the two sense forks: for each for Nothing causes itself in (1)"
+subject_kind = "result"
+subject_id = "f6e67b12-0e1a-512f-a34b-c05112ecef6c"
+predicate = "tests"
+object_kind = "statement"
+object_id = "cc5c7105-90f2-5c2a-8f57-16325b2946d4"
+note = "Tests omission of this premise from noSelfEfficientCauseBySenseFork in the finite causation interpretation selecting the sense branch that the omitted input would have closed."
+
+[[relation]]
+id = "Test by Finite interpretations for the two sense forks: for each for Every use of 'cause' on t (2)"
+label = "Test by Finite interpretations for the two sense forks: for each for Every use of 'cause' on t (2)"
+subject_kind = "result"
+subject_id = "f6e67b12-0e1a-512f-a34b-c05112ecef6c"
+predicate = "tests"
+object_kind = "argument"
+object_id = "48d1002b-8904-5fe4-92c3-969f25bfe4fc"
+note = "Tests mixing causal readings with coverage but without exclusivity, allowing the two uses to disagree in the Unit profile."
+
+[[relation]]
+id = "Test by Finite interpretations for the two sense forks: for each for Every use of 'prior' on t (2)"
+label = "Test by Finite interpretations for the two sense forks: for each for Every use of 'prior' on t (2)"
+subject_kind = "result"
+subject_id = "f6e67b12-0e1a-512f-a34b-c05112ecef6c"
+predicate = "tests"
+object_kind = "argument"
+object_id = "57af0345-6077-5169-83b4-a8f91ad9705a"
+note = "Tests mixing priority readings with coverage but without exclusivity, allowing the two uses to disagree in the Unit profile."

@@ -1,0 +1,10 @@
+{
+  "id": "5d229665-0994-4c9b-85fe-a4449a3e4462",
+  "label": "Test by Explicit anchor correspondence preserves the sample target",
+  "subject_kind": "result",
+  "subject_id": "d3530a61-adba-400d-a88d-d7a700ea716c",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "e611886f-2a21-448d-8069-a9d87f63494e",
+  "note": "Tests compatibility of uniform anchor definition and anchor-preserving correspondence on the selected Unit and Bool interpretations."
+}

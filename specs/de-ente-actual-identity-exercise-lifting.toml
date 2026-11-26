@@ -62,3 +62,13 @@ rule = "Check each exercise model against the same reciprocal actual esse-supply
 meaning = "Reuse the established acyclic three-token feedback and acyclic successor-chain examples. In three-token feedback the actual edge B → A cannot lift at A₀, despite the projected pair B₁ → A₂. In the alternating chain the successor exercise supplies every target and is borne by the other bearer. The even indices give an infinite fibre over the actual identity bearer. Both models project exactly to the reciprocal actual esse-supply relation whose two-edge return goes through that same identity. This certifies separations between the stated assumptions under their formal interpretations."
 [argument.senses]
 EVENT_CAUSATION_ENTITY_FEEDBACK_SIMULTANEITY = "EVENT_CAUSATION_ENTITY_FEEDBACK_SIMULTANEITY_3"
+
+[[relation]]
+id = "Test by Finite feedback and an unbounded chain test exercise lifting"
+label = "Test by Finite feedback and an unbounded chain test exercise lifting"
+subject_kind = "result"
+subject_id = "88a50d6f-636a-40bb-b952-fe811a9bf6b9"
+predicate = "tests"
+object_kind = "statement"
+object_id = "4bd2d25b-27c6-4cfe-9b5f-bfa11511c176"
+note = "Tests the backward prior-exercise lifting in an acyclic actual-identity cause interpretation and checks how separate acyclic chains behave."

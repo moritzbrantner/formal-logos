@@ -1,0 +1,10 @@
+{
+  "id": "a125bb48-2917-4d8a-a4d0-85d332508ea4",
+  "label": "Test by One-being controls for the Dei Filius sufficiency bridges, checked",
+  "subject_kind": "result",
+  "subject_id": "8eb47d7a-bc24-4acd-a6b3-73ce84e24f11",
+  "predicate": "tests",
+  "object_kind": "argument",
+  "object_id": "1fa790f2-9e45-4861-a9b7-cdbd2139c69d",
+  "note": "Tests joint satisfiability of the attribute-field premises in a profile with one candidate bearing the nine and every Dei Filius attribute."
+}

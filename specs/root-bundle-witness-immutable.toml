@@ -13,3 +13,43 @@ premises = []
 conclusion = "Root bundle immutability finite certificate"
 rule = "Finite evaluation of existing quantified predicates"
 meaning = "Check the specified positive interpretation and four omission interpretations of the unchanged root-route immutability bundle. All four premises are individually indispensable over the unconstrained dictionaries. No root premise is discharged."
+
+[[relation]]
+id = "Test by Root bundle immutability witness and omission controls"
+label = "Test by Root bundle immutability witness and omission controls"
+subject_kind = "result"
+subject_id = "c198d4da-f06c-4f22-b532-89103d100e6c"
+predicate = "tests"
+object_kind = "statement"
+object_id = "4c79298d-ee09-5e99-9ced-1be92c19b4cc"
+note = "Tests omission from the unchanged immutability bundle in the finite profile renaming the mutable bearer as GOD_4."
+
+[[relation]]
+id = "Test by Root bundle immutability witness and omission controls for Act is SIMPLY_PRIOR_1 to PO (1)"
+label = "Test by Root bundle immutability witness and omission controls for Act is SIMPLY_PRIOR_1 to PO (1)"
+subject_kind = "result"
+subject_id = "c198d4da-f06c-4f22-b532-89103d100e6c"
+predicate = "tests"
+object_kind = "statement"
+object_id = "a4d3261a-3239-5b44-9953-64ab1b0ed762"
+note = "Tests omission from the unchanged immutability bundle by restoring the original simple-priority assignment while keeping the modified act and potency tables."
+
+[[relation]]
+id = "Test by Root bundle immutability witness and omission controls for Nothing is simultaneously i (1)"
+label = "Test by Root bundle immutability witness and omission controls for Nothing is simultaneously i (1)"
+subject_kind = "result"
+subject_id = "c198d4da-f06c-4f22-b532-89103d100e6c"
+predicate = "tests"
+object_kind = "statement"
+object_id = "c6d6379b-6a9b-55b5-a701-3df289dfcca4"
+note = "Tests omission from the unchanged immutability bundle in the finite control that makes the GOD_4 bearer both act and potency in the further respect."
+
+[[relation]]
+id = "Test by Root bundle immutability witness and omission controls for Whatever is maximal in bein (1)"
+label = "Test by Root bundle immutability witness and omission controls for Whatever is maximal in bein (1)"
+subject_kind = "result"
+subject_id = "c198d4da-f06c-4f22-b532-89103d100e6c"
+predicate = "tests"
+object_kind = "statement"
+object_id = "eaa4c679-98a3-5e82-95ff-18bd1177ce74"
+note = "Tests omission from the unchanged immutability bundle with revised act, potency and prior assignments on the same Bool carriers."

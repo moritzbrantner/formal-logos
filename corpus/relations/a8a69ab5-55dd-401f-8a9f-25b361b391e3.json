@@ -1,0 +1,10 @@
+{
+  "id": "a8a69ab5-55dd-401f-8a9f-25b361b391e3",
+  "label": "Test by A nonempty schema interpretation retains matched religious truth invariance but fails local…",
+  "subject_kind": "result",
+  "subject_id": "9ef3d66b-c7bd-56ab-84a5-dc35384cf365",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "5ee99eb5-5793-50a4-9bc7-b177f67f6c63",
+  "note": "Tests the descriptive-role component in a nonempty profile retaining matched religious truth invariance but lacking fact representation."
+}

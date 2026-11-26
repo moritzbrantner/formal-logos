@@ -159,3 +159,13 @@ predicate = "tests"
 object_kind = "statement"
 object_id = "eb6611a5-f8a7-44f6-9bf1-2f65eb80b3cb"
 note = "Tests the converse strength implication in the registered interpretation. Same InAct, CausesIn, esse, Governs and IsLord. The strong version gives LORD_1 to every cause and governor of all; the weak one only to such a being that also wills some good of their own to every other intellectual being. Control part 2: a cause and governor of all that wills no good to an existing intellectual creature satisfies the weak version and falsifies the strong one."
+
+[[relation]]
+id = "Test by Joint-satisfiability model of the LORD_3 Dei Filius root route, checked"
+label = "Test by Joint-satisfiability model of the LORD_3 Dei Filius root route, checked"
+subject_kind = "result"
+subject_id = "80920b5c-eabe-40aa-86c7-b11231531913"
+predicate = "tests"
+object_kind = "argument"
+object_id = "625e9993-f850-432a-8fc8-b3b813c7b35f"
+note = "Tests joint satisfiability of the unified root bundle in its designated root model under explicit excluded middle."

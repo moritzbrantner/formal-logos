@@ -1,0 +1,10 @@
+{
+  "id": "77e55138-4125-4871-a4a5-b79d777d177f",
+  "label": "Test by One-being, one-respect interpretations in which the being is NECESSARY_1",
+  "subject_kind": "result",
+  "subject_id": "37c4b9c2-210d-573c-af3e-06332563f7d1",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "b8d21cd0-8ac6-5556-a934-d59b025698d7",
+  "note": "Tests omission of this premise from necessaryBeingInAct in the one-being one-respect models identifying exactly where the necessary-being-to-act inference fails."
+}

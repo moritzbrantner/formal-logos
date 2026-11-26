@@ -1,0 +1,10 @@
+{
+  "id": "3af18b16-7039-468c-a857-219bb1082eb5",
+  "label": "Test by A shared reachability profile fixes neither route composition nor intellect",
+  "subject_kind": "result",
+  "subject_id": "54544253-4e90-48d2-80c9-023b016cb849",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "3ff52bf2-165b-497b-b7ad-4acf1ca8bee5",
+  "note": "Tests whether the same restricted path profile determines route composition or intellect in two immaterial profiles with the same Nat anchor."
+}

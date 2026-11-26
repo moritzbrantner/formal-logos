@@ -1,0 +1,10 @@
+{
+  "id": "44a65da8-4eb0-4ca6-a63f-4be20d6c33b5",
+  "label": "Test by Finite onset-only giving with explanation, origin and RECEIVES_ESSE_AT_2",
+  "subject_kind": "result",
+  "subject_id": "ea414de5-3a51-42d2-8297-2846dfc63caa",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "52b05849-88b3-4f44-b81b-768850f9ed12",
+  "note": "Tests reception-giving correlativity with standing receipt and onset-only giving in the same history."
+}

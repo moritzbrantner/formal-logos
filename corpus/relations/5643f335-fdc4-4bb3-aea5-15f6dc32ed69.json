@@ -1,0 +1,10 @@
+{
+  "id": "5643f335-fdc4-4bb3-aea5-15f6dc32ed69",
+  "label": "Test by One being living at two ordered times with different life-states",
+  "subject_kind": "result",
+  "subject_id": "4f41f2b6-b941-5cbe-8ce1-b6808f6065a5",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "0628359b-4a71-5c67-a84b-0fd80104aceb",
+  "note": "Tests omission of the motion-to-potency analysis in a finite two-time history with changed life states."
+}

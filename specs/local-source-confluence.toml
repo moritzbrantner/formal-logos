@@ -45,3 +45,13 @@ conclusion = "Two alternating sources can supply every stage of a connected acyc
 axioms = ["propext", "Classical.choice", "Quot.sound"]
 rule = "Construct upstream joins by parity and prove acyclicity by strict stage order"
 meaning = "Each relay stage has both an immediate source and a further relay. Sources alternate, so the further relay reaches the initial source through one more relay. Opposite sources have no common extension. This tests substituting a short route to some source for well-foundedness in the local-fork argument."
+
+[[relation]]
+id = "Test by Test local joining when every stage has a source but its relay chain continues"
+label = "Test by Test local joining when every stage has a source but its relay chain continues"
+subject_kind = "result"
+subject_id = "cbc25f11-29fe-483a-8157-672c7703e6cd"
+predicate = "tests"
+object_kind = "statement"
+object_id = "25697a6f-d4f8-55c4-9e12-2d6b6710c119"
+note = "Tests omission of well-foundedness in a connected ladder with local fork joinability, reachable sources, and two distinct sources."

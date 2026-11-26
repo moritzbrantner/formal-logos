@@ -1,0 +1,10 @@
+{
+  "id": "a0040bce-a36b-4dde-a3af-4970ef747ee3",
+  "label": "Test by Comparison and omission bundle",
+  "subject_kind": "result",
+  "subject_id": "a94fd849-9264-5497-b9d1-1828cf81744a",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "30e6e01c-b7f1-536c-86ae-0a9be35dd160",
+  "note": "Tests omission of this premise from necessaryConcreteAncestor in the assigned thinker or ancestry profile retaining the other nonlogical inputs and with no necessary concrete ancestor."
+}

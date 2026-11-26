@@ -1,0 +1,10 @@
+{
+  "id": "3fd303c6-8a63-438d-80a9-e9da5b1ab1db",
+  "label": "Test by The fixed fork, isolated pair, integer chain and empty g for The selected graph has an (1)",
+  "subject_kind": "result",
+  "subject_id": "7a1dcb73-7789-5571-a8be-51d50cd7a3aa",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "c638c6f7-31e2-53a4-9668-bb23b88cc04e",
+  "note": "Tests omission on the empty carrier satisfying the universal graph conditions without a source."
+}

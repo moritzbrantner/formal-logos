@@ -68,3 +68,23 @@ axioms = []
 sense_mixing_control = true
 rule = "Explicit two-being interpretations, checked by unfolding"
 meaning = "Nonvacuity: STMT-PURE-ACT-LIVES and the restricted sense bridge are jointly satisfiable with a living pure act. Sense mixing fails without the bridge: a pure act can have life at some time (LIVING_2) and not LIVING_1, so STMT-PURE-ACT-LIVES alone does not give the living conjunct. The bridge alone gives a pure act no LIVING_1: with no life at any time the bridge holds and a pure act does not live. This does not check that STMT-PURE-ACT-LIVES is needed in the full premise bundle of either composition (no omission model for those bundles is checked). The restriction matters: the unrestricted bridge implies the restricted one, which can hold where the unrestricted one fails. The new route does not formally presuppose the old intellect-gives-life bridge (its source warrant still runs through intellect: q.18 a.3 grounds God's life in his understanding). Model-witnessed facts about these interpretations only; they show where each premise is needed, not that it is false or doubtful."
+
+[[relation]]
+id = "Test by Controls for the LIVING_2-to-LIVING_1 route at the Dei Filius root, checked"
+label = "Test by Controls for the LIVING_2-to-LIVING_1 route at the Dei Filius root, checked"
+subject_kind = "result"
+subject_id = "2de8c08d-9dc3-478b-9304-919a43435f20"
+predicate = "tests"
+object_kind = "statement"
+object_id = "1773079b-236a-5f7d-b1e9-fb8f23202341"
+note = "Tests omission of this premise from nineGiveDeiFiliusLivingFromPureAct in the pure-act life interpretation and the restricted life-sense comparison."
+
+[[relation]]
+id = "Test by Controls for the LIVING_2-to-LIVING_1 route at the Dei F for Whatever is in POTENCY_1 (1)"
+label = "Test by Controls for the LIVING_2-to-LIVING_1 route at the Dei F for Whatever is in POTENCY_1 (1)"
+subject_kind = "result"
+subject_id = "2de8c08d-9dc3-478b-9304-919a43435f20"
+predicate = "tests"
+object_kind = "statement"
+object_id = "ad49ea00-287e-4c7c-8ab6-fe222d16d493"
+note = "Tests omission of this premise from nineGiveDeiFiliusLivingFromPureAct in the pure-act life interpretation and the restricted life-sense comparison."

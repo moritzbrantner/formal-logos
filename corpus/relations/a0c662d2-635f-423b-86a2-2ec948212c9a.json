@@ -1,0 +1,10 @@
+{
+  "id": "a0c662d2-635f-423b-86a2-2ec948212c9a",
+  "label": "Test by Controls of the round-3 Christ-and-Church batch: one fin for Open historical premise, (1)",
+  "subject_kind": "result",
+  "subject_id": "47011ff0-25d2-587e-844a-17d6b1a7b11f",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "067cd417-4570-5684-a514-d9af55267442",
+  "note": "Tests omitting this premise in the encoded selectedChurchFromAttestation argument, with the other premises retained and the conclusion false in each corresponding control."
+}

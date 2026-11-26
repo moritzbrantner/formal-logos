@@ -1,0 +1,10 @@
+{
+  "id": "6820a344-ddbf-47bd-b15f-7dfe7a9a4e67",
+  "label": "Test by Ideal consensus comparison has compatibility and omissio for Ideal consensus identifie (1)",
+  "subject_kind": "result",
+  "subject_id": "04d31815-72a0-4c1c-a209-25a7ac84c180",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "b3622de9-6c8e-4dc6-b597-48b9c0dffc46",
+  "note": "Tests omission of the identification with goodness in the surplus-artifact profile retaining approval and a sound witness."
+}

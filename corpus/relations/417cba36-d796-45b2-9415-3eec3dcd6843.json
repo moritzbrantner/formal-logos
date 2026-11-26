@@ -1,0 +1,10 @@
+{
+  "id": "417cba36-d796-45b2-9415-3eec3dcd6843",
+  "label": "Test by Exact inhabited Bool/Unit interpretation has a stationary opiner and a distinct moved being…",
+  "subject_kind": "result",
+  "subject_id": "1da45265-793e-5a79-9958-91a824c0b0d5",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "7ee7b61e-bce1-52e4-aea1-b207c1a3289c",
+  "note": "Tests the exact opinion-to-motion tuple requirement in a populated model with a stationary opiner and a distinct moved being."
+}

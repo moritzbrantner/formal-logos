@@ -1,0 +1,10 @@
+{
+  "id": "ed2cf92c-d1cd-435e-8764-036651380273",
+  "label": "Test by Divine assertion route structural controls certificate for Veracity GodNoContraryAssertion",
+  "subject_kind": "result",
+  "subject_id": "bd2c7094-5946-4815-b7a0-27a535bd2d8e",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "6e8807d4-9aea-4f9d-9226-89a302701df6",
+  "note": "Tests omission of this premise from assertionTruthB in the finite actual-assertion profile, which retains the other input and has a false assertion."
+}

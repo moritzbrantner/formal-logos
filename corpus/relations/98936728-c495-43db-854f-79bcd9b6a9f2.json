@@ -1,0 +1,10 @@
+{
+  "id": "98936728-c495-43db-854f-79bcd9b6a9f2",
+  "label": "Test by Indiscriminate correspondence fails on the same anchor profile",
+  "subject_kind": "result",
+  "subject_id": "858fb017-87d2-4b1e-9bd9-1e85bb3d60b2",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "e611886f-2a21-448d-8069-a9d87f63494e",
+  "note": "Tests whether a uniform anchor definition enforces arbitrary correspondence by using the universal relation and the false and true Bool objects."
+}

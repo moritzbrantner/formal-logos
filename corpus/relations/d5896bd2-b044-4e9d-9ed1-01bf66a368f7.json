@@ -1,0 +1,10 @@
+{
+  "id": "d5896bd2-b044-4e9d-9ed1-01bf66a368f7",
+  "label": "Test by The alternating model fails amalgamation; infinite Nat t for One finite list contains (1)",
+  "subject_kind": "result",
+  "subject_id": "a243e1b6-e217-55aa-80ba-a5fab5fc8324",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "b9bf4eb8-ccac-5960-a8c7-c01bf24fbb33",
+  "note": "Tests finite cover in the populated infinite Nat-tail profile retaining individual contingency and amalgamation."
+}

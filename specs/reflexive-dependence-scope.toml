@@ -146,3 +146,13 @@ object_kind = "statement"
 object_id = "If an actual CONCRETE_6 individual depends for its being on a different one, that one grounds it"
 verification_result_id = "Distinct-relata dependence-to-grounding bridge, from the unrestricted bridge"
 note = "Same Profile, world and DependsForBeing; the weak version adds c ≠ x. Under reflexive DependsForBeing only the strong version yields self-grounding. Strictness is not separately certified."
+
+[[relation]]
+id = "Test by Finite models separating reflexive distinct-nonmutual dependence from asymmetry"
+label = "Test by Finite models separating reflexive distinct-nonmutual dependence from asymmetry"
+subject_kind = "result"
+subject_id = "0ccf914c-9ba9-47aa-96d3-53fbf5ebfeca"
+predicate = "tests"
+object_kind = "statement"
+object_id = "da8e6b60-4dab-5858-9c8d-f6e84c821970"
+note = "Tests unrestricted asymmetry on two reflexive models retaining distinct nonmutuality, including a two-element order with a distinct edge."

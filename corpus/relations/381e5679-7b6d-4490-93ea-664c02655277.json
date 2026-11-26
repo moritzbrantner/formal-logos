@@ -1,0 +1,10 @@
+{
+  "id": "381e5679-7b6d-4490-93ea-664c02655277",
+  "label": "Test by Exact finite controls: two incomparable represented degr for Independently supplied Ma (1)",
+  "subject_kind": "result",
+  "subject_id": "29fd4c62-0327-5599-aad8-15ee7c35cd6c",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "85975f1d-cac5-59f8-8104-bd112de183ad",
+  "note": "Tests omission of greatest-degree calibration in the incomparable profile preserving strict-degree calibration and maximal definition."
+}

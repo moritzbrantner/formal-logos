@@ -1,0 +1,10 @@
+{
+  "id": "467182c0-8281-47d9-8944-5301b102096a",
+  "label": "Test by Controls of the round-3 Christ-and-Church batch: one fin for The Catholic Church is a (1)",
+  "subject_kind": "result",
+  "subject_id": "47011ff0-25d2-587e-844a-17d6b1a7b11f",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "d453e09f-fb59-595e-92a3-150339d36c71",
+  "note": "Tests omitting this premise in the encoded christsChurchIsCatholicFromUniqueness argument, with the other premises retained and the conclusion false in each corresponding control."
+}

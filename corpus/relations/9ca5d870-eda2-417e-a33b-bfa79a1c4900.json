@@ -1,0 +1,10 @@
+{
+  "id": "9ca5d870-eda2-417e-a33b-bfa79a1c4900",
+  "label": "Test by Formal fact: the Metaphysics IX.6 analysis of POTENCY_1 for Nothing is simultaneously (1)",
+  "subject_kind": "result",
+  "subject_id": "a26e8e49-ca29-55f0-81e6-411d72543c25",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "c6d6379b-6a9b-55b5-a701-3df289dfcca4",
+  "note": "Checks the exact commitment required to interpret potency by the IX.6 analysis in the existing typed vocabulary."
+}

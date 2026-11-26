@@ -1,0 +1,10 @@
+{
+  "id": "a7ee120b-adbc-447e-b2ad-21a5ceb1d4ee",
+  "label": "Test by Present-receipt controls checked for Whatever has received esse is receiving it at a f (1)",
+  "subject_kind": "result",
+  "subject_id": "45b3c73b-90da-4018-abc3-336b95dc6b3e",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "db441b19-a990-47c5-9fde-0de212062837",
+  "note": "Tests omission of this premise from onsetOfOnsetReceipt in the onset history assignment with the other input retained."
+}

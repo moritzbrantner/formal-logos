@@ -1,0 +1,10 @@
+{
+  "id": "8914a07f-cd6b-4028-a381-b081c8451abb",
+  "label": "Test by Formal fact: the quarta via's premises with…, via broad for What is maximal in a GENUS (1)",
+  "subject_kind": "result",
+  "subject_id": "9bd3a966-c0f3-5d3f-8329-bac373c85ba5",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "d9fad785-40ab-555a-a1c1-5e39c9d50497",
+  "note": "Tests compatibility of the broad genus principle with the typed Aristotelian no-genus premises in a finite structure."
+}

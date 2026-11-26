@@ -106,3 +106,73 @@ axioms = []
 sense_mixing_control = true
 rule = "Explicit finite interpretations on Bool with case analysis"
 meaning = "Closed controls for the De ente extrinsic-source route. Each open input fails in one interpretation and the conclusion fails there: the literal disjunction together with the weak exhaustiveness and some-cause (brute esse), the efficiency bridge with the weak exhaustiveness and some-cause downstream of it (formal nature, a label for an unconstrained non-efficient nature source), no-self-causation (self-cause), the self-causation reading with some-cause downstream (unrealized quiddity) and the actuality of causes of being (nonactual cause); one interpretation satisfies every input and the conclusion. These witness logical underdetermination under the encoded predicates only; they are not evidence that brute or formally sourced esse is possible or plausible."
+
+[[relation]]
+id = "Test by De ente extrinsic-source controls"
+label = "Test by De ente extrinsic-source controls"
+subject_kind = "result"
+subject_id = "08275113-da24-4510-ab91-1d2553eb1c88"
+predicate = "tests"
+object_kind = "statement"
+object_id = "4ccb319f-9b7e-41fd-a560-d4affa25816b"
+note = "Tests omission of this premise from distinctEsseOtherCauseFromCaused in the brute, self-cause or nonactual-cause interpretation for the corresponding premise."
+
+[[relation]]
+id = "Test by De ente extrinsic-source controls for A distinct esse from its nature (NATURE_SOURCE_1 (1)"
+label = "Test by De ente extrinsic-source controls for A distinct esse from its nature (NATURE_SOURCE_1 (1)"
+subject_kind = "result"
+subject_id = "08275113-da24-4510-ab91-1d2553eb1c88"
+predicate = "tests"
+object_kind = "statement"
+object_id = "600f91cb-ac5e-4283-b078-26b941fe2211"
+note = "Tests omission of this premise from distinctEsseExhaustionFromDeEnte in the designated brute-esse and formal-nature interpretations respectively."
+
+[[relation]]
+id = "Test by De ente extrinsic-source controls for Whatever belongs to a thing is from its nature ( (1)"
+label = "Test by De ente extrinsic-source controls for Whatever belongs to a thing is from its nature ( (1)"
+subject_kind = "result"
+subject_id = "08275113-da24-4510-ab91-1d2553eb1c88"
+predicate = "tests"
+object_kind = "statement"
+object_id = "75919560-1efc-4aba-b739-f57c3fdb079f"
+note = "Tests omission of this premise from distinctEsseExhaustionFromDeEnte in the designated brute-esse and formal-nature interpretations respectively."
+
+[[relation]]
+id = "Test by De ente extrinsic-source controls for Every actual distinct esse is caused by its quid (1)"
+label = "Test by De ente extrinsic-source controls for Every actual distinct esse is caused by its quid (1)"
+subject_kind = "result"
+subject_id = "08275113-da24-4510-ab91-1d2553eb1c88"
+predicate = "tests"
+object_kind = "statement"
+object_id = "8592601e-a5ea-4924-ac9f-095cd0050a71"
+note = "Tests omission of this premise from distinctEsseCausedFromDeEnte in the designated brute-esse or unrealized-quiddity control, respectively."
+
+[[relation]]
+id = "Test by De ente extrinsic-source controls for If a thing's quiddity efficiently causes (NATURE (1)"
+label = "Test by De ente extrinsic-source controls for If a thing's quiddity efficiently causes (NATURE (1)"
+subject_kind = "result"
+subject_id = "08275113-da24-4510-ab91-1d2553eb1c88"
+predicate = "tests"
+object_kind = "statement"
+object_id = "a2800f45-c1d4-47f3-bf3f-738fb128c088"
+note = "Tests omission of this premise from distinctEsseCausedFromDeEnte in the designated brute-esse or unrealized-quiddity control, respectively."
+
+[[relation]]
+id = "Test by De ente extrinsic-source controls for UNITING-CAUSE_3"
+label = "Test by De ente extrinsic-source controls for UNITING-CAUSE_3"
+subject_kind = "result"
+subject_id = "08275113-da24-4510-ab91-1d2553eb1c88"
+predicate = "tests"
+object_kind = "statement"
+object_id = "b62a64ab-ac11-569a-b8e8-de51a74b058f"
+note = "Tests omission of this premise from distinctEsseOtherCauseFromCaused in the brute, self-cause or nonactual-cause interpretation for the corresponding premise."
+
+[[relation]]
+id = "Test by De ente extrinsic-source controls for Every actual distinct esse has some cause of being"
+label = "Test by De ente extrinsic-source controls for Every actual distinct esse has some cause of being"
+subject_kind = "result"
+subject_id = "08275113-da24-4510-ab91-1d2553eb1c88"
+predicate = "tests"
+object_kind = "statement"
+object_id = "d1f3ffcc-04f2-4683-b385-2bfb2baf3f10"
+note = "Tests omission of this premise from distinctEsseOtherCauseFromCaused in the brute, self-cause or nonactual-cause interpretation for the corresponding premise."

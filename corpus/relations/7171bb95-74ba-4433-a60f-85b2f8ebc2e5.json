@@ -1,0 +1,10 @@
+{
+  "id": "7171bb95-74ba-4433-a60f-85b2f8ebc2e5",
+  "label": "Test by Finite interpretations for the ten derivations of round for For every GOD_4 candidate (1)",
+  "subject_kind": "result",
+  "subject_id": "d3dd4601-36f0-51a2-a5f4-29fc87e49e84",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "63f5b040-f322-50db-8d78-811245fffab3",
+  "note": "Tests omitting this premise in the encoded immediateFailsFromEnvoyFounding argument, with the other premises retained and the conclusion false in each corresponding control."
+}
