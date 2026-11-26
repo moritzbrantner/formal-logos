@@ -11,7 +11,8 @@
   "summary": "Issue #2052. Selected loss yields the existing dependence-to-impossibility premise via soundness for the shared dependence primitive, accessible absence coverage and realization of being-without by an accessible witness. A three-world omission model exhibits a case where the effect drops after the chosen removal but persists in a farther accessible world. A separate normal/repair comparison reuses the matched AND/idle mechanisms and public-input clamp, which concerns public input absence only. None of these comparisons supplies an interpretation of the existence-fact labels in the strict-ground map.",
   "blocker": "OPEN: justify witness adequacy for real possibility and whether the same effect can persist under replacement in the sustaining scope. The dependence-to-strict-ground map still needs an independently interpreted existence-fact theory and its oriented edges.",
   "evidence": [
-    "b8c1cfb7-c820-45c2-a102-cb26633c6bf8"
+    "b8c1cfb7-c820-45c2-a102-cb26633c6bf8",
+    "PR-2089"
   ],
   "workers": [
     {
@@ -19,7 +20,8 @@
       "provider": "codex",
       "model": "gpt-6.2-sol",
       "effort": "high",
-      "date": "2026-11-26"
+      "date": "2026-11-26",
+      "pr": "PR-2089"
     }
   ]
 }
