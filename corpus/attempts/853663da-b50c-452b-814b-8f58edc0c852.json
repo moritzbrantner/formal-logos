@@ -9,7 +9,8 @@
   "outcome": "rejected",
   "summary": "At 1c9e6607bc6e004abc94cdb41426dbd26d4a0e97, under the shared heavy-job lock, ran truth discover with the proved pool, a ranked cap of eight (plus eligible registered bridges), 3000 CLI heartbeats, batch four and two jobs. Duper searched the unfolded propositions. Lean-auto used Zipperposition for premise selection with Duper reconstruction. The retained candidate b241b5ca forbids every CausesOrigin x x edge. Discovery unified Being, Respect and the CauseFrame F across modules by name, then obtained the bridge because its antecedent was false. The sense preflight finds no unbridged authored sense, which does not certify these binder identifications. The registered consumer noSelfOriginFromSelfExercise already runs from this bridge and NoSelfProduction to b241b5ca on one frame. Reversing that route through a vacuous antecedent does not support the productive interpretation of an occurrence of self-origin. The engine filtered the trial before independent certification. The existing instantiation from the unrestricted origin bridge stays available as recorded.",
   "evidence": [
-    "9598a73d-7db6-4fe3-8c9a-114e21dc1ed8"
+    "9598a73d-7db6-4fe3-8c9a-114e21dc1ed8",
+    "PR-2041"
   ],
   "workers": [
     {
@@ -17,7 +18,8 @@
       "provider": "codex",
       "model": "gpt-6.2-sol",
       "effort": "high",
-      "date": "2026-11-26"
+      "date": "2026-11-26",
+      "pr": "PR-2041"
     }
   ]
 }

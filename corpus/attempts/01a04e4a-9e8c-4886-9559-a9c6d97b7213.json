@@ -39,14 +39,17 @@
   "kind": "derivation",
   "outcome": "failed",
   "summary": "At 1c9e6607bc6e004abc94cdb41426dbd26d4a0e97, under the shared heavy-job lock, ran truth discover with the proved pool, a ranked cap of eight (plus eligible registered bridges), 3000 CLI heartbeats, batch four and two jobs. Duper searched the unfolded propositions. Lean-auto used Zipperposition for premise selection with Duper reconstruction. The following exact retrieved bundles remained unresolved. A failed search does not refute a target or settle whether its ranked bundle entails it. Each line gives the target and the candidate IDs in supplied order.\n76e0f716 ← 419363e2, 7c3da33e, ef721eab, 0628359b, c85e8ef5, 0ab78c08, 578f43f1, 6b83bc10\n47aff057 ← bf93f259, 47b151ca, 0791f2ad, 08e493f8, 0f49d71e, d85de8e1, 8288ff1e, 61ad11f3\n8ab3d114 ← 0f49d71e, c4bb0481, ec5ffe6b, bf93f259, 45d8e959, 47b151ca, 522506d1, bd305511\n000e1f65 ← 0f49d71e, c4bb0481, ec5ffe6b, bf93f259, 45d8e959, 47b151ca, 522506d1, bd305511\n2bdf810f ← fea5942a, 42756c07\nb6784d40 ← fea5942a, 42756c07, 45d8e959, 0f49d71e, a8298fbd, bf93f259, c4bb0481, 47b151ca\n1d1f5ac4 ← 326fd926, 88082a9b, 0b4a7612, 0e604fee, ba30a28d, b0a15d9a, 8269797e, df00fea2\nbe90bb15 ← b241b5ca, 1bea3966, 87421f27, b62a64ab, 5a4afaa5, 64498e7e, 70e98bb5, b26c10a0\n97fa3a0b ← 08e493f8, d85de8e1, ec5ffe6b, bf93f259, c4bb0481, 32d77f18, 7ad36aca, 8288ff1e\n376d6a5a ← 2c0b9bd7, d0fc96b7, a9036c3c, d0b76fb9, 4a5a43a5, ee74c678, 5a4afaa5, b26c10a0\n9eaa3b6e ← 7030af77, 8176a284, cffad050, e4e6b0cd, 406f0cbe, 40ce286d, 78945dde, c18faab2\n0181cf7b ← 99470e3f, f9f371cb, 2ed50036, 6948dde0, 8f183538, f6003a4c, 128d9fde, 634a80b8\n3209ff59 ← 99470e3f, f9f371cb, 2ed50036, 6948dde0, 8f183538, f6003a4c, 128d9fde, 634a80b8\n6a0b545c ← 99470e3f, a9036c3c, d0b76fb9, d0fc96b7, 2c0b9bd7, ee74c678, 4a5a43a5, cffad050, 46326b43, 631e014f, 777646a5, a1df8f1a, da09703b, e3afc8a3\na961a13e ← 7030af77, 8176a284, d0fc96b7, e4e6b0cd, 2c0b9bd7, 65c301a8, 8288ff1e, f401994a\n39a4c28c ← a9036c3c, d0b76fb9, 7030af77, d0fc96b7, 2c0b9bd7, ee74c678, 4a5a43a5, cffad050\n3e890700 ← 0f49d71e, 47b151ca, a9036c3c, d0b76fb9, bf93f259, c4bb0481, 45d8e959, 0791f2ad\ncdb79aa6 ← a9036c3c, d0b76fb9, 7030af77, d0fc96b7, 2c0b9bd7, ee74c678, 4a5a43a5, cffad050\ne0088de9 ← 0566122f, b7d4eede, 2c0b9bd7, 47b151ca, a9036c3c, d0b76fb9, bb7e4426, 2f2f5bd2\nf1a124b6 ← 99470e3f, 7030af77, d0fc96b7, 2c0b9bd7, 65c301a8, 8288ff1e, f401994a, f6003a4c\nfe09fcd0 ← 2ed50036, 0ac8f77a, 99ec3c56, d80686c2, 22189ad9, 784a5e0b, 079b53bf, 3de4d557\nca84f62d ← 00e962ae, d80686c2, f3d343f1, 0ab78c08, 2639f425, 4a952b96, 578f43f1, 7067553d\n1722a80f ← 8697bb2d, e81971f1, 0315d471, 30e6e01c, 8cf54bde, a7040bf1, a082d5be, 7e9ca71a\n1edfc1d1 ← e81971f1, 0315d471, 30e6e01c, 8697bb2d, 8cf54bde, a7040bf1, a082d5be, 7e9ca71a\n95c5138f ← 8697bb2d, 17f2fdc1, e81971f1, 0315d471, 30e6e01c, 8cf54bde, a7040bf1, a082d5be\n22954087 ← 4c815f13, 7bcafb49, e81971f1, 8cf54bde, 136a4bac, e1220ed4, 7e9ca71a, da31142e\nc2fa06f2 ← 0315d471, 30e6e01c, 8cf54bde, a7040bf1, a082d5be, 7e9ca71a, c821487b, da31142e\n196e6606 ← 65c301a8, 4a5a43a5, 4ccb319f, d0fc96b7, 0e0409d5, 2f2f5bd2, 5969873b, d76abd3e\n17667565 ← e81971f1, 0315d471, 30e6e01c, 8697bb2d, 8cf54bde, a7040bf1, a082d5be, 7e9ca71a\n5581cd7f ← e81971f1, 0315d471, 30e6e01c, 8697bb2d, 8cf54bde, a7040bf1, a082d5be, 7e9ca71a\ne6d842fb ← 0315d471, 30e6e01c, 8cf54bde, a7040bf1, a082d5be, 7e9ca71a, c821487b, da31142e\n0a7896e7 ← adf07168, 61b6e188, 2c0b9bd7, 65c301a8, 8288ff1e, f401994a, f6003a4c, d76abd3e",
-  "evidence": [],
+  "evidence": [
+    "PR-2041"
+  ],
   "workers": [
     {
       "role": "author",
       "provider": "codex",
       "model": "gpt-6.2-sol",
       "effort": "high",
-      "date": "2026-11-26"
+      "date": "2026-11-26",
+      "pr": "PR-2041"
     }
   ]
 }

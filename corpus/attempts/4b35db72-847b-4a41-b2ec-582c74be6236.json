@@ -14,14 +14,17 @@
   "kind": "derivation",
   "outcome": "blocked",
   "summary": "At 1c9e6607bc6e004abc94cdb41426dbd26d4a0e97, under the shared heavy-job lock, ran truth discover with the proved pool, a ranked cap of eight (plus eligible registered bridges), 3000 CLI heartbeats, batch four and two jobs. Duper searched the unfolded propositions. Lean-auto used Zipperposition for premise selection with Duper reconstruction. All seven targets had Lean declarations in the built library. Retrieval found no proved-pool candidate sharing the required vocabulary and a compatible binder anchor. These targets did not reach Duper. The four mixed-token priority targets use the selected Sum B E relation. Atom population, actual assertion, and operation agency also failed the retrieval gate.",
-  "evidence": [],
+  "evidence": [
+    "PR-2041"
+  ],
   "workers": [
     {
       "role": "author",
       "provider": "codex",
       "model": "gpt-6.2-sol",
       "effort": "high",
-      "date": "2026-11-26"
+      "date": "2026-11-26",
+      "pr": "PR-2041"
     }
   ],
   "blocker": "Supply an explicit same-domain premise bundle if an existing proved proposition bears on the target. For a genuine witness or framework input, continue its independent research rather than treating the absence of a candidate as proof failure."

@@ -56,7 +56,8 @@
     "d9a2d64b-0547-541a-9b3d-b9840c519f70",
     "899da724-479d-582b-9533-1852c53df6b8",
     "b374765e-a278-57d9-8449-bf24bd454cf6",
-    "f3e50c70-425e-58ad-981b-bdbbb4ca2bac"
+    "f3e50c70-425e-58ad-981b-bdbbb4ca2bac",
+    "PR-2041"
   ],
   "workers": [
     {
@@ -64,7 +65,8 @@
       "provider": "codex",
       "model": "gpt-6.2-sol",
       "effort": "high",
-      "date": "2026-11-26"
+      "date": "2026-11-26",
+      "pr": "PR-2041"
     }
   ],
   "blocker": "For unsupported binders or syntax, reuse an existing exact manual control where available, or supply a finite interpretation respecting the theorem's original frame, carriers and relations."
