@@ -10,6 +10,17 @@
   "summary": "The First Way says that the moved is in potency to that toward which it is being moved. Its adjacent same-respect argument distinguishes actual heat from potency to heat, while allowing potency to cold.",
   "blocker": "Fix the target respect to what the motion is toward. Heat already actual rules out potency to that same heat at the same time and in the same way in the example. The route needs PotencyAdopted as capacity together with lack of InAct for every MovedIn instance, including the transport of this same-time and same-way qualification into its untimed predicates.",
   "evidence": [
-    "5e028436-4f60-536a-a626-11e037977129"
+    "5e028436-4f60-536a-a626-11e037977129",
+    "PR-2024"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2024"
+    }
   ]
 }

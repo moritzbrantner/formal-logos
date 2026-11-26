@@ -10,6 +10,17 @@
   "summary": "The pinned Latta translation gives the general principle in §32, distinguishes contingent truths in §33, and applies sufficient reason to contingent truths in §36. §§37–38 separately argue for a final reason beyond the contingent series. The local target only asks for a reason token.",
   "blocker": "The principle addresses the recorded brute-contingency alternative by requiring a reason for the truth in question, even when unknown. Applying it requires a world-indexed contingent existent to yield a fact of the kind Leibniz covers and its sufficient reason to supply a token for the same existence fact in the model’s explains relation. The model does not require that a token be sufficient in Leibniz’s sense.",
   "evidence": [
-    "0e1bffc2-b521-52f0-9926-2c227d94dc57"
+    "0e1bffc2-b521-52f0-9926-2c227d94dc57",
+    "PR-2024"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2024"
+    }
   ]
 }

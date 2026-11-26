@@ -9,5 +9,17 @@
   "outcome": "blocked",
   "summary": "In the unpinned Adam–Tannery Meditation II, Descartes lists doubting under thinking and identifies his own current doubt as inseparable from his thought. The passage starts from that performance. The analyst target ranges over every performed act of doubting whether thought occurs and requires an occurrence and realization witness.",
   "blocker": "Admit an edition-level pinned witness of the cited range and recheck the reading before registering any claim. Relate the meditator’s first-person performance to the target’s act domain and its Realizes relation to distinguish episodes from the recorded dispositional alternative.",
-  "evidence": []
+  "evidence": [
+    "PR-2024"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2024"
+    }
+  ]
 }

@@ -10,6 +10,17 @@
   "summary": "Aquinas distinguishes the means of intellectual apprehension from the thing understood. The species is a form of the intellect in act as a likeness. I q.14 a.2 treats both the human possible intellect and the divine case, where the intellect itself is the species of divine self-understanding.",
   "blocker": "This supplies a species for human actual understanding and corrects an identification of that species with the external thing’s form. The route still needs the same species indexed by Intelligible and HasForm for every instance in Understands, including cases outside the human account. Divine self-understanding requires the identity reading in I q.14 a.2 rather than introducing a received likeness in God.",
   "evidence": [
-    "be3fca2f-c705-47f9-8ed6-11797d81d009"
+    "be3fca2f-c705-47f9-8ed6-11797d81d009",
+    "PR-2024"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2024"
+    }
   ]
 }

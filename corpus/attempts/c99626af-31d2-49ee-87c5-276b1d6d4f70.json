@@ -10,6 +10,17 @@
   "summary": "Aristotle distinguishes three senses at the outset. The account of capacity refers to its exercise. The substance comparison uses mature form and actuality as end. The temporal case uses generation or acquisition from an already actual source, with the prior actual and what comes to be the same in kind rather than number.",
   "blocker": "The text directly argues for qualified priority of actuality and identifies which temporal claim survives the case of a capacity preceding its own exercise. To reach ActPriorInRouteSense, select a priority sense, show how it is represented by the binary RoutePrior on beings, and justify an actual witness in the same respect for each InPotency instance. Priority of an account or end alone supplies no such witness.",
   "evidence": [
-    "0b73b0df-5927-492e-87d8-b1246f8b27bb"
+    "0b73b0df-5927-492e-87d8-b1246f8b27bb",
+    "PR-2024"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2024"
+    }
   ]
 }

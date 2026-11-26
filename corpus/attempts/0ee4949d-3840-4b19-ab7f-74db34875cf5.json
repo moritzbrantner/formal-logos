@@ -10,6 +10,17 @@
   "summary": "The body supports finality by arguing that an agent requires determination to a definite effect. It distinguishes directing one’s own action from being directed. The replies distinguish knowing an end and being directed to an end, and explain why a nonrational thing has natural or sensitive appetite rather than will.",
   "blocker": "The thesis challenges end-free natural agency directly. To apply it to EveryOperationHasAnEnd, every OperatesThrough witness, including the route’s immanent operations, must be covered by agency in the argument, and its determinate terminus must count as an end for the same operation in DirectedTo.",
   "evidence": [
-    "c877ee68-65a6-4576-9709-946cd0272288"
+    "c877ee68-65a6-4576-9709-946cd0272288",
+    "PR-2024"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2024"
+    }
   ]
 }

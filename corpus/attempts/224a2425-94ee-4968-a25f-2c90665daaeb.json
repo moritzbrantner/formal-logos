@@ -10,6 +10,17 @@
   "summary": "Aquinas explains why the powers of the soul flow from its essence, with the soul alone receiving some powers and the composite receiving others. The body contrasts proper and extraneous accidents. Ad 2 qualifies the subject’s active causality, and ad 3 describes natural resultance without a transition.",
   "blocker": "Aquinas gives a case of a subject actively contributing to a perfection in itself, as opposed to merely receiving it from outside. To instantiate the route’s existential, identify an actual proper accident with a respect, its subject with the same bearer at both ends, and qualified active resultance with the route’s CausesIn for that respect.",
   "evidence": [
-    "afac47a6-76ad-4b1f-9c1f-48be6246f6c3"
+    "afac47a6-76ad-4b1f-9c1f-48be6246f6c3",
+    "PR-2024"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2024"
+    }
   ]
 }

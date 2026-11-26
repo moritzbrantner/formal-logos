@@ -9,5 +9,17 @@
   "outcome": "rejected",
   "summary": "In the unpinned Second Replies, geometrical exposition, axiom IV refers to the first and total cause. Axiom V requires a cause of the idea’s objective reality that contains that reality formally or eminently. Meditatio III §§14–15 starts with the efficient and total cause and even allows an idea to arise from another idea, while requiring a first archetypal cause. The texts supply no generalization to every partial cause, which the route’s ObjectiveAdequacy would quantify over.",
   "blocker": "For the narrower sibling, obtain the pinned witnesses and couple an existence premise supplying an adequate or total cause with an adequacy premise restricted to that cause, or explicitly reconstruct the degree-of-reality comparison. Universal partial-cause adequacy would require a separate defense.",
-  "evidence": []
+  "evidence": [
+    "PR-2024"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2024"
+    }
+  ]
 }
