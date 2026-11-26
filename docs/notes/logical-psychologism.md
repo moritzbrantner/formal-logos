@@ -78,78 +78,22 @@ The F1 result `a7ecf1fe` is already the exact classical rebuttal of the case-pre
 
 The F6 control intentionally varies an uninterpreted relation. It therefore tests only the formal entailment from validity to the thin existential, not whether the empty relation represents an adequate philosophical account of rationality. The same separation applies to empirically correct or incorrect token acceptance. To obtain an actual reason witness, use the existing `reasonsFromWarrant` with the warranted-acceptance and two calibration premises listed above; to exclude global nihilism use `f6ExcludesNihilism` on that same Reason. Do not register a theorem that assumes an opaque bridge “if validity obtains then F6” and merely applies it.
 
-## Executable finite comparison (run in this session)
+## Finite comparison checked in Lean
 
-This Python 3 standard-library check exhausts all four truth valuations, all four Boolean acceptance profiles, and all four Boolean classifiers on the acceptance bit for each profile. It confirms the countervaluation and tests equal-data impossibility versus restored discrimination. In the training-only control both rules really have true premises; there is no vacuous-success artifact. The final two one-agent controls simply vary the thin reason relation; they are structural surrogates, not a model of the full psychology of a reasoner.
-
-```python
-from itertools import product
-
-rules = ('MP', 'AC')
-valuations = tuple(product((False, True), repeat=2))
-
-def evaluate(rule, p, q):
-    implication = not p or q
-    return (p and implication, q) if rule == 'MP' else (q and implication, p)
-
-def failures(rule, worlds):
-    return [w for w in worlds if evaluate(rule, *w) == (True, False)]
-
-valid = {r: not failures(r, valuations) for r in rules}
-assert valid == {'MP': True, 'AC': False}
-assert failures('AC', valuations) == [(False, True)]
-assert failures('MP', valuations) == []
-assert all(not failures(r, [(True, True)]) for r in rules)
-# Both rules actually have true premises in the restricted trial.
-assert all(evaluate(r, True, True) == (True, True) for r in rules)
-for flags in product((False, True), repeat=2):
-    observed = dict(zip(rules, flags))
-    classifiers = [dict(zip((False, True), outputs))
-                   for outputs in product((False, True), repeat=2)]
-    exact = [c for c in classifiers if all(c[observed[r]] == valid[r] for r in rules)]
-    assert bool(exact) == (flags[0] != flags[1])
-    print(f'acceptance {flags}: {len(exact)} exact Boolean classifiers')
-# Thin F6 and a psychological acceptance relation can coexist or not.
-for reason in (False, True):
-    accepts = True
-    f6 = reason  # one-agent, one-content domain
-    nihilism = not reason
-    assert accepts and (f6 != nihilism)
-print('MP countervaluations:', failures('MP', valuations))
-print('AC countervaluations:', failures('AC', valuations))
-print('PASS: four valuations, four acceptance profiles, all four classifiers per profile; two F6 relation controls')
-```
-
-Actual output:
-
-```text
-acceptance (False, False): 0 exact Boolean classifiers
-acceptance (False, True): 1 exact Boolean classifiers
-acceptance (True, False): 1 exact Boolean classifiers
-acceptance (True, True): 0 exact Boolean classifiers
-MP countervaluations: []
-AC countervaluations: [(False, True)]
-PASS: four valuations, four acceptance profiles, all four classifiers per profile; two F6 relation controls
-```
-
-Run from the note without retyping the check:
-
-```sh
-python3 - <<'PY'
-from pathlib import Path
-note = Path("docs/notes/logical-psychologism.md").read_text()
-code = note.split("```python\n", 1)[1].split("\n```", 1)[0]
-exec(compile(code, "logical_psychologism_check.py", "exec"))
-PY
-```
-
-This is an exhaustive finite test of the analyst representation only. It does not run Lean, Comparator or NanoDa.
+Lean checks the four valuations, acceptance profiles and Boolean classifiers.
+Modus ponens has no countervaluation and affirming the consequent fails at
+`(false, true)`. At the restricted valuation `(true, true)` both rules have
+true premises and conclusions. Exactly one Boolean classifier works when
+the acceptance bits differ, and none works when the bits agree. The existing
+F6 models vary the one-agent reason relation independently of validity.
+[Finite rules and classifiers](../../TruthCore/Logic/LogicalPsychologism.lean#L262) · [F6 controls](../../TruthCore/Logic/LogicalPsychologism.lean#L99)
 
 ## Verification and handoff
 
 [Attempt record](../../corpus/attempts/e1fa608e-9eb1-49ab-8c79-9d92cc499ecf.json). Draft #1990 continues #1989 and #1007; the other draft was left unchanged to avoid a cross-lane conflict. Main baseline `a9819b148bd4a7c089cff9dc07f95c209452511e`; initial checkpoint `9af0c608f434d05f52f5b72017e25e884a40c5ab`, rival and root mapping checkpoint `2584ab7214fa502d4db524ec9df92fca3845cffa`. Read exact F1/F6 records and declarations, the above Challenges/Solutions, authority controls, prior correction and basing notes, repository AGENTS and research skills. The exact registered proof `b41427d3` composes the existential from `SomePropositionHolds.somePropositionHolds` rather than re-proving the True witness in that theorem; selecting True is an explanatory instantiation in the proof-uptake task. No new attributed source claims.
 
-The initial connector session checked the Python comparison. The integrated Lean and Python verification is recorded at the end of this note.
+The initial connector session checked the finite comparison in Python. The
+Lean checks now appear above and in the follow-up at the end of this note.
 
 Run from the prepared checkout of this note with the release `truth` CLI and pinned worker toolchain:
 
@@ -475,123 +419,19 @@ metaphysical admissibility of a world, or reason-giving authority.
 The proof uses classical reasoning only for the coverage equivalence;
 the omitted-world construction itself is a direct counterexample.
 
-### 8. Executable follow-up comparison
+### 8. Finite follow-up checked in Lean
 
-The following exact standard-library script ran successfully in the
-continuation's execution container. It enumerates all fourteen nonempty
-proper valuation subsets and all 256 singleton premise/conclusion
-truth-function pairs for each nonempty subset, all sixteen connective
-tables, all eight syntactic acceptance patterns, and exact rational
-reliability controls. The earlier Python comparison was also rerun
-successfully.
+The four-valuation fixture has fourteen nonempty proper scopes. Each admits
+the explicit tautological-premise counterexample from the existing omission
+theorem, while full coverage preserves entailment. The connective census
+checks all sixteen tables and the eight syntactic response inputs, including
+the two tables compatible with diagonal labels and MP soundness. AC soundness
+selects equivalence, and a true first off-diagonal label selects implication.
+The five exact-rational examples check the nonzero conditional error, the
+prior, and the strict positive-relevance criterion. On the uniform roster,
+zero countervaluation mass agrees with entailment for all 256 pairs.
+[Scope count](../../TruthCore/Logic/LogicalPsychologism.lean#L274) · [Omitted valuation](../../TruthCore/Logic/LogicalPsychologism.lean#L280) · [Connective census](../../TruthCore/Logic/LogicalPsychologism.lean#L298) · [Exact reliability](../../TruthCore/Logic/LogicalPsychologism.lean#L322) · [Uniform mass](../../TruthCore/Logic/LogicalPsychologism.lean#L332)
 
-```python
-from fractions import Fraction as F
-from itertools import product, combinations
-
-V = tuple(product((0, 1), repeat=2))
-T = tuple(product((0, 1), repeat=4))
-TOP = (1, 1, 1, 1)
-MP = lambda f: f[V.index((1, 0))] == 0
-AC = lambda f: f[V.index((0, 1))] == 0
-material = tuple(int(not p or q) for p, q in V)
-equivalence = tuple(int(p == q) for p, q in V)
-
-def entails(g, h, scope):
-    return all(not g[i] or h[i] for i in scope)
-
-full = tuple(range(4))
-proper = 0
-for n in range(1, 5):
-    for scope in combinations(full, n):
-        false_positives = [(g, h) for g in T for h in T
-                           if entails(g, h, scope) and not entails(g, h, full)]
-        assert bool(false_positives) == (scope != full)
-        if scope != full:
-            proper += 1
-            omitted = next(i for i in full if i not in scope)
-            target = tuple(int(i != omitted) for i in full)
-            assert entails(TOP, target, scope)
-            assert not entails(TOP, target, full)
-            assert all(TOP[i] for i in scope)
-print('Scope: 14 nonempty proper subsets each admit nonvacuous false positives; full scope admits none.')
-assert proper == 14
-
-# Total syntactic response map on all subsets of the three acceptance flags.
-# Premise flags concern accepted tokens, not their actual truth.
-def transition(flags):
-    p, q, c = flags
-    return (p or (q and c), q or (p and c), c)
-response = tuple(transition(x) for x in product((0, 1), repeat=3))
-assert len(response) == 8
-# Both interpretations give exactly the same truths in both diagonal cases.
-for p, q in ((0, 0), (1, 1)):
-    i = V.index((p, q))
-    assert material[i] == equivalence[i] == 1
-    assert transition((p, q, material[i])) == transition((p, q, equivalence[i]))
-assert MP(material) and MP(equivalence)
-assert not AC(material) and AC(equivalence)
-# Restrict to truth-functions with these two observed labels and MP soundness.
-compatible = [f for f in T if f[0] == f[3] == 1 and MP(f)]
-assert set(compatible) == {material, equivalence}
-assert [f for f in compatible if AC(f)] == [equivalence]
-assert [f for f in compatible if f[1] == 1] == [material]
-# A noncircular positive computation: once truth-functional calibration is
-# supplied, all sixteen truth tables satisfy the direct MP/AC characterizations.
-for f in T:
-    assert MP(f) == all(not(p and f[i]) or q for i, (p, q) in enumerate(V))
-    assert AC(f) == all(not(q and f[i]) or p for i, (p, q) in enumerate(V))
-print('Content: 16 tables and 8 total syntactic input patterns; diagonal labels plus MP leave two tables; AC soundness picks equivalence, off-diagonal true label picks material implication.')
-
-# Conditional failure probability of AC given actually true premises.
-# Every world has positive mass; error can be arbitrarily small without being zero.
-for n in (4, 10, 100, 1000, 1000000):
-    mass = (F(1,n), F(1,n), F(1,n), F(n-3,n))
-    assert sum(mass) == 1 and min(mass) > 0
-    eligible = [i for i,(p,q) in enumerate(V) if q and material[i]]
-    error = sum(mass[i] for i in eligible if not V[i][0]) / sum(mass[i] for i in eligible)
-    assert error == F(1,n-2) and error > 0
-    prior = sum(mass[i] for i, (p, _) in enumerate(V) if p)
-    assert prior == F(n-2, n) and 1-error == F(n-3, n-2)
-    assert (1-error > prior) == (n > 4)
-    print(f'AC conditional error at n={n}: {error}')
-# In the finite full-support setting, an exact zero error mass among countervaluations
-# is equivalent to entailment; no conditional probability when premise mass is zero.
-mass = (F(1,4),)*4
-for g in T:
-    for h in T:
-        err = sum(m for i,m in enumerate(mass) if g[i] and not h[i])
-        assert (err == 0) == entails(g, h, full)
-print('PASS: scope, interpretation, and exact reliability controls')
-```
-
-Output:
-
-```text
-Scope: 14 nonempty proper subsets each admit nonvacuous false positives; full scope admits none.
-Content: 16 tables and 8 total syntactic input patterns; diagonal labels plus MP leave two tables; AC soundness picks equivalence, off-diagonal true label picks material implication.
-AC conditional error at n=4: 1/2
-AC conditional error at n=10: 1/8
-AC conditional error at n=100: 1/98
-AC conditional error at n=1000: 1/998
-AC conditional error at n=1000000: 1/999998
-PASS: scope, interpretation, and exact reliability controls
-```
-
-To rerun both Python comparisons and build the Lean module from a prepared checkout:
-
-```sh
-python3 - <<'PY'
-from pathlib import Path
-note = Path("docs/notes/logical-psychologism.md").read_text()
-for i, part in enumerate(note.split("```python\n")[1:], 1):
-    code = part.split("\n```", 1)[0]
-    exec(compile(code, f"logical_psychologism_check_{i}.py", "exec"), {})
-PY
-python3 scripts/worker_env.py -- lake build TruthCore.Logic.LogicalPsychologism
-target/release/truth novelty 'restricted truth preservation is complete iff it covers every isolatable countervaluation'
-target/release/truth novelty 'inferential role soundness and truth-functional calibration determine a connective'
-target/release/truth frontier-diff --base "$(git merge-base HEAD origin/main)"
-```
-
-Both Python comparisons passed, including the distinction between positive relevance and high conditional accuracy. The pinned toolchain checks the Lean comparisons together in the library build. The registered correction, validity and reason results retain their individual certificates. The remaining application concerns a particular subject’s grounds and uptake.
+The registered correction, validity and reason results retain their
+individual certificates. The remaining application concerns a particular
+subject’s grounds and uptake.
