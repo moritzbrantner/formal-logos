@@ -1,0 +1,11 @@
+{
+  "id": "3b2bf87a-279c-43d9-a0d0-b0e36f38c4ed",
+  "label": "One minimal exercise excludes an identity return under backward lifting",
+  "argument_id": "0eb055b1-5ee8-4c29-90e8-505f884e2592",
+  "challenge_module": "TruthCore.Results.Aquinas.DeEnte.FirstIdentityExercise.Challenge",
+  "solution_module": "TruthCore.Results.Aquinas.DeEnte.FirstIdentityExercise.Solution",
+  "theorem": "TruthCore.Results.Aquinas.DeEnte.FirstIdentityExercise.noReturnOfMinimalExercise",
+  "comparator_config": "results/3b2bf87a-279c-43d9-a0d0-b0e36f38c4ed/comparator.json",
+  "status": "solution-present",
+  "description": "Every selected exercise of each recipient has an eligible predecessor exercise for each actual esse supplier. Apply this through the whole proposed loop into the chosen exercise of the actual identity bearer. The earlier exercise then has that same bearer. Conversely, if the fibre is inhabited and every C edge projects to an actual esse-supplier edge, the absence of an identity return excludes a same-bearer predecessor for every exercise of that bearer. The checked model uses the earlier rooted reciprocal dependents. Every bearer has infinitely many indexed exercises, and the two dependents have a cyclic pair of exercises. The common first giver still has a minimal exercise. An operational ordering of events warrants an application to esse only if the productive links are identified on this same interpretation."
+}

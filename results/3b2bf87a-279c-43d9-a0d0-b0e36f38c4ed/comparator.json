@@ -1,0 +1,15 @@
+{
+  "challenge_module": "TruthCore.Results.Aquinas.DeEnte.FirstIdentityExercise.Challenge",
+  "solution_module": "TruthCore.Results.Aquinas.DeEnte.FirstIdentityExercise.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Aquinas.DeEnte.FirstIdentityExercise.noReturnOfMinimalExercise",
+    "TruthCore.Results.Aquinas.DeEnte.FirstIdentityExercise.minimalExerciseOfNoReturn",
+    "TruthCore.Results.Aquinas.DeEnte.FirstIdentityExercise.minimalWithInfiniteFibreAndOtherCycle"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "enable_nanoda": true
+}

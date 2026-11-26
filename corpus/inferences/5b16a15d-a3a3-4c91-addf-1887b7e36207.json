@@ -1,0 +1,13 @@
+{
+  "id": "5b16a15d-a3a3-4c91-addf-1887b7e36207",
+  "label": "One minimal exercise excludes an identity return under backward lifting (inference)",
+  "input_statement_ids": [
+    "4bd2d25b-27c6-4cfe-9b5f-bfa11511c176",
+    "004ded49-94d4-42ff-a58b-1fc592e72a02"
+  ],
+  "output_statement_id": "41c858ee-07ee-41db-9693-b5fef6154efe",
+  "rule": "Lift a proposed bearer loop backwards from the selected exercise into a same-bearer predecessor",
+  "meaning": "Every selected exercise of each recipient has an eligible predecessor exercise for each actual esse supplier. Apply this through the whole proposed loop into the chosen exercise of the actual identity bearer. The earlier exercise then has that same bearer. Conversely, if the fibre is inhabited and every C edge projects to an actual esse-supplier edge, the absence of an identity return excludes a same-bearer predecessor for every exercise of that bearer. The checked model uses the earlier rooted reciprocal dependents. Every bearer has infinitely many indexed exercises, and the two dependents have a cyclic pair of exercises. The common first giver still has a minimal exercise. An operational ordering of events warrants an application to esse only if the productive links are identified on this same interpretation.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}
