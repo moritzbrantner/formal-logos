@@ -1,0 +1,10 @@
+{
+  "id": "4a69bcaa-cb2c-49f5-8407-376a86695ab5",
+  "label": "Test by Four positive authorship evidence controls by construction",
+  "subject_kind": "result",
+  "subject_id": "858b9d75-065d-491c-bb54-419ff9337515",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "f2504092-91c0-53f1-a59b-2402ccb7b0a7",
+  "note": "Tests whether positive observation evidence gives full classification using the same-domain ambiguity, distinctive-sign, full discrimination and added imitator controls."
+}

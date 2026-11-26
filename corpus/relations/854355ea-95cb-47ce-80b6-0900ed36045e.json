@@ -1,0 +1,10 @@
+{
+  "id": "854355ea-95cb-47ce-80b6-0900ed36045e",
+  "label": "Test by Conditional existential named support is equivalent to coverage of every admissible CORRECT…",
+  "subject_kind": "result",
+  "subject_id": "7182ccf9-5ea0-56c5-8e4d-b57f2500d29e",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "9108832f-0ef5-5036-8550-f405c7203ff4",
+  "note": "Checks the same-dictionary equivalence between named correct support and covering all admissible correct accounts."
+}
