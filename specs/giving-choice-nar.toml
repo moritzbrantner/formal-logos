@@ -21,6 +21,7 @@ meaning = "Reflexivity places the representative in its own withholding cell. Br
 [[argument]]
 id = "NAR from admissible root cells and exclusion of NECESSARY_2 recipient withholding"
 theorem = "nar_of_admissible_cells_and_recipient_exclusion"
+strong_version_needed = {"0dd78706-e6f7-40a6-9232-eac3df1c0ae9" = "Retains the frozen all-recipient proof for comparison. The necessary-only route supplies the restriction that suffices for NAR."}
 premises = ["0c27f65a-6a6b-438a-b96c-b2bab9f21ac3", "46a468b2-8132-4ef4-bd31-6e8292013f3b", "0dd78706-e6f7-40a6-9232-eac3df1c0ae9", "No admissible withholding cell for a NECESSARY_2 grounded recipient"]
 conclusion = "43651417-cd19-43d7-8f70-8def61acb0f0"
 axioms = []

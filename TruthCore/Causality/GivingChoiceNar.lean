@@ -30,4 +30,15 @@ def NoAdmissibleWithholdingCellForNecessaryGrounded
       F.history.ontic.ExistsAt (world k) g →
       ¬ Cstit g k (fun j => ¬ Produces F world g x j)
 
+/-- The withholding-cell premise restricted to NECESSARY_2 actual recipients. -/
+def RootsHaveNecessaryWithholdingCells
+    {W B T R M H : Type} {C : BranchingFrame M H B} {m : M}
+    (F : CausalityFrame W B T R) (world : C.Through m → W)
+    (concrete : B → Prop) (G : W → B → B → Prop) (w : W) : Prop :=
+  ∀ g x, ActualRoot (groundProfile F concrete G) w g →
+    ActualConcrete (groundProfile F concrete G) w x →
+    ActualConcreteGround (groundProfile F concrete G) w g x →
+    NecessaryAt F.history.ontic w x →
+    ∃ k, Cstit g k (fun j => ¬ Produces F world g x j)
+
 end TruthCore.Causality.GivingChoiceNar

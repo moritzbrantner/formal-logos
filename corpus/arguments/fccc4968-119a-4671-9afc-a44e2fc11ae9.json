@@ -31,5 +31,8 @@
     "205a39c3-915d-5fe4-8076-a9ff91329e08",
     "83264cf5-01fe-52fc-9a00-eeb024f6496e",
     "c529e8d3-43e3-53a8-a82f-3955e9815265"
-  ]
+  ],
+  "strong_version_needed": {
+    "0dd78706-e6f7-40a6-9232-eac3df1c0ae9": "Retains the frozen all-recipient proof for comparison. The necessary-only route supplies the restriction that suffices for NAR."
+  }
 }

@@ -19,6 +19,7 @@ disambiguations = ["DISAMB-CONCRETE-ABSTRACT-CRITERIA"]
 [[argument]]
 id = "Admissible root withholding cells supply accessible per-effect withholding"
 theorem = "root_withholding_of_cells"
+strong_version_needed = {"0dd78706-e6f7-40a6-9232-eac3df1c0ae9" = "The conclusion quantifies over every grounded actual concretum, including contingent recipients. Necessary-recipient coverage alone supplies no cell for that case."}
 premises = ["Actual root choice histories map to accessible worlds retaining the same root", "Each grounded actual concretum has a root choice cell that withholds giving it being"]
 conclusion = "fbd0a6d3-5ca6-4f17-8651-ed0d6989c747"
 axioms = []
