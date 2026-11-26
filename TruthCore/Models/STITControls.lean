@@ -239,7 +239,7 @@ theorem worldAlignment :
   · intro admits
     exact (admits (here false false (false, false))).1.elim Bool.noConfusion Bool.noConfusion
   · exact willed_two_way_of_cell (A := agency (some true)) (h := actual) (x := true)
-      (Or.inl rfl) admit (fun _ => ⟨fun _ => Iff.rfl, fun _ => Iff.rfl⟩)
+      admit (fun _ => ⟨fun _ => Iff.rfl, fun _ => Iff.rfl⟩)
       ⟨true, rfl, rfl, ⟨(), rfl, rfl, rfl⟩, rfl, rfl, rfl⟩ (choice false).2
 
 /-- Two nonempty outputs with no shared recipient. Either recipient can be

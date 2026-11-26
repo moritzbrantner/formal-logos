@@ -635,29 +635,41 @@ control, the obligation and the agent's epistemic and excusing conditions.
 [Checked controls](../../TruthCore/Models/STITControls.lean)
 
 The giving interpretation evaluates the existing `GivesTo` in each mapped
-world of the shared temporal history. Giving and a recipient's existence
-agree only under `TracksExistence` on the represented worlds. Factivity
-supports the forward direction. The converse requires dependence on this
-very giver, so it can fail if the recipient is independently sustained.
+world of the shared temporal history. On each represented history,
+`TracksExistence` says that giving by this giver entails the recipient's
+existence, and that the recipient's existence entails giving by this giver.
+Factivity supports the first direction. Exclusive dependence on this giver
+could support the converse. A second giver may coexist with both implications.
+The converse fails if some represented history has the recipient existing
+without this giver giving it being.
 Under the biconditional, an actual cell ensuring existence and an available
 cell ensuring absence give dstit for production and a cell ensuring
 nonproduction. The theorem excluding NECESSITATE_5 maps the compared histories
 to accessible worlds where the same giver exists. Restricting access to
 the producing world preserves dstit in the finite comparison and restores
 NECESSITATE_5. To obtain WILL_CAPACITY_VERSUS_WILLED_GIVING_2 from the
-actual exercise in sense _3, the withholding witness must also retain
-the giver's intrinsic states and external conditions. Even the resulting
-world witness is silent about contrastive explanation of the selected
-exercise. No identification of the senses or modalities is assumed.
+actual exercise in sense _3, the theorem takes all-history admissibility
+and setup agreement as sufficient interpretation assumptions. Admissibility
+supplies the giver's presence at the selected history. The existential
+alternative uses accessibility, the giver's presence and agreement of
+intrinsic states and external conditions at the withholding witness.
+Contrastive explanation of the selected exercise remains a further question.
 [Typed giving interpretation](../../TruthCore/Causality/GivingChoice.lean)
 
 The graph uses two open premises, admissibility of the mapped histories
 (`46a468b2`) and a withholding cell for each grounded actual concretum
 (`0dd78706`). Their common world map and decision frame are bound in
-`root_withholding_of_cells`. Reflexivity supplies a history in its own
-withholding cell. This yields NAR premise (a) (`fbd0a6d3`), used by
-`narFromRootWithholding` with factivity and (b2) to support `43651417`.
-The result neither needs rational exercise nor supplies it. Its
+`root_withholding_of_cells`. A withholding choice cell guarantees
+nonproduction at every history in the selected representative's setoid
+class for that agent and moment. One history of nonproduction does not
+establish control over a cell. Reflexivity gives nonproduction at the
+chosen representative itself. The proof uses the sufficient all-history
+admissibility premise only at that representative for each effect. This
+yields NAR premise (a) (`fbd0a6d3`). In `narFromRootWithholding`, the
+`IntellectualGodCommonRootAt` premise and (b2), giving every necessary
+grounded recipient wherever accessible and the root exists, supply the
+other two inputs for `43651417`. The root withholding result concerns
+choice and giving, independently of power classification. Its
 nonvacuity control keeps the same grounding edge and withholding cell when
 access is blocked, which removes admissibility and premise (a). A cell per
 recipient can vary with the recipient. The two exclusive nonempty output

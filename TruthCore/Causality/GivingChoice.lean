@@ -45,8 +45,10 @@ def Produces (F : CausalityFrame W B T R) (world : C.Through m → W) (g x : B) 
   fun k => GivesTo F (world k) g x
 
 /-- OPEN identification of this recipient's existence with its production
-by this giver, in just the represented worlds. Factivity and exclusive
-dependence are both needed for the biconditional. -/
+by this giver, in just the represented worlds. Giving entails presence of x,
+and presence of x entails giving by g. Exclusive dependence on g is one
+possible rationale for the converse. A represented world where x exists
+and g does not give x being falsifies that converse. -/
 def TracksExistence (F : CausalityFrame W B T R) (world : C.Through m → W) (g x : B) : Prop :=
   ∀ k, Produces F world g x k ↔ F.history.ontic.ExistsAt (world k) x
 
@@ -73,19 +75,19 @@ theorem dstit_excludes_fixed
   exact does.2 (fun k => fixed.2 (world k) (admit k).1 (admit k).2)
 
 /-- The same actual rational exercise and an available withholding cell
-suffice for the existing existential same-setup giving sense. This is a
-one-way consequence: mere withholding at a world need not be an action. -/
+suffice for the existing existential same-setup giving sense. The all-history
+premises supply the giver’s presence at the selected history and accessibility,
+presence and setup agreement at the withholding witness. -/
 theorem willed_two_way_of_cell
     {F : CausalityFrame W B T R} {A : AgencyFrame W B S P} {world : C.Through m → W}
     {h : C.Through m} {g x : B} {available : TruthCore.Modal.Frame (C.Through m)}
-    (existsHere : F.history.ontic.ExistsAt (world h) g)
     (admit : Admissible F world (world h) g)
     (same : SameSetup A world (world h) g) (rational : RationallyGivesAt F A (world h) g x)
     (cell : CanEnsure available g h (fun k => ¬ Produces F world g x k)) :
     WilledTwoWayAt F A (world h) g := by
   obtain ⟨p, owned, rationalPower, givesBy⟩ := rational
   obtain ⟨k, _, withheld⟩ := canEnsure_can cell
-  exact ⟨existsHere, p, x, world k, owned, rationalPower, (admit k).1, (admit k).2,
+  exact ⟨(admit h).2, p, x, world k, owned, rationalPower, (admit k).1, (admit k).2,
     same k, givesBy, withheld⟩
 
 /-- OPEN, for the selected grounding profile. Each actual root's grounded
@@ -99,7 +101,8 @@ def RootsHaveWithholdingCells (F : CausalityFrame W B T R) (world : C.Through m 
     ActualConcreteGround (groundProfile F concrete G) w g x →
     ∃ k, Cstit g k (fun j => ¬ Produces F world g x j)
 
-/-- OPEN scope for the represented continuations of the roots. -/
+/-- OPEN sufficient interpretation for the represented continuations of the
+roots. The root withholding result applies it only at each chosen representative. -/
 def RootHistoriesAdmissible (F : CausalityFrame W B T R) (world : C.Through m → W)
     (concrete : B → Prop) (G : W → B → B → Prop) (w : W) : Prop :=
   ∀ g, ActualRoot (groundProfile F concrete G) w g → Admissible F world w g
