@@ -1,0 +1,52 @@
+{
+  "id": "01a04e4a-9e8c-4886-9559-a9c6d97b7213",
+  "label": "Bounded proved-pool discovery on God-existence and attribute routes",
+  "statement_ids": [
+    "76e0f716-8541-583b-94b4-bffae59c94bb",
+    "47aff057-35ef-5418-930b-fef72e1104d2",
+    "8ab3d114-d6e2-5f6d-805b-ae901f56d39b",
+    "000e1f65-6e74-5519-bbf3-300d5f61ada8",
+    "2bdf810f-f7ca-4732-b661-378f54fbd6d4",
+    "b6784d40-65cb-444d-9027-b93a074592ac",
+    "1d1f5ac4-011e-461a-b8bd-14409b5dddf9",
+    "be90bb15-c2ce-44cd-ae2d-5ec6dc4c24c9",
+    "97fa3a0b-eb23-5fb1-9741-c1f09fb72206",
+    "376d6a5a-c179-5090-b57c-f9a371222899",
+    "9eaa3b6e-ad2f-5776-ab26-03cfa9f54ad8",
+    "0181cf7b-9934-4d4b-b7e1-7583e3c3a7cd",
+    "3209ff59-a0ec-4e70-8198-63c3056628a4",
+    "6a0b545c-d3bb-52d1-b0b7-c3ea48febb92",
+    "a961a13e-6caf-5864-ba84-10773f0c8b2e",
+    "39a4c28c-4a75-5918-96bf-16a5acd8e783",
+    "3e890700-3a15-5dd5-bc71-ec03d3466139",
+    "cdb79aa6-eaff-5fd8-b094-410d9df021c0",
+    "e0088de9-28eb-533c-a1e7-662f780cc0e2",
+    "f1a124b6-5df4-5488-9411-5f85f9fee173",
+    "fe09fcd0-c767-5218-9d97-9a170f91a64f",
+    "ca84f62d-67cb-58a6-bc3e-a631ab46e3d1",
+    "1722a80f-47a4-5605-8b66-b3534e457bcb",
+    "1edfc1d1-34d4-4f3e-99e6-e07a6ba58ffc",
+    "95c5138f-e3cc-552d-9846-ab8dc84502f4",
+    "22954087-d5fb-4bd3-bcb7-5d5167016988",
+    "c2fa06f2-cf36-5958-b69a-ef274b45014c",
+    "196e6606-d61b-59c4-a12b-7ce056936b92",
+    "17667565-81e2-55d7-a269-a569f2449caf",
+    "5581cd7f-43b3-5aa1-b18d-36b8a44a9681",
+    "e6d842fb-fdcf-5da0-9c45-e576e2d5d842",
+    "0a7896e7-fc8a-55b2-a368-978bda235b31"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "failed",
+  "summary": "At 1c9e6607bc6e004abc94cdb41426dbd26d4a0e97, under the shared heavy-job lock, ran truth discover with the proved pool, a ranked cap of eight (plus eligible registered bridges), 3000 CLI heartbeats, batch four and two jobs. Duper searched the unfolded propositions. Lean-auto used Zipperposition for premise selection with Duper reconstruction. The following exact retrieved bundles remained unresolved. A failed search does not refute a target or settle whether its ranked bundle entails it. Each line gives the target and the candidate IDs in supplied order.\n76e0f716 ← 419363e2, 7c3da33e, ef721eab, 0628359b, c85e8ef5, 0ab78c08, 578f43f1, 6b83bc10\n47aff057 ← bf93f259, 47b151ca, 0791f2ad, 08e493f8, 0f49d71e, d85de8e1, 8288ff1e, 61ad11f3\n8ab3d114 ← 0f49d71e, c4bb0481, ec5ffe6b, bf93f259, 45d8e959, 47b151ca, 522506d1, bd305511\n000e1f65 ← 0f49d71e, c4bb0481, ec5ffe6b, bf93f259, 45d8e959, 47b151ca, 522506d1, bd305511\n2bdf810f ← fea5942a, 42756c07\nb6784d40 ← fea5942a, 42756c07, 45d8e959, 0f49d71e, a8298fbd, bf93f259, c4bb0481, 47b151ca\n1d1f5ac4 ← 326fd926, 88082a9b, 0b4a7612, 0e604fee, ba30a28d, b0a15d9a, 8269797e, df00fea2\nbe90bb15 ← b241b5ca, 1bea3966, 87421f27, b62a64ab, 5a4afaa5, 64498e7e, 70e98bb5, b26c10a0\n97fa3a0b ← 08e493f8, d85de8e1, ec5ffe6b, bf93f259, c4bb0481, 32d77f18, 7ad36aca, 8288ff1e\n376d6a5a ← 2c0b9bd7, d0fc96b7, a9036c3c, d0b76fb9, 4a5a43a5, ee74c678, 5a4afaa5, b26c10a0\n9eaa3b6e ← 7030af77, 8176a284, cffad050, e4e6b0cd, 406f0cbe, 40ce286d, 78945dde, c18faab2\n0181cf7b ← 99470e3f, f9f371cb, 2ed50036, 6948dde0, 8f183538, f6003a4c, 128d9fde, 634a80b8\n3209ff59 ← 99470e3f, f9f371cb, 2ed50036, 6948dde0, 8f183538, f6003a4c, 128d9fde, 634a80b8\n6a0b545c ← 99470e3f, a9036c3c, d0b76fb9, d0fc96b7, 2c0b9bd7, ee74c678, 4a5a43a5, cffad050, 46326b43, 631e014f, 777646a5, a1df8f1a, da09703b, e3afc8a3\na961a13e ← 7030af77, 8176a284, d0fc96b7, e4e6b0cd, 2c0b9bd7, 65c301a8, 8288ff1e, f401994a\n39a4c28c ← a9036c3c, d0b76fb9, 7030af77, d0fc96b7, 2c0b9bd7, ee74c678, 4a5a43a5, cffad050\n3e890700 ← 0f49d71e, 47b151ca, a9036c3c, d0b76fb9, bf93f259, c4bb0481, 45d8e959, 0791f2ad\ncdb79aa6 ← a9036c3c, d0b76fb9, 7030af77, d0fc96b7, 2c0b9bd7, ee74c678, 4a5a43a5, cffad050\ne0088de9 ← 0566122f, b7d4eede, 2c0b9bd7, 47b151ca, a9036c3c, d0b76fb9, bb7e4426, 2f2f5bd2\nf1a124b6 ← 99470e3f, 7030af77, d0fc96b7, 2c0b9bd7, 65c301a8, 8288ff1e, f401994a, f6003a4c\nfe09fcd0 ← 2ed50036, 0ac8f77a, 99ec3c56, d80686c2, 22189ad9, 784a5e0b, 079b53bf, 3de4d557\nca84f62d ← 00e962ae, d80686c2, f3d343f1, 0ab78c08, 2639f425, 4a952b96, 578f43f1, 7067553d\n1722a80f ← 8697bb2d, e81971f1, 0315d471, 30e6e01c, 8cf54bde, a7040bf1, a082d5be, 7e9ca71a\n1edfc1d1 ← e81971f1, 0315d471, 30e6e01c, 8697bb2d, 8cf54bde, a7040bf1, a082d5be, 7e9ca71a\n95c5138f ← 8697bb2d, 17f2fdc1, e81971f1, 0315d471, 30e6e01c, 8cf54bde, a7040bf1, a082d5be\n22954087 ← 4c815f13, 7bcafb49, e81971f1, 8cf54bde, 136a4bac, e1220ed4, 7e9ca71a, da31142e\nc2fa06f2 ← 0315d471, 30e6e01c, 8cf54bde, a7040bf1, a082d5be, 7e9ca71a, c821487b, da31142e\n196e6606 ← 65c301a8, 4a5a43a5, 4ccb319f, d0fc96b7, 0e0409d5, 2f2f5bd2, 5969873b, d76abd3e\n17667565 ← e81971f1, 0315d471, 30e6e01c, 8697bb2d, 8cf54bde, a7040bf1, a082d5be, 7e9ca71a\n5581cd7f ← e81971f1, 0315d471, 30e6e01c, 8697bb2d, 8cf54bde, a7040bf1, a082d5be, 7e9ca71a\ne6d842fb ← 0315d471, 30e6e01c, 8cf54bde, a7040bf1, a082d5be, 7e9ca71a, c821487b, da31142e\n0a7896e7 ← adf07168, 61b6e188, 2c0b9bd7, 65c301a8, 8288ff1e, f401994a, f6003a4c, d76abd3e",
+  "evidence": [],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26"
+    }
+  ]
+}
