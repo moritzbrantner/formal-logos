@@ -223,6 +223,20 @@ pub struct WorkerArgs {
     pub open: bool,
 }
 
+/// The `bottlenecks` options (it also reads `--limit` and
+/// `--authored-only-by`).
+#[derive(Default)]
+pub struct BottleneckArgs {
+    /// Whether any of them was given.
+    pub flags: bool,
+    /// `--stage N`, repeatable.
+    pub stages: Vec<u64>,
+    /// `--min-arguments N`
+    pub min_arguments: Option<usize>,
+    /// `--min-routes N`
+    pub min_routes: Option<usize>,
+}
+
 /// Every option of every command, parsed in one pass in token order.
 pub struct Args {
     pub machine: bool,
@@ -263,6 +277,7 @@ pub struct Args {
     /// any number).
     pub modules: Vec<String>,
     pub workers: WorkerArgs,
+    pub bottlenecks: BottleneckArgs,
 }
 
 /// The `countermodel` options (`--all` is the shared research flag).
@@ -384,6 +399,7 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
         discover: DiscoverArgs::default(),
         modules: Vec::new(),
         workers: WorkerArgs::default(),
+        bottlenecks: BottleneckArgs::default(),
     };
     let mut args = args.iter();
     while let Some(arg) = args.next() {
@@ -598,6 +614,25 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
                         .ok_or_else(|| usage("--authored-only-by requires a model name"))?
                         .to_owned(),
                 );
+            }
+            "--stage" | "--min-arguments" | "--min-routes" => {
+                parsed.bottlenecks.flags = true;
+                let value = args.next().and_then(|value| value.to_str());
+                let bottlenecks = &mut parsed.bottlenecks;
+                match arg {
+                    "--stage" => bottlenecks.stages.push(number(value, arg)? as u64),
+                    _ => {
+                        let count =
+                            value.and_then(|value| value.parse().ok()).ok_or_else(|| {
+                                usage(format!("{arg} requires a non-negative integer"))
+                            })?;
+                        if arg == "--min-arguments" {
+                            bottlenecks.min_arguments = Some(count);
+                        } else {
+                            bottlenecks.min_routes = Some(count);
+                        }
+                    }
+                }
             }
             "--omit" | "--module" | "--theorem" => {
                 let value = args
@@ -846,7 +881,7 @@ impl Args {
         }
         if !accepts.frontier_root && self.frontier_root_set() {
             return Err(usage(
-                "--frontier-root applies only to thickness, frontier, frontier-diff, next-steps, orphans, dossier, context, unused-premises and workers",
+                "--frontier-root applies only to thickness, frontier, frontier-diff, next-steps, orphans, dossier, context, unused-premises, workers and bottlenecks",
             ));
         }
         if !accepts.orphans && (self.senses || self.group_by.is_some()) {
