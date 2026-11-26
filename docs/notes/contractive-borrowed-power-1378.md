@@ -598,23 +598,31 @@ a necessary ancestor. See the [receipt result](../../corpus/results/2a842b8c-fe4
   account for the same determinate positive activity without borrowing its
   actuality as part of the explanans.
   [Hume, Dialogues Concerning Natural Religion, Part IX, printed p. 167](https://en.wikisource.org/wiki/Page:Dialogues_Concerning_Natural_Religion_-_Hume_(1779).djvu/173).
-- **Grand PSR approaches.** Koons's aggregation principle and causal
-  principle for wholly contingent facts give an explanation of the
-  contingent aggregate by a nonoverlapping cause. In the joint Koons–Pruss
-  case the noncircular PSR instead covers pluralities of basic natural facts
-  and demands an explanans external to the plurality. Their positive
-  argument is epistemic: uncaused experiential evidence threatens the
-  counterfactual reliability invoked by empirical knowledge. Oppy's
-  restriction leaves causes for ordinary evidence while treating initial
-  histories differently. To defeat that restriction, the PSR defense
-  needs its claimed relevant similarity across the scope of the
-  generalization. At matched scope, these approaches oppose the sufficiency
+- **Grand PSR approaches.** In Koons's argument, given a contingent fact,
+  Lemma 3 makes the aggregate of wholly contingent facts wholly contingent,
+  Axiom 7 (causal principle) supplies its cause, and Axiom 6 (*Separate
+  Existence*) excludes mereological overlap between that cause and the
+  aggregate. Without Axiom 6 the externality of the cause is unsupported.
+  In the joint Koons–Pruss case the noncircular PSR instead covers
+  pluralities of basic natural facts and demands an explanans external to
+  the plurality. Their positive argument is epistemic: uncaused experiential
+  evidence threatens the counterfactual reliability invoked by empirical
+  knowledge. Oppy's restriction leaves causes for ordinary evidence while
+  treating initial histories differently. Koons and Pruss test that very
+  restriction in §4: even if ordinary experiences have temporal
+  predecessors, a subject cannot know *a priori* that present experiences
+  are non-first without relying on knowledge of the past, so on their
+  account the restricted rule cannot secure empirical knowledge. The
+  remaining dispute is whether the rule's applicability must be knowable
+  *a priori* for empirical knowledge to be possible. This reply bears on
+  epistemic warrant for the PSR and supplies no concrete grounding edge.
+  At matched scope, these approaches oppose the sufficiency
   of merely distributive explanations for the eligible facts. An external
   fact explanation would still need to identify an actual concrete
   productive contributor on the fixed recipient's supply path. Even that
   would leave open the existence of a different infinite grounding branch.
-  [Koons, “A New Look at the Cosmological Argument,” §6.2](https://lionandlambapologetics.org/wp-content/uploads/2021/03/A-New-Look-at-the-Cosmological-Argument.pdf).
-  [Koons and Pruss, “Skepticism and the Principle of Sufficient Reason,” §§2–3](https://robkoons.net/uploads/1/3/5/2/135276253/koons-pruss2020_article_skepticismandtheprincipleofsuf.pdf).
+  [Koons, “A New Look at the Cosmological Argument,” §§5–6.2](https://lionandlambapologetics.org/wp-content/uploads/2021/03/A-New-Look-at-the-Cosmological-Argument.pdf).
+  [Koons and Pruss, “Skepticism and the Principle of Sufficient Reason,” §§2–4, esp. n. 7](https://robkoons.net/uploads/1/3/5/2/135276253/koons-pruss2020_article_skepticismandtheprincipleofsuf.pdf).
 
 Provisional assessment for review. Finite productive provenance is plausible
 as a direct commitment for an exhaustively derivative exercise in a fixed

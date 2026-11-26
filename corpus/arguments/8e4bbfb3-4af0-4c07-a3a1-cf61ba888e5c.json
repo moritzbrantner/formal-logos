@@ -10,7 +10,7 @@
   "inference_ids": [
     "94200e67-1002-4f2b-af9f-d3f4f2431d6d"
   ],
-  "meaning": "The no-return entry into the fixed recipient gives a net exporter upstream of its sender. By export coverage that exporter has no actual concrete ground. Positive entries follow Profile.grounds, so the same exporter is a source reached in the recipient's complete grounding cone. The finite ledger can omit grounding edges.",
+  "meaning": "The no-return entry into the fixed recipient gives a net exporter upstream of its sender. By export coverage that exporter has no actual concrete ground. Positive entries follow Profile.grounds, so the same exporter is a source reached in the recipient's complete grounding cone. The ledger of finite total throughput can omit grounding edges.",
   "definition_ids": [
     "52352824-6be9-53c6-83d4-82fed9a08cbb",
     "c57e2682-08e6-527e-950f-0fa0a7ff11ef",
