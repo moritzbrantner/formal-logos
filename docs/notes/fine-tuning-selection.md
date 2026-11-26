@@ -457,7 +457,9 @@ raw fine-evidence masses differ (1/2 and 1/10), but both rows give conditional
 probability one because their other-observer cell is empty. Their report
 laws coincide at a nonuniform comparison prior (design 1/3 and natural 2/3).
 The certain report contributes no further update after observerhood.
-Observerhood itself can carry information in a pre-selection comparison.
+The Lean control `screenedObserverhoodSeparates` observes observerhood
+before selection in these same two rows. Its likelihoods are 1/2 and 1/10,
+so it carries positive information under any interior pre-selection prior.
 The existing `selectedNatural` control answers a nearby challenge at the
 same scope: restricting observers to fine-evidence worlds can even reverse
 a design-favoring factor. A physical ensemble with selection therefore

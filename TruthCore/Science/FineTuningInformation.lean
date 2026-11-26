@@ -25,16 +25,31 @@ def reportRate (s : Sampling) : unitInterval := ⟨(likelihood s : ℝ), by
   · exact_mod_cast (div_le_one s.observers_pos).mpr
       (le_add_of_nonneg_right (s.nonnegative 1))⟩
 
+/-- Two normalized binary report laws indexed by the comparison model. -/
+noncomputable def binaryKernel (d n : unitInterval) : Kernel Bool Bool :=
+  Kernel.ofFunOfCountable fun m => bernoulliMeasure true false (if m then d else n)
+
+instance binaryKernel_isMarkov (d n : unitInterval) : IsMarkovKernel (binaryKernel d n) :=
+  ⟨fun m => by
+    change IsProbabilityMeasure (bernoulliMeasure true false (if m then d else n))
+    infer_instance⟩
+
 /-- Model label true indexes design; false indexes the natural rival.
 Report true denotes the fine-evidence cell among observer worlds. -/
 noncomputable def reportKernel (d n : Sampling) : Kernel Bool Bool :=
-  Kernel.ofFunOfCountable fun m =>
-    bernoulliMeasure true false (if m then reportRate d else reportRate n)
+  binaryKernel (reportRate d) (reportRate n)
 
 instance reportKernel_isMarkov (d n : Sampling) : IsMarkovKernel (reportKernel d n) :=
-  ⟨fun m => by
-    change IsProbabilityMeasure (bernoulliMeasure true false (if m then reportRate d else reportRate n))
-    infer_instance⟩
+  inferInstanceAs (IsMarkovKernel (binaryKernel (reportRate d) (reportRate n)))
+
+/-- Probability of sampling an observer before conditioning on observerhood. -/
+def observerRate (s : Sampling) : unitInterval := ⟨((s.weight 0 + s.weight 1 : ℚ) : ℝ), by
+  constructor
+  · exact_mod_cast le_of_lt s.observers_pos
+  · exact_mod_cast (calc
+      s.weight 0 + s.weight 1 ≤ s.weight 0 + s.weight 1 + s.weight 2 :=
+        le_add_of_nonneg_right (s.nonnegative 2)
+      _ = 1 := by simpa [Fin.sum_univ_three, add_assoc] using s.normalized)⟩
 
 /-- The supplied comparison prior gives design mass p and the natural rival mass 1-p. -/
 noncomputable def modelPrior (p : unitInterval) : Measure Bool :=

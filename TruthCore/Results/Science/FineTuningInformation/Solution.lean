@@ -22,17 +22,9 @@ private theorem prior_false (p : unitInterval) :
   unfold modelPrior
   exact bernoulliMeasure_real_apply_of_notMem_of_mem p (measurableSet_singleton _) (by simp) (by simp)
 
-private theorem row_true (d n : Sampling) :
-    (reportKernel d n true).real {true} = (reportRate d : ℝ) :=
-  prior_true (reportRate d)
-
-private theorem row_false (d n : Sampling) :
-    (reportKernel d n false).real {true} = (reportRate n : ℝ) :=
-  prior_true (reportRate n)
-
-theorem observerInformation : ObserverInformationCriterion := by
-  intro p d n hp hp'
-  change mutualInformation (modelPrior p ⊗ₘ reportKernel d n) = 0 ↔ _
+private theorem binaryInformation_eq_zero_iff (p d n : unitInterval)
+    (hp : 0 < (p : ℝ)) (hp' : (p : ℝ) < 1) :
+    mutualInformation (modelPrior p ⊗ₘ binaryKernel d n) = 0 ↔ d = n := by
   constructor
   · intro hz
     have hrows := (kernel_information_eq_zero_iff _ _).mp hz
@@ -44,17 +36,20 @@ theorem observerInformation : ObserverInformationCriterion := by
       exact (sub_pos.mpr hp').ne' (by rw [← prior_false p, measureReal_def, h, ENNReal.toReal_zero])
     have hrowsEq := (hrows true ht).trans (hrows false hf).symm
     have hrates := congrArg (fun μ : Measure Bool => μ.real {true}) hrowsEq
-    rw [row_true, row_false] at hrates
-    exact Rat.cast_injective (show (likelihood d : ℝ) = (likelihood n : ℝ) from hrates)
-  · intro h
-    have hrates : reportRate d = reportRate n := Subtype.ext (by simp [reportRate, h])
-    have hk : reportKernel d n = Kernel.const Bool (modelPrior (reportRate d)) := by
+    change (modelPrior d).real {true} = (modelPrior n).real {true} at hrates
+    exact Subtype.ext (by simpa only [prior_true] using hrates)
+  · rintro rfl
+    have hk : binaryKernel d d = Kernel.const Bool (modelPrior d) := by
       ext m : 1
-      cases m
-      · exact congrArg modelPrior hrates.symm
-      · rfl
+      cases m <;> rfl
     rw [mutualInformation_eq_zero_iff, hk, Measure.compProd_const, Measure.map_fst_prod,
       Measure.map_snd_prod, measure_univ, measure_univ, one_smul, one_smul]
+
+theorem observerInformation : ObserverInformationCriterion := by
+  intro p d n hp hp'
+  exact (binaryInformation_eq_zero_iff p (reportRate d) (reportRate n) hp hp').trans
+    ⟨fun h => Rat.cast_injective (congrArg Subtype.val h),
+      fun h => Subtype.ext (by simp [reportRate, h])⟩
 
 theorem screeningControls : ScreeningControls := by
   have hd : likelihood screenedDesign = 1 := by
@@ -88,6 +83,18 @@ theorem accuracyAgreement (hGain : BayesianGainCertificate)
   exact h.2.2.trans ((show ((reportRate d : ℝ) = (reportRate n : ℝ)) ↔
       likelihood d = likelihood n from Rat.cast_inj).trans
     (hInformation p d n hp hp').symm)
+
+/-- Before selection, observerhood itself separates the same screened rows
+ at any interior pre-selection model prior. -/
+theorem screenedObserverhoodSeparates (p : unitInterval)
+    (hp : 0 < (p : ℝ)) (hp' : (p : ℝ) < 1) :
+    0 < mutualInformation (modelPrior p ⊗ₘ
+      binaryKernel (observerRate screenedDesign) (observerRate screenedNatural)) := by
+  refine lt_of_le_of_ne (mutualInformation_nonneg _) (Ne.symm ?_)
+  intro hz
+  have he := (binaryInformation_eq_zero_iff _ _ _ hp hp').mp hz
+  have hval := congrArg Subtype.val he
+  norm_num [observerRate, screenedDesign, screenedNatural] at hval
 
 /-- The observation collapsing the two labels loses target information when
  both labels have positive mass. Reading the label itself loses none. -/
