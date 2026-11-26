@@ -1,12 +1,12 @@
 {
   "id": "afac47a6-76ad-4b1f-9c1f-48be6246f6c3",
-  "label": "I q.77 a.6 co. and ad 2–3 — The subject produces its proper accident insofar as it is in act",
+  "label": "I q.77 a.6 co. and ad 2–3 — Qualified active causality of the subject for its proper accident",
   "statement_id": "d81fc75c-1f5b-49a6-96b1-f39fb9fd8e76",
   "source_id": "c77377cf-501b-56c6-be40-b518e9aad101",
   "locator": "I q.77 a.6 co. and ad 2–3",
-  "interpretation": "Aquinas explains why the powers of the soul flow from its essence, with the soul alone receiving some powers and the composite receiving others. The body contrasts proper and extraneous accidents. Ad 2 qualifies the subject’s active causality, and ad 3 describes natural resultance without a transition.",
+  "interpretation": "The body discusses proper accidents in explaining how the powers of the soul flow from its essence, with the soul alone receiving some powers and the composite receiving others. Ad 2 qualifies the subject’s active causality, and ad 3 explains the emanation as natural resultance without change.",
   "status": "formalized",
-  "attribution": "The passage states that insofar as the subject is actual, it produces its proper accident and that insofar as it is in potency, it receives that accident, which is the premise.",
+  "attribution": "The passage states that the subject is productive of its proper accident insofar as it is actual and receptive insofar as it is potential, with causality active in a qualified sense and natural resultance without change, which is the premise.",
   "definition_ids": [
     "d69babba-5fb9-4b10-af4e-6bfb6d3e5a0f"
   ]

@@ -1,14 +1,14 @@
 {
   "id": "c99626af-31d2-49ee-87c5-276b1d6d4f70",
-  "label": "Actuality is prior in account and substance, and qualifiedly in time",
+  "label": "Three comparisons of actuality and capacity in Aristotle Θ.8",
   "statement_ids": [
     "197ac723-487c-5fa2-8800-4b441d322014"
   ],
   "date": "2026-11-26",
   "kind": "reading",
   "outcome": "succeeded",
-  "summary": "Aristotle distinguishes three senses at the outset. The account of capacity refers to its exercise. The substance comparison uses mature form and actuality as end. The temporal case uses generation or acquisition from an already actual source, with the prior actual and what comes to be the same in kind rather than number.",
-  "blocker": "The text directly argues for qualified priority of actuality and identifies which temporal claim survives the case of a capacity preceding its own exercise. To reach ActPriorInRouteSense, select a priority sense, show how it is represented by the binary RoutePrior on beings, and justify an actual witness in the same respect for each InPotency instance. Priority of an account or end alone supplies no such witness.",
+  "summary": "Θ.8 separates the reference to exercise in the account of a capacity, priority in substance by form or end, and qualified temporal priority. In generation or acquisition from potency, the actual source always precedes the result and is numerically different. An individual’s own capacity can precede its exercise.",
+  "blocker": "Choose and justify the route’s binary RoutePrior on beings and show how every InPotency instance has an actual witness in the same respect, including a potency that is never realized. Reference to an activity in the account of a capacity gives a relation with different arguments from RoutePrior.",
   "evidence": [
     "0b73b0df-5927-492e-87d8-b1246f8b27bb",
     "PR-2024"
@@ -16,6 +16,14 @@
   "workers": [
     {
       "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2024"
+    },
+    {
+      "role": "repair",
       "provider": "codex",
       "model": "gpt-6.2-sol",
       "effort": "high",

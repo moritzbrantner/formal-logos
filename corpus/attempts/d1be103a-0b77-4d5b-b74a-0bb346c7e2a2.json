@@ -7,8 +7,8 @@
   "date": "2026-11-26",
   "kind": "reading",
   "outcome": "succeeded",
-  "summary": "In the pinned Baur/Koch numbering, c.3 gives the composition and treats the quiddity as potential with respect to received esse as act. C.4 restates their distinction for created intellectual substances and distinguishes them from material composites and from the first being.",
-  "blocker": "The source gives real composition in the relevant case, against treating the distinction as merely a difference of descriptions. The route still needs the modeled essenceOf and esseOf values to be ConstituentOf the same bearer in the sense of metaphysical principles, and the inference from distinct values to joint constitution outside the case of separate created intelligences.",
+  "summary": "De ente cap.3 [69874] treats the quiddity of a separate created intelligence as potential with respect to the act of being received from the first being. This received act is that by which the intelligence subsists.",
+  "blocker": "Show that the quiddity and the received act by which the intelligence subsists map to essenceOf and esseOf, respectively, and count as ConstituentOf the same bearer. Extend the resulting joint constitution to the route’s domain of things with distinct values.",
   "evidence": [
     "e11ffb48-e8c2-4bce-b26f-d8cfefc62698",
     "PR-2024"
@@ -16,6 +16,14 @@
   "workers": [
     {
       "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2024"
+    },
+    {
+      "role": "repair",
       "provider": "codex",
       "model": "gpt-6.2-sol",
       "effort": "high",

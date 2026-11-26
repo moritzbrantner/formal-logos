@@ -1,10 +1,16 @@
 {
   "id": "0b73b0df-5927-492e-87d8-b1246f8b27bb",
-  "label": "IX.8, 1049b4–1050b6 — Actuality is prior in account and substance, and qualifiedly in time",
+  "label": "IX.8, 1049b4–1050b6 — Three comparisons of actuality and capacity in Aristotle Θ.8",
   "statement_id": "6a610371-479e-49ba-9860-8582ac79f14e",
   "source_id": "a8acbf0a-30ba-5e04-b261-cb62a89cbddb",
   "locator": "IX.8, 1049b4–1050b6",
-  "interpretation": "Aristotle distinguishes three senses at the outset. The account of capacity refers to its exercise. The substance comparison uses mature form and actuality as end. The temporal case uses generation or acquisition from an already actual source, with the prior actual and what comes to be the same in kind rather than number.",
+  "interpretation": "Priority in account concerns the corresponding activity to which the account of a capacity refers. Priority in substance is argued from mature form and actuality as end. In the temporal argument, the prior source and the thing that comes to actuality are the same in kind and different in number. The individual’s capacity can precede its own exercise.",
   "status": "formalized",
-  "attribution": "The passage states that actuality is prior to the corresponding capacity in account and in substance and that in time, an already actual member of the same kind can precede the capacity, although a subject’s own capacity can precede its own actuality, which is the premise."
+  "attribution": "The passage states that actuality is prior in account and in substance, and that in the generation or acquisition under discussion what comes to actuality from potency always does so through a numerically different actual source that precedes what comes to be even though the individual’s capacity can precede its own exercise, which is the premise.",
+  "definition_ids": [
+    "accea1d5-513e-4749-9353-17d298a69f46"
+  ],
+  "disambiguation_ids": [
+    "be54be36-3ce8-53f9-8168-50d1114e6c76"
+  ]
 }

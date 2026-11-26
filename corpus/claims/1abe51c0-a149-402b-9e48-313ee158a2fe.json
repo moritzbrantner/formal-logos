@@ -8,6 +8,10 @@
   "status": "formalized",
   "attribution": "The passage states that an intellectual nature stands to its apprehended good so as to seek it when absent and rest in it when possessed and that both belong to will, which is the premise.",
   "definition_ids": [
-    "fb2759f7-aecb-4921-9f82-61de72a45245"
+    "fb2759f7-aecb-4921-9f82-61de72a45245",
+    "7c64b499-6dba-5e03-bdf3-5acea95d8836"
+  ],
+  "disambiguation_ids": [
+    "1d765cae-eca9-558f-9542-8291df359058"
   ]
 }

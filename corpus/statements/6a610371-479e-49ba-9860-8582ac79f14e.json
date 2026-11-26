@@ -1,5 +1,11 @@
 {
   "id": "6a610371-479e-49ba-9860-8582ac79f14e",
-  "label": "Actuality is prior in account and substance, and qualifiedly in time",
-  "paraphrase": "Actuality is prior to the corresponding capacity in account and in substance. In time, an already actual member of the same kind can precede the capacity, although a subject’s own capacity can precede its own actuality."
+  "label": "Three comparisons of actuality and capacity in Aristotle Θ.8",
+  "paraphrase": "Actuality is prior to the corresponding capacity in account and in substance. In the generation or acquisition under discussion, what comes to actuality from potency always does so through a numerically different actual source that precedes what comes to be, while the individual’s own capacity can precede its exercise.",
+  "definition_ids": [
+    "accea1d5-513e-4749-9353-17d298a69f46"
+  ],
+  "disambiguation_ids": [
+    "be54be36-3ce8-53f9-8168-50d1114e6c76"
+  ]
 }

@@ -7,8 +7,8 @@
   "date": "2026-11-26",
   "kind": "reading",
   "outcome": "succeeded",
-  "summary": "The article grades life through self-operation: plants as to execution, animals also as to the form acquired through sense, and intellectual beings as to ordering to an end. In humans this is compatible with first principles and the ultimate end being fixed by nature. The highest case is argued separately, where nature is its very act of understanding.",
-  "blocker": "The source takes intellectual self-direction itself as a way of living, against confining life to bodily functions. The route needs every HasIntellect bearer to have or exercise self-operation in the precise timeless Operates reading of LIVING_1. The source passage’s gradation does not resolve how an entirely unexercised capacity would satisfy that predicate.",
+  "summary": "I q.18 a.3 treats intellectual self-direction as a mode of life and recognizes that humans also receive determination from another in some respects. The route concludes D.Lives g of each HasIntellect bearer, including a bearer whose intellectual capacity is unexercised.",
+  "blocker": "Show what warrants D.Lives g, the primitive that IntellectualIsLiving predicates of each HasIntellect g, in its stated sense of operating from oneself without being moved by another in that operation. This requires an account of a bearer whose intellectual capacity is unexercised.",
   "evidence": [
     "28c5ac67-5b7e-4aa7-a081-b84ad0ad1f64",
     "PR-2024"
@@ -16,6 +16,14 @@
   "workers": [
     {
       "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2024"
+    },
+    {
+      "role": "repair",
       "provider": "codex",
       "model": "gpt-6.2-sol",
       "effort": "high",

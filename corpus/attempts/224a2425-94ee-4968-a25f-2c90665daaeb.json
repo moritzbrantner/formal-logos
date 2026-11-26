@@ -1,14 +1,14 @@
 {
   "id": "224a2425-94ee-4968-a25f-2c90665daaeb",
-  "label": "The subject produces its proper accident insofar as it is in act",
+  "label": "Qualified active causality of the subject for its proper accident",
   "statement_ids": [
     "5e76cbf7-9033-549c-9ec3-328746219b46"
   ],
   "date": "2026-11-26",
   "kind": "reading",
   "outcome": "succeeded",
-  "summary": "Aquinas explains why the powers of the soul flow from its essence, with the soul alone receiving some powers and the composite receiving others. The body contrasts proper and extraneous accidents. Ad 2 qualifies the subject’s active causality, and ad 3 describes natural resultance without a transition.",
-  "blocker": "Aquinas gives a case of a subject actively contributing to a perfection in itself, as opposed to merely receiving it from outside. To instantiate the route’s existential, identify an actual proper accident with a respect, its subject with the same bearer at both ends, and qualified active resultance with the route’s CausesIn for that respect.",
+  "summary": "I q.77 a.6 co. distinguishes the actual subject’s productive role from its receptive role in potency. Ad 2 calls the causality active in a qualified sense. Ad 3 specifies natural resultance without change.",
+  "blocker": "To instantiate the existential, identify an actual proper accident with a respect r and show that the subject x is the same bearer at both ends and that its qualified active contribution gives the reflexive CausesIn x x r.",
   "evidence": [
     "afac47a6-76ad-4b1f-9c1f-48be6246f6c3",
     "PR-2024"
@@ -16,6 +16,14 @@
   "workers": [
     {
       "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2024"
+    },
+    {
+      "role": "repair",
       "provider": "codex",
       "model": "gpt-6.2-sol",
       "effort": "high",
