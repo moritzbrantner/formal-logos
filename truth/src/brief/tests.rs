@@ -2144,3 +2144,48 @@ fn question_returns_explicit_attempt_evidence_when_result_text_does_not_match() 
     assert!(text.contains("The displayed investigations cite no registered Lean results."));
     std::fs::remove_dir_all(root).unwrap();
 }
+
+#[test]
+fn a_limited_question_preserves_proofs_about_the_current_assessment() {
+    let root = fixture("current-assessment-cited-proofs");
+    let recent = "c0000000-0000-4000-8000-000000000006";
+    let argument = "a0000000-0000-4000-8000-000000000006";
+    let attempt = "d0000000-0000-4000-8000-000000000106";
+    record(
+        &root,
+        "arguments",
+        json!({"id":argument, "label":"Recent consequence", "meaning":"The recent consequence follows from the supplied bridge.", "inference_ids":[INFERENCE],
+        "conclusion_statement_id":SERIES, "premise_statement_ids":[]}),
+    );
+    record(
+        &root,
+        "results",
+        json!({"id":recent, "argument_id":argument,
+        "theorem":"TruthCore.Results.Fixture.recent", "status":"solution-present", "challenge_module":"TruthCore.Results.Fixture.Challenge", "solution_module":"TruthCore.Results.Fixture.Solution", "comparator_config":"results/x/comparator.json"}),
+    );
+    record(
+        &root,
+        "attempts",
+        json!({"id":attempt, "label":"Earlier and later studies",
+        "statement_ids":[GOAL, SERIES], "evidence":[RESULT, recent],
+        "current_assessment":{"scope":"Finite supplier audits", "assessment":"Finite supplier audits identify the initial bearer.", "statement_ids":[SERIES]}}),
+    );
+    let corpus = Corpus::load(&root).unwrap();
+    for limit in [1, 2] {
+        let (report, _) = super::assessment_search::report_for_root(
+            &root,
+            &corpus,
+            "finite supplier audits",
+            limit,
+        )
+        .unwrap();
+        let citations = report["cited_lean_results"].as_array().unwrap();
+        assert_eq!(citations[0]["id"], recent);
+        assert_eq!(citations[0]["cited_by"][0]["attempt_id"], attempt);
+        assert_eq!(citations.len(), limit);
+        if limit == 2 {
+            assert_eq!(citations[1]["id"], RESULT);
+        }
+    }
+    std::fs::remove_dir_all(root).unwrap();
+}

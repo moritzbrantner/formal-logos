@@ -67,7 +67,7 @@ pub(super) fn cited_results(
         let Some(attempt) = corpus.get("attempts", attempt_id) else {
             continue;
         };
-        for result in attempt
+        let mut evidence: Vec<_> = attempt
             .fields
             .get("evidence")
             .and_then(Value::as_array)
@@ -75,7 +75,20 @@ pub(super) fn cited_results(
             .flatten()
             .filter_map(Value::as_str)
             .filter_map(|id| corpus.get("results", id))
+            .collect();
+        if matched["kind"] == "current_assessment"
+            && let Some(targets) = matched["statement_ids"].as_array()
         {
+            // Keep earlier evidence accessible while giving this assessment's
+            // conclusions first place within the same investigation.
+            evidence.sort_by_cached_key(|result| {
+                !corpus
+                    .get("arguments", field(result, "argument_id"))
+                    .and_then(|argument| argument.fields.get("conclusion_statement_id"))
+                    .is_some_and(|conclusion| targets.contains(conclusion))
+            });
+        }
+        for result in evidence {
             let sources = citations.entry(field(result, "id")).or_default();
             if sources.is_empty() {
                 cited_in_order.push(result);
