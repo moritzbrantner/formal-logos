@@ -117,6 +117,8 @@ in it. [Odds](../../corpus/results/07aaa585-ecf4-4584-a679-c9f02d294fcf.json)
 [Single charge](../../corpus/results/3cb00ff1-e0c9-4874-badf-d7f499a49f92.json)
 [Nonuniform discount control](../../corpus/results/d1c3835a-f5c9-4acf-8664-aa7720ccbd45.json)
 
+The equal-likelihood assumption can be tested. With a finite-depth prediction fixed in advance, [successive complete supplier lists](de-ente-esse-source-1628.md#does-finding-another-supplier-favor-an-endless-regress) can favor the endless account. Finding an empty list at the predicted terminal gives the opposite verdict.
+
 ### How many choices does a chain of borrowers require?
 
 Suppose each receiver is active exactly when its sole upstream link is intact and its supplier is active. On one intact infinite chain, the state of a single receiver determines the state of every bearer. With several uncoupled chains, every assignment of on or off to the chains is possible. After cuts, a chain still has one such choice if some upstream tail is intact. Switching that tail on activates precisely those receivers with every upstream link intact. Cuts arbitrarily far upstream force the whole chain off. This generalizes the [single-chain proof](q44-inferential-dependency.md#a-stronger-source-free-rival-under-interventions). [Lean classification](../../TruthCore/Results/Causality/ParallelPowerTransmission/Solution.lean)

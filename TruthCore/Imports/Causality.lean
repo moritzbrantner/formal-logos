@@ -293,6 +293,7 @@ public import TruthCore.Causality.SuccessionPotency
 public import TruthCore.Causality.Supertasks
 public import TruthCore.Causality.SupplierAudit
 public import TruthCore.Causality.SupplierAuditCertificates
+public import TruthCore.Causality.SupplierAuditLikelihood
 public import TruthCore.Causality.SurveyCapabilityControls
 public import TruthCore.Causality.SurveyCapabilityProfiles
 public import TruthCore.Causality.SurveyExternalCause
