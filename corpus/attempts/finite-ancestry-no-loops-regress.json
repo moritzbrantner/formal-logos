@@ -32,7 +32,8 @@
     "0d877e2b-86df-4bed-8275-49c1a614e2c7",
     "3cb00ff1-e0c9-4874-badf-d7f499a49f92",
     "d1c3835a-f5c9-4acf-8664-aa7720ccbd45",
-    "PR-2005"
+    "PR-2005",
+    "PR-2009"
   ],
   "current_assessment": {
     "date": "2026-11-26",
@@ -46,8 +47,8 @@
     "note": "docs/notes/causal-finitism-367.md#does-occams-razor-favor-a-finite-account-of-an-infinite-regress",
     "review": "accepted_qualified",
     "reviewed_revision": "8b892c5b48de01a1a66293d9e2f9ffafb04e765d",
-    "publication": "unpublished",
-    "evidence": "Independent review at e85b5f23b and targeted acceptance at c33ff837b covered the original six results, paired charges, whole-class probability and provisional application (merged #2005). A separate review at 8b892c5b4 verified the finite-fiber and mixed infinite-reuse companions and their interpretation.",
+    "publication": "published",
+    "evidence": "Independent review at e85b5f23b and targeted acceptance at c33ff837b covered the original six results, paired charges, whole-class probability and provisional application (merged #2005). A separate review at 8b892c5b4 verified the finite-fiber and mixed infinite-reuse companions and their interpretation. Delivered in PR #2009.",
     "supersedes": "Extends the original #2005 headcount assessment from distinct and paired charges to arbitrary finite fibers. Its whole-hypothesis probability assessment and the prior finite-ancestry derivation remain applicable."
   }
 }

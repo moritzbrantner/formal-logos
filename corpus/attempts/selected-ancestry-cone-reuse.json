@@ -31,7 +31,8 @@
     "e9c3abb0-e798-473a-a1e0-ef11a38ed720",
     "PR-795",
     "PR-1291",
-    "5f29a004-b5d5-4265-90bc-9b5862cdcbbb"
+    "5f29a004-b5d5-4265-90bc-9b5862cdcbbb",
+    "PR-2009"
   ],
   "current_assessment": {
     "date": "2026-11-26",
@@ -44,8 +45,8 @@
     "next_test": "For a specified recipient, distinguish evidence for new independent productive inputs at successive steps from repeated exercise under one instantiated rule. Check whether the competing finite account supplies this very recipient.",
     "note": "docs/notes/causal-finitism-367.md#does-occams-razor-favor-a-finite-account-of-an-infinite-regress",
     "review": "accepted_qualified",
-    "publication": "unpublished",
-    "evidence": "Independent challenge at 5a9dbb6a9 accepted the cone bridge, converse, two-cycle control and the actual necessary-ancestor composition. The recheck at e9174faf3 confirmed the narrowed sense metadata against the unchanged cone definition and existing consumers.",
+    "publication": "published",
+    "evidence": "Independent challenge at 5a9dbb6a9 accepted the cone bridge, converse, two-cycle control and the actual necessary-ancestor composition. The recheck at e9174faf3 confirmed the narrowed sense metadata against the unchanged cone definition and existing consumers. Delivered in PR #2009.",
     "supersedes": "None. This extends the existing selected-cone result with a sufficient condition for its foundation premise.",
     "reviewed_revision": "5a9dbb6a929b4c801194a4ada80447db6a5c4edf"
   }

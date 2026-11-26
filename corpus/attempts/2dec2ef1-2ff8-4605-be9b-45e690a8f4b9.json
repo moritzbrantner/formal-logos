@@ -24,7 +24,8 @@
     "1ccd1c7c-4ffc-4671-b88a-a7fd31a5dc27",
     "b31ec5f0-14b7-493d-a340-f721cfe2e283",
     "76c39b25-2ab8-4987-b8c5-9e57999fb0c1",
-    "6500533a-333c-4f22-b369-acbfe3ad0662"
+    "6500533a-333c-4f22-b369-acbfe3ad0662",
+    "PR-2009"
   ],
   "blocker": "The experiments identify material realizers of measured patterns. Applying existential grounding to them requires both an actual concrete pattern bearer and an interpretation of material realization as Profile.grounds. Universal coverage of basic extended bearers remains open. The named result separately needs the actual concrete spatial whole, its contingency, and its existential grounding of each distinct actual occupant.",
   "current_assessment": {
@@ -38,8 +39,8 @@
     "next_test": "Identify the field independently, then determine whether varying its proposed realizer removes the field itself or changes only its measured geometry. Compare the same recipient under both accounts of existential supply.",
     "note": "docs/notes/spatial-translation-and-reason.md#can-an-extended-bearer-end-a-grounding-regress",
     "review": "accepted_qualified",
-    "publication": "unpublished",
-    "evidence": "Independent targeted recheck at e9174faf3 accepted both spatial result families, the two experiments and the repair distinguishing material realization from existential grounding. The off-world example has the encoded attributes and carries no essential-aseity premise.",
+    "publication": "published",
+    "evidence": "Independent targeted recheck at e9174faf3 accepted both spatial result families, the two experiments and the repair distinguishing material realization from existential grounding. The off-world example has the encoded attributes and carries no essential-aseity premise. Delivered in PR #2009.",
     "reviewed_revision": "e9174faf32785a6da298f64bf510b143b92531a6",
     "supersedes": "None. The original #1857 finding is retained."
   }
