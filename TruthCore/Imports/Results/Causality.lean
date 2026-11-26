@@ -215,6 +215,7 @@ public import TruthCore.Results.Causality.IndexedSignalProvenance.Solution
 public import TruthCore.Results.Causality.IndexedSignalReaper.Solution
 public import TruthCore.Results.Causality.InertEmptiness.Solution
 public import TruthCore.Results.Causality.InfiniteLocalTransmission.Solution
+public import TruthCore.Results.Causality.IntellectualAppetite.Solution
 public import TruthCore.Results.Causality.IntellectualInclination.Solution
 public import TruthCore.Results.Causality.IntentionalExemplarExtension.Solution
 public import TruthCore.Results.Causality.InterventionTransitivity.Solution

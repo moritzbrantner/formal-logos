@@ -1,0 +1,11 @@
+{
+  "id": "a4a6c33c-2efd-441a-a94d-f6ef01268636",
+  "label": "GOD_4 HAS_WILL_1 through an inclination following an apprehended good",
+  "argument_id": "64ba9d55-6299-4ef0-97b4-106440fbe251",
+  "challenge_module": "TruthCore.Results.Causality.IntellectualAppetite.Challenge",
+  "solution_module": "TruthCore.Results.Causality.IntellectualAppetite.Solution",
+  "theorem": "TruthCore.Results.Causality.IntellectualAppetite.godHasWillFromAppraisedForm",
+  "comparator_config": "results/a4a6c33c-2efd-441a-a94d-f6ef01268636/comparator.json",
+  "status": "solution-present",
+  "description": "For each GOD_4, use its intellect to obtain an actualizing intelligible form under which it apprehends a good. The restricted inclination law supplies an orientation following that very form in that same bearer. The guarded recognition premise gives HAS_WILL_1 for that bearer. The conclusion is possession of will. Any act, rational giving or possible withholding requires further hypotheses."
+}
