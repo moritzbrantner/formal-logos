@@ -11,6 +11,7 @@ public import TruthCore.Models.CountTemporalControls
 public import TruthCore.Models.EmptyTruthmaker
 public import TruthCore.Models.FiniteSupport
 public import TruthCore.Models.HistoryTimeScope
+public import TruthCore.Models.HyperintensionalExistence
 public import TruthCore.Models.Inertia
 public import TruthCore.Models.InfiniteGreatestWhole
 public import TruthCore.Models.Intentionality943
