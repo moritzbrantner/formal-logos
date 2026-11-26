@@ -227,12 +227,26 @@ pub fn report(
     }
     let investigations = previous_investigations(corpus, &scenario.withheld, selected_result);
     if let Some(result_id) = selected_result {
-        for entry in investigations
+        let mut cited: Vec<_> = investigations
             .iter()
             .filter(|entry| entry.evidence.contains(&result_id))
-            .take(limit)
-        {
-            output.push(format!("Investigation citing this result — {}\n{}\nUse --json for its full finding and evidence.", entry.label, entry.path));
+            .collect();
+        cited.sort_by_key(|entry| entry.assessment_of(target).is_none());
+        for entry in cited.into_iter().take(limit) {
+            if let Some(assessment) = entry.assessment_of(target) {
+                let field = |key: &str| assessment[key].as_str().unwrap_or_default();
+                output.push(format!(
+                    "Assessment of the conclusion ({}, {}) — {}\n{}\nRevision test — {}\n{}",
+                    field("review"),
+                    field("publication"),
+                    field("scope"),
+                    field("assessment"),
+                    field("next_test"),
+                    field("note")
+                ));
+            } else {
+                output.push(format!("Investigation citing this result — {}\n{}\nUse --json for its full finding and evidence.", entry.label, entry.path));
+            }
         }
     }
     if let Some(example) =

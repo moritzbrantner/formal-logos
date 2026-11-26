@@ -91,8 +91,18 @@ struct Investigation<'a> {
     summary: &'a str,
     blocker: Option<&'a Value>,
     evidence: Vec<&'a str>,
-    #[serde(skip)]
-    current_scope: Option<Vec<&'a str>>,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    current_assessment: Option<&'a Value>,
+}
+
+impl Investigation<'_> {
+    fn assessment_of(&self, statement: &str) -> Option<&Value> {
+        self.current_assessment.filter(|assessment| {
+            assessment["statement_ids"]
+                .as_array()
+                .is_some_and(|ids| ids.iter().any(|id| id.as_str() == Some(statement)))
+        })
+    }
 }
 
 fn previous_investigations<'a>(
@@ -122,10 +132,9 @@ fn previous_investigations<'a>(
                 summary: text(fields, "summary"),
                 blocker: fields.get("blocker"),
                 evidence,
-                current_scope: fields
+                current_assessment: fields
                     .get("current_assessment")
-                    .and_then(Value::as_object)
-                    .map(|assessment| list(assessment, "statement_ids")),
+                    .filter(|value| value.is_object()),
             })
         })
         .collect()
@@ -139,17 +148,14 @@ fn investigation_example(
         .iter()
         .filter(|entry| {
             !entry.summary.is_empty()
-                && entry.statement_ids.iter().any(|id| {
-                    relevant(id)
-                        && entry
-                            .current_scope
-                            .as_ref()
-                            .is_none_or(|scope| !scope.contains(id))
-                })
+                && entry
+                    .statement_ids
+                    .iter()
+                    .any(|id| relevant(id) && entry.assessment_of(id).is_none())
         })
         .min_by_key(|entry| {
             (
-                entry.current_scope.is_some(),
+                entry.current_assessment.is_some(),
                 Reverse(entry.date),
                 entry.attempt_id,
             )

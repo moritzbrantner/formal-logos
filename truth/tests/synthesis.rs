@@ -432,15 +432,32 @@ fn result_reference_selects_its_certificate_and_replays_its_argument() {
         "challenge_module":"Challenge","solution_module":"Solution","theorem":"secondProof",
         "comparator_config":"test","status":"solution-present"}),
     );
-    for (id, reference) in [
-        ("direct-use", "second-result"),
-        ("sibling-use", "result-edge"),
+    fixture.statement("Q");
+    for (id, reference, scope, judgment) in [
+        (
+            "a-earlier",
+            "second-result",
+            "Q",
+            "Judgment about another conclusion.",
+        ),
+        (
+            "direct-use",
+            "second-result",
+            "T",
+            "Warrant at the selected scope.",
+        ),
+        (
+            "sibling-use",
+            "result-edge",
+            "T",
+            "Judgment citing only the sibling.",
+        ),
     ] {
-        fixture.write(
-            "attempts",
-            json!({"id":id, "statement_ids":["T"],
-            "summary":"Tracked the interpretation.", "evidence":[reference]}),
-        );
+        fixture.assessment(id, &[scope], &["Q", "T"], judgment, "accepted_qualified");
+        let path = fixture.0.join("corpus/attempts").join(format!("{id}.json"));
+        let mut attempt: Value = serde_json::from_slice(&fs::read(path).unwrap()).unwrap();
+        attempt["evidence"] = json!([reference]);
+        fixture.write("attempts", attempt);
     }
     let output = fixture.run(&["second-result", "--without", "P", "--limit", "1", "--json"]);
     assert!(
@@ -450,14 +467,21 @@ fn result_reference_selects_its_certificate_and_replays_its_argument() {
     );
     let report: Value = serde_json::from_slice(&output.stdout).unwrap();
     assert_eq!(report["selected_result_id"], "second-result");
+    let investigations = report["previous_investigations"].as_array().unwrap();
+    assert_eq!(investigations.len(), 2);
+    let direct = investigations
+        .iter()
+        .find(|entry| entry["attempt_id"] == "direct-use")
+        .unwrap();
     assert_eq!(
-        report["previous_investigations"].as_array().unwrap().len(),
-        1
+        direct["current_assessment"]["assessment"],
+        "Warrant at the selected scope."
     );
-    assert_eq!(
-        report["previous_investigations"][0]["attempt_id"],
-        "direct-use"
-    );
+    let text = String::from_utf8(fixture.run(&["second-result", "--limit", "1"]).stdout).unwrap();
+    assert!(text.contains("Assessment of the conclusion (accepted_qualified, published)"));
+    assert!(text.contains("Warrant at the selected scope."));
+    assert!(!text.contains("Judgment about another conclusion."));
+    assert!(!text.contains("Judgment citing only the sibling."));
     assert_eq!(report["argument"]["argument_id"], "edge");
     assert_eq!(report["results"].as_array().unwrap().len(), 1);
     assert_eq!(report["results"][0]["theorem"], "secondProof");

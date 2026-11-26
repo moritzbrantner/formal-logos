@@ -37,10 +37,10 @@
     "assessment": "One intact infinite chain has exactly two states. The state of one receiver fixes the state of every bearer on that chain. Observing activity fixes the choice on that chain alone. Each other uncoupled chain with an intact upstream tail adds one independent choice. Even with countably many chains the uniform active state has a short description, although any countable catalogue misses some admissible assignment. A finite ontology can have a headcount advantage at matched adequacy. Explaining this receiver’s actual power requires an account of why the selected state obtains, whether through a concrete law or whole whose obtaining accounts for that activity, or a source that actually supplies it.",
     "next_test": "Fix this receiver and the particular power exercised. Test whether it continues exercising that same power after a verified cut blocks every relay input for it, and whether a separately identified feed delivers that power to this receiver. A feed independent of the interrupted channel could itself borrow power elsewhere.",
     "note": "docs/notes/causal-finitism-367.md#how-many-choices-does-a-chain-of-borrowers-require",
-    "reviewed_revision": "1c8882268669d57147ba2dd006a4ca18bd884bec",
-    "review": "unreviewed",
-    "publication": "unpublished",
-    "evidence": "The registered classification and its diagonal consequence extend the existing one-chain intervention proof. The earlier finite-grounding and parsimony judgments retain their own scopes.",
+    "reviewed_revision": "505fedc6cd01b43f0cd7ccb4a7430cda6afe050a",
+    "review": "accepted_qualified",
+    "publication": "published",
+    "evidence": "Independent review at 272fd411f accepted the classification and diagonal consequence. Targeted review at 505fedc6c accepted the same-chain observation and the cut comparison at the same receiver and power. PR #2005.",
     "supersedes": "None. Applies the earlier one-chain result to parsimony across disjoint chains."
   }
 }
