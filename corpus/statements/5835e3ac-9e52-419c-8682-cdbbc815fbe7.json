@@ -1,0 +1,13 @@
+{
+  "id": "5835e3ac-9e52-419c-8682-cdbbc815fbe7",
+  "label": "Universal causes with HAS_INTELLECT_1 and HAS_WILL_1 are first in PRIOR_1",
+  "paraphrase": "OPEN, analyst formulation. Every g with HAS_INTELLECT_1 and HAS_WILL_1 that causes the being of every other being in act as to esse has no distinct simply prior being. This links universal esse causality to firstness in simple priority.",
+  "lean_declaration": "TruthCore.Causality.ThroughWill.IntellectualUniversalCausesAreFirst",
+  "definition_ids": [
+    "25e19d5a-5cdf-5916-a888-f6a0ce970f11",
+    "1d9aa4d9-18cc-5930-95fb-5af65e32c0f8",
+    "88bc0655-9dd0-5879-ba1b-3fca9f86c1f4",
+    "7c64b499-6dba-5e03-bdf3-5acea95d8836",
+    "92c03350-6809-497d-b123-2ffb11c0e0c1"
+  ]
+}

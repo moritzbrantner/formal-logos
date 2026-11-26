@@ -1,0 +1,15 @@
+{
+  "id": "ecc504ab-86ea-4c30-b2d3-4f5592f059b7",
+  "label": "Intellectual universal giving by rational exercise, from priority (inference)",
+  "input_statement_ids": [
+    "c65f64de-f2b1-46a2-bf8d-c0450f5fc6c6",
+    "012f5c10-72e7-48a6-a56e-cb880fbd6776",
+    "a0abeef8-30ea-432c-9bfb-07d2179151f2",
+    "5835e3ac-9e52-419c-8682-cdbbc815fbe7"
+  ],
+  "output_statement_id": "83d8a0e0-9866-48d3-b582-9082c9cfeac8",
+  "rule": "Convert the causal edge to giving and eliminate the non-rational case by firstness",
+  "meaning": "For each distinct actual effect, the esse adapter gives an actual giving and the classifier gives an owned power exercised in it. The non-rational branch supplies a distinct prior intellect, contradictory to firstness of the same universal cause. The rational branch supplies the typed exercise. The independent premises carry application to actual esse, classification, metaphysical priority, and the scope of firstness.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

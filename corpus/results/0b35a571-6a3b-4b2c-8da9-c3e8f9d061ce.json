@@ -1,0 +1,11 @@
+{
+  "id": "0b35a571-6a3b-4b2c-8da9-c3e8f9d061ce",
+  "label": "GOD_4 wills the esse of each distinct caused recipient, from rational giving",
+  "argument_id": "e3371535-b4da-4ec4-98ae-1c93e53aa2c8",
+  "challenge_module": "TruthCore.Results.Causality.ThroughWill.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ThroughWill.Solution",
+  "theorem": "TruthCore.Results.Causality.ThroughWill.willsEsseForOfRationalGiving",
+  "comparator_config": "results/0b35a571-6a3b-4b2c-8da9-c3e8f9d061ce/comparator.json",
+  "status": "solution-present",
+  "description": "Given a GOD_4 g with will and a distinct effect x in act as to esse, the causal part of supreme goodness makes g a universal cause of esse. The GOD_4 intellect premise provides that same g's intellect. Thus the rational giving bridge covers x, and the recipient application supplies willing x its esse. Causation of x follows already from the universal coverage. This concerns distinct effects and leaves the self-case separate."
+}

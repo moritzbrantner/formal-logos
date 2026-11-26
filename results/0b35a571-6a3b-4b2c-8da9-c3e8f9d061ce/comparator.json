@@ -1,0 +1,9 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.ThroughWill.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ThroughWill.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.ThroughWill.willsEsseForOfRationalGiving"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}

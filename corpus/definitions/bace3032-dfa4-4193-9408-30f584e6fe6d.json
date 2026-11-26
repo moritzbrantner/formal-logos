@@ -1,0 +1,9 @@
+{
+  "id": "bace3032-dfa4-4193-9408-30f584e6fe6d",
+  "label": "Giving by an owned rational power at a world",
+  "term": "rational exercise in giving (RationallyGivesAt)",
+  "definition": "RationallyGivesAt F A w g x: some power p belongs to g, is rational, and g's giving x being at some moment in w exercises p. This combines PowerOf, Rational and GivesBy from the existing agency overlay.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.ThroughWill.RationallyGivesAt",
+  "note": "Analyst reconstruction. Illustrative analogue: a builder actually builds by exercising her rational inclination to build. A builder who also radiates body heat illustrates an effect for which the possessed will supplies no exercise. Applying the distinction to universal esse-giving remains open. No transitivity, uniqueness of power, or modal variation is built in. Rational classifies a power; the definition records its exercise for this effect without encoding what was understood or how that content determined the exercise. See docs/notes/divine-love-goodness-bridge.md. Dependencies: 582f44c3-7778-4806-b385-e1eff852ac5e (giving by a power), b8061228-9131-40f2-83bd-cb7d719bd0a0 (rational power), and 62dfa893-b633-4513-9790-8f9a0a3087e0 (world-relative giving)."
+}

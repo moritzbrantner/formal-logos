@@ -1,0 +1,15 @@
+{
+  "id": "6d6ea7d0-eeef-471b-a955-da916ed0ce80",
+  "label": "GOD_4 wills the esse of each distinct caused recipient, from rational giving (inference)",
+  "input_statement_ids": [
+    "e0dae79f-c042-5a08-a148-725d0468df91",
+    "29818edd-9f5a-5414-baa2-9a7d0c8abf18",
+    "83d8a0e0-9866-48d3-b582-9082c9cfeac8",
+    "3655f59f-9ab4-4c5d-8fb2-474810d29418"
+  ],
+  "output_statement_id": "a94c5dfc-c722-49fe-a242-dd39409b079d",
+  "rule": "Read the universal esse coverage of GOD_4's causal goodness, then apply rational and recipient bridges",
+  "meaning": "Given a GOD_4 g with will and a distinct effect x in act as to esse, the causal part of supreme goodness makes g a universal cause of esse. The GOD_4 intellect premise provides that same g's intellect. Thus the rational giving bridge covers x, and the recipient application supplies willing x its esse. Causation of x follows already from the universal coverage. This concerns distinct effects and leaves the self-case separate.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

@@ -1,0 +1,103 @@
+[batch]
+vocab = "TruthCore.Causality.ThroughWill"
+results = "TruthCore.Results.Causality.ThroughWill"
+
+[[statement]]
+id = "Distinct actual caused esse is exercised as giving in the selected world"
+lean = "ActualEsseCausesGiveAt"
+paraphrase = "OPEN, analyst formulation. At the selected world w, if x is distinct from g and in act as to esse and g causes x's esse, then g gives x being at some moment of w. The case predicate for act in esse and tenseless CausesIn stay distinct from world-relative giving."
+definitions = ["DEF-ESSE", "DEF-CAUSE-OF-PERFECTION", "62dfa893-b633-4513-9790-8f9a0a3087e0"]
+
+[[statement]]
+id = "Giving at the selected world exercises an owned power of a classified mode"
+lean = "GivingHasClassifiedPowerAt"
+paraphrase = "OPEN, analyst formulation. Every giving at w exercises some owned power p of its giver, with rationality or its negation for that p. Other exercised powers are allowed. This is selected-world coverage, with the disjunction explicit."
+definitions = ["582f44c3-7778-4806-b385-e1eff852ac5e", "b8061228-9131-40f2-83bd-cb7d719bd0a0", "62dfa893-b633-4513-9790-8f9a0a3087e0"]
+
+[[statement]]
+id = "Non-rational giving requires a distinct PRIOR_1 intellect"
+lean = "NonrationalGivingHasPriorIntellectAt"
+paraphrase = "OPEN, analyst formulation. If g gives x being at w by exercising an owned non-rational power, some distinct being with HAS_INTELLECT_1 is simply prior to g. This is the priority consequence of the natural teleology thesis that an intellect fixes the natural agent's end and means. The type retains existence of the prior intellect and leaves its directing act unspecified."
+definitions = ["DEF-SIMPLE-PRIORITY", "DEF-HAS-INTELLECT", "582f44c3-7778-4806-b385-e1eff852ac5e", "b8061228-9131-40f2-83bd-cb7d719bd0a0", "62dfa893-b633-4513-9790-8f9a0a3087e0"]
+
+[[statement]]
+id = "Universal causes with HAS_INTELLECT_1 and HAS_WILL_1 are first in PRIOR_1"
+lean = "IntellectualUniversalCausesAreFirst"
+paraphrase = "OPEN, analyst formulation. Every g with HAS_INTELLECT_1 and HAS_WILL_1 that causes the being of every other being in act as to esse has no distinct simply prior being. This links universal esse causality to firstness in simple priority."
+definitions = ["DEF-FIRST-BEING", "DEF-SIMPLE-PRIORITY", "DEF-HAS-INTELLECT", "DEF-HAS-WILL", "92c03350-6809-497d-b123-2ffb11c0e0c1"]
+
+[[statement]]
+id = "Universal causes with HAS_INTELLECT_1 and HAS_WILL_1 have at most one active power"
+lean = "IntellectualUniversalCausesHaveOnePower"
+paraphrase = "OPEN, analyst formulation. For every universal esse cause with HAS_INTELLECT_1 and HAS_WILL_1, any two active powers it owns are identical. This applies at-most-one-power simplicity to each qualifying universal cause."
+definitions = ["DEF-HAS-INTELLECT", "DEF-HAS-WILL", "92c03350-6809-497d-b123-2ffb11c0e0c1", "fdeb7757-10db-4fa7-91a4-6c15ee5100d2"]
+
+[[statement]]
+id = "Universal causes with HAS_INTELLECT_1 and HAS_WILL_1 give by rational exercise at w"
+lean = "IntellectualUniversalCausesGiveRationallyAt"
+paraphrase = "For every g with HAS_INTELLECT_1 and HAS_WILL_1 that causes the being of every other being in act as to esse, and each such distinct effect x, g gives x being at w by exercising an owned rational power. This is the agency-overlay sense of through will. The type does not establish practical determination by apprehended content, recipient-directed willing or freedom to refrain."
+definitions = ["DEF-HAS-INTELLECT", "DEF-HAS-WILL", "92c03350-6809-497d-b123-2ffb11c0e0c1", "bace3032-dfa4-4193-9408-30f584e6fe6d"]
+
+[[statement]]
+id = "A universal intellectual cause directs each actual effect it gives by rational exercise"
+lean = "RationalUniversalGivingDirects"
+paraphrase = "OPEN, analyst formulation. For every g with HAS_INTELLECT_1 and HAS_WILL_1 causing the esse of every distinct actual x, for each such x that g gives being at w by an owned rational power, some end is one to which g directs x."
+definitions = ["DEF-HAS-INTELLECT", "DEF-HAS-WILL", "92c03350-6809-497d-b123-2ffb11c0e0c1", "DEF-GOVERNMENT-DIRECTION-TO-END", "bace3032-dfa4-4193-9408-30f584e6fe6d"]
+
+[[statement]]
+id = "GOD_4 giving a distinct actual effect by rational exercise wills its esse to it"
+lean = "DivineRationalGivingWillsEsseFor"
+paraphrase = "OPEN, analyst formulation. For every GOD_4 and distinct effect in act in esse, if this God gives it being at w by exercising an owned rational power, this God wills the good of esse to that recipient. Recipient-directed CREATURE_WILLING_1 allows ordering the same effect to another."
+definitions = ["DEF-GOD-OF-CLASSICAL-THEISM", "DEF-ESSE", "08b826db-2d9c-48e5-b69c-d4ac54088518", "bace3032-dfa4-4193-9408-30f584e6fe6d"]
+
+[[statement]]
+id = "Controls for rational exercise by universal causes and its applications"
+lean = "Control.Controls"
+paraphrase = "Two actual beings in two mutually accessible worlds. The universal cause has intellect, will and a rational power. Each omission of the esse-giving adapter, classified exercise, natural priority, or firstness keeps the other three and falsifies universal rational exercise. With firstness and a fixed non-rational exercise the priority rule fails. An alternative fixed rational exercise satisfies all four and the rational conclusion while end direction, recipient-directed willing and the NarDerivation fixity-to-required-means rule with an empty requirement relation fail."
+definitions = ["DEF-HAS-INTELLECT", "DEF-HAS-WILL", "DEF-FIRST-BEING", "DEF-SIMPLE-PRIORITY", "92c03350-6809-497d-b123-2ffb11c0e0c1", "02aa24f8-e6cc-4d47-8b34-d3b7149e7ee8", "90719cb5-43c2-4677-8ad7-20e077e28ac9", "08b826db-2d9c-48e5-b69c-d4ac54088518", "DEF-GOVERNMENT-DIRECTION-TO-END", "bace3032-dfa4-4193-9408-30f584e6fe6d"]
+
+[[argument]]
+id = "Intellectual universal giving by rational exercise, from priority"
+theorem = "rationalGivingOfPriority"
+premises = ["Distinct actual caused esse is exercised as giving in the selected world", "Giving at the selected world exercises an owned power of a classified mode", "Non-rational giving requires a distinct PRIOR_1 intellect", "Universal causes with HAS_INTELLECT_1 and HAS_WILL_1 are first in PRIOR_1"]
+conclusion = "Universal causes with HAS_INTELLECT_1 and HAS_WILL_1 give by rational exercise at w"
+axioms = []
+rule = "Convert the causal edge to giving and eliminate the non-rational case by firstness"
+meaning = "For each distinct actual effect, the esse adapter gives an actual giving and the classifier gives an owned power exercised in it. The non-rational branch supplies a distinct prior intellect, contradictory to firstness of the same universal cause. The rational branch supplies the typed exercise. The independent premises carry application to actual esse, classification, metaphysical priority, and the scope of firstness."
+
+[[argument]]
+id = "Intellectual universal giving by rational exercise, from one power"
+theorem = "rationalGivingOfOnePower"
+premises = ["Distinct actual caused esse is exercised as giving in the selected world", "Universal causes with HAS_INTELLECT_1 and HAS_WILL_1 have at most one active power", "5c1aba17-d224-49fd-a31c-728a54ac63a9"]
+conclusion = "Universal causes with HAS_INTELLECT_1 and HAS_WILL_1 give by rational exercise at w"
+axioms = []
+rule = "Convert the causal edge to giving and apply the rational exercise result at the same bearer"
+meaning = "The adapter supplies giving at w. The universal-scope premise supplies one power for the same intellectual cause. The earlier result from one power then supplies its owned rational exercise for each giving at w. This composition shares the adapter with the priority route."
+
+[[argument]]
+id = "A universal intellectual cause directs all actual effects, from rational giving"
+theorem = "directsAllOfRationalGiving"
+premises = ["Universal causes with HAS_INTELLECT_1 and HAS_WILL_1 give by rational exercise at w", "A universal intellectual cause directs each actual effect it gives by rational exercise"]
+conclusion = "123d394b-11ce-449a-a8b6-7fda5a254a6d"
+axioms = []
+transcription = "assembly"
+rule = "Compose the per-effect rational exercise with the application to directing it to an end"
+meaning = "At the same g and x the first premise gives rational exercise and the second supplies some end to which g directs x. The end may depend on x. The q.103 government implication is downstream."
+
+[[argument]]
+id = "GOD_4 wills the esse of each distinct caused recipient, from rational giving"
+theorem = "willsEsseForOfRationalGiving"
+premises = ["e0dae79f-c042-5a08-a148-725d0468df91", "29818edd-9f5a-5414-baa2-9a7d0c8abf18", "Universal causes with HAS_INTELLECT_1 and HAS_WILL_1 give by rational exercise at w", "GOD_4 giving a distinct actual effect by rational exercise wills its esse to it"]
+conclusion = "a94c5dfc-c722-49fe-a242-dd39409b079d"
+axioms = []
+rule = "Read the universal esse coverage of GOD_4's causal goodness, then apply rational and recipient bridges"
+meaning = "Given a GOD_4 g with will and a distinct effect x in act as to esse, the causal part of supreme goodness makes g a universal cause of esse. The GOD_4 intellect premise provides that same g's intellect. Thus the rational giving bridge covers x, and the recipient application supplies willing x its esse. Causation of x follows already from the universal coverage. This concerns distinct effects and leaves the self-case separate."
+
+[[argument]]
+id = "Four priority-route omissions and fixed rational exercise, checked"
+theorem = "controls"
+premises = []
+conclusion = "Controls for rational exercise by universal causes and its applications"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Evaluate the same two-world causal assignment with changes to giving, exercise and priority"
+meaning = "The created effect is always actual and the tenseless esse edge always holds. Absence of giving or absence of an exercise assignment shows why the respective adapter or classification input matters. The fixed non-rational exercise meets firstness and violates natural priority; assigning priority to the effect instead makes natural priority true and firstness false. With the fixed rational exercise all four inputs hold. Empty end and recipient-willing relations test the further applications, and with no required means the same rational fixed exercise violates WN. These are structural assignments to the shared frame and agency overlay."
