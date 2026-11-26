@@ -855,9 +855,8 @@ For the adopted esse interpretation, `ExistingInActAt` gives hAct b hE. The witn
 ### Matched rival controls
 
 The following are selected finite interpretation controls, not metaphysical
-possibility or source claims. The first four Lean controls are reused;
-the last two additional controls are mathematical assignments with their
-finite quantifiers checked in Python, not Lean-certified.
+possibility or source claims. The first four Lean controls are reused.
+The last two assignments are checked by the linked Lean declarations.
 
 - `CogitoSubject.subjectlessControl` and `nonSubstantialBearerModel`:
   keep occurrence fixed, remove attribution or substance. For the
@@ -902,34 +901,14 @@ finite quantifiers checked in Python, not Lean-certified.
   distinct subject. This is not a model of a thesis defining
   intellectual exercise as attribution to a *distinct* bearer.
 
-Small executable check (analyst controls only; run with Python 3):
-
-```python
-from itertools import product
-W, B = {0, 1}, {"a", "b"}
-access = set(product(W, W))
-exists = {(0, "a"), (1, "b")}
-concrete = B
-occurs, understands = {"e"}, {"e"}
-bears = {("a", "e")}
-act = {("a", "esse"), ("a", "understanding")}
-grounds = set()
-state = {(0, "a", 0): "question", (0, "a", 1): "grasp"}
-assert all(any((w, b) in exists for b in concrete) for w in W)
-assert not any(all((v, b) in exists for v in W if (0, v) in access)
-               for b in concrete)
-assert any(e in understands and (b, e) in bears and (0, b) in exists
-           and (b, "understanding") in act and (b, "esse") in act
-           for e in occurs for b in B)
-assert state[0, "a", 0] != state[0, "a", 1] and not grounds
-actual = {"e"}
-possible = {"e"}
-assert actual and not (possible - actual)
-```
-
-Execution passed in the research environment. This checks the explicitly
-listed finite properties only, not arbitrary corpus predicates, theorem
-bindings or the general conservative-extension proof.
+Lean checks both additional fixtures. The split population retains
+the actual grasp, both act respects and the distinct ordered stage
+labels, while its proper grounds are empty and neither candidate is
+necessary at the actual world. The single-event profile has an actual
+occurrence and coincident possible and actual extensions, with empty
+distinct-bearing, substance and proper-ground relations. The general
+conservative-extension argument is a separate question.
+[Split population](../../TruthCore/Logic/CogitoRivalControls.lean#L42) · [Single event](../../TruthCore/Logic/CogitoRivalControls.lean#L69)
 
 ### Provisional judgment and downstream destinations
 
