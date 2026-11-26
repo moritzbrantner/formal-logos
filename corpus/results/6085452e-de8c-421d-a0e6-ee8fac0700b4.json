@@ -1,0 +1,12 @@
+{
+  "id": "6085452e-de8c-421d-a0e6-ee8fac0700b4",
+  "label": "Existence in the selected extension from the asserter of an occurring thought",
+  "argument_id": "e4ac196d-0fed-47bf-9bc9-9f8b9c5c2e35",
+  "challenge_module": "TruthCore.Results.Logic.FirstPersonWitness.Challenge",
+  "solution_module": "TruthCore.Results.Logic.FirstPersonWitness.Solution",
+  "theorem": "TruthCore.Results.Logic.FirstPersonWitness.existenceFromAssertion",
+  "comparator_config": "results/6085452e-de8c-421d-a0e6-ee8fac0700b4/comparator.json",
+  "status": "solution-present",
+  "description": "Assembly transcription, attribution deferred. Take an agent actually asserting the selected content and an episode realizing that assertion at the selected world. The realization premise uses the selected world's occurrence slice. Instantiate the agency premise with this asserter and their matching occurrence and realization. This explicitly requires that the matching asserter bears the episode. The world-indexed presence bridge puts that bearer into the selected existence extension. The exported conclusion is existence in that extension; the companion witness adds the in-re esse contract for concreteness of the same bearer.",
+  "transcription": "assembly"
+}

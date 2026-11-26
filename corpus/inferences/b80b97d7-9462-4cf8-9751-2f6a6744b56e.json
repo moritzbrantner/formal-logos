@@ -1,0 +1,15 @@
+{
+  "id": "b80b97d7-9462-4cf8-9751-2f6a6744b56e",
+  "label": "Existence in the selected extension from the performer of a realized doubt (inference)",
+  "input_statement_ids": [
+    "95c5138f-e3cc-552d-9846-ab8dc84502f4",
+    "1722a80f-47a4-5605-8b66-b3534e457bcb",
+    "c2fa06f2-cf36-5958-b69a-ef274b45014c",
+    "f8b47cda-5ebf-532d-b951-b4f756076cc9"
+  ],
+  "output_statement_id": "43253cd8-62be-4528-85e4-54806bd3fac0",
+  "rule": "Instantiate the bearing and world-existence rules at the doubter and realizing episode",
+  "meaning": "Assembly transcription, attribution deferred. Take a performed doubt whether thought occurs and an episode realizing that act at the selected world. The realization premise uses that world's occurrence slice. The agency premise expressly makes the assigned performer a bearer of the matching episode. The world-indexed presence bridge puts that same performer into the selected existence extension. The companion witness adds the in-re esse contract for concreteness. Contingency additionally requires an accessible world where this bearer is absent.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}
