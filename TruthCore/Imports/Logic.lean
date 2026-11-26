@@ -32,6 +32,7 @@ public import TruthCore.Logic.EpistemicReasonBearer
 public import TruthCore.Logic.EpistemicReasonDefinitionFork
 public import TruthCore.Logic.EpistemicReasons
 public import TruthCore.Logic.EpistemicUnderminers
+public import TruthCore.Logic.EvidenceAimTable
 public import TruthCore.Logic.ExcludedMiddle
 public import TruthCore.Logic.ExcludedMiddleAssertionBoundary
 public import TruthCore.Logic.ExperiencedThoughtBearer

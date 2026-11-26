@@ -455,35 +455,12 @@ The checked old `goalRelative` frame already separates the latter force field;
 the new calculation gives the support distinction determinate informational
 content instead of another arbitrary favoring flag.
 
-The following exact-rational enumeration reproduces the four rows. It also
-checks both possible supported answers at both aim settings. This is a finite
-Python calculation, **not** a new Lean/Comparator/NanoDa certificate or corpus
-model registration. No threshold-to-full-belief inference is made.
-
-```python
-from fractions import Fraction as F
-from itertools import product
-
-rows = [(w, s, b, F(3 if s == w else 1, 16))
-        for w, s, b in product((0, 1), repeat=3)]
-assert sum(m for _, _, _, m in rows) == 1
-
-def posterior(test):
-    selected = [(w, m) for w, s, b, m in rows if test(w, s, b)]
-    return sum(w*m for w, m in selected) / sum(m for _, m in selected)
-
-assert posterior(lambda w, s, b: True) == F(1, 2)
-for s, b in product((0, 1), repeat=2):
-    q = posterior(lambda w, x, y: x == s and y == b)
-    assert q == F(3 if s else 1, 4)
-    assert posterior(lambda w, x, y: y == b) == F(1, 2)
-    print(s, b, q)
-    for aim, answer in product((False, True), (0, 1)):
-        merit = (answer == s)
-        force = aim and merit  # the rival's explicit normative assumption
-        if not aim:
-            assert not force
-```
+Lean checks normalization of the eight-entry table, the prior and the
+conditional probabilities for all four signal-and-bonus pairs. It also
+checks the selected merit and force rules for both answers at both aim
+settings. The force rule is an input to the comparison. No
+threshold-to-full-belief inference is made.
+[Exact probabilities](../../TruthCore/Logic/EvidenceAimTable.lean#L26) · [Aim controls](../../TruthCore/Logic/EvidenceAimTable.lean#L35)
 
 The probability identities are calculated; the last force rule is stipulated
 and checked for its consequences, not inferred from the probabilities. A new
