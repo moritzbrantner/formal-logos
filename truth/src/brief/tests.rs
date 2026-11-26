@@ -2103,12 +2103,43 @@ end TruthCore.Results.Causality.ContingentAncestry
     assert_eq!(candidates[0]["path"], path);
     assert_eq!(candidates[0]["line"], 3);
     assert_eq!(candidates[0]["registered_result_ids"], json!([]));
-    assert_eq!(candidates[0]["signature"], "theorem necessaryAncestor (h : True) :\n    True");
+    assert_eq!(
+        candidates[0]["signature"],
+        "theorem necessaryAncestor (h : True) :\n    True"
+    );
     assert!(report["lean_results"].as_array().unwrap().is_empty());
     assert!(text.contains("source matches, not equivalence or verification claims"));
     assert!(text.contains(path));
     assert!(!text.contains("exact h"));
     assert!(!text.contains("sorry"));
+    std::fs::remove_dir_all(root).unwrap();
+}
+
+#[test]
+fn contingent_descent_retrieves_the_existing_necessary_ancestor_implementation() {
+    let root = fixture("question-real-contingent-ancestry");
+    std::fs::remove_dir_all(root.join("docs")).unwrap();
+    std::fs::remove_dir_all(root.join("corpus/attempts")).unwrap();
+    let path = "TruthCore/Results/Causality/ContingentAncestry/Solution.lean";
+    let repository = Path::new(env!("CARGO_MANIFEST_DIR")).parent().unwrap();
+    let source = std::fs::read_to_string(repository.join(path)).unwrap();
+    write(&root, path, &source);
+    let corpus = Corpus::load(&root).unwrap();
+    let (report, _) = super::assessment_search::report_for_root(
+        &root,
+        &corpus,
+        "contingent necessary ancestor descent",
+        5,
+    )
+    .unwrap();
+    let candidates = report["lean_library_candidates"].as_array().unwrap();
+    assert!(candidates.iter().any(|hit| {
+        hit["name"] == "TruthCore.Results.Causality.ContingentAncestry.necessaryAncestor"
+            && hit["path"] == path
+            && hit["signature"]
+                .as_str()
+                .is_some_and(|s| s.contains("ContingentConeFounded"))
+    }), "{candidates:?}");
     std::fs::remove_dir_all(root).unwrap();
 }
 
