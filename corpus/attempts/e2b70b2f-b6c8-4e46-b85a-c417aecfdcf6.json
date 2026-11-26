@@ -12,7 +12,8 @@
   "summary": "The #468 intellectual and simple impersonal assignments share the structural maximum and necessary underived signature. At the same #1867 copy schedule they give the same complete represented trace and opposite root intellect and will. The trace identifies the copy/toggle schedule within that law class. The independently imposed attribute premises give an inhabited restriction where both attributes hold. See the actual-history section of docs/notes/physical-ground-468.md for matched explanatory alternatives and the provisional assessment. The model combines existing assignments with a schedule and has no rule making a source produce that schedule.",
   "blocker": "OPEN: same-source production of the particular actual order and an independently warranted domain restriction or permitted source-sensitive report that separates different attribute values on every tied fiber. A Boolean history alone represents neither exercise of intellect and will nor adequate ultimate explanation.",
   "evidence": [
-    "38ebb0ba-2e44-44a2-8bb1-61617e0b5200"
+    "38ebb0ba-2e44-44a2-8bb1-61617e0b5200",
+    "PR-2099"
   ],
   "workers": [
     {
@@ -20,7 +21,8 @@
       "provider": "codex",
       "model": "gpt-6.2-sol",
       "effort": "high",
-      "date": "2026-11-26"
+      "date": "2026-11-26",
+      "pr": "PR-2099"
     }
   ]
 }
