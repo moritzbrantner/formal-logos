@@ -1,0 +1,10 @@
+{
+  "id": "c7df7ec6-124e-4999-a09e-f8cfc8f89f53",
+  "label": "Test by The explicit invariance-only model satisfies all four se for Every sentence satisfying (1)",
+  "subject_kind": "result",
+  "subject_id": "3475369c-9c70-576e-96fa-8b1e62e15f55",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "40840c3d-90da-5237-b2a3-8ea9519b5c9c",
+  "note": "Tests omitting the actual truth component in the invariance-only profile where the false selected evil premise still counts as objective."
+}

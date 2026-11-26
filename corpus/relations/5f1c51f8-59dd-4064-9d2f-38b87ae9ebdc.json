@@ -1,0 +1,10 @@
+{
+  "id": "5f1c51f8-59dd-4064-9d2f-38b87ae9ebdc",
+  "label": "Test by Test coverage of all contingent recipients at the necessary intermediary",
+  "subject_kind": "result",
+  "subject_id": "012166ef-0b65-4785-a163-1900d60044c9",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "75974d26-9483-4e1b-81a9-693a90ee9d0f",
+  "note": "Tests extending direct giving to actual contingent recipients into ancestry of all actual concreta using the d-to-g-to-c chain where the selected g cannot reach its own root."
+}

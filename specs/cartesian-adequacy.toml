@@ -173,3 +173,13 @@ predicate = "tests"
 object_kind = "statement"
 object_id = "64498e7e-7f10-54a0-9ec0-c65e6076de1f"
 note = "Tests independence of preexistence and respect-wise total-cause containment, with separate finite cases using partial causes and the distinction between causing being and causing a perfection."
+
+[[relation]]
+id = "Test by MORE_1 control: strict comparative holds, no-effect-exceeds-total-cause fails"
+label = "Test by MORE_1 control: strict comparative holds, no-effect-exceeds-total-cause fails"
+subject_kind = "result"
+subject_id = "bc769e84-ca67-403e-b14a-527e4a9c8a3b"
+predicate = "tests"
+object_kind = "statement"
+object_id = "87f41688-c06f-4fe9-994b-0682a4be3038"
+note = "Tests non-strict total-cause adequacy from the strict comparison alone, using reciprocal total causes and a universally true primitive comparison on two beings."

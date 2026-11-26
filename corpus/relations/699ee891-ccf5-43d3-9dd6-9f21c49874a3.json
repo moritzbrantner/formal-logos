@@ -1,0 +1,10 @@
+{
+  "id": "699ee891-ccf5-43d3-9dd6-9f21c49874a3",
+  "label": "Test by Test the strict-ground interpretation after identifying labels across two disjoint pairs",
+  "subject_kind": "result",
+  "subject_id": "b251e442-4373-4ef8-984d-5f5a9004be2e",
+  "predicate": "tests",
+  "object_kind": "argument",
+  "object_id": "337ecbd2-673d-4b71-9282-b0eee4efd697",
+  "note": "Tests why acyclicity of bearer steps alone does not suffice for fixed labels in the four-bearer projection with a two-label cycle."
+}

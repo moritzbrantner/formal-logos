@@ -1,0 +1,10 @@
+{
+  "id": "2288c368-d291-48d4-8b38-8a59c016476f",
+  "label": "Test by Restated-premise controls, checked",
+  "subject_kind": "result",
+  "subject_id": "554f060b-f097-4729-b90a-196d535448ac",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "22954087-d5fb-4bd3-bcb7-5d5167016988",
+  "note": "Checks the exact selected-meditator reformulation by using the same occurrence, bearer and meditator fields."
+}
