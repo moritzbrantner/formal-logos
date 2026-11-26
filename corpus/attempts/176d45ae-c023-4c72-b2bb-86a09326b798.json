@@ -12,7 +12,8 @@
   "blocker": "The finite equations do not supply independently warranted strict-giving and history calibration. For one received bearer, specify an admissible pair and criteria for tracking the bearer and detecting nonexercise independent of its fate, then check that the cut preserves its onset and loss conditions, excludes all alternative givers, and preserves a reason if the bearer survives. Explained survival revises the universal bridge within that interpretation. Calibrated inducer-free loss favors sustaining for that case; generalization requires a scope bridge. If withdrawal itself independently qualifies as a loss inducer, the loss comparison leaves the persistence law standing.",
   "evidence": [
     "PR-2091",
-    "00a7e616-3154-4db7-8d66-af4536384df7"
+    "00a7e616-3154-4db7-8d66-af4536384df7",
+    "PR-2094"
   ],
   "workers": [
     {
@@ -22,6 +23,29 @@
       "effort": "high",
       "date": "2026-11-26",
       "pr": "PR-2091"
+    },
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2094"
     }
-  ]
+  ],
+  "current_assessment": {
+    "date": "2026-11-26",
+    "statement_ids": [
+      "d86c9de9-25be-488b-b3b7-69f5f4eb80b8"
+    ],
+    "scope": "Finite strict-giver withdrawal for a begun received-esse bearer, with both histories calibrated in one frame at fixed onset, origin and independently characterized loss conditions.",
+    "assessment": "The checked contrast makes the test precise. Explained inducer-free survival with every giver absent supplies a counterinstance to the productive bridge in the calibrated frame. Inducer-free loss instead supplies a counterinstance to the cessation law in that frame. Direct conservation remains positively motivated for direct causes of being, and the inertia account retains its case from earlier actuality and an independently warranted law of cessation. The Boolean contrast leaves their relative warrant open in the absence of an independently justified calibration.",
+    "next_test": "Identify one begun received bearer across an admissible pair, fix its onset and origin, and justify detection of nonexercise of strict giving independent of the later presence report. Exclude competing givers and loss inducers at the matching scope. Explained survival would revise the productive bridge in that interpretation. Inducer-free loss would favor sustaining for that case; broader warrant needs a scope bridge.",
+    "note": "docs/notes/sustaining-vs-existential-inertia.md#13-finite-interventions-and-the-productive-bridge",
+    "reviewed_revision": "dfbea133f53da25380f908d9a6694730498739b2",
+    "review": "unreviewed",
+    "publication": "unpublished",
+    "evidence": "Draft PR-2094, with a checked conditional contrast. Independent semantic challenge of the application and assessment remains pending.",
+    "supersedes": "None. This assessment concerns the calibration test and retains the earlier positive warrant and its qualifications."
+  }
 }
