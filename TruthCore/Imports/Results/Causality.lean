@@ -328,6 +328,7 @@ public import TruthCore.Results.Causality.PureIndiscernibility.Solution
 public import TruthCore.Results.Causality.Q44EssentialSource.Solution
 public import TruthCore.Results.Causality.Q44SourceSupply.Solution
 public import TruthCore.Results.Causality.QuantitativeTransferPaths.Solution
+public import TruthCore.Results.Causality.RayObservation.Solution
 public import TruthCore.Results.Causality.ReceiptAllocation.Solution
 public import TruthCore.Results.Causality.ReceiptMatching.Solution
 public import TruthCore.Results.Causality.ReceivedEsseActualGiver.Solution
@@ -407,6 +408,7 @@ public import TruthCore.Results.Causality.SupertaskUrnPointwise.Solution
 public import TruthCore.Results.Causality.SupplierAuditCertificates.Solution
 public import TruthCore.Results.Causality.SupplierAuditLikelihood.Solution
 public import TruthCore.Results.Causality.SupplierAuditVisibility.Solution
+public import TruthCore.Results.Causality.SupplierPanelLikelihood.Solution
 public import TruthCore.Results.Causality.SurveyCapabilityProfiles.Solution
 public import TruthCore.Results.Causality.SurveyProductiveSource.Solution
 public import TruthCore.Results.Causality.SurveySourceEndpointControls.Solution

@@ -1,0 +1,13 @@
+{
+  "id": "8ec1492e-07e5-4b90-8b43-3550a10a0331",
+  "label": "Test the shared setting by varying just one of two observed live rays (inference)",
+  "input_statement_ids": [
+    "2b807b2a-85e0-48ab-bc51-d8aaf6d24aad",
+    "166fd469-2bfa-4e82-a96e-84dcac10f7f9"
+  ],
+  "output_statement_id": "e8d2e788-c5ea-4d00-a105-79968ba6d540",
+  "rule": "Enable the ray of the first reading and leave other rays off",
+  "meaning": "A feasible mixed pair cannot come from one ray, by live within-ray agreement. Across distinct rays, turning on just the first ray yields a full feasible report with the second reading off. Such a pair contradicts agreement under a single shared Boolean setting. The exclusion concerns this shared-setting model, whose settings are transmitted unchanged along each intact tail.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

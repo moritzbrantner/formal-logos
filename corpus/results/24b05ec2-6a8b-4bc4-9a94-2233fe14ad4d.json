@@ -1,0 +1,11 @@
+{
+  "id": "24b05ec2-6a8b-4bc4-9a94-2233fe14ad4d",
+  "label": "Test the shared setting by varying just one of two observed live rays",
+  "argument_id": "c2d94b94-fed2-45d5-9d9e-2a30793675ff",
+  "challenge_module": "TruthCore.Results.Causality.RayObservation.Challenge",
+  "solution_module": "TruthCore.Results.Causality.RayObservation.Solution",
+  "theorem": "TruthCore.Results.Causality.RayObservation.mixedLiveRayReport",
+  "comparator_config": "results/24b05ec2-6a8b-4bc4-9a94-2233fe14ad4d/comparator.json",
+  "status": "solution-present",
+  "description": "A feasible mixed pair cannot come from one ray, by live within-ray agreement. Across distinct rays, turning on just the first ray yields a full feasible report with the second reading off. Such a pair contradicts agreement under a single shared Boolean setting. The exclusion concerns this shared-setting model, whose settings are transmitted unchanged along each intact tail."
+}
