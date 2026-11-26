@@ -1,0 +1,10 @@
+{
+  "id": "332c87d9-bb67-485f-9dd0-94767d6ef2db",
+  "label": "Test by The golden mountain model: one being in act in a further respect but not in being",
+  "subject_kind": "result",
+  "subject_id": "f91a71d7-0337-56e9-bf58-74a703866520",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "196e6606-d61b-59c4-a12b-7ce056936b92",
+  "note": "Tests omission of this premise from noActualityWithoutBeing in the golden mountain fixture with act in the further respect and no act in being."
+}

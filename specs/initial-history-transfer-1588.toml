@@ -87,3 +87,33 @@ conclusion = "Rigid initial profile denies the single bearer-omission edge"
 axioms = ["propext", "Classical.choice", "Quot.sound"]
 rule = "Rigid soundness and preservation at an M-accessible witness; finite decision for the surrogate"
 meaning = "Binds the discriminating premise in its existential form: one E-admitted, M-accessible history lacking the actual initial bearer. The rigid profile denies exactly this edge; restricted inclusion over all such histories is a sufficient strengthening that the qualitative surrogate profile also fails. No warrant for or against the edge is established."
+
+[[relation]]
+id = "Test by Rigid initial profile denies the single bearer-omission edge checked"
+label = "Test by Rigid initial profile denies the single bearer-omission edge checked"
+subject_kind = "result"
+subject_id = "8fac57db-553c-47df-a989-34ff6d95641f"
+predicate = "tests"
+object_kind = "statement"
+object_id = "77a76499-f2df-467f-b685-919f8b110d89"
+note = "Tests the rigid history no-omission boundary against the qualitative profile with one E-admitted and M-accessible bearer omission, on the four-history surrogate."
+
+[[relation]]
+id = "Test by Initial history transfer 1588 finite model checked"
+label = "Test by Initial history transfer 1588 finite model checked"
+subject_kind = "result"
+subject_id = "ea476f80-caae-431c-8205-328d57441bd7"
+predicate = "tests"
+object_kind = "statement"
+object_id = "77a76499-f2df-467f-b685-919f8b110d89"
+note = "Tests joint variation of rigidity, bearer omission and transfer on the four-history surrogate, comparing rigid and qualitative accessibility."
+
+[[relation]]
+id = "Test by Rigid initial profile with full inclusion E-necessity checked"
+label = "Test by Rigid initial profile with full inclusion E-necessity checked"
+subject_kind = "result"
+subject_id = "33f9dfc9-4ad3-4fc9-8dea-991b958f843f"
+predicate = "tests"
+object_kind = "statement"
+object_id = "77a76499-f2df-467f-b685-919f8b110d89"
+note = "Checks the full-inclusion alternative on the same rigid profile, where every E-admitted history retains the actual initial bearer."

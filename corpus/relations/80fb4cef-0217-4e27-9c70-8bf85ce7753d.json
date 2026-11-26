@@ -1,0 +1,10 @@
+{
+  "id": "80fb4cef-0217-4e27-9c70-8bf85ce7753d",
+  "label": "Test by Fixed initial 535 rigid branch checked",
+  "subject_kind": "result",
+  "subject_id": "b99b6dd0-1850-432d-a33a-2b592f404599",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "c778a6ca-e756-56ac-aa68-c81e9883ca7c",
+  "note": "Tests nonvacuity of the rigid initial-witness reading in the joint Bool-history model with variation at later stages."
+}

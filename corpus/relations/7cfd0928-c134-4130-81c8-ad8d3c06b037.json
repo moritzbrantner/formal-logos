@@ -1,0 +1,10 @@
+{
+  "id": "7cfd0928-c134-4130-81c8-ad8d3c06b037",
+  "label": "Test by Finite-duration Arrival B controls checked for Possibly, some contingent thing is pres (1)",
+  "subject_kind": "result",
+  "subject_id": "ebf324e3-ecbb-4d14-92dc-1bfa19702074",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "faa1ff28-8553-4b63-8597-5a53088d5415",
+  "note": "Tests omission of this premise from possiblyBeginsFiniteDurationOfMetricallyFinite in the stated history retaining possible beginning without metric finiteness."
+}

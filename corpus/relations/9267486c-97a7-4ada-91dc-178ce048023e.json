@@ -1,0 +1,10 @@
+{
+  "id": "9267486c-97a7-4ada-91dc-178ce048023e",
+  "label": "Test by The shared duplicate-label B frame has modal-language MC for Rival: modal collapse hol (1)",
+  "subject_kind": "result",
+  "subject_id": "0c3e85d3-c3ae-52e5-b5bc-25e0997e392b",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "6358fce9-4fa9-5fdf-8948-c4563c5ce7d1",
+  "note": "Tests replacing full-predicate collapse by language-relative collapse in the duplicate-label interpretation and states the separate sufficient upgrade assumptions."
+}

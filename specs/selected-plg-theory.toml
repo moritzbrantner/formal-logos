@@ -85,3 +85,33 @@ sense_mixing_control = true
 axioms = ["propext", "Classical.choice", "Quot.sound"]
 rule = "Apply the strict-step and return-path tests to the two labels"
 meaning = "The weak-only and strict-forward presentations each consist of one full sequent. The return control adds exactly one reverse weak full sequent and keeps both labels and the dependence edge fixed. These are formal tests of the encoded premises."
+
+[[relation]]
+id = "Test by Classify consistency of a supplied PLG presentation by strict steps and weak returns"
+label = "Test by Classify consistency of a supplied PLG presentation by strict steps and weak returns"
+subject_kind = "result"
+subject_id = "00f2cd7c-c0a7-4eef-b57a-e59bde59b204"
+predicate = "tests"
+object_kind = "argument"
+object_id = "4bd8457a-2c92-4d47-bcb6-d32fda38af75"
+note = "Checks the sufficiency and exact boundary of the no-return criterion for consistency of the supplied theory, with predecessor-set ranks in the positive direction."
+
+[[relation]]
+id = "Test by Compare three fixed PLG presentations for the same labelled Boolean dependence edge"
+label = "Test by Compare three fixed PLG presentations for the same labelled Boolean dependence edge"
+subject_kind = "result"
+subject_id = "1ea2f628-a121-4e37-a21c-5f4af77f0321"
+predicate = "tests"
+object_kind = "statement"
+object_id = "d1c47547-492f-4c93-a7af-6eb522602e08"
+note = "Tests the no-strict-return boundary by adding exactly one reverse weak full sequent to the fixed two-label strict-forward profile."
+
+[[relation]]
+id = "Test by Classify strict partial derivability by paths in a consistent PLG presentation"
+label = "Test by Classify strict partial derivability by paths in a consistent PLG presentation"
+subject_kind = "result"
+subject_id = "006f49e8-4c68-424d-9403-9f025185b555"
+predicate = "tests"
+object_kind = "argument"
+object_id = "ea09d50b-ed10-4454-b737-ff7014bebdd6"
+note = "Checks strict derivability against the nonempty path condition in the same represented selected PLG theory under its consistency assumptions."

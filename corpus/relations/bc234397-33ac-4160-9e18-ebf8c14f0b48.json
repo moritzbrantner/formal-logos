@@ -1,0 +1,10 @@
+{
+  "id": "bc234397-33ac-4160-9e18-ebf8c14f0b48",
+  "label": "Test by Closed stock bounds the number of intervals meeting a uniform energy demand, by accounting",
+  "subject_kind": "result",
+  "subject_id": "dcbd1474-8431-4644-a248-7a07803a5473",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "97f5850f-62bc-5e43-a0c1-dd1033d08fc9",
+  "note": "Checks the finite-horizon quantitative obstruction for the selected no-input stock mechanism with a common lower bound on each output."
+}

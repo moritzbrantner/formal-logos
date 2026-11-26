@@ -47,3 +47,33 @@ conclusion = "Fixed initial 535 propagation schema"
 transcription = "single_application"
 rule = "Witness propagation"
 meaning = "Elementary propagation of an explicitly assumed same bearer; no philosophical premise discharged."
+
+[[relation]]
+id = "Test by Fixed initial 535 joint controls checked"
+label = "Test by Fixed initial 535 joint controls checked"
+subject_kind = "result"
+subject_id = "bceb9bda-cf1c-4038-a5bd-43d63c6a06dc"
+predicate = "tests"
+object_kind = "statement"
+object_id = "c778a6ca-e756-56ac-aa68-c81e9883ca7c"
+note = "Tests whether shared initial qualitative description can replace rigid bearer identity in the Bool-history alternating roster."
+
+[[relation]]
+id = "Test by Fixed initial 535 propagation transcribed"
+label = "Test by Fixed initial 535 propagation transcribed"
+subject_kind = "result"
+subject_id = "d5b1d0f7-6736-4578-8d11-8d4704a08464"
+predicate = "tests"
+object_kind = "argument"
+object_id = "237660eb-1886-400f-8369-f4adb238033f"
+note = "Checks propagation only when the initial bearer is held fixed across accessible histories."
+
+[[relation]]
+id = "Test by Fixed initial 535 rigid branch checked"
+label = "Test by Fixed initial 535 rigid branch checked"
+subject_kind = "result"
+subject_id = "b99b6dd0-1850-432d-a33a-2b592f404599"
+predicate = "tests"
+object_kind = "statement"
+object_id = "c778a6ca-e756-56ac-aa68-c81e9883ca7c"
+note = "Tests nonvacuity of the rigid initial-witness reading in the joint Bool-history model with variation at later stages."

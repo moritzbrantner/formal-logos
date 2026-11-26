@@ -1,0 +1,10 @@
+{
+  "id": "fb4edbce-3f0f-4534-957d-32877ee4afd8",
+  "label": "Test by The unpaired S4 configuration has world extensionality for its entire fixed language, while…",
+  "subject_kind": "result",
+  "subject_id": "f2382eb6-f19c-5981-a711-e8399b8543d4",
+  "predicate": "tests",
+  "object_kind": "argument",
+  "object_id": "ef9e4732-8f01-5910-b9a7-c436ed042dcd",
+  "note": "Tests the optional fixed-language extensionality condition using the unpaired S4 profile, where possible collapse still fails to yield actual collapse."
+}

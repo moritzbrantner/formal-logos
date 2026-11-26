@@ -1,0 +1,10 @@
+{
+  "id": "59131490-ac5f-4cae-91ec-9223c00db3f5",
+  "label": "Test by On a symmetric frame, possible domain-relative MC entail for Symmetry propagates possi (1)",
+  "subject_kind": "result",
+  "subject_id": "7f3ae9c9-7c7f-58ec-8813-42c3f92df51a",
+  "predicate": "tests",
+  "object_kind": "argument",
+  "object_id": "5cc9b388-18b4-5291-9e43-548c993f7fe1",
+  "note": "Checks language-relative propagation for fixed modal formulas with the stated closure and decision assumptions on a symmetric frame."
+}

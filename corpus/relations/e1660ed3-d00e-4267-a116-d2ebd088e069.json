@@ -1,0 +1,10 @@
+{
+  "id": "e1660ed3-d00e-4267-a116-d2ebd088e069",
+  "label": "Test by GOD_1: 'God is maximal in being' read nominally is analytic",
+  "subject_kind": "result",
+  "subject_id": "a28d0621-b762-597c-997e-74b706269ebe",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "4c79298d-ee09-5e99-9ced-1be92c19b4cc",
+  "note": "Checks maximality only for the nominal GOD_1 predicate when the description already includes maximality."
+}

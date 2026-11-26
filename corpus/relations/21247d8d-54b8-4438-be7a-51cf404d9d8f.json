@@ -1,0 +1,10 @@
+{
+  "id": "21247d8d-54b8-4438-be7a-51cf404d9d8f",
+  "label": "Test by Symmetry propagates possible full-predicate modal collap for KTB sense: a CONTINGENT_1 (1)",
+  "subject_kind": "result",
+  "subject_id": "a9ec8cc6-f83d-5ce7-bc0e-cac6a183a49b",
+  "predicate": "tests",
+  "object_kind": "argument",
+  "object_id": "f054d090-5a08-5a16-ac01-e630085bef1a",
+  "note": "Checks the full-predicate propagation law used by the KTB refutation, using symmetry to send the collapsed successor back to the route world."
+}

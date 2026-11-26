@@ -1,0 +1,10 @@
+{
+  "id": "de21b9c4-cabb-4309-9168-263f58211219",
+  "label": "Test by No language and frame satisfy the V2 exclusion thesis: e for The V2 exclusion thesis: (1)",
+  "subject_kind": "result",
+  "subject_id": "2d032de7-5ab9-5c0d-af09-d60c4a73088d",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "92ad4e06-5b99-529d-9501-5a86917dbfa4",
+  "note": "Tests the proposed exclusion by applying the 1936 result for a language in which the selected negation entails no observation statement."
+}

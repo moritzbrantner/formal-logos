@@ -1,0 +1,10 @@
+{
+  "id": "e4f8814b-af49-4bc9-b4fa-b34ef346e09b",
+  "label": "Test by An explicit serial Bool two-cycle with constant atomic v for Rival: every truth at the (1)",
+  "subject_kind": "result",
+  "subject_id": "61b7019f-6381-58a2-9d10-7293cb3fa57b",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "65d98476-da20-551b-ba5b-eb15f9279de1",
+  "note": "Tests whether fixed-language collapse agrees with full-predicate collapse on the nonreflexive serial Boolean cycle, where only the full domain distinguishes the two labels."
+}

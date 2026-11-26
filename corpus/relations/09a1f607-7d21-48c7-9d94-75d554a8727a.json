@@ -1,0 +1,10 @@
+{
+  "id": "09a1f607-7d21-48c7-9d94-75d554a8727a",
+  "label": "Test by Reflexivity alone gives full-predicate MC exactly when a world accesses precisely itself",
+  "subject_kind": "result",
+  "subject_id": "bd043b01-df8e-547b-ab47-4ea2b951afd1",
+  "predicate": "tests",
+  "object_kind": "argument",
+  "object_id": "eb868f3a-66d2-53ee-bd4b-47f7e7a33ac4",
+  "note": "Checks the reflexive full-predicate law used in the T refutation, applying a necessary-collapse claim back to the root."
+}

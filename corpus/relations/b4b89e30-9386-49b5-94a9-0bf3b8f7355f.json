@@ -1,0 +1,10 @@
+{
+  "id": "b4b89e30-9386-49b5-94a9-0bf3b8f7355f",
+  "label": "Test by Fixed initial 535 propagation transcribed",
+  "subject_kind": "result",
+  "subject_id": "d5b1d0f7-6736-4578-8d11-8d4704a08464",
+  "predicate": "tests",
+  "object_kind": "argument",
+  "object_id": "237660eb-1886-400f-8369-f4adb238033f",
+  "note": "Checks propagation only when the initial bearer is held fixed across accessible histories."
+}

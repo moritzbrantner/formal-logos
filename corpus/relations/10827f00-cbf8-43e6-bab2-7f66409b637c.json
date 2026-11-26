@@ -1,0 +1,10 @@
+{
+  "id": "10827f00-cbf8-43e6-bab2-7f66409b637c",
+  "label": "Test by Geometric discharge has no uniform positive interval energy lower bound, by accounting",
+  "subject_kind": "result",
+  "subject_id": "c664ea2b-843a-48c2-9bec-86819d56610f",
+  "predicate": "tests",
+  "object_kind": "argument",
+  "object_id": "dc9576d6-9216-4440-97cf-eee0494ac3f7",
+  "note": "Tests whether the positive decaying outputs have a common lower bound by evaluating the same geometric ledger sequence at unbounded natural intervals."
+}

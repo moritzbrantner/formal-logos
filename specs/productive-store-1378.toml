@@ -62,3 +62,33 @@ premises = []
 conclusion = "Positive discharge can persist at every natural interval with finite initial stock"
 rule = "Energy ledger arithmetic"
 meaning = "For every natural n let e=(1/2)^n. The ledger (2e,2(1/2)^(n+1),0,e/2,e/2) is admissible and e/2 is positive. Adjacent stocks match; this witnesses indefinitely positive but decreasing interval output without external energy input, not eternal steady output or metaphysical source-free power. Analyst conditional model only; no universal causal or existential bridge."
+
+[[relation]]
+id = "Test by Finite energy ledger bounds output and requires input fo for A per se ordered series o (1)"
+label = "Test by Finite energy ledger bounds output and requires input fo for A per se ordered series o (1)"
+subject_kind = "result"
+subject_id = "545f7f99-b00a-403b-bcf5-27ede3214ee1"
+predicate = "tests"
+object_kind = "statement"
+object_id = "97f5850f-62bc-5e43-a0c1-dd1033d08fc9"
+note = "Tests the productive-store mechanism under closed nondepleting balance, using the interval resource boundary and treating work and heat as energy exports."
+
+[[relation]]
+id = "Test by Discharge maintenance replenishment and heat-only ledger controls, by ledger arithmetic"
+label = "Test by Discharge maintenance replenishment and heat-only ledger controls, by ledger arithmetic"
+subject_kind = "result"
+subject_id = "1d7ef9dd-8301-450a-8777-30735d4d55d7"
+predicate = "tests"
+object_kind = "statement"
+object_id = "97f5850f-62bc-5e43-a0c1-dd1033d08fc9"
+note = "Tests the same productive-store mechanism in finite ledgers that vary input, depletion, useful work and heat."
+
+[[relation]]
+id = "Test by Positive discharge can persist at every natural interval for A per se ordered series o (1)"
+label = "Test by Positive discharge can persist at every natural interval for A per se ordered series o (1)"
+subject_kind = "result"
+subject_id = "46bfce3d-7901-407c-8ed2-34ee086dfc00"
+predicate = "tests"
+object_kind = "statement"
+object_id = "97f5850f-62bc-5e43-a0c1-dd1033d08fc9"
+note = "Tests the proposed conservation-only obstruction to persistent positive output by the declining zero-input ledger on all natural intervals."

@@ -1,0 +1,10 @@
+{
+  "id": "3fcbfd25-9239-4b5f-b17a-7d802060f7ce",
+  "label": "Test by Order-law controls for dependence and the priority bridges, checked",
+  "subject_kind": "result",
+  "subject_id": "a79850a6-0a21-4a4d-afe7-df52e8df0a0d",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "09b88101-5ee4-44f1-b9e0-57117ce6f70e",
+  "note": "Tests omission of transitivity in the priority-transitivity derivation, preserving reflexivity, distinct nonmutuality and both bridges on the direct-edge chain."
+}

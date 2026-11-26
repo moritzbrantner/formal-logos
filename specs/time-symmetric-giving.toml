@@ -165,3 +165,13 @@ predicate = "tests"
 object_kind = "statement"
 object_id = "d86c9de9-25be-488b-b3b7-69f5f4eb80b8"
 note = "Tests the productive explanation bridge using the eternal inertial profile with momentary explanation and no giving."
+
+[[relation]]
+id = "Test by Under the momentary PSR the productive bridge is concurrent actualization, checked"
+label = "Test by Under the momentary PSR the productive bridge is concurrent actualization, checked"
+subject_kind = "result"
+subject_id = "2b8b48d1-2f51-4596-a17f-d4c5a0222ca6"
+predicate = "tests"
+object_kind = "statement"
+object_id = "40a97664-e481-42d7-8458-78374a61aa26"
+note = "Checks the exact dependence of the productive explanation bridge on concurrent actualization once momentary PSR is held fixed."

@@ -35,3 +35,13 @@ premises = []
 conclusion = "Conserving the complete supply allows tied or increased local intensity under different routing"
 rule = "Compute the same per-port threshold test before and after routing"
 meaning = "For every positive n, both outputs account for all 2n units. Separate routing gives the input and output the same least upper bound n; pooled routing yields least upper bound 2n, and the 2n probe distinguishes the output from the input. This controls the inference from no additional supplied quantity to preservation of local grade. The ports are an analogy for that inference and carry no causal or metaphysical classification."
+
+[[relation]]
+id = "Test by Compare local intensity under pass-through and concentration of the same whole supply"
+label = "Test by Compare local intensity under pass-through and concentration of the same whole supply"
+subject_kind = "result"
+subject_id = "8cbb943d-a6cd-4cb3-8a43-3432523db0ea"
+predicate = "tests"
+object_kind = "argument"
+object_id = "8fe13407-28a6-4c20-b3e2-2905499e13cf"
+note = "Tests the interpretation of graded comparison by keeping the quantitative outputs fixed while changing separate routing to pooling."

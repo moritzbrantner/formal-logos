@@ -1,0 +1,10 @@
+{
+  "id": "b61c4c92-ddf0-4f91-9c5a-51dd9045ae6c",
+  "label": "Test by Compare local intensity under pass-through and concentration of the same whole supply",
+  "subject_kind": "result",
+  "subject_id": "8cbb943d-a6cd-4cb3-8a43-3432523db0ea",
+  "predicate": "tests",
+  "object_kind": "argument",
+  "object_id": "8fe13407-28a6-4c20-b3e2-2905499e13cf",
+  "note": "Tests the interpretation of graded comparison by keeping the quantitative outputs fixed while changing separate routing to pooling."
+}

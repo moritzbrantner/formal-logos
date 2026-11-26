@@ -58,3 +58,43 @@ premises = []
 conclusion = "Replenishment permits constant nondepleting interval work"
 rule = "Finite summation and real Archimedean order"
 meaning = "At every natural interval the explicit ledger (2,2,1,1,0) is admissible and its unit work meets unit demand. This is a replenished ledger control, not physical dynamics. Analyst conditional energy accounting only; no causal or bearer bridge."
+
+[[relation]]
+id = "Test by Geometric discharge has no uniform positive interval energy lower bound, by accounting"
+label = "Test by Geometric discharge has no uniform positive interval energy lower bound, by accounting"
+subject_kind = "result"
+subject_id = "c664ea2b-843a-48c2-9bec-86819d56610f"
+predicate = "tests"
+object_kind = "argument"
+object_id = "dc9576d6-9216-4440-97cf-eee0494ac3f7"
+note = "Tests whether the positive decaying outputs have a common lower bound by evaluating the same geometric ledger sequence at unbounded natural intervals."
+
+[[relation]]
+id = "Test by Closed finite stock excludes a uniform positive interval for Closed stock bounds the n (1)"
+label = "Test by Closed finite stock excludes a uniform positive interval for Closed stock bounds the n (1)"
+subject_kind = "result"
+subject_id = "8d4aa56e-be32-4a83-a263-0b62acb67503"
+predicate = "tests"
+object_kind = "argument"
+object_id = "d84fc44b-a0a6-422b-bde9-267d2819b0bd"
+note = "Tests indefinite uniform demand in the zero-input real stock recurrence by applying the finite horizon bound with arbitrary natural horizon."
+
+[[relation]]
+id = "Test by Replenishment permits constant nondepleting interval work, by temporal energy accounting"
+label = "Test by Replenishment permits constant nondepleting interval work, by temporal energy accounting"
+subject_kind = "result"
+subject_id = "a73311f6-c3b4-4712-96a6-449af9771ebe"
+predicate = "tests"
+object_kind = "argument"
+object_id = "47c33df4-4c8f-40be-93c5-6006f751b6a1"
+note = "Tests omitting closure in the uniform demand case by restoring one unit of input in each admissible constant-stock ledger."
+
+[[relation]]
+id = "Test by Closed stock bounds the number of intervals meeting a uniform energy demand, by accounting"
+label = "Test by Closed stock bounds the number of intervals meeting a uniform energy demand, by accounting"
+subject_kind = "result"
+subject_id = "dcbd1474-8431-4644-a248-7a07803a5473"
+predicate = "tests"
+object_kind = "statement"
+object_id = "97f5850f-62bc-5e43-a0c1-dd1033d08fc9"
+note = "Checks the finite-horizon quantitative obstruction for the selected no-input stock mechanism with a common lower bound on each output."

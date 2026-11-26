@@ -182,3 +182,33 @@ predicate = "tests"
 object_kind = "statement"
 object_id = "9fecbef4-0094-4e99-ab9d-98b9c1b916f1"
 note = "Tests omission of relational accompaniment when the origin relation holds at onset alone."
+
+[[relation]]
+id = "Test by On RECEIVES_ESSE_AT_3 present-tense reception is accompaniment, checked"
+label = "Test by On RECEIVES_ESSE_AT_3 present-tense reception is accompaniment, checked"
+subject_kind = "result"
+subject_id = "42590821-3376-49be-9c87-e8e6d752d910"
+predicate = "tests"
+object_kind = "statement"
+object_id = "964928dc-9067-45d4-8de3-c91e27cbe1c6"
+note = "Tests replacing primitive present receipt by existential relation-to-origin receipt on the stated histories by checking its exact equivalence to accompaniment."
+
+[[relation]]
+id = "Test by RECEIVES_ESSE_AT_3 correlativity is concurrent actualization, checked"
+label = "Test by RECEIVES_ESSE_AT_3 correlativity is concurrent actualization, checked"
+subject_kind = "result"
+subject_id = "1637b89a-9ef5-470e-b439-6da628f829cc"
+predicate = "tests"
+object_kind = "statement"
+object_id = "40a97664-e481-42d7-8458-78374a61aa26"
+note = "Checks the exact relation between concurrent giving and relational correlativity under the supplied accompaniment hypothesis."
+
+[[relation]]
+id = "Test by Founded origin relation with a giving term iff concurrent actualization, checked"
+label = "Test by Founded origin relation with a giving term iff concurrent actualization, checked"
+subject_kind = "result"
+subject_id = "b5e9b376-d79a-4f0d-8b94-782bc0915122"
+predicate = "tests"
+object_kind = "statement"
+object_id = "40a97664-e481-42d7-8458-78374a61aa26"
+note = "Checks whether existence of some relation satisfying the stated relationship gives more than concurrence on the same received-esse history."

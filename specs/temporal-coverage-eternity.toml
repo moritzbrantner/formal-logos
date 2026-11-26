@@ -43,3 +43,33 @@ premises = []
 conclusion = "Temporal coverage and life calibration omission controls"
 rule = "Explicit finite witnesses and boundary elimination"
 meaning = "Nonvacuity and carrying omissions for temporal transport only, not metaphysical possibility or a renewed immutability-alone investigation."
+
+[[relation]]
+id = "Test by Temporal everlasting consumer verified"
+label = "Test by Temporal everlasting consumer verified"
+subject_kind = "result"
+subject_id = "504dadf2-fbc0-4f14-961f-c8cccdccb2a9"
+predicate = "tests"
+object_kind = "statement"
+object_id = "5bec93b3-9950-5e46-b243-cf5a4658b929"
+note = "Checks the temporal transport interpretation under same-bearer connected coverage, interminability, an anchor and the life-to-existence bridge."
+
+[[relation]]
+id = "Test by Temporal coverage omission controls verified"
+label = "Test by Temporal coverage omission controls verified"
+subject_kind = "result"
+subject_id = "8ba56dc8-9e82-4c46-b89e-3648acab3255"
+predicate = "tests"
+object_kind = "argument"
+object_id = "a18e2ce2-dc4f-4f83-b4ec-a167f2245af8"
+note = "Tests the carrying conditions of conditional temporal transport in the displayed positive and omission assignments."
+
+[[relation]]
+id = "Test by Temporal comparison path life transport verified"
+label = "Test by Temporal comparison path life transport verified"
+subject_kind = "result"
+subject_id = "38452bf9-49ee-4b85-b073-716ac9dc003c"
+predicate = "tests"
+object_kind = "argument"
+object_id = "fbd0011a-80ca-4401-9bbd-883cc276311e"
+note = "Checks the conditional life-transport step for the same bearer along the supplied connected coverage paths."

@@ -34,3 +34,23 @@ conclusion = "STMT-MAXIME-ENS-CAUSES-BEING-OF-ALL"
 rule = "Composition with UniqueRootPerfection.derive and selected-package connection"
 meaning = "Apply the existing UniqueRootPerfection.derive theorem to its original eight hypotheses, then the selected-package connection. Retains all eight explicit policies, including the at-being genus policy; no new assumption, naming or modal transport. This is a conditional composition, not premise defense. Existing controls for the original package are reused; this batch tests the final two-premise connection separately."
 senses = {NECESSARY = "NECESSARY_2", MAXIMAL_IN_A_SELECTED_PERFECTION_GREATEST = "9bea9a43-3a87-4d62-86de-e5873aea62f8", WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT = "556515c9-1fcc-4ea0-b85d-2a4cad7eff79"}
+
+[[relation]]
+id = "Test by Selected root to Fourth Way finite controls"
+label = "Test by Selected root to Fourth Way finite controls"
+subject_kind = "result"
+subject_id = "e34557ac-d366-49ba-a5a9-2af8426f681c"
+predicate = "tests"
+object_kind = "statement"
+object_id = "7abdee27-8abc-59d9-9b20-740616a1a8dd"
+note = "Tests omission of this premise from derive in the respective finite controls of the selected-root Fourth Way interface."
+
+[[relation]]
+id = "Test by Selected root to Fourth Way finite controls for The genus principle at being only: wha (1)"
+label = "Test by Selected root to Fourth Way finite controls for The genus principle at being only: wha (1)"
+subject_kind = "result"
+subject_id = "e34557ac-d366-49ba-a5a9-2af8426f681c"
+predicate = "tests"
+object_kind = "statement"
+object_id = "da09703b-0b1e-5dca-9dd7-6c0c8d1610d7"
+note = "Tests omission of this premise from derive in the respective finite controls of the selected-root Fourth Way interface."

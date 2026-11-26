@@ -1,0 +1,10 @@
+{
+  "id": "195956cf-dbb7-452d-bb2b-010a141e61f9",
+  "label": "Test by Rigid initial profile with full inclusion E-necessity checked",
+  "subject_kind": "result",
+  "subject_id": "33f9dfc9-4ad3-4fc9-8dea-991b958f843f",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "77a76499-f2df-467f-b685-919f8b110d89",
+  "note": "Checks the full-inclusion alternative on the same rigid profile, where every E-admitted history retains the actual initial bearer."
+}
