@@ -1079,44 +1079,12 @@ conditional on an actual inquiry needing to distinguish admitted
 possibilities whose relevant evidence does not distinguish them,
 and on the absence of other relevant warrant.
 
-The exact finite assignments and rational arithmetic were checked
-with the following standalone Python diagnostic (not a Lean
-certificate or a repository corpus check):
-
-```python
-from fractions import Fraction
-worlds = {0: {"B0", "D0"}, 1: {"B1", "D1"}}
-reasons = {0: {("B0", "D0")}, 1: {("B1", "D1")}}
-bases, derivatives = {"B0", "B1"}, {"D0", "D1"}
-for w, entities in worlds.items():
-    assert len(entities & bases) == len(entities & derivatives) == 1
-    for i in range(2):
-        b, d = f"B{i}", f"D{i}"
-        assert (b in entities) == (d in entities)
-        if d in entities:
-            assert (b, d) in reasons[w]
-        if b in entities:
-            assert all(t != b for _, t in reasons[w])
-    assert all(s in entities and t in entities for s, t in reasons[w])
-    assert all(any(x not in other for other in worlds.values())
-               for x in entities)
-    assert next(iter(entities & derivatives)).replace("D", "B") == next(
-        iter(entities & bases)
-    )
-assert all(not all(guess in e for e in worlds.values()) for guess in bases)
-assert [w for w, e in worlds.items() if "D0" in e] == [0]
-for p in [Fraction(1, 10), Fraction(1, 2), Fraction(9, 10)]:
-    prior = {0: p, 1: 1-p}
-    assert prior[0] / sum(prior.values()) == p
-    assert prior[0] / sum(prior[w] for w, e in worlds.items() if "D0" in e) == 1
-```
-
-The diagnostic checks the stated assignment and decoder at the
-two worlds and three sample positive priors; the general
-probability identity above follows by the displayed algebra. The
-reason pairs are also the stipulated cause pairs in this
-surrogate; they are not a new mechanistic causality certificate.
-No semantic challenge or formal certification is implied.
+Lean checks the two roster assignments, endpoint soundness, one base
+and derivative per world, the absence of reasons targeting the bases,
+and the occupant decoder. It also checks the exact results at the
+three sample priors. The assigned reason pairs are the cause pairs
+in this surrogate. An actual productive mechanism requires separate evidence.
+[Assignments](../../TruthCore/Explanation/AdequacyFiniteControls.lean#L24) · [Identity observation](../../TruthCore/Explanation/AdequacyFiniteControls.lean#L38) · [Sample priors](../../TruthCore/Explanation/AdequacyFiniteControls.lean#L50)
 
 ### Checkpoint 3: matched comparison with nonnecessitating explanation
 
@@ -1452,48 +1420,10 @@ relevance and direction, not an assertion that a fixed conceptual
 description has somehow selected the actual outcome. The matched
 interpretation does not settle that metaphysical warrant.
 
-The finite assignments and truth/edge tests were independently run
-as a standalone Python diagnostic, not as a registered Lean model:
-
-```python
-from itertools import product
-W = (0, 1)
-E = {0: {"Q", "B"}, 1: {"Q"}}
-valid = []
-for e0, e1 in product((False, True), repeat=2):
-    edge = {0: e0, 1: e1}
-    sound = all(not edge[w] or "B" in E[w] for w in W)
-    if sound and edge[0]:
-        valid.append((e0, e1))
-assert valid == [(True, False)]
-for identity in (False, True):
-    rigid = {w: identity for w in W}
-    assert all(not rigid[w] or "B" in E[w] for w in W) == (not identity)
-    gated = {w: identity and "B" in E[w] for w in W}
-    assert all(not gated[w] or "B" in E[w] for w in W)
-    assert gated[0] == identity
-T = {0: {"n", "a", "b", "q"}, 1: {"n", "q"}}
-cases = [
-    (set(), False, False, False, True),
-    ({("b", "a"), ("a", "b")}, True, True, True, True),
-    ({("a", "b")}, True, False, False, True),
-    ({("n", "b")}, True, False, False, False),
-    ({("n", "a"), ("a", "b")}, True, True, False, False),
-]
-for edges, bc, ac, cycle, necessitating in cases:
-    assert all(s in T[0] and t in T[0] for s, t in edges)
-    assert any(t == "b" for s, t in edges) == bc
-    assert any(t == "a" for s, t in edges) == ac
-    reach = set(edges)
-    while True:
-        nxt = reach | {(x, z) for x, y in reach for u, z in reach if y == u}
-        if nxt == reach:
-            break
-        reach = nxt
-    assert any(x == y for x, y in reach) == cycle
-    assert all(s not in T[v] or t in T[v]
-               for s, t in edges for v in W) == necessitating
-```
+Lean checks all four edge tables, rigid versus presence-gated identity,
+and the five explanatory directions. The rows check actual endpoints,
+coverage of each target, cycles and truth preservation at both worlds.
+[Edge tables](../../TruthCore/Explanation/AdequacyFiniteControls.lean#L83) · [Explanans rows](../../TruthCore/Explanation/AdequacyFiniteControls.lean#L105)
 
 The direct nature row is intentionally an assignment of an
 explanatory relation. It is **not** a concrete mechanism for a
@@ -1774,38 +1704,11 @@ The point is the identifiability of a positive limiting principle,
 not the assumption that the act of being is a numerical quantity,
 conserved input or transferable common stock.
 
-Reproduction (the finite checks ran in standalone Python; no registered
-Lean certificate):
-
-```python
-from itertools import product, combinations
-K = frozenset({"u", "v"})
-queries = [frozenset(s) for i in range(3) for s in combinations(K, i)]
-for limited, contingent in product((False, True), repeat=2):
-    profiles = {0: frozenset({"u"}) if limited else K, 1: K}
-    occupants = {0: 0, 1: 1 if contingent else 0}
-    exists = {w: {("B", i), ("D", i)} for w, i in occupants.items()}
-    reasons = {w: {(("B", i), ("D", i))} for w, i in occupants.items()}
-    for w in (0, 1):
-        assert len([b for b in exists[w] if b[0] == "B"]) == 1
-        assert len([d for d in exists[w] if d[0] == "D"]) == 1
-        for i in (0, 1):
-            assert (("B", i) in exists[w]) == (("D", i) in exists[w])
-        assert all(s in exists[w] and t in exists[w] for s, t in reasons[w])
-        assert all(any(s == ("B", d[1]) and t == d for s, t in reasons[w])
-                   for d in exists[w] if d[0] == "D")
-        assert all(t[0] != "B" for s, t in reasons[w])
-    b = ("B", 0)
-    assert ((b in exists[0]) and any(b not in E for E in exists.values())) == contingent
-    assert (profiles[0] < K) == limited
-    assert all((q & profiles[0]) == frozenset(v for v in q if v in profiles[0])
-               for q in queries)
-    if not contingent:
-        assert all(occupants[w] == 0 for w in (0, 1))
-A, R, primitive = K, frozenset({"u"}), frozenset({"u"})
-assert all(q & A & R == q & primitive for q in queries)
-assert any(q & A & K != q & primitive for q in queries)
-```
+Lean checks the two independent switches, one for the channel restriction
+and one for the occupancy change. It also checks all four input probes
+in the matched receiver and primitive implementations and the separator
+when the receiver's admitted channels change.
+[Occupant rows](../../TruthCore/Explanation/AdequacyFiniteControls.lean#L24) · [Operational comparison](../../TruthCore/Explanation/AdequacyFiniteControls.lean#L63)
 
 ### 4. The positive metaphysical comparison: real determinant versus primitive typed act
 
@@ -2285,151 +2188,14 @@ the finite derivation. The displayed rules supply no reason for that
 exercise. This is a result about the chosen resource rules, not a universal
 failure of nonnecessitating explanation.
 
-The standalone Python diagnostic passes. It is reproduced in full so that
-the model, omitted adequacy conditions and distinct scopes remain inspectable.
-It is not a Lean certificate or a complete metaphysical counterworld.
-
-```python
-"""Finite matched audit of ExistentialInheritance.Contained false.
-
-This is a Python diagnostic, not a Lean certificate or a metaphysical model.
-The two Bool worlds, existence assignment, parent and Step are the existing
-Contained definitions, restricted to the derivative prefix 0..3.  Source
-activation changes only a causal/reason edge to the SAME base.  Assigned edges
-do not demonstrate productive or explanatory adequacy.  The optional clock
-trace and act-fact extension are disclosed additions, not existing Lean fields.
-"""
-
-from itertools import product
-
-
-W = (False, True)  # false is actual, as in Contained
-N, B = "background", "base"
-D = tuple(f"derivative:{n}" for n in range(4))
-BEINGS = {N, B, *D}
-LAW, ACT = "law", "exercise"
-
-
-def ex(x):
-    return ("exists", x)
-
-
-def present(w):
-    return {N} if w else BEINGS.copy()
-
-
-def parent(n):
-    return B if n == 0 else D[n - 1]
-
-
-def causes(active, w):
-    old = set() if w else {(parent(n), d) for n, d in enumerate(D)}
-    return old | ({(N, B)} if active and not w else set())
-
-
-def reasons(active, w):
-    return {(ex(s), ex(t)) for s, t in causes(active, w)}
-
-
-def truths(w, *, with_act=False):
-    return {LAW, *(ex(x) for x in present(w))} | (
-        {ACT} if with_act and not w else set()
-    )
-
-
-def contingent(x):
-    return x in present(False) and any(x not in present(v) for v in W)
-
-
-def closure(seed, rules):
-    result = set(seed)
-    while True:
-        following = result | {effect for members, effect in rules if members <= result}
-        if following == result:
-            return result
-        result = following
-
-
-old_rules = [({LAW, ex(parent(n))}, ex(d)) for n, d in enumerate(D)]
-for active, w in product((False, True), W):
-    edges = causes(active, w)
-    # Factive reason facts, distinct existing cause endpoints, unchanged D edges.
-    assert all(s in present(w) and t in present(w) and s != t for s, t in edges)
-    assert all(r in truths(w) and f in truths(w) for r, f in reasons(active, w))
-    assert {(s, t) for s, t in edges if t in D} == causes(False, w)
-    assert all(any(t == d for _, t in edges) for d in D if d in present(w))
-    assert all(not members <= truths(w) or effect in truths(w)
-               for members, effect in old_rules)
-    # Optional deterministic readout: dependence depth is NOT time.  This
-    # separate finite-state trace uses one fixed transition and fixed initial
-    # value n mod 3, not a new contingent initial-state fact.
-    for n, d in enumerate(D):
-        trace = tuple((n + t) % 3 for t in range(6)) if d in present(w) else ()
-        assert all(trace[t + 1] == (trace[t] + 1) % 3
-                   for t in range(len(trace) - 1))
-        assert trace == (tuple((n + t) % 3 for t in range(6)) if not w else ())
-
-for active in (False, True):
-    unexplained_contingents = {
-        x for x in BEINGS if contingent(x)
-        and not any(f == ex(x) for _, f in reasons(active, False))
-    }
-    assert unexplained_contingents == (set() if active else {B})
-    # Necessary presence itself supplies no admitted reason for N.
-    assert all(N in present(w) for w in W)
-    assert not any(f == ex(N) for _, f in reasons(active, False))
-    assert all(contingent(x) for x in {B, *D})
-
-# N's added reason is actually factive but not necessitating: N remains at
-# the SAME world's absence witness of the SAME B.  No derivative is replaced.
-assert (ex(N), ex(B)) in reasons(True, False)
-assert ex(N) in truths(True) and ex(B) not in truths(True)
-
-# All old prerequisite rules are truth preserving.  A deterministic extra
-# rule from necessary N+law alone to B would fail at the absence world.
-necessary_seed = {LAW, ex(N)}
-assert necessary_seed <= truths(True) and ex(B) not in truths(True)
-
-# Represent an actual exercise as an additional fact, not an additional being.
-# Its explicit inclusion restores truth preservation but leaves it a necessary
-# input of this finite derivation.  The diagnostic provides no reason for ACT.
-activated_rules = [*old_rules, ({LAW, ex(N), ACT}, ex(B))]
-for w in W:
-    assert all(not members <= truths(w, with_act=True)
-               or effect in truths(w, with_act=True)
-               for members, effect in activated_rules)
-assert not {ex(B), *(ex(d) for d in D)} & closure(necessary_seed, activated_rules)
-assert {ex(B), *(ex(d) for d in D)} <= closure(necessary_seed | {ACT}, activated_rules)
-assert {ex(d) for d in D} <= closure(necessary_seed | {ex(B)}, old_rules)
-assert not any(effect == ACT for _, effect in activated_rules)
-
-# Forced replacement at the same absence world.  Root entails actual presence.
-# This first control has one root and one essentially dependent child per world.
-rosters = {0: {"B0", "D0"}, 1: {"B1", "D1"}}
-links = {0: {("B0", "D0")}, 1: {("B1", "D1")}}
-roots = {w: {x for x in roster if not any(t == x for _, t in links[w])}
-         for w, roster in rosters.items()}
-assert all(len(r) == 1 for r in roots.values())
-assert "B0" not in rosters[1] and roots[1] == {"B1"}
-assert all(r <= rosters[w] for w, r in roots.items())
-# A world-general root-exemption policy licenses the alternative OCCUPANT,
-# while never licensing two roots at once.  No recombination rule is used.
-exempt = roots
-assert exempt[0] == {"B0"} and exempt[1] == {"B1"}
-
-# Generic forced replacement does NOT imply that the other root is contingent:
-# C is present at both worlds, dependent at 0 and the sole root at 1.
-rosters2 = {0: {"B", "C"}, 1: {"C"}}
-links2 = {0: {("B", "C")}, 1: set()}
-roots2 = {w: {x for x in roster if not any(t == x for _, t in links2[w])}
-          for w, roster in rosters2.items()}
-assert roots2 == {0: {"B"}, 1: {"C"}}
-assert "B" not in rosters2[1] and all("C" in r for r in rosters2.values())
-
-print("PASS: same-B finite audit; fixed derivative rules and deterministic readout;")
-print("      factive nonnecessitating source edge; residual exercise input;")
-print("      forced alternative occupant; no forced further simultaneous exception.")
-```
+Lean checks the four-derivative prefix using the existing `Contained`
+presence and step relations. It verifies factive endpoints, unchanged
+derivative records, truth-preserving prerequisites and the independent
+clock readout. It also checks the same base's absence, the role of the
+exercise fact in the resource derivation, and both replacement rosters.
+The presence and edges are stipulated, as is the added exercise fact.
+An actual explanation requires the adequacy conditions below.
+[Correspondence with Contained](../../TruthCore/Explanation/AdequacyFiniteControls.lean#L126) · [Fixed derivation and clock](../../TruthCore/Explanation/AdequacyFiniteControls.lean#L184) · [Source and exercise resource](../../TruthCore/Explanation/AdequacyFiniteControls.lean#L199) · [Replacement rosters](../../TruthCore/Explanation/AdequacyFiniteControls.lean#L231)
 
 ### 6. Adequacy, determining explanation, warrant and sufficiency
 
