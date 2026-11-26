@@ -11,7 +11,7 @@
   "date": "2026-11-26",
   "kind": "derivation",
   "outcome": "succeeded",
-  "summary": "CausalRoleComparison in TruthCore/Causality/TermSenseForks.lean identifies the logical commitments of all five denials. A single finite frame admits them jointly for the efficient-or-perfection use and supplies a distinct efficient antecedent only at another respect for the diagonal patient. Individual assessments and reopening conditions are in docs/notes/load-bearing-terms.md#five-denials-at-one-causal-use-2026-11-26. The example concerns the scope of the descent premise and leaves the graph unchanged. This joint-denial test follows attempt 01b3a726-463c-4d0f-8317-828b60818e0a (PR-2032).",
+  "summary": "CausalRoleComparison in TruthCore/Causality/TermSenseForks.lean identifies the logical commitments of all five denials. A single finite frame admits them jointly for the efficient-or-perfection use and supplies a distinct efficient antecedent only at another respect for the diagonal patient. Individual assessments and reopening conditions are in docs/notes/load-bearing-terms.md#five-denials-at-one-causal-use-2026-11-26. The example concerns the scope of the descent premise and leaves the graph unchanged. This joint-denial test follows attempt 01b3a726 (PR-2032).",
   "blocker": "The unresolved application is whether an already constituted bearer really supplies its own maintained state at a fixed respect in the selected efficient relation. For the perfection existential the corresponding identity question is whether producing the power makes the subject effectively responsible for its own having that power, with the power fixed as the respect. Neither question is decided by the formal frame.",
   "evidence": [
     "0505143b-7a9a-4236-a53c-7c5a5f2aa5d0",
@@ -60,6 +60,6 @@
     "review": "accepted_qualified",
     "publication": "published",
     "evidence": "Sol independently reviewed the draft at 7482de40a on PR-2046 and accepted with fixes. It accepted joint compatibility and the distinct incoming witness at another respect. This repair addresses occurrence universes, origin wording, the burden of the perfection denial, selection and attempt provenance. Repair re-check pending.",
-    "supersedes": "No prior judgment superseded. Extends attempt 01b3a726-463c-4d0f-8317-828b60818e0a (PR-2032) with a joint-denial test and per-premise assessment."
+    "supersedes": "No prior judgment superseded. Extends attempt 01b3a726 (PR-2032) with a joint-denial test and per-premise assessment."
   }
 }

@@ -738,7 +738,7 @@ between those senses. The remaining definitions are linked here for navigation.
 
 ## Five denials at one causal use (2026-11-26)
 
-The single-use cause fork and the distinct-antecedent descent answer different questions about a diagonal edge. For the former, fix the extension of the route relation across all tuples. For the latter, hold the patient and efficient relation fixed and ask whether *some* respect supplies a distinct antecedent. The following second pass builds on [the earlier witness comparison](#no-self-cause-scope-in-the-two-ways-and-temporal-composition-2026-11-26) and [the proper-accident reading](../../corpus/attempts/224a2425-94ee-4968-a25f-2c90665daaeb.json).
+The single-use cause fork and the distinct-antecedent descent answer different questions about a diagonal edge. For the former, fix the extension of the route relation across all tuples. For the latter, hold the patient and efficient relation fixed and ask whether *some* respect supplies a distinct antecedent. The following second pass extends [the PR-2032 attempt](../../corpus/attempts/01b3a726-463c-4d0f-8317-828b60818e0a.json) and builds on [the earlier witness comparison](#no-self-cause-scope-in-the-two-ways-and-temporal-composition-2026-11-26) and [the proper-accident reading](../../corpus/attempts/224a2425-94ee-4968-a25f-2c90665daaeb.json).
 
 | Premise | Positive warrant and overall provisional judgment | Strongest denial, its cost, and what would change the judgment |
 |---|---|---|
