@@ -1,6 +1,0 @@
-{
-  "id": "d79e54fc-17e2-4872-a257-4a748dbe7f08",
-  "label": "Teleonomy filter reproduces fine-report screening in the same sampling rows",
-  "paraphrase": "For any pair of normalized three-cell sampling rows with no other-observer mass in either row, applying the teleonomy fixture's retention filter to the fine indicator yields the same fine-report likelihood as conditioning on observers in each row. Both likelihoods are one. The observer-conditioned report has zero mutual information about the model label for every interior comparison prior.",
-  "lean_declaration": "TruthCore.Science.FineTuningRetention.RetentionScreening"
-}

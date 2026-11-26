@@ -2,5 +2,10 @@
   "id": "ad278bbf-84c0-4833-8810-e451c4797574",
   "label": "Screened and separating fine-evidence reports at unequal model weights",
   "paraphrase": "At model weights one third for design and two thirds for the natural rival, the screened pair always reports fine evidence and has zero model-report information. The existing calibrated design and natural pair has positive model-report information at that same prior.",
-  "lean_declaration": "TruthCore.Science.FineTuningInformation.ScreeningControls"
+  "lean_declaration": "TruthCore.Science.FineTuningInformation.ScreeningControls",
+  "connection_plan": {
+    "target_statement_id": "8626f8a5-9531-5da7-9ebd-f901e74b1129",
+    "missing_bridge": "Calibrate the rival predictions using physical sampling, justify the inference from the calibrated evidence to an actual designer, and identify that same witness with GOD_4.",
+    "blocker": "The stipulated sampling rows supply no physical calibration, warrant for a designer inference, or evidence identifying the inferred witness with GOD_4."
+  }
 }

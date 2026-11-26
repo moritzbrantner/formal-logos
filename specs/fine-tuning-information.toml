@@ -7,15 +7,30 @@ id = "Observer-conditioned binary report information criterion"
 lean = "ObserverInformationCriterion"
 paraphrase = "For a supplied prior giving both models positive mass, the binary report has zero mutual information about the model label exactly when both three-cell sampling rows give the same observer-conditioned fine-evidence likelihood."
 
+[statement.connection_plan]
+target_statement_id = "8626f8a5-9531-5da7-9ebd-f901e74b1129"
+missing_bridge = "Calibrate the rival predictions using physical sampling, justify the inference from the calibrated evidence to an actual designer, and identify that same witness with GOD_4."
+blocker = "The stipulated sampling rows supply no physical calibration, warrant for a designer inference, or evidence identifying the inferred witness with GOD_4."
+
 [[statement]]
 id = "Screened and separating fine-evidence reports at unequal model weights"
 lean = "ScreeningControls"
 paraphrase = "At model weights one third for design and two thirds for the natural rival, the screened pair always reports fine evidence and has zero model-report information. The existing calibrated design and natural pair has positive model-report information at that same prior."
 
+[statement.connection_plan]
+target_statement_id = "8626f8a5-9531-5da7-9ebd-f901e74b1129"
+missing_bridge = "Calibrate the rival predictions using physical sampling, justify the inference from the calibrated evidence to an actual designer, and identify that same witness with GOD_4."
+blocker = "The stipulated sampling rows supply no physical calibration, warrant for a designer inference, or evidence identifying the inferred witness with GOD_4."
+
 [[statement]]
 id = "Binary fine-evidence report has zero Brier gain exactly at zero information"
 lean = "AccuracyAgreement"
 paraphrase = "With both models and both reports having positive predictive mass and coherent binary update equations, expected Brier gain vanishes exactly when the fine-evidence report has zero mutual information about the model label."
+
+[statement.connection_plan]
+target_statement_id = "8626f8a5-9531-5da7-9ebd-f901e74b1129"
+missing_bridge = "Calibrate the rival predictions using physical sampling, justify the inference from the calibrated evidence to an actual designer, and identify that same witness with GOD_4."
+blocker = "The stipulated sampling rows supply no physical calibration, warrant for a designer inference, or evidence identifying the inferred witness with GOD_4."
 
 [[argument]]
 id = "Observer-conditioned likelihood equality determines binary report independence"

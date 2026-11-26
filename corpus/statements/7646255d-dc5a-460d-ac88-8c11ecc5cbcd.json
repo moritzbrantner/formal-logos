@@ -2,5 +2,10 @@
   "id": "7646255d-dc5a-460d-ac88-8c11ecc5cbcd",
   "label": "Binary fine-evidence report has zero Brier gain exactly at zero information",
   "paraphrase": "With both models and both reports having positive predictive mass and coherent binary update equations, expected Brier gain vanishes exactly when the fine-evidence report has zero mutual information about the model label.",
-  "lean_declaration": "TruthCore.Science.FineTuningInformation.AccuracyAgreement"
+  "lean_declaration": "TruthCore.Science.FineTuningInformation.AccuracyAgreement",
+  "connection_plan": {
+    "target_statement_id": "8626f8a5-9531-5da7-9ebd-f901e74b1129",
+    "missing_bridge": "Calibrate the rival predictions using physical sampling, justify the inference from the calibrated evidence to an actual designer, and identify that same witness with GOD_4.",
+    "blocker": "The stipulated sampling rows supply no physical calibration, warrant for a designer inference, or evidence identifying the inferred witness with GOD_4."
+  }
 }

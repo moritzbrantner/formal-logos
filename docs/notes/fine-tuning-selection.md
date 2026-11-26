@@ -484,7 +484,7 @@ replace that comparison.
 
 The typed graph links test the existing finite calibration and connect
 the information criterion to the binary Bayesian accuracy result. The
-destination is the existing `STMT-GOD-EXISTS` node. The planned bridge
+destination in all three statement connection plans is `STMT-GOD-EXISTS`. The bridge
 still requires physical selection and calibrated likelihoods, a warranted
 inference to an actual designer, and identification of that witness with
 GOD_4. The model-label distinction also cannot supply #1867's missing
@@ -494,13 +494,3 @@ histories are metaphysically possible. For #930, the accuracy result
 specifies an information-sensitive consideration under the modeled update
 conditions. Whether it supplies actual pro tanto or categorical reasons
 for belief requires the separate epistemic bridge.
-
-The [retention control](../../corpus/results/19bf9149-0b9c-4186-8c6c-619aa8224527.json)
-applies the root-linked [teleonomy filter](../../corpus/statements/teleonomy-selection-coverage.json)
-to the fine indicator. The fixture retains the whole fine cell and discards
-its complement. If both rows have zero other-observer mass, this yields
-exactly their observer-conditioned fine likelihoods. The report is certain in
-each row and has zero mutual information at every interior comparison prior.
-The typed `tests` edge records this application. Its input represents sampled
-cells, so it exercises the Boolean filter without interpreting the cells as
-organisms or drawing an inference about tending or intelligent direction.
