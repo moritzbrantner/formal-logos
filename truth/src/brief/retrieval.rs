@@ -1244,7 +1244,10 @@ impl LeanSource {
                 let Some(signature) = theorem_header(&lines, start) else {
                     continue;
                 };
-                let formal = expanded_identifiers(&format!("{name}\n{signature}"));
+                // A shared namespace is navigation, not evidence that an
+                // unrelated theorem answers the question.
+                let short_name = name.rsplit('.').next().unwrap_or(name);
+                let formal = expanded_identifiers(&format!("{short_name}\n{signature}"));
                 let matched = query.matched(
                     &format!("{formal}\n{}", adjacent_doc(&lines, start)),
                     &aliases,
