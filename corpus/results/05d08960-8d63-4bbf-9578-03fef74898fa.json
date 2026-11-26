@@ -1,0 +1,11 @@
+{
+  "id": "05d08960-8d63-4bbf-9578-03fef74898fa",
+  "label": "Exhibit observationally equal extreme supplier mixtures under a common access cap",
+  "argument_id": "d826af56-9a5e-4262-ab57-42b77e19e316",
+  "challenge_module": "TruthCore.Results.Causality.SupplierAuditVisibility.Challenge",
+  "solution_module": "TruthCore.Results.Causality.SupplierAuditVisibility.Solution",
+  "theorem": "TruthCore.Results.Causality.SupplierAuditVisibility.commonCapControl",
+  "comparator_config": "results/05d08960-8d63-4bbf-9578-03fef74898fa/comparator.json",
+  "status": "solution-present",
+  "description": "The finite world at the cap and the endless world already agree on all reportable lengths. The common visibility factor zeros out every longer length, where the underlying predictions differ. The equal observed profiles have opposite extreme endless shares."
+}

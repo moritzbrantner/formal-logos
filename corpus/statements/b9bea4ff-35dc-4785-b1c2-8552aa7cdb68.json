@@ -1,0 +1,11 @@
+{
+  "id": "b9bea4ff-35dc-4785-b1c2-8552aa7cdb68",
+  "label": "A common bounded supplier audit cannot identify the endless population share",
+  "paraphrase": "For every access cap d, give matching-prefix queries through length d observation factor one and queries beyond d observation factor zero. The normalized finite class concentrated at depth d has latent matching-prefix probability one for lengths at most d and zero at every longer length. The populations with endless shares zero and one have identical observed matching-prefix probabilities at every length under that same cap.",
+  "lean_declaration": "TruthCore.Causality.SupplierAuditVisibility.CommonCapControl",
+  "definition_ids": [
+    "7aefc429-5425-44d6-8757-ec8bf55f17fb",
+    "77b06e8c-9266-4801-b3cb-2ce1dd9d13e6",
+    "f13f4f58-7120-4a2d-b2ab-2d1c4469c96f"
+  ]
+}
