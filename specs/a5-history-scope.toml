@@ -20,3 +20,13 @@ premises = []
 conclusion = "A5 history interpretation scope controls"
 rule = "Explicit full-carrier witnesses and omission counterexamples"
 meaning = "Test the owner-selected interpretation alternatives without conjoining them as one source reading. No original allowance is cleared by these controls; no actual causal availability, explanation or root truth follows."
+
+[[relation]]
+id = "Test by A5 history scope controls verified"
+label = "Test by A5 history scope controls verified"
+subject_kind = "result"
+subject_id = "1bc1de00-e290-4c8e-bc14-a3584b48d9ec"
+predicate = "tests"
+object_kind = "statement"
+object_id = "0e453d79-b36c-5c51-99a7-25e014f5aac0"
+note = "Tests candidate scope distinctions for the exact-history roster using separate onset, classification and cutoff interpretations, with source calibration open."

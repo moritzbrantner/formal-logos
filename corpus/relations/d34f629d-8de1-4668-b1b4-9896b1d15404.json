@@ -1,0 +1,10 @@
+{
+  "id": "d34f629d-8de1-4668-b1b4-9896b1d15404",
+  "label": "Test by Revision uptake screening structural certificate by port evaluation",
+  "subject_kind": "result",
+  "subject_id": "5ba7dd8f-7f4a-4d83-89b9-ca2cfffa02f0",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "94cdf074-f21a-5157-8bd4-63d48ed015f1",
+  "note": "Tests whether later sensitivity depends directly on the original acquisition value by holding recommendation fixed in the Boolean revision router built on the acquisition interface."
+}

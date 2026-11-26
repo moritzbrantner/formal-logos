@@ -31,3 +31,13 @@ conclusion = "A two-reading change comparison is accurate exactly when its offse
 rule = "Evaluate the Boolean change comparison for both target values and offsets"
 meaning = "Evaluating the four input bits identifies the precise condition under which a differential reading tracks change in a fixed XOR channel. Keeping or reading the two values and correctly carrying out the comparison are application conditions. The identity supplies no physical frequencies or normative premise."
 axioms = []
+
+[[relation]]
+id = "Test by Derive the three-coordinate parity restriction and its removal from the available inputs"
+label = "Test by Derive the three-coordinate parity restriction and its removal from the available inputs"
+subject_kind = "result"
+subject_id = "495c506a-3436-4f2f-94aa-2a32129932c9"
+predicate = "tests"
+object_kind = "statement"
+object_id = "c4f4fd40-9ee4-59be-82ab-ec576f26aa33"
+note = "Tests how the static parity boundary is preserved by actual paired flips on the three report coordinates and removed by one additional unmatched flip."

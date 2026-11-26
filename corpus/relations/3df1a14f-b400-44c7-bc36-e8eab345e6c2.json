@@ -1,0 +1,10 @@
+{
+  "id": "3df1a14f-b400-44c7-bc36-e8eab345e6c2",
+  "label": "Test by Two closed mathematical controls: the usual real interva for The event times 1/ lie in (1)",
+  "subject_kind": "result",
+  "subject_id": "aab03d1b-aeb5-5160-ad14-14624ed61600",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "7b9648fb-2a44-5149-a9da-dcf00bdfdff7",
+  "note": "Tests the bounded-time versus first-event distinction in the reflected geometric schedule instead of the reciprocal schedule, with zero still the first time and no first event."
+}

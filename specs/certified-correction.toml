@@ -15,3 +15,13 @@ premises = []
 conclusion = "Scoped certificate calibration connects a procedure to exact classification"
 rule = "constructive proof and finite omission controls"
 meaning = "Conditional analyst candidate: coverage and scoped calibration yield exact classification on the scope; the availability (execution-resource) component of coverage is not load-bearing for ScopedConnection. The controls separate calibration from coverage, extensional classifiability from coverage by a given procedure, and restricted from unrestricted calibration. No human usability, epistemic warrant, truth-directed norm, or root premise is established."
+
+[[relation]]
+id = "Test by Scoped calibration and procedure separation controls"
+label = "Test by Scoped calibration and procedure separation controls"
+subject_kind = "result"
+subject_id = "1a8bd458-62eb-40f0-b7b1-d692e9cf6f07"
+predicate = "tests"
+object_kind = "statement"
+object_id = "6df7921a-29b6-5574-8952-f27497140a53"
+note = "Tests obtaining exact factorization on the explicit scope from covered calibrated certificates and separates it from the echo procedure's missing resources."

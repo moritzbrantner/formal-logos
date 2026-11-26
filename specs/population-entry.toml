@@ -16,3 +16,13 @@ conclusion = "Persistent population conservation and capacity separate solitary 
 axioms = ["propext", "Classical.choice", "Quot.sound"]
 rule = "Count persistent birth indices, compare adjacent populations, and construct complete single-entry histories with a fixed detector"
 meaning = "In one birth-input mechanism the represented number of agents is the cardinality of active birth indices. A late birth increases that count. Under conservation, equality of initial bits forces equality of complete birth histories. Exact conservation excludes even solitary late birth; capacity one is saturated by the persisting founder, yet admits the same later candidate in its absence. At an unrestricted boundary, adding just the late input suffices for an admissible extra agent, its produced event and a changed source-blind detector reading. Absence of incoming causes and absence of #312 reason tokens are separately represented. A conserved net charge, a real modal recombination principle or global loss of empirical warrant is outside the theorem."
+
+[[relation]]
+id = "Test by Populated founder and agent-entry controls under three fixed boundary conditions"
+label = "Test by Populated founder and agent-entry controls under three fixed boundary conditions"
+subject_kind = "result"
+subject_id = "9a461665-57c8-48cf-be37-07ec42d0f07f"
+predicate = "tests"
+object_kind = "statement"
+object_id = "608a262d-08fe-4dfd-9413-67e2ecf35b84"
+note = "Tests the local existence PSR for contingents in the shared persistent-founder model with a sound reason assignment for its firing but no reason for its own existence."

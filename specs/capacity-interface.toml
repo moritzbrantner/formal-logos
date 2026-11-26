@@ -20,3 +20,13 @@ conclusion = "Indexed capacity correspondence and information preservation"
 rule = "Existential image and equality transport, with explicit information-loss controls"
 meaning = "Formal certificate in classical logic: exact correspondence implies agreement on identified situation, bearer and respect indices. Conversely agreement lets the existential image recover precisely the original event profile. Retaining event identity gives a lossless adapter for arbitrary profiles. Transport is pointwise equivalence, not a new capacity or activation law. The unchanged root-route formulas are preserved under the thin profile round trip. The finite controls isolate index loss; the reused BorrowedExercise witnesses assert no new philosophical defeat. No external philosophical premises and no root premise change."
 senses = { CAUSAL_CAPACITY_VERSUS_ACTUAL_EXERCISE = "CAUSAL_CAPACITY_VERSUS_ACTUAL_EXERCISE_1" }
+
+[[relation]]
+id = "Test by Capacity correspondence from agreement on identified indices"
+label = "Test by Capacity correspondence from agreement on identified indices"
+subject_kind = "result"
+subject_id = "d26f85e9-262c-426d-888c-2a09fef96a17"
+predicate = "tests"
+object_kind = "argument"
+object_id = "c76a1cfb-cf26-4ac3-b9ba-3c07e727f3b5"
+note = "Tests exact recovery of the thin world/bearer capacity profile used by the Cogito transport argument and distinguishes adaptations that lose event or scenario information."

@@ -1,0 +1,10 @@
+{
+  "id": "95889b57-be44-4888-ab43-b87f2d7f9ad8",
+  "label": "Test by Intrinsic selection obstruction checked",
+  "subject_kind": "result",
+  "subject_id": "19183927-9590-41d8-a4ad-04137100ad4a",
+  "predicate": "tests",
+  "object_kind": "argument",
+  "object_id": "a21fb462-90ef-44f1-99f6-15c692a1f48b",
+  "note": "Checks the independent intrinsic-decoder condition omitted by the contextual model that selects different targets at one constant intrinsic state."
+}

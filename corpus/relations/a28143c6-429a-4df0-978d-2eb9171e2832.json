@@ -1,0 +1,10 @@
+{
+  "id": "a28143c6-429a-4df0-978d-2eb9171e2832",
+  "label": "Test by Capacity correspondence from agreement on identified indices",
+  "subject_kind": "result",
+  "subject_id": "d26f85e9-262c-426d-888c-2a09fef96a17",
+  "predicate": "tests",
+  "object_kind": "argument",
+  "object_id": "c76a1cfb-cf26-4ac3-b9ba-3c07e727f3b5",
+  "note": "Tests exact recovery of the thin world/bearer capacity profile used by the Cogito transport argument and distinguishes adaptations that lose event or scenario information."
+}
