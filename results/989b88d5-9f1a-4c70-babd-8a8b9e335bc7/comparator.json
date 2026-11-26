@@ -1,0 +1,9 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.ComparativePerfectionScale.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ComparativePerfectionScale.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.ComparativePerfectionScale.moreInBeingTracksDegreeOfExactCalibration"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}
