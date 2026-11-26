@@ -1,0 +1,9 @@
+{
+  "id": "7011ffa0-1d24-4e36-84e2-714a38cbdeac",
+  "label": "Target identifiability on an admitted model class",
+  "term": "Target identifiability on an admitted model class",
+  "definition": "At fixed observation and target functions on the admitted models, any two models giving equal observations yield equal values of the target.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Science.Identifiability.Identifies",
+  "note": "Exact mathematical recoverability. For the Boolean history application, the reported trace and root attributes are separate outputs."
+}

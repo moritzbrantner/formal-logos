@@ -1,0 +1,27 @@
+[batch]
+vocab = "TruthCore.Alternatives.ActualHistoryIdentification"
+results = "TruthCore.Results.Alternatives.ActualHistoryIdentification"
+
+[[statement]]
+id = "A represented complete history recovers the switch schedule but leaves root attributes open"
+lean = "Boundary"
+paraphrase = "For admitted #468 routes paired with #1867 Boolean copy/toggle schedules, the complete generated trace identifies the switch schedule. Two admitted routes with the same trace have opposite HAS_INTELLECT_1 and HAS_WILL_1 values at the designated root, so neither attribute is identified. The nonempty restriction by the existing immateriality-to-intellect and intellect-to-will premises makes both attributes true throughout. An augmented map identifies the attribute pair exactly when some permitted report separates each same-history pair with different attributes. This is a control on the supplied profile, with source-to-history applicability and any real separating report OPEN."
+definitions = ["DEF-HAS-INTELLECT", "DEF-HAS-WILL", "dace8e73-8b5b-5378-8e62-17d534413168", "7011ffa0-1d24-4e36-84e2-714a38cbdeac", "dcf6e171-f867-45cc-8a1f-9966629d1a91", "0614b2ed-2c9a-4106-9240-c5a723fd04f9"]
+
+[[argument]]
+id = "Recover the Boolean schedule and test root-attribute identification in matched routes"
+theorem = "boundary"
+premises = []
+conclusion = "A represented complete history recovers the switch schedule but leaves root attributes open"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Recover transition switches and compare the two admitted route profiles"
+meaning = "Adjacent Boolean values recover the actual switch in the supplied copy/toggle schedule. The #468 ladder supplies two admitted roots with equal generated traces and opposite attributes. The #468 maximum theorems determine the attributes after the explicit profile restriction. The augmented-map criterion follows by comparing the coordinates of the supplied reports."
+
+[[relation]]
+id = "Equal-history roots test the immateriality-to-intellect premise"
+subject_kind = "argument"
+subject_id = "Recover the Boolean schedule and test root-attribute identification in matched routes"
+predicate = "tests"
+object_kind = "statement"
+object_id = "STMT-IMMATERIAL-IS-INTELLECTUAL"
+note = "The shared #468 structural premises and maximum entail the strongest immateriality antecedent in both route profiles. The impersonal profile has no intellect at that same maximum. Its complete represented Boolean trace matches the intellectual profile, so the trace cannot supply the missing attribute premise in this profile."

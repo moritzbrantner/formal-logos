@@ -1,0 +1,11 @@
+{
+  "id": "38ebb0ba-2e44-44a2-8bb1-61617e0b5200",
+  "label": "Recover the Boolean schedule and test root-attribute identification in matched routes",
+  "argument_id": "351511de-80be-4448-90d4-e6ccd08f483b",
+  "challenge_module": "TruthCore.Results.Alternatives.ActualHistoryIdentification.Challenge",
+  "solution_module": "TruthCore.Results.Alternatives.ActualHistoryIdentification.Solution",
+  "theorem": "TruthCore.Results.Alternatives.ActualHistoryIdentification.boundary",
+  "comparator_config": "results/38ebb0ba-2e44-44a2-8bb1-61617e0b5200/comparator.json",
+  "status": "solution-present",
+  "description": "Adjacent Boolean values recover the actual switch in the supplied copy/toggle schedule. The #468 ladder supplies two admitted roots with equal generated traces and opposite attributes. The #468 maximum theorems determine the attributes after the explicit profile restriction. The augmented-map criterion follows by comparing the coordinates of the supplied reports."
+}
