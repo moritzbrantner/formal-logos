@@ -1,0 +1,10 @@
+{
+  "id": "8c08dd2c-20c6-4cf2-9635-d1200a167993",
+  "label": "Test by Matched controls for the practical specification of fixe for A GOD_4 giving plan rejec (1)",
+  "subject_kind": "result",
+  "subject_id": "6a0df6b9-d7d5-4612-8dc0-ee12b98dfbb5",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "df6c64a6-02dc-414a-be8e-dccd035b8872",
+  "note": "Tests omission of the benefit rejection rule with a fixed operative bare-output plan that passes the edited description."
+}

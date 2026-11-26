@@ -105,3 +105,13 @@ predicate = "tests"
 object_kind = "argument"
 object_id = "337ecbd2-673d-4b71-9282-b0eee4efd697"
 note = "Tests why acyclicity of bearer steps alone does not suffice for fixed labels in the four-bearer projection with a two-label cycle."
+
+[[relation]]
+id = "Test by Classify exactly the fixed labels admitting the distinct-dependence PLG map"
+label = "Test by Classify exactly the fixed labels admitting the distinct-dependence PLG map"
+subject_kind = "result"
+subject_id = "5ebdfbff-f984-43d0-a7d7-ddc19286f39f"
+predicate = "tests"
+object_kind = "statement"
+object_id = "42756c07-03cd-4b54-8ed6-ed6c1a5132aa"
+note = "Tests existence of a consistent selected strict-ground interpretation on fixed labels via the criterion excluding closed walks in the projected steps."

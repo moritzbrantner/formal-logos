@@ -1,0 +1,10 @@
+{
+  "id": "414123da-2cf1-40dd-9497-15158793a771",
+  "label": "Test by Distinct mover gives some mover",
+  "subject_kind": "result",
+  "subject_id": "630d75d5-40b5-4ab6-acbd-44e674ba4d12",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "c8451a5e-83ae-4952-bcb0-5d2c6ea2596c",
+  "note": "Checks the projection from a distinct mover to a mover in the same respect, without a transfer across independently witnessed respects."
+}

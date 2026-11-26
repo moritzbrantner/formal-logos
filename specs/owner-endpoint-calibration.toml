@@ -14,3 +14,13 @@ premises = []
 conclusion = "Owner endpoint calibration interface and omission certificate"
 rule = "Conjunction elimination, literal actualGraph dictionary, and explicit finite interpretations"
 meaning = "Conditional interfaces keep all profile and owner inputs inside the quantified certificate. DirectLaw uses only the activity conjunct; ProfileLaw uses exerciseHasPower and powerConcrete; EsseLaw adds concreteIsEsse. Actual existence is supplied by actualGraph nodes and is not needed by the owner's unguarded activity clause itself. Controls distinguish missing production, dictionary and esse calibration, without asserting an anchored intended ontology."
+
+[[relation]]
+id = "Test by Owner endpoint calibration checked interface"
+label = "Test by Owner endpoint calibration checked interface"
+subject_kind = "result"
+subject_id = "a62ea00e-c7df-4a6e-ae5b-cfe8e904a56e"
+predicate = "tests"
+object_kind = "statement"
+object_id = "e27489c3-7419-5123-8476-386633e62532"
+note = "Tests the scope of the owner-floor concreteness rule by contrasting actualGraph endpoints with a separate graph, an isolated nonconcrete source and the same-bearer esse calibration."

@@ -259,3 +259,13 @@ object_kind = "statement"
 object_id = "65f3d0c7-cc3d-4ce3-a4a9-6fa38bf722cb"
 verification_result_id = "b7943ca9-af73-4549-b66e-00c5320a85b2"
 note = "The existing unrestricted own-essence reception statement implies R3 by a single-premise Lean proof. This records strength only; R3 is used in the B6 argument because the full universal law is disputed for nonidentity recipients. Neither premise is established by the relation. Strictness has not been separately certified."
+
+[[relation]]
+id = "Test by First mover necessity controls checked"
+label = "Test by First mover necessity controls checked"
+subject_kind = "result"
+subject_id = "2b71a3ad-7dc9-405c-aae8-783c850ff2b0"
+predicate = "tests"
+object_kind = "statement"
+object_id = "3c9d683b-7ecf-4e35-b2cf-2997fbc1a3b2"
+note = "Tests the contingent-to-potency-or-cause alternatives on the finite Bool frames of the first-mover necessity batch, with potency and distinct causes assigned separately."
