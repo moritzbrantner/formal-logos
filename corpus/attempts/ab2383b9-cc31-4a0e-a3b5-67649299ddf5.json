@@ -1,0 +1,15 @@
+{
+  "id": "ab2383b9-cc31-4a0e-a3b5-67649299ddf5",
+  "label": "Motion is toward that to which the subject is in potency",
+  "statement_ids": [
+    "bc4051e9-7098-56f2-8204-e998c5be653b"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "The First Way says that the moved is in potency to that toward which it is being moved. Its adjacent same-respect argument distinguishes actual heat from potency to heat, while allowing potency to cold.",
+  "blocker": "Fix the target respect to what the motion is toward. Heat already actual rules out potency to that same heat at the same time and in the same way in the example. The route needs PotencyAdopted as capacity together with lack of InAct for every MovedIn instance, including the transport of this same-time and same-way qualification into its untimed predicates.",
+  "evidence": [
+    "5e028436-4f60-536a-a626-11e037977129"
+  ]
+}

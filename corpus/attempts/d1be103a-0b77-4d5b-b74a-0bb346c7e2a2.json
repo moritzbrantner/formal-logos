@@ -1,0 +1,15 @@
+{
+  "id": "d1be103a-0b77-4d5b-b74a-0bb346c7e2a2",
+  "label": "A separate created intelligence is composed of its quiddity and received esse",
+  "statement_ids": [
+    "f5db1796-20b1-5eef-8953-ef549815e989"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "In the pinned Baur/Koch numbering, c.3 gives the composition and treats the quiddity as potential with respect to received esse as act. C.4 restates their distinction for created intellectual substances and distinguishes them from material composites and from the first being.",
+  "blocker": "The source gives real composition in the relevant case, against treating the distinction as merely a difference of descriptions. The route still needs the modeled essenceOf and esseOf values to be ConstituentOf the same bearer in the sense of metaphysical principles, and the inference from distinct values to joint constitution outside the case of separate created intelligences.",
+  "evidence": [
+    "e11ffb48-e8c2-4bce-b26f-d8cfefc62698"
+  ]
+}

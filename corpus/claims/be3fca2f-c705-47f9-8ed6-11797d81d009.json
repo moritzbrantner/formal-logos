@@ -1,0 +1,13 @@
+{
+  "id": "be3fca2f-c705-47f9-8ed6-11797d81d009",
+  "label": "I q.85 a.2 co. and ad 1 — The intelligible species is that by which the human intellect understands",
+  "statement_id": "c5026721-1fef-4d6a-9b57-a21159d4230b",
+  "source_id": "c77377cf-501b-56c6-be40-b518e9aad101",
+  "locator": "I q.85 a.2 co. and ad 1",
+  "interpretation": "Aquinas distinguishes the means of intellectual apprehension from the thing understood. The species is a form of the intellect in act as a likeness. I q.14 a.2 treats both the human possible intellect and the divine case, where the intellect itself is the species of divine self-understanding.",
+  "status": "formalized",
+  "attribution": "The passage states that the intelligible species is the likeness through which the human intellect primarily understands the thing and that in reflection the intellect can also understand the species itself, which is the premise.",
+  "definition_ids": [
+    "fb2759f7-aecb-4921-9f82-61de72a45245"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "75027f31-6808-4085-8c5f-0117e085203d",
+  "label": "The human soul is the first principle of the human being’s vital operations",
+  "statement_ids": [
+    "144b0405-9800-5032-bf9c-5f26a2d4d2d1"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "Aquinas argues from what a human being first acts by to the form of the one to whom the act is properly attributed. The human being is both the one who understands and the one who senses. Aquinas distinguishes being the body’s form and exercising intellect through a bodily organ.",
+  "blocker": "The examples tie particular vital operations to a form, giving a case against a separation of a human being’s substantial form from its operations. The route needs the converse direction with unrestricted scope: every form in HasForm, including an intelligible form or an acquired form, must supply some attributed operation through that very form. A principle that enables an operation still needs an operation witness if OperatesThrough demands exercise.",
+  "evidence": [
+    "6f47dd17-020b-475d-b3ea-1744dc757b46"
+  ]
+}

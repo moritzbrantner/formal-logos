@@ -1,0 +1,10 @@
+{
+  "id": "3c1af4c8-e6ea-4da6-9f37-01ae90b935d2",
+  "label": "Source support for 608a262d from Monadology §§32–38",
+  "subject_kind": "claim",
+  "subject_id": "0e1bffc2-b521-52f0-9926-2c227d94dc57",
+  "predicate": "supports",
+  "object_kind": "statement",
+  "object_id": "608a262d-08fe-4dfd-9413-67e2ecf35b84",
+  "note": "The principle addresses the recorded brute-contingency alternative by requiring a reason for the truth in question, even when unknown. Applying it requires a world-indexed contingent existent to yield a fact of the kind Leibniz covers and its sufficient reason to supply a token for the same existence fact in the model’s explains relation. The model does not require that a token be sufficient in Leibniz’s sense."
+}

@@ -1,0 +1,10 @@
+{
+  "id": "964e0001-9ba5-476d-88cb-999a90d70639",
+  "label": "Witness for Descartes on the objective reality of ideas",
+  "source_id": "8ac0e273-75c8-4229-8e61-b3ad1507b9ff",
+  "locator": "Meditation III, AT VII 40–47; Second Replies, AT VII 160–166",
+  "priority": 430,
+  "goal": "Admit an edition-level pinned witness of the cited range and recheck the reading before registering any claim. Resolve the causal and first-person readings for the Cartesian route under 0747e4f3-5296-4353-af67-2dd86c740a5e, 3845020d-f64b-4a4f-8734-e8069a80e36a, 4a9ede84-d1a2-4d5a-8d5b-eded62114cc4, d3fcdeeb-32cc-481d-bb34-21445f3c4c47.",
+  "reason": "Both works have candidate editions. The causal principle concerns objective reality and requires an adequate cause. The Meditation contrasts finite self and a genuine perception of infinite substance.",
+  "status": "candidate"
+}

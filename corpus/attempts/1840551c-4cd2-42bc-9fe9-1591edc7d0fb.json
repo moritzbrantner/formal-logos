@@ -1,0 +1,15 @@
+{
+  "id": "1840551c-4cd2-42bc-9fe9-1591edc7d0fb",
+  "label": "A natural form is followed by inclination",
+  "statement_ids": [
+    "87afc0da-6637-5707-9e40-9a4a14d095ad"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "Aquinas contrasts the natural inclination attached to a thing’s form with an animal’s appetite for what it apprehends. A power’s natural inclination to its fitting activity is distinct from the animal’s appetite for something fitting to it as an animal.",
+  "blocker": "For a natural operation of the kind discussed, the form supplies an intrinsic orientation beyond the fact that an action reached an end. The route needs the relevant form of every OperatesThrough witness, including an apprehended form, to ground its particular InclinedTo. External direction toward an end by itself gives no such inclination in the instrument.",
+  "evidence": [
+    "be48d5ff-4ac4-4c96-8f45-20627b0180e8"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "c72f187d-e960-4180-adae-f987eaa49394",
+  "label": "Source support for 73b3d83a from I q.85 a.2 co. and ad 1",
+  "subject_kind": "claim",
+  "subject_id": "be3fca2f-c705-47f9-8ed6-11797d81d009",
+  "predicate": "supports",
+  "object_kind": "statement",
+  "object_id": "73b3d83a-3699-5b19-87bb-fc43364a47d8",
+  "note": "This supplies a species for human actual understanding and corrects an identification of that species with the external thing’s form. The route still needs the same species indexed by Intelligible and HasForm for every instance in Understands, including cases outside the human account. Divine self-understanding requires the identity reading in I q.14 a.2 rather than introducing a received likeness in God."
+}

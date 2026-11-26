@@ -1,0 +1,10 @@
+{
+  "id": "30c39f0a-cea3-452e-b899-b9bdbd2b3ac1",
+  "label": "Source support for ef068f46 from III.66 n. 2 [26153]",
+  "subject_kind": "claim",
+  "subject_id": "e8a76684-39c1-4932-b592-c863ab7a61c7",
+  "predicate": "supports",
+  "object_kind": "statement",
+  "object_id": "ef068f46-6d3f-4a7a-b1b9-36e52d9fe867",
+  "note": "Giving esse in the chapter is an agent’s exercise of causal power. The route still requires every efficient CausesIn edge at esse, including any originating or sustaining edge in its domain, to count as such giving, and the giver’s being in act to be witnessed by its InAct in at least one modeled respect."
+}

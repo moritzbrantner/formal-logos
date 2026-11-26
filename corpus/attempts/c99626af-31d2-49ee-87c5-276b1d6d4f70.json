@@ -1,0 +1,15 @@
+{
+  "id": "c99626af-31d2-49ee-87c5-276b1d6d4f70",
+  "label": "Actuality is prior in account and substance, and qualifiedly in time",
+  "statement_ids": [
+    "197ac723-487c-5fa2-8800-4b441d322014"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "Aristotle distinguishes three senses at the outset. The account of capacity refers to its exercise. The substance comparison uses mature form and actuality as end. The temporal case uses generation or acquisition from an already actual source, with the prior actual and what comes to be the same in kind rather than number.",
+  "blocker": "The text directly argues for qualified priority of actuality and identifies which temporal claim survives the case of a capacity preceding its own exercise. To reach ActPriorInRouteSense, select a priority sense, show how it is represented by the binary RoutePrior on beings, and justify an actual witness in the same respect for each InPotency instance. Priority of an account or end alone supplies no such witness.",
+  "evidence": [
+    "0b73b0df-5927-492e-87d8-b1246f8b27bb"
+  ]
+}

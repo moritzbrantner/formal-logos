@@ -1,0 +1,10 @@
+{
+  "id": "7b41f06e-b02a-402b-92a2-fdb1d73d9ecf",
+  "label": "Witness for Descartes on doubting as a mode of thinking",
+  "source_id": "8ac0e273-75c8-4229-8e61-b3ad1507b9ff",
+  "locator": "Meditation II, AT VII 28–29",
+  "priority": 430,
+  "goal": "Admit an edition-level pinned witness of the cited range and recheck the reading before registering any claim. Compare the first-person enumeration with 1722a80f-47a4-5605-8b66-b3534e457bcb.",
+  "reason": "The meditator identifies his own doubting as thought. Attempts to infer every performance of doubting is realized by an occurring episode need a separate bridge.",
+  "status": "candidate"
+}

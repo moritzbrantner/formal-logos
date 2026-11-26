@@ -1,0 +1,13 @@
+{
+  "id": "c877ee68-65a6-4576-9709-946cd0272288",
+  "label": "I–II q.1 a.2 co. — Agents act for an end",
+  "statement_id": "d353b5ab-ca0c-4ff6-8c14-dcf6b00168f2",
+  "source_id": "c77377cf-501b-56c6-be40-b518e9aad101",
+  "locator": "I–II q.1 a.2 co.",
+  "interpretation": "The body supports finality by arguing that an agent requires determination to a definite effect. It distinguishes directing one’s own action from being directed. The replies distinguish knowing an end and being directed to an end, and explain why a nonrational thing has natural or sensitive appetite rather than will.",
+  "status": "formalized",
+  "attribution": "The passage states that every agent acts for an end, with rational agents directing themselves and nonrational things tending toward their ends by natural inclination under another’s direction, which is the premise.",
+  "definition_ids": [
+    "7ee48533-c148-4412-bcad-6b3e3dbe51f0"
+  ]
+}

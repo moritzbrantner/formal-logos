@@ -1,0 +1,13 @@
+{
+  "id": "d4fb8678-8dd5-4683-96e0-c1bc873ac9bd",
+  "label": "Waiting for Aquinas’s participation commentary witness",
+  "statement_ids": [
+    "9da93cd4-e4ed-536b-8302-4e7acd0e02ed"
+  ],
+  "date": "2026-11-26",
+  "kind": "source-search",
+  "outcome": "blocked",
+  "summary": "The unpinned Corpus Thomisticum edition of lectio 2 gives part-taking and several different ways of receiving. Its effect-to-cause example is air receiving light at less than the source’s brightness. The modes differ and the passage does not assign the same intrinsic reception relation to them all.",
+  "blocker": "Admit an edition-level pinned witness of the cited range and recheck the reading before registering any claim. Specify which modes fall under ParticipatesIn and how each supplies ReceivedIn for the same perfection in the participant.",
+  "evidence": []
+}

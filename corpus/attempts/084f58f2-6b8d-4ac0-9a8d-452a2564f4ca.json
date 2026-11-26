@@ -1,0 +1,15 @@
+{
+  "id": "084f58f2-6b8d-4ac0-9a8d-452a2564f4ca",
+  "label": "The intelligible species is that by which the human intellect understands",
+  "statement_ids": [
+    "73b3d83a-3699-5b19-87bb-fc43364a47d8"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "Aquinas distinguishes the means of intellectual apprehension from the thing understood. The species is a form of the intellect in act as a likeness. I q.14 a.2 treats both the human possible intellect and the divine case, where the intellect itself is the species of divine self-understanding.",
+  "blocker": "This supplies a species for human actual understanding and corrects an identification of that species with the external thing’s form. The route still needs the same species indexed by Intelligible and HasForm for every instance in Understands, including cases outside the human account. Divine self-understanding requires the identity reading in I q.14 a.2 rather than introducing a received likeness in God.",
+  "evidence": [
+    "be3fca2f-c705-47f9-8ed6-11797d81d009"
+  ]
+}
