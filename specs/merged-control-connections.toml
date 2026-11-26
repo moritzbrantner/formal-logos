@@ -37,3 +37,12 @@ predicate = "alternative_to"
 object_kind = "statement"
 object_id = "cccaf7ca-8900-4ddb-aa38-e0c0c1465456"
 note = "For the same replacement outputs, role occupancy counts the far backup producer's output as the effect and exact provenance excludes it. role_omits_witness checks the resulting failure of the same closest-absence selection to preserve a witness."
+
+[[relation]]
+id = "Fixed-bearer act and fact substitution tests the essential-existence bridge"
+subject_kind = "result"
+subject_id = "cdda0f09-97ae-4d1e-9323-a638a3795ad0"
+predicate = "tests"
+object_kind = "statement"
+object_id = "565ccd6c-0036-4613-8595-f6f03d273a0d"
+note = "The modified content-based judgment distinguishes coextensive exercise and existence, while its world-predicate projection passes the extensional identity-to-essential-existence bridge. This tests the role of extensionality without challenging the checked extensional proof."
