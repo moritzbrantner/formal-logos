@@ -23,6 +23,14 @@
       "effort": "high",
       "date": "2026-11-26",
       "pr": "PR-2099"
+    },
+    {
+      "role": "repair",
+      "provider": "claude",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2099"
     }
   ]
 }

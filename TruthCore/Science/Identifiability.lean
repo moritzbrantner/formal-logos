@@ -143,8 +143,8 @@ def augment (observe : M → O) (permitted : Set I) (report : M → I → R)
     (m : M) : O × (permitted → R) :=
   (observe m, fun i => report m i.val)
 
-/-- Extra tests suffice exactly when some permitted test separates each
-observationally tied pair that differs in its target. -/
+/-- Extra tests suffice exactly when, for each observationally tied pair that
+differs in its target, at least one permitted test separates that pair. -/
 theorem augment_identifies_iff (observe : M → O) (target : M → T)
     (permitted : Set I) (report : M → I → R) :
     Identifies (augment observe permitted report) target ↔
