@@ -1,0 +1,11 @@
+{
+  "id": "e8ca49db-51b4-41c4-884c-91114870689a",
+  "label": "GOD_4 rationally gives esse to the beneficiary, from the operative standard",
+  "argument_id": "3095c750-0fa4-4df2-a28a-fb4ac48850d7",
+  "challenge_module": "TruthCore.Results.Causality.PracticalSpecification.Challenge",
+  "solution_module": "TruthCore.Results.Causality.PracticalSpecification.Solution",
+  "theorem": "TruthCore.Results.Causality.PracticalSpecification.recipientOfPracticalSpecification",
+  "comparator_config": "results/e8ca49db-51b4-41c4-884c-91114870689a/comparator.json",
+  "status": "solution-present",
+  "description": "Choose the operative standard for the same giver and effect. If benefit credit were optional, every requirement would remain satisfied after the edit. Rejection gives a required benefit clause for that effect in esse. The local recognition premise then applies to that clause and supplies recipient-directed willing."
+}

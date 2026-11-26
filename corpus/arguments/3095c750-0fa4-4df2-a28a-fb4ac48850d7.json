@@ -1,0 +1,22 @@
+{
+  "id": "3095c750-0fa4-4df2-a28a-fb4ac48850d7",
+  "label": "GOD_4 rationally gives esse to the beneficiary, from the operative standard",
+  "premise_statement_ids": [
+    "4be0f774-2c0a-4691-9088-6e790940960a",
+    "df6c64a6-02dc-414a-be8e-dccd035b8872",
+    "437438f0-183c-48e5-8d84-f82b94fabf3e"
+  ],
+  "conclusion_statement_id": "3655f59f-9ab4-4c5d-8fb2-474810d29418",
+  "inference_ids": [
+    "258e542a-da2b-48e1-b51b-70f5c0717160"
+  ],
+  "meaning": "Choose the operative standard for the same giver and effect. If benefit credit were optional, every requirement would remain satisfied after the edit. Rejection gives a required benefit clause for that effect in esse. The local recognition premise then applies to that clause and supplies recipient-directed willing.",
+  "definition_ids": [
+    "08b826db-2d9c-48e5-b69c-d4ac54088518",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "88f9f6e8-997b-5f7d-afa1-c501954c3807",
+    "a84afabf-d6e6-424d-a792-2fa874c466a5",
+    "bace3032-dfa4-4193-9408-30f584e6fe6d",
+    "fbd163ad-ec01-45d1-a749-f90a1de6ea37"
+  ]
+}

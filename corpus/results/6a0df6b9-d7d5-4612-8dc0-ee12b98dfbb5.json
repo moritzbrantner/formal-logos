@@ -1,0 +1,11 @@
+{
+  "id": "6a0df6b9-d7d5-4612-8dc0-ee12b98dfbb5",
+  "label": "Matched controls for the practical specification of fixed rational giving",
+  "argument_id": "88d97e13-58aa-40d0-aa10-aa6fd00276e9",
+  "challenge_module": "TruthCore.Results.Causality.PracticalSpecification.Challenge",
+  "solution_module": "TruthCore.Results.Causality.PracticalSpecification.Solution",
+  "theorem": "TruthCore.Results.Causality.PracticalSpecification.controls",
+  "comparator_config": "results/6a0df6b9-d7d5-4612-8dc0-ee12b98dfbb5/comparator.json",
+  "status": "solution-present",
+  "description": "The same fixed rational giving occurs throughout. Coverage fails with apprehension and satisfaction but no operative use. On the operative profiles the same bare production is always required. Changing the two requirements independently tests the rejection premises without changing who gives being. On the full profile omission of each recognition changes only the corresponding distinct-effect case relation. The certificate is structural and compares no possible worlds of a metaphysical rival."
+}

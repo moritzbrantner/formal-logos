@@ -1,0 +1,14 @@
+{
+  "id": "258e542a-da2b-48e1-b51b-70f5c0717160",
+  "label": "GOD_4 rationally gives esse to the beneficiary, from the operative standard (inference)",
+  "input_statement_ids": [
+    "4be0f774-2c0a-4691-9088-6e790940960a",
+    "df6c64a6-02dc-414a-be8e-dccd035b8872",
+    "437438f0-183c-48e5-8d84-f82b94fabf3e"
+  ],
+  "output_statement_id": "3655f59f-9ab4-4c5d-8fb2-474810d29418",
+  "rule": "Extract the benefit requirement by testing its omission from an otherwise successful plan",
+  "meaning": "Choose the operative standard for the same giver and effect. If benefit credit were optional, every requirement would remain satisfied after the edit. Rejection gives a required benefit clause for that effect in esse. The local recognition premise then applies to that clause and supplies recipient-directed willing.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

@@ -1,0 +1,68 @@
+[batch]
+vocab = "TruthCore.Causality.PracticalSpecification"
+results = "TruthCore.Results.Causality.PracticalSpecification"
+
+[[statement]]
+id = "Distinct actual giving by WILL_CAPACITY_VERSUS_WILLED_GIVING_3 has an operative plan at w"
+lean = "RationalGivingHasPlan"
+paraphrase = "OPEN, analyst formulation. At w, for each distinct x in act in esse that g gives being by an owned rational power, some plan is apprehended as good by g, actually governs that giving and meets its requirements in that giving's context. Plans can be shared between effects."
+definitions = ["DEF-ESSE", "bace3032-dfa4-4193-9408-30f584e6fe6d", "a84afabf-d6e6-424d-a792-2fa874c466a5"]
+
+[[statement]]
+id = "A GOD_4 giving plan rejects withdrawing the credit for a distinct recipient's esse as its good"
+lean = "DivinePlanRejectsBenefitOmission"
+paraphrase = "OPEN, analyst formulation. For every GOD_4 and distinct x in act in esse, each operative successful plan for this giving would reject its actual assessment with just the credit for x's esse as x's own good erased. The bare output and every other assessed role are kept. This is a test of the content of the standard, independent of whether the edited assessment describes a feasible output."
+definitions = ["DEF-GOD-OF-CLASSICAL-THEISM", "DEF-ESSE", "fbd163ad-ec01-45d1-a749-f90a1de6ea37", "a84afabf-d6e6-424d-a792-2fa874c466a5"]
+
+[[statement]]
+id = "A giving plan rejects withdrawing every end-placement of a distinct actual effect"
+lean = "PlanRejectsEndOmission"
+paraphrase = "OPEN, analyst formulation. For every distinct x in act in esse, each operative successful plan for this giving rejects its actual assessment with all x's end-placements removed. The bare output, benefit clauses and other bearers' end-placements are kept. The rejection concerns the fulfillment standard at w and asserts no alternative world."
+definitions = ["DEF-ESSE", "fbd163ad-ec01-45d1-a749-f90a1de6ea37", "a84afabf-d6e6-424d-a792-2fa874c466a5"]
+
+[[statement]]
+id = "Required beneficiary credit in operative giving counts as CREATURE_WILLING_1"
+lean = "RequiredBenefitIsWilled"
+paraphrase = "OPEN, analyst formulation. At w, if a successfully governing plan of giving to x requires counting a respect r as good for x, g wills that good to x in CREATURE_WILLING_1. Subordinate concern is allowed, and the rule does not identify any particular plan or requirement."
+definitions = ["08b826db-2d9c-48e5-b69c-d4ac54088518", "fbd163ad-ec01-45d1-a749-f90a1de6ea37", "a84afabf-d6e6-424d-a792-2fa874c466a5"]
+
+[[statement]]
+id = "Required end-placement in operative giving counts as directing the effect to that end"
+lean = "RequiredEndIsDirected"
+paraphrase = "OPEN, analyst formulation. At w, if a successfully governing plan of g's giving to x requires x's placement in an order to e, g directs x toward e in the case's direction relation. This rule does not identify which plans require such an end-placement and does not supply an authority relation."
+definitions = ["DEF-GOVERNMENT-DIRECTION-TO-END", "fbd163ad-ec01-45d1-a749-f90a1de6ea37", "a84afabf-d6e6-424d-a792-2fa874c466a5"]
+
+[[statement]]
+id = "Fixed rational giving separates operative planning, recipient benefit and placement toward an end"
+lean = "Control.Controls"
+paraphrase = "In the shared two-world fixed rational assignment, the foreseen profile appraises and satisfies the full standard but lacks operative plan coverage. The bare-output profile governs the giving but passes both edits as sufficient descriptions, so both rejection premises fail. A plan requiring only the distinct recipient's end-placement or only its benefit respectively validates just the corresponding bridge, with both recognition rules satisfied in each assignment. The full profile admits both conclusions, and switching off either distinct recipient relation separately falsifies its recognition rule and bridge while preserving the other assumptions and conclusion. Both case relations are populated at the source."
+definitions = ["DEF-ESSE", "DEF-GOD-OF-CLASSICAL-THEISM", "DEF-HAS-INTELLECT", "DEF-HAS-WILL", "92c03350-6809-497d-b123-2ffb11c0e0c1", "bace3032-dfa4-4193-9408-30f584e6fe6d", "08b826db-2d9c-48e5-b69c-d4ac54088518", "DEF-GOVERNMENT-DIRECTION-TO-END", "fbd163ad-ec01-45d1-a749-f90a1de6ea37", "a84afabf-d6e6-424d-a792-2fa874c466a5"]
+
+[[argument]]
+id = "GOD_4 rationally gives esse to the beneficiary, from the operative standard"
+theorem = "recipientOfPracticalSpecification"
+premises = ["Distinct actual giving by WILL_CAPACITY_VERSUS_WILLED_GIVING_3 has an operative plan at w", "A GOD_4 giving plan rejects withdrawing the credit for a distinct recipient's esse as its good", "Required beneficiary credit in operative giving counts as CREATURE_WILLING_1"]
+conclusion = "3655f59f-9ab4-4c5d-8fb2-474810d29418"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Extract the benefit requirement by testing its omission from an otherwise successful plan"
+meaning = "Choose the operative standard for the same giver and effect. If benefit credit were optional, every requirement would remain satisfied after the edit. Rejection gives a required benefit clause for that effect in esse. The local recognition premise then applies to that clause and supplies recipient-directed willing."
+
+[[argument]]
+id = "Universal rational giving directs each actual effect, from the operative standard"
+theorem = "directionOfPracticalSpecification"
+premises = ["Distinct actual giving by WILL_CAPACITY_VERSUS_WILLED_GIVING_3 has an operative plan at w", "A giving plan rejects withdrawing every end-placement of a distinct actual effect", "Required end-placement in operative giving counts as directing the effect to that end"]
+conclusion = "de6a0f86-dfc5-4941-be2c-dfe3ad81a9a8"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+sense_bridges = [{ term = "WILL_CAPACITY_VERSUS_WILLED_GIVING", from = "916b63e7-d8d8-49ba-9d42-9ad19c1fa090", to = "438df309-f7a6-4c68-bd90-c44a960900f9", statement_id = "de6a0f86-dfc5-4941-be2c-dfe3ad81a9a8", role = "conclusion" }]
+rule = "Extract a particular end-placement by testing omission of the entire class of end-placements"
+meaning = "Choose the operative standard for the same giver and effect. If there were no case-directed end, any requirement for an end-placement of that effect would contradict the recognition premise. Every requirement would survive the edit, against rejection. This yields some end for the effect in the direction relation. No common end or recipient-directed benefit is needed."
+
+[[argument]]
+id = "Matched controls for the practical specification of fixed rational giving"
+theorem = "controls"
+premises = []
+conclusion = "Fixed rational giving separates operative planning, recipient benefit and placement toward an end"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+sense_mixing_control = true
+rule = "Evaluate the common rational giving assignment with different practical clause and recognition assignments"
+meaning = "The same fixed rational giving occurs throughout. Coverage fails with apprehension and satisfaction but no operative use. On the operative profiles the same bare production is always required. Changing the two requirements independently tests the rejection premises without changing who gives being. On the full profile omission of each recognition changes only the corresponding distinct-effect case relation. The certificate is structural and compares no possible worlds of a metaphysical rival."

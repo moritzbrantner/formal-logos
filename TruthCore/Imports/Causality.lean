@@ -228,6 +228,7 @@ public import TruthCore.Causality.PostCutStore
 public import TruthCore.Causality.Power1392
 public import TruthCore.Causality.Power1392Exercise
 public import TruthCore.Causality.PowerExistenceBoundary
+public import TruthCore.Causality.PracticalSpecification
 public import TruthCore.Causality.PresentReceipt
 public import TruthCore.Causality.PreservationCandidates
 public import TruthCore.Causality.PreservationMeaning
