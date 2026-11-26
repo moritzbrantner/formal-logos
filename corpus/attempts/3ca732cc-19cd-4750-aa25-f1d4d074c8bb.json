@@ -1,0 +1,26 @@
+{
+  "id": "3ca732cc-19cd-4750-aa25-f1d4d074c8bb",
+  "label": "Distinguish the principle of an operation from exercise through the form",
+  "statement_ids": [
+    "144b0405-9800-5032-bf9c-5f26a2d4d2d1"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "ST I q.76 a.1 supports the human soul as the principle of vital operations. That explanatory direction cannot establish an actual operation for every natural and intelligible form in the worklist signature. See docs/intellectual-appetite-source.md#intellectual-appetite-willing-and-self-operation-2026-11-26.",
+  "blocker": "Restrict or calibrate FormIsPrincipleOfOperation to forms and operations that bear this exact relation.",
+  "evidence": [
+    "a4a6c33c-2efd-441a-a94d-f6ef01268636",
+    "PR-2031"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2031"
+    }
+  ]
+}

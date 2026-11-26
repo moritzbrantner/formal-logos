@@ -1,0 +1,26 @@
+{
+  "id": "d7f43fbd-6e20-4978-bc41-c426f2470d5a",
+  "label": "Test whether possessing will supplies the relevant rational power",
+  "statement_ids": [
+    "71fc097b-4039-4812-a498-2ad70fe08b98"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "The #2019 one-power branch uses WillIsRationalPower as an independent classification. Intrinsic self-good orientation does not determine PowerOf or Rational for the agency profile. A soul's nonempty response profile uses different relations. See docs/intellectual-appetite-source.md#intellectual-appetite-willing-and-self-operation-2026-11-26.",
+  "blocker": "Show that the intrinsic orientation and the productive exercise express one and the same owned power on this giver, or qualify the route.",
+  "evidence": [
+    "a4a6c33c-2efd-441a-a94d-f6ef01268636",
+    "PR-2031"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2031"
+    }
+  ]
+}

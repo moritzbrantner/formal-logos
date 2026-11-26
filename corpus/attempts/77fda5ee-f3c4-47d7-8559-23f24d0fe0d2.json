@@ -1,0 +1,26 @@
+{
+  "id": "77fda5ee-f3c4-47d7-8559-23f24d0fe0d2",
+  "label": "Trace universal direction to the existing effect-wise result",
+  "statement_ids": [
+    "de6a0f86-dfc5-4941-be2c-dfe3ad81a9a8"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "The existing directionOfPracticalSpecification specializes the broader effect-wise result to universal intellectual causes. The proof still requires operative-plan coverage, omission rejection and end-recognition. This is reuse of one derivation. See docs/intellectual-appetite-source.md#intellectual-appetite-willing-and-self-operation-2026-11-26.",
+  "blocker": "Resolve the practical specification commitments and supply the same-giver rational giving independently of intrinsic will and self-operation.",
+  "evidence": [
+    "a4a6c33c-2efd-441a-a94d-f6ef01268636",
+    "PR-2031"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2031"
+    }
+  ]
+}

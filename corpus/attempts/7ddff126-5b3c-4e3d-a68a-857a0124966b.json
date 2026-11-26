@@ -1,0 +1,26 @@
+{
+  "id": "7ddff126-5b3c-4e3d-a68a-857a0124966b",
+  "label": "Separate recognition of intellectual appetite from its exercise",
+  "statement_ids": [
+    "f586a11b-dbda-53d1-9c21-8d75da74056f"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "The existing recognition consumes AppetitivePowerOf and FollowsIntellect and concludes the primitive HasWill. It supplies no episode or agency-frame rational exercise. The new appraised-form recognizer uses the case possession predicate directly. See docs/intellectual-appetite-source.md#intellectual-appetite-willing-and-self-operation-2026-11-26.",
+  "blocker": "Calibrate the direction of the inclination to the same good as apprehended and settle the legacy sense bindings before reusing them in a new argument.",
+  "evidence": [
+    "a4a6c33c-2efd-441a-a94d-f6ef01268636",
+    "PR-2031"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2031"
+    }
+  ]
+}

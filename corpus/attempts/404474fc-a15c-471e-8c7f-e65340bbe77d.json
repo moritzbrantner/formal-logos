@@ -1,0 +1,26 @@
+{
+  "id": "404474fc-a15c-471e-8c7f-e65340bbe77d",
+  "label": "Restrict actual understanding to the intellectual GOD_4 bearer",
+  "statement_ids": [
+    "64e174b3-3efb-510e-81cc-34bc054a9898"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "The root will proof avoids a premise turning every intellect into a current act. Its witness is local to intellectual GOD_4 and includes an actualizing intelligible form and evaluative presentation. See docs/intellectual-appetite-source.md#intellectual-appetite-willing-and-self-operation-2026-11-26.",
+  "blocker": "Supply actual self-understanding on the same GOD_4 bearer and show how it presents its own good under its own form.",
+  "evidence": [
+    "a4a6c33c-2efd-441a-a94d-f6ef01268636",
+    "PR-2031"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2031"
+    }
+  ]
+}

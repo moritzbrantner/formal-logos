@@ -1,0 +1,26 @@
+{
+  "id": "c5d918db-ff83-456e-b637-ae0607930d13",
+  "label": "Distinguish an operation's intrinsic end from a supplied terminus",
+  "statement_ids": [
+    "12bdfec3-81f6-59e6-91df-88b323ff860e"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "The ST I\u2013II q.1 a.2 support concerns agency for an end, potentially supplied by another. A trajectory ending at a drain does not by itself identify an intrinsic end of the thing's own form. The new capacity derivation takes local inclination directly. See docs/intellectual-appetite-source.md#intellectual-appetite-willing-and-self-operation-2026-11-26.",
+  "blocker": "Calibrate the relevant OperatesThrough witnesses as intrinsic operations with the end in the same respect.",
+  "evidence": [
+    "a4a6c33c-2efd-441a-a94d-f6ef01268636",
+    "PR-2031"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2031"
+    }
+  ]
+}

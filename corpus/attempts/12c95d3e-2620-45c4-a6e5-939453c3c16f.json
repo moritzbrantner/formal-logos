@@ -1,0 +1,32 @@
+{
+  "id": "12c95d3e-2620-45c4-a6e5-939453c3c16f",
+  "label": "Test appraised inclination against the pure contemplator and idle appetite",
+  "statement_ids": [
+    "69bbed47-72f4-4ca0-a925-05f7969cfa03",
+    "6f3f1c14-9d10-4bfa-bdc0-6dfae1d0554a",
+    "66aecdd7-ea4e-55c6-9377-10db08893854",
+    "090be689-b77f-51a1-9d5d-caf339169e4b",
+    "d4b35781-27f4-5c21-b03e-df696df7e19f",
+    "b7b10ad2-fafe-552e-8bf4-205d49f2f070",
+    "763e8f08-55ca-5e87-99dd-7423d6534073"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "Lean derives GodHasWill from the four registered premises and supplies an omission control for each. Pure act plus possession and appraisal leaves exercise open unless the selected intrinsic respect is calibrated. Finite control assignments test entailment. See docs/intellectual-appetite-source.md#intellectual-appetite-willing-and-self-operation-2026-11-26.",
+  "blocker": "Discriminate mere value-appraisal from intrinsic affirmation. At a possessed good show that the capacity and act satisfy the adopted POTENCY_1 respect match. Independent semantic challenge is pending.",
+  "evidence": [
+    "a4a6c33c-2efd-441a-a94d-f6ef01268636",
+    "PR-2031"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2031"
+    }
+  ]
+}
