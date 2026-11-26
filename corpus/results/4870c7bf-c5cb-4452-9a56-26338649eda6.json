@@ -1,0 +1,11 @@
+{
+  "id": "4870c7bf-c5cb-4452-9a56-26338649eda6",
+  "label": "A beneficiary requirement in every governing plan suffices for one witness",
+  "argument_id": "11809585-439b-40ad-bef0-94d57c98e8e1",
+  "challenge_module": "TruthCore.Results.Causality.BenefitPlanWitness.Challenge",
+  "solution_module": "TruthCore.Results.Causality.BenefitPlanWitness.Solution",
+  "theorem": "TruthCore.Results.Causality.BenefitPlanWitness.someFromEvery",
+  "comparator_config": "results/4870c7bf-c5cb-4452-9a56-26338649eda6/comparator.json",
+  "status": "solution-present",
+  "description": "For the same actual distinct recipient, obtain a governing plan from the antecedent. Since the universal rejection test applies to it, this plan witnesses the existential test."
+}

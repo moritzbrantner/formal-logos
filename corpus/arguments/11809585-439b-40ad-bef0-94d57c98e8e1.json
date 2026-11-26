@@ -1,0 +1,18 @@
+{
+  "id": "11809585-439b-40ad-bef0-94d57c98e8e1",
+  "label": "A beneficiary requirement in every governing plan suffices for one witness",
+  "premise_statement_ids": [
+    "df6c64a6-02dc-414a-be8e-dccd035b8872"
+  ],
+  "conclusion_statement_id": "1733629b-f6d4-4804-9a9b-1af74e2747c0",
+  "inference_ids": [
+    "6d1a6368-4b96-4cb5-a213-c719e55f5722"
+  ],
+  "meaning": "For the same actual distinct recipient, obtain a governing plan from the antecedent. Since the universal rejection test applies to it, this plan witnesses the existential test.",
+  "definition_ids": [
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "88f9f6e8-997b-5f7d-afa1-c501954c3807",
+    "a84afabf-d6e6-424d-a792-2fa874c466a5",
+    "fbd163ad-ec01-45d1-a749-f90a1de6ea37"
+  ]
+}

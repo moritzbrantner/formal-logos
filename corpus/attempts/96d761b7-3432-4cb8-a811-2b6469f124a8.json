@@ -1,0 +1,22 @@
+{
+  "id": "96d761b7-3432-4cb8-a811-2b6469f124a8",
+  "label": "Assess beneficiary and end requirements at the same giving",
+  "statement_ids": [
+    "df6c64a6-02dc-414a-be8e-dccd035b8872",
+    "1733629b-f6d4-4804-9a9b-1af74e2747c0",
+    "437438f0-183c-48e5-8d84-f82b94fabf3e",
+    "b1d7825e-a1ae-4f86-af2e-1b9819055e0f",
+    "f8cd0849-e401-4c45-8820-2cd9fc08b8e7",
+    "eb6611a5-f8a7-44f6-9bf1-2f65eb80b3cb"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "I q.5 a.1 gives a basis for calling esse the recipient's good in the relevant respect. I q.20 a.2 supports recipient willing; the reverse step needs the same giving to implement that willingness in a governing standard. The finite controls show that goodness and even recipient willing at that effect, with operative instrumentality and correct appraisal of a benefit standard, can lack an operative benefit witness. For end omission, I q.22 a.1 supplies a conception of order to a willed end; extending it to each effect needs a practical-role rather than only causal-coverage application. The two recognitions have conceptual warrant from the same giver's adopted recipient credit and end placement, respectively. A separate normative application from governance to standing is still needed for LORD_1.",
+  "blocker": "Establish whether this giving would be a fulfillment by producing a functioning part of the order regardless of whether its esse counts for the bearer. Show that any required end and benefit clauses instantiate the intended case relations at this same giver and recipient. A claim to normatively authoritative government needs grounds beyond these clauses.",
+  "evidence": [
+    "78b94fbf-e025-4084-a529-2102fd8b98a8",
+    "d55b6783-8e14-47de-93ba-0beddbf41f2c",
+    "785a4e63-9c0f-4d9c-8745-b4cebc2c5cde"
+  ]
+}
