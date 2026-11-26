@@ -9,6 +9,9 @@
 //! recorded contact between statements:
 //!
 //! - an argument joins each premise and commitment to its conclusion;
+//! - an inference step of an argument joins its inputs, assumptions and
+//!   discharged statements to its output, and its output to the argument's
+//!   conclusion (these also count for reaching the root);
 //! - a relation of any predicate (including `tests`) joins its endpoints, an
 //!   endpoint standing for statements: a statement for itself, a claim for
 //!   its statement, an argument for its conclusion and premises, a result
@@ -73,6 +76,20 @@ impl<'a> Graph<'a> {
         }
     }
 
+    /// Join `premise` to `conclusion` and record that it reaches it.
+    fn reach(&mut self, premise: &'a str, conclusion: &'a str) {
+        self.link(premise, conclusion);
+        if premise != conclusion
+            && self.statements.contains(premise)
+            && self.statements.contains(conclusion)
+        {
+            self.premises_of
+                .entry(conclusion)
+                .or_default()
+                .insert(premise);
+        }
+    }
+
     fn build(corpus: &'a Corpus) -> Self {
         let statements: BTreeSet<&str> = corpus
             .records_by_id("statements")
@@ -106,6 +123,27 @@ impl<'a> Graph<'a> {
                 text(argument, "id"),
                 std::iter::once(conclusion).chain(premises).collect(),
             );
+        }
+        // Inference steps of registered arguments: each input, assumption and
+        // discharged statement joins (and reaches) the step's output, and the
+        // output joins (and reaches) the argument's conclusion. Intermediate
+        // statements are part of the argument graph.
+        for argument in &arguments {
+            let conclusion = text(argument, "conclusion_statement_id");
+            for id in list(argument, "inference_ids") {
+                let Some(step) = corpus.get("inferences", id).map(|record| &record.fields) else {
+                    continue;
+                };
+                let output = text(step, "output_statement_id");
+                graph.reach(output, conclusion);
+                for input in list(step, "input_statement_ids")
+                    .into_iter()
+                    .chain(list(step, "assumption_statement_ids"))
+                    .chain(list(step, "discharged_statement_ids"))
+                {
+                    graph.reach(input, output);
+                }
+            }
         }
         let claim_statement: HashMap<&str, &str> = corpus
             .records("claims")
