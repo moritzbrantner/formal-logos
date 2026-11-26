@@ -119,3 +119,42 @@ fn shared_transcription_closure_fixture_in_either_order() {
         );
     }
 }
+
+/// A `tests` relation (a control, model or countermodel naming what it
+/// tests) carries no warrant: adding such relations to the shared fixture
+/// leaves `truth --json frontier` unchanged apart from the input fingerprint.
+#[test]
+fn tests_relations_leave_frontier_json_unchanged() {
+    let fixture = fixture();
+    let mut input = Map::new();
+    for key in ["statements", "arguments", "results", "relations", "claims"] {
+        input.insert(key.into(), fixture[key].clone());
+    }
+    let mut plain = frontier(&Value::Object(input.clone()));
+    let relations = input["relations"].as_array().cloned().unwrap_or_default();
+    let tests = [
+        ("argument", "ARG-REF", "statement", "OPEN"),
+        ("argument", "ARG-PROVED", "statement", "TOP"),
+        ("argument", "ARG-T1", "argument", "ARG-T2"),
+        ("argument", "ARG-REF2", "statement", "DEF2"),
+    ]
+    .into_iter()
+    .enumerate()
+    .map(|(index, (subject_kind, subject, object_kind, object))| {
+        json!({"id": format!("REL-TESTS-{index}"), "subject_kind": subject_kind,
+               "subject_id": subject, "predicate": "tests", "object_kind": object_kind,
+               "object_id": object, "note": "a control of this node"})
+    });
+    input.insert(
+        "relations".into(),
+        Value::Array(relations.into_iter().chain(tests).collect()),
+    );
+    let mut tested = frontier(&Value::Object(input));
+    for report in [&mut plain, &mut tested] {
+        report
+            .as_object_mut()
+            .expect("report")
+            .remove("input_identity");
+    }
+    assert_eq!(tested, plain);
+}

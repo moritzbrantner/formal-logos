@@ -221,6 +221,18 @@ jobs:
       - name: Report the orphan-count delta
         if: always() && github.event_name == 'pull_request'
         run: target/release/truth orphans --base HEAD^1 | tee -a "$GITHUB_STEP_SUMMARY"
+      # Cohesive-graph diagnostic (owner direction, 2026-11-26): statements with no
+      # recorded contact with the root. Counts are not a score; this step never fails.
+      - name: Report graph connectivity (diagnostic)
+        if: always()
+        continue-on-error: true
+        run: |
+          {
+            echo "### Graph connectivity (\`truth connectivity\`, diagnostic)"
+            echo '```text'
+            target/release/truth connectivity --list-isolated 20 || true
+            echo '```'
+          } | tee -a "$GITHUB_STEP_SUMMARY"
       # Attribution self-check (#989, owner decision 2026-11-05): on a PR, every new or
       # changed stating claim (or claim whose statement text or passage changed) must
       # record "The passage states X, which is the premise." CI checks the record

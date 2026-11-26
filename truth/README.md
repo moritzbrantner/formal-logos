@@ -18,6 +18,7 @@ target/debug/truth context ARGUMENT-ID --json
 target/debug/truth tree STMT-GOD-EXISTS --down 2 --up 2
 target/debug/truth orphans
 target/debug/truth orphans --senses --json
+target/debug/truth connectivity --list-isolated 20
 target/debug/truth issues --from issues.json --for STMT-GOD-EXISTS
 target/debug/truth brief STMT-GOD-EXISTS --issues-from snapshot.json
 target/debug/truth brief --question 'ultimate explanation, brute fact or infinite regress'
@@ -1213,6 +1214,44 @@ in `-SENSES-EXHAUSTIVE` (coverage) or `-SENSE-UNIQUE`/`-SENSES-EXCLUSIVE`
 and takes that coverage premise. Entries are ordered by the number of
 root-path links and name the missing parts. Neither report closes anything or
 writes records.
+
+## `connectivity`
+
+`truth connectivity [--frontier-root STATEMENT-ID] [--list-isolated N]` is a
+**diagnostic** for the cohesive-graph goal (owner direction, 2026-11-26): it
+shows which statements share no recorded contact with the frontier root
+(default `STMT-CATHOLICISM-TRUE`), so that work connecting them can be found.
+Its counts describe the graph's shape. They are not a progress score, a
+measure of philosophical merit, or a quantity to optimize, and contact is not
+warrant: the command closes, supports and attacks nothing.
+
+It reports, over all statements:
+
+- **reach root via argument chains**: statements from which the root is
+  reached by following premises and commitments up to conclusions, through
+  any recorded argument whatever its verification status (unlike the
+  route-aware `frontier --reaching-root`);
+- **root component**: the undirected connected component of the root, whose
+  edges are each argument (premises and commitments to the conclusion), each
+  relation of any predicate, `tests` included (a statement endpoint stands for
+  itself, a claim for its statement, an argument for its conclusion and
+  premises, a result for its argument's; `background_statement_ids` join the
+  object), and each attempt (the statements it names);
+- **other components**: the statements with some edge outside the root
+  component, the number of their components and their sizes (largest first);
+- **isolated**: statements with no edge at all.
+
+The statements outside the root component are classified, isolated and
+island statements separately, by the first match of: the conclusion of a
+premise-free argument (a control, model or consistency check: record what it
+tests with a `tests` relation, `docs/corpus-model.md`); a source reading (a
+claim states it); the conclusion of an argument whose premises are off the
+root component; named only by an attempt; unused. `--list-isolated N` lists N
+isolated statements with their class (premise-free results first, then by
+label). `--json` gives every non-root component's statement IDs. The method
+matches the measurement script of the 2026-11-26 baseline, extended only by
+the `result` endpoint of `tests` relations. CI prints the text report to a
+PR's job summary without failing on it.
 
 ## `bridges`
 
