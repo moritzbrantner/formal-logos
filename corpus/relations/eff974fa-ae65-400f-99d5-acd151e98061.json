@@ -6,5 +6,5 @@
   "predicate": "tests",
   "object_kind": "statement",
   "object_id": "438caf34-80d5-51bf-806a-d5e7c127e088",
-  "note": "Tests joint satisfiability of the bare, enriched and scoped-brute bundles in the finite regularity interpretations used for the diagnostic comparisons."
+  "note": "Checks separate finite realizations of the bare observational, intervention-enriched, and scoped-brute bundles used in the diagnostic comparisons."
 }
