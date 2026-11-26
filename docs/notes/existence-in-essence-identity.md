@@ -370,9 +370,69 @@ bridge, so it is not an unflagged equivocation.
 
 **Boundary.** The step uses propositional extensionality inside the nature,
 because `Essential` takes world-propositions, as in `ModalGrounding`. Fine's
-essence is hyperintensional (navigation only). On that reading E-link alone
-does not license substitution inside `□ₓ`, and `ca973127` needs a further
-substitution premise. Recorded as open.
+essence is hyperintensional (navigation only). For a content-sensitive
+application of `ca973127`, the extra step is preservation of the nature
+judgment for the selected replacement.
+
+### Act and fact at one fixed bearer
+
+The [fixed-bearer control](../../corpus/results/cdda0f09-97ae-4d1e-9323-a638a3795ad0.json)
+applies the extension criterion used in #2087 to two contents of the same
+bearer. The existing `conditionalIdentity` model supplies bearer `true`,
+its principle maps and its worlds. Three contents concern this bearer: its
+act is exercised, it exists, and if it exists its act is exercised. The first
+two are true at the same points. At point `false` the bearer is absent,
+both unconditional contents are false, and the conditional is true.
+
+| Nature judgment at that bearer | Conditional exercise | Unconditional exercise | Existence fact |
+| --- | --- | --- | --- |
+| Pullback of the existing `conditionalExercise` judgment | Accepted | Excluded | Excluded |
+| Same conditional entry with unconditional exercise added as a distinct content | Accepted | Accepted | Excluded |
+
+The first judgment admits an extension criterion by construction.
+Substitution preserves the verdict because it excludes both unconditional
+contents. The second judgment distinguishes the coextensive pair, so an
+extension criterion cannot reproduce it. Projecting its accepted contents
+to world predicates yields a judgment satisfying the extensional
+`565ccd6c` by `exerciseInNatureGivesEssentialExistence`. The exercise
+entry supplies the shared extension. The original judgment still rejects
+the existence content. The projection loses EC and the model's
+essence-grounds-necessity clause. Its new entry is false at the accessible
+point `false`, where the bearer is absent. The changed judgment tests the
+substitution at this formal scope.
+
+**Provisional assessment.** E-link retains its warrant discussed above and
+fixes where the two contents hold. At `823d4312`, unconditional exercise
+still needs existential import from this bearer's nature. The conditional
+model shows why the conditional exercise falls short. At `565ccd6c`, the
+extensional derivation and its converse identify a single open warrant
+question given E-link. Using that equivalence to defend AN by invoking the
+unconditional bridge would spend the very warrant under investigation.
+For a content-sensitive reading, even warranted unconditional exercise
+needs preservation under this replacement. Global classification by world
+extension suffices and is stronger than the local transfer from exercise to
+existence. The first row shows why classification supplies no positive
+membership of its own. The argument from nonreceived actuality using the
+power/potency account remains the shared support discussed in §§6–8. The
+conditional account and the direct unconditional assumption remain live.
+No new substantive objection to either is identified here.
+
+**Revision conditions.** To support the content-sensitive transfer,
+justify a criterion for this very nature under which the obtaining exercise
+of its act and its existence fact are interchangeable independently of
+whether either is essential. Coextension concerns where the contents hold,
+while equality of represented principles concerns their bearer's esse and
+essence. To support AN, show that the nature of the same bearer requires
+the exercise to obtain unconditionally, with a reason that also addresses
+the conditional account. A finding at one bearer needs application to the
+selected foundational witness or generalization to serve the universal
+route. The judgment on content tags is a model-local predicate.
+`EXISTENCE_IN_ESSENCE_2` is the projected unconditional essential truth,
+`_3` is represented principle identity, `_4` names the separate corpus
+sense of existence-fact membership, and `_5` is entailment by an essential
+truth.
+
+See the [attempt record](../../corpus/attempts/0e07791e-d108-4b34-8a97-e91daef4a3f3.json).
 
 ## 5. Arguments for "existence never belongs to an essence", at the identity
 
@@ -643,9 +703,10 @@ No condition is added to any source.
      standards (toward AN, (a));
    - whether a hyperintensional essence theory gives EC a principled reason
      at act-essences (toward EC, (c)).
-2. **The hyperintensional boundary** of `ca973127` and law 15 (§4): a
-   substitution premise for E-link inside `Essential`, with a model in which
-   it fails.
+2. **The hyperintensional boundary** of `ca973127` and law 15 (§4): the
+   fixed-bearer control separates pointwise agreement from preservation.
+   Seek an independent reason for preservation in the selected bearer's
+   nature and a separate warrant for unconditional exercise.
 3. **The act-of-being dispute** (Kenny versus Gilson/Klima, navigation only).
    It bears on (c)'s intelligibility, and so on the identity clause of
    `FoundationalAt`, `565ccd6c` and the q.3 a.4 route at once.

@@ -1,0 +1,17 @@
+{
+  "id": "0e07791e-d108-4b34-8a97-e91daef4a3f3",
+  "label": "Same-bearer act and fact substitution in the conditional exercise model",
+  "date": "2026-11-26",
+  "statement_ids": [
+    "823d4312-2405-43db-90ea-3d9b303ac07a",
+    "3a2af70f-aa63-4966-85b7-97d5d12b865a",
+    "565ccd6c-0036-4613-8595-f6f03d273a0d"
+  ],
+  "kind": "countermodel",
+  "outcome": "succeeded",
+  "summary": "The fixed-bearer control in docs/notes/existence-in-essence-identity.md#act-and-fact-at-one-fixed-bearer uses the existing conditionalIdentity frame and the bearer true. The conditional nature is invariant on the coextensive exercise and existence pair because it rejects both. Adding unconditional exercise as distinct content preserves the frame and conditional entry, makes the nature judgment differ across the pair, and breaks extension-based classification. Applying the existing bridge theorem to the projection of that changed judgment reports essential existence on world predicates, while the existence content is excluded by the source judgment. The projected judgment fails EC and essence grounds necessity at the accessible absence point. This bounds the formal inference and leaves the metaphysical standing of the conditional account open. Given the act-fact link the prior extensional equivalence gives no independent warrant for AN or 565ccd6c. No new source attribution.",
+  "blocker": "Independently warrant preservation by the actual nature judgment for this exercise and existence pair, and warrant unconditional exercise at the selected bearer. A criterion on extensions suffices for preservation but supplies no positive membership. Extensional agreement by itself licenses neither step.",
+  "evidence": [
+    "cdda0f09-97ae-4d1e-9323-a638a3795ad0"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "d757805c-0a42-4265-8ead-f170463895a7",
+  "label": "Act and fact substitution at one bearer: extension criterion and conditional model",
+  "paraphrase": "For one supplied nature judgment on the three fixed-bearer contents, a criterion on their world extensions licenses substitution of coextensive exercise and existence. In the existing conditional-exercise model with bearer true, the two unconditional contents are coextensive and differ in extension from the conditional. The lifted nature takes the conditional alone and admits an extension criterion. A changed judgment accepts the conditional and unconditional exercise while rejecting the existence fact, so it admits no extension criterion. Its projection to world predicates nevertheless satisfies the extensional identity-to-essential-existence bridge. This is a structural test of the projection, with no metaphysical admissibility claim.",
+  "lean_declaration": "TruthCore.Ontology.EssenceActFactInvariance.FixedBearerControls",
+  "definition_ids": [
+    "25d4df96-f18b-4477-a7ce-11fa8c17cd83",
+    "b2e22524-357f-47b5-814f-0a0e59f0d612",
+    "7cf63236-9c12-41bc-bf20-6fbce7a121db",
+    "1fda7b2c-4411-4ffd-8fa2-78e30b6aedef",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ],
+  "disambiguation_ids": [
+    "1aef8986-ed29-564f-9803-d812d2ff63e1",
+    "f704b7ca-b455-4da7-a757-b0564fe76b3b",
+    "6f1d1395-7c1d-5bd5-a45d-03380857aed6"
+  ]
+}
