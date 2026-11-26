@@ -3,24 +3,26 @@ vocab = "TruthCore.Modal.ModalPowerHolder"
 results = "TruthCore.Results.Modal.ModalPowerHolder"
 
 [[statement]]
-id = "The actual contingent roster admits common subpopulations"
+id = "90b222c4-376f-4dab-8a20-adf639316685"
+label = "The actual CONTINGENCY_1 roster admits common subpopulations"
 lean = "ActualRosterAmalgamates"
 paraphrase = "Open analyst aggregation principle. For every two worlds accessible from w there is a world accessible from w whose present members of the fixed actual contingent concrete roster were present at both of those worlds. Beings outside that roster are unrestricted."
-definitions = ["DEF-KANT-MODAL-CONTINGENCY", "DEF-KANT-ONTOLOGICAL-MODEL"]
+definitions = ["DEF-KANT-MODAL-CONTINGENCY", "DEF-KANT-ONTOLOGICAL-MODEL", "DEF-POPULATION-CLOSURE"]
 disambiguations = ["DISAMB-KANT-CONTINGENCY", "DISAMB-CONCRETE-ABSTRACT-CRITERIA"]
 
 [[statement]]
 id = "The concrete roster of CONTINGENCY_1 at w is finite"
 lean = "ActualRosterFinite"
 paraphrase = "Open analyst roster principle. One finite list enumerates all concrete beings contingent at w. The candidate domain and other worlds' populations may be infinite."
-definitions = ["DEF-KANT-MODAL-CONTINGENCY", "DEF-KANT-ONTOLOGICAL-MODEL"]
+definitions = ["DEF-KANT-MODAL-CONTINGENCY", "DEF-KANT-ONTOLOGICAL-MODEL", "DEF-INHABITED-CONCRETE-WORLD"]
 disambiguations = ["DISAMB-KANT-CONTINGENCY", "DISAMB-CONCRETE-ABSTRACT-CRITERIA"]
 
 [[statement]]
-id = "No newcomer is contingent where the actual contingent concrete roster is absent"
+id = "9574ad92-9949-40ee-baf3-e8aec590dc7d"
+label = "No newcomer is CONTINGENCY_1 where the actual CONTINGENCY_1 concrete roster is absent"
 lean = "ActualRosterCoversAtAbsence"
 paraphrase = "Open analyst roster principle. At every accessible world lacking the whole actual contingent concrete roster, every concrete being contingent at that world exists at w. This excludes contingent replacements at those worlds and does not itself transport any witness of nonexistence to w."
-definitions = ["DEF-KANT-MODAL-CONTINGENCY", "DEF-KANT-ONTOLOGICAL-MODEL"]
+definitions = ["DEF-KANT-MODAL-CONTINGENCY", "DEF-KANT-ONTOLOGICAL-MODEL", "DEF-INHABITED-CONCRETE-WORLD"]
 disambiguations = ["DISAMB-KANT-CONTINGENCY", "DISAMB-CONCRETE-ABSTRACT-CRITERIA"]
 
 [[statement]]
@@ -34,13 +36,13 @@ disambiguations = ["DISAMB-KANT-CONTINGENCY", "DISAMB-CONCRETE-ABSTRACT-CRITERIA
 id = "Finite equivalence-frame controls for joint absence and replacement contingents"
 lean = "Model.Controls"
 paraphrase = "Two finite control frames, both reflexive and Euclidean. In the first, the actual roster is finite and the positive conjunction that all its members exist is true at the reading world and fails at a successor. Common-subpopulation closure and joint absence both fail. In the second, joint absence holds while the roster coverage condition and global contingent absence fail."
-definitions = ["DEF-KANT-MODAL-CONTINGENCY", "DEF-KANT-ONTOLOGICAL-MODEL"]
+definitions = ["DEF-KANT-MODAL-CONTINGENCY", "DEF-KANT-ONTOLOGICAL-MODEL", "DEF-POPULATION-CLOSURE"]
 disambiguations = ["DISAMB-KANT-CONTINGENCY"]
 
 [[argument]]
 id = "Joint absence by amalgamating a finite actual contingent roster"
 theorem = "jointAbsenceOfFiniteRoster"
-premises = ["390ac3ab-48ec-596e-9890-4d2364e81cf9", "The actual contingent roster admits common subpopulations", "The concrete roster of CONTINGENCY_1 at w is finite"]
+premises = ["390ac3ab-48ec-596e-9890-4d2364e81cf9", "90b222c4-376f-4dab-8a20-adf639316685", "The concrete roster of CONTINGENCY_1 at w is finite"]
 conclusion = "18e5bd4e-8178-468e-b867-fbaf9c5988ad"
 rule = "Apply finite omission to the fixed subtype of actual contingent concreta"
 meaning = "Every listed actual contingent concretum has an accessible absence witness by its membership condition. Starting with an accessible successor, finite omission combines the witnesses using containment in both roster populations. The resulting world lacks every member by the roster's finite enumeration."
@@ -48,7 +50,7 @@ meaning = "Every listed actual contingent concretum has an accessible absence wi
 [[argument]]
 id = "Global contingent absence by roster coverage and local transitivity"
 theorem = "globalAbsenceOfRosterCoverage"
-premises = ["d65fb12b-7a85-479a-8c40-4b10f8b3c7c8", "18e5bd4e-8178-468e-b867-fbaf9c5988ad", "No newcomer is contingent where the actual contingent concrete roster is absent"]
+premises = ["d65fb12b-7a85-479a-8c40-4b10f8b3c7c8", "18e5bd4e-8178-468e-b867-fbaf9c5988ad", "9574ad92-9949-40ee-baf3-e8aec590dc7d"]
 conclusion = "0dc833c1-3b2f-4769-a09e-531f0da12455"
 rule = "Lift a putative replacement's absence witness and contradict joint absence at the same world"
 meaning = "Take the accessible world where the actual contingent concrete roster is absent. If a concrete being were contingent there, coverage would put it at w and local transitivity would make its absence witness accessible from w. It would therefore be contingent at w and excluded from that very world."

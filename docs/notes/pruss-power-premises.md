@@ -561,15 +561,29 @@ route of #2022), and the varying-giver route to `b90ee2de`.
   on outside beings. Finite omission composes the rule finitely. The existing
   #533 infinite-tail control has an amalgamating population and witnesses for
   every finite omission, while an inhabitant survives at every world. An
-  infinite case would need a separately warranted limit or compactness step.
-  Granting each absence independently has prima facie force for ordinary
+  infinite actual roster does not by itself require a limit or compactness
+  principle: if some accessible world has only finitely many present roster
+  members, applying finite omission to those members and amalgamating the
+  result with the chosen world leaves an empty common subpopulation, even when
+  infinitely many roster members exist at the reading world. A limit or
+  compactness principle is needed only when no such world is available.
+  `ActualRosterFinite` remains an explicit sufficient premise of the
+  registered theorem. Conversely, a joint-absence world itself witnesses the
+  pair rule for every pair, since its projected population is empty; on the
+  finite-roster and successor assumptions, amalgamation and joint absence are
+  therefore equivalent. The forward proof is a genuine finite induction, but
+  the pair rule's warrant cannot exceed that of joint absence. What could
+  independently motivate it is an account of the roster's existence
+  conditions on which the absence conditions of distinct contingents never
+  exclude one another. Granting each absence independently has prima facie force for ordinary
   destructible objects. Extending a compatibility rule from these cases to
   all concrete contingents requires information about how their existence
   conditions interact.
 - **Big conjunctive fact.** A Leibnizian candidate with truth condition
   “every member of (A_w) exists” is false whenever a member is missing. Its
-  contingency is therefore compatible with a permanent occupant of every
-  world, as the first model shows. A fact with truth condition “some member
+  contingency is therefore compatible with at least one actual-roster member
+  being present at each world, with the member varying by world, as the first
+  model shows. A fact with truth condition “some member
   of (A_w) exists” has the required scope: its possible falsity is exactly
   the joint-absence claim in the classical reading. A total fact that records
   all positives and negatives can also change by variation of one conjunct.
@@ -685,8 +699,9 @@ exercise even with alternative productive or sustaining sources admitted.
 That is the point where a positive sustainment account and an onset-only
 account differ. For the collective premise, reopen a stronger assessment
 when there is a warranted admissibility rule combining absence conditions
-for the actual roster, including a limit principle if the roster is
-infinite. Formal results supply conditional support options. They establish
+for the actual roster, including, if the roster is infinite, either a limit
+principle or an accessible world with finitely many present roster members.
+Formal results supply conditional support options. They establish
 no framework premise.
 
 Research records for this checkpoint cover
