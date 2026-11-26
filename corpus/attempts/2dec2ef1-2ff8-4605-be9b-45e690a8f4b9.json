@@ -6,15 +6,39 @@
     "1dd2b809-a1d3-43ca-8dfc-b7c1c4fbfd58",
     "144a61c5-0abd-4759-bdcd-8ad59ed8be72",
     "8bfeb070-436d-4503-8282-4b7df72a4d93",
-    "bc2ee163-0ca6-48b2-84b2-0da27326cfcb"
+    "bc2ee163-0ca6-48b2-84b2-0da27326cfcb",
+    "2bc46588-ef09-442b-a933-aefc5e0bb064",
+    "b4f5403f-aaf8-4b9e-97fc-b32f7abac9ee",
+    "5e002319-3828-4de8-96bc-98ebf34072d7",
+    "018456e8-cd2e-46e1-9c13-fa06e6f4dde9",
+    "d4b138f2-d5c9-4b35-bc5a-dbf3aa7617e8"
   ],
   "date": "2026-11-22",
   "kind": "derivation",
   "outcome": "blocked",
-  "summary": "Reused spatial identity and translation, boost simultaneity, temporal history, three spatiotemporal senses, necessary-underived existence and same-witness vocabulary. Froze Challenge, wrote conditional pointwise and existential Solution, and a populated Bool countermodel with an actual root-to-whole existential-grounding edge that defeats the proposed nonlocation conclusion without the whole-to-occupant bridge. No symmetry-to-identity, cone-to-causation, history-to-eternity, or physical-to-existential-grounding inference is assumed; grounding throughout is only the selected Profile.grounds relation, not DEF-ESSE or a cause of esse. Semantic-challenge repair: added a checked joint model of all four premises with a located occupant distinct from the whole (jointModel) and a checked control that the unrestricted whole-priority bridge contradicts the other three premises (unrestrictedInconsistent), so the located restriction carries the positive work; nonlocation is stated as relative to the one supplied, non-world-indexed frame F; and selectedUnlocated is named as the pointwise entry point for a GOD_4 consumer. Philosophical ontological rivals and precise remaining warrant/consumer are explained in docs/notes/spatial-translation-and-reason.md. Independent semantic challenge on PR #1857 accepted the consequence; its P1/P2 wording and coverage findings are repaired. Final formal validation remains with CI.",
+  "summary": "Reused spatial identity and translation, boost simultaneity, temporal history, three spatiotemporal senses, necessary-underived existence and same-witness vocabulary. Froze Challenge, wrote conditional pointwise and existential Solution, and a populated Bool countermodel with an actual root-to-whole existential-grounding edge that defeats the proposed nonlocation conclusion without the whole-to-occupant bridge. No symmetry-to-identity, cone-to-causation, history-to-eternity, or physical-to-existential-grounding inference is assumed; grounding throughout is only the selected Profile.grounds relation, not DEF-ESSE or a cause of esse. Semantic-challenge repair: added a checked joint model of all four premises with a located occupant distinct from the whole (jointModel) and a checked control that the unrestricted whole-priority bridge contradicts the other three premises (unrestrictedInconsistent), so the located restriction carries the positive work; nonlocation is stated as relative to the one supplied, non-world-indexed frame F; and selectedUnlocated is named as the pointwise entry point for a GOD_4 consumer. Philosophical ontological rivals and precise remaining warrant/consumer are explained in docs/notes/spatial-translation-and-reason.md. Independent semantic challenge on PR #1857 accepted the consequence; its P1/P2 wording and coverage findings are repaired. The linked #1857 result is on main. The subsequent named-root result and anchored regress fork use the same selected-world existential grounding relation.",
   "evidence": [
     "3750704c-24ea-49d0-b080-e4bb82c8ec93",
-    "PR-1857"
+    "PR-1857",
+    "529bf9f9-72c4-4a8e-be5f-fb3b239c6c66",
+    "1ccd1c7c-4ffc-4671-b88a-a7fd31a5dc27",
+    "b31ec5f0-14b7-493d-a340-f721cfe2e283",
+    "76c39b25-2ab8-4987-b8c5-9e57999fb0c1",
+    "6500533a-333c-4f22-b369-acbfe3ad0662"
   ],
-  "blocker": "The whole's concrete actuality, contingency and especially occupant-to-whole existential grounding are open. A GOD_4 consumer needs only its own bearer UnderivedConcreteAt in the same profile and world, for the same frame F, and can then apply the pointwise selectedUnlocated; the primitive Eternal recognition route is separate. Final CI Lean, binding, Comparator and NanoDa verification of the repaired result is pending."
+  "blocker": "Giving every located actual concretum an existential ground is warranted for the proposed realized patterns only insofar as their occurrence requires an identified carrier. Its application to a basic extended bearer remains open. The named-root argument separately needs an actual contingent concrete spatial whole and its existential grounding of every distinct actual occupant.",
+  "current_assessment": {
+    "date": "2026-11-26",
+    "statement_ids": [
+      "b4f5403f-aaf8-4b9e-97fc-b32f7abac9ee",
+      "2bc46588-ef09-442b-a933-aefc5e0bb064"
+    ],
+    "scope": "Existential grounding of spatial occupants and nonoccupation of the same necessary classical God at the selected world.",
+    "assessment": "The two experiments support realization of particular patterns in an identifiable medium. They leave open whether a basic spatial field itself requires an existential ground. With universal occupant grounding and acyclicity, insisting that every actual concretum occupies space commits one to an injective regress from each selected recipient. One rule can specify all its edges. The actual-root and named-witness proofs preserve a separate conditional argument for divine nonoccupation.",
+    "next_test": "Identify the field independently, then determine whether varying its proposed realizer removes the field itself or changes only its measured geometry. Compare the same recipient under both accounts of existential supply.",
+    "note": "docs/notes/spatial-translation-and-reason.md#can-an-extended-bearer-end-a-grounding-regress",
+    "review": "unreviewed",
+    "publication": "unpublished",
+    "evidence": "Two checked spatial result families. The earlier review of #1857 covers only its original four-premise result."
+  }
 }
