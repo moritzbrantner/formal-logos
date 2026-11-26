@@ -1,0 +1,10 @@
+{
+  "id": "af3faa0c-847f-441a-8134-9d3cb50c6600",
+  "label": "A successor chain with one essence value has infinitely many rootless identity suppliers (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "f5b34578-280d-45af-a761-fe744b7a3c11",
+  "rule": "Use each positive natural as a distinct actual identity ancestor of zero under successor supply",
+  "meaning": "Every natural receives from its successor. Zero has distinct represented essence and esse, while each successor has true for both fields. Strict descent in recipient index along any forward path excludes a return. Each positive index occurs upstream of zero, yet only one essence value occurs among identity bearers. Absence of a supplierless point rules out finite certification and the common first giver. This tests the count of individuals versus assigned values in a model and leaves the number of independent commitments needed for an actual explanation open.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

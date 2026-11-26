@@ -1,0 +1,28 @@
+{
+  "id": "c907468a-8798-42c3-bc08-1ac95c1a92aa",
+  "label": "Compare true supplier termination with an untagged access stop",
+  "premise_statement_ids": [
+    "25a31bba-c01f-43cf-9c53-c8f9ae3ce466"
+  ],
+  "conclusion_statement_id": "e9d0031b-7213-491b-b7cb-dd5eba5f861c",
+  "inference_ids": [
+    "412a384c-1a62-449b-827e-9246495ee986"
+  ],
+  "meaning": "The same roster and recipient zero fix the comparison. In both worlds the observed complete matching lists end just before d. In the sourced world d is read and its list is empty. In the endless world d cannot be read and the actual relation supplies d from d+1. The untagged projection forgets that distinction, although the boundary packet retains it. Correctness of the terminal tag is supplied by the complete-list observation rule.",
+  "term_senses": {
+    "CRITERION_OF_CORRECTNESS": "b77c1c5a-7956-47ac-84d2-b3d748abf918"
+  },
+  "definition_ids": [
+    "3ddbf9f0-f7a6-4992-8c8d-be91b2d22ba5",
+    "425ae4bc-d5f0-4ebc-99b7-2645c947f497",
+    "5b19527d-9418-441e-820c-3c659ba7cb12",
+    "77b06e8c-9266-4801-b3cb-2ce1dd9d13e6",
+    "7aefc429-5425-44d6-8757-ec8bf55f17fb",
+    "9033e872-b92d-4adc-919b-ed9aa1c9e35a",
+    "a6e1ef95-8138-5cfc-8fe2-1202ba3b9a5c",
+    "c15c1634-6d70-4ecb-8b5b-5592df955223"
+  ],
+  "disambiguation_ids": [
+    "ba851630-7eec-5851-8ad2-d8eff7430e41"
+  ]
+}

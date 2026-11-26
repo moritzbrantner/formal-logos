@@ -1,0 +1,11 @@
+{
+  "id": "4546bf9c-5c76-4a4d-921e-fff297421f84",
+  "label": "Compare intrinsic and auxiliary-borrowed feeds by primary and auxiliary interventions",
+  "argument_id": "e989a6cb-d1b6-454e-9e46-ba4198a582a2",
+  "challenge_module": "TruthCore.Results.Causality.RelaySourceRecognition.Challenge",
+  "solution_module": "TruthCore.Results.Causality.RelaySourceRecognition.Solution",
+  "theorem": "TruthCore.Results.Causality.RelaySourceRecognition.primaryCutSourceComparison",
+  "comparator_config": "results/4546bf9c-5c76-4a4d-921e-fff297421f84/comparator.json",
+  "status": "solution-present",
+  "description": "In the borrowed profiles every active auxiliary stage receives from its active successor. Auxiliary stage zero can therefore transmit to the same feed token that is intrinsic in the sourced world. The active feed maintains the same primary segment in each selected profile, fixing equal baseline and single-primary-cut records with opposite intrinsic labels. The borrowed world has no intrinsic source and cannot furnish a finite inductive derivation, even though the same feed actually supplies the recipient. When the primary incoming edge at d is cut, the primary segment reads the feed itself in every compatible profile. Removing the auxiliary entrance now tests the token in isolation under the complete incoming inventory. This identifies intrinsic status only in the specified model with the modeled intervention and full link coverage."
+}

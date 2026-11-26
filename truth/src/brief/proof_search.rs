@@ -4,7 +4,7 @@ use crate::{Corpus, Record, synthesis::result_witness};
 use rusqlite::{Connection, params};
 use serde::Serialize;
 use serde_json::{Value, json};
-use std::{collections::BTreeMap, path::Path};
+use std::{cmp::Reverse, collections::BTreeMap, path::Path};
 
 fn field<'a>(record: &'a Record, key: &str) -> &'a str {
     record
@@ -49,12 +49,31 @@ struct AttemptCitation<'a> {
     path: &'a str,
 }
 
+fn citation_coverage(query: &Query, corpus: &Corpus, result: &Record) -> (usize, usize) {
+    let argument = corpus.get("arguments", field(result, "argument_id"));
+    let conclusion =
+        argument.and_then(|a| corpus.get("statements", field(a, "conclusion_statement_id")));
+    let labels = [
+        field(result, "label"),
+        argument.map_or("", |a| field(a, "label")),
+        conclusion.map_or("", |s| field(s, "label")),
+    ]
+    .join(" ");
+    let aliases = BTreeMap::new();
+    let coverage = |text: &str| query.content_coverage(&query.matched(text, &aliases)).0;
+    (
+        coverage(&labels),
+        coverage(conclusion.map_or("", |s| field(s, "paraphrase"))),
+    )
+}
+
 /// Resolve only canonical result IDs explicitly listed in the displayed
 /// attempts' evidence. These citations belong to the attempt as a whole.
 pub(super) fn cited_results(
     root: &Path,
     corpus: &Corpus,
     attempts: &[Value],
+    query: &Query,
     direct: &mut [Value],
     limit: usize,
 ) -> Vec<Value> {
@@ -79,14 +98,23 @@ pub(super) fn cited_results(
         if matched["kind"] == "current_assessment"
             && let Some(targets) = matched["statement_ids"].as_array()
         {
-            // Keep earlier evidence accessible while giving this assessment's
-            // conclusions first place within the same investigation.
-            evidence.sort_by_cached_key(|result| {
-                !corpus
+            let in_scope = |result: &Record| {
+                corpus
                     .get("arguments", field(result, "argument_id"))
-                    .and_then(|argument| argument.fields.get("conclusion_statement_id"))
-                    .is_some_and(|conclusion| targets.contains(conclusion))
-            });
+                    .and_then(|a| a.fields.get("conclusion_statement_id"))
+                    .is_some_and(|id| targets.contains(id))
+            };
+            evidence.sort_by_cached_key(|result| !in_scope(result));
+            // Lead with the closest scoped citation; keep the remaining
+            // evidence in the investigator's order within each group.
+            if let Some((index, _)) = evidence
+                .iter()
+                .take_while(|result| in_scope(result))
+                .enumerate()
+                .min_by_key(|(_, result)| Reverse(citation_coverage(query, corpus, result)))
+            {
+                evidence[..=index].rotate_right(1);
+            }
         }
         for result in evidence {
             let sources = citations.entry(field(result, "id")).or_default();

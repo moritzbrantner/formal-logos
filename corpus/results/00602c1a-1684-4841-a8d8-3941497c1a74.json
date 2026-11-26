@@ -1,0 +1,11 @@
+{
+  "id": "00602c1a-1684-4841-a8d8-3941497c1a74",
+  "label": "Uniqueness bounds the identity bearers upstream of each actual recipient",
+  "argument_id": "ed49616a-4a52-404e-a0a7-bd28e49bd3ff",
+  "challenge_module": "TruthCore.Results.Aquinas.DeEnte.IdentitySourceCycle.Challenge",
+  "solution_module": "TruthCore.Results.Aquinas.DeEnte.IdentitySourceCycle.Solution",
+  "theorem": "TruthCore.Results.Aquinas.DeEnte.IdentitySourceCycle.finiteIdentityAncestorsOfUniqueness",
+  "comparator_config": "results/00602c1a-1684-4841-a8d8-3941497c1a74/comparator.json",
+  "status": "solution-present",
+  "description": "Apply actual identity-bearer uniqueness to any two members of the same recipient's upstream set. The set may be empty. Other upstream bearers may be infinite in number. Whether the stated identity is instantiated in reality, and whether it singles out at most one bearer, require separate warrant."
+}

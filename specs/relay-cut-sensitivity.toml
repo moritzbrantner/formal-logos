@@ -1,0 +1,33 @@
+[batch]
+vocab = "TruthCore.Causality.RelayCutSensitivity"
+results = "TruthCore.Results.Causality.RelayCutSensitivity"
+
+[[statement]]
+id = "One relay cut preserves bottom activity exactly at or above a maintained feed"
+lean = "SingleCutComparison"
+definitions = ["5231af84-0f05-4623-b1b7-f570059f7bca", "d3a92973-548a-4acf-959d-e94c4d56dbfe", "e1b95906-8d38-59c3-abee-0ccc1c9d333b"]
+paraphrase = "Fix receiver zero and one power on a natural-number successor roster. The all-active intact profile and a family of single-cut responses exist for both the relay-only model and each model with its sole separate active feed at depth d. Cutting the link i+1 into i extinguishes receiver zero in every relay-only response. With a maintained separate active feed at depth d, receiver zero stays active in every admissible response exactly when d ≤ i. Thus d is the least cut position preserving the receiver's activity, including d = 0. For any bound k, depth k+1 reproduces failure at every i ≤ k and preserves activity at the next cut."
+
+[[statement]]
+id = "Random relay cuts detect maintained feeds at a rate determined by the cut law's tail"
+lean = "RandomizedCutComparison"
+definitions = ["5231af84-0f05-4623-b1b7-f570059f7bca", "d3a92973-548a-4acf-959d-e94c4d56dbfe", "c617c480-1590-4143-99bc-9622ec18c716", "77b06e8c-9266-4801-b3cb-2ce1dd9d13e6"]
+paraphrase = "Using the same receiver and power, the survival mass is zero for relay-only cut responses. For any fixed nonnegative probability law on cut positions and any fixed fed depth d, the survival probability is depthLikelihood of the cut law at length d, equal to one minus the mass of cuts below d. It is at most one and positive exactly when some cut i ≥ d has positive mass. In particular full support gives positive sensitivity at every finite depth. For each fixed law, sensitivity eventually falls below every positive bound as d increases. A proper full-support geometric law gives exactly (1/2)^d."
+
+[[argument]]
+id = "Compare single cuts of the same relay with and without a maintained feed"
+theorem = "singleCutComparison"
+premises = ["c98408fd-f39e-4f47-a104-36b4c52ef617"]
+conclusion = "One relay cut preserves bottom activity exactly at or above a maintained feed"
+rule = "Specialize the cut classification to one ray and propagate the maintained feed down the intact links"
+meaning = "For relay-only activity the single-ray cut forces receiver zero off in every solution. At the stipulated feed, its own input guarantees activity even when the incoming successor link there is cut. Downward propagation below the feed gives the exact threshold. Separate response profiles witness consistency under every modeled cut. This compares two local accounts of a specified power. Application to the Second Way accessibility reading requires a bridge from actual per se causation to the modeled links, active feed and intervention conditions. The feed's own source remains open."
+axioms = []
+
+[[argument]]
+id = "Transfer the prefix likelihood calculation to randomized relay cuts"
+theorem = "randomizedCutComparison"
+premises = ["One relay cut preserves bottom activity exactly at or above a maintained feed", "25a31bba-c01f-43cf-9c53-c8f9ae3ce466"]
+conclusion = "Random relay cuts detect maintained feeds at a rate determined by the cut law's tail"
+rule = "Sum matching cut weights using the same index threshold as the supplier-audit likelihood"
+meaning = "A successful cut response at depth d selects exactly the indices i ≥ d, the same summands as a prefix of length d selects in the supplier audit. Here the distribution is the investigator's choice of cut i and the depth d is fixed. The probability is positive exactly when the tail contains a positive weight, and it is at most the total mass one. The reused prefix result gives arbitrarily small tails at large depth and the exact geometric value. Relay-only outcomes contribute zero at every cut index."
+axioms = ["propext", "Classical.choice", "Quot.sound"]

@@ -1,0 +1,12 @@
+{
+  "id": "888066cf-0aa1-4a75-a86c-c47e1652e9c8",
+  "label": "Nested records from one supplier audit update by conditional likelihood",
+  "paraphrase": "Given a matching prefix of positive finite-class likelihood for the same recipient, reobserving the same or a shorter matching prefix has conditional likelihood one. Extending to a longer matching prefix has conditional finite-class likelihood equal to its prior mass divided by the prior mass of the already observed prefix. For positive finite-class weight and both likelihoods positive, dividing the old endless-to-sourced odds by this conditional likelihood gives the new odds, since the deterministic endless world matches both records.",
+  "lean_declaration": "TruthCore.Causality.SupplierAuditLikelihood.PrefixConditioning",
+  "definition_ids": [
+    "5b19527d-9418-441e-820c-3c659ba7cb12",
+    "7aefc429-5425-44d6-8757-ec8bf55f17fb",
+    "77b06e8c-9266-4801-b3cb-2ce1dd9d13e6",
+    "d497dc7a-2c66-4448-b89b-e710dbf4e209"
+  ]
+}

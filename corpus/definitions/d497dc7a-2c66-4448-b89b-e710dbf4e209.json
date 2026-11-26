@@ -1,0 +1,9 @@
+{
+  "id": "d497dc7a-2c66-4448-b89b-e710dbf4e209",
+  "label": "Conditional likelihood of an incoming-list prefix after another prefix",
+  "term": "conditionalDepthLikelihood",
+  "definition": "Divide the finite-class prior mass of sourced worlds that match both the new and the observed prefix records by the prior mass of sourced worlds matching the observed prefix.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.SupplierAuditLikelihood.conditionalDepthLikelihood",
+  "note": "Interpret as a conditional likelihood only with a proper distribution and positive observed mass. Both records refer to the same traced recipient, order, population and supplier lists. Selecting already-known matching prefixes can change the comparison and must be reflected in the conditioning."
+}

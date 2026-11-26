@@ -1,0 +1,11 @@
+{
+  "id": "6cb154aa-b519-45f2-bc36-3e4528ad21d0",
+  "label": "Compare single cuts of the same relay with and without a maintained feed",
+  "argument_id": "2466d1be-8630-4df2-8209-7e207ef9c908",
+  "challenge_module": "TruthCore.Results.Causality.RelayCutSensitivity.Challenge",
+  "solution_module": "TruthCore.Results.Causality.RelayCutSensitivity.Solution",
+  "theorem": "TruthCore.Results.Causality.RelayCutSensitivity.singleCutComparison",
+  "comparator_config": "results/6cb154aa-b519-45f2-bc36-3e4528ad21d0/comparator.json",
+  "status": "solution-present",
+  "description": "For relay-only activity the single-ray cut forces receiver zero off in every solution. At the stipulated feed, its own input guarantees activity even when the incoming successor link there is cut. Downward propagation below the feed gives the exact threshold. Separate response profiles witness consistency under every modeled cut. This compares two local accounts of a specified power. Application to the Second Way accessibility reading requires a bridge from actual per se causation to the modeled links, active feed and intervention conditions. The feed's own source remains open."
+}

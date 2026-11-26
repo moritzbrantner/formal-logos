@@ -1,0 +1,9 @@
+{
+  "id": "c617c480-1590-4143-99bc-9622ec18c716",
+  "label": "Survival mass under a law over cut positions",
+  "term": "post-cut survival mass",
+  "definition": "For each separately tested cut, take its probability weight if the designated receiver zero remains active and zero otherwise. The survival mass is the sum of those contributions.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.RelayCutSensitivity.survivalMass",
+  "note": "The weights model the experimenter's random choice of the cut position and have total mass one when used as a probability law. The roster, the receiver and its specified power stay fixed."
+}

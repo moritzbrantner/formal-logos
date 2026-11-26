@@ -1,0 +1,11 @@
+{
+  "id": "7a970bf6-1168-4c45-bf3c-9a0a1e4a8615",
+  "label": "Excluding a return through the shared identity ancestor gives a common first giver",
+  "argument_id": "b58e7a06-252d-40a3-9a09-5acc0feb096c",
+  "challenge_module": "TruthCore.Results.Aquinas.DeEnte.IdentitySourceCycle.Challenge",
+  "solution_module": "TruthCore.Results.Aquinas.DeEnte.IdentitySourceCycle.Solution",
+  "theorem": "TruthCore.Results.Aquinas.DeEnte.IdentitySourceCycle.commonSourceOfNoIdentityReturn",
+  "comparator_config": "results/7a970bf6-1168-4c45-bf3c-9a0a1e4a8615/comparator.json",
+  "status": "solution-present",
+  "description": "Fixed q3a4 profile throughout. Distinct-esse ancestry supplies a finite nonempty path to each actual recipient whose represented essence differs from its esse. Unique actual identity and one actual bearer select n. Every other actual bearer falls under that ancestry premise, so n reaches it. Any supplier of n would complete a nonempty return through n. Conversely, with uniqueness, a common first giver excludes every such return. The companion reuses the existing model with a supplierless common source and an infinite branch. Global well-foundedness is unnecessary. Deriving ancestry from well-foundedness or closed-collection rootedness inherits those commitments. Further bridges identify the source with a world-relative grounding root and with God."
+}

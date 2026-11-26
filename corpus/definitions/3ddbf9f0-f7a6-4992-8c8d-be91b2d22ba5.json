@@ -1,0 +1,9 @@
+{
+  "id": "3ddbf9f0-f7a6-4992-8c8d-be91b2d22ba5",
+  "label": "Matching supplier prefixes with an untagged stop",
+  "term": "untaggedRecord",
+  "definition": "At length k record whether k is within the access bound and all k complete lists match the endless prefix. Also record a stop when this matching prefix is reported but a matching prefix of length k+1 is unavailable.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.SupplierAuditVisibility.untaggedRecord",
+  "note": "A stop omits whether the next complete list failed to match or could not be read. The entire sequence of these pairs is the evidence in the exact-classifier comparison."
+}

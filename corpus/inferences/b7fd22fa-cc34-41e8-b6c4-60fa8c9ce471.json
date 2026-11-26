@@ -1,0 +1,15 @@
+{
+  "id": "b7fd22fa-cc34-41e8-b6c4-60fa8c9ce471",
+  "label": "Finite acyclic identity ancestry gives each actual esse bearer a finite root audit (inference)",
+  "input_statement_ids": [
+    "b2b289ed-74a7-4c1c-88c0-26f213a6e6c3",
+    "41c858ee-07ee-41db-9693-b5fef6154efe",
+    "3d01134d-0b03-4469-a81a-a18d6e179fa0",
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410"
+  ],
+  "output_statement_id": "3008c7db-0236-4b03-9da7-f41ea8d8cac1",
+  "rule": "Choose a minimal actual identity ancestor and certify its globally supplierless status and finite path",
+  "meaning": "An actual target is its own identity ancestor or has one by the distinct-esse premise. The nonempty finite set of such ancestors has a minimal member under nonempty actual esse-cause reachability. An incoming supplier would itself be an actual identity or have an actual identity ancestor. Either yields another identity ancestor of the target strictly upstream of the chosen member. The existing positive certificate criterion yields an audit, and the existing audit consumer gives closed-collection rootedness on the same profile. The ancestry premise requires independent warrant to avoid circular support through rootedness. The three-bearer chain preserves all inputs while a directly supplied identity bearer directly supplies a distinct-esse recipient.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

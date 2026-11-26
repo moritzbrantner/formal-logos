@@ -1,0 +1,9 @@
+{
+  "id": "d3a92973-548a-4acf-959d-e94c4d56dbfe",
+  "label": "Activity under a local relay and an independent active feed",
+  "term": "local relay activity with an independent active feed",
+  "definition": "A position is active with respect to the selected power exactly when it has a separate active feed or its immediate successor has that power active and the successor link is intact.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.RelayCutSensitivity.RelayActivity",
+  "note": "This extends the local successor-only transmission rule to a specified additional input. Independence means the feed is kept active under the selected interventions on successor links. The origin of the feed remains open."
+}

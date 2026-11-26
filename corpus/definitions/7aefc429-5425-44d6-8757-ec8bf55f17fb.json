@@ -1,0 +1,9 @@
+{
+  "id": "7aefc429-5425-44d6-8757-ec8bf55f17fb",
+  "label": "Complete lists matching the endless supplier prefix",
+  "term": "PrefixMatches",
+  "definition": "On the common natural-number roster, every recipient x below the audit length has complete incoming list consisting of x + 1 alone. The audit uses the same identities, begins at recipient zero and follows the indicated suppliers; length zero records no lists.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.SupplierAuditLikelihood.PrefixMatches",
+  "note": "Uses SupplierAudit.auditFrame with the selected prefix of recipients. The observed rootless prefix is a record of complete incoming lists at those recipients, with no claim about a list beyond the audit."
+}

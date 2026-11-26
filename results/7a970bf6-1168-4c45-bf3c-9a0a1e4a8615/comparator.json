@@ -1,0 +1,11 @@
+{
+  "challenge_module": "TruthCore.Results.Aquinas.DeEnte.IdentitySourceCycle.Challenge",
+  "solution_module": "TruthCore.Results.Aquinas.DeEnte.IdentitySourceCycle.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Aquinas.DeEnte.IdentitySourceCycle.commonSourceOfNoIdentityReturn",
+    "TruthCore.Results.Aquinas.DeEnte.IdentitySourceCycle.noIdentityReturnOfCommonSource",
+    "TruthCore.Results.Aquinas.DeEnte.IdentitySourceCycle.commonSourceWithEndlessBranch"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}

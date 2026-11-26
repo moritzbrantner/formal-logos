@@ -1,0 +1,9 @@
+{
+  "id": "f0bdc622-1770-455d-9c83-0b57bf0af456",
+  "label": "Primary relay and auxiliary entrance intervention",
+  "term": "primary relay, specified feed and auxiliary entrance",
+  "basis": "stipulative",
+  "definition": "Stage has two disjoint natural-number successor rays and a distinct feed token that supplies primary stage d. Primary zero is the recipient, including when the feed supplies it directly at d = 0. Intrinsic power belongs only to the feed token in the sourced world. The auxiliary-zero entrance into that token exists only in the borrowed world while the entrance is retained. A primary cut removes the successor link into its named primary position. LocalActivity requires activity exactly at stages with intrinsic power or a retained link from an active immediate supplier. The two selected profiles put activity on the primary segment connected to the active feed and keep the auxiliary ray active in the borrowed world. PrimaryRecord reports recipient activity for every primary cut and the baseline, leaving the entrance alone. Transmits requires a retained link from an active supplier.",
+  "note": "Analyst model of a specified respect of activity with explicit selected responses and complete incoming-link inventory at the feed. The auxiliary-only cut distinguishes the selected profiles. In the combined cut at the auxiliary entrance and primary incoming link at d, every profile satisfying the local law reports the feed's intrinsic status at zero. Applicability requires warranted identification of the powers and links under intervention and warranted coverage of the incoming suppliers. The two local models do not establish metaphysical possibility, existence-giving power, or the adequacy of finite grounding as a universal account.",
+  "lean_declaration": "TruthCore.Causality.RelaySourceRecognition.LocalActivity"
+}
