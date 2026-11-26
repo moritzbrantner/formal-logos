@@ -118,9 +118,20 @@ theorem restrictionCensus :
     restrictions.all comparison := by
   decide +kernel
 
-/-- P's external basis and Q's occurrence basis may be defeated independently. -/
+inductive Basis where
+  | external | occurrence
+  deriving DecidableEq
+
+/-- The external basis supports P (false), and the occurrence basis supports Q (true). -/
+def supports : List (Basis × Bool) := [(.external, false), (.occurrence, true)]
+
+def defeated (extDefeat occDefeat : Bool) : Basis → Bool
+  | .external => extDefeat
+  | .occurrence => occDefeat
+
 def survive (extDefeat occDefeat targetQ : Bool) : Bool :=
-  if targetQ then !occDefeat else !extDefeat
+  supports.any fun (basis, content) =>
+    content == targetQ && !defeated extDefeat occDefeat basis
 
 def reasons (e o calibrate q : Bool) : Bool := calibrate && survive e o q
 

@@ -198,7 +198,7 @@ report someone's inner life.
 Lean checks the twelve states, all 2,048 restrictions containing the actual
 state, and the 1,024 that also contain the counterfeit. It checks the eight
 reason and defeat assignments on the two bases.
-[Episode rows](../../TruthCore/Logic/ActualInquiryControls.lean#L97) · [Restriction census](../../TruthCore/Logic/ActualInquiryControls.lean#L116) · [Reason uses and defeat](../../TruthCore/Logic/ActualInquiryControls.lean#L127)
+[Episode rows](../../TruthCore/Logic/ActualInquiryControls.lean#L97) · [Restriction census](../../TruthCore/Logic/ActualInquiryControls.lean#L116) · [Reason uses and defeat](../../TruthCore/Logic/ActualInquiryControls.lean#L138)
 
 A encodes actual episode-kind, not an independently tested first-person access mechanism; matching A is a structural surrogate for the factive access profile, which additionally requires actual apprehension in the philosophical reading. A ⇒ Q holds by the explicit classification, not by a numerical experiment proving introspection reliable. The reason profiles assign the support and defeat relations; the calibration-off control empties R deliberately and does not prove no reason in an actual subject. Both undercutters can be set true together; the experiment thus leaves wholesale defeat coherent at this purely structural level. It isolates the *additional* conditions needed to carry the observed external error across to the occurrence ground.
 
@@ -294,7 +294,7 @@ The comparison below explicitly separates phenomenal occurrence from thought, re
 
 Lean checks the 64 episode assignments, 2,736 positive-mass conditions,
 1,440 score comparisons, and eight assigned force profiles.
-[Episode scope](../../TruthCore/Logic/ActualInquiryControls.lean#L162) · [Conditioning](../../TruthCore/Logic/ActualInquiryControls.lean#L191) · [Score and force checks](../../TruthCore/Logic/ActualInquiryControls.lean#L205)
+[Episode scope](../../TruthCore/Logic/ActualInquiryControls.lean#L173) · [Conditioning](../../TruthCore/Logic/ActualInquiryControls.lean#L202) · [Score and force checks](../../TruthCore/Logic/ActualInquiryControls.lean#L216)
 
 The conditional probability identity and score inequalities have the
 elementary general arguments above. The probability weights and payoff
@@ -400,12 +400,12 @@ The local positive warrant is thus not just the absence of discovered objections
 
 Lean checks the three exact report posteriors and their refinements, the
 positive-mass and zero-mass restriction counts, and the sixteen
-reason-status assignments. The restriction counts compare integer masses,
-with a proof connecting the comparisons to positive-denominator rational
-posteriors. Lean checks all 6,561 mixed-channel comparisons
+reason-status assignments. Lean checks the restriction counts using
+integer masses and separately proves the arithmetic equivalences for
+rational quotients with positive denominators. Lean checks all 6,561 mixed-channel comparisons
 by scaling the two likelihoods by 64 and using integer comparisons. The
 dependent-mode control uses exact rational probabilities.
-[Report posteriors](../../TruthCore/Logic/ActualInquiryControls.lean#L263) · [Restrictions](../../TruthCore/Logic/ActualInquiryControls.lean#L326) · [Mass comparisons](../../TruthCore/Logic/ActualInquiryControls.lean#L301) · [Reason status](../../TruthCore/Logic/ActualInquiryControls.lean#L330) · [Likelihood signs](../../TruthCore/Logic/ActualInquiryControls.lean#L367) · [Dependent mode](../../TruthCore/Logic/ActualInquiryControls.lean#L370)
+[Report posteriors](../../TruthCore/Logic/ActualInquiryControls.lean#L274) · [Restrictions](../../TruthCore/Logic/ActualInquiryControls.lean#L337) · [Mass comparisons](../../TruthCore/Logic/ActualInquiryControls.lean#L312) · [Reason status](../../TruthCore/Logic/ActualInquiryControls.lean#L341) · [Likelihood signs](../../TruthCore/Logic/ActualInquiryControls.lean#L378) · [Dependent mode](../../TruthCore/Logic/ActualInquiryControls.lean#L381)
 
 The count of 7,776 positive-mass comparisons consists of 5,184 strict
 gains and 2,592 cases already at one. There are 5,022 joint zero-mass
@@ -509,7 +509,7 @@ The principal insight is not an unrestricted trilemma about all justification. I
 Lean checks the dependency and active-set census, the three selected
 graphs, the separate prior-use traces with and without a standing
 credential, and the status and method/instance assignments.
-[Dependency census](../../TruthCore/Logic/ActualInquiryControls.lean#L412) · [Prior-use traces](../../TruthCore/Logic/ActualInquiryControls.lean#L435) · [Status](../../TruthCore/Logic/ActualInquiryControls.lean#L441) · [Method and instance](../../TruthCore/Logic/ActualInquiryControls.lean#L453)
+[Dependency census](../../TruthCore/Logic/ActualInquiryControls.lean#L423) · [Prior-use traces](../../TruthCore/Logic/ActualInquiryControls.lean#L446) · [Status](../../TruthCore/Logic/ActualInquiryControls.lean#L452) · [Method and instance](../../TruthCore/Logic/ActualInquiryControls.lean#L464)
 
 The 4,164 dependency and active-set profiles include 2,001 nonempty
 serial profiles and 604 nonempty distinct-serial profiles, all cyclic.
@@ -700,7 +700,7 @@ Lean checks the 1,837 positive-denominator profiles and the five sample
 assignments, including the dogmatic prior and equal likelihoods. It
 checks all 1,000 bounded-product updates. The rational gain is linked to
 the registered real-valued accuracy theorem.
-[Registered gain correspondence](../../TruthCore/Logic/ActualInquiryControls.lean#L478) · [Gain grid](../../TruthCore/Logic/ActualInquiryControls.lean#L517) · [Samples](../../TruthCore/Logic/ActualInquiryControls.lean#L524) · [Bounded updates](../../TruthCore/Logic/ActualInquiryControls.lean#L541)
+[Registered gain correspondence](../../TruthCore/Logic/ActualInquiryControls.lean#L489) · [Gain grid](../../TruthCore/Logic/ActualInquiryControls.lean#L528) · [Samples](../../TruthCore/Logic/ActualInquiryControls.lean#L535) · [Bounded updates](../../TruthCore/Logic/ActualInquiryControls.lean#L552)
 
 The prior/likelihood model and the accuracy objective require justification; the calculations alone do not confer normative authority or a universal cutoff. They complement rather than replace the C/T/W/F6 incompatibility. The strict universal independent-credential demand is not justified by the mere possibility of positive further gain, and possible gain is not sufficient to show that current belief is unwarranted. The strongest higher-order rival can grant the first-order bearing and challenge the access/model grounds. The next discriminating test is to identify a concrete model or access defeater and compare the gain of investigating that uncertainty to merely restating the original reason. Keep actual reason attribution and F6 independent warrant separate.
 

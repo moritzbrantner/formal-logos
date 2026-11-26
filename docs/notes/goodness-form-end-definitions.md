@@ -404,7 +404,7 @@ architecture. Material and substrate supply are fixed. The environmental
 challenge family removes either 0 or 2 reserve units per step; supplied support
 is specified separately. No developmental transition is modeled.
 
-The native reference regime has `drive=1, help=0, regulator=0, loss=0`, with
+The native reference regime has `drive=1, help=0, regulator=0, loss=0, recruited=0`, with
 barrier and both sites present. Its broader regulation regime permits
 recruitment and the stated reserve challenges. These are two regimes of the
 same stipulated class; compensation is not permission to change the bearer or

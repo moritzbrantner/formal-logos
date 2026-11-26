@@ -14,7 +14,7 @@ def select (readable : Version → Bool) (tie : Version) : Version :=
 def dispatch (readable : Version → Bool) (booking tie : Version) (connected : Bool) :
     Option Version × Version × Version :=
   let instruction := select readable tie
-  (if connected then some instruction else none, booking, instruction)
+  (if connected then some instruction else none, booking, select readable tie)
 
 def only (v : Version) (w : Version) : Bool := v == w
 
