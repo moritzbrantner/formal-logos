@@ -810,17 +810,88 @@ semantics.
 ### Connection and next test
 
 The target is [the distinct dependence map](../../corpus/statements/42756c07-03cd-4b54-8ed6-ed6c1a5132aa.json)
-(`42756c07`), used in the nonmutuality and Second Way routes above. The
-strongest result for this target is that modal coextension leaves room
-for an oriented PLG presentation of a separately specified nature
-assignment. The extensional interpretation retains the modal constraints
-without supplying this orientation. Neither result changes the warrant
-for exporting efficient-causal dependence. The missing bridge is an
-independent warrant that one specific supplier's **existence fact**, at the
-same time and respect, grounds the selected effect's existence fact.
-Fix those labels and test the proposed strict path and any weak return
-against independent evidence of the actual supply. There is no new graph
-edge or premise change.
+(`42756c07`), between path coverage `b6784d40` and the Second Way
+accessibility premise `97f5850f`.
+
+**Fixed-label check.** The [worked Lean application](../../TruthCore/Causality/StrictGroundSupplyEdge.lean)
+keeps the supplier fact at label `false` and the recipient fact at label
+`true`. In `strictForward`, the initial strict full sequent with singleton
+antecedent gives the path's strict step. Both surrounding weak paths have
+length zero. The consistency criterion rules out a finite weak return,
+even one using strict steps as weak steps. On the same labels, `weakOnly`
+retains forward weak derivability and omits every strict-step path between
+the pair. The original modal profile is the same in both tests. Labelling
+by world extension would recover the modal verdicts and identify the two
+endpoints. Retaining the strict sequent on those identical labels would
+then give a strict self-sequent, which is incompatible with any consistent
+PLG theory. An extensional account can instead keep the modal verdicts and
+leave the strict explanatory claim out. This comparison concerns the
+coextensive pair in the model.
+
+The application calls `mapOfStrictPaths` and feeds its output into
+`foundedFromAncestralLabels`. The relation in the per se slot is the reverse
+of the stipulated nature relation and has the single supplier-to-recipient
+edge. Alignment follows from that choice and the distinct Boolean bearers.
+Finite ancestry labels follow from the Boolean label type. The ontic cause
+relation of `directedNature` is empty. This gives a worked instantiation of
+the existing four-premise composition and no new ground for anyone's
+acceptance of those premises in the Second Way.
+
+**Actual-edge assessment.** Reuse the illumination paradigm as an analyst
+case. Fix the emitter and the particular illumination it sustains at one
+time, in the respect of being that very illumination. The causal direction
+is supported by the explanatory roles of emission and reception: the
+emitter can persist when the beam is blocked, and the recipient light at
+that location depends on successful transmission. Fix the proposed labels
+to the existence of that emitter and the existence of that illumination
+at that time. The evidence traces the emitter's *activity* to the effect.
+A causal presentation that labels the activity or transmitted light can
+use that evidence directly, but substitutes a different antecedent for the
+selected existence fact. A strict partial ground need not suffice alone,
+so the need for operation leaves room for a contribution by the existence
+fact. Establishing that contribution would require a same-case account of
+what the supplier's existence adds as a partial explanation of the effect's
+existence, beyond the fact that a bearer exists whenever it operates. For
+the constitutive reading, the account would also have to identify the
+supplier fact as a constituent of the recipient fact's explanation.
+
+The illumination case favors a directed causal account at its own scope.
+A causal account in terms of activity and transmission has positive
+support there and can omit any constitutive edge between the two existence
+facts. The existing evidence leaves the proposed strict edge unlicensed
+on those exact labels. The Boolean nature assignment shows compatibility
+with coextension and supplies no independent warrant for that edge.
+Reopen when a specified actual case supports the explanatory role of both
+fact labels at the same time and in the same respect. On that evidence,
+justify the initial sequents in one presentation and check the whole set
+for weak returns, including return paths introduced by other cases.
+
+**Scope of any extension.** For the existing route, coverage must range
+over every distinct `D` edge in the selected domain, using the same
+labelling and consistent theory. Applying that map to the per se series
+requires `adb951c1` on the independently selected relation: each of its
+links must concern distinct bearers and supply being in that respect.
+A sustaining cause of motion can leave the instrument's being untouched,
+so evidence about the motion cannot license that alignment. Restricting
+the relation to per se causes of esse still requires evidence that it is
+the relation needed in the Second Way and that the same path justification
+applies throughout. Finiteness of upstream labels for each effect is a
+separate obligation.
+
+To use a PLG path for world-local `ActualConcreteGround`, first identify
+the corresponding concrete bearers and their fact labels at the selected
+world. Then justify the implication from derivability on those labels to
+the profile's `grounds` relation on those same bearers, including the
+supplier's actuality and concreteness. Even such an implication on distinct
+pairs would serve only the scope of `a8298fbd`. The unrestricted
+`2e248016` still requires a separate account of self-dependence. On a
+reflexive `D` it requires world-local self-grounding for actual concreta,
+which conflicts with an irreflexive reading of that world-local ground.
+No transport is assumed here.
+
+There is no new graph edge or premise change. The missing bridge is
+independent evidence for an actual existence-fact orientation.
+[Supply-edge attempt](../../corpus/attempts/0463b5e3-dac4-4e22-a359-c6f7eaa264a5.json)
 
 For the [esse–essence identity question](existence-in-essence-identity.md),
 the result motivates checking substitution **inside** the nature judgment.

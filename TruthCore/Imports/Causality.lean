@@ -310,6 +310,7 @@ public import TruthCore.Causality.SpineRivalsStageOne
 public import TruthCore.Causality.StrictEsseScale
 public import TruthCore.Causality.StrictGroundInfiniteCauseSeries
 public import TruthCore.Causality.StrictGroundRepresentation
+public import TruthCore.Causality.StrictGroundSupplyEdge
 public import TruthCore.Causality.StrictPriorityPureAct
 public import TruthCore.Causality.SubjectFocalRoles
 public import TruthCore.Causality.SubtractionArgument
