@@ -1,0 +1,29 @@
+{
+  "id": "4e519f40-be19-41f4-bb2c-cfc8999ebec2",
+  "label": "Actual access and represented divine assent in KD45",
+  "statement_ids": [
+    "7dd8a624-b04d-4ea0-9ecf-2d9e5cab95ad",
+    "b653adaa-3573-4409-8732-2f37867c2bba",
+    "aba394e1-845d-441d-9cfb-24b71fe8da0a",
+    "08e7be98-cf38-45fd-83fc-1035051c5c26"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "Issue #2057. Actual self-access and one-way truth alignment yield the exact divine-assent accuracy node consumed by the sincerity route. The finite omission retains representation and KD45 while giving false assent. The existing finite threshold policy with a fixed heavy core demonstrates coherent fallibility with positive actual probability. Reverse knowledge inclusion, omitted introspection conditions, the lottery, and distinct Moore assertion conditions delimit the representation. The actual-access and representation warrants, preference-independent authority, and transfer to individuated contents remain open. See docs/notes/divine-veracity-1410.md#actual-access-and-represented-divine-assent-2057 for the provisional assessment and reopening condition.",
+  "evidence": [
+    "002ce8cf-4819-4ea6-849e-3da3df079f93",
+    "e796f4f0-3518-4d9c-afd0-5e8b7ce9da81",
+    "PR-2102"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2102"
+    }
+  ]
+}

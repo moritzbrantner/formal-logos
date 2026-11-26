@@ -1488,3 +1488,77 @@ the coverage and normative commitments, or confer new formal certification.
 The reviewed local snapshot has the identical Git tree as published revision
 [`813aed9c`](https://github.com/moritzbrantner/formal-logos/commit/813aed9c2aa3251ba1a5e4c8d3970e321ed83640).
 The findings are published on `agent/source-independence-history`, not merged.
+
+## Actual access and represented divine assent (#2057)
+
+The target is the existing `GodAssentAccurate` (7dd8a624-b04d-4ea0-9ecf-2d9e5cab95ad).
+The modal representation and actual-access condition concern one supplied
+profile, one designated world, and the same classified bearer throughout.
+Each actual assent must have a believed world predicate whose truth at that
+world agrees with the assented Prop. The single actual self-edge lets the box
+be evaluated there. The existing sincerity route consumes the resulting
+accuracy claim. Its confirmation-to-assertion step remains a separate input.
+
+The finite omission retains the representation and the three KD45 frame
+conditions. A classified bearer assents to False, represented by a predicate
+true only at the nonactual successor. In that formal interpretation the
+representation also allows assent to all Prop: different contents may have
+the same truth value at the selected alternative and the calibration does
+not preserve negation. This is a test of the exact sufficient premises.
+It supplies no model of a perfectly truthful intellect. The positive
+probability control `DoxasticThreshold.skewFixedControl` gives a coherent
+fallible profile for the narrower question whether strong, consistent
+evidential selection excludes a false assent. The same event is accepted
+at 0.9 and believed in the fixed KD45 profile, while its complement has
+positive measure and contains the actual point. This supports fallible
+evidential selection as a live alternative wherever reliability is inferred
+from coherence and favorable evidence alone. It supplies grounds for
+acceptance under the specified policy, with rational entitlement open.
+
+**Provisional assessment.** Actual access expresses a real adequacy condition
+for this representation, but selecting a frame that contains actuality
+would beg the question if justified only by the intended conclusion.
+The proper-object and truth-as-cognitive-good considerations above give
+some positive reason to pursue actual truth access under a doctrine of
+perfect intellect. The exact transfer from perfect intellectual operation to
+truth-bearing awareness of a selected contingent content remains OPEN.
+The strongest matched alternative admits a well-supported but fallible assent
+about that same content when the available representation omits a live
+actual alternative. The structural control and skew example show how that
+alternative works. Extending it to the same divine bearer requires an
+independent account of how such omission is compatible with the relevant
+perfection. Reassess when the same-bearer actual-operation argument can
+establish availability of one selected contingent content, with independently
+identified content and warrant for the representation. An independently
+justified counterexample within that scope would also revise the assessment.
+
+The knowledge bridge uses inclusion from belief successors to epistemic
+successors at the actual world. The distributed specialization preserves
+the witnessing agent and time. The reverse-inclusion control instead gives
+knowledge with withholding. The same biased KD45 frame that admits false
+belief fails the T formula and can fail belief-to-knowledge with a reflexive
+epistemic frame. Alternating successors show that seriality alone leaves
+both introspection principles open. Requiring a fixed nonempty heavy core
+supplies KD45 for a selected probability policy, while the local equivalence
+requires no match beyond the selected world. The lottery failure uses the
+intersection closure that any single row of a relation already imposes.
+
+The two Moore contents, `p ∧ ¬ Bp` and `p ∧ B¬p`, are each true at the
+biased frame's designated world. The withholding control also realizes
+the former without the latter. For a sincere assertion by the speaker
+described by the content, at the same speech context, positive introspection
+carries belief of the first conjunct to a selected successor. The omissive
+second conjunct says that belief is absent there. The commissive second
+conjunct adds belief in the negation there and conflicts with serial
+consistency. This uses local assertion-to-belief from `AssertionRetorsion`
+and follows `PerformedDenial` in distinguishing the claim's truth at a
+world from the conditions on its performance. It is a practical defect
+within the stated model. Application to human speech or epistemic
+entitlement requires separate warrant. The frame choice is time-local.
+
+Belief in a proposition representing justification can be false. The
+ordinary reason for suspension in the existing count profile targets a
+different attitude from adopting the belief. The preference-independent
+authority bridge in #930 and the sense migration in #1376 remain OPEN.
+Revision and stability under updates belong to the separate AGM/DEL work
+and #1424.

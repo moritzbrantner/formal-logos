@@ -20,7 +20,7 @@ theorem atWorld (μ : Measure W) [IsProbabilityMeasure μ] (t : ℝ)
     (positive : 0 < t) (atMostOne : t ≤ 1) (closed : ConjunctionClosed μ t) :
     (HeavyCore μ t).Nonempty ∧
       ∀ {Agent : Type} (c : Doxastic.Context Agent W) (a : Agent) (w : W)
-        (successors : ∀ v, (c.belief a).access w v ↔ v ∈ HeavyCore μ t) (A : Set W),
+        (_successors : ∀ v, (c.belief a).access w v ↔ v ∈ HeavyCore μ t) (A : Set W),
         Accepted μ t A ↔ Doxastic.Believes c a (· ∈ A) w := by
   obtain ⟨membership, closure, _, emptyRejected⟩ :=
     TruthCore.Results.Logic.ThresholdBelief.core W μ t positive atMostOne
@@ -59,5 +59,19 @@ theorem lotteryOmission (t : ℝ) (positive : 0 < t) (belowOne : t < 1) :
   intro A B hA hB
   exact (represents (A ∩ B)).mpr fun v hv =>
     ⟨(represents A).mp hA v hv, (represents B).mp hB v hv⟩
+
+/-- The existing skew measure yields a coherent policy and a KD45 profile
+for the same event. The false actual point still has positive probability. -/
+theorem skewFixedControl :
+    let c : Doxastic.Context Unit Bool :=
+      ⟨fun _ => Doxastic.fixed (· ∈ HeavyCore skew (9/10)), false⟩
+    FrameSatisfies .KD45 (c.belief ()) ∧
+      Doxastic.Believes c () (· = true) false ∧ ¬ (false = true) ∧
+      0 < skew.real {false} := by
+  obtain ⟨probability, _, _, closed, accepted, _, mass, _⟩ :=
+    TruthCore.Results.Logic.ThresholdBelief.skewSurvivor
+  let := probability
+  have h := fixedCore skew (9/10) (by norm_num) (by norm_num) closed false
+  exact ⟨h.1, (h.2 {true}).mp accepted, Bool.noConfusion, mass⟩
 
 end TruthCore.Logic.DoxasticThreshold

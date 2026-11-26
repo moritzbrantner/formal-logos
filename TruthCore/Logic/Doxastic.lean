@@ -114,6 +114,32 @@ theorem biasedFalseBelief (a : Agent) :
       ¬ ((biased Agent).actual = true) :=
   ⟨fun _ hv => hv, Bool.noConfusion⟩
 
+theorem biasedRejectsT (a : Agent) :
+    ¬ Valid ((biased Agent).belief a) (.imp (.box (.atom ())) (.atom ())) := by
+  intro valid
+  obtain ⟨believed, falseAtActual⟩ := biasedFalseBelief a
+  exact falseAtActual (valid (fun v _ => v = true) (biased Agent).actual believed)
+
+theorem falseBeliefIsNotKnowledge :
+    let epistemic : Frame Bool := ⟨Eq⟩
+    Reflexive epistemic ∧ Believes (biased Unit) () (· = true) false ∧
+      ¬ JustificationIntrospection.Knows epistemic (· = true) false :=
+  ⟨fun _ => rfl, (biasedFalseBelief ()).1, fun hk => Bool.noConfusion (hk false rfl)⟩
+
+/-- Two alternating alternatives preserve seriality while invalidating both
+introspection laws. Both failures concern the same actual belief profile. -/
+theorem serialWithoutIntrospection :
+    let c : Context Unit Bool := ⟨fun _ => ⟨fun w v => v = !w⟩, false⟩
+    let p : Bool → Prop := (· = true)
+    let q : Bool → Prop := (· = false)
+    Serial (c.belief ()) ∧
+      (Believes c () p c.actual ∧ ¬ Believes c () (Believes c () p) c.actual) ∧
+      (¬ Believes c () q c.actual ∧
+        ¬ Believes c () (fun v => ¬ Believes c () q v) c.actual) := by
+  exact ⟨fun w => ⟨!w, rfl⟩,
+    ⟨fun _ hv => hv, fun h => Bool.noConfusion (h true rfl false rfl)⟩,
+    ⟨fun h => Bool.noConfusion (h true rfl), fun h => h true rfl (fun _ hv => hv)⟩⟩
+
 /-- A reflexive knowledge frame can sit inside the belief frame while Kp holds
 and the belief agent withholds on p. The omitted direction of inclusion matters. -/
 theorem reverseInclusionControl :
