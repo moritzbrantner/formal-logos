@@ -1,0 +1,36 @@
+[batch]
+vocab = "TruthCore.Causality.SupplierAuditLikelihood"
+results = "TruthCore.Results.Causality.SupplierAuditLikelihood"
+
+[[statement]]
+id = "25a31bba-c01f-43cf-9c53-c8f9ae3ce466"
+label = "Successive supplier lists can favor an endless chain over a fixed mixture of finite depths"
+lean = "PrefixComparison"
+definitions = ["5b19527d-9418-441e-820c-3c659ba7cb12", "7aefc429-5425-44d6-8757-ec8bf55f17fb", "425ae4bc-d5f0-4ebc-99b7-2645c947f497", "77b06e8c-9266-4801-b3cb-2ce1dd9d13e6"]
+paraphrase = "Starting at recipient zero on the same natural-number roster, an audit of the first k complete lists of the endless chain matches the finite-depth world n exactly when k ≤ n. Thus every finite prefix matches both the endless relation and a sourced relation with a supplierless ancestor of zero. If the next complete list is empty at depth d, only sourced depth d matches that record within these classes. Under one fixed proper nonnegative prior on the finite depths, the matching prefix has finite-class likelihood one minus the cumulative mass below k and endless likelihood one. With fixed positive class weights, sufficiently long prefixes favor the endless class by any prescribed finite positive factor, but there is no cutoff uniform over proper priors: at each length, concentrating at that depth gives likelihood one. A full-support geometric prior gives positive likelihood (1/2)^k and rules out preference by every factor at any one finite k."
+
+[[statement]]
+id = "888066cf-0aa1-4a75-a86c-c47e1652e9c8"
+label = "Nested records from one supplier audit update by conditional likelihood"
+lean = "PrefixConditioning"
+definitions = ["5b19527d-9418-441e-820c-3c659ba7cb12", "7aefc429-5425-44d6-8757-ec8bf55f17fb", "77b06e8c-9266-4801-b3cb-2ce1dd9d13e6", "d497dc7a-2c66-4448-b89b-e710dbf4e209"]
+paraphrase = "Given a matching prefix of positive finite-class likelihood for the same recipient, reobserving the same or a shorter matching prefix has conditional likelihood one. Extending to a longer matching prefix has conditional finite-class likelihood equal to its prior mass divided by the prior mass of the already observed prefix. For positive finite-class weight and both likelihoods positive, dividing the old endless-to-sourced odds by this conditional likelihood gives the new odds, since the deterministic endless world matches both records."
+
+[[argument]]
+id = "Compare endless and finite-depth supplier models by their prefix likelihood"
+theorem = "prefixComparison"
+comparator_theorems = ["selectedRegressControl"]
+premises = ["5a6103e6-5335-4319-889f-6fa9d1b60831"]
+conclusion = "25a31bba-c01f-43cf-9c53-c8f9ae3ce466"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Check complete lists and reuse the prior mass of fitting reserve bounds"
+meaning = "The sourced world's root has an empty incoming list, so it cannot be among the recipients whose full lists match the endless singleton record. Before that depth the lists agree. The two likelihoods use the same cutoff, transferring the fixed-prior tail theorem from the finite reserve calculation. The first complete empty list identifies the sourced depth among the selected worlds and excludes the endless world. A companion interprets suppliers as efficient edges in one respect. Sourced depths then satisfy the Second Way regress reading on asCaused edges and have a first efficient cause. The endless world falsifies that reading under the same interpretation. The last caused intermediate has an incoming efficient edge from the first cause even though its asCaused list is empty. Applying this selected relation and observation procedure to actual efficient or existential causation remains open."
+
+[[argument]]
+id = "Condition one supplier audit on its existing matching prefix"
+theorem = "prefixConditioning"
+premises = []
+conclusion = "888066cf-0aa1-4a75-a86c-c47e1652e9c8"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "The joint event for two nested records is the longer matching prefix"
+meaning = "The same sourced candidate matches both records exactly when its depth is at least the maximum of the two lengths. For positive mass of the observed event, repeated observations of that event or its consequences leave the odds unchanged. Updating on a longer match divides the old odds by the conditional finite-class likelihood, so multiplying separate unconditional likelihoods would count part of the same evidence twice."

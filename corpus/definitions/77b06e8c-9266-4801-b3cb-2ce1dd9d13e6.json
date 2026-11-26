@@ -1,0 +1,9 @@
+{
+  "id": "77b06e8c-9266-4801-b3cb-2ce1dd9d13e6",
+  "label": "Deterministic prefix likelihood for the sourced depth class",
+  "term": "depthLikelihood",
+  "definition": "Sum the conditional finite-class prior weights of precisely those sourced-depth worlds whose actual complete incoming lists match the specified prefix on the fixed natural-number roster. A matching world contributes its full weight and any other world contributes zero.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.SupplierAuditLikelihood.depthLikelihood",
+  "note": "A probability interpretation requires a nonnegative distribution of total mass one. The observation scheme audits the fixed sequence from recipient zero, and the prior is fixed before successive records. Applying this class and likelihood to an actual comparison requires independent justification for the depth distribution, relation, and observation scheme."
+}

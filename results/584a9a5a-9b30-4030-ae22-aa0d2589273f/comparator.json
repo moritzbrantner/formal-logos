@@ -1,0 +1,14 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.SupplierAuditLikelihood.Challenge",
+  "solution_module": "TruthCore.Results.Causality.SupplierAuditLikelihood.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.SupplierAuditLikelihood.prefixComparison",
+    "TruthCore.Results.Causality.SupplierAuditLikelihood.selectedRegressControl"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "enable_nanoda": true
+}

@@ -1,0 +1,13 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.SupplierAuditVisibility.Challenge",
+  "solution_module": "TruthCore.Results.Causality.SupplierAuditVisibility.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.SupplierAuditVisibility.calibratedPrefixRecovery"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "enable_nanoda": true
+}

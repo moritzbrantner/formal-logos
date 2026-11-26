@@ -16,8 +16,8 @@ SCOPED_PR = re.compile(r"\bPR(?:-| #)([1-9][0-9]*)\b")
 FIELDS = "number,state,baseRefOid,headRefOid,mergeCommit"
 
 
-def git(*args):
-    return subprocess.run(["git", *args], text=True, capture_output=True,
+def git(*args, text=True):
+    return subprocess.run(["git", *args], text=text, capture_output=True,
                           env={**os.environ, "GIT_NO_LAZY_FETCH": "1"})
 
 
@@ -27,6 +27,26 @@ def commit(ref):
         if result.returncode == 0:
             return result.stdout.strip()
     return None
+
+
+def complete_histories(left, right):
+    shallow = git("rev-parse", "--is-shallow-repository")
+    if shallow.returncode or shallow.stdout.strip() not in {"true", "false"}:
+        return False
+    if shallow.stdout.strip() == "false":
+        return True
+    # Git presents shallow boundaries as roots. Check the original parent headers
+    # of the apparent roots reachable from these two tips, including merge parents.
+    walk = git("rev-list", "--max-parents=0", left, right)
+    roots = walk.stdout.splitlines()
+    if walk.returncode or not roots:
+        return False
+    for root in roots:
+        obj = git("cat-file", "commit", root, text=False)
+        headers = obj.stdout.partition(b"\n\n")[0].split(b"\n")
+        if obj.returncode or any(header.startswith(b"parent ") for header in headers):
+            return False
+    return True
 
 
 def relation(left, right):
@@ -41,7 +61,7 @@ def relation(left, right):
     backward = git("merge-base", "--is-ancestor", right, left).returncode
     if backward == 0:
         return "descendant"
-    if forward == backward == 1 and git("rev-parse", "--is-shallow-repository").stdout.strip() == "false":
+    if forward == backward == 1 and complete_histories(left, right):
         return "divergent"
     return "unknown"
 

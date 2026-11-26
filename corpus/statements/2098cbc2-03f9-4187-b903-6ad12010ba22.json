@@ -1,0 +1,11 @@
+{
+  "id": "2098cbc2-03f9-4187-b903-6ad12010ba22",
+  "label": "Calibrated observation recovers the endless population share from matching prefixes",
+  "paraphrase": "The population mixes an endless share w in [0, 1] and a sourced share 1 − w with a fixed nonnegative normalized depth prior. At a cutoff k let t be the sourced matching-prefix probability and suppose the observed matching-prefix probability r factors as v times the latent mixture probability, for a common positive observation factor v ≤ 1. If t < 1, the share equals (r/v − t)/(1 − t). If t = 1, r equals v for every share. If t > 0, the ratio of endless to sourced observed matching-prefix probabilities is v/(v t) = 1/t. If the calibrated factor is positive at every length, r(k)/v(k) tends to w. Two such populations with the same observation profile and the same observed matching-prefix probabilities have the same endless share, even if their fixed proper sourced-depth priors differ.",
+  "lean_declaration": "TruthCore.Causality.SupplierAuditVisibility.CalibratedPrefixRecovery",
+  "definition_ids": [
+    "7aefc429-5425-44d6-8757-ec8bf55f17fb",
+    "77b06e8c-9266-4801-b3cb-2ce1dd9d13e6",
+    "f13f4f58-7120-4a2d-b2ab-2d1c4469c96f"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "id": "b635dd4f-73c5-4ac9-b5bd-d5b18b0ea748",
+  "label": "Lossless additive readout of maintained feeds in a relay prefix",
+  "term": "unit feed count",
+  "definition": "The count of a prefix of length k starts at zero and adds one unit per maintained feed at positions from zero to k minus one. A position without a maintained feed adds zero.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.RelayFeedInventory.unitFeedCount",
+  "note": "A measurement law for a richer test on the same roster. Reporting one unit per feed requires additive contributions with no loss or ambiguity; the Boolean local activity rule alone supplies no such count."
+}

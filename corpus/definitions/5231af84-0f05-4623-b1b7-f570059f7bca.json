@@ -1,0 +1,9 @@
+{
+  "id": "5231af84-0f05-4623-b1b7-f570059f7bca",
+  "label": "One cut in a successor relay",
+  "term": "single cut in a successor relay",
+  "definition": "Cut i removes just the incoming successor link from i+1 into i, with every other successor link still intact on the same natural-number roster.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.RelayCutSensitivity.singleCut",
+  "note": "A selected intervention on a local power channel. Each indexed cut is tested separately against the same intact topology."
+}

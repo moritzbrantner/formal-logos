@@ -1,0 +1,15 @@
+{
+  "challenge_module": "TruthCore.Results.Aquinas.DeEnte.ReceivedOrUnderived.Challenge",
+  "solution_module": "TruthCore.Results.Aquinas.DeEnte.ReceivedOrUnderived.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Aquinas.DeEnte.ReceivedOrUnderived.auditsOfFiniteAcyclicIdentityAncestry",
+    "TruthCore.Results.Aquinas.DeEnte.ReceivedOrUnderived.closedOfFiniteAcyclicIdentityAncestry",
+    "TruthCore.Results.Aquinas.DeEnte.ReceivedOrUnderived.finiteAcyclicIdentityAncestryAllowsSupply"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "enable_nanoda": true
+}

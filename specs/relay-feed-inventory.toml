@@ -1,0 +1,18 @@
+[batch]
+vocab = "TruthCore.Causality.RelayFeedInventory"
+results = "TruthCore.Results.Causality.RelayFeedInventory"
+
+[[statement]]
+id = "Boolean relay cuts match one feed and infinitely many feeds with the same first position"
+lean = "FeedInventoryComparison"
+definitions = ["5231af84-0f05-4623-b1b7-f570059f7bca", "d3a92973-548a-4acf-959d-e94c4d56dbfe", "daeae08d-3a0b-46fc-b932-18eda7ff5f37", "b635dd4f-73c5-4ac9-b5bd-d5b18b0ea748"]
+paraphrase = "On the same successor roster with the same selected power, arbitrary maintained feeds admit an all-active intact baseline and responses to every single cut. In every response, receiver zero is active after cut i exactly when some feed is at a position at most i. The sole feed at d and feeds at every n ≥ d give identical Boolean reports for every primary cut. Charging those feed positions individually gives the singleton inventory a headcount advantage surviving every finite addition. A stipulated additive unit-count readout settles whether position i has a feed by whether the reported count rises by one when i enters the measured prefix. The prefix through position d+1 reports one unit for the singleton and two for the tail."
+
+[[argument]]
+id = "Compare matched relay reports by feed headcount and by additive feed counts"
+theorem = "feedInventoryComparison"
+premises = ["70ddfed2-f784-4edb-9b3e-252bb4856a07", "d899fe9f-2c8c-43aa-a2c4-2c8c2c06890b"]
+conclusion = "Boolean relay cuts match one feed and infinitely many feeds with the same first position"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Propagate through the intact prefix and compare singleton and tail charges and readouts"
+meaning = "At the cut the feed is the only way to remain active. Induction toward the receiver shows that activity is equivalent to the presence of at least one feed at or below the cut. The single-feed threshold therefore agrees at every primary cut with the corresponding tail inventory. The headcount comparison charges each feed position separately and concerns these matched Boolean observations. Counting independent explanatory assumptions instead requires an additional model of how the feeds are generated. An additive readout assigns each in-prefix feed its own observable contribution. Adjacent prefix counts recover membership, and the prefix through the position immediately above the first feed already separates the two inventories."

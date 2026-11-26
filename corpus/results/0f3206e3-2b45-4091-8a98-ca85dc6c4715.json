@@ -1,0 +1,11 @@
+{
+  "id": "0f3206e3-2b45-4091-8a98-ca85dc6c4715",
+  "label": "Recover the endless mixture share under calibrated common supplier visibility",
+  "argument_id": "00d50423-e8e5-4f7c-bd8d-bed1cd2abdfe",
+  "challenge_module": "TruthCore.Results.Causality.SupplierAuditVisibility.Challenge",
+  "solution_module": "TruthCore.Results.Causality.SupplierAuditVisibility.Solution",
+  "theorem": "TruthCore.Results.Causality.SupplierAuditVisibility.calibratedPrefixRecovery",
+  "comparator_config": "results/0f3206e3-2b45-4091-8a98-ca85dc6c4715/comparator.json",
+  "status": "solution-present",
+  "description": "At one length, observed probability divided by its known positive visibility factor gives the latent mixture probability. With a known finite-class tail below one the mixture equation can be inverted. Comparing class likelihoods for a positive match instead cancels the common factor without knowing its value, when the finite tail is positive. Across lengths, the existing prefix comparison identifies the finite likelihood as one minus the prior partial sum. Normalization makes that tail vanish, yielding the endless share as the unique limit even across distinct proper priors. The factorization is a substantive observation assumption. These population probabilities do not classify a single actual world or supply finite-sample estimation."
+}

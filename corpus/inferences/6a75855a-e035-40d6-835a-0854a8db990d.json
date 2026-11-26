@@ -1,0 +1,14 @@
+{
+  "id": "6a75855a-e035-40d6-835a-0854a8db990d",
+  "label": "Underived identity ancestry gives each actual esse bearer a finite root audit (inference)",
+  "input_statement_ids": [
+    "74231a5c-5cc1-4714-a715-b5408e076c42",
+    "3d01134d-0b03-4469-a81a-a18d6e179fa0",
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410"
+  ],
+  "output_statement_id": "3008c7db-0236-4b03-9da7-f41ea8d8cac1",
+  "rule": "Select the identity bearer or its named actual identity ancestor and certify its roothood and finite path",
+  "meaning": "Use explicit excluded middle for represented esse–essence identity of each actual bearer. For identity, use the bearer itself with the empty path. For distinct esse, use the actual identity bearer and finite path specified by 3d01134d. In either case there is no incoming cause at that root. Apply the existing positive certificate criterion to the fixed actual esse relation. The resulting per-bearer certificate implies 20babef7 through the existing finite-audit conversion. Using the existing 3d01134d derivation from 20babef7 here is circular support for 20babef7; its other existing producer invokes well-foundedness, which already implies 20babef7. The two-bearer control retains finite identity ancestry, actual causation in both directions, internal receipt of the distinct bearer's esse, and the other reception laws. It omits causal-to-internal receipt precisely at the identity bearer, which still receives actual supply. Both rootedness and finite root audits then fail. This is a separation in the interpreted predicates.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

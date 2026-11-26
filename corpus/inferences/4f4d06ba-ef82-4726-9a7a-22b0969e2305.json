@@ -1,0 +1,12 @@
+{
+  "id": "4f4d06ba-ef82-4726-9a7a-22b0969e2305",
+  "label": "Recover the endless mixture share under calibrated common supplier visibility (inference)",
+  "input_statement_ids": [
+    "25a31bba-c01f-43cf-9c53-c8f9ae3ce466"
+  ],
+  "output_statement_id": "2098cbc2-03f9-4187-b903-6ad12010ba22",
+  "rule": "Divide out common positive visibility and use the vanishing proper-prior tail",
+  "meaning": "At one length, observed probability divided by its known positive visibility factor gives the latent mixture probability. With a known finite-class tail below one the mixture equation can be inverted. Comparing class likelihoods for a positive match instead cancels the common factor without knowing its value, when the finite tail is positive. Across lengths, the existing prefix comparison identifies the finite likelihood as one minus the prior partial sum. Normalization makes that tail vanish, yielding the endless share as the unique limit even across distinct proper priors. The factorization is a substantive observation assumption. These population probabilities do not classify a single actual world or supply finite-sample estimation.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

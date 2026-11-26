@@ -148,6 +148,36 @@ class WorkerReportTest(unittest.TestCase):
         self.assertEqual(row["reported_to_reviewed"], "divergent")
         self.assertNotIn("changed_report_paths", row)
 
+    def test_shallow_boundary_matters_only_for_the_histories_compared(self):
+        self.git("switch", "-qc", "sibling", self.base)
+        self.note.write_text("Independent sibling")
+        sibling = self.save("Sibling")
+        with tempfile.TemporaryDirectory() as checkout:
+            def git(*args):
+                subprocess.run(["git", *args], cwd=checkout, check=True, capture_output=True)
+
+            def relation(left, right):
+                report = subprocess.check_output(
+                    [sys.executable, SCRIPT, left, "--main", right, "--attempt", "example-id"],
+                    cwd=checkout, text=True)
+                return json.loads(report)["reported_to_main"]
+
+            git("init", "-q")
+            git("remote", "add", "local", self.root.as_uri())
+            git("fetch", "--no-tags", "--depth=1", "local", self.main)
+            git("fetch", "--no-tags", "local", self.worker, sibling)
+            self.assertEqual(relation(self.worker, self.main), "unknown")
+            self.assertEqual(relation(self.worker, sibling), "divergent")
+            # The sibling's complete side of a merge cannot vouch for its shallow side.
+            merged = subprocess.check_output(
+                ["git", "-c", "user.name=Test", "-c", "user.email=test@example.org",
+                 "-c", "commit.gpgsign=false", "commit-tree", f"{sibling}^{{tree}}",
+                 "-p", sibling, "-p", self.main, "-m", "Join the two histories"],
+                cwd=checkout, text=True).strip()
+            self.assertEqual(relation(self.worker, merged), "unknown")
+            git("fetch", "--no-tags", "--unshallow", "local", self.main)
+            self.assertEqual(relation(self.worker, self.main), "ancestor")
+
     def test_squash_metadata_does_not_establish_head_ancestry(self):
         self.git("switch", "-qc", "squash", self.base)
         self.git("merge", "--squash", "worker")

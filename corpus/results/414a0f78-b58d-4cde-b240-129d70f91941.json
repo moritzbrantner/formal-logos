@@ -1,0 +1,11 @@
+{
+  "id": "414a0f78-b58d-4cde-b240-129d70f91941",
+  "label": "Compare matched relay reports by feed headcount and by additive feed counts",
+  "argument_id": "0844445e-bd1d-4032-a422-770625c33bf8",
+  "challenge_module": "TruthCore.Results.Causality.RelayFeedInventory.Challenge",
+  "solution_module": "TruthCore.Results.Causality.RelayFeedInventory.Solution",
+  "theorem": "TruthCore.Results.Causality.RelayFeedInventory.feedInventoryComparison",
+  "comparator_config": "results/414a0f78-b58d-4cde-b240-129d70f91941/comparator.json",
+  "status": "solution-present",
+  "description": "At the cut the feed is the only way to remain active. Induction toward the receiver shows that activity is equivalent to the presence of at least one feed at or below the cut. The single-feed threshold therefore agrees at every primary cut with the corresponding tail inventory. The headcount comparison charges each feed position separately and concerns these matched Boolean observations. Counting independent explanatory assumptions instead requires an additional model of how the feeds are generated. An additive readout assigns each in-prefix feed its own observable contribution. Adjacent prefix counts recover membership, and the prefix through the position immediately above the first feed already separates the two inventories."
+}
