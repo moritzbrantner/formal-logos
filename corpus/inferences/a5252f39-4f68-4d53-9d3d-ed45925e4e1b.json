@@ -1,0 +1,10 @@
+{
+  "id": "a5252f39-4f68-4d53-9d3d-ed45925e4e1b",
+  "label": "Finite feedback and an unbounded chain test exercise lifting (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "b885b4d7-408a-4efb-9bd9-704c6dac416a",
+  "rule": "Check each exercise model against the same reciprocal actual esse-supply profile",
+  "meaning": "Reuse the established acyclic three-token feedback and acyclic successor-chain examples. In three-token feedback the actual edge B → A cannot lift at A₀, despite the projected pair B₁ → A₂. In the alternating chain the successor exercise supplies every target and is borne by the other bearer. The even indices give an infinite fibre over the actual identity bearer. Both models project exactly to the reciprocal actual esse-supply relation whose two-edge return goes through that same identity. This certifies separations between the stated assumptions under their formal interpretations.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

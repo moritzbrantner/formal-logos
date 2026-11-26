@@ -1,0 +1,12 @@
+{
+  "id": "48f3c367-eaff-4a66-aa97-4bc69ba581ac",
+  "label": "The eligible exercise relation has no nonempty finite directed cycle",
+  "paraphrase": "On the fixed eligible exercise type E, the interpreted relation C has no nonempty finite directed walk from any exercise back to itself. It can still have an infinite predecessor chain. No clock or temporal direction condition is asserted.",
+  "lean_declaration": "TruthCore.Causality.TemporalActualization.EventAcyclic",
+  "definition_ids": [
+    "4ffdfea6-0a5a-513c-a710-050648c260bf"
+  ],
+  "disambiguation_ids": [
+    "b4da30a9-86f7-57cc-a0c9-17b5dd216ccd"
+  ]
+}

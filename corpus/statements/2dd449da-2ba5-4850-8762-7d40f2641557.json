@@ -1,0 +1,14 @@
+{
+  "id": "2dd449da-2ba5-4850-8762-7d40f2641557",
+  "label": "Every finite panel of actual recipients has a common actual maximal giver of esse",
+  "paraphrase": "Open analyst premise. Fix one actual dictionary and the respect esse. Every finite set of actual recipients, including the empty set, has an actual candidate unsurpassed in esse across the full bearer carrier (MAXIME_1). The same candidate within a panel either is a selected recipient or directly gives that recipient esse. The candidate can vary between panels.",
+  "lean_declaration": "TruthCore.Causality.FiniteGiverPanels.EveryPanelCovered",
+  "definition_ids": [
+    "a2a8de58-42e0-5481-b7fb-848ae8602036",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"
+  ],
+  "disambiguation_ids": [
+    "4f1d0cf6-88ba-59e3-814d-01450c2bf282"
+  ]
+}

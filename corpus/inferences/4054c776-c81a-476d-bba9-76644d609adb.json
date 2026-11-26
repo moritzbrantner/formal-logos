@@ -1,0 +1,15 @@
+{
+  "id": "4054c776-c81a-476d-bba9-76644d609adb",
+  "label": "Unity of named GOD_4 from finite esse ancestry and exclusion at the last edge (inference)",
+  "input_statement_ids": [
+    "c35b1a5c-6405-449b-993b-8196b2457e08",
+    "4c79298d-ee09-5e99-9ced-1be92c19b4cc",
+    "18561596-1269-53ff-8505-c56e4348e335",
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410"
+  ],
+  "output_statement_id": "33b18ae7-4578-54bc-a2b5-edce99b21fc2",
+  "rule": "Identify every named maximum with the common ancestor by excluding the last edge",
+  "meaning": "For each named g the converse of the nominal definition supplies actuality and maximality at esse. If g differs from the common source, its nonempty actual esse-cause path ends at g with a distinct cause of g's esse. That last edge contradicts the existing maximality exclusion on the same profile. Excluded middle supplies the identity split, yielding equality of any two named bearers. This uses neither causal composition nor transitivity of comparison. The conclusion gives uniqueness conditional on naming; naming the source requires a separate argument.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

@@ -1,0 +1,11 @@
+{
+  "id": "88a50d6f-636a-40bb-b952-fe811a9bf6b9",
+  "label": "Finite feedback and an unbounded chain test exercise lifting",
+  "argument_id": "d6176357-1227-4e4f-adb0-6c9b3b53c990",
+  "challenge_module": "TruthCore.Results.Aquinas.DeEnte.ActualIdentityExerciseLifting.Challenge",
+  "solution_module": "TruthCore.Results.Aquinas.DeEnte.ActualIdentityExerciseLifting.Solution",
+  "theorem": "TruthCore.Results.Aquinas.DeEnte.ActualIdentityExerciseLifting.exerciseLiftingControls",
+  "comparator_config": "results/88a50d6f-636a-40bb-b952-fe811a9bf6b9/comparator.json",
+  "status": "solution-present",
+  "description": "Reuse the established acyclic three-token feedback and acyclic successor-chain examples. In three-token feedback the actual edge B → A cannot lift at A₀, despite the projected pair B₁ → A₂. In the alternating chain the successor exercise supplies every target and is borne by the other bearer. The even indices give an infinite fibre over the actual identity bearer. Both models project exactly to the reciprocal actual esse-supply relation whose two-edge return goes through that same identity. This certifies separations between the stated assumptions under their formal interpretations."
+}

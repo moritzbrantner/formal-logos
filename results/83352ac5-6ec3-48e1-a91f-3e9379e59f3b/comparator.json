@@ -1,0 +1,16 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.FiniteGiverPanels.Challenge",
+  "solution_module": "TruthCore.Results.Causality.FiniteGiverPanels.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.FiniteGiverPanels.universalGiver",
+    "TruthCore.Results.Causality.FiniteGiverPanels.boundedRefutation",
+    "TruthCore.Results.Causality.FiniteGiverPanels.cyclicSharpness",
+    "TruthCore.Results.Causality.FiniteGiverPanels.underivedPivotPairs"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "enable_nanoda": true
+}

@@ -1,0 +1,13 @@
+{
+  "challenge_module": "TruthCore.Results.Aquinas.DeEnte.BoundedIdentityExercise.Challenge",
+  "solution_module": "TruthCore.Results.Aquinas.DeEnte.BoundedIdentityExercise.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Aquinas.DeEnte.BoundedIdentityExercise.boundedIdentityExerciseControls"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "enable_nanoda": true
+}

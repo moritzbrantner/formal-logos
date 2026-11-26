@@ -1,0 +1,63 @@
+[batch]
+vocab = "TruthCore.Latin.Aquinas.DeEnte.BoundedIdentityExercise"
+results = "TruthCore.Results.Aquinas.DeEnte.BoundedIdentityExercise"
+
+[[statement]]
+id = "Every actual identity bearer has at least one eligible exercise"
+lean = "ActualIdentityExerciseFibresInhabited"
+paraphrase = "For each bearer r in act as to esse whose represented esse equals its represented essence, at least one token of the fixed eligible exercise type is borne by r. This conditional population requirement applies only to actual identity bearers."
+definitions = ["183b48d2-1753-583d-aef9-4199cff86231", "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"]
+
+[[statement]]
+id = "Each actual identity exercise fibre has a real-time lower bound"
+lean = "ActualIdentityExerciseTimesBoundedBelow"
+paraphrase = "On the fixed q3a4 profile, bearer map and real-valued exercise clock, each actual identity bearer has some real lower bound common to every eligible exercise it bears. The bound may differ by bearer and need not be attained."
+definitions = ["183b48d2-1753-583d-aef9-4199cff86231", "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"]
+
+[[statement]]
+id = "Each actual identity exercise fibre has locally finite indexed real times"
+lean = "ActualIdentityExerciseTimesLocallyFinite"
+paraphrase = "For each actual identity bearer and every real instant, some neighborhood of that instant meets only finitely many eligible exercise tokens of that bearer. The fixed clock assigns an instant to each token. The count is of tokens, including distinct tokens at equal clock values, and the neighborhoods include possible limit instants outside the image."
+definitions = ["183b48d2-1753-583d-aef9-4199cff86231", "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72", "2d94381e-1133-4e5b-9841-0dee609aca01"]
+
+[[statement]]
+id = "Every selected exercise edge advances the exercise clock strictly"
+lean = "TruthCore.Causality.TemporalActualization.StrictForward"
+paraphrase = "On the fixed type of eligible exercise tokens and the selected clock, every interpreted exercise edge C e f places the clock value of e strictly below that of f. This is a premise on C throughout its domain, including intermediate exercises borne by nonidentity bearers."
+definitions = ["1710226f-8899-4d75-b553-f0e40fc7db1d"]
+
+[[statement]]
+id = "Two clocks on one inhabited identity exercise fibre with no minimal exercise"
+lean = "BoundedIdentityExerciseControls"
+paraphrase = "On the existing alternating exercise graph and two-bearer q3a4 feedback profile, actual identity fibres are inhabited and every actual esse-supplier edge admits backward exercise lifting. Each identity exercise has a two-edge incoming path from another exercise of its own bearer. On this graph, the discrete clock −n is strictly forward and locally finite at the identity fibre and fails to bound that fibre from below. The reflected Zeno clock is strictly forward and bounded below there and fails indexed local finiteness."
+definitions = [
+  "183b48d2-1753-583d-aef9-4199cff86231",
+  "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+  "2d94381e-1133-4e5b-9841-0dee609aca01",
+  "4ffdfea6-0a5a-513c-a710-050648c260bf",
+  "cc5eed1d-8e75-473a-9714-f2c04bd75d0f",
+  "1710226f-8899-4d75-b553-f0e40fc7db1d",
+]
+
+[[argument]]
+id = "Bounded and locally finite real times give a minimal identity exercise"
+theorem = "minimalExerciseOfBoundedLocallyFiniteClock"
+premises = [
+  "Every actual identity bearer has at least one eligible exercise",
+  "Each actual identity exercise fibre has a real-time lower bound",
+  "Each actual identity exercise fibre has locally finite indexed real times",
+  "Every selected exercise edge advances the exercise clock strictly",
+]
+conclusion = "004ded49-94d4-42ff-a58b-1fc592e72a02"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Choose a minimum of the finite set of exercises between a lower bound and one inhabited clock value"
+meaning = "Fix one q3a4 profile, eligible exercise roster, bearer map, relation C and real clock. For each actual identity bearer, take its lower bound and the clock value of a chosen eligible exercise. Indexed local finiteness makes this nonempty compact interval contain finitely many exercise tokens of the bearer. A token achieving the minimum among them has no same-bearer predecessor via any nonempty C-path because strict forwardness along that path would put the predecessor in the same interval with a smaller clock value. The interval argument permits infinitely many later exercises and needs no uniform bound or gap size. A physical application requires independently identifying eligible esse-supply exercises, assigning real clock values to those same tokens, and justifying the quantitative and strict-edge conditions there. Its use to exclude an actual esse-supplier return further requires backward lifting on the same interpretation."
+
+[[argument]]
+id = "Matched discrete and reflected Zeno clocks test the interval premise bundle"
+theorem = "boundedIdentityExerciseControls"
+premises = []
+conclusion = "Two clocks on one inhabited identity exercise fibre with no minimal exercise"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Keep the bearer and exercise graphs fixed while switching real clocks"
+meaning = "Use the existing two-actual-bearer reciprocal esse-supply model, alternating exercise bearer map, and n+1 → n exercise graph. Every even n lies on the identity fibre and receives a path from n+2 via n+1. The discrete clock inherits local finiteness from the negative natural clock, while the even indices give arbitrarily negative times. The reflected Zeno clock sends those infinitely many even indices into [0,1], where local finiteness would force a finite number of indices. This certifies that neither a lower bound alone nor indexed local finiteness alone yields a minimal exercise even with inhabited identity fibres, strict forwardness and backward lifting. The clocks are mathematical controls on that interpretation."

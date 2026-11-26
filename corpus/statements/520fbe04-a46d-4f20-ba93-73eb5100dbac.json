@@ -1,0 +1,14 @@
+{
+  "id": "520fbe04-a46d-4f20-ba93-73eb5100dbac",
+  "label": "Some finite panel of actual recipients has only finitely many eligible maximal givers of esse",
+  "paraphrase": "Open analyst premise on the same actual dictionary. Some finite set of actual recipients admits an exhaustive finite population of actual MAXIME_1 candidates, each of which is or directly gives esse to every recipient on that panel. The population can be empty under this premise alone, and the finite bound is on the whole passing population of this one panel.",
+  "lean_declaration": "TruthCore.Causality.FiniteGiverPanels.FinitePivot",
+  "definition_ids": [
+    "a2a8de58-42e0-5481-b7fb-848ae8602036",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"
+  ],
+  "disambiguation_ids": [
+    "4f1d0cf6-88ba-59e3-814d-01450c2bf282"
+  ]
+}

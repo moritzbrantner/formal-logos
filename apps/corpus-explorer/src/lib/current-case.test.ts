@@ -239,12 +239,18 @@ test("real case preserves destinations for every support and evidence record", (
 }, 120_000);
 
 
-test("the ordinary premise dossier shows the current common-giver comparison and next test", async () => {
+test("the ordinary premise dossier shows the finite-panel comparison and retains the two-domain judgment", async () => {
   const statementId = "0881e859-c4c3-53ff-9bec-b61294e12d51";
   const html = renderToStaticMarkup(await DossierPage({ params: Promise.resolve({ statementId }) }));
-  expect(html).toContain("Distinct ultimate sources whose products interact");
-  expect(html).toContain("Next test");
-  expect(html).toContain("For the rim and spokes");
-  expect(html).toContain('href="/attempts/efe9809e-be74-5683-b722-c2694647b840"');
-  expect(html.indexOf("Current research judgments")).toBeLessThan(html.indexOf("Source readings"));
+  const judgmentsStart = html.indexOf('id="assessments"');
+  const sourcesStart = html.indexOf('aria-labelledby="dossier-sources"');
+  expect(judgmentsStart).toBeGreaterThanOrEqual(0);
+  expect(sourcesStart).toBeGreaterThan(judgmentsStart);
+  const judgments = html.slice(judgmentsStart, sourcesStart);
+  expect(judgments).toContain("Evidence of a giver for each recipient fits both universal and partitioned supply.");
+  expect(judgments).toContain("A flat infinite order passes every finite test while each candidate misses its successor.");
+  expect(judgments).toContain("Next test");
+  expect(judgments).toContain("For one actual recipient, establish which maximal candidates could directly give it esse and what excludes any further one.");
+  expect(judgments).toContain('href="/attempts/4e4a3c81-3e59-4d2d-82f3-7668e7aa560e"');
+  expect(judgments).toContain('<option value="efe9809e-be74-5683-b722-c2694647b840">');
 }, 120_000);
