@@ -1,0 +1,41 @@
+{
+  "id": "2bd8f067-5a81-48ac-b8c9-d973ce5609e9",
+  "label": "Same-moment giving from received esse on three readings",
+  "statement_ids": [
+    "76d2cc96-14a0-48bc-bd0b-a5c0ca853265",
+    "964928dc-9067-45d4-8de3-c91e27cbe1c6",
+    "52b05849-88b3-4f44-b81b-768850f9ed12",
+    "6da7d94a-abc4-4092-96c1-9469af548f87",
+    "9a14bdd8-65f8-4fe5-97b7-9fbbcde73e5b",
+    "9fecbef4-0094-4e99-ab9d-98b9c1b916f1",
+    "d86c9de9-25be-488b-b3b7-69f5f4eb80b8",
+    "23e04ae5-98ed-4464-8f9b-dc0dfbad0caa",
+    "d7f5a528-6e11-44a1-a12a-438c88a46cbf",
+    "e15c0c44-841d-4088-ac46-9b4fe07e2082",
+    "d383124b-9fbb-42ce-8ab5-3673b4466c03",
+    "c4661518-33cc-4a53-ae55-cb986be9c2b5"
+  ],
+  "date": "2026-12-02",
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "Section 11 of docs/notes/sustaining-vs-existential-inertia.md. Three explicit assemblies reach distinct same-moment giving: momentary PSR with the productive bridge, occurrence of the origin relation with term giving, and present receipt with correlativity. The first and third use scoped non-self-giving; the second uses origin irreflexivity. The shared two-moment countermodel grants the explanatory demand, origin accompaniment with an existing distinct originator, and standing receipt at the later moment. It falsifies the corresponding productive bridges there. The passion variant grants correlativity and receipt at onset only. The countermodel also grants concurrence when there is giving, and contact when giving, while the sustaining reading fails. This locates the failure of each proposed implication in the stated formal interpretation. It gives no actual example of a strict giver withdrawing while the same bearer persists.",
+  "blocker": "Q.104 a.1 supports a distinct timeless conserver of participated being. Application still needs coverage of the route receivers and the effect-side GivesAt calibration. The same-bearer discriminating test is to hold the initial origin, identity and intrinsic conditions fixed and justify whether loss follows from withdrawal of productive giving. An argument for the inertia law must cover existential cessation and justify the absence of an inducer independently of assuming inertia. Row 51 adds a separate same-cause burden if the result is used for sustained giving by a designated cause. The q.8 immediate-contact calibration remains open.",
+  "evidence": [
+    "5ec9a3bc-55b6-48ed-9f22-98403a488d9c",
+    "437407ac-7d07-42f8-b90b-2b2cf3b5ae43",
+    "50a273d0-d04d-43f8-90cc-fdfad7712a3d",
+    "ea414de5-3a51-42d2-8297-2846dfc63caa",
+    "62877563-d97a-4f44-9890-bf0bc739731c",
+    "da9c82ed-e886-5335-81c3-cebad9b27345",
+    "b246de60-51d3-4e7c-ba3f-0683f169b92f"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-12-02"
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+[batch]
+vocab = "TruthCore.Causality.ConcurrentGiving"
+results = "TruthCore.Results.Causality.ConcurrentGiving"
+
+[[statement]]
+id = "A received-esse bearer never directly gives itself being while present"
+lean = "NoReceivedSelfGiving"
+paraphrase = "OPEN analyst commitment: in every history, at each moment t of x's presence, if x's esse is received in a principle then x does not exercise strict esse-giving on itself at t. This rules out an identity between the direct giver and recipient in that respect. The motivating rationale is that a bearer already exercises its own operation only in virtue of being actual, so treating that very operation as the direct source of that same actuality reverses the proposed dependence. The primitive GivesAt relation does not enforce that rationale. Earlier-to-later explanations, interactions with proper parts, and reflexive nonproductive requirements remain open."
+definitions = ["DEF-ESSE-RECEIVED-IN", "158301bc-9585-4145-be60-34f08c9f922c", "DEF-TEMPORAL-HISTORY-NOW-SLICE", "DEF-ESSE"]
+disambiguations = ["DISAMB-ESSE-RECEPTION"]
+
+[[statement]]
+id = "The origin relation at a moment never relates a bearer to itself"
+lean = "TruthCore.Causality.RelationalReceipt.Irreflexive"
+paraphrase = "OPEN analyst commitment: in every history and at every moment, if x bears the selected origin relation to g at that moment, g is distinct from x. This specifies identity of the two relata only. The rationale is that the relation is to a principle from which the bearer derives its act of being, where treating the bearer itself as its source would require it already to be in order to stand as source. A reflexive existence requirement has a different content. The primitive origin relation does not enforce irreflexivity."
+definitions = ["7b28be97-9a3c-444f-af46-fe410092c3ee", "DEF-TEMPORAL-HISTORY-NOW-SLICE", "DEF-ESSE"]
+
+[[statement]]
+id = "One onset-only giving history supports explanation, origin and RECEIVES_ESSE_AT_2"
+lean = "Control.JointInertia"
+paraphrase = "Finite control: one history has two beings present at both supplied moments, with the recipient's esse received and the distinct originator giving the recipient being at moment 0 only. Momentary explanation by origin or inertia, the cessation law, origin accompaniment, foundation, irreflexivity, term coexistence, standing receipt at each moment, scoped non-self-giving, contact and concurrence hold. The explanation-to-giving bridge, giving by the term, receipt-giving correlativity, weak concurrent actualization and the universal sustaining reading fail."
+definitions = ["DEF-ESSE-RECEIVED-IN", "158301bc-9585-4145-be60-34f08c9f922c", "DEF-TEMPORAL-HISTORY-NOW-SLICE", "DEF-ESSE", "261516e9-9e57-4750-a6ba-f0ea64ff09bf", "8c20c988-31fd-4b59-acf2-db230a6ea32e", "7b28be97-9a3c-444f-af46-fe410092c3ee", "181bb18f-72a4-4cb1-b5c0-9a70f5af2bb5", "211a6432-8b8f-53ed-85e3-75173bb15b24", "56989bd0-a232-56ea-9093-c89350effff4"]
+disambiguations = ["DISAMB-ESSE-RECEPTION", "71d3bdb7-92cc-4023-b0ca-1739914628e4"]
+
+[[statement]]
+id = "Onset-only giving satisfies RECEIVES_ESSE_AT_1 correlativity and onset receipt"
+lean = "Control.OnsetOnlyPassion"
+paraphrase = "In the two-moment inertia history on the passion interpretation, receipt at onset and receipt-giving correlativity hold, while reception at every moment of presence and weak concurrent actualization fail. The recipient is present at moment 1 with no passion receipt or giver then."
+definitions = ["DEF-ESSE-RECEIVED-IN", "158301bc-9585-4145-be60-34f08c9f922c", "DEF-TEMPORAL-HISTORY-NOW-SLICE", "DEF-ESSE", "ac8dbcaa-09d9-4f9e-9d19-995b38642f82"]
+disambiguations = ["DISAMB-ESSE-RECEPTION", "71d3bdb7-92cc-4023-b0ca-1739914628e4"]
+
+[[argument]]
+id = "Distinct concurrent giving from momentary explanation and the productive bridge"
+theorem = "distinctOfMomentaryExplanation"
+premises = ["9a14bdd8-65f8-4fe5-97b7-9fbbcde73e5b", "d86c9de9-25be-488b-b3b7-69f5f4eb80b8", "A received-esse bearer never directly gives itself being while present"]
+conclusion = "76d2cc96-14a0-48bc-bd0b-a5c0ca853265"
+transcription = "assembly"
+axioms = []
+rule = "Use the momentary PSR and productive bridge to obtain a giver there, then exclude identity by scoped non-self-giving"
+meaning = "Assembly: for a received-esse thing present at t, the existing explanatory derivation gives a giver at t; scoped non-self-giving makes that witness distinct. The productive bridge is an open commitment about giving, beyond the demand to explain the fact of presence at t."
+
+[[argument]]
+id = "Distinct concurrent giving from an irreflexive origin relation whose term gives"
+theorem = "distinctOfOriginTerm"
+premises = ["9fecbef4-0094-4e99-ab9d-98b9c1b916f1", "6da7d94a-abc4-4092-96c1-9469af548f87", "The origin relation at a moment never relates a bearer to itself"]
+conclusion = "76d2cc96-14a0-48bc-bd0b-a5c0ca853265"
+transcription = "assembly"
+axioms = []
+rule = "Select the origin term at the recipient's moment, exclude identity by irreflexivity and apply the term-giving bridge"
+meaning = "Assembly: accompaniment supplies a term at t, irreflexivity distinguishes that witness from the bearer, and giving by the term supplies the witness's giving at t. Giving by the term is an open commitment beyond the relation's continued obtaining or the term's coexistence."
+
+[[argument]]
+id = "Distinct concurrent giving from present-tense receipt and correlativity"
+theorem = "distinctOfPresentReceipt"
+premises = ["964928dc-9067-45d4-8de3-c91e27cbe1c6", "52b05849-88b3-4f44-b81b-768850f9ed12", "A received-esse bearer never directly gives itself being while present"]
+conclusion = "76d2cc96-14a0-48bc-bd0b-a5c0ca853265"
+transcription = "assembly"
+axioms = []
+rule = "Use present-tense receipt and correlativity to obtain a giver there, then exclude identity by scoped non-self-giving"
+meaning = "Assembly over the same primitive Receipt parameter in both premises. The existing receipt derivation produces a giver at the recipient's moment t; scoped non-self-giving makes that witness distinct. On the standing interpretation the productive burden falls on correlativity; on the passion interpretation it falls on receipt at every moment."
+
+[[argument]]
+id = "Finite onset-only giving with explanation, origin and RECEIVES_ESSE_AT_2"
+theorem = "jointInertia"
+premises = []
+conclusion = "One onset-only giving history supports explanation, origin and RECEIVES_ESSE_AT_2"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+senses = {RECEIVES_ESSE_AT = "RECEIVES_ESSE_AT_2"}
+rule = "Evaluate the propositions on the explicit two-moment causality frame"
+meaning = "Closed control over a single interpretation. Onset-only giving is compatible there with momentary explanation, origin accompaniment, standing receipt, non-self-giving, contact and concurrence, as well as the cessation law, foundation, irreflexivity and term coexistence. The three productive bridges, weak concurrent actualization and the universal sustaining reading all fail in that frame."
+
+[[argument]]
+id = "Finite RECEIVES_ESSE_AT_1 contrast of onset and present receipt"
+theorem = "onsetOnlyPassion"
+premises = []
+conclusion = "Onset-only giving satisfies RECEIVES_ESSE_AT_1 correlativity and onset receipt"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+senses = {RECEIVES_ESSE_AT = "RECEIVES_ESSE_AT_1"}
+rule = "Evaluate the passion interpretation of receipt on the two-moment causality frame"
+meaning = "Closed control over the passion interpretation. Receipt at onset and correlativity hold. Present-tense receipt and weak concurrent actualization fail."

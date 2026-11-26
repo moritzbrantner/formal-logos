@@ -1,0 +1,25 @@
+{
+  "id": "5e8ed8a9-e82f-4823-bc4c-e04489fe4dd0",
+  "label": "Distinct concurrent giving from present-tense receipt and correlativity",
+  "premise_statement_ids": [
+    "964928dc-9067-45d4-8de3-c91e27cbe1c6",
+    "52b05849-88b3-4f44-b81b-768850f9ed12",
+    "e15c0c44-841d-4088-ac46-9b4fe07e2082"
+  ],
+  "conclusion_statement_id": "76d2cc96-14a0-48bc-bd0b-a5c0ca853265",
+  "inference_ids": [
+    "afa282ef-ea93-4185-a37b-63835b99220c"
+  ],
+  "meaning": "Assembly over the same primitive Receipt parameter in both premises. The existing receipt derivation produces a giver at the recipient's moment t; scoped non-self-giving makes that witness distinct. On the standing interpretation the productive burden falls on correlativity; on the passion interpretation it falls on receipt at every moment.",
+  "definition_ids": [
+    "158301bc-9585-4145-be60-34f08c9f922c",
+    "506ea036-c6bf-4e2d-aee3-7b25bfcdfea6",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "4433942e-aaf6-55a9-b777-66e55638103d",
+    "6e811e85-b983-5988-b20a-f4f3ee83c50e"
+  ],
+  "disambiguation_ids": [
+    "71d3bdb7-92cc-4023-b0ca-1739914628e4",
+    "5921354b-51e6-5da3-8d8c-e9041840fd9f"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "d383124b-9fbb-42ce-8ab5-3673b4466c03",
+  "label": "The origin relation at a moment never relates a bearer to itself",
+  "paraphrase": "OPEN analyst commitment: in every history and at every moment, if x bears the selected origin relation to g at that moment, g is distinct from x. This specifies identity of the two relata only. The rationale is that the relation is to a principle from which the bearer derives its act of being, where treating the bearer itself as its source would require it already to be in order to stand as source. A reflexive existence requirement has a different content. The primitive origin relation does not enforce irreflexivity.",
+  "lean_declaration": "TruthCore.Causality.RelationalReceipt.Irreflexive",
+  "definition_ids": [
+    "7b28be97-9a3c-444f-af46-fe410092c3ee",
+    "6e811e85-b983-5988-b20a-f4f3ee83c50e",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"
+  ]
+}

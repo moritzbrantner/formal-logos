@@ -1,0 +1,15 @@
+{
+  "id": "e15c0c44-841d-4088-ac46-9b4fe07e2082",
+  "label": "A received-esse bearer never directly gives itself being while present",
+  "paraphrase": "OPEN analyst commitment: in every history, at each moment t of x's presence, if x's esse is received in a principle then x does not exercise strict esse-giving on itself at t. This rules out an identity between the direct giver and recipient in that respect. The motivating rationale is that a bearer already exercises its own operation only in virtue of being actual, so treating that very operation as the direct source of that same actuality reverses the proposed dependence. The primitive GivesAt relation does not enforce that rationale. Earlier-to-later explanations, interactions with proper parts, and reflexive nonproductive requirements remain open.",
+  "lean_declaration": "TruthCore.Causality.ConcurrentGiving.NoReceivedSelfGiving",
+  "definition_ids": [
+    "4433942e-aaf6-55a9-b777-66e55638103d",
+    "158301bc-9585-4145-be60-34f08c9f922c",
+    "6e811e85-b983-5988-b20a-f4f3ee83c50e",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"
+  ],
+  "disambiguation_ids": [
+    "5921354b-51e6-5da3-8d8c-e9041840fd9f"
+  ]
+}

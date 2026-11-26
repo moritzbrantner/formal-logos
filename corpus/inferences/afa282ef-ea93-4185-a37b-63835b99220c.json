@@ -1,0 +1,14 @@
+{
+  "id": "afa282ef-ea93-4185-a37b-63835b99220c",
+  "label": "Distinct concurrent giving from present-tense receipt and correlativity (inference)",
+  "input_statement_ids": [
+    "964928dc-9067-45d4-8de3-c91e27cbe1c6",
+    "52b05849-88b3-4f44-b81b-768850f9ed12",
+    "e15c0c44-841d-4088-ac46-9b4fe07e2082"
+  ],
+  "output_statement_id": "76d2cc96-14a0-48bc-bd0b-a5c0ca853265",
+  "rule": "Use present-tense receipt and correlativity to obtain a giver there, then exclude identity by scoped non-self-giving",
+  "meaning": "Assembly over the same primitive Receipt parameter in both premises. The existing receipt derivation produces a giver at the recipient's moment t; scoped non-self-giving makes that witness distinct. On the standing interpretation the productive burden falls on correlativity; on the passion interpretation it falls on receipt at every moment.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

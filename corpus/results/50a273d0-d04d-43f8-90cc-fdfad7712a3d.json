@@ -1,0 +1,12 @@
+{
+  "id": "50a273d0-d04d-43f8-90cc-fdfad7712a3d",
+  "label": "Distinct concurrent giving from present-tense receipt and correlativity",
+  "argument_id": "5e8ed8a9-e82f-4823-bc4c-e04489fe4dd0",
+  "challenge_module": "TruthCore.Results.Causality.ConcurrentGiving.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ConcurrentGiving.Solution",
+  "theorem": "TruthCore.Results.Causality.ConcurrentGiving.distinctOfPresentReceipt",
+  "comparator_config": "results/50a273d0-d04d-43f8-90cc-fdfad7712a3d/comparator.json",
+  "status": "solution-present",
+  "description": "Assembly over the same primitive Receipt parameter in both premises. The existing receipt derivation produces a giver at the recipient's moment t; scoped non-self-giving makes that witness distinct. On the standing interpretation the productive burden falls on correlativity; on the passion interpretation it falls on receipt at every moment.",
+  "transcription": "assembly"
+}

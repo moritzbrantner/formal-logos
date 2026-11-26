@@ -1,0 +1,17 @@
+{
+  "id": "539c6e2d-c632-4e13-9a43-6290bef515ec",
+  "label": "Onset-only giving satisfies RECEIVES_ESSE_AT_1 correlativity and onset receipt",
+  "paraphrase": "In the two-moment inertia history on the passion interpretation, receipt at onset and receipt-giving correlativity hold, while reception at every moment of presence and weak concurrent actualization fail. The recipient is present at moment 1 with no passion receipt or giver then.",
+  "lean_declaration": "TruthCore.Causality.ConcurrentGiving.Control.OnsetOnlyPassion",
+  "definition_ids": [
+    "4433942e-aaf6-55a9-b777-66e55638103d",
+    "158301bc-9585-4145-be60-34f08c9f922c",
+    "6e811e85-b983-5988-b20a-f4f3ee83c50e",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "ac8dbcaa-09d9-4f9e-9d19-995b38642f82"
+  ],
+  "disambiguation_ids": [
+    "5921354b-51e6-5da3-8d8c-e9041840fd9f",
+    "71d3bdb7-92cc-4023-b0ca-1739914628e4"
+  ]
+}

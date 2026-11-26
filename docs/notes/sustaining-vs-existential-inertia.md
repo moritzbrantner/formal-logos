@@ -1478,6 +1478,114 @@ nor a necessary or underived source. The inference from identity to present
 production remains open, with no new support option or discharge.
 [Instances used by the esse-root routes](esse-root-leaves.md#b-where-the-fourteen-enter-which-instance-each-route-consumes-and-bypasses).
 
+## 11. What turns received esse into giving at the same moment? (2026-12-02)
+
+Fix one history, the same received-esse bearer, and a moment of its presence.
+`EsseReceivedIn x z` is receiver-to-received-act composition. Neither the
+principle `z` nor the bearer is thereby an efficient giver. The arguments
+start with this positive reception predicate. A claim that x's essence
+fails to account for its esse would still need to be connected to that
+predicate if it were the only premise about composition. The inherited
+`GivesAt v g x t` means productive exercise of the causation of x's esse
+with t on the effect side. This allows timeless action to be indexed by
+its effect's presence, once that interpretation bridge has been defended.
+Earlier production, preventing destruction, giving an accidental perfection
+and explaining a later fact by an earlier fact are different roles.
+
+| Reading | Premises that suffice for a distinct giver at the recipient's moment | Where onset-only giving survives |
+| --- | --- | --- |
+| Explanation of presence at each moment | Momentary PSR `9a14bdd8`, productive bridge `d86c9de9`, and scoped direct non-self-giving | The fact explained is the recipient's presence at t. An earlier presence plus a law can explain that very fact without a giver at t. The model keeps the PSR and rejects the productive bridge. |
+| Origin relation obtained at each moment | Accompaniment `9fecbef4`, term giving `6da7d94a`, and origin irreflexivity | The originator is present and is still the related term at t, while idle at t. Accompaniment and even term coexistence leave term giving open. An origin relation restricted to onset instead drops accompaniment, as in the earlier relational-receipt controls. |
+| Receipt while present | Present receipt `964928dc`, correlativity `52b05849`, and scoped direct non-self-giving | Standing receipt (RECEIVES_ESSE_AT_2) holds throughout and correlativity fails. Passion receipt (RECEIVES_ESSE_AT_1) has correlativity by construction but occurs only at onset in the same giving history. |
+
+The three deductions are assemblies for the strong conclusion `76d2cc96`,
+using the same `CausalityFrame` and receipt predicate per argument. Previous
+results derive the weaker conclusion `40a97664`, allowing a self-giver.
+Direct non-self-giving is restricted here to received bearers when present.
+There is prima facie warrant on the productive reading: an operation of x
+presupposes x is actual, so that operation is a poor candidate for the direct
+source of the very actuality it presupposes. An inertialist who invokes the
+bearer's earlier actuality can grant this restriction. A putatively productive
+intrinsic power would need an account of how it produces its own bearer at
+that moment without the explanatory dependence running both ways. The same
+reason motivates origin irreflexivity on the derivative-source reading,
+while a reflexive requirement or an account using distinct proper parts
+requires its own analysis. Both commitments are open and neither requires
+general causal transitivity, well-foundedness, or a denial of self-maintenance.
+
+The [finite Lean controls](../../TruthCore/Causality/ConcurrentGiving.lean)
+fix one history and two individuals at both supplied moments. True gives
+false esse at moment 0. At moment 1 false is still present with received
+esse, still related to true, and has no giver. `JointInertia` checks the
+explanatory failure, relational failure and standing-receipt failure jointly;
+`OnsetOnlyPassion` checks the passion case with the same history and giving.
+The cessation law holds because neither bearer is lost in the model. The
+origin-or-inertia explanation at 1 uses prior presence and the lack of an
+inducer, so its reason is inhabited even though the productive bridge fails.
+These are structural surrogates. The model holds identity fixed and includes
+no experiment isolating a conserver and no account of why the persistence
+law governs real received esse.
+
+**Positive rival and its price.** The matched no-change reconstruction
+takes the same bearer's earlier actuality, no inducer of its loss, and a
+law requiring an inducer for existential cessation. If the bearer were
+absent later, that would be a loss and hence would require an inducer.
+This supplies a conditional explanation of the particular later fact and
+targets the necessity of a productive explanation in `d86c9de9` and the
+equivalent productive burden on standing receipt. The positive rationale
+is the causal requirement on changes and the familiar difference between
+producing something and keeping it, illustrated by Aquinas's own builder
+and house. This illustration concerns a cause of becoming. It supplies no
+observed case of an independently identified, strict cause of esse ceasing
+to give while the very same effect remains. The law must cover existential
+loss, and the no-inducer claim must survive the conservator's reply that
+withdrawal of a necessary giver could itself explain loss. Merely having a
+deduction from a history and a law leaves open whether they explain the
+whole history's actuality and whether further production also occurs.
+See the pinned [Schmid reply, part 3](../../corpus/passages/schmid-inertia-reply-3.json)
+and §§7–10 above. [Beaudoin's publisher abstract](https://doi.org/10.1007/s11153-007-9113-1)
+identifies a narrower scope, the universe's fundamental material; extension
+to all received-esse bearers would require a further argument. The
+Mackie-style distinction between an earlier origin and a concurrent
+sustaining series is used here as an analyst contrast; the model uses
+Schmid's reconstruction, with no new attribution record for either author.
+
+**Provisional assessment.** The strongest positive warrant for concurrent
+giving is the direct conservation account in I q.104 a.1 co. and ad 4:
+given the cause-of-being reading, the dependence is on productive exercise
+throughout, and the action continues without motion or time. The approved
+[support relation](../../corpus/relations/a32d71ad-483a-4ad4-9afb-80dccbf61004.json)
+leaves open the coverage of all route receivers and the effect-side
+`GivesAt` calibration. Continuing receipt and the continuing origin
+relation are intelligible in both frameworks. All three assemblies put
+the contested productive step on the open premise side; they provide no
+new independent warrant for that step. Direct concurrent giving remains
+a defensible primitive option. To revise this assessment, fix the same
+bearer, origin, powers and cessation conditions, then justify either
+why withdrawal of productive giving is sufficient for that bearer's loss
+or why the prior-state law suffices when that giving is absent. An example
+about the loss of an accidental quality needs a further bridge to the
+loss of the bearer itself.
+
+**Downstream.** Concurrence `d7f5a528` constrains who gives when some giving
+occurs. It holds in the onset-only model while sustaining `23e04ae5` fails.
+The q.104 distinction gives a reason to investigate the sustaining reading
+for direct causes of being. An uncalibrated tenseless edge could instead be
+assigned to an originator whose exercise has ended. The existing
+`sustainingOfConcurrentActualization` uses concurrent actualization,
+concurrence and `da72ae93` to reach `ce55210c`, the restriction to causes
+distinct from their effect. Even strong concurrent giving permits a relay
+of distinct givers, as in the existing concurrent-actualization control.
+The immensity presence route also uses `c4661518` for contact. I q.8 a.1–2
+supports presence by power to an immediate effect, leaving the
+[typed co-presence calibration](../../corpus/relations/485c891d-a69b-44eb-ab29-97a4a7d37d30.json)
+open. A Second Way application must additionally identify concurrent
+giving with the selected per se dependence and supply its relevant ordering
+and regress premises. No claim here establishes conservation, omnipresence,
+immensity, or that regress step.
+
+[Attempt record](../../corpus/attempts/2bd8f067-5a81-48ac-b8c9-d973ce5609e9.json)
+
 ## Research attempts citing this note
 
 - [Necessary origin with existential inertia against the esse-priority source bundle](../../corpus/attempts/4b051644-666b-451e-8e09-b5b9356932f9.json)
