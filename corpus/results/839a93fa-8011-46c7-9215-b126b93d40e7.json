@@ -1,0 +1,11 @@
+{
+  "id": "839a93fa-8011-46c7-9215-b126b93d40e7",
+  "label": "Recover the missing requirements and exact witnesses from each giving-plan denial",
+  "argument_id": "98f84488-46c3-4c35-a5e4-8dee18aaac7f",
+  "challenge_module": "TruthCore.Results.Causality.GivingPlanExceptions.Challenge",
+  "solution_module": "TruthCore.Results.Causality.GivingPlanExceptions.Solution",
+  "theorem": "TruthCore.Results.Causality.GivingPlanExceptions.exceptions",
+  "comparator_config": "results/839a93fa-8011-46c7-9215-b126b93d40e7/comparator.json",
+  "status": "solution-present",
+  "description": "Given a governing plan, all its requirements are realized. Its edited description therefore still meets the standard exactly when none of the removed clauses was required. Apply this fact and classical quantifier duality within each principle's own restrictions."
+}

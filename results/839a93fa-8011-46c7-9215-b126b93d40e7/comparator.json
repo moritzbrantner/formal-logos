@@ -1,0 +1,13 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.GivingPlanExceptions.Challenge",
+  "solution_module": "TruthCore.Results.Causality.GivingPlanExceptions.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.GivingPlanExceptions.exceptions"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "enable_nanoda": true
+}
