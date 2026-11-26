@@ -1,0 +1,32 @@
+[batch]
+vocab = "TruthCore.Causality.IntellectualAppetite"
+results = "TruthCore.Results.Causality.IntellectualAppetite"
+
+[[statement]]
+id = "700215cd-e9b9-465c-9075-fd6583f197eb"
+label = "Every GOD_4 with HAS_INTELLECT_1 apprehends a good under an actualizing intelligible form"
+lean = "GodIntellectApprehendsGood"
+paraphrase = "Open analyst premise. For each GOD_4 bearer with HAS_INTELLECT_1, some intelligible form actualizes that same bearer and presents something to that bearer as good. Appraisal may concern the bearer's own good."
+definitions = ["DEF-GOD-OF-CLASSICAL-THEISM", "DEF-HAS-INTELLECT", "DEF-APPETITIVE-OBJECT-ASPECT", "fb2759f7-aecb-4921-9f82-61de72a45245"]
+
+[[statement]]
+id = "GOD_4 has an inclination following an actualizing form under which it apprehends a good"
+lean = "AppraisedFormInclines"
+paraphrase = "Open analyst premise. For each GOD_4, whenever an intelligible form actualizes that bearer and it apprehends something as good under that form, it has an orientation following that form. Formally, appraisal and inclination are linked only by the shared form index; the premise does not encode that the orientation follows because the good is apprehended under that aspect, which remains an open interpretation. No act of pursuit or production is asserted."
+definitions = ["DEF-GOD-OF-CLASSICAL-THEISM", "DEF-APPETITIVE-OBJECT-ASPECT", "fb2759f7-aecb-4921-9f82-61de72a45245"]
+
+[[statement]]
+id = "6f3f1c14-9d10-4bfa-bdc0-6dfae1d0554a"
+label = "In a GOD_4, inclination following a form presenting a good counts as HAS_WILL_1"
+lean = "AppraisedInclinationIsWill"
+paraphrase = "Open analyst premise. If a GOD_4 bearer apprehends something as good under an intelligible form and has an inclination following that same form, it HAS_WILL_1. Formally, the appraisal and the inclination share only the form index. The interpretation on which the inclination answers to the good because it is apprehended under that aspect is recorded as open and is not encoded; mere co-occurrence under one form satisfies the antecedent. The proposition uses the primitive possession predicate and does not posit a separate passive faculty or an actual episode."
+definitions = ["DEF-GOD-OF-CLASSICAL-THEISM", "DEF-HAS-WILL", "DEF-APPETITIVE-OBJECT-ASPECT", "fb2759f7-aecb-4921-9f82-61de72a45245"]
+
+[[argument]]
+id = "GOD_4 HAS_WILL_1 through an inclination following an apprehended good"
+theorem = "godHasWillFromAppraisedForm"
+premises = ["STMT-GOD-HAS-INTELLECT", "700215cd-e9b9-465c-9075-fd6583f197eb", "GOD_4 has an inclination following an actualizing form under which it apprehends a good", "6f3f1c14-9d10-4bfa-bdc0-6dfae1d0554a"]
+conclusion = "STMT-GOD-HAS-WILL"
+axioms = []
+rule = "Choose one actualizing intelligible form presenting good and use it in both inclination steps"
+meaning = "For each GOD_4, use its intellect to obtain an actualizing intelligible form under which it apprehends a good. The restricted inclination law supplies an orientation following that very form in that same bearer. The guarded recognition premise gives HAS_WILL_1 for that bearer. The conclusion is possession of will. Any act, rational giving or possible withholding requires further hypotheses."

@@ -1,0 +1,33 @@
+{
+  "id": "c3f27519-9df6-4a7f-ac8b-5a53b4bc1ece",
+  "label": "Distinguish a foreseen good from a plan that governs the giving",
+  "statement_ids": [
+    "4be0f774-2c0a-4691-9088-6e790940960a"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "The compiled practical-specification application uses rational giving for the same distinct effect and the prior operative-plan coverage hypothesis. The foreseen control shows that agreement with an apprehended plan does not establish operative governance. See docs/intellectual-appetite-source.md#intellectual-appetite-willing-and-self-operation-2026-11-26.",
+  "blocker": "Identify an independently specified plan and show why it governs this giving rather than simply describing its effect.",
+  "evidence": [
+    "a4a6c33c-2efd-441a-a94d-f6ef01268636",
+    "PR-2031"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2031"
+    },
+    {
+      "role": "repair",
+      "provider": "claude",
+      "model": "claude-opus-5-5",
+      "date": "2026-11-26",
+      "pr": "PR-2031"
+    }
+  ]
+}

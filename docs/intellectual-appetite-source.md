@@ -362,3 +362,219 @@ zero. Root premise and closure change: none. Attribution remains deferred.
 ## Research attempts citing this note
 
 - [#355: typed the q.19 a.1 argument with forms and inclinations so that will follows intellect is…](../corpus/attempts/will-from-intellectual-inclination.json)
+
+## Intellectual appetite, willing and self-operation (2026-11-26)
+
+### Provisional judgment
+
+The best current intellect-based support for GOD_4 possessing will concerns
+its own apprehended good. It combines an account of an intellectual act in
+which the bearer knows its own form, an account of how that good is presented
+under an evaluative aspect, and a substantive principle that this evaluative
+apprehension grounds an orientation of the bearer to the good. The proof
+leaves that last principle open. Pure contemplation is the strongest local
+challenge. The exercise of will toward a possessed intrinsic good is a
+further step. Practical direction toward distinct effects has its own
+evidential route through #2019–#2021.
+
+#### From intellectual form to capacity
+
+The general conditional is already proved by
+[willFromIntellectualInclination](../TruthCore/Results/Causality/IntellectualInclination/Solution.lean).
+Its three premises are intelligible-form coverage for intellect, inclination
+following every form, and recognition of intelligible-form inclination as
+will. Round 5 decomposes those premises separately through operation and
+finality, actual understanding, and an appetitive principle. The old
+inclination and recognition predicates leave the evaluative aspect implicit.
+
+The new [same-bearer application](../TruthCore/Results/Causality/IntellectualAppetite/Solution.lean)
+fixes the aspect explicitly. Given `GodHasIntellect`, it uses:
+
+1. `GodIntellectApprehendsGood` (`700215cd`). Each qualifying bearer is in act
+   through some intelligible form and apprehends a good under that same form.
+   The form index tracks the intelligible presentation. The predicate adds
+   appraisal to actual understanding in rows 173–174. There is no
+   general premise that every possible intellect is exercising cognition.
+2. `AppraisedFormInclines` (`69bbed47`). On a GOD_4 bearer and a form satisfying
+   those guards, an inclination follows that form. The application uses the
+   same relation `InclinedTo` as the older proof. The narrower law is sufficient
+   here without requiring comparable inclinations for other forms and bearers.
+3. `AppraisedInclinationIsWill` (`6f3f1c14`). The inclination is recognized as
+   HAS_WILL_1 on the same bearer. Formally, the appraisal and the inclination
+   share only the form index: an inclination following the same form for an
+   independent reason also satisfies the antecedent. The interpretation on
+   which the orientation answers to the good *because* it is apprehended under
+   that aspect is the disputed evaluative step and remains open; encoding it
+   would need a typed condition that excludes mere co-occurrence under one form. The classification
+   uses neither creaturely passive power nor a present episode as an antecedent.
+
+`godHasWillFromAppraisedForm` binds all four premises to the existing
+`GodHasWill` statement `66aecdd7`. Its exact type is universal over bearers
+that satisfy GOD_4. Existence remains a separate root obligation. The finite
+controls give omission assignments for each of the four inputs and a
+populated positive application. In `Control.contemplator` the single bearer
+has the specified intelligible appraisal and no form-relative inclination
+at all. Recognition holds on that assignment, the inclination law fails,
+and the bearer has no will. The model is a structural test of the inference.
+
+`restrictFormInclination` and `restrictRecognition` prove the respective
+scope reductions on the same Lean assignments. `Control.scopeIsStrict`
+has an appraised case satisfying the local inclination law and a distinct
+form outside the guards falsifying `EveryFormHasInclination`. The strength
+order is checked here at the type level. A corpus `strengthens` edge needs
+prior review of the old bindings. On new-argument preflight,
+`STMT-EVERY-FORM-HAS-INCLINATION` imports both appetite senses through its
+definition links, and `STMT-INTELLIGIBLE-INCLINATION-IS-WILL` imports both
+HAVING_WILL_OR_APPETITE_VERSUS_EXERCISING_1 and _2. The Lean sources of the
+projections quantify over a primitive orientation. They supply no conversion
+from `Capacity.Possessed`, which requires soulhood. Registering either
+projection with those links as a new sense bridge would overstate it.
+The earlier applications and the direct assumption options remain available.
+
+#### From capacity to exercise, life and direction
+
+| Claim | Encoded boundary on the same bearer |
+| --- | --- |
+| Possession of will | `GodHasWill` uses HAS_WILL_1 and WILL_CAPACITY_VERSUS_WILLED_GIVING_1. Appetite's `Capacity.Possessed` is a separate soul-relative sense. |
+| Act of will concerning a good | `Nonempty (AppetitePowerExercise.Exercise m g o t)` is a concrete episode claim in the supplied interpretation. `t` is an occasion and may represent an intrinsic act without a temporal transition. |
+| Self-operation and life | `OperatingFromItselfIsLiving Operates Lives` applies at a supplied time of actual self-operation. The worked application uses pure act and `PureActLifeAtSomeTimeIsLiving` to reach the separate timeless `D.Lives g`. The existing immanent-operation route can use understanding even while will is unsettled. |
+| Rational exercise and direction | WILL_CAPACITY_VERSUS_WILLED_GIVING_3 is `RationallyGivesAt F A w g x`, actual giving by an owned rational power. The worked #2020 application derives `∃ e, Directs g x e` for the same distinct actual effect using operative-plan coverage, end-omission rejection and end-recognition. WILL_CAPACITY_VERSUS_WILLED_GIVING_2 adds a same-set-up withholding witness, which those direction inputs do not supply. |
+
+`exerciseAtPossessedGood` uses the calibration that at this possessed
+apprehended good a bearer with will is either exercising it there or is
+in potency in a supplied intrinsic respect. Pure act rules out the latter
+on the same bearer. This calibration carries a substantive match of
+respect, good and occasion. In the adopted POTENCY_1 reading,
+`exerciseAtMatchedRespect` exposes its components: `CanBe g r` must
+include this intrinsic exercise at the selected respect, and `InAct g r`
+must deliver an actual episode in the interpretation. Pure act alone
+supplies neither. Widening `r` to the ability to produce each external
+effect would require a distinct warrant and can force every represented
+ability into actual production. Neither theorem yields that application.
+
+`Control.capacityAndExercise` checks populated apprehension of a possessed
+good with possible love and no act, and an actual-love assignment with the
+same good and occasion. `Control.pureActWithoutCalibration` checks an
+independent assignment of pure act, HAS_WILL_1, appraisal and possession
+with no represented exercise. Soulhood is false in that assignment. This
+identifies the missing respect calibration even if the pure-act predicate
+holds. The proofs do not certify a patientless metaphysical realization.
+
+#### Scope of the prior evidence and standing rivals
+
+The prior [source-support batch](https://github.com/moritzbrantner/formal-logos/pull/2024)
+supports narrower readings of ST I q.76 a.1 and q.80 a.1–2, the possessed-good
+case of q.19 a.1, and the immanent-operation reading of q.18 a.2–3.
+Sourced support for agential finality in ST I–II q.1 a.2 bears on row 170.
+To use rows 170/171/178 together, an operation needs its intrinsic form
+and attributable end in a common respect. A ball can roll toward a drain
+because it was put on a gradient. Identifying its path or endpoint alone
+does not identify an intrinsic end that follows from the ball's own form.
+The finality decomposition adds explanatory structure when it supplies
+that intrinsic link. Otherwise the direct form–inclination premise is a
+credible candidate primitive in a theory where forms specify characteristic
+operations. The strongest everyday warrant is the stability of species-
+characteristic activity across ordinary changes of opportunity or
+interference. This warrants form-relative orientation better than it
+warrants the universal quantifier over immaterial and intelligible form.
+The negative test is whether good-directedness is constitutive of the
+intellectual form at issue, or the good is already a sufficient terminus
+of contemplation with no additional appetite. Rows 177/180 require
+recognizing that same orientation as an appetitive principle and then
+as possession of will. The existing `HAS_WILL_3` label in row 180 must
+be read against its actual `HasWill` parameter and DEF-HAS-WILL link.
+It supplies neither form-indexed actual exercise nor rational giving.
+
+- **Pure contemplation.** In *Metaphysics* Λ.9, intellect's supreme
+  actuality is explained by the excellence and identity of its
+  sole primary object, itself. Dependence on another object or a switch
+  of object would undermine the explanatory account of its invariant
+  excellence. Λ.7 explains motion through an object of desire and
+  identifies the first actuality's own life with thought. This motivates
+  a pure-contemplator reconstruction that grants actual apprehension
+  and rejects `AppraisedFormInclines` if form-relative appetite is an
+  additional determinant of that activity. The rival explains intrinsic
+  life and final attracting without an account of efficient giving in
+  esse. The historical reading is narrower than the finite control:
+  Λ.7 calls contemplation supremely pleasant, so Λ.9 cannot by itself
+  establish absence of intrinsic rest or delight. If the pleasure is
+  genuine affirmation of the apprehended good, the Thomist recognition
+  may apply even on a model with no outward willing. The discriminating
+  question is whether self-thinking accounts for that pleasure in full
+  or is also an immanent appetitive act toward its object.
+  [Aristotle, *Metaphysics* XII.7 and XII.9, Ross translation](https://classics.mit.edu/Aristotle/metaphysics.12.xii.html)
+- **Procession from perfection.** *Enneads* V.4 distinguishes a perfection
+  internal to the source and a consequent outgoing activity. Fire's
+  outward warmth illustrates production which has its explanation in
+  a source remaining what it is. Plotinus accordingly gives a positive
+  replacement for effect-selection by a governing plan, and his distinction
+  between the One and derivative Intellect makes the antecedent of
+  `GodIntellectApprehendsGood` itself disputed for the first source.
+  Taking necessary procession as the complete explanation rejects
+  the inference from production to `RationallyGivesAt`, or rejects
+  effect-specific operative-plan coverage (row 217) if a thin rationality
+  assignment is allowed. His distinction between the One's qualified
+  self-presence and ordinary intellectual multiplicity also challenges
+  whether the first bearer is intellectual in the selected sense.
+  In VI.8.13 Plotinus treats the One's will toward itself and its
+  essential being as identical, with an explicit qualification about
+  applying the language to the One. This gives independent historical
+  motivation for allowing intrinsic willing alongside an account of
+  procession that dispenses with practical selection of effects.
+  The strongest relevant check is whether stable inward perfection can
+  discriminate actual effects while satisfying the same contingency
+  constraints as the theistic route. For the same giver with invariant
+  set-up and factive giving, the checked fixedness law in
+  [will versus chance](notes/will-versus-chance.md#2-part-a-a-necessitating-source-is-excluded-already)
+  requires necessity of effects if giving is set-up necessitated. A
+  rival that accepts only necessary effects can retain the mechanism
+  by rejecting the shared contingency premise. The restriction applies
+  to necessitating rational giving as well.
+  [Plotinus, *Enneads* V.4.1–2, MacKenna translation](https://en.wikisource.org/wiki/Plotinus_(MacKenna)/Volume_4/Ennead_5.4)
+  [Plotinus, *Enneads* VI.8, MacKenna translation](https://en.wikisource.org/wiki/Plotinus_(MacKenna)/Volume_5/Ennead_6.8)
+- **Anthropomorphic transfer.** The objection with a mechanism targets
+  recognition via a univocal passive soul-power, or the interpretation
+  of every actual will as seeking an absent good. Such an exercise
+  depends on a mover or a deficiency that explains a new actualization.
+  Perfect contemplation or a non-receptive source suffices in the
+  replacement account, so that mechanism would conflict with the
+  alleged pure act. The q.19 possessed-good reading avoids that transfer.
+  Its positive content is rest or affirmation in a good already
+  possessed. No substantive objection to that reading follows from
+  the creaturely passivity mechanism by itself. Actual exercise still
+  needs the same intrinsic respect and an appraisal that meets the
+  episode type.
+
+#### Remaining discrimination
+
+For rows 173–174 the closest positive support is the prior
+[`ImmanentSelfPresence` route](notes/causal-perfection-transfer.md) and
+`SelfKnownGoodIsRepresented`. Actual self-understanding supplies a form
+and its primary object under its existing calibrations. Recognition of
+that object's goodness under **that very intelligible form** is the
+remaining input. The possession-sensitive response profile has a
+retain/absence distinction but does not carry this form index into
+`Appraises`. The next test is to interpret the same selected primary
+species in both the self-apprehension and evaluative roles, then compare
+the case of acknowledged value without any conative relation against
+intrinsic affirmation of possessed good. Another description of bare
+self-knowledge would leave the gap intact.
+
+For row 181 the relevant upgrade is the positive identification of the
+self-operation with an actual immanent understanding at a supplied
+duration index. The downstream time-to-timeless bridge is separate.
+For row 197 the fact that practical judgments can direct owned operations
+supports a rational-power reading of the pertinent will, but a generic
+inclination supplies no agency-frame `PowerOf` or `Rational` witness.
+The matched objection is a source that possesses an intrinsic self-good
+orientation while its productive power is classified independently.
+The exact question is whether one power realizes both on the same giver.
+
+Rows 217 and 235 remain applications to already exercised rational giving.
+Check that a plan governs this act rather than merely describing its
+foreseen output, and independently recognize an end-placement requirement
+as actual direction. Row 245 already has a general type-level
+specialization, `directionOfPracticalSpecification`, from the broader
+effect-wise result. It has no additional evidential independence from
+coverage, rejection and recognition. The governing end may differ by
+effect, and the benefit and authority conclusions have separate bridges.

@@ -1,0 +1,33 @@
+{
+  "id": "75d4b1e5-97c2-4306-852c-151028028f7d",
+  "label": "Recognize required end-placement as direction by the same giver",
+  "statement_ids": [
+    "f8cd0849-e401-4c45-8820-2cd9fc08b8e7"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "The checked #2020 application uses RequiredEndIsDirected separately from operative coverage and end-omission rejection. End-placement is distinct from recipient benefit and from authority. See docs/intellectual-appetite-source.md#intellectual-appetite-willing-and-self-operation-2026-11-26.",
+  "blocker": "Justify this recognition in a concrete giving profile with the bearer, effect, plan and end fixed.",
+  "evidence": [
+    "a4a6c33c-2efd-441a-a94d-f6ef01268636",
+    "PR-2031"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2031"
+    },
+    {
+      "role": "repair",
+      "provider": "claude",
+      "model": "claude-opus-5-5",
+      "date": "2026-11-26",
+      "pr": "PR-2031"
+    }
+  ]
+}
