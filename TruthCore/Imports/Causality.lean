@@ -170,6 +170,7 @@ public import TruthCore.Causality.MaximumDefinitionFork
 public import TruthCore.Causality.MeinongianActuality
 public import TruthCore.Causality.MetricBeginningArrival
 public import TruthCore.Causality.MetricGrimReaper
+public import TruthCore.Causality.MixedSupplierCensus
 public import TruthCore.Causality.ModalNecessaryBeingActuality
 public import TruthCore.Causality.ModalSenseSupport
 public import TruthCore.Causality.MotionMapsBatch1
