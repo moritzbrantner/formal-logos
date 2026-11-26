@@ -480,6 +480,7 @@ fn result_reference_selects_its_certificate_and_replays_its_argument() {
     let text = String::from_utf8(fixture.run(&["second-result", "--limit", "1"]).stdout).unwrap();
     assert!(text.contains("Assessment of the conclusion (accepted_qualified, published)"));
     assert!(text.contains("Warrant at the selected scope."));
+    assert!(text.contains("corpus/attempts/direct-use.json"));
     assert!(!text.contains("Judgment about another conclusion."));
     assert!(!text.contains("Judgment citing only the sibling."));
     assert_eq!(report["argument"]["argument_id"], "edge");

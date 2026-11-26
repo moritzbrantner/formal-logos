@@ -236,13 +236,14 @@ pub fn report(
             if let Some(assessment) = entry.assessment_of(target) {
                 let field = |key: &str| assessment[key].as_str().unwrap_or_default();
                 output.push(format!(
-                    "Assessment of the conclusion ({}, {}) — {}\n{}\nRevision test — {}\n{}",
+                    "Assessment of the conclusion ({}, {}) — {}\n{}\nRevision test — {}\n{}\nResearch record — {}",
                     field("review"),
                     field("publication"),
                     field("scope"),
                     field("assessment"),
                     field("next_test"),
-                    field("note")
+                    field("note"),
+                    entry.path
                 ));
             } else {
                 output.push(format!("Investigation citing this result — {}\n{}\nUse --json for its full finding and evidence.", entry.label, entry.path));
