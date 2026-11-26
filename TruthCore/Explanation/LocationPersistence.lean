@@ -33,4 +33,12 @@ def AnchoredLocation : Prop :=
     Sound h w x location → Stationary location → location s = some place →
       ∀ t, location t = some place ∧ h.IsAt w x t
 
+/-- A single everlasting bearer has two sound traces starting at a reported
+place. One stays there and the other reports a distinct place at date 1. -/
+def ReportedLocationContrast : Prop :=
+  ∃ (h : History Unit Unit Int) (stays moves : Int → Option Bool) (p q : Bool),
+    Sound h () () stays ∧ Sound h () () moves ∧ Stationary stays ∧
+    stays 0 = some p ∧ moves 0 = some p ∧ stays 1 = some p ∧ moves 1 = some q ∧
+    p ≠ q ∧ EverlastingAt h () ()
+
 end TruthCore.Explanation.LocationPersistence

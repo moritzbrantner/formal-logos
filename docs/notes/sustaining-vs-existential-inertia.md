@@ -996,9 +996,9 @@ Earlier presence necessarily varies between those histories.
    [proof and application](../../TruthCore/Results/Explanation/LocationPersistence/Solution.lean)
    transport the supplied position across a stationary integer trace by
    the existing `constant_of_stationary`. Soundness projects the
-   bearer's presence at both dates. The worked control gives one
-   everlasting bearer two sound traces, with the same location at 0 and
-   different locations at 1. This checks that fixing presence leaves
+   bearer's presence at both dates. The [worked control](../../corpus/statements/8f8111e3-9bb0-40e2-9c60-163686668613.json)
+   gives one everlasting bearer two sound traces. Both report place p at 0.
+   At 1 the stationary trace reports p and the other reports a distinct place q. This checks that fixing presence leaves
    position open, even when an initial location is fixed, unless a
    transition condition is also supplied. The same abstract transition
    form applies to existential persistence: the earlier and later
@@ -1051,7 +1051,8 @@ Earlier presence necessarily varies between those histories.
    the temporal test.
 
 4. **“External things” has two defensible readings.**
-   - **Other bearers.** Target the move from the persistence of a given x
+   - **[Other bearers](../../corpus/statements/791ca930-499c-4922-a475-fdbc20684638.json).**
+     Target the move from the persistence of a given x
      to the actuality of a distinct y. An x-only conditional has no
      y-actuality input, and even a universal per-bearer rule needs an
      earlier y for its y-instance. Section 7 supplies the control after
@@ -1060,7 +1061,8 @@ Earlier presence necessarily varies between those histories.
      present. An explanation of y via x's causal powers or activity would
      need a cross-bearer origin or support premise. This is a substantive
      limit on expanding the rule's explanatory scope.
-   - **Externally conditioned continuance.** Target a stronger claim of
+   - **[Externally conditioned continuance](../../corpus/statements/5a4ba734-fea3-4e3c-afd1-50f086c32f41.json).**
+     Target a stronger claim of
      independence from every external condition. External prevention of
      destruction is compatible with the rule, since it can secure the
      no-inducer background. The existing q.104 becoming/being distinction
@@ -1115,9 +1117,10 @@ test is the same-bearer comparison in the
 [calibrated withdrawal PR](https://github.com/moritzbrantner/formal-logos/pull/2094),
 with earlier presence, origin and loss background controlled as specified there.
 Warranted survival after independently excluded current giving, with a
-reason for presence, would challenge the productive bridge. Warranted
-loss under the same controls would challenge the causal cessation law in
-that instance.
+reason for presence, would challenge the productive bridge.
+Loss would challenge the cessation law
+for this bearer and interval if withdrawal itself and every other loss
+inducer were independently excluded.
 
 An Aₓ reformulation would need a separate premise specifying a reason for
 `∃t, h.IsAt w x t` against the omission profile, with an explicit

@@ -7,4 +7,7 @@ open TruthCore.Explanation.LocationPersistence
 theorem anchoredLocation : AnchoredLocation := by
   sorry
 
+theorem samePresenceDifferentLocation : ReportedLocationContrast := by
+  sorry
+
 end TruthCore.Results.Explanation.LocationPersistence

@@ -35,15 +35,12 @@ private def presentHistory : History Unit Unit Int where
 
 /-- For the same everlasting bearer and the same initial location,
 one sound trace stays and another changes position. -/
-theorem samePresenceDifferentLocation :
-    ∃ (h : History Unit Unit Int) (stays moves : Int → Option Bool),
-      Sound h () () stays ∧ Sound h () () moves ∧ Stationary stays ∧
-      stays 0 = moves 0 ∧ stays 1 ≠ moves 1 ∧ EverlastingAt h () () := by
+theorem samePresenceDifferentLocation : ReportedLocationContrast := by
   let stays : Int → Option Bool := fun _ => some true
   let moves : Int → Option Bool := fun t =>
     some (TruthCore.Explanation.PathRelocation.alt t)
-  refine ⟨presentHistory, stays, moves, fun _ _ _ => trivial,
-    fun _ _ _ => trivial, fun _ => rfl, by decide, by decide, ?_⟩
+  refine ⟨presentHistory, stays, moves, true, false, fun _ _ _ => trivial,
+    fun _ _ _ => trivial, fun _ => rfl, rfl, by decide, rfl, by decide, by decide, ?_⟩
   exact fun t => (presenceAtBoth presentHistory () () stays 0 t true
     (fun _ _ _ => trivial) (fun _ => rfl) rfl).2
 

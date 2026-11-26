@@ -7,5 +7,5 @@
   "theorem": "TruthCore.Results.Explanation.LocationPersistence.anchoredLocation",
   "comparator_config": "results/1371f04e-8b90-4fb2-bda9-56ba9f02d8dc/comparator.json",
   "status": "solution-present",
-  "description": "Reuse constant_of_stationary to derive equality of every reported location with the anchor. Soundness then gives the presence of the same bearer at the same date. The shared premise about location reports applies only to a supplied trace, and is not a premise of existential inertia or a source of actuality without a location anchor."
+  "description": "The anchored result transports a reported place under stationarity and projects the same bearer's presence through soundness. Its certified companion witnesses two sound traces for one everlasting bearer, with distinct Boolean places p and q. Both traces report p at date 0, the stationary trace reports p at date 1, and the other trace reports q at date 1. Both dates have positive location reports in each trace."
 }

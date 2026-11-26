@@ -8,6 +8,7 @@
   ],
   "meaning": "Reuse constant_of_stationary to derive equality of every reported location with the anchor. Soundness then gives the presence of the same bearer at the same date. The shared premise about location reports applies only to a supplied trace, and is not a premise of existential inertia or a source of actuality without a location anchor.",
   "definition_ids": [
+    "6788dada-f316-5cc3-8376-e64c512b1a0e",
     "6e811e85-b983-5988-b20a-f4f3ee83c50e"
   ]
 }

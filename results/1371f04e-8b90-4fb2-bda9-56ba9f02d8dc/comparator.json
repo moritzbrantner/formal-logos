@@ -2,7 +2,8 @@
   "challenge_module": "TruthCore.Results.Explanation.LocationPersistence.Challenge",
   "solution_module": "TruthCore.Results.Explanation.LocationPersistence.Solution",
   "theorem_names": [
-    "TruthCore.Results.Explanation.LocationPersistence.anchoredLocation"
+    "TruthCore.Results.Explanation.LocationPersistence.anchoredLocation",
+    "TruthCore.Results.Explanation.LocationPersistence.samePresenceDifferentLocation"
   ],
   "permitted_axioms": [
     "propext",
