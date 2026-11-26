@@ -14,7 +14,8 @@
     "PR-2040",
     "PR-2087",
     "945d3606-d6ac-4e5e-a9fd-d95d1dd508e1",
-    "d09f6268-93bf-4a00-af60-c57fc2353825"
+    "d09f6268-93bf-4a00-af60-c57fc2353825",
+    "PR-2092"
   ],
   "blocker": "No independently warranted existence-fact orientation was identified for an actual distinct edge. The emitter's operation and transmission explain the illumination at the selected time, but the contribution of the emitter's existence fact as partial ground is open. General coverage in a single theory, alignment of the selected per se relation, and finite upstream labels per effect remain separate.",
   "workers": [
@@ -23,7 +24,8 @@
       "provider": "codex",
       "model": "gpt-6.2-sol",
       "effort": "high",
-      "date": "2026-11-26"
+      "date": "2026-11-26",
+      "pr": "PR-2092"
     }
   ],
   "current_assessment": {
@@ -37,7 +39,7 @@
     "assessment": "The fixed-label test excludes an extensional identification that retains the strict edge in the consistent Boolean presentation. The causal direction in the illumination paradigm has local warrant, while an account through activity and transmission explains the same effect without committing to a strict PLG edge on the proposed existence facts. Withhold the existence-fact export on that case. The direct-assumption options and the earlier four-premise accessibility argument retain their scopes.",
     "next_test": "Fix one actual supplier and recipient with evidence of concurrent existential supply in one respect. Identify what the supplier's existence fact contributes as a partial explanation of the recipient's existence fact, and check the initial sequents and all weak returns in a presentation whose steps have that warrant. Only then test coverage over the independently selected per se links and the effect-local bound on upstream labels.",
     "note": "docs/notes/distinct-dependence-strict-ground-route.md#connection-and-next-test",
-    "reviewed_revision": "1abb78cda3a95b7ece63c6ddcbccae576285a1ea",
+    "reviewed_revision": "db2f4b657f8cdba36818a86dfc5b3ffec1d89439",
     "review": "unreviewed",
     "publication": "unpublished",
     "evidence": "Baseline PRs #2040 and #2087, the worked Lean application StrictGroundSupplyEdge.lean, and the existing registered path and finite-label results.",
