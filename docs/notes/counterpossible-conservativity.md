@@ -259,12 +259,22 @@ provenance to the original source. Its absence at the standpoint is consistent
 with that historical tag, and the selector loses a witness even on the origin
 criterion. This is a checked assignment of provenance, with no claim that a
 complete history for a particular sustaining effect realizes that assignment.
+The result is conditional on counting the far candidate by its producer tag:
+`OriginIndividuation` tests only whether the candidate carries `.source`, so
+it matches producers, not production histories.
 
 **Provenance.** Tracking a particular produced item often depends on continuity
 of its production history. Two separately produced replacement parts can
 occupy the same machine role and have the same specifications, yet a serial
 number and continuous custody trace distinguish them. That gives a reason to
 reject a separately produced duplicate when the question is about this item.
+It gives no corresponding reason to count every candidate made by the same
+producer as the original token: one manufacturer can make two replacement
+parts for the same slot, each the sole candidate in its world and each
+carrying the producer tag, while serial number and custody still distinguish
+them. The provisional assessment therefore treats producer matching as the
+formal criterion tested here, and token identity by production history as a
+further, stronger criterion that the finite profile does not encode.
 It does not make ongoing presence of its producer constitutive of the item.
 A part can remain in use after the producer ceases to exist, precisely because
 production and subsequent maintenance are different activities. The historical

@@ -8,14 +8,14 @@ id = "EFFECT_INDIVIDUATION_1 tracks the actual provenance in the replacement pro
 lean = "OriginIndividuation"
 definitions = ["a36adbd0-b558-4efc-bd73-4479ddcf1698"]
 disambiguations = ["1cb16a7f-9c11-4cf0-96f8-c2ffb2307df7"]
-paraphrase = "OPEN interpretation in the fixed replacement profile. The effect is present exactly where the candidate for the given role has the actual producer's provenance. The candidate has this provenance at actual, there is no candidate at near, and the candidate at far has backup provenance."
+paraphrase = "OPEN interpretation. For a supplied role output, the effect is present exactly where the candidate for the given role carries the actual producer's provenance tag. Applied to replacementOutput, this yields the listed inventory: the candidate has this provenance at actual, there is no candidate at near, and the candidate at far has backup provenance."
 
 [[statement]]
 id = "EFFECT_INDIVIDUATION_2 tracks role occupancy in the replacement profile"
 lean = "RoleIndividuation"
 definitions = ["e7cffaa0-bccd-49ee-b1cf-0e730e418151"]
 disambiguations = ["1cb16a7f-9c11-4cf0-96f8-c2ffb2307df7"]
-paraphrase = "OPEN interpretation in the same fixed replacement profile. The effect is present exactly where the given role has an output. It counts the actual and backup candidates as the effect across worlds and has no output at near."
+paraphrase = "OPEN interpretation. For a supplied role output, the effect is present exactly where the given role has an output. Applied to replacementOutput, it counts the actual and backup candidates as the effect across worlds and has no output at near."
 
 [[statement]]
 id = "Closest absence preserves accessible contrast witnesses in the replacement profile"
