@@ -1,0 +1,11 @@
+{
+  "id": "e61a7881-72cc-4aad-98d7-07b17501cb9d",
+  "label": "Distinct reciprocal production obstructs common strict extension",
+  "argument_id": "8730a057-b4f4-460f-8bbc-d8b325db7839",
+  "challenge_module": "TruthCore.Results.Causality.ExistentialPriorityOrder.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ExistentialPriorityOrder.Solution",
+  "theorem": "TruthCore.Results.Causality.ExistentialPriorityOrder.reciprocalControl",
+  "comparator_config": "results/e61a7881-72cc-4aad-98d7-07b17501cb9d/comparator.json",
+  "status": "solution-present",
+  "description": "The fixed Bool interpretation has only distinct production edges and still has a mixed cycle. It separates the conclusion of noSelf from the global common-order hypothesis."
+}

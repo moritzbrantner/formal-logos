@@ -1,0 +1,17 @@
+{
+  "id": "60dbb9d7-e4b6-4bf5-a4e5-b179b9818194",
+  "label": "Separate strict-order control for the two mixed interfaces",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "2c6d2657-9113-480f-93b1-8a9575d1b793",
+  "inference_ids": [
+    "2ebe742d-1205-4aa6-96d6-4452f92131b2"
+  ],
+  "meaning": "The one-bearer, one-act control satisfies the two interfaces on separate strict relations. On the same data their required union is irreflexive but fails transitivity, and self-production holds. This is an abstract separation of relations.",
+  "definition_ids": [
+    "20a4bee8-3701-40ed-a63e-bf683ca4eb14",
+    "57a30b7d-c51e-4b28-83ac-b7e924b7ace4",
+    "eee784e7-d27d-5ccd-835b-2e03b344b7f8",
+    "d6aed40f-2703-4cf5-852a-369fbacd085c"
+  ],
+  "sense_mixing_control": true
+}

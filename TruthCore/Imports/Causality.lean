@@ -116,6 +116,7 @@ public import TruthCore.Causality.ExerciseEndpointControls
 public import TruthCore.Causality.ExistenceAccountIntegration
 public import TruthCore.Causality.ExistenceActuality
 public import TruthCore.Causality.ExistenceSenseRoute
+public import TruthCore.Causality.ExistentialPriorityOrder
 public import TruthCore.Causality.ExistentialSelfActualization
 public import TruthCore.Causality.ExistsSenseMeaning
 public import TruthCore.Causality.FiniteBranching

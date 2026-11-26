@@ -1,0 +1,11 @@
+{
+  "id": "d8585999-be0f-491d-abc6-ecc8e6afa08c",
+  "label": "Required-edge acyclicity characterizes strict extension",
+  "argument_id": "b91c8d7e-59ac-4ef9-a6d8-04e4c439e243",
+  "challenge_module": "TruthCore.Results.Causality.ExistentialPriorityOrder.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ExistentialPriorityOrder.Solution",
+  "theorem": "TruthCore.Results.Causality.ExistentialPriorityOrder.exactExtension",
+  "comparator_config": "results/d8585999-be0f-491d-abc6-ecc8e6afa08c/comparator.json",
+  "status": "solution-present",
+  "description": "For arbitrary fixed exercise data, every strict extension contains the nonempty finite paths. Irreflexivity excludes their diagonal. If the required edges are acyclic, their transitive closure is itself an irreflexive transitive extension. No semantic identification of other priority relations follows."
+}

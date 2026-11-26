@@ -1,0 +1,9 @@
+{
+  "id": "57a30b7d-c51e-4b28-83ac-b7e924b7ace4",
+  "label": "Required existential-production edges and their acyclicity",
+  "term": "acyclicity of required existential-production edges",
+  "definition": "There is no nonempty finite directed closed walk of required existential-production edges on the fixed mixed bearer/exercise carrier (Graph.NoCycles applied to RequiredEdge).",
+  "basis": "stipulative",
+  "note": "This is an analyst condition on the exercise data, without a requirement of well-foundedness. Justification for applying this condition to existential production remains open. See docs/notes/unique-feedback-explanation-311.md.",
+  "lean_declaration": "TruthCore.Causality.ExistentialPriorityOrder.RequiredEdgesAcyclic"
+}
