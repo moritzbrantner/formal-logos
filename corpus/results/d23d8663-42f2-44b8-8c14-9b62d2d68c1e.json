@@ -1,0 +1,11 @@
+{
+  "id": "d23d8663-42f2-44b8-8c14-9b62d2d68c1e",
+  "label": "All-recipient cells entail NECESSARY_2 recipient cells",
+  "argument_id": "4d047904-9277-4f86-b911-48ce64407a1c",
+  "challenge_module": "TruthCore.Results.Causality.GivingChoiceNecessary.Challenge",
+  "solution_module": "TruthCore.Results.Causality.GivingChoiceNecessary.Solution",
+  "theorem": "TruthCore.Results.Causality.GivingChoiceNecessary.necessary_cells_of_all_cells",
+  "comparator_config": "results/d23d8663-42f2-44b8-8c14-9b62d2d68c1e/comparator.json",
+  "status": "solution-present",
+  "description": "On the same world map and profile, each NECESSARY_2 grounded actual recipient is covered by all-recipient withholding. This single-application weakening certifies the strength order."
+}

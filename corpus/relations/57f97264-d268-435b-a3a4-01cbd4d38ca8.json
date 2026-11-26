@@ -1,0 +1,11 @@
+{
+  "id": "57f97264-d268-435b-a3a4-01cbd4d38ca8",
+  "label": "All-recipient cell coverage strengthens NECESSARY_2 recipient coverage",
+  "subject_kind": "statement",
+  "subject_id": "0dd78706-e6f7-40a6-9232-eac3df1c0ae9",
+  "predicate": "strengthens",
+  "object_kind": "statement",
+  "object_id": "e1c6cc9b-1bd3-470e-a42a-5404ddf60577",
+  "verification_result_id": "d23d8663-42f2-44b8-8c14-9b62d2d68c1e",
+  "note": "All other inputs are held fixed. The weaker sibling requires cells only for recipients that are NECESSARY_2 at the selected world."
+}

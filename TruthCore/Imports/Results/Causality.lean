@@ -198,6 +198,8 @@ public import TruthCore.Results.Causality.FullFirstCause.Solution
 public import TruthCore.Results.Causality.FullnessCandidates.Solution
 public import TruthCore.Results.Causality.GiverIndexedApplication.Solution
 public import TruthCore.Results.Causality.GivingChoice.Solution
+public import TruthCore.Results.Causality.GivingChoiceNar.Solution
+public import TruthCore.Results.Causality.GivingChoiceNecessary.Solution
 public import TruthCore.Results.Causality.GivingPlanExceptions.Solution
 public import TruthCore.Results.Causality.GodMaximalCausal.Solution
 public import TruthCore.Results.Causality.GodNamingSenses.Solution
