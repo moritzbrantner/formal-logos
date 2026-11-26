@@ -1,0 +1,20 @@
+{
+  "id": "ead32fcc-cccf-4915-b8f1-40f83899a74a",
+  "label": "Distinct efficient supply at a second respect and five cause-fork denials",
+  "statement_ids": [
+    "048eac8a-c325-52ad-9627-3f5431eea846",
+    "5e76cbf7-9033-549c-9ec3-328746219b46",
+    "3715f518-89a7-5815-8416-990fb686a837",
+    "0a2f1846-e8cd-5082-9566-39b4ae8082fc",
+    "cc5c7105-90f2-5c2a-8f57-16325b2946d4"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "CausalRoleComparison in TruthCore/Causality/TermSenseForks.lean identifies the logical commitments of all five denials. A single finite frame admits them jointly for the efficient-or-perfection use and supplies a distinct efficient antecedent only at another respect for the diagonal patient. Individual assessments and reopening conditions are in docs/notes/load-bearing-terms.md#five-denials-at-one-causal-use-2026-11-26. The example concerns the scope of the descent premise and leaves the graph unchanged.",
+  "blocker": "The unresolved application is whether an already constituted bearer really supplies its own maintained state at a fixed respect in the selected efficient relation. For the perfection existential the corresponding identity question is whether the producing subject is the bearer perfected by the power, with the power specified as the respect. Neither question is decided by the formal frame.",
+  "evidence": [
+    "0505143b-7a9a-4236-a53c-7c5a5f2aa5d0",
+    "afac47a6-76ad-4b1f-9c1f-48be6246f6c3"
+  ]
+}

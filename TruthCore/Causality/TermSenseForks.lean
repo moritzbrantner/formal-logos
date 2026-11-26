@@ -344,3 +344,88 @@ def TermSenseForkControls : Prop :=
   PriorForkControls ∧ CauseForkControls
 
 end TruthCore.Causality.TermSenseForks
+
+namespace TruthCore.Causality.TermSenseForks.CausalRoleComparison
+
+/-- The same effect has a self-edge at one respect and a distinct supplier at the other. -/
+def frame : CauseFrame Bool Bool where
+  MovedIn := fun _ _ => False
+  MovesIn := fun _ _ _ => False
+  EfficientlyCausesIn := fun c x r => x = true ∧ c = r
+  CausesIn := fun c x r => c = true ∧ x = false ∧ r = false
+  CausesOrigin := fun _ _ => False
+
+/-- A single use that admits either an efficient contribution or a perfection edge. -/
+def inclusive (c x r : Bool) : Prop :=
+  frame.EfficientlyCausesIn c x r ∨ frame.CausesIn c x r
+
+theorem uncoveredEvenWithAllSelected :
+    ¬ CauseSensesExhaustive frame (fun _ => True) (fun _ : Unit => inclusive) := by
+  rintro h
+  obtain ⟨s, _, eqn⟩ := h ()
+  have diag : frame.CausesBy s true true true := by
+    rw [← eqn]
+    exact Or.inl ⟨rfl, rfl⟩
+  have reverseEdge : frame.CausesBy s true false false := by
+    rw [← eqn]
+    exact Or.inr ⟨rfl, rfl, rfl⟩
+  cases s <;> simp [CauseFrame.CausesBy, frame] at *
+
+theorem jointDenials :
+    ¬ SomeSubjectCausesItsOwnPerfection frame ∧
+    ¬ SelfEfficientCausationIsSelfMoving frame ∧
+    ¬ SelfEfficientCausationIsSelfOrigination frame ∧
+    ¬ NothingCausesItselfInRouteSense inclusive := by
+  have edge : frame.EfficientlyCausesIn true true true := ⟨rfl, rfl⟩
+  refine ⟨?_, fun h => h true true edge, fun h => h true true edge,
+    fun h => h true true (Or.inl edge)⟩
+  rintro ⟨x, _, yes, no, _⟩
+  exact Bool.noConfusion (yes.symm.trans no)
+
+/-- Distinct supply holds for every effect, while the diagonal respect itself has no
+distinct incoming edge to that patient. -/
+theorem supplierRespect :
+    (∀ c x r, frame.EfficientlyCausesIn c x r →
+      ∃ d s, d ≠ x ∧ frame.EfficientlyCausesIn d x s) ∧
+    ¬ ∃ d, d ≠ true ∧ frame.EfficientlyCausesIn d true true := by
+  constructor
+  · rintro c x r ⟨rfl, _⟩
+    exact ⟨false, false, by decide, rfl, rfl⟩
+  · rintro ⟨d, ne, _, eqn⟩
+    exact ne eqn
+
+end TruthCore.Causality.TermSenseForks.CausalRoleComparison
+
+namespace TruthCore.Causality.TermSenseForks.CausalRoleComparison
+
+variable {B R : Type} (F : CauseFrame B R)
+
+theorem movingDenial :
+    ¬ SelfEfficientCausationIsSelfMoving F ↔
+      ∃ x r, F.EfficientlyCausesIn x x r ∧ ¬ F.MovesIn x x r := by
+  classical
+  simp [SelfEfficientCausationIsSelfMoving]
+
+theorem originDenial :
+    ¬ SelfEfficientCausationIsSelfOrigination F ↔
+      ∃ x r, F.EfficientlyCausesIn x x r ∧ ¬ F.CausesOrigin x x := by
+  classical
+  simp [SelfEfficientCausationIsSelfOrigination]
+
+theorem perfectionDenial :
+    ¬ SomeSubjectCausesItsOwnPerfection F ↔ NothingCausesItsOwnPerfection F := by
+  simp [SomeSubjectCausesItsOwnPerfection, NothingCausesItsOwnPerfection]
+
+theorem routeDenial (use : B → B → R → Prop) :
+    ¬ NothingCausesItselfInRouteSense use ↔ ∃ x r, use x x r := by
+  classical
+  simp [NothingCausesItselfInRouteSense]
+
+theorem coverageDenial {U : Type} (select : CauseSense → Prop)
+    (use : U → B → B → R → Prop) :
+    ¬ CauseSensesExhaustive F select use ↔
+      ∃ u, ∀ s, select s → use u ≠ F.CausesBy s := by
+  classical
+  simp [CauseSensesExhaustive, SensesCover]
+
+end TruthCore.Causality.TermSenseForks.CausalRoleComparison
