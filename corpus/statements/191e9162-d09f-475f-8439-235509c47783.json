@@ -1,0 +1,12 @@
+{
+  "id": "191e9162-d09f-475f-8439-235509c47783",
+  "label": "Receipt exit links WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT_2 and WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT_3",
+  "paraphrase": "Every event in the fixed selected class follows a Profile.grounds edge among actual concreta at this world. A marked event enters the specified recipient. There is no selected transfer path back from that recipient to the sender, and the events whose senders can reach the marked sender by selected transfers form a finite type, including the marked event itself.",
+  "lean_declaration": "TruthCore.Causality.SelectedConeSupply.SelectedReceiptExit",
+  "definition_ids": [
+    "a1b2e330-388f-4120-bc5c-969642317792",
+    "9c6e4314-2e35-52ff-951e-db752a3c8ce2",
+    "c57e2682-08e6-527e-950f-0fa0a7ff11ef",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ]
+}

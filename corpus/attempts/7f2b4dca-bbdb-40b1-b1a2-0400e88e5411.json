@@ -1,0 +1,47 @@
+{
+  "id": "7f2b4dca-bbdb-40b1-b1a2-0400e88e5411",
+  "label": "Compare rankings, fork joins and finite transfer accounting on one actual grounding cone",
+  "statement_ids": [
+    "516c4fee-086b-4fb9-8f8d-13175959bfbd",
+    "5adb2dc9-54bc-4727-8821-b4dbb94d5220",
+    "838f7cca-32ac-4aea-a3b5-bfc077ef50ba",
+    "018456e8-cd2e-46e1-9c13-fa06e6f4dde9",
+    "34816fb7-0ec2-4f2e-9634-7fd7e8b7f3bd",
+    "6462fc19-f997-4166-8d6c-c60836e4383f",
+    "9cd1588d-4416-439e-ac0c-190d46e6b753",
+    "00719dce-f127-43dd-b909-0333c9a18ff2",
+    "08ed59de-c83e-400f-a8ee-aef527cfc3e4",
+    "4b4d62a2-f5f0-46af-aec1-8b07458b4505",
+    "9968af58-0c48-435e-abc0-db9c500003d4",
+    "1b1e3f09-f2e9-5949-9c3b-8f7fce26a403",
+    "97f5850f-62bc-5e43-a0c1-dd1033d08fc9",
+    "1be43c11-bd47-526a-baf1-c99baa2fc1eb",
+    "191e9162-d09f-475f-8439-235509c47783",
+    "973317de-b22b-4954-8e9b-9341f3ce2b8a",
+    "cf18717c-558d-4855-8ef9-0372eeb70fe0",
+    "c9545c29-5d97-4808-b343-8aaf87370479",
+    "34f9ad6f-fd45-44a6-951c-4ae54f3e3c62",
+    "5e002319-3828-4de8-96bc-98ebf34072d7"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "Local accessibility is equivalent to excluding an arbitrary Nat-indexed upstream walk anchored at the selected actual recipient. Using injective regress denial requires acyclicity of its complete cone. A one-step join and a finite source path give a Nat rank on the cone. An acyclic split into two leaves separates numerical descent from one-step joining, and the well-founded Nat-with-top interpretation separates accessibility from Nat ranking. Positive gap, lower bound and uniform edge drop are distinct inputs to the existing numerical route. Finite joining still allows the common-source ray. The selected transfer exit conditions specialize the existing unlocated ledger and receipt premises to events or positive entries following actual grounds with a mark into the selected bearer. These yield two conditional source-path routes. The same contingent recipient in the common-source ray witnesses both sufficient accounting bundles and an injective regress. Two explicit edge inclusions specialize cone well-foundedness to the Second and Third Way relations on the cone carrier. See docs/notes/contractive-borrowed-power-1378.md for the comparison, current provisional assessment and rival tests.",
+  "blocker": "Independent evidence for existential edge alignment, the receipt or throughput coverage law, and actual one-step joining or a warranted rank remains open. Derivative productive provenance supports a candidate source commitment. Spreading it across the full cone or transporting it to caused necessity requires separately justified edges and coverage.",
+  "evidence": [
+    "2a842b8c-fe4e-4731-8504-e389f542bca8",
+    "7d247372-988e-4b98-8b50-86f53586f705",
+    "787799b8-0996-4c27-a655-e4fdc9ba1679",
+    "a18f7922-65fa-4d86-80cf-4201aa58e44c",
+    "af7171b5-371a-497d-9486-c73b5b9d3002"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26"
+    }
+  ]
+}

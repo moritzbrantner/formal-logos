@@ -1,0 +1,14 @@
+{
+  "id": "f9ba8e2b-3681-46f2-bfb6-e4279b15ad77",
+  "label": "Selected grounding source path from aligned finite receipt matching (inference)",
+  "input_statement_ids": [
+    "c9545c29-5d97-4808-b343-8aaf87370479",
+    "08ed59de-c83e-400f-a8ee-aef527cfc3e4",
+    "191e9162-d09f-475f-8439-235509c47783"
+  ],
+  "output_statement_id": "6462fc19-f997-4166-8d6c-c60836e4383f",
+  "rule": "Locate the unmatched sender and lift its transfer path to the selected grounding cone",
+  "meaning": "A matching deficit excludes every actual concrete ground of the upstream sender by the stated coverage rule. Each transfer on its path to the fixed recipient follows a grounding edge, so the same sender is a source reached in the recipient's complete grounding cone. The finite event ancestry concerns selected transfers. Other grounding branches can continue without end.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

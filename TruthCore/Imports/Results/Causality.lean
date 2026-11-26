@@ -382,6 +382,8 @@ public import TruthCore.Results.Causality.ScopedActualCausality.Solution
 public import TruthCore.Results.Causality.SelectedAncestry.Solution
 public import TruthCore.Results.Causality.SelectedAncestryUnique.Solution
 public import TruthCore.Results.Causality.SelectedConeRegress.Solution
+public import TruthCore.Results.Causality.SelectedConeSupply.Solution
+public import TruthCore.Results.Causality.SelectedConeSupplyControls.Solution
 public import TruthCore.Results.Causality.SelectedNecessaryRoute.Solution
 public import TruthCore.Results.Causality.SelectedPlgTheory.Solution
 public import TruthCore.Results.Causality.SelectedSourcePath.Solution

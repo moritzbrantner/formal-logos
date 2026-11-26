@@ -518,3 +518,119 @@ owes the same account of actual supply, in addition to its existence or
 capacity. Reopen the comparison on an independently motivated existential
 quantity and a bounded loss law for its actual transmission. Ordinal
 comparisons of esse leave that quantitative interpretation open.
+
+## Which conditions exclude endless supply in one actual grounding cone? (2026-11-26)
+
+Fix one actual concrete recipient, one world, and the complete cone of that
+recipient under the immediate `Profile.grounds` edges. Upstream indices count
+links. An incoming edge says that its source supplies the selected bearer's
+existence under the productive reading being investigated. Identifying a
+real-world edge requires evidence that the proposed supplier contributes to the
+existence of the recipient itself. A condition for an operation, formation of
+the bearer, or an earlier instance of the same kind has a different scope.
+
+| Condition | Exact consequence in this scope | Test of the converse or omitted premise |
+| --- | --- | --- |
+| No infinite upstream walk starts at the recipient | Equivalent to `ConeWellFounded` in classical Lean. Every cone member is reached by a finite prefix and can inherit accessibility. Equivalently, require acyclicity within this cone and deny an injective regress from the recipient. | The existing two-cycle passes injective-chain denial and fails accessibility. Acyclicity, including the strict-order and no-strict-return criteria of #2025 and #2026, permits an infinite acyclic ray. |
+| A natural-number rank strictly decreases on every upstream edge | Well-foundedness. The existing real-potential proof gives such a rank by flooring the normalized potential with a common lower bound and a uniform positive drop. Its original assumptions range over the actual roster, so restriction supplies a rank on the cone. | The `WithTop Nat` cone under strict order is well-founded at the top, with arbitrarily long finite paths below it. A natural-number rank at the top would bound all those lengths. The existing varying-gap ray has a lower-bounded, strictly decreasing real potential and no uniform positive drop. |
+| One finite source path and one-step joining | The existing source-path proof gives accessibility. In fact the length of a maximal path ranks every member of the same cone and decreases by exactly one at each step. A rank alone permits an immediate fork into two distinct leaves with no common supplier. | Mere finite joining, even with a common reachable source for every member, allows the infinite common-source ray (#2022). One-step joining without a source path is vacuous on a successor ray with one supplier per node. |
+| Aligned finite receipt matching or aligned finite throughput | For the fixed recipient, a finite path of actual concrete grounding reaches a source. Bookings follow actual grounding edges, with a one-way marked transfer into this recipient. The matching or export coverage rule turns the upstream deficit into absence of an actual concrete ground for that same sender. | In the same contingent recipient's common-source ray, book only the source-to-recipient transfer. Both accounting rules hold and the omitted successor edges give an injective regress at that recipient. Finiteness governs the selected ledger. Conversely, neither ranking nor strict joining selects a ledger or supplies a marked entry in a fixed ledger. A fixed zero ledger satisfies coverage on every finite ranked chain and has no marked transfer. |
+
+The exact condition for excluding arbitrary infinite upstream walks is local
+accessibility. Denial of an injective regress suffices when conjoined with
+acyclicity on the same cone. If the target is only to find a source, existence of
+one finite source path is a weaker target. In the aligned accounting arguments
+the selected bookings are between actual concreta, and the finite spliced path
+stays in the cone. A ledger found independently and covering the relevant
+grounded bearers can locate that source. One-step joining, if separately
+warranted, then gives cone-wide termination. The application still needs
+cone-local contingent grounding and the existing classical case split to infer
+a necessary ancestor. See the [receipt result](../../corpus/results/2a842b8c-fe4e-4731-8504-e389f542bca8.json),
+[throughput result](../../corpus/results/7d247372-988e-4b98-8b50-86f53586f705.json),
+[structural checks](../../corpus/results/787799b8-0996-4c27-a655-e4fdc9ba1679.json) and the
+[earlier fork result](../../corpus/results/a18f7922-65fa-4d86-80cf-4201aa58e44c.json).
+
+### Derivative power and the rival explanations
+
+- **Essential ordering.** Fix the effect and the respect in which it is
+  produced. Removing the present driver of a stick removes the stick's
+  instrumentally supplied motion in that same respect. A father whose father is
+  absent can still beget, since the present exercise uses a power he retains.
+  That difference supports dependence of exercise on an active source. The
+  further candidate primitive is that an actual, exhaustively derivative
+  exercise has a finite productive provenance in some underived contribution
+  in the same respect. Its positive warrant is the difference between an
+  exercise actually being supplied and a set of relays each able to forward an
+  input. Upgrading that principle to well-foundedness of *every* actual
+  existential-supply branch requires further coverage. The formal Second Way
+  premise concerns `CausesAsCaused`. The formal Third Way premise concerns
+  `NecessityCausedAmongNecessaries`, a narrower relation with a separate
+  necessity dictionary. `perSeRegressExcluded_on_cone` requires each relation to
+  be represented on this cone and included in its actual grounds. Applying
+  either result beyond this carrier requires a coverage or transport argument.
+  [Aquinas, ST I, q.46 a.2 ad 7](https://www.newadvent.org/summa/1046.htm).
+- **Source-free infinitism.** The analyst's Oppy-style rival takes a lawfully
+  organized beginningless network of occurring exercises. Each relay actually
+  receives its operative input from its predecessor. It grants dependence of
+  exercise and denies finite productive provenance. The prior all-on and
+  all-off witnesses explain the force and limit of this reply. The same local
+  transmission equations support both, so a local law can account for each
+  exercise given neighboring activity, while the presence of positive activity
+  still depends on a populated boundary condition or an independently
+  justified global selection principle. An explicitly productive global law
+  selecting an active state, with warrant independent of that state's
+  actuality, would weaken the source inference. Oppy's published challenge to
+  Koons is narrower than this analyst model. He argues that evidence from
+  caused events also supports a defeasible rule restricted to non-first
+  spatiotemporal events. This challenges extending event-level warrant to the
+  whole and gives no actual case of per se existential supply.
+  [Borrowed exercise and its fixed-state controls](borrowed-exercise-741.md#three-rivals).
+  [Oppy, “Koons’ Cosmological Argument,” §2](https://philarchive.org/archive/OPPKCAv1).
+- **Hume–Edwards distribution.** Explaining each member does all the work
+  when the purported whole is merely the members collected in thought.
+  Cleanthes's twenty particles give the positive comparison. This challenges
+  the premise that there is a further aggregate object requiring a cause. The
+  shared residue on the strong productive reading is the actuality of the
+  inputs to each relay. The objection can succeed against a demand for an
+  extra object even while the activation problem survives. Conversely,
+  adding a name for the collection supplies no reason to expect a further
+  productive input. The test is whether the member-level explanations
+  account for the same determinate positive activity without borrowing its
+  actuality as part of the explanans.
+  [Hume, Dialogues Concerning Natural Religion, Part IX, printed p. 167](https://en.wikisource.org/wiki/Page:Dialogues_Concerning_Natural_Religion_-_Hume_(1779).djvu/173).
+- **Grand PSR approaches.** Koons's aggregation principle and causal
+  principle for wholly contingent facts give an explanation of the
+  contingent aggregate by a nonoverlapping cause. In the joint Koons–Pruss
+  case the noncircular PSR instead covers pluralities of basic natural facts
+  and demands an explanans external to the plurality. Their positive
+  argument is epistemic: uncaused experiential evidence threatens the
+  counterfactual reliability invoked by empirical knowledge. Oppy's
+  restriction leaves causes for ordinary evidence while treating initial
+  histories differently. To defeat that restriction, the PSR defense
+  needs its claimed relevant similarity across the scope of the
+  generalization. At matched scope, these approaches oppose the sufficiency
+  of merely distributive explanations for the eligible facts. An external
+  fact explanation would still need to identify an actual concrete
+  productive contributor on the fixed recipient's supply path. Even that
+  would leave open the existence of a different infinite grounding branch.
+  [Koons, “A New Look at the Cosmological Argument,” §6.2](https://lionandlambapologetics.org/wp-content/uploads/2021/03/A-New-Look-at-the-Cosmological-Argument.pdf).
+  [Koons and Pruss, “Skepticism and the Principle of Sufficient Reason,” §§2–3](https://robkoons.net/uploads/1/3/5/2/135276253/koons-pruss2020_article_skepticismandtheprincipleofsuf.pdf).
+
+Provisional assessment for review. Finite productive provenance is plausible
+as a direct commitment for an exhaustively derivative exercise in a fixed
+respect. The present driver tests that dependence in clear instrumental
+examples. The reason against a source-free exercise is the unresolved
+selection of positive activity in the strongest locally supplied rival, where
+the same rules also allow inactivity. The same test applies to an alleged
+underived source whose mere existence permits both states. The existential
+application and full-cone foundation remain open. For numerical descent,
+identify a measure where every actual grounding step consumes a common positive
+amount of available depth. For one-step joining, provide grounds for immediate
+common suppliers even at genuine forks. For accounting, identify actual
+existential transfer instances whose receipts are distinct or whose positive
+amounts obey the stated coverage inequality. Reopen the derivative-power
+comparison if an independently warranted rule selects the positive exercise
+in a source-free productive cone, or if an independently fixed mode of
+transmission rules out the positive limitless case.
+
+[Research attempt](../../corpus/attempts/7f2b4dca-bbdb-40b1-b1a2-0400e88e5411.json).

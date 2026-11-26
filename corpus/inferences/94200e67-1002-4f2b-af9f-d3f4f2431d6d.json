@@ -1,0 +1,14 @@
+{
+  "id": "94200e67-1002-4f2b-af9f-d3f4f2431d6d",
+  "label": "Selected grounding source path from aligned finite throughput coverage (inference)",
+  "input_statement_ids": [
+    "34f9ad6f-fd45-44a6-951c-4ae54f3e3c62",
+    "00719dce-f127-43dd-b909-0333c9a18ff2",
+    "973317de-b22b-4954-8e9b-9341f3ce2b8a"
+  ],
+  "output_statement_id": "6462fc19-f997-4166-8d6c-c60836e4383f",
+  "rule": "Locate the net exporter and lift its positive-transfer path to the selected grounding cone",
+  "meaning": "The no-return entry into the fixed recipient gives a net exporter upstream of its sender. By export coverage that exporter has no actual concrete ground. Positive entries follow Profile.grounds, so the same exporter is a source reached in the recipient's complete grounding cone. The finite ledger can omit grounding edges.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

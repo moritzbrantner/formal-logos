@@ -1,0 +1,34 @@
+{
+  "id": "8e4bbfb3-4af0-4c07-a3a1-cf61ba888e5c",
+  "label": "Selected grounding source path from aligned finite throughput coverage",
+  "premise_statement_ids": [
+    "34f9ad6f-fd45-44a6-951c-4ae54f3e3c62",
+    "00719dce-f127-43dd-b909-0333c9a18ff2",
+    "973317de-b22b-4954-8e9b-9341f3ce2b8a"
+  ],
+  "conclusion_statement_id": "6462fc19-f997-4166-8d6c-c60836e4383f",
+  "inference_ids": [
+    "94200e67-1002-4f2b-af9f-d3f4f2431d6d"
+  ],
+  "meaning": "The no-return entry into the fixed recipient gives a net exporter upstream of its sender. By export coverage that exporter has no actual concrete ground. Positive entries follow Profile.grounds, so the same exporter is a source reached in the recipient's complete grounding cone. The finite ledger can omit grounding edges.",
+  "definition_ids": [
+    "52352824-6be9-53c6-83d4-82fed9a08cbb",
+    "c57e2682-08e6-527e-950f-0fa0a7ff11ef",
+    "822c9912-2313-584b-b2b7-77031da20107",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "9c6e4314-2e35-52ff-951e-db752a3c8ce2",
+    "a1b2e330-388f-4120-bc5c-969642317792"
+  ],
+  "disambiguation_ids": [
+    "c529e8d3-43e3-53a8-a82f-3955e9815265"
+  ],
+  "sense_bridges": [
+    {
+      "term": "WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT",
+      "from": "556515c9-1fcc-4ea0-b85d-2a4cad7eff79",
+      "to": "1e18ccd2-b582-4d6e-9c55-324d19151ce8",
+      "statement_id": "973317de-b22b-4954-8e9b-9341f3ce2b8a",
+      "role": "premise"
+    }
+  ]
+}
