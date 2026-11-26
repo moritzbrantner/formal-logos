@@ -1,0 +1,13 @@
+{
+  "challenge_module": "TruthCore.Results.Case.Catholicism.WeakEsseCalibration.Challenge",
+  "solution_module": "TruthCore.Results.Case.Catholicism.WeakEsseCalibration.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Case.Catholicism.WeakEsseCalibration.structuralCoverage"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "enable_nanoda": true
+}

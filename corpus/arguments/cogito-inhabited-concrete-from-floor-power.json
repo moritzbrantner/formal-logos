@@ -14,7 +14,6 @@
   ],
   "meaning": "Some concrete candidate exists at w, by the existing Round 4 capacity derivation (inhabitedFromPower, imported and applied), with the owner-approved floor commitment supplying the capacity clause that the old argument took as the bare premise STMT-CAUSAL-POWER-REQUIRES-CONCRETENESS-AT, for the same hasCausalPower predicate as STMT-INTELLECTUAL-EXERCISER-HAS-POWER. The other five premises are unchanged and remain OPEN. It does not establish the floor commitment or infer capacity from exercise.",
   "definition_ids": [
-    "632ad5ee-e94f-574d-bb37-c02b774984f4",
     "d662ee50-cdd3-517b-bd8a-024dca5929d0",
     "a17326fa-7d9f-5dce-8dc2-ec330eab6bdb",
     "1709a759-7962-5df2-a56f-9bd0e20d3692",

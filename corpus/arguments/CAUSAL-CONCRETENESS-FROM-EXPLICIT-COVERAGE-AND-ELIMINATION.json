@@ -19,5 +19,8 @@
   "disambiguation_ids": [
     "623ddbf6-9683-5361-bae4-e348a00ec680",
     "32416dd1-c3ce-5180-bf06-1cabab088be7"
-  ]
+  ],
+  "strong_version_needed": {
+    "0c1b8438-fef8-5e2e-b42a-49d9d2e1f2df": "Historical biconditional interface. The original proof uses calibration only through structural coverage. Sibling result 839358ce-a242-4356-8fd8-75a4067980c7 uses the one-direction calibration."
+  }
 }

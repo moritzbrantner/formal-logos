@@ -1,0 +1,11 @@
+{
+  "id": "0ff29886-4fdc-4e28-b377-c2b305299e44",
+  "label": "Selected-world CONCRETE_6 fork from the esse-to-CONCRETE_6 direction",
+  "argument_id": "deb4cdae-cec6-4ecd-80eb-9e64dae90437",
+  "challenge_module": "TruthCore.Results.Case.Catholicism.WeakEsseCalibration.Challenge",
+  "solution_module": "TruthCore.Results.Case.Catholicism.WeakEsseCalibration.Solution",
+  "theorem": "TruthCore.Results.Case.Catholicism.WeakEsseCalibration.structuralCoverage",
+  "comparator_config": "results/0ff29886-4fdc-4e28-b377-c2b305299e44/comparator.json",
+  "status": "solution-present",
+  "description": "Excluded middle splits on the selected countercase. When it is absent, each power holder or candidate with an outgoing causal edge at the selected world must have esse in re, since its absence would witness a selected countercase. The one-direction calibration then classifies that same candidate as concrete. The supplied grounds field has no role."
+}

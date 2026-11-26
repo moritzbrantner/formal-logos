@@ -1,0 +1,15 @@
+{
+  "id": "6b75ed44-e92a-4c7a-b95d-4777f5b41aa7",
+  "label": "Selected-world CONCRETE_6 from weak calibration and named elimination (inference)",
+  "input_statement_ids": [
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410",
+    "2d9807a5-ebff-45fd-972f-e241f18713d4",
+    "d75fefb5-07e7-590b-bba9-693dabd9da9d",
+    "488eb991-a56a-506e-bc04-dd0abf33b80f"
+  ],
+  "output_statement_id": "e27489c3-7419-5123-8476-386633e62532",
+  "rule": "Apply the restricted structural fork and eliminate each covered countercase",
+  "meaning": "Keep the same supplied causal frame, power and concreteness predicates. The fork either supplies the owner condition or a selected countercase. Named coverage takes that countercase to a named one, and named failure excludes each of the three cases. The one-direction calibration is used in the structural fork. The grounds field has no role.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

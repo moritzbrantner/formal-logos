@@ -17,7 +17,6 @@
   "meaning": "On the same Ontic, failed headless coverage supplies an existing source at an accessible v. The local causal principle and excluded middle give necessity there. Outgoing activity and the concreteness dictionary classify that same source at v. Euclidean access at w and reflexivity of w carry the source's existence to w and to each of its successors. Causal activity and sourcehood are used only at v.",
   "definition_ids": [
     "735d59a6-61de-5e43-bcf6-4ff64bceb90d",
-    "c57e2682-08e6-527e-950f-0fa0a7ff11ef",
     "d8e2ed12-8089-5202-ae51-e807cf611c76",
     "712e2f2b-4984-5a0d-bf5b-e47f356e0905",
     "125597c9-6387-5f13-af97-4b364f0673e3",
@@ -50,5 +49,9 @@
       "statement_id": "b19ffd92-01bd-5c0b-9643-e7407137ea5e",
       "role": "conclusion"
     }
-  ]
+  ],
+  "strong_version_needed": {
+    "ef69a630-2277-56be-86ca-f05f8193093a": "The causal principle is applied at the accessible history v where failed headless coverage supplies the source. d8a1fb16 supplies the principle only at the selected world w, which may differ from v.",
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "Excluded middle handles failed ancestry coverage in source selection and decides existence of the selected source at each successor of v. ca432e24 only decides equality of actual bearers against a GOD_4 candidate and permits double-negation elimination for that candidate's esse–essence equality."
+  }
 }

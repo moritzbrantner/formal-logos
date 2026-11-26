@@ -1,0 +1,13 @@
+{
+  "id": "51b39cc9-8375-4cc7-a28e-91e7011a2466",
+  "label": "Selected-world CONCRETE_6 fork from the esse-to-CONCRETE_6 direction (inference)",
+  "input_statement_ids": [
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410",
+    "2d9807a5-ebff-45fd-972f-e241f18713d4"
+  ],
+  "output_statement_id": "ed5aa44a-3dcc-54fd-aee3-8db5aed71f9c",
+  "rule": "Split on the selected no-esse countercase and classify each active candidate",
+  "meaning": "Excluded middle splits on the selected countercase. When it is absent, each power holder or candidate with an outgoing causal edge at the selected world must have esse in re, since its absence would witness a selected countercase. The one-direction calibration then classifies that same candidate as concrete. The supplied grounds field has no role.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

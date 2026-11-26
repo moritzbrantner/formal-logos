@@ -7,21 +7,33 @@
     "873d057f-e58e-53cc-a054-093f7c5a4238",
     "2b20b5af-d653-56ba-8001-35903fb3d1ea",
     "9c717c08-4046-42d8-ae8b-763ef6b1b394",
-    "d8796eaa-52f7-4731-9ab4-28783abe2dcc"
+    "d8796eaa-52f7-4731-9ab4-28783abe2dcc",
+    "ed5aa44a-3dcc-54fd-aee3-8db5aed71f9c",
+    "e27489c3-7419-5123-8476-386633e62532"
   ],
   "date": "2026-11-26",
   "kind": "derivation",
   "outcome": "succeeded",
-  "summary": "The concreteness calibration gives the esse-in-re to concrete direction after retaining f.ontic, f.concrete, f.InAct and f.esse in the destination profile. The dropped OwnerCommitmentAt definition link was contextual: calibration supplies no productive power or causation law. The S5 frame condition supplies the single reflexive edge at w on the same Ontic. The finite nonempty fibre supplies one eligible exercise per actual identity bearer, on the same q3a4 profile and exercise map. Each result records a conditional projection as an assembly; it contributes no independent premise warrant.",
+  "summary": "The concreteness calibration gives the esse-in-re to concrete direction after retaining f.ontic, f.concrete, f.InAct and f.esse in the destination profile. The dropped OwnerCommitmentAt definition link was contextual: calibration supplies no productive power or causation law. The S5 frame condition supplies the single reflexive edge at w on the same Ontic. The finite nonempty fibre supplies one eligible exercise per actual identity bearer, on the same q3a4 profile and exercise map. Each result records a conditional projection as an assembly; it contributes no independent premise warrant. The review of 64434e696 identified two consumers that need only the forward calibration. The weak siblings preserve the same power-holder and causer predicates for structural coverage and named elimination. Countercase failure instead uses concreteness to infer esse, and the finite-fibre argument uses finiteness to obtain a minimal exercise. KTB plus S4 conditionally gives the S5 bundle under rule (a), which carries selected-world reflexivity through the transcription. Application of the S5 bundle remains open.",
   "evidence": [
     "4ead4ca3-7296-4b5c-bced-21e95d684581",
     "c99a255d-7cc0-4642-a16c-d840a215764b",
     "a3aec1ef-cca5-4500-bdc1-7dd27fdf8305",
-    "PR-2022"
+    "PR-2022",
+    "0ff29886-4fdc-4e28-b377-c2b305299e44",
+    "839358ce-a242-4356-8fd8-75a4067980c7"
   ],
   "workers": [
     {
       "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2022"
+    },
+    {
+      "role": "repair",
       "provider": "codex",
       "model": "gpt-6.2-sol",
       "effort": "high",

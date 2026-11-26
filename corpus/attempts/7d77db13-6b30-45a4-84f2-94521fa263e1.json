@@ -10,7 +10,7 @@
   "date": "2026-11-26",
   "kind": "derivation",
   "outcome": "succeeded",
-  "summary": "The existing strength result specializes Euclidean access to the selected world, and the inert-emptiness route already uses the local condition. The productive-source route uses accessibility among successors of w to retain the same necessary source, with sourcehood and its outgoing activity tested at the accessible history. The global-absence power route uses just the edge from an initiating successor v to any successor u of w at which the same holder might fail to exist. The latter retains the global power content and the possible absence of all contingent concreta at some successor. Both are conditional. The classifier route is recorded separately because its inherited sense metadata is unresolved.",
+  "summary": "The existing strength result specializes Euclidean access to the selected world, and the inert-emptiness route already uses the local condition. The productive-source route uses accessibility among successors of w to retain the same necessary source, with sourcehood and its outgoing activity tested at the accessible history. The global-absence power route uses just the edge from an initiating successor v to any successor u of w at which the same holder might fail to exist. The latter retains the global power content and the possible absence of all contingent concreta at some successor. Both are conditional. The classifier route is recorded separately because its inherited sense metadata is unresolved. The productive-source proof needs the causal principle at the accessible witness v and uses Ontic.Causes. The selected-world principle at w does not cover that use. Its source search and the modal existence case splits of both new routes exceed the bearer and essence equality formulas of ca432e24.",
   "evidence": [
     "7e5f0f8a-aa2d-496b-87b6-8411f7970732",
     "8544b7a9-3f37-4b05-96d9-27b67a897686",
@@ -22,6 +22,14 @@
   "workers": [
     {
       "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2022"
+    },
+    {
+      "role": "repair",
       "provider": "codex",
       "model": "gpt-6.2-sol",
       "effort": "high",

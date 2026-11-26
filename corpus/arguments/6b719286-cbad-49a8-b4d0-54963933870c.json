@@ -41,5 +41,8 @@
       "statement_id": "84d02356-5dac-4ce5-9f9e-4cebf12f96f2",
       "role": "conclusion"
     }
-  ]
+  ],
+  "strong_version_needed": {
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The proof decides the same holder's existence at an arbitrary successor of w. ca432e24 only decides equality of actual bearers against a GOD_4 candidate and permits double-negation elimination for that candidate's esse–essence equality."
+  }
 }
