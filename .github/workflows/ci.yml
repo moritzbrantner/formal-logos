@@ -229,18 +229,32 @@ jobs:
       - name: Report the orphan-count delta
         if: always() && github.event_name == 'pull_request'
         run: target/release/truth orphans --base HEAD^1 | tee -a "$GITHUB_STEP_SUMMARY"
-      # Cohesive-graph diagnostic (owner direction, 2026-11-26): statements with no
-      # recorded contact with the root. Counts are not a score; this step never fails.
-      - name: Report graph connectivity (diagnostic)
+      # Cohesive-graph goal (owner direction, 2026-11-26): the report shows statements
+      # with no recorded contact with the root (counts are not a score). On a PR the
+      # gate fails when a statement new since the base (HEAD^1), or moved out of the
+      # root component, is outside it without a connection_plan (docs/corpus-model.md).
+      - name: Gate new graph disconnection
         if: always()
-        continue-on-error: true
+        env:
+          EVENT: ${{ github.event_name }}
         run: |
+          set -o pipefail
           {
             echo "### Graph connectivity (\`truth connectivity\`, diagnostic)"
             echo '```text'
             target/release/truth connectivity --list-isolated 20 || true
             echo '```'
           } | tee -a "$GITHUB_STEP_SUMMARY"
+          if [[ "$EVENT" == pull_request ]] && git rev-parse --verify HEAD^1 >/dev/null 2>&1; then
+            {
+              echo "### Connectivity gate (\`truth connectivity --base HEAD^1\`)"
+              echo '```text'
+              status=0
+              target/release/truth connectivity --base HEAD^1 || status=$?
+              echo '```'
+              exit "$status"
+            } 2>&1 | tee -a "$GITHUB_STEP_SUMMARY"
+          fi
       # Attribution self-check (#989, owner decision 2026-11-05): on a PR, every new or
       # changed stating claim (or claim whose statement text or passage changed) must
       # record "The passage states X, which is the premise." CI checks the record

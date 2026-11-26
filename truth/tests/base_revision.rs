@@ -145,6 +145,54 @@ fn base_revisions_are_judged_by_the_head_rules() {
     assert!(orphans["base_error"].is_null());
 }
 
+/// The connectivity gate reads the base from Git like the other `--base`
+/// commands: HEAD joins A to ROOT, so nothing new is disconnected; a new
+/// unconnected statement in the working tree fails it (exit 1, listed as
+/// `label [uuid8]`) until it records a connection plan.
+#[test]
+fn the_connectivity_gate_fails_on_new_disconnection_only() {
+    let directory = TempDir::new("connectivity");
+    let root = directory.0.as_path();
+    fixture(root);
+    let gate = truth(root, &["connectivity", "--base", "BASE"]);
+    assert_eq!(gate["passed"], true);
+    assert_eq!(gate["new_statements"], 0);
+
+    const NEW: &str = "55555555-5555-4555-8555-555555555555";
+    write(
+        root,
+        "corpus/statements/new.json",
+        &format!(r#"{{"id": "{NEW}", "label": "NEW", "paraphrase": "NEW"}}"#),
+    );
+    let output = Command::new(BINARY)
+        .args(["--root"])
+        .arg(root)
+        .args(["--frontier-root", "ROOT", "connectivity", "--base", "BASE"])
+        .output()
+        .unwrap();
+    assert_eq!(output.status.code(), Some(1));
+    let text = String::from_utf8_lossy(&output.stdout);
+    assert!(
+        text.contains(
+            "NEW [55555555]: new statement outside the root component; no connection plan"
+        ),
+        "{text}"
+    );
+
+    write(
+        root,
+        "corpus/statements/new.json",
+        &format!(
+            r#"{{"id": "{NEW}", "label": "NEW", "paraphrase": "NEW", "connection_plan": {{
+                "target_statement_id": "{A}", "missing_bridge": "NEW implies A.",
+                "blocker": "No shared vocabulary yet."}}}}"#
+        ),
+    );
+    let gate = truth(root, &["connectivity", "--base", "BASE"]);
+    assert_eq!(gate["passed"], true);
+    assert_eq!(gate["judged"][0]["status"], "planned");
+}
+
 #[test]
 fn an_unreadable_base_revision_is_a_revision_error() {
     let directory = TempDir::new("error");

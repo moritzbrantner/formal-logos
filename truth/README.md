@@ -19,6 +19,7 @@ target/debug/truth tree STMT-GOD-EXISTS --down 2 --up 2
 target/debug/truth orphans
 target/debug/truth orphans --senses --json
 target/debug/truth connectivity --list-isolated 20
+target/debug/truth connectivity --base origin/main
 target/debug/truth issues --from issues.json --for STMT-GOD-EXISTS
 target/debug/truth brief STMT-GOD-EXISTS --issues-from snapshot.json
 target/debug/truth brief --question 'ultimate explanation, brute fact or infinite regress'
@@ -1250,8 +1251,25 @@ root component; named only by an attempt; unused. `--list-isolated N` lists N
 isolated statements with their class (premise-free results first, then by
 label). `--json` gives every non-root component's statement IDs. The method
 matches the measurement script of the 2026-11-26 baseline, extended only by
-the `result` endpoint of `tests` relations. CI prints the text report to a
-PR's job summary without failing on it.
+the `result` endpoint of `tests` relations. CI prints the text report to the
+job summary.
+
+`truth connectivity --base REV` is the **gate on new disconnection** (owner
+direction, 2026-11-26: disconnected work must not accumulate again). It reads
+the base revision's committed corpus like `frontier-diff`, `thickness --base`
+and `orphans --base` ("head rules on base data") and computes the root
+component at both revisions over the same edges. It judges each statement that
+is outside the root component at the head and either is new (present at the
+head, absent at the base) or was in the root component at the base. Such a
+statement passes only with a `connection_plan` (`docs/corpus-model.md`) whose
+`target_statement_id` is in the head's root component; statements already
+outside it at the base are not judged. The command exits 1 and lists each
+offending statement as `label [uuid8]`, with the reason (no plan, or a plan
+target off the root component). It also lists the planned statements and the
+plans whose statement has since joined the root component. `--base` and
+`--list-isolated` are alternatives. On a pull request CI runs it against the
+base (`HEAD^1` of the merge commit) and fails on it; `scripts/preflight.sh`
+runs it against the merge base.
 
 ## `bridges`
 
