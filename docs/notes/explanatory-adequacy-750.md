@@ -2300,9 +2300,8 @@ Canonical reuse checks inspected related, dossier, brief, semantics and
 the PSR-to-B2 argument context. The advisory novelty query found partially
 recorded material, so no philosophical novelty or new certified theorem
 is claimed for the occupancy consequence. The small core Lean proof reports
-zero axioms; the Python model checks pass. Existing certificate evidence
-is reused for unchanged modules; neither diagnostic claims Comparator or
-NanoDa certification. Corpus, attribution, generated-file and premise-delta
+zero axioms. The linked Lean declarations now cover the finite models.
+Corpus, attribution, generated-file and premise-delta
 checks and the independent final-outcome review are recorded in #1968.
 The claim/type sweep covers local versus inclusive scope, fixed versus
 arbitrary inputs, actual versus possible source exercise, necessary

@@ -1014,7 +1014,7 @@ accepted the [witness comparison](#which-occurrence-supplies-the-witness) at
 particular questioning at w₀. The [attempt](../../corpus/attempts/cogito-concrete-world-536.json)
 records the review and the remaining #543 obligations.
 
-The finite Python control checks the listed model properties. The existing
+The linked finite Lean controls check the listed model properties. The existing
 [cogito/esse](../../corpus/attempts/cogito-esse-1113.json) and
 [thought/change](../../corpus/attempts/cogito-physics-thought-change-subject.json)
 results retain their reviewed scopes. This local application reuses #1980

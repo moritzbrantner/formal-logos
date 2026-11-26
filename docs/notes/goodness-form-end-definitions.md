@@ -711,8 +711,8 @@ an alleged intention with no defended formative relevance does likewise.
 The next source-level test concerns that same productive relation and
 beneficiary, rather than another proof that a component can maintain a system.
 No new formal consequence, empirical reanalysis or root-premise discharge is
-claimed here. The earlier finite recurrence retains its recorded Python-only
-verification status. Independent reviewer `/root/finality_semantic_review`
+claimed here. The earlier finite recurrence is now checked by the linked
+Lean module. Independent reviewer `/root/finality_semantic_review`
 accepted this scope and warrant assessment, the integrated synthesis, the
 three current records and the actual PR body with qualifications at
 `a66f3ff30e42a0325b0dba7105e32e45dedf69cc`, with no unresolved substantiated

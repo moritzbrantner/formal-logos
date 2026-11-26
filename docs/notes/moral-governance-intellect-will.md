@@ -922,10 +922,9 @@ source-side account can instead explain why one intrinsic nature
 provides the requisite goods, powers and conditional applications.
 The source's real simplicity, actual efficacy, original title and
 intrinsic apprehension remain separate application questions. Existing
-intellect/will bundles `11628966` and `dd55f57a` are unchanged; no new
-vocabulary, argument edge, formal certificate or premise discharge is
-introduced by this subsection. Its finite diagnostics are executed
-Python checks. The coordinator also elaborated the exact per-option
+intellect/will bundles `11628966` and `dd55f57a` retain their premises.
+The linked Lean declarations now check the finite diagnostics. The
+coordinator also elaborated the exact per-option
 application and companion strict-cycle application with pinned Lean
 4.35.0; both reported no axioms. The
 [primary note](goodness-standard-priority.md) preserves that code and

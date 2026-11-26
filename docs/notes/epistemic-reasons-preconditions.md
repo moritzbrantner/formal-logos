@@ -593,11 +593,12 @@ or renaming the authority premise would not supply that next test.
 ### Verification and exact premise comparison
 
 Live conventions resolved to source revision
-`15f348b072188255da837578eaafc8a98f12fdf0`. The persisted Python block was
-executed with exact rational arithmetic. Corpus validation, offline attribution
+`15f348b072188255da837578eaafc8a98f12fdf0`. At that checkpoint the comparison
+ran in Python with exact rational arithmetic. The linked Lean checks now
+cover that comparison. Corpus validation, offline attribution
 check, documentation/import generator checks and whitespace validation passed.
-No proof input changed; no new build, binding, Comparator or NanoDa acceptance
-is claimed. Coordinator-owned semantic review and final CI remain pending.
+The original checkpoint changed no proof input. Coordinator-owned semantic
+review and final CI were pending at that checkpoint.
 
 Computed with `python3 scripts/worker_env.py -- target/release/truth
 frontier-diff --base 956c8280973ea7d9ed085de07c6b2b50c4c9cf06`:
