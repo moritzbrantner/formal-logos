@@ -1,0 +1,10 @@
+{
+  "id": "f7b077a8-d525-422a-a49b-f6452330ff3a",
+  "label": "Test by Lifting is no novel necessary support plus necessary and actual supporters",
+  "subject_kind": "result",
+  "subject_id": "477d7396-687a-4699-819b-7e7b3fa01771",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "2a9378b4-3dad-591b-a88e-1907a79f1fa5",
+  "note": "Checks the exact decomposition of the stronger statement into the weaker version and the registered delta under the comparison's shared interpretation."
+}

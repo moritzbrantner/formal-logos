@@ -1,0 +1,10 @@
+{
+  "id": "a38c87d8-fd22-48d1-a218-2d4d3543b8f6",
+  "label": "Test by Finite interpretations for the nine derivations of round for Every POTENCY_1 has a gro (1)",
+  "subject_kind": "result",
+  "subject_id": "9b1c8d31-2458-5ece-9902-ea7dd0371d6c",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "8a1d7012-3a77-5c78-a5b1-30006aa4ae8c",
+  "note": "Tests omitting this premise in the encoded actPriorFromGround argument, with the other premises retained and the conclusion false in each corresponding control."
+}

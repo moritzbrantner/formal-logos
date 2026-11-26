@@ -66,3 +66,13 @@ coverage = "Five selected finite relations, not all philosophical senses or mode
 exclusivity = "Edges tested independently; no global exclusivity asserted"
 witness = "Control.Joined with populated whole/motor/limb; controls proves reconstruction bridge and target failure; Full proves nonvacuity of both bridges"
 next_step = "Investigate an independent warrant for internal-to-whole transfer; no inference from countermodel to actual metaphysical denial"
+
+[[relation]]
+id = "Test by Self-motion separation finite certificates"
+label = "Test by Self-motion separation finite certificates"
+subject_kind = "result"
+subject_id = "374ccfc2-84a0-44dd-812d-0f6f9d31b271"
+predicate = "tests"
+object_kind = "statement"
+object_id = "99470e3f-81ac-5cf2-8a0e-69429f98fd0c"
+note = "Tests the selected premise in the following setting. Control.Obj whole/motor/limb; one Unit context, shared Part, Moved, Integrated Control.Joined with populated whole/motor/limb; controls proves reconstruction bridge and target failure; Full proves nonvacuity of both bridges Control.Certificate: the Joined interpretation satisfies reconstruction bridge but not the original distinct-part target"

@@ -1,0 +1,10 @@
+{
+  "id": "db748cff-3f03-4275-9c4b-7d954504fb0e",
+  "label": "Test by Finite interpretations for the nine derivations of round for Whoever causes a thing in (2)",
+  "subject_kind": "result",
+  "subject_id": "9b1c8d31-2458-5ece-9902-ea7dd0371d6c",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "3c20c835-0af9-52d9-bbff-32fb22ceaff6",
+  "note": "Tests omitting this premise in the encoded necessityFromPerfection argument, with the other premises retained and the conclusion false in each corresponding control."
+}

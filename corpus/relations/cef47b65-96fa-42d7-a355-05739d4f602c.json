@@ -1,0 +1,10 @@
+{
+  "id": "cef47b65-96fa-42d7-a355-05739d4f602c",
+  "label": "Test by Controls for the nine-restricted self-operation premises, checked",
+  "subject_kind": "result",
+  "subject_id": "64165d34-9103-4fbf-8d6a-0421768baf91",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "1773079b-236a-5f7d-b1e9-fb8f23202341",
+  "note": "Tests the converse strength implication in the registered interpretation. Same InPotency and LivesAt. The strong version constrains every pure act; the weak one only pure acts that also have the other eight of the nine. Control.Controls part 2: a lifeless pure act without intellect satisfies the weak version and falsifies the strong one."
+}

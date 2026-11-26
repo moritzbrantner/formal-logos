@@ -1,0 +1,10 @@
+{
+  "id": "d6ec3e38-5843-465b-b0aa-0d8faf93cb25",
+  "label": "Test by Rotating triangle, rooted pair and uncovered edge contro for The existing union of sel (1)",
+  "subject_kind": "result",
+  "subject_id": "38963a9d-3db2-4d60-8b78-949e53693acd",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "d149d238-2eeb-5c8b-a136-f95d7aa5c721",
+  "note": "Tests the selected premise in the following setting. Same Profile, selected relation and selected world as the premise; two mutually accessible worlds, three candidates, all concrete and necessary. Control.rootedPair in Control.RootedPairCompatible; controls proves the listed conjuncts. Control.rootedPair at world false: the rival, EveryWorldGroundingWF, concrete population, ActualGroundingWF, EveryContingentGroundedAt, ActualReflexive, NoContingentConcreteSupport, coverage and excluded middle hold; ConcreteNecessaryUnionWF, NoNovelNecessarySupport and NecessarySupportIsPresent fail; NecessaryConcreteUnderivedAt holds."
+}

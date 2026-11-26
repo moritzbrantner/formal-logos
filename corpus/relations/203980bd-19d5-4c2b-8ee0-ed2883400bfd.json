@@ -1,0 +1,10 @@
+{
+  "id": "203980bd-19d5-4c2b-8ee0-ed2883400bfd",
+  "label": "Test by Finite interpretations for the eight derivations of roun for Everything other than p h (1)",
+  "subject_kind": "result",
+  "subject_id": "27d0aa1f-bd7c-5946-b886-0dea80ab650e",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "11e24b50-06bc-5e2e-b9b6-a4e4dc421237",
+  "note": "Tests omitting this premise in the encoded othersAreCreatures argument, with the other premises retained and the conclusion false in each corresponding control."
+}

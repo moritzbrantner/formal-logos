@@ -134,3 +134,13 @@ object_id = "Whatever is in act in being and in POTENCY_2 in some respect is com
 verification_result_id = "In act in being and in POTENCY_2 makes composite, from the unrestricted version"
 strictness_result_id = "Theta.8 controls: heavenly first, contingent first, idle uncaused composite, checked"
 note = "Same InAct, InPotency and Composite parameters; the weak version fixes the act respect at esse. Control.RestrictedStrict: a being in act in a place but not in being, in potency in being and simple. Given STMT-ACTUALITY-ONLY-INSOFAR-AS-BEING they are equivalent (Control.Facts)."
+
+[[relation]]
+id = "Test by Theta.8 controls: heavenly first, contingent first, idle uncaused composite, checked"
+label = "Test by Theta.8 controls: heavenly first, contingent first, idle uncaused composite, checked"
+subject_kind = "result"
+subject_id = "7380b8e8-eeb7-4952-ad72-62734416efc4"
+predicate = "tests"
+object_kind = "statement"
+object_id = "3d99779b-b44a-4daa-a873-8ccdd3c034ae"
+note = "Tests the converse strength implication in the registered interpretation. Same InAct, InPotency and Composite parameters; the weak version fixes the act respect at esse. Control.RestrictedStrict: a being in act in a place but not in being, in potency in being and simple. Given STMT-ACTUALITY-ONLY-INSOFAR-AS-BEING they are equivalent (Control.Facts)."

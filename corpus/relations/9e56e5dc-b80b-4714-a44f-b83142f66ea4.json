@@ -1,0 +1,10 @@
+{
+  "id": "9e56e5dc-b80b-4714-a44f-b83142f66ea4",
+  "label": "Test by Finite interpretations for the eleven derivations of rou for Simple priority is transi (1)",
+  "subject_kind": "result",
+  "subject_id": "133783a4-07b1-5727-9fca-7f9fb474db54",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "7ad36aca-d55e-5b66-92fa-30749333df4f",
+  "note": "Tests omitting this premise in the encoded noLoopsFromPriority argument, with the other premises retained and the conclusion false in each corresponding control."
+}

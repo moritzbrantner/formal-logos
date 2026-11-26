@@ -1,0 +1,10 @@
+{
+  "id": "db430c72-5800-4c5f-a085-c83180946ed8",
+  "label": "Test by Cold stone, composition omissions and first-being act priority facts, checked",
+  "subject_kind": "result",
+  "subject_id": "28d5d266-80d7-412e-9b4e-7bc1a58510bc",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "3b2d2d46-baa6-4772-a2db-bb3daeb092fc",
+  "note": "Tests the converse strength implication in the registered interpretation. Same InAct, InPotency and PriorSimply parameters. The strong reading constrains every potency bearer; the weak one only first beings. Control.ColdStone satisfies the weak version while the strong one fails for a stone with a simply prior ground and nothing in act in heat."
+}

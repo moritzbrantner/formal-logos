@@ -1,0 +1,10 @@
+{
+  "id": "ad6b79f5-c487-4b88-acc7-0a97904d848c",
+  "label": "Test by Selected ancestry uniqueness nonvacuity and omissions for An actual concretum's distin (1)",
+  "subject_kind": "result",
+  "subject_id": "e9c3abb0-e798-473a-a1e0-ef11a38ed720",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "cb1cdea9-eb6c-578c-8008-84e0d4107fd3",
+  "note": "Tests omitting this premise in the encoded uniqueRoot argument, with the other premises retained and the conclusion false in each corresponding control."
+}

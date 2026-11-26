@@ -1,0 +1,10 @@
+{
+  "id": "3d3f567a-f505-4578-9869-6c481287bb44",
+  "label": "Test by Finite interpretations for the eight derivations of roun for If x has r by participati (1)",
+  "subject_kind": "result",
+  "subject_id": "27d0aa1f-bd7c-5946-b886-0dea80ab650e",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "9da93cd4-e4ed-536b-8302-4e7acd0e02ed",
+  "note": "Tests omitting this premise in the encoded causedPerfectionReceivedInEffect argument, with the other premises retained and the conclusion false in each corresponding control."
+}

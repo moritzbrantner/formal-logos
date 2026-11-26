@@ -1,0 +1,10 @@
+{
+  "id": "a54fdfef-a3a5-43ec-bf24-09b9be1515a7",
+  "label": "Test by Finite interpretations for the round 3 Cogito/existence- for Being moved in r is the a (1)",
+  "subject_kind": "result",
+  "subject_id": "b9c3f090-3bf2-5c96-ae3e-c18a1d63cd3b",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "76e0f716-8541-583b-94b4-bffae59c94bb",
+  "note": "Tests omitting this premise in the encoded beingMovedFromUnactualizedCapacity argument, with the other premises retained and the conclusion false in each corresponding control."
+}

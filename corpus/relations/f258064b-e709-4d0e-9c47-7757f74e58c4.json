@@ -1,0 +1,10 @@
+{
+  "id": "f258064b-e709-4d0e-9c47-7757f74e58c4",
+  "label": "Test by Joint mathematical package: genuine Mathlib convergence/ for Every closed event-occupa (1)",
+  "subject_kind": "result",
+  "subject_id": "695a73ac-2b13-5219-8b88-a963c29e6688",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "667f1ace-c9dc-555d-9f66-40a4263b643a",
+  "note": "Checks the instance of closed-set limit admission in its stated indexed setting, including finite controls for dropping closure or the tail conditions."
+}

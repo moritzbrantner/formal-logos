@@ -1,0 +1,10 @@
+{
+  "id": "f159fcf9-7d09-4d69-8513-16a97caa6d86",
+  "label": "Test by Rivals of the fourteen stage-two attribute premises surv for Nothing is simultaneously (1)",
+  "subject_kind": "result",
+  "subject_id": "120dd28f-c1e6-4fa2-8acf-26d0c1d5162a",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "c6d6379b-6a9b-55b5-a701-3df289dfcca4",
+  "note": "Tests the selected premise in the following setting. Same InAct, InPotency and PriorSimply predicates; one being, one respect; PriorSimply is reflexive in this model. Control.actAndPotency in Control.Certificate. Other premise of FirstBeingNoPotency.firstBeingNoPotency holds: act is simply prior to potency (the being in act prior to the potential being is that being itself). Its conclusion (a first being is in potency in no respect) fails."
+}

@@ -1,0 +1,10 @@
+{
+  "id": "54d41f49-90e6-42df-94e7-765448f0bc3c",
+  "label": "Test by In the specified Bool setting only false is generated an for Anything that comes to be (1)",
+  "subject_kind": "result",
+  "subject_id": "30544d35-4c58-5483-b31a-827decfab7f5",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "9709d14f-1324-58f1-8889-1110881c5b44",
+  "note": "The specified identity-only Bool setting satisfies W and not S under exactly the same empty background and decidable identity."
+}

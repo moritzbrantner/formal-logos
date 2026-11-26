@@ -1,0 +1,10 @@
+{
+  "id": "d6b5dd9c-33ee-4ce7-ab27-2c59ec65b8de",
+  "label": "Test by The Bool predicate True satisfies the empty background a for For an arbitrary supplied (1)",
+  "subject_kind": "result",
+  "subject_id": "0b8b8a8c-83df-55b3-a659-4c151e204591",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "f976f890-aba8-59cb-a312-1feaf833e727",
+  "note": "The supplied Bool predicate True has distinct false and true witnesses, satisfying existence and falsifying unique existence under the same empty background."
+}

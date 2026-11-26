@@ -1,0 +1,10 @@
+{
+  "id": "f841d331-b57d-4dd4-ba64-b028363cf7da",
+  "label": "Test by Theta.8 controls: heavenly first, contingent first, idle uncaused composite, checked",
+  "subject_kind": "result",
+  "subject_id": "7380b8e8-eeb7-4952-ad72-62734416efc4",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "3d99779b-b44a-4daa-a873-8ccdd3c034ae",
+  "note": "Tests the converse strength implication in the registered interpretation. Same InAct, InPotency and Composite parameters; the weak version fixes the act respect at esse. Control.RestrictedStrict: a being in act in a place but not in being, in potency in being and simple. Given STMT-ACTUALITY-ONLY-INSOFAR-AS-BEING they are equivalent (Control.Facts)."
+}

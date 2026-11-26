@@ -296,3 +296,273 @@ predicate = "supports"
 object_kind = "statement"
 object_id = "STMT-EXISTENT-IS-IN-ACT-IN-SOME-RESPECT"
 note = "Q.4 a.1 ad 3 calls esse 'actualitas omnium rerum'; the claim formalizes only the direction from act to esse. The premise uses the other direction, from existence at the selected world to act in some respect; reading the Ontic existence assignment as esse in re is the analyst's."
+
+[[relation]]
+id = "Test by Finite interpretations for the fourteen derivations of round 2: for each premise other than…"
+label = "Test by Finite interpretations for the fourteen derivations of round 2: for each premise other than…"
+subject_kind = "result"
+subject_id = "7ebb0ab0-4022-5113-9810-67b4afa60cfc"
+predicate = "tests"
+object_kind = "statement"
+object_id = "0436de86-6579-53f2-9ff5-2111ba44ebae"
+note = "Tests omitting this premise in the encoded intellectualExerciseRequiresActFromExistence argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the fourteen derivations of r for Every bearer of causal po (1)"
+label = "Test by Finite interpretations for the fourteen derivations of r for Every bearer of causal po (1)"
+subject_kind = "result"
+subject_id = "7ebb0ab0-4022-5113-9810-67b4afa60cfc"
+predicate = "tests"
+object_kind = "statement"
+object_id = "0a7896e7-fc8a-55b2-a368-978bda235b31"
+note = "Tests omitting this premise in the encoded existingInActAtFromEleaticPower, existentInActFromEleaticPower, intellectualExerciseRequiresActFromActivePower arguments, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the fourteen derivations of r for Every occurring thought e (1)"
+label = "Test by Finite interpretations for the fourteen derivations of r for Every occurring thought e (1)"
+subject_kind = "result"
+subject_id = "7ebb0ab0-4022-5113-9810-67b4afa60cfc"
+predicate = "tests"
+object_kind = "statement"
+object_id = "17667565-81e2-55d7-a269-a569f2449caf"
+note = "Tests omitting this premise in the encoded everyThoughtHasSubjectFromAgency argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the fourteen derivations of r for Whoever is attributed an (1)"
+label = "Test by Finite interpretations for the fourteen derivations of r for Whoever is attributed an (1)"
+subject_kind = "result"
+subject_id = "7ebb0ab0-4022-5113-9810-67b4afa60cfc"
+predicate = "tests"
+object_kind = "statement"
+object_id = "193c3a8c-fc70-5b5d-8621-df68a5b0f960"
+note = "Tests omitting this premise in the encoded intellectualExerciseRequiresActFromOperating argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the fourteen derivations of r for Whoever is attributed an (2)"
+label = "Test by Finite interpretations for the fourteen derivations of r for Whoever is attributed an (2)"
+subject_kind = "result"
+subject_id = "7ebb0ab0-4022-5113-9810-67b4afa60cfc"
+predicate = "tests"
+object_kind = "statement"
+object_id = "3b13b39c-9d1c-5324-8327-0329f26e083c"
+note = "Tests omitting this premise in the encoded intellectualExerciseRequiresActFromExistence argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the fourteen derivations of r for Every intellectual exerci (1)"
+label = "Test by Finite interpretations for the fourteen derivations of r for Every intellectual exerci (1)"
+subject_kind = "result"
+subject_id = "7ebb0ab0-4022-5113-9810-67b4afa60cfc"
+predicate = "tests"
+object_kind = "statement"
+object_id = "3dd25039-1575-5612-83a5-2cee9ce1bf7a"
+note = "Tests omitting this premise in the encoded bearerExistsFromOperationAndEsse argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the fourteen derivations of r for Every occurring thought e (2)"
+label = "Test by Finite interpretations for the fourteen derivations of r for Every occurring thought e (2)"
+subject_kind = "result"
+subject_id = "7ebb0ab0-4022-5113-9810-67b4afa60cfc"
+predicate = "tests"
+object_kind = "statement"
+object_id = "4bc1befb-0788-5c26-9aef-2e57b15950ef"
+note = "Tests omitting this premise in the encoded thoughtIsExerciseFromIntellective argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the fourteen derivations of r for Every cause is in act in (1)"
+label = "Test by Finite interpretations for the fourteen derivations of r for Every cause is in act in (1)"
+subject_kind = "result"
+subject_id = "7ebb0ab0-4022-5113-9810-67b4afa60cfc"
+predicate = "tests"
+object_kind = "statement"
+object_id = "4cd75e82-3338-5ef6-9636-da518844a519"
+note = "Tests omitting this premise in the encoded intellectualExerciseRequiresActFromProduction argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the fourteen derivations of r for Whatever is in act of ess (1)"
+label = "Test by Finite interpretations for the fourteen derivations of r for Whatever is in act of ess (1)"
+subject_kind = "result"
+subject_id = "7ebb0ab0-4022-5113-9810-67b4afa60cfc"
+predicate = "tests"
+object_kind = "statement"
+object_id = "546975ef-0614-5c0a-8f49-fab2cd2a2533"
+note = "Tests omitting this premise in the encoded bearerExistsFromOperationAndEsse argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the fourteen derivations of r for Whoever is attributed an (3)"
+label = "Test by Finite interpretations for the fourteen derivations of r for Whoever is attributed an (3)"
+subject_kind = "result"
+subject_id = "7ebb0ab0-4022-5113-9810-67b4afa60cfc"
+predicate = "tests"
+object_kind = "statement"
+object_id = "54b0131b-96f2-51b6-b47d-87a0b7f2219c"
+note = "Tests omitting this premise in the encoded intellectualExerciseRequiresActFromProduction argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the fourteen derivations of r for Every occurring thought e (3)"
+label = "Test by Finite interpretations for the fourteen derivations of r for Every occurring thought e (3)"
+subject_kind = "result"
+subject_id = "7ebb0ab0-4022-5113-9810-67b4afa60cfc"
+predicate = "tests"
+object_kind = "statement"
+object_id = "5581cd7f-43b3-5aa1-b18d-36b8a44a9681"
+note = "Tests omitting this premise in the encoded everyThoughtHasSubjectFromModification argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the fourteen derivations of r for Nothing has actuality exc (1)"
+label = "Test by Finite interpretations for the fourteen derivations of r for Nothing has actuality exc (1)"
+subject_kind = "result"
+subject_id = "7ebb0ab0-4022-5113-9810-67b4afa60cfc"
+predicate = "tests"
+object_kind = "statement"
+object_id = "7067553d-cad9-5d79-b6b2-912e35051530"
+note = "Tests omitting this premise in the encoded existingInActAtFromSomeAct, existingInActAtFromEleaticPower, bearerExistsFromOperationAndEsse arguments, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the fourteen derivations of r for Whoever is attributed an (4)"
+label = "Test by Finite interpretations for the fourteen derivations of r for Whoever is attributed an (4)"
+subject_kind = "result"
+subject_id = "7ebb0ab0-4022-5113-9810-67b4afa60cfc"
+predicate = "tests"
+object_kind = "statement"
+object_id = "8061edec-5af6-5d25-81b4-e1ccd98207fa"
+note = "Tests omitting this premise in the encoded intellectualExerciseRequiresActFromActivePower argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the fourteen derivations of r for Whoever bears an intellec (1)"
+label = "Test by Finite interpretations for the fourteen derivations of r for Whoever bears an intellec (1)"
+subject_kind = "result"
+subject_id = "7ebb0ab0-4022-5113-9810-67b4afa60cfc"
+predicate = "tests"
+object_kind = "statement"
+object_id = "84c57a8c-d9a2-5672-8b7f-200117f13497"
+note = "Tests omitting this premise in the encoded thoughtIsExerciseFromIntellective argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the fourteen derivations of r for Bearers exercise intellec (1)"
+label = "Test by Finite interpretations for the fourteen derivations of r for Bearers exercise intellec (1)"
+subject_kind = "result"
+subject_id = "7ebb0ab0-4022-5113-9810-67b4afa60cfc"
+predicate = "tests"
+object_kind = "statement"
+object_id = "8cf54bde-0c97-5428-9179-0d567293675d"
+note = "Tests omitting this premise in the encoded bearerExistsFromOperationAndEsse argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the fourteen derivations of r for Whoever bears an occurrin (1)"
+label = "Test by Finite interpretations for the fourteen derivations of r for Whoever bears an occurrin (1)"
+subject_kind = "result"
+subject_id = "7ebb0ab0-4022-5113-9810-67b4afa60cfc"
+predicate = "tests"
+object_kind = "statement"
+object_id = "a082d5be-9db6-5a35-add6-3944aab819f6"
+note = "Tests omitting this premise in the encoded thoughtIsExerciseFromOpining argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the fourteen derivations of r for Whatever is not in act of (1)"
+label = "Test by Finite interpretations for the fourteen derivations of r for Whatever is not in act of (1)"
+subject_kind = "result"
+subject_id = "7ebb0ab0-4022-5113-9810-67b4afa60cfc"
+predicate = "tests"
+object_kind = "statement"
+object_id = "a62975a9-bcd4-5bc7-83e7-6d4f5d2b2c13"
+note = "Tests omitting this premise in the encoded existingInActAtFromMerePossibility argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the fourteen derivations of r for At the selected world eve (1)"
+label = "Test by Finite interpretations for the fourteen derivations of r for At the selected world eve (1)"
+subject_kind = "result"
+subject_id = "7ebb0ab0-4022-5113-9810-67b4afa60cfc"
+predicate = "tests"
+object_kind = "statement"
+object_id = "adf07168-21a9-5ea3-83b1-7d404f3f6421"
+note = "Tests omitting this premise in the encoded existingInActAtFromSomeAct argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the fourteen derivations of r for Every existent has causal power"
+label = "Test by Finite interpretations for the fourteen derivations of r for Every existent has causal power"
+subject_kind = "result"
+subject_id = "7ebb0ab0-4022-5113-9810-67b4afa60cfc"
+predicate = "tests"
+object_kind = "statement"
+object_id = "ae68972c-175a-5e68-86fb-f69fa30e2054"
+note = "Tests omitting this premise in the encoded existingInActAtFromEleaticPower, existentInActFromEleaticPower arguments, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the fourteen derivations of r for The agent of an episode b (1)"
+label = "Test by Finite interpretations for the fourteen derivations of r for The agent of an episode b (1)"
+subject_kind = "result"
+subject_id = "7ebb0ab0-4022-5113-9810-67b4afa60cfc"
+predicate = "tests"
+object_kind = "statement"
+object_id = "c2fa06f2-cf36-5958-b69a-ef274b45014c"
+note = "Tests omitting this premise in the encoded everyThoughtHasSubjectFromAgency argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the fourteen derivations of r for Whoever bears an episode (1)"
+label = "Test by Finite interpretations for the fourteen derivations of r for Whoever bears an episode (1)"
+subject_kind = "result"
+subject_id = "7ebb0ab0-4022-5113-9810-67b4afa60cfc"
+predicate = "tests"
+object_kind = "statement"
+object_id = "c8394eaf-3110-503d-881f-6fc49f7430c3"
+note = "Tests omitting this premise in the encoded thoughtIsExerciseFromOpining argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the fourteen derivations of r for Nothing merely possible e (1)"
+label = "Test by Finite interpretations for the fourteen derivations of r for Nothing merely possible e (1)"
+subject_kind = "result"
+subject_id = "7ebb0ab0-4022-5113-9810-67b4afa60cfc"
+predicate = "tests"
+object_kind = "statement"
+object_id = "c85117b0-6113-5460-95d8-5593d1acd49d"
+note = "Tests omitting this premise in the encoded existingInActAtFromMerePossibility argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the fourteen derivations of r for Every operation has an ag (1)"
+label = "Test by Finite interpretations for the fourteen derivations of r for Every operation has an ag (1)"
+subject_kind = "result"
+subject_id = "7ebb0ab0-4022-5113-9810-67b4afa60cfc"
+predicate = "tests"
+object_kind = "statement"
+object_id = "d4ea5ebf-7680-5c48-a0ad-6a6e559ec2d6"
+note = "Tests omitting this premise in the encoded everyThoughtHasSubjectFromAgency argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the fourteen derivations of r for Every modification is bor (1)"
+label = "Test by Finite interpretations for the fourteen derivations of r for Every modification is bor (1)"
+subject_kind = "result"
+subject_id = "7ebb0ab0-4022-5113-9810-67b4afa60cfc"
+predicate = "tests"
+object_kind = "statement"
+object_id = "e6d842fb-fdcf-5da0-9c45-e576e2d5d842"
+note = "Tests omitting this premise in the encoded everyThoughtHasSubjectFromModification argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the fourteen derivations of r for Every occurring thought e (4)"
+label = "Test by Finite interpretations for the fourteen derivations of r for Every occurring thought e (4)"
+subject_kind = "result"
+subject_id = "7ebb0ab0-4022-5113-9810-67b4afa60cfc"
+predicate = "tests"
+object_kind = "statement"
+object_id = "eb7c7da6-f772-5cda-a70d-260ce466e54e"
+note = "Tests omitting this premise in the encoded bearerExistsFromWorldIndexedOccurrence argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the fourteen derivations of r for At any world, whoever bea (1)"
+label = "Test by Finite interpretations for the fourteen derivations of r for At any world, whoever bea (1)"
+subject_kind = "result"
+subject_id = "7ebb0ab0-4022-5113-9810-67b4afa60cfc"
+predicate = "tests"
+object_kind = "statement"
+object_id = "f8b47cda-5ebf-532d-b951-b4f756076cc9"
+note = "Tests omitting this premise in the encoded bearerExistsFromWorldIndexedOccurrence argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the fourteen derivations of r for Every transient or immane (1)"
+label = "Test by Finite interpretations for the fourteen derivations of r for Every transient or immane (1)"
+subject_kind = "result"
+subject_id = "7ebb0ab0-4022-5113-9810-67b4afa60cfc"
+predicate = "tests"
+object_kind = "statement"
+object_id = "febc5ca6-967a-5fcc-9d72-5255d1300b6d"
+note = "Tests omitting this premise in the encoded intellectualExerciseRequiresActFromOperating argument, with the other premises retained and the conclusion false in each corresponding control."

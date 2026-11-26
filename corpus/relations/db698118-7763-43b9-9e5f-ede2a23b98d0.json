@@ -1,0 +1,10 @@
+{
+  "id": "db698118-7763-43b9-9e5f-ede2a23b98d0",
+  "label": "Test by Finite interpretations for the eight derivations of roun for Whatever c efficiently ca (1)",
+  "subject_kind": "result",
+  "subject_id": "27d0aa1f-bd7c-5946-b886-0dea80ab650e",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "c0d99549-799c-5a01-9b59-75fe88550b26",
+  "note": "Tests omitting this premise in the encoded efficientCauseNotDependent argument, with the other premises retained and the conclusion false in each corresponding control."
+}

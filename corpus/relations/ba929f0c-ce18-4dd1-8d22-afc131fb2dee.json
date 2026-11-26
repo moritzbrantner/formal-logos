@@ -1,0 +1,10 @@
+{
+  "id": "ba929f0c-ce18-4dd1-8d22-afc131fb2dee",
+  "label": "Test by Finite interpretations for the eight derivations of roun for If y can be without x and (1)",
+  "subject_kind": "result",
+  "subject_id": "27d0aa1f-bd7c-5946-b886-0dea80ab650e",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "97fa3a0b-eb23-5fb1-9741-c1f09fb72206",
+  "note": "Tests omitting this premise in the encoded nonmutualDependenceSuffices argument, with the other premises retained and the conclusion false in each corresponding control."
+}

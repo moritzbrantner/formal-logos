@@ -139,3 +139,23 @@ object_id = "Whatever is LORD_3 is LORD_1"
 verification_result_id = "LORD_2 being LORD_1 gives LORD_3 being LORD_1"
 strictness_result_id = "Controls for the typed LORD_3 reading, checked"
 note = "Same InAct, CausesIn, esse, Governs and IsLord. The strong version gives LORD_1 to every cause and governor of all; the weak one only to such a being that also wills some good of their own to every other intellectual being. Control part 2: a cause and governor of all that wills no good to an existing intellectual creature satisfies the weak version and falsifies the strong one."
+
+[[relation]]
+id = "Test by Controls for the typed LORD_3 reading, checked"
+label = "Test by Controls for the typed LORD_3 reading, checked"
+subject_kind = "result"
+subject_id = "96ce418a-a2d7-40ac-bf8d-cf698f16f4dc"
+predicate = "tests"
+object_kind = "statement"
+object_id = "c691e3d0-5dd0-404a-a1dd-9a4a278dcd31"
+note = "Tests the converse strength implication in the registered interpretation. Same IsGod, InAct, GoodIn, WillsGoodFor and esse. The strong version gives a willed good to every existing being, God included; the weak one only to a distinct intellectual being whose being God causes. Control part 5: with no intellectual being other than God and no willing, the weak version holds and the strong one fails."
+
+[[relation]]
+id = "Test by Controls for the typed LORD_3 reading, checked for Whatever is LORD_2 is LORD_1"
+label = "Test by Controls for the typed LORD_3 reading, checked for Whatever is LORD_2 is LORD_1"
+subject_kind = "result"
+subject_id = "96ce418a-a2d7-40ac-bf8d-cf698f16f4dc"
+predicate = "tests"
+object_kind = "statement"
+object_id = "eb6611a5-f8a7-44f6-9bf1-2f65eb80b3cb"
+note = "Tests the converse strength implication in the registered interpretation. Same InAct, CausesIn, esse, Governs and IsLord. The strong version gives LORD_1 to every cause and governor of all; the weak one only to such a being that also wills some good of their own to every other intellectual being. Control part 2: a cause and governor of all that wills no good to an existing intellectual creature satisfies the weak version and falsifies the strong one."

@@ -1,0 +1,10 @@
+{
+  "id": "89e77323-e50b-4a17-bc69-f79254f9ee14",
+  "label": "Test by Finite interpretations for the fourteen derivations of r for Every operation has an ag (1)",
+  "subject_kind": "result",
+  "subject_id": "7ebb0ab0-4022-5113-9810-67b4afa60cfc",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "d4ea5ebf-7680-5c48-a0ad-6a6e559ec2d6",
+  "note": "Tests omitting this premise in the encoded everyThoughtHasSubjectFromAgency argument, with the other premises retained and the conclusion false in each corresponding control."
+}

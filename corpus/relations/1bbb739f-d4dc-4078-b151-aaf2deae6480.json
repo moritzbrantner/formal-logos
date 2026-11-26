@@ -1,0 +1,10 @@
+{
+  "id": "1bbb739f-d4dc-4078-b151-aaf2deae6480",
+  "label": "Test by Rivals of the fourteen stage-two attribute premises surv for A being that is SIMPLE_4, (1)",
+  "subject_kind": "result",
+  "subject_id": "120dd28f-c1e6-4fa2-8acf-26d0c1d5162a",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "818a73cc-249d-5f9b-9c34-aee1f2cbf333",
+  "note": "Tests the selected premise in the following setting. Same Signature with its primitive HasClassicalAttributes field and the theorem's own nine predicate instances; one being, one respect. Control.attributesFallShort in Control.Certificate. Other thirteen non-logical premises of StageTwo.ClassicalAttributes.godHasClassicalAttributes hold, including the five separately supplied attribute conclusions. Its conclusion (whatever is God has the classical attributes) fails. The theorem's excluded-middle premise is general logic and is not checked."
+}

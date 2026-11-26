@@ -1,0 +1,10 @@
+{
+  "id": "64d13f1e-2fed-4534-bb0e-3ecc0c142c3b",
+  "label": "Test by Non-concrete-cause rival of the esse-cause bridge survives, checked",
+  "subject_kind": "result",
+  "subject_id": "3abf7cd9-99f2-4d45-80ee-dc7295e4bce8",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "cb1cdea9-eb6c-578c-8008-84e0d4107fd3",
+  "note": "Tests the selected premise in the following setting. Same Profile, selected world, CausesIn and esse as the premise; two mutually accessible worlds, two candidates. Control.formCause in Control.NonConcreteEsseCauseSurvives; nonConcreteEsseCauseSurvives proves the listed conjuncts. Control.formCause at world false with formCauses and formParticipates: the rival, ContingentConcretumParticipatesEsse and ParticipatedEsseHasDistinctCause hold; EveryContingentGroundedAt fails. Consumer tested: Round2Grounding.contingentGroundedViaParticipation."
+}

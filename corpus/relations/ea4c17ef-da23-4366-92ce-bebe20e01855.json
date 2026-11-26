@@ -1,0 +1,10 @@
+{
+  "id": "ea4c17ef-da23-4366-92ce-bebe20e01855",
+  "label": "Test by Finite interpretations for the eight derivations of roun for For every y, perfection r (1)",
+  "subject_kind": "result",
+  "subject_id": "27d0aa1f-bd7c-5946-b886-0dea80ab650e",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "3e890700-3a15-5dd5-bc71-ec03d3466139",
+  "note": "Tests omitting this premise in the encoded causePerfectionNotReceivedInEffect argument, with the other premises retained and the conclusion false in each corresponding control."
+}

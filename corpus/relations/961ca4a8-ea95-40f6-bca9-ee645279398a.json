@@ -1,0 +1,10 @@
+{
+  "id": "961ca4a8-ea95-40f6-bca9-ee645279398a",
+  "label": "Test by Other-only origin frame separates the origin bridges",
+  "subject_kind": "result",
+  "subject_id": "44001670-8287-47bf-815b-c5719bee6449",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "be90bb15-c2ce-44cd-ae2d-5ec6dc4c24c9",
+  "note": "Strictness control: in the other-only frame with no exercises the self-edge bridge holds vacuously and the universal bridge fails at the edge true to false."
+}
