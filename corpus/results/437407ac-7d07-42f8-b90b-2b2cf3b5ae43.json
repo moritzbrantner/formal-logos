@@ -1,0 +1,12 @@
+{
+  "id": "437407ac-7d07-42f8-b90b-2b2cf3b5ae43",
+  "label": "Distinct concurrent giving from an irreflexive origin relation whose term gives",
+  "argument_id": "d4cddbea-7b10-4ba7-8410-9bf0216138dd",
+  "challenge_module": "TruthCore.Results.Causality.ConcurrentGiving.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ConcurrentGiving.Solution",
+  "theorem": "TruthCore.Results.Causality.ConcurrentGiving.distinctOfOriginTerm",
+  "comparator_config": "results/437407ac-7d07-42f8-b90b-2b2cf3b5ae43/comparator.json",
+  "status": "solution-present",
+  "description": "Assembly: accompaniment supplies a term at t, irreflexivity distinguishes that witness from the bearer, and giving by the term supplies the witness's giving at t. Giving by the term is an open commitment beyond the relation's continued obtaining or the term's coexistence.",
+  "transcription": "assembly"
+}

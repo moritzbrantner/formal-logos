@@ -1,0 +1,30 @@
+{
+  "id": "c321b0d3-6cdb-4226-bf6a-9c9bed3add10",
+  "label": "Finite onset-only giving with explanation, origin and RECEIVES_ESSE_AT_2",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "98308b41-095d-4a81-9897-8f73e324a26f",
+  "inference_ids": [
+    "d5cdfbaa-0d4b-4914-8a44-c143492f212e"
+  ],
+  "meaning": "Closed control over a single interpretation. Onset-only giving is compatible there with momentary explanation, origin accompaniment, standing receipt, non-self-giving, contact and concurrence, as well as the cessation law, foundation, irreflexivity and term coexistence. The three productive bridges, weak concurrent actualization and the universal sustaining reading all fail in that frame.",
+  "term_senses": {
+    "CAUSE_OF_BEING": "5acddd28-aca0-410d-96d2-ef9386b8dc27",
+    "RECEIVES_ESSE_AT": "5cbcd91f-285b-4c5c-bc2f-72106e483e43"
+  },
+  "definition_ids": [
+    "158301bc-9585-4145-be60-34f08c9f922c",
+    "181bb18f-72a4-4cb1-b5c0-9a70f5af2bb5",
+    "261516e9-9e57-4750-a6ba-f0ea64ff09bf",
+    "7b28be97-9a3c-444f-af46-fe410092c3ee",
+    "8c20c988-31fd-4b59-acf2-db230a6ea32e",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "4433942e-aaf6-55a9-b777-66e55638103d",
+    "56989bd0-a232-56ea-9093-c89350effff4",
+    "6e811e85-b983-5988-b20a-f4f3ee83c50e"
+  ],
+  "disambiguation_ids": [
+    "71d3bdb7-92cc-4023-b0ca-1739914628e4",
+    "5921354b-51e6-5da3-8d8c-e9041840fd9f"
+  ]
+}

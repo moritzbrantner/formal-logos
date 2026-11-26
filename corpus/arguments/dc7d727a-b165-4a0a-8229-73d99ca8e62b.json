@@ -1,0 +1,24 @@
+{
+  "id": "dc7d727a-b165-4a0a-8229-73d99ca8e62b",
+  "label": "Finite RECEIVES_ESSE_AT_1 contrast of onset and present receipt",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "539c6e2d-c632-4e13-9a43-6290bef515ec",
+  "inference_ids": [
+    "28cde34e-e988-4e61-a137-30a1b48e0587"
+  ],
+  "meaning": "Closed control over the passion interpretation. Receipt at onset and correlativity hold. Present-tense receipt and weak concurrent actualization fail.",
+  "term_senses": {
+    "RECEIVES_ESSE_AT": "a2905cb6-12a9-4c21-9c24-3bb25e6537a1"
+  },
+  "definition_ids": [
+    "158301bc-9585-4145-be60-34f08c9f922c",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "4433942e-aaf6-55a9-b777-66e55638103d",
+    "6e811e85-b983-5988-b20a-f4f3ee83c50e",
+    "ac8dbcaa-09d9-4f9e-9d19-995b38642f82"
+  ],
+  "disambiguation_ids": [
+    "71d3bdb7-92cc-4023-b0ca-1739914628e4",
+    "5921354b-51e6-5da3-8d8c-e9041840fd9f"
+  ]
+}

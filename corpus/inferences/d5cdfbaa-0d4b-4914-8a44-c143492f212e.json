@@ -1,0 +1,10 @@
+{
+  "id": "d5cdfbaa-0d4b-4914-8a44-c143492f212e",
+  "label": "Finite onset-only giving with explanation, origin and RECEIVES_ESSE_AT_2 (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "98308b41-095d-4a81-9897-8f73e324a26f",
+  "rule": "Evaluate the propositions on the explicit two-moment causality frame",
+  "meaning": "Closed control over a single interpretation. Onset-only giving is compatible there with momentary explanation, origin accompaniment, standing receipt, non-self-giving, contact and concurrence, as well as the cessation law, foundation, irreflexivity and term coexistence. The three productive bridges, weak concurrent actualization and the universal sustaining reading all fail in that frame.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

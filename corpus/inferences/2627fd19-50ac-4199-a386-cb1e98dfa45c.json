@@ -1,0 +1,14 @@
+{
+  "id": "2627fd19-50ac-4199-a386-cb1e98dfa45c",
+  "label": "Distinct concurrent giving from an irreflexive origin relation whose term gives (inference)",
+  "input_statement_ids": [
+    "9fecbef4-0094-4e99-ab9d-98b9c1b916f1",
+    "6da7d94a-abc4-4092-96c1-9469af548f87",
+    "d383124b-9fbb-42ce-8ab5-3673b4466c03"
+  ],
+  "output_statement_id": "76d2cc96-14a0-48bc-bd0b-a5c0ca853265",
+  "rule": "Select the origin term at the recipient's moment, exclude identity by irreflexivity and apply the term-giving bridge",
+  "meaning": "Assembly: accompaniment supplies a term at t, irreflexivity distinguishes that witness from the bearer, and giving by the term supplies the witness's giving at t. Giving by the term is an open commitment beyond the relation's continued obtaining or the term's coexistence.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

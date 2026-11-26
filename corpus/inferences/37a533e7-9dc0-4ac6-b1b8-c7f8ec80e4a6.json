@@ -1,0 +1,14 @@
+{
+  "id": "37a533e7-9dc0-4ac6-b1b8-c7f8ec80e4a6",
+  "label": "Distinct concurrent giving from momentary explanation and the productive bridge (inference)",
+  "input_statement_ids": [
+    "9a14bdd8-65f8-4fe5-97b7-9fbbcde73e5b",
+    "d86c9de9-25be-488b-b3b7-69f5f4eb80b8",
+    "e15c0c44-841d-4088-ac46-9b4fe07e2082"
+  ],
+  "output_statement_id": "76d2cc96-14a0-48bc-bd0b-a5c0ca853265",
+  "rule": "Use the momentary PSR and productive bridge to obtain a giver there, then exclude identity by scoped non-self-giving",
+  "meaning": "Assembly: for a received-esse thing present at t, the existing explanatory derivation gives a giver at t; scoped non-self-giving makes that witness distinct. The productive bridge is an open commitment about giving, beyond the demand to explain the fact of presence at t.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

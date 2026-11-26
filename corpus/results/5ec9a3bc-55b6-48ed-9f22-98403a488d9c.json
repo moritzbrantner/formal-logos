@@ -1,0 +1,12 @@
+{
+  "id": "5ec9a3bc-55b6-48ed-9f22-98403a488d9c",
+  "label": "Distinct concurrent giving from momentary explanation and the productive bridge",
+  "argument_id": "5ac5ea7c-299f-4fa9-82ad-9a9c99198166",
+  "challenge_module": "TruthCore.Results.Causality.ConcurrentGiving.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ConcurrentGiving.Solution",
+  "theorem": "TruthCore.Results.Causality.ConcurrentGiving.distinctOfMomentaryExplanation",
+  "comparator_config": "results/5ec9a3bc-55b6-48ed-9f22-98403a488d9c/comparator.json",
+  "status": "solution-present",
+  "description": "Assembly: for a received-esse thing present at t, the existing explanatory derivation gives a giver at t; scoped non-self-giving makes that witness distinct. The productive bridge is an open commitment about giving, beyond the demand to explain the fact of presence at t.",
+  "transcription": "assembly"
+}

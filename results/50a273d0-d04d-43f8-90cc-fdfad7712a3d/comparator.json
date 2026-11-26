@@ -1,0 +1,9 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.ConcurrentGiving.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ConcurrentGiving.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.ConcurrentGiving.distinctOfPresentReceipt"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}

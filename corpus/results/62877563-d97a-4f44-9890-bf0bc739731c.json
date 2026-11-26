@@ -1,0 +1,11 @@
+{
+  "id": "62877563-d97a-4f44-9890-bf0bc739731c",
+  "label": "Finite RECEIVES_ESSE_AT_1 contrast of onset and present receipt",
+  "argument_id": "dc7d727a-b165-4a0a-8229-73d99ca8e62b",
+  "challenge_module": "TruthCore.Results.Causality.ConcurrentGiving.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ConcurrentGiving.Solution",
+  "theorem": "TruthCore.Results.Causality.ConcurrentGiving.onsetOnlyPassion",
+  "comparator_config": "results/62877563-d97a-4f44-9890-bf0bc739731c/comparator.json",
+  "status": "solution-present",
+  "description": "Closed control over the passion interpretation. Receipt at onset and correlativity hold. Present-tense receipt and weak concurrent actualization fail."
+}
