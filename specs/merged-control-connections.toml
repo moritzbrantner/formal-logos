@@ -1,0 +1,39 @@
+[batch]
+vocab = "TruthCore.Causality"
+results = "TruthCore.Results.Causality"
+
+[[relation]]
+id = "The calibrated withdrawal contrast tests the productive bridge"
+subject_kind = "result"
+subject_id = "00a7e616-3154-4db7-8d66-af4536384df7"
+predicate = "tests"
+object_kind = "statement"
+object_id = "d86c9de9-25be-488b-b3b7-69f5f4eb80b8"
+note = "The calibrated, explained, received survivor excludes every strict giver at the cut endpoint. The contradiction with the productive bridge is conditional on the calibration."
+
+[[relation]]
+id = "Calibrated loss tests the coverage of cessation by inducers"
+subject_kind = "result"
+subject_id = "00a7e616-3154-4db7-8d66-af4536384df7"
+predicate = "tests"
+object_kind = "statement"
+object_id = "3f5d3750-0f2b-4f53-9330-5ea679463820"
+note = "The calibrated loss branch fixes earlier presence and excludes every represented inducer in the interval, while the later presence bit is false. It checks a configuration in which both equivalent formulations of the persistence condition fail."
+
+[[relation]]
+id = "Exact provenance tests accessible witness preservation in the replacement profile"
+subject_kind = "result"
+subject_id = "19d47624-328d-4c39-9008-1ce24f7d6eed"
+predicate = "tests"
+object_kind = "statement"
+object_id = "31bcb75e-22ea-4ca9-a9f5-a71da9bfc3f1"
+note = "origin_preserves tests the general preservation requirement in the unchanged replacement profile under exact-provenance individuation. Only actual retains the effect's provenance, so the preservation conclusion is vacuous there. The separate role criterion permits a far witness that the same closest-absence selection omits."
+
+[[relation]]
+id = "Fixed-role occupancy is an alternative to exact-provenance individuation"
+subject_kind = "statement"
+subject_id = "f530b408-cb58-4780-adb3-f2e96d5aa717"
+predicate = "alternative_to"
+object_kind = "statement"
+object_id = "cccaf7ca-8900-4ddb-aa38-e0c0c1465456"
+note = "For the same replacement outputs, role occupancy counts the far backup producer's output as the effect and exact provenance excludes it. role_omits_witness checks the resulting failure of the same closest-absence selection to preserve a witness."

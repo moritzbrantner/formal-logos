@@ -27,8 +27,13 @@ paraphrase = "There are two sound traces of one everlasting bearer and two disti
 
 [[statement]]
 id = "External things reading on the actuality of a distinct bearer"
-paraphrase = "Analyst interpretation with attribution deferred. The question is whether a persistence explanation for one bearer x can explain why a distinct bearer y exists at any date. The per-bearer law by itself leaves this open, since applying it to y uses y's prior presence. A cross-bearer origin or support reason would supply a further input."
+lean = "TruthCore.Explanation.InertialActuality.OtherBearerActualityOpen"
+definitions = ["DEF-TEMPORAL-HISTORY-NOW-SLICE","8c20c988-31fd-4b59-acf2-db230a6ea32e"]
+paraphrase = "Analyst control, attribution deferred. Two integer-time histories of one frame share the cessation law and no inducers. A bearer x has the same presence at each date and the same earlier-date reason for presence at date 1 in both histories, while a distinct bearer y is present at some date in one and at none in the other. Even the global law and the x-only reason fail to entail y's actuality."
 
 [[statement]]
 id = "External things reading on externally conditioned persistence"
-paraphrase = "Analyst interpretation with attribution deferred. The question is whether a bearer can continue to exist only under certain external conditions. An external protector may secure the no-loss background without giving the bearer its being. No substantive objection identified to the conditional persistence law from external conditioning alone. An independently established ongoing strict giver would pose a separate question about existential dependence."
+lean = "TruthCore.Explanation.InertialActuality.ExternalProtectionCompatible"
+definitions = ["DEF-TEMPORAL-HISTORY-NOW-SLICE","8c20c988-31fd-4b59-acf2-db230a6ea32e","DEF-ESSE-RECEIVED-IN","158301bc-9585-4145-be60-34f08c9f922c"]
+disambiguations = ["DISAMB-ESSE-RECEPTION"]
+paraphrase = "Analyst control, attribution deferred. The same receiver is present at 0 in two integer-time histories satisfying the cessation law. At 1 the protector is present and there is no inducer against the receiver in one history. In the other the protector is absent and a loss inducer occurs at 1. The receiver survives to 1 only in the protected history. Neither history supplies a strict giver at 1. The surviving received bearer has an inertial reason at 1, falsifying the productive bridge in this model."

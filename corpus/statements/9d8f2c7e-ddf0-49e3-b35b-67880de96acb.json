@@ -1,0 +1,13 @@
+{
+  "id": "9d8f2c7e-ddf0-49e3-b35b-67880de96acb",
+  "label": "A specified essential truth entails the temporal candidate's ontic existence",
+  "paraphrase": "OPEN analyst premise on the consequential nature reading (EXISTENCE_IN_ESSENCE_5), specialized to a supplied world-proposition. The fact belongs to the candidate's nature, and in every represented world where the fact holds the candidate exists in the ontic frame. The premise leaves open where the fact holds and whether there is such a fact for a real candidate.",
+  "lean_declaration": "TruthCore.Explanation.InertialActuality.NatureSuppliesActuality",
+  "definition_ids": [
+    "7cf63236-9c12-41bc-bf20-6fbce7a121db",
+    "316780ef-70da-498f-8893-317cb35ca80b"
+  ],
+  "disambiguation_ids": [
+    "f704b7ca-b455-4da7-a757-b0564fe76b3b"
+  ]
+}

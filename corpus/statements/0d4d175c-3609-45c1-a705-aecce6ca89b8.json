@@ -1,0 +1,10 @@
+{
+  "id": "0d4d175c-3609-45c1-a705-aecce6ca89b8",
+  "label": "The reported location contrast is compatible with failure of the existential state rule",
+  "paraphrase": "Analyst formulation, attribution deferred. The existing reported location contrast holds. In a separate integer-time frame there is no strict giving or onset transition for the tested bearer, yet the state rule fails under the stipulated no-inducer predicate.",
+  "lean_declaration": "TruthCore.Explanation.InertialActuality.LocationDoesNotSupplyStateLaw",
+  "definition_ids": [
+    "6788dada-f316-5cc3-8376-e64c512b1a0e",
+    "8c20c988-31fd-4b59-acf2-db230a6ea32e"
+  ]
+}

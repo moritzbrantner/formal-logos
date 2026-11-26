@@ -1,0 +1,10 @@
+{
+  "id": "6b4280f4-6a0f-405f-9055-0ab5052dfc9f",
+  "label": "The cessation law and an inducer-free background leave temporal actuality open",
+  "paraphrase": "Analyst formulation, attribution deferred. Two integer-time histories in one frame share the cessation law, the absence of every loss inducer and an everlasting background bearer. The designated other bearer is everlasting in one history and absent at every date in the other. The law and background therefore do not entail the candidate's presence at any date in the omission history.",
+  "lean_declaration": "TruthCore.Explanation.InertialActuality.LawLeavesActualityOpen",
+  "definition_ids": [
+    "8c20c988-31fd-4b59-acf2-db230a6ea32e",
+    "4b4e5631-b2c6-5c76-ac4a-2615eb87e17d"
+  ]
+}

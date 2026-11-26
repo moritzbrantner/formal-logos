@@ -1,5 +1,10 @@
 {
   "id": "791ca930-499c-4922-a475-fdbc20684638",
   "label": "External things reading on the actuality of a distinct bearer",
-  "paraphrase": "Analyst interpretation with attribution deferred. The question is whether a persistence explanation for one bearer x can explain why a distinct bearer y exists at any date. The per-bearer law by itself leaves this open, since applying it to y uses y's prior presence. A cross-bearer origin or support reason would supply a further input."
+  "paraphrase": "Analyst control, attribution deferred. Two integer-time histories of one frame share the cessation law and no inducers. A bearer x has the same presence at each date and the same earlier-date reason for presence at date 1 in both histories, while a distinct bearer y is present at some date in one and at none in the other. Even the global law and the x-only reason fail to entail y's actuality.",
+  "lean_declaration": "TruthCore.Explanation.InertialActuality.OtherBearerActualityOpen",
+  "definition_ids": [
+    "6e811e85-b983-5988-b20a-f4f3ee83c50e",
+    "8c20c988-31fd-4b59-acf2-db230a6ea32e"
+  ]
 }

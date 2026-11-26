@@ -1,0 +1,12 @@
+{
+  "id": "f36be486-bee3-4042-8436-1656eb30ef2a",
+  "label": "An existence-entailing nature fact selects temporal actuality under at-now coherence",
+  "paraphrase": "Analyst formulation, attribution deferred. Given at-now coherence, in each world where the specified fact holds the candidate is present at some date.",
+  "lean_declaration": "TruthCore.Explanation.InertialActuality.NatureSelection",
+  "definition_ids": [
+    "6e811e85-b983-5988-b20a-f4f3ee83c50e"
+  ],
+  "disambiguation_ids": [
+    "92df85d7-aae7-57ac-b84e-3780ade842f1"
+  ]
+}

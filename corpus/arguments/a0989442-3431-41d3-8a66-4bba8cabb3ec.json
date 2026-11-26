@@ -1,0 +1,13 @@
+{
+  "id": "a0989442-3431-41d3-8a66-4bba8cabb3ec",
+  "label": "An inertia reason carries its own earlier actuality witness",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "57552b24-52f0-4ba5-95e9-e4bf8ac40169",
+  "inference_ids": [
+    "62c638a0-836d-4500-984a-e5fe95f1b2e6"
+  ],
+  "meaning": "Unpack the earlier-date reason, use the existing interval theorem to derive later presence, and witness actuality from earlier presence alone. The law and reason are hypotheses inside the universally quantified result.",
+  "definition_ids": [
+    "8c20c988-31fd-4b59-acf2-db230a6ea32e"
+  ]
+}

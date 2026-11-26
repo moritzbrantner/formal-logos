@@ -1,0 +1,11 @@
+{
+  "id": "20548369-e6d9-4711-abe5-0a58c4c8b1cd",
+  "label": "A reversible unproduced window with an actuality anchor stays populated",
+  "paraphrase": "Analyst formulation, attribution deferred. Given no loss inducer or strict giver on the integer timeline, and the independent condition that presence at each next date requires presence at the preceding date, presence of the designated bearer at any anchor implies presence at all dates.",
+  "lean_declaration": "TruthCore.Explanation.InertialActuality.AnchoredExistenceWithoutProduction",
+  "definition_ids": [
+    "8c20c988-31fd-4b59-acf2-db230a6ea32e",
+    "158301bc-9585-4145-be60-34f08c9f922c",
+    "4b4e5631-b2c6-5c76-ac4a-2615eb87e17d"
+  ]
+}
