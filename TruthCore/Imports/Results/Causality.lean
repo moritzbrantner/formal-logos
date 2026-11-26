@@ -180,6 +180,7 @@ public import TruthCore.Results.Causality.FiniteNecessaryUnion.Controls.Solution
 public import TruthCore.Results.Causality.FiniteNecessaryUnion.LocalWitness.Solution
 public import TruthCore.Results.Causality.FiniteNecessaryUnion.SourceBridge.Solution
 public import TruthCore.Results.Causality.FiniteReapersConsistent.Solution
+public import TruthCore.Results.Causality.FiniteReserveOdds.Solution
 public import TruthCore.Results.Causality.FiniteRestriction.Solution
 public import TruthCore.Results.Causality.FiniteThroughput.Solution
 public import TruthCore.Results.Causality.FirstMoverNecessity.Solution

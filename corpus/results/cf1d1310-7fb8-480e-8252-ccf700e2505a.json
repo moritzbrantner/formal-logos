@@ -1,0 +1,11 @@
+{
+  "id": "cf1d1310-7fb8-480e-8252-ccf700e2505a",
+  "label": "Derive eventual posterior preference from the shrinking mass of fitting finite reserves",
+  "argument_id": "10f8cf39-3d77-40e1-89e4-22455a294a9d",
+  "challenge_module": "TruthCore.Results.Causality.FiniteReserveOdds.Challenge",
+  "solution_module": "TruthCore.Results.Causality.FiniteReserveOdds.Solution",
+  "theorem": "TruthCore.Results.Causality.FiniteReserveOdds.finiteReserveComparison",
+  "comparator_config": "results/cf1d1310-7fb8-480e-8252-ccf700e2505a/comparator.json",
+  "status": "solution-present",
+  "description": "The finite ledger criterion forces the initial reserve bound to cover the observed total. A reserve that falls by one unit per interval realizes the trace for every sufficient bound. The proper prior's tail tends to zero, so any stored likelihood below it eventually loses by the prescribed factor to a supplied likelihood with a uniform positive lower bound. The class weights may be normalized together. At each fixed length the distribution assigning mass (1/2)^(m+1) to bound m leaves positive deterministic stored weight, so the fixed-weight preference criterion excludes domination by every factor at that length. The result compares these modeled accounts of the same output and requires an application to justify the prior, the class likelihoods, and the fixed no-feed interpretation of the stored rival."
+}

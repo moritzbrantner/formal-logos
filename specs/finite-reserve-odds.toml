@@ -1,0 +1,19 @@
+[batch]
+vocab = "TruthCore.Causality.FiniteReserveOdds"
+results = "TruthCore.Results.Causality.FiniteReserveOdds"
+
+[[statement]]
+id = "5a6103e6-5335-4319-889f-6fa9d1b60831"
+label = "Longer unit-output runs can favor replenishment over finite reserve by any prescribed factor"
+lean = "FiniteReserveComparison"
+definitions = ["4826b5ea-c643-44f1-ba1f-4247175f4d76"]
+paraphrase = "With both external feeds zero, an exact run of N unit-output intervals fits a natural-number initial reserve bound m exactly when N ≤ m. For any one fixed proper conditional distribution on the finite bounds, the prior mass of fitting bounds equals one minus the mass below N. Fix positive class priors, a stored-class likelihood between zero and that fitting mass at each N, and a supplied-class likelihood between a common positive lower bound and one. For every prescribed positive factor, all sufficiently long finite runs give the supplied account comparative posterior weight strictly greater than that factor times the stored account's weight. A fixed full-support geometric distribution on the finite bounds gives deterministic stored likelihood (1/2)^N, which is positive for every finite N. Under that control, at each fixed N and positive stored-class prior, no positive supplied weight is at least every positive factor times the stored weight."
+
+[[argument]]
+id = "Derive eventual posterior preference from the shrinking mass of fitting finite reserves"
+theorem = "finiteReserveComparison"
+premises = ["3e40edc9-ff92-4726-b7e1-26ef310e47e8", "7b3c4ab3-9453-4818-8791-4e63890dd84a"]
+conclusion = "5a6103e6-5335-4319-889f-6fa9d1b60831"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Specialize the finite ledger, sum the compatible prior tail, and compare positive fixed weights"
+meaning = "The finite ledger criterion forces the initial reserve bound to cover the observed total. A reserve that falls by one unit per interval realizes the trace for every sufficient bound. The proper prior's tail tends to zero, so any stored likelihood below it eventually loses by the prescribed factor to a supplied likelihood with a uniform positive lower bound. The class weights may be normalized together. At each fixed length the distribution assigning mass (1/2)^(m+1) to bound m leaves positive deterministic stored weight, so the fixed-weight preference criterion excludes domination by every factor at that length. The result compares these modeled accounts of the same output and requires an application to justify the prior, the class likelihoods, and the fixed no-feed interpretation of the stored rival."
