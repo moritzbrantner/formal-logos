@@ -1,0 +1,12 @@
+{
+  "id": "6bcb6b1a-6a4a-423d-864e-2d02368bd5c7",
+  "label": "Universal causes with HAS_INTELLECT_1 and HAS_WILL_1 have at most one active power",
+  "paraphrase": "OPEN, analyst formulation. For every universal esse cause with HAS_INTELLECT_1 and HAS_WILL_1, any two active powers it owns are identical. This applies at-most-one-power simplicity to each qualifying universal cause.",
+  "lean_declaration": "TruthCore.Causality.ThroughWill.IntellectualUniversalCausesHaveOnePower",
+  "definition_ids": [
+    "88bc0655-9dd0-5879-ba1b-3fca9f86c1f4",
+    "7c64b499-6dba-5e03-bdf3-5acea95d8836",
+    "92c03350-6809-497d-b123-2ffb11c0e0c1",
+    "fdeb7757-10db-4fa7-91a4-6c15ee5100d2"
+  ]
+}

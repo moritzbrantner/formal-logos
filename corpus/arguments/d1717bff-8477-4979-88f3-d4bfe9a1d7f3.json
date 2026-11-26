@@ -1,0 +1,33 @@
+{
+  "id": "d1717bff-8477-4979-88f3-d4bfe9a1d7f3",
+  "label": "A universal intellectual cause directs all actual effects, from rational giving",
+  "premise_statement_ids": [
+    "83d8a0e0-9866-48d3-b582-9082c9cfeac8",
+    "de6a0f86-dfc5-4941-be2c-dfe3ad81a9a8"
+  ],
+  "conclusion_statement_id": "123d394b-11ce-449a-a8b6-7fda5a254a6d",
+  "inference_ids": [
+    "0b3013ab-d784-40f8-b3b1-459d70028d56"
+  ],
+  "meaning": "At the same g and x the first premise gives rational exercise and the second supplies some end to which g directs x. The end may depend on x. The q.103 government implication is downstream.",
+  "definition_ids": [
+    "92c03350-6809-497d-b123-2ffb11c0e0c1",
+    "c53b5fbe-121a-5d59-8e29-0f9f7eea85b1",
+    "88bc0655-9dd0-5879-ba1b-3fca9f86c1f4",
+    "7c64b499-6dba-5e03-bdf3-5acea95d8836",
+    "bace3032-dfa4-4193-9408-30f584e6fe6d"
+  ],
+  "disambiguation_ids": [
+    "dba7b1de-f3a0-57af-9af9-b2a4da3136fa",
+    "c0fda0ee-3508-5101-94ba-043e3eb28b0e",
+    "8b3d47bc-7fee-4936-99ad-6561aedc657a"
+  ],
+  "sense_bridges": [
+    {
+      "term": "WILL_CAPACITY_VERSUS_WILLED_GIVING",
+      "from": "916b63e7-d8d8-49ba-9d42-9ad19c1fa090",
+      "to": "438df309-f7a6-4c68-bd90-c44a960900f9",
+      "statement_id": "83d8a0e0-9866-48d3-b582-9082c9cfeac8"
+    }
+  ]
+}

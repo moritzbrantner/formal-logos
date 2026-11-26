@@ -1,0 +1,10 @@
+{
+  "id": "ca3d5100-4db4-46fa-993f-ff2a87171952",
+  "label": "Four priority-route omissions and fixed rational exercise, checked (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "ea658285-091d-47fe-9dc2-7fe3aa1c2b66",
+  "rule": "Evaluate the same two-world causal assignment with changes to giving, exercise and priority",
+  "meaning": "The created effect is always actual and the tenseless esse edge always holds. Absence of giving or absence of an exercise assignment shows why the respective adapter or classification input matters. The fixed non-rational exercise meets firstness and violates natural priority; assigning priority to the effect instead makes natural priority true and firstness false. With the fixed rational exercise all four inputs hold. Empty end and recipient-willing relations test the further applications, and with no required means the same rational fixed exercise violates WN. These are structural assignments to the shared frame and agency overlay.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

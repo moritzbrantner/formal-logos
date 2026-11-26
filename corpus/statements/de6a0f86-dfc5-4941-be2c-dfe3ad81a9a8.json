@@ -1,0 +1,13 @@
+{
+  "id": "de6a0f86-dfc5-4941-be2c-dfe3ad81a9a8",
+  "label": "A universal intellectual cause directs each actual effect it gives by rational exercise",
+  "paraphrase": "OPEN, analyst formulation. For every g with HAS_INTELLECT_1 and HAS_WILL_1 causing the esse of every distinct actual x, for each such x that g gives being at w by an owned rational power, some end is one to which g directs x.",
+  "lean_declaration": "TruthCore.Causality.ThroughWill.RationalUniversalGivingDirects",
+  "definition_ids": [
+    "88bc0655-9dd0-5879-ba1b-3fca9f86c1f4",
+    "7c64b499-6dba-5e03-bdf3-5acea95d8836",
+    "92c03350-6809-497d-b123-2ffb11c0e0c1",
+    "c53b5fbe-121a-5d59-8e29-0f9f7eea85b1",
+    "bace3032-dfa4-4193-9408-30f584e6fe6d"
+  ]
+}

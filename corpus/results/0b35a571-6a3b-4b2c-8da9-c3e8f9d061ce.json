@@ -1,0 +1,12 @@
+{
+  "id": "0b35a571-6a3b-4b2c-8da9-c3e8f9d061ce",
+  "label": "GOD_4 wills the esse of each distinct caused recipient, from rational giving",
+  "argument_id": "e3371535-b4da-4ec4-98ae-1c93e53aa2c8",
+  "challenge_module": "TruthCore.Results.Causality.ThroughWill.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ThroughWill.Solution",
+  "theorem": "TruthCore.Results.Causality.ThroughWill.willsEsseForOfRationalGiving",
+  "comparator_config": "results/0b35a571-6a3b-4b2c-8da9-c3e8f9d061ce/comparator.json",
+  "status": "solution-present",
+  "description": "Assembly transcription. The proof uses the existing divine intellect and causal goodness premises and the rational exercise result to supply the antecedent of the open recipient application. That application supplies the recipient-directed conclusion verbatim.",
+  "transcription": "assembly"
+}

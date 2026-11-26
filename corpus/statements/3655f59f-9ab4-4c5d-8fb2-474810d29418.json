@@ -1,0 +1,12 @@
+{
+  "id": "3655f59f-9ab4-4c5d-8fb2-474810d29418",
+  "label": "GOD_4 giving a distinct actual effect by rational exercise wills its esse to it",
+  "paraphrase": "OPEN, analyst formulation. For every GOD_4 and distinct effect in act in esse, if this God gives it being at w by exercising an owned rational power, this God wills the good of esse to that recipient. Recipient-directed CREATURE_WILLING_1 allows ordering the same effect to another.",
+  "lean_declaration": "TruthCore.Causality.ThroughWill.DivineRationalGivingWillsEsseFor",
+  "definition_ids": [
+    "88f9f6e8-997b-5f7d-afa1-c501954c3807",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "08b826db-2d9c-48e5-b69c-d4ac54088518",
+    "bace3032-dfa4-4193-9408-30f584e6fe6d"
+  ]
+}

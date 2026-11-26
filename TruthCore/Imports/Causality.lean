@@ -326,6 +326,7 @@ public import TruthCore.Causality.TermSenseForks2
 public import TruthCore.Causality.TermSenseForks3
 public import TruthCore.Causality.TermSenseForks4
 public import TruthCore.Causality.ThinkingRootFork
+public import TruthCore.Causality.ThroughWill
 public import TruthCore.Causality.TimeSymmetricGiving
 public import TruthCore.Causality.ToleranceOriginRival
 public import TruthCore.Causality.TotalHolding

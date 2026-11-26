@@ -2980,7 +2980,11 @@ with the sourced q.103 a.3 reading that directing is governing. The bridge's
 antecedent lists the three as separate conjuncts. Q.22 a.2's reason presupposes
 voluntary agency, so the bridge also carries the step that such a being causes
 through its intellect and will; necessary emanation by an intellect is the
-relevant alternative (no justification on file). Conservation is not a separate
+relevant alternative. The [through-will checkpoint](divine-love-goodness-bridge.md#through-will-checkpoint-2026-11-26)
+gives two conditional paths to actual rational exercise for each effect and an
+assembly with an additional direction premise leading to the same 123d394b bridge. It also
+tests fixed rational and non-rational exercises and separates causal direction
+from the authority required for LORD_1. Conservation is not a separate
 conjunct: `CausesIn … esse` is timeless. BLESSED_2 is intellect, universal
 perfection, goodness as to being and act in the respect of understanding
 (`39f50105`). At a being with the nine it follows from two existing premises of

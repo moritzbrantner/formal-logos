@@ -1,0 +1,13 @@
+{
+  "id": "a0abeef8-30ea-432c-9bfb-07d2179151f2",
+  "label": "Non-rational giving requires a distinct PRIOR_1 intellect",
+  "paraphrase": "OPEN, analyst formulation. If g gives x being at w by exercising an owned non-rational power, some distinct being with HAS_INTELLECT_1 is simply prior to g. This is the priority consequence of the natural teleology thesis that an intellect fixes the natural agent's end and means. The type retains existence of the prior intellect and leaves its directing act unspecified.",
+  "lean_declaration": "TruthCore.Causality.ThroughWill.NonrationalGivingHasPriorIntellectAt",
+  "definition_ids": [
+    "1d9aa4d9-18cc-5930-95fb-5af65e32c0f8",
+    "88bc0655-9dd0-5879-ba1b-3fca9f86c1f4",
+    "582f44c3-7778-4806-b385-e1eff852ac5e",
+    "b8061228-9131-40f2-83bd-cb7d719bd0a0",
+    "62dfa893-b633-4513-9790-8f9a0a3087e0"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "7556889e-c216-4bc8-89e9-453c7d664bda",
+  "label": "A universal intellectual cause directs all actual effects, from rational giving",
+  "argument_id": "d1717bff-8477-4979-88f3-d4bfe9a1d7f3",
+  "challenge_module": "TruthCore.Results.Causality.ThroughWill.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ThroughWill.Solution",
+  "theorem": "TruthCore.Results.Causality.ThroughWill.directsAllOfRationalGiving",
+  "comparator_config": "results/7556889e-c216-4bc8-89e9-453c7d664bda/comparator.json",
+  "status": "solution-present",
+  "description": "At the same g and x the first premise gives rational exercise and the second supplies some end to which g directs x. The end may depend on x. The q.103 government implication is downstream.",
+  "transcription": "assembly"
+}

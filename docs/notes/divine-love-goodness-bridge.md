@@ -616,3 +616,157 @@ research requires a new assignment; this integration authorizes none.
 
 - [Group 7 integration: assembled assertion branches and registered q.20 love route (#1732)](../../corpus/attempts/e641ca1d-d06b-461a-8270-c9030fa4fc29.json)
 - [Intentional creation bridge route and emanation audit](../../corpus/attempts/intentional-creation-1459.json)
+
+## Through-will checkpoint (2026-11-26)
+
+The new conditional support concerns the mode of giving **each distinct actual
+effect** of the same universal esse cause, with intellect and will held fixed.
+[Rational exercise](../../TruthCore/Causality/ThroughWill.lean) means that the
+cause gives the effect being at some moment of the selected world, and that this
+giving exercises an owned rational power (WILL_CAPACITY_VERSUS_WILLED_GIVING_3).
+This can hold with fixed output. Sense 1 is possession of will, and sense 2
+adds accessible withholding with the same set-up. The agency dictionary reads rational
+power as an inclination that follows intellectual apprehension of good. It
+classifies the power using a primitive. Practical content and its governance of
+this effect remain open. A builder deliberately constructing a shelter
+illustrates rational exercise. Her body warming the air illustrates production
+in a respect in which her possessed intellectual appetite supplies no exercise.
+Both examples involve finite processes within an existing world. Generalizing
+to esse itself is a separate commitment.
+
+| Step | Exact commitment and warrant |
+| --- | --- |
+| Actual exercise | An esse edge from g to a distinct x in act as to esse supplies giving at the selected w. The sustaining and concurrence results motivate the step if the effect is present and their assumptions hold on this dictionary. The generic, tenseless CAUSE_2 edge and world-relative exercise are distinct inputs. |
+| Classified exercise | Giving at w exercises an owned power which is rational or non-rational. This is the existing own-power idea with classification explicit at the witness. Multiple powers may be exercised. |
+| Firstness | A universal cause with intellect and will has no distinct simply prior being. Universality supplies a reverse esse edge if the putative prior is actual in esse. To use that to infer firstness, the route needs an account of which prior beings are actual, simple priority as a cause of esse, and the exclusion of mutual esse causation. Existing proofs of firstness at a selected root have narrower scope. |
+| Natural priority | Non-rational exercise in giving requires a distinct simply prior intellect. ST I q.19 a.4 co., first reason, motivates this by reference to a natural agent's end and means being set by a higher intellect, as an archer sets an arrow's end and path. The existence of a prior intellect suffices for the formal contradiction. Extending the reason from directed instruments to intrinsic productivity of the ultimate source is the disputed application. |
+| One power | Alternatively, require at most one active power for each qualifying cause. The existing one-power result then supplies rational exercise from will following intellect, will supplying an owned rational power, and giving exercising an owned power. ST I q.19 a.4 ad 4 motivates unity of knowledge directing, will commanding, and power executing for God. Equating that unity with identity of all owned active powers for every qualifying cause remains open. |
+
+The [two proofs](../../TruthCore/Results/Causality/ThroughWill/Solution.lean)
+share the esse adapter. The second consumes 5c1aba17, whose proof is the
+[existing one-power result](../../TruthCore/Results/Causality/WillVersusChance/Solution.lean).
+Each of the four priority inputs has an omission control. The adapter omission
+deletes giving and the classifier omission deletes exercise. The priority
+omission retains firstness and fixed giving by an owned non-rational power
+while the cause also owns a rational power. In the firstness omission, the
+actual effect is simply prior to the source in the assignment. The assignment
+tests the type, which specifies no directing by that effect. The positive
+control retains the fixed output, exercises the rational power, and permits
+empty direction and recipient-willing relations. These are structural
+non-entailment tests with actual relata and a populated causal edge.
+
+### Rival mechanisms
+
+*Enneads* V.4.1–2 gives a positive mechanism of derivative activity without a
+prior director. Plotinus appeals to the productivity of mature beings and
+distinguishes the activity constitutive of a substance from an outward activity
+that follows from it, illustrated by the heat of fire and the heat it imparts.
+The outward effect proceeds while the source remains itself. The One is beyond
+intellect in the passage. Extending that mechanism to a source whose intellect
+knows the order and whose will rests in its own good is an analyst variant.
+If its productive power is non-rational, the variant denies natural priority.
+If it grants the other one-power premises, it must distinguish the rational
+capacity from the active power of non-rational production. HAS_WILL_1 supplies
+neither power identity nor exercise for this effect. The finite priority
+omission checks that distinction. It leaves the rival's applicability to a
+single universal esse cause and its account of power unity open.
+[Pinned Plotinus witness](../../corpus/passages/plotinus-enneads-v-4.json)
+
+An Avicennian-style necessary procession gives the first determinate effect
+from the First's self-intellection and accounts for subsequent multiplicity
+through the derived intellects' distinct objects or aspects of intellection.
+This offers a mechanism for derivative determinate effects from a simple
+source and disputes the second q.19 a.4 reason's claim that natural necessity
+in an infinite cause would require an effect indeterminate and infinite in
+being. The point of disagreement is whether a determinate first effect can
+proceed in this way.
+Whether the proposal also denies rational exercise depends on what work the
+First's intellection and approval do in production and whether the derived
+effects satisfy the case's universal CAUSE_2 coverage. Further source
+interpretation is deferred.
+[Avicenna, Metaphysics of the Healing IX.4, source lead](https://www.academia.edu/2993314/Avicenna_Meta_9_4)
+
+A Rowe-style argument from perfect goodness and a unique best order can retain
+rational operation while making it fixed. On that proposal, the best's goodness
+settles the outcome even though the creator's own good needs no created means.
+A Kretzmann-style diffusion requirement to produce some good needs a further
+premise to fix this particular effect. These proposals bear on
+RationalFixedGivingIsRequired (WN) in [NarDerivation](nar-derivation.md),
+which assumes rational exercise in its antecedent. In the fixed rational
+control WN fails when the required-means relation is empty. Conversely, the
+fixed non-rational control has no rational exercise for WN to constrain.
+I q.19 a.10 co. limits free choice to what is willed non-necessarily and refers
+back to a.3, where absolute and suppositional necessity are distinguished.
+A freedom argument needs additional grounds for possible variation or against
+a proposed necessitating reason. In particular, the q.19 a.10 source support
+for the POWER_OVER_ESSE_1 bridge d1593e5c needs effective willing matched to
+the same giver's giving or withholding at accessible worlds. It also needs
+the effect's continued being to depend on that giver's exercise. Actual
+rational giving alone supplies neither condition.
+[Pinned q.19 witnesses](../../corpus/passages/aquinas-summa-theologiae-q19.json)
+
+### Applications and provisional assessment
+
+- **Direction and lordship.** The new result reaches 123d394b with a separate
+  premise that rational exercise in giving each effect supplies an end to
+  which the giver directs it. This is recorded as an assembly transcription,
+  and 123d394b stays open. I q.22 a.1 co. and ad 2–3 distinguish the
+  intellectual plan of order, the willed end, and execution. Q.22 a.2 co.
+  and ad 1 extend ordering to each effect of the universal first agent.
+  Aquinas's example of a cause outside the order of a particular agent
+  differs from collateral output within the universal cause's own productive
+  order. Coverage still needs a reason to treat each effect as directed by
+  this giver. The q.103 rule links direction to LORD_2 government. I q.13
+  a.7 co. and ad 5 use real subjection on the creature side for divine
+  Lordship. Applying that rationale to bb3d4417, and thence to the
+  LORD_2-to-LORD_1 bridge, still requires linking universal causal dependence
+  to authority to dispose.
+  [Providence witness](../../corpus/passages/aquinas-summa-theologiae-q22.json)
+  [Lordship witness](../../corpus/passages/aquinas-summa-theologiae-q13-a7.json)
+- **Recipient-directed willing.** The assembly transcription applies the open
+  recipient-good bridge to a94c5dfc, which feeds the existing LORD_3 willing
+  input. The causal conjunct of supreme goodness supplies universal esse
+  coverage, and the GOD_4 intellect premise supplies intellect at that same
+  giver. These inputs supply the bridge's antecedent. The bridge itself
+  supplies the recipient-directed content. The frontier keeps a94c5dfc open
+  with source support.
+  I q.20 a.2 co. uses divine will causing esse to argue that God wills good
+  to each creature. The ordered-love reading of ad 3 treats irrational
+  creatures under quasi-desire in their order to rational creatures and God.
+  A productive order can be adopted for another's good, so the rational
+  production of a recipient needs a further reason to say the good is also
+  willed **to** it.
+  [Love witness](../../corpus/passages/aquinas-summa-theologiae-q20.json)
+
+**Provisional judgment for independent challenge.** Instrumental teleology
+provides a reason to ask what fixes the end and means of non-rational operation.
+The one-power argument adds a distinct reason to exclude a separate natural
+capacity doing the productive work if substantive power unity applies. Rational
+exercise is thus a coherent conditional account for the universal cause. The
+overall inference remains underdetermined at natural priority, the scope of
+one-power simplicity, and the esse-to-exercise adapter. The positive grounds
+for diffusion concern production without prior selection. Whether the same
+mechanism works at the ultimate esse cause while preserving its will in the
+selected sense still needs a defense.
+
+The next discriminating test asks whether apprehended order actually specifies
+the source's exercise **as practical** for each esse effect. Hold fixed the
+outputs and what is known, and test production as the realization of this
+effect's apprehended description against mere foresight or adoption of the
+whole order. The third reason of q.19 a.4 motivates this by moving from effects
+intellectually preexisting to their proceeding according to what is understood,
+then to appetite toward realizing it. Correct exemplary representation,
+available rational power and universal causal coverage leave the practical
+step open. The existing reviewed comparison from I–II q.9 a.1 gives a
+specifying role to the apprehended good in proper acts of appetite. The
+application here must show that the giving is such an act for the selected
+effect. Its defense would advance direction. The narrower recipient-good
+test would still ask whose good is willed, as distinct from what is ordered to
+a good. Independent grounds for a determinate, non-rational disposition of
+an ultimate source would weaken natural priority. An existing productive
+dependence test can check that adoption helps supply an exercise without
+depending on the product it is meant to explain. Applying it here still needs
+an identification of the independently specified adopted content and its
+productive role on the same esse edge.
+[Actual exercise controls](../../TruthCore/Explanation/ActualExerciseExplanation.lean)
+[Apprehended good comparison](will-versus-chance.md#can-a-good-specify-actual-production-without-being-apprehended-2026-11-25)

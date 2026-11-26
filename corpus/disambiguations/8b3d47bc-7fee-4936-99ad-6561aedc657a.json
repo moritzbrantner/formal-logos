@@ -1,12 +1,13 @@
 {
  "id": "8b3d47bc-7fee-4936-99ad-6561aedc657a",
- "label": "Will: the HAS_WILL_1 capacity versus a willed two-way giving",
+ "label": "Will: possession, two-way rational giving, and actual rational giving",
  "term": "will (capacity versus willed giving)",
  "sense_definition_ids": [
   "7c64b499-6dba-5e03-bdf3-5acea95d8836",
-  "de24ce2e-84e4-48d8-9cac-5f66ad532015"
+  "de24ce2e-84e4-48d8-9cac-5f66ad532015",
+  "bace3032-dfa4-4193-9408-30f584e6fe6d"
  ],
- "resolution": "WILL_CAPACITY_VERSUS_WILLED_GIVING_1 is HAS_WILL_1 (DEF 7c64b499-6dba-5e03-bdf3-5acea95d8836), having will as a capacity, the sense of STMT-GOD-HAS-WILL. WILL_CAPACITY_VERSUS_WILLED_GIVING_2 (DEF de24ce2e-84e4-48d8-9cac-5f66ad532015) is exercise-level: a giving by a power classified Rational that is withheld at an accessible world with the same set-up (WilledTwoWayAt, the will-versus-chance batch). Sense 2 implies sense 1 through the OPEN bridge 65e0179f-55d4-4b77-98ba-4b5b26f2d404 ('Whatever has a rational power HAS_WILL_1'). Sense 1 yields sense 2 only with 71fc097b-4039-4812-a498-2ad70fe08b98 ('Whatever HAS_WILL_1 has a rational power') together with one power, giving as exercise and a same-set-up withholding (arguments A and B). Possessing a power classified Rational is unbridged to the possessed appetitive power of 941efd70's second sense (AppetitePowerExercise.Capacity.Possessed). Sense 2 is unbridged to the Wills relation of statement a94c5dfc-c722-49fe-a242-dd39409b079d and to the exercise senses of disambiguation 941efd70-d56f-53f9-b5f9-8acd36711a54. No argument passes between the senses without one of those listed bridges.",
+ "resolution": "WILL_CAPACITY_VERSUS_WILLED_GIVING_1 is HAS_WILL_1, possession of will, as used in STMT-GOD-HAS-WILL. WILL_CAPACITY_VERSUS_WILLED_GIVING_2 (WilledTwoWayAt) is rational giving with withholding at an accessible world where the giver exists with the same set-up. WILL_CAPACITY_VERSUS_WILLED_GIVING_3 (RationallyGivesAt) is the actual giving of a specified effect by an owned rational power at the selected world. The fixed-output control in ThroughWill satisfies sense 3 while lacking the possible withholding of sense 2. The capacity-to-exercise applications require explicit premises, including the prior-intellect or one-power routes for the qualifying universal giver. The open bridge 65e0179f-55d4-4b77-98ba-4b5b26f2d404 licenses the move from ownership of a rational power to HAS_WILL_1. Bridge 71fc097b-4039-4812-a498-2ad70fe08b98 licenses the reverse move from HAS_WILL_1 to ownership of a rational power. They concern possession. Actual exercise and same-set-up withholding require further inputs in the will-versus-chance batch. Ownership of a rational power remains unbridged to the possessed appetitive power of 941efd70-d56f-53f9-b5f9-8acd36711a54. Recipient-directed willing in a94c5dfc has a separate application premise from sense 3 and receives no definition from either giving sense.",
  "term_label": "WILL_CAPACITY_VERSUS_WILLED_GIVING",
  "senses": [
   {
@@ -20,6 +21,12 @@
    "label": "WILL_CAPACITY_VERSUS_WILLED_GIVING_2",
    "definition_id": "de24ce2e-84e4-48d8-9cac-5f66ad532015",
    "lean_declaration": "TruthCore.Causality.WillVersusChance.WilledTwoWayAt"
+  },
+  {
+   "id": "438df309-f7a6-4c68-bd90-c44a960900f9",
+   "label": "WILL_CAPACITY_VERSUS_WILLED_GIVING_3",
+   "definition_id": "bace3032-dfa4-4193-9408-30f584e6fe6d",
+   "lean_declaration": "TruthCore.Causality.ThroughWill.RationallyGivesAt"
   }
  ]
 }
