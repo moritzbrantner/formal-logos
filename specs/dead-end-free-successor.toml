@@ -1,0 +1,12 @@
+[batch]
+vocab = "TruthCore.Case.Catholicism.StageOne.NecessaryIndividual"
+results = "TruthCore.Results.Case.Catholicism.DeadEndFreeSuccessor"
+disambiguations = ["DISAMB-NECESSARY"]
+
+[[argument]]
+id = "An accessible successor from the no-dead-end frame condition"
+theorem = "successorWithoutDeadEnds"
+premises = ["STMT-ACCESSIBILITY-NO-DEAD-END", "STMT-EXCLUDED-MIDDLE"]
+conclusion = "STMT-ACCESSIBLE-SUCCESSOR"
+rule = "Apply excluded middle to successor existence and contradict the no-dead-end condition in the negative case"
+meaning = "For one frame and selected world w, if all worlds satisfy the no-dead-end condition and excluded middle holds, there exists a world accessible from w. This gives the world witness used in finite roster amalgamation without assuming that w accesses itself. The witness need not be distinct or populated. The global no-dead-end premise is incomparable with self-access at a single selected world."

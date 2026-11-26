@@ -1,0 +1,25 @@
+{
+  "id": "e39c0ad1-e215-4743-8630-320b0a91332b",
+  "label": "Consequence and warrant connection plan",
+  "statement_ids": [
+    "1b56e1aa-7ba1-54f5-8763-222b03f55edb"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "This open bridge concerns the admitted argument roster and an independent warrant predicate. A formal theorem already quantified over argument consequence cannot justify warrant for the actual divine inference.",
+  "evidence": [
+    "PR-2086"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
+    }
+  ],
+  "blocker": "Connection target 8626f8a5-9531-5da7-9ebd-f901e74b1129. The scoped bridge described in the summary remains open."
+}

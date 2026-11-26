@@ -1,0 +1,25 @@
+{
+  "id": "eba00363-d0f6-4a81-b612-5c568f4c8061",
+  "label": "Endorsed religious practice move connection plan",
+  "statement_ids": [
+    "56cbb279-f1d3-53ed-8152-4157568f9ff6"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "A witness to internal endorsement does not supply external or shared warrant. Test the exact move on the recognition route within the same theological and shared reason profiles.",
+  "evidence": [
+    "PR-2086"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
+    }
+  ],
+  "blocker": "Connection target b025531d-6c4a-573a-a205-795fe8da514a. The scoped bridge described in the summary remains open."
+}

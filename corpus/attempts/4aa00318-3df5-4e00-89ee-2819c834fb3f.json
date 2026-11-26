@@ -1,0 +1,25 @@
+{
+  "id": "4aa00318-3df5-4e00-89ee-2819c834fb3f",
+  "label": "Selected tuple of nonreception connection plan",
+  "statement_ids": [
+    "8713075f-883c-5eb3-9f8b-8beffa469d2f"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "Nonreception is a tuple-level denial. It neither rules out communication nor supplies universal own-esse or noncomposition. Align the body, soul and selected reception relation before asking whether it bears on immateriality.",
+  "evidence": [
+    "PR-2086"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
+    }
+  ],
+  "blocker": "Connection target 180f5ad2-a421-541a-85c9-9bca578b4a43. The scoped bridge described in the summary remains open."
+}

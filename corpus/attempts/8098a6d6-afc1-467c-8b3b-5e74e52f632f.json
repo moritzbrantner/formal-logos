@@ -1,0 +1,29 @@
+{
+  "id": "8098a6d6-afc1-467c-8b3b-5e74e52f632f",
+  "label": "Q14 pointwise foreign-form reception connection plan",
+  "statement_ids": [
+    "079fbf4c-49a3-518c-9577-064ff73591e4",
+    "365f37a0-02f0-5654-83ea-f90d59facdb5",
+    "8d26d75c-f97b-51b7-9ba7-b075ee0ca100"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "The mode split obtains aptitude without matter at the same receiver from positive foreign-form aptitude and exclusion of material modes. The old target is universal over structurally immaterial bearers. Its existing assembly already imports mode elimination. The substantive missing step is application of positive aptitude and the intellectual rather than sensory grade to each such bearer. Introduced in af1530200.",
+  "evidence": [
+    "PR-2086",
+    "b6380f92-d17b-587d-84c1-c88ed83d42a9",
+    "c54152d4-dfa4-5496-ae27-116144bdde5d"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
+    }
+  ],
+  "blocker": "Connection target 180f5ad2-a421-541a-85c9-9bca578b4a43. The scoped bridge described in the summary remains open."
+}

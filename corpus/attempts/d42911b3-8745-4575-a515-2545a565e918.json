@@ -1,0 +1,25 @@
+{
+  "id": "d42911b3-8745-4575-a515-2545a565e918",
+  "label": "Truth-functional fragment delta connection plan",
+  "statement_ids": [
+    "0cca2282-07c5-40b8-a36b-8b017a2a29a9"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "Box-free is a syntax restriction on one formula. Any application needs an actual formula with its translation into the chosen Kripke setting. Reuse the exact comparison rather than reading syntax as truth or a frame law.",
+  "evidence": [
+    "PR-2086"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
+    }
+  ],
+  "blocker": "Connection target 7089ce3d-3855-5bfb-a3c3-c202e8ff458a. The scoped bridge described in the summary remains open."
+}

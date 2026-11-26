@@ -1,0 +1,27 @@
+{
+  "id": "46a3ee1c-02bc-442a-9b86-7eda644201de",
+  "label": "Every-removal per-accidens exercise connection plan",
+  "statement_ids": [
+    "9a78c82f-2219-4299-8c31-a92f9073ac4c",
+    "ad2d36f3-848d-42d4-b916-78f6c84c2538"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "The every-removal conditional yields capacity for each admissible removal and may be vacuous with none. Supply availability and connect the exercise, removed member and surviving patient to the actual series before treating it as evidence of per-accidens independence. Introduced in ddcfa884a.",
+  "evidence": [
+    "81583ed2-57b1-4969-9dea-f37caaa4a2d1",
+    "PR-2086"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
+    }
+  ],
+  "blocker": "Connection target 97f5850f-62bc-5e43-a0c1-dd1033d08fc9. The scoped bridge described in the summary remains open."
+}

@@ -1,0 +1,25 @@
+{
+  "id": "5fe76097-9449-424d-841c-884815715186",
+  "label": "Naming strength delta connection plan",
+  "statement_ids": [
+    "8570ba58-69b1-4a47-9391-db209e3147cb"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "The delta constrains maxima outside the reduced description. Preserve the precise existing strength comparison and identify an actual non-reduced maximum before trying to use the disjunction on the God-existence argument.",
+  "evidence": [
+    "PR-2086"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
+    }
+  ],
+  "blocker": "Connection target 8626f8a5-9531-5da7-9ebd-f901e74b1129. The scoped bridge described in the summary remains open."
+}

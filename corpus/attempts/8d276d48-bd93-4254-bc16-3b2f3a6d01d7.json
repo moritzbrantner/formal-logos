@@ -1,0 +1,26 @@
+{
+  "id": "8d276d48-bd93-4254-bc16-3b2f3a6d01d7",
+  "label": "Two-way guarded capability bridge connection plan",
+  "statement_ids": [
+    "45fe3a9b-aa7b-45c5-b6ae-b331044ede1f",
+    "c07a8fec-6cc9-4742-ae0d-781aff348dfa"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "The two directions require the same productive disposition trial, ordered pair and accessible-world standpoint. Show the occurrence and no-mask/no-fink conditions for the proposed giving exercise before moving between capacity and exercise.",
+  "evidence": [
+    "PR-2086"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
+    }
+  ],
+  "blocker": "Connection target 83d8a0e0-9866-48d3-b582-9082c9cfeac8. The scoped bridge described in the summary remains open."
+}

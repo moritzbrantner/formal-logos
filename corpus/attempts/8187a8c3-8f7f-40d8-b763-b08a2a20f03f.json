@@ -1,0 +1,29 @@
+{
+  "id": "8187a8c3-8f7f-40d8-b763-b08a2a20f03f",
+  "label": "Historical pilot bridges connection plan",
+  "statement_ids": [
+    "15419140-67d4-5362-8543-578e184e6ecb",
+    "3f1a2ba9-14c0-59cb-9787-8a83975b01a4",
+    "47f03855-3e49-53c6-8aa8-5f92c58da819",
+    "89f0b3bb-7519-52e6-8c02-42825e92783b",
+    "e0982d70-0707-5b56-a720-b42b3fd1e5b0"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "The five open interpretations target pilot E0, E1, E3, E4 and E5 respectively. Preserve the distinction between an attested report and historical application, including the proposed person identifications and belief transitions. Historical evaluation is deferred by the owner.",
+  "evidence": [
+    "PR-2086"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
+    }
+  ],
+  "blocker": "Connection target f93a88f9-d8f9-5b2a-99ae-b0dea250403f. The scoped bridge described in the summary remains open."
+}

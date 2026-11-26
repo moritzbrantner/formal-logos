@@ -1,0 +1,26 @@
+{
+  "id": "896ae206-2925-4325-9e51-d0eaa52b24b3",
+  "label": "Restricted retorsion claims connection plan",
+  "statement_ids": [
+    "3c701af7-c66c-55f2-82da-9a596d90b719",
+    "d77d4e63-3d0a-5acf-b46e-52d94ddc29d5"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "The local claims explicitly demarcate a domain. Determine whether the exact God-existence claim and the proposed norm's own assertion enter that domain. A consistent restriction can reject universal scope while preserving its local test.",
+  "evidence": [
+    "PR-2086"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
+    }
+  ],
+  "blocker": "Connection target 8626f8a5-9531-5da7-9ebd-f901e74b1129. The scoped bridge described in the summary remains open."
+}

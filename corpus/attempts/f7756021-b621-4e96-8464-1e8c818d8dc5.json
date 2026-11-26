@@ -1,0 +1,25 @@
+{
+  "id": "f7756021-b621-4e96-8464-1e8c818d8dc5",
+  "label": "Entailing whole-series reason connection plan",
+  "statement_ids": [
+    "de6096d1-b30d-480c-8035-ed17950bf8ca"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "An obtaining reason entailing preservation of all actual contingent facts differs from reason-guided contingent exercise. Match the reason bearer and actual universal cause and justify the truth-entailment account before using it to assess contingent giving.",
+  "evidence": [
+    "PR-2086"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
+    }
+  ],
+  "blocker": "Connection target 83d8a0e0-9866-48d3-b582-9082c9cfeac8. The scoped bridge described in the summary remains open."
+}

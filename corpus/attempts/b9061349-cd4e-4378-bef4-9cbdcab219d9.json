@@ -1,0 +1,27 @@
+{
+  "id": "b9061349-cd4e-4378-bef4-9cbdcab219d9",
+  "label": "Respect-free mover fork connection plan",
+  "statement_ids": [
+    "22a09acd-44f6-4cc6-98d4-90dd773cfff6",
+    "c8451a5e-83ae-4952-bcb0-5d2c6ea2596c"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "The common conclusion gives a per-se mover in some respect. The route requires a mover in the very respect in which a reduction occurs. Supply a same-respect bridge for the distinct-mover branch and actual reduction/coverage alignment for the accident branch before using the fork in the root inference. Introduced in 2ef653751.",
+  "evidence": [
+    "PR-2086",
+    "b5690137-e9b1-4cd9-94da-41882b777ad9"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
+    }
+  ],
+  "blocker": "Connection target 4a952b96-be5f-5493-8277-985248151d01. The scoped bridge described in the summary remains open."
+}

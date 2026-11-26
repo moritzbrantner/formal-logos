@@ -1,0 +1,19 @@
+{
+  "id": "780669c5-2f8f-4afc-a12b-73b567e52159",
+  "label": "The Gödel positivity premises exclude dead ends",
+  "inference_ids": [
+    "cb83db76-f85d-5560-8997-d9cc8414db5a"
+  ],
+  "premise_statement_ids": [
+    "a9077c68-43f0-53e1-905a-d431488204ee",
+    "96d8342a-f88f-5edf-8792-00d4f6d556ca",
+    "649e7f30-2410-5cc1-b7c4-222f96cfb7dd"
+  ],
+  "conclusion_statement_id": "0166c188-85b1-53c0-b844-d9a3ec6cf1fa",
+  "meaning": "Suppose a world w accesses no world. By Ax2a the empty property or its negation is positive at w; not the empty property (step 1). At w every necessity holds vacuously, so the negation of the empty property is necessarily included in the empty property, and by Ax4 the empty property is positive at w: contradiction. Not a step of the AFP proof; it replaces the frame reasoning hidden in its smt step 5.",
+  "definition_ids": [
+    "9010544f-188a-5d00-83dc-85d0c0b4052d",
+    "ceded0b9-7c27-55c0-82db-4bf0afc66e47",
+    "6300d642-4116-591e-bac8-7af32093ea6d"
+  ]
+}

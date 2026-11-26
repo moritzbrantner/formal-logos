@@ -1,0 +1,30 @@
+{
+  "id": "bc03bd4b-242f-4be2-ae77-babba65bcb08",
+  "label": "Humean blanket entitlement denial connection plan",
+  "statement_ids": [
+    "03df43ea-8c25-5818-a703-4bca7692b6a5",
+    "97e39364-c47c-5489-af9e-8805cd1204a1",
+    "dc6f1fd9-3c5b-56d7-bbce-606e02882b5b",
+    "f2b6e95f-f43a-57d2-abf4-cb24e75cd422"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "The result excludes blanket denial only under entitled habit certification or a rational reliance witness plus the reliance-entitlement bridge. Map a particular exercised inference on the cogito route to one supplied Assessment topic and test whether the critic offers rational entitlement or only reports practical reliance. Introduced in 9098aaa6b.",
+  "evidence": [
+    "4db3900e-d6ba-5d99-84a3-27963d8caae0",
+    "6be97965-177e-5af2-a808-c71b0cfe8041",
+    "PR-2086"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
+    }
+  ],
+  "blocker": "Connection target b45ca9db-0bf2-40d3-819c-44dc4e2cef5c. The scoped bridge described in the summary remains open."
+}

@@ -1,0 +1,35 @@
+{
+  "id": "3702a4c0-b6a9-446d-b55f-f06d32ad609e",
+  "label": "No-dead-end frame gives a selected successor",
+  "statement_ids": [
+    "0166c188-85b1-53c0-b844-d9a3ec6cf1fa"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "Excluded middle on successor existence yields an accessible witness at the selected world on the same frame. Failure of existence would make every world inaccessible from that world. The registered Gödel producer supplies the no-dead-end condition under Ax2a, Ax4 and empty-property exclusion. The successor feeds finite actual-contingent roster amalgamation and the finite population cover derivation.",
+  "evidence": [
+    "da5001d2-3f90-449b-a772-8e3964a03375",
+    "PR-2086",
+    "a7f5faf2-7f51-4bfd-a5bd-236105e44f6c",
+    "645be66f-1072-4205-92b5-05c3fa65dfbb"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
+    },
+    {
+      "role": "repair",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
+    }
+  ]
+}

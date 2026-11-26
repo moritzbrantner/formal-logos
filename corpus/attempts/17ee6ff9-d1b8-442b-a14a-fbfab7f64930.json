@@ -1,0 +1,29 @@
+{
+  "id": "17ee6ff9-d1b8-442b-a14a-fbfab7f64930",
+  "label": "World and actuality scopes of causal concreteness connection plan",
+  "statement_ids": [
+    "4a3c9d9f-3705-5f32-ac5c-5e484fa634fc",
+    "5c2ea438-3699-547d-b94a-647c1e8688f0",
+    "6060dcd6-5153-5ac0-8dba-6ccd9d90285a",
+    "66c8b382-56d4-5bf9-bded-baabec554f7a",
+    "e81474ba-489c-5655-beb5-705b5789fc30"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "The all-world countercase may occur at an accessible world while selected-world concreteness holds. Select one world and distinguish productive exercise from capacity and mathematical relevance. Transfer needs a warranted world/scope alignment, not a model role label.",
+  "evidence": [
+    "PR-2086"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
+    }
+  ],
+  "blocker": "Connection target 61b6e188-39aa-57d9-9e0b-dedc05226995. The scoped bridge described in the summary remains open."
+}

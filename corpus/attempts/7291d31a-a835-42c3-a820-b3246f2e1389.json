@@ -1,0 +1,27 @@
+{
+  "id": "7291d31a-a835-42c3-a820-b3246f2e1389",
+  "label": "Exact and truth-preserving record transport connection plan",
+  "statement_ids": [
+    "636afc90-2c2c-4054-adca-9680d35b9e98",
+    "c7c0ccda-a540-43f5-bad5-1e9b25eb2ca7"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "The consequence keeps the same source-record channel and weakens recovery to preservation of true encoded contents. The source guarantee also requires actual truthful assertions and their production. Bind the exact channel to a usable witness and establish those separate inputs for the particular route premise before instantiating the theorem.",
+  "evidence": [
+    "7b9429c8-d870-4cf4-9904-554042cb3e69",
+    "PR-2086"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
+    }
+  ],
+  "blocker": "Connection target 389db8f3-19c9-48c6-a6c7-c778f13895e2. The scoped bridge described in the summary remains open."
+}

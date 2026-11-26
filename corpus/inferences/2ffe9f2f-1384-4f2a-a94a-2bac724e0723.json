@@ -1,0 +1,16 @@
+{
+  "id": "2ffe9f2f-1384-4f2a-a94a-2bac724e0723",
+  "label": "One individual persists across successors under finite population cover (inference)",
+  "input_statement_ids": [
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410",
+    "390ac3ab-48ec-596e-9890-4d2364e81cf9",
+    "09e9333a-d596-5ee1-99ce-80f1bad4a0ba",
+    "b9bf4eb8-ccac-5960-a8c7-c01bf24fbb33",
+    "7570cdf8-56b1-58dc-951d-e987959c2d29"
+  ],
+  "output_statement_id": "b62deb46-c451-5971-a569-cc5c0f44a398",
+  "rule": "Finite omission induction, followed by a contradiction with de dicto population",
+  "meaning": "Registers the existing finite_cover_deRe derivation. On one frame, population predicate and base world, excluded middle, accessible-successor existence, absence amalgamation, finite population cover and de dicto population imply that one individual is present at every accessible world. Concrete divine witness identification requires further premises.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

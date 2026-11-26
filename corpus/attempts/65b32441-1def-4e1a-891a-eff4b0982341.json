@@ -1,0 +1,30 @@
+{
+  "id": "65b32441-1def-4e1a-891a-eff4b0982341",
+  "label": "Unique existence and at-most-one connection plan",
+  "statement_ids": [
+    "6694be77-c7b2-5199-b1e8-514e640c491c",
+    "a0c179aa-43a0-5c0a-8b80-55cbfab4a6b5",
+    "f976f890-aba8-59cb-a312-1feaf833e727"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "The generic certificate factors existence and at-most-one for one predicate. The existing classical God assembly already combines existence and uniqueness. Any new use must identify one shared IsGod predicate and a genuine consumer of a unique witness, such as attribute agreement across two existing witnesses. Repeating the same conjunction adds no support. Introduced in e230c1d4a.",
+  "evidence": [
+    "80ae979c-c317-52b8-a9b9-ca041f0cee26",
+    "9884d1dc-d038-5308-8d13-fc507afaa0cb",
+    "PR-2086",
+    "e90ac0a8-d075-5219-9c9e-c65d159ceb3a"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
+    }
+  ],
+  "blocker": "Connection target 33b18ae7-4578-54bc-a2b5-edce99b21fc2. The scoped bridge described in the summary remains open."
+}

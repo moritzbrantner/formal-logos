@@ -1,0 +1,27 @@
+{
+  "id": "3a2b8a89-1705-478d-be19-eafc6aa1a10d",
+  "label": "Circular participation explanation connection plan",
+  "statement_ids": [
+    "7a8228a2-ef81-52cf-84c2-027b2647a4c8",
+    "f3a39613-fa70-591b-9d88-2df5740d9c3f"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "Asymmetry blocks reciprocal grounding of the pair of participation/exemplification facts. The root relation ranges over existing concrete beings. Establish a relation-preserving translation from the relevant fact pair to those relata, or use the result only to compare theories about the participation relation. Introduced in 18b6b89f5.",
+  "evidence": [
+    "23cfe9f4-3347-599d-9ac6-08956903f46e",
+    "PR-2086"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
+    }
+  ],
+  "blocker": "Connection target 39f7c63d-b372-564c-b18a-ed09d02dda9a. The scoped bridge described in the summary remains open."
+}
