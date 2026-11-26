@@ -1,0 +1,12 @@
+{
+  "id": "9ec1a08c-142c-4cb1-9037-970899e25d80",
+  "label": "Self-origin transfer supplies the CAUSE_4 disjunct (inference)",
+  "input_statement_ids": [
+    "0a2f1846-e8cd-5082-9566-39b4ae8082fc"
+  ],
+  "output_statement_id": "a6965d7b-332d-4790-a208-2eb60f78e38f",
+  "rule": "Insert the original conclusion as the second disjunct",
+  "meaning": "Apply the old diagonal implication to the same bearer and respect, then introduce the origin disjunct. No identification of efficient causing with origin follows.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

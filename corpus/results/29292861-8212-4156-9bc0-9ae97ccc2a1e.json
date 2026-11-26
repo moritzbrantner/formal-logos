@@ -1,0 +1,12 @@
+{
+  "id": "29292861-8212-4156-9bc0-9ae97ccc2a1e",
+  "label": "Global efficient no-self-cause supplies distinct incoming coverage",
+  "argument_id": "3a7b93d4-fe32-44a0-a9f2-6194bd4730af",
+  "challenge_module": "TruthCore.Results.Case.Catholicism.NoSelfCauseScope.Challenge",
+  "solution_module": "TruthCore.Results.Case.Catholicism.NoSelfCauseScope.Solution",
+  "theorem": "TruthCore.Results.Case.Catholicism.NoSelfCauseScope.distinctOfNoSelf",
+  "comparator_config": "results/29292861-8212-4156-9bc0-9ae97ccc2a1e/comparator.json",
+  "status": "solution-present",
+  "description": "A witness for the antecedent is itself distinct under the global ban, so it can be retained with its same respect.",
+  "transcription": "assembly"
+}

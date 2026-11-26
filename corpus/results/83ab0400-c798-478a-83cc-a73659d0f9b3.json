@@ -1,0 +1,11 @@
+{
+  "id": "83ab0400-c798-478a-83cc-a73659d0f9b3",
+  "label": "Second Way from distinct efficient incoming witnesses",
+  "argument_id": "4b7b5edf-7212-4fb5-85c2-f44b3f689e21",
+  "challenge_module": "TruthCore.Results.Case.Catholicism.NoSelfCauseScope.Challenge",
+  "solution_module": "TruthCore.Results.Case.Catholicism.NoSelfCauseScope.Solution",
+  "theorem": "TruthCore.Results.Case.Catholicism.NoSelfCauseScope.firstEfficientOfDistinct",
+  "comparator_config": "results/83ab0400-c798-478a-83cc-a73659d0f9b3/comparator.json",
+  "status": "solution-present",
+  "description": "Given an effect, choose a distinct incoming cause. If it has no incoming cause of any kind in the same efficient relation it is first. Otherwise the per se premise makes it a predecessor that is also an effect. Well-foundedness contradicts the absence of any first cause, using the observed effect to begin. The endpoint is double-negated."
+}

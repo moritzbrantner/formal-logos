@@ -1,0 +1,42 @@
+{
+  "id": "157a5c52-33fe-4454-bbeb-ce896f755992",
+  "label": "Composite cause of being from the restricted temporal self-uniter ban",
+  "premise_statement_ids": [
+    "6b80cfe4-82e1-53d3-9c7c-6564e52a25de",
+    "58445bd6-264b-53cf-8951-d052022f8e47",
+    "8e44a618-09cf-5ae0-8a0e-c8c7e60b5d26",
+    "fbee7f15-f54b-5a67-9773-3c09ca7015f4",
+    "2e69fa9d-733f-4ef8-9e1f-22dbc2e820bf"
+  ],
+  "conclusion_statement_id": "ca07cae9-6102-564e-a7fd-efb013744b3d",
+  "inference_ids": [
+    "3593c868-9c48-4bab-834b-fb22a9b5f1e2"
+  ],
+  "meaning": "Two distinct components give a uniter. If it is the composite, temporal composer coverage gives precisely the diagonal excluded on its tuple. The same distinct uniter then causes the composite's esse by the separate uniting-to-esse premise.",
+  "definition_ids": [
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "c20f04bb-c069-5be5-b2c1-691fc994dcb9",
+    "98ac7aa1-54cb-553c-826b-2a69257f6cbe",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "85f7f569-ab4d-514b-aa2c-cf75171ad105",
+    "f930c63f-f79a-507c-9462-b572480c6808"
+  ],
+  "disambiguation_ids": [
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "57f80020-fa6f-5b69-be58-b4cf95b7226f"
+  ],
+  "sense_bridges": [
+    {
+      "term": "UNITING_CAUSE_VERSUS_EFFICIENT_CAUSE",
+      "from": "a7854292-a7cb-403d-b926-f61af1bb435b",
+      "to": "b0629638-0fe1-4da3-af9f-bc28446e53eb",
+      "statement_id": "8e44a618-09cf-5ae0-8a0e-c8c7e60b5d26"
+    },
+    {
+      "term": "UNITING_CAUSE_VERSUS_EFFICIENT_CAUSE",
+      "from": "a7854292-a7cb-403d-b926-f61af1bb435b",
+      "to": "2478812d-d2cd-4182-8ad0-d27a4bdb9ff2",
+      "statement_id": "fbee7f15-f54b-5a67-9773-3c09ca7015f4"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "challenge_module": "TruthCore.Results.Case.Catholicism.NoSelfCauseScope.Challenge",
+  "solution_module": "TruthCore.Results.Case.Catholicism.NoSelfCauseScope.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Case.Catholicism.NoSelfCauseScope.distinctOfNoOrigin"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}

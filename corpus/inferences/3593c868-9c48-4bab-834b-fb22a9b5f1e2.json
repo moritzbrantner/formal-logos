@@ -1,0 +1,16 @@
+{
+  "id": "3593c868-9c48-4bab-834b-fb22a9b5f1e2",
+  "label": "Composite cause of being from the restricted temporal self-uniter ban (inference)",
+  "input_statement_ids": [
+    "6b80cfe4-82e1-53d3-9c7c-6564e52a25de",
+    "58445bd6-264b-53cf-8951-d052022f8e47",
+    "8e44a618-09cf-5ae0-8a0e-c8c7e60b5d26",
+    "fbee7f15-f54b-5a67-9773-3c09ca7015f4",
+    "2e69fa9d-733f-4ef8-9e1f-22dbc2e820bf"
+  ],
+  "output_statement_id": "ca07cae9-6102-564e-a7fd-efb013744b3d",
+  "rule": "Extract the uniter, exclude identity on its actual tuple, and apply the esse bridge",
+  "meaning": "Two distinct components give a uniter. If it is the composite, temporal composer coverage gives precisely the diagonal excluded on its tuple. The same distinct uniter then causes the composite's esse by the separate uniting-to-esse premise.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

@@ -1,0 +1,12 @@
+{
+  "id": "4be980c4-ffae-477a-9ca5-652fcc00b3af",
+  "label": "Global efficient no-self-cause supplies distinct incoming coverage (inference)",
+  "input_statement_ids": [
+    "8b2561cd-3743-536d-a110-3352fdb0c6b9"
+  ],
+  "output_statement_id": "bd050ab8-3cfa-4db8-a990-a4595834afb9",
+  "rule": "Keep an arbitrary incoming witness after excluding its diagonal",
+  "meaning": "A witness for the antecedent is itself distinct under the global ban, so it can be retained with its same respect.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

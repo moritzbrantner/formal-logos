@@ -1,0 +1,22 @@
+{
+  "id": "dc6cfab2-2473-46bd-9405-3000139548fd",
+  "label": "All-time efficient irreflexivity gives its self-uniter restriction",
+  "premise_statement_ids": [
+    "d15ded6f-1895-5d2d-b967-a14165c49bda"
+  ],
+  "conclusion_statement_id": "2e69fa9d-733f-4ef8-9e1f-22dbc2e820bf",
+  "inference_ids": [
+    "d7410627-ccb9-4ce9-bb8c-f07768c400cf"
+  ],
+  "meaning": "Any temporal edge is witnessed at an admitted time. Apply the old ban there, including when the bearer is a self-uniter.",
+  "definition_ids": [
+    "c20f04bb-c069-5be5-b2c1-691fc994dcb9"
+  ],
+  "disambiguation_ids": [
+    "57f80020-fa6f-5b69-be58-b4cf95b7226f"
+  ],
+  "strong_version_needed": {
+    "d15ded6f-1895-5d2d-b967-a14165c49bda": "This argument registers the restriction on the same temporal frame."
+  },
+  "weakening": true
+}

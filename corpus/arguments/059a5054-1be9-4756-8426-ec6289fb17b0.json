@@ -1,0 +1,23 @@
+{
+  "id": "059a5054-1be9-4756-8426-ec6289fb17b0",
+  "label": "Self-origin transfer supplies the CAUSE_4 disjunct",
+  "premise_statement_ids": [
+    "0a2f1846-e8cd-5082-9566-39b4ae8082fc"
+  ],
+  "conclusion_statement_id": "a6965d7b-332d-4790-a208-2eb60f78e38f",
+  "inference_ids": [
+    "9ec1a08c-142c-4cb1-9037-970899e25d80"
+  ],
+  "meaning": "Apply the old diagonal implication to the same bearer and respect, then introduce the origin disjunct. No identification of efficient causing with origin follows.",
+  "definition_ids": [
+    "05dc1385-d245-5137-bf8b-dbdb1d3d9a7a",
+    "69c0b23e-54c7-57a1-871f-839c6e5514c6"
+  ],
+  "disambiguation_ids": [
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b"
+  ],
+  "strong_version_needed": {
+    "0a2f1846-e8cd-5082-9566-39b4ae8082fc": "This argument registers the strength comparison only."
+  },
+  "weakening": true
+}
