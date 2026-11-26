@@ -1,0 +1,12 @@
+{
+  "id": "c5d4dfd8-ea5f-4c31-b68b-1403eefef88a",
+  "label": "Boolean relay cuts match one feed and infinitely many feeds with the same first position",
+  "paraphrase": "On the same successor roster with the same selected power, arbitrary maintained feeds admit an all-active intact baseline and responses to every single cut. In every response, receiver zero is active after cut i exactly when some feed is at a position at most i. The sole feed at d and feeds at every n ≥ d give identical Boolean reports for every primary cut. Charging those feed positions individually gives the singleton inventory a headcount advantage surviving every finite addition. A stipulated additive unit-count readout settles whether position i has a feed by whether the reported count rises by one when i enters the measured prefix. The prefix through position d+1 reports one unit for the singleton and two for the tail.",
+  "lean_declaration": "TruthCore.Causality.RelayFeedInventory.FeedInventoryComparison",
+  "definition_ids": [
+    "5231af84-0f05-4623-b1b7-f570059f7bca",
+    "d3a92973-548a-4acf-959d-e94c4d56dbfe",
+    "daeae08d-3a0b-46fc-b932-18eda7ff5f37",
+    "b635dd4f-73c5-4ac9-b5bd-d5b18b0ea748"
+  ]
+}

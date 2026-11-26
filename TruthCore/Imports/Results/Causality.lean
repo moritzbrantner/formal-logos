@@ -340,6 +340,7 @@ public import TruthCore.Results.Causality.RegressReadingsCoincide.Solution
 public import TruthCore.Results.Causality.RegressRivalCoverage.Coverage.Solution
 public import TruthCore.Results.Causality.RelationalReceipt.Solution
 public import TruthCore.Results.Causality.RelayCutSensitivity.Solution
+public import TruthCore.Results.Causality.RelayFeedInventory.Solution
 public import TruthCore.Results.Causality.RestatedPremises.Solution
 public import TruthCore.Results.Causality.RivalRefutationsRound2.Solution
 public import TruthCore.Results.Causality.RootEssenceIdentity.Solution

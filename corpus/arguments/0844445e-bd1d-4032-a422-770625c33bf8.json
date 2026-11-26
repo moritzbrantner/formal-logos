@@ -1,0 +1,20 @@
+{
+  "id": "0844445e-bd1d-4032-a422-770625c33bf8",
+  "label": "Compare matched relay reports by feed headcount and by additive feed counts",
+  "premise_statement_ids": [
+    "70ddfed2-f784-4edb-9b3e-252bb4856a07",
+    "d899fe9f-2c8c-43aa-a2c4-2c8c2c06890b"
+  ],
+  "conclusion_statement_id": "c5d4dfd8-ea5f-4c31-b68b-1403eefef88a",
+  "inference_ids": [
+    "095dd995-5e90-423b-9ef5-5a658da2a0c3"
+  ],
+  "meaning": "At the cut the feed is the only way to remain active. Induction toward the receiver shows that activity is equivalent to the presence of at least one feed at or below the cut. The single-feed threshold therefore agrees at every primary cut with the corresponding tail inventory. The headcount comparison charges each feed position separately and concerns these matched Boolean observations. Counting independent explanatory assumptions instead requires an additional model of how the feeds are generated. An additive readout assigns each in-prefix feed its own observable contribution. Adjacent prefix counts recover membership, and the prefix through the position immediately above the first feed already separates the two inventories.",
+  "definition_ids": [
+    "5231af84-0f05-4623-b1b7-f570059f7bca",
+    "e1b95906-8d38-59c3-abee-0ccc1c9d333b",
+    "b635dd4f-73c5-4ac9-b5bd-d5b18b0ea748",
+    "d3a92973-548a-4acf-959d-e94c4d56dbfe",
+    "daeae08d-3a0b-46fc-b932-18eda7ff5f37"
+  ]
+}
