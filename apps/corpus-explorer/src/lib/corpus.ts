@@ -309,7 +309,7 @@ export type CorpusRelation = {
   label?: string;
   /** Former readable id of a migrated record, kept as an alias. */
   legacy_id?: string;
-  subject_kind: "source" | "statement" | "claim" | "inference" | "argument";
+  subject_kind: "source" | "statement" | "claim" | "inference" | "argument" | "result";
   subject_id: string;
   predicate: string;
   object_kind: "source" | "statement" | "claim" | "inference" | "argument";
