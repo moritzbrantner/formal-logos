@@ -125,7 +125,7 @@ private theorem chainPerfection : PerfectInFrame grades named := by
   intro g namedG _ _ _
   exact Or.inr namedG
 
-/-- The populated finite chain proves the two attribute conditionals and shows
+/-- The populated finite chain satisfies the premises and conclusions of the two attribute conditionals and shows
 that the same nonlogical inputs can hold with direct supreme goodness false. -/
 theorem chainControl : ChainControl := by
   have noEndpoint : ¬ chainCause primary effect := by

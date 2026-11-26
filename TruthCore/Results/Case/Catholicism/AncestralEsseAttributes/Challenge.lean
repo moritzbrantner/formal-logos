@@ -37,7 +37,7 @@ open TruthCore.Case.Catholicism.AncestralEsseAttributes.Control
 open TruthCore.Causality.Q44SourceSupply.Control (Being chainCause)
 open TruthCore.Causality.Q44EssentialSource.Control.Three
 
-/-- The populated finite chain proves the two attribute conditionals and shows
+/-- The populated finite chain satisfies the premises and conclusions of the two attribute conditionals and shows
 that the same nonlogical inputs can hold with direct supreme goodness false. -/
 theorem chainControl : ChainControl := by
   sorry
