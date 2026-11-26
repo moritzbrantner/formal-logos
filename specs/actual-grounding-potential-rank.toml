@@ -74,3 +74,12 @@ coverage = "One explicitly populated omission model, not all lower-bounded groun
 exclusivity = "No exclusion between lower bound alone and absence of Nat rank is assumed."
 witness = "Control.descending with S=0,L=0,epsilon=0 in Control.Certificate; controls proves lower bound, gap, failed positivity, failed Nat rank and failed ActualGroundingWF."
 next_step = "The checked full-bundle exclusion requires both remaining open calibrations; no metaphysical actuality inferred."
+
+[[relation]]
+id = "Unranked actual grounding is the Nat-rank rival"
+subject_kind = "statement"
+subject_id = "Actual grounding lacks a finite Nat rank"
+predicate = "alternative_to"
+object_kind = "statement"
+object_id = "STMT-ACTUAL-GROUNDING-FINITE-RANK"
+note = "ActualGroundingUnranked m w is the exact negation of ActualGroundingFiniteRank m w on the same selected world and actual concrete grounding relation. The existing potential result excludes it under the three open numerical calibrations. The reverse-successor interpretation supplies a mathematical example of the rival, without settling its metaphysical application or the weaker well-foundedness premise."

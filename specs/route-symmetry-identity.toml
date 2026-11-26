@@ -1,0 +1,37 @@
+[batch]
+vocab = "TruthCore.Logic.Strength.RouteSymmetryIdentity"
+results = "TruthCore.Results.Logic.Strength.RouteSymmetryIdentity"
+definitions = ["DEF-MODAL-FIXTURE-FRAME"]
+
+[[statement]]
+id = "The route symmetry deltas both express B on the same frame"
+lean = "SameRouteSymmetry"
+paraphrase = "For any supplied profile of the route signature, each of the two named symmetry deltas holds iff the accessibility relation of that very profile's frame is symmetric."
+definitions = ["DEF-MODAL-FIXTURE-FRAME"]
+
+[[argument]]
+id = "The same-frame identities of the two symmetry deltas"
+theorem = "sameRouteSymmetry"
+premises = []
+conclusion = "The route symmetry deltas both express B on the same frame"
+rule = "Definitional equality of both symmetry predicates on the selected frame"
+meaning = "For every world type, signature and matching profile, both named delta predicates unfold to Symmetric m.ontic.frame. The two equivalences are definitionally reflexive. The result asserts no symmetry of different frames and no frame condition of the actual route."
+comparator_theorems = ["nodeDelta", "frameDelta"]
+
+[[relation]]
+id = "Necessary-root symmetry delta matches B on the selected frame"
+subject_kind = "statement"
+subject_id = "986bd9f3-c737-413a-82a7-7add8d47451a"
+predicate = "logically_equivalent_to"
+object_kind = "statement"
+object_id = "STMT-ACCESSIBILITY-SYMMETRIC"
+note = "TruthCore.Results.Logic.Strength.RouteSymmetryIdentity.nodeDelta certifies the equivalence at the same frame m.ontic.frame of the supplied profile m. The delta retains its role in the necessary-root strength comparisons."
+
+[[relation]]
+id = "Frame-premise symmetry delta matches B on the selected frame"
+subject_kind = "statement"
+subject_id = "9a02972e-df16-413c-baa4-5dfaf9b3f8f4"
+predicate = "logically_equivalent_to"
+object_kind = "statement"
+object_id = "STMT-ACCESSIBILITY-SYMMETRIC"
+note = "TruthCore.Results.Logic.Strength.RouteSymmetryIdentity.frameDelta certifies the equivalence at the same frame m.ontic.frame of the supplied profile m. The delta retains its role in the frame-premise strength comparisons."

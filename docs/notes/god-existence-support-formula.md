@@ -616,3 +616,25 @@ supports the consumer's original structured vocabulary.
 - [Targets skipped at proved-pool retrieval](../../corpus/attempts/4b35db72-847b-4a41-b2ec-582c74be6236.json)
 - [Rejected self-origin converse](../../corpus/attempts/853663da-b50c-452b-814b-8f58edc0c852.json)
 - [Tactic probes on existing Challenges](../../corpus/attempts/b3bdaa86-3f9d-4a3d-b292-c7c0d39722bc.json)
+
+## Connectivity review (2026-11-26)
+
+Two existing comparisons now have explicit rival links. The absence of a
+natural-number rank challenges the ranking of the same selected actual
+concrete grounding graph. The reverse-successor model gives a mathematical
+instance of the rival, while the bounded uniform-potential argument excludes it
+under its three open calibrations. In q.14, failure of all three calibrations
+challenges coverage by the named menu on the same receiver scope. Neither
+comparison settles which profile applies to the actual case.
+
+Both symmetry deltas express condition B on the same selected frame. The
+[identity certificate](../../corpus/results/79564d3e-e0b9-4311-aafb-a8bf97d52831.json)
+allows readers of the Pruss and necessary-root routes to find the shared
+condition without identifying their independently supplied frames. The proof
+asserts the equivalences for every supplied profile.
+
+The mover fork remains a priority for bridge research. Its common conclusion
+provides a mover in some respect, while the reduction premise of the prima
+via asks for a mover in the very respect in which the subject moves. A bridge
+must supply that alignment for the respect-free constructor and connect
+accidental-mover coverage to actual reductions in the stated domain.

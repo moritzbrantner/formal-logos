@@ -92,6 +92,7 @@ public import TruthCore.Logic.SoritesBoundary
 public import TruthCore.Logic.Strength.Cause
 public import TruthCore.Logic.Strength.NecessaryFrames
 public import TruthCore.Logic.Strength.Order
+public import TruthCore.Logic.Strength.RouteSymmetryIdentity
 public import TruthCore.Logic.Strength.UniqueExistence
 public import TruthCore.Logic.StrengthComparison
 public import TruthCore.Logic.TemporalPastCoverage
