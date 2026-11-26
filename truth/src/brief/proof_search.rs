@@ -241,6 +241,33 @@ pub(super) fn library_declaration(root: &Path, query: &str) -> Option<Value> {
     Some(json!({"name":name,"path":path,"line":line,"source":source}))
 }
 
+/// Include reusable implementations that are not already displayed as a result.
+pub(super) fn library_candidates(
+    root: &Path,
+    corpus: &Corpus,
+    query: &Query,
+    shown: &[Value],
+    cited: &[Value],
+    limit: usize,
+) -> Vec<Value> {
+    let excluded = shown
+        .iter()
+        .chain(cited)
+        .filter_map(|entry| entry["theorem"].as_str().map(str::to_owned))
+        .collect();
+    let mut candidates = LeanSource::new(root).theorem_candidates(query, &excluded, limit);
+    for candidate in &mut candidates {
+        let name = candidate["name"].as_str().unwrap_or_default();
+        let ids: Vec<_> = corpus
+            .records_by_id("results")
+            .filter(|(_, record)| field(record, "theorem") == name)
+            .map(|(id, _)| id)
+            .collect();
+        candidate["registered_result_ids"] = json!(ids);
+    }
+    candidates
+}
+
 /// Prefer an exact formal identifier. For ordinary questions search the theorem
 /// names and registered argument/conclusion labels. Read Lean only for the
 /// selected witnesses. Notes and attempts never enter the candidate set.
