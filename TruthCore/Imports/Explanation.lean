@@ -20,6 +20,7 @@ public import TruthCore.Explanation.CondensationSufficiency
 public import TruthCore.Explanation.ConservativeReasonExpansion
 public import TruthCore.Explanation.ContainedSelection
 public import TruthCore.Explanation.DisjunctionGround
+public import TruthCore.Explanation.DispatchControls
 public import TruthCore.Explanation.EmptyHistoryCausalAvailability
 public import TruthCore.Explanation.EmptyHistoryCountControl
 public import TruthCore.Explanation.EmptyTruthmaker
