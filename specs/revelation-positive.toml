@@ -63,3 +63,13 @@ predicate = "tests"
 object_kind = "statement"
 object_id = "f2504092-91c0-53f1-a59b-2402ccb7b0a7"
 note = "Checks the explicit ability-evidence, uptake and full-calibration hypotheses needed for the encoded recognition bridge."
+
+[[relation]]
+id = "Test by Sound positive evidence exactly when one inhabited fiber is pure by construction"
+label = "Test by Sound positive evidence exactly when one inhabited fiber is pure by construction"
+subject_kind = "result"
+subject_id = "4e12554c-e2ad-4c3d-bac0-53972461585c"
+predicate = "tests"
+object_kind = "argument"
+object_id = "a5d6f197-407f-4542-9fd8-4ef1aa6860d8"
+note = "Checks the pure-fiber to sound-positive-evidence step in the stipulated recognition bridge for the same candidate and event."

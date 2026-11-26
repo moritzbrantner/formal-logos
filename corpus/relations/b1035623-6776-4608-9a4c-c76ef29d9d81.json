@@ -1,0 +1,10 @@
+{
+  "id": "b1035623-6776-4608-9a4c-c76ef29d9d81",
+  "label": "Test by The shared compositional interpretation preserves moral modus ponens for any act predicate",
+  "subject_kind": "result",
+  "subject_id": "47710a7a-1bd8-5eb8-912d-ccf7176925fb",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "926071cf-d26f-5aa9-9e80-e5d6ac01432c",
+  "note": "Checks the modus ponens form under a common truth-functional interpretation for arbitrary natural predicates on acts."
+}

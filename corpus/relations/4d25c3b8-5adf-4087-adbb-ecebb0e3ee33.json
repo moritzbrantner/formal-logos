@@ -1,0 +1,10 @@
+{
+  "id": "4d25c3b8-5adf-4087-adbb-ecebb0e3ee33",
+  "label": "Test by For every designated arrangement, a false-only judgment for Every candidate propositio (1)",
+  "subject_kind": "result",
+  "subject_id": "52fa2ae2-e92d-588c-9693-51eb48dc6a85",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "7f6451e9-a533-5bfd-9899-16bb4164ecab",
+  "note": "Tests omission of factivity with the false-only acceptance policy for each supplied arrangement."
+}

@@ -1,0 +1,10 @@
+{
+  "id": "f2da5feb-3af9-458f-b9d7-6db54af73c23",
+  "label": "Test by Internal counterfactual acceptance separation controls",
+  "subject_kind": "result",
+  "subject_id": "f4c0852f-51f0-4363-8998-a0e022572aa0",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "50d8be94-f9c1-52af-bf43-fb2751915756",
+  "note": "Tests whether internal acceptance can settle the fixed-assessor approval boundary using two changed-approval profiles where acceptance and counterfactual truth diverge."
+}

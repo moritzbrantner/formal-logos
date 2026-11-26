@@ -1,0 +1,10 @@
+{
+  "id": "3d7d8262-d16b-4780-83b4-bfb47f7ecdb8",
+  "label": "Test by Sound positive evidence exactly when one inhabited fiber is pure by construction",
+  "subject_kind": "result",
+  "subject_id": "4e12554c-e2ad-4c3d-bac0-53972461585c",
+  "predicate": "tests",
+  "object_kind": "argument",
+  "object_id": "a5d6f197-407f-4542-9fd8-4ef1aa6860d8",
+  "note": "Checks the pure-fiber to sound-positive-evidence step in the stipulated recognition bridge for the same candidate and event."
+}
