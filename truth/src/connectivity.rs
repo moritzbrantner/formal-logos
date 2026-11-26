@@ -576,6 +576,8 @@ pub fn gate(head: &Corpus, base: &Corpus, root: &str, base_label: &str) -> Value
     let base_component = owned_component(base, root);
     let base_statements: HashSet<&str> =
         base.records_by_id("statements").map(|(id, _)| id).collect();
+    let head_statements: HashSet<&str> =
+        head.records_by_id("statements").map(|(id, _)| id).collect();
     let base_planned: HashSet<&str> = base
         .records_by_id("statements")
         .filter(|(_, record)| plan_target(&record.fields).is_some())
@@ -609,9 +611,20 @@ pub fn gate(head: &Corpus, base: &Corpus, root: &str, base_label: &str) -> Value
         } else {
             continue;
         };
-        let (status, target) = match target {
-            None => ("no_plan", Value::Null),
-            Some(target) => (
+        // A plan counts only when it is well formed by `truth check`'s rule,
+        // so the gate does not depend on `check` having run first.
+        let invalid =
+            crate::check::validate_connection_plan(&record.fields, &head_statements).err();
+        let (status, target) = match (target, &invalid) {
+            (None, None) => ("no_plan", Value::Null),
+            (target, Some(_)) => (
+                "invalid_plan",
+                target.map_or(
+                    Value::Null,
+                    |target| json!({"id": target, "label": label(target)}),
+                ),
+            ),
+            (Some(target), None) => (
                 if component.contains(target) {
                     "planned"
                 } else {
@@ -622,7 +635,7 @@ pub fn gate(head: &Corpus, base: &Corpus, root: &str, base_label: &str) -> Value
         };
         judged.push(json!({
             "id": id, "label": label(id), "change": change,
-            "status": status, "plan_target": target,
+            "status": status, "plan_target": target, "plan_error": invalid,
         }));
     }
     let offending: Vec<&Value> = judged
@@ -723,13 +736,16 @@ pub fn format_gate(report: &Value) -> String {
                 Some("moved_out") => "moved out of the root component",
                 _ => "planned at the base and still outside the root component",
             };
-            let reason = if entry["status"] == "no_plan" {
-                "no connection plan".to_owned()
-            } else {
-                format!(
+            let reason = match entry["status"].as_str() {
+                Some("no_plan") => "no connection plan".to_owned(),
+                Some("invalid_plan") => format!(
+                    "invalid connection plan: {}",
+                    entry["plan_error"].as_str().unwrap_or_default()
+                ),
+                _ => format!(
                     "its plan target {} is outside the root component",
                     named(&entry["plan_target"])
-                )
+                ),
             };
             lines.push(format!("  {}: {change}; {reason}", named(entry)));
         }

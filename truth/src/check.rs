@@ -1729,7 +1729,7 @@ fn validate_settlement_actions(statement: &Obj) -> Res<()> {
 /// library to the case"): a statement outside the root's component names the
 /// root-route statement it is meant to reach, the missing bridge and the
 /// blocker. `truth connectivity --base` requires it of new disconnection.
-fn validate_connection_plan(statement: &Obj, statements: &HashSet<&str>) -> Res<()> {
+pub(crate) fn validate_connection_plan(statement: &Obj, statements: &HashSet<&str>) -> Res<()> {
     let Some(plan) = statement.get("connection_plan") else {
         return Ok(());
     };

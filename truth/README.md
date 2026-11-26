@@ -1266,10 +1266,11 @@ co-citation, which records research activity rather than a typed contact. It
 judges each statement outside the typed component at the head that is new
 (present at the head, absent at the base), was in the typed component at the
 base, or carried a `connection_plan` at the base. Such a statement passes only
-with a `connection_plan` whose `target_statement_id` is in the head's typed
+with a valid `connection_plan` (the shape `truth check` requires, checked by
+the gate itself) whose `target_statement_id` is in the head's typed
 component; statements outside it at the base that never had a plan are not
 judged. The command exits 1 and lists each offending statement as
-`label [uuid8]`, with the reason (no plan, or a plan target off the typed
+`label [uuid8]`, with the reason (no plan, an invalid plan, or a plan target off the typed
 component). It also lists the outstanding planned statements and the plans
 ready for plan review: joining the component does not show that the named
 bridge was delivered. The gate checks that work is linked, not the

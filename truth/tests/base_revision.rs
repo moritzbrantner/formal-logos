@@ -188,6 +188,32 @@ fn the_connectivity_gate_fails_on_new_disconnection_only() {
         "{text}"
     );
 
+    // A plan with only a target (no bridge, no blocker) is not a valid plan,
+    // although its target is in the root component: the gate still fails.
+    write(
+        root,
+        "corpus/statements/new.json",
+        &format!(
+            r#"{{"id": "{NEW}", "label": "NEW", "paraphrase": "NEW",
+                "connection_plan": {{"target_statement_id": "{A}"}}}}"#
+        ),
+    );
+    let output = Command::new(BINARY)
+        .args(["--root"])
+        .arg(root)
+        .args(["--frontier-root", "ROOT", "connectivity", "--base", "BASE"])
+        .output()
+        .unwrap();
+    assert_eq!(output.status.code(), Some(1));
+    let text = String::from_utf8_lossy(&output.stdout);
+    assert!(
+        text.contains(
+            "NEW [55555555]: new statement outside the root component; invalid connection plan: \
+             connection_plan.missing_bridge must be a non-empty string"
+        ),
+        "{text}"
+    );
+
     write(
         root,
         "corpus/statements/new.json",
