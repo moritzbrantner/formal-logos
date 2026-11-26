@@ -1,0 +1,12 @@
+{
+  "id": "c99a255d-7cc0-4642-a16c-d840a215764b",
+  "label": "S5 frame conditions give reflexivity at the selected world",
+  "argument_id": "bf5410ed-ff72-4cb5-a310-716401ec30bf",
+  "challenge_module": "TruthCore.Results.Case.Catholicism.PremiseRestrictions.Challenge",
+  "solution_module": "TruthCore.Results.Case.Catholicism.PremiseRestrictions.Solution",
+  "theorem": "TruthCore.Results.Case.Catholicism.PremiseRestrictions.actualReflexiveOfS5",
+  "comparator_config": "results/c99a255d-7cc0-4642-a16c-d840a215764b/comparator.json",
+  "status": "solution-present",
+  "description": "Assembly by projection on the same m.ontic.frame and instantiation at w. The result is the single edge from w to w.",
+  "transcription": "assembly"
+}

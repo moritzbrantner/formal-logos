@@ -1,0 +1,30 @@
+{
+  "id": "7d77db13-6b30-45a4-84f2-94521fa263e1",
+  "label": "Local Euclidean access for a productive source and a global-absence power holder",
+  "statement_ids": [
+    "62b4a40a-919e-5da4-998c-131c386b7361",
+    "1b1462e6-c285-448c-87e2-3053bc05a341",
+    "b19ffd92-01bd-5c0b-9643-e7407137ea5e",
+    "84d02356-5dac-4ce5-9f9e-4cebf12f96f2"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "The existing strength result specializes Euclidean access to the selected world, and the inert-emptiness route already uses the local condition. The productive-source route uses accessibility among successors of w to retain the same necessary source, with sourcehood and its outgoing activity tested at the accessible history. The global-absence power route uses just the edge from an initiating successor v to any successor u of w at which the same holder might fail to exist. The latter retains the global power content and the possible absence of all contingent concreta at some successor. Both are conditional. The classifier route is recorded separately because its inherited sense metadata is unresolved.",
+  "evidence": [
+    "7e5f0f8a-aa2d-496b-87b6-8411f7970732",
+    "8544b7a9-3f37-4b05-96d9-27b67a897686",
+    "b0585787-ad9b-4af8-a4f6-55bf721e436c",
+    "e8bf0413-9802-4f08-b179-2b46036d6666",
+    "316fa523-efe7-49c1-839e-6faa96ba6ae9"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26"
+    }
+  ]
+}

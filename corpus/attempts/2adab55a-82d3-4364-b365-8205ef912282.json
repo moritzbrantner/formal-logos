@@ -1,0 +1,31 @@
+{
+  "id": "2adab55a-82d3-4364-b365-8205ef912282",
+  "label": "Global absence and strict supremacy serve distinct consumer requirements",
+  "statement_ids": [
+    "0dc833c1-3b2f-4769-a09e-531f0da12455",
+    "18e5bd4e-8178-468e-b867-fbaf9c5988ad",
+    "f11768d2-3d5e-59b2-8a41-aaaae005413d",
+    "fad8af3e-3e4e-582a-a592-0164bdd62527"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "rejected",
+  "summary": "The global-absence power route grounds and issues a power for no contingent concretum at the initiating history. Joint absence of the actual contingent concreta allows replacements and does not supply that power content. The corpus already has the separate actual-absence power route and its projection to the shared necessary-concrete node. The strict supremacy route consumes MAXIME_3 to apply its causal premise to the same bearer. MAXIME_1 alone does not supply strict supremacy. Even the implication from strict supremacy to maximality needs a condition on the supplied MoreIn relation, such as asymmetry. The separate MAXIME_1 route already uses a causal principle stated for a maximal bearer. Neither pair licenses the proposed direct same-consumer substitution.",
+  "evidence": [
+    "f90934ad-df58-4fbc-958e-c46afd2d3a93",
+    "42da6b2d-00b5-4451-81bc-01f155737144",
+    "ad42c376-4c75-467d-9b6b-4775eba6fbb0",
+    "ef4d76c8-0d4b-59a2-8b58-b0238977e643",
+    "9b25d298-e491-528d-8e6d-8b155dfe51bc",
+    "578c4221-db84-5728-9f3e-3a053b96c893"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26"
+    }
+  ]
+}

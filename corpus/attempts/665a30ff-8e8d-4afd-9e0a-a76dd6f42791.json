@@ -1,0 +1,25 @@
+{
+  "id": "665a30ff-8e8d-4afd-9e0a-a76dd6f42791",
+  "label": "Finite fork joins do not suffice for selected-cone well-foundedness",
+  "statement_ids": [
+    "34816fb7-0ec2-4f2e-9634-7fd7e8b7f3bd",
+    "9cd1588d-4416-439e-ac0c-190d46e6b753",
+    "1b1e3f09-f2e9-5949-9c3b-8f7fce26a403"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "rejected",
+  "summary": "The selected-cone induction needs a path to the source shortened by exactly one per upstream step. A finite join can introduce a path longer than the original one. The checked common-source ray has a source directly supplying every ray node, and an infinite chain of immediate ray supplies n+1 to n. Taking the cone of node zero with all nodes actual and concrete retains precisely the ray and its source: every fork joins upstream at that source, each node reaches the source, and the infinite ray defeats accessibility at zero. Thus one finite source path and finite joins do not suffice for this conclusion even on the same edge dictionary. This concerns the encoded graph, not the actuality of such supply.",
+  "evidence": [
+    "a18f7922-65fa-4d86-80cf-4201aa58e44c"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26"
+    }
+  ]
+}

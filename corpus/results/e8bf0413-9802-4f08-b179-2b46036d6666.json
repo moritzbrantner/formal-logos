@@ -1,0 +1,11 @@
+{
+  "id": "e8bf0413-9802-4f08-b179-2b46036d6666",
+  "label": "Necessary concrete productive source with Euclidean access at the selected world",
+  "argument_id": "3ea6e6d2-c5fa-4a3a-b1b0-451faaa46fc4",
+  "challenge_module": "TruthCore.Results.Case.Catholicism.PremiseRestrictions.Challenge",
+  "solution_module": "TruthCore.Results.Case.Catholicism.PremiseRestrictions.Solution",
+  "theorem": "TruthCore.Results.Case.Catholicism.PremiseRestrictions.productiveSourceAt",
+  "comparator_config": "results/e8bf0413-9802-4f08-b179-2b46036d6666/comparator.json",
+  "status": "solution-present",
+  "description": "On the same Ontic, failed headless coverage supplies an existing source at an accessible v. The local causal principle and excluded middle give necessity there. Outgoing activity and the concreteness dictionary classify that same source at v. Euclidean access at w and reflexivity of w carry the source's existence to w and to each of its successors. Causal activity and sourcehood are used only at v."
+}

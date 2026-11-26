@@ -1,0 +1,12 @@
+{
+  "id": "29117b53-b16a-4255-ad20-c4c573d03d4c",
+  "label": "Finite nonempty identity exercise fibres give inhabited fibres (inference)",
+  "input_statement_ids": [
+    "9c717c08-4046-42d8-ae8b-763ef6b1b394"
+  ],
+  "output_statement_id": "d8796eaa-52f7-4731-9ab4-28783abe2dcc",
+  "rule": "Project set nonemptiness at each actual identity bearer",
+  "meaning": "Assembly by projection. For each actual identity bearer in the fixed q3a4 profile, take a witness from the nonempty fibre of the same eligible exercise bearer map. Actuality and represented esse–essence identity are the same guards on both sides.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}
