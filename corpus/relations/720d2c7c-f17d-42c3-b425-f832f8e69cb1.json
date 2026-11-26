@@ -1,0 +1,10 @@
+{
+  "id": "720d2c7c-f17d-42c3-b425-f832f8e69cb1",
+  "label": "Test by Necessary restriction determination boundary by truth-vector invariance",
+  "subject_kind": "result",
+  "subject_id": "9a2c5f49-7c1d-4fbe-b4fb-8dbee1642f61",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "8cb72b43-74b2-5dad-ad9a-73eadae47602",
+  "note": "Tests evidence-only selection in the same truth-vector reading, specialized to a necessary basis and an accessible absence witness for a contingent fact."
+}

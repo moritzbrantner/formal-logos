@@ -52,3 +52,13 @@ predicate = "tests"
 object_kind = "statement"
 object_id = "d86c9de9-25be-488b-b3b7-69f5f4eb80b8"
 note = "Tests the productive explanation bridge with the same positive momentary explanation and contrasting origin-only and sustaining assignments."
+
+[[relation]]
+id = "Test by Classical interval equivalence for existential cessation"
+label = "Test by Classical interval equivalence for existential cessation"
+subject_kind = "result"
+subject_id = "ea0b5e2e-48a7-41b2-90ae-8a9284c5ddd6"
+predicate = "tests"
+object_kind = "statement"
+object_id = "34e4ff72-0ab4-4c76-9f37-4ccc361f1aa1"
+note = "Checks the law used in the matched receiver histories by identifying cessation coverage with persistence on every inducer-free interval of any preordered history."

@@ -1,0 +1,10 @@
+{
+  "id": "e151e4c4-c271-4382-9fb0-96240c663068",
+  "label": "Test by Classical interval equivalence for existential cessation",
+  "subject_kind": "result",
+  "subject_id": "ea0b5e2e-48a7-41b2-90ae-8a9284c5ddd6",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "34e4ff72-0ab4-4c76-9f37-4ccc361f1aa1",
+  "note": "Checks the law used in the matched receiver histories by identifying cessation coverage with persistence on every inducer-free interval of any preordered history."
+}

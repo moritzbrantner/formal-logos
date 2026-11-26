@@ -84,3 +84,43 @@ conclusion = "Finite recombination plus prefix closure permits every complete su
 axioms = ["propext", "Classical.choice", "Quot.sound"]
 rule = "Inductively extend finite records and apply explicit closure; countermodel by eventually constant versus alternating infinite traces"
 meaning = "The exact mathematical bridge is (admitted initial history + one-step richness) implies finite richness, and (finite richness + prefix closure) implies complete suffix richness. Local finite compatibility is insufficient for infinite recombination without the closure premise. Stable and empty selectors show why closure and one-step freedom need separate nonvacuity and pattern assumptions. The connection to an actual ontically unexplained world remains OPEN."
+
+[[relation]]
+id = "Test by Universal law projection under unrestricted future suffixes"
+label = "Test by Universal law projection under unrestricted future suffixes"
+subject_kind = "result"
+subject_id = "6e3bad3f-b479-4ccd-8426-5c2979b6f26e"
+predicate = "tests"
+object_kind = "statement"
+object_id = "83bad780-5acf-5235-a30b-8572b3d2cb2a"
+note = "Tests the open-future prediction obstruction with every possible Boolean suffix at each fixed finite record, extending the two-next-value comparisons."
+
+[[relation]]
+id = "Test by Arbitrarily late deterministic copy-to-toggle law switch"
+label = "Test by Arbitrarily late deterministic copy-to-toggle law switch"
+subject_kind = "result"
+subject_id = "1a3273be-505b-4c54-8f91-e4f209ca4122"
+predicate = "tests"
+object_kind = "statement"
+object_id = "83bad780-5acf-5235-a30b-8572b3d2cb2a"
+note = "Tests projecting the stable copy law from the finite prefix by comparing it with an equally deterministic but arbitrarily late toggle schedule."
+
+[[relation]]
+id = "Test by Stable, vacuous and ground-status omission controls"
+label = "Test by Stable, vacuous and ground-status omission controls"
+subject_kind = "result"
+subject_id = "9d9c1993-6809-494d-99ce-866614f6037a"
+predicate = "tests"
+object_kind = "argument"
+object_id = "50ff5c59-61b4-48d9-bda7-259ee444dd45"
+note = "Tests the roles of suffix admission and inhabited evidence cells using stable and empty cells, with independent assignments to scope grounding."
+
+[[relation]]
+id = "Test by Fixed unrestricted rival equals union of deterministic schedules"
+label = "Test by Fixed unrestricted rival equals union of deterministic schedules"
+subject_kind = "result"
+subject_id = "be57c3aa-3b12-47b6-aa58-c7e4750d1995"
+predicate = "tests"
+object_kind = "argument"
+object_id = "50ff5c59-61b4-48d9-bda7-259ee444dd45"
+note = "Tests suffix-complete nonvacuity with one fixed unrestricted profile that can realize every individual deterministic copy-or-toggle schedule."

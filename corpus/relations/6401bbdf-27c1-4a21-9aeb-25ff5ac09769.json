@@ -1,0 +1,10 @@
+{
+  "id": "6401bbdf-27c1-4a21-9aeb-25ff5ac09769",
+  "label": "Test by Explicit omission controls: an inconsistent initial valu for At each observed cutoff, (1)",
+  "subject_kind": "result",
+  "subject_id": "14f494b7-e975-5e3a-8545-899bcaa2094a",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "83bad780-5acf-5235-a30b-8572b3d2cb2a",
+  "note": "Tests nonvacuity and omitted restrictions using inconsistent records, grounded false forecasts and a mismatching deterministic toggle law."
+}

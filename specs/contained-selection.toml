@@ -44,3 +44,13 @@ predicate = "tests"
 object_kind = "statement"
 object_id = "608a262d-08fe-4dfd-9413-67e2ecf35b84"
 note = "Tests whether local no-brute-existence coverage accounts for the contingent act that explains a target, keeping ontology and the existence-fact map fixed while removing the act's reason."
+
+[[relation]]
+id = "Test by Necessary restriction determination boundary by truth-vector invariance"
+label = "Test by Necessary restriction determination boundary by truth-vector invariance"
+subject_kind = "result"
+subject_id = "9a2c5f49-7c1d-4fbe-b4fb-8dbee1642f61"
+predicate = "tests"
+object_kind = "statement"
+object_id = "8cb72b43-74b2-5dad-ad9a-73eadae47602"
+note = "Tests evidence-only selection in the same truth-vector reading, specialized to a necessary basis and an accessible absence witness for a contingent fact."

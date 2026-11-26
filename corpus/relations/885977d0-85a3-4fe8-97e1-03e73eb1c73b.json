@@ -1,0 +1,10 @@
+{
+  "id": "885977d0-85a3-4fe8-97e1-03e73eb1c73b",
+  "label": "Test by Fixed unrestricted rival equals union of deterministic schedules",
+  "subject_kind": "result",
+  "subject_id": "be57c3aa-3b12-47b6-aa58-c7e4750d1995",
+  "predicate": "tests",
+  "object_kind": "argument",
+  "object_id": "50ff5c59-61b4-48d9-bda7-259ee444dd45",
+  "note": "Tests suffix-complete nonvacuity with one fixed unrestricted profile that can realize every individual deterministic copy-or-toggle schedule."
+}

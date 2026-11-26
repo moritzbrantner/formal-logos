@@ -1,0 +1,10 @@
+{
+  "id": "c815eb9b-eb75-47c3-93a3-07e4b69c0090",
+  "label": "Test by Explicit finite S5 models distinguish singleton root col for The supplied predicate ha (1)",
+  "subject_kind": "result",
+  "subject_id": "1bb0ac1f-5e23-5ceb-9699-3ca1adf18a70",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "af2986b0-ca65-5b9b-83ce-6ae024e6a4d2",
+  "note": "Tests omission of independent contingency using a universal singleton with sound conception and conceived collapse."
+}

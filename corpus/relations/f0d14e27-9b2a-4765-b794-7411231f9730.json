@@ -1,0 +1,10 @@
+{
+  "id": "f0d14e27-9b2a-4765-b794-7411231f9730",
+  "label": "Test by Open-future positive fallback and norm-omission controls",
+  "subject_kind": "result",
+  "subject_id": "cbe78462-7e2a-4271-aed1-a753020d5de3",
+  "predicate": "tests",
+  "object_kind": "argument",
+  "object_id": "394faa75-70cd-4883-9847-3227fd84d53f",
+  "note": "Tests the limits of the strict guarantee conclusion with a populated open-future cell and an endorsed weaker safe policy."
+}

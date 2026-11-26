@@ -1,0 +1,10 @@
+{
+  "id": "4fae1696-baaf-4964-8a3f-b8c8ac206772",
+  "label": "Test by There is an interpretation in which a thought occurs, th for Some subject bears some o (1)",
+  "subject_kind": "result",
+  "subject_id": "3fdeab83-1fcd-572a-8bac-af80bb0016cf",
+  "predicate": "tests",
+  "object_kind": "argument",
+  "object_id": "3b3664d6-613c-57eb-b149-5b74389f8e48",
+  "note": "Tests the limits of the existential bearer inference using one occurring episode with two distinct bearers while retaining both premises."
+}

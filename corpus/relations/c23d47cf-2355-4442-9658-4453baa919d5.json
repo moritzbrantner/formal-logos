@@ -1,0 +1,10 @@
+{
+  "id": "c23d47cf-2355-4442-9658-4453baa919d5",
+  "label": "Test by Explicit finite S5 models distinguish singleton root collapse from global identity…",
+  "subject_kind": "result",
+  "subject_id": "1bb0ac1f-5e23-5ceb-9699-3ca1adf18a70",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "1381a9eb-5f92-5ca9-ab78-825eaa57fbb7",
+  "note": "Tests the scope of language-relative propagation with a non-negation-closed separating inventory and with a duplicate-label language."
+}

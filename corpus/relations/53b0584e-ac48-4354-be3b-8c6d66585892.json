@@ -1,0 +1,10 @@
+{
+  "id": "53b0584e-ac48-4354-be3b-8c6d66585892",
+  "label": "Test by Rigid initial profile, bearer omission and transfer triad checked",
+  "subject_kind": "result",
+  "subject_id": "f2fb11be-5bde-4c6f-a894-c60a1dcf3052",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "67cd1280-5152-4899-8acd-b0ae25d3d64a",
+  "note": "Tests the stronger restricted-transfer bundle under rigid initial preservation and a stipulated E-accessible bearer omission, which excludes the relevant M edge."
+}

@@ -1,0 +1,10 @@
+{
+  "id": "b2e58350-b266-4360-ad3d-ad31aa0c6781",
+  "label": "Test by Apply the existing joint borrowing trap to the adoption-product pair",
+  "subject_kind": "result",
+  "subject_id": "08c4864c-8d48-4270-a21e-da87f43f80a4",
+  "predicate": "tests",
+  "object_kind": "argument",
+  "object_id": "272c8062-dfd3-4389-ad1d-8729019c95c5",
+  "note": "Checks why the original circular adoption-product exercise lacks inductive supply despite another source contributing in each conjunctive record."
+}

@@ -62,3 +62,33 @@ conclusion = "Stable future allows positive forecasts and policies under the sam
 axioms = ["propext", "Classical.choice", "Quot.sound"]
 rule = "Induction from stable initial state and deterministic copy transitions"
 meaning = "Strong guarantees are not contradictory norms by themselves; their conflict with positive projection depends on the two admitted alternative futures. The smaller stable cell yields positive examples without transferring its lawhood or epistemic access to reality."
+
+[[relation]]
+id = "Test by Self-endorsed guarantee norm defeats confident scientific and practical claims"
+label = "Test by Self-endorsed guarantee norm defeats confident scientific and practical claims"
+subject_kind = "result"
+subject_id = "01188cb4-dee1-40be-8e7b-aef481381319"
+predicate = "tests"
+object_kind = "argument"
+object_id = "432b6e05-1082-4ded-a595-06b8bdf163b6"
+note = "Tests the consequence of the same two-successor barrier for endorsement when the stance explicitly adopts a universal guarantee norm."
+
+[[relation]]
+id = "Test by Open-future positive fallback and norm-omission controls"
+label = "Test by Open-future positive fallback and norm-omission controls"
+subject_kind = "result"
+subject_id = "cbe78462-7e2a-4271-aed1-a753020d5de3"
+predicate = "tests"
+object_kind = "argument"
+object_id = "394faa75-70cd-4883-9847-3227fd84d53f"
+note = "Tests the limits of the strict guarantee conclusion with a populated open-future cell and an endorsed weaker safe policy."
+
+[[relation]]
+id = "Test by Stable-law positive entitlement and excluded-future control"
+label = "Test by Stable-law positive entitlement and excluded-future control"
+subject_kind = "result"
+subject_id = "506707fb-adc0-4671-8726-c5cd97d2f466"
+predicate = "tests"
+object_kind = "argument"
+object_id = "394faa75-70cd-4883-9847-3227fd84d53f"
+note = "Tests omission of the second future in the stable copy-law cell with the same strong norm and positive entitlement."
