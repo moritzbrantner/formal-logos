@@ -1,0 +1,10 @@
+{
+  "id": "40b00b53-4dce-495e-bbbd-1105d8fca3c5",
+  "label": "Test by No infinite no-first-deadline sequence of binary Reaper for For the supplied Nat-index (1)",
+  "subject_kind": "result",
+  "subject_id": "0daf1415-2144-5ece-8605-2e7dec18218c",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "bd593079-2891-575c-bad3-cac32139ffdc",
+  "note": "Tests joint satisfiability of the firing law along the stipulated infinite no-first-deadline schedule in Lean's action-order interpretation."
+}

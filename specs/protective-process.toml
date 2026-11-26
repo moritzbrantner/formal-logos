@@ -77,3 +77,13 @@ predicate = "tests"
 object_kind = "statement"
 object_id = "069f5d05-0427-46c3-8ead-d7df4a6b859a"
 note = "Tests the selected premise in the following setting. One fixed Model Bool Bool Stage; the identical bearer true and shared initial ready state; only sampled times 0,1,2. finite model with flame 0=ready, flame 1=burning, flame 2=lost; guarded 0=ready and guarded n=safe for n>0. A terminal flame edge is populated on the baseline, while guard safety has all explicit inputs. Controls first conjunct: Interrupted finite false flame guarded 0; Admissible, LossCovered, NoBypass and ProtectedInterval for finite/blockFlame/guarded/2/true."
+
+[[relation]]
+id = "Test by Bounded protective process safety by history induction"
+label = "Test by Bounded protective process safety by history induction"
+subject_kind = "result"
+subject_id = "a6e02700-e4ee-4f2a-804a-6d146e681b68"
+predicate = "tests"
+object_kind = "argument"
+object_id = "c1d980d8-38b7-4cfa-9ee8-07a3b62289a9"
+note = "Checks the safety conclusion exercised by the guarded trajectory by finite induction under initial existence, admissibility, loss coverage and no bypass."
