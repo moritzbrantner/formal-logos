@@ -25,6 +25,6 @@
   "workers": [
     {"role": "author", "provider": "codex", "model": "gpt-6.2-sol", "effort": "high", "date": "2026-11-26", "pr": "PR-2025"},
     {"role": "repair", "provider": "codex", "model": "gpt-6.2-sol", "effort": "high", "date": "2026-11-26", "pr": "PR-2025"},
-    {"role":"author","provider":"codex","model":"gpt-6.2-astra","effort":"high","date":"2026-11-26"}
+    {"role": "author", "provider": "codex", "model": "gpt-6.2-astra", "effort": "high", "date": "2026-11-26", "pr": "PR-2040"}
   ]
 }
