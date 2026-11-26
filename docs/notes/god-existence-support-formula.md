@@ -590,8 +590,8 @@ three of four existing flagged consumers, with zero folded
 single-premise-application hits. The corpus's assembly and instantiation
 classifications apply a different test.
 
-The finite-model helper gave 51 Lean-checked omission certificates across
-58 consuming results. The [omission attempt](../../corpus/attempts/11adaaa5-7e9a-4855-8fcd-275421fa2067.json)
+Of 58 consuming results, 33 yielded 51 Lean-checked omission certificates;
+extraction stopped before model search on the other 25, covering 35 requests. The [omission attempt](../../corpus/attempts/11adaaa5-7e9a-4855-8fcd-275421fa2067.json)
 links the corresponding existing controls and the
 [19 retained certificates](../../TruthCore/Case/Catholicism/DiscoverySweepControls.lean).
 For example, the omitted dependence requirement in
