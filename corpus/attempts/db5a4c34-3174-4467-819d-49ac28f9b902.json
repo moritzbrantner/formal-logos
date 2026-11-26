@@ -1,0 +1,25 @@
+{
+  "id": "db5a4c34-3174-4467-819d-49ac28f9b902",
+  "label": "Coextensive existence facts can retain directed PLG ground and essence membership",
+  "statement_ids": [
+    "42756c07-03cd-4b54-8ed6-ed6c1a5132aa"
+  ],
+  "date": "2026-11-26",
+  "kind": "countermodel",
+  "outcome": "succeeded",
+  "summary": "Issue #2058 applies the earlier directedNature profile to bearer-indexed existence facts on its two-world S5 frame. The same coextensive pair has a strict PLG edge and its weak consequence in one consistent presentation; a weak return is underivable. A weak-only presentation omits the strict edge. The stipulated essence membership discriminates the same pair, and the earlier alternate profile omits this membership on the same ontic model. In the selected contexts no exact classifier of strict ground, weak ground or essence membership can depend only on the varying fact’s world predicate. Identifying the two labels in any consistent presentation forbids the selected strict edge. See TruthCore.Models.HyperintensionalExistence and the issue #2058 section of docs/notes/distinct-dependence-strict-ground-route.md.",
+  "evidence": [
+    "PR-2025",
+    "PR-2040"
+  ],
+  "blocker": "The witnessed map concerns stipulated nature membership. An application to the efficient-causal D at 42756c07 needs independently warranted fact labels and directed PLG paths for the same supplier and effect, time and respect. At an essence–esse identity, a further bridge would have to establish invariance under the particular act-fact substitution inside the selected nature judgment.",
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26"
+    }
+  ]
+}

@@ -740,3 +740,97 @@ respect are fixed, what explanatory contribution does the supplier's
 assumption options. Neither the modal control nor the cyclic presentation
 undermines a prerequisite of inquiry. Their conflicts are with identifiable
 route commitments under the specified readings.
+
+## Coextensive existence facts and the strict-ground map (#2058)
+
+The earlier modal control rules out a strict PLG map of **mutual modal
+requirement** in a consistent presentation. The
+[existence-content model](../../TruthCore/Models/HyperintensionalExistence.lean)
+keeps that same ontic frame and instead maps the stipulated directional
+nature relation. The inputs are the nature assignment from `directedNature`
+and the `strictForward` PLG assumptions from the Boolean control. The map
+orients the only membership edge from the fact in the nature to the fact
+about its bearer. Neither formal input is inferred from modal co-presence.
+
+### What the example discriminates
+
+- The two contents are existence facts indexed by distinct bearers. Both
+  are true at both worlds, so the boxed biconditional holds from every
+  origin. The frame meets the existing S5 conditions and has a contingent
+  world predicate. Rigid names pick out the bearers at both worlds and the
+  names never co-refer. Coextension thus does not require a syntactic
+  contrast between names for the same bearer.
+- The consistent PLG presentation derives a strict partial ground from the
+  supplier fact to the recipient fact and hence also derives the forward
+  weak partial ground. A weak return would turn that strict edge into strict
+  self-grounding by mixed transitivity. The weak-only presentation preserves
+  the forward weak edge and omits strict derivability. The orientation is a
+  hypothesis about the chosen formal presentation. Strict transitivity and
+  finite well-foundedness of consistent PLG apply here by the existing
+  [acyclicity result](../../TruthCore/Results/Modern/Fine/StrictGroundAcyclic/Solution.lean).
+- `InEssence` means that an existence fact belongs to a specified bearer's
+  nature. It holds of the supplier fact at the recipient bearer and fails
+  there for the recipient's own existence fact. The existing
+  `natureWithoutReason` assignment omits the supplier membership on the
+  identical ontic profile. Both are stipulated assignments. No warranted
+  instance of actual constitutive essence or dependence for being is supplied
+  by the Boolean examples.
+
+### When substitution is licensed
+
+Equality of contents gives ordinary substitution in any typed judgment.
+Agreement at every accessible world gives the same box and diamond verdicts
+at that origin. The [interpretation interface](../../TruthCore/Logic/ContentInterpretation.lean)
+reuses the equal-data criterion underlying `FinerContentCriterion`: a
+judgment in a fixed content slot factors through world predicates exactly
+when it is invariant on equal-extension fibers. Each selected PLG
+or essence judgment in `extensionCollapse` distinguishes these two inputs,
+which have equal extensions. Such a judgment therefore cannot factor
+through that projection. For the strict antecedent, substitution would
+produce strict self-grounding. For the weak consequent, substitution would
+transfer weak identity at the recipient label into the excluded weak
+return. For essence it would transfer membership to the recipient fact,
+which the selected profile omits.
+
+An extensional account can keep the world predicates as its entire content
+domain and explain the matching modal verdicts directly. It then owes
+either an independent account of the directional judgments or a reason to
+deny that those judgments are genuine. If it also keeps the strict PLG
+edge on those very extensions, the equal endpoints produce a strict
+self-edge, violating consistency. This is the exact cost of combining
+extensional identity with that PLG claim. The facts agree on world truth
+and are distinguished by the displayed judgments, so they are no
+counterexample to indiscernibility under every predicate. The claim that
+world truth exhausts admissible criteria of content identity is a further
+commitment. Neither the fact constructor nor the resulting PLG model
+establishes a real difference of essence. No substantive objection to the
+formal compatibility has been identified within the selected S5 and PLG
+semantics.
+
+### Connection and next test
+
+The target is [the distinct dependence map](../../corpus/statements/42756c07-03cd-4b54-8ed6-ed6c1a5132aa.json)
+(`42756c07`), used in the nonmutuality and Second Way routes above. The
+strongest result for this target is that modal coextension leaves room
+for an oriented PLG presentation of a separately specified nature
+assignment. The extensional interpretation retains the modal constraints
+without supplying this orientation. Neither result changes the warrant
+for exporting efficient-causal dependence. The missing bridge is an
+independent warrant that one specific supplier's **existence fact**, at the
+same time and respect, grounds the selected effect's existence fact.
+Fix those labels and test the proposed strict path and any weak return
+against independent evidence of the actual supply. There is no new graph
+edge or premise change.
+
+For the [esse–essence identity question](existence-in-essence-identity.md),
+the result motivates checking substitution **inside** the nature judgment.
+It does not test the particular act–fact link (`3a2af70f`) or the
+exercise-in-the-nature condition (`823d4312`). A direct test needs a
+fixed bearer with those act and fact representations, a common
+content interpretation, and an independent reason that the selected
+nature judgment is invariant under that particular substitution.
+The toy nature membership also does not supply an adequate intrinsic
+explanation or the individuation premise of the simplicity/uniqueness
+route.
+
+[Attempt record](../../corpus/attempts/db5a4c34-3174-4467-819d-49ac28f9b902.json)
