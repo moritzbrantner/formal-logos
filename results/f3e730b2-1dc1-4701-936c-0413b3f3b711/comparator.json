@@ -1,0 +1,14 @@
+{
+  "challenge_module": "TruthCore.Results.Aquinas.DeEnte.ActualIdentityExerciseLifting.Challenge",
+  "solution_module": "TruthCore.Results.Aquinas.DeEnte.ActualIdentityExerciseLifting.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Aquinas.DeEnte.ActualIdentityExerciseLifting.actualIdentityAncestryAcyclicOfExerciseLifting",
+    "TruthCore.Results.Aquinas.DeEnte.ActualIdentityExerciseLifting.liftActualEssePath"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "enable_nanoda": true
+}

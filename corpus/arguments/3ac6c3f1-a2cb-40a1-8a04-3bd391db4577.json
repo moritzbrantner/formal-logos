@@ -1,0 +1,28 @@
+{
+  "id": "3ac6c3f1-a2cb-40a1-8a04-3bd391db4577",
+  "label": "Acyclic exercises and finite identity fibres exclude a return by backward lifting",
+  "premise_statement_ids": [
+    "48f3c367-eaff-4a66-aa97-4bc69ba581ac",
+    "4bd2d25b-27c6-4cfe-9b5f-bfa11511c176",
+    "9c717c08-4046-42d8-ae8b-763ef6b1b394"
+  ],
+  "conclusion_statement_id": "41c858ee-07ee-41db-9693-b5fef6154efe",
+  "inference_ids": [
+    "643a67df-3f31-4970-b721-163d38c1c3e9"
+  ],
+  "meaning": "Fix one q.3 a.4 profile, eligible exercise type, bearer map and exercise relation. Backward lifting composes over a nonempty finite actual esse-supplier path. In an inhabited finite identity fibre, acyclic exercise reachability is a strict transitive relation and has a minimal element. A bearer return lifts backwards from that element to a strict predecessor in the same fibre. Intermediate distinct-esse bearers require no finite fibre. The theorem uses no clock, global exercise well-foundedness, or premise that the bearer relation is exactly the existence-based projection.",
+  "term_senses": {
+    "EVENT_CAUSATION_ENTITY_FEEDBACK_SIMULTANEITY": "9e4c5f3d-a257-4f7f-84c4-48eec45aba0d"
+  },
+  "definition_ids": [
+    "8163859b-95b3-4dd2-8a69-541bd332f32f",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "183b48d2-1753-583d-aef9-4199cff86231",
+    "4ffdfea6-0a5a-513c-a710-050648c260bf",
+    "b14674c2-b20b-42ea-b5dd-9f9d6ebc304e",
+    "cc5eed1d-8e75-473a-9714-f2c04bd75d0f"
+  ],
+  "disambiguation_ids": [
+    "b4da30a9-86f7-57cc-a0c9-17b5dd216ccd"
+  ]
+}

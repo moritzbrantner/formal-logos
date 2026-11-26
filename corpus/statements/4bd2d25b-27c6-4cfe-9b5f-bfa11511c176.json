@@ -1,0 +1,9 @@
+{
+  "id": "4bd2d25b-27c6-4cfe-9b5f-bfa11511c176",
+  "label": "Every actual esse-supplier edge lifts backwards from every eligible recipient exercise",
+  "paraphrase": "Analyst formulation, attribution deferred. On one q.3 a.4 profile and eligible exercise interpretation, for every ActualEsseCause edge c → x and every eligible exercise f borne by x, some eligible exercise e borne by c satisfies C e f.",
+  "lean_declaration": "TruthCore.Latin.Aquinas.DeEnte.ActualIdentityExerciseLifting.BackwardActualEsseExerciseLifting",
+  "definition_ids": [
+    "cc5eed1d-8e75-473a-9714-f2c04bd75d0f"
+  ]
+}
