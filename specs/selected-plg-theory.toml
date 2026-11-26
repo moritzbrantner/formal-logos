@@ -3,6 +3,11 @@ vocab = "TruthCore.Causality.SelectedPlgTheory"
 results = "TruthCore.Results.Causality.SelectedPlgTheory"
 
 [[statement]]
+id = "The selected PLG atom type is populated"
+lean = "PopulatedAtomType"
+paraphrase = "The supplied type of PLG atoms has at least one inhabitant. It then admits a strict self-sequent, which can witness consistency if that sequent is underivable."
+
+[[statement]]
 id = "The selected PLG assumptions have no strict step with a weak return path"
 lean = "NoStrictReturn"
 definitions = ["DEF-FINE-PLG-DERIVABILITY"]
@@ -37,11 +42,11 @@ paraphrase = "With two Boolean labels and the sole dependence edge of true on fa
 [[argument]]
 id = "Certify consistency of the selected PLG theory from its absence of strict returns"
 theorem = "consistentOfNoStrictReturn"
-premises = ["The selected PLG assumptions have no strict step with a weak return path"]
+premises = ["The selected PLG atom type is populated", "The selected PLG assumptions have no strict step with a weak return path"]
 conclusion = "fea5942a-b50c-4299-a5fe-80a5c2b8c0a9"
 axioms = ["propext", "Classical.choice", "Quot.sound"]
 rule = "Rank atoms by all their weakly reachable predecessors and apply PLG rank soundness"
-meaning = "On a populated atom type, an initial weak step includes its source's predecessor set in its target's set. For strict steps that inclusion is proper by the premise. Each initial sequent satisfies the rank reading and the existing soundness theorem covers every encoded PLG rule. A strict self-sequent is underivable in the very same set."
+meaning = "An initial weak step includes its source's predecessor set in its target's set. For strict steps that inclusion is proper by the no-return premise. Each initial sequent satisfies the rank reading and the existing soundness theorem covers every encoded PLG rule. The population premise supplies an atom whose strict self-sequent is underivable in the very same set."
 
 [[argument]]
 id = "Derive the distinct dependence map from strict-step paths in the selected assumptions"

@@ -1,0 +1,6 @@
+{
+  "id": "d1c47547-492f-4c93-a7af-6eb522602e08",
+  "label": "The selected PLG atom type is populated",
+  "paraphrase": "The supplied type of PLG atoms has at least one inhabitant. It then admits a strict self-sequent, which can witness consistency if that sequent is underivable.",
+  "lean_declaration": "TruthCore.Causality.SelectedPlgTheory.PopulatedAtomType"
+}

@@ -7,5 +7,5 @@
   "theorem": "TruthCore.Results.Causality.SelectedPlgTheory.consistentOfNoStrictReturn",
   "comparator_config": "results/ac062be2-1f2b-4481-8f91-852dcdd33bb7/comparator.json",
   "status": "solution-present",
-  "description": "On a populated atom type, an initial weak step includes its source's predecessor set in its target's set. For strict steps that inclusion is proper by the premise. Each initial sequent satisfies the rank reading and the existing soundness theorem covers every encoded PLG rule. A strict self-sequent is underivable in the very same set."
+  "description": "An initial weak step includes its source's predecessor set in its target's set. For strict steps that inclusion is proper by the no-return premise. Each initial sequent satisfies the rank reading and the existing soundness theorem covers every encoded PLG rule. The population premise supplies an atom whose strict self-sequent is underivable in the very same set."
 }

@@ -11,8 +11,8 @@ open TruthCore.Results.Modern.Fine.InfiniteDescent
 open TruthCore.Results.Modern.Fine.StrictGroundAcyclic
 open Relation Sequent
 
-theorem consistentOfNoStrictReturn {Atom : Type} (a : Atom) (S : Set (Sequent Atom))
-    (noReturn : NoStrictReturn S) : Consistent S := by
+theorem consistentOfNoStrictReturn {Atom : Type} (S : Set (Sequent Atom))
+    (populated : PopulatedAtomType Atom) (noReturn : NoStrictReturn S) : Consistent S := by
   sorry
 
 theorem consistencyCriterion : ConsistencyCriterion := by

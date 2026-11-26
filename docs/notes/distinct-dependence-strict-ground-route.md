@@ -68,8 +68,10 @@ Disambiguation `23dd6f32-b456-4963-adb3-7befbf0dc4fb`
   is "the light in the air depends on the shining sun".
 - "Ground" takes sense 2 only: Fine's formal strict partial ground on
   uninterpreted atoms.
-- The argument passes from sense 1 to sense 2 only through the OPEN map
-  premise, which is listed as a `sense_bridges` premise.
+- The direct-assumption route crosses from sense 1 to sense 2 at the OPEN map
+  premise `42756c07`. The strict-path route assumes the OPEN alignment
+  `b6784d40` as its crossing premise and derives the map by PLG rules. Both leave
+  the interpretation of the labels as existence facts open.
 - The `controls` argument (missing map) shows that the two senses do not mix
   without that premise.
 
@@ -554,7 +556,9 @@ contributes no arrow. The two tests are:
    reverse subsumption requires strict paths for each antecedent, and
    consistency rules out using explosion. [Strict derivability criterion](../../corpus/results/006f49e8-4c68-424d-9403-9f025185b555.json)
 
-The two conditions give support options for `fea5942a` and `42756c07` in
+The consistency argument records population as a separate premise. An empty atom
+type satisfies the no-return condition vacuously but has no sequent to witness
+consistency. On the stated domain, the two tests give support options for `fea5942a` and `42756c07` in
 the nonmutuality and Second Way consumers. On the same fixed `S`, the map
 orients every distinct step, consistency excludes strict self-grounding,
 and PLG composes successive strict grounds transitively. This need not make
@@ -635,6 +639,6 @@ assessment of the stronger reading.
 | `adb951c1` | Per se alignment needs distinct endpoints and evidence that the effect's *being* depends on this supplier. The hand can move the stick through a per se instrumental series while the stick continues to exist when it is released. A reading restricted to per se causes of esse avoids that example, with alignment still to be supplied on that narrower relation. |
 | `f10d5632` | Selecting the history relation to be the per se relation makes inclusion reflexive. Evidence of finite distinct ancestry and absence of loops must then concern that same selected history. An independently selected history needs a same-carrier inclusion check. |
 | `2e248016` | The direction from world-local dependence to actual-concrete grounding requires a reason to export `D` to the profile's selected relation. The unrestricted statement also maps `D(x,x)`; with actual grounding irreflexive it excludes reflexive `D` on a populated actual-concrete domain. The existing distinct sibling `a8298fbd` avoids that diagonal commitment. |
-| `0f5b53ef` | The converse export needs its own warrant: a ground of a quality or a constitutive contribution can explain the local fact without supplying the entire bearer's being. The selected grounds must be shown to concern the bearer's existence and support the relevant counterfactual. |
+| `0f5b53ef` | A quality-level explanation challenges the converse export only if the profile admits bearer-to-bearer grounding edges on that basis. For a profile restricted to existential grounds, the question is whether those grounds entail the selected dependence-for-being counterfactual. |
 | `7a63a3fe` | The priority bridge targets the profile's world-local ground and `PRIOR_1`. A strict order on PLG labels yields no such bridge. The required calibration is actual grounding to priority in act in the relevant respect on the same bearers. |
 | `2047d14b` | Self-grounding is excluded on a strict explanatory reading. In the world-local profile, any transfer from PLG would still need an explicit ground-to-PLG bridge **on the diagonal**, which the distinct map never supplies. The existing reflexive-requirement controls locate the competing reading. |

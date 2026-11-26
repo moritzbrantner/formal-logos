@@ -39,8 +39,8 @@ private theorem strictPathDerivable {Atom : Type} {S : Set (Sequent Atom)} {a b 
     (Derivable.transWeakStrict (weakPathDerivable before) (strictEdgeDerivable step))
     (weakPathDerivable after)
 
-theorem consistentOfNoStrictReturn {Atom : Type} (a : Atom) (S : Set (Sequent Atom))
-    (noReturn : NoStrictReturn S) : Consistent S := by
+theorem consistentOfNoStrictReturn {Atom : Type} (S : Set (Sequent Atom))
+    (populated : PopulatedAtomType Atom) (noReturn : NoStrictReturn S) : Consistent S := by
   let rank (b : Atom) : Set Atom := {a | ReflTransGen (WeakEdge S) a b}
   have weakRank {a b} (edge : WeakEdge S a b) : rank a ⊆ rank b :=
     fun _ path => path.tail edge
@@ -54,16 +54,16 @@ theorem consistentOfNoStrictReturn {Atom : Type} (a : Atom) (S : Set (Sequent At
     | weakPartial a b => exact weakRank (Or.inl member)
     | strictFull premises b => exact fun a h => strictRank (Or.inr ⟨premises, member, h⟩)
     | strictPartial a b => exact strictRank (Or.inl member)
+  obtain ⟨a⟩ := populated
   exact ⟨strictPartial a a, fun h => lt_irrefl _ (holdsAtRank_of_derivable rank allAssumptions h)⟩
 
 theorem consistencyCriterion : ConsistencyCriterion := by
-  intro Atom _ S
+  intro Atom inhabited S
   constructor
   · intro consistent a b edge back
     exact strictIrrefl consistent a
       (Derivable.transStrictWeak (strictEdgeDerivable edge) (weakPathDerivable back))
-  · obtain ⟨a⟩ := ‹Nonempty Atom›
-    exact consistentOfNoStrictReturn a S
+  · exact consistentOfNoStrictReturn S inhabited
 
 private def PathHolds {Atom : Type} (S : Set (Sequent Atom)) : Sequent Atom → Prop
   | weakFull premises b => ∀ a ∈ premises, ReflTransGen (WeakEdge S) a b
@@ -123,7 +123,8 @@ theorem presentationControls : PresentationControls := by
   have noStrict : ∀ a b, ¬ StrictEdge weakOnly a b := by
     intro a b
     simp [StrictEdge, weakOnly]
-  have weakConsistent := consistentOfNoStrictReturn false weakOnly (fun a b edge => (noStrict a b edge).elim)
+  have weakConsistent :=
+    consistentOfNoStrictReturn weakOnly ⟨false⟩ (fun a b edge => (noStrict a b edge).elim)
   have forwardEdge : StrictEdge strictForward false true :=
     Or.inr ⟨{false}, rfl, rfl⟩
   have forwardNoReturn : NoStrictReturn strictForward := by
@@ -146,7 +147,7 @@ theorem presentationControls : PresentationControls := by
     Or.inr ⟨{false}, Or.inr rfl, rfl⟩
   have returnEdge : WeakEdge withWeakReturn true false :=
     Or.inr (Or.inl ⟨{true}, Or.inl rfl, rfl⟩)
-  refine ⟨weakConsistent, ?_, consistentOfNoStrictReturn false strictForward forwardNoReturn,
+  refine ⟨weakConsistent, ?_, consistentOfNoStrictReturn strictForward ⟨false⟩ forwardNoReturn,
     ?_, ?_, ?_⟩
   · intro mapped
     obtain ⟨a, b, _, step, _⟩ :=

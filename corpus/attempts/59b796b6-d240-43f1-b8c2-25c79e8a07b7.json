@@ -6,11 +6,12 @@
     "fea5942a-b50c-4299-a5fe-80a5c2b8c0a9",
     "42756c07-03cd-4b54-8ed6-ed6c1a5132aa",
     "2bdf810f-f7ca-4732-b661-378f54fbd6d4",
-    "b6784d40-65cb-444d-9027-b93a074592ac"
+    "b6784d40-65cb-444d-9027-b93a074592ac",
+    "d1c47547-492f-4c93-a7af-6eb522602e08"
   ],
   "kind": "derivation",
   "outcome": "succeeded",
-  "summary": "On a populated atom type an exact supplied assumption set is consistent iff no initial strict step has a weak return path. The derived predecessor-set rank validates every member and witnesses an underivable strict self-sequent. In a consistent set exact strict partial derivability is a path with a strict step. These results give conditional arguments for both target premises on the same S. On two fixed labels, weakening a strict full assumption removes the map, while adding a weak reverse assumption keeps the map and destroys consistency. The existing infinite witness still permits descent. See docs/notes/distinct-dependence-strict-ground-route.md#testing-a-supplied-plg-theory.",
+  "summary": "On a populated atom type an exact supplied assumption set is consistent iff no initial strict step has a weak return path. The derived predecessor-set rank validates every member and witnesses an underivable strict self-sequent. In a consistent set exact strict partial derivability is a path with a strict step. These results give conditional arguments for both target premises on the same S. Semantic review at 0be519f7 accepted the characterizations and required that the population condition be registered as an explicit premise, since the empty atom type has no sequent to witness consistency. On two fixed labels, weakening a strict full assumption removes the map, while adding a weak reverse assumption keeps the map and destroys consistency. The existing infinite witness still permits descent. See docs/notes/distinct-dependence-strict-ground-route.md#testing-a-supplied-plg-theory.",
   "blocker": "The root consumers leave S and the labelling arbitrary. There is no independent existence-fact presentation to test there. The next application needs one effect and labelled facts, an independently justified set including any weak assumptions, and warrant for interpreting each selected path as same-respect existential supply.",
   "evidence": [
     "ac062be2-1f2b-4481-8f91-852dcdd33bb7",
@@ -22,6 +23,7 @@
     "PR-2025"
   ],
   "workers": [
-    {"role": "author", "provider": "codex", "model": "gpt-6.2-sol", "effort": "high", "date": "2026-11-26", "pr": "PR-2025"}
+    {"role": "author", "provider": "codex", "model": "gpt-6.2-sol", "effort": "high", "date": "2026-11-26", "pr": "PR-2025"},
+    {"role": "repair", "provider": "codex", "model": "gpt-6.2-sol", "effort": "high", "date": "2026-11-26", "pr": "PR-2025"}
   ]
 }

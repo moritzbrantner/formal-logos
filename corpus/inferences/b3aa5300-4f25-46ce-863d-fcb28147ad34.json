@@ -2,11 +2,12 @@
   "id": "b3aa5300-4f25-46ce-863d-fcb28147ad34",
   "label": "Certify consistency of the selected PLG theory from its absence of strict returns (inference)",
   "input_statement_ids": [
+    "d1c47547-492f-4c93-a7af-6eb522602e08",
     "2bdf810f-f7ca-4732-b661-378f54fbd6d4"
   ],
   "output_statement_id": "fea5942a-b50c-4299-a5fe-80a5c2b8c0a9",
   "rule": "Rank atoms by all their weakly reachable predecessors and apply PLG rank soundness",
-  "meaning": "On a populated atom type, an initial weak step includes its source's predecessor set in its target's set. For strict steps that inclusion is proper by the premise. Each initial sequent satisfies the rank reading and the existing soundness theorem covers every encoded PLG rule. A strict self-sequent is underivable in the very same set.",
+  "meaning": "An initial weak step includes its source's predecessor set in its target's set. For strict steps that inclusion is proper by the no-return premise. Each initial sequent satisfies the rank reading and the existing soundness theorem covers every encoded PLG rule. The population premise supplies an atom whose strict self-sequent is underivable in the very same set.",
   "assumption_statement_ids": [],
   "discharged_statement_ids": []
 }

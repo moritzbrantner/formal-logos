@@ -10,6 +10,9 @@ open TruthCore.Modern.Fine.PureLogicOfGround
 open DependenceStrictGroundMap
 open Relation
 
+/-- The selected atom type has an inhabitant, so it admits a sequent. -/
+def PopulatedAtomType (Atom : Type) : Prop := Nonempty Atom
+
 /-- A particular antecedent of an initial strict sequent, full or partial. -/
 def StrictEdge {Atom : Type} (S : Set (Sequent Atom)) (a b : Atom) : Prop :=
   Sequent.strictPartial a b ∈ S ∨ ∃ premises, Sequent.strictFull premises b ∈ S ∧ a ∈ premises
