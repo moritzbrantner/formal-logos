@@ -23,9 +23,12 @@ definitions = ["DEF-COMPOSER-TEMPORAL-PROFILE"]
 disambiguations = ["DISAMB-UNITING-CAUSE"]
 
 [[statement]]
-id = "Finite controls for the scope of motion, origin and temporal self-cause"
+id = "05ef524c-8e43-4155-adc7-5bb5ada27b8b"
 lean = "Control.Boundaries"
-paraphrase = "Three fixed structural controls. An integrated-style component displacement with both cause attributions has an actual distinct mover and a whole-level diagonal. A distinct origin and a self-directed perfection coexist with distinct incoming coverage and a first efficient cause with the per se and regress premises, while both broad efficient-self bridges fail on the stipulated efficient relation. An actual temporal uniting tuple has past distinct activity, and a past diagonal outside that tuple falsifies the all-time ban while the restricted ban and selected-time exclusion hold. These are comparisons of supplied interpretations."
+label = "Finite controls for scoped causal diagonals"
+definitions = ["DEF-MOTION-AS-REDUCTION", "DEF-EFFICIENT-CAUSING", "DEF-PER-SE-EFFICIENT-CAUSE-LINK"]
+disambiguations = ["DISAMB-CAUSE", "DISAMB-UNITING-CAUSE"]
+paraphrase = "Three fixed structural controls. The motion interpretation satisfies InternalMotion for the whole in displacement. PatientLift supplies an actual distinct mover and AggregateLift supplies a whole-level diagonal. On the stipulated Boolean interpretation the binary origin shares a bearer pair with the distinct efficient edge. The efficient edges differ in respect, and the diagonal efficient edge shares its respect with the self-directed perfection. These coexist with distinct incoming coverage and a first efficient cause with the per se and regress premises, while both broad efficient-self bridges fail on the stipulated efficient relation. An actual temporal uniting tuple has past distinct activity, and a past diagonal outside that tuple falsifies the all-time ban while the restricted ban and selected-time exclusion hold. These are comparisons of supplied interpretations."
 
 [[argument]]
 id = "A selected actual mover supplies another MOTION_1 mover"
@@ -80,6 +83,7 @@ note = "The weak bridge can hold via a distinct incoming edge alone. The acciden
 [[argument]]
 id = "Distinct efficient incoming coverage from no CAUSE_4 self-origin"
 theorem = "distinctOfNoOrigin"
+strong_version_needed = {"STMT-EXCLUDED-MIDDLE" = "The frozen argument uses the existing excluded-middle interface to decide c = x for a witnessed edge E c x r. It only needs that local equality disjunction; the existing classical-attributes restriction does not supply it for an arbitrary cause and effect in this frame."}
 premises = ["Each efficient self-edge has a distinct incoming cause or a CAUSE_4 self-origin", "STMT-NOTHING-ORIGINATES-ITSELF", "STMT-EXCLUDED-MIDDLE"]
 conclusion = "Every efficient effect has a distinct EFFICIENT_CAUSING_2 cause"
 rule = "Split identity of the selected witness and eliminate the self-origin disjunct"
@@ -88,6 +92,7 @@ meaning = "A distinct incoming edge already witnesses the consequent. If the sel
 [[argument]]
 id = "Second Way from distinct efficient incoming witnesses"
 theorem = "firstEfficientOfDistinct"
+strong_version_needed = {"8a22ae75-4198-5a32-ae52-bad2848a50a5" = "Descent knows only that the distinct antecedent is efficiently caused in some respect. The weaker sibling 446e3f2a also needs evidence that this incoming respect is relevant to its outgoing activity. The frozen premises give no such relevance witness."}
 premises = ["STMT-ORDER-OF-EFFICIENT-CAUSES-FOUND", "Every efficient effect has a distinct EFFICIENT_CAUSING_2 cause", "STMT-SECOND-EFFICIENT-CAUSES-CAUSE-ONLY-AS-CAUSED", "STMT-NO-INFINITE-PER-SE-EFFICIENT-CAUSE-SERIES"]
 conclusion = "STMT-FIRST-EFFICIENT-CAUSE-CANNOT-BE-LACKING"
 rule = "Well-founded descent on effects using a distinct incoming witness at each step"
@@ -127,6 +132,6 @@ meaning = "Two distinct components give a uniter. If it is the composite, tempor
 id = "Finite boundaries of the self-cause exclusions"
 theorem = "boundaries"
 premises = []
-conclusion = "Finite controls for the scope of motion, origin and temporal self-cause"
+conclusion = "05ef524c-8e43-4155-adc7-5bb5ada27b8b"
 rule = "Construct finite populated relation interpretations and discharge each stated clause"
-meaning = "A proper motor supplies an actual patient-lift edge while an aggregate lift supplies a whole diagonal and the patient lacks completed act. The Boolean control includes a distinct origin and an accident diagonal in different respects, with no motion. The same efficient roster satisfies the new full Second Way bundle with the distinct original cause first. The temporal control puts both activities in the past and selects only the distinct uniter."
+meaning = "A proper motor supplies an actual patient-lift edge while an aggregate lift supplies a whole diagonal and the patient lacks completed act. In the Boolean control the two efficient edges carry different respect indices. The distinct efficient edge and the binary origin edge have the same ordered bearer pair by stipulation. The second efficient edge is a self-diagonal and also has a stipulated perfection edge at that respect. The motion relation is empty. The same efficient roster satisfies the new full Second Way bundle with the distinct original cause first. The temporal control puts both activities in the past and selects only the distinct uniter."

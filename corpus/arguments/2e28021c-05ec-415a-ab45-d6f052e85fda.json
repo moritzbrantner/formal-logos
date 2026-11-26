@@ -18,5 +18,8 @@
   ],
   "disambiguation_ids": [
     "00e0d443-eb39-56a3-9179-9c8852ca4a2b"
-  ]
+  ],
+  "strong_version_needed": {
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The frozen argument uses the existing excluded-middle interface to decide c = x for a witnessed edge E c x r. It only needs that local equality disjunction; the existing classical-attributes restriction does not supply it for an arbitrary cause and effect in this frame."
+  }
 }

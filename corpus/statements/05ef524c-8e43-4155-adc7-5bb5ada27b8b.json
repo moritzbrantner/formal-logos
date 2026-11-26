@@ -1,6 +1,15 @@
 {
   "id": "05ef524c-8e43-4155-adc7-5bb5ada27b8b",
-  "label": "Finite controls for the scope of motion, origin and temporal self-cause",
-  "paraphrase": "Three fixed structural controls. An integrated-style component displacement with both cause attributions has an actual distinct mover and a whole-level diagonal. A distinct origin and a self-directed perfection coexist with distinct incoming coverage and a first efficient cause with the per se and regress premises, while both broad efficient-self bridges fail on the stipulated efficient relation. An actual temporal uniting tuple has past distinct activity, and a past diagonal outside that tuple falsifies the all-time ban while the restricted ban and selected-time exclusion hold. These are comparisons of supplied interpretations.",
-  "lean_declaration": "TruthCore.Case.Catholicism.NoSelfCauseScope.Control.Boundaries"
+  "label": "Finite controls for scoped causal diagonals",
+  "paraphrase": "Three fixed structural controls. The motion interpretation satisfies InternalMotion for the whole in displacement. PatientLift supplies an actual distinct mover and AggregateLift supplies a whole-level diagonal. On the stipulated Boolean interpretation the binary origin shares a bearer pair with the distinct efficient edge. The efficient edges differ in respect, and the diagonal efficient edge shares its respect with the self-directed perfection. These coexist with distinct incoming coverage and a first efficient cause with the per se and regress premises, while both broad efficient-self bridges fail on the stipulated efficient relation. An actual temporal uniting tuple has past distinct activity, and a past diagonal outside that tuple falsifies the all-time ban while the restricted ban and selected-time exclusion hold. These are comparisons of supplied interpretations.",
+  "lean_declaration": "TruthCore.Case.Catholicism.NoSelfCauseScope.Control.Boundaries",
+  "definition_ids": [
+    "a7904c82-eef8-58e4-ac7c-0bb93374cb43",
+    "69c0b23e-54c7-57a1-871f-839c6e5514c6",
+    "4a101a4c-12de-53c8-80c6-de7a523ea9d9"
+  ],
+  "disambiguation_ids": [
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "57f80020-fa6f-5b69-be58-b4cf95b7226f"
+  ]
 }

@@ -6,5 +6,14 @@
   "inference_ids": [
     "452b7e03-b9e5-4e6f-9e98-584025c5dd3a"
   ],
-  "meaning": "A proper motor supplies an actual patient-lift edge while an aggregate lift supplies a whole diagonal and the patient lacks completed act. The Boolean control includes a distinct origin and an accident diagonal in different respects, with no motion. The same efficient roster satisfies the new full Second Way bundle with the distinct original cause first. The temporal control puts both activities in the past and selects only the distinct uniter."
+  "meaning": "A proper motor supplies an actual patient-lift edge while an aggregate lift supplies a whole diagonal and the patient lacks completed act. In the Boolean control the two efficient edges carry different respect indices. The distinct efficient edge and the binary origin edge have the same ordered bearer pair by stipulation. The second efficient edge is a self-diagonal and also has a stipulated perfection edge at that respect. The motion relation is empty. The same efficient roster satisfies the new full Second Way bundle with the distinct original cause first. The temporal control puts both activities in the past and selects only the distinct uniter.",
+  "definition_ids": [
+    "69c0b23e-54c7-57a1-871f-839c6e5514c6",
+    "a7904c82-eef8-58e4-ac7c-0bb93374cb43",
+    "4a101a4c-12de-53c8-80c6-de7a523ea9d9"
+  ],
+  "disambiguation_ids": [
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "57f80020-fa6f-5b69-be58-b4cf95b7226f"
+  ]
 }

@@ -631,8 +631,12 @@ coverage nor the descent supplies that interface.
 
 The [origin branch](../../corpus/arguments/2e28021c-05ec-415a-ab45-d6f052e85fda.json)
 uses CAUSE_4 exclusion, explicit excluded middle, and the weaker sibling
-of `0a2f1846`. A diagonal efficient edge must have a distinct incoming
-alternative or an origin diagonal. The former can hold even when the
+of `0a2f1846`. The frozen proof uses excluded middle only to decide equality
+of the endpoints of a witnessed efficient edge. The local assumption
+`∀ c x r, E c x r → c = x ∨ c ≠ x` would suffice for that step. The registered
+classical-attributes restriction does not give this disjunction for arbitrary
+endpoints of the efficient relation. A diagonal efficient edge must have a
+distinct incoming alternative or an origin diagonal. The former can hold even when the
 original effect can operate on itself in another respect. Absence of an
 origin diagonal supplies no distinct efficient witness by itself. The live
 test is a bearer with only diagonal incoming efficient activity on the
@@ -699,17 +703,32 @@ cover actual cases. The shared per se, regress and esse-bridge obligations
 retain their previous warrant.
 
 The [finite certificate](../../corpus/results/0505143b-7a9a-4236-a53c-7c5a5f2aa5d0.json)
-uses supplied structural interpretations. Its aggregate diagonal has a
-distinct actual motor on the same motion roster. Its accident diagonal is
-stipulated in the efficient relation in a different respect from the distinct
-origin. The motion relation is empty in that accident control, and the
-distinct original cause has no incoming edge, so the per se relation can be
-empty there. The temporal model puts both activities in the past, with only
+uses supplied structural interpretations. In the motion row, `InternalMotion`
+holds of the whole's displacement. `PatientLift` gives a distinct actual
+motor and `AggregateLift` gives a whole-level diagonal in the same motion
+roster. The separate [reconstruction certificate](../../corpus/results/857ed537-1e5e-413d-b0ce-5595c7256a11.json)
+checks the stronger `WholeParts` reading with `Integrated`. In the Boolean
+accident row, the distinct and diagonal efficient edges carry different
+respect indices. The distinct efficient edge and the binary origin edge
+have the same ordered bearer pair by stipulation. The accident perfection
+edge has the same respect as the efficient diagonal. The motion relation is
+empty, and the distinct efficient cause has no incoming edge, so the per
+se relation can be empty there. This fixed model exhibits a witness. The
+general Second Way result concludes only `¬¬ ∃ f, IsFirstEfficientCause E f`.
+The temporal model puts both activities in the past, with only
 the distinct pair on the uniting relation. These checks do not model how a
 proper accident emanates, whether an animal's whole is the immediate source
 of motion, or whether Spinoza's substance exists. The passage links provide
 reading context. This batch adds analyst propositions and no new source
-attributions.
+attributions. The finite certificate links the motion, selected-time
+efficient and per se definitions in its record. Adding the perfection and
+origin definitions would combine CAUSE_1, CAUSE_2 and CAUSE_4, and adding the
+perfection or temporal profile would combine distinct UNITING_CAUSE_VERSUS_EFFICIENT_CAUSE
+senses. The certificate evaluates separate predicates and supplies no bridge
+between those senses. The remaining definitions are linked here for navigation.
+[Perfection](../../corpus/definitions/cause-of-perfection.json) ·
+[Origin](../../corpus/definitions/cause-of-origin.json) ·
+[Temporal profile](../../corpus/definitions/composer-temporal-profile.json)
 
 ## Research attempts citing this note
 

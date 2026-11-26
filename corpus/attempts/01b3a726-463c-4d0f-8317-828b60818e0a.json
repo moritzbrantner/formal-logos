@@ -39,6 +39,14 @@
       "effort": "high",
       "date": "2026-11-26",
       "pr": "PR-2032"
+    },
+    {
+      "role": "repair",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2032"
     }
   ],
   "current_assessment": {
@@ -55,13 +63,13 @@
       "3209ff59-a0ec-4e70-8198-63c3056628a4"
     ],
     "scope": "No-self-cause scope for the motion, efficient descent and temporal uniter routes",
-    "assessment": "The productive-exercise interpretation gives conditional warrant for strict exclusion of a bearer producing its own being. It leaves qualified proper-accident resultance and part-mediated motion available. Select a single act predicate for the distinct-mover inference and a single efficient relation for the distinct incoming descent. The universal route ban requires its own relation choice. The source supports qualified resultance, with application to the reflexive perfection predicate still open.",
+    "assessment": "The productive-exercise interpretation gives conditional warrant for strict exclusion of a bearer producing its own being. It leaves qualified proper-accident resultance and part-mediated motion available. Select a single act predicate for the distinct-mover inference and a single efficient relation for the distinct incoming descent. The universal route ban requires its own relation choice. The source supports qualified resultance, with application to the reflexive perfection predicate still open. The optional origin proof uses excluded middle only for equality of the two endpoints of a witnessed efficient edge. Local equality decisions on those edges suffice. The descent concludes double-negated existence and supplies no designated bearer.",
     "next_test": "Fix a bearer with diagonal efficient activity and check whether it has a distinct incoming cause anywhere in the same selected relation. For the root interface check whether the selected first efficient bearer is underived in the existential dependence sense. For temporal composition test an actual unit whose acquisition of being owes to a self-uniting act by that same bearer.",
     "note": "docs/notes/load-bearing-terms.md#no-self-cause-scope-in-the-two-ways-and-temporal-composition-2026-11-26",
-    "reviewed_revision": "7a4f5da6b5a6ca42ed797d255ac9acd1c10c967e",
-    "review": "unreviewed",
+    "reviewed_revision": "d0788fb4a07a2725332649e75008efd935001927",
+    "review": "changes_requested",
     "publication": "published",
-    "evidence": "PR-2032 draft proof delivery. Targeted Lean binding, Comparator and NanoDa passed for the eight results. Independent semantic challenge is pending.",
+    "evidence": "PR-2032 independent semantic review of d0788fb4 accepted the two connected inferences, the Second Way descent, the strength comparisons and the rival treatment with requested fixes. The repair corrects the finite interpretation, records the strong-premise audit, narrows the claim about excluded middle and adds compatible definition links. Re-check of the repair is pending.",
     "supersedes": "Supersedes only the wording in a82b06b6 and the 2026-11-18 Prima Via note that the three self-motion leaves are dispensable only through the stated universal actuality premise. The new motion intermediate and the existing from-being-in-act full route both bypass that premise. It retains the earlier assessment of the older universal-actuality derivation, C*, and the regress. No other prior judgment is displaced."
   }
 }

@@ -83,6 +83,7 @@ meaning = "Non-transcription conditional derivation on one q.3 a.4 profile p, on
 [[argument]]
 id = "Every SERIES_OF_CAUSES_4 link is PER_SE_5, from the present-cause bridge"
 theorem = "perSeEsseLinksOfPresentEsseCause"
+strong_version_needed = {"8b2561cd-3743-536d-a110-3352fdb0c6b9" = "The present-cause bridge requires distinctness of the very cause on the given existential per se link. A distinct incoming substitute at a possibly different respect need not occur on this link."}
 comparator_theorems = ["presentCauseControls"]
 premises = ["STMT-NOTHING-IS-EFFICIENT-CAUSE-OF-ITSELF", "A present efficient cause of another's being is an actual CAUSE_2 of its being"]
 conclusion = "Every SERIES_OF_CAUSES_4 link is a PER_SE_5 actual CAUSE_2 of being"
@@ -142,7 +143,7 @@ meaning = "Non-transcription conditional derivation on one grounding profile m, 
 id = "Every SERIES_OF_CAUSES_4 link is a SERIES_OF_CAUSES_3 link, from the per se ordering"
 theorem = "perSeEsseLinkIsPerSeCauseLinkOfOrdering"
 comparator_theorems = ["inclusionSupportControls"]
-strong_version_needed = {"8a22ae75-4198-5a32-ae52-bad2848a50a5" = "Reading B needs RelevantTo c x esse r' for the respect in which c is caused; the third premise gives only 'caused in some respect', so B does not suffice with these premises. A B-variant would need the stronger premise that the cause of every existential link is efficiently caused in a respect relevant to its causing x's being."}
+strong_version_needed = {"8a22ae75-4198-5a32-ae52-bad2848a50a5" = "Reading B needs RelevantTo c x esse r' for the respect in which c is caused; the third premise gives only 'caused in some respect', so B does not suffice with these premises. A B-variant would need the stronger premise that the cause of every existential link is efficiently caused in a respect relevant to its causing x's being.", "8b2561cd-3743-536d-a110-3352fdb0c6b9" = "The strong ordering premise needs the given existential link to have distinct endpoints. Distinct incoming coverage can supply a different cause without changing the given link."}
 premises = ["STMT-SECOND-EFFICIENT-CAUSES-CAUSE-ONLY-AS-CAUSED", "STMT-NOTHING-IS-EFFICIENT-CAUSE-OF-ITSELF", "The cause of every SERIES_OF_CAUSES_4 link is itself efficiently caused in some respect"]
 conclusion = "Every SERIES_OF_CAUSES_4 link is a SERIES_OF_CAUSES_3 link"
 sense_bridges = [

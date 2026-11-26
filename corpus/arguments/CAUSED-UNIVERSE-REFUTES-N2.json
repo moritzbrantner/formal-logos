@@ -22,5 +22,8 @@
     "1ea8b036-7a66-540a-be38-301a8db9077c",
     "623ddbf6-9683-5361-bae4-e348a00ec680",
     "32416dd1-c3ce-5180-bf06-1cabab088be7"
-  ]
+  ],
+  "strong_version_needed": {
+    "8b2561cd-3743-536d-a110-3352fdb0c6b9": "The outside-spacetime step must exclude the diagonal for the same concrete cause in the N2 countercase. A distinct incoming alternative does not rule it out."
+  }
 }

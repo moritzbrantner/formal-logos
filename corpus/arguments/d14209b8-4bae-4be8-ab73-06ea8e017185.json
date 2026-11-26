@@ -31,5 +31,8 @@
       "to": "2478812d-d2cd-4182-8ad0-d27a4bdb9ff2",
       "statement_id": "622dbf36-0ca9-4401-b766-08a309f31ec1"
     }
-  ]
+  ],
+  "strong_version_needed": {
+    "8b2561cd-3743-536d-a110-3352fdb0c6b9": "The present-cause bridge requires distinctness of the very cause on the given existential per se link. A distinct incoming substitute at a possibly different respect need not occur on this link."
+  }
 }

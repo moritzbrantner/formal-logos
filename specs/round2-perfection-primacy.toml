@@ -186,6 +186,7 @@ meaning = "Derives the batch 1 bridge that a distinct cause does not have the pe
 [[argument]]
 id = "EFFICIENT-CAUSE-NOT-DEPENDENT-FROM-ASYMMETRY"
 theorem = "efficientCauseNotDependent"
+strong_version_needed = {"8b2561cd-3743-536d-a110-3352fdb0c6b9" = "The dependence-asymmetry premise applies only to distinct bearers. It needs distinctness of the given efficient cause and its effect. The weak premise may give a different incoming cause and leave the given edge diagonal."}
 premises = ["STMT-EFFECT-DEPENDS-FOR-BEING-ON-EFFICIENT-CAUSE", "STMT-NOTHING-IS-EFFICIENT-CAUSE-OF-ITSELF", "STMT-DISTINCT-BEINGS-NOT-MUTUALLY-DEPENDENT"]
 conclusion = "STMT-EFFICIENT-CAUSE-NOT-DEPENDENT-ON-EFFECT"
 rule = "Reductio, universal instantiation and modus ponens"
