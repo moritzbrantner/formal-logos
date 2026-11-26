@@ -16,7 +16,8 @@ definitions = ["e1b95906-8d38-59c3-abee-0ccc1c9d333b"]
 paraphrase = "For every finite panel, the number of feasible Boolean reports equals two raised to the number of distinct ray identities observed at intact tails. Duplicate observations and observations of cut positions do not add choices. This includes the empty panel and panels with no live observations, each of which has one feasible report, and applies with an arbitrary family of rays."
 
 [[statement]]
-id = "One shared setting requires live report agreement and extends to synchronized disjoint rays"
+id = "166fd469-2bfa-4e82-a96e-84dcac10f7f9"
+label = "A common setting fits exactly the reports with live borrower agreement and all cut positions off"
 lean = "SharedSwitchCharacterization"
 definitions = ["e1b95906-8d38-59c3-abee-0ccc1c9d333b"]
 paraphrase = "A panel report has one shared Boolean setting exactly when every position with an upstream cut reports off and all live readings agree across the panel. Every compatible report extends to a global activity profile on the same disjoint successor rays, where an intact tail is active exactly when the common setting is on."
@@ -49,7 +50,7 @@ axioms = ["propext", "Classical.choice", "Quot.sound"]
 id = "Characterize a shared setting and realize it on the same disjoint ray family"
 theorem = "sharedSwitchCharacterization"
 premises = ["c98408fd-f39e-4f47-a104-36b4c52ef617"]
-conclusion = "One shared setting requires live report agreement and extends to synchronized disjoint rays"
+conclusion = "166fd469-2bfa-4e82-a96e-84dcac10f7f9"
 comparator_theorems = ["distinctLiveSuppliers"]
 rule = "Read one common bit at every live position and select all rays or none to realize it globally"
 meaning = "With one shared setting, every live observation reads the same bit and cut positions report off. In the reverse direction use any live reading as the setting, or off if there are no live readings. The parallel-ray realization gives this setting simultaneously to the distinct rays while leaving their local supplier relation fixed. The companion shows that two live observations on distinct rays have immediate suppliers and cannot have a common immediate supplier in this graph. The stipulation that the readings are synchronized supplies no metaphysical efficient-cause identity."
@@ -58,7 +59,7 @@ axioms = ["propext", "Classical.choice", "Quot.sound"]
 [[argument]]
 id = "Test the shared setting by varying just one of two observed live rays"
 theorem = "mixedLiveRayReport"
-premises = ["2b807b2a-85e0-48ab-bc51-d8aaf6d24aad", "One shared setting requires live report agreement and extends to synchronized disjoint rays"]
+premises = ["2b807b2a-85e0-48ab-bc51-d8aaf6d24aad", "166fd469-2bfa-4e82-a96e-84dcac10f7f9"]
 conclusion = "Mixed live readings are feasible across distinct rays and exclude a shared setting"
 rule = "Enable the ray of the first reading and leave other rays off"
 meaning = "A feasible mixed pair cannot come from one ray, by live within-ray agreement. Across distinct rays, turning on just the first ray yields a full feasible report with the second reading off. Such a pair contradicts agreement under a single shared Boolean setting. The exclusion concerns this shared-setting model, whose settings are transmitted unchanged along each intact tail."

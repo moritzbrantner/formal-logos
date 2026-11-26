@@ -1,6 +1,6 @@
 {
   "id": "166fd469-2bfa-4e82-a96e-84dcac10f7f9",
-  "label": "One shared setting requires live report agreement and extends to synchronized disjoint rays",
+  "label": "A common setting fits exactly the reports with live borrower agreement and all cut positions off",
   "paraphrase": "A panel report has one shared Boolean setting exactly when every position with an upstream cut reports off and all live readings agree across the panel. Every compatible report extends to a global activity profile on the same disjoint successor rays, where an intact tail is active exactly when the common setting is on.",
   "lean_declaration": "TruthCore.Causality.RayObservation.SharedSwitchCharacterization",
   "definition_ids": [
