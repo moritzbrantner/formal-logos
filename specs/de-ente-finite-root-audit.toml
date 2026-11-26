@@ -1,0 +1,25 @@
+[batch]
+vocab = "TruthCore.Latin.Aquinas.DeEnte.FiniteEsseRootAudit"
+results = "TruthCore.Results.Aquinas.DeEnte.FiniteEsseRootAudit"
+
+[[statement]]
+id = "Each actual esse bearer admits a finite audit of a particular actual root ancestor"
+lean = "EveryActualEsseBearerHasFiniteRootAudit"
+paraphrase = "OPEN analyst premise, attribution deferred. On one fixed q3a4 profile, each actual esse bearer x has a particular actual bearer r and a finite set of audited recipients. Every relation on the fixed roster agreeing with the full incoming lists of ActualEsseCause at those recipients gives r no supplier and a finite directed path from r to x, permitting zero edges when r is x. The root and audited set may vary with x. This is structural availability of a certificate, with no assertion that an observer has performed an audit."
+definitions = [
+  "5b19527d-9418-441e-820c-3c659ba7cb12",
+  "c15c1634-6d70-4ecb-8b5b-5592df955223",
+  "05a2afda-c654-5f6b-a0f7-796c5dc1be2e",
+  "8163859b-95b3-4dd2-8a69-541bd332f32f",
+  "DEF-ESSE",
+]
+
+[[argument]]
+id = "Finite root audits imply rooted closed esse collections"
+theorem = "closedOfFiniteRootAudits"
+comparator_theorems = ["finiteRootAuditsOfClosed"]
+premises = ["Each actual esse bearer admits a finite audit of a particular actual root ancestor"]
+conclusion = "20babef7-6ae7-4b48-b72a-f417e8e63136"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Read the certificate in the actual relation and apply supplier closure backwards through its finite path"
+meaning = "On the same q3a4 profile, the actual relation agrees with every audit of itself. The particular audited r is therefore an actual supplierless ancestor of the same x. Each actual cause edge retains both actuality guards and its supplier-to-recipient direction in esseCauseGraph p. A closed collection containing x must contain r by the finite path. This gives an alternative structural formulation of the existing rootedness premise and makes the data for a local positive certificate explicit; applicability of that premise remains open."

@@ -1,0 +1,9 @@
+{
+  "id": "19fdc01d-90af-4d78-b5df-b46d93a8dfaa",
+  "label": "Fixed positive amounts on a sole grounding edge admit attenuation exactly at a strict decrease",
+  "paraphrase": "For every positive amount assignment to the two actual concreta in the one-edge profile, all the original reception constraints admit weights, own inputs and bounds exactly when the recipient's assigned amount is smaller than the giver's.",
+  "lean_declaration": "TruthCore.Causality.ClosedGroundingRoots.FixedAmounts.FixedAmountCriterion",
+  "definition_ids": [
+    "14e3be39-e587-4d9a-a48e-c48885ecd260"
+  ]
+}

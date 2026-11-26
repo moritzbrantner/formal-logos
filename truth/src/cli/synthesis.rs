@@ -24,7 +24,7 @@ fn run(args: &Args, operands: &[&str]) -> Output {
         || question.is_some() && !operands.is_empty()
     {
         return Err(usage(
-            "synthesis takes one statement or --question TEXT, optionally with --limit N",
+            "synthesis takes one statement, argument, result or --question TEXT, optionally with --limit N",
         ));
     }
     if question.is_some_and(|q| q.trim().is_empty()) {
@@ -43,7 +43,7 @@ fn run(args: &Args, operands: &[&str]) -> Output {
     if let Some(question) = question {
         if comparing {
             return Err(usage(
-                "withholding premises requires a selected argument ID",
+                "withholding premises requires an argument or its result",
             ));
         }
         let limit = args.research.limit.unwrap_or(5);
@@ -56,8 +56,19 @@ fn run(args: &Args, operands: &[&str]) -> Output {
         .first()
         .copied()
         .unwrap_or(support_graph::DEFAULT_TARGETS[0]);
-    let target = resolve_in(&aliases, token, &["statements", "arguments"])?;
-    if let Some(argument) = corpus.get("arguments", &target) {
+    let target = resolve_in(&aliases, token, &["statements", "arguments", "results"])?;
+    let result = corpus.get("results", &target);
+    let argument = if let Some(record) = result {
+        let argument_id = record.fields["argument_id"].as_str().unwrap_or_default();
+        Some(
+            corpus
+                .get("arguments", argument_id)
+                .ok_or_else(|| unknown(&format!("result {target} has no known argument")))?,
+        )
+    } else {
+        corpus.get("arguments", &target)
+    };
+    if let Some(argument) = argument {
         let without = args
             .without
             .iter()
@@ -67,6 +78,7 @@ fn run(args: &Args, operands: &[&str]) -> Output {
             &args.root,
             &corpus,
             argument,
+            result.map(|_| target.as_str()),
             &without,
             args.compare_premises,
             args.research.limit.unwrap_or(5) as usize,
@@ -76,7 +88,7 @@ fn run(args: &Args, operands: &[&str]) -> Output {
     }
     if comparing {
         return Err(usage(
-            "withholding premises requires a selected argument ID",
+            "withholding premises requires an argument or its result",
         ));
     }
     let target = if let Some(record) = corpus.get("statements", &target) {
@@ -92,7 +104,11 @@ fn run(args: &Args, operands: &[&str]) -> Output {
             .collect();
         match declarations.as_slice() {
             [(_, _, record)] => *record,
-            [] => return Err(unknown(&format!("unknown statement: {token}"))),
+            [] => {
+                return Err(unknown(&format!(
+                    "unknown statement, argument or result: {token}"
+                )));
+            }
             several => {
                 let candidates: Vec<Value> = several.iter().map(|(id, declaration, record)|
                     json!({"id":id,"lean_declaration":declaration,"paraphrase":record.fields["paraphrase"]})).collect();

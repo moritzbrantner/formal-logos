@@ -1,0 +1,19 @@
+[batch]
+vocab = "TruthCore.Causality.PerSeRegressCardinality"
+results = "TruthCore.Results.Causality.PerSeRegressCardinality"
+
+[[statement]]
+id = "Second Way controls for successor orientation and finite cycles"
+lean = "SuccessorOrientationAndFiniteCycle"
+definitions = ["4a101a4c-12de-53c8-80c6-de7a523ea9d9"]
+disambiguations = ["81c233d4-01b4-528c-8bbd-7da228443ffe"]
+paraphrase = "Two interpretations of the exact Second Way vocabulary use all natural numbers, one respect and the same successor formula with reversed edge orientation. Both satisfy the other four Second Way inputs and have acyclic efficient causation. With n causing n+1, the per se relation is well-founded and 0 is a first efficient cause. With n+1 causing n, an injective per se regress starts at each number, the regress prohibition fails and there is no first efficient cause. A two-bearer cycle with no self-edges also violates the regress prohibition and allows an infinite traversal, but admits no injective infinite sequence."
+
+[[argument]]
+id = "Certify the Second Way successor and finite-cycle controls"
+theorem = "successorOrientationAndFiniteCycle"
+premises = []
+conclusion = "Second Way controls for successor orientation and finite cycles"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Interpret the same successor rule in both directions and compare with an alternating cycle"
+meaning = "Both Nat interpretations designate exactly the efficient edges with caused sources as per se and use the corresponding strict priority order. Decreasing Nat rank proves accessibility in the rooted interpretation, while f(n) = x + n gives each x an upstream chain in the converse interpretation. The latter chain is injective by the existing acyclic chain theorem. Alternating the two Boolean bearers of a cycle gives a repeated traversal with no self-edges and no injection from Nat into its carrier. These controls distinguish whether a descent repeats, how many bearers it needs, and whether a fixed roster has a first efficient cause. They test the exact regress premise 97f5850f-62bc-5e43-a0c1-dd1033d08fc9 in mathematical interpretations and do not establish causal applicability or equal explanatory adequacy."

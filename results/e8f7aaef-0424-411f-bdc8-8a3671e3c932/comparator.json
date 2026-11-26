@@ -1,0 +1,15 @@
+{
+  "challenge_module": "TruthCore.Results.Logic.RegressHeadcount.Challenge",
+  "solution_module": "TruthCore.Results.Logic.RegressHeadcount.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Logic.RegressHeadcount.headcountCriterion",
+    "TruthCore.Results.Logic.RegressHeadcount.finiteAdditionCriterion",
+    "TruthCore.Results.Logic.RegressHeadcount.pairedCharges"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "enable_nanoda": true
+}

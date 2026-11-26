@@ -1,0 +1,13 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.FiniteReserveOdds.Challenge",
+  "solution_module": "TruthCore.Results.Causality.FiniteReserveOdds.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.FiniteReserveOdds.finiteReserveComparison"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "enable_nanoda": true
+}

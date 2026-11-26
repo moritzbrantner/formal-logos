@@ -7,15 +7,47 @@
     "e529c42f-f0a2-5ebf-9ae1-459e7f798d31",
     "37e9e7a0-2385-5e08-9ef9-f793b5ceb936",
     "f10d5632-ee55-5c6a-b972-809363b8c50c",
-    "99b1a274-ce1a-5019-9b0f-5cc6e70b07dc"
+    "99b1a274-ce1a-5019-9b0f-5cc6e70b07dc",
+    "36d2e4c0-3d45-467a-bf22-51eb0cc507ba",
+    "d899fe9f-2c8c-43aa-a2c4-2c8c2c06890b",
+    "da0d3984-b2c2-48db-9355-d65564ff1a7f",
+    "7b3c4ab3-9453-4818-8791-4e63890dd84a",
+    "ef01a8ff-f4a3-4297-9484-402f8f2270d6",
+    "e9b5b688-7a85-4fff-861c-b717fad30074"
   ],
   "date": "2026-10-26",
   "kind": "derivation",
   "outcome": "succeeded",
-  "summary": "A genuine finite-set and acyclic-transitive-closure route derives accessibility and transfers it by explicit per-se edge inclusion. Each hypothesis has an omission model. This does not identify finite distinct ancestors with no infinite histories, defend the premises, supply the event/being map, or close the root frontier. Proof verification status is recorded in the linked result, not inferred from this attempt.",
+  "summary": "A genuine finite-set and acyclic-transitive-closure route derives accessibility and transfers it by explicit per-se edge inclusion. Each hypothesis has an omission model. This does not identify finite distinct ancestors with no infinite histories, defend the premises, supply the event/being map, or close the root frontier. Proof verification status is recorded in the linked result, not inferred from this attempt. An acyclic infinite regress visits infinitely many distinct bearers. Reversing the same successor edge on the same infinite roster changes whether there is a first cause. Occam’s headcount comparison favors finite additional commitments under equal explanatory adequacy when the regress requires infinitely many distinct posits. Billing each bearer, or each successive pair, suffices. In a probability comparison, preference beyond every finite factor requires zero weight for the regress hypothesis. Uniformly discounted depth events covering every member of the regress class in one model force zero weight for that class. Discounting one specific infinite sequence does not suffice. A single charge for a shared law permits positive weight. At matched adequacy the finite commitments merit preference on this headcount criterion. Whether an actual first cause exists remains open. Application depends on what each account must independently assume to explain the same recipient. See docs/notes/causal-finitism-367.md#does-occams-razor-favor-a-finite-account-of-an-infinite-regress.",
   "evidence": [
     "a4558f9c-3063-5d3b-b8a3-164e26160ed2",
     "98991434-ec43-5e9c-b3d3-bdca82e57366",
-    "PR-433"
-  ]
+    "PR-433",
+    "ce67d8c1-0035-56d4-b1ab-301244a482ab",
+    "c9da9c66-3a32-5d4a-84f4-9b70187ef1b9",
+    "844a12de-ccf7-4e47-a30e-0fee51765eef",
+    "e8f7aaef-0424-411f-bdc8-8a3671e3c932",
+    "07aaa585-ecf4-4584-a679-c9f02d294fcf",
+    "e2657ba9-e4e0-4961-a8cd-6fd50eb6167b",
+    "0d877e2b-86df-4bed-8275-49c1a614e2c7",
+    "3cb00ff1-e0c9-4874-badf-d7f499a49f92",
+    "d1c3835a-f5c9-4acf-8664-aa7720ccbd45",
+    "PR-2005"
+  ],
+  "current_assessment": {
+    "date": "2026-11-26",
+    "statement_ids": [
+      "97f5850f-62bc-5e43-a0c1-dd1033d08fc9",
+      "d899fe9f-2c8c-43aa-a2c4-2c8c2c06890b"
+    ],
+    "scope": "Occam’s razor applied to finitely or infinitely many independent commitments to explain the same recipient in the Second Way.",
+    "assessment": "At matched explanatory adequacy, a finite account is preferable on headcount grounds when the competing explanation needs infinitely many independent posits. The number of bearers alone leaves open whether there is a first cause. The whole regress hypothesis retains its prior odds against a finite alternative under equal positive likelihoods. Preference beyond every finite factor in the probability comparison requires zero weight for the whole rival.",
+    "next_test": "For the same recipient, identify what each account must independently assume for productive supply. Determine whether the regress needs infinitely many distinct commitments or one instantiated law, and whether the proposed source explains the same production.",
+    "note": "docs/notes/causal-finitism-367.md#does-occams-razor-favor-a-finite-account-of-an-infinite-regress",
+    "review": "accepted_qualified",
+    "reviewed_revision": "c33ff837bdf7d5d8a8133647fa99ebb2f9ef8454",
+    "publication": "published",
+    "evidence": "Independent review of the six formal results at e85b5f23b. The targeted recheck at c33ff837b accepted the paired-charge example, the whole-class probability condition and the provisional application. PR #2005.",
+    "supersedes": "Adds the parsimony assessment to the earlier finite-ancestry derivation and its omission controls."
+  }
 }

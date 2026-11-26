@@ -109,6 +109,7 @@ pub fn report(
     root: &Path,
     corpus: &Corpus,
     argument: &Record,
+    selected_result: Option<&str>,
     without: &[String],
     compare: bool,
     limit: usize,
@@ -138,7 +139,7 @@ pub fn report(
 
     let mut backed = BTreeSet::new();
     let mut results = Vec::new();
-    for (_, record) in corpus.records_by_id("results") {
+    for (result_id, record) in corpus.records_by_id("results") {
         let aid = text(&record.fields, "argument_id");
         if matches!(
             text(&record.fields, "status"),
@@ -146,7 +147,7 @@ pub fn report(
         ) {
             backed.insert(aid);
         }
-        if aid == id {
+        if aid == id && selected_result.is_none_or(|selected| selected == result_id) {
             results.push(result_witness(root, record));
         }
     }
@@ -224,7 +225,31 @@ pub fn report(
             field("note")
         ));
     }
-    let investigations = previous_investigations(corpus, &scenario.withheld);
+    let investigations = previous_investigations(corpus, &scenario.withheld, selected_result);
+    if let Some(result_id) = selected_result {
+        let mut cited: Vec<_> = investigations
+            .iter()
+            .filter(|entry| entry.evidence.contains(&result_id))
+            .collect();
+        cited.sort_by_key(|entry| entry.assessment_of(target).is_none());
+        for entry in cited.into_iter().take(limit) {
+            if let Some(assessment) = entry.assessment_of(target) {
+                let field = |key: &str| assessment[key].as_str().unwrap_or_default();
+                output.push(format!(
+                    "Assessment of the conclusion ({}, {}) — {}\n{}\nRevision test — {}\n{}\nResearch record — {}",
+                    field("review"),
+                    field("publication"),
+                    field("scope"),
+                    field("assessment"),
+                    field("next_test"),
+                    field("note"),
+                    entry.path
+                ));
+            } else {
+                output.push(format!("Investigation citing this result — {}\n{}\nUse --json for its full finding and evidence.", entry.label, entry.path));
+            }
+        }
+    }
     if let Some(example) =
         investigation_example(&investigations, |sid| scenario.withheld.contains(sid))
     {
@@ -237,6 +262,9 @@ pub fn report(
     json["scope"] = json!(scope);
     json["argument"] = json!({"argument_id":id,"label":label,"meaning":meaning,"conclusion_statement_id":target,"path":argument.path});
     json["results"] = json!(results);
+    if let Some(result_id) = selected_result {
+        json["selected_result_id"] = json!(result_id);
+    }
     json["inputs"] = json!(inputs);
     json["withheld_assessments"] = json!(reviewed_inputs);
     json["previous_investigations"] = json!(investigations);

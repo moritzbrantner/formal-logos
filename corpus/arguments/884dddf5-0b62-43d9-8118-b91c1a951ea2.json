@@ -1,0 +1,14 @@
+{
+  "id": "884dddf5-0b62-43d9-8118-b91c1a951ea2",
+  "label": "Characterize existence of an attenuation assignment on the actual grounding graph",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "16dc0aed-137c-41f4-8018-a40ea4a0738e",
+  "inference_ids": [
+    "e3c6ef6f-bf61-415f-9671-2e5955842d20"
+  ],
+  "meaning": "The equivalence applies to one fixed world and actual concrete grounding relation. The fitted amount halves with each step from a root and the choice of supplier can ignore other incoming edges. The construction gives no reason to assign those amounts to actual esse independently of rootedness.",
+  "definition_ids": [
+    "14e3be39-e587-4d9a-a48e-c48885ecd260",
+    "38b9012a-472b-4544-a271-16d22b25c9ac"
+  ]
+}

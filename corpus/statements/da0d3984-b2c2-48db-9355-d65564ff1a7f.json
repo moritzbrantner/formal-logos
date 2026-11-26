@@ -1,0 +1,6 @@
+{
+  "id": "da0d3984-b2c2-48db-9355-d65564ff1a7f",
+  "label": "Occam’s razor and finite or infinite regress: equal likelihood preserves positive prior odds",
+  "paraphrase": "At a fixed common positive likelihood for the same observation, positive prior weights on a finite hypothesis and an infinite regress hypothesis give positive comparison posteriors whose odds are exactly their prior odds. Every positive real odds ratio is realized by normalized positive priors, including odds favoring either rival.",
+  "lean_declaration": "TruthCore.Causality.OccamRegress.EqualLikelihoodOdds"
+}

@@ -1,0 +1,9 @@
+{
+  "id": "c98408fd-f39e-4f47-a104-36b4c52ef617",
+  "label": "Local transmission on parallel successor rays is determined by which surviving tails are active",
+  "paraphrase": "An intact infinite chain of borrowers has one independent activity choice: all on or all off. Disjoint chains can have different states. On any family of disjoint successor rays with arbitrary intact incoming links, the local transmission rule holds exactly when a position is active iff some position on its ray is active and every incoming link at or upstream of the position is intact. Every selection of rays is realized by activating the intact tail of each selected ray. A surviving tail contributes one freely selectable on/off alternative, whereas a ray with no intact tail contributes none. Any upstream cut forces the position off in every solution. The all-off solution is the only pointwise solution exactly when no intact tail exists anywhere, in particular when cuts occur at or above every position.",
+  "lean_declaration": "TruthCore.Causality.ParallelPowerTransmission.ActivityClassification",
+  "definition_ids": [
+    "e1b95906-8d38-59c3-abee-0ccc1c9d333b"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.PerSeRegressCardinality.Challenge",
+  "solution_module": "TruthCore.Results.Causality.PerSeRegressCardinality.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.PerSeRegressCardinality.successorOrientationAndFiniteCycle"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "enable_nanoda": true
+}

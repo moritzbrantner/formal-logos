@@ -1,0 +1,10 @@
+{
+  "id": "16dc0aed-137c-41f4-8018-a40ea4a0738e",
+  "label": "Fitted attenuation is equivalent to countability and rooted closed grounding collections",
+  "paraphrase": "At a fixed world and grounding relation, some numerical assignment satisfies attenuated reception exactly when the actual concreta are countable and each nonempty supplier-closed collection of them contains an actual root.",
+  "lean_declaration": "TruthCore.Causality.ClosedGroundingRoots.AttenuationFitCriterion",
+  "definition_ids": [
+    "14e3be39-e587-4d9a-a48e-c48885ecd260",
+    "38b9012a-472b-4544-a271-16d22b25c9ac"
+  ]
+}

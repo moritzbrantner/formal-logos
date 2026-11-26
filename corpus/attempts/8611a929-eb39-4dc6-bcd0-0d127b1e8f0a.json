@@ -3,15 +3,42 @@
   "label": "Finite dissipative store test for actual power and grounding",
   "date": "2026-11-10",
   "statement_ids": [
-    "97f5850f-62bc-5e43-a0c1-dd1033d08fc9"
+    "97f5850f-62bc-5e43-a0c1-dd1033d08fc9",
+    "3e40edc9-ff92-4726-b7e1-26ef310e47e8",
+    "a2c5ea55-c818-45a3-ace9-5bc2e86f3d51",
+    "5a6103e6-5335-4319-889f-6fa9d1b60831"
   ],
   "kind": "derivation",
   "outcome": "blocked",
-  "summary": "Energy ledger bounds and controls checked in shared Lean preview; closed nondepleting dissipation requires input, but finite closed stock permits transient and indefinitely decreasing positive interval output. Conservation alone supplies neither contraction nor an independent bearer. Existing PowerExistenceBoundary separates underived power from esse support; no physical abstraction to that profile certified. Details, failed drafts, exact preview binding, rival costs, rough-draft corrections and next tests: docs/notes/productive-store-1378.md. Final delivered-head certification pending. Continuation: uniform interval demand yields n*epsilon <= stock0 and Archimedean exclusion; geometric discharge has no uniform positive bound. A positive shrinking load profile restores the reservoir rival. Full draft, failed type inference, time/dimension analysis and exact application blockers are persisted in the same linked note; final CI and semantic challenge pending.",
-  "blocker": "Need same-resource/time abstraction for parent per-se exercise, physical dynamics/boundary completeness, and independently warranted connection between energy transmission and existential support. Master reassessment and independent semantic challenge required.",
+  "summary": "Energy ledger bounds and controls checked in shared Lean preview; closed nondepleting dissipation requires input, but finite closed stock permits transient and indefinitely decreasing positive interval output. Conservation alone supplies neither contraction nor an independent bearer. Existing PowerExistenceBoundary separates underived power from esse support; no physical abstraction to that profile certified. Details, failed drafts, exact preview binding, rival costs, rough-draft corrections and next tests: docs/notes/productive-store-1378.md. Final delivered-head certification pending. Continuation: uniform interval demand yields n*epsilon <= stock0 and Archimedean exclusion; geometric discharge has no uniform positive bound. A positive shrinking load profile restores the reservoir rival. Full draft, failed type inference, time/dimension analysis and exact application blockers are persisted in the same linked note; final CI and semantic challenge pending. The sustained-demand comparison subsequently received qualified review with a work-versus-total-output correction at c73e17dfb. The finite audit now characterizes precisely when the named input is required. A separate comparison checks the effect of longer runs on the weight of the whole stored-reserve account under one fixed capacity distribution.",
+  "blocker": "For the same receiver and time boundary, independently constrain the stock at the cut and aggregate inputs from other channels. Probabilistic application also needs a justified capacity distribution and likelihood for the supplied account. Applying power transmission to the existence of this bearer requires a separate bridge.",
   "evidence": [
     "545f7f99-b00a-403b-bcf5-27ede3214ee1",
     "46bfce3d-7901-407c-8ed2-34ee086dfc00",
-    "PR-1386"
-  ]
+    "PR-1386",
+    "7dbeaf65-ca3f-43f3-bd26-4925fa1ee349",
+    "75361108-193f-467a-ace9-5aeb85f9668a",
+    "7b8f7bc0-de2b-4b4d-8f9f-cfdb34c1250c",
+    "cf1d1310-7fb8-480e-8252-ccf700e2505a",
+    "a268b937-edc1-5f68-b996-9f3489809979",
+    "PR-2005"
+  ],
+  "current_assessment": {
+    "date": "2026-11-26",
+    "statement_ids": [
+      "97f5850f-62bc-5e43-a0c1-dd1033d08fc9",
+      "3e40edc9-ff92-4726-b7e1-26ef310e47e8",
+      "a2c5ea55-c818-45a3-ace9-5bc2e86f3d51",
+      "5a6103e6-5335-4319-889f-6fa9d1b60831"
+    ],
+    "scope": "Finitely many bounded observations of the same receiver after a cut, as evidence about its named feed.",
+    "assessment": "A prefix whose output exceeds available initial stock and other inputs forces a contribution from the named feed by that endpoint. If all prefixes fit the independent bounds, a zero-feed ledger exists. Rumford’s chip comparison bears on a specific proposed heat store. The boiling time by itself sets no capacity bound. Under a fixed proper prior over finite reserves and positive class weights, sustained unit output eventually favors replenishment by each prescribed finite factor if its likelihood stays bounded below and the storage likelihood is at most the mass of reserves that fit. When each stored reserve delivers one unit per interval until empty, a full-support geometric capacity prior gives positive storage likelihood at every finite length. The receiver may have stored an earlier contribution, and its energy supplier may itself depend on another bearer for existence.",
+    "next_test": "Apply the prefix test to a receiver with independently calibrated initial stock, output, and bounds on every other feed. A comparison without an exhaustive stock bound needs independently calibrated reserve and supplied predictions. To use the result for the Second Way, trace giving in the very respect of the receiver’s existence.",
+    "note": "docs/notes/productive-store-1378.md#when-does-finite-output-require-a-particular-feed",
+    "review": "accepted_qualified",
+    "reviewed_revision": "f03eb49c4118f48869647d8aa2084ca0a85db915",
+    "publication": "published",
+    "evidence": "Independent review of the three registered results, the fixed and changing observations, the source application and the power/esse boundary at 9536c80f6. Targeted recheck accepted the historical and deterministic-reserve qualifications at f03eb49c4. The historical edition is preserved in formal-logos-sources PR #18. PR #2005.",
+    "supersedes": "Extends the earlier finite-store and sustained-demand comparisons and retains their energy and existence qualifications."
+  }
 }

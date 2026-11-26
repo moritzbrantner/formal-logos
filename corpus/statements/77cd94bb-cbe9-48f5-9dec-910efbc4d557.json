@@ -1,0 +1,12 @@
+{
+  "id": "77cd94bb-cbe9-48f5-9dec-910efbc4d557",
+  "label": "A specified supplierless ancestor exists exactly when a finite audit can certify that bearer",
+  "paraphrase": "On a fixed bearer type, take every supplier relation agreeing with the complete incoming lists of the audited recipients as an alternative. A specified bearer is actually supplierless and reaches the target by a finite path exactly when some audit of finitely many recipients certifies those two facts about that very bearer in every alternative. The target can itself be the supplierless bearer by the zero-edge path.",
+  "lean_declaration": "TruthCore.Causality.SupplierAuditCertificates.PositiveCertificateCriterion",
+  "definition_ids": [
+    "5b19527d-9418-441e-820c-3c659ba7cb12",
+    "3e9fb252-3f0b-4ed4-a683-7c36d255c357",
+    "c15c1634-6d70-4ecb-8b5b-5592df955223",
+    "05a2afda-c654-5f6b-a0f7-796c5dc1be2e"
+  ]
+}

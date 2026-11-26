@@ -67,7 +67,7 @@ Returns ranked records and note sections with their IDs and paths.",
         description: "Read registered Lean theorem signatures, proof sources and record status for a statement or question, followed by scoped research findings. Search a theorem by name or ask in ordinary language. Omit both fields for God-existence.",
         schema: || {
             json!({ "type":"object", "additionalProperties":false, "properties":{
-            "target":id_schema("Statement or argument UUID, legacy ID or exact label."),
+            "target":id_schema("Statement, argument or result UUID, legacy ID or exact label. A result opens its Lean certificate and argument."),
             "without":{"type":"array","maxItems":MAX_LIST,"items":id_schema("Withhold a premise or commitment of the selected argument.")},
             "question":{"type":"string","maxLength":1000,"description":"Research question in ordinary language."},
             "limit":limit_schema() } })

@@ -1,0 +1,33 @@
+[batch]
+vocab = "TruthCore.Causality.AttenuationFit"
+results = "TruthCore.Results.Causality.AttenuationFit"
+
+[[statement]]
+id = "Fitted attenuation is equivalent to countability and rooted closed grounding collections"
+lean = "TruthCore.Causality.ClosedGroundingRoots.AttenuationFitCriterion"
+paraphrase = "At a fixed world and grounding relation, some numerical assignment satisfies attenuated reception exactly when the actual concreta are countable and each nonempty supplier-closed collection of them contains an actual root."
+definitions = ["Attenuated per se reception of esse", "Closed-collection rootedness of actual grounding"]
+
+[[statement]]
+id = "Fixed positive amounts on a sole grounding edge admit attenuation exactly at a strict decrease"
+lean = "TruthCore.Causality.ClosedGroundingRoots.FixedAmounts.FixedAmountCriterion"
+paraphrase = "For every positive amount assignment to the two actual concreta in the one-edge profile, all the original reception constraints admit weights, own inputs and bounds exactly when the recipient's assigned amount is smaller than the giver's."
+definitions = ["Attenuated per se reception of esse"]
+
+[[argument]]
+id = "Characterize existence of an attenuation assignment on the actual grounding graph"
+theorem = "attenuationIffCountableAndClosedRooted"
+premises = []
+conclusion = "Fitted attenuation is equivalent to countability and rooted closed grounding collections"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Construct the attenuation weights along shortest finite paths from actual roots and use the forward closed-collection theorem"
+meaning = "The equivalence applies to one fixed world and actual concrete grounding relation. The fitted amount halves with each step from a root and the choice of supplier can ignore other incoming edges. The construction gives no reason to assign those amounts to actual esse independently of rootedness."
+
+[[argument]]
+id = "Solve the fixed-amount reception constraints on the two-bearer grounding profile"
+theorem = "fixedAmountCriterion"
+premises = []
+conclusion = "Fixed positive amounts on a sole grounding edge admit attenuation exactly at a strict decrease"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Use the single eligible positive weight and zero own input at the recipient, and construct a fitting weight from the ratio of the fixed amounts"
+meaning = "The actual graph, world, and two identities stay fixed while amounts range over positive assignments. Equal amounts are incompatible even on this rooted graph. A strict decrease suffices in the two-bearer profile. A general sole-supplier recipient satisfies the same necessary inequality."

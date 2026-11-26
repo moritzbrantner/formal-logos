@@ -2,6 +2,7 @@
 use super::retrieval::{LeanSource, Query};
 use crate::{Corpus, Record, synthesis::result_witness};
 use rusqlite::{Connection, params};
+use serde::Serialize;
 use serde_json::{Value, json};
 use std::{collections::BTreeMap, path::Path};
 
@@ -42,6 +43,89 @@ fn witness(root: &Path, corpus: &Corpus, result: &Record) -> Value {
     evidence
 }
 
+#[derive(Serialize)]
+struct AttemptCitation<'a> {
+    attempt_id: &'a str,
+    path: &'a str,
+}
+
+/// Resolve only canonical result IDs explicitly listed in the displayed
+/// attempts' evidence. These citations belong to the attempt as a whole.
+pub(super) fn cited_results(
+    root: &Path,
+    corpus: &Corpus,
+    attempts: &[Value],
+    direct: &mut [Value],
+    limit: usize,
+) -> Vec<Value> {
+    let mut citations: BTreeMap<_, Vec<AttemptCitation<'_>>> = BTreeMap::new();
+    let mut cited_in_order = Vec::new();
+    for matched in attempts.iter().take(limit) {
+        let Some(attempt_id) = matched["attempt_id"].as_str() else {
+            continue;
+        };
+        let Some(attempt) = corpus.get("attempts", attempt_id) else {
+            continue;
+        };
+        let mut evidence: Vec<_> = attempt
+            .fields
+            .get("evidence")
+            .and_then(Value::as_array)
+            .into_iter()
+            .flatten()
+            .filter_map(Value::as_str)
+            .filter_map(|id| corpus.get("results", id))
+            .collect();
+        if matched["kind"] == "current_assessment"
+            && let Some(targets) = matched["statement_ids"].as_array()
+        {
+            // Keep earlier evidence accessible while giving this assessment's
+            // conclusions first place within the same investigation.
+            evidence.sort_by_cached_key(|result| {
+                !corpus
+                    .get("arguments", field(result, "argument_id"))
+                    .and_then(|argument| argument.fields.get("conclusion_statement_id"))
+                    .is_some_and(|conclusion| targets.contains(conclusion))
+            });
+        }
+        for result in evidence {
+            let sources = citations.entry(field(result, "id")).or_default();
+            if sources.is_empty() {
+                cited_in_order.push(result);
+            }
+            if sources
+                .last()
+                .is_none_or(|source| source.attempt_id != attempt_id)
+            {
+                sources.push(AttemptCitation {
+                    attempt_id,
+                    path: &attempt.path,
+                });
+            }
+        }
+    }
+    for result in direct {
+        let id = result["id"].as_str().unwrap_or_default();
+        if let Some(sources) = citations.remove(id) {
+            result["cited_by"] = json!(sources);
+        }
+    }
+    cited_in_order
+        .into_iter()
+        .filter_map(|result| {
+            citations
+                .remove(field(result, "id"))
+                .map(|sources| (result, sources))
+        })
+        .take(limit)
+        .map(|(result, sources)| {
+            let mut evidence = witness(root, corpus, result);
+            evidence["cited_by"] = json!(sources);
+            evidence
+        })
+        .collect()
+}
+
 pub(super) fn qualified_name(query: &str) -> bool {
     let name = query.trim().trim_matches('`');
     name.contains('.')
@@ -71,7 +155,7 @@ pub(super) fn find(
     limit: usize,
 ) -> rusqlite::Result<Vec<Value>> {
     let token = query.text.trim().trim_matches('`');
-    if token.is_empty() {
+    if token.is_empty() || limit == 0 {
         return Ok(Vec::new());
     }
     let exact_hits: Vec<_> = corpus
@@ -89,10 +173,10 @@ pub(super) fn find(
     let db = Connection::open_in_memory()?;
     db.execute_batch(
         "CREATE VIRTUAL TABLE proofs USING fts5(
-        id UNINDEXED, name, argument, conclusion, tokenize='porter unicode61'
+        id UNINDEXED, name, argument, conclusion_label, paraphrase, tokenize='porter unicode61'
     )",
     )?;
-    let mut insert = db.prepare("INSERT INTO proofs VALUES (?1,?2,?3,?4)")?;
+    let mut insert = db.prepare("INSERT INTO proofs VALUES (?1,?2,?3,?4,?5)")?;
     for (id, result) in corpus.records_by_id("results") {
         let Some(argument) = corpus.get("arguments", field(result, "argument_id")) else {
             continue;
@@ -107,14 +191,15 @@ pub(super) fn find(
             id,
             name,
             field(argument, "label"),
+            conclusion.map(|s| field(s, "label")).unwrap_or_default(),
             conclusion
                 .map(|s| field(s, "paraphrase"))
                 .unwrap_or_default()
         ])?;
     }
     let mut ranked = db.prepare(
-        "SELECT id, name || ' ' || argument || ' ' || conclusion
-        FROM proofs WHERE proofs MATCH ?1 ORDER BY bm25(proofs,0,2,2,1), id",
+        "SELECT id, name || ' ' || argument || ' ' || conclusion_label || ' ' || paraphrase
+        FROM proofs WHERE proofs MATCH ?1 ORDER BY bm25(proofs,0,2,2,2,1), id",
     )?;
     let mut rows = ranked.query([terms])?;
     let mut hits = Vec::new();

@@ -108,6 +108,18 @@ only by concreta. -/
 def ActualSuppliersOfConcretaConcrete (m : Profile W B) (w : W) : Prop :=
   ∀ x y, ActualConcrete m w x → m.ontic.ExistsAt w y → m.grounds w y x → m.concrete y
 
+/-- The reception constraints for specified weights, own inputs, amounts and bounds. -/
+def AttenuationLaws (m : Profile W B) (w : W)
+    (wt : {x // ActualConcrete m w x} → {x // ActualConcrete m w x} → ℝ)
+    (s P : {x // ActualConcrete m w x} → ℝ) (q M : ℝ) : Prop :=
+    0 ≤ q ∧ q < 1 ∧ 0 ≤ M ∧ (∀ v u, 0 ≤ wt v u) ∧ (∀ v, 0 ≤ s v) ∧
+    (∀ v, P v ≤ M) ∧ (∀ v, Summable (wt v)) ∧ (∀ v, ∑' u, wt v u ≤ q) ∧
+    (∀ v, Summable fun u => wt v u * P u) ∧
+    (∀ v, P v ≤ s v + ∑' u, wt v u * P u) ∧
+    (∀ v u, 0 < wt v u → m.grounds w u.1 v.1) ∧
+    (∀ u, 0 < s u → ∀ y, ¬ ActualConcreteGround m w y u.1) ∧
+    (∀ v, 0 < P v)
+
 /-- Per se reception of esse with uniform loss, on the actual concreta at `w`:
 the actual concreta are countable; each has an amount `P` of esse, positive and at
 most a common bound `M`; it receives weight `wt v u ≥ 0` only from an actual
@@ -119,13 +131,7 @@ def AttenuatedEsseReception (m : Profile W B) (w : W) : Prop :=
   Countable {x // ActualConcrete m w x} ∧
   ∃ (wt : {x // ActualConcrete m w x} → {x // ActualConcrete m w x} → ℝ)
     (s P : {x // ActualConcrete m w x} → ℝ) (q M : ℝ),
-    0 ≤ q ∧ q < 1 ∧ 0 ≤ M ∧ (∀ v u, 0 ≤ wt v u) ∧ (∀ v, 0 ≤ s v) ∧
-    (∀ v, P v ≤ M) ∧ (∀ v, Summable (wt v)) ∧ (∀ v, ∑' u, wt v u ≤ q) ∧
-    (∀ v, Summable fun u => wt v u * P u) ∧
-    (∀ v, P v ≤ s v + ∑' u, wt v u * P u) ∧
-    (∀ v u, 0 < wt v u → m.grounds w u.1 v.1) ∧
-    (∀ u, 0 < s u → ∀ y, ¬ ActualConcreteGround m w y u.1) ∧
-    (∀ v, 0 < P v)
+    AttenuationLaws m w wt s P q M
 
 namespace Control
 

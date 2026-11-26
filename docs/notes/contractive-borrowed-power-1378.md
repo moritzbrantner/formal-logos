@@ -492,12 +492,25 @@ bound and cumulative loss. These are mathematical interpretations of
 forwarding. [Actual esse tail](../../TruthCore/Results/Aquinas/DeEnte/ClosedEsseSource/Solution.lean)
 [Quantitative controls](../../TruthCore/Results/Causality/QuantitativeTransferPaths/Solution.lean)
 
-The theorem gives a conditional reason to expect an actual source where the
-amounts, bounds and losses are independently warranted for the same esse
-relation. If the countable bearers are already known to have finite root access,
-the quantities can be fitted to that access. Assign amount `(1/2)^d` at minimum
-upstream distance `d` to a root, with a single half-weight toward a nearer
-bearer and input one at each root. An impersonal whole can play the source role
+On a **countable** roster, the existence of some numerical assignment satisfying
+these laws is equivalent to every nonempty supplier-closed collection containing
+a root. The converse chooses a shortest path from an actual root to each bearer,
+assigns amount `(1/2)^d` at distance `d`, and gives weight `1/2` to one nearer
+supplier at each nonroot. Other actual edges can have weight zero. This works
+with cycles, arbitrarily long finite paths, or several roots. With no actual
+bearers both conditions hold vacuously. A fit obtained this way carries the
+evidence already supplied for rootedness. [Checked equivalence](../../corpus/results/a0f13ac8-5960-4949-a04a-10b8aa9fc69a.json)
+
+An independent measure makes a different prediction. If a recipient has one
+actual concrete supplier, its positive amount must be strictly smaller than
+the supplier's. In the two-bearer example this condition is also sufficient.
+Assigning both amount 1 rules out every admissible choice of weights and own
+inputs on the same rooted graph. Assigning 1 and 1/2 permits reception as above.
+To apply this comparison to esse requires a meaning for the amounts and grounds
+for the measured values and loss law independent of the root assignment.
+[Fixed-amount test](../../corpus/results/74c69bf9-9eaa-482e-9f77-158ef5761349.json)
+
+An impersonal whole can play the source role
 if it is an uncaused bearer in the same profile and has an actual supply path
 to this recipient. Taking the populated whole as primitive leaves that
 productive path to be shown if claimed. A proposed independent divine source

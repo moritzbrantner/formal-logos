@@ -1,0 +1,10 @@
+{
+  "id": "50ff9c2a-c482-4893-85d4-75915417e3c4",
+  "label": "Characterize finite certificates for a specified supplierless ancestor (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "77cd94bb-cbe9-48f5-9dec-910efbc4d557",
+  "rule": "Audit the specified root and the recipients along one finite actual path, and use the actual relation for factivity",
+  "meaning": "For a given audit the test is exact: the audit must cover the specified root, its list must be empty, and some actual path to the target must have all edge recipients audited. Necessity follows by deleting all unrecorded edges to test the path and by adding a self-edge to the specified bearer if its list was unaudited. This concerns ideal certificates on a fixed graph of suppliers.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

@@ -1,0 +1,10 @@
+{
+  "id": "a31283f5-6fd7-4698-af62-4a6e54eaead1",
+  "label": "Count distinct posits along an acyclic regress against a finite alternative (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "d899fe9f-2c8c-43aa-a2c4-2c8c2c06890b",
+  "rule": "Compose injectivity of a descending acyclic chain with separate charges, then compare extended natural and exact cardinalities",
+  "meaning": "This is a conditional application of cardinal parsimony. The headcount theorem fixes the charged carrier; charging beings as tokens and charging independent explanatory assumptions can produce different verdicts. With a common countably infinite inventory, the exact cardinalities of all objects agree in the displayed example. Empirical adequacy and philosophical preference require separate assessment.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

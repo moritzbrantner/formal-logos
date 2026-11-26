@@ -72,6 +72,7 @@ public import TruthCore.Logic.ReferenceAnchor
 public import TruthCore.Logic.ReflectiveCoherence
 public import TruthCore.Logic.Regress
 public import TruthCore.Logic.RegressDomains
+public import TruthCore.Logic.RegressHeadcount
 public import TruthCore.Logic.Relativism
 public import TruthCore.Logic.RetorsionApplications
 public import TruthCore.Logic.RevelationPositive

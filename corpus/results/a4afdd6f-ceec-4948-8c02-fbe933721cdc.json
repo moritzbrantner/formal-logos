@@ -1,0 +1,11 @@
+{
+  "id": "a4afdd6f-ceec-4948-8c02-fbe933721cdc",
+  "label": "Classify every parallel-ray solution and characterize when cuts force inactivity",
+  "argument_id": "da54653f-4689-4926-8329-6fe880969606",
+  "challenge_module": "TruthCore.Results.Causality.ParallelPowerTransmission.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ParallelPowerTransmission.Solution",
+  "theorem": "TruthCore.Results.Causality.ParallelPowerTransmission.activityClassification",
+  "comparator_config": "results/a4afdd6f-ceec-4948-8c02-fbe933721cdc/comparator.json",
+  "status": "solution-present",
+  "description": "For a populated ray, activity propagates upstream and requires every upstream link to be intact. Any position on the intact tail can recover activity from a common upstream position with the known active one, by repeated use of the local rule in the downstream direction. Conversely, each chosen tail satisfies that rule by splitting off its first intact link. Taking all rays as selected witnesses activity whenever a tail survives; any upstream cut forces inactivity in all assignments. The model stipulates transmission topology and link availability, and does not identify local activity with metaphysical efficient power or argue that an actual physical or metaphysical system has this shape."
+}

@@ -1,0 +1,12 @@
+{
+  "id": "36d2e4c0-3d45-467a-bf22-51eb0cc507ba",
+  "label": "Second Way controls for successor orientation and finite cycles",
+  "paraphrase": "Two interpretations of the exact Second Way vocabulary use all natural numbers, one respect and the same successor formula with reversed edge orientation. Both satisfy the other four Second Way inputs and have acyclic efficient causation. With n causing n+1, the per se relation is well-founded and 0 is a first efficient cause. With n+1 causing n, an injective per se regress starts at each number, the regress prohibition fails and there is no first efficient cause. A two-bearer cycle with no self-edges also violates the regress prohibition and allows an infinite traversal, but admits no injective infinite sequence.",
+  "lean_declaration": "TruthCore.Causality.PerSeRegressCardinality.SuccessorOrientationAndFiniteCycle",
+  "definition_ids": [
+    "4a101a4c-12de-53c8-80c6-de7a523ea9d9"
+  ],
+  "disambiguation_ids": [
+    "81c233d4-01b4-528c-8bbd-7da228443ffe"
+  ]
+}

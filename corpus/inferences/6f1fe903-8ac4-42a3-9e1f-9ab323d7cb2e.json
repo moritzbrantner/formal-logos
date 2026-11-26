@@ -1,0 +1,10 @@
+{
+  "id": "6f1fe903-8ac4-42a3-9e1f-9ab323d7cb2e",
+  "label": "Solve the fixed-amount reception constraints on the two-bearer grounding profile (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "19fdc01d-90af-4d78-b5df-b46d93a8dfaa",
+  "rule": "Use the single eligible positive weight and zero own input at the recipient, and construct a fitting weight from the ratio of the fixed amounts",
+  "meaning": "The actual graph, world, and two identities stay fixed while amounts range over positive assignments. Equal amounts are incompatible even on this rooted graph. A strict decrease suffices in the two-bearer profile. A general sole-supplier recipient satisfies the same necessary inequality.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

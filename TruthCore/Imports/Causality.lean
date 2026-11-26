@@ -26,6 +26,7 @@ public import TruthCore.Causality.AristotelianRivalRefutations
 public import TruthCore.Causality.AtomisticCausalSource
 public import TruthCore.Causality.AtomisticRequirementControl
 public import TruthCore.Causality.AtomisticUniversalCausePriority
+public import TruthCore.Causality.AttenuationFit
 public import TruthCore.Causality.BearerRegress
 public import TruthCore.Causality.BegunComingToBe
 public import TruthCore.Causality.BoundedPastResource
@@ -119,6 +120,7 @@ public import TruthCore.Causality.ExistsSenseMeaning
 public import TruthCore.Causality.FiniteBranching
 public import TruthCore.Causality.FiniteEsseDependence
 public import TruthCore.Causality.FiniteNecessaryUnion
+public import TruthCore.Causality.FiniteReserveOdds
 public import TruthCore.Causality.FiniteRestriction
 public import TruthCore.Causality.FiniteThroughput
 public import TruthCore.Causality.FirstMoverNecessity
@@ -192,6 +194,7 @@ public import TruthCore.Causality.NecessarySupportActualScope
 public import TruthCore.Causality.NecessarySupportCoverage
 public import TruthCore.Causality.NecessarySupportPathConnection
 public import TruthCore.Causality.NonlimitingConcreteExistence
+public import TruthCore.Causality.OccamRegress
 public import TruthCore.Causality.OccurrenceUnderivedEssence
 public import TruthCore.Causality.OneDependenceOrder
 public import TruthCore.Causality.OperationLocalFiniteness
@@ -199,6 +202,7 @@ public import TruthCore.Causality.OriginDeletion
 public import TruthCore.Causality.OriginExerciseBridge
 public import TruthCore.Causality.OriginToleranceIdentity
 public import TruthCore.Causality.OwnerEndpointCalibration
+public import TruthCore.Causality.ParallelPowerTransmission
 public import TruthCore.Causality.ParityUnionRegress
 public import TruthCore.Causality.PartFreePlurality
 public import TruthCore.Causality.PartMediatedSelfMotion
@@ -206,6 +210,7 @@ public import TruthCore.Causality.ParticipatedDuration
 public import TruthCore.Causality.ParticipatedEsseScale
 public import TruthCore.Causality.ParticularActuality
 public import TruthCore.Causality.PerAccidensResponses
+public import TruthCore.Causality.PerSeRegressCardinality
 public import TruthCore.Causality.PerfectionOfBeing
 public import TruthCore.Causality.PerfectionPreexistence
 public import TruthCore.Causality.PerfectionTransferGrounding
@@ -213,6 +218,7 @@ public import TruthCore.Causality.PluralRootConfluence
 public import TruthCore.Causality.PossessionSensitiveAppetite
 public import TruthCore.Causality.PossibleCausalSourceNecessity
 public import TruthCore.Causality.PossibleCauseOfContingency
+public import TruthCore.Causality.PostCutStore
 public import TruthCore.Causality.Power1392
 public import TruthCore.Causality.Power1392Exercise
 public import TruthCore.Causality.PowerExistenceBoundary
@@ -286,6 +292,7 @@ public import TruthCore.Causality.SubtractionArgument
 public import TruthCore.Causality.SuccessionPotency
 public import TruthCore.Causality.Supertasks
 public import TruthCore.Causality.SupplierAudit
+public import TruthCore.Causality.SupplierAuditCertificates
 public import TruthCore.Causality.SurveyCapabilityControls
 public import TruthCore.Causality.SurveyCapabilityProfiles
 public import TruthCore.Causality.SurveyExternalCause

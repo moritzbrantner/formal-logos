@@ -1,0 +1,19 @@
+[batch]
+vocab = "TruthCore.Logic.RegressHeadcount"
+results = "TruthCore.Results.Logic.RegressHeadcount"
+
+[[statement]]
+id = "Occam's razor and the headcount of a finite explanation versus an infinite regress"
+lean = "RegressHeadcountCriterion"
+paraphrase = "A headcount advantage surviving every finite addition is exactly a finite charged inventory against an infinite one. An acyclic regress supplies an infinite charged inventory if its visited bearers have distinct charges. A shared countable infinity of other objects can make two total inventories equipotent despite this advantage in additions."
+definitions = ["Headcount advantage after every finite addition"]
+
+[[argument]]
+id = "Count distinct posits along an acyclic regress against a finite alternative"
+theorem = "headcountCriterion"
+comparator_theorems = ["finiteAdditionCriterion", "pairedCharges"]
+premises = []
+conclusion = "Occam's razor and the headcount of a finite explanation versus an infinite regress"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Compose injectivity of a descending acyclic chain with separate charges, then compare extended natural and exact cardinalities"
+meaning = "This is a conditional application of cardinal parsimony. The headcount theorem fixes the charged carrier; charging beings as tokens and charging independent explanatory assumptions can produce different verdicts. With a common countably infinite inventory, the exact cardinalities of all objects agree in the displayed example. Empirical adequacy and philosophical preference require separate assessment."

@@ -1,0 +1,9 @@
+{
+  "id": "3e9fb252-3f0b-4ed4-a683-7c36d255c357",
+  "label": "Full supplier predecessor cone of a target",
+  "term": "full supplier predecessor cone",
+  "definition": "predecessorCone supplies target is the set of all bearers with a finite directed path to target in the supplied relation. The zero-edge path includes target itself. The cone is computed separately for each candidate relation.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.SupplierAuditCertificates.predecessorCone",
+  "note": "This applies Mathlib Relation.ReflTransGen to the supplier relation as in SupplierAudit.finiteAuditRootUndecided. The relation is a parameter. An application to actual esse needs the fixed actual-cause profile and a separate evidence interpretation."
+}

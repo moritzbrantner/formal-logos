@@ -1,0 +1,16 @@
+{
+  "id": "2ff49c52-e70c-445b-b9b7-d5d757498237",
+  "label": "Finite observation criterion for zero replenishment from the named feed",
+  "premise_statement_ids": [
+    "133b5366-c519-4df2-8d44-17d8fb94ee39"
+  ],
+  "conclusion_statement_id": "3e40edc9-ff92-4726-b7e1-26ef310e47e8",
+  "inference_ids": [
+    "4213ee24-5dcf-4c78-bd63-31ce4aca325a"
+  ],
+  "meaning": "The existing cumulative energy bound yields the required inequality for every prefix of any compatible ledger with zero named replenishment. If all prefix inequalities hold, take initial stock at its upper bound, other feed at its upper bounds, and output at its lower bounds. The difference between cumulative allowed energy and cumulative required output gives nonnegative stock at every boundary, so the ledger realizes those bounds with zero named feed.",
+  "definition_ids": [
+    "4826b5ea-c643-44f1-ba1f-4247175f4d76",
+    "e5cefbf6-0c52-47d9-b9a6-66c0ebf65e73"
+  ]
+}

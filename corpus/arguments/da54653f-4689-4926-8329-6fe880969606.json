@@ -1,0 +1,13 @@
+{
+  "id": "da54653f-4689-4926-8329-6fe880969606",
+  "label": "Classify every parallel-ray solution and characterize when cuts force inactivity",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "c98408fd-f39e-4f47-a104-36b4c52ef617",
+  "inference_ids": [
+    "1ae6b614-2609-4561-a5dd-57f57b0c5767"
+  ],
+  "meaning": "For a populated ray, activity propagates upstream and requires every upstream link to be intact. Any position on the intact tail can recover activity from a common upstream position with the known active one, by repeated use of the local rule in the downstream direction. Conversely, each chosen tail satisfies that rule by splitting off its first intact link. Taking all rays as selected witnesses activity whenever a tail survives; any upstream cut forces inactivity in all assignments. The model stipulates transmission topology and link availability, and does not identify local activity with metaphysical efficient power or argue that an actual physical or metaphysical system has this shape.",
+  "definition_ids": [
+    "e1b95906-8d38-59c3-abee-0ccc1c9d333b"
+  ]
+}

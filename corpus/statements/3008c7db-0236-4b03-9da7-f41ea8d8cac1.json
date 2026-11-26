@@ -1,0 +1,13 @@
+{
+  "id": "3008c7db-0236-4b03-9da7-f41ea8d8cac1",
+  "label": "Each actual esse bearer admits a finite audit of a particular actual root ancestor",
+  "paraphrase": "OPEN analyst premise, attribution deferred. On one fixed q3a4 profile, each actual esse bearer x has a particular actual bearer r and a finite set of audited recipients. Every relation on the fixed roster agreeing with the full incoming lists of ActualEsseCause at those recipients gives r no supplier and a finite directed path from r to x, permitting zero edges when r is x. The root and audited set may vary with x. This is structural availability of a certificate, with no assertion that an observer has performed an audit.",
+  "lean_declaration": "TruthCore.Latin.Aquinas.DeEnte.FiniteEsseRootAudit.EveryActualEsseBearerHasFiniteRootAudit",
+  "definition_ids": [
+    "5b19527d-9418-441e-820c-3c659ba7cb12",
+    "c15c1634-6d70-4ecb-8b5b-5592df955223",
+    "05a2afda-c654-5f6b-a0f7-796c5dc1be2e",
+    "8163859b-95b3-4dd2-8a69-541bd332f32f",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"
+  ]
+}

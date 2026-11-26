@@ -1,0 +1,13 @@
+{
+  "id": "bb03c03f-26f2-4266-ae24-4b91ab2f2143",
+  "label": "Derive eventual posterior preference from the shrinking mass of fitting finite reserves (inference)",
+  "input_statement_ids": [
+    "3e40edc9-ff92-4726-b7e1-26ef310e47e8",
+    "7b3c4ab3-9453-4818-8791-4e63890dd84a"
+  ],
+  "output_statement_id": "5a6103e6-5335-4319-889f-6fa9d1b60831",
+  "rule": "Specialize the finite ledger, sum the compatible prior tail, and compare positive fixed weights",
+  "meaning": "The finite ledger criterion forces the initial reserve bound to cover the observed total. A reserve that falls by one unit per interval realizes the trace for every sufficient bound. The proper prior's tail tends to zero, so any stored likelihood below it eventually loses by the prescribed factor to a supplied likelihood with a uniform positive lower bound. The class weights may be normalized together. At each fixed length the distribution assigning mass (1/2)^(m+1) to bound m leaves positive deterministic stored weight, so the fixed-weight preference criterion excludes domination by every factor at that length. The result compares these modeled accounts of the same output and requires an application to justify the prior, the class likelihoods, and the fixed no-feed interpretation of the stored rival.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

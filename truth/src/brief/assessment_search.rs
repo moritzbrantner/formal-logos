@@ -342,14 +342,16 @@ pub fn report_for_root(
         text.insert_str(text.find('\n').unwrap_or(text.len()), &excerpt);
         report["note_match"] = note;
     }
-    let results =
+    let mut results =
         super::proof_search::find(root, corpus, &query, limit).map_err(|err| err.to_string())?;
+    let matches = report["matches"].as_array().map_or(&[][..], Vec::as_slice);
+    let cited = super::proof_search::cited_results(root, corpus, matches, &mut results, limit);
     let library = if identifier && results.is_empty() {
         super::proof_search::library_declaration(root, &query.text)
     } else {
         None
     };
-    let proof_section = if let Some(declaration) = &library {
+    let mut proof_section = if let Some(declaration) = &library {
         let path = string(declaration, "path");
         let label = if std::path::Path::new(path).ends_with("Challenge.lean") {
             "Frozen Lean specification"
@@ -362,39 +364,65 @@ pub fn report_for_root(
             string(declaration, "source")
         )
     } else if results.is_empty() {
-        "\n\nNo registered Lean result matched this question.".to_owned()
+        if identifier {
+            "\n\nNo registered Lean result matches this identifier.".to_owned()
+        } else {
+            "\n\nNo direct text match for a registered Lean result.".to_owned()
+        }
     } else {
-        let rendered = results
-            .iter()
-            .enumerate()
-            .map(|(i, r)| {
-                let mut entry = format!(
-                    "{}\n{}",
-                    string(r, "argument_label"),
-                    crate::synthesis::format_result_witness(r)
-                );
-                if i == 0 && !string(r, "argument_meaning").is_empty() {
-                    entry.push_str(&format!(
-                        "\nRecorded interpretation — {}",
-                        string(r, "argument_meaning")
-                    ));
-                }
-                entry.push_str(&format!(
-                    "\nInspect or withhold a premise — truth synthesis {}",
-                    string(r, "argument_id")
-                ));
-                entry
-            })
-            .collect::<Vec<_>>()
-            .join("\n\n");
-        format!("\n\nMatching Lean results\n{rendered}")
+        format!("\n\nMatching Lean results\n{}", render_results(&results))
     };
+    if !cited.is_empty() {
+        proof_section.push_str(&format!(
+            "\n\nLean results cited in the investigations' evidence history\n{}",
+            render_results(&cited)
+        ));
+    } else if results.is_empty() && !matches.is_empty() && limit > 0 {
+        proof_section.push_str(" The displayed investigations cite no registered Lean results.");
+    }
     text.insert_str(text.find('\n').unwrap_or(text.len()), &proof_section);
     report["lean_results"] = json!(results);
+    report["cited_lean_results"] = json!(cited);
     if let Some(declaration) = library {
         report["lean_declaration"] = declaration;
     }
     Ok((report, text))
+}
+
+fn render_results(results: &[Value]) -> String {
+    results
+        .iter()
+        .enumerate()
+        .map(|(i, result)| {
+            let mut entry = format!(
+                "{}\n{}",
+                string(result, "argument_label"),
+                crate::synthesis::format_result_witness(result)
+            );
+            if i == 0 && !string(result, "argument_meaning").is_empty() {
+                entry.push_str(&format!(
+                    "\nRecorded interpretation — {}",
+                    string(result, "argument_meaning")
+                ));
+            }
+            if let Some(citations) = result["cited_by"].as_array() {
+                entry.push_str(&format!("\nResult {}", string(result, "id")));
+                for citation in citations {
+                    entry.push_str(&format!(
+                        "\nCited in attempt evidence — {} ({})",
+                        string(citation, "attempt_id"),
+                        string(citation, "path")
+                    ));
+                }
+            }
+            entry.push_str(&format!(
+                "\nInspect or withhold a premise — truth synthesis {}",
+                string(result, "argument_id")
+            ));
+            entry
+        })
+        .collect::<Vec<_>>()
+        .join("\n\n")
 }
 
 fn note_passage(

@@ -91,15 +91,26 @@ struct Investigation<'a> {
     summary: &'a str,
     blocker: Option<&'a Value>,
     evidence: Vec<&'a str>,
-    #[serde(skip)]
-    current_scope: Option<Vec<&'a str>>,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    current_assessment: Option<&'a Value>,
+}
+
+impl Investigation<'_> {
+    fn assessment_of(&self, statement: &str) -> Option<&Value> {
+        self.current_assessment.filter(|assessment| {
+            assessment["statement_ids"]
+                .as_array()
+                .is_some_and(|ids| ids.iter().any(|id| id.as_str() == Some(statement)))
+        })
+    }
 }
 
 fn previous_investigations<'a>(
     corpus: &'a Corpus,
     scope: &BTreeSet<&str>,
+    cited_result: Option<&str>,
 ) -> Vec<Investigation<'a>> {
-    if scope.is_empty() {
+    if scope.is_empty() && cited_result.is_none() {
         return Vec::new();
     }
     corpus
@@ -107,25 +118,24 @@ fn previous_investigations<'a>(
         .filter_map(|(attempt_id, record)| {
             let fields = &record.fields;
             let statement_ids = list(fields, "statement_ids");
-            statement_ids
-                .iter()
-                .any(|id| scope.contains(id))
-                .then(|| Investigation {
-                    attempt_id,
-                    path: &record.path,
-                    label: text(fields, "label"),
-                    date: text(fields, "date"),
-                    statement_ids,
-                    kind: text(fields, "kind"),
-                    outcome: text(fields, "outcome"),
-                    summary: text(fields, "summary"),
-                    blocker: fields.get("blocker"),
-                    evidence: list(fields, "evidence"),
-                    current_scope: fields
-                        .get("current_assessment")
-                        .and_then(Value::as_object)
-                        .map(|assessment| list(assessment, "statement_ids")),
-                })
+            let evidence = list(fields, "evidence");
+            (statement_ids.iter().any(|id| scope.contains(id))
+                || cited_result.is_some_and(|id| evidence.contains(&id)))
+            .then(|| Investigation {
+                attempt_id,
+                path: &record.path,
+                label: text(fields, "label"),
+                date: text(fields, "date"),
+                statement_ids,
+                kind: text(fields, "kind"),
+                outcome: text(fields, "outcome"),
+                summary: text(fields, "summary"),
+                blocker: fields.get("blocker"),
+                evidence,
+                current_assessment: fields
+                    .get("current_assessment")
+                    .filter(|value| value.is_object()),
+            })
         })
         .collect()
 }
@@ -138,17 +148,14 @@ fn investigation_example(
         .iter()
         .filter(|entry| {
             !entry.summary.is_empty()
-                && entry.statement_ids.iter().any(|id| {
-                    relevant(id)
-                        && entry
-                            .current_scope
-                            .as_ref()
-                            .is_none_or(|scope| !scope.contains(id))
-                })
+                && entry
+                    .statement_ids
+                    .iter()
+                    .any(|id| relevant(id) && entry.assessment_of(id).is_none())
         })
         .min_by_key(|entry| {
             (
-                entry.current_scope.is_some(),
+                entry.current_assessment.is_some(),
                 Reverse(entry.date),
                 entry.attempt_id,
             )
@@ -423,7 +430,7 @@ pub fn build<'a>(
             objections.push(value);
         }
     }
-    let previous_investigations = previous_investigations(corpus, &scoped);
+    let previous_investigations = previous_investigations(corpus, &scoped, None);
     let target_attempt_paths = previous_investigations
         .iter()
         .filter(|entry| entry.statement_ids.contains(&target.id))

@@ -417,3 +417,76 @@ fn compare_a_selected_argument_without_bootstrapping_its_conclusion() {
     assert_eq!(recovered["recovered_inputs"], json!(["K"]));
     assert_eq!(recovered["derivation"], json!(["zero", "chosen"]));
 }
+
+#[test]
+fn result_reference_selects_its_certificate_and_replays_its_argument() {
+    let fixture = Fixture(
+        std::env::temp_dir().join(format!("truth-synthesis-result-{}", std::process::id())),
+    );
+    fixture.statement("P");
+    fixture.statement("T");
+    fixture.argument("edge", &["P"], "T", false);
+    fixture.write(
+        "results",
+        json!({"id":"second-result","argument_id":"edge",
+        "challenge_module":"Challenge","solution_module":"Solution","theorem":"secondProof",
+        "comparator_config":"test","status":"solution-present"}),
+    );
+    fixture.statement("Q");
+    for (id, reference, scope, judgment) in [
+        (
+            "a-earlier",
+            "second-result",
+            "Q",
+            "Judgment about another conclusion.",
+        ),
+        (
+            "direct-use",
+            "second-result",
+            "T",
+            "Warrant at the selected scope.",
+        ),
+        (
+            "sibling-use",
+            "result-edge",
+            "T",
+            "Judgment citing only the sibling.",
+        ),
+    ] {
+        fixture.assessment(id, &[scope], &["Q", "T"], judgment, "accepted_qualified");
+        let path = fixture.0.join("corpus/attempts").join(format!("{id}.json"));
+        let mut attempt: Value = serde_json::from_slice(&fs::read(path).unwrap()).unwrap();
+        attempt["evidence"] = json!([reference]);
+        fixture.write("attempts", attempt);
+    }
+    let output = fixture.run(&["second-result", "--without", "P", "--limit", "1", "--json"]);
+    assert!(
+        output.status.success(),
+        "{}",
+        String::from_utf8_lossy(&output.stderr)
+    );
+    let report: Value = serde_json::from_slice(&output.stdout).unwrap();
+    assert_eq!(report["selected_result_id"], "second-result");
+    let investigations = report["previous_investigations"].as_array().unwrap();
+    assert_eq!(investigations.len(), 2);
+    let direct = investigations
+        .iter()
+        .find(|entry| entry["attempt_id"] == "direct-use")
+        .unwrap();
+    assert_eq!(
+        direct["current_assessment"]["assessment"],
+        "Warrant at the selected scope."
+    );
+    let text = String::from_utf8(fixture.run(&["second-result", "--limit", "1"]).stdout).unwrap();
+    assert!(text.contains("Assessment of the conclusion (accepted_qualified, published)"));
+    assert!(text.contains("Warrant at the selected scope."));
+    assert!(text.contains("corpus/attempts/direct-use.json"));
+    assert!(!text.contains("Judgment about another conclusion."));
+    assert!(!text.contains("Judgment citing only the sibling."));
+    assert_eq!(report["argument"]["argument_id"], "edge");
+    assert_eq!(report["results"].as_array().unwrap().len(), 1);
+    assert_eq!(report["results"][0]["theorem"], "secondProof");
+    assert_eq!(report["selected_applicable"], false);
+    let argument: Value = serde_json::from_slice(&fixture.run(&["edge", "--json"]).stdout).unwrap();
+    assert_eq!(argument["results"].as_array().unwrap().len(), 2);
+}

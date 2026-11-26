@@ -1,10 +1,13 @@
-import TruthCore.Causality.EssentialPower
+import TruthCore.Results.Causality.ParallelPowerTransmission.Solution
 import TruthCore.Latin.Aquinas.DeEnte.ClosedEsseSource
 import TruthCore.Causality.Q44EssentialSource
 
 namespace InterruptedTransmission
 
 open TruthCore.Causality (PowerTransmissionRule)
+open TruthCore.Causality.ParallelPowerTransmission (intactTail)
+open TruthCore.Results.Causality.ParallelPowerTransmission
+  (transmissionEquation intactTailStep populatedRay)
 open TruthCore.Causality.Q44EssentialSource (ParticipatedHasEssentialSource)
 open TruthCore.Latin.Aquinas.DeEnte (ActualEsseCause)
 open TruthCore.Latin.Aquinas.DeEnte.ClosedEsseSource (tailAtState)
@@ -12,60 +15,22 @@ open TruthCore.Latin.Aquinas.DeEnte.ClosedEsseSource (tailAtState)
 /-- Link x carries from its immediate upstream neighbour x+1. -/
 def edge (live : Nat → Prop) (c x : Nat) : Prop := c = x + 1 ∧ live x
 
-def clearFrom (live : Nat → Prop) (x : Nat) : Prop :=
-  ∀ j, x ≤ j → live j
+def clearFrom (live : Nat → Prop) (x : Nat) : Prop := intactTail live x
 
 theorem equation {live active : Nat → Prop} :
     PowerTransmissionRule (edge live) active ↔
-      ∀ x, active x ↔ live x ∧ active (x + 1) := by
-  constructor
-  · intro law x
-    constructor
-    · intro hx
-      obtain ⟨c, ⟨rfl, intact⟩, hc⟩ := (law x).mp hx
-      exact ⟨intact, hc⟩
-    · rintro ⟨intact, hc⟩
-      exact (law x).mpr ⟨x + 1, ⟨rfl, intact⟩, hc⟩
-  · intro law x
-    constructor
-    · intro hx
-      obtain ⟨intact, hc⟩ := (law x).mp hx
-      exact ⟨x + 1, ⟨rfl, intact⟩, hc⟩
-    · rintro ⟨_, ⟨rfl, intact⟩, hc⟩
-      exact (law x).mpr ⟨intact, hc⟩
+      ∀ x, active x ↔ live x ∧ active (x + 1) :=
+  transmissionEquation (fun x => x + 1) live active
 
 theorem clearSolution (live : Nat → Prop) :
-    PowerTransmissionRule (edge live) (clearFrom live) := by
-  apply equation.mpr
-  intro x
-  constructor
-  · exact fun h => ⟨h x (Nat.le_refl _), fun j hj => h j (by omega)⟩
-  · rintro ⟨hx, h⟩ j hj
-    rcases Nat.eq_or_lt_of_le hj with rfl | hlt
-    · exact hx
-    · exact h j hlt
+    PowerTransmissionRule (edge live) (clearFrom live) :=
+  equation.mpr (intactTailStep live)
 
 /-- Nonemptiness selects a unique solution pointwise, for arbitrary sets of cuts.
     The punctured law itself always also admits the empty solution. -/
 theorem classify {live active : Nat → Prop} (law : PowerTransmissionRule (edge live) active)
-    (populated : ∃ z, active z) (x : Nat) : active x ↔ clearFrom live x := by
-  have eqn := equation.mp law
-  have upstream {n j : Nat} (h : n ≤ j) (hn : active n) : active j := by
-    induction h with
-    | refl => exact hn
-    | step _ ih => exact ((eqn _).mp ih).2
-  constructor
-  · intro hx j hj
-    exact ((eqn j).mp (upstream hj hx)).1
-  · intro clear
-    obtain ⟨z, hz⟩ := populated
-    have agree {j : Nat} (hj : x ≤ j) : active x ↔ active j := by
-      induction hj with
-      | refl => exact Iff.rfl
-      | step h ih =>
-        exact ih.trans ⟨fun hy => ((eqn _).mp hy).2,
-          fun hs => (eqn _).mpr ⟨clear _ h, hs⟩⟩
-    exact (agree (Nat.le_max_left x z)).mpr (upstream (Nat.le_max_right x z) hz)
+    (populated : ∃ z, active z) (x : Nat) : active x ↔ clearFrom live x :=
+  populatedRay (equation.mp law) populated x
 
 theorem populationCriterion (live : Nat → Prop) :
     (∃ active, PowerTransmissionRule (edge live) active ∧ ∃ z, active z) ↔

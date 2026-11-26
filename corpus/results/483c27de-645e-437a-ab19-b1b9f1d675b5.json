@@ -1,0 +1,11 @@
+{
+  "id": "483c27de-645e-437a-ab19-b1b9f1d675b5",
+  "label": "Diagonalize along the bottom positions of countably many intact successor rays",
+  "argument_id": "94ec39c9-8fe0-420c-a9c0-75c0ffc18a0a",
+  "challenge_module": "TruthCore.Results.Causality.ParallelPowerTransmission.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ParallelPowerTransmission.Solution",
+  "theorem": "TruthCore.Results.Causality.ParallelPowerTransmission.countableCatalogueMisses",
+  "comparator_config": "results/483c27de-645e-437a-ab19-b1b9f1d675b5/comparator.json",
+  "status": "solution-present",
+  "description": "Select ray i when entry i is false at (i, 0). Every link is intact, so the classification's realization satisfies local transmission. Agreement of entry i and the constructed value at (i, 0) would equate the entry with its own negation. The result concerns coverage of the space of allowed assignments and gives no complexity bound for an individual assignment, such as the uniformly active one."
+}

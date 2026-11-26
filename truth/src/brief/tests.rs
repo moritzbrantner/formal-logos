@@ -1969,10 +1969,17 @@ fn question_returns_frozen_lean_evidence_without_any_notes_or_assessments() {
         "TruthCore/Results/Fixture/Solution.lean",
         &source.replace("sorry", "exact h"),
     );
+    record(
+        &root,
+        "statements",
+        json!({"id":GOAL, "label":"Cardinality surcharge",
+        "paraphrase":"The goal follows."}),
+    );
     let corpus = Corpus::load(&root).unwrap();
     for question in [
         "TruthCore.Results.Fixture.goal",
         "goal from the open bridge",
+        "Cardinality surcharge",
     ] {
         let (result, text) =
             super::assessment_search::report_for_root(&root, &corpus, question, 2).unwrap();
@@ -2033,5 +2040,152 @@ fn question_returns_frozen_lean_evidence_without_any_notes_or_assessments() {
     let (miss, _) =
         super::assessment_search::report_for_root(&root, &corpus, "xylophones", 2).unwrap();
     assert_eq!(miss["lean_results"], json!([]));
+    std::fs::remove_dir_all(root).unwrap();
+}
+
+#[test]
+fn question_returns_explicit_attempt_evidence_when_result_text_does_not_match() {
+    let root = fixture("question-cited-lean-results");
+    let current = "d0000000-0000-4000-8000-000000000102";
+    let prior = "d0000000-0000-4000-8000-000000000103";
+    let second_result = "c0000000-0000-4000-8000-000000000002";
+    let uncited_result = "c0000000-0000-4000-8000-000000000003";
+    let theorem = "TruthCore.Results.Fixture.goal";
+    for (id, name) in [
+        (second_result, "corollary"),
+        (uncited_result, "independent"),
+    ] {
+        record(
+            &root,
+            "results",
+            json!({"id":id, "argument_id":ARGUMENT, "theorem":format!("TruthCore.Results.Fixture.{name}"),
+                "challenge_module":"TruthCore.Results.Fixture.Challenge",
+                "solution_module":"TruthCore.Results.Fixture.Solution",
+                "comparator_config":"results/x/comparator.json","status":"solution-present"}),
+        );
+    }
+    record(
+        &root,
+        "attempts",
+        json!({"id":current,"label":"Earlier readings","statement_ids":[GOAL, OPEN_PREMISE],
+            "evidence":[RESULT,second_result,"PR-41"],
+            "current_assessment":{
+                "scope":"Finite store after a cut",
+                "assessment":"A finite store allows sustained output after a cut. The open bridge still needs support.",
+                "statement_ids":[OPEN_PREMISE],"review":"accepted_qualified"
+            }
+        }),
+    );
+    record(
+        &root,
+        "attempts",
+        json!({"id":prior,"label":"Earlier readings","statement_ids":[GOAL],
+            "summary":"A finite store allows sustained output after a cut.",
+            "evidence":[RESULT,GOAL,"PR-42"]}),
+    );
+    let corpus = Corpus::load(&root).unwrap();
+    let run = |question, limit| {
+        super::assessment_search::report_for_root(&root, &corpus, question, limit).unwrap()
+    };
+    let source = |attempt_id| {
+        json!({
+            "attempt_id":attempt_id, "path":format!("corpus/attempts/{attempt_id}.json")
+        })
+    };
+    let question =
+        "Does sustained output after a cut require ongoing input or can a finite store explain it?";
+    let (report, text) = run(question, 3);
+    assert_eq!(report["lean_results"], json!([]));
+    let cited = report["cited_lean_results"].as_array().unwrap();
+    assert_eq!(cited.len(), 2);
+    assert_eq!(cited[0]["id"], RESULT);
+    assert_eq!(cited[0]["theorem"], theorem);
+    assert_eq!(
+        cited[0]["cited_by"],
+        json!([source(current), source(prior)])
+    );
+    assert_eq!(cited[1]["id"], second_result);
+    assert_eq!(cited[1]["cited_by"], json!([source(current)]));
+    assert_eq!(report["matches"][0]["statement_ids"], json!([OPEN_PREMISE]));
+    for term in [
+        "No direct text match for a registered Lean result.",
+        "Lean results cited in the investigations' evidence history",
+        &format!("Cited in attempt evidence — {prior} (corpus/attempts/{prior}.json)"),
+        &format!("Result {RESULT}"),
+        theorem,
+    ] {
+        assert!(text.contains(term), "{text}");
+    }
+    assert_eq!(text.matches(theorem).count(), 1);
+    assert!(!text.contains("PR-41"));
+
+    let (limited, _) = run(question, 1);
+    let cited = limited["cited_lean_results"].as_array().unwrap();
+    assert_eq!(cited.len(), 1);
+    assert_eq!(cited[0]["cited_by"], json!([source(current)]));
+
+    let (direct, text) = run("open bridge", 3);
+    assert_eq!(direct["lean_results"][0]["id"], RESULT);
+    assert_eq!(
+        direct["lean_results"][0]["cited_by"],
+        json!([source(current)])
+    );
+    assert_eq!(direct["cited_lean_results"], json!([]));
+    assert_eq!(text.matches(theorem).count(), 1);
+    assert!(text.contains(&format!("Cited in attempt evidence — {current}")));
+
+    let (exact, _) = run(theorem, 3);
+    assert_eq!(exact["lean_results"][0]["id"], RESULT);
+    assert!(exact["lean_results"][0].get("cited_by").is_none());
+    assert_eq!(exact["cited_lean_results"], json!([]));
+
+    let (miss, text) = run("two-world model", 3);
+    assert_eq!(miss["cited_lean_results"], json!([]));
+    assert!(text.contains("The displayed investigations cite no registered Lean results."));
+    std::fs::remove_dir_all(root).unwrap();
+}
+
+#[test]
+fn a_limited_question_preserves_proofs_about_the_current_assessment() {
+    let root = fixture("current-assessment-cited-proofs");
+    let recent = "c0000000-0000-4000-8000-000000000006";
+    let argument = "a0000000-0000-4000-8000-000000000006";
+    let attempt = "d0000000-0000-4000-8000-000000000106";
+    record(
+        &root,
+        "arguments",
+        json!({"id":argument, "label":"Recent consequence", "meaning":"The recent consequence follows from the supplied bridge.", "inference_ids":[INFERENCE],
+        "conclusion_statement_id":SERIES, "premise_statement_ids":[]}),
+    );
+    record(
+        &root,
+        "results",
+        json!({"id":recent, "argument_id":argument,
+        "theorem":"TruthCore.Results.Fixture.recent", "status":"solution-present", "challenge_module":"TruthCore.Results.Fixture.Challenge", "solution_module":"TruthCore.Results.Fixture.Solution", "comparator_config":"results/x/comparator.json"}),
+    );
+    record(
+        &root,
+        "attempts",
+        json!({"id":attempt, "label":"Earlier and later studies",
+        "statement_ids":[GOAL, SERIES], "evidence":[RESULT, recent],
+        "current_assessment":{"scope":"Finite supplier audits", "assessment":"Finite supplier audits identify the initial bearer.", "statement_ids":[SERIES]}}),
+    );
+    let corpus = Corpus::load(&root).unwrap();
+    for limit in [1, 2] {
+        let (report, _) = super::assessment_search::report_for_root(
+            &root,
+            &corpus,
+            "finite supplier audits",
+            limit,
+        )
+        .unwrap();
+        let citations = report["cited_lean_results"].as_array().unwrap();
+        assert_eq!(citations[0]["id"], recent);
+        assert_eq!(citations[0]["cited_by"][0]["attempt_id"], attempt);
+        assert_eq!(citations.len(), limit);
+        if limit == 2 {
+            assert_eq!(citations[1]["id"], RESULT);
+        }
+    }
     std::fs::remove_dir_all(root).unwrap();
 }

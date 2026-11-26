@@ -75,6 +75,58 @@ assumed for actual reality. The finite path can be zero steps and its endpoint
 is uncaused only relative to that per se relation; nothing establishes uniqueness,
 necessary existence, a temporal beginning, or God.
 
+## Does Occam’s razor favor a finite account of an infinite regress?
+
+The earlier proof needs finite ancestry for each dependent and acyclicity.
+An acyclic infinite path visits infinitely many distinct bearers. An endless
+walk around two bearers repeats them. Even paths of every finite length can
+occur under well-founded dependence. On the same infinite roster of natural
+numbers, letting each number cause its successor gives a first efficient
+cause, 0. Reversing the arrows gives an endless injective regress. Each
+ordering uses one successor rule. [Distinctness proof](../../corpus/results/WORLD-ACTUAL-SOURCE-OR-REGRESS.json)
+[Finite-depth control](../../corpus/results/REGRESS-ACCESSIBILITY-ALLOWS-UNBOUNDED-DEPTH.json)
+[Opposite causal orders](../../corpus/results/844a12de-ccf7-4e47-a30e-0fee51765eef.json)
+
+For accounts equally adequate to the same evidence, a headcount razor gives a
+finite inventory an advantage that survives **every finite addition** against
+an infinite inventory. If the units counted are independent explanatory posits,
+assigning a distinct charge to each bearer suffices. Charging each successive
+pair once also yields infinitely many distinct charges.
+The choice of baseline also matters. Against a shared countably infinite
+background, adding one thing or countably many yields equally large total
+inventories, despite the difference in additions. [Headcount criterion](../../corpus/results/e8f7aaef-0424-411f-bdc8-8a3671e3c932.json)
+
+In a two-hypothesis probability comparison, equal positive likelihoods leave
+the prior odds unchanged. Preference beyond every finite factor requires zero
+weight for the **whole** regress hypothesis. A uniform further discount at
+every depth yields zero for the whole class if the same sequence of depth
+events contains **every admitted regress alternative** in one prior model.
+For fair coin tosses, fixing one infinite sequence gives prefixes of weight
+`2⁻ⁿ`; the class of all infinite sequences has weight one.
+Strict discounts can still leave weight over: the earlier product
+with factors `1 − 1/(n+2)²` stays at least `1/2` at every depth from zero.
+Charging once for a shared generating law also permits positive weight at every
+depth. I therefore favor the finitely committed account when both accounts explain
+the same production and the rival incurs infinitely many independent
+commitments. The actual no-regress premise remains open. Applying the preference
+turns on which commitments this recipient’s explanation requires. A generating law needs grounds for applying to
+this actual series. A proposed source needs grounds for its productive role
+in it. [Odds](../../corpus/results/07aaa585-ecf4-4584-a679-c9f02d294fcf.json)
+[Unbounded preference](../../corpus/results/e2657ba9-e4e0-4961-a8cd-6fd50eb6167b.json)
+[Repeated discount](../../corpus/results/0d877e2b-86df-4bed-8275-49c1a614e2c7.json)
+[Single charge](../../corpus/results/3cb00ff1-e0c9-4874-badf-d7f499a49f92.json)
+[Nonuniform discount control](../../corpus/results/d1c3835a-f5c9-4acf-8664-aa7720ccbd45.json)
+
+### How many choices does a chain of borrowers require?
+
+Suppose each receiver is active exactly when its sole upstream link is intact and its supplier is active. On one intact infinite chain, the state of a single receiver determines the state of every bearer. With several uncoupled chains, every assignment of on or off to the chains is possible. After cuts, a chain still has one such choice if some upstream tail is intact. Switching that tail on activates precisely those receivers with every upstream link intact. Cuts arbitrarily far upstream force the whole chain off. This generalizes the [single-chain proof](q44-inferential-dependency.md#a-stronger-source-free-rival-under-interventions). [Lean classification](../../TruthCore/Results/Causality/ParallelPowerTransmission/Solution.lean)
+
+Even on countably many intact chains, “all on” specifies a whole state in two words. Yet any countable catalogue of fully specified states misses a possible one: on chain `i`, choose the opposite of what entry `i` says about receiver zero. That state differs from every entry of **that catalogue**. The actual state could be one of its simplest entries. [Diagonal argument](../../corpus/results/483c27de-645e-437a-ab19-b1b9f1d675b5.json)
+
+For the Second Way this separates two applications of the razor. A theory postulating fewer additional **beings** can win on ontological headcount. A theory ascribing the same state to infinitely many borrowers can still use one law and one state choice. Observing an active receiver fixes the choice on its own chain. Other chains with an intact tail remain free. Taking the observation itself as the productive explanation of that receiver would assume what needs explaining.
+
+Fix the receiver and the power whose exercise is at issue. If a verified cut blocks every relay input for that power, the relay-only rule predicts that the receiver ceases exercising it. A working feed on the receiver’s side that supplies that very power predicts its continued exercise. A source placed upstream of the break can give the same prediction as the relay-only rule. Even a verified surviving feed could itself receive power elsewhere. The existing [finite-grounding proof](../../corpus/results/FINITE-GROUNDING-HAS-SOURCE.json) reaches an intrinsic source under the substantive premise that actual power must travel a finite path from such a source. Whether actual giving of being requires that premise remains the crux. The [finite-store test](productive-store-1378.md#when-does-finite-output-require-a-particular-feed) shows what a sequence of measured outputs can establish about a candidate feed and when successive observations can change the odds.
+
 ## Omission controls and frontier
 
 Comparator checks a finite self-loop without loop exclusion, strict reverse

@@ -1,0 +1,9 @@
+{
+  "id": "3e40edc9-ff92-4726-b7e1-26ef310e47e8",
+  "label": "Stored energy and other feeds can cover a finite audit exactly when every prefix fits",
+  "paraphrase": "After a cut, a nonnegative upper bound on initial stored energy, lower bounds on output per interval, and upper bounds on other feed per interval (all nonnegative) admit a finite ledger with zero replenishment from the named feed exactly when every observed prefix's lower total output is at most the initial stock bound plus the prefix's upper total other feed.",
+  "lean_declaration": "TruthCore.Causality.PostCutStore.ZeroCandidateCriterion",
+  "definition_ids": [
+    "4826b5ea-c643-44f1-ba1f-4247175f4d76"
+  ]
+}

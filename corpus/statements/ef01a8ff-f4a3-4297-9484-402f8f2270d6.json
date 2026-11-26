@@ -1,0 +1,6 @@
+{
+  "id": "ef01a8ff-f4a3-4297-9484-402f8f2270d6",
+  "label": "Occam’s razor and infinite regress: uniform prefix discounts force zero hypothesis weight",
+  "paraphrase": "Suppose a nonnegative whole-hypothesis weight is bounded above by each of its prefix weights, the initial prefix weight is at most one, and each extension has weight at most a fixed fraction q of the previous prefix weight, with 0 ≤ q < 1. The whole-hypothesis weight is zero.",
+  "lean_declaration": "TruthCore.Causality.OccamRegress.UniformPrefixDiscount"
+}

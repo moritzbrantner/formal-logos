@@ -1,0 +1,10 @@
+{
+  "id": "3c24083c-0c1e-4130-8fc2-d75f158fb8b6",
+  "label": "Calculate finite and infinite regress odds at a common positive likelihood",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "da0d3984-b2c2-48db-9355-d65564ff1a7f",
+  "inference_ids": [
+    "9c9310d5-3844-4997-bdad-ebb6a2bf15e8"
+  ],
+  "meaning": "The hypotheses are compared at equal likelihood for the same observation. A defensible assignment of prior weights and a separate case for equal explanatory adequacy are application requirements. The likelihood calculation does not choose the priors or settle either hypothesis."
+}

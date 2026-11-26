@@ -24,6 +24,7 @@ public import TruthCore.Results.Causality.AtomisticNecessaryBeing.Solution
 public import TruthCore.Results.Causality.AtomisticNecessaryConstituent.Solution
 public import TruthCore.Results.Causality.AtomisticRequirementControl.Solution
 public import TruthCore.Results.Causality.AtomisticUniversalCausePriority.Solution
+public import TruthCore.Results.Causality.AttenuationFit.Solution
 public import TruthCore.Results.Causality.BearerRegress.Solution
 public import TruthCore.Results.Causality.BegunComingToBe.Solution
 public import TruthCore.Results.Causality.BoundedPastResource.Solution
@@ -179,6 +180,7 @@ public import TruthCore.Results.Causality.FiniteNecessaryUnion.Controls.Solution
 public import TruthCore.Results.Causality.FiniteNecessaryUnion.LocalWitness.Solution
 public import TruthCore.Results.Causality.FiniteNecessaryUnion.SourceBridge.Solution
 public import TruthCore.Results.Causality.FiniteReapersConsistent.Solution
+public import TruthCore.Results.Causality.FiniteReserveOdds.Solution
 public import TruthCore.Results.Causality.FiniteRestriction.Solution
 public import TruthCore.Results.Causality.FiniteThroughput.Solution
 public import TruthCore.Results.Causality.FirstMoverNecessity.Solution
@@ -280,6 +282,7 @@ public import TruthCore.Results.Causality.NecessarySupportPathConnection.Solutio
 public import TruthCore.Results.Causality.NecessaryWholeReplacement.Solution
 public import TruthCore.Results.Causality.NecessaryWitnessConnection.Solution
 public import TruthCore.Results.Causality.NonlimitingConcreteExistence.Solution
+public import TruthCore.Results.Causality.OccamRegress.Solution
 public import TruthCore.Results.Causality.OccurrenceUnderivedEssence.Solution
 public import TruthCore.Results.Causality.OneDependenceOrder.Solution
 public import TruthCore.Results.Causality.OriginDeletion.Solution
@@ -287,6 +290,7 @@ public import TruthCore.Results.Causality.OriginExerciseBridge.SelfEdge.Solution
 public import TruthCore.Results.Causality.OriginExerciseBridge.Solution
 public import TruthCore.Results.Causality.OriginToleranceIdentity.Solution
 public import TruthCore.Results.Causality.OwnerEndpointCalibration.Solution
+public import TruthCore.Results.Causality.ParallelPowerTransmission.Solution
 public import TruthCore.Results.Causality.ParityUnionRegress.Solution
 public import TruthCore.Results.Causality.PartFreePlurality.Solution
 public import TruthCore.Results.Causality.PartMediatedSelfMotion.Solution
@@ -294,6 +298,7 @@ public import TruthCore.Results.Causality.ParticipatedEsseScale.Solution
 public import TruthCore.Results.Causality.ParticularActuality.Solution
 public import TruthCore.Results.Causality.PastResourceControls.Solution
 public import TruthCore.Results.Causality.PerAccidensResponses.Solution
+public import TruthCore.Results.Causality.PerSeRegressCardinality.Solution
 public import TruthCore.Results.Causality.PerfectRootIntellectFromGovernor.Solution
 public import TruthCore.Results.Causality.PerfectRootPositiveIntellectWill.Solution
 public import TruthCore.Results.Causality.PerfectionOfBeing.Solution
@@ -303,6 +308,7 @@ public import TruthCore.Results.Causality.PluralRootConfluence.Solution
 public import TruthCore.Results.Causality.PossessionSensitiveAppetite.Solution
 public import TruthCore.Results.Causality.PossibleCausalSourceNecessity.Solution
 public import TruthCore.Results.Causality.PossibleCauseBruteSurvival.Solution
+public import TruthCore.Results.Causality.PostCutStore.Solution
 public import TruthCore.Results.Causality.PotencyPrivation.Solution
 public import TruthCore.Results.Causality.Power1392.Solution
 public import TruthCore.Results.Causality.Power1392Exercise.Solution
@@ -392,6 +398,7 @@ public import TruthCore.Results.Causality.SupertaskOscillation.Solution
 public import TruthCore.Results.Causality.SupertaskStableEndpoint.Solution
 public import TruthCore.Results.Causality.SupertaskUnitCostDiverges.Solution
 public import TruthCore.Results.Causality.SupertaskUrnPointwise.Solution
+public import TruthCore.Results.Causality.SupplierAuditCertificates.Solution
 public import TruthCore.Results.Causality.SurveyCapabilityProfiles.Solution
 public import TruthCore.Results.Causality.SurveyProductiveSource.Solution
 public import TruthCore.Results.Causality.SurveySourceEndpointControls.Solution

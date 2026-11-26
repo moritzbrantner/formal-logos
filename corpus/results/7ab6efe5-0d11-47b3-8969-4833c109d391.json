@@ -1,0 +1,11 @@
+{
+  "id": "7ab6efe5-0d11-47b3-8969-4833c109d391",
+  "label": "Characterize finite certificates for a specified supplierless ancestor",
+  "argument_id": "2bdee102-bbc5-43d0-9698-a672e1e47d6c",
+  "challenge_module": "TruthCore.Results.Causality.SupplierAuditCertificates.Challenge",
+  "solution_module": "TruthCore.Results.Causality.SupplierAuditCertificates.Solution",
+  "theorem": "TruthCore.Results.Causality.SupplierAuditCertificates.positiveCertificate",
+  "comparator_config": "results/7ab6efe5-0d11-47b3-8969-4833c109d391/comparator.json",
+  "status": "solution-present",
+  "description": "For a given audit the test is exact: the audit must cover the specified root, its list must be empty, and some actual path to the target must have all edge recipients audited. Necessity follows by deleting all unrecorded edges to test the path and by adding a self-edge to the specified bearer if its list was unaudited. This concerns ideal certificates on a fixed graph of suppliers."
+}

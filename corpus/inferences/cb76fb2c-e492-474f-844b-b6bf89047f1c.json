@@ -1,0 +1,10 @@
+{
+  "id": "cb76fb2c-e492-474f-844b-b6bf89047f1c",
+  "label": "Bound the whole regress hypothesis weight by geometrically decreasing prefix weights (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "ef01a8ff-f4a3-4297-9484-402f8f2270d6",
+  "rule": "Induct on prefix length and apply a geometric limit to the upper bounds",
+  "meaning": "Independent primitive commitments with a uniformly bounded cost can supply the displayed recurrence. The comparison needs an upper bound for the weight of the whole rival in every prefix event of the same prior model. A product for an individual sequence does not bound a union of alternative regresses. The application requires a reason that the rival's additional commitments incur the stipulated uniform cost.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

@@ -1,0 +1,36 @@
+[batch]
+vocab = "TruthCore.Causality.PostCutStore"
+results = "TruthCore.Results.Causality.PostCutStore"
+definitions = ["4826b5ea-c643-44f1-ba1f-4247175f4d76", "e5cefbf6-0c52-47d9-b9a6-66c0ebf65e73"]
+
+[[statement]]
+id = "Stored energy and other feeds can cover a finite audit exactly when every prefix fits"
+lean = "ZeroCandidateCriterion"
+definitions = ["4826b5ea-c643-44f1-ba1f-4247175f4d76"]
+paraphrase = "After a cut, a nonnegative upper bound on initial stored energy, lower bounds on output per interval, and upper bounds on other feed per interval (all nonnegative) admit a finite ledger with zero replenishment from the named feed exactly when every observed prefix's lower total output is at most the initial stock bound plus the prefix's upper total other feed."
+
+[[argument]]
+id = "2ff49c52-e70c-445b-b9b7-d5d757498237"
+label = "Finite observation criterion for zero replenishment from the named feed"
+theorem = "zeroCandidateCriterion"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+premises = ["133b5366-c519-4df2-8d44-17d8fb94ee39"]
+conclusion = "Stored energy and other feeds can cover a finite audit exactly when every prefix fits"
+rule = "Prefix energy accounting and construction of a finite ledger"
+meaning = "The existing cumulative energy bound yields the required inequality for every prefix of any compatible ledger with zero named replenishment. If all prefix inequalities hold, take initial stock at its upper bound, other feed at its upper bounds, and output at its lower bounds. The difference between cumulative allowed energy and cumulative required output gives nonnegative stock at every boundary, so the ledger realizes those bounds with zero named feed."
+
+[[statement]]
+id = "An output deficit after a cut forces replenishment from the named feed"
+lean = "CandidateReplenishmentBound"
+definitions = ["4826b5ea-c643-44f1-ba1f-4247175f4d76"]
+paraphrase = "In every compatible finite energy ledger after a cut, the named feed supplies at least the prefix's lower total output minus the bound on initial stored energy and the prefix's upper total other feed. A positive difference forces positive named replenishment in some interval of that prefix."
+
+[[argument]]
+id = "73173379-46f7-4261-b4a7-c448e5d9b157"
+label = "A crossed cumulative budget forces named replenishment after the cut"
+theorem = "candidateReplenishmentBound"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+premises = ["133b5366-c519-4df2-8d44-17d8fb94ee39"]
+conclusion = "An output deficit after a cut forces replenishment from the named feed"
+rule = "Prefix energy accounting"
+meaning = "The existing cumulative energy bound limits output by initial stock and the sum of both feeds. The initial stock and other feed upper bounds then give a lower bound on the total named feed over the prefix. If the lower bound is positive, at least one interval in that prefix has positive named feed."
