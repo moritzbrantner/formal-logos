@@ -431,6 +431,7 @@ an actual designer with the GOD_4 witness. This research changes no formal
 premise or root route.
 
 ## #2050: information in the report after observer selection
+[Research attempt](../../corpus/attempts/752c6644-d537-4efc-9e45-cbb08372be38.json)
 
 Fix the report to whether a sampled observer falls in the fine-evidence cell
 (cell 0 rather than cell 1). The channel uses the existing conditional event
