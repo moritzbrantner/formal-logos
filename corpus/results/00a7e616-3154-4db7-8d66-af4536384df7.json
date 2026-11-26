@@ -1,0 +1,11 @@
+{
+  "id": "00a7e616-3154-4db7-8d66-af4536384df7",
+  "label": "Computed cut responses test the productive bridge and the cessation law",
+  "argument_id": "42ad862a-f9fb-4334-a770-06dacb5f4b7e",
+  "challenge_module": "TruthCore.Results.Causality.StructuralCausalWithdrawal.Challenge",
+  "solution_module": "TruthCore.Results.Causality.StructuralCausalWithdrawal.Solution",
+  "theorem": "TruthCore.Results.Causality.StructuralCausalWithdrawal.calibratedContrast",
+  "comparator_config": "results/00a7e616-3154-4db7-8d66-af4536384df7/comparator.json",
+  "status": "solution-present",
+  "description": "Use the computed cut readout in each mechanism. For the survivor, the current-channel binding and the false channel bit exclude the designated giver independently of the later readout, and the calibration excludes every other candidate, including the receiver itself. The received bearer and a reason for its presence then contradict the productive bridge in that frame. For the loss, the unchanged earlier bit gives earlier presence and the false later bit gives later absence of the same bearer. The cessation law would supply an inducer in the very interval certified inducer-free. The calibration and the reason are hypotheses inside the quantified conclusion. Their applicability and the existence of an admissible pair are open. The test is linked to the assessment of the productive bridge through the withdrawal attempt and does not supply a root premise."
+}

@@ -1612,7 +1612,7 @@ The same judgment bears on the sustaining reading used by the per se Second Way,
 
 - [Necessary origin with existential inertia against the esse-priority source bundle](../../corpus/attempts/4b051644-666b-451e-8e09-b5b9356932f9.json)
 
-## Finite interventions and the productive bridge
+## 13. Finite interventions and the productive bridge
 
 Issue #2053 targets the productive bridge
 [`d86c9de9`](../../corpus/statements/d86c9de9-25be-488b-b3b7-69f5f4eb80b8.json).
@@ -1683,29 +1683,94 @@ question of the preceding section. A mere latent lookup is evidence of
 formal underdetermination, while the persistence law would do the
 explanatory work in the inertia interpretation.
 
-The missing bridge would map the natural and cut responses to two admissible
-histories of one `CausalityFrame`, agreeing about earlier presence
-`history.IsAt w x earlier`, receipt and the loss-inducer background. It
-would identify the current channel with the strict exercise
-`F.GivesAt w g x later`, prove its selective removal independently of the
-recipient readout, exclude alternative strict givers at that moment, and
-identify the readout with `history.IsAt w x later` for the same bearer.
-The immediate test is whether the bearer persists in such a cut history.
-Continuing presence with the momentary explanation and independently excluded
-givers would bear directly against the productive bridge in that instance.
-Loss would discriminate the stated models yet would still require the
-strict-giving interpretation and a scope argument to support the universal
-premise. Lamp behavior concerns illumination and supplies neither calibration.
-The possibility of a strict-giver cut and the preservation of the
-background remain the live blockers. The provisional assessment of the
-productive bridge therefore remains open at the warrant recorded above.
+### What a calibrated cut tests
 
-The [PR #2089 selector](https://github.com/moritzbrantner/formal-logos/pull/2089)
-is reused by `selection_forced`. In the context-and-valuation worlds of the
-SCM, a forced value gives a nonempty selection for that antecedent, and
-`Would` evaluates the consequent in the recomputed outcome. The missing
-history calibration would extend this use to `W` in the shared frame.
-For the persistence test the antecedent is absence of the **operation** at
-the selected moment. The specialized agent-absence test requires a separate
-bridge to the agent's ontic nonexistence. Identifying either absence with a
-Boolean assignment requires its own interpretation.
+[Calibration](../../TruthCore/Causality/StructuralCausalWithdrawal.lean)
+maps the natural and surgically modified valuations to a directed admissible
+pair in one `CausalityFrame`. This test uses the earlier point as the
+bearer's onset. The earlier bit represents the same bearer beginning at
+the same moment, where the same distinct originator gives it being in
+both histories. Absence of loss inducers is supplied for that bearer in
+both intervals, with the later endpoint included. The current bit is true
+iff the designated giver exercises strict `GivesAt` for the bearer at the
+later moment of that history. The cut value of this bit excludes that giver
+independently of the later report. A separate condition excludes every
+other giver at the cut endpoint, including the bearer itself. The later bit
+is true iff the same bearer is present there. This last identification
+requires a criterion for tracking the bearer of esse across histories, as
+in §10. A persistent report for a successor would give the wrong witness.
+
+The directed admissibility criterion is an application input. It licenses
+comparing the specified natural history with the cut history under those
+controls. Its justification must identify what fixes the giving operation
+and the loss background before reading later presence. The lamp illustrates
+selective control of a circuit with independently identifiable components and
+an illumination readout. A switch that merely records a controller state
+supplies a contrasting case, as does a lamp that continues to shine because
+a second power source takes over. The strict exercise that produces a
+bearer's esse and a criterion that excludes every other such exercise lack
+a corresponding independently calibrated case here. The equations are
+acyclic in their input graph. Neither the calibration nor its proof
+ascribes transitivity, asymmetry or well-foundedness to strict giving or
+to admissibility.
+
+[calibratedContrast](../../TruthCore/Results/Causality/StructuralCausalWithdrawal/Solution.lean)
+uses the computed responses in `Mechanism.single_channel_contrast`. The two
+consequences apply separately, each in the frame of its supplied calibration.
+
+| Cut outcome | Checked consequence | What would revise the assessment |
+| --- | --- | --- |
+| Background response retains presence | With received esse and a reason for presence at the cut endpoint, this instance falsifies the productive bridge in the matched frame. | Supply independently justified strict withdrawal, giver exclusion, bearer identity and a reason for the continuing presence. |
+| Responsive mechanism loses presence | With the earlier presence and no loss inducer in the interval, this instance falsifies `CessationNeedsInducer` in the matched frame. | A warranted calibration of this loss would favor sustaining for the tested bearer. A universal productive premise would still require an argument extending that case to the other receivers and times it covers. |
+
+The survivor uses one reason for presence, which the existing momentary PSR
+would supply. The distinct-giver condition is a separate input to the
+existing argument for strong concurrent giving. Since the survivor excludes
+every giver, it also challenges weak concurrent giving in the same frame.
+The stage-1 consumer is the existing route from weak concurrent giving
+through the sustaining reading, contact `c4661518` and the co-presence
+bridge to `2068f91c`. The registered result diagnoses the contested input
+`d86c9de9`; the case has no calibrated instance to use as a refutation.
+The direct option for `2068f91c` and other routes require their own assessment.
+
+### Warrant and next test
+
+The conservation account in §11 gives positive warrant for concurrent
+exercise insofar as the giver is a direct cause of the bearer's being.
+The inertia rival explains continuing presence by earlier actuality and
+a law that existential cessation requires an inducer. Prior presence and
+an independently established inducer-free interval would give the
+`originOrInertia` reason. The law would then rule out absence in that
+interval. Applicability of the law to the bearer and interval would give
+the explanation force beyond the background equation's latent lookup.
+The finite model imposes no law on loss and supplies no independent
+classification of withdrawal. If withdrawal itself induces loss, an
+observed loss is compatible with the inertial law. That response violates
+the specific no-inducer calibration in the table. No conflict with an
+accepted floor premise has been identified for inertia at this scope.
+
+**Provisional assessment.** Strict giving remains a defensible direct
+commitment. The SCM adds a discriminating test and leaves the positive
+warrant and standing of the two accounts as assessed in §§11–12. The
+unresolved step is an independently justified interpretation of the
+designated giver's later nonexercise as an admissible change in strict
+esse-giving with loss conditions held fixed. The next test is to specify
+one begun received bearer, a criterion for presence across the compared
+histories, and a criterion for that giver's exercise independent of its
+effect's fate. Apply the losing or surviving branch only once the same
+interval has been checked for independently characterized loss inducers
+and alternative givers. A rival that counts withdrawal as inducing loss
+must say how that event brings about cessation in this case. A loss readout
+alone gives no classification of the mechanism.
+
+`selection_forced` can transport the Boolean assignment only within its
+valuation worlds. The operation event here is
+`¬ F.GivesAt cut giver bearer later`, which follows from the false bit and
+the channel binding. The [agent-absence selector](https://github.com/moritzbrantner/formal-logos/pull/2089)
+targets `¬ F.history.ontic.ExistsAt cut giver`; reaching that event would
+require an additional implication from nonexercise or an independently
+chosen agent-absence history. The existing STIT `Admissible` includes
+the giver's continued ontic existence. Using a STIT cell for this cut
+would require identifying its mapped history and verifying absence of the
+same giver's exercise for the same recipient and effect moment. The
+withdrawal result uses no such transport.
