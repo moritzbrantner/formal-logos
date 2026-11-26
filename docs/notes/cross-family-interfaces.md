@@ -154,66 +154,17 @@ Candidate next migration: abstract just the repeated role-to-selected-root step 
 
 These patterns are close to the user's current intellect/will investigation, but should not generate a fresh God-identification route merely by abstracting predicates. New sense-specific instances must bind to existing root-role claims with explicit application evidence.
 
-## 9. Executed finite diagnostic controls
+## 9. Finite diagnostic controls checked in Lean
 
-A local Python standard-library enumeration was run during this survey. It checks the small mathematical profiles only, independently of Lean and the corpus. It does not certify the candidate proof terms or prove any actual-world application.
-
-```python
-from itertools import product
-B = (0, 1)
-maps = list(product(B, repeat=2))
-n = 0
-for tr, mv, sel, e in product(maps, maps, maps, B):
-    if tr[e] == e and sel[tr[e]] == mv[sel[e]]:
-        assert mv[sel[e]] == sel[e]
-        n += 1
-assert n == 32
-n = 0
-for mv, p, h in product(maps, maps, B):
-    if (p[h] and all(not p[x] or x == h for x in B)
-            and all(not p[x] or p[mv[x]] for x in B)):
-        assert mv[h] == h
-        n += 1
-assert n == 4
-bad = 0
-for obs, p in product(maps, maps):
-    invariant = all(obs[s] != obs[t] or p[s] == p[t]
-                    for s, t in product(B, repeat=2))
-    factors = any(all(c[obs[s]] == p[s] for s in B) for c in maps)
-    assert invariant == factors
-    bad += not invariant
-assert bad == 4  # of 16 profiles
-gap = 0
-for r in product(B, repeat=4):
-    R = lambda i, x: r[2*i+x]
-    local = all(any(R(i, x) for x in B) for i in B)
-    uniform = any(all(R(i, x) for i in B) for x in B)
-    assert not uniform or local
-    gap += local and not uniform
-assert gap == 2  # of 16 relations: diagonal and antidiagonal
-n = 0
-for allowed, obs, pos, truth in product(maps, maps, maps,
-                                        product(B, repeat=4)):
-    I = [i for i in B if allowed[i] and pos[obs[i]]]
-    holds = lambda i: bool(truth[2*obs[i]+i])
-    sound = all(holds(i) for i in I)
-    uniform = all(obs[i] != obs[j] or holds(i) == holds(j)
-                  for i, j in product(I, repeat=2))
-    witnesses = all(any(obs[i] == obs[j] and holds(j) for j in I) for i in I)
-    assert sound == (uniform and witnesses)
-    n += 1
-assert n == 1024  # includes empty scopes; vacuity explicitly retained
-gap = 0
-for a, b in product(maps, maps):
-    factive = a[0] and b[0]
-    sufficient = all(not a[v] or b[v] for v in B)
-    if all(a) and sufficient:
-        assert all(b)
-    gap += factive and not sufficient
-assert gap == 1  # actual factivity alone permits failure of modal sufficiency
-```
-
-The actual run reported 32 fixed-selector antecedent instances, four closed-unique instances, 16 factorization profiles (four failures of factorability), 16 witness relations (two local-without-uniform cases), 1,024 restricted positive-fiber profiles, and one case of actual factivity without modal sufficiency. The finite witness and factorization failures are not philosophical counterexamples to the existence of a necessary source; they discriminate the proposed logical transitions. No broader closure computation has run.
+The two-element fixtures include 32 fixed-selector antecedent instances,
+four closed-unique instances, 16 factorization profiles with four failures,
+16 witness relations with two local-without-uniform cases, 1,024 restricted
+positive-fiber profiles, and one case of actual factivity without modal
+sufficiency. The fixed-point cases apply the shared selection theorems.
+The finite witness and factorization failures distinguish the proposed
+logical transitions. The application to a necessary source requires its
+separate interpretive premises.
+[Fixed selector](../../TruthCore/Logic/InterfaceFiniteControls.lean#L26) · [Closed unique predicate](../../TruthCore/Logic/InterfaceFiniteControls.lean#L40) · [Classification](../../TruthCore/Logic/InterfaceFiniteControls.lean#L57) · [Witness scope](../../TruthCore/Logic/InterfaceFiniteControls.lean#L66) · [Restricted fibers](../../TruthCore/Logic/InterfaceFiniteControls.lean#L88) · [Modal scope](../../TruthCore/Logic/InterfaceFiniteControls.lean#L96)
 
 ## 10. Handoff for first implementation
 
