@@ -395,8 +395,8 @@ contents. The second judgment distinguishes the coextensive pair, so an
 extension criterion cannot reproduce it. Projecting its accepted contents
 to world predicates yields a judgment satisfying the extensional
 `565ccd6c` by `exerciseInNatureGivesEssentialExistence`. The exercise
-entry supplies the shared extension. The original judgment still rejects
-the existence content. The projection loses EC and the model's
+entry supplies the shared extension. The second content judgment still rejects
+the existence tag even though its projection accepts the shared world predicate. The projection loses EC and the model's
 essence-grounds-necessity clause. Its new entry is false at the accessible
 point `false`, where the bearer is absent. The changed judgment tests the
 substitution at this formal scope.
