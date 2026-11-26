@@ -1,0 +1,14 @@
+{
+  "id": "c54f0922-eb5c-4abd-9bde-6586e4127424",
+  "label": "STIT choice cell guarantees an outcome at a moment",
+  "kind": "stipulative",
+  "lean_declaration": "TruthCore.Modal.STIT.Cstit",
+  "term": "Withholding choice cell",
+  "definition": "At moment m, take agent g and a representative history k through m. Cstit g k p holds exactly when for every history j through m in the same setoid class as k under g’s choice partition at m, p holds at j. For a withholding cell, p says that g does not give x being in the world mapped from j.",
+  "basis": "stipulative",
+  "claim_ids": [],
+  "definition_ids": [
+    "62dfa893-b633-4513-9790-8f9a0a3087e0"
+  ],
+  "note": "One history of nonproduction does not establish control over a cell. Withholding requires nonproduction throughout the represented choice class."
+}
