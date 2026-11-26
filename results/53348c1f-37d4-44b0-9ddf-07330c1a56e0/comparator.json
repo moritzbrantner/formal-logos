@@ -2,6 +2,7 @@
   "challenge_module": "TruthCore.Results.Aquinas.DeEnte.UniversalGiverFork.Challenge",
   "solution_module": "TruthCore.Results.Aquinas.DeEnte.UniversalGiverFork.Solution",
   "theorem_names": [
+    "TruthCore.Results.Aquinas.DeEnte.UniversalGiverFork.sameGiverCriterionAtEsse",
     "TruthCore.Results.Aquinas.DeEnte.UniversalGiverFork.sameGiverCriterion",
     "TruthCore.Results.Aquinas.DeEnte.UniversalGiverFork.secondaryGiverControl"
   ],

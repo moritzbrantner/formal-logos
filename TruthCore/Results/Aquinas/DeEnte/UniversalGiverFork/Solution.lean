@@ -1,10 +1,12 @@
 module
 
 public import TruthCore.Latin.Aquinas.DeEnte.UniversalGiverFork
+public import TruthCore.Case.Catholicism.PreexistenceWithoutTransfer
 
 @[expose] public section
 
 namespace TruthCore.Results.Aquinas.DeEnte.UniversalGiverFork
+open TruthCore.Case.Catholicism.PreexistenceWithoutTransfer (CauseOfBeingIsMoreInBeing)
 open TruthCore.Greek.Aristotle.Metaphysics
 open TruthCore.Latin.Aquinas.DeEnte
 open TruthCore.Latin.Aquinas.DeEnte.UniversalGiverFork
@@ -15,13 +17,13 @@ open TruthCore.Causality.SelectedAncestry (Cone)
 open TruthCore.Causality.SelectedSourcePath (coneGraph selectedNode)
 open ClosedEsseSource (esseCauseGraph)
 
-theorem sameGiverCriterion {B P R : Type} (p : Profile B P R) (MoreIn : R → B → B → Prop)
+theorem sameGiverCriterionAtEsse {B P R : Type} (p : Profile B P R) (MoreIn : R → B → B → Prop)
     (hGiver : MaximeEnsCausesBeingOfAllReading p.InAct MoreIn p.CausesIn p.esse)
-    (hAscent : CauseOfQualityInAnotherIsMoreSuchReading p.CausesIn MoreIn) :
+    (hAscent : CauseOfBeingIsMoreInBeing p.CausesIn MoreIn p.esse) :
     SameGiverForkCriterion p MoreIn := by
   obtain ⟨s, hMax, hGives⟩ := hGiver
   have noIncoming (y : B) (hy : ActualEsseCause p y s) : False :=
-    hMax.2 y (hAscent y s p.esse hy.1 hy.2.2.2)
+    hMax.2 y (hAscent y s hy.1 hy.2.2.2)
   refine ⟨s, hMax, hGives, ?_⟩
   intro x
   let m := esseCauseGraph p
@@ -58,6 +60,12 @@ theorem sameGiverCriterion {B P R : Type} (p : Profile B P R) (MoreIn : R → B 
       exact (hne (Subtype.ext ((hOnly _ hy).trans (hOnly _ hz).symm))).elim
     · rw [atSource] at hy
       exact (noIncoming _ hy).elim
+
+theorem sameGiverCriterion {B P R : Type} (p : Profile B P R) (MoreIn : R → B → B → Prop)
+    (hGiver : MaximeEnsCausesBeingOfAllReading p.InAct MoreIn p.CausesIn p.esse)
+    (hAscent : CauseOfQualityInAnotherIsMoreSuchReading p.CausesIn MoreIn) :
+    SameGiverForkCriterion p MoreIn := by
+  exact sameGiverCriterionAtEsse p MoreIn hGiver (fun y x => hAscent y x p.esse)
 
 theorem secondaryGiverControl : SecondaryGiverControl := by
   have hGiver : MaximeEnsCausesBeingOfAllReading

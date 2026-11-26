@@ -53,4 +53,25 @@ abbrev SupplierPath (G : Graph N) (s x : N) :=
 abbrev SupplierPath.length {G : Graph N} {s x : N} (p : SupplierPath G s x) : Nat :=
   @Quiver.Path.length N (supplierQuiver G) s x p
 
+/-- A two-edge-deep cone with one middle supplier for every natural number. -/
+inductive WideConeNode
+  | root
+  | middle (n : Nat)
+  | tip
+
+inductive WideConeGround : WideConeNode → WideConeNode → Prop
+  | toMiddle (n : Nat) : WideConeGround .root (.middle n)
+  | toTip (n : Nat) : WideConeGround (.middle n) .tip
+
+def wideConeProfile : Profile Unit WideConeNode where
+  ontic := {
+    frame := ⟨fun _ _ => True⟩
+    ExistsAt := fun _ _ => True
+    Causes := fun _ _ _ => False }
+  concrete := fun _ => True
+  grounds := fun _ => WideConeGround
+
+def wideConeTip : {b // ActualConcrete wideConeProfile () b} :=
+  ⟨.tip, trivial, trivial⟩
+
 end TruthCore.Causality.SelectedSourcePath

@@ -14,7 +14,8 @@
     "1b1e3f09-f2e9-5949-9c3b-8f7fce26a403",
     "0881e859-c4c3-53ff-9bec-b61294e12d51",
     "d5a94eb1-72d2-53e0-9a52-9787b5b61a8d",
-    "b2337d92-cfcf-416c-af91-cd5d68a65f06"
+    "b2337d92-cfcf-416c-af91-cd5d68a65f06",
+    "cffad050-e86d-48b8-b04b-be47fcc1352d"
   ],
   "kind": "derivation",
   "outcome": "succeeded",
@@ -31,7 +32,7 @@
   "current_assessment": {
     "date": "2026-11-26",
     "scope": "When one source path suffices for termination, and when a secondary can give esse to the same recipient as a maximal giver under that condition.",
-    "assessment": "Starting at an actual concrete bearer, one finite path to a source with no actual concrete supplier suffices for well-foundedness of its complete ancestry if every pair of distinct suppliers of every member has a common immediate supplier, with immediacy fixed by the selected edges. Branching is allowed. Finite access to one source from every member alone admits an endless secondary line. One Git merge passes the local test while unequal lengths to one initial commit exclude the condition across its ancestry. Under universal esse giving by a maximum and causal ascent, strict joining on the actual esse relation is equivalent to all incoming gifts to this recipient coming from that maximum. A secondary giving esse here excludes that combination if both gifts use the same edges. A secondary may give another respect. If the primary only supplies through an intermediary, its universal giving on immediate edges requires a further premise.",
+    "assessment": "Starting at an actual concrete bearer, one finite path to a source with no actual concrete supplier suffices for well-foundedness of its complete ancestry if every pair of distinct suppliers of every member has a common immediate supplier, with immediacy fixed by the selected edges. The checked cone with infinitely many suppliers has depth two. Finite access to one source from every member alone admits an endless secondary line. One Git merge passes the local test while unequal lengths to one initial commit exclude the condition across its ancestry. Under universal esse giving by a maximum and causal ascent at esse, strict joining on the actual esse relation is equivalent to all incoming gifts to this recipient coming from that maximum. A secondary giving esse here excludes that combination if both gifts use the same edges. A secondary may give another respect. If the primary only supplies through an intermediary, its universal giving on immediate edges requires a further premise.",
     "next_test": "Identify the dependent whose existence the rim and spokes each directly supply. Check whether the same bearer directly supplies the existence of both parts and whether the first giver also gives the dependent its esse in this very relation. One matched fork is local evidence. Two source-ending paths of unequal length at the dependent would exclude strict joining across its ancestry.",
     "note": "docs/notes/part-free-plurality.md#when-does-one-source-path-account-for-every-branch",
     "statement_ids": [
@@ -40,9 +41,10 @@
       "1b1e3f09-f2e9-5949-9c3b-8f7fce26a403",
       "0881e859-c4c3-53ff-9bec-b61294e12d51",
       "d5a94eb1-72d2-53e0-9a52-9787b5b61a8d",
-      "b2337d92-cfcf-416c-af91-cd5d68a65f06"
+      "b2337d92-cfcf-416c-af91-cd5d68a65f06",
+      "cffad050-e86d-48b8-b04b-be47fcc1352d"
     ],
-    "evidence": "The selected-source result a18f7922 proves termination, equal lengths and the necessary-ancestor composition under their stated premises. Its controls include a genuine diamond, a common-source regress and a three-bearer change of edge scope. The same-giver result 53348c1f includes a secondary esse giver in a model of the two Thomistic premises. The linked Git parent records provide a separate check on the local-to-global inference.",
+    "evidence": "The selected-source result a18f7922 proves termination, equal lengths and the necessary-ancestor composition under their stated premises. Its controls include a genuine diamond, an infinite-width depth-two cone, a common-source regress and a three-bearer change of edge scope. The same-giver result 53348c1f includes a secondary esse giver in a model of the universal gift and ascent at esse. The earlier 74caa472 inference supplies this fixed-respect ascent from the broader d5a94eb1. The linked Git parent records provide a separate check on the local-to-global inference.",
     "reviewed_revision": "04f4d86c097874bb5c32694a3bf6d1cd066788ca",
     "review": "unreviewed",
     "publication": "unpublished",

@@ -181,4 +181,49 @@ theorem ancestralEdgeControl :
       ForksJoinInOneStep G ∧ ¬ ForksJoinInOneStep (TruthCore.Causality.GroundingEdgeScope.pathGraph G) :=
   TruthCore.Causality.GroundingEdgeScope.threeVertexChainSeparates
 
+/-- Every vertex belongs to the selected cone. The middle vertices are
+infinitely many distinct immediate suppliers of the tip and each has the
+root as immediate supplier. The existing criterion gives well-foundedness. -/
+theorem infiniteWidthControl :
+    (∀ y, Cone wideConeProfile () .tip y) ∧
+      (∃ f : Nat → {b // Cone wideConeProfile () .tip b},
+        Function.Injective f ∧ ∀ n,
+          (coneGraph wideConeProfile () .tip).edge (f n) (selectedNode wideConeProfile () wideConeTip) ∧
+            WideConeGround .root (f n).val) ∧
+      HasSelectedSourcePath wideConeProfile () wideConeTip ∧
+      SelectedForksJoinInOneStep wideConeProfile () wideConeTip ∧
+      ConeWellFounded wideConeProfile () .tip := by
+  have link {y z : WideConeNode} (h : WideConeGround y z) :
+      ActualConcreteGround wideConeProfile () y z :=
+    ⟨trivial, trivial, h⟩
+  have hCone (y : WideConeNode) : Cone wideConeProfile () .tip y := by
+    refine ⟨⟨trivial, trivial⟩, ?_⟩
+    cases y with
+    | root => exact .head (link (.toMiddle 0)) (.single (link (.toTip 0)))
+    | middle n => exact .single (link (.toTip n))
+    | tip => exact .refl
+  let root : {b // Cone wideConeProfile () .tip b} := ⟨.root, hCone .root⟩
+  let middle (n : Nat) : {b // Cone wideConeProfile () .tip b} := ⟨.middle n, hCone (.middle n)⟩
+  have hPath : HasSelectedSourcePath wideConeProfile () wideConeTip := by
+    refine ⟨root, .link (y := middle 0) (.toTip 0) (.link (y := root) (.toMiddle 0) (.same root)), ?_⟩
+    rintro ⟨⟨y, _⟩, hy⟩
+    change WideConeGround y .root at hy
+    cases hy
+  have hFork : SelectedForksJoinInOneStep wideConeProfile () wideConeTip := by
+    rintro ⟨x, hx⟩ ⟨y, hy⟩ ⟨z, hz⟩ hyx hzx hne
+    change WideConeGround y x at hyx
+    change WideConeGround z x at hzx
+    cases hyx with
+    | toMiddle n =>
+      cases hzx
+      exact (hne rfl).elim
+    | toTip n =>
+      cases hzx with
+      | toTip m => exact ⟨root, .toMiddle n, .toMiddle m⟩
+  refine ⟨hCone, ⟨middle, ?_, fun n => ⟨.toTip n, .toMiddle n⟩⟩,
+    hPath, hFork, coneWellFounded_of_sourcePath wideConeProfile () wideConeTip hPath hFork⟩
+  intro n m h
+  have heq : WideConeNode.middle n = .middle m := congrArg Subtype.val h
+  exact WideConeNode.middle.inj heq
+
 end TruthCore.Results.Causality.SelectedSourcePath

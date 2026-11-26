@@ -83,4 +83,18 @@ theorem ancestralEdgeControl :
       ForksJoinInOneStep G ∧ ¬ ForksJoinInOneStep (TruthCore.Causality.GroundingEdgeScope.pathGraph G) := by
   sorry
 
+/-- Every vertex belongs to the selected cone. The middle vertices are
+infinitely many distinct immediate suppliers of the tip and each has the
+root as immediate supplier. The existing criterion gives well-foundedness. -/
+theorem infiniteWidthControl :
+    (∀ y, Cone wideConeProfile () .tip y) ∧
+      (∃ f : Nat → {b // Cone wideConeProfile () .tip b},
+        Function.Injective f ∧ ∀ n,
+          (coneGraph wideConeProfile () .tip).edge (f n) (selectedNode wideConeProfile () wideConeTip) ∧
+            WideConeGround .root (f n).val) ∧
+      HasSelectedSourcePath wideConeProfile () wideConeTip ∧
+      SelectedForksJoinInOneStep wideConeProfile () wideConeTip ∧
+      ConeWellFounded wideConeProfile () .tip := by
+  sorry
+
 end TruthCore.Results.Causality.SelectedSourcePath

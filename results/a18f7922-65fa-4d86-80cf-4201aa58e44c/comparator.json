@@ -10,7 +10,8 @@
     "TruthCore.Results.Causality.SelectedSourcePath.diamondAllowsBranching",
     "TruthCore.Results.Causality.SelectedSourcePath.commonSourceAllowsRegress",
     "TruthCore.Results.Causality.SelectedSourcePath.ancestralForkCriterion",
-    "TruthCore.Results.Causality.SelectedSourcePath.ancestralEdgeControl"
+    "TruthCore.Results.Causality.SelectedSourcePath.ancestralEdgeControl",
+    "TruthCore.Results.Causality.SelectedSourcePath.infiniteWidthControl"
   ],
   "permitted_axioms": [
     "propext",
