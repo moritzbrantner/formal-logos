@@ -59,9 +59,9 @@ theorem lawLeavesActualityOpen : LawLeavesActualityOpen := by
   exact candidateOmitted (entails pairedFrame pairedLaw backgroundEverlasting)
 
 theorem inertialReasonRequiresActuality : InertialReasonRequiresActuality := by
-  intro W B R F D v x s t law reason
+  intro W B T R _ F D v x s t law reason
   obtain ⟨before, earlier, clear⟩ := reason
-  have later := (intervalEquivalence W B Int F.history D).mp law v x s t before earlier clear
+  have later := (intervalEquivalence W B T F.history D).mp law v x s t before earlier clear
   exact ⟨later, earlier, ⟨s, earlier⟩⟩
 
 theorem natureSelection {W B R : Type} (F : CausalityFrame W B Int R)

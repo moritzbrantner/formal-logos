@@ -985,6 +985,8 @@ Earlier presence necessarily varies between those histories.
    objection targets a move from the conditional persistence law to an
    explanation of Aₓ. [`inertialReasonRequiresActuality`](../../corpus/results/03b3cc57-e3c5-4745-a46e-b2e7647f782f.json)
    applies the interval law to the earlier-date branch of `originOrInertia`.
+   It works for any preorder of supplied times, including the order used
+   in the [limit control](../../TruthCore/Explanation/LimitPersistenceLaw.lean).
    Its earlier Eₓ(s) independently witnesses Aₓ.
    [`lawLeavesActualityOpen`](../../corpus/results/90fcd276-9af3-46a7-9c4b-af6090b52938.json)
    verifies the H₊/H₀ comparison in §7 in one shared frame. The same

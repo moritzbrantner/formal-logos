@@ -12,7 +12,7 @@ paraphrase = "Analyst formulation, attribution deferred. Two integer-time histor
 id = "An earlier-date inertial reason already witnesses temporal actuality"
 lean = "InertialReasonRequiresActuality"
 definitions = ["8c20c988-31fd-4b59-acf2-db230a6ea32e"]
-paraphrase = "Analyst formulation, attribution deferred. For any integer-time frame and supplied loss background, the cessation law and a valid earlier-date originOrInertia reason produce later presence. The earlier presence carried by the reason independently witnesses the same bearer's presence at some date."
+paraphrase = "Analyst formulation, attribution deferred. For any frame with a preorder of times and a supplied loss background, the cessation law and a valid earlier-date originOrInertia reason derive later presence. The earlier presence carried by the reason independently witnesses the same bearer's presence at some date."
 
 [[statement]]
 id = "A specified essential truth entails the temporal candidate's ontic existence"

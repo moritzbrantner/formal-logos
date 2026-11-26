@@ -1,7 +1,7 @@
 {
   "id": "57552b24-52f0-4ba5-95e9-e4bf8ac40169",
   "label": "An earlier-date inertial reason already witnesses temporal actuality",
-  "paraphrase": "Analyst formulation, attribution deferred. For any integer-time frame and supplied loss background, the cessation law and a valid earlier-date originOrInertia reason produce later presence. The earlier presence carried by the reason independently witnesses the same bearer's presence at some date.",
+  "paraphrase": "Analyst formulation, attribution deferred. For any frame with a preorder of times and a supplied loss background, the cessation law and a valid earlier-date originOrInertia reason derive later presence. The earlier presence carried by the reason independently witnesses the same bearer's presence at some date.",
   "lean_declaration": "TruthCore.Explanation.InertialActuality.InertialReasonRequiresActuality",
   "definition_ids": [
     "8c20c988-31fd-4b59-acf2-db230a6ea32e"

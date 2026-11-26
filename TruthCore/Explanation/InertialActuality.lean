@@ -25,7 +25,7 @@ open TruthCore.Explanation.LocationPersistence (ReportedLocationContrast)
 variable {W B R P : Type}
 
 /-- Actuality within the represented temporal profile of a rigid bearer. -/
-def TemporalActuality (h : History W B Int) (v : W) (x : B) : Prop :=
+def TemporalActuality {T : Type} (h : History W B T) (v : W) (x : B) : Prop :=
   ∃ t, h.IsAt v x t
 
 abbrev noInducer : Bool → Bool → Int → Prop := fun _ _ _ => False
@@ -45,8 +45,8 @@ def LawLeavesActualityOpen : Prop :=
 /-- The earlier-date reason for a successful temporal application of inertia
 already has an actuality witness, independently of the later conclusion. -/
 def InertialReasonRequiresActuality : Prop :=
-  ∀ (W B R : Type) (F : CausalityFrame W B Int R) (D : W → B → Int → Prop)
-    (v : W) (x : B) (s t : Int),
+  ∀ (W B T R : Type) [Preorder T] (F : CausalityFrame W B T R) (D : W → B → T → Prop)
+    (v : W) (x : B) (s t : T),
     CessationNeedsInducer F.history D →
     (originOrInertia F.history ⟨F.GivesAt⟩ D).Explains v (.inr s) x t →
     F.history.IsAt v x t ∧ (F.history.IsAt v x s ∧ TemporalActuality F.history v x)
