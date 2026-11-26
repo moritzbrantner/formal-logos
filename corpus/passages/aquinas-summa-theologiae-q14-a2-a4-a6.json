@@ -1,0 +1,42 @@
+{
+  "snapshot": {
+    "source_id": "c77377cf-501b-56c6-be40-b518e9aad101",
+    "edition_urn": "http://scta.info/resource/TAca84-d1e118/cod-cnLxE4",
+    "language": "lat",
+    "repository": "scta-texts/TAca84",
+    "revision": "f9065dc8ce7bc790b8c972e49ee19d661f028be6",
+    "path": "TAca84-d1e118/cod-cnLxE4_TAca84-d1e118.xml",
+    "git_blob_sha": "313acd7bdc7586fb9c92f75dfc5441ab37f028ec",
+    "source_url": "https://raw.githubusercontent.com/scta-texts/TAca84/f9065dc8ce7bc790b8c972e49ee19d661f028be6/TAca84-d1e118/cod-cnLxE4_TAca84-d1e118.xml",
+    "license": "CC BY-NC-SA 4.0"
+  },
+  "passages": [
+    {
+      "id": "33460e88-9aa3-4101-ad90-bbccbec5d435",
+      "label": "Thomas Aquinas, Summa theologiae, I q.14 a.2",
+      "locator": "I q.14 a.2",
+      "claim_locator_prefixes": [
+        "I q.14 a.2 "
+      ],
+      "tei_xml_id": "TAca84-d1e118-Dd1e445"
+    },
+    {
+      "id": "59124bf1-1aab-4b9a-a605-59dbd3a764d1",
+      "label": "Thomas Aquinas, Summa theologiae, I q.14 a.4",
+      "locator": "I q.14 a.4",
+      "claim_locator_prefixes": [
+        "I q.14 a.4 "
+      ],
+      "tei_xml_id": "TAca84-d1e118-Dd1e886"
+    },
+    {
+      "id": "9f73fe7a-f0ed-48be-9ec4-81ec1505d9cb",
+      "label": "Thomas Aquinas, Summa theologiae, I q.14 a.6",
+      "locator": "I q.14 a.6",
+      "claim_locator_prefixes": [
+        "I q.14 a.6 "
+      ],
+      "tei_xml_id": "TAca84-d1e118-Dd1e1329"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "11a3d3e5-8d05-4334-85cc-45bccd636db0",
+  "label": "Aquinas, I q.14 a.4 co.: God’s act of understanding is his very being",
+  "statement_id": "a3078187-8841-4b35-8c69-f4c69bbc5ed0",
+  "source_id": "c77377cf-501b-56c6-be40-b518e9aad101",
+  "locator": "I q.14 a.4 co.",
+  "interpretation": "Understanding remains in the one who understands. Aquinas argues that a distinct intellectual act would actualize the divine substance as a potency. The divine essence itself is the form by which God understands.",
+  "status": "formalized",
+  "attribution": "The passage states that in God the act of understanding is identical with his essence and his act of being, which is the premise.",
+  "definition_ids": [
+    "0fa78db2-05d6-5c3e-b8c9-04124ccc5776",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "183b48d2-1753-583d-aef9-4199cff86231"
+  ]
+}

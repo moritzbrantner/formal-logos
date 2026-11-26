@@ -1,0 +1,13 @@
+{
+  "id": "99241327-82c2-4880-b437-d08625a58b40",
+  "label": "Aquinas, I q.13 a.7 co. and ad 5: Divine dominion rests on creatures’ real subjection",
+  "statement_id": "69a67b43-8473-4b4f-a503-64b230280377",
+  "source_id": "c77377cf-501b-56c6-be40-b518e9aad101",
+  "locator": "I q.13 a.7 co. and ad 5",
+  "interpretation": "The relation is real on the creature's side. On God's side it is a relation of reason. The name can be predicated temporally as creatures come to stand in that relation, with no change to God.",
+  "status": "formalized",
+  "attribution": "The passage states that God is really Lord over creatures because their subjection to him is real, which is the premise.",
+  "definition_ids": [
+    "59350e3b-1b76-45cd-b9fd-548f3f4658b5"
+  ]
+}

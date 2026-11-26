@@ -1,0 +1,15 @@
+{
+  "id": "d21d4ecd-4bcd-460a-b946-5ddbc34b8ed7",
+  "label": "Aquinas, I q.14 a.2 co. and ad 3: Our possible intellect exercises understanding through an intellig",
+  "statement_id": "89519ff8-2ec8-4faa-b57b-aa7fa12e21aa",
+  "source_id": "c77377cf-501b-56c6-be40-b518e9aad101",
+  "locator": "I q.14 a.2 co. and ad 3",
+  "interpretation": "The body contrasts an intellect in potency with the intellect currently informed by what it understands. The third reply describes the human possible intellect as receptive to objects of understanding, and applies this to how we come to know our own intellectual activity.",
+  "status": "formalized",
+  "attribution": "The passage states that our possible intellect is in potency to what can be understood and understands actually only insofar as a form of something intelligible makes it actual, which is the premise.",
+  "definition_ids": [
+    "0fa78db2-05d6-5c3e-b8c9-04124ccc5776",
+    "88bc0655-9dd0-5879-ba1b-3fca9f86c1f4",
+    "39f50105-c889-4c30-b841-ce458ec8109d"
+  ]
+}

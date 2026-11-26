@@ -1,0 +1,10 @@
+{
+  "id": "9e735a38-7569-4e29-869f-03fec36ad287",
+  "label": "Aquinas I q.19 a.10 co. and ad 2 supports A being that gives x being at w and withholds it at an acc",
+  "subject_kind": "claim",
+  "subject_id": "988f35e6-a728-4955-9561-bc8c266bde57",
+  "predicate": "supports",
+  "object_kind": "statement",
+  "object_id": "d1593e5c-38ff-46a9-9bbb-cede6f825bc9",
+  "note": "The divine case supplies voluntary alternatives regarding a thing's existence. The typed premise concerns every giver and a particular accessible-world pair, with an indexed exercise of giving in one world and withholding in the other. Applying the source needs the identification of effective willing with the same giver's esse-giving and a correspondence between freedom of choice and the selected accessibility relation."
+}

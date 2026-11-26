@@ -1,0 +1,15 @@
+{
+  "id": "fe3c0586-d406-4035-a605-1c1bd65a0d04",
+  "label": "Aquinas, I q.7 a.2 co.: A created subsistent form has being contracted to its nature",
+  "statement_id": "a2ac6222-12ed-4038-90b3-d0b6af3a4a5b",
+  "source_id": "c77377cf-501b-56c6-be40-b518e9aad101",
+  "locator": "I q.7 a.2 co.",
+  "interpretation": "Aquinas distinguishes lack of material limitation, which can ground infinity in a respect, from absolute infinity. He argues that even in the immaterial case a created form has being without being its own act of being.",
+  "status": "formalized",
+  "attribution": "The passage states that even a created form that subsists apart from matter has received being contracted to a determinate nature and therefore is finite absolutely, which is the premise.",
+  "definition_ids": [
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "14d30c53-51c2-502d-b009-247dac0421e0",
+    "183b48d2-1753-583d-aef9-4199cff86231"
+  ]
+}

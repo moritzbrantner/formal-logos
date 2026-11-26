@@ -1,0 +1,15 @@
+{
+  "id": "e4c3bba6-39bc-4f0f-9cae-1a57e99f5c76",
+  "label": "Aquinas, I q.12 a.4 co.: Natural knowledge follows the knower’s mode of being",
+  "statement_id": "38c69352-42c2-4738-9037-04cd62296ce6",
+  "source_id": "c77377cf-501b-56c6-be40-b518e9aad101",
+  "locator": "I q.12 a.4 co.",
+  "interpretation": "What is known is in the knower according to the knower's mode. Aquinas distinguishes embodied human cognition, angelic cognition and God's knowledge of subsistent being. The first reply distinguishes knowing a likeness from seeing the divine essence, and the third reply allows elevation of created intellect by grace.",
+  "status": "formalized",
+  "attribution": "The passage states that if a thing’s mode of being exceeds the knower’s own, knowledge of the thing according to that mode exceeds the knower’s natural power, which is the premise.",
+  "definition_ids": [
+    "5b196f1c-210d-450e-b3f1-33e214f9f45d",
+    "88bc0655-9dd0-5879-ba1b-3fca9f86c1f4",
+    "183b48d2-1753-583d-aef9-4199cff86231"
+  ]
+}
