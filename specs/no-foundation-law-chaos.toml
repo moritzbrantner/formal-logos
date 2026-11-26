@@ -96,16 +96,6 @@ object_id = "83bad780-5acf-5235-a30b-8572b3d2cb2a"
 note = "Tests the open-future prediction obstruction with every possible Boolean suffix at each fixed finite record, extending the two-next-value comparisons."
 
 [[relation]]
-id = "Test by Arbitrarily late deterministic copy-to-toggle law switch"
-label = "Test by Arbitrarily late deterministic copy-to-toggle law switch"
-subject_kind = "result"
-subject_id = "1a3273be-505b-4c54-8f91-e4f209ca4122"
-predicate = "tests"
-object_kind = "statement"
-object_id = "83bad780-5acf-5235-a30b-8572b3d2cb2a"
-note = "Tests projecting the stable copy law from the finite prefix by comparing it with an equally deterministic but arbitrarily late toggle schedule."
-
-[[relation]]
 id = "Test by Stable, vacuous and ground-status omission controls"
 label = "Test by Stable, vacuous and ground-status omission controls"
 subject_kind = "result"

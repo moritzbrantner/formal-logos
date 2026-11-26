@@ -31,23 +31,3 @@ premises = []
 conclusion = "Aevum candidates allow potential adjunct variation and reject admissible corruption"
 rule = "Explicit admissible and actual configuration witnesses"
 meaning = "The supplied accessibility includes unrealized adjunct alternatives. Actual constancy alone cannot exclude substantial corruption. Holding inventories and partial-order comparison remain explicit candidate interpretations, not original aevum or Boethian eternity."
-
-[[relation]]
-id = "Test by Aevum candidate admissibility controls verified"
-label = "Test by Aevum candidate admissibility controls verified"
-subject_kind = "result"
-subject_id = "34acd995-28cc-48b2-9ea2-e90ab90ff900"
-predicate = "tests"
-object_kind = "statement"
-object_id = "0986e1be-0b12-526b-8363-7c595124b452"
-note = "Tests the potential adjunct-change clause on the candidate holding frames with constant actual substantial identity and varying admissible adjuncts, alongside the corruption control."
-
-[[relation]]
-id = "Test by Duration measure candidate separation verified"
-label = "Test by Duration measure candidate separation verified"
-subject_kind = "result"
-subject_id = "e9cd57b9-eec7-485f-88cb-26fad847f3f6"
-predicate = "tests"
-object_kind = "statement"
-object_id = "0670371f-cc20-5d34-8541-964f19550a20"
-note = "Tests two candidate measurement readings on commensurable labeled segments, where squared extent preserves comparison but fails additivity and constant readout fails reflection."

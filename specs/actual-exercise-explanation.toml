@@ -68,13 +68,3 @@ predicate = "tests"
 object_kind = "argument"
 object_id = "4df18b31-1b44-4d5c-abef-15d203c6c2f7"
 note = "Tests omission of the product-needs-adoption condition in the output-bypass exercise, holding the adoption prerequisite fixed."
-
-[[relation]]
-id = "Test by Apply the existing joint borrowing trap to the adoption-product pair"
-label = "Test by Apply the existing joint borrowing trap to the adoption-product pair"
-subject_kind = "result"
-subject_id = "08c4864c-8d48-4270-a21e-da87f43f80a4"
-predicate = "tests"
-object_kind = "argument"
-object_id = "272c8062-dfd3-4389-ad1d-8729019c95c5"
-note = "Checks why the original circular adoption-product exercise lacks inductive supply despite another source contributing in each conjunctive record."

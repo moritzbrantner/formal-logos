@@ -107,33 +107,3 @@ predicate = "tests"
 object_kind = "statement"
 object_id = "77a76499-f2df-467f-b685-919f8b110d89"
 note = "Tests joint variation of rigidity, bearer omission and transfer on the four-history surrogate, comparing rigid and qualitative accessibility."
-
-[[relation]]
-id = "Test by Rigid initial profile with full inclusion E-necessity checked"
-label = "Test by Rigid initial profile with full inclusion E-necessity checked"
-subject_kind = "result"
-subject_id = "33f9dfc9-4ad3-4fc9-8dea-991b958f843f"
-predicate = "tests"
-object_kind = "statement"
-object_id = "77a76499-f2df-467f-b685-919f8b110d89"
-note = "Checks the full-inclusion alternative on the same rigid profile, where every E-admitted history retains the actual initial bearer."
-
-[[relation]]
-id = "Test by Restricted and complete-description possibility transfer checked"
-label = "Test by Restricted and complete-description possibility transfer checked"
-subject_kind = "result"
-subject_id = "dc44d6b1-021a-4427-9aaa-ff9d305f5858"
-predicate = "tests"
-object_kind = "statement"
-object_id = "83f5fb38-7357-51dd-82ee-f167aac59758"
-note = "Tests the strength of access inclusion in the two-frame possibility transfer profile by restricting it to a single description or complete singleton description."
-
-[[relation]]
-id = "Test by Rigid initial profile, bearer omission and transfer triad checked"
-label = "Test by Rigid initial profile, bearer omission and transfer triad checked"
-subject_kind = "result"
-subject_id = "f2fb11be-5bde-4c6f-a894-c60a1dcf3052"
-predicate = "tests"
-object_kind = "statement"
-object_id = "67cd1280-5152-4899-8acd-b0ae25d3d64a"
-note = "Tests the stronger restricted-transfer bundle under rigid initial preservation and a stipulated E-accessible bearer omission, which excludes the relevant M edge."

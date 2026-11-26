@@ -123,16 +123,6 @@ witness = "TruthCore.Ontology.QuotientGeneration.Control.presentation, selected,
 next_step = "Specify a substantive admissibility condition that excludes this concrete presentation while retaining intended abstractions; do not replace it with constitutive essence by assertion."
 
 [[relation]]
-id = "Test by Fixed faithful quotient kernel equality, checked"
-label = "Test by Fixed faithful quotient kernel equality, checked"
-subject_kind = "result"
-subject_id = "e3522743-5e6b-4c0b-85d7-82a13df974b7"
-predicate = "tests"
-object_kind = "statement"
-object_id = "64b877b5-dff5-4fd0-a84b-ceb37e3595de"
-note = "Checks the equality criterion for values of the designated quotient presentation using its exact Setoid kernel."
-
-[[relation]]
 id = "Test by Fixed quotient image and representative range agree"
 label = "Test by Fixed quotient image and representative range agree"
 subject_kind = "result"

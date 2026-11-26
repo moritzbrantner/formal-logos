@@ -439,13 +439,3 @@ predicate = "tests"
 object_kind = "statement"
 object_id = "b5fea0e6-a058-512f-bf11-ca740ebd3f06"
 note = "Tests iterated box-existence on the reflexive nontransitive chain where box-existence holds but its box does not."
-
-[[relation]]
-id = "Test by Formal controls: on any frame, box-existence gives actua for Fork node: the intended r (1)"
-label = "Test by Formal controls: on any frame, box-existence gives actua for Fork node: the intended r (1)"
-subject_kind = "result"
-subject_id = "53ca8e9d-dfad-5b55-b395-6ecb4c3e46bf"
-predicate = "tests"
-object_kind = "statement"
-object_id = "bed94ec2-ebd9-59e0-8c68-2d5eee6009e3"
-note = "Tests the differences among box, de dicto, actualist and per se readings on separate explicit frames before matching any root sense."

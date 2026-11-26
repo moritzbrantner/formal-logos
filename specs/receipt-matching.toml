@@ -63,23 +63,3 @@ conclusion = "Two calibrations preserve every realized grade but reverse a relay
 rule = "Check all giver edges and all realized-level bounds, then compute the two finite ledgers"
 meaning = "The relay receives a higher-grade instance and gives two lower-grade ones. Only the numerical distance between the grades changes. The witness uses the existing realizedLevels definition, without claiming the assignment realizes every premise about an actual sole essential giver."
 axioms = ["propext", "Classical.choice", "Quot.sound"]
-
-[[relation]]
-id = "Test by Characterize robust transfer coverage by counts at each grade threshold"
-label = "Test by Characterize robust transfer coverage by counts at each grade threshold"
-subject_kind = "result"
-subject_id = "690829e4-e0f3-444a-9242-71e1ca849d3c"
-predicate = "tests"
-object_kind = "statement"
-object_id = "08ed59de-c83e-400f-a8ee-aef527cfc3e4"
-note = "Checks the quantitative comparison used in receipt matching under additive threshold-based grading of finite occurrence histograms."
-
-[[relation]]
-id = "Test by Separate one-to-many ordinal preservation from a relay's additive balance"
-label = "Test by Separate one-to-many ordinal preservation from a relay's additive balance"
-subject_kind = "result"
-subject_id = "531adda1-c6e7-4076-9c96-59ad97c10826"
-predicate = "tests"
-object_kind = "statement"
-object_id = "08ed59de-c83e-400f-a8ee-aef527cfc3e4"
-note = "Tests whether unchanged ordinal comparisons fix receipt matching in the four-bearer relay using the two different additive grade calibrations."

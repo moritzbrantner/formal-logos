@@ -6,5 +6,5 @@
   "predicate": "tests",
   "object_kind": "statement",
   "object_id": "1381a9eb-5f92-5ca9-ab78-825eaa57fbb7",
-  "note": "Tests the scope of language-relative propagation with a non-negation-closed separating inventory and with a duplicate-label language."
+  "note": "Tests the restricted extensionality condition on the universal duplicate-label formula model, which has formula-relative collapse but distinct labels and a contingent predicate outside its language."
 }

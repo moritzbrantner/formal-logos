@@ -59,13 +59,3 @@ predicate = "tests"
 object_kind = "argument"
 object_id = "a9f20e41-34bc-4d21-bbd3-6032ac78b018"
 note = "Tests the context-independence hypothesis of the intrinsic decoder theorem using an accurate contextual decoder at one constant intrinsic state."
-
-[[relation]]
-id = "Test by Intrinsic selection obstruction checked"
-label = "Test by Intrinsic selection obstruction checked"
-subject_kind = "result"
-subject_id = "19183927-9590-41d8-a4ad-04137100ad4a"
-predicate = "tests"
-object_kind = "argument"
-object_id = "a21fb462-90ef-44f1-99f6-15c692a1f48b"
-note = "Checks the independent intrinsic-decoder condition omitted by the contextual model that selects different targets at one constant intrinsic state."

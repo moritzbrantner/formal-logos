@@ -87,16 +87,6 @@ rule = "Induct on derivable strict ground restricted to the finite label image o
 meaning = "Each per se predecessor remains in the same ancestral cone and moves strictly down among its labels by alignment and the selected consistent theory. Strict ground on this finite label set is transitive and irreflexive, hence well-founded. Induction yields accessibility of the effect for the original cause relation. The premises concern the same labels throughout."
 
 [[relation]]
-id = "Test by Recover the exact strict path relation of an acyclic dependence presentation"
-label = "Test by Recover the exact strict path relation of an acyclic dependence presentation"
-subject_kind = "result"
-subject_id = "1acba9b6-c43f-46b5-9099-50a1b40230ed"
-predicate = "tests"
-object_kind = "argument"
-object_id = "337ecbd2-673d-4b71-9282-b0eee4efd697"
-note = "Checks the identity-labelling boundary for the fixed-label criterion by recovering exactly reversed nonempty distinct-step dependence paths."
-
-[[relation]]
 id = "Test by Test the strict-ground interpretation after identifying labels across two disjoint pairs"
 label = "Test by Test the strict-ground interpretation after identifying labels across two disjoint pairs"
 subject_kind = "result"

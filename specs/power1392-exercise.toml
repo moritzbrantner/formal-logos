@@ -15,13 +15,3 @@ premises = []
 conclusion = "Same-agent finite exercise separation with populated feasibility"
 rule = "Explicit finite witnesses and Boolean contradiction"
 meaning = "Structural control for the open active-power sufficiency root premise d61eda33-7f6c-52a8-a905-e16661520f23. Original-task, recipient and sign-exclusivity bridges remain unbuilt. See docs/notes/power1392.md. Duplicate actualDoesNotForceRestriction and pure application taskSpecific are not registered as independent arguments."
-
-[[relation]]
-id = "Test by Same-agent exercise proxy control certificate"
-label = "Test by Same-agent exercise proxy control certificate"
-subject_kind = "result"
-subject_id = "cf728e50-f142-409d-b9a0-162f46d1be85"
-predicate = "tests"
-object_kind = "statement"
-object_id = "d61eda33-7f6c-52a8-a905-e16661520f23"
-note = "Tests sufficiency of actuality for task capacity in the separated exercise and active-power profiles of the encoded model."

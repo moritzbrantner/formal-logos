@@ -1,10 +1,10 @@
 {
   "id": "7e69229f-d734-4cc7-883c-97ed6519a017",
-  "label": "Test by An inhabited Unit carrier has no general CHANGE_2 but fa for McTaggart-style rival: no (1)",
+  "label": "McTaggart appearance control on an inhabited changeless carrier",
   "subject_kind": "result",
   "subject_id": "8fe21025-211b-5845-a911-9bd27a6c5d4a",
   "predicate": "tests",
   "object_kind": "statement",
-  "object_id": "5d37dd2a-6539-514d-bd74-1b2ad8021c8f",
-  "note": "Tests whether lack of general change requires the additional appearance commitments in the inhabited no-change Unit interpretation."
+  "object_id": "d908f7a8-5c50-58fa-b0e0-702795acd6f5",
+  "note": "Tests the appearance clause of the McTaggart reconstruction in the inhabited Unit interpretation with neither change nor any judgment of appearance."
 }

@@ -160,26 +160,6 @@ senses = {MOVED_BY_SOMETHING_BY_ANOTHER_PER = "MOVED_BY_SOMETHING_BY_ANOTHER_PER
 sense_bridges = [{term = "MOVED_BY_SOMETHING_BY_ANOTHER_PER", from = "MOVED_BY_SOMETHING_BY_ANOTHER_PER_2", to = "MOVED_BY_SOMETHING_BY_ANOTHER_PER_1", statement_id = "A distinct mover in some respect supplies a mover in some respect", role = "conclusion"}]
 
 [[relation]]
-id = "Test by Distinct mover supplies respect-free mover coverage"
-label = "Test by Distinct mover supplies respect-free mover coverage"
-subject_kind = "result"
-subject_id = "ef6a96c7-f2ae-435d-b9dc-6831dc29c65d"
-predicate = "tests"
-object_kind = "statement"
-object_id = "c8451a5e-83ae-4952-bcb0-5d2c6ea2596c"
-note = "Checks the distinct-mover branch of the respect-free fork by forgetting distinctness while keeping the very same mover and respect."
-
-[[relation]]
-id = "Test by Distinct mover gives some mover"
-label = "Test by Distinct mover gives some mover"
-subject_kind = "result"
-subject_id = "630d75d5-40b5-4ab6-acbd-44e674ba4d12"
-predicate = "tests"
-object_kind = "statement"
-object_id = "c8451a5e-83ae-4952-bcb0-5d2c6ea2596c"
-note = "Checks the projection from a distinct mover to a mover in the same respect, without a transfer across independently witnessed respects."
-
-[[relation]]
 id = "Test by Motion and mover fork finite controls"
 label = "Test by Motion and mover fork finite controls"
 subject_kind = "result"
@@ -208,13 +188,3 @@ predicate = "tests"
 object_kind = "statement"
 object_id = "d758b09d-9f7c-4641-bc9b-3916fa3f37d4"
 note = "Tests omission of residual mover coverage in the finite Unit profile keeping scope coverage and the physical mover principle."
-
-[[relation]]
-id = "Test by MOTION_2 restricts MOTION_1 reduction"
-label = "Test by MOTION_2 restricts MOTION_1 reduction"
-subject_kind = "result"
-subject_id = "cc549a02-abeb-491e-85ad-bf5d5b01d4a4"
-predicate = "tests"
-object_kind = "statement"
-object_id = "59f993dc-9d2d-4d0e-90b9-386b8e686fd3"
-note = "Checks the physical-motion case of the broad-motion comparison by keeping its moved witness in the indicated respect."

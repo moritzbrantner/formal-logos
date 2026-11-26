@@ -15,13 +15,3 @@ conclusion = "EXISTS_1 candidate witness survives empty EXISTS_2 extension"
 rule = "Explicit constructors and elimination of an impossible existence guard"
 meaning = "A Unit candidate satisfies True. An actual witness under the empty extension would carry False. Under the full extension the same candidate satisfies the guard and predicate. No domain-to-actuality implication or esse bridge is asserted."
 sense_mixing_control = true
-
-[[relation]]
-id = "Test by Empty actual extension separates existential meanings"
-label = "Test by Empty actual extension separates existential meanings"
-subject_kind = "result"
-subject_id = "8b15f627-bffd-4dc6-9b4e-a45332d71b5b"
-predicate = "tests"
-object_kind = "argument"
-object_id = "b7946610-9304-4b67-8639-50c94009d6de"
-note = "Tests why a candidate witness requires the actuality guard used by the actualist-K route, contrasting the same inhabited Unit domain with empty and full actual extensions."

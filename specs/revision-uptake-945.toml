@@ -40,13 +40,3 @@ predicate = "tests"
 object_kind = "statement"
 object_id = "8f3850f0-fd7a-441b-ad6b-723750781b68"
 note = "Tests the scope of Boolean recommendation sensitivity with echo, inversion and closed-gate noise, which distinguish sensitivity to the port from successful assessment."
-
-[[relation]]
-id = "Test by Revision uptake screening structural certificate by port evaluation"
-label = "Test by Revision uptake screening structural certificate by port evaluation"
-subject_kind = "result"
-subject_id = "5ba7dd8f-7f4a-4d83-89b9-ca2cfffa02f0"
-predicate = "tests"
-object_kind = "statement"
-object_id = "94cdf074-f21a-5157-8bd4-63d48ed015f1"
-note = "Tests whether later sensitivity depends directly on the original acquisition value by holding recommendation fixed in the Boolean revision router built on the acquisition interface."

@@ -39,13 +39,3 @@ predicate = "tests"
 object_kind = "argument"
 object_id = "514b965e-292b-42fc-a443-a559f30f1373"
 note = "Tests the candidate-attribution conditions in genuine, forgery, replay, insertion and guess histories with the same visible response."
-
-[[relation]]
-id = "Test by Addressed echo attribution from history and access by construction"
-label = "Test by Addressed echo attribution from history and access by construction"
-subject_kind = "result"
-subject_id = "dd6869af-f37c-4e49-b1e7-81f1574ab9ee"
-predicate = "tests"
-object_kind = "statement"
-object_id = "f2504092-91c0-53f1-a59b-2402ccb7b0a7"
-note = "Tests the candidate-attribution part of recognition by deriving production of the matching response from explicit integrity, freshness, access and exclusivity conditions in a transcript."

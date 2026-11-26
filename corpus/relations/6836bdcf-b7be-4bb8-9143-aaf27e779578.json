@@ -6,5 +6,5 @@
   "predicate": "tests",
   "object_kind": "statement",
   "object_id": "1f21c751-c8eb-570e-8359-b139fe4fbcff",
-  "note": "Tests the single-component requirement in disconnected S5 and distinguishes reflexivity and symmetry with shared-sink and branching controls."
+  "note": "Tests the single-component qualification on disconnected S5, where the root has all three full-predicate collapse statuses and an outside label fails collapse; separately tests removing S5 at the shared sink."
 }

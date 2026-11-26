@@ -145,26 +145,6 @@ definitions = ["7ec17771-8ac2-476b-b674-40ef61a2debc", "e6aeaf5b-de26-4beb-bc38-
 disambiguations = []
 
 [[relation]]
-id = "Test by Explicit anchor correspondence preserves the sample target"
-label = "Test by Explicit anchor correspondence preserves the sample target"
-subject_kind = "result"
-subject_id = "d3530a61-adba-400d-a88d-d7a700ea716c"
-predicate = "tests"
-object_kind = "statement"
-object_id = "e611886f-2a21-448d-8069-a9d87f63494e"
-note = "Tests compatibility of uniform anchor definition and anchor-preserving correspondence on the selected Unit and Bool interpretations."
-
-[[relation]]
-id = "Test by Indiscriminate correspondence fails on the same anchor profile"
-label = "Test by Indiscriminate correspondence fails on the same anchor profile"
-subject_kind = "result"
-subject_id = "858fb017-87d2-4b1e-9bd9-1e85bb3d60b2"
-predicate = "tests"
-object_kind = "statement"
-object_id = "e611886f-2a21-448d-8069-a9d87f63494e"
-note = "Tests whether a uniform anchor definition enforces arbitrary correspondence by using the universal relation and the false and true Bool objects."
-
-[[relation]]
 id = "Test by FO embeds into restricted reachability language"
 label = "Test by FO embeds into restricted reachability language"
 subject_kind = "result"

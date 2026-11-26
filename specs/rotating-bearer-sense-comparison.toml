@@ -161,13 +161,3 @@ predicate = "tests"
 object_kind = "statement"
 object_id = "b62deb46-c451-5971-a569-cc5c0f44a398"
 note = "Tests replacing fixed-bearer existence by population at every successor in the universal Boolean swapping interpretation."
-
-[[relation]]
-id = "Test by Rotating bearer root sense classification, checked"
-label = "Test by Rotating bearer root sense classification, checked"
-subject_kind = "result"
-subject_id = "6aa8cf1f-11f6-4607-bd34-61718b599ecd"
-predicate = "tests"
-object_kind = "statement"
-object_id = "bed94ec2-ebd9-59e0-8c68-2d5eee6009e3"
-note = "Tests the separate need for root facts when using de dicto population under rotation, with explicit excluded middle and the same profile."
