@@ -1,0 +1,9 @@
+{
+  "id": "425ae4bc-d5f0-4ebc-99b7-2645c947f497",
+  "label": "Complete empty supplier list at the end of a matching prefix",
+  "term": "TerminalMatches",
+  "definition": "The audit sees the complete singleton lists of the endless prefix for every recipient below the specified depth and a complete empty incoming list at the recipient at that depth.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.SupplierAuditLikelihood.TerminalMatches",
+  "note": "The final observation is absence of every incoming edge in the selected supplier relation. A missed, inaccessible or unaudited supplier list does not give this observation."
+}

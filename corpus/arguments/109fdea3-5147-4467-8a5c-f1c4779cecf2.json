@@ -1,0 +1,16 @@
+{
+  "id": "109fdea3-5147-4467-8a5c-f1c4779cecf2",
+  "label": "Condition one supplier audit on its existing matching prefix",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "888066cf-0aa1-4a75-a86c-c47e1652e9c8",
+  "inference_ids": [
+    "a86241ae-db9e-4b25-b1f2-23473ba99b4a"
+  ],
+  "meaning": "The same sourced candidate matches both records exactly when its depth is at least the maximum of the two lengths. For positive mass of the observed event, repeated observations of that event or its consequences leave the odds unchanged. Updating on a longer match divides the old odds by the conditional finite-class likelihood, so multiplying separate unconditional likelihoods would count part of the same evidence twice.",
+  "definition_ids": [
+    "5b19527d-9418-441e-820c-3c659ba7cb12",
+    "77b06e8c-9266-4801-b3cb-2ce1dd9d13e6",
+    "7aefc429-5425-44d6-8757-ec8bf55f17fb",
+    "d497dc7a-2c66-4448-b89b-e710dbf4e209"
+  ]
+}
