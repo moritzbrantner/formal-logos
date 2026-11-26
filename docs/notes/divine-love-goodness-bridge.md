@@ -1152,7 +1152,8 @@ The proposed warrant assessment is for independent semantic review.
 Independent second pass on the practical-specification and benefit-witness
 records at `95d55d4a`. Fix the giver, recipient, world, esse respect and
 interpretation of the plan throughout each comparison. The [exception
-theorem](../../TruthCore/Causality/GivingPlanExceptions.lean) gives six
+theorem](../../TruthCore/Results/Causality/GivingPlanExceptions/Solution.lean#L24)
+(`GivingPlanExceptions.exceptions`) gives six
 separate biconditionals. Its proof uses the success condition in
 `Governing`: all required clauses are already realized, so an edit
 preserves fulfillment exactly when it removes no required clause.
@@ -1170,12 +1171,19 @@ contests the through-will argument upstream. The intrinsic account can
 meet the antecedent if rationality classifies the power while the mode
 of this exercise is fixed intrinsically. The [foreseen
 profile][prior-controls] demonstrates the logical space for that distinction.
-A positive analogy is the difference between understanding one's automatic
-production of a sound and shaping a sound to realize an apprehended pitch.
-Neither reproduction of the pitch nor the capacity to correct it, by itself,
-identifies the mode of the original production. The analogy concerns
-productive uptake only. Human automatic production does not identify a
-first giver's power.
+An analogy, for that distinction alone, is the difference between
+understanding one's automatic production of a sound and shaping a sound to
+realize an apprehended pitch. Neither reproduction of the pitch nor the
+capacity to correct it, by itself, identifies the mode of the original
+production. The analogy leaves open whether the sound is produced by
+exercising the very rational power the coverage denial grants, and human
+automatic production does not identify a first giver's power. The matched
+test is: identify an effect of the same owned rational exercise, then
+establish whether any apprehended standard actually governs and succeeds
+for that effect. The foreseen profile supports formal compatibility only.
+The rational necessitarian's positive explanation of why an apprehended
+good could still determine the giving necessarily is the earlier
+unique-best account (see [Rival mechanisms](#rival-mechanisms)).
 
 The practical account explains determinate specification if the form of
 the work measures this very exercise. The rival explains it if a grounded
@@ -1280,13 +1288,20 @@ further executive activity, or if its end differs from the plan's end;
 either would call for a separate bridge.
 
 No denial here contradicts performing inquiry. The discriminating internal
-tensions arise when a rival both grants an operative practical role and
-denies its thin intentional description, or offers an upstream exception
-outside the rational-giving antecedent. The shared coverage question counts
-once across love (a94c5dfc via 3655f59f) and direction (de6a0f86 toward
-123d394b and bb3d4417). Benefit omission and its recognition bear on love.
-End omission and its recognition bear on direction. LORD_1 still requires
-original standing to dispose. For the next test prioritize the independent
+tension arises when a rival grants that the same giver adopted and realized
+an operative practical role and yet denies its thin intentional
+description; the thin recognition judgments are provisionally warranted on
+that reading, under the revision conditions above. An exception outside the
+rational-giving antecedent is a different kind of result: it leaves the
+coverage premise untouched and is an upstream scope result against the
+separate rational-exercise step. The shared coverage question counts once
+across love (a94c5dfc via 3655f59f) and direction. The registered direction
+route from the reviewed premises runs through 2f9a99cc to 123d394b and then
+to 1063da3d (LORD_2). Benefit omission and its recognition bear on love; end
+omission and its recognition bear on direction. Reaching LORD_1 still uses
+the separate authority bridge eb6611a5 (original standing to dispose); the
+older bb3d4417 supplies that bridge as a separate premise and receives no
+support from the direction result. For the next test prioritize the independent
 grounds for *exhaustiveness* of the operative standard at one giving:
 establishing one instrumental criterion would answer neither the weaker
 benefit question nor whether another governing standard directs this effect.
