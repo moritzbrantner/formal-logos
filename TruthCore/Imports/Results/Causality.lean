@@ -411,6 +411,7 @@ public import TruthCore.Results.Causality.StrictGroundInfiniteCauseSeries.Soluti
 public import TruthCore.Results.Causality.StrictGroundRepresentation.Solution
 public import TruthCore.Results.Causality.StrictPriorityPureAct.Solution
 public import TruthCore.Results.Causality.StrictPriorityPureActControls.Solution
+public import TruthCore.Results.Causality.StructuralCausalWithdrawal.Solution
 public import TruthCore.Results.Causality.SubjectFocalRoles.Solution
 public import TruthCore.Results.Causality.SubtractionArgument.Solution
 public import TruthCore.Results.Causality.SuccessionPotency.Solution

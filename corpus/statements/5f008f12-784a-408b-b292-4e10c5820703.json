@@ -1,0 +1,17 @@
+{
+  "id": "5f008f12-784a-408b-b292-4e10c5820703",
+  "label": "Calibrated withdrawal separates explained survival from inducer-free loss",
+  "paraphrase": "Analyst consequence for the two existing Boolean mechanisms at the all-true context. For each mechanism separately, suppose its natural and cut valuations calibrate to an admissible pair in one shared causality frame, with the same bearer and onset giver, no loss inducers in either interval, and all other strict givers absent at the cut endpoint. For the background mechanism, if the bearer has received esse and has an explanation at that endpoint, the bearer is present there and this instance falsifies the productive bridge in that frame. For the responsive mechanism the bearer is absent, and its earlier presence and inducer-free loss falsify the cessation-needs-an-inducer law in that frame. The claim is conditional on the respective calibrations.",
+  "lean_declaration": "TruthCore.Causality.StructuralCausalModel.Withdrawal.CalibratedContrast",
+  "definition_ids": [
+    "4433942e-aaf6-55a9-b777-66e55638103d",
+    "60b36398-a152-552a-a413-ef649e5b7b1f",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "158301bc-9585-4145-be60-34f08c9f922c",
+    "261516e9-9e57-4750-a6ba-f0ea64ff09bf",
+    "8c20c988-31fd-4b59-acf2-db230a6ea32e"
+  ],
+  "disambiguation_ids": [
+    "5921354b-51e6-5da3-8d8c-e9041840fd9f"
+  ]
+}
