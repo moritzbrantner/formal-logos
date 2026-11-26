@@ -122,8 +122,8 @@ review state. When a question phrase is missing from the leading finding,
 the command can also quote a matching research note with its section and line.
 Question JSON returns that passage in `note_match` when available.
 Results explicitly cited by a matching investigation appear in `cited_lean_results`.
-When several cited conclusions belong to the same current assessment, the question’s
-terms rank their registered descriptions before the display limit is applied.
+When several cited conclusions belong to the same current assessment, the closest match
+in their registered labels and paraphrases leads. The other scoped citations retain their recorded order.
 A direct result that the investigation also cites carries its provenance in `cited_by`.
 
 The complete statement JSON includes these fields.
