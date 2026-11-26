@@ -1,0 +1,9 @@
+{
+  "id": "b5f857e8-f8a4-4418-a90a-0a1e7030656e",
+  "label": "Closest absence preserves accessible contrast witnesses in the replacement profile",
+  "paraphrase": "For the supplied effect presence predicate in the three-world replacement profile, the closest-absence selector preserves accessible effect-present source-absence witnesses at actual. For each pair of the two tracked individuals, if an accessible world has the first present and the second absent, some accessible contrast for that pair is selected.",
+  "lean_declaration": "TruthCore.Modal.WitnessPreservationIndividuation.ReplacementPreservation",
+  "definition_ids": [
+    "c7d19067-3df4-48ef-b0a6-bf20cb4ba43c"
+  ]
+}

@@ -3,19 +3,22 @@
   "label": "Accessible coverage and the dependence-to-impossibility bridge",
   "statement_ids": [
     "000e1f65-6e74-5519-bbf3-300d5f61ada8",
-    "42756c07-03cd-4b54-8ed6-ed6c1a5132aa"
+    "42756c07-03cd-4b54-8ed6-ed6c1a5132aa",
+    "31bcb75e-22ea-4ca9-a9f5-a71da9bfc3f1"
   ],
   "date": "2026-11-26",
   "kind": "derivation",
   "outcome": "succeeded",
-  "summary": "Issue #2052. Selected loss yields the existing dependence-to-impossibility premise via soundness for the shared dependence primitive, accessible absence coverage and realization of being-without by an accessible witness. A three-world omission model exhibits a case where the effect drops after the chosen removal but persists in a farther accessible world. A separate normal/repair comparison reuses the matched AND/idle mechanisms and public-input clamp, which concerns public input absence only. None of these comparisons supplies an interpretation of the existence-fact labels in the strict-ground map. Independent-review repair: witness preservation lets the selector omit accessible source-absence worlds provided it keeps an accessible contrast for each pair that has one. Full coverage entails this weaker policy, and omitting the empty near world in the same frame witnesses strictness. The sibling derivation of the modal premise uses witness preservation with the same soundness and realization assumptions.",
-  "blocker": "OPEN: justify witness adequacy for real possibility and whether the same effect can persist under replacement in the sustaining scope. The dependence-to-strict-ground map still needs an independently interpreted existence-fact theory and its oriented edges.",
+  "summary": "Issue #2052. Selected loss yields the existing dependence-to-impossibility premise via soundness for the shared dependence primitive, accessible absence coverage and realization of being-without by an accessible witness. A three-world omission model exhibits a case where the effect drops after the chosen removal but persists in a farther accessible world. A separate normal/repair comparison reuses the matched AND/idle mechanisms and public-input clamp, which concerns public input absence only. None of these comparisons supplies an interpretation of the existence-fact labels in the strict-ground map. Independent-review repair: witness preservation lets the selector omit accessible source-absence worlds provided it keeps an accessible contrast for each pair that has one. Full coverage entails this weaker policy, and omitting the empty near world in the same frame witnesses strictness. The sibling derivation of the modal premise uses witness preservation with the same soundness and realization assumptions. Matched individuation continuation: exact provenance excludes the backup candidate, making preservation vacuous in the fixed three-world profile. Role occupancy admits it and the closest-absence selector omits the resulting contrast despite selected loss and accessible realization. Assigning the far output the original producer’s provenance preserves the omission even under exact origin. The typed origin case uses the prior witness theorem to derive model-relative modal exclusion.",
+  "blocker": "OPEN: warrant a same-bearer criterion for a selected sustaining dependence edge and justify which accessible source-absence histories realize genuine contrasts. The dependence-to-strict-ground map still needs an independently interpreted existence-fact theory and its oriented edges.",
   "evidence": [
     "b8c1cfb7-c820-45c2-a102-cb26633c6bf8",
     "PR-2089",
     "37ec7490-ffa8-455c-b5e3-a396a3ad12f9",
     "3dc6c377-27bc-4c5d-97b6-7ca3c1d7ff9e",
-    "19c36016-c875-470e-9d66-fc24c86fb018"
+    "19c36016-c875-470e-9d66-fc24c86fb018",
+    "19d47624-328d-4c39-9008-1ce24f7d6eed",
+    "PR-2093"
   ],
   "workers": [
     {
@@ -33,6 +36,38 @@
       "effort": "high",
       "date": "2026-11-26",
       "pr": "PR-2089"
+    },
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2093"
+    },
+    {
+      "role": "repair",
+      "provider": "claude",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2093"
     }
-  ]
+  ],
+  "current_assessment": {
+    "date": "2026-11-26",
+    "statement_ids": [
+      "31bcb75e-22ea-4ca9-a9f5-a71da9bfc3f1",
+      "000e1f65-6e74-5519-bbf3-300d5f61ada8"
+    ],
+    "scope": "Same-effect witness preservation for closest source absence in the three-world replacement control",
+    "assessment": "Provenance is informative for a historically identified token and role occupancy for a function. The checked backup assignment defeats preservation under the role criterion. Under exact provenance it leaves no same-effect contrast, so preservation holds in that profile. A retained historical provenance assignment restores the omitted witness under exact origin, so origin matching provides no general guarantee of preservation. Modal exclusion is conditional and confined to the model. Real application to the stage-one dependence premise remains open.",
+    "next_test": "Select a particular load-bearing sustaining dependence edge, specify its bearer and constitutive continuity conditions, and defend which source-absence histories are accessible for that bearer. Revise toward a preservation counterexample if a warranted same-bearer absence history is omitted by the selector with no qualifying selected witness. A warranted contrast inventory that rules out omission would support preservation for that edge.",
+    "note": "docs/notes/counterpossible-conservativity.md#what-counts-as-the-same-effect-through-replacement",
+    "reviewed_revision": "f0023fc0f135ae1b5a81c0d22e4866ab92edf00e",
+    "review": "unreviewed",
+    "publication": "unpublished",
+    "evidence": "Proposed comparison in draft PR-2093. The linked note and Lean results give the exact model and scope. Independent semantic challenge belongs to coordinator review.",
+    "supersedes": "Completes the prior note’s next test to fix the same-effect criterion and compare replacement on one accessibility profile. Retains the prior coverage and strict-ground findings and the unresolved real-possibility application."
+  }
 }

@@ -82,3 +82,4 @@ public import TruthCore.Results.Modal.T.FrameBoundary.Solution
 public import TruthCore.Results.Modal.T.Laws.Solution
 public import TruthCore.Results.Modal.T.ScopeBoundary.Solution
 public import TruthCore.Results.Modal.TemporalHistoryControls.Solution
+public import TruthCore.Results.Modal.WitnessPreservationIndividuation.Solution
