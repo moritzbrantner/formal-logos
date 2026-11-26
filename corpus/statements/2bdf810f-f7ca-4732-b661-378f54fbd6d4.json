@@ -1,0 +1,9 @@
+{
+  "id": "2bdf810f-f7ca-4732-b661-378f54fbd6d4",
+  "label": "The selected PLG assumptions have no strict step with a weak return path",
+  "paraphrase": "For the supplied set of PLG assumptions, no antecedent-to-consequent step of an initial strict full or partial sequent has a finite return path using antecedent-to-consequent steps of initial sequents of any kind. The return can have length zero, which excludes strict self-steps. Every antecedent of a full sequent is considered.",
+  "lean_declaration": "TruthCore.Causality.SelectedPlgTheory.NoStrictReturn",
+  "definition_ids": [
+    "df5284cb-8f1f-5b61-9b1c-ee4c1544b469"
+  ]
+}

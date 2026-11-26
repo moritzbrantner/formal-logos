@@ -1,0 +1,15 @@
+{
+  "id": "4bd8457a-2c92-4d47-bcb6-d32fda38af75",
+  "label": "Certify consistency of the selected PLG theory from its absence of strict returns",
+  "premise_statement_ids": [
+    "2bdf810f-f7ca-4732-b661-378f54fbd6d4"
+  ],
+  "conclusion_statement_id": "fea5942a-b50c-4299-a5fe-80a5c2b8c0a9",
+  "inference_ids": [
+    "b3aa5300-4f25-46ce-863d-fcb28147ad34"
+  ],
+  "meaning": "On a populated atom type, an initial weak step includes its source's predecessor set in its target's set. For strict steps that inclusion is proper by the premise. Each initial sequent satisfies the rank reading and the existing soundness theorem covers every encoded PLG rule. A strict self-sequent is underivable in the very same set.",
+  "definition_ids": [
+    "df5284cb-8f1f-5b61-9b1c-ee4c1544b469"
+  ]
+}

@@ -1,0 +1,82 @@
+[batch]
+vocab = "TruthCore.Causality.SelectedPlgTheory"
+results = "TruthCore.Results.Causality.SelectedPlgTheory"
+
+[[statement]]
+id = "The selected PLG assumptions have no strict step with a weak return path"
+lean = "NoStrictReturn"
+definitions = ["DEF-FINE-PLG-DERIVABILITY"]
+paraphrase = "For the supplied set of PLG assumptions, no antecedent-to-consequent step of an initial strict full or partial sequent has a finite return path using antecedent-to-consequent steps of initial sequents of any kind. The return can have length zero, which excludes strict self-steps. Every antecedent of a full sequent is considered."
+
+[[statement]]
+id = "Each distinct dependence edge has a strict-step path in the selected PLG assumptions"
+lean = "DependenceHasStrictPaths"
+definitions = ["DEF-DEPENDS-FOR-BEING", "DEF-FINE-PLG-STRICT-PARTIAL-GROUND", "DEF-FINE-PLG-DERIVABILITY"]
+disambiguations = ["23dd6f32-b456-4963-adb3-7befbf0dc4fb"]
+paraphrase = "OPEN formal bridge on the supplied dependence relation, labels and assumptions. For each distinct pair with D(x,y), the selected set contains antecedent-to-consequent steps making a finite path from the label of y to the label of x. At least one step comes from a strict full or partial sequent. The labels have no encoded metaphysical interpretation."
+
+[[statement]]
+id = "PLG consistency is equivalent to the absence of a strict step with a weak return"
+lean = "ConsistencyCriterion"
+definitions = ["DEF-FINE-PLG-DERIVABILITY"]
+paraphrase = "For each populated atom type and each supplied set of PLG sequents, that exact set is consistent if and only if no initial strict step has a finite return path of initial steps of any kind. A return of length zero counts."
+
+[[statement]]
+id = "Consistent PLG derives strict partial grounds exactly along paths with a strict step"
+lean = "StrictDerivabilityCriterion"
+definitions = ["DEF-FINE-PLG-STRICT-PARTIAL-GROUND", "DEF-FINE-PLG-DERIVABILITY"]
+paraphrase = "For each consistent PLG set and any two atoms, the strict partial sequent is derivable if and only if there is a finite antecedent-to-consequent path through the assumptions with at least one strict step. Full sequents contribute a step for each antecedent."
+
+[[statement]]
+id = "Two-label PLG controls distinguish weak support, strict support, and a weak return"
+lean = "Control.PresentationControls"
+definitions = ["DEF-DEPENDS-FOR-BEING", "DEF-FINE-PLG-STRICT-PARTIAL-GROUND", "DEF-FINE-PLG-DERIVABILITY"]
+disambiguations = ["23dd6f32-b456-4963-adb3-7befbf0dc4fb"]
+paraphrase = "With two Boolean labels and the sole dependence edge of true on false, a singleton weak full sequent in the supplier-to-dependent direction gives consistency but fails the map. The strict full version gives both. Adjoining the reverse weak full sequent to the strict version preserves the map and makes that exact set inconsistent."
+
+[[argument]]
+id = "Certify consistency of the selected PLG theory from its absence of strict returns"
+theorem = "consistentOfNoStrictReturn"
+premises = ["The selected PLG assumptions have no strict step with a weak return path"]
+conclusion = "fea5942a-b50c-4299-a5fe-80a5c2b8c0a9"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Rank atoms by all their weakly reachable predecessors and apply PLG rank soundness"
+meaning = "On a populated atom type, an initial weak step includes its source's predecessor set in its target's set. For strict steps that inclusion is proper by the premise. Each initial sequent satisfies the rank reading and the existing soundness theorem covers every encoded PLG rule. A strict self-sequent is underivable in the very same set."
+
+[[argument]]
+id = "Derive the distinct dependence map from strict-step paths in the selected assumptions"
+theorem = "mapOfStrictPaths"
+premises = ["Each distinct dependence edge has a strict-step path in the selected PLG assumptions"]
+conclusion = "42756c07-03cd-4b54-8ed6-ed6c1a5132aa"
+sense_bridges = [{term = "DEPENDENCE_FOR_BEING_VERSUS_STRICT_GROUND", from = "DEPENDENCE_FOR_BEING_VERSUS_STRICT_GROUND_1", to = "DEPENDENCE_FOR_BEING_VERSUS_STRICT_GROUND_2", statement_id = "Each distinct dependence edge has a strict-step path in the selected PLG assumptions", role = "premise"}]
+axioms = []
+rule = "Derive weak partial grounds along both subpaths and compose across the strict step"
+meaning = "For the same S, D and labels throughout, use identity for an empty weak subpath, the partial subsumption rules on initial full sequents, and weak and mixed transitivity to derive the target strict partial sequent. No assumption about the well-foundedness of D or consistency of S is needed for this implication. The initial paths are an explicit alignment premise about uninterpreted labels."
+
+[[argument]]
+id = "Classify consistency of a supplied PLG presentation by strict steps and weak returns"
+theorem = "consistencyCriterion"
+premises = []
+conclusion = "PLG consistency is equivalent to the absence of a strict step with a weak return"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Compose strict steps with weak returns and construct a predecessor-set model"
+meaning = "A forbidden return yields strict self-grounding and explosion. In its absence, predecessor-set ranks validate every member of the supplied theory. The comparison fixes S rather than replacing it with a theory generated from D."
+
+[[argument]]
+id = "Classify strict partial derivability by paths in a consistent PLG presentation"
+theorem = "strictDerivabilityCriterion"
+premises = []
+conclusion = "Consistent PLG derives strict partial grounds exactly along paths with a strict step"
+axioms = []
+rule = "Induct over all encoded derivation rules and derive each represented path"
+meaning = "For soundness, the path invariant tracks every antecedent of full sequents individually. Cut concatenates paths, and reverse subsumption supplies strict paths for every antecedent. Consistency makes the explosion case impossible. For completeness, each represented path yields a strict partial sequent via the mixed transitivity rules."
+
+[[argument]]
+id = "Compare three fixed PLG presentations for the same labelled Boolean dependence edge"
+theorem = "presentationControls"
+premises = []
+conclusion = "Two-label PLG controls distinguish weak support, strict support, and a weak return"
+sense_mixing_control = true
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Apply the strict-step and return-path tests to the two labels"
+meaning = "The weak-only and strict-forward presentations each consist of one full sequent. The return control adds exactly one reverse weak full sequent and keeps both labels and the dependence edge fixed. These are formal tests of the encoded premises."

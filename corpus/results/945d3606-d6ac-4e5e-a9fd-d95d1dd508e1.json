@@ -1,0 +1,11 @@
+{
+  "id": "945d3606-d6ac-4e5e-a9fd-d95d1dd508e1",
+  "label": "Derive the distinct dependence map from strict-step paths in the selected assumptions",
+  "argument_id": "ea09d50b-ed10-4454-b737-ff7014bebdd6",
+  "challenge_module": "TruthCore.Results.Causality.SelectedPlgTheory.Challenge",
+  "solution_module": "TruthCore.Results.Causality.SelectedPlgTheory.Solution",
+  "theorem": "TruthCore.Results.Causality.SelectedPlgTheory.mapOfStrictPaths",
+  "comparator_config": "results/945d3606-d6ac-4e5e-a9fd-d95d1dd508e1/comparator.json",
+  "status": "solution-present",
+  "description": "For the same S, D and labels throughout, use identity for an empty weak subpath, the partial subsumption rules on initial full sequents, and weak and mixed transitivity to derive the target strict partial sequent. No assumption about the well-foundedness of D or consistency of S is needed for this implication. The initial paths are an explicit alignment premise about uninterpreted labels."
+}

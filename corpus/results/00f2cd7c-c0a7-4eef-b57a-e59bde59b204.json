@@ -1,0 +1,11 @@
+{
+  "id": "00f2cd7c-c0a7-4eef-b57a-e59bde59b204",
+  "label": "Classify consistency of a supplied PLG presentation by strict steps and weak returns",
+  "argument_id": "9229c6c7-f293-4b8d-8908-28fa2fafafb9",
+  "challenge_module": "TruthCore.Results.Causality.SelectedPlgTheory.Challenge",
+  "solution_module": "TruthCore.Results.Causality.SelectedPlgTheory.Solution",
+  "theorem": "TruthCore.Results.Causality.SelectedPlgTheory.consistencyCriterion",
+  "comparator_config": "results/00f2cd7c-c0a7-4eef-b57a-e59bde59b204/comparator.json",
+  "status": "solution-present",
+  "description": "A forbidden return yields strict self-grounding and explosion. In its absence, predecessor-set ranks validate every member of the supplied theory. The comparison fixes S rather than replacing it with a theory generated from D."
+}

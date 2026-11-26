@@ -1,0 +1,14 @@
+{
+  "id": "964a3045-0d96-4d48-a8ba-97111c809b7a",
+  "label": "Two-label PLG controls distinguish weak support, strict support, and a weak return",
+  "paraphrase": "With two Boolean labels and the sole dependence edge of true on false, a singleton weak full sequent in the supplier-to-dependent direction gives consistency but fails the map. The strict full version gives both. Adjoining the reverse weak full sequent to the strict version preserves the map and makes that exact set inconsistent.",
+  "lean_declaration": "TruthCore.Causality.SelectedPlgTheory.Control.PresentationControls",
+  "definition_ids": [
+    "bf26b9b2-41ed-55b0-9557-dae90ab9b81f",
+    "5d9a94e0-d64b-53ca-b9cc-504735060e0a",
+    "df5284cb-8f1f-5b61-9b1c-ee4c1544b469"
+  ],
+  "disambiguation_ids": [
+    "23dd6f32-b456-4963-adb3-7befbf0dc4fb"
+  ]
+}
