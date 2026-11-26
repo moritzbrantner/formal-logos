@@ -1,0 +1,10 @@
+{
+  "id": "c58a6ae3-9672-48d8-9bdf-79966eaa64df",
+  "label": "Test by Founded origin relation with a giving term iff concurrent actualization, checked",
+  "subject_kind": "result",
+  "subject_id": "b5e9b376-d79a-4f0d-8b94-782bc0915122",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "40a97664-e481-42d7-8458-78374a61aa26",
+  "note": "Checks whether existence of some relation satisfying the stated relationship gives more than concurrence on the same received-esse history."
+}

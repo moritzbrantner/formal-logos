@@ -108,3 +108,13 @@ object_id = "Act is SIMPLY_PRIOR_1 to POTENCY_2 at a first being"
 verification_result_id = "Act is SIMPLY_PRIOR_1 to POTENCY_2 at a first being, from independent act priority"
 strictness_result_id = "Cold stone, composition omissions and first-being act priority facts, checked"
 note = "Same InAct, InPotency and PriorSimply parameters. The strong reading constrains every potency bearer; the weak one only first beings. Control.ColdStone satisfies the weak version while the strong one fails for a stone with a simply prior ground and nothing in act in heat."
+
+[[relation]]
+id = "Test by Cold stone, composition omissions and first-being act priority facts, checked"
+label = "Test by Cold stone, composition omissions and first-being act priority facts, checked"
+subject_kind = "result"
+subject_id = "28d5d266-80d7-412e-9b4e-7bc1a58510bc"
+predicate = "tests"
+object_kind = "statement"
+object_id = "3b2d2d46-baa6-4772-a2db-bb3daeb092fc"
+note = "Tests the converse strength implication in the registered interpretation. Same InAct, InPotency and PriorSimply parameters. The strong reading constrains every potency bearer; the weak one only first beings. Control.ColdStone satisfies the weak version while the strong one fails for a stone with a simply prior ground and nothing in act in heat."

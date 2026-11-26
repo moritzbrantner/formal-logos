@@ -1,0 +1,10 @@
+{
+  "id": "fff25ab7-35ac-4ba3-aebd-bd32ddd03fe7",
+  "label": "Test by No language and frame satisfy the V3 exclusion thesis: wherever Church's three observation…",
+  "subject_kind": "result",
+  "subject_id": "e6a36628-4954-5263-af49-268fdbcb63a6",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "fd01a8b5-1b6b-5c08-a1e6-915528fa12cc",
+  "note": "Tests the two-sided exclusion by applying Church's exact three-observation construction to the sentence and its negation."
+}

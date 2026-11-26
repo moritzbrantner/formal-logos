@@ -1,0 +1,10 @@
+{
+  "id": "2bc9e194-4bbe-4d8b-99ca-dbe47107d4ac",
+  "label": "Test by The fixed diamond is upstream-confluent, connected and well-founded, fails unique immediate…",
+  "subject_kind": "result",
+  "subject_id": "d25f68a3-a9f7-547e-81f1-964da24856e0",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "b0b614c3-0933-5724-b477-6642db60521f",
+  "note": "Tests the necessity of immediate predecessor uniqueness for the graph source consequence in the finite well-founded diamond with confluence."
+}

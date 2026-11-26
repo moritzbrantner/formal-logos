@@ -1,0 +1,10 @@
+{
+  "id": "db8f7df2-6ffd-4093-994e-c008c9faf0ef",
+  "label": "Test by There is a universal modal frame and a time-indexed stat for Temporal succession of op (1)",
+  "subject_kind": "result",
+  "subject_id": "56580411-5a17-51f4-8d02-f440b78c00ff",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "6c61f613-349c-5e5f-936b-bf77cbec2674",
+  "note": "Tests separating temporal change of state from cross-world failure of its initial condition in a universal two-world model."
+}

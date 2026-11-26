@@ -1,0 +1,10 @@
+{
+  "id": "8833c767-bb97-48ba-957e-2072861c6c22",
+  "label": "Test by Q44 essential-source finite controls, checked for At most one actual being has its ess (1)",
+  "subject_kind": "result",
+  "subject_id": "7cdc011d-037c-4a23-b748-f4311ebc5cd3",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "a576300f-4b01-45ae-902c-cfe3d0fbf2de",
+  "note": "Tests omission of the at-most-one condition in the finite q.44 source selection."
+}

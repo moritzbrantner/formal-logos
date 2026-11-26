@@ -1,0 +1,10 @@
+{
+  "id": "7f53576e-5393-4a6d-9e1c-30cb35f1085d",
+  "label": "Test by Finite interpretations for the fourteen derivations of r for Whoever is attributed an (1)",
+  "subject_kind": "result",
+  "subject_id": "7ebb0ab0-4022-5113-9810-67b4afa60cfc",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "193c3a8c-fc70-5b5d-8621-df68a5b0f960",
+  "note": "Tests omitting this premise in the encoded intellectualExerciseRequiresActFromOperating argument, with the other premises retained and the conclusion false in each corresponding control."
+}

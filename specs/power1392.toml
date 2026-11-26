@@ -15,3 +15,13 @@ premises = []
 conclusion = "Power sufficiency compatibility and actual witness scope"
 rule = "Constructive predicate factorization"
 meaning = "Conditional scope audit for issue 1392, not a derivation of active-power sufficiency or root closure. The compatibility witness assigns ability to AllReq only as an existential mathematical construction; no metaphysical definition of ability is proposed. The actual-witness consequence explicitly assumes Infinite g. RelativeBridge retains separately supplied feasible and two OPEN bridges. See docs/notes/power1392.md for semantic limits and positive rivals."
+
+[[relation]]
+id = "Test by Power compatibility scope certificate"
+label = "Test by Power compatibility scope certificate"
+subject_kind = "result"
+subject_id = "e0d08b68-5b16-4621-83ba-ef99e527979a"
+predicate = "tests"
+object_kind = "statement"
+object_id = "d61eda33-7f6c-52a8-a905-e16661520f23"
+note = "Tests the task-scope and witness requirements of the ability rule with one required perfection and a separate feasibility predicate."

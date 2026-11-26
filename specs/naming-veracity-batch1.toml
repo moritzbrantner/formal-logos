@@ -266,3 +266,113 @@ predicate = "supports"
 object_kind = "statement"
 object_id = "STMT-NAME-GOD-IMPOSED-FROM-OPERATION"
 note = "The quarta via calls God what is the cause of being, goodness and every perfection to all beings. The encoded statement keeps only causation of the being of all others, adds the uniqueness condition, and states it as the condition under which the name applies; the source names the cause of all perfections, not only of being, and gives no uniqueness clause."
+
+[[relation]]
+id = "Test by Controls of the naming/veracity/revelation/authority batch: one finite model in which every…"
+label = "Test by Controls of the naming/veracity/revelation/authority batch: one finite model in which every…"
+subject_kind = "result"
+subject_id = "a77876ba-3cf0-54e4-bcb5-8df32517bc21"
+predicate = "tests"
+object_kind = "statement"
+object_id = "0ec9bd34-cbf6-5838-9d45-6ae516504f23"
+note = "Tests omission of this premise from revelationFromOmnipotence in the declared finite revelation assignment with the other premises retained."
+
+[[relation]]
+id = "Test by Controls of the naming/veracity/revelation/authority bat for Only GOD_4 can reveal wit (1)"
+label = "Test by Controls of the naming/veracity/revelation/authority bat for Only GOD_4 can reveal wit (1)"
+subject_kind = "result"
+subject_id = "a77876ba-3cf0-54e4-bcb5-8df32517bc21"
+predicate = "tests"
+object_kind = "statement"
+object_id = "30b2064f-8346-5deb-b58f-46b348d9f3c3"
+note = "Tests omission of this premise from revelationFromOmnipotence in the declared finite revelation assignment with the other premises retained."
+
+[[relation]]
+id = "Test by Controls of the naming/veracity/revelation/authority bat for Revealing a truth and acc (1)"
+label = "Test by Controls of the naming/veracity/revelation/authority bat for Revealing a truth and acc (1)"
+subject_kind = "result"
+subject_id = "a77876ba-3cf0-54e4-bcb5-8df32517bc21"
+predicate = "tests"
+object_kind = "statement"
+object_id = "44696042-51ee-58d0-b462-165ae93680a5"
+note = "Tests omission of this premise from revelationFromOmnipotence in the declared finite revelation assignment with the other premises retained."
+
+[[relation]]
+id = "Test by Controls of the naming/veracity/revelation/authority bat for Whatever is GOD_4 and has (1)"
+label = "Test by Controls of the naming/veracity/revelation/authority bat for Whatever is GOD_4 and has (1)"
+subject_kind = "result"
+subject_id = "a77876ba-3cf0-54e4-bcb5-8df32517bc21"
+predicate = "tests"
+object_kind = "statement"
+object_id = "4d47d4ae-7aa9-5bba-8aa7-68f79ff8dfa9"
+note = "Tests omission of this premise from godConfirmsOnlyTruthFromVeracity in the declared finite veracity assignment with the other premises retained."
+
+[[relation]]
+id = "Test by Controls of the naming/veracity/revelation/authority bat for Whatever causes the being (1)"
+label = "Test by Controls of the naming/veracity/revelation/authority bat for Whatever causes the being (1)"
+subject_kind = "result"
+subject_id = "a77876ba-3cf0-54e4-bcb5-8df32517bc21"
+predicate = "tests"
+object_kind = "statement"
+object_id = "57b88730-adcd-574b-933b-c509519e55cd"
+note = "Tests omission of this premise from reducedNamingFromOperation in the finite two-being one-respect naming interpretation."
+
+[[relation]]
+id = "Test by Controls of the naming/veracity/revelation/authority bat for Whatever a teaching autho (1)"
+label = "Test by Controls of the naming/veracity/revelation/authority bat for Whatever a teaching autho (1)"
+subject_kind = "result"
+subject_id = "a77876ba-3cf0-54e4-bcb5-8df32517bc21"
+predicate = "tests"
+object_kind = "statement"
+object_id = "5f00cb73-5899-5399-850d-47eec2c21291"
+note = "Tests omission of this premise from authorityProposesOnlyTruth in the declared finite authority assignment with the other premise retained."
+
+[[relation]]
+id = "Test by Controls of the naming/veracity/revelation/authority bat for The name 'GOD_1' applies (1)"
+label = "Test by Controls of the naming/veracity/revelation/authority bat for The name 'GOD_1' applies (1)"
+subject_kind = "result"
+subject_id = "a77876ba-3cf0-54e4-bcb5-8df32517bc21"
+predicate = "tests"
+object_kind = "statement"
+object_id = "709ad5d2-5be5-5023-897e-a0c8ea8bd5ab"
+note = "Tests omission of this premise from reducedNamingFromOperation in the finite two-being one-respect naming interpretation."
+
+[[relation]]
+id = "Test by Controls of the naming/veracity/revelation/authority bat for Whatever is GOD_4 and has (2)"
+label = "Test by Controls of the naming/veracity/revelation/authority bat for Whatever is GOD_4 and has (2)"
+subject_kind = "result"
+subject_id = "a77876ba-3cf0-54e4-bcb5-8df32517bc21"
+predicate = "tests"
+object_kind = "statement"
+object_id = "ad56f066-2fef-58e6-8995-0ed8757b9b9c"
+note = "Tests omission of this premise from godConfirmsOnlyTruthFromVeracity in the declared finite veracity assignment with the other premises retained."
+
+[[relation]]
+id = "Test by Controls of the naming/veracity/revelation/authority bat for Every being confirming a (1)"
+label = "Test by Controls of the naming/veracity/revelation/authority bat for Every being confirming a (1)"
+subject_kind = "result"
+subject_id = "a77876ba-3cf0-54e4-bcb5-8df32517bc21"
+predicate = "tests"
+object_kind = "statement"
+object_id = "b426b086-1b1c-5137-94e6-a2f17402481f"
+note = "Tests omission of this premise from godConfirmsOnlyTruthFromVeracity in the declared finite veracity assignment with the other premises retained."
+
+[[relation]]
+id = "Test by Controls of the naming/veracity/revelation/authority bat for Whatever a GOD_4 with the (1)"
+label = "Test by Controls of the naming/veracity/revelation/authority bat for Whatever a GOD_4 with the (1)"
+subject_kind = "result"
+subject_id = "a77876ba-3cf0-54e4-bcb5-8df32517bc21"
+predicate = "tests"
+object_kind = "statement"
+object_id = "c1deb2ee-770d-5030-9e5c-302e33028811"
+note = "Tests omission of this premise from authorityProposesOnlyTruth in the declared finite authority assignment with the other premise retained."
+
+[[relation]]
+id = "Test by Controls of the naming/veracity/revelation/authority bat for A sufficient condition fo (1)"
+label = "Test by Controls of the naming/veracity/revelation/authority bat for A sufficient condition fo (1)"
+subject_kind = "result"
+subject_id = "a77876ba-3cf0-54e4-bcb5-8df32517bc21"
+predicate = "tests"
+object_kind = "statement"
+object_id = "f2504092-91c0-53f1-a59b-2402ccb7b0a7"
+note = "Tests omission of this premise from revelationFromOmnipotence in the declared finite revelation assignment with the other premises retained."

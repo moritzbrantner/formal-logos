@@ -1,0 +1,10 @@
+{
+  "id": "34e00df7-777a-498d-9cc3-10371789a6e6",
+  "label": "Test by Q44 ancestor source-supply controls, checked",
+  "subject_kind": "result",
+  "subject_id": "406fbe1a-1613-4af9-afcf-33cea6682eb2",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "bc1810e5-1070-5585-9b0f-e17ca3547ac7",
+  "note": "Tests omitting the unreceived-to-own-being bridge in the finite q.44 participant-and-source profile."
+}

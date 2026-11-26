@@ -1,0 +1,10 @@
+{
+  "id": "3b6ae3c9-6af8-4681-b15f-0a54f97b6ae6",
+  "label": "Test by Rotating bearer populated separation controls, checked",
+  "subject_kind": "result",
+  "subject_id": "7158959d-0522-4246-9f5a-f26291350e1b",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "b62deb46-c451-5971-a569-cc5c0f44a398",
+  "note": "Tests replacing fixed-bearer existence by population at every successor in the universal Boolean swapping interpretation."
+}

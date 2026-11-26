@@ -52,3 +52,23 @@ object_kind = "statement"
 object_id = "1733629b-f6d4-4804-9a9b-1af74e2747c0"
 verification_result_id = "A beneficiary requirement in every governing plan suffices for one witness"
 note = "At the same g, x, w and plan interpretation, the universal test applies to any existing witness. The mixed-plan control displays why the reverse implication can fail."
+
+[[relation]]
+id = "Test by Evaluate matched controls for existential and universal benefit omission"
+label = "Test by Evaluate matched controls for existential and universal benefit omission"
+subject_kind = "result"
+subject_id = "d55b6783-8e14-47de-93ba-0beddbf41f2c"
+predicate = "tests"
+object_kind = "statement"
+object_id = "1733629b-f6d4-4804-9a9b-1af74e2747c0"
+note = "Tests the existential benefit standard by switching operative use of the same recognized plan on the fixed two-world rational exercise."
+
+[[relation]]
+id = "Test by Evaluate matched controls for existential and universal for A GOD_4 giving plan reject (1)"
+label = "Test by Evaluate matched controls for existential and universal for A GOD_4 giving plan reject (1)"
+subject_kind = "result"
+subject_id = "d55b6783-8e14-47de-93ba-0beddbf41f2c"
+predicate = "tests"
+object_kind = "statement"
+object_id = "df6c64a6-02dc-414a-be8e-dccd035b8872"
+note = "Tests universal versus existential beneficiary credit when the instrumental governing plan remains in both assignments."

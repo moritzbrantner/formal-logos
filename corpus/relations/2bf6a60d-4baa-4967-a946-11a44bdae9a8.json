@@ -1,0 +1,10 @@
+{
+  "id": "2bf6a60d-4baa-4967-a946-11a44bdae9a8",
+  "label": "Test by Finite interpretations for the round 3 Cogito/existence- for The selected being bears (1)",
+  "subject_kind": "result",
+  "subject_id": "b9c3f090-3bf2-5c96-ae3e-c18a1d63cd3b",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "b0fd6cc1-8907-5ec6-b0b4-598848314bf2",
+  "note": "Tests omitting this premise in the encoded selectedActualConcreteFromBorneThought argument, with the other premises retained and the conclusion false in each corresponding control."
+}

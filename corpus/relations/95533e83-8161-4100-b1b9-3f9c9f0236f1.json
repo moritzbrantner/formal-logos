@@ -1,0 +1,10 @@
+{
+  "id": "95533e83-8161-4100-b1b9-3f9c9f0236f1",
+  "label": "Test by Social construction and local scope finite controls",
+  "subject_kind": "result",
+  "subject_id": "7a23011d-5098-4477-8f2e-ab6750459bdf",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "147882aa-2ca4-4854-b945-7c0360c61e26",
+  "note": "Tests whether the construction-to-variation bridge generalizes to the full scope on the fixed profile with one stable true content outside the local scope."
+}

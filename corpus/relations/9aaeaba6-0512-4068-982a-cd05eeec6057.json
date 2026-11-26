@@ -1,0 +1,10 @@
+{
+  "id": "9aaeaba6-0512-4068-982a-cd05eeec6057",
+  "label": "Test by Will and CHANCE_3 controls checked",
+  "subject_kind": "result",
+  "subject_id": "ec6627bf-e955-4532-8ee5-9345fd54fa9f",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "6e4b519b-e766-4dbe-a046-aab8082cb484",
+  "note": "Tests the converse strength implication in the registered interpretation. Same frame and agency overlay. The strong version constrains every being at w with the same set-up at the withholding world; the weak one only beings whose set-up is invariant at w. The controls' three-world model satisfies the weak version while the strong one fails for a chancy being whose set-up varies at a third world."
+}

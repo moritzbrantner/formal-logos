@@ -1,0 +1,10 @@
+{
+  "id": "a7a67e35-764f-4ef2-adba-06e0acd1aecf",
+  "label": "Test by Root bundle immutability witness and omission controls for Whatever is maximal in bein (1)",
+  "subject_kind": "result",
+  "subject_id": "c198d4da-f06c-4f22-b532-89103d100e6c",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "eaa4c679-98a3-5e82-95ff-18bd1177ce74",
+  "note": "Tests omission from the unchanged immutability bundle with revised act, potency and prior assignments on the same Bool carriers."
+}

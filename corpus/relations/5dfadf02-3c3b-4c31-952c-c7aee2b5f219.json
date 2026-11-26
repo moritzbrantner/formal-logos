@@ -1,0 +1,10 @@
+{
+  "id": "5dfadf02-3c3b-4c31-952c-c7aee2b5f219",
+  "label": "Test by One explicit widened original artifact candidate space retains correct-account existence…",
+  "subject_kind": "result",
+  "subject_id": "20d8056e-e0db-5c20-b386-f4211e085e21",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "9108832f-0ef5-5036-8550-f405c7203ff4",
+  "note": "Tests strictness relative to global named coverage by holding a named correct account together with an admissible wrong unnamed extension."
+}

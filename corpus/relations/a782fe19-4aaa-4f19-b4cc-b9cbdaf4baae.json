@@ -1,0 +1,10 @@
+{
+  "id": "a782fe19-4aaa-4f19-b4cc-b9cbdaf4baae",
+  "label": "Test by One sound two-world explanation model has local no-brute for Every actual positive ind (1)",
+  "subject_kind": "result",
+  "subject_id": "97a2a306-39cc-5060-8646-d41c5d5c9624",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "8dd0c1c7-4b19-5e6e-93ea-e76a448b07ad",
+  "note": "Tests whether local no-brute coverage extends globally using the same sound two-world model with a brute positive existence fact at true."
+}

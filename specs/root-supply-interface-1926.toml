@@ -127,3 +127,13 @@ predicate = "logically_equivalent_to"
 object_kind = "statement"
 object_id = "dc397705-d727-419e-92f9-65d44e1ff15d"
 note = "Same profile, selected relation and world: some actual concretum has joint supply in the recorded actual-concrete graph with graph sources as intrinsic contributions iff some actual concretum has no actual concrete ground. Verified, without excluded middle, by the existing premise-free result CONCRETE-SUPPLY-ROOT-EQUIVALENCE (supplyRootEquivalence, result 89605d34), whose right-hand side is ActualRootExistsAt's body. The records stay distinct (a supply formulation and a root formulation); no argument is registered in either direction."
+
+[[relation]]
+id = "Test by Root existence factors as whole-roster nontrapping, population and stability"
+label = "Test by Root existence factors as whole-roster nontrapping, population and stability"
+subject_kind = "result"
+subject_id = "25e69290-4bbd-467a-adb3-d861896037f2"
+predicate = "tests"
+object_kind = "statement"
+object_id = "dc397705-d727-419e-92f9-65d44e1ff15d"
+note = "Checks the exact decomposition of the stronger statement into the weaker version and the registered delta under the comparison's shared interpretation."

@@ -1,0 +1,10 @@
+{
+  "id": "87c625ce-21b8-4245-a43c-b7f600e48d93",
+  "label": "Test by Finite-duration Arrival B controls checked",
+  "subject_kind": "result",
+  "subject_id": "ebf324e3-ecbb-4d14-92dc-1bfa19702074",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "256b5bab-d753-4167-a802-421954a3da48",
+  "note": "Tests omission of this premise from necessaryConcreteOfFiniteDurationBeginning in the open-below history retaining the finite-duration beginning and the required frame laws but with no totality cause."
+}

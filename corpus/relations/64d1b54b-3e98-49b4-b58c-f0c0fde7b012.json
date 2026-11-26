@@ -1,0 +1,10 @@
+{
+  "id": "64d1b54b-3e98-49b4-b58c-f0c0fde7b012",
+  "label": "Test by Maximum-first from prior causes: finite controls, checke for What is SIMPLY_PRIOR_1 to (1)",
+  "subject_kind": "result",
+  "subject_id": "0cfadbaf-e798-4a72-a4d7-31d31bbbac56",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "70e98bb5-a96d-5d69-870d-e6bd0df2b813",
+  "note": "Tests omission of this premise from maximumInBeingIsFirstBeingOfPriorCause in the two-being one-respect profile with the other input retained and maximum firstness false."
+}

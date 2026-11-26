@@ -1,0 +1,10 @@
+{
+  "id": "c56023cc-f9df-44ab-a51d-fb167d4e30bd",
+  "label": "Test by Finite interpretations for the fourteen derivations of r for Every intellectual exerci (1)",
+  "subject_kind": "result",
+  "subject_id": "7ebb0ab0-4022-5113-9810-67b4afa60cfc",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "3dd25039-1575-5612-83a5-2cee9ce1bf7a",
+  "note": "Tests omitting this premise in the encoded bearerExistsFromOperationAndEsse argument, with the other premises retained and the conclusion false in each corresponding control."
+}

@@ -288,3 +288,43 @@ object_kind = "statement"
 object_id = "STMT-PARTICIPATED-HAS-OTHER-CAUSE"
 verification_result_id = "PARTICIPATED-HAS-OTHER-CAUSE-BECOMING-BEING-CAUSE-2"
 note = "Strength order BECOMING-BEING-CAUSE_2 over BECOMING-BEING-CAUSE_3: the external cause must also actually exist. No strictness control in this batch."
+
+[[relation]]
+id = "Test by Finite interpretations for the uniting-cause, in-act and for Every composite has a cau (1)"
+label = "Test by Finite interpretations for the uniting-cause, in-act and for Every composite has a cau (1)"
+subject_kind = "result"
+subject_id = "07959b3c-475e-55d4-9cab-a6bb2687539f"
+predicate = "tests"
+object_kind = "argument"
+object_id = "4723e4a8-ae3b-582e-8fef-06e21d8528e1"
+note = "Tests mixing causation readings with coverage but without exclusivity on the Bool being and Unit respect frame."
+
+[[relation]]
+id = "Test by Finite interpretations for the uniting-cause, in-act and for Nothing that is being mov (1)"
+label = "Test by Finite interpretations for the uniting-cause, in-act and for Nothing that is being mov (1)"
+subject_kind = "result"
+subject_id = "07959b3c-475e-55d4-9cab-a6bb2687539f"
+predicate = "tests"
+object_kind = "argument"
+object_id = "c10beed2-a743-56c8-8185-2a26b45aab44"
+note = "Tests mixing act readings with coverage but without exclusivity on the Unit frame allowing self-motion."
+
+[[relation]]
+id = "Test by Finite interpretations for the uniting-cause, in-act and for Each of the two uses of ' (1)"
+label = "Test by Finite interpretations for the uniting-cause, in-act and for Each of the two uses of ' (1)"
+subject_kind = "result"
+subject_id = "07959b3c-475e-55d4-9cab-a6bb2687539f"
+predicate = "tests"
+object_kind = "statement"
+object_id = "6af2aed7-d9bd-54f1-a4c2-4e981b22d099"
+note = "Tests omitting uniting-cause sense coverage with exclusivity retained in the Bool case."
+
+[[relation]]
+id = "Test by Finite interpretations for the uniting-cause, in-act and for Each of the two uses of ' (2)"
+label = "Test by Finite interpretations for the uniting-cause, in-act and for Each of the two uses of ' (2)"
+subject_kind = "result"
+subject_id = "07959b3c-475e-55d4-9cab-a6bb2687539f"
+predicate = "tests"
+object_kind = "statement"
+object_id = "fcf064ee-9b36-5990-b4fd-9b1549b10530"
+note = "Tests omitting in-act sense coverage with exclusivity retained in the Unit case."

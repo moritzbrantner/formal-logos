@@ -1,0 +1,10 @@
+{
+  "id": "f41222fc-2199-469b-8f00-4d75b280f096",
+  "label": "Test by Controls of the round-3 Christ-and-Church batch: one fin for Jesus' self-ascribed auth (1)",
+  "subject_kind": "result",
+  "subject_id": "47011ff0-25d2-587e-844a-17d6b1a7b11f",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "02bcb70d-f2f5-52af-b050-3a033999a0f9",
+  "note": "Tests omitting this premise in the encoded pilotClaimsFromMarkForgiveness argument, with the other premises retained and the conclusion false in each corresponding control."
+}

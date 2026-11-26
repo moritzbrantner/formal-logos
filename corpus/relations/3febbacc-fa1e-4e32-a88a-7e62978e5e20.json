@@ -1,0 +1,10 @@
+{
+  "id": "3febbacc-fa1e-4e32-a88a-7e62978e5e20",
+  "label": "Test by Finite interpretations with one component for An efficient cause is prior to what it causes",
+  "subject_kind": "result",
+  "subject_id": "77d2339e-c0d5-5527-95cd-29c539cf72d1",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "e078f07b-a4b8-595e-a3ee-02dd83474450",
+  "note": "Tests omission of this premise from noComponentFirst in the one-component interpretation in which the component becomes first in being."
+}

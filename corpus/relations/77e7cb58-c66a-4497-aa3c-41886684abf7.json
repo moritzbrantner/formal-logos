@@ -1,0 +1,10 @@
+{
+  "id": "77e7cb58-c66a-4497-aa3c-41886684abf7",
+  "label": "Test by Unrestricted free absence factors into contingent free absence and companioned absence",
+  "subject_kind": "result",
+  "subject_id": "542c595e-08e3-4b71-8799-dc23fb26c5d9",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "ff30c214-d193-4501-a6a8-0a5bdeb80477",
+  "note": "Checks the exact decomposition of the stronger statement into the weaker version and the registered delta under the comparison's shared interpretation."
+}

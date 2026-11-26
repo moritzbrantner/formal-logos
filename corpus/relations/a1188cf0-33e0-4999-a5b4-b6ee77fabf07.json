@@ -1,0 +1,10 @@
+{
+  "id": "a1188cf0-33e0-4999-a5b4-b6ee77fabf07",
+  "label": "Test by Thin reasons and actual belief without warrant are jointly satisfiable",
+  "subject_kind": "result",
+  "subject_id": "cf896bd6-1437-4c43-a6da-05a29b49d797",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "cf57c52c-c519-49c0-9536-d5fa8a9c9bac",
+  "note": "Tests whether unqualified reason possession and actual belief yield warrant without the eligibility condition, on the Boolean omission assignment."
+}

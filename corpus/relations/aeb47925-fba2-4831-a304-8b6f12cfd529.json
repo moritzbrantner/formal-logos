@@ -1,0 +1,10 @@
+{
+  "id": "aeb47925-fba2-4831-a304-8b6f12cfd529",
+  "label": "Test by There is a modal interpretation with an actual contingen for At least one individual e (1)",
+  "subject_kind": "result",
+  "subject_id": "321d6ee6-cd7a-585b-9d0f-f21e564efd66",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "c778a6ca-e756-56ac-aa68-c81e9883ca7c",
+  "note": "Tests whether local contingent causality suffices on its own using an all-contingent causal model at the designated world."
+}

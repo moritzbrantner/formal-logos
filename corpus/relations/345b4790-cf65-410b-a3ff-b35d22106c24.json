@@ -1,0 +1,10 @@
+{
+  "id": "345b4790-cf65-410b-a3ff-b35d22106c24",
+  "label": "Test by Closed-collection controls, checked",
+  "subject_kind": "result",
+  "subject_id": "66b54b88-8c2f-4d4b-8efe-ed67ed9b1e8c",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "82cfaf26-fc86-54ab-8328-9a7b2bdbbe21",
+  "note": "Tests the converse strength implication in the registered interpretation. Same Profile, selected relation and world. The weak version constrains only ground-closed collections: an endless descending chain or a cycle directly grounded by a root is allowed. Strict: in Control.limitGrounder (a direct root grounder) the weak version holds and AGWF fails."
+}

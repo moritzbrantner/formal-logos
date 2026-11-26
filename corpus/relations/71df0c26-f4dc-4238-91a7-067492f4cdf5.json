@@ -1,0 +1,10 @@
+{
+  "id": "71df0c26-f4dc-4238-91a7-067492f4cdf5",
+  "label": "Test by Finite interpretations for the eight derivations of roun for Every received esse is limited",
+  "subject_kind": "result",
+  "subject_id": "27d0aa1f-bd7c-5946-b886-0dea80ab650e",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "7de89edb-e3a8-59ee-9740-8d0ce7c8ea24",
+  "note": "Tests omitting this premise in the encoded nothingElseReachesPrimary argument, with the other premises retained and the conclusion false in each corresponding control."
+}

@@ -1,0 +1,10 @@
+{
+  "id": "7e418819-5f7d-44f5-87ef-805733b8b1ab",
+  "label": "Test by A joint concrete V4-style proposal reconstruction over the reused two-coordinate language",
+  "subject_kind": "result",
+  "subject_id": "a50f9907-cccd-5538-a78d-970bad582992",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "57ee35c2-0a51-5b19-9afc-7042be15edab",
+  "note": "Tests the use of the criterion boundary in two explicit proposal languages, separating expressive exclusion, task-based adoption and ambient truth."
+}

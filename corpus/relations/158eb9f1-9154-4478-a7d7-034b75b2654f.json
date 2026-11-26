@@ -1,0 +1,10 @@
+{
+  "id": "158eb9f1-9154-4478-a7d7-034b75b2654f",
+  "label": "Test by Controls of the round-3 Christ-and-Church batch: one fin for The narrative reports Jes (1)",
+  "subject_kind": "result",
+  "subject_id": "47011ff0-25d2-587e-844a-17d6b1a7b11f",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "0b7130f1-144a-5129-b99a-647303a06d7f",
+  "note": "Tests omitting this premise in the encoded pilotClaimsFromMarkForgiveness argument, with the other premises retained and the conclusion false in each corresponding control."
+}

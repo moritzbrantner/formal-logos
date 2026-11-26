@@ -1,0 +1,10 @@
+{
+  "id": "89cfd1bb-f9c0-4398-bd2d-eace90a59591",
+  "label": "Test by In the universal two-world S5 frame, the atom-only inven for For S5 and a negation-clo (1)",
+  "subject_kind": "result",
+  "subject_id": "64f3293f-e58a-5b4d-b126-eb6feaee490f",
+  "predicate": "tests",
+  "object_kind": "argument",
+  "object_id": "1d3cf635-a5d5-5045-9ec4-feb309029768",
+  "note": "Tests omitting negation closure while keeping world extensionality in the universal two-world one-atom inventory."
+}

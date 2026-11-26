@@ -1,0 +1,10 @@
+{
+  "id": "d98d2309-9813-4eed-8f69-7e85dea32135",
+  "label": "Test by Epistemic authority finite controls for Belief answerability: force for believing does (1)",
+  "subject_kind": "result",
+  "subject_id": "2930b66a-b5e3-4f3f-b2d3-758d84c0e54d",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "1ef64186-1d82-4801-bf3d-2ab1a6ae7f50",
+  "note": "Tests the answerability bridge against the goal-relative profile that retains thin reasons and actual force but fails answerability."
+}

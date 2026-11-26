@@ -107,3 +107,43 @@ predicate = "refutes"
 object_kind = "statement"
 object_id = "STMT-GOD-EXISTS"
 note = "Conditional rival using the unchanged selected-predicate RouteIdentification; establishes no premise truth."
+
+[[relation]]
+id = "Test by Witness-local hiddenness controls verified"
+label = "Test by Witness-local hiddenness controls verified"
+subject_kind = "result"
+subject_id = "c76bf052-c7a6-4438-b8e4-f7f26bac0fb2"
+predicate = "tests"
+object_kind = "statement"
+object_id = "16fde4e8-1801-4758-8207-f5ac611f3876"
+note = "Tests omission of witness-only openness in inhabited-God controls and compares the qualified sufficient-reason reply with unqualified opening at the same gap."
+
+[[relation]]
+id = "Test by Witness-local hiddenness controls verified for At the actual world some person at some (1)"
+label = "Test by Witness-local hiddenness controls verified for At the actual world some person at some (1)"
+subject_kind = "result"
+subject_id = "c76bf052-c7a6-4438-b8e4-f7f26bac0fb2"
+predicate = "tests"
+object_kind = "statement"
+object_id = "62d4c4c4-9834-5acb-ba7b-260e040c7009"
+note = "Tests omission of the nonbelief witness in the finite God-present control retaining love and both witness-scoped norms."
+
+[[relation]]
+id = "Test by Witness-local hiddenness controls verified for Witness-only access requirement"
+label = "Test by Witness-local hiddenness controls verified for Witness-only access requirement"
+subject_kind = "result"
+subject_id = "c76bf052-c7a6-4438-b8e4-f7f26bac0fb2"
+predicate = "tests"
+object_kind = "statement"
+object_id = "c18f6b6a-93cb-40fd-8fd6-7b03ce0941b1"
+note = "Tests omission of witness-only access exclusion in the finite God-present control retaining witness openness and a nonresistant nonbeliever."
+
+[[relation]]
+id = "Test by Witness-local hiddenness controls verified for Aligned single hiddenness witness bundle"
+label = "Test by Witness-local hiddenness controls verified for Aligned single hiddenness witness bundle"
+subject_kind = "result"
+subject_id = "c76bf052-c7a6-4438-b8e4-f7f26bac0fb2"
+predicate = "tests"
+object_kind = "statement"
+object_id = "c67a7815-2071-4d76-a3a0-b9f8e7b09532"
+note = "Checks nonvacuity of the aligned single-person-time bundle with actual love and the no-God conclusion in a finite interpretation."

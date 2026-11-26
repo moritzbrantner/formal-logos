@@ -137,3 +137,13 @@ object_id = "There is no infinite descending chain of PER_SE_5 actual causes of 
 verification_result_id = "No infinite PER_SE_5 regress of actual causes of being, from no infinite regress"
 strictness_result_id = "De ente root-interface controls"
 note = "Same profile and the same supplied per se link; the per se version restricts well-foundedness to per se links. PerAccidensRegressControl witnesses that the converse fails."
+
+[[relation]]
+id = "Test by De ente root-interface controls"
+label = "Test by De ente root-interface controls"
+subject_kind = "result"
+subject_id = "96c022f9-f64a-4035-9715-8ffab62a3ac9"
+predicate = "tests"
+object_kind = "statement"
+object_id = "fd12ad3d-6729-4fa0-bb87-0121260df684"
+note = "Tests the converse strength implication in the registered interpretation. Same profile and the same supplied per se link; the per se version restricts well-foundedness to per se links. PerAccidensRegressControl witnesses that the converse fails."

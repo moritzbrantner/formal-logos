@@ -1,0 +1,10 @@
+{
+  "id": "983c0433-7c4b-49dc-9e5e-998e97ab01fa",
+  "label": "Test by Formal fact: none of the eight act/POTENCY_1 premises sh for Nothing is simultaneously (1)",
+  "subject_kind": "result",
+  "subject_id": "51ab02bc-b328-555e-bfd9-4ee0d716c3d4",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "c6d6379b-6a9b-55b5-a701-3df289dfcca4",
+  "note": "Tests omission of simultaneous act/potency exclusion from the eight-premise package retaining sensible motion and per se regress."
+}

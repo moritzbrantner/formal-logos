@@ -1,0 +1,10 @@
+{
+  "id": "4e69e674-d940-432a-a653-6271989fb63a",
+  "label": "Test by Same profile witness support adapter joint and omission certificates",
+  "subject_kind": "result",
+  "subject_id": "9fe202a4-c151-420a-b394-523e09aa56c2",
+  "predicate": "tests",
+  "object_kind": "argument",
+  "object_id": "78dfeded-5bc4-40e3-af5d-7adeb178cc0e",
+  "note": "Tests joint satisfiability of the exact same-witness package and distinguishes an underived bearer from the underivedness of the unique profile exemplar in the second assignment."
+}

@@ -1,0 +1,10 @@
+{
+  "id": "0957d95e-8302-4834-a053-299d10b31996",
+  "label": "Test by Populate acquisition-history assumptions with the operative press and its patient",
+  "subject_kind": "result",
+  "subject_id": "f6f7968d-5ed4-4ba9-ac3e-d6a6c1258722",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "14539ae8-d014-4931-95c0-2f309e94f986",
+  "note": "Tests joint nonvacuity of the ranked-input history with the covered stroke, imprint and indicator on the existing press profile."
+}

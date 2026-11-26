@@ -1,0 +1,10 @@
+{
+  "id": "e48cc448-e855-4eb3-af70-1a6d18f0adac",
+  "label": "Test by KTB node is the T node plus a symmetric frame",
+  "subject_kind": "result",
+  "subject_id": "769e5a6f-08a6-489f-a795-073b8b6e1c3f",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "12e11583-51e9-5c42-a51f-0debdb152818",
+  "note": "Checks the exact decomposition of the stronger statement into the weaker version and the registered delta under the comparison's shared interpretation."
+}

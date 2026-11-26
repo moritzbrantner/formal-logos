@@ -1,0 +1,10 @@
+{
+  "id": "d3e8aa6c-84fa-449f-a737-e70cff2d92f0",
+  "label": "Test by Certificate-only and non-well-founded known-prior accoun for The supplied demonstrativ (1)",
+  "subject_kind": "result",
+  "subject_id": "20ed92f4-766f-4bd6-b67d-9e5e37f9a209",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "bade02f4-b2f2-4d75-b822-564d5059b9c6",
+  "note": "Tests well-founded demonstrative priority in the Nat successor profile with certificates using earlier premises and all contents true and known."
+}

@@ -140,3 +140,33 @@ object_kind = "statement"
 object_id = "Co-possible Grim Reaper pieces along a coinitial populated descent glue into one world"
 verification_result_id = "Unrestricted Grim Reaper patchwork gives coinitial Grim Reaper patchwork"
 note = "Same frame, histories and pieces; the quantifier over descents is restricted to coinitial ones."
+
+[[relation]]
+id = "Test by Grim Reaper patchwork controls checked"
+label = "Test by Grim Reaper patchwork controls checked"
+subject_kind = "result"
+subject_id = "f93bd2da-d55b-4e08-8867-6dd399a32049"
+predicate = "tests"
+object_kind = "statement"
+object_id = "3c0c69a9-8076-4d85-9119-6ccbedaa6547"
+note = "Tests patchwork with both local-piece premises in the beginningless pivot register."
+
+[[relation]]
+id = "Test by Grim Reaper patchwork controls checked for Co-possible Grim Reaper pieces along a coin (1)"
+label = "Test by Grim Reaper patchwork controls checked for Co-possible Grim Reaper pieces along a coin (1)"
+subject_kind = "result"
+subject_id = "f93bd2da-d55b-4e08-8867-6dd399a32049"
+predicate = "tests"
+object_kind = "statement"
+object_id = "7d17a839-f29b-4d16-a70c-5e3d3bd77c25"
+note = "Tests coinitial patchwork on the integer pivot profile retaining both local-piece premises and coinitiality."
+
+[[relation]]
+id = "Test by Grim Reaper patchwork controls checked for Along every populated descent, adjacent Gri (1)"
+label = "Test by Grim Reaper patchwork controls checked for Along every populated descent, adjacent Gri (1)"
+subject_kind = "result"
+subject_id = "f93bd2da-d55b-4e08-8867-6dd399a32049"
+predicate = "tests"
+object_kind = "statement"
+object_id = "934deb52-49b4-4b5d-a270-b1680472d1d6"
+note = "Tests adjacent-pieces co-possibility with both patchwork principles in the beginningless silent integer register."

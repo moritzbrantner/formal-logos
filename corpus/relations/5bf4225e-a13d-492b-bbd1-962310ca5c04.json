@@ -1,0 +1,10 @@
+{
+  "id": "5bf4225e-a13d-492b-bbd1-962310ca5c04",
+  "label": "Test by Finite interpretations for the ten derivations of round for Every Johannine commission (1)",
+  "subject_kind": "result",
+  "subject_id": "d3dd4601-36f0-51a2-a5f4-29fc87e49e84",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "a8365742-e60c-51e8-8e1b-881e7adbf2fe",
+  "note": "Tests omitting this premise in the encoded johnIndependentFromStrands argument, with the other premises retained and the conclusion false in each corresponding control."
+}

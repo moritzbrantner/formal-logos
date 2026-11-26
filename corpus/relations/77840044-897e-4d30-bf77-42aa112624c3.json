@@ -1,0 +1,10 @@
+{
+  "id": "77840044-897e-4d30-bf77-42aa112624c3",
+  "label": "Test by Root existence factors as whole-roster nontrapping, population and stability",
+  "subject_kind": "result",
+  "subject_id": "25e69290-4bbd-467a-adb3-d861896037f2",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "dc397705-d727-419e-92f9-65d44e1ff15d",
+  "note": "Checks the exact decomposition of the stronger statement into the weaker version and the registered delta under the comparison's shared interpretation."
+}

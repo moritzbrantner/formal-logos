@@ -1,0 +1,10 @@
+{
+  "id": "b6884850-8127-4319-b58b-d318fc2fa4a8",
+  "label": "Test by De ente esse-source controls for At most one actual being has its esse identical with (1)",
+  "subject_kind": "result",
+  "subject_id": "04212a3f-ba3c-4102-978f-c551b5ad8600",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "a576300f-4b01-45ae-902c-cfe3d0fbf2de",
+  "note": "Tests omission of this premise from commonEsseIsEssenceSource in the De ente two-source interpretation with the other composition inputs retained."
+}

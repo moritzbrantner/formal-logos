@@ -58,3 +58,13 @@ premises = []
 conclusion = "Replenishment permits constant nondepleting interval work"
 rule = "Finite summation and real Archimedean order"
 meaning = "At every natural interval the explicit ledger (2,2,1,1,0) is admissible and its unit work meets unit demand. This is a replenished ledger control, not physical dynamics. Analyst conditional energy accounting only; no causal or bearer bridge."
+
+[[relation]]
+id = "Test by Replenishment permits constant nondepleting interval work, by temporal energy accounting"
+label = "Test by Replenishment permits constant nondepleting interval work, by temporal energy accounting"
+subject_kind = "result"
+subject_id = "a73311f6-c3b4-4712-96a6-449af9771ebe"
+predicate = "tests"
+object_kind = "argument"
+object_id = "47c33df4-4c8f-40be-93c5-6006f751b6a1"
+note = "Tests omitting closure in the uniform demand case by restoring one unit of input in each admissible constant-stock ledger."

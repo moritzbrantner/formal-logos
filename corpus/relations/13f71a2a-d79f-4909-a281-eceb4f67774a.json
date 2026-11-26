@@ -1,0 +1,10 @@
+{
+  "id": "13f71a2a-d79f-4909-a281-eceb4f67774a",
+  "label": "Test by Part-free description control",
+  "subject_kind": "result",
+  "subject_id": "d8fdd4e6-71d8-48ae-8f90-207095991567",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "446e5de8-6477-460d-8288-a4c294c36d83",
+  "note": "Tests compatibility of local name-free definability with an independently assigned false composition predicate on the named Bool witness."
+}

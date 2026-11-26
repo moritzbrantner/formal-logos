@@ -1,0 +1,10 @@
+{
+  "id": "cc0de32b-2b65-4692-a383-382b5e86aa72",
+  "label": "Test by Rivals of the fourteen stage-two attribute premises surv for Whatever HAS_INTELLECT_1 (1)",
+  "subject_kind": "result",
+  "subject_id": "120dd28f-c1e6-4fa2-8acf-26d0c1d5162a",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "090be689-b77f-51a1-9d5d-caf339169e4b",
+  "note": "Tests the selected premise in the following setting. Same HasIntellect and HasWill predicates; one being, one respect. Control.intellectWithoutWill in Control.Certificate. Other seven premises of StageTwo.GodHasWill.godHasWill hold, including that what is altogether immaterial has intellect. Its conclusion (God has will) fails."
+}

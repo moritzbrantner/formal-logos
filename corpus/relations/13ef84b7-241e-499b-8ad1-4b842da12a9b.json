@@ -1,0 +1,10 @@
+{
+  "id": "13ef84b7-241e-499b-8ad1-4b842da12a9b",
+  "label": "Test by Inert-emptiness controls checked for A concrete-empty moment is followed only by concr (1)",
+  "subject_kind": "result",
+  "subject_id": "ed27d6ae-685d-434e-b00f-b3c8121a3709",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "395cb0f6-0352-47b1-8996-918468cc716a",
+  "note": "Tests omission of this premise from necessaryConcrete in the separate typed history controls retaining the modal frame conditions and both other history premises."
+}

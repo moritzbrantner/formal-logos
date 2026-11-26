@@ -1,0 +1,10 @@
+{
+  "id": "f9790c52-3910-4b2e-af88-da9696a274a5",
+  "label": "Test by Finite interpretations for the two sense forks: for each for Every use of 'cause' on t (2)",
+  "subject_kind": "result",
+  "subject_id": "f6e67b12-0e1a-512f-a34b-c05112ecef6c",
+  "predicate": "tests",
+  "object_kind": "argument",
+  "object_id": "48d1002b-8904-5fe4-92c3-969f25bfe4fc",
+  "note": "Tests mixing causal readings with coverage but without exclusivity, allowing the two uses to disagree in the Unit profile."
+}

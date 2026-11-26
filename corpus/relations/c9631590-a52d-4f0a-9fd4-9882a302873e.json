@@ -1,0 +1,10 @@
+{
+  "id": "c9631590-a52d-4f0a-9fd4-9882a302873e",
+  "label": "Test by Finite interpretations for the eleven derivations of rou for Nothing is prior to itself",
+  "subject_kind": "result",
+  "subject_id": "133783a4-07b1-5727-9fca-7f9fb474db54",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "32d77f18-a9c2-5486-b51c-a24f32863af4",
+  "note": "Tests omitting this premise in the encoded noLoopsFromPriority argument, with the other premises retained and the conclusion false in each corresponding control."
+}

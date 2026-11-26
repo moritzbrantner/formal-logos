@@ -1,0 +1,10 @@
+{
+  "id": "abc67c66-a6d5-4133-a7e8-af5958f3c44b",
+  "label": "Test by Finite models for the CONTINGENT_1 node and its modal-co for Some actual CONCRETE_AND_ (1)",
+  "subject_kind": "result",
+  "subject_id": "3e1d8dfa-b732-5e4b-84ee-374fafe05f66",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "c94b5446-e7e7-5b36-9bed-288959725526",
+  "note": "Tests omission of the contingency node on the one-world profile retaining the T, B and 5 schemas while each collapse rival holds."
+}

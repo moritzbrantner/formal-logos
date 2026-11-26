@@ -1,0 +1,10 @@
+{
+  "id": "97f20262-32ed-4eb7-b7f4-922de59be2a7",
+  "label": "Test by Lifting is no contingent ground plus actual recurrence of support edges",
+  "subject_kind": "result",
+  "subject_id": "ec1e60f9-2c2f-4889-a822-4fdeee231da1",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "2a9378b4-3dad-591b-a88e-1907a79f1fa5",
+  "note": "Checks the exact decomposition of the stronger statement into the weaker version and the registered delta under the comparison's shared interpretation."
+}

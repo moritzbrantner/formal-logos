@@ -1,0 +1,10 @@
+{
+  "id": "37f4b2cb-9310-4690-9778-029a686fc7f9",
+  "label": "Test by Formal fact: if every POTENCY_1 is of the contradictory, for Every POTENCY_1 is of the (1)",
+  "subject_kind": "result",
+  "subject_id": "eb7995ee-9e0d-543e-9eef-13c3dca9b959",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "f80a0209-8181-5f37-a173-a46e6f315b00",
+  "note": "Tests omission of potency-of-the-contradictory in the five-input route restricted to the substance respect."
+}

@@ -1,0 +1,10 @@
+{
+  "id": "ede660b4-18ab-4554-a4d8-8906750785e6",
+  "label": "Test by Esse-cause efficiency controls for Every actual distinct esse is efficiently caused (C (1)",
+  "subject_kind": "result",
+  "subject_id": "23792412-934c-4ea1-a3a8-e9f5d37a94b0",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "1ff08418-e7a8-473f-9348-f2fe83b4d00e",
+  "note": "Tests the converse strength implication in the registered interpretation. Same q.3 a.4 profile and witness; the strong version adds that the external cause of esse is an efficient cause of it (EfficientlyCausesEsse). NonEfficientCauseControl satisfies the weak version and falsifies the strong one."
+}

@@ -260,3 +260,53 @@ predicate = "refutes"
 object_kind = "statement"
 object_id = "All supplied formation methods are insensitive to opposite truths"
 note = "The paired outputs vary in the same supplied method class and state profile used by the denial."
+
+[[relation]]
+id = "Test by Finite benchmark accuracy and opposite-truth responsiveness are independent"
+label = "Test by Finite benchmark accuracy and opposite-truth responsiveness are independent"
+subject_kind = "result"
+subject_id = "721646f2-eadd-43d4-8df9-a3aa00c48fd7"
+predicate = "tests"
+object_kind = "statement"
+object_id = "034cb5d4-4e52-4c61-8b7b-708436f3a670"
+note = "Tests whether benchmark reliability and responsiveness are equivalent using constant-true and opposite-answer methods on the four-entry benchmark."
+
+[[relation]]
+id = "Test by Certificate-only and non-well-founded known-prior accounts survive"
+label = "Test by Certificate-only and non-well-founded known-prior accounts survive"
+subject_kind = "result"
+subject_id = "20ed92f4-766f-4bd6-b67d-9e5e37f9a209"
+predicate = "tests"
+object_kind = "statement"
+object_id = "b178b6e6-0115-4611-8fea-58dab5d69fed"
+note = "Tests the earlier-premise reading of demonstration in the Unit certificate-only model where the sole content is known and priority is empty."
+
+[[relation]]
+id = "Test by Certificate-only and non-well-founded known-prior accoun for The supplied demonstrativ (1)"
+label = "Test by Certificate-only and non-well-founded known-prior accoun for The supplied demonstrativ (1)"
+subject_kind = "result"
+subject_id = "20ed92f4-766f-4bd6-b67d-9e5e37f9a209"
+predicate = "tests"
+object_kind = "statement"
+object_id = "bade02f4-b2f2-4d75-b822-564d5059b9c6"
+note = "Tests well-founded demonstrative priority in the Nat successor profile with certificates using earlier premises and all contents true and known."
+
+[[relation]]
+id = "Test by Thin reasons and actual belief without warrant are jointly satisfiable"
+label = "Test by Thin reasons and actual belief without warrant are jointly satisfiable"
+subject_kind = "result"
+subject_id = "cf896bd6-1437-4c43-a6da-05a29b49d797"
+predicate = "tests"
+object_kind = "statement"
+object_id = "cf57c52c-c519-49c0-9536-d5fa8a9c9bac"
+note = "Tests whether unqualified reason possession and actual belief yield warrant without the eligibility condition, on the Boolean omission assignment."
+
+[[relation]]
+id = "Test by An inhabited semantic profile separates identity from an invalid inference"
+label = "Test by An inhabited semantic profile separates identity from an invalid inference"
+subject_kind = "result"
+subject_id = "b203c461-805a-4572-b966-ba3a7886d561"
+predicate = "tests"
+object_kind = "statement"
+object_id = "3e6a8e08-7bac-47f2-b67c-00471dcbcf69"
+note = "Tests global invalidity in the Boolean truth profile witnessing both valid identity and an invalid inference from true to false."

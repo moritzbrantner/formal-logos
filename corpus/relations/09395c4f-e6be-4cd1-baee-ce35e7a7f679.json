@@ -1,0 +1,10 @@
+{
+  "id": "09395c4f-e6be-4cd1-baee-ce35e7a7f679",
+  "label": "Test by Finite interpretations for the eight derivations of roun for A greater degree of any p (1)",
+  "subject_kind": "result",
+  "subject_id": "27d0aa1f-bd7c-5946-b886-0dea80ab650e",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "9eaa3b6e-ad2f-5776-ab26-03cfa9f54ad8",
+  "note": "Tests omitting this premise in the encoded unlimitedPossessionExceedsLimited argument, with the other premises retained and the conclusion false in each corresponding control."
+}

@@ -1,0 +1,10 @@
+{
+  "id": "a9e2b9a5-db45-4f43-b9ae-128ec496a599",
+  "label": "Test by Controls of the round-3 Christ-and-Church batch: one fin for Any two visible societies (1)",
+  "subject_kind": "result",
+  "subject_id": "47011ff0-25d2-587e-844a-17d6b1a7b11f",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "e0e35789-1b8d-5fd7-a5a5-b5ab20d20fee",
+  "note": "Tests omitting this premise in the encoded christsChurchIsCatholicFromUniqueness argument, with the other premises retained and the conclusion false in each corresponding control."
+}

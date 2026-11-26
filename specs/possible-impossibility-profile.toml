@@ -30,3 +30,13 @@ premises = []
 conclusion = "Formula-local possible-impossibility scope controls"
 rule = "Construct finite witnesses in the existing Bool frames."
 meaning = "Nonvacuity and scope/report/gloss bridge omission controls only. Bool does not restrict the arbitrary-world certificate."
+
+[[relation]]
+id = "Test by Formula-local possible-impossibility omission controls"
+label = "Test by Formula-local possible-impossibility omission controls"
+subject_kind = "result"
+subject_id = "2c478290-075b-4f0e-a9bc-c973ca3c3b9b"
+predicate = "tests"
+object_kind = "argument"
+object_id = "2c1e2180-dfb7-46aa-8d7d-bd134000df80"
+note = "Tests nonvacuity and scope of the formula-local equivalence using the universal and ascending Boolean frames and independently supplied report and gloss values."

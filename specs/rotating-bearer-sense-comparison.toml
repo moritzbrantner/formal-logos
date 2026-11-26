@@ -141,3 +141,23 @@ scope = "deDictoK: compare only the worldwise-existence component with the Rotat
 witness = "TruthCore.Results.Causality.RotatingBearerSenseComparison.controls: rotatingProfile reuses Control.swapOntic; ExistsAt v b iff v=b, universal access, false actual world, every successor populated, no fixed bearer, S5 and NecessaryIn deDictoK for every candidate. This witnesses necessity-clause compatibility only, not a God or root witness."
 gap = "Full-root compatibility is unresolved: controls has no signature or RootFacts witness. No distinct de-dicto necessary-root sense definition exists; the Box definition is used only for its explicitly scoped worldwise-existence clause, not equated with the root node."
 next_step = "If selected, supply an independent RootFacts interpretation on this SAME rotating-existence profile and retain the same candidate identity/accessibility; otherwise leave the full-root cell unresolved. No new proof or claim is introduced here."
+
+[[relation]]
+id = "Test by Rotating bearer finite sense classification, checked"
+label = "Test by Rotating bearer finite sense classification, checked"
+subject_kind = "result"
+subject_id = "93afcb83-90c0-4c5b-b4bb-8f12297f8d33"
+predicate = "tests"
+object_kind = "statement"
+object_id = "b62deb46-c451-5971-a569-cc5c0f44a398"
+note = "Checks the distinction between fixed-bearer and worldwise necessity under rotation and explicit excluded middle on the same roster."
+
+[[relation]]
+id = "Test by Rotating bearer populated separation controls, checked"
+label = "Test by Rotating bearer populated separation controls, checked"
+subject_kind = "result"
+subject_id = "7158959d-0522-4246-9f5a-f26291350e1b"
+predicate = "tests"
+object_kind = "statement"
+object_id = "b62deb46-c451-5971-a569-cc5c0f44a398"
+note = "Tests replacing fixed-bearer existence by population at every successor in the universal Boolean swapping interpretation."

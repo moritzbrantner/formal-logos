@@ -1,0 +1,10 @@
+{
+  "id": "f206fd8a-ffa9-4969-90f6-a5f118962291",
+  "label": "Test by Four controls for the audited defeat policy",
+  "subject_kind": "result",
+  "subject_id": "fddc2381-a88e-41b9-b799-16e834ad7217",
+  "predicate": "tests",
+  "object_kind": "argument",
+  "object_id": "ceaee982-9528-43d0-ac9d-8a35f4594bea",
+  "note": "Tests policy self-application and the limit of basis defeat in stipulated models with true unwarranted content or an independent supporting ground."
+}

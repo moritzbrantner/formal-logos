@@ -1,0 +1,10 @@
+{
+  "id": "0356a214-b82b-44c7-9d69-38c8cece7c70",
+  "label": "Test by Formal fact: with 'GENUS_1' in the quarta via's GENUS_1 for There is something maximal (1)",
+  "subject_kind": "result",
+  "subject_id": "20a0c178-0280-5238-878c-deae2db1e470",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "0881e859-c4c3-53ff-9bec-b61294e12d51",
+  "note": "Tests the Fourth Way consequence when the genus principle is restricted to genuine genera, with the strict principle populated by animal and the being conclusion false."
+}

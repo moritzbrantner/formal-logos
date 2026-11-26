@@ -1,0 +1,10 @@
+{
+  "id": "ec03ff7a-3140-4258-82b0-e67a9b18ebfc",
+  "label": "Test by A mathematically defined acyclic infinite causal relation can have a source in every finite…",
+  "subject_kind": "result",
+  "subject_id": "222e5cdf-b40c-5288-a964-589d7f4f538c",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "29d0850c-2d52-5096-bf86-7e9ea44154cc",
+  "note": "Tests whether every finite restriction having a local source suffices for a global source using the reverse-successor relation on Nat."
+}

@@ -1,0 +1,10 @@
+{
+  "id": "9159d89a-d834-4344-9658-035df6513a9f",
+  "label": "Test by Finite interpretations for the eleven derivations of rou for Every edge of the studied (1)",
+  "subject_kind": "result",
+  "subject_id": "133783a4-07b1-5727-9fca-7f9fb474db54",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "57552dce-fee0-506b-9aef-58a20da0db44",
+  "note": "Tests omitting this premise in the encoded noLoopsFromPriority, wellFoundedFromPriority arguments, with the other premises retained and the conclusion false in each corresponding control."
+}

@@ -37,3 +37,23 @@ conclusion = "Same profile witness weak-bridge sibling omission controls"
 axioms = []
 rule = "Finite case analysis on explicit assignments"
 meaning = "Omission controls for the weak-bridge sibling: in each assignment every other input holds, one bridge fails and the exemplar is not underived, so neither bridge can be dropped from this argument. Assignments only; they are not evidence against either bridge."
+
+[[relation]]
+id = "Test by Same profile witness weak-bridge sibling omission certificates"
+label = "Test by Same profile witness weak-bridge sibling omission certificates"
+subject_kind = "result"
+subject_id = "d7aa6bca-01a7-4c42-a9f6-9be3b430ca8d"
+predicate = "tests"
+object_kind = "statement"
+object_id = "96d25c42-71aa-5fa0-841d-9aa62d91e1be"
+note = "Tests omission of this premise from sameWitnessUnderivedFromBridges in the shared-witness interpretation retaining the other inputs but leaving the selected exemplar derived."
+
+[[relation]]
+id = "Test by Same profile witness weak-bridge sibling omission certif for An incoming direct existe (1)"
+label = "Test by Same profile witness weak-bridge sibling omission certif for An incoming direct existe (1)"
+subject_kind = "result"
+subject_id = "d7aa6bca-01a7-4c42-a9f6-9be3b430ca8d"
+predicate = "tests"
+object_kind = "statement"
+object_id = "bd983df2-058a-5503-89a1-bbebe87f958b"
+note = "Tests omission of this premise from sameWitnessUnderivedFromBridges in the shared-witness interpretation retaining the other inputs but leaving the selected exemplar derived."

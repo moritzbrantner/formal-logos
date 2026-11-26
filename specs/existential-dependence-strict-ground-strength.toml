@@ -32,3 +32,13 @@ axioms = ["propext", "Classical.choice", "Quot.sound"]
 rule = "Reuse the consistent Fine infinite-descent theory with the successor dependence relation"
 meaning = "Joint satisfiability of PLG consistency and the dependence-to-strict-ground map with a nonempty distinct-step D, in one formal interpretation over the natural numbers. It shows that the support bundle is not satisfied only by an empty dependence relation; it does not show that either input is true of real beings."
 sense_mixing_control = true
+
+[[relation]]
+id = "Test by Nonvacuity witness for the strict-ground dependence bundle"
+label = "Test by Nonvacuity witness for the strict-ground dependence bundle"
+subject_kind = "result"
+subject_id = "6d871ee2-14db-43a9-b8f4-a6d7707a86d2"
+predicate = "tests"
+object_kind = "argument"
+object_id = "3f972da1-d36f-4b00-95ed-cf0b78bf0105"
+note = "Tests whether the consistency and mapping premises can hold with a nonempty distinct-step dependence relation on Nat."

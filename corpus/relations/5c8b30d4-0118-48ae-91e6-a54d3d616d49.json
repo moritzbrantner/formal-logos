@@ -1,0 +1,10 @@
+{
+  "id": "5c8b30d4-0118-48ae-91e6-a54d3d616d49",
+  "label": "Test by Controls for the grounded perfection-transfer derivation, checked",
+  "subject_kind": "result",
+  "subject_id": "40f6a49b-4582-4e3e-bb12-81e818c51262",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "10cd24ed-3878-489b-819e-02820a6ef2cd",
+  "note": "Tests omission of this premise from causeOfBeingCausesEveryPerfectionGrounded in the three designated transfer interpretations, with exactly one substantive input dropped at a time."
+}

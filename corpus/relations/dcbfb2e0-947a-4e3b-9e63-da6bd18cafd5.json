@@ -1,0 +1,10 @@
+{
+  "id": "dcbfb2e0-947a-4e3b-9e63-da6bd18cafd5",
+  "label": "Test by Joint absence and replacement controls on finite equival for No newcomer is CONTINGENC (1)",
+  "subject_kind": "result",
+  "subject_id": "4eda66b6-a2c1-439e-984f-f22a0c747727",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "9574ad92-9949-40ee-baf3-e8aec590dc7d",
+  "note": "Tests omission of coverage against replacement contingents in the swapped equivalence-frame model where actual-roster absence holds."
+}

@@ -84,3 +84,23 @@ evidence_result_ids = { implication = "Every maximum in being being GOD_2 entail
 separator = { setting = "twoMaximaSetting", result_id = "Two-maxima control separates 'every maximum in being is GOD_2' from reduced naming" }
 statement_parameter_indices = { stronger = [0, 1, 2, 3, 5, 6], weaker = [0, 1, 2, 3, 4, 5, 6], delta = [0, 1, 2, 3, 4, 5, 6] }
 note = "Difference of 'every maximum in being is GOD_2' and the reduced nominal description: the strong version adds exactly that every maximum in being that does not both cause the being of every other being and be the only maximum is GOD_2. The delta concerns only maxima outside the reduced description, including the case of several maxima, which the at-most-one-maximum result addresses separately. The two-maxima separator is a finite interpretation, not a claim that several maxima in being exist."
+
+[[relation]]
+id = "Test by Every maximum in being is GOD_2 factors as reduced naming plus the clause outside it"
+label = "Test by Every maximum in being is GOD_2 factors as reduced naming plus the clause outside it"
+subject_kind = "result"
+subject_id = "16501a16-dbcd-46ba-8b03-fa88701e1ae9"
+predicate = "tests"
+object_kind = "statement"
+object_id = "957a71fe-ba7e-5633-bef2-f5d287362fc5"
+note = "Checks the exact decomposition of the stronger statement into the weaker version and the registered delta under the comparison's shared interpretation."
+
+[[relation]]
+id = "Test by Two-maxima control separates 'every maximum in being is GOD_2' from reduced naming"
+label = "Test by Two-maxima control separates 'every maximum in being is GOD_2' from reduced naming"
+subject_kind = "result"
+subject_id = "ee78cc8b-c98d-4a20-a298-62c0687a3716"
+predicate = "tests"
+object_kind = "statement"
+object_id = "957a71fe-ba7e-5633-bef2-f5d287362fc5"
+note = "Strictness control: on Bool with everything in act, nothing more a being, no causing and no GOD_2, uniqueness of a maximum fails (the causing condition also fails), so the reduced naming holds vacuously, while true is maximal and not GOD_2."

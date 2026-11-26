@@ -16,3 +16,13 @@ conclusion = "A necessary intermediary can directly supply every actual continge
 axioms = []
 rule = "Inspect both worlds on the original three-being chain and apply named-root identification"
 meaning = "Both d and g exist in every accessible world. At false, g gives being to the contingent c, the only possible actual contingent recipient there. The incoming edge d to g leaves g derived. If the selected g reached every actual concretum, a finite path to the actual root d would identify g with d, contrary to the distinct constructors. The use of the naming predicate stipulates a candidate, without independently warranting its divine status."
+
+[[relation]]
+id = "Test by Test coverage of all contingent recipients at the necessary intermediary"
+label = "Test by Test coverage of all contingent recipients at the necessary intermediary"
+subject_kind = "result"
+subject_id = "012166ef-0b65-4785-a163-1900d60044c9"
+predicate = "tests"
+object_kind = "statement"
+object_id = "75974d26-9483-4e1b-81a9-693a90ee9d0f"
+note = "Tests extending direct giving to actual contingent recipients into ancestry of all actual concreta using the d-to-g-to-c chain where the selected g cannot reach its own root."

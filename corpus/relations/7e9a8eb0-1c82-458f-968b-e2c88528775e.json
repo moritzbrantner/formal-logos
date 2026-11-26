@@ -1,0 +1,10 @@
+{
+  "id": "7e9a8eb0-1c82-458f-968b-e2c88528775e",
+  "label": "Test by Finite interpretations for the eleven derivations of rou for Nothing is moved except i (1)",
+  "subject_kind": "result",
+  "subject_id": "133783a4-07b1-5727-9fca-7f9fb474db54",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "4be9a4ac-699a-5adc-88d4-bbd958fa1576",
+  "note": "Tests omitting this premise in the encoded pureActOperatesFromBeing argument, with the other premises retained and the conclusion false in each corresponding control."
+}

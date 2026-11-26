@@ -1,0 +1,10 @@
+{
+  "id": "21e2c635-cc7f-4aff-8a6e-1b2c163a2b73",
+  "label": "Test by Comparison and omission bundle for Some thought episode occurs under the supplied occu (1)",
+  "subject_kind": "result",
+  "subject_id": "a94fd849-9264-5497-b9d1-1828cf81744a",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "e81971f1-601c-57f5-be2d-c4b0624d0cad",
+  "note": "Tests omission of this premise from necessaryConcreteAncestor in the assigned thinker or ancestry profile retaining the other nonlogical inputs and with no necessary concrete ancestor."
+}

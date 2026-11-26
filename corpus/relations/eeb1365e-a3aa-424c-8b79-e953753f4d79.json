@@ -1,0 +1,10 @@
+{
+  "id": "eeb1365e-a3aa-424c-8b79-e953753f4d79",
+  "label": "Test by Four priority-route omissions and fixed rational exercis for Non-rational giving requi (1)",
+  "subject_kind": "result",
+  "subject_id": "decd967f-3ecb-4bca-8d69-cd365ed30f9f",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "a0abeef8-30ea-432c-9bfb-07d2179151f2",
+  "note": "Tests omission of this premise from rationalGivingOfPriority in the corresponding shared-frame assignment with the same CAUSE_2 edge and assigned intellect and will."
+}

@@ -344,3 +344,43 @@ object_kind = "statement"
 object_id = "STMT-LIFE-BOUNDARY-REQUIRES-SOME-MUTABILITY"
 verification_result_id = "LIFE-BOUNDARY-SOME-MUTABILITY-FROM-ANOTHER"
 note = "Strength order between MUTABLE_2 and MUTABLE_3 in the boundary use."
+
+[[relation]]
+id = "Test by Controls for the MUTABLE and GOD sense forks"
+label = "Test by Controls for the MUTABLE and GOD sense forks"
+subject_kind = "result"
+subject_id = "6df6e803-d83f-5fca-b4ca-3b714defa5a1"
+predicate = "tests"
+object_kind = "argument"
+object_id = "8a29551f-afa7-5336-a699-fa534a0d0143"
+note = "Tests mixing the naming and root God predicates while keeping sense coverage and omitting exclusivity in a finite described-principle profile."
+
+[[relation]]
+id = "Test by GOD_1: the naming premise read nominally is analytic"
+label = "Test by GOD_1: the naming premise read nominally is analytic"
+subject_kind = "result"
+subject_id = "07fbf440-0132-533b-82d0-3b205a7bb5e2"
+predicate = "tests"
+object_kind = "argument"
+object_id = "b7e2768a-ae2c-56f9-8089-acca1e1b44d0"
+note = "Checks the definitional naming application in the GOD_1 interpretation before the bridge to the GOD_4 predicate."
+
+[[relation]]
+id = "Test by Controls for the MUTABLE and GOD sense forks for MUTABLE fork summary: immutable in on (1)"
+label = "Test by Controls for the MUTABLE and GOD sense forks for MUTABLE fork summary: immutable in on (1)"
+subject_kind = "result"
+subject_id = "6df6e803-d83f-5fca-b4ca-3b714defa5a1"
+predicate = "tests"
+object_kind = "argument"
+object_id = "77c3850f-919b-5837-9399-85c34313f80c"
+note = "Tests mixing the mutability readings in a finite covered but nonexclusive use profile whose joint no-change conclusion fails."
+
+[[relation]]
+id = "Test by Controls for the MUTABLE and GOD sense forks for There is something maximally being th (1)"
+label = "Test by Controls for the MUTABLE and GOD sense forks for There is something maximally being th (1)"
+subject_kind = "result"
+subject_id = "6df6e803-d83f-5fca-b4ca-3b714defa5a1"
+predicate = "tests"
+object_kind = "statement"
+object_id = "0881e859-c4c3-53ff-9bec-b61294e12d51"
+note = "Tests the omission of the Fourth Way's causal maximum input in the registered described-principle route to GOD_4 existence."

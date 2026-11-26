@@ -1,0 +1,10 @@
+{
+  "id": "0d52a8cf-d874-4f5b-a75b-1f62d670dc1d",
+  "label": "Test by Per-accidens response-family model controls",
+  "subject_kind": "result",
+  "subject_id": "bbfad776-4451-4bb1-9fda-ba62c31a19ed",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "9a78c82f-2219-4299-8c31-a92f9073ac4c",
+  "note": "Tests whether preserving exercise under all admissible removals requires a populated removal class in the integer-dated intervention profiles."
+}

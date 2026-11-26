@@ -1,0 +1,10 @@
+{
+  "id": "b2f60372-285f-432f-9857-bdcabf857072",
+  "label": "Test by Owner endpoint calibration checked interface",
+  "subject_kind": "result",
+  "subject_id": "a62ea00e-c7df-4a6e-ae5b-cfe8e904a56e",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "e27489c3-7419-5123-8476-386633e62532",
+  "note": "Tests the scope of the owner-floor concreteness rule by contrasting actualGraph endpoints with a separate graph, an isolated nonconcrete source and the same-bearer esse calibration."
+}

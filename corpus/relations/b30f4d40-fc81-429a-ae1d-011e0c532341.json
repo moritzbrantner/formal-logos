@@ -1,0 +1,10 @@
+{
+  "id": "b30f4d40-fc81-429a-ae1d-011e0c532341",
+  "label": "Test by Actual hiddenness scope controls",
+  "subject_kind": "result",
+  "subject_id": "4a63f31d-e115-4be8-bb4a-3ab9bf737f1e",
+  "predicate": "tests",
+  "object_kind": "argument",
+  "object_id": "c4e41a1e-7170-4f55-85f0-16e4d6320845",
+  "note": "Tests joint satisfiability and the omitted interfaces of the actual-world hiddenness profile using its stated empirical and normative assignments."
+}

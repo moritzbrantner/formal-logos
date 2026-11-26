@@ -1,0 +1,10 @@
+{
+  "id": "a7709c6a-18f6-42ee-826a-5df5920c2a54",
+  "label": "Test by Populated moral scope permits both raw explanatory direc for The two orders of explana (1)",
+  "subject_kind": "result",
+  "subject_id": "6fc3b602-b76e-5c4f-842a-9fbc7869ca84",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "3d253af8-a9c3-54ca-b1d9-ccb7fc86a302",
+  "note": "Tests the shared predicates with both orders on a nonempty moral scope when asymmetry fails, and with both or neither under asymmetry in separate controls."
+}

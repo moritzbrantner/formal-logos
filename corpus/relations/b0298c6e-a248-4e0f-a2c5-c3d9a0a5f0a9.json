@@ -1,0 +1,10 @@
+{
+  "id": "b0298c6e-a248-4e0f-a2c5-c3d9a0a5f0a9",
+  "label": "Test by Evaluate matched controls for existential and universal for A GOD_4 giving plan reject (1)",
+  "subject_kind": "result",
+  "subject_id": "d55b6783-8e14-47de-93ba-0beddbf41f2c",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "df6c64a6-02dc-414a-be8e-dccd035b8872",
+  "note": "Tests universal versus existential beneficiary credit when the instrumental governing plan remains in both assignments."
+}

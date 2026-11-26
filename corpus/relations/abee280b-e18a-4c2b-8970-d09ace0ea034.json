@@ -1,0 +1,10 @@
+{
+  "id": "abee280b-e18a-4c2b-8970-d09ace0ea034",
+  "label": "Test by Finite interpretations for the fourteen derivations of r for At any world, whoever bea (1)",
+  "subject_kind": "result",
+  "subject_id": "7ebb0ab0-4022-5113-9810-67b4afa60cfc",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "f8b47cda-5ebf-532d-b951-b4f756076cc9",
+  "note": "Tests omitting this premise in the encoded bearerExistsFromWorldIndexedOccurrence argument, with the other premises retained and the conclusion false in each corresponding control."
+}

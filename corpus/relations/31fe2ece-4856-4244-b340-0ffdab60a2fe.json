@@ -1,0 +1,10 @@
+{
+  "id": "31fe2ece-4856-4244-b340-0ffdab60a2fe",
+  "label": "Test by One being living at two ordered times with different lif for A living thing whose life (1)",
+  "subject_kind": "result",
+  "subject_id": "4f41f2b6-b941-5cbe-8ce1-b6808f6065a5",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "487fb7ab-609f-5695-b1b3-77fe21538c7f",
+  "note": "Tests omission of the life-state change-to-motion premise in a finite two-time history."
+}

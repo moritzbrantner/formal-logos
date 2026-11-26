@@ -36,3 +36,23 @@ conclusion = "Maximum-first from prior causes: finite controls"
 axioms = []
 rule = "Explicit finite interpretations on Bool and Unit"
 meaning = "Nonvacuity and omission controls: on two beings and one respect, (1) both premises hold with true maximal in being and simply prior to false, and the conclusion holds; (2) with no comparisons and true prior to and causing the being of false, the priority premise holds and the conclusion fails at the maximum false; (3) with no causing and true prior to false, the no-distinct-cause premise holds and the conclusion fails. Finite interpretations only."
+
+[[relation]]
+id = "Test by Maximum-first from prior causes: finite controls, checked"
+label = "Test by Maximum-first from prior causes: finite controls, checked"
+subject_kind = "result"
+subject_id = "0cfadbaf-e798-4a72-a4d7-31d31bbbac56"
+predicate = "tests"
+object_kind = "statement"
+object_id = "18561596-1269-53ff-8505-c56e4348e335"
+note = "Tests omission of this premise from maximumInBeingIsFirstBeingOfPriorCause in the two-being one-respect profile with the other input retained and maximum firstness false."
+
+[[relation]]
+id = "Test by Maximum-first from prior causes: finite controls, checke for What is SIMPLY_PRIOR_1 to (1)"
+label = "Test by Maximum-first from prior causes: finite controls, checke for What is SIMPLY_PRIOR_1 to (1)"
+subject_kind = "result"
+subject_id = "0cfadbaf-e798-4a72-a4d7-31d31bbbac56"
+predicate = "tests"
+object_kind = "statement"
+object_id = "70e98bb5-a96d-5d69-870d-e6bd0df2b813"
+note = "Tests omission of this premise from maximumInBeingIsFirstBeingOfPriorCause in the two-being one-respect profile with the other input retained and maximum firstness false."

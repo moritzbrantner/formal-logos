@@ -1,0 +1,10 @@
+{
+  "id": "7fb5a636-5fe2-4c0d-8ab1-f21bc33fe2f3",
+  "label": "Test by Controls of the round-3 Christ-and-Church batch: one fin for Whatever the Council of C (1)",
+  "subject_kind": "result",
+  "subject_id": "47011ff0-25d2-587e-844a-17d6b1a7b11f",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "0434c90e-18e8-590a-bc84-25c6d8a452c3",
+  "note": "Tests omitting this premise in the encoded creedProposedFromC381 argument, with the other premises retained and the conclusion false in each corresponding control."
+}

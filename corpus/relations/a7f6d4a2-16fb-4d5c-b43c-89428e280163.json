@@ -1,0 +1,10 @@
+{
+  "id": "a7f6d4a2-16fb-4d5c-b43c-89428e280163",
+  "label": "Test by De ente esse-source controls",
+  "subject_kind": "result",
+  "subject_id": "04212a3f-ba3c-4102-978f-c551b5ad8600",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "457698e4-eb21-4561-ab32-eccbfb0a992e",
+  "note": "Tests omission of this premise from distinctEsseHasEsseIsEssenceSource in the De ente cause-of-being profile, using the uncaused distinct esse or the descending Nat cause chain respectively."
+}

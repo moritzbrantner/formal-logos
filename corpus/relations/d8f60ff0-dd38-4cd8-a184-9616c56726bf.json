@@ -1,0 +1,10 @@
+{
+  "id": "d8f60ff0-dd38-4cd8-a184-9616c56726bf",
+  "label": "Test by Divine assertion route structural controls certificate",
+  "subject_kind": "result",
+  "subject_id": "bd2c7094-5946-4815-b7a0-27a535bd2d8e",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "1496f7ec-2c22-4b26-aef2-39c77ca6ea49",
+  "note": "Tests omission of this premise from assertionTruthA in the finite actual-assertion profile, which retains the other input and has a false assertion."
+}

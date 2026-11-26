@@ -1,0 +1,10 @@
+{
+  "id": "468b5353-d0f5-4fb2-a70b-f419a6c3bb71",
+  "label": "Test by Finite interpretations for the nine derivations of round for Having two distinct const (1)",
+  "subject_kind": "result",
+  "subject_id": "9b1c8d31-2458-5ece-9902-ea7dd0371d6c",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "b67c6bb9-3a56-5400-89f7-c6eb6f0eb2a1",
+  "note": "Tests omitting this premise in the encoded compositionsFromConstituents argument, with the other premises retained and the conclusion false in each corresponding control."
+}

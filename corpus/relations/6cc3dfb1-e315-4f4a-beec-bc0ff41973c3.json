@@ -1,0 +1,10 @@
+{
+  "id": "6cc3dfb1-e315-4f4a-beec-bc0ff41973c3",
+  "label": "Test by In the existing nontrivial two-coordinate language, the for The supplied criterion is (1)",
+  "subject_kind": "result",
+  "subject_id": "c199664c-295e-52eb-a5e6-12945a8bf998",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "af40d9a3-0007-50be-94fb-2d22068c03dd",
+  "note": "Tests the converse strength implication in the registered interpretation. Full scoped coextension entails the necessary-only condition. The control witnesses one exact V3 instance satisfying the latter but not full calibration."
+}

@@ -92,3 +92,13 @@ conclusion = "Every possible world contains some individual"
 axioms = ["propext", "Classical.choice", "Quot.sound"]
 rule = "Compose emptyWorldDeletion with accessibleDeletionExcluded"
 meaning = "Conditional incompatibility, composed from emptyWorldDeletion and accessibleDeletionExcluded: origin-determined access, an empty possible world and Arrival A's presence-to-existence, inert emptiness and possible contingent-free past at w cannot all hold; stated as the exclusion of an empty world by the other four. So the encoded origin-tolerance rival, if it keeps the OPEN if-half and Arrival A's non-frame premises, must deny that a world with no individuals is possible. Strengthened bundle only: the five-world countermodel of the original bundle (OriginToleranceIdentity.Control.faithful) has no empty world and stands. Establishes none of its premises."
+
+[[relation]]
+id = "Test by Origin-deletion controls checked"
+label = "Test by Origin-deletion controls checked"
+subject_kind = "result"
+subject_id = "70d098fe-048d-4bcd-b48e-e9ca293b0ba0"
+predicate = "tests"
+object_kind = "statement"
+object_id = "d827a4e2-88c9-4dc9-9cec-442dd673524e"
+note = "Tests deletion and its accessible-world scope across the three explicit origin-tolerance models, retaining the core origin commitments as recorded."

@@ -42,3 +42,33 @@ premises = []
 conclusion = "Ideal consensus due actuality finite controls"
 rule = "explicit finite artifact interpretations"
 meaning = "On the existing knife and counterweight profile, exact assessors satisfy every bridge. Permissive and rejecting assessors respectively omit soundness and acceptance; a due-accurate assessor with surplus goodness omits Reduction. Each omitted bridge leaves the due thesis false. Empty consensus also satisfies Acceptance while sound witnesses fail. No historical rival is refuted."
+
+[[relation]]
+id = "Test by Ideal consensus comparison has compatibility and omission controls"
+label = "Test by Ideal consensus comparison has compatibility and omission controls"
+subject_kind = "result"
+subject_id = "04d31815-72a0-4c1c-a209-25a7ac84c180"
+predicate = "tests"
+object_kind = "statement"
+object_id = "50b0a5e4-ef0c-4358-84a1-cb663303cd44"
+note = "Tests omission of universal approval in the omission-artifact ideal consensus profile."
+
+[[relation]]
+id = "Test by Ideal consensus comparison has compatibility and omissio for Each aspect has a sound i (1)"
+label = "Test by Ideal consensus comparison has compatibility and omissio for Each aspect has a sound i (1)"
+subject_kind = "result"
+subject_id = "04d31815-72a0-4c1c-a209-25a7ac84c180"
+predicate = "tests"
+object_kind = "statement"
+object_id = "770dca86-b389-4999-a2b7-a27b35eb40c8"
+note = "Tests omission of sound assessment witnesses in the surplus-artifact ideal consensus profile."
+
+[[relation]]
+id = "Test by Ideal consensus comparison has compatibility and omissio for Ideal consensus identifie (1)"
+label = "Test by Ideal consensus comparison has compatibility and omissio for Ideal consensus identifie (1)"
+subject_kind = "result"
+subject_id = "04d31815-72a0-4c1c-a209-25a7ac84c180"
+predicate = "tests"
+object_kind = "statement"
+object_id = "b3622de9-6c8e-4dc6-b597-48b9c0dffc46"
+note = "Tests omission of the identification with goodness in the surplus-artifact profile retaining approval and a sound witness."

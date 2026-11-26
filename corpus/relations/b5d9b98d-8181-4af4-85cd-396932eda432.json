@@ -1,0 +1,10 @@
+{
+  "id": "b5d9b98d-8181-4af4-85cd-396932eda432",
+  "label": "Test by Finite interpretations for the eleven derivations of rou for Whatever HAS_INTELLECT_1 (1)",
+  "subject_kind": "result",
+  "subject_id": "133783a4-07b1-5727-9fca-7f9fb474db54",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "64e174b3-3efb-510e-81cc-34bc054a9898",
+  "note": "Tests omitting this premise in the encoded intellectFormFromUnderstanding argument, with the other premises retained and the conclusion false in each corresponding control."
+}

@@ -85,3 +85,53 @@ axioms = ["propext", "Classical.choice", "Quot.sound"]
 sense_mixing_control = true
 rule = "Evaluate the common rational giving assignment with different practical clause and recognition assignments"
 meaning = "The same fixed rational giving occurs throughout. Coverage fails with apprehension and satisfaction but no operative use. On the operative profiles the same bare production is always required. Changing the two requirements independently tests the rejection premises without changing who gives being. With the full plan fixed, switching off willing or direction for the distinct recipient falsifies the corresponding recognition rule and bridge. The certificate is structural and compares no possible worlds of a metaphysical rival."
+
+[[relation]]
+id = "Test by Matched controls for the practical specification of fixed rational giving"
+label = "Test by Matched controls for the practical specification of fixed rational giving"
+subject_kind = "result"
+subject_id = "6a0df6b9-d7d5-4612-8dc0-ee12b98dfbb5"
+predicate = "tests"
+object_kind = "statement"
+object_id = "437438f0-183c-48e5-8d84-f82b94fabf3e"
+note = "Tests benefit-to-willing recognition with a plan that requires benefit and recipient willing switched off."
+
+[[relation]]
+id = "Test by Matched controls for the practical specification of fixe for Distinct actual giving by (1)"
+label = "Test by Matched controls for the practical specification of fixe for Distinct actual giving by (1)"
+subject_kind = "result"
+subject_id = "6a0df6b9-d7d5-4612-8dc0-ee12b98dfbb5"
+predicate = "tests"
+object_kind = "statement"
+object_id = "4be0f774-2c0a-4691-9088-6e790940960a"
+note = "Tests omission of operative coverage in the fixed rational giving case where the plan is apprehended and satisfied but unused."
+
+[[relation]]
+id = "Test by Matched controls for the practical specification of fixe for A giving plan rejects wit (1)"
+label = "Test by Matched controls for the practical specification of fixe for A giving plan rejects wit (1)"
+subject_kind = "result"
+subject_id = "6a0df6b9-d7d5-4612-8dc0-ee12b98dfbb5"
+predicate = "tests"
+object_kind = "statement"
+object_id = "b1d7825e-a1ae-4f86-af2e-1b9819055e0f"
+note = "Tests omission of the end rejection rule with the operative bare-output plan and the other relations fixed."
+
+[[relation]]
+id = "Test by Matched controls for the practical specification of fixe for A GOD_4 giving plan rejec (1)"
+label = "Test by Matched controls for the practical specification of fixe for A GOD_4 giving plan rejec (1)"
+subject_kind = "result"
+subject_id = "6a0df6b9-d7d5-4612-8dc0-ee12b98dfbb5"
+predicate = "tests"
+object_kind = "statement"
+object_id = "df6c64a6-02dc-414a-be8e-dccd035b8872"
+note = "Tests omission of the benefit rejection rule with a fixed operative bare-output plan that passes the edited description."
+
+[[relation]]
+id = "Test by Matched controls for the practical specification of fixe for Required end-placement in (1)"
+label = "Test by Matched controls for the practical specification of fixe for Required end-placement in (1)"
+subject_kind = "result"
+subject_id = "6a0df6b9-d7d5-4612-8dc0-ee12b98dfbb5"
+predicate = "tests"
+object_kind = "statement"
+object_id = "f8cd0849-e401-4c45-8820-2cd9fc08b8e7"
+note = "Tests the end-to-direction recognition with a plan that requires end-placement and the distinct recipient's direction switched off."

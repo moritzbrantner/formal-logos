@@ -1,0 +1,10 @@
+{
+  "id": "34288b94-1737-4027-82a9-8d9c7e698881",
+  "label": "Test by For every shared entity type with decidable equality, ge for Anything that comes to be (1)",
+  "subject_kind": "result",
+  "subject_id": "21025c5a-8e53-5d35-9044-d8239329dac7",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "9709d14f-1324-58f1-8889-1110881c5b44",
+  "note": "Checks the exact decomposition of the stronger statement into the weaker version and the registered delta under the comparison's shared interpretation."
+}

@@ -1,0 +1,10 @@
+{
+  "id": "095b3255-d68f-4a8f-874b-f69b602d7c32",
+  "label": "Test by Matched act-reason deletion separates existential from contingent-fact coverage",
+  "subject_kind": "result",
+  "subject_id": "31a48b76-871a-4205-9c51-58663787b64d",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "608a262d-08fe-4dfd-9413-67e2ecf35b84",
+  "note": "Tests whether local no-brute-existence coverage accounts for the contingent act that explains a target, keeping ontology and the existence-fact map fixed while removing the act's reason."
+}

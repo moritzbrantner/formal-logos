@@ -1,0 +1,10 @@
+{
+  "id": "3065c5b3-4942-4ab9-9191-85964e40ac2d",
+  "label": "Test by Finite interpretations for the seven derivations of caus for Nothing gives what it doe (1)",
+  "subject_kind": "result",
+  "subject_id": "86d080aa-4c6e-5f85-a86e-333c805d0093",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "376d6a5a-c179-5090-b57c-f9a371222899",
+  "note": "Tests omitting this premise in the encoded causeOfQualityMoreSuch argument, with the other premises retained and the conclusion false in each corresponding control."
+}

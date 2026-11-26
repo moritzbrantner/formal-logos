@@ -1,0 +1,10 @@
+{
+  "id": "457659b3-19e5-49de-93cf-6debc1c3aeb6",
+  "label": "Test by An exact Nat×Bool interpretation satisfies local-chain c for If each member of an infi (1)",
+  "subject_kind": "result",
+  "subject_id": "aabd5208-0f38-57ba-a8a8-67b052c2c4c2",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "9a36bdc4-75a6-5c39-9d70-88bd42ba38a5",
+  "note": "Tests the unrestricted scope in a populated local-chain structure with a distinct injective touching chain and no corresponding whole."
+}

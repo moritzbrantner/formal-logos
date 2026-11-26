@@ -1,0 +1,10 @@
+{
+  "id": "c8ee2c86-fb4c-41c1-b882-b83cc5828640",
+  "label": "Test by Abstract-only rival of concrete population survives, checked",
+  "subject_kind": "result",
+  "subject_id": "3ece0128-00db-428a-a8f5-c781c072fcfb",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "56f68b40-9737-59a0-8cac-5610980a1547",
+  "note": "Tests the selected premise in the following setting. Same Ontic model, concrete predicate and selected world as the premise; one world, one candidate. Control.abstractOnly in Control.AbstractOnlySurvives; abstractOnlySurvives proves the listed conjuncts. Control.abstractOnly at its one world: the rival and excluded middle hold; NecessaryRootTrilemma fails. Consumer tested: NecessaryRootFork.necessaryRootTrilemma."
+}

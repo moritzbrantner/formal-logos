@@ -1,0 +1,10 @@
+{
+  "id": "a66ec367-6aa2-4b63-8983-86c1d66b2097",
+  "label": "Test by Grounding calibration supplies the POE truth component",
+  "subject_kind": "result",
+  "subject_id": "ebb9a5d9-f95f-4f92-9eb7-db53e6751d7d",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "40840c3d-90da-5237-b2a3-8ea9519b5c9c",
+  "note": "Checks the truth-component condition for the grounding calibration on arbitrary profiles using the grounding branch of the disjunctive lemma."
+}

@@ -1,0 +1,10 @@
+{
+  "id": "5f207c0b-3844-4e9f-b79a-71b15557c482",
+  "label": "Test by Finite interpretations for the eight derivations of roun for Having r without limitati (1)",
+  "subject_kind": "result",
+  "subject_id": "27d0aa1f-bd7c-5946-b886-0dea80ab650e",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "f6677834-6328-5588-a288-0e0d815876ff",
+  "note": "Tests omitting this premise in the encoded unlimitedPossessionExceedsLimited argument, with the other premises retained and the conclusion false in each corresponding control."
+}

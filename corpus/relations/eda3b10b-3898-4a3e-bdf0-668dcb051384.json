@@ -1,0 +1,10 @@
+{
+  "id": "eda3b10b-3898-4a3e-bdf0-668dcb051384",
+  "label": "Test by For each of the four hiddenness premises there is an int for At every supplied world, (1)",
+  "subject_kind": "result",
+  "subject_id": "a73f8a32-6e94-5307-86a3-f9f48445347f",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "7a22ab5d-e728-58a0-b6f1-48d944e6e216",
+  "note": "Tests omission of this premise from noGod in the respective finite hiddenness assignment where GOD exists and the other three premises are maintained."
+}

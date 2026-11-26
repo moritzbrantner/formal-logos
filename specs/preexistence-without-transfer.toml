@@ -180,3 +180,23 @@ rule = "Finite bounded decision for the full nonlogical premise bundle and restr
 meaning = "Finite structural interpretation over Fin 3 and Bool. Every nonlogical premise of the new GOD_4 bundle and its consequent hold, and unrestricted f8ba2429 fails: the secondary cause gives the recipient esse but not its additional perfection. Classical excluded middle is available separately. Thus universal-scope transfer is strictly weaker than unrestricted transfer under the other bundle assumptions, without showing either is true of reality."
 definitions = ["211a6432-8b8f-53ed-85e3-75173bb15b24", "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72", "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168", "a2a8de58-42e0-5481-b7fb-848ae8602036"]
 disambiguations = ["00e0d443-eb39-56a3-9179-9c8852ca4a2b", "205a39c3-915d-5fe4-8076-a9ff91329e08", "dba7b1de-f3a0-57af-9af9-b2a4da3136fa"]
+
+[[relation]]
+id = "Test by Matched three-bearer control for universal-only transfer to GOD_4"
+label = "Test by Matched three-bearer control for universal-only transfer to GOD_4"
+subject_kind = "result"
+subject_id = "fcc91ba5-c1ce-4a8e-b405-22d8912f9032"
+predicate = "tests"
+object_kind = "statement"
+object_id = "f8ba2429-b4f1-5712-a4d3-798213963d34"
+note = "Tests whether the restricted transfer input entails unrestricted transfer using the Fin 3 and Bool source and effects profile."
+
+[[relation]]
+id = "Test by Controls for preexistence without transfer, checked"
+label = "Test by Controls for preexistence without transfer, checked"
+subject_kind = "result"
+subject_id = "77881eaf-8685-48f1-9086-69bdd6820ab5"
+predicate = "tests"
+object_kind = "statement"
+object_id = "2c0b9bd7-9dad-4837-bf7e-4cbeff35729c"
+note = "Tests broadening cause-of-being transfer to distinct causes of every perfection in the Bool interpretation with a distinct cause of a further perfection that does not cause the effect's being."

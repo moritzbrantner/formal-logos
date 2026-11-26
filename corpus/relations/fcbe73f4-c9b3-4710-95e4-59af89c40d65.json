@@ -1,0 +1,10 @@
+{
+  "id": "fcbe73f4-c9b3-4710-95e4-59af89c40d65",
+  "label": "Test by Finite interpretations for the nine derivations of round for What is ALTOGETHER_IMMATE (1)",
+  "subject_kind": "result",
+  "subject_id": "9b1c8d31-2458-5ece-9902-ea7dd0371d6c",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "44000fce-47be-5597-b176-61e2f270199c",
+  "note": "Tests omitting this premise in the encoded immaterialIntellectualFromGrades argument, with the other premises retained and the conclusion false in each corresponding control."
+}

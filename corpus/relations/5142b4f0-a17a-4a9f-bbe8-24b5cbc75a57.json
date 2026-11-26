@@ -1,0 +1,10 @@
+{
+  "id": "5142b4f0-a17a-4a9f-bbe8-24b5cbc75a57",
+  "label": "Test by Three deadline-ordered Reapers admit an assignment obeying the same firing rule",
+  "subject_kind": "result",
+  "subject_id": "35930a1f-fd11-552c-bda8-3266f757be00",
+  "predicate": "tests",
+  "object_kind": "argument",
+  "object_id": "06e8500c-b234-5f99-89f8-e0efb1502154",
+  "note": "Tests the role of having no first deadline using three ordered reapers that obey the same rule once an earliest one is supplied."
+}

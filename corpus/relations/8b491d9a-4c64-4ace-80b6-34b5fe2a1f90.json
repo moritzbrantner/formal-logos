@@ -1,0 +1,10 @@
+{
+  "id": "8b491d9a-4c64-4ace-80b6-34b5fe2a1f90",
+  "label": "Test by Conceptual existence boundary finite separations for Nuclear profile has an actuality- (1)",
+  "subject_kind": "result",
+  "subject_id": "b5b39d22-7a92-4bc1-9d42-60af1a486aee",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "ddfab47a-60c0-4bfd-b388-79c23c4b4377",
+  "note": "Tests omission of this premise from existingExemplar in the finite feature and Unit candidate interpretations of the existence account."
+}

@@ -1,0 +1,10 @@
+{
+  "id": "ae1bfc61-e19b-4539-8f81-6e68244aa222",
+  "label": "Test by Rivals of the fourteen stage-two attribute premises surv for Every perfection of a thi (1)",
+  "subject_kind": "result",
+  "subject_id": "120dd28f-c1e6-4fa2-8acf-26d0c1d5162a",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "64498e7e-7f10-54a0-9ec0-c65e6076de1f",
+  "note": "Tests the selected premise in the following setting. Same InAct and CausesIn predicates and esse respect; two beings, two respects. Control.emergentPerfection in Control.Certificate. Other premise of CausalMapsBatch1.causeOfBeingHasWhatItGives holds: whatever is caused in a thing is had by it. Its conclusion (a cause of being has every perfection it causes) fails."
+}

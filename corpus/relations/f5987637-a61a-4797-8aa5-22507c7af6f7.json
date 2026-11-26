@@ -1,0 +1,10 @@
+{
+  "id": "f5987637-a61a-4797-8aa5-22507c7af6f7",
+  "label": "Test by Graded-foundation controls, checked for An incoming direct existential-support edge be (1)",
+  "subject_kind": "result",
+  "subject_id": "5dbba779-432b-4d3a-bd4a-11b14086ef63",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "bd983df2-058a-5503-89a1-bbebe87f958b",
+  "note": "Tests whether rigid grade ascent suffices for actual edge transport with the only support edge at the nonactual world."
+}

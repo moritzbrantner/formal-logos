@@ -1,0 +1,10 @@
+{
+  "id": "c6568cfc-1080-4a86-a628-1d70c61ec7f7",
+  "label": "Test by S4 route frame is the KT route frame plus transitivity",
+  "subject_kind": "result",
+  "subject_id": "6ab159fc-250c-49b1-9d47-970798e2ce92",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "d8d91023-300e-50f4-9cc5-e62f44a1aa04",
+  "note": "Checks the exact decomposition of the stronger statement into the weaker version and the registered delta under the comparison's shared interpretation."
+}

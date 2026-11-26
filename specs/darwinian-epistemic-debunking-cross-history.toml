@@ -42,3 +42,13 @@ premises = []
 conclusion = "Finite controls for the cross-history horn of Darwinian epistemic debunking"
 rule = "Evaluate a two-history and a one-history profile"
 meaning = "A nonvacuity witness and an omission control for the cross-history argument. The first profile shows that its conclusion does not entail actual inaccuracy and that the within-history-variation reading misses this fixed-truth case. The second shows that verdict variation is needed. These are formal interpretations only."
+
+[[relation]]
+id = "Test by Cross-history horn finite controls"
+label = "Test by Cross-history horn finite controls"
+subject_kind = "result"
+subject_id = "641cb6d7-e7bf-4cb6-8179-fb768a4e9b33"
+predicate = "tests"
+object_kind = "statement"
+object_id = "f94c7149-699e-4c13-a65e-c4aad5c2a9af"
+note = "Tests omission of verdict variation in the fixed-true selective-history interpretation."

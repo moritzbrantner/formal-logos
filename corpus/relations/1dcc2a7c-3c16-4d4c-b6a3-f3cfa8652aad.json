@@ -1,0 +1,10 @@
+{
+  "id": "1dcc2a7c-3c16-4d4c-b6a3-f3cfa8652aad",
+  "label": "Test by Recognition omissions certificate for Recognition survey completeness",
+  "subject_kind": "result",
+  "subject_id": "efc50de4-5299-4e97-94cc-00e57d0da92b",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "3a7448a1-344a-4a6d-a372-caa812d2ab8e",
+  "note": "Tests omission of recognition completeness in the separate hidden-cost interpretation retaining apparent pointlessness and the other inputs."
+}
