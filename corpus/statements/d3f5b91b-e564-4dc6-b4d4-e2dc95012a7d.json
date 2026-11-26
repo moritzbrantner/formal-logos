@@ -1,11 +1,10 @@
 {
   "id": "d3f5b91b-e564-4dc6-b4d4-e2dc95012a7d",
-  "label": "God wills each creature its GOOD_4 in esse (CREATURE_WILLING_1)",
+  "label": "God wills each existing creature its good of being",
   "paraphrase": "For each existing creature, its esse is itself a good and God wills that good to it, since God's will is the cause of things.",
   "definition_ids": [
     "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
-    "08b826db-2d9c-48e5-b69c-d4ac54088518",
-    "4c8f0e6b-7ef6-5be5-851c-cdf4f0301546"
+    "08b826db-2d9c-48e5-b69c-d4ac54088518"
   ],
   "disambiguation_ids": [
     "dd7ff973-0e54-4c93-b9c5-b002cac2b256"

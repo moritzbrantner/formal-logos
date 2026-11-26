@@ -1,5 +1,8 @@
 {
   "id": "092cb2cd-8926-4784-8a2a-a337ede850ff",
   "label": "An agent touches what it acts on immediately by its power",
-  "paraphrase": "Every agent is joined to what it acts on immediately and touches it by its power."
+  "paraphrase": "Every agent is joined to what it acts on immediately and touches it by its power.",
+  "definition_ids": [
+    "45d9e3c2-2317-4d89-b6fd-f32b075975a4"
+  ]
 }

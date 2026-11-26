@@ -1,0 +1,12 @@
+{
+  "id": "45d9e3c2-2317-4d89-b6fd-f32b075975a4",
+  "label": "Contact by power in immediate action",
+  "term": "contact by power (contactus virtutis)",
+  "definition": "An agent touches an effect by its power when that power acts on the very effect immediately. The contact consists in the exercise of the power on that effect. Dimensional contact is bodily contact through spatial extension. The temporal relation IsAt instead expresses a being's presence at a moment in a history.",
+  "basis": "sourced",
+  "claim_ids": [
+    "b246de60-51d3-4e7c-ba3f-0683f169b92f",
+    "a07a724e-2ff1-42f0-9cb8-544386424e84"
+  ],
+  "note": "ST I q.8 a.1 co. joins the agent to that on which it acts immediately. Ad 3 allows action upon a distant effect through intermediaries. Q.8 a.2 ad 1 distinguishes an incorporeal agent's contact by power from dimensional contact. This source reading supplies no temporal axiom. The application to GiverPresentWhenGiving still requires a bridge to the giver's IsAt at the effect-side moment and an immediacy condition on GivesAt."
+}

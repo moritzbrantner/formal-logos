@@ -4,7 +4,10 @@
   "statement_id": "092cb2cd-8926-4784-8a2a-a337ede850ff",
   "source_id": "c77377cf-501b-56c6-be40-b518e9aad101",
   "locator": "I q.8 a.1 co.",
-  "interpretation": "The contact principle in the corpus is restricted to immediate action. The third reply explicitly allows a distant effect through intermediaries. Aquinas applies the principle to God's continual giving of esse, with presence as agent to effect.",
+  "interpretation": "The contact principle in the corpus is restricted to immediate action. The third reply explicitly allows a distant effect through intermediaries. Aquinas applies the principle to God's continual giving of esse, with presence as agent to effect. The distinction from dimensional contact comes from q.8 a.2 ad 1. Contact by power applies to the agent's immediate effect. Inferring the giver's temporal co-presence requires a further bridge.",
   "status": "formalized",
-  "attribution": "The passage states that every agent is joined to what it acts on immediately and touches it by its power, which is the premise."
+  "attribution": "The passage states that every agent is joined to what it acts on immediately and touches it by its power, which is the premise.",
+  "definition_ids": [
+    "45d9e3c2-2317-4d89-b6fd-f32b075975a4"
+  ]
 }

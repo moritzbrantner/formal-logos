@@ -6,5 +6,5 @@
   "predicate": "supports",
   "object_kind": "statement",
   "object_id": "a94c5dfc-c722-49fe-a242-dd39409b079d",
-  "note": "The corpus supplies velle bonum alicui for esse on the stated q.19 a.4 basis of causation through divine will. The model's antecedent only has generic CausesIn plus HasWill. The bridge still needs causation through will, with recipient-directed willing read consistently with ordered quasi-desire in ad 3."
+  "note": "The corpus supplies the esse instance of velle bonum alicui used by this application, with causation through divine will as its basis in q.19 a.4. The separate GOOD_4 definition gives the general account across perfections. The model's antecedent has generic CausesIn plus HasWill, so the bridge still needs causation through will and recipient-directed willing consistent with ordered quasi-desire in ad 3."
 }
