@@ -77,11 +77,12 @@ suffice for the existing existential same-setup giving sense. This is a
 one-way consequence: mere withholding at a world need not be an action. -/
 theorem willed_two_way_of_cell
     {F : CausalityFrame W B T R} {A : AgencyFrame W B S P} {world : C.Through m → W}
-    {h : C.Through m} {w : W} {g x : B} {available : TruthCore.Modal.Frame (C.Through m)}
-    (existsHere : F.history.ontic.ExistsAt w g) (admit : Admissible F world w g)
-    (same : SameSetup A world w g) (rational : RationallyGivesAt F A w g x)
+    {h : C.Through m} {g x : B} {available : TruthCore.Modal.Frame (C.Through m)}
+    (existsHere : F.history.ontic.ExistsAt (world h) g)
+    (admit : Admissible F world (world h) g)
+    (same : SameSetup A world (world h) g) (rational : RationallyGivesAt F A (world h) g x)
     (cell : CanEnsure available g h (fun k => ¬ Produces F world g x k)) :
-    WilledTwoWayAt F A w g := by
+    WilledTwoWayAt F A (world h) g := by
   obtain ⟨p, owned, rationalPower, givesBy⟩ := rational
   obtain ⟨k, _, withheld⟩ := canEnsure_can cell
   exact ⟨existsHere, p, x, world k, owned, rationalPower, (admit k).1, (admit k).2,
