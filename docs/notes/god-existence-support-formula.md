@@ -605,6 +605,53 @@ binder or formula for each consumer. A fresh search needs either a relevant
 explicit proved bundle for a retrieval gap or an interpretation that
 supports the consumer's original structured vocabulary.
 
+## First-pass premise curation for stages 1–2 (2026-11-26)
+
+The curation starts from the stage 1–2 list on `f0fbf831d`. The attempts
+record which consuming arguments need each premise, weaker sufficient
+readings where available, and a test for each remaining application gap.
+
+Selected-world self-access supplies the starting successor for finite roster
+amalgamation. Global contingent grounding rules out a contingent root in
+the same selected cone by restricting grounds to the cone and contradicting
+roothood. The direct local premises remain useful in applications that
+lack the stronger hypotheses. The first result supplies a world witness,
+and the second excludes one kind of root. The second result does not supply
+a necessary root. [Successor result](../../corpus/results/7d450da7-c3e7-42e3-b49c-06fce72b6953.json)
+· [Cone result](../../corpus/results/06e57838-89c8-4196-a2d5-f1b807af5ddd.json)
+
+The source records supply partial support for existential necessity, attainment
+in the being comparison, persistence-preserving motion, and substance priority.
+The support notes specify the extension each transfer would need. The moved
+mover probe locates a remaining potency-sense bridge even after the same
+mover's actuality in esse is supplied.
+
+- [Causal necessity in the Third Way](../../corpus/attempts/44f0c0c2-3f9a-45bf-ac45-273d18f1708f.json)
+- [Comparative-degree calibrations and superlative uses](../../corpus/attempts/29b64770-aaff-484b-9e05-a238cf9404cd.json)
+- [Fourth Way existence and power across maximum readings](../../corpus/attempts/a6ddfe48-728f-40ba-afa2-438da45c3f31.json)
+- [Naming in the Fourth Way and common maximum](../../corpus/attempts/d6966a7c-4fb0-479a-8744-a88633e7a231.json)
+- [Physical and residual broad motion](../../corpus/attempts/31aab3cc-df95-4063-a195-e3942b805122.json)
+- [Global grounding and the selected cone's roots](../../corpus/attempts/cf5f5d13-436d-4229-a5fb-0bc3b90f1ab8.json)
+- [Motion, virtual actuality and capacity variants](../../corpus/attempts/e45c2155-ff80-48d3-b7f8-f90ad5cb10a1.json)
+- [Mutability of life boundaries and the receiving subject](../../corpus/attempts/7a456e63-abe2-4f73-a6a0-622da69c7aaa.json)
+- [Intellect from reception: calibrations and the old structural domain](../../corpus/attempts/903fd8d5-62ee-4938-9271-1a030d3728d0.json)
+- [Focal subject-role application and causal order](../../corpus/attempts/d995fef1-d683-45d7-8a78-3e6422ca4753.json)
+- [Selected-world concreteness and productive countercases](../../corpus/attempts/235d9974-6fa0-4071-a5ee-0208db44c825.json)
+- [Thought episodes, assent and intellectual exercise](../../corpus/attempts/8953f709-b2a8-4328-8c87-e0c6c628c72a.json)
+- [Goodness account selection by admissibility and adequacy](../../corpus/attempts/adcab4ff-68f1-4e98-b1b1-156d2d0ea13e.json)
+- [Ideal consensus as a route to due actuality](../../corpus/attempts/5177acf0-eaf6-4031-bf7d-32ee3093dbc8.json)
+- [Numerical individuation by grounding ancestry](../../corpus/attempts/9242f14b-94d8-4add-b3bb-99323c09e00f.json)
+- [Intellectual creation and the exercise of will](../../corpus/attempts/f3099a5e-1216-4ac1-8212-78f0c63a05db.json)
+- [Life-state change, motion and duration scope](../../corpus/attempts/f6083a95-5f06-458e-a157-36bf959015c6.json)
+- [Calibrations for duration and temporal causal attribution](../../corpus/attempts/e179bcd0-8c07-4aad-a93b-cb9007e496f2.json)
+- [Composition, self-uniting and the two cause uses](../../corpus/attempts/e54991f4-261a-4ea6-ae98-0014326b44e8.json)
+- [Esse reception and same-bearer actuality](../../corpus/attempts/3c6ff084-76f5-48fc-9b2f-e328a07fdbc4.json)
+- [Substance priority and the ground of a potency](../../corpus/attempts/d05575f9-eebf-43d1-aeb6-cddf14603d45.json)
+- [C* and the esse cause of a moved mover](../../corpus/attempts/09ff1e75-2e98-4801-b536-f0c47492fa24.json)
+- [Strict comparison and non-reciprocity](../../corpus/attempts/19cf46a0-15c4-4f62-bd05-cda902dd002a.json)
+- [Ontic causes as actual concrete grounds](../../corpus/attempts/ea95f029-7215-430c-9920-621dbf8efdb3.json)
+- [Selected modal base and accessible successor](../../corpus/attempts/e716cccf-1641-49e9-bc2f-0691231418c3.json)
+
 ## Research attempts citing this note
 
 - [Classical root's PURE_ACT_1 from its simplicity, existence and the composition premise](../../corpus/attempts/383d23ad-bec6-442c-9fec-0112df1e1c97.json)

@@ -1,0 +1,25 @@
+{
+  "id": "cf5f5d13-436d-4229-a5fb-0bc3b90f1ab8",
+  "label": "Global grounding and the selected cone's roots",
+  "statement_ids": [
+    "0db4d734-2323-572f-b81b-a1448ae78296"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "0db4d734-2323-572f-b81b-a1448ae78296 (Derivable): Global contingent grounding at w yields an actual concrete ground for any alleged contingent root in the selected complete cone, by SelectedAncestry.scopeComparison on the same profile and world. The proof contradicts roothood by applying the ungroundedness condition to this witness. The conclusion records the global-to-cone restriction. Consumer cdddec73 can use the resulting local negative premise with excluded middle. Reversing cdddec73 alone would supply only a cycle. Assess the direct cone-local denial of brute contingent roots where the stronger global dependence premise lacks warrant.",
+  "evidence": [
+    "06e57838-89c8-4196-a2d5-f1b807af5ddd",
+    "a76dc25b-fba0-5c07-8f61-00c0a8ce1a6d",
+    "1ef5d8a1-4d8a-5118-bd28-f329866e2f65"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "id": "f6083a95-5f06-458e-a157-36bf959015c6",
+  "label": "Life-state change, motion and duration scope",
+  "statement_ids": [
+    "5a229a9d-9186-58f7-b5b9-c6c20223400d",
+    "5fdac93c-13f7-506a-b151-d02f8a50d995",
+    "6884dcfd-7c4c-588a-8fce-8c05ccbd3844",
+    "c41ed610-456e-59db-a8af-81e209769486",
+    "ce1ed1ad-9a30-5ba6-a6d8-d264a52169ee"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "blocked",
+  "summary": "5a229a9d-9186-58f7-b5b9-c6c20223400d (Source lead): The pinned Physics V.1 text at 225a34–225b3 treats change between affirmative termini as motion, after excluding generation and corruption. The narrower claim 74553863 supports the distinction in d0f70b81. Its termini are affirmative descriptions, while the route assumes ChangesBetween and LivesAt at both endpoints and returns an untimed MovedIn in the same respect. Show that the admitted persistence-preserving changes have such termini in the same respect and fall under the relevant motion kind.\n\n5fdac93c-13f7-506a-b151-d02f8a50d995 (Primitive): d0f70b81 uses an ordered pair of times and unequal life states to obtain change in some respect. Conceptual prima facie warrant comes from a life-state function that records the same bearer's intrinsic condition. The rule is defeasible if distinct states are aliases, extrinsic observations, or differences in description rather than in the bearer. Retain as a candidate representation principle for faithful intrinsic life states.\n\n6884dcfd-7c4c-588a-8fce-8c05ccbd3844 (Primitive): 8de2d2ee uses the disjunction act or potency only in the respect of esse. Prima facie conceptual warrant comes from a domain limited to actual bearers and genuinely realizable esse subjects. If the quantifier also ranges over impossible or merely stipulated candidates, their lack of actuality yields no real passive potency. The proof needs the act disjunct only where no potency is available. Retain for a typed domain with exhaustive act/potency in esse.\n\nc41ed610-456e-59db-a8af-81e209769486 (Bridge): 5344f278 needs a difference in whether the same bearer lives at two ordered times to count as change in that bearer. 5fdac93c instead assumes inequality of values of an independent life-state function. The latter yields the former only given a life-status distinction in those values. Creation without a persisting subject also needs a broader sense of change than alteration. Test the life-state encoding against a creation or generation case, and decide whether its ChangesBetween predicate admits a bearer absent at one endpoint.\n\nce1ed1ad-9a30-5ba6-a6d8-d264a52169ee (Bridge): da46291c transfers self-operation to some admitted duration point. Attributing an operation from itself to a timeless bearer does not select a temporal point by itself. ST I q.10 a.2 ad 4 is a lead for eternity's inclusion of time, while the particular operation-at-time relation still needs interpretation. Find an admitted duration witness for a timeless operation, or specify an atemporally true operation relation and the transfer to time.",
+  "evidence": [
+    "74553863-6b4f-5c6c-b6be-b8a8cfa8f76c",
+    "0090ef34-b18e-5e97-84b2-9b317d9c9864",
+    "74f03562-0d40-5e1f-b026-e306a9afdc9f",
+    "124fec5f-d542-55fc-822a-0605e39eb7ac",
+    "0857ad49-390c-5cc7-a2e5-c8ec89612dbb"
+  ],
+  "blocker": "The life-state and duration relations need same-bearer applicability in the broad motion and timeless cases.",
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "id": "31aab3cc-df95-4063-a195-e3942b805122",
+  "label": "Physical and residual broad motion",
+  "statement_ids": [
+    "0ab65393-65df-40fc-b911-f5c2eaf8db08",
+    "d758b09d-9f7c-4641-bc9b-3916fa3f37d4"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "0ab65393-65df-40fc-b911-f5c2eaf8db08 (Bridge): 2999429c and e228e56c need every moved instance to land in the physical or residual class. A complementary residual defined by ¬ physical would yield coverage given a case split but changes the independently supplied residual predicate. The existing MotionMoverFork.Controls include failure of broad coverage with the physical and residual rules intact. Compare the selected physical and residual catalogs for a concrete broad reduction classified by neither, or justify the complement interpretation explicitly.\n\nd758b09d-9f7c-4641-bc9b-3916fa3f37d4 (Bridge): The same consumers require each residual broad movement to have a per-se mover in that very respect. Physical-only mover coverage and existence of a mover in some respect leave this requirement open. Controls isolate precisely that omission. Find a positive nonphysical reduction in the target profile and identify a same-respect actualizer; test whether an accidental explanatory relation merely tracks it.",
+  "evidence": [
+    "511d9114-661a-4160-9279-d519ff6039bb",
+    "cff6c846-3632-4330-9ac0-fdd1b8f38d86"
+  ],
+  "blocker": "The profile supplies the physical and residual predicates independently of moved and moves; real coverage and a same-respect residual reducer remain to be shown.",
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "id": "29b64770-aaff-484b-9e05-a238cf9404cd",
+  "label": "Comparative-degree calibrations and superlative uses",
+  "statement_ids": [
+    "078d4c69-9d31-56f0-8ddf-a3306f0d7a33",
+    "0e3d0877-0ac0-5df8-9ec6-ca5b7659a506",
+    "54cc2502-0b6c-5ea1-b186-50d766c5222a",
+    "675b22e7-a29e-579a-8626-ffaefdbfae7b",
+    "aee5daab-cb7a-54ff-b6ca-82dbcd061794"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "078d4c69-9d31-56f0-8ddf-a3306f0d7a33 (Variant): 963f8e06 uses identification of the supplied Maxime extension with mere weak maximality, along with a separate greatest-degree calibration. It uses the forward coverage of weak maxima and the reverse recognition of greatest bearers; the relevant inclusions would suffice for its direction without a full maximal biconditional. Retain the conditional calibration.\n\n0e3d0877-0ac0-5df8-9ec6-ca5b7659a506 (Variant): c0be361f uses distinct-candidate strict comparability in esse to move from a weak maximum to MAXIME_3. Comparable weak degrees allowing ties are insufficient for strict greatness; the converse route uses asymmetry. The order premise could be restricted to comparisons with the selected maximum for a local application. Retain the strict-comparison branch.\n\n54cc2502-0b6c-5ea1-b186-50d766c5222a (Variant): 9846490f excludes strict-supremacy calibration at the same frame to select the greatest-degree calibration by exhaustion. A selected witness to a mismatch suffices to establish this negation; mismatch in another model does not. Retain as a local elimination input.\n\n675b22e7-a29e-579a-8626-ffaefdbfae7b (Variant): 9846490f assumes one of three calibrations in the same profile. MaximumDefinitionFork.remainder makes all three fail on a supplied extension, so the theorem's finite menu has independent coverage content. Direct greatest calibration bypasses the menu, leaving the exclusions unnecessary on that route. Retain the named-menu branch.\n\naee5daab-cb7a-54ff-b6ca-82dbcd061794 (Variant): 9846490f excludes mere maximality in the same frame. This is distinct from excluding strict supremacy, and local mismatch suffices. Direct greatest calibration bypasses both exclusions. Retain as a local elimination input.",
+  "evidence": [
+    "bc0da2da-0542-52b6-a8ed-fbbae28ed62e",
+    "847a7877-a421-5667-ad81-7b3d0a3e6fe0",
+    "4777b2bc-9d66-5f18-8d18-936f0e52985a"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26"
+    }
+  ]
+}

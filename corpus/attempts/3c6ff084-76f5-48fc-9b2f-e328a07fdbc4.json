@@ -1,0 +1,28 @@
+{
+  "id": "3c6ff084-76f5-48fc-9b2f-e328a07fdbc4",
+  "label": "Esse reception and same-bearer actuality",
+  "statement_ids": [
+    "871a5f81-7c63-4511-81fc-8ca437587ccd",
+    "b9316115-41b9-57e3-bdef-35b6e2face1a"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "871a5f81-7c63-4511-81fc-8ca437587ccd (Primitive): 8088f47d uses actual receipt of a bearer's esse in some principle to infer that very bearer's actuality in esse. Prima facie warrant comes from actual receipt as an exercised relation, on analogy with actual participation in a perfection. If Received denotes aptitude, an abstract representation or past receipt, same-profile actuality does not follow. The distinct giver is supplied by other inputs. Retain as a candidate factivity premise for actual reception.\n\nb9316115-41b9-57e3-bdef-35b6e2face1a (Variant): 0a26eff0, 888b3cb6 and e6af6938 use own-essence reception only on identity bearers. The registered instantiation 564f13a8 gives this restriction from the unrestricted sibling. The consumers already use the weaker scope and still require the other identity and noncomposition premises. Retain the scoped version for those consumers.",
+  "evidence": [
+    "9882d958-d049-5286-9cdc-34df79fdf964",
+    "2cf16a68-2692-446e-b135-3a4e390b7323",
+    "3ed2829f-bde0-5350-a53a-d7ba6ce0facf",
+    "140c818c-4624-5aae-a22d-6e7042235ccc",
+    "191d472b-a056-5ef7-9ac7-b98d93e3f8f9"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26"
+    }
+  ]
+}

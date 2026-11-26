@@ -1,0 +1,11 @@
+{
+  "id": "06e57838-89c8-4196-a2d5-f1b807af5ddd",
+  "label": "Global contingent grounding excludes a contingent root in the selected cone",
+  "argument_id": "f1b416fb-6714-4621-8895-6e94c5769013",
+  "challenge_module": "TruthCore.Results.Causality.ContingentConeRoot.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ContingentConeRoot.Solution",
+  "theorem": "TruthCore.Results.Causality.ContingentConeRoot.noContingentRootAncestorOfGlobalGrounding",
+  "comparator_config": "results/06e57838-89c8-4196-a2d5-f1b807af5ddd/comparator.json",
+  "status": "solution-present",
+  "description": "The existing scope comparison gives an actual concrete ground for each contingent cone member at the same world and under the same grounding relation. Any purported contingent root in that cone has no such ground, a contradiction. The restriction neither supplies a root nor constrains support at any other world."
+}

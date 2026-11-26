@@ -1,0 +1,26 @@
+{
+  "id": "19cf46a0-15c4-4f62-bd05-cda902dd002a",
+  "label": "Strict comparison and non-reciprocity",
+  "statement_ids": [
+    "a4814f25-84b0-560e-870a-eb3a23a6a35b"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "a4814f25-84b0-560e-870a-eb3a23a6a35b (Primitive): 1fe8fd6f, 482f4ad2, 4d1efe91 and 69e63caf use asymmetry of the supplied MoreIn. Conceptual warrant is strong when it is a strict comparison of the same perfection in the same sense and respect, as follows from strict comparison of calibrated degrees. The current predicate is independent of that calibration. A weak comparison admits ties and reciprocal comparisons, and comparisons along different dimensions do not yield a common strict order. An esse-only restriction is sufficient where the consumer only instantiates at esse. Retain as a candidate order law under the strict same-respect interpretation.",
+  "evidence": [
+    "578c4221-db84-5728-9f3e-3a053b96c893",
+    "3a48a7e3-d1c8-5980-bc4b-3ee3972f2f1b",
+    "a1f73b1d-6955-4fe4-8873-b15ded6ebaa4",
+    "097ef0bc-67d7-57fc-bad4-8f20708db5ca"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26"
+    }
+  ]
+}

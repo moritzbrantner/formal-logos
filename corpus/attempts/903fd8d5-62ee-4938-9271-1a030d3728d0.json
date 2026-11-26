@@ -1,0 +1,35 @@
+{
+  "id": "903fd8d5-62ee-4938-9271-1a030d3728d0",
+  "label": "Intellect from reception: calibrations and the old structural domain",
+  "statement_ids": [
+    "1de89130-7919-5102-a330-8cf4423201e4",
+    "2a918a0d-5dbe-5a9f-baad-4be4c34e5de3",
+    "8e05fc5c-4ec6-5fb4-9332-afafb35e9f21",
+    "938eace1-ee6f-5f48-baaa-d3b64ecb0215",
+    "ab8d6a1d-674f-5c21-901a-fd1d8fc19cf8",
+    "aefa1bf1-099b-575c-958e-05cff58df51c",
+    "b059990d-b017-5c28-a8c0-a854064b9486",
+    "ea8ebf72-b176-53f5-9e44-1ae1e9161146",
+    "f42c2f3d-5ae7-5377-a9c5-54c31cc038e4"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "1de89130-7919-5102-a330-8cf4423201e4 (Variant): 7f8c529f uses the biconditional on admitted receivers from ST I q.14 a.1 analyst vocabulary. It needs the aptitude-to-intellect direction for old structurally free receivers. The sensory case in Article1 separates without-matter reception from intellectual classification over unrestricted receivers. Retain the capacity-and-mode variant.\n\n2a918a0d-5dbe-5a9f-baad-4be4c34e5de3 (Bridge): 1ae8b1c3 and 7f8c529f both need a foreign form and a reception mode. The old antecedent only excludes matter-form composition and component status. Q14ReceptionFork controls separate structural freedom and an empty positive aptitude relation. Seek a dispositional account assigning at least one foreign form and admissible mode to each same structurally free receiver.\n\n8e05fc5c-4ec6-5fb4-9332-afafb35e9f21 (Variant): a662ba40 requires failure of the without-matter calibration on its exact receiver model and scope. The failure can follow from one admitted mismatch. The direct change-proxy calibration would bypass the elimination branch. Retain the same-profile exclusion.\n\n938eace1-ee6f-5f48-baaa-d3b64ecb0215 (Variant): 1ae8b1c3 uses the foreign-form capacity biconditional on admitted receivers, with only its capacity-to-intellect direction used there. Article1.CognitiveAptitudeReading goes from cognition to aptitude and has a broader subject predicate; its converse does not give this calibration. Retain the capacity-only variant.\n\nab8d6a1d-674f-5c21-901a-fd1d8fc19cf8 (Variant): a662ba40 requires failure of the capacity calibration on the same model and scope. An admitted mismatch suffices; a mismatch on an excluded receiver says nothing about this premise. Direct proxy calibration bypasses both local exclusions. Retain the same-profile exclusion.\n\naefa1bf1-099b-575c-958e-05cff58df51c (Variant): a662ba40 uses the coverage of three proposed calibrations on a single model, event profile and scope. The remaining extension is explicit. Direct proxy calibration suffices for the conclusion without claiming that this menu covers actual or possible accounts. Retain the finite coverage assumption for the elimination branch.\n\nb059990d-b017-5c28-a8c0-a854064b9486 (Bridge): c71a0643 requires an actual occurring event of that receiver with an alien form and distinct before and after states. Its event proxy imposes no efficient causal condition. Receiving capacity or passive material-mode exclusion cannot supply occurrence, and a temporally invariant intellectual activity gives no such state difference. Check for a positive event witness on the intended old structurally free domain before using this proxy, including whether the divine application is meant to admit any transition.\n\nea8ebf72-b176-53f5-9e44-1ae1e9161146 (Bridge): 7f8c529f uses exclusion of with-matter reception to pass from some foreign-form aptitude to a without-matter mode. Lack of a matter-form composite and lack of componenthood are conditions on a receiver's structure, whereas NoMaterialReception restricts its reception relation. Test a reception theory in which material-mode aptitude entails the receiver's own matter-form composition; the current model supplies that relation separately.\n\nf42c2f3d-5ae7-5377-a9c5-54c31cc038e4 (Bridge): 1ae8b1c3, 7f8c529f and c71a0643 need the same admitted scope to include every old structurally free receiver. A calibration accurate on sensory exclusions or a convenient subdomain need not cover the old target. Give the extensional inclusion in the exact profile used for the calibration. A restrictive scope used to exclude a mismatch must still cover the old antecedent.",
+  "evidence": [
+    "7e19d6ce-d3c6-50d2-b9d5-db79259a8980",
+    "855605e0-ac10-5121-9dae-cd101d127aae",
+    "ac20cb7d-bed1-55c2-baa2-3575370b5954",
+    "60ba5708-fed3-5de9-aff5-c78eb6d76139"
+  ],
+  "blocker": "The matched receiver model must supply positive reception evidence and the selected intellectual calibration; structural freedoms alone give neither.",
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26"
+    }
+  ]
+}

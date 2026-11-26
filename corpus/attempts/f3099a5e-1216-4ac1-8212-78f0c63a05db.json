@@ -1,0 +1,27 @@
+{
+  "id": "f3099a5e-1216-4ac1-8212-78f0c63a05db",
+  "label": "Intellectual creation and the exercise of will",
+  "statement_ids": [
+    "5835e3ac-9e52-419c-8682-cdbbc815fbe7",
+    "6bcb6b1a-6a4a-423d-864e-2d02368bd5c7",
+    "a0abeef8-30ea-432c-9bfb-07d2179151f2"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "5835e3ac-9e52-419c-8682-cdbbc815fbe7 (Bridge): 15aec982 requires every intellectual and volitional universal giver to have no distinct simply prior being. Coverage of other actual esse bearers does not settle arbitrary PriorSimply edges, particularly toward an alleged prior being not shown actual at esse. Test whether every distinct prior of such a giver must be an actual bearer and whether prior-to-source plus its giving to that prior conflicts with the chosen priority relation.\n\n6bcb6b1a-6a4a-423d-864e-2d02368bd5c7 (Bridge): 405eaef0 swaps the priority premises for at most one active power in every qualifying giver. Owning intellect and will does not by itself identify powers or prove that their acts use a numerically single principle. Reapply the divine simplicity analysis to the active-power carrier, checking whether it distinguishes real powers from descriptive roles of the same power.\n\na0abeef8-30ea-432c-9bfb-07d2179151f2 (Bridge): 15aec982 also needs a distinct prior intellect for each giving by an owned non-rational power. ST I q.19 a.4 co. is a lead for the ordering of determinate natural action to an end by intellect; a distinct PRIOR_1 witness for the exact productive esse act is additional. Test the scope on mediated teleology and whether same-agent rational direction would defeat the claimed distinct prior witness.",
+  "evidence": [
+    "bc375179-5b86-4094-87e1-96ef9a39780f",
+    "e916eae9-a493-408f-b3d0-9ef91b4be3ad"
+  ],
+  "blocker": "Universal causal coverage, simplicity of active power, and teleological direction must attach to the same giver and application profile.",
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26"
+    }
+  ]
+}

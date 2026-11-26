@@ -1,0 +1,27 @@
+{
+  "id": "7a456e63-abe2-4f73-a6a0-622da69c7aaa",
+  "label": "Mutability of life boundaries and the receiving subject",
+  "statement_ids": [
+    "138a151b-285a-5181-829b-5464968164ac",
+    "473f3a7f-0730-5bdc-a7e2-772c8372ffd7"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "138a151b-285a-5181-829b-5464968164ac (Bridge): 158efe69 and aa026502 use the transfer from another's power to some potency in the subject. ST I q.9 a.2 distinguishes potency in the subject from another's power over it; dependence for esse therefore needs an additional interpretation before it counts as internal changeability. Natural generation of a persistent subject is a more favorable case than creation without a prior subject. Test separately whether production or conservation gives a real passive potency inhering in that same bearer, keeping a merely extrinsic dependence separate.\n\n473f3a7f-0730-5bdc-a7e2-772c8372ffd7 (Variant): aa026502 preserves the specific MUTABLE_2 life-boundary reading, while c6356524 certifies that it implies the weaker MUTABLE_3 sibling. The latter suffices in 158efe69 with the same 138a151b transfer. This reduction provides no warrant that every boundary is a case of another's power. Retain the stronger branch for the explicit scope comparison.",
+  "evidence": [
+    "87c6d32e-305a-5c11-b048-9677e4556789",
+    "8928344c-1e6b-5ee3-8f3a-f9c87ea7e1ac",
+    "d8df0a99-a86f-5442-ab9b-1eb55358236c"
+  ],
+  "blocker": "Power in another must be connected to a passive potency of the same subject in an admitted respect.",
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26"
+    }
+  ]
+}

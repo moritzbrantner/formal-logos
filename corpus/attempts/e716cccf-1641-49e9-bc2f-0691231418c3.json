@@ -1,0 +1,24 @@
+{
+  "id": "e716cccf-1641-49e9-bc2f-0691231418c3",
+  "label": "Selected modal base and accessible successor",
+  "statement_ids": [
+    "390ac3ab-48ec-596e-9890-4d2364e81cf9"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "390ac3ab-48ec-596e-9890-4d2364e81cf9 (Derivable): In the same Ontic frame, ActualReflexive at the selected base w supplies w itself as the witness of AccessibleSuccessor. This is the weak existence condition consumed by 8823592e to start finite amalgamation, including its empty-roster case. No distinct successor, population, or global reflexivity follows. Check warrant for local self-access in the chosen application. Direct accessible nonemptiness remains available even on irreflexive frames.",
+  "evidence": [
+    "7d450da7-c3e7-42e3-b49c-06fce72b6953",
+    "e165bc1e-b947-4b8d-a787-136661f39dbe"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+[batch]
+vocab = "TruthCore.Causality.Round3CogitoBase"
+results = "TruthCore.Results.Causality.ContingentConeRoot"
+
+[[argument]]
+id = "Global contingent grounding excludes a contingent root in the selected cone"
+theorem = "noContingentRootAncestorOfGlobalGrounding"
+premises = ["c71c068c-bbae-5ed5-a99d-70b155c8d239"]
+conclusion = "0db4d734-2323-572f-b81b-a1448ae78296"
+rule = "Restrict global grounding to the actual ancestry cone and contradict roothood"
+meaning = "The existing scope comparison gives an actual concrete ground for each contingent cone member at the same world and under the same grounding relation. Any purported contingent root in that cone has no such ground, a contradiction. The restriction neither supplies a root nor constrains support at any other world."
+sense_bridges = [{term = "WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT", from = "WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT_2", to = "WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT_3", statement_id = "0db4d734-2323-572f-b81b-a1448ae78296", role = "conclusion"}]

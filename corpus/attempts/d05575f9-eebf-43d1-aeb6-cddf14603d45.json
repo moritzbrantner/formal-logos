@@ -1,0 +1,31 @@
+{
+  "id": "d05575f9-eebf-43d1-aeb6-cddf14603d45",
+  "label": "Substance priority and the ground of a potency",
+  "statement_ids": [
+    "42008b33-62b5-564b-875b-ff91957ddd46",
+    "9226c6af-c824-5f54-8937-79e5726ce3a4",
+    "a4606a6b-8209-58d9-b221-a26a7f31b0e1",
+    "d1258afa-b9f2-56e8-8ed0-7ae3512ac9d8"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "42008b33-62b5-564b-875b-ff91957ddd46 (Variant): 2212f5d4 uses a temporally first being with some potency to refute the temporal variant, and 2f615646 uses that elimination in the reading route. Metaphysics XII.6, 1071b26–28 is a lead for Night and the early cosmologies; it supplies no actual first temporal bearer simply by discussing them. The direct substance-priority sibling f4f8458e bypasses this premise. Retain as an explicit temporal countercase input.\n\n9226c6af-c824-5f54-8937-79e5726ce3a4 (Bridge): 2f615646 and f4f8458e map the supplied substance/perfection priority order into PRIOR_1. If simple priority tracks a productive dependence order, perfection ranking by itself can leave that dependence missing. Compare the two relations on the very witness invoked by act priority and test whether the published PRIOR_1 interpretation takes constitutive priority as a sufficient case.\n\na4606a6b-8209-58d9-b221-a26a7f31b0e1 (Bridge): c332764b needs every supplied ground of a potency to be simply prior to its subject. An ordered constitutive dependency supports this for a ground furnishing the capacity, while a stipulated condition or correlate need not share that order. The universal input presently applies to the supplied GroundsPotency without that distinction. Check whether GroundsPotency on the proposed idle-potency example means a giver of the capacity or only an enabling condition.\n\nd1258afa-b9f2-56e8-8ed0-7ae3512ac9d8 (Source lead): Metaphysics IX.8 connects substance priority to mature form and actuality as end. The narrower pinned claim 0b73b0df separates this argument from the actual agent examples in the temporal argument. f4f8458e needs an actual same-respect witness, for every POTENCY_1 instance, in the binary substance/perfection order. The esse-restricted incorruptibility result supplies too little for all respects. Identify the required actual bearer for a potency that is never realized and justify the substrate and respect mapping.",
+  "evidence": [
+    "0b73b0df-5927-492e-87d8-b1246f8b27bb",
+    "2e0d7e70-a079-569b-b39b-9b19e1a8da80",
+    "de6540a7-39bc-5106-8970-73f1db6d5b40",
+    "047cc9d8-f5fc-5585-bde6-a39b21754d2d",
+    "a5fb36cb-ad73-5714-aed9-68555ab2002e"
+  ],
+  "blocker": "The source lead gives an order distinction. Universal same-respect priority and the interpretations of ground and simple priority need independent alignment.",
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26"
+    }
+  ]
+}

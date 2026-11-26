@@ -1,0 +1,31 @@
+{
+  "id": "e45c2155-ff80-48d3-b7f8-f90ad5cb10a1",
+  "label": "Motion, virtual actuality and capacity variants",
+  "statement_ids": [
+    "17ec77f3-3943-5d12-b94a-e93a3e26fc45",
+    "4dd1d52a-574c-5d32-a8cd-d2a24d3f20fa",
+    "d4a26175-a984-5c19-85f1-b6aadbf095fe",
+    "d9daeb1e-1749-5473-9fae-04184dd5e40c",
+    "f590a5d5-d592-5734-bffd-0936ec276c4b"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "17ec77f3-3943-5d12-b94a-e93a3e26fc45 (Variant): 8653b123 pairs virtual actuality exclusion with the virtual mover premise. Formal-only exclusion does not block an agent's virtual actuality and same-respect subject potency unless that virtual act implies formal actuality there. Retain the matched IN-ACT_2 branch.\n\n4dd1d52a-574c-5d32-a8cd-d2a24d3f20fa (Variant): e417a889 treats potency as bare capability, so the exclusion forbids an existing exercise and retained capability together. STMT-SOME-CAPACITY-EXERCISED supplies the exact conditional failure case. Capacity under privation is the weaker relevant non-simultaneity on the adopted reading, changing the meaning of potency. Retain the POTENCY_3 comparison.\n\nd4a26175-a984-5c19-85f1-b6aadbf095fe (Variant): 8653b123 requires virtual actuality of each mover in the same respect. Inclusive actuality provides too little for this branch since it permits a formally actual mover without virtual actuality. The inclusive branch has its own stronger exclusion. Retain the matched IN-ACT_2 branch.\n\nd9daeb1e-1749-5473-9fae-04184dd5e40c (Variant): 4edc6de2 pairs inclusive actuality in movers with inclusive exclusion. be63edb7 projects the weaker formal exclusion; the formal exclusion alone cannot rule out virtual-only mover actuality alongside subject potency. Existing mixed-reading controls mark the failure. Retain the IN-ACT_3 branch with its stronger exclusion.\n\nf590a5d5-d592-5734-bffd-0936ec276c4b (Variant): b44126c7 uses the IN-ACT_1 mover claim next to formal non-simultaneity, and 329c975b projects inclusive mover actuality from it. Inclusive actuality suffices in its own branch with inclusive non-simultaneity; it does not replace the formal mover claim in the frozen consumer. Retain the formal-only comparison.",
+  "evidence": [
+    "da03941e-af9d-54e6-a884-2d14a013d2a8",
+    "d8c33c8d-ea7f-54b2-b69b-d2020e260584",
+    "7a24c09c-ef70-571f-83e4-1f31a75134b4",
+    "eaa61dc9-8231-5db5-acc0-8c55a67fe4a4",
+    "65046f67-bf8b-525a-9578-6d38710c07a7"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26"
+    }
+  ]
+}
