@@ -21,7 +21,8 @@
     "04212a3f-ba3c-4102-978f-c551b5ad8600",
     "7349a3d5-f4c0-5464-bf00-d97e8b505715",
     "e080fd61-fabb-50e4-b3d3-3a63e3fabfe9",
-    "PR-2016"
+    "PR-2016",
+    "PR-2028"
   ],
   "workers": [
     {
@@ -29,7 +30,8 @@
       "provider": "codex",
       "model": "gpt-6.2-sol",
       "effort": "high",
-      "date": "2026-11-26"
+      "date": "2026-11-26",
+      "pr": "PR-2028"
     }
   ]
 }
