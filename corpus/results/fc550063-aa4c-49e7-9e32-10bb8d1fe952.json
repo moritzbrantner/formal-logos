@@ -1,0 +1,11 @@
+{
+  "id": "fc550063-aa4c-49e7-9e32-10bb8d1fe952",
+  "label": "Bayesian Brier and fine-report Shannon zero conditions agree",
+  "argument_id": "760168e6-62f7-484d-8ed6-788c8a06989a",
+  "challenge_module": "TruthCore.Results.Science.FineTuningInformation.Challenge",
+  "solution_module": "TruthCore.Results.Science.FineTuningInformation.Solution",
+  "theorem": "TruthCore.Results.Science.FineTuningInformation.accuracyAgreement",
+  "comparator_config": "results/fc550063-aa4c-49e7-9e32-10bb8d1fe952/comparator.json",
+  "status": "solution-present",
+  "description": "With the encoded joint-probability equations and interior predictive and prior probabilities, Brier gain and Shannon information have the same zero condition. The metrics remain distinct."
+}

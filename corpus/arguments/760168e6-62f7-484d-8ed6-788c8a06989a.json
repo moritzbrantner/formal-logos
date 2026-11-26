@@ -1,0 +1,17 @@
+{
+  "id": "760168e6-62f7-484d-8ed6-788c8a06989a",
+  "label": "Bayesian Brier and fine-report Shannon zero conditions agree",
+  "premise_statement_ids": [
+    "907aafab-960d-4290-bd08-b955f1f10f4c",
+    "27379412-f94e-44b0-8e29-1b548bc142d1"
+  ],
+  "conclusion_statement_id": "7646255d-dc5a-460d-ac88-8c11ecc5cbcd",
+  "inference_ids": [
+    "49382352-a8a7-4fc1-981e-3e0b08273d4b"
+  ],
+  "meaning": "With the encoded joint-probability equations and interior predictive and prior probabilities, Brier gain and Shannon information have the same zero condition. The metrics remain distinct.",
+  "definition_ids": [
+    "1683f712-7c0b-4b81-b6ba-82a2644de4e8",
+    "c89d6b19-0d84-5124-8289-99f130113c74"
+  ]
+}

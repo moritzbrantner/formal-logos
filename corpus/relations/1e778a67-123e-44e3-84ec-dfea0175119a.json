@@ -1,0 +1,10 @@
+{
+  "id": "1e778a67-123e-44e3-84ec-dfea0175119a",
+  "label": "Shannon screening controls test finite observer selection",
+  "subject_kind": "result",
+  "subject_id": "05180ad2-fb54-4fdf-9e4d-7fd5e6323303",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "94808f80-2c73-4757-b95e-61808b5bcde5",
+  "note": "Uses the same sampling and event definitions to check an equal-likelihood screened pair against the calibrated separating pair. The control tests dependence on calibration under observer selection."
+}

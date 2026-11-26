@@ -3,6 +3,7 @@ module
 
 public import TruthCore.Results.Science.AdaptiveHistoryAccess.Solution
 public import TruthCore.Results.Science.FineTuningEvidence.Solution
+public import TruthCore.Results.Science.FineTuningInformation.Solution
 public import TruthCore.Results.Science.FineTuningSelection.Solution
 public import TruthCore.Results.Science.InductionSelection.Solution
 public import TruthCore.Results.Science.MeasurementCalibration.Solution
