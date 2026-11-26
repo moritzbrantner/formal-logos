@@ -1,0 +1,9 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.CounterfactualDependence.Challenge",
+  "solution_module": "TruthCore.Results.Causality.CounterfactualDependence.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.CounterfactualDependence.dependence_excludes_being_without"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}

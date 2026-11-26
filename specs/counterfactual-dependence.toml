@@ -1,0 +1,36 @@
+[batch]
+vocab = "TruthCore.Causality.CounterfactualDependence"
+results = "TruthCore.Results.Causality.CounterfactualDependence"
+definitions = ["DEF-DEPENDS-FOR-BEING", "DEF-CAN-BE-WITHOUT", "c7d19067-3df4-48ef-b0a6-bf20cb4ba43c"]
+disambiguations = ["23dd6f32-b456-4963-adb3-7befbf0dc4fb"]
+
+[[statement]]
+id = "2bdb0be1-85dc-45a6-a8d0-c45fe46bb361"
+label = "Selected absence tracks DEPENDENCE_FOR_BEING_VERSUS_STRICT_GROUND_1"
+lean = "DependenceTracksSelectedAbsence"
+definitions = ["DEF-DEPENDS-FOR-BEING", "c7d19067-3df4-48ef-b0a6-bf20cb4ba43c"]
+paraphrase = "OPEN soundness assumption at the supplied origin: for every x that depends for its being on y in the shared causal frame, x is absent in every world selected for y's absence. This is a one-way condition. It neither supplies an efficient-causal edge nor requires a selected world when the selection is empty."
+
+[[statement]]
+id = "The selector covers every accessible absence world"
+lean = "CoversAccessibleAbsence"
+definitions = ["c7d19067-3df4-48ef-b0a6-bf20cb4ba43c"]
+paraphrase = "OPEN coverage assumption at the supplied origin: for every candidate source y and every world accessible from the origin in the shared ontology where y is absent, that world is in the selection for y's absence."
+
+[[statement]]
+id = "Being able to be without another has an accessible existence witness"
+lean = "BeingWithoutHasAccessibleWitness"
+definitions = ["DEF-CAN-BE-WITHOUT"]
+paraphrase = "OPEN realization assumption at the supplied origin: whenever x can be without y, some world accessible from the origin in the shared ontology has x existing and y absent. This assumes only the realization direction."
+
+[[argument]]
+id = "18a75892-5c49-409a-b297-5cbb7a644222"
+label = "Accessible absence coverage rules out being without a source of dependence"
+theorem = "dependence_excludes_being_without"
+premises = ["2bdb0be1-85dc-45a6-a8d0-c45fe46bb361", "The selector covers every accessible absence world", "Being able to be without another has an accessible existence witness"]
+conclusion = "STMT-DEPENDENCE-EXCLUDES-BEING-WITHOUT"
+# The sense is selected by the linked definition and tagged frame projection.
+# The optional bind-time constant check expects EffectDependsOnEfficientCause;
+# this inference uses DependsForBeing without the distinct efficient-cause law.
+rule = "A being-without witness would be selected by coverage and excluded by dependence soundness"
+meaning = "Conditional support for the existing dependence-to-real-impossibility premise. If x depends for its being on y and could exist without y, the realization premise supplies an accessible contrast world. Coverage selects it, so soundness implies x is absent there, contradicting the witness. The three assumptions are explicit. Accessibility stays distinct from intervention outcomes, and the argument leaves the shared dependence primitive and the strict-ground map untouched."
