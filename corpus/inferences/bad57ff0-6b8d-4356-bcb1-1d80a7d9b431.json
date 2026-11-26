@@ -1,0 +1,12 @@
+{
+  "id": "bad57ff0-6b8d-4356-bcb1-1d80a7d9b431",
+  "label": "The unlocated actual root on the recipient's path refutes occupant N2 (inference)",
+  "input_statement_ids": [
+    "d5770df2-5877-4d04-a3d9-faf0ae525649"
+  ],
+  "output_statement_id": "c7122d59-f0db-54da-a019-880da5fd7be8",
+  "rule": "counterinstance to universal occupant N2",
+  "meaning": "The actual concrete root on the selected recipient's path contradicts occupant N2 when that thesis uses the same Profile.ontic, Profile.concrete, world and Located F. The recipient need not be the counterinstance. This conclusion is scoped to dimensive occupation in the supplied frame.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

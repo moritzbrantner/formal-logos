@@ -1,0 +1,93 @@
+[batch]
+vocab = "TruthCore.Causality.GroundedOccupantRegress"
+results = "TruthCore.Results.Causality.GroundedOccupantRegress"
+
+[[statement]]
+id = "b4f5403f-aaf8-4b9e-97fc-b32f7abac9ee"
+label = "Every actual concrete SPATIOTEMPORAL_2 occupant has an actual concrete ground"
+lean = "LocatedActualConcreteGroundedAt"
+paraphrase = "At the selected world every actual concretum that dimensively occupies a region of the supplied frame has an actual concrete existential ground at that same world. The ground may be unlocated. This is open coverage for one frame and world in the selected Profile.grounds relation. Occupation, an account of spatial relations or a physical mechanism does not by itself supply this kind of grounding."
+definitions = ["a1b2e330-388f-4120-bc5c-969642317792", "e9e031af-665e-5888-9328-f7637b5a2677", "ddde7152-b698-5a85-8060-b8c6c9905758"]
+disambiguations = ["1ea8b036-7a66-540a-be38-301a8db9077c"]
+
+[[statement]]
+id = "5e002319-3828-4de8-96bc-98ebf34072d7"
+label = "Actual concrete grounding at the selected world is acyclic"
+lean = "ActualConcreteGroundingAcyclicAt"
+paraphrase = "The graph whose nodes are actual concreta at the selected world and whose edges are Profile.grounds at that world has no nonempty finite return path. Other worlds, other grounding relations and chains through nonconcreta or absent candidates are outside the premise."
+definitions = ["a1b2e330-388f-4120-bc5c-969642317792"]
+
+[[statement]]
+id = "018456e8-cd2e-46e1-9c13-fa06e6f4dde9"
+label = "No injective actual concrete grounding regress starts at the selected recipient"
+lean = "NoAnchoredConcreteGroundingRegress"
+paraphrase = "At the selected world no injective Nat-indexed chain of actual concrete Profile.grounds edges starts at this actual concrete recipient and follows those edges upstream. This local denial does not exclude chains anchored elsewhere or assert whole-graph well-foundedness."
+definitions = ["a1b2e330-388f-4120-bc5c-969642317792"]
+
+[[statement]]
+id = "d5770df2-5877-4d04-a3d9-faf0ae525649"
+label = "The selected recipient has a finite actual concrete grounding path to an unlocated root"
+lean = "UnlocatedRootPath"
+paraphrase = "A finite path leads upstream from this same actual concrete recipient to an actual root of Profile.grounds restricted to the actual concreta of the selected world. This root occupies no region of the supplied frame in the SPATIOTEMPORAL_2 sense. If the recipient is itself an unlocated root, the path may have length zero."
+definitions = ["a1b2e330-388f-4120-bc5c-969642317792", "52352824-6be9-53c6-83d4-82fed9a08cbb", "822c9912-2313-584b-b2b7-77031da20107", "e9e031af-665e-5888-9328-f7637b5a2677", "ddde7152-b698-5a85-8060-b8c6c9905758"]
+disambiguations = ["1ea8b036-7a66-540a-be38-301a8db9077c"]
+
+[[statement]]
+id = "d4b138f2-d5c9-4b35-bc5a-dbf3aa7617e8"
+label = "The selected recipient has an unlocated actual root path or an injective grounding regress"
+lean = "UnlocatedRootOrRegress"
+paraphrase = "In the selected world's graph of actual concreta, the same recipient either has a finite upstream grounding path to an actual root that occupies no region of the supplied frame or anchors an infinite upstream grounding chain of distinct actual concreta. Both horns may hold. A path from the recipient to itself may have length zero when it is an unlocated root."
+definitions = ["a1b2e330-388f-4120-bc5c-969642317792", "52352824-6be9-53c6-83d4-82fed9a08cbb", "822c9912-2313-584b-b2b7-77031da20107", "e9e031af-665e-5888-9328-f7637b5a2677", "ddde7152-b698-5a85-8060-b8c6c9905758"]
+disambiguations = ["1ea8b036-7a66-540a-be38-301a8db9077c"]
+
+[[statement]]
+id = "df00fea2-7967-41c5-990f-74c4d52606e8"
+label = "An injective actual concrete grounding regress starts at the selected recipient"
+lean = "AnchoredConcreteGroundingRegress"
+paraphrase = "An infinite Nat-indexed chain starts at this actual concrete recipient and follows Profile.grounds edges upstream. Its bearers are pairwise distinct and are actual concreta at the same selected world. The indexing counts link positions and does not represent elapsed time."
+definitions = ["a1b2e330-388f-4120-bc5c-969642317792"]
+
+[[argument]]
+id = "c003c64a-0781-4031-afdd-820c758a8ddb"
+label = "Acyclic grounding and occupant coverage imply the same-recipient root or regress"
+theorem = "unlocatedRootOrRegress"
+premises = ["5e002319-3828-4de8-96bc-98ebf34072d7", "b4f5403f-aaf8-4b9e-97fc-b32f7abac9ee"]
+conclusion = "d4b138f2-d5c9-4b35-bc5a-dbf3aa7617e8"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+comparator_theorems = ["successorControl", "fundamentalFieldControl"]
+rule = "source-or-regress on the actual concrete grounding graph, with root location excluded by coverage"
+meaning = "Apply the generic source_or_regress from WORLD-ACTUAL-SOURCE-OR-REGRESS to ConcreteExistentialSupply.graph, reusing the selected existential-grounding relation without assuming efficient causation. Coverage supplies a concrete predecessor to any occupied source, so every source reached by the classification is unlocated. If the recipient is located then a path to the unlocated root has positive length. The successor control verifies occupant N2 and coverage with an acyclic injective regress generated by a single relation rule. The field/mode control verifies occupant N2, a genuine mode ground, and no anchored regress at the mode. Coverage fails at the actual concrete located field. The controls establish formal consistency of these bundles under the given interpretations. The existential-grounding applicability and actual coverage of occupants remain open."
+senses = { SPATIOTEMPORAL = "SPATIOTEMPORAL_2" }
+
+[[argument]]
+id = "b25d41dd-9b0c-4058-99a7-358d144934ed"
+label = "Recipient-local regress denial selects a finite unlocated root path"
+theorem = "unlocatedRoot_of_noRegress"
+premises = ["d4b138f2-d5c9-4b35-bc5a-dbf3aa7617e8", "018456e8-cd2e-46e1-9c13-fa06e6f4dde9"]
+conclusion = "d5770df2-5877-4d04-a3d9-faf0ae525649"
+rule = "same-recipient disjunctive elimination"
+meaning = "Deny the exact injective chain horn at the same recipient and world for which the classification was proved. Roothood is relative to actual concrete grounds. The unlocated root need not be uniquely sourced or necessary."
+senses = { SPATIOTEMPORAL = "SPATIOTEMPORAL_2" }
+axioms = []
+
+[[argument]]
+id = "d01da14e-9bca-4579-a8d1-70e2dd7aaeea"
+label = "The unlocated actual root on the recipient's path refutes occupant N2"
+theorem = "concreteNaturalismFails_of_unlocatedRoot"
+premises = ["d5770df2-5877-4d04-a3d9-faf0ae525649"]
+conclusion = "c7122d59-f0db-54da-a019-880da5fd7be8"
+rule = "counterinstance to universal occupant N2"
+meaning = "The actual concrete root on the selected recipient's path contradicts occupant N2 when that thesis uses the same Profile.ontic, Profile.concrete, world and Located F. The recipient need not be the counterinstance. This conclusion is scoped to dimensive occupation in the supplied frame."
+senses = { NATURALISM = "NATURALISM_2", SPATIOTEMPORAL = "SPATIOTEMPORAL_2" }
+axioms = []
+
+[[argument]]
+id = "1d19afbd-5b5a-440e-8b5e-7c63d00607ff"
+label = "Occupant N2 selects an injective grounding regress at the same classified recipient"
+theorem = "anchoredRegress_of_naturalism"
+premises = ["d4b138f2-d5c9-4b35-bc5a-dbf3aa7617e8", "41ae1d27-391f-530e-a65c-4e2b2ef4b08e"]
+conclusion = "df00fea2-7967-41c5-990f-74c4d52606e8"
+rule = "universal occupant N2 excludes the unlocated root horn"
+meaning = "Under occupant N2, coverage and actual concrete acyclicity, an injective regress follows at each selected actual concrete recipient in the supplied world. Occupant N2 applies once more to every actual concrete node of this chain, so each occupies some region of the same frame. Distinct actual ground bearers do not establish distinct rules or independent explanatory posits."
+senses = { NATURALISM = "NATURALISM_2", SPATIOTEMPORAL = "SPATIOTEMPORAL_2" }
+axioms = []

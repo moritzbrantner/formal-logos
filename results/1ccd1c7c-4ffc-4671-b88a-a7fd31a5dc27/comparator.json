@@ -1,0 +1,15 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.GroundedOccupantRegress.Challenge",
+  "solution_module": "TruthCore.Results.Causality.GroundedOccupantRegress.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.GroundedOccupantRegress.unlocatedRootOrRegress",
+    "TruthCore.Results.Causality.GroundedOccupantRegress.successorControl",
+    "TruthCore.Results.Causality.GroundedOccupantRegress.fundamentalFieldControl"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "enable_nanoda": true
+}

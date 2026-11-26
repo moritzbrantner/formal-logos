@@ -1,0 +1,11 @@
+{
+  "id": "b31ec5f0-14b7-493d-a340-f721cfe2e283",
+  "label": "Recipient-local regress denial selects a finite unlocated root path",
+  "argument_id": "b25d41dd-9b0c-4058-99a7-358d144934ed",
+  "challenge_module": "TruthCore.Results.Causality.GroundedOccupantRegress.Challenge",
+  "solution_module": "TruthCore.Results.Causality.GroundedOccupantRegress.Solution",
+  "theorem": "TruthCore.Results.Causality.GroundedOccupantRegress.unlocatedRoot_of_noRegress",
+  "comparator_config": "results/b31ec5f0-14b7-493d-a340-f721cfe2e283/comparator.json",
+  "status": "solution-present",
+  "description": "Deny the exact injective chain horn at the same recipient and world for which the classification was proved. Roothood is relative to actual concrete grounds. The unlocated root need not be uniquely sourced or necessary."
+}

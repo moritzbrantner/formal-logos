@@ -1,0 +1,14 @@
+{
+  "id": "b4f5403f-aaf8-4b9e-97fc-b32f7abac9ee",
+  "label": "Every actual concrete SPATIOTEMPORAL_2 occupant has an actual concrete ground",
+  "paraphrase": "At the selected world every actual concretum that dimensively occupies a region of the supplied frame has an actual concrete existential ground at that same world. The ground may be unlocated. This is open coverage for one frame and world in the selected Profile.grounds relation. Occupation, an account of spatial relations or a physical mechanism does not by itself supply this kind of grounding.",
+  "lean_declaration": "TruthCore.Causality.GroundedOccupantRegress.LocatedActualConcreteGroundedAt",
+  "definition_ids": [
+    "a1b2e330-388f-4120-bc5c-969642317792",
+    "e9e031af-665e-5888-9328-f7637b5a2677",
+    "ddde7152-b698-5a85-8060-b8c6c9905758"
+  ],
+  "disambiguation_ids": [
+    "1ea8b036-7a66-540a-be38-301a8db9077c"
+  ]
+}

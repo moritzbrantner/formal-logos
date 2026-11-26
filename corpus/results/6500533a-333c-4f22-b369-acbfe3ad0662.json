@@ -1,0 +1,11 @@
+{
+  "id": "6500533a-333c-4f22-b369-acbfe3ad0662",
+  "label": "Occupant N2 selects an injective grounding regress at the same classified recipient",
+  "argument_id": "1d19afbd-5b5a-440e-8b5e-7c63d00607ff",
+  "challenge_module": "TruthCore.Results.Causality.GroundedOccupantRegress.Challenge",
+  "solution_module": "TruthCore.Results.Causality.GroundedOccupantRegress.Solution",
+  "theorem": "TruthCore.Results.Causality.GroundedOccupantRegress.anchoredRegress_of_naturalism",
+  "comparator_config": "results/6500533a-333c-4f22-b369-acbfe3ad0662/comparator.json",
+  "status": "solution-present",
+  "description": "Under occupant N2, coverage and actual concrete acyclicity, an injective regress follows at each selected actual concrete recipient in the supplied world. Occupant N2 applies once more to every actual concrete node of this chain, so each occupies some region of the same frame. Distinct actual ground bearers do not establish distinct rules or independent explanatory posits."
+}
