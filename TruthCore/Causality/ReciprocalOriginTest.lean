@@ -28,9 +28,14 @@ theorem deniedDiagonalIff {B R E : Type} (F : CauseFrame B R)
 def frame (diagonal : Prop) : CauseFrame Bool Unit :=
   { otherOnlyFrame with CausesOrigin := fun c x => c ≠ x ∨ (diagonal ∧ c = false ∧ x = false) }
 
-/-- Both choices admit a distinct producer for every bearer and the same
-finite cycle. Even the universal exercise bridge holds without the added edge.
-Adding it changes the verdict on the weak bridge as well. -/
+/-- First conjunct: in both choices each bearer has a distinct `CausesOrigin`
+predecessor (an originator, not an exercise witness). Separately, by direct
+calculation in the fixed exercise profile, exercise `!x` occurs, is borne by
+`!x` and produces `x`, so each bearer also has a distinct productive supplier;
+that existential is not a conjunct of this theorem. Second conjunct: the
+required edges form the same finite cycle. Even the universal exercise bridge
+holds without the added diagonal edge; adding it changes the verdict on the
+weak bridge as well. -/
 theorem matchedOrigins (diagonal : Prop) :
     (∀ x : Bool, ∃ a : Bool, a ≠ x ∧ (frame diagonal).CausesOrigin a x) ∧
     ¬ RequiredEdgesAcyclic (fun _ : Bool => True) id (· ≠ ·) ∧
