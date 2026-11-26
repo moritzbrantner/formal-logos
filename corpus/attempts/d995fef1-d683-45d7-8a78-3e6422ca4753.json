@@ -1,0 +1,28 @@
+{
+  "id": "d995fef1-d683-45d7-8a78-3e6422ca4753",
+  "label": "Focal subject-role application and causal order",
+  "statement_ids": [
+    "2fa04c4f-6390-4ae1-afba-0800d3b0765c",
+    "78c24896-0ecc-4309-a9d9-e271cf36e082",
+    "9bbbe1ef-d07b-4baa-87e1-05cb3ff488aa"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "2fa04c4f-6390-4ae1-afba-0800d3b0765c (Bridge): fbd40037 uses one substantial individual as the subject of every secondary. The split and common SubjectFocalRoles fixtures distinguish a shared relation kind from a shared individual bearer. Ordinary cases of inherence in distinct substances give a substantive reason to distinguish those claims. Check whether a common-instance claim is justified on the chosen secondaries, or only common focal reference to the kind substance.\n\n78c24896-0ecc-4309-a9d9-e271cf36e082 (Bridge): fbd40037 needs every selected creature to satisfy Secondary. That definition excludes being a substance and requires inherence in one. A creature counted as a substance in the ordinary account of individual living things fails the first test. Identify an independent subject-role sense that admits created substances as secondaries without changing the predicate used for the common-instance premise.\n\n9bbbe1ef-d07b-4baa-87e1-05cb3ff488aa (Bridge): fbd40037 makes every Inheres edge a productive esse-cause edge in the same dictionary. Ordinary subject dependence explains an accident's being in a subject; causal production of that accident's esse needs a separate reason. The common-subject fixture permits subject relations with empty causal relations. For one matched example of dependence, show that the subject produces the dependent's being in the chosen CAUSE sense and quantify over the same edges only after that account is justified.",
+  "evidence": [
+    "163d02eb-afe1-4127-932d-9fa66391e68e",
+    "PR-2048"
+  ],
+  "blocker": "The chosen subject and inherence profile needs an actual common instance and an independently warranted productive esse reading.",
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2048"
+    }
+  ]
+}

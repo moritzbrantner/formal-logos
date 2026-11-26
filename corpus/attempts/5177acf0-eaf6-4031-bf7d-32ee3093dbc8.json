@@ -1,0 +1,28 @@
+{
+  "id": "5177acf0-eaf6-4031-bf7d-32ee3093dbc8",
+  "label": "Ideal consensus as a route to due actuality",
+  "statement_ids": [
+    "50b0a5e4-ef0c-4358-84a1-cb663303cd44",
+    "770dca86-b389-4999-a2b7-a27b35eb40c8",
+    "b3622de9-6c8e-4dc6-b597-48b9c0dffc46"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "50b0a5e4-ef0c-4358-84a1-cb663303cd44 (Bridge): cd378970 needs every due actuality to be approved by every admitted ideal assessor. One sound assessor per aspect gives only a check against false positive consensus, not completeness. The rejecting control separates them. Specify what information and evaluative competence an ideal assessor has that forbids rejecting a due actuality.\n\n770dca86-b389-4999-a2b7-a27b35eb40c8 (Bridge): cd378970 requires, for each aspect, at least one ideal assessor whose approval entails due actuality. In the empty-assessor control, universal consensus is automatic even without due actuality. The witness may vary by aspect and need not approve it. Give one justified nonvacuous sound assessment rule on each admitted aspect, without assuming the consensus reduction.\n\nb3622de9-6c8e-4dc6-b597-48b9c0dffc46 (Variant): cd378970 uses a biconditional between the supplied goodness relation and unanimity of admitted ideal assessors. Neither approval bridge itself picks out GoodIn. A direct extensional form/end calibration bypasses the consensus account; within this branch both directions are used for the two inclusions. Retain the consensus reduction as an explicit analyst option.",
+  "evidence": [
+    "6b4d1a8d-81d1-4bde-a806-5a62f0b85c9a",
+    "PR-2048"
+  ],
+  "blocker": "The three ideal-approval inputs need independent content for ideality and approval on the same aspect domain.",
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2048"
+    }
+  ]
+}
