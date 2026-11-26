@@ -1,4 +1,8 @@
-import TruthCore.Latin.Aquinas.DeEnte.UniversalGiverFork
+module
+
+public import TruthCore.Latin.Aquinas.DeEnte.UniversalGiverFork
+
+@[expose] public section
 
 namespace TruthCore.Results.Aquinas.DeEnte.UniversalGiverFork
 open TruthCore.Greek.Aristotle.Metaphysics
