@@ -1,0 +1,11 @@
+{
+  "id": "a656267c-9784-4119-9449-918951682b5f",
+  "label": "Transfer the prefix likelihood calculation to randomized relay cuts",
+  "argument_id": "16105d73-f203-43b0-9278-3592b6a88d36",
+  "challenge_module": "TruthCore.Results.Causality.RelayCutSensitivity.Challenge",
+  "solution_module": "TruthCore.Results.Causality.RelayCutSensitivity.Solution",
+  "theorem": "TruthCore.Results.Causality.RelayCutSensitivity.randomizedCutComparison",
+  "comparator_config": "results/a656267c-9784-4119-9449-918951682b5f/comparator.json",
+  "status": "solution-present",
+  "description": "A successful cut response at depth d selects exactly the indices i ≥ d, the same summands as a prefix of length d selects in the supplier audit. Here the distribution is the investigator's choice of cut i and the depth d is fixed. The probability is positive exactly when the tail contains a positive weight, and it is at most the total mass one. The reused prefix result gives arbitrarily small tails at large depth and the exact geometric value. Relay-only outcomes contribute zero at every cut index."
+}
