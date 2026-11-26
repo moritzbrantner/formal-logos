@@ -19,6 +19,7 @@ target/debug/truth tree STMT-GOD-EXISTS --down 2 --up 2
 target/debug/truth orphans
 target/debug/truth orphans --senses --json
 target/debug/truth connectivity --list-isolated 20
+target/debug/truth connectivity --base origin/main
 target/debug/truth issues --from issues.json --for STMT-GOD-EXISTS
 target/debug/truth brief STMT-GOD-EXISTS --issues-from snapshot.json
 target/debug/truth brief --question 'ultimate explanation, brute fact or infinite regress'
@@ -1250,8 +1251,34 @@ root component; named only by an attempt; unused. `--list-isolated N` lists N
 isolated statements with their class (premise-free results first, then by
 label). `--json` gives every non-root component's statement IDs. The method
 matches the measurement script of the 2026-11-26 baseline, extended only by
-the `result` endpoint of `tests` relations. CI prints the text report to a
-PR's job summary without failing on it.
+the `result` endpoint of `tests` relations. The report ends with every
+recorded `connection_plan` (`docs/corpus-model.md`), with its target, missing
+bridge and blocker: *outstanding* while its statement is outside the root's
+typed component (below), *ready for plan review* once it has joined it. CI
+prints the text report to the job summary.
+
+`truth connectivity --base REV` is the **gate on new disconnection** (owner
+direction, 2026-11-26: disconnected work must not accumulate again). It reads
+the base revision's committed corpus like `frontier-diff`, `thickness --base`
+and `orphans --base` ("head rules on base data") and computes the root's
+**typed component** at both revisions: the report's edges except attempt
+co-citation, which records research activity rather than a typed contact. It
+judges each statement outside the typed component at the head that is new
+(present at the head, absent at the base), was in the typed component at the
+base, or carried a `connection_plan` at the base. Such a statement passes only
+with a valid `connection_plan` (the shape `truth check` requires, checked by
+the gate itself) whose `target_statement_id` is in the head's typed
+component; statements outside it at the base that never had a plan are not
+judged. The command exits 1 and lists each offending statement as
+`label [uuid8]`, with the reason (no plan, an invalid plan, or a plan target off the typed
+component). It also lists the outstanding planned statements and the plans
+ready for plan review: joining the component does not show that the named
+bridge was delivered. The gate checks that work is linked, not the
+substantive root-route obligation. `--base` and `--list-isolated` are
+alternatives; an unreadable base is a `revision_error` (exit 1). On a pull
+request CI runs it against `HEAD^1` (checkout is the merge commit) and fails
+on it; `scripts/preflight.sh` runs it against the merge base.
+
 
 ## `bridges`
 

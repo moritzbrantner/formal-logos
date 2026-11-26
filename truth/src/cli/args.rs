@@ -342,7 +342,7 @@ pub struct Accepts {
     pub frontier: bool,
     /// `--base` and `--head`
     pub revisions: bool,
-    /// `--base` alone (`thickness`, `orphans`)
+    /// `--base` alone (`thickness`, `orphans`, `connectivity`)
     pub base: bool,
     /// `--from` and `--for`
     pub issues: bool,
@@ -913,7 +913,7 @@ impl Args {
             return Err(usage(if accepts.base {
                 "--head applies only to frontier-diff"
             } else {
-                "--base applies only to frontier-diff, thickness and orphans; --head only to frontier-diff"
+                "--base applies only to frontier-diff, thickness, orphans and connectivity; --head only to frontier-diff"
             }));
         }
         if !accepts.issues && self.issues.own() {
