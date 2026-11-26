@@ -18,9 +18,10 @@
     "00f2cd7c-c0a7-4eef-b57a-e59bde59b204",
     "006f49e8-4c68-424d-9403-9f025185b555",
     "1ea2f628-a121-4e37-a21c-5f4af77f0321",
-    "a01e0429-1544-453d-973b-779f186c1654"
+    "a01e0429-1544-453d-973b-779f186c1654",
+    "PR-2025"
   ],
   "workers": [
-    {"role": "author", "provider": "codex", "model": "gpt-6.2-sol", "effort": "high", "date": "2026-11-26"}
+    {"role": "author", "provider": "codex", "model": "gpt-6.2-sol", "effort": "high", "date": "2026-11-26", "pr": "PR-2025"}
   ]
 }

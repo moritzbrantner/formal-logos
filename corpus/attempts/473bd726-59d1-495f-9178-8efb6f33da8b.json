@@ -16,9 +16,10 @@
   "blocker": "Test one independently specified case of actual existential supply on the same carrier, world and respect. Show which per se links supply being, which facts represent that supply, and whether the grounding profile and priority relation agree there, including a separate diagonal test if irreflexivity is used.",
   "evidence": [
     "d09f6268-93bf-4a00-af60-c57fc2353825",
-    "cc7dd608-8551-4045-8bfb-5a7643a9314a"
+    "cc7dd608-8551-4045-8bfb-5a7643a9314a",
+    "PR-2025"
   ],
   "workers": [
-    {"role": "author", "provider": "codex", "model": "gpt-6.2-sol", "effort": "high", "date": "2026-11-26"}
+    {"role": "author", "provider": "codex", "model": "gpt-6.2-sol", "effort": "high", "date": "2026-11-26", "pr": "PR-2025"}
   ]
 }
