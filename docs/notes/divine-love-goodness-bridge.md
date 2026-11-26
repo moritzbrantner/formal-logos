@@ -1146,3 +1146,147 @@ The proposed warrant assessment is for independent semantic review.
 [success-attempt]: ../../corpus/attempts/af2d4e1e-c278-4511-b5e3-2913d6b1767f.json
 [coverage-attempt]: ../../corpus/attempts/83bd8a2c-ab08-4c82-baca-2cdd78605dd9.json
 [credit-attempt]: ../../corpus/attempts/96d761b7-3432-4cb8-a811-2b6469f124a8.json
+
+## What would defeat the giving-plan premises? (2026-11-26)
+
+Independent second pass on the practical-specification and benefit-witness
+records at `95d55d4a`. Fix the giver, recipient, world, esse respect and
+interpretation of the plan throughout each comparison. The [exception
+theorem](../../TruthCore/Causality/GivingPlanExceptions.lean) gives six
+separate biconditionals. Its proof uses the success condition in
+`Governing`: all required clauses are already realized, so an edit
+preserves fulfillment exactly when it removes no required clause.
+This permits a test against the *content* of a purported standard even
+when removing the good while preserving the effect is metaphysically
+impossible. The theorem supplies no actual divine exception.
+
+**Operative coverage (4be0f774).** The strongest denial grants a distinct
+actual effect produced by an owned rational power. Its determinate
+manifestation follows from what the power is. Intellect can perfectly
+apprehend that manifestation without the apprehended standard measuring
+what the source is doing in producing it. A source acting solely by a
+*nonrational* power, however, misses this premise's antecedent. That version
+contests the through-will argument upstream. The intrinsic account can
+meet the antecedent if rationality classifies the power while the mode
+of this exercise is fixed intrinsically. The [foreseen
+profile][prior-controls] demonstrates the logical space for that distinction.
+A positive analogy is the difference between understanding one's automatic
+production of a sound and shaping a sound to realize an apprehended pitch.
+Neither reproduction of the pitch nor the capacity to correct it, by itself,
+identifies the mode of the original production. The analogy concerns
+productive uptake only. Human automatic production does not identify a
+first giver's power.
+
+The practical account explains determinate specification if the form of
+the work measures this very exercise. The rival explains it if a grounded
+intrinsic mode selects that same output. Each can take a contentful basis
+as primitive. Self-apprehension, firstness and the observed output do not
+select between them. A rational necessitarian who says the source
+necessarily acts *because of* the apprehended good can accept coverage
+throughout. Necessity supplies neither a denial nor evidence for uptake.
+Overall, coverage is supported for intentionally specified exercises;
+the unrestricted application remains underdetermined. Reopen on evidence
+for which basis fixes the manifestation at a particular rational giving,
+including evidence that the standard actually succeeds there. Failure
+of coverage alone also allows an unsuccessful specification.
+
+**Benefit omission (1733629b and df6c64a6).** Consider an agent who
+maintains the viability of a graft for transplantation. Viability is
+a real perfection of the tissue, and the recipient of the transplant
+benefits. Those facts leave open what counts as success *for the tissue*
+in the agent's operative standard. A specification can require viability
+entirely for the work the graft is to do. Contrast maintaining the same
+tissue under a second governing standard that counts its flourishing as
+a good of that tissue. These are different roles for the same perfection,
+even when both specifications pick out the same physical condition.
+This is an analogy for instrumental selection, with no inference from
+biological function to a divine motive.
+
+For the stronger premise, the rival owes just one genuinely governing
+standard for a divine giving that lacks the credit. A second standard
+that credits the bearer leaves the exception intact. The best defense
+is unity of the practical ground of the giving: if only one standard
+actually governs, a role-specific description extracted from it cannot
+supply a second operative witness. Conversely, unity of the agent or
+the act does not prove uniqueness of its governing standard. The
+[mixed profile][benefit-proof] makes the difference consequential.
+I find little warrant for the every-plan extension over the one-plan
+claim. Revise upward with a reason every governing standard must carry
+the credit, including standards that specify the effect's work.
+
+For the weaker premise the rival owes more: at one *governed* giving,
+**every** operative standard must omit that requirement. One purely
+instrumental description is insufficient. Nor does the denial require
+that the creator never wills a good to the bearer: the instrumental-only
+profile retains willing while defeating the existential plan test.
+Communicating being gives positive prima facie warrant for a beneficiary
+reading when the communication itself aims to perfect its receiver.
+Instrumental maintenance explains the same imparted perfection and its
+place in the whole. Neither identifies the giver's actual criterion
+merely by identifying the bearer of the perfection. Retain the weaker
+premise as a defensible direct assumption. Its application to every
+governed divine giving is underdetermined. A trace of one beneficiary
+standard rebuts the denial at that giving; a reason the whole-order
+standard exhausts that giving supports it. Universal extrapolation needs
+a reason common to the other givings.
+
+**Benefit recognition (437438f0).** Now hold fixed an actually adopted
+requirement that the good count *for this recipient*. The denial requires
+a giver, recipient, operative standard and respect with that requirement
+and no matching willing. The recognition principles quantify even beyond
+distinct divine givings in esse. An instrumentalist has a positive account
+of recognizing a patient's benefit as a fact while choosing only a useful
+outcome. This contests the classification of the requirement as beneficiary
+credit. It does not explain why a good genuinely included *as this
+patient's good* in the giver's productive aim would fall outside the thin
+recipient-willing sense, which allows subordinate concern. The formal
+recognition-off assignment marks precisely where an independent relation
+can differ. No substantive objection identified to recognition under the
+selected practical reading. I favor it on conceptual grounds. Reopen if a
+matched instance distinguishes actual adoption in that beneficiary role
+from willing the good to that recipient without silently strengthening
+willing to affection or ultimate concern.
+
+**End omission (b1d7825e).** Whole-order instrumentalism can positively
+support direction when the part's contribution to an end is required.
+Its strongest rival here is selective purposive production: success in
+producing this effect can consist in realizing a specified good in it.
+A further placement need not enter that standard. Requiring relief of
+a patient's pain exemplifies a criterion fully intelligible in terms of
+the recipient's condition, even when relief also enables a later activity.
+If the relief itself is called an end, the relevant question is whether
+the standard requires *placement of this recipient toward that end*;
+renaming the benefit does not establish that role. The benefit-only
+control in [the practical proof][prior-controls] realizes this distinction
+in the clause language. The denial needs one eligible plan with **no**
+required placement for x toward any end. Other plans can direct the very
+same x. Overall, the end test has warrant for production specified by
+a part's place in an order. Its every-plan scope remains unsupported by
+the general fact of order. Reopen if each relevant standard can be shown
+to require such placement or a single eligible operative standard can
+be identified positively as exhausted by a recipient condition.
+
+**End recognition (f8cd0849).** A rival might distinguish choosing
+a specification from doing the directing: an executor independently
+chooses how to place the effect. If the giver's specification requires
+only the output, the executor explains the placement but the recognition
+antecedent fails. If the giver's own operative specification requires
+this x toward this e and succeeds, delegation can explain execution;
+it leaves intact the giver's direction in the thin design sense. The
+control sets the case relation false with the requirement present.
+No substantive objection identified under the design reading. I favor
+recognition there. Revise if the case relation demonstrably requires
+further executive activity, or if its end differs from the plan's end;
+either would call for a separate bridge.
+
+No denial here contradicts performing inquiry. The discriminating internal
+tensions arise when a rival both grants an operative practical role and
+denies its thin intentional description, or offers an upstream exception
+outside the rational-giving antecedent. The shared coverage question counts
+once across love (a94c5dfc via 3655f59f) and direction (de6a0f86 toward
+123d394b and bb3d4417). Benefit omission and its recognition bear on love.
+End omission and its recognition bear on direction. LORD_1 still requires
+original standing to dispose. For the next test prioritize the independent
+grounds for *exhaustiveness* of the operative standard at one giving:
+establishing one instrumental criterion would answer neither the weaker
+benefit question nor whether another governing standard directs this effect.

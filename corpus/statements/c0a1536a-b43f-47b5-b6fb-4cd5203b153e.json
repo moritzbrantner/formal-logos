@@ -1,0 +1,15 @@
+{
+  "id": "c0a1536a-b43f-47b5-b6fb-4cd5203b153e",
+  "label": "Exact exception witnesses for six selected-world giving-plan principles",
+  "paraphrase": "For fixed interpretations and world, six separate equivalences describe failure of coverage, either benefit omission principle, end omission, and either recognition. Coverage needs an uncovered rational giving. Failure of the one-plan benefit test needs a governed divine giving lacking the requirement in every governing plan. Failure of the universal benefit or end test needs one eligible governing plan lacking the benefit clause or all the recipient's end clauses respectively. A recognition exception needs the required role and failure of its matching case relation. The witnesses need not coincide.",
+  "lean_declaration": "TruthCore.Causality.GivingPlanExceptions.Exceptions",
+  "definition_ids": [
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "88f9f6e8-997b-5f7d-afa1-c501954c3807",
+    "c53b5fbe-121a-5d59-8e29-0f9f7eea85b1",
+    "08b826db-2d9c-48e5-b69c-d4ac54088518",
+    "bace3032-dfa4-4193-9408-30f584e6fe6d",
+    "fbd163ad-ec01-45d1-a749-f90a1de6ea37",
+    "a84afabf-d6e6-424d-a792-2fa874c466a5"
+  ]
+}
