@@ -119,6 +119,7 @@ public import TruthCore.Causality.ExistentialSelfActualization
 public import TruthCore.Causality.ExistsSenseMeaning
 public import TruthCore.Causality.FiniteBranching
 public import TruthCore.Causality.FiniteEsseDependence
+public import TruthCore.Causality.FiniteGiverPanels
 public import TruthCore.Causality.FiniteNecessaryUnion
 public import TruthCore.Causality.FiniteReserveOdds
 public import TruthCore.Causality.FiniteRestriction

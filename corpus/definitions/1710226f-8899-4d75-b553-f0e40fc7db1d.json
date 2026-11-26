@@ -1,0 +1,9 @@
+{
+  "id": "1710226f-8899-4d75-b553-f0e40fc7db1d",
+  "label": "Strict forwardness of eligible exercise edges",
+  "term": "strict forwardness of eligible exercise edges",
+  "definition": "Every selected exercise edge C e f satisfies clock e < clock f on the supplied order of clock values. The clock values belong to the particular eligible exercise tokens. C ranges over the fixed exercise roster, including exercises of distinct bearers.",
+  "lean_declaration": "TruthCore.Causality.TemporalActualization.StrictForward",
+  "basis": "stipulative",
+  "note": "The existing strict-forward clause of the temporal direction profiles, applied to the selected exercise relation. Its application to eligible esse-supply exercises remains open and requires an order-preserving clock on those very tokens."
+}

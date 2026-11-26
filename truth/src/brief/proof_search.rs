@@ -1,6 +1,10 @@
 //! Retrieve registered Lean results independently of research notes.
-use super::retrieval::{LeanSource, Query};
-use crate::{Corpus, Record, synthesis::result_witness};
+use super::retrieval::{LeanSource, Query, qualified_declarations};
+use crate::{
+    Corpus, Record,
+    context::{comparator_config, module_path},
+    synthesis::result_witness,
+};
 use rusqlite::{Connection, params};
 use serde::Serialize;
 use serde_json::{Value, json};
@@ -27,6 +31,9 @@ fn exact(record: &Record, query: &str) -> bool {
 
 fn witness(root: &Path, corpus: &Corpus, result: &Record) -> Value {
     let mut evidence = result_witness(root, result);
+    if let Some(label) = result.fields.get("label") {
+        evidence["result_label"] = label.clone();
+    }
     if let Some(argument) = corpus.get("arguments", field(result, "argument_id")) {
         evidence["argument_label"] = argument.fields["label"].clone();
         evidence["argument_meaning"] = argument.fields["meaning"].clone();
@@ -165,6 +172,67 @@ pub(super) fn qualified_name(query: &str) -> bool {
         })
 }
 
+#[derive(Serialize)]
+pub(super) struct ComparatorCompanion<'a> {
+    pub result_id: &'a str,
+    pub result_label: &'a str,
+    pub comparator_config: &'a str,
+    pub challenge_path: Option<String>,
+    pub challenge_line: Option<usize>,
+}
+
+/// Match the full names configured for each registered result. This reports
+/// the configured scope only. A companion has no primary result status here.
+pub(super) fn comparator_companions<'a>(
+    root: &Path,
+    corpus: &'a Corpus,
+    query: &str,
+) -> Vec<ComparatorCompanion<'a>> {
+    let name = query.trim().trim_matches('`');
+    let mut configs = BTreeMap::new();
+    let mut challenge_lines = BTreeMap::new();
+    corpus
+        .records_by_id("results")
+        .filter_map(|(id, result)| {
+            let path = field(result, "comparator_config");
+            if path.is_empty() || field(result, "theorem") == name {
+                return None;
+            }
+            let config = configs
+                .entry(path)
+                .or_insert_with(|| comparator_config(root, path));
+            if !config
+                .get("theorem_names")?
+                .as_array()?
+                .iter()
+                .any(|item| item == name)
+            {
+                return None;
+            }
+            let challenge_path = config
+                .get("challenge_module")
+                .and_then(Value::as_str)
+                .filter(|module| !module.is_empty())
+                .map(module_path);
+            let challenge_line = challenge_path.as_ref().and_then(|path| {
+                *challenge_lines.entry(path.clone()).or_insert_with(|| {
+                    let source = std::fs::read_to_string(root.join(path)).ok()?;
+                    qualified_declarations(&source)
+                        .into_iter()
+                        .find_map(|(declaration, line)| (declaration == name).then_some(line + 1))
+                })
+            });
+            Some(ComparatorCompanion {
+                result_id: id,
+                result_label: field(result, "label"),
+                comparator_config: path,
+                challenge_path: challenge_path.map(|path| path.to_string_lossy().into_owned()),
+                challenge_line,
+            })
+        })
+        .collect()
+}
+
 /// Local library theorems and definitions can be inspected by their qualified
 /// name even when nobody has registered them as arguments in the graph.
 pub(super) fn library_declaration(root: &Path, query: &str) -> Option<Value> {
@@ -186,13 +254,20 @@ pub(super) fn find(
     if token.is_empty() || limit == 0 {
         return Ok(Vec::new());
     }
+    let qualified = qualified_name(token);
     let exact_hits: Vec<_> = corpus
         .records_by_id("results")
-        .filter(|(_, record)| exact(record, token))
+        .filter(|(_, record)| {
+            if qualified {
+                field(record, "theorem") == token
+            } else {
+                exact(record, token)
+            }
+        })
         .take(limit)
         .map(|(_, record)| witness(root, corpus, record))
         .collect();
-    if !exact_hits.is_empty() || qualified_name(token) {
+    if !exact_hits.is_empty() || qualified {
         return Ok(exact_hits);
     }
     let Some(terms) = super::assessment_search::expression(query) else {

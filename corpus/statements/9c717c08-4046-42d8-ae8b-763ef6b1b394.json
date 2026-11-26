@@ -1,0 +1,9 @@
+{
+  "id": "9c717c08-4046-42d8-ae8b-763ef6b1b394",
+  "label": "Every actual identity bearer has a finite nonempty eligible exercise fibre",
+  "paraphrase": "Analyst formulation, attribution deferred. On the fixed profile and fixed eligible exercise-to-bearer map, each bearer in act as to esse whose represented esse equals its represented essence has finitely many eligible exercises and at least one. The restriction applies only to such bearers.",
+  "lean_declaration": "TruthCore.Latin.Aquinas.DeEnte.ActualIdentityExerciseLifting.ActualIdentityExerciseFibresFiniteNonempty",
+  "definition_ids": [
+    "b14674c2-b20b-42ea-b5dd-9f9d6ebc304e"
+  ]
+}

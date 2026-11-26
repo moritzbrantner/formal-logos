@@ -1,0 +1,11 @@
+{
+  "id": "8b09eca8-028a-43dc-8c89-74cdb5f9ca80",
+  "label": "Unity of named GOD_4 from finite esse ancestry and exclusion at the last edge",
+  "argument_id": "ae45ef40-acf7-44e6-a45b-b01f668f2a0a",
+  "challenge_module": "TruthCore.Results.Case.Catholicism.AncestralEsseAttributes.Challenge",
+  "solution_module": "TruthCore.Results.Case.Catholicism.AncestralEsseAttributes.Solution",
+  "theorem": "TruthCore.Results.Case.Catholicism.AncestralEsseAttributes.oneFromAncestry",
+  "comparator_config": "results/8b09eca8-028a-43dc-8c89-74cdb5f9ca80/comparator.json",
+  "status": "solution-present",
+  "description": "For each named g the converse of the nominal definition supplies actuality and maximality at esse. If g differs from the common source, its nonempty actual esse-cause path ends at g with a distinct cause of g's esse. That last edge contradicts the existing maximality exclusion on the same profile. Excluded middle supplies the identity split, yielding equality of any two named bearers. This uses neither causal composition nor transitivity of comparison. The conclusion gives uniqueness conditional on naming; naming the source requires a separate argument."
+}

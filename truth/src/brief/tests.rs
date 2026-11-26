@@ -1992,6 +1992,19 @@ fn question_returns_frozen_lean_evidence_without_any_notes_or_assessments() {
         assert!(text.contains("Matching Lean results"));
         assert!(result["matches"].as_array().unwrap().is_empty());
     }
+    let (primary, text) = super::assessment_search::report_for_root(
+        &root,
+        &corpus,
+        "TruthCore.Results.Fixture.goal",
+        1,
+    )
+    .unwrap();
+    assert_eq!(primary["lean_results"][0]["result_label"], "Goal result");
+    assert_eq!(primary["comparator_companions"], json!([]));
+    assert!(text.contains(&format!(
+        "Registered primary theorem — Goal result [{RESULT}]"
+    )));
+
     let companion = "namespace TruthCore.Results.Fixture\ntheorem paired : True := by\n  sorry\ntheorem pending : True := by\n  sorry\nend TruthCore.Results.Fixture\n";
     write(&root, "TruthCore/Results/Fixture/Challenge.lean", companion);
     write(
@@ -2014,6 +2027,7 @@ fn question_returns_frozen_lean_evidence_without_any_notes_or_assessments() {
             lookup["lean_declaration"]["path"],
             format!("TruthCore/Results/Fixture/{module}.lean")
         );
+        assert_eq!(lookup["comparator_companions"], json!([]));
         assert!(text.contains(detail), "{text}");
     }
     let (library, text) = super::assessment_search::report_for_root(
@@ -2040,6 +2054,98 @@ fn question_returns_frozen_lean_evidence_without_any_notes_or_assessments() {
     let (miss, _) =
         super::assessment_search::report_for_root(&root, &corpus, "xylophones", 2).unwrap();
     assert_eq!(miss["lean_results"], json!([]));
+    std::fs::remove_dir_all(root).unwrap();
+}
+
+#[test]
+fn exact_lean_lookup_uses_comparator_names_and_frozen_locations() {
+    let root = fixture("question-comparator-companions");
+    let second = "c0000000-0000-4000-8000-000000000002";
+    let unrelated = "c0000000-0000-4000-8000-000000000003";
+    let scope = "TruthCore.Results.Fixture";
+    let companion = format!("{scope}.paired");
+    let challenge = format!("{scope}.Challenge");
+    let challenge_path = "TruthCore/Results/Fixture/Challenge.lean";
+    let frozen = "namespace TruthCore.Other\ntheorem paired : True := by\n  sorry\nend TruthCore.Other\n\nnamespace TruthCore.Results.Fixture\ntheorem goal : True := by\n  sorry\ntheorem otherGoal : True := by\n  sorry\ntheorem paired : True := by\n  sorry\nend TruthCore.Results.Fixture\n";
+    write(&root, challenge_path, frozen);
+    write(
+        &root,
+        "TruthCore/Results/Fixture/Solution.lean",
+        &format!(
+            "{}\nnamespace {scope}\ntheorem helper : True := by\n  trivial\nend {scope}\n",
+            frozen.replace("sorry", "trivial"),
+        ),
+    );
+    for (id, path, primary, label) in [
+        (RESULT, "results/x/comparator.json", "goal", "Goal result"),
+        (
+            second,
+            "results/y/comparator.json",
+            "otherGoal",
+            "Other goal result",
+        ),
+    ] {
+        let primary = format!("{scope}.{primary}");
+        record(
+            &root,
+            "results",
+            json!({"id":id, "label":label, "argument_id":ARGUMENT,
+                "theorem":primary, "challenge_module":challenge, "comparator_config":path,
+                "solution_module":format!("{scope}.Solution"), "status":"solution-present"}),
+        );
+        write(
+            &root,
+            path,
+            &json!({"challenge_module":challenge,"theorem_names":[primary,companion,companion]})
+                .to_string(),
+        );
+    }
+    record(
+        &root,
+        "results",
+        json!({"id":unrelated, "label":"Unrelated result", "argument_id":ARGUMENT,
+            "theorem":"TruthCore.Unrelated.paired", "comparator_config":"results/z/comparator.json",
+            "challenge_module":"TruthCore.Unrelated.Challenge", "solution_module":"TruthCore.Unrelated.Solution",
+            "status":"solution-present"}),
+    );
+    write(
+        &root,
+        "results/z/comparator.json",
+        r#"{"theorem_names":["TruthCore.Unrelated.paired","TruthCore.Unrelated.helper"]}"#,
+    );
+    let corpus = Corpus::load(&root).unwrap();
+    let (lookup, text) =
+        super::assessment_search::report_for_root(&root, &corpus, &format!("`{companion}`"), 1)
+            .unwrap();
+    assert_eq!(lookup["lean_results"], json!([]));
+    assert_eq!(lookup["lean_declaration"]["name"], companion);
+    assert_eq!(
+        lookup["comparator_companions"],
+        json!([
+            {"result_id":RESULT, "result_label":"Goal result", "comparator_config":"results/x/comparator.json",
+                "challenge_path":challenge_path, "challenge_line":11},
+            {"result_id":second, "result_label":"Other goal result", "comparator_config":"results/y/comparator.json",
+                "challenge_path":challenge_path, "challenge_line":11}
+        ])
+    );
+    assert!(text.contains("Companion theorem listed in Comparator configuration"));
+    assert!(text.contains(&format!("Goal result [{RESULT}]")));
+    assert!(text.contains(&format!("Other goal result [{second}]")));
+    assert!(text.contains(&format!("Frozen Challenge — {challenge_path}:11")));
+    assert!(!text.contains("Unrelated result"));
+
+    for name in [
+        format!("{scope}.helper"),
+        "TruthCore.Other.paired".to_owned(),
+    ] {
+        let (helper, text) =
+            super::assessment_search::report_for_root(&root, &corpus, &name, 2).unwrap();
+        assert_eq!(helper["lean_declaration"]["name"], name);
+        assert_eq!(helper["lean_results"], json!([]));
+        assert_eq!(helper["comparator_companions"], json!([]));
+        assert!(text.contains("Lean library declaration"));
+        assert!(!text.contains("Comparator configuration"));
+    }
     std::fs::remove_dir_all(root).unwrap();
 }
 

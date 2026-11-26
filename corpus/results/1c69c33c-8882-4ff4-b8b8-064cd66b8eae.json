@@ -1,0 +1,11 @@
+{
+  "id": "1c69c33c-8882-4ff4-b8b8-064cd66b8eae",
+  "label": "Populated actual esse chain separation verified",
+  "argument_id": "cf64a88a-9ea4-4038-9750-d73fec8beadb",
+  "challenge_module": "TruthCore.Results.Case.Catholicism.AncestralEsseAttributes.Challenge",
+  "solution_module": "TruthCore.Results.Case.Catholicism.AncestralEsseAttributes.Solution",
+  "theorem": "TruthCore.Results.Case.Catholicism.AncestralEsseAttributes.chainControl",
+  "comparator_config": "results/1c69c33c-8882-4ff4-b8b8-064cd66b8eae/comparator.json",
+  "status": "solution-present",
+  "description": "Reuse the Q44 three-bearer chain with esse and further represented respects. The last bearer is actual at esse and in an additional respect. Every present esse edge transfers each actual effect-perfection, and the named source is good at esse by goodness-as-actuality. The absent source-to-last-bearer cause at the additional respect falsifies the direct causal conjunct of supreme goodness. The checked assignment tests the distinction between an ancestry route and a direct cause on these exact predicates."
+}

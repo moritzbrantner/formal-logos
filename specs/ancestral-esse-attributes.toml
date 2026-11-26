@@ -1,0 +1,35 @@
+[batch]
+vocab = "TruthCore.Case.Catholicism.AncestralEsseAttributes"
+results = "TruthCore.Results.Case.Catholicism.AncestralEsseAttributes"
+
+[[argument]]
+id = "Unity of named GOD_4 from finite esse ancestry and exclusion at the last edge"
+theorem = "oneFromAncestry"
+premises = ["c35b1a5c-6405-449b-993b-8196b2457e08", "4c79298d-ee09-5e99-9ced-1be92c19b4cc", "18561596-1269-53ff-8505-c56e4348e335", "ee4ab504-c8fe-59bc-bc96-7cbeefed6410"]
+conclusion = "33b18ae7-4578-54bc-a2b5-edce99b21fc2"
+axioms = []
+rule = "Identify every named maximum with the common ancestor by excluding the last edge"
+meaning = "For each named g the converse of the nominal definition supplies actuality and maximality at esse. If g differs from the common source, its nonempty actual esse-cause path ends at g with a distinct cause of g's esse. That last edge contradicts the existing maximality exclusion on the same profile. Excluded middle supplies the identity split, yielding equality of any two named bearers. This uses neither causal composition nor transitivity of comparison. The conclusion gives uniqueness conditional on naming; naming the source requires a separate argument."
+
+[[argument]]
+id = "Perfection of named GOD_4 by same-respect preexistence along finite esse ancestry"
+theorem = "perfectFromAncestry"
+premises = ["c35b1a5c-6405-449b-993b-8196b2457e08", "4c79298d-ee09-5e99-9ced-1be92c19b4cc", "18561596-1269-53ff-8505-c56e4348e335", "ee4ab504-c8fe-59bc-bc96-7cbeefed6410", "7067553d-cad9-5d79-b6b2-912e35051530", "64498e7e-7f10-54a0-9ec0-c65e6076de1f"]
+conclusion = "78b7c124-4419-4d55-8c2d-9cb8b37eb9b6"
+axioms = []
+rule = "Carry actuality in the same respect back through each edge of the finite path"
+meaning = "Final-edge exclusion identifies each named maximum with the common source. Any represented actuality implies actual esse, so every distinct bearer with that actuality has a finite actual esse-cause path from the source. Perfection preexistence takes actuality in the same respect from the effect to the cause at each edge, using the identical InAct and CausesIn fields throughout. Where the bearer is already the source, equality transports its actuality. This uses the explicit excluded-middle premise for the equality splits and yields the existing single-field perfection; the applicability of preexistence and its formal-or-eminent interpretation remain separate."
+
+[[statement]]
+id = "A populated actual esse chain separates same-field perfection from direct supreme goodness"
+lean = "Control.ChainControl"
+paraphrase = "Three actual bearers form the source-to-intermediate-to-recipient chain on one frame. The source is named, actual at esse and the common uncaused identity source. Named maximality, maximal causal exclusion, actuality-to-being, preexistence, goodness-as-actuality and per-edge transfer all hold. The one named bearer has single-field perfection. The distinct endpoint is actual in another respect but has no causal edge from the source at esse or at that other respect, so the existing direct supreme-goodness predicate fails."
+
+[[argument]]
+id = "Populated actual esse chain separation verified"
+theorem = "chainControl"
+premises = []
+conclusion = "A populated actual esse chain separates same-field perfection from direct supreme goodness"
+axioms = []
+rule = "Evaluate the existing unity, perfection and supreme-goodness predicates on a populated two-edge chain"
+meaning = "Reuse the Q44 three-bearer chain with esse and further represented respects. The last bearer is actual at esse and in an additional respect. Every present esse edge transfers each actual effect-perfection, and the named source is good at esse by goodness-as-actuality. The absent source-to-last-bearer cause at the additional respect falsifies the direct causal conjunct of supreme goodness. The checked assignment tests the distinction between an ancestry route and a direct cause on these exact predicates."

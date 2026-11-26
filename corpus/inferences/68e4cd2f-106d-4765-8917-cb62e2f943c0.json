@@ -1,0 +1,10 @@
+{
+  "id": "68e4cd2f-106d-4765-8917-cb62e2f943c0",
+  "label": "Infinite actual roster witnesses omission of the finite giver pivot (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "766c2f51-7340-47f0-ab15-68f293f52793",
+  "rule": "Bound each finite panel and choose a recipient above any proposed universal giver",
+  "meaning": "In the exact natural-number interpretation the successor of the finite panel's supremum gives esse directly to each member, while a proposed global giver fails at its own successor. The finite-pivot result with the checked #561 package then rules out any finite pivot in this same interpretation. This is a formal deletion witness for the finite-pivot premise.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

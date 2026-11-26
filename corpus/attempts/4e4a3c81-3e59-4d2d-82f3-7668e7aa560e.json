@@ -1,7 +1,7 @@
 {
   "id": "4e4a3c81-3e59-4d2d-82f3-7668e7aa560e",
   "label": "GOD_4 uniqueness from maximality or nonmutual dependence at esse",
-  "date": "2026-11-25",
+  "date": "2026-11-26",
   "statement_ids": [
     "33b18ae7-4578-54bc-a2b5-edce99b21fc2",
     "18561596-1269-53ff-8505-c56e4348e335",
@@ -9,32 +9,41 @@
     "86d02b69-87eb-5594-9958-ccaa5fe6b685",
     "4c79298d-ee09-5e99-9ced-1be92c19b4cc",
     "2068f91c-1eeb-5dbb-a71a-f7b6a12bb495",
-    "0f49d71e-09e6-5a9c-b7e7-e0e9b8fe769c"
+    "0f49d71e-09e6-5a9c-b7e7-e0e9b8fe769c",
+    "0881e859-c4c3-53ff-9bec-b61294e12d51",
+    "2dd449da-2ba5-4850-8762-7d40f2641557",
+    "520fbe04-a46d-4f20-ba93-73eb5100dbac"
   ],
   "kind": "derivation",
   "outcome": "succeeded",
-  "summary": "Three conditional routes yield GodIsOne. A single actual maximal witness excludes every distinct God, each candidate's own maximality can replace the existence premise, and two proposed universal givers would be mutually dependent under the explicit cause-to-dependence bridge. The first proof also works with only actual recipients and feeds the existing same-signature classical assembly. The controls exhibit a God giving esse to an actual other with genus causality false, single nonlogical omissions, distinct maximal providers to separate recipients, and the actual-recipient scope boundary. The proofs use identity case splits explicitly. See docs/notes/maximum-definition-fork.md#can-two-distinct-gods-each-give-the-others-esse-1936 for the provisional assessment and rival comparison. All four result configurations passed zero-permitted-axiom Comparator and NanoDa locally, including the actual-recipient lemma and the exact 3769b87e assembly application. Four bound, zero mismatches. The focused proof sweep flagged no likely transcriptions; the separate countermodel search Lean-checked a two-being omission of the naming converse. Against parent 4e44d8ce8, frontier-diff reports no Catholicism-root premise change and three absent-to-verified GodIsOne target routes. No global exclusion or premise establishment is inferred. The two-domain follow-up identifies one present structural support for the optical cavity and radial breathing modes of a measured silica toroid. Independent low-power mechanical characterization, detuning-dependent splitting and a control shifting the fiber acoustic background support this local assignment. The optical field and material displacement have distinct dynamics. Their contributions to the readout do not instantiate the same relation as support by the toroid. See docs/notes/maximum-definition-fork.md#do-two-modes-of-one-resonator-have-a-present-common-bearer for the measurements, modeled localization, plural account and reversal test.",
-  "blocker": "Universal causal reach remains the common warrant question. Test whether independently identifying the giver of received esse across domains supports the actual-recipient converse, and whether every God candidate is actual in esse on the dependence route. The witness route already supplies actuality of its recipient. No route supplies an existing God or establishes its premises. For the resonator, an existential application requires tracing what sustains the material and field themselves through the same relation. Shared mode confinement and support do not identify that giver.",
+  "summary": "Three conditional routes yield GodIsOne. A single actual maximal witness excludes every distinct God, each candidate's own maximality can replace the existence premise, and two proposed universal givers would be mutually dependent under the explicit cause-to-dependence bridge. The first proof also works with only actual recipients and feeds the existing same-signature classical assembly. The controls exhibit a God giving esse to an actual other with genus causality false, single nonlogical omissions, distinct maximal providers to separate recipients, and the actual-recipient scope boundary. The proofs use identity case splits explicitly. See docs/notes/maximum-definition-fork.md#can-two-distinct-gods-each-give-the-others-esse-1936 for the provisional assessment and rival comparison. All four result configurations passed zero-permitted-axiom Comparator and NanoDa locally, including the actual-recipient lemma and the exact 3769b87e assembly application. Four bound, zero mismatches. The focused proof sweep flagged no likely transcriptions; the separate countermodel search Lean-checked a two-being omission of the naming converse. Against parent 4e44d8ce8, frontier-diff reports no Catholicism-root premise change and three absent-to-verified GodIsOne target routes. No global exclusion or premise establishment is inferred. The two-domain follow-up identifies one present structural support for the optical cavity and radial breathing modes of a measured silica toroid. Independent low-power mechanical characterization, detuning-dependent splitting and a control shifting the fiber acoustic background support this local assignment. The optical field and material displacement have distinct dynamics. Their contributions to the readout do not instantiate the same relation as support by the toroid. See docs/notes/maximum-definition-fork.md#do-two-modes-of-one-resonator-have-a-present-common-bearer for the measurements, modeled localization, plural account and reversal test. A common maximal giver on every finite panel and one exhaustively finite panel population yield one giver for every actual recipient. A flat infinite order passes every finite test while each candidate misses its successor. With an independently underived maximum fixed, testing its pairs is equivalent to its direct coverage. Complete factorization and a closed impression record illustrate how an exhaustive inventory could be warranted in their respective domains. docs/notes/maximum-definition-fork.md#can-finite-panels-identify-the-same-actual-giver-of-esse",
+  "blocker": "Universal causal reach remains the common warrant question. Test whether independently identifying the giver of received esse across domains supports the actual-recipient converse, and whether every God candidate is actual in esse on the dependence route. The witness route already supplies actuality of its recipient. No route supplies an existing God or establishes its premises. For the resonator, an existential application requires tracing what sustains the material and field themselves through the same relation. Shared mode confinement and support do not identify that giver. For one actual recipient, establish which maximal candidates could directly give it esse and what excludes any further one. Include the recipient itself when maximal.",
   "evidence": [
     "8ba99a96-b804-45e3-8008-a0f312279192",
     "3c60e372-7e35-4758-a583-64bcc0a42497",
     "177e3836-f990-4bb4-9446-1093c9d2fb0d",
     "4f934468-3157-4d9f-b606-35832ae1c9af",
-    "PR-1973"
+    "PR-1973",
+    "83352ac5-6ec3-48e1-a91f-3e9379e59f3b",
+    "8353b4b6-b22b-45d2-8216-a32b12df5707",
+    "PR-2007"
   ],
   "current_assessment": {
-    "date": "2026-11-25",
+    "date": "2026-11-26",
     "statement_ids": [
-      "33b18ae7-4578-54bc-a2b5-edce99b21fc2"
+      "33b18ae7-4578-54bc-a2b5-edce99b21fc2",
+      "0881e859-c4c3-53ff-9bec-b61294e12d51",
+      "2dd449da-2ba5-4850-8762-7d40f2641557",
+      "520fbe04-a46d-4f20-ba93-73eb5100dbac"
     ],
-    "scope": "The causal-naming, maximal-witness and nonmutual-dependence arguments for GodIsOne on one esse dictionary.",
-    "assessment": "Under the causal naming converse, exclusion of a distinct esse cause at a maximum yields unity with either a supplied maximal witness or the maximality of each God candidate. The dependence route requires both dependence of the effect on its esse cause and exclusion of mutual dependence between distinct bearers. Two universal givers would violate that exclusion. Each proof uses the stated identity case split. Evidence of a giver for each recipient fits both universal and partitioned supply. The maximal witness is actual in esse, which permits the restriction of the naming premise to actual recipients in that proof.",
-    "next_test": "Track what gives the being of recipients in two proposed domains. For the dependence argument with restricted scope, establish actuality in esse of each God candidate or justify causal reach to both candidates.",
-    "note": "docs/notes/maximum-definition-fork.md#can-two-distinct-gods-each-give-the-others-esse-1936",
-    "reviewed_revision": "4ad2728c3588178de0771e0504ac42254b543242",
+    "scope": "The causal-naming, maximal-witness and nonmutual-dependence arguments for GodIsOne on one esse dictionary. Finite candidate tests for a maximal direct giver on the same actual dictionary.",
+    "assessment": "Under the causal naming converse, exclusion of a distinct esse cause at a maximum yields unity with either a supplied maximal witness or the maximality of each God candidate. The dependence route requires both dependence of the effect on its esse cause and exclusion of mutual dependence between distinct bearers. Two universal givers would violate that exclusion. Each proof uses the stated identity case split. Evidence of a giver for each recipient fits both universal and partitioned supply. The maximal witness is actual in esse, which permits the restriction of the naming premise to actual recipients in that proof. A common maximal giver on every finite panel and one exhaustively finite panel population yield one giver for every actual recipient. A flat infinite order passes every finite test while each candidate misses its successor. With an independently underived maximum fixed, testing its pairs is equivalent to its direct coverage. Complete factorization and a closed impression record illustrate how an exhaustive inventory could be warranted in their respective domains.",
+    "next_test": "Track what gives the being of recipients in two proposed domains. For the dependence argument with restricted scope, establish actuality in esse of each God candidate or justify causal reach to both candidates. For one actual recipient, establish which maximal candidates could directly give it esse and what excludes any further one. Include the recipient itself when maximal.",
+    "note": "docs/notes/maximum-definition-fork.md#can-finite-panels-identify-the-same-actual-giver-of-esse",
+    "reviewed_revision": "d9e45e107032f1b64a48d7fea3306b17c0c4aaf0",
     "review": "accepted_qualified",
     "publication": "published",
-    "evidence": "The independent challenge checked the three complete unity arguments, models and same-signature assembly. The final review retained the actual-recipient scope of the maximal-witness argument and both dependence premises. Four configurations passed Comparator and NanoDa.",
-    "supersedes": "None. Adds alternatives to the existing genus-causality, nature and root arguments."
+    "evidence": "The independent challenge checked the three complete unity arguments, models and same-signature assembly. The final review retained the actual-recipient scope of the maximal-witness argument and both dependence premises. Four configurations passed Comparator and NanoDa. The prior disposition applies to the earlier scope at 4ad2728c3588178de0771e0504ac42254b543242. The independent challenge accepted the fixed-dictionary finite-hitting application, sharp bound for every positive candidate count, underived pair criterion and infinite omission. The actual existence of an exhaustive panel roster and direct productive reach remain open. Targeted recheck accepted d9e45e107032f1b64a48d7fea3306b17c0c4aaf0. PR #2007.",
+    "supersedes": "Extends the previous assessment at 4ad2728c3588178de0771e0504ac42254b543242 with finite candidate tests for a maximal direct giver on the same actual dictionary."
   }
 }

@@ -347,36 +347,65 @@ pub fn report_for_root(
     let matches = report["matches"].as_array().map_or(&[][..], Vec::as_slice);
     let cited =
         super::proof_search::cited_results(root, corpus, matches, &query, &mut results, limit);
+    let companions = if identifier {
+        super::proof_search::comparator_companions(root, corpus, &query.text)
+    } else {
+        Vec::new()
+    };
     let library = if identifier && results.is_empty() {
         super::proof_search::library_declaration(root, &query.text)
     } else {
         None
     };
-    let mut proof_section = if let Some(declaration) = &library {
+    let mut proof_section = String::new();
+    if !results.is_empty() {
+        proof_section.push_str(&format!(
+            "\n\nMatching Lean results\n{}",
+            render_results(&results, identifier)
+        ));
+    }
+    if !companions.is_empty() {
+        proof_section.push_str("\n\nCompanion theorem listed in Comparator configuration");
+        for companion in &companions {
+            proof_section.push_str(&format!(
+                "\n{} [{}]\nComparator configuration — {}",
+                companion.result_label, companion.result_id, companion.comparator_config,
+            ));
+            if let Some(path) = &companion.challenge_path {
+                if let Some(line) = companion.challenge_line {
+                    proof_section.push_str(&format!("\nFrozen Challenge — {path}:{line}"));
+                } else {
+                    proof_section.push_str(&format!("\nConfigured Challenge — {path}"));
+                }
+            }
+        }
+    }
+    if let Some(declaration) = &library {
         let path = string(declaration, "path");
         let label = if std::path::Path::new(path).ends_with("Challenge.lean") {
             "Frozen Lean specification"
+        } else if !companions.is_empty() {
+            "Lean implementation"
         } else {
             "Lean library declaration"
         };
-        format!(
+        proof_section.push_str(&format!(
             "\n\n{label} · {path}:{}\n{}",
             declaration["line"],
             string(declaration, "source")
-        )
-    } else if results.is_empty() {
-        if identifier {
-            "\n\nNo registered Lean result matches this identifier.".to_owned()
+        ));
+    }
+    if proof_section.is_empty() {
+        proof_section.push_str(if identifier {
+            "\n\nNo registered Lean result matches this identifier."
         } else {
-            "\n\nNo direct text match for a registered Lean result.".to_owned()
-        }
-    } else {
-        format!("\n\nMatching Lean results\n{}", render_results(&results))
-    };
+            "\n\nNo direct text match for a registered Lean result."
+        });
+    }
     if !cited.is_empty() {
         proof_section.push_str(&format!(
             "\n\nLean results cited in the investigations' evidence history\n{}",
-            render_results(&cited)
+            render_results(&cited, false)
         ));
     } else if results.is_empty() && !matches.is_empty() && limit > 0 {
         proof_section.push_str(" The displayed investigations cite no registered Lean results.");
@@ -384,20 +413,31 @@ pub fn report_for_root(
     text.insert_str(text.find('\n').unwrap_or(text.len()), &proof_section);
     report["lean_results"] = json!(results);
     report["cited_lean_results"] = json!(cited);
+    if identifier {
+        report["comparator_companions"] = json!(companions);
+    }
     if let Some(declaration) = library {
         report["lean_declaration"] = declaration;
     }
     Ok((report, text))
 }
 
-fn render_results(results: &[Value]) -> String {
+fn render_results(results: &[Value], qualified_lookup: bool) -> String {
     results
         .iter()
         .enumerate()
         .map(|(i, result)| {
+            let heading = if qualified_lookup {
+                format!(
+                    "Registered primary theorem — {} [{}]",
+                    string(result, "result_label"),
+                    string(result, "id")
+                )
+            } else {
+                string(result, "argument_label").to_owned()
+            };
             let mut entry = format!(
-                "{}\n{}",
-                string(result, "argument_label"),
+                "{heading}\n{}",
                 crate::synthesis::format_result_witness(result)
             );
             if i == 0 && !string(result, "argument_meaning").is_empty() {
