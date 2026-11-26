@@ -1,0 +1,35 @@
+{
+  "id": "22233862-c160-4f1f-aba1-416f0c8f201b",
+  "label": "Complete selected cone well-foundedness from one source path and one-step joining",
+  "premise_statement_ids": [
+    "6462fc19-f997-4166-8d6c-c60836e4383f",
+    "34816fb7-0ec2-4f2e-9634-7fd7e8b7f3bd"
+  ],
+  "conclusion_statement_id": "1b1e3f09-f2e9-5949-9c3b-8f7fce26a403",
+  "inference_ids": [
+    "b9d09032-1a9c-49c8-942d-75c83ab96f1c"
+  ],
+  "meaning": "At each immediate upstream step every supplier has a path to the same source exactly one edge shorter. Induction gives accessibility of the selected bearer, and every actual concrete member of the complete cone inherits it. Any two finite maximal paths from the same bearer have equal length and reach the same source. Unique predecessor suffices, while the existing four-node diamond witnesses that immediate branching is compatible with the rule. The acyclic common-source ray witnesses that even global upstream confluence and a path to the same unique source from every node allow a regress when only finite joining is required. The two application premises are open. To infer a necessary ancestor, retain the existing cone-local contingent grounding and excluded middle at the same actual selected bearer.",
+  "term_senses": {
+    "FULL_ANCESTRY_FOUNDATION_VERSUS_CONTINGENT_ONLY": "959c30ea-70e8-47ba-931b-2054a080ea7e"
+  },
+  "definition_ids": [
+    "52352824-6be9-53c6-83d4-82fed9a08cbb",
+    "008cb21a-256c-5a90-822c-acd4591d699a",
+    "822c9912-2313-584b-b2b7-77031da20107",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "e1ff44df-ed97-5990-8424-1abd720f23ea",
+    "9c6e4314-2e35-52ff-951e-db752a3c8ce2",
+    "264e5668-fdd0-5ee3-98d1-6dc9925056c4",
+    "7b0fa9c6-f1fa-5b46-8a8b-31187fa3a28b",
+    "99f27f99-cf28-58bb-9e08-eb3fe8e752c1"
+  ],
+  "disambiguation_ids": [
+    "623ddbf6-9683-5361-bae4-e348a00ec680",
+    "7507d645-874d-5434-add8-2f49c2801d36",
+    "09a5b009-3548-5a02-80b6-9eafc755a10e",
+    "c529e8d3-43e3-53a8-a82f-3955e9815265"
+  ]
+}
