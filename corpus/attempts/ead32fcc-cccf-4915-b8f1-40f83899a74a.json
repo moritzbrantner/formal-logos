@@ -15,6 +15,17 @@
   "blocker": "The unresolved application is whether an already constituted bearer really supplies its own maintained state at a fixed respect in the selected efficient relation. For the perfection existential the corresponding identity question is whether the producing subject is the bearer perfected by the power, with the power specified as the respect. Neither question is decided by the formal frame.",
   "evidence": [
     "0505143b-7a9a-4236-a53c-7c5a5f2aa5d0",
-    "afac47a6-76ad-4b1f-9c1f-48be6246f6c3"
+    "afac47a6-76ad-4b1f-9c1f-48be6246f6c3",
+    "PR-2046"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-astra",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2046"
+    }
   ]
 }
