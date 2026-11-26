@@ -9,6 +9,7 @@ public import TruthCore.Latin.Aquinas.DeEnte.EsseReception
 public import TruthCore.Latin.Aquinas.DeEnte.EsseSource
 public import TruthCore.Latin.Aquinas.DeEnte.ExtrinsicSource
 public import TruthCore.Latin.Aquinas.DeEnte.FiniteEsseRootAudit
+public import TruthCore.Latin.Aquinas.DeEnte.ReceivedOrUnderived
 public import TruthCore.Latin.Aquinas.DeEnte.RootInterface
 public import TruthCore.Latin.Aquinas.InMetaphysicam.BookII
 public import TruthCore.Latin.Aquinas.InMetaphysicam.BookIX
