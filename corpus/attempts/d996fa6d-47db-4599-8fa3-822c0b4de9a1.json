@@ -2,21 +2,27 @@
   "id": "d996fa6d-47db-4599-8fa3-822c0b4de9a1",
   "label": "Root links from Alexander Bird, Antidotes all the way down? Theoria 19",
   "statement_ids": [
-    "aa6a9f58-a800-50ca-aa74-201d13efbbe4",
-    "e025d0f1-9e8c-5125-80ad-60888c650bd4"
+    "aa6a9f58-a800-50ca-aa74-201d13efbbe4"
   ],
   "date": "2026-11-26",
   "kind": "reading",
   "outcome": "succeeded",
-  "summary": "§6, pp.267–268, dispositional essentialism and laws: Bird proposes explaining suitable laws through dispositions essential to natural properties and conditions for their manifestation. This is a rival account of lawhood to best-system regularities. Applying it to the same laws would require defending dispositional essentialism and the specified exception conditions. No defeat of best-system lawhood is asserted. §§1–3 and §§6–7, pp.259–262 and 268–269: Bird's fink and antidote cases show that possession of a disposition can fail to yield manifestation in the triggering conditions. This matters when treating the case's possession and exercise predicates as equivalent. The inverse from power to causing needs a manifestation bridge free of the relevant blockers.",
+  "summary": "§6, pp.267–268, dispositional essentialism and laws: Bird proposes explaining suitable laws through dispositions essential to natural properties and conditions for their manifestation. This is a rival account of lawhood to best-system regularities. Applying it to the same laws would require defending dispositional essentialism and the specified exception conditions. No defeat of best-system lawhood is asserted.",
   "evidence": [
     "a174e95e-2ee6-5004-81d9-3b2e293c85bb",
-    "9290ec2e-f570-5f51-ac8c-174454877af5",
     "PR-2085"
   ],
   "workers": [
     {
       "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2085"
+    },
+    {
+      "role": "repair",
       "provider": "codex",
       "model": "gpt-6.2-sol",
       "effort": "high",

@@ -108,16 +108,6 @@ object_kind = "statement"
 object_id = "34ffdbd8-07eb-5c1d-b38d-1a917c8f901b"
 note = "Bird proposes explaining suitable laws through dispositions essential to natural properties and conditions for their manifestation. This is a rival account of lawhood to best-system regularities. Applying it to the same laws would require defending dispositional essentialism and the specified exception conditions. No defeat of best-system lawhood is asserted."
 
-[[relation]]
-id = "11139b6a-f3bd-47af-baf0-671bccfabf32"
-label = "Source qualification for 60e9b099 from reading e025d0f1"
-subject_kind = "claim"
-subject_id = "9290ec2e-f570-5f51-ac8c-174454877af5"
-predicate = "qualifies"
-object_kind = "statement"
-object_id = "60e9b099-2bc0-5a8c-86d8-821d04f5b16c"
-note = "Bird's fink and antidote cases show that possession of a disposition can fail to yield manifestation in the triggering conditions. This matters when treating the case's possession and exercise predicates as equivalent. The inverse from power to causing needs a manifestation bridge free of the relevant blockers."
-
 # Allan Gibbard, Reply to Commentators
 
 [[relation]]
@@ -289,16 +279,6 @@ object_id = "93824f63-3964-50ec-a029-057102888f72"
 note = "C obtains possible exemplification of the positive God-like property at each world. The theorem of necessary exemplification additionally needs the essence and necessary-existence steps and the modal transfer. Possibility does not identify a rigid divine witness."
 
 [[relation]]
-id = "bef4c9b0-a64a-47da-a25c-41d9c0dd568d"
-label = "Source qualification for a6b42d40 from reading 81d437cf"
-subject_kind = "claim"
-subject_id = "5c3007c0-2978-5108-b64c-c0dfd05cec02"
-predicate = "qualifies"
-object_kind = "statement"
-object_id = "a6b42d40-6d62-5fbb-85e4-5a37c6ca4a3e"
-note = "Flawlessness uses the positive-negation axiom and the God-like definition to exclude exemplification of nonpositive properties by a God-like individual. The result concerns individuals satisfying the definition under those axioms. It gives no independent evidence that being God-like is positive."
-
-[[relation]]
 id = "980f3dae-b65e-4980-bacd-b873d7f9a5ec"
 label = "Source qualification for 93824f63 from reading c6ebeb52"
 subject_kind = "claim"
@@ -319,16 +299,6 @@ object_id = "93824f63-3964-50ec-a029-057102888f72"
 note = "T2 identifies God-like as an essence of each God-like individual in Scott's sense. To yield T3 one still needs possible exemplification of God-like, the positive status of necessary existence and the modal propagation, with each step using the same embedding."
 
 # Christoph Benzmüller and Dana Scott, Notes on Gödel's and Scott's Variants of the Ontological…
-
-[[relation]]
-id = "ac6b5382-9a19-4c4c-aefe-6790f3223235"
-label = "Source qualification for 96d8342a from reading 9cdba00e"
-subject_kind = "claim"
-subject_id = "9c34b71a-b9c7-5e64-997b-811f2426ee6a"
-predicate = "qualifies"
-object_kind = "statement"
-object_id = "96d8342a-f88f-5edf-8792-00d4f6d556ca"
-note = "The 1970 conjunction axiom differs from closure under necessary inclusion. Using it within that axiom package does not make it follow from the inclusion clause alone, and the application needs the same world-indexed positive-property interpretation."
 
 [[relation]]
 id = "c07e8515-ee39-43c5-96b5-29f796051900"
@@ -1805,14 +1775,14 @@ object_id = "94e04d71-f5e3-5d0b-99fd-1fa01df090e9"
 note = "The source argues that the members of a genus share generic quiddity but differ in their acts of being. The application needs the resulting esse–essence distinction for every proper generic member and identity of represented esse and essence for the same GOD_4 witness."
 
 [[relation]]
-id = "40f1b56b-d421-4294-b192-bab6649ef3c8"
+id = "e673e2a5-1f1d-4d70-a15f-2a2ef712d467"
 label = "Source support for 700215cd from reading bd823369"
 subject_kind = "claim"
 subject_id = "e246cc99-d2fd-5d00-8054-d60117167f12"
-predicate = "supports"
+predicate = "qualifies"
 object_kind = "statement"
 object_id = "700215cd-e9b9-465c-9075-fd6583f197eb"
-note = "Aquinas distinguishes grasping an object as being from the suitably good aspect under which appetite bears on it. This bears on the target's good-as-apprehended reading. It leaves open that this same divine intellectual act apprehends a good through a form and that the form actualizes in the selected sense."
+note = "Q.80 a.1 ad 2 distinguishes the aspect under which an object is apprehended from that under which appetite relates to it as suitable or good. This distinguishes the route's intellectual appraisal from appetite. The passage supplies neither an instance of a divine bearer appraising a good under a form nor a reason that every qualifying divine intellect does so."
 
 [[relation]]
 id = "e6272447-5780-4962-99ed-1ee9d592aa61"

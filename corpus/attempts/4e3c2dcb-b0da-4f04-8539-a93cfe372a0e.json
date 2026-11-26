@@ -2,16 +2,14 @@
   "id": "4e3c2dcb-b0da-4f04-8539-a93cfe372a0e",
   "label": "Root links from Christoph Benzmüller and Dana Scott, Notes on Gödel's and Scott's Variants of the O",
   "statement_ids": [
-    "9cdba00e-f2ef-585c-8d4d-c6a94ce1d408",
     "ce92c0a9-3db3-594f-a412-4fde009101bd",
     "9828ffa7-fa30-5220-a946-872f2aedfb5f"
   ],
   "date": "2026-11-26",
   "kind": "reading",
   "outcome": "succeeded",
-  "summary": "GoedelVariantHOML1.thy, Ax1: \"⌊P φ ❙∧ P ψ ❙⊃ P (φ ❙. ψ)⌋\": The 1970 conjunction axiom differs from closure under necessary inclusion. Using it within that axiom package does not make it follow from the inclusion clause alone, and the application needs the same world-indexed positive-property interpretation. GoedelVariantHOML1.thy, Th1: \"⌊G x ❙⊃ G Ess. x⌋\": Th1 supplies the 1970 antecedent-to-essence step using its actualist necessary inclusion. To reach Th3 one still needs the necessary-existence axiom and the accessible occurrence of an existing God-like individual in the same embedding. GoedelVariantHOML1.thy, Th2: \"⌊G x ❙⊃ ❙□(❙∃⇧Ey. G y)⌋\": Th2 starts from God-likeness at the given world and yields necessary actualist exemplification. Th3 adds the modal passage from a possibly existing witness using the frame law. The existing possibility boundary still applies, so a proof of Th2 gives no existing God-like witness.",
+  "summary": "GoedelVariantHOML1.thy, Th1: \"⌊G x ❙⊃ G Ess. x⌋\": Th1 supplies the 1970 antecedent-to-essence step using its actualist necessary inclusion. To reach Th3 one still needs the necessary-existence axiom and the accessible occurrence of an existing God-like individual in the same embedding. GoedelVariantHOML1.thy, Th2: \"⌊G x ❙⊃ ❙□(❙∃⇧Ey. G y)⌋\": Th2 starts from God-likeness at the given world and yields necessary actualist exemplification. Th3 adds the modal passage from a possibly existing witness using the frame law. The existing possibility boundary still applies, so a proof of Th2 gives no existing God-like witness.",
   "evidence": [
-    "9c34b71a-b9c7-5e64-997b-811f2426ee6a",
     "cf494304-602a-574e-9903-6735dad045eb",
     "158993d7-0e40-5fe8-8ee9-6e6983abc671",
     "PR-2085"
@@ -19,6 +17,14 @@
   "workers": [
     {
       "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2085"
+    },
+    {
+      "role": "repair",
       "provider": "codex",
       "model": "gpt-6.2-sol",
       "effort": "high",

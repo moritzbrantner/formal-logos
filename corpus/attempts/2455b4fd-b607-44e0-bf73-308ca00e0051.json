@@ -1,6 +1,6 @@
 {
   "id": "2455b4fd-b607-44e0-bf73-308ca00e0051",
-  "label": "Unlinked readings from Thomas Aquinas, Summa theologiae",
+  "label": "Retained readings from Thomas Aquinas, Summa theologiae",
   "statement_ids": [
     "f724e807-67ee-51f2-a731-1f2eb407c913",
     "a3078187-8841-4b35-8c69-f4c69bbc5ed0",
@@ -11,8 +11,8 @@
   ],
   "date": "2026-11-26",
   "kind": "reading",
-  "outcome": "rejected",
-  "summary": "I q.10 a.3 co. and ad 2: aeternitas vere et proprie in solo Deo est: The proper and participated uses are explicitly distinguished. The extant attribute premise asks whether the selected deity is eternal and supplies no exclusion claim about all other beings to which the reservation would apply. I q.14 a.4 co.: The identity of divine understanding, essence and esse is stronger and more specific than the existing possession-of-intellect and proper-operation premises. Their parameters contain no equality of that act with esse. I q.2 a.3 co., quinta via: et hoc dicimus Deum: The Fifth Way's concluding name is attached to the intelligent director. Existing naming premises use an expressly fuller nominal profile. Calling the director God supplies no link to that typed naming test without showing the further properties of this witness. I q.2 a.3 co., secunda via: quam omnes Deum nominant: The conclusion names the first efficient cause. The selected case does not use first efficient cause alone as a naming criterion. The report that it is so named does not identify that cause with an already qualified case witness. I q.85 a.1 ad 2 [32018]: quantitates, ut numeri et dimensiones et figurae ... possunt considerari absque qualitatibus sensibilibus ... Plato ... omnia quae diximus abstrahi per intellectum, posuit abstracta esse secundum rem: Abstraction from sensible qualities while retaining a quantitative subject provides an epistemic distinction. The case's concrete–abstract partition uses independently specified esse in re, and the passage provides no rule placing the target values in that partition. I-II q.94 a.2 co.: Secundum se quidem quaelibet propositio dicitur per se nota, cuius praedicatum est de ratione subiecti; contingit tamen quod ignoranti definitionem subiecti, talis propositio non erit per se nota: Aquinas's distinction concerns self-evidence through knowledge of a subject account. No active floor item is the blanket claim that every predicate in a subject account is evident to its reasoners.",
+  "outcome": "succeeded",
+  "summary": "I q.10 a.3 co. and ad 2: aeternitas vere et proprie in solo Deo est: The participated-eternity definition cites the distinction between proper and participated or extended eternity. The case's operational duration calibration needs an explicit test for that distinction on the same bearer before the exclusive scope of proper eternity can enter the route. I q.14 a.4 co.: The existing intellect attempt 627f23ba compares the identity of divine understanding and esse. The possession-of-intellect and operation premises do not themselves assert that identity. The open bridge must identify the understanding exercise with esse of the same divine bearer. I q.2 a.3 co., quinta via: et hoc dicimus Deum: The Fifth Way applies the name God to its intelligent director of natural things. This is sourced usage in the GOD_3 definition. The case’s full-profile naming premise would still need the director to meet its whole description and the application of the name to be carried by that same witness. I q.2 a.3 co., secunda via: quam omnes Deum nominant: The Second Way reports that everyone names its first efficient cause God. This is sourced usage in the GOD_3 definition. Its connection to the full-profile premise needs the first efficient cause to be the witness of that profile. The wording supplies no identity with the Fifth Way director. I q.85 a.1 ad 2 [32018]: quantitates, ut numeri et dimensiones et figurae ... possunt considerari absque qualitatibus sensibilibus ... Plato ... omnia quae diximus abstrahi per intellectum, posuit abstracta esse secundum rem: The concrete–abstract comparison uses this claim about intellectual abstraction in docs/notes/concrete-abstract.md. The case partition needs a bridge from separation in thought to whether a value has the relevant esse in re. Intellectual consideration apart from sensible qualities does not supply that bridge. I-II q.94 a.2 co.: Secundum se quidem quaelibet propositio dicitur per se nota, cuius praedicatum est de ratione subiecti; contingit tamen quod ignoranti definitionem subiecti, talis propositio non erit per se nota: The natural-law per se nota definition uses this account of self-evidence in itself and its distinction from self-evidence to a knower. Applying it to a particular case-floor item needs an analysis of its subject account and a reason that its predicate belongs to it.",
   "evidence": [
     "5ed0428b-45fe-5b28-883c-b6ddf705b55f",
     "11a3d3e5-8d05-4334-85cc-45bccd636db0",
@@ -25,6 +25,14 @@
   "workers": [
     {
       "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2085"
+    },
+    {
+      "role": "repair",
       "provider": "codex",
       "model": "gpt-6.2-sol",
       "effort": "high",
