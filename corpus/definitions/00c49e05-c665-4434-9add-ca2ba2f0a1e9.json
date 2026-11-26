@@ -1,0 +1,9 @@
+{
+  "id": "00c49e05-c665-4434-9add-ca2ba2f0a1e9",
+  "label": "Augmented observation: original observation plus every permitted report",
+  "term": "augmented observation map",
+  "definition": "For a model m, the augmented observation pairs the original observation of m with the whole indexed family of reports of m, one at every setting in the supplied permission set. The observer receives the response at every permitted setting jointly, not one selected response. Only settings in the permission set enter the map.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Science.Identifiability.augment",
+  "note": "Analyst definition for the identifiability criterion (#2051). The caller supplies the intervention semantics and the permission set. Whether the reports are feasible and jointly available in the actual case remains open; the definition asserts neither."
+}
