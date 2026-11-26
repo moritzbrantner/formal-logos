@@ -80,15 +80,17 @@ interpretations of the map remain open and untyped:
 
 - **(a) Constitutive/metaphysical ground of existence facts.** This is Fine's
   non-causal metaphysical explanation, and it is the reading the rationale below
-  appeals to. On it, the definition's **own paradigm edge is not covered**: the
-  sun's existing is not standardly a partial ground of the light's existing. The
-  light's existence is grounded in its constituents, and the sun is its cause.
-  So the map would have to be restricted to a non-causal relation of receiving
-  esse, not stated for the broad `D`.
+  appeals to. On it, whether the definition's own paradigm edge is covered is
+  open (reassessed 2026-11-26, [negation tests](#negation-tests-on-the-same-labelled-edge-2026-11-26)):
+  the illumination case supports a local direction of causal supply, but gives
+  no warrant that the sun's existence fact partly grounds the light's. If it
+  does not, the map would have to be restricted to a non-causal relation of
+  receiving esse, not stated for the broad `D`.
 - **(b) Natural/causal-production ground.** Here PLG is applied as the logic
-  common to all grounding relations. On this reading the paradigm edge is
-  covered, but the "constitutive explanatory direction" rationale does not
-  apply. The map's warrant then reduces to the asymmetry of efficient causal
+  common to all grounding relations. On this reading the paradigm edge's local
+  causal direction is supported, though applying the formal map still requires
+  warranted steps between the selected labels, and the "constitutive
+  explanatory direction" rationale does not apply. The map's warrant then reduces to the asymmetry of efficient causal
   dependence for being (compare `STMT-EFFICIENT-CAUSE-NOT-DEPENDENT-ON-EFFECT`),
   strengthened to acyclicity.
 
@@ -642,3 +644,99 @@ assessment of the stronger reading.
 | `0f5b53ef` | A quality-level explanation challenges the converse export only if the profile admits bearer-to-bearer grounding edges on that basis. For a profile restricted to existential grounds, the question is whether those grounds entail the selected dependence-for-being counterfactual. |
 | `7a63a3fe` | The priority bridge targets the profile's world-local ground and `PRIOR_1`. A strict order on PLG labels yields no such bridge. The required calibration is actual grounding to priority in act in the relevant respect on the same bearers. |
 | `2047d14b` | Self-grounding is excluded on a strict explanatory reading. In the world-local profile, any transfer from PLG would still need an explicit ground-to-PLG bridge **on the diagonal**, which the distinct map never supplies. The existing reflexive-requirement controls locate the competing reading. |
+
+## Negation tests on the same labelled edge (2026-11-26)
+
+Fix the supplier, recipient, their labels, and the entire assumption set before
+asking what the dependence edge explains. The two branches of the per se route
+use these inputs differently. Argument `4bd8457a` uses population and absence
+of a strict return for consistency. Argument `ea09d50b` uses path coverage to
+derive the map. The nonmutuality result requires consistency and the map on
+the same presentation. These two arguments supply one way to obtain those
+inputs; either input can also be assumed directly. The following judgments concern the baseline of PR #2025 and the
+[compiled negation tests](../../TruthCore/Models/SelectedPlgNegations.lean).
+
+**Population (`d1c47547`).** Strongly warranted in any application that
+supplies both a bearer in the labelling domain and a total label function;
+missing either input removes this proof of population and leaves it open. Applying the very same total label function to
+that bearer supplies the atom (`populatedAtBearer`). A skeptic about reifying
+existence facts can grant this mathematical witness and dispute its
+interpretation. The strongest literal denial is an empty language.
+`emptyPresentation` takes both carriers empty. Every path obligation and the
+no-return condition hold, but there is no sequent at all to witness PLG
+consistency. An empty target with a total labelling cannot retain the observed
+bearer. No substantive objection to population survives those two inputs.
+Reopen if the alleged witness and labelling belong to different domains or the
+application has yet to exhibit a bearer.
+
+**No strict return (`2bdf810f`).** Favor this condition for presentations of
+one-way supply whose weak steps all preserve the same order. A strict step
+then increases rank, so the reverse weak path cannot restore its starting
+rank. A rival can instead preserve reciprocal constraints, for example the
+co-existence requirements of two necessary bearers. Reciprocally weak edges
+alone are compatible with the test. An infinite strict descent alone is also
+compatible, as the earlier natural-number model shows. Denial requires a
+strict step *and* a finite weak return. Keeping one direction strict while
+admitting the return makes every sequent derivable in this calculus. That is
+a specific conflict with the route's consistency premise. The positive
+interdependence alternative (Thompson on holistic explanation; Bliss on
+circles and regress) holds that some reciprocal links do constitutive
+explanatory work. It challenges `42756c07` if both links belong to the
+selected `D`; if both are represented in PLG with at least one strict
+direction, the return violates `2bdf810f`. Acyclic infinite descent is a
+separate alternative: it leaves `2bdf810f` intact and bears on a downstream
+termination premise. Neither alternative supplies an example of the same
+illumination effect sustaining its own supplier. For the unspecified root presentation the judgment
+remains conditional. Inspect weak links as well as strict ones, or supply a
+rank independently warranted for every initial sequent.
+
+**Path coverage (`b6784d40`).** On a consistent presentation the exact price
+of denying coverage is one distinct dependent and supplier with no strict-step
+path in the required direction. The corresponding strict sequent is
+underivable (`missingMapIffUncovered`). The prior weak-only control realizes
+that denial while retaining the dependence edge. A causal investigator can
+have a positive reason for precisely such restraint: the emitter's operation
+explains the presence of light, while the proposed labels record just their
+existences. Omitting a strict step is defensible when the evidence supports
+the operation and the chosen presentation records no rule transferring it to
+those facts. This favors withholding unrestricted coverage. It gives no
+reason to deny a path whose initial steps already have that warrant. Reassess
+on an independently specified presentation, checking each strict step and
+both endpoint interpretations.
+
+**Parent map (`42756c07`).** The directed supply in the illumination case
+supports trying an oriented causal reading. The same evidence fits a local
+account in terms of emission and reception (Wilson-style specific dependence
+relations): emission and reception explain the specified light's presence
+while the emitter operates, which supports withholding the export from causal
+supply to a constitutive relation between bare existence facts, while leaving
+formal path coverage and partial constitutive ground open. Such an account owes an explanation
+of how the effect is sustained, but owes a *constitutive* ground only if there
+is a further reason that this particular existence fact has one. Pointing out
+that emission requires operation does not refute strict *partial* ground:
+the proposed supplier fact need not suffice on its own. The current evidence
+underdetermines that stronger interpretation. The Fine-style alternative
+holds that source-indexed essence can distinguish directions that necessary
+co-presence leaves symmetric. In the existing `directedNature` profile, modal
+co-existence is mutual even though the essence assignment is directional; the
+essence assignment is stipulated and the causal relation is empty, so the
+theorem tests the modal relation alone. `modalControlExcludesMap` excludes the strict map
+on that modal relation for **every** labelling and consistent presentation.
+This rules out mere modal requirement as a general warrant. Applying that
+result against the selected efficient-causal relation would require an
+identification that the illumination case does not provide.
+
+There is a second diagnostic for the parent. Keep the earlier Boolean edge
+and identity labels and supply just a strict self-step at the supplier.
+`loopMasksMissingPath` proves that the map holds while coverage and consistency
+both fail. Every initial step stays at the supplier, yet explosion derives
+the sequent about the recipient. Thus a successful derivation alone cannot
+serve as the discriminating evidence. Reassess the parent on an independently
+motivated consistent theory that explains why the supplier's *existence fact*
+partly grounds the recipient's, at the very respect and time for which the
+causal explanation is offered: once the supplier's operation, the time and the
+respect are fixed, what explanatory contribution does the supplier's
+*existence* still make? Until then the two bridges remain direct
+assumption options. Neither the modal control nor the cyclic presentation
+undermines a prerequisite of inquiry. Their conflicts are with identifiable
+route commitments under the specified readings.

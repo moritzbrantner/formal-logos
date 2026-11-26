@@ -1360,3 +1360,108 @@ and respect r, the next test is whether `degree r c ≤ capacity x r` warrants
 the recipient's capacity shows that the recipient limits the cause. The effect's
 own degree within its own capacity bears on a different premise.
 The earlier warrant assessments and source bindings stand at their recorded scopes.
+
+## Testing the six denials on the same bearers (2026-11-26)
+
+This second pass uses the comparative representation and receiver audit above
+at revision `190a6bd0`. The comparison and null premises jointly support the
+possession of what exceeds another. The capacity and participation premises
+do different work in the ascent from the effect to its giver. Reuse in the
+attribute arguments carries the same assumptions forward.
+
+| Premise | Overall provisional judgment and positive warrant | What the denial explains and costs | Discriminating test or revision condition |
+| --- | --- | --- | --- |
+| `98755509` forward calibration | Strong as a criterion for selecting a representation. Purely comparative facts suffice for an ordinal construction under the earlier qualitative conditions. Independent calibration of a supplied degree of esse remains open. | An observation can group two bearers in the same class although one exceeds the other. The denial for that observation sacrifices its ability to recover that strict difference. Task dominance and the absence of numerical units give no substantive objection to forward preservation in a partial order. | Fix an independent degree assignment for the same two kinds and respect of actuality. A reproducible tie or reversal for an acknowledged strict pair defeats that assignment. A transitivity test alone cannot identify the supplied map. |
+| `ac72bbfe` positive degree implies possession | Strong when possession means having any of the perfection and the origin codes its absence. On a domain of actual beings, universal possession of esse already entails this implication for any map. It gives no evidence about differences of esse. | A threshold adjective distinguishes having enough from measuring above zero. It must supply a criterion for enough. That explains relative heat predicates but changes the registered minimum standard. No substantive counterexample on the fixed reading was identified. | Reopen if an independently warranted positive degree belongs to an actual nonpossessor in the same sense. An instance involving a stricter predicate tests a different claim. |
+| `ed766869` null is a lower bound | Strong for a stipulated absence rank. A qualitative comparison need supply neither an absent bearer nor a privileged reference among actual profiles. | A profile used as reference can have no strict predecessor while another profile is incomparable with it. This preserves a meaningful benchmark and loses the inference from its minimality to a common lower bound. | On the proposed cross-kind scale test whether the reference lies weakly below each actual kind. One incomparable profile defeats this null. Adjoining a bottom repairs the representation and leaves its interpretation as absence to be justified. |
+| `f6677834` unlimited by the recipient entails excess | Open for a distinct cause and its own effect. The Lean model witnesses the exact stipulated tuple: distinct cause and effect, equal assigned degrees and capacities, and no limitation of the cause by the effect, so the inference fails in that interpretation. Independent warrant for applying this to a real causal pair is lacking. Receiving an act gives reason to constrain the degree received; it supplies no corresponding constraint on the giver's own act. | Equal-degree communication is the rival's positive alternative, but the thermal illustration does not warrant it: bringing a body *toward* the source's temperature establishes neither equality nor that the recipient's capacity reaches the source's degree. The rival owes a productive setup with `degree(c) ≤ capacity(x)` and a reason `x` does not limit `c`. Strict loss in reception is a separate question: even `degree(x) < degree(c)` leaves `capacity(x) < degree(c)` to be shown. | Show why, for the very causal pair, equality with the effect's capacity would make the effect a limiting principle of the cause's own act. Productive sufficiency and the effect's self-limitation leave that question open. |
+| `efe134d4` distinct cause implies participation | Plausible for a communicated act which the effect's essence cannot supply. As a universal converse it is conditionally challenged: generation would distinguish causing a bearer with its essential character from giving it a perfection extrinsic to what it is, but only if the generator causes this bearer to have the specified perfection in the registered `CausesIn` sense and the bearer has that same perfection through what it is. No concrete case meeting both conditions is recorded, so the challenge stays conditional; the sustaining and esse applications remain open. | The generative account must include causing the effect's being *r* under the chosen causal reading. Where only a presently sustaining cause qualifies, a past generator does not meet the antecedent. At esse the rival additionally owes a defense of essential possession in that same dependent effect. | Fix originating or sustaining causation for the pair and show whether its essence suffices for the particular act. Evidence for the direction from participation to causation leaves the converse open. |
+| `9da93cd4` participation implies self-reception | Plausible for intrinsic acquired acts such as the heat of heated iron. The inference across all respects remains underdetermined. The definition supplies nonessential possession. Reception adds a potency in this participant for this act. | Exemplar conformity can explain a likeness through a pattern but must show that the likeness qualifies as nonessential possession in the registered sense and that the participant lacks the corresponding receiving potency. The definition explicitly excludes a bare Platonic relation. No substantive same-sense exception at esse was identified. | Identify the potency and received act in a mode of participation whose status is disputed. The pending edition-level witness may settle a textual reading if it covers that mode. It would still leave its application to a given bearer to be shown. |
+
+Four [Lean controls](../../TruthCore/Models/ComparativePerfectionScale.lean)
+isolate these tests. `collapsedObservation` holds the ordered pair fixed and
+changes the measuring map. `thresholdWithoutAboveNull` preserves the
+comparison and lower bound while the lower positive bearer misses the
+threshold. `incomparableNull` distinguishes “nothing is strictly below”
+from the actual lower-bound formula. `equalCapacityOnCausalPair` places
+equal constant degrees and capacities on the distinct source and effect of
+the model's designated causal relation. It assumes no physics or account of
+how esse is given. For the last two denials the existing
+`linearScaleWithoutReceptionBridges` already supplies simultaneous structural
+compatibility. Its freely assigned predicates provide no independent evidence
+for essential possession or exemplar causality.
+
+None of the six denials makes its assertion self-defeating or conflicts with
+an identified prerequisite of inquiry. The discriminating costs concern what
+each account can explain about the same pair. The strongest remaining test
+for the ascent is whether a presently dependent effect can have the same
+degree of esse as its cause while receiving it intrinsically. This requires
+an independently warranted comparison of their acts and a ground for strict
+loss in reception. Inferring loss from the giver's priority would reuse the
+very bridge being tested.
+
+### Four possible shapes of the represented degrees
+
+Restrict attention to a nontrivial linear order at one respect. In the
+four witnesses each degree is represented by a bearer, each bearer has the
+perfection, and “more” is the strict order on those degrees. Least and
+greatest below refer to attained endpoints, and bounds range over the fully
+represented order itself; the four rows therefore classify both attained
+endpoints and boundedness within that order. In an ambient order the two
+come apart: the open interval (0, 1) of the rationals is bounded on both
+sides by 0 and 1 while attaining neither endpoint. A supremum in a larger
+space need not be represented. For partial orders the route's `IsMaximumIn`
+requires only an unbeaten possessor, which can exist without a greatest one.
+
+| Shape and model | Null premises | Fourth Way maximum and provisional assessment |
+| --- | --- | --- |
+| Both endpoints, two degrees (`Fin 2`) | The lower degree satisfies the bound. Above it entails possession in this model. | The upper bearer witnesses the maximum. A finite classification explains attainment if it exhausts the actual degrees. Two observed classes alone do not establish exhaustion. |
+| Neither endpoint, integers | Every proposed internal reference has a predecessor. Above any reference still implies possession here. | Every bearer is exceeded. A two-sided comparative ordering explains gradation without either absence or a final bearer. It owes a separate account of any proposed intrinsic endpoints. |
+| Lower endpoint only, natural numbers | Zero supplies the bound. All positive degrees belong to possessors. | Each attained degree has a successor. This endless-ascent rival preserves a lower bound and strict calibration. In this stipulated representation it defeats entailment from strict gradation alone to an unbeaten bearer; it does not engage the stronger inference Aquinas uses (see below). Revise if an independent constraint guarantees attainment. |
+| Upper endpoint only, natural numbers in reverse order | Every represented degree has another below it, including the greatest. No represented absence point serves as lower bound. | Zero is the greatest in reverse order. This supports an attained maximum without an absence point. To identify that bearer as the cause requires a further causal premise. |
+
+These witnesses concern strict gradation alone. ST I q.2 a.3 (Fourth Way)
+takes two further textual steps: things are compared as they differently
+approach something that is most such, and the move from most true to
+*maxime ens*. The corpus already has routes that derive a maximum from
+approach and strict primacy, or from the absence of infinite ascent with
+additional premises; see the
+[approach-and-primacy argument](../../corpus/arguments/grades-at-being-from-approach-primacy.json).
+On those readings a primary can ground the ordering of creatures without
+being a homogeneous degree within their scale, so the endless-ascent model
+does not count against them.
+
+The [endpoint theorems](../../TruthCore/Models/ComparativePerfectionScale.lean)
+prove these combinations using `IsLeast` and `IsGreatest`. With a witnessed
+strict pair, `ascentIffGreatestOnFullRange` proves the equivalence to the
+existing `GradesToMaximumAtBeing` in these models. A top degree in a
+codomain would be insufficient without an attaining bearer. Conversely, a
+reference lying outside the represented range can serve as a lower bound of
+that range. It would change the full-range hypothesis in `nullOnFullRange`.
+
+Across all four rows, `98755509` holds for the identity degree and can fail
+for a constant observation of the same strict pair. The bare formula
+`ac72bbfe` requires a supplied value, with no lower-bound hypothesis.
+It holds in all four models. It can fail in each at a chosen reference
+below a bearer that lacks the perfection; with the reference chosen at a
+greatest degree its antecedent is empty. Even in the two rows with a least
+degree, its identification with absence needs warrant: the least bearer
+here possesses the perfection. For `f6677834`, keep each recipient's
+capacity equal to its degree. Interpreting limitation as lying within that
+capacity validates the implication even for nonvacuous strict excess.
+Leaving an equal-degree act unlimited defeats it. These comparisons fix the
+order and explain why its endpoints alone favor neither causal reading.
+The same freedom remains for `efe134d4` and `9da93cd4`: none of their
+three relations occurs in the endpoint conditions. Thus a lower bound,
+possession, strict increase, and the giver's causal priority are separate
+questions for any proposed ordering across kinds at esse.
+
+For the graph, the first three inputs still feed the
+[possession argument](../../corpus/arguments/more-such-has-perfection-from-positive-degree.json).
+The [total-cause degree argument](../../corpus/arguments/c974d1f0-df19-4091-9b6e-377cf78336e2.json)
+also needs a strict causal comparative before it can use forward calibration.
+The capacity finding bears on argument `1fbc8de7` and the last two premises
+remain joint inputs to the [effect-reception argument](../../corpus/arguments/caused-perfection-received-from-participation.json).
+The endpoint examples address the
+[maximum-at-being premise](../../corpus/statements/grades-to-maximum-at-being.json)
+on the stipulated orders. They supply no cross-kind application at esse.

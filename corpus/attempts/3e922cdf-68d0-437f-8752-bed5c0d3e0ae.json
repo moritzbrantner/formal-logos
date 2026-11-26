@@ -1,0 +1,63 @@
+{
+  "id": "3e922cdf-68d0-437f-8752-bed5c0d3e0ae",
+  "label": "Same-world realization and the denials of seven cogito premises",
+  "date": "2026-11-26",
+  "statement_ids": [
+    "1722a80f-47a4-5605-8b66-b3534e457bcb",
+    "1edfc1d1-34d4-4f3e-99e6-e07a6ba58ffc",
+    "22954087-d5fb-4bd3-bcb7-5d5167016988",
+    "5581cd7f-43b3-5aa1-b18d-36b8a44a9681",
+    "95c5138f-e3cc-552d-9846-ab8dc84502f4",
+    "b45ca9db-0bf2-40d3-819c-44dc4e2cef5c",
+    "c2fa06f2-cf36-5958-b69a-ef274b45014c"
+  ],
+  "kind": "countermodel",
+  "outcome": "succeeded",
+  "summary": "One candidate realizes the selected content and one performed doubt here while another qualifying candidate lacks a local realization. Both universal realization rules fail in realizedTokenWithFailedBridges. otherContentWithoutSelectedPerformance keeps a realized assertion of different content while both selected performances are absent. otherBearerAttribution keeps an occurring, borne episode while the designated cogito, agency alignment and unary modification rule fail. These are scope controls for the existing same-performer assemblies. See the seven provisional judgments and revision conditions in docs/notes/cogito-esse-1113.md, Testing denials at the performing token. PR-2041 attempt 11adaaa5 records checked single-premise omissions; 808d2c82 records failed extractions, including the Ontic assemblies. We reuse the single omissions and combine successful local realization with another qualifying candidate's failure, a realized other-content assertion with both selected performances absent, and actual bearing with failed designation, alignment and modification. otherBearerAttribution stipulates generic agency. The Ontic omission tests using AssertionAgency and DoubtAgency remain blocked.",
+  "blocker": "Discriminating thin ownership from an organized-event reading requires an independent criterion for identifying who retains and corrects this act. A concrete, contingent, ancestrally dependent bearer requires the separate standing classification, modal and grounding premises.",
+  "evidence": [
+    "6085452e-de8c-421d-a0e6-ee8fac0700b4",
+    "f825c058-5e5e-4cd6-bc57-05c2da758c51",
+    "PR-2042",
+    "PR-2041"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-astra",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2042"
+    },
+    {
+      "role": "repair",
+      "provider": "codex",
+      "model": "gpt-6.2-astra",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2042"
+    }
+  ],
+  "current_assessment": {
+    "date": "2026-11-26",
+    "statement_ids": [
+      "1722a80f-47a4-5605-8b66-b3534e457bcb",
+      "1edfc1d1-34d4-4f3e-99e6-e07a6ba58ffc",
+      "22954087-d5fb-4bd3-bcb7-5d5167016988",
+      "5581cd7f-43b3-5aa1-b18d-36b8a44a9681",
+      "95c5138f-e3cc-552d-9846-ab8dc84502f4",
+      "b45ca9db-0bf2-40d3-819c-44dc4e2cef5c",
+      "c2fa06f2-cf36-5958-b69a-ef274b45014c"
+    ],
+    "scope": "Seven negations with selected content, performer and world held fixed in each test",
+    "assessment": "Genuine present consideration strongly warrants one local cognitive occurrence. Retention and correction are shared evidence for the organized process and thin bearer. Attribution to a designated bearer needs an identifying criterion. The denial of occurrence is false if realized here, and strict contradiction requires its truth here as well. The universals still range over other candidates. The existential performance inputs are warranted when the corresponding act is actually undertaken. Substantial ownership, world-relative presence and concrete classification need distinct evidence. Individual premise assessments and revision conditions are in the linked table.",
+    "next_test": "Compare responsibility for a delegated assertion with the exercise of revising its content and identify which candidate realizes and bears this very exercise.",
+    "note": "docs/notes/cogito-esse-1113.md#testing-denials-at-the-performing-token-2026-11-26-second-pass-working-note",
+    "reviewed_revision": "68845e7426373f2a229956d47b802ee5ceb6a0a1",
+    "review": "accepted_qualified",
+    "publication": "unpublished",
+    "evidence": "Three compiled FirstPersonWitness scope controls and reviewed same-performer baseline PR-2034. Sol independently reviewed 3d2da1717 and accepted with fixes. The repaired delivery distinguishes truth, performance, epistemic warrant and ownership. Its substantive revision is recorded separately from this review metadata.",
+    "supersedes": "None. Tests the universal and designated-witness readings at fixed scope."
+  }
+}

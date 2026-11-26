@@ -1165,3 +1165,80 @@ records the local assessment and its reopening conditions. The
 [alternative witness attempt](../../corpus/attempts/4f86edaa-2700-42ec-8b66-2f08ff44c138.json)
 records the separate applications of designated meditation, modification,
 representation and phenomenal bearing.
+
+### Testing denials at the performing token (2026-11-26, second-pass working note)
+
+Fix the world of the putative inquiry, the question it addresses and the
+episode offered as its performance. There are two different tests even at
+that world. What would falsify the premise? Could this very performance
+supply the falsifying instance? On a classical reading the negation of
+a universal realization bridge needs one qualifying failure. Another
+performer's successful realization leaves that failure available.
+
+| Premise | Positive warrant and scope | What the denial commits its proponent to | Evidence that changes the assessment |
+| --- | --- | --- | --- |
+| Someone asserts this content (b45ca9db) | An actual avowal supplies the existential directly. Inquiry can proceed by entertaining a question. | A rehearsal or quotation can reproduce the words without undertaking their commitment. A denial about content Q is ordinarily a different content from Q. | Check whether the speaker endorses Q here, as distinct from quoting it. Retraction presupposes an earlier commitment only if the retraction concerns that very utterance. |
+| Each performed suspension, question or direct denial about thought occurrence has a thought realizing it (1722a80f) | Genuinely entertaining the question, suspending judgment on it or deliberately denying thought occurrence each warrants a cognitive episode for that act. | The denial of the universal requires one qualifying performance with no matching occurring thought. Reciting a script alone supplies no evidence that its speaker performed any of the three acts. | Identify a qualifying performance and test whether its alleged realizer belongs to that very act. No substantive counterinstance identified on the deliberative reading. |
+| Assertion realization (1edfc1d1) | Formulating and defending an answer supports realization by the present speaker. The universal includes every asserter of this content. | Standing institutional assertions can be renewed through delegated publication. A mismatch arises if the institution qualifies as asserter while realization requires an episode by that institution and excludes delegated performance. | Specify the criterion of institutional realization and apply it to the same publication. Personal reflection settles only the personal instance. |
+| Someone suspends judgment, questions or directly denies that thought occurs (95c5138f) | Actually performing any one of these acts directly supplies the existential witness. | Someone can assert that nobody performs any qualifying act without performing one. Someone who genuinely denies that thought occurs thereby performs a qualifying act and falsifies the existential negation. | Check which content the speaker addresses and whether they actually suspend judgment, question or deny thought occurrence. Use this same extension for 1722a80f. |
+| The designated meditator thinks (22954087) | Revision warrants an episode. Attribution to the designated meditator gains warrant when evidence identifies that candidate as its bearer. | Self-model error preserves the revision while misidentifying its subject. This challenges the premise only if `me` designates the represented self. | Determine which candidate `me` designates. Retention and correction are common to the organized-process and thin-bearer accounts. |
+| The agent of an episode bears it (c2fa06f2) | Strong when agency means immanent exercise by this subject. | A commissioning principal and the person exercising judgment can differ. This explains failure under responsibility-based agency. Extending it to immanent exercise requires evidence that the principal qualifies under that same relation. | Compare who can revise the judgment in exercising it with who can authorize its publication. No substantive failure identified from delegation alone under the immanent reading. |
+| Every occurring thought is a modification (5581cd7f) | A revised judgment can be understood as a mode or accident of the inquirer. That reading supports classification of this episode. | An organized bundle can classify the revision as a self-standing event related to earlier events by retention. Denying the universal requires one occurring episode outside the unary classification `Modification e`. | Seek a criterion distinguishing a mode from a self-standing event within the same organized sequence. If the episode is a modification, the inference to a bearer uses the separate premise e6d842fb. |
+
+An occurring thought can express the false content that no thought occurs.
+If this very thought realizes a denial of occurrence at its own world, its
+occurrence falsifies the denial there. Strict contradiction requires the
+additional claim that the denial is true at that world. This is the truth
+condition proved by [`noAccurateDenial`](../../TruthCore/Results/Logic/PerformedDenial/NoAccurateDenial/Solution.lean#L14).
+Epistemic self-undermining concerns the reasons offered: a denier who relies
+on endorsement as a reason to eliminate every endorsement owes an account
+of that reliance. Occurrence as a precondition of inquiry makes a third,
+narrower point. Genuinely considering the question is itself a cognitive
+exercise whatever answer one gives.
+
+For this same exercise, the [matched accounts](#matched-accounts-and-formal-controls)
+assign different significance to the subject of the sentence. Impersonal
+thought preserves occurrence and challenges the inference from grammatical
+subject to bearer. An organized bundle preserves retention and correction
+while challenging a distinct substrate. Those observations count equally
+for the bundle and the thin bearer until a criterion distinguishes them;
+the organized process may itself qualify as that bearer. Self-model error
+preserves revision and bears on 22954087 only if `me` designates the
+represented self. Phenomenal illusionism targets `Experienced` in the separate
+bbfacacc branch and leaves cognitive realization available. As in the
+[eliminativism entry, row 12](#e-recorded-objections-and-rivals-classified),
+eliminating folk endorsement leaves qualifying inquiry available if the
+replacement explains how a reason prompts correction of the answer.
+Source attribution remains deferred.
+
+The [compiled scope controls](../../TruthCore/Results/Logic/FirstPersonWitness/Solution.lean)
+test the seven denials in three interpretations:
+
+- `realizedTokenWithFailedBridges` fixes one content and two candidates.
+  Both qualify in each of the assertion and doubt interpretations. The first
+  has a realization here and the second lacks one. Consequently both universal
+  bridges fail, no-occurrence is false here, and no-occurrence is true at
+  the other world. The two interpretations share a realization relation by
+  stipulation. The model assigns no semantic content to a token. Calling
+  the performance a denial of no-occurrence requires that additional reading.
+- `otherContentWithoutSelectedPerformance` witnesses an assertion of another
+  content with an occurring realization, alongside the absence of both an
+  assertion of the selected content and a performed doubt about thought.
+  Reasoning about the two absences need not instantiate either missing act.
+- `otherBearerAttribution` gives the sole occurring episode to the candidate
+  distinct from the designated meditator. Assigning agency to the meditator
+  falsifies the alignment rule, and the empty modification classification
+  falsifies the modification rule. In particular, `5581cd7f` has the unary
+  conclusion `Modification e`; it takes a separate rule to infer a bearer.
+  The example stipulates the relations. Observing an integrated episode
+  favors thin attribution only if the tracking evidence identifies which
+  candidate actually exercises the revision.
+
+A warranted stopping point is recognition of this present exercise while
+one is genuinely reconsidering a reason. No selected propositional content,
+universal rule of agency, phenomenal classification or substantial owner is
+a necessary condition of inquiry established by these tests. The exact next
+discriminator for the existence route is whether tracking who retains and
+corrects this token independently identifies its bearer at this world.
+Presence, concrete classification and the cosmological ancestry premises
+retain their own obligations.

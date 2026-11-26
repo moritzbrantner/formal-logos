@@ -7,16 +7,18 @@
     "ed766869-09b3-529a-ad3d-f817a931b5a3",
     "e433b6f5-f24a-5172-b528-8419d2c49027",
     "38cf20d9-1069-5d7c-a366-21b5f6e08bfe",
-    "c323e046-067c-5228-a4a8-55df7bdeb397"
+    "c323e046-067c-5228-a4a8-55df7bdeb397",
+    "e4e6b0cd-f61a-5605-a302-573c67cf063a"
   ],
   "date": "2026-11-26",
   "kind": "derivation",
   "outcome": "succeeded",
-  "summary": "The existing GradesFrame has a common set-valued rank satisfying the forward comparison, both null conditions and reverse comparison among bearers exactly when strict comparison implies possession, is irreflexive and is transitive on bearer triples. The checked construction counts the candidate itself only when it possesses the perfection. With a supplied map, the existing omission models and the new reverse and mixed-domain controls distinguish the individual assumptions. Exact calibration for every pair follows when every member is a bearer. Exact calibration at esse plus possession assembles the selected tracking premise consumed by 87f32a9c. See docs/notes/maximum-definition-fork.md#one-scale-for-the-comparative-and-null-conditions-2026-11-26.",
-  "blocker": "For independent application, justify the primitive comparative and possession criteria at esse on the same bearer domain. The constructed representation assumes the possession rule and cannot independently warrant it. An externally supplied degree map needs calibration evidence of its own.",
+  "summary": "The existing GradesFrame has a common set-valued rank satisfying the forward comparison, both null conditions and reverse comparison among bearers exactly when strict comparison implies possession, is irreflexive and is transitive on bearer triples. The checked construction counts the candidate itself only when it possesses the perfection. With a supplied map, the existing omission models and the new reverse and mixed-domain controls distinguish the individual assumptions. Exact calibration for every pair follows when every member is a bearer. Exact calibration at esse plus possession assembles the selected tracking premise consumed by 87f32a9c. See docs/notes/maximum-definition-fork.md#one-scale-for-the-comparative-and-null-conditions-2026-11-26. Second pass on the denial: collapsedObservation and thresholdWithoutAboveNull distinguish a supplied map and threshold from the underlying order. incomparableNull separates a minimal reference from a lower bound. On the fully represented linear orders Fin 2, integers, naturals and reverse naturals, representedEndpointExamples and ascentIffGreatestOnFullRange separate all four attained endpoint patterns. In these stipulated representations strict gradation alone does not entail an unbeaten bearer; the Fourth Way's approach-to-a-primary and maxime-ens steps, and the existing approach-and-strict-primacy route, are separate and untouched by this result. All-possessor models satisfy above-reference possession even without a least degree.",
+  "blocker": "For independent application, justify the primitive comparative and possession criteria at esse on the same bearer domain. The constructed representation assumes the possession rule and cannot independently warrant it. An externally supplied degree map needs calibration evidence of its own. Test an independently fixed strict pair across kinds and the proposed degree map. A coarse tie, reversal or incomparable null can decide the corresponding calibration for that map. See the six judgments and four endpoint cases in docs/notes/maximum-definition-fork.md, 2026-11-26.",
   "evidence": [
     "989b88d5-9f1a-4c70-babd-8a8b9e335bc7",
-    "PR-2027"
+    "PR-2027",
+    "PR-2039"
   ],
   "workers": [
     {
@@ -33,6 +35,21 @@
       "model": "claude-opus-5-5",
       "date": "2026-11-26",
       "pr": "PR-2027"
+    },
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-astra",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2039"
+    },
+    {
+      "role": "repair",
+      "provider": "claude",
+      "model": "claude-opus-5-5",
+      "date": "2026-11-26",
+      "pr": "PR-2039"
     }
   ]
 }

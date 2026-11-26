@@ -10,28 +10,30 @@
   "date": "2026-11-26",
   "kind": "countermodel",
   "outcome": "succeeded",
-  "summary": "On the shared GradesFrame, a fully calibrated finite linear scale leaves the recipient capacity bridge open, even with each bearer self-limited. A product-order model separates capacity comparability from the within-capacity interpretation of limitation. A distinct cause, participating bearer and cross-recipient coexist with the same linear scale while the three causal/reception links fail, using explicitly assigned predicates. The models test formal non-entailment only. The existing scope and source judgments are retained. See docs/notes/maximum-definition-fork.md#capacity-reception-and-participation-in-the-same-comparison-domain.",
+  "summary": "On the shared GradesFrame, a fully calibrated finite linear scale leaves the recipient capacity bridge open, even with each bearer self-limited. A product-order model separates capacity comparability from the within-capacity interpretation of limitation. A distinct cause, participating bearer and cross-recipient coexist with the same linear scale while the three causal/reception links fail, using explicitly assigned predicates. The models test formal non-entailment only. The existing scope and source judgments are retained. See docs/notes/maximum-definition-fork.md#capacity-reception-and-participation-in-the-same-comparison-domain. Second pass: equalCapacityOnCausalPair places equal degrees and capacities on the designated cause and effect while the effect does not limit the cause. The endpoint fork shows both receptive bridges jointly variable at fixed order and causal edge. Generation conditionally challenges the universal converse on the originating reading: only if the generator causes the bearer's being r in the CausesIn sense and the bearer has r through what it is, for which no concrete case is recorded. Mere exemplar resemblance fails the registered participation criterion and supplies no same-sense objection at esse.",
   "blocker": "The cause–effect role still needs warrant for the inference from lying within the effect’s capacity to actual limitation by that effect. The In De hebdomadibus witness is now pinned. Applying its distinct modes of participation to reception of the same perfection in the same participant still requires the scope argument recorded in the source support note.",
   "evidence": [
+    "03e73ae6-6d82-4e21-86f8-1ad06bf5a648",
     "PR-1772",
     "PR-2024",
     "PR-2027",
-    "03e73ae6-6d82-4e21-86f8-1ad06bf5a648",
+    "PR-2039",
     "PR-2044"
   ],
   "workers": [
     {
       "role": "author",
       "provider": "codex",
-      "model": "gpt-6.2-sol",
+      "model": "gpt-6.2-astra",
       "effort": "high",
       "date": "2026-11-26",
-      "pr": "PR-2027"
+      "pr": "PR-2039"
     },
     {
-      "role": "repair",
-      "provider": "claude",
-      "model": "claude-opus-5-5",
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
       "date": "2026-11-26",
       "pr": "PR-2027"
     },
@@ -42,6 +44,20 @@
       "effort": "high",
       "date": "2026-11-26",
       "pr": "PR-2044"
+    },
+    {
+      "role": "repair",
+      "provider": "claude",
+      "model": "claude-opus-5-5",
+      "date": "2026-11-26",
+      "pr": "PR-2027"
+    },
+    {
+      "role": "repair",
+      "provider": "claude",
+      "model": "claude-opus-5-5",
+      "date": "2026-11-26",
+      "pr": "PR-2039"
     }
   ]
 }

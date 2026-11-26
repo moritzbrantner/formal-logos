@@ -42,5 +42,6 @@ public import TruthCore.Models.QuartaViaMaximumControls
 public import TruthCore.Models.RespectAlternatingMotionCycle
 public import TruthCore.Models.Scott
 public import TruthCore.Models.SelectedAncestry
+public import TruthCore.Models.SelectedPlgNegations
 public import TruthCore.Models.TemporalHistoryControls
 public import TruthCore.Models.WorldIndexedSources

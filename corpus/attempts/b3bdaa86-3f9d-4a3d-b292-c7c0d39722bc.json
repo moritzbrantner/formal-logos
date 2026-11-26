@@ -1,0 +1,34 @@
+{
+  "id": "b3bdaa86-3f9d-4a3d-b292-c7c0d39722bc",
+  "label": "Tactic and transcription probes on four existing stage-one consumers",
+  "statement_ids": [
+    "22954087-d5fb-4bd3-bcb7-5d5167016988",
+    "b45ca9db-0bf2-40d3-819c-44dc4e2cef5c",
+    "1edfc1d1-34d4-4f3e-99e6-e07a6ba58ffc",
+    "c2fa06f2-cf36-5958-b69a-ef274b45014c",
+    "1722a80f-47a4-5605-8b66-b3534e457bcb",
+    "95c5138f-e3cc-552d-9846-ab8dc84502f4",
+    "be90bb15-c2ce-44cd-ae2d-5ec6dc4c24c9"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "At 1c9e6607bc6e004abc94cdb41426dbd26d4a0e97, all 58 direct consumers in the selected cohort had registered Solutions. The four separate Challenge directories without sibling Solution files also have registered Solutions in other modules. For comparison, truth prove-sweep tested the four consuming results already flagged by the frontier at the default 20000 heartbeat budget. thoughtOccursOfMeditatorThinks and existenceFromAssertion closed with unfold+grind; selfExerciseOfExercise closed with tauto; existenceFromDoubt was unresolved. The folded single-premise application probe flagged none. The corpus heuristic classifies three as assemblies and one as an instantiation. The two detectors test different shapes. No status revision follows from the tactic results.",
+  "evidence": [
+    "2e0da6d9-f06e-4c85-b407-01dd35055738",
+    "6085452e-de8c-421d-a0e6-ee8fac0700b4",
+    "f825c058-5e5e-4cd6-bc57-05c2da758c51",
+    "4421bfcd-63b3-4855-87e3-3e9893525352",
+    "PR-2041"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2041"
+    }
+  ]
+}
