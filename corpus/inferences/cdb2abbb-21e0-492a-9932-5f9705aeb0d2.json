@@ -1,0 +1,15 @@
+{
+  "id": "cdb2abbb-21e0-492a-9932-5f9705aeb0d2",
+  "label": "GOD_3 to GOD_4 by reference to a common maximum (inference)",
+  "input_statement_ids": [
+    "082974c4-f613-42fe-83dd-bb5d0186d943",
+    "4c79298d-ee09-5e99-9ced-1be92c19b4cc",
+    "5a594b1e-09b6-592c-862d-473874a6c49c",
+    "8626f8a5-9531-5da7-9ebd-f901e74b1129"
+  ],
+  "output_statement_id": "6d85b363-58ec-5a8a-9e20-58a93d188ea5",
+  "rule": "Existential elimination, uniqueness of a maximum and substitution",
+  "meaning": "Assume a GOD_4 bearer exists, both the actual use of the selected community and GOD_4 select only maxima in the same sense and profile, and any two maxima are identical. Every GOD_3 bearer is then identical with the existing GOD_4 bearer and is GOD_4. Using the result to support GOD_4 existence through the same bridge would be circular.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

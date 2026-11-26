@@ -1,0 +1,35 @@
+{
+  "id": "a59c3215-0415-4720-8ff1-32362466029b",
+  "label": "First-source uniqueness through nature and real determinations",
+  "statement_ids": [
+    "3581ee6a-6cc3-57c5-aa23-b93118f0dff1",
+    "75b5b027-21f1-400a-8b21-775bb6d47983",
+    "fb3315ca-9f34-528f-87f4-e591d8cdb28f",
+    "62ea1e7a-dbf7-5042-8899-516e2aea7a4c",
+    "f8b58a9b-38b0-55a9-b9a8-5f305c040de8",
+    "55890498-a250-5f23-9277-bd563a557378"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "The existing Q11 and root-multiplication derivations require incommunicability of the individuating basis, its agreement with nature, and common nature. Simpleness, esse–essence identity and first-being priority yield absence of represented limiting principles. They leave common nature open. De ente uses a separate relation of sharing nature and an explicit multiplication inventory. The real-thisness alternative requires strict purity, possession of every pure determination and a sufficient individuation principle. Existing omission models isolate bare numerical difference and a non-pure individuating determination. The #2016 model separates unique selected root from uniqueness among necessary beings.",
+  "blocker": "Determine whether two unreceived whole natures could differ without a receiver, limiting determination or priority relation. Independently test whether numerical difference needs a real determination in the selected first-source domain.",
+  "evidence": [
+    "841e7c81-2137-511c-ba18-29620f7a1b16",
+    "025d7183-4bd8-5285-a5ee-50bee7f461b5",
+    "a417d617-989d-51ef-95f0-1020e061fe74",
+    "04212a3f-ba3c-4102-978f-c551b5ad8600",
+    "7349a3d5-f4c0-5464-bf00-d97e8b505715",
+    "e080fd61-fabb-50e4-b3d3-3a63e3fabfe9",
+    "PR-2016"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26"
+    }
+  ]
+}

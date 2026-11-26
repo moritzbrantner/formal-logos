@@ -1,0 +1,34 @@
+{
+  "id": "31e93031-c8d4-4b83-a1eb-25117b7e5de7",
+  "label": "GOD_2 to GOD_4 by reference to a common maximum",
+  "premise_statement_ids": [
+    "f790dfca-0617-476d-b946-3d2e936062fe",
+    "4c79298d-ee09-5e99-9ced-1be92c19b4cc",
+    "5a594b1e-09b6-592c-862d-473874a6c49c",
+    "8626f8a5-9531-5da7-9ebd-f901e74b1129"
+  ],
+  "conclusion_statement_id": "e165f4aa-e872-5e2f-8211-52d40df114cc",
+  "inference_ids": [
+    "27554f3d-692c-4434-a824-d778e8b7570b"
+  ],
+  "meaning": "Assume a GOD_4 bearer exists, both predicates select only maxima in the same sense and profile, and any two maxima are identical. An arbitrary GOD_2 bearer is then identical with the existing GOD_4 bearer and is GOD_4. This gives the stated direction of the sense bridge. Using the result to support GOD_4 existence through the same bridge would be circular.",
+  "definition_ids": [
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "23e73af5-a0df-5838-9689-5899c37fdcda",
+    "88f9f6e8-997b-5f7d-afa1-c501954c3807",
+    "a2a8de58-42e0-5481-b7fb-848ae8602036"
+  ],
+  "disambiguation_ids": [
+    "205a39c3-915d-5fe4-8076-a9ff91329e08",
+    "4f1d0cf6-88ba-59e3-814d-01450c2bf282"
+  ],
+  "sense_bridges": [
+    {
+      "term": "GOD",
+      "from": "b11d7317-49bb-4c03-b1aa-fefada6943ff",
+      "to": "52c2ebac-0a71-4dd4-8a21-804c1dd0847a",
+      "statement_id": "e165f4aa-e872-5e2f-8211-52d40df114cc",
+      "role": "conclusion"
+    }
+  ]
+}

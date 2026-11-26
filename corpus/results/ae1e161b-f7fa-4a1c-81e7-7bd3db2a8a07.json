@@ -1,0 +1,11 @@
+{
+  "id": "ae1e161b-f7fa-4a1c-81e7-7bd3db2a8a07",
+  "label": "GOD_3 to GOD_4 by reference to a common maximum",
+  "argument_id": "e4c90277-86eb-4201-9f61-d7edd9028682",
+  "challenge_module": "TruthCore.Results.Case.Catholicism.FirstSourceIdentification.Challenge",
+  "solution_module": "TruthCore.Results.Case.Catholicism.FirstSourceIdentification.Solution",
+  "theorem": "TruthCore.Results.Case.Catholicism.FirstSourceIdentification.usageFromCommonMaximum",
+  "comparator_config": "results/ae1e161b-f7fa-4a1c-81e7-7bd3db2a8a07/comparator.json",
+  "status": "solution-present",
+  "description": "Conditional reference agreement of GOD_3 and GOD_4 in the stated inclusion direction. The actual community-wide restriction to maxima is a premise."
+}

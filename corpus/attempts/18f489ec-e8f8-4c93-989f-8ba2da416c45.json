@@ -1,0 +1,34 @@
+{
+  "id": "18f489ec-e8f8-4c93-989f-8ba2da416c45",
+  "label": "Co-reference of stage-one names with a previously identified classical God",
+  "statement_ids": [
+    "dfc3cbae-f00f-4861-a5f6-f5aecec4c157",
+    "49542121-caa6-576e-aa84-3a1546397388",
+    "6d85b363-58ec-5a8a-9e20-58a93d188ea5",
+    "e165f4aa-e872-5e2f-8211-52d40df114cc"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "Each existing GOD_2 or GOD_3 bridge follows if its name applies only to maxima, a GOD_4 bearer exists, GOD_4 bearers are maxima, and maxima are numerically unique in the same profile. The proof transports GOD_4 across equality of bearers. Finite controls distinguish lack of a GOD_4 bearer from a community that successfully names the full description but also names a nonmaximum. The Dei Filius dictionary goes to the primitive attribute field, and thus cannot supply the classical bearer needed here.",
+  "blocker": "For an existence route, test substantive GOD_4 sufficiency on the independently characterized first source. For the usage premise, fix the community's relevant use and show whether the description fixes its complete reference.",
+  "evidence": [
+    "0a62d923-f704-4dc7-8496-24614a5ce14b",
+    "ae1e161b-f7fa-4a1c-81e7-7bd3db2a8a07",
+    "8eb47d7a-bc24-4acd-a6b3-73ce84e24f11",
+    "PR-2017",
+    "PR-2018",
+    "PR-2019",
+    "PR-2020",
+    "PR-2021"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26"
+    }
+  ]
+}
