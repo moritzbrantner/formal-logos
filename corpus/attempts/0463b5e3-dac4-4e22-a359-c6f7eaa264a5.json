@@ -9,7 +9,7 @@
   "date": "2026-11-26",
   "kind": "reading",
   "outcome": "blocked",
-  "summary": "The illumination paradigm supports a direction from the emitter's activity to the particular illumination at a fixed time and in the selected respect. It leaves open whether the emitter's existence fact is itself a partial explanation of the illumination's existence fact. On the separate Boolean control from PR #2087, the same coextensive facts and fixed labels have an initial strict step and no finite weak return in strictForward. The weak-only comparison lacks any strict path between those labels. Keeping the strict sequent while identifying coextensive labels would give a strict self-sequent. The worked Lean application composes the path theorem and the finite-ancestry theorem on the converse of the stipulated nature relation, with finite Boolean labels. The ontic cause relation is empty. This witnesses the formal composition and supplies no actual efficient-causal edge or independent evidence for the stipulated orientation.",
+  "summary": "The illumination paradigm supports a direction from the emitter's activity, at emission time, to the particular illumination at reception time, in the selected respect. It does not establish that illumination at reception time t depends on the emitter's existence at t: at a positive distance, light in transit can arrive after the emitter ceases operating. Concurrent existential supply is the first open test. It also leaves open whether the emitter's existence fact is itself a partial explanation of the illumination's existence fact. On the separate Boolean control from PR #2087, the same coextensive facts and fixed labels have an initial strict step and no finite weak return in strictForward. The weak-only comparison lacks any strict path between those labels. Keeping the strict sequent while identifying coextensive labels would give a strict self-sequent. The worked Lean application composes the path theorem and the finite-ancestry theorem on the converse of the stipulated nature relation, with finite Boolean labels. The ontic cause relation is empty. This witnesses the formal composition and supplies no actual efficient-causal edge or independent evidence for the stipulated orientation.",
   "evidence": [
     "PR-2040",
     "PR-2087",
@@ -17,12 +17,20 @@
     "d09f6268-93bf-4a00-af60-c57fc2353825",
     "PR-2092"
   ],
-  "blocker": "No independently warranted existence-fact orientation was identified for an actual distinct edge. The emitter's operation and transmission explain the illumination at the selected time, but the contribution of the emitter's existence fact as partial ground is open. General coverage in a single theory, alignment of the selected per se relation, and finite upstream labels per effect remain separate.",
+  "blocker": "No independently warranted existence-fact orientation was identified for an actual distinct edge. The emitter's operation at emission time and transmission explain the illumination at reception time; no case yet shows concurrent existential supply at one time t. Even for a case passing that test, the contribution of the emitter's existence fact as partial ground is open. General coverage in a single theory, alignment of the selected per se relation, and finite upstream labels per effect remain separate.",
   "workers": [
     {
       "role": "author",
       "provider": "codex",
       "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2092"
+    },
+    {
+      "role": "repair",
+      "provider": "anthropic",
+      "model": "claude-opus-5-5",
       "effort": "high",
       "date": "2026-11-26",
       "pr": "PR-2092"

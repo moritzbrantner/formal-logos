@@ -838,13 +838,20 @@ the existing four-premise composition and no new ground for anyone's
 acceptance of those premises in the Second Way.
 
 **Actual-edge assessment.** Reuse the illumination paradigm as an analyst
-case. Fix the emitter and the particular illumination it sustains at one
-time, in the respect of being that very illumination. The causal direction
-is supported by the explanatory roles of emission and reception: the
-emitter can persist when the beam is blocked, and the recipient light at
-that location depends on successful transmission. Fix the proposed labels
-to the existence of that emitter and the existence of that illumination
-at that time. The evidence traces the emitter's *activity* to the effect.
+case. Fix the emitter and the particular illumination at a receiving
+location, in the respect of being that very illumination. Distinguish the
+emission time from the reception time. The causal direction is supported
+by the explanatory roles of emission and reception: the emitter can
+persist when the beam is blocked, and the recipient light at that location
+depends on successful transmission. That evidence does not establish that
+illumination at reception time t depends on the emitter's existence at t.
+At a positive distance, light already in transit can arrive after the
+emitter ceases operating. Concurrent existential supply is therefore the
+first open test: a case must show that the effect's existence at t depends
+on the supplier's existence at the same t. The partial-ground question
+below applies only to a case that passes that test. Fix the proposed
+labels to the existence of that emitter and the existence of that
+illumination, each at its stated time. The evidence traces the emitter's *activity* to the effect.
 A causal presentation that labels the activity or transmitted light can
 use that evidence directly, but substitutes a different antecedent for the
 selected existence fact. A strict partial ground need not suffice alone,
