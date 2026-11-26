@@ -12,7 +12,8 @@
   "evidence": [
     "87c6d32e-305a-5c11-b048-9677e4556789",
     "8928344c-1e6b-5ee3-8f3a-f9c87ea7e1ac",
-    "d8df0a99-a86f-5442-ab9b-1eb55358236c"
+    "d8df0a99-a86f-5442-ab9b-1eb55358236c",
+    "PR-2048"
   ],
   "blocker": "Power in another must be connected to a passive potency of the same subject in an admitted respect.",
   "workers": [
@@ -21,7 +22,8 @@
       "provider": "codex",
       "model": "gpt-6.2-sol",
       "effort": "high",
-      "date": "2026-11-26"
+      "date": "2026-11-26",
+      "pr": "PR-2048"
     }
   ]
 }

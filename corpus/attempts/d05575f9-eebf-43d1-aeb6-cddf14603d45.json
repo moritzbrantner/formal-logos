@@ -16,7 +16,8 @@
     "2e0d7e70-a079-569b-b39b-9b19e1a8da80",
     "de6540a7-39bc-5106-8970-73f1db6d5b40",
     "047cc9d8-f5fc-5585-bde6-a39b21754d2d",
-    "a5fb36cb-ad73-5714-aed9-68555ab2002e"
+    "a5fb36cb-ad73-5714-aed9-68555ab2002e",
+    "PR-2048"
   ],
   "blocker": "The source lead gives an order distinction. Universal same-respect priority and the interpretations of ground and simple priority need independent alignment.",
   "workers": [
@@ -25,7 +26,8 @@
       "provider": "codex",
       "model": "gpt-6.2-sol",
       "effort": "high",
-      "date": "2026-11-26"
+      "date": "2026-11-26",
+      "pr": "PR-2048"
     }
   ]
 }

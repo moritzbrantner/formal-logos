@@ -620,6 +620,13 @@ and the second excludes one kind of root. The second result does not supply
 a necessary root. [Successor result](../../corpus/results/7d450da7-c3e7-42e3-b49c-06fce72b6953.json)
 · [Cone result](../../corpus/results/06e57838-89c8-4196-a2d5-f1b807af5ddd.json)
 
+On the universal-giving route, an alleged distinct prior is in act in esse
+under the selected actuality premises. The universal giver causes that
+prior's being, and the same priority relation would run both ways. The
+nonmutual-dependence premise rules this out. This proof gives firstness for
+the qualifying giver under the stated premises.
+[Universal giving priority result](../../corpus/results/fde3e9d8-0358-44f5-a1a2-823a880a8331.json)
+
 The source records supply partial support for existential necessity, attainment
 in the being comparison, persistence-preserving motion, and substance priority.
 The support notes specify the extension each transfer would need. The moved

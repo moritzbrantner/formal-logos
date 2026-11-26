@@ -9,7 +9,8 @@
   "outcome": "blocked",
   "summary": "a9e55713-876d-54f7-9ecc-fc6136c1d8a9 (Bridge): 9b14e6d7 uses a one-way transfer from an existing Ontic cause of an actual concretum to that same cause being concrete and grounding the effect at w. Causal concreteness addresses only the first conjunct and its efficient-cause reading must be checked against Ontic.Causes. An historical productive cause can differ from a present sustaining ground. Seek separate same-cause evidence for productive esse-grounding and concrete membership, or restrict the causal premise to the matching sustaining case.",
   "evidence": [
-    "36d36dfa-961c-5adb-a38e-54d79b612bfd"
+    "36d36dfa-961c-5adb-a38e-54d79b612bfd",
+    "PR-2048"
   ],
   "blocker": "The actual cause must be shown to meet concreteness and grounding in the selected local profile, with both conditions on the same cause.",
   "workers": [
@@ -18,7 +19,8 @@
       "provider": "codex",
       "model": "gpt-6.2-sol",
       "effort": "high",
-      "date": "2026-11-26"
+      "date": "2026-11-26",
+      "pr": "PR-2048"
     }
   ]
 }

@@ -20,7 +20,8 @@
     "7e19d6ce-d3c6-50d2-b9d5-db79259a8980",
     "855605e0-ac10-5121-9dae-cd101d127aae",
     "ac20cb7d-bed1-55c2-baa2-3575370b5954",
-    "60ba5708-fed3-5de9-aff5-c78eb6d76139"
+    "60ba5708-fed3-5de9-aff5-c78eb6d76139",
+    "PR-2048"
   ],
   "blocker": "The matched receiver model must supply positive reception evidence and the selected intellectual calibration; structural freedoms alone give neither.",
   "workers": [
@@ -29,7 +30,8 @@
       "provider": "codex",
       "model": "gpt-6.2-sol",
       "effort": "high",
-      "date": "2026-11-26"
+      "date": "2026-11-26",
+      "pr": "PR-2048"
     }
   ]
 }

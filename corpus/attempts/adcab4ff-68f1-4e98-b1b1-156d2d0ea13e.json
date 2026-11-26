@@ -15,7 +15,8 @@
     "9005815b-b469-5ee6-b252-546f11f12d8c",
     "d36ad9c0-59fc-589a-a86b-89803ffd8342",
     "c3d7e98f-fe13-5dd2-85f9-2a93b55cbd50",
-    "826023e5-670e-5afc-8619-8f329eff6008"
+    "826023e5-670e-5afc-8619-8f329eff6008",
+    "PR-2048"
   ],
   "blocker": "The fixed profile needs independent evidence that its admissible class contains a correct account and that the particular feature account fails.",
   "workers": [
@@ -24,7 +25,8 @@
       "provider": "codex",
       "model": "gpt-6.2-sol",
       "effort": "high",
-      "date": "2026-11-26"
+      "date": "2026-11-26",
+      "pr": "PR-2048"
     }
   ]
 }

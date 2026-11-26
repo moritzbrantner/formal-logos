@@ -17,7 +17,8 @@
     "0090ef34-b18e-5e97-84b2-9b317d9c9864",
     "74f03562-0d40-5e1f-b026-e306a9afdc9f",
     "124fec5f-d542-55fc-822a-0605e39eb7ac",
-    "0857ad49-390c-5cc7-a2e5-c8ec89612dbb"
+    "0857ad49-390c-5cc7-a2e5-c8ec89612dbb",
+    "PR-2048"
   ],
   "blocker": "The life-state and duration relations need same-bearer applicability in the broad motion and timeless cases.",
   "workers": [
@@ -26,7 +27,8 @@
       "provider": "codex",
       "model": "gpt-6.2-sol",
       "effort": "high",
-      "date": "2026-11-26"
+      "date": "2026-11-26",
+      "pr": "PR-2048"
     }
   ]
 }

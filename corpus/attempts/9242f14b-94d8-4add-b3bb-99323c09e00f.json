@@ -10,7 +10,8 @@
   "summary": "53cc2c53-1f9a-4e4a-8402-3ac464fa8352 (Variant): 132d5816 uses full ancestor individuation to force comparability under well-foundedness; d805079c only needs its instance on source pairs. The fixtured SiblingControl has one source and two distinct dependents with exactly the same nonempty-path ancestors, so source uniqueness does not carry the full criterion. The restriction to source pairs would suffice for source uniqueness, leaving the comparability result scoped to its stronger input. Retain full individuation only for the comparison that needs it.",
   "evidence": [
     "d4b9ac47-475e-4711-bc92-129433b3c074",
-    "454f8ca8-c6d5-4ff3-a4e2-dfb939444751"
+    "454f8ca8-c6d5-4ff3-a4e2-dfb939444751",
+    "PR-2048"
   ],
   "workers": [
     {
@@ -18,7 +19,8 @@
       "provider": "codex",
       "model": "gpt-6.2-sol",
       "effort": "high",
-      "date": "2026-11-26"
+      "date": "2026-11-26",
+      "pr": "PR-2048"
     }
   ]
 }

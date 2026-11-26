@@ -21,7 +21,8 @@
     "12f0f3dd-6a1e-5215-8c0b-d98150979f66",
     "0a95d946-d7d5-559e-bd0e-66841d6beb62",
     "ef4d76c8-0d4b-59a2-8b58-b0238977e643",
-    "4519a560-5977-5258-9878-a3aa7eecccd4"
+    "4519a560-5977-5258-9878-a3aa7eecccd4",
+    "PR-2048"
   ],
   "blocker": "Existence, within-profile ordering, and productive causal coverage call for different evidence. The comparative definitions leave productive esse-cause edges independent.",
   "workers": [
@@ -30,7 +31,8 @@
       "provider": "codex",
       "model": "gpt-6.2-sol",
       "effort": "high",
-      "date": "2026-11-26"
+      "date": "2026-11-26",
+      "pr": "PR-2048"
     }
   ]
 }

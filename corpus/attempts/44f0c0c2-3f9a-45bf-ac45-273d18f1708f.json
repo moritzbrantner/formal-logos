@@ -11,7 +11,8 @@
   "summary": "0014afa4-30be-5693-9a41-93bf0eaa923c (Bridge): The consumer 30c06bc2 composes CausesIn with a relation saying where the effect's necessity consists. Causing an effect in a respect and causing the modal strength of that respect are distinct. The input requires this transfer in every admitted necessity respect. Keep the cause and patient fixed and test whether an efficient esse cause gives the effect its inability not to be, or only its being when present.\n\n651a68d4-a36e-5237-925b-ffdedcf41144 (Source lead): The pinned Third Way context moves from what can be and not be to necessary being and then distinguishes necessary beings with or without a cause of their necessity. The narrower dichotomy claim f8951495 supports an existential reading in context. It does not assign the independent NecessityConsistsIn relation used by 30c06bc2. Justify the same-bearer assignment of the esse respect and keep it separate from transfer to causal necessity.",
   "evidence": [
     "f8951495-107f-59da-aadf-e5f502e5ed0e",
-    "5da29d43-b434-5f72-a2aa-f56823106f7d"
+    "5da29d43-b434-5f72-a2aa-f56823106f7d",
+    "PR-2048"
   ],
   "blocker": "The independently supplied necessity-respect and necessity-cause relations need an interpretation that supports both transfers on the same bearer.",
   "workers": [
@@ -20,7 +21,8 @@
       "provider": "codex",
       "model": "gpt-6.2-sol",
       "effort": "high",
-      "date": "2026-11-26"
+      "date": "2026-11-26",
+      "pr": "PR-2048"
     }
   ]
 }

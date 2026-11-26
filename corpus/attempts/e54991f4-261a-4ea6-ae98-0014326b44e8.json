@@ -16,7 +16,8 @@
     "386fdad9-919c-5ab5-8d8c-ffa33648a624",
     "f2d4c971-8138-5852-9721-92142d50a728",
     "09fd79a2-5007-5432-97c6-b2e3d9674abf",
-    "e53e38f3-663e-554f-966f-a85f72a3aece"
+    "e53e38f3-663e-554f-966f-a85f72a3aece",
+    "PR-2048"
   ],
   "blocker": "The relevant uniting, efficient-causal and component relations must be fixed before transferring either route-use premise.",
   "workers": [
@@ -25,7 +26,8 @@
       "provider": "codex",
       "model": "gpt-6.2-sol",
       "effort": "high",
-      "date": "2026-11-26"
+      "date": "2026-11-26",
+      "pr": "PR-2048"
     }
   ]
 }

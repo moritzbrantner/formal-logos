@@ -13,7 +13,8 @@
   "evidence": [
     "9679c661-c706-5a38-ac2c-c3a8dcf87cc2",
     "839358ce-a242-4356-8fd8-75a4067980c7",
-    "da23017d-7eff-5baa-9370-b5a0c33ec15d"
+    "da23017d-7eff-5baa-9370-b5a0c33ec15d",
+    "PR-2048"
   ],
   "blocker": "A capacity-only no-esse case and a further productive category remain distinct application gaps for the named elimination route.",
   "workers": [
@@ -22,7 +23,8 @@
       "provider": "codex",
       "model": "gpt-6.2-sol",
       "effort": "high",
-      "date": "2026-11-26"
+      "date": "2026-11-26",
+      "pr": "PR-2048"
     }
   ]
 }

@@ -1,0 +1,16 @@
+{
+  "id": "17cb0f74-115d-4151-876d-d61558e77d59",
+  "label": "Intellectual universal causes are first from actual priority relata and esse dependence (inference)",
+  "input_statement_ids": [
+    "57c5ed67-f9fa-55bb-9b3e-3c00643b21e9",
+    "0436de86-6579-53f2-9ff5-2111ba44ebae",
+    "ee74c678-0a06-47d3-9c76-27ff798e9a01",
+    "47aff057-35ef-5418-930b-fef72e1104d2",
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410"
+  ],
+  "output_statement_id": "5835e3ac-9e52-419c-8682-cdbbc815fbe7",
+  "rule": "A distinct prior is actual and caused by the universal cause, contradicting nonmutuality",
+  "meaning": "For a qualifying universal cause, any alleged distinct prior exists at the selected world and is actual as to esse by the two actuality premises. The universal cause therefore causes that prior's esse and precedes it in the same simple-priority relation. Priority requires nonmutual dependence, so the two directions contradict. Excluded middle for equality then gives the required identity. The argument uses universal causal coverage without needing the intellect and will qualifications to obtain the contradiction.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}
