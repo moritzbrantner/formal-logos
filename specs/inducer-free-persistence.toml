@@ -5,12 +5,13 @@ results = "TruthCore.Results.Explanation.InducerFreePersistence"
 [[statement]]
 id = "Existential loss coverage is equivalent to persistence throughout inducer-free intervals"
 lean = "IntervalEquivalence"
+definitions = ["8c20c988-31fd-4b59-acf2-db230a6ea32e"]
 paraphrase = "For every supplied history, preorder and loss-inducer predicate, the all-interval cessation law is equivalent classically to persistence from presence at s to presence at each later t when no inducer occurs in (s,t]."
 
 [[statement]]
 id = "A contingent receiver admits opposite giving assignments under the same inertia law"
 lean = "MatchedAssignments"
-definitions = ["181bb18f-72a4-4cb1-b5c0-9a70f5af2bb5", "158301bc-9585-4145-be60-34f08c9f922c", "261516e9-9e57-4750-a6ba-f0ea64ff09bf"]
+definitions = ["181bb18f-72a4-4cb1-b5c0-9a70f5af2bb5", "158301bc-9585-4145-be60-34f08c9f922c", "261516e9-9e57-4750-a6ba-f0ea64ff09bf", "8c20c988-31fd-4b59-acf2-db230a6ea32e"]
 paraphrase = "On the necessary-origin control, fix both worlds, the recipient, an everywhere empty inducer predicate, standing receipt and the same origin-or-inertia explanation. At moment 2 of the actual history the earlier presence at 1 explains the recipient, with no origin-giving then and positive sustained giving then. The productive bridge and standing correlativity fail for origin-only giving and hold for sustained giving. The inherited necessary-origin bundle uses origin-only giving."
 
 [[argument]]

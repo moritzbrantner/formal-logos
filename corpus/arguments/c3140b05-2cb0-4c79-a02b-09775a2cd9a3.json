@@ -6,5 +6,8 @@
   "inference_ids": [
     "eec8e8b3-4a0c-44f7-a9c9-6555e8fdc903"
   ],
-  "meaning": "The two universal constraints are classically equivalent. Neither supplies warrant for the law or its inducer interpretation."
+  "meaning": "The two universal constraints are classically equivalent. Neither supplies warrant for the law or its inducer interpretation.",
+  "definition_ids": [
+    "8c20c988-31fd-4b59-acf2-db230a6ea32e"
+  ]
 }
