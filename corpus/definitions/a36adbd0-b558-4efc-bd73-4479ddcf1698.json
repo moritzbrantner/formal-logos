@@ -1,0 +1,9 @@
+{
+  "id": "a36adbd0-b558-4efc-bd73-4479ddcf1698",
+  "label": "EFFECT_INDIVIDUATION_1: Exact provenance within the fixed role",
+  "term": "effect individuation by exact provenance",
+  "definition": "For the chosen role and actual reference output, the designated effect is present at a standpoint exactly when the unique candidate output for the role carries the actual producer's provenance tag. The tag records who originally produced the candidate, independently of the producer's existence at the standpoint.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Modal.WitnessPreservationIndividuation.OriginIndividuation",
+  "note": "Analyst criterion for the three-world replacement comparison. The fixed role and candidate outputs are stipulated. Same provenance suffices only in the comparison with one designated candidate per world. Transfer to numerical identity of a concrete bearer, including tolerance for changed provenance and persistence after production, remains open. See docs/notes/counterpossible-conservativity.md."
+}

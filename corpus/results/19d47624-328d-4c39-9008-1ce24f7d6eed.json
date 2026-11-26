@@ -1,0 +1,11 @@
+{
+  "id": "19d47624-328d-4c39-9008-1ce24f7d6eed",
+  "label": "EFFECT_INDIVIDUATION_1 yields witness preservation in the replacement profile",
+  "argument_id": "e8cd427c-7a33-4ba3-950e-9b3c8a63b3a4",
+  "challenge_module": "TruthCore.Results.Modal.WitnessPreservationIndividuation.Challenge",
+  "solution_module": "TruthCore.Results.Modal.WitnessPreservationIndividuation.Solution",
+  "theorem": "TruthCore.Results.Modal.WitnessPreservationIndividuation.origin_preserves",
+  "comparator_config": "results/19d47624-328d-4c39-9008-1ce24f7d6eed/comparator.json",
+  "status": "solution-present",
+  "description": "Only actual has an output with actual provenance, and both tracked individuals exist there. This exhausts accessible contrast witnesses for every pair, so the closest-absence selector preserves the required witnesses vacuously. The typed consumer origin_case_exclusion uses this result with selected absence soundness and accessible realization in the same control."
+}

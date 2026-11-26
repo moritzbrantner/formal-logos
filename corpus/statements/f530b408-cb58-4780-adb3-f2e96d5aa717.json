@@ -1,0 +1,12 @@
+{
+  "id": "f530b408-cb58-4780-adb3-f2e96d5aa717",
+  "label": "EFFECT_INDIVIDUATION_2 tracks role occupancy in the replacement profile",
+  "paraphrase": "OPEN interpretation in the same fixed replacement profile. The effect is present exactly where the given role has an output. It counts the actual and backup candidates as the effect across worlds and has no output at near.",
+  "lean_declaration": "TruthCore.Modal.WitnessPreservationIndividuation.RoleIndividuation",
+  "definition_ids": [
+    "e7cffaa0-bccd-49ee-b1cf-0e730e418151"
+  ],
+  "disambiguation_ids": [
+    "1cb16a7f-9c11-4cf0-96f8-c2ffb2307df7"
+  ]
+}

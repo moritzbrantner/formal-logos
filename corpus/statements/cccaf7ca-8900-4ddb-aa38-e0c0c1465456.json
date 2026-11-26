@@ -1,0 +1,12 @@
+{
+  "id": "cccaf7ca-8900-4ddb-aa38-e0c0c1465456",
+  "label": "EFFECT_INDIVIDUATION_1 tracks the actual provenance in the replacement profile",
+  "paraphrase": "OPEN interpretation in the fixed replacement profile. The effect is present exactly where the candidate for the given role has the actual producer's provenance. The candidate has this provenance at actual, there is no candidate at near, and the candidate at far has backup provenance.",
+  "lean_declaration": "TruthCore.Modal.WitnessPreservationIndividuation.OriginIndividuation",
+  "definition_ids": [
+    "a36adbd0-b558-4efc-bd73-4479ddcf1698"
+  ],
+  "disambiguation_ids": [
+    "1cb16a7f-9c11-4cf0-96f8-c2ffb2307df7"
+  ]
+}

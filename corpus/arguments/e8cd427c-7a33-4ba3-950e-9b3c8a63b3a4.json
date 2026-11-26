@@ -1,0 +1,22 @@
+{
+  "id": "e8cd427c-7a33-4ba3-950e-9b3c8a63b3a4",
+  "label": "EFFECT_INDIVIDUATION_1 yields witness preservation in the replacement profile",
+  "premise_statement_ids": [
+    "cccaf7ca-8900-4ddb-aa38-e0c0c1465456"
+  ],
+  "conclusion_statement_id": "b5f857e8-f8a4-4418-a90a-0a1e7030656e",
+  "inference_ids": [
+    "4224f989-4552-47c2-a1f0-6ae5e8a7e35d"
+  ],
+  "meaning": "Only actual has an output with actual provenance, and both tracked individuals exist there. This exhausts accessible contrast witnesses for every pair, so the closest-absence selector preserves the required witnesses vacuously. The typed consumer origin_case_exclusion uses this result with selected absence soundness and accessible realization in the same control.",
+  "term_senses": {
+    "EFFECT_INDIVIDUATION": "dabadd62-2cf6-4741-85df-779987285d94"
+  },
+  "definition_ids": [
+    "a36adbd0-b558-4efc-bd73-4479ddcf1698",
+    "c7d19067-3df4-48ef-b0a6-bf20cb4ba43c"
+  ],
+  "disambiguation_ids": [
+    "1cb16a7f-9c11-4cf0-96f8-c2ffb2307df7"
+  ]
+}
