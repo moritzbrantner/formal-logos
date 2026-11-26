@@ -25,7 +25,14 @@ use std::{
 type Obj = Map<String, Value>;
 type Res<T> = Result<T, String>;
 
-const ENTITY_KINDS: &[&str] = &["argument", "claim", "inference", "source", "statement"];
+const ENTITY_KINDS: &[&str] = &[
+    "argument",
+    "claim",
+    "inference",
+    "result",
+    "source",
+    "statement",
+];
 const MATHLIB_PERMITTED_AXIOMS: &[&str] = &["propext", "Classical.choice", "Quot.sound"];
 const FLOOR_BASES: &[&str] = &["common_ground", "observation", "retorsion"];
 /// `legacy_uuid("statement", "STMT-EXCLUDED-MIDDLE")`.
@@ -1826,26 +1833,53 @@ fn validate_argument_derivation(
 }
 
 fn validate_premise_program_relation(path: &str, relation: &Obj) -> Res<()> {
-    let expected: Option<(&[&str], &str)> = match text(relation, "predicate") {
+    let predicate = text(relation, "predicate");
+    let expected: Option<(&[&str], &[&str])> = match predicate {
         "alternative_to" | "instance_of_schema" | "strengthens" => {
-            Some((&["statement"], "statement"))
+            Some((&["statement"], &["statement"]))
         }
-        "refutes" | "root_route" => Some((&["argument"], "statement")),
-        "attacks" => Some((&["argument", "claim", "statement"], "statement")),
-        "supports" => Some((&["claim"], "statement")),
+        "refutes" | "root_route" => Some((&["argument"], &["statement"])),
+        "attacks" => Some((&["argument", "claim", "statement"], &["statement"])),
+        "supports" => Some((&["claim"], &["statement"])),
+        // A control, model, countermodel or consistency check names what it
+        // tests. It is navigation, not warrant: `frontier` ignores it.
+        "tests" => Some((&["argument", "result"], &["argument", "statement"])),
         _ => None,
     };
-    let Some((subjects, object)) = expected else {
+    let Some((subjects, objects)) = expected else {
+        if [
+            text(relation, "subject_kind"),
+            text(relation, "object_kind"),
+        ]
+        .contains(&"result")
+        {
+            return Err(format!(
+                "{path}: only a tests relation may have a result endpoint"
+            ));
+        }
         return Ok(());
     };
     if !subjects.contains(&text(relation, "subject_kind"))
-        || text(relation, "object_kind") != object
+        || !objects.contains(&text(relation, "object_kind"))
     {
         return Err(format!(
-            "{path}: {} relates {} to {object}",
-            text(relation, "predicate"),
-            subjects.join("/")
+            "{path}: {predicate} relates {} to {}",
+            subjects.join("/"),
+            objects.join("/")
         ));
+    }
+    if predicate == "tests" {
+        if text(relation, "subject_kind") == text(relation, "object_kind")
+            && text(relation, "subject_id") == text(relation, "object_id")
+        {
+            return Err(format!("{path}: tests relates a record to itself"));
+        }
+        if relation
+            .get("note")
+            .is_some_and(|note| note.as_str().is_none_or(|note| note.trim().is_empty()))
+        {
+            return Err(format!("{path}: a tests note must be nonempty text"));
+        }
     }
     Ok(())
 }
@@ -2970,6 +3004,7 @@ fn validate(
                 "statement" => &statement_index,
                 "claim" => &claim_index,
                 "inference" => &inference_index,
+                "result" => &result_index,
                 _ => &argument_index,
             };
             if !index.contains_key(id) {
@@ -4711,5 +4746,60 @@ mod tests {
         ] {
             assert_eq!(validate(Some(workers)), Err(error.to_owned()));
         }
+    }
+
+    #[test]
+    fn tests_relations_take_a_result_or_argument_subject() {
+        let relation = |subject_kind: &str, object_kind: &str, extra: Value| {
+            let mut relation = serde_json::json!({"id": "REL", "subject_kind": subject_kind,
+                "subject_id": "S", "predicate": "tests", "object_kind": object_kind,
+                "object_id": "O"});
+            if let (Some(relation), Value::Object(extra)) = (relation.as_object_mut(), extra) {
+                relation.extend(extra);
+            }
+            relation.as_object().cloned().unwrap()
+        };
+        let none = Value::Null;
+        for (subject, object) in [
+            ("result", "statement"),
+            ("result", "argument"),
+            ("argument", "statement"),
+            ("argument", "argument"),
+        ] {
+            assert_eq!(
+                validate_premise_program_relation("r", &relation(subject, object, none.clone())),
+                Ok(())
+            );
+        }
+        let noted = relation(
+            "result",
+            "statement",
+            serde_json::json!({"note": "omits it"}),
+        );
+        assert_eq!(validate_premise_program_relation("r", &noted), Ok(()));
+        assert_eq!(
+            validate_premise_program_relation("r", &relation("statement", "statement", none)),
+            Err("r: tests relates argument/result to argument/statement".to_owned())
+        );
+        let blank = relation("result", "statement", serde_json::json!({"note": " "}));
+        assert_eq!(
+            validate_premise_program_relation("r", &blank),
+            Err("r: a tests note must be nonempty text".to_owned())
+        );
+        let mut itself = relation("argument", "argument", Value::Null);
+        itself.insert("object_id".into(), "S".into());
+        assert_eq!(
+            validate_premise_program_relation("r", &itself),
+            Err("r: tests relates a record to itself".to_owned())
+        );
+        // A result endpoint belongs to `tests` alone.
+        let mut other = relation("result", "statement", Value::Null);
+        other.insert("predicate".into(), "supports".into());
+        assert!(validate_premise_program_relation("r", &other).is_err());
+        other.insert("predicate".into(), "logically_equivalent_to".into());
+        assert_eq!(
+            validate_premise_program_relation("r", &other),
+            Err("r: only a tests relation may have a result endpoint".to_owned())
+        );
     }
 }

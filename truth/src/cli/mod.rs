@@ -25,6 +25,7 @@ mod brief;
 mod check;
 mod configuration_report;
 mod configurations;
+mod connectivity;
 mod context;
 mod countermodel;
 mod currentness;
@@ -70,6 +71,7 @@ pub const HELP: &str = "Usage: truth [--root PATH] [--json] status
        truth [--root PATH] [--json] frontier [--reaching-root] [--routes] [--frontier-root STATEMENT] [--fixture FILE]
        truth [--root PATH] [--json] frontier-diff --base REV [--head REV] [--frontier-root STATEMENT]
        truth [--root PATH] [--json] orphans [--frontier-root STATEMENT] [--by module|family | --senses | --base REV]
+       truth [--root PATH] [--json] connectivity [--frontier-root STATEMENT] [--list-isolated N]
        truth [--root PATH] [--json] bridges --constants FILE (--queue-file FILE | --target ID)...
              [--targets N] [--top K] [--pool M]
        truth [--root PATH] [--json] related STATEMENT [--limit N]
@@ -169,6 +171,7 @@ pub const COMMANDS: &[Command] = &[
     frontier::COMMAND,
     frontier_diff::COMMAND,
     orphans::COMMAND,
+    connectivity::COMMAND,
     bridges::COMMAND,
     related::COMMAND,
     dossier::COMMAND,
@@ -280,6 +283,9 @@ pub fn run(args: &[OsString]) -> Output {
                 Err(usage(
                     "--authored-only-by applies only to workers and bottlenecks; --open only to workers",
                 ))
+            }
+            Some(command) if args.list_isolated.is_some() && command.name != "connectivity" => {
+                Err(usage("--list-isolated applies only to connectivity"))
             }
             Some(command) if args.bottlenecks.flags && command.name != "bottlenecks" => Err(usage(
                 "--stage, --min-arguments and --min-routes apply only to bottlenecks",

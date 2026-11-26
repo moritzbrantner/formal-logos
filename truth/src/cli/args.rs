@@ -278,6 +278,8 @@ pub struct Args {
     pub modules: Vec<String>,
     pub workers: WorkerArgs,
     pub bottlenecks: BottleneckArgs,
+    /// `--list-isolated N` (`connectivity`)
+    pub list_isolated: Option<usize>,
 }
 
 /// The `countermodel` options (`--all` is the shared research flag).
@@ -400,6 +402,7 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
         modules: Vec::new(),
         workers: WorkerArgs::default(),
         bottlenecks: BottleneckArgs::default(),
+        list_isolated: None,
     };
     let mut args = args.iter();
     while let Some(arg) = args.next() {
@@ -613,6 +616,14 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
                         .filter(|value| !value.trim().is_empty())
                         .ok_or_else(|| usage("--authored-only-by requires a model name"))?
                         .to_owned(),
+                );
+            }
+            "--list-isolated" => {
+                let value = args.next().and_then(|value| value.to_str());
+                parsed.list_isolated = Some(
+                    value
+                        .and_then(|value| value.parse().ok())
+                        .ok_or_else(|| usage("--list-isolated requires a non-negative integer"))?,
                 );
             }
             "--stage" | "--min-arguments" | "--min-routes" => {

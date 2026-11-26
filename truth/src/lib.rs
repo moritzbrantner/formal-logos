@@ -10,6 +10,7 @@ pub mod check;
 pub mod configuration_explorer;
 pub mod configuration_live;
 pub mod configurations;
+pub mod connectivity;
 pub mod context;
 pub mod countermodel;
 pub mod currentness;
