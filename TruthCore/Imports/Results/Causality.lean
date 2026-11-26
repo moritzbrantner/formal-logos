@@ -315,6 +315,7 @@ public import TruthCore.Results.Causality.PotencyPrivation.Solution
 public import TruthCore.Results.Causality.Power1392.Solution
 public import TruthCore.Results.Causality.Power1392Exercise.Solution
 public import TruthCore.Results.Causality.PowerExistenceBoundary.Solution
+public import TruthCore.Results.Causality.PracticalSpecification.Solution
 public import TruthCore.Results.Causality.PresentReceipt.Solution
 public import TruthCore.Results.Causality.PreservationMeaning.Solution
 public import TruthCore.Results.Causality.PrimaViaCertificates.Solution

@@ -770,3 +770,165 @@ an identification of the independently specified adopted content and its
 productive role on the same esse edge.
 [Actual exercise controls](../../TruthCore/Explanation/ActualExerciseExplanation.lean)
 [Apprehended good comparison](will-versus-chance.md#can-a-good-specify-actual-production-without-being-apprehended-2026-11-25)
+
+## Practical specification checkpoint (2026-11-26)
+
+The question at 3655f59f is what makes the recipient's esse a good the giver
+wills **for that recipient**. Practical use of an apprehended standard is one
+part of the answer. Its operative content is another. The new deductions
+start from the rational-exercise sense of giving already used in #2019, at the
+same giver, recipient and selected world.
+[Practical plan and controls](../../TruthCore/Causality/PracticalSpecification.lean) ·
+[Proofs](../../TruthCore/Results/Causality/PracticalSpecification/Solution.lean)
+
+### Two omission tests on the same practical standard
+
+First specify what would count as fulfillment independently of the successful
+output. A standard can require producing x, count x's esse as its own good, and
+require x to have a place in an order to an end e. A plan may combine these
+requirements and may govern many effects at once. The interpretation treats
+the chosen standard in this analysis as conjunctive. For a disjunctive plan,
+for example, which branch actually governs production would need further
+evidence before applying this analysis. The omission tests edit **descriptions
+of fulfillment**. They do not assert that one can produce x without its esse,
+that a logically impossible output is possible, or that an alternative act
+of creation is accessible.
+
+- **Operative coverage (4be0f774).** For a distinct actual effect given being
+  by rational exercise, find a standard apprehended as good by that very
+  giver, used to specify this giving, and satisfied in the giving's context.
+  A clinician's adopted treatment target guides assessment and correction
+  even if a dose fails. A forecast can correctly predict a beneficial effect
+  whose occurrence the clinician did nothing to secure. Those roles give
+  the distinction an independent rationale. The successful-giving
+  application to esse itself remains open.
+- **Benefit (df6c64a6).** In a GOD_4 giving, erase only the credit for x's
+  esse as x's good from the actual assessment. If no such clause were
+  required, the edited assessment would still satisfy every requirement.
+  Rejection therefore identifies a mandatory benefit clause. The
+  recognition premise 437438f0 assigns an operative commitment to that
+  benefit to the recipient-willing relation. It is an explicit interpretation
+  of the case primitive. It allows the benefit to be desired for x as a
+  subordinate good. It cannot be applied merely because the whole plan is
+  good or x actually benefits.
+- **End (b1d7825e).** Erase every end-placement of x from the actual
+  assessment while preserving its bare production and any benefit credit.
+  If no end-placement of x were required, the edited assessment would
+  still pass. Its rejection and the direction recognition premise f8cd0849
+  yield a particular end to which the giver directs x. The same end need
+  not serve every effect. The procedure works even when the benefit test
+  fails.
+
+The new premises do not mention an existing application bridge as an
+assumption. They require an independently assessable content and its use,
+then test the content with role omissions. Under the conjunctive semantics
+these tests characterize which roles are mandatory. This is a way to locate
+and test an open commitment, not independent evidence that a real divine
+standard has the tested content. Inferring that content only from x's
+actual production or goodness would assume the contested practical role.
+Recognition still needs the step from a required content to the corresponding
+case relation, whose range and reading are fixed by the existing definitions.
+[Evidential basis versus correct performance](explanatory-symmetry-742.md#what-transfers-from-belief-to-action-to-an-origin)
+
+### Rivals and what the controls discriminate
+
+All rows use the original two-world assignment with one fixed rational
+giving, the same actual giver and effect, and the same causal edge.
+Apprehension is fixed and every clause is assigned realized throughout.
+The content also always requires bare production of x and the source's
+self-good. The controls vary operative use, the requirements and the case
+relations as indicated. Self-willing and self-direction are populated
+assignments outside the distinct-effect targets.
+
+| Interpretation tested | Practical use in giving x | Is x's own benefit required? | Is an end-placement of x required? | Finite result for the distinct effect |
+| --- | --- | --- | --- | --- |
+| Foresight without use | No | Yes, in the apprehended but unused plan | Yes, in that same plan | No coverage. The conditional tests and recognition rules hold vacuously at the distinct effect. Both target bridges fail. |
+| Whole-order use with bare production of x | Yes | No | No | Both edited descriptions meet the standard. Both bridges fail with both recognition premises satisfied. |
+| Whole-order use assigning x an end | Yes | No | Yes | The end test and direction bridge hold. The benefit test and recipient bridge fail. |
+| Recipient benefit as a success criterion | Yes | Yes | No | The benefit test and recipient bridge hold. The end test and direction bridge fail. |
+| Full selected content | Yes | Yes | Yes | Both tests, recognitions and bridges hold. Turning off either case relation at x with the full operative plan preserved falsifies its recognition and bridge, independently of the other relation. |
+
+Direction for another's sake is the strongest rival to the recipient
+inference **even if** the esse giving is under an adopted order. A familiar
+positive mechanism is instrumental placement. A production protocol can
+deliberately maintain a microbial strain that performs a needed function
+for a larger process, without making the strain's own flourishing a
+criterion of success. A producer can likewise attend only to the whole
+order as realizing its own final good. The disagreement is whether x's esse
+makes a contribution as good **to x**, or only as a component of what
+serves a further end. Instrumental placement can retain practical use,
+knowledge and per-effect direction, while rejecting the benefit omission
+premise. The concrete production example concerns a continuing life process
+and does not generalize by itself to giving esse.
+
+The self-loving diffusion proposal is the stronger rival to **operative
+coverage**. It explains the output through the source's own intrinsic
+generative orientation, with the proper volition directed at the source's
+own good. The previous checkpoint's Plotinus comparison supplies the
+outward-activity mechanism. Its extension to a rational universal giver
+is an analyst variant. Such a giver can be rational in the #2019 classifier
+and understand the product while still rejecting that the actual esse
+exercise is constituted by use of an apprehended standard. Its explanatory
+burden is to substantiate how one source's nature supplies the specific
+output and why the proper volition is fulfilled independently of it.
+The presence of self-love and an accurate representation do not supply
+that productive account. Universal causal coverage puts every distinct
+actual producer within the first cause's esse coverage. Even granting that
+there is no producer outside its order, the first cause's own activity
+could still have a collateral consequence. The absence of an outside
+producer therefore does not by itself settle either test.
+[Prior diffusion comparison](#rival-mechanisms) ·
+[Proper exercise and intrinsic-final rival](will-versus-chance.md#can-a-good-specify-actual-production-without-being-apprehended-2026-11-25)
+
+### Applications and provisional judgment
+
+The strongest positive reason for coverage is the proper-manifestation
+analysis in the prior comparison. If giving this esse is the proper
+realization of intellectual appetite under an independently specified good,
+that good supplies the activity's practical measure. A successfully
+satisfied standard of each recipient's esse as its own good would then give
+a reason for the benefit test even where the whole order has a further end.
+A practically adopted role for x in the order supports the direction test
+without settling that beneficiary question. The available reasons warrant
+investigating these as distinct support options. They leave actual
+governance, the scope and content of the standards and their interpretations
+underdetermined. Knowledge of a creature in its own nature could help fix
+the description of x in the plan. It would still require knowing by the
+same giver, evaluative apprehension, and actual use. No formal inference
+from that separate knowledge statement is made here.
+
+The recipient derivation targets 3655f59f, feeding the existing #2019
+application to a94c5dfc. The direction derivation targets 2f9a99cc. It uses
+actual rational exercise alone in the antecedent. Composing it with
+83d8a0e0, which supplies exercise for each distinct actual effect of the
+qualifying universal cause, gives the assembly route to 123d394b.
+The original Lean specialization at de6a0f86 has possession and actual
+exercise as separate antecedents. Its proof uses exercise and does not
+infer it from capacity. The specialization remains in the frozen
+Challenge and Comparator check. The sense validator cannot represent
+co-occurrence of these antecedents without a bridge, so the graph
+records the stronger exercise-only theorem and the direct assembly
+consumer. The frontier reports 3655f59f and 2f9a99cc as proved, and
+a94c5dfc and 123d394b as closed via transcription. Their philosophical
+establishment remains open. End-directed government supports the LORD_2
+antecedent, and the love route supports the
+benevolent willing input of LORD_3. Even their conjunction leaves the
+authority-to-dispose premise open. Knowing how creation serves the governed
+can strengthen a rationale for authority but does not establish normative
+standing from the descriptive roles encoded here.
+[LORD_3 and original standing](natural-goodness-function-and-authority.md#group-8-integration-from-reasons-and-goods-to-moral-authority-and-god-1733-2026-11-18)
+
+The next discriminating step is to fix an antecedently interpretable success
+criterion for a particular effect, then show from the actual productive
+constitution why the giver's **apprehending** it governs the exercise.
+Candidates must distinguish a realized recipient good that counts in making
+this act successful from a merely foreseeable benefit of the same act. A
+productive dependence circle would weaken a proposed account of adoption
+that needs its own product. A defended noncognitive source specification
+that explains the same actual directed production would weaken a claim
+that apprehension must do the work. The finite assignments decide neither
+constitutive account.
+[Actual exercise dependence test](../../TruthCore/Explanation/ActualExerciseExplanation.lean)
+
+[Derivation attempt](../../corpus/attempts/3fdc09ec-1d28-4b3e-b7aa-a1db6fff0456.json) ·
+[Rejected direct inference](../../corpus/attempts/55c9bf7e-8825-4634-9988-2352c019ce76.json)

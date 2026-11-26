@@ -1,0 +1,11 @@
+{
+  "id": "b1d7825e-a1ae-4f86-af2e-1b9819055e0f",
+  "label": "A giving plan rejects withdrawing every end-placement of a distinct actual effect",
+  "paraphrase": "OPEN, analyst formulation. For every distinct x in act in esse, each operative successful plan for this giving rejects its actual assessment with all x's end-placements removed. The bare output, benefit clauses and other bearers' end-placements are kept. The rejection concerns the fulfillment standard at w and asserts no alternative world.",
+  "lean_declaration": "TruthCore.Causality.PracticalSpecification.PlanRejectsEndOmission",
+  "definition_ids": [
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "fbd163ad-ec01-45d1-a749-f90a1de6ea37",
+    "a84afabf-d6e6-424d-a792-2fa874c466a5"
+  ]
+}

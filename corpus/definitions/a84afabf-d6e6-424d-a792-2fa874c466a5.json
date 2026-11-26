@@ -1,0 +1,17 @@
+{
+  "id": "a84afabf-d6e6-424d-a792-2fa874c466a5",
+  "label": "An apprehended standard of fulfillment governing actual giving",
+  "term": "operative practical specification",
+  "definition": "A plan supplies a criterion of success as jointly required clauses. Meets checks each requirement against the assessed description. Governing at a selected world requires the same giver's actual apprehension of the plan as good, the plan specifying the giving of this effect, and success of the production under its own standard. Specifying means use as the measure of what the giving is accomplishing. Apprehension, actual use, assignment of requirements and realization of clauses are primitive fields.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.PracticalSpecification.Plan",
+  "definition_ids": ["fbd163ad-ec01-45d1-a749-f90a1de6ea37"],
+  "note": "Analyst representation of a conjunctive success specification. A treatment plan used by a practitioner to decide and assess a dose exemplifies its practical role. A future effect correctly predicted from a patient's condition, or an unused clinical plan that would also have approved the actual dose, illustrates the missing role. There is no transitivity, asymmetry, uniqueness, priority in time, well-foundedness or counterfactual access axiom. A specification can govern several effects. This is formal specification of success, neither an efficient producer nor an axiom that its object necessitates exercise. Application to universal giving, successful giving under this standard and its recognition as the case relations are OPEN. Independent justification is required for the practical use and actual requirements, including alternative fulfillment conditions where the conjunctive representation is inadequate.",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "The plan fields record a content's requirements, the giver's evaluative apprehension, actual use in giving and satisfaction of a clause.",
+    "examples": ["The requirement set of a treatment plan and its actual use as a standard for administering the dose."],
+    "exclusions": ["Accurate observation, passive foresight or a merely possible intention.", "Inference from successful outcomes backwards to a supposed intention."],
+    "open_obligations": ["Show that an antecedently specified content actually supplies the standard for this esse giving.", "Show which roles the practical standard requires and why the two case relations recognize the selected content."]
+  }
+}

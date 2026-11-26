@@ -1,0 +1,9 @@
+{
+  "id": "fbd163ad-ec01-45d1-a749-f90a1de6ea37",
+  "label": "Three roles in a practical standard of fulfillment",
+  "term": "clause of a practical specification",
+  "definition": "A clause of a proposed standard is bare production of a bearer, credit for a respect as that bearer's own good, or the bearer's placement in an order to a particular end. The benefit clause requires specifying the recipient's good as a success criterion even if it serves a further good. The end clause checks a role in an order, which can serve another beneficiary or the giver. These clauses are distinct descriptions, with no implication between constructors. An omission of one role keeps the rest of the assessed description fixed and need not be a possible world.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.PracticalSpecification.Clause",
+  "note": "Analyst classification for the matched practical specification comparison. The constructors encode distinct roles in assessment and do not define the old willing and direction predicates. A medical treatment can be specified as producing a supply, protecting the patient, or preparing the patient for surgery. Protecting triage staff can be intended as a means to helping patients, while the professional benefit of a staff member may be incidental. The judgments about benefit and end at the universal esse cause are OPEN. See docs/notes/divine-love-goodness-bridge.md under Practical specification checkpoint."
+}

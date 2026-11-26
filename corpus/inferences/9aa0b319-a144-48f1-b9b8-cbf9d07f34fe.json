@@ -1,0 +1,13 @@
+{
+  "id": "9aa0b319-a144-48f1-b9b8-cbf9d07f34fe",
+  "label": "Universal intellectual causes direct every actual effect, through exercise and direction (inference)",
+  "input_statement_ids": [
+    "83d8a0e0-9866-48d3-b582-9082c9cfeac8",
+    "2f9a99cc-6cd4-4253-a112-e31dad6cd686"
+  ],
+  "output_statement_id": "123d394b-11ce-449a-a8b6-7fda5a254a6d",
+  "rule": "Supply rational exercise from universal giving and apply the exercise-to-direction result",
+  "meaning": "Assembly transcription. At the same qualifying universal giver and distinct actual recipient, the first premise supplies the actual rational exercise and the second supplies an end to which the giver directs the effect.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}
