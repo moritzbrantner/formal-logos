@@ -33,7 +33,8 @@
     "e3d2cb7a-fe02-4a48-a389-0d6120ecbe33",
     "PR-1504",
     "e2fae76f-54df-4e93-8163-31bd4b377f2e",
-    "38e6a68e-1d0d-4c43-bff8-3d1df65b7b68"
+    "38e6a68e-1d0d-4c43-bff8-3d1df65b7b68",
+    "PR-2006"
   ],
   "blocker": "Not blocked. Next tests: (0) Scotus on esse and essence (Suárez DM XXXI now assessed below), aimed at the reception premises (29e71e43 and its sense-fixed sibling ea2c4745 at CREATURE_1, and 7de89edb) rather than at a general caused-esse bridge; (1) 29e71e43 still generalizes q.7 a.2 from a subsistent created form to every CREATURE_1: a material composite's esse could be read as received through its form in matter (q.7 a.1), a candidate derivation; (2) uniqueness of the universal cause is not built into CREATURE_1, and no current downstream use needs it; the spine's root uniqueness results could tie the g of CREATURE_1 to the selected root if a later argument needs it. Observation (informal, not lake-checked): combining the Round 2 premises at CREATURE_1 (29e71e43 and STMT-PRIMARY-ESSE-UNRECEIVED for the primary p) with 0e242e29 forces p = m whenever p is in act as to being: otherwise m causes p's being, p is CREATURE_1, so p's esse is received, contrary to PrimaryEsseUnreceived. Control model 3 has no primary p, so it does not witness that combination; (3) the earlier open tests (2)-(4) of attempt 170d6a5e remain.",
   "current_assessment": {
