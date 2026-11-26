@@ -1,10 +1,10 @@
 {
   "id": "86ac1c14-f0cb-486b-8a45-75bc3362e1af",
-  "label": "Physics V.1 supports change of a persisting subject",
+  "label": "Physics V.1 constrains the motion reading of persisting-subject change",
   "subject_kind": "claim",
   "subject_id": "74553863-6b4f-5c6c-b6be-b8a8cfa8f76c",
   "predicate": "supports",
   "object_kind": "statement",
   "object_id": "5a229a9d-9186-58f7-b5b9-c6c20223400d",
-  "note": "The elimination of generation and corruption singles out change between affirmative termini as motion. The route must show that its ChangesBetween instances with LivesAt at both endpoints are precisely changes between the relevant affirmative termini of one subject, with motion in the same respect. Aristotelian motion is restricted to the admitted kinds in this passage. The claim does not generalize that scope to every supplied respect."
+  "note": "Physics V.1, 225a34–225b3, eliminates generation and corruption from motion and restricts motion to change between affirmative termini. The bound claim supplies this necessary condition. The route needs the converse for its admitted changes: every ChangesBetween instance with LivesAt at both endpoints must suffice for MovedIn in the same respect. That sufficiency and the mapping from the route's predicates to the text's affirmative termini remain open."
 }

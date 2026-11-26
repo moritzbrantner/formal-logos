@@ -612,7 +612,8 @@ record which consuming arguments need each premise, weaker sufficient
 readings where available, and a test for each remaining application gap.
 
 Selected-world self-access supplies the starting successor for finite roster
-amalgamation. Global contingent grounding rules out a contingent root in
+amalgamation. The frontier counts this witness assembly under its transcription
+closure rule. Global contingent grounding rules out a contingent root in
 the same selected cone by restricting grounds to the cone and contradicting
 roothood. The direct local premises remain useful in applications that
 lack the stronger hypotheses. The first result supplies a world witness,
@@ -628,8 +629,9 @@ the qualifying giver under the stated premises.
 [Universal giving priority result](../../corpus/results/fde3e9d8-0358-44f5-a1a2-823a880a8331.json)
 
 The source records supply partial support for existential necessity, attainment
-in the being comparison, persistence-preserving motion, and substance priority.
-The support notes specify the extension each transfer would need. The moved
+in the being comparison, and substance priority. Physics V.1 gives a necessary
+condition on motion. The converse, that the route’s persistence-preserving change
+suffices for motion in the same respect, remains open. The moved
 mover probe locates a remaining potency-sense bridge even after the same
 mover's actuality in esse is supplied.
 

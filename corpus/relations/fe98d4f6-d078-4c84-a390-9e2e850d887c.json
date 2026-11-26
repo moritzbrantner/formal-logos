@@ -2,9 +2,9 @@
   "id": "fe98d4f6-d078-4c84-a390-9e2e850d887c",
   "label": "Third Way necessity supports the existential respect reading",
   "subject_kind": "claim",
-  "subject_id": "f8951495-107f-59da-aadf-e5f502e5ed0e",
+  "subject_id": "885affcf-ef90-5288-9277-9a842c2e1263",
   "predicate": "supports",
   "object_kind": "statement",
   "object_id": "651a68d4-a36e-5237-925b-ffdedcf41144",
-  "note": "The passage arrives at necessary being by contrasting it with things able to be and not be, then distinguishes necessary beings with and without a cause of necessity. This motivates reading necessity there as existential. The narrow dichotomy does not assign any respect in the route's NecessityConsistsIn relation, and gives no transfer from causing esse to causing the necessity of esse."
+  "note": "The Third Way asserts that some being cannot not-be after contrasting necessary being with things able to be and not be. This supports an existential reading of the necessity at issue. The later dichotomy about a cause of necessity supplies context. The route still needs to show that every NECESSARY_1 bearer satisfies NecessityConsistsIn at esse. Transferring from causing esse to causing its necessity is a separate premise."
 }
