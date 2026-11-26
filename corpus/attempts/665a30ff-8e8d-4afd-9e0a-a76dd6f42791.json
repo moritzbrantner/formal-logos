@@ -11,7 +11,8 @@
   "outcome": "rejected",
   "summary": "The selected-cone induction needs a path to the source shortened by exactly one per upstream step. A finite join can introduce a path longer than the original one. The checked common-source ray has a source directly supplying every ray node, and an infinite chain of immediate ray supplies n+1 to n. Taking the cone of node zero with all nodes actual and concrete retains precisely the ray and its source: every fork joins upstream at that source, each node reaches the source, and the infinite ray defeats accessibility at zero. Thus one finite source path and finite joins do not suffice for this conclusion even on the same edge dictionary. This concerns the encoded graph, not the actuality of such supply.",
   "evidence": [
-    "a18f7922-65fa-4d86-80cf-4201aa58e44c"
+    "a18f7922-65fa-4d86-80cf-4201aa58e44c",
+    "PR-2022"
   ],
   "workers": [
     {
@@ -19,7 +20,8 @@
       "provider": "codex",
       "model": "gpt-6.2-sol",
       "effort": "high",
-      "date": "2026-11-26"
+      "date": "2026-11-26",
+      "pr": "PR-2022"
     }
   ]
 }

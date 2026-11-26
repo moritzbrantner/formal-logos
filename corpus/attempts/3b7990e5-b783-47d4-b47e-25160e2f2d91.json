@@ -14,7 +14,8 @@
   "outcome": "blocked",
   "summary": "The classifier separation proof uses the accessibility input only in transferring existence and necessity of the same c from accessible v to w and its successors. A Lean prototype replaced that transfer with ActualEuclidean.necessaryAtOrigin and compiled. The legacy classifier inputs list source-backed supply and well-foundedness senses absent from the predicates. Even after narrowing those links in a local experiment, the preflight treats the classifier's concrete-existence property and its separate backward-closure law as rival senses of one term. The legacy Consumer 15374d2f stays authoritative for that bundle.",
   "evidence": [
-    "eefabfd5-7e32-5fee-9771-c2e65e3daa65"
+    "eefabfd5-7e32-5fee-9771-c2e65e3daa65",
+    "PR-2022"
   ],
   "blocker": "Distinguish the co-used classifier and backward-closure declarations in the sense index before registering the exact local sibling. No premise maps the two predicates as rival senses.",
   "workers": [
@@ -23,7 +24,8 @@
       "provider": "codex",
       "model": "gpt-6.2-sol",
       "effort": "high",
-      "date": "2026-11-26"
+      "date": "2026-11-26",
+      "pr": "PR-2022"
     }
   ]
 }
