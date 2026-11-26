@@ -2995,7 +2995,8 @@ merely virtual) understanding. A Scotist sense, with beatitude in the will's
 enjoyment, would be a further sense. Objection audit: no substantive objection
 identified to the directing bridge or to either sense bridge. The side effects
 on file involve a particular cause, and their mechanism is causes concurring
-unordered by it (q.22 a.2 ad 1, attributed and unpinned). That mechanism is
+unordered by it (q.22 a.2 ad 1, see the
+[pinned providence reading](../../corpus/attempts/e551ce3e-a8db-40c4-bbca-e9fbb84be9d7.json)). That mechanism is
 absent when one cause gives being to everything else. Avicenna affirms
 providence, and the bridge says nothing about the mode of cognition. His view
 bears only on a stronger reading that requires cognition of particulars as
@@ -4153,6 +4154,8 @@ using their proposed esse ranks.
 
 ## Research attempts citing this note
 
+- [Divine self-comprehension does not supply participant comprehension](../../corpus/attempts/9d6f93e5-d6ac-4bae-b892-e2d9e3e86029.json)
+- [Aquinas on perfect intellectual good and the act of understanding](../../corpus/attempts/7da1f26f-06eb-45c0-b5c4-44d7cc896027.json)
 - [Measure the acts of a comprehending source and a reflective recipient](../../corpus/attempts/57d7b850-f476-4cb6-9e2a-3920ff006f92.json)
 - [Modal spine A3 against the initial-state view: founded coming-to-be and survival models](../../corpus/attempts/modal-spine-coming-to-be-20261110.json)
 - [Modal spine stage one: necessary concrete individual from inert emptiness, with rivals recorded](../../corpus/attempts/modal-spine-inert-emptiness-20261109.json)

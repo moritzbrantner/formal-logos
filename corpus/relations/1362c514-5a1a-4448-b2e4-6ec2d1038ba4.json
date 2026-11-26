@@ -1,0 +1,10 @@
+{
+  "id": "1362c514-5a1a-4448-b2e4-6ec2d1038ba4",
+  "label": "Supreme divine beatitude supports the PERFECT_2 and HAS_INTELLECT_1 application",
+  "subject_kind": "claim",
+  "subject_id": "b7a22200-2aca-45ec-90ab-57d623584e6d",
+  "predicate": "supports",
+  "object_kind": "statement",
+  "object_id": "dc3ec456-9fd1-4e1a-8690-c529fe831ee2",
+  "note": "The text applies its rationale to God in the superlative. The model generalizes to every subject with formal-or-virtual perfection in every realized respect and a bare intellect flag. It still needs to show that those predicates supply the perfect intellectual good in and from the subject itself."
+}

@@ -1,0 +1,13 @@
+{
+  "id": "fa4fa750-39a9-4f00-9c30-8b4b90682fab",
+  "label": "Aquinas, I q.19 a.3 co.: Necessary willing of a means requires that means for the end",
+  "statement_id": "c4f15082-0275-4647-ba03-70ee59058b5d",
+  "source_id": "c77377cf-501b-56c6-be40-b518e9aad101",
+  "locator": "I q.19 a.3 co.",
+  "interpretation": "Aquinas contrasts food for preserving life or a ship for crossing the sea with a horse for a journey that can also be made on foot. In applying the distinction to God, he treats creaturely means as unnecessary for the divine goodness and distinguishes absolute necessity from necessity given God's willing.",
+  "status": "formalized",
+  "attribution": "The passage states that in willing an end, a person necessarily wills a means to that end only if the end cannot be attained without that means, which is the premise.",
+  "definition_ids": [
+    "90719cb5-43c2-4677-8ad7-20e077e28ac9"
+  ]
+}

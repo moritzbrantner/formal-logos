@@ -1,0 +1,10 @@
+{
+  "id": "0cdf4201-e380-403a-8850-d0bffc0e9749",
+  "label": "Divine willing of creaturely esse supports the CREATURE_WILLING_1 bridge",
+  "subject_kind": "claim",
+  "subject_id": "78b94fbf-e025-4084-a529-2102fd8b98a8",
+  "predicate": "supports",
+  "object_kind": "statement",
+  "object_id": "a94c5dfc-c722-49fe-a242-dd39409b079d",
+  "note": "The corpus supplies velle bonum alicui for esse on the stated q.19 a.4 basis of causation through divine will. The model's antecedent only has generic CausesIn plus HasWill. The bridge still needs causation through will, with recipient-directed willing read consistently with ordered quasi-desire in ad 3."
+}

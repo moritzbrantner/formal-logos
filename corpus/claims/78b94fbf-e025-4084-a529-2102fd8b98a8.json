@@ -1,0 +1,18 @@
+{
+  "id": "78b94fbf-e025-4084-a529-2102fd8b98a8",
+  "label": "I q.20 a.2: God wills each creature its GOOD_4 in esse (CREATURE_WILLING_1)",
+  "statement_id": "d3f5b91b-e564-4dc6-b4d4-e2dc95012a7d",
+  "source_id": "c77377cf-501b-56c6-be40-b518e9aad101",
+  "locator": "I q.20 a.2 co.",
+  "interpretation": "The corpus moves from the will causing a creature's esse to esse as a good willed to that creature, and glosses love as willing good to another. Reply 3 describes the love of irrational creatures as quasi-desire ordered to rational creatures and to God, and reserves friendship and benevolence in the proper sense for rational creatures. Reply 4 distinguishes loving a sinner in respect of existing nature from hating the same sinner in respect of fault.",
+  "status": "formalized",
+  "attribution": "The passage states that for each existing creature, its esse is itself a good and God wills that good to it, since God's will is the cause of things, which is the premise.",
+  "definition_ids": [
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "08b826db-2d9c-48e5-b69c-d4ac54088518",
+    "4c8f0e6b-7ef6-5be5-851c-cdf4f0301546"
+  ],
+  "disambiguation_ids": [
+    "dd7ff973-0e54-4c93-b9c5-b002cac2b256"
+  ]
+}

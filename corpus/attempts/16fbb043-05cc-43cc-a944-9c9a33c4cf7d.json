@@ -1,0 +1,19 @@
+{
+  "id": "16fbb043-05cc-43cc-a944-9c9a33c4cf7d",
+  "label": "Aquinas on self-willing, necessary means and voluntary production",
+  "statement_ids": [
+    "2a168a36-bd60-491a-8ad7-ce5b1d2fb560",
+    "0266eac2-3fad-43eb-a1f1-e784c5356105",
+    "6e4b519b-e766-4dbe-a046-aab8082cb484"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "ST I q.19 a.3 distinguishes absolute and suppositional necessity and restricts necessary willing of means to indispensable means of the willed end. Q.19 a.4 explains God's effect production by intellect and will. Its second reason invokes uniform natural action unless impeded, then applies divine unlimited perfection in the particular case. It gives no criterion that arbitrary same-set-up modal variation makes a producing power rational. A stochastic non-rational propensity is the specific alternative the existing will-versus-chance inquiry tests.",
+  "blocker": "For 0266eac2 match fixed giving to necessary willing of the means under the same end. For 6e4b519b establish positive grounds for excluding non-rational variation in the relevant domain. The determination argument in I q.19 a.4 is evidence about Aquinas's account of divine action, without a direct support edge to the generalized chance exclusion.",
+  "evidence": [
+    "7be0c53c-0455-45b4-8ea4-31d1b96a9fb3",
+    "fa4fa750-39a9-4f00-9c30-8b4b90682fab",
+    "e9ec97c2-ecf7-414e-906d-c15e7de65888"
+  ]
+}

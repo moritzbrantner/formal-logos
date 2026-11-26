@@ -1,0 +1,14 @@
+{
+  "id": "7ab92b2d-2471-43f6-af1b-a8dee675ec50",
+  "label": "Aquinas, I q.22 a.2 co.: Divine providence orders existing things as individuals to an end",
+  "statement_id": "e348280d-0933-4cc9-84c7-c8e2ed941862",
+  "source_id": "c77377cf-501b-56c6-be40-b518e9aad101",
+  "locator": "I q.22 a.2 co.",
+  "interpretation": "The first argument extends ordering to the range of the first agent's causality. The second appeals to God's knowledge of particulars and the analogy of art. The first reply explains that interference by another particular cause can escape a particular agent's ordering, while all particular causes fall under the universal cause. I q.22 a.1 co. and ad 2–3 distinguish the ratio of order from its execution and say that providence presupposes willing the end.",
+  "status": "formalized",
+  "attribution": "The passage states that God, the first agent whose causality extends to all being including individuating principles, orders everything that has being to an end, extending his providence to individuals, which is the premise.",
+  "definition_ids": [
+    "92c03350-6809-497d-b123-2ffb11c0e0c1",
+    "c53b5fbe-121a-5d59-8e29-0f9f7eea85b1"
+  ]
+}

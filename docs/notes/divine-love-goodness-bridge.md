@@ -18,8 +18,7 @@ good does not entail either perfect interpersonal accessibility or veracity;
 those are additional disputed normative/cognitive bridges. This checkpoint
 is therefore lower-priority exploratory support until such a bridge is built.
 
-Sources consulted for orientation and semantic review, without creating new
-source claims or pinned passage records:
+Sources originally consulted for orientation and semantic review:
 
 - [ST I q.20 a.2 co. and ad 3–4](https://www.newadvent.org/summa/1020.htm):
   every existing thing has existence and perfections as goods; God's will
@@ -39,6 +38,15 @@ source claims or pinned passage records:
   divine will is the cause of things; divine goodness is a reason for willing
   other things, and natural or essential causation is not freely interchangeable
   with an act of will.
+
+The pinned Latin readings of I q.19 aa.3–4 and q.20 a.2 now support the
+self-willing and recipient-willing premises. The self-case still needs to
+identify divine goodness with the selected `GOOD_4` respect, and the
+recipient case still needs causation through will. The source records and
+scope of the third reply are linked in the
+[willing](../../corpus/attempts/16fbb043-05cc-43cc-a944-9c9a33c4cf7d.json)
+and [love](../../corpus/attempts/e551ce3e-a8db-40c4-bbca-e9fbb84be9d7.json)
+reading records.
 
 The argument **does not** say that God loves irrational creatures with
 friendship, loves all recipients in the same degree, approves of moral

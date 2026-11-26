@@ -1,0 +1,10 @@
+{
+  "id": "f4bcc494-ee4f-436d-bb64-7cbcdf877298",
+  "label": "Intellectual and voluntary production supports willing a creature its esse",
+  "subject_kind": "claim",
+  "subject_id": "e9ec97c2-ecf7-414e-906d-c15e7de65888",
+  "predicate": "supports",
+  "object_kind": "statement",
+  "object_id": "a94c5dfc-c722-49fe-a242-dd39409b079d",
+  "note": "This is the positive premise q.20 a.2 uses for the move from caused esse to willed esse. The route's generic CausesIn and HasWill do not encode causation through will. This passage alone also leaves the recipient-directed step to q.20 a.2."
+}

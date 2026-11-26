@@ -1,0 +1,33 @@
+{
+  "snapshot": {
+    "source_id": "c77377cf-501b-56c6-be40-b518e9aad101",
+    "edition_urn": "http://scta.info/resource/TAca84-d1e180/cod-cnLxE4",
+    "language": "lat",
+    "repository": "scta-texts/TAca84",
+    "revision": "f9065dc8ce7bc790b8c972e49ee19d661f028be6",
+    "path": "TAca84-d1e180/cod-cnLxE4_TAca84-d1e180.xml",
+    "source_url": "https://raw.githubusercontent.com/scta-texts/TAca84/f9065dc8ce7bc790b8c972e49ee19d661f028be6/TAca84-d1e180/cod-cnLxE4_TAca84-d1e180.xml",
+    "git_blob_sha": "7d3f2eeb719db256de1657659dd3256ccf57d933",
+    "license": "CC BY-NC-SA 4.0"
+  },
+  "passages": [
+    {
+      "id": "dad3f3ea-b1ed-411d-86dc-579a877c1221",
+      "label": "Thomas Aquinas, Summa theologiae, I q.26 a.1",
+      "locator": "I q.26 a.1",
+      "claim_locator_prefixes": [
+        "I q.26 a.1 "
+      ],
+      "tei_xml_id": "TAca84-d1e180-Dd1e148"
+    },
+    {
+      "id": "68394803-7eab-41d2-ab58-6175561a9c1d",
+      "label": "Thomas Aquinas, Summa theologiae, I q.26 a.2",
+      "locator": "I q.26 a.2",
+      "claim_locator_prefixes": [
+        "I q.26 a.2 "
+      ],
+      "tei_xml_id": "TAca84-d1e180-Dd1e271"
+    }
+  ]
+}

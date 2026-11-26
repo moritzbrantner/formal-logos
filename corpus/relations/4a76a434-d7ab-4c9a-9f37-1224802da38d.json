@@ -1,0 +1,10 @@
+{
+  "id": "4a76a434-d7ab-4c9a-9f37-1224802da38d",
+  "label": "Knowability according to act supports the measured inequality",
+  "subject_kind": "claim",
+  "subject_id": "3c65e0cb-f991-42e8-8cb3-e65435e47a82",
+  "predicate": "supports",
+  "object_kind": "statement",
+  "object_id": "7921f9c8-81f4-4af5-b945-d98787d12f42",
+  "note": "The text supplies the general in-act criterion for intrinsic knowability. The model requires a cross-measure inequality actDegree y ≤ knowability y for every y in one preorder. The article supplies no common ordered scale or rule identifying its two degrees in that scale."
+}

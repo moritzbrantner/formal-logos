@@ -1,0 +1,19 @@
+{
+  "id": "e551ce3e-a8db-40c4-bbca-e9fbb84be9d7",
+  "label": "Aquinas on willing a creature's esse and directing creatures to ends",
+  "statement_ids": [
+    "a94c5dfc-c722-49fe-a242-dd39409b079d",
+    "123d394b-11ce-449a-a8b6-7fda5a254a6d",
+    "7f6a2e91-4924-4488-8173-03d1dabb222b"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "ST I q.20 a.2 co. derives willing a creature's esse to it on the basis of q.19 a.4's will as cause. Its ad 3 orders irrational creatures to rational creatures and God under quasi-desire. That reply does not assert the exclusive denial of willing a creature's esse to it, nor specify the typed esse-indexed ordering of 7f6a2e91 as a separate thesis. ST I q.22 aa.1–2 puts all individuals under the ordering of the universal first cause, with providence in intellect and presupposing a willed end. The chosen generic causation relations leave acting through will open in both routes.",
+  "blocker": "Make causation through will explicit in applications of the two claims. For love, preserve the difference between a good willed to a creature and that creature being ordered to another. For providence, preserve the distinction between the plan and execution.",
+  "evidence": [
+    "e9ec97c2-ecf7-414e-906d-c15e7de65888",
+    "78b94fbf-e025-4084-a529-2102fd8b98a8",
+    "7ab92b2d-2471-43f6-af1b-a8dee675ec50"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "9d6f93e5-d6ac-4bae-b892-e2d9e3e86029",
+  "label": "Divine self-comprehension does not supply participant comprehension",
+  "statement_ids": [
+    "06410834-141f-4035-8a30-14f8a18c3139"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "rejected",
+  "summary": "Read the pinned Leonine witness at ST I q.14 a.3 co. and ad 1–2. The object is God himself. Aquinas concludes that God knows himself as perfectly as he is knowable, because his power to know matches his actuality of being. Ad 1 distinguishes inclusion of another from cognitive self-comprehension. Nothing in this article distributes comprehension to each actual participant of a chosen source. The related q.12 claims document the qualitative criterion and the created-knower limit.",
+  "blocker": "Test the proper-knowledge argument of I q.14 a.6 separately. A participant route needs object-specific knowledge at the participant's own knowability and an application to the same selected source, rather than just divine self-knowledge.",
+  "evidence": [
+    "3c65e0cb-f991-42e8-8cb3-e65435e47a82",
+    "ba924bce-a588-4dd5-b400-e7dad76d99ba"
+  ]
+}
