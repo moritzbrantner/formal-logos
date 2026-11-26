@@ -11,7 +11,7 @@
   ],
   "kind": "derivation",
   "outcome": "succeeded",
-  "summary": "On a populated atom type an exact supplied assumption set is consistent iff no initial strict step has a weak return path. The derived predecessor-set rank validates every member and witnesses an underivable strict self-sequent. In a consistent set exact strict partial derivability is a path with a strict step. These results give conditional arguments for both target premises on the same S. Semantic review at 0be519f7 accepted the characterizations and required that the population condition be registered as an explicit premise, since the empty atom type has no sequent to witness consistency. On two fixed labels, weakening a strict full assumption removes the map, while adding a weak reverse assumption keeps the map and destroys consistency. The existing infinite witness still permits descent. See docs/notes/distinct-dependence-strict-ground-route.md#testing-a-supplied-plg-theory.",
+  "summary": "On a populated atom type an exact supplied assumption set is consistent iff no initial strict step has a weak return path. The derived predecessor-set rank validates every member and witnesses an underivable strict self-sequent. In a consistent set exact strict partial derivability is a path with a strict step. These results give conditional arguments for both target premises on the same S. Semantic review at 0be519f7 accepted the characterizations and required that the population condition be registered as an explicit premise, since the empty atom type has no sequent to witness consistency. On two fixed labels, weakening a strict full assumption removes the map, while adding a weak reverse assumption keeps the map and destroys consistency. The existing infinite witness still permits descent. The independent negation tests in TruthCore/Models/SelectedPlgNegations.lean favor population for a witnessed, totally labelled application. They distinguish literal modal co-existence (no consistent universal map in directedNature) from causal supply, and show that explosion can mask a missing path on the same edge. The note records the provisional judgment and revision test for each premise. See docs/notes/distinct-dependence-strict-ground-route.md#testing-a-supplied-plg-theory.",
   "blocker": "The root consumers leave S and the labelling arbitrary. There is no independent existence-fact presentation to test there. The next application needs one effect and labelled facts, an independently justified set including any weak assumptions, and warrant for interpreting each selected path as same-respect existential supply.",
   "evidence": [
     "ac062be2-1f2b-4481-8f91-852dcdd33bb7",
@@ -24,6 +24,7 @@
   ],
   "workers": [
     {"role": "author", "provider": "codex", "model": "gpt-6.2-sol", "effort": "high", "date": "2026-11-26", "pr": "PR-2025"},
-    {"role": "repair", "provider": "codex", "model": "gpt-6.2-sol", "effort": "high", "date": "2026-11-26", "pr": "PR-2025"}
+    {"role": "repair", "provider": "codex", "model": "gpt-6.2-sol", "effort": "high", "date": "2026-11-26", "pr": "PR-2025"},
+    {"role":"author","provider":"codex","model":"gpt-6.2-astra","effort":"high","date":"2026-11-26"}
   ]
 }
