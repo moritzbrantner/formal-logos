@@ -1,0 +1,11 @@
+{
+  "id": "2e062016-f3a5-4036-bff5-498e43fe0550",
+  "label": "Finite pair checks admit an untested MAXIME_ENS_1 universal giver",
+  "argument_id": "b5cf460a-1c6e-43e8-8226-f8988c7e65f3",
+  "challenge_module": "TruthCore.Results.Aquinas.DeEnte.UnobservedGiver.Challenge",
+  "solution_module": "TruthCore.Results.Aquinas.DeEnte.UnobservedGiver.Solution",
+  "theorem": "TruthCore.Results.Aquinas.DeEnte.UnobservedGiver.finitePairGiverControl",
+  "comparator_config": "results/2e062016-f3a5-4036-bff5-498e43fe0550/comparator.json",
+  "status": "solution-present",
+  "description": "Use Option Nat as the rigid roster and keep every bearer in act at esse. In the baseline profile, the distinguished bearer none has rank zero and every other bearer has rank one. In each alternative with a different giver h, h has rank zero, none rank one and all other bearers rank two. An actual esse cause goes from smaller to larger rank, and that same comparison interprets MoreIn at the sole respect. A finite set of pairs mentions only finitely many bearers. Pick h outside both projections and different from none. The comparisons on the tested pairs are unchanged and h supplies none in the alternative. Both profiles thus fit the same finite yes/no record while retaining well-foundedness, closed-collection rootedness, causal ascent and their own unique actual maximal universal direct giver. Complete incoming lists at the selected giver and the traced bearer can provide the certificate in each profile. Those lists contain information beyond the tested pairs. The MoreIn assignment varies with the giver, so a separate observation that fixes the maximality of none is outside the compared record. The construction interprets the mode-unspecified actual esse relation and makes no application to real productive causes or divine naming."
+}

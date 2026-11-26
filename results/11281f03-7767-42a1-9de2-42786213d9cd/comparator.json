@@ -1,0 +1,13 @@
+{
+  "challenge_module": "TruthCore.Results.Aquinas.DeEnte.RankedGiverAudit.Challenge",
+  "solution_module": "TruthCore.Results.Aquinas.DeEnte.RankedGiverAudit.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Aquinas.DeEnte.RankedGiverAudit.rowAuditsOfRankedCertificates"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "enable_nanoda": true
+}

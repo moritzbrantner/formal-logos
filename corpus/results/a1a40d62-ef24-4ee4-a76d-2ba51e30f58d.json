@@ -1,0 +1,11 @@
+{
+  "id": "a1a40d62-ef24-4ee4-a76d-2ba51e30f58d",
+  "label": "Characterize finite pair certificates for a specified supplierless ancestor",
+  "argument_id": "2e79baa9-e2c8-4518-a2c1-d36504119610",
+  "challenge_module": "TruthCore.Results.Causality.SupplierPairAudit.Challenge",
+  "solution_module": "TruthCore.Results.Causality.SupplierPairAudit.Solution",
+  "theorem": "TruthCore.Results.Causality.SupplierPairAudit.finiteCertificate",
+  "comparator_config": "results/a1a40d62-ef24-4ee4-a76d-2ba51e30f58d/comparator.json",
+  "status": "solution-present",
+  "description": "For a fixed set of tested pairs, all allowed incoming pairs at the root must be tested and answered negatively, and a path to the target must consist entirely of tested positive edges. The greatest agreeing relation can add an untested allowed supplier at the root. The least retains just the tested positive edges. Each query checks one ordered pair, whereas a complete incoming-list audit gives one response containing all actual suppliers of that recipient. A finite certificate uses all allowed incoming pairs at the root and the edges of one finite actual path. On an infinite roster allowing every pair, finite certification of any specified root is impossible. On the natural-number roster with bearer 2 the only allowed supplier of bearer 0, querying (2, 0) and (0, 1) certifies zero as a supplierless ancestor of one in the one-edge example, even though any bearer is allowed to supply one."
+}

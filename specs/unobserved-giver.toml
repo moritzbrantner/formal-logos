@@ -1,0 +1,35 @@
+# Analyst formulation, attribution deferred.
+
+[batch]
+vocab = "TruthCore.Latin.Aquinas.DeEnte.UnobservedGiver"
+results = "TruthCore.Results.Aquinas.DeEnte.UnobservedGiver"
+
+[[statement]]
+id = "Finite actual esse pair checks can leave the MAXIME_ENS_1 universal giver unidentified"
+lean = "FinitePairGiverControl"
+definitions = [
+  "a2a8de58-42e0-5481-b7fb-848ae8602036",
+  "211a6432-8b8f-53ed-85e3-75173bb15b24",
+  "5766de66-8a37-5b04-aa65-9eec53319f50",
+  "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+  "8163859b-95b3-4dd2-8a69-541bd332f32f",
+  "23ae8d63-1351-4e7c-9ab1-ed85d9695b22",
+  "c15c1634-6d70-4ecb-8b5b-5592df955223",
+  "5b19527d-9418-441e-820c-3c659ba7cb12",
+  "05a2afda-c654-5f6b-a0f7-796c5dc1be2e",
+]
+disambiguations = [
+  "4f1d0cf6-88ba-59e3-814d-01450c2bf282",
+  "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+  "1795a62e-f78b-5f5b-94e7-9e7490824811",
+]
+paraphrase = """On the same countably infinite roster of actual bearers, each choice of giver defines a ranked profile with well-founded actual esse causation and rooted closed collections. At the sole respect, esse, every actual cause is strictly more in esse than its recipient. The selected giver is the unique maximal bearer, directly gives every other bearer its esse, and is every bearer's unique supplierless ancestor. Each bearer has a finite certificate using complete incoming lists for that ancestor. For every finite set of ordered pairs on the baseline profile, a completion with a different giver agrees on every tested actual esse edge and non-edge. The completion's giver appears in neither projection of the tested pairs and directly gives the baseline giver its esse. The baseline giver therefore ceases to be its own supplierless ancestor in that completion."""
+
+[[argument]]
+id = "Finite pair checks admit an untested MAXIME_ENS_1 universal giver"
+theorem = "finitePairGiverControl"
+premises = []
+conclusion = "Finite actual esse pair checks can leave the MAXIME_ENS_1 universal giver unidentified"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Choose a giver outside the finite union of both projections and the baseline giver, then compare ranks on the tested pairs"
+meaning = """Use Option Nat as the rigid roster and keep every bearer in act at esse. In the baseline profile, the distinguished bearer none has rank zero and every other bearer has rank one. In each alternative with a different giver h, h has rank zero, none rank one and all other bearers rank two. An actual esse cause goes from smaller to larger rank, and that same comparison interprets MoreIn at the sole respect. A finite set of pairs mentions only finitely many bearers. Pick h outside both projections and different from none. The comparisons on the tested pairs are unchanged and h supplies none in the alternative. Both profiles thus fit the same finite yes/no record while retaining well-foundedness, closed-collection rootedness, causal ascent and their own unique actual maximal universal direct giver. Complete incoming lists at the selected giver and the traced bearer can provide the certificate in each profile. Those lists contain information beyond the tested pairs. The MoreIn assignment varies with the giver, so a separate observation that fixes the maximality of none is outside the compared record. The construction interprets the mode-unspecified actual esse relation and makes no application to real productive causes or divine naming."""

@@ -12,9 +12,12 @@ public import TruthCore.Latin.Aquinas.DeEnte.EsseSource
 public import TruthCore.Latin.Aquinas.DeEnte.ExtrinsicSource
 public import TruthCore.Latin.Aquinas.DeEnte.FiniteEsseRootAudit
 public import TruthCore.Latin.Aquinas.DeEnte.FirstIdentityExercise
+public import TruthCore.Latin.Aquinas.DeEnte.IdentityPairAudit
 public import TruthCore.Latin.Aquinas.DeEnte.IdentitySupplierSingleton
+public import TruthCore.Latin.Aquinas.DeEnte.RankedGiverAudit
 public import TruthCore.Latin.Aquinas.DeEnte.ReceivedOrUnderived
 public import TruthCore.Latin.Aquinas.DeEnte.RootInterface
+public import TruthCore.Latin.Aquinas.DeEnte.UnobservedGiver
 public import TruthCore.Latin.Aquinas.InMetaphysicam.BookII
 public import TruthCore.Latin.Aquinas.InMetaphysicam.BookIX
 public import TruthCore.Latin.Aquinas.InMetaphysicam.BookXII

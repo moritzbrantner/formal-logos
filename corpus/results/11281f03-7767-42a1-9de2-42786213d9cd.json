@@ -1,0 +1,11 @@
+{
+  "id": "11281f03-7767-42a1-9de2-42786213d9cd",
+  "label": "Recover finite complete-list root audits from ranked pair certificates",
+  "argument_id": "496d212c-f3d5-4e76-ac27-c662b476d72c",
+  "challenge_module": "TruthCore.Results.Aquinas.DeEnte.RankedGiverAudit.Challenge",
+  "solution_module": "TruthCore.Results.Aquinas.DeEnte.RankedGiverAudit.Solution",
+  "theorem": "TruthCore.Results.Aquinas.DeEnte.RankedGiverAudit.rowAuditsOfRankedCertificates",
+  "comparator_config": "results/11281f03-7767-42a1-9de2-42786213d9cd/comparator.json",
+  "status": "solution-present",
+  "description": "The actual relation agrees with its own answers. For the same actual bearer and each actual recipient the certificate therefore gives actual supplierlessness and a finite path. The existing positive complete-list theorem constructs a finite audit in its own broader frame retaining this very source. The number of pair queries and the number of complete incoming lists describe different acts of observation. This route supplies the existing local certificate premise used by the closed-collection argument."
+}

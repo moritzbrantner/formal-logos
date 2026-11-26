@@ -1,0 +1,14 @@
+{
+  "id": "f58d91ff-b5e5-4b99-b73e-0947a102848b",
+  "label": "One fixed actual maximum can be certified as the same root of every recipient by testing its gift",
+  "paraphrase": "Fix one actual esse relation, the actuality of each bearer and the comparison MoreIn at esse on the same roster. Every actual edge is eligible: its donor is distinct, actual and strictly higher at esse than the actual recipient. Some one actual maximum s has the following property for every actual x. All subrelations of the eligible pairs agreeing with the actual answer about (s,x) make s a supplierless ancestor of x. For x = s the test uses the empty set of questions. For every distinct recipient it uses only the direct pair (s,x). This is availability conditional on the fixed admissibility rule and the actual answers.",
+  "lean_declaration": "TruthCore.Latin.Aquinas.DeEnte.RankedGiverAudit.RankedGiverCertificates",
+  "definition_ids": [
+    "5b19527d-9418-441e-820c-3c659ba7cb12",
+    "c15c1634-6d70-4ecb-8b5b-5592df955223",
+    "3e9fb252-3f0b-4ed4-a683-7c36d255c357",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"
+  ]
+}

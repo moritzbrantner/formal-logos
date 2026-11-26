@@ -1,0 +1,19 @@
+[batch]
+vocab = "TruthCore.Causality.SupplierPairAudit"
+results = "TruthCore.Results.Causality.SupplierPairAudit"
+
+[[statement]]
+id = "A finite pair audit certifies a root ancestor exactly with finitely many eligible suppliers"
+lean = "FiniteCertificateCriterion"
+paraphrase = "Fix a bearer roster, an allowed supplier relation, an actual subrelation, a proposed root and a target. A finite set of yes/no supplier-pair queries certifies that same bearer as a supplierless ancestor exactly when it actually is one and has only finitely many allowed incoming suppliers. The alternatives are all subrelations of the allowed relation that agree with the actual answers. A zero-edge path is permitted when the root is the target."
+definitions = ["3e9fb252-3f0b-4ed4-a683-7c36d255c357", "c15c1634-6d70-4ecb-8b5b-5592df955223", "05a2afda-c654-5f6b-a0f7-796c5dc1be2e"]
+
+[[argument]]
+id = "Characterize finite pair certificates for a specified supplierless ancestor"
+theorem = "finiteCertificate"
+comparator_theorems = ["certificateAt", "unrestrictedInfiniteRoster", "boundedRootMaskControl", "completeListAuditOfPairCertificate"]
+premises = []
+conclusion = "A finite pair audit certifies a root ancestor exactly with finitely many eligible suppliers"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Use the greatest agreeing admissible relation for supplierlessness and the least agreeing admissible relation for ancestry"
+meaning = "For a fixed set of tested pairs, all allowed incoming pairs at the root must be tested and answered negatively, and a path to the target must consist entirely of tested positive edges. The greatest agreeing relation can add an untested allowed supplier at the root. The least retains just the tested positive edges. Each query checks one ordered pair, whereas a complete incoming-list audit gives one response containing all actual suppliers of that recipient. A finite certificate uses all allowed incoming pairs at the root and the edges of one finite actual path. On an infinite roster allowing every pair, finite certification of any specified root is impossible. On the natural-number roster with bearer 2 the only allowed supplier of bearer 0, querying (2, 0) and (0, 1) certifies zero as a supplierless ancestor of one in the one-edge example, even though any bearer is allowed to supply one."
