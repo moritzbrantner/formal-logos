@@ -4,15 +4,22 @@
   "date": "2026-11-26",
   "statement_ids": [
     "fbd0a6d3-5ca6-4f17-8651-ed0d6989c747",
-    "83d8a0e0-9866-48d3-b582-9082c9cfeac8"
+    "83d8a0e0-9866-48d3-b582-9082c9cfeac8",
+    "0dd78706-e6f7-40a6-9232-eac3df1c0ae9",
+    "eeccc832-02c7-426a-bb16-d269260751be",
+    "43651417-cd19-43d7-8f70-8def61acb0f0",
+    "bf7b9a2d-d98f-49a4-a236-c963c4830693"
   ],
   "kind": "derivation",
   "outcome": "succeeded",
-  "summary": "Admissible withholding cells supply per-effect accessible withholding in the existing NAR route. Dstit production excludes fixity under the world alignment used in the proof. The same actual rational exercise plus a feasible withholding cell with aligned worlds and invariant setup supplies WilledTwoWayAt. The matched finite assignment preserves dstit under restriction of metaphysical access while retaining fixity, so historical variation alone was rejected as a test of NECESSITATE_5. The fixed ThroughWill and BenefitPlanWitness model preserves rational exercise and a governing beneficiary requirement with no two-way giving. The exclusive-output control rejects the inference from per-recipient ability to a jointly noncreating choice.",
-  "blocker": "An admissible controlled cell that jointly withholds all creation under the same setup remains open. For application to NAR, identify the selected universal giver as the actual root in the same grounding profile.",
+  "summary": "Admissible withholding cells supply per-effect accessible withholding in the existing NAR route. Dstit production excludes fixity under the world alignment used in the proof. The same actual rational exercise plus a feasible withholding cell with aligned worlds and invariant setup supplies WilledTwoWayAt. The matched finite assignment preserves dstit under restriction of metaphysical access while retaining fixity, so historical variation alone was rejected as a test of NECESSITATE_5. The fixed ThroughWill and BenefitPlanWitness model preserves rational exercise and a governing beneficiary requirement with no two-way giving. The exclusive-output control rejects the inference from per-recipient ability to a jointly noncreating choice. At the NAR inputs, (b2) excludes a withholding cell for a NECESSARY_2 actual concretum grounded by the selected root whenever its representative maps to an accessible world retaining that root. The root and reach clauses of the common-root premise then connect the cell exclusion and both STIT inputs to NAR.",
+  "blocker": "The necessary-recipient test is formally resolved under (b2). The application still needs evidence for an admissible withholding cell for this recipient or for a governing requirement fixing its giving, and the identity of the proposed universal giver with the actual root of the same profile. Joint refraining requires its own witness.",
   "evidence": [
     "5ce72737-3acd-4b56-994f-9292d96e55b5",
-    "PR-2090"
+    "PR-2090",
+    "a8fe73bf-f45e-4e17-b14b-5f3268682d4e",
+    "5b4d6b33-0b00-4b93-8878-5b05ff6c18fa",
+    "PR-2095"
   ],
   "workers": [
     {
@@ -30,22 +37,34 @@
       "effort": "high",
       "date": "2026-11-26",
       "pr": "PR-2090"
+    },
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2095"
     }
   ],
   "current_assessment": {
     "date": "2026-11-26",
     "statement_ids": [
       "fbd0a6d3-5ca6-4f17-8651-ed0d6989c747",
-      "83d8a0e0-9866-48d3-b582-9082c9cfeac8"
+      "83d8a0e0-9866-48d3-b582-9082c9cfeac8",
+      "0dd78706-e6f7-40a6-9232-eac3df1c0ae9",
+      "eeccc832-02c7-426a-bb16-d269260751be",
+      "43651417-cd19-43d7-8f70-8def61acb0f0",
+      "bf7b9a2d-d98f-49a4-a236-c963c4830693"
     ],
-    "scope": "Choice, fixity and same-setup withholding in the universal rational giving and NAR routes.",
-    "assessment": "The strongest positive finding is compatibility of the modeled rational exercise with an admissible cell that guarantees withholding from a fixed setup. Rational exercise and recipient-directed governing content also admit fixed giving in the reused control. Rational necessitarianism survives on the account that the admissible complete outputs all create. Pointwise withholding and joint refraining need separate warrant.",
-    "next_test": "Warrant admissibility and agential control of a jointly noncreating output with the same intrinsic states and external conditions, or identify the rationally necessary requirement that rules it out. For NAR, retain the actual root identity in the same grounding profile.",
-    "note": "docs/notes/nar-derivation.md#choice-cells-and-the-scope-of-withholding-2059",
-    "reviewed_revision": "712d29a44bd19dfc734a5fa90a657b6a6508b443",
+    "scope": "Recipient-specific STIT withholding at the NAR inputs, with the same-setup and joint-refraining questions from PR-2090.",
+    "assessment": "The controlled rational exercise supports the structural compatibility of a fixed setup and an admissible withholding cell for a contingent recipient. At a NECESSARY_2 recipient directly grounded by the same actual root, (b2) requires giving where the mapped representative would withhold it. The mixed-mode rival preserves rational exercise and contingent withholding at the world level by keeping the necessary recipient fixed. It has a structural witness, and the application of either account to the actual universal giver remains open.",
+    "next_test": "Identify the proposed giver with the actual root of the same profile. Warrant a withholding cell with an accessible representative retaining that giver for the putatively necessary recipient, or a governing requirement that fixes giving to that recipient in the represented outputs. A separate jointly noncreating cell with the same intrinsic states and external conditions would bear on joint refraining.",
+    "note": "docs/notes/nar-derivation.md#the-necessary-recipient-test-at-the-nar-inputs",
+    "reviewed_revision": "980293ad50e513b70119c1c3e208f4a194d254d8",
     "review": "unreviewed",
     "publication": "published",
-    "evidence": "Draft PR-2090 and the compiled worldAlignment, rootWithholdingAlignment, governingBenefitWithFixedGiving, pointwiseNotJoint and tiedNoEmptyChoice declarations. Independent semantic review is pending.",
-    "supersedes": "None. This is a new typed comparison and preserves the earlier ThroughWill and NAR assessments."
+    "evidence": "Draft PR-2095 at the proof revision recorded here. Both results passed local binding and Comparator checks. Independent semantic challenge is pending.",
+    "supersedes": "Refines PR-2090’s NAR next test beyond root identity by identifying the scoped (b2) conflict. Retains the earlier same-setup finding and the separate joint-refraining question."
   }
 }
