@@ -1,0 +1,11 @@
+{
+  "id": "cdda0f09-97ae-4d1e-9323-a638a3795ad0",
+  "label": "Fixed-bearer act and fact substitution controls checked",
+  "argument_id": "c1613f21-428e-496d-8d1d-642401715844",
+  "challenge_module": "TruthCore.Results.Ontology.EssenceActFactInvariance.Challenge",
+  "solution_module": "TruthCore.Results.Ontology.EssenceActFactInvariance.Solution",
+  "theorem": "TruthCore.Results.Ontology.EssenceActFactInvariance.fixedBearerControls",
+  "comparator_config": "results/cdda0f09-97ae-4d1e-9323-a638a3795ad0/comparator.json",
+  "status": "solution-present",
+  "description": "Diagnostic at 823d4312 and 565ccd6c. The changed content-based judgment defeats inference from coextension and unconditional exercise membership to existence membership on that formal reading. The original conditional profile rejects both unconditional contents. The extensional proof at 565ccd6c remains valid on its stated type. The control supplies no independent warrant for unconditional exercise or for the application of an extension criterion to the actual nature."
+}
