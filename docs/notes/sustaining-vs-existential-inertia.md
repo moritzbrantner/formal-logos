@@ -1668,15 +1668,20 @@ the same received-esse bearer, earlier presence, original origin and absence
 of independently specified loss inducers fixed. The matched surrogate uses
 the first input as earlier presence, the second as the current operation and
 the output as later presence. In `Mechanism.responsive` the output reads
-both inputs. In `Mechanism.background` it reads the unchanged context and
-tracks the past in the fixed no-inducer case. `Mechanism.single_channel_contrast` checks their agreement under natural
-observation. With both background bits true and the current operation forced
-off, the responsive model loses the output and the background model retains
-it. The old positive inertia account supplies the basis for the second
-hypothesis, namely prior presence plus an independently defended
-inducer-free persistence law. A mere latent lookup is evidence of formal
-underdetermination, while the persistence law does the explanatory work in
-the inertia interpretation.
+both inputs. In `Mechanism.background` it computes `u.first && u.second`
+from the unchanged context: it tracks the earlier-presence bit only when the
+second background bit is true, and at `⟨true, false⟩` it returns false
+despite earlier presence. The model has no loss-inducer predicate.
+`Mechanism.single_channel_contrast` checks their agreement under natural
+observation. At the selected all-true context, the background output retains
+the earlier-presence value after the cut, while the responsive model loses
+it. Interpreting that response as inertia requires independent grounds for
+applying the persistence law to this bearer and interval, including grounds
+for treating withdrawal as inducer-free. The old positive inertia account
+proposes such a law; its application to existential loss remains the open
+question of the preceding section. A mere latent lookup is evidence of
+formal underdetermination, while the persistence law would do the
+explanatory work in the inertia interpretation.
 
 The missing bridge would map the natural and cut responses to two admissible
 histories of one `CausalityFrame`, agreeing about earlier presence
