@@ -719,7 +719,8 @@ unsatisfiable. The three premises supply the cell, accessibility with the
 same root present, and giving at that same world. This contradiction needs
 no common-root premise. Common-root reach is needed for the NAR inference:
 every necessary actual concretum either is the common root or is directly
-grounded by it and so falls under the incompatibility. The contradiction is conditional on the existence of this pair. [Checked incompatibility](../../TruthCore/Results/Causality/GivingChoiceNecessary/Solution.lean)
+grounded by it and so falls under the incompatibility.
+[Checked incompatibility](../../TruthCore/Results/Causality/GivingChoiceNecessary/Solution.lean)
 
 The original `0dd78706` and `46a468b2` also yield the accessible-world
 premise `fbd0a6d3`, which conflicts with (b2) given the same pair. The
@@ -761,7 +762,7 @@ proof leaves the choice open:
   itself leaves open whether this root is the giver in every world.
 - **The pair's existence.** A putatively necessary-through-another case
   needs evidence of NECESSARY_2 existence and direct grounding by this
-  actual root at `w). An accessible absence world would challenge that
+  actual root at `w`. An accessible absence world would challenge that
   necessity. Evidence of a mediated dependence alone leaves the direct
   edge to be shown. Independent reasons to exclude every such pair
   would also resolve the conflict.
