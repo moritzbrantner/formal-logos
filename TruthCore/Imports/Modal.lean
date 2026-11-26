@@ -64,4 +64,5 @@ public import TruthCore.Modal.SimplicityCollapse
 public import TruthCore.Modal.StandardCorrespondenceCertificate
 public import TruthCore.Modal.TResearch
 public import TruthCore.Modal.TemporalHistory
+public import TruthCore.Modal.WillChoiceCensus
 public import TruthCore.Modal.WorldwiseExplanation
