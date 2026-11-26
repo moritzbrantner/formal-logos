@@ -1,0 +1,16 @@
+{
+  "id": "c141f1dc-f6bd-45a8-a028-b3b8f42b21fb",
+  "label": "Aquinas, I q.14 a.6 co. and ad 1: God knows creatures in their own natures through his essence",
+  "statement_id": "9671be2f-191d-4c1e-b3c5-6faed1b34f28",
+  "source_id": "c77377cf-501b-56c6-be40-b518e9aad101",
+  "locator": "I q.14 a.6 co. and ad 1",
+  "interpretation": "Aquinas distinguishes proper knowledge of what differentiates creatures from knowledge of being in common. His explanation relies on the divine essence containing creaturely perfections, including differentiating perfections, in a higher manner. The first reply distinguishes the mode of the knower from the nature of the known thing.",
+  "status": "formalized",
+  "attribution": "The passage states that through his own essence God knows creatures in their own natures and in what distinguishes them from one another, which is the premise.",
+  "definition_ids": [
+    "0fa78db2-05d6-5c3e-b8c9-04124ccc5776",
+    "88bc0655-9dd0-5879-ba1b-3fca9f86c1f4",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "183b48d2-1753-583d-aef9-4199cff86231"
+  ]
+}

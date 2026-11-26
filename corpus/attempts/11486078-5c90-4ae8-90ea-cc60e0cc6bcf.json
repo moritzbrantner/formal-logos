@@ -1,0 +1,17 @@
+{
+  "id": "11486078-5c90-4ae8-90ea-cc60e0cc6bcf",
+  "label": "Aquinas on first-causal goodness and the distinction between actual and due",
+  "statement_ids": [
+    "ff35f485-9ac3-5160-b338-b1dfcdf3b0b5",
+    "060e7a1a-6c3d-5c8f-b67b-2d0a78044642",
+    "76f32b56-36b5-5a42-b5cb-efa834c27e39"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "I q.6 a.1 gives an application of the goodness-desirability account to the first efficient cause, taking the likeness of cause and effect as a premise. I q.6 a.3 co. distinguishes constitutive being, additions required for perfect operation and attainment of a further end. Ad 2–3 separates a creature's goodness in having being from goodness by essence and distinguishes several sources of added goodness. None says that every perfection actually possessed is due under the bearer’s supplied form and end. Necessity for perfect operation applies to the second category described in the body.",
+  "blocker": "To infer AllActualitiesDue, defend independent grounds for excluding actual non-due perfections in the fixed form-and-end profile. The article itself gives a narrower classification of perfections.",
+  "evidence": [
+    "ca4e711d-ed9d-4345-8780-70d1a53b915d"
+  ]
+}

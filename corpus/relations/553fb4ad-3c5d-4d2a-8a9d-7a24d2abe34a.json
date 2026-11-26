@@ -1,0 +1,10 @@
+{
+  "id": "553fb4ad-3c5d-4d2a-8a9d-7a24d2abe34a",
+  "label": "Aquinas I q.16 a.5 ad 1 supports Veracity GodTruthPresent",
+  "subject_kind": "claim",
+  "subject_id": "8b0b86f4-e2d0-4c54-89bb-9d428445358a",
+  "predicate": "supports",
+  "object_kind": "statement",
+  "object_id": "bc7130d0-176e-4cb6-bc0b-5023b1ede4da",
+  "note": "The reply supplies knowledge of complex contents and its manner. GodTruthPresent ranges over every true Prop and uses the primitive Present relation for the same GOD_4 bearer. It still needs a mapping from Aquinas's complex intelligibles to that entire proposition carrier and from the single act of knowing to the modeled present-to relation."
+}

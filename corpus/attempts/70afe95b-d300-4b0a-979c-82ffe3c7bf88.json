@@ -1,0 +1,15 @@
+{
+  "id": "70afe95b-d300-4b0a-979c-82ffe3c7bf88",
+  "label": "Aquinas on the material composite’s receiving and perfecting principles",
+  "statement_ids": [
+    "cc0f7879-dba8-5b47-ab8d-3905d1e518a6"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "I q.3 a.2 co. uses the participation of matter in form to distinguish the roles of the two in a composite. Its ad 3 separates matter-based individuation and a form subsisting of itself.",
+  "blocker": "Connect the material principles to ConstituentOf on the same Principle carrier and show that the encoded witnesses are numerically distinct.",
+  "evidence": [
+    "b1ec5d01-ed3a-4961-9180-966bd1351a43"
+  ]
+}

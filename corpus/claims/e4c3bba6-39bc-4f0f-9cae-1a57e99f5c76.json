@@ -1,0 +1,15 @@
+{
+  "id": "e4c3bba6-39bc-4f0f-9cae-1a57e99f5c76",
+  "label": "Aquinas, I q.12 a.4 co.: Natural knowledge follows the knower’s mode of being",
+  "statement_id": "38c69352-42c2-4738-9037-04cd62296ce6",
+  "source_id": "c77377cf-501b-56c6-be40-b518e9aad101",
+  "locator": "I q.12 a.4 co.",
+  "interpretation": "A knower’s nature governs what it can know by its natural power. The first reply allows an angel to know God naturally through a likeness present in the angel. The third reply allows a created intellect to be elevated by grace to see the divine essence.",
+  "status": "formalized",
+  "attribution": "The passage states that if a thing’s mode of being exceeds the knower’s own, knowledge of the thing according to that mode exceeds the knower’s natural power, which is the premise.",
+  "definition_ids": [
+    "88bc0655-9dd0-5879-ba1b-3fca9f86c1f4",
+    "183b48d2-1753-583d-aef9-4199cff86231",
+    "d26fac6c-075b-4abb-a6c5-6d9b42a98357"
+  ]
+}

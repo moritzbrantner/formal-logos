@@ -1,0 +1,15 @@
+{
+  "id": "ca4e711d-ed9d-4345-8780-70d1a53b915d",
+  "label": "Aquinas, I q.6 a.1 co.: God as first efficient cause is desirable through his effects",
+  "statement_id": "b687a994-dec1-4a8e-9b5e-36dfc2abb394",
+  "source_id": "c77377cf-501b-56c6-be40-b518e9aad101",
+  "locator": "I q.6 a.1 co.",
+  "interpretation": "An effect's perfection bears a likeness to the agent, so what is desirable in the agent is the participation of that likeness. The second reply allows a natural appetite without cognition, alongside sensible and rational cases.",
+  "status": "formalized",
+  "attribution": "The passage states that goodness belongs preeminently to God as first efficient cause: effects seek their own perfections, and in doing so desire a likeness of their cause, which is the premise.",
+  "definition_ids": [
+    "678b9306-81f1-5c61-ab90-6e4594395b50",
+    "7e0de556-bdca-41d6-83b6-ee047408201b",
+    "a3b24e0c-c984-47a6-85c4-707fa24a5af0"
+  ]
+}

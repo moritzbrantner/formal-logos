@@ -1,0 +1,18 @@
+{
+  "id": "c4fa3167-d1d4-4364-8fe6-422e0896a22e",
+  "label": "Aquinas on free giving, conservation and contingent absence",
+  "statement_ids": [
+    "d1593e5c-38ff-46a9-9bbb-cede6f825bc9",
+    "f0ac2f76-62fe-4b9b-8427-e0ca8d7a3cef",
+    "94393b5b-8950-4a52-aef1-50cd09232e64",
+    "95bf8780-0e3c-49ba-b636-2274e2997a30"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "The offline Dominican translation of I q.104 a.3 co. gives God's free production and preservation of creatures and says withdrawal of continual giving would annihilate them. Ad 1 and ad 3 distinguish withdrawal from an action with non-being as its direct effect. The admitted SCTA revision has no q.104 witness and the existing New Advent pin covers a.1, so no new q.104 claim was registered. In the pinned Latin, I q.19 a.10 co. and ad 2 provides the narrower divine freedom as to whether a thing is. I q.19 a.7 ad 4 distinguishes suppositional fixity of the will from absolute necessity. I q.19 a.8 co. and replies ascribe contingency or necessity of effects to the efficacy of the divine will and different proximate causes. None states a principle grounding global modal possibility in a bearer’s power or deriving per-creature power from a power for joint absence.",
+  "blocker": "Match divine freedom to a fixed giver and indexed exercise of giving. A global absence inference additionally needs an explicit principle grounding joint possibility and a distribution principle for the same set of creatures. Direct q.104 claim work needs an admitted article-level witness.",
+  "evidence": [
+    "988f35e6-a728-4955-9561-bc8c266bde57"
+  ]
+}

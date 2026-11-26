@@ -1,0 +1,10 @@
+{
+  "id": "1884dc12-c2e7-4712-bd3a-3a80576ab2e2",
+  "label": "Aquinas I q.12 a.4 co. supports Nothing knows anything at a degree above its own degree of act",
+  "subject_kind": "claim",
+  "subject_id": "e4c3bba6-39bc-4f0f-9cae-1a57e99f5c76",
+  "predicate": "supports",
+  "object_kind": "statement",
+  "object_id": "7db53cde-911c-48ec-ab4f-054a00288148",
+  "note": "Aquinas gives a qualitative limit of natural power. The premise bounds each actual episode of knowing by the knower's total act on one preorder, including an elevated intellect in its elevated state. The passage leaves the commensurability and the transfer from natural power to total act under elevation open."
+}

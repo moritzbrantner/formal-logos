@@ -1,0 +1,10 @@
+{
+  "id": "bd4afaf2-4eb7-45b0-bce4-c68e36b5e0f7",
+  "label": "Aquinas I q.7 a.2 bears on the CREATURE_1 reception bridge",
+  "subject_kind": "claim",
+  "subject_id": "fe3c0586-d406-4035-a605-1c1bd65a0d04",
+  "predicate": "supports",
+  "object_kind": "statement",
+  "object_id": "ea2c4745-029d-48fb-a935-b1cb3c9e7f5d",
+  "note": "If a created form subsists apart from matter, Aquinas says that its esse is received and contracted to a determinate nature. The target needs a separately represented receiving principle for every CREATURE_1 bearer. The application requires a representation of that principle and its reception relation, in addition to the source’s contraction to a nature."
+}
