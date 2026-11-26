@@ -17,7 +17,8 @@
   "blocker": "For independent application, justify the primitive comparative and possession criteria at esse on the same bearer domain. The constructed representation assumes the possession rule and cannot independently warrant it. An externally supplied degree map needs calibration evidence of its own. Test an independently fixed strict pair across kinds and the proposed degree map. A coarse tie, reversal or incomparable null can decide the corresponding calibration for that map. See the six judgments and four endpoint cases in docs/notes/maximum-definition-fork.md, 2026-11-26.",
   "evidence": [
     "989b88d5-9f1a-4c70-babd-8a8b9e335bc7",
-    "PR-2027"
+    "PR-2027",
+    "PR-2039"
   ],
   "workers": [
     {
@@ -40,7 +41,8 @@
       "provider": "codex",
       "model": "gpt-6.2-astra",
       "effort": "high",
-      "date": "2026-11-26"
+      "date": "2026-11-26",
+      "pr": "PR-2039"
     }
   ]
 }

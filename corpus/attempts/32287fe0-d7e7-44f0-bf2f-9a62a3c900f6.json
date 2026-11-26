@@ -15,7 +15,8 @@
   "evidence": [
     "PR-1772",
     "PR-2024",
-    "PR-2027"
+    "PR-2027",
+    "PR-2039"
   ],
   "workers": [
     {
@@ -38,7 +39,8 @@
       "provider": "codex",
       "model": "gpt-6.2-astra",
       "effort": "high",
-      "date": "2026-11-26"
+      "date": "2026-11-26",
+      "pr": "PR-2039"
     }
   ]
 }
