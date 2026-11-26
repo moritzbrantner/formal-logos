@@ -7,7 +7,7 @@
   "date": "2026-11-26",
   "kind": "derivation",
   "outcome": "blocked",
-  "summary": "The ST I\u2013II q.1 a.2 support concerns agency for an end, potentially supplied by another. A trajectory ending at a drain does not by itself identify an intrinsic end of the thing's own form. The new capacity derivation takes local inclination directly. See docs/intellectual-appetite-source.md#intellectual-appetite-willing-and-self-operation-2026-11-26.",
+  "summary": "The ST I–II q.1 a.2 support concerns agency for an end, potentially supplied by another. A trajectory ending at a drain does not by itself identify an intrinsic end of the thing's own form. The new capacity derivation takes local inclination directly. See docs/intellectual-appetite-source.md#intellectual-appetite-willing-and-self-operation-2026-11-26.",
   "blocker": "Calibrate the relevant OperatesThrough witnesses as intrinsic operations with the end in the same respect.",
   "evidence": [
     "a4a6c33c-2efd-441a-a94d-f6ef01268636",
@@ -19,6 +19,13 @@
       "provider": "codex",
       "model": "gpt-6.2-sol",
       "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2031"
+    },
+    {
+      "role": "repair",
+      "provider": "claude",
+      "model": "claude-opus-5-5",
       "date": "2026-11-26",
       "pr": "PR-2031"
     }

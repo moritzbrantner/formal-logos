@@ -400,9 +400,12 @@ fixes the aspect explicitly. Given `GodHasIntellect`, it uses:
    same relation `InclinedTo` as the older proof. The narrower law is sufficient
    here without requiring comparable inclinations for other forms and bearers.
 3. `AppraisedInclinationIsWill` (`6f3f1c14`). The inclination is recognized as
-   HAS_WILL_1 on the same bearer. The premise carries the claim that the
-   orientation answers to the good under the apprehended aspect. Form-correlated
-   activity could otherwise have another explanatory ground. The classification
+   HAS_WILL_1 on the same bearer. Formally, the appraisal and the inclination
+   share only the form index: an inclination following the same form for an
+   independent reason also satisfies the antecedent. The interpretation on
+   which the orientation answers to the good *because* it is apprehended under
+   that aspect is the disputed evaluative step and remains open; encoding it
+   would need a typed condition that excludes mere co-occurrence under one form. The classification
    uses neither creaturely passive power nor a present episode as an antecedent.
 
 `godHasWillFromAppraisedForm` binds all four premises to the existing

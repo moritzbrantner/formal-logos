@@ -1,7 +1,7 @@
 {
   "id": "6f3f1c14-9d10-4bfa-bdc0-6dfae1d0554a",
-  "label": "Inclination following an intelligible form presenting a good counts as HAS_WILL_1",
-  "paraphrase": "Open analyst premise. If a GOD_4 bearer apprehends something as good under an intelligible form and has an inclination following that same form, it HAS_WILL_1. The recognition is substantive: the inclination must be toward the good under the apprehended aspect. The proposition uses the primitive possession predicate and does not posit a separate passive faculty or an actual episode.",
+  "label": "In a GOD_4, inclination following a form presenting a good counts as HAS_WILL_1",
+  "paraphrase": "Open analyst premise. If a GOD_4 bearer apprehends something as good under an intelligible form and has an inclination following that same form, it HAS_WILL_1. Formally, the appraisal and the inclination share only the form index. The interpretation on which the inclination answers to the good because it is apprehended under that aspect is recorded as open and is not encoded; mere co-occurrence under one form satisfies the antecedent. The proposition uses the primitive possession predicate and does not posit a separate passive faculty or an actual episode.",
   "lean_declaration": "TruthCore.Causality.IntellectualAppetite.AppraisedInclinationIsWill",
   "definition_ids": [
     "88f9f6e8-997b-5f7d-afa1-c501954c3807",
