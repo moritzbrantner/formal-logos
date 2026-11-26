@@ -8,7 +8,9 @@
     "TruthCore.Results.Causality.SelectedSourcePath.necessaryRootAncestor_of_sourcePath",
     "TruthCore.Results.Causality.SelectedSourcePath.oneStepForks_of_uniquePredecessor",
     "TruthCore.Results.Causality.SelectedSourcePath.diamondAllowsBranching",
-    "TruthCore.Results.Causality.SelectedSourcePath.commonSourceAllowsRegress"
+    "TruthCore.Results.Causality.SelectedSourcePath.commonSourceAllowsRegress",
+    "TruthCore.Results.Causality.SelectedSourcePath.ancestralForkCriterion",
+    "TruthCore.Results.Causality.SelectedSourcePath.ancestralEdgeControl"
   ],
   "permitted_axioms": [
     "propext",

@@ -1,0 +1,11 @@
+{
+  "id": "53348c1f-37d4-44b0-9ddf-07330c1a56e0",
+  "label": "Test one-step joining against a universal giver and a secondary esse cause",
+  "argument_id": "06ee9e53-0522-4b49-8bdb-3e8687c55db3",
+  "challenge_module": "TruthCore.Results.Aquinas.DeEnte.UniversalGiverFork.Challenge",
+  "solution_module": "TruthCore.Results.Aquinas.DeEnte.UniversalGiverFork.Solution",
+  "theorem": "TruthCore.Results.Aquinas.DeEnte.UniversalGiverFork.sameGiverCriterion",
+  "comparator_config": "results/53348c1f-37d4-44b0-9ddf-07330c1a56e0/comparator.json",
+  "status": "solution-present",
+  "description": "Causal ascent excludes any distinct actual cause of this maximal giver's esse. Every other actual recipient is given esse by it. An additional actual esse giver at that same recipient would form a fork with the maximum, which has no incoming supplier. Conversely, when all incoming gifts there are from the maximum, the complete cone consists only of the recipient and at most the maximum, so there is no distinct fork. A three-bearer control admits the maximum, ascent and a secondary efficient esse gift simultaneously. The formal edge records CausesIn in the esse respect with both actuality guards; applying the strict rule to that whole relation and interpreting an edge as immediate production are separate philosophical commitments. The conclusion poses no objection to secondary causes of another respect."
+}

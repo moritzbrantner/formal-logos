@@ -1,0 +1,15 @@
+{
+  "id": "b2337d92-cfcf-416c-af91-cd5d68a65f06",
+  "label": "A maximal universal giver and strict joins permit only its own esse gift at the recipient",
+  "paraphrase": "One actual maximal giver causes the esse of every distinct actual recipient. On the graph of these actual esse gifts, for each selected actual recipient every fork in its complete ancestry joins in one step if and only if every incoming gift to that recipient comes from this same giver. Which acts count as giving esse remains an application premise.",
+  "lean_declaration": "TruthCore.Latin.Aquinas.DeEnte.UniversalGiverFork.SameGiverForkCriterion",
+  "definition_ids": [
+    "a2a8de58-42e0-5481-b7fb-848ae8602036",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "9c6e4314-2e35-52ff-951e-db752a3c8ce2"
+  ],
+  "disambiguation_ids": [
+    "4f1d0cf6-88ba-59e3-814d-01450c2bf282"
+  ]
+}

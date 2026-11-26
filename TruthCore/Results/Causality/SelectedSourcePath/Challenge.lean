@@ -1,4 +1,4 @@
-import TruthCore.Causality.SelectedSourcePath
+import TruthCore.Causality.GroundingEdgeScope
 import TruthCore.Causality.MathlibBridges
 import TruthCore.Results.Causality.WorldSourceRegress.Solution
 import TruthCore.Results.Causality.SelectedAncestry.Solution
@@ -65,6 +65,22 @@ theorem commonSourceAllowsRegress :
       UpstreamConfluent (actualGraph overlap ()) ∧
       ¬ Acc (actualGraph overlap ()).edge overlapNode ∧
       ¬ ForksJoinInOneStep (actualGraph overlap ()) := by
+  sorry
+
+/-- On the represented complete cone, replacing a ground edge by any positive
+ancestral path preserves access to sources. It makes the strict fork rule
+equivalent to having only the source as a positive ancestor of the recipient. -/
+theorem ancestralForkCriterion {W B : Type} (m : Profile W B) (w : W)
+    (x : {b // ActualConcrete m w b}) {s : {b // Cone m w x.val b}}
+    (hs : (coneGraph m w x.val).Source s)
+    (hsx : Relation.TransGen (coneGraph m w x.val).edge s (selectedNode m w x)) :
+    ForksJoinInOneStep (TruthCore.Causality.GroundingEdgeScope.pathGraph (coneGraph m w x.val)) ↔
+      ∀ y, Relation.TransGen (coneGraph m w x.val).edge y (selectedNode m w x) → y = s := by
+  sorry
+
+theorem ancestralEdgeControl :
+    ∃ G : Graph (Fin 3), G.Source 0 ∧ G.edge 0 1 ∧ G.edge 1 2 ∧
+      ForksJoinInOneStep G ∧ ¬ ForksJoinInOneStep (TruthCore.Causality.GroundingEdgeScope.pathGraph G) := by
   sorry
 
 end TruthCore.Results.Causality.SelectedSourcePath
