@@ -1,5 +1,5 @@
 //! Retrieve registered Lean results independently of research notes.
-use super::retrieval::{LeanSource, Query, qualified_declarations};
+use super::retrieval::{LeanSource, Query, expanded_identifiers, qualified_declarations};
 use crate::{
     Corpus, Record,
     context::{comparator_config, module_path},
@@ -303,20 +303,20 @@ pub(super) fn find(
     let db = Connection::open_in_memory()?;
     db.execute_batch(
         "CREATE VIRTUAL TABLE proofs USING fts5(
-        id UNINDEXED, name, argument, conclusion_label, paraphrase, tokenize='porter unicode61'
+        id UNINDEXED, name, argument, conclusion_label, paraphrase, description, tokenize='porter unicode61'
     )",
     )?;
-    let mut insert = db.prepare("INSERT INTO proofs VALUES (?1,?2,?3,?4,?5)")?;
+    let mut insert = db.prepare("INSERT INTO proofs VALUES (?1,?2,?3,?4,?5,?6)")?;
     for (id, result) in corpus.records_by_id("results") {
         let Some(argument) = corpus.get("arguments", field(result, "argument_id")) else {
             continue;
         };
         let conclusion = corpus.get("statements", field(argument, "conclusion_statement_id"));
-        let name = format!(
+        let name = expanded_identifiers(&format!(
             "{} {}",
             field(result, "theorem"),
             field(result, "legacy_id")
-        );
+        ));
         insert.execute(params![
             id,
             name,
@@ -324,12 +324,13 @@ pub(super) fn find(
             conclusion.map(|s| field(s, "label")).unwrap_or_default(),
             conclusion
                 .map(|s| field(s, "paraphrase"))
-                .unwrap_or_default()
+                .unwrap_or_default(),
+            field(result, "description")
         ])?;
     }
     let mut ranked = db.prepare(
-        "SELECT id, name || ' ' || argument || ' ' || conclusion_label || ' ' || paraphrase
-        FROM proofs WHERE proofs MATCH ?1 ORDER BY bm25(proofs,0,2,2,2,1), id",
+        "SELECT id, name || ' ' || argument || ' ' || conclusion_label || ' ' || paraphrase || ' ' || description
+        FROM proofs WHERE proofs MATCH ?1 ORDER BY bm25(proofs,0,2,2,2,1,0.5), id",
     )?;
     let mut rows = ranked.query([terms])?;
     let mut hits = Vec::new();
