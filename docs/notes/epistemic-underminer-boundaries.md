@@ -232,13 +232,8 @@ conditional token carries an ordered pair `(antecedent, consequent)`. An
 accepted atomic token and an accepted conditional generate a recommendation
 only if their antecedent identities match:
 
-```python
-def recommendation(atom, antecedent, consequent,
-                   atom_accepted, conditional_accepted):
-    if atom_accepted and conditional_accepted and atom == antecedent:
-        return consequent
-    return None
-```
+The recommendation rule and its checks are in Lean.
+[Recommendation](../../TruthCore/Logic/MatchedRecommendation.lean#L11) · [Truth preservation](../../TruthCore/Logic/MatchedRecommendation.lean#L15) · [Renaming](../../TruthCore/Logic/MatchedRecommendation.lean#L26) · [Scope counts](../../TruthCore/Logic/MatchedRecommendation.lean#L33) · [Mutations](../../TruthCore/Logic/MatchedRecommendation.lean#L43)
 
 `None` means this route supplies no recommendation; it does not mean the
 conclusion is false or ought to be rejected. The two acceptance flags are
@@ -256,15 +251,15 @@ each case tests 864 input/valuation combinations: whenever it returns a
 content and its accepted premises are true, that content is true. Enumerating
 the six permutations of the atoms tests 648 input/renaming combinations:
 renaming the inputs renames the recommendation, including preservation of
-absence. These are finite executable checks, not a new Lean certificate or
-proof of unbounded understanding. Replacing the selected consequent with a
+absence. The Lean theorems cover every assignment in these finite domains
+by proving truth preservation and renaming for the stated rule. They leave
+the analysis of understanding open. Replacing the selected consequent with a
 fixed unrelated atom, or removing the antecedent comparison, yields specific
 truth-preservation failures. With atoms numbered 0–2 and valuation
 `(true, false, false)`, the first mutation sends accepted `0` and `0→0` to
 false atom `2`; the second sends accepted `0` and `1→1` to false atom `1`.
-The original function passes all 864 valuation and 648 renaming checks; both
-mutation counterexamples were evaluated on 2026-11-14. The counts describe
-this declared finite domain only.
+Both mutation counterexamples are checked in Lean. The counts describe
+the declared finite domain.
 
 To model uptake of this recommendation, reuse the existing
 [`RevisionUptake.revise`](../../TruthCore/Modal/RevisionUptake.lean). For each q,

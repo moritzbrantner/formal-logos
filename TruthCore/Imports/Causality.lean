@@ -171,6 +171,7 @@ public import TruthCore.Causality.MaximumDefinitionFork
 public import TruthCore.Causality.MeinongianActuality
 public import TruthCore.Causality.MetricBeginningArrival
 public import TruthCore.Causality.MetricGrimReaper
+public import TruthCore.Causality.MixedSupplierCensus
 public import TruthCore.Causality.ModalNecessaryBeingActuality
 public import TruthCore.Causality.ModalSenseSupport
 public import TruthCore.Causality.MotionMapsBatch1
@@ -216,7 +217,9 @@ public import TruthCore.Causality.PerAccidensResponses
 public import TruthCore.Causality.PerSeRegressCardinality
 public import TruthCore.Causality.PerfectionOfBeing
 public import TruthCore.Causality.PerfectionPreexistence
+public import TruthCore.Causality.PerfectionTransferControls
 public import TruthCore.Causality.PerfectionTransferGrounding
+public import TruthCore.Causality.PhysicalGroundControls
 public import TruthCore.Causality.PluralRootConfluence
 public import TruthCore.Causality.PossessionSensitiveAppetite
 public import TruthCore.Causality.PossibleCausalSourceNecessity
@@ -232,6 +235,7 @@ public import TruthCore.Causality.PrimaViaCertificates
 public import TruthCore.Causality.PriorityInBeing
 public import TruthCore.Causality.ProductiveDegree
 public import TruthCore.Causality.ProductiveDeletion
+public import TruthCore.Causality.ProductiveDeletionCensus
 public import TruthCore.Causality.ProductiveStore
 public import TruthCore.Causality.ProtectiveProcess
 public import TruthCore.Causality.PureActRoot

@@ -21,7 +21,13 @@ Next: inspect exact existing semantics and use this concrete episode for scoped 
 
 ## Actual tally, contrast cases, and what the observation warrants
 
-The selected list was actually inspected and the following calculations actually executed in Python. The labels are the research input, not a hypothetical observed list in a stipulated agent's mental state. The distinctness, pairing, complete coverage, and remainder checks passed. The proof is also transparent without relying on the interpreter: three disjoint pairs and one leftover make seven. Fix the meaning of *odd*, the members of the displayed collection, and the question of its cardinality. This truth is not changed by wishing for an even count. The supplied material remains publicly checkable; whether a particular subject attends to and understands it is a distinct application question.
+The selected list was inspected, and Lean checks distinctness, pairing,
+complete coverage and the remainder. The displayed labels are the research
+input. Three disjoint pairs and one leftover make seven. Fix the meaning
+of *odd*, the members of the displayed collection, and the question of
+its cardinality. This truth is not changed by wishing for an even count.
+The supplied material remains publicly checkable. Whether a particular
+subject attends to and understands it is a distinct application question.
 
 The earlier [belief-witness test](epistemic-reasons-preconditions.md#which-consideration-gives-a-reason-to-believe-this-content-1007-2026-11-25) compared hypothetical reports about parity. This continuation supplies the complete input and checked residue. It also tests a further content that the earlier suspension control expressly left outside its domain: the narrower fact supported by an inconclusive report. Let the finite comparison domain contain the eight prefixes of the displayed list (lengths 0 through 7). Let P mean the report has three complete pairs and one residue, Q mean the count is odd, C mean the report has three complete pairs, and M mean its cardinality is six or seven.
 
@@ -37,51 +43,12 @@ All five premises are satisfiable and all conclusions are non-tautological in th
 
 This gives an actual-data route to a belief reason even for an investigator who rationally withholds on the main question. It weakens the application demand from successful answer to actual access to a supporting, non-undercut basis for *some* content. Use the same subject and report; change the belief target explicitly. A local warrant for the epistemic merit of the inference is direct: a complete check isolates a real difference between the two possible conclusions, while no amount of liking the even answer alters the indicated residue. The merit and evidence-relative correctness are not the further claim of end-independent force. The aim-relative account gives an actual accuracy-seeking subject a reason for M from the report, or Q from the full tally. A global reason nihilist can admit that the observation favors the answer in a purely descriptive/informational sense while denying normative favoring. That denial is opposed by the direct judgment that a good check counts for belief, not refuted by a bare truth table.
 
-### Reproduction (executed; finite control, not a Lean result)
+### Finite controls checked in Lean
 
-```python
-labels = (930, 932, 1007, 1987, 1989, 1990, 1991)
-assert len(set(labels)) == len(labels)
-pairs = tuple(zip(labels[::2], labels[1::2]))
-residue = labels[2*len(pairs):]
-assert tuple(x for pair in pairs for x in pair) + residue == labels
-assert (len(pairs), len(residue)) == (3, 1)
-worlds = tuple(labels[:n] for n in range(len(labels) + 1))
-report = lambda w: divmod(len(w), 2)
-coarse = lambda w: report(w)[0]
-odd = lambda w: report(w)[1] == 1
-full = lambda w: report(w) == (3, 1)
-pair3 = lambda w: coarse(w) == 3
-meta = lambda w: len(w) in (6, 7)
-fiber = tuple(w for w in worlds if pair3(w))
-assert tuple(map(len, fiber)) == (6, 7)
-assert set(map(odd, fiber)) == {False, True}
-for p, q, expected in [
-    (full, odd, True), (odd, full, False), (pair3, odd, False),
-    (pair3, lambda w: not odd(w), False), (pair3, meta, True),
-]:
-    assert any(p(w) for w in worlds) and any(not q(w) for w in worlds)
-    assert all(not p(w) or q(w) for w in worlds) == expected
-
-def invariant(project, holds):
-    return all(project(s) != project(t) or holds(s) == holds(t)
-               for s in worlds for t in worlds)
-
-assert not invariant(coarse, odd)
-assert invariant(report, odd)
-assert invariant(coarse, meta)
-for force in ('aim-relative', 'independent', 'none'):
-    merits = {d: all(odd(w) for w in worlds if report(w) == report(labels))
-              for d in ('accuracy', 'comfort')}
-    assigned = {d: merits[d] and (force == 'independent' or
-                (force == 'aim-relative' and d == 'accuracy')) for d in merits}
-    assert all(merits.values())
-    assert tuple(assigned.values()) == {
-        'aim-relative': (True, False), 'independent': (True, True),
-        'none': (False, False)
-    }[force]
-print(pairs, residue, tuple(map(len, fiber)))
-```
+Lean checks distinctness, the exhaustive pairing and remainder, all five
+implication rows, and the coarse and full data fibers. The separate force
+rows hold the information fixed and vary the assigned rule.
+[Pairing and information](../../TruthCore/Logic/ActualInquiryControls.lean#L55) · [Force profiles](../../TruthCore/Logic/ActualInquiryControls.lean#L75)
 
 The finite prefixes are combinatorial control states, not a claim that these are all metaphysically possible worlds. Force is assigned, not measured. Merit does not vary with preference *because the content, observation, consequence relation and actual evidence are held fixed*. A report-channel fault, a changing subject matter or altered meanings would require a different analysis. This is a test of exact information and omission of normative bridges, not a complete account of cognitive realization, normative authority or logical grounding. Both force-positive profiles preserve the local epistemic result. The force-free profile has the same informational structure but omits force, and cannot itself settle whether that interpretation is philosophically adequate.
 
@@ -222,61 +189,16 @@ Under the local reason calibration of `6b4e3331`, an available non-undercut bOcc
 
 The distinctness is a consequence *inside that interpretation*, because one basis is undercut and the other is not. It does not prove actual separation, availability or retention, and does not assume that an independently justified warrant for the audit is supplied. The witness projection is a library application of the stated calibration. In particular, do not infer survival of bOccurrence from the fact that bExternal was defeated.
 
-### 4. Executed finite comparisons
+### 4. Finite comparisons checked in Lean
 
-The preceding checkpoint's Python reproduction was rerun successfully. The new reproduction below enumerates twelve states and every subset containing the selected actual state (2048 restrictions), of which 1024 admit the specified deceptive comparison state. It also checks eight explicit reason/defeat structural profiles. The finite states represent a fixed comparison interpretation, not exhaustive metaphysical possibilities or an actual report of someone's inner life.
+The finite states represent a fixed comparison interpretation. The
+assignments do not assert exhaustive metaphysical possibilities or
+report someone's inner life.
 
-```python
-from itertools import product
-# Episode-kind, external truth, public marker of inquiry.
-W = tuple(product(('none', 'asks-p', 'other-thought'),
-                  (False, True), (False, True)))
-w0 = ('asks-p', True, True)
-counterfeit = ('asks-p', False, True)
-report_only = ('none', True, True)
-A = lambda w: w[0] == 'asks-p'
-Q = lambda w: w[0] != 'none'
-P = lambda w: w[1]
-T = lambda w: w[2]
-assert A(w0) and Q(w0) and P(w0) and T(w0)
-assert A(counterfeit) and Q(counterfeit) and not P(counterfeit)
-assert T(report_only) and not A(report_only) and not Q(report_only)
-assert all(not A(w) or Q(w) for w in W)
-assert any(Q(w) and not A(w) for w in W)
-assert any(not Q(w) for w in W)
-other = tuple(w for w in W if w != w0)
-count = deceptive = 0
-for include in product((False, True), repeat=len(other)):
-    H = (w0,) + tuple(w for w,i in zip(other,include) if i)
-    F = tuple(w for w in H if A(w))
-    assert F and all(Q(w) for w in F)
-    assert not any(A(w) and not Q(w) for w in H)
-    count += 1
-    if counterfeit in H:
-        assert any(P(w) for w in F) and any(not P(w) for w in F)
-        deceptive += 1
-assert (count, deceptive) == (2048, 1024)
-assert not all(not T(w) or Q(w) for w in W)
-
-# Distinct uses of a source, not independent source tokens.
-B = ('ext', 'occ')
-C = ('P', 'Q')
-support = {('ext', 'P'), ('occ', 'Q')}
-profiles = []
-for ext_defeat, occ_defeat in product((False, True), repeat=2):
-    defeated = {'ext': ext_defeat, 'occ': occ_defeat}
-    survivor = {p for p in C
-        if any((b,p) in support and not defeated[b] for b in B)}
-    assert ('P' in survivor) == (not ext_defeat)
-    assert ('Q' in survivor) == (not occ_defeat)
-    for calibrate in (False, True):
-        R = survivor if calibrate else set()
-        assert bool(R) == (calibrate and bool(survivor))
-        if ext_defeat and not occ_defeat and calibrate:
-            assert R == {'Q'}
-        profiles.append((ext_defeat, occ_defeat, calibrate, tuple(sorted(R))))
-assert len(profiles) == 8
-```
+Lean checks the twelve states, all 2,048 restrictions containing the actual
+state, and the 1,024 that also contain the counterfeit. It checks the eight
+reason and defeat assignments on the two bases.
+[Episode rows](../../TruthCore/Logic/ActualInquiryControls.lean#L97) · [Restriction census](../../TruthCore/Logic/ActualInquiryControls.lean#L116) · [Reason uses and defeat](../../TruthCore/Logic/ActualInquiryControls.lean#L138)
 
 A encodes actual episode-kind, not an independently tested first-person access mechanism; matching A is a structural surrogate for the factive access profile, which additionally requires actual apprehension in the philosophical reading. A ⇒ Q holds by the explicit classification, not by a numerical experiment proving introspection reliable. The reason profiles assign the support and defeat relations; the calibration-off control empties R deliberately and does not prove no reason in an actual subject. Both undercutters can be set true together; the experiment thus leaves wholesale defeat coherent at this purely structural level. It isolates the *additional* conditions needed to carry the observed external error across to the occurrence ground.
 
@@ -366,86 +288,20 @@ There is a further targeted dialectical dilemma. If a critic presents the propos
 
 **Provisional assessment.** On the competent, actually truth-directed reading, the local positive attribution is strongly warranted prima facie: the instance is present, its bearing on the existential is understood, no appeal to the accuracy of a separate source is needed, and the false alternative is excluded by the very evidence. No substantive defeater of that bearing has been identified which preserves the stipulated actual evidence and the subject's competent access to it. This does not rule out an undercutter of the access, or establish sufficient warrant, belief, or categorical force. The genuine normative nihilist can deny the basic evaluative judgment while preserving the information facts; this leaves a live philosophical disagreement, but the denial itself is not a counterexample to the positive warrant. The strongest goal-relative account can grant thin F6 in this very inquiry. A reason for suspension in addition to the reason for Q need not cancel the latter pro tanto. The direct judgment is more defensible than a generic inference from external reliability, but its actual first-person application is not observed by this session.
 
-### 4. Reproducible finite checks (executed)
+### 4. Finite checks in Lean
 
 The comparison below explicitly separates phenomenal occurrence from thought, report, external truth, and a further episode evaluating the objection. Both episode slots can be absent; the second need not be the first. A thought can be unexperienced. This tests witness replacement without a fixed numerical identity or a factive assumption about the external content. The label "phenomenal-nonthought" denotes a nonconceptual phenomenal episode, not a judgment which itself counts as thought. The two slots are all the episodes relevant to the finite test; no general claim of exhaustive episodes is made.
 
-```python
-from itertools import product
-from fractions import Fraction
-kinds = ('none', 'unexperienced-thought', 'phenomenal-nonthought', 'phenomenal-thought')
-phen = lambda k: k.startswith('phenomenal-')
-thought = lambda k: k in ('unexperienced-thought', 'phenomenal-thought')
-# Primary episode kind, evaluation episode kind, public marker, external truth.
-W = tuple(product(kinds, kinds, (False, True), (False, True)))
-Q = lambda w: phen(w[0]) or phen(w[1])
-T = lambda w: thought(w[0]) or thought(w[1])
-A = lambda w: phen(w[0])
-D = lambda w: phen(w[1])
-M = lambda w: w[2]
-P = lambda w: w[3]
-assert len(W) == 64
-assert all(not (A(w) or D(w)) or Q(w) for w in W)
-assert any(not A(w) and D(w) and Q(w) for w in W)
-assert any(A(w) and not T(w) for w in W)
-assert any(T(w) and not Q(w) for w in W)
-assert any(M(w) and not Q(w) for w in W)
-assert {P(w) for w in W if A(w)} == {False, True}
-assert {T(w) for w in W if A(w)} == {False, True}
-assert {Q(w) for w in W if M(w)} == {False, True}
-# A positive-probability phenomenal ground, a mere marker, and an independent
-# actual episode of evaluating a proposed defeater. Weights need not be uniform.
-H = (('phenomenal-thought', 'none', True, True),
-     ('phenomenal-nonthought', 'none', True, False),
-     ('none', 'none', True, False),
-     ('none', 'phenomenal-thought', True, False),
-     ('none', 'none', False, True))
-assert set(H) <= set(W)
-prob_checks = 0
-for weights in product(range(4), repeat=len(H)):
-    total = sum(weights)
-    if not total:
-        continue
-    prior = Fraction(sum(x for w, x in zip(H, weights) if Q(w)), total)
-    for evidence in (A, D, lambda w: A(w) or D(w)):
-        mass = sum(x for w, x in zip(H, weights) if evidence(w))
-        if not mass:
-            continue
-        posterior = Fraction(sum(x for w, x in zip(H, weights) if evidence(w) and Q(w)), mass)
-        assert posterior == 1 and posterior >= prior
-        assert (posterior > prior) == (prior < 1)
-        prob_checks += 1
-    if all(weights):
-        assert 0 < Fraction(sum(x for w,x in zip(H, weights) if M(w) and Q(w)),
-                            sum(x for w,x in zip(H,weights) if M(w))) < 1
-# Truth-directed payoff only: correct/incorrect/suspend scores are independent
-# of the occurrence. Compare every admissible integer score triple in range.
-score_checks = 0
-for c, i, s in product(range(-2, 3), repeat=3):
-    if not i <= s <= c or c == i:
-        continue
-    for w in W:
-        if not (A(w) or D(w)):
-            continue
-        assert Q(w)
-        q, notq, suspend = c, i, s
-        assert q > notq and q >= suspend
-        assert (q > suspend) == (c > s)
-        score_checks += 1
-print('states', len(W), 'nonempty conditioning tests', prob_checks, 'state-score comparisons', score_checks)
-# Omission controls for the stronger epistemic conclusion. Preserve the same
-# episode and information while varying attribution and force; not psychology.
-for counts, aims, independent in product((False, True), repeat=3):
-    # Presentation/attribution at believe Q, plus separate force rule.
-    reason = counts
-    actual_force = reason and (aims or independent)
-    assert not actual_force or reason
-    if counts and not aims and not independent:
-        assert reason and not actual_force
-print('attribution/force controls', 8)
-```
+Lean checks the 64 episode assignments, 2,736 positive-mass conditions,
+1,440 score comparisons, and eight assigned force profiles.
+[Episode scope](../../TruthCore/Logic/ActualInquiryControls.lean#L173) · [Conditioning](../../TruthCore/Logic/ActualInquiryControls.lean#L202) · [Score and force checks](../../TruthCore/Logic/ActualInquiryControls.lean#L216)
 
-Actual output: 64 states, 2736 nonempty conditioning tests, 1440 state-score comparisons, eight structural attribution/force controls. These checks are finite arithmetic and explicit omission models. The conditional probability identity and score inequalities have the elementary general arguments above; no probability measure over metaphysical possibilities or actual decision rule is inferred. The information-inclusion conclusion follows by construction of Q from phenomenal occurrences, and the last controls assign attribution rather than test human normativity. The code confirms the advertised distinctions rather than deriving any novel Lean result or claiming that every competing metaphysics is represented.
+The conditional probability identity and score inequalities have the
+elementary general arguments above. The probability weights and payoff
+rule are stipulated. The information-inclusion conclusion follows by
+construction of Q from phenomenal occurrences, and the last controls
+assign attribution. An actual probability measure, decision rule or
+normative attribution requires further evidence.
 
 ### 5. Exact downstream consequence and allocation
 
@@ -540,119 +396,23 @@ Use the following fixed case contrasts before treating any new claim as an argum
 
 The local positive warrant is thus not just the absence of discovered objections. There is an actual-instance-to-existential evidential relationship, and it has a robust conditional comparison even under adverse higher-order reports. The rival's own strongest mechanism is represented rather than dismissed: it may remove access, undermine higher-order entitlement, or neutralize a fallible cue. On the ordinary pro tanto interpretation, it is reasonable to retain a local positive reason judgment in the competent actual inquiry with no defeating access mechanism. The additional claim that higher-order access is mandatory **even for a pro tanto reason** still requires substantive defense. A goal-relative account can grant this reason to a subject actually seeking the answer. A global nihilist can reject the evaluative bridge altogether; it does not follow from the probability calculation that such a position is false. F1 and F6's existing markings remain unchanged.
 
-### 5. Executed reproducible tests
+### 5. Finite report and access tests checked in Lean
 
-```python
-from fractions import Fraction as F
-from itertools import product
+Lean checks the three exact report posteriors and their refinements, the
+positive-mass and zero-mass restriction counts, and the sixteen
+reason-status assignments. Lean checks the restriction counts using
+integer masses and separately proves the arithmetic equivalences for
+rational quotients with positive denominators. Lean checks all 6,561 mixed-channel comparisons
+by scaling the two likelihoods by 64 and using integer comparisons. The
+dependent-mode control uses exact rational probabilities.
+[Report posteriors](../../TruthCore/Logic/ActualInquiryControls.lean#L274) · [Restrictions](../../TruthCore/Logic/ActualInquiryControls.lean#L337) · [Mass comparisons](../../TruthCore/Logic/ActualInquiryControls.lean#L312) · [Reason status](../../TruthCore/Logic/ActualInquiryControls.lean#L341) · [Likelihood signs](../../TruthCore/Logic/ActualInquiryControls.lean#L378) · [Dependent mode](../../TruthCore/Logic/ActualInquiryControls.lean#L381)
 
-def report_profile(h_q_m, h_n_m):
-    # Q, H (higher-order report), M (first-order marker), multiplicity.
-    return [(True,True,True,h_q_m), (True,True,False,8-h_q_m),
-            (False,True,True,h_n_m), (False,True,False,24-h_n_m),
-            (True,False,True,18), (True,False,False,6),
-            (False,False,True,2), (False,False,False,6)]
-
-def prob(rows, predicate, cond=lambda _: True):
-    denominator = sum(w[-1] for w in rows if cond(w))
-    if not denominator:
-        return None
-    return F(sum(w[-1] for w in rows if cond(w) and predicate(w)), denominator)
-
-Q = lambda w: w[0]
-H = lambda w: w[1]
-M = lambda w: w[2]
-HM = lambda w: H(w) and M(w)
-for name, a, b, expected in [('attenuation',4,6,F(2,5)),
-                             ('neutralization',2,6,F(1,4)),
-                             ('reversal',2,12,F(1,7))]:
-    rows = report_profile(a,b)
-    assert all(w[-1]>0 for w in rows)
-    prior, first, higher, combined = (prob(rows,Q),prob(rows,Q,M),
-                                    prob(rows,Q,H),prob(rows,Q,HM))
-    assert prior == F(1,2) and first > prior and higher == F(1,4)
-    assert combined == expected and combined < prior
-    assert (combined > higher, combined == higher, combined < higher) == {
-        'attenuation':(True,False,False), 'neutralization':(False,True,False),
-        'reversal':(False,False,True)}[name]
-    print(name, prior, first, higher, combined)
-    # Refine the Q,H,M cell with two distinct experienced grounds.
-    # H and M are markers only. Not all Q worlds supply access.
-    refined=[]
-    for q,h,m,n in rows:
-        if q and h and m:
-            refined += [(q,h,m,True,False,1),(q,h,m,False,True,1)]
-            if n>2: refined += [(q,h,m,False,False,n-2)]
-        else: refined += [(q,h,m,False,False,n)]
-    assert prob(refined,Q,HM)==combined
-    A=lambda w: w[3]
-    D=lambda w: w[4]
-    for E in (A,D,lambda w:A(w) or D(w)):
-        assert prob(refined,Q,lambda w:HM(w) and E(w)) == 1
-    assert any(Q(w) and not A(w) and D(w) for w in refined)
-    assert any(not Q(w) and HM(w) for w in refined)
-
-# Seven states (Q,A,D,H); actual A or D entails Q.
-S=((True,True,False,True), (True,False,True,True),
-   (True,False,False,True), (False,False,False,True),
-   (True,True,False,False), (True,False,False,False),
-   (False,False,False,False))
-count=excluded=dogmatic=strict=0
-for weights in product(range(3),repeat=len(S)):
-    if not any(weights): continue
-    rows=[(*w,n) for w,n in zip(S,weights)]
-    for flag in (False,True):
-        cond=lambda w: w[3]==flag
-        pre=prob(rows,Q,cond)
-        if pre is None: continue
-        for E in (lambda w:w[1],lambda w:w[2],lambda w:w[1] or w[2]):
-            post=prob(rows,Q,lambda w:cond(w) and E(w))
-            if post is None:
-                excluded+=1; continue
-            assert post==1
-            if pre==1:
-                dogmatic+=1
-            else:
-                assert post>pre
-                assert prob(rows,E,lambda w:cond(w) and not Q(w))==0
-                assert prob(rows,E,lambda w:cond(w) and Q(w))>0
-                strict+=1
-            count+=1
-assert count==dogmatic+strict
-print('conditional restrictions:',count,'zero mass:',excluded,'already certain:',dogmatic,'strict support:',strict)
-for rq,rh,susp,wq in product((False,True),repeat=4):
-    f6=rq or rh
-    assert not (f6 and not rq and not rh)
-    if rh: assert f6
-    if not rq and not rh and susp: assert not f6
-    if rq and not wq: assert f6
-print('reason/warrant/suspension controls:',16)
-
-# Mixed channel for apparent rather than established access.
-grid=[F(i,8) for i in range(9)]
-strict=neutral=reverse=0
-for alpha,t,mq,mn in product(grid,repeat=4):
-    lq=alpha*t+(1-alpha)*mq
-    ln=(1-alpha)*mn
-    delta=mn-mq
-    assert lq-ln==alpha*t-(1-alpha)*delta
-    if mq==mn and alpha>0 and t>0:
-        assert lq>ln
-    if delta>0 and t+delta>0:
-        assert (lq>ln)==(alpha>delta/(t+delta))
-        assert (lq==ln)==(alpha==delta/(t+delta))
-    if lq>ln: strict+=1
-    elif lq==ln: neutral+=1
-    else: reverse+=1
-assert strict+neutral+reverse==9**4
-print('mixed-channel controls:',strict,neutral,reverse)
-a_q,a_n,t,m=F(3,4),F(1,4),F(1,4),F(3,4)
-lq=a_q*t+(1-a_q)*m; ln=(1-a_n)*m
-assert (lq,ln)==(F(3,8),F(9,16)) and lq<ln
-print('dependent-mode control:',lq,ln)
-```
-
-Executed in the container with Python exact fractions: the three reported posteriors passed; 7,776 positive-mass conditioning comparisons passed (5,184 strict gains, 2,592 saturated at one; 5,022 joint zero-mass cases recorded separately, not counted as conditioning); 16 structural reason/warrant/suspension assignments and 6,561 mixed-channel likelihood-sign comparisons passed (4,871 positive, 305 equal, 1,385 negative; signs alone do not certify a defined posterior when both likelihoods vanish). The explicit dependent-mode counterexample passed. These checks support the displayed arithmetic and controls, not actual normative attributions, exhaustive rival coverage or Lean verification.
+The count of 7,776 positive-mass comparisons consists of 5,184 strict
+gains and 2,592 cases already at one. There are 5,022 joint zero-mass
+cases reported separately. The likelihood differences divide into
+4,871 positive, 305 zero, and 1,385 negative. When both likelihoods vanish,
+the posterior is undefined. The assigned cases check the arithmetic
+with normative attribution and rival coverage left open.
 
 ### 6. Handoff: the next crux after informational defeat
 
@@ -744,96 +504,23 @@ The skeptical proponent cannot use C and T and W to conclude **global** reasonle
 
 The principal insight is not an unrestricted trilemma about all justification. It is that the universal strong demand cannot both **explain away every reason** and **be rationally warranted by a belief-directed reason** within a well-founded prior-credential interpretation. This gives a separate discriminating application of F6. The direct-occurrence case supplies positive warrant for not imposing that demand on every reason; a strong credential theorist can still reject that local normative attribution. The thin reason judgment is more defensible than the claim that every justified belief is basic or that every epistemic standard is universally binding.
 
-### 6. Reproducible structural controls (actually executed)
+### 6. Structural controls checked in Lean
 
-```python
-from itertools import product
+Lean checks the dependency and active-set census, the three selected
+graphs, the separate prior-use traces with and without a standing
+credential, and the status and method/instance assignments.
+[Dependency census](../../TruthCore/Logic/ActualInquiryControls.lean#L423) · [Prior-use traces](../../TruthCore/Logic/ActualInquiryControls.lean#L446) · [Status](../../TruthCore/Logic/ActualInquiryControls.lean#L452) · [Method and instance](../../TruthCore/Logic/ActualInquiryControls.lean#L464)
 
-# Each node represents a reason instance of one subject. An outgoing edge is
-# an independently supplied credential whose justified content has this reason.
-# An edge between active reason nodes is the combined credential/justification
-# link, not by itself a semantic certificate of either reason.
-def inspect(n, edges, active):
-    successor = lambda i: {j for j in active if (i,j) in edges}
-    serial = all(successor(i) for i in active)
-    distinct_serial = all(successor(i)-{i} for i in active)
-    cycle = False
-    for i in active:
-        frontier = set(successor(i)); reached = set()
-        while frontier-reached:
-            v = frontier-reached
-            reached |= v
-            frontier |= set().union(*(successor(j) for j in v))
-        cycle |= i in reached
-    return serial, distinct_serial, cycle
-
-profiles=serial_nonempty=distinct_nonempty=acyclic_nonempty=0
-for n in range(1,4):
-    E=tuple(product(range(n), repeat=2))
-    for bits in product((False,True),repeat=len(E)):
-        edges={e for e,x in zip(E,bits) if x}
-        for flags in product((False,True),repeat=n):
-            active={i for i,x in enumerate(flags) if x}
-            serial,distinct,cycle=inspect(n,edges,active)
-            profiles+=1
-            if active and serial:
-                serial_nonempty+=1
-                assert cycle
-            if active and distinct:
-                distinct_nonempty+=1
-                assert cycle and serial
-            if active and not cycle:
-                acyclic_nonempty+=1
-                assert any(not any((i,j) in edges for j in active) for i in active)
-print('finite dependency profiles:',profiles,'serial:',serial_nonempty,
-      'distinct serial:',distinct_nonempty,'nonempty acyclic:',acyclic_nonempty)
-assert inspect(1,{(0,0)},{0}) == (True,False,True)
-assert inspect(3,{(0,1),(1,2),(2,1)},{0,1,2}) == (True,True,True)
-assert inspect(3,{(0,1),(1,2)},{0,1,2}) == (False,False,False)
-
-trace_cases=0
-for n in range(1,11):
-    for flags in product((False,True),repeat=n):
-        uses=[i for i,x in enumerate(flags) if x]
-        if not uses: continue
-        earliest=uses[0]
-        assert not any(j<earliest for j in uses)
-        assert not all(any(j<i for j in uses) for i in uses)
-        # A prior standing credential outside the trace is a local escape.
-        assert all(any(j<i for j in [-1]+uses) for i in uses)
-        trace_cases+=1
-print('nonempty finite use traces:',trace_cases)
-
-status_cases=0
-for rq,bc,jc,rc in product((False,True), repeat=4):
-    justified_belief=bc and jc
-    require_credential=not rq or justified_belief
-    j_requires_reason=not justified_belief or rc
-    if rq and require_credential and j_requires_reason:
-        assert rc
-    if rq and not bc:
-        assert not require_credential
-    if rq and justified_belief and not rc:
-        assert require_credential and not j_requires_reason
-    status_cases+=1
-print('credential status cases:',status_cases)
-
-# General method validation and a presented instance have different truth
-# conditions. The specific factive evidential certificate is NOT a normative
-# reason attribution.
-worlds=[(q,v,a) for q,v,a in product((False,True),repeat=3) if not a or q]
-assert len(worlds)==6
-Q=lambda w:w[0]; V=lambda w:w[1]; A=lambda w:w[2]
-C=lambda w:V(w) and A(w)
-assert {Q(w) for w in worlds if V(w)}=={False,True}
-assert all(not A(w) or Q(w) for w in worlds)
-assert all(not C(w) or Q(w) for w in worlds)
-assert any(A(w) and not V(w) for w in worlds)
-assert any(V(w) and not A(w) for w in worlds)
-print('method/instance profiles:',len(worlds))
-```
-
-Executed with Python in the container: 4,164 finite dependency/active-set profiles, including 2,001 nonempty serial profiles (every one cyclic), 604 nonempty distinct-serial profiles (every one cyclic), and 1,101 nonempty acyclic profiles (every one has an active instance with no active credential successor). The 2,036 nonempty finite trace tests, 16 status assignments and six method/instance profiles passed. Counts include repeated active subgraphs within different carrier/edge assignments and are not distinct philosophical positions or research merit. The structural status controls explicitly assign the relevant normative fields; they do not establish any actual justified belief or actual agent. The trace test omits actual credential content and proves only the rank boundary for a finite closed prior-use roster. The six profiles allow actual instances without method validation and vice versa, not actual reason attribution absent a disputed calibration.
+The 4,164 dependency and active-set profiles include 2,001 nonempty
+serial profiles and 604 nonempty distinct-serial profiles, all cyclic.
+In each of the 1,101 nonempty acyclic profiles an active instance lacks
+an active credential successor. The other checks cover 2,036 nonempty
+traces, 16 status assignments and six method/instance profiles. Counts
+include repeated active subgraphs within different carrier and edge
+assignments. The status fields are stipulated. The trace tests the rank
+boundary for a finite roster, leaving credential content open. The six
+profiles allow actual instances without method validation and vice versa.
+Reason attribution still requires the separate calibration.
 
 ### 7. Assessment, downstream and next discriminating question
 
@@ -1002,47 +689,18 @@ The mean posterior equals the prior. Thus a prospective useful check need not be
 3. **Accumulation is neither a count nor an independence requirement.** For a sequence of received observations use the conditional likelihood factor given the observations already obtained. Prior odds times the product of those factors are the updated odds. This is the existing chain-factor principle, not multiplication of marginal likelihood ratios. Deterministic copies of a single positive report (posterior 9/10) leave that posterior at 9/10 when the copying mechanism is fixed; partial dependence need not do so. If the conditional factors along the observed sequence are all at least k>1, and initial odds O0>0, then after n such factors odds are at least O0*k^n. For a fixed chosen threshold t in (0,1), n satisfying O0*k^n >= t/(1-t) is sufficient. This is a conditional finite-threshold result, not a proof that the observations will occur, any threshold is legitimate, or arbitrarily high confidence is warranted in actual inquiry. Without a nonzero lower bound on prior odds, no finite uniform n follows from a finite factor bound. Even strictly favorable updates can fail to attain a threshold: for n>=1 take factor L_n=(n+1)^2/[n(n+2)]>1. The product through N telescopes to 2(N+1)/(N+2), strictly below 2. From prior 1/2, posterior is 2(N+1)/(3N+4), increasing toward 2/3 but always below it. These factors are realizable as successive conditional likelihood ratios for a positive outcome, e.g. b_n=1/2 and a_n=L_n/2, with fresh outcomes conditional on H/not H; the assertion concerns the all-positive path. Merely adding more favoring arguments does not guarantee arbitrary warrant or confidence. This telescoping example and threshold argument are algebraic research findings in the note, not separately registered Lean theorems.
 4. **Question-relative stopping, with reopening.** Suppose a particular instance is genuinely apprehended and the subject grasps the existential consequence, or the existing grounds entail the target on the fixed interpretation. Another test cannot improve optimal first-order squared-error accuracy when the correctly conditioned assessment already assigns the target probability one. Yet a check of access, premise truth or rule application can be informative for a different, unresolved target. In an illustrative assessment, a known target with prior one has zero gain for any admissible further refinement, while an uncertain reliability target with prior 1/2 and rates 9/10,1/10 has gain 4/25. This is not a claim that the direct-grasp judgment is already calibrated with p=1; a concrete undercutter may warrant revising that assessment. The distinction blocks both arbitrary endless credentialing and arbitrary dogmatism. A request to repeat a reason must show what new uncertainty it addresses, not merely relabel the original target. A credible challenge to the interpretation, evidence access or model is not redundant just because the first-order consequence is fixed.
 
-### Executed checks, boundaries and next test
+### Lean checks, boundaries and next test
 
-The following exact-fraction test ran in the container on p=i/12 for i=1,...,11 and a,b=j/12 for j=0,...,12. There were 1,837 positive-denominator profiles. It checked posterior pooling, the risk-difference formula, the scaled identity, the zero condition, the upper bound, and both update directions. The four fixtures above and 1,000 bounded-product steps also passed. Reproduction (Python standard library):
+The exact-rational grid uses p=i/12 for i=1,...,11 and a,b=j/12 for
+j=0,...,12. It checks posterior pooling, the risk-difference formula,
+the scaled identity, the zero condition, the upper bound and both
+update directions.
 
-```python
-from fractions import Fraction as F
-from itertools import product
-
-def gain(p,a,b):
-    w=p*a+(1-p)*b
-    if not 0<w<1: return None
-    u=p*a/w
-    v=p*(1-a)/(1-w)
-    g=w*(1-w)*(u-v)**2
-    assert p==w*u+(1-w)*v
-    assert g==p*(1-p)-w*u*(1-u)-(1-w)*v*(1-v)
-    assert w*(1-w)*g==(p*(1-p)*(a-b))**2
-    assert (g==0)==(a==b) if 0<p<1 else g==0
-    assert 0<=g<=p*(1-p)
-    assert (u>p)==(a>b) if 0<p<1 else u==p
-    assert (v<p)==(a>b) if 0<p<1 else v==p
-    return w,u,v,g
-count=0
-for p,a,b in product([F(i,12) for i in range(1,12)],
-                     [F(i,12) for i in range(13)],
-                     [F(i,12) for i in range(13)]):
-    if gain(p,a,b) is not None: count+=1
-assert count==1837
-assert gain(F(1,2),F(9,10),F(1,10))[-1]==F(4,25)
-assert gain(F(1,2),F(9,1000),F(1,1000))[-1]==F(4,4975)
-assert gain(F(99,100),F(9,10),F(1,10))[-1]==F(363,557500)
-assert gain(F(1,2),F(7,10),F(7,10))[-1]==0
-assert gain(F(1),F(9,10),F(1,10))[-1]==0
-odds=F(1)
-for n in range(1,1001):
-    factor=F((n+1)**2,n*(n+2))
-    assert factor>1
-    odds*=factor
-    assert odds==F(2*(n+1),n+2)<2
-    assert odds/(1+odds)==F(2*(n+1),3*n+4)<F(2,3)
-```
+Lean checks the 1,837 positive-denominator profiles and the five sample
+assignments, including the dogmatic prior and equal likelihoods. It
+checks all 1,000 bounded-product updates. The rational gain is linked to
+the registered real-valued accuracy theorem.
+[Registered gain correspondence](../../TruthCore/Logic/ActualInquiryControls.lean#L489) · [Gain grid](../../TruthCore/Logic/ActualInquiryControls.lean#L528) · [Samples](../../TruthCore/Logic/ActualInquiryControls.lean#L535) · [Bounded updates](../../TruthCore/Logic/ActualInquiryControls.lean#L552)
 
 The prior/likelihood model and the accuracy objective require justification; the calculations alone do not confer normative authority or a universal cutoff. They complement rather than replace the C/T/W/F6 incompatibility. The strict universal independent-credential demand is not justified by the mere possibility of positive further gain, and possible gain is not sufficient to show that current belief is unwarranted. The strongest higher-order rival can grant the first-order bearing and challenge the access/model grounds. The next discriminating test is to identify a concrete model or access defeater and compare the gain of investigating that uncertainty to merely restating the original reason. Keep actual reason attribution and F6 independent warrant separate.
 

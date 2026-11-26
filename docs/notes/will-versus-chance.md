@@ -766,39 +766,12 @@ applicable CI remain required before reliance as reviewed support.
 
 ### 6. Reproduced analyst controls (unregistered)
 
-Executed the following dependency-free Python 3 diagnostic on this checkpoint.
-Its finite integer rankings are a test of the abstract quality argument,
-not a metaphysical measure of goodness, a Lean model or a substitute for
-the existing kernel checks.
-
-```python
-from itertools import product
-
-X = tuple(frozenset(i for i in range(3) if mask & (1 << i))
-          for mask in range(8))
-d, a, b = 0, 1, 2
-quality = lambda s: 2 * (d in s) + int((a in s) != (b in s))
-opt = [s for s in X if all(quality(t) <= quality(s) for t in X)]
-assert opt == [frozenset((d, a)), frozenset((d, b))]
-assert all(any(quality(t) > quality(s) for t in X)
-           for s in X if d not in s)
-assert all(d in s for s in opt) and any(a not in s for s in opt)
-assert frozenset() in X and frozenset((a,)) in X
-
-checked = triggered = 0
-for q in product(range(3), repeat=len(X)):
-    highest = max(q)
-    improvement = all(
-        any(q[j] > q[i] for j in range(len(X)))
-        for i, s in enumerate(X) if d not in s
-    )
-    winners = [s for i, s in enumerate(X) if q[i] == highest]
-    core = all(d in s for s in winners)
-    assert improvement == core
-    checked += 1
-    triggered += improvement
-print(checked, triggered)
-```
+Lean checks the eight complete outputs and the exhaustive ternary-rank
+comparison. The finite optimizer evaluates the corpus definition of
+`Optimal` on these outputs. The permission and exercise tables check
+the omission contrast below. These integer rankings are stipulated
+structural inputs for the abstract quality argument.
+[Optimality evaluator](../../TruthCore/Modal/WillChoiceCensus.lean#L31) · [Tied optima](../../TruthCore/Modal/WillChoiceCensus.lean#L41) · [Rank census](../../TruthCore/Modal/WillChoiceCensus.lean#L59) · [Omission controls](../../TruthCore/Modal/WillChoiceCensus.lean#L64)
 
 Result: two tied optima; all 6,561 rank assignments pass, 1,055
 satisfy the improvement condition. The enumeration only covers a
@@ -826,9 +799,8 @@ the quality/feasibility assignments and absence of intrinsic constitution
 are explicit; the root-restricted WN application is distinguished from
 the unrestricted theorem and the other sense bridges are retained;
 the actual delivery remains a draft pending independent review and CI.
-No new stating claim or formal theorem is proposed, so no new claim/type
-pair or proof certificate is represented. The full repository self-sweep
-and CLI validation remain outstanding.
+The original draft proposed no new stating claim or registered theorem.
+The Lean checks above cover the finite fixture and its omission controls.
 
 
 ## Can the same intrinsic actuality understand and produce blindly? (2026-11-25)

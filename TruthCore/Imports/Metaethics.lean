@@ -12,9 +12,11 @@ public import TruthCore.Metaethics.GoodnessCorrectSupport
 public import TruthCore.Metaethics.GoodnessFormEnd
 public import TruthCore.Metaethics.GoodnessFormEndIdealConsensus
 public import TruthCore.Metaethics.GoodnessStandardPriority
+public import TruthCore.Metaethics.GovernanceEligibilityCensus
 public import TruthCore.Metaethics.InternalCounterfactual
 public import TruthCore.Metaethics.MeaningRivalBoundary
 public import TruthCore.Metaethics.NaturalisticRealism
+public import TruthCore.Metaethics.OrganizationalMaintenance
 public import TruthCore.Metaethics.PlanStateEmbedding
 public import TruthCore.Metaethics.Questions
 public import TruthCore.Metaethics.SupervenienceProfiles

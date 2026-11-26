@@ -774,28 +774,11 @@ Take the same S = `{0,1}` and O = `{0,1}` throughout this structural
 test. A four-entry table lists `Good(0,0), Good(0,1), Good(1,0),
 Good(1,1)`. Enumerate all tables and test invariance on equal data:
 
-```python
-from itertools import product
+Lean checks the complete set of two-profile eligibility tables and uses
+the existing exact-classification criterion for equal-data fibers.
+[Criterion](../../TruthCore/Metaethics/GovernanceEligibilityCensus.lean#L26) · [Counts](../../TruthCore/Metaethics/GovernanceEligibilityCensus.lean#L46) · [Selected rows](../../TruthCore/Metaethics/GovernanceEligibilityCensus.lean#L57)
 
-def factors(table, data):
-    return all(data[s] != data[t] or table[2*s+o] == table[2*t+o]
-               for s in (0, 1) for t in (0, 1) for o in (0, 1))
-
-tables = list(product((0, 1), repeat=4))
-singleton = [p for p in tables if sum(p[:2]) == sum(p[2:]) == 1]
-assert sum(factors(p, (0, 0)) for p in tables) == 4
-assert len(singleton) == 4
-assert sum(factors(p, (0, 0)) for p in singleton) == 2
-
-flip = (1, 0, 0, 1)
-assert not factors(flip, (0, 0))
-assert factors(flip, (0, 1))
-rule = lambda kind, option: kind == option
-assert all(bool(flip[2*s+o]) == rule(s, o)
-           for s in (0, 1) for o in (0, 1))
-```
-
-All displayed assertions were executed in Python 3. Four of the
+Four of the
 sixteen Boolean tables factor through constant data; two of the four
 tables having exactly one eligible option per profile do. These are
 counts of this fixture, not priors, frequencies or comparative warrant
@@ -866,7 +849,7 @@ only in the respect of **not violating this particular claim**:
 | B on B's own behalf | no | yes |
 | C, validly | yes | yes |
 
-Executing that rule returned `(0,1); (1,1)`. It fails factorization
+The Lean consent control gives `(0,1); (1,1)`. It fails factorization
 through constant data and factors once the consent distinction is
 retained. This is a concrete, content-preserving reason to reject
 **consent-omitting data as complete for this claim's application**,
@@ -876,7 +859,7 @@ proof of C's original title, or an actual two-world counterexample
 to the necessary source. The rightful holder and rule stay fixed;
 the fact of who acts changes. One invariant conditional rule explains
 that difference. Knowing which party consented still does not give
-the knower C's title.
+the knower C's title. [Consent control](../../TruthCore/Metaethics/GovernanceEligibilityCensus.lean#L72)
 
 Nor do the existing
 [`EpistemicAuthority.controls`](../../corpus/results/2930b66a-b5e3-4f3f-b2d3-758d84c0e54d.json)
@@ -939,10 +922,9 @@ source-side account can instead explain why one intrinsic nature
 provides the requisite goods, powers and conditional applications.
 The source's real simplicity, actual efficacy, original title and
 intrinsic apprehension remain separate application questions. Existing
-intellect/will bundles `11628966` and `dd55f57a` are unchanged; no new
-vocabulary, argument edge, formal certificate or premise discharge is
-introduced by this subsection. Its finite diagnostics are executed
-Python checks. The coordinator also elaborated the exact per-option
+intellect/will bundles `11628966` and `dd55f57a` retain their premises.
+The linked Lean declarations now check the finite diagnostics. The
+coordinator also elaborated the exact per-option
 application and companion strict-cycle application with pinned Lean
 4.35.0; both reported no axioms. The
 [primary note](goodness-standard-priority.md) preserves that code and

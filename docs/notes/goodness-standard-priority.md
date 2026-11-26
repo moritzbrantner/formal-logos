@@ -655,52 +655,13 @@ already distinguishes priority between roles from strict priority between
 their real referents; that result is reused here without rerunning its
 role or act-coverage diagnostics.
 
-**Executed finite control.** The owner's three-node cycle check was
-reproduced and strengthened to enumerate every strict partial order on
-the three labeled nodes. There are 6 total orders and 19 strict partial
-orders; none contains all three cycle edges. Removing any one edge leaves
-exactly one extension of each kind. Each singleton edge is separately a
-strict partial order, while the three-edge union fails transitivity; its
-transitive closure contains all three self-loops. The following is the
-reproducible core of the executed check:
-
-```python
-from itertools import permutations, product
-
-nodes = range(3)
-cycle = ((0, 1), (1, 2), (2, 0))
-pairs = tuple(product(nodes, repeat=2))
-
-def strict_order(edges):
-    return (all((x, x) not in edges for x in nodes)
-            and all((x, z) in edges for x, y in edges
-                    for y2, z in edges if y == y2))
-
-def linear_extensions(edges):
-    return [p for p in permutations(nodes)
-            if all(p.index(x) < p.index(y) for x, y in edges)]
-
-orders = [frozenset(p for p, bit in zip(pairs, bits) if bit)
-          for bits in product((0, 1), repeat=9)]
-orders = [order for order in orders if strict_order(order)]
-assert len(orders) == 19
-assert not linear_extensions(cycle)
-assert not any(set(cycle) <= order for order in orders)
-for i in range(3):
-    remaining = cycle[:i] + cycle[i+1:]
-    assert len(linear_extensions(remaining)) == 1
-    assert sum(set(remaining) <= order for order in orders) == 1
-assert all(strict_order(frozenset((edge,))) for edge in cycle)
-assert not strict_order(frozenset(cycle))
-closure = set(cycle)
-while True:
-    expanded = closure | {(x, z) for x, y in closure
-                          for y2, z in closure if y == y2}
-    if expanded == closure:
-        break
-    closure = expanded
-assert closure == set(pairs)
-```
+**Finite control checked in Lean.** There are six linear orders and
+19 strict partial orders on the three labeled facts. None extends the
+full cycle. Deleting any one edge leaves exactly one extension of each
+kind, and every singleton is itself a strict partial order. The union of
+the three edges fails transitivity and its positive transitive closure
+contains every ordered pair, including all three self-loops.
+[Counts and omission controls](../../TruthCore/Metaethics/GoodnessStandardPriority.lean#L63) · [Positive closure](../../TruthCore/Metaethics/GoodnessStandardPriority.lean#L73)
 
 This is finite relational verification. It supplies no actual source,
 normative ground, philosophical edge or common-order interpretation.
@@ -898,7 +859,7 @@ wisdom-to-self-knowledge/capacity consumer declarations in
 first-agent, joint-compatibility, one-act and final source-uptake sections
 linked above. It reuses the merged #1984/#1986/#1970 analyses rather than
 claiming a fresh execution of their diagnostics or a new primary-source
-reading. The new execution here is the displayed finite cycle control.
+reading. The finite cycle control is now checked in Lean.
 No source materialization, Lean declaration, corpus record, support edge
 or premise discharge is added by this substantive slice.
 

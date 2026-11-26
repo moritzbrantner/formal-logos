@@ -506,7 +506,7 @@ methodological norm also needs a rationale connecting those observations
 to the normative restriction, not just successful applications of the
 method. These are live disputes, not refutations of all empiricism.
 
-**Finite discriminating test (executed in Python, not Lean).** Take two
+**Finite discriminating test checked in Lean.** Take two
 contents L (the logical claim), Q (an observational claim), and two bases
 D (non-observation-dependent), O (observation-dependent). Fix S(L,D)
 and S(Q,O) true, vary the two remaining sufficiency entries, and vary
@@ -521,18 +521,8 @@ The eight cases were enumerated:
 | 1 | 0 | true | false | true | true |
 | 1 | 1 | true | false | true | false |
 
-Reproduce the finite test (no dependencies):
-
-```python
-from itertools import product
-for lo, qd, global_scope in product((False, True), repeat=3):
-    S = {"L": {"D": True, "O": lo}, "Q": {"D": qd, "O": True}}
-    scope = ("L", "Q") if global_scope else ("Q",)
-    exists = all(not any(S[p].values()) or S[p]["O"] for p in scope)
-    exclusive = all(not S[p]["D"] for p in scope)
-    assert exists == (lo if global_scope else True)
-    assert exclusive == (False if global_scope else not qd)
-```
+Lean checks the existential and exclusive verdicts across the eight
+scope and sufficiency assignments. [Scoped basis test](../../TruthCore/Logic/ScopedSufficientBasis.lean#L24)
 
 In particular, L having both bases and Q having its empirical basis is
 a populated control for why a deductive proof alone does not contradict

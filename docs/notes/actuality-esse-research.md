@@ -451,7 +451,7 @@ For the `aba6f4e1` argument, a positive sufficient condition is available. Ident
 
 Reuse `ParticularActuality.restrict` and `DerivativeJointPower.Supply`. Fix the same selected realization token `v`, record family `h`, intrinsic seeds `I`, and set `S` of independently identified productive input tokens of a named giver `a`. Delete only groups with a contributor in `S` (not enablers); keep intrinsic seeds and the contents of all retained groups fixed. In an actual exercise interpretation take `h := m.exercisedGroups`, and keep the original frame and event identities fixed. Define the candidate cut by `keep g := ∀ u ∈ h.contributors g, u ∉ S`.
 
-**Proposed structural lemma (not Lean/Comparator checked):** if `Supply h I v` and `¬ Supply (restrict h keep) I v`, there is a nonempty contributor path from some `u ∈ S` to that very `v` along originally supplied groups. A supplied group means an admitted group whose contributors all have original supply; its effect then has original supply. This is a reachability claim about the records, not a statement about modal worlds.
+**Structural lemma checked in Lean and Comparator:** if `Supply h I v` and `¬ Supply (restrict h keep) I v`, there is a nonempty contributor path from some `u ∈ S` to that very `v` along originally supplied groups. A supplied group means an admitted group whose contributors all have original supply; its effect then has original supply. This is a reachability claim about the records, not a statement about modal worlds. [`pathOfLoss`](../../TruthCore/Results/Causality/ProductiveDeletion/Solution.lean#L18)
 
 Proof sketch: take an original supply derivation of v. Under the supposition that no selected input has a nonempty path to v, inductively transport the derivation into the restricted family. An intrinsic derivation is unchanged. At a joint step, the original derivation supplies every contributor; if any contributor is selected there is an immediate path to the effect. If a selected input reaches a contributor by a nonempty path, extending that path with this group reaches the effect. Thus the group is retained and each contributor derivation satisfies the no-path condition; transport them and apply the joint constructor. This proves no path implies survival; the loss-to-path direction is classical contraposition (state any required logic assumptions). No acyclicity, uniform finite depth, unique sufficient cause or indispensability of all contributors is used. An independently seeded target cannot be lost. The path may use a group that also has other productive inputs.
 
@@ -461,66 +461,14 @@ To obtain the existing `ExerciseContribution.Step`/ `Credit` rather than a bare 
 
 ### Reproducible structural diagnostic
 
-Seven event indices: 0 = common existential seed, 1 = recipient esse, 2 = producer esse, 3 = independently stipulated source operative input, 4 = alternative operative input, 5 = intermediate, 6 = selected target. The fixed seeds are 0, 3, 4. The two fixed esse records are 0 → 1 and 0 → 2. All 13 optional productive group records can be independently retained or omitted; these are analyst assignments, not a causal ontology. Compute least inductive supply by saturation and positive reachability from 3 through groups whose contributors and effects are originally supplied (source and target are distinct). The recipient-esse cut independently removes records producing 1; the productive cut removes records with 3 as contributor. The former is not a possible-world claim about a nonexistent recipient, and the latter does not remove 3 as a seed. Both bearers' esse remains supplied under the productive cut. The actual-exercise interpretation requires separate evidence; supplied groups need not all be exercised in reality.
+Seven event indices: 0 = common existential seed, 1 = recipient esse, 2 = producer esse, 3 = independently stipulated source operative input, 4 = alternative operative input, 5 = intermediate, 6 = selected target. The fixed seeds are 0, 3, 4. The two fixed esse records are 0 → 1 and 0 → 2. All 13 optional productive group records can be independently retained or omitted; these are analyst assignments, not a causal ontology. The original diagnostic saturated the records. The Lean evaluator computes the same least supply on this fixture. Positive reachability from 3 goes through groups whose contributors and effects are originally supplied, with distinct source and target. The recipient-esse cut independently removes records producing 1; the productive cut removes records with 3 as contributor. The former is not a possible-world claim about a nonexistent recipient, and the latter does not remove 3 as a seed. Both bearers' esse remains supplied under the productive cut. The actual-exercise interpretation requires separate evidence; supplied groups need not all be exercised in reality.
 
-Executed the following JavaScript diagnostic on 2026-11-24. Copy the fenced code to Node.js or a browser console to reproduce. These are the authoritative reproducible counts for this fixture; earlier unrecorded chat counts are withdrawn rather than treated as verification.
-
-```javascript
-const groups = [
-  [[3],5],[[3],6],[[4],5],[[4],6],[[1],5],[[1],6],
-  [[2],5],[[2],6],[[5],6],[[6],5],[[3,4],6],[[1,5],6],[[2,5],6]
-];
-const fixed = [[[0],1],[[0],2]], seeds = [0,3,4];
-function supply(gs, ss = seeds) {
-  const s = new Set(ss); let n;
-  do {
-    n = s.size;
-    for (const [inputs,out] of gs)
-      if (inputs.every(i => s.has(i))) s.add(out);
-  } while (s.size !== n);
-  return s;
-}
-function path(gs,s,src,target) {
-  const r = new Set([src]); let n;
-  do {
-    n = r.size;
-    for (const [inputs,out] of gs)
-      if (inputs.every(i => s.has(i)) && s.has(out) &&
-          inputs.some(i => r.has(i))) r.add(out);
-  } while (r.size !== n);
-  return r.has(target); // used only for distinct src and target
-}
-const counts = {graphs:0,supplied:0,loss:0,lossNoPath:0,
-  pathSurvives:0,bearerLossNoSelectedPath:0};
-for (let mask = 0; mask < 2**groups.length; mask++) {
-  const gs = [...fixed,...groups.filter((_,i) => mask & (1<<i))];
-  const orig = supply(gs);
-  const cut = supply(gs.filter(([i]) => !i.includes(3)));
-  const bearerCut = supply(gs.filter(([,o]) => o !== 1));
-  const p = path(gs,orig,3,6);
-  counts.graphs++;
-  if (!cut.has(1) || !cut.has(2)) throw Error("bearer not preserved");
-  if (!orig.has(6)) continue;
-  counts.supplied++;
-  if (!cut.has(6)) {
-    counts.loss++;
-    if (!p) counts.lossNoPath++;
-  } else if (p) counts.pathSurvives++;
-  if (!bearerCut.has(6) && !p) counts.bearerLossNoSelectedPath++;
-}
-const expected = {graphs:8192,supplied:8146,loss:194,lossNoPath:0,
-  pathSurvives:6846,bearerLossNoSelectedPath:98};
-if (JSON.stringify(counts) !== JSON.stringify(expected))
-  throw Error(JSON.stringify(counts));
-const historical = [...fixed,[[3],5],[[5],6]];
-const present = [...fixed,[[5],6]];
-const retainedSeeds = [...seeds,5];
-if (!path(historical,supply(historical),3,6) ||
-    !supply(present,retainedSeeds).has(6) ||
-    path(present,supply(present,retainedSeeds),3,6))
-  throw Error("retention control");
-console.log(counts);
-```
+Lean checks the counts for all 8,192 optional-record assignments, bearer
+preservation after the productive cut, and the historical retention control.
+The Boolean supply test agrees with inductive supply in each record
+context. The path test agrees with positive supplied-path reachability
+in the original and retention contexts.
+[Counts](../../TruthCore/Causality/ProductiveDeletionCensus.lean#L280) · [Bearer preservation](../../TruthCore/Causality/ProductiveDeletionCensus.lean#L284) · [Retention](../../TruthCore/Causality/ProductiveDeletionCensus.lean#L288) · [Supply equivalence](../../TruthCore/Causality/ProductiveDeletionCensus.lean#L172) · [Path equivalence](../../TruthCore/Causality/ProductiveDeletionCensus.lean#L228)
 
 | Test | Count |
 | --- | ---: |

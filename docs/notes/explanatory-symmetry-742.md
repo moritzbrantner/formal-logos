@@ -276,34 +276,11 @@ the version's suitability after dispatch. The booking can determine both the
 automatically dispatched version and the language shown on the editor's initial brief.
 Even perfect agreement across bookings could have this shared upstream cause.
 
-Here is the complete Python 3 test. A return of A or B is the simulated
-dispatch of that version. Disconnecting the instruction leaves the reported
-end, booking, confirmed languages and available versions fixed. The third
-implementation reads the confirmed languages directly.
-
-```python
-def select(readable, tie):
-    return tie if tie in readable else readable[0]
-
-def dispatch(readable, booking, tie, connected):
-    instruction = select(readable, tie)
-    edited = instruction if connected else None
-    automatic = booking
-    direct = select(readable, tie)
-    return edited, automatic, direct
-
-def report(version, readable):
-    return f"{version} was readable" if version in readable else "unreadable"
-
-for version in "AB":
-    sent = dispatch(version, version, version, True)
-    assert sent == (version,) * 3
-    assert all(report(item, version) == f"{version} was readable" for item in sent)
-assert dispatch("A", "A", "A", False) == (None, "A", "A")
-assert dispatch("B", "A", "A", True) == ("B", "A", "B")
-assert dispatch("AB", "A", "A", True) == ("A", "A", "A")
-assert dispatch("AB", "A", "B", True) == ("B", "A", "B")
-```
+Lean checks both aligned bookings and their readability reports. It
+also checks the disconnected instruction, the booking mismatch, and both
+tie selections. The simulated dispatch returns the version sent, or
+absence if the editor's instruction is disconnected.
+[Aligned cases](../../TruthCore/Explanation/DispatchControls.lean#L24) · [Interventions](../../TruthCore/Explanation/DispatchControls.lean#L31)
 
 In the default A case all three can truthfully report “A was readable.”
 Only the first dispatch used the editor's instruction. Disconnecting it
