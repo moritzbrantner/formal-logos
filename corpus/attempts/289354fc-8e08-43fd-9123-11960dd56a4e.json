@@ -1,0 +1,25 @@
+{
+  "id": "289354fc-8e08-43fd-9123-11960dd56a4e",
+  "label": "Waiting for Descartes’s account of substance and thought modes",
+  "statement_ids": [
+    "5581cd7f-43b3-5aa1-b18d-36b8a44a9681"
+  ],
+  "date": "2026-11-26",
+  "kind": "source-search",
+  "outcome": "blocked",
+  "summary": "The unpinned French Principes I §§52–53 identifies thought as the thinking substance’s principal attribute. Imagining, sensing and willing depend on a thinking thing. The lead’s identification of thought itself as a mode of the substance conflates the principal attribute with its determinate modes. The dependence of those modes still bears on the episode target.",
+  "blocker": "Admit an edition-level pinned witness of the cited range and recheck the reading before registering any claim. Show that every occurring thought episode in the typed domain is one of the dependent modes. The positive dependence claim and the rejected principal-attribute identification have different scopes.",
+  "evidence": [
+    "PR-2024"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2024"
+    }
+  ]
+}

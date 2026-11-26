@@ -1,0 +1,10 @@
+{
+  "id": "691c05fd-f02a-4d84-b059-42cd12b635be",
+  "label": "Source support for 8d2ac441 from I q.18 a.3 co.",
+  "subject_kind": "claim",
+  "subject_id": "28c5ac67-5b7e-4aa7-a081-b84ad0ad1f64",
+  "predicate": "supports",
+  "object_kind": "statement",
+  "object_id": "8d2ac441-9b89-45ee-b8f6-db3522e0bafa",
+  "note": "Show what warrants D.Lives g, the primitive that IntellectualIsLiving predicates of each HasIntellect g, in its stated sense of operating from oneself without being moved by another in that operation. This requires an account of a bearer whose intellectual capacity is unexercised."
+}

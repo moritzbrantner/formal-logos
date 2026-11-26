@@ -1,0 +1,26 @@
+{
+  "id": "031a0912-4b4a-477e-860a-a44d6996ef06",
+  "label": "A creature’s being depends throughout on divine giving",
+  "statement_ids": [
+    "76d2cc96-14a0-48bc-bd0b-a5c0ca853265"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "In the pinned Dominican translation, the body distinguishes direct conservation from removing a cause of corruption, and compares creaturely being to illumination that would cease immediately without its source. Ad 4 expressly describes the action conserving creatures as without motion or time.",
+  "blocker": "This gives a distinct preserver for a creature with participated being and directly opposes self-sufficient persistence for that creature. Show that every receiver of esse in the route’s histories is within the scope of the creature argument, and that the timeless conservation counts as strict GivesAt by that preserver at each indexed presence moment. The temporal index belongs to the effect.",
+  "evidence": [
+    "da9c82ed-e886-5335-81c3-cebad9b27345",
+    "PR-2024"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2024"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "67b273a6-afb8-4bd4-92c0-08b3d0fd73c8",
+  "label": "Source support for 12bdfec3 from I–II q.1 a.2 co. and ad 1",
+  "subject_kind": "claim",
+  "subject_id": "c877ee68-65a6-4576-9709-946cd0272288",
+  "predicate": "supports",
+  "object_kind": "statement",
+  "object_id": "12bdfec3-81f6-59e6-91df-88b323ff860e",
+  "note": "The thesis challenges end-free natural agency directly. To apply it to EveryOperationHasAnEnd, every OperatesThrough witness, including the route’s immanent operations, must be covered by agency in the argument, and its determinate terminus must count as an end for the same operation in DirectedTo."
+}

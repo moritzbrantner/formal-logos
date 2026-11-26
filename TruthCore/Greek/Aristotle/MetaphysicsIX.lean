@@ -49,4 +49,13 @@ def PotencyIsUnactualizedCapacityReading {Being : Sort u} {Respect : Sort v}
     (InAct InPotency CanBe : Being → Respect → Prop) : Prop :=
   ∀ x r, InPotency x r ↔ CanBe x r ∧ ¬ InAct x r
 
+/-- In *Metaphysics* Θ.8, 1049b12–17, an activity is prior in account to a
+capacity when the account of that capacity refers to the activity as its
+corresponding exercise. The supplied relation expresses this reference
+between a capacity and an activity, rather than priority between two beings. -/
+def PriorInAccount {Activity : Sort u} {Capacity : Sort v}
+    (accountRefersToExercise : Capacity → Activity → Prop)
+    (activity : Activity) (capacity : Capacity) : Prop :=
+  accountRefersToExercise capacity activity
+
 end TruthCore.Greek.Aristotle.Metaphysics

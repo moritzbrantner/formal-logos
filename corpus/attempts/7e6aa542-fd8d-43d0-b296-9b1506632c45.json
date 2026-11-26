@@ -1,0 +1,26 @@
+{
+  "id": "7e6aa542-fd8d-43d0-b296-9b1506632c45",
+  "label": "Same-respect incompatibility and irreflexivity of receptive potency",
+  "statement_ids": [
+    "14325c83-1c3f-5afb-b63f-52b0c2b2a326"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "rejected",
+  "summary": "I q.3 a.1 co. distinguishes temporal priority within one subject from actuality’s priority without qualification. I q.2 a.3 rules out simultaneous act and potency in the same subject in the same respect. De ente c.3 [69874] distinguishes a receiving quiddity from its received esse after arguing for the distinction in created intelligences. These readings leave open irreflexivity of the separate binary relation ReceptivePotencyTo over principles.",
+  "blocker": "Justify why the same principle as both arguments of ReceptivePotencyTo would entail simultaneous act and potency in the same subject and respect, or independently justify nonidentity for every receiving relation in the selected domain.",
+  "evidence": [
+    "448c2608-b7ba-5399-bda9-66581ed3d6ca",
+    "PR-2024"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2024"
+    }
+  ]
+}

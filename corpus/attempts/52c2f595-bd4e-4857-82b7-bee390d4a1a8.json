@@ -1,0 +1,27 @@
+{
+  "id": "52c2f595-bd4e-4857-82b7-bee390d4a1a8",
+  "label": "Waiting for Descartes’s causal and first-person premises",
+  "statement_ids": [
+    "0747e4f3-5296-4353-af67-2dd86c740a5e",
+    "4a9ede84-d1a2-4d5a-8d5b-eded62114cc4",
+    "d3fcdeeb-32cc-481d-bb34-21445f3c4c47"
+  ],
+  "date": "2026-11-26",
+  "kind": "source-search",
+  "outcome": "blocked",
+  "summary": "The unpinned Meditatio III §§13–16 distinguishes an idea as a mode of thinking from the reality it presents and applies the causal demand to the latter. §§22–27 expressly contrast the finite meditator and his genuine idea of an infinite substance, distinguishing apprehension from exhaustive comprehension and actual infinity from indefinite increase. The first-person content and finitude are two different readings.",
+  "blocker": "Admit an edition-level pinned witness of the cited range and recheck the reading before registering any claim. For the causal premise restrict the represented content to what counts as objective reality and bind the same content to ObjCause. For the first-person readings identify the same meditator and occurring episode and defend the translation into Rep and the particular modeled infinite perfection, including exclusion of eminent possession for the finitude reading.",
+  "evidence": [
+    "PR-2024"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2024"
+    }
+  ]
+}

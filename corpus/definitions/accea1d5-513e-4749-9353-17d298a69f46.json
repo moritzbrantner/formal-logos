@@ -1,0 +1,12 @@
+{
+  "id": "accea1d5-513e-4749-9353-17d298a69f46",
+  "label": "Activity in the account of a capacity",
+  "term": "priority in account in Aristotle, Metaphysics Θ.8",
+  "definition": "An activity is prior in account to a capacity when the account of that capacity refers to that activity as its corresponding exercise, as the account of the capacity to build refers to building.",
+  "basis": "sourced",
+  "claim_ids": [
+    "0b73b0df-5927-492e-87d8-b1246f8b27bb"
+  ],
+  "lean_declaration": "TruthCore.Greek.Aristotle.Metaphysics.PriorInAccount",
+  "note": "PriorInAccount takes the reference relation from a capacity to its exercise as a parameter. This is a comparison of activity and capacity by reference in the account. Its arguments have different roles from the two beings of RoutePrior, and it supplies no witness of an actual bearer."
+}

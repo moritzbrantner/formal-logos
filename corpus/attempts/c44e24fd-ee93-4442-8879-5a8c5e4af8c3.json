@@ -1,0 +1,26 @@
+{
+  "id": "c44e24fd-ee93-4442-8879-5a8c5e4af8c3",
+  "label": "The soul has appetite in response to intellectual apprehension",
+  "statement_ids": [
+    "8554d4f7-2c78-53f5-97c4-dffed1148941"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "The pinned q.80 a.1–2 distinguishes natural inclination from appetite following apprehension. A.2 explains the distinction of intellectual and sensory appetite in the soul by their apprehended objects. The passivity of the soul’s appetite is part of that local explanation.",
+  "blocker": "The account supplies appetite toward an object as intellectually apprehended, against restricting all appetite to sense or natural inclination alone. The route must show that every InclinedTo tied to an Intelligible form is such a response rather than a natural inclination belonging to an intellectual nature, and that its response warrants a principle bearing both AppetitivePowerOf and FollowsIntellect over the selected domain.",
+  "evidence": [
+    "3012a91c-07fb-59b6-b654-ecc488a87eff",
+    "PR-2024"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2024"
+    }
+  ]
+}
