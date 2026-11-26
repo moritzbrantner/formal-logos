@@ -137,4 +137,130 @@ theorem linearScaleWithoutReceptionBridges :
   · intro h
     exact h true () false ⟨rfl, rfl⟩
 
+/-- A coarse observation can collapse an acknowledged comparison on the
+same two bearers, although the underlying rank preserves it. -/
+theorem collapsedObservation :
+    MoreInExceedsDegree raises degree ∧
+      ¬ MoreInExceedsDegree raises (fun _ _ => (1 : Fin 3)) := by
+  exact ⟨fun _ _ _ h => h, fun h => (lt_irrefl (1 : Fin 3))
+    (h () true false (by decide))⟩
+
+/-- The null clause requires a common lower bound even on a partial order.
+Neither represented profile lies strictly below this reference profile. -/
+theorem incomparableNull :
+    (∀ r x, ¬ vector r x < ((1, 0) : Fin 2 × Fin 2)) ∧
+      ¬ NoDegreeBelowNull vector ((1, 0) : Fin 2 × Fin 2) := by
+  exact ⟨by intro r x h; cases x with
+    | false => exact (by decide : ¬ (1 : Fin 2) ≤ 0) (le_of_lt h).2
+    | true => exact (lt_irrefl _) h, fun h => (by decide : ¬ ((1, 0) : Fin 2 × Fin 2) ≤
+    vector () false) (h () false)⟩
+
+/-- With the same comparison and origin, raising the possession threshold
+makes the lower bearer's positive reading insufficient. -/
+theorem thresholdWithoutAboveNull :
+    MoreInExceedsDegree raises degree ∧ NoDegreeBelowNull degree 0 ∧
+      ¬ AboveNullDegreeHasThePerfection onlyTrue degree 0 := by
+  exact ⟨fun _ _ _ h => h, linearScaleWithoutCapacityBridge.1.least,
+    fun h => (by decide : ¬ onlyTrue false ()) (h () false (by decide))⟩
+
+/-- Both members possess the respect at capacity. A distinct source gives
+it to the effect, which limits only its own act. The capacity failure occurs
+on the very causal pair. -/
+theorem equalCapacityOnCausalPair :
+    caused true false () ∧ actual true () ∧ ¬ limited true () false ∧
+      ¬ UnlimitedHavingExceedsCapacity actual limited
+        (fun _ _ => (1 : Fin 2)) (fun _ _ => (1 : Fin 2)) := by
+  exact ⟨⟨rfl, rfl⟩, trivial, by decide,
+    fun h => (lt_irrefl (1 : Fin 2)) (h true () false trivial (by decide))⟩
+
+section Endpoints
+
+open TruthCore.Causality.DirectEsseRootUniquenessAtBeing
+
+/-- Every degree is represented by itself in the selected respect. -/
+abbrev identityDegree {D : Type} (_ : Unit) (x : D) := x
+
+abbrev hasLeast (D : Type) [Preorder D] := ∃ x : D, IsLeast Set.univ x
+abbrev hasGreatest (D : Type) [Preorder D] := ∃ x : D, IsGreatest Set.univ x
+
+theorem representedEndpointExamples :
+    (hasLeast (Fin 2) ∧ hasGreatest (Fin 2)) ∧
+    (¬ hasLeast ℤ ∧ ¬ hasGreatest ℤ) ∧
+    (hasLeast ℕ ∧ ¬ hasGreatest ℕ) ∧
+    (¬ hasLeast ℕᵒᵈ ∧ hasGreatest ℕᵒᵈ) := by
+  have lower (D : Type) [PartialOrder D] [OrderBot D] : hasLeast D :=
+    ⟨⊥, trivial, fun _ _ => bot_le⟩
+  have upper (D : Type) [PartialOrder D] [OrderTop D] : hasGreatest D :=
+    ⟨⊤, trivial, fun _ _ => le_top⟩
+  have noLower (D : Type) [PartialOrder D] [NoMinOrder D] : ¬ hasLeast D := by
+    rintro ⟨x, _, h⟩
+    obtain ⟨y, hy⟩ := exists_lt x
+    exact (not_le_of_gt hy) (h (Set.mem_univ y))
+  have noUpper (D : Type) [PartialOrder D] [NoMaxOrder D] : ¬ hasGreatest D := by
+    rintro ⟨x, _, h⟩
+    obtain ⟨y, hy⟩ := exists_gt x
+    exact (not_le_of_gt hy) (h (Set.mem_univ y))
+  exact ⟨⟨lower _, upper _⟩, ⟨noLower _, noUpper _⟩, ⟨lower _, noUpper _⟩,
+    ⟨noLower _, upper _⟩⟩
+
+variable {D : Type} [LinearOrder D]
+
+abbrev strictDegree (_ : Unit) (x y : D) : Prop := y < x
+abbrev allPossess (_ : D) (_ : Unit) : Prop := True
+
+theorem nullOnFullRange (n : D) :
+    NoDegreeBelowNull identityDegree n ↔ IsLeast Set.univ n :=
+  ⟨fun h => ⟨trivial, fun x _ => h () x⟩, fun h _ x => h.2 (Set.mem_univ x)⟩
+
+theorem calibrationOnFullRange (n : D) :
+    MoreInExceedsDegree strictDegree (@identityDegree D) ∧
+      AboveNullDegreeHasThePerfection allPossess identityDegree n :=
+  ⟨fun _ _ _ h => h, fun _ _ _ => trivial⟩
+
+/-- With a witnessed strict pair the route's maximal bearer is exactly a
+greatest degree on this fully represented linear order. -/
+theorem ascentIffGreatestOnFullRange {x y : D} (hxy : x < y) :
+    GradesToMaximumAtBeing allPossess (@strictDegree D _) () ↔ hasGreatest D := by
+  constructor
+  · intro h
+    obtain ⟨m, _, hm⟩ := h ⟨y, x, hxy⟩
+    exact ⟨m, trivial, fun z _ => le_of_not_gt (hm z)⟩
+  · rintro ⟨m, _, hm⟩ _
+    exact ⟨m, trivial, fun z => not_lt_of_ge (hm (Set.mem_univ z))⟩
+
+/-- A measure-based limit licenses excess. Dropping that limit even at
+equality defeats excess on exactly the same scale with the same capacities. -/
+theorem capacityAlternativesOnFullRange (n : D) :
+    UnlimitedHavingExceedsCapacity allPossess (fun (x : D) _ z => x ≤ z)
+      (fun x _ => x) (fun z _ => z) ∧
+    ¬ UnlimitedHavingExceedsCapacity allPossess (fun (_ : D) _ _ => False)
+      (fun x _ => x) (fun z _ => z) := by
+  exact ⟨fun _ _ _ _ h => lt_of_not_ge h,
+    fun h => (lt_irrefl n) (h n () n trivial id)⟩
+
+/-- The same witnessed pair tests a coarsened observation and a stricter
+possession threshold, independently of either endpoint. -/
+theorem observationAndThresholdExceptions {a b : D} (hab : a < b) :
+    ¬ MoreInExceedsDegree (@strictDegree D _) (fun _ _ => a) ∧
+    ¬ AboveNullDegreeHasThePerfection (fun x (_ : Unit) => b < x) identityDegree a :=
+  ⟨fun h => (lt_irrefl a) (h () b a hab),
+   fun h => (lt_irrefl b) (h () b hab)⟩
+
+/-- Both bridges can hold on a designated causal pair if its effect
+participates and receives. Swapping which bearer participates and giving
+it only cross-reception defeats both bridges on the same ordered domain. -/
+theorem receptionAlternativesOnFullRange {c e : D} (hec : e < c) :
+    let gives := fun y x (_ : Unit) => y = c ∧ x = e
+    (CausedByAnotherIsParticipated gives (fun x _ => x = e) ∧
+      ParticipatedIsReceivedInParticipant (fun x (_ : Unit) => x = e)
+        (fun x _ z => x = e ∧ z = x)) ∧
+    (¬ CausedByAnotherIsParticipated gives (fun x _ => x = c) ∧
+      ¬ ParticipatedIsReceivedInParticipant (fun x (_ : Unit) => x = c)
+        (fun x _ z => x = c ∧ z = e)) := by
+  exact ⟨⟨fun _ _ _ _ h => h.2, fun _ _ h => ⟨h, rfl⟩⟩,
+    ⟨fun h => (ne_of_lt hec) (h c e () (ne_of_gt hec) ⟨rfl, rfl⟩),
+     fun h => (ne_of_gt hec) (h c () rfl).2⟩⟩
+
+end Endpoints
+
 end TruthCore.Models.ComparativePerfectionScale
