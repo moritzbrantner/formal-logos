@@ -1,0 +1,31 @@
+{
+  "id": "4b35db72-847b-4a41-b2ec-582c74be6236",
+  "label": "Proved-pool retrieval gaps on God-existence and attribute routes",
+  "statement_ids": [
+    "d1c47547-492f-4c93-a7af-6eb522602e08",
+    "37ae2e51-468c-5051-81ca-dfc6ae91f7b5",
+    "66b7ac36-56a9-5907-8dc2-3dfb69100c9c",
+    "d07314a3-ac99-58df-8fa1-e21f0d53db5d",
+    "e9da0216-07df-5c7f-b9e8-475d12671f59",
+    "b45ca9db-0bf2-40d3-819c-44dc4e2cef5c",
+    "d4ea5ebf-7680-5c48-a0ad-6a6e559ec2d6"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "At 1c9e6607bc6e004abc94cdb41426dbd26d4a0e97, under the shared heavy-job lock, ran truth discover with the proved pool, a ranked cap of eight (plus eligible registered bridges), 3000 CLI heartbeats, batch four and two jobs. Duper searched the unfolded propositions. Lean-auto used Zipperposition for premise selection with Duper reconstruction. All seven targets had Lean declarations in the built library. Retrieval found no proved-pool candidate sharing the required vocabulary and a compatible binder anchor. These targets did not reach Duper. The four mixed-token priority targets use the selected Sum B E relation. Atom population, actual assertion, and operation agency also failed the retrieval gate.",
+  "evidence": [
+    "PR-2041"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2041"
+    }
+  ],
+  "blocker": "Supply an explicit same-domain premise bundle if an existing proved proposition bears on the target. For a genuine witness or framework input, continue its independent research rather than treating the absence of a candidate as proof failure."
+}
