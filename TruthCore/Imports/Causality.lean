@@ -138,6 +138,7 @@ public import TruthCore.Causality.FullnessCandidates
 public import TruthCore.Causality.GiverIndexedApplication
 public import TruthCore.Causality.GiverPerfectionControls
 public import TruthCore.Causality.GivingChoice
+public import TruthCore.Causality.GivingChoiceNar
 public import TruthCore.Causality.GivingPlanExceptions
 public import TruthCore.Causality.GodMaximalCausal
 public import TruthCore.Causality.GodNamingSenses
@@ -316,6 +317,7 @@ public import TruthCore.Causality.StructuralCausalAdapters
 public import TruthCore.Causality.StructuralCausalDeletion
 public import TruthCore.Causality.StructuralCausalIdentification
 public import TruthCore.Causality.StructuralCausalModel
+public import TruthCore.Causality.StructuralCausalWithdrawal
 public import TruthCore.Causality.SubjectFocalRoles
 public import TruthCore.Causality.SubtractionArgument
 public import TruthCore.Causality.SuccessionPotency

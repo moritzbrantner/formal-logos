@@ -1,0 +1,12 @@
+{
+  "id": "dcb86e33-7cce-45ac-b579-f9bf50c53c5b",
+  "label": "Rigidity excludes admissible cells withholding NECESSARY_2 grounded recipients (inference)",
+  "input_statement_ids": [
+    "eeccc832-02c7-426a-bb16-d269260751be"
+  ],
+  "output_statement_id": "bf7b9a2d-d98f-49a4-a236-c963c4830693",
+  "rule": "Apply giving rigidity at the reflexive cell representative",
+  "meaning": "Reflexivity places the representative in its own withholding cell. Bridge (b2) requires this same root to give the same NECESSARY_2 grounded recipient being at that representative's mapped world, since the world is accessible and retains the root. The two conclusions contradict.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

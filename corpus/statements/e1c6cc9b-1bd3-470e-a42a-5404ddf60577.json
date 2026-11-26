@@ -1,0 +1,19 @@
+{
+  "id": "e1c6cc9b-1bd3-470e-a42a-5404ddf60577",
+  "label": "Each NECESSARY_2 grounded actual recipient has a withholding cell",
+  "paraphrase": "OPEN analyst formulation. At the selected world, every NECESSARY_2 actual concretum directly grounded by an actual root has a cell of that root consisting only of histories whose mapped worlds lack its giving to that recipient. The recipient can determine the cell. Accessibility and the root's existence at the mapped worlds are separate inputs.",
+  "lean_declaration": "TruthCore.Causality.GivingChoiceNar.RootsHaveNecessaryWithholdingCells",
+  "definition_ids": [
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "c57e2682-08e6-527e-950f-0fa0a7ff11ef",
+    "a1b2e330-388f-4120-bc5c-969642317792",
+    "62dfa893-b633-4513-9790-8f9a0a3087e0",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "c54f0922-eb5c-4abd-9bde-6586e4127424"
+  ],
+  "disambiguation_ids": [
+    "83264cf5-01fe-52fc-9a00-eeb024f6496e",
+    "623ddbf6-9683-5361-bae4-e348a00ec680"
+  ]
+}

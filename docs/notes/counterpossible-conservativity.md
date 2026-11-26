@@ -228,20 +228,88 @@ and the diagonal convention of the primitive remain as assessed in the
 [causal dependence investigation](causal-dependence-support-investigation.md).
 The adapter assumes no general transitivity, asymmetry or well-foundedness.
 
-In the checked replacement control the agent is present at actual only. The
-same effect is present at actual where a giving edge is supplied, drops in the
-near removal outcome, and remains at far under a stipulated backup condition.
-Both absence worlds are accessible. Soundness at the closest absence and
-accessible witness realization hold in this interpretation, while coverage
-and the existing dependence-to-impossibility conclusion fail. This isolates
-a formal gap even with a nonempty removal test. It leaves the metaphysical
-availability of such a replacement and identity of the effect across scenarios
-open. The next test is to fix an effect individuation criterion and compare
-identity-preserving replacement with essential source dependence under the
-same accessibility profile. Determine whether any genuine being-without
-witness could be omitted by the candidate selector. `42756c07`, the parent
-map to strict grounding of existence facts, still needs independently
-interpreted labels and warranted strict-ground edges. Neither an ordered
-conditional nor the causal removal adapter supplies those edges.
+### What counts as the same effect through replacement?
+
+The original replacement control assigns one effect to actual and far. It
+shows failure of closest-absence reasoning under that assignment. To test the
+assignment itself, keep the role, the giving edge and the dependence edge at
+issue, the actual origin, the source existence profile, universal accessibility
+and the ordering actual < near < far fixed. The candidate inventory has one
+output for the role at actual, produced by the designated source, no candidate
+at near, and one at far, produced by the backup. The two criteria assign
+different cross-world presence predicates to the same target slot. The formal
+standpoint records a provenance tag independently of current producer existence.
+
+| Criterion | Same effect at far | Consequence for the same closest-absence selector |
+| --- | --- | --- |
+| EFFECT_INDIVIDUATION_1, exact origin within the fixed role | No, because the candidate has backup provenance | Both tracked individuals exist only at actual. There is no accessible effect-present/source-absent contrast for any pair, so witness preservation holds vacuously. |
+| EFFECT_INDIVIDUATION_2, occupancy of the fixed role | Yes, because the backup realizes the role | Far is an accessible contrast. Near is the sole selected absence and has no output. Witness preservation fails even though selected loss and accessible realization hold in the model. |
+
+The [Lean comparison](../../TruthCore/Modal/WitnessPreservationIndividuation.lean)
+checks the role assignment in `role_omits_witness`. The registered
+[`origin_preserves`](../../TruthCore/Results/Modal/WitnessPreservationIndividuation/Solution.lean)
+checks the provenance assignment. Its typed consumer `origin_case_exclusion`
+uses the existing `dependence_excludes_being_without_of_witnesses` with that
+preservation result, the selected near loss, and the control's three-world
+witness relation. Its conclusion is a model-relative instance of `000e1f65`.
+The role result also proves that this instance fails under the second criterion.
+A criterion that tracks provenance alone does not entail the modal conclusion.
+`retained_origin_omits_witness` keeps the role output at far and changes its
+provenance to the original source. Its absence at the standpoint is consistent
+with that historical tag, and the selector loses a witness even on the origin
+criterion. This is a checked assignment of provenance, with no claim that a
+complete history for a particular sustaining effect realizes that assignment.
+The result is conditional on counting the far candidate by its producer tag:
+`OriginIndividuation` tests only whether the candidate carries `.source`, so
+it matches producers, not production histories.
+
+**Provenance.** Tracking a particular produced item often depends on continuity
+of its production history. Two separately produced replacement parts can
+occupy the same machine role and have the same specifications, yet a serial
+number and continuous custody trace distinguish them. That gives a reason to
+reject a separately produced duplicate when the question is about this item.
+It gives no corresponding reason to count every candidate made by the same
+producer as the original token: one manufacturer can make two replacement
+parts for the same slot, each the sole candidate in its world and each
+carrying the producer tag, while serial number and custody still distinguish
+them. The provisional assessment therefore treats producer matching as the
+formal criterion tested here, and token identity by production history as a
+further, stronger criterion that the finite profile does not encode.
+It does not make ongoing presence of its producer constitutive of the item.
+A part can remain in use after the producer ceases to exist, precisely because
+production and subsequent maintenance are different activities. The historical
+control isolates that objection to treating the provenance criterion as enough
+for witness preservation, and exact provenance also needs a defensible account
+of how much variation in production can leave the target item the same.
+
+**Role.** A service can continue at the same endpoint when a backup takes
+over. An account of service continuity should admit the alternate realization
+if it preserves the selected interface and service conditions. Role
+equivalence can also hold between two distinct realizers, as when both primary
+and standby servers can answer the same request. The existence of the standby
+therefore answers a question about the service without establishing that the
+primary server persists. That distinction gives a substantive objection to
+using role occupancy as sufficient for numerical identity in the root
+argument, even when role occupancy is the right criterion for the service.
+
+**Provisional assessment.** Exact provenance has the stronger warrant when
+the effect is a particular produced token and the backup independently
+produces a duplicate. Role occupancy has the stronger warrant when the
+explanandum is the continued realization of a specified function. The root
+premise concerns a being, so a backup filling a function does not by itself
+challenge `31bcb75e` for that being. The historical variant also blocks an
+inference from provenance alone to the general premise. The next test is to
+fix a particular bearer, specify which constitutive conditions its sustaining
+dependence involves, and justify accessible source-absence histories against
+those conditions. An admissible history with the same bearer at far would
+revise the preservation judgment if every selected absence loses it. An
+independently warranted account covering all relevant contrasts and ruling
+out such omission would support the scoped use. The three-world result gives
+no such coverage for the intended metaphysical frame. The route from
+`31bcb75e` to `000e1f65`, `75f11492` and `2e96d2fa` still uses the prior
+argument. Neither this comparison nor the prior witness argument supplies
+`8ab3d114`, the independence-to-separability premise of the PRIOR_4 sibling
+`c4bb0481` at `47aff057`. The separate strict-ground map `42756c07` still
+needs independently interpreted existence-fact labels and oriented edges.
 
 [Recorded attempt](../../corpus/attempts/f9d65e23-d6a2-4259-98e9-0dc4fe418956.json).

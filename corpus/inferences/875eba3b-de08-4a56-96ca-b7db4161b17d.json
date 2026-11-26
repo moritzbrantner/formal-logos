@@ -1,0 +1,15 @@
+{
+  "id": "875eba3b-de08-4a56-96ca-b7db4161b17d",
+  "label": "NAR from admissible cells restricted to NECESSARY_2 recipients (inference)",
+  "input_statement_ids": [
+    "0c27f65a-6a6b-438a-b96c-b2bab9f21ac3",
+    "46a468b2-8132-4ef4-bd31-6e8292013f3b",
+    "e1c6cc9b-1bd3-470e-a42a-5404ddf60577",
+    "bf7b9a2d-d98f-49a4-a236-c963c4830693"
+  ],
+  "output_statement_id": "43651417-cd19-43d7-8f70-8def61acb0f0",
+  "rule": "Apply bare common-root reach and eliminate a necessary grounded recipient by cell exclusion",
+  "meaning": "The common root either is the necessary actual concretum or directly grounds it. In the grounding case, necessity puts the recipient within the restricted cell premise. Admissibility at its representative contradicts recipient exclusion. The Lean proof uses bare common-root reach. The registered argument obtains it from the intellectual common-root premise because the bare-root record has legacy links to several unbridged senses.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

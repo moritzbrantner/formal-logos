@@ -198,6 +198,8 @@ public import TruthCore.Results.Causality.FullFirstCause.Solution
 public import TruthCore.Results.Causality.FullnessCandidates.Solution
 public import TruthCore.Results.Causality.GiverIndexedApplication.Solution
 public import TruthCore.Results.Causality.GivingChoice.Solution
+public import TruthCore.Results.Causality.GivingChoiceNar.Solution
+public import TruthCore.Results.Causality.GivingChoiceNecessary.Solution
 public import TruthCore.Results.Causality.GivingPlanExceptions.Solution
 public import TruthCore.Results.Causality.GodMaximalCausal.Solution
 public import TruthCore.Results.Causality.GodNamingSenses.Solution
@@ -411,6 +413,7 @@ public import TruthCore.Results.Causality.StrictGroundInfiniteCauseSeries.Soluti
 public import TruthCore.Results.Causality.StrictGroundRepresentation.Solution
 public import TruthCore.Results.Causality.StrictPriorityPureAct.Solution
 public import TruthCore.Results.Causality.StrictPriorityPureActControls.Solution
+public import TruthCore.Results.Causality.StructuralCausalWithdrawal.Solution
 public import TruthCore.Results.Causality.SubjectFocalRoles.Solution
 public import TruthCore.Results.Causality.SubtractionArgument.Solution
 public import TruthCore.Results.Causality.SuccessionPotency.Solution

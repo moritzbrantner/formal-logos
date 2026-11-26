@@ -1,0 +1,19 @@
+{
+  "id": "bf7b9a2d-d98f-49a4-a236-c963c4830693",
+  "label": "No admissible withholding cell for a NECESSARY_2 grounded recipient",
+  "paraphrase": "Analyst formulation. Fix an actual root g, a NECESSARY_2 actual concretum x it grounds, and a representative history k. If the selected world map sends k to an accessible world where g exists, the cell represented by k cannot guarantee that g withholds giving x being. Only the representative is required to map to an accessible world retaining g.",
+  "lean_declaration": "TruthCore.Causality.GivingChoiceNar.NoAdmissibleWithholdingCellForNecessaryGrounded",
+  "definition_ids": [
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "c57e2682-08e6-527e-950f-0fa0a7ff11ef",
+    "a1b2e330-388f-4120-bc5c-969642317792",
+    "62dfa893-b633-4513-9790-8f9a0a3087e0",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "c54f0922-eb5c-4abd-9bde-6586e4127424"
+  ],
+  "disambiguation_ids": [
+    "83264cf5-01fe-52fc-9a00-eeb024f6496e",
+    "623ddbf6-9683-5361-bae4-e348a00ec680"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "e01681ab-bc25-4d33-a948-b055f0833e04",
+  "label": "NAR from admissible cells restricted to NECESSARY_2 recipients",
+  "argument_id": "c917c8b9-89dd-4d4a-bf2f-c861ac004676",
+  "challenge_module": "TruthCore.Results.Causality.GivingChoiceNecessary.Challenge",
+  "solution_module": "TruthCore.Results.Causality.GivingChoiceNecessary.Solution",
+  "theorem": "TruthCore.Results.Causality.GivingChoiceNecessary.nar_of_necessary_cells_and_recipient_exclusion",
+  "comparator_config": "results/e01681ab-bc25-4d33-a948-b055f0833e04/comparator.json",
+  "status": "solution-present",
+  "description": "The common root either is the necessary actual concretum or directly grounds it. In the grounding case, necessity puts the recipient within the restricted cell premise. Admissibility at its representative contradicts recipient exclusion. The Lean proof uses bare common-root reach. The registered argument obtains it from the intellectual common-root premise because the bare-root record has legacy links to several unbridged senses."
+}
