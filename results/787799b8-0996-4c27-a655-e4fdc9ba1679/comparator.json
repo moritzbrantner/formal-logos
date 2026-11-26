@@ -1,0 +1,13 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.SelectedConeSupplyControls.Challenge",
+  "solution_module": "TruthCore.Results.Causality.SelectedConeSupplyControls.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.SelectedConeSupplyControls.coneWalkCriterion"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "enable_nanoda": true
+}

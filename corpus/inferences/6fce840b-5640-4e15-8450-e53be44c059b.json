@@ -1,0 +1,10 @@
+{
+  "id": "6fce840b-5640-4e15-8450-e53be44c059b",
+  "label": "Characterize complete cone well-foundedness by anchored upstream walks (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "cf18717c-558d-4855-8ef9-0372eeb70fe0",
+  "rule": "Apply the accessibility criterion for descending chains and inherit accessibility along finite paths",
+  "meaning": "Mathlib relates accessibility to the absence of an unrestricted descending chain from the selected actual node. Restricting to that node's complete upstream cone preserves accessibility, since finite ancestors inherit it and the complete cone contains their actual concrete predecessors. Companion checks compare cone-local acyclicity with injective regress denial, natural-number ranking with source paths and one-step joining, and selected transfer accounting with an infinite same-recipient regress. The per se applications require separate relation-inclusion inputs on the cone carrier.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

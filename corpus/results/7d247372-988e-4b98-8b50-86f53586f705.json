@@ -1,0 +1,11 @@
+{
+  "id": "7d247372-988e-4b98-8b50-86f53586f705",
+  "label": "Selected grounding source path from aligned finite throughput coverage",
+  "argument_id": "8e4bbfb3-4af0-4c07-a3a1-cf61ba888e5c",
+  "challenge_module": "TruthCore.Results.Causality.SelectedConeSupply.Challenge",
+  "solution_module": "TruthCore.Results.Causality.SelectedConeSupply.Solution",
+  "theorem": "TruthCore.Results.Causality.SelectedConeSupply.sourcePath_of_throughputExit",
+  "comparator_config": "results/7d247372-988e-4b98-8b50-86f53586f705/comparator.json",
+  "status": "solution-present",
+  "description": "The no-return entry into the fixed recipient gives a net exporter upstream of its sender. By export coverage that exporter has no actual concrete ground. Positive entries follow Profile.grounds, so the same exporter is a source reached in the recipient's complete grounding cone. The ledger of finite total throughput can omit grounding edges."
+}

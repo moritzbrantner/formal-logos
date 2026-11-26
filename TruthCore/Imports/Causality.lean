@@ -288,6 +288,7 @@ public import TruthCore.Causality.SameSourceWitness
 public import TruthCore.Causality.ScopedActualCausality
 public import TruthCore.Causality.SelectedAncestry
 public import TruthCore.Causality.SelectedAncestryUniqueControl
+public import TruthCore.Causality.SelectedConeSupply
 public import TruthCore.Causality.SelectedPlgTheory
 public import TruthCore.Causality.SelectedSourcePath
 public import TruthCore.Causality.SelfCausationPriority

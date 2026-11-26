@@ -1,0 +1,11 @@
+{
+  "id": "2a842b8c-fe4e-4731-8504-e389f542bca8",
+  "label": "Selected grounding source path from aligned finite receipt matching",
+  "argument_id": "9926952b-b18c-4738-9efb-81e24c2cde00",
+  "challenge_module": "TruthCore.Results.Causality.SelectedConeSupply.Challenge",
+  "solution_module": "TruthCore.Results.Causality.SelectedConeSupply.Solution",
+  "theorem": "TruthCore.Results.Causality.SelectedConeSupply.sourcePath_of_receiptExit",
+  "comparator_config": "results/2a842b8c-fe4e-4731-8504-e389f542bca8/comparator.json",
+  "status": "solution-present",
+  "description": "A matching deficit excludes every actual concrete ground of the upstream sender by the stated coverage rule. Each transfer on its path to the fixed recipient follows a grounding edge, so the same sender is a source reached in the recipient's complete grounding cone. The finite event ancestry concerns selected transfers. Other grounding branches can continue without end."
+}
