@@ -1,0 +1,14 @@
+[batch]
+vocab = "TruthCore.Isabelle.AFP.NotesOnGoedel.GoedelVariantHOML1"
+results = "TruthCore.Results.Case.Catholicism.GoedelDeadEndExclusion"
+disambiguations = ["DISAMB-NECESSARY"]
+
+[[argument]]
+id = "780669c5-2f8f-4afc-a12b-73b567e52159"
+label = "The Gödel positivity premises exclude dead ends"
+theorem = "noDeadEndOfPositivity"
+premises = ["a9077c68-43f0-53e1-905a-d431488204ee", "96d8342a-f88f-5edf-8792-00d4f6d556ca", "649e7f30-2410-5cc1-b7c4-222f96cfb7dd"]
+conclusion = "0166c188-85b1-53c0-b844-d9a3ec6cf1fa"
+rule = "case-analysis"
+meaning = "Suppose a world w accesses no world. By Ax2a the empty property or its negation is positive at w; not the empty property (step 1). At w every necessity holds vacuously, so the negation of the empty property is necessarily included in the empty property, and by Ax4 the empty property is positive at w: contradiction. Not a step of the AFP proof; it replaces the frame reasoning hidden in its smt step 5."
+description = "Registers the existing noDeadEndWorld theorem on a fixed frame, existence predicate and positivity predicate. Ax2a, Ax4 and exclusion of the empty property imply no world accesses no worlds. Positivity stays specific to the Gödel setting."

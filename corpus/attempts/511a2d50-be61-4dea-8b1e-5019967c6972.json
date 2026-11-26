@@ -1,15 +1,16 @@
 {
   "id": "511a2d50-be61-4dea-8b1e-5019967c6972",
-  "label": "Finite population cover application connection plan",
+  "label": "Finite population cover supplies a de re necessary individual",
   "statement_ids": [
     "b9bf4eb8-ccac-5960-a8c7-c01bf24fbb33"
   ],
   "date": "2026-11-26",
   "kind": "derivation",
-  "outcome": "blocked",
-  "summary": "Reuse finite_cover_deRe on the exact Frame/ExistsAt signature. Bind a finite cover at the same base world with reachable-successor existence, absence amalgamation, de dicto population and excluded middle. Applying its witness to God existence additionally needs the route's actual concrete root condition.",
+  "outcome": "succeeded",
+  "summary": "Registers finite_cover_deRe on the same frame, population predicate and base world. The existing proof uses excluded middle, an accessible successor, absence amalgamation, finite population cover and de dicto population to obtain one individual present at every accessible world.",
   "evidence": [
-    "PR-2086"
+    "PR-2086",
+    "645be66f-1072-4205-92b5-05c3fa65dfbb"
   ],
   "workers": [
     {
@@ -19,7 +20,15 @@
       "effort": "high",
       "date": "2026-11-26",
       "pr": "PR-2086"
+    },
+    {
+      "role": "repair",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
     }
   ],
-  "blocker": "Connection target b62deb46-c451-5971-a569-cc5c0f44a398. The scoped bridge described in the summary remains open."
+  "blocker": "Identification with an actual concrete divine witness requires a separate argument."
 }

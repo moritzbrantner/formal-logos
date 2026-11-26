@@ -1,14 +1,14 @@
 {
   "id": "294d7c64-6672-4fc2-a341-7d8e280d0f8c",
-  "label": "Exact Humean thesis denials connection plan",
+  "label": "Exact Humean thesis denials on one assessment",
   "statement_ids": [
     "32b8b25e-2108-5dbc-90c8-db8d80253e58",
     "5ac01ada-7496-50e0-9ae5-6f750dcf0679"
   ],
   "date": "2026-11-26",
   "kind": "derivation",
-  "outcome": "blocked",
-  "summary": "The blanket reconstruction and selective theological denial belong to different arguments and can require different standards. Pair each with its exact existing negative in the same Assessment after the corresponding route application is justified.",
+  "outcome": "succeeded",
+  "summary": "RejectStrong and RejectTheologyWithheld are the exact negations of their respective partners on the same Assessment. The alternative relations record those two local comparisons. The premise bundles for blanket and selective rejection differ. These formal comparisons carry no adverse weight against theism.",
   "evidence": [
     "PR-2086"
   ],
@@ -20,7 +20,14 @@
       "effort": "high",
       "date": "2026-11-26",
       "pr": "PR-2086"
+    },
+    {
+      "role": "repair",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
     }
-  ],
-  "blocker": "Connection target 8626f8a5-9531-5da7-9ebd-f901e74b1129. The scoped bridge described in the summary remains open."
+  ]
 }

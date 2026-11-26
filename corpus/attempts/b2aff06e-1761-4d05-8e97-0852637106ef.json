@@ -1,15 +1,17 @@
 {
   "id": "b2aff06e-1761-4d05-8e97-0852637106ef",
-  "label": "Gödel empty-property connection plan",
+  "label": "Empty-property exclusion in the Gödel no-dead-end argument",
   "statement_ids": [
     "649e7f30-2410-5cc1-b7c4-222f96cfb7dd"
   ],
   "date": "2026-11-26",
   "kind": "derivation",
-  "outcome": "blocked",
-  "summary": "EmptyPropertyNotPositive uses the specific positive-property predicate of the Gödel formalization. A God-existence application would need a property vocabulary shared with the actual GOD_4 criterion and a downstream consumer of that exclusion. The frame-only no-dead-end condition has a separate successor result.",
+  "outcome": "succeeded",
+  "summary": "The registered Gödel inference uses exclusion of the empty property, Ax2a and Ax4 on the same model. At a dead end, necessary inclusion is vacuous. Positivity of the negated empty property then entails positivity of the empty property, contradicting its exclusion. The downstream successor argument uses the resulting frame condition with excluded middle. Positivity has its Gödel meaning throughout.",
   "evidence": [
-    "PR-2086"
+    "PR-2086",
+    "a7f5faf2-7f51-4bfd-a5bd-236105e44f6c",
+    "da5001d2-3f90-449b-a772-8e3964a03375"
   ],
   "workers": [
     {
@@ -19,7 +21,14 @@
       "effort": "high",
       "date": "2026-11-26",
       "pr": "PR-2086"
+    },
+    {
+      "role": "repair",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
     }
-  ],
-  "blocker": "No premise of the case identifies Gödel positivity with the attributes in the GOD_4 witness."
+  ]
 }

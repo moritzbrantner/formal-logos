@@ -7,14 +7,24 @@
   "date": "2026-11-26",
   "kind": "derivation",
   "outcome": "succeeded",
-  "summary": "At the selected world of the same frame, a failure of successor existence would make every world inaccessible from that world, against NoDeadEndWorld. Excluded middle on the existence proposition supplies the witness. The local successor feeds finite actual-contingent roster amalgamation through 390ac3ab-48ec-596e-9890-4d2364e81cf9. The inherited Goedel box definition was removed from the frame-only premise after checking its declaration. The proof needs the global no-dead-end condition and does not derive self-access.",
+  "summary": "Excluded middle on successor existence yields an accessible witness at the selected world on the same frame. Failure of existence would make every world inaccessible from that world. The registered Gödel producer supplies the no-dead-end condition under Ax2a, Ax4 and empty-property exclusion. The successor feeds finite actual-contingent roster amalgamation and the finite population cover derivation.",
   "evidence": [
     "da5001d2-3f90-449b-a772-8e3964a03375",
-    "PR-2086"
+    "PR-2086",
+    "a7f5faf2-7f51-4bfd-a5bd-236105e44f6c",
+    "645be66f-1072-4205-92b5-05c3fa65dfbb"
   ],
   "workers": [
     {
       "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
+    },
+    {
+      "role": "repair",
       "provider": "codex",
       "model": "gpt-6.2-sol",
       "effort": "high",

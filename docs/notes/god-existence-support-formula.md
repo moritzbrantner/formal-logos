@@ -707,3 +707,25 @@ accidental-mover coverage to actual reductions in the stated domain.
 - [Procedurally selected whole-series exercise connection plan](../../corpus/attempts/9c67743d-c18c-4663-87bf-6978ca7f85ad.json)
 - [Respect-free mover fork connection plan](../../corpus/attempts/b9061349-cd4e-4378-bef4-9cbdcab219d9.json)
 - [No-dead-end frame gives a selected successor](../../corpus/attempts/3702a4c0-b6a9-446d-b55f-f06d32ad609e.json)
+
+The corrected connectivity scan includes every inference in a registered
+argument, including scoped assumptions. The 31 original retirement candidates
+have existing uses: 26 occur in registered inferences and five are exercised
+in the motion and mover controls. The Third Way occupancy and coming-to-be
+statements are intermediate steps. The succession assumption is discharged
+in the conditional infinite-past argument.
+
+The [finite-cover result](../../corpus/results/645be66f-1072-4205-92b5-05c3fa65dfbb.json)
+registers the existing derivation of one individual present at every accessible
+world. It keeps excluded middle, successor existence, absence amalgamation,
+finite population cover and de dicto population on one frame and existence
+predicate. Identifying its individual with an actual concrete divine witness
+requires further work. The [Gödel result](../../corpus/results/a7f5faf2-7f51-4bfd-a5bd-236105e44f6c.json)
+registers the existing no-dead-end inference with Ax2a, Ax4 and empty-property
+exclusion explicit. It supplies a frame condition for the successor argument.
+Gödel positivity retains its model-specific meaning.
+
+- [Finite population cover](../../corpus/attempts/511a2d50-be61-4dea-8b1e-5019967c6972.json)
+- [Gödel empty-property exclusion](../../corpus/attempts/b2aff06e-1761-4d05-8e97-0852637106ef.json)
+- [Third Way temporal inferences](../../corpus/attempts/daabd904-66a0-4a5c-baf0-1a1e2f8edf6c.json)
+- [Exact Humean alternatives](../../corpus/attempts/294d7c64-6672-4fc2-a341-7d8e280d0f8c.json)

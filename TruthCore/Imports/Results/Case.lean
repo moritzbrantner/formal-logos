@@ -23,6 +23,7 @@ public import TruthCore.Results.Case.Catholicism.ClassicalAttributesJointWitness
 public import TruthCore.Results.Case.Catholicism.DeadEndFreeSuccessor.Solution
 public import TruthCore.Results.Case.Catholicism.DivineLoveRoute.Solution
 public import TruthCore.Results.Case.Catholicism.DivineLoveSenseRoute.Solution
+public import TruthCore.Results.Case.Catholicism.FiniteCoverNecessaryIndividual.Solution
 public import TruthCore.Results.Case.Catholicism.FirstSourceIdentification.Controls
 public import TruthCore.Results.Case.Catholicism.FirstSourceIdentification.Solution
 public import TruthCore.Results.Case.Catholicism.FirstUnmovedMoverExistsOrNotFromEm.Solution
@@ -40,6 +41,7 @@ public import TruthCore.Results.Case.Catholicism.FromQuartaViaWithClassicalAttri
 public import TruthCore.Results.Case.Catholicism.FromQuartaViaWithoutTruthBridge.Solution
 public import TruthCore.Results.Case.Catholicism.GodIncorruptibility.Solution
 public import TruthCore.Results.Case.Catholicism.GodIsOneFromEsse.Solution
+public import TruthCore.Results.Case.Catholicism.GoedelDeadEndExclusion.Solution
 public import TruthCore.Results.Case.Catholicism.ImmanentOrigins.Solution
 public import TruthCore.Results.Case.Catholicism.MaximalBeingCauseExclusion.Solution
 public import TruthCore.Results.Case.Catholicism.MaximeEnsIsGodStrength.Solution
