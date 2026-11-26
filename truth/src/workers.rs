@@ -47,6 +47,33 @@ fn models<'a>(attempt: &'a Record, role: &str) -> impl Iterator<Item = &'a str> 
         .filter_map(|worker| worker["model"].as_str())
 }
 
+/// For each statement named in some attempt's `statement_ids`, the models
+/// recorded as `author` on its attempts (empty when no attempt records one).
+pub fn authors(corpus: &Corpus) -> BTreeMap<String, BTreeSet<String>> {
+    let mut by_statement: BTreeMap<String, BTreeSet<String>> = BTreeMap::new();
+    for attempt in corpus.records("attempts") {
+        for id in attempt
+            .get("statement_ids")
+            .and_then(Value::as_array)
+            .into_iter()
+            .flatten()
+            .filter_map(Value::as_str)
+        {
+            by_statement
+                .entry(id.to_owned())
+                .or_default()
+                .extend(models(attempt, "author").map(str::to_owned));
+        }
+    }
+    by_statement
+}
+
+/// Whether `authored` is exactly `{model}`: the `--authored-only-by` test of
+/// `truth workers` and `truth bottlenecks`.
+pub fn authored_only_by<S: AsRef<str>>(authored: &BTreeSet<S>, model: &str) -> bool {
+    authored.len() == 1 && authored.iter().all(|name| name.as_ref() == model)
+}
+
 /// The `truth workers` filters.
 #[derive(Debug, Default, Clone)]
 pub struct Filter {
@@ -102,7 +129,7 @@ pub fn report(
             continue;
         }
         if let Some(model) = &filter.authored_only_by
-            && !(authored.len() == 1 && authored.contains(model.as_str()))
+            && !authored_only_by(&authored, model)
         {
             continue;
         }

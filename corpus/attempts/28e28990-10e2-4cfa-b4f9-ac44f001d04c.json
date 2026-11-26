@@ -1,16 +1,18 @@
 {
   "id": "28e28990-10e2-4cfa-b4f9-ac44f001d04c",
-  "label": "Waiting for Descartes’s taxonomy of actual thinking",
+  "label": "Reading the meditator’s present doubting",
   "statement_ids": [
     "1722a80f-47a4-5605-8b66-b3534e457bcb"
   ],
   "date": "2026-11-26",
   "kind": "source-search",
-  "outcome": "blocked",
-  "summary": "In the unpinned Adam–Tannery Meditation II, Descartes lists doubting under thinking and identifies his own current doubt as inseparable from his thought. The passage starts from that performance. The analyst target ranges over every performed act of doubting whether thought occurs and requires an occurrence and realization witness.",
-  "blocker": "Admit an edition-level pinned witness of the cited range and recheck the reading before registering any claim. Relate the meditator’s first-person performance to the target’s act domain and its Realizes relation to distinguish episodes from the recorded dispositional alternative.",
+  "outcome": "succeeded",
+  "summary": "The pinned Adam–Tannery scan, Latin Wikisource transcription and Haldane–Ross translation agree in Meditation II §8’s classification of doubting under thinking and §9’s application to the meditator’s present doubt. The example involves an exercised, first-person doubt even under the dream or deceiver suppositions.",
+  "blocker": "Apply the example to the same performance of doubting whether thought occurs. A universal result needs an occurring Realizes witness for each act in the selected domain, whose definition must exclude a merely unexercised disposition.",
   "evidence": [
-    "PR-2024"
+    "PR-2024",
+    "6f7adcbf-d5f1-4933-be9c-e5601c5957b2",
+    "PR-2044"
   ],
   "workers": [
     {
@@ -20,6 +22,14 @@
       "effort": "high",
       "date": "2026-11-26",
       "pr": "PR-2024"
+    },
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2044"
     }
   ]
 }

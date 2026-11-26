@@ -1,0 +1,65 @@
+{
+  "id": "ead32fcc-cccf-4915-b8f1-40f83899a74a",
+  "label": "Distinct efficient supply at a second respect and five cause-fork denials",
+  "statement_ids": [
+    "048eac8a-c325-52ad-9627-3f5431eea846",
+    "5e76cbf7-9033-549c-9ec3-328746219b46",
+    "3715f518-89a7-5815-8416-990fb686a837",
+    "0a2f1846-e8cd-5082-9566-39b4ae8082fc",
+    "cc5c7105-90f2-5c2a-8f57-16325b2946d4"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "CausalRoleComparison in TruthCore/Causality/TermSenseForks.lean identifies the logical commitments of all five denials. A single finite frame admits them jointly for the efficient-or-perfection use and supplies a distinct efficient antecedent only at another respect for the diagonal patient. Individual assessments and reopening conditions are in docs/notes/load-bearing-terms.md#five-denials-at-one-causal-use-2026-11-26. The example concerns the scope of the descent premise and leaves the graph unchanged. This joint-denial test follows attempt 01b3a726 (PR-2032).",
+  "blocker": "The unresolved application is whether an already constituted bearer really supplies its own maintained state at a fixed respect in the selected efficient relation. For the perfection existential the corresponding identity question is whether producing the power makes the subject effectively responsible for its own having that power, with the power fixed as the respect. Neither question is decided by the formal frame.",
+  "evidence": [
+    "0505143b-7a9a-4236-a53c-7c5a5f2aa5d0",
+    "afac47a6-76ad-4b1f-9c1f-48be6246f6c3",
+    "PR-2046"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-astra",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2046"
+    },
+    {
+      "role": "review",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "date": "2026-11-26",
+      "pr": "PR-2046"
+    },
+    {
+      "role": "repair",
+      "provider": "codex",
+      "model": "gpt-6.2-astra",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2046"
+    }
+  ],
+  "current_assessment": {
+    "date": "2026-11-26",
+    "statement_ids": [
+      "048eac8a-c325-52ad-9627-3f5431eea846",
+      "5e76cbf7-9033-549c-9ec3-328746219b46",
+      "3715f518-89a7-5815-8416-990fb686a837",
+      "0a2f1846-e8cd-5082-9566-39b4ae8082fc",
+      "cc5c7105-90f2-5c2a-8f57-16325b2946d4"
+    ],
+    "scope": "Five premises of noSelfEfficientCauseBySenseFork at one causal use",
+    "assessment": "Coverage has strong warrant at an occurrence fixed to an explicitly selected relation. Global uniqueness needs a separate premise. Qualified internal resultance supports the perfection witness if the subject is responsible for its own having the power. The motion transfer requires actualization at the same respect. The origin transfer has warrant when that very efficient exercise brings its bearer into being. Continuing esse and maintenance of an acquired state each leave that condition open. Strict productive priority supports a diagonal ban for that relation. The inclusive-use frame accommodates all five denials and distinct supply at a different respect.",
+    "next_test": "Fix one power received by the soul alone. Determine whether the soul’s productive exercise accounts for that very soul’s having the power. For an efficient diagonal, distinguish actualization at its own respect, continuing supply of esse, and the exercise bringing this bearer into being.",
+    "note": "docs/notes/load-bearing-terms.md#five-denials-at-one-causal-use-2026-11-26",
+    "reviewed_revision": "7482de40af06e07966be4e8f992fc47dedee1452",
+    "review": "accepted_qualified",
+    "publication": "published",
+    "evidence": "Sol independently reviewed the draft at 7482de40a on PR-2046 and accepted with fixes. It accepted joint compatibility and the distinct incoming witness at another respect. This repair addresses occurrence universes, origin wording, the burden of the perfection denial, selection and attempt provenance. Repair re-check pending.",
+    "supersedes": "No prior judgment superseded. Extends attempt 01b3a726 (PR-2032) with a joint-denial test and per-premise assessment."
+  }
+}

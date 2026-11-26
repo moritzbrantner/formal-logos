@@ -1,0 +1,14 @@
+{
+  "id": "4bbbf389-5cea-44ee-8862-8df801fb2ba1",
+  "label": "Descartes: An idea requires a cause containing its objective reality",
+  "statement_id": "39d67f49-d477-43c5-b37f-cc1e072d33fb",
+  "source_id": "8ac0e273-75c8-4229-8e61-b3ad1507b9ff",
+  "locator": "Second Replies, AT VII 165–166, axioms IV–V",
+  "interpretation": "Axiom V draws on axiom IV, whose containment clause names the first and adequate cause. Axiom V’s existential causal demand can be satisfied by such a cause even when other causes contribute.",
+  "status": "formalized",
+  "attribution": "The passage states that the objective reality of our ideas requires a cause in which that same reality is contained formally or eminently, which is the premise.",
+  "definition_ids": [
+    "e4b40a41-13ee-4272-b38a-1c992776ab4e",
+    "705f28fe-7a8c-46c2-b0f2-f414ae8e8f73"
+  ]
+}

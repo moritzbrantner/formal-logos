@@ -2344,8 +2344,9 @@ impl<'a> Frontier<'a> {
     }
 }
 
-/// Python `item_depth`: an open premise's depth under the current rule.
-fn item_depth(item: &Value) -> String {
+/// Python `item_depth`: an open premise's depth (`bare`, `supported` or
+/// `stated`) under the current rule.
+pub fn item_depth(item: &Value) -> String {
     let depth = item["depth"].as_str().unwrap_or_default();
     if depth == LEGACY_SOURCED || depth == STATED {
         let ids = |field: &str| -> HashSet<&str> {

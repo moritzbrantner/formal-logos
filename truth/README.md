@@ -1076,6 +1076,51 @@ entries under each attempt (`worker: author codex/gpt-6.2-sol (high) 2026-11-26
 PR-2020`), and their JSON carries the `workers` list. The view writes nothing;
 a worker entry records who did the work, not evidence about its targets.
 
+## `bottlenecks`
+
+`truth bottlenecks [--stage N]... [--min-arguments N] [--min-routes N]
+[--limit N] [--authored-only-by MODEL] [--frontier-root STATEMENT]` (owner
+direction, 2026-11-26; `truth/src/bottlenecks.rs`) lists the open premises
+where several arguments or routes stop, for choosing which premises get a
+focused negation-side review ([when several arguments stop at the same
+premise](../docs/systematic-corpus-loop.md#when-several-arguments-stop-at-the-same-premise)).
+It reads the reaching-root frontier computed in-process for the root and
+adds no closure rule of its own. For each open premise it prints:
+
+- **routes**: the root routes (`truth frontier --routes`) that need it. A
+  route's open premises are the leaves of its expanded route; a stated or
+  supported premise proved from open premises stays such a leaf, so a route
+  needs a premise when it is a leaf or when every verified derivation of a
+  proved leaf needs it. The JSON also gives `routes_using_it_in_some_proof`
+  (some chain of verified derivations uses it);
+- **stage routes**: per stage, the verified derivations of the stage
+  conclusion (for stage 1 the existence of God) that need it, in the same
+  sense. Every root route rests on the stage conclusions, so stage routes
+  separate premises that the root routes share;
+- **args**: the distinct arguments that take it as a premise;
+- **reach**: its transitive dependent statements;
+- **stages**, the frontier **support** class (`bare`, `supported`: only
+  supporting or unpinned claims, `stated`: a pinned stating claim) with
+  `+derivation` when a verified derivation is a conditional support option,
+  its recorded **rivals** (refuted ones counted) and **objections**, and the
+  models that authored attempts on it (as in `truth workers`).
+
+Premises are ranked by routes, then the stage routes of the selected stages
+(of every stage without `--stage`), then arguments, then reach.
+
+- `--stage N` (repeatable) keeps premises on which a stage-N conclusion rests.
+- `--min-arguments N` (default 2) and `--min-routes N` (default 0) set the
+  thresholds; `--limit N` prints the first N after ranking.
+- `--authored-only-by MODEL` keeps premises whose recorded attempt authors are
+  exactly `MODEL`, so a second model can take premises one model has worked
+  on alone.
+
+For example, `truth bottlenecks --stage 1 --stage 2 --min-arguments 3
+--limit 20` lists the shared open premises of the God-existence and divine
+attribute stages. The counts describe shared dependency, not philosophical
+merit or the strength of a premise (`AGENTS.md`); a listed premise is a
+candidate for review, not a finding about it. The view writes nothing.
+
 ## `next`, `next-steps`, `arguments`, `results`, `sort-lists`
 
 Ports of the navigation subcommands of `scripts/corpus.py`
