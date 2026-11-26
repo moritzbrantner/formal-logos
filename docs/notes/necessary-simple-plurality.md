@@ -1295,7 +1295,8 @@ as an independently defended plural-foundation refutation. Inspecting
 `NecessaryRootUniqueness.uniqueRoot`, `maximumExistsOfNecessaryAt`,
 `NecessaryConcreteRouteBridge.necessaryRootIsMaximumOfRoot`, and the existing
 Anselm/necessary-ultimate-source interfaces exposes a common-source mechanism.
-This comparison introduces no new theorem, relation, source claim or model.
+The comparison originally introduced no theorem or model. The checks linked
+below formalize its causal reach and test both contingent-target boundaries.
 
 **Positive reusable inference and its exact scope.** Let c be the maximum in
 esse supplied by `maximumExistsOfNecessaryAt`. The imported genus premise gives
@@ -1305,19 +1306,11 @@ IsMaximumIn InAct MoreIn esse c →
   ∀ x, x ≠ c → InAct x esse → CausesIn c x esse.
 ```
 
-For every x with `NecessaryAt m.ontic w x`, the existing
-`isNecessaryOfNecessaryAt` and explicit `NecessaryBeingHasBeing` supply
-`InAct x esse`. Under x ≠ c, `CauseOfNecessaryBeingCausesItsNecessity` then gives
-`CausesNecessityOf c x`. The separate
-`NecessityCausesAreActualConcreteGrounds` bridge gives
-`ActualConcreteGround m w c x`, using c ≠ x, the symmetric inequality.
-Thus the SAME numerical c has the following conditional scope:
-
-```
-NecessaryAt m.ontic w x → x ≠ c →
-  CausesIn c x esse ∧ CausesNecessityOf c x ∧
-  ActualConcreteGround m w c x.
-```
+[`maximumReachesNecessaryAt`](../../TruthCore/Results/Causality/NecessaryRootUniqueness/Solution.lean)
+checks the composition for a supplied maximum c and distinct necessary target
+x. Necessary-being actuality supplies `InAct x esse`. Genus causality then
+supplies the esse edge from c to x, which the two explicit transfer bridges
+turn into a cause of necessity and an actual concrete ground from the same c.
 
 No firstness, absence of potency, causal-grade comparison or naming premise is
 needed for this inference. With the nine-premise result's root n, the supplied-
@@ -1338,19 +1331,31 @@ Maximum existence is produced by the necessary witness's esse population plus
 grades-to-maximum/EM, rather than assumed as a unique-source flag. This is a
 useful conditional derivation; its inputs' independent truth remains separate.
 
-**The actual-contingent boundary has two layers.** Nothing in this bundle says
-`m.ontic.ExistsAt w x → InAct x esse`. Its necessary-being bridge applies only
-to the modal necessary predicate. Therefore a merely actual concrete contingent
-candidate cannot automatically enter the genus premise's causal target domain.
-If that candidate's `InAct x esse` is separately given, genus causality does
-supply `CausesIn c x esse` under x≠c; but the next transfer premise is restricted
-to necessary targets. It then supplies neither a cause-of-necessity fact nor
-`ActualConcreteGround m w c x` for this contingent. Consequently the proved
-common causal scope over necessary candidates is not selected-ground coverage
-of every actual candidate, universal ancestry, well-foundedness, a complete
-explanation of actual reality, or a prohibition of all necessary nonroots.
-No Ontic existence/actuality or causal/grounding correspondence is filled in
-by terminology.
+**The actual-contingent boundary has two layers.**
+[`ContingentScope.contingentTarget`](../../TruthCore/Results/Causality/NecessaryRootUniqueness/Solution.lean)
+checks two three-being profiles with the same selected maximum, actual
+contingent target and grounding edges. In the first, the contingent target
+exists at the selected world, but fails `InAct` at esse and lacks an esse edge
+from the maximum. In the second, it has esse actuality and receives the esse
+edge required by genus causality. The maximum still neither causes its
+necessity nor directly grounds it. In both profiles a distinct necessary
+nonroot grounds the contingent target, and the maximum grounds that nonroot.
+
+[`ContingentScope.uniqueInBoth`](../../TruthCore/Results/Causality/NecessaryRootUniqueness/Solution.lean)
+replays the nine-premise result in each profile, retaining the original
+explicit excluded-middle input.
+[`ContingentScope.necessaryNonroot`](../../TruthCore/Results/Causality/NecessaryRootUniqueness/Solution.lean)
+checks that two distinct actual individuals are necessary in the same model.
+These witnesses separate direct selected-ground coverage and uniqueness of
+all necessary individuals from uniqueness of the actual selected root. The
+grounding path through the necessary nonroot survives. Questions about universal
+ancestry, well-foundedness, and explanatory completeness remain separate.
+These are non-entailments in the encoded vocabulary. Independent warrant for
+the convergence premises and the applicability of the distinction between
+esse causation and selected grounding remain open. An independently warranted
+bridge covering distinct actual contingent esse targets would address the
+second separation. The first also needs a reason those targets have esse
+actuality in the selected reading.
 
 **Comparison with the existing Anselm family.**
 `AnselmUltimateSource.atMostOne` also selects a single numerical c, makes it
@@ -1393,7 +1398,7 @@ the separately supplied actual concrete root, whereas the Anselm composition
 retains its explicit source actuality/concreteness/coverage and shared-power
 interfaces. Neither route establishes arbitrary actual-contingent ground
 coverage under the other route's relations. Root-frontier premise change from
-this audit: zero. No theorem or proof file was changed.
+the original audit and this Lean follow-up: zero.
 
 
 ## Owner-requested adversarial review: universal causal reach (2026-10-31)
