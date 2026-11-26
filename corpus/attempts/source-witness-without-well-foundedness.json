@@ -27,7 +27,8 @@
     "PR-633",
     "PR-634",
     "a18f7922-65fa-4d86-80cf-4201aa58e44c",
-    "53348c1f-37d4-44b0-9ddf-07330c1a56e0"
+    "53348c1f-37d4-44b0-9ddf-07330c1a56e0",
+    "PR-2010"
   ],
   "current_assessment": {
     "date": "2026-11-26",
@@ -44,10 +45,10 @@
       "b2337d92-cfcf-416c-af91-cd5d68a65f06",
       "cffad050-e86d-48b8-b04b-be47fcc1352d"
     ],
-    "evidence": "The selected-source result a18f7922 proves termination, equal lengths and the necessary-ancestor composition under their stated premises. Its controls include a genuine diamond, an infinite-width depth-two cone, a common-source regress and a three-bearer change of edge scope. The same-giver result 53348c1f includes a secondary esse giver in a model of the universal gift and ascent at esse. The earlier 74caa472 inference supplies this fixed-respect ascent from the broader d5a94eb1. The linked Git parent records provide a separate check on the local-to-global inference. Independent review at 9bd686ff accepted the finite-depth proof, infinite-width control and fixed-esse application, with actual grounding and causal mode open.",
+    "evidence": "The selected-source result a18f7922 proves termination, equal lengths and the necessary-ancestor composition under their stated premises. Its controls include a genuine diamond, an infinite-width depth-two cone, a common-source regress and a three-bearer change of edge scope. The same-giver result 53348c1f includes a secondary esse giver in a model of the universal gift and ascent at esse. The earlier 74caa472 inference supplies this fixed-respect ascent from the broader d5a94eb1. The linked Git parent records provide a separate check on the local-to-global inference. Independent review at 9bd686ff accepted the finite-depth proof, infinite-width control and fixed-esse application, with actual grounding and causal mode open. Published in PR #2010.",
     "reviewed_revision": "9bd686ff5034042f2107dafe2d7b3745616fe7d6",
     "review": "accepted_qualified",
-    "publication": "unpublished",
+    "publication": "published",
     "supersedes": "None. The #320 result on finite paths under upstream confluence and its regress control retain their original scope."
   }
 }
