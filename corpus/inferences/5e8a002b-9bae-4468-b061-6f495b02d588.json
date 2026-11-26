@@ -1,0 +1,15 @@
+{
+  "id": "5e8a002b-9bae-4468-b061-6f495b02d588",
+  "label": "Contingent spacetime grounding excludes location of the named GOD_4 root (inference)",
+  "input_statement_ids": [
+    "da3facd6-008e-5e76-92fa-677350c2dfdb",
+    "1dd2b809-a1d3-43ca-8dfc-b7c1c4fbfd58",
+    "144a61c5-0abd-4759-bdcd-8ad59ed8be72",
+    "8bfeb070-436d-4503-8282-4b7df72a4d93"
+  ],
+  "output_statement_id": "2bc46588-ef09-442b-a933-aefc5e0bb064",
+  "rule": "Same-witness elimination and contradiction with selected-world actual roothood",
+  "meaning": "The three existing spatial premises yield a new attribute of the already named GOD_4 bearer. Its necessary existence rules out identity with the contingent whole on the same profile and modal frame. If the bearer occupied the supplied space, the whole would be its concrete existing ground at the selected world, contradicting actual roothood there. The companion naturalism projection uses this very witness against N2 and N1 with Located F as their thesis predicate. In the companion finite interpretation all four premises hold with a distinct located occupant grounded by the whole at the selected world, and that occupant supplies an incoming concrete ground to the named root at another accessible world. The proof uses neither all-world underivedness, a second existence witness, nor a bridge from location to physicality or every spatiotemporal relation. The spatial premises remain explicit.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}
