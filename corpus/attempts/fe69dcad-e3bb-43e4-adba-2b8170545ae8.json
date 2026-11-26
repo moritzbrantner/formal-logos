@@ -1,0 +1,25 @@
+{
+  "id": "fe69dcad-e3bb-43e4-adba-2b8170545ae8",
+  "label": "Local truth variation connection plan",
+  "statement_ids": [
+    "fa3047a0-8a79-5e6f-a5eb-4ecc4dc7a145"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "Local variation may coexist with stable logic. Give a same-content witness for a case premise before using local variation against its profile-independent truth.",
+  "evidence": [
+    "PR-2086"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
+    }
+  ],
+  "blocker": "Connection target 8626f8a5-9531-5da7-9ebd-f901e74b1129. The scoped bridge described in the summary remains open."
+}

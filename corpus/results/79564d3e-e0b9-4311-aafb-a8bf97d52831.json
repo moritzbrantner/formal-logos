@@ -1,0 +1,11 @@
+{
+  "id": "79564d3e-e0b9-4311-aafb-a8bf97d52831",
+  "label": "The same-frame identities of the two symmetry deltas",
+  "argument_id": "9a90aac1-011a-48b8-9af0-e002e17297f7",
+  "challenge_module": "TruthCore.Results.Logic.Strength.RouteSymmetryIdentity.Challenge",
+  "solution_module": "TruthCore.Results.Logic.Strength.RouteSymmetryIdentity.Solution",
+  "theorem": "TruthCore.Results.Logic.Strength.RouteSymmetryIdentity.sameRouteSymmetry",
+  "comparator_config": "results/79564d3e-e0b9-4311-aafb-a8bf97d52831/comparator.json",
+  "status": "solution-present",
+  "description": "For every world type, signature and matching profile, both named delta predicates unfold to Symmetric m.ontic.frame. The two equivalences are definitionally reflexive. The result asserts no symmetry of different frames and no frame condition of the actual route."
+}

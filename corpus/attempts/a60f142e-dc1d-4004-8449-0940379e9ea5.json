@@ -1,0 +1,27 @@
+{
+  "id": "a60f142e-dc1d-4004-8449-0940379e9ea5",
+  "label": "Internal natural-reason standards connection plan",
+  "statement_ids": [
+    "aeb5a002-ec89-4a8d-b8f6-0150b8713a3c",
+    "cb49b719-ca91-48a5-8241-1d1bee17187d"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "Determination entails internal sufficiency for the selected moves. A recognition route needs the same moves concerning an actual GOD_4 candidate to answer to shared reason. Internal sufficiency and external jurisdiction may coexist; specify a common reason standard before comparing the live rival. Introduced in 58a0983c2.",
+  "evidence": [
+    "PR-2086",
+    "db4ab405-8717-4aba-b134-62d58514c16e"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
+    }
+  ],
+  "blocker": "Connection target b025531d-6c4a-573a-a205-795fe8da514a. The scoped bridge described in the summary remains open."
+}

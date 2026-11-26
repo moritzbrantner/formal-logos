@@ -1,0 +1,26 @@
+{
+  "id": "65ca78fe-4966-4d8f-b947-8c4938c754a7",
+  "label": "Theistic horizon and outsiders connection plan",
+  "statement_ids": [
+    "585b1fe4-e800-5f72-80ad-1269220d1360",
+    "afcc7308-48df-5700-968c-7674d2b32b78"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "Endorsement by the practice and use by theists do not settle sharedness; an outsider can be a theist. Test one admitted move on an independently specified shared standard.",
+  "evidence": [
+    "PR-2086"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
+    }
+  ],
+  "blocker": "Connection target c87ffcb8-9a44-5e02-a68b-13d0282ae930. The scoped bridge described in the summary remains open."
+}

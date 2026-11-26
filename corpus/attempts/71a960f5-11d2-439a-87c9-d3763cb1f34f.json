@@ -1,0 +1,28 @@
+{
+  "id": "71a960f5-11d2-439a-87c9-d3763cb1f34f",
+  "label": "Restricted scientism demarcation connection plan",
+  "statement_ids": [
+    "7c902319-7f1c-59d4-8dbb-a5edf28f500f",
+    "c7c38492-0687-5174-9782-b10f34dd46e6",
+    "fefdc728-bbd1-505e-86f5-d4387b4d06ef"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "Identify the exact natural-theology claim and its proof as members of a supplied claim arena, then test whether they are within the demarcated class. The internal-scope self-application test does not exclude a restriction that consistently places its own formulation outside. Introduced in 3da0ef7cd.",
+  "evidence": [
+    "PR-2086",
+    "b5956905-c650-54f3-aa23-36efa45e4e67"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
+    }
+  ],
+  "blocker": "Connection target 8626f8a5-9531-5da7-9ebd-f901e74b1129. The scoped bridge described in the summary remains open."
+}

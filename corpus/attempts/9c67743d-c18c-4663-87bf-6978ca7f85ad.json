@@ -1,0 +1,27 @@
+{
+  "id": "9c67743d-c18c-4663-87bf-6978ca7f85ad",
+  "label": "Procedurally selected whole-series exercise connection plan",
+  "statement_ids": [
+    "24354918-037c-4b3b-9077-8981b8857b1c",
+    "3cc186d1-36cf-4e57-8d4c-23d924738709"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "The local selection result forgets its first-optimum choice condition on the same whole-series exercise. To use it on the universal-cause route, identify the exercise bearer with the actual universal intellectual cause, the obtaining content with that cause's reason-guided esse giving, and the choice outcome with actual effects without assuming modal fixity. Introduced in 9f473d1db.",
+  "evidence": [
+    "1b478d58-8b1e-448b-85f2-5953c71e84e9",
+    "PR-2086"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
+    }
+  ],
+  "blocker": "Connection target 83d8a0e0-9866-48d3-b582-9082c9cfeac8. The scoped bridge described in the summary remains open."
+}

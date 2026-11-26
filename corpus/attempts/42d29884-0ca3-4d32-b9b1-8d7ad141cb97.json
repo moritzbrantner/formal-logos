@@ -1,0 +1,30 @@
+{
+  "id": "42d29884-0ca3-4d32-b9b1-8d7ad141cb97",
+  "label": "Separate modes of cognition connection plan",
+  "statement_ids": [
+    "12062ef2-399a-563f-852d-9633663a7a71",
+    "23ad5d64-5f12-503e-b03c-bd008f0baa6b",
+    "bce99980-bc76-5837-8e36-333828f4018f",
+    "e162e164-da46-5958-a608-2683c88c9d69"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "The isolation theorem uses mode confinement, while the mediation reply needs direct access to a presentation and a transfer of knowledge to the presented object. Interpret the Q14 intellect target in that object-and-mode structure and distinguish knowing one's own formal content from knowing the external object at issue. Introduced in e661dcb7c.",
+  "evidence": [
+    "0d0c558f-07b7-57f2-866b-5b06b616b46e",
+    "155c81fc-ca86-58e7-b5a7-58466462c3f0",
+    "PR-2086"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
+    }
+  ],
+  "blocker": "Connection target 180f5ad2-a421-541a-85c9-9bca578b4a43. The scoped bridge described in the summary remains open."
+}

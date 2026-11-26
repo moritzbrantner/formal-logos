@@ -1,0 +1,27 @@
+{
+  "id": "1c491cda-da17-403b-82a4-f4a192e38e0c",
+  "label": "Possible continued per-accidens exercise connection plan",
+  "statement_ids": [
+    "82db8fb3-1ca6-4eaf-8ac6-c0c2853f19f5",
+    "f3f1f630-da00-4329-afd3-f370c4569989"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "Continuation under one removal supplies capacity under that removal, not independence from the currently operating cause. Relate the removal state and executable act to the same supplied support edge, then check whether some rather than every admissible removal is enough for the relevant per-se/per-accidens distinction. Introduced in ddcfa884a.",
+  "evidence": [
+    "PR-2086",
+    "a1d3ab88-4e25-4138-8b76-b223dcdd8ad4"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
+    }
+  ],
+  "blocker": "Connection target 97f5850f-62bc-5e43-a0c1-dd1033d08fc9. The scoped bridge described in the summary remains open."
+}

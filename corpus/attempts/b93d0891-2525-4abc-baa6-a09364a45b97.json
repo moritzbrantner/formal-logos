@@ -1,0 +1,40 @@
+{
+  "id": "b93d0891-2525-4abc-baa6-a09364a45b97",
+  "label": "Religious meaning across two discourses connection plan",
+  "statement_ids": [
+    "05790be0-984b-55cc-9f0f-802d4b4cc80c",
+    "1ff9aed4-fa1d-56e0-b9b8-ef79e8395e8e",
+    "2961c9e0-02b5-582e-96bf-3df45cb4e0c4",
+    "5ee99eb5-5793-50a4-9bc7-b177f67f6c63",
+    "707f5c5f-94bd-536e-9fe2-86b87bb3a3a4",
+    "8b39e3a5-1388-59eb-ad08-7d11e3a6497c",
+    "8c3ccf42-6033-53dc-95f2-64cca9b9f970",
+    "9a6cee94-2ef4-5ed0-8838-627afec2d9f8",
+    "b917f813-5020-5506-b7cd-eac478ddff72",
+    "f4761615-d94b-52fa-9346-e476c0d44d3d"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "Local fact-reporting and matched truth invariance have different witnesses. Embed the exact GOD_4 assertion in an admitted religious discourse and identify its apparent content with the proposition used in the case. Compare whether the same-content assertion has the same truth conditions across the two settings. Introduced in 773508623.",
+  "evidence": [
+    "0594f347-b4d8-540a-b0e9-695072d17f93",
+    "0814d1d1-917a-5534-a699-a9c57f51bbf8",
+    "680e53e9-f724-5f97-b694-563cad0f86d8",
+    "7d880f9a-ad7c-5340-a905-442092e9711b",
+    "PR-2086",
+    "a3bb00aa-5177-5101-98a2-d03f2e53d81f",
+    "d21b3680-58a7-59e7-831c-419885389264"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
+    }
+  ],
+  "blocker": "Connection target 8626f8a5-9531-5da7-9ebd-f901e74b1129. The scoped bridge described in the summary remains open."
+}

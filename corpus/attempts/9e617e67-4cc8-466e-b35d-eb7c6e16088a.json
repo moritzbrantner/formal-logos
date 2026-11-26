@@ -1,0 +1,25 @@
+{
+  "id": "9e617e67-4cc8-466e-b35d-eb7c6e16088a",
+  "label": "Scope of naturalized epistemology connection plan",
+  "statement_ids": [
+    "fab744c4-14de-55a1-9731-3edc78bf19f4"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "Continuity with science is an epistemic method claim. To oppose a particular proof, specify the independent admissibility standard and show the target inference fails it. Do not infer denial of abstract objects or GOD_4 from the method alone.",
+  "evidence": [
+    "PR-2086"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
+    }
+  ],
+  "blocker": "Connection target 8626f8a5-9531-5da7-9ebd-f901e74b1129. The scoped bridge described in the summary remains open."
+}

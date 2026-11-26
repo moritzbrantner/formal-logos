@@ -1,0 +1,25 @@
+{
+  "id": "32b9484b-2244-4976-b0c3-892701a42ec2",
+  "label": "Exemplar-to-maker bridge connection plan",
+  "statement_ids": [
+    "4fa50912-f139-518d-b55e-f1fbd0e4dae7"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "The role of an exemplar in guiding a distinct producer is an open application. The actual cause's precontained perfection requires further identification of a producer and the mode in which its perfection is possessed.",
+  "evidence": [
+    "PR-2086"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
+    }
+  ],
+  "blocker": "Connection target 64498e7e-7f10-54a0-9ec0-c65e6076de1f. The scoped bridge described in the summary remains open."
+}

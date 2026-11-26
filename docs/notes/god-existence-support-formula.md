@@ -672,3 +672,60 @@ mover's actuality in esse is supplied.
 - [Targets skipped at proved-pool retrieval](../../corpus/attempts/4b35db72-847b-4a41-b2ec-582c74be6236.json)
 - [Rejected self-origin converse](../../corpus/attempts/853663da-b50c-452b-814b-8f58edc0c852.json)
 - [Tactic probes on existing Challenges](../../corpus/attempts/b3bdaa86-3f9d-4a3d-b292-c7c0d39722bc.json)
+
+## Connectivity review (2026-11-26)
+
+Two existing comparisons now have explicit rival links. The absence of a
+natural-number rank challenges the ranking of the same selected actual
+concrete grounding graph. The reverse-successor model gives a mathematical
+instance of the rival, while the bounded uniform-potential argument excludes it
+under its three open calibrations. In q.14, failure of all three calibrations
+challenges coverage by the named menu on the same receiver scope. Neither
+comparison settles which profile applies to the actual case.
+
+Both symmetry deltas express condition B on the same selected frame. The
+[identity certificate](../../corpus/results/79564d3e-e0b9-4311-aafb-a8bf97d52831.json)
+allows readers of the Pruss and necessary-root routes to find the shared
+condition without identifying their independently supplied frames. The proof
+asserts the equivalences for every supplied profile.
+
+The [no-dead-end argument](../../corpus/results/da5001d2-3f90-449b-a772-8e3964a03375.json)
+adds a route to the accessible world needed for finite-roster amalgamation.
+Excluded middle supplies a successor from the global frame condition at the
+selected world. The existing self-access route still supplies its own
+witness. The new route needs global absence of dead ends and leaves
+the application of that frame condition open.
+
+The mover fork remains a priority for bridge research. Its common conclusion
+provides a mover in some respect, while the reduction premise of the prima
+via asks for a mover in the very respect in which the subject moves. A bridge
+must supply that alignment for the respect-free constructor and connect
+accidental-mover coverage to actual reductions in the stated domain.
+
+- [Unranked actual grounding connectivity finding](../../corpus/attempts/4a389529-42fc-48e8-987c-e40cebd3e605.json)
+- [Q14 pointwise foreign-form reception connection plan](../../corpus/attempts/8098a6d6-afc1-467c-8b3b-5e74e52f632f.json)
+- [Procedurally selected whole-series exercise connection plan](../../corpus/attempts/9c67743d-c18c-4663-87bf-6978ca7f85ad.json)
+- [Respect-free mover fork connection plan](../../corpus/attempts/b9061349-cd4e-4378-bef4-9cbdcab219d9.json)
+- [No-dead-end frame gives a selected successor](../../corpus/attempts/3702a4c0-b6a9-446d-b55f-f06d32ad609e.json)
+
+The corrected connectivity scan includes every inference in a registered
+argument, including scoped assumptions. The 31 original retirement candidates
+have existing uses: 26 occur in registered inferences and five are exercised
+in the motion and mover controls. The Third Way occupancy and coming-to-be
+statements are intermediate steps. The succession assumption is discharged
+in the conditional infinite-past argument.
+
+The [finite-cover result](../../corpus/results/645be66f-1072-4205-92b5-05c3fa65dfbb.json)
+registers the existing derivation of one individual present at every accessible
+world. It keeps excluded middle, successor existence, absence amalgamation,
+finite population cover and de dicto population on one frame and existence
+predicate. Identifying its individual with an actual concrete divine witness
+requires further work. The [Gödel result](../../corpus/results/a7f5faf2-7f51-4bfd-a5bd-236105e44f6c.json)
+registers the existing no-dead-end inference with Ax2a, Ax4 and empty-property
+exclusion explicit. It supplies a frame condition for the successor argument.
+Gödel positivity retains its model-specific meaning.
+
+- [Finite population cover](../../corpus/attempts/511a2d50-be61-4dea-8b1e-5019967c6972.json)
+- [Gödel empty-property exclusion](../../corpus/attempts/b2aff06e-1761-4d05-8e97-0852637106ef.json)
+- [Third Way temporal inferences](../../corpus/attempts/daabd904-66a0-4a5c-baf0-1a1e2f8edf6c.json)
+- [Exact Humean alternatives](../../corpus/attempts/294d7c64-6672-4fc2-a341-7d8e280d0f8c.json)

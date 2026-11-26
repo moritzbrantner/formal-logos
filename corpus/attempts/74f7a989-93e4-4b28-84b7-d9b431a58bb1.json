@@ -1,0 +1,25 @@
+{
+  "id": "74f7a989-93e4-4b28-84b7-d9b431a58bb1",
+  "label": "External authority of natural reason connection plan",
+  "statement_ids": [
+    "cd0faef1-c00d-44bb-8b54-8046445bd314"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "Exclusion of external jurisdiction is independent of internal sufficiency. Connect it only after identifying the external standard with the actual shared recognition standard for the same move.",
+  "evidence": [
+    "PR-2086"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
+    }
+  ],
+  "blocker": "Connection target b025531d-6c4a-573a-a205-795fe8da514a. The scoped bridge described in the summary remains open."
+}

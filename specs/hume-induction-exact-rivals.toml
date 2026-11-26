@@ -1,0 +1,21 @@
+[batch]
+vocab = "TruthCore.Modern.Hume.Induction"
+results = "TruthCore.Results.Modern.Hume.Induction"
+
+[[relation]]
+id = "Blanket Humean skepticism is the exact alternative to its rejection"
+subject_kind = "statement"
+subject_id = "STMT-HUME-INDUCTION-STRONG-SKEPTIC"
+predicate = "alternative_to"
+object_kind = "statement"
+object_id = "STMT-HUME-INDUCTION-REJECT-STRONG"
+note = "RejectStrong a is definitionally the negation of StrongSkeptic a on the same Assessment. The comparison supplies no evidence against theism."
+
+[[relation]]
+id = "Selective theological withholding is the exact alternative to its rejection"
+subject_kind = "statement"
+subject_id = "STMT-HUME-INDUCTION-THEOLOGY-WITHHELD"
+predicate = "alternative_to"
+object_kind = "statement"
+object_id = "STMT-HUME-INDUCTION-REJECT-SELECTIVE"
+note = "RejectTheologyWithheld a is definitionally the negation of TheologyWithheld a on the same Assessment. The comparison supplies no evidence against theism."

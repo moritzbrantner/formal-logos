@@ -1,0 +1,10 @@
+{
+  "id": "3fb56f18-a549-4592-bcba-a097549ea920",
+  "label": "The same-frame identities of the two symmetry deltas (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "3c8a1915-481e-4451-aaf2-0d1bc3b88c73",
+  "rule": "Definitional equality of both symmetry predicates on the selected frame",
+  "meaning": "For every world type, signature and matching profile, both named delta predicates unfold to Symmetric m.ontic.frame. The two equivalences are definitionally reflexive. The result asserts no symmetry of different frames and no frame condition of the actual route.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}
