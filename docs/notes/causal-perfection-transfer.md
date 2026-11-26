@@ -2731,7 +2731,7 @@ One world, two actual concrete bearers g and x. The ground relation and the esse
 
 All eight assignments preserve actual root and effect, active transitive operation, the act-reference equality, the actual-operation existence rule and motion-requires-potency. The effect's independent motion/potency makes pure act nonvacuous. With the fixed actual witness and unmoved g, the dichotomy and life rule jointly imply life at g. The incoming-ground adapter tests whether the selected recipient x can ground the identical operative act. The omission control removes that transport condition.
 
-**Limits:** the model is a Python finite surrogate, not a registered `GradesFrame`/`Profile` model or a Lean certificate. Act references, terminus and external actualization are separately interpreted slots; no real ontology of actions is proved. The restored case stipulates immanent operation, not its metaphysical compatibility with simplicity. The act-identity adapter is substantive, not a theorem of represented equality. No countermodel defeats Aquinas, and no model demonstrates that the strongest rival is metaphysically possible. The local diagnostic is reproduced below.
+**Limits:** the model is a finite surrogate checked in Lean. Its operation and life rules are the corpus definitions `BeingInActHasOperation`, `OperationFromSelfOrAsMoved`, `SelfOperatingUnmovedLives` and `PureAct`; it is not a registered `GradesFrame`/`Profile` model. Act references, terminus and external actualization are separately interpreted slots; no real ontology of actions is proved. The restored case stipulates immanent operation, not its metaphysical compatibility with simplicity. The act-identity adapter is substantive, not a theorem of represented equality. No countermodel defeats Aquinas, and no model demonstrates that the strongest rival is metaphysically possible. [Background, forced life and adapter exclusion, controls](../../TruthCore/Causality/PerfectionTransferControls.lean#L33)
 
 #### 4.2. Same-standard comparison
 
@@ -2767,54 +2767,9 @@ Primary texts read in accessible web witnesses (not new pinned corpus evidence):
 - S3. Aquinas, *Summa theologiae* I, q.25, a.1 co., ad 2–3. [English text](https://www.newadvent.org/summa/1025.htm).
 - S4. Aquinas, *Summa theologiae* I, q.4, a.2 co., ad 1–3. [English text](https://www.newadvent.org/summa/1004.htm#article2).
 
-The original investigation used read-only repository inspection, accessible primary texts, eight Python assignments and four selected restoration/omission controls, and a semantic self-sweep. The later continuations added the structural controls reproduced below.
+The original investigation used read-only repository inspection, accessible primary texts, eight finite assignments (first run in Python, now checked in Lean) and four selected restoration/omission controls, and a semantic self-sweep. The later continuations added the structural controls; all are now Lean checked in `PerfectionTransferControls`.
 
 The initial independent semantic challenge examined PR #1916 at `35c03763084282b3b33bacf6b4ab274957180cbc` against `main` `ba8a75398b009932a33f649ec7abcb2069a3e030`. It reproduced the embedded operation and due-scope controls and requested corrections to the conjunctive graph, operation exclusion, life purity and continuation scope. The targeted re-review accepted the documentation and research checkpoint at `1d63f12806ed9984ea2ea8973295b1e6b1210d59` with the same conditional and structural boundaries. The coordinator ran `truth check` and computed no frontier change on the original checkpoint in a local no-commit merge with that main revision. This checkpoint edits only the note and attempts. PR #1916 landed at `dcfa16aea`. The [integrated-head CI report](https://github.com/moritzbrantner/formal-logos/actions/runs/45328781191/job/138224725332) computed no premise change.
-
-### Reproduction of the operation structural diagnostic
-
-```python
-from itertools import product
-B=('g','x'); R=('esse','motion'); T=(0,); O=('give','receive','immanent')
-# Effect receives esse from g, both actual. Effects move and are potent; source neither.
-actual=set(B); grounds={('g','x')}; causes={('g','x','esse')};
-potency={('x','motion')}; moved={('x','motion')}; pure=lambda b: not any((b,r) in potency for r in R)
-root=lambda b: b in actual and not any((c,b) in grounds for c in B)
-# Give is an actual operation of g, with source-owned exercise and external terminus.
-# The act reference for give is identical to the source's esse-act reference in every variant.
-being_act={'g':'ag','x':'ax'}; act_ref={'give':'ag','receive':'ax','immanent':'ag'}
-rows=[]
-for has_immanent,life,external_determination in product((False,True),repeat=3):
-    operation_of={('give','g'),('receive','x')}|({('immanent','g')} if has_immanent else set())
-    terminus={'give':'x','receive':'x','immanent':'g'}
-    self_operation={b for b in B if any((o,b) in operation_of and terminus[o]==b and o=='immanent' for o in O)}
-    lives={('x',0)}|({('g',0)} if life else set())
-    externally_actualized={('x','give')} if external_determination else set()
-    broad_self={'g'} if not any(o=='give' for _,o in externally_actualized) else set()
-    # Neither passive potency nor motion is assigned to g even in external-determination omission case.
-    # Check source act grounding adapter as a separate condition rather than baking it into roothood.
-    act_ground_adapter=all(not ((o,'g') in operation_of and act_ref[o]==being_act['g']) or (c,'g') in grounds for c,o in externally_actualized)
-    round5_op=all(any((o,b) in operation_of for o in O) for b in actual)
-    dichotomy=all(b in self_operation or any((b,r) in moved for r in R) for o,b in operation_of)
-    moved_requires_potency=moved<=potency
-    life_rule=all(not(b in self_operation and not any((b,r) in moved for r in R)) or any((b,t) in lives for t in T) for b in B)
-    # Broad life classification applies only to independently exercised own operation; not identical to corpus LivesAt.
-    row=dict(immanent=int(has_immanent),life=int(life),external_determination=int(external_determination),adapter=int(act_ground_adapter),broad=int('g' in broad_self),dichotomy=int(dichotomy),life_rule=int(life_rule))
-    assert root('g') and not root('x') and pure('g') and not pure('x') and round5_op and moved_requires_potency
-    assert ('give','g') in operation_of and ('g','x','esse') in causes and act_ref['give']==being_act['g'] and terminus['give']=='x'
-    if dichotomy and life_rule: assert life
-    if act_ground_adapter: assert not external_determination
-    rows.append(row)
-print('Checked',len(rows),'assignments')
-for row in rows: print(row)
-# Explicit one-bearer omission witnesses and positive control on same background.
-def get(i,l,e): return next(r for r in rows if (r['immanent'],r['life'],r['external_determination'])==(i,l,e))
-assert get(0,0,0)==dict(immanent=0,life=0,external_determination=0,adapter=1,broad=1,dichotomy=0,life_rule=1)
-assert get(1,0,0)['dichotomy'] and not get(1,0,0)['life_rule']
-assert all(get(1,1,0)[k] for k in ['adapter','broad','dichotomy','life_rule'])
-assert not get(0,0,1)['adapter'] and not get(0,0,1)['broad']
-print('Four selected controls pass')
-```
 
 
 ## Operation origin, terminus and intrinsic completion (2026-11-24; draft continuation)
@@ -2865,53 +2820,9 @@ Reuse the alternating-output idea from #462 without asserting metaphysical alter
 
 The transported incoming edge makes the third variant no longer a root, with mutual ground edges in this toy graph. This is intentional: it shows the consequence of restoring the bridge, not a metaphysical model of grounding cycles. The remaining cases deliberately omit that condition or the identity antecedent. The two variants with no ground from the selected recipient share the actual productive operation and identity. One supplies immanence independently and the other lacks it, while both hold the recipient-specific exclusion fixed. There is no claim that the underlying primitives exhaust philosophical readings. The original #462 model does not establish real act identity or any first-source application. No additional countermodel to modal collapse is claimed.
 
-**Executed diagnostic** (16 configurations, 32 local assignments, five selected controls passed in JavaScript). It is an analyst structural check, not a Lean certificate. To reproduce, use the following function body in a local JavaScript runner, or wrap it in a function and print the return value.
+**Checked diagnostic** (16 configurations, 32 local assignments, five selected controls). It is an analyst structural check in Lean; its dichotomy is the corpus `OperationFromSelfOrAsMoved`.
 
-```javascript
-// Analyst structural surrogate; no modal frame or metaphysical certificate.
-function check(ok) { if (!ok) throw Error("control failed"); }
-const rows = [];
-for (const identity of [false,true])
-for (const completion of [false,true])
-for (const transport of [false,true])
-for (const immanent of [false,true]) {
-  const states = ["x","y"].map(effect => {
-    const actual = new Set(["g",effect]);
-    const act = identity ? "g-esse" : "g-operation";
-    const ground = [["g",effect]];
-    const actGround = completion ? [[effect,act]] : [];
-    if (identity && completion && transport) ground.push([effect,"g"]);
-    const root = actual.has("g") && !ground.some(([c,x])=>x==="g");
-    const effects = [["g",effect,"esse"]];
-    const moved = new Set([effect]), potency = new Set([effect]);
-    const operations = [["give","g"],["secondary",effect]];
-    if (immanent) operations.push(["inward","g"]);
-    const intrinsic = new Set(immanent ? ["g"] : []);
-    const dichotomy = operations.every(([o,x])=>intrinsic.has(x)||moved.has(x));
-    const bridge = !identity || !actGround.length ||
-      ground.some(([c,x])=>c===effect && x==="g");
-    const givesX = effects.some(([c,x,r])=>c==="g" && x==="x" && r==="esse");
-    check(actual.size===2 && effect!=="g" && effects.length===1);
-    check(operations.some(([o,x])=>o==="give" && x==="g"));
-    check(!moved.has("g") && !potency.has("g") && moved.has(effect) && potency.has(effect));
-    check([...actual].every(x=>operations.some(([o,y])=>y===x)));
-    check(givesX===actual.has("x"));
-    if (root && identity && bridge) check(!actGround.length);
-    check(dichotomy===immanent);
-    return {root,bridge,act,term:effect,givesX};
-  });
-  check(states[0].act===states[1].act && states[0].term!==states[1].term);
-  check(states[0].givesX && !states[1].givesX);
-  rows.push({identity,completion,transport,immanent,states});
-}
-const find=(i,c,t,m)=>rows.find(r=>r.identity===i&&r.completion===c&&r.transport===t&&r.immanent===m);
-check(find(true,false,true,false).states.every(s=>s.root&&s.bridge));
-check(find(true,false,true,true).states.every(s=>s.root&&s.bridge));
-check(find(true,true,true,false).states.every(s=>!s.root&&s.bridge));
-check(find(true,true,false,false).states.every(s=>s.root&&!s.bridge));
-check(find(false,true,true,false).states.every(s=>s.root&&s.bridge));
-return rows.length;
-```
+[Invariants and controls](../../TruthCore/Causality/PerfectionTransferControls.lean#L106)
 
 ### 5. Downstream and next research discriminator
 
@@ -2964,45 +2875,9 @@ All four variants retain actual g, actual distinct x, g's sole outgoing existent
 
 The first cell shows that no due absence, stipulated own being, strict determination purity, an actual root, and actual productive coverage do not force whole-power fullness in this signature. The second cell restores due coverage, exposing the real conflict. The fourth cell shows that due coverage is not necessary for fullness without the separately stated possessed-pure-due constraint. The assignment does not satisfy the stronger absolute-esse thesis when that thesis entails across-mode fullness. It is not evidence for a metaphysically possible deficient absolute act. It tests the scope error of inferring absence of every nonpossession from absence of due deficiency. Neither side is charged with a defect defined by its rival's unestablished criterion. No goodness evaluation, modal possibility or temporal process is inferred.
 
-Executed exact diagnostic (four variants and the displayed conditional tests, all passed):
+Exact diagnostic, checked in Lean (four variants and the displayed conditional tests):
 
-```javascript
-// Fixed actual source g, actual distinct living effect x, and supplied Pure/OfBeing inventory.
-// These are structural assignments, not a metaphysical life criterion.
-function assert(c){ if(!c) throw Error("control failed"); }
-const ds=["esse","activeEfficacy","life"];
-const pure=new Set(ds), ofBeing=new Set(ds);
-const actual=["g","x"], ground=[["g","x"]];
-const root=actual.includes("g")&&!ground.some(([a,y])=>y==="g");
-const ownBeing=new Set(["g"]); // stipulated, not derived from roothood
-const passivePotency=new Set(["x"]); // nonvacuous pure-act contrast
-const hasX=new Set(ds);
-const produces=ds.map(d=>["g","x",d]); // explicit coverage, not inferred from giving esse
-const rows=[];
-for(const hasLife of [false,true])
-for(const dueLife of [false,true]){
-  const hasG=new Set(["esse","activeEfficacy",...(hasLife?["life"]:[])]);
-  const dueG=new Set(["esse","activeEfficacy",...(dueLife?["life"]:[])]);
-  const noDueMissing=[...dueG].every(d=>hasG.has(d));
-  const pureDue=[...pure].every(d=>dueG.has(d));
-  const full=[...pure].every(d=>hasG.has(d));
-  const possessedPureDue=[...pure].every(d=>!hasG.has(d)||dueG.has(d));
-  const wholePower=[...ofBeing].every(d=>hasG.has(d));
-  assert(root&&ownBeing.has("g")&&!passivePotency.has("g")&&passivePotency.has("x"));
-  assert(actual.length===2&&hasX.has("life")&&produces.every(([a,x,d])=>actual.includes(a)&&actual.includes(x)&&hasX.has(d)));
-  assert([...hasG].every(d=>pure.has(d))&&[...pure].every(d=>ofBeing.has(d)));
-  assert(!noDueMissing||!pureDue||full);
-  assert(!noDueMissing||!possessedPureDue||(full===pureDue));
-  assert(full===wholePower); // this fixture stipulates Pure = OfBeing
-  rows.push({hasLife,dueLife,noDueMissing,pureDue,full,possessedPureDue,wholePower});
-}
-const get=(h,d)=>rows.find(r=>r.hasLife===h&&r.dueLife===d);
-assert(get(false,false).noDueMissing&&!get(false,false).full);
-assert(!get(false,true).noDueMissing&&!get(false,true).full);
-assert(get(true,true).noDueMissing&&get(true,true).full);
-assert(get(true,false).full&&!get(true,false).pureDue);
-return rows;
-```
+[Variants and the general due-coverage lemma, checked in Lean](../../TruthCore/Causality/PerfectionTransferControls.lean#L172)
 
 ### Registered argument bundles and the selected root
 
@@ -3274,7 +3149,7 @@ warrant of a token, and the claim from its practical appropriation.
 Compute ordinary projected reachability and full-group least closure
 from {N,E}. Add the actual external K/J to the seeds only when not
 source-based; this restores the complete stipulated account on all four
-rows. Executed diagnostic:
+rows. Checked in Lean:
 
 | K source-based | J source-based | Projected path to P | Full source support of I | Full source support of T | Full source support of P |
 | --- | --- | --- | --- | --- | --- |
@@ -3283,36 +3158,7 @@ rows. Executed diagnostic:
 | yes | no | yes | yes | no | no |
 | yes | yes | yes | yes | yes | yes |
 
-```python
-from itertools import product
-
-def closure(seeds, groups, conjunctive):
-    seen = set(seeds)
-    while True:
-        nxt = seen | {y for xs, y in groups
-                      if (set(xs) <= seen if conjunctive else set(xs) & seen)}
-        if nxt == seen:
-            return seen
-        seen = nxt
-
-S = {'N', 'E'}
-common = [(('N', 'E'), y) for y in ('A', 'C', 'X', 'H', 'O')] + [
-    (('A', 'X', 'K'), 'I'), (('C', 'J'), 'T'),
-    (('A', 'C', 'H', 'T', 'J'), 'D'),
-    (('A', 'I', 'K', 'O'), 'U'), (('U', 'D'), 'P')]
-for k, j in product((False, True), repeat=2):
-    groups = common + ([(('N',), 'K')] if k else []) \
-                    + ([(('N',), 'J')] if j else [])
-    external = ({'K'} if not k else set()) | ({'J'} if not j else set())
-    reach = closure(S, groups, False)
-    full = closure(S, groups, True)
-    total = closure(S | external, groups, True)
-    assert {'A', 'C', 'I', 'T', 'D', 'U', 'P'} <= reach
-    assert {'A', 'C', 'I', 'T', 'D', 'U', 'P'} <= total
-    assert ('I' in full) == k and ('U' in full) == k
-    assert ('T' in full) == j and ('D' in full) == j
-    assert ('P' in full) == (k and j)
-```
+[Closure rows checked in Lean](../../TruthCore/Causality/PerfectionTransferControls.lean#L209)
 
 This is an application of the already investigated projection/conjunction
 distinction; do not register another generic closure theorem. The exact
