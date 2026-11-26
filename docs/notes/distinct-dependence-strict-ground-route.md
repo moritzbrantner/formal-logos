@@ -80,15 +80,17 @@ interpretations of the map remain open and untyped:
 
 - **(a) Constitutive/metaphysical ground of existence facts.** This is Fine's
   non-causal metaphysical explanation, and it is the reading the rationale below
-  appeals to. On it, the definition's **own paradigm edge is not covered**: the
-  sun's existing is not standardly a partial ground of the light's existing. The
-  light's existence is grounded in its constituents, and the sun is its cause.
-  So the map would have to be restricted to a non-causal relation of receiving
-  esse, not stated for the broad `D`.
+  appeals to. On it, whether the definition's own paradigm edge is covered is
+  open (reassessed 2026-11-26, [negation tests](#negation-tests-on-the-same-labelled-edge-2026-11-26)):
+  the illumination case supports a local direction of causal supply, but gives
+  no warrant that the sun's existence fact partly grounds the light's. If it
+  does not, the map would have to be restricted to a non-causal relation of
+  receiving esse, not stated for the broad `D`.
 - **(b) Natural/causal-production ground.** Here PLG is applied as the logic
-  common to all grounding relations. On this reading the paradigm edge is
-  covered, but the "constitutive explanatory direction" rationale does not
-  apply. The map's warrant then reduces to the asymmetry of efficient causal
+  common to all grounding relations. On this reading the paradigm edge's local
+  causal direction is supported, though applying the formal map still requires
+  warranted steps between the selected labels, and the "constitutive
+  explanatory direction" rationale does not apply. The map's warrant then reduces to the asymmetry of efficient causal
   dependence for being (compare `STMT-EFFICIENT-CAUSE-NOT-DEPENDENT-ON-EFFECT`),
   strengthened to acyclicity.
 
@@ -649,12 +651,14 @@ Fix the supplier, recipient, their labels, and the entire assumption set before
 asking what the dependence edge explains. The two branches of the per se route
 use these inputs differently. Argument `4bd8457a` uses population and absence
 of a strict return for consistency. Argument `ea09d50b` uses path coverage to
-derive the map. Only their joint application lets the map constrain mutual
-dependence. The following judgments concern the baseline of PR #2025 and the
+derive the map. The nonmutuality result requires consistency and the map on
+the same presentation. These two arguments supply one way to obtain those
+inputs; either input can also be assumed directly. The following judgments concern the baseline of PR #2025 and the
 [compiled negation tests](../../TruthCore/Models/SelectedPlgNegations.lean).
 
 **Population (`d1c47547`).** Strongly warranted in any application that
-already identifies a bearer. Applying the very same total label function to
+supplies both a bearer in the labelling domain and a total label function;
+missing either input removes this proof of population and leaves it open. Applying the very same total label function to
 that bearer supplies the atom (`populatedAtBearer`). A skeptic about reifying
 existence facts can grant this mathematical witness and dispute its
 interpretation. The strongest literal denial is an empty language.
@@ -674,10 +678,15 @@ alone are compatible with the test. An infinite strict descent alone is also
 compatible, as the earlier natural-number model shows. Denial requires a
 strict step *and* a finite weak return. Keeping one direction strict while
 admitting the return makes every sequent derivable in this calculus. That is
-a specific conflict with the route's consistency premise. A reciprocal
-account may keep its own explanatory commitments by treating both links as
-weak or by giving a different rule for strict cycles. Neither supplies this
-route's denied premise. For the unspecified root presentation the judgment
+a specific conflict with the route's consistency premise. The positive
+interdependence alternative (Thompson on holistic explanation; Bliss on
+circles and regress) holds that some reciprocal links do constitutive
+explanatory work. It challenges `42756c07` if both links belong to the
+selected `D`; if both are represented in PLG with at least one strict
+direction, the return violates `2bdf810f`. Acyclic infinite descent is a
+separate alternative: it leaves `2bdf810f` intact and bears on a downstream
+termination premise. Neither alternative supplies an example of the same
+illumination effect sustaining its own supplier. For the unspecified root presentation the judgment
 remains conditional. Inspect weak links as well as strict ones, or supply a
 rank independently warranted for every initial sequent.
 
@@ -697,14 +706,21 @@ both endpoint interpretations.
 
 **Parent map (`42756c07`).** The directed supply in the illumination case
 supports trying an oriented causal reading. The same evidence fits a local
-account in terms of emission and reception. Such an account owes an explanation
+account in terms of emission and reception (Wilson-style specific dependence
+relations): emission and reception explain the specified light's presence
+while the emitter operates, which supports withholding the export from causal
+supply to a constitutive relation between bare existence facts, while leaving
+formal path coverage and partial constitutive ground open. Such an account owes an explanation
 of how the effect is sustained, but owes a *constitutive* ground only if there
 is a further reason that this particular existence fact has one. Pointing out
 that emission requires operation does not refute strict *partial* ground:
 the proposed supplier fact need not suffice on its own. The current evidence
-underdetermines that stronger interpretation. In the existing
-`directedNature` profile, modal co-existence is mutual even though the essence
-assignment is directional. `modalControlExcludesMap` excludes the strict map
+underdetermines that stronger interpretation. The Fine-style alternative
+holds that source-indexed essence can distinguish directions that necessary
+co-presence leaves symmetric. In the existing `directedNature` profile, modal
+co-existence is mutual even though the essence assignment is directional; the
+essence assignment is stipulated and the causal relation is empty, so the
+theorem tests the modal relation alone. `modalControlExcludesMap` excludes the strict map
 on that modal relation for **every** labelling and consistent presentation.
 This rules out mere modal requirement as a general warrant. Applying that
 result against the selected efficient-causal relation would require an
@@ -718,7 +734,9 @@ the sequent about the recipient. Thus a successful derivation alone cannot
 serve as the discriminating evidence. Reassess the parent on an independently
 motivated consistent theory that explains why the supplier's *existence fact*
 partly grounds the recipient's, at the very respect and time for which the
-causal explanation is offered. Until then the two bridges remain direct
+causal explanation is offered: once the supplier's operation, the time and the
+respect are fixed, what explanatory contribution does the supplier's
+*existence* still make? Until then the two bridges remain direct
 assumption options. Neither the modal control nor the cyclic presentation
 undermines a prerequisite of inquiry. Their conflicts are with identifiable
 route commitments under the specified readings.
