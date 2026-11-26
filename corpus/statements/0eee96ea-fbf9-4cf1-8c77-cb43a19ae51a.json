@@ -1,0 +1,12 @@
+{
+  "id": "0eee96ea-fbf9-4cf1-8c77-cb43a19ae51a",
+  "label": "Random relay cuts detect maintained feeds at a rate determined by the cut law's tail",
+  "paraphrase": "Using the same receiver and power, the survival mass is zero for relay-only cut responses. For any fixed nonnegative probability law on cut positions and any fixed fed depth d, the survival probability is depthLikelihood of the cut law at length d, equal to one minus the mass of cuts below d. It is at most one and positive exactly when some cut i ≥ d has positive mass. In particular full support gives positive sensitivity at every finite depth. For each fixed law, sensitivity eventually falls below every positive bound as d increases. A proper full-support geometric law gives exactly (1/2)^d.",
+  "lean_declaration": "TruthCore.Causality.RelayCutSensitivity.RandomizedCutComparison",
+  "definition_ids": [
+    "5231af84-0f05-4623-b1b7-f570059f7bca",
+    "d3a92973-548a-4acf-959d-e94c4d56dbfe",
+    "c617c480-1590-4143-99bc-9622ec18c716",
+    "77b06e8c-9266-4801-b3cb-2ce1dd9d13e6"
+  ]
+}

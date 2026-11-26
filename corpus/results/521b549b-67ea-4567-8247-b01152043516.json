@@ -1,0 +1,11 @@
+{
+  "id": "521b549b-67ea-4567-8247-b01152043516",
+  "label": "Compare true supplier termination with an untagged access stop",
+  "argument_id": "c907468a-8798-42c3-bc08-1ac95c1a92aa",
+  "challenge_module": "TruthCore.Results.Causality.SupplierAuditVisibility.Challenge",
+  "solution_module": "TruthCore.Results.Causality.SupplierAuditVisibility.Solution",
+  "theorem": "TruthCore.Results.Causality.SupplierAuditVisibility.boundaryStopComparison",
+  "comparator_config": "results/521b549b-67ea-4567-8247-b01152043516/comparator.json",
+  "status": "solution-present",
+  "description": "The same roster and recipient zero fix the comparison. In both worlds the observed complete matching lists end just before d. In the sourced world d is read and its list is empty. In the endless world d cannot be read and the actual relation supplies d from d+1. The untagged projection forgets that distinction, although the boundary packet retains it. Correctness of the terminal tag is supplied by the complete-list observation rule."
+}

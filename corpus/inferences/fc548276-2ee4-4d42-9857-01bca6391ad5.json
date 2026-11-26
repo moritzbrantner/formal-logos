@@ -1,0 +1,12 @@
+{
+  "id": "fc548276-2ee4-4d42-9857-01bca6391ad5",
+  "label": "Exhibit observationally equal extreme supplier mixtures under a common access cap (inference)",
+  "input_statement_ids": [
+    "25a31bba-c01f-43cf-9c53-c8f9ae3ce466"
+  ],
+  "output_statement_id": "b9bea4ff-35dc-4785-b1c2-8552aa7cdb68",
+  "rule": "Concentrate the finite prior at the cap and compare the reported probabilities",
+  "meaning": "The finite world at the cap and the endless world already agree on all reportable lengths. The common visibility factor zeros out every longer length, where the underlying predictions differ. The equal observed profiles have opposite extreme endless shares.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

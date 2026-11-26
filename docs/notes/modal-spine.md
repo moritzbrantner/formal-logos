@@ -3236,8 +3236,9 @@ CREATURE_1, now carries the existence of a universal cause of being. That is
 close to the conclusion of the attribution genus-principle argument that uses
 it, a warrant burden on that premise rather than a proof gap. Existential inertia targets sustaining causation of being,
 which `#1493` types as CAUSE_OF_BEING_2. The step here uses the atemporal cause
-of being and no persistence claim. The esse-essence tradition of Scotus, Ockham
-and Suárez is an unread lead. It would now target the reception premises, the
+of being and no persistence claim. At the time of this assessment the esse-essence
+tradition of Scotus, Ockham and Suárez was an unread lead. For the subsequent
+reading of Suárez, see [external giving and internal reception](de-ente-esse-source-1628.md#can-an-identity-of-essence-and-existence-rule-out-a-supplier). It would now target the reception premises, the
 q.7 a.2 reading `29e71e43` and the reception-limitation premise `7de89edb`, not
 the sense bridge. It would do so only on a really-distinct reading of the
 receiving principle. Joint satisfiability is no

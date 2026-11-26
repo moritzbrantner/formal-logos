@@ -1,0 +1,17 @@
+{
+  "id": "e9d0031b-7213-491b-b7cb-dd5eba5f861c",
+  "label": "A matching prefix and untagged stop can leave a specified supplierless ancestor unresolved",
+  "paraphrase": "For every d, compare the sourced depth-d world visible through recipient d with the endless world visible only below d. They report the same matching prefixes at all query lengths, namely lengths at most d, and the same untagged stop at exactly d. Recipient d is a supplierless ancestor of zero in the sourced world and has a supplier in the endless world. No exact classifier on their full untagged records identifies that ancestor as supplierless. In this pair, the boundary report distinguishes a verified empty list from no access. A verified empty list at d is equivalent to d being a supplierless ancestor of zero.",
+  "lean_declaration": "TruthCore.Causality.SupplierAuditVisibility.BoundaryStopComparison",
+  "definition_ids": [
+    "5b19527d-9418-441e-820c-3c659ba7cb12",
+    "7aefc429-5425-44d6-8757-ec8bf55f17fb",
+    "c15c1634-6d70-4ecb-8b5b-5592df955223",
+    "a6e1ef95-8138-5cfc-8fe2-1202ba3b9a5c",
+    "9033e872-b92d-4adc-919b-ed9aa1c9e35a",
+    "3ddbf9f0-f7a6-4992-8c8d-be91b2d22ba5"
+  ],
+  "disambiguation_ids": [
+    "ba851630-7eec-5851-8ad2-d8eff7430e41"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "id": "16105d73-f203-43b0-9278-3592b6a88d36",
+  "label": "Transfer the prefix likelihood calculation to randomized relay cuts",
+  "premise_statement_ids": [
+    "70ddfed2-f784-4edb-9b3e-252bb4856a07",
+    "25a31bba-c01f-43cf-9c53-c8f9ae3ce466"
+  ],
+  "conclusion_statement_id": "0eee96ea-fbf9-4cf1-8c77-cb43a19ae51a",
+  "inference_ids": [
+    "e2155cd8-5735-448a-a76f-689a7665045d"
+  ],
+  "meaning": "A successful cut response at depth d selects exactly the indices i ≥ d, the same summands as a prefix of length d selects in the supplier audit. Here the distribution is the investigator's choice of cut i and the depth d is fixed. The probability is positive exactly when the tail contains a positive weight, and it is at most the total mass one. The reused prefix result gives arbitrarily small tails at large depth and the exact geometric value. Relay-only outcomes contribute zero at every cut index.",
+  "definition_ids": [
+    "425ae4bc-d5f0-4ebc-99b7-2645c947f497",
+    "5231af84-0f05-4623-b1b7-f570059f7bca",
+    "5b19527d-9418-441e-820c-3c659ba7cb12",
+    "77b06e8c-9266-4801-b3cb-2ce1dd9d13e6",
+    "7aefc429-5425-44d6-8757-ec8bf55f17fb",
+    "e1b95906-8d38-59c3-abee-0ccc1c9d333b",
+    "c617c480-1590-4143-99bc-9622ec18c716",
+    "d3a92973-548a-4acf-959d-e94c4d56dbfe"
+  ]
+}

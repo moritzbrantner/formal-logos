@@ -1,0 +1,9 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.RelaySourceRecognition.Challenge",
+  "solution_module": "TruthCore.Results.Causality.RelaySourceRecognition.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.RelaySourceRecognition.primaryCutSourceComparison"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}

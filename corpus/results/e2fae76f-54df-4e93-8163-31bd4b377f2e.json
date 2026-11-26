@@ -1,0 +1,11 @@
+{
+  "id": "e2fae76f-54df-4e93-8163-31bd4b377f2e",
+  "label": "Internal reception excludes incoming actual esse supply at identity",
+  "argument_id": "920770b4-5b6b-4a39-9fce-e1eb3ebbe1ae",
+  "challenge_module": "TruthCore.Results.Aquinas.DeEnte.ReceivedOrUnderived.Challenge",
+  "solution_module": "TruthCore.Results.Aquinas.DeEnte.ReceivedOrUnderived.Solution",
+  "theorem": "TruthCore.Results.Aquinas.DeEnte.ReceivedOrUnderived.identityEsseUnderivedOfReception",
+  "comparator_config": "results/e2fae76f-54df-4e93-8163-31bd4b377f2e/comparator.json",
+  "status": "solution-present",
+  "description": "For a bearer whose represented esse is its essence, the cause-to-reception bridge would make its esse received in some principle. Identity-scoped reception fixes that principle as the bearer's essence, here identical to its esse. The receiver-potency law then contradicts the irreflexivity of receptive potency. The cause-to-reception bridge retains its act-of-being individuation scope. The derivation uses the same self-potency inference as contingentDistinctEsseFromReception with a causal antecedent in place of contingency."
+}

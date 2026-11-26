@@ -1,0 +1,11 @@
+{
+  "id": "70ddfed2-f784-4edb-9b3e-252bb4856a07",
+  "label": "One relay cut preserves bottom activity exactly at or above a maintained feed",
+  "paraphrase": "Fix receiver zero and one power on a natural-number successor roster. The all-active intact profile and a family of single-cut responses exist for both the relay-only model and each model with its sole separate active feed at depth d. Cutting the link i+1 into i extinguishes receiver zero in every relay-only response. With a maintained separate active feed at depth d, receiver zero stays active in every admissible response exactly when d ≤ i. Thus d is the least cut position preserving the receiver's activity, including d = 0. For any bound k, depth k+1 reproduces failure at every i ≤ k and preserves activity at the next cut.",
+  "lean_declaration": "TruthCore.Causality.RelayCutSensitivity.SingleCutComparison",
+  "definition_ids": [
+    "5231af84-0f05-4623-b1b7-f570059f7bca",
+    "d3a92973-548a-4acf-959d-e94c4d56dbfe",
+    "e1b95906-8d38-59c3-abee-0ccc1c9d333b"
+  ]
+}

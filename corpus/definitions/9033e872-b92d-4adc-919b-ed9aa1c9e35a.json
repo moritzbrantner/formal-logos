@@ -1,0 +1,9 @@
+{
+  "id": "9033e872-b92d-4adc-919b-ed9aa1c9e35a",
+  "label": "Complete supplier list with access status",
+  "term": "visibleList",
+  "definition": "For a recipient below the access bound, return its complete set of suppliers wrapped in `some`. A verified empty list gives `some ∅`. At or above the access bound return `none`.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.SupplierAuditVisibility.visibleList",
+  "note": "This stipulates exact and complete inspection when the recipient is accessible. The access bound and the actual supplier relation are separate inputs."
+}

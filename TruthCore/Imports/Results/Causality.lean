@@ -340,6 +340,9 @@ public import TruthCore.Results.Causality.RegressAccessibilityUnboundedDepth.Sol
 public import TruthCore.Results.Causality.RegressReadingsCoincide.Solution
 public import TruthCore.Results.Causality.RegressRivalCoverage.Coverage.Solution
 public import TruthCore.Results.Causality.RelationalReceipt.Solution
+public import TruthCore.Results.Causality.RelayCutSensitivity.Solution
+public import TruthCore.Results.Causality.RelayFeedInventory.Solution
+public import TruthCore.Results.Causality.RelaySourceRecognition.Solution
 public import TruthCore.Results.Causality.RestatedPremises.Solution
 public import TruthCore.Results.Causality.RivalRefutationsRound2.Solution
 public import TruthCore.Results.Causality.RootEssenceIdentity.Solution
@@ -401,6 +404,8 @@ public import TruthCore.Results.Causality.SupertaskStableEndpoint.Solution
 public import TruthCore.Results.Causality.SupertaskUnitCostDiverges.Solution
 public import TruthCore.Results.Causality.SupertaskUrnPointwise.Solution
 public import TruthCore.Results.Causality.SupplierAuditCertificates.Solution
+public import TruthCore.Results.Causality.SupplierAuditLikelihood.Solution
+public import TruthCore.Results.Causality.SupplierAuditVisibility.Solution
 public import TruthCore.Results.Causality.SurveyCapabilityProfiles.Solution
 public import TruthCore.Results.Causality.SurveyProductiveSource.Solution
 public import TruthCore.Results.Causality.SurveySourceEndpointControls.Solution

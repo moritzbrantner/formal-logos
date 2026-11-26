@@ -1,0 +1,37 @@
+[batch]
+vocab = "TruthCore.Latin.Aquinas.DeEnte.IdentitySupplierSingleton"
+results = "TruthCore.Results.Aquinas.DeEnte.IdentitySourceCycle"
+
+[[argument]]
+id = "Uniqueness bounds the identity bearers upstream of each actual recipient"
+theorem = "finiteIdentityAncestorsOfUniqueness"
+premises = ["a576300f-4b01-45ae-902c-cfe3d0fbf2de"]
+conclusion = "b2b289ed-74a7-4c1c-88c0-26f213a6e6c3"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "All actual identity ancestors of the selected actual recipient form a subsingleton set"
+meaning = "Apply actual identity-bearer uniqueness to any two members of the same recipient's upstream set. The set may be empty. Other upstream bearers may be infinite in number. Whether the stated identity is instantiated in reality, and whether it singles out at most one bearer, require separate warrant."
+
+[[argument]]
+id = "Excluding a return through the shared identity ancestor gives a common first giver"
+theorem = "commonSourceOfNoIdentityReturn"
+comparator_theorems = ["noIdentityReturnOfCommonSource", "commonSourceWithEndlessBranch"]
+premises = ["3d01134d-0b03-4469-a81a-a18d6e179fa0", "a576300f-4b01-45ae-902c-cfe3d0fbf2de", "78cffb8e-da95-4459-8058-45e0953cdde8", "41c858ee-07ee-41db-9693-b5fef6154efe", "ee4ab504-c8fe-59bc-bc96-7cbeefed6410"]
+conclusion = "c35b1a5c-6405-449b-993b-8196b2457e08"
+axioms = []
+rule = "Start at one actual bearer, identify every actual identity ancestor with the same candidate, and exclude an incoming supplier by the return path it would close"
+meaning = "Fixed q3a4 profile throughout. Distinct-esse ancestry supplies a finite nonempty path to each actual recipient whose represented essence differs from its esse. Unique actual identity and one actual bearer select n. Every other actual bearer falls under that ancestry premise, so n reaches it. Any supplier of n would complete a nonempty return through n. Conversely, with uniqueness, a common first giver excludes every such return. The companion reuses the existing model with a supplierless common source and an infinite branch. Global well-foundedness is unnecessary. Deriving ancestry from well-foundedness or closed-collection rootedness inherits those commitments. Further bridges identify the source with a world-relative grounding root and with God."
+
+[[statement]]
+id = "One represented essence value permits infinitely many distinct identity suppliers of one recipient"
+lean = "SingletonEssenceValueWithInfiniteIdentitySuppliers"
+paraphrase = "Analyst countermodel on the q3a4 profile with all naturals actual. Zero has distinct esse. The edge from c to x holds exactly when c = x + 1. All actual identity bearers have the same represented essence value, and infinitely many of them are ancestors of zero. Each distinct-esse bearer has identity ancestry and no identity bearer lies on an actual esse-cause loop. The universal finite root-audit condition and the common first-source conclusion both fail. The singleton counts values assigned by essenceOf."
+definitions = ["8163859b-95b3-4dd2-8a69-541bd332f32f", "183b48d2-1753-583d-aef9-4199cff86231", "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"]
+
+[[argument]]
+id = "A successor chain with one essence value has infinitely many rootless identity suppliers"
+theorem = "identitySupplierSingletonCountermodel"
+premises = []
+conclusion = "One represented essence value permits infinitely many distinct identity suppliers of one recipient"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Use each positive natural as a distinct actual identity ancestor of zero under successor supply"
+meaning = "Every natural receives from its successor. Zero has distinct represented essence and esse, while each successor has true for both fields. Strict descent in recipient index along any forward path excludes a return. Each positive index occurs upstream of zero, yet only one essence value occurs among identity bearers. Absence of a supplierless point rules out finite certification and the common first giver. This tests the count of individuals versus assigned values in a model and leaves the number of independent commitments needed for an actual explanation open."

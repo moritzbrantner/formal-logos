@@ -1,0 +1,10 @@
+{
+  "id": "a86241ae-db9e-4b25-b1f2-23473ba99b4a",
+  "label": "Condition one supplier audit on its existing matching prefix (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "888066cf-0aa1-4a75-a86c-c47e1652e9c8",
+  "rule": "The joint event for two nested records is the longer matching prefix",
+  "meaning": "The same sourced candidate matches both records exactly when its depth is at least the maximum of the two lengths. For positive mass of the observed event, repeated observations of that event or its consequences leave the odds unchanged. Updating on a longer match divides the old odds by the conditional finite-class likelihood, so multiplying separate unconditional likelihoods would count part of the same evidence twice.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

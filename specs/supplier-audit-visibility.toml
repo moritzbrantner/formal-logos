@@ -1,0 +1,53 @@
+[batch]
+vocab = "TruthCore.Causality.SupplierAuditVisibility"
+results = "TruthCore.Results.Causality.SupplierAuditVisibility"
+
+[[statement]]
+id = "e9d0031b-7213-491b-b7cb-dd5eba5f861c"
+label = "A matching prefix and untagged stop can leave a specified supplierless ancestor unresolved"
+lean = "BoundaryStopComparison"
+definitions = ["5b19527d-9418-441e-820c-3c659ba7cb12", "7aefc429-5425-44d6-8757-ec8bf55f17fb", "c15c1634-6d70-4ecb-8b5b-5592df955223", "a6e1ef95-8138-5cfc-8fe2-1202ba3b9a5c", "9033e872-b92d-4adc-919b-ed9aa1c9e35a", "3ddbf9f0-f7a6-4992-8c8d-be91b2d22ba5"]
+disambiguations = ["ba851630-7eec-5851-8ad2-d8eff7430e41"]
+paraphrase = "For every d, compare the sourced depth-d world visible through recipient d with the endless world visible only below d. They report the same matching prefixes at all query lengths, namely lengths at most d, and the same untagged stop at exactly d. Recipient d is a supplierless ancestor of zero in the sourced world and has a supplier in the endless world. No exact classifier on their full untagged records identifies that ancestor as supplierless. In this pair, the boundary report distinguishes a verified empty list from no access. A verified empty list at d is equivalent to d being a supplierless ancestor of zero."
+
+[[statement]]
+id = "2098cbc2-03f9-4187-b903-6ad12010ba22"
+label = "Calibrated observation recovers the endless population share from matching prefixes"
+lean = "CalibratedPrefixRecovery"
+definitions = ["7aefc429-5425-44d6-8757-ec8bf55f17fb", "77b06e8c-9266-4801-b3cb-2ce1dd9d13e6", "f13f4f58-7120-4a2d-b2ab-2d1c4469c96f"]
+paraphrase = "The population mixes an endless share w in [0, 1] and a sourced share 1 − w with a fixed nonnegative normalized depth prior. At a cutoff k let t be the sourced matching-prefix probability and suppose the observed matching-prefix probability r factors as v times the latent mixture probability, for a common positive observation factor v ≤ 1. If t < 1, the share equals (r/v − t)/(1 − t). If t = 1, r equals v for every share. If t > 0, the ratio of endless to sourced observed matching-prefix probabilities is v/(v t) = 1/t. If the calibrated factor is positive at every length, r(k)/v(k) tends to w. Two such populations with the same observation profile and the same observed matching-prefix probabilities have the same endless share, even if their fixed proper sourced-depth priors differ."
+
+[[statement]]
+id = "b9bea4ff-35dc-4785-b1c2-8552aa7cdb68"
+label = "A common supplier audit cap can hide opposite endless population shares"
+lean = "CommonCapControl"
+definitions = ["7aefc429-5425-44d6-8757-ec8bf55f17fb", "77b06e8c-9266-4801-b3cb-2ce1dd9d13e6", "f13f4f58-7120-4a2d-b2ab-2d1c4469c96f"]
+paraphrase = "For every access cap d, give matching-prefix queries through length d observation factor one and queries beyond d observation factor zero. The normalized finite class concentrated at depth d has latent matching-prefix probability one for lengths at most d and zero at every longer length. The populations with endless shares zero and one have identical observed matching-prefix probabilities at every length under that same cap."
+
+[[argument]]
+id = "Compare true supplier termination with an untagged access stop"
+theorem = "boundaryStopComparison"
+premises = ["25a31bba-c01f-43cf-9c53-c8f9ae3ce466"]
+conclusion = "e9d0031b-7213-491b-b7cb-dd5eba5f861c"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+senses = {CRITERION_OF_CORRECTNESS = "CRITERION_OF_CORRECTNESS_1"}
+rule = "Compute both access-limited reports and use exact classification on equal-data fibers"
+meaning = "The same roster and recipient zero fix the comparison. In both worlds the observed complete matching lists end just before d. In the sourced world d is read and its list is empty. In the endless world d cannot be read and the actual relation supplies d from d+1. The untagged projection forgets that distinction, although the boundary packet retains it. Correctness of the terminal tag is supplied by the complete-list observation rule."
+
+[[argument]]
+id = "Recover the endless mixture share under calibrated common supplier visibility"
+theorem = "calibratedPrefixRecovery"
+premises = ["25a31bba-c01f-43cf-9c53-c8f9ae3ce466"]
+conclusion = "2098cbc2-03f9-4187-b903-6ad12010ba22"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Divide out common positive visibility and use the vanishing proper-prior tail"
+meaning = "At one length, observed probability divided by its known positive visibility factor gives the latent mixture probability. With a known finite-class tail below one the mixture equation can be inverted. Comparing class likelihoods for a positive match instead cancels the common factor without knowing its value, when the finite tail is positive. Across lengths, the existing prefix comparison identifies the finite likelihood as one minus the prior partial sum. Normalization makes that tail vanish, yielding the endless share as the unique limit even across distinct proper priors. The factorization is a substantive observation assumption. These population probabilities do not classify a single actual world or supply finite-sample estimation."
+
+[[argument]]
+id = "Exhibit observationally equal extreme supplier mixtures under a common access cap"
+theorem = "commonCapControl"
+premises = ["25a31bba-c01f-43cf-9c53-c8f9ae3ce466"]
+conclusion = "b9bea4ff-35dc-4785-b1c2-8552aa7cdb68"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Concentrate the finite prior at the cap and compare the reported probabilities"
+meaning = "The finite world at the cap and the endless world already agree on all reportable lengths. The common visibility factor zeros out every longer length, where the underlying predictions differ. The equal observed profiles have opposite extreme endless shares."

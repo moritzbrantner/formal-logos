@@ -2154,7 +2154,7 @@ fn a_limited_question_preserves_proofs_about_the_current_assessment() {
     record(
         &root,
         "arguments",
-        json!({"id":argument, "label":"Recent consequence", "meaning":"The recent consequence follows from the supplied bridge.", "inference_ids":[INFERENCE],
+        json!({"id":argument, "label":"Finite tracer consequence", "meaning":"The recent consequence follows from the supplied bridge.", "inference_ids":[INFERENCE],
         "conclusion_statement_id":SERIES, "premise_statement_ids":[]}),
     );
     record(
@@ -2187,5 +2187,45 @@ fn a_limited_question_preserves_proofs_about_the_current_assessment() {
             assert_eq!(citations[1]["id"], RESULT);
         }
     }
+    // Both conclusions are now in scope. The question selects the last citation.
+    // The second slot still exposes the first recorded result.
+    record(
+        &root,
+        "statements",
+        json!({"id":GOAL, "label":"The goal follows", "paraphrase":"The comparison permits a finite supply."}),
+    );
+    let other = "c0000000-0000-4000-8000-000000000007";
+    record(
+        &root,
+        "results",
+        json!({"id":other, "argument_id":ARGUMENT, "label":"A tracer", "theorem":"TruthCore.Results.Fixture.other",
+            "challenge_module":"TruthCore.Results.Fixture.Challenge","solution_module":"TruthCore.Results.Fixture.Solution",
+            "comparator_config":"results/x/comparator.json","status":"solution-present"}),
+    );
+    record(
+        &root,
+        "attempts",
+        json!({"id":attempt, "label":"Earlier and later studies",
+            "statement_ids":[GOAL, SERIES], "evidence":[RESULT, other, recent],
+            "current_assessment":{"scope":"Finite supplier audits", "assessment":"A tracer marks the initial bearer in a finite supplier audit.", "statement_ids":[GOAL, SERIES]}}),
+    );
+    let corpus = Corpus::load(&root).unwrap();
+    let (report, _) = super::assessment_search::report_for_root(
+        &root,
+        &corpus,
+        "Does a finite supplier audit leave a tracer?",
+        1,
+    )
+    .unwrap();
+    assert_eq!(report["lean_results"], json!([]));
+    assert_eq!(report["cited_lean_results"][0]["id"], recent);
+    let (report, _) = super::assessment_search::report_for_root(
+        &root,
+        &corpus,
+        "Does a finite supplier audit leave a tracer?",
+        2,
+    )
+    .unwrap();
+    assert_eq!(report["cited_lean_results"][1]["id"], RESULT);
     std::fs::remove_dir_all(root).unwrap();
 }

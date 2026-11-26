@@ -247,6 +247,9 @@ public import TruthCore.Causality.ReflexiveDependenceScope
 public import TruthCore.Causality.RegressReadings
 public import TruthCore.Causality.RegressRivalCoverage
 public import TruthCore.Causality.RelationalReceipt
+public import TruthCore.Causality.RelayCutSensitivity
+public import TruthCore.Causality.RelayFeedInventory
+public import TruthCore.Causality.RelaySourceRecognition
 public import TruthCore.Causality.RestatedPremises
 public import TruthCore.Causality.RivalRefutationsRound2
 public import TruthCore.Causality.RootEssenceIdentity
@@ -294,6 +297,8 @@ public import TruthCore.Causality.SuccessionPotency
 public import TruthCore.Causality.Supertasks
 public import TruthCore.Causality.SupplierAudit
 public import TruthCore.Causality.SupplierAuditCertificates
+public import TruthCore.Causality.SupplierAuditLikelihood
+public import TruthCore.Causality.SupplierAuditVisibility
 public import TruthCore.Causality.SurveyCapabilityControls
 public import TruthCore.Causality.SurveyCapabilityProfiles
 public import TruthCore.Causality.SurveyExternalCause

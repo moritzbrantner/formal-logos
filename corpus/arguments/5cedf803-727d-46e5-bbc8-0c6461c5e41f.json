@@ -1,0 +1,19 @@
+{
+  "id": "5cedf803-727d-46e5-bbc8-0c6461c5e41f",
+  "label": "Compare endless and finite-depth supplier models by their prefix likelihood",
+  "premise_statement_ids": [
+    "5a6103e6-5335-4319-889f-6fa9d1b60831"
+  ],
+  "conclusion_statement_id": "25a31bba-c01f-43cf-9c53-c8f9ae3ce466",
+  "inference_ids": [
+    "54231e6a-7680-4eae-9841-ba91749949a3"
+  ],
+  "meaning": "The sourced world's root has an empty incoming list, so it cannot be among the recipients whose full lists match the endless singleton record. Before that depth the lists agree. The two likelihoods use the same cutoff, transferring the fixed-prior tail theorem from the finite reserve calculation. The first complete empty list identifies the sourced depth among the selected worlds and excludes the endless world. A companion interprets suppliers as efficient edges in one respect. Sourced depths then satisfy the Second Way regress reading on asCaused edges and have a first efficient cause. The endless world falsifies that reading under the same interpretation. The last caused intermediate has an incoming efficient edge from the first cause even though its asCaused list is empty. Applying this selected relation and observation procedure to actual efficient or existential causation remains open.",
+  "definition_ids": [
+    "425ae4bc-d5f0-4ebc-99b7-2645c947f497",
+    "4826b5ea-c643-44f1-ba1f-4247175f4d76",
+    "5b19527d-9418-441e-820c-3c659ba7cb12",
+    "77b06e8c-9266-4801-b3cb-2ce1dd9d13e6",
+    "7aefc429-5425-44d6-8757-ec8bf55f17fb"
+  ]
+}

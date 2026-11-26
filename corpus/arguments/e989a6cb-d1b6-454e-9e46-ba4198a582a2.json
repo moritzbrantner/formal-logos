@@ -1,0 +1,25 @@
+{
+  "id": "e989a6cb-d1b6-454e-9e46-ba4198a582a2",
+  "label": "Compare intrinsic and auxiliary-borrowed feeds by primary and auxiliary interventions",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "060df804-10d5-445c-ac1f-0549ac7c8c02",
+  "inference_ids": [
+    "dbf18f3f-6f94-443c-b5cf-b18feeb919d2"
+  ],
+  "meaning": "In the borrowed profiles every active auxiliary stage receives from its active successor. Auxiliary stage zero can therefore transmit to the same feed token that is intrinsic in the sourced world. The active feed maintains the same primary segment in each selected profile, fixing equal baseline and single-primary-cut records with opposite intrinsic labels. The borrowed world has no intrinsic source and cannot furnish a finite inductive derivation, even though the same feed actually supplies the recipient. When the primary incoming edge at d is cut, the primary segment reads the feed itself in every compatible profile. Removing the auxiliary entrance now tests the token in isolation under the complete incoming inventory. This identifies intrinsic status only in the specified model with the modeled intervention and full link coverage.",
+  "term_senses": {
+    "CRITERION_OF_CORRECTNESS": "b77c1c5a-7956-47ac-84d2-b3d748abf918"
+  },
+  "definition_ids": [
+    "a6e1ef95-8138-5cfc-8fe2-1202ba3b9a5c",
+    "e1b95906-8d38-59c3-abee-0ccc1c9d333b",
+    "822c9912-2313-584b-b2b7-77031da20107",
+    "febac82d-1ca3-5773-89ec-0401f1bac7a0",
+    "f0bdc622-1770-455d-9c83-0b57bf0af456"
+  ],
+  "disambiguation_ids": [
+    "ba851630-7eec-5851-8ad2-d8eff7430e41",
+    "4b02d34a-9226-5009-9ac2-3b52f4222b21"
+  ],
+  "sense_mixing_control": true
+}

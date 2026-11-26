@@ -1,0 +1,9 @@
+{
+  "id": "f13f4f58-7120-4a2d-b2ab-2d1c4469c96f",
+  "label": "Latent matching-prefix probability in the two-class supplier mixture",
+  "term": "mixturePrefix",
+  "definition": "At query length k the latent matching-prefix probability is w + (1 − w) · depthLikelihood(prior, k), with depthLikelihood the sourced conditional matching-prefix probability. The endless class always matches the latent prefix.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.SupplierAuditVisibility.mixturePrefix",
+  "note": "The endless population share w lies in [0, 1] and the conditional sourced prior is fixed, nonnegative, and normalized for the probability reading. A common observation factor multiplies both class probabilities at a given length in the factored models. A visibility probability of zero removes all prefix observations at that length."
+}
