@@ -1,0 +1,19 @@
+{
+  "id": "853b34a0-2933-4336-b329-1afed3e1dd94",
+  "label": "Aquinas on intrinsic knowability and the scope of incomprehensibility",
+  "statement_ids": [
+    "7921f9c8-81f4-4af5-b945-d98787d12f42",
+    "fa3f08a8-aa2f-4385-8c72-4343eb5409c0",
+    "bbac932e-033c-4008-92ce-176f94e3e039"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "ST I q.12 a.1 co. grounds intrinsic knowability in actuality. Q.12 a.7 co. excludes exhaustive cognition of God by a created intellect even with its finite elevation. It allows genuine attainment, and the created scope does not exclude divine self-comprehension.",
+  "blocker": "Supply or justify a common preorder for the measured inequality and identify whether the scope of all non-INFINITE_1 intellects tracks finite created cognition. The source gives the qualitative and divine cases.",
+  "evidence": [
+    "3c65e0cb-f991-42e8-8cb3-e65435e47a82",
+    "ba924bce-a588-4dd5-b400-e7dad76d99ba",
+    "PR-2017"
+  ]
+}

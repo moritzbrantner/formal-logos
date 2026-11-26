@@ -1,0 +1,13 @@
+{
+  "id": "fa4fa750-39a9-4f00-9c30-8b4b90682fab",
+  "label": "I q.19 a.3: Willing an end necessitates willing a means only if the means is indispensable",
+  "statement_id": "c4f15082-0275-4647-ba03-70ee59058b5d",
+  "source_id": "c77377cf-501b-56c6-be40-b518e9aad101",
+  "locator": "I q.19 a.3 co.",
+  "interpretation": "The necessity in this reading follows from willing the end. Aquinas contrasts food for preserving life or a ship for crossing the sea with a horse for a journey that can also be made on foot. In God's case, his goodness can be had without creatures. Necessity on the supposition that God wills a creature follows from the immutability of that willing.",
+  "status": "formalized",
+  "attribution": "The passage states that willing an end necessitates willing a particular means to it only if that end cannot be had without that means, which is the premise.",
+  "definition_ids": [
+    "90719cb5-43c2-4677-8ad7-20e077e28ac9"
+  ]
+}

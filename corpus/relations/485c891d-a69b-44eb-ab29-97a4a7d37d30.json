@@ -1,0 +1,10 @@
+{
+  "id": "485c891d-a69b-44eb-ab29-97a4a7d37d30",
+  "label": "Immediate contact supports time-indexed presence",
+  "subject_kind": "claim",
+  "subject_id": "b246de60-51d3-4e7c-ba3f-0683f169b92f",
+  "predicate": "supports",
+  "object_kind": "statement",
+  "object_id": "c4661518-33cc-4a53-ae55-cb986be9c2b5",
+  "note": "The source concerns contact with an immediate effect. The premise ranges over every GivesAt exercise in every history and infers IsAt for the giver at the effect-side moment. It needs a bridge from esse-giving to immediate action and from contact by power to that history-indexed co-presence."
+}

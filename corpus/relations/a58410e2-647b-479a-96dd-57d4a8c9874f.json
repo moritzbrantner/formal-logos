@@ -1,0 +1,10 @@
+{
+  "id": "a58410e2-647b-479a-96dd-57d4a8c9874f",
+  "label": "Intellectual and voluntary production supports the providence application",
+  "subject_kind": "claim",
+  "subject_id": "e9ec97c2-ecf7-414e-906d-c15e7de65888",
+  "predicate": "supports",
+  "object_kind": "statement",
+  "object_id": "123d394b-11ce-449a-a8b6-7fda5a254a6d",
+  "note": "Aquinas supplies a reason for God acting through intellect and will, which the q.22 providence reading uses. Mere conjunction of HasIntellect, HasWill and universal caused esse does not encode the priority, perfection or identity premises of this article, or by itself yield an end for each effect."
+}

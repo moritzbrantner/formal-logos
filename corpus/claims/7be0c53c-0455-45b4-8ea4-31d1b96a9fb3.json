@@ -1,0 +1,14 @@
+{
+  "id": "7be0c53c-0455-45b4-8ea4-31d1b96a9fb3",
+  "label": "I q.19 a.3: GOD_4 necessarily wills his own goodness",
+  "statement_id": "45f72861-c3a0-488c-9c29-e2fdb3f64ee8",
+  "source_id": "c77377cf-501b-56c6-be40-b518e9aad101",
+  "locator": "I q.19 a.3 co.",
+  "interpretation": "This is the self-case in Aquinas's distinction between absolute necessity and necessity on the supposition that God wills something. The divine goodness is the proper object of God's will and is willed as the end to which other things are ordered.",
+  "status": "formalized",
+  "attribution": "The passage states that God wills his own goodness to be with absolute necessity because it is the proper object of the divine will, which is the premise.",
+  "definition_ids": [
+    "88f9f6e8-997b-5f7d-afa1-c501954c3807",
+    "7c64b499-6dba-5e03-bdf3-5acea95d8836"
+  ]
+}

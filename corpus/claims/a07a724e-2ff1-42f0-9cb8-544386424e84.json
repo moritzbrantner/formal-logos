@@ -1,0 +1,13 @@
+{
+  "id": "a07a724e-2ff1-42f0-9cb8-544386424e84",
+  "label": "Aquinas, I q.8 a.2 co.: God fills every place by giving being to what fills it",
+  "statement_id": "2ba7af8a-fa60-40b1-b149-ead1adde8999",
+  "source_id": "c77377cf-501b-56c6-be40-b518e9aad101",
+  "locator": "I q.8 a.2 co.",
+  "interpretation": "The second account of being in a place in the corpus explains how God fills every place. His presence is compatible with that of other things. The replies distinguish contact by power from dimensional contact and totality of essence from totality of quantity.",
+  "status": "formalized",
+  "attribution": "The passage states that God fills every place by giving being to the things that fill it, compatible with their occupying it, which is the premise.",
+  "definition_ids": [
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"
+  ]
+}
