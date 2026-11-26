@@ -41,13 +41,13 @@
       "d899fe9f-2c8c-43aa-a2c4-2c8c2c06890b"
     ],
     "scope": "Occam’s razor applied to finitely or infinitely many independent commitments to explain the same recipient in the Second Way.",
-    "assessment": "At matched explanatory adequacy, a finite account is preferable on headcount grounds when the competing explanation needs infinitely many independent posits. The number of bearers alone leaves open whether there is a first cause. The whole regress hypothesis retains its prior odds against a finite alternative under equal positive likelihoods. Preference beyond every finite factor in the probability comparison requires zero weight for the whole rival.",
+    "assessment": "At matched explanatory adequacy, a finite account is preferable on headcount grounds when the competing explanation needs infinitely many independent posits. This headcount advantage already follows if each independent posit accounts for finitely many positions on the infinite chain, even with no common bound on these group sizes. The number of bearers alone leaves open whether there is a first cause. The whole regress hypothesis retains its prior odds against a finite alternative under equal positive likelihoods. Preference beyond every finite factor in the probability comparison requires zero weight for the whole rival.",
     "next_test": "For the same recipient, identify what each account must independently assume for productive supply. Determine whether the regress needs infinitely many distinct commitments or one instantiated law, and whether the proposed source explains the same production.",
     "note": "docs/notes/causal-finitism-367.md#does-occams-razor-favor-a-finite-account-of-an-infinite-regress",
     "review": "accepted_qualified",
-    "reviewed_revision": "c33ff837bdf7d5d8a8133647fa99ebb2f9ef8454",
-    "publication": "published",
-    "evidence": "Independent review of the six formal results at e85b5f23b. The targeted recheck at c33ff837b accepted the paired-charge example, the whole-class probability condition and the provisional application. PR #2005. The grouped-charge extension is recorded in the same headcount result and is outside the scope of that original review.",
-    "supersedes": "Adds the parsimony assessment to the earlier finite-ancestry derivation and its omission controls."
+    "reviewed_revision": "8b892c5b48de01a1a66293d9e2f9ffafb04e765d",
+    "publication": "unpublished",
+    "evidence": "Independent review at e85b5f23b and targeted acceptance at c33ff837b covered the original six results, paired charges, whole-class probability and provisional application (merged #2005). A separate review at 8b892c5b4 verified the finite-fiber and mixed infinite-reuse companions and their interpretation.",
+    "supersedes": "Extends the original #2005 headcount assessment from distinct and paired charges to arbitrary finite fibers. Its whole-hypothesis probability assessment and the prior finite-ancestry derivation remain applicable."
   }
 }
