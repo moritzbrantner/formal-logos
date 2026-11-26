@@ -1266,7 +1266,8 @@ identified in the earlier receiver audit. On the role reading, limitation
 tracks a particular recipient that constrains a received act. Two creatures
 receiving esse in their own principles give the positive reason to distinguish
 the intrinsic limiting role from falling within an unrelated recipient's
-capacity. On the measure reading, the bridge is definitional but the inference
+capacity. On the measure reading, the within-capacity-to-limitation implication
+is definitional; strict excess still requires comparability, and the inference
 from limited to received (`39a4c28c`) requires its own defense. The finite
 controls test the dependency. They do not identify these two readings, or
 model esse as metaphysically received. The route consumes the capacity step
@@ -1353,7 +1354,9 @@ independent warrant for a numerical ranking of esse or for the causal and
 receptive threshold. The next discriminating test is to fix an independently
 motivated cross-kind comparison at esse, preserve the same act and degree
 inputs, and ask whether two acknowledged comparisons entail a third on the
-actual bearer domain. For the cause–effect application, the next test is
-whether the effect's degree being within the candidate recipient's capacity
-gives evidence that the recipient actually limits the cause's possession.
+actual bearer domain. For the cause–effect application, with cause c, effect x
+and respect r, the next test is whether `degree r c ≤ capacity x r` warrants
+`LimitedBy c r x`, given `InAct c r`: whether the cause's degree falling within
+the recipient's capacity shows that the recipient limits the cause. The effect's
+own degree within its own capacity bears on a different premise.
 The earlier warrant assessments and source bindings stand at their recorded scopes.

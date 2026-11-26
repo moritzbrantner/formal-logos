@@ -4,7 +4,10 @@ public import TruthCore.Causality.CartesianAdequacy
 public import TruthCore.Causality.ComparativePerfectionScale
 
 /-! Finite structural controls for a supplied degree map and for the two
-extra capacity conditions. The causality fields of the frames are unused. -/
+extra capacity conditions. The scale and capacity controls leave the
+causality fields of their frames unused. The reception control
+`linearScaleWithoutReceptionBridges` assigns `CausesIn` a distinct cause and
+leaves `DependsForBeing` empty. -/
 
 @[expose] public section
 
