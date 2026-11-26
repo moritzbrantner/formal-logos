@@ -1165,3 +1165,33 @@ records the local assessment and its reopening conditions. The
 [alternative witness attempt](../../corpus/attempts/4f86edaa-2700-42ec-8b66-2f08ff44c138.json)
 records the separate applications of designated meditation, modification,
 representation and phenomenal bearing.
+
+### Testing denials at the performing token (2026-11-26, second-pass working note)
+
+Fix the world of the putative inquiry, the question it addresses and the
+episode offered as its performance. There are two different tests even at
+that world. What would falsify the premise? Could this very performance
+supply the falsifying instance? On a classical reading the negation of
+a universal realization bridge needs one qualifying failure. Another
+performer's successful realization leaves that failure available.
+
+| Premise | Positive warrant and scope | What the denial commits its proponent to | Evidence that changes the assessment |
+| --- | --- | --- | --- |
+| Someone asserts this content (b45ca9db) | An actual avowal supplies the existential directly. Inquiry can proceed by entertaining a question. | A rehearsal or quotation can reproduce the words without undertaking their commitment. A denial about content Q is ordinarily a different content from Q. | Check whether the speaker endorses Q here, as distinct from quoting it. Retraction presupposes an earlier commitment only if the retraction concerns that very utterance. |
+| Performed doubt is realized in thought (1722a80f) | Strong on the deliberative reading. Holding the question open and reconsidering reasons are exercises of thinking. | One performed doubt about thought must lack any occurring thought realizing that act. A mere scripted question fails the performed-doubt antecedent on this reading. No substantive counterinstance identified for deliberative doubt. | A case independently recognizable as deliberative doubt in which the alleged thought realizes a different act would challenge the evidence for that instance. Establishing the negation requires ruling out every matching episode. |
+| Assertion realization (1edfc1d1) | Formulating and defending an answer supports realization by the present speaker. The universal includes every asserter of this content. | Standing institutional assertions can be renewed through delegated publication. A mismatch arises if the institution qualifies as asserter while realization requires an episode by that institution and excludes delegated performance. | Specify the criterion of institutional realization and apply it to the same publication. Personal reflection settles only the personal instance. |
+| A doubt about thought is performed (95c5138f) | Direct warrant for a person actually suspending judgment on this question. Reflective inquiry can also start from assent. | A person can assess the conditional argument while confidently affirming that thinking occurs. Denying that anyone doubts need involve no such suspension. | Identify a present questioner who genuinely suspends judgment or uses the stipulated broader methodical sense of doubt. Keep the sense fixed in the realization bridge. |
+| The designated meditator thinks (22954087) | Present revision of one's answer supports the identification of the acting process as a thin bearer. | The first-person index could pick out a represented enduring self while the occurring revision belongs to an organized process. This account requires an argument that the index selects the representation's object. | Track which candidate the index designates across correction. A witness to some episode borne by that candidate still leaves identification with this correction open. |
+| The agent of an episode bears it (c2fa06f2) | Strong when agency means immanent exercise by this subject. | A commissioning principal and the person exercising judgment can differ. This explains failure under responsibility-based agency. Extending it to immanent exercise requires evidence that the principal qualifies under that same relation. | Compare who can revise the judgment in exercising it with who can authorize its publication. No substantive failure identified from delegation alone under the immanent reading. |
+| Every occurring thought modifies a bearer (5581cd7f) | A revision changes how an organized inquirer answers. This supports a particular modification when that organization qualifies as bearer. | An event account can take the transition between episodes as primitive. It owes criteria for grouping the episodes and for excluding the organized process itself as bearer. Rejection of a further substance leaves this thin bearer available. | Test whether grouping by retention and correction satisfies the selected modification relation. A criterion requiring a distinct enduring subject incurs a further defense on the positive side. |
+
+The strictly incompatible pair is an occurring realizing thought and the
+content that no thought occurs at that world. Doubting a proposition does
+not assert its negation. Rejecting a universal bridge can itself be a fully
+realized piece of inquiry. An account that uses endorsement as its reason
+for accepting the elimination of every endorsement owes an account of that
+epistemic practice. Translating the practice into correction of public
+outputs is a positive response whose adequacy turns on its ability to
+distinguish correction for a reason from mere difference of output.
+Phenomenal classification occurs in none of these seven denial tests.
+Source attribution remains deferred.
