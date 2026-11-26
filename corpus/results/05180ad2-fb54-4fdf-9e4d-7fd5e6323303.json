@@ -1,0 +1,11 @@
+{
+  "id": "05180ad2-fb54-4fdf-9e4d-7fd5e6323303",
+  "label": "Screened and calibrated sampling rows test binary report discrimination",
+  "argument_id": "9797ec40-8d1d-4c65-b5a2-ab5719bec727",
+  "challenge_module": "TruthCore.Results.Science.FineTuningInformation.Challenge",
+  "solution_module": "TruthCore.Results.Science.FineTuningInformation.Solution",
+  "theorem": "TruthCore.Results.Science.FineTuningInformation.screeningControls",
+  "comparator_config": "results/05180ad2-fb54-4fdf-9e4d-7fd5e6323303/comparator.json",
+  "status": "solution-present",
+  "description": "The two screened sampling rows give the same certain fine report even at unequal model weights. The calibrated sampling pair gives distinct report likelihoods and positive mutual information at the same comparison prior."
+}

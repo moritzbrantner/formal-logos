@@ -429,3 +429,65 @@ still needs #1734's epistemic bridge. #1731's intellect/will capacity and
 #1730's contingent exercise do not identify a goal distribution or identify
 an actual designer with the GOD_4 witness. This research changes no formal
 premise or root route.
+
+## #2050: information in the report after observer selection
+
+Fix the report to whether a sampled observer falls in the fine-evidence cell
+(cell 0 rather than cell 1). The channel uses the existing conditional event
+ratio in each sampling row. The prior weights the design and natural labels
+**after** conditioning on observerhood. A pre-selection prior would first
+require an update by the observer likelihoods. `observerInformation` shows
+that, at any comparison prior strictly between zero and one, those two
+conditional event ratios agree exactly when the report is independent of the
+label. Since the report is binary, the fine-report probability determines
+the entire observation law. The same reduction would require checking every
+report category in a finer partition.
+
+The strongest positive warrant within this profile is a difference in the
+conditional report distributions under the same selection rule. The existing
+design and natural rows give 3/4 and 1/4. A fine report then favors design over
+that modeled rival (Bayes factor 3), while a non-fine report favors the natural
+rival. Mutual information measures the expected discrimination of the
+experiment before seeing its output, in nats. The Brier agreement theorem
+addresses only the zero condition under coherent binary updates and interior
+predictive mass. It leaves both metrics and their interpretations distinct.
+
+The screened pair shows the strongest selection rival within this test. Its
+raw fine-evidence masses differ (1/2 and 1/10), but both rows give conditional
+probability one because their other-observer cell is empty. Their report
+laws coincide at a nonuniform comparison prior (design 1/3 and natural 2/3).
+The certain report contributes no further update after observerhood.
+Observerhood itself can carry information in a pre-selection comparison.
+The existing `selectedNatural` control answers a nearby challenge at the
+same scope: restricting observers to fine-evidence worlds can even reverse
+a design-favoring factor. A physical ensemble with selection therefore
+needs a justified distribution on its observer populations. An impersonal
+necessity account can predict the same report if a specified constraint
+forces its observer evidence into cell 0. It needs a derivation of that
+constraint and its record distribution. A purposive account needs an
+independently motivated intention and sampling rule to predict its own
+conditional row. The numerical controls supply examples of sampling laws
+only. They carry no modal claims about either model.
+
+Provisional assessment: the fine report has conditional evidential force
+when calibrated competing rows differ. The existing examples supply no
+actual likelihood calibration and give no grounds to rank the actual
+origin accounts. Reopen this comparison when a candidate can derive the
+distribution of **more specific observed features among observers** under
+a shared measurement and selection procedure, or when an independently
+justified design distribution and a concrete impersonal rival supply
+different conditional predictions under that procedure. Raw rarity cannot
+replace that comparison.
+
+The typed graph links test the existing finite calibration and connect
+the information criterion to the binary Bayesian accuracy result. The
+destination is the existing `STMT-GOD-EXISTS` node. The planned bridge
+still requires physical selection and calibrated likelihoods, a warranted
+inference to an actual designer, and identification of that witness with
+GOD_4. The model-label distinction also cannot supply #1867's missing
+inference to unrestricted law continuations: finite probabilities presuppose
+a chosen sampling law over admitted outcomes and do not settle which
+histories are metaphysically possible. For #930, the accuracy result
+specifies an information-sensitive consideration under the modeled update
+conditions. Whether it supplies actual pro tanto or categorical reasons
+for belief requires the separate epistemic bridge.

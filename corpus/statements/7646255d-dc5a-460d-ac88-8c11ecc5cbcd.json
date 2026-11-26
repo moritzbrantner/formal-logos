@@ -1,0 +1,6 @@
+{
+  "id": "7646255d-dc5a-460d-ac88-8c11ecc5cbcd",
+  "label": "Binary fine-evidence report has zero Brier gain exactly at zero information",
+  "paraphrase": "With both models and both reports having positive predictive mass and coherent binary update equations, expected Brier gain vanishes exactly when the fine-evidence report has zero mutual information about the model label.",
+  "lean_declaration": "TruthCore.Science.FineTuningInformation.AccuracyAgreement"
+}

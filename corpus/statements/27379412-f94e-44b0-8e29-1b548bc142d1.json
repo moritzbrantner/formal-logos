@@ -1,0 +1,6 @@
+{
+  "id": "27379412-f94e-44b0-8e29-1b548bc142d1",
+  "label": "Observer-conditioned binary report information criterion",
+  "paraphrase": "For a supplied prior giving both models positive mass, the binary report has zero mutual information about the model label exactly when both three-cell sampling rows give the same observer-conditioned fine-evidence likelihood.",
+  "lean_declaration": "TruthCore.Science.FineTuningInformation.ObserverInformationCriterion"
+}
