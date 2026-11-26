@@ -54,10 +54,10 @@
     "assessment": "A finite record can identify a particular supplierless ancestor by preserving one path to the recipient and the ancestor’s empty incoming list. Excluding every such ancestor requires checking the whole finite rootless predecessor cone. In an acyclic cone that negative verdict always escapes finite audit. In the repository’s own recorded ancestry, the positive test identified a parentless ancestor by one hash-verified path. For the De ente argument, positive certificates for every actual bearer on the same existential relation suffice for rootedness. The key warrant at a candidate source is completeness of its list of existential suppliers. Classical rootedness also gives availability of those certificates, so appealing to that converse adds no independent warrant.",
     "next_test": "For a proposed actual giver and recipient, trace a productive path in their existence and give independent grounds that every possible incoming actual esse supplier to this giver would be accounted for. Test that completeness claim against the holist’s account of joint production. A finite record of observed links alone leaves the source status open.",
     "note": "docs/notes/de-ente-esse-source-1628.md#what-can-a-finite-audit-establish-about-this-recipients-first-giver",
-    "review": "unreviewed",
-    "publication": "unpublished",
-    "evidence": "Positive and negative certificate theorems, existing cycle controls, and a same-profile De ente application.",
+    "review": "accepted_qualified",
+    "publication": "published",
+    "evidence": "Three registered Lean results, two earlier control models, and a raw Git object trace. Independent challenge at e52bb28f9 checked the exact finite criteria, the actual esse application, the lack of a converse graph edge, and the 1,504-object witness. Targeted recheck accepted the path and scope repairs at 7f196bbe5. PR #2005.",
     "supersedes": "Extends the earlier comparison of two assignments agreeing on each finite sample. The prior warrant analysis for borrowed actuality, attenuation, and the standing holistic alternative retains its original scope.",
-    "reviewed_revision": "9210a3bcc6bca5c7a03a9f3d0c88ade6dd5f88aa"
+    "reviewed_revision": "7f196bbe525d66cab2c14a7f9ba37d0f027d1c31"
   }
 }
