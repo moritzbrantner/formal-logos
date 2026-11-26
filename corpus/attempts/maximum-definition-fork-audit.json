@@ -10,7 +10,13 @@
     "c35b1a5c-6405-449b-993b-8196b2457e08",
     "b4987085-f7b0-4031-a795-364873d3c216",
     "cffad050-e86d-48b8-b04b-be47fcc1352d",
-    "8626f8a5-9531-5da7-9ebd-f901e74b1129"
+    "8626f8a5-9531-5da7-9ebd-f901e74b1129",
+    "485f0e77-e689-4aad-9622-fa2162d6b5ca",
+    "584862e5-b41b-4a3b-a494-7f04b719553c",
+    "f58d91ff-b5e5-4b99-b73e-0947a102848b",
+    "cc70608d-dc96-4808-b89f-17aa297008e7",
+    "3008c7db-0236-4b03-9da7-f41ea8d8cac1",
+    "20babef7-6ae7-4b48-b72a-f417e8e63136"
   ],
   "date": "2026-11-17",
   "kind": "derivation",
@@ -26,7 +32,33 @@
     "82fb68e4-bb68-435e-b6c0-47f49677e2d0",
     "d8cb586a-6394-44d1-8df5-fd0da5b1927f",
     "PR-1141",
-    "PR-1712"
+    "PR-1712",
+    "11281f03-7767-42a1-9de2-42786213d9cd",
+    "2e062016-f3a5-4036-bff5-498e43fe0550",
+    "8318ddd4-006f-4a9b-8fde-440d0542b331",
+    "a1a40d62-ef24-4ee4-a76d-2ba51e30f58d",
+    "c27ec66c-8efb-42b4-bb20-47ece171e1b4",
+    "fb2603c6-8c07-40d2-93b9-b622e4a8dfd9"
   ],
-  "blocker": "Conditional bridge resolved; actual common-source coverage, narrow causal composition and causal ascent remain substantive inputs. Next discriminating warrant target is existing De ente shared-nature premise75b5b027, which supports uniqueness/source selection. Tenseless ancestry also needs a current productive-esse application before use as present support. Reopen maximal bridge on a positively warranted multiple-unreceived-source, tied universal-source or noncomposing operative-esse account; formal assignments alone do not provide such warrant."
+  "blocker": "Conditional bridge resolved; actual common-source coverage, narrow causal composition and causal ascent remain substantive inputs. Next discriminating warrant target is existing De ente shared-nature premise75b5b027, which supports uniqueness/source selection. Tenseless ancestry also needs a current productive-esse application before use as present support. Reopen maximal bridge on a positively warranted multiple-unreceived-source, tied universal-source or noncomposing operative-esse account; formal assignments alone do not provide such warrant.",
+  "current_assessment": {
+    "date": "2026-11-26",
+    "scope": "What can finite checks of individual supplier\u2013recipient pairs tell us about which actual bearer is a first giver? Can prior knowledge of degrees of being or internal reception make a candidate identifiable?",
+    "statement_ids": [
+      "485f0e77-e689-4aad-9622-fa2162d6b5ca",
+      "584862e5-b41b-4a3b-a494-7f04b719553c",
+      "f58d91ff-b5e5-4b99-b73e-0947a102848b",
+      "cc70608d-dc96-4808-b89f-17aa297008e7",
+      "3008c7db-0236-4b03-9da7-f41ea8d8cac1",
+      "20babef7-6ae7-4b48-b72a-f417e8e63136"
+    ],
+    "assessment": "For a fixed relation of eligible gifts and arbitrary completions, the checked answers must cover every eligible donor to the proposed giver and preserve one positive path to the recipient. A finite certificate is possible precisely for an actual root ancestor with finitely many eligible incoming donors. Even if both accounts have a unique maximal direct giver and are well-founded, any finite set of pair answers on the same infinite roster can agree while the identity of the giver differs when the comparison may vary. An independently applicable strict ranking together with a maximal direct giver fixes one source for every actual recipient. Underived identity bearers plus finite actual identity ancestry and excluded middle instead give a certified source per recipient, possibly through intermediaries. Both routes recover the existing finite complete-list theorem on each actual recipient. Each reuses its source and eligibility premises. A fresh datagram identified a second immediate sender after the first exited. This gives warrant for a specific transmission. Establishing the scope of every possible giver of existence remains the decisive step.",
+    "next_test": "Hold the actual donor, the recipient, and its attained degree fixed. What feature of the recipient establishes reception in a really distinct principle when the rival allows receiving existence from a donor without such internal reception? On the competing degree route, test whether the independently justified upper bound and crossing extend to the whole bearer in the respect of being.",
+    "note": "docs/notes/de-ente-esse-source-1628.md#which-individual-supplier-checks-can-identify-a-first-giver",
+    "review": "unreviewed",
+    "publication": "unpublished",
+    "evidence": "Six result bindings with the fixed-maximum and mediated identity applications and the matching finite-pair rival. The sender_identity.py trial uses kernel-supplied credentials on received datagrams. The prior proof from reception to underivedness is e2fae76f.",
+    "supersedes": "Extends the earlier maximum-definition and source-first investigations to single-pair observations. The complete-list and visibility assessment in attempt 4da08bd8 retains its existing scope.",
+    "reviewed_revision": "78739e1f3b8d7621f5ada14267c9e843cd7d3786"
+  }
 }
