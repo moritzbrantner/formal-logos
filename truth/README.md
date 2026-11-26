@@ -1051,6 +1051,31 @@ the frozen goldens `truth/tests/golden/issues/` (recorded by the retired `script
 `scripts/truth_parity/fixtures/issues-snapshot.json` (retired with it) extended
 with blocks naming real corpus records.
 
+## `workers`
+
+`truth workers [--authored-only-by MODEL] [--open] [--frontier-root STATEMENT]`
+(owner direction, 2026-11-26; `truth/src/workers.rs`) is the revisit query over
+the attempt records' optional `workers` lists (`docs/premise-dossiers.md`). For
+each statement named in some attempt's `statement_ids` it prints the latest
+attempt (by date, then id) with its kind and outcome, the models that authored
+attempts on the statement (`role: "author"`), the models that reviewed them,
+how many of its attempts record no author, and whether the frontier computed
+in-process for the root leaves the statement open (not closed) and whether it
+reaches the root. Statements are listed by latest attempt, newest first.
+
+- `--authored-only-by MODEL` keeps statements whose recorded authors are
+  exactly `MODEL` (the `model` string, for example `gpt-6.2-sol`). Attempts
+  without an author entry are counted, not treated as another model, so check
+  the "attempts without an author entry" count before reading "only".
+- `--open` keeps statements the computed frontier does not close.
+
+For example, `truth workers --authored-only-by gpt-6.2-sol --open` lists open
+propositions so far worked on only by that model, as candidates to revisit with
+another one. `truth dossier`, `truth context` and `truth brief` show the same
+entries under each attempt (`worker: author codex/gpt-6.2-sol (high) 2026-11-26
+PR-2020`), and their JSON carries the `workers` list. The view writes nothing;
+a worker entry records who did the work, not evidence about its targets.
+
 ## `next`, `next-steps`, `arguments`, `results`, `sort-lists`
 
 Ports of the navigation subcommands of `scripts/corpus.py`

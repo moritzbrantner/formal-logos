@@ -300,7 +300,10 @@ claim merely to log activity. Record exact target statement IDs, outcome, concis
 findings, remaining blocker when blocked, and result/claim/PR evidence. A successful
 attempt does not establish its target or change frontier closure. The dossier is
 computed from corpus records, not edited separately. See `docs/premise-dossiers.md`
-for the attempt format and reference boundaries.
+for the attempt format and reference boundaries. Each attempt a worker creates or
+updates appends itself to `workers` (role, provider, model, effort, date, PR), so a
+proposition's history shows which agents and models worked on it (owner direction,
+2026-11-26).
 
 ## Research hypotheses are not forced owner decisions (owner direction, 2026-11-09)
 

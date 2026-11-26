@@ -815,6 +815,9 @@ pub fn format_dossier(dossier: &Dossier, index: &DossierIndex, limit: Option<usi
                 clip(value_text(attempt, "blocker"))
             ));
         }
+        for worker in crate::workers::entries(attempt) {
+            lines.push(format!("    worker: {}", crate::workers::line(worker)));
+        }
     }
     if attempts.is_empty() {
         lines.push("  none recorded".into());
