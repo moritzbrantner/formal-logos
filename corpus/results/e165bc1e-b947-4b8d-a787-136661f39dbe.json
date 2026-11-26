@@ -1,0 +1,11 @@
+{
+  "id": "e165bc1e-b947-4b8d-a787-136661f39dbe",
+  "label": "Joint absence by amalgamating a finite actual contingent roster",
+  "argument_id": "8823592e-778b-4b03-b59c-0eeebb86abd0",
+  "challenge_module": "TruthCore.Results.Modal.ModalPowerHolder.Challenge",
+  "solution_module": "TruthCore.Results.Modal.ModalPowerHolder.Solution",
+  "theorem": "TruthCore.Results.Modal.ModalPowerHolder.jointAbsenceOfFiniteRoster",
+  "comparator_config": "results/e165bc1e-b947-4b8d-a787-136661f39dbe/comparator.json",
+  "status": "solution-present",
+  "description": "Every listed actual contingent concretum has an accessible absence witness by its membership condition. Starting with an accessible successor, finite omission combines the witnesses using containment in both roster populations. The resulting world lacks every member by the roster's finite enumeration."
+}

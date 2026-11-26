@@ -30,6 +30,6 @@ theorem differentGivingOfOneRecipient {W B T R : Type} (F : CausalityFrame W B T
     (hFactive : GivenExists F) :
     ActualAbsenceExerciseDiffers F PowerFor concrete w := by sorry
 
-theorem controls : Model.Controls := by sorry
+theorem controls : TruthCore.Modal.ModalPowerHolder.Model.Controls := by sorry
 
 end TruthCore.Results.Modal.ModalPowerHolder

@@ -1,0 +1,11 @@
+{
+  "id": "313d3625-83d0-4767-86c2-d6e4ab00a7d1",
+  "label": "The holder gives differently when it gives at least one actual contingent being",
+  "argument_id": "52f03966-45c7-4407-b3da-ea79d55b01f6",
+  "challenge_module": "TruthCore.Results.Modal.ModalPowerHolder.Challenge",
+  "solution_module": "TruthCore.Results.Modal.ModalPowerHolder.Solution",
+  "theorem": "TruthCore.Results.Modal.ModalPowerHolder.differentGivingOfOneRecipient",
+  "comparator_config": "results/313d3625-83d0-4767-86c2-d6e4ab00a7d1/comparator.json",
+  "status": "solution-present",
+  "description": "For each holder, pick an actual contingent recipient of its giving. At the accessible world of joint absence where that holder exists, this recipient is absent. Factivity rules out the same giving there, so the recipients of its giving differ between these worlds. The result uses the same holder and recipient without requiring actual giving to the rest of the roster."
+}

@@ -1,0 +1,71 @@
+[batch]
+vocab = "TruthCore.Modal.ModalPowerHolder"
+results = "TruthCore.Results.Modal.ModalPowerHolder"
+
+[[statement]]
+id = "The actual contingent roster admits common subpopulations"
+lean = "ActualRosterAmalgamates"
+paraphrase = "Open analyst aggregation principle. For every two worlds accessible from w there is a world accessible from w whose present members of the fixed actual contingent concrete roster were present at both of those worlds. Beings outside that roster are unrestricted."
+definitions = ["DEF-KANT-MODAL-CONTINGENCY", "DEF-KANT-ONTOLOGICAL-MODEL"]
+disambiguations = ["DISAMB-KANT-CONTINGENCY", "DISAMB-CONCRETE-ABSTRACT-CRITERIA"]
+
+[[statement]]
+id = "The concrete roster of CONTINGENCY_1 at w is finite"
+lean = "ActualRosterFinite"
+paraphrase = "Open analyst roster principle. One finite list enumerates all concrete beings contingent at w. The candidate domain and other worlds' populations may be infinite."
+definitions = ["DEF-KANT-MODAL-CONTINGENCY", "DEF-KANT-ONTOLOGICAL-MODEL"]
+disambiguations = ["DISAMB-KANT-CONTINGENCY", "DISAMB-CONCRETE-ABSTRACT-CRITERIA"]
+
+[[statement]]
+id = "No newcomer is contingent where the actual contingent concrete roster is absent"
+lean = "ActualRosterCoversAtAbsence"
+paraphrase = "Open analyst roster principle. At every accessible world lacking the whole actual contingent concrete roster, every concrete being contingent at that world exists at w. This excludes contingent replacements at those worlds and does not itself transport any witness of nonexistence to w."
+definitions = ["DEF-KANT-MODAL-CONTINGENCY", "DEF-KANT-ONTOLOGICAL-MODEL"]
+disambiguations = ["DISAMB-KANT-CONTINGENCY", "DISAMB-CONCRETE-ABSTRACT-CRITERIA"]
+
+[[statement]]
+id = "Every holder of actual-roster absence power gives some member of that roster being at w"
+lean = "ActualAbsenceHoldersGiveSome"
+paraphrase = "Open analyst premise. Each holder at w of a power for the joint absence of the actual contingent concrete roster gives being at w to at least one member of that roster. Giving at a world means giving at some time in that world. The recipient can depend on the holder."
+definitions = ["bf7eddca-8291-4744-8470-379babcd7781", "62dfa893-b633-4513-9790-8f9a0a3087e0", "DEF-KANT-MODAL-CONTINGENCY", "DEF-KANT-ONTOLOGICAL-MODEL"]
+disambiguations = ["DISAMB-KANT-CONTINGENCY", "DISAMB-CONCRETE-ABSTRACT-CRITERIA"]
+
+[[statement]]
+id = "Finite equivalence-frame controls for joint absence and replacement contingents"
+lean = "Model.Controls"
+paraphrase = "Two finite control frames, both reflexive and Euclidean. In the first, the actual roster is finite and the positive conjunction that all its members exist is true at the reading world and fails at a successor. Common-subpopulation closure and joint absence both fail. In the second, joint absence holds while the roster coverage condition and global contingent absence fail."
+definitions = ["DEF-KANT-MODAL-CONTINGENCY", "DEF-KANT-ONTOLOGICAL-MODEL"]
+disambiguations = ["DISAMB-KANT-CONTINGENCY"]
+
+[[argument]]
+id = "Joint absence by amalgamating a finite actual contingent roster"
+theorem = "jointAbsenceOfFiniteRoster"
+premises = ["390ac3ab-48ec-596e-9890-4d2364e81cf9", "The actual contingent roster admits common subpopulations", "The concrete roster of CONTINGENCY_1 at w is finite"]
+conclusion = "18e5bd4e-8178-468e-b867-fbaf9c5988ad"
+rule = "Apply finite omission to the fixed subtype of actual contingent concreta"
+meaning = "Every listed actual contingent concretum has an accessible absence witness by its membership condition. Starting with an accessible successor, finite omission combines the witnesses using containment in both roster populations. The resulting world lacks every member by the roster's finite enumeration."
+
+[[argument]]
+id = "Global contingent absence by roster coverage and local transitivity"
+theorem = "globalAbsenceOfRosterCoverage"
+premises = ["d65fb12b-7a85-479a-8c40-4b10f8b3c7c8", "18e5bd4e-8178-468e-b867-fbaf9c5988ad", "No newcomer is contingent where the actual contingent concrete roster is absent"]
+conclusion = "0dc833c1-3b2f-4769-a09e-531f0da12455"
+rule = "Lift a putative replacement's absence witness and contradict joint absence at the same world"
+meaning = "Take the accessible world where the actual contingent concrete roster is absent. If a concrete being were contingent there, coverage would put it at w and local transitivity would make its absence witness accessible from w. It would therefore be contingent at w and excluded from that very world."
+
+[[argument]]
+id = "The holder gives differently when it gives at least one actual contingent being"
+theorem = "differentGivingOfOneRecipient"
+premises = ["906f5c39-2a63-4dc2-955d-a00cfd8a976b", "Every holder of actual-roster absence power gives some member of that roster being at w", "3ef41442-431a-4bed-83bd-4458ed623f5f"]
+conclusion = "5cf75a6b-c3be-4ed5-acdf-c163383dd7f2"
+rule = "Use factive giving to exclude the chosen actual giving at the initiator-presence world"
+meaning = "For each holder, pick an actual contingent recipient of its giving. At the accessible world of joint absence where that holder exists, this recipient is absent. Factivity rules out the same giving there, so the recipients of its giving differ between these worlds. The result uses the same holder and recipient without requiring actual giving to the rest of the roster."
+
+[[argument]]
+id = "Joint absence and replacement controls on finite equivalence frames"
+theorem = "controls"
+premises = []
+conclusion = "Finite equivalence-frame controls for joint absence and replacement contingents"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Restrict to the three populated profiles and reuse the two-world replacement model"
+meaning = "Universal access permits every populated Boolean profile. The actual roster has two contingents, with a world omitting each. The positive conjunction can fail but no accessible profile omits both. In the reused swapped model the one actual contingent is absent at the other world and a distinct contingent exists there, so the joint-absence and global claims separate."

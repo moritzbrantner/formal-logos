@@ -529,3 +529,167 @@ is attributed. No statement says "God", "will", "choice" or "freedom".
   edited;
 - `corpus/definition-status.json` gained only this module's four entries;
   other stale entries were not refreshed.
+
+## 11. Fixed-roster aggregation and one-recipient giving (2026-11-26)
+
+Write (w) for the reading world and (A_w) for its rigid roster of concrete
+beings with CONTINGENCY_1. Roster membership requires existence at (w) and
+an accessible world where the same bearer is absent. A world's population
+may vary. Accessibility here admits whole histories for the selected modal
+reading. An edge conveys neither a time step nor a causal mechanism.
+Concreteness is the supplied world-independent predicate throughout.
+
+The [fixed-roster batch](../../specs/modal-power-holder.toml) supplies three
+conditional routes on this carrier. The Lean results reuse finite omission
+from #533 and the replacement witness from #1889. Their conclusions feed
+the ordinary Pruss route and its global variant (including the local-access
+route of #2022), and the varying-giver route to `b90ee2de`.
+
+| Target | Claim and type boundary | Result |
+|---|---|---|
+| `18e5bd4e`, some successor lacks all of (A_w) | A successor exists, (A_w) has a finite list cover, and every pair of successors has another successor whose (A_w)-population is contained in both. Individual absence witnesses are supplied by membership in (A_w). The finite list constrains neither the ambient domain nor other worlds' total populations. | [`jointAbsenceOfFiniteRoster`](../../corpus/results/e165bc1e-b947-4b8d-a787-136661f39dbe.json) |
+| `0dc833c1`, some successor has no local contingent concreta | Take the same witness (v) of joint absence. Require that concrete contingents at an accessible joint-absence world already exist at (w), plus transitivity at (w). A hypothetical local contingent at (v) would exist at (w) and have an absence witness reachable from (w). It would belong to (A_w) and be absent at (v), contradicting its local contingency. Necessary concreta can still exist at (v). | [`globalAbsenceOfRosterCoverage`](../../corpus/results/7eb6cabd-d805-4db9-8b18-1f73d45553f5.json) |
+| `5cf75a6b`, P2δ | Each holder gives at least one (A_w)-member at (w), with the recipient allowed to depend on the holder. P2′ gives a single accessible (v) with joint absence and the same holder present. Factive giving excludes its giving to that same recipient at (v), so the sets of recipients differ. `GivesTo` means there is some time of giving in the world. | [`differentGivingOfOneRecipient`](../../corpus/results/313d3625-83d0-4767-86c2-d6e4ab00a7d1.json) |
+| Both failures on equivalence frames | Universal access on the three populated profiles ({a,b}, {a}, {b}) gives two individually contingent actual beings and a contingent positive conjunction. Every successor has a resident, so joint absence and amalgamation fail. On the two-world swapped profile, (A_w={a}) and the other world has only (b), itself contingent there. Joint absence holds, while roster coverage and global absence fail. The causal and giving slots play no role. | [`controls`](../../corpus/results/4eda66b6-a2c1-439e-984f-f22a0c747727.json) |
+
+### Which modal step needs a new commitment?
+
+- **Aggregation.** The exact missing compatibility is a successor in the
+  intersection of every roster member's absence condition. The finite route
+  uses a sufficient pair rule on **projected** populations. It needs common
+  lower bounds under containment, with no exact intersection or restriction
+  on outside beings. Finite omission composes the rule finitely. The existing
+  #533 infinite-tail control has an amalgamating population and witnesses for
+  every finite omission, while an inhabitant survives at every world. An
+  infinite case would need a separately warranted limit or compactness step.
+  Granting each absence independently has prima facie force for ordinary
+  destructible objects. Extending a compatibility rule from these cases to
+  all concrete contingents requires information about how their existence
+  conditions interact.
+- **Big conjunctive fact.** A Leibnizian candidate with truth condition
+  “every member of (A_w) exists” is false whenever a member is missing. Its
+  contingency is therefore compatible with a permanent occupant of every
+  world, as the first model shows. A fact with truth condition “some member
+  of (A_w) exists” has the required scope: its possible falsity is exactly
+  the joint-absence claim in the classical reading. A total fact that records
+  all positives and negatives can also change by variation of one conjunct.
+  An explanation of the actual total fact would still need an explicit
+  alternative whose truth conditions say every actual member is absent.
+  These are analyst readings of candidate facts, with historical attribution
+  deferred. See the corpus result `JointContingencyLocalization.equivalence`
+  for the existing distinction between failure of a joint positive condition
+  and failure of its members.
+- **S5 and replacement.** Reflexivity and Euclideanness constrain the edges.
+  Neither countermodel relies on missing edges between admitted histories.
+  The forward transfer from local nonexistence at a successor to possible
+  nonexistence at (w) needs only the inclusion of that successor's outgoing
+  edges in (w)'s. The registered route assumes this at every successor and
+  tests coverage only at joint-absence worlds. Its proof uses coverage and
+  the inclusion only at the chosen witness. In a shared equivalence
+  component, a candidate present only at a nonactual history is a concrete
+  mechanism for replacement because the accessible actual history witnesses
+  its nonexistence. A policy limiting the population of those histories has
+  content beyond S5. The direct joint-absence premise remains available even
+  to a theory allowing replacement.
+- **Third Way.** Under the hypothesis that each actual concretum is
+  contingent, joint absence removes the actual concrete roster in one
+  alternative. The global conclusion removes local **contingent** concreta
+  there. To infer that no concrete being exists there would also require
+  that any concretum present there is contingent **there**, or a corresponding
+  exclusion of necessary survivors. An empty history is a separate claim
+  from an empty time followed by production within the actual history.
+  The latter argument needs the same-history temporal realization, a rule
+  excluding new being after the specified empty time, and a link to actual
+  present existence. See [the temporal collective-possibility
+  comparison](collective-possibility-route-boundary.md). The Kenny/Mackie
+  quantifier-shift concern is evaluated here as a logical objection, with
+  historical attribution deferred. Its strongest positive counteraccount is
+  a succession or family of admissible populations in which at least one
+  member always occupies a populated alternative although each actual member
+  can be omitted. Its precise rejection is aggregation (or the direct
+  collective possibility), and the finite model settles the alleged
+  entailment even with rigid identity and finite roster. The model supplies
+  no reason by itself to assert that metaphysical histories obey the
+  permanent-population policy.
+
+### Which holder, and when does it give?
+
+- `95bf8780` conditionally supplies a holder **at (w)** for the coordinated
+  outcome. The initiator-premise `906f5c39` is a restriction on how that
+  power is realized. On the tenseless reading its motivation is that a
+  chain-initiator is in the history of its own initiating event. Then
+  `a6906cab` puts the holder in the concrete kind. Together with actual
+  contingency, actual joint absence and explicit excluded middle, the
+  [existing holder result](../../corpus/results/42da6b2d-00b5-4451-81bc-01f155737144.json)
+  derives NECESSARY_2 for this same witness within the model: if it
+  could be absent, it would be in the actual roster it survives. This
+  argument needs neither S5 nor exclusion of replacements. The worked
+  inference is existential; the separate `b517ca3e` concerns **every**
+  holder at (w). Its serious-actualist reading remains a live direct
+  commitment. A nonconcrete initiator is excluded only by the chosen
+  causal-concreteness bridge. Neither occupancy of a world nor a
+  world-relative power predicate by itself gives occupancy at each of
+  that world's times.
+- The `9f7b1778` creator premise gives every recipient. Its known use in
+  law 5 can be restricted to one recipient for the P2δ route. The older
+  universal route for withholding **each** recipient and the collective to
+  distributive POWER_OVER_ESSE_1 bridge `f0ac2f76` still need their own
+  warrants. For `d1593e5c`, actual giving in (w) and absence of the same
+  giver's giving at (v) are the typed antecedent facts. They do not show
+  that withholding by this giver makes the recipient cease, as opposed
+  to coinciding with its absence. The existing ST I q.19 a.10 support
+  (`988f35e6`, #2018) leaves dependency on the giver's continued exercise
+  open. #2029's momentary-giving routes supply some giver at each relevant
+  received presence under their own bridges. They leave open whether it
+  is this holder through time and whether its withdrawal suffices for
+  cessation. The uniqueness result of #2016 is scoped to roots. Applying it
+  to the present recipient needs both candidate explanations classified
+  under that scope. The earlier
+  [holder/root controls](holder-root-identification.md) exhibit a necessary
+  holder grounded through another, so merely reusing uniqueness is
+  insufficient.
+- **Necessary natural ground.** The rigid-bearer reading of a necessary
+  initial substrate plus law-governed objective chance retains the same
+  initial candidate across accessible histories while allowing distinct
+  downstream populations. It can accept the necessary-holder existence
+  conclusion if the substrate initiates the relevant outcomes, while
+  rejecting the inference from variable recipients to intellectual
+  selection. On a productive-only construal of its power, it explains
+  downstream events without claiming a power whose exercise directly
+  produces universal withholding. That construal contests P1′ as applied
+  to the negative outcome, and an onset-only construal also contests
+  continuing giving. The motivation is the positive account of a common
+  start and alternative chance developments, with the restricted
+  accessibility and rigid identity assumptions stated in
+  [the existing Oppy assessment](fixed-initial-history-535.md#oppys-modal-readings-in-the-pinned-chapter).
+  The modal roster controls do not encode chance, laws or intellect.
+  The source's fixed-output variant faces a different cost: with
+  factive giving, a necessary source that gives to the same recipients
+  wherever it exists would make those actual recipients necessary.
+  That conflicts with retaining actual contingency of any such recipient.
+  The chance variant survives that test.
+
+**Provisional assessment.** World-bounded initiator presence and factive
+giving have direct motivation on the selected meanings. The finite
+aggregation result isolates a substantial population commitment. The
+positive conjunction and frame axioms do not warrant it and the replacement
+model gives a concrete reason to keep the global step separate.
+Aristotelian grounding of this particular negative outcome and actual
+giving by the selected holder remain the load-bearing causal commitments.
+An impersonal chance source still accounts for variation at the typed
+scope. The next discriminating test is a received effect at a specified
+continued time whose contemporaneous giver can be identified with the
+modal holder using an independently justified dependence and source
+criterion. Test whether continued presence requires that giver's same
+exercise even with alternative productive or sustaining sources admitted.
+That is the point where a positive sustainment account and an onset-only
+account differ. For the collective premise, reopen a stronger assessment
+when there is a warranted admissibility rule combining absence conditions
+for the actual roster, including a limit principle if the roster is
+infinite. Formal results supply conditional support options. They establish
+no framework premise.
+
+Research records for this checkpoint cover
+[roster aggregation and replacement](../../corpus/attempts/modal-power-holder-roster.json),
+[holder identity](../../corpus/attempts/modal-power-holder-identity.json), and
+[actual giving](../../corpus/attempts/modal-power-holder-giving.json).

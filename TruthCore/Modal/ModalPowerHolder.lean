@@ -53,7 +53,7 @@ open TruthCore.Modal (Reflexive Euclidean)
 /-- The three populated Boolean profiles, with universal access. Every world
 is populated, but each of the two actual beings can be omitted. -/
 def populatedProfiles : CausalityFrame {v : Bool × Bool // v ≠ (false, false)} Bool Unit Bool :=
-  frameOn univ (fun v => comboEx v.val) noCause noPrior
+  frameOn (fun _ _ => True) (fun v => comboEx v.val) (fun _ _ _ => False) (fun _ _ => False)
 
 def bothPresent : {v : Bool × Bool // v ≠ (false, false)} :=
   ⟨(true, true), by decide⟩
@@ -67,7 +67,7 @@ def AllRosterPresent (F : CausalityFrame W B T R) (concrete : B → Prop) (w v :
 def Controls : Prop :=
   (Reflexive populatedProfiles.history.ontic.frame ∧ Euclidean populatedProfiles.history.ontic.frame ∧
     ActualRosterFinite populatedProfiles allConcrete bothPresent ∧
-    AllRosterPresent populatedProfiles allConcrete bothPresent ∧
+    AllRosterPresent populatedProfiles allConcrete bothPresent bothPresent ∧
     (∃ v, populatedProfiles.history.ontic.frame.access bothPresent v ∧
       ¬ AllRosterPresent populatedProfiles allConcrete bothPresent v) ∧
     ¬ ActualRosterAmalgamates populatedProfiles allConcrete bothPresent ∧

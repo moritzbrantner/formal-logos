@@ -1,0 +1,29 @@
+{
+  "id": "914546cb-72be-4f56-98d8-bda29ab0e90f",
+  "label": "The selected modal holder and the scope of actual existence",
+  "statement_ids": [
+    "95bf8780-0e3c-49ba-b636-2274e2997a30",
+    "906f5c39-2a63-4dc2-955d-a00cfd8a976b",
+    "a6906cab-59c4-4938-b6d1-991369e8ffb0",
+    "b517ca3e-503e-4346-b0e0-7b99ad4e875d"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "blocked",
+  "summary": "The existing actual-absence theorem supplies NECESSARY_2 for the same concrete holder that exists at the actual world and an accessible joint-absence world. It uses no frame condition and allows replacements. The witness from P1-prime does not derive actuality or concreteness of every power-holder. A rigid necessary natural substrate is compatible with the necessity conclusion in a positive-production reading. See docs/notes/pruss-power-premises.md, section 11.",
+  "blocker": "The power-grounding rule for a collective negative outcome, the serious-actualist rule for every holder, and causal rather than abstract initiation remain independent commitments on the supplied frame. Applying root uniqueness to identify a giver also needs that giver to occupy the root role.",
+  "evidence": [
+    "42da6b2d-00b5-4451-81bc-01f155737144",
+    "88f1ee6e-2c04-4f5b-8066-c5f1121bed74",
+    "d8073ba0-ff27-479a-adbe-05086acb1da1"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26"
+    }
+  ]
+}

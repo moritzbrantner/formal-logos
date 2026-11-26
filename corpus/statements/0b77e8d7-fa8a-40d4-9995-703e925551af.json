@@ -1,0 +1,13 @@
+{
+  "id": "0b77e8d7-fa8a-40d4-9995-703e925551af",
+  "label": "Finite equivalence-frame controls for joint absence and replacement contingents",
+  "paraphrase": "Two finite control frames, both reflexive and Euclidean. In the first, the actual roster is finite and the positive conjunction that all its members exist is true at the reading world and fails at a successor. Common-subpopulation closure and joint absence both fail. In the second, joint absence holds while the roster coverage condition and global contingent absence fail.",
+  "lean_declaration": "TruthCore.Modal.ModalPowerHolder.Model.Controls",
+  "definition_ids": [
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ],
+  "disambiguation_ids": [
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f"
+  ]
+}

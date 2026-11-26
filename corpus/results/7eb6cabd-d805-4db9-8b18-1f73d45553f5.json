@@ -1,0 +1,11 @@
+{
+  "id": "7eb6cabd-d805-4db9-8b18-1f73d45553f5",
+  "label": "Global contingent absence by roster coverage and local transitivity",
+  "argument_id": "d07821c3-c2fc-4840-89ba-4fd1ca753d8e",
+  "challenge_module": "TruthCore.Results.Modal.ModalPowerHolder.Challenge",
+  "solution_module": "TruthCore.Results.Modal.ModalPowerHolder.Solution",
+  "theorem": "TruthCore.Results.Modal.ModalPowerHolder.globalAbsenceOfRosterCoverage",
+  "comparator_config": "results/7eb6cabd-d805-4db9-8b18-1f73d45553f5/comparator.json",
+  "status": "solution-present",
+  "description": "Take the accessible world where the actual contingent concrete roster is absent. If a concrete being were contingent there, coverage would put it at w and local transitivity would make its absence witness accessible from w. It would therefore be contingent at w and excluded from that very world."
+}

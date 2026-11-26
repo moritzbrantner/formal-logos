@@ -1,0 +1,27 @@
+{
+  "id": "8823592e-778b-4b03-b59c-0eeebb86abd0",
+  "label": "Joint absence by amalgamating a finite actual contingent roster",
+  "premise_statement_ids": [
+    "390ac3ab-48ec-596e-9890-4d2364e81cf9",
+    "90b222c4-376f-4dab-8a20-adf639316685",
+    "df77cf26-558f-48ce-a2b2-343561d0a3f5"
+  ],
+  "conclusion_statement_id": "18e5bd4e-8178-468e-b867-fbaf9c5988ad",
+  "inference_ids": [
+    "36bdddd1-3b2b-4410-aa75-0d66c78ea138"
+  ],
+  "meaning": "Every listed actual contingent concretum has an accessible absence witness by its membership condition. Starting with an accessible successor, finite omission combines the witnesses using containment in both roster populations. The resulting world lacks every member by the roster's finite enumeration.",
+  "definition_ids": [
+    "5dcbf9ee-d1a6-5238-8941-9a116508f291",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "f8948e28-b13a-5244-95f1-41a05cd4fff2",
+    "e1ff44df-ed97-5990-8424-1abd720f23ea"
+  ],
+  "disambiguation_ids": [
+    "623ddbf6-9683-5361-bae4-e348a00ec680",
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f",
+    "7507d645-874d-5434-add8-2f49c2801d36"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "id": "66d384ba-2c89-40d2-8479-e428045d99cb",
+  "label": "Varying giving from one actual recipient of each modal power holder",
+  "statement_ids": [
+    "9f7b1778-84c9-40cf-a1b6-a91a960b0590",
+    "5cf75a6b-c3be-4ed5-acdf-c163383dd7f2",
+    "6ea2a9c5-d472-4dd6-9fe5-094d9a611d7f",
+    "f0ac2f76-62fe-4b9b-8427-e0ca8d7a3cef",
+    "d1593e5c-38ff-46a9-9bbb-cede6f825bc9"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "Initiator presence and factive giving imply P2-delta when every holder gives some actual contingent concretum being at the reading world. The same recipient is absent where joint absence obtains, so the same holder gives differently. The route to POWER_OVER_ESSE_1 over every member still needs a distributive premise or withholding of each with the open withheld-giving bridge. Concurrent giving under the separate #2029 assumptions does not select this same modal holder. See docs/notes/pruss-power-premises.md, section 11.",
+  "blocker": "Identify a giver during the continued existence of a recipient with the modal holder and test whether continued presence requires the same exercise when alternative sustainers are admitted. The one-recipient result leaves this identity and dependency open.",
+  "evidence": [
+    "313d3625-83d0-4767-86c2-d6e4ab00a7d1",
+    "84cc194c-9955-439d-8d19-f4d264e91910",
+    "988f35e6-a728-4955-9561-bc8c266bde57",
+    "PR-2029"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26"
+    }
+  ]
+}

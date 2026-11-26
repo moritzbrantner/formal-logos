@@ -1,0 +1,14 @@
+{
+  "id": "90b222c4-376f-4dab-8a20-adf639316685",
+  "label": "The actual contingent roster admits common subpopulations",
+  "paraphrase": "Open analyst aggregation principle. For every two worlds accessible from w there is a world accessible from w whose present members of the fixed actual contingent concrete roster were present at both of those worlds. Beings outside that roster are unrestricted.",
+  "lean_declaration": "TruthCore.Modal.ModalPowerHolder.ActualRosterAmalgamates",
+  "definition_ids": [
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ],
+  "disambiguation_ids": [
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f",
+    "623ddbf6-9683-5361-bae4-e348a00ec680"
+  ]
+}
