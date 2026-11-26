@@ -107,6 +107,7 @@ namespace Denomination
 
 abbrev g : Fin 3 := 0
 abbrev x : Fin 3 := 1
+abbrev y : Fin 3 := 2
 abbrev give : Fin 3 := 0
 abbrev secondary : Fin 3 := 1
 abbrev inward : Fin 3 := 2
@@ -119,16 +120,29 @@ structure Config where
 
 variable (k : Config) (effect : Fin 3)
 
+def actual (b : Fin 3) : Prop := b = g ∨ b = effect
+instance (b : Fin 3) : Decidable (actual effect b) := inferInstanceAs (Decidable (_ ∨ _))
+
+inductive ActReference where
+  | esseAct | operationAct
+  deriving DecidableEq
+
+def actRef (_ : Fin 3) : ActReference := if k.identity then .esseAct else .operationAct
+def terminus : Fin 3 := effect
 def ground (c b : Fin 3) : Prop :=
   (c = g ∧ b = effect) ∨ (k.identity ∧ k.completion ∧ k.transport ∧ c = effect ∧ b = g)
 def actGround : Prop := k.completion = true
-def root : Prop := ∀ c, ¬ ground k effect c g
+def root : Prop := actual effect g ∧ ∀ c, ¬ ground k effect c g
+def effects (c b : Fin 3) (r : Unit) : Prop := c = g ∧ b = effect ∧ r = ()
+instance (c b : Fin 3) (r : Unit) : Decidable (effects effect c b r) :=
+  inferInstanceAs (Decidable (_ ∧ _))
 def operationOf (o : Fin 3) (b : Fin 3) : Prop :=
   (o = give ∧ b = g) ∨ (o = secondary ∧ b = effect) ∨ (k.immanent ∧ o = inward ∧ b = g)
 def intrinsic (b : Fin 3) : Prop := k.immanent ∧ b = g
+def potency (b : Fin 3) : Prop := b = effect
 def moved (b : Fin 3) (_ : Unit) : Prop := b = effect
 def bridge : Prop := ¬ k.identity ∨ ¬ actGround k ∨ ground k effect effect g
-def givesX : Prop := effect = x
+def givesX : Prop := ∃ r, effects effect g x r
 
 def Dichotomy : Prop := OperationFromSelfOrAsMoved (operationOf k effect) (intrinsic k) (moved effect)
 
@@ -141,12 +155,22 @@ dichotomy holds exactly with immanence, and a root satisfying identity and the
 bridge excludes completion. Across the rosters the act is fixed while the
 productive description "g gives x" changes truth. -/
 theorem invariants :
-    ∀ k ∈ configs, ∀ effect ∈ [(1 : Fin 3), 2],
-      (Dichotomy k effect ↔ k.immanent = true) ∧
-      (root k effect ∧ k.identity = true ∧ bridge k effect → ¬ actGround k) ∧
-      (givesX effect ↔ effect = 1) := by
+    configs.length = 16 ∧ ∀ k ∈ configs,
+      (∀ effect ∈ [x, y],
+        (Finset.univ.filter (actual effect)).card = 2 ∧ effect ≠ g ∧
+        (∃ c b, effects effect c b () ∧ ∀ c' b' r,
+          effects effect c' b' r → c' = c ∧ b' = b ∧ r = ()) ∧
+        operationOf k effect give g ∧
+        ¬ moved effect g () ∧ ¬ potency effect g ∧
+        moved effect effect () ∧ potency effect effect ∧
+        (∀ b, actual effect b → ∃ o, operationOf k effect o b) ∧
+        (givesX effect ↔ actual effect x) ∧
+        (Dichotomy k effect ↔ k.immanent = true) ∧
+        (root k effect ∧ k.identity = true ∧ bridge k effect → ¬ actGround k)) ∧
+      actRef k x = actRef k y ∧ terminus x ≠ terminus y ∧ givesX x ∧ ¬ givesX y := by
   unfold Dichotomy OperationFromSelfOrAsMoved operationOf intrinsic moved bridge root ground
-    actGround givesX
+    actGround givesX terminus potency
+  unfold actual effects
   decide
 
 /-- The five selected controls, in both rosters. -/
@@ -156,7 +180,7 @@ theorem controls : ∀ effect ∈ [(1 : Fin 3), 2],
     (¬ root ⟨true, true, true, false⟩ effect ∧ bridge ⟨true, true, true, false⟩ effect) ∧
     (root ⟨true, true, false, false⟩ effect ∧ ¬ bridge ⟨true, true, false, false⟩ effect) ∧
     (root ⟨false, true, true, false⟩ effect ∧ bridge ⟨false, true, true, false⟩ effect) := by
-  unfold bridge root ground actGround
+  unfold bridge root ground actGround actual
   decide
 
 end Denomination
@@ -180,18 +204,41 @@ def has (hasLife : Bool) (d : Fin 3) : Bool := d != 2 || hasLife
 def due (dueLife : Bool) (d : Fin 3) : Bool := d != 2 || dueLife
 def all (p : Fin 3 → Bool) : Bool := (List.finRange 3).all p
 
+abbrev g : Fin 2 := 0
+abbrev x : Fin 2 := 1
+
+def actual : List (Fin 2) := [g, x]
+def ground (a b : Fin 2) : Prop := a = g ∧ b = x
+def ownBeing (b : Fin 2) : Prop := b = g
+def passivePotency (b : Fin 2) : Prop := b = x
+def hasX (_ : Fin 3) : Bool := true
+def produces (a b : Fin 2) (_ : Fin 3) : Prop := a = g ∧ b = x
+def pureInventory (_ : Fin 3) : Bool := true
+def ofBeing (_ : Fin 3) : Bool := true
+
 def noDueMissing (h u : Bool) : Bool := all fun d => !due u d || has h d
-def pureDue (u : Bool) : Bool := all (due u)
-def full (h : Bool) : Bool := all (has h)
-def possessedPureDue (h u : Bool) : Bool := all fun d => !has h d || due u d
+def pureDue (u : Bool) : Bool := all fun d => !pureInventory d || due u d
+def full (h : Bool) : Bool := all fun d => !pureInventory d || has h d
+def wholePower (h : Bool) : Bool := all fun d => !ofBeing d || has h d
+def possessedPureDue (h u : Bool) : Bool :=
+  all fun d => !(pureInventory d && has h d) || due u d
 
 theorem variants :
-    (∀ h u : Bool, (!(noDueMissing h u && pureDue u) || full h) = true ∧
+    (g ∈ actual ∧ x ∈ actual ∧ g ≠ x ∧ actual.length = 2 ∧
+      ground g x ∧ (∀ a, ¬ ground a g) ∧ ownBeing g ∧
+      ¬ passivePotency g ∧ passivePotency x ∧
+      ∀ d, hasX d = true ∧ produces g x d ∧
+        ∀ a b, produces a b d → a ∈ actual ∧ b ∈ actual ∧ b = x ∧ hasX d = true) ∧
+    (∀ h u : Bool,
+      (∀ d, (has h d → pureInventory d) ∧ (pureInventory d → ofBeing d)) ∧
+      full h = wholePower h ∧
+      (!(noDueMissing h u && pureDue u) || full h) = true ∧
       (!(noDueMissing h u && possessedPureDue h u) || full h == pureDue u) = true) ∧
     (noDueMissing false false ∧ !full false) = true ∧
     (!noDueMissing false true ∧ !full false) = true ∧
     (noDueMissing true true ∧ full true) = true ∧
     (full true ∧ !pureDue false) = true := by
+  unfold actual ground ownBeing passivePotency produces
   decide
 
 end DueScope

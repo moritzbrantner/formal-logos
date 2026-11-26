@@ -130,7 +130,7 @@ definitions, so these are counts of models of `MaximumHasNoDistinctEsseCause`,
 `SomeBeingMaximalInBeing` and `GodCausesBeingOfAllOthers`. This checks the
 finite encoding, not philosophical necessity or global minimality; the general
 entailment is `GodIsOneFromEsse.oneFromWitness`.
-[Evaluators and their definitions](../../TruthCore/Case/Catholicism/GodUniquenessCensus.lean#L35) · [Census](../../TruthCore/Case/Catholicism/GodUniquenessCensus.lean#L215)
+[Evaluators and their definitions](../../TruthCore/Case/Catholicism/GodUniquenessCensus.lean#L37) · [Census](../../TruthCore/Case/Catholicism/GodUniquenessCensus.lean#L229)
 
 Concrete two-actual-bearer controls, with identity interpreted normally and
 unlisted relation entries false: the positive model has God = {0},
@@ -220,7 +220,7 @@ God = {0}; unlisted facts false):
   bearers are maximal there but no distinct causal edges hold.
 
 Both controls are checked in Lean against the corpus definitions, each
-with a nonempty IsGod. [Independence controls](../../TruthCore/Case/Catholicism/GodUniquenessCensus.lean#L265)
+with a nonempty IsGod. [Independence controls](../../TruthCore/Case/Catholicism/GodUniquenessCensus.lean#L296)
 The first model's nonactual carrier and the second model's unrestricted
 respect are essential to the displayed failure. If the intended application
 makes every carrier actual at esse, the first contrast is not admissible
@@ -349,7 +349,7 @@ substantive inputs (`MaximeEnsCausesBeingOfAllReading`,
 `CauseOfBeingIsMoreInBeing`, `GodIsMaximalInBeing`) and the conjunction of
 at-most-one-God and actual-bearer God-causality. Equality on the two
 carriers is decidable, so no separate excluded-middle input is needed.
-[Census](../../TruthCore/Case/Catholicism/GodUniquenessCensus.lean#L239)
+[Census](../../TruthCore/Case/Catholicism/GodUniquenessCensus.lean#L255)
 
 All 128 joint models satisfy the candidate conclusion; 64 have at least
 one God. The three omission counts refer to falsification of the **joint**
@@ -361,8 +361,12 @@ Then 0 is the sole maximum and universal actual source, but causes no
 inactive carrier 2. If all carriers are assumed actual at esse, that
 separator is unavailable. A four-carrier version of this separator is the
 second row of the certified
-[`GodIsOneFromEsse.RecipientBoundary`](../../TruthCore/Case/Catholicism/GodIsOneFromEsse.lean#L86),
-and the general convergence proof is `AttributesFromEsse.oneFromSource`.
+[`GodIsOneFromEsse.RecipientBoundary`](../../TruthCore/Case/Catholicism/GodIsOneFromEsse.lean#L86).
+`AttributesFromEsse.oneFromSource` proves general uniqueness under
+all-respects causal ascent and excluded middle.
+[`oneFromSource`](../../TruthCore/Results/Case/Catholicism/AttributesFromEsse/Solution.lean#L56)
+The exact conjunction above is checked at finite scope by
+[`fifthCensus`](../../TruthCore/Case/Catholicism/GodUniquenessCensus.lean#L255).
 These remain structural diagnostics. Re-run with intended carrier
 constraints and include the full naming premise in a nonvacuous control
 before reading the counts as more than this encoding.

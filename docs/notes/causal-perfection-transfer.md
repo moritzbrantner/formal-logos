@@ -2731,7 +2731,7 @@ One world, two actual concrete bearers g and x. The ground relation and the esse
 
 All eight assignments preserve actual root and effect, active transitive operation, the act-reference equality, the actual-operation existence rule and motion-requires-potency. The effect's independent motion/potency makes pure act nonvacuous. With the fixed actual witness and unmoved g, the dichotomy and life rule jointly imply life at g. The incoming-ground adapter tests whether the selected recipient x can ground the identical operative act. The omission control removes that transport condition.
 
-**Limits:** the model is a finite surrogate checked in Lean. Its operation and life rules are the corpus definitions `BeingInActHasOperation`, `OperationFromSelfOrAsMoved`, `SelfOperatingUnmovedLives` and `PureAct`; it is not a registered `GradesFrame`/`Profile` model. Act references, terminus and external actualization are separately interpreted slots; no real ontology of actions is proved. The restored case stipulates immanent operation, not its metaphysical compatibility with simplicity. The act-identity adapter is substantive, not a theorem of represented equality. No countermodel defeats Aquinas, and no model demonstrates that the strongest rival is metaphysically possible. [Background, forced life and adapter exclusion, controls](../../TruthCore/Causality/PerfectionTransferControls.lean#L33)
+**Limits:** the model is a finite surrogate checked in Lean. Its operation and life rules are the corpus definitions `BeingInActHasOperation`, `OperationFromSelfOrAsMoved`, `SelfOperatingUnmovedLives` and `PureAct`; it is not a registered `GradesFrame`/`Profile` model. Act references, terminus and external actualization are separately interpreted slots; no real ontology of actions is proved. The restored case stipulates immanent operation, not its metaphysical compatibility with simplicity. The act-identity adapter is substantive, not a theorem of represented equality. No countermodel defeats Aquinas, and no model demonstrates that the strongest rival is metaphysically possible. [Background, forced life and adapter exclusion, controls](../../TruthCore/Causality/PerfectionTransferControls.lean#L71)
 
 #### 4.2. Same-standard comparison
 
@@ -2822,7 +2822,7 @@ The transported incoming edge makes the third variant no longer a root, with mut
 
 **Checked diagnostic** (16 configurations, 32 local assignments, five selected controls). It is an analyst structural check in Lean; its dichotomy is the corpus `OperationFromSelfOrAsMoved`.
 
-[Invariants and controls](../../TruthCore/Causality/PerfectionTransferControls.lean#L106)
+[Invariants and controls](../../TruthCore/Causality/PerfectionTransferControls.lean#L157)
 
 ### 5. Downstream and next research discriminator
 
@@ -2877,7 +2877,7 @@ The first cell shows that no due absence, stipulated own being, strict determina
 
 Exact diagnostic, checked in Lean (four variants and the displayed conditional tests):
 
-[Variants and the general due-coverage lemma, checked in Lean](../../TruthCore/Causality/PerfectionTransferControls.lean#L172)
+[Variants and the general due-coverage lemma, checked in Lean](../../TruthCore/Causality/PerfectionTransferControls.lean#L226)
 
 ### Registered argument bundles and the selected root
 
@@ -3158,7 +3158,7 @@ rows. Checked in Lean:
 | yes | no | yes | yes | no | no |
 | yes | yes | yes | yes | yes | yes |
 
-[Closure rows checked in Lean](../../TruthCore/Causality/PerfectionTransferControls.lean#L209)
+[Closure rows checked in Lean](../../TruthCore/Causality/PerfectionTransferControls.lean#L289)
 
 This is an application of the already investigated projection/conjunction
 distinction; do not register another generic closure theorem. The exact

@@ -9,15 +9,18 @@ public import TruthCore.Causality.TermSenseForks3
 # Exhaustive two-carrier census of the genus-free uniqueness bundles
 
 Finite diagnostics for `docs/notes/root-route-modal-load.md` §§1, 3 and 5.
-Every structure has two carriers and one respect (esse). A structure fixes
+Every structure enumerated in §§1 and 5 has two carriers and one respect (esse). A structure fixes
 which carriers are God and actual, and the `MoreIn` and `CausesIn` tables;
 `more y x` reads "`y` is more in being than `x`". The Boolean evaluators below
 are proved to coincide with the corpus definitions, so the counts are counts
 of models of those definitions, not of a separate encoding.
 
-The counts describe this small encoding. The general entailments are
-`GodIsOneFromEsse.oneFromWitness` (§1) and `AttributesFromEsse.oneFromSource`
-(§5); the named omission controls are `GodIsOneFromEsse.controls`.
+The counts describe this small encoding. The general §1 entailment is
+`GodIsOneFromEsse.oneFromWitness`; the named omission controls are
+`GodIsOneFromEsse.controls`. In §5, `fifthCensus` checks the conjunction of
+uniqueness and actual-bearer God-causality at finite scope.
+`AttributesFromEsse.oneFromSource` gives general uniqueness under all-respects
+causal ascent and excluded middle.
 -/
 
 @[expose] public section

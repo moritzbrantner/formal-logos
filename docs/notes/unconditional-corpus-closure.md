@@ -662,7 +662,7 @@ failed reverse inference from possible to actual population, and actual
 reflexive necessary population without contingency. The evaluators are
 proved to coincide with `InhabitedConcreteAt`, `ActualReflexive`,
 `PossiblyInhabitedConcreteAt`, `SomeActualContingentAt` and `NecessaryAt`.
-[Census](../../TruthCore/Explanation/ActualPopulationCensus.lean#L38)
+[Census](../../TruthCore/Explanation/ActualPopulationCensus.lean#L102)
 
 These are finite controls of the stipulated predicate shapes, not
 substantive philosophical objections or metaphysical possibility
@@ -880,7 +880,7 @@ exclusive horn and coexistence are witnessed. The census also
 confirms the conditional no-necessary-to-contingent transfer. The
 evaluators are proved to coincide with `InhabitedConcreteAt`,
 `NecessaryConcreteAt` and `SomeActualContingentAt`.
-[Census](../../TruthCore/Explanation/ActualPopulationCensus.lean#L115)
+[Census](../../TruthCore/Explanation/ActualPopulationCensus.lean#L167)
 
 These applications fall outside the historical sample. The two candidate
 horns can coexist. Neither disjunct can be entered separately as an
