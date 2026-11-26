@@ -430,7 +430,10 @@ pub fn report_for_root(
             if let Some(ids) = candidate["registered_result_ids"].as_array()
                 && !ids.is_empty()
             {
-                proof_section.push_str(&format!("\nRegistered result IDs: {}", candidate["registered_result_ids"]));
+                proof_section.push_str(&format!(
+                    "\nRegistered result IDs: {}",
+                    candidate["registered_result_ids"]
+                ));
             }
         }
     }
