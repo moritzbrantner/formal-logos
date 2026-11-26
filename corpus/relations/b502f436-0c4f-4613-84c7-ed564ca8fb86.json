@@ -1,0 +1,10 @@
+{
+  "id": "b502f436-0c4f-4613-84c7-ed564ca8fb86",
+  "label": "Test by For any individual/world types and one Boolean primitive atom, the corresponding generated…",
+  "subject_kind": "result",
+  "subject_id": "2d210c08-90f5-5ae4-a91a-26108c8b80f2",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "f062ef5f-82a4-58d4-86bc-b1eb0d8943a1",
+  "note": "Checks the admitted Boolean syntax used by both filtered quantifiers for one supplied primitive atom, including complement and conjunction closure."
+}

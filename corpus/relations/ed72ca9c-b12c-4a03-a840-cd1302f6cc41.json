@@ -1,0 +1,10 @@
+{
+  "id": "ed72ca9c-b12c-4a03-a840-cd1302f6cc41",
+  "label": "Test by Concession, answerability, goal-relativism and indifference bundle exclusion",
+  "subject_kind": "result",
+  "subject_id": "d2b63ed6-5454-4255-a2c3-a9ea8891ebff",
+  "predicate": "tests",
+  "object_kind": "argument",
+  "object_id": "a2a12365-d64a-452a-a6f3-5a3999c3440a",
+  "note": "Tests compatibility of the goal-relative exclusion with actual-force concession and belief answerability in the same supplied preference frame."
+}

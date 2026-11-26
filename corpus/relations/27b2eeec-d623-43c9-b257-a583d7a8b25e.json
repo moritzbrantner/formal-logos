@@ -1,0 +1,10 @@
+{
+  "id": "27b2eeec-d623-43c9-b257-a583d7a8b25e",
+  "label": "Test by Reuses #179’s complete two-archer model",
+  "subject_kind": "result",
+  "subject_id": "734bfca4-26fb-5520-a56e-bd6923ba592d",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "358a2a59-9ae2-53d7-a45c-83273d684739",
+  "note": "Tests the scope from each body having a director to one director of all bodies in the original two-archer interpretation."
+}

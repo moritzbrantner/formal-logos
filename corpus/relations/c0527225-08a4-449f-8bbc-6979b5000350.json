@@ -1,0 +1,10 @@
+{
+  "id": "c0527225-08a4-449f-8bbc-6979b5000350",
+  "label": "Test by Restricted and complete-description possibility transfer checked",
+  "subject_kind": "result",
+  "subject_id": "dc44d6b1-021a-4427-9aaa-ff9d305f5858",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "83f5fb38-7357-51dd-82ee-f167aac59758",
+  "note": "Tests the strength of access inclusion in the two-frame possibility transfer profile by restricting it to a single description or complete singleton description."
+}

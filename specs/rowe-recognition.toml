@@ -58,3 +58,23 @@ predicate = "tests"
 object_kind = "argument"
 object_id = "3aae1f42-ee89-4de2-a569-7fca5568415b"
 note = "Tests joint nonvacuity for the coverage, recognition completeness and apparent pointlessness bundle in the selected experience interpretation."
+
+[[relation]]
+id = "Test by Recognition omissions certificate"
+label = "Test by Recognition omissions certificate"
+subject_kind = "result"
+subject_id = "efc50de4-5299-4e97-94cc-00e57d0da92b"
+predicate = "tests"
+object_kind = "statement"
+object_id = "1a3bbdc6-722c-4758-ab2f-b51628d8feee"
+note = "Tests omission of coverage in the first hidden-cost interpretation retaining apparent pointlessness, permission and narrow theism."
+
+[[relation]]
+id = "Test by Recognition omissions certificate for Recognition survey completeness"
+label = "Test by Recognition omissions certificate for Recognition survey completeness"
+subject_kind = "result"
+subject_id = "efc50de4-5299-4e97-94cc-00e57d0da92b"
+predicate = "tests"
+object_kind = "statement"
+object_id = "3a7448a1-344a-4a6d-a372-caa812d2ab8e"
+note = "Tests omission of recognition completeness in the separate hidden-cost interpretation retaining apparent pointlessness and the other inputs."

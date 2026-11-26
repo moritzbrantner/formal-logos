@@ -120,3 +120,13 @@ predicate = "tests"
 object_kind = "statement"
 object_id = "d9f96be1-e2bb-4446-8cb5-b75330323dfc"
 note = "Tests omitting availability of indifference from the goal-relative exclusion argument when every preference has the accuracy aim."
+
+[[relation]]
+id = "Test by Concession, answerability, goal-relativism and indifference bundle exclusion"
+label = "Test by Concession, answerability, goal-relativism and indifference bundle exclusion"
+subject_kind = "result"
+subject_id = "d2b63ed6-5454-4255-a2c3-a9ea8891ebff"
+predicate = "tests"
+object_kind = "argument"
+object_id = "a2a12365-d64a-452a-a6f3-5a3999c3440a"
+note = "Tests compatibility of the goal-relative exclusion with actual-force concession and belief answerability in the same supplied preference frame."

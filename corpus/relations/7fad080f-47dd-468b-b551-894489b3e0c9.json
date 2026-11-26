@@ -1,0 +1,10 @@
+{
+  "id": "7fad080f-47dd-468b-b551-894489b3e0c9",
+  "label": "Test by Second-order self-application test for any weak thesis that restricts a strong norm to a…",
+  "subject_kind": "result",
+  "subject_id": "76bfdeb1-6796-5201-8c84-e988f2cea7bb",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "620f5e6c-d3dd-56a8-97c3-1603245b281c",
+  "note": "Tests when the generic two-horn test applies to a weak thesis of a restricted norm, using its membership in the stipulated domain."
+}

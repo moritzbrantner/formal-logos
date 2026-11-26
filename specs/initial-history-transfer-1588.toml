@@ -117,3 +117,13 @@ predicate = "tests"
 object_kind = "statement"
 object_id = "77a76499-f2df-467f-b685-919f8b110d89"
 note = "Checks the full-inclusion alternative on the same rigid profile, where every E-admitted history retains the actual initial bearer."
+
+[[relation]]
+id = "Test by Restricted and complete-description possibility transfer checked"
+label = "Test by Restricted and complete-description possibility transfer checked"
+subject_kind = "result"
+subject_id = "dc44d6b1-021a-4427-9aaa-ff9d305f5858"
+predicate = "tests"
+object_kind = "statement"
+object_id = "83f5fb38-7357-51dd-82ee-f167aac59758"
+note = "Tests the strength of access inclusion in the two-frame possibility transfer profile by restricting it to a single description or complete singleton description."
