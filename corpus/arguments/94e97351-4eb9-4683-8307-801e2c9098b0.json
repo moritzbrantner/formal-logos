@@ -1,0 +1,12 @@
+{
+  "id": "94e97351-4eb9-4683-8307-801e2c9098b0",
+  "label": "Apply the fixed teleonomy retention rule to screened fine-tuning rows",
+  "premise_statement_ids": [
+    "27379412-f94e-44b0-8e29-1b548bc142d1"
+  ],
+  "conclusion_statement_id": "d79e54fc-17e2-4872-a257-4a748dbe7f08",
+  "inference_ids": [
+    "4ff767c2-49fb-432d-97f7-6df4a99abb0d"
+  ],
+  "meaning": "Apply the exact Boolean retention rule to the fine indicator, using the fine-cell weight and its complementary weight. In rows with no other-observer mass, the retained ratio agrees with the observer-conditioned report, and the binary information criterion yields zero information."
+}
