@@ -1,0 +1,13 @@
+{
+  "id": "ca3e052b-e3ef-4022-96eb-f69528b6afed",
+  "label": "Selected cone well-foundedness from acyclicity and anchored regress denial (inference)",
+  "input_statement_ids": [
+    "5e002319-3828-4de8-96bc-98ebf34072d7",
+    "018456e8-cd2e-46e1-9c13-fa06e6f4dde9"
+  ],
+  "output_statement_id": "1b1e3f09-f2e9-5949-9c3b-8f7fce26a403",
+  "rule": "anchored descending chain extraction and accessibility of finite ancestors",
+  "meaning": "Keep the same actual recipient, world and actual concrete Profile.grounds graph. Acyclicity makes a descending chain injective, so denying an injective chain gives accessibility at the recipient. Accessibility propagates to its finite actual concrete ancestors, which gives well-foundedness on the complete selected cone. The converse excludes an anchored regress without assuming acyclicity of the full actual concrete graph. The two-cycle control has a repeating descending chain and fails cone well-foundedness while satisfying injective regress denial. Composition with the existing SelectedAncestry.necessaryRootAncestor theorem retains the recipient's actual-concrete witness, cone-local contingent grounding and excluded middle. The result supplies one conditional support option for cone well-foundedness, without assuming location coverage or establishing the higher premises.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

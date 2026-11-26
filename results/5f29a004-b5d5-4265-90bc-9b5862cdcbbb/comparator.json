@@ -1,0 +1,16 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.SelectedConeRegress.Challenge",
+  "solution_module": "TruthCore.Results.Causality.SelectedConeRegress.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.SelectedConeRegress.coneWellFounded_of_noAnchoredRegress",
+    "TruthCore.Results.Causality.SelectedConeRegress.noAnchoredRegress_of_coneWellFounded",
+    "TruthCore.Results.Causality.SelectedConeRegress.necessaryRootAncestor_of_noAnchoredRegress",
+    "TruthCore.Results.Causality.SelectedConeRegress.cyclicControl"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "enable_nanoda": true
+}
