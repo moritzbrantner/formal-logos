@@ -1,0 +1,11 @@
+/tmp/claude-1000/-home-moenarch-moritzbrantner-truth-core/6b71aaed-713d-409a-a920-4d22efd81d12/scratchpad/b2030/target/release/build/libsqlite3-sys/b80b04b3b7d02428/out/libsqlite3_sys-b80b04b3b7d02428.d: /home/moenarch/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libsqlite3-sys-0.40.0/src/lib.rs /home/moenarch/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libsqlite3-sys-0.40.0/src/error.rs /tmp/claude-1000/-home-moenarch-moritzbrantner-truth-core/6b71aaed-713d-409a-a920-4d22efd81d12/scratchpad/b2030/target/release/build/libsqlite3-sys/84355bd67edf796b/out/bindgen.rs
+
+/tmp/claude-1000/-home-moenarch-moritzbrantner-truth-core/6b71aaed-713d-409a-a920-4d22efd81d12/scratchpad/b2030/target/release/build/libsqlite3-sys/b80b04b3b7d02428/out/liblibsqlite3_sys-b80b04b3b7d02428.rlib: /home/moenarch/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libsqlite3-sys-0.40.0/src/lib.rs /home/moenarch/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libsqlite3-sys-0.40.0/src/error.rs /tmp/claude-1000/-home-moenarch-moritzbrantner-truth-core/6b71aaed-713d-409a-a920-4d22efd81d12/scratchpad/b2030/target/release/build/libsqlite3-sys/84355bd67edf796b/out/bindgen.rs
+
+/tmp/claude-1000/-home-moenarch-moritzbrantner-truth-core/6b71aaed-713d-409a-a920-4d22efd81d12/scratchpad/b2030/target/release/build/libsqlite3-sys/b80b04b3b7d02428/out/liblibsqlite3_sys-b80b04b3b7d02428.rmeta: /home/moenarch/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libsqlite3-sys-0.40.0/src/lib.rs /home/moenarch/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libsqlite3-sys-0.40.0/src/error.rs /tmp/claude-1000/-home-moenarch-moritzbrantner-truth-core/6b71aaed-713d-409a-a920-4d22efd81d12/scratchpad/b2030/target/release/build/libsqlite3-sys/84355bd67edf796b/out/bindgen.rs
+
+/home/moenarch/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libsqlite3-sys-0.40.0/src/lib.rs:
+/home/moenarch/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libsqlite3-sys-0.40.0/src/error.rs:
+/tmp/claude-1000/-home-moenarch-moritzbrantner-truth-core/6b71aaed-713d-409a-a920-4d22efd81d12/scratchpad/b2030/target/release/build/libsqlite3-sys/84355bd67edf796b/out/bindgen.rs:
+
+# env-dep:OUT_DIR=/tmp/claude-1000/-home-moenarch-moritzbrantner-truth-core/6b71aaed-713d-409a-a920-4d22efd81d12/scratchpad/b2030/target/release/build/libsqlite3-sys/84355bd67edf796b/out
