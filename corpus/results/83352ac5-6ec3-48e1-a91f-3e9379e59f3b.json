@@ -1,0 +1,11 @@
+{
+  "id": "83352ac5-6ec3-48e1-a91f-3e9379e59f3b",
+  "label": "Finite actual panels and one finite pivot yield one maximal direct giver of esse",
+  "argument_id": "ec7ed859-de14-4146-8db5-422bf018444e",
+  "challenge_module": "TruthCore.Results.Causality.FiniteGiverPanels.Challenge",
+  "solution_module": "TruthCore.Results.Causality.FiniteGiverPanels.Solution",
+  "theorem": "TruthCore.Results.Causality.FiniteGiverPanels.universalGiver",
+  "comparator_config": "results/83352ac5-6ec3-48e1-a91f-3e9379e59f3b/comparator.json",
+  "status": "solution-present",
+  "description": "Conditional support for the existing weak-maximal Fourth Way conclusion. Both empirical or metaphysical application premises remain open. The modal package supplies a mathematical consequence on panel indices; the argument uses no premise about the actual constitution of possible worlds."
+}

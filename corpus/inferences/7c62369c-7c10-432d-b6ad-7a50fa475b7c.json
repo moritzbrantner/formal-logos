@@ -1,0 +1,14 @@
+{
+  "id": "7c62369c-7c10-432d-b6ad-7a50fa475b7c",
+  "label": "Finite actual panels and one finite pivot yield one maximal direct giver of esse (inference)",
+  "input_statement_ids": [
+    "35ea71e7-c17d-5e83-a8d9-3d3dc666ea59",
+    "2dd449da-2ba5-4850-8762-7d40f2641557",
+    "520fbe04-a46d-4f20-ba93-73eb5100dbac"
+  ],
+  "output_statement_id": "0881e859-c4c3-53ff-9bec-b61294e12d51",
+  "rule": "Apply the registered finite-hitting law to panel unions and take singleton panels",
+  "meaning": "Use the one-finite-population projection of the checked #561 package. Finite recipient panels index the universal component and actual maximal givers form its fixed roster. Union gives a subintersection of the two passing populations. Every-panel coverage supplies population and the pivot supplies finiteness; the resulting fixed candidate passes every singleton in the original actual dictionary. Equality exempts the giver and all distinct actual recipients have direct esse edges.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

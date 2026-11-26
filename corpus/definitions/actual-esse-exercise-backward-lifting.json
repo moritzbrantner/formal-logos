@@ -1,0 +1,13 @@
+{
+  "id": "cc5eed1d-8e75-473a-9714-f2c04bd75d0f",
+  "label": "Backward lifting of actual esse supply to eligible exercises",
+  "term": "backward lifting of actual esse supply",
+  "definition": "On one q.3 a.4 profile p, fix the eligible exercise type E, a bearer map E → B, and an interpreted causal relation C on E. For every actual esse-supplier edge c → x and every eligible exercise f borne by x, an eligible exercise e borne by c satisfies C e f. The same map and relation are used for every edge and target exercise.",
+  "lean_declaration": "TruthCore.Latin.Aquinas.DeEnte.ActualIdentityExerciseLifting.BackwardActualEsseExerciseLifting",
+  "definition_ids": [
+    "8163859b-95b3-4dd2-8a69-541bd332f32f",
+    "4ffdfea6-0a5a-513c-a710-050648c260bf"
+  ],
+  "note": "Analyst stipulation, attribution deferred. The exercise profile supplies token individuation, eligibility and a causal interpretation of C. The bridge applies to the selected tenseless, mode-unspecified actual esse-supplier relation and remains OPEN for that interpretation. In the A₀→B₁→A₂ control, both projected edges are witnessed, but the B-to-A edge cannot lift at A₀. The alternating chain with n+1 supplying n lifts at every eligible recipient token. Neither example assumes a clock or equates the whole cause-of-esse relation with temporal origination or a specific causal mode. Exact projection by some exercise pair alone does not impose the bridge.",
+  "basis": "stipulative"
+}

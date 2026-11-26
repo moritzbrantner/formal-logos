@@ -49,6 +49,16 @@ fn get(record: &Record, field: &str) -> Value {
     record.get(field).cloned().unwrap_or(Value::Null)
 }
 
+pub(crate) fn comparator_config(root: &Path, path: &str) -> Record {
+    if path.is_empty() {
+        return Record::new();
+    }
+    std::fs::read(root.join(path))
+        .ok()
+        .and_then(|bytes| serde_json::from_slice(&bytes).ok())
+        .unwrap_or_default()
+}
+
 /// `TruthCore.A.B` -> `TruthCore/A/B.lean`.
 pub fn module_path(module: &str) -> PathBuf {
     PathBuf::from(format!("{}.lean", module.replace('.', "/")))
@@ -737,14 +747,7 @@ pub fn context_pack(
         let solution = text(result, "solution_module");
         let (blocks, advertised) = lean_files.challenge_statements(challenge, theorem);
         let short_name = theorem.rsplit('.').next().unwrap_or_default();
-        let comparator: Record = if pyfmt::truthy(result.get("comparator_config")) {
-            std::fs::read(root.join(text(result, "comparator_config")))
-                .ok()
-                .and_then(|bytes| serde_json::from_slice(&bytes).ok())
-                .unwrap_or_default()
-        } else {
-            Record::new()
-        };
+        let comparator = comparator_config(root, text(result, "comparator_config"));
         let checked: HashSet<&str> = list(&comparator, "theorem_names")
             .into_iter()
             .map(|name| name.rsplit('.').next().unwrap_or_default())

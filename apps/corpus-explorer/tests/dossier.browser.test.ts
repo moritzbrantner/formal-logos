@@ -93,6 +93,9 @@ test("switching case judgments exposes the common-giver rival, its next test and
   expect(await reader.evaluate((section) => section.scrollWidth <= section.clientWidth + 1)).toBe(true);
   await reader.locator(`a[href="${premiseHref}"]`).first().click();
   await page.waitForURL((url) => url.pathname === premiseHref);
-  await page.getByRole("region", { name: "Current research judgments" }).getByText(/Distinct ultimate sources whose products interact/).waitFor();
+  const premiseReader = page.getByRole("region", { name: "Current research judgments" });
+  await premiseReader.getByLabel("Choose a recorded judgment").selectOption("efe9809e-be74-5683-b722-c2694647b840");
+  await premiseReader.getByText(/Distinct ultimate sources whose products interact/).waitFor();
+  await premiseReader.getByText(/For the rim and spokes/).waitFor();
   await page.close();
 }, 60000);

@@ -1,0 +1,32 @@
+{
+  "id": "ec7ed859-de14-4146-8db5-422bf018444e",
+  "label": "Finite actual panels and one finite pivot yield one maximal direct giver of esse",
+  "premise_statement_ids": [
+    "35ea71e7-c17d-5e83-a8d9-3d3dc666ea59",
+    "2dd449da-2ba5-4850-8762-7d40f2641557",
+    "520fbe04-a46d-4f20-ba93-73eb5100dbac"
+  ],
+  "conclusion_statement_id": "0881e859-c4c3-53ff-9bec-b61294e12d51",
+  "inference_ids": [
+    "7c62369c-7c10-432d-b6ad-7a50fa475b7c"
+  ],
+  "meaning": "Use the one-finite-population projection of the checked #561 package. Finite recipient panels index the universal component and actual maximal givers form its fixed roster. Union gives a subintersection of the two passing populations. Every-panel coverage supplies population and the pivot supplies finiteness; the resulting fixed candidate passes every singleton in the original actual dictionary. Equality exempts the giver and all distinct actual recipients have direct esse edges.",
+  "term_senses": {
+    "MAXIMAL_IN_A_SELECTED_PERFECTION_GREATEST": "9bea9a43-3a87-4d62-86de-e5873aea62f8"
+  },
+  "definition_ids": [
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "6f1b9a55-01d5-5894-95fc-f067077e2bda",
+    "a2a8de58-42e0-5481-b7fb-848ae8602036",
+    "f8948e28-b13a-5244-95f1-41a05cd4fff2",
+    "e1ff44df-ed97-5990-8424-1abd720f23ea",
+    "baddf770-36bf-542f-bb3c-2297342d5452",
+    "96b756de-1ba1-594b-ba05-ac63da55f63f"
+  ],
+  "disambiguation_ids": [
+    "e0c88ff5-5878-5ab9-ac83-bb9314ed6dc0",
+    "4f1d0cf6-88ba-59e3-814d-01450c2bf282",
+    "7507d645-874d-5434-add8-2f49c2801d36"
+  ]
+}

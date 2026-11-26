@@ -1,0 +1,10 @@
+{
+  "id": "d8796eaa-52f7-4731-9ab4-28783abe2dcc",
+  "label": "Every actual identity bearer has at least one eligible exercise",
+  "paraphrase": "For each bearer r in act as to esse whose represented esse equals its represented essence, at least one token of the fixed eligible exercise type is borne by r. This conditional population requirement applies only to actual identity bearers.",
+  "lean_declaration": "TruthCore.Latin.Aquinas.DeEnte.BoundedIdentityExercise.ActualIdentityExerciseFibresInhabited",
+  "definition_ids": [
+    "183b48d2-1753-583d-aef9-4199cff86231",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"
+  ]
+}

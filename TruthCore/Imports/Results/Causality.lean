@@ -173,6 +173,7 @@ public import TruthCore.Results.Causality.ExistsSenseMeaning.Solution
 public import TruthCore.Results.Causality.ExternalCandidateNecessity.Solution
 public import TruthCore.Results.Causality.FiniteBranching.Solution
 public import TruthCore.Results.Causality.FiniteEsseDependence.Solution
+public import TruthCore.Results.Causality.FiniteGiverPanels.Solution
 public import TruthCore.Results.Causality.FiniteGroundingHasSource.Solution
 public import TruthCore.Results.Causality.FiniteGroundingLimitNotClosed.Solution
 public import TruthCore.Results.Causality.FiniteNecessaryUnion.Classification.Solution

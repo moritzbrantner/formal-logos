@@ -1,0 +1,11 @@
+{
+  "id": "b821ed7c-b847-4a13-bf4e-a8cd7a40b529",
+  "label": "Perfection of named GOD_4 by same-respect preexistence along finite esse ancestry",
+  "argument_id": "aba2aba4-6366-4c7f-8bd2-c0179f5ac75a",
+  "challenge_module": "TruthCore.Results.Case.Catholicism.AncestralEsseAttributes.Challenge",
+  "solution_module": "TruthCore.Results.Case.Catholicism.AncestralEsseAttributes.Solution",
+  "theorem": "TruthCore.Results.Case.Catholicism.AncestralEsseAttributes.perfectFromAncestry",
+  "comparator_config": "results/b821ed7c-b847-4a13-bf4e-a8cd7a40b529/comparator.json",
+  "status": "solution-present",
+  "description": "Final-edge exclusion identifies each named maximum with the common source. Any represented actuality implies actual esse, so every distinct bearer with that actuality has a finite actual esse-cause path from the source. Perfection preexistence takes actuality in the same respect from the effect to the cause at each edge, using the identical InAct and CausesIn fields throughout. Where the bearer is already the source, equality transports its actuality. This uses the explicit excluded-middle premise for the equality splits and yields the existing single-field perfection; the applicability of preexistence and its formal-or-eminent interpretation remain separate."
+}
