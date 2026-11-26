@@ -1,0 +1,26 @@
+{
+  "id": "176d45ae-c023-4c72-b2bb-86a09326b798",
+  "label": "A finite strict-giver withdrawal contrast for the productive bridge",
+  "statement_ids": [
+    "d86c9de9-25be-488b-b3b7-69f5f4eb80b8",
+    "76d2cc96-14a0-48bc-bd0b-a5c0ca853265"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "blocked",
+  "summary": "The finite SCM comparison in docs/notes/sustaining-vs-existential-inertia.md, section Finite interventions and the productive bridge, holds the recorded earlier input fixed. Mechanism.single_channel_contrast proves natural report agreement for every context and separates response to one cut: at the all-true context the current input is forced false and the responsive model loses its output, while the context-based model retains it. A separate control establishes full observational parity with different interventional masses even when distinct exogenous noise coordinates are independent. Neither control equates a channel with a strict giver or a Boolean readout with presence of a received-esse bearer. The old inducer-free account remains the positive standing rival. Its causal requirement on existential cessation and the classification of withdrawal are still open.",
+  "blocker": "Realize both responses as admissible histories of one CausalityFrame for the same recipient, earlier presence, origin and independently specified loss conditions. Establish that the cut removes the strict GivesAt operation independently of the recipient's fate and excludes alternative givers. Calibrate the later report to that same recipient's presence, then test for survival while preserving the momentary explanation. A Boolean forced value supplies selector success only in a valuation world.",
+  "evidence": [
+    "PR-2091"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2091"
+    }
+  ]
+}

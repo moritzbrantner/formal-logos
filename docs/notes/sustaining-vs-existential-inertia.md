@@ -1618,7 +1618,8 @@ Issue #2053 targets the productive bridge
 [`d86c9de9`](../../corpus/statements/d86c9de9-25be-488b-b3b7-69f5f4eb80b8.json).
 With the momentary PSR it feeds weak concurrent actualization `40a97664`,
 then the sustaining-cause reading `ce55210c` and the esse-dependence premise
-`2068f91c`. These are links already in the graph.
+`2068f91c`. These are links already in the graph. The [attempt record](../../corpus/attempts/176d45ae-c023-4c72-b2bb-86a09326b798.json)
+tracks the open calibration.
 
 [StructuralCausalModel](../../TruthCore/Causality/StructuralCausalModel.lean)
 uses directed parent slots and well-founded recursion. A surgery forces a
