@@ -90,8 +90,12 @@ ordering uses one successor rule. [Distinctness proof](../../corpus/results/WORL
 For accounts equally adequate to the same evidence, a headcount razor gives a
 finite inventory an advantage that survives **every finite addition** against
 an infinite inventory. If the units counted are independent explanatory posits,
-assigning a distinct charge to each bearer suffices. Charging each successive
-pair once also yields infinitely many distinct charges.
+it suffices that each posit actually used accounts for only finitely many
+positions on the endless chain. The group sizes can grow without bound. A finite
+list of such posits could cover only a finite union of finite groups. Charging
+each successive pair once is an example. The converse fails: one reusable posit
+can cover every even position while infinitely many different posits cover the
+odd positions. What matters is the set of posits actually required.
 The choice of baseline also matters. Against a shared countably infinite
 background, adding one thing or countably many yields equally large total
 inventories, despite the difference in additions. [Headcount criterion](../../corpus/results/e8f7aaef-0424-411f-bdc8-8a3671e3c932.json)
