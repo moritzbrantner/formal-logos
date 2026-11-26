@@ -18,6 +18,7 @@ use truth::{
 mod args;
 mod attribution_check;
 mod bind_check;
+mod bottlenecks;
 mod bridge_experiments;
 mod bridges;
 mod brief;
@@ -131,6 +132,8 @@ pub const HELP: &str = "Usage: truth [--root PATH] [--json] status
              [--premise-pool closed|proved|all] [--candidates N]
              [--heartbeats N] [--batch N] [--jobs N] [--zipperposition PATH] [--write-spec PATH]
        truth [--root PATH] [--json] workers [--authored-only-by MODEL] [--open] [--frontier-root STATEMENT]
+       truth [--root PATH] [--json] bottlenecks [--stage N]... [--min-arguments N] [--min-routes N] [--limit N]
+             [--authored-only-by MODEL] [--frontier-root STATEMENT]
 
 An ID, STATEMENT, TARGET or --target may be a uuid, a legacy id (STMT-...) or a label.
 dossier and context compute the frontier in-process, or read it from FILE, written by
@@ -205,6 +208,7 @@ pub const COMMANDS: &[Command] = &[
     prove_sweep::COMMAND,
     discover::COMMAND,
     workers::COMMAND,
+    bottlenecks::COMMAND,
 ];
 
 /// Parses `args` and runs the command it names.
@@ -268,9 +272,18 @@ pub fn run(args: &[OsString]) -> Output {
                     "--without and --compare-premises apply only to synthesis",
                 ))
             }
-            Some(command) if args.workers.flags && command.name != "workers" => {
-                Err(usage("--authored-only-by and --open apply only to workers"))
+            Some(command)
+                if args.workers.flags
+                    && !(command.name == "workers"
+                        || (command.name == "bottlenecks" && !args.workers.open)) =>
+            {
+                Err(usage(
+                    "--authored-only-by applies only to workers and bottlenecks; --open only to workers",
+                ))
             }
+            Some(command) if args.bottlenecks.flags && command.name != "bottlenecks" => Err(usage(
+                "--stage, --min-arguments and --min-routes apply only to bottlenecks",
+            )),
             Some(command) if args.semantics.flags && command.name != "semantics" => Err(usage(
                 "--conclusion, --definition and --bridge apply only to semantics",
             )),

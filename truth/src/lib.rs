@@ -2,6 +2,7 @@
 pub mod attribution;
 pub mod bind_check;
 pub mod bind_types;
+pub mod bottlenecks;
 pub mod bridge_experiments;
 pub mod bridges;
 pub mod brief;
