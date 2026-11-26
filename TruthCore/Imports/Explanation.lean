@@ -47,6 +47,7 @@ public import TruthCore.Explanation.JointCooperation
 public import TruthCore.Explanation.JointGroundEffectContingency
 public import TruthCore.Explanation.LawActuality
 public import TruthCore.Explanation.LimitPersistenceLaw
+public import TruthCore.Explanation.LocationPersistence
 public import TruthCore.Explanation.MechanismInterventionParity
 public import TruthCore.Explanation.NecessaryFactBoundary
 public import TruthCore.Explanation.NecessaryUltimateSource

@@ -1,0 +1,10 @@
+{
+  "id": "8f8111e3-9bb0-40e2-9c60-163686668613",
+  "label": "Same everlasting presence and reported start admit different reported destinations",
+  "paraphrase": "There are two sound traces of one everlasting bearer and two distinct Boolean places p and q. Both traces report p at date 0. One trace is stationary and reports p at date 1. The other reports q at date 1. Every named endpoint has a positive report.",
+  "lean_declaration": "TruthCore.Explanation.LocationPersistence.ReportedLocationContrast",
+  "definition_ids": [
+    "4b4e5631-b2c6-5c76-ac4a-2615eb87e17d",
+    "6788dada-f316-5cc3-8376-e64c512b1a0e"
+  ]
+}

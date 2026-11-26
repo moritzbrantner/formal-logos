@@ -966,6 +966,181 @@ unchanged. The added attempt is the record of this analyst test, not a new
 supporting inference or a claim to historical fidelity.
 
 
+## The tree analogy and existence at all
+
+Analyst formulation of the owner's argument, with attribution deferred. Fix
+one designated bearer x and one history. Write Eₓ(t) for its dated presence
+(`History.IsAt`) and Aₓ for ∃t Eₓ(t). For the local comparison keep x,
+its origin if it began, its earlier presence, and the independently
+specified loss conditions fixed. For the Aₓ comparison use the populated
+and omission histories of §7, with the same law and background bearer.
+Earlier presence necessarily varies between those histories.
+
+1. **Persistence and actuality are distinct explanatory targets.** The
+   objection targets a move from the conditional persistence law to an
+   explanation of Aₓ. Every application to x uses earlier Eₓ(s), which
+   already entails Aₓ. The H₊/H₀ comparison in §7 shows that the law and
+   no-loss background permit both outcomes. The reversible control there
+   shows that exchangeable anchors in a beginningless history still
+   require some positive anchor. This rules out selection of the populated
+   history by that law and background alone. The countermodel concerns
+   entailment within the supplied profile class. Its bearing on a proposed
+   *complete* explanation comes from the independent demand to account for
+   an indispensable actuality input (§7).
+
+2. **The tree analogy transfers a conditional transition.** A position
+   report At(x,L,t) entails that the tree is present at t. In the
+   [Lean vocabulary](../../TruthCore/Explanation/LocationPersistence.lean)
+   that entailment is the explicit `Sound` condition on the report
+   `location t = some L`; the trace may also give no report. The
+   [proof and application](../../TruthCore/Results/Explanation/LocationPersistence/Solution.lean)
+   transport the supplied position across a stationary integer trace by
+   the existing `constant_of_stationary`. Soundness projects the
+   bearer's presence at both dates. The [worked control](../../corpus/statements/8f8111e3-9bb0-40e2-9c60-163686668613.json)
+   gives one everlasting bearer two sound traces. Both report place p at 0.
+   At 1 the stationary trace reports p and the other reports a distinct place q. This checks that fixing presence leaves
+   position open, even when an initial location is fixed, unless a
+   transition condition is also supplied. The same abstract transition
+   form applies to existential persistence: the earlier and later
+   conditions are both instances of `History.IsAt`, as in
+   `CessationNeedsInducer` and `originOrInertia`. In that application
+   the input already asserts the very kind of actuality the output asserts.
+   The tree case supplies evidence about conditions for keeping a place.
+   An argument by analogy for an existential persistence law needs a
+   further premise that the same kind of state-transition warrant governs
+   the bearer's very being. Agreeing to represent both as dated predicates
+   supplies only the formal similarity.
+
+   The **discriminating premise** is whether the actuality of this same
+   substantial bearer has the independence from current production that
+   a state of an already-present subject can have. Compare the established
+   temporal-presence vocabulary
+   ([PRESENCE_NOW_TEMPORAL_PERPETUITY_BEGINNING](../../corpus/disambiguations/temporal-history-existence-axes.json))
+   with [DEF-ESSE](../../corpus/definitions/esse.json) and
+   [DISAMB-ESSE-RECEPTION](../../corpus/disambiguations/esse-reception.json),
+   especially `RECEPTION_OF_ESSE_VERSUS_EXTERNAL_CAUSE_1`
+   (`DEF-ESSE-RECEIVED-IN`), reception of an act in a principle.
+   The [existence/esse support disambiguation](../../corpus/disambiguations/existence-esse-support.json)
+   distinguishes world-relative existence, the respect of esse, and
+   support or exercise at a world. The modeled predicate is dated
+   presence. Its use leaves open the ontological account of that presence.
+   Received act in a principle also leaves external origination and
+   concurrent giving to their respective bridge premises (§§5–6 and 11).
+   Thus the tree case challenges an inference from ordinary state
+   persistence to a law of substantial actuality. It leaves room for an
+   independently warranted persistence law, even for received-esse
+   bearers, if that law can be justified under a strict-giver cut.
+
+3. **God parity tests the same explanandum.** Grant an everlasting
+   candidate g for the test. Temporal perpetuity within an occupied
+   history still uses the actuality of g when one date explains another.
+   If the proposed inertia law alone were offered for Aᵍ, the same
+   H₊/H₀ test would apply: the bare law permits a history without g.
+   This is a consequence of the law's conditional form, with no appeal to
+   personal assent. The omission profile need not be possible under a
+   separate, warranted principle of aseity or nature-based actuality.
+   Such a principle would have to supply existence of the relevant
+   bearer and explain it, with its own warrant. An uninstantiated
+   description and a conditional about a candidate's nature leave that
+   obligation open. Aseity addresses the candidate's being through itself
+   and temporal inertia addresses continuance under earlier actuality.
+   The two occupy different explanatory roles. This is fair to the
+   persistence-only rival, which can reserve a nature-based or other
+   foundational account for Aᵍ or restrict its law to suitable temporal
+   receivers. A timeless candidate is outside the antecedent structure of
+   the temporal test.
+
+4. **“External things” has two defensible readings.**
+   - **[Other bearers](../../corpus/statements/791ca930-499c-4922-a475-fdbc20684638.json).**
+     Target the move from the persistence of a given x
+     to the actuality of a distinct y. An x-only conditional has no
+     y-actuality input, and even a universal per-bearer rule needs an
+     earlier y for its y-instance. Section 7 supplies the control after
+     exchanging the roles: keep the background bearer and its persistence
+     fixed while varying whether the designated additional bearer is ever
+     present. An explanation of y via x's causal powers or activity would
+     need a cross-bearer origin or support premise. This is a substantive
+     limit on expanding the rule's explanatory scope.
+   - **[Externally conditioned continuance](../../corpus/statements/5a4ba734-fea3-4e3c-afd1-50f086c32f41.json).**
+     Target a stronger claim of
+     independence from every external condition. External prevention of
+     destruction is compatible with the rule, since it can secure the
+     no-inducer background. The existing q.104 becoming/being distinction
+     and the competing readings of withdrawal (§11 and the sibling calibration
+     in PR #2094) supply the difference: removal of a protector can allow a
+     separate loss process, while withdrawal by a direct cause of being
+     would remove its claimed productive contribution itself. The latter
+     would bear on existential independence if independently identified
+     for the same receiver. No substantive objection identified to the
+     conditional persistence law from external conditioning alone.
+
+### Replies at the same scope
+
+| Rival reply | What the objection establishes and what remains |
+| --- | --- |
+| **Origin for begun bearers, inertia thereafter.** The existing [I q.104 a.1 becoming/being claim](../../corpus/claims/becoming-cause-not-being-cause.json) records a builder whose building can cease while the house persists. | An origin cause can account for Aₓ through a positively explained onset. The temporal chain can start there. The objection to the law alone then leaves the combined account standing. The q.104 distinction sharpens the later dispute: a cause of becoming (*causa fiendi*) need not operate whenever the effect exists. This leaves open whether the effect also has a direct cause of being (*causa essendi*). For a beginningless bearer the origin reply needs a distinct, potentially atemporal actuality account. |
+| **Necessary or brute foundation.** The rival can accept substantial dependence on an origin, including a necessary source (§9), and stop at a necessary or brute foundation. | The necessity of a source supplies no specific contingent outcome without a relevance and realization bridge. The rival can add an originating exercise, a positive nonnecessitating selection account, or an independently warranted reason fixing the relevant actuality. Bruteness can reject the demand for a further reason at the foundational level; it supplies no further explanation there. A sustaining account also owes an account of why its source and relevant exercise obtain insofar as its standard calls for one. The objection exposes the shared scope question without choosing a foundation. |
+| **Hume–Edwards.** Grant genuinely adequate explanations for each actual member and use their conjunction as the explanation of the series. | The [typed `MemberLift`](../../TruthCore/Explanation/ActualWorldGap.lean) explicitly adds this lifting step. The owner's test rules out the persistence law alone as a selector. It leaves the distributive standard standing on its own terms, because its inputs include actual members and their explanations. An entailing whole-history standard instead asks for an adequate reason that distinguishes Aₓ from the omission profile, or the complete order from its relevant alternatives. Giving the list of actual stages only reintroduces the disputed actuality in the explanans. For the broader series, keep contingent laws and relations in scope as well as presence facts, as in [the whole-series assessment](../../corpus/attempts/a5958e25-0904-46cb-a9e8-62ca5f3f5286.json) and the [existing rival comparison](unique-feedback-explanation-311.md). Deciding between the standards requires an argument about whether member-wise coverage is sufficient for the requested contrast. |
+
+### Provisional assessment and revision conditions
+
+The strongest warrant in the owner's argument is the fixed-law H₊/H₀
+contrast joined to the explicit difference between a position report and the
+presence it presupposes. That warrant defeats the claim that inertia alone
+selects a bearer as actual. It also removes the tree example as sufficient
+warrant for applying the existential law to received-esse bearers. For
+dated presence, the strongest inertia account still uses the same bearer,
+actual earlier presence, and a causal law requiring an inducer of
+cessation. For Aₓ, onset explanation remains available where onset is
+independently explained. A beginningless account owes a positive
+actuality reason if it adopts the contrastive standard, or a defense of
+distributive adequacy or its stopping point if it adopts another standard.
+Those standards are separate from the question of state persistence versus
+received act. Defend the stronger whole-history claim by specifying a
+matched positive reason that explains the first actuality or grounds the
+beginningless profile, or by independently justifying member-wise coverage
+for the precise contrast. An adequate nonnecessitating reason would need
+independently identified explanatory relevance and direction even where it
+admits alternative outcomes.
+
+The comparison on [`d86c9de9`](../../corpus/statements/d86c9de9-25be-488b-b3b7-69f5f4eb80b8.json)
+remains open at its actual scope. Its antecedent already fixes actual
+presence at t and an explanation of that presence, and its consequent
+requires strict giving then. The Aₓ contrast varies earlier actuality
+and cannot decide between the two accounts with it held fixed. The
+stronger [`76d2cc96`](../../corpus/statements/76d2cc96-14a0-48bc-bd0b-a5c0ca853265.json)
+also asks for a giver distinct from the bearer. The tree proof supplies
+neither production nor distinctness. Direct conservation of received
+being retains the positive warrant described in §11, conditional on the
+cause-of-being interpretation and its calibration. The relevant next
+test is the same-bearer comparison in the
+[calibrated withdrawal PR](https://github.com/moritzbrantner/formal-logos/pull/2094),
+with earlier presence, origin and loss background controlled as specified there.
+Warranted survival after independently excluded current giving, with a
+reason for presence, would challenge the productive bridge.
+Loss would challenge the cessation law
+for this bearer and interval if withdrawal itself and every other loss
+inducer were independently excluded.
+
+An Aₓ reformulation would need a separate premise specifying a reason for
+`∃t, h.IsAt w x t` against the omission profile, with an explicit
+adequacy standard and an actual noncircular basis for that reason. A
+productive variant would additionally need a bridge from such a reason
+to an actual giver of the same bearer. To compose it with the present
+route it would need one further result, showing why the giver exercises
+at the selected t whenever x is present, including its bearer, effect and
+time binding. The scope test gives no warrant for adding that result as a
+hidden premise. The existing bridge supports the God-existence route
+through weak concurrent giving, the sustaining reading and `2068f91c`.
+The Lean location result is consumed by the two-date presence
+application above. The [registered result](../../corpus/results/1371f04e-8b90-4fb2-bda9-56ba9f02d8dc.json)
+certifies the anchored transition. Its case connection is a diagnostic of the offered
+analogy in the existing attempt
+[`176d45ae`](../../corpus/attempts/176d45ae-c023-4c72-b2bb-86a09326b798.json).
+
+[Attempt record](../../corpus/attempts/08713633-1a85-4977-9794-0cca47d9f064.json)
+
+
 ## 8. C3 at an actual world: grounded, ungrounded and sustained controls (2026-11-23)
 
 **Scope.** C3 concerns a bearer with *presently derivative* actuality, not merely
