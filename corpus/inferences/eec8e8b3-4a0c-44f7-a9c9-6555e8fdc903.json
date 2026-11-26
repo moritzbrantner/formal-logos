@@ -1,0 +1,10 @@
+{
+  "id": "eec8e8b3-4a0c-44f7-a9c9-6555e8fdc903",
+  "label": "Classical interval equivalence for existential cessation (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "3f5d3750-0f2b-4f53-9330-5ea679463820",
+  "rule": "Contrapose loss and inducer-free persistence on the same interval",
+  "meaning": "The two universal constraints are classically equivalent. Neither supplies warrant for the law or its inducer interpretation.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}
