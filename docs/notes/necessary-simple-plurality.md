@@ -1311,6 +1311,14 @@ checks the composition for a supplied maximum c and distinct necessary target
 x. Necessary-being actuality supplies `InAct x esse`. Genus causality then
 supplies the esse edge from c to x, which the two explicit transfer bridges
 turn into a cause of necessity and an actual concrete ground from the same c.
+With c and w fixed under the stated bridges, its conclusion is:
+
+```lean
+∀ x, NecessaryAt m.ontic w x → x ≠ c →
+  CausesIn c x esse ∧ CausesNecessityOf c x ∧ ActualConcreteGround m w c x
+```
+
+Necessity is relative to w; the theorem does not require x to exist at w.
 
 No firstness, absence of potency, causal-grade comparison or naming premise is
 needed for this inference. With the nine-premise result's root n, the supplied-
@@ -1346,11 +1354,13 @@ replays the nine-premise result in each profile, retaining the original
 explicit excluded-middle input.
 [`ContingentScope.necessaryNonroot`](../../TruthCore/Results/Causality/NecessaryRootUniqueness/Solution.lean)
 checks that two distinct actual individuals are necessary in the same model.
-These witnesses separate direct selected-ground coverage and uniqueness of
-all necessary individuals from uniqueness of the actual selected root. The
-grounding path through the necessary nonroot survives. Questions about universal
-ancestry, well-foundedness, and explanatory completeness remain separate.
-These are non-entailments in the encoded vocabulary. Independent warrant for
+These witnesses show two non-entailments in the encoded vocabulary: uniqueness
+of the actual selected root entails neither direct selected-ground coverage of
+every actual contingent target by the root nor uniqueness of all necessary
+individuals. The grounding path through the necessary nonroot survives. The
+witnesses settle nothing about universal ancestry, well-foundedness or
+explanatory completeness; in both, the root reaches every individual at the
+selected world and grounding there is well-founded. Independent warrant for
 the convergence premises and the applicability of the distinction between
 esse causation and selected grounding remain open. An independently warranted
 bridge covering distinct actual contingent esse targets would address the
