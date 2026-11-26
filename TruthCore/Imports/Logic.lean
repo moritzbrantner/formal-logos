@@ -83,6 +83,7 @@ public import TruthCore.Logic.RootDescent
 public import TruthCore.Logic.Scientism
 public import TruthCore.Logic.ScientismScopeBoundary
 public import TruthCore.Logic.ScopedEmpiricalProofBarrier
+public import TruthCore.Logic.ScopedSufficientBasis
 public import TruthCore.Logic.SelfApplication
 public import TruthCore.Logic.SoritesBoundary
 public import TruthCore.Logic.Strength.Cause
