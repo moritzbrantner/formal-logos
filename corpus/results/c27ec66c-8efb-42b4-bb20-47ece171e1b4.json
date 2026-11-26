@@ -1,0 +1,11 @@
+{
+  "id": "c27ec66c-8efb-42b4-bb20-47ece171e1b4",
+  "label": "Certify one maximal giver for each actual recipient by testing its gift",
+  "argument_id": "352e7658-dcb6-45aa-a8e0-eda6f8717b24",
+  "challenge_module": "TruthCore.Results.Aquinas.DeEnte.RankedGiverAudit.Challenge",
+  "solution_module": "TruthCore.Results.Aquinas.DeEnte.RankedGiverAudit.Solution",
+  "theorem": "TruthCore.Results.Aquinas.DeEnte.RankedGiverAudit.rankedCertificates",
+  "comparator_config": "results/c27ec66c-8efb-42b4-bb20-47ece171e1b4/comparator.json",
+  "status": "solution-present",
+  "description": "Strict ascent at esse makes every actual donor eligible. At the same actual maximum no eligible donor remains. Its actual gift to each distinct actual recipient then supplies one observed positive edge to that very recipient. The checked fixed-pair criterion gives the same root and ancestry for all matching alternatives. For the maximum itself the zero-step path needs no query. For a distinct recipient an empty report permits the empty relation, so establishing which bearer supplies it still requires evidence. The alternatives preserve the comparative and its application to donors, and may omit the actual direct gift."
+}

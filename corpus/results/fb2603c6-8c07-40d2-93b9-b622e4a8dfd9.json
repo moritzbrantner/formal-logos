@@ -1,0 +1,11 @@
+{
+  "id": "fb2603c6-8c07-40d2-93b9-b622e4a8dfd9",
+  "label": "Recover finite complete-list root audits from identity-ancestor pair certificates",
+  "argument_id": "64b63d01-bb42-4347-8744-8707c7922ef8",
+  "challenge_module": "TruthCore.Results.Aquinas.DeEnte.IdentityPairAudit.Challenge",
+  "solution_module": "TruthCore.Results.Aquinas.DeEnte.IdentityPairAudit.Solution",
+  "theorem": "TruthCore.Results.Aquinas.DeEnte.IdentityPairAudit.listAuditsOfIdentityPairs",
+  "comparator_config": "results/fb2603c6-8c07-40d2-93b9-b622e4a8dfd9/comparator.json",
+  "status": "solution-present",
+  "description": "At each actual recipient, the recorded pair answers are true of the actual esse relation. The existing root-ancestor theorem gives a finite complete-list certificate for that same identity witness and recipient. The earlier reception route already uses the same metaphysical premises for actual source access. The new comparison determines which finite observations could identify its source."
+}

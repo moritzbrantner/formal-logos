@@ -1,0 +1,12 @@
+{
+  "id": "554786a0-5cfa-4be6-8e55-db6d0dd48b5d",
+  "label": "Recover finite complete-list root audits from ranked pair certificates (inference)",
+  "input_statement_ids": [
+    "f58d91ff-b5e5-4b99-b73e-0947a102848b"
+  ],
+  "output_statement_id": "3008c7db-0236-4b03-9da7-f41ea8d8cac1",
+  "rule": "Apply the matching-pair certificate to the actual relation, then use the finite incoming-list theorem",
+  "meaning": "The actual relation agrees with its own answers. For the same actual bearer and each actual recipient the certificate therefore gives actual supplierlessness and a finite path. The existing positive complete-list theorem constructs a finite audit in its own broader frame retaining this very source. The number of pair queries and the number of complete incoming lists describe different acts of observation. This route supplies the existing local certificate premise used by the closed-collection argument.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

@@ -10,10 +10,13 @@ public import TruthCore.Results.Aquinas.DeEnte.EsseSource.Solution
 public import TruthCore.Results.Aquinas.DeEnte.ExtrinsicSource.Solution
 public import TruthCore.Results.Aquinas.DeEnte.FiniteEsseRootAudit.Solution
 public import TruthCore.Results.Aquinas.DeEnte.FirstIdentityExercise.Solution
+public import TruthCore.Results.Aquinas.DeEnte.IdentityPairAudit.Solution
 public import TruthCore.Results.Aquinas.DeEnte.IdentitySourceCycle.Solution
+public import TruthCore.Results.Aquinas.DeEnte.RankedGiverAudit.Solution
 public import TruthCore.Results.Aquinas.DeEnte.ReceivedOrUnderived.Solution
 public import TruthCore.Results.Aquinas.DeEnte.RootInterface.Solution
 public import TruthCore.Results.Aquinas.DeEnte.UniversalGiverFork.Solution
+public import TruthCore.Results.Aquinas.DeEnte.UnobservedGiver.Solution
 public import TruthCore.Results.Aquinas.InMetaphysicam.PrimumMovensPureAct.Solution
 public import TruthCore.Results.Aquinas.SummaContraGentiles.Chapter22Conjunction.Solution
 public import TruthCore.Results.Aquinas.SummaContraGentiles.Chapter22SecondCase.Solution

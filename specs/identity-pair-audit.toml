@@ -1,0 +1,28 @@
+[batch]
+vocab = "TruthCore.Latin.Aquinas.DeEnte.IdentityPairAudit"
+results = "TruthCore.Results.Aquinas.DeEnte.IdentityPairAudit"
+
+[[statement]]
+id = "Finite pair checks identify an actual identity ancestor under the reception restriction"
+lean = "FiniteIdentityPairAudits"
+definitions = ["8163859b-95b3-4dd2-8a69-541bd332f32f", "c15c1634-6d70-4ecb-8b5b-5592df955223", "3e9fb252-3f0b-4ed4-a683-7c36d255c357", "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72", "DEF-ESSE"]
+paraphrase = "Every actual esse gift is eligible under the rule that its distinct actual donor gives to an actual recipient whose represented esse differs from its essence. For each actual bearer there is a particular actual identity bearer and finitely many observed donor-recipient pairs such that every eligible relation matching those answers makes that identity bearer a supplierless ancestor of the recipient. The selected bearer, path and tests may vary by recipient. There is no requirement of a maximum or a direct gift to every recipient."
+
+[[argument]]
+id = "Certify an identity ancestor by pair checks along a mediated esse path"
+theorem = "finiteIdentityQueries"
+comparator_theorems = ["hiddenGiverAtIdentity"]
+premises = ["3d01134d-0b03-4469-a81a-a18d6e179fa0", "74231a5c-5cc1-4714-a715-b5408e076c42", "ee4ab504-c8fe-59bc-bc96-7cbeefed6410"]
+conclusion = "Finite pair checks identify an actual identity ancestor under the reception restriction"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Apply the finite pair certificate criterion to an identity ancestor without eligible donors"
+meaning = "An actual recipient either is an identity bearer or has a finite path from one under the ancestry premise. Excluding actual supply at identity makes the eligibility restriction sound. At that same identity bearer the eligibility rule leaves zero candidate donors, so the checked finite pair criterion applies to the actual path. The case split uses excluded middle. In the alternate hidden-giver models the baseline bearer's represented identity persists even as it receives esse. That assignment pinpoints the disputed exclusion. An interpretation allowing external production of a bearer with the represented identity must supply some other warrant for underivedness."
+
+[[argument]]
+id = "Recover finite complete-list root audits from identity-ancestor pair certificates"
+theorem = "listAuditsOfIdentityPairs"
+premises = ["Finite pair checks identify an actual identity ancestor under the reception restriction"]
+conclusion = "3008c7db-0236-4b03-9da7-f41ea8d8cac1"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Transfer each particular identity ancestor to its actual complete-list certificate"
+meaning = "At each actual recipient, the recorded pair answers are true of the actual esse relation. The existing root-ancestor theorem gives a finite complete-list certificate for that same identity witness and recipient. The earlier reception route already uses the same metaphysical premises for actual source access. The new comparison determines which finite observations could identify its source."

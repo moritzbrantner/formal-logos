@@ -1,0 +1,11 @@
+{
+  "id": "8318ddd4-006f-4a9b-8fde-440d0542b331",
+  "label": "Certify an identity ancestor by pair checks along a mediated esse path",
+  "argument_id": "806ed583-8a98-49ad-b199-050fef6504cd",
+  "challenge_module": "TruthCore.Results.Aquinas.DeEnte.IdentityPairAudit.Challenge",
+  "solution_module": "TruthCore.Results.Aquinas.DeEnte.IdentityPairAudit.Solution",
+  "theorem": "TruthCore.Results.Aquinas.DeEnte.IdentityPairAudit.finiteIdentityQueries",
+  "comparator_config": "results/8318ddd4-006f-4a9b-8fde-440d0542b331/comparator.json",
+  "status": "solution-present",
+  "description": "An actual recipient either is an identity bearer or has a finite path from one under the ancestry premise. Excluding actual supply at identity makes the eligibility restriction sound. At that same identity bearer the eligibility rule leaves zero candidate donors, so the checked finite pair criterion applies to the actual path. The case split uses excluded middle. In the alternate hidden-giver models the baseline bearer's represented identity persists even as it receives esse. That assignment pinpoints the disputed exclusion. An interpretation allowing external production of a bearer with the represented identity must supply some other warrant for underivedness."
+}

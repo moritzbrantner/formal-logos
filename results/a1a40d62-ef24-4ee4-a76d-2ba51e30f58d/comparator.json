@@ -1,0 +1,17 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.SupplierPairAudit.Challenge",
+  "solution_module": "TruthCore.Results.Causality.SupplierPairAudit.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.SupplierPairAudit.finiteCertificate",
+    "TruthCore.Results.Causality.SupplierPairAudit.certificateAt",
+    "TruthCore.Results.Causality.SupplierPairAudit.unrestrictedInfiniteRoster",
+    "TruthCore.Results.Causality.SupplierPairAudit.boundedRootMaskControl",
+    "TruthCore.Results.Causality.SupplierPairAudit.completeListAuditOfPairCertificate"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "enable_nanoda": true
+}
