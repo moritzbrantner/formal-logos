@@ -1,0 +1,18 @@
+[batch]
+vocab = "TruthCore.Explanation.LocationPersistence"
+results = "TruthCore.Results.Explanation.LocationPersistence"
+
+[[statement]]
+id = "An anchored stationary location preserves location and dated presence"
+lean = "AnchoredLocation"
+definitions = ["6e811e85-b983-5988-b20a-f4f3ee83c50e"]
+paraphrase = "For any designated bearer in one temporal history, assume that every reported location entails the bearer's presence on that date, that its location trace is stationary at every adjacent pair, and that it has a reported place at one supplied date. Then at every date that same place is reported and the bearer is present. This analyst control concerns dated presence only and assumes no giving relation."
+
+[[argument]]
+id = "Stationarity transports a location anchor and its presence presupposition"
+theorem = "anchoredLocation"
+premises = []
+conclusion = "An anchored stationary location preserves location and dated presence"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Transport the location anchor by stationarity and project presence by soundness"
+meaning = "Reuse constant_of_stationary to derive equality of every reported location with the anchor. Soundness then gives the presence of the same bearer at the same date. The shared premise about location reports applies only to a supplied trace, and is not a premise of existential inertia or a source of actuality without a location anchor."

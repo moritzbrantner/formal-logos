@@ -1,0 +1,11 @@
+{
+  "id": "1371f04e-8b90-4fb2-bda9-56ba9f02d8dc",
+  "label": "Stationarity transports a location anchor and its presence presupposition",
+  "argument_id": "7a707813-b012-42bc-a20b-87a0bb5dc7a1",
+  "challenge_module": "TruthCore.Results.Explanation.LocationPersistence.Challenge",
+  "solution_module": "TruthCore.Results.Explanation.LocationPersistence.Solution",
+  "theorem": "TruthCore.Results.Explanation.LocationPersistence.anchoredLocation",
+  "comparator_config": "results/1371f04e-8b90-4fb2-bda9-56ba9f02d8dc/comparator.json",
+  "status": "solution-present",
+  "description": "Reuse constant_of_stationary to derive equality of every reported location with the anchor. Soundness then gives the presence of the same bearer at the same date. The shared premise about location reports applies only to a supplied trace, and is not a premise of existential inertia or a source of actuality without a location anchor."
+}

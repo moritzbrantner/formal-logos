@@ -1,0 +1,9 @@
+{
+  "id": "f913dc34-49c6-4f3d-bade-5e5dc47ccef4",
+  "label": "An anchored stationary location preserves location and dated presence",
+  "paraphrase": "For any designated bearer in one temporal history, assume that every reported location entails the bearer's presence on that date, that its location trace is stationary at every adjacent pair, and that it has a reported place at one supplied date. Then at every date that same place is reported and the bearer is present. This analyst control concerns dated presence only and assumes no giving relation.",
+  "lean_declaration": "TruthCore.Explanation.LocationPersistence.AnchoredLocation",
+  "definition_ids": [
+    "6e811e85-b983-5988-b20a-f4f3ee83c50e"
+  ]
+}
