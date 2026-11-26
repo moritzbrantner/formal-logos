@@ -2,6 +2,9 @@ module
 
 public import TruthCore.Explanation.ExistentialInheritance
 public import TruthCore.Explanation.BruteContingencyParity
+public import TruthCore.Logic.ExcludedMiddle
+public import TruthCore.Logic.RootDescent
+public import TruthCore.Results.Kant.CosmologicalInference.LocalCausalityInsufficientUniversal.Solution
 public import TruthCore.Results.Causality.DerivativeJointPower.Solution
 
 @[expose] public section
@@ -359,6 +362,288 @@ theorem containedExemption :
   exact ⟨hHonors, fun h => hNone (h .base hBase), hStep, hReq, hAccept,
     hNot, fun h => hNot (h _ _ hStep hReq)⟩
 
+/-! ## Recursive expansion: actual necessity versus contingent stopping
+
+A chosen existence-reason about a being is not automatically an existential
+input. The next step requires its actual existence and an explicit selection
+coverage hypothesis. The modal split uses the existing selected-world sense
+and explicit excluded middle, not modal necessitation of the effect.
+-/
+
+/-- The selected token is admitted for x and is about an actually existing y.
+Unlike SelectedContingentReason this also permits a necessary endpoint. -/
+def SelectedActualReason (m : Model W B) (w : W)
+    (selected : B → Reason B → Prop) (x y : B) : Prop :=
+  ∃ r, selected x r ∧ m.explains w r (.fact x) ∧
+    TruthCore.Explanation.BruteContingencyParity.source r = y ∧
+    m.ontic.ExistsAt w y
+
+/-- Follow only the selected contingent-input relation. A complete accessible
+branch either reaches an unexplained contingent input or a reason about an
+actual necessary being. The claim does not require a global PSR or global WF.
+The selected reason must have an actual bearer; this is an open application,
+not a consequence of a token's name. -/
+theorem necessaryOrBruteOnAccessibleExpansion (m : Model W B) (w : W)
+    (selected : B → Reason B → Prop) (start : B)
+    (hEM : TruthCore.Logic.ExcludedMiddle)
+    (hStart : ContingentAt m.ontic w start)
+    (hAcc : Acc (fun y x => SelectedContingentReason m w selected x y) start)
+    (hSelect : ∀ x, ContingentAt m.ontic w x →
+      (∃ r, m.explains w r (.fact x)) → ∃ y, SelectedActualReason m w selected x y) :
+    ∃ x, ContingentAt m.ontic w x ∧
+      Relation.ReflTransGen (SelectedContingentReason m w selected) start x ∧
+      ((¬ ∃ r, m.explains w r (.fact x)) ∨
+        ∃ y, SelectedActualReason m w selected x y ∧ NecessaryAt m.ontic w y) := by
+  let P := fun x => ContingentAt m.ontic w x ∧
+    Relation.ReflTransGen (SelectedContingentReason m w selected) start x
+  let Stop := fun x => (¬ ∃ r, m.explains w r (.fact x)) ∨
+    ∃ y, SelectedActualReason m w selected x y ∧ NecessaryAt m.ontic w y
+  have step : ∀ x, P x → Stop x ∨
+      ∃ y, SelectedContingentReason m w selected x y ∧ P y := by
+    intro x hx
+    rcases hEM (∃ r, m.explains w r (.fact x)) with hReason | hNone
+    · obtain ⟨y, hy⟩ := hSelect x hx.1 hReason
+      rcases hEM (ContingentAt m.ontic w y) with hCont | hNotCont
+      · obtain ⟨r, hs, he, hsrc, _⟩ := hy
+        have hEdge : SelectedContingentReason m w selected x y :=
+          ⟨r, hs, he, hsrc, hCont⟩
+        exact Or.inr ⟨y, hEdge, hCont, Relation.ReflTransGen.tail hx.2 hEdge⟩
+      · have hActual : m.ontic.ExistsAt w y := by
+          obtain ⟨_, _, _, _, ha⟩ := hy
+          exact ha
+        have hNec : NecessaryAt m.ontic w y := by
+          intro v hv
+          rcases hEM (m.ontic.ExistsAt v y) with h | h
+          · exact h
+          · exact (hNotCont ⟨hActual, v, hv, h⟩).elim
+        exact Or.inl (Or.inr ⟨y, hy, hNec⟩)
+    · exact Or.inl (Or.inl hNone)
+  obtain ⟨x, hx, hStop⟩ := TruthCore.Logic.RootDescent.acc_descend
+    (P := P) (Stop := Stop) step hAcc ⟨hStart, Relation.ReflTransGen.refl⟩
+  exact ⟨x, hx.1, hx.2, hStop⟩
+
+/-- The demand-based route eliminates the contingent stopping horn only on
+the followed branch. The necessary being is the actual bearer of the last
+selected reason; it need not be uncaused, unique or divine. -/
+theorem necessaryInputOfHonoredExpansion (m : Model W B) (w : W)
+    (selected : B → Reason B → Prop)
+    (S : WhyStance (ExistenceFact B ⊕ Reason B)) (start : B)
+    (hEM : TruthCore.Logic.ExcludedMiddle)
+    (hStart : ContingentAt m.ontic w start)
+    (hAcc : Acc (fun y x => SelectedContingentReason m w selected x y) start)
+    (hSelect : ∀ x, ContingentAt m.ontic w x →
+      (∃ r, m.explains w r (.fact x)) → ∃ y, SelectedActualReason m w selected x y)
+    (hHonors : WhyHonors S (ofModel m) w)
+    (hAccept : ∀ x, ContingentAt m.ontic w x → S.accepts ((ofModel m).exist x))
+    (hProp : DemandPropagates m w selected S)
+    (hReq : S.requiresWhy ((ofModel m).exist start)) :
+    ∃ x y, Relation.ReflTransGen (SelectedContingentReason m w selected) start x ∧
+      SelectedActualReason m w selected x y ∧ NecessaryAt m.ontic w y := by
+  obtain ⟨x, hx, hp, hNone | ⟨y, hy, hn⟩⟩ :=
+    necessaryOrBruteOnAccessibleExpansion m w selected start hEM hStart hAcc hSelect
+  · exact (hNone (reasonOfHonoredDemand m w S x hHonors
+      (demandAlongSelectedReasons m w selected S hProp hp hReq) (hAccept x hx))).elim
+  · exact ⟨x, y, hp, hy, hn⟩
+
+/-- If the rival honors the local explanatory demand and denies actual
+necessary existence, the selected contingent expansion cannot be accessible.
+Nonaccessibility alone is not a certified infinite injective path. -/
+theorem noNecessaryForcesNonAccessibleExpansion (m : Model W B) (w : W)
+    (selected : B → Reason B → Prop)
+    (S : WhyStance (ExistenceFact B ⊕ Reason B)) (start : B)
+    (hEM : TruthCore.Logic.ExcludedMiddle)
+    (hStart : ContingentAt m.ontic w start)
+    (hSelect : ∀ x, ContingentAt m.ontic w x →
+      (∃ r, m.explains w r (.fact x)) → ∃ y, SelectedActualReason m w selected x y)
+    (hHonors : WhyHonors S (ofModel m) w)
+    (hAccept : ∀ x, ContingentAt m.ontic w x → S.accepts ((ofModel m).exist x))
+    (hProp : DemandPropagates m w selected S)
+    (hReq : S.requiresWhy ((ofModel m).exist start))
+    (hNo : ¬ NecessaryBeing m.ontic w) :
+    ¬ Acc (fun y x => SelectedContingentReason m w selected x y) start := by
+  intro hAcc
+  obtain ⟨_, y, _, hy, hn⟩ :=
+    necessaryInputOfHonoredExpansion m w selected S start hEM hStart hAcc
+      hSelect hHonors hAccept hProp hReq
+  obtain ⟨_, _, _, _, ha⟩ := hy
+  exact hNo ⟨y, ha, hn⟩
+
+/-- Reinterpret the existing local-causality counterexamples as reason-token
+models: only an actual distinct cause is admitted as a circumstantial
+reason. This is a model construction, not a general cause-to-reason law. -/
+def causesAsReasons (o : Ontic W B) : Model W B :=
+  ⟨o, fun w r f => match r, f with
+    | .intrinsic _, _ => False
+    | .circumstance y, .fact x => o.ExistsAt w y ∧ o.Causes w y x ∧ y ≠ x⟩
+
+def allContingentDemands (m : Model W B) (w : W) :
+    WhyStance (ExistenceFact B ⊕ Reason B) where
+  accepts := (ofModel m).holds w
+  core := fun _ => False
+  demands := fun _ => False
+  requiresWhy := fun f => ∃ x, f = (ofModel m).exist x ∧ ContingentAt m.ontic w x
+
+/-- A locally caused contingent roster can meet all these demands without
+any further condition on the upstream order. -/
+theorem localCausalExpansion (o : Ontic W B) (w : W)
+    (hLocal : LocalCausalPrinciple o) :
+    WhyHonors (allContingentDemands (causesAsReasons o) w) (ofModel (causesAsReasons o)) w ∧
+    DemandPropagates (causesAsReasons o) w (fun _ _ => True)
+      (allContingentDemands (causesAsReasons o) w) ∧
+    (∀ x, ContingentAt o w x →
+      (allContingentDemands (causesAsReasons o) w).accepts ((ofModel (causesAsReasons o)).exist x) ∧
+      (allContingentDemands (causesAsReasons o) w).requiresWhy ((ofModel (causesAsReasons o)).exist x)) ∧
+    (∀ x, ContingentAt o w x →
+      ∃ y, SelectedActualReason (causesAsReasons o) w (fun _ _ => True) x y) := by
+  refine ⟨?_, ?_, ?_, ?_⟩
+  · intro f hf _
+    obtain ⟨x, hEq, hx⟩ := hf
+    subst f
+    obtain ⟨y, hy, hc, hne⟩ := hLocal w x hx
+    exact ⟨Sum.inr (.circumstance y), hy, hc, hne⟩
+  · intro x y hEdge _
+    obtain ⟨_, _, _, _, hy⟩ := hEdge
+    exact ⟨y, rfl, hy⟩
+  · intro x hx
+    exact ⟨hx.1, x, rfl, hx⟩
+  · intro x hx
+    obtain ⟨y, hy, hc, hne⟩ := hLocal w x hx
+    exact ⟨y, .circumstance y, trivial, ⟨hy, hc, hne⟩, rfl, hy⟩
+
+/-- Reuse the already certified infinite successor model. All contingent
+existence-demands are honored, actual selected input coverage holds, and no
+actual necessary being exists. No new metaphysical possibility claim. -/
+theorem regressDemandControl :
+    ∃ o : Ontic Bool (Bool × Nat), (∃ x, ContingentAt o false x) ∧
+      ¬ NecessaryBeing o false ∧
+      WhyHonors (allContingentDemands (causesAsReasons o) false)
+        (ofModel (causesAsReasons o)) false ∧
+      DemandPropagates (causesAsReasons o) false (fun _ _ => True)
+        (allContingentDemands (causesAsReasons o) false) ∧
+      (∀ x, ContingentAt o false x →
+        (allContingentDemands (causesAsReasons o) false).accepts
+          ((ofModel (causesAsReasons o)).exist x) ∧
+        (allContingentDemands (causesAsReasons o) false).requiresWhy
+          ((ofModel (causesAsReasons o)).exist x)) ∧
+      (∀ x, ContingentAt o false x →
+        ∃ y, SelectedActualReason (causesAsReasons o) false (fun _ _ => True) x y) := by
+  obtain ⟨o, _, hLocal, hCont, hNo⟩ :=
+    TruthCore.Results.Kant.CosmologicalInference.LocalCausalityInsufficientUniversal.localCausalityInsufficientUniversal
+  exact ⟨o, hCont, hNo, localCausalExpansion o false hLocal⟩
+
+/-- Two actual contingent bearers with reciprocal distinct local causes. -/
+def circularOntic : Ontic Bool Bool :=
+  ⟨⟨fun _ _ => True⟩, fun w _ => w = false, fun _ y x => y ≠ x⟩
+
+theorem circularLocal : LocalCausalPrinciple circularOntic := by
+  intro w x hx
+  cases x
+  · exact ⟨true, hx.1, Bool.noConfusion, Bool.noConfusion⟩
+  · exact ⟨false, hx.1, Bool.noConfusion, Bool.noConfusion⟩
+
+/-- The cyclic rival admits the same demand and input commitments. Merely
+requiring distinct sources does not exclude reciprocal explanation. -/
+theorem circularDemandControl :
+    (∃ x, ContingentAt circularOntic false x) ∧ ¬ NecessaryBeing circularOntic false ∧
+    WhyHonors (allContingentDemands (causesAsReasons circularOntic) false)
+      (ofModel (causesAsReasons circularOntic)) false ∧
+    DemandPropagates (causesAsReasons circularOntic) false (fun _ _ => True)
+      (allContingentDemands (causesAsReasons circularOntic) false) ∧
+    (∀ x, ContingentAt circularOntic false x →
+      (allContingentDemands (causesAsReasons circularOntic) false).accepts
+        ((ofModel (causesAsReasons circularOntic)).exist x) ∧
+      (allContingentDemands (causesAsReasons circularOntic) false).requiresWhy
+        ((ofModel (causesAsReasons circularOntic)).exist x)) ∧
+    (∀ x, ContingentAt circularOntic false x →
+      ∃ y, SelectedActualReason (causesAsReasons circularOntic) false (fun _ _ => True) x y) := by
+  refine ⟨⟨false, rfl, true, trivial, Bool.noConfusion⟩, ?_,
+    localCausalExpansion circularOntic false circularLocal⟩
+  rintro ⟨x, _, hn⟩
+  exact Bool.noConfusion (hn true trivial)
+
 end DemandPilot
+
+/-! ## Expanding whole groups of explanatory inputs
+
+Use the existing inductive FullSupply, including enablers. This result
+requires a completed inductive derivation, not just a closed account or
+pointwise local reasons. It places no global well-foundedness condition on
+the graph, which may include cycles and infinite alternatives elsewhere.
+-/
+namespace ExpansionPilot
+
+variable {F G : Type}
+
+/-- Actual being-level projection of an admitted input record: y is the
+bearer of an existence fact used to produce the recorded existence of x.
+Membership is not by itself a claim of metaphysical indispensability. -/
+def ActualExistenceInput (A : Arena W B F) (w : W) (h : Groups F G)
+    (y x : B) : Prop :=
+  A.ontic.ExistsAt w y ∧ h.graph.edge (A.exist y) (A.exist x)
+
+/-- Follow the submitted inductive derivation. If every admitted rule for
+the existence of a contingent being uses at least one actual existential
+input, one can trace the target to an actual necessary bearer or to a
+contingent primitive leaf. An unrelated necessary background cannot
+satisfy the conclusion without a path. A primitive leaf might have a reason
+outside this expansion; it is not automatically metaphysically brute. -/
+theorem necessaryOrPrimitiveOfFullSupply (A : Arena W B F) (w : W)
+    (h : Groups F G) (Stop : F → Prop)
+    (hEM : TruthCore.Logic.ExcludedMiddle)
+    (hInput : ∀ g x, h.admitted g → h.effect g = A.exist x →
+      ContingentAt A.ontic w x →
+      ∃ y, A.ontic.ExistsAt w y ∧ A.exist y ∈ h.members g)
+    (x : B) (hx : ContingentAt A.ontic w x)
+    (hSupply : FullSupply h Stop (A.exist x)) :
+    ∃ y, Relation.ReflTransGen (ActualExistenceInput A w h) y x ∧
+      ((A.ontic.ExistsAt w y ∧ NecessaryAt A.ontic w y) ∨
+        (ContingentAt A.ontic w y ∧ Stop (A.exist y))) := by
+  have trace : ∀ f, FullSupply h Stop f →
+      ∀ z, f = A.exist z → ContingentAt A.ontic w z →
+      ∃ y, Relation.ReflTransGen (ActualExistenceInput A w h) y z ∧
+        ((A.ontic.ExistsAt w y ∧ NecessaryAt A.ontic w y) ∨
+          (ContingentAt A.ontic w y ∧ Stop (A.exist y))) := by
+    intro f hs
+    induction hs with
+    | intrinsic e he =>
+      intro z hz hCont
+      exact ⟨z, Relation.ReflTransGen.refl, Or.inr ⟨hCont, hz ▸ he⟩⟩
+    | joint g hg _ ih =>
+      intro z hz hCont
+      obtain ⟨a, ha, hMember⟩ := hInput g z hg hz hCont
+      have hEdge : ActualExistenceInput A w h a z := ⟨ha, g, hg, hz, hMember⟩
+      rcases hEM (ContingentAt A.ontic w a) with hContA | hNotContA
+      · obtain ⟨y, hp, hLeaf⟩ := ih (A.exist a) hMember a rfl hContA
+        exact ⟨y, Relation.ReflTransGen.tail hp hEdge, hLeaf⟩
+      · have hn : NecessaryAt A.ontic w a := by
+          intro v hv
+          rcases hEM (A.ontic.ExistsAt v a) with hExists | hAbsent
+          · exact hExists
+          · exact (hNotContA ⟨ha, v, hv, hAbsent⟩).elim
+        exact ⟨a, Relation.ReflTransGen.tail Relation.ReflTransGen.refl hEdge,
+          Or.inl ⟨ha, hn⟩⟩
+  exact trace _ hSupply x rfl hx
+
+/-- A completed explanation that admits no contingent existence as a primitive
+leaf has an actual necessary input ancestor, even when the whole inventory
+or the whole relation is infinite. The no-contingent-leaf policy and the
+existential-input property are both open philosophical application premises. -/
+theorem necessaryInputOfFullSupply (A : Arena W B F) (w : W)
+    (h : Groups F G) (Stop : F → Prop)
+    (hEM : TruthCore.Logic.ExcludedMiddle)
+    (hInput : ∀ g x, h.admitted g → h.effect g = A.exist x →
+      ContingentAt A.ontic w x →
+      ∃ y, A.ontic.ExistsAt w y ∧ A.exist y ∈ h.members g)
+    (hStop : ∀ y, ContingentAt A.ontic w y → ¬ Stop (A.exist y))
+    (x : B) (hx : ContingentAt A.ontic w x)
+    (hSupply : FullSupply h Stop (A.exist x)) :
+    ∃ y, Relation.ReflTransGen (ActualExistenceInput A w h) y x ∧
+      A.ontic.ExistsAt w y ∧ NecessaryAt A.ontic w y := by
+  obtain ⟨y, hp, hNec | ⟨hy, hs⟩⟩ :=
+    necessaryOrPrimitiveOfFullSupply A w h Stop hEM hInput x hx hSupply
+  · exact ⟨y, hp, hNec⟩
+  · exact (hStop y hy hs).elim
+
+end ExpansionPilot
 
 end TruthCore.Results.Explanation.ExistentialInheritance
