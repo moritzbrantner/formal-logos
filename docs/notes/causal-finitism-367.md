@@ -117,6 +117,16 @@ in it. [Odds](../../corpus/results/07aaa585-ecf4-4584-a679-c9f02d294fcf.json)
 [Single charge](../../corpus/results/3cb00ff1-e0c9-4874-badf-d7f499a49f92.json)
 [Nonuniform discount control](../../corpus/results/d1c3835a-f5c9-4acf-8664-aa7720ccbd45.json)
 
+### How many choices does a chain of borrowers require?
+
+Suppose each receiver is active exactly when its sole upstream link is intact and its supplier is active. On one intact infinite chain, the state of a single receiver determines the state of every bearer. With several uncoupled chains, every assignment of on or off to the chains is possible. After cuts, a chain still has one such choice if some upstream tail is intact. Switching that tail on activates precisely those receivers with every upstream link intact. Cuts arbitrarily far upstream force the whole chain off. This generalizes the [single-chain proof](q44-inferential-dependency.md#a-stronger-source-free-rival-under-interventions). [Lean classification](../../TruthCore/Results/Causality/ParallelPowerTransmission/Solution.lean)
+
+Even on countably many intact chains, “all on” specifies a whole state in two words. Yet any countable catalogue of fully specified states misses a possible one: on chain `i`, choose the opposite of what entry `i` says about receiver zero. That state differs from every entry of **that catalogue**. The actual state could be one of its simplest entries. [Diagonal argument](../../corpus/results/483c27de-645e-437a-ab19-b1b9f1d675b5.json)
+
+For the Second Way this separates two applications of the razor. A theory postulating fewer additional **beings** can win on ontological headcount. A theory ascribing the same state to infinitely many borrowers can still use one law and one state choice. Observing an active receiver selects a solution of that law. Taking the observation itself as the productive explanation of that receiver would assume what needs explaining.
+
+A cut distinguishes the accounts when the proposed source supplies this same receiver through a path that survives the cut. The relay-only rule then predicts inactivity downstream of the broken link. A working feed on the receiver’s side predicts activity there. A source placed upstream of the break can give the same prediction as the relay-only rule. Even a verified surviving feed could itself receive power elsewhere. The existing [finite-grounding proof](../../corpus/results/FINITE-GROUNDING-HAS-SOURCE.json) reaches an intrinsic source under the substantive premise that actual power must travel a finite path from such a source. Whether actual giving of being requires that premise remains the crux.
+
 ## Omission controls and frontier
 
 Comparator checks a finite self-loop without loop exclusion, strict reverse
