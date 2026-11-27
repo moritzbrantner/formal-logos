@@ -28,10 +28,14 @@ intentionality) alike (results module: `simpleBearerHasNonRealStandIn`,
 `realStandInsGiveNoGoodGeneralFavouring`).
 
 **The conceptualist premise.** `NonRealContainmentIsApprehension`: whatever is
-in a bearer without being a real constituent of it is there only as an object of
-that bearer's apprehension. It is a general thesis about non-real being (the
-classical "beings of reason have being only in the intellect"), not a thesis
-about favouring; its warrant is assessed in other domains (negations, possibilia,
+in a bearer without being a real constituent of it is apprehended by that
+bearer. It is a general thesis about non-real being, not a thesis about
+favouring. It is related to the classical dictum that beings of reason have
+being only in an intellect, but it is not a consequence of it: it drops the
+dependence, indexes apprehension to the containing bearer, and ranges over every
+non-real contained item rather than over beings of reason (the two ranges
+coincide only if every non-real item is a being of reason, which A4 denies). Its
+warrant is assessed in other domains (negations, possibilia,
 propositions, relations to non-existents, distinctions within one thing). The
 rival A4 denies it: its modes are non-real, contained and mind-independent (a
 Scotist formal distinction a parte rei is the developed precedent). The content
@@ -77,10 +81,16 @@ candidates are a root's possible effects and false on a carrier with present
 inputs. -/
 def NoPresentCandidates (Present : S → X → Prop) : Prop := ∀ s x, ¬ Present s x
 
-/-- OPEN conceptualist premise about non-real being (analyst formulation; the
-classical "beings of reason have being only in the intellect", generalized):
+/-- OPEN conceptualist premise about non-real being (analyst formulation):
 whatever is in a bearer without being a real constituent of it is apprehended by
-that bearer. It is general: it does not mention favouring, value or roots. A
+that bearer. Compared with the classical dictum that beings of reason have being
+only in an intellect, it is weaker in dropping the dependence (it says only
+"apprehended") and stronger in indexing apprehension to the containing bearer
+(the dictum allows some other intellect). It also ranges over every non-real
+contained item, not only over beings of reason; the dictum reaches A4's modes
+only if every non-real item is a being of reason, which A4 denies. So it is not
+a consequence of the dictum. It is general: it does not mention favouring, value
+or roots. A
 bearer that apprehends nothing contains no non-real item. Denied by an account
 on which a simple nature contains mind-independent non-real modes (A4, the #1892
 objective-eminence status). -/
@@ -210,7 +220,10 @@ Artifacts: rows 1 and 2 differ only in apprehension, by construction (A4 is
 defined as a structural duplicate). Row 4 assigns apprehension to isolate the
 content premise; the template rival as such also denies apprehension. Row 3
 keeps every contained item real, so the simple-source theorem's conclusion is
-blocked by the failed simplicity, not shown false of composite thinkers. -/
+blocked by the failed simplicity, not shown false of composite thinkers. In rows
+2, 3 and 5 the root criterion fails because the row assigns no apprehension;
+row 5 shows that `NoPresentCandidates` is needed for the derivation, not that
+present inputs exclude apprehension. -/
 def PossibiliaControls : Prop :=
   (laneC contains noInputs Item.inner ∧ simple realBlob ∧ NoPresentCandidates noInputs ∧
     nra contains realBlob appInner ∧ ca contains noInputs Item.inner realBlob aboutItem ∧

@@ -86,6 +86,8 @@ the corpus sense.
 
 The adopted sense gives an abstract item "at most" being in the intellect. That
 is an upper bound, not the conceptualist thesis that non-real items have being
-only as objects of apprehension. Lane H1 registers that thesis, in a weaker
-typed form, as an open premise of a root-route derivation and assesses its
-warrant: [Do possibilities need a mind?](causal-perfection-transfer.md#do-possibilities-need-a-mind-conceptualism-and-non-real-plurality-at-a-simple-root-2026-11-27-provisional-2145)
+only as objects of apprehension. Lane H1 registers a related typed premise as
+an open premise of a root-route derivation and assesses its warrant. The typed
+premise is not a consequence of that thesis: it drops the dependence, but it
+requires apprehension by the bearer that contains the item and ranges over every
+non-real contained item: [Do possibilities need a mind?](causal-perfection-transfer.md#do-possibilities-need-a-mind-conceptualism-and-non-real-plurality-at-a-simple-root-2026-11-27-provisional-2145)
