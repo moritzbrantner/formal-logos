@@ -26,7 +26,8 @@
     "38963a9d-3db2-4d60-8b78-949e53693acd",
     "PR-1465",
     "68220715-e56a-469e-8cba-7d159e696fcd",
-    "3bc885c0-80c7-4ab2-b66c-35c27a1c3837"
+    "3bc885c0-80c7-4ab2-b66c-35c27a1c3837",
+    "PR-2118"
   ],
   "blocker": "Coverage and no-novel-edge remain OPEN. Next tests: (1) warrant for coverage against accounts that let a necessary concretum lack every actual concrete supporter while having one elsewhere, including whether grounding-contingentism (candidate leads Leuenberger 2014, Skiles 2015; from memory and unread, read before citing; logic-first, no source campaign) independently motivates the rival's shape (ii), and whether a formalised essence-based dependence account that implies coverage is available without presupposing the endpoint; (2) whether J1 can be weakened to its selected-world instance in underivedFromNecessityOfCoverage (only that instance is used) and registered as a weaker sibling; (3) whether the ungrounded witness of underivedOfCoverage (the actual necessary root itself) is the root NecessaryClassicalGodRoot.derive starts from (spine item 3, other owner). New scope: justify rigid ascent and asymmetry for the selected support interpretation before using the refutation as an established result. Its conclusion addresses reciprocal support only and cannot establish well-foundedness of the support union.",
   "workers": [
@@ -35,7 +36,8 @@
       "provider": "codex",
       "model": "gpt-6.2-sol",
       "effort": "high",
-      "date": "2026-11-27"
+      "date": "2026-11-27",
+      "pr": "PR-2118"
     }
   ]
 }
