@@ -103,16 +103,35 @@ theorem selfApplicationIndividuates {B D S X C : Type} (Has : B → D → Prop)
   exact ⟨φ, d, hφ, TruthCore.Results.Causality.AxiarchicFoundation.favouredIndividuated (ψ s)
     (rel b ψ s) (stand b) (hReal b ψ hψ s) (hIrr b ψ hψ s) _ _ hfav⟩
 
-/-- The second-order standard is the same in every scenario, so no second-order
-profile depends on it under any control (law 4 of `GoodDependenceLaws`): strong
-self-application is a fixed second-order orientation, not a value-dependent
-(good-general) one, whoever bears it. -/
+/-- The second-order standard is scenario-invariant, so no second-order profile
+depends on it under any control (law 4). This does not make any profile `Fixed`;
+see `SecondOrderStandardAt` for the scenario-relative reading. -/
 theorem secondOrderStandardNotDependedOn {S X D Z : Type} (good : S → X → X → Prop)
     (favours : Profile S X → D) (ctrl : S → Z) (ψ : Profile S D) (s : S) (d d' : D) :
     ¬ TruthCore.Causality.GoodFavouring.DependsUnder (SecondOrderStandard good favours) ctrl ψ s
       d d' :=
   TruthCore.Results.Causality.GoodFavouring.goodDependenceLaws.2.2.2.1 S D Z _ ctrl ψ s d d'
     (fun _ _ _ => rfl)
+
+/-- Under the scenario-relative standard, if each profile's agreement with value
+is the same in every scenario (as at a necessary source), the standard is
+invariant and no second-order profile depends on it under any control. -/
+theorem invariantAlignmentNoSecondOrderDependence {S X D Z : Type} (good : S → X → X → Prop)
+    (favours : Profile S X → D)
+    (hInv : ∀ φ s t, TruthCore.Causality.GoodFavouring.AlignedAt φ good s ↔
+      TruthCore.Causality.GoodFavouring.AlignedAt φ good t)
+    (ctrl : S → Z) (ψ : Profile S D) (s : S) (d d' : D) :
+    ¬ TruthCore.Causality.GoodFavouring.DependsUnder (SecondOrderStandardAt good favours) ctrl ψ
+      s d d' := by
+  apply TruthCore.Results.Causality.GoodFavouring.goodDependenceLaws.2.2.2.1 S D Z _ ctrl ψ s d d'
+  intro a b _
+  funext e e'
+  apply propext
+  constructor
+  · rintro ⟨φ, φ', h1, h2, h3, h4⟩
+    exact ⟨φ, φ', h1, h2, (hInv φ a b).1 h3, fun h => h4 ((hInv φ' a b).2 h)⟩
+  · rintro ⟨φ, φ', h1, h2, h3, h4⟩
+    exact ⟨φ, φ', h1, h2, (hInv φ a b).2 h3, fun h => h4 ((hInv φ' a b).1 h)⟩
 
 /-! ## Control -/
 
@@ -148,6 +167,28 @@ theorem guidanceTable : GuidanceTable := by
     ?_, fun _ => ⟨goodTracking, extraOnly, rfl, rfl, hTrackGood, hNotTrackExtra⟩⟩
   rintro ⟨-, -, h⟩
   exact absurd (show w .base .fit .d < w .base .fit .c from h) (by decide)
+
+/-- Lean-only: under the scenario-relative standard a second-order profile can
+depend on it. The fit-blind profile agrees with value at `base`, not at `raised`,
+so a bearer whose favourings agree with value only sometimes is not confined to a
+fixed second-order orientation. -/
+theorem scenarioRelativeStandardDependedOn :
+    TruthCore.Causality.GoodFavouring.DependsUnder (SecondOrderStandardAt good id) noCtrl
+      (SecondOrderStandardAt good id) .raised goodTracking extraOnly := by
+  have hAlignG : ∀ s, TruthCore.Causality.GoodFavouring.AlignedAt goodTracking good s :=
+    fun _ _ _ => Iff.rfl
+  have hBaseAligned : TruthCore.Causality.GoodFavouring.AlignedAt extraOnly good .base := by
+    intro x y
+    cases x <;> cases y <;> simp [extraOnly, good, w]
+  have hRaisedNot : ¬ TruthCore.Causality.GoodFavouring.AlignedAt extraOnly good .raised := by
+    intro h
+    exact (h .c .d).1 (show w .raised .extra .d < w .raised .extra .c by decide)
+  have hStd : SecondOrderStandardAt good id .raised goodTracking extraOnly :=
+    ⟨goodTracking, extraOnly, rfl, rfl, hAlignG _, hRaisedNot⟩
+  refine ⟨hStd, hStd, .base, rfl, ?_, ?_⟩ <;>
+  · rintro ⟨φ, φ', h1, h2, -, h4⟩
+    subst h1; subst h2
+    exact h4 hBaseAligned
 
 end Control
 

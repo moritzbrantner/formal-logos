@@ -6423,20 +6423,47 @@ favouring the value-tracking favouring over one that does not track value. The
 table exhibits the standard: the good-tracking profile ranks over the fit-blind
 one in every scenario.
 
-Lean-only `secondOrderStandardNotDependedOn` proves that the standard is the same
-in every scenario, because tracking quantifies over all scenarios. So no
+Lean-only `secondOrderStandardNotDependedOn` proves that this standard is the
+same in every scenario, because tracking quantifies over all scenarios. So no
 second-order profile depends on it under any control (law 4 of
-`GoodDependenceLaws`). Strong self-application is therefore a fixed
-second-order orientation, not a value-dependent one, whoever bears it. That is
-parity at second order.
+`GoodDependenceLaws`). Strong self-application on this standard supports no
+value-dependence. That does not show that any second-order profile is `Fixed`.
 
-There is a further consequence for both sides. Responsiveness to one's own
-standard, where that standard is necessary, has the form of an orientation fixed
-to one content. The rationale behind horn A of Lane 4 is "restriction of
-favouring content is limitation". If it were extended to second-order
-favourings, it would reach the personal source's necessary self-love as much as
-any rival. Horn A as encoded concerns first-order favourings, so this extension
-is not made here.
+The invariance comes from encoding the standard with global tracking. The
+stronger faithful reading is scenario-relative: at s, a favouring that agrees
+with the value order at s ranks above one that does not
+(`SecondOrderStandardAt`). Two Lean-only results cover it:
+
+- `scenarioRelativeStandardDependedOn`. On the guidance carrier, the fit-blind
+  profile agrees with value at base but not at raised. So the second-order
+  profile that follows the scenario-relative standard depends on it. A bearer
+  whose favourings agree with value in some scenarios and not others can show
+  value-dependence at second order.
+- `invariantAlignmentNoSecondOrderDependence`. If whether each profile agrees
+  with value is the same in every scenario, the scenario-relative standard is
+  invariant too, and no second-order profile depends on it. That is the case
+  at a necessary source whose favourings and value standard do not vary.
+
+So at the root, strong self-application supports no value-dependence at second
+order on either side. Parity there follows from A4 being a structural duplicate
+of the personal source.
+
+**A note on horn A, stated symmetrically.** Lane 4's horn A rests on the
+rationale "restriction of favouring content is limitation". Its encoded test of
+non-restriction is the value-dependence mark (good-generality). That mark cannot
+tell invariant value-tracking from fixedness: a necessary self-favouring that
+tracks an invariant value standard depends on nothing, because nothing varies.
+It is not restricted relative to that standard, however. It ranks exactly as the
+standard ranks.
+
+So, if horn A's rationale were extended to second-order favourings:
+
+- using dependence as the criterion of non-restriction would misclassify the
+  personal source's necessary self-love as restricted;
+- using restriction relative to value would let self-love escape.
+
+Horn A as encoded concerns first-order favourings, and no extension is made
+here.
 
 **Other readings.**
 
@@ -6470,7 +6497,7 @@ is not made here.
 | Counterfactual guidance, outweighed reason raised alone | passes (good-tracking profile) | passes (same profile) | no; profile-level, and A4 is a structural duplicate |
 | Registration of the outweighed respect in the actual state | needs per-respect ideas (an analyst extension) | needs per-respect modes (a new commitment) | not tested; the demand is the same and the proposed payments differ (below) |
 | Weak self-application: own favouring over a non-present determination | reduces to the criterion at second order | the same | no; relocates the same bridge |
-| Strong self-application: responsiveness to the second-order standard | a fixed second-order orientation | the same | no; the standard is scenario-invariant |
+| Strong self-application: responsiveness to the second-order standard | at a necessary source, no value-dependence on the standard (global or scenario-relative) | the same | no; parity follows from the structural duplicate. A contingent bearer can show second-order dependence on the scenario-relative standard. The standard is scenario-invariant |
 | Self-love | yes (q.19 a.3) | the rival's own posit | no |
 | Ranking possible alternatives to its own favouring | unavailable at a necessary source | unavailable | no |
 | Self-apprehension | yes by definition | no by definition | presupposes the dispute |
@@ -6499,7 +6526,9 @@ of that plurality.
   the second-order standard.
 - Guidance separates good-tracking favouring from blind and fixed favouring.
   It is blind to the difference between A4 and the personal source.
-- Strong self-application is a fixed orientation for both sides.
+- Strong self-application supports no value-dependence on its standard at a
+  necessary source, for both sides. A contingent bearer can show it on the
+  scenario-relative standard.
 - Registration and weak self-application relocate the same demand.
 - Because A4 is a structural duplicate, none of this is new evidence for
   parity. It shows that a structural test cannot separate the two.
@@ -6567,6 +6596,19 @@ All are repaired on this branch after `8a36e93f0`:
 - `singleRespectTrackerNotGuided`, with the D-nature claim restricted;
 - strong self-application, with `secondOrderStandardNotDependedOn`;
 - the prose and table above.
+
+The targeted re-check of `8a36e93f0..134e91c95` accepted the repairs of P1-1,
+P1-2 and all five P2s.
+
+It found one residual P1. The prose called strong self-application "a fixed
+orientation, whoever bears it", but the lemma shows only that nothing depends on
+a scenario-invariant standard.
+
+It also found one new P2: the horn-A sentence was one-sided.
+
+Both are fixed in the following commit. That commit adds the scenario-relative
+standard and its two Lean-only results, restricts the claim to a necessary
+source, and states the horn-A point symmetrically.
 
 [Attempt record](../../corpus/attempts/6429463e-be7f-467a-a64f-de8d2e13c06e.json)
 

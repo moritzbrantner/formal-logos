@@ -91,6 +91,14 @@ def SecondOrderStandard (good : S → X → X → Prop) (favours : Profile S X �
     S → D → D → Prop :=
   fun _ d d' => ∃ φ φ', d = favours φ ∧ d' = favours φ' ∧ Tracks φ good ∧ ¬ Tracks φ' good
 
+/-- The SCENARIO-RELATIVE SECOND-ORDER STANDARD: at `s`, a favouring determination
+whose profile agrees with the value order at `s` ranks above one whose profile
+does not. Unlike `SecondOrderStandard` it can vary across scenarios. -/
+def SecondOrderStandardAt (good : S → X → X → Prop) (favours : Profile S X → D) :
+    S → D → D → Prop :=
+  fun s d d' => ∃ φ φ', d = favours φ ∧ d' = favours φ' ∧
+    GoodFavouring.AlignedAt φ good s ∧ ¬ GoodFavouring.AlignedAt φ' good s
+
 /-- STRONG SELF-APPLICATION: some second-order favouring of `b` favours, at some
 scenario, one of `b`'s own favouring determinations over another favouring
 determination, and the second-order standard ranks them that way. -/
