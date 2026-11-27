@@ -1,0 +1,10 @@
+{
+  "id": "b653ba6e-c23d-4f90-a779-2c6ef294947d",
+  "label": "Content-fixed favouring laws test the existential PSR for contingents",
+  "subject_kind": "result",
+  "subject_id": "652f9917-57ce-4eac-b5d0-1595fa8f6c90",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "608a262d-08fe-4dfd-9413-67e2ecf35b84",
+  "note": "Tests what an invariant reason of the kind the existential PSR admits can explain about a contingent outcome under a favouring standard that a re-description of the outcome fails: contrasts its content favours, never whatever outcome occurs."
+}

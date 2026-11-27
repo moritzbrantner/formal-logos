@@ -1,0 +1,11 @@
+{
+  "id": "652f9917-57ce-4eac-b5d0-1595fa8f6c90",
+  "label": "Content-fixed favouring laws, from the definitions",
+  "argument_id": "8ebb951a-044a-41d6-8614-40eff45072a5",
+  "challenge_module": "TruthCore.Results.Causality.GoodFavouring.Challenge",
+  "solution_module": "TruthCore.Results.Causality.GoodFavouring.Solution",
+  "theorem": "TruthCore.Results.Causality.GoodFavouring.favouringStandardLaws",
+  "comparator_config": "results/652f9917-57ce-4eac-b5d0-1595fa8f6c90/comparator.json",
+  "status": "solution-present",
+  "description": "A placed diagnostic for 608a262d. It supplies the discriminating contrastive standard that SelectionScope's determination laws left open: the explanans is individuated independently of the outcome partition, and it is not met trivially, because an outcome-independent asymmetric content cannot select whatever outcome occurs (the #742 incompatible core on choice cells), while the re-description that meets the determination standard (law 8) does so only by being outcome-dependent. Good-bounded favouring explains no contrast between outcomes that the standard ties and selects nothing when every outcome is bettered, whoever the source. Establishes no premise."
+}

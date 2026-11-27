@@ -1,0 +1,11 @@
+{
+  "id": "b5fe7a87-05d6-47f5-9dd5-a2ffe11815f4",
+  "label": "Controlled dependence laws, from the definitions",
+  "argument_id": "e26fd16a-7f7c-4e9b-ae50-d1b2f2e96382",
+  "challenge_module": "TruthCore.Results.Causality.GoodFavouring.Challenge",
+  "solution_module": "TruthCore.Results.Causality.GoodFavouring.Solution",
+  "theorem": "TruthCore.Results.Causality.GoodFavouring.goodDependenceLaws",
+  "comparator_config": "results/b5fe7a87-05d6-47f5-9dd5-a2ffe11815f4/comparator.json",
+  "status": "solution-present",
+  "description": "A placed diagnostic for 4be0f774. The premise asks for a plan that is apprehended as good and actually governs each rational giving; its recorded blocker (attempts c3f27519, 83bd8a2c) asks what distinguishes governing from describing the effect. Controlled dependence supplies one testable criterion: a source's favouring depends on a plan's or a good's standard only if it is not fixed and does not factor through the controlled feature, so a fixed profile that agrees with an apprehended plan (the foreseen control) never depends on it. The same laws show the limit: the plan standard ignores ApprehendsAsGood and SpecifiesGiving, so dependence on it supplies neither apprehension nor the primitive governing relation, and if goodness is fixed by the controlled feature no aligned profile depends on it, personal or impersonal. Establishes no premise."
+}

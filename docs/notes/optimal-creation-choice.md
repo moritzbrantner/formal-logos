@@ -4187,6 +4187,348 @@ declaration or proof change (one docstring is reworded):
 - Codex findings: necessary production *can permit*, rather than *keeps*,
   the weaker scopes; `tiedNoEmptyChoice` omits only optional recipients.
 
+## Favouring, end-content and goodness under one standard (#2145; 2026-11-27)
+
+Research program [#2145](https://github.com/moritzbrantner/formal-logos/issues/2145),
+Investigations 2 and 3 (Lane 2b). It continues §§59–64 on the same carrier.
+Questions: is there a contrastive standard that the bare re-description of §59
+law 8 fails, and what does it say about rational exercise, a good-sensitive
+propensity, intrinsic generative finality and chance? What separates producing
+a beneficial arrangement from producing it *because of its goodness*, and does
+original finality require the latter? The module
+[`TruthCore/Causality/GoodFavouring.lean`](../../TruthCore/Causality/GoodFavouring.lean)
+and its results (`specs/good-favouring.toml`) certify §§65–67. Everything is an
+analyst formulation with attribution deferred. Every model is a finite
+structural surrogate. It witnesses one formal interpretation, not a
+metaphysical possibility, and types no intellect, apprehension, chance
+measure or simplicity. Which account a profile represents is an interpretive
+assignment. Draft #2107's coordination fixture and the `WillVersusChance`
+module are not reused or edited.
+
+### 65. A favouring standard that the re-description fails
+
+On the §59 cell carrier, an explanatory level supplies at each history a
+*content*, and each content carries a favouring relation on outcomes. The
+level explains "the actual outcome rather than y" when its actual content
+favours the actual outcome over y (`FavouringExplains`). This is pro tanto: y
+may lie in the level's cell. The content is *outcome-independent* when it is
+the same at every compared history (`OutcomeIndependent`): it is fixed before,
+and independently of, which outcome occurs. The standard is the cell-carrier
+analogue of SELECTING_AN_OUTCOME_1 (`NetSelects`, #742). It is not one of that
+term's senses and no bridge to it is claimed.
+
+Result `652f9917` (`favouringStandardLaws`, premise-free, placed diagnostic
+`tests` `608a262d`) proves,
+for every frame:
+
+1. **Non-triviality.** An outcome-independent content with asymmetric favouring
+   does not favour each history's outcome over every other realized outcome at
+   every history of a scope with a contingent outcome. This is the #742
+   incompatible core (base-fixed favouring, selection at both histories) on
+   choice cells. It is not a new incompatibility.
+2. **The re-description.** The outcome itself, as content favouring itself over
+   everything else, selects at every history and has asymmetric favouring. With
+   a contingent outcome it is not outcome-independent. Outcome independence is
+   therefore exactly what separates it from law 1.
+3. A content constant on the cells of an invariant level (§59) is
+   outcome-independent.
+4. **Ties.** A content that favours only what a standard G ranks higher
+   (good-bounded) does not select the actual outcome when another realized
+   outcome is not ranked below it.
+5. **No best.** If G is asymmetric and every realized outcome is bettered by a
+   realized outcome, no good-bounded content selects.
+
+So the standard can fail. An outcome-independent content explains a contrast
+only if the outcome it favours is the one that occurs. Law 8 of §59 could not
+fail in this way. The price is that this standard does not ask for the
+*determination* of the outcome: favouring is compatible with the rival's
+occurring. Determination (SELECTING_AN_OUTCOME_2) and favouring
+(SELECTING_AN_OUTCOME_1) remain different explananda.
+
+### 66. Six matched profiles under that standard
+
+Result `da0125fd` (`goodFavouringTable`, placed diagnostic `tests` `4be0f774`)
+uses the §60
+carrier: total omission, D-realizing c and d, unfit z, the exercise frame with
+histories c and d, actual outcome c. The *content* of each account is a
+*profile*: its favouring in each of four variation scenarios. In `actual`, c and
+d realize D and are tied, and z and omission do not. In `reversal`, the physical
+provisions are the same, but D is realized by c and z, not d (the
+recipient-relative reversal of
+[will-versus-chance.md §C](will-versus-chance.md#c-test-reciprocal-relevance-to-recipients-not-a-favored-physical-pattern)).
+In `valueless`, D-realization is as actual and nothing is better than anything.
+In `cBetter`, D-realization is as actual and c is better than d. The last two
+vary goodness at fixed D-realization. They are counterpossible if goodness
+facts about candidates are necessary (§67).
+
+| Profile (interpretation) | c rather than z, omission (actual) | c rather than d (actual) | selects c (actual) | c rather than d (cBetter) | depends on D-realization (d over z) | depends on goodness, D fixed (c over z) |
+| --- | --- | --- | --- | --- | --- | --- |
+| Chance (no favouring) | no | no | no | no | no | no |
+| Proxy: propensity to the physical provision type of c, d | yes | no | no | no | no | no |
+| D-nature: intrinsic generative finality directed to D | yes | no | no | no | yes | no |
+| Determined will: a will with a fixed preference for D | yes | no | no | no | yes | no |
+| Good-general nature: favours what is better (axiarchic-type, impersonal) | yes | no | no | yes (selects) | yes | yes |
+| Rational exercise under a correctly apprehended good | yes | no | no | yes (selects) | yes | yes |
+
+The table rows are evaluated in Lean. The two good-tracking profiles are the
+same function, and so are the D-nature and the determined will (row 7). Their
+parity is definitional, as law 7 of §59 was.
+
+**Answers to Question A.**
+
+- *At the actual standard there is parity among every non-chance account.* The
+  proxy, the D-nature, the determined will, the good-general nature and
+  rational exercise explain the same contrasts: c rather than z, and c rather
+  than omission. Chance explains none. The discriminating standard therefore
+  does not separate rational exercise from intrinsic generative finality on the
+  actual contrasts. It separates both from chance.
+- *The actual selection between equally good D-realizations is explained by no
+  favouring account* (law 4). If c and d are tied, the selection of c over d
+  comes only from an outcome-fine exercise (§59 law 6), whether that exercise is
+  an adoption, an actualization or a generative exercise. This holds whatever
+  the bearer. Only where c is better (`cBetter`) do good-tracking profiles select
+  c, and then the selection is by goodness, not by an exercise.
+- *The differences appear only under variation, and they do not follow the
+  personal/impersonal line.* Recipient-relative reversal separates the proxy
+  from D-tracking. Goodness variation at fixed D separates D-tracking from
+  good-tracking, and that line puts the determined will with the D-nature and
+  rational exercise with the good-general nature.
+- *The difference does not come from a stipulated label.* Each row's verdict
+  comes from what the profile is a function of (laws 1–2 of
+  `b5fe7a87`). A biased content that favours c over d with no
+  goodness difference would explain "c rather than d" in `actual`. It is a
+  fixed profile, so by law 2 it fails both dependence columns.
+
+**Asymmetric-burden check (one criterion, both sides).**
+
+| Criterion | Personal reading | Impersonal reading | Same verdict? |
+| --- | --- | --- | --- |
+| Outcome-independent favouring at the actual standard | rational exercise: c over z and omission, not over d | D-nature, good-general nature: the same | yes |
+| Selection between tied D-realizers | not by favouring; exercise (§59 law 6) | not by favouring; exercise | yes |
+| Dependence on D-realization (reversal) | rational exercise, determined will: yes | D-nature, good-general: yes; proxy: no | yes, per profile |
+| Dependence on goodness at fixed D | rational: yes; determined will: no | good-general: yes; D-nature: no | yes, per profile |
+| Without counterpossible goodness variation | no aligned profile depends on goodness (law 4) | the same | yes |
+| Apprehended plan governs (BECAUSE_OF_GOODNESS_3) | asserted by the account; not supplied by dependence (law 7) | denied by the account | not tested by these laws |
+
+No criterion here is applied to one side only. Where the verdict differs, it
+differs between profiles that appear on both sides.
+
+### 67. Beneficial arrangement versus "because of its goodness"
+
+Result `b5fe7a87` (`goodDependenceLaws`, placed diagnostic `tests` `4be0f774`)
+types controlled
+dependence. A profile depends on a feature g, with a feature held fixed, when it
+favours x over y and, in some scenario that agrees on the held feature, neither
+g nor the profile ranks x over y. The laws:
+
+1. A profile that factors through the held feature depends on nothing under
+   that control.
+2. A fixed profile depends on nothing.
+3. A profile tracking f depends on g exactly when f ranks x over y and some
+   scenario agreeing on the control has neither ranking it.
+4. **No variation, no dependence.** If g factors through the held feature, a
+   profile depends on g only where g does not rank x over y. So no profile
+   aligned with g depends on it.
+5. A fixed profile tracks only a fixed feature.
+6. Profiles tracking the same feature have the same dependence verdicts.
+7. **The plan standard ignores apprehension.** The standard a
+   `PracticalSpecification.Plan` induces on outcomes (`planStandard`) reads only
+   `Requirement`. Replacing `ApprehendsAsGood` and `SpecifiesGiving` leaves it
+   and every dependence verdict on it unchanged.
+
+Disambiguation BECAUSE_OF_GOODNESS keeps three readings apart:
+
+- **BECAUSE_OF_GOODNESS_1** (`BecauseOfContent`): the favouring depends on the
+  realization of the end D. The end content specifies the orientation. This is
+  the "proper end-description" explanation of
+  [will-versus-chance.md §C](will-versus-chance.md#c-test-reciprocal-relevance-to-recipients-not-a-favored-physical-pattern),
+  now with a failure condition: a proxy aligned with D in the actual scenario
+  fails it at the reversal.
+- **BECAUSE_OF_GOODNESS_2** (`BecauseOfGoodness`): the favouring depends on
+  betterness with D-realization held fixed.
+- **BECAUSE_OF_GOODNESS_3** (`PracticalSpecification.Governing`): an
+  apprehended plan actually governs the giving. This is the reading of
+  `4be0f774`.
+
+What follows, and what carries it:
+
+- **(i) does not entail (ii) in reading 2.** The D-nature favours c over z, and
+  c is better (table row 6). Its favouring factors through D-realization, so it
+  does not depend on goodness (law 1). This is producing a beneficial
+  arrangement, and even producing it for its end D, without producing it
+  because of its goodness in reading 2. The determined will is the same.
+- **Reading 1 does not need apprehension.** The D-nature meets it. So the
+  noncognitive rival's claim to formal and final explanation under its
+  end-description survives a test that it could have failed.
+- **Reading 2 cuts across the bearer.** Good-general profiles meet it; profiles
+  determined to one end do not. This is a typed form of the classical contrast
+  between an appetite determined to one end and an appetite for the good as
+  such, without the classical claim that only the second is intellectual.
+- **Reading 2 needs counterpossible variation.** If goodness facts are fixed by
+  the candidates' contents, then betterness factors through D-realization.
+  Then, by law 4, no account aligned with goodness depends on it, the personal
+  account included. Whoever relies on reading 2 must admit variation of
+  goodness at fixed content, or treat the profile as an intensional fact about
+  what the favouring is a function of.
+- **Readings 1 and 2 do not supply reading 3** (law 7). The dependence criterion
+  is one testable answer to the blocker of attempts `c3f27519` and `83bd8a2c`
+  ("show why the plan governs this giving rather than simply describing its
+  effect"). A profile fixed to an effect that agrees with an apprehended plan
+  never depends on it. The criterion is met by a good-tracking profile with no
+  apprehension field. So it does not supply the premise's apprehension or its
+  primitive `SpecifiesGiving`. Reading `SpecifiesGiving` as controlled
+  dependence is an OPEN interpretive bridge.
+
+**Does original finality require "because of goodness"?** "Requires" here means
+entailment under explicit premises. Fix the explanandum of original objective
+finality as the conjunction of three conditions. (E1) The produced
+arrangement is beneficial: c is better than z and omission. (E2) The origin's
+outcome-independent favouring explains c rather than z (§65). (E3) The
+favouring is the origin's own: no further determining principle supplies it.
+The proxy profile also satisfies E1–E3, so they describe a beneficial
+arrangement from the origin's own favouring, not yet finality. Finality adds
+(F) reading 1: the favouring depends on the realization of D, which the proxy
+fails at the reversal. The D-nature satisfies E1–E3 and F, and fails reading 2.
+So *original finality in the sense E1–E3 plus F does not require reading 2*.
+It entails reading 2 only with a further explanandum:
+
+- **E4 (non-coincidence):** the origin's favouring of the better over the
+  worse is explained by the goodness, not merely co-present with it.
+
+E4 is reading 2 applied to the origin, so adding it makes the entailment
+definitional. The substantive question is whether E4 belongs to the
+explanandum. Reading 3 needs one more step, a **content-generality bridge**:
+a good-tracking favouring at an original source is apprehension. That bridge
+is not typed or established. The good-general row has the same profile as
+rational exercise and no apprehension field.
+
+**The D-nature's alignment, a trilemma.** The D-nature's favouring coincides
+with goodness in the actual scenario. Three accounts of that coincidence are
+available to it:
+
+- (a) A primitive necessary alignment of a particular content D with
+  independent goodness facts. This meets E1–E3 and leaves E4 unmet. Its
+  price is a necessary coincidence between two independent facts: n favours D,
+  and D is good.
+- (b) Upgrade to a good-general orientation. This meets E4 and takes on the
+  content-generality bridge.
+- (c) Ground the goodness of candidates in n itself. This is the "perfective
+  character intrinsic to the productive actuality" proposal of
+  [goodness-standard-priority.md](goodness-standard-priority.md#a-positive-intrinsic-constitution-at-the-matched-scope).
+  Then n grounds the betterness ordering over every candidate, including the
+  unrealized z. That is a relation of n to the whole candidate space, which is
+  the exemplar role. This option is not typed here.
+
+Is the coincidence in (a) a substantive objection? Under the Objection
+Standard: it targets the D-nature's claim to explain finality *as finality*
+(E4). Its mechanism is that goodness is idle in that explanation (laws 1 and 4;
+table row 6). The independent justification is that "for the good" is
+ordinarily distinguished from "regularly productive of what happens to be
+good", which is §57's second insufficiency applied at the origin. It is
+relevant only if E4 belongs to the explanandum. The rival can reject E4 and
+defend the necessary alignment as one of its primitives. The personal
+account's corresponding primitive is one orientation to the good as such,
+covering every candidate. The rival's is an orientation to one content plus
+goodness facts independent of it. This is a comparison of primitives, not a
+refutation.
+
+### 68. Finite measure and hooks for Investigation 4
+
+**Finite-measure test** ([teleology-first-mover.md](teleology-first-mover.md#does-finite-due-measure-restrict-an-unrestricted-source)).
+That test asked whether an original noncognitive source needs a received
+restriction or a ceiling on its power to ground recipients' finite due
+measure, while apprehension avoids both. The profiles add a third option for
+the noncognitive source: *a determination of its favouring to one content*.
+This is the D-nature's fixity, which includes the finite measures that D
+requires. It is neither received nor a ceiling on power. A good-general
+profile, personal or not, avoids that determination. Its measure is then
+explained in one of two ways. If a better or undominated measure exists, it is
+explained by goodness (law 4 of §65 and the §62 fork). If measures are tied or
+strictly improvable, it is explained by a contingent exercise (§65 law 5, §59
+law 6), on both sides. So the q.19 a.4 contrast refines to this: what
+apprehension avoids, a good-general noncognitive profile also avoids. What
+remains is whether good-generality without apprehension is coherent, which is
+the content-generality bridge of §67. The finite-measure test does not by
+itself change §44's parity. It moves the open point to that bridge.
+
+**Hooks for Investigation 4.** These are recorded here and not resolved.
+
+1. *Determination as limitation (Lane 1, #2153).* The D-nature and the
+   determined will do not favour the better c over d in `cBetter`. That is a
+   positive determination of the favouring to one content, which excludes
+   favouring the better under another standard. Whether such an exclusion at an
+   unlimited root is limiting under Lane 1's joint-compossibility result is
+   Lane 1's question. It applies to a determined will in the same way.
+2. *Good-generality and simplicity.* A good-general profile is a function on
+   the whole candidate space: "one act containing many forms". Whether such a
+   function at a simple source is one act or many is the §60 individuation fork
+   again.
+3. *Omission (#2154).* A good-general source for which some creation is better
+   than omission never omits under the §62 fork, unless omission is
+   undominated. A D-nature whose content requires a recipient is categorical.
+   Both feed the §61 trade-off.
+
+### 69. Current conclusion, strongest rivals and next tests
+
+**Current conclusion (provisional).**
+
+- *Selection.* The favouring standard of §65 discriminates where §59's did not.
+  The re-description fails it, and chance explains nothing under it. At the
+  actual standard it gives parity between rational exercise and every
+  non-chance impersonal profile. No account explains the selection of one of two
+  equally good D-realizations by favouring. That remains a contingent exercise
+  on both sides.
+- *Because of goodness.* Producing a beneficial arrangement, producing it for
+  its end D, and producing it because of its goodness are typed apart.
+  Noncognitive end-directed production meets the second. The third (reading
+  2) separates good-general from determined-to-one profiles on both sides, and
+  needs counterpossible variation of goodness.
+- *Original finality* (E1–E3 with F) is reading 1. It requires reading 2 only with E4,
+  and reading 3 only with E4 and the content-generality bridge. Neither is
+  established. §44's no-unconditional-ranking judgment stands. A modest
+  relative consideration is noted, not a ranking: at E4, good-general accounts
+  (personal or axiarchic) have one primitive orientation where the D-nature has
+  a particular content plus an unexplained necessary alignment.
+
+**Strongest standing rivals and their prices.**
+
+- *D-directed generative nature* (the rival on record). It meets reading 1 and
+  the actual-standard contrasts. Its price is E4: a necessary alignment of a
+  particular content with independent goodness, or grounding of goodness in n.
+  It also carries the hook-1 determination.
+- *Good-general noncognitive nature* (axiarchic in the broad sense of
+  goodness-standard-priority.md). It meets readings 1 and 2 and matches
+  rational exercise on every typed test. Its price is good-generality without
+  apprehension, which is the content-generality bridge, plus the change of
+  ultimate-explanation scope recorded there for Leslie's stronger view.
+
+**Next discriminating tests.**
+
+1. *Content generality.* Define a favouring that is a function of the
+   betterness of arbitrary candidate contents, including unrealized ones. Test
+   whether being such a function is a cognitive relation (having the form of
+   another, ST I q.14 a.1, navigation only), or whether a noncognitive account
+   of it can be given that is not intellect renamed. The earlier q.14–15
+   finding that productive containment is not yet intentional presence
+   (attempt `4d9cd347`, assessment history) marks the same gap.
+2. *Warrant for E4.* Compare derivative natural finality, where a nature's good
+   is defined relative to that nature, with the original source's favouring of
+   other natures' goods, where it is not. Is non-coincidence part of the
+   explanandum there?
+3. *Admissibility of counterpossible goodness variation.* If it is
+   inadmissible, reading 2 is idle for every account (law 4), and the
+   discrimination must use the intensional profile reading or reading 3.
+4. *Lane 1 hook 1*, after #2153.
+
+**Graph.** Three placed diagnostics: `652f9917` tests `608a262d`;
+`b5fe7a87` and `da0125fd` test `4be0f774`. No premise is
+added, discharged or reclassified. The intellect route `11628966` (`65c409cc`,
+`46326b43`, `4c79298d` ⊢ `29818edd`) and the will routes to `66aecdd7` are
+unchanged. The content-generality bridge is recorded as an open question, not
+as a statement. Attempt record:
+[ff4f5b3f](../../corpus/attempts/ff4f5b3f-32c4-4983-9656-5ed31c1262ed.json).
+
 ## Research attempts citing this note
 
 - [Issue 1737 same-source contingent creation, omission, and selection adequacy](../../corpus/attempts/divine-knowledge-choice-creation-1737.json)
+- [Favouring standard and readings of 'because of goodness' (#2145 Lane 2b)](../../corpus/attempts/ff4f5b3f-32c4-4983-9656-5ed31c1262ed.json)

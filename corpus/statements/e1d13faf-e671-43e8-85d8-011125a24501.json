@@ -1,0 +1,16 @@
+{
+  "id": "e1d13faf-e671-43e8-85d8-011125a24501",
+  "label": "Good-favouring table: tied D-realizers unexplained; only good-general profiles depend on goodness",
+  "paraphrase": "Analyst formulation on one finite carrier: the four outcomes of the selection-scope model (total omission, D-realizing c and d, unfit z), its exercise frame with histories c and d and actual outcome c, and four scenarios (actual: c and d realize D and are tied; reversal: same physical provisions, D realized by c and z; valueless: D-realization as actual, nothing better than anything; cBetter: D-realization as actual and c better than d). Six profiles: chance (no favouring), proxy (favours the physical provision type of c and d), D-nature and determined will (both favour D-realization), good-general nature and rational exercise (both favour what is better). (1) Realization of D in the actual scenario is Fit. (2) With the actual scenario as content, proxy, D-nature, determined will, good-general and rational each explain c rather than z and c rather than omission, none explains c rather than d, none selects c; chance explains no contrast. (3) With cBetter as content, good-general and rational select c; D-nature and proxy do not explain c rather than d. (4) The outcome re-description selects at every history and is not outcome-independent, and no outcome-independent content with asymmetric favouring selects at every history. (5) For d rather than z at actual, D-nature, good-general and rational depend on D-realization (BECAUSE_OF_GOODNESS_1); the proxy favours d over z without that dependence; chance lacks it. (6) For c rather than z at actual, good-general and rational depend on betterness with D-realization fixed (BECAUSE_OF_GOODNESS_2); D-nature favours c over z and c is better, yet D-nature, determined will, proxy and chance lack that dependence. (7) Good-general equals rational and D-nature equals determined will as functions. Which account each profile represents is an interpretive assignment; the valueless and cBetter scenarios vary goodness at fixed D-realization and are counterpossible if goodness facts are necessary. Finite structural surrogates; no intellect, apprehension, chance measure or simplicity is typed.",
+  "lean_declaration": "TruthCore.Causality.GoodFavouring.GoodFavouringTable",
+  "definition_ids": [
+    "aaaad7b2-fd1c-49ad-ac0b-666763ef96df",
+    "45541b02-ec42-4bae-9d45-4c67d2902004",
+    "bcb40191-d34f-4958-9ac8-f6a7192c8191",
+    "da7e9520-18d1-4514-8490-186e7b29a56d"
+  ],
+  "disambiguation_ids": [
+    "8430c7dc-2972-4f47-87a9-ce4676533cdf",
+    "59b60fe6-1bfe-512f-a90c-17416218bba4"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "id": "9d8bad2a-91f9-45f7-a181-b9c39a55cdcb",
+  "label": "Plan standard: a plan ranks one outcome over another by meeting its requirements",
+  "term": "plan standard",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.GoodFavouring.planStandard",
+  "definition": "planStandard P desc k x y: the description of outcome x meets every requirement of plan k (Meets P k (desc x)) and the description of y does not.",
+  "note": "Stipulative bridge from the Plan vocabulary of the practical-specification premise (DEF a84afabf) to outcome orderings, so that a source's favouring can be tested for dependence on a plan's standard. It reads only the plan's Requirement field. See docs/notes/optimal-creation-choice.md §§65–69."
+}

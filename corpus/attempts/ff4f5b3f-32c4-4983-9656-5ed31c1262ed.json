@@ -1,0 +1,45 @@
+{
+  "id": "ff4f5b3f-32c4-4983-9656-5ed31c1262ed",
+  "label": "Does a favouring standard or 'because of goodness' separate personal from impersonal finality?",
+  "statement_ids": [
+    "4be0f774-2c0a-4691-9088-6e790940960a",
+    "608a262d-08fe-4dfd-9413-67e2ecf35b84",
+    "29818edd-9f5a-5414-baa2-9a7d0c8abf18",
+    "66aecdd7-ea4e-55c6-9377-10db08893854"
+  ],
+  "date": "2026-11-27",
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "See docs/notes/optimal-creation-choice.md sections 65-69 (#2145 Lane 2b). Verified results: 652f9917 (content-fixed favouring laws: an outcome-independent content with asymmetric favouring does not select whatever outcome occurs in a scope with a contingent outcome, the #742 core on choice cells; the outcome re-description that meets the determination standard does so only by being outcome-dependent; good-bounded favouring selects nothing between tied outcomes or when every outcome is bettered), b5fe7a87 (controlled dependence laws: fixed or control-factoring profiles depend on nothing; tracking characterization; if goodness factors through the held feature no aligned profile depends on it; two profiles tracking one feature agree; the plan standard reads only Requirement, so dependence on it supplies neither ApprehendsAsGood nor SpecifiesGiving), da0125fd (matched table of chance, proxy, D-nature, determined will, good-general nature and rational exercise over four scenarios: parity on the actual contrasts among non-chance profiles, no favouring explanation of c over the tied d, reversal separates proxy from D-tracking, goodness variation at fixed D separates D-tracking from good-tracking on both sides; sense-mixing control for BECAUSE_OF_GOODNESS 1 and 2). New disambiguation BECAUSE_OF_GOODNESS (8430c7dc). Findings: the favouring standard discriminates where determination did not, but gives parity between rational exercise and every non-chance impersonal profile at the actual standard; producing a beneficial arrangement, producing it for its end D, and producing it because of its goodness are typed apart; a noncognitive D-directed nature meets the end-content reading and fails the controlled goodness reading, as a determined will does; the goodness reading needs counterpossible variation; none of the dependence readings supplies the apprehended plan of 4be0f774.",
+  "blocker": "Not blocked for the assigned formal questions. The personal/impersonal line is not crossed by any typed test: rational exercise and a good-general noncognitive profile are the same function. Further discrimination needs (1) the content-generality bridge (is a favouring that is a function of the betterness of arbitrary, including unrealized, candidate contents a cognitive relation?), (2) warrant that non-coincidence of the origin's favouring with goodness (E4) belongs to the explanandum of original finality, or (3) a decision on the admissibility of counterpossible goodness variation.",
+  "evidence": [
+    "652f9917-57ce-4eac-b5d0-1595fa8f6c90",
+    "b5fe7a87-05d6-47f5-9dd5-a2ffe11815f4",
+    "da0125fd-1bd0-42b5-bcaa-e64d5486176c"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "anthropic",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "date": "2026-11-27"
+    }
+  ],
+  "current_assessment": {
+    "date": "2026-11-27",
+    "statement_ids": [
+      "4be0f774-2c0a-4691-9088-6e790940960a",
+      "608a262d-08fe-4dfd-9413-67e2ecf35b84"
+    ],
+    "scope": "Contrastive favouring with outcome-independent content; three readings of 'produced because of its goodness'; matched personal and impersonal profiles",
+    "assessment": "Under content-fixed favouring (the cell-carrier analogue of SELECTING_AN_OUTCOME_1), which a re-description of the outcome fails, rational exercise, a D-directed generative nature, a good-general nature, a determined will and a physical proxy explain the same actual contrasts and none explains the selection of one of two tied D-realizations, which remains a contingent exercise on both sides; chance explains nothing. Dependence on the end D separates the proxy; dependence on goodness at fixed D separates good-general from determined-to-one profiles, personal and impersonal alike, and requires counterpossible goodness variation. Original finality (beneficial, the origin's own favouring, dependent on D) requires the end-content reading only; it requires the goodness reading only with a non-coincidence explanandum (E4), and the apprehended plan of 4be0f774 only with E4 and a content-generality bridge, neither established. No unconditional ranking.",
+    "next_test": "Define content-general favouring (a function of the betterness of arbitrary candidate contents) and test whether it is a cognitive relation; assess warrant for E4 by contrasting derivative natural finality with an origin's favouring of other natures' goods; decide whether counterpossible goodness variation is admissible; Lane 1 hook on content determination as limitation.",
+    "note": "docs/notes/optimal-creation-choice.md#favouring-end-content-and-goodness-under-one-standard-2145-2026-11-27",
+    "reviewed_revision": "0000000000000000000000000000000000000000",
+    "review": "unreviewed",
+    "publication": "unpublished",
+    "evidence": "Proposed delivery on branch research/impersonal-finality; three results with focused Lean build; independent semantic challenge pending.",
+    "supersedes": "None. It answers the selection-standard next test of attempt d6bcce8a and refines the because-of-goodness question of will-versus-chance.md section C without revising their judgments."
+  }
+}

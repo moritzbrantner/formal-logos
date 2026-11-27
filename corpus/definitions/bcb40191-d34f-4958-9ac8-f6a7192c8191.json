@@ -1,0 +1,9 @@
+{
+  "id": "bcb40191-d34f-4958-9ac8-f6a7192c8191",
+  "label": "Produced because of its end-content: favouring depends on realization of the end D",
+  "term": "because of its goodness (end-content reading)",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.GoodFavouring.BecauseOfContent",
+  "definition": "BecauseOfContent fit φ s x y is DependsUnder fit (fun _ => ()) φ s x y: the source favours x over y at s, and in some scenario where the realization of the end D (fit) does not rank x over y, the source does not favour x over y either. A source tracking D passes; a source tracking a physical proxy that coincides with D in the actual scenario fails at a recipient-relative reversal.",
+  "note": "Analyst reading BECAUSE_OF_GOODNESS_1: the good content D specifies the productive orientation (formal and final explanation under the orientation's proper end-description, will-versus-chance.md §C). It does not require that the goodness of D, as distinct from D's realization, makes a difference. See docs/notes/optimal-creation-choice.md §§65–69."
+}

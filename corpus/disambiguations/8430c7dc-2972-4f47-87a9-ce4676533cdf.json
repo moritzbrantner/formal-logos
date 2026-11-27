@@ -1,0 +1,32 @@
+{
+  "id": "8430c7dc-2972-4f47-87a9-ce4676533cdf",
+  "label": "Produced because of its goodness: end-content, controlled goodness dependence, apprehended plan",
+  "term": "because of its goodness",
+  "sense_definition_ids": [
+    "bcb40191-d34f-4958-9ac8-f6a7192c8191",
+    "da7e9520-18d1-4514-8490-186e7b29a56d",
+    "40b44511-f3a8-4bbe-8761-ccb340858f9f"
+  ],
+  "resolution": "'The source produces this arrangement because of its goodness' has three typed readings, each distinct from producing an arrangement that is in fact beneficial (the good-favouring table's D-nature row: it favours the better c over z without depending on goodness). BECAUSE_OF_GOODNESS_1 (BecauseOfContent): the favouring depends on realization of the end D, so the end content specifies the orientation; a D-directed noncognitive nature meets it and a physical proxy fails it at a recipient-relative reversal. BECAUSE_OF_GOODNESS_2 (BecauseOfGoodness): the favouring depends on betterness with D-realization held fixed; it separates good-general from determined-to-one profiles, whatever the bearer, and needs scenarios that vary goodness at fixed D-realization (counterpossible if goodness is necessary; without them no aligned profile meets it). BECAUSE_OF_GOODNESS_3 (PracticalSpecification.Governing): an apprehended plan actually governs the giving; readings 1 and 2 do not supply its apprehension or its primitive SpecifiesGiving. Reading 1 does not entail reading 2 (the D-nature row); the converse is not tested here; neither 1 nor 2 supplies 3. No step passes between them: the good-favouring table states readings 1 and 2 separately for the same profiles, and nothing in this batch uses reading 3 beyond its definition.",
+  "term_label": "BECAUSE_OF_GOODNESS",
+  "senses": [
+    {
+      "id": "ee26ba38-ddc9-4b3e-89d9-0d203e63e551",
+      "label": "BECAUSE_OF_GOODNESS_1",
+      "definition_id": "bcb40191-d34f-4958-9ac8-f6a7192c8191",
+      "lean_declaration": "TruthCore.Causality.GoodFavouring.BecauseOfContent"
+    },
+    {
+      "id": "9d14c5bd-2b8f-4e74-b7e2-b5c4a297241d",
+      "label": "BECAUSE_OF_GOODNESS_2",
+      "definition_id": "da7e9520-18d1-4514-8490-186e7b29a56d",
+      "lean_declaration": "TruthCore.Causality.GoodFavouring.BecauseOfGoodness"
+    },
+    {
+      "id": "e4c14f73-6393-4f83-8d54-99fa02921526",
+      "label": "BECAUSE_OF_GOODNESS_3",
+      "definition_id": "40b44511-f3a8-4bbe-8761-ccb340858f9f",
+      "lean_declaration": "TruthCore.Causality.PracticalSpecification.Governing"
+    }
+  ]
+}

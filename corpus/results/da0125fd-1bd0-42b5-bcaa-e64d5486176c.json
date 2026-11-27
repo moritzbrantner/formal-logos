@@ -1,0 +1,11 @@
+{
+  "id": "da0125fd-1bd0-42b5-bcaa-e64d5486176c",
+  "label": "Matched good-favouring table, by computation",
+  "argument_id": "9666d95f-6610-4aa1-8118-6eddd30fdc8e",
+  "challenge_module": "TruthCore.Results.Causality.GoodFavouring.Challenge",
+  "solution_module": "TruthCore.Results.Causality.GoodFavouring.Solution",
+  "theorem": "TruthCore.Results.Causality.GoodFavouring.goodFavouringTable",
+  "comparator_config": "results/da0125fd-1bd0-42b5-bcaa-e64d5486176c/comparator.json",
+  "status": "solution-present",
+  "description": "A placed diagnostic for 4be0f774. Under the content-fixed favouring standard, at the actual standard, a physical proxy, a D-directed nature, a determined will, a good-general nature and rational exercise explain the same contrasts (c rather than z or omission) and none explains c rather than the tied d: parity, with chance explaining nothing. Recipient-relative reversal separates the proxy from D-tracking; goodness variation at fixed D-realization separates D-tracking from good-tracking, and that line runs through both personal and impersonal interpretations (determined will with the D-nature, rational exercise with the good-general nature). The D-nature favours the beneficial c over z without that dependence: a beneficial arrangement not produced because of its goodness in reading 2. No row separates rational exercise from the good-general nature: as profiles they are the same function. Establishes no premise."
+}

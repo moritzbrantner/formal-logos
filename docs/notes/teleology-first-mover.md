@@ -1376,3 +1376,41 @@ refinement study also limits a generalization from selection to uniform
 optimality.
 
 [Thomas Aquinas reading attempt](../../corpus/attempts/e1970646-f032-4195-b150-e6aeeae51420.json), [Charles Darwin reading attempt](../../corpus/attempts/2603f170-503e-464d-ac69-53e547298272.json), [Natalie A. Dye and colleagues reading attempt](../../corpus/attempts/bf3cf017-f0f7-4430-8e6e-2d0bd088b432.json), [Nathan Tompkins and colleagues reading attempt](../../corpus/attempts/920c9e5b-922e-4c1e-ad0e-45bc9cbe2346.json), [Zachary D. Blount and colleagues reading attempt](../../corpus/attempts/b888c0a0-f4cc-48f3-8642-d45da505bd0a.json).
+
+## Finite measure under content-fixed favouring (#2145; 2026-11-27)
+
+This continues the [finite-measure test](#does-finite-due-measure-restrict-an-unrestricted-source),
+which the program lists as the test that could change §44's parity. The
+results are in
+[optimal-creation-choice.md §§65–69](optimal-creation-choice.md#favouring-end-content-and-goodness-under-one-standard-2145-2026-11-27)
+(`TruthCore/Causality/GoodFavouring.lean`, analyst formulations, finite
+surrogates).
+
+The test's two options for the noncognitive source were a received restriction
+and a ceiling on its power. Typing the source's favouring as a profile across
+variation scenarios exposes a third option: a *determination of the favouring
+to one content*. The rival on record, a nature directed to the joint
+manifestation D, has this determination. It fixes the measures that D requires
+without receiving them and without capping the power. It meets the end-content
+reading of "because of its goodness" (BECAUSE_OF_GOODNESS_1). A physical proxy
+aligned with D fails that reading at the recipient-relative reversal. The rival
+fails the controlled goodness reading (BECAUSE_OF_GOODNESS_2), as a will with a
+fixed preference for D does.
+
+What apprehension avoids, a good-general profile also avoids: its favouring
+follows betterness, and it carries no content determination. Such a profile
+explains a finite measure by goodness only where a better or undominated
+measure exists. Where measures are tied or strictly improvable, the measure
+comes from a contingent exercise, for personal and impersonal profiles alike.
+So the finite-measure test does not by itself change the parity. It moves the
+open point to two places. One is whether non-coincidence of the origin's
+favouring with goodness (E4) belongs to the explanandum of original finality.
+The other is whether good-generality without apprehension is coherent (the
+content-generality bridge). Whether the D-nature's content determination counts
+as a limitation at an unlimited root is the Investigation 4 hook to Lane 1
+(#2153). It is recorded, not resolved.
+
+The `65c409cc`/`11628966` intellect route and its complete bundle are unchanged.
+The new results are placed diagnostics for `4be0f774` and `608a262d`.
+The current finite-measure assessment is in attempt
+[4d9cd347](../../corpus/attempts/4d9cd347-0a0f-49f3-8d85-14e5cdb8dab0.json).

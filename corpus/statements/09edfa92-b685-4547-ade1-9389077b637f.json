@@ -1,0 +1,14 @@
+{
+  "id": "09edfa92-b685-4547-ade1-9389077b637f",
+  "label": "Controlled dependence: fixed profiles depend on nothing; plan standards ignore apprehension",
+  "paraphrase": "Analyst formulation over any type of variation scenarios S and outcomes X, with a profile giving a source's favouring in each scenario and scenario-indexed features. A profile depends on feature g under control ctrl at s for x over y when it favours x over y at s and some scenario agreeing with s on ctrl has neither g nor the profile ranking x over y. (1) A profile that factors through ctrl (equal ctrl, equal profile) depends on nothing under ctrl. (2) A profile that is the same in every scenario depends on nothing under any control. (3) A profile coinciding with f in every scenario depends on g under ctrl exactly when f ranks x over y at s and some scenario agreeing on ctrl has neither g nor f ranking x over y. (4) If g factors through ctrl, a profile depends on g only where g does not rank x over y at s, so no profile coinciding with g at s depends on g. (5) A fixed profile coinciding with f everywhere makes f the same in every scenario. (6) Two profiles coinciding with the same f have the same dependence verdicts (definitional). (7) For a practical-specification Plan and outcome descriptions, the induced plan standard (x meets plan k's requirements and y does not) is unchanged when the plan's ApprehendsAsGood and SpecifiesGiving fields are replaced, and so are the dependence verdicts on it. No apprehension, intellect or chance is typed.",
+  "lean_declaration": "TruthCore.Causality.GoodFavouring.GoodDependenceLaws",
+  "definition_ids": [
+    "45541b02-ec42-4bae-9d45-4c67d2902004",
+    "9d8bad2a-91f9-45f7-a181-b9c39a55cdcb",
+    "a84afabf-d6e6-424d-a792-2fa874c466a5"
+  ],
+  "disambiguation_ids": [
+    "8430c7dc-2972-4f47-87a9-ce4676533cdf"
+  ]
+}
