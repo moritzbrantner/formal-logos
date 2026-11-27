@@ -27,6 +27,7 @@ public import TruthCore.Results.Causality.AtomisticUniversalCausePriority.Soluti
 public import TruthCore.Results.Causality.AttenuationFit.Solution
 public import TruthCore.Results.Causality.BearerRegress.Solution
 public import TruthCore.Results.Causality.BegunComingToBe.Solution
+public import TruthCore.Results.Causality.BegunOrHomogeneousGiving.Solution
 public import TruthCore.Results.Causality.BenefitPlanWitness.Solution
 public import TruthCore.Results.Causality.BoundedPastResource.Solution
 public import TruthCore.Results.Causality.BruteRootDisjunction.Solution
@@ -59,6 +60,7 @@ public import TruthCore.Results.Causality.ClassicalGodFromPositiveRoot.Solution
 public import TruthCore.Results.Causality.ClassicalGodRevelationBoundary.Solution
 public import TruthCore.Results.Causality.ClosedEsseSourceGod.Solution
 public import TruthCore.Results.Causality.ClosedGroundingRoots.Solution
+public import TruthCore.Results.Causality.CogitoActualRoot.Solution
 public import TruthCore.Results.Causality.CogitoAncestorNecessaryConcrete.Solution
 public import TruthCore.Results.Causality.CogitoCapacityInterface.Solution
 public import TruthCore.Results.Causality.CogitoNecessaryConcrete.Solution
@@ -298,8 +300,10 @@ public import TruthCore.Results.Causality.NecessaryRootFork.Solution
 public import TruthCore.Results.Causality.NecessaryRootGodExistence.Reduced.Solution
 public import TruthCore.Results.Causality.NecessaryRootGodExistence.Solution
 public import TruthCore.Results.Causality.NecessaryRootGodUniqueness.Solution
+public import TruthCore.Results.Causality.NecessaryRootUniqueMaximum.Solution
 public import TruthCore.Results.Causality.NecessaryRootUniqueness.Solution
 public import TruthCore.Results.Causality.NecessarySenseBridges.Solution
+public import TruthCore.Results.Causality.NecessarySenseClassicalConverse.Solution
 public import TruthCore.Results.Causality.NecessarySenseFork.Solution
 public import TruthCore.Results.Causality.NecessarySimplePlurality.Solution
 public import TruthCore.Results.Causality.NecessarySupportActualScope.Solution

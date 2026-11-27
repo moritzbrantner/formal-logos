@@ -1,7 +1,7 @@
 {
   "id": "63e88cef-e95b-4350-a0e2-4107e51caa90",
   "label": "Every exclusion-free profile is admissible",
-  "paraphrase": "OPEN, analyst formulation, attribution deferred: the sufficiency direction of member-grounded admissibility. Every set of real determinations in which no member requires the lack of some of its members is an admissible intrinsic profile. It does not say that every inadmissible profile is excluded by a member's requirement, so it allows requirements of presence and other further admissibility constraints. With the requirement relation left free, it and 'no pure determination requires the lack of pure determinations' are jointly equivalent to 'every profile of pure determinations is admissible'.",
+  "paraphrase": "OPEN, analyst formulation, attribution deferred: the sufficiency direction of member-grounded admissibility. Every set of real determinations in which no member requires the lack of some of its members is an admissible intrinsic profile. Read contrapositively, every inadmissible profile fails exclusion-freedom, so (classically) some member of it requires the lack of some of its members: it localizes every inadmissibility in a member's requirement of a lack. What it omits is the necessity direction, that every admissible profile is exclusion-free, which makes every member's requirement of a lack binding (a profile containing one is inadmissible). With the requirement relation left free, it and 'no pure determination requires the lack of pure determinations' are jointly equivalent to 'every profile of pure determinations is admissible'.",
   "lean_declaration": "TruthCore.Causality.RootPerfectionIntellect.ExclusionFreeAdmissible",
   "definition_ids": [
     "3f8e5e3c-e85a-4388-af9c-4da1c8a02069",

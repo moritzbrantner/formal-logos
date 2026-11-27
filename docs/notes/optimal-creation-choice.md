@@ -4263,7 +4263,8 @@ account is a *profile*, its favouring in each of four variation scenarios:
   d. This is the recipient-relative reversal of
   [will-versus-chance.md §C](will-versus-chance.md#c-test-reciprocal-relevance-to-recipients-not-a-favored-physical-pattern).
 - `valueless`: D-realization as actual, and nothing is better than anything.
-  This is counterpossible if betterness is fixed by D-realization (§67).
+  It holds the candidates' contents as actual and removes all betterness, so it
+  is counterpossible if betterness is fixed by the candidates' contents (§67).
 - `cBetter`: D-realization as actual, and c is better than d through a
   difference in c's content that D-realization does not record.
 
@@ -4329,7 +4330,7 @@ goodness is the open content-generality question of §67.
 | Selection between tied D-realizers by good-bounded favouring | none; exercise (§59 law 6) | none; exercise | yes |
 | Dependence on D-realization (reversal) | rational exercise, determined will: yes | D-nature, good-general: yes; proxy: no | yes per assigned profile |
 | Dependence on goodness at fixed D | rational: yes; determined will: no | good-general: yes; D-nature: no | yes per assigned profile |
-| Without counterpossible goodness variation | no profile depends on goodness (law 4) | the same | yes |
+| Betterness factoring through the held feature | no profile depends on goodness (law 4) | the same | yes |
 | Apprehended plan governs (BECAUSE_OF_GOODNESS_3) | asserted by the account; not supplied by dependence (law 7) | denied by the account | not tested by these laws |
 
 No criterion here is applied to one side only. The verdicts that differ differ
@@ -4382,7 +4383,12 @@ What follows, and what carries it:
   beneficial arrangement, even producing it for its end D, without producing it
   because of its goodness in reading 2. The determined will is the same.
 - **Reading 1 needs no apprehension field.** A profile *defined as* tracking
-  D-realization meets reading 1 by construction; that cannot fail. What can fail
+  D-realization meets reading 1 for a contrast only given a variation witness:
+  D-realization must rank the contrast at the current scenario and fail to rank
+  it at some other scenario. The table supplies `reversal` for c over z. If
+  D-realization were constant over the scenario space, a D-tracking profile
+  would be fixed and would fail reading 1 (law 2). Given such a witness, the
+  verdict holds by construction and cannot fail. What can fail
   is the interpretive claim that a given source's favouring depends on
   D-realization rather than on a physical type. A source whose favouring tracked
   only the physical type would be the proxy row, and it fails at the reversal.
@@ -4394,13 +4400,26 @@ What follows, and what carries it:
   contrast between an appetite determined to one end and an appetite for the
   good as such. It does not include the classical claim that only the second is
   intellectual.
-- **Reading 2 needs variation of goodness at fixed D-realization.** Row 6 uses
-  the `valueless` scenario. If betterness is fixed by D-realization, that
-  scenario is counterpossible. Without it, betterness factors through
-  D-realization, and by law 4 no profile depends on goodness, the personal
-  account included. Whoever relies on reading 2 must admit such variation, or
-  treat the profile as an intensional fact about what the favouring is a
-  function of. `cBetter` is not needed for row 6.
+- **Reading 2 needs variation of goodness within a D-realization class.** Two
+  claims must be kept apart:
+  - (a) *Row 6's contrast.* For c over z, row 6 uses the `valueless` scenario,
+    which removes all betterness while keeping the candidates as actual. If the
+    betterness of c over z is fixed by the candidates' contents, that scenario
+    is counterpossible. Without it, row 6's witness is gone and good-tracking
+    profiles do not meet reading 2 *for c over z*.
+  - (b) *No profile depends on goodness at all.* This stronger claim needs law
+    4's hypothesis: betterness factors through D-realization, so goodness never
+    varies within a D-realization class. Removing `valueless` does not give
+    that. `cBetter` and `actual` have the same D-realization, but only `cBetter`
+    ranks c over d. So the good-tracking profiles depend on goodness for c over
+    d at `cBetter`, with `actual` as the witness. This follows directly from the
+    definitions; it is not a certified table row. That variation comes from a
+    difference in c's content, so it need not be counterpossible.
+
+  So reading 2 is available wherever goodness varies within a D-realization
+  class. It is idle for every account only if betterness factors through
+  D-realization (law 4). The D-nature's failure of reading 2 does not depend on
+  this: its favouring factors through D-realization (law 1).
 - **Readings 1 and 2 do not supply reading 3** (law 7). The dependence criterion
   is one candidate answer to the blocker of attempts `c3f27519` and `83bd8a2c`:
   "show why the plan governs this giving rather than simply describing its
@@ -4437,8 +4456,12 @@ The answers differ per sense (table row 9):
   typed, the good-general profile does (row 9). Whether a *noncognitive* source
   can have that profile is the content-generality question: whether a
   favouring that is a function of the betterness of arbitrary candidate
-  contents is an apprehension. Sense 2 also needs admissible counterpossible
-  variation.
+  contents is an apprehension. Sense 2 also needs goodness to vary within a
+  D-realization class for the contrast in question. For c over d that is
+  available without counterpossibles (`cBetter` against `actual`); for c over z
+  it needs the `valueless` scenario. The open question is whether such
+  variation is available or admissible for the contrasts that matter, and
+  whether a noncognitive profile can track it.
 - **Original finality with reading 3** (an apprehended plan governs) needs,
   beyond sense 2, the
   content-generality bridge *and* the bridge reading `SpecifiesGiving` as
@@ -4551,10 +4574,14 @@ point to that question and to hook 1.
 - *Because of goodness.* Producing a beneficial arrangement, producing it for
   its end D, and producing it because of its goodness are typed apart.
   Dependence is difference-making: perverse and biased favouring do not count.
-  A profile defined as D-tracking meets reading 1, and whether a given source is
-  such a profile is interpretive. Reading 2 separates good-tracking from
-  determined-to-one profiles under the assignment, and needs counterpossible
-  variation of goodness.
+  A profile defined as D-tracking meets reading 1 for a contrast given a
+  variation witness (the table's `reversal`), and whether a given source is such
+  a profile is interpretive. Reading 2 separates good-tracking from
+  determined-to-one profiles under the assignment. It needs goodness to vary
+  within a D-realization class for the contrast. That variation is
+  counterpossible for c over z if betterness there is fixed by content, but not
+  for c over d (`cBetter` against `actual`). It is idle for every account only
+  if betterness factors through D-realization (law 4).
 - *Original finality* has two typed senses. Under ORIGINAL_FINALITY_1 it does
   not require reading 2. Under ORIGINAL_FINALITY_2 it requires reading 2 by
   definition. Whether a noncognitive source can meet sense 2 is the
@@ -4592,9 +4619,13 @@ point to that question and to hook 1.
    original source. There a nature's good is defined relative to that nature.
    Here the source favours other natures' goods, where it is not. Is
    non-coincidence part of the explanandum in the original case?
-3. *Admissibility of counterpossible goodness variation.* If it is
-   inadmissible, reading 2 is idle for every account (law 4). The discrimination
-   must then use the intensional profile reading or reading 3.
+3. *Goodness variation within a D-realization class.* For which contrasts
+   does goodness vary at fixed D-realization? For c over d it can, through other
+   content, with no counterpossible. For c over z it does only in a
+   counterpossible scenario if betterness there is fixed by content. Reading 2
+   is idle for every account only if betterness factors through D-realization
+   (law 4). Where it is idle, the discrimination must use the intensional
+   profile reading or reading 3.
 4. *Lane 1 hook 1*, after #2153.
 
 **Graph.** Three placed diagnostics: `652f9917` tests `608a262d`; `b5fe7a87`
