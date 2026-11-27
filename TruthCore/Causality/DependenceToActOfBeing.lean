@@ -196,6 +196,39 @@ def LimitationComparison : Prop :=
       ReceivedEsseOnlyToCapacity F A C EsseReceivedIn →
       ∀ x, ¬ OwnBeingByQuiddity F A x → ∀ d, F.InAct x d → C.Admits (A.quiddity x) d)
 
+/-! ## The q.7 a.1 bridge
+
+The candidate bridge from reception toward intensive esse (ST I q.7 a.1 co.,
+"infinitum secundum quod se tenet ex parte formae non determinatae per materiam,
+habet rationem perfecti. Illud autem quod est maxime formale omnium, est ipsum
+esse"): unreceived esse is unlimited, so it includes every pure perfection. It runs
+through own being as no recipient (`7338142d`), limitation only through reception
+(`1304b462`) and unlimited esse having every pure perfection. -/
+
+/-- Unlimited esse has every pure perfection: a being whose esse is not limited
+really has every pure perfection (`Has`, real determinations). -/
+def UnlimitedEsseHasEveryPure {D : Type} (EsseLimited : B → Prop) (Has : B → D → Prop)
+    (Pure : D → Prop) : Prop :=
+  ∀ x, ¬ EsseLimited x → ∀ d, Pure d → Has x d
+
+/-- The measure reading of limited esse, defined: `x`'s esse is limited when `x`
+lacks some pure perfection (finite in formal perfection). -/
+def LimitedByMeasure {D : Type} (Has : B → D → Prop) (Pure : D → Prop) (x : B) : Prop :=
+  ∃ d, Pure d ∧ ¬ Has x d
+
+/-- The q.7 a.1 bridge gives the locus-(b) composite without `d164b1ff` and
+`c4fb87a6`; on the measure reading of limitation its third premise is analytic, so
+the content moves to `1304b462`. -/
+def Q7BridgeLoadMap : Prop :=
+  ∀ (B P D : Type) (OwnBeing : B → Prop) (EsseReceivedIn : B → P → Prop)
+    (EsseLimited : B → Prop) (Has : B → D → Prop) (Pure : D → Prop),
+    (ReceptionLimitation.OwnBeingIsNoRecipient OwnBeing (fun x => ∃ r, EsseReceivedIn x r) →
+      TruthCore.Latin.Aquinas.SummaTheologiae.PrimaPars.InfinityReception.EsseLimitedOnlyThroughReceptionReading
+        EsseLimited EsseReceivedIn →
+      UnlimitedEsseHasEveryPure EsseLimited Has Pure →
+      TruthCore.Causality.ModeOfBeingMiddleTerm.OwnBeingHasEveryPurePerfection OwnBeing Has Pure) ∧
+    UnlimitedEsseHasEveryPure (LimitedByMeasure Has Pure) Has Pure
+
 /-! ## Controls -/
 
 namespace Control
@@ -308,6 +341,33 @@ def Controls : Prop :=
   ¬ ActualizedPureIsOfEsse (gframe act2) (thomist act2) ⟨fun d => d = 0⟩ pure ∧
   ¬ IntensiveEsse (⟨fun d => d = 0⟩ : IntensiveEsseFrame (Fin 3)) pure ∧
   ActualizedPureIsOfEsse (gframe act2) idle ⟨fun d => d = 0⟩ pure
+
+/-! ### The q.7 a.1 bridge on a quantifier-view source
+
+Beings: `false` a source that is its own being, `true` an effect. Determinations:
+`false` being, `true` a stand-in for life; both pure. The source has only being. -/
+
+def own (b : Bool) : Prop := b = false
+def recv (b : Bool) (_ : Unit) : Prop := b = true
+def hasOnlyBeing (b d : Bool) : Prop := d = false ∨ b = true
+def allPure (_ : Bool) : Prop := True
+/-- Role reading: only what is received is limited. -/
+def limitedRole (b : Bool) : Prop := b = true
+
+/-- Statements about this profile only. Role reading: own being is no recipient
+and limitation is only through reception, but unlimited esse does not have every
+pure perfection, and the source lacks life. Measure reading: unlimited esse has
+every pure perfection (analytically), but the source is limited without being
+received, so limitation only through reception fails. -/
+def Q7Controls : Prop :=
+  ReceptionLimitation.OwnBeingIsNoRecipient own (fun x => ∃ r, recv x r) ∧
+  TruthCore.Latin.Aquinas.SummaTheologiae.PrimaPars.InfinityReception.EsseLimitedOnlyThroughReceptionReading
+    limitedRole recv ∧
+  ¬ UnlimitedEsseHasEveryPure limitedRole hasOnlyBeing allPure ∧
+  ¬ TruthCore.Causality.ModeOfBeingMiddleTerm.OwnBeingHasEveryPurePerfection own hasOnlyBeing allPure ∧
+  UnlimitedEsseHasEveryPure (LimitedByMeasure hasOnlyBeing allPure) hasOnlyBeing allPure ∧
+  ¬ TruthCore.Latin.Aquinas.SummaTheologiae.PrimaPars.InfinityReception.EsseLimitedOnlyThroughReceptionReading
+    (LimitedByMeasure hasOnlyBeing allPure) recv
 
 end Control
 

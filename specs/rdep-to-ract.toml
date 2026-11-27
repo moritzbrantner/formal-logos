@@ -187,3 +187,71 @@ predicate = "tests"
 object_kind = "statement"
 object_id = "29e71e43-1d34-5008-8811-897fbddda209"
 note = "The non-reception profile satisfies R-dep, the first unde and the essence-only account of finitude while reception fails."
+
+# ---------------------------------------------------------------- 2026-11-27: the q.7 a.1 bridge (re-check of PR #2171, P2-3)
+
+[[statement]]
+id = "0c1a3ec8-f374-4669-9b79-d43ab70bc439"
+label = "The q.7 a.1 bridge moves the intensive content between its premises by the reading of limitation"
+lean = "Q7BridgeLoadMap"
+paraphrase = "Premise-free, for every own-being predicate, reception relation, limitation predicate, real-determination relation and purity predicate. (1) If what is its own being is no recipient of esse (7338142d at Recipient := has its esse received somewhere), esse is limited only through reception (1304b462), and unlimited esse really has every pure perfection, then whatever is its own being really has every pure perfection: the locus-(b) composite, without d164b1ff or c4fb87a6. (2) On the measure reading of limitation (lacking some pure perfection), 'unlimited esse has every pure perfection' holds in every interpretation. So on the measure reading the intensive content sits in 1304b462 (only reception limits); on the role reading it sits in 'unlimited esse has every pure perfection'. The conclusion concerns real having (Has), not the formal-or-eminent 9a0a4951."
+definitions = ["f971eabf-d723-46c4-a34a-35a5af154abb", "6ced5205-e6a4-585e-950e-3b22e7c9ef01", "4433942e-aaf6-55a9-b777-66e55638103d", "5dc08b95-ca15-52ab-b8cd-2b558e9a13f7", "3aba5f19-f48d-50db-bc57-93ba2e99f845", "65e38ffa-5a1c-55d0-935c-6538d843b780"]
+disambiguations = ["19190b6e-359f-590c-b434-4e6f5803da4f", "5921354b-51e6-5da3-8d8c-e9041840fd9f", "dc9c0a1b-1759-5b1c-9ab9-ee7bea8847b7"]
+
+[[statement]]
+id = "6694d214-277c-4db8-81dc-a8c99c45cce2"
+label = "A source with only being against the q.7 a.1 bridge: controls"
+lean = "Control.Q7Controls"
+paraphrase = "Closed finite profile; statements about it only. A source that is its own being and has only being, and a received effect that has everything; two stand-in determinations, both pure. Role reading (only what is received is limited): own being is no recipient and limitation is only through reception, but unlimited esse does not have every pure perfection and the source lacks the stand-in for life. Measure reading: unlimited esse has every pure perfection, but the source is limited without being received, so limitation only through reception fails. A quantifier-view source fails one premise of the bridge on each reading."
+definitions = ["f971eabf-d723-46c4-a34a-35a5af154abb", "6ced5205-e6a4-585e-950e-3b22e7c9ef01", "4433942e-aaf6-55a9-b777-66e55638103d", "3aba5f19-f48d-50db-bc57-93ba2e99f845", "65e38ffa-5a1c-55d0-935c-6538d843b780"]
+disambiguations = ["19190b6e-359f-590c-b434-4e6f5803da4f", "5921354b-51e6-5da3-8d8c-e9041840fd9f"]
+
+[[argument]]
+id = "955f0e7e-824d-472c-adc6-ed364b1cb48c"
+label = "The q.7 a.1 bridge load map, checked"
+theorem = "q7BridgeLoadMap"
+premises = []
+conclusion = "0c1a3ec8-f374-4669-9b79-d43ab70bc439"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Chain non-reception, limitation only through reception and unlimited perfection; check the measure reading directly"
+meaning = "Premise-free. The q.7 a.1 bridge yields the locus-(b) composite from 7338142d, 1304b462 and 'unlimited esse has every pure perfection'; on the measure reading the last premise is analytic (by excluded middle), so the content moves to 1304b462. A certificate of where the load sits, not of warrant."
+
+[[argument]]
+id = "5fc76be7-2fee-4d7a-8aa7-b9aa3941e600"
+label = "A source with only being against the q.7 a.1 bridge: controls, checked"
+theorem = "q7Controls"
+premises = []
+conclusion = "6694d214-277c-4db8-81dc-a8c99c45cce2"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Explicit finite profile over Bool, checked by decision"
+meaning = "One source with only being, read with the role and the measure reading of limitation: each reading makes a different premise of the q.7 a.1 bridge fail. A structural surrogate."
+
+[[relation]]
+id = "876ab993-6fc0-4320-a2ce-db0282d358dd"
+label = "Test by the q.7 a.1 load map of limitation only through reception"
+subject_kind = "argument"
+subject_id = "955f0e7e-824d-472c-adc6-ed364b1cb48c"
+predicate = "tests"
+object_kind = "statement"
+object_id = "1304b462-4a10-5dd0-995a-db5feb21d98e"
+note = "On the measure reading the intensive content of the q.7 a.1 bridge sits in 1304b462 (only reception limits esse)."
+
+[[relation]]
+id = "ea84e2f6-792a-4b7b-b297-2d647f49ce79"
+label = "Test by the q.7 a.1 controls of limitation only through reception"
+subject_kind = "argument"
+subject_id = "5fc76be7-2fee-4d7a-8aa7-b9aa3941e600"
+predicate = "tests"
+object_kind = "statement"
+object_id = "1304b462-4a10-5dd0-995a-db5feb21d98e"
+note = "On the measure reading a source with only being is limited without being received, so 1304b462 fails there."
+
+[[relation]]
+id = "5dec0b75-a465-4e51-baf8-643eede3fc7b"
+label = "Test by the q.7 a.1 load map of whole-power real possession"
+subject_kind = "argument"
+subject_id = "955f0e7e-824d-472c-adc6-ed364b1cb48c"
+predicate = "tests"
+object_kind = "statement"
+object_id = "d164b1ff-ad31-5fbc-8ef9-eb0db51ebd96"
+note = "The q.7 a.1 bridge reaches the locus-(b) composite without d164b1ff and c4fb87a6, at the price of 'unlimited esse really has every pure perfection' or of 1304b462 on the measure reading."

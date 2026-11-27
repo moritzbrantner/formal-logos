@@ -61,4 +61,13 @@ theorem limitationComparison : LimitationComparison := by
 theorem controls : Control.Controls := by
   sorry
 
+/-- The q.7 a.1 bridge: own being receives nothing, so its esse is unlimited, so it
+has every pure perfection; on the measure reading the last step is analytic. -/
+theorem q7BridgeLoadMap : Q7BridgeLoadMap := by
+  sorry
+
+/-- The q.7 a.1 bridge on a source that has only being, checked by decision. -/
+theorem q7Controls : Control.Q7Controls := by
+  sorry
+
 end TruthCore.Results.Causality.DependenceToActOfBeing

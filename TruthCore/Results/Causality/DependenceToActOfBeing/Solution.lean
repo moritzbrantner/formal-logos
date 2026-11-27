@@ -113,4 +113,26 @@ theorem controls : Control.Controls := by
     ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩
   all_goals decide
 
+/-- The q.7 a.1 bridge: own being receives nothing, so its esse is unlimited, so it
+has every pure perfection; on the measure reading the last step is analytic. -/
+theorem q7BridgeLoadMap : Q7BridgeLoadMap := by
+  intro B P D OwnBeing EsseReceivedIn EsseLimited Has Pure
+  refine ⟨?_, ?_⟩
+  · intro hNoRecipient hOnly hUnlimited x hx d hd
+    refine hUnlimited x ?_ d hd
+    intro hLimited
+    exact hNoRecipient x hx (hOnly x hLimited)
+  · intro x hNotLimited d hd
+    exact Classical.byContradiction fun hNot => hNotLimited ⟨d, hd, hNot⟩
+
+/-- The q.7 a.1 bridge on a source that has only being, checked by decision. -/
+theorem q7Controls : Control.Q7Controls := by
+  dsimp [Control.Q7Controls, Control.own, Control.recv, Control.hasOnlyBeing,
+    Control.allPure, Control.limitedRole, TruthCore.Causality.ReceptionLimitation.OwnBeingIsNoRecipient,
+    TruthCore.Latin.Aquinas.SummaTheologiae.PrimaPars.InfinityReception.EsseLimitedOnlyThroughReceptionReading,
+    UnlimitedEsseHasEveryPure, LimitedByMeasure,
+    TruthCore.Causality.ModeOfBeingMiddleTerm.OwnBeingHasEveryPurePerfection]
+  refine ⟨?_, ?_, ?_, ?_, ?_, ?_⟩
+  all_goals decide
+
 end TruthCore.Results.Causality.DependenceToActOfBeing
