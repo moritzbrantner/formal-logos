@@ -1,0 +1,10 @@
+{
+  "id": "04b49cca-9b7b-427d-b60a-10e23e80e444",
+  "label": "Test by AtomisticRequirementControl.certificate (f60704c5)",
+  "subject_kind": "result",
+  "subject_id": "8c2e229f-c128-4bd7-bcfa-630fa6f018fa",
+  "predicate": "tests",
+  "object_kind": "argument",
+  "object_id": "f60704c5-e5e3-521a-82e0-f0c8f4b32cc0",
+  "note": "Witness the unique-cause premise on the six-object graph with four production edges. The effects p, m and b each have r as their sole incoming cause, and q has s. The supplied all-present scenario contains all six objects."
+}
