@@ -1,0 +1,10 @@
+{
+  "id": "2b075881-5576-45ed-b5ab-341b39836cd5",
+  "label": "Test by PartFreePlurality.jointControl (034eb68f)",
+  "subject_kind": "result",
+  "subject_id": "a5b44455-66e5-5bef-9784-e37472a39324",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "034eb68f-6b29-5854-9f66-e4e760b9cfa8",
+  "note": "Omit differentiation in represented act between distinct first movers in the part-free model. Left and right both move the common instrument, and neither is moved or a proper component. Both are in act in all three modeled respects. Equality or distinctness is decidable on the five-bearer carrier."
+}

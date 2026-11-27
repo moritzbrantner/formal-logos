@@ -1,0 +1,10 @@
+{
+  "id": "f016cd28-110c-44ce-8f30-d0e967d750d7",
+  "label": "Test by Controls.checks (bd983df2)",
+  "subject_kind": "result",
+  "subject_id": "706c8d20-dde4-59ed-8d0f-9cd0f6ed8e6b",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "bd983df2-058a-5503-89a1-bbebe87f958b",
+  "note": "Omit the no-novel-edge condition in the benign varying fixture. Both bearers are present at the reading world false and at true. Direct support from bearer false to bearer true holds at world true only. The union still has a source and no cycle."
+}

@@ -1,0 +1,10 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.PureActRootImmutability.Challenge",
+  "solution_module": "TruthCore.Results.Causality.PureActRootImmutability.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.PureActRootImmutability.immutableOfReach",
+    "TruthCore.Results.Causality.PureActRootImmutability.reachOmission"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}

@@ -104,6 +104,7 @@ meaning = "PRIOR_4 sibling of argument f8992ef7, by its existing theorem firstMo
 [[argument]]
 id = "Every first mover moved by none is PURE_ACT_5, from first in being and a PRIOR_4 bridge"
 theorem = "firstMoverPureActFromFirstInBeing"
+definitions = ["ff1ba8f4-ab6e-5bdd-9e17-02b08a025168", "25e19d5a-5cdf-5916-a888-f6a0ce970f11", "cfadc1f4-dd30-5f4f-a336-a0b9c1b1182d", "9f874532-f37e-590b-bec9-a9affb2762ac", "a49e4cf1-ca4f-5519-9724-892af257cedb", "1d9aa4d9-18cc-5930-95fb-5af65e32c0f8", "f4365b55-da11-4e27-b5b7-71024d9508be"]
 premises = ["Every first mover moved by none is first in being: none other is PRIOR_4 to it", "A first unmoved mover first in being is first in PRIOR_1: none other is PRIOR_1 to it", "a4d3261a-3239-5b44-9953-64ab1b0ed762"]
 conclusion = "6c18d52b-2456-59ae-995f-13440f8c808d"
 sense_bridges = [

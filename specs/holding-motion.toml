@@ -30,6 +30,11 @@ paraphrase = "OPEN analyst premise, attribution deferred (respect-general concur
 definitions = ["56b438a0-7fcc-4dd5-916b-1d2e2162310b", "ea1904bc-bdfa-4835-a4a7-8545c5221e2e", "6ab9a832-6b0f-47ac-9f08-144444bf1cb1", "DEF-ACT"]
 disambiguations = ["a59fd0ac-f276-528d-8dc3-c3eddd331ac7"]
 
+[statement.connection_plan]
+target_statement_id = "c71c068c-bbae-5ed5-a99d-70b155c8d239"
+missing_bridge = "Instantiate respect-general concurrent actualization at esse, then apply the selected-world contingency-to-lackability and holder-to-actual-ground calibrations of the esse-only sibling."
+blocker = "The wider respect law produces holding at esse but includes neither the modal lackability calibration nor the selected grounding edge for that holder."
+
 [[statement]]
 id = "A mover that could lack the act by which it holds another is MOTION_3 held in it by another"
 lean = "HeldMoverIsHeldInItsOperativeAct"
@@ -43,6 +48,11 @@ lean = "LackableBeingIsHeld"
 paraphrase = "OPEN analyst premise, attribution deferred: the untimed esse instance of the respect-general concurrent actualization. Whatever is in act as to being (InAct x esse) and could lack being (Lackability.CanLack x esse) is presently given being by something other than itself (HeldMotion at esse, the holding relation read at esse as giving being). Derived from the timed strong concurrent actualization 76d2cc96-14a0-48bc-bd0b-a5c0ca853265 under the present-moment reading of its vocabulary (dedc431f-4f04-40e9-b519-3243d1874c18), which is a further open bridge: its clause (b), that whatever could lack being has received esse, is substantive. Existential inertia contests it (concurrent-actualization Control part 1); its warrant is assessed on branch agent/sustaining-vs-inertia and is not judged here."
 definitions = ["56b438a0-7fcc-4dd5-916b-1d2e2162310b", "ea1904bc-bdfa-4835-a4a7-8545c5221e2e", "6ab9a832-6b0f-47ac-9f08-144444bf1cb1", "DEF-ESSE"]
 disambiguations = ["a59fd0ac-f276-528d-8dc3-c3eddd331ac7"]
+
+[statement.connection_plan]
+target_statement_id = "c71c068c-bbae-5ed5-a99d-70b155c8d239"
+missing_bridge = "Use the existing existence-to-act calibration at esse. Show that modal absence from an accessible world gives CanLack at esse for the same actual concretum. Show that the distinct holder at esse is concrete, exists at the selected world, and grounds the recipient there."
+blocker = "Holding and lackability are primitive and untimed. PresentMomentHoldingReading maps timed giving into holding, while this application needs the holder-to-selected-actual-ground direction. A present actualization alone does not certify the giver’s concreteness or the selected grounding edge."
 
 [[statement]]
 id = "Whatever presently gives another being presently actualizes it in every act it could lack"
