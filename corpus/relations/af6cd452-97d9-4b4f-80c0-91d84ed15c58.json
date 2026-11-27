@@ -1,0 +1,10 @@
+{
+  "id": "af6cd452-97d9-4b4f-80c0-91d84ed15c58",
+  "label": "Test by EpistemicCredentialing.controls (1b74e22c)",
+  "subject_kind": "result",
+  "subject_id": "1583ce3d-4c08-4a3b-a81a-50f2f52e9cdc",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "1b74e22c-3e2e-5328-b587-6dc2517f5e3f",
+  "note": "Omit consideration presentation. In unpresented the thin belief-reason extension is populated, but CountsAsReason is empty, so no consideration presents that reason for the supplied belief. There are no active consideration instances and the credential and transfer requirements hold vacuously under empty prior."
+}
