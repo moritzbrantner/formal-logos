@@ -107,13 +107,3 @@ predicate = "tests"
 object_kind = "statement"
 object_id = "7648194d-042b-495d-a098-ce906bdc7005"
 note = "Omit the binary per se composition clause. In profile false the caused-as-caused premise holds and the producer's link to the recipient is marked per se. The source gives esse to the producer and has no edge to the recipient, so full composition fails. The derivation keeps its explicit excluded-middle input."
-
-[[relation]]
-id = "7a851bfd-feef-41be-a46a-a9bb04cad33c"
-label = "Test by GiverIndexedApplication.controls (85eeb70c)"
-subject_kind = "result"
-subject_id = "a587f218-82d7-4080-b528-f6bc650cdf85"
-predicate = "tests"
-object_kind = "argument"
-object_id = "85eeb70c-c7c3-4e4f-a645-4ecbb987b3ff"
-note = "In profile true, the populated four-role model assigns both incoming givers the final esse edge to the recipient. Its caused-as-caused and binary per se composition premises hold together. Excluded middle remains an explicit input to the derivation."
