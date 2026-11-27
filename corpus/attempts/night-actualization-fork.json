@@ -14,11 +14,20 @@
   "date": "2026-10-28",
   "kind": "derivation",
   "outcome": "succeeded",
-  "summary": "At baseline 9bdac2ab, extracted explicit same-witness coverage of the existing Night reading: no actual mover, an actual self-mover, or a distinct actual mover without simple priority. Coverage takes excluded middle explicitly; the self and distinct-mover alternatives can overlap, so an exclusive trilemma was rejected. A constructive follow-on uses the existing root mover, mover-actuality and act/potency commitments to force the distinct actual mover without priority. This is the positive repair boundary extracted from the existing coreFromRootPremises proof, not a new philosophical refutation. A separate composition applies that existing theorem to the supplied Night witness and exposes logical falsity for configuration propagation. New source attribution, identification of movers with efficient causes, and temporal-priority conclusions were all excluded. Both frozen Challenges and the source records remain intact. Focused and full Lean builds pass, all three exact results passed Comparator with NanoDa enabled and no permitted axioms, and an independent semantic/type sweep passes. Exact joint deletion witnesses are registered separately; configuration-level inclusion-minimality depends on their live verification. No premise truth is established by these consequence certificates. No root premise is discharged.",
+  "summary": "At baseline 9bdac2ab, extracted explicit same-witness coverage of the existing Night reading: no actual mover, an actual self-mover, or a distinct actual mover without simple priority. Coverage takes excluded middle explicitly; the self and distinct-mover alternatives can overlap, so an exclusive trilemma was rejected. A constructive follow-on uses the existing root mover, mover-actuality and act/potency commitments to force the distinct actual mover without priority. This is the positive repair boundary extracted from the existing coreFromRootPremises proof, not a new philosophical refutation. A separate composition applies that existing theorem to the supplied Night witness and exposes logical falsity for configuration propagation. New source attribution, identification of movers with efficient causes, and temporal-priority conclusions were all excluded. Both frozen Challenges and the source records remain intact. Focused and full Lean builds pass, all three exact results passed Comparator with NanoDa enabled and no permitted axioms, and an independent semantic/type sweep passes. Exact joint deletion witnesses are registered separately; configuration-level inclusion-minimality depends on their live verification. No premise truth is established by these consequence certificates. No root premise is discharged.\n\n2026-11-27, #2103 placement curation. Generation from Night. 2f3e2b91 (unplaced): Exact denial of the stronger actualized-Night bundle under moving premises. Bare unactualized Night survives. 93e340f8 (unplaced): Actualized unpreceded potency, reduction by a mover, mover actuality, act/potency disjointness and actual-mover priority. Bare unactualized Night survives. Retain as a conditional incompatibility; no closure edge. 6d1ade05, 21865b45 (unplaced): Coverage or forced subcase for the same actualized-Night witness. Actual instantiation remains open.",
   "evidence": [
     "6d1ade05-0267-537e-9f80-d545c91b8704",
     "21865b45-900e-5e1d-90c2-06a41af568bd",
     "93e340f8-c47b-5ef4-b9ec-e1ae84e456a0",
     "PR-588"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-27"
+    }
   ]
 }

@@ -10,7 +10,7 @@
   "date": "2026-11-06",
   "kind": "derivation",
   "outcome": "failed",
-  "summary": "Rejected the reading that negating UniverseHasExistingCause entails UniverseUncaused. U is existential over an existing cause, whereas UniverseUncaused excludes all incoming causal edges. Counterexample from review 4492957391: only the spacetime whole exists and is a spacetime part; a nonexisting concrete candidate c has the sole causal edge c → whole. N1, N2, no self-causation, whole-to-part, containment and the weak causal-concreteness floor item hold, but UniverseUncaused is false. The prose now claims only no existing cause. The existing survivor certificate independently witnesses the stronger uncaused-whole position; it does not turn that position into a consequence of negating U. No theorem, Challenge or premise is changed.\n\nDefinition/scope follow-up: UniverseUncaused excludes all candidate edges, while UniverseHasExistingCause requires causer actuality. Reuse existing full endpoint-actuality policy, weaken it to selected-whole-causer actuality and expose the exact positive witness transport. Keep the strongest raw brute-universe alternative, add exact no-existing-cause complement and checked existing/no-edge/only-absent-causers trilemma under explicit EM. Endpoint actuality removes the third generic case; it is not silently built into Ontic. Three finite populated assignments test the scope distinction, with the absent-edge model expressly outside the intended actuality policy and no claim of metaphysical possibility. Eight checked results, all old Challenges/source meanings preserved. See docs/notes/universe-cause-scope-boundary.md.",
+  "summary": "Rejected the reading that negating UniverseHasExistingCause entails UniverseUncaused. U is existential over an existing cause, whereas UniverseUncaused excludes all incoming causal edges. Counterexample from review 4492957391: only the spacetime whole exists and is a spacetime part; a nonexisting concrete candidate c has the sole causal edge c → whole. N1, N2, no self-causation, whole-to-part, containment and the weak causal-concreteness floor item hold, but UniverseUncaused is false. The prose now claims only no existing cause. The existing survivor certificate independently witnesses the stronger uncaused-whole position; it does not turn that position into a consequence of negating U. No theorem, Challenge or premise is changed.\n\nDefinition/scope follow-up: UniverseUncaused excludes all candidate edges, while UniverseHasExistingCause requires causer actuality. Reuse existing full endpoint-actuality policy, weaken it to selected-whole-causer actuality and expose the exact positive witness transport. Keep the strongest raw brute-universe alternative, add exact no-existing-cause complement and checked existing/no-edge/only-absent-causers trilemma under explicit EM. Endpoint actuality removes the third generic case; it is not silently built into Ontic. Three finite populated assignments test the scope distinction, with the absent-edge model expressly outside the intended actuality policy and no claim of metaphysical possibility. Eight checked results, all old Challenges/source meanings preserved. See docs/notes/universe-cause-scope-boundary.md.\n\n2026-11-27, #2103 placement curation. Naturalism. 9a2a5dc6, 6cdd9554, c43e1525, cf79aa32 (unplaced): Conditional denial of a selected naturalism thesis about spatiotemporal or causal closure; no same-bearer bridge to the root predicates. 02881a46 (unplaced): An interpretation assigns an uncaused universe and proper-part regress jointly with listed floor assumptions. Compatibility is internal to the chosen dictionary. 4d0e6b3c, 533d45e9 (unplaced): Excludes a simple remote occupant on the supplied frame. Equating its bearer and spatiotemporal scope with the case is open. a7d9e528 (unplaced): Coverage of cause or no edge for the selected whole; neither disjunct identifies a GOD_4 bearer.",
   "evidence": [
     "6cdd9554-9467-5753-b3da-d96255d03317",
     "02881a46-16b8-555e-b29c-e4bba2877eb9",
@@ -25,5 +25,14 @@
     "3f98370d-d53a-5931-98ee-be63381ddafb",
     "PR-1155"
   ],
-  "blocker": "The stronger inference needs an explicit causal-endpoint existence premise; it is not added to the argument."
+  "blocker": "The stronger inference needs an explicit causal-endpoint existence premise; it is not added to the argument.",
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-27"
+    }
+  ]
 }

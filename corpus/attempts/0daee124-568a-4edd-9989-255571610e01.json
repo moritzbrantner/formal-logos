@@ -7,7 +7,7 @@
   "date": "2026-11-09",
   "kind": "derivation",
   "outcome": "succeeded",
-  "summary": "Bounded analyst experience reconstruction: optional actual source versus presented candidate, local clean-token calibration, separate theological identification and normative permission. Finite controls retain hallucination, defeated competing presentation, and occurrence/calibration/identification/capacity gaps. Existential recognized-God witness is separate from universal root-capability assembly, which needs coverage and a reverse capability bridge. No source attribution, empirical reliability or theological premise established. See docs/notes/religious-experience-recognition.md. Rejected permission-to-truth and single-witness-to-universal moves; testimony does not substitute for experience.",
+  "summary": "Bounded analyst experience reconstruction: optional actual source versus presented candidate, local clean-token calibration, separate theological identification and normative permission. Finite controls retain hallucination, defeated competing presentation, and occurrence/calibration/identification/capacity gaps. Existential recognized-God witness is separate from universal root-capability assembly, which needs coverage and a reverse capability bridge. No source attribution, empirical reliability or theological premise established. See docs/notes/religious-experience-recognition.md. Rejected permission-to-truth and single-witness-to-universal moves; testimony does not substitute for experience.\n\n2026-11-27, #2103 placement curation. Religious experience. 27a66a4d (placed diagnostic): Token warrant and recognition consequences require the carrying experience and recognition facts; retain already registered controls. 158be088, c23335f3 (unplaced): Token warrant and recognition consequences require the carrying experience and recognition facts; retain already registered controls.",
   "evidence": [
     "27a66a4d-6693-458b-8232-f87b6cc1a870",
     "18caf08e-c875-4a46-b5c4-7a4ee36cf3d5",
@@ -15,5 +15,14 @@
     "158be088-72a4-4beb-aefc-627ee753718e",
     "PR-1260"
   ],
-  "blocker": "Independent discrimination of genuine-source and warranted false-positive interpretations; empirical calibration and theological identification, universal coverage and external-sign capability bridge remain OPEN."
+  "blocker": "Independent discrimination of genuine-source and warranted false-positive interpretations; empirical calibration and theological identification, universal coverage and external-sign capability bridge remain OPEN.",
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-27"
+    }
+  ]
 }
