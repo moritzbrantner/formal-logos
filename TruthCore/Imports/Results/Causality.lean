@@ -25,6 +25,7 @@ public import TruthCore.Results.Causality.AtomisticNecessaryConstituent.Solution
 public import TruthCore.Results.Causality.AtomisticRequirementControl.Solution
 public import TruthCore.Results.Causality.AtomisticUniversalCausePriority.Solution
 public import TruthCore.Results.Causality.AttenuationFit.Solution
+public import TruthCore.Results.Causality.AxiarchicFoundation.Solution
 public import TruthCore.Results.Causality.BearerRegress.Solution
 public import TruthCore.Results.Causality.BegunComingToBe.Solution
 public import TruthCore.Results.Causality.BegunOrHomogeneousGiving.Solution
