@@ -13,7 +13,7 @@
   ],
   "kind": "derivation",
   "outcome": "succeeded",
-  "summary": "Three remaining exact alternative-edge cases audited. Generic ScopedScientism needs explicit witness-transfer coverage to exclude nonempirical establishment; added all-established, pointwise failing-witness and existential transfer siblings with checked strength order, two strictness controls and populated outside-scope overlap. Invariant meaning coexists with occasion meaning under constant expression; derive existing exact occasion failure from invariant meaning plus unchanged free-attitude/actual antecedent-loss/moral-witness premises, retain populated controls. Kripke no-fact and PU noninterpretive-grasp raw readings concern different factual/practical scopes; existing exact regress theorem/fork does not identify them. Reclassified that raw edge attacks, preserving full source meanings/internal fork. Synthetic actual-record regression refutations reproduce three legacy false-closure paths and verify corrected targets remain open. Existing selfapplication results, source claims, frozen Challenges, floors and engine authority unchanged. Rejected silent universal scope, unguarded opposite-account incompatibility and raw/source-shadow identity. Detailed findings and remaining applicability/interpretation bridges in docs/notes/scientism-meaning-rival-boundary.md. Extended use audit: all79 coordinator-selected outside-disambiguation truth/ethics definition texts and84 selected exact consuming types inspected with complete linked consumer IDs. Existing reflective ought/consistency/truth, knowledge/report/warrant, moral/descriptive/plan, scoring and hard-case interfaces retain independent premises/controls; no additional invalid inference found. A separate sufficient correct-account support weakening for goodness was identified and authorized. Full per-ID findings and actual coverage limits persist in docs/notes/truth-definition-use-audit.md and its linked JSON; prior inventory membership is not claimed to be prior full reading.",
+  "summary": "Three remaining exact alternative-edge cases audited. Generic ScopedScientism needs explicit witness-transfer coverage to exclude nonempirical establishment; added all-established, pointwise failing-witness and existential transfer siblings with checked strength order, two strictness controls and populated outside-scope overlap. Invariant meaning coexists with occasion meaning under constant expression; derive existing exact occasion failure from invariant meaning plus unchanged free-attitude/actual antecedent-loss/moral-witness premises, retain populated controls. Kripke no-fact and PU noninterpretive-grasp raw readings concern different factual/practical scopes; existing exact regress theorem/fork does not identify them. Reclassified that raw edge attacks, preserving full source meanings/internal fork. Synthetic actual-record regression refutations reproduce three legacy false-closure paths and verify corrected targets remain open. Existing selfapplication results, source claims, frozen Challenges, floors and engine authority unchanged. Rejected silent universal scope, unguarded opposite-account incompatibility and raw/source-shadow identity. Detailed findings and remaining applicability/interpretation bridges in docs/notes/scientism-meaning-rival-boundary.md. Extended use audit: all79 coordinator-selected outside-disambiguation truth/ethics definition texts and84 selected exact consuming types inspected with complete linked consumer IDs. Existing reflective ought/consistency/truth, knowledge/report/warrant, moral/descriptive/plan, scoring and hard-case interfaces retain independent premises/controls; no additional invalid inference found. A separate sufficient correct-account support weakening for goodness was identified and authorized. Full per-ID findings and actual coverage limits persist in docs/notes/truth-definition-use-audit.md and its linked JSON; prior inventory membership is not claimed to be prior full reading.\n\nCuration pass 2, lane D (#2103, 2026-11-27). 0dd4739f remains unplaced. The existing tests concern the off-path occasion-emotivist reading and occurrence-invariant expressivist meaning. One model gives the two occurrences the same attitude. Another preserves meaning across assertion and antecedent but supplies an expressed attitude only in the assertion.",
   "evidence": [
     "c0f1bcbf-ee6b-535e-ad8e-0a5ca7b51df0",
     "5f4d05b7-b001-5383-bb5c-bf7485c1e21d",
@@ -23,5 +23,15 @@
     "0dd4739f-89e1-5cc9-bd6f-47762ec58912",
     "PR-1154",
     "PR-1162"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-27",
+      "pr": "PR-2131"
+    }
   ]
 }
