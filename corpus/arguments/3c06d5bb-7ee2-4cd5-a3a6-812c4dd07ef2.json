@@ -1,0 +1,36 @@
+{
+  "id": "3c06d5bb-7ee2-4cd5-a3a6-812c4dd07ef2",
+  "label": "The Cogito's necessary concrete ground-ancestor witnesses a necessary concretum at w",
+  "premise_statement_ids": [
+    "da31142e-34bd-579d-82a7-9b3745d534e6"
+  ],
+  "conclusion_statement_id": "b19ffd92-01bd-5c0b-9643-e7407137ea5e",
+  "inference_ids": [
+    "cf5fcb9c-8bd0-470b-bd1a-3b5f713355b0"
+  ],
+  "meaning": "On one profile m, world w and occurrence data, the premise supplies some bearer b of an occurring episode e and a ground-ancestor x of b that is concrete under m.concrete, exists at w and exists at every world accessible from w. The conclusion keeps that same x with the same three properties and drops b, e and the ancestry fact. The premise is the sense bridge from a thought occurring to something concrete existing: it asserts both of one witness chain, and the proof uses exactly its concrete-existence part. Necessity stays accessibility-relative and de re; nothing about all-world existence, uniqueness, underivedness or God follows. Declared an instantiation: it adds no warrant beyond the premise.",
+  "definition_ids": [
+    "c86cc1d1-c09f-5296-8ab9-2e5ddf217dce",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "e1ff44df-ed97-5990-8424-1abd720f23ea",
+    "baddf770-36bf-542f-bb3c-2297342d5452",
+    "ce8ccc1a-4f9a-5904-a10c-548778d79b66",
+    "c0cbef1c-060a-54d4-bb49-8d59da40caf3"
+  ],
+  "disambiguation_ids": [
+    "7507d645-874d-5434-add8-2f49c2801d36",
+    "c529e8d3-43e3-53a8-a82f-3955e9815265",
+    "16ea77ae-4ec7-59e4-8474-10f04efb5ddf"
+  ],
+  "sense_bridges": [
+    {
+      "term": "A_THOUGHT_OCCURS_VERSUS_SOMETHING_CONCRETE",
+      "from": "1c99ce91-24fc-4896-b1cc-ec13e1797d40",
+      "to": "16318101-d4c4-4ea8-a28e-406fc06ca152",
+      "statement_id": "da31142e-34bd-579d-82a7-9b3745d534e6",
+      "role": "premise"
+    }
+  ]
+}

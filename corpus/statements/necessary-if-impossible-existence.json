@@ -10,5 +10,10 @@
   ],
   "disambiguation_ids": [
     "7181df76-d6ed-5226-a34b-08910ddbe6a0"
-  ]
+  ],
+  "connection_plan": {
+    "target_statement_id": "da3facd6-008e-5e76-92fa-677350c2dfdb",
+    "missing_bridge": "Instantiate G on the same profile and signature as the classical-God-root node: G v := some m.concrete satisfier of that signature's GOD_4 predicate exists at v. With reflexivity at w, the impossibility instance excludes an actual concrete GOD_4 satisfier at w, so it contradicts NecessaryClassicalGodRootAt for that signature. Record that instance as a typed rival of the node.",
+    "blocker": "G has no case instance. The reverse possibility premise for that instance (an accessible world with no concrete GOD_4 satisfier) is stipulated, not argued, so the reverse modal argument is formal only until that premise has a positive account."
+  }
 }
