@@ -1,0 +1,11 @@
+{
+  "id": "8f86d7cc-293e-4a3e-a414-cc2239afa1ab",
+  "label": "The de re witness is CONCRETE_6 by selected-world calibration",
+  "argument_id": "b6c0c43b-51d0-4d12-a8d4-f6d553475b0c",
+  "challenge_module": "TruthCore.Results.Causality.CompositionRoutes.Challenge",
+  "solution_module": "TruthCore.Results.Causality.CompositionRoutes.Solution",
+  "theorem": "TruthCore.Results.Causality.CompositionRoutes.necessaryConcreteOfCalibratedExistence",
+  "comparator_config": "results/8f86d7cc-293e-4a3e-a414-cc2239afa1ab/comparator.json",
+  "status": "solution-present",
+  "description": "Keep the very individual that exists at the selected world and at all accessible worlds in this Profile. Apply the existing all-actual-existents concreteness premise at the selected world to that individual's actual existence. The conclusion binds NECESSARY_2 to the same NECESSARY_11 accessibility data and retains the same witness. The calibration is itself supported conditionally by the existence-to-act and esse-in-re policies (978fc7b1), so this route inherits their scope. No claim about sourcehood or necessary causation follows. The mixed two-world control has actual concrete population and bare actual necessity with no necessary concretum."
+}

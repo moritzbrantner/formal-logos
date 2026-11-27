@@ -88,6 +88,7 @@ public import TruthCore.Results.Causality.ComposerTemporalDefinitions.PastSelfCo
 public import TruthCore.Results.Causality.ComposerTemporalDefinitions.PersistenceStrength.Solution
 public import TruthCore.Results.Causality.ComposerTemporalDefinitions.TemporalComposition.Bound.Solution
 public import TruthCore.Results.Causality.ComposerTemporalDefinitions.TemporalComposition.Solution
+public import TruthCore.Results.Causality.CompositionRoutes.Solution
 public import TruthCore.Results.Causality.ComprehensionByMeasure.Solution
 public import TruthCore.Results.Causality.ConceptualExistenceBoundary.Solution
 public import TruthCore.Results.Causality.ConcreteActualCoverNecessaryBeing.Solution

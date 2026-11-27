@@ -1,0 +1,13 @@
+{
+  "id": "111850b3-e1db-4dee-bc83-a542f58a093d",
+  "label": "The same necessary individual is concrete under selected-world calibration (inference)",
+  "input_statement_ids": [
+    "c778a6ca-e756-56ac-aa68-c81e9883ca7c",
+    "0e02cd69-8fb0-4859-8287-937440c84b5b"
+  ],
+  "output_statement_id": "b19ffd92-01bd-5c0b-9643-e7407137ea5e",
+  "rule": "Existential elimination and selected-world concreteness calibration",
+  "meaning": "Keep the very individual that exists at the selected world and at all accessible worlds in this Profile. Apply the existing all-actual-existents concreteness premise at the selected world to that individual's actual existence. The conclusion binds NECESSARY_2 to the same NECESSARY_11 accessibility data and retains the same witness. The calibration is itself supported conditionally by the existence-to-act and esse-in-re policies (978fc7b1), so this route inherits their scope. No claim about sourcehood or necessary causation follows. The mixed two-world control has actual concrete population and bare actual necessity with no necessary concretum.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}
