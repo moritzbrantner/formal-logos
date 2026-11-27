@@ -1,11 +1,12 @@
 {
   "id": "f0fe8b71-b20b-4de0-a1df-dd598a14cd73",
   "label": "Actual recipient withholding can preserve contingent giving in every world",
-  "paraphrase": "In a two-world frame with universal access, the same necessary giver gives being factively to a contingent recipient in every world. It gives the actual contingent recipient being in the actual world, and withholds being from that recipient in a world where the recipient is absent and a replacement receives being. The model assigns the giver power for the actual contingents' joint absence using the existing positive-outcome power assignment. Neither world lacks contingent concreta. This is a control on the supplied frame.",
+  "paraphrase": "In a two-world frame with universal access, the same necessary giver gives being factively to a contingent recipient in every world. It gives the actual contingent recipient being in the actual world, and withholds being from that recipient in a world where the recipient is absent and a replacement receives being. The model assigns the giver power for the actual contingents' joint absence using the existing positive-outcome power assignment (the thin PowerFor reading). Because the giver gives to some recipient in every world, that assignment holds for every proposition, so the power conjunct does not discriminate among propositions in this frame; the substantive withholding result is carried by the exhibited accessible world and the change in giving to the actual recipient. Neither world lacks contingent concreta. This is a control on the supplied frame.",
   "lean_declaration": "TruthCore.Modal.ActualRecipientReplacement.Boundary",
   "definition_ids": [
     "6ecf24d5-5001-4571-937c-2632ac8c2c66",
     "62dfa893-b633-4513-9790-8f9a0a3087e0",
-    "97f37f5c-7f82-5077-9bb9-6cfc8673631d"
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "bf7eddca-8291-4744-8470-379babcd7781"
   ]
 }
