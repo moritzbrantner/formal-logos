@@ -4281,11 +4281,17 @@ the background that makes the cases meaningful:
    arguments below use that k is pure. Denying that intellect is a pure
    perfection is a fourth response that the trichotomy does not classify.
    It remains the open purity obligation of `d3a0e98a` and `521613fc`.
-5. **The bearer's own profile is admissible.** If g's actual profile is
-   itself inadmissible, no admissible profile contains it, so every k that
-   is admissible somewhere is classified as (ii) only vacuously.
-   `anchorControl` is such a case: its root's absence of the pure `0` is
-   formally (ii), though no positive determination excludes `0`. The gloss
+5. **The bearer's own profile is admissible.** If no admissible profile
+   contains g's actual profile, every k that is admissible somewhere is
+   classified as (ii) only vacuously
+   (`absenceVacuousWithoutAdmissibleSuperset`). Inadmissibility of g's
+   profile alone does not give this: the family need not be closed
+   downward. With the exact-closure family admitting only `{esse, a, b}`, the
+   inadmissible profile `{esse}` has that admissible superset, and its
+   absence of `a` is unexplained (iii). `anchorControl` meets the stronger
+   condition, because no finite profile contains its infinite root profile.
+   Its root's absence of the pure `0` is formally (ii), though no positive
+   determination excludes `0`. The gloss
    of (ii) as exclusion by g's positive determinations therefore needs
    admissibility of the root's profile (`0a9d3a40`).
 
@@ -4341,7 +4347,8 @@ answer to B is exact: given joint compossibility, either
 determination-to-limitation bridge and admissibility of the root's own
 profile (`0a9d3a40`), (ii) entails a limiting principle that the root
 lacks. Without joint compossibility, or without root-profile admissibility
-(`anchorControl`, where the case is vacuous), (ii) survives at an
+(`anchorControl`, where no admissible profile contains the root's
+profile and the case is vacuous), (ii) survives at an
 unlimited root. The model stipulates the conflict and does not explain
 it. A rival who takes this horn owes a positive account of why two
 limitation-free actualities exclude each other. The articulation
@@ -4523,7 +4530,11 @@ prose scope only, with no formal change: a holistic restriction of the
 family falls under (ii) unless it excludes k everywhere; "no extrinsic
 case at a root" is narrowed to the selected grounding relation, with the
 wider exclusion an open bridge; and the profile-level parity row is not
-read as a source that understands. A later
+read as a source that understands. A further automated thread corrected
+the P1-1 wording on the same terms. Case (ii) is vacuous only when no
+admissible profile contains the bearer's profile, not merely when that
+profile is inadmissible. The Lean-only lemma
+`absenceVacuousWithoutAdmissibleSuperset` states the condition. A later
 commit changes only durable review-state text and one wording repair in §D.
 
 **Next discriminating tests.**

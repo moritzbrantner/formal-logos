@@ -22,9 +22,13 @@ family `Admissible` of intrinsic profiles (sets of real determinations):
 2. `AbsenceFromPositiveProfile`: `k` occurs in some admissible profile, but no
    admissible profile contains both the bearer's actual determinations and `k`.
    When the bearer's own profile is admissible, its positive determinations,
-   singly or only jointly, exclude `k`. When that profile is itself
-   inadmissible, every `k` admissible somewhere falls here vacuously, so the
-   gloss needs `RootProfilesAdmissible` (see `anchorControl`).
+   singly or only jointly, exclude `k`. When NO admissible profile contains
+   the bearer's profile, every `k` admissible somewhere falls here vacuously
+   (`absenceVacuousWithoutAdmissibleSuperset`; `anchorControl` is such a
+   case). Inadmissibility of the profile alone does not give this: the family
+   need not be closed downward, so an inadmissible profile can have an
+   admissible superset, and its omissions can then be unexplained (case 3).
+   So the gloss needs `RootProfilesAdmissible`.
 3. `UnexplainedAbsence`: an admissible profile contains the bearer's actual
    determinations together with `k`, yet the bearer lacks `k`. Neither the
    admissibility constraints nor the positive profile fix the omission.
