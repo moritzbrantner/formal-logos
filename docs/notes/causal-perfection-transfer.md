@@ -6359,16 +6359,25 @@ Lean:
 - **The standard of favouring**, disambiguated in DISAMB STANDARD_OF_FAVOURING
   (`da16b898`):
   - STANDARD_OF_FAVOURING_1, the betterness ranking read as value
-    (`ValueStandard`, DEF `e14aa0f0`, a declared primitive);
+    (`ValueStandardOrder`, DEF `e14aa0f0`, a structure with a declared-primitive
+    relation field `better`);
   - STANDARD_OF_FAVOURING_2, the end-realization ordering
-    (`EndRealizationStandard`, DEF `b2eab05f`).
+    (`EndRealizationOrder`, DEF `b2eab05f`, with field `ranks`;
+    `EndRealizationStandard fit` builds it from an end-realization feature).
+
+  The two senses are distinct Lean types. Passing from one to the other needs an
+  explicit construction from the other's relation; an unbridged mix fails to
+  typecheck.
 
   No earlier record defined the ranking itself. DEF `071b24f0` only requires it
   to be read as value.
 
-The bridge statements `720bccc2` and `a141e6a8` and the registered argument use
-sense 1 only. The D-relative form is the same Lean function applied with sense
-2. It appears only in Lean-only controls and is not a corpus statement.
+The bridge statements `720bccc2` and `a141e6a8` (`MissingValueVerdictIsImpure`,
+`UnbackedValueVerdictIsImpure`) and the registered argument use sense 1 only. The
+D-relative form is the generic `MissingVerdictIsImpure` and
+`UnbackedVerdictIsImpure` applied to an end-realization order's relation. It
+appears only in a Lean-only control (`standardRelativity`) and is not a corpus
+statement.
 
 ### A. Is restricting content a limitation?
 
@@ -6531,11 +6540,29 @@ disputed profiles.
 
 **A5. What the relocated thesis says.** Together with RootPurity and
 `a30c5963`, the two value-sense bridges entail that a root's pure favouring
-makes **exactly value's verdicts**, at every scenario and every pair. That is
-strictly stronger than ORIGINAL_FINALITY_2, which adds dependence on goodness
-at one scenario and one pair to ORIGINAL_FINALITY_1. ORIGINAL_FINALITY_1 is not
-an end-content standard either: its first condition is that the favoured
-arrangement is better (`good s x y`). This section therefore does not identify
+makes **exactly value's verdicts**, at every scenario and every pair.
+
+How this compares with ORIGINAL_FINALITY_2 needs care. ORIGINAL_FINALITY_2 is
+ORIGINAL_FINALITY_1 plus dependence on goodness with end-realization fixed
+(`BecauseOfGoodness`) at one scenario and one pair. ORIGINAL_FINALITY_1 itself
+contains dependence on end-realization (`BecauseOfContent`).
+
+- Exact tracking plus variation gives only the goodness-dependence component,
+  at the variation witness (`exactTrackingGivesGoodnessDependence`, Lean-only).
+  It is strictly stronger than that component, which holds at one pair.
+- It does not by itself give ORIGINAL_FINALITY_2.
+  `exactTrackingWithoutOriginalFinality` (Lean-only, zero axioms) is a
+  counterexample: the profile equals `good`, `good` varies at a fixed
+  end-realization, and nothing realizes the end. Exact tracking and variation
+  hold, but `OriginalFinalityForGood` fails at every scenario and pair, because
+  its ORIGINAL_FINALITY_1 component needs `BecauseOfContent`.
+- So the comparison holds only against an explicit ORIGINAL_FINALITY_1
+  background. Where the root's favouring meets ORIGINAL_FINALITY_1 at the
+  variation witness, exact value tracking supplies the rest of
+  ORIGINAL_FINALITY_2 there, and exact tracking says more than that one pair.
+
+ORIGINAL_FINALITY_1 is not an end-content standard either: its first condition
+is that the favoured arrangement is better (`good s x y`). This section therefore does not identify
 the senses of the standard with the ORIGINAL_FINALITY senses. The standard is
 disambiguated separately (DISAMB `da16b898`).
 
@@ -6585,12 +6612,11 @@ disambiguated separately (DISAMB `da16b898`).
 
 The conclusion is horn A's `7fca65ec`. A pure favouring makes exactly value's
 verdicts, so it is good-general at the standard's own witness.
-The three new premises are stated with `ValueStandard good`
-(STANDARD_OF_FAVOURING_1), which is definitionally `good`. The marker is a
-declared-primitive tag. `bind-check` sees the tag, not the reading. It does not
-make mixing the senses a type error: `ValueStandard (EndRealizationStandard
-fit)` reduces to `EndRealizationStandard fit` by `rfl`. The conclusion's
-`good` is untagged, and the controls use `fitOrder` directly.
+The three new premises take a value order `v : ValueStandardOrder S X`
+(STANDARD_OF_FAVOURING_1). The conclusion is stated for its relation
+`v.better`, by explicit projection, because `7fca65ec`'s ranking parameter is
+untagged. An `EndRealizationOrder` cannot be passed for `v`. Using one needs an
+explicit construction `⟨e.ranks⟩`, which would be a sense bridge.
 
 The route does not use the admissible family, joint compossibility,
 root-profile admissibility, pure admissibility, the structural L, `e2357adc`,
@@ -6623,16 +6649,19 @@ one-favouring realization. Two further facts about it:
 4. the empty favouring counted pure (the loss bridge fails);
 5. the degenerate `everything` favouring counted pure (the arbitrariness bridge
    fails);
-6. the D-relative form: the D-favouring is pure and tracks its standard, and
-   only variation fails.
+6. the value order coincides with the end-realization ordering (betterness
+   factors through end-realization, `variationCore`'s fourth member): the
+   D-favouring is pure and tracks the value order exactly, and only variation
+   fails.
 
 Disclosures:
 
 - `everything` (every candidate favoured over every candidate, itself
   included) is a forced, degenerate relation. It serves only as the
   arbitrariness control.
-- In row 6 the conclusion's standard parameter is the D ordering
-  (STANDARD_OF_FAVOURING_2).
+- Every row uses the value sense. Row 6 is a value order whose relation is
+  the D ordering's relation. That is not the D sense; the D-relative form
+  appears only in `standardRelativity`.
 - The assignments say nothing about what favouring, purity or value are.
 
 ### B. The reception fork as a reference-class comparison
@@ -6873,8 +6902,10 @@ price with the personal root.
 
 - `e2357adc` remains open. Its warrant is relocated to "a common standard
   governs every favouring, it is value, and value varies within a D-class".
-  Its sharp form is "a root's pure favouring makes exactly value's verdicts",
-  which is strictly stronger than ORIGINAL_FINALITY_2.
+  Its sharp form is "a root's pure favouring makes exactly value's verdicts".
+  That is strictly stronger than the goodness-dependence component of
+  ORIGINAL_FINALITY_2. It gives ORIGINAL_FINALITY_2 itself only against an
+  ORIGINAL_FINALITY_1 background (A5).
 - The A6 route is a conditional reformulation, not added support.
 - `44e39691` stays at parity on the reception fork.
 - The classical selection carries the extrinsic-decree price (shared with lane
@@ -6935,6 +6966,20 @@ Nothing here is a formal establishment, and formal validity is unchanged.
 
 The delivery is accepted as qualified at `3a081ef06`. The final wording fix was
 made after that.
+
+4. **Codex review of draft PR #2177** at `32575cefa`. It left three P1
+   threads, all fixed in the commit that adds this item:
+   - **Distinct Lean types for the senses.** They are now the structures
+     `ValueStandardOrder` and `EndRealizationOrder`. The registered premises
+     are `MissingValueVerdictIsImpure`, `UnbackedValueVerdictIsImpure` and
+     `BetternessVariesWithinEndClass` on a `ValueStandardOrder`, and an
+     unbridged mix fails to typecheck.
+   - **The ORIGINAL_FINALITY_2 comparison** is qualified (A5), with the
+     counterexample `exactTrackingWithoutOriginalFinality`.
+   - **`parAlternativeExcludedAtRoot`** now takes the shared `CausalityFrame`
+     and uses its `PriorSimply`.
+
+   Fixes 1 and 3 change types, so they await a short re-check.
 
 [Attempt record](../../corpus/attempts/7ee3e5eb-37b5-4157-b591-f8d38a833ab1.json)
 

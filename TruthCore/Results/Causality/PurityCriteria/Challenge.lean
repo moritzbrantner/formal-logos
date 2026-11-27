@@ -22,22 +22,23 @@ compossibility, the purity of good-generality or one-favouring realization.
 Let `r` be an actual root and `favours φ` one of its determinations. Actual roots
 have no represented limiting principle, so by the RootPurity bridge `favours φ`
 is pure. By the loss and arbitrariness bridges (and excluded middle), `φ` makes
-exactly the verdicts of the standard `good`. Betterness varies within an
-end-realization class, so the standard itself is good-general, and a profile with
+exactly the verdicts of the value order `v` (STANDARD_OF_FAVOURING_1, a
+distinct type from an end-realization order). Betterness varies within an
+end-realization class, so the value order itself is good-general, and a profile with
 exactly its verdicts is good-general at the same witness. The distinct simply
 prior being of the limiting principle is the frame's `PriorSimply`. -/
 theorem actualRootFavouringIsGoodGeneralFromStandard {W B T R D P S X Z : Type}
     (F : CausalityFrame W B T R) (m : Profile W B) (w : W)
     (Has : B → D → Prop) (Pure : D → Prop) (Composite : B → Prop) (essence esse : B → P)
     (favours : TruthCore.Causality.GoodFavouring.Profile S X → D)
-    (good : S → X → X → Prop) (fitOf : S → Z) (Present : S → X → Prop)
+    (v : ValueStandardOrder S X) (fitOf : S → Z) (Present : S → X → Prop)
     (hEM : ExcludedMiddle)
     (hRoots : ActualRootsWithoutLimitingPrinciple m w Composite F.PriorSimply essence esse)
     (hPurity : UnlimitedDeterminationsArePure Composite F.PriorSimply essence esse Has Pure)
-    (hLoss : MissingVerdictIsImpure Pure favours (ValueStandard good))
-    (hBacked : UnbackedVerdictIsImpure Pure favours (ValueStandard good))
-    (hVaries : BetternessVariesWithinEndClass (ValueStandard good) fitOf Present) :
-    ActualRootFavouringIsGoodGeneral m w Has favours good fitOf Present := by
+    (hLoss : MissingValueVerdictIsImpure Pure favours v)
+    (hBacked : UnbackedValueVerdictIsImpure Pure favours v)
+    (hVaries : BetternessVariesWithinEndClass v fitOf Present) :
+    ActualRootFavouringIsGoodGeneral m w Has favours v.better fitOf Present := by
   sorry
 
 /-! ## Symmetric alternatives -/

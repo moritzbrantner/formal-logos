@@ -26,13 +26,17 @@ applied to every side by the same function and can fail.
   OPEN bridges `MissingVerdictIsImpure` and `UnbackedVerdictIsImpure` read
   "restriction of content is limitation" as: a favouring determination that
   misses, or adds to, the verdicts of the standard is not a pure perfection.
-  Their content depends on which standard is supplied: STANDARD_OF_FAVOURING_1,
-  the betterness ranking read as value (`ValueStandard`), gives the
-  value-relative form; STANDARD_OF_FAVOURING_2, the end-realization ordering
-  (`EndRealizationStandard`), gives the D-relative form. Both forms use the same
-  functions.
-* **Variation.** `BetternessVariesWithinEndClass` is good-generality of the
-  standard itself: betterness ranks some pair at one scenario and not at another
+  Their content depends on which standard is supplied. The two senses of the
+  standard are distinct Lean types: STANDARD_OF_FAVOURING_1 is
+  `ValueStandardOrder` (the betterness ranking read as value), and
+  STANDARD_OF_FAVOURING_2 is `EndRealizationOrder` (the end-realization
+  ordering). The registered value-sense bridges `MissingValueVerdictIsImpure`
+  and `UnbackedValueVerdictIsImpure` take a `ValueStandardOrder`, so an
+  end-realization order cannot be passed to them without an explicit
+  construction of a value order from its relation.
+* **Variation.** `BetternessVariesWithinEndClass` (on a `ValueStandardOrder`;
+  `StandardVariesWithinEndClass` is the same condition on any ranking) is
+  good-generality of the standard itself: betterness ranks some pair at one scenario and not at another
   that agrees on end-realization. Betterness factoring through end-realization
   (the fourth member of the #2172 `variationCore`) implies its denial; the
   converse fails in general because of the present-input clause.
@@ -93,32 +97,62 @@ def UnbackedVerdictIsImpure (Pure : D → Prop) (favours : GoodFavouring.Profile
     (std : GoodFavouring.Profile S X) : Prop :=
   ∀ φ, UnbackedVerdict std φ → ¬ Pure (favours φ)
 
-/-- OPEN variation premise: betterness varies within an end-realization class.
-For some scenario `s` and pair `x`, `y`, at least one of them not a present input
-at `s`, `good` ranks `x` over `y` at `s` and does not at some scenario that
-agrees with `s` on end-realization. It is good-generality of the standard
-itself, and holds exactly when some profile is good-general
-(`variationIffSomeGoodGeneral`). Betterness factoring through end-realization
-(the fourth member of `variationCore`) implies its denial; the converse fails in
-general because of the present-input clause. -/
-def BetternessVariesWithinEndClass (good : S → X → X → Prop) (fitOf : S → Z)
+/-- Variation of any ranking `std` within an end-realization class: for some
+scenario `s` and pair `x`, `y`, at least one not a present input at `s`, `std`
+ranks `x` over `y` at `s` and does not at some scenario agreeing with `s` on
+end-realization. It is good-generality of the ranking itself. -/
+def StandardVariesWithinEndClass (std : S → X → X → Prop) (fitOf : S → Z)
     (Present : S → X → Prop) : Prop :=
-  GoodGeneral good fitOf Present good
+  GoodGeneral std fitOf Present std
 
 /-! ## Senses of the standard of favouring (DISAMB STANDARD_OF_FAVOURING) -/
 
-/-- STANDARD_OF_FAVOURING_1: the betterness ranking read as VALUE (x is a better
-good than y at the scenario). It is a declared PRIMITIVE: the supplied parameter
-`good`, which Lean does not type as value; this declaration only marks the sense.
-Distinguishing condition: it is not the end-realization ordering, and nothing
-here says it factors through end-realization. -/
-def ValueStandard (good : S → X → X → Prop) : GoodFavouring.Profile S X := good
+/-- STANDARD_OF_FAVOURING_1: the betterness ranking read as VALUE. Its field
+`better s x y` says that `x` is a better good than `y` at `s`. The field is a
+declared PRIMITIVE relation: Lean does not type value. Distinguishing condition:
+it is not the end-realization ordering, and nothing here says it factors through
+end-realization. A separate structure, so that a value order and an
+end-realization order are distinct types: passing between them needs an
+explicit construction from the other's relation. -/
+structure ValueStandardOrder (S X : Type) where
+  /-- `x` is a better good than `y` at the scenario. -/
+  better : S → X → X → Prop
 
-/-- STANDARD_OF_FAVOURING_2: the end-realization ordering. `x` ranks over `y` at
-`s` exactly when `x` realizes the end D at `s` and `y` does not (the Lane 2b
-`fitOrder` pattern). -/
-def EndRealizationStandard (fit : S → X → Bool) : GoodFavouring.Profile S X :=
-  fun s x y => fit s x = true ∧ fit s y = false
+/-- STANDARD_OF_FAVOURING_2: an ordering of candidates by end-realization. Its
+field `ranks s x y` says that `x` ranks over `y` at `s` by end-realization. A
+distinct structure from `ValueStandardOrder`. -/
+structure EndRealizationOrder (S X : Type) where
+  /-- `x` ranks over `y` at the scenario by realization of the end D. -/
+  ranks : S → X → X → Prop
+
+/-- The end-realization ordering of an end-realization feature `fit`: `x` ranks
+over `y` at `s` exactly when `x` realizes the end D at `s` and `y` does not (the
+Lane 2b `fitOrder` pattern). -/
+def EndRealizationStandard (fit : S → X → Bool) : EndRealizationOrder S X :=
+  ⟨fun s x y => fit s x = true ∧ fit s y = false⟩
+
+/-- OPEN loss bridge in the value sense (STANDARD_OF_FAVOURING_1): a favouring
+determination whose profile misses a verdict of the value order is not pure. -/
+def MissingValueVerdictIsImpure (Pure : D → Prop) (favours : GoodFavouring.Profile S X → D)
+    (v : ValueStandardOrder S X) : Prop :=
+  MissingVerdictIsImpure Pure favours v.better
+
+/-- OPEN arbitrariness bridge in the value sense (STANDARD_OF_FAVOURING_1): a
+favouring determination whose profile makes a verdict the value order does not
+back is not pure. -/
+def UnbackedValueVerdictIsImpure (Pure : D → Prop) (favours : GoodFavouring.Profile S X → D)
+    (v : ValueStandardOrder S X) : Prop :=
+  UnbackedVerdictIsImpure Pure favours v.better
+
+/-- OPEN variation premise in the value sense: betterness varies within an
+end-realization class (`StandardVariesWithinEndClass` of the value order). It
+holds exactly when some profile is good-general relative to the value order
+(`variationIffSomeGoodGeneral`). Betterness factoring through end-realization
+(the fourth member of `variationCore`) implies its denial; the converse fails in
+general because of the present-input clause. -/
+def BetternessVariesWithinEndClass (v : ValueStandardOrder S X) (fitOf : S → Z)
+    (Present : S → X → Prop) : Prop :=
+  StandardVariesWithinEndClass v.better fitOf Present
 
 /-! ## Symmetric alternatives -/
 
@@ -209,15 +243,15 @@ def pureEverything (d : Det) : Prop := d = Det.esse ∨ d = Det.fav everything
 /-- The RootPurity bridge (`c78c77da`) on the carrier. -/
 def purity (src : Set Det) (pure : Det → Prop) (c : Prop) : Prop :=
   UnlimitedDeterminationsArePure (composite c) jointFrame.PriorSimply rep rep (hasSrc src) pure
-/-- The loss bridge relative to `std`. -/
+/-- The value-sense loss bridge, with the value order whose relation is `std`. -/
 def loss (pure : Det → Prop) (std : GoodFavouring.Profile Scenario Outcome) : Prop :=
-  MissingVerdictIsImpure pure favTok std
-/-- The arbitrariness bridge relative to `std`. -/
+  MissingValueVerdictIsImpure pure favTok ⟨std⟩
+/-- The value-sense arbitrariness bridge, with the value order whose relation is `std`. -/
 def backed (pure : Det → Prop) (std : GoodFavouring.Profile Scenario Outcome) : Prop :=
-  UnbackedVerdictIsImpure pure favTok std
-/-- Variation of the standard within an end-realization class. -/
+  UnbackedValueVerdictIsImpure pure favTok ⟨std⟩
+/-- Variation of the value order whose relation is `std`. -/
 def varies (std : GoodFavouring.Profile Scenario Outcome) : Prop :=
-  BetternessVariesWithinEndClass std fits noInputs
+  BetternessVariesWithinEndClass ⟨std⟩ fits noInputs
 /-- The conclusion `7fca65ec`, good-generality relative to `std`. -/
 def generalFor (std : GoodFavouring.Profile Scenario Outcome) (src : Set Det) : Prop :=
   ActualRootFavouringIsGoodGeneral rootProfile true (hasSrc src) favTok std fits noInputs
@@ -233,10 +267,11 @@ conclusion fails.
 4. the empty (chance) favouring counted pure: only the loss bridge fails;
 5. the degenerate `everything` favouring counted pure: only the arbitrariness
    bridge fails;
-6. the standard is the end-realization ordering itself (betterness factors
-   through end-realization) and the D-directed favouring is pure: only the
-   variation premise fails. This is the D-relative form of the bridges: under
-   it the D-directed favouring tracks its standard exactly. -/
+6. the value order coincides with the end-realization ordering (betterness
+   factors through end-realization, `variationCore`'s fourth member) and the
+   D-directed favouring is pure: only the variation premise fails, and the
+   D-directed favouring tracks the value order exactly. Every row uses the
+   value sense; the D-relative form appears only in `StandardRelativity`. -/
 def StandardControls : Prop :=
   (roots False ∧ purity personalSrc purePos False ∧ loss purePos better ∧
     backed purePos better ∧ varies better ∧ generalFor better personalSrc) ∧
@@ -251,6 +286,11 @@ def StandardControls : Prop :=
   (roots False ∧ purity dNatureSrc pureNoGG False ∧ loss pureNoGG fitOrder ∧
     backed pureNoGG fitOrder ∧ ¬ varies fitOrder ∧ ¬ generalFor fitOrder dNatureSrc)
 
+/-- The carrier's value order (STANDARD_OF_FAVOURING_1). -/
+def valueOrder : ValueStandardOrder Scenario Outcome := ⟨better⟩
+/-- The carrier's end-realization order (STANDARD_OF_FAVOURING_2). -/
+def dOrder : EndRealizationOrder Scenario Outcome := EndRealizationStandard fits
+
 /-- Standard relativity on the Lane 2b model. In genuine scenarios (all but the
 counterpossible `valueless`) the D-directed profile and the good-tracking profile
 agree on every verdict except one: `c` over `d` at `cBetter`. The value standard
@@ -262,9 +302,29 @@ def StandardRelativity : Prop :=
   (∀ s x y, s ≠ .valueless → ¬ (s = .cBetter ∧ x = .c ∧ y = .d) →
     (dNature s x y ↔ better s x y)) ∧
   (better .cBetter .c .d ∧ ¬ dNature .cBetter .c .d) ∧
-  MissesVerdict better dNature ∧ UnbackedVerdict fitOrder better ∧
-  ¬ MissesVerdict better better ∧ ¬ UnbackedVerdict better better ∧
-  ¬ MissesVerdict fitOrder dNature ∧ ¬ UnbackedVerdict fitOrder dNature
+  MissesVerdict valueOrder.better dNature ∧ UnbackedVerdict dOrder.ranks better ∧
+  ¬ MissesVerdict valueOrder.better better ∧ ¬ UnbackedVerdict valueOrder.better better ∧
+  ¬ MissesVerdict dOrder.ranks dNature ∧ ¬ UnbackedVerdict dOrder.ranks dNature
+
+/-- Two times and two candidates for the ORIGINAL_FINALITY control: `good` ranks
+`true` over `false` at time `true` only; end-realization is constant; nothing
+realizes the end. -/
+def ofGood (s x y : Bool) : Prop := s = true ∧ x = true ∧ y = false
+/-- No candidate realizes the end at any scenario. -/
+def ofFit (_ _ _ : Bool) : Prop := False
+
+/-- Exact value tracking with variation does not give ORIGINAL_FINALITY_2: the
+profile equal to `good` tracks it exactly and the value order varies within the
+(single) end-realization class, yet `OriginalFinalityForGood` fails at every
+scenario and pair, because its ORIGINAL_FINALITY_1 component needs dependence on
+end-realization (`BecauseOfContent`), which the constant `ofFit` never ranks.
+The goodness-dependence component (`BecauseOfGoodness`) does hold. -/
+def ExactTrackingWithoutOriginalFinality : Prop :=
+  BetternessVariesWithinEndClass (⟨ofGood⟩ : ValueStandardOrder Bool Bool)
+      (fun _ => ()) (fun _ _ => False) ∧
+  (∃ s x y, TruthCore.Causality.GoodFavouring.BecauseOfGoodness ofGood (fun _ => ()) ofGood s x y) ∧
+  ∀ s x y, ¬ TruthCore.Causality.GoodFavouring.OriginalFinalityForGood ofGood ofFit (fun _ => ())
+    ofGood s x y
 
 /-- A standing physical tie-break: prefer the physical provision type wherever
 value does not rank the other candidate higher. -/

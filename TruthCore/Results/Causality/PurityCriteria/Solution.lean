@@ -26,51 +26,52 @@ compossibility, the purity of good-generality or one-favouring realization.
 Let `r` be an actual root and `favours φ` one of its determinations. Actual roots
 have no represented limiting principle, so by the RootPurity bridge `favours φ`
 is pure. By the loss and arbitrariness bridges (and excluded middle), `φ` makes
-exactly the verdicts of the standard `good`. Betterness varies within an
-end-realization class, so the standard itself is good-general, and a profile with
+exactly the verdicts of the value order `v` (STANDARD_OF_FAVOURING_1, a
+distinct type from an end-realization order). Betterness varies within an
+end-realization class, so the value order itself is good-general, and a profile with
 exactly its verdicts is good-general at the same witness. The distinct simply
 prior being of the limiting principle is the frame's `PriorSimply`. -/
 theorem actualRootFavouringIsGoodGeneralFromStandard {W B T R D P S X Z : Type}
     (F : CausalityFrame W B T R) (m : Profile W B) (w : W)
     (Has : B → D → Prop) (Pure : D → Prop) (Composite : B → Prop) (essence esse : B → P)
     (favours : TruthCore.Causality.GoodFavouring.Profile S X → D)
-    (good : S → X → X → Prop) (fitOf : S → Z) (Present : S → X → Prop)
+    (v : ValueStandardOrder S X) (fitOf : S → Z) (Present : S → X → Prop)
     (hEM : ExcludedMiddle)
     (hRoots : ActualRootsWithoutLimitingPrinciple m w Composite F.PriorSimply essence esse)
     (hPurity : UnlimitedDeterminationsArePure Composite F.PriorSimply essence esse Has Pure)
-    (hLoss : MissingVerdictIsImpure Pure favours (ValueStandard good))
-    (hBacked : UnbackedVerdictIsImpure Pure favours (ValueStandard good))
-    (hVaries : BetternessVariesWithinEndClass (ValueStandard good) fitOf Present) :
-    ActualRootFavouringIsGoodGeneral m w Has favours good fitOf Present := by
+    (hLoss : MissingValueVerdictIsImpure Pure favours v)
+    (hBacked : UnbackedValueVerdictIsImpure Pure favours v)
+    (hVaries : BetternessVariesWithinEndClass v fitOf Present) :
+    ActualRootFavouringIsGoodGeneral m w Has favours v.better fitOf Present := by
   intro r hr φ hφ
   have hP : Pure (favours φ) := hPurity r (hRoots r hr) (favours φ) hφ
-  have hGe : ∀ s x y, good s x y → φ s x y := fun s x y hg =>
+  have hGe : ∀ s x y, v.better s x y → φ s x y := fun s x y hg =>
     (hEM (φ s x y)).elim id fun hn => (hLoss φ ⟨s, x, y, hg, hn⟩ hP).elim
-  have hLe : ∀ s x y, φ s x y → good s x y := fun s x y hf =>
-    (hEM (good s x y)).elim id fun hn => (hBacked φ ⟨s, x, y, hf, hn⟩ hP).elim
+  have hLe : ∀ s x y, φ s x y → v.better s x y := fun s x y hf =>
+    (hEM (v.better s x y)).elim id fun hn => (hBacked φ ⟨s, x, y, hf, hn⟩ hP).elim
   obtain ⟨s, x, y, ⟨hg, -, t, ht, hng, -⟩, hPres⟩ := hVaries
   exact ⟨s, x, y, ⟨hg, hGe s x y hg, t, ht, hng, fun h => hng (hLe t x y h)⟩, hPres⟩
 
 /-- Lean-only. The two standard bridges give one favouring per actual root: two
-favouring determinations of an actual root are pure, so both track `good` and
+favouring determinations of an actual root are pure, so both track `v.better` and
 name the same profile. A bearer-level counterpart of the uniqueness clause of
 `3e6ae3e7`, derived, not that statement (which concerns admissible profiles). -/
 theorem actualRootHasOneFavouringFromStandard {W B T R D P S X : Type}
     (F : CausalityFrame W B T R) (m : Profile W B) (w : W)
     (Has : B → D → Prop) (Pure : D → Prop) (Composite : B → Prop) (essence esse : B → P)
     (favours : TruthCore.Causality.GoodFavouring.Profile S X → D)
-    (good : S → X → X → Prop)
+    (v : ValueStandardOrder S X)
     (hEM : ExcludedMiddle)
     (hRoots : ActualRootsWithoutLimitingPrinciple m w Composite F.PriorSimply essence esse)
     (hPurity : UnlimitedDeterminationsArePure Composite F.PriorSimply essence esse Has Pure)
-    (hLoss : MissingVerdictIsImpure Pure favours (ValueStandard good))
-    (hBacked : UnbackedVerdictIsImpure Pure favours (ValueStandard good)) :
+    (hLoss : MissingValueVerdictIsImpure Pure favours v)
+    (hBacked : UnbackedValueVerdictIsImpure Pure favours v) :
     ∀ r, ActualRoot m w r → ∀ φ ψ, Has r (favours φ) → Has r (favours ψ) → φ = ψ := by
   intro r hr φ ψ hφ hψ
-  have hTrack : ∀ χ, Has r (favours χ) → ∀ s x y, χ s x y ↔ good s x y := by
+  have hTrack : ∀ χ, Has r (favours χ) → ∀ s x y, χ s x y ↔ v.better s x y := by
     intro χ hχ s x y
     have hP : Pure (favours χ) := hPurity r (hRoots r hr) (favours χ) hχ
-    exact ⟨fun hf => (hEM (good s x y)).elim id fun hn => (hBacked χ ⟨s, x, y, hf, hn⟩ hP).elim,
+    exact ⟨fun hf => (hEM (v.better s x y)).elim id fun hn => (hBacked χ ⟨s, x, y, hf, hn⟩ hP).elim,
       fun hg => (hEM (χ s x y)).elim id fun hn => (hLoss χ ⟨s, x, y, hg, hn⟩ hP).elim⟩
   funext s x y
   exact propext ((hTrack φ hφ s x y).trans (hTrack ψ hψ s x y).symm)
@@ -85,7 +86,7 @@ theorem hornAPremisesGiveVariation {D S X Z : Type} (Admissible : Set D → Prop
       Admissible Pure)
     (hPureGG : TruthCore.Causality.ImpersonalFoundationJoint.GoodGeneralityIsPure Pure goodGen)
     (hOne : OneFavouringRealization Admissible favours goodGen good fitOf Present) :
-    BetternessVariesWithinEndClass good fitOf Present := by
+    StandardVariesWithinEndClass good fitOf Present := by
   obtain ⟨q, hq, hg⟩ := hPureAdm goodGen hPureGG
   obtain ⟨ψ, -, hgg⟩ := hOne q hq
   obtain ⟨s, x, y, ⟨hs, -, t, ht, hnt, -⟩, hPres⟩ := hgg hg
@@ -96,7 +97,7 @@ profile that factors through end-realization (a nature determined to its end
 content) either misses a verdict of the standard or makes an unbacked one, at
 the two scenarios of the variation witness. -/
 theorem variationForcesLossOrArbitrariness {S X Z : Type} (good : S → X → X → Prop)
-    (fitOf : S → Z) (Present : S → X → Prop) (hVaries : BetternessVariesWithinEndClass good fitOf Present)
+    (fitOf : S → Z) (Present : S → X → Prop) (hVaries : StandardVariesWithinEndClass good fitOf Present)
     (φ : TruthCore.Causality.GoodFavouring.Profile S X) (hFac : Function.FactorsThrough φ fitOf) :
     MissesVerdict good φ ∨ UnbackedVerdict good φ := by
   obtain ⟨s, x, y, ⟨hg, -, t, ht, hng, -⟩, -⟩ := hVaries
@@ -108,7 +109,7 @@ theorem variationForcesLossOrArbitrariness {S X Z : Type} (good : S → X → X 
 /-- Lean-only. Variation holds exactly when some profile is good-general. -/
 theorem variationIffSomeGoodGeneral {S X Z : Type} (good : S → X → X → Prop) (fitOf : S → Z)
     (Present : S → X → Prop) :
-    BetternessVariesWithinEndClass good fitOf Present ↔
+    StandardVariesWithinEndClass good fitOf Present ↔
       ∃ φ : TruthCore.Causality.GoodFavouring.Profile S X, GoodGeneral good fitOf Present φ := by
   constructor
   · intro h; exact ⟨good, h⟩
@@ -119,7 +120,7 @@ theorem variationIffSomeGoodGeneral {S X Z : Type} (good : S → X → X → Pro
 (law 4 of `GoodDependenceLaws`). -/
 theorem factoringDeniesVariation {S X Z : Type} (good : S → X → X → Prop) (fitOf : S → Z)
     (Present : S → X → Prop) (hFac : Function.FactorsThrough good fitOf) :
-    ¬ BetternessVariesWithinEndClass good fitOf Present :=
+    ¬ StandardVariesWithinEndClass good fitOf Present :=
   TruthCore.Results.Causality.ImpersonalFoundationJoint.factorsThroughNotGoodGeneral good fitOf
     Present good hFac
 
@@ -138,7 +139,7 @@ theorem noBestSelectionAgainstFavouring {S X : Type} (good φ : S → X → X �
 the end is undominated: no candidate ranks over it. A favouring that tracks this
 standard never faces the no-best case while some candidate realizes the end. -/
 theorem endRealizerUndominated {S X : Type} (fit : S → X → Bool) (s : S) (x : X)
-    (hx : fit s x = true) : ∀ y, ¬ EndRealizationStandard fit s y x := by
+    (hx : fit s x = true) : ∀ y, ¬ (EndRealizationStandard fit).ranks s y x := by
   rintro y ⟨-, h⟩
   rw [hx] at h
   exact Bool.noConfusion h
@@ -153,6 +154,19 @@ theorem noBestNat (φ : Unit → Nat → Nat → Prop) (hTrack : ∀ s x y, φ s
   obtain ⟨m, -, h⟩ := noBestSelectionAgainstFavouring (fun _ x y => y < x) φ hTrack () Set.univ
     (fun x _ => ⟨x + 1, trivial, Nat.lt_succ_self x⟩) n trivial
   exact ⟨m, h⟩
+
+/-- Lean-only. Exact tracking of a value order that varies within an
+end-realization class gives the goodness-dependence component of
+ORIGINAL_FINALITY_2 (`BecauseOfGoodness` at the variation witness). It does not
+give ORIGINAL_FINALITY_2 itself, whose ORIGINAL_FINALITY_1 component also needs
+dependence on end-realization (`exactTrackingWithoutOriginalFinality`). -/
+theorem exactTrackingGivesGoodnessDependence {S X Z : Type} (v : ValueStandardOrder S X)
+    (fitOf : S → Z) (Present : S → X → Prop) (φ : TruthCore.Causality.GoodFavouring.Profile S X)
+    (hTrack : ∀ s x y, φ s x y ↔ v.better s x y)
+    (hVaries : BetternessVariesWithinEndClass v fitOf Present) :
+    ∃ s x y, TruthCore.Causality.GoodFavouring.BecauseOfGoodness v.better fitOf φ s x y := by
+  obtain ⟨s, x, y, ⟨hg, -, t, ht, hng, -⟩, -⟩ := hVaries
+  exact ⟨s, x, y, hg, (hTrack s x y).2 hg, t, ht, hng, fun h => hng ((hTrack t x y).1 h)⟩
 
 /-! ## Symmetric alternatives -/
 
@@ -187,14 +201,16 @@ theorem exclusiveAlternativesNotBothPure {D A : Type} (Admissible : Set D → Pr
 
 /-- Lean-only. An intrinsic choice token `tok a` with an exclusive alternative
 `tok b` on a par in purity is had by no actual root, under RootPurity and the
-requirement-form premises. It hits personal and impersonal roots alike and does
+requirement-form premises, with the frame's `PriorSimply` (PRIOR_1) in both
+nonlimitation premises. It hits personal and impersonal roots alike and does
 not touch a selection that is not a token of the root's profile. -/
-theorem parAlternativeExcludedAtRoot {W B D P A : Type} (m : Profile W B) (w : W)
+theorem parAlternativeExcludedAtRoot {W B T R D P A : Type} (F : CausalityFrame W B T R)
+    (m : Profile W B) (w : W)
     (Admissible : Set D → Prop) (RequiresLack : D → Set D → Prop) (Has : B → D → Prop)
-    (Pure : D → Prop) (Composite : B → Prop) (Prior : B → B → Prop) (essence esse : B → P)
+    (Pure : D → Prop) (Composite : B → Prop) (essence esse : B → P)
     (tok : A → D)
-    (hRoots : ActualRootsWithoutLimitingPrinciple m w Composite Prior essence esse)
-    (hPurity : UnlimitedDeterminationsArePure Composite Prior essence esse Has Pure)
+    (hRoots : ActualRootsWithoutLimitingPrinciple m w Composite F.PriorSimply essence esse)
+    (hPurity : UnlimitedDeterminationsArePure Composite F.PriorSimply essence esse Has Pure)
     (hSuff : ExclusionFreeAdmissible Admissible RequiresLack)
     (hPure : PureRequiresNoPureLack RequiresLack Pure)
     (hEx : ExclusiveTokens Admissible tok) {a b : A} (hab : a ≠ b)
@@ -403,10 +419,24 @@ theorem standardControls : StandardControls := by
 theorem standardRelativity : StandardRelativity := by
   refine ⟨?_, ⟨Or.inr ⟨rfl, rfl⟩, by simp [dNature, fitOrder, fits]⟩,
     ⟨.cBetter, .c, .d, Or.inr ⟨rfl, rfl⟩, by simp [dNature, fitOrder, fits]⟩,
-    ⟨.cBetter, .c, .d, Or.inr ⟨rfl, rfl⟩, by simp [fitOrder, fits]⟩,
-    noMissSelf _, noUnbackedSelf _, noMissSelf _, noUnbackedSelf _⟩
-  intro s x y hs hne
-  cases s <;> cases x <;> cases y <;> simp_all [dNature, better, fitOrder, fits]
+    ⟨.cBetter, .c, .d, Or.inr ⟨rfl, rfl⟩, by simp [dOrder, EndRealizationStandard, fits]⟩,
+    noMissSelf _, noUnbackedSelf _, ?_, ?_⟩
+  · intro s x y hs hne
+    cases s <;> cases x <;> cases y <;> simp_all [dNature, better, fitOrder, fits]
+  · exact noMissSelf dNature
+  · exact noUnbackedSelf dNature
+
+/-- Lean-only control: exact value tracking with variation without
+ORIGINAL_FINALITY_2 (`ExactTrackingWithoutOriginalFinality`). -/
+theorem exactTrackingWithoutOriginalFinality : ExactTrackingWithoutOriginalFinality := by
+  refine ⟨⟨true, true, false, ⟨⟨rfl, rfl, rfl⟩, ⟨rfl, rfl, rfl⟩, false, rfl, ?_, ?_⟩, Or.inl id⟩,
+    ⟨true, true, false, ⟨rfl, rfl, rfl⟩, ⟨rfl, rfl, rfl⟩, false, rfl, ?_, ?_⟩, ?_⟩
+  · rintro ⟨h, -⟩; exact Bool.noConfusion h
+  · rintro ⟨h, -⟩; exact Bool.noConfusion h
+  · rintro ⟨h, -⟩; exact Bool.noConfusion h
+  · rintro ⟨h, -⟩; exact Bool.noConfusion h
+  · rintro s x y ⟨⟨-, -, hfit, -⟩, -⟩
+    exact hfit
 
 theorem refinementCondemnsGoodTracking : RefinementCondemnsGoodTracking := by
   refine ⟨le_sup_left, ?_, ?_, ⟨.reversal, .c, .z, Or.inr ?_, ?_⟩⟩

@@ -1,9 +1,9 @@
 {
   "id": "b2eab05f-01b6-4ec8-a367-5cb6702a18f3",
   "label": "STANDARD_OF_FAVOURING_2: the end-realization ordering",
-  "term": "standard of favouring, end-realization sense (EndRealizationStandard fit)",
-  "definition": "EndRealizationStandard fit ranks x over y at scenario s exactly when x realizes the end content D at s and y does not (fit s x = true and fit s y = false), the pattern of the Lane 2b fitOrder. It is the standard by which a favouring determined to the end content D is correct: such a favouring tracks it exactly. It ranks no two candidates that both realize, or both fail to realize, D.",
+  "term": "standard of favouring, end-realization sense (EndRealizationOrder)",
+  "definition": "An EndRealizationOrder is a ranking of candidates in each variation scenario by realization of the end content D: its field ranks s x y says that x ranks over y at s by end-realization. EndRealizationStandard fit builds the canonical one from an end-realization feature: x ranks over y at s exactly when fit s x = true and fit s y = false, the pattern of the Lane 2b fitOrder. It is the standard by which a favouring determined to D is correct: such a favouring tracks it exactly. It is a distinct type from ValueStandardOrder.",
   "basis": "stipulative",
-  "lean_declaration": "TruthCore.Causality.PurityCriteria.EndRealizationStandard",
+  "lean_declaration": "TruthCore.Causality.PurityCriteria.EndRealizationOrder",
   "note": "Stipulative analyst notion (#2145 premise lane P), attribution deferred. It is not ORIGINAL_FINALITY_1, whose conditions include that the favoured arrangement is better (good s x y); it is only the ordering by end-realization."
 }
