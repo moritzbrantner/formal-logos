@@ -18,7 +18,8 @@
   "blocker": "Not blocked. The residual dispute is the containment-recognition bridge d1fb6414 at the intentional/virtual containment boundary: whether a plurality of value-ranked modes of imitability in one simple nature, guiding its favouring, can be mind-independent without being real composition or real relations to non-existents (the #1892 objective-eminence status). Next tests: encode IntrinsicExemplarEminence with a favouring realized on contained modes and ConstitutivelySimple; a root-restricted recognition bridge with simplicity as a premise; aligned powers versus the D-nature as a configuration; check whether the Plotinian produced-realm structure is exactly the final cause as object.",
   "evidence": [
     "1895c9f3-8099-4117-aa9e-c1c7fd4b7f87",
-    "30c6f4c5-1c2c-4574-a02a-72c15e28a84c"
+    "30c6f4c5-1c2c-4574-a02a-72c15e28a84c",
+    "PR-2175"
   ],
   "workers": [
     {
@@ -26,14 +27,16 @@
       "provider": "anthropic",
       "model": "claude-opus-5-5",
       "effort": "high",
-      "date": "2026-11-27"
+      "date": "2026-11-27",
+      "pr": "PR-2175"
     },
     {
       "role": "repair",
       "provider": "anthropic",
       "model": "claude-opus-5-5",
       "effort": "high",
-      "date": "2026-11-27"
+      "date": "2026-11-27",
+      "pr": "PR-2175"
     }
   ],
   "current_assessment": {
@@ -48,8 +51,8 @@
     "note": "docs/notes/causal-perfection-transfer.md#individuating-non-present-candidates-the-axiarchic-rival-and-the-cognition-criterion-2026-11-27-provisional-2145",
     "reviewed_revision": "28f063a9500a24f35797af681968bfa0c271b24b",
     "review": "accepted_qualified",
-    "publication": "unpublished",
-    "evidence": "Branch research/premise-cognition (stacked on research/impersonal-joint) with result 1895c9f3: focused Lean build, bind-check, Comparator and NanoDa passed. Independent semantic challenge at 2fdafb853 (five P1, eight P2) repaired at 0692e4910; targeted re-check at 28f063a95 accepted the repairs and the revised judgment, with one residual P1 and three P2 fixed in the following commit (wording and record-level disclosure only; no Lean type or registered result changed).",
+    "publication": "published",
+    "evidence": "Branch research/premise-cognition (stacked on research/impersonal-joint) with result 1895c9f3: focused Lean build, bind-check, Comparator and NanoDa passed. Independent semantic challenge at 2fdafb853 (five P1, eight P2) repaired at 0692e4910; targeted re-check at 28f063a95 accepted the repairs and the revised judgment, with one residual P1 and three P2 fixed in the following commit (wording and record-level disclosure only; no Lean type or registered result changed). Published as draft PR-2175 (https://github.com/moritzbrantner/formal-logos/pull/2175) after merging main at e9ac9d86c; Comparator and NanoDa rerun on the merged inputs.",
     "supersedes": "None. It adds a scoped assessment beside e03ee9b6's; that assessment's parity on the criterion is refined, not withdrawn."
   }
 }
