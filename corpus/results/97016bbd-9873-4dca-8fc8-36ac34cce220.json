@@ -1,0 +1,11 @@
+{
+  "id": "97016bbd-9873-4dca-8fc8-36ac34cce220",
+  "label": "More such package and mode of possession: induction-shaped controls, checked",
+  "argument_id": "ca5583c5-15e1-40b2-9685-e64e83486d65",
+  "challenge_module": "TruthCore.Results.Causality.MoreSuchSenseCollapse.Challenge",
+  "solution_module": "TruthCore.Results.Causality.MoreSuchSenseCollapse.Solution",
+  "theorem": "TruthCore.Results.Causality.MoreSuchSenseCollapse.controls",
+  "comparator_config": "results/97016bbd-9873-4dca-8fc8-36ac34cce220/comparator.json",
+  "status": "solution-present",
+  "description": "One finite interpretation shaped like induction heating, read twice: with a formal comparative and with an eminent comparative on the same causes, acts and reception. With the formal comparative, the formal possession gap, inclusive possession, the reception premises and the formal more-such bearer hold while the inclusive exceeding step, 'more such' and formal possession fail. With the eminent comparative the whole package holds at inclusive act and only the formal more-such bearer fails. The control shows that mixing eminent possession with a formal bearer fails in this interpretation. It is a structural surrogate: it shows which premise carries the failure in one interpretation, not that the premise is false of reality."
+}

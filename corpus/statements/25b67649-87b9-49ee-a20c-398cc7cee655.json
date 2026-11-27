@@ -1,0 +1,15 @@
+{
+  "id": "25b67649-87b9-49ee-a20c-398cc7cee655",
+  "label": "Some distinct cause of a perfection in another does not have it IN_ACT_1, formally",
+  "paraphrase": "Analyst formulation, attribution deferred: the exact negation of 26632e48 with its original scope. Some c, distinct from x, causes x's being r (CAUSE_2) and does not have r formally (not A.InActFormally c r). It says nothing about virtual or eminent possession. Warrant, outside Lean: induction heating, in which a water-cooled copper coil carrying alternating current heats a steel workpiece far above the coil's own temperature; on DEF-CAUSE-OF-PERFECTION the coil is a cause of the workpiece's heat, and it is not formally hot to that degree. The case needs only that CAUSE_2 counts the coil; it does not need CAUSE_2 to count instruments in general, because the principal causes upstream in a hydroelectric supply (turbine, generator, falling water) are not formally hot either. The finite interpretation in the controls 'More such package and mode of possession: induction-shaped controls' is a structural surrogate of the case, not its evidence. Open.",
+  "lean_declaration": "TruthCore.Causality.MoreSuchSenseCollapse.FormalPossessionGap",
+  "definition_ids": [
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "a5bda545-3e76-5240-808d-25f897a07be5",
+    "00bd3c0c-010a-559c-a2a0-b4fbf49cbaf1"
+  ],
+  "disambiguation_ids": [
+    "dba7b1de-f3a0-57af-9af9-b2a4da3136fa",
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b"
+  ]
+}

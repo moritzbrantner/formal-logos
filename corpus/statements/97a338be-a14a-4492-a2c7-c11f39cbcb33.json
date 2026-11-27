@@ -1,0 +1,19 @@
+{
+  "id": "97a338be-a14a-4492-a2c7-c11f39cbcb33",
+  "label": "The more-such package with an IN_ACT_1 bearer turns possession in any mode into formal possession",
+  "paraphrase": "Analyst formulation, attribution deferred. For every single act predicate InAct shared by the possession premise and the exceeding step, and every reception and limitation relation: distinct-cause possession in InAct (2c0b9bd7), a caused perfection is received in its effect (a9036c3c), reception limits (cdb79aa6), limitation only through reception (39a4c28c), the cause's perfection is not received in the effect (d0b76fb9) and the exceeding step in InAct (7030af77), together with 'what is more such has the perfection' read with formal act (c11369aa at IN_ACT_1), imply formal distinct-cause possession 26632e48. It is an implication between those propositions, true in every interpretation; it asserts none of them. Consequence for the eminence clause: when the two registered steps (moreSuchOfDistinctCauseGives, distinctCauseGivesOfMoreSuch) are composed with eminent possession in the first and formal possession in the second, eminent possession comes back as formal possession.",
+  "lean_declaration": "TruthCore.Causality.MoreSuchSenseCollapse.MoreSuchPackageForcesFormalPossession",
+  "definition_ids": [
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "a5bda545-3e76-5240-808d-25f897a07be5",
+    "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168",
+    "5766de66-8a37-5b04-aa65-9eec53319f50",
+    "cf4875cb-6baf-5bf5-8590-84a21777c66c",
+    "245797e9-e5e9-5296-8d34-2138cc6b7ae6",
+    "00bd3c0c-010a-559c-a2a0-b4fbf49cbaf1"
+  ],
+  "disambiguation_ids": [
+    "dba7b1de-f3a0-57af-9af9-b2a4da3136fa",
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b"
+  ]
+}
