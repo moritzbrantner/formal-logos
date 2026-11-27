@@ -68,19 +68,16 @@ theorem favouringStandardLaws : FavouringStandardLaws :=
 /-! ## Part B -/
 
 theorem goodDependenceLaws : GoodDependenceLaws := by
-  refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_⟩
-  · rintro S X Z g ctrl φ s x y hfac ⟨hφ, t, hct, -, hnt⟩
+  refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩
+  · rintro S X Z g ctrl φ s x y hfac ⟨-, hφ, t, hct, -, hnt⟩
     exact hnt (by rw [hfac hct]; exact hφ)
-  · rintro S X Z g ctrl φ s x y hfix ⟨hφ, t, -, -, hnt⟩
+  · rintro S X Z g ctrl φ s x y hfix ⟨-, hφ, t, -, -, hnt⟩
     exact hnt ((hfix s t x y).1 hφ)
   · intro S X Z f g ctrl φ s x y htr
     have htr' : ∀ s x y, φ s x y ↔ f s x y := htr
     simp only [DependsUnder, htr']
-  · intro S X Z g ctrl φ s x y hfac
-    have key : DependsUnder g ctrl φ s x y → ¬ g s x y := by
-      rintro ⟨-, t, hct, hng, -⟩ hg
-      exact hng (by rw [hfac hct]; exact hg)
-    exact ⟨key, fun hal hd => key hd ((hal x y).1 hd.1)⟩
+  · rintro S X Z g ctrl φ s x y hfac ⟨hg, -, t, hct, hng, -⟩
+    exact hng (by rw [hfac hct]; exact hg)
   · intro S X f φ hfix htr s t x y
     rw [← htr s x y, ← htr t x y]
     exact hfix s t x y
@@ -90,6 +87,9 @@ theorem goodDependenceLaws : GoodDependenceLaws := by
     simp only [DependsUnder, hφ', hψ']
   · intro W B R E K X Z P desc app spec ctrl φ k x y
     exact ⟨rfl, Iff.rfl⟩
+  · intro M H A X C F m fav fav' e out h hag
+    exact ⟨fun y => hag _ _, fun hs y hy hne => (hag _ _).1 (hs y hy hne),
+      fun hs y hy hne => (hag _ _).2 (hs y hy hne)⟩
 
 /-! ## Part C -/
 
@@ -113,9 +113,25 @@ private theorem range_frame (y : Outcome) :
     · exact ⟨hc, rfl⟩
     · exact ⟨hd, rfl⟩
 
+private theorem bg1_dNature : BecauseOfContent fitOrder dNature .actual .c .z :=
+  ⟨by simp [fitOrder, fits], by simp [dNature, fitOrder, fits], .reversal, rfl,
+    by simp [fitOrder, fits], by simp [dNature, fitOrder, fits]⟩
+
+private theorem bg1_goodGeneral : BecauseOfContent fitOrder goodGeneral .actual .c .z :=
+  ⟨by simp [fitOrder, fits], by simp [goodGeneral, better, fitOrder, fits], .reversal, rfl,
+    by simp [fitOrder, fits], by simp [goodGeneral, better, fitOrder, fits]⟩
+
+private theorem bg2_goodGeneral : BecauseOfGoodness better fits goodGeneral .actual .c .z :=
+  ⟨by simp [better, fitOrder, fits], by simp [goodGeneral, better, fitOrder, fits], .valueless,
+    fits_valueless, by simp [better], by simp [goodGeneral, better]⟩
+
+private theorem not_bg2_dNature : ¬ BecauseOfGoodness better fits dNature .actual .c .z := by
+  rintro ⟨-, -, t, hct, -, hnt⟩
+  exact hnt (by simp only [dNature, fitOrder, hct]; simp [fits])
+
 theorem goodFavouringTable : GoodFavouringTable := by
   refine ⟨fits_actual, ⟨?_, ?_⟩, ⟨?_, ?_, ?_, ?_⟩, ⟨?_, ?_, ?_⟩, ⟨?_, ?_, ?_, ?_, ?_, ?_⟩,
-    ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_⟩, ⟨rfl, rfl⟩⟩
+    ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_⟩, ⟨rfl, rfl⟩, ⟨?_, ?_, ?_, ?_, ?_⟩, ⟨?_, ?_, ?_, ?_⟩⟩
   · intro φ hφ
     have hsel : ∀ ψ : Profile Scenario Outcome, ¬ ψ .actual .c .d →
         ¬ FavouringSelects ψ (at_ .actual) hc outcome :=
@@ -143,29 +159,39 @@ theorem goodFavouringTable : GoodFavouringTable := by
     cases h
   · intro C fav e hind hasym
     exact nontrivial fav e outcome hc hind hasym ⟨hd, by decide⟩
-  · exact ⟨by simp [dNature, fitOrder, fits], .reversal, rfl, by simp [fitOrder, fits],
-      by simp [dNature, fitOrder, fits]⟩
-  · exact ⟨by simp [goodGeneral, better, fitOrder, fits], .reversal, rfl,
-      by simp [fitOrder, fits], by simp [goodGeneral, better, fitOrder, fits]⟩
-  · exact ⟨by simp [rational, better, fitOrder, fits], .reversal, rfl,
-      by simp [fitOrder, fits], by simp [rational, better, fitOrder, fits]⟩
+  · exact bg1_dNature
+  · exact bg1_goodGeneral
+  · exact bg1_goodGeneral
   · simp [proxy, physOrder, physical]
-  · rintro ⟨-, t, -, -, hnt⟩
+  · rintro ⟨-, -, t, -, -, hnt⟩
     exact hnt (by simp [proxy, physOrder, physical])
-  · rintro ⟨h, -⟩
+  · rintro ⟨-, h, -⟩
     exact h
-  · exact ⟨by simp [goodGeneral, better, fitOrder, fits], .valueless, fits_valueless,
-      by simp [better], by simp [goodGeneral, better]⟩
-  · exact ⟨by simp [rational, better, fitOrder, fits], .valueless, fits_valueless,
-      by simp [better], by simp [rational, better]⟩
+  · exact bg2_goodGeneral
+  · exact bg2_goodGeneral
   · exact ⟨by simp [dNature, fitOrder, fits], by simp [better, fitOrder, fits]⟩
-  · rintro ⟨-, t, hct, -, hnt⟩
-    exact hnt (by simp only [dNature, fitOrder, hct]; simp [fits])
-  · rintro ⟨-, t, hct, -, hnt⟩
-    exact hnt (by simp only [determinedWill, fitOrder, hct]; simp [fits])
-  · rintro ⟨-, t, -, -, hnt⟩
+  · exact not_bg2_dNature
+  · exact not_bg2_dNature
+  · rintro ⟨-, -, t, -, -, hnt⟩
     exact hnt (by simp [proxy, physOrder, physical])
-  · rintro ⟨h, -⟩
+  · rintro ⟨-, h, -⟩
     exact h
+  · exact ⟨rfl, rfl, rfl⟩
+  · simp [better, fitOrder, fits]
+  · rintro ⟨hg, -⟩
+    simp [better, fitOrder, fits] at hg
+  · intro y hy hne
+    rcases (range_frame y).1 hy with rfl | rfl
+    · exact absurd rfl hne
+    · exact Or.inr ⟨rfl, rfl, rfl⟩
+  · rintro ⟨hg, -⟩
+    simp [better, fitOrder, fits] at hg
+  · exact ⟨by simp [better, fitOrder, fits], by simp [dNature, fitOrder, fits], bg1_dNature⟩
+  · rintro ⟨-, h⟩
+    exact not_bg2_dNature h
+  · exact ⟨⟨by simp [better, fitOrder, fits], by simp [goodGeneral, better, fitOrder, fits],
+      bg1_goodGeneral⟩, bg2_goodGeneral⟩
+  · rintro ⟨-, -, -, -, t, -, -, hnt⟩
+    exact hnt (by simp [proxy, physOrder, physical])
 
 end TruthCore.Results.Causality.GoodFavouring

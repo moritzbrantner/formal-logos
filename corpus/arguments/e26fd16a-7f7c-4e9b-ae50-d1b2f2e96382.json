@@ -6,7 +6,7 @@
   "inference_ids": [
     "845f8a6f-6765-40e7-858a-960275acb4d6"
   ],
-  "meaning": "Laws 1 and 2: the witness scenario agrees on the control (or the profile is fixed), so the profile favours x over y there too. Law 3 rewrites the profile by the tracked feature. Law 4: the witness scenario agrees on the control, so g's verdict is the same as at s, which must therefore be negative; an aligned profile's favouring at s gives a positive verdict. Law 5 rewrites both sides by tracking. Law 6 rewrites both profiles. Law 7: Meets reads only Requirement, so the plan standard is unchanged by definitional unfolding.",
+  "meaning": "Laws 1 and 2: the witness scenario agrees on the control (or the profile is fixed), so the profile favours x over y there too. Law 3 rewrites the profile by the tracked feature. Law 4: the witness scenario agrees on the control, so g's verdict there equals its positive verdict at s. Law 5 rewrites both sides by tracking. Law 6 rewrites both profiles. Law 7: Meets reads only Requirement, so the plan standard is unchanged by definitional unfolding. Law 8: the favouring verdicts read only the favouring of the actual content.",
   "definition_ids": [
     "45541b02-ec42-4bae-9d45-4c67d2902004",
     "9d8bad2a-91f9-45f7-a181-b9c39a55cdcb",

@@ -1388,28 +1388,36 @@ surrogates).
 
 The test's two options for the noncognitive source were a received restriction
 and a ceiling on its power. Typing the source's favouring as a profile across
-variation scenarios exposes a third option: a *determination of the favouring
-to one content*. The rival on record, a nature directed to the joint
-manifestation D, has this determination. On that interpretation it fixes the
-measures that D requires without receiving them and without capping the power;
-the finite model types favouring only, not measures or power. It meets the end-content
-reading of "because of its goodness" (BECAUSE_OF_GOODNESS_1). A physical proxy
-aligned with D fails that reading at the recipient-relative reversal. The rival
-fails the controlled goodness reading (BECAUSE_OF_GOODNESS_2), as a will with a
-fixed preference for D does.
+variation scenarios makes explicit a third option that was already implicit in
+the earlier "simple joint productive constitution": a *determination of the
+favouring to one content*. The rival on record, a nature directed to the joint
+manifestation D, is interpreted as having this determination. On that
+interpretation it fixes the measures that D requires. The finite model types
+favouring only, not measures or power. Whether that determination is free of
+reception and of a ceiling is conditional on the Investigation 4 hook below.
 
-What apprehension avoids, a good-general profile also avoids: its favouring
-follows betterness, and it carries no content determination. Such a profile
-explains a finite measure by goodness only where a better or undominated
-measure exists. Where measures are tied or strictly improvable, the measure
-comes from a contingent exercise, for personal and impersonal profiles alike.
-So the finite-measure test does not by itself change the parity. It moves the
-open point to two places. One is whether non-coincidence of the origin's
-favouring with goodness (E4) belongs to the explanandum of original finality.
-The other is whether good-generality without apprehension is coherent (the
-content-generality bridge). Whether the D-nature's content determination counts
-as a limitation at an unlimited root is the Investigation 4 hook to Lane 1
-(#2153). It is recorded, not resolved.
+A profile defined as tracking D meets the end-content reading of "because of
+its goodness" (BECAUSE_OF_GOODNESS_1) by construction. A physical proxy aligned
+with D fails that reading at the recipient-relative reversal. Whether the rival's
+source is a D-tracker or a proxy is interpretive. The rival also fails the
+controlled goodness reading (BECAUSE_OF_GOODNESS_2), as a will with a fixed
+preference for D does. That verdict discriminates only if variation of goodness
+at fixed D-realization is admitted. Such variation is counterpossible if
+goodness is fixed by D-realization, and without it every profile fails reading 2.
+
+As typed, what apprehension avoids, a good-general profile also avoids: its
+favouring follows betterness, and it carries no content determination. Such a
+profile explains a finite measure by goodness only where a better or
+undominated measure exists. Where measures are tied or strictly improvable, the
+measure comes from a contingent exercise, for personal and impersonal profiles
+alike. So the finite-measure test does not by itself change the parity. It
+moves the open point to two places. One is which sense of original finality
+the case needs: only the for-the-good sense (ORIGINAL_FINALITY_2) includes
+non-coincidence of the origin's favouring with goodness. The other is whether
+good-generality without apprehension is coherent (the content-generality
+question). Whether the D-nature's content determination counts as a limitation
+at an unlimited root is the Investigation 4 hook to Lane 1 (#2153). It is
+recorded, not resolved.
 
 The `65c409cc`/`11628966` intellect route and its complete bundle are unchanged.
 The new results are placed diagnostics for `4be0f774` and `608a262d`.

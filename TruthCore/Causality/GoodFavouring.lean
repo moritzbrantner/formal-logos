@@ -18,30 +18,39 @@ outcome rather than y" when its actual content favours the actual outcome over
 y (`FavouringExplains`). The content is *outcome-independent* when it is the
 same at every compared history (`OutcomeIndependent`): it is fixed before, and
 independently of, which outcome occurs. This is the cell-carrier analogue of
-pro tanto favouring (SELECTING_AN_OUTCOME_1, `NetSelects` of #742), not one of
-its senses and not bridged to it. Unlike the determination standard of
+net favouring (SELECTING_AN_OUTCOME_1, `NetSelects` of #742), not one of its
+senses and not bridged to it. Law 1 assumes each content's favouring is
+asymmetric (net); a content with pro tanto reasons in both directions (plural
+rationality) is outside its scope. Unlike the determination standard of
 `SelectionScope` (law 8), it is not met trivially: an outcome-independent
 asymmetric content cannot favour the realized outcome over its rivals at every
 history of a scope with a contingent outcome. The re-description of the outcome
 does that only by being outcome-dependent. This is the cell-carrier form of the
-#742 incompatible core (base-fixed favouring, selection at both histories).
+#742 incompatible core (base-fixed favouring, selection at both histories). At
+the actual history alone, the re-description is excluded by the admission
+condition (outcome independence), not by law 1.
 
 **Part B (what "because of its goodness" can mean).** Favouring is compared
 across *variation scenarios* `s : S`: a profile `φ s x y` gives the source's
 favouring in each scenario, and features of candidates (a physical type, the
 realization of the recipient good D, a betterness standard) are scenario-indexed
-relations. `DependsUnder g ctrl φ s x y`: the profile favours x over y at s, and in
+relations. `DependsUnder g ctrl φ s x y`: `g` ranks x over y at s, the profile
+favours x over y at s, and in
 some scenario that agrees with s on the controlled feature `ctrl`, `g` does not
 rank x over y and neither does the profile (controlled difference-making). A
 profile that factors through the control (`Function.FactorsThrough φ ctrl`)
 depends on nothing else under that control; a fixed profile depends on nothing;
 and if the goodness standard itself factors through the control, no profile
-aligned with it depends on it. The three readings of "produced because of its
+depends on it. A profile favouring what `g` does not rank higher (perverse or
+biased) does not depend on `g`. The three readings of "produced because of its
 goodness" are kept apart (disambiguation BECAUSE_OF_GOODNESS):
 `BecauseOfContent` (dependence on D-realization with nothing held fixed),
 `BecauseOfGoodness` (dependence on betterness with D-realization held fixed)
 and `PracticalSpecification.Governing` (an apprehended plan actually governs
-the giving).
+the giving). Two senses of original finality are typed: ORIGINAL_FINALITY_1
+(`OriginalFinality`: beneficial, the origin's favouring, dependent on D) and
+ORIGINAL_FINALITY_2 (`OriginalFinalityForGood`: also dependent on goodness with
+D fixed, E4).
 
 **Plan standard.** A `PracticalSpecification.Plan` induces a standard on
 outcomes from its requirements (`planStandard`). It reads only `Requirement`,
@@ -166,12 +175,14 @@ def Fixed (φ : Profile S X) : Prop :=
 def AlignedAt (φ : Profile S X) (f : S → X → X → Prop) (s : S) : Prop :=
   ∀ x y, φ s x y ↔ f s x y
 
-/-- CONTROLLED DEPENDENCE: at `s` the profile favours `x` over `y`, and in some
-scenario agreeing with `s` on the controlled feature `ctrl`, the feature `g` does
-not rank `x` over `y` and the profile does not favour it. -/
+/-- CONTROLLED DEPENDENCE (difference-making): at `s` the feature `g` ranks `x`
+over `y` and the profile favours `x` over `y`, and in some scenario agreeing with
+`s` on the controlled feature `ctrl`, `g` does not rank `x` over `y` and the
+profile does not favour it. A profile favouring what `g` does not rank higher at
+`s` (a perverse or merely biased profile) does not depend on `g` there. -/
 def DependsUnder (g : S → X → X → Prop) (ctrl : S → Z) (φ : Profile S X) (s : S) (x y : X) :
     Prop :=
-  φ s x y ∧ ∃ t, ctrl t = ctrl s ∧ ¬ g t x y ∧ ¬ φ t x y
+  g s x y ∧ φ s x y ∧ ∃ t, ctrl t = ctrl s ∧ ¬ g t x y ∧ ¬ φ t x y
 
 /-- BECAUSE_OF_GOODNESS_1 (end content): the favouring depends on the realization
 of the end D (`fit`), with nothing held fixed beyond the scenario space. -/
@@ -183,6 +194,22 @@ standard `good` with the realization of D (`fitOf`) held fixed. -/
 def BecauseOfGoodness {D : Type} (good : S → X → X → Prop) (fitOf : S → D) (φ : Profile S X)
     (s : S) (x y : X) : Prop :=
   DependsUnder good fitOf φ s x y
+
+/-- ORIGINAL_FINALITY_1 at `s` for `x` over `y`: the arrangement favoured is the
+better one (E1, `good s x y`), the origin's own profile favours it (E2, `φ s x y`),
+and that favouring depends on the realization of the end D (F,
+`BecauseOfContent`). E3 (no further determining principle supplies the profile)
+is not typed: it is the interpretation of `φ` as the origin's own. -/
+def OriginalFinality (good fit : S → X → X → Prop) (φ : Profile S X) (s : S) (x y : X) :
+    Prop :=
+  good s x y ∧ φ s x y ∧ BecauseOfContent fit φ s x y
+
+/-- ORIGINAL_FINALITY_2: ORIGINAL_FINALITY_1 together with E4, non-coincidence of
+the origin's favouring with goodness, typed as `BecauseOfGoodness` with the
+realization of D held fixed (the end operates as good). -/
+def OriginalFinalityForGood {D : Type} (good fit : S → X → X → Prop) (fitOf : S → D)
+    (φ : Profile S X) (s : S) (x y : X) : Prop :=
+  OriginalFinality good fit φ s x y ∧ BecauseOfGoodness good fitOf φ s x y
 
 end Dependence
 
@@ -198,19 +225,23 @@ def planStandard {W B R E K X : Type} (P : Plan W B R E K) (desc : X → Clause 
    nothing under that control.
 2. **Fixity.** A fixed profile depends on nothing, under any control.
 3. **Tracking.** A profile tracking `f` depends on `g` under `ctrl` exactly when
-   `f` ranks `x` over `y` at `s` and some scenario agreeing on `ctrl` has neither
-   `g` nor `f` ranking `x` over `y`.
+   `g` and `f` rank `x` over `y` at `s` and some scenario agreeing on `ctrl` has
+   neither `g` nor `f` ranking `x` over `y`.
 4. **No variation, no dependence.** If the standard `g` factors through the
-   control, a profile depends on `g` only by favouring what `g` does not rank
-   higher; so no profile aligned with `g` at `s` depends on it. This holds of
-   every profile, personal or impersonal by interpretation.
+   control, no profile depends on `g` under that control. This holds of every
+   profile, personal or impersonal by interpretation.
 5. **Fixed and tracking.** A fixed profile tracks only a fixed feature.
 6. **Label independence.** Two profiles tracking the same feature have the same
    dependence verdicts. Definitional.
 7. **Plan standard is blind to apprehension.** Replacing a plan's
    `ApprehendsAsGood` and `SpecifiesGiving` fields leaves its standard unchanged,
    so a profile depends on the plan standards of the one plan exactly when it
-   depends on those of the other. -/
+   depends on those of the other.
+8. **Agreement at the content.** Two favouring assignments that agree on the
+   actual content receive the same verdicts of the content-fixed favouring
+   standard (`FavouringExplains`, `FavouringSelects`). So profiles that coincide
+   in the content scenario are indistinguishable by that standard, whatever they
+   do in other scenarios. Definitional. -/
 def GoodDependenceLaws : Prop :=
   (∀ (S X Z : Type) (g : S → X → X → Prop) (ctrl : S → Z) (φ : Profile S X) (s : S) (x y : X),
     Function.FactorsThrough φ ctrl → ¬ DependsUnder g ctrl φ s x y) ∧
@@ -219,11 +250,10 @@ def GoodDependenceLaws : Prop :=
   (∀ (S X Z : Type) (f g : S → X → X → Prop) (ctrl : S → Z) (φ : Profile S X) (s : S)
       (x y : X),
     Tracks φ f →
-      (DependsUnder g ctrl φ s x y ↔ f s x y ∧ ∃ t, ctrl t = ctrl s ∧ ¬ g t x y ∧ ¬ f t x y)) ∧
+      (DependsUnder g ctrl φ s x y ↔
+        g s x y ∧ f s x y ∧ ∃ t, ctrl t = ctrl s ∧ ¬ g t x y ∧ ¬ f t x y)) ∧
   (∀ (S X Z : Type) (g : S → X → X → Prop) (ctrl : S → Z) (φ : Profile S X) (s : S) (x y : X),
-    Function.FactorsThrough g ctrl →
-      (DependsUnder g ctrl φ s x y → ¬ g s x y) ∧
-        (AlignedAt φ g s → ¬ DependsUnder g ctrl φ s x y)) ∧
+    Function.FactorsThrough g ctrl → ¬ DependsUnder g ctrl φ s x y) ∧
   (∀ (S X : Type) (f : S → X → X → Prop) (φ : Profile S X),
     Fixed φ → Tracks φ f → ∀ s t x y, f s x y ↔ f t x y) ∧
   (∀ (S X Z : Type) (f g : S → X → X → Prop) (ctrl : S → Z) (φ ψ : Profile S X) (s : S)
@@ -235,7 +265,12 @@ def GoodDependenceLaws : Prop :=
     planStandard { P with ApprehendsAsGood := app, SpecifiesGiving := spec } desc =
         planStandard P desc ∧
       (DependsUnder (planStandard { P with ApprehendsAsGood := app, SpecifiesGiving := spec } desc)
-          ctrl φ k x y ↔ DependsUnder (planStandard P desc) ctrl φ k x y))
+          ctrl φ k x y ↔ DependsUnder (planStandard P desc) ctrl φ k x y)) ∧
+  (∀ (M H A X C : Type) (F : BranchingFrame M H A) (m : M) (fav fav' : C → X → X → Prop)
+      (e : F.Through m → C) (out : F.Through m → X) (h : F.Through m),
+    (∀ x y, fav (e h) x y ↔ fav' (e h) x y) →
+      (∀ y, FavouringExplains fav e h out y ↔ FavouringExplains fav' e h out y) ∧
+        (FavouringSelects fav e h out ↔ FavouringSelects fav' e h out))
 
 /-! ## Part C: one matched model -/
 
@@ -301,6 +336,14 @@ def goodGeneral : Profile Scenario Outcome := better
 /-- Rational exercise under a correctly apprehended good (personal by interpretation). -/
 def rational : Profile Scenario Outcome := better
 
+/-- Control: a profile favouring the worse z over c, in `actual` only. -/
+def perverse : Profile Scenario Outcome := fun s x y => s = .actual ∧ x = .z ∧ y = .c
+
+/-- Control: a bias for c over the tied d, in `actual` only, added to the D-nature.
+It is outcome-independent content but not good-bounded. -/
+def bias : Profile Scenario Outcome :=
+  fun s x y => fitOrder s x y ∨ (s = .actual ∧ x = .c ∧ y = .d)
+
 /-- The exercise frame of `SelectionScope` (scope c, d) and its two histories. -/
 abbrev frame := exerciseSource
 
@@ -315,6 +358,11 @@ end Model
 open Model in
 /-- The matched table, at the actual outcome c of the exercise frame.
 
+Which philosophical account each profile represents is an interpretive
+assignment. Rows 2, 3 and the shared verdicts of row 7's pairs hold by
+construction: the standard reads only the profile in the content scenario, and
+the non-chance profiles agree there (`GoodDependenceLaws` law 8).
+
 1. Fit links to `SelectionScope.Fit` in `actual`.
 2. Standard A in `actual`: proxy, D-nature, determined will, good-general nature
    and rational exercise each explain "c rather than z" and "c rather than
@@ -324,13 +372,20 @@ open Model in
    proxy do not explain "c rather than d".
 4. The re-description selects at every history and is not outcome-independent;
    no outcome-independent content with asymmetric favouring does.
-5. Dependence on D-realization (`BecauseOfContent`) for "d rather than z": the
-   D-nature and both good-tracking profiles have it, the proxy and chance lack it.
+5. Dependence on D-realization (`BecauseOfContent`) for "c rather than z": the
+   D-nature and both good-tracking profiles have it (witness `reversal`); the proxy
+   favours c over z without it; chance lacks it.
 6. Dependence on goodness with D-realization fixed (`BecauseOfGoodness`) for
    "c rather than z": good-general and rational have it; D-nature, determined will,
    proxy and chance lack it. The D-nature still favours the beneficial c over z.
 7. The two good-tracking profiles are the same function, and so are the D-nature
-   and the determined will. -/
+   and the determined will.
+8. Controls: the perverse profile favours the worse z over c and does not depend
+   on goodness; the bias selects c in `actual` (it is not good-bounded) and does
+   not depend on goodness for c over the tied d.
+9. Original finality for c over z: the D-nature has ORIGINAL_FINALITY_1 and lacks
+   ORIGINAL_FINALITY_2; the good-general profile has ORIGINAL_FINALITY_2; the proxy
+   lacks ORIGINAL_FINALITY_1. -/
 def GoodFavouringTable : Prop :=
   (∀ o, fits .actual o = true ↔ Fit o) ∧
   ((∀ φ ∈ [proxy, dNature, determinedWill, goodGeneral, rational],
@@ -347,11 +402,11 @@ def GoodFavouringTable : Prop :=
     ¬ OutcomeIndependent (outcome : frame.Through () → Outcome) ∧
     ∀ (C : Type) (fav : C → Outcome → Outcome → Prop) (e : frame.Through () → C),
       OutcomeIndependent e → (∀ c, Std.Asymm (fav c)) → ¬ SelectsAtEveryHistory fav e outcome) ∧
-  (BecauseOfContent fitOrder dNature .actual .d .z ∧
-    BecauseOfContent fitOrder goodGeneral .actual .d .z ∧
-    BecauseOfContent fitOrder rational .actual .d .z ∧
-    proxy .actual .d .z ∧ ¬ BecauseOfContent fitOrder proxy .actual .d .z ∧
-    ¬ BecauseOfContent fitOrder chance .actual .d .z) ∧
+  (BecauseOfContent fitOrder dNature .actual .c .z ∧
+    BecauseOfContent fitOrder goodGeneral .actual .c .z ∧
+    BecauseOfContent fitOrder rational .actual .c .z ∧
+    proxy .actual .c .z ∧ ¬ BecauseOfContent fitOrder proxy .actual .c .z ∧
+    ¬ BecauseOfContent fitOrder chance .actual .c .z) ∧
   (BecauseOfGoodness better fits goodGeneral .actual .c .z ∧
     BecauseOfGoodness better fits rational .actual .c .z ∧
     (dNature .actual .c .z ∧ better .actual .c .z) ∧
@@ -359,6 +414,14 @@ def GoodFavouringTable : Prop :=
     ¬ BecauseOfGoodness better fits determinedWill .actual .c .z ∧
     ¬ BecauseOfGoodness better fits proxy .actual .c .z ∧
     ¬ BecauseOfGoodness better fits chance .actual .c .z) ∧
-  (goodGeneral = rational ∧ dNature = determinedWill)
+  (goodGeneral = rational ∧ dNature = determinedWill) ∧
+  (perverse .actual .z .c ∧ better .actual .c .z ∧
+    ¬ BecauseOfGoodness better fits perverse .actual .z .c ∧
+    FavouringSelects bias (at_ .actual) hc outcome ∧
+    ¬ BecauseOfGoodness better fits bias .actual .c .d) ∧
+  (OriginalFinality better fitOrder dNature .actual .c .z ∧
+    ¬ OriginalFinalityForGood better fitOrder fits dNature .actual .c .z ∧
+    OriginalFinalityForGood better fitOrder fits goodGeneral .actual .c .z ∧
+    ¬ OriginalFinality better fitOrder proxy .actual .c .z)
 
 end TruthCore.Causality.GoodFavouring
