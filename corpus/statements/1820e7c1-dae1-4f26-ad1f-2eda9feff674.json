@@ -1,0 +1,12 @@
+{
+  "id": "1820e7c1-dae1-4f26-ad1f-2eda9feff674",
+  "label": "Recipient-local fork conditions can hold with no CONCRETE_6 existent",
+  "paraphrase": "There is a one-world, one-candidate profile and a spatial frame in which the sole candidate fails selected-world actual concreteness. The local fork and local regress denial hold vacuously for every actual concrete recipient, and every actual contingent concretum has an actual concrete ground vacuously. The profile has no necessary concrete witness. This checks the population omission for universally quantified recipient-local predicates. It supplies no actual recipient and requires no principle of excluded middle.",
+  "lean_declaration": "TruthCore.Causality.UnlocatedRootNecessity.EmptyPopulationOmission",
+  "definition_ids": [
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "a1b2e330-388f-4120-bc5c-969642317792",
+    "e9e031af-665e-5888-9328-f7637b5a2677",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1"
+  ]
+}

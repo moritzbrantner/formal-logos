@@ -457,6 +457,7 @@ public import TruthCore.Results.Causality.ToleranceOriginRival.Solution
 public import TruthCore.Results.Causality.TotalHolding.Solution
 public import TruthCore.Results.Causality.TractarianLogicalSpace.Solution
 public import TruthCore.Results.Causality.UnderivedCommonSource.Solution
+public import TruthCore.Results.Causality.UnderivedConcreteness.Solution
 public import TruthCore.Results.Causality.UnderivedEssenceEsse.Solution
 public import TruthCore.Results.Causality.UnderivedNonComposite.Solution
 public import TruthCore.Results.Causality.UnderivedRootPerfection.Solution
@@ -465,6 +466,7 @@ public import TruthCore.Results.Causality.UniqueFeedback.Solution
 public import TruthCore.Results.Causality.UniqueRootPerfection.Solution
 public import TruthCore.Results.Causality.UniqueRootQuarta.Solution
 public import TruthCore.Results.Causality.UniversalGivingPriority.Solution
+public import TruthCore.Results.Causality.UnlocatedRootNecessity.Solution
 public import TruthCore.Results.Causality.WholePowerClassification.Solution
 public import TruthCore.Results.Causality.WholePowerPerfection.Solution
 public import TruthCore.Results.Causality.WholeRosterFoundation.Solution
