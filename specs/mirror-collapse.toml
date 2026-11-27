@@ -1,0 +1,114 @@
+[batch]
+vocab = "TruthCore.Modal.MirrorCollapse"
+results = "TruthCore.Results.Modal.MirrorCollapse"
+
+[[statement]]
+id = "Every world violating no ESSENCE_5 truth is possible"
+lean = "EssenceGroundedWorldPossibility"
+definitions = ["7cf63236-9c12-41bc-bf20-6fbce7a121db", "beb654a7-e204-5f4c-a7b4-45e886ba7109"]
+disambiguations = ["DISAMB-ESSENCE", "DISAMB-NECESSARY"]
+paraphrase = "OPEN, analyst formulation, attribution deferred: world-level essence-grounded possibility. Every world v of the frame at which every ESSENCE_5 truth of every being holds (every φ such that it lies in the nature of some being that φ) is accessible from w. Whatever no nature excludes is possible. It is the world-level counterpart of lane E's EM (f6f956a1, for root profiles, #2174) and of the existing EssentialExclusionAccount (for the absence of one being), and an instance of the Finean view that essences are the source of necessity (navigation only). Powers-based accounts (possibility needs a power), Humean recombination and modal primitivism deny it in different ways."
+
+[[statement]]
+id = "Every ESSENCE_5 truth holds at the actual world"
+lean = "EssentialTruthsHoldAt"
+definitions = ["7cf63236-9c12-41bc-bf20-6fbce7a121db"]
+disambiguations = ["DISAMB-ESSENCE"]
+paraphrase = "OPEN, analyst formulation, attribution deferred: factivity of ESSENCE_5 at the actual world. For every being x and world-proposition φ, if it lies in the nature of x that φ, then φ holds at w. What lies in a nature is true. It follows from 'essence grounds necessity' (EssenceGroundsNecessity) on a frame reflexive at w."
+
+[[statement]]
+id = "The mirror image of the actual world satisfies every ESSENCE_5 truth the actual world does"
+lean = "EssentialTruthsPreservedByMirrorAt"
+definitions = ["7cf63236-9c12-41bc-bf20-6fbce7a121db", "3fc924f3-6226-41ae-8032-f63ea44f27a9"]
+disambiguations = ["DISAMB-ESSENCE"]
+paraphrase = "OPEN, analyst formulation, attribution deferred: orientation-free natures, at w only. For every being x and world-proposition φ, if it lies in the nature of x that φ and φ holds at w, then φ holds at the global mirror image σ w. No nature contains a condition that the actual arrangement meets and its mirror image violates. A nature containing a primitive orientation, or an essential truth about which of two incongruent counterparts is realized, denies it. It says nothing about natures at other worlds."
+
+[[statement]]
+id = "The global mirror image of the actual world has the opposite handedness"
+lean = "HandednessReversedAt"
+definitions = ["3fc924f3-6226-41ae-8032-f63ea44f27a9"]
+paraphrase = "OPEN, analyst formulation, attribution deferred: the feature H (global handedness) holds at the mirror image σ w exactly when it fails at w. The mirror image is a different arrangement. A relationalist about orientation who identifies a world with its global mirror image (σ w = w) denies it; so does anyone for whom global handedness is no feature of a world."
+
+[[statement]]
+id = "The relation-of-reason account: cost, real decrees under N, and a joint model"
+lean = "RelationOfReasonCertificate"
+definitions = ["5e66f74d-c34f-4aee-ae29-2a5b698294fd", "3aba5f19-f48d-50db-bc57-93ba2e99f845", "65e38ffa-5a1c-55d0-935c-6538d843b780", "88f7c656-f484-4737-a872-b2d78c604322"]
+disambiguations = ["DISAMB-NECESSARY"]
+paraphrase = "Analyst certificate, attribution deferred. (1) On the relation-of-reason account (an invariant intrinsic profile, a real determination carrying the act, the act's actual terminus the effect, every terminus existing, the effect CONTINGENT_1), the act is performed at every accessible world and does not strictly suffice for the effect; no fact intrinsic to the source discriminates the effect's presence from its absence; the act's terminus discriminates it and is not intrinsic to the source. (2) For a real, exclusive decree family under N at one bearer (no accessible world gives it a determination it lacks), every decree it has at an accessible world is its actual decree; if that decree suffices for a contingent effect, some accessible world lacks the effect and has no decree at all. (3) On one finite carrier the account holds together with RootPurity, a30c5963, N at the root, 0c8631bd, both directions of member grounding, the existential PSR for contingents, some actual contingent concrete being, the failure of actual collapse and #555's IX.6/IsImmutable/ModalCapacity readings at the actual world. A structural surrogate only; nothing in the account mentions intellect."
+
+[[statement]]
+id = "The mirror fork for a necessitarian and the contrast gap of every invariant source"
+lean = "MirrorForkCertificate"
+definitions = ["3fc924f3-6226-41ae-8032-f63ea44f27a9", "7cf63236-9c12-41bc-bf20-6fbce7a121db", "f9a77a01-4dcf-5a1d-9bf7-a45a466ce504", "3aba5f19-f48d-50db-bc57-93ba2e99f845", "65e38ffa-5a1c-55d0-935c-6538d843b780"]
+disambiguations = ["DISAMB-ESSENCE", "DISAMB-NECESSARY"]
+paraphrase = "Analyst certificate, attribution deferred. (1) Under actual modal collapse and world-level essence-grounded possibility, every world violating no ESSENCE_5 truth is the actual world. (2) Under collapse, that possibility principle, factivity and reversed handedness, some essential truth holds at the actual world and fails at its mirror image. (3) Under collapse, factivity, preservation by the mirror and reversed handedness, the mirror image violates no essential truth and is not accessible. (4) Under collapse, the possibility principle, factivity and preservation, the mirror image is the actual world, so the mirror reverses no feature. (5) A rule that singles out the actual world among the worlds violating no essential truth, where the mirror image violates none and handedness is reversed, holds at the actual world and fails at its mirror image. (6) If a source's real determinations are invariant over accessible worlds and the mirror image is accessible, no fact intrinsic to the source discriminates any explanandum true at the actual world and false at its mirror image. (7) Under a30c5963, RootPurity, the sufficiency direction of member grounding and 0c8631bd, two exclusive orientation tokens on a par in purity are had by no actual root. (8) If every actual concrete being is NECESSARY_2 and some actual being is chiral, then with factivity, preservation and reversed handedness, world-level essence-grounded possibility fails."
+
+[[statement]]
+id = "Some actual concrete being exists only at worlds with the actual handedness"
+lean = "ChiralIndividualAt"
+definitions = ["3fc924f3-6226-41ae-8032-f63ea44f27a9", "beb654a7-e204-5f4c-a7b4-45e886ba7109"]
+paraphrase = "OPEN, analyst formulation, attribution deferred: a chiral individual. Some concrete being x exists at w, and at every world where x exists the feature H (global handedness) has its value at w. Example: an actual molecule of one enantiomer, if being of its chemical kind is essential to it and the mirror image of that molecule is a molecule of the other kind (sortal essentialism with enantiomers as distinct kinds). A haecceitist who holds that the same molecule exists, mirrored, at the mirror image denies it."
+
+[[argument]]
+id = "Some actual concrete being is contingent, from essence-grounded possibility and a chiral individual"
+label = "A CONTINGENT_1 CONCRETE_AND_ABSTRACT_6 being, from the mirror and chirality"
+theorem = "contingentFromChiralMirror"
+comparator_theorems = ["mirrorControls"]
+premises = ["Every world violating no ESSENCE_5 truth is possible", "Every ESSENCE_5 truth holds at the actual world", "The mirror image of the actual world satisfies every ESSENCE_5 truth the actual world does", "The global mirror image of the actual world has the opposite handedness", "Some actual concrete being exists only at worlds with the actual handedness"]
+conclusion = "c94b5446-e7e7-5b36-9bed-288959725526"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Factivity and preservation put the mirror image among the worlds no essence excludes; essence-grounded possibility makes it accessible; reversed handedness there excludes the chiral individual, which is therefore absent at an accessible world"
+meaning = "The mirror image σ w satisfies every essential truth (the actual world does, and the mirror preserves those it satisfies), so it is accessible from w. Handedness at σ w is the opposite of handedness at w. The chiral individual x exists at w and exists only at worlds sharing w's handedness, so x is absent at σ w: some actual concrete being is CONTINGENT_1 at w. The main theorem uses no axioms. A concrete necessitarian who grounds possibility in essences must deny one of the five premises: a nature containing orientation, no distinct mirror image, a brute impossibility not excluded by any nature, an actual world violating an essential truth, or that any actual being is chiral (haecceitism about mirrored individuals). The Comparator companion mirrorControls (propext only) gives a positive row; for each premise a row where it alone fails, the other four hold and the conclusion fails; and five relocation-probe rows where one premise fails, the other four hold and the conclusion still holds, so no premise is equivalent to the conclusion given the other four. The argument applies equally to a personal necessitarian (a necessary choice of the best, where 'best' is mirror-invariant) and an impersonal one. Structural assignments only; the Lean-only notCollapsedFromMirror gives the full-collapse form (185ce448) from the first four premises alone."
+description = "Conditional support option for c94b5446 from a horizontal family (essence-grounded modality and mirror symmetry), independent of the existing routes to c94b5446. Not a transcription. Establishes no premise. The contested load sits on world-level essence-grounded possibility (which powers theorists reject), on orientation-free natures and on the chiral individual."
+
+[[argument]]
+id = "Relation-of-reason certificate"
+label = "Relation-of-reason account: cost, decrees under N, joint model"
+theorem = "relationOfReason"
+premises = []
+conclusion = "The relation-of-reason account: cost, real decrees under N, and a joint model"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Invariance makes every intrinsic fact constant over accessible worlds; N and exclusivity return any decree at an accessible world to the actual one; finite check"
+meaning = "Clause 1 is proved from the account alone: invariance and the carrier determination give the act at every accessible world; #555's rigid core then excludes strict efficacy; an intrinsic fact is constant over the accessible worlds, so it cannot fail at the world lacking the effect; terminus soundness makes the terminus discriminate the effect, and the same world shows it is not intrinsic. So the account keeps contingency and foundation and pays #555's price at the intrinsic level (no strictly sufficient, contrast-relevant intrinsic reason); the contrast is carried by an extrinsic fact whose own variation has only a non-discriminating intrinsic reason, #555's 'relocated' pattern. Clause 2: N at the bearer sends a decree had at an accessible world to w, where exclusivity identifies it with the actual decree; so a real decree leaves alternatives only without any decree, and with a decree at every accessible world the effect is not contingent. Clause 3 is a finite check on one carrier (rr…): the relation-of-reason account with the classical profile premises and a contingent effect. Nothing in clauses 1-2 mentions intellect, so the same price falls on an impersonal permissive propensity whose chance outcome is the terminus. Structural surrogates only."
+description = "Certificate, placed diagnostic. Establishes no premise. It answers whether the personal case's own profile premises force modal collapse: on the stated carrier they do not, given the relation-of-reason account; collapse needs a further premise (strict sufficiency of the intrinsic act, a real decree at every accessible world under N, or a necessitating PSR)."
+
+[[argument]]
+id = "Mirror fork certificate"
+label = "Mirror fork for necessitarians; contrast gap of invariant sources"
+theorem = "mirrorFork"
+premises = []
+conclusion = "The mirror fork for a necessitarian and the contrast gap of every invariant source"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Collapse with essence-grounded possibility identifies every unexcluded world with the actual one; case analysis on which premise of the mirror argument fails"
+meaning = "Clause 1: under collapse, an unexcluded world is accessible and so satisfies 'is w'. Clauses 2-4 locate the necessitarian's exit: with reversal and the possibility principle, some essential truth separates w from σ w (a nature containing orientation, option 1); with preservation but without the possibility principle, σ w is unexcluded and impossible (brute, option 3); with the possibility principle and preservation, σ w = w and no feature is reversed (no distinct mirror image, option 2, which by clause 1 generalizes to every unexcluded world). Clause 5: a necessitating rule that singles out w is itself not mirror-invariant at w. Clause 6: for every source whose real determinations are invariant over accessible worlds (an impersonal propensity, or the classical root on the relation-of-reason account) no intrinsic fact discriminates this handedness from the other. Clause 7: an orientation token with a par alternative is excluded at an actual root by the requirement-form purity premises (the handedness instance of lane P's mechanism, proved from the declarations on main). The certificate does not favour personal over impersonal accounts; it presses necessitarian accounts of either kind and any claim that an invariant source's intrinsic profile explains the contrast."
+description = "Certificate, placed diagnostic for c94b5446. Establishes no premise."
+
+[[relation]]
+id = "Test by MirrorCollapse.relationOfReason (c94b5446)"
+label = "Test by MirrorCollapse.relationOfReason (c94b5446)"
+subject_kind = "result"
+subject_id = "Relation-of-reason certificate"
+predicate = "tests"
+object_kind = "statement"
+object_id = "c94b5446-e7e7-5b36-9bed-288959725526"
+note = "On the certificate's carrier some actual concrete being is contingent while the classical root keeps every profile premise listed in clause 3 on the relation-of-reason account; the profile premises alone do not force collapse there."
+
+[[relation]]
+id = "Test by MirrorCollapse.relationOfReason (0c8631bd)"
+label = "Test by MirrorCollapse.relationOfReason (0c8631bd)"
+subject_kind = "result"
+subject_id = "Relation-of-reason certificate"
+predicate = "tests"
+object_kind = "statement"
+object_id = "0c8631bd-d6fd-405f-a3f3-45ab8d1a50c6"
+note = "The purity of requirements holds on the carrier together with a contingent effect of the root, on the relation-of-reason account; the impure limiter's requirement keeps the relation nonempty."
+
+[[relation]]
+id = "Test by MirrorCollapse.mirrorFork (c94b5446)"
+label = "Test by MirrorCollapse.mirrorFork (c94b5446)"
+subject_kind = "result"
+subject_id = "Mirror fork certificate"
+predicate = "tests"
+object_kind = "statement"
+object_id = "c94b5446-e7e7-5b36-9bed-288959725526"
+note = "States what denying c94b5446 costs its concrete-necessitarian rival when an actual being is chiral (clause 8), and what full collapse costs a necessitarian who grounds possibility in essences (clauses 1-4): a nature containing orientation, no distinct mirror image (generalized: no unexcluded world other than the actual), or a brute impossibility."

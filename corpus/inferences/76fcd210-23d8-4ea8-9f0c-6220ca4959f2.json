@@ -1,0 +1,16 @@
+{
+  "id": "76fcd210-23d8-4ea8-9f0c-6220ca4959f2",
+  "label": "A CONTINGENT_1 CONCRETE_AND_ABSTRACT_6 being, from the mirror and chirality (inference)",
+  "input_statement_ids": [
+    "a3cf255d-c910-461d-9bad-2c52d79fe894",
+    "598e90cb-7609-40c6-a9b5-e781e7298507",
+    "6a3db88a-98b9-4103-9d66-25ca03e34570",
+    "314f6b15-5743-4894-8b4f-b8fe3e692022",
+    "a0d94a8d-f0b6-4b6c-8033-4eccdabb52df"
+  ],
+  "output_statement_id": "c94b5446-e7e7-5b36-9bed-288959725526",
+  "rule": "Factivity and preservation put the mirror image among the worlds no essence excludes; essence-grounded possibility makes it accessible; reversed handedness there excludes the chiral individual, which is therefore absent at an accessible world",
+  "meaning": "The mirror image σ w satisfies every essential truth (the actual world does, and the mirror preserves those it satisfies), so it is accessible from w. Handedness at σ w is the opposite of handedness at w. The chiral individual x exists at w and exists only at worlds sharing w's handedness, so x is absent at σ w: some actual concrete being is CONTINGENT_1 at w. The main theorem uses no axioms. A concrete necessitarian who grounds possibility in essences must deny one of the five premises: a nature containing orientation, no distinct mirror image, a brute impossibility not excluded by any nature, an actual world violating an essential truth, or that any actual being is chiral (haecceitism about mirrored individuals). The Comparator companion mirrorControls (propext only) gives a positive row; for each premise a row where it alone fails, the other four hold and the conclusion fails; and five relocation-probe rows where one premise fails, the other four hold and the conclusion still holds, so no premise is equivalent to the conclusion given the other four. The argument applies equally to a personal necessitarian (a necessary choice of the best, where 'best' is mirror-invariant) and an impersonal one. Structural assignments only; the Lean-only notCollapsedFromMirror gives the full-collapse form (185ce448) from the first four premises alone.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

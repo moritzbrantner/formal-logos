@@ -1,0 +1,10 @@
+{
+  "id": "2b98d70a-8545-4244-9092-1b9683934f6c",
+  "label": "Relation-of-reason account: cost, decrees under N, joint model (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "8347844a-b79f-478f-b150-5457d76dfcd3",
+  "rule": "Invariance makes every intrinsic fact constant over accessible worlds; N and exclusivity return any decree at an accessible world to the actual one; finite check",
+  "meaning": "Clause 1 is proved from the account alone: invariance and the carrier determination give the act at every accessible world; #555's rigid core then excludes strict efficacy; an intrinsic fact is constant over the accessible worlds, so it cannot fail at the world lacking the effect; terminus soundness makes the terminus discriminate the effect, and the same world shows it is not intrinsic. So the account keeps contingency and foundation and pays #555's price at the intrinsic level (no strictly sufficient, contrast-relevant intrinsic reason); the contrast is carried by an extrinsic fact whose own variation has only a non-discriminating intrinsic reason, #555's 'relocated' pattern. Clause 2: N at the bearer sends a decree had at an accessible world to w, where exclusivity identifies it with the actual decree; so a real decree leaves alternatives only without any decree, and with a decree at every accessible world the effect is not contingent. Clause 3 is a finite check on one carrier (rr…): the relation-of-reason account with the classical profile premises and a contingent effect. Nothing in clauses 1-2 mentions intellect, so the same price falls on an impersonal permissive propensity whose chance outcome is the terminus. Structural surrogates only.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

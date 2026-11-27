@@ -1,0 +1,36 @@
+{
+  "id": "6637294f-e0a8-4d16-b73c-74d47ca6c7f0",
+  "label": "Relation-of-reason account priced; mirror-world fork for necessitarians (#2145 lane M)",
+  "date": "2026-11-27",
+  "statement_ids": [
+    "8347844a-b79f-478f-b150-5457d76dfcd3",
+    "59278450-e6d5-4fb9-9dac-062a9de0984c",
+    "a3cf255d-c910-461d-9bad-2c52d79fe894",
+    "598e90cb-7609-40c6-a9b5-e781e7298507",
+    "6a3db88a-98b9-4103-9d66-25ca03e34570",
+    "314f6b15-5743-4894-8b4f-b8fe3e692022",
+    "a0d94a8d-f0b6-4b6c-8033-4eccdabb52df",
+    "c94b5446-e7e7-5b36-9bed-288959725526",
+    "185ce448-0297-51f9-95f6-e272dba93156",
+    "0c8631bd-d6fd-405f-a3f3-45ab8d1a50c6",
+    "66aecdd7-ea4e-55c6-9377-10db08893854"
+  ],
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "#2145 lane M (owner-approved round 3). A: stated the relation-of-reason (extrinsic-decree) account of contingent willing (RelationOfReasonAt, DEF 5e66f74d) on #462's OutputProfile with world-indexed real determinations. Certificate relationOfReason (af7bc494): on the account the act is performed at every accessible world and does not strictly suffice (#555 rigid_core); no fact intrinsic to the source discriminates the effect's presence from its absence; the act's terminus discriminates it and is not intrinsic. So the account is coherent and pays exactly #555's nonnecessitating/relocated price; the definition mentions no intellect, so an impersonal permissive propensity pays the identical price (parity, agreeing with will-versus-chance section 7). Under N at the bearer (the bearer form of #2174's 906f9077), an exclusive real decree family leaves at every accessible world only the actual decree or none (decreesUnderN, noDecreeWorldUnderN): on the real-decree reading N excludes 'could have created otherwise' and keeps only 'could have refrained without any decree'. A joint finite model satisfies the account together with RootPurity c78c77da, a30c5963, N at the root, 0c8631bd, both directions of member grounding, 608a262d, c94b5446, 185ce448 and #555's IX.6/IsImmutable/ModalCapacity readings: the tested profile premises do not force collapse. B: mirror-world rule. Registered contingentFromChiralMirror (8d5ad56a): world-level essence-grounded possibility (ESSENCE_5), factivity, preservation of the actual world's essential truths by the global mirror, reversed handedness and a chiral individual give c94b5446; companion mirrorControls realizes each option (nature containing orientation, brute impossibility, no distinct mirror image, factivity, no chiral individual) and five relocation-probe rows. Lean-only notCollapsedFromMirror gives the full-collapse form 185ce448 from the first four premises (not registered: 185ce448 is off the current root routes). Certificate mirrorFork (28b64d7f): under collapse and essence-grounded possibility every unexcluded world is the actual world (option 2 generalizes); options 1 and 3 are exact; a necessitating rule singling out the actual world is not mirror-invariant ('best' cannot select); every invariant source has a contrast gap for handedness; an orientation token with a par alternative is excluded at a root by the requirement-form purity premises (handedness instance of lane P's mechanism); concrete necessitarianism with a chiral individual must deny essence-grounded possibility or one of the other premises. Applied identically: the mirror case presses necessitarian accounts (personal and impersonal alike) and any claim that an invariant source's intrinsic profile explains the contrast; it does not favour personal over impersonal. C: the possibility intuition is prima facie modal warrant against a non-relationalist background; strongest defeater PII with relationalism about orientation; recorded as low-to-moderate weight against necessitarianism that also holds essence-grounded possibility. Lane P's asymmetry (the personal side alone must treat a willing as no real determination) is real as a description; its only recorded support is inductive from finite agents (the LE reference-class position); a claim of contrastive explanation by the will fails (the discriminating terminus is coextensive with the effect).",
+  "blocker": "Conditional throughout. Registered support for c94b5446 rests on world-level essence-grounded possibility (powers theorists reject it), orientation-free natures and a chiral individual (haecceitists about mirrored individuals deny it). Untested cells: lane E's EM/LE/E in the joint model (until #2174 is on main), 0050b6ed (power for joint absence) on the CausalityFrame overlay, and a route-wide sweep for necessitating PSR premises. Three-angles rule: contrastive explanation at a necessary invariant source has now ended in parity from #555 BranchCosts, will-versus-chance section 7 and this lane; stop vertical work there. Next tests: a powers counterpart with mirror-invariant powers; call lane P's parAlternativeExcludedAtRoot once it lands; add EM/LE to the joint model.",
+  "evidence": [
+    "af7bc494-84ea-437f-9a69-415a4fd4204f",
+    "8d5ad56a-8a75-476b-9cf0-c316284a78ad",
+    "28b64d7f-750b-457b-87ff-05f44141b8ad"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "anthropic",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "date": "2026-11-27"
+    }
+  ]
+}

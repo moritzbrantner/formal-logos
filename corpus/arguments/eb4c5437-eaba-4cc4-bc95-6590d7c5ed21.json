@@ -1,0 +1,21 @@
+{
+  "id": "eb4c5437-eaba-4cc4-bc95-6590d7c5ed21",
+  "label": "Mirror fork for necessitarians; contrast gap of invariant sources",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "59278450-e6d5-4fb9-9dac-062a9de0984c",
+  "inference_ids": [
+    "a28335fa-c326-41e7-934b-a35b47d7b623"
+  ],
+  "meaning": "Clause 1: under collapse, an unexcluded world is accessible and so satisfies 'is w'. Clauses 2-4 locate the necessitarian's exit: with reversal and the possibility principle, some essential truth separates w from σ w (a nature containing orientation, option 1); with preservation but without the possibility principle, σ w is unexcluded and impossible (brute, option 3); with the possibility principle and preservation, σ w = w and no feature is reversed (no distinct mirror image, option 2, which by clause 1 generalizes to every unexcluded world). Clause 5: a necessitating rule that singles out w is itself not mirror-invariant at w. Clause 6: for every source whose real determinations are invariant over accessible worlds (an impersonal propensity, or the classical root on the relation-of-reason account) no intrinsic fact discriminates this handedness from the other. Clause 7: an orientation token with a par alternative is excluded at an actual root by the requirement-form purity premises (the handedness instance of lane P's mechanism, proved from the declarations on main). The certificate does not favour personal over impersonal accounts; it presses necessitarian accounts of either kind and any claim that an invariant source's intrinsic profile explains the contrast.",
+  "definition_ids": [
+    "3fc924f3-6226-41ae-8032-f63ea44f27a9",
+    "7cf63236-9c12-41bc-bf20-6fbce7a121db",
+    "f9a77a01-4dcf-5a1d-9bf7-a45a466ce504",
+    "65e38ffa-5a1c-55d0-935c-6538d843b780",
+    "3aba5f19-f48d-50db-bc57-93ba2e99f845"
+  ],
+  "disambiguation_ids": [
+    "1aef8986-ed29-564f-9803-d812d2ff63e1",
+    "83264cf5-01fe-52fc-9a00-eeb024f6496e"
+  ]
+}

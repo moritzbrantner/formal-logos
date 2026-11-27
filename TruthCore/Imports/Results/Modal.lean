@@ -43,6 +43,7 @@ public import TruthCore.Results.Modal.K.ScopeBoundary.Solution
 public import TruthCore.Results.Modal.LimitationPossibility.Control.Solution
 public import TruthCore.Results.Modal.LimitationPossibility.Solution
 public import TruthCore.Results.Modal.LimitationSeparation.Solution
+public import TruthCore.Results.Modal.MirrorCollapse.Solution
 public import TruthCore.Results.Modal.ModalGrounding.Solution
 public import TruthCore.Results.Modal.ModalGroundingActualAbsence.Solution
 public import TruthCore.Results.Modal.ModalPowerHolder.Solution

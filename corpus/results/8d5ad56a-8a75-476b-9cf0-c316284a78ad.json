@@ -1,0 +1,11 @@
+{
+  "id": "8d5ad56a-8a75-476b-9cf0-c316284a78ad",
+  "label": "A CONTINGENT_1 CONCRETE_AND_ABSTRACT_6 being, from the mirror and chirality",
+  "argument_id": "8ce71fb8-b484-4273-8dca-fc9830b48d72",
+  "challenge_module": "TruthCore.Results.Modal.MirrorCollapse.Challenge",
+  "solution_module": "TruthCore.Results.Modal.MirrorCollapse.Solution",
+  "theorem": "TruthCore.Results.Modal.MirrorCollapse.contingentFromChiralMirror",
+  "comparator_config": "results/8d5ad56a-8a75-476b-9cf0-c316284a78ad/comparator.json",
+  "status": "solution-present",
+  "description": "Conditional support option for c94b5446 from a horizontal family (essence-grounded modality and mirror symmetry), independent of the existing routes to c94b5446. Not a transcription. Establishes no premise. The contested load sits on world-level essence-grounded possibility (which powers theorists reject), on orientation-free natures and on the chiral individual."
+}
