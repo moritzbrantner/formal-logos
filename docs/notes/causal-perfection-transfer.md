@@ -4432,7 +4432,8 @@ and objective exemplarity are not capacities of the source's own
 apprehension. That they remain separate is not a theorem. It rests on a
 joint model: `standingRival` assigns the #1892 source, with its own
 capacity *set equal to* its actual apprehension. That choice makes the
-exercise-or-potency conjunct and ab esse ad posse trivial. The collapse
+exercise-or-potency conjunct trivial, and it would make ab esse ad posse
+trivial (that premise is not a conjunct of the model). The collapse
 premises then hold, and the source has neither aptitude nor exercise.
 "Productive capacity for knowers without understanding" survives the
 simplicity reading in this encoding. For self-directed contents the
@@ -4503,7 +4504,9 @@ are repaired at `07046c461abfa1a863ee1ac68ff261e33a2745aa`:
 - the parity verdict on E was overstated;
 - the `standingRival` personal variant was over-read.
 
-The coordinator's targeted re-check of the repairs has not yet run.
+The targeted re-check at `ddec20b4721d5f1b9121714865f168b3d59a08bd`
+accepted all four registered steps and found no remaining P1. A later
+commit changes only durable review-state text and one wording repair in §D.
 
 **Next discriminating tests.**
 
