@@ -1,0 +1,10 @@
+{
+  "id": "95172c03-8161-4455-be4a-308ece75563e",
+  "label": "Test by SourceWitness.overlap_control (688bfc49)",
+  "subject_kind": "result",
+  "subject_id": "b06d45ee-a1da-5ce4-84be-4f2a8009ab07",
+  "predicate": "tests",
+  "object_kind": "argument",
+  "object_id": "688bfc49-14ef-5f0a-8079-cf6ec30fb131",
+  "note": "Witness connectivity, confluence and a source together on the infinite populated actual graph at the sole world. Every some n has a direct upstream path to none, so distinct finite upstream endpoints can be extended to none. The relation also admits an infinite upstream branch."
+}
