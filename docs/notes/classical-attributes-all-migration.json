@@ -162,7 +162,7 @@
         "sha256": "24fe5978433819bc66b38f876a3b33560bd8c6ee9dcb572a78fd0e922937b109",
         "lean_declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.ActSimplyPriorToPotencyReading"
       },
-      "reviewed_sha256": "f20becd83b8f27863b836bc34a025d14d153aef3ff31c7ab39eb551fd879b675"
+      "reviewed_sha256": "747110a7cc923cdae60b7e4813abbbf6f7dc2c0c96d75dab8d35c148c079b9f0"
     },
     {
       "kind": "statements",
