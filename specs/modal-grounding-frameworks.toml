@@ -122,7 +122,7 @@ disambiguations = ["DISAMB-CONCRETE-ABSTRACT-CRITERIA", "DISAMB-KANT-CONTINGENCY
 id = "Modal grounding frameworks at the foundational case: laws, framework models and omission models"
 lean = "Model.Controls"
 paraphrase = "Premise-free laws and finite models (structural surrogates, not metaphysical possibility). Laws: (1) correlation with an uncaused esse and simple incorruptibility excludes any power over a being's esse; (2) PGP with unrestricted recombination and companions excludes any concrete foundational being; (3) existence-conditional essences exclude unconditional essentialism's reading of esse = essence for a being with esse = essence whose absence is representable; (4) under existence-conditional essences no essential truth of x entails x's existence once x's absence is representable; (5) Pruss's grounding P1 and possibility P4 with Euclidean access and a transfer bridge (a power for the global possibility is a power over the esse of each concretum it excludes) put every concrete contingent being under some power over its esse; (6) with excluded middle this makes every concrete foundational being necessary; (7) Aristotelian grounding of 'nothing concrete', initiator presence and concrete holders exclude the subtraction conclusion wherever something concrete exists; (8) the subtraction conclusion gives the global possibility premise P4 (a stronger analyst variant, not Pruss's own premise); (9) on a Euclidean frame the unrestricted conceivability bridge of #248 cannot take both a conceived necessary existence and a conceived absence of one being; (10) unreceivedness, firstness, correlation, passive-to-receptive, no self-esse-cause and B3 make the first unmoved mover incorruptible simply and under no power over its esse, and with PGP and excluded middle necessary if it exists at w; (11) with excluded middle PGP is exactly its half for existentially receptive beings and its half for subjectless beings. Models: theist (nonvacuity of every argument), prussWithoutPGP (Pruss premises and conclusion with PGP, C2 and the transfer bridge failing), bruteFoundational (a contingent foundational being: PGP, B6 and the necessity verdict fail; omission models of the two essentialist premises), conditionalEssence and its four omission models, primitivistSilence (the same foundational profile with the being necessary in one frame and contingent in another), hybridFirstWay (the First Way's act and potency premises, ST I q.2 a.3, unrestricted recombination, a corruptible composite under PGP's subject half and a contingent foundational first mover), six Pruss omission models (the fourth a replacement case: the one actual concretum possibly absent while a non-actual being is contingent elsewhere; the sixth, Euclidean, an artefact of the global P4), and two one-sided conceivability models."
-definitions = ["7fcf846e-d0ef-400e-89c0-7c82b94edde7", "7cf63236-9c12-41bc-bf20-6fbce7a121db", "54bdb2f0-aa66-489f-ae06-174dd668d424", "bf7eddca-8291-4744-8470-379babcd7781", "6ecf24d5-5001-4571-937c-2632ac8c2c66", "f9f58df7-d3be-4d66-b1f1-204d7049c450", "13c0abe7-25f7-4921-b52e-9f732edd6f2c", "1b8baf77-84fa-5513-a138-7fa14840dd87", "DEF-KANT-MODAL-NECESSITY", "DEF-KANT-MODAL-CONTINGENCY", "DEF-KANT-ONTOLOGICAL-MODEL", "DEF-ESSE", "DEF-CAN-FAIL-TO-BE", "3fd6bddb-f10c-4df4-8694-3eb5e7c28617", "DEF-POTENCY", "DEF-PURE-ACT", "DEF-FIRST-UNMOVED-MOVER"]
+definitions = ["7fcf846e-d0ef-400e-89c0-7c82b94edde7", "7cf63236-9c12-41bc-bf20-6fbce7a121db", "54bdb2f0-aa66-489f-ae06-174dd668d424", "bf7eddca-8291-4744-8470-379babcd7781", "6ecf24d5-5001-4571-937c-2632ac8c2c66", "f9f58df7-d3be-4d66-b1f1-204d7049c450", "13c0abe7-25f7-4921-b52e-9f732edd6f2c", "1b8baf77-84fa-5513-a138-7fa14840dd87", "DEF-KANT-MODAL-NECESSITY", "DEF-KANT-MODAL-CONTINGENCY", "DEF-KANT-ONTOLOGICAL-MODEL", "DEF-ESSE", "DEF-CAN-FAIL-TO-BE", "3fd6bddb-f10c-4df4-8694-3eb5e7c28617", "DEF-POTENCY", "DEF-PURE-ACT", "DEF-FIRST-UNMOVED-MOVER", "153fcebf-66f6-53de-bad7-82a30a359c9c"]
 disambiguations = ["DISAMB-KANT-CONTINGENCY", "DISAMB-CONCRETE-ABSTRACT-CRITERIA", "DISAMB-ESSE-RECEPTION", "DISAMB-CAUSE", "DISAMB-PRIORITY-SIMPLE-OR-IN-TIME", "DISAMB-CORRUPTIBLE-SIMPLY-OR-IN-A-RESPECT", "DISAMB-POTENCY", "DISAMB-ESSENCE", "f5dda05f-ba3c-4fdf-82a3-e4803c24ddb5", "d25cee67-1d5c-4a4c-bda5-8571b731ddf3"]
 
 [[argument]]
@@ -206,3 +206,133 @@ conclusion = "Modal grounding frameworks at the foundational case: laws, framewo
 rule = "General laws and explicit finite models"
 meaning = "Premise-free laws comparing the accounts of de re possibility of absence at the foundational case (power-grounded, combinatorial, essentialist in two forms, hybrid) and the Pruss reconstruction, then finite models: a theist nonvacuity model, the Pruss-without-PGP separation, the brute foundational model, the existence-conditional model with four omission models, the primitivist pair, the hybrid First Way model, six Pruss omission models and two one-sided conceivability models. Model-witnessed separations only; no premise is established and no reality claim is made."
 description = "Premise-free laws and models for the #1887 framework batch. Sense-mixing control: the laws relate MODAL_CONTINGENCY_1, NECESSARY_2, POSSIBLE_NOT_TO_BE_1 and _2, POWER_OVER_ESSE_1 and the new power-for-a-proposition primitive without a bridge premise. Establishes no premise."
+
+[[relation]]
+id = "1cc880b4-234d-4158-aab4-e7cb0efd2958"
+label = "Test by ModalGrounding.controls (20d5fecd)"
+subject_kind = "result"
+subject_id = "ef54f023-8184-406a-9b0c-caa2df7415b0"
+predicate = "tests"
+object_kind = "statement"
+object_id = "20d5fecd-950e-42f8-8dc9-3014491ff6ae"
+note = "Omit power grounding of contingency at reading world true. In bruteFirst the foundational mover exists there and is absent at the other accessible world, despite being incorruptible simply and under no bearer’s power over its esse. Both power grounding and the necessity verdict fail."
+
+[[relation]]
+id = "d3e4d6af-59aa-4c7c-91f2-a47ae34e1e85"
+label = "Test by ModalGrounding.controls (96971e31)"
+subject_kind = "result"
+subject_id = "ef54f023-8184-406a-9b0c-caa2df7415b0"
+predicate = "tests"
+object_kind = "statement"
+object_id = "96971e31-4782-4478-95b8-b6863a6a9412"
+note = "Omit the premise that beings contingent at the reading world have distinct esse and essence. In bruteFirst the foundational mover true is contingent at true and its represented esse and essence agree, so the foundational necessity verdict fails."
+
+[[relation]]
+id = "08351930-014e-4ba7-9bee-a1e15ecf0c29"
+label = "Test by ModalGrounding.controls (54bafc9f)"
+subject_kind = "result"
+subject_id = "ef54f023-8184-406a-9b0c-caa2df7415b0"
+predicate = "tests"
+object_kind = "statement"
+object_id = "54bafc9f-9c69-4343-ba32-8ab19d12b759"
+note = "Omit the principle that essential existence entails necessary existence. The bruteFirst profile assigns the mover's existence to its nature and satisfies the esse-to-essential-existence bridge. The mover is absent at an accessible world, and the distinct-esse verdict fails."
+
+[[relation]]
+id = "7953e585-8cc7-4492-ab0d-f6c36b1e391e"
+label = "Test by ModalGrounding.controls (565ccd6c)"
+subject_kind = "result"
+subject_id = "ef54f023-8184-406a-9b0c-caa2df7415b0"
+predicate = "tests"
+object_kind = "statement"
+object_id = "565ccd6c-0036-4613-8595-f6f03d273a0d"
+note = "Omit the bridge from equality of esse and essence to essential existence. On bruteFirst the essential predicate is empty. Essential truths entail necessity vacuously, while the contingent mover has equal esse and essence and the bridge fails."
+
+[[relation]]
+id = "6d8121d8-491a-408e-b971-8c4645df802e"
+label = "Test by ModalGrounding.controls (94393b5b)"
+subject_kind = "result"
+subject_id = "ef54f023-8184-406a-9b0c-caa2df7415b0"
+predicate = "tests"
+object_kind = "statement"
+object_id = "94393b5b-8950-4a52-aef1-50cd09232e64"
+note = "Omit grounding for the global absence possibility. In creatureFrame at true there is a contingent concretum and an accessible world with no contingent concretum. No candidate has a power for the latter proposition. Initiator presence and holder concreteness hold vacuously."
+
+[[relation]]
+id = "4a949b17-6331-428b-ab79-d160773b1f9c"
+label = "Test by ModalGrounding.controls (fffa0693)"
+subject_kind = "result"
+subject_id = "ef54f023-8184-406a-9b0c-caa2df7415b0"
+predicate = "tests"
+object_kind = "statement"
+object_id = "fffa0693-d04d-4387-b43d-514e092f72d1"
+note = "Omit initiator presence for the global absence possibility. In creatureFrame the sole power holder is the contingent creature false, which exists at the reading world true but is absent from the only accessible outcome with no contingent concretum."
+
+[[relation]]
+id = "d6fd3c39-c1de-43d5-a1d6-f15c55d3ea79"
+label = "Test by ModalGrounding.controls (2d2be120)"
+subject_kind = "result"
+subject_id = "ef54f023-8184-406a-9b0c-caa2df7415b0"
+predicate = "tests"
+object_kind = "statement"
+object_id = "2d2be120-ac0a-405f-b4b3-7cc68be1f320"
+note = "Omit concreteness of the global-absence power holder. In theistFrame true holds the power and is present at the origin and at the outcome, while only the contingent bearer false is concrete. The other nonlogical premises hold and the concrete holder conclusion fails."
+
+[[relation]]
+id = "d3c3219f-11f6-462d-8df5-a4413bf290d8"
+label = "Test by ModalGrounding.controls (0dc833c1)"
+subject_kind = "result"
+subject_id = "ef54f023-8184-406a-9b0c-caa2df7415b0"
+predicate = "tests"
+object_kind = "statement"
+object_id = "0dc833c1-3b2f-4769-a09e-531f0da12455"
+note = "Omit the possibility of a world without any world-local contingent concretum. In swappedFrame at true the present contingent bearer can be absent, but another contingent concretum is present at the replacement world. The global absence proposition fails everywhere."
+
+[[relation]]
+id = "7ac84b82-620d-4bb8-a562-88e6d477d3a8"
+label = "Test by ModalGrounding.controls (c76b6e2c)"
+subject_kind = "result"
+subject_id = "ef54f023-8184-406a-9b0c-caa2df7415b0"
+predicate = "tests"
+object_kind = "statement"
+object_id = "c76b6e2c-1ca0-47fd-a9d0-2c2faa3d1174"
+note = "Omit the actual contingent-concretum premise in the global route. In emptyFrame the existence extension is empty at both worlds, including the reading world true. The absence proposition is accessible, and there is no existing power holder."
+
+[[relation]]
+id = "d836d3e1-e270-4bb5-b8be-eac905688368"
+label = "Test by ModalGrounding.controls (62b4a40a)"
+subject_kind = "result"
+subject_id = "ef54f023-8184-406a-9b0c-caa2df7415b0"
+predicate = "tests"
+object_kind = "statement"
+object_id = "62b4a40a-919e-5da4-998c-131c386b7361"
+note = "Omit Euclidean access. In nonEuclidean at a, the power holder true is present at a and at the contingent-free accessible world b, which accesses only itself. That holder is absent at c, also accessible from a, so the required origin-relative necessity fails."
+
+[[relation]]
+id = "44327799-6f8f-4846-b029-74445afe2106"
+label = "Test by ModalGrounding.controls (be4b04bf)"
+subject_kind = "result"
+subject_id = "ef54f023-8184-406a-9b0c-caa2df7415b0"
+predicate = "tests"
+object_kind = "argument"
+object_id = "be4b04bf-9050-4278-80ce-574d1505d9eb"
+note = "At true in theistFrame, false is a present contingent concretum, and the other accessible world has no contingent concretum. The power holder true is concrete and exists at both worlds. All global-route nonlogical premises hold in this model."
+
+[[relation]]
+id = "776c40ea-17ee-49c3-9505-461cd4a3b8e0"
+label = "Test by ModalGrounding.controls (3847c481)"
+subject_kind = "result"
+subject_id = "ef54f023-8184-406a-9b0c-caa2df7415b0"
+predicate = "tests"
+object_kind = "argument"
+object_id = "3847c481-be5a-4e77-be60-8aa28bd8d700"
+note = "At true in theistFrame, bearer true is a concrete foundational being and the foundational necessity condition holds. It witnesses the positive joint premise bundle on the same frame."
+
+[[relation]]
+id = "0d32268c-f19e-4271-a302-171c9bd61749"
+label = "Test by ModalGrounding.controls (06327949)"
+subject_kind = "result"
+subject_id = "ef54f023-8184-406a-9b0c-caa2df7415b0"
+predicate = "tests"
+object_kind = "argument"
+object_id = "06327949-ec8e-469a-92ba-76345f8a18c0"
+note = "In theistFrame at true, essential existence of bearer true is assigned explicitly and it is present at every accessible world. The essentialist necessity law and the bridge from esse equal to essence hold jointly."
