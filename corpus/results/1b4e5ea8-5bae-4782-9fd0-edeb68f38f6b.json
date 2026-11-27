@@ -1,11 +1,11 @@
 {
   "id": "1b4e5ea8-5bae-4782-9fd0-edeb68f38f6b",
-  "label": "A protector can block a loss inducer without giving the receiver being",
+  "label": "A received bearer can survive with a protector present, no loss inducer and no strict giver",
   "argument_id": "f1ac8941-e5ba-4741-a821-16410e8b56b5",
   "challenge_module": "TruthCore.Results.Explanation.InertialActuality.Challenge",
   "solution_module": "TruthCore.Results.Explanation.InertialActuality.Solution",
   "theorem": "TruthCore.Results.Explanation.InertialActuality.externalProtectionCompatible",
   "comparator_config": "results/1b4e5ea8-5bae-4782-9fd0-edeb68f38f6b/comparator.json",
   "status": "solution-present",
-  "description": "Every loss in the exposed history crosses the inducer at 1. The protected history has no inducer against the receiver. The received and inertially explained survivor lacks any strict giver at 1, so it falsifies the productive bridge in this model."
+  "description": "At date 1 the model stipulates covariation between protector presence and inducer absence through a shared world index. Causal prevention is one interpretation of that covariation. In the surviving history, the received bearer has an inertial reason and lacks any strict giver at 1, so the productive bridge fails there."
 }

@@ -5,6 +5,6 @@
   "subject_id": "90fcd276-9af3-46a7-9c4b-af6090b52938",
   "predicate": "tests",
   "object_kind": "statement",
-  "object_id": "98308b41-095d-4a81-9897-8f73e324a26f",
-  "note": "The same cessation law as in the onset-only control permits a wholly omitted bearer without an onset or a dated anchor. The test isolates the law from the companion origin and receipt assumptions."
+  "object_id": "3f5d3750-0f2b-4f53-9330-5ea679463820",
+  "note": "Keep the interval cessation law, the absence of inducers and a background bearer fixed. Vary whether the candidate has any dated presence, including the earlier presence needed to apply the forward persistence rule."
 }

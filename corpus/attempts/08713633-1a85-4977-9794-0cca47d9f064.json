@@ -23,7 +23,7 @@
   "date": "2026-11-26",
   "kind": "reading",
   "outcome": "blocked",
-  "summary": "The formalized analyst readings (attribution deferred) in docs/notes/sustaining-vs-existential-inertia.md advance the §7 scope test. InertialActuality.lawLeavesActualityOpen fixes the law, no inducers and a background bearer across populated and omitted profiles. inertialReasonRequiresActuality derives later presence and locates the independent earlier witness. everlastingParity applies the same comparison to an everlasting candidate, and natureSelection moves from a specified existence-entailing nature fact to dated actuality only under at-now coherence and truth of that fact. A timeless candidate is outside the test. otherBearerActualityOpen holds the dependent inference for x fixed and varies the distinct y. externalProtectionCompatible checks both protected survival and induced loss, and tests the productive bridge in the protected history. transferLocation uses the open adjacent state rule and the explicit no-onset comparison condition. locationDoesNotSupplyStateLaw and stateAndReceiptCompatible test the limits of the analogy and preserve both open sibling propositions. The original location comparison positively reports both endpoints, with a common initial place and distinct destinations. Inertia alone fails to select actuality, and the tree example alone does not justify an existential law. Conditional persistence retains positive warrant. Explained onset, nature-based actuality and distributive adequacy remain distinct responses. The conclusion at the momentary scope of d86c9de9 stays open.",
+  "summary": "The formalized analyst readings (attribution deferred) in docs/notes/sustaining-vs-existential-inertia.md advance the §7 scope test. InertialActuality.lawLeavesActualityOpen fixes the law, no inducers and a background bearer across populated and omitted profiles. inertialReasonRequiresActuality derives later presence and locates the independent earlier witness. everlastingParity applies the same comparison to an everlasting candidate, and natureSelection moves from a specified existence-entailing nature fact to dated actuality only under at-now coherence and truth of that fact. A timeless candidate is outside the test. otherBearerActualityOpen holds the dependent inference for x fixed and varies the distinct y. externalProtectionCompatible checks survival and loss under stipulated protector–inducer covariation, and tests the productive bridge in the protected history. transferLocation uses the open adjacent state rule and the explicit no-onset comparison condition. locationDoesNotSupplyStateLaw and stateAndReceiptCompatible test the limits of the analogy and preserve both open sibling propositions. The original location comparison positively reports both endpoints, with a common initial place and distinct destinations. Inertia alone fails to select actuality, and the tree example alone does not justify an existential law. Conditional persistence retains positive warrant. Explained onset, nature-based actuality and distributive adequacy remain distinct responses. The conclusion at the momentary scope of d86c9de9 stays open.",
   "blocker": "For d86c9de9, fix earlier actuality, origin and the same bearer across the cut, and supply a calibrated strict withdrawal with each possible giver independently excluded. Loss tests the cessation law only if withdrawal itself and every other loss inducer are independently excluded. For the broader actuality question, supply a positive reason, its adequacy standard and, if applying the productive account, an explicit further bridge to strict giving. The reversible location transfer requires the open forward state rule and its comparison conditions; reception of esse alone supplies neither that rule nor its denial.",
   "evidence": [
     "1371f04e-8b90-4fb2-bda9-56ba9f02d8dc",
@@ -63,6 +63,14 @@
       "model": "gpt-6.2-sol",
       "effort": "high",
       "date": "2026-11-26",
+      "pr": "PR-2100"
+    },
+    {
+      "role": "repair",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-27",
       "pr": "PR-2100"
     }
   ]

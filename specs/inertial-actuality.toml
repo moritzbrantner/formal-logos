@@ -15,7 +15,8 @@ definitions = ["8c20c988-31fd-4b59-acf2-db230a6ea32e"]
 paraphrase = "Analyst formulation, attribution deferred. For any frame with a preorder of times and a supplied loss background, the cessation law and a valid earlier-date originOrInertia reason derive later presence. The earlier presence carried by the reason independently witnesses the same bearer's presence at some date."
 
 [[statement]]
-id = "A specified essential truth entails the temporal candidate's ontic existence"
+id = "9d8f2c7e-ddf0-49e3-b35b-67880de96acb"
+label = "EXISTENCE_IN_ESSENCE_5: A specified essential truth entails the candidate's existence"
 lean = "NatureSuppliesActuality"
 definitions = ["7cf63236-9c12-41bc-bf20-6fbce7a121db","316780ef-70da-498f-8893-317cb35ca80b"]
 disambiguations = ["f704b7ca-b455-4da7-a757-b0564fe76b3b"]
@@ -43,7 +44,8 @@ disambiguations = ["DISAMB-ESSE-RECEPTION","DISAMB-TEMPORAL-HISTORY-EXISTENCE-AX
 paraphrase = "OPEN analyst state premise for a designated substantial bearer and integer-time history. From presence at any supplied date, the bearer remains present at the next date if that endpoint has no loss inducer and no strict giver. This is the forward preservability attributed to a state. Identifying dated presence with esse would require a separate bridge."
 
 [[statement]]
-id = "A designated substantial bearer's actuality is a received act of being"
+id = "4a3fdeba-5267-4b1d-bb69-9275bd04b2e2"
+label = "RECEPTION_OF_ESSE_VERSUS_EXTERNAL_CAUSE_1: A substantial bearer's act of being is received"
 lean = "ReceivedAct"
 definitions = ["DEF-ESSE","DEF-ESSE-RECEIVED-IN"]
 disambiguations = ["DISAMB-ESSE-RECEPTION","DISAMB-TEMPORAL-HISTORY-EXISTENCE-AXES","DISAMB-EXISTENCE-ESSE-SUPPORT"]
@@ -89,7 +91,7 @@ meaning = "Unpack the earlier-date reason, use the existing interval theorem to 
 [[argument]]
 id = "Transport an existence-entailing nature fact to a dated actuality witness"
 theorem = "natureSelection"
-premises = ["A specified essential truth entails the temporal candidate's ontic existence"]
+premises = ["9d8f2c7e-ddf0-49e3-b35b-67880de96acb"]
 conclusion = "An existence-entailing nature fact selects temporal actuality under at-now coherence"
 axioms = ["propext","Classical.choice","Quot.sound"]
 rule = "Apply the existence entailment and use the designated now"
@@ -116,13 +118,14 @@ rule = "Hold x's presence and earlier-date reason fixed while varying y"
 meaning = "The reason at 0 for x at 1 is valid in both histories. Even the stronger global cessation law under no inducers leaves the distinct y's actuality open."
 
 [[argument]]
-id = "A protector can block a loss inducer without giving the receiver being"
+id = "f1ac8941-e5ba-4741-a821-16410e8b56b5"
+label = "A received bearer can survive with a protector present, no loss inducer and no strict giver"
 theorem = "externalProtectionCompatible"
 premises = []
 conclusion = "5a4ba734-fea3-4e3c-afd1-50f086c32f41"
 axioms = ["propext","Classical.choice","Quot.sound"]
 rule = "Check the cessation law and apply the productive bridge to the protected survivor"
-meaning = "Every loss in the exposed history crosses the inducer at 1. The protected history has no inducer against the receiver. The received and inertially explained survivor lacks any strict giver at 1, so it falsifies the productive bridge in this model."
+meaning = "At date 1 the model stipulates covariation between protector presence and inducer absence through a shared world index. Causal prevention is one interpretation of that covariation. In the surviving history, the received bearer has an inertial reason and lacks any strict giver at 1, so the productive bridge fails there."
 
 [[argument]]
 id = "Apply the stationary location proof under a substantial-actuality state premise"
@@ -157,8 +160,8 @@ subject_kind = "result"
 subject_id = "A shared cessation law admits opposite actuality profiles"
 predicate = "tests"
 object_kind = "statement"
-object_id = "98308b41-095d-4a81-9897-8f73e324a26f"
-note = "The same cessation law as in the onset-only control permits a wholly omitted bearer without an onset or a dated anchor. The test isolates the law from the companion origin and receipt assumptions."
+object_id = "3f5d3750-0f2b-4f53-9330-5ea679463820"
+note = "Keep the interval cessation law, the absence of inducers and a background bearer fixed. Vary whether the candidate has any dated presence, including the earlier presence needed to apply the forward persistence rule."
 
 [[relation]]
 id = "The earlier-date application tests the interval persistence result"
@@ -184,7 +187,7 @@ subject_kind = "result"
 subject_id = "Nature entailment restricts the same two histories admitted by the bare law"
 predicate = "tests"
 object_kind = "statement"
-object_id = "A specified essential truth entails the temporal candidate's ontic existence"
+object_id = "9d8f2c7e-ddf0-49e3-b35b-67880de96acb"
 note = "At-now coherence gives a date of presence wherever the named nature fact holds. In the omitted branch this rules out truth of any fact satisfying the premise."
 
 [[relation]]
@@ -193,17 +196,17 @@ subject_kind = "result"
 subject_id = "The same persistence reason for x permits absence of a distinct y"
 predicate = "tests"
 object_kind = "statement"
-object_id = "98308b41-095d-4a81-9897-8f73e324a26f"
-note = "The common earlier-date reason accounts for an existing receiver's continued presence in both histories. It does not settle a distinct bearer's actuality."
+object_id = "3f5d3750-0f2b-4f53-9330-5ea679463820"
+note = "Keep the interval cessation law, absence of inducers, and x's earlier presence and reason fixed. Vary whether the distinct bearer y has any dated presence."
 
 [[relation]]
 id = "The protection model tests the productive bridge"
 subject_kind = "result"
-subject_id = "A protector can block a loss inducer without giving the receiver being"
+subject_id = "f1ac8941-e5ba-4741-a821-16410e8b56b5"
 predicate = "tests"
 object_kind = "statement"
 object_id = "d86c9de9-25be-488b-b3b7-69f5f4eb80b8"
-note = "The protected receiver is present and has received esse and a valid inertial reason at 1, with every strict giver absent. Only the stipulated frame is tested."
+note = "At 1 the received survivor has a valid inertial reason and no strict giver. Protector presence covaries with inducer absence through a shared world index. Causal prevention is an interpretation of that stipulation."
 
 [[relation]]
 id = "The location countermodel tests the adjacent state premise"
@@ -213,15 +216,6 @@ predicate = "tests"
 object_kind = "statement"
 object_id = "A substantial bearer's actuality persists through inducer-free unproduced adjacent steps"
 note = "Under no onset, no giving and the all-false inducer interpretation, the exposed history loses the bearer from date 0 to 1 even though the worked location contrast holds separately."
-
-[[relation]]
-id = "The independent profile control reuses the reported location contrast"
-subject_kind = "result"
-subject_id = "A moving-location control leaves the actuality transfer premise unproved"
-predicate = "tests"
-object_kind = "statement"
-object_id = "8f8111e3-9bb0-40e2-9c60-163686668613"
-note = "The control retains the exact positive reports in the worked location comparison while varying the presence-transition law in a separate frame."
 
 [[relation]]
 id = "The anchored-location certificate checks the two reported destinations"
@@ -238,7 +232,7 @@ subject_kind = "result"
 subject_id = "An inertial profile can also model a received act"
 predicate = "tests"
 object_kind = "statement"
-object_id = "A designated substantial bearer's actuality is a received act of being"
+object_id = "4a3fdeba-5267-4b1d-bb69-9275bd04b2e2"
 note = "The witness checks receipt and unproduced state persistence for the same bearer; no passage from dated presence to esse is assumed."
 
 [[relation]]
@@ -253,7 +247,7 @@ note = "The supplied reception dictionary and absence of giving leave the state 
 [[relation]]
 id = "The protection model tests the inducer-free scope of the actuality comparison"
 subject_kind = "result"
-subject_id = "A protector can block a loss inducer without giving the receiver being"
+subject_id = "f1ac8941-e5ba-4741-a821-16410e8b56b5"
 predicate = "tests"
 object_kind = "statement"
 object_id = "The cessation law and an inducer-free background leave temporal actuality open"

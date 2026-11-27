@@ -991,7 +991,7 @@ Earlier presence necessarily varies between those histories.
    [`lawLeavesActualityOpen`](../../corpus/results/90fcd276-9af3-46a7-9c4b-af6090b52938.json)
    verifies the H₊/H₀ comparison in §7 in one shared frame. The same
    cessation law, absence of every inducer and everlasting background bearer
-   fit both actuality and omission of x. The reversible control there
+   fit both actuality and omission of x. The [onset-only control](../../corpus/statements/98308b41-095d-4a81-9897-8f73e324a26f.json) uses the same cessation law alongside distinct origin and receipt conditions. The reversible control in §7
    shows that exchangeable anchors in a beginningless history still
    require some positive anchor. This rules out selection of the populated
    history by that law and background alone. The countermodel concerns
@@ -1096,8 +1096,9 @@ Earlier presence necessarily varies between those histories.
      models a survivor where a protector is present and the loss inducer
      is absent. The same receiver is present at 0 in the exposed history,
      where it disappears at 1 with an inducer and no protector. The law
-     holds in both, and both exclude every strict giver at 1. The
-     protection-to-inducer dependency is stipulated in the model. The
+     holds in both, and both exclude every strict giver at 1. Both endpoint conditions read the shared world index, which
+     stipulates their covariation. A common condition could produce the
+     same pattern. Causal prevention is an interpretation of the pattern. The
      received survivor and its valid earlier-date reason test the
      productive bridge in that frame. The existing q.104 becoming/being distinction
      and the competing readings of withdrawal (§11 and the sibling calibration
