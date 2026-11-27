@@ -10,5 +10,10 @@
   ],
   "disambiguation_ids": [
     "7181df76-d6ed-5226-a34b-08910ddbe6a0"
-  ]
+  ],
+  "connection_plan": {
+    "target_statement_id": "b19ffd92-01bd-5c0b-9643-e7407137ea5e",
+    "missing_bridge": "With the same case instance of G as planned for the necessary-existence horn (G v := some m.concrete GOD_4 satisfier exists at v), use a possibility premise for that instance to exclude the impossibility horn, then apply the de dicto to de re bridge and reflexivity at w to reach NecessaryConcreteAt.",
+    "blocker": "No case instance of G, no possibility premise for it and no de re bridge are formalized. Coverage alone does not choose a horn: the reverse possibility premise selects impossibility with equal formal right."
+  }
 }
