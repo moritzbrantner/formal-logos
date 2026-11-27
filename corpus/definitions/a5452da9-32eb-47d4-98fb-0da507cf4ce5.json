@@ -1,0 +1,9 @@
+{
+  "id": "a5452da9-32eb-47d4-98fb-0da507cf4ce5",
+  "label": "Unexplained absence: lacking a determination an admissible profile adds to all one has",
+  "term": "unexplained absence of a determination",
+  "lean_declaration": "TruthCore.Causality.RootPerfectionExclusion.UnexplainedAbsence",
+  "definition": "UnexplainedAbsence Admissible Has x k: x lacks k, and some admissible profile contains every real determination of x together with k. Then neither the admissibility constraints (no admissible profile contains k) nor x's positive profile (no admissible profile contains its determinations and k) fixes the omission. It is not a claim that the absence has no truthmaker, cause or totality fact; it says only that the two represented intrinsic explanations leave it open.",
+  "basis": "stipulative",
+  "note": "Stipulative analyst notion (#2145), attribution deferred. Absence from the constraints is AbsenceFromAdmissibility and absence from the positive profile is AbsenceFromPositiveProfile; absenceTrichotomy proves, with excluded middle, that every absence is exactly one of the three relative to one family. A primitive totality or closure fact of the bearer, if not represented in the family, leaves an absence unexplained in this sense; denying NoUnexplainedAbsenceAtRoots is the way to hold such a fact. Extrinsic explanation is not represented. At an actual root there is no explanation through the selected actual-concrete grounding relation, since no actual concrete being grounds it; that every extrinsic explanation of an absence would supply such a ground is an open bridge, not part of ActualRoot."
+}

@@ -1,0 +1,10 @@
+{
+  "id": "ee287fd3-3890-4739-8407-a27d7c81191d",
+  "label": "Each pure determination occurs in some admissible profile",
+  "paraphrase": "OPEN, analyst formulation, attribution deferred: every pure determination belongs to at least one admissible intrinsic profile, so no pure determination is excluded by the admissibility constraints alone. Its denial for intellect is the claim that understanding is incompatible with some admissibility constraint: metaphysical simplicity, unreceivedness, necessity or another incompatibility taken as warranted in the family's interpretation.",
+  "lean_declaration": "TruthCore.Causality.RootPerfectionExclusion.PureDeterminationsAdmissible",
+  "definition_ids": [
+    "65e38ffa-5a1c-55d0-935c-6538d843b780",
+    "3f8e5e3c-e85a-4388-af9c-4da1c8a02069"
+  ]
+}

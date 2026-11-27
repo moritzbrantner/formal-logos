@@ -1,0 +1,12 @@
+{
+  "id": "7bc1af16-3b5c-4dd1-8363-cb4597e30ec8",
+  "label": "R-act2 from dependence through the first unde and inclusion, checked",
+  "argument_id": "678d45f5-971a-414b-a0fb-01a701f07ee2",
+  "challenge_module": "TruthCore.Results.Causality.DependenceToActOfBeing.Challenge",
+  "solution_module": "TruthCore.Results.Causality.DependenceToActOfBeing.Solution",
+  "theorem": "TruthCore.Results.Causality.DependenceToActOfBeing.ractTwoFromDependence",
+  "comparator_config": "results/7bc1af16-3b5c-4dd1-8363-cb4597e30ec8/comparator.json",
+  "status": "solution-present",
+  "description": "Near-transcription (single application): given R-dep, the first unde and the witness premise, inclusion is equivalent to R-act2 (undeLoadMap, conjunct 3), so the proof applies inclusion to deliver its own content. Generic in the frame. It makes the commitment explicit and closes nothing by itself.",
+  "transcription": "single_application"
+}

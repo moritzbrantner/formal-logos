@@ -1,11 +1,14 @@
 {
   "id": "38ed105c-6103-4969-8246-a6a071cdbb18",
   "label": "The nature of a being whose esse is its essence is not received in matter",
-  "paraphrase": "For every x whose represented esse equals its represented essence, x's nature is not received in matter (not InMatter x). Reading of De ente c.3 [69874] (Baur/Koch; Leonine c.4): 'et multo minus reciperet additionem materiae, quia iam esset esse non subsistens sed materiale'.",
+  "paraphrase": "For every x whose represented esse equals its represented essence, x's nature is not received in matter (not InMatter x). Reading of De ente c.3 [69874] (Baur/Koch; Leonine c.4): 'et multo minus reciperet additionem materiae, quia iam esset esse non subsistens sed materiale'. Sense gap (2026-11-27): the source sentence ('si autem ponatur aliqua res, quae sit esse tantum') is about esse tantum (OWN_BEING_1); this Lean reading states it of beings whose represented esse equals their represented essence (OWN_BEING_2). On OWN_BEING_2 a real-identity account of creatures can deny it; see DISAMB 1bff3cb4 and docs/notes/rdep-to-ract.md.",
   "lean_declaration": "TruthCore.Latin.Aquinas.DeEnte.EsseTantumNotInMatterReading",
   "definition_ids": [
     "2a19c5e4-6c0b-4733-a3dd-e207899b8547",
     "183b48d2-1753-583d-aef9-4199cff86231",
     "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"
+  ],
+  "disambiguation_ids": [
+    "1bff3cb4-f73b-42d4-ba2c-ff782e9df39b"
   ]
 }

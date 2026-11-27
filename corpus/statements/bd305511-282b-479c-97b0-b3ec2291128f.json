@@ -13,5 +13,10 @@
   "disambiguation_ids": [
     "be54be36-3ce8-53f9-8168-50d1114e6c76",
     "623ddbf6-9683-5361-bae4-e348a00ec680"
-  ]
+  ],
+  "connection_plan": {
+    "target_statement_id": "c51a07a1-4cdb-4b5f-b1ec-ebd8237f834e",
+    "missing_bridge": "With restricted well-foundedness of the selected relation 82cfaf26, this bridge gives PRIOR_4 well-foundedness among actual concreta 522506d1 (result 1dbd7440); from there the two bridges of the plan recorded on 522506d1 lead to c51a07a1: some actual concretum is first in being, and the first unmoved mover is that first in being.",
+    "blocker": "The same-bearer identification recorded in the plan of 522506d1 (docs/notes/one-dependence-order.md, 'Connection plan for 522506d1'): well-foundedness gives some first in being, not that the first mover is it."
+  }
 }

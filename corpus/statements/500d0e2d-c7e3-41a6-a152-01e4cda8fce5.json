@@ -1,0 +1,10 @@
+{
+  "id": "500d0e2d-c7e3-41a6-a152-01e4cda8fce5",
+  "label": "Pure determinations are jointly compossible within the admissible family",
+  "paraphrase": "OPEN, analyst formulation, attribution deferred: joint compossibility of pure perfections relative to one admissible family. If q is an admissible profile whose members are all pure, and k is pure and occurs in some admissible profile, then q with k added is admissible. It is a one-step insertion law; pairwise compatibility of pure determinations does not imply it, and it does not say that every set of pure determinations is admissible.",
+  "lean_declaration": "TruthCore.Causality.RootPerfectionExclusion.PureExtensionsAdmissible",
+  "definition_ids": [
+    "65e38ffa-5a1c-55d0-935c-6538d843b780",
+    "3f8e5e3c-e85a-4388-af9c-4da1c8a02069"
+  ]
+}
