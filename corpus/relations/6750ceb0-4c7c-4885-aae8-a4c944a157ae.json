@@ -1,0 +1,10 @@
+{
+  "id": "6750ceb0-4c7c-4885-aae8-a4c944a157ae",
+  "label": "Test by ContingencyGrounding.controls (ee74c678)",
+  "subject_kind": "result",
+  "subject_id": "cafd9800-2fee-4fb6-a52f-bec0f1479d7f",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "ee74c678-0a06-47d3-9c76-27ff798e9a01",
+  "note": "Omit simple priority for a distinct CAUSE_2 at esse. In unprioritized, x causes the esse of the contingent bearer f at true. The distinct pair has no simple-priority edge. C2-minus holds there and the other four C2 power-grounding premises hold."
+}

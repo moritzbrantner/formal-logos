@@ -1,0 +1,10 @@
+{
+  "id": "44cbd59a-2eef-4573-b65d-415465336292",
+  "label": "Test by ContingencyGrounding.controls (9163c423)",
+  "subject_kind": "result",
+  "subject_id": "cafd9800-2fee-4fb6-a52f-bec0f1479d7f",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "9163c423-bbf7-464d-9342-6e1cf38d54e6",
+  "note": "Omit correlation on the broad POWER_OVER_ESSE_1 reading. In the bruteFirst variant of SelfAnnihilatorModel, the contingent f at true has power over its own esse while f is incorruptible simply and no one causes its esse. The other four C2 route premises hold."
+}

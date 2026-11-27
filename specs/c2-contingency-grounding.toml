@@ -68,8 +68,8 @@ disambiguations = ["DISAMB-ESSE-RECEPTION"]
 id = "C2 contingency grounding: laws, rival models and omission models"
 lean = "Model.Controls"
 paraphrase = "Premise-free laws and finite Bool models (structural surrogates, not metaphysical possibility). Laws: C2 implies its weak form; the weak form with B3 implies C2; R1 with De ente's receiver reading implies C2; B2 with B3 implies C2; correlation implies #1870's bridge (ii) restricted to beings incorruptible simply; PGP with no power of anything over its own esse and corruptible-has-POTENCY_1 gives q.9 a.2's MUTABLE_3 for every contingent being (bridge (i)); the PGP route reaches the First Way endpoint; B4b implies corruptible-has-POTENCY_1; B4a implies PGP; with the adopted POTENCY_1 and the existence-to-act interface, B4b excludes every actual being corruptible simply at w, so corruptibility is not POTENCY_1 at esse; under the giving sense POWER_OVER_ESSE_2 the correlation is trivial. Models: bruteSimple (a contingent, simple, unreceived, uncaused, incorruptible first mover under no power: every premise of the PGP and C2 routes holds except PGP and C2; CCR holds on the same frame's q.3 a.4 profile with that being uncaused, a degenerate check since that profile has no esse-causes); selfAnnihilator (PGP holds; correlation fails, or no-self-esse-cause fails in the self-causing variant; C2 fails in both); uncausedComposite (C2 holds by reception while PGP, B2 and C2's prior-cause disjunct fail); angelic (a contingent incorruptible being under a necessary prior source: every premise of the PGP argument and C2 hold; B4 and the pure-act target fail only structurally, since the being is POTENCY_1-pure act relative to the frame's two respects only); inertPowerHolder (an omission model of correlation: a necessary being has power over a contingent being's esse with no causal role; PGP and C2 hold, correlation and B2 or B4 fail, so C2 does not entail B2 or B4); bareCorruptible, selfAnnihilator, inertPowerHolder and unprioritizedSource as omission models of passive-to-receptive, correlation, no-self-esse-cause and B3, the last with C2-minus holding while C2 fails; witness (every premise of every new argument, applied nonvacuously); potencyOnly (the pure-act target, B4 and B2 or B4 hold, PGP and C2 fail, so C2 and B2 or B4 are independent); corruptor (an uncaused corruptible composite: correlation and C2 hold through matter and form while R1 and the unrestricted bridge (ii) fail)."
-definitions = ["DEF-KANT-MODAL-CONTINGENCY", "DEF-KANT-MODAL-NECESSITY", "DEF-KANT-ONTOLOGICAL-MODEL", "f9f58df7-d3be-4d66-b1f1-204d7049c450", "3fd6bddb-f10c-4df4-8694-3eb5e7c28617", "DEF-RECEPTIVE-POTENCY", "DEF-ESSE-RECEIVED-IN", "DEF-ESSE", "DEF-CAUSE-OF-PERFECTION", "DEF-SIMPLE-PRIORITY", "DEF-CAN-FAIL-TO-BE", "DEF-INCORRUPTIBLE-SIMPLY", "DEF-POTENCY", "DEF-PURE-ACT", "DEF-FIRST-UNMOVED-MOVER", "DEF-MUTABLE-IN-SOME-WAY"]
-disambiguations = ["DISAMB-KANT-CONTINGENCY", "DISAMB-RECEPTIVE-POTENCY", "DISAMB-ESSE-RECEPTION", "DISAMB-CAUSE", "DISAMB-PRIORITY-SIMPLE-OR-IN-TIME", "DISAMB-CORRUPTIBLE-SIMPLY-OR-IN-A-RESPECT", "DISAMB-CAN-FAIL-TO-BE-OR-BE-OTHERWISE", "DISAMB-POTENCY", "DISAMB-POTENCY-IN-SUBJECT-VS-IN-ANOTHER"]
+definitions = ["DEF-KANT-MODAL-CONTINGENCY", "DEF-KANT-MODAL-NECESSITY", "DEF-KANT-ONTOLOGICAL-MODEL", "f9f58df7-d3be-4d66-b1f1-204d7049c450", "3fd6bddb-f10c-4df4-8694-3eb5e7c28617", "220ca6f1-cec0-4e54-aaad-ae9dcc1194f4", "DEF-RECEPTIVE-POTENCY", "DEF-ESSE-RECEIVED-IN", "DEF-ESSE", "DEF-CAUSE-OF-PERFECTION", "DEF-SIMPLE-PRIORITY", "DEF-CAN-FAIL-TO-BE", "DEF-INCORRUPTIBLE-SIMPLY", "DEF-POTENCY", "DEF-PURE-ACT", "DEF-FIRST-UNMOVED-MOVER", "DEF-MUTABLE-IN-SOME-WAY"]
+disambiguations = ["DISAMB-KANT-CONTINGENCY", "DISAMB-RECEPTIVE-POTENCY", "DISAMB-ESSE-RECEPTION", "DISAMB-CAUSE", "DISAMB-PRIORITY-SIMPLE-OR-IN-TIME", "DISAMB-CORRUPTIBLE-SIMPLY-OR-IN-A-RESPECT", "DISAMB-CAN-FAIL-TO-BE-OR-BE-OTHERWISE", "DISAMB-POTENCY", "DISAMB-POTENCY-IN-SUBJECT-VS-IN-ANOTHER", "f5dda05f-ba3c-4fdf-82a3-e4803c24ddb5", "d25cee67-1d5c-4a4c-bda5-8571b731ddf3"]
 
 [[argument]]
 id = "C2 from power grounding, correlation, passive-to-receptive, no self-esse-cause and B3"
@@ -238,3 +238,153 @@ predicate = "tests"
 object_kind = "statement"
 object_id = "6508c239-b36d-4010-b9e4-ff0cdd5757e5"
 note = "At reading world true the contingent bearer true has a distinct CAUSE_2 of its esse. The model has no reception, matter-form composition or simple-priority edges. The weaker receptive-or-cause disjunction holds and the stronger disjunction with priority fails."
+
+[[relation]]
+id = "762b83c9-25d2-47be-a9e8-8a3048737320"
+label = "Test by ContingencyGrounding.controls (20d5fecd)"
+subject_kind = "result"
+subject_id = "cafd9800-2fee-4fb6-a52f-bec0f1479d7f"
+predicate = "tests"
+object_kind = "statement"
+object_id = "20d5fecd-950e-42f8-8dc9-3014491ff6ae"
+note = "Omit power grounding for actual bearers contingent at the reading world. At true in bruteFirst, f is contingent and incorruptible simply, and no bearer has POWER_OVER_ESSE_1 over f. The other four C2 route premises hold."
+
+[[relation]]
+id = "373bd5f7-5d4a-466d-9e2a-193f3d0cc067"
+label = "Test by ContingencyGrounding.controls (9163c423)"
+subject_kind = "result"
+subject_id = "cafd9800-2fee-4fb6-a52f-bec0f1479d7f"
+predicate = "tests"
+object_kind = "statement"
+object_id = "9163c423-bbf7-464d-9342-6e1cf38d54e6"
+note = "Omit correlation on the broad POWER_OVER_ESSE_1 reading. In the bruteFirst variant of SelfAnnihilatorModel, the contingent f at true has power over its own esse while f is incorruptible simply and no one causes its esse. The other four C2 route premises hold."
+
+[[relation]]
+id = "9b529880-1f6f-4c75-86df-9b19a6318b05"
+label = "Test by ContingencyGrounding.controls (b62a64ab)"
+subject_kind = "result"
+subject_id = "cafd9800-2fee-4fb6-a52f-bec0f1479d7f"
+predicate = "tests"
+object_kind = "statement"
+object_id = "b62a64ab-ac11-569a-b8e8-de51a74b058f"
+note = "Omit the prohibition of self-esse-causation. In selfCauser, f both has POWER_OVER_ESSE_1 over its own esse and causes it. At true f is contingent, and the frame has no distinct esse-cause. The other four C2 route premises hold."
+
+[[relation]]
+id = "c9707694-fd36-46fe-b0f8-f4d0f1701c19"
+label = "Test by ContingencyGrounding.controls (16c760a3)"
+subject_kind = "result"
+subject_id = "cafd9800-2fee-4fb6-a52f-bec0f1479d7f"
+predicate = "tests"
+object_kind = "statement"
+object_id = "16c760a3-0328-4e16-9908-da6e5e4cdb2d"
+note = "Omit the passage from simple corruptibility to existential receptivity. In uncausedX the contingent bearer x at true can fail to be at esse, with no received esse or matter-form composition. No one has power over its esse, and no one causes its esse."
+
+[[relation]]
+id = "36f12a26-3d6e-46fa-8035-c78ece51d185"
+label = "Test by ContingencyGrounding.controls (ee74c678)"
+subject_kind = "result"
+subject_id = "cafd9800-2fee-4fb6-a52f-bec0f1479d7f"
+predicate = "tests"
+object_kind = "statement"
+object_id = "ee74c678-0a06-47d3-9c76-27ff798e9a01"
+note = "Omit simple priority for a distinct CAUSE_2 at esse. In unprioritized, x causes the esse of the contingent bearer f at true. The distinct pair has no simple-priority edge. C2-minus holds there and the other four C2 power-grounding premises hold."
+
+[[relation]]
+id = "89e8733f-6e9d-4042-94b2-1c631dd7a084"
+label = "Test by ContingencyGrounding.controls (8a8d00e9)"
+subject_kind = "result"
+subject_id = "cafd9800-2fee-4fb6-a52f-bec0f1479d7f"
+predicate = "tests"
+object_kind = "statement"
+object_id = "8a8d00e9-12b6-4cf0-b662-431cc4addd49"
+note = "Test stronger B2 with B3 held fixed. The contingent x at true in uncausedX receives esse in a principle in receptive potency to it, so C2 holds. The esse-cause relation is empty, so x fails B2 and B3 holds vacuously."
+
+[[relation]]
+id = "498f2aa7-f48d-418d-a518-5c6e8152538c"
+label = "Test by ContingencyGrounding.controls (ae9d9473)"
+subject_kind = "result"
+subject_id = "cafd9800-2fee-4fb6-a52f-bec0f1479d7f"
+predicate = "tests"
+object_kind = "statement"
+object_id = "ae9d9473-34f1-4b51-8f13-41d340d64ad1"
+note = "Test stronger R1 with the receiver reading held fixed. In CorruptorModel the contingent x at true is composed of matter and form, satisfying C2 by receptivity. Reception is empty, so x fails R1 and the receiver reading holds vacuously."
+
+[[relation]]
+id = "0bd43ff0-4733-477e-afa5-0647701be516"
+label = "Test by ContingencyGrounding.controls (6508c239)"
+subject_kind = "result"
+subject_id = "cafd9800-2fee-4fb6-a52f-bec0f1479d7f"
+predicate = "tests"
+object_kind = "statement"
+object_id = "6508c239-b36d-4010-b9e4-ff0cdd5757e5"
+note = "Omit C2 in the route to the necessary First Way mover. In bruteFirst, f is the pure-act first mover among the two modeled respects, exists at true, and is absent at false. It is unreceived and lacks a distinct prior esse-cause. The other nonlogical inputs hold. The route takes excluded middle explicitly."
+
+[[relation]]
+id = "b1972e90-68ab-40bf-8b35-896b7e9e43b0"
+label = "Test by ContingencyGrounding.controls (82ad1978)"
+subject_kind = "result"
+subject_id = "cafd9800-2fee-4fb6-a52f-bec0f1479d7f"
+predicate = "tests"
+object_kind = "argument"
+object_id = "82ad1978-da75-416d-a3e1-fbc9d2d4cf2b"
+note = "Witness all five power-grounding premises together at true. The two actual bearers are the necessary f and the contingent x. The frame gives x simple corruptibility and gives f both POWER_OVER_ESSE_1 over x and a distinct simply prior CAUSE_2 at esse. Reception and matter-form composition realize the passive-to-receptive premise."
+
+[[relation]]
+id = "9102a87b-002d-4877-a5bb-37d6b45bd263"
+label = "Test by ContingencyGrounding.controls (00b384a1)"
+subject_kind = "result"
+subject_id = "cafd9800-2fee-4fb6-a52f-bec0f1479d7f"
+predicate = "tests"
+object_kind = "argument"
+object_id = "00b384a1-ff90-4170-bc54-f4234ba039e0"
+note = "Witness power grounding, broad correlation, no self-esse-cause and corruptible-to-potency together. At true f and x both exist, and x alone is contingent. x is corruptible at esse and in POTENCY_1 in heat. The frame assigns f power over x's esse and the only esse-causal edge f to x."
+
+[[relation]]
+id = "f941a991-4402-4e2f-b4c8-2bb43437780b"
+label = "Test by ContingencyGrounding.controls (f68a5d87)"
+subject_kind = "result"
+subject_id = "cafd9800-2fee-4fb6-a52f-bec0f1479d7f"
+predicate = "tests"
+object_kind = "argument"
+object_id = "f68a5d87-45ea-4686-82a6-8b71f722b90a"
+note = "Witness simplicity, identity-scoped reception, receiver potency and receptive irreflexivity in the two-bearer witness frame. The first mover f moves x in heat, and x receives esse in a principle distinct from and in receptive potency to x's esse. The first mover f has neither reception nor matter-form composition."
+
+[[relation]]
+id = "a7a1762d-5d30-49c4-8866-f9e20878e764"
+label = "Test by ContingencyGrounding.controls (f644aee8)"
+subject_kind = "result"
+subject_id = "cafd9800-2fee-4fb6-a52f-bec0f1479d7f"
+predicate = "tests"
+object_kind = "argument"
+object_id = "f644aee8-8d2d-4221-8846-ad901ce7c258"
+note = "Witness the First Way premise bundle at true with two present bearers. The unreceived pure-act first mover f moves the contingent x in heat. The only contingent bearer x satisfies C2 by reception and by a distinct prior esse-cause. The argument takes excluded middle explicitly."
+
+[[relation]]
+id = "f14842c1-a170-4f41-a5a8-c862ad38f5a5"
+label = "Test by ContingencyGrounding.controls (38394aad)"
+subject_kind = "result"
+subject_id = "cafd9800-2fee-4fb6-a52f-bec0f1479d7f"
+predicate = "tests"
+object_kind = "argument"
+object_id = "38394aad-234f-402c-994f-3d451636c15b"
+note = "Witness R1 and the receiver reading together in uncausedX at true. Both bearers exist and x is contingent. Its esse is received in the principle false, which is in receptive potency to the esse-principle true."
+
+[[relation]]
+id = "793986a3-26a2-4721-a3db-20a923c30021"
+label = "Test by ContingencyGrounding.controls (61924ce7)"
+subject_kind = "result"
+subject_id = "cafd9800-2fee-4fb6-a52f-bec0f1479d7f"
+predicate = "tests"
+object_kind = "argument"
+object_id = "61924ce7-f9db-4bc4-a7b1-c708d480bfce"
+note = "Witness B2 and B3 together in the two-bearer witness frame at true. The only contingent bearer x has f as a distinct esse-cause, and the sole esse-causal edge is simply prior."
+
+[[relation]]
+id = "2d5a4bc0-d49d-4d0d-b0cc-8b2ce337912b"
+label = "Test by ContingencyGrounding.controls (0a06cc95)"
+subject_kind = "result"
+subject_id = "cafd9800-2fee-4fb6-a52f-bec0f1479d7f"
+predicate = "tests"
+object_kind = "argument"
+object_id = "0a06cc95-90eb-47d8-a42c-57e52c0aa458"
+note = "Witness C2-minus and B3 together in the two-bearer witness frame at true. The contingent x is receptive and has a distinct esse-cause f. The same edge is simply prior, and there are no other distinct esse-cause edges."
