@@ -1,0 +1,10 @@
+{
+  "id": "95260d4b-05d1-441e-9234-ea4fad7a0039",
+  "label": "Ordinary-comparative gap is the alternative to the MORE_3 reading of more such",
+  "subject_kind": "statement",
+  "subject_id": "e7db0c0f-77c1-4e5e-862a-8c61b9fa36a0",
+  "predicate": "alternative_to",
+  "object_kind": "statement",
+  "object_id": "31b55b01-4ef4-492c-9bd9-dcec0611adbc",
+  "note": "Exact negation with the original scope; warranted by the induction-heating case recorded in docs/notes/causal-possession-bottleneck.md, conditional on CAUSE_2 counting the coil."
+}

@@ -227,6 +227,7 @@ public import TruthCore.Results.Causality.HistoricalRemoval.Solution
 public import TruthCore.Results.Causality.HolderRootIdentification.Solution
 public import TruthCore.Results.Causality.HoldingMotion.Solution
 public import TruthCore.Results.Causality.IlluminationReceipt.Solution
+public import TruthCore.Results.Causality.ImpersonalFoundationJoint.Solution
 public import TruthCore.Results.Causality.IndexedSignalProvenance.Solution
 public import TruthCore.Results.Causality.IndexedSignalReaper.Solution
 public import TruthCore.Results.Causality.InertEmptiness.Solution
@@ -262,6 +263,7 @@ public import TruthCore.Results.Causality.MetricGrimReaper.Solution
 public import TruthCore.Results.Causality.ModalFrameStrength.Solution
 public import TruthCore.Results.Causality.ModalNecessaryBeingActuality.Solution
 public import TruthCore.Results.Causality.ModalSenseSupport.Solution
+public import TruthCore.Results.Causality.MoreSuchSenseCollapse.Solution
 public import TruthCore.Results.Causality.MotionMapsBatch1.Solution
 public import TruthCore.Results.Causality.MotionMoverFork.Solution
 public import TruthCore.Results.Causality.MutualSupportAsymmetry.Solution
@@ -387,6 +389,7 @@ public import TruthCore.Results.Causality.RootIntellectWillStrictPureAct.Solutio
 public import TruthCore.Results.Causality.RootMultiplication.Solution
 public import TruthCore.Results.Causality.RootNonlimitationFromCompositionKinds.Solution
 public import TruthCore.Results.Causality.RootPerfectionExclusion.Solution
+public import TruthCore.Results.Causality.RootPerfectionIntellect.Solution
 public import TruthCore.Results.Causality.RootPositiveIntellectWill.Solution
 public import TruthCore.Results.Causality.RootPositiveIntellectWillControl.Solution
 public import TruthCore.Results.Causality.RootPurity.Solution

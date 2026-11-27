@@ -1,0 +1,11 @@
+{
+  "id": "af2ab17b-2f8e-4066-88c0-33e0469c7293",
+  "label": "The more-such package with an IN_ACT_1 bearer forces formal possession, checked",
+  "argument_id": "df500d7b-4756-482d-96cf-35a56186d90f",
+  "challenge_module": "TruthCore.Results.Causality.MoreSuchSenseCollapse.Challenge",
+  "solution_module": "TruthCore.Results.Causality.MoreSuchSenseCollapse.Solution",
+  "theorem": "TruthCore.Results.Causality.MoreSuchSenseCollapse.moreSuchPackageForcesFormalPossession",
+  "comparator_config": "results/af2ab17b-2f8e-4066-88c0-33e0469c7293/comparator.json",
+  "status": "solution-present",
+  "description": "Assume the package. The registered derivation moreSuchOfDistinctCauseGives, applied at the shared act predicate InAct, gives 'more such': every distinct cause of r in x is more r than x. The registered derivation distinctCauseGivesOfMoreSuch, applied at formal act with the formal more-such bearer, turns that into formal possession. The result has no premises: it is the implication itself, valid for every InAct and every reception and limitation relation, and it asserts no member of the package. Its use is diagnostic: with an observed formal possession gap (25b67649), some member of the package fails under every single act reading; which member is not selected by this theorem."
+}

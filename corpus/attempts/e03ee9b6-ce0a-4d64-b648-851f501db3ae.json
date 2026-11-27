@@ -1,0 +1,52 @@
+{
+  "id": "e03ee9b6-ce0a-4d64-b648-851f501db3ae",
+  "label": "Joint coherence of a simple, necessary, noncognitive, finality-originating foundation (#2145 Lane 4)",
+  "statement_ids": [
+    "29818edd-9f5a-5414-baa2-9a7d0c8abf18",
+    "fe67d766-3e9f-57b5-bbff-c3e2c50c56fd",
+    "9281317d-1f0a-4522-b91c-58cc07652e92",
+    "4be0f774-2c0a-4691-9088-6e790940960a",
+    "66aecdd7-ea4e-55c6-9377-10db08893854",
+    "7fca65ec-8565-46fe-a5fe-bfdfcf0ed245",
+    "3b40009e-1c56-4cce-86ba-1980fd2cb9a7",
+    "e2357adc-6946-47a0-b39b-8efe1805d214",
+    "3e6ae3e7-28c6-4dae-9d23-f021b4d9ddf2"
+  ],
+  "date": "2026-11-27",
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "See docs/notes/causal-perfection-transfer.md, section 'Joint coherence of a simple, necessary, noncognitive, finality-originating foundation'. Verified results (zero-axiom main theorems, results over the shared CausalityFrame): 22ee1b3b (horn A: excluded middle, a30c5963, the structural L 4ff76ab8, 0a9d3a40, ee287fd3, purity of good-generality e2357adc and one-favouring realization 3e6ae3e7 give 7fca65ec, every favouring determination of an actual root is good-general; the excluding determination is the root's own favouring, so the #2153 E premise 9281317d is not used; corollary: no actual root's favouring factors through its end content, so Lane 2b's D-directed nature is excluded at an actual root under these premises), 30c6f4c5 (horn B: with commitment (e) in its weakest favouring form under ORIGINAL_FINALITY_1/2 980e6482 and the cognition criterion 3b40009e, every actual root apprehends some content through a good-general favouring), fad1a1ac (with dc397705, 75974d26 and the recognition bridge 02f04027, GOD_4 HAS_INTELLECT_1). Comparator companions: favouringControls (positive row and one deletion row per non-logical premise of horn A, with RootPurity and joint compossibility separated in two L rows), apprehensionControls (deletion rows; the axiarchic good-general rival row), criterionTable (classification controls: good-general nature and rational exercise pass alike, witness cBetter vs actual with no counterpossible scenario; fixed-content disposition, proxy and chance fail; a present-input comparator fails; and, row 5, a toy least-action law meets the formal definition when lower action is the ranking and fails it under a value ranking, so the value reading of good is load-bearing), intellectStepControls, jointConfigurations (the #1892 FirstSourceFrame with D-directed, good-general impersonal and personal favouring; section 61 replacement omission frame on another carrier). Lean-only: variationCore (if betterness factors through end-realization, one-favouring realization, pure admissibility and purity of good-generality are jointly inconsistent), impersonalFoundationCore (with an actual root and (c), the premises of both horns and (e) are inconsistent), presentInputsNotGoodGeneral, factorsThroughNotGoodGeneral. Rejected or not pursued: a coverage premise 'fixed or general favouring at roots' (it restates E restricted to good-generality, so it would be E under another presentation); a token for content-fixity (subsumed by favouring determinations per profile); a will step to 66aecdd7 (its recognition bridge would carry BECAUSE_OF_GOODNESS_3, which readings 1 and 2 do not supply); a configuration record (needs corpus/models registration of the control rows). Semantic challenge of c10c2655d: the inductive warrant for the criterion equivocated on the ranking good (P1); repaired by the value reading in DEF 071b24f0, the compiled least-action row, and recording the criterion as a direct assumption at parity with the axiarchic denial. Further P1 repairs: denying one-favouring realization keeps a30c5963 and has its own price; the q.19 a.4 transfer principle is relocated into e2357adc and 3e6ae3e7, not discharged; 980e6482 is the weakest form under ORIGINAL_FINALITY_1/2 (0bbbf98c), and the final cause as object (no favouring of its own) is a recorded rival not covered by it. New DEF 3ece6dfe (About). The repairs are at 437ed0179. The targeted re-check at f5ced2da4 accepted them and found one new P1: the rationale for 3e6ae3e7 called favouring profiles complete or total rankings, which is false of GoodFavouring.Profile (dNature and better are distinct and never conflict). It was fixed in the following commit: the denial's price is now a single bearer with two distinct non-conflicting favourings in one respect, and 3e6ae3e7 has no derivation and only a weak rationale. Four P2s were fixed in the same commit: noValue is the empty ranking, so the value verdict on least action rests on the paths not differing in value; the noncognitive final-cause rival rests on Plotinus, since Aristotle's first mover thinks; the attempt wording; the review record.",
+  "blocker": "Not blocked for the assigned questions A-E. The comparison now turns on (1) whether restriction of favouring content is a limitation (row 3b), (2) what individuates favourings: whether two distinct non-conflicting favourings of one simple bearer are two or one (price of denying 3e6ae3e7), (3) the criterion as a direct assumption on value-responsiveness, at parity with the axiarchic primitive, (4) the final cause as object as a reading of (e), (5) goodness variation within one end-realization class, (6) the reception fork shared with the wisdom route once the criterion is granted, (7) a will-recognition bridge with the governing relation explicit.",
+  "evidence": [
+    "22ee1b3b-9259-4215-97ba-b51fd88b550f",
+    "30c6f4c5-1c2c-4574-a02a-72c15e28a84c",
+    "fad1a1ac-7d0d-400b-82ad-fb8d4bfa963c"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "anthropic",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "date": "2026-11-27",
+      "pr": "PR-2172"
+    }
+  ],
+  "current_assessment": {
+    "date": "2026-11-27",
+    "statement_ids": [
+      "29818edd-9f5a-5414-baa2-9a7d0c8abf18",
+      "7fca65ec-8565-46fe-a5fe-bfdfcf0ed245",
+      "3b40009e-1c56-4cce-86ba-1980fd2cb9a7"
+    ],
+    "scope": "Joint coherence of (a)-(e) for an impersonal foundation; cross-family argument from finality to limitation and cognition",
+    "assessment": "Relative to the #2153 E∘L bundle d3051570, horn A swaps E for the purity of good-generality (e2357adc) and one-favouring realization (3e6ae3e7); under them a simple, necessary, noncognitive foundation cannot have a favouring determined to one content. This relocates the q.19 a.4 transfer principle into those two premises; it adds no warrant by itself. The foundation can still be composite; simple with two distinct non-conflicting favourings in one respect; a bearer of a pure determination-to-one that excludes another pure perfection; one whose good-generality is impure or inadmissible; good-general and noncognitive by denying the cognition criterion, which is a direct assumption on value-responsiveness at parity with that denial; or the final cause as object with no favouring of its own (noncognitive in its Plotinian form; Aristotle's first mover thinks). Selection among tied creations is a shared price; contingency of creation as such separates permissive from categorical accounts on both sides. The finality route is a conditional support option for 29818edd that avoids 180f5ad2, fe67d766 and E but shares the whole #2153 background with the E∘L route. No unconditional ranking.",
+    "next_test": "Is restriction of favouring content a limitation (RequiresLack test against PureRequiresNoPureLack, both sides)? What individuates favourings (two distinct non-conflicting favourings of one bearer, or their union)? State value-responsiveness without presence as content positively; test the final cause as object against coordinated order; goodness variation within a D-class; a will-recognition bridge with BECAUSE_OF_GOODNESS_3 explicit; register controls as models.",
+    "note": "docs/notes/causal-perfection-transfer.md#joint-coherence-of-a-simple-necessary-noncognitive-finality-originating-foundation-2026-11-27-provisional-2145",
+    "review": "accepted_qualified",
+    "publication": "unpublished",
+    "evidence": "Branch research/impersonal-joint with results 22ee1b3b, 30c6f4c5, fad1a1ac (focused Lean build, bind-check, Comparator and NanoDa). Independent semantic challenge of c10c2655d (four P1, nine P2) repaired at 437ed0179; targeted re-check at f5ced2da4 accepted those repairs and found one new wording P1 and four P2s, repaired in the following commit. The final confirmation at c35af0688 found no remaining P1. The Lean-only lemma noConflictDNatureBetter (distinct D-directed and good-tracking profiles never conflict) was added afterwards and changes no registered result.",
+    "supersedes": "None. It answers the Investigation 4 hooks of #2154 (section 64) and Lane 2b (section 68) without revising their judgments.",
+    "reviewed_revision": "c35af06885f229cc09f88903e6095d1dc5632799"
+  }
+}

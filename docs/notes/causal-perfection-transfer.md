@@ -4552,6 +4552,1113 @@ commit changes only durable review-state text and one wording repair in §D.
    statement, so `fe67d766` reaches `29818edd` with every bridge visible.
    This was deferred from this delivery.
 
+## From every pure perfection to intellect, and constitutive admissibility (2026-11-27; provisional, #2145)
+
+### Question and reuse
+
+Program [#2145](https://github.com/moritzbrantner/truth-core/issues/2145),
+Investigation 1, second slice. It continues the
+[previous section](#why-could-a-pure-perfection-be-absent-at-an-unlimited-root-2026-11-27-provisional-2145),
+whose conclusion `fe67d766` (every actual concrete root has every pure
+perfection) says nothing about which determinations are pure. Two questions:
+
+- **A.** Can `fe67d766` reach GOD_4 HAS_INTELLECT_1 (`29818edd`) with purity of
+  intellect and every wisdom-to-intellect bridge as explicit premises?
+- **B.** Under a constitutive reading of the admissible family, is joint
+  compossibility (`500d0e2d`) derivable, or only restated?
+
+Reused without change: the four `WisdomSelfUnderstanding` bridges and
+`actualRootSelfKnowledgeFromWisdom` of `WholePowerPerfection` (attempt
+`d3a0e98a`), `namedRootOfReach` (`ActualAncestralSource`), the #2153 family and
+premises, the #1970 determinations and the #2153 control carrier. Lean:
+[vocabulary](../../TruthCore/Causality/RootPerfectionIntellect.lean),
+[results and controls](../../TruthCore/Results/Causality/RootPerfectionIntellect/Solution.lean),
+[spec](../../specs/root-perfection-intellect.toml).
+
+### A. Purity of intellect and the registered route
+
+**Purity statement.** "The determination wisdom is a pure perfection" is a
+new open premise (`WisdomIsPure Pure wisdom`). The token `wisdom` has its own
+stipulative definition (`04d7652c`): the bearer's own subject-grounded
+apprehension, not productive wisdom (a power to make others apprehend) and not
+exemplary wisdom (a form that norms another knower). Its `Pure` is the same parameter as
+in `fe67d766` and in `WholePowerPerfection` (DEF-PURE-PERFECTION), so no sense
+bridge is needed: the composition shares the parameter, and the senses are
+not passed between. The strict and unrestricted purity notions (`b5ac268c`,
+`956247e3`) are statements about first movers built from the same `Pure`; they
+are not other senses of "pure". What makes `wisdom` intellectual is not its
+name. It is fixed only by the open capacity bridge, which is about the same
+token.
+
+Warrant (cumulative-warrant policy). Both sides turn on one distinction:
+is reception constitutive of apprehension, or the mode in which finite
+knowers apprehend? The repository records this fork in
+COGNITIVE_RECEPTION_AND_KNOWING (`e557eab8`, the `Q14ReceptionFork`
+calibrations). There, aptitude for another's form is kept apart from the
+intellectual grade of HAS_INTELLECT_1, and sense already receives without
+matter. Neither side's answer to the fork is established.
+
+- *For purity.* DEF-PURE-PERFECTION counts a determination pure if it
+  involves no potency, limitation or reception. That is the criterion, not
+  evidence that apprehension meets it. The positive reason is that what is
+  perfective in apprehension is the actual grasp of truth. Receptivity shows
+  up as the condition of grasping something one did not already have. In
+  self-apprehension by a bearer that receives nothing, the grasp has no
+  distinct object to receive. This reason assumes that the fork falls on
+  the "mode" side. It has no more independent support than the objection
+  below.
+- *Against purity.*
+  - Target: the purity premise.
+  - Mechanism: if being informed by a distinct object belongs to what
+    cognition is, then apprehension involves reception, and it is not pure.
+  - Independent justification: every otherwise known instance of cognition
+    is receptive, and the Aristotelian account of the possible intellect
+    makes understanding a being-informed. This reason assumes that the fork
+    falls on the "constitutive" side, and generalizes from finite knowers.
+- *Scoring.* Each side owes support for its answer to the same fork. Each
+  has a positive consideration: the perfective element in grasp, against
+  the uniform receptivity of known cognition. Neither consideration settles
+  the fork, and self-apprehension without reception is the disputed case for
+  both. The scoring is parity on this point.
+
+The Plotinian duality objection (a knower and the known make two) targets
+admissibility with simplicity (case i, `ee287fd3`), not purity.
+
+Provisional assessment: the purity premise and its denial stand at parity on
+the reception fork. Its warrant is moderate at best and turns on that fork.
+It is not established.
+
+**Registered route** (two steps, both zero-axiom main theorems):
+
+1. `pureActRootsKnowThemselvesFromPurity` (step one). Premises:
+   - `a30c5963` (actual roots have no represented limiting principle);
+   - `26e8e6ed` (an unlimited being is its own being);
+   - `fe67d766`;
+   - the purity premise;
+   - the capacity bridge (`WisdomSelfCapacity`);
+   - the exercise-or-potency bridge (`SelfCapacityExercisedOrPotent`);
+   - the grounding bridge (`TrueSelfApprehensionGrounded`).
+
+   Conclusion: every PURE_ACT_1 actual root has intrinsic self-knowledge
+   (`PureActRootsKnowThemselves`). The proof is the existing
+   `actualRootSelfKnowledgeFromWisdom`. The q.4 a.2 whole-power premises
+   (`d164b1ff`, `c4fb87a6`) are not used. Every producer of `fe67d766` feeds
+   this step: the E∘L routes of #2153, the whole-power route, the infinity
+   route and the finite-dependence route.
+2. `godHasIntellectFromRootPerfection` (step two). Premises:
+   - `593d7307` (some actual first root is PURE_ACT_1, DEF-PURE-ACT `a49e4cf1`);
+   - `75974d26` (finite grounding reach of GOD_4);
+   - the step-one conclusion;
+   - the recognition bridge (GOD_4 with intrinsic self-knowledge
+     HAS_INTELLECT_1).
+
+   Conclusion: `29818edd`. The identity of each GOD_4 with the root is the
+   existing `namedRootOfReach`.
+
+Neither step is a transcription. Step one composes seven premises. Step two
+derives the identity of GOD_4 with the pure-act root before the recognition
+bridge applies. The recognition bridge itself is a one-step open rule: what
+the route derives is its antecedent, intrinsic self-knowledge, not its
+consequent.
+
+**Controls.** In `stepOneControls` and `stepTwoControls`, every one of the
+eleven premises is load-bearing on the #2153 carrier: an assignment makes
+it fail while the others hold and the conclusion fails, and a positive row
+witnesses all of them together. Encoding disclosures:
+
+- In the exercise row the source can apprehend its own content, does not, and
+  has no potency. That is an assignment only because `InPotency` is the
+  independently supplied POTENCY_2.
+- In the first-root row the root is in potency, so the step-one conclusion
+  holds vacuously.
+- In the reach row GOD_4 names the effect.
+- The assignments witness the stated relations only. They say nothing about
+  what wisdom, apprehension or grounding are.
+
+**`aptitudeIffExerciseAtPureAct` (question A3).** It does not discharge or
+simplify `SelfCapacityExercisedOrPotent`; it consumes it. Given that bridge,
+pure act and ab esse ad posse, it shows that own capacity and exercise
+coincide. Its only effect here is that, under the step-one premises, the
+capacity-level and the actual-level readings of HAS_INTELLECT_1 converge at a
+pure-act root. The capacity-only theorem `godHasIntellectFromWisdomCapacity`
+remains an unregistered weaker option. It drops exercise, grounding and pure
+act, but it requires the capacity reading of HAS_INTELLECT_1.
+
+**Shared dependencies and independence.** Two existing routes to `29818edd`
+run through the q.14 immateriality premise `180f5ad2` (`ea6608a9` via
+`beede613`, and `26e368d3`); a third runs through local teleology
+(`b8394dbb`). This route uses neither, so it is a horizontal support
+family at the level of its distinctive premises. It is not disjoint in its
+ancestry. It shares two premises with `ea6608a9`: finite reach `75974d26`
+and the existence of an actual root (here through `593d7307`). Through the
+whole-power producer `7d8bbdcb` of `fe67d766`, it also shares these premises
+with the producers of `beede613` (`2288f225`, `58da0281`):
+- `363a528c`: composites are posterior to their components.
+- `b35ce743`: composites have a distinct component.
+- `86efed1a`: what is simply prior is concrete.
+- `cb1cdea9`: a distinct esse-cause is an actual concrete ground.
+- `be639b3f` and `61bd42e5`: the q.3 a.4 first-proof readings.
+- `0436de86`: the one-way existence contract.
+- `ee4ab504`: excluded middle.
+
+The E∘L producers of `fe67d766` (#2153) avoid most of these. They share
+`a30c5963` and excluded middle. Its own load sits
+in four places: purity, the three bridges, recognition and `fe67d766`. The
+last of these carries E, or the premises of the other producers.
+
+### B. A constitutive reading of admissibility
+
+The #2153 family `Admissible` is a primitive. The constitutive reading states,
+as an open premise `MemberGroundedAdmissibility` (`6bba8431`), that a profile
+is admissible exactly when it is exclusion-free. That means no member `d`
+requires the lack of a subset `S` of the profile. The primitive
+`RequiresLack d S` reads: "it belongs to what `d` is that a bearer of `d` does
+not have all of `S`". The intended reading is upward closed in `S`, but that
+is not encoded (new definitions `22c26860`, `88f7c656`).
+
+The premise says that the primitive family and the defined notion coincide.
+It does not identify them, so nothing is hidden in a definitional equality.
+It is neutral about purity and n-ary: a member can require a joint lack with
+no pair excluded. Because exclusion-freedom is inherited by subsets, member
+grounding makes the family downward closed and admits the empty profile. It
+therefore excludes two kinds of constraint:
+- irreducibly holistic prohibitions;
+- requirements of presence: a member that needs another alongside it, or a
+  family that requires a determination in every profile.
+
+The derivations use only its sufficiency direction, the registered weaker
+sibling `ExclusionFreeAdmissible` (`63e88cef`): every exclusion-free profile
+is admissible. Read contrapositively, it already localizes every
+inadmissibility: an inadmissible profile is not exclusion-free, so
+(classically) some member requires the lack of some of its members. The
+split is this: the weak premise localizes every inadmissibility in a member's
+requirement of a lack, and the necessity direction makes such requirements
+binding (a profile containing one is inadmissible). It has a `strengthens` relation from member grounding,
+verified by `exclusionFreeAdmissibleOfMemberGrounding`. Its difference is
+certified (#1598): member grounding is the sufficiency direction plus the
+necessity direction "every admissible profile is exclusion-free"
+(`mgOverSufficiencyExact`, premise-free). The separator `strictSeparates`
+(every profile admissible, noesis requiring its own lack) satisfies the weak
+version and fails the strong one.
+
+The second premise, `PureRequiresNoPureLack` (`0c8631bd`), says no pure
+determination requires the lack of pure determinations. Its rationale is
+DEF-PURE-PERFECTION: requiring the lack of a positive actuality is a limitation
+of the requirer.
+
+Results (all main theorems use no axioms; companion `constitutiveControls`):
+
+- `jointCompossibilityOfExclusionFreeAdmissibility`: the sufficiency
+  direction and the purity premise give `500d0e2d`.
+- `pureAdmissibleOfExclusionFreeAdmissibility`: they give `ee287fd3`.
+- `rootProfilesAdmissibleOfExclusionFreeAdmissibility`: with `3b39e0ba`
+  (every determination of an actual root is pure) they give `0a9d3a40`.
+- **The anchoring family.** The #2153 anchoring family (finite profiles of
+  natural numbers) *is* member-grounded, with every determination requiring
+  the lack of every infinite set (`anchorFamilyGrounding`). But no
+  requirement relation satisfying the purity premise gives it the
+  sufficiency direction while every determination is pure: the infinite
+  all-pure profile is inadmissible. Under these premises an all-pure root
+  profile is admissible.
+- **What the premise pairs amount to** (Lean-only):
+  - `premisesIffStructural`: with the requirement relation free, member
+    grounding and the purity premise are jointly equivalent to "the family
+    is downward closed, contains the empty profile and contains every
+    all-pure profile".
+  - `sufficiencyPremisesIffAllPure`: the sufficiency direction and the
+    purity premise are jointly equivalent to "every all-pure profile is
+    admissible".
+  - `finiteConverse`: under member grounding and `ee287fd3`, joint
+    compossibility gives the purity premise for every finite set of pure
+    determinations.
+- `presenceRequirement` (Lean-only): the family in which noesis needs the
+  impure limiter alongside it has these properties:
+  - it is member-grounded for no requirement relation;
+  - it fails the sufficiency-and-purity pair for every relation;
+  - every pure determination is admissible somewhere;
+  - joint compossibility fails.
+
+**Verdict: a relocation, not independent warrant.** Formally, the premise
+pair is a strengthening of what it derives. With the requirement relation
+free, it says that every all-pure profile is admissible, or with member
+grounding also downward closure. Under member grounding, joint compossibility
+returns the purity premise for every finite set. The pair therefore relocates
+joint compossibility into requirement form. The purity premise's rationale is
+the one already recorded for joint compossibility (DEF-PURE-PERFECTION). Its
+one additional thesis is the localization of incompatibility in what a
+member requires (member grounding, or its sufficiency direction). That
+thesis is carried by the intended reading of `RequiresLack`, not by the
+structure. That neither premise mentions insertion is a syntactic fact, not
+a source of warrant. By the closed-cycle rule, mutual implication adds no
+warrant by itself. The results stay as conditional support options; the
+warrant they add is at most the warrant of localization.
+
+**The test case under the localization thesis.** The #2153 `jointConflict`
+family admits every pure pair and forbids the triple `a`, `b`, noesis. Its
+downward-closed counterpart `bruteTriple` drops the requirement that `esse`
+be in every profile, which is itself a requirement of presence. For a profile
+that contains `esse` and not the limiter, and a pure target, the two families
+give the same `HasCompatibleExtension` facts.
+
+| Reading of the prohibition | Sufficiency direction | Purity premise | Joint compossibility |
+| --- | --- | --- | --- |
+| triple, no member requires anything (irreducibly holistic) | fails | holds | fails |
+| triple, noesis requires the joint lack of a and b | holds (member grounding too) | fails | fails |
+| noesis requires the presence of the impure limiter | fails with purity, for every relation | n/a | fails |
+
+The second row is the discriminating model: the constitutive reading holds
+and joint compossibility fails, because a pure member requires a lack. A
+joint prohibition of pure determinations therefore has three options:
+- ungrounded in any member, denying localization;
+- grounded in a pure determination's requirement of a lack, denying the
+  purity premise;
+- grounded in a member's requirement of presence. This is the articulation
+  objection's form, in which noesis needs an impure articulation. It is
+  excluded by member grounding, and by the sufficiency direction together
+  with purity. It is a positive, member-grounded constraint, not a brute one.
+
+For case (i), rows 4 and 5 back the first two options: the family without
+noesis is either ungrounded, or has noesis requiring its own lack. A
+requirement of presence yields case (i) only if the family also excludes the
+required impure item everywhere, which is not encoded. The
+`presenceRequirement` family admits every pure determination somewhere, so it
+is a case (ii) family.
+
+**A recorded candidate against the purity premise.**
+
+- *Target:* `PureRequiresNoPureLack`, for pairs of classical pure perfections.
+- *Proposed mechanism:* immutability would be a pure determination requiring
+  the lack of tensed knowing, if knowing what is now the case requires change
+  (the omniscience–immutability argument, attribution deferred).
+- *Independent justification:* not supplied here. The claim that tensed
+  knowing requires change is the mechanism itself, and the corpus records no
+  independent support for it (`truth index search 'immutability omniscience
+  tensed'` finds only this section).
+- *Status:* a recorded candidate, not a standing objection. It carries no
+  evidential weight for either side until its mechanism is independently
+  supported. If it were, it would concern noesis only if tensed knowing is
+  part of noesis; the available reply denies that.
+
+**Shared rationale with E.** Member grounding localizes necessary
+incompatibilities in a simple source's profile in what its members require.
+E says that absences at a root are fixed by the admissibility constraints or
+by the positive profile. Both apply one principle to two kinds of negative fact
+about a root's profile: negative facts have positive grounds. They are not
+independent evidence. A rival who accepts brute negative facts rejects both
+at once, and the ungrounded option above is the incompatibility counterpart
+of E's case (iii).
+
+### C. E's warrant against the graph's explanatory principles
+
+There is no existing node that supplies a closure principle at roots for
+determinations.
+
+- The local existence PSR `608a262d` (`NoBruteContingentExistenceAt`) covers
+  existence facts of beings contingent at w. A root's lack of a determination
+  is neither an existence fact nor, at a necessary root with a necessary
+  profile, contingent.
+- `ContingentPSR` and `NecessaryPSR` (`PSRStrength`) have the same
+  contingency restriction.
+- The unrestricted `FactPSR` covers every fact. It is vocabulary only: no
+  statement binds it. It would supply E only together with a further bridge:
+  any reason for a fact about a root's intrinsic profile is its admissibility
+  constraints or its positive profile.
+- The parity norm of `BruteContingencyParity` (`ExcludesUnreasonedAcceptance`,
+  `FeatureUniform`) applies only to facts that share the selected feature.
+  Suppose a stance rejects unreasoned existence of the foundation and accepts
+  "by its own nature" as the self-reason for necessary existence. If its
+  feature is "a necessary intrinsic fact about the foundation", then by
+  uniformity it must give the foundation's profile closure a reason too.
+  "By its own nature" for a profile fact is case (i) or (ii), not case (iii).
+  A stance whose feature is only "existence fact" escapes. Whether that
+  narrower feature is principled is the open question. The same standard
+  applies to a personal root: its lack of impure determinations is fixed by
+  the limitation premises, case (i) or (ii).
+
+- The truthmaker family (`TruthmakerTheories`) does not supply E either:
+  - `791bee74`: maximalist coverage and its consequences;
+  - `012a5ae5` (`NeedsMakerAt`): a true fact has some eligible maker;
+  - `0f38a9c3`: negative-fact coverage is inconsistent with an empty
+    eligible-maker domain.
+
+  Maximalism applied to "the root lacks k" demands some maker of that
+  negative truth. A totality fact ("these are all of the root's
+  determinations") is such a maker, and it is exactly the rival's primitive
+  closure, case (iii). The family therefore supplies E only with a further
+  bridge: a root's absences must be made true by its admissibility
+  constraints or its positive profile, not by a totality fact. On the same
+  standard, a personal root's absences would need makers of the same kind.
+  Encoding that bridge over `NeedsMakerAt` is a next test.
+
+So E's warrant remains the general, not yet registered, demand that negative
+facts at a root have intrinsic grounds. Member grounding (B) depends on the
+same demand.
+
+### Assessment, standing rival and graph effect
+
+**What changed.**
+
+- `fe67d766` now reaches GOD_4 HAS_INTELLECT_1 by a registered route.
+  Purity, the three bridges and recognition are separate open premises. The
+  route is independent of the q.14 immateriality premise in its distinctive
+  premises; the ancestry it shares is listed above.
+- Three #2153 premises (joint compossibility, pure admissibility and, given
+  root purity, root-profile admissibility) are now conclusions of the
+  sufficiency direction and the purity premise. That is a relocation into
+  requirement form, not independent warrant.
+- The rival's case (ii) reduces to three options: an ungrounded constraint, a
+  pure requirement of a lack, or a requirement of presence. Case (i) reduces
+  to the first two. A requirement of presence reaches case (i) only if the
+  family also excludes the required impure item everywhere, which is not
+  encoded.
+
+**Standing rival and its price.** The impersonal eminent source (#1892)
+without intellect survives in any of five forms, each with a price:
+
+- deny that understanding is pure. This turns on the reception fork, where
+  the two sides are at parity.
+- exclude noesis through a requirement of presence (the articulation
+  objection: noesis needs an impure articulation). This is a positive,
+  member-grounded constraint and a case (ii) exclusion. It becomes case (i),
+  inadmissibility with simplicity, only if the family also excludes the
+  articulation everywhere, which is not encoded. It denies member grounding,
+  and the sufficiency direction together with purity. It owes an account of
+  why the required articulation is impure.
+- accept an ungrounded necessary incompatibility among pure determinations.
+  This denies localization.
+- name a pure determination whose requirement excludes noesis. One candidate
+  is recorded (immutability against tensed knowing), but its mechanism has
+  no independent justification here, so it carries no evidential weight for
+  either side.
+- accept an unexplained absence. This denies E.
+
+The third and fifth are one commitment, brute negative facts at the root,
+applied twice.
+
+**Provisional judgment.** The route is conditional support. It does not
+establish `29818edd`. Its weakest points:
+- the purity of intellect itself (parity on the reception fork);
+- recognition and grounding (semantic bridges, primitives with intended
+  readings);
+- the shared demand that negative facts at a root be grounded. That demand
+  now carries both E and the localization thesis, and it has no registered
+  warrant.
+
+The B results clarify where joint compossibility's warrant lives: in the
+purity rationale plus localization. They do not add warrant beyond
+localization.
+
+Parity: a brute-negative-facts stance applies in the same way to personal
+and impersonal roots. It counts against the impersonal profile only as far
+as that demand is warranted.
+
+**Review state.** The independent semantic challenge ran at
+`2571329898`. It accepted the A route (`fd01e30c`, `c256d381`), the shared
+`Pure` parameter and all eleven control rows. It did not accept the
+interpretive layer of B as presented. Its findings were repaired at `6cac8d105`:
+- the relocation verdict;
+- the requirement-of-presence option;
+- the anchoring family;
+- the immutability candidate (recorded; no independent justification supplied);
+- the wisdom definition and relabelling;
+- the weaker sufficiency sibling;
+- the shared ancestry;
+- parity scoring on the reception fork;
+- the truthmaker survey;
+- PURE_ACT_1 labels.
+
+The targeted re-check at `fce2ba69d` accepted all steps and found no
+remaining P1 in the content it checked. The certified difference for the
+member-grounding strength order (`mgOverSufficiencyExact`, `strictSeparates`)
+was added afterwards and checked at `2ee185e3f`. That check found one P1, a
+wording error that reversed the direction of the difference statement, which
+is fixed in the commit that adds this sentence.
+
+**Next discriminating tests.**
+
+1. Encode the truthmaker bridge of C: a root's absences are made true by its
+   admissibility constraints or its positive profile, not by a totality fact.
+   Test it on personal and impersonal roots alike.
+2. Formalize the C comparison as a `WhyStance` over profile facts. Decide
+   whether a feature-uniform stance can principledly select "existence fact"
+   rather than "necessary intrinsic fact about the foundation".
+3. Encode the omniscience-immutability conflict as a `RequiresLack` instance
+   and test whether its pure-determination reading survives the
+   tensed/untensed distinction.
+4. Give `CanApprehend` and `CognitivelyGrounded` a constraint that separates
+   own from productive capacity. This is the recognition step's semantic
+   obligation.
+5. Encode the #1879 articulation test as a requirement of presence (noesis
+   needs an articulation). Decide whether that articulation must be impure
+   at a simple source (case i).
+
+## Joint coherence of a simple, necessary, noncognitive, finality-originating foundation (2026-11-27; provisional, #2145)
+
+### Question, fixed meanings and reuse
+
+Program [#2145](https://github.com/moritzbrantner/truth-core/issues/2145),
+Investigation 4. Can an ultimate foundation n be at once:
+
+- (a) simple and unlimited;
+- (b) necessary and underived;
+- (c) entirely noncognitive;
+- (d) productive of genuinely contingent, complex beings;
+- (e) originally responsible for objective finality?
+
+The task is to combine the earlier slices, not to restate their disputed
+premises. The question is whether the impersonal rival's solution in one
+investigation creates a difficulty in another.
+
+Reused without change:
+
+- the #2153 admissible family, the structural L (`4ff76ab8`, derived in #2153
+  from the RootPurity bridge `c78c77da` and joint compossibility `500d0e2d`),
+  `a30c5963`, `0a9d3a40`, `ee287fd3` and the absence trichotomy
+  ([above](#why-could-a-pure-perfection-be-absent-at-an-unlimited-root-2026-11-27-provisional-2145));
+- the Lane 2b favouring profiles, `BecauseOfGoodness` (BECAUSE_OF_GOODNESS_2),
+  the ORIGINAL_FINALITY senses (`0bbbf98c`) and the matched table
+  ([optimal-creation-choice.md §§65–69](optimal-creation-choice.md#favouring-end-content-and-goodness-under-one-standard-2145-2026-11-27));
+- the #2154 omission scopes and complete-decision fork (§§61–62 there);
+- the #1892 `FirstSourceFrame`, finite reach `75974d26`, root existence
+  `dc397705` and `namedRootOfReach`.
+
+The results take the shared `CausalityFrame` (#1784). The "distinct simply
+prior being" of the #2153 limiting principle is the frame's `PriorSimply`
+(PRIOR_1).
+
+Lean: [vocabulary](../../TruthCore/Causality/ImpersonalFoundationJoint.lean),
+[results and controls](../../TruthCore/Results/Causality/ImpersonalFoundationJoint/Solution.lean),
+[spec](../../specs/impersonal-foundation-joint.toml).
+
+New vocabulary, each with a stipulative definition record:
+
+- **Favouring determination** `favours φ` (`abd8cfa4`): the real determination
+  "a favouring of the bearer is the profile φ". The record does not say that a
+  bearer has only one favouring.
+- **Good-generality** `goodGen` (`847ddbe3`): the real determination of a
+  favouring that depends on value for at least one pair. The Lean content is
+  existential. It is not "favouring the better in every case".
+- **Good-general profile** `GoodGeneral` (`071b24f0`). For some scenario and
+  some pair of candidates, at least one of which is not a present input
+  (`b28d7e04`), the favouring depends on betterness with end-realization held
+  fixed (BECAUSE_OF_GOODNESS_2). The betterness standard `good` is read as a
+  **value** ranking. Lean does not type value, so this reading constrains the
+  interpretations, and it is load-bearing (see B).
+- **Actual apprehension** `Apprehends` (`07f3fb85`), with examples,
+  non-examples and structural properties.
+- **About a candidate** `About` (`3ece6dfe`).
+
+### A. The fixed-content horn meets the limitation results
+
+**The bridge that joins the families.** The open premise "one admissible
+profile has one favouring" (`OneFavouringRealization`, `3e6ae3e7`) says
+three things:
+
+- every admissible profile is realized by one favouring profile ψ;
+- every favouring token in it names ψ;
+- if the profile contains `goodGen`, ψ is good-general.
+
+It is an open reading of what a simple source's favouring is. It is **not
+derived** from the encoded simplicity of #2153. In control row 7 two
+favourings are jointly admissible, and the root still has no represented
+limiting principle (`a30c5963` holds). A simple root may also carry several
+other distinct determinations (`esse`, `goodGen`, wisdom).
+
+**Its own price (whoever denies it).** A favouring profile
+(`GoodFavouring.Profile`) is any relation of candidates per scenario. It need
+not be total, and two distinct profiles need not conflict. The D-directed
+`dNature` and the good-tracking `better` are distinct, yet neither ever
+favours y over x where the other favours x over y (Lean-only
+`noConflictDNatureBetter`, from the semantic challenge's probe).
+
+So a rival who denies one-favouring realization can hold a single bearer with
+two distinct, non-conflicting favouring relations in one respect: a fixed
+D-favouring alongside a value-dependent favouring that ranks more pairs. That
+is exactly the row-7 configuration. The price of that position is to say what
+makes these *two* favourings of one simple bearer rather than one favouring,
+the union of the two relations.
+
+Neither side has a derivation here. `3e6ae3e7` is an open reading with a weak
+rationale: a simple source's inclination is one. Making that rationale precise
+would need a further open reading, for example that a favouring profile is
+maximal (the bearer's whole favouring), and that reading is not adopted
+here.
+
+**Result A** (`actualRootFavouringIsGoodGeneral`, `22ee1b3b`, registered,
+zero axioms). The premises are:
+
+- excluded middle `ee4ab504`;
+- `a30c5963`;
+- the structural L `4ff76ab8`;
+- root-profile admissibility `0a9d3a40`;
+- pure admissibility `ee287fd3`;
+- the purity of good-generality `e2357adc`;
+- one-favouring realization `3e6ae3e7`.
+
+The conclusion is `7fca65ec`: every favouring determination of an actual
+root is good-general.
+
+Suppose the root has `favours φ` and φ is not good-general. An admissible
+profile containing the root's profile and `goodGen` would be realized by φ,
+and φ would then have to be good-general. So the root's favouring excludes an
+admissible pure determination. That is case (ii) of the trichotomy, and L
+turns it into a limiting principle that actual roots lack.
+
+**What is new: E is swapped out.** The premise set is exactly the bundle of
+the #2153 E∘L argument `d3051570`, {`ee4ab504`, `a30c5963`, `4ff76ab8`,
+`0a9d3a40`, `ee287fd3`}, with E (`9281317d`) replaced by {`e2357adc`,
+`3e6ae3e7`}.
+
+The swap works because the excluding determination is the root's favouring,
+the very determination that commitment (e) in its favouring senses requires.
+It is not a gain in warrant by itself. Its value depends on whether the two
+new premises are better supported than E.
+
+**Corollary** (`noActualRootFavouringFixedToEnd`, Lean-only). A profile that
+factors through end-realization is not good-general (law 1 of
+`GoodDependenceLaws`). Under A's premises, then, no actual root's favouring
+factors through its end content, and Lane 2b's D-directed generative nature is
+excluded at an actual root.
+
+The transfer principle that
+[divine-love-goodness-bridge.md](divine-love-goodness-bridge.md) found missing
+from q.19 a.4's second reason (navigation only) is **relocated, not
+discharged**. That principle says that determination of a nature's action to
+one content is a limitation of the nature. It is now carried by `e2357adc` and
+`3e6ae3e7`, through L. The only positive warrant recorded for `e2357adc` is
+that same principle (see below), and the principle works only together with
+`3e6ae3e7`. This gives the principle a clearer location in the graph. It adds
+no warrant.
+
+**The rival's options** (`favouringControls`, Comparator companion). In every
+failing row the root has the D-directed favouring and A's conclusion fails.
+Each row fails exactly one premise:
+
+| Row | Premise that fails | The rival's position |
+| --- | --- | --- |
+| 2 | `a30c5963` | the root is composite; gives up (a) as encoded |
+| 3a | L, through RootPurity `c78c77da` (compossibility holds) | D-favouring is impure, yet the root is unlimited |
+| 3b | L, through joint compossibility `500d0e2d` (RootPurity holds) | D-favouring and good-generality are both pure and exclude each other |
+| 4 | `0a9d3a40` | the root's own profile is inadmissible |
+| 5 | `ee287fd3` for `goodGen` | good-generality is incompatible with the admissibility constraints (case i) |
+| 6 | purity of good-generality | good-generality is not a pure perfection |
+| 7 | one-favouring realization (keeps `a30c5963`) | two favourings are jointly admissible at a root with no represented limiting principle; pays the price of `3e6ae3e7` above |
+
+Rows 3a and 3b are the #2153 options (deny RootPurity, or deny joint
+compossibility). Here they are located at a determination that the rival
+itself posits.
+
+Suppose one-favouring realization and joint compossibility both hold. Then two
+distinct favouring determinations cannot both be pure, provided one lies in an
+admissible profile of pure determinations and the other is admissible
+somewhere. Adding the second to that profile would make the profile
+admissible, and its single favouring would have to be both. This is an
+immediate consequence, not compiled. So 3b is the sharp form of the dispute:
+which favouring is the pure one, good-generality or determination to D?
+
+**Warrant for the purity of good-generality.** Both sides are held to the
+same standard.
+
+- *For.* A favouring confined to one content, when value-dependent favouring
+  is admissible, is a restriction of the favouring's range.
+  DEF-PURE-PERFECTION counts restriction as limitation. The classical
+  rationale ties determination to one effect to a limited form (ST I q.19 a.4,
+  second reason, navigation only). This is the relocated transfer principle.
+  It assumes that restriction of content is limitation of act, which is
+  exactly what the rival denies.
+- *Against (a substantive objection).*
+  - *Target:* the purity premise.
+  - *Mechanism:* if good-general favouring is cognitive (the criterion of B),
+    and cognition is constitutively receptive, then good-generality involves
+    reception and is impure.
+  - *Independent justification:* the reception fork of the
+    [previous section](#a-purity-of-intellect-and-the-registered-route), where
+    the two sides stand at parity.
+  - *Relevance:* direct.
+- *Consequence for independence.* A rival who accepts the criterion and takes
+  the constitutive side of the reception fork makes one commitment that denies
+  both the purity of wisdom and the purity of good-generality. The two routes
+  to intellect therefore share that dependency.
+- *A second, distinct question.* Is restriction of favouring content a
+  limitation in the DEF-PURE-PERFECTION sense? This is neither the reception
+  fork nor E. It is the discriminating point of row 3b. Beyond the classical
+  rationale and its denial, no argument either way is recorded.
+
+**Goodness variation within a D-class** (Lane 2b, as corrected at #2163).
+`GoodGeneral` needs a scenario where betterness changes while
+end-realization stays fixed. `cBetter` against `actual` supplies one: the same
+`fits`, but a different ranking of c against d. The counterpossible
+`valueless` scenario is not used (`criterionTable` row 1).
+
+If betterness factors through end-realization, nothing is good-general
+(law 4). `variationCore` (Lean-only) then shows that four premises cannot all
+hold:
+
+- one-favouring realization;
+- pure admissibility;
+- the purity of good-generality;
+- betterness factoring through end-realization.
+
+One of the four must go, and the core does not say which. For both sides the
+open question is whether goodness varies within one class of end-realization.
+
+An earlier draft suggested that if D is goodness itself, a D-directed nature
+is good-general "on an intensional reading". That conflicts with law 4. The
+suggestion is unformalized and is withdrawn.
+
+### B. The good-general horn meets the cognition criterion
+
+**Result B** (`actualRootsApprehendThroughGoodGeneralFavouring`, `30c6f4c5`,
+registered, zero axioms). The premises are:
+
+- A's conclusion;
+- commitment (e) in its weakest favouring form under ORIGINAL_FINALITY_1 and
+  _2: every actual root has a favouring determination (`980e6482`);
+- the cognition criterion `3b40009e`: whatever has a good-general favouring
+  determination apprehends some content about a candidate.
+
+The conclusion is `3a32d91c`.
+
+**What the criterion is.** Its two marks are value-dependence with end
+content fixed, and a non-present compared candidate. At a root before
+production nothing is a present input, so there the criterion rests on the
+first mark alone.
+
+The first mark needs `good` to be value. The semantic challenge's probe is now
+compiled as `criterionTable` row 5. In it a toy least-action law, with
+`good` := lower action and `fitOf` := fixed endpoints, satisfies the formal
+definition. With the empty ranking (`noValue`) it does not. That half is
+trivial: it models only the stated assumption that the paths do not differ in
+value. So:
+
+- *Under a generic ranking*, a variational law is an independent noncognitive
+  instance of both marks. It would refute the criterion.
+- *Under the value reading*, which is the adopted one, a variational law does
+  not depend on value at all, so it fails the first mark. This rests on the
+  assumption that candidate paths do not differ in value; Lean does not
+  establish it. This is not because
+  it "factors through its own fixed functional": in the probe, the law's
+  favouring varies while the endpoints stay fixed.
+
+**The criterion's warrant, restated.** Under the value reading, no known
+noncognitive case meets the first mark. A real balance tracks weight, not
+value. A Molnar-type power is directed to a fixed manifestation, not to value.
+
+The earlier statement of the warrant was inductive: "each mark alone occurs
+without cognition; no known case has both". That reduces to the claim that
+value-responsiveness to non-present candidates is cognition. This is exactly
+the point that the axiarchic rival denies.
+
+So the criterion is recorded as a **direct-assumption option**. It is not an
+induction. Its stated rationale runs as follows:
+
+- non-present candidates cannot act on the source;
+- the value of a candidate is not a further magnitude that could act on it
+  either;
+- so if the source's favouring is to differ with that value, the value has to
+  be present to the source in some non-causal way;
+- presence of another's character in a subject without its causal action is
+  what intentional presence is.
+
+The rival denies the third step. On the axiarchic view, value is directly
+efficacious ("ethical requiredness") with no presence as content.
+
+`criterionTable` rows 1–4 remain as classification controls:
+
+- row 1: the good-general nature and rational exercise pass alike, because
+  they are the same function;
+- row 2: the D-nature, the determined will, the proxy and chance fail;
+- row 3: a comparator restricted to present inputs fails, whatever it tracks;
+- row 4: if betterness is the D-realization ordering itself, nothing passes.
+
+With `About` and `Apprehends` free, the criterion and the recognition bridge
+(`02f04027`) together amount to **one thesis**: good-general favouring at
+GOD_4 is intellect. They are assessed below as one dependency.
+
+**The standing rival of horn B.** A good-general noncognitive foundation:
+Leslie-type axiarchism, in which ethical requiredness is creatively effective
+without a mind. `apprehensionControls` row 4 has it: a good-tracking favouring,
+no apprehension, and the criterion failing.
+
+Its price is a primitive by which the value of non-present candidates makes a
+difference to what the foundation favours, with no presence of that value as
+content. Under the value reading, no other value-responsive noncognitive case
+is known. That absence is not counted as independent evidence: every known
+value-responsive case is one that the dispute is about. No substantive
+objection to the axiarchic primitive has been identified beyond the criterion
+itself. On the criterion the two sides stand **at parity**: a direct
+assumption against a primitive denial of it.
+
+The #1892 exemplar route is a further option for the rival. The source
+contains exemplar forms of every candidate and favours by their perfection,
+apprehending nothing. That relocates the gap to "containment of the forms of
+non-present candidates is not intentional presence" (attempt `4d9cd347`,
+`ObjectiveEminence`).
+
+**Recorded rival to commitment (e) in the favouring form: the final cause as
+object.**
+
+- *Target:* `980e6482` as a reading of (e).
+- *Mechanism:* the root originates finality only as an object of appetite. It
+  is what other things tend toward, and has no favouring of its own.
+- *Independent justification:* the mode of moving as an object of love
+  (Aristotle, Metaph. Λ.7 1072b3), and Plotinus's One. Navigation only; this
+  is an analyst formulation with attribution deferred.
+- *Relevance:* such a root can be simple, necessary and noncognitive, which is
+  exactly the target. The noncognitive form rests on Plotinus alone, since
+  Aristotle's first mover is itself thinking (νόησις νοήσεως, Λ.9). It meets neither ORIGINAL_FINALITY_1 nor _2. Those senses
+  require the origin's own favouring (`0bbbf98c`), so the disambiguation does
+  not cover this reading.
+- *Status:* standing. It is not encoded as a third sense here, because that
+  disambiguation belongs to Lane 2b's open PR. Its deletion row is
+  `apprehensionControls` row 3: a root with no favouring token.
+
+Its price is the question of how a root that favours nothing is "originally
+responsible" for the coordinated order of effects it does not itself select.
+It is not tested here.
+
+**Inconsistent core** (`impersonalFoundationCore`, Lean-only, zero axioms).
+The following cannot all hold:
+
+- an actual root exists;
+- the premises of A;
+- (e) in its favouring form;
+- the criterion;
+- (c), stated as: no actual root apprehends any content.
+
+At least one must be rejected, and the core does not select which. Deletion
+witnesses are the control rows. Minimality is not claimed.
+
+### C. Selection and omission across the horns, under one standard
+
+The commitment-(d) question has two readings, kept apart through
+TOTAL_REFRAINING (`6ce98992`):
+
+- (d1) each creature is contingent: individual omission;
+- (d2) it is contingent that there is any creature: total refraining.
+
+| Account | Individual omission (d1) | Total refraining at the giving level (TOTAL_REFRAINING_1) | Explains "some creation rather than none" by its invariant level |
+| --- | --- | --- | --- |
+| D-directed nature, categorical (favours every D-realization over omission and its exercise follows strict favouring) | only with two or more tied D-realizers; the choice between them is a contingent exercise (§59 law 6) that good-bounded favouring does not explain (§65 law 4) | no: necessarily productive (§61) | yes |
+| Good-general nature or maximizing will, when some creation is strictly better than omission | only with two or more undominated creations (§62) | no, unless omission is undominated | yes |
+| Permissive rational exercise, or permissive propensity (omission in scope) | yes | yes | no; only a contingent exercise does (§59 law 6) |
+
+The table is an analyst classification. Its cells are instances of the
+certified §61 table and §62 fork, under the open cross-carrier bridges
+recorded in §64 there. Its verdicts do not depend on who bears the profile.
+
+- The categorical horns give (d1) at most, and only with ties.
+- (d2) needs a permissive scope. Production rather than none is then explained
+  by a contingent exercise, for a person and for a permissive propensity alike.
+
+So C separates categorical from permissive accounts, not personal from
+impersonal ones. Under (d2) the categorical impersonal horns fail, and the
+impersonal account must be a permissive propensity. A still constrains such
+a propensity, since its favouring is a favouring determination of the root.
+
+### D. Simplicity and the individuation fork, without double counting
+
+Apply the §60 fork of optimal-creation-choice.md to each horn under (a).
+
+- **Invariant act, contingent terminus.** "c rather than the tied d" is then a
+  contingent fact that nothing intrinsic to the source settles. Its demand for
+  a ground falls under a PSR for contingent facts (`ContingentPSR`, and the
+  Lane 2b selection standard), not under E. E concerns necessary negative
+  facts about a root's profile, and A does not use it. The price falls on the
+  D-nature, the good-general nature and the personal will alike; this is the
+  familiar problem of divine freedom and simplicity. It is counted once, as a
+  shared price.
+- **Varying exercise.** The root then has a contingent intrinsic
+  determination. That conflicts with (b), and with a necessary pure-act
+  profile, on both sides alike.
+- **Hook 2 of Lane 2b (good-generality and simplicity).** *Under one-favouring
+  realization* (`3e6ae3e7`), a good-general profile is one favouring
+  determination, `favours ψ`, and its many contents lie in the profile. Without
+  that premise, this does not follow. Whether one act "containing many forms"
+  is articulated is #1879's question, unchanged and the same for both sides.
+
+The noncognitive account pays one price of its own: one of rows 2–7, or a
+denial of the criterion. The selection price is shared by every account under
+(a). Neither is E, and E is not counted again.
+
+### E. Joint configurations and the price list
+
+`jointConfigurations` is a Comparator companion of B. On one carrier it
+assembles the #1892 necessary, simple, pure-act root (`FirstSourceFrame`), its
+effect (which does not exist at world false), and three favouring
+assignments:
+
+1. the D-directed impersonal root: ORIGINAL_FINALITY_1 but not _2; it
+   apprehends nothing; (e) holds; the criterion holds vacuously; A's
+   conclusion fails;
+2. the good-general impersonal root: ORIGINAL_FINALITY_2; it apprehends
+   nothing; A's conclusion and (e) hold; the criterion fails;
+3. the personal root: the same favouring with apprehension; every premise of
+   both horns holds.
+
+Each row is a structural surrogate. It witnesses only that its conjunction is
+satisfiable in this encoding. It omits:
+
+- any account of what favouring, purity, admissibility or value are;
+- causal efficacy of the favouring;
+- the complexity of the effects in (d), which is not encoded;
+- the identity of the source across the cross-carrier omission frame;
+- an identification of the two simplicity predicates (#2153 `Composite` and
+  #1892 `ConstitutivelySimple`), which are both asserted but never related.
+
+Rows 2 and 3 have the identical source profile `personalSrc`. They differ only
+in the free `Apprehends` relation, so the model does not distinguish them by
+anything else.
+
+**Surviving impersonal configurations, with their total price.**
+
+| Configuration | (e) taken in | Denies | Price (beyond the shared selection price of D) |
+| --- | --- | --- | --- |
+| D-nature at a composite root | sense 1 | `a30c5963` (row 2) | gives up (a) as encoded |
+| D-nature with two favourings at a simple root | sense 1 | one-favouring realization `3e6ae3e7` (row 7), keeping `a30c5963` | two distinct non-conflicting favouring relations in one respect at a root without a represented limiting principle; owes why they are two favourings rather than their union |
+| D-nature with impure D-favouring at an unlimited root | sense 1 | RootPurity (row 3a) | an impure determination with no represented limiting principle |
+| D-nature with pure D-favouring | sense 1 | joint compossibility (row 3b) | two pure actualities that exclude each other with no limitation in either; owes a positive account (the #1970 and #2153 burden) |
+| D-nature, good-generality impure | sense 1 | `e2357adc` (row 6) | restriction of favouring content is not limitation; or the criterion plus the constitutive side of the reception fork (one commitment that also denies the purity of wisdom) |
+| D-nature, good-generality inadmissible | sense 1 | `ee287fd3` for good-generality (row 5, case i) | a positive incompatibility of good-generality with simplicity |
+| Any D-nature with no goodness variation within a D-class | sense 1 | one of the `variationCore` four | if betterness factors through end-realization, nothing is good-general, for either side |
+| Axiarchic good-general foundation | sense 2 | the criterion (row 4 of B) | a primitive efficacy of the value of non-present candidates without its presence as content; at parity with the criterion |
+| Final cause as object (noncognitive form: Plotinian) | neither favouring sense | `980e6482` (row 3 of B) | a root that favours nothing is "originally responsible" for an order it does not select; untested |
+
+In every row (d) is (d1) with ties, or (d2) for a permissive propensity (see
+C).
+
+**The personal configuration under the same discipline.** This is row 3 of
+`jointConfigurations`. It denies (c) and takes on:
+
+- the purity of good-generality and of wisdom (the reception fork, at parity);
+- one-favouring realization;
+- the criterion-and-recognition thesis, as one dependency;
+- the shared selection price.
+
+It does not pay E on this route.
+
+**Shared dependencies and independent families** for the intellect
+destination `29818edd`:
+
+| Route | Distinctive premises | Shared with others |
+| --- | --- | --- |
+| q.14 immateriality (`ea6608a9`, `26e368d3`) | `180f5ad2` | `75974d26` |
+| Pure perfection (Lane 1b, `c256d381`), E∘L producer `d3051570` | E `9281317d` (or the whole-power producers of `fe67d766`), purity of wisdom, three wisdom bridges, recognition `8ba44d60` | `ee4ab504`, `a30c5963`, `4ff76ab8` (L itself), `0a9d3a40`, `ee287fd3`, `75974d26` |
+| Finality (this section) | `e2357adc`, `3e6ae3e7`, `980e6482`, the criterion-and-recognition thesis (`3b40009e` with `02f04027`) | the same five as `d3051570` without E (`ee4ab504`, `a30c5963`, `4ff76ab8`, `0a9d3a40`, `ee287fd3`), `75974d26`, `dc397705`; the reception fork with the wisdom route once the criterion is granted |
+| Selection (#2154, Lane 2b; will routes to `66aecdd7`) | the selection standard, `0050b6ed`, `4be0f774` | none of the above |
+
+The finality route and the pure-perfection route through `d3051570` share
+their whole background bundle. Only the premise that does the closing work
+differs: E in one route, and in the other `e2357adc` with `3e6ae3e7`. The
+finality route avoids `180f5ad2`, `fe67d766` and E. At the level of what it
+substitutes for E it is horizontal support, not a disjoint family.
+
+**Configuration record.** A `corpus/configurations` record needs registered
+finite models in `corpus/models`. The incompatibility and the deletion
+witnesses are compiled (`impersonalFoundationCore` and the control rows) but
+not registered as model records. Registering them is a next test, not part
+of this delivery.
+
+### Assessment, standing rivals and graph effect
+
+**Results** (spec `specs/impersonal-foundation-joint.toml`):
+
+- `22ee1b3b` (horn A, conclusion `7fca65ec`);
+- `30c6f4c5` (horn B, conclusion `3a32d91c`);
+- `fad1a1ac` (GOD_4 HAS_INTELLECT_1).
+
+New open premises:
+
+- one-favouring realization `3e6ae3e7`;
+- the purity of good-generality `e2357adc`;
+- (e) in its favouring form `980e6482`;
+- the cognition criterion `3b40009e`;
+- the recognition bridge `02f04027`.
+
+**What changed.**
+
+- A cross-family argument now reaches GOD_4 HAS_INTELLECT_1 in three
+  registered steps. It is a new conditional support option for `29818edd`. It
+  does not establish its conclusion.
+- Its first step answers the question the brief asked of Lanes 1 and 2b. The
+  rival's finality solution, a favouring determined to one content, is a
+  positive determination. Under one-favouring realization it falls under L,
+  not under E. Relative to `d3051570`, the closing premise E is swapped for
+  `e2357adc` and `3e6ae3e7`, and the q.19 a.4 transfer principle is relocated
+  into them.
+- The criterion is now recorded as a direct assumption on value-responsiveness,
+  with its rationale. Its value reading is load-bearing, and the least-action
+  probe is compiled.
+
+**Strongest standing rivals and their prices.**
+
+1. The axiarchic good-general noncognitive foundation. It denies the
+   criterion with a primitive. The two sides are at parity on the criterion,
+   and A does not touch this rival.
+2. The final cause as object, in its noncognitive Plotinian form (Aristotle's
+   first mover thinks). It takes (e) in neither favouring sense. It is
+   recorded and its price is untested.
+3. The D-nature with good-generality impure. It holds either that restricting
+   content is not limitation, or the criterion together with the constitutive
+   side of the reception fork.
+
+**Provisional judgment.** Each surviving impersonal configuration denies a
+named premise. The premises differ in how much positive rationale they have.
+
+- `e2357adc` rests on the relocated transfer principle, "restriction of
+  content is limitation". The rival denies that principle, and no independent
+  argument is recorded either way.
+- `3e6ae3e7` has no derivation and only a weak rationale: a simple source's
+  inclination is one. Its denial, two distinct non-conflicting favourings in
+  one respect, is coherent in the controls (row 7). Its price is to explain
+  why these are two favourings rather than their union.
+- The criterion is a direct assumption with a rationale. It stands at parity
+  with the axiarchic denial.
+
+None of these premises is established. The finality route therefore does not
+add independent warrant beyond what these premises carry. What it does is:
+
+- move the noncognitive rival's escape away from E and onto premises it must
+  deny explicitly;
+- show that the rival's own finality determination is a positive determination
+  that L reaches.
+
+This counts against a rival who accepts (a), (b) and (e) in a favouring sense,
+and only as far as `e2357adc`, `3e6ae3e7` and the criterion are warranted. It
+does not count against a rival who takes (e) as the final cause qua object, or
+who takes (e) in sense 2 and denies the criterion.
+
+The same standard is applied throughout:
+
+- the criterion classifies personal and impersonal profiles by the same
+  function;
+- the selection price is shared;
+- the omission table separates categorical from permissive accounts.
+
+No unconditional winner is claimed. Formal validity is unchanged.
+
+**Will.** No step to `66aecdd7` is registered. A will-recognition bridge from
+good-general favouring plus apprehension would carry BECAUSE_OF_GOODNESS_3,
+the governing of the favouring by the apprehension. Lane 2b law 7 shows that
+readings 1 and 2 do not supply it.
+
+**Synthesis for #2145.**
+
+*Excluded, under which premises.* Some foundations are excluded under the
+following premises, and not otherwise:
+
+- #2153's background (`ee4ab504`, `a30c5963`, L, `0a9d3a40`, `ee287fd3`);
+- the purity of good-generality;
+- the one-favouring reading of simplicity.
+
+Under these, a simple, necessary, noncognitive, finality-originating
+foundation cannot have a favouring determined to one content. E is not among
+the premises. The transfer principle that this exclusion needs is carried by
+the last two premises.
+
+*Remaining, with their commitments.* Such a foundation can still be:
+
+- composite;
+- simple, with two distinct non-conflicting favourings;
+- a bearer of a pure determination-to-one that excludes another pure
+  perfection;
+- a foundation whose good-generality is impure or inadmissible;
+- good-general and noncognitive, by a primitive denial of the criterion (at
+  parity);
+- the final cause as object, with no favouring of its own (noncognitive in its
+  Plotinian form; Aristotle's first mover thinks).
+
+*Shared, not discriminating.* Selection among tied creations. Contingency of
+creation as such (d2), which separates permissive from categorical accounts.
+
+*The cumulative case for intrinsic intellect.* It has three partly
+independent families:
+
+- q.14 immateriality;
+- the pure-perfection route;
+- the finality route.
+
+The last two share their whole #2153 background, and they share the reception
+fork once the criterion is granted. They differ only in the closing premise.
+
+*Will.* The case for will still turns on the governing relation
+(BECAUSE_OF_GOODNESS_3, `4be0f774`).
+
+**Next discriminating tests.**
+
+1. Is restriction of favouring content a limitation (row 3b)? Encode a
+   favouring confined to one content as `RequiresLack` of good-generality,
+   and test it against `PureRequiresNoPureLack` on both sides.
+2. What individuates favourings: are two distinct non-conflicting favouring
+   relations of one bearer two favourings or one (their union)? This is the
+   price of denying `3e6ae3e7`. A maximality reading of favouring profiles is
+   one candidate, not adopted here.
+3. Value-responsiveness without presence as content: state the axiarchic
+   relation positively and test whether it differs from apprehension in more
+   than its name.
+4. The final cause as object: can a root that favours nothing originate
+   *coordinated* order (`4be0f774`, `608a262d`)?
+5. Goodness variation within a D-class for an original source.
+6. A will-recognition bridge with BECAUSE_OF_GOODNESS_3 explicit.
+7. Register the controls as models and the core as a configuration.
+
+**Review record.** The independent semantic challenge of `c10c2655d`
+accepted:
+
+- all three Lean types and premise lists;
+- every control row as load-bearing;
+- the conditional statement of "excluded";
+- that `fad1a1ac` is not a transcription;
+- Horn A as a valid, nonvacuous theorem without E.
+
+It found four P1s:
+
+1. The criterion's warrant equivocated on `good`. The balance tracks weight,
+   and with a generic ranking a least-action law meets both marks.
+2. The price of denying one-favouring realization was overstated as giving
+   up (a).
+3. The transfer principle was presented as compiled rather than relocated.
+4. "Weakest form of (e)" lacked a covering disambiguation and omitted the
+   final cause as object.
+
+It also found nine P2s: the existential "as such"; mark 2 being automatic at
+roots; the intensional-merge suggestion; the inverted rival phrase; the
+grounding of `About` and `Apprehends`, and the criterion and recognition as one
+thesis; the shared-dependency table; the "omits" list; hook 2's dependence on
+`3e6ae3e7`; and the judgment.
+
+The repairs:
+
+- the value reading of `good` is stated in DEF `071b24f0`;
+- `criterionTable` row 5 compiles the least-action probe;
+- the criterion is recorded as a direct assumption, at parity with the
+  axiarchic rival;
+- row 7 and the price table keep `a30c5963`, and `3e6ae3e7` has its own price;
+- the relocation is stated;
+- `980e6482` is relabelled and linked to `0bbbf98c`, and the final cause as
+  object is a recorded rival;
+- DEF `3ece6dfe` (`About`) is added and DEF `07f3fb85` is extended;
+- the remaining prose is repaired as listed.
+
+These repairs are at `437ed0179`. The targeted re-check at `f5ced2da4`
+accepted all four P1 and nine P2 repairs. It found one new P1, introduced by
+the P1-2 repair: the rationale for `3e6ae3e7` called favouring profiles
+"complete" or "total" rankings, which is false of `GoodFavouring.Profile` and
+of the model, since `dNature` and `better` are distinct and never conflict. It
+also found four P2s: the row-5 triviality of `noValue`, the Aristotle/Plotinus
+scope of the final-cause rival, the attempt wording, and this record. All are
+fixed in the following commit. The price of denying `3e6ae3e7` is now a single
+bearer with two distinct non-conflicting favourings in one respect, and
+`3e6ae3e7` is marked as having no derivation and only a weak rationale.
+
+The final confirmation at `c35af0688` found no remaining P1 and accepted the
+delivery as qualified. One optional P2 followed it: the Lean-only lemma
+`noConflictDNatureBetter`, cited above, was added afterwards and changes no
+registered result.
+
+[Attempt record](../../corpus/attempts/e03ee9b6-ce0a-4d64-b648-851f501db3ae.json)
+
+
 ## Research attempts citing this note
 
 - [Batch certification of eight exploration maps deriving eight bare root-path premises from deeper…](../../corpus/attempts/round2-perfection-primacy.json)

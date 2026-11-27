@@ -163,6 +163,7 @@ public import TruthCore.Causality.HistoricalRemoval
 public import TruthCore.Causality.HolderRootIdentification
 public import TruthCore.Causality.HoldingMotion
 public import TruthCore.Causality.IlluminationReceipt
+public import TruthCore.Causality.ImpersonalFoundationJoint
 public import TruthCore.Causality.IndexedSignalProvenance
 public import TruthCore.Causality.IndexedSignalReaper
 public import TruthCore.Causality.InertEmptiness
@@ -188,6 +189,7 @@ public import TruthCore.Causality.MetricGrimReaper
 public import TruthCore.Causality.MixedSupplierCensus
 public import TruthCore.Causality.ModalNecessaryBeingActuality
 public import TruthCore.Causality.ModalSenseSupport
+public import TruthCore.Causality.MoreSuchSenseCollapse
 public import TruthCore.Causality.MotionMapsBatch1
 public import TruthCore.Causality.MotionMoverFork
 public import TruthCore.Causality.MutualSupportAsymmetry
@@ -285,6 +287,7 @@ public import TruthCore.Causality.RootIntellectWillPureAct
 public import TruthCore.Causality.RootIntellectWillPureActPlurality
 public import TruthCore.Causality.RootMultiplication
 public import TruthCore.Causality.RootPerfectionExclusion
+public import TruthCore.Causality.RootPerfectionIntellect
 public import TruthCore.Causality.RootPositiveIntellectWill
 public import TruthCore.Causality.RootPositiveIntellectWillControl
 public import TruthCore.Causality.RootPurity
