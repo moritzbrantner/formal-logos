@@ -1,0 +1,168 @@
+# #2145 Lane 2 (Investigation 3): permitted range versus actual selection under one
+# determination standard, the three omission scopes, the complete-decision fork, and
+# the scope of 0050b6ed. Analyst formulations, attribution deferred.
+# See docs/notes/optimal-creation-choice.md §§59-63.
+
+[batch]
+vocab = "TruthCore.Causality.SelectionScope"
+results = "TruthCore.Results.Causality.SelectionScope"
+
+[[statement]]
+id = "Choice-cell determination: invariant levels explain only the range; selection is contingent"
+disambiguations = ["59b60fe6-1bfe-512f-a90c-17416218bba4"]
+lean = "SelectionRangeLaws"
+definitions = ["5a818c39-1ba6-4cce-adf6-246d1d49fd1e", "9e9af2c4-5938-4204-859b-fcf78d485e20"]
+paraphrase = "Analyst formulation on any local STIT frame with an outcome map, where each agent is one explanatory level of a source and explaining 'the actual outcome rather than y' is Cstit of 'outcome is not y' (the actual cell excludes y): a cell-level analogue of SELECTING_AN_OUTCOME_2 (ContrastRelevant, disambiguation 59b60fe6), not one of its senses and not bridged to it. (1) A level explains the contrast exactly when y is outside its actual cell range. (2) For any candidate set T0 containing the realized range, T0 minus the cell range is the disjoint union of T0 minus the realized range and the realized range minus the cell range (the #1953 decomposition). (3) A level with a single cell explains a contrast exactly when y is not realized by any history of the scope. (4) Such a level selects the actual outcome exactly when the outcome is not contingent in the scope. (5) Selection holds exactly when every rival outcome is excluded. (6) A level that selects a contingent actual outcome deliberatively sees to its own actual cell (Dstit), and no single-cell level sees to that cell. (7) Two levels with the same actual cell explain the same contrasts (definitional: Cstit reads only cells). (8) A level whose actual cell is the actual outcome class selects, and with a contingent outcome sees to its own cell: the outcome partition itself meets the standard, so determination on cells cannot tell explaining the selection from re-describing it. Nothing about rationality, chance or goodness is typed."
+
+[[statement]]
+id = "Four-account table: manifestation selects without contingency; ranges; contingent exercises"
+disambiguations = ["59b60fe6-1bfe-512f-a90c-17416218bba4"]
+lean = "FourAccountTable"
+definitions = ["5a818c39-1ba6-4cce-adf6-246d1d49fd1e", "9e9af2c4-5938-4204-859b-fcf78d485e20"]
+paraphrase = "Analyst formulation on one finite carrier: four candidate outcomes (total omission none, D-realizing creations c and d, unfit creation z), actual outcome c, two explanatory levels of one source (nature: one cell; exercise: cells equal to the outcome partition). Necessary manifestation (scope c only): its nature excludes none, z and d and selects c, and c is not contingent. Invariant D-range source (scope c, d): its nature excludes none and z but not d, does not select, and c is contingent. Invariant permissive source (scope none, c, d): its nature excludes z but not none. Exercise frame (scope c, d): its exercise level selects c, c is contingent, the exercise level deliberatively sees to its own cell, the nature level does not see to that cell, and the nature level does not exclude d. Permissive exercise frame (scope none, c, d): the exercise level excludes none, the nature level does not, and the exercise level deliberatively sees to its own cell. Which philosophical account each frame represents (impersonal propensity, generative finality or standing will for the invariant D-range frame; rational adoption, propensity actualization or generative exercise for the exercise frame) is an interpretive assignment, not typed. Finite structural surrogates; no intellect, apprehension, chance measure or goodness is typed."
+
+[[statement]]
+id = "f50655a4-9a64-4838-b864-cac1a2175803"
+label = "Three omission scopes of giving are strictly ordered; necessary production excludes total refraining"
+disambiguations = ["6ce98992-366e-4115-a0db-e240a7701e42"]
+lean = "OmissionScopeTable"
+definitions = ["6f842f97-5de9-4fbc-8b1b-ac50a49a738e", "3c8f25cf-97ae-4d0f-bd4e-c46d3eba8ec4", "a7985f66-16b1-4f0f-bb7f-4988d2377790", "62dfa893-b633-4513-9790-8f9a0a3087e0"]
+paraphrase = "Analyst formulation on the shared causality frame, recipients individuated by provenance with rigid beings (EFFECT_INDIVIDUATION_1 of 1cb16a7f; under role individuation a replacement is no omission). For every frame, world w and being g: giving-level total refraining (TOTAL_REFRAINING_1: at some accessible world where g exists it gives nothing) implies withholding the whole actual roster (at some accessible world where g exists it gives none of the beings it gives at w, replacements allowed), which implies withholding each actual recipient individually (possibly at different worlds); a source that gives something at every accessible world where it exists never refrains totally in that giving-level sense; a fixed giver existing at w gives each of its recipients at w at every accessible world where it exists. Strictness controls: Van Cleve's frame with a giver withholds each recipient but not the whole roster and is necessarily productive; the replacement frame (g gives c at false and d at true) withholds the whole actual roster, does not totally refrain, is necessarily productive and satisfies #1897's ActualAbsenceByWithholding; the theist surrogate totally refrains. The registered STIT decision-frame controls are included: in pointwiseNotJoint each single recipient can be ensured absent while no cell omits all creation; in tiedNoEmptyChoice only optional recipient 1 is ensured absent, recipient 0 being created in every cell, and no cell omits all creation. Finite surrogates only; compare DISAMB-BOUNDED-OMISSION for world-population omission."
+
+[[statement]]
+id = "Complete-decision fork: if a creation surpasses omission, an undominated policy never omits"
+lean = "CompleteDecisionFork"
+definitions = ["e81a6f5d-4d2f-4647-b3e0-300e2707340d"]
+paraphrase = "Analyst formulation of #1953's complete-decision fork with Mathlib's Maximal on a partial order of complete decisions (feasible set: omission o inserted into creation decisions C). (1) o is undominated exactly when no creation is strictly above it. (2) A creation is undominated among all decisions exactly when it is undominated among creations and not strictly below o. (3) In a finite C with a unique undominated creation m, m is strictly above every other creation. (4) If every creation is strictly below some creation and some creation is above o, no decision is undominated. (5) A policy choosing an undominated decision at every world of a scope, when some creation is above o, never chooses o there. (6) Control on sets of Bool ordered by inclusion: two incomparable creations both above the empty decision; a policy choosing one at each world chooses only undominated decisions, never the empty one, and avoids each creation at some world. The order, feasibility and the choosing policy are explicit parameters; nothing about goodness, personal or impersonal sources is typed."
+
+[[statement]]
+id = "Every GOD_4 exists at w and has power for there being no contingent concrete being"
+lean = "GodsHoldTotalAbsencePower"
+definitions = ["88f9f6e8-997b-5f7d-afa1-c501954c3807", "bf7eddca-8291-4744-8470-379babcd7781", "1b8baf77-84fa-5513-a138-7fa14840dd87", "97f37f5c-7f82-5077-9bb9-6cfc8673631d", "6ecf24d5-5001-4571-937c-2632ac8c2c66"]
+disambiguations = ["623ddbf6-9683-5361-bae4-e348a00ec680", "35fa7162-6cb3-52e1-ac5b-66afc318c74f", "6ce98992-366e-4115-a0db-e240a7701e42"]
+paraphrase = "OPEN (analyst formulation, unattributed): every GOD_4 exists at w and has at w a power (PowerFor) for there being no contingent concrete being (NoContingentConcreteIn): the world-level total-noncreation power (TOTAL_REFRAINING_2). As typed it is independent of 0050b6ed (joint absence of the actual contingents): neither entails the other without Euclidean access and monotone powers. Motivation, navigation only: on classical theism God could have refrained from creating (ST I q.19 a.3). It does not exclude necessary concreta and says nothing about which creatures exist otherwise."
+
+[[statement]]
+id = "At w, a power for p is a power for any q holding at every accessible p-world"
+lean = "PowerForMonotoneAt"
+definitions = ["578e81cd-d0fb-4921-9a02-7e250d5310cb", "bf7eddca-8291-4744-8470-379babcd7781"]
+paraphrase = "OPEN bridge (analyst formulation, unattributed): at w, for every being y and propositions p and q, if q holds at every world accessible from w at which p holds, then a PowerFor of y at w for p is a PowerFor of y at w for q. Reading: an exercise issuing in p obtaining issues in q obtaining. Cost: any power is then a power for whatever holds at every accessible world."
+
+[[statement]]
+id = "a57320d7-b873-435b-afb9-7ef4f72ffc46"
+disambiguations = ["6ce98992-366e-4115-a0db-e240a7701e42"]
+label = "Joint-absence and total-noncreation powers are independent as typed; both bridges are needed"
+lean = "ActualAbsencePowerScopeControls"
+definitions = ["578e81cd-d0fb-4921-9a02-7e250d5310cb", "a7985f66-16b1-4f0f-bb7f-4988d2377790", "bf7eddca-8291-4744-8470-379babcd7781", "88f9f6e8-997b-5f7d-afa1-c501954c3807"]
+paraphrase = "Analyst formulation, finite controls with GOD_4 read as the holder g and the possibility reading of PowerFor (y has at w a power for p when p holds at an accessible world where y exists). (1) On a three-world frame (no creature, c, d) the total-noncreation power, Euclidean access, monotone powers and 0050b6ed's proposition all hold. (2) On the replacement frame (g gives c at false and d at true) 0050b6ed's proposition, Euclidean access and monotone powers hold, the total-noncreation power fails, g gives something at every accessible world and #1897's ActualAbsenceByWithholding holds. (3) On a non-Euclidean frame (a sees b, e1, e2; each sees only itself; c absent only at e1, d only at e2) with g necessary at a, the total-noncreation power and monotone powers hold and 0050b6ed's proposition fails. (4) On the three-world frame with a non-monotone, maximally specific power the total-noncreation power and Euclidean access hold and 0050b6ed's proposition fails. So the two powers are independent as typed; only the bundle with Euclidean access and monotone powers entails 0050b6ed. Each model witnesses only its formal interpretation; the possibility reading has no causal content, the maximally specific power is an encoding artifact, and recipients are rigid (provenance individuation)."
+
+[[argument]]
+id = "Choice-cell determination laws, from the definitions"
+theorem = "selectionRangeLaws"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+premises = []
+conclusion = "Choice-cell determination: invariant levels explain only the range; selection is contingent"
+rule = "Unfold Cstit on the cell relation; a single cell is the whole scope; a selecting cell omits a rival history"
+meaning = "Law 1 is the definition of Cstit read as cell-range exclusion. Law 2 is set algebra, using that the cell range lies in the realized range. Law 3: with one cell, Cstit of 'not y' quantifies over every history. Law 4: with one cell, selection says every history has the actual outcome. Law 5 uses excluded middle on the outcome of a cell member. Law 6: a history with another outcome lies outside the selecting cell, so the cell proposition is not necessary, and a single-cell level's cell contains that history. Law 7 transports Cstit along equal cells. Law 8 applies law 6 to an outcome-fine cell. Laws 1, 5 and 7 are near-definitional; laws 2, 3, 4, 6 and 8 have short proofs."
+description = "A placed diagnostic for 608a262d. An invariant explanans (the kind an existential PSR reason token can be) explains the realized range of outcomes and no contrast within it (law 3); selecting a contingent outcome requires an explanans level whose own cell is contingent and is not seen to by any invariant level (law 6). The value of laws 7 and 8 is negative: determination on cells reads only cell partitions, and any level as fine as the outcome partition, including a bare re-description of the outcome, meets it. So this standard cannot discriminate explaining the selection from re-describing it, nor an adoption from an actualization. A discriminating test needs a standard on which the explanans is individuated independently of the outcome partition, or a different sense of selecting (SELECTING_AN_OUTCOME_1, pro tanto favouring), neither tested here. Establishes no premise."
+
+[[argument]]
+id = "Matched four-account table under determination, by computation"
+theorem = "fourAccountTable"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+premises = []
+conclusion = "Four-account table: manifestation selects without contingency; ranges; contingent exercises"
+rule = "Apply the projection boundary at the nature level and relocation at the exercise level of each finite frame"
+meaning = "Each account is one accountFrame over the four outcomes. The nature level is invariant, so by law 3 it explains exactly the outcomes outside the account's scope; by law 4 it selects only in the one-outcome scope. The exercise level's cell is the actual outcome, so it selects; with a second outcome in scope, law 6 gives Dstit of its cell and the nature level's failure to see to it."
+description = "A placed diagnostic for 608a262d. Necessary manifestation selects only by making c non-contingent; an invariant D-range frame explains 'rather than nothing' and 'rather than the unfit z' but never 'rather than d'; a permissive invariant frame does not explain 'rather than nothing'; a frame that selects a contingent c does so through an exercise level whose cells are the outcome partition, which its invariant nature does not see to. The difference between the invariant D-range frame and the exercise frame is only whether an outcome-fine level is posited (law 8), so the table does not show that one account explains selection where another explains only the range. That rational adoption, propensity actualization and generative exercise are all represented by the one exercise frame is an interpretive assignment; their parity under this standard is definitional (law 7), not a substantive result. Pro tanto favouring and apprehended content are untested, not defeated. Establishes no premise."
+
+[[argument]]
+id = "Three omission scopes of giving, by derivation and finite controls"
+theorem = "omissionScopeTable"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+premises = []
+conclusion = "f50655a4-9a64-4838-b864-cac1a2175803"
+rule = "Weaken the witness world; refute total refraining at the productive witness; compute the finite frames; reuse the STIT controls"
+meaning = "A total-refraining world withholds every actual recipient; a roster-withholding world withholds each. A necessarily productive giver gives something at the refraining witness. A fixed giver gives the same at the withholding world. The Van Cleve, replacement and theist frames are evaluated case by case; pointwiseNotJoint and tiedNoEmptyChoice are the existing STITControls theorems."
+description = "A placed diagnostic for 0050b6ed. It certifies the §56 omission table that was hand-checked only: individual omission, whole-actual-roster withholding with replacement, and giving-level total refraining (TOTAL_REFRAINING_1) are distinct and strictly ordered modal profiles of a source's giving; a necessarily productive source excludes the third and can permit the first two (the replacement frame witnesses both; Van Cleve's frame shows that it need not permit the second); a fixed giver gives each actual recipient wherever it exists (reading a fixed giver as a necessary manifestation is an open interpretive bridge). The replacement frame satisfies #1897's ActualAbsenceByWithholding while giving something at every world. Recipients are individuated by provenance with rigid beings; under role individuation (1cb16a7f) the replacement frame withholds nothing. Finite surrogates only."
+
+[[argument]]
+id = "Complete-decision fork, by Mathlib order theory"
+theorem = "completeDecisionFork"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+premises = []
+conclusion = "Complete-decision fork: if a creation surpasses omission, an undominated policy never omits"
+rule = "maximal_iff_forall_gt on insert o C; Set.Finite.exists_le_maximal for uniqueness; a finite set-inclusion control"
+meaning = "Omission's maximality fails exactly at a strictly better creation. A creation's maximality in insert o C splits into maximality in C and not lying below o. In a finite C every creation lies below a maximal one, which uniqueness makes m. An improvable C with a creation above o leaves no maximal decision. The policy clause is clause 1 at each world. The control evaluates singletons of Bool."
+description = "A placed diagnostic for 0050b6ed. It certifies #1953's complete-decision fork in Lean with Mathlib's Maximal rather than IsGreatest: a policy that necessarily chooses an undominated complete decision, when some creation strictly surpasses omission, never chooses omission, while each particular creation can still be avoided (control with two incomparable creations); with a strictly improvable creation set and some creation surpassing omission there is no undominated decision. Reading 'never chooses omission' as the giving-level NecessarilyGivesSomeAt of the omission table is an OPEN cross-carrier bridge. The theorem is neutral between personal and impersonal choosers. Establishes no premise."
+
+[[argument]]
+id = "2754c58d-35b0-4da6-a49a-97e4a348bcc2"
+label = "GOD_4 joint-absence power from total noncreation, Euclidean access, monotone powers"
+theorem = "actualAbsencePowerOfTotal"
+axioms = []
+premises = ["Every GOD_4 exists at w and has power for there being no contingent concrete being", "62b4a40a-919e-5da4-998c-131c386b7361", "At w, a power for p is a power for any q holding at every accessible p-world"]
+conclusion = "0050b6ed-3c7d-4d6a-b97a-417837d76184"
+rule = "At an accessible world with no contingent concretum, each concretum contingent at w is absent (Euclidean access); transfer the power along that entailment"
+meaning = "Let g be GOD_4: it exists at w and has a power for no contingent concretum. At an accessible v with no contingent concretum, a concretum x contingent at w and present at v would be contingent at v, because the world u from w where x is absent is accessible from v (Euclidean). So the actual contingents are jointly absent at every accessible total-absence world, and monotonicity transfers g's power. Constructive and zero-axiom."
+description = "A new conditional support option for 0050b6ed (consumed by 834ddcfa and bc4d81f6 on the GOD_4 HAS_WILL_1 routes). It makes explicit what the recorded refraining warrant (ST I q.19 a.3, navigation), read as the world-level total-noncreation power a8dedf3f, needs to reach the typed joint-absence premise: Euclidean access (62b4a40a) and the monotone-power bridge (6fdd3f60). The scope controls show that a8dedf3f and 0050b6ed are independent as typed and that both bridges are needed; only the bundle is stronger. Not a strengthens registration. Establishes no premise."
+
+[[argument]]
+id = "Joint-absence power scope controls, by finite models"
+theorem = "actualAbsencePowerScopeControls"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+premises = []
+conclusion = "a57320d7-b873-435b-afb9-7ef4f72ffc46"
+rule = "Evaluate the three-world, replacement and non-Euclidean frames under the possibility reading and a maximally specific power"
+meaning = "Nonvacuity applies actualAbsencePowerOfTotal on the three-world frame. In the replacement frame the actual contingent c is absent at true while d is contingent there, so total noncreation fails at both worlds. In the four-world non-Euclidean frame, b sees only itself, so nothing is contingent there and g (necessary) exists there; no accessible world lacks both c and d. In the three-world frame the maximally specific power holds for total noncreation (true only at none) but not for actual absence (true at some true too)."
+description = "A placed diagnostic for 0050b6ed. As typed, 0050b6ed needs only the replacement scope (the actual contingents all absent, others allowed); it and the world-level total-noncreation power a8dedf3f are independent (controls 2-4), and only their bundle with Euclidean access and monotone powers is stronger; each bridge is needed, the Euclidean control with a necessary holder. With PowerFor left free and in this structural surrogate, 0050b6ed holds of a source that gives something at every accessible world, so as typed it does not separate an optional creator from a necessarily productive source. Encoding disclosures: the possibility reading has no causal content; the maximally specific power is an artifact; recipients are rigid."
+
+[[relation]]
+id = "Determination on choice cells tests the existential PSR for contingents"
+label = "Determination on choice cells tests the existential PSR for contingents"
+subject_kind = "result"
+subject_id = "Choice-cell determination laws, from the definitions"
+predicate = "tests"
+object_kind = "statement"
+object_id = "608a262d-08fe-4dfd-9413-67e2ecf35b84"
+note = "Tests what an invariant reason of the kind the existential PSR admits can explain about a contingent outcome: the realized range, and no contrast within it."
+
+[[relation]]
+id = "Matched four-account table tests the existential PSR for contingents"
+label = "Matched four-account table tests the existential PSR for contingents"
+subject_kind = "result"
+subject_id = "Matched four-account table under determination, by computation"
+predicate = "tests"
+object_kind = "statement"
+object_id = "608a262d-08fe-4dfd-9413-67e2ecf35b84"
+note = "Applies the determination standard to four accounts matched in reach and recipient good, separating existence of some production, the range and the actual selection."
+
+[[relation]]
+id = "Three omission scopes test the GOD_4 joint-absence power"
+label = "Three omission scopes test the GOD_4 joint-absence power"
+subject_kind = "result"
+subject_id = "Three omission scopes of giving, by derivation and finite controls"
+predicate = "tests"
+object_kind = "statement"
+object_id = "0050b6ed-3c7d-4d6a-b97a-417837d76184"
+note = "Separates individual omission, whole-actual-roster withholding (the scope of 0050b6ed's joint absence) and giving-level total refraining, and which of them a necessarily productive source can permit."
+
+[[relation]]
+id = "Complete-decision fork tests the GOD_4 joint-absence power"
+label = "Complete-decision fork tests the GOD_4 joint-absence power"
+subject_kind = "result"
+subject_id = "Complete-decision fork, by Mathlib order theory"
+predicate = "tests"
+object_kind = "statement"
+object_id = "0050b6ed-3c7d-4d6a-b97a-417837d76184"
+note = "Shows that an undominated-decision policy with a creation above omission never chooses omission but can avoid each creation, the scope 0050b6ed needs."
+
+[[relation]]
+id = "Joint-absence power scope controls test the GOD_4 joint-absence power"
+label = "Joint-absence power scope controls test the GOD_4 joint-absence power"
+subject_kind = "result"
+subject_id = "Joint-absence power scope controls, by finite models"
+predicate = "tests"
+object_kind = "statement"
+object_id = "0050b6ed-3c7d-4d6a-b97a-417837d76184"
+note = "Independence from the total-noncreation power, compatibility with necessary production, and neededness of Euclidean access and monotone powers for the passage from total noncreation."

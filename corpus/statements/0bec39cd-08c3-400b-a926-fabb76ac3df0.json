@@ -1,0 +1,9 @@
+{
+  "id": "0bec39cd-08c3-400b-a926-fabb76ac3df0",
+  "label": "Complete-decision fork: if a creation surpasses omission, an undominated policy never omits",
+  "paraphrase": "Analyst formulation of #1953's complete-decision fork with Mathlib's Maximal on a partial order of complete decisions (feasible set: omission o inserted into creation decisions C). (1) o is undominated exactly when no creation is strictly above it. (2) A creation is undominated among all decisions exactly when it is undominated among creations and not strictly below o. (3) In a finite C with a unique undominated creation m, m is strictly above every other creation. (4) If every creation is strictly below some creation and some creation is above o, no decision is undominated. (5) A policy choosing an undominated decision at every world of a scope, when some creation is above o, never chooses o there. (6) Control on sets of Bool ordered by inclusion: two incomparable creations both above the empty decision; a policy choosing one at each world chooses only undominated decisions, never the empty one, and avoids each creation at some world. The order, feasibility and the choosing policy are explicit parameters; nothing about goodness, personal or impersonal sources is typed.",
+  "lean_declaration": "TruthCore.Causality.SelectionScope.CompleteDecisionFork",
+  "definition_ids": [
+    "e81a6f5d-4d2f-4647-b3e0-300e2707340d"
+  ]
+}

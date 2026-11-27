@@ -29,6 +29,7 @@ public import TruthCore.Causality.AtomisticUniversalCausePriority
 public import TruthCore.Causality.AttenuationFit
 public import TruthCore.Causality.BearerRegress
 public import TruthCore.Causality.BegunComingToBe
+public import TruthCore.Causality.BegunOrHomogeneousGiving
 public import TruthCore.Causality.BenefitPlanWitness
 public import TruthCore.Causality.BoundedPastResource
 public import TruthCore.Causality.BruteFoundationBoundary
@@ -282,6 +283,7 @@ public import TruthCore.Causality.RootIntellectWillOmission
 public import TruthCore.Causality.RootIntellectWillPureAct
 public import TruthCore.Causality.RootIntellectWillPureActPlurality
 public import TruthCore.Causality.RootMultiplication
+public import TruthCore.Causality.RootPerfectionExclusion
 public import TruthCore.Causality.RootPositiveIntellectWill
 public import TruthCore.Causality.RootPositiveIntellectWillControl
 public import TruthCore.Causality.RootPurity
@@ -303,6 +305,7 @@ public import TruthCore.Causality.SelectedAncestryUniqueControl
 public import TruthCore.Causality.SelectedConeSupply
 public import TruthCore.Causality.SelectedPlgTheory
 public import TruthCore.Causality.SelectedSourcePath
+public import TruthCore.Causality.SelectionScope
 public import TruthCore.Causality.SelfCausationPriority
 public import TruthCore.Causality.SelfMotionSeparation
 public import TruthCore.Causality.SelfOperationLife
