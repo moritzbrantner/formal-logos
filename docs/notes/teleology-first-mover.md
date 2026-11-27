@@ -1390,8 +1390,9 @@ The test's two options for the noncognitive source were a received restriction
 and a ceiling on its power. Typing the source's favouring as a profile across
 variation scenarios exposes a third option: a *determination of the favouring
 to one content*. The rival on record, a nature directed to the joint
-manifestation D, has this determination. It fixes the measures that D requires
-without receiving them and without capping the power. It meets the end-content
+manifestation D, has this determination. On that interpretation it fixes the
+measures that D requires without receiving them and without capping the power;
+the finite model types favouring only, not measures or power. It meets the end-content
 reading of "because of its goodness" (BECAUSE_OF_GOODNESS_1). A physical proxy
 aligned with D fails that reading at the recipient-relative reversal. The rival
 fails the controlled goodness reading (BECAUSE_OF_GOODNESS_2), as a will with a

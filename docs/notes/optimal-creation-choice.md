@@ -4270,8 +4270,10 @@ facts about candidates are necessary (§67).
 | Good-general nature: favours what is better (axiarchic-type, impersonal) | yes | no | no | yes (selects) | yes | yes |
 | Rational exercise under a correctly apprehended good | yes | no | no | yes (selects) | yes | yes |
 
-The table rows are evaluated in Lean. The two good-tracking profiles are the
-same function, and so are the D-nature and the determined will (row 7). Their
+The table is evaluated in Lean. Chance is certified to explain no contrast,
+from which its other "no" cells follow. The two good-tracking profiles are the
+same function, and so are the D-nature and the determined will (row 7); cells
+not listed separately for one member of a pair follow from that identity. Their
 parity is definitional, as law 7 of §59 was.
 
 **Answers to Question A.**
@@ -4364,12 +4366,15 @@ What follows, and what carries it:
   determined to one end do not. This is a typed form of the classical contrast
   between an appetite determined to one end and an appetite for the good as
   such, without the classical claim that only the second is intellectual.
-- **Reading 2 needs counterpossible variation.** If goodness facts are fixed by
-  the candidates' contents, then betterness factors through D-realization.
-  Then, by law 4, no account aligned with goodness depends on it, the personal
-  account included. Whoever relies on reading 2 must admit variation of
-  goodness at fixed content, or treat the profile as an intensional fact about
-  what the favouring is a function of.
+- **Reading 2 needs variation of goodness at fixed D-realization.** Row 6
+  uses the `valueless` scenario: D-realization as actual, nothing better than
+  anything. If betterness is fixed by D-realization, that scenario is
+  counterpossible. Without it, betterness factors through D-realization, and by
+  law 4 no profile aligned with goodness depends on it, the personal account
+  included. Whoever relies on reading 2 must admit such variation, or treat the
+  profile as an intensional fact about what the favouring is a function of.
+  (`cBetter` varies goodness through a difference in c's content that
+  D-realization does not record; it is not needed for row 6.)
 - **Readings 1 and 2 do not supply reading 3** (law 7). The dependence criterion
   is one testable answer to the blocker of attempts `c3f27519` and `83bd8a2c`
   ("show why the plan governs this giving rather than simply describing its
@@ -4439,8 +4444,9 @@ That test asked whether an original noncognitive source needs a received
 restriction or a ceiling on its power to ground recipients' finite due
 measure, while apprehension avoids both. The profiles add a third option for
 the noncognitive source: *a determination of its favouring to one content*.
-This is the D-nature's fixity, which includes the finite measures that D
-requires. It is neither received nor a ceiling on power. A good-general
+This is the D-nature's fixity. On interpretation it includes the finite
+measures that D requires; the model types favouring only, not measures or
+power. It is neither received nor a ceiling on power. A good-general
 profile, personal or not, avoids that determination. Its measure is then
 explained in one of two ways. If a better or undominated measure exists, it is
 explained by goodness (law 4 of §65 and the §62 fork). If measures are tied or
