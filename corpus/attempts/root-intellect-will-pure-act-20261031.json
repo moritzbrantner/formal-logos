@@ -32,7 +32,8 @@
     "aabfb2d5-f928-5802-b8b3-941de8665c34",
     "PR-831",
     "315bbaac-5296-5f16-8866-7babba957f22",
-    "dd55f57a-b256-4e73-b57e-6e2cca1c06f7"
+    "dd55f57a-b256-4e73-b57e-6e2cca1c06f7",
+    "PR-2119"
   ],
   "blocker": "A constructive use of the extra pure-act clause needs an existing obligation that actually consumes it at this witness, together with an independently justified identity or naming interface where the consumer requires one. Neither a bare God predicate nor unknown equality of independently existential witnesses provides that interface.",
   "workers": [
@@ -41,7 +42,8 @@
       "provider": "codex",
       "model": "gpt-6.2-sol",
       "effort": "high",
-      "date": "2026-11-27"
+      "date": "2026-11-27",
+      "pr": "PR-2119"
     }
   ]
 }
