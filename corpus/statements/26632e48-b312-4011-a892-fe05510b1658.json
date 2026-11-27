@@ -1,0 +1,15 @@
+{
+  "id": "26632e48-b312-4011-a892-fe05510b1658",
+  "label": "Whatever causes a perfection in another thing has it IN_ACT_1, formally",
+  "paraphrase": "Analyst formulation, attribution deferred: the formal (IN_ACT_1) reading of distinct-cause possession 2c0b9bd7. Whatever, distinct from x, causes x's being r (CAUSE_2, G.CausesIn) has r formally, in the same form in which it produces it, as fire that is hot makes wood hot (A.InActFormally). It is one determination of 2c0b9bd7's act parameter, whose recorded reading is inclusive (formally or eminently); the eminent determinations are not this statement. Its exact negation 25b67649 is recorded as an alternative. Open.",
+  "lean_declaration": "TruthCore.Causality.MoreSuchSenseCollapse.FormalDistinctCausePossession",
+  "definition_ids": [
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "a5bda545-3e76-5240-808d-25f897a07be5",
+    "00bd3c0c-010a-559c-a2a0-b4fbf49cbaf1"
+  ],
+  "disambiguation_ids": [
+    "dba7b1de-f3a0-57af-9af9-b2a4da3136fa",
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b"
+  ]
+}
