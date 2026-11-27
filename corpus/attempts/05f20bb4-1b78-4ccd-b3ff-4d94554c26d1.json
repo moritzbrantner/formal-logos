@@ -21,7 +21,10 @@
     "6694d214-277c-4db8-81dc-a8c99c45cce2",
     "1304b462-4a10-5dd0-995a-db5feb21d98e",
     "9a0a4951-dad6-4d3c-a6c1-f84b7ab492f4",
-    "d164b1ff-ad31-5fbc-8ef9-eb0db51ebd96"
+    "d164b1ff-ad31-5fbc-8ef9-eb0db51ebd96",
+    "94036513-8146-4137-8cce-daf40577369d",
+    "a576300f-4b01-45ae-902c-cfe3d0fbf2de",
+    "75b5b027-21f1-400a-8b21-775bb6d47983"
   ],
   "kind": "derivation",
   "outcome": "succeeded",
@@ -34,9 +37,12 @@
     "96fc4767-bb7a-4103-afa0-bc68a051daeb",
     "7bc1af16-3b5c-4dd1-8363-cb4597e30ec8",
     "9655a913-2a81-426f-aa3f-64dcdafa9c16",
-    "65a56bc5-9ac0-4b75-ab29-80679827eb04"
+    "65a56bc5-9ac0-4b75-ab29-80679827eb04",
+    "13574c55-fd8d-4763-a0b3-e970449cb4f4",
+    "c5debf00-c88b-4d45-bbd6-29705a224ce5",
+    "a6f864af-e46b-4f2a-ad0b-7ba6b4812b68"
   ],
-  "blocker": "No argument on file for the composition step (an act other in content than the nature, had from another, is received in the nature as in a really distinct potency) that a rival granting dependence and caused existence must accept; R-act2 has textual warrant only, and its q.7 a.1 substitute moves the content to 'unlimited esse has every pure perfection' or to 1304b462. Next: formalize agreement-and-difference and test for a criterion of non-trivial shared perfection independent of the act reading; otherwise move horizontally to degrees of being or the OwnBeing E/L obligations.",
+  "blocker": "Real otherness rests on 75b5b027 (the #697 individuation gap) on OWN_BEING_2, and reception given real otherness on receiving-from implying receiving-in; R-act2 has textual warrant only. The next discriminating node is degrees of being, where vertical and horizontal tests converge; direction pending owner review.",
   "current_assessment": {
     "date": "2026-11-27",
     "statement_ids": [
@@ -49,17 +55,20 @@
       "29e71e43-1d34-5008-8811-897fbddda209",
       "1304b462-4a10-5dd0-995a-db5feb21d98e",
       "9a0a4951-dad6-4d3c-a6c1-f84b7ab492f4",
-      "d164b1ff-ad31-5fbc-8ef9-eb0db51ebd96"
+      "d164b1ff-ad31-5fbc-8ef9-eb0db51ebd96",
+      "94036513-8146-4137-8cce-daf40577369d",
+      "a576300f-4b01-45ae-902c-cfe3d0fbf2de",
+      "75b5b027-21f1-400a-8b21-775bb6d47983"
     ],
     "scope": "The q.4 a.1 ad 3 'unde' inference and its parallels (q.3 a.4 second proof, De ente capp.3-4, q.7 a.1-2) from R-dep to R-act1 and R-act2, over the shared GradesFrame with respect identity as content identity and own being as esse tantum; rivals: the quantifier view and Suárez's real-identity account; limitation at the scope of finitude in perfection and plurality of finite beings.",
-    "assessment": "The unde inference is explicative, not probative: given R-dep, each bridge is equivalent to what it delivers (certified), and its stated grounds (R-dep; signification in q.3 a.4) are granted by every rival. Two separating steps: the act reading of 'actuality of forms' separates the quantifier view; the composition step (real reception: second unde = q.3 a.4 'oportet igitur' = De ente DE1 major with DE4 = q.7 a.2 'necesse est') separates Suárez too, and is one commitment. No argument on file for the composition step must be accepted by a rival granting R-dep and caused existence; its material instances carry over only through an analogy that De ente's 'aequivoce' leaves unargued. R-act1 in the real-reception sense: weak to moderate as an argued thesis; not defeated. At matching scope reception is not needed: finitude in perfection follows from the shared nature premise (certified), plurality from De ente's own modes of difference and matter; the essence-only accounts (quantifier view; Suárez) are favored there by parsimony. Overall standing unresolved; agreement-and-difference is the strongest open candidate for a shared explanandum. R-act2 gains nothing from the unde, and the q.7 a.1 bridge (7338142d, 1304b462, unlimited esse really has every pure perfection) only shifts it (certified): on the role reading of limitation the content sits in 'unlimited esse has every pure perfection', on the measure reading in 1304b462, and a source with only being rejects whichever carries it. De ente cap.4 supports only power-eminence at subsistent esse (9a0a4951). Locus (b)'s impersonal-source exclusion needs the bundle {OwnBeing, d164b1ff read intensively (real Has), R-act2, purity}, or the q.7 a.1 premises in its place; rejecting one member is forced, none in particular; 'keep 9a0a4951, reject real Has' is an open option with no defender on file. The esse-root-leaves grade of 29e71e43 ('P, moderate to strong') rests on q.7 a.2, whose 'necesse est' rests on the same composition step: recorded as a qualification, that assessment not edited. The quantifier view now has one item of positive warrant at matching scope on file (scope-limited parsimony); the semantic success of the quantificational analysis does not discriminate (q.3 a.4 ad 2). First grades.",
-    "next_test": "Formalize agreement-and-difference (many beings agree in being, differ in nature) and test whether any criterion of non-trivial shared perfection is independent of the act reading; the unde and the q.7 a.1 bridge both only shift the load. If none, move horizontally to degrees of being (5a948c37, e462cf2f) or the OwnBeing E/L obligations.",
-    "note": "docs/notes/rdep-to-ract.md#7-provisional-judgment-2026-11-27-unreviewed",
-    "supersedes": "none: the #2171 assessment (attempt 1b16fb17) and the esse-root-leaves assessment are kept; the latter's grade of 29e71e43 is qualified here, not revised.",
+    "assessment": "The unde inference is explicative, not probative (analyst judgment on formally immediate equivalences): given R-dep each bridge is equivalent to what it delivers, and its stated grounds (R-dep; signification in q.3 a.4) are granted by every rival; ractOneFromDependence and ractTwoFromDependence are declared near-transcriptions. The route is sense-neutral in 'actualized through': the results are generic in the frame and the first bridge is analytic on the dependence reading, so the act reading does no work; the one separating step is reception (the second unde in content form, 89d82643, the strong version), plus inclusion for R-act2. That step bundles (i) real otherness of whatever is not esse tantum and (ii) reception given real otherness (the real-otherness sibling 94036513, registered as strengthens). (i)'s strongest route is De ente stage (b), 860eae63 to a576300f, which fails at 75b5b027 (the #697 individuation gap), exactly where Suárez's real-identity creatures (OWN_BEING_2 without OWN_BEING_1) escape; (ii) rests on DE4, whose material instances carry over only through receiving-from implying receiving-in, which Suárez denies (DM XXXI XIII.17); stage (b) and (ii) share 7fcfcee8 and 14325c83. Reception now has a registered real-composition sense (RECEPTION_OF_ESSE_VERSUS_EXTERNAL_CAUSE_5); R-act1 on that sense is weak to moderate as an argued thesis, not defeated. On the constitution-open sense Suárez concedes a founded metaphysical contraction (XIII.18). At matching scope reception is not needed: finitude follows from the shared nature premise, plurality from De ente's own modes; the essence-only family (quantifier view, Suárez) is favored over real reception by a scope-limited parsimony tiebreaker; the quantifier view's distinctive no-act claim still has no positive warrant on file. Overall standing unresolved. The strongest agreement-and-difference argument, the participation and degree version (q.3 a.4 third proof, 'more and less'), separates the act of being from the quantifier view only if being has degrees, and does not separate real composition from Suárez, who grants degrees without it; vertical and horizontal tests converge on degrees of being. R-act2 has textual warrant only; the q.7 a.1 bridge shifts its content to the unlimited-esse premise or to 1304b462, which DM XXXI XIII.18 answers on the real-composition sense. Locus (b) needs {OwnBeing, d164b1ff intensive, R-act2, purity} or the q.7 a.1 premises; 'keep 9a0a4951, reject real Has' is open with no defender on file. Frontier: R-act1 is an open leaf; 29e71e43 still closes by rule (a) through creatureReceptionFromActOfBeing, its obligation relocated to a strictly stronger thesis with a lower argued grade and the same composition step: relocation, not progress. 29e71e43 is graded by sense by coordinator decision (esse-root-leaves.md (f2)). First grades.",
+    "next_test": "None started (coordinator stop). The vertical test (participation and degree version of agreement and difference) and the horizontal move converge on degrees of being (5a948c37, e462cf2f); real reception separately needs 75b5b027 defended on OWN_BEING_2 or an argument from receiving-from to receiving-in.",
+    "note": "docs/notes/rdep-to-ract.md#7-provisional-judgment-2026-11-27-repaired-after-challenge",
+    "supersedes": "the 2026-11-27 first-grade assessment (assessment_history).",
     "review": "unreviewed",
     "publication": "unpublished",
-    "evidence": "Proposed delivery in PR #2173 (stacked on PR #2171); independent semantic challenge pending before merge.",
-    "reviewed_revision": "5f1c1e7a166fcde70baa1a138061f4aaa7b76486"
+    "evidence": "Repairs of the challenge at 56e9dab7641a79d10871b435e2a581f90bf0e64a in PR #2173; re-check pending.",
+    "reviewed_revision": "56e9dab7641a79d10871b435e2a581f90bf0e64a"
   },
   "workers": [
     {
@@ -69,6 +78,32 @@
       "effort": "high",
       "date": "2026-11-27",
       "pr": "PR-2173"
+    }
+  ],
+  "assessment_history": [
+    {
+      "date": "2026-11-27",
+      "statement_ids": [
+        "7067553d-cad9-5d79-b6b2-912e35051530",
+        "8c64b036-3db9-4143-9a8d-d7814cc84c79",
+        "254ee26f-01d5-4359-bdde-5779b6e80533",
+        "8d7e24dc-20b9-44b8-8c5f-7bac55774f34",
+        "89d82643-cf45-4933-90b3-83a89f6210f2",
+        "fdd2213a-90ee-4f7c-86cd-ca4872549bd6",
+        "29e71e43-1d34-5008-8811-897fbddda209",
+        "1304b462-4a10-5dd0-995a-db5feb21d98e",
+        "9a0a4951-dad6-4d3c-a6c1-f84b7ab492f4",
+        "d164b1ff-ad31-5fbc-8ef9-eb0db51ebd96"
+      ],
+      "scope": "The q.4 a.1 ad 3 'unde' inference and its parallels (q.3 a.4 second proof, De ente capp.3-4, q.7 a.1-2) from R-dep to R-act1 and R-act2, over the shared GradesFrame with respect identity as content identity and own being as esse tantum; rivals: the quantifier view and Suárez's real-identity account; limitation at the scope of finitude in perfection and plurality of finite beings.",
+      "assessment": "The unde inference is explicative, not probative: given R-dep, each bridge is equivalent to what it delivers (certified), and its stated grounds (R-dep; signification in q.3 a.4) are granted by every rival. Two separating steps: the act reading of 'actuality of forms' separates the quantifier view; the composition step (real reception: second unde = q.3 a.4 'oportet igitur' = De ente DE1 major with DE4 = q.7 a.2 'necesse est') separates Suárez too, and is one commitment. No argument on file for the composition step must be accepted by a rival granting R-dep and caused existence; its material instances carry over only through an analogy that De ente's 'aequivoce' leaves unargued. R-act1 in the real-reception sense: weak to moderate as an argued thesis; not defeated. At matching scope reception is not needed: finitude in perfection follows from the shared nature premise (certified), plurality from De ente's own modes of difference and matter; the essence-only accounts (quantifier view; Suárez) are favored there by parsimony. Overall standing unresolved; agreement-and-difference is the strongest open candidate for a shared explanandum. R-act2 gains nothing from the unde, and the q.7 a.1 bridge (7338142d, 1304b462, unlimited esse really has every pure perfection) only shifts it (certified): on the role reading of limitation the content sits in 'unlimited esse has every pure perfection', on the measure reading in 1304b462, and a source with only being rejects whichever carries it. De ente cap.4 supports only power-eminence at subsistent esse (9a0a4951). Locus (b)'s impersonal-source exclusion needs the bundle {OwnBeing, d164b1ff read intensively (real Has), R-act2, purity}, or the q.7 a.1 premises in its place; rejecting one member is forced, none in particular; 'keep 9a0a4951, reject real Has' is an open option with no defender on file. The esse-root-leaves grade of 29e71e43 ('P, moderate to strong') rests on q.7 a.2, whose 'necesse est' rests on the same composition step: recorded as a qualification, that assessment not edited. The quantifier view now has one item of positive warrant at matching scope on file (scope-limited parsimony); the semantic success of the quantificational analysis does not discriminate (q.3 a.4 ad 2). First grades.",
+      "next_test": "Formalize agreement-and-difference (many beings agree in being, differ in nature) and test whether any criterion of non-trivial shared perfection is independent of the act reading; the unde and the q.7 a.1 bridge both only shift the load. If none, move horizontally to degrees of being (5a948c37, e462cf2f) or the OwnBeing E/L obligations.",
+      "note": "docs/notes/rdep-to-ract.md#10-review-repairs-challenge-at-56e9dab7",
+      "supersedes": "none: the #2171 assessment (attempt 1b16fb17) and the esse-root-leaves assessment are kept; the latter's grade of 29e71e43 is qualified here, not revised.",
+      "review": "accepted_qualified",
+      "publication": "unpublished",
+      "evidence": "Independent semantic challenge at 56e9dab7641a79d10871b435e2a581f90bf0e64a accepted with qualifications (5 P1, 6 P2): registration inflated closure; the act reading does no work; stage (b) missing and the second unde mislabelled weakest; parsimony credited to the wrong rival; real reception not a registered sense. Repaired in the current assessment.",
+      "reviewed_revision": "56e9dab7641a79d10871b435e2a581f90bf0e64a"
     }
   ]
 }
