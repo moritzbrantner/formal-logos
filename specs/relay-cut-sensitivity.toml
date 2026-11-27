@@ -8,6 +8,11 @@ lean = "SingleCutComparison"
 definitions = ["5231af84-0f05-4623-b1b7-f570059f7bca", "d3a92973-548a-4acf-959d-e94c4d56dbfe", "e1b95906-8d38-59c3-abee-0ccc1c9d333b"]
 paraphrase = "Fix receiver zero and one power on a natural-number successor roster. The all-active intact profile and a family of single-cut responses exist for both the relay-only model and each model with its sole separate active feed at depth d. Cutting the link i+1 into i extinguishes receiver zero in every relay-only response. With a maintained separate active feed at depth d, receiver zero stays active in every admissible response exactly when d ≤ i. Thus d is the least cut position preserving the receiver's activity, including d = 0. For any bound k, depth k+1 reproduces failure at every i ≤ k and preserves activity at the next cut."
 
+[statement.connection_plan]
+target_statement_id = "3008c7db-0236-4b03-9da7-f41ea8d8cac1"
+missing_bridge = "For a proposed finite root audit, keep the same named recipient, candidate roster and q3a4 profile. Calibrate the relevant relay activity to the very bearer being in act as to esse, and the tested retained links to actual distinct-bearer causes in that esse respect. Compare the predicted fresh readout after cutting a named successor link with the observed readout. If the readout survives a cut that the relay-only account predicts will turn it off, use the threshold and an independent feed isolation to test whether the audited incoming list omitted a maintained input. The bridge would test completeness for the selected list, an input to the existing finite certificate criterion."
+blocker = "The checked relay experiment observes fresh token delivery and the bearers persist through its cuts. It therefore calibrates activity, while calibration to the bearer being in act as to esse and to ActualEsseCause is missing. The surviving input might receive supply through another channel. Survival does not certify an empty list, and failure at finitely many cuts does not exclude a deeper feed. No roster-wide audit coverage follows from the local threshold."
+
 [[statement]]
 id = "Random relay cuts detect maintained feeds at a rate determined by the cut law's tail"
 lean = "RandomizedCutComparison"
