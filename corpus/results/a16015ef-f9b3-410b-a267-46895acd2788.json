@@ -1,0 +1,11 @@
+{
+  "id": "a16015ef-f9b3-410b-a267-46895acd2788",
+  "label": "Classical attributes from separate unity and perfection routes",
+  "argument_id": "7366a9b4-8b1b-4c60-bc78-2e3331c9ca58",
+  "challenge_module": "TruthCore.Results.Case.Catholicism.AttributeHubConnections.Challenge",
+  "solution_module": "TruthCore.Results.Case.Catholicism.AttributeHubConnections.Solution",
+  "theorem": "TruthCore.Results.Case.Catholicism.AttributeHubConnections.attributesFromSeparateProofs",
+  "comparator_config": "results/a16015ef-f9b3-410b-a267-46895acd2788/comparator.json",
+  "status": "solution-present",
+  "description": "Reuse the verified simplicity, infinity and intellect derivations on the supplied grades frame. The same maximal God candidate is first and is consequently potency-free. Apply the existing eternity and will premises to that candidate. Combine these six consequences with independent unity, frame perfection and causal goodness under the existing open sufficiency premise. InAct, CausesIn, esse and PriorSimply are shared across the inferences. No existence or reading of the represented actuality field as formal or eminent follows."
+}
