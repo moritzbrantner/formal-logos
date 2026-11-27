@@ -5068,8 +5068,8 @@ other distinct determinations (`esse`, `goodGen`, wisdom).
 (`GoodFavouring.Profile`) is any relation of candidates per scenario. It need
 not be total, and two distinct profiles need not conflict. The D-directed
 `dNature` and the good-tracking `better` are distinct, yet neither ever
-favours y over x where the other favours x over y (the semantic challenge's
-probe `NoConflict`).
+favours y over x where the other favours x over y (Lean-only
+`noConflictDNatureBetter`, from the semantic challenge's probe).
 
 So a rival who denies one-favouring realization can hold a single bearer with
 two distinct, non-conflicting favouring relations in one respect: a fixed
@@ -5650,6 +5650,11 @@ scope of the final-cause rival, the attempt wording, and this record. All are
 fixed in the following commit. The price of denying `3e6ae3e7` is now a single
 bearer with two distinct non-conflicting favourings in one respect, and
 `3e6ae3e7` is marked as having no derivation and only a weak rationale.
+
+The final confirmation at `c35af0688` found no remaining P1 and accepted the
+delivery as qualified. One optional P2 followed it: the Lean-only lemma
+`noConflictDNatureBetter`, cited above, was added afterwards and changes no
+registered result.
 
 [Attempt record](../../corpus/attempts/e03ee9b6-ce0a-4d64-b648-851f501db3ae.json)
 

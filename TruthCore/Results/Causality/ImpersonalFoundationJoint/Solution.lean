@@ -488,6 +488,19 @@ theorem criterionTable : CriterionTable := by
   · rintro ⟨_, _, _, ⟨h, -⟩, -⟩
     exact h
 
+/-- Lean-only (added after the re-check, from the semantic challenge's probe):
+the D-directed and the good-tracking profiles are distinct, yet never favour a
+pair oppositely. Favouring profiles are therefore not total rankings, and two
+distinct favourings of one bearer need not conflict (control row 7). -/
+theorem noConflictDNatureBetter :
+    (∀ s x y, ¬ (dNature s x y ∧ goodGeneral s y x)) ∧ dNature ≠ goodGeneral := by
+  refine ⟨?_, ?_⟩
+  · intro s x y ⟨h1, h2⟩
+    cases s <;> cases x <;> cases y <;> simp_all [dNature, goodGeneral, better, fitOrder, fits]
+  · intro h
+    have := congrFun (congrFun (congrFun h .cBetter) .c) .d
+    simp [dNature, goodGeneral, better, fitOrder, fits] at this
+
 private theorem reachIffJ (n : Bool) : reach n ↔ n = true := by
   constructor
   · intro h
