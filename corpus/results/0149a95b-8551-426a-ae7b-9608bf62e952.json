@@ -1,0 +1,11 @@
+{
+  "id": "0149a95b-8551-426a-ae7b-9608bf62e952",
+  "label": "Modal ontological argument on the case profile gives a necessary concretum",
+  "argument_id": "410f8588-f2b8-48fd-87a2-8f4255f49679",
+  "challenge_module": "TruthCore.Results.Modal.ModalOntologicalCase.Challenge",
+  "solution_module": "TruthCore.Results.Modal.ModalOntologicalCase.Solution",
+  "theorem": "TruthCore.Results.Modal.ModalOntologicalCase.necessaryConcreteOfModal",
+  "comparator_config": "results/0149a95b-8551-426a-ae7b-9608bf62e952/comparator.json",
+  "status": "solution-present",
+  "description": "The modal ontological argument on the case profile: possibility, the boxed necessary-if-existent conditional and selected-world Euclidean access give a de dicto box of concrete GOD_4 existence; reflexivity and the explicit rigidity bridge make it one de re necessary concrete GOD_4, which witnesses the root-path NecessaryConcreteAt. Conditional on all five premises."
+}

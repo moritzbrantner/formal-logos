@@ -1,0 +1,10 @@
+{
+  "id": "ef183ad2-7d96-4305-9165-12d275eaeb91",
+  "label": "Modal ontological case controls (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "87a7fd12-9831-41d2-b7ab-4ad8baeff378",
+  "rule": "Evaluate the five finite models by simp",
+  "meaning": "Premise-free finite models at standpoint false of two-world, two-candidate profiles with universal access (reflexive and Euclidean), every candidate GOD_4 and concrete (category-constant). onlyHere omits the boxed conditional, nobody omits possibility, swapped omits rigidity; each keeps the other four premises and falsifies both conclusions. fixedOne satisfies all five premises and both conclusions (one candidate at both worlds, the other nowhere). fixedPlusVisitor satisfies the GOD_4 conclusion and falsifies rigidity. Models witness only their formal interpretation.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

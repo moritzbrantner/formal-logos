@@ -1,0 +1,30 @@
+{
+  "id": "17306820-7e58-4c6a-8f59-be98dd33e460",
+  "label": "Modal ontological argument on the case profile with an explicit de dicto to de re bridge",
+  "statement_ids": [
+    "b19ffd92-01bd-5c0b-9643-e7407137ea5e",
+    "b1b17cef-ea68-4dd1-8b3e-9e28c029d289",
+    "2f681b7b-e81c-4e5c-8431-74426ac20f7f",
+    "e3c64b61-df23-410e-bb2f-b56bfb58ecd0",
+    "1b1462e6-c285-448c-87e2-3053bc05a341",
+    "2b20b5af-d653-56ba-8001-35903fb3d1ea",
+    "87a7fd12-9831-41d2-b7ab-4ad8baeff378"
+  ],
+  "date": "2026-11-27",
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "Lane F (#2103). Instantiated the stipulated G of NecessaryIfExistent (#437) on the case: G v says some x that is GOD_4 under the case signature's primitive IsGod is concrete under the case profile and exists at v under its Ontic. The proof does not derive concreteness from necessity; it takes it from the possibility premise (#2106). Box G is definitionally DeDicto of that presence (#435), so its witnesses may vary across worlds. The passage to de re NecessaryAt is the explicit open premise GodPresenceRigidAt: any concrete GOD_4 at a world accessible from w is the same as any concrete GOD_4 at w. It is anchored at w and asserts no existence. Result 0149a95b derives NecessaryConcreteAt (b19ffd92) directly, with no transcription hop, from five premises. Two are root-path frame premises at the selected world only: EuclideanAt (1b1462e6) and ActualReflexive (2b20b5af). The other three are new and open: the boxed conditional, possibility and rigidity. The sense passage NECESSARY_11 (Box over the frame) to NECESSARY_2 (NecessaryAt) is declared through the rigidity premise, matching the proof. No excluded middle is used. Neither Scott's nor Gödel's essence-based NecessaryExistence and no Gödel GodLike occurs, so no Gödel-Scott God concept is identified with GOD_4; GOD_4 enters only as the predicate of G, with no naming premise. Controls result bc8eea6a: omitting each new premise (keeping the other four) falsifies the conclusion; a nonvacuity model satisfies all five premises; in a strictness model the GOD_4 de re conclusion holds while rigidity fails, so the conclusion does not entail the bridge and the bridge is not equivalent to it. Rejected: (a) targeting the world-free GodExists, which the possibility premise alone already gives, so the modal steps would be idle; (b) a separate GOD_4 de re intermediate reached only through an assembly projection, which would place the route only through a transcription hop. Remaining: positive warrant for the three new premises, including whether classical uniqueness of God and rigid candidate identity justify the rigidity bridge, and the exact weaker frame condition SuccessorConnected (0523281a) in place of EuclideanAt.",
+  "evidence": [
+    "0149a95b-8551-426a-ae7b-9608bf62e952",
+    "bc8eea6a-231c-473e-8bf6-e4301b057c36"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "claude",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "date": "2026-11-27"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "id": "410f8588-f2b8-48fd-87a2-8f4255f49679",
+  "label": "Modal ontological argument on the case profile gives a necessary concretum",
+  "premise_statement_ids": [
+    "1b1462e6-c285-448c-87e2-3053bc05a341",
+    "2b20b5af-d653-56ba-8001-35903fb3d1ea",
+    "b1b17cef-ea68-4dd1-8b3e-9e28c029d289",
+    "2f681b7b-e81c-4e5c-8431-74426ac20f7f",
+    "e3c64b61-df23-410e-bb2f-b56bfb58ecd0"
+  ],
+  "conclusion_statement_id": "b19ffd92-01bd-5c0b-9643-e7407137ea5e",
+  "inference_ids": [
+    "f8d5bb23-1b71-4d3c-8aa9-2d03a685f4da"
+  ],
+  "meaning": "On one case signature σ, profile m and standpoint w. All five inputs are supplied premises; nothing is derived about them. The possibility premise gives an accessible world v with a concrete GOD_4. The boxed conditional at w makes G (some concrete GOD_4 exists) necessary at v. Euclidean access at w only (1b1462e6) gives v access to every world accessible from w, so G holds at all of them: a de dicto box, whose witnesses may differ. Reflexivity at w (2b20b5af) gives a concrete GOD_4 x existing at w, and the rigidity bridge identifies every GOD_4 witness at an accessible world with x, so x exists at every accessible world. The conclusion NecessaryConcreteAt (b19ffd92) takes that same x with its concreteness, existence at w and NecessaryAt at w; x's GOD_4-hood is used to apply the bridge but is not part of the conclusion. Concreteness and GOD_4-hood come only from the possibility premise. Neither Scott's nor Gödel's NecessaryExistence is used, so no Gödel–Scott sense or God concept is identified with GOD_4. No excluded middle. SuccessorConnected (0523281a) is the exact frame condition for the forward escalation over all G; EuclideanAt is used because it is already a root-path premise and the proof needs only one successor step. The controls show each of the three new premises is needed and that the conclusion does not entail the bridge.",
+  "definition_ids": [
+    "337b660c-ffd3-4316-af08-424ca641d6c9",
+    "539443e8-0f99-4cb9-925f-fb522d3cc042",
+    "5f4f8c56-51f8-43e2-8862-6e3152609c3c",
+    "735d59a6-61de-5e43-bcf6-4ff64bceb90d",
+    "88f9f6e8-997b-5f7d-afa1-c501954c3807",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "f8948e28-b13a-5244-95f1-41a05cd4fff2",
+    "6f7a4ccc-10de-52fb-af44-41dcb793d8c9",
+    "e1ff44df-ed97-5990-8424-1abd720f23ea",
+    "baddf770-36bf-542f-bb3c-2297342d5452",
+    "a09a6897-aec8-45f2-8cfe-5ae7bab3b8d4",
+    "c03ce44d-f7e6-4eef-9082-304b40699395",
+    "c9576df7-8e9e-4ecc-a031-cc1560c733d9"
+  ],
+  "disambiguation_ids": [
+    "7181df76-d6ed-5226-a34b-08910ddbe6a0",
+    "7507d645-874d-5434-add8-2f49c2801d36",
+    "83264cf5-01fe-52fc-9a00-eeb024f6496e"
+  ],
+  "sense_bridges": [
+    {
+      "term": "NECESSARY",
+      "from": "8c881fa6-2b9f-44be-a32a-c8ef29c13643",
+      "to": "7af298fb-a2c4-4239-919b-7685f2e1f67a",
+      "statement_id": "e3c64b61-df23-410e-bb2f-b56bfb58ecd0",
+      "role": "premise"
+    }
+  ]
+}

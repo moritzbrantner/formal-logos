@@ -1,0 +1,10 @@
+{
+  "id": "eff871b0-f99c-41cc-aeb1-7741b4cb5702",
+  "label": "Modal ontological controls test the boxed conditional",
+  "subject_kind": "result",
+  "subject_id": "bc8eea6a-231c-473e-8bf6-e4301b057c36",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "b1b17cef-ea68-4dd1-8b3e-9e28c029d289",
+  "note": "Omission model onlyHere: Euclidean and reflexive access, possibility and rigidity hold, the boxed conditional fails, and neither conclusion holds."
+}
