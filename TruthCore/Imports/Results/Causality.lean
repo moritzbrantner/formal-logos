@@ -111,6 +111,7 @@ public import TruthCore.Results.Causality.ContingentRecipients.Solution
 public import TruthCore.Results.Causality.ContingentTotalityCause.Solution
 public import TruthCore.Results.Causality.ContractiveBorrowedPower.Solution
 public import TruthCore.Results.Causality.ConvergentZenoSchedule.Solution
+public import TruthCore.Results.Causality.CoordinatedFinality.Solution
 public import TruthCore.Results.Causality.CountCauseTimeNecessity.Solution
 public import TruthCore.Results.Causality.CountCauseTimeNecessityProjection.Solution
 public import TruthCore.Results.Causality.CountCauseTimeOpportunity.Solution

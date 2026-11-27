@@ -1,0 +1,13 @@
+{
+  "id": "37202790-5ed0-44b4-81cf-7839f2680832",
+  "label": "Matched plan and structural response profile",
+  "term": "matched operative plan and structural response profile",
+  "definition": "The Boolean profile index selects the existing operative or omission practical-plan control, with its benefit and end clauses held on. The same index selects the responsive or idle public-input mechanism. Operative coverage remains the existing rational-giving coverage proposition, not a new definition of actual intentional action. The supplied cut replaces only the second public input equation; its reading as an appraisal report and the pairing of coverage with the mechanism are fixed stipulations of the test.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.CoordinatedFinality.Operation.operativeCoverage",
+  "definition_ids": [
+    "a84afabf-d6e6-424d-a792-2fa874c466a5",
+    "0716f13e-ad25-5d22-be1a-c7a0cc486071"
+  ],
+  "note": "This finite pairing licenses testing identifiability under a specified public surgery; it does not show that loss of divine cognition is feasible or that a particular causal response constitutes practical apprehension."
+}

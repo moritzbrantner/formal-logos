@@ -1,0 +1,10 @@
+{
+  "id": "865e88a3-0b35-47e4-8b49-861449a0b1e4",
+  "label": "Test coordinated fulfillment and operative plan identification (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "85a090aa-9017-4fd9-92a3-cf97885b6305",
+  "rule": "Evaluate the required fit and compare observation fibers under the same supplied surgery",
+  "meaning": "Apply the existing Plan fulfillment clause to the two component and fit reports. Use three_response to verify their matched outputs and opposite fulfillment. Apply the existing practical-specification coverage controls and SCM natural-agreement and cut theorem to the explicitly paired profiles. Identifiability fails on each matched fiber with opposite target values; the extra report and the nonempty counterfactual selector discriminate the supplied operative pairing. No claim about the actual ultimate source follows.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

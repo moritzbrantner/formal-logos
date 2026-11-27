@@ -1,0 +1,11 @@
+{
+  "id": "2b1eb66f-73a2-4ab6-9eac-0d8969664c67",
+  "label": "Test coordinated fulfillment and operative plan identification",
+  "argument_id": "95740d4b-569d-4963-8a2f-e003126915ae",
+  "challenge_module": "TruthCore.Results.Causality.CoordinatedFinality.Challenge",
+  "solution_module": "TruthCore.Results.Causality.CoordinatedFinality.Solution",
+  "theorem": "TruthCore.Results.Causality.CoordinatedFinality.boundary",
+  "comparator_config": "results/2b1eb66f-73a2-4ab6-9eac-0d8969664c67/comparator.json",
+  "status": "solution-present",
+  "description": "Apply the existing Plan fulfillment clause to the two component and fit reports. Use three_response to verify their matched outputs and opposite fulfillment. Apply the existing practical-specification coverage controls and SCM natural-agreement and cut theorem to the explicitly paired profiles. Identifiability fails on each matched fiber with opposite target values; the extra report and the nonempty counterfactual selector discriminate the supplied operative pairing. No claim about the actual ultimate source follows."
+}

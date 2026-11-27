@@ -1,0 +1,33 @@
+[batch]
+vocab = "TruthCore.Causality.CoordinatedFinality"
+results = "TruthCore.Results.Causality.CoordinatedFinality"
+
+[[statement]]
+id = "Component accounting and matched natural reports do not identify operative finality"
+lean = "Boundary"
+paraphrase = "In a Boolean structural model, a fixed conjunctive plan requires both component outputs and their end-placement fit. Two contexts agree on the outputs but differ on fit and hence success; the component report cannot identify fulfillment, while the full report can. In the paired practical-plan and mechanism controls, the same natural reports and populated appraisal and satisfaction coexist with opposite operative coverage. With one public input withdrawn the two profiles differ; the augmented report identifies coverage in this supplied pairing, and the nonempty intervention selector expresses the same local contrast. No real-world applicability or general reduction of practical direction to intervention sensitivity is asserted."
+definitions = ["a84afabf-d6e6-424d-a792-2fa874c466a5","fbd163ad-ec01-45d1-a749-f90a1de6ea37","7011ffa0-1d24-4e36-84e2-714a38cbdeac","0716f13e-ad25-5d22-be1a-c7a0cc486071","c7d19067-3df4-48ef-b0a6-bf20cb4ba43c","37202790-5ed0-44b4-81cf-7839f2680832"]
+
+[statement.connection_plan]
+target_statement_id = "8626f8a5-9531-5da7-9ebd-f901e74b1129"
+missing_bridge = "Show that this same source's independently apprehended standard actually specifies its giving and the relations needed for the recipient's independently characterized good."
+blocker = "The Boolean fit and appraisal reports and the pairing of Plan and SCM profiles are stipulated, not actual source-to-good calibration. A noncognitive joint-manifestation account remains possible within the selected formal comparison."
+
+[[argument]]
+id = "Test coordinated fulfillment and operative plan identification"
+theorem = "boundary"
+premises = []
+conclusion = "Component accounting and matched natural reports do not identify operative finality"
+definitions = ["a84afabf-d6e6-424d-a792-2fa874c466a5","fbd163ad-ec01-45d1-a749-f90a1de6ea37","7011ffa0-1d24-4e36-84e2-714a38cbdeac","0716f13e-ad25-5d22-be1a-c7a0cc486071","c7d19067-3df4-48ef-b0a6-bf20cb4ba43c","37202790-5ed0-44b4-81cf-7839f2680832"]
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Evaluate the required fit and compare observation fibers under the same supplied surgery"
+meaning = "Apply the existing Plan fulfillment clause to the two component and fit reports. Use three_response to verify their matched outputs and opposite fulfillment. Apply the existing practical-specification coverage controls and SCM natural-agreement and cut theorem to the explicitly paired profiles. Identifiability fails on each matched fiber with opposite target values; the extra report and the nonempty counterfactual selector discriminate the supplied operative pairing. No claim about the actual ultimate source follows."
+
+[[relation]]
+id = "Matched practical profiles test operative plan coverage"
+subject_kind = "result"
+subject_id = "Test coordinated fulfillment and operative plan identification"
+predicate = "tests"
+object_kind = "statement"
+object_id = "4be0f774-2c0a-4691-9088-6e790940960a"
+note = "Tests the extension from successful rational giving and an apprehended fulfilled standard to actual operative plan coverage in the existing fixed rational-giving fixture. The positive and omission plans are paired with the responsive and idle SCMs by stipulation; no inference to actual metaphysical direction or admissible divine intervention is asserted."
