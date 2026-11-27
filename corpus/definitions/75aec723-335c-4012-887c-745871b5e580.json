@@ -1,0 +1,9 @@
+{
+  "id": "75aec723-335c-4012-887c-745871b5e580",
+  "label": "Normalized finite additivity on the power set",
+  "term": "Normalized finite additivity on the power set",
+  "definition": "A real-valued function on every subset assigns one to the carrier and adds on disjoint pairs. Nonnegativity is deliberately not required in the impossibility theorem.",
+  "basis": "stipulative",
+  "note": "Analyst mathematical vocabulary for the selected investigation; no source attribution or metaphysical application is assumed.",
+  "lean_declaration": "TruthCore.Modal.ProbabilityUnderdetermination.NormalizedAdditive"
+}

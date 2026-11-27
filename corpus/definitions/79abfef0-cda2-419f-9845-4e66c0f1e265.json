@@ -1,0 +1,9 @@
+{
+  "id": "79abfef0-cda2-419f-9845-4e66c0f1e265",
+  "label": "All-permutation invariance of set values",
+  "term": "All-permutation invariance of set values",
+  "definition": "The value of every set is unchanged under its preimage by every carrier equivalence. This is stronger than invariance under a specified subgroup or transport of a measure along an equivalence.",
+  "basis": "stipulative",
+  "note": "Analyst mathematical vocabulary for the selected investigation; no source attribution or metaphysical application is assumed.",
+  "lean_declaration": "TruthCore.Modal.ProbabilityUnderdetermination.PermutationInvariant"
+}

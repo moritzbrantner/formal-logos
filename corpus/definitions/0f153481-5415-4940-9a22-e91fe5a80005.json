@@ -1,0 +1,9 @@
+{
+  "id": "0f153481-5415-4940-9a22-e91fe5a80005",
+  "label": "Increasing finite exhaustion",
+  "term": "Increasing finite exhaustion",
+  "definition": "A monotone sequence of finite subsets containing each carrier member at some stage. No sampling law or geometric order is assumed.",
+  "basis": "stipulative",
+  "note": "Analyst mathematical vocabulary for the selected investigation; no source attribution or metaphysical application is assumed.",
+  "lean_declaration": "TruthCore.Modal.ProbabilityUnderdetermination.Exhaustion"
+}

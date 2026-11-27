@@ -1,0 +1,11 @@
+{
+  "id": "a1954608-e63e-4de4-a600-502b4a17b167",
+  "label": "Continuous probability with zero point masses and variable interval masses",
+  "argument_id": "7b8eedf6-9d32-4d19-a623-7b7675f91a7c",
+  "challenge_module": "TruthCore.Results.Modal.ProbabilityUnderdetermination.Challenge",
+  "solution_module": "TruthCore.Results.Modal.ProbabilityUnderdetermination.Solution",
+  "theorem": "TruthCore.Results.Modal.ProbabilityUnderdetermination.continuousControl",
+  "comparator_config": "results/a1954608-e63e-4de4-a600-502b4a17b167/comparator.json",
+  "status": "solution-present",
+  "description": "Lebesgue measure restricted to the closed unit interval is a probability on the real line, has zero mass on every singleton, and assigns the interval from zero to t its length for t between zero and one. Draft proof candidate; verification required."
+}

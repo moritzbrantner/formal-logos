@@ -1,0 +1,9 @@
+{
+  "id": "bc045e1b-1265-4b4f-9aa3-4142a5cf4368",
+  "label": "Equal singleton measure values",
+  "term": "Equal singleton measure values",
+  "definition": "There exists one nonnegative extended real value equal to the measure of every singleton. This does not demand invariance under every permutation on an arbitrary measurable space.",
+  "basis": "stipulative",
+  "note": "Analyst mathematical vocabulary for the selected investigation; no source attribution or metaphysical application is assumed.",
+  "lean_declaration": "TruthCore.Modal.ProbabilityUnderdetermination.EqualPointMass"
+}

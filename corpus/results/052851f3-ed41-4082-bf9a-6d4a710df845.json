@@ -1,0 +1,11 @@
+{
+  "id": "052851f3-ed41-4082-bf9a-6d4a710df845",
+  "label": "Fixed modal accessibility and truth leave interior event probability arbitrary",
+  "argument_id": "ba279e76-0344-4fcb-bcec-563a48fb9567",
+  "challenge_module": "TruthCore.Results.Modal.ProbabilityUnderdetermination.Challenge",
+  "solution_module": "TruthCore.Results.Modal.ProbabilityUnderdetermination.Solution",
+  "theorem": "TruthCore.Results.Modal.ProbabilityUnderdetermination.modalProbabilityFreedom",
+  "comparator_config": "results/052851f3-ed41-4082-bf9a-6d4a710df845/comparator.json",
+  "status": "solution-present",
+  "description": "For a fixed Kripke frame, valuation, origin and formula, when its accessible carrier is countable with measurable singletons and both truth classes are infinite, each strictly interior event probability is realized by a point-full-support measure on exactly that carrier. No change of frame or valuation is used. Draft proof candidate; verification required."
+}

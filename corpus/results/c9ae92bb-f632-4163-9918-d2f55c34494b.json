@@ -1,0 +1,11 @@
+{
+  "id": "c9ae92bb-f632-4163-9918-d2f55c34494b",
+  "label": "No normalized finitely additive set function invariant under all permutations",
+  "argument_id": "704f771f-afb5-4b48-978f-c0639a1e0bda",
+  "challenge_module": "TruthCore.Results.Modal.ProbabilityUnderdetermination.Challenge",
+  "solution_module": "TruthCore.Results.Modal.ProbabilityUnderdetermination.Solution",
+  "theorem": "TruthCore.Results.Modal.ProbabilityUnderdetermination.noPermutationProbability",
+  "comparator_config": "results/c9ae92bb-f632-4163-9918-d2f55c34494b/comparator.json",
+  "status": "solution-present",
+  "description": "On every infinite carrier, no normalized finitely additive real-valued function on the entire power set is invariant under preimages by every permutation. Nonnegativity and countable additivity are not required. Draft proof candidate; verification required."
+}

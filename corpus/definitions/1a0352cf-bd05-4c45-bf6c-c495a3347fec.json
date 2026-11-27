@@ -1,0 +1,9 @@
+{
+  "id": "1a0352cf-bd05-4c45-bf6c-c495a3347fec",
+  "label": "Restricted unit-interval Lebesgue measure",
+  "term": "Restricted unit-interval Lebesgue measure",
+  "definition": "Mathlib volume restricted to the real closed unit interval. Length is supplied by the real measurable geometry, not by cardinality or modal access. Arbitrary subsets of the real line need not be measurable.",
+  "basis": "stipulative",
+  "note": "Analyst mathematical vocabulary for the selected investigation; no source attribution or metaphysical application is assumed.",
+  "lean_declaration": "TruthCore.Modal.ProbabilityUnderdetermination.unitMeasure"
+}

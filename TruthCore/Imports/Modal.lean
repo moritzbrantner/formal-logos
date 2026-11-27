@@ -53,6 +53,7 @@ public import TruthCore.Modal.OptimalCreationChoice
 public import TruthCore.Modal.PastSerialityCertificate
 public import TruthCore.Modal.PossibilityTransfer
 public import TruthCore.Modal.PossibleImpossibility
+public import TruthCore.Modal.ProbabilityUnderdetermination
 public import TruthCore.Modal.PrussPowerPremises
 public import TruthCore.Modal.ReasonResponseHistory
 public import TruthCore.Modal.ResearchFinite

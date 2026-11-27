@@ -1,0 +1,14 @@
+{
+  "id": "796b415f-2de6-46b1-ae71-ee7fab6a5689",
+  "label": "No normalized uniform point masses on a countably infinite carrier",
+  "paraphrase": "Every Mathlib probability on a countably infinite carrier with measurable singletons has unequal singleton weights somewhere; a constant zero weight sums to zero and a nonzero constant sums to infinity.",
+  "lean_declaration": "TruthCore.Modal.ProbabilityUnderdetermination.NoUniform",
+  "definition_ids": [
+    "bc045e1b-1265-4b4f-9aa3-4142a5cf4368"
+  ],
+  "connection_plan": {
+    "target_statement_id": "8626f8a5-9531-5da7-9ebd-f901e74b1129",
+    "missing_bridge": "Connect the existing FineTuningSelection and FineTuningEvidence likelihood comparison to a calibrated physical sampling measure and an observer-selection rule, then to an independently warranted actual designer inference and identification with the same GOD_4 witness.",
+    "blocker": "The mathematical controls show that bare carrier, truth partition and access do not calibrate a probability. They do not derive any physical prior, designer likelihood or actual designer. The existing fine-tuning connection remains open."
+  }
+}

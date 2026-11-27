@@ -1,0 +1,14 @@
+{
+  "id": "5b82cb80-34b3-4511-b4ce-f6d8e6e357f7",
+  "label": "Continuous probability with zero point masses and variable interval masses",
+  "paraphrase": "Lebesgue measure restricted to the closed unit interval is a probability on the real line, has zero mass on every singleton, and assigns the interval from zero to t its length for t between zero and one.",
+  "lean_declaration": "TruthCore.Modal.ProbabilityUnderdetermination.ContinuousControl",
+  "definition_ids": [
+    "1a0352cf-bd05-4c45-bf6c-c495a3347fec"
+  ],
+  "connection_plan": {
+    "target_statement_id": "8626f8a5-9531-5da7-9ebd-f901e74b1129",
+    "missing_bridge": "Connect the existing FineTuningSelection and FineTuningEvidence likelihood comparison to a calibrated physical sampling measure and an observer-selection rule, then to an independently warranted actual designer inference and identification with the same GOD_4 witness.",
+    "blocker": "The mathematical controls show that bare carrier, truth partition and access do not calibrate a probability. They do not derive any physical prior, designer likelihood or actual designer. The existing fine-tuning connection remains open."
+  }
+}

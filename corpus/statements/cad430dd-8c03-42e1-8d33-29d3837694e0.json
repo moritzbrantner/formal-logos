@@ -1,0 +1,16 @@
+{
+  "id": "cad430dd-8c03-42e1-8d33-29d3837694e0",
+  "label": "Two bijective enumerations give different limiting frequencies for the same event",
+  "paraphrase": "There is a single set of naturals and two bijective enumerations whose initial finite sets exhaust the entire carrier, with limiting relative frequencies one half and one third, respectively. Limits use every sufficiently large prefix, not merely subsequences.",
+  "lean_declaration": "TruthCore.Modal.ProbabilityUnderdetermination.EnumerationDependence",
+  "definition_ids": [
+    "cb975bcc-de7f-4d49-9738-1b988400b6dd",
+    "0f153481-5415-4940-9a22-e91fe5a80005",
+    "5c03a3af-49c0-4fc1-916a-59f38e39352c"
+  ],
+  "connection_plan": {
+    "target_statement_id": "8626f8a5-9531-5da7-9ebd-f901e74b1129",
+    "missing_bridge": "Connect the existing FineTuningSelection and FineTuningEvidence likelihood comparison to a calibrated physical sampling measure and an observer-selection rule, then to an independently warranted actual designer inference and identification with the same GOD_4 witness.",
+    "blocker": "The mathematical controls show that bare carrier, truth partition and access do not calibrate a probability. They do not derive any physical prior, designer likelihood or actual designer. The existing fine-tuning connection remains open."
+  }
+}

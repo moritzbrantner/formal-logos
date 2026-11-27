@@ -1,0 +1,11 @@
+{
+  "id": "b1a3baef-5ec9-4558-9e10-1f14c65495e8",
+  "label": "Equal infinite cardinality does not determine equal probability",
+  "argument_id": "7105d7f7-f337-4039-a943-6ec501617e85",
+  "challenge_module": "TruthCore.Results.Modal.ProbabilityUnderdetermination.Challenge",
+  "solution_module": "TruthCore.Results.Modal.ProbabilityUnderdetermination.Solution",
+  "theorem": "TruthCore.Results.Modal.ProbabilityUnderdetermination.equalCardinalityDifferent",
+  "comparator_config": "results/b1a3baef-5ec9-4558-9e10-1f14c65495e8/comparator.json",
+  "status": "solution-present",
+  "description": "On every countable carrier with measurable singletons and two infinite complementary events, the two subtypes have equal cardinality and there exists a point-full-support probability measure assigning them unequal masses. Draft proof candidate; verification required."
+}
