@@ -55,14 +55,6 @@
       "effort": "high",
       "date": "2026-11-27",
       "pr": "PR-2119"
-    },
-    {
-      "role": "repair",
-      "provider": "codex",
-      "model": "gpt-6.2-sol",
-      "effort": "high",
-      "date": "2026-11-27",
-      "pr": "PR-2119"
     }
   ]
 }
