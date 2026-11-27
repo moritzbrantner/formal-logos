@@ -339,6 +339,10 @@ both directions of member grounding (`89c988d9` and the sufficiency direction),
 the existential PSR for contingents `608a262d`, some actual contingent concrete
 being `c94b5446`, the failure of actual collapse `185ce448`, and #555's IX.6
 reading, `IsImmutable` and `ModalCapacity` at the actual world. What carries it:
+the readings hold because potency is empty and ability is read as actuality
+(`rrNoPotency`, `CanBe := rrHas`), so `IsImmutable` is satisfied trivially there;
+admissibility is defined as exclusion-freedom, so both directions of member
+grounding hold by definition;
 the root's four pure determinations are constant; the effect is composite;
 access is universal; the impure `limiter` requires the lack of `noesis`, so the
 requirement relation is not emptied. Not modelled: lane E's EM and LE (pending
@@ -483,7 +487,7 @@ placed by `tests` on `c94b5446`):
 | Impersonal necessitarian (emanation) | necessary | yes | its nature, only via option 1, 2 or 3 | option 1 (at a root: excluded by clause 7 under the purity premises), option 2 generalized (clause 1), or brute |
 | Personal necessitarian (necessary choice of the best) | necessary | yes | as above; "best" cannot select (clause 5) | identical to the impersonal necessitarian |
 | Classical personal root, relation-of-reason account | contingent | no | no intrinsic fact (clause 6); only the extrinsic terminus | #555's non-contrastive price (A above) |
-| Personal root with a real, varying selection | contingent | no | the selection (intrinsic, varies) | denies N; at a root with a mirror alternative, denies one of the purity premises (clause 7 applied to selection tokens) |
+| Personal root with a real, varying selection | contingent | no | the selection (intrinsic, varies) | denies N; at a root whose selection token has an exclusive mirror alternative on a par in purity, denies one of the purity premises (clause 7 applied to selection tokens) |
 | Impersonal permissive propensity, invariant | contingent | no | no intrinsic fact (clause 6) | #555's non-contrastive price, identical to the classical row |
 | Impersonal propensity with a varying outcome state | contingent | no | the outcome state | as the varying personal selection |
 
