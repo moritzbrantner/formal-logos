@@ -267,6 +267,16 @@ Count each item once.
 - **`5c5281dd` is one sentence.** Read as R-dep it is `196e6606`, `7067553d`. Read as
   R-mode it is `791fa216`. Read as R-pure it is `c4fb87a6`. These are three readings,
   not three supports.
+- **That sentence underwrites all three loci of PR #2170.** It is stated by claim
+  `5dd2d69f`, which also supports `f8ba2429`, `791fa216` and `c4fb87a6`.
+  - Universal transfer `b26c10a0`, through `791fa216`.
+  - Locus (b): the second proof with ad 3, through `c4fb87a6` and `d164b1ff`.
+  - Locus (a): the bridge from a higher mode to intrinsic possession. Its
+    intrinsic-perfection bridges take `c4fb87a6`: `122b112e` via `95c04a6d`, and
+    `fe67d766` via `7d8bbdcb`.
+
+  So a judgment of the sentence's reading, and of R-act beneath it, moves all
+  three. They are one dependency, not three.
 - **The transfer locus.** `b26c10a0` = `5e281daf` + the pair. On the act reading the
   load sits on R-act and `5e281daf`; on the dependence reading it sits on `2f6b9eff`.
   The secondary-cause rival `e3da0672` bears only on the latter.
