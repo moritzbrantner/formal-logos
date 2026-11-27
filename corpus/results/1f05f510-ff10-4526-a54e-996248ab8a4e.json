@@ -7,5 +7,5 @@
   "theorem": "TruthCore.Results.Causality.CogitoAncestorNecessaryConcrete.necessaryAncestorOfFork",
   "comparator_config": "results/1f05f510-ff10-4526-a54e-996248ab8a4e/comparator.json",
   "status": "solution-present",
-  "description": "Derives the Cogito's necessary concrete ground-ancestor from the thinker-local fork and the thinker-local anti-brute-root principle by refuting the contingent-root horn. Conditional on both open premises."
+  "description": "Derives the Cogito's necessary concrete ground-ancestor from the thinker-local fork and the thinker-local anti-brute-root principle by refuting the contingent-root horn. Conditional on the derived fork 7e9ca71a and the open premise f8dafcc7."
 }
