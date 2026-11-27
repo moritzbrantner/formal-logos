@@ -1,0 +1,32 @@
+{
+  "id": "4c3751a6-6b32-47f2-89c4-d094dabe5613",
+  "label": "Contained in a bearer: generic, intentional (apprehended) and virtual (not apprehended)",
+  "term": "contained in a bearer",
+  "sense_definition_ids": [
+    "c917dda9-f382-48fa-8cc1-a0b9e609c164",
+    "c82c75e9-1786-43f1-8e0d-1b295ae5699a",
+    "1294c8f3-3eb6-4960-859e-506ccdee6ab8"
+  ],
+  "resolution": "CONTAINED_IN_1 (generic) is the sense of the locus bridges 65805e5a-818a-49a0-ae3c-eba95724500f and 69b9f887-582a-479c-924b-e7328f3930b4 and of the antecedent of the containment-recognition bridge d1fb6414-976e-4833-908d-17787cca2502; CONTAINED_IN_2 (intentional) is that bridge's consequent; CONTAINED_IN_3 (virtual) is the rival's reading of its contained stand-ins. Generic containment is entailed by each of the others; intentional and virtual containment exclude each other by their Lean bodies (one requires apprehension, the other its absence). The registered derivation of the cognition criterion 3b40009e-1c56-4cce-86ba-1980fd2cb9a7 passes from CONTAINED_IN_1 to CONTAINED_IN_2 only through d1fb6414, declared as its sense bridge; no step passes from virtual to intentional containment, which is exactly what the rival denies.",
+  "term_label": "CONTAINED_IN",
+  "senses": [
+    {
+      "id": "03ce80c5-aaba-4aae-adbf-a87092044dd4",
+      "label": "CONTAINED_IN_1",
+      "definition_id": "c917dda9-f382-48fa-8cc1-a0b9e609c164",
+      "lean_declaration": "TruthCore.Causality.AxiarchicFoundation.ContainsGenerically"
+    },
+    {
+      "id": "30130a78-4a0e-44bb-bb2c-9e037651fa06",
+      "label": "CONTAINED_IN_2",
+      "definition_id": "c82c75e9-1786-43f1-8e0d-1b295ae5699a",
+      "lean_declaration": "TruthCore.Causality.AxiarchicFoundation.ContainsIntentionally"
+    },
+    {
+      "id": "4f2f2f0c-2e4f-42f5-a84a-e850c7aa3d7e",
+      "label": "CONTAINED_IN_3",
+      "definition_id": "1294c8f3-3eb6-4960-859e-506ccdee6ab8",
+      "lean_declaration": "TruthCore.Causality.AxiarchicFoundation.ContainsVirtually"
+    }
+  ]
+}

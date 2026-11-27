@@ -47,7 +47,8 @@ apprehends. -/
 theorem goodGeneralFavouringIsApprehensionOfIndividuation {B D S X Z C : Type}
     (Has : B → D → Prop) (favours : TruthCore.Causality.GoodFavouring.Profile S X → D)
     (good : S → X → X → Prop) (fitOf : S → Z) (Present : S → X → Prop)
-    (stand : B → X → C) (rel : B → S → C → C → Prop) (Contains Produces : B → C → Prop)
+    (stand : B → X → C) (rel : B → TruthCore.Causality.GoodFavouring.Profile S X → S → C → C → Prop)
+    (Contains Produces : B → C → Prop)
     (About : C → X → Prop) (Apprehends : B → C → Prop)
     (hEM : ExcludedMiddle)
     (hReal : FavouringRealizedOnItems Has favours stand rel)
@@ -60,7 +61,7 @@ theorem goodGeneralFavouringIsApprehensionOfIndividuation {B D S X Z C : Type}
   intro b φ hφ hGG
   obtain ⟨s, x, y, hdep, hnp⟩ := hGG
   have hne : stand b x ≠ stand b y :=
-    favouredIndividuated (φ s) (rel b s) (stand b) (hReal b φ hφ s) (hIrr b φ hφ s) x y hdep.2.1
+    favouredIndividuated (φ s) (rel b φ s) (stand b) (hReal b φ hφ s) (hIrr b φ hφ s) x y hdep.2.1
   have hContained : ∀ v, ¬ Present s v → Contains b (stand b v) := by
     intro v hv
     cases hEM (Contains b (stand b v)) with
@@ -76,6 +77,101 @@ theorem goodGeneralFavouringIsApprehensionOfIndividuation {B D S X Z C : Type}
   | inr hy =>
     obtain ⟨hab, hap⟩ := hRecog b φ s y x hφ (Or.inr hdep) hy (hContained y hy) hne.symm
     exact ⟨stand b y, y, hab, hap⟩
+
+/-! ## Lean-only: what the derivation relocates (semantic challenge probes)
+
+Given the other five premises, the registered recognition bridge is strictly
+stronger than the criterion: the criterion implies the weakened bridge, the
+weakened bridge with the five premises implies the criterion, and on the control
+carrier the criterion and the five premises hold while the registered bridge
+fails (`criterionDoesNotGiveRecognition`). The derivation therefore localizes
+the dispute; it adds no warrant against a rival who grants the other premises. -/
+
+/-- The criterion alone implies the weakened recognition bridge. -/
+theorem criterionGivesWeakRecognition {B D S X Z C : Type}
+    (Has : B → D → Prop) (favours : TruthCore.Causality.GoodFavouring.Profile S X → D)
+    (good : S → X → X → Prop) (fitOf : S → Z) (Present : S → X → Prop)
+    (stand : B → X → C) (Contains : B → C → Prop)
+    (About : C → X → Prop) (Apprehends : B → C → Prop)
+    (h : GoodGeneralFavouringIsApprehension Has favours good fitOf Present About Apprehends) :
+    ContainedStandInYieldsApprehension Has favours good fitOf Present stand Contains About
+      Apprehends := by
+  intro b φ s z w hφ hdep hz _ _
+  apply h b φ hφ
+  rcases hdep with hd | hd
+  · exact ⟨s, z, w, hd, Or.inl hz⟩
+  · exact ⟨s, w, z, hd, Or.inr hz⟩
+
+/-- The weakened recognition bridge, with the other five premises, gives the
+criterion. -/
+theorem weakRecognitionGivesCriterion {B D S X Z C : Type}
+    (Has : B → D → Prop) (favours : TruthCore.Causality.GoodFavouring.Profile S X → D)
+    (good : S → X → X → Prop) (fitOf : S → Z) (Present : S → X → Prop)
+    (stand : B → X → C) (rel : B → TruthCore.Causality.GoodFavouring.Profile S X → S → C → C → Prop)
+    (Contains Produces : B → C → Prop)
+    (About : C → X → Prop) (Apprehends : B → C → Prop)
+    (hEM : ExcludedMiddle)
+    (hReal : FavouringRealizedOnItems Has favours stand rel)
+    (hIrr : FavouringIrreflexive Has favours)
+    (hOwn : NoIndependentStandIn Has favours Present stand Contains Produces)
+    (hNotMade : NoMerelyProducedStandIn Has favours Present stand Contains Produces)
+    (hW : ContainedStandInYieldsApprehension Has favours good fitOf Present stand Contains About
+      Apprehends) :
+    GoodGeneralFavouringIsApprehension Has favours good fitOf Present About Apprehends := by
+  intro b φ hφ hGG
+  obtain ⟨s, x, y, hdep, hnp⟩ := hGG
+  have hne : stand b x ≠ stand b y :=
+    favouredIndividuated (φ s) (rel b φ s) (stand b) (hReal b φ hφ s) (hIrr b φ hφ s) x y hdep.2.1
+  have hContained : ∀ v, ¬ Present s v → Contains b (stand b v) := by
+    intro v hv
+    cases hEM (Contains b (stand b v)) with
+    | inl hc => exact hc
+    | inr hnc =>
+      cases hEM (Produces b (stand b v)) with
+      | inl hp => exact (hNotMade b φ s v hφ hv ⟨hp, hnc⟩).elim
+      | inr hnp' => exact (hOwn b φ s v hφ hv ⟨hnc, hnp'⟩).elim
+  cases hnp with
+  | inl hx => exact hW b φ s x y hφ (Or.inl hdep) hx (hContained x hx) hne
+  | inr hy => exact hW b φ s y x hφ (Or.inr hdep) hy (hContained y hy) hne.symm
+
+/-- Without the individuation conjunct, realization and irreflexivity are not
+needed: the nowhere exclusion only discharges that conjunct. Containment of the
+non-present candidate's stand-in follows from excluded middle and the two locus
+bridges alone. -/
+theorem recognitionWithoutIndividuationGivesCriterion {B D S X Z C : Type}
+    (Has : B → D → Prop) (favours : TruthCore.Causality.GoodFavouring.Profile S X → D)
+    (good : S → X → X → Prop) (fitOf : S → Z) (Present : S → X → Prop)
+    (stand : B → X → C) (Contains Produces : B → C → Prop)
+    (About : C → X → Prop) (Apprehends : B → C → Prop)
+    (hEM : ExcludedMiddle)
+    (hOwn : NoIndependentStandIn Has favours Present stand Contains Produces)
+    (hNotMade : NoMerelyProducedStandIn Has favours Present stand Contains Produces)
+    (hR : ∀ b φ s z w, Has b (favours φ) →
+      (BecauseOfGoodness good fitOf φ s z w ∨ BecauseOfGoodness good fitOf φ s w z) →
+      ¬ Present s z → Contains b (stand b z) → About (stand b z) z ∧ Apprehends b (stand b z)) :
+    GoodGeneralFavouringIsApprehension Has favours good fitOf Present About Apprehends := by
+  intro b φ hφ hGG
+  obtain ⟨s, x, y, hdep, hnp⟩ := hGG
+  have hContained : ∀ v, ¬ Present s v → Contains b (stand b v) := by
+    intro v hv
+    cases hEM (Contains b (stand b v)) with
+    | inl hc => exact hc
+    | inr hnc =>
+      cases hEM (Produces b (stand b v)) with
+      | inl hp => exact (hNotMade b φ s v hφ hv ⟨hp, hnc⟩).elim
+      | inr hnp' => exact (hOwn b φ s v hφ hv ⟨hnc, hnp'⟩).elim
+  cases hnp with
+  | inl hx => exact ⟨_, _, hR b φ s x y hφ (Or.inl hdep) hx (hContained x hx)⟩
+  | inr hy => exact ⟨_, _, hR b φ s y x hφ (Or.inr hdep) hy (hContained y hy)⟩
+
+/-- Item realization with a profile-indexed relation does not force one favouring
+per bearer: the identity assignment realizes any family of profiles, each by
+itself. (With a relation not indexed by the profile, realization would force all
+favourings of a bearer to be equal.) -/
+theorem realizationAllowsSeveralFavourings {B S X : Type}
+    (Has : B → TruthCore.Causality.GoodFavouring.Profile S X → Prop) :
+    FavouringRealizedOnItems Has id (fun _ x => x) (fun _ φ s => φ s) :=
+  fun _ _ _ _ _ _ => Iff.rfl
 
 /-! ## Controls -/
 
@@ -235,6 +331,26 @@ theorem axiarchicControls : AxiarchicControls := by
   · exact ownOf _ _ (fun b φ hφ => (hasAllIn b φ hφ).1) fun _ => Or.inl ⟨rfl, Or.inl rfl⟩
   · exact notMadeOf _ _ (fun b φ hφ => (hasAllIn b φ hφ).1) fun _ => Or.inr ⟨rfl, Or.inl rfl⟩
   · simp [hasSrc, allInSrc, favTok]
+
+/-- Lean-only (semantic challenge probe): on the personal row's carrier, with the
+same stand-ins, relation and loci (so the other five premises hold, as in
+`axiarchicControls` row 1), the criterion holds while the registered recognition
+bridge fails: the source apprehends only its one nature, which counts as about
+every outcome, and not the contained stand-in. So the criterion and the other
+premises do not give the bridge. -/
+theorem criterionDoesNotGiveRecognition :
+    GoodGeneralFavouringIsApprehension (hasSrc personalSrc) favTok better fits noInputs
+        aboutOrBlob appBlob ∧
+      ¬ ContainedStandInIsApprehended (hasSrc personalSrc) favTok better fits noInputs
+        (standVia Item.inner) contains aboutOrBlob appBlob := by
+  constructor
+  · intro b φ hφ _
+    obtain ⟨rfl, -⟩ := hasPersonal b φ hφ
+    exact ⟨Item.blob, .c, Or.inl rfl, rfl, rfl⟩
+  · intro h
+    obtain ⟨-, -, hc⟩ := h true better .cBetter .c .d hasBetter (Or.inl depBetter) (fun h => h)
+      ⟨rfl, Or.inr ⟨.c, rfl⟩⟩ (by simp [standVia])
+    cases hc
 
 end Controls
 

@@ -25,7 +25,8 @@ apprehends. -/
 theorem goodGeneralFavouringIsApprehensionOfIndividuation {B D S X Z C : Type}
     (Has : B → D → Prop) (favours : TruthCore.Causality.GoodFavouring.Profile S X → D)
     (good : S → X → X → Prop) (fitOf : S → Z) (Present : S → X → Prop)
-    (stand : B → X → C) (rel : B → S → C → C → Prop) (Contains Produces : B → C → Prop)
+    (stand : B → X → C) (rel : B → TruthCore.Causality.GoodFavouring.Profile S X → S → C → C → Prop)
+    (Contains Produces : B → C → Prop)
     (About : C → X → Prop) (Apprehends : B → C → Prop)
     (hEM : ExcludedMiddle)
     (hReal : FavouringRealizedOnItems Has favours stand rel)
@@ -37,6 +38,15 @@ theorem goodGeneralFavouringIsApprehensionOfIndividuation {B D S X Z C : Type}
     GoodGeneralFavouringIsApprehension Has favours good fitOf Present About Apprehends := by
   sorry
 
+/-! ## Lean-only: what the derivation relocates (semantic challenge probes)
+
+Given the other five premises, the registered recognition bridge is strictly
+stronger than the criterion: the criterion implies the weakened bridge, the
+weakened bridge with the five premises implies the criterion, and on the control
+carrier the criterion and the five premises hold while the registered bridge
+fails (`criterionDoesNotGiveRecognition`). The derivation therefore localizes
+the dispute; it adds no warrant against a rival who grants the other premises. -/
+
 /-! ## Controls -/
 
 open TruthCore.Causality.AxiarchicFoundation.Control
@@ -47,6 +57,19 @@ open TruthCore.Causality.ImpersonalFoundationJoint.Control
 
 /-- The individuation trilemma on one carrier (see `AxiarchicControls`). -/
 theorem axiarchicControls : AxiarchicControls := by
+  sorry
+
+/-- Lean-only (semantic challenge probe): on the personal row's carrier, with the
+same stand-ins, relation and loci (so the other five premises hold, as in
+`axiarchicControls` row 1), the criterion holds while the registered recognition
+bridge fails: the source apprehends only its one nature, which counts as about
+every outcome, and not the contained stand-in. So the criterion and the other
+premises do not give the bridge. -/
+theorem criterionDoesNotGiveRecognition :
+    GoodGeneralFavouringIsApprehension (hasSrc personalSrc) favTok better fits noInputs
+        aboutOrBlob appBlob ∧
+      ¬ ContainedStandInIsApprehended (hasSrc personalSrc) favTok better fits noInputs
+        (standVia Item.inner) contains aboutOrBlob appBlob := by
   sorry
 
 end TruthCore.Results.Causality.AxiarchicFoundation

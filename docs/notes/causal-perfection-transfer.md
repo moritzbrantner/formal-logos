@@ -5703,10 +5703,20 @@ New vocabulary, each with a stipulative definition record:
   value-fact, an idea, a mode of imitability of the bearer's nature, a power
   directed to x, or the bearer's one undifferentiated nature. Two candidates
   are *individuated* in b's favouring when their stand-ins differ.
-- **Contained in** `Contains b e` (`c917dda9`): an intrinsic determination of
-  b, or b's own nature. Containment may be intentional (an idea) or virtual (a
-  power to produce, a mode of imitability). The relation does not say which.
-- **Produced by** `Produces b e` (`b71adcba`): a product of b outside it.
+- **Contained in** `Contains b e` (`c917dda9`, CONTAINED_IN_1): an intrinsic
+  determination of b, or b's own nature. Containment may be intentional (an
+  idea) or virtual (a power to produce, a mode of imitability). This generic
+  sense does not say which. Disambiguation CONTAINED_IN (`4c3751a6`) records it
+  beside CONTAINED_IN_2, intentional (`c82c75e9`, `ContainsIntentionally`:
+  contained, about a candidate and apprehended) and CONTAINED_IN_3, virtual
+  (`1294c8f3`, `ContainsVirtually`: contained and not apprehended). The q.4 a.2
+  formal/virtual containment of perfections in a cause (DEF `d7e7ae08`) is
+  related but distinct.
+- **Produced by** `Produces b e` (`b71adcba`): something b makes as other than
+  itself. It is production only, not every grounding relation: a mode of b's
+  own nature, or a value-fact grounded in it, is not thereby produced. It is
+  intended irreflexive and asymmetric, but neither property is assumed in Lean,
+  and it is not linked to the frame's `CausesIn` or `GivesAt`.
 - **Independent of** `Independent` (`fcfb7a8b`): neither contained in nor
   produced by b.
 
@@ -5717,7 +5727,7 @@ difference to what the foundation favours, with no presence of that value to
 the foundation as content. In Lane 2b's terms its profile is the good-tracking
 `better`. That is the same function as rational exercise (`GoodFavouringTable`
 row 7). The profile therefore cannot separate the accounts. What separates them
-is how the profile is *realized*: through which real items the non-present
+is how the profile is *realized*: through which items the non-present
 candidates figure, and how their value reaches the favouring.
 
 Four positive accounts of that link are available to the rival. Each is an
@@ -5774,10 +5784,25 @@ these modes are understood. This is the #1892 objective-eminence reading
 
 **Item realization** (`633d5c29`, open). A favouring determination's profile
 is, at every scenario, the inverse image (`InvImage`) of a relation among the
-bearer's stand-ins. Its rationale is that a real favouring relation of a real
-bearer has real terms even when the candidates do not exist. **Irreflexivity**
-(`3ca01752`, open) says that no favouring favours a candidate over itself. It
-is weaker than the net (asymmetric) favouring that the #2163 standard assumes.
+bearer's stand-ins. The relation is indexed by the bearer, the favouring profile
+and the scenario. An earlier draft indexed it by bearer and scenario only. The
+semantic challenge showed that this forced every favouring of one bearer to be
+equal, which is the separate open bridge `3e6ae3e7` imposed without a flag.
+Lean-only `realizationAllowsSeveralFavourings` now witnesses the repair.
+**Irreflexivity** (`3ca01752`, open) says that no favouring favours a candidate
+over itself. It is weaker than the net (asymmetric) favouring that the #2163
+standard assumes.
+
+What realization and irreflexivity require together is only that favoured pairs
+have distinct stand-ins. Realization does not require "real" terms in any
+further sense. The identity assignment, with candidates as their own stand-ins,
+satisfies it. Such stand-ins are independent of the bearer. The demand for real
+terms is therefore carried by the own-favouring bridge below, not by
+realization.
+
+The substantive coverage assumption is in the shape `stand : B → X → C`: for
+each bearer, every way a candidate figures in its favourings goes through one
+stand-in item.
 
 **Horn 3, nowhere.** `unindividuatedNotFavoured` (Lean-only, zero axioms): if a
 profile is realized on items and is irreflexive, two candidates with the same
@@ -5785,14 +5810,18 @@ stand-in are not favoured one over the other. The proof is two lines: x over y
 becomes the item relation between one item and itself, which is y over y.
 
 So value cannot act without individuated candidates, under these two premises.
+In the registered derivation this exclusion has one role: it discharges the
+individuation conjunct (`stand b z ≠ stand b w`) of the recognition bridge.
+Without that conjunct, realization and irreflexivity are not needed at all
+(Lean-only `recognitionWithoutIndividuationGivesCriterion`).
 Either premise can be denied, and the controls show both denials:
 
 - *Deny realization* (control row 5). The favouring of x over y is a bare fact
-  with no real items distinguishing x from y. This is not detected by the #2163
-  outcome-independent favouring standard, which reads only the profile at the
-  content scenario (law 8): formally, the bare profile explains contrasts
-  there. Its price is a real relation of a real bearer whose terms are not
-  real.
+  that no item relation induces: one item for every candidate. This is not
+  detected by the #2163 outcome-independent favouring standard, which reads only
+  the profile at the content scenario (law 8): formally, the bare profile
+  explains contrasts there. Its price is a favouring that discriminates
+  candidates that nothing in its realization discriminates.
 - *Deny irreflexivity* (row 6). The profile `allIn` is realized on one item. It
   is good-general in the formal sense, but at `cBetter` it favours every
   outcome over every outcome, itself included. It favours x over y only as it
@@ -5805,8 +5834,9 @@ determinations of n that discriminate the pairs. They are contained stand-ins
 in all but name (horn 2).
 
 **Coverage.** By excluded middle (`ee4ab504`) a stand-in is contained in b, or
-produced by b without being contained, or independent. Coverage is used, and
-proved, only in that form. Exclusivity is not used.
+produced by b without being contained, or independent. Since `Independent` is
+defined as the complement, this coverage is trivial. The substantive coverage
+is the stand-in shape noted above. Exclusivity is not used.
 
 **Horn 1, independent realm.** Excluded by the own-favouring bridge
 `65805e5a` (open). Its rationale has two parts.
@@ -5829,7 +5859,9 @@ root, `65805e5a` is a reading of that inclusive commitment.
 
 Under horn 1 the foundation's production is guided by items it neither grounds
 nor contains. Is it still ultimate? At that inclusive scope it is not the sole
-ultimate. Either the realm is co-ultimate (a plural foundation: n and the
+ultimate. The inclusive sole-foundation reading of (b) is not registered as a
+statement. The price below is therefore conditional on that unregistered
+reading. Either the realm is co-ultimate (a plural foundation: n and the
 independent value-facts), or value is prior (Leslie's stronger view, on which
 requiredness would explain n as well). This agrees with the earlier
 [axiarchic scope finding](goodness-standard-priority.md#the-axiarchic-alternative-and-its-different-source-scope):
@@ -5854,14 +5886,23 @@ is the recorded rival to (e): the final cause as object, with no favouring of
 its own. It denies `980e6482`, not this bridge.
 
 **Horn 2, in the source.** If the other two horns are excluded, the
-non-present candidate's stand-in is contained in the bearer and individuates
-it. Does that contained structure already satisfy `Apprehends` and `About`? It
+non-present candidate's stand-in is contained in the bearer, intentionally or
+virtually (CONTAINED_IN_1). That follows from excluded middle and the two locus
+bridges alone, each of which denies one horn: it is a disjunctive syllogism.
+Realization and irreflexivity add that the stand-in individuates the candidate.
+What is contained is the stand-in, not the value, and virtual containment (a
+power to produce) may be causal. Does that contained structure already satisfy `Apprehends` and `About`? It
 satisfies every *typed* property they have:
 
 - a two-place relation between the bearer and an item;
 - an item that is about a candidate, is not functional, and does not imply
   that the candidate is realized;
 - no correctness or capacity entailment.
+
+This holds under the controls' reading `aboutItem`, which stretches DEF
+`3ece6dfe`: it counts non-representational items (an independent value-fact, a
+produced item, a power) as "about" what they stand for. A4 may deny `About` of
+its modes as well as `Apprehends`.
 
 It also meets the two non-example tests in DEF `07f3fb85` and DEF `3ece6dfe`.
 It is not "a physical state that merely covaries with y": nothing covaries
@@ -5905,39 +5946,49 @@ is not a present input, z's stand-in is contained in the bearer, and that
 stand-in differs from w's. Then the stand-in is a content about z that the
 bearer itself apprehends.
 
-*Positive warrant.*
+*Context, not warrant.* Three items frame the bridge but do not support it.
 
 - HAS_INTELLECT_1 (DEF `88bc0655`): "cognition involves the form of what is
-  known in the knower".
-- The q.14 a.1 contrast: knowers have the form of another as of another
-  (navigation only).
-- The standard functional criterion of representation: an internal item that
-  stands in for absent features and guides the system's own behaviour
-  (Haugeland's "standing in"; navigation only).
-- At a simple bearer there is no subsystem for which the item could stand in
-  without standing in for the bearer itself.
+  known in the knower". That is a *necessary* condition of cognition. Citing
+  it for sufficiency would be the converse.
+- The q.14 a.1 contrast (knowers have the form of another *as of another*;
+  navigation only) already assumes intentional containment, which is the point
+  in dispute.
+- The functional criterion of representation (an internal item that stands in
+  for absent features and guides the system's own behaviour; Haugeland,
+  navigation only) supports at most `About`. A4 can grant `About` while
+  denying `Apprehends`.
 
-The bridge's antecedent is narrower than the criterion's, since containment
-and individuation are required. Its consequent is more specific, since the
-apprehended content is the stand-in itself. The criterion does not imply it,
-and it does not imply the criterion.
+*Against A4, no listed consideration discriminates.* The observation that a
+simple bearer has no subsystem answers the sub-personal objection below, not
+A4. A4's modes are not sub-personal; they are, on the rival's account,
+contained without being apprehended.
 
-*Substantive objection to its general scope.*
+*Strength.* Given the other five premises of the registered derivation, every
+good-general bearer meets the bridge's antecedent. Its added antecedent
+conditions (containment, individuation) therefore narrow nothing there.
 
-- *Target:* the bridge for composite bearers.
-- *Mechanism:* sub-personal representation. A contained stand-in guides the
-  whole bearer's favouring, while the bearer does not apprehend it.
-- *Independent justification:* established cases of representations guiding
-  choice without the subject's access, such as blindsight and early-vision
-  states.
-- *Relevance:* none of those established cases has a value-dependent
-  favouring. Each tracks a feature (see C). At a simple bearer, a sub-personal
-  level needs parts that the bearer lacks.
+Three Lean-only results, from the semantic challenge's probes, make the
+comparison exact:
 
-The general scope is therefore open at this boundary, and the root application
-does not depend on it. A root-restricted version, with simplicity as a premise,
-would be the weakest version that suffices for the root route. It is not
-registered here.
+- `criterionGivesWeakRecognition`: the criterion alone implies the bridge with
+  its consequent weakened to the criterion's (`ContainedStandInYieldsApprehension`).
+- `weakRecognitionGivesCriterion`: that weakened bridge, with the other five
+  premises, implies the criterion.
+- `criterionDoesNotGiveRecognition` (Comparator companion): on the personal
+  row's carrier the criterion and the other premises hold while `d1fb6414`
+  fails. In that model the source apprehends only its one nature, read as about
+  every outcome.
+
+So, modulo the other five premises, `d1fb6414` is strictly stronger than the
+criterion. It is the explicit sense bridge from CONTAINED_IN_1 to
+CONTAINED_IN_2.
+
+*Sub-personal representation.* For composite bearers, a contained stand-in
+could guide the bearer's favouring without the bearer apprehending it. This
+mechanism has established instances (blindsight, early vision), but none of
+them has a value-dependent favouring; each tracks a feature (see C). For
+value-dependent cases, no substantive objection has been identified.
 
 **Result** (`goodGeneralFavouringIsApprehensionOfIndividuation`, `1895c9f3`,
 registered, zero axioms). Its premises are:
@@ -5949,11 +6000,15 @@ registered, zero axioms). Its premises are:
 - the source-of-differences bridge `69b9f887`;
 - the containment-recognition bridge `d1fb6414`.
 
-Its conclusion is the cognition criterion `3b40009e`. The proof uses each
-horn. Distinct stand-ins come from realization and irreflexivity. Excluded
-middle with the two bridges locates the non-present candidate's stand-in in the
-source. Recognition then applies. The criterion keeps its direct-assumption
-option. This is an additional, conditional support option.
+Its conclusion is the cognition criterion `3b40009e`. Distinct stand-ins come
+from realization and irreflexivity, and they serve only the recognition
+bridge's individuation conjunct. Excluded middle with the two locus bridges
+places the non-present candidate's stand-in in the source. Recognition then
+applies. It is declared as the sense bridge from CONTAINED_IN_1 to
+CONTAINED_IN_2. The criterion keeps its direct-assumption option. The
+derivation is a conditional support option, but given the other five premises
+its last premise is strictly stronger than the criterion. Against a rival who
+grants the other five, it relocates the dispute and adds no warrant.
 
 **Controls** (`axiarchicControls`, Comparator companion, `propext` and
 `Quot.sound`). The carrier is Lane 4's source `true` with `personalSrc`, the
@@ -5964,13 +6019,18 @@ item type. Each row fixes stand-ins, an item relation, loci and apprehension:
 | --- | --- | --- | --- | --- |
 | 1 | `inner o`, contained, apprehended | none | holds | divine ideas |
 | 2 | `inner o`, contained, not apprehended | recognition | fails | A3 or A4 (powers, or imitability modes) |
-| 3 | `realm o`, independent | own-favouring | fails | A1 / A2, or a demiurge's Forms (if apprehension is added) |
+| 3 | `realm o`, independent | own-favouring | fails (no apprehension assigned) | A1 / A2; a demiurge's Forms would be this locus with apprehension added, and then the criterion holds |
 | 4 | `made o`, produced | source-of-differences | fails | a produced realm guiding the producer |
 | 5 | one item `blob` for every outcome | realization, for every item relation | fails | value acting with no individuated candidates |
 | 6 | `blob`, with the profile `allIn` | irreflexivity | fails | a non-contrastive favouring that is formally good-general |
 
 Each failing row fails exactly one of the five non-logical premises; the others
-hold. Row 5 is universal: no item relation at all realizes the good-tracking
+hold. Two artifacts are disclosed. In rows 3 to 6 the recognition bridge holds
+only vacuously, because no contained individuating stand-in exists. And the
+criterion fails in rows 3 to 6 because those rows assign no apprehension, not
+because of the failed premise. With the personal apprehension relation the
+criterion would hold in rows 3 to 5. The rows show that each premise is needed
+for the derivation. They do not show that its failure refutes the criterion. Row 5 is universal: no item relation at all realizes the good-tracking
 favouring on one item. Rows 1 and 2 have the same stand-ins, relation and loci
 and differ only in apprehension. That is by construction, and it encodes D
 below; it is not a finding.
@@ -6025,7 +6085,7 @@ horn. One table, one standard:
 | --- | --- | --- | --- | --- |
 | Independent realm | demiurge contemplating Forms | creative requiredness (A1), value-grounded favouring with independent value (A2) | `65805e5a` | sui generis co-determination of the bearer's own favouring by items it neither contains nor makes; at a root, not the sole ultimate at the inclusive scope (plural or value-first). The same for both |
 | Produced realm | activism: God creates the abstracta that guide creation | a source producing a realm of possibles (or the Plotinian One with Intellect) | `69b9f887` | the producer must already discriminate what it produces (the bootstrapping problem), or its own favouring is non-contrastive and (e) in the favouring form is denied. The same for both |
-| Nowhere | no coherent occupant | an undifferentiated source | realization `633d5c29` or irreflexivity `3ca01752` | a real relation without real terms, or a favouring of each over itself. The same for both |
+| Nowhere | no coherent occupant | an undifferentiated source | realization `633d5c29` or irreflexivity `3ca01752` | a favouring that discriminates candidates its realization does not discriminate, or a favouring of each over itself. The same for both |
 | In the source, intentional | divine ideas | — | none | the exemplar-containment problem under simplicity (#1879): many ideas through one essence |
 | In the source, virtual | — | aligned powers (A3); imitability exemplars (A4) | `d1fb6414` | A3: a necessary alignment of two whole orders (also paid by any account, personal included, whose value-ranking of candidates is neither received nor grounded in the source). A4: the full exemplar structure with the modes not understood; the #1892 objective-eminence gap |
 
@@ -6054,27 +6114,29 @@ structure. Apprehension is the only difference left.
 
 ### Assessment, standing rival and graph effect
 
-**What was clarified, connected and supported.**
+**What was clarified, connected and localized.**
 
-- The criterion now has a registered conditional derivation (`1895c9f3`). Its
-  direct-assumption option is kept.
-- The derivation unpacks the criterion's recorded rationale. "Value must be
-  present to the source in some non-causal way" is now derived as containment
-  of an individuating stand-in, from realization, irreflexivity and the two
-  locus bridges. The final step, "presence without causal action is intentional
-  presence", remains a direct assumption. It is now narrower: it concerns only
-  contained, individuating, value-guiding stand-ins (`d1fb6414`).
+- The criterion now has a registered conditional derivation (`1895c9f3`), and
+  its direct-assumption option is kept. The change is a **localization**, not a
+  gain in warrant:
+  - *Against A3/A4* the dispute is relocated onto `d1fb6414`. Modulo the other
+    five premises, that premise is strictly stronger than the criterion, and
+    both rivals grant those five (control row 2). There is no warrant change.
+  - *Against A1* the dispute is localized at `65805e5a`. Its price at a root
+    (not the sole ultimate at the inclusive scope) is conditional on the
+    unregistered inclusive reading of (b).
+  - *Against the nowhere horn* there is a genuine but small Lean exclusion,
+    under realization and irreflexivity.
+- What is derived is that the non-present candidate's stand-in is contained in
+  the bearer, intentionally or virtually. This follows from excluded middle and
+  the two locus bridges, each of which denies one horn. The derivation does not
+  show that value is present non-causally. The step to intentional presence
+  remains a direct assumption, now in the stronger form `d1fb6414`.
 - The derivation does not use the inference rejected in
   [mind-physicalism-fork-419](mind-physicalism-fork-419.md#test-whether-value-sensitive-production-requires-representation),
   "normative reasons are not efficient causes, therefore only a mind connects
   them to production". It leaves the contained, unapprehended option open as a
   separate premise.
-- The trilemma assigns each rival its premise. Leslie-type creative
-  requiredness denies `65805e5a`. Its price at a root is not being the sole
-  ultimate at the inclusive scope (plural or value-first). This is consistent
-  with the earlier scope finding, and (b) as encoded does not exclude it.
-  Aligned powers and imitability exemplars deny `d1fb6414`. The nowhere horn
-  is excluded in Lean under realization and irreflexivity.
 
 **A refinement of §69.** Lane 2b gave good-general accounts a modest relative
 consideration: one primitive orientation, where the D-nature has a particular
@@ -6085,21 +6147,26 @@ candidate.
 
 **Strongest standing rival and its price.** Noncognitive imitability
 exemplarism (A4) is now the strongest rival on this premise. It denies only
-the containment-recognition bridge. Its price is the one in the B list above:
+the containment-recognition bridge, and possibly `About` of its modes. Its price is the one in the B list above:
 a plurality of value-ranked modes in the one nature that guides favouring and
 is neither real composition, nor real relations to non-existents, nor
 mind-dependent. This is the #1892 objective-eminence status, and on it the two
 sides stand at parity. Within this program no further substantive objection
 to A4 has been identified. The A3 form carries an identified alignment price.
-The A1 form carries the inclusive-scope price.
+The A1 form carries the inclusive-scope price, conditional on that unregistered
+reading.
 
-**Provisional judgment.** A modest positive change in the criterion's support.
-The first three steps of its rationale now follow from premises with their own
-stated rationale. The rivals must deny a named premise and pay a named price.
-The residual dispute is located exactly at the intentional/virtual containment
-boundary, at parity. Formal establishment is unchanged. No premise is
-discharged. No unconditional ranking of personal over impersonal accounts is
-made.
+**Provisional judgment.** No change in the criterion's overall warrant. The
+criterion is still a direct assumption at parity with A4, now localized at a
+premise that is strictly stronger than it given the rest. What changed is
+where each rival must deny a premise:
+
+- A1 at `65805e5a`, with a price conditional on an unregistered reading;
+- A3 and A4 at `d1fb6414`, with A3 additionally paying an alignment price;
+- the nowhere horn is excluded under two premises.
+
+Formal establishment is unchanged and no premise is discharged. No
+unconditional ranking of personal over impersonal accounts is made.
 
 **Graph.** One registered result, `1895c9f3`. It reaches the root through
 `3b40009e` → `30c6f4c5` → `3a32d91c` → `fad1a1ac` → `29818edd`. New open
@@ -6127,6 +6194,53 @@ Excluded middle `ee4ab504` is reused.
 4. *The produced realm and (e).* Check whether the Plotinian structure (horn 3
    at the producer, individuation in a product) is exactly the final cause as
    object, the recorded rival of `980e6482`.
+5. *The inclusive reading of (b).* Register the inclusive sole-foundation
+   reading as a sibling statement of (b), so that A1's price is no longer
+   conditional on an unregistered reading.
+
+**Review record.** The independent semantic challenge of
+`1c4d003b9..2fdafb853` accepted the following as stated: `1895c9f3` as valid,
+zero-axiom and not a transcription; the single-premise failures of the
+controls; parity with A4; and the treatment of the natural-case survey.
+
+It found five P1s:
+
+1. A relocation was presented as a modest gain in the criterion's support.
+   Its probes showed that, given the other five premises, `d1fb6414` is
+   strictly stronger than the criterion.
+2. "Value must be present non-causally" was claimed as derived. What is
+   derived is only containment of the stand-in, intentional or virtual, by a
+   disjunctive syllogism over the two locus bridges.
+3. Item realization forced one favouring per bearer, because its relation was
+   not indexed by profile.
+4. The prose said realization excludes items that its type admits.
+5. The warrant list for `d1fb6414` included a necessary-condition converse and
+   a question-begging item.
+
+It also found eight P2s:
+
+- the unregistered inclusive reading of (b);
+- `Produces` conflating production and grounding;
+- the missing containment disambiguation;
+- vacuous recognition and the chosen apprehension relation in control rows 3
+  to 6;
+- the stretched `About`;
+- the relevance of the sub-personal objection;
+- the role of the nowhere exclusion;
+- the trivial coverage of the loci.
+
+The repairs:
+
+- The item relation is indexed by profile. This changes the Lean type of
+  `FavouringRealizedOnItems`, and the Challenge was regenerated.
+- Lean-only lemmas were added: `criterionGivesWeakRecognition`,
+  `weakRecognitionGivesCriterion`, `recognitionWithoutIndividuationGivesCriterion`
+  and `realizationAllowsSeveralFavourings`.
+- `criterionDoesNotGiveRecognition` was added as a Comparator companion.
+- The containment senses and disambiguation CONTAINED_IN were added, with
+  `d1fb6414` declared as the sense bridge.
+- `Produces` was restricted to production.
+- The prose and assessment were rescoped as listed above.
 
 [Attempt record](../../corpus/attempts/421caba9-f0d9-44f6-b9d9-ae81b0e374bb.json)
 

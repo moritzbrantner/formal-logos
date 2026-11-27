@@ -13,7 +13,7 @@
   "inference_ids": [
     "5074311d-ac1f-45a0-b5d1-4dff5c37bddf"
   ],
-  "meaning": "Let b have a favouring determination whose profile phi is good-general: at some scenario s, for candidates x and y, at least one not a present input, phi depends on betterness with end-realization fixed, so in particular phi favours x over y at s. By item realization phi at s is the inverse image of an item relation under b's stand-in assignment; by irreflexivity phi does not favour y over y. If x and y had the same stand-in, phi would favour y over y, so their stand-ins differ (unindividuatedNotFavoured: the nowhere horn yields no favouring of one candidate over another). Take the candidate z of the pair that is not a present input. By excluded middle its stand-in is contained in b, or not contained and produced by b, or neither (independent). The own-favouring bridge excludes the independent realm and the source-of-differences bridge excludes the merely produced item, so the stand-in is contained. The containment-recognition bridge then makes that stand-in a content about z that b itself apprehends, which is the cognition criterion's conclusion for b. The main theorem uses no axioms. The Comparator companion axiarchicControls (propext and Quot.sound, within the permitted Mathlib axiom set; Lane 4's carrier with the Lane 2b profiles and a new item type) gives the personal row with every premise and the criterion, and for each of the five non-logical premises a row where it alone fails and the criterion fails: contained but unapprehended stand-ins (recognition fails; the same stand-ins, relation and loci as the personal row), an independent realm (own-favouring fails), a produced realm (source-of-differences fails), one undifferentiated item with the good-tracking favouring (no item relation realizes it), and one item with a non-contrastive favouring that is good-general in the formal sense but favours an outcome over itself (irreflexivity fails). These are structural surrogates, not metaphysical possibilities; which account a row represents is an interpretive assignment.",
+  "meaning": "Let b have a favouring determination whose profile phi is good-general: at some scenario s, for candidates x and y, at least one not a present input, phi depends on betterness with end-realization fixed, so in particular phi favours x over y at s. By item realization phi at s is the inverse image of an item relation (indexed by b, phi and s) under b's stand-in assignment; by irreflexivity phi does not favour y over y. If x and y had the same stand-in, phi would favour y over y, so their stand-ins differ (unindividuatedNotFavoured). This only discharges the individuation conjunct of the recognition bridge; without that conjunct realization and irreflexivity are not needed (recognitionWithoutIndividuationGivesCriterion). Take the candidate z of the pair that is not a present input. By excluded middle its stand-in is contained in b (CONTAINED_IN_1, intentionally or virtually), or not contained and produced by b, or neither (independent). The own-favouring bridge excludes the independent realm and the source-of-differences bridge excludes the merely produced item, so it is contained; this is a disjunctive syllogism over premises that each deny one horn. The containment-recognition bridge, declared as the sense bridge from CONTAINED_IN_1 to CONTAINED_IN_2, then makes that stand-in a content about z that b itself apprehends, which is the cognition criterion's conclusion for b. Given the other five premises the recognition bridge is strictly stronger than the criterion (criterionGivesWeakRecognition, weakRecognitionGivesCriterion and the Comparator companion criterionDoesNotGiveRecognition), so the derivation localizes the dispute rather than adding warrant against a rival who grants those premises. The main theorem uses no axioms. The Comparator companion axiarchicControls (propext and Quot.sound, within the permitted Mathlib axiom set; Lane 4's carrier with the Lane 2b profiles and a new item type) gives the personal row with every premise and the criterion, and for each of the five non-logical premises a row where it alone fails: contained but unapprehended stand-ins (recognition fails; the same stand-ins, relation and loci as the personal row), an independent realm, a produced realm, one undifferentiated item with the good-tracking favouring (no item relation realizes it), and one item with a non-contrastive favouring that is good-general in the formal sense but favours an outcome over itself. In rows 3 to 6 recognition holds only vacuously, and the criterion fails there because those rows assign no apprehension, not because of the failed premise. These are structural surrogates, not metaphysical possibilities; which account a row represents is an interpretive assignment.",
   "term_senses": {
     "BECAUSE_OF_GOODNESS": "9d14c5bd-2b8f-4e74-b7e2-b5c4a297241d"
   },
@@ -25,11 +25,21 @@
     "abd8cfa4-1887-47d5-86cc-e0f6092e4ded",
     "b28d7e04-694b-442b-a42b-65f39190956f",
     "b71adcba-9430-4c3b-a87e-60471247d2dd",
+    "c82c75e9-1786-43f1-8e0d-1b295ae5699a",
     "c917dda9-f382-48fa-8cc1-a0b9e609c164",
     "fae7bbb8-931c-4a95-9f44-1d59921d1c83",
     "fcfb7a8b-1373-4437-89c3-b7893d850031"
   ],
   "disambiguation_ids": [
-    "8430c7dc-2972-4f47-87a9-ce4676533cdf"
+    "8430c7dc-2972-4f47-87a9-ce4676533cdf",
+    "4c3751a6-6b32-47f2-89c4-d094dabe5613"
+  ],
+  "sense_bridges": [
+    {
+      "term": "CONTAINED_IN",
+      "from": "03ce80c5-aaba-4aae-adbf-a87092044dd4",
+      "to": "30130a78-4a0e-44bb-bb2c-9e037651fa06",
+      "statement_id": "d1fb6414-976e-4833-908d-17787cca2502"
+    }
   ]
 }

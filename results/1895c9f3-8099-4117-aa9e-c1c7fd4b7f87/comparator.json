@@ -3,7 +3,8 @@
   "solution_module": "TruthCore.Results.Causality.AxiarchicFoundation.Solution",
   "theorem_names": [
     "TruthCore.Results.Causality.AxiarchicFoundation.goodGeneralFavouringIsApprehensionOfIndividuation",
-    "TruthCore.Results.Causality.AxiarchicFoundation.axiarchicControls"
+    "TruthCore.Results.Causality.AxiarchicFoundation.axiarchicControls",
+    "TruthCore.Results.Causality.AxiarchicFoundation.criterionDoesNotGiveRecognition"
   ],
   "permitted_axioms": [
     "propext",

@@ -1,7 +1,7 @@
 {
   "id": "65805e5a-818a-49a0-ae3c-eba95724500f",
   "label": "No own favouring has an independent stand-in for a non-present candidate",
-  "paraphrase": "OPEN own-favouring bridge, analyst formulation, attribution deferred: for every bearer b with a favouring determination, every scenario s and every candidate x that is not a present input at s, b's stand-in for x is not independent of b: it is not the case that b neither contains nor produces it. Rationale: the favouring is the bearer's own (not supplied by another determiner, DEF abd8cfa4), and an independent item makes a difference to a bearer by acting on it (then it is a present input) or by being represented in it (then a contained item stands for it). It excludes the independent-realm horn: Leslie-type requiredness of abstract value-facts that is creatively effective on the bearer's favouring without being present to it, and a demiurge guided by Forms it neither contains nor makes. At an actual root it is a reading of the inclusive sole-foundation commitment; the encoded underivedness of a root (no actual concrete ground) does not imply it, since it concerns non-concrete co-determiners.",
+  "paraphrase": "OPEN own-favouring bridge, analyst formulation, attribution deferred: for every bearer b with a favouring determination, every scenario s and every candidate x that is not a present input at s, b's stand-in for x is not independent of b: it is not the case that b neither contains (CONTAINED_IN_1) nor produces it. Rationale: the favouring is the bearer's own (not supplied by another determiner, DEF abd8cfa4), and an independent item makes a difference to a bearer by acting on it (then it is a present input) or by being represented in it (then a contained item stands for it). It excludes the independent-realm horn: Leslie-type requiredness of abstract value-facts that is creatively effective on the bearer's favouring without being present to it, a demiurge guided by Forms it neither contains nor makes, and candidates standing for themselves. At an actual root it would be a reading of an inclusive sole-foundation commitment, which is not registered as a statement; the encoded underivedness of a root (no actual concrete ground) does not imply it, since it concerns non-concrete co-determiners.",
   "lean_declaration": "TruthCore.Causality.AxiarchicFoundation.NoIndependentStandIn",
   "definition_ids": [
     "abd8cfa4-1887-47d5-86cc-e0f6092e4ded",
@@ -10,5 +10,8 @@
     "c917dda9-f382-48fa-8cc1-a0b9e609c164",
     "b71adcba-9430-4c3b-a87e-60471247d2dd",
     "fcfb7a8b-1373-4437-89c3-b7893d850031"
+  ],
+  "disambiguation_ids": [
+    "4c3751a6-6b32-47f2-89c4-d094dabe5613"
   ]
 }

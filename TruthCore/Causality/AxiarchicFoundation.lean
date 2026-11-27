@@ -23,13 +23,23 @@ input it may be the input itself; for a non-present candidate it is something
 else (an abstract candidate or value-fact, an idea, a mode of imitability, a
 power directed to `x`, or the bearer's one undifferentiated nature). A favouring
 determination is *realized on items* when, in every scenario, its profile is the
-inverse image (`InvImage`) of a relation among the stand-ins. This is a reading
-of a real favouring relation of a real bearer: its terms are real items, even
-when the candidates are not.
+inverse image (`InvImage`) of a relation among the stand-ins; the relation is
+indexed by the favouring profile, so several favourings of one bearer are not
+excluded. Realization with irreflexivity only requires favoured pairs to have
+distinct stand-ins. It does not require the stand-ins to be real in any further
+sense: the identity assignment satisfies it, and candidates as their own
+stand-ins fall under the independent locus. The demand for real terms is carried
+by `NoIndependentStandIn`, not by realization.
+
+The shape `stand : B → X → C` assumes that, for each bearer, every way a
+candidate figures in its favourings goes through one stand-in item. That is the
+substantive coverage assumption; the coverage of the three loci below is
+trivial by comparison.
 
 **Three loci.** Relative to a bearer an item is contained in it (`Contains`),
 produced by it (`Produces`), or independent of it (neither). With excluded
-middle these cover every item. The individuation trilemma:
+middle these cover every item; since `Independent` is defined as the complement,
+that coverage is trivial. The individuation trilemma:
 
 1. *independent realm* (Leslie-type requiredness of abstract value-facts, a
    demiurge's independent Forms): excluded by the open `NoIndependentStandIn`;
@@ -38,7 +48,10 @@ middle these cover every item. The individuation trilemma:
    apprehension is the open `ContainedStandInIsApprehended`;
 3. *nowhere* (one undifferentiated item for every candidate): with item
    realization and irreflexivity it gives no favouring of one candidate over
-   another (`unindividuatedNotFavoured`, in the results module).
+   another (`unindividuatedNotFavoured`, in the results module). In the
+   registered derivation this exclusion only discharges the individuation
+   conjunct of the recognition bridge; without that conjunct realization and
+   irreflexivity are not needed.
 
 A produced item outside the bearer (a realm the source makes) is excluded by the
 open `NoMerelyProducedStandIn` (source-of-differences reasoning).
@@ -46,7 +59,11 @@ open `NoMerelyProducedStandIn` (source-of-differences reasoning).
 `Contains`, `Produces`, `About` and `Apprehends` are free. Nothing in a type
 separates intentional containment (an idea) from virtual containment (a power
 directed to a manifestation): that is exactly the step the open recognition
-bridge takes. Every model in `Control` is a finite structural surrogate; it
+bridge takes. Given the other five premises of the registered derivation, that
+bridge is strictly stronger than the cognition criterion
+(`ContainedStandInYieldsApprehension` and the results-module lemmas), so the
+derivation relocates and localizes the dispute; it adds no warrant against a
+rival who grants the other premises. Every model in `Control` is a finite structural surrogate; it
 witnesses only the stated formal interpretation, never a metaphysical
 possibility. -/
 
@@ -61,13 +78,19 @@ variable {B D S X Z C : Type}
 
 /-- OPEN item realization: for every bearer `b` and every favouring determination
 `favours φ` of `b`, in every scenario `s`, `φ s` favours `x` over `y` exactly when
-the relation `rel b s` holds between the stand-ins `stand b x` and `stand b y`
-(the profile is the inverse image of an item relation). A real favouring relation
-of a real bearer has real items as its terms, even when the candidates do not
-exist. -/
+the relation `rel b φ s` holds between the stand-ins `stand b x` and `stand b y`
+(the profile is the inverse image of an item relation). The relation is indexed
+by the favouring profile, so a bearer may have several favourings realized on the
+same stand-ins: one favouring per bearer is not built in (that is the separate
+open bridge `OneFavouringRealization`). What realization constrains, together with
+irreflexivity, is only that favoured pairs have distinct stand-ins
+(`unindividuatedNotFavoured`). It does not by itself require the stand-ins to be
+"real" in any further sense: the identity assignment (candidates as their own
+stand-ins) satisfies it, and such an assignment falls under the independent locus
+excluded by `NoIndependentStandIn`. -/
 def FavouringRealizedOnItems (Has : B → D → Prop) (favours : GoodFavouring.Profile S X → D)
-    (stand : B → X → C) (rel : B → S → C → C → Prop) : Prop :=
-  ∀ b φ, Has b (favours φ) → ∀ s x y, φ s x y ↔ InvImage (rel b s) (stand b) x y
+    (stand : B → X → C) (rel : B → GoodFavouring.Profile S X → S → C → C → Prop) : Prop :=
+  ∀ b φ, Has b (favours φ) → ∀ s x y, φ s x y ↔ InvImage (rel b φ s) (stand b) x y
 
 /-- OPEN irreflexivity: no favouring determination favours a candidate over
 itself in any scenario. Weaker than the asymmetry (net favouring) that the #2163
@@ -106,11 +129,13 @@ depends on value with end content fixed (BECAUSE_OF_GOODNESS_2) for a pair `z`,
 `w` in either order, `z` is not a present input, the stand-in of `z` is contained
 in the bearer, and it differs from the stand-in of `w` (it individuates `z`
 against `w`), then that contained stand-in is a content about `z` that the bearer
-itself apprehends. It is narrower than the cognition criterion in its antecedent
-(containment and individuation are required) and more specific in its consequent
-(the apprehended content is the stand-in). It is the step from a contained,
+itself apprehends. Its antecedent adds containment and individuation, but given
+the other premises of the registered derivation every good-general bearer meets
+them, so it narrows nothing there; its consequent is more specific (the
+apprehended content is the stand-in). Given those premises it is strictly
+stronger than the cognition criterion. It is the step from a contained,
 individuating, value-guiding item to intentional presence, which a virtual
-(power-to-produce) reading of the containment denies. -/
+(power-to-produce, mode-of-imitability) reading of the containment denies. -/
 def ContainedStandInIsApprehended (Has : B → D → Prop)
     (favours : GoodFavouring.Profile S X → D) (good : S → X → X → Prop) (fitOf : S → Z)
     (Present : S → X → Prop) (stand : B → X → C) (Contains : B → C → Prop)
@@ -119,6 +144,50 @@ def ContainedStandInIsApprehended (Has : B → D → Prop)
     (BecauseOfGoodness good fitOf φ s z w ∨ BecauseOfGoodness good fitOf φ s w z) →
     ¬ Present s z → Contains b (stand b z) → stand b z ≠ stand b w →
       About (stand b z) z ∧ Apprehends b (stand b z)
+
+/-! ## Three senses of containment (disambiguation CONTAINED_IN)
+
+The locus bridges and the antecedent of the recognition bridge use containment in
+the generic sense. The recognition bridge's consequent (the contained stand-in is
+an apprehended content about the candidate) is containment in the intentional
+sense; the rival's contained-but-unapprehended stand-ins (powers, modes of
+imitability) are containment in the virtual sense. The recognition bridge is the
+explicit passage from the generic to the intentional sense. The intentional and
+virtual senses are reduced here to the free relations `Apprehends` and `About`;
+the classical difference between having the form of another as other and having
+the power to produce it is not captured beyond that. -/
+
+/-- CONTAINED_IN_1 (generic): the item is contained in the bearer, intentionally or
+virtually; the relation does not say which. -/
+def ContainsGenerically (Contains : B → C → Prop) (b : B) (e : C) : Prop := Contains b e
+
+/-- CONTAINED_IN_2 (intentional): the item is contained in the bearer and the bearer
+apprehends it as a content about some candidate. -/
+def ContainsIntentionally (Contains : B → C → Prop) (About : C → X → Prop)
+    (Apprehends : B → C → Prop) (b : B) (e : C) : Prop :=
+  Contains b e ∧ (∃ x, About e x) ∧ Apprehends b e
+
+/-- CONTAINED_IN_3 (virtual): the item is contained in the bearer without being
+apprehended by it, as a power to produce or a mode in which the bearer is
+imitable. -/
+def ContainsVirtually (Contains : B → C → Prop) (Apprehends : B → C → Prop) (b : B) (e : C) :
+    Prop :=
+  Contains b e ∧ ¬ Apprehends b e
+
+/-- The containment-recognition bridge with its consequent weakened to the
+cognition criterion's: some content about some candidate is apprehended by the
+bearer. Lean-only comparison notion (semantic challenge probe): the criterion
+implies it outright, and with the other five premises of the registered
+derivation it implies the criterion, so given those premises the registered
+bridge `ContainedStandInIsApprehended` is strictly stronger than the criterion. -/
+def ContainedStandInYieldsApprehension (Has : B → D → Prop)
+    (favours : GoodFavouring.Profile S X → D) (good : S → X → X → Prop) (fitOf : S → Z)
+    (Present : S → X → Prop) (stand : B → X → C) (Contains : B → C → Prop)
+    (About : C → X → Prop) (Apprehends : B → C → Prop) : Prop :=
+  ∀ b φ s z w, Has b (favours φ) →
+    (BecauseOfGoodness good fitOf φ s z w ∨ BecauseOfGoodness good fitOf φ s w z) →
+    ¬ Present s z → Contains b (stand b z) → stand b z ≠ stand b w →
+      ∃ c y, About c y ∧ Apprehends b c
 
 /-! ## Finite controls
 
@@ -151,8 +220,9 @@ inductive Item
 def standVia (k : Outcome → Item) : Bool → Outcome → Item := fun _ => k
 
 /-- The item relation induced by `better` along `k`. -/
-def relVia (k : Outcome → Item) : Bool → Scenario → Item → Item → Prop :=
-  fun _ s e e' => ∃ x y, k x = e ∧ k y = e' ∧ better s x y
+def relVia (k : Outcome → Item) :
+    Bool → GoodFavouring.Profile Scenario Outcome → Scenario → Item → Item → Prop :=
+  fun _ _ s e e' => ∃ x y, k x = e ∧ k y = e' ∧ better s x y
 
 /-- The source contains its inner items and its one nature. -/
 def contains (b : Bool) (e : Item) : Prop :=
@@ -161,7 +231,11 @@ def contains (b : Bool) (e : Item) : Prop :=
 /-- The source produces the `made` items. -/
 def produces (b : Bool) (e : Item) : Prop := b = true ∧ ∃ o, e = Item.made o
 
-/-- An item is about `o` when it is one of the items standing for `o`. -/
+/-- An item is about `o` when it is one of the items standing for `o`. This is a
+stretched reading of `About` (DEF `3ece6dfe`, a content that represents a
+candidate): it counts non-representational items (an independent value-fact, a
+produced item, a power) as "about" what they stand for. A rival in the
+contained-unapprehended row may deny `About` as well as `Apprehends`. -/
 def aboutItem (e : Item) (o : Outcome) : Prop :=
   e = Item.inner o ∨ e = Item.realm o ∨ e = Item.made o
 
@@ -171,6 +245,13 @@ def appInner (b : Bool) (e : Item) : Prop := b = true ∧ ∃ o, e = Item.inner 
 /-- Nothing apprehends anything. -/
 def appNone (_ : Bool) (_ : Item) : Prop := False
 
+/-- Control for the relocation finding: the one nature `blob` counts as about
+every outcome. -/
+def aboutOrBlob (e : Item) (o : Outcome) : Prop := e = Item.blob ∨ aboutItem e o
+
+/-- Control for the relocation finding: the source apprehends only its one nature. -/
+def appBlob (b : Bool) (e : Item) : Prop := b = true ∧ e = Item.blob
+
 /-- A non-contrastive favouring: in `cBetter` every outcome over every outcome
 (itself included), in other scenarios nothing. -/
 def allIn : GoodFavouring.Profile Scenario Outcome := fun s _ _ => s = Scenario.cBetter
@@ -179,8 +260,8 @@ def allIn : GoodFavouring.Profile Scenario Outcome := fun s _ _ => s = Scenario.
 def allInSrc : Set Det := {Det.esse, Det.fav allIn}
 
 /-- Item realization on Lane 4's carrier. -/
-def realized (src : Set Det) (k : Outcome → Item) (rel : Bool → Scenario → Item → Item → Prop) :
-    Prop :=
+def realized (src : Set Det) (k : Outcome → Item)
+    (rel : Bool → GoodFavouring.Profile Scenario Outcome → Scenario → Item → Item → Prop) : Prop :=
   FavouringRealizedOnItems (hasSrc src) favTok (standVia k) rel
 /-- Irreflexivity on the carrier. -/
 def irrefl (src : Set Det) : Prop := FavouringIrreflexive (hasSrc src) favTok
@@ -217,7 +298,13 @@ fails in it.
    No item relation whatever realizes the favouring; the other premises hold.
 6. Nowhere, realized: the favouring `allIn`, realized on the one item, is
    good-general in the formal sense but favours every outcome over itself in
-   `cBetter`. Only irreflexivity fails. -/
+   `cBetter`. Only irreflexivity fails.
+
+Artifacts: in rows 3 to 6 the recognition bridge holds only vacuously (no
+contained individuating stand-in), and the criterion fails there because those
+rows assign `appNone`, not because of the failed premise; with `appInner` the
+criterion would hold in rows 3 to 5. The rows show that each premise is needed
+for the derivation, not that its failure refutes the criterion. -/
 def AxiarchicControls : Prop :=
   (realized personalSrc Item.inner (relVia Item.inner) ∧ irrefl personalSrc ∧
     own personalSrc Item.inner ∧ notMade personalSrc Item.inner ∧
@@ -234,7 +321,7 @@ def AxiarchicControls : Prop :=
   ((∀ rel, ¬ realized personalSrc (fun _ => Item.blob) rel) ∧ irrefl personalSrc ∧
     own personalSrc (fun _ => Item.blob) ∧ notMade personalSrc (fun _ => Item.blob) ∧
     recog personalSrc (fun _ => Item.blob) appNone ∧ ¬ crit personalSrc appNone) ∧
-  (realized allInSrc (fun _ => Item.blob) (fun _ s _ _ => s = Scenario.cBetter) ∧
+  (realized allInSrc (fun _ => Item.blob) (fun _ _ s _ _ => s = Scenario.cBetter) ∧
     ¬ irrefl allInSrc ∧ own allInSrc (fun _ => Item.blob) ∧
     notMade allInSrc (fun _ => Item.blob) ∧ recog allInSrc (fun _ => Item.blob) appNone ∧
     ImpersonalFoundationJoint.Control.gg allIn ∧ allIn Scenario.cBetter .c .c ∧
