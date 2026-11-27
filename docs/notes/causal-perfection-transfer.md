@@ -4729,7 +4729,10 @@ therefore excludes two kinds of constraint:
 The derivations use only its sufficiency direction, the registered weaker
 sibling `ExclusionFreeAdmissible` (`63e88cef`): every exclusion-free profile
 is admissible. It has a `strengthens` relation from member grounding,
-verified by `exclusionFreeAdmissibleOfMemberGrounding`. A strictness row
+verified by `exclusionFreeAdmissibleOfMemberGrounding`. Its difference is
+certified (#1598): member grounding is the sufficiency direction plus the
+necessity direction "every admissible profile is exclusion-free"
+(`mgOverSufficiencyExact`, premise-free). The separator `strictSeparates`
 (every profile admissible, noesis requiring its own lack) satisfies the weak
 version and fails the strong one.
 
@@ -4809,9 +4812,12 @@ joint prohibition of pure determinations therefore has three options:
   excluded by member grounding, and by the sufficiency direction together
   with purity. It is a positive, member-grounded constraint, not a brute one.
 
-The same three options govern case (i): the family without noesis is either
-ungrounded, or has noesis requiring its own lack (rows 4 and 5), or has
-noesis requiring an impure presence.
+For case (i), rows 4 and 5 back the first two options: the family without
+noesis is either ungrounded, or has noesis requiring its own lack. A
+requirement of presence yields case (i) only if the family also excludes the
+required impure item everywhere, which is not encoded. The
+`presenceRequirement` family admits every pure determination somewhere, so it
+is a case (ii) family.
 
 **Objection to the purity premise meeting the standard.**
 
@@ -4896,20 +4902,24 @@ same demand.
   root purity, root-profile admissibility) are now conclusions of the
   sufficiency direction and the purity premise. That is a relocation into
   requirement form, not independent warrant.
-- The rival's case (ii) and case (i) each reduce to three options: an
-  ungrounded constraint, a pure requirement of a lack, or a requirement of
-  presence.
+- The rival's case (ii) reduces to three options: an ungrounded constraint, a
+  pure requirement of a lack, or a requirement of presence. Case (i) reduces
+  to the first two. A requirement of presence reaches case (i) only if the
+  family also excludes the required impure item everywhere, which is not
+  encoded.
 
 **Standing rival and its price.** The impersonal eminent source (#1892)
 without intellect survives in any of five forms, each with a price:
 
 - deny that understanding is pure. This turns on the reception fork, where
   the two sides are at parity.
-- deny that noesis is admissible with simplicity through a requirement of
-  presence (the articulation objection). This is a positive, member-grounded
-  constraint. It denies member grounding, and the sufficiency direction
-  together with purity. It owes an account of why the required articulation
-  is impure.
+- exclude noesis through a requirement of presence (the articulation
+  objection: noesis needs an impure articulation). This is a positive,
+  member-grounded constraint and a case (ii) exclusion. It becomes case (i),
+  inadmissibility with simplicity, only if the family also excludes the
+  articulation everywhere, which is not encoded. It denies member grounding,
+  and the sufficiency direction together with purity. It owes an account of
+  why the required articulation is impure.
 - accept an ungrounded necessary incompatibility among pure determinations.
   This denies localization.
 - name a pure determination whose requirement excludes noesis. One candidate
@@ -4937,11 +4947,10 @@ Parity: a brute-negative-facts stance applies in the same way to personal
 and impersonal roots. It counts against the impersonal profile only as far
 as that demand is warranted.
 
-**Review state.** The independent semantic challenge reviewed head
+**Review state.** The independent semantic challenge ran at
 `2571329898`. It accepted the A route (`fd01e30c`, `c256d381`), the shared
 `Pure` parameter and all eleven control rows. It did not accept the
-interpretive layer of B as presented. Its findings are repaired in this
-revision:
+interpretive layer of B as presented. Its findings were repaired at `6cac8d105`:
 - the relocation verdict;
 - the requirement-of-presence option;
 - the anchoring family;
@@ -4953,7 +4962,8 @@ revision:
 - the truthmaker survey;
 - PURE_ACT_1 labels.
 
-A targeted re-check is pending.
+The targeted re-check at `fce2ba69d` accepted all steps and found no
+remaining P1.
 
 **Next discriminating tests.**
 

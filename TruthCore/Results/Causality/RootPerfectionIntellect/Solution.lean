@@ -105,6 +105,12 @@ theorem exclusionFreeAdmissibleOfMemberGrounding {D : Type} (Admissible : Set D 
     (hGround : MemberGroundedAdmissibility Admissible RequiresLack) :
     ExclusionFreeAdmissible Admissible RequiresLack := fun q => (hGround q).2
 
+/-- Certified difference: member grounding is its sufficiency direction plus
+its necessity direction. Premise-free and constructive. -/
+theorem mgOverSufficiencyExact : MGOverSufficiencyExact :=
+  fun _ _ => ⟨fun h => ⟨fun q => (h q).2, fun q => (h q).1⟩,
+    fun h q => ⟨h.2 q, h.1 q⟩⟩
+
 /-- Under the two premises every profile of pure determinations is admissible. -/
 theorem allPureAdmissible {D : Type} (Admissible : Set D → Prop)
     (RequiresLack : D → Set D → Prop) (Pure : D → Prop)
@@ -664,6 +670,12 @@ theorem constitutiveControls :
   · intro h
     exact (h {Determination.noesis}).1 trivial _ rfl {Determination.noesis}
       (subset_refl _) ⟨rfl, rfl⟩
+
+/-- Strictness of member grounding over its sufficiency direction: with every
+profile admissible and `noesis` requiring its own lack, the sufficiency
+direction holds and member grounding fails. -/
+theorem strictSeparates : StrictSeparates :=
+  ⟨trivial, constitutiveControls.2.2.2.2.2.2.2.1, constitutiveControls.2.2.2.2.2.2.2.2⟩
 
 end Controls
 

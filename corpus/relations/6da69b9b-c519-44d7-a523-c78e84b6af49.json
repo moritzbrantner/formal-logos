@@ -7,5 +7,6 @@
   "object_kind": "statement",
   "object_id": "63e88cef-e95b-4350-a0e2-4107e51caa90",
   "verification_result_id": "65990bb6-edc0-43e1-910b-92e474fba70c",
-  "note": "Same Admissible family and RequiresLack relation. The strong version is a biconditional; the weak one is its right-to-left direction, which is all the three derivations use. The strictness row of constitutiveControls (every profile admissible, noesis requiring its own lack) satisfies the weak version and fails the strong one."
+  "strictness_result_id": "d6bfcd0d-d172-46ef-9b55-3183678903e0",
+  "note": "Same Admissible family and RequiresLack relation. The strong version is a biconditional; the weak one is its right-to-left direction, which is all the three derivations use. The strictness row of constitutiveControls (every profile admissible, noesis requiring its own lack) satisfies the weak version and fails the strong one; the certified difference is the necessity direction, every admissible profile is exclusion-free."
 }
