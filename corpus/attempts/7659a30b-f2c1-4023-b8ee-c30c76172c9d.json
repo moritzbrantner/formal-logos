@@ -1,0 +1,24 @@
+{
+  "id": "7659a30b-f2c1-4023-b8ee-c30c76172c9d",
+  "label": "Test the quantitative grounding of the invariant non-rational chance rival",
+  "statement_ids": [
+    "55892476-1e99-444b-a6bd-5430b0f115c4",
+    "78af5042-9b4e-41a4-bb76-ad4d1973e25a"
+  ],
+  "date": "2026-11-27",
+  "kind": "countermodel",
+  "outcome": "blocked",
+  "summary": "Added a draft numerical completion certificate, matched probability laws, unique calibration and full symmetry controls, partial symmetry, tied optimality and STIT choice partitions on the existing histories.",
+  "evidence": [
+    "725538ae-ef24-4c5f-bca9-7bab754ba1aa"
+  ],
+  "blocker": "Lean, binding, Comparator/NanoDa and independent semantic review remain pending. The substantive bridge from the complete intrinsic nature of the necessary source to one grounded objective law is not established.",
+  "workers": [
+    {
+      "role": "author",
+      "provider": "openai",
+      "model": "gpt-6.2",
+      "date": "2026-11-27"
+    }
+  ]
+}

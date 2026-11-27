@@ -1,0 +1,9 @@
+{
+  "id": "f0aac0ea-001b-45c3-b669-cff83228a81a",
+  "input_statement_ids": [],
+  "output_statement_id": "5a288e2a-71f6-497e-be4c-0f3ad7957834",
+  "rule": "PMF normalization, finite calibration and STIT choice partitions",
+  "meaning": "On the fixed ChanceRival history frame, every positive normalized binary pair completes the qualitative description; positive support, strict probability ranking and tied optimality do not uniquely determine the law. A singleton calibration or complete binary exchange symmetry uniquely determines it; one two-element orbit and a singleton do not. Identical histories can support either effective STIT control of creation and withholding or indiscrete cells without that control. These are diagnostic mathematical controls, not a proof that a fixed complete essence permits variable intrinsic propensities or that intention guarantees sufficient reason.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

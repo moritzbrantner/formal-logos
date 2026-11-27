@@ -1,0 +1,26 @@
+{
+  "id": "5a288e2a-71f6-497e-be4c-0f3ad7957834",
+  "label": "Numerical grounding and choice-partition controls for the invariant source",
+  "paraphrase": "On the fixed ChanceRival history frame, every positive normalized binary pair completes the qualitative description; positive support, strict probability ranking and tied optimality do not uniquely determine the law. A singleton calibration or complete binary exchange symmetry uniquely determines it; one two-element orbit and a singleton do not. Identical histories can support either effective STIT control of creation and withholding or indiscrete cells without that control. These are diagnostic mathematical controls, not a proof that a fixed complete essence permits variable intrinsic propensities or that intention guarantees sufficient reason.",
+  "lean_declaration": "TruthCore.Causality.WillVersusChance.Model.DistributionGroundingControls",
+  "definition_ids": [
+    "0a36cead-b4fc-4248-a9f2-884edf61d89f",
+    "b8061228-9131-40f2-83bd-cb7d719bd0a0",
+    "69d8aef9-b0d4-461d-9a48-ef0bb4fbd56f",
+    "b4bb7bb4-4e2d-437d-825e-79a029340e77",
+    "582f44c3-7778-4806-b385-e1eff852ac5e",
+    "62dfa893-b633-4513-9790-8f9a0a3087e0",
+    "a2840d96-8bdc-4e6a-a9a3-376a9505ec7c",
+    "fdeb7757-10db-4fa7-91a4-6c15ee5100d2",
+    "4f503422-a3dc-51f3-8e1d-a1065ef6038e",
+    "c54f0922-eb5c-4abd-9bde-6586e4127424"
+  ],
+  "disambiguation_ids": [
+    "c18f084e-bb0a-4edd-84d6-fdd1bb2ede87"
+  ],
+  "connection_plan": {
+    "target_statement_id": "55892476-1e99-444b-a6bd-5430b0f115c4",
+    "missing_bridge": "Show that the source's complete nature grounds a particular objective law or that its non-rational powers cannot ground such a law, instead of inferring this from qualitative variation.",
+    "blocker": "Qualitative invariance is compatible with numerically fixed stochastic laws; underdetermination of the description does not refute a uniquely grounded complete law."
+  }
+}

@@ -120,4 +120,8 @@ macro "wc_unfold" : tactic => `(tactic|
 theorem willVersusChanceControls : Controls := by
   sorry
 
+/-- Numerical completion, calibration, symmetry and choice-partition controls. -/
+theorem distributionGroundingControls : DistributionGroundingControls := by
+  sorry
+
 end TruthCore.Results.Causality.WillVersusChance

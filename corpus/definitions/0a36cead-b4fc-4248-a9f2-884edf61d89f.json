@@ -1,0 +1,8 @@
+{
+  "id": "0a36cead-b4fc-4248-a9f2-884edf61d89f",
+  "label": "Numerical propensity law on giving histories",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.WillVersusChance.Model.binaryLaw",
+  "definition": "A Mathlib PMF on the existing Boolean giving/withholding histories. A binary law assigns masses p and q with p+q=1; the full-support controls require p,q>0. The three-point law assigns p,p,q with 2p+q=1.",
+  "note": "The numbers are supplied rather than inferred from accessibility, invariant intrinsic setup, or causal power. Objective causal applicability is a separate commitment."
+}

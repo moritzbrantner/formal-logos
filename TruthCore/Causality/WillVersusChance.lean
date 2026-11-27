@@ -4,6 +4,11 @@ public import TruthCore.Modal.PrussPowerPremises
 public import TruthCore.Latin.Aquinas.SummaTheologiae.PrimaPars.IntellectWill
 public import TruthCore.Case.Catholicism.StageTwo
 public import TruthCore.Logic.ExcludedMiddle
+public import TruthCore.Modal.STIT
+public import TruthCore.Modal.OptimalCreationChoice
+public import Mathlib.Probability.ProbabilityMassFunction.Constructions
+public import Mathlib.Algebra.BigOperators.Fin
+public import Mathlib.Data.Fin.VecNotation
 
 /-!
 # Choice versus chance at a necessary, patientless source (stage two, `66aecdd7`)
@@ -837,6 +842,61 @@ def Controls : Prop :=
   Laws ∧ TheistNonvacuity ∧ ChanceRival ∧ IntellectualChancer ∧ ChanceCoreDeletions ∧
     OmissionsIntellectRoute ∧ OmissionsHolderWill ∧ OmissionsThetaFive ∧ OmissionsGodWill ∧
     DNPStrictness ∧ SenseModels
+
+
+/-! ## Numerical completion of the chance rival
+
+The PMFs below complete a fixed qualitative description. They do not
+identify accessibility with positive probability, or assign an objective
+propensity to the foundation by definition. -/
+
+open scoped ENNReal
+
+/-- A normalized binary law; true is the withholding history of theistG. -/
+noncomputable def binaryLaw (p q : ℝ≥0∞) (h : p + q = 1) : PMF Bool :=
+  PMF.ofFintype (fun b => if b then p else q) (by
+    rw [Fintype.sum_bool]
+    simpa using h)
+
+/-- Equal mass in one orbit, with a possibly different singleton mass. -/
+noncomputable def twoOrbitLaw (p q : ℝ≥0∞) (h : p + p + q = 1) : PMF (Fin 3) :=
+  PMF.ofFintype ![p, p, q] (by
+    simpa [Fin.sum_univ_succ, add_assoc] using h)
+
+/-- Both complete outputs have the same optimal quality. -/
+def TiedOptimalLaw (μ : PMF Bool) : Prop :=
+  ∀ b, 0 < μ b →
+    TruthCore.Modal.OptimalCreationChoice.Optimal (Set.univ : Set Bool) (fun _ => (0 : Nat)) b
+
+/-- The same histories, with either singleton or indiscrete choice cells. -/
+def lawChoice (separate : Bool) : TruthCore.Modal.STIT.BranchingFrame Unit Bool Unit where
+  traverses := fun _ _ => True
+  choice := fun _ _ => Setoid.ker fun h => if separate then h.val else false
+
+def lawHistory (separate b : Bool) : (lawChoice separate).Through () :=
+  ⟨b, trivial⟩
+
+def lawCreates (separate : Bool) (h : (lawChoice separate).Through ()) : Prop :=
+  GivesTo theistG h.val .g .c
+
+/-- Numerical underdetermination, genuine determination by stronger
+constraints, and the independence of choice-cell control from sampling. -/
+def DistributionGroundingControls : Prop :=
+  ChanceRival ∧
+  (∀ p q : ℝ≥0∞, 0 < p → 0 < q → p + q = 1 →
+    ∃ μ : PMF Bool, (∀ b, 0 < μ b) ∧ μ true = p ∧ μ false = q) ∧
+  (∃ μ ν : PMF Bool, (∀ b, 0 < μ b ∧ 0 < ν b) ∧
+    μ true < μ false ∧ ν true < ν false ∧ μ true ≠ ν true ∧
+    TiedOptimalLaw μ ∧ TiedOptimalLaw ν) ∧
+  (∀ μ ν : PMF Bool, μ true = ν true → μ = ν) ∧
+  (∀ μ ν : PMF Bool, μ true = μ false → ν true = ν false → μ = ν) ∧
+  (∃ μ : PMF Bool, (∀ b, 0 < μ b) ∧ μ true = μ false) ∧
+  (∃ μ ν : PMF (Fin 3), (∀ i, 0 < μ i ∧ 0 < ν i) ∧
+    μ 0 = μ 1 ∧ ν 0 = ν 1 ∧ μ 2 ≠ ν 2) ∧
+  (TruthCore.Modal.STIT.Dstit () (lawHistory true false) (lawCreates true) ∧
+    TruthCore.Modal.STIT.Cstit () (lawHistory true true) (fun h => ¬ lawCreates true h) ∧
+    lawCreates false (lawHistory false false) ∧
+    ¬ TruthCore.Modal.STIT.Cstit () (lawHistory false false) (lawCreates false))
 
 end Model
 

@@ -2129,3 +2129,104 @@ ultimate constitution; prior accepted continuations keep their scope.
 
 - [Does the PSR-collapse family exclude a necessitating impersonal source at the will step?](../../corpus/attempts/24ae0211-148c-4400-9843-90eac4f25a59.json)
 - [What discriminates will from chance at a necessary source with an invariant set-up?](../../corpus/attempts/790d6d05-da9f-489c-b9f5-e4b66e2eab82.json)
+
+
+## Quantitative grounding of the chance rival (2026-11-27)
+
+[Research attempt](../../corpus/attempts/7659a30b-f2c1-4023-b8ee-c30c76172c9d.json) · [Proposed result](../../corpus/results/725538ae-ef24-4c5f-bca9-7bab754ba1aa.json).
+Targets DNP_inv (55892476-1e99-444b-a6bd-5430b0f115c4) and the optimal-output rival (78af5042-9b4e-41a4-bb76-ad4d1973e25a).
+This is a draft diagnostic; no root premise is discharged. The required Lean,
+binding, Comparator, NanoDa, frontier and independent review gates remain open.
+
+**Matched completions.** Reuse theistG and simpleChancy: the same invariant
+necessary giver, the same two possible histories (giving c and withholding c),
+and the same non-rational power. Extend the qualitative description with
+one Mathlib PMF, fixed across both histories. The creation/withholding masses
+7/8 and 1/8 versus 5/8 and 3/8 preserve the histories, positive support,
+strict probability rank and the same tied-optimal complete-output set.
+Every positive normalized pair is admitted by this qualitative description.
+These are different completions, not two worlds with a demonstrably
+identical *complete quantitative essence*. A necessarily fixed nondegenerate
+law does not necessitate its actual outcome. Probability is not possibility.
+
+**Positive controls.** One exact singleton mass determines the binary law by
+normalization; full exchange symmetry also determines it uniquely. With
+two orbits, masses (1/8,1/8,6/8) and (2/8,2/8,4/8) obey the same within-orbit
+symmetry. Thus the remaining freedom is orbit mass, not a failure of
+normalization. A structural determination is genuinely explanatory to the
+extent that the structure, exhaustive domain, relevance to objective chance,
+and uniqueness are grounded. Mere ordering, partial symmetry and feasibility
+are not enough.
+
+### Accounts compared at the same explanatory scope
+
+1. Necessary nature: if the complete nature entails the unique law and
+   that entailment is adequately grounded, the variation test is answered.
+   A necessary primitive quantitative nature survives a PSR restricted to
+   contingent facts. Necessity by itself says nothing about which law.
+2. Dispositions: a quantitative manifestation rule can determine the law,
+   but an unquantified ability to give or withhold cannot. The residual
+   question is why that numerical disposition is intrinsic to this source.
+   A mathematically complex profile is not automatically a really composite
+   substance. Excluding it by simplicity needs a real-multiplicity or
+   patientless-operation bridge, not just counting numerical parameters.
+3. Symmetry or structural constraints: unique normalized invariance can
+   fix a law without an agent. The independent explanatory burden concerns
+   the applicability of the symmetries, orbit masses where there are several
+   orbits, and any boundary conditions or parameters. Full symmetry is a
+   positive control, not another instance of arbitrariness.
+4. Contingent brute law: the obtaining distribution is itself unexplained.
+   This directly conflicts with sufficient reason for that contingent law,
+   but is not a logical inconsistency independent of the PSR.
+5. Intelligent direction: an agent can intend and produce a particular
+   complete effect without sampling an outcome; if instead it intentionally
+   institutes a stochastic law, the reason for that law remains a distinct
+   explanatory obligation. Intention must do explanatory work, not just
+   rename the actual outcome. Tied optima do not specify either a measure
+   or a selection rule.
+
+### Cumulative placement
+
+The STIT comparison holds the histories and giving event fixed while
+comparing singleton and indiscrete choice cells. It distinguishes actual
+occurrence from seeing to it that an outcome occurs, including an available
+cell ensuring withholding. It neither requires a stochastic mechanism
+nor establishes that such control belongs to the actual necessary root.
+
+The existing optimal-creation-choice result separates unique optimum,
+ties and nonexistence of an optimum. The numerical control adds that even
+an unchanged tied-optimum set and a strict probability ordering leave
+quantitative weights open. A unique optimum under a justified total
+optimization principle is a different, stronger explanatory account.
+
+The causal-perfection/intellect route must be evaluated independently.
+If intellect, one power, the will-following-intellect premise and the
+operation bridge are established for this very source, the existing
+oneIntellectualPowerGivesWilledGiving route constrains the exercise of its
+power, rather than excluding chance by its definition. Neither causal
+perfection nor simplicity alone calculates numerical weights. PSRLaterAxes
+already distinguishes probabilistic ranking/conditioning from production:
+conditioning on a necessary source cannot explain the particular law just
+by increasing event probability.
+
+**Provisional comparison.** A bare possibility space, qualitative power,
+ordinal ranking, or incomplete symmetry does not ground a particular law.
+The strongest surviving impersonal commitments are (i) a necessary complete
+quantitative nature with a uniquely grounded nondegenerate law, (ii) a
+grounded structure that uniquely induces that law, and (iii) a primitive
+necessary law accepted as an explanatory terminus. A contingent brute law
+survives only rejection or restriction of the applicable PSR. The personal
+route can explain actual contingent production without positing a selection
+probability, but requires independent intellectual/rational causal warrant
+and adequate reasons for intentional exercise. The numerical controls do
+not establish DNP_inv, defeat necessary intrinsic propensities, or prove
+the personal route. A contrastive explanation of action need not imply
+necessitation; conversely, merely naming a free choice is not a contrastive
+explanation.
+
+**Next discriminator.** Specify the objective chance law on complete outputs,
+identify its alleged ground in the complete simple source, and test uniqueness
+without building the law into the premise as an unexplained parameter.
+Contrast this with independently justified intentional causal direction.
+Separate the question of grounding a law from the question of grounding
+an individual realization of it; neither entails the other without a bridge.
