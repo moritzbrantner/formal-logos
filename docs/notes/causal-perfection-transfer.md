@@ -5236,7 +5236,7 @@ A, scope).
 | deny EM | a necessary lack with no essential ground | not needed | as the impersonal root | powers accounts, primitivism |
 | deny LE (uncarried negative clause) | a nature with an exclusion that no real determination carries | not needed | as the impersonal root | brute negative facts; the reference-class objection below |
 | deny MG | a root determination requires a lack that does not bind admissibility | not needed | as the impersonal root | none identified |
-| keep LE, carrier real | the carrier is impure: excluded by `0c8631bd` and `3b39e0ba` | its impure lacks need pure carriers or inadmissibility | as the impersonal root | — |
+| keep LE, carrier real | the carrier is impure: excluded by `0c8631bd` and `3b39e0ba` | its impure lacks need pure carriers or inadmissibility | as the impersonal root | the Plotinian line (unity excludes the duality of thought; [above](#simple-self-understanding-and-the-plotinian-objection), "Unresolved stronger Plotinian claim"), which denies `0c8631bd` with a pure carrier |
 | what compliance rests on | — | admissibility and maximality of the full pure profile, pure carriers for impure lacks, N via the relation-of-reason account | — | — |
 
 The standard is the same in every column. The classical root denies none of
@@ -5338,11 +5338,14 @@ Formal validity is unchanged by this judgment.
 
 **Review state.** The independent semantic challenge reviewed `f00df7af4`. It
 accepted the registered types, premise lists, cycle handling, cross-lane edits
-and controls. It did not accept the assessment. The repairs in the commit that
-adds this sentence scope the verdict to case (iii), record the reference-class
+and controls, and did not accept the assessment (three P1). Repairs at
+`09aa5fc44` scope the verdict to case (iii), record the reference-class
 objection, price N for the classical root (`classicalSelectionControl`),
 register strictness `2f9866e3`, and correct the wording of B, of the truthmaker
-paragraph and of ESSENCE_6. A targeted re-check is pending.
+paragraph and of ESSENCE_6. The targeted re-check at `45fbffa76` found the
+branch ready with no remaining P1. Its optional P2s (scope of the strictness
+records, the Plotinian pointer in the price table, durable review state) are
+fixed in the commit that adds this sentence.
 
 ### Next discriminating tests
 

@@ -6,5 +6,5 @@
   "predicate": "tests",
   "object_kind": "statement",
   "object_id": "682e6436-a44f-40d6-bc02-7cb5f4a2b754",
-  "note": "Carriage is satisfied by an assignment whose closure is carried by a pure determination requiring the lack of a pure one; there the purity of requirements (0c8631bd) and the necessity direction of member grounding fail, which is what blocks the carried closure at a root."
+  "note": "Carriage is satisfied by an assignment whose closure is carried by a pure determination requiring the lack of a pure one. In that assignment the purity of requirements (0c8631bd) and the necessity direction of member grounding fail (shown in carriageControls row 3, not in this result's own type). At a root such a carrier is blocked by 0c8631bd with 3b39e0ba; the necessity direction does not block it but sends the absence to case (i) or (ii)."
 }

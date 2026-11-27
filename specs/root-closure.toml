@@ -93,7 +93,7 @@ axioms = ["propext", "Classical.choice", "Quot.sound"]
 premises = []
 conclusion = "The carried-closure assignment separates positive root essences from carriage"
 rule = "Finite check (row 3 of carriageControls)"
-meaning = "With the closure 'lacks noesis' carried by the pure a, carriage holds and positivity fails: the strengthening of carriage by positivity is strict. A structural interpretation only; in the same row the necessity direction of member grounding and the purity of requirements fail."
+meaning = "With the closure 'lacks noesis' carried by the pure a, carriage holds and positivity fails: the strengthening of carriage by positivity is strict. A structural interpretation only. In the same assignment the necessity direction of member grounding and the purity of requirements fail (shown in carriageControls row 3, not in this result's own type). At a root such a carrier is blocked by 0c8631bd with 3b39e0ba; the necessity direction instead sends the absence to case (i) or (ii)."
 description = "Strictness control for positivity of root essences over carriage. Establishes no premise."
 
 [[relation]]
@@ -114,4 +114,4 @@ subject_id = "2f9866e3-a768-40a2-b166-eb1a277d1fff"
 predicate = "tests"
 object_kind = "statement"
 object_id = "682e6436-a44f-40d6-bc02-7cb5f4a2b754"
-note = "Carriage is satisfied by an assignment whose closure is carried by a pure determination requiring the lack of a pure one; there the purity of requirements (0c8631bd) and the necessity direction of member grounding fail, which is what blocks the carried closure at a root."
+note = "Carriage is satisfied by an assignment whose closure is carried by a pure determination requiring the lack of a pure one. In that assignment the purity of requirements (0c8631bd) and the necessity direction of member grounding fail (shown in carriageControls row 3, not in this result's own type). At a root such a carrier is blocked by 0c8631bd with 3b39e0ba; the necessity direction does not block it but sends the absence to case (i) or (ii)."
