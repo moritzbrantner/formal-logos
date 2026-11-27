@@ -31,7 +31,7 @@
       "date": "2026-11-27"
     },
     {
-      "role": "worker",
+      "role": "repair",
       "provider": "anthropic",
       "model": "claude-opus-5-5",
       "effort": "high",
