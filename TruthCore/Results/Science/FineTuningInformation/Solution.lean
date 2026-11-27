@@ -1,6 +1,9 @@
 module
 
 public import TruthCore.Science.FineTuningInformation
+import Mathlib.Tactic.FieldSimp
+import Mathlib.Tactic.Positivity
+import Mathlib.Tactic.Ring
 
 @[expose] public section
 
@@ -117,5 +120,102 @@ theorem nullStateControl :
   intro s t hs ht _
   have hfalse : ¬ 0 < (modelPrior 1).real {false} := by rw [prior_false]; norm_num
   cases s <;> cases t <;> first | rfl | exact (hfalse hs).elim | exact (hfalse ht).elim
+
+namespace Plenitude
+
+open Set
+open TruthCore.Science.FineTuningInformation.Plenitude
+
+theorem repeatedTypes : RepeatedTypes := by
+  constructor
+  · apply Set.Subset.antisymm
+    · exact Set.subset_univ _
+    · intro b _
+      exact ⟨(b, 0), Set.mem_univ _, rfl⟩
+  · intro b
+    refine ⟨fun n => (b, n), ?_, ?_⟩
+    · intro m n h
+      exact congrArg Prod.snd h
+    · intro n
+      exact ⟨Set.mem_univ _, rfl⟩
+
+theorem fine_probability (p : unitInterval) :
+    (observationLaw p).real fineEvent = (p : ℝ) := by
+  rw [observationLaw, fineEvent, measureReal_def, Measure.prod_prod, measure_univ, mul_one]
+  exact prior_true p
+
+theorem positive_singletons (p : unitInterval) (hp : 0 < (p : ℝ))
+    (hp' : (p : ℝ) < 1) (u : Universe) :
+    0 < (observationLaw p).real {u} := by
+  rcases u with ⟨b, n⟩
+  have hb : 0 < (modelPrior p).real {b} := by
+    cases b
+    · rw [prior_false]
+      exact sub_pos.mpr hp'
+    · rw [prior_true]
+      exact hp
+  have h0 : half ≠ 0 := by
+    intro h
+    have hv := congrArg (fun q : unitInterval => (q : ℝ)) h
+    norm_num [half] at hv
+  have h1 : half ≠ 1 := by
+    intro h
+    have hv := congrArg (fun q : unitInterval => (q : ℝ)) h
+    norm_num [half] at hv
+  have hn : 0 < (geometricMeasure half).real {n} :=
+    geometricMeasure_real_singleton_pos h0 h1 n
+  rw [← Set.singleton_prod_singleton, observationLaw, measureReal_def,
+    Measure.prod_prod, ENNReal.toReal_mul]
+  exact mul_pos hb hn
+
+theorem observationalUnderdetermination : ObservationalUnderdetermination := by
+  refine ⟨repeatedTypes, ?_, ?_⟩
+  · intro p
+    refine ⟨?_, positive_singletons p.val p.property.1 p.property.2, fine_probability p.val⟩
+    unfold observationLaw
+    infer_instance
+  · intro possible reachable h
+    let lo : InteriorRate :=
+      ⟨⟨1/100, by norm_num, by norm_num⟩, by norm_num, by norm_num⟩
+    let hi : InteriorRate :=
+      ⟨⟨99/100, by norm_num, by norm_num⟩, by norm_num, by norm_num⟩
+    have he := h lo hi rfl
+    simp only [fine_probability] at he
+    norm_num [lo, hi] at he
+
+theorem cutoffUnderdetermination : CutoffUnderdetermination := by
+  intro a b ha hb
+  refine ⟨?_, ?_, ?_⟩
+  · intro n m h tag k hk
+    simp only [slice, Finset.mem_range] at hk ⊢
+    exact lt_of_lt_of_le hk (Nat.mul_le_mul_left _ (Nat.add_le_add_right h 1))
+  · intro tag k
+    have ht : 1 ≤ (if tag then a else b) := by
+      cases tag <;> simp <;> omega
+    have hx := Nat.mul_le_mul_right (k + 1) ht
+    simp only [slice, Finset.mem_range]
+    exact lt_of_lt_of_le (Nat.lt_succ_self k) (by simpa using hx)
+  · intro n
+    have hA : 0 < (a : ℚ) := by exact_mod_cast ha
+    have hB : 0 < (b : ℚ) := by exact_mod_cast hb
+    have hN : 0 < (n : ℚ) + 1 := by positivity
+    have hSum : 0 < (a : ℚ) + b := add_pos hA hB
+    simp [cutoffLikelihood, slice, Nat.cast_mul, Nat.cast_add] <;>
+      rw [← add_mul] <;> field_simp [ne_of_gt hN, ne_of_gt hSum] <;> ring
+
+theorem observerWeightUnderdetermination : ObserverWeightUnderdetermination := by
+  constructor
+  · intro s
+    simp [weightedLikelihood, likelihood]
+  · intro s hother p hp hp'
+    refine ⟨p / s.weight 0, (1-p) / s.weight 1,
+      div_pos hp s.evidence_pos, div_pos (sub_pos.mpr hp') hother, ?_⟩
+    have hx : s.weight 0 * (p / s.weight 0) = p := by
+      field_simp [ne_of_gt s.evidence_pos]
+    have hy : s.weight 1 * ((1-p) / s.weight 1) = 1-p := by
+      field_simp [ne_of_gt hother]
+    rw [weightedLikelihood, hx, hy, show p + (1-p) = 1 by ring, div_one]
+
+end Plenitude
 
 end TruthCore.Results.Science.FineTuningInformation
