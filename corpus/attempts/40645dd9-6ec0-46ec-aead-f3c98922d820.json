@@ -17,7 +17,8 @@
   "summary": "Warrant-phase checkpoint on the top substantive bottleneck family (computed ranking in docs/notes/spine-dependency-map.md, 2026-11-27). The unrestricted maxim 376d6a5a ranks first because the distinct-cause version 2c0b9bd7 is derived only through the strength application 777d3b8d or the cycle with 'more such' d5a94eb1; no route consumer uses its self-causation case. Verified: for every single act predicate shared by the possession premise and the exceeding step, the more-such package with the more-such bearer c11369aa read formally implies formal distinct-cause possession (moreSuchPackageForcesFormalPossession, premise-free). Verified finite controls shaped like induction heating: with the ordinary comparative, the formal gap, inclusive possession, the four reception premises and the formal bearer hold while the inclusive exceeding step 7030af77, 'more such' and formal possession fail; with an eminent comparative the package holds at inclusive act and only the formal bearer fails. The formal reading 26632e48 and 'more such' on the ordinary comparative are contradicted by actual cases (induction heating; Rumford's boring trials) under the recorded meaning of CAUSE_2. Inclusive possession has no substantive objection identified on the power determination of IN_ACT_2. The eminent comparative has no specification on file and shares the degree-calibration gap. No premise is established, defeated in the frontier sense, or closed.",
   "evidence": [
     "af2ab17b-2f8e-4066-88c0-33e0469c7293",
-    "97016bbd-9873-4dca-8fc8-36ac34cce220"
+    "97016bbd-9873-4dca-8fc8-36ac34cce220",
+    "PR-2166"
   ],
   "blocker": "Consumer audit: decide for c201b61a, a31b3e52, 924302df, d0c022f8 and the stage-two possession bridges whether each needs formal possession or formal comparison at a perfection other than being, or only inclusive possession and an eminent comparative; then an independent specification of the eminent comparative, which the degree-calibration family also lacks.",
   "current_assessment": {
@@ -46,7 +47,8 @@
       "provider": "claude",
       "model": "claude-opus-5-5",
       "effort": "high",
-      "date": "2026-11-27"
+      "date": "2026-11-27",
+      "pr": "PR-2166"
     }
   ]
 }
