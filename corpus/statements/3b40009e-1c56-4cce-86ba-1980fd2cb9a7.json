@@ -1,13 +1,14 @@
 {
   "id": "3b40009e-1c56-4cce-86ba-1980fd2cb9a7",
   "label": "Whatever has a good-general favouring apprehends some content",
-  "paraphrase": "OPEN cognition criterion, analyst formulation, attribution deferred: every bearer x that has the real determination that its own favouring is a good-general profile phi (its favouring of candidates, at least one not a present input, depends on their betterness with end-realization held fixed) itself apprehends some content that is about some candidate. It is stated without reference to persons and applies in the same way to rational exercise and to an impersonal good-general nature. Its two marks each exclude one known noncognitive directed relation: a disposition or law whose selection factors through its own fixed end content, and a comparator that responds only to present inputs (CriterionTable). Whether any noncognitive relation meets both marks is the point the impersonal good-general rival denies.",
+  "paraphrase": "OPEN cognition criterion, analyst formulation, attribution deferred: every bearer x that has the real determination that a favouring of it is a good-general profile phi (for at least one pair of candidates, at least one not a present input, its favouring depends on their betterness, read as value, with end-realization held fixed) itself apprehends some content that is about some candidate. It is a direct assumption whose content is the thesis that responsiveness of favouring to the value of non-present candidates is cognition; it is stated without reference to persons and applies in the same way to rational exercise and to an impersonal good-general nature. At a root before production nothing is a present input, so there it rests on the value-dependence mark alone. The value reading is load-bearing: with lower action as the ranking, a least-action law meets the formal definition (CriterionTable row 5). The impersonal good-general rival affirms what the criterion denies: that a noncognitive favouring can depend on the value of non-present candidates. With About and Apprehends free, this criterion and the recognition bridge together amount to one thesis.",
   "lean_declaration": "TruthCore.Causality.ImpersonalFoundationJoint.GoodGeneralFavouringIsApprehension",
   "definition_ids": [
     "abd8cfa4-1887-47d5-86cc-e0f6092e4ded",
     "071b24f0-ef72-4012-8c7d-ab3be3335961",
     "07f3fb85-6036-4e42-8eb8-a18db846719f",
-    "b28d7e04-694b-442b-a42b-65f39190956f"
+    "b28d7e04-694b-442b-a42b-65f39190956f",
+    "3ece6dfe-c033-4546-b7d4-94ef48a235df"
   ],
   "disambiguation_ids": [
     "8430c7dc-2972-4f47-87a9-ce4676533cdf"

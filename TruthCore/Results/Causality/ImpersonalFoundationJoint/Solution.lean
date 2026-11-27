@@ -66,8 +66,8 @@ theorem actualRootFavouringIsGoodGeneral {W B T R D P S X Z : Type}
 
 /-! ## B. The good-general horn meets the cognition criterion -/
 
-/-- Horn B. Every actual root has an own favouring determination (the weakest
-form of commitment (e) used); by horn A it is good-general; the cognition
+/-- Horn B. Every actual root has a favouring determination (the weakest form of
+commitment (e) under ORIGINAL_FINALITY_1 and _2); by horn A it is good-general; the cognition
 criterion then gives an apprehended content about a candidate. -/
 theorem actualRootsApprehendThroughGoodGeneralFavouring {W B D S X Z C : Type}
     (m : Profile W B) (w : W) (Has : B → D → Prop)
@@ -113,8 +113,7 @@ theorem godHasIntellectFromGoodGeneralApprehension {W B D S X Z C : Type}
 /-! ## Lean-only consequences, cores and boundaries -/
 
 /-- A favouring that factors through the end-realization feature (a nature
-determined to its end content D, or a law selecting by its own fixed functional)
-is not good-general: law 1 of `GoodDependenceLaws`. -/
+determined to its end content D) is not good-general: law 1 of `GoodDependenceLaws`. -/
 theorem factorsThroughNotGoodGeneral {S X Z : Type} (good : S → X → X → Prop) (fitOf : S → Z)
     (Present : S → X → Prop) (φ : TruthCore.Causality.GoodFavouring.Profile S X)
     (hfac : Function.FactorsThrough φ fitOf) : ¬ GoodGeneral good fitOf Present φ := by
@@ -166,8 +165,8 @@ theorem variationCore {D S X Z : Type} (Admissible : Set D → Prop) (Pure : D �
   exact TruthCore.Results.Causality.GoodFavouring.goodDependenceLaws.2.2.2.1 S X Z good fitOf ψ
     s x y hFixed hdep
 
-/-- A comparator all of whose candidates are present inputs (a balance) is not
-good-general, whatever it tracks. -/
+/-- A comparator all of whose candidates are present inputs is not good-general,
+whatever ranking it tracks. -/
 theorem presentInputsNotGoodGeneral {S X Z : Type} (good : S → X → X → Prop) (fitOf : S → Z)
     (Present : S → X → Prop) (hAll : ∀ s x, Present s x)
     (φ : TruthCore.Causality.GoodFavouring.Profile S X) : ¬ GoodGeneral good fitOf Present φ := by
@@ -176,7 +175,7 @@ theorem presentInputsNotGoodGeneral {S X Z : Type} (good : S → X → X → Pro
   · exact hy (hAll s y)
 
 /-- The incompatible core of the impersonal foundation. With an actual root,
-the premises of horns A and B, commitment (e) in its weakest form and commitment
+the premises of horns A and B, commitment (e) in its weakest favouring form and commitment
 (c) (no actual root apprehends any content) cannot all hold. At least one member
 must be rejected; the core does not select which. -/
 theorem impersonalFoundationCore {W B T R D P S X Z C : Type}
@@ -482,9 +481,12 @@ theorem criterionTable : CriterionTable := by
   refine ⟨⟨ggBetter, ggBetter, rfl⟩, ⟨notGGdNature, notGGdNature,
     constNotGG _ fun _ _ => rfl, constNotGG _ fun _ _ => rfl⟩,
     presentInputsNotGoodGeneral better fits allPresent (fun _ _ => trivial) better, ?_⟩
-  rintro ⟨s, x, y, hdep, -⟩
-  exact TruthCore.Results.Causality.GoodFavouring.goodDependenceLaws.2.2.2.1 _ _ _ fitOrder
-    fits better s x y (fun a b hab => by funext x y; simp only [fitOrder, hab]) hdep
+  refine ⟨?_, ⟨.v1, .p, .q, ⟨trivial, trivial, .v2, rfl, id, id⟩, Or.inl id⟩, ?_⟩
+  · rintro ⟨s, x, y, hdep, -⟩
+    exact TruthCore.Results.Causality.GoodFavouring.goodDependenceLaws.2.2.2.1 _ _ _ fitOrder
+      fits better s x y (fun a b hab => by funext x y; simp only [fitOrder, hab]) hdep
+  · rintro ⟨_, _, _, ⟨h, -⟩, -⟩
+    exact h
 
 private theorem reachIffJ (n : Bool) : reach n ↔ n = true := by
   constructor

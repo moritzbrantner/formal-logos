@@ -1,7 +1,7 @@
 {
   "id": "7fca65ec-8565-46fe-a5fe-bfdfcf0ed245",
   "label": "Every favouring determination of an actual root is good-general",
-  "paraphrase": "Analyst formulation, attribution deferred: for every actual concrete root r at w and every favouring profile phi, if r has the real determination that its own favouring is phi, then phi is good-general: for some scenario and candidates, at least one not a present input, phi depends on betterness with end-realization held fixed (BECAUSE_OF_GOODNESS_2). It does not say that any root has a favouring; a root whose favouring factors through its end content does not satisfy it.",
+  "paraphrase": "Analyst formulation, attribution deferred: for every actual concrete root r at w and every favouring profile phi, if r has the real determination that a favouring of r is phi, then phi is good-general: for some scenario and candidates, at least one not a present input, phi depends on betterness with end-realization held fixed (BECAUSE_OF_GOODNESS_2). It does not say that any root has a favouring; a root whose favouring factors through its end content does not satisfy it.",
   "lean_declaration": "TruthCore.Causality.ImpersonalFoundationJoint.ActualRootFavouringIsGoodGeneral",
   "definition_ids": [
     "3aba5f19-f48d-50db-bc57-93ba2e99f845",

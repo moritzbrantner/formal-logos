@@ -25,32 +25,42 @@ being" of the #2153 limiting principle is the frame's `PriorSimply` (PRIOR_1).
 The grounding profile, compositeness and the represented essence and esse are
 not frame fields and stay explicit parameters, as in #2153.
 
-**Favouring determinations.** `favours φ` is the real determination "the bearer's
-own favouring is the profile φ" (one token per profile). `goodGen` is the real
-determination "the bearer favours the better as such". Neither token is fixed in
-Lean; their content enters only through the open bridge
-`OneFavouringRealization`: every admissible profile (a set of determinations a
-simple, unreceived, necessary source could jointly have) is realized by ONE
-favouring profile ψ, every favouring token in it names ψ, and if it contains
-`goodGen` then ψ is good-general. The "one" is where simplicity enters: a
-composite source could have a fixed natural inclination and a good-general
-appetite as two distinct powers, and the `anyFamily` control (two favourings
-jointly admissible) is exactly that case.
+**Favouring determinations.** `favours φ` is the real determination "a
+favouring of the bearer is the profile φ" (one token per profile). `goodGen` is
+the real determination "the bearer's favouring depends on betterness for at
+least one pair" (good-generality; the Lean content is existential). Neither
+token is fixed in Lean; their content enters only through the open bridge
+`OneFavouringRealization`: every admissible profile is realized by ONE favouring
+profile ψ, every favouring token in it names ψ, and if it contains `goodGen` then
+ψ is good-general. That a profile has at most one favouring is an OPEN reading of
+what a simple source's favouring is; it is not derived from the encoded
+simplicity (`ActualRootsWithoutLimitingPrinciple` holds in the `anyFamily`
+control, where two favourings are jointly admissible, while a simple root may
+carry several other distinct determinations such as `esse` and `goodGen`).
 
 **Good-general favouring** (`GoodGeneral`, profile level): for some scenario and
-pair of candidates, the favouring depends on betterness with the end-realization
-feature held fixed (BECAUSE_OF_GOODNESS_2) and at least one of the two candidates
-is not a present input of the favouring at that scenario. The second clause
-separates a comparator that responds only to inputs actually present to it (a
-balance); the first separates a disposition whose favouring factors through its
-fixed end content (law 1 of `GoodDependenceLaws`).
+pair of candidates, the favouring depends on the betterness standard `good` with
+the end-realization feature held fixed (BECAUSE_OF_GOODNESS_2), and at least one
+of the two candidates is not a present input of the favouring at that scenario.
+`good` is a parameter. Its INTENDED reading is a value ranking (x is a better good
+than y); Lean does not type value. Under any other ranking the definition is met
+by noncognitive selectors: `CriterionTable` row 5 is a toy least-action law
+(`good` := lower action, `fitOf` := fixed endpoints) that is good-general in
+the formal sense. Read with `good` as value, the first mark excludes every
+favouring that does not depend on value at all, and the second excludes a
+comparator restricted to inputs present to it. At a root before production
+nothing is a present input, so there the criterion rests on the first mark alone.
 
 **Cognition criterion** (`GoodGeneralFavouringIsApprehension`): a bearer whose
 favouring determination is good-general apprehends some content about a
-candidate. It is an OPEN analyst bridge. Its two clauses are characterized
+candidate. It is an OPEN analyst bridge, a direct assumption whose content is
+the thesis that responsiveness of favouring to the VALUE of non-present
+candidates, with their end content held fixed, is cognition. It is stated
 without reference to persons; it applies in the same way to rational exercise
-and to an impersonal good-general nature, which `GoodFavouring` represents by the
-same function.
+and to an impersonal good-general nature, which `GoodFavouring` represents by
+the same function. Because `About` and `Apprehends` are free, the criterion and
+the recognition bridge together amount to one thesis: good-general favouring at
+GOD_4 is intellect.
 
 Every model in `Control` is a finite structural surrogate. It witnesses only the
 stated formal interpretation, never a metaphysical possibility. -/
@@ -68,12 +78,16 @@ variable {W B D S X Z C : Type}
 /-- GOOD-GENERAL favouring profile: in some scenario `s`, for candidates `x`, `y`
 of which at least one is not a present input at `s`, the profile's favouring of
 `x` over `y` depends on the betterness standard `good` with the end-realization
-feature `fitOf` held fixed (BECAUSE_OF_GOODNESS_2, `BecauseOfGoodness`). -/
+feature `fitOf` held fixed (BECAUSE_OF_GOODNESS_2, `BecauseOfGoodness`).
+Existential: one scenario and one pair suffice. `good` is intended as a value
+ranking; under another ranking (lower action) a physical law meets it
+(`CriterionTable` row 5). -/
 def GoodGeneral (good : S → X → X → Prop) (fitOf : S → Z) (Present : S → X → Prop)
     (φ : GoodFavouring.Profile S X) : Prop :=
   ∃ s x y, BecauseOfGoodness good fitOf φ s x y ∧ (¬ Present s x ∨ ¬ Present s y)
 
-/-- OPEN one-favouring realization (the simplicity bridge for favouring): every
+/-- OPEN one-favouring realization (an open reading of simplicity for favouring,
+not derived from `ActualRootsWithoutLimitingPrinciple`): every
 admissible profile `q` is realized by one favouring profile `ψ`; every favouring
 token in `q` names `ψ`, and if `q` contains the good-general token then `ψ` is
 good-general. It is a reading of what the favouring tokens and admissibility
@@ -84,7 +98,8 @@ def OneFavouringRealization (Admissible : Set D → Prop)
   ∀ q, Admissible q → ∃ ψ : GoodFavouring.Profile S X,
     (∀ φ, favours φ ∈ q → φ = ψ) ∧ (goodGen ∈ q → GoodGeneral good fitOf Present ψ)
 
-/-- OPEN, analyst formulation: favouring the better as such is a pure perfection
+/-- OPEN, analyst formulation: good-generality (a favouring that depends on
+betterness for at least one pair, with end content fixed) is a pure perfection
 in the sense of the supplied `Pure` (DEF-PURE-PERFECTION), the same parameter as
 in the #2153 premises. -/
 def GoodGeneralityIsPure (Pure : D → Prop) (goodGen : D) : Prop := Pure goodGen
@@ -95,10 +110,13 @@ def ActualRootFavouringIsGoodGeneral (m : Profile W B) (w : W) (Has : B → D �
     (Present : S → X → Prop) : Prop :=
   ∀ r, ActualRoot m w r → ∀ φ, Has r (favours φ) → GoodGeneral good fitOf Present φ
 
-/-- OPEN, the weakest form of commitment (e) used here: every actual root at `w`
-has an own favouring determination. ORIGINAL_FINALITY_1 at a root (an own
-favouring that prefers the better and depends on end-realization) includes it;
-the finality conditions themselves are not used. -/
+/-- OPEN, the weakest form of commitment (e) under ORIGINAL_FINALITY_1 and _2
+used here: every actual root at `w` has a favouring determination.
+ORIGINAL_FINALITY_1 at a root (an own favouring that prefers the better and
+depends on end-realization) includes it; the finality conditions themselves are
+not used. A root that originates finality only as an object of appetite, with
+no favouring of its own (the final-cause-as-object reading), does not meet it;
+that reading is a recorded rival, not covered here. -/
 def ActualRootsHaveOwnFavouring (m : Profile W B) (w : W) (Has : B → D → Prop)
     (favours : GoodFavouring.Profile S X → D) : Prop :=
   ∀ r, ActualRoot m w r → ∃ φ, Has r (favours φ)
@@ -132,9 +150,11 @@ def ActualRootsApprehendThroughGoodGeneralFavouring (m : Profile W B) (w : W)
 
 /-- OPEN recognition bridge: every GOD_4 bearer that apprehends through
 good-general favouring satisfies the unary `HasIntellect` of HAS_INTELLECT_1. It
-carries the intellectual, as against sensory, grade: favouring by the betterness
-of candidates that are not present inputs, with their end content held fixed, is
-read as grasping goodness as such. It is sufficiency only. -/
+carries the intellectual, as against sensory, grade: a favouring that depends,
+for at least one pair, on the value of candidates that are not present inputs,
+with their end content held fixed, is read as grasping goodness under the
+aspect of goodness. The antecedent is existential (one pair, one scenario). It
+is sufficiency only. -/
 def GodGoodGeneralApprehensionIsIntellect (IsGod HasIntellect : B → Prop)
     (Has : B → D → Prop) (favours : GoodFavouring.Profile S X → D)
     (good : S → X → X → Prop) (fitOf : S → Z) (Present : S → X → Prop)
@@ -171,7 +191,8 @@ def favTok : GoodFavouring.Profile Scenario Outcome → Det := Det.fav
 production). -/
 def noInputs (_ : Scenario) (_ : Outcome) : Prop := False
 
-/-- Every candidate is a present input (a balance comparing what is on its pans). -/
+/-- Every candidate is a present input (a comparator restricted to what is
+presented to it, whatever ranking it tracks). -/
 def allPresent (_ : Scenario) (_ : Outcome) : Prop := True
 
 /-- Good-general favouring on the control carrier. -/
@@ -303,7 +324,8 @@ conclusion fails there.
    admissibility fails;
 6. good-generality impure: only its purity fails;
 7. every profile admissible, so two favourings can be had together: only
-   one-favouring realization fails. -/
+   one-favouring realization fails; the root still has no represented limiting
+   principle, so this row keeps the encoded simplicity. -/
 def FavouringControls : Prop :=
   (roots False ∧ limits simpleFamily personalSrc purePos False ∧ rootAdm simpleFamily personalSrc ∧
     pureAdm simpleFamily purePos ∧ ggPure purePos ∧ realizes simpleFamily ∧
@@ -345,19 +367,60 @@ def ApprehensionControls : Prop :=
   (general personalSrc ∧ favouring personalSrc ∧ ¬ criterion personalSrc appNone ∧
     ¬ apprehends personalSrc appNone)
 
-/-- How the criterion classifies the Lane 2b profiles and a balance.
+/-- Toy least-action carrier (the semantic challenge's probe): two potentials
+with the same fixed endpoints, two candidate paths. -/
+inductive Pot
+  | v1
+  | v2
+
+/-- Candidate paths. -/
+inductive Traj
+  | p
+  | q
+
+/-- The fixed endpoints: the same in both potentials. -/
+def endpoints (_ : Pot) : Unit := ()
+
+/-- Lower action: `p` under `v1`, `q` under `v2`. -/
+def lessAction : Pot → Traj → Traj → Prop
+  | .v1, .p, .q => True
+  | .v1, .p, .p => False
+  | .v1, .q, _ => False
+  | .v2, .q, .p => True
+  | .v2, .q, .q => False
+  | .v2, .p, _ => False
+
+/-- The law favours the lower-action path. -/
+def leastActionLaw : GoodFavouring.Profile Pot Traj := lessAction
+
+/-- No value difference between the two paths. -/
+def noValue (_ : Pot) (_ _ : Traj) : Prop := False
+
+/-- No candidate path is a present input. -/
+def noPaths (_ : Pot) (_ : Traj) : Prop := False
+
+/-- How the criterion classifies the Lane 2b profiles, a present-input
+comparator and a least-action law. Row 5 shows that the formal definition
+classifies by whatever ranking is supplied as `good`: the definitional
+restriction of `good` to value is what keeps the law out.
 1. The good-general nature and rational exercise (the same function) are
    good-general, witnessed at `cBetter` with `actual` as the scenario that holds
    end-realization fixed; the counterpossible `valueless` scenario is not used.
 2. The D-nature, the determined will, the proxy and chance are not.
-3. A balance that tracks betterness but only among present inputs is not.
+3. A comparator restricted to present inputs is not, whatever it tracks (here
+   the betterness ordering itself; a real balance tracks weight, not value).
 4. If betterness is the D-realization ordering itself (no variation of goodness
-   at fixed end content), not even the good-tracking profile is good-general. -/
+   at fixed end content), not even the good-tracking profile is good-general.
+5. With `good` := lower action and fixed endpoints, a least-action law is
+   good-general in the formal sense; with a value ranking under which the paths
+   do not differ, it is not. -/
 def CriterionTable : Prop :=
   (gg goodGeneral ∧ gg rational ∧ goodGeneral = rational) ∧
   (¬ gg dNature ∧ ¬ gg determinedWill ∧ ¬ gg proxy ∧ ¬ gg chance) ∧
   ¬ GoodGeneral better fits allPresent better ∧
-  ¬ GoodGeneral GoodFavouring.Model.fitOrder fits noInputs better
+  ¬ GoodGeneral GoodFavouring.Model.fitOrder fits noInputs better ∧
+  (GoodGeneral lessAction endpoints noPaths leastActionLaw ∧
+    ¬ GoodGeneral noValue endpoints noPaths leastActionLaw)
 
 /-- Recognition-step controls: a positive witness and, for three of the four
 premises, a row where it fails, the others hold and GOD_4 HAS_INTELLECT_1 fails

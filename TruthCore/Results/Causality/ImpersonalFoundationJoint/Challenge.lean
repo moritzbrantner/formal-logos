@@ -52,8 +52,8 @@ theorem actualRootFavouringIsGoodGeneral {W B T R D P S X Z : Type}
 
 /-! ## B. The good-general horn meets the cognition criterion -/
 
-/-- Horn B. Every actual root has an own favouring determination (the weakest
-form of commitment (e) used); by horn A it is good-general; the cognition
+/-- Horn B. Every actual root has a favouring determination (the weakest form of
+commitment (e) under ORIGINAL_FINALITY_1 and _2); by horn A it is good-general; the cognition
 criterion then gives an apprehended content about a candidate. -/
 theorem actualRootsApprehendThroughGoodGeneralFavouring {W B D S X Z C : Type}
     (m : Profile W B) (w : W) (Has : B → D → Prop)
