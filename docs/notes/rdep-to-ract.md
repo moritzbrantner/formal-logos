@@ -16,8 +16,8 @@ and R-act₂ are registered there.
 
 This is a provisional judgment under the systematic loop. It changes no frontier rule
 and no existing theorem or Challenge. **Review status:** the challenge at `56e9dab7`
-accepted it with qualifications (5 P1, 6 P2). The repairs are in §10; a re-check is
-pending.
+accepted it with qualifications (5 P1, 6 P2), and the re-check at `9ff8ed73` again
+accepted it with qualifications (3 P1, 3 P2). The repairs of both are in §10.
 
 ## 1. The sources, read in full
 
@@ -32,8 +32,10 @@ All five Aquinas texts were read in the materialized witnesses:
 | ST I q.7 a.2 | `fb608477` |
 
 Suárez, *Disputationes metaphysicae* XXXI, sect. XIII, nn.17–18, was read in the pinned
-local copy of the Castellote–Renemann edition (sha256 `1df6c70b`, pp. 80–81). There is no
-passage record; attribution goes through this note.
+local copy of the Castellote–Renemann edition (sha256 `1df6c70b`, pp. 80–81). It now
+has a pinned `web_snapshot` passage record, `f87d414b` (source `3dba6cf4`, physical PDF
+pp. 80–81, text hash pinned). No stating claim is attached; attribution goes through
+this note.
 
 **ST I q.4 a.1, objection 3 and ad 3.** The objection: "ipsum esse videtur esse
 imperfectissimum: cum sit communissimum, et recipiens omnium additiones". The reply,
@@ -207,9 +209,9 @@ Results, all verified (Comparator and NanoDa):
 | `7277b7d1` | `undeLoadMap` | premise-free: (1) given R-dep, the first bridge ⟺ "esse is the actuality of every form had in act"; (2) given R-dep, the first bridge and the nature in act, the second bridge ⟺ reception in the nature of whatever is not esse tantum; (3) given R-dep, the first bridge and the witness, inclusion ⟺ R-act₂; (4) with the dependence relation the first bridge holds in every frame |
 | `d53d259e` | `limitationComparison` | premise-free; see §5 |
 | `56e315ff` | `controls` | finite profiles: the first and second bridges each fail where the other premises hold and R-act₁ fails; R-act₂ fails under thin inclusion or with no actualization |
-| `13574c55` | `compositionStepUnbundled` | premise-free: the content form gives the real-otherness form; real otherness of whatever is not esse tantum, with the real-otherness form, gives back the content form; at-most-one real identity with an esse-tantum real-identity being gives real otherness |
+| `13574c55` | `compositionStepUnbundled` | premise-free: (1) the content form gives the real-otherness form; (2) real otherness of whatever is not esse tantum, with the real-otherness form, gives back the content form; (3) at-most-one real identity, with an esse-tantum real-identity being, gives real otherness (existential, and close to the GOD_4 conclusion); (4) the non-existential bridge OWN_BEING_2 ⇒ OWN_BEING_1 (`RealIdentityIsEsseTantum`) gives real otherness by itself |
 | `c5debf00` | `secondUndeContentGivesRealOther` | content form ⇒ real-otherness form (backing of the strength registration) |
-| `a6f864af` | `unbundledControls` | Suárez's profile: two creatures each really identical with its existence, not esse tantum, nothing received. At-most-one fails, real otherness fails, the real-otherness form holds vacuously, the content form fails |
+| `a6f864af` | `unbundledControls` | two beings, not esse tantum, each with its esse really identical with its own essence (`esseOf`, `essenceOf` the identity on beings), nothing received. Checked: the inline at-most-one formula over real identity fails; the bridge OWN_BEING_2 ⇒ OWN_BEING_1 fails; real otherness fails; the real-otherness form holds vacuously; the content form fails. It models nothing about shared natures, added differences, matter or the other premises of `07b1fac4` |
 | `65a56bc5` | `q7BridgeLoadMap` | premise-free; the q.7 a.1 bridge (§5a) |
 | `9655a913` | `q7Controls` | a source with only being under the two readings of limitation (§5a) |
 
@@ -263,32 +265,47 @@ routes:
 - **(i)** has the stronger De ente route, **stage (b)** (de-ente-esse-source-1628.md).
   - Result `860eae63` (`atMostOneEsseIsEssenceFromPlurification`) gives `a576300f`,
     "at most one actual being has its esse identical with its essence" (OWN_BEING_2).
-  - Its inputs are the plurification inventory `2495a71d`, no added difference, no
-    matter, and the reception premises `6dfe01ab`, `7fcfcee8`, `14325c83`.
+  - Its inputs are the plurification inventory `2495a71d`, shared nature `75b5b027`, no
+    added difference `f13d1cdd`, no matter `38ed105c`, and the reception premises
+    `6dfe01ab`, `7fcfcee8`, `14325c83`.
   - With a real-identity being that is esse tantum, at-most-one gives (i): conjunct (3)
-    of `compositionStepUnbundled`.
-  - **It fails at `75b5b027`:** "any two actual beings whose esse is their essence share
-    one nature". This is the open #697 individuation gap.
+    of `compositionStepUnbundled`. **Caution:** that existential premise is close to the
+    GOD_4 conclusion that `29e71e43` serves on the esse-root routes, so support for (i)
+    through (3) would beg the question there.
+  - Conjunct (4) gives (i) from the **non-existential bridge OWN_BEING_2 ⇒ OWN_BEING_1**
+    (`RealIdentityIsEsseTantum`): whatever has its esse really identical with its essence
+    is esse tantum.
   - **Shared dependencies:** stage (b) uses `7fcfcee8` and `14325c83`, the same
     receptive-potency premises as the reception cluster under (ii). The two parts are not
     independent.
 
-**Where Suárez escapes: at stage (b), not at DE4.** Suárez's creatures each have their
-esse really identical with their essence (OWN_BEING_2) without being esse tantum
-(OWN_BEING_1).
-- So they deny `75b5b027` on OWN_BEING_2: two such creatures do not share one nature.
-- With it they deny at-most-one, and so (i).
-- Given (i), (ii) is vacuous for them.
+**Where stage (b) fails: its OWN_BEING_2 premises together, that is, the bridge OWN_BEING_2
+⇒ OWN_BEING_1.**
+- In Lean, stage (b) states `75b5b027`, `f13d1cdd` and `38ed105c` of beings whose
+  represented esse equals their represented essence (OWN_BEING_2). The source for
+  `f13d1cdd` and `38ed105c` ("si autem ponatur aliqua res, quae sit esse tantum")
+  speaks of esse tantum (OWN_BEING_1). The sense gap is now recorded on both statements
+  and on argument `07b1fac4` (DISAMB `1bff3cb4`).
+- Read on OWN_BEING_2, the three premises together amount to the bridge OWN_BEING_2 ⇒
+  OWN_BEING_1.
+- A real-identity account of creatures such as Suárez's denies that bridge, and not
+  only at `75b5b027`:
+  - material creatures falsify `38ed105c` on OWN_BEING_2 (their nature is received in
+    matter), and plausibly `f13d1cdd` (added differences);
+  - `75b5b027` holds for two humans and fails only across species.
+- Given that (i) fails for such creatures, (ii) is vacuous for them.
 
-`unbundledControls` witnesses exactly this.
+`unbundledControls` checks only part of this: the inline at-most-one formula over real
+identity fails, the bridge OWN_BEING_2 ⇒ OWN_BEING_1 fails, and real otherness fails.
+It does not model shared natures, differences or matter.
 
 | Step | Quantifier view | Suárez (real identity; DM XXXI.XIII.17–18) |
 | --- | --- | --- |
 | R-dep; signification; DE1 content distinction; caused existence | grants | grants |
 | First unde | grants on the dependence reading, which suffices for the route | grants on the act reading too |
-| (i) real otherness, via stage (b) | rejects the frame: there is no esse principle to be other or identical | **rejects, at `75b5b027`** |
+| (i) real otherness, via stage (b) | rejects the frame: there is no esse principle to be other or identical | **rejects the bridge OWN_BEING_2 ⇒ OWN_BEING_1** (`75b5b027`, `f13d1cdd`, `38ed105c` on OWN_BEING_2) |
 | (ii) reception given real otherness | rejects | grants vacuously (no creature has real otherness) |
-| Reception in the constitution-open sense 1 | rejects (no act of being) | grants at the level of reason: "metaphysical contraction", XIII.18 |
+| Reception in the constitution-open sense 1 | rejects (no act of being) | **open.** Concedes a founded metaphysical *contraction* (XIII.18: esse limited "quia est actus talis essentiae"), not reception. Calls created esse "irreceptum in aliquo … irreceptum in subiecto" (XIII.17), unscoped. Whether contraction counts as sense-1 reception is an open analyst bridge |
 | Reception in the real-composition sense 5 | rejects | rejects ("non ut est potentia in qua recipitur") |
 
 ## 5. Negated-premise test and limitation at matching scope
@@ -300,8 +317,9 @@ esse really identical with their essence (OWN_BEING_2) without being esse tantum
   - *Floor items.* No conflict identified. DEF-ESSE's act gloss is recorded as contested
     (#2171).
   - *What it gives up.* R-act₁, R-act₂ and what rests on them.
-- **Suárez's account** rejects real otherness (i) at `75b5b027`, and reception in sense
-  5. It grants a founded reason-level version of sense 1.
+- **Suárez's account** rejects real otherness (i), through the bridge OWN_BEING_2 ⇒
+  OWN_BEING_1, and reception in sense 5. It concedes a founded metaphysical contraction.
+  Whether that contraction amounts to reception in sense 1 is an open analyst bridge.
 
 **Limitation at matching scope.** Explanandum: whatever is not its own being lacks some
 pure perfection. `limitationComparison` (`d53d259e`) shows, formally immediately:
@@ -431,8 +449,10 @@ this option set.
 3. **Failure point named.** R-act₁ in the real-composition sense is **weak to moderate**
    as an argued thesis, not defeated.
    - Its strongest route to real otherness, De ente stage (b) (`860eae63` → `a576300f`),
-     fails at `75b5b027` (the #697 individuation gap). That is exactly where Suárez's
-     real-identity creatures escape.
+     fails at its OWN_BEING_2 premises taken together (`75b5b027`, `f13d1cdd`,
+     `38ed105c`), that is, at the bridge OWN_BEING_2 ⇒ OWN_BEING_1. That is where a
+     real-identity account of creatures escapes. Support through the existential form (3)
+     would also beg the question against the esse-root routes.
    - (ii) rests on DE4, which has no warrant on file beyond its material instances, and
      those carry over only through receiving-from ⇒ receiving-in, which Suárez denies.
    - Stage (b) shares `7fcfcee8` and `14325c83` with (ii).
@@ -455,15 +475,22 @@ this option set.
      obligation moves to a strictly stronger thesis, R-act₁, which carries a lower argued
      grade and presents the same composition step.
    - Its grade is revised by sense, by coordinator decision (esse-root-leaves.md (f2)):
-     strong as textual commitment; weak to moderate on the real-composition sense, with
-     Suárez's objection recorded as row 15; moderate to strong on the constitution-open
-     sense, which DM XXXI XIII.18 does not reach.
+     - strong as textual commitment;
+     - weak to moderate on the real-composition sense, with Suárez's objection recorded
+       as row 17;
+     - **moderate** on the constitution-open sense, lowered from moderate to strong.
+       DM XXXI concedes only a founded *contraction*, not reception. XIII.17's
+       "irreceptum in aliquo" is unscoped. Whether contraction counts as sense-1
+       reception is an open analyst bridge.
 
 These are first grades. Nothing is established or defeated in the frontier sense.
 
 **Revision conditions:**
-- A defence of `75b5b027` on OWN_BEING_2 (the #697 gap), or another route to real
-  otherness that Suárez must accept.
+- A defence of the non-existential bridge OWN_BEING_2 ⇒ OWN_BEING_1 (stage (b)'s
+  `75b5b027`, `f13d1cdd`, `38ed105c` on OWN_BEING_2; the #697 gap), or another route to
+  real otherness that a real-identity account must accept.
+- An argument that a founded metaphysical contraction is, or is not, reception in the
+  constitution-open sense.
 - An argument that receiving from an agent is receiving in a subject for esse.
 - A shared explanandum at matching scope that only real reception explains.
 - A defended thesis that being admits degrees (the Fourth Way node), which would give
@@ -477,7 +504,8 @@ These are first grades. Nothing is established or defeated in the frontier sense
 - **The act reading of actualization** is idle on this route. It remains one commitment
   under DEF-ESSE's contested gloss and `791fa216` on the act reading.
 - **The composition step** is one commitment:
-  - (i) real otherness: De ente stage (b) (`860eae63`, `a576300f`, the open `75b5b027`);
+  - (i) real otherness: De ente stage (b) (`860eae63`, `a576300f`), resting on the
+    bridge OWN_BEING_2 ⇒ OWN_BEING_1 (`75b5b027`, `f13d1cdd`, `38ed105c` on OWN_BEING_2);
   - (ii) reception given real otherness: the second unde, q.3 a.4's second proof, De
     ente DE4, q.7 a.2 co.;
   - and thereby `29e71e43` on both its q.7 a.2 support and its `ractOneFromDependence`
@@ -506,7 +534,8 @@ These are first grades. Nothing is established or defeated in the frontier sense
 - On that node Suárez is not a rival: he grants degrees without real composition. So a
   defended "being has degrees" would separate the act of being from the quantifier view,
   but not real reception from Suárez.
-- Real reception needs either `75b5b027` defended on OWN_BEING_2 or an argument from
+- Real reception needs either the bridge OWN_BEING_2 ⇒ OWN_BEING_1 defended
+  (non-existentially, so as not to presuppose the GOD_4 conclusion) or an argument from
   receiving-from to receiving-in.
 
 ## 10. Review repairs (challenge at `56e9dab7`)
@@ -525,3 +554,14 @@ These are first grades. Nothing is established or defeated in the frontier sense
 | P2-4 own-being senses | **Accepted.** `ad76481a` is linked from argument `a811f5a3` and named in result `96fc4767`'s description. DISAMB `1bff3cb4` (OWN_BEING) added. | spec, DISAMB |
 | P2-5 plan on `254ee26f` | **Accepted.** Moved into #2171, with the blocker set to `62ca3d65`'s undecided identification. | #2171 spec |
 | P2-6 "aequivoce" | **Accepted.** Quoted with its scope and with "invenitur potentia et actus in intelligentiis". DE1's major premise is graded symmetrically with DE4. | §1, §3 |
+
+**Re-check at `9ff8ed73` (accept-qualified, 3 P1, 3 P2):**
+
+| Finding | Disposition | Where |
+| --- | --- | --- |
+| P1-1 Suárez's escape placed too narrowly | **Accepted.** The failure point is now stage (b)'s OWN_BEING_2 premises taken together (`75b5b027`, `f13d1cdd`, `38ed105c`), that is, the bridge OWN_BEING_2 ⇒ OWN_BEING_1. Material real-identity creatures falsify `38ed105c` (and plausibly `f13d1cdd`) on OWN_BEING_2; `75b5b027` fails only across species. The control is described only by what it checks. The sense gap is recorded on `f13d1cdd`, `38ed105c` and argument `07b1fac4` (DISAMB `1bff3cb4`). | `f8a2db99`, relation `1611d4f5`, `1bff3cb4`, §4, esse-root-leaves row 17, PR |
+| P1-2 XIII.18 concedes contraction, not reception | **Accepted.** Only contraction is attributed to Suárez; "contraction counts as sense-1 reception" is marked an open analyst bridge; XIII.17's "irreceptum in aliquo … in subiecto" is noted as unscoped. The constitution-open grade of `29e71e43` is lowered to moderate, with the reason recorded. | §4, §5, §7.6, esse-root-leaves rows 17–18 and (f2), attempt `b1fa5613` |
+| P1-3 esse-root-leaves inconsistent | **Accepted.** The rows are moved into the (f) table as 17 and 18; the tally is scoped by sense; "(by sense, see (f2))" added in (c) and (g). | esse-root-leaves.md |
+| P2-1 `Unit`-valued esse and essence | **Accepted.** Both are now the identity on `Bool`; the controls are re-verified. | Lean |
+| P2-2 conjunct (3) begs the question | **Accepted.** Flagged in `f2871bf1` and §4. The non-existential form OWN_BEING_2 ⇒ OWN_BEING_1 (`RealIdentityIsEsseTantum`) is added as conjunct (4) and checked to fail in Suárez's profile. | Lean, `f2871bf1`, §4 |
+| P2-3 DM XXXI passage | **Done.** `web_snapshot` passage `f87d414b` under source `3dba6cf4`, pinned to the local copy's bytes and the extracted text of PDF pp. 80–81. | corpus/passages/suarez-dm-xxxi-13-17-18.json |

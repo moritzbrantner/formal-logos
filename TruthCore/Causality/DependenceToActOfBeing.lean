@@ -269,8 +269,16 @@ def RealCompositionReception {P : Type} (EsseReceivedIn : B → P → Prop)
     (esseOf : B → P) (x : B) (r : P) : Prop :=
   EsseReceivedIn x r ∧ r ≠ esseOf x
 
+/-- The bridge OWN_BEING_2 ⇒ OWN_BEING_1: whatever has its esse really identical with
+its essence is *esse tantum*. Non-existential; it is what stage (b)'s premises
+`75b5b027`, `f13d1cdd` and `38ed105c`, read on OWN_BEING_2, jointly need. -/
+def RealIdentityIsEsseTantum {P : Type} (F : GradesFrame W B T R)
+    (A : ActualizationFrame B R) (esseOf essenceOf : B → P) : Prop :=
+  ∀ x, EsseReallyIsEssence esseOf essenceOf x → OwnBeingByQuiddity F A x
+
 /-- The composition step is (i) real otherness plus (ii) the weaker sibling; stage
-(b)'s at-most-one, with a real-identity being that is *esse tantum*, gives (i). -/
+(b)'s at-most-one, with a real-identity being that is *esse tantum*, gives (i), and
+so does the non-existential bridge `RealIdentityIsEsseTantum` alone. -/
 def CompositionStepUnbundled : Prop :=
   ∀ (W B T R P : Type) (F : GradesFrame W B T R) (A : ActualizationFrame B R)
     (EsseReceivedIn : B → R → Prop) (esseOf essenceOf : B → P),
@@ -282,6 +290,8 @@ def CompositionStepUnbundled : Prop :=
     ((∀ x y, EsseReallyIsEssence esseOf essenceOf x →
         EsseReallyIsEssence esseOf essenceOf y → x = y) →
       (∃ n, EsseReallyIsEssence esseOf essenceOf n ∧ OwnBeingByQuiddity F A n) →
+      NonOwnBeingsHaveRealOtherness F A esseOf essenceOf) ∧
+    (RealIdentityIsEsseTantum F A esseOf essenceOf →
       NonOwnBeingsHaveRealOtherness F A esseOf essenceOf)
 
 /-! ## Controls -/
@@ -426,20 +436,22 @@ def Q7Controls : Prop :=
 
 /-! ### Suárez's profile against the unbundled composition step
 
-World 1 with the act relation (esse actualizes the nature) and no reception; both
-beings have their esse really identical with their essence (`esseOf` and
-`essenceOf` constant), and neither is *esse tantum*. -/
+World 1 with the act relation (esse actualizes the nature) and no reception; each
+being has its esse really identical with its own essence (`esseOf` and `essenceOf`
+both the identity on beings, so one being's esse is not another's essence), and
+neither is *esse tantum*. -/
 
-def esseOfS (_ : Bool) : Unit := ()
-def essenceOfS (_ : Bool) : Unit := ()
+def esseOfS (b : Bool) : Bool := b
+def essenceOfS (b : Bool) : Bool := b
 
-/-- Statements about this profile only. At most one real-identity being fails (two
-creatures each really identical with its existence), real otherness of non-own
-beings fails, the weaker sibling holds vacuously, and the second unde in its
-content form fails. -/
+/-- Statements about this profile only: the inline at-most-one formula over real
+identity fails, the bridge OWN_BEING_2 ⇒ OWN_BEING_1 fails, real otherness of non-own
+beings fails, the weaker sibling holds vacuously, and the second unde in its content
+form fails. Nothing here mentions shared natures or the other premises of stage (b). -/
 def UnbundledControls : Prop :=
   ¬ (∀ x y, EsseReallyIsEssence esseOfS essenceOfS x →
       EsseReallyIsEssence esseOfS essenceOfS y → x = y) ∧
+  ¬ RealIdentityIsEsseTantum (gframe act1) (thomist act1) esseOfS essenceOfS ∧
   ¬ NonOwnBeingsHaveRealOtherness (gframe act1) (thomist act1) esseOfS essenceOfS ∧
   ActualizedRealOtherQuiddityReceivesEsse (gframe act1) (thomist act1) noReceived
     esseOfS essenceOfS ∧

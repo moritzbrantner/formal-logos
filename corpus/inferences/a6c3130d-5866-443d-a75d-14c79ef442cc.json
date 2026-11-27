@@ -4,7 +4,7 @@
   "input_statement_ids": [],
   "output_statement_id": "f8a2db99-54a2-450e-9c94-2a6af0068e4e",
   "rule": "Explicit finite profile over Bool, checked by decision",
-  "meaning": "Two real-identity creatures that are not esse tantum and receive nothing: stage (b)'s at-most-one and real otherness fail, the real-otherness form holds vacuously, the content form fails. A structural surrogate.",
+  "meaning": "Two real-identity beings that are not esse tantum and receive nothing: the inline at-most-one formula and the bridge OWN_BEING_2 => OWN_BEING_1 fail, real otherness fails, the real-otherness form holds vacuously, the content form fails. Nothing about shared natures is modelled. A structural surrogate.",
   "assumption_statement_ids": [],
   "discharged_statement_ids": []
 }

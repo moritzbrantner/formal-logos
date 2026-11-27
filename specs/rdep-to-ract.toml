@@ -270,13 +270,13 @@ lean = "ActualizedRealOtherQuiddityReceivesEsse"
 paraphrase = "OPEN, analyst formulation, attribution deferred: the weaker sibling of 89d82643, reading q.3 a.4's 'ad essentiam quae est aliud ab ipso' as real otherness. For every x: if x's nature is actual in x through esse, is other in content than being itself, and x's esse is not really identical with its essence (OWN_BEING_2 fails), then x's esse is received in its nature (RECEPTION_OF_ESSE_1). With real otherness of whatever is not esse tantum it gives back 89d82643 (compositionStepUnbundled). Suárez's profile satisfies it vacuously."
 definitions = ["82ab06d0-5328-4d85-b3a2-4a13532d9524", "97c4f504-4792-43c6-9f61-ae23df732d5f", "4433942e-aaf6-55a9-b777-66e55638103d", "87f9e331-d75e-41c5-994f-125c4969deb5", "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"]
 disambiguations = ["a409105e-8389-46ce-b14b-bebbc2864198", "5921354b-51e6-5da3-8d8c-e9041840fd9f", "1bff3cb4-f73b-42d4-ba2c-ff782e9df39b"]
-connection_plan = { target_statement_id = "29e71e43-1d34-5008-8811-897fbddda209", missing_bridge = "Real otherness of whatever is not esse tantum (NonOwnBeingsHaveRealOtherness), so that this sibling with the first unde and the nature in act gives CREATURE_1 reception. Its registered route is De ente stage (b): 860eae63 to a576300f (at most one actual being whose esse is its essence), plus a real-identity being that is esse tantum.", blocker = "Stage (b) rests on 75b5b027 (any two beings whose esse is their essence share one nature), the open #697 individuation gap; Suárez's account of creatures, each really identical with its own existence without being esse tantum, denies it on OWN_BEING_2. Stage (b) shares 7fcfcee8 and 14325c83 with the reception cluster." }
+connection_plan = { target_statement_id = "29e71e43-1d34-5008-8811-897fbddda209", missing_bridge = "Real otherness of whatever is not esse tantum (NonOwnBeingsHaveRealOtherness), so that this sibling with the first unde and the nature in act gives CREATURE_1 reception. Its registered route is De ente stage (b): 860eae63 to a576300f (at most one actual being whose esse is its essence), plus a real-identity being that is esse tantum.", blocker = "Real otherness via stage (b) rests on stage (b)'s premises read on OWN_BEING_2, 75b5b027 (two real-identity beings share one nature), f13d1cdd (no added difference) and 38ed105c (no matter), which together amount to the bridge OWN_BEING_2 => OWN_BEING_1 (RealIdentityIsEsseTantum). The source states f13d1cdd and 38ed105c of esse tantum (OWN_BEING_1). On a real-identity account of creatures such as Suárez's, material creatures falsify 38ed105c on OWN_BEING_2 and plausibly f13d1cdd, while 75b5b027 holds for two humans and fails only across species. Support through stage (b)'s existential form would also presuppose a real-identity being that is esse tantum, close to the GOD_4 conclusion. Stage (b) shares 7fcfcee8 and 14325c83 with the reception cluster." }
 
 [[statement]]
 id = "f2871bf1-63f2-4045-bee5-af0a35e56b29"
 label = "The composition step is real otherness plus reception, and stage (b) supplies real otherness"
 lean = "CompositionStepUnbundled"
-paraphrase = "Premise-free, over every grades frame and principle sort. (1) The content form of the second unde (89d82643) gives its real-otherness form. (2) Real otherness of whatever is not esse tantum, with the real-otherness form, gives back the content form. (3) If at most one being has its esse really identical with its essence, and some such being is esse tantum, then whatever is not esse tantum has real otherness. So the composition step bundles (i) real otherness, whose De ente route is stage (b) through at-most-one (a576300f), with (ii) reception given real otherness. Formally immediate; it locates the load, it does not supply warrant."
+paraphrase = "Premise-free, over every grades frame and principle sort. (1) The content form of the second unde (89d82643) gives its real-otherness form. (2) Real otherness of whatever is not esse tantum, with the real-otherness form, gives back the content form. (3) If at most one being has its esse really identical with its essence, and some such being is esse tantum, then whatever is not esse tantum has real otherness. (4) The non-existential bridge OWN_BEING_2 => OWN_BEING_1 (whatever has its esse really identical with its essence is esse tantum) gives real otherness by itself. Caution on (3): its existential premise, a real-identity being that is esse tantum, is close to the GOD_4 conclusion that 29e71e43 serves on the esse-root routes, so support for real otherness through (3) would beg the question there; (4) is the form that does not. Formally immediate; it locates the load, it does not supply warrant."
 definitions = ["82ab06d0-5328-4d85-b3a2-4a13532d9524", "97c4f504-4792-43c6-9f61-ae23df732d5f", "4433942e-aaf6-55a9-b777-66e55638103d", "87f9e331-d75e-41c5-994f-125c4969deb5", "ad76481a-f038-4652-9c6e-0e0441eee7e5"]
 disambiguations = ["a409105e-8389-46ce-b14b-bebbc2864198", "5921354b-51e6-5da3-8d8c-e9041840fd9f", "1bff3cb4-f73b-42d4-ba2c-ff782e9df39b"]
 
@@ -284,7 +284,7 @@ disambiguations = ["a409105e-8389-46ce-b14b-bebbc2864198", "5921354b-51e6-5da3-8
 id = "f8a2db99-54a2-450e-9c94-2a6af0068e4e"
 label = "Suárez's profile against the unbundled composition step: controls"
 lean = "Control.UnbundledControls"
-paraphrase = "Closed finite profile; statements about it only. Two beings whose nature is other than being itself, each with its esse really identical with its essence, esse actualizing the nature, nothing received. At most one real-identity being fails, real otherness of non-own beings fails, the real-otherness form of the second unde holds vacuously, and its content form fails. It witnesses where Suárez's account escapes: at stage (b)'s uniqueness on OWN_BEING_2 (75b5b027), not at reception given real otherness."
+paraphrase = "Closed finite profile; statements about it only. Two beings whose nature is other than being itself, each with its esse really identical with its own essence (esseOf and essenceOf the identity on beings), esse actualizing the nature, nothing received. Checked: the inline at-most-one formula over real identity fails; the bridge OWN_BEING_2 => OWN_BEING_1 fails; real otherness of non-own beings fails; the real-otherness form of the second unde holds vacuously; its content form fails. It models nothing about shared natures, added differences, matter or the other premises of argument 07b1fac4."
 definitions = ["82ab06d0-5328-4d85-b3a2-4a13532d9524", "97c4f504-4792-43c6-9f61-ae23df732d5f", "4433942e-aaf6-55a9-b777-66e55638103d", "87f9e331-d75e-41c5-994f-125c4969deb5", "ad76481a-f038-4652-9c6e-0e0441eee7e5"]
 disambiguations = ["a409105e-8389-46ce-b14b-bebbc2864198", "5921354b-51e6-5da3-8d8c-e9041840fd9f", "1bff3cb4-f73b-42d4-ba2c-ff782e9df39b"]
 
@@ -307,7 +307,7 @@ conclusion = "f2871bf1-63f2-4045-bee5-af0a35e56b29"
 axioms = ["propext", "Classical.choice", "Quot.sound"]
 sense_mixing_control = true
 rule = "Prove each implication; derive real otherness from at-most-one by substitution"
-meaning = "Premise-free load map of the composition step: content form = real-otherness form plus real otherness of non-own beings; at-most-one real identity with an esse-tantum real-identity being gives real otherness. Formally immediate."
+meaning = "Premise-free load map of the composition step: content form = real-otherness form plus real otherness of non-own beings; at-most-one real identity with an esse-tantum real-identity being gives real otherness (existential, near the GOD_4 conclusion); so does the non-existential bridge OWN_BEING_2 => OWN_BEING_1. Formally immediate."
 
 [[argument]]
 id = "b7480e89-a3e2-4380-8553-9b8b52012540"
@@ -318,7 +318,7 @@ conclusion = "f8a2db99-54a2-450e-9c94-2a6af0068e4e"
 axioms = ["propext", "Classical.choice", "Quot.sound"]
 sense_mixing_control = true
 rule = "Explicit finite profile over Bool, checked by decision"
-meaning = "Two real-identity creatures that are not esse tantum and receive nothing: stage (b)'s at-most-one and real otherness fail, the real-otherness form holds vacuously, the content form fails. A structural surrogate."
+meaning = "Two real-identity beings that are not esse tantum and receive nothing: the inline at-most-one formula and the bridge OWN_BEING_2 => OWN_BEING_1 fail, real otherness fails, the real-otherness form holds vacuously, the content form fails. Nothing about shared natures is modelled. A structural surrogate."
 
 [[relation]]
 id = "09f6c23a-f600-4ff5-b8b4-6da44df7ee13"
@@ -340,7 +340,7 @@ subject_id = "f539bba2-1418-4a82-96d9-d55d973b6ae9"
 predicate = "tests"
 object_kind = "statement"
 object_id = "a576300f-4b01-45ae-902c-cfe3d0fbf2de"
-note = "Shows what a576300f contributes to the composition step: with a real-identity being that is esse tantum, at-most-one gives real otherness of every other being."
+note = "Shows what a576300f contributes to the composition step: with a real-identity being that is esse tantum, at-most-one gives real otherness (conjunct 3, existential and close to the GOD_4 conclusion); conjunct 4 gives it from the non-existential bridge OWN_BEING_2 => OWN_BEING_1."
 
 [[relation]]
 id = "1611d4f5-d354-40a5-89cc-b1b75038d68d"
@@ -350,4 +350,4 @@ subject_id = "b7480e89-a3e2-4380-8553-9b8b52012540"
 predicate = "tests"
 object_kind = "statement"
 object_id = "a576300f-4b01-45ae-902c-cfe3d0fbf2de"
-note = "Two creatures each really identical with its existence falsify at-most-one on OWN_BEING_2; this is the point (75b5b027) where Suárez's account escapes stage (b)."
+note = "The profile falsifies the inline at-most-one formula over real identity and the bridge OWN_BEING_2 => OWN_BEING_1; it does not model shared natures or the other premises of argument 07b1fac4 that yield a576300f."

@@ -140,7 +140,7 @@ otherness; stage (b)'s at-most-one with an *esse tantum* real-identity being giv
 real otherness. -/
 theorem compositionStepUnbundled : CompositionStepUnbundled := by
   intro W B T R P F A EsseReceivedIn esseOf essenceOf
-  refine ⟨?_, ?_, ?_⟩
+  refine ⟨?_, ?_, ?_, ?_⟩
   · intro hStrong x hAct hNe _
     exact hStrong x hAct hNe
   · intro hOther hWeak x hAct hNe
@@ -149,6 +149,8 @@ theorem compositionStepUnbundled : CompositionStepUnbundled := by
     have hxn : x = n := hAtMost x n hx hn
     subst hxn
     exact hNotOwn hOwn
+  · intro hBridge x hNotOwn hx
+    exact hNotOwn (hBridge x hx)
 
 /-- The strong (content-distinctness) form of the second unde gives its
 real-otherness sibling: the backing of the strength registration. -/
@@ -163,8 +165,9 @@ theorem unbundledControls : Control.UnbundledControls := by
   dsimp [Control.UnbundledControls, Control.esseOfS, Control.essenceOfS, Control.gframe,
     Control.act1, Control.thomist, Control.nature, Control.noReceived,
     EsseReallyIsEssence, NonOwnBeingsHaveRealOtherness, OwnBeingByQuiddity,
-    ActualizedRealOtherQuiddityReceivesEsse, ActualizedQuiddityReceivesEsse]
-  refine ⟨?_, ?_, ?_, ?_⟩
+    ActualizedRealOtherQuiddityReceivesEsse, ActualizedQuiddityReceivesEsse,
+    RealIdentityIsEsseTantum]
+  refine ⟨?_, ?_, ?_, ?_, ?_⟩
   all_goals decide
 
 end TruthCore.Results.Causality.DependenceToActOfBeing

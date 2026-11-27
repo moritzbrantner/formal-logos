@@ -24,7 +24,9 @@
     "d164b1ff-ad31-5fbc-8ef9-eb0db51ebd96",
     "94036513-8146-4137-8cce-daf40577369d",
     "a576300f-4b01-45ae-902c-cfe3d0fbf2de",
-    "75b5b027-21f1-400a-8b21-775bb6d47983"
+    "75b5b027-21f1-400a-8b21-775bb6d47983",
+    "f13d1cdd-6b9f-4d05-9919-312587ad835a",
+    "38ed105c-6103-4969-8246-a6a071cdbb18"
   ],
   "kind": "derivation",
   "outcome": "succeeded",
@@ -42,7 +44,7 @@
     "c5debf00-c88b-4d45-bbd6-29705a224ce5",
     "a6f864af-e46b-4f2a-ad0b-7ba6b4812b68"
   ],
-  "blocker": "Real otherness rests on 75b5b027 (the #697 individuation gap) on OWN_BEING_2, and reception given real otherness on receiving-from implying receiving-in; R-act2 has textual warrant only. The next discriminating node is degrees of being, where vertical and horizontal tests converge; direction pending owner review.",
+  "blocker": "Real otherness rests on the bridge OWN_BEING_2 => OWN_BEING_1 (stage (b)'s 75b5b027, f13d1cdd, 38ed105c on OWN_BEING_2; the #697 gap), and reception given real otherness on receiving-from implying receiving-in; R-act2 has textual warrant only. The next discriminating node is degrees of being, where vertical and horizontal tests converge; direction pending owner review.",
   "current_assessment": {
     "date": "2026-11-27",
     "statement_ids": [
@@ -61,14 +63,14 @@
       "75b5b027-21f1-400a-8b21-775bb6d47983"
     ],
     "scope": "The q.4 a.1 ad 3 'unde' inference and its parallels (q.3 a.4 second proof, De ente capp.3-4, q.7 a.1-2) from R-dep to R-act1 and R-act2, over the shared GradesFrame with respect identity as content identity and own being as esse tantum; rivals: the quantifier view and Suárez's real-identity account; limitation at the scope of finitude in perfection and plurality of finite beings.",
-    "assessment": "The unde inference is explicative, not probative (analyst judgment on formally immediate equivalences): given R-dep each bridge is equivalent to what it delivers, and its stated grounds (R-dep; signification in q.3 a.4) are granted by every rival; ractOneFromDependence and ractTwoFromDependence are declared near-transcriptions. The route is sense-neutral in 'actualized through': the results are generic in the frame and the first bridge is analytic on the dependence reading, so the act reading does no work; the one separating step is reception (the second unde in content form, 89d82643, the strong version), plus inclusion for R-act2. That step bundles (i) real otherness of whatever is not esse tantum and (ii) reception given real otherness (the real-otherness sibling 94036513, registered as strengthens). (i)'s strongest route is De ente stage (b), 860eae63 to a576300f, which fails at 75b5b027 (the #697 individuation gap), exactly where Suárez's real-identity creatures (OWN_BEING_2 without OWN_BEING_1) escape; (ii) rests on DE4, whose material instances carry over only through receiving-from implying receiving-in, which Suárez denies (DM XXXI XIII.17); stage (b) and (ii) share 7fcfcee8 and 14325c83. Reception now has a registered real-composition sense (RECEPTION_OF_ESSE_VERSUS_EXTERNAL_CAUSE_5); R-act1 on that sense is weak to moderate as an argued thesis, not defeated. On the constitution-open sense Suárez concedes a founded metaphysical contraction (XIII.18). At matching scope reception is not needed: finitude follows from the shared nature premise, plurality from De ente's own modes; the essence-only family (quantifier view, Suárez) is favored over real reception by a scope-limited parsimony tiebreaker; the quantifier view's distinctive no-act claim still has no positive warrant on file. Overall standing unresolved. The strongest agreement-and-difference argument, the participation and degree version (q.3 a.4 third proof, 'more and less'), separates the act of being from the quantifier view only if being has degrees, and does not separate real composition from Suárez, who grants degrees without it; vertical and horizontal tests converge on degrees of being. R-act2 has textual warrant only; the q.7 a.1 bridge shifts its content to the unlimited-esse premise or to 1304b462, which DM XXXI XIII.18 answers on the real-composition sense. Locus (b) needs {OwnBeing, d164b1ff intensive, R-act2, purity} or the q.7 a.1 premises; 'keep 9a0a4951, reject real Has' is open with no defender on file. Frontier: R-act1 is an open leaf; 29e71e43 still closes by rule (a) through creatureReceptionFromActOfBeing, its obligation relocated to a strictly stronger thesis with a lower argued grade and the same composition step: relocation, not progress. 29e71e43 is graded by sense by coordinator decision (esse-root-leaves.md (f2)). First grades.",
+    "assessment": "The unde inference is explicative, not probative (analyst judgment on formally immediate equivalences): given R-dep each bridge is equivalent to what it delivers, and its stated grounds (R-dep; signification in q.3 a.4) are granted by every rival; ractOneFromDependence and ractTwoFromDependence are declared near-transcriptions. The route is sense-neutral in 'actualized through': the results are generic in the frame and the first bridge is analytic on the dependence reading, so the act reading does no work; the one separating step is reception (the second unde in content form, 89d82643, the strong version), plus inclusion for R-act2. That step bundles (i) real otherness of whatever is not esse tantum and (ii) reception given real otherness (the real-otherness sibling 94036513, registered as strengthens). (i)'s strongest route is De ente stage (b), 860eae63 to a576300f, whose premises 75b5b027, f13d1cdd and 38ed105c, stated in Lean on OWN_BEING_2 while the source speaks of esse tantum, together amount to the bridge OWN_BEING_2 => OWN_BEING_1; a real-identity account of creatures (Suárez) denies that bridge (material creatures falsify 38ed105c and plausibly f13d1cdd; 75b5b027 fails only across species); support through the existential form of compositionStepUnbundled (3) would beg the question against the esse-root routes, and (4) gives the non-existential bridge; (ii) rests on DE4, whose material instances carry over only through receiving-from implying receiving-in, which Suárez denies (DM XXXI XIII.17); stage (b) and (ii) share 7fcfcee8 and 14325c83. Reception now has a registered real-composition sense (RECEPTION_OF_ESSE_VERSUS_EXTERNAL_CAUSE_5); R-act1 on that sense is weak to moderate as an argued thesis, not defeated. On the constitution-open sense Suárez concedes only a founded metaphysical contraction (XIII.18), not reception; whether contraction counts as sense-1 reception is an open analyst bridge. At matching scope reception is not needed: finitude follows from the shared nature premise, plurality from De ente's own modes; the essence-only family (quantifier view, Suárez) is favored over real reception by a scope-limited parsimony tiebreaker; the quantifier view's distinctive no-act claim still has no positive warrant on file. Overall standing unresolved. The strongest agreement-and-difference argument, the participation and degree version (q.3 a.4 third proof, 'more and less'), separates the act of being from the quantifier view only if being has degrees, and does not separate real composition from Suárez, who grants degrees without it; vertical and horizontal tests converge on degrees of being. R-act2 has textual warrant only; the q.7 a.1 bridge shifts its content to the unlimited-esse premise or to 1304b462, which DM XXXI XIII.18 answers on the real-composition sense. Locus (b) needs {OwnBeing, d164b1ff intensive, R-act2, purity} or the q.7 a.1 premises; 'keep 9a0a4951, reject real Has' is open with no defender on file. Frontier: R-act1 is an open leaf; 29e71e43 still closes by rule (a) through creatureReceptionFromActOfBeing, its obligation relocated to a strictly stronger thesis with a lower argued grade and the same composition step: relocation, not progress. 29e71e43 is graded by sense by coordinator decision (esse-root-leaves.md (f2)): textual strong; real-composition weak to moderate; constitution-open moderate. First grades.",
     "next_test": "None started (coordinator stop). The vertical test (participation and degree version of agreement and difference) and the horizontal move converge on degrees of being (5a948c37, e462cf2f); real reception separately needs 75b5b027 defended on OWN_BEING_2 or an argument from receiving-from to receiving-in.",
     "note": "docs/notes/rdep-to-ract.md#7-provisional-judgment-2026-11-27-repaired-after-challenge",
     "supersedes": "the 2026-11-27 first-grade assessment (assessment_history).",
     "review": "unreviewed",
     "publication": "unpublished",
-    "evidence": "Repairs of the challenge at 56e9dab7641a79d10871b435e2a581f90bf0e64a in PR #2173; re-check pending.",
-    "reviewed_revision": "56e9dab7641a79d10871b435e2a581f90bf0e64a"
+    "evidence": "Repairs of the re-check at 9ff8ed730de748259f21290307a8385cde6cb992 in PR #2173.",
+    "reviewed_revision": "9ff8ed730de748259f21290307a8385cde6cb992"
   },
   "workers": [
     {
@@ -81,6 +83,33 @@
     }
   ],
   "assessment_history": [
+    {
+      "date": "2026-11-27",
+      "statement_ids": [
+        "7067553d-cad9-5d79-b6b2-912e35051530",
+        "8c64b036-3db9-4143-9a8d-d7814cc84c79",
+        "254ee26f-01d5-4359-bdde-5779b6e80533",
+        "8d7e24dc-20b9-44b8-8c5f-7bac55774f34",
+        "89d82643-cf45-4933-90b3-83a89f6210f2",
+        "fdd2213a-90ee-4f7c-86cd-ca4872549bd6",
+        "29e71e43-1d34-5008-8811-897fbddda209",
+        "1304b462-4a10-5dd0-995a-db5feb21d98e",
+        "9a0a4951-dad6-4d3c-a6c1-f84b7ab492f4",
+        "d164b1ff-ad31-5fbc-8ef9-eb0db51ebd96",
+        "94036513-8146-4137-8cce-daf40577369d",
+        "a576300f-4b01-45ae-902c-cfe3d0fbf2de",
+        "75b5b027-21f1-400a-8b21-775bb6d47983"
+      ],
+      "scope": "The q.4 a.1 ad 3 'unde' inference and its parallels (q.3 a.4 second proof, De ente capp.3-4, q.7 a.1-2) from R-dep to R-act1 and R-act2, over the shared GradesFrame with respect identity as content identity and own being as esse tantum; rivals: the quantifier view and Suárez's real-identity account; limitation at the scope of finitude in perfection and plurality of finite beings.",
+      "assessment": "The unde inference is explicative, not probative (analyst judgment on formally immediate equivalences): given R-dep each bridge is equivalent to what it delivers, and its stated grounds (R-dep; signification in q.3 a.4) are granted by every rival; ractOneFromDependence and ractTwoFromDependence are declared near-transcriptions. The route is sense-neutral in 'actualized through': the results are generic in the frame and the first bridge is analytic on the dependence reading, so the act reading does no work; the one separating step is reception (the second unde in content form, 89d82643, the strong version), plus inclusion for R-act2. That step bundles (i) real otherness of whatever is not esse tantum and (ii) reception given real otherness (the real-otherness sibling 94036513, registered as strengthens). (i)'s strongest route is De ente stage (b), 860eae63 to a576300f, which fails at 75b5b027 (the #697 individuation gap), exactly where Suárez's real-identity creatures (OWN_BEING_2 without OWN_BEING_1) escape; (ii) rests on DE4, whose material instances carry over only through receiving-from implying receiving-in, which Suárez denies (DM XXXI XIII.17); stage (b) and (ii) share 7fcfcee8 and 14325c83. Reception now has a registered real-composition sense (RECEPTION_OF_ESSE_VERSUS_EXTERNAL_CAUSE_5); R-act1 on that sense is weak to moderate as an argued thesis, not defeated. On the constitution-open sense Suárez concedes a founded metaphysical contraction (XIII.18). At matching scope reception is not needed: finitude follows from the shared nature premise, plurality from De ente's own modes; the essence-only family (quantifier view, Suárez) is favored over real reception by a scope-limited parsimony tiebreaker; the quantifier view's distinctive no-act claim still has no positive warrant on file. Overall standing unresolved. The strongest agreement-and-difference argument, the participation and degree version (q.3 a.4 third proof, 'more and less'), separates the act of being from the quantifier view only if being has degrees, and does not separate real composition from Suárez, who grants degrees without it; vertical and horizontal tests converge on degrees of being. R-act2 has textual warrant only; the q.7 a.1 bridge shifts its content to the unlimited-esse premise or to 1304b462, which DM XXXI XIII.18 answers on the real-composition sense. Locus (b) needs {OwnBeing, d164b1ff intensive, R-act2, purity} or the q.7 a.1 premises; 'keep 9a0a4951, reject real Has' is open with no defender on file. Frontier: R-act1 is an open leaf; 29e71e43 still closes by rule (a) through creatureReceptionFromActOfBeing, its obligation relocated to a strictly stronger thesis with a lower argued grade and the same composition step: relocation, not progress. 29e71e43 is graded by sense by coordinator decision (esse-root-leaves.md (f2)). First grades.",
+      "next_test": "None started (coordinator stop). The vertical test (participation and degree version of agreement and difference) and the horizontal move converge on degrees of being (5a948c37, e462cf2f); real reception separately needs 75b5b027 defended on OWN_BEING_2 or an argument from receiving-from to receiving-in.",
+      "note": "docs/notes/rdep-to-ract.md#7-provisional-judgment-2026-11-27-repaired-after-challenge",
+      "supersedes": "the 2026-11-27 first-grade assessment (assessment_history).",
+      "review": "accepted_qualified",
+      "publication": "unpublished",
+      "evidence": "Re-check at 9ff8ed730de748259f21290307a8385cde6cb992 accepted with qualifications (3 P1, 3 P2): Suárez's escape placed too narrowly at 75b5b027; contraction attributed as reception; esse-root-leaves table inconsistent; Unit-valued esse in the control; conjunct (3) existential; DM XXXI passage missing. Repaired in the current assessment.",
+      "reviewed_revision": "9ff8ed730de748259f21290307a8385cde6cb992"
+    },
     {
       "date": "2026-11-27",
       "statement_ids": [

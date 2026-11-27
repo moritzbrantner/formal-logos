@@ -6,5 +6,5 @@
   "predicate": "tests",
   "object_kind": "statement",
   "object_id": "a576300f-4b01-45ae-902c-cfe3d0fbf2de",
-  "note": "Two creatures each really identical with its existence falsify at-most-one on OWN_BEING_2; this is the point (75b5b027) where Suárez's account escapes stage (b)."
+  "note": "The profile falsifies the inline at-most-one formula over real identity and the bridge OWN_BEING_2 => OWN_BEING_1; it does not model shared natures or the other premises of argument 07b1fac4 that yield a576300f."
 }

@@ -7,7 +7,7 @@
     "ad76481a-f038-4652-9c6e-0e0441eee7e5",
     "87f9e331-d75e-41c5-994f-125c4969deb5"
   ],
-  "resolution": "OWN_BEING_1 (OwnBeingByQuiddity): the nature of x is being itself, esse tantum, compared by content. OWN_BEING_2 (EsseReallyIsEssence): x's esse is really identical with its essence. The unde route and R-act1 as derived here use OWN_BEING_1. De ente's stage (b) (860eae63, a576300f) is stated with OWN_BEING_2; to give real otherness to everything not OWN_BEING_1 it needs a real-identity being that is also esse tantum, and the uniqueness premise 75b5b027 on OWN_BEING_2, which Suárez's account of creatures (each really identical with its existence, not esse tantum) denies. CompositionStepUnbundled keeps the two senses in separate conjuncts; no statement identifies them.",
+  "resolution": "OWN_BEING_1 (OwnBeingByQuiddity): the nature of x is being itself, esse tantum, compared by content. OWN_BEING_2 (EsseReallyIsEssence): x's esse is really identical with its essence. The unde route and R-act1 as derived here use OWN_BEING_1. De ente's stage (b) (argument 07b1fac4, result 860eae63, conclusion a576300f) is stated in Lean with OWN_BEING_2, while its source premises f13d1cdd and 38ed105c ('si autem ponatur aliqua res, quae sit esse tantum') speak of OWN_BEING_1. Read on OWN_BEING_2, 75b5b027, f13d1cdd and 38ed105c together amount to the bridge OWN_BEING_2 => OWN_BEING_1 (RealIdentityIsEsseTantum); a real-identity account of creatures (Suárez) denies that bridge: material creatures falsify 38ed105c and plausibly f13d1cdd on OWN_BEING_2, and 75b5b027 fails across species. CompositionStepUnbundled keeps the senses in separate conjuncts; no statement identifies them.",
   "senses": [
     {
       "id": "fda7cf17-86d1-4879-b6af-b116bfb96622",
