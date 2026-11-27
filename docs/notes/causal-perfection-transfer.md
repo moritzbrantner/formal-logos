@@ -5777,7 +5777,7 @@ on the control.
 
 Lean-only `witnessOnlyAlignment` checks this on a model. Two strict orders on
 three candidates agree on the witnessing pair and fail together in the second
-scenario. They rank another pair oppositely in the first scenario, and the
+scenario. Both are certified asymmetric and transitive. They rank another pair oppositely in the first scenario, and the
 power-tracking profile is still good-general.
 
 A coincidence over the whole candidate space would be the D-nature's alignment
@@ -6286,7 +6286,10 @@ After publication as #2175, Codex review at `b508b3721` raised two P1s.
 1. The A3 price as a whole-order alignment was stronger than `GoodGeneral`
    witnesses, which is one pair at one scenario. It is now restricted to the
    witnessed pairs, and Lean-only `witnessOnlyAlignment` gives a model of
-   agreement on the witness with disagreement elsewhere.
+   agreement on the witness with disagreement elsewhere. A later Codex P1
+   found that the value relation in that model was not transitive. The model
+   now adds the forced comparison, and transitivity of both relations is
+   certified.
 2. The containment senses did not occur in the bound types. The premise types
    now use `ContainsGenerically` and `ContainsIntentionally`. The argument
    records CONTAINED_IN_1, with `d1fb6414` as its sense bridge. Sense 1's
