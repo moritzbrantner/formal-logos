@@ -47,7 +47,9 @@ transitively. Unlike `senses`, a tracked constant is reported and still
 unfolded, and a bound variable never counts: a free `InPotency` parameter does
 not reach the definition of potency. Library constants are boundaries. One extra
 array element `{"tracked_kinds": {name: kind}}` gives each tracked constant's kind
-(`definition`, `projection`, `inductive`, …, or `missing`).
+(`definition`, `projection`, `inductive`, …, or `missing`), judged by the target of
+an alias (`aliasOf`); a type reaching that target reaches the alias too, and
+`{"tracked_aliases": {alias: target}}` lists them.
 -/
 import Lean
 
@@ -231,14 +233,24 @@ def senseConstants (senses : NameSet) (e : Expr) : MetaM (Array Name) := do
 def sensesJson (senses : NameSet) (e : Expr) : MetaM Json := do
   return toJson ((← senseConstants senses e).map Name.toString)
 
+/-- The tracked constants, and for each constant that tracked aliases resolve to
+(`aliasOf`), those aliases: a type using the target reaches its aliases too. -/
+structure Tracked where
+  names : NameSet := {}
+  aliasesOf : Std.HashMap Name (Array Name) := {}
+
+def Tracked.isEmpty (t : Tracked) : Bool := t.names.isEmpty
+
 /-- Tracked constants reached from the constant `n` (see the module docstring),
 memoized in `memo`. A definition cycle contributes what was found before it closed. -/
-partial def reachedOf (tracked : NameSet) (memo : IO.Ref (Std.HashMap Name NameSet))
+partial def reachedOf (tracked : Tracked) (memo : IO.Ref (Std.HashMap Name NameSet))
     (n : Name) : MetaM NameSet := do
   if let some found := (← memo.get).get? n then return found
   memo.modify (·.insert n {})
   let mut found : NameSet := {}
-  if tracked.contains n then found := found.insert n
+  if tracked.names.contains n then found := found.insert n
+  for a in tracked.aliasesOf.getD n #[] do
+    found := found.insert a
   if "TruthCore.".isPrefixOf n.toString then
     if let some (.defnInfo d) := (← getEnv).find? n then
       for c in d.value.getUsedConstants do
@@ -263,7 +275,7 @@ def constantKind (env : Environment) (n : Name) : String :=
   | some (.quotInfo _) => "quotient"
 
 /-- The tracked constants `e` reaches, sorted by name. -/
-def reachesJson (tracked : NameSet) (memo : IO.Ref (Std.HashMap Name NameSet)) (e : Expr) :
+def reachesJson (tracked : Tracked) (memo : IO.Ref (Std.HashMap Name NameSet)) (e : Expr) :
     MetaM Json := do
   let mut found : NameSet := {}
   for c in e.getUsedConstants do
@@ -287,7 +299,7 @@ def aliasOf (env : Environment) : Nat → Name → Name
     | _ => n
 
 def describeTheorem (prefixes : Array String) (contracts : Array String) (senses : NameSet)
-    (senseTheorems : Array String) (tracked : NameSet) (memo : IO.Ref (Std.HashMap Name NameSet))
+    (senseTheorems : Array String) (tracked : Tracked) (memo : IO.Ref (Std.HashMap Name NameSet))
     (thm : Name) : MetaM Json := do
   let some info := (← getEnv).find? thm
     | return Json.mkObj [("theorem", Json.str thm.toString), ("error", Json.str "unknown constant")]
@@ -332,12 +344,19 @@ unsafe def main (args : List String) : IO UInt32 := do
   let senseTheorems := (input.getObjValAs? (Array String) "sense_theorems").toOption.getD #[]
   let senses : NameSet := senseNames.foldl (fun s n => s.insert n) {}
   let trackedNames := ((input.getObjValAs? (Array String) "tracked_constants").toOption.getD #[]).map String.toName
-  let tracked : NameSet := trackedNames.foldl (fun s n => s.insert n) {}
   let memo ← IO.mkRef ({} : Std.HashMap Name NameSet)
   initSearchPath (← findSysroot)
   enableInitializersExecution
   let env ← importModules (modules.map fun m => { module := m.toName }) {}
     (trustLevel := 1024) (loadExts := true)
+  -- A tracked alias (a definition whose value is a bare constant) is reached
+  -- wherever its target is, and judged by its target's kind.
+  let mut tracked : Tracked := { names := trackedNames.foldl (fun s n => s.insert n) {} }
+  for n in trackedNames do
+    let target := aliasOf env 32 n
+    if target != n then
+      tracked := { tracked with
+        aliasesOf := tracked.aliasesOf.insert target ((tracked.aliasesOf.getD target #[]).push n) }
   let ctx : Core.Context := { fileName := "<bind-types>", fileMap := default, maxHeartbeats := 0 }
   let state : Core.State := { env }
   let (out, _) ← (MetaM.run' (theorems.mapM fun t =>
@@ -348,7 +367,12 @@ unsafe def main (args : List String) : IO UInt32 := do
       if env.contains n then some (n.toString, Json.str (aliasOf env 32 n).toString) else none
     out := out.push (Json.mkObj [("sense_aliases", Json.mkObj aliases)])
   if !trackedNames.isEmpty then
-    let kinds := trackedNames.toList.map fun n => (n.toString, Json.str (constantKind env n))
+    let kinds := trackedNames.toList.map fun n =>
+      (n.toString, Json.str (constantKind env (aliasOf env 32 n)))
     out := out.push (Json.mkObj [("tracked_kinds", Json.mkObj kinds)])
+    let aliases := trackedNames.toList.filterMap fun n =>
+      let target := aliasOf env 32 n
+      if target != n then some (n.toString, Json.str target.toString) else none
+    out := out.push (Json.mkObj [("tracked_aliases", Json.mkObj aliases)])
   IO.println (Json.arr out).compress
   return 0

@@ -111,17 +111,33 @@ fn typed(item: &Value) -> Typed {
 pub struct Described {
     types: BTreeMap<String, Vec<Typed>>,
     pub unchecked: BTreeMap<String, String>,
+    /// Fresh entries whose `reaches` were computed for another tracked set
+    /// (definitions or senses added or removed since): read for logical
+    /// premises, which are always tracked, but not for definitions.
+    tracking_outdated: BTreeSet<String>,
     /// Tracked constant -> kind (`definition`, `projection`, …).
     kinds: BTreeMap<String, String>,
+    /// Why nothing could be read, when the cache is unreadable.
+    pub note: Option<String>,
 }
 
 impl Described {
-    /// Reads the cache of `root` for every result of `corpus`.
-    pub fn load(root: &Path, corpus: &Corpus) -> Result<Self, String> {
-        let cache = bind_types::load(root)?;
+    /// Reads the cache of `root` for every result of `corpus`. An unreadable
+    /// cache leaves every result unchecked, with a note.
+    pub fn load(root: &Path, corpus: &Corpus) -> Self {
+        let (cache, note) = match bind_types::load(root) {
+            Ok(cache) => (cache, None),
+            Err(error) => (
+                None,
+                Some(format!("the elaborated-type cache is unreadable ({error})")),
+            ),
+        };
+        let tracked = tracked_constants(corpus);
+        let current = bind_types::tracked_digest(tracked.iter().map(String::as_str));
         let inputs = Inputs::new(root);
         let mut types = BTreeMap::new();
         let mut unchecked = BTreeMap::new();
+        let mut tracking_outdated = BTreeSet::new();
         for (id, record) in corpus.records_by_id("results") {
             let lookup = match &cache {
                 Some(cache) => cache.lookup(&inputs, &record.fields),
@@ -137,6 +153,11 @@ impl Described {
                         .map(typed)
                         .collect();
                     if items.iter().all(|item| item.reaches.is_some()) {
+                        if cache.as_ref().and_then(|cache| cache.tracked_digest_of(id))
+                            != Some(current.as_str())
+                        {
+                            tracking_outdated.insert(id.to_owned());
+                        }
                         types.insert(id.to_owned(), items);
                     } else {
                         unchecked.insert(id.to_owned(), "cached before `reaches`".into());
@@ -146,7 +167,12 @@ impl Described {
                     unchecked.insert(id.to_owned(), format!("stale: {reason}"));
                 }
                 Lookup::Missing => {
-                    unchecked.insert(id.to_owned(), "not in the cache".into());
+                    let reason = if note.is_some() {
+                        "cache unreadable"
+                    } else {
+                        "not in the cache"
+                    };
+                    unchecked.insert(id.to_owned(), reason.into());
                 }
             }
         }
@@ -159,11 +185,13 @@ impl Described {
                     .collect()
             })
             .unwrap_or_default();
-        Ok(Self {
+        Self {
             types,
             unchecked,
+            tracking_outdated,
             kinds,
-        })
+            note,
+        }
     }
 
     /// Built from exporter descriptions keyed by result id and constant
@@ -188,11 +216,21 @@ impl Described {
         Self {
             types,
             unchecked: BTreeMap::new(),
+            tracking_outdated: BTreeSet::new(),
             kinds: kinds
                 .iter()
                 .map(|(name, kind)| ((*name).to_owned(), (*kind).to_owned()))
                 .collect(),
+            note: None,
         }
+    }
+
+    /// Marks results as described for another tracked set (tests).
+    #[cfg(test)]
+    fn outdate(mut self, results: &[&str]) -> Self {
+        self.tracking_outdated
+            .extend(results.iter().map(|id| (*id).to_owned()));
+        self
     }
 
     /// Everything a result's certificate type reaches (binders and result).
@@ -252,20 +290,28 @@ pub fn report(corpus: &Corpus, described: &Described, scope: &Scope) -> Value {
     let mut tests_judged = 0usize;
     for (id, record) in corpus.records_by_id("relations") {
         let relation = &record.fields;
-        if text(relation, "predicate") != "tests"
-            || text(relation, "object_kind") != "argument"
-            || !scope.judges(
-                "relations",
-                id,
-                relation,
-                &["subject_kind", "subject_id", "object_kind", "object_id"],
-            )
-        {
+        if text(relation, "predicate") != "tests" || text(relation, "object_kind") != "argument" {
             continue;
         }
-        let Some(argument) = corpus.get("arguments", text(relation, "object_id")) else {
+        let object = text(relation, "object_id");
+        let Some(argument) = corpus.get("arguments", object) else {
             continue;
         };
+        // Judged when the relation is new or changed, or when the tested
+        // argument's premises changed (it may have gained a logical premise).
+        if !scope.judges(
+            "relations",
+            id,
+            relation,
+            &["subject_kind", "subject_id", "object_kind", "object_id"],
+        ) && !scope.judges(
+            "arguments",
+            object,
+            &argument.fields,
+            &["premise_statement_ids"],
+        ) {
+            continue;
+        }
         let logical: Vec<(&str, &str)> = list(&argument.fields, "premise_statement_ids")
             .into_iter()
             .filter_map(|premise| {
@@ -310,8 +356,13 @@ pub fn report(corpus: &Corpus, described: &Described, scope: &Scope) -> Value {
     }
 
     // 2. Linked definitions the statement's bound type does not reach.
+    // Only entries described for the current tracked set: an older entry may
+    // lack a definition added since.
     let mut bound: HashMap<&str, BTreeSet<&str>> = HashMap::new();
-    for items in described.types.values() {
+    for (result, items) in &described.types {
+        if described.tracking_outdated.contains(result) {
+            continue;
+        }
         for item in items {
             if let Some(reaches) = &item.reaches {
                 bound
@@ -432,6 +483,8 @@ pub fn report(corpus: &Corpus, described: &Described, scope: &Scope) -> Value {
     json!({
         "scope": match scope { Scope::All => "all", Scope::Since(_) => "since_base" },
         "results_unchecked": described.unchecked.len(),
+        "results_tracking_outdated": described.tracking_outdated.len(),
+        "cache_note": described.note,
         "tests_judged": tests_judged,
         "tests_unchecked_subjects": tests_unchecked,
         "tests_missing_logical_premise": tests_warnings,
@@ -484,6 +537,16 @@ pub fn format(report: &Value) -> String {
             "{} result(s) have no fresh cache entry; run `truth bind-check` (or `--affected \
              --base REV`) after `lake build` to check them",
             report["results_unchecked"]
+        ));
+    }
+    if let Some(note) = report["cache_note"].as_str() {
+        lines.push(format!("unchecked: {note}"));
+    }
+    if report["results_tracking_outdated"].as_u64().unwrap_or(0) > 0 {
+        lines.push(format!(
+            "{} fresh result(s) were described for an older set of tracked definitions and are \
+             not read for definition links; rerun `truth bind-check` to refresh them",
+            report["results_tracking_outdated"]
         ));
     }
     if !tests.is_empty() {
@@ -782,6 +845,46 @@ mod tests {
         let same = report_since(&corpus, &corpus);
         assert_eq!(same["tests_judged"], 0);
         assert_eq!(same["definition_links_judged"], 0);
+        // A tested argument that gained its logical premise since the base is
+        // judged again, although the relations did not change.
+        let base = fixture();
+        base.write(
+            "arguments",
+            json!({"id": "ARG", "premise_statement_ids": ["P"], "conclusion_statement_id": "C"}),
+        );
+        let base_corpus = Corpus::load(&base.0).unwrap();
+        let gained = report_since(&corpus, &base_corpus);
+        assert_eq!(gained["tests_judged"], 2);
+        assert_eq!(
+            gained["tests_missing_logical_premise"][0]["relation_id"],
+            "REL-BAD"
+        );
+        // Entries described for an older tracked set are not read for
+        // definition links (S is bound only by USE-S).
+        let outdated = super::report(&corpus, &described().outdate(&["USE-S"]), &Scope::All);
+        assert_eq!(outdated["definition_not_in_type"], json!([]));
+        assert_eq!(outdated["definition_links_unchecked"], 3);
+        assert_eq!(
+            outdated["tests_missing_logical_premise"]
+                .as_array()
+                .unwrap()
+                .len(),
+            1
+        );
+    }
+
+    #[test]
+    fn an_unreadable_cache_leaves_everything_unchecked() {
+        let checkout = fixture();
+        fs::create_dir_all(checkout.0.join(".cache")).unwrap();
+        fs::write(checkout.0.join(bind_types::CACHE), "not json").unwrap();
+        let corpus = Corpus::load(&checkout.0).unwrap();
+        let described = Described::load(&checkout.0, &corpus);
+        assert!(described.note.is_some());
+        let report = report(&corpus, &described, &Scope::All);
+        assert_eq!(report["results_unchecked"], 3);
+        assert_eq!(report["tests_missing_logical_premise"], json!([]));
+        assert!(format(&report).contains("unchecked: the elaborated-type cache is unreadable"));
     }
 
     fn report_since(corpus: &Corpus, base: &Corpus) -> Value {

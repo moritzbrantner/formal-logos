@@ -19,11 +19,9 @@ fn run(args: &Args, operands: &[&str]) -> Output {
     };
     args.simple(operands, 0, false, accepts)?;
     let (corpus, aliases, _) = load(args)?;
-    let described = type_lints::Described::load(&args.root, &corpus).map_err(|error| {
-        corpus_error(format!(
-            "type-lints: unreadable elaborated-type cache: {error}"
-        ))
-    })?;
+    // An unreadable cache leaves every result unchecked (with a note); the
+    // command still exits 0.
+    let described = type_lints::Described::load(&args.root, &corpus);
     let mut output = match args.frontier.base.as_deref() {
         Some(revision) => {
             let tree = truth::frontier::base_tree(&args.root, revision).map_err(corpus_error)?;
