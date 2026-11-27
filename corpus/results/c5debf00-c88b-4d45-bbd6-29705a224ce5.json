@@ -1,0 +1,11 @@
+{
+  "id": "c5debf00-c88b-4d45-bbd6-29705a224ce5",
+  "label": "Content form of the second unde gives its real-otherness form, checked",
+  "argument_id": "48777e17-41e3-4761-923e-ebcf7394b8b6",
+  "challenge_module": "TruthCore.Results.Causality.DependenceToActOfBeing.Challenge",
+  "solution_module": "TruthCore.Results.Causality.DependenceToActOfBeing.Solution",
+  "theorem": "TruthCore.Results.Causality.DependenceToActOfBeing.secondUndeContentGivesRealOther",
+  "comparator_config": "results/c5debf00-c88b-4d45-bbd6-29705a224ce5/comparator.json",
+  "status": "solution-present",
+  "description": "The real-otherness form adds an antecedent to the content form, so the content form gives it. Backing of the strength registration."
+}

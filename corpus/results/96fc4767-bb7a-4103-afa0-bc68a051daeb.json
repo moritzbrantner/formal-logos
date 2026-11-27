@@ -7,5 +7,6 @@
   "theorem": "TruthCore.Results.Causality.DependenceToActOfBeing.ractOneFromDependence",
   "comparator_config": "results/96fc4767-bb7a-4103-afa0-bc68a051daeb/comparator.json",
   "status": "solution-present",
-  "description": "Take x whose nature is not being itself. Its nature is in act, so by R-dep x has being; by the first unde its nature is actual through esse; by the second, since the nature is not being itself, x's esse is received in its nature; received esse is limited. Own being is read as esse tantum (the nature is being itself). Given R-dep, the first bridge and the nature in act, the second bridge is equivalent to the reception half of the conclusion (undeLoadMap), so this derivation makes the commitment explicit."
+  "description": "Near-transcription (single application): given R-dep, the first unde and the nature in act, the second unde is equivalent to the reception half of R-act1 (undeLoadMap, conjunct 2), so the proof applies that bridge to deliver its own content; the limited half comes from 7de89edb. Own being is read as esse tantum (OWN_BEING_1, DEF ad76481a). Generic in the frame, so it holds on the dependence reading of 'actualized through' as well. It makes the commitment explicit and closes nothing by itself.",
+  "transcription": "single_application"
 }

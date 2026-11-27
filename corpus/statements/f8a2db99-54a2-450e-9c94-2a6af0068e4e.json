@@ -1,0 +1,18 @@
+{
+  "id": "f8a2db99-54a2-450e-9c94-2a6af0068e4e",
+  "label": "Suárez's profile against the unbundled composition step: controls",
+  "paraphrase": "Closed finite profile; statements about it only. Two beings whose nature is other than being itself, each with its esse really identical with its essence, esse actualizing the nature, nothing received. At most one real-identity being fails, real otherness of non-own beings fails, the real-otherness form of the second unde holds vacuously, and its content form fails. It witnesses where Suárez's account escapes: at stage (b)'s uniqueness on OWN_BEING_2 (75b5b027), not at reception given real otherness.",
+  "lean_declaration": "TruthCore.Causality.DependenceToActOfBeing.Control.UnbundledControls",
+  "definition_ids": [
+    "82ab06d0-5328-4d85-b3a2-4a13532d9524",
+    "97c4f504-4792-43c6-9f61-ae23df732d5f",
+    "4433942e-aaf6-55a9-b777-66e55638103d",
+    "87f9e331-d75e-41c5-994f-125c4969deb5",
+    "ad76481a-f038-4652-9c6e-0e0441eee7e5"
+  ],
+  "disambiguation_ids": [
+    "a409105e-8389-46ce-b14b-bebbc2864198",
+    "5921354b-51e6-5da3-8d8c-e9041840fd9f",
+    "1bff3cb4-f73b-42d4-ba2c-ff782e9df39b"
+  ]
+}

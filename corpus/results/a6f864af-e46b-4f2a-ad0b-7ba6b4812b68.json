@@ -1,0 +1,11 @@
+{
+  "id": "a6f864af-e46b-4f2a-ad0b-7ba6b4812b68",
+  "label": "Suárez's profile against the unbundled composition step: controls, checked",
+  "argument_id": "b7480e89-a3e2-4380-8553-9b8b52012540",
+  "challenge_module": "TruthCore.Results.Causality.DependenceToActOfBeing.Challenge",
+  "solution_module": "TruthCore.Results.Causality.DependenceToActOfBeing.Solution",
+  "theorem": "TruthCore.Results.Causality.DependenceToActOfBeing.unbundledControls",
+  "comparator_config": "results/a6f864af-e46b-4f2a-ad0b-7ba6b4812b68/comparator.json",
+  "status": "solution-present",
+  "description": "Two real-identity creatures that are not esse tantum and receive nothing: stage (b)'s at-most-one and real otherness fail, the real-otherness form holds vacuously, the content form fails. A structural surrogate."
+}

@@ -1,0 +1,11 @@
+{
+  "id": "13574c55-fd8d-4763-a0b3-e970449cb4f4",
+  "label": "The composition step is real otherness plus reception, checked",
+  "argument_id": "f539bba2-1418-4a82-96d9-d55d973b6ae9",
+  "challenge_module": "TruthCore.Results.Causality.DependenceToActOfBeing.Challenge",
+  "solution_module": "TruthCore.Results.Causality.DependenceToActOfBeing.Solution",
+  "theorem": "TruthCore.Results.Causality.DependenceToActOfBeing.compositionStepUnbundled",
+  "comparator_config": "results/13574c55-fd8d-4763-a0b3-e970449cb4f4/comparator.json",
+  "status": "solution-present",
+  "description": "Premise-free load map of the composition step: content form = real-otherness form plus real otherness of non-own beings; at-most-one real identity with an esse-tantum real-identity being gives real otherness. Formally immediate."
+}

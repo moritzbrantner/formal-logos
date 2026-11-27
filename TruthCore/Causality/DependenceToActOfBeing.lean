@@ -39,9 +39,14 @@ Targets: R-act₁ `FiniteEsseReceivedAndLimited` (`8c64b036`) and R-act₂
 * for R-act₂, `PurePerfectionsActualSomewhere` and
   `ActualizedPureIsOfEsse`.
 
-`ActualizationFrame.ActualizedBy` is ACTUALIZATION_2, a primitive with the act
-reading ("r is actual in x through the act a"). `DeflatedActualizedBy` is
-ACTUALIZATION_1, the dependence reading. Respect identity in `GradesFrame`
+`ActualizationFrame.ActualizedBy` is intended as ACTUALIZED_THROUGH_2, a primitive
+with the act reading ("r is actual in x through the act a"). `DeflatedActualizedBy`
+is ACTUALIZED_THROUGH_1, the dependence reading. The two senses share the type
+`B → R → R → Prop`, so the type does not enforce the distinction, and every result
+here is generic in the frame: it holds with `⟨quiddity, DeflatedActualizedBy F⟩`,
+where the first bridge is analytic. The route is sense-neutral in "actualized
+through"; its separating content is reception (and inclusion for R-act₂).
+Respect identity in `GradesFrame`
 is identity of content (humanity is not being), which every view considered
 grants (De ente c.3's "possum enim intelligere quid est homo vel Phoenix et
 tamen ignorare an esse habeat in rerum natura"). It is not real distinction. -/
@@ -62,9 +67,10 @@ structure ActualizationFrame (B R : Type) where
   /-- `quiddity x`: the nature of `x`, as the respect in which `x` is actually
   what it is ("humanitas ... in actu", q.3 a.4). -/
   quiddity : B → R
-  /-- ACTUALIZATION_2, explicitly primitive: in `x`, the respect `r` is actual
-  through the act `a` ("ipsum esse est actualitas ... ipsarum formarum"). Not
-  the dependence relation `DeflatedActualizedBy`; no law relates the two. -/
+  /-- Intended as ACTUALIZED_THROUGH_2, explicitly primitive: in `x`, the respect `r`
+  is actual through the act `a` ("ipsum esse est actualitas ... ipsarum formarum").
+  No law relates it to `DeflatedActualizedBy`, which has the same type and can
+  instantiate this field. -/
   ActualizedBy : B → R → R → Prop
 
 /-- "Cuius quiditas est ipsum suum esse" (De ente c.3): the nature of `x` is
@@ -229,6 +235,55 @@ def Q7BridgeLoadMap : Prop :=
       TruthCore.Causality.ModeOfBeingMiddleTerm.OwnBeingHasEveryPurePerfection OwnBeing Has Pure) ∧
     UnlimitedEsseHasEveryPure (LimitedByMeasure Has Pure) Has Pure
 
+/-! ## Unbundling the composition step
+
+Real identity of a being's essence and esse is represented, as in the q.3 a.4 and
+De ente profiles (`a576300f`), by equality of `esseOf x` and `essenceOf x` in a
+principle sort read as real identity. Content identity of respects (the frame's
+`=` on `R`) is weaker: a creature whose existence is really identical with its
+essence (Suárez, DM XXXI) still has a nature other in content than being itself. -/
+
+/-- OWN_BEING_2: the esse of `x` is really identical with its essence (q.3 a.4,
+"Deus est suum esse"; De ente stage (b)). Not *esse tantum* (`OwnBeingByQuiddity`). -/
+def EsseReallyIsEssence {P : Type} (esseOf essenceOf : B → P) (x : B) : Prop :=
+  esseOf x = essenceOf x
+
+/-- The weaker sibling of the second unde: q.3 a.4's "ad essentiam quae est aliud ab
+ipso" read as real otherness. A nature actual through an esse other than it in
+content, and really other than it, receives that esse. -/
+def ActualizedRealOtherQuiddityReceivesEsse {P : Type} (F : GradesFrame W B T R)
+    (A : ActualizationFrame B R) (EsseReceivedIn : B → R → Prop)
+    (esseOf essenceOf : B → P) : Prop :=
+  ∀ x, A.ActualizedBy x (A.quiddity x) F.esse → A.quiddity x ≠ F.esse →
+    ¬ EsseReallyIsEssence esseOf essenceOf x → EsseReceivedIn x (A.quiddity x)
+
+/-- (i) Real otherness: whatever is not its own being (*esse tantum*) has its esse
+really other than its essence. -/
+def NonOwnBeingsHaveRealOtherness {P : Type} (F : GradesFrame W B T R)
+    (A : ActualizationFrame B R) (esseOf essenceOf : B → P) : Prop :=
+  ∀ x, ¬ OwnBeingByQuiddity F A x → ¬ EsseReallyIsEssence esseOf essenceOf x
+
+/-- RECEPTION_OF_ESSE, real-composition sense: the esse of `x` is received in `r`
+(RECEPTION_OF_ESSE_1, constitution open) and `r` is really other than that esse. -/
+def RealCompositionReception {P : Type} (EsseReceivedIn : B → P → Prop)
+    (esseOf : B → P) (x : B) (r : P) : Prop :=
+  EsseReceivedIn x r ∧ r ≠ esseOf x
+
+/-- The composition step is (i) real otherness plus (ii) the weaker sibling; stage
+(b)'s at-most-one, with a real-identity being that is *esse tantum*, gives (i). -/
+def CompositionStepUnbundled : Prop :=
+  ∀ (W B T R P : Type) (F : GradesFrame W B T R) (A : ActualizationFrame B R)
+    (EsseReceivedIn : B → R → Prop) (esseOf essenceOf : B → P),
+    (ActualizedQuiddityReceivesEsse F A EsseReceivedIn →
+      ActualizedRealOtherQuiddityReceivesEsse F A EsseReceivedIn esseOf essenceOf) ∧
+    (NonOwnBeingsHaveRealOtherness F A esseOf essenceOf →
+      ActualizedRealOtherQuiddityReceivesEsse F A EsseReceivedIn esseOf essenceOf →
+      ActualizedQuiddityReceivesEsse F A EsseReceivedIn) ∧
+    ((∀ x y, EsseReallyIsEssence esseOf essenceOf x →
+        EsseReallyIsEssence esseOf essenceOf y → x = y) →
+      (∃ n, EsseReallyIsEssence esseOf essenceOf n ∧ OwnBeingByQuiddity F A n) →
+      NonOwnBeingsHaveRealOtherness F A esseOf essenceOf)
+
 /-! ## Controls -/
 
 namespace Control
@@ -368,6 +423,27 @@ def Q7Controls : Prop :=
   UnlimitedEsseHasEveryPure (LimitedByMeasure hasOnlyBeing allPure) hasOnlyBeing allPure ∧
   ¬ TruthCore.Latin.Aquinas.SummaTheologiae.PrimaPars.InfinityReception.EsseLimitedOnlyThroughReceptionReading
     (LimitedByMeasure hasOnlyBeing allPure) recv
+
+/-! ### Suárez's profile against the unbundled composition step
+
+World 1 with the act relation (esse actualizes the nature) and no reception; both
+beings have their esse really identical with their essence (`esseOf` and
+`essenceOf` constant), and neither is *esse tantum*. -/
+
+def esseOfS (_ : Bool) : Unit := ()
+def essenceOfS (_ : Bool) : Unit := ()
+
+/-- Statements about this profile only. At most one real-identity being fails (two
+creatures each really identical with its existence), real otherness of non-own
+beings fails, the weaker sibling holds vacuously, and the second unde in its
+content form fails. -/
+def UnbundledControls : Prop :=
+  ¬ (∀ x y, EsseReallyIsEssence esseOfS essenceOfS x →
+      EsseReallyIsEssence esseOfS essenceOfS y → x = y) ∧
+  ¬ NonOwnBeingsHaveRealOtherness (gframe act1) (thomist act1) esseOfS essenceOfS ∧
+  ActualizedRealOtherQuiddityReceivesEsse (gframe act1) (thomist act1) noReceived
+    esseOfS essenceOfS ∧
+  ¬ ActualizedQuiddityReceivesEsse (gframe act1) (thomist act1) noReceived
 
 end Control
 

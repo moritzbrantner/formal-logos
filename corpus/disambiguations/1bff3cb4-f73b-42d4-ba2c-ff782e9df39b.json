@@ -1,0 +1,25 @@
+{
+  "id": "1bff3cb4-f73b-42d4-ba2c-ff782e9df39b",
+  "label": "Own being: esse tantum versus real identity of esse and essence",
+  "term": "own being (OwnBeing)",
+  "term_label": "OWN_BEING",
+  "sense_definition_ids": [
+    "ad76481a-f038-4652-9c6e-0e0441eee7e5",
+    "87f9e331-d75e-41c5-994f-125c4969deb5"
+  ],
+  "resolution": "OWN_BEING_1 (OwnBeingByQuiddity): the nature of x is being itself, esse tantum, compared by content. OWN_BEING_2 (EsseReallyIsEssence): x's esse is really identical with its essence. The unde route and R-act1 as derived here use OWN_BEING_1. De ente's stage (b) (860eae63, a576300f) is stated with OWN_BEING_2; to give real otherness to everything not OWN_BEING_1 it needs a real-identity being that is also esse tantum, and the uniqueness premise 75b5b027 on OWN_BEING_2, which Suárez's account of creatures (each really identical with its existence, not esse tantum) denies. CompositionStepUnbundled keeps the two senses in separate conjuncts; no statement identifies them.",
+  "senses": [
+    {
+      "id": "fda7cf17-86d1-4879-b6af-b116bfb96622",
+      "label": "OWN_BEING_1",
+      "definition_id": "ad76481a-f038-4652-9c6e-0e0441eee7e5",
+      "lean_declaration": "TruthCore.Causality.DependenceToActOfBeing.OwnBeingByQuiddity"
+    },
+    {
+      "id": "72aa6203-0bd4-4579-9b21-ed020916e179",
+      "label": "OWN_BEING_2",
+      "definition_id": "87f9e331-d75e-41c5-994f-125c4969deb5",
+      "lean_declaration": "TruthCore.Causality.DependenceToActOfBeing.EsseReallyIsEssence"
+    }
+  ]
+}

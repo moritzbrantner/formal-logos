@@ -135,4 +135,36 @@ theorem q7Controls : Control.Q7Controls := by
   refine ⟨?_, ?_, ?_, ?_, ?_, ?_⟩
   all_goals decide
 
+/-- The content form of the second unde is the real-otherness form plus real
+otherness; stage (b)'s at-most-one with an *esse tantum* real-identity being gives
+real otherness. -/
+theorem compositionStepUnbundled : CompositionStepUnbundled := by
+  intro W B T R P F A EsseReceivedIn esseOf essenceOf
+  refine ⟨?_, ?_, ?_⟩
+  · intro hStrong x hAct hNe _
+    exact hStrong x hAct hNe
+  · intro hOther hWeak x hAct hNe
+    exact hWeak x hAct hNe (hOther x hNe)
+  · intro hAtMost ⟨n, hn, hOwn⟩ x hNotOwn hx
+    have hxn : x = n := hAtMost x n hx hn
+    subst hxn
+    exact hNotOwn hOwn
+
+/-- The strong (content-distinctness) form of the second unde gives its
+real-otherness sibling: the backing of the strength registration. -/
+theorem secondUndeContentGivesRealOther {W B T R P : Type} (F : GradesFrame W B T R)
+    (A : ActualizationFrame B R) (EsseReceivedIn : B → R → Prop) (esseOf essenceOf : B → P)
+    (hStrong : ActualizedQuiddityReceivesEsse F A EsseReceivedIn) :
+    ActualizedRealOtherQuiddityReceivesEsse F A EsseReceivedIn esseOf essenceOf :=
+  fun x hAct hNe _ => hStrong x hAct hNe
+
+/-- Suárez's profile, checked by decision. -/
+theorem unbundledControls : Control.UnbundledControls := by
+  dsimp [Control.UnbundledControls, Control.esseOfS, Control.essenceOfS, Control.gframe,
+    Control.act1, Control.thomist, Control.nature, Control.noReceived,
+    EsseReallyIsEssence, NonOwnBeingsHaveRealOtherness, OwnBeingByQuiddity,
+    ActualizedRealOtherQuiddityReceivesEsse, ActualizedQuiddityReceivesEsse]
+  refine ⟨?_, ?_, ?_, ?_⟩
+  all_goals decide
+
 end TruthCore.Results.Causality.DependenceToActOfBeing

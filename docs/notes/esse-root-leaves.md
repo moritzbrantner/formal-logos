@@ -332,9 +332,9 @@ link:
 | 6 | "An abstract cause of esse would falsify" `82eeeb3c` (paraphrase) | **No substantive objection identified.** No abstract cause of esse is established or argued on file. A rival positing Forms as causes of being must either grant them esse in re, which makes them CONCRETE_AND_ABSTRACT_6 by the owner's stipulation, or explain how what has no esse in re gives esse; no record does the latter. |
 | 7 | Origin without sustaining dependence (new for `2068f91c`; extends lane B's row 2 against `a8298fbd`, #1769) | **Kept, conditional.** *Target:* `2068f91c` when `CausesIn` at esse covers originating causes and `D` is read sustaining. *Mechanism:* a parent originates a child's being, and the child can be while the parent is not. *Justification:* ordinary generation; q.104 a.1's contrast of a cause of becoming with a cause of being (claim `40aefb2e`, not re-read here). *Relevance:* DEF-CAUSE-OF-PERFECTION leaves the mode open, and the route's edge comes from the genus principle, whose mode is also open. On the narrower sense that claim `40aefb2e` records, a cause of becoming is not a cause of being as such; there the parent is no `CausesIn` cause of the child's esse, and the objection has no target. |
 | 8 | Redundant (overdetermining) causes against the bare counterfactual gloss of `D` (brief) | **No substantive objection identified.** Redundant causation is established for qualities and events, not for the esse of one bearer. No case is on file, and the route's instance concerns a root with no other ground. |
-| 9 | Real-distinction deniers against `29e71e43` and `7de89edb` ([original assessment](modal-spine.md)) | The original assessment recorded an unread lead. The subsequent [reading of Suárez, DM XXXI](de-ente-esse-source-1628.md#can-an-identity-of-essence-and-existence-rule-out-a-supplier) applies when internal reception requires a really distinct principle. DEF-ESSE-RECEIVED-IN leaves that interpretation open. Scotus and Ockham remain unread. |
+| 9 | Real-distinction deniers against `29e71e43` and `7de89edb` ([original assessment](modal-spine.md)) | The original assessment recorded an unread lead. The subsequent [reading of Suárez, DM XXXI](de-ente-esse-source-1628.md#can-an-identity-of-essence-and-existence-rule-out-a-supplier) applies when internal reception requires a really distinct principle. DEF-ESSE-RECEIVED-IN leaves that interpretation open. Scotus and Ockham remain unread. *Revised 2026-11-27: see row 15 and (f2).* |
 | 10 | Divine processions (scope condition, definition `80dea550`, on `da72ae93`) for `7de89edb` | **Restated as a scope boundary.** It is excluded by the domain stipulation, and it belongs to a deferred research phase. |
-| 11 | "A finite subsistent being" (rival table, [modal-spine.md](modal-spine.md)) against `1304b462` | **No substantive objection identified.** The rival table records it as a formal alternative with no justification on file. |
+| 11 | "A finite subsistent being" (rival table, [modal-spine.md](modal-spine.md)) against `1304b462` | **No substantive objection identified.** The rival table records it as a formal alternative with no justification on file. *Revised 2026-11-27: Suárez supplies the justification on the real-composition sense; see row 16 and (f2).* |
 | 12 | United-soul communication of esse (DISAMB-ESSE-RECEPTION's open case; SCG II.80 n.13) | **No target on the four reception leaves.** It bears on STMT-ESSE-RECEIVED-IN-OWN-ESSENCE and on lane D's `3e890700`. |
 | 13 | No proportioned measure (q.3 a.5 ad 2; relation `394a49a5`) against `331f4751` | **No substantive objection identified**, as lane D found for its degree postulates (#1772): a preorder degree is not a common measure. |
 | 14 | Degree-of-being deniers (univocal existence; brief, this section) against `e462cf2f`, and the content of `38cf20d9` and `331f4751` | **Kept, sense-relative.** *Positive account:* "exists" is the univocal existential quantifier and admits no degrees; things differ in their properties, not in how much they exist. *Mechanism:* `MoreIn esse` would never hold, so `e462cf2f` is false. *Justification:* the success of the quantificational analysis of existence statements, including negative existentials (Frege, Russell, Quine; attribution deferred, not read here). *Relevance:* it reaches `e462cf2f` on the existence-as-quantifier reading of being. On DEF-ESSE's act reading it must deny graded actuality, which is a different thesis, and on the derivation in (c) it then bears on `5a948c37`'s comparative conjunct and `a9622441`'s verum conjunct. It does not reach `fad8af3e` (derivation (ii)). |
@@ -347,6 +347,38 @@ objection identified 6 (rows 3, 6, 8, 11, 12, 13). Leaves with no kept
 objection: `ae68972c`, `0a7896e7`, `1304b462`, `7de89edb`, `29e71e43`,
 `331f4751`, `38cf20d9`, `fad8af3e`, `82eeeb3c`. `e2462fa8`'s blocker is not an
 objection to its truth; it concerns the warrant of applying the source.
+
+| 15 | Suárez's real identity against `29e71e43` (added 2026-11-27) | **Kept, on the real-composition sense.**<br>*Target:* q.7 a.2 co., "necesse est quod ipsum eius esse sit receptum et contractum", read as reception in a principle really other than the esse (RECEPTION_OF_ESSE_VERSUS_EXTERNAL_CAUSE_5).<br>*Mechanism:* the composition step, an act other in content than the nature and had from another, received in the nature as in a really distinct potency, is not granted.<br>*Justification:* DM XXXI XIII.17: created esse is "irreceptum in aliquo, quamvis sit receptum ab aliquo", and participation is "una et eadem res … per vim alterius". XIII.18: created esse is limited "seipso", "non ut est potentia in qua recipitur". Both were read in the pinned local copy (Castellote–Renemann, sha256 `1df6c70b`, pp. 80–81). The De ente stage (b) route to real otherness rests on the open `75b5b027` (#697).<br>*Relevance:* `29e71e43` is the creature-reception premise of the esse-root routes.<br>It does **not** reach the constitution-open sense (RECEPTION_OF_ESSE_1): XIII.18 admits "metaphysical contraction" on a "distinctio conceptuum cum aliquo fundamento in re", under which esse is limited "quia est actus talis essentiae". |
+| 16 | Suárez's self-limited created esse against `1304b462` (added 2026-11-27) | **Kept, on the real-composition sense.**<br>*Target:* "esse is limited only through reception".<br>*Mechanism and justification:* DM XXXI XIII.18 takes up the objection "esse non receptum in aliquo non habet unde limitetur". It answers that created esse is limited "seipso et ex vi entitatis suae", intrinsically, and extrinsically by God, effectively and exemplarly, without a really distinct receiving potency.<br>*Relevance:* the measure reading of `1304b462`, which carries the content of the q.7 a.1 bridge (rdep-to-ract.md §5a).<br>On the constitution-open sense, Suárez's metaphysical contraction again concedes a reason-level version. This supplies the justification that row 11 found missing. |
+
+### (f2) Revision of `29e71e43` and `1304b462` by sense (2026-11-27)
+
+A coordinator provisional judgment, which AGENTS.md permits; it is not an owner
+decision. It is made on the evidence of checkpoint 4
+([rdep-to-ract.md](rdep-to-ract.md)) and DM XXXI XIII.17–18, read in the pinned local
+copy. Reception of esse now has a registered real-composition sense
+(RECEPTION_OF_ESSE_VERSUS_EXTERNAL_CAUSE_5, DEF `74837d29`) beside the
+constitution-open sense 1. The earlier grade of `29e71e43`, "P, moderate to strong"
+with "no substantive objection identified" in (c) and (f) row 9, is kept in the
+attempt's assessment history. It is replaced by sense:
+
+- **As Aquinas's textual commitment** (q.7 a.2 co. with ad 1, De ente cap.4
+  "receptum et ideo limitatum"): **strong.**
+- **As argued warrant on the real-composition sense:** **weak to moderate**, not
+  defeated, unresolved, aligned with R-act₁ in that sense.
+  - Its "necesse est" rests on the composition step, grounded in q.4 a.1 ad 3, and
+    every argument for that step on file shifts its load (rdep-to-ract.md).
+  - Row 15 records the substantive objection.
+- **On the constitution-open sense:** **moderate to strong**, unchanged.
+  - DM XXXI does not reach it: XIII.18 admits a metaphysical contraction founded in
+    re, under which essence is limited "in ordine ad esse" and esse "quia est actus
+    talis essentiae".
+  - Its remaining rival is the quantifier view, which denies any act of being; no
+    positive warrant for that distinctive claim is on file (#2171).
+  - Whether each consuming route works on this sense is not assessed here.
+
+`1304b462` is revised in the same way. On the real-composition sense it now meets the
+sourced objection of row 16. On the constitution-open sense the (c) grade stands.
 
 ### (g) Overall provisional judgment, route-level judgment, revision conditions and next test
 

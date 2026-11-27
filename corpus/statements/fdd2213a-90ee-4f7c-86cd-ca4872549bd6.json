@@ -1,7 +1,7 @@
 {
   "id": "fdd2213a-90ee-4f7c-86cd-ca4872549bd6",
   "label": "A pure perfection actual through esse is a perfection of esse itself",
-  "paraphrase": "OPEN, analyst formulation, attribution deferred: for every x and pure perfection d, if d is actual in x through esse (ACTUALIZED_THROUGH_2) then d is a perfection of esse itself (PERFECTION_OF_BEING_2, intensive esse). With R-dep, the first 'unde' and the witness premise it is equivalent to R-act2 (254ee26f). The text closest to it is the q.4 a.2 sentence 'omnium autem perfectiones pertinent ad perfectionem essendi' (5c5281dd) read constitutively, the sentence whose ground is under test.",
+  "paraphrase": "OPEN, analyst formulation, attribution deferred: for every x and pure perfection d, if d is actual in x through esse (the frame field, intended as ACTUALIZED_THROUGH_2; sense-neutral as above) then d is a perfection of esse itself (PERFECTION_OF_BEING_2, intensive esse). With R-dep, the first 'unde' and the witness premise it is equivalent to R-act2 (254ee26f). The text closest to it is the q.4 a.2 sentence 'omnium autem perfectiones pertinent ad perfectionem essendi' (5c5281dd) read constitutively, the sentence whose ground is under test.",
   "lean_declaration": "TruthCore.Causality.DependenceToActOfBeing.ActualizedPureIsOfEsse",
   "definition_ids": [
     "82ab06d0-5328-4d85-b3a2-4a13532d9524",

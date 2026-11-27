@@ -70,4 +70,22 @@ theorem q7BridgeLoadMap : Q7BridgeLoadMap := by
 theorem q7Controls : Control.Q7Controls := by
   sorry
 
+/-- The content form of the second unde is the real-otherness form plus real
+otherness; stage (b)'s at-most-one with an *esse tantum* real-identity being gives
+real otherness. -/
+theorem compositionStepUnbundled : CompositionStepUnbundled := by
+  sorry
+
+/-- The strong (content-distinctness) form of the second unde gives its
+real-otherness sibling: the backing of the strength registration. -/
+theorem secondUndeContentGivesRealOther {W B T R P : Type} (F : GradesFrame W B T R)
+    (A : ActualizationFrame B R) (EsseReceivedIn : B → R → Prop) (esseOf essenceOf : B → P)
+    (hStrong : ActualizedQuiddityReceivesEsse F A EsseReceivedIn) :
+    ActualizedRealOtherQuiddityReceivesEsse F A EsseReceivedIn esseOf essenceOf := by
+  sorry
+
+/-- Suárez's profile, checked by decision. -/
+theorem unbundledControls : Control.UnbundledControls := by
+  sorry
+
 end TruthCore.Results.Causality.DependenceToActOfBeing
