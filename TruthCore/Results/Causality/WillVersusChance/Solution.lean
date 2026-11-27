@@ -2,6 +2,9 @@ module
 
 public import TruthCore.Causality.WillVersusChance
 public import TruthCore.Results.Modal.PrussPowerPremises.Solution
+import Mathlib.Tactic.Linarith
+import Mathlib.Tactic.FinCases
+import Mathlib.Tactic.NormNum
 
 /-! Choice versus chance at a necessary, patientless source (stage two,
 `66aecdd7`): intellect and one power make every giving willed, and so make the
@@ -13,9 +16,6 @@ reconstructions; attribution deferred. -/
 
 @[expose] public section
 
-import Mathlib.Tactic.Linarith
-import Mathlib.Tactic.FinCases
-import Mathlib.Tactic.NormNum
 
 namespace TruthCore.Results.Causality.WillVersusChance
 open TruthCore.Causality.WillVersusChance
