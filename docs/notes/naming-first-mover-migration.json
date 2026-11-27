@@ -686,7 +686,7 @@
         "sha256": "693823d57d40864a9065ca67cdddd5a7fc3a509962634db83d99d8127024a723",
         "lean_declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.MatterFormAndEsseEssenceAreCompositionsReading"
       },
-      "reviewed_sha256": "c80f2f52e172e4fe01f3c1216e0cd28aa1263d6fdab32fdef33315d23580a485"
+      "reviewed_sha256": "0fdd6a1ee948679d39afd58490d7471c516e746a5601d8ad04d1122c851cd11f"
     },
     {
       "kind": "statements",

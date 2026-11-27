@@ -2,7 +2,7 @@
   "id": "d7741cdc-881b-5bda-85ce-d70223162f78",
   "label": "Whatever is composed of matter and form, or has an act of being other than its essence, is composite",
   "legacy_id": "STMT-MATTER-FORM-AND-ESSE-ESSENCE-ARE-COMPOSITIONS",
-  "paraphrase": "For each bearer, satisfying the supplied matter-form predicate implies composition. Having different values under the supplied esse and essence maps also implies composition.",
+  "paraphrase": "Whatever is composed of matter and form, or has an act of being (esse) other than its essence, is composite.",
   "lean_declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.MatterFormAndEsseEssenceAreCompositionsReading",
   "definition_ids": [
     "24693bb9-472f-440b-829d-1ebc3ac009b6",
@@ -11,5 +11,6 @@
   ],
   "disambiguation_ids": [
     "1aef8986-ed29-564f-9803-d812d2ff63e1"
-  ]
+  ],
+  "note": "The represented Lean reading compares the supplied esse and essence maps in their common principle type."
 }
