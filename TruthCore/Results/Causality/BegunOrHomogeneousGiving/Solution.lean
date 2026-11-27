@@ -106,4 +106,18 @@ theorem controls : Certificate := by
     simp only [falseReceived] at hz
     exact ⟨true, rfl, hz⟩
 
+/-- Populated nonvacuity witness (`Control.Nonvacuity`). -/
+theorem nonvacuity : Nonvacuity := by
+  have hCA : TruthCore.Causality.ConcurrentActualization.ConcurrentlyActualized
+      eternal givesAlways falseReceived := by
+    intro v x t z hz _
+    simp only [falseReceived] at hz
+    exact ⟨true, rfl, hz⟩
+  refine ⟨⟨false, 0, rfl, trivial⟩, fun v x z _ hz _ t ht => hCA v x t z hz ht,
+    fun v x t z hz _ ht => hCA v x t z hz ht, ?_, hCA⟩
+  intro v x t z hz _
+  simp only [falseReceived] at hz
+  subst hz
+  exact Or.inr eternalHomogeneous
+
 end TruthCore.Results.Causality.BegunOrHomogeneousGiving

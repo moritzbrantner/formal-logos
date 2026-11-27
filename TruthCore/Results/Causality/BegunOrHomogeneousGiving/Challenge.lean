@@ -32,4 +32,8 @@ open TruthCore.Causality.BegunOrHomogeneousGiving.Control
 theorem controls : Certificate := by
   sorry
 
+/-- Populated nonvacuity witness (`Control.Nonvacuity`). -/
+theorem nonvacuity : Nonvacuity := by
+  sorry
+
 end TruthCore.Results.Causality.BegunOrHomogeneousGiving

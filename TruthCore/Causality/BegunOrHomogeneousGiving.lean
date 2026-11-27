@@ -98,6 +98,17 @@ def Certificate : Prop :=
   (ConcurrentlyActualized eternal givesAlways falseReceived ∧
     ¬ BegunOrHomogeneous eternal markedZero falseReceived)
 
+/-- Nonvacuity: in the eternal history with no supplied facts and `true`
+giving `false` being at every moment, a received-esse thing (`false`) is present
+at moment `0`, and the begun restriction, the homogeneous restriction, the
+coverage premise and `40a97664` all hold. -/
+def Nonvacuity : Prop :=
+  (∃ x t, falseReceived x () ∧ eternal.IsAt () x t) ∧
+    ConcurrentlyActualizedOnceBegun eternal givesAlways falseReceived ∧
+    ConcurrentlyActualizedIfHomogeneous eternal givesAlways noFacts falseReceived ∧
+    BegunOrHomogeneous eternal noFacts falseReceived ∧
+    ConcurrentlyActualized eternal givesAlways falseReceived
+
 end Control
 
 end TruthCore.Causality.BegunOrHomogeneousGiving
