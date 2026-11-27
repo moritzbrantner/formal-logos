@@ -343,12 +343,12 @@
       "path": "corpus/statements/act-simply-prior-to-potency.json",
       "status": "unresolved",
       "classification": "reused_unchanged_audit",
-      "finding": "Reuse unchanged prior audit disposition: Retained explicit open commitment: Act is simply prior to potency: whatever is in potency in a respect is simply posterior to some being that is in act in that respect. Exact applications are bound by the scoped Challenges. Existing source/attempt evidence is reused, not a renewed source-fidelity certification. The fixed Lean declaration takes a supplied potency predicate. Producer-specific specializations are recorded at their arguments.",
+      "finding": "Reuse unchanged prior audit disposition: Retained explicit open commitment: Act is simply prior to potency: whatever is in potency in a respect is simply posterior to some being that is in act in that respect. Exact applications are bound by the scoped Challenges. Existing source/attempt evidence is reused, not a renewed source-fidelity certification. The fixed Lean declaration takes a supplied potency predicate. Producer-specific specializations are recorded at their arguments. The potency disambiguation applies at each fixed predicate instantiation.",
       "before": {
         "sha256": "24fe5978433819bc66b38f876a3b33560bd8c6ee9dcb572a78fd0e922937b109",
         "lean_declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.ActSimplyPriorToPotencyReading"
       },
-      "reviewed_sha256": "747110a7cc923cdae60b7e4813abbbf6f7dc2c0c96d75dab8d35c148c079b9f0"
+      "reviewed_sha256": "09f157406ebb1bdefa3699a8cbe815586771dff514a9b170db0a5efd8a8ff6fe"
     },
     {
       "kind": "statements",
@@ -980,12 +980,12 @@
       "path": "corpus/statements/unique-god-with-classical-attributes-exists.json",
       "status": "inspected",
       "classification": "reused_unchanged_audit",
-      "finding": "Reuse unchanged prior audit disposition: Exactly \u2203g, \u03c3.IsGod g \u2227 IsTheOneGod \u03c3.IsGod g \u2227 \u03c3.HasClassicalAttributes g. Fourth-Way m and First-Way f remain the single respective witness; uniqueness ranges over original \u03c3.IsGod, including in Q11-NATURE. 2026-11-27 type/link reconciliation: the quantified binder and signature are unchanged. Retain the witness, GOD_4, numerical uniqueness and the primitive field links. The discarded terms describe earlier derivations and do not occur in this endpoint. The connection plan documents only the open-premise assembly producers.",
+      "finding": "Reuse unchanged prior audit disposition: Exactly \u2203g, \u03c3.IsGod g \u2227 IsTheOneGod \u03c3.IsGod g \u2227 \u03c3.HasClassicalAttributes g. Fourth-Way m and First-Way f remain the single respective witness; uniqueness ranges over original \u03c3.IsGod, including in Q11-NATURE. 2026-11-27 type/link reconciliation: the quantified binder and signature are unchanged. Retain the witness, GOD_4, numerical uniqueness and the primitive field links. The discarded terms describe earlier derivations and do not occur in this endpoint. The connection plan documents the open-premise projection 822de823. The field-to-field cycle through 398f4323 is recorded separately.",
       "before": {
         "sha256": "9c1652a18e12bb35f55b1478bb315866fed3c5cec8dfd892bbca08849ef62dc2",
         "lean_declaration": "TruthCore.Case.Catholicism.UniqueClassicalGodExists"
       },
-      "reviewed_sha256": "22f90afc0c60dba0e89404e84abb5cd31c32dd2490b500cad4af52829acdc6ed"
+      "reviewed_sha256": "035bb29a31c8eface06b571810d4501a8f7e19580e35c06350ae2af6cf903d0c"
     },
     {
       "kind": "statements",
