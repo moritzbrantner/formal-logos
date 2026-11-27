@@ -7715,8 +7715,8 @@ own.
 
 | Account (mode, object) | Good-general | Per-bearer measure | Object premise | Cognition criterion | Where it pays |
 | --- | --- | --- | --- | --- | --- |
-| Personal root (rational, the good) | yes | unrestricted | holds by the kind rule, given that its favouring is a rational appetite of the root (`rationalKindGivesObject`'s `hRat`, the disputed mode step) | holds | `hRat` at the root, which is `d1fb6414`'s positive side; the exemplar-containment problem under simplicity (#1879), shared with A4 (lane C) |
-| Imitability exemplarism, A4 (natural, the good) | yes | unrestricted | holds | denies | the mode coordinate: `d1fb6414` / `3b40009e` (parity, lane C) |
+| Personal root (rational, the good) | yes | unrestricted | holds by the kind rule, given that its favouring is a rational appetite of the root (`rationalKindGivesObject`'s `hRat`, the disputed mode step) | holds | `hRat` at the root, which corresponds, by analyst judgment, to `d1fb6414`'s positive side; the exemplar-containment problem under simplicity (#1879), shared with A4 (lane C) |
+| Imitability exemplarism, A4 (natural, the good) | yes | unrestricted | holds | denies | the object premise by stipulation of its nature's end (no kind rule applies to a natural bearer); the mode coordinate: `d1fb6414` / `3b40009e` (parity, lane C) |
 | D-directed nature (natural, D) | no | unrestricted | denies | not engaged | the object premise; if value is grounded in its nature, an unrecorded fixity to D (to E); otherwise lane C's locus prices for value itself |
 | Determined will (rational, D; the same profile as the D-directed nature, borne by a willing bearer) | no | restricted: by the kind rule its object for a willing bearer is the good, and it misses c over d at `cBetter` | holds by the kind rule; its favouring does not track that object | not engaged | no actual root has it, given RootPurity, the per-bearer bridge and the kind rule (`perBearerAndObjectGiveRootValueVerdicts`; the grid's two-bearer model) |
 
@@ -7821,6 +7821,11 @@ Reused closed premises: `a30c5963` and `c78c77da`.
    type. The Challenge was regenerated, and the grid gained the two-bearer
    model. The prose of B, C, D and the assessment was rescoped as above. DEFs
    `f58cd6bf` and `e69e3826` were updated.
+3. **Targeted re-check** of `be1e3bb2b..7924bf51c`: all seven findings fixed;
+   new types non-vacuous; each control row still fails exactly its claimed
+   premise. Two new wording P2s (the personal row's "which is `d1fb6414`'s
+   positive side" made an analyst correspondence; A4's object-premise price by
+   stipulation of its nature's end) were fixed in the following commit.
 
 [Attempt record](../../corpus/attempts/f366f20e-0bd3-40cc-a8f3-595c2ec5194f.json)
 
