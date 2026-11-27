@@ -36,5 +36,24 @@
       "effort": "high",
       "date": "2026-11-27"
     }
-  ]
+  ],
+  "current_assessment": {
+    "date": "2026-11-27",
+    "statement_ids": [
+      "9281317d-1f0a-4522-b91c-58cc07652e92",
+      "906f9077-478e-4730-a46b-5c6ce27c62c0",
+      "f6f956a1-c1bb-4d92-8278-f50c4a33ff97",
+      "61a0b3e6-b115-4533-9148-82b17b149616",
+      "682e6436-a44f-40d6-bc02-7cb5f4a2b754"
+    ],
+    "scope": "E (no unexplained absence at actual roots) against an essence-grounded account of root-profile modality, carriage of essential exclusions, truthmakers and the selection tu quoque (#2145 premise lane E). Scoped to a rival whose lack of noesis is case (iii), given joint compossibility and the purity of noesis, 0c8631bd, 3b39e0ba, N and the necessity direction of member grounding 89c988d9.",
+    "assessment": "Conditional support of low to moderate strength for E; nothing established. E is derived from N, EM and EP (4fef9522), and EP from LE and the necessity direction MG (10f44921). Both are relocations: under N, EM and factivity EP is equivalent to E, and under MG LE is equivalent to EP; LE with MG is strictly stronger than EP. N and EM carry warrant outside the dispute, but EM is a contested theory of modality that the powers account many theists hold does not supply, and N costs the classical root the relation-of-reason account of its free selection (classicalSelectionControl). LE's inductive base contains only impure, limiting carriers; at a pure root closureCarrierExcludedAtRoots leaves no admissible carrier, so a substantive reference-class objection stands and LE's remaining warrant there is the rationale it shares with member grounding, 0c8631bd and E (negative facts at a root have positive grounds). The totality fact as a real determination lands in case (ii) and is excluded by 0c8631bd with 3b39e0ba; as a non-determination it denies LE; as a distinct entity it is the extrinsic case. Necessitation-style truthmaking is met by any existent for a necessary fact. Neither registered WhyStance standard separates contingent selection from a bare negative clause. A holistic case (i)/(ii) exclusion of noesis satisfies every premise of this route and is priced in the compossibility lanes. Both sides pay (price table in the note); no ranking beyond it.",
+    "next_test": "Non-inductive warrant for LE at a pure root, or a necessary negative fact outside the dispute carried by a pure, non-limiting determination; test the relation-of-reason account of the classical root's selection against N (#555); a powers-account counterpart deriving E without EM; a fact-to-profile bridge into ContingentPSR; independent warrant for 89c988d9 and 0c8631bd.",
+    "note": "docs/notes/causal-perfection-transfer.md#closure-for-a-roots-own-determinations-essence-carriage-and-truthmakers-2026-11-27-provisional-2145",
+    "reviewed_revision": "09aa5fc44391b905da1ecaf4f1189e6879cf78dd",
+    "review": "unreviewed",
+    "publication": "unpublished",
+    "supersedes": "The first proposal of this lane at f00df7af4 ('moderate conditional support; not at parity; LE has an inductive base and no substantive objection at the root'), which the independent semantic challenge did not accept.",
+    "evidence": "Branch research/premise-e-closure. The independent semantic challenge of f00df7af4 accepted the registered types, premise lists, cycle handling, cross-lane edits and controls, and did not accept the assessment (three P1, six P2). Repairs at 09aa5fc44391b905da1ecaf4f1189e6879cf78dd; a targeted re-check has not yet run."
+  }
 }
