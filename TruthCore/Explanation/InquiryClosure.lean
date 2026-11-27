@@ -32,11 +32,15 @@ Three gaps are separated.
   turns `GlobalDefeat` into its unrestricted form. The one quality condition that reaches necessary targets,
   `StoppingPoints.WorkIndependent` at every reason, forces every explained
   necessary truth to have a contingent reason, for every root alike.
-* **Sense.** `PositivelyFixedAbsence` is the sense of "explained" that E uses
-  (EXPLAINED_ABSENCE_2). `RootLackReasonsPositive` is the bridge to it from the
-  admitted-reason sense (`PSRStrength.Explained`, EXPLAINED_ABSENCE_1). With a
-  PSR for root lack facts, the lack facts represented and the necessity
-  direction of member grounding it gives E, and E alone gives it back.
+* **Sense.** E says that no absence at an actual root is unexplained in the
+  admissibility sense (EXPLAINED_ABSENCE_3: fixed by the admissibility
+  constraints with the root's profile, case i or ii). `PositivelyFixedAbsence`
+  (EXPLAINED_ABSENCE_2) adds a carried exclusion; it equals sense 3 under the
+  necessity direction of member grounding. `RootLackReasonsPositive` is the
+  bridge to sense 2 from the admitted-reason sense (`PSRStrength.Explained`,
+  EXPLAINED_ABSENCE_1). With a PSR for root lack facts, the lack facts
+  represented and the necessity direction of member grounding it gives E, and
+  E alone gives it back.
   `RootLackReasonsEssential` (a reason for a root's lack requires a nature
   excluding it) factors the bridge through LE.
 
@@ -126,11 +130,13 @@ It is not restricted to contingent facts. -/
 def RootLackPSR (m : Profile W B) (w : W) (A : Arena W B F) (lack : B → D → F) : Prop :=
   ∀ r, ActualRoot m w r → ∀ d, A.holds w (lack r d) → Explained A w (lack r d)
 
-/-- EXPLAINED_ABSENCE_2, an absence positively fixed in the sense E uses:
+/-- EXPLAINED_ABSENCE_2, a positively fixed absence:
 either no admissible profile contains all of `x`'s determinations together
 with `k` (case i or ii of #2153), or some determination `t` of `x` requires
 the lack of a set `S` containing `k` whose other members `x` has (a carried
-exclusion, LE's sense). It is not "some reason for the absence is admitted": a
+exclusion, LE's sense). E's sense (EXPLAINED_ABSENCE_3) is the first disjunct;
+the two coincide under the necessity direction of member grounding. It is not
+"some reason for the absence is admitted": a
 bare negative clause in a nature is an admitted reason in the #755 arena and
 fixes nothing here. -/
 def PositivelyFixedAbsence (Admissible : Set D → Prop) (RequiresLack : D → Set D → Prop)
@@ -321,13 +327,21 @@ open TruthCore.Logic (ExcludedMiddle)
    `ContingentPSR`, and turns `GlobalDefeat` into `GlobalDefeatUnreasoned`; it
    keeps factivity, necessitation, distribution (under the conjunct law),
    contingent irreflexivity and reason independence.
+3b. The why-stances of `BruteContingencyParity` are not covered by 1:
+   `WhyHonors` and `ExcludesUnreasonedAcceptance` quantify over whatever the
+   stance accepts and requires a reason why for, necessary facts included
+   (`ExcludesUnreasonedAcceptance` is written for a necessary `o`). Under the
+   cheap extension, with excluded middle, the contingent-fact PSR and a
+   stance that accepts only facts true at `w`, both hold: the stance's demand
+   is met for every accepted fact, a root's necessary lack included, by an
+   admitted reason. (`FeatureUniform` mentions no arena and is unaffected.)
 4. Quality at necessary targets: with excluded middle, factive reasons that
    are `WorkIndependent` at every reason give every explained necessary truth
    a contingent reason; so with `FactPSR` at a world with a true fact and no
    contingent fact they are inconsistent.
 5. Root lacks under N: on the profile's frame, with lack facts represented,
    every lack of an actual root is a fact true at every accessible world and
-   not contingent, so by 1 every inquiry condition is blind to its reasons.
+   not contingent, so the nine conditions of 1 are blind to its reasons.
 6. The contingent branch: with lack facts represented, EM and EP (lane E), the
    contingent-fact PSR gives every unexplained absence at an actual root an
    admitted reason, and the lack is contingent.
@@ -344,7 +358,7 @@ open TruthCore.Logic (ExcludedMiddle)
     nothing requires a lack, the source's profile `{esse, a, b}` at both
     worlds, the extended arena): N, the lack facts, the unrestricted fact PSR
     at both worlds with factive, distributing, contingently irreflexive and
-    independent reasons, every inquiry condition above including
+    independent reasons, the nine conditions of 1 including
     `GlobalDefeatUnreasoned`, support for the source's lacking `noesis`, and
     the necessity direction of member grounding all hold; E and the sense
     bridge fail.
@@ -386,6 +400,14 @@ def InquiryScopeMap : Prop :=
     (IrreflexiveContingent A →
       IrreflexiveContingent (withReasons A (necessaryReasons A))) ∧
     (ReasonIndependent A → ReasonIndependent (withReasons A (necessaryReasons A)))) ∧
+  -- 3b. the #756 why-stances with an ontic demand under the cheap extension
+  (∀ (W B F : Type) (A : Arena W B F) (w : W)
+    (S : TruthCore.Explanation.BruteContingencyParity.WhyStance F),
+    ExcludedMiddle → ContingentPSR A w → (∀ f, S.accepts f → A.holds w f) →
+      TruthCore.Explanation.BruteContingencyParity.WhyHonors S
+        (withReasons A (necessaryReasons A)) w ∧
+      ∀ o, TruthCore.Explanation.BruteContingencyParity.ExcludesUnreasonedAcceptance S
+        (withReasons A (necessaryReasons A)) w o) ∧
   -- 4. independence at necessary targets
   (∀ (W B F : Type) (A : Arena W B F) (w : W) (r f : F),
     ExcludedMiddle → Factive A → (∀ s, WorkIndependent A w s) → A.explains w r f →
@@ -459,7 +481,7 @@ def InquiryScopeMap : Prop :=
     AdmissibleIsExclusionFree open_ noReq ∧
     ¬ NoUnexplainedAbsenceAtRoots root true open_ (hasAt true) ∧
     ¬ RootLackReasonsPositive root true rival open_ noReq hasAt Control.lackOf) ∧
-  -- 11. every inquiry condition without any reason for a root lack
+  -- 11. the contingent-scoped conditions without any reason for a root lack
   (let base := Control.base TruthCore.Causality.SourceIntellectControls.ProfileControls.positive
    let root := TruthCore.Causality.IntentionalExemplarExtension.Control.rootProfile
    ContingentPSR base true ∧ NoBrute base true ∧

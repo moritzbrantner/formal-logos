@@ -7,5 +7,5 @@
   "theorem": "TruthCore.Results.Explanation.InquiryClosure.positiveLackReasonsOfNoUnexplainedAbsence",
   "comparator_config": "results/a7644793-0495-41e8-9851-9c7d2b95836b/comparator.json",
   "status": "solution-present",
-  "description": "Relocation converse: E implies the sense bridge for every arena. Not registered as a strength relation, since the bridge replaces E in other arguments only together with the PSR for root lack facts, the lack facts and the necessity direction. Establishes no premise."
+  "description": "Relocation converse: E implies the sense bridge for every arena. Not a strength fork: E is a claim in EXPLAINED_ABSENCE_3, while the bridge is a passage from EXPLAINED_ABSENCE_1 to EXPLAINED_ABSENCE_2, a difference of content, not of strength. With noUnexplainedAbsenceFromPositiveLackReasons it closes the loop E to bridge to E, so that route to E is a relocation that is connected only. Establishes no premise."
 }

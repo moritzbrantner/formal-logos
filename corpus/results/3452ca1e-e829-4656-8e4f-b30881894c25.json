@@ -7,5 +7,5 @@
   "theorem": "TruthCore.Results.Explanation.InquiryClosure.lackReasonsEssentialOfExcluded",
   "comparator_config": "results/3452ca1e-e829-4656-8e4f-b30881894c25/comparator.json",
   "status": "solution-present",
-  "description": "Essential exclusion of root absences implies the reason-essence thesis. Not registered as a strength relation, since the thesis replaces essential exclusion only together with the PSR for root lack facts and the lack facts. Establishes no premise."
+  "description": "Strength-order certificate: essential exclusion of root absences implies the reason-essence thesis, which restricts it to absences with an admitted reason. Establishes no premise."
 }

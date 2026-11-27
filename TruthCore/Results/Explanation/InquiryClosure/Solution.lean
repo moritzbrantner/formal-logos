@@ -207,6 +207,17 @@ theorem cheapExtension (A : Arena W B F) (I : Inquiry W F) (w : W) :
     · exact hR w' r f hx hc
     · exact absurd hn (notNecessaryOfContingent hc)
 
+theorem cheapExtensionStances (A : Arena W B F) (w : W)
+    (S : TruthCore.Explanation.BruteContingencyParity.WhyStance F)
+    (hEM : ExcludedMiddle) (hC : ContingentPSR A w) (hAcc : ∀ f, S.accepts f → A.holds w f) :
+    TruthCore.Explanation.BruteContingencyParity.WhyHonors S
+        (withReasons A (necessaryReasons A)) w ∧
+      ∀ o, TruthCore.Explanation.BruteContingencyParity.ExcludesUnreasonedAcceptance S
+        (withReasons A (necessaryReasons A)) w o := by
+  have hF := (cheapExtension A ⟨fun _ _ _ => False⟩ w).2.1 hEM hC
+  exact ⟨fun f _ hf => hF f (hAcc f hf),
+    fun o ⟨_, ho, hn⟩ => hn (hF o (hAcc o ho))⟩
+
 theorem independentReasonContingent (A : Arena W B F) (w : W) (r f : F)
     (hEM : ExcludedMiddle) (hF : Factive A) (hI : ∀ s, WorkIndependent A w s)
     (hx : A.explains w r f) (hn : NecessaryFact A w f) : Contingent A w r := by
@@ -256,6 +267,10 @@ theorem contingentBranch (m : Profile W B) (A : Arena W B F) (w : W)
       fun h => (hRep v r d).1 h hd⟩
   exact ⟨hc, hC _ hc⟩
 
+/-- The sense bridge from the reason-essence thesis, carriage and the necessity
+direction of member grounding: an absence with an admitted reason is excluded
+by an ESSENCE_6 condition, which carriage puts at every admissible extension,
+so no admissible extension adds the missing determination. -/
 theorem factorization (m : Profile W B) (A : Arena W B F) (w : W)
     (Admissible : Set D → Prop) (Ess : B → B → (Set D → Prop) → Prop)
     (RequiresLack : D → Set D → Prop) (HasAt : W → B → D → Prop) (lack : B → D → F)
@@ -679,6 +694,40 @@ theorem lackReasonEssenceControls :
     ⟨rootLackPSRExtended _, fun _ _ _ => Iff.rfl, reExtendedNeg, leCarried, notMGCarried,
       notEPositive _⟩⟩
 
+/-- Comparator companion of the registered factorization (`factorization`):
+each row lists the reason-essence thesis, carriage (LE), the necessity
+direction of member grounding and the sense bridge, on the #2153 carrier with
+the extended arena:
+1. positive witness: every pure determination, only admissibility essential;
+2. the reason-essence thesis fails: profile `{esse, a, b}`, only admissibility
+   essential; the bridge fails;
+3. LE fails: the same profile, the bare clause "lacks `noesis`" in the
+   nature; the thesis holds and the bridge fails.
+No row drops the necessity direction alone: on this carrier every admissible
+extension of `{esse, a, b}` containing `noesis` is `{esse, a, b, noesis}`, so a
+carrier there is always a carried exclusion and the bridge then holds
+(`bridgeCarried`). -/
+theorem factorizationControls :
+    (RootLackReasonsEssential rootProfile true (extended pureSet) essOpen
+        (hasAt pureSet pureSet) lackOf ∧ cLE essOpen pureSet pureSet noReq ∧
+      AdmissibleIsExclusionFree openProfile noReq ∧
+      RootLackReasonsPositive rootProfile true (extended pureSet) openProfile noReq
+        (hasAt pureSet pureSet) lackOf) ∧
+    (¬ RootLackReasonsEssential rootProfile true (extended positive) essOpen
+        (hasAt positive positive) lackOf ∧ cLE essOpen positive positive noReq ∧
+      AdmissibleIsExclusionFree openProfile noReq ∧
+      ¬ RootLackReasonsPositive rootProfile true (extended positive) openProfile noReq
+        (hasAt positive positive) lackOf) ∧
+    (RootLackReasonsEssential rootProfile true (extended positive) essNeg
+        (hasAt positive positive) lackOf ∧ ¬ cLE essNeg positive positive noReq ∧
+      AdmissibleIsExclusionFree openProfile noReq ∧
+      ¬ RootLackReasonsPositive rootProfile true (extended positive) openProfile noReq
+        (hasAt positive positive) lackOf) :=
+  ⟨⟨reExtendedPure, leOpen _ _ _, mgNoReq,
+      positiveLackReasonsOfNoUnexplainedAbsence _ _ _ _ _ _ _ (eOf _ _ subset_rfl)⟩,
+    ⟨notREExtendedOpen, leOpen _ _ _, mgNoReq, notBridgeRival⟩,
+    ⟨reExtendedNeg, notLENeg, mgNoReq, notBridgeRival⟩⟩
+
 /-! ### The rival with the full inquiry stance -/
 
 theorem rivalRow :
@@ -752,6 +801,7 @@ theorem inquiryScopeMap : InquiryScopeMap :=
     fun _ _ _ A w e p hp => necessaryNoBruteAlternative A w e p hp,
     fun _ _ _ A I w hP => noBruteAlternativeOfPSR A I w hP,
     fun _ _ _ A I w => cheapExtension A I w,
+    fun _ _ _ A w S hEM hC hAcc => cheapExtensionStances A w S hEM hC hAcc,
     fun _ _ _ A w r f hEM hF hI hx hn => independentReasonContingent A w r f hEM hF hI hx hn,
     fun _ _ _ A w f hEM hP hF hI hf hno => independentFactPSRContingency A w f hEM hP hF hI hf hno,
     fun _ _ _ _ m A w HasAt lack hO hRep hN r hr d hLack =>

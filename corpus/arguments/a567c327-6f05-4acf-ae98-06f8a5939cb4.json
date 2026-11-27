@@ -28,5 +28,14 @@
   "disambiguation_ids": [
     "1aef8986-ed29-564f-9803-d812d2ff63e1",
     "bb604f7b-9e16-4168-b433-be76bd3995a9"
+  ],
+  "sense_bridges": [
+    {
+      "term": "EXPLAINED_ABSENCE",
+      "from": "5e7d2fd0-dc12-4654-b1e2-8fa12c43c7be",
+      "to": "ea93739d-0a36-447e-bc29-384846b8eebe",
+      "statement_id": "fedc67d8-9752-419a-8eb5-9896081ccfe4",
+      "role": "premise"
+    }
   ]
 }

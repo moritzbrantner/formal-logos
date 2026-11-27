@@ -84,6 +84,19 @@ theorem noUnexplainedAbsenceFromEssentialExclusion {W B D : Type}
 
 /-! ## General lemmas for the certificate -/
 
+/-- The sense bridge from the reason-essence thesis, carriage and the necessity
+direction of member grounding: an absence with an admitted reason is excluded
+by an ESSENCE_6 condition, which carriage puts at every admissible extension,
+so no admissible extension adds the missing determination. -/
+theorem factorization (m : Profile W B) (A : Arena W B F) (w : W)
+    (Admissible : Set D → Prop) (Ess : B → B → (Set D → Prop) → Prop)
+    (RequiresLack : D → Set D → Prop) (HasAt : W → B → D → Prop) (lack : B → D → F)
+    (hRE : RootLackReasonsEssential m w A Ess HasAt lack)
+    (hLE : RootEssentialConditionsCarried m w Admissible Ess HasAt RequiresLack)
+    (hMG : AdmissibleIsExclusionFree Admissible RequiresLack) :
+    RootLackReasonsPositive m w A Admissible RequiresLack HasAt lack := by
+  sorry
+
 /-- E from the PSR for root lack facts, the lack facts, the thesis that a root
 lack's admitted reasons require a nature excluding it, carriage (LE) and the
 necessity direction of member grounding. The last three give the sense bridge
@@ -253,6 +266,37 @@ theorem lackReasonEssenceControls :
         (hasAt positive positive) lackOf ∧
       cLE essNeg positive positive aExcludesNoesis ∧
       ¬ AdmissibleIsExclusionFree openProfile aExcludesNoesis ∧ ¬ cE positive positive) := by
+  sorry
+
+/-- Comparator companion of the registered factorization (`factorization`):
+each row lists the reason-essence thesis, carriage (LE), the necessity
+direction of member grounding and the sense bridge, on the #2153 carrier with
+the extended arena:
+1. positive witness: every pure determination, only admissibility essential;
+2. the reason-essence thesis fails: profile `{esse, a, b}`, only admissibility
+   essential; the bridge fails;
+3. LE fails: the same profile, the bare clause "lacks `noesis`" in the
+   nature; the thesis holds and the bridge fails.
+No row drops the necessity direction alone: on this carrier every admissible
+extension of `{esse, a, b}` containing `noesis` is `{esse, a, b, noesis}`, so a
+carrier there is always a carried exclusion and the bridge then holds
+(`bridgeCarried`). -/
+theorem factorizationControls :
+    (RootLackReasonsEssential rootProfile true (extended pureSet) essOpen
+        (hasAt pureSet pureSet) lackOf ∧ cLE essOpen pureSet pureSet noReq ∧
+      AdmissibleIsExclusionFree openProfile noReq ∧
+      RootLackReasonsPositive rootProfile true (extended pureSet) openProfile noReq
+        (hasAt pureSet pureSet) lackOf) ∧
+    (¬ RootLackReasonsEssential rootProfile true (extended positive) essOpen
+        (hasAt positive positive) lackOf ∧ cLE essOpen positive positive noReq ∧
+      AdmissibleIsExclusionFree openProfile noReq ∧
+      ¬ RootLackReasonsPositive rootProfile true (extended positive) openProfile noReq
+        (hasAt positive positive) lackOf) ∧
+    (RootLackReasonsEssential rootProfile true (extended positive) essNeg
+        (hasAt positive positive) lackOf ∧ ¬ cLE essNeg positive positive noReq ∧
+      AdmissibleIsExclusionFree openProfile noReq ∧
+      ¬ RootLackReasonsPositive rootProfile true (extended positive) openProfile noReq
+        (hasAt positive positive) lackOf) := by
   sorry
 
 /-! ### The rival with the full inquiry stance -/

@@ -1,11 +1,12 @@
 {
   "id": "bb604f7b-9e16-4168-b433-be76bd3995a9",
-  "label": "Explained absence: an admitted reason versus positive fixing",
-  "term": "Explained absence: an admitted reason versus positive fixing",
+  "label": "Explained absence: admitted reason, positive fixing, admissibility fixing",
+  "term": "Explained absence: admitted reason, positive fixing, admissibility fixing",
   "term_label": "EXPLAINED_ABSENCE",
   "sense_definition_ids": [
     "6d3a3ecb-f92f-42da-b6bb-4ea99e3ea48d",
-    "04c93d61-3c02-4e68-a48d-cfc72d6882c4"
+    "04c93d61-3c02-4e68-a48d-cfc72d6882c4",
+    "a5452da9-32eb-47d4-98fb-0da507cf4ce5"
   ],
   "senses": [
     {
@@ -19,7 +20,13 @@
       "label": "EXPLAINED_ABSENCE_2",
       "definition_id": "04c93d61-3c02-4e68-a48d-cfc72d6882c4",
       "lean_declaration": "TruthCore.Explanation.InquiryClosure.PositivelyFixedAbsence"
+    },
+    {
+      "id": "ea93739d-0a36-447e-bc29-384846b8eebe",
+      "label": "EXPLAINED_ABSENCE_3",
+      "definition_id": "a5452da9-32eb-47d4-98fb-0da507cf4ce5",
+      "lean_declaration": "TruthCore.Causality.RootPerfectionExclusion.UnexplainedAbsence"
     }
   ],
-  "resolution": "An absence at a root is 'explained' in sense 1 when some fact is admitted as a reason for the lack fact in the #755 arena (ADMITTED_EXPLICABILITY_ROLE_1, the sense of every PSR and inquiry bridge in the graph), and in sense 2 when it is positively fixed: the admissibility constraints or a carried exclusion settle it. 'No unexplained absence at roots' (9281317d, with the definition a5452da9) denies an absence that sense 2's first disjunct leaves open; under the necessity direction of member grounding that is the denial of sense 2. Sense 1 does not give sense 2: a bare negative clause, or any necessary truth under necessaryReasons, is an admitted reason for a necessary lack that no admissibility constraint fixes (InquiryClosure rival row). Passing from sense 1 to sense 2 is the explicit open bridge 'an absence of an actual root with an admitted reason is positively fixed' (RootLackReasonsPositive), listed in sense_bridges, or the composition of the reason-essence thesis, carriage and member grounding (factorization in the InquiryClosure results). See docs/notes/causal-perfection-transfer.md, section on inquiry and closure at the root."
+  "resolution": "An absence at a root is 'explained' in sense 1 when some fact is admitted as a reason for the lack fact in the #755 arena (ADMITTED_EXPLICABILITY_ROLE_1, the sense of every PSR and inquiry bridge in the graph). It is explained in sense 3 when it is not an unexplained absence (a5452da9): the admissibility constraints, alone or with the bearer's profile, exclude the missing determination (case i or ii). This is the sense of 'no unexplained absence at roots' (9281317d). The sense-3 record defines its complement, so sense 3 is read as the negation of UnexplainedAbsence for a lacked determination. Sense 2 (positively fixed) is sense 3 or a carried exclusion. Sense 3 gives sense 2 by its first disjunct, and sense 2 gives sense 3 under the necessity direction of member grounding (89c988d9, carriedClosureNotUnexplained). Sense 1 gives neither: a bare negative clause, or any necessary truth under necessaryReasons, is an admitted reason for a necessary lack that no admissibility constraint fixes (InquiryClosure rival row). Passages between the senses are explicit premises listed in sense_bridges: the open bridge RootLackReasonsPositive (a8a43166) from 1 to 2; the necessity direction 89c988d9 from 2 to 3; the reason-essence thesis fedc67d8 from 1 to 3 together with carriage and 89c988d9; the factorization argument derives a8a43166 from fedc67d8, carriage and 89c988d9. See docs/notes/causal-perfection-transfer.md, section on inquiry and closure at the root."
 }

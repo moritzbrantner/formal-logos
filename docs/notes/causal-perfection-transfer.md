@@ -8224,14 +8224,23 @@ carrier. Lean: [vocabulary](../../TruthCore/Explanation/InquiryClosure.lean),
 [results and controls](../../TruthCore/Results/Explanation/InquiryClosure/Solution.lean),
 [spec](../../specs/inquiry-closure.toml).
 
-**Two senses of "explained absence"** (disambiguation `bb604f7b`,
-EXPLAINED_ABSENCE). Every PSR and inquiry bridge in the graph uses
-EXPLAINED_ABSENCE_1: some fact is *admitted* as a reason
-(`PSRStrength.Explained`, ADMITTED_EXPLICABILITY_ROLE_1). E uses
-EXPLAINED_ABSENCE_2 (`PositivelyFixedAbsence`, definition `04c93d61`): the
-admissibility constraints or a carried exclusion settle the absence. A bare
-negative clause is an admitted reason and fixes nothing. A passage between
-the senses is the explicit open bridge `RootLackReasonsPositive`.
+**Three senses of "explained absence"** (disambiguation `bb604f7b`,
+EXPLAINED_ABSENCE).
+- EXPLAINED_ABSENCE_1: some fact is *admitted* as a reason
+  (`PSRStrength.Explained`, ADMITTED_EXPLICABILITY_ROLE_1). The PSR and
+  inquiry conditions of this section use it.
+- EXPLAINED_ABSENCE_3: the absence is not unexplained (`a5452da9`): the
+  admissibility constraints, alone or with the root's profile, exclude the
+  missing determination (case i or ii). E (`9281317d`, now tagged) uses this
+  sense.
+- EXPLAINED_ABSENCE_2 (`PositivelyFixedAbsence`, definition `04c93d61`):
+  sense 3 or a carried exclusion. Sense 3 gives sense 2; sense 2 gives sense 3
+  under the necessity direction of member grounding (`89c988d9`).
+
+A bare negative clause is an admitted reason and fixes nothing. The passages
+between senses are explicit premises in `sense_bridges`: the open bridge
+`RootLackReasonsPositive` (1 to 2), `89c988d9` (2 to 3) and the reason-essence
+thesis with carriage and `89c988d9` (1 to 3).
 
 New open premises (analyst formulations, attribution deferred):
 
@@ -8244,34 +8253,48 @@ New open premises (analyst formulations, attribution deferred):
 | reason-essence thesis (`RootLackReasonsEssential`) | a root absence has an admitted reason only if some ESSENCE_6 condition excludes it given the root's profile |
 | essential exclusion of root absences (`RootLacksEssentiallyExcluded`, XN) | every root absence is excluded by some ESSENCE_6 condition given the root's profile |
 
-### A. Scope: the inquiry family reads reasons only at contingent targets
+### A. Scope: the nine inquiry conditions read reasons only at contingent targets
 
 `inquiryScopeMap` (registered certificate [`a3d7403d`]) clause 1: if two reason relations
 agree on every target contingent at the world of evaluation
 (`AgreeOnContingent`), then the contingent-fact PSR, `NoBrute`, the four #756
 bridges, `ReasonIndependent`, `IrreflexiveContingent` and the
 skeptical-alternative presupposition `NoBruteEvidenceAlternative` hold of one
-exactly when they hold of the other. `FactPSR` is not invariant. So every
-inquiry-tied PSR form in the graph is silent about which reasons, if any, a
+exactly when they hold of the other. `FactPSR` is not invariant. So the nine
+conditions named in clause 1 are silent about which reasons, if any, a
 necessary fact has.
+
+**Not covered by clause 1.** The #756 why-stance forms of
+`BruteContingencyParity` carry an ontic demand over whatever a stance accepts
+and requires a reason why for, necessary facts included: `WhyHonors` (with
+`FeatureUniform`, `3ab9d002`) and `ExcludesUnreasonedAcceptance` (`9df516be`),
+which is written for a necessary `o`. They are not invariant under
+`AgreeOnContingent`. Clause 3b: under the cheap extension of part B, with
+excluded middle, the contingent-fact PSR and a stance that accepts only facts
+true at w, both hold, `ExcludesUnreasonedAcceptance` for every `o`. So a
+feature-uniform stance that requires a reason why a root lacks d is met by an
+admitted reason, which the rival supplies cheaply. These forms reach a root's
+necessary lacks, but only in sense 1. (`FeatureUniform` mentions no arena.)
 
 This is not an artifact of how the bridges were written. The inquiry argument's
 mechanism is the skeptical alternative: if brute facts were allowed, the
 evidence could obtain for no reason at an accessible world where the
 hypothesis fails (`BruteEvidenceAlternative`, Koons–Pruss style, navigation
 only). Clause 2 proves that no such alternative exists for a hypothesis true at
-every accessible world, and that the contingent-fact PSR at every accessible
-world already secures the presupposition. The contingency restriction is
-therefore set by the mechanism itself. A Della Rocca-style charge that stopping
-at contingent facts is arbitrary (the `Selective` standing of #756) does not
-apply to an inquiry-based PSR: the feature that draws its line, contingency,
-is the feature on which the argument's force depends. In #756 terms the
-inquiry PSR is `Restricted` relative to contingency, and clause 2 shows that
-this line is not drawn by having a reason.
+every accessible world. That is the substantive half. Its other half (the
+contingent-fact PSR at every accessible world secures the presupposition)
+holds by definition, because `BruteEvidenceAlternative` uses `BruteAt`, which
+includes contingency of the evidence. So the restriction to contingent targets
+is partly built into the formulation. What clause 2 shows is that the inquiry
+argument gives no reason to extend the scope to necessary hypotheses. It does
+not show that a PSR restricted to contingent facts is non-arbitrary. A Della
+Rocca-style uniformity charge (navigation only) is not answered here; part B
+shows that it is met cheaply in sense 1 if pressed.
 
 Clause 5: on the profile's frame, with lack facts represented and N, every
 lack of an actual root is necessary and not contingent. Together with clause
-1, the whole family is blind to the reasons for a necessary root's absences.
+1, the nine conditions are blind to the reasons for a necessary root's
+absences.
 Clause 11 makes this concrete: on the #2153 carrier, with no reason admitted
 for any lack, every contingent-scoped inquiry condition holds while the PSR
 for root lack facts and `FactPSR` fail.
@@ -8315,14 +8338,22 @@ Registered results (main theorems use no axioms):
 
 - `rootLackPSROfFactPSR` [`d0040551`]: `FactPSR` gives the PSR for root lack
   facts, registered as a `strengthens` relation.
-- `noUnexplainedAbsenceFromPositiveLackReasons` [`93dfa140`]: the PSR for
-  root lack facts, the lack facts, the sense bridge and the necessity
-  direction of member grounding (`89c988d9`) give E.
+- `noUnexplainedAbsenceFromPositiveLackReasons` [`93dfa140`, argument
+  `c689901f`]: the PSR for root lack facts, the lack facts, the sense bridge
+  and the necessity direction of member grounding (`89c988d9`) give E.
 - `positiveLackReasonsOfNoUnexplainedAbsence` [`a7644793`]: E alone gives the
   sense bridge for every arena, lack map and requirement relation. Given the
-  other three premises the bridge and E are equivalent: a relocation. It is not
-  registered as a `strengthens` relation, because the bridge replaces E in
-  other arguments only together with those premises.
+  other three premises the bridge and E are equivalent. It is not a
+  `strengthens` relation: E is a claim in sense 3, the bridge a passage from
+  sense 1 to sense 2, a difference of content rather than strength.
+- **Status of the first route.** With `a7644793` it forms the loop E → bridge
+  → E, and the frontier shows the bridge closed only through E. Route
+  `93dfa140`/`c689901f` is therefore a relocation that is *connected only*. It
+  is not a support option for E unless the bridge has an independent route.
+  The factorization below gives one, whose load is LE and `89c988d9`.
+- `factorization` [`d8b668df`]: the reason-essence thesis, LE and the
+  necessity direction give the sense bridge (clause 7 registered as an
+  argument; companion `factorizationControls`).
 - `noUnexplainedAbsenceFromEssentialLackReasons` [`1844def4`]: the PSR for
   root lack facts, the lack facts, the reason-essence thesis, LE and the
   necessity direction give E. Clause 7 (the factorization) shows how: the
@@ -8356,7 +8387,8 @@ event); an agnostic rival asserts nothing. The rival needs neither profile
 inference nor E.
 
 **The reasoning by which the root's other attributes are inferred.**
-Candidate (b). In the graph, E is a premise only of the two arguments for
+Candidate (b). Apart from this lane's relocation converse (`8a7b6e51`,
+concluding the sense bridge), E is a premise only of the two arguments for
 "every actual root has every pure perfection" (`fe67d766`: `31c791ab`,
 `d3051570`; `truth semantics` on `9281317d`). The attributes the impersonal
 rival accepts (necessary existence, simplicity, pure act, own being) are not
@@ -8369,8 +8401,10 @@ self-undermining charge is available on the present graph.
 
 `noUnexplainedAbsenceFromEssentialExclusion` [`915d06fd`]: XN, LE and the
 necessity direction give E. `lackReasonsEssentialOfExcluded` [`3452ca1e`]: XN
-gives the reason-essence thesis (strict on the base-arena row; not a
-`strengthens` relation, for the same reason as the bridge). Given the PSR for root lack facts and the lack facts, XN
+gives the reason-essence thesis. This is registered as a `strengthens`
+relation, a scope restriction to absences with an admitted reason, and is
+strict on the base-arena row; no certified difference is registered. Route
+`915d06fd` records `strong_version_needed`. Given the PSR for root lack facts and the lack facts, XN
 and the reason-essence thesis are equivalent, so the PSR is idle once XN is
 assumed directly.
 
@@ -8379,8 +8413,9 @@ This route differs from lane E's route `4fef9522` in two ways:
 - It needs neither N (`906f9077`) nor EM (`f6f956a1`). A powers theorist who
   rejects essence-grounded modality is not thereby barred from it; whether the
   powers account supplies XN is next test 2.
-- It does not cost the classical root N. In `essentialExclusionControls` row
-  5, lane E's selection carrier (every pure determination, a selection read as
+- On lane E's selection carrier it does not cost the classical root N. In
+  `essentialExclusionControls` row 5 that carrier, whose source's nature is
+  stipulated to impose only the admissibility condition, (every pure determination, a selection read as
   a real intrinsic determination that varies across worlds, each selection
   requiring the lack of the other) satisfies XN, LE, the necessity direction
   and E while N fails. The classical root's non-selection of the other outcome
@@ -8393,7 +8428,7 @@ E's: LE and the necessity direction. Its rival options are a necessary lack
 that no nature excludes (denies XN; modal primitivism or brutalism, row 2) or
 a bare negative clause (denies LE, row 3).
 
-**Symmetry.** The inquiry family reaches a root's *contingent* facts. On the
+**Symmetry.** The nine conditions of clause 1 reach a root's *contingent* facts. On the
 real-determination reading these include the classical root's selection and
 its non-selection of the other outcome (row 5: absent at the actual world,
 present at the other), so the contingent-fact PSR demands an admitted reason
@@ -8433,17 +8468,22 @@ already contain.
 **What changed.**
 
 - The unrestricted fact PSR now has a statement node, and a PSR for root lack
-  facts connects it to E through two registered routes. The scope gap that
+  facts connects it to E through two registered routes: `93dfa140` is a
+  relocation that is connected only, and `1844def4` runs through the
+  reason-essence thesis and LE. The scope gap that
   #2153 recorded ("a PSR for the closure of a necessary root's profile ... no
   such bridge is in the graph") now has a node. Its admitted sense is cheap and
   carries no discriminating load.
-- The whole inquiry-tied PSR family is proved blind to reasons at necessary
-  targets, and its contingency restriction is principled by its own
-  mechanism.
-- The sense gap is explicit (EXPLAINED_ABSENCE_1 versus _2) and the bridge is
-  equivalent to E given cheap premises. It factors through LE.
-- A new support option for E (XN, LE, MG) drops N and EM. It is open to the
-  powers account and does not cost the classical root N.
+- The nine conditions named in clause 1 are proved blind to reasons at
+  necessary targets. The inquiry argument's skeptical mechanism gives no
+  reason to extend their scope. The why-stance forms that do reach necessary
+  facts are met by the cheap extension (clause 3b).
+- The sense gap is explicit (EXPLAINED_ABSENCE_1, _2, _3, with E in sense 3)
+  and the bridge is equivalent to E given cheap premises. It factors through
+  LE (`d8b668df`).
+- A new support option for E (XN, LE, MG) drops N and EM. It does not
+  require essence-grounded modality, and on lane E's selection carrier it does
+  not cost the classical root N.
 
 **Standing rival and its price.** The impersonal eminent source with a
 necessary lack of noesis and the full inquiry stance: every #756 bridge, the
@@ -8460,14 +8500,25 @@ E's sense rests on LE (or the sense bridge, which is E given the rest). This
 is not a defeat of the inquiry argument for the PSR, whose contingent scope
 stands. The E warrant judgment of lane E is unchanged (conditional support of
 low to moderate strength; nothing established). The XN route adds a support
-option with lighter modal premises, which widens who can use E's derivation
-(powers theorists) and removes the classical root's N-price on that route. It
+option with lighter modal premises. It does not require essence-grounded
+modality (whether the powers account supplies XN is open), and on lane E's
+selection carrier it does not charge the classical root N. It
 adds no independent evidence for LE, which remains the shared bottleneck with
 member grounding and the purity of requirements. Formal validity is unchanged
 by this judgment.
 
-**Review state.** Unreviewed. The independent semantic challenge required by
-the systematic loop is pending.
+**Review state.** The independent semantic challenge of `20418cdd1` accepted
+the formal core and found two P1s and four P2s. All were repaired in the
+following commit; a targeted re-check is pending.
+
+| Finding | Repair |
+| --- | --- |
+| P1-1: "every inquiry-tied PSR form" was wider than clause 1; the why-stance forms `WhyHonors`/`FeatureUniform` (`3ab9d002`) and `ExcludesUnreasonedAcceptance` (`9df516be`) reach necessary facts | Prose says "the nine conditions named in clause 1". New clause 3b (Lean, `cheapExtensionStances`) proves that both stance forms hold under the cheap extension for a stance accepting only truths. Updated: part A, the assessment, map argument `e49dfdd6`, relation `29623fd6`, attempt `44f1b30b` |
+| P1-2: E's sense was untagged; E is disjunct 1 of sense 2 only under MG | New sense EXPLAINED_ABSENCE_3 (`a5452da9`, `UnexplainedAbsence`), and E (`9281317d`) is tagged with `bb604f7b` (cross-lane edit). Added `sense_bridges` on `c689901f` (2→3 via `89c988d9`), `8a7b6e51` (3→2) and `a567c327` (1→3 via `fedc67d8`). Clause 7 is registered as `factorization` [`d8b668df`]. Corrected: vocabulary doc, DEF `04c93d61`, the disambiguation resolution. `truth semantics` reports every H2 argument as single sense, bridged or mixing control |
+| P2-1: "restriction set by the mechanism" was partly definitional; the Della Rocca reply overreached | Part A now separates the substantive half from the definitional half and claims only that the inquiry argument gives no reason to extend the scope |
+| P2-2: `3452ca1e` has the scope-restriction shape | Registered `b2d6ac16` strengthens `fedc67d8`, with `strong_version_needed` on `a2560bca`. `a7644793` is kept out, with its content difference stated. `d0040551`: no strictness result and no certified difference |
+| P2-3: the classical claims generalized from one carrier | Scoped to "lane E's selection carrier" in `b2d6ac16`, argument `a2560bca` and the note |
+| P2-4: loop E → bridge → E; the stale "premise only of" sentence | `93dfa140`/`c689901f` is reported as a relocation that is connected only (part C, assessment, attempt). Part D names `8a7b6e51` |
 
 ### Next discriminating tests
 

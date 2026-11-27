@@ -33,6 +33,13 @@
       "to": "e3064991-b249-48bf-b015-0652cb63078e",
       "statement_id": "a8a43166-6904-48ff-bfa7-8b535e00c4a4",
       "role": "premise"
+    },
+    {
+      "term": "EXPLAINED_ABSENCE",
+      "from": "e3064991-b249-48bf-b015-0652cb63078e",
+      "to": "ea93739d-0a36-447e-bc29-384846b8eebe",
+      "statement_id": "89c988d9-34b2-4aee-9e1a-bf4a304c032b",
+      "role": "premise"
     }
   ]
 }
