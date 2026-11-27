@@ -149,7 +149,7 @@ interpretation: with the ordinary comparative, the exceeding step (and with it
 | Formal possession `26632e48` | The induction and Rumford cases | **Kept, established case**, conditional only on CAUSE_2 counting the coil (or borer) as a cause of the heat, which the recorded definition does. Mechanism: energy is transferred by induction (or by mechanical work), not by a hotter body. |
 | "More such" `d5a94eb1` on the ordinary comparative | The same cases: the cause is not hotter | **Kept, established case** for the unrestricted Posterior Analytics I.2 reading. Metaphysics II.1's sourced restriction to synonymous causes (STMT-SYNONYMOUS-CAUSE-OF-QUALITY-IS-AT-LEAST-AS-SUCH) is untouched: the coil is not a synonymous cause of heat. |
 | Exceeding step `7030af77` at inclusive act with the ordinary comparative | The same cases, through the control's first table | **Kept**, under that pair of readings only. At formal act its antecedent fails for the coil and the case does not touch it. |
-| Inclusive possession `2c0b9bd7` on the power determination | Candidate: a cause that produces r with no power to produce r | **No substantive objection identified.** Actual production is the standard evidence of an active power. The Humean regularity view deflates powers but can accept the deflated ascription; occasionalism denies that creatures cause, which leaves the conditional untouched. |
+| Inclusive possession `2c0b9bd7` on the power determination, where power includes the transient power of an instrument in use | Candidate: a cause that produces r with no power to produce r | **No substantive objection identified.** Actual production is the standard evidence of an active power. The Humean regularity view deflates powers but can accept the deflated ascription; occasionalism denies that creatures cause, which leaves the conditional untouched. If power is restricted to a principal agent's own power, the instrument objection of the next row applies. |
 | Inclusive possession `2c0b9bd7` on the containment determination | Capacity or law-mediated production (modal-spine row 14) | **Restated**, unchanged: a positive conceptual alternative, not evidence that production without containment occurs. No case discriminating containment from capacity is on file. |
 | Instrument objection (modal-spine row 12) | Chisel and shape | **Unchanged, kept conditionally.** Whether it is answered on the power determination depends on whether IN_ACT_2's power includes the transient instrumental power of a tool in use (ST III q.62 a.4, unread here) or only the principal agent's own power; that is the open sub-fork of §2. |
 
@@ -161,7 +161,7 @@ the reception bundle: it holds in the control, and nothing here bears on it.
 | Reading | Strongest positive warrant | Independent of the others? |
 | --- | --- | --- |
 | `2c0b9bd7` inclusive, power determination | Close to a meaning postulate: an actual cause of r can produce r, and on this determination having r virtually is just having that power. Prima facie strong; it carries little load, because it says no more about the cause than its causing already says. | Shares the form of its warrant, an inference from a cause's exercise to what the cause is, with the agency-in-act premise `ef068f46` (a cause of being is in act in some respect). They are different propositions; a defeat of that inference form would reach both. |
-| `2c0b9bd7` inclusive, containment determination | Two independently specified cases: at esse, where every perfection is a mode of being (q.4 a.2 co.) and the cause-of-being ladder `d0fc96b7` ⇒ `4ccb319f` applies; and conserved quantities in physics, where a cause gives no more energy than it has. For arbitrary perfections without a common measure no specification of "contains" is on file. | The esse case is the warrant of `d0fc96b7`, not an additional one. |
+| `2c0b9bd7` inclusive, containment determination | One case where containment has an independent specification: at esse, where every perfection is a mode of being (q.4 a.2 co.) and the cause-of-being ladder `d0fc96b7` ⇒ `4ccb319f` applies. An analyst's analogue in physics: for a conserved quantity a cause gives no more than it has, so the coil "contains" the heat it supplies if heat is counted as a mode of the energy it carries. That specifies containment only for perfections that are modes of a conserved quantity. For arbitrary perfections without a common measure no specification of "contains" is on file. | The esse case is the warrant of `d0fc96b7`, not an additional one. |
 | `26632e48` formal | Ordinary synonymous generation (fire heats, man begets man) and Metaphysics II.1 for synonymous causes. | These are the scope of the sourced synonymous premise, not of the unrestricted formal reading. |
 | `d5a94eb1` and `c11369aa`, uniform eminent comparative | Survives the cases (control, second table). Its only positive rationale is the Thomist account of eminence. | Same missing specification as the recorded degree-calibration gap (`fd2c8710`, `9eaa3b6e`; [causal-perfection-transfer note](causal-perfection-transfer.md#d-overall-provisional-judgment-revision-conditions-and-next-test)). |
 | `376d6a5a`, `d0fc96b7` | Unchanged: no independent warrant beyond `2c0b9bd7` (with `67aa5b5c` for the self-causation case) and the esse ladder. | Strength siblings of one principle. |
@@ -171,9 +171,11 @@ the reception bundle: it holds in the control, and nothing here bears on it.
 1. **The formal reading of possession is contradicted by actual cases** under the
    recorded meaning of CAUSE_2. It is not a candidate for the routes' reading.
 2. **Inclusive possession `2c0b9bd7` is strong prima facie but light.** On the
-   power determination it is near-analytic and no substantive objection is
-   identified. It then adds almost nothing to what causing already gives: on that
-   determination the comparative steps downstream must do the work.
+   power determination, with power including an instrument's transient power, it
+   is near-analytic and no substantive objection is identified (restricted to a
+   principal agent's own power, the instrument objection stays kept
+   conditionally). It then adds almost nothing to what causing already gives: on
+   that determination the comparative steps downstream must do the work.
 3. **The comparative package is where the weight sits.** On the ordinary
    comparative, "more such" `d5a94eb1` and the inclusive exceeding step
    `7030af77` are contradicted by the same cases. On a uniform eminent comparative
@@ -251,4 +253,8 @@ counterparts, and whether its observed premise (the grades "found in things")
 is formal. A consumer that needs formal possession at a perfection other than
 being is refuted on its present package by §4. One that needs only inclusive
 readings moves the burden to the eminent comparative. Then register the IN_ACT_2
-sub-fork (power against containment) if a consumer needs containment.
+sub-fork (power against containment) if a consumer needs containment, and the
+ordinary and eminent senses of MORE_1 as separate declarations, so that the
+objection to `d5a94eb1` on the ordinary comparative can be recorded as a typed
+`attacks` relation rather than in this note and the control's `tests` edge
+only.
