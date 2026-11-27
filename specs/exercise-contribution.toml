@@ -34,3 +34,13 @@ conclusion = "Press controls separate conservation, joint effect production and 
 rule = "Derive productive reachability from actual groups, test contributor deletion and evaluate the original transfer predicate"
 meaning = "Last-step induction computes the whole positive-length contributor-path relation in this press: the sole pair beyond single edges is drive to imprint through stroke in application. Conservation, co-production and application therefore yield different path credit without reassigning a final CausesIn edge. Removing drive or stroke separately tests the cooperative group's two contributors with its other members present. Retained power and present lending are checked separately. The truth of universal transfer in one finite profile concerns that interpretation alone."
 axioms = ["propext","Classical.choice","Quot.sound"]
+
+[[relation]]
+id = "e96ab989-e713-40de-9808-b3b1ec959135"
+label = "Test by ExerciseContribution.controls (b26c10a0)"
+subject_kind = "result"
+subject_id = "b49d3550-271c-49f2-bc3f-de9ac58b504f"
+predicate = "tests"
+object_kind = "statement"
+object_id = "b26c10a0-983d-5a88-aa03-cc601bc1ddc6"
+note = "In the conservation row, productive contributor paths give the giver causal credit for the esse of both other bearers. The distinct patient is in act in the work respect through the imprint, and the giver lacks a contributor path to it. This instance of universal-cause perfection transfer fails under the certificate’s path-credit interpretation."
