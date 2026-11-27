@@ -2,6 +2,7 @@
   "id": "c6539b44-f844-4c50-ac42-9dcf7ecc4960",
   "label": "The fixed recipient’s unlocated root is a NECESSARY_2 CONCRETE_6 witness",
   "premise_statement_ids": [
+    "adb5020c-f115-5a26-a736-343ec2fc9d68",
     "d4b138f2-d5c9-4b35-bc5a-dbf3aa7617e8",
     "018456e8-cd2e-46e1-9c13-fa06e6f4dde9",
     "c71c068c-bbae-5ed5-a99d-70b155c8d239",
@@ -11,7 +12,7 @@
   "inference_ids": [
     "56628299-e197-4dac-8a39-2ea6d71f5218"
   ],
-  "meaning": "The fork and recipient-local denial of an injective regress give an actual concrete root upstream of the same selected recipient. Excluded middle and the existing nonnecessity-to-contingency result turn any failure of the root's de re necessity into an actual contingent root. Such a root contradicts the existing contingent-grounding premise on the same Profile and world. The root itself witnesses concrete necessity at w and its accessible worlds. Unlocatedness is a property of the recovered witness in the supplied spacetime frame and is unused in the modal step. Regress denial is local to the selected recipient. The proof requires neither global well-foundedness nor an identification of grounding with causal or spatial relations.",
+  "meaning": "The selected bearer x is actual and CONCRETE_6 by an explicit premise. The fork and recipient-local denial of an injective regress use that same x and give an actual concrete root upstream of x. Excluded middle and the existing nonnecessity-to-contingency result turn any failure of the root's de re necessity into an actual contingent root. Such a root contradicts the existing contingent-grounding premise on the same Profile and world. The root itself witnesses concrete necessity at w and its accessible worlds. Unlocatedness is a property of the recovered witness in the supplied spacetime frame and is unused in the modal step. Regress denial is local to the selected recipient. The proof requires neither global well-foundedness nor an identification of grounding with causal or spatial relations.",
   "definition_ids": [
     "52352824-6be9-53c6-83d4-82fed9a08cbb",
     "c57e2682-08e6-527e-950f-0fa0a7ff11ef",

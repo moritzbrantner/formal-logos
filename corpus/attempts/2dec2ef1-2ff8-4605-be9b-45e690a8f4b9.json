@@ -16,7 +16,7 @@
   "date": "2026-11-22",
   "kind": "derivation",
   "outcome": "blocked",
-  "summary": "Reused spatial identity and translation, boost simultaneity, temporal history, three spatiotemporal senses, necessary-underived existence and same-witness vocabulary. Froze Challenge, wrote conditional pointwise and existential Solution, and a populated Bool countermodel with an actual root-to-whole existential-grounding edge that defeats the proposed nonlocation conclusion without the whole-to-occupant bridge. No symmetry-to-identity, cone-to-causation, history-to-eternity, or physical-to-existential-grounding inference is assumed; grounding throughout is only the selected Profile.grounds relation, not DEF-ESSE or a cause of esse. Semantic-challenge repair: added a checked joint model of all four premises with a located occupant distinct from the whole (jointModel) and a checked control that the unrestricted whole-priority bridge contradicts the other three premises (unrestrictedInconsistent), so the located restriction carries the positive work; nonlocation is stated as relative to the one supplied, non-world-indexed frame F; and selectedUnlocated is named as the pointwise entry point for a GOD_4 consumer. Philosophical ontological rivals and precise remaining warrant/consumer are explained in docs/notes/spatial-translation-and-reason.md. Independent semantic challenge on PR #1857 accepted the consequence; its P1/P2 wording and coverage findings are repaired. The linked #1857 result is on main. The subsequent named-root result and anchored regress fork use the same selected-world existential grounding relation. Lane E, #2103 (2026-11-27): disposition (ii) for the anchored fork. UnlocatedRootNecessity.necessaryConcreteOfUnlocatedFork chooses the same-recipient root via the local denial of an injective regress. A failure of its necessity via the selected frame yields an actual contingent root by excluded middle and contradicts actual contingent grounding. The recovered root itself witnesses NECESSARY_2 concrete existence. This result uses a recipient-local premise where the older necessary-concrete producer assumes global well-founded actual grounding. No universality of nonoccupation or of no-regress is asserted.",
+  "summary": "Reused spatial identity and translation, boost simultaneity, temporal history, three spatiotemporal senses, necessary-underived existence and same-witness vocabulary. Froze Challenge, wrote conditional pointwise and existential Solution, and a populated Bool countermodel with an actual root-to-whole existential-grounding edge that defeats the proposed nonlocation conclusion without the whole-to-occupant bridge. No symmetry-to-identity, cone-to-causation, history-to-eternity, or physical-to-existential-grounding inference is assumed; grounding throughout is only the selected Profile.grounds relation, not DEF-ESSE or a cause of esse. Semantic-challenge repair: added a checked joint model of all four premises with a located occupant distinct from the whole (jointModel) and a checked control that the unrestricted whole-priority bridge contradicts the other three premises (unrestrictedInconsistent), so the located restriction carries the positive work; nonlocation is stated as relative to the one supplied, non-world-indexed frame F; and selectedUnlocated is named as the pointwise entry point for a GOD_4 consumer. Philosophical ontological rivals and precise remaining warrant/consumer are explained in docs/notes/spatial-translation-and-reason.md. Independent semantic challenge on PR #1857 accepted the consequence; its P1/P2 wording and coverage findings are repaired. The linked #1857 result is on main. The subsequent named-root result and anchored regress fork use the same selected-world existential grounding relation. Lane E, #2103 (2026-11-27): disposition (ii) for the anchored fork. UnlocatedRootNecessity.necessaryConcreteOfUnlocatedFork chooses the same-recipient root via the local denial of an injective regress. A failure of its necessity via the selected frame yields an actual contingent root by excluded middle and contradicts actual contingent grounding. The recovered root itself witnesses NECESSARY_2 concrete existence. This result uses a recipient-local premise where the older necessary-concrete producer assumes global well-founded actual grounding. No universality of nonoccupation or of no-regress is asserted. Semantic repair after challenge of 58c18766: the bridge now consumes the existing selected actual concrete recipient premise explicitly. Its two local hypotheses use the identical witness and proof. The older fork producer is still pointwise in the subtype of actual concreta and supplies no population. The one-world singleton omission control has no existent candidate. Universal local conditions and contingent grounding hold vacuously and the concrete-necessity conclusion fails.",
   "evidence": [
     "3750704c-24ea-49d0-b080-e4bb82c8ec93",
     "PR-1857",
@@ -27,7 +27,8 @@
     "6500533a-333c-4f22-b369-acbfe3ad0662",
     "PR-2009",
     "286395b0-7571-4c38-8b4c-37f80af43835",
-    "PR-2113"
+    "PR-2113",
+    "a82ffbcd-37b5-4a58-be8d-a53cd3cc5c9f"
   ],
   "blocker": "The experiments identify material realizers of measured patterns. Applying existential grounding to them requires both an actual concrete pattern bearer and an interpretation of material realization as Profile.grounds. Universal coverage of basic extended bearers remains open. The named result separately needs the actual concrete spatial whole, its contingency, and its existential grounding of each distinct actual occupant.",
   "current_assessment": {
@@ -49,6 +50,14 @@
   "workers": [
     {
       "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-27",
+      "pr": "PR-2113"
+    },
+    {
+      "role": "repair",
       "provider": "codex",
       "model": "gpt-6.2-sol",
       "effort": "high",
