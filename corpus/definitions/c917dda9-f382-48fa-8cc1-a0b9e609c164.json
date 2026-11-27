@@ -1,0 +1,8 @@
+{
+  "id": "c917dda9-f382-48fa-8cc1-a0b9e609c164",
+  "label": "Contained in a bearer: the item is an intrinsic determination of the bearer",
+  "term": "contained in a bearer (Contains b e)",
+  "basis": "stipulative",
+  "definition": "Contains b e: the item e is contained in the bearer b, as an intrinsic determination or as the bearer's own nature, not as a separate being. Containment may be intentional (an idea, the form of another as other) or virtual (a power to produce, a mode in which the bearer's nature is imitable); the relation does not say which. Examples: an idea in a mind; a disposition of a body; the one nature of a simple source. Non-examples: an abstract object that exists whether or not the bearer does; a product the bearer has made outside itself. Structural properties: a declared primitive two-place relation; it implies neither apprehension nor production.",
+  "note": "Stipulative analyst notion (#2145 premise lane C), attribution deferred. See docs/notes/causal-perfection-transfer.md, section 'Individuating non-present candidates: the axiarchic rival and the cognition criterion'. Lean has no declaration for it: it is the parameter Contains : B → C → Prop. That intentional and virtual containment are not separated in the type is deliberate: the containment-recognition bridge is exactly the step between them."
+}

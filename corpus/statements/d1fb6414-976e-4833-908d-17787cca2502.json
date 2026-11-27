@@ -1,0 +1,17 @@
+{
+  "id": "d1fb6414-976e-4833-908d-17787cca2502",
+  "label": "A contained individuating stand-in guiding value-dependent favouring is apprehended",
+  "paraphrase": "OPEN containment-recognition bridge, analyst formulation, attribution deferred: for every bearer b with a favouring determination of profile phi, every scenario s and candidates z, w: if phi depends on betterness (read as value) with end-realization held fixed (BECAUSE_OF_GOODNESS_2) for z over w or for w over z at s, z is not a present input at s, b's stand-in for z is contained in b, and it differs from b's stand-in for w, then that stand-in is a content about z and b itself apprehends it. Its antecedent is narrower than the cognition criterion's (containment and individuation are required) and its consequent more specific (the apprehended content is the stand-in). It is the step from a contained, individuating item that guides value-dependent favouring to intentional presence. A virtual reading of the containment (a power to produce z, or a mode in which the bearer is imitable by z, not apprehended) denies it; nothing in the Lean types separates the two readings.",
+  "lean_declaration": "TruthCore.Causality.AxiarchicFoundation.ContainedStandInIsApprehended",
+  "definition_ids": [
+    "abd8cfa4-1887-47d5-86cc-e0f6092e4ded",
+    "fae7bbb8-931c-4a95-9f44-1d59921d1c83",
+    "b28d7e04-694b-442b-a42b-65f39190956f",
+    "c917dda9-f382-48fa-8cc1-a0b9e609c164",
+    "07f3fb85-6036-4e42-8eb8-a18db846719f",
+    "3ece6dfe-c033-4546-b7d4-94ef48a235df"
+  ],
+  "disambiguation_ids": [
+    "8430c7dc-2972-4f47-87a9-ce4676533cdf"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "633d5c29-a594-4c1a-b3f6-2b899a0e65ed",
+  "label": "Favouring determinations are realized on stand-in items",
+  "paraphrase": "OPEN analyst bridge, attribution deferred: for every bearer b and every favouring determination of b (the real determination that a favouring of b is the profile phi), in every variation scenario s and for all candidates x, y, phi favours x over y at s exactly when a relation among items holds between b's stand-in for x and b's stand-in for y (the profile is the inverse image of an item relation under the stand-in assignment). A stand-in is the real item through which a candidate figures in b's favouring: the candidate itself if present, otherwise something else. The rationale: a real favouring relation of a real bearer has real terms even when the candidates do not exist. It does not say where the stand-ins are or what kind of item they are; the item relation and the assignment are parameters.",
+  "lean_declaration": "TruthCore.Causality.AxiarchicFoundation.FavouringRealizedOnItems",
+  "definition_ids": [
+    "abd8cfa4-1887-47d5-86cc-e0f6092e4ded",
+    "fae7bbb8-931c-4a95-9f44-1d59921d1c83"
+  ]
+}
