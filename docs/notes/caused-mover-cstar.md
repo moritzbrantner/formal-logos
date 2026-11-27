@@ -897,9 +897,18 @@ gives a populated model of the whole bundle and one omission model for each of
 the four new premises.
 
 **Provisional judgment.** The holding First Way now reaches `c1b68c21` as a
-conditional support option disjoint from the prima via proofs `a8ced49e` and
-`d337ab29`. Its weakest points are the two sense bridges and `89f0d0d5`, which
-conflicts with beings necessary through another that are presently held. It is
+conditional support option. Its premise statements are disjoint from those of
+the prima via proofs `a8ced49e` and `d337ab29`, but its warrant is shared with
+them in two places:
+
+- the stated support of the moved-side bridge `e2f44380` runs through
+  `4a952b96` (whatever is moved is moved by another);
+- the holding regresses `6f924bb0` and `c4e333da` are holding analogues of the
+  per se regress `226c38f6`.
+
+Its weakest points are the two sense bridges and `89f0d0d5`. On the modal
+reading of `CanLack`, `89f0d0d5` conflicts with beings necessary through another
+(`IsNecessary` with `HasCauseOfNecessityAliunde`) that are presently held. It is
 weaker than the prima via route on the bridges and adds a holding-sense
 alternative to the per se mover series. Nothing is established.
 

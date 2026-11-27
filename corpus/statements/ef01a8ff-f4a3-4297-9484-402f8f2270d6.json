@@ -5,7 +5,7 @@
   "lean_declaration": "TruthCore.Causality.OccamRegress.UniformPrefixDiscount",
   "connection_plan": {
     "target_statement_id": "e529c42f-f0a2-5ebf-9ae1-459e7f798d31",
-    "missing_bridge": "An application premise for one actual causal relation: equal explanatory adequacy of a finite-ancestry account and an infinite-regress account of the same recipients, together with a defended prior assignment in one model that gives the whole regress class zero weight (for example uniformly discounted depth events containing every admitted regress alternative, or independent commitments each covering finitely many positions); and a rule by which such a probabilistic preference supports the deductive premise e529c42f.",
-    "blocker": "No prior assignment is defended for an actual regress: a single charge for a shared generating law permits positive weight at every depth (SharedLawCharge), equal likelihoods leave the prior odds unchanged (EqualLikelihoodOdds), and the corpus has no argument form from a probabilistic preference to a deductive premise (docs/notes/causal-finitism-367.md, Occam section)."
+    "missing_bridge": "The zero-weight bridge to e529c42f: an application premise for one actual causal relation giving equal explanatory adequacy of a finite-ancestry account and an infinite-regress account of the same recipients and a defended prior assignment that gives the whole regress class zero weight, with a rule from that probabilistic preference to the deductive premise e529c42f. This theorem is the route to that zero weight: uniformly discounted depth events containing every admitted regress alternative in one prior model force it.",
+    "blocker": "No uniform discount over every admitted regress alternative is defended for an actual regress, and the corpus has no argument form from a probabilistic preference to a deductive premise (docs/notes/causal-finitism-367.md, Occam section)."
   }
 }

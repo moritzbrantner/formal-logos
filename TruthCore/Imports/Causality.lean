@@ -218,6 +218,7 @@ public import TruthCore.Causality.OccurrenceUnderivedEssence
 public import TruthCore.Causality.OneDependenceOrder
 public import TruthCore.Causality.OperationLocalFiniteness
 public import TruthCore.Causality.OriginDeletion
+public import TruthCore.Causality.OriginDeletionIncompatibility
 public import TruthCore.Causality.OriginExerciseBridge
 public import TruthCore.Causality.OriginToleranceIdentity
 public import TruthCore.Causality.OwnerEndpointCalibration

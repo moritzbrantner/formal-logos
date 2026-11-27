@@ -310,6 +310,7 @@ public import TruthCore.Results.Causality.OccamRegress.Solution
 public import TruthCore.Results.Causality.OccurrenceUnderivedEssence.Solution
 public import TruthCore.Results.Causality.OneDependenceOrder.Solution
 public import TruthCore.Results.Causality.OriginDeletion.Solution
+public import TruthCore.Results.Causality.OriginDeletionIncompatibility.Solution
 public import TruthCore.Results.Causality.OriginExerciseBridge.SelfEdge.Solution
 public import TruthCore.Results.Causality.OriginExerciseBridge.Solution
 public import TruthCore.Results.Causality.OriginToleranceIdentity.Solution

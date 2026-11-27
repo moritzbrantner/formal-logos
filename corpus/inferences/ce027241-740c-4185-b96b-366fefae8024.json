@@ -6,7 +6,7 @@
   ],
   "output_statement_id": "cf7940a7-659d-47c1-9ab8-54b18e5bc9d4",
   "rule": "A total holder is a holder of another",
-  "meaning": "TotallyHolds f x r includes f distinct from x and f presently actualizing x in r, so a total holder not MOTION_3 held in r is a holder of another not held in r; the double negation is carried through. This gives cf7940a7 a support through the total-holding repair (4b9462dd with the open bridge b41f6bcd, giving 6fdb45c3), which is consistent with the leaning-cards observation (TotalHolding Control part 1), beside its original support from the unrestricted holding per se link 685933c7, which that observation contradicts (f401994a). The weakening adds no warrant beyond 6fdb45c3's; b41f6bcd stays contested by co-support on the physical-holder reading.",
+  "meaning": "TotallyHolds f x r includes f distinct from x and f presently actualizing x in r, so a total holder not MOTION_3 held in r is a holder of another not held in r; the double negation is carried through. This gives cf7940a7 a support through the total-holding repair (4b9462dd with the open bridge b41f6bcd, giving 6fdb45c3), which is consistent with the leaning-cards observation (TotalHolding Control part 1), beside its original support from the unrestricted holding per se link 685933c7, which that observation contradicts jointly with the holding regress 6f924bb0 (f401994a); the inconsistency forces rejecting at least one of the three, not the link in particular. The weakening adds no warrant beyond 6fdb45c3's; b41f6bcd stays contested by co-support on the physical-holder reading.",
   "assumption_statement_ids": [],
   "discharged_statement_ids": []
 }
