@@ -93,30 +93,33 @@ theorem fixedPoints_equal_of_wellFounded (G : Graph A) (intrinsic : A → Prop)
     · exact Or.inl hi
     · exact Or.inr ⟨y, hy, ih y hy hg⟩
 
+/-- Accessibility excludes every nonempty return path. This component of
+the controls works constructively, including on an empty carrier. -/
+theorem noCycles_of_wellFounded (G : Graph A) (h : WellFounded G.edge) : G.NoCycles := by
+  have noReturn : ∀ x, Acc G.edge x → ¬ Relation.TransGen G.edge x x := by
+    intro x hx
+    induction hx with
+    | intro x _ ih =>
+      intro path
+      cases path with
+      | single hxx => exact ih x hxx (.single hxx)
+      | tail hPath hEdge => exact ih _ hEdge ((Relation.TransGen.single hEdge).trans hPath)
+  exact fun x => noReturn x (h.apply x)
+
 theorem controls_of_wellFounded (G : Graph A) (h : WellFounded G.edge) : G.Controls := by
   have noSeries := TruthCore.Results.Causality.RegressAccessibilityExcludesSeries.accessibilityReadingExcludesDescendingSeries A G.edge h.apply
-  refine ⟨?_, noSeries, ?_⟩
-  · intro x hx
-    have noReturn : ∀ b, Acc G.edge b → ¬ Relation.TransGen G.edge b b := by
-      intro b hb
-      induction hb with
-      | intro b _ ih =>
-        intro hp
-        cases hp with
-        | single hbb => exact ih b hbb (.single hbb)
-        | tail hab hbb => exact ih _ hbb ((Relation.TransGen.single hbb).trans hab)
-    exact noReturn x (h.apply x) hx
-  · intro x
-    have hg : FinitelyGroundedPower G.edge G.Source x := by
-      classical
-      induction h.apply x with
-      | intro x _ ih =>
-        by_cases hs : ∃ y, G.edge y x
-        · obtain ⟨y, hy⟩ := hs
-          exact .borrowed hy (ih y hy)
-        · exact .intrinsic x hs
-    exact TruthCore.Results.Causality.FiniteGroundingHasSource.finiteGroundingHasSource
-      A G.edge G.Source x hg
+  refine ⟨G.noCycles_of_wellFounded h, noSeries, ?_⟩
+  intro x
+  have hg : FinitelyGroundedPower G.edge G.Source x := by
+    classical
+    induction h.apply x with
+    | intro x _ ih =>
+      by_cases hs : ∃ y, G.edge y x
+      · obtain ⟨y, hy⟩ := hs
+        exact .borrowed hy (ih y hy)
+      · exact .intrinsic x hs
+  exact TruthCore.Results.Causality.FiniteGroundingHasSource.finiteGroundingHasSource
+    A G.edge G.Source x hg
 
 end Graph
 
