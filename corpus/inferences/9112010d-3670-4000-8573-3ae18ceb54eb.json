@@ -1,0 +1,12 @@
+{
+  "id": "9112010d-3670-4000-8573-3ae18ceb54eb",
+  "label": "An actual root exists, from the Cogito necessary thinking root (inference)",
+  "input_statement_ids": [
+    "b401eca0-7fb9-48a7-a89c-3872f9912eea"
+  ],
+  "output_statement_id": "dc397705-d727-419e-92f9-65d44e1ff15d",
+  "rule": "Keep the rootness clause of the supplied thinking root",
+  "meaning": "Transcription (assembly): the proof destructures the premise and repackages its witness n with the rootness clause the premise already states, so it certifies no inference beyond projection (invariant 16). The premise b401eca0 gives a bearer b of an occurring thought and one n that thinks, is a ground ancestor of b, is an actual root of the selected relation at w (concrete, existing at w, with no actual concrete ground there) and exists at every world accessible from w. Keeping only the rootness clause gives ActualRootExistsAt at the same profile and world: some actual concrete root exists at w. Thinking, ancestry and de re necessity are dropped, so the conclusion says nothing about a thinker, necessity, uniqueness or God. As a transcription it carries closure only by rule (d): dc397705 is closed through it exactly when b401eca0 is closed, and b401eca0 is closed as the conclusion of the non-transcription result 60df7e87 whose premises (the Cogito occurrence and bearer premises, debcd4e1, db72222b, dc7e315d and excluded middle) remain open. Nothing here is established. Sense bridge: b401eca0 states rootness as the absence of an actual concrete ground (WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT_1); ActualRoot (_2) is defined from that absence, and the premise carries both about the same n.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}
