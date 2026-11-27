@@ -1,0 +1,28 @@
+{
+  "id": "e49dfdd6-0eb5-46c4-a707-05b6d61fb9f8",
+  "label": "Inquiry PSR scope map at roots: blind to necessary facts, bridged to E",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "a4da59c9-5ce0-4007-98d5-690997b12570",
+  "inference_ids": [
+    "94ffcfc8-121c-4828-a62d-adb12a02cabd"
+  ],
+  "meaning": "Certificate for #2145 lane H2. Every inquiry-tied PSR form in the graph reads the reason relation only at targets contingent at the world of evaluation, and the skeptical mechanism of the inquiry argument has no purchase on a necessary hypothesis; under N every lack of an actual root is necessary, so these forms are blind to its reasons. Extending the scope to all facts is cheap: the necessary truths admitted as reasons for the necessary truths meet the unrestricted fact PSR and keep every quality condition. The quality condition that does reach necessary targets forces contingent reasons for necessary truths, for every root alike. The step to E's sense of explained absence is the sense bridge, which the reason-essence thesis, carriage and member grounding supply. The epistemic reading of closure (every root absence known by profile-sound inference) gives E only as a completeness demand. Finite rows: the impersonal source with profile {esse, a, b} meets every inquiry condition and the unrestricted fact PSR while E fails, and with no reasons for its lacks it still meets every contingent-scoped condition. Establishes no premise.",
+  "definition_ids": [
+    "04c93d61-3c02-4e68-a48d-cfc72d6882c4",
+    "1db9a5b1-7e87-49dd-9bba-65e47f2ffc45",
+    "3f8e5e3c-e85a-4388-af9c-4da1c8a02069",
+    "6d3a3ecb-f92f-42da-b6bb-4ea99e3ea48d",
+    "88f7c656-f484-4737-a872-b2d78c604322",
+    "8e1ba83c-04e3-4bd3-8e25-e0c532a703a6",
+    "52352824-6be9-53c6-83d4-82fed9a08cbb",
+    "02c59c61-4cd1-5698-9338-e4a37ebf71f4",
+    "179d4557-bda1-59c4-938a-b91e9974a27f",
+    "a5452da9-32eb-47d4-98fb-0da507cf4ce5"
+  ],
+  "disambiguation_ids": [
+    "1aef8986-ed29-564f-9803-d812d2ff63e1",
+    "a61d3807-50e9-595e-9011-9123fd606a4b",
+    "bb604f7b-9e16-4168-b433-be76bd3995a9"
+  ],
+  "sense_mixing_control": true
+}

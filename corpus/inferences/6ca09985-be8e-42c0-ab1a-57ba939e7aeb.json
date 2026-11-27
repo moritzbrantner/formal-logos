@@ -1,0 +1,16 @@
+{
+  "id": "6ca09985-be8e-42c0-ab1a-57ba939e7aeb",
+  "label": "No unexplained absence at roots, from the root lack PSR, reasons in natures and carriage (inference)",
+  "input_statement_ids": [
+    "2cf517c3-a6c3-4652-9bad-af3ca6edab0f",
+    "47c228ff-2082-4a27-b0b9-856cc1b79c7c",
+    "fedc67d8-9752-419a-8eb5-9896081ccfe4",
+    "682e6436-a44f-40d6-bc02-7cb5f4a2b754",
+    "89c988d9-34b2-4aee-9e1a-bf4a304c032b"
+  ],
+  "output_statement_id": "9281317d-1f0a-4522-b91c-58cc07652e92",
+  "rule": "The PSR gives a root lack an admitted reason, the reason-essence thesis an excluding ESSENCE_6 condition, and carriage with member grounding puts that condition at every admissible extension",
+  "meaning": "Fix an actual root r at w and a determination d it lacks. The lack facts and the PSR for root lack facts give the lack an admitted reason; the reason-essence thesis gives an ESSENCE_6 condition on r's profile failing at every profile containing r's determinations and d. Every admissible profile containing r's determinations is exclusion-free (necessity direction of member grounding), so carriage (LE) puts the condition there (positiveEssenceFromCarriage). Hence no admissible profile adds d to r's determinations, so the sense bridge holds (factorization) and E follows by noUnexplainedAbsenceFromPositiveLackReasons. Unlike the essentialist route 4fef9522 it uses neither necessity of root absences (906f9077) nor essence-grounded modality (f6f956a1). The rival with a bare negative clause 'lacks noesis' meets the PSR, the lack facts, the reason-essence thesis and the necessity direction, and denies carriage: the load is on LE, as on route 4fef9522 through 10f44921. The main theorem uses no axioms. The Comparator companion lackReasonEssenceControls (three Mathlib axioms; same carrier) gives a positive witness and, for each premise, a row where it fails, the other four hold and E fails. The rows are assignments of the stated relations, not models of essence or explanation.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

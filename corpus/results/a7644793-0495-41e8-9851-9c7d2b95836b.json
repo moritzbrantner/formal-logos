@@ -1,0 +1,11 @@
+{
+  "id": "a7644793-0495-41e8-9851-9c7d2b95836b",
+  "label": "Positively fixed root absences, from no unexplained absence at roots",
+  "argument_id": "8a7b6e51-8ed5-41a9-ae8e-5dd6f6d1cd90",
+  "challenge_module": "TruthCore.Results.Explanation.InquiryClosure.Challenge",
+  "solution_module": "TruthCore.Results.Explanation.InquiryClosure.Solution",
+  "theorem": "TruthCore.Results.Explanation.InquiryClosure.positiveLackReasonsOfNoUnexplainedAbsence",
+  "comparator_config": "results/a7644793-0495-41e8-9851-9c7d2b95836b/comparator.json",
+  "status": "solution-present",
+  "description": "Strength-order certificate and relocation converse: E implies the sense bridge for every arena. Establishes no premise."
+}

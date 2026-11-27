@@ -1,0 +1,58 @@
+{
+  "id": "44f1b30b-0f3b-4251-9452-f89db29884d1",
+  "label": "Inquiry and closure at the root: does the PSR presupposed by inquiry reach a root's absences?",
+  "date": "2026-11-27",
+  "statement_ids": [
+    "9281317d-1f0a-4522-b91c-58cc07652e92",
+    "682e6436-a44f-40d6-bc02-7cb5f4a2b754",
+    "89c988d9-34b2-4aee-9e1a-bf4a304c032b",
+    "6db599dd-272b-4546-ba50-11a69095280d",
+    "2cf517c3-a6c3-4652-9bad-af3ca6edab0f",
+    "47c228ff-2082-4a27-b0b9-856cc1b79c7c",
+    "a8a43166-6904-48ff-bfa7-8b535e00c4a4",
+    "fedc67d8-9752-419a-8eb5-9896081ccfe4",
+    "b2d6ac16-4ad6-4a04-9f81-9844abfe28d2",
+    "a4da59c9-5ce0-4007-98d5-690997b12570"
+  ],
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "#2145 horizontal lane H2. Tested whether the PSR in the forms the graph ties to inquiry (#755, #756) reaches a necessary root's intrinsic and negative profile facts. Certificate inquiryScopeMap [a3d7403d]: every inquiry-tied form (ContingentPSR, NoBrute, TrackingBridge, SupportCoverage, EvidenceBridge, GlobalDefeat, the skeptical-alternative presupposition NoBruteEvidenceAlternative, ReasonIndependent, IrreflexiveContingent) is invariant under any change of reasons at targets not contingent at the world of evaluation, and the skeptical mechanism has no purchase on a necessary hypothesis, so the contingency restriction is set by the mechanism; under N every root lack is necessary and the family is blind to its reasons; admitting the necessary truths as reasons for the necessary truths meets FactPSR wherever ContingentPSR holds and keeps every quality condition, so the scope extension is cheap; WorkIndependent at every reason, the one quality condition that reaches necessary targets, gives every explained necessary truth a contingent reason, for both roots. Separated two senses of explained absence (new disambiguation bb604f7b: EXPLAINED_ABSENCE_1 admitted reason, _2 positively fixed). Registered: FactPSR strengthens the PSR for root lack facts [d0040551]; that PSR, the lack facts, the sense bridge a8a43166 and the necessity direction 89c988d9 give E [93dfa140]; E alone gives the bridge [a7644793] (relocation); the PSR, the lack facts, the reason-essence thesis fedc67d8, LE and 89c988d9 give E [1844def4]; essential exclusion of root absences b2d6ac16 strengthens the reason-essence thesis [3452ca1e]; b2d6ac16, LE and 89c988d9 give E without N or EM [915d06fd]. Lean-only clauses: profile-sound complete knowledge of root lacks gives E (the epistemic candidate is a completeness demand); the reference-class assumption binds both roots. E is used in the graph only for fe67d766, so rejecting it undermines no attribute inference the rival uses. Controls: each premise of each route fails alone with E failing; the rival with profile {esse, a, b} meets N, the lack facts, FactPSR at both worlds, every quality condition, every #756 bridge and the unrestricted GlobalDefeat while E and the bridge fail; the base arena with no reasons for lacks meets every contingent-scoped condition; on lane E's classical selection carrier XN, LE, MG and E hold while N fails.",
+  "blocker": "No inquiry premise supplies the step from an admitted reason to a positively fixed absence: it is the sense bridge (equivalent to E given cheap premises) or the reason-essence thesis with LE. LE at a pure root remains the shared bottleneck (lane E's reference-class objection). Strongest standing rival: the impersonal eminent source with a necessary lack of noesis, the full inquiry stance, and a bare negative clause (denies LE) or a nature-less necessary lack (denies XN) as admitted reason. Next: an argument for LE from the unity of a simple being; XN on the powers account; whether a selection is a real determination (#555); register WorkIndependent at necessary targets as a rival quality standard.",
+  "evidence": [
+    "d0040551-f797-426b-afe4-e75888e58e5a",
+    "93dfa140-01a8-4191-8f64-dd17fc683d09",
+    "a7644793-0495-41e8-9851-9c7d2b95836b",
+    "1844def4-8763-429c-a24f-0b26f381cdac",
+    "3452ca1e-e829-4656-8e4f-b30881894c25",
+    "915d06fd-93a4-42a7-9895-8d36093db018",
+    "a3d7403d-9488-463b-b6fd-07a7a0901eda"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "anthropic",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "date": "2026-11-27"
+    }
+  ],
+  "current_assessment": {
+    "date": "2026-11-27",
+    "statement_ids": [
+      "9281317d-1f0a-4522-b91c-58cc07652e92",
+      "682e6436-a44f-40d6-bc02-7cb5f4a2b754",
+      "2cf517c3-a6c3-4652-9bad-af3ca6edab0f",
+      "a8a43166-6904-48ff-bfa7-8b535e00c4a4",
+      "b2d6ac16-4ad6-4a04-9f81-9844abfe28d2"
+    ],
+    "scope": "E (no unexplained absence at actual roots) and carriage LE against the PSR in the forms the graph ties to inquiry (#755, #756), applied symmetrically to the impersonal and the classical root (#2145 lane H2). Scoped to a rival whose lack of noesis is case (iii).",
+    "assessment": "The inquiry family gives E and LE no independent warrant; this fourth angle on E relocates to LE. Every inquiry-tied PSR form is blind to reasons at necessary targets, and its contingency restriction is principled by the skeptical mechanism itself. Extending the scope to a necessary root's lack facts is cheap in the admitted-reason sense (necessaryReasons), and the rival with the full inquiry stance and the unrestricted fact PSR keeps E false. The step from an admitted reason to E's positively fixed absence is the sense bridge, equivalent to E given cheap premises, or the reason-essence thesis with LE and the necessity direction 89c988d9. The epistemic reading of closure is E as a completeness demand on knowledge of the root's profile, which no inquiry needs; E supports no attribute inference the rival uses. Symmetrically, the inquiry family reaches the classical root's contingent selection (met by its exercised power) and not the necessitarian impersonal root's lacks, and a uniform extension is met cheaply by both. The new route from essential exclusion of root absences, LE and 89c988d9 drops N and EM: it is open to the powers account and does not cost the classical root N on lane E's selection carrier; its load is LE and 89c988d9, shared with lane E's route. Lane E's judgment on E (conditional support of low to moderate strength; nothing established) is unchanged.",
+    "next_test": "An argument for LE at a pure root from the unity of a simple being; XN on the powers account; whether a selection is a real intrinsic determination (#555); register WorkIndependent at necessary targets as a rival quality standard.",
+    "note": "docs/notes/causal-perfection-transfer.md#inquiry-and-closure-at-the-root-does-the-psr-presupposed-by-inquiry-reach-a-necessary-roots-absences-2026-11-27-provisional-2145",
+    "reviewed_revision": "bb60f5fcdd3017ccd94bba03dddc9767f9845ab1",
+    "review": "unreviewed",
+    "publication": "unpublished",
+    "evidence": "Branch research/h2-inquiry-closure (#2145 lane H2), no PR yet. Independent semantic challenge pending. Seven results pass bind-check, Comparator and NanoDa locally.",
+    "supersedes": "None for this lane. It adds to, and does not revise, lane E's recorded assessment of E in attempt 0c181f3b, which stands."
+  }
+}

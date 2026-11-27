@@ -1,0 +1,10 @@
+{
+  "id": "94ffcfc8-121c-4828-a62d-adb12a02cabd",
+  "label": "Inquiry PSR scope map at roots: blind to necessary facts, bridged to E (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "a4da59c9-5ce0-4007-98d5-690997b12570",
+  "rule": "Invariance under change of reasons for necessary targets, cheap scope extension, quality at necessary targets, sense factorization and finite controls",
+  "meaning": "Certificate for #2145 lane H2. Every inquiry-tied PSR form in the graph reads the reason relation only at targets contingent at the world of evaluation, and the skeptical mechanism of the inquiry argument has no purchase on a necessary hypothesis; under N every lack of an actual root is necessary, so these forms are blind to its reasons. Extending the scope to all facts is cheap: the necessary truths admitted as reasons for the necessary truths meet the unrestricted fact PSR and keep every quality condition. The quality condition that does reach necessary targets forces contingent reasons for necessary truths, for every root alike. The step to E's sense of explained absence is the sense bridge, which the reason-essence thesis, carriage and member grounding supply. The epistemic reading of closure (every root absence known by profile-sound inference) gives E only as a completeness demand. Finite rows: the impersonal source with profile {esse, a, b} meets every inquiry condition and the unrestricted fact PSR while E fails, and with no reasons for its lacks it still meets every contingent-scoped condition. Establishes no premise.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

@@ -1,0 +1,11 @@
+{
+  "id": "3452ca1e-e829-4656-8e4f-b30881894c25",
+  "label": "Reasons for root absences lie in natures, from ESSENCE_6 exclusion of root absences",
+  "argument_id": "10db1848-8313-4802-94ba-488da3a6f63a",
+  "challenge_module": "TruthCore.Results.Explanation.InquiryClosure.Challenge",
+  "solution_module": "TruthCore.Results.Explanation.InquiryClosure.Solution",
+  "theorem": "TruthCore.Results.Explanation.InquiryClosure.lackReasonsEssentialOfExcluded",
+  "comparator_config": "results/3452ca1e-e829-4656-8e4f-b30881894c25/comparator.json",
+  "status": "solution-present",
+  "description": "Strength-order certificate: essential exclusion of root absences implies the reason-essence thesis. Establishes no premise."
+}
