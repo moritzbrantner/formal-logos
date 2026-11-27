@@ -12,7 +12,7 @@
   ],
   "connection_plan": {
     "target_statement_id": "c4fb87a6-047d-5f3d-b3e3-8dc0c4bbc946",
-    "missing_bridge": "A registered sense bridge identifying PERFECTION_OF_BEING_2's primitive OfEsse with the OfBeing primitive of c4fb87a6 over the same determinations, so that R-act2 supplies c4fb87a6 in the intensive sense.",
-    "blocker": "The identity is registered as logically_equivalent_to (evidence intensiveEsseIffPurePertainsToEsse), which the frontier does not read; a one-premise derivation of the same universal shape would be a transcription and add no warrant. The independent question is whether R-act2 itself is warranted: the q.4 a.1 ad 3 unde inference only makes it explicit, and the q.7 a.1 bridge moves its content between 1304b462 and the unlimited-esse premise (docs/notes/rdep-to-ract.md)."
+    "missing_bridge": "A decision of DISAMB 62ca3d65 that c4fb87a6, as used on its root routes (7d8bbdcb, 95c04a6d, ff74a7ac), takes PERFECTION_OF_BEING_2, so that R-act2 supplies it (the identity is registered as logically_equivalent_to).",
+    "blocker": "DISAMB 62ca3d65 leaves the sense of c4fb87a6's primitive OfBeing undecided between the thin and intensive readings; the registered equivalence holds only on the intensive reading, which is the contested act-of-being thesis (docs/notes/mode-of-being-subsistent-esse.md)."
   }
 }
