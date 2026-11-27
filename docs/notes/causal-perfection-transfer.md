@@ -8879,9 +8879,11 @@ EXPLAINED_ABSENCE).
 - EXPLAINED_ABSENCE_1: some fact is *admitted* as a reason
   (`PSRStrength.Explained`, ADMITTED_EXPLICABILITY_ROLE_1). The PSR and
   inquiry conditions of this section use it.
-- EXPLAINED_ABSENCE_3: the absence is not unexplained (`a5452da9`): the
-  admissibility constraints, alone or with the root's profile, exclude the
-  missing determination (case i or ii). E (`9281317d`, now tagged) uses this
+- EXPLAINED_ABSENCE_3: the absence is excluded by admissibility (definition
+  `c48266c2`, `AbsenceExcludedByAdmissibility`): the admissibility
+  constraints, alone or with the root's profile, exclude the missing
+  determination (case i or ii). For a lacked determination it is the negation
+  of an unexplained absence (`a5452da9`). E (`9281317d`, now tagged) uses this
   sense.
 - EXPLAINED_ABSENCE_2 (`PositivelyFixedAbsence`, definition `04c93d61`):
   sense 3 or a carried exclusion. Sense 3 gives sense 2; sense 2 gives sense 3
@@ -8997,10 +8999,12 @@ Registered results (main theorems use no axioms):
   `strengthens` relation: E is a claim in sense 3, the bridge a passage from
   sense 1 to sense 2, a difference of content rather than strength.
 - **Status of the first route.** With `a7644793` it forms the loop E → bridge
-  → E, and the frontier shows the bridge closed only through E. Route
-  `93dfa140`/`c689901f` is therefore a relocation that is *connected only*. It
-  is not a support option for E unless the bridge has an independent route.
-  The factorization below gives one, whose load is LE and `89c988d9`.
+  → E. Taken alone, route `93dfa140`/`c689901f` is a relocation that is
+  *connected only*. The factorization below (`d8b668df`, argument `44890767`)
+  now gives the bridge a second route that does not run through E; its load is
+  the reason-essence thesis, LE and `89c988d9`. So the bridge is supported
+  only as far as those premises are, and through them the first route adds
+  nothing beyond route `1844def4`.
 - `factorization` [`d8b668df`]: the reason-essence thesis, LE and the
   necessity direction give the sense bridge (clause 7 registered as an
   argument; companion `factorizationControls`).
@@ -9127,7 +9131,9 @@ already contain.
 - The nine conditions named in clause 1 are proved blind to reasons at
   necessary targets. The inquiry argument's skeptical mechanism gives no
   reason to extend their scope. The why-stance forms that do reach necessary
-  facts are met by the cheap extension (clause 3b).
+  facts are met by the cheap extension (clause 3b), for a stance that accepts
+  only facts true at w, given excluded middle and the contingent-fact PSR at
+  w.
 - The sense gap is explicit (EXPLAINED_ABSENCE_1, _2, _3, with E in sense 3)
   and the bridge is equivalent to E given cheap premises. It factors through
   LE (`d8b668df`).
@@ -9169,6 +9175,19 @@ following commit; a targeted re-check is pending.
 | P2-2: `3452ca1e` has the scope-restriction shape | Registered `b2d6ac16` strengthens `fedc67d8`, with `strong_version_needed` on `a2560bca`. `a7644793` is kept out, with its content difference stated. `d0040551`: no strictness result and no certified difference |
 | P2-3: the classical claims generalized from one carrier | Scoped to "lane E's selection carrier" in `b2d6ac16`, argument `a2560bca` and the note |
 | P2-4: loop E → bridge → E; the stale "premise only of" sentence | `93dfa140`/`c689901f` is reported as a relocation that is connected only (part C, assessment, attempt). Part D names `8a7b6e51` |
+
+The targeted re-check of `15e07d15f` found every finding fixed and no P1. It
+raised three P2s, repaired in the following commit:
+1. Clause 3b's hypotheses (a stance accepting only facts true at w, excluded
+   middle, the contingent-fact PSR at w) are restated where 3b is cited: the
+   note, the map argument `e49dfdd6` and the attempt assessment.
+2. The stale "the bridge closed only through E" now reflects the
+   factorization `d8b668df` (argument `44890767`).
+3. Sense 3 is bound to its own declaration, `AbsenceExcludedByAdmissibility`
+   (definition `c48266c2`), not to its complement `UnexplainedAbsence`. It is
+   the first disjunct of `PositivelyFixedAbsence`. E links `c48266c2`
+   (cross-lane spec edit). E's `lean_declaration` and the bindings of
+   `9c55984a`, `d3051570` and `31c791ab` are unchanged.
 
 ### Next discriminating tests
 

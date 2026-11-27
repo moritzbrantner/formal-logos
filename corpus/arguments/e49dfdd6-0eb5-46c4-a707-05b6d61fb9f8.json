@@ -6,7 +6,7 @@
   "inference_ids": [
     "94ffcfc8-121c-4828-a62d-adb12a02cabd"
   ],
-  "meaning": "Certificate for #2145 lane H2. The nine conditions named in clause 1 (the contingent-fact PSR, NoBrute, the four #756 bridges, the skeptical-alternative presupposition, ReasonIndependent and IrreflexiveContingent) read the reason relation only at targets contingent at the world of evaluation, and the skeptical mechanism has no purchase on a necessary hypothesis; under N every lack of an actual root is necessary, so these nine are blind to its reasons. The why-stance forms WhyHonors and ExcludesUnreasonedAcceptance do reach necessary facts, and the cheap extension meets them (clause 3b). Extending the scope to all facts is cheap: the necessary truths admitted as reasons for the necessary truths meet the unrestricted fact PSR and keep every quality condition. The quality condition that does reach necessary targets forces contingent reasons for necessary truths, for every root alike. The step to E's sense of explained absence is the sense bridge, which the reason-essence thesis, carriage and member grounding supply. The epistemic reading of closure (every root absence known by profile-sound inference) gives E only as a completeness demand. Finite rows: the impersonal source with profile {esse, a, b} meets every inquiry condition and the unrestricted fact PSR while E fails, and with no reasons for its lacks it still meets every contingent-scoped condition. Establishes no premise.",
+  "meaning": "Certificate for #2145 lane H2. The nine conditions named in clause 1 (the contingent-fact PSR, NoBrute, the four #756 bridges, the skeptical-alternative presupposition, ReasonIndependent and IrreflexiveContingent) read the reason relation only at targets contingent at the world of evaluation, and the skeptical mechanism has no purchase on a necessary hypothesis; under N every lack of an actual root is necessary, so these nine are blind to its reasons. The why-stance forms WhyHonors and ExcludesUnreasonedAcceptance do reach necessary facts; the cheap extension meets them for a stance that accepts only facts true at w, given excluded middle and the contingent-fact PSR at w (clause 3b). Extending the scope to all facts is cheap: the necessary truths admitted as reasons for the necessary truths meet the unrestricted fact PSR and keep every quality condition. The quality condition that does reach necessary targets forces contingent reasons for necessary truths, for every root alike. The step to E's sense of explained absence is the sense bridge, which the reason-essence thesis, carriage and member grounding supply. The epistemic reading of closure (every root absence known by profile-sound inference) gives E only as a completeness demand. Finite rows: the impersonal source with profile {esse, a, b} meets every inquiry condition and the unrestricted fact PSR while E fails, and with no reasons for its lacks it still meets every contingent-scoped condition. Establishes no premise.",
   "definition_ids": [
     "04c93d61-3c02-4e68-a48d-cfc72d6882c4",
     "1db9a5b1-7e87-49dd-9bba-65e47f2ffc45",
@@ -17,7 +17,8 @@
     "52352824-6be9-53c6-83d4-82fed9a08cbb",
     "02c59c61-4cd1-5698-9338-e4a37ebf71f4",
     "179d4557-bda1-59c4-938a-b91e9974a27f",
-    "a5452da9-32eb-47d4-98fb-0da507cf4ce5"
+    "a5452da9-32eb-47d4-98fb-0da507cf4ce5",
+    "c48266c2-ba78-41c2-8860-61273abf0ef8"
   ],
   "disambiguation_ids": [
     "1aef8986-ed29-564f-9803-d812d2ff63e1",

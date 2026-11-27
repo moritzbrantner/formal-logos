@@ -130,6 +130,17 @@ It is not restricted to contingent facts. -/
 def RootLackPSR (m : Profile W B) (w : W) (A : Arena W B F) (lack : B → D → F) : Prop :=
   ∀ r, ActualRoot m w r → ∀ d, A.holds w (lack r d) → Explained A w (lack r d)
 
+/-- EXPLAINED_ABSENCE_3, an absence excluded by admissibility: no admissible
+profile contains all of `x`'s determinations together with `k` (case i or ii
+of #2153). For a lacked `k` it is the negation of
+`RootPerfectionExclusion.UnexplainedAbsence`, and it is the sense of E
+(`NoUnexplainedAbsenceAtRoots`). It is the first disjunct of
+`PositivelyFixedAbsence`, so it gives EXPLAINED_ABSENCE_2 outright; the converse
+needs the necessity direction of member grounding. -/
+def AbsenceExcludedByAdmissibility (Admissible : Set D → Prop) (Has : B → D → Prop)
+    (x : B) (k : D) : Prop :=
+  ¬ HasCompatibleExtension Admissible (ActualProfile Has x) k
+
 /-- EXPLAINED_ABSENCE_2, a positively fixed absence:
 either no admissible profile contains all of `x`'s determinations together
 with `k` (case i or ii of #2153), or some determination `t` of `x` requires
@@ -141,7 +152,7 @@ bare negative clause in a nature is an admitted reason in the #755 arena and
 fixes nothing here. -/
 def PositivelyFixedAbsence (Admissible : Set D → Prop) (RequiresLack : D → Set D → Prop)
     (Has : B → D → Prop) (x : B) (k : D) : Prop :=
-  ¬ HasCompatibleExtension Admissible (ActualProfile Has x) k ∨
+  AbsenceExcludedByAdmissibility Admissible Has x k ∨
     ∃ t S, Has x t ∧ k ∈ S ∧ S ⊆ insert k (ActualProfile Has x) ∧ RequiresLack t S
 
 /-- OPEN sense bridge, analyst formulation: at every actual root `r` at `w`, an
