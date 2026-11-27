@@ -19,7 +19,18 @@
     "8631f4b8-12db-5279-917c-952476ae5eee",
     "PR-817",
     "39427676-044b-468c-955f-a36355baf737",
-    "b14bb21a-174e-4863-aabd-6b4f886990a5"
+    "b14bb21a-174e-4863-aabd-6b4f886990a5",
+    "PR-2125"
   ],
-  "blocker": "No premise discharged. Common nature, numerical individuation and the Q7 unreceivedness/infinity interpretation remain open."
+  "blocker": "No premise discharged. Common nature, numerical individuation and the Q7 unreceivedness/infinity interpretation remain open.",
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-27",
+      "pr": "PR-2125"
+    }
+  ]
 }

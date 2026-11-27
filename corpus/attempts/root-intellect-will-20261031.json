@@ -35,6 +35,17 @@
     "df46d8e4-128e-53ee-9485-2af2654308e4",
     "PR-829",
     "ea6608a9-da9f-45e1-a726-fdb239370193",
-    "0fb8f0c9-af91-4242-bdff-89ec86b87af0"
+    "0fb8f0c9-af91-4242-bdff-89ec86b87af0",
+    "PR-2125"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-27",
+      "pr": "PR-2125"
+    }
   ]
 }
