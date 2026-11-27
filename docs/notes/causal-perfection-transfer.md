@@ -7726,7 +7726,9 @@ price is now located precisely:
   options (C).
 
 No substantive objection to it beyond these was identified. On the mode
-coordinate, A4 stays at parity with the personal account (lane C).
+coordinate, A4 stays at parity with the personal account (lane C; its round-3
+counterfactual-guidance and self-application tests did not separate them, see
+[above](#counterfactual-guidance-and-self-application-against-imitability-exemplars-2026-11-27-provisional-2145)).
 
 **Provisional judgment.** This angle also relocates. It is the fourth on the
 purity family, after the three angles listed at the top of this section. It
