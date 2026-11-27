@@ -1,0 +1,14 @@
+{
+  "id": "ac93d55a-2264-4b88-a1fc-ed6ce0a47bd7",
+  "label": "A holder of another MOTION_1 moves it in some respect",
+  "paraphrase": "OPEN analyst sense bridge from MOTION_3 to MOTION_1, attribution deferred (MOTION_1 here is a reading of the binder MovesIn, not a type: the binder is abstract and untagged, since DISAMB-MOTION is pinned by a reviewed bundle audit): if f, distinct from x, presently actualizes x in respect r (holding, definition 6ab9a832), then f moves x (the First Way's MovesIn, read broadly as educing from potency to act, MOTION_1, definition a7904c82) in some respect. Strongest support, restricted: where x is in POTENCY_1 in some respect s other than r and f's present actualizing of x in r is what reduces that potency, f moves x in s, which is the broad reading of moving in DISAMB-MOTION. For pure conservation (f keeps x in an act it already has, with no potency of x reduced by f) no support is stated. Substantive objection, recorded: attempt b7e7af8c records Aquinas's own text, ST I q.104 a.1 ad 4 (pinned passage f74e1b94, an analyst reading), that conservation is without motion; with DISAMB-MOTION's reading of moving as eduction from potency to act, continued possession of an act is not a new eduction, so on that reading pure conservation is not MOTION_1 moving and the bridge fails for a holder that only conserves.",
+  "lean_declaration": "TruthCore.Causality.HoldingFirstMover.HoldingAnotherIsMoving",
+  "definition_ids": [
+    "6ab9a832-6b0f-47ac-9f08-144444bf1cb1",
+    "a7904c82-eef8-58e4-ac7c-0bb93374cb43",
+    "ea1904bc-bdfa-4835-a4a7-8545c5221e2e"
+  ],
+  "disambiguation_ids": [
+    "a59fd0ac-f276-528d-8dc3-c3eddd331ac7"
+  ]
+}

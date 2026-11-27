@@ -1,0 +1,10 @@
+{
+  "id": "f4e49a01-6da8-4e6b-bbd9-5be8803d0b8f",
+  "label": "Act, non-reception and thin profiles of the unde inference: controls, checked (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "f2013d4f-0d00-4a2c-89df-33e4db9fb335",
+  "rule": "Explicit finite profiles over Bool and Fin 3, checked by decision",
+  "meaning": "Finite profiles showing that each bridge of the two derivations is needed on them, that the non-reception profile satisfies R-dep, the first bridge and the essence-only account while R-act1 fails, and that reception without the nature premise does not give finitude. A structural surrogate.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

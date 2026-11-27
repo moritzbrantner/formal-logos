@@ -1,0 +1,22 @@
+{
+  "id": "859b50dd-d198-4534-9706-da5a26417825",
+  "label": "Thin and act readings of perfection of being on one subsistent source: controls",
+  "paraphrase": "Closed finite profiles; statements about them only. A source that is its own being and a living effect; two stipulated pure determinations, one standing for being and one, a Boolean stand-in for life (not any recorded sense of LIVING). Thin profile: only being is a perfection of being and the source has only being; d164b1ff holds, c4fb87a6 fails at the stand-in for life, and the source lacks it. Act profile: every pure determination is a perfection of being and the source has every determination; both premises and their composite hold. On the thin profile, with the effect as the only recipient of esse, R-act₁ (the esse of whatever is not its own being is received in a principle and limited), own being is no recipient (7338142d) and a nonrecipient's determinations are pure (32695660) hold, while R-act₂ (intensive esse) with the thin reading fails; with the intensive reading taken as purity it holds. Locus (b): on the thin profile with the intensive reading taken as purity, R-act₂, purity and own being hold, yet the source does not really have the stand-in for life and d164b1ff read intensively fails; and the source lacks no perfection of being in the mode-open act of a frame where everything is in act (9a0a4951) while still not really having it. It witnesses where a thin reading of 'perfection of being' (PERFECTION_OF_BEING_1) leaves the pair: it can keep d164b1ff and must give up c4fb87a6; and that reception of esse does not by itself give intensive esse. It is not evidence for either reading.",
+  "lean_declaration": "TruthCore.Causality.ModeOfBeingMiddleTerm.Control.Controls",
+  "definition_ids": [
+    "5dc08b95-ca15-52ab-b8cd-2b558e9a13f7",
+    "3aba5f19-f48d-50db-bc57-93ba2e99f845",
+    "65e38ffa-5a1c-55d0-935c-6538d843b780",
+    "84147eb5-88ef-46e7-9a0d-9c18d5137f16",
+    "0a2bf1a0-bfc5-45d7-966a-a28919b6e847",
+    "4433942e-aaf6-55a9-b777-66e55638103d",
+    "6ced5205-e6a4-585e-950e-3b22e7c9ef01"
+  ],
+  "disambiguation_ids": [
+    "b1640e51-d7d4-5a80-9992-29fa1ded8048",
+    "dc9c0a1b-1759-5b1c-9ab9-ee7bea8847b7",
+    "1aef8986-ed29-564f-9803-d812d2ff63e1",
+    "1795a62e-f78b-5f5b-94e7-9e7490824811",
+    "62ca3d65-8dd4-4187-abe1-a928b3045f12"
+  ]
+}

@@ -25,6 +25,7 @@ public import TruthCore.Results.Causality.AtomisticNecessaryConstituent.Solution
 public import TruthCore.Results.Causality.AtomisticRequirementControl.Solution
 public import TruthCore.Results.Causality.AtomisticUniversalCausePriority.Solution
 public import TruthCore.Results.Causality.AttenuationFit.Solution
+public import TruthCore.Results.Causality.AxiarchicFoundation.Solution
 public import TruthCore.Results.Causality.BearerRegress.Solution
 public import TruthCore.Results.Causality.BegunComingToBe.Solution
 public import TruthCore.Results.Causality.BegunOrHomogeneousGiving.Solution
@@ -137,6 +138,7 @@ public import TruthCore.Results.Causality.DependenceGroundingPriority.Solution
 public import TruthCore.Results.Causality.DependenceOrderSenses.Solution
 public import TruthCore.Results.Causality.DependenceStrictGroundMap.Solution
 public import TruthCore.Results.Causality.DependenceStrictGroundMapStrength.Solution
+public import TruthCore.Results.Causality.DependenceToActOfBeing.Solution
 public import TruthCore.Results.Causality.DerivativeJointPower.Solution
 public import TruthCore.Results.Causality.DirectEsseGenusOmissionControl.Solution
 public import TruthCore.Results.Causality.DirectEsseRootGodExistence.ExistenceOnly.Solution
@@ -225,6 +227,7 @@ public import TruthCore.Results.Causality.GroundingYieldsRegress.Solution
 public import TruthCore.Results.Causality.HeadlessCausalAncestry.Solution
 public import TruthCore.Results.Causality.HistoricalRemoval.Solution
 public import TruthCore.Results.Causality.HolderRootIdentification.Solution
+public import TruthCore.Results.Causality.HoldingFirstMover.Solution
 public import TruthCore.Results.Causality.HoldingMotion.Solution
 public import TruthCore.Results.Causality.IlluminationReceipt.Solution
 public import TruthCore.Results.Causality.ImpersonalFoundationJoint.Solution
@@ -263,6 +266,7 @@ public import TruthCore.Results.Causality.MetricGrimReaper.Solution
 public import TruthCore.Results.Causality.ModalFrameStrength.Solution
 public import TruthCore.Results.Causality.ModalNecessaryBeingActuality.Solution
 public import TruthCore.Results.Causality.ModalSenseSupport.Solution
+public import TruthCore.Results.Causality.ModeOfBeingMiddleTerm.Solution
 public import TruthCore.Results.Causality.MoreSuchSenseCollapse.Solution
 public import TruthCore.Results.Causality.MotionMapsBatch1.Solution
 public import TruthCore.Results.Causality.MotionMoverFork.Solution
@@ -317,6 +321,7 @@ public import TruthCore.Results.Causality.OccamRegress.Solution
 public import TruthCore.Results.Causality.OccurrenceUnderivedEssence.Solution
 public import TruthCore.Results.Causality.OneDependenceOrder.Solution
 public import TruthCore.Results.Causality.OriginDeletion.Solution
+public import TruthCore.Results.Causality.OriginDeletionIncompatibility.Solution
 public import TruthCore.Results.Causality.OriginExerciseBridge.SelfEdge.Solution
 public import TruthCore.Results.Causality.OriginExerciseBridge.Solution
 public import TruthCore.Results.Causality.OriginToleranceIdentity.Solution

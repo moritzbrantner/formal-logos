@@ -27,6 +27,7 @@ public import TruthCore.Causality.AtomisticCausalSource
 public import TruthCore.Causality.AtomisticRequirementControl
 public import TruthCore.Causality.AtomisticUniversalCausePriority
 public import TruthCore.Causality.AttenuationFit
+public import TruthCore.Causality.AxiarchicFoundation
 public import TruthCore.Causality.BearerRegress
 public import TruthCore.Causality.BegunComingToBe
 public import TruthCore.Causality.BegunOrHomogeneousGiving
@@ -94,6 +95,7 @@ public import TruthCore.Causality.DependenceGroundingPriority
 public import TruthCore.Causality.DependenceOrderSenses
 public import TruthCore.Causality.DependenceStrictGroundMap
 public import TruthCore.Causality.DependenceStrictGroundMapStrength
+public import TruthCore.Causality.DependenceToActOfBeing
 public import TruthCore.Causality.DerivativeJointPower
 public import TruthCore.Causality.DirectEsseGenusOmissionControl
 public import TruthCore.Causality.DirectEsseRootGoodnessOmission
@@ -161,6 +163,7 @@ public import TruthCore.Causality.GroundingRegress
 public import TruthCore.Causality.HeadlessCausalAncestry
 public import TruthCore.Causality.HistoricalRemoval
 public import TruthCore.Causality.HolderRootIdentification
+public import TruthCore.Causality.HoldingFirstMover
 public import TruthCore.Causality.HoldingMotion
 public import TruthCore.Causality.IlluminationReceipt
 public import TruthCore.Causality.ImpersonalFoundationJoint
@@ -189,6 +192,7 @@ public import TruthCore.Causality.MetricGrimReaper
 public import TruthCore.Causality.MixedSupplierCensus
 public import TruthCore.Causality.ModalNecessaryBeingActuality
 public import TruthCore.Causality.ModalSenseSupport
+public import TruthCore.Causality.ModeOfBeingMiddleTerm
 public import TruthCore.Causality.MoreSuchSenseCollapse
 public import TruthCore.Causality.MotionMapsBatch1
 public import TruthCore.Causality.MotionMoverFork
@@ -221,6 +225,7 @@ public import TruthCore.Causality.OccurrenceUnderivedEssence
 public import TruthCore.Causality.OneDependenceOrder
 public import TruthCore.Causality.OperationLocalFiniteness
 public import TruthCore.Causality.OriginDeletion
+public import TruthCore.Causality.OriginDeletionIncompatibility
 public import TruthCore.Causality.OriginExerciseBridge
 public import TruthCore.Causality.OriginToleranceIdentity
 public import TruthCore.Causality.OwnerEndpointCalibration

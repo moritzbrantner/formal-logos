@@ -845,3 +845,75 @@ Records: statements `aa9b2a73`, `38a82161`, `c4e333da`, `4b9462dd`,
 `b41f6bcd`, `6fdb45c3`, `0e0409d5`, `9c7ad646`, `f360bb6f`, `c7212e95`;
 definitions `edca52e4`, `acde39ee`, `5462ce35`; results `dd2ac370`, `28913eec`,
 `1dcb54f5`, `85f1cb63`, `727d5a3f`. A new attempt records the outcome.
+
+## 11. 2026-11-27: the passage to every respect and the MOTION sense bridges (#2103)
+
+Module `TruthCore/Causality/HoldingFirstMover.lean`, spec
+`specs/holding-first-mover.toml`. Analyst formulations, attribution deferred.
+
+**Passage (2'), built.** Section 10.5 recorded the passage from the operative
+respect to esse or every respect as unformulated. It now runs from the
+unlosable first holder `5eb16c61` with two open premises about the primitive,
+untimed lackability:
+
+- `89f0d0d5`: what is MOTION_3 held in a respect could lack its act there (the
+  converse direction of C\* `1dd5be70`);
+- `f856b295`: what could lack being could lack each act it has (fixing the
+  inclusive reading of `CanLack`, with `7067553d` as support).
+
+With `6e2176cd`, a holder held in some respect could lack being and so its
+operative act, which the first holder cannot. Result `544bc129` concludes
+`de1f6c17`: there cannot be no holder of another held (MOTION_3) in no respect.
+The passage itself uses no timed giving. Upstream, one support of `5eb16c61`
+runs through C\*-holding `1dd5be70`, and so through `166dba9d`, `f834ee65`
+and the present-moment reading `dedc431f`. That support uses the reading only
+in the direction it supplies, from timed giving to holding at esse. The plans
+recorded by #2108 need the converse direction, from a holder to a selected
+actual ground: on `f834ee65` and `166dba9d` toward `c71c068c`, and on
+`f360bb6f` toward `da3facd6`. They concern other targets and stay as recorded.
+`f834ee65`, `166dba9d` and `dedc431f` now also reach the root through
+C\*-holding.
+
+**Bridge (3), as two explicit open sense bridges.** `de1f6c17` is the First-Way
+reading with being moved read as holding (`firstUnheldHolder_iff_reading`).
+Result `2b40780f` carries it to `c1b68c21` (MOTION_1) through:
+
+- `ac93d55a`: a holder of another moves it in some respect;
+- `e2f44380`: whatever is moved in some respect is held in some respect.
+
+Each bridge records its strongest support and a substantive objection. For
+`ac93d55a`, conservation of an act already possessed is not eduction from
+potency to act on DISAMB-MOTION's reading. For `e2f44380`, inertial and
+extrinsic-inertialist accounts deny a present actualizer of what is moved.
+
+**Repair connected.** Result `00761dc8` derives `cf7940a7` from `6fdb45c3`.
+This gives the relative first holder a support through the total-holding repair
+(`4b9462dd` with the contested bridge `b41f6bcd`), which is consistent with the
+leaning cards. The cards observation `5469677e` is now recorded as attacking the
+unrestricted link `685933c7`, which this route puts on a root path.
+
+**Controls.** `controls` (Comparator companion of `544bc129` and `2b40780f`)
+gives a populated model of the whole bundle and one omission model for each of
+the four new premises.
+
+**Provisional judgment.** The holding First Way now reaches `c1b68c21` as a
+conditional support option. Its premise statements are disjoint from those of
+the prima via proofs `a8ced49e` and `d337ab29`, but its warrant is shared with
+them in two places:
+
+- the stated support of the moved-side bridge `e2f44380` runs through
+  `4a952b96` (whatever is moved is moved by another);
+- the holding regresses `6f924bb0` and `c4e333da` are holding analogues of the
+  per se regress `226c38f6`.
+
+Its weakest points are the two sense bridges and `89f0d0d5`. On the modal
+reading of `CanLack`, `89f0d0d5` conflicts with beings necessary through another
+(`IsNecessary` with `HasCauseOfNecessityAliunde`) that are presently held. It is
+weaker than the prima via route on the bridges and adds a holding-sense
+alternative to the per se mover series. Nothing is established.
+
+**Still unplaced.** `f401994a` (result `0b40c6e1`) and the C\* control
+`3de4d557` (result `0dc12783`) derive the negation of an observation premise
+from root-path premises. Placing either as a refutation of that observation
+would use the premise the observation attacks, so both stay with the
+incompatibility lane.
