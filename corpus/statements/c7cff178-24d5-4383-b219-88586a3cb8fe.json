@@ -2,5 +2,12 @@
   "id": "c7cff178-24d5-4383-b219-88586a3cb8fe",
   "label": "Cessation coverage and ungiven continuation comparison",
   "paraphrase": "For arbitrary sampled process models, causal coverage of cessation and no terminal destructive cause give double-negated next presence of the same initially present bearer. Continued weak giving is classically equivalent to failure of continuation without any giver. Coverage plus that failure premise yields a terminal process witness whenever a previously present recipient has no next giver. The existing ConcurrentlyActualized premise restricts to continued giving on a matching selected-world process dictionary. Reused temporal inertia and sustained histories respectively satisfy causal coverage with failure and success of concurrent actualization; the inertial process dictionary contains a sound actual loss of the other bearer. These are conditional laws and structural interpretations, not actual conservation or rival defeat.",
-  "lean_declaration": "TruthCore.Causality.ConcurrentCessation.Certificate"
+  "lean_declaration": "TruthCore.Causality.ConcurrentCessation.Certificate",
+  "definition_ids": [
+    "9bd9cc6b-61c5-4180-bd8f-b1e90555689a",
+    "a2ba53c6-6eca-4572-acf1-8bd78a0967a5",
+    "158301bc-9585-4145-be60-34f08c9f922c",
+    "6e811e85-b983-5988-b20a-f4f3ee83c50e",
+    "4433942e-aaf6-55a9-b777-66e55638103d"
+  ]
 }
