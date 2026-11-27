@@ -1,0 +1,10 @@
+{
+  "id": "933eca8e-4a78-4b93-8631-08cbbc119ee9",
+  "label": "Test by SimplicityCollapse.rootExposure (938650b0)",
+  "subject_kind": "result",
+  "subject_id": "9cac6a2b-b4a6-523d-98b3-e0dab1989c75",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "938650b0-ff50-5c60-8b70-5b7dc600eaaf",
+  "note": "In noReturn the potency reading and the source’s immutability and capacity conditions hold at false and true. World false accesses true, which has no successors, so modal capacity at true is vacuous. The source is in act in respect false at false and lacks it at true, where the reverse transfer has no access edge."
+}
