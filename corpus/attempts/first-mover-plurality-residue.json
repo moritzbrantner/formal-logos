@@ -12,7 +12,7 @@
   ],
   "kind": "derivation",
   "outcome": "blocked",
-  "summary": "Sought the weakest premise excluding the part-free two-root model and tested its independence. Given individuation, the first-mover adapter and every-perfection, distinct first movers can only have one act profile and different natures, and at-most-one is equivalent to act-determines-nature and to first-movers-share-nature; so those two conditions are not independent of uniqueness given those premises, and the #715 content bundle is strictly stronger than the first. The non-equivalent form tried is UnlimitedBeingsShareNature: it does not use every-perfection, each of five hypotheses is needed by a control, and it exceeds uniqueness on a single-mover carrier. Its first-mover instance is still not independent, and it is vacuous at every pair with a limited member, so ordinary pluralities give it no instance. Rejected: treating ordinary limited pairs as inductive support for the root pair; treating formal independence of the universal as an independent defense; using the intelligences of De ente c.3 as a counterexample, since that passage denies them omnimoda simplicitas through esse other than quiddity, which is a limiting principle here. Details in docs/notes/necessary-simple-plurality.md.",
+  "summary": "Sought the weakest premise excluding the part-free two-root model and tested its independence. Given individuation, the first-mover adapter and every-perfection, distinct first movers can only have one act profile and different natures, and at-most-one is equivalent to act-determines-nature and to first-movers-share-nature; so those two conditions are not independent of uniqueness given those premises, and the #715 content bundle is strictly stronger than the first. The non-equivalent form tried is UnlimitedBeingsShareNature: it does not use every-perfection, each of five hypotheses is needed by a control, and it exceeds uniqueness on a single-mover carrier. Its first-mover instance is still not independent, and it is vacuous at every pair with a limited member, so ordinary pluralities give it no instance. Rejected: treating ordinary limited pairs as inductive support for the root pair; treating formal independence of the universal as an independent defense; using the intelligences of De ente c.3 as a counterexample, since that passage denies them omnimoda simplicitas through esse other than quiddity, which is a limiting principle here. Details in docs/notes/necessary-simple-plurality.md.\n\nCuration pass 2, lane D (#2103, 2026-11-27). a4f20969 tests 2344542e. Omit individuation. Assign a constant suppositum, essence and esse on the part-free motion carrier. The other four hypotheses hold, while the two distinct first movers share the assigned individuating value. a4f20969 tests 3581ee6a. Omit the adapter from first-mover suppositum to nature. The two first movers have distinct supposita but essence and esse are constant. The other four hypotheses hold, and the movers remain distinct. a4f20969 tests 78246da5. Omit first-mover simplicity. Assign composition to every bearer in the part-free motion model. The common-nature law among unlimited bearers then holds vacuously, and the two distinct first movers remain. a4f20969 tests 74eb9113. Omit firstness in being by making every distinct bearer simply prior. Each of the two unmoved movers then counts as limited by a prior bearer, so the unlimited-nature law leaves both distinct movers admissible. a4f20969 tests fb3315ca. Omit the shared nature of all unlimited bearers. The part-free model retains individuation, the suppositum adapter, simplicity and firstness. Its two first movers are unlimited and their represented natures differ. a4f20969 tests 6acf2716. In the single-mover fixture with identity suppositum, essence and esse, the mover g is simply prior to every other bearer and is the sole unlimited bearer. All five premises hold and g witnesses first unmoved motion.",
   "blocker": "Defend the bridge, or a replacement, on grounds that do not reduce to its first-mover instance and that answer the different-whole-essence rival; separately defend applying first-mover premises to a selected necessary underived individual. The part-free model survives every hypothesis but the bridge.",
   "evidence": [
     "bd1550cd-c5ae-5b72-834a-e55fb04be10b",
@@ -21,5 +21,15 @@
     "c0159bdf-0113-5e26-b340-eebedd3d0fa5",
     "a5b44455-66e5-5bef-9784-e37472a39324",
     "PR-771"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-27",
+      "pr": "PR-2114"
+    }
   ]
 }

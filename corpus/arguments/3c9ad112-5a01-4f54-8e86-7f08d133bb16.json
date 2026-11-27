@@ -1,0 +1,43 @@
+{
+  "id": "3c9ad112-5a01-4f54-8e86-7f08d133bb16",
+  "label": "Selected-world calibration gives an underived CONCRETE_6 witness",
+  "premise_statement_ids": [
+    "d236f537-dd57-50ec-9676-cee87b19242a",
+    "0e02cd69-8fb0-4859-8287-937440c84b5b"
+  ],
+  "conclusion_statement_id": "0bdcf366-29c7-5d45-b603-5c929dcad976",
+  "inference_ids": [
+    "136d3450-ce9c-4f11-95a6-2e32bdc09d22"
+  ],
+  "meaning": "For the supplied Profile, take the witness of NecessarilyUnderived with its support parameter fixed to that Profile's grounds. Apply the calibration at w to the same witness's existence there. Keep its de re necessity relative to w and specialize the incoming-edge exclusion at every admitted world to existing concrete candidates. The two sense links record this passage from the broader underived bundle to the restricted ground exclusion and its retained modal conjunct. The separate calibration is needed for an unspecified witness. In the omission control the necessary underived bearer is classified as nonconcrete while the actually present concrete bearer is contingent.",
+  "definition_ids": [
+    "008cb21a-256c-5a90-822c-acd4591d699a",
+    "9146789d-5b36-572f-baa1-7eef28967793",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "7b0b109c-ad03-59a3-a81c-d0e027e91f95",
+    "75c193e1-bab0-5ec2-890b-9ff608b05aa7",
+    "b242943a-34cc-582d-8c38-c1203b9d2c91"
+  ],
+  "disambiguation_ids": [
+    "623ddbf6-9683-5361-bae4-e348a00ec680",
+    "6f1d1395-7c1d-5bd5-a45d-03380857aed6",
+    "5d15d8f2-1080-53c9-886f-cee2a4ff23a9"
+  ],
+  "sense_bridges": [
+    {
+      "term": "WORLD_RELATIVE_EXISTENCE_METAPHYSICAL_ESSE_NECESSITY",
+      "from": "57356a7a-ed0a-478f-abfc-2d47dd631135",
+      "to": "2e064a7b-b29f-4f0b-8978-782674012d86",
+      "role": "conclusion",
+      "statement_id": "0bdcf366-29c7-5d45-b603-5c929dcad976"
+    },
+    {
+      "term": "DE_RE_NECESSARY_EXISTENCE_ABSENT_EXISTENTIAL",
+      "from": "6d0fde78-c9fd-40b9-9802-1d096b77f375",
+      "to": "2bba28ee-ea32-4fd0-b582-7500ea114b2f",
+      "role": "conclusion",
+      "statement_id": "0bdcf366-29c7-5d45-b603-5c929dcad976"
+    }
+  ]
+}

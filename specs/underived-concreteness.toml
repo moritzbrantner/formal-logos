@@ -1,0 +1,18 @@
+[batch]
+vocab = "TruthCore.Causality.NecessaryConcreteUnderived"
+results = "TruthCore.Results.Causality.UnderivedConcreteness"
+
+[[argument]]
+id = "Selected-world calibration gives an underived CONCRETE_6 witness"
+theorem = "underivedConcreteOfCalibration"
+comparator_theorems = ["jointlySatisfied", "calibrationOmission"]
+premises = ["STMT-NECESSARILY-UNDERIVED", "0e02cd69-8fb0-4859-8287-937440c84b5b"]
+conclusion = "STMT-NECESSARY-CONCRETE-UNDERIVED-AT"
+rule = "Existential elimination, selected-world concreteness calibration and restriction to concrete supporters"
+meaning = "For the supplied Profile, take the witness of NecessarilyUnderived with its support parameter fixed to that Profile's grounds. Apply the calibration at w to the same witness's existence there. Keep its de re necessity relative to w and specialize the incoming-edge exclusion at every admitted world to existing concrete candidates. The two sense links record this passage from the broader underived bundle to the restricted ground exclusion and its retained modal conjunct. The separate calibration is needed for an unspecified witness. In the omission control the necessary underived bearer is classified as nonconcrete while the actually present concrete bearer is contingent."
+disambiguations = ["623ddbf6-9683-5361-bae4-e348a00ec680", "6f1d1395-7c1d-5bd5-a45d-03380857aed6", "5d15d8f2-1080-53c9-886f-cee2a4ff23a9"]
+sense_bridges = [
+  { term = "WORLD_RELATIVE_EXISTENCE_METAPHYSICAL_ESSE_NECESSITY", from = "WORLD_RELATIVE_EXISTENCE_METAPHYSICAL_ESSE_NECESSITY_3", to = "WORLD_RELATIVE_EXISTENCE_METAPHYSICAL_ESSE_NECESSITY_1", role = "conclusion", statement_id = "STMT-NECESSARY-CONCRETE-UNDERIVED-AT" },
+  { term = "DE_RE_NECESSARY_EXISTENCE_ABSENT_EXISTENTIAL", from = "DE_RE_NECESSARY_EXISTENCE_ABSENT_EXISTENTIAL_2", to = "DE_RE_NECESSARY_EXISTENCE_ABSENT_EXISTENTIAL_1", role = "conclusion", statement_id = "STMT-NECESSARY-CONCRETE-UNDERIVED-AT" },
+]
+axioms = []
