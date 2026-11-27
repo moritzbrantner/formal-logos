@@ -1,0 +1,10 @@
+{
+  "id": "45606221-42c8-422d-ac30-65dbaa656d81",
+  "label": "The more-such package with an IN_ACT_1 bearer forces formal possession, checked (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "97a338be-a14a-4492-a2c7-c11f39cbcb33",
+  "rule": "Compose moreSuchOfDistinctCauseGives at the shared act predicate with distinctCauseGivesOfMoreSuch at formal act",
+  "meaning": "Assume the package. The registered derivation moreSuchOfDistinctCauseGives, applied at the shared act predicate InAct, gives 'more such': every distinct cause of r in x is more r than x. The registered derivation distinctCauseGivesOfMoreSuch, applied at formal act with the formal more-such bearer, turns that into formal possession. The result has no premises: it is the implication itself, valid for every InAct and every reception and limitation relation, and it asserts no member of the package. Its use is diagnostic: with an observed formal possession gap (25b67649), some member of the package fails under every single act reading; which member is not selected by this theorem.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

@@ -7,14 +7,36 @@
     "c82c75e9-1786-43f1-8e0d-1b295ae5699a",
     "1294c8f3-3eb6-4960-859e-506ccdee6ab8"
   ],
-  "resolution": "CONTAINED_IN_1 (generic) is the sense of the locus bridges 65805e5a-818a-49a0-ae3c-eba95724500f and 69b9f887-582a-479c-924b-e7328f3930b4 and of the antecedent of the containment-recognition bridge d1fb6414-976e-4833-908d-17787cca2502; CONTAINED_IN_2 (intentional) is that bridge's consequent; CONTAINED_IN_3 (virtual) is the rival's reading of its contained stand-ins. Generic containment is entailed by each of the others; intentional and virtual containment exclude each other by their Lean bodies (one requires apprehension, the other its absence). The registered derivation of the cognition criterion 3b40009e-1c56-4cce-86ba-1980fd2cb9a7 passes from CONTAINED_IN_1 to CONTAINED_IN_2 only through d1fb6414, declared as its sense bridge; no step passes from virtual to intentional containment, which is exactly what the rival denies. Enforcement: no statement's Lean type uses ContainsGenerically, ContainsIntentionally or ContainsVirtually (ContainsGenerically is the raw parameter Contains), so bind-check cannot catch a mixing of these senses; the sense tags live in the definitions, labels and prose, and the declared sense bridge records the passage.",
+  "resolution": "CONTAINED_IN_1 (generic) is the sense of the locus bridges 65805e5a-818a-49a0-ae3c-eba95724500f and 69b9f887-582a-479c-924b-e7328f3930b4 and of the antecedent of the containment-recognition bridge d1fb6414-976e-4833-908d-17787cca2502; CONTAINED_IN_2 (intentional) is that bridge's consequent; CONTAINED_IN_3 (virtual) is the rival's reading of its contained stand-ins. Generic containment is entailed by each of the others; intentional and virtual containment exclude each other by their Lean bodies (one requires apprehension, the other its absence). The registered derivation of the cognition criterion 3b40009e-1c56-4cce-86ba-1980fd2cb9a7 passes from CONTAINED_IN_1 to CONTAINED_IN_2 only through d1fb6414, declared as its sense bridge; no step passes from virtual to intentional containment, which is exactly what the rival denies. Enforcement: the premise types use the sense declarations (Independent and NoMerelyProducedStandIn state containment as ContainsGenerically; the recognition bridge's antecedent is ContainsGenerically and its consequent ContainsIntentionally), the argument declares CONTAINED_IN_1 as its sense, and bind-check admits the CONTAINED_IN_2 constant only in the declared sense-bridge premise. ContainsGenerically unfolds to the parameter Contains, so the separation of senses rests on which declaration a type uses, not on a difference in their extensions for generic containment.",
   "term_label": "CONTAINED_IN",
   "senses": [
     {
       "id": "03ce80c5-aaba-4aae-adbf-a87092044dd4",
       "label": "CONTAINED_IN_1",
       "definition_id": "c917dda9-f382-48fa-8cc1-a0b9e609c164",
-      "lean_declaration": "TruthCore.Causality.AxiarchicFoundation.ContainsGenerically"
+      "lean_declaration": "TruthCore.Causality.AxiarchicFoundation.ContainsGenerically",
+      "lean_parameters": [
+        {
+          "declaration": "TruthCore.Causality.AxiarchicFoundation.ContainsGenerically",
+          "parameter": "Contains"
+        },
+        {
+          "declaration": "TruthCore.Causality.AxiarchicFoundation.Independent",
+          "parameter": "Contains"
+        },
+        {
+          "declaration": "TruthCore.Causality.AxiarchicFoundation.NoIndependentStandIn",
+          "parameter": "Contains"
+        },
+        {
+          "declaration": "TruthCore.Causality.AxiarchicFoundation.NoMerelyProducedStandIn",
+          "parameter": "Contains"
+        },
+        {
+          "declaration": "TruthCore.Causality.AxiarchicFoundation.ContainedStandInIsApprehended",
+          "parameter": "Contains"
+        }
+      ]
     },
     {
       "id": "30130a78-4a0e-44bb-bb2c-9e037651fa06",

@@ -62,9 +62,10 @@ theorem goodGeneralFavouringIsApprehensionOfIndividuation {B D S X Z C : Type}
   obtain ⟨s, x, y, hdep, hnp⟩ := hGG
   have hne : stand b x ≠ stand b y :=
     favouredIndividuated (φ s) (rel b φ s) (stand b) (hReal b φ hφ s) (hIrr b φ hφ s) x y hdep.2.1
-  have hContained : ∀ v, ¬ Present s v → Contains b (stand b v) := by
+  have hContained : ∀ v, ¬ Present s v →
+      TruthCore.Causality.AxiarchicFoundation.ContainsGenerically Contains b (stand b v) := by
     intro v hv
-    cases hEM (Contains b (stand b v)) with
+    cases hEM (TruthCore.Causality.AxiarchicFoundation.ContainsGenerically Contains b (stand b v)) with
     | inl hc => exact hc
     | inr hnc =>
       cases hEM (Produces b (stand b v)) with
@@ -72,10 +73,10 @@ theorem goodGeneralFavouringIsApprehensionOfIndividuation {B D S X Z C : Type}
       | inr hnp' => exact (hOwn b φ s v hφ hv ⟨hnc, hnp'⟩).elim
   cases hnp with
   | inl hx =>
-    obtain ⟨hab, hap⟩ := hRecog b φ s x y hφ (Or.inl hdep) hx (hContained x hx) hne
+    obtain ⟨hab, -, -, hap⟩ := hRecog b φ s x y hφ (Or.inl hdep) hx (hContained x hx) hne
     exact ⟨stand b x, x, hab, hap⟩
   | inr hy =>
-    obtain ⟨hab, hap⟩ := hRecog b φ s y x hφ (Or.inr hdep) hy (hContained y hy) hne.symm
+    obtain ⟨hab, -, -, hap⟩ := hRecog b φ s y x hφ (Or.inr hdep) hy (hContained y hy) hne.symm
     exact ⟨stand b y, y, hab, hap⟩
 
 /-! ## Lean-only: what the derivation relocates (semantic challenge probes)
@@ -122,9 +123,10 @@ theorem weakRecognitionGivesCriterion {B D S X Z C : Type}
   obtain ⟨s, x, y, hdep, hnp⟩ := hGG
   have hne : stand b x ≠ stand b y :=
     favouredIndividuated (φ s) (rel b φ s) (stand b) (hReal b φ hφ s) (hIrr b φ hφ s) x y hdep.2.1
-  have hContained : ∀ v, ¬ Present s v → Contains b (stand b v) := by
+  have hContained : ∀ v, ¬ Present s v →
+      TruthCore.Causality.AxiarchicFoundation.ContainsGenerically Contains b (stand b v) := by
     intro v hv
-    cases hEM (Contains b (stand b v)) with
+    cases hEM (TruthCore.Causality.AxiarchicFoundation.ContainsGenerically Contains b (stand b v)) with
     | inl hc => exact hc
     | inr hnc =>
       cases hEM (Produces b (stand b v)) with
@@ -148,13 +150,15 @@ theorem recognitionWithoutIndividuationGivesCriterion {B D S X Z C : Type}
     (hNotMade : NoMerelyProducedStandIn Has favours Present stand Contains Produces)
     (hR : ∀ b φ s z w, Has b (favours φ) →
       (BecauseOfGoodness good fitOf φ s z w ∨ BecauseOfGoodness good fitOf φ s w z) →
-      ¬ Present s z → Contains b (stand b z) → About (stand b z) z ∧ Apprehends b (stand b z)) :
+      ¬ Present s z → TruthCore.Causality.AxiarchicFoundation.ContainsGenerically Contains b (stand b z) →
+        About (stand b z) z ∧ Apprehends b (stand b z)) :
     GoodGeneralFavouringIsApprehension Has favours good fitOf Present About Apprehends := by
   intro b φ hφ hGG
   obtain ⟨s, x, y, hdep, hnp⟩ := hGG
-  have hContained : ∀ v, ¬ Present s v → Contains b (stand b v) := by
+  have hContained : ∀ v, ¬ Present s v →
+      TruthCore.Causality.AxiarchicFoundation.ContainsGenerically Contains b (stand b v) := by
     intro v hv
-    cases hEM (Contains b (stand b v)) with
+    cases hEM (TruthCore.Causality.AxiarchicFoundation.ContainsGenerically Contains b (stand b v)) with
     | inl hc => exact hc
     | inr hnc =>
       cases hEM (Produces b (stand b v)) with
@@ -291,13 +295,13 @@ theorem axiarchicControls : AxiarchicControls := by
   -- row 1: recognition and the criterion
   · intro b φ s z₀ w₀ hφ _ _ _ _
     obtain ⟨rfl, -⟩ := hasPersonal b φ hφ
-    exact ⟨Or.inl rfl, rfl, z₀, rfl⟩
+    exact ⟨Or.inl rfl, ⟨rfl, Or.inr ⟨z₀, rfl⟩⟩, ⟨z₀, Or.inl rfl⟩, rfl, z₀, rfl⟩
   · intro b φ hφ _
     obtain ⟨rfl, -⟩ := hasPersonal b φ hφ
     exact ⟨Item.inner .c, .c, Or.inl rfl, rfl, .c, rfl⟩
   -- row 2: recognition fails
   · intro h
-    obtain ⟨-, hc⟩ := h true better .cBetter .c .d hasBetter
+    obtain ⟨-, -, -, hc⟩ := h true better .cBetter .c .d hasBetter
       (Or.inl depBetter) (fun h => h)
       ⟨rfl, Or.inr ⟨.c, rfl⟩⟩ (by simp [standVia])
     exact hc
@@ -348,9 +352,21 @@ theorem criterionDoesNotGiveRecognition :
     obtain ⟨rfl, -⟩ := hasPersonal b φ hφ
     exact ⟨Item.blob, .c, Or.inl rfl, rfl, rfl⟩
   · intro h
-    obtain ⟨-, -, hc⟩ := h true better .cBetter .c .d hasBetter (Or.inl depBetter) (fun h => h)
+    obtain ⟨-, -, -, -, hc⟩ := h true better .cBetter .c .d hasBetter (Or.inl depBetter) (fun h => h)
       ⟨rfl, Or.inr ⟨.c, rfl⟩⟩ (by simp [standVia])
     cases hc
+
+/-- Lean-only: value-dependence of an aligned order witnesses coincidence on the
+witnessing pair only (see `AlignmentControl`). -/
+theorem witnessOnlyAlignment :
+    TruthCore.Causality.AxiarchicFoundation.AlignmentControl.WitnessOnlyAlignment := by
+  open TruthCore.Causality.AxiarchicFoundation.AlignmentControl in
+  refine ⟨⟨.s0, .a, .b, ⟨trivial, trivial, .s1, rfl, fun h => h, fun h => h⟩, Or.inl id⟩,
+    ?_, ?_, trivial, trivial⟩
+  · intro s x y h h'
+    cases s <;> cases x <;> cases y <;> simp_all [value]
+  · intro s x y h h'
+    cases s <;> cases x <;> cases y <;> simp_all [power]
 
 end Controls
 

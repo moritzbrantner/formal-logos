@@ -5709,7 +5709,12 @@ New vocabulary, each with a stipulative definition record:
   sense does not say which. Disambiguation CONTAINED_IN (`4c3751a6`) records it
   beside CONTAINED_IN_2, intentional (`c82c75e9`, `ContainsIntentionally`:
   contained, about a candidate and apprehended) and CONTAINED_IN_3, virtual
-  (`1294c8f3`, `ContainsVirtually`: contained and not apprehended). The q.4 a.2
+  (`1294c8f3`, `ContainsVirtually`: contained and not apprehended). The premise
+  types use these declarations: `Independent`, `NoMerelyProducedStandIn` and the
+  recognition bridge's antecedent state containment as `ContainsGenerically`,
+  and the bridge's consequent is `ContainsIntentionally`. The argument declares
+  CONTAINED_IN_1 as its sense and the bridge as its sense bridge to
+  CONTAINED_IN_2. `truth check` rejects the argument if the bridge is removed. The q.4 a.2
   formal/virtual containment of perfections in a cause (DEF `d7e7ae08`) is
   related but distinct.
 - **Produced by** `Produces b e` (`b71adcba`): something b makes as other than
@@ -5764,10 +5769,22 @@ this. A profile that tracks a feature f depends on g at a pair exactly when f
 and g both rank the pair at that scenario and some scenario agreeing on the
 control has neither. So a favouring that tracks an intrinsic power order meets
 the value-dependence mark only where that order and the value order coincide.
-Over the whole candidate space this is a necessary coincidence of two
-separately specified orders. It is the D-nature's alignment price
-(§67, option (a)), extended from one content to every candidate. No relation
-makes the coincidence hold. The same law applies to a personal source whose
+What `GoodGeneral` witnesses is narrower than a whole-order agreement. It
+requires dependence at one scenario and one pair, so the witnessed price is a
+coincidence of the two separately specified orders on the witnessing pair or
+pairs: both rank the pair at the scenario, and both fail at a scenario agreeing
+on the control.
+
+Lean-only `witnessOnlyAlignment` checks this on a model. Two strict orders on
+three candidates agree on the witnessing pair and fail together in the second
+scenario. They rank another pair oppositely in the first scenario, and the
+power-tracking profile is still good-general.
+
+A coincidence over the whole candidate space would be the D-nature's alignment
+price (§67, option (a)) extended from one content to every candidate. It is
+incurred only by an account that claims whole-order agreement. That is a
+stronger premise, not registered here and not used. For the witnessed
+coincidence, as far as it extends, no relation makes it hold. The same law applies to a personal source whose
 ideas track value-facts that are neither received from outside nor grounded in
 the source: its favouring follows its ideas, and their correctness about
 independent value is then the same unexplained coincidence.
@@ -6087,7 +6104,7 @@ horn. One table, one standard:
 | Produced realm | activism: God creates the abstracta that guide creation | a source producing a realm of possibles (or the Plotinian One with Intellect) | `69b9f887` | the producer must already discriminate what it produces (the bootstrapping problem), or its own favouring is non-contrastive and (e) in the favouring form is denied. The same for both |
 | Nowhere | no coherent occupant | an undifferentiated source | realization `633d5c29` or irreflexivity `3ca01752` | a favouring that discriminates candidates its realization does not discriminate, or a favouring of each over itself. The same for both |
 | In the source, intentional | divine ideas | — | none | the exemplar-containment problem under simplicity (#1879): many ideas through one essence |
-| In the source, virtual | — | aligned powers (A3); imitability exemplars (A4) | `d1fb6414` | A3: a necessary alignment of two whole orders (also paid by any account, personal included, whose value-ranking of candidates is neither received nor grounded in the source). A4: the full exemplar structure with the modes not understood; the #1892 objective-eminence gap |
+| In the source, virtual | — | aligned powers (A3); imitability exemplars (A4) | `d1fb6414` | A3: an unexplained coincidence of its intrinsic order with the value order on the witnessing pair or pairs, which extends to the whole candidate space only under an unregistered whole-order agreement premise. The same price, at the same scope, is paid by any account, personal included, whose value-ranking of candidates is neither received nor grounded in the source. A4: the full exemplar structure with the modes not understood; the #1892 objective-eminence gap |
 
 *The individuation price is shared.* Both accounts locate the candidates in
 the source. Both owe an account of many candidate-individuating modes in one
@@ -6106,7 +6123,7 @@ and whether one judgment's complex content needs real articulation is again
 #1879.
 
 *Alignment is shared too.* Apprehension alone does not explain why favouring
-coincides with value. Correct ideas of an unreceiving source about value-facts
+coincides with value, at whatever scope the coincidence is witnessed. Correct ideas of an unreceiving source about value-facts
 that are independent of it are the same coincidence as A3. Both accounts avoid
 alignment only by grounding the value order in the source's own nature. Once
 they do, the personal account (ideas) and A4 (imitability modes) have the same
@@ -6142,8 +6159,9 @@ structure. Apprehension is the only difference left.
 consideration: one primitive orientation, where the D-nature has a particular
 content plus an unexplained alignment. For the noncognitive good-general
 account this holds in its A1 and A4 forms only. In the A3 form it has an
-intrinsic order plus an alignment, like the D-nature, extended over every
-candidate.
+intrinsic order plus a coincidence with value on the witnessed pairs. That is
+like the D-nature's price, and it extends over every candidate only under an
+unregistered whole-order agreement premise.
 
 **Strongest standing rival and its price.** Noncognitive imitability
 exemplarism (A4) is now the strongest rival on this premise. It denies only
@@ -6152,7 +6170,8 @@ a plurality of value-ranked modes in the one nature that guides favouring and
 is neither real composition, nor real relations to non-existents (the
 independent locus, denied by `65805e5a`), nor mind-dependent. This is the #1892 objective-eminence status, and on it the two
 sides stand at parity. Within this program no further substantive objection
-to A4 has been identified. The A3 form carries an identified alignment price.
+to A4 has been identified. The A3 form carries an identified coincidence price
+on the witnessed pairs.
 The A1 form carries the inclusive-scope price, conditional on that unregistered
 reading.
 
@@ -6162,7 +6181,8 @@ premise that is strictly stronger than it given the rest. What changed is
 where each rival must deny a premise:
 
 - A1 at `65805e5a`, with a price conditional on an unregistered reading;
-- A3 and A4 at `d1fb6414`, with A3 additionally paying an alignment price;
+- A3 and A4 at `d1fb6414`, with A3 additionally paying a coincidence price on
+  the witnessed pairs;
 - the nowhere horn is excluded under two premises.
 
 Formal establishment is unchanged and no premise is discharged. No
@@ -6259,7 +6279,21 @@ It also found three P2s:
 - the virtual-containment definition was worded too narrowly;
 - the intentional-containment definition presented an intended reading as fact.
 
-All four are fixed in the following commit.
+All four are fixed in the following commit, `424f15c78`.
+
+After publication as #2175, Codex review at `b508b3721` raised two P1s.
+
+1. The A3 price as a whole-order alignment was stronger than `GoodGeneral`
+   witnesses, which is one pair at one scenario. It is now restricted to the
+   witnessed pairs, and Lean-only `witnessOnlyAlignment` gives a model of
+   agreement on the witness with disagreement elsewhere.
+2. The containment senses did not occur in the bound types. The premise types
+   now use `ContainsGenerically` and `ContainsIntentionally`. The argument
+   records CONTAINED_IN_1, with `d1fb6414` as its sense bridge. Sense 1's
+   parameters are tagged. These changes alter the bound types of `65805e5a`,
+   `69b9f887` and `d1fb6414`, and the Challenge was regenerated.
+
+
 
 [Attempt record](../../corpus/attempts/421caba9-f0d9-44f6-b9d9-ae81b0e374bb.json)
 
