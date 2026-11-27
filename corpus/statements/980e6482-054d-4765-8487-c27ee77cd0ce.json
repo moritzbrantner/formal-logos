@@ -1,0 +1,10 @@
+{
+  "id": "980e6482-054d-4765-8487-c27ee77cd0ce",
+  "label": "Every actual root has an own favouring determination",
+  "paraphrase": "OPEN, analyst formulation, attribution deferred: every actual concrete root r at w has, for some favouring profile phi, the real determination that its own favouring is phi. It is the weakest form of commitment (e) of #2145 (the foundation originates objective finality) that the cross-family argument uses: ORIGINAL_FINALITY_1 at a root (the origin's own favouring prefers the better and depends on end-realization) includes it, but the finality conditions themselves are not part of this statement.",
+  "lean_declaration": "TruthCore.Causality.ImpersonalFoundationJoint.ActualRootsHaveOwnFavouring",
+  "definition_ids": [
+    "3aba5f19-f48d-50db-bc57-93ba2e99f845",
+    "abd8cfa4-1887-47d5-86cc-e0f6092e4ded"
+  ]
+}

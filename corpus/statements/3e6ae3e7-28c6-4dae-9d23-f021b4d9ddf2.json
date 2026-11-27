@@ -1,0 +1,15 @@
+{
+  "id": "3e6ae3e7-28c6-4dae-9d23-f021b4d9ddf2",
+  "label": "One admissible profile has one favouring, good-general if it has good-generality",
+  "paraphrase": "OPEN analyst bridge, attribution deferred: every admissible intrinsic profile q (a set of real determinations a simple, unreceived, necessary source could jointly have) is realized by one favouring profile psi: every favouring determination in q is the determination that the bearer's favouring is psi, and if q contains the good-generality determination, psi is good-general (for some scenario and candidates, at least one not a present input, it depends on betterness with end-realization held fixed, BECAUSE_OF_GOODNESS_2). The 'one' is where simplicity enters: a composite source could have a fixed natural inclination and a good-general appetite as two powers, and then two favourings would be jointly admissible. It is a reading of the favouring tokens and of admissibility, not a theorem about them.",
+  "lean_declaration": "TruthCore.Causality.ImpersonalFoundationJoint.OneFavouringRealization",
+  "definition_ids": [
+    "3f8e5e3c-e85a-4388-af9c-4da1c8a02069",
+    "abd8cfa4-1887-47d5-86cc-e0f6092e4ded",
+    "847ddbe3-1701-455e-acd1-7d989a84c971",
+    "071b24f0-ef72-4012-8c7d-ab3be3335961"
+  ],
+  "disambiguation_ids": [
+    "8430c7dc-2972-4f47-87a9-ce4676533cdf"
+  ]
+}

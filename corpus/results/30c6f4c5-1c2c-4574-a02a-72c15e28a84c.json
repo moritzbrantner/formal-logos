@@ -1,0 +1,11 @@
+{
+  "id": "30c6f4c5-1c2c-4574-a02a-72c15e28a84c",
+  "label": "Actual roots apprehend through good-general favouring, from finality and the criterion",
+  "argument_id": "cc00d109-daf9-4d8b-acd5-6391d14934f6",
+  "challenge_module": "TruthCore.Results.Causality.ImpersonalFoundationJoint.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ImpersonalFoundationJoint.Solution",
+  "theorem": "TruthCore.Results.Causality.ImpersonalFoundationJoint.actualRootsApprehendThroughGoodGeneralFavouring",
+  "comparator_config": "results/30c6f4c5-1c2c-4574-a02a-72c15e28a84c/comparator.json",
+  "status": "solution-present",
+  "description": "Fix an actual root r at w. Commitment (e) in its weakest form gives r a favouring determination favours phi. The previous step makes phi good-general, and the cognition criterion gives r an apprehended content about some candidate. The main theorem uses no axioms. Comparator companions (Mathlib axioms): apprehensionControls gives a positive witness and, for each premise, a row where it fails, the others hold and the conclusion fails; its last row is the standing good-general impersonal rival (good-tracking favouring, no apprehension, the criterion failing). criterionTable shows the criterion's two marks each exclude one noncognitive directed relation: the D-nature, determined will, proxy and chance are not good-general, nor is a balance tracking betterness among present inputs; the good-general nature and rational exercise (the same function) are, witnessed without the counterpossible valueless scenario; and if betterness is the end-realization ordering itself, nothing is. jointConfigurations assembles on one carrier the necessary simple root (the #1892 FirstSourceFrame) with the D-directed, the good-general impersonal and the personal favouring, each with its finality sense and apprehension assignment, and the section 61 replacement omission profile on another carrier. These are structural surrogates, not metaphysical possibilities."
+}

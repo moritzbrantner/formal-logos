@@ -1,0 +1,10 @@
+{
+  "id": "e2357adc-6946-47a0-b39b-8efe1805d214",
+  "label": "Favouring the better as such is a pure perfection",
+  "paraphrase": "OPEN, analyst formulation, attribution deferred: the good-generality determination (favouring the better as such, not one fixed end content) is a pure perfection: an actuality involving no potency, limitation or reception (DEF-PURE-PERFECTION). It uses the same purity parameter as the #2153 premises, so no sense passage is involved. The Lean type is only Pure goodGen for one token; its content enters through the one-favouring realization bridge.",
+  "lean_declaration": "TruthCore.Causality.ImpersonalFoundationJoint.GoodGeneralityIsPure",
+  "definition_ids": [
+    "65e38ffa-5a1c-55d0-935c-6538d843b780",
+    "847ddbe3-1701-455e-acd1-7d989a84c971"
+  ]
+}

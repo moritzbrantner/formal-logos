@@ -1,0 +1,8 @@
+{
+  "id": "abd8cfa4-1887-47d5-86cc-e0f6092e4ded",
+  "label": "Favouring determination: the real determination that the bearer's own favouring is the profile φ",
+  "term": "favouring determination (favours φ)",
+  "basis": "stipulative",
+  "definition": "favours φ is the real determination (DEF-REAL-DETERMINATION) of a bearer whose own favouring, in every variation scenario, is the profile φ: which candidate it counts in favour of over which. There is one token per profile. It is the bearer's own inclination, not a favouring supplied by another determiner and not a description of what the bearer happens to produce.",
+  "note": "Stipulative analyst notion (#2145 Investigation 4), attribution deferred. Lean has no declaration for it: it is the parameter favours : Profile S X → D. Its content enters only through the open bridge OneFavouringRealization. That an original source's favouring is its own (condition E3 of ORIGINAL_FINALITY_1) is what makes commitment (e) supply such a determination."
+}
