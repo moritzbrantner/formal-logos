@@ -210,6 +210,7 @@ public import TruthCore.Results.Causality.GivingChoiceNecessary.Solution
 public import TruthCore.Results.Causality.GivingPlanExceptions.Solution
 public import TruthCore.Results.Causality.GodMaximalCausal.Solution
 public import TruthCore.Results.Causality.GodNamingSenses.Solution
+public import TruthCore.Results.Causality.GoodFavouring.Solution
 public import TruthCore.Results.Causality.GradedSupportFoundation.Solution
 public import TruthCore.Results.Causality.GradesAtBeingRoutes.Solution
 public import TruthCore.Results.Causality.GreatestDegreeRootRoute.Solution

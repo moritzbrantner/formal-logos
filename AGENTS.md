@@ -482,6 +482,18 @@ Seek nonvacuity witnesses and omission countermodels where practical and informa
 
 See `docs/decisions/2026-11-07-02-connect-libraries-to-the-case.md`.
 
+**Placement is plumbing, not warrant** (owner decision 2026-11-27, `docs/decisions/2026-11-27-02-curation-ends-mechanical-review-strict-main.md`). A result is "reaching the root" or placed when it is connected, not when it is supported. Progress reports keep four standings apart. Each reaching result's `truth orphans` provenance key maps to one of them:
+
+1. **established**: the frontier's established statements (no provenance key).
+2. **conditionally supported by a substantive derivation**: `substantive`. `refutation_support` belongs here too, but only as support for that refutation of a recorded rival, not for a root route.
+3. **connected only**:
+   - `transcription_closed` carries rule (d) closure to the root but no independent warrant;
+   - `transcription_self` contributes at most rule (d) closure;
+   - `transcription_open`, `loop_back`, `registration_bare` and `unverified_route` carry no support to the root.
+4. **planned**: the placement state `planned` (no provenance key).
+
+Counts are never progress (owner direction, 2026-11-24).
+
 ## Proof-seeking stance
 
 - Seek machine-checkable consequence, not prose approval. An LLM may propose readings, propositions, formalizations, or proof steps, but its agreement is never evidence that a conclusion follows.

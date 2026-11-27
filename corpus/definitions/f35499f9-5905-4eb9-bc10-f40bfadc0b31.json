@@ -1,0 +1,9 @@
+{
+  "id": "f35499f9-5905-4eb9-bc10-f40bfadc0b31",
+  "label": "ORIGINAL_FINALITY_1: beneficial, the origin's own favouring, dependent on realizing D",
+  "term": "original finality (end-dependent reading)",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.GoodFavouring.OriginalFinality",
+  "definition": "OriginalFinality good fit φ s x y: at scenario s the standard ranks x over y (E1, the favoured arrangement is the better one), the origin's profile favours x over y (E2), and that favouring depends on the realization of the end D (F, BecauseOfContent fit φ s x y). E3, that no further determining principle supplies the profile, is not typed: it is the interpretation of φ as the origin's own.",
+  "note": "Analyst reading ORIGINAL_FINALITY_1 of the owner's question whether original objective finality requires production because of goodness. Under it the answer is no: the D-directed profile meets it and fails BECAUSE_OF_GOODNESS_2 (good-favouring table row 9). That it requires BECAUSE_OF_GOODNESS_1 holds by its definition. See docs/notes/optimal-creation-choice.md §§65–69."
+}

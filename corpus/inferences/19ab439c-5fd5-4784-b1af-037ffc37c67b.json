@@ -1,0 +1,10 @@
+{
+  "id": "19ab439c-5fd5-4784-b1af-037ffc37c67b",
+  "label": "Content-fixed favouring laws, from the definitions (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "03d50aae-cf49-48ae-9944-56da63ef0ac2",
+  "rule": "Pick a history with another outcome; selection at both histories with one asymmetric content is contradictory",
+  "meaning": "Law 1: the actual history h and a history k with another outcome are both in the realized range; selection at h gives favouring of out h over out k, at k favouring of out k over out h, by the same content, contradicting asymmetry. Law 2 checks the re-description directly; a contingent outcome makes its content differ between two histories. Law 3: one cell relates every two histories. Law 4: selection would favour the actual outcome over the tied rival, which good-boundedness turns into a G-ranking. Law 5: the bettering outcome is distinct by asymmetry, and selection over it gives the reverse G-ranking.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}
