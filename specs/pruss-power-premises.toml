@@ -249,7 +249,7 @@ subject_id = "8ad1804e-06d1-4491-ba96-d3382245f2ad"
 predicate = "tests"
 object_kind = "statement"
 object_id = "5cf75a6b-c3be-4ed5-acdf-c163383dd7f2"
-note = "Omit the exercise-difference premise. In inertG at false, g is a concrete, necessarily present holder of the actual-roster absence power. The giving relation is empty at both worlds, so the necessary varying-giver conclusion fails despite the other premises."
+note = "Omit the exercise-difference premise. In inertG at false, g is a concrete, necessarily present holder of the actual-roster absence power. The giving relation is empty at both worlds, so the necessary varying-giver conclusion fails. The remaining nonlogical premises hold."
 
 [[relation]]
 id = "76c5db7c-db59-44c3-8d30-3f66fce60d5b"
@@ -360,3 +360,13 @@ predicate = "tests"
 object_kind = "argument"
 object_id = "11afcb55-dea9-4d5b-a992-34de8852394e"
 note = "In theistG at false, g gives c being and withholds it at true. The actual-absence withholding predicate and the bridge to g's esse power over c hold jointly."
+
+[[relation]]
+id = "6cdbbf4a-3dba-47fb-a314-c21a2af8e5b4"
+label = "Test by PrussPowerPremises.twoMemberCollective (95bf8780)"
+subject_kind = "result"
+subject_id = "9bba1325-f031-450d-b506-f91ca9f0bc46"
+predicate = "tests"
+object_kind = "statement"
+object_id = "95bf8780-0e3c-49ba-b636-2274e2997a30"
+note = "At the selected world (true, true), c and d are both present and contingent. Joint absence fails there and holds at the accessible world (false, false), so both antecedents of ActualAbsenceGrounded hold. The present g has the stipulated propositional PowerFor their joint absence. Individual absence grounding fails."
