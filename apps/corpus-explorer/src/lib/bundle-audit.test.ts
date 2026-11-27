@@ -10,7 +10,8 @@ test("bounded audit exposes exact coverage and keeps unrelated results outside s
   expect(audit?.records.find((r) => r.id === legacyUuid("statement", "STMT-CAUSE-OF-QUALITY-IN-ANOTHER-IS-MORE-SUCH"))?.status).toBe("unresolved");
   expect(audit?.limits.join(" ")).toContain("#720");
   const complete = getBundleAudit(legacyUuid("result", "CATHOLICISM-STAGE2-CLASSICAL-ATTRIBUTES-ALL"));
-  expect(complete?.records.length).toBe(153);
+  expect(complete?.records.length).toBe(154);
+  expect(complete?.records.some((r) => r.kind === "definitions" && r.path === "corpus/definitions/represented-esse-map.json")).toBe(true);
   expect(complete?.records.some((r) => r.kind === "definitions" && r.id === legacyUuid("definition", "DEF-INDEPENDENT-POTENCY"))).toBe(true);
   expect(complete?.records.some((r) => r.kind === "disambiguations" && r.id === legacyUuid("disambiguation", "DISAMB-POTENCY"))).toBe(true);
   expect(getBundleAudit(legacyUuid("result", "CATHOLICISM-STAGES-ONE-TWO-Q11-NATURE"))).toBe(complete);
