@@ -10,7 +10,7 @@
   ],
   "kind": "derivation",
   "outcome": "blocked",
-  "summary": "See docs/notes/contingency-receptivity-c2.md#can-the-whole-unreceived-act-be-absent. Identity excludes retaining the bearer while removing its identical act. Joint omission requires no dormant constituent, but needs an independent warrant of admissibility. A route to the same individual's necessity would exclude both no unreceived actuality and replacement by another unreceived act. Population and transworld individuation can be assessed independently. Neither local uniqueness nor an existentially necessary power-holder meets both obligations. Under the strict no-ground stipulation, an affirmative answer requires primitive permission. The reviewed prior parity assessment d067722e is retained. No new theorem or premise effect. Independent challenge at note blob 077ad0d2 and targeted recheck at c7a0b075 addressed indispensable giving, coverage of replacement acts and the strict no-ground condition. Final note blob b4611e17abc18008463712b6f3eb0b85cbcc8266 applies the reviewer’s exact recombination scope.",
+  "summary": "See docs/notes/contingency-receptivity-c2.md#can-the-whole-unreceived-act-be-absent. Identity excludes retaining the bearer while removing its identical act. Joint omission requires no dormant constituent, but needs an independent warrant of admissibility. A route to the same individual's necessity would exclude both no unreceived actuality and replacement by another unreceived act. Population and transworld individuation can be assessed independently. Neither local uniqueness nor an existentially necessary power-holder meets both obligations. Under the strict no-ground stipulation, an affirmative answer requires primitive permission. The reviewed prior parity assessment d067722e is retained. No new theorem or premise effect. Independent challenge at note blob 077ad0d2 and targeted recheck at c7a0b075 addressed indispensable giving, coverage of replacement acts and the strict no-ground condition. Final note blob b4611e17abc18008463712b6f3eb0b85cbcc8266 applies the reviewer’s exact recombination scope.\n\nCuration pass 2, lane D batch 3 (#2103, 2026-11-27). 514112f2 remains unplaced. At reading world false, the universal Bool frame has exactly one existing concrete individual at each world. Each of the two rigid roster members is absent at the other world, but neither world has an empty extension. The instantiated Third Way collective-possibility premise cd6ddd56 fails, and its registration is off path. The root-path actual-contingent-roster amalgamation condition concerns the singleton roster at false and holds in this presence pattern.",
   "blocker": "A proof of necessity needs independent existential import at an act-essence or grounds for occupation and individual identity across every accessible order. A proof of possible absence needs warranted admissibility of joint omission at this very being. Conditional identity and the population and individuation controls separate inferences only.",
   "evidence": [
     "PR-1884",
@@ -23,5 +23,15 @@
     "841e7c81-2137-511c-ba18-29620f7a1b16",
     "037bfce4-c040-4b73-9db0-dd284c848f3c",
     "PR-1903"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-27",
+      "pr": "PR-2139"
+    }
   ]
 }
