@@ -1,0 +1,16 @@
+{
+  "id": "04c75ec4-ff41-48b4-9012-c0857d7ad3a6",
+  "label": "The mode-of-being pair is equivalent to: a total cause of being causes every actual perfection",
+  "paraphrase": "Analyst formulation, attribution deferred. Over the shared frame and for any total-cause relation: there is a reading ModeOfBeing on which every perfection a thing has in act is a mode of its being (791fa216) and a total cause of a thing's being causes each of its modes of being (2f6b9eff), exactly when a total cause of a thing's being causes each perfection that thing has in act. Since 791fa216's ModeOfBeing is a primitive that, in every registered consumer, occurs only in 791fa216 and one other premise, the pair says no more than the composite; its warrant is whatever fixes the meaning of 'mode of being'. It asserts neither premise.",
+  "lean_declaration": "TruthCore.Causality.ModeOfBeingMiddleTerm.ModesPairIffTotalTransfer",
+  "definition_ids": [
+    "42f8b601-09d6-5ad0-af5f-27af30b95166",
+    "09542185-eb41-5874-8fd3-fe40ea68aeb4",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "5cbd5a0a-9055-4b69-af39-bd0bff1279fd"
+  ],
+  "disambiguation_ids": [
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "dba7b1de-f3a0-57af-9af9-b2a4da3136fa"
+  ]
+}

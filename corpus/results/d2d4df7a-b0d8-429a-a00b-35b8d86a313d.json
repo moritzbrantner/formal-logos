@@ -1,0 +1,11 @@
+{
+  "id": "d2d4df7a-b0d8-429a-a00b-35b8d86a313d",
+  "label": "Thin and act readings of perfection of being on one subsistent source: controls, checked",
+  "argument_id": "0a723259-d2e3-4daf-b9d6-72fbcf677411",
+  "challenge_module": "TruthCore.Results.Causality.ModeOfBeingMiddleTerm.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ModeOfBeingMiddleTerm.Solution",
+  "theorem": "TruthCore.Results.Causality.ModeOfBeingMiddleTerm.controls",
+  "comparator_config": "results/d2d4df7a-b0d8-429a-a00b-35b8d86a313d/comparator.json",
+  "status": "solution-present",
+  "description": "Two profiles of one subsistent source differing only in the reading of 'perfection of being' and what the source has: on the thin one whole-power possession holds and purity-as-perfection-of-being fails at the stand-in for life; on the act one both hold. A structural surrogate."
+}

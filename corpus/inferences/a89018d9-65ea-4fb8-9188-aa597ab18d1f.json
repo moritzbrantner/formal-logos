@@ -1,0 +1,10 @@
+{
+  "id": "a89018d9-65ea-4fb8-9188-aa597ab18d1f",
+  "label": "The mode-of-being premise pair is equivalent to its composite, checked (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "04c75ec4-ff41-48b4-9012-c0857d7ad3a6",
+  "rule": "Compose the pair; conversely read mode of being as had in act",
+  "meaning": "Forward: from a mode of being of an actual perfection and the total-cause premise, the total cause causes the perfection. Backward: take 'mode of being' to be 'had in act'; the mode premise is then trivial and the total-cause premise is the composite. Premise-free: it is the equivalence itself, a certificate that the decomposition shifts the load rather than lightening it.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

@@ -1,0 +1,10 @@
+{
+  "id": "e97ee696-c88d-4f21-bd06-8abf27e1e5b3",
+  "label": "The subsistent-esse premise pair is equivalent to its composite, checked (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "8c07547d-832e-4d78-85e8-f33e0149131d",
+  "rule": "Compose the pair; conversely read perfection of being as pure perfection",
+  "meaning": "Forward: from whole-power possession and purity-as-perfection-of-being, what is its own being has each pure perfection. Backward: take 'perfection of being' to be 'pure perfection'; the purity premise is then trivial and whole-power possession is the composite. Premise-free: the equivalence itself.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

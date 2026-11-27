@@ -1,0 +1,11 @@
+{
+  "id": "1cf43a42-2c4e-41c2-9129-9aff47208686",
+  "label": "The subsistent-esse premise pair is equivalent to its composite, checked",
+  "argument_id": "c8a7e868-70f1-4e36-8a2f-2ee52e91924a",
+  "challenge_module": "TruthCore.Results.Causality.ModeOfBeingMiddleTerm.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ModeOfBeingMiddleTerm.Solution",
+  "theorem": "TruthCore.Results.Causality.ModeOfBeingMiddleTerm.ownBeingPairIffEveryPure",
+  "comparator_config": "results/1cf43a42-2c4e-41c2-9129-9aff47208686/comparator.json",
+  "status": "solution-present",
+  "description": "Forward: from whole-power possession and purity-as-perfection-of-being, what is its own being has each pure perfection. Backward: take 'perfection of being' to be 'pure perfection'; the purity premise is then trivial and whole-power possession is the composite. Premise-free: the equivalence itself."
+}

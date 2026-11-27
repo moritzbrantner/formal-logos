@@ -1,0 +1,147 @@
+# Warrant phase, checkpoint 3 (2026-11-27, #2103, #143): the ST I q.4 a.2 co. sentence
+# "omnium autem perfectiones pertinent ad perfectionem essendi" (5c5281dd), on which two
+# loci rest: universal transfer b26c10a0 through its reading 791fa216 with 2f6b9eff, and
+# the subsistent-esse route through c4fb87a6 with d164b1ff (second proof and ad 3). Each
+# pair meets only at a primitive middle term (ModeOfBeing, OfBeing). This batch certifies
+# what each pair says, shows how the sentence's own ground moves the load, and records a
+# thin and an act reading of "perfection of being" on one subsistent source. Assessment:
+# docs/notes/mode-of-being-subsistent-esse.md. Analyst formulations, attribution deferred.
+# Nothing is established.
+
+[batch]
+vocab = "TruthCore.Causality.ModeOfBeingMiddleTerm"
+results = "TruthCore.Results.Causality.ModeOfBeingMiddleTerm"
+definitions = []
+disambiguations = []
+
+[[statement]]
+id = "The mode-of-being pair is equivalent to: a total cause of being causes every actual perfection"
+label = "The mode-of-being pair is equivalent to: a total cause of being causes every actual perfection"
+lean = "ModesPairIffTotalTransfer"
+paraphrase = "Analyst formulation, attribution deferred. Over the shared frame and for any total-cause relation: there is a reading ModeOfBeing on which every perfection a thing has in act is a mode of its being (791fa216) and a total cause of a thing's being causes each of its modes of being (2f6b9eff), exactly when a total cause of a thing's being causes each perfection that thing has in act. Since 791fa216's ModeOfBeing is a primitive that, in every registered consumer, occurs only in 791fa216 and one other premise, the pair says no more than the composite; its warrant is whatever fixes the meaning of 'mode of being'. It asserts neither premise."
+definitions = ["42f8b601-09d6-5ad0-af5f-27af30b95166", "09542185-eb41-5874-8fd3-fe40ea68aeb4", "211a6432-8b8f-53ed-85e3-75173bb15b24", "5cbd5a0a-9055-4b69-af39-bd0bff1279fd"]
+disambiguations = ["00e0d443-eb39-56a3-9179-9c8852ca4a2b", "dba7b1de-f3a0-57af-9af9-b2a4da3136fa"]
+
+[[statement]]
+id = "On the dependence reading of mode of being, the transfer load moves to the total-cause premise"
+label = "On the dependence reading of mode of being, the transfer load moves to the total-cause premise"
+lean = "DependenceReadingShiftsLoad"
+paraphrase = "Analyst formulation, attribution deferred. Read 'r is a mode of x's being' as 'x has r in act and has being', the reading supplied by the sentence's own ground ('secundum hoc enim aliqua perfecta sunt, quod aliquo modo esse habent'). Given that nothing has actuality except insofar as it is (7067553d, q.4 a.1 ad 3), every perfection had in act is a mode of being in this sense (791fa216 at this reading), and the total-cause premise 2f6b9eff at this reading is equivalent to: a total cause of a thing's being causes each perfection it has in act. So on this reading 791fa216 is near-analytic and the whole load of universal transfer sits on 2f6b9eff (with 5e281daf). It asserts none of the premises."
+definitions = ["42f8b601-09d6-5ad0-af5f-27af30b95166", "09542185-eb41-5874-8fd3-fe40ea68aeb4", "211a6432-8b8f-53ed-85e3-75173bb15b24", "5cbd5a0a-9055-4b69-af39-bd0bff1279fd", "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"]
+disambiguations = ["00e0d443-eb39-56a3-9179-9c8852ca4a2b", "dba7b1de-f3a0-57af-9af9-b2a4da3136fa"]
+
+[[statement]]
+id = "The subsistent-esse pair is equivalent to: what is its own being has every pure perfection"
+label = "The subsistent-esse pair is equivalent to: what is its own being has every pure perfection"
+lean = "OwnBeingPairIffEveryPure"
+paraphrase = "Analyst formulation, attribution deferred. For any own-being predicate, real-determination relation and purity predicate: there is a reading OfBeing on which what is its own being has every perfection of being (d164b1ff) and every pure perfection is a perfection of being (c4fb87a6), exactly when what is its own being has every pure perfection. OfBeing is a primitive that, in every registered consumer (7d8bbdcb, 95c04a6d, ff74a7ac), occurs only in these two premises, so the pair says no more than the composite; which of the two carries the load depends on how 'perfection of being' is fixed. It asserts neither premise."
+definitions = ["5dc08b95-ca15-52ab-b8cd-2b558e9a13f7", "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72", "5f851204-5991-5e16-87f1-e8b3ed729708", "3aba5f19-f48d-50db-bc57-93ba2e99f845", "65e38ffa-5a1c-55d0-935c-6538d843b780"]
+disambiguations = ["b1640e51-d7d4-5a80-9992-29fa1ded8048", "dc9c0a1b-1759-5b1c-9ab9-ee7bea8847b7", "1aef8986-ed29-564f-9803-d812d2ff63e1", "1795a62e-f78b-5f5b-94e7-9e7490824811"]
+
+[[statement]]
+id = "Thin and act readings of perfection of being on one subsistent source: controls"
+label = "Thin and act readings of perfection of being on one subsistent source: controls"
+lean = "Control.Controls"
+paraphrase = "Closed finite profiles; statements about them only. A source that is its own being and a living effect; two stipulated pure determinations, one standing for being and one, a Boolean stand-in for life (not any recorded sense of LIVING). Thin profile: only being is a perfection of being and the source has only being; d164b1ff holds, c4fb87a6 fails at the stand-in for life, and the source lacks it. Act profile: every pure determination is a perfection of being and the source has every determination; both premises and their composite hold. It witnesses where a thin reading of 'perfection of being' leaves the pair: it can keep d164b1ff and must give up c4fb87a6. It is not evidence for either reading."
+definitions = ["5dc08b95-ca15-52ab-b8cd-2b558e9a13f7", "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72", "5f851204-5991-5e16-87f1-e8b3ed729708", "3aba5f19-f48d-50db-bc57-93ba2e99f845", "65e38ffa-5a1c-55d0-935c-6538d843b780"]
+disambiguations = ["b1640e51-d7d4-5a80-9992-29fa1ded8048", "dc9c0a1b-1759-5b1c-9ab9-ee7bea8847b7", "1aef8986-ed29-564f-9803-d812d2ff63e1", "1795a62e-f78b-5f5b-94e7-9e7490824811"]
+
+[[argument]]
+id = "The mode-of-being premise pair is equivalent to its composite, checked"
+label = "The mode-of-being premise pair is equivalent to its composite, checked"
+theorem = "modesPairIffTotalTransfer"
+premises = []
+conclusion = "The mode-of-being pair is equivalent to: a total cause of being causes every actual perfection"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Compose the pair; conversely read mode of being as had in act"
+meaning = "Forward: from a mode of being of an actual perfection and the total-cause premise, the total cause causes the perfection. Backward: take 'mode of being' to be 'had in act'; the mode premise is then trivial and the total-cause premise is the composite. Premise-free: it is the equivalence itself, a certificate that the decomposition shifts the load rather than lightening it."
+
+[[argument]]
+id = "The dependence reading moves the transfer load to the total-cause premise, checked"
+label = "The dependence reading moves the transfer load to the total-cause premise, checked"
+theorem = "dependenceReading"
+premises = []
+conclusion = "On the dependence reading of mode of being, the transfer load moves to the total-cause premise"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Unfold the dependence reading; use actuality only insofar as being"
+meaning = "Assume nothing has actuality except insofar as it is. Every perfection had in act is then had together with being, so it is a mode of being in the dependence sense, and the total-cause premise at that reading demands causation of every perfection had in act. Premise-free: the implication itself."
+
+[[argument]]
+id = "The subsistent-esse premise pair is equivalent to its composite, checked"
+label = "The subsistent-esse premise pair is equivalent to its composite, checked"
+theorem = "ownBeingPairIffEveryPure"
+premises = []
+conclusion = "The subsistent-esse pair is equivalent to: what is its own being has every pure perfection"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Compose the pair; conversely read perfection of being as pure perfection"
+meaning = "Forward: from whole-power possession and purity-as-perfection-of-being, what is its own being has each pure perfection. Backward: take 'perfection of being' to be 'pure perfection'; the purity premise is then trivial and whole-power possession is the composite. Premise-free: the equivalence itself."
+
+[[argument]]
+id = "Thin and act readings of perfection of being on one subsistent source: controls, checked"
+label = "Thin and act readings of perfection of being on one subsistent source: controls, checked"
+theorem = "controls"
+premises = []
+conclusion = "Thin and act readings of perfection of being on one subsistent source: controls"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Explicit finite profiles over Bool, checked by decision"
+meaning = "Two profiles of one subsistent source differing only in the reading of 'perfection of being' and what the source has: on the thin one whole-power possession holds and purity-as-perfection-of-being fails at the stand-in for life; on the act one both hold. A structural surrogate."
+
+[[relation]]
+id = "Test by the mode pair certificate of the mode premise"
+label = "Test by the mode pair certificate of the mode premise"
+subject_kind = "argument"
+subject_id = "The mode-of-being premise pair is equivalent to its composite, checked"
+predicate = "tests"
+object_kind = "statement"
+object_id = "791fa216-ce40-5e7d-82c5-0bd5fe245446"
+note = "Shows that 791fa216 with 2f6b9eff says exactly 'a total cause of being causes every actual perfection' when ModeOfBeing is otherwise unconstrained, as in afb8cba3."
+
+[[relation]]
+id = "Test by the mode pair certificate of the total-cause premise"
+label = "Test by the mode pair certificate of the total-cause premise"
+subject_kind = "argument"
+subject_id = "The mode-of-being premise pair is equivalent to its composite, checked"
+predicate = "tests"
+object_kind = "statement"
+object_id = "2f6b9eff-84a1-5310-9abb-19985f3282c3"
+note = "Shows that 2f6b9eff with 791fa216 says exactly the composite; with ModeOfBeing read as 'had in act' 2f6b9eff is the composite itself."
+
+[[relation]]
+id = "Test by the dependence reading of the mode premise"
+label = "Test by the dependence reading of the mode premise"
+subject_kind = "argument"
+subject_id = "The dependence reading moves the transfer load to the total-cause premise, checked"
+predicate = "tests"
+object_kind = "statement"
+object_id = "791fa216-ce40-5e7d-82c5-0bd5fe245446"
+note = "On the dependence reading given by the sentence's own ground, 791fa216 follows from 7067553d, so it carries no load there; the load is in 2f6b9eff."
+
+[[relation]]
+id = "Test by the subsistent-esse pair certificate of whole-power possession"
+label = "Test by the subsistent-esse pair certificate of whole-power possession"
+subject_kind = "argument"
+subject_id = "The subsistent-esse premise pair is equivalent to its composite, checked"
+predicate = "tests"
+object_kind = "statement"
+object_id = "d164b1ff-ad31-5fbc-8ef9-eb0db51ebd96"
+note = "Shows that d164b1ff with c4fb87a6 says exactly 'what is its own being has every pure perfection' when OfBeing is otherwise unconstrained, as in 7d8bbdcb, 95c04a6d and ff74a7ac."
+
+[[relation]]
+id = "Test by the subsistent-esse pair certificate of purity as perfection of being"
+label = "Test by the subsistent-esse pair certificate of purity as perfection of being"
+subject_kind = "argument"
+subject_id = "The subsistent-esse premise pair is equivalent to its composite, checked"
+predicate = "tests"
+object_kind = "statement"
+object_id = "c4fb87a6-047d-5f3d-b3e3-8dc0c4bbc946"
+note = "Shows that c4fb87a6 with d164b1ff says exactly the composite; with OfBeing read as 'pure', c4fb87a6 is trivial and d164b1ff is the composite."
+
+[[relation]]
+id = "Test by the thin and act controls of purity as perfection of being"
+label = "Test by the thin and act controls of purity as perfection of being"
+subject_kind = "argument"
+subject_id = "Thin and act readings of perfection of being on one subsistent source: controls, checked"
+predicate = "tests"
+object_kind = "statement"
+object_id = "c4fb87a6-047d-5f3d-b3e3-8dc0c4bbc946"
+note = "On the thin profile c4fb87a6 is the premise that fails (at the stand-in for life) while d164b1ff holds; on the act profile both hold."

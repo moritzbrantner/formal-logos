@@ -1,0 +1,19 @@
+{
+  "id": "859b50dd-d198-4534-9706-da5a26417825",
+  "label": "Thin and act readings of perfection of being on one subsistent source: controls",
+  "paraphrase": "Closed finite profiles; statements about them only. A source that is its own being and a living effect; two stipulated pure determinations, one standing for being and one, a Boolean stand-in for life (not any recorded sense of LIVING). Thin profile: only being is a perfection of being and the source has only being; d164b1ff holds, c4fb87a6 fails at the stand-in for life, and the source lacks it. Act profile: every pure determination is a perfection of being and the source has every determination; both premises and their composite hold. It witnesses where a thin reading of 'perfection of being' leaves the pair: it can keep d164b1ff and must give up c4fb87a6. It is not evidence for either reading.",
+  "lean_declaration": "TruthCore.Causality.ModeOfBeingMiddleTerm.Control.Controls",
+  "definition_ids": [
+    "5dc08b95-ca15-52ab-b8cd-2b558e9a13f7",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "5f851204-5991-5e16-87f1-e8b3ed729708",
+    "3aba5f19-f48d-50db-bc57-93ba2e99f845",
+    "65e38ffa-5a1c-55d0-935c-6538d843b780"
+  ],
+  "disambiguation_ids": [
+    "b1640e51-d7d4-5a80-9992-29fa1ded8048",
+    "dc9c0a1b-1759-5b1c-9ab9-ee7bea8847b7",
+    "1aef8986-ed29-564f-9803-d812d2ff63e1",
+    "1795a62e-f78b-5f5b-94e7-9e7490824811"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "1c66ee49-5521-48d5-9001-700c5b14ddbd",
+  "label": "Thomas Aquinas, Summa theologiae I q.4 a.2 ad 3: no perfection of being is lacking to subsistent being",
+  "statement_id": "d164b1ff-ad31-5fbc-8ef9-eb0db51ebd96",
+  "source_id": "c77377cf-501b-56c6-be40-b518e9aad101",
+  "locator": "I q.4 a.2 ad 3: tamen ipsum esse Dei includit in se vitam et sapientiam; quia nulla de perfectionibus essendi potest deesse ei quod est ipsum esse subsistens",
+  "interpretation": "The reason clause ('quia nulla de perfectionibus essendi potest deesse ei quod est ipsum esse subsistens') is general: none of the perfections of being can be lacking to whatever is subsistent being itself. 'Ipsum esse subsistens' is read as the primitive OwnBeing, 'perfectiones essendi' as the primitive OfBeing, and 'not lacking' as having the perfection as a real determination (Has). The passage says it cannot be lacking; the statement says only that it is had. The reply contrasts what participates being, which need not participate it 'secundum omnem modum essendi', so 'ens' does not include living and wise. It applies the principle to God's esse including life and wisdom; that application, and the claim that life and wisdom are perfections of being, are not part of this statement (see the supports relation to c4fb87a6). The second proof of the same article argues the same principle by the analogy of subsistent heat lacking nothing of the power of heat.",
+  "attribution": "The passage states that none of the perfections of being can be lacking to that which is subsistent being itself, which is the premise: whatever is its own being has every real determination that is a perfection of being.",
+  "status": "formalized"
+}
