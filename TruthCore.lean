@@ -45,6 +45,7 @@ public import TruthCore.Imports.Results.Ethics
 public import TruthCore.Imports.Results.Explanation
 public import TruthCore.Imports.Results.Greek
 public import TruthCore.Imports.Results.Hiddenness
+public import TruthCore.Imports.Results.History
 public import TruthCore.Imports.Results.Isabelle
 public import TruthCore.Imports.Results.Kant
 public import TruthCore.Imports.Results.Logic

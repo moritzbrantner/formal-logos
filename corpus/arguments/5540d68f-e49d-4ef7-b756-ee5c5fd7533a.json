@@ -1,0 +1,15 @@
+{
+  "id": "5540d68f-e49d-4ef7-b756-ee5c5fd7533a",
+  "label": "Test actual recipient absence with contingent replacement giving",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "f0fe8b71-b20b-4de0-a1df-dd598a14cd73",
+  "inference_ids": [
+    "e6e413cf-3265-41bb-a5c0-d45a31fcefdb"
+  ],
+  "meaning": "Uses the Pruss-power roster with factive giving in both worlds. Every actual contingent is the first recipient, so the alternative supports the fixed-population withholding condition while still supplying a contingent recipient. The assigned power and universally accessible worlds are structural inputs. The control supplies no purpose, rational appetite, intrinsic invariance, simplicity or real-world modal admissibility.",
+  "definition_ids": [
+    "62dfa893-b633-4513-9790-8f9a0a3087e0",
+    "6ecf24d5-5001-4571-937c-2632ac8c2c66",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d"
+  ]
+}

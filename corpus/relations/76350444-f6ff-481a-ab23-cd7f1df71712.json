@@ -1,0 +1,10 @@
+{
+  "id": "76350444-f6ff-481a-ab23-cd7f1df71712",
+  "label": "Truthful selective lists test the scope of positive record authenticity",
+  "subject_kind": "argument",
+  "subject_id": "49202ada-d9bb-4a22-855f-bfd57d8edfdb",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "995550a6-1f29-45bc-ac2e-6aad4e42007f",
+  "note": "The positive list has true entries throughout its observation fiber, while the distinct claim that the earlier event occurred varies inside the fiber."
+}

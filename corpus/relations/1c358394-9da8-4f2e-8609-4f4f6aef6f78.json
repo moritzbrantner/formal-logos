@@ -1,0 +1,10 @@
+{
+  "id": "1c358394-9da8-4f2e-8609-4f4f6aef6f78",
+  "label": "Recipient replacement tests the scope of actual-contingent withholding",
+  "subject_kind": "argument",
+  "subject_id": "5540d68f-e49d-4ef7-b756-ee5c5fd7533a",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "b8a2a9e1-0dda-48bc-a646-d4cb229ca62c",
+  "note": "The frame realizes the withholding premise used by the same-source willed-giver argument while necessarily giving some contingent recipient. It tests treating actual-population withholding as total noncreation, with no classification of the giver's power as rational."
+}

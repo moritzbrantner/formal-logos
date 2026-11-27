@@ -4,6 +4,7 @@ module
 public import TruthCore.Results.Modal.A5HistoryScope.Solution
 public import TruthCore.Results.Modal.AccessibilityComponents.Solution
 public import TruthCore.Results.Modal.ActualReasonWitness.Solution
+public import TruthCore.Results.Modal.ActualRecipientReplacement.Solution
 public import TruthCore.Results.Modal.ActualistDomains.Solution
 public import TruthCore.Results.Modal.B.Countermodels.Solution
 public import TruthCore.Results.Modal.B.DisconnectedScope.Solution
