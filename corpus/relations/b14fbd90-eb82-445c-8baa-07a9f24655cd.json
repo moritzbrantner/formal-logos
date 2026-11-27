@@ -1,0 +1,10 @@
+{
+  "id": "b14fbd90-eb82-445c-8baa-07a9f24655cd",
+  "label": "Test by PartFreePlurality.jointControl (0730d46f)",
+  "subject_kind": "result",
+  "subject_id": "a5b44455-66e5-5bef-9784-e37472a39324",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "0730d46f-4604-5750-9a64-de664f064b31",
+  "note": "Omit a common nature for the supplied Q11 predicate in the five-bearer model with separate proper-component and priority relations. Left and right both satisfy root and retain their different essence values. Each has suppositum equal to its own nature, and the suppositum map is injective."
+}
