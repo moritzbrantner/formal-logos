@@ -228,6 +228,7 @@ public import TruthCore.Results.Causality.HistoricalRemoval.Solution
 public import TruthCore.Results.Causality.HolderRootIdentification.Solution
 public import TruthCore.Results.Causality.HoldingMotion.Solution
 public import TruthCore.Results.Causality.IlluminationReceipt.Solution
+public import TruthCore.Results.Causality.ImpersonalFoundationJoint.Solution
 public import TruthCore.Results.Causality.IndexedSignalProvenance.Solution
 public import TruthCore.Results.Causality.IndexedSignalReaper.Solution
 public import TruthCore.Results.Causality.InertEmptiness.Solution

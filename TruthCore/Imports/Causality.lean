@@ -164,6 +164,7 @@ public import TruthCore.Causality.HistoricalRemoval
 public import TruthCore.Causality.HolderRootIdentification
 public import TruthCore.Causality.HoldingMotion
 public import TruthCore.Causality.IlluminationReceipt
+public import TruthCore.Causality.ImpersonalFoundationJoint
 public import TruthCore.Causality.IndexedSignalProvenance
 public import TruthCore.Causality.IndexedSignalReaper
 public import TruthCore.Causality.InertEmptiness
