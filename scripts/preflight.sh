@@ -9,6 +9,8 @@
 # Run from the repository root with target/release/truth built. It fails fast on the
 # first failing check. It does not run `lake build`, bind-check, Comparator or NanoDa:
 # run the focused build and `truth bind-check --affected --base <BASE>` separately.
+# When HEAD is behind origin/main it also checks that every batch spec regenerates
+# unchanged on the merge result (main requires branches to be up to date).
 set -euo pipefail
 
 base_ref=""
@@ -17,7 +19,7 @@ while [[ $# -gt 0 ]]; do
   case "$1" in
     --base) base_ref="${2:?--base needs a ref}"; shift 2 ;;
     --allow-dirty) allow_dirty=1; shift ;;
-    -h|--help) sed -n '2,11p' "$0" | sed 's/^# \{0,1\}//'; exit 0 ;;
+    -h|--help) sed -n '2,13p' "$0" | sed 's/^# \{0,1\}//'; exit 0 ;;
     *) echo "preflight: unknown argument: $1" >&2; exit 2 ;;
   esac
 done
@@ -58,9 +60,6 @@ step "connectivity gate (new statements join the root component or record a conn
 step "placement gate (new results reach the root, are placed, or record a connection_plan)" \
   target/release/truth orphans --base "$base" --gate
 step "batch specs regenerate their records" python3 scripts/argument_batch.py records --check specs/*.toml
-step "bundle audit" python3 scripts/bundle_audit.py
-step "generated docs tables" python3 scripts/docs_index.py
-step "generated import aggregators" scripts/root-imports.sh
 
 # Files changed since the base: committed, staged, unstaged and untracked (not ignored).
 changed=$(
@@ -71,6 +70,59 @@ changed=$(
     git ls-files --others --exclude-standard
   } | sort -u
 )
+
+# Every batch spec must also regenerate unchanged once this branch is merged with
+# origin/main (#2139: two PRs that each passed broke main together through a stale
+# regeneration). When HEAD is behind origin/main, check the committed merge result in
+# a scratch copy; the working tree is not touched.
+merged_specs() {
+  local upstream=origin/main out tree tmp status=0
+  if ! git rev-parse --verify -q "$upstream^{commit}" >/dev/null; then
+    echo "no $upstream: skipped"
+    return 0
+  fi
+  if git merge-base --is-ancestor "$upstream" HEAD; then
+    echo "HEAD contains $upstream: the check above already covers the merge"
+    return 0
+  fi
+  if ! out=$(git merge-tree --write-tree --no-messages HEAD "$upstream"); then
+    echo "HEAD does not merge cleanly with $upstream: merge it, resolve the conflicts and rerun" >&2
+    return 1
+  fi
+  tree=${out%%$'\n'*}
+  tmp=$(mktemp -d "${TMPDIR:-/tmp}/preflight-merge.XXXXXX")
+  git archive "$tree" corpus results specs scripts | tar -x -C "$tmp"
+  (cd "$tmp" && python3 scripts/argument_batch.py records --check specs/*.toml) || status=$?
+  rm -rf "$tmp"
+  if (( status != 0 )); then
+    echo "the merge with $upstream leaves records stale: merge $upstream, regenerate with" \
+      "'python3 scripts/argument_batch.py records SPEC --write --fix' and rerun" >&2
+  fi
+  return "$status"
+}
+step "batch specs regenerate their records on the merge with origin/main" merged_specs
+
+step "bundle audit" python3 scripts/bundle_audit.py
+
+# The bundle-audit tests (Python and explorer) pin record counts of the audited
+# bundles, so a corpus change can break them without touching the audit itself.
+# Scoped: they run only when a corpus record or an audited bundle input changed.
+audit_tests() {
+  if ! grep -qE '^(corpus/|docs/notes/[^/]*-migration\.json$|scripts/(test_)?bundle_audit\.py$|apps/corpus-explorer/src/lib/bundle-audit)' <<<"$changed"; then
+    echo "no corpus record or audited bundle input changed: skipped"
+    return 0
+  fi
+  python3 -m unittest discover -s scripts -p test_bundle_audit.py || return 1
+  if command -v bun >/dev/null; then
+    (cd apps/corpus-explorer && bun test src/lib/bundle-audit.test.ts) || return 1
+  else
+    echo "bun not found: the explorer bundle-audit test is left to CI"
+  fi
+}
+step "bundle-audit tests (when corpus records or audited bundles changed)" audit_tests
+
+step "generated docs tables" python3 scripts/docs_index.py
+step "generated import aggregators" scripts/root-imports.sh
 
 lint() {
   CHANGED="$changed" python3 - <<'PY'
