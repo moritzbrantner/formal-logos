@@ -155,7 +155,9 @@ imitability) are containment in the virtual sense. The recognition bridge is the
 explicit passage from the generic to the intentional sense. The intentional and
 virtual senses are reduced here to the free relations `Apprehends` and `About`;
 the classical difference between having the form of another as other and having
-the power to produce it is not captured beyond that. -/
+the power to produce it is not captured beyond that. No premise's type uses these
+three declarations (the generic one is the raw parameter `Contains`), so bind-check
+cannot catch a mixing of the senses; the tags live in the records and prose. -/
 
 /-- CONTAINED_IN_1 (generic): the item is contained in the bearer, intentionally or
 virtually; the relation does not say which. -/
@@ -167,9 +169,9 @@ def ContainsIntentionally (Contains : B → C → Prop) (About : C → X → Pro
     (Apprehends : B → C → Prop) (b : B) (e : C) : Prop :=
   Contains b e ∧ (∃ x, About e x) ∧ Apprehends b e
 
-/-- CONTAINED_IN_3 (virtual): the item is contained in the bearer without being
-apprehended by it, as a power to produce or a mode in which the bearer is
-imitable. -/
+/-- CONTAINED_IN_3 (virtual): any item contained in the bearer without being
+apprehended by it, for example a power to produce, a mode in which the bearer
+is imitable, its one undifferentiated nature or a sub-personal item. -/
 def ContainsVirtually (Contains : B → C → Prop) (Apprehends : B → C → Prop) (b : B) (e : C) :
     Prop :=
   Contains b e ∧ ¬ Apprehends b e

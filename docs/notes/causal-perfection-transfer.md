@@ -5932,8 +5932,8 @@ dispute is this. The rival needs a plurality of modes in the one nature that
 meets four conditions:
 
 - it is not a real composition of that nature (which would conflict with (a));
-- it is not a set of real relations to non-existent relata (which would deny
-  realization);
+- it is not a set of real relations to non-existent relata (which would put
+  the stand-ins in the independent locus, denied by `65805e5a`);
 - it is not mind-dependent;
 - it is mind-independent and still guides the favouring.
 
@@ -6149,8 +6149,8 @@ candidate.
 exemplarism (A4) is now the strongest rival on this premise. It denies only
 the containment-recognition bridge, and possibly `About` of its modes. Its price is the one in the B list above:
 a plurality of value-ranked modes in the one nature that guides favouring and
-is neither real composition, nor real relations to non-existents, nor
-mind-dependent. This is the #1892 objective-eminence status, and on it the two
+is neither real composition, nor real relations to non-existents (the
+independent locus, denied by `65805e5a`), nor mind-dependent. This is the #1892 objective-eminence status, and on it the two
 sides stand at parity. Within this program no further substantive objection
 to A4 has been identified. The A3 form carries an identified alignment price.
 The A1 form carries the inclusive-scope price, conditional on that unregistered
@@ -6241,6 +6241,25 @@ The repairs:
   `d1fb6414` declared as the sense bridge.
 - `Produces` was restricted to production.
 - The prose and assessment were rescoped as listed above.
+
+These repairs are at `0692e4910`. The targeted re-check at `28f063a95` accepted:
+
+- the repairs of F1–F3 and F5–F13;
+- the F3 type change, which weakens the premise;
+- the declared sense bridge;
+- the revised judgment.
+
+It found one residual P1. The four-condition list for A4 still said that real
+relations to non-existents "would deny realization". They would instead put the
+stand-ins in the independent locus, which `65805e5a` denies.
+
+It also found three P2s:
+
+- the CONTAINED_IN sense tags are not enforced by any Lean type;
+- the virtual-containment definition was worded too narrowly;
+- the intentional-containment definition presented an intended reading as fact.
+
+All four are fixed in the following commit.
 
 [Attempt record](../../corpus/attempts/421caba9-f0d9-44f6-b9d9-ae81b0e374bb.json)
 
