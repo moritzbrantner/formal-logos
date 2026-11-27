@@ -40,5 +40,10 @@
     "1aef8986-ed29-564f-9803-d812d2ff63e1",
     "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
     "5323527f-56a2-5d11-8a76-5b25461a61b4"
-  ]
+  ],
+  "connection_plan": {
+    "target_statement_id": "da3facd6-008e-5e76-92fa-677350c2dfdb",
+    "missing_bridge": "Identify the same-witness ancestor n with the selected necessary root of the classical-God route on the same profile and world (for example through the selected-root uniqueness of 91b085c4-f1c7-5ada-9848-8e7dc753313a, whose root n already is, being an actual concrete root necessary at w), and use the same q3 profile p for that route's represented esse/essence identity conjunct, so that n's identity carries over to the one selected root.",
+    "blocker": "No uniqueness premise is part of the occurrence route, and the classical-God route's identity conjunct is stated for its own selected root and q3 profile, not for this occurrence profile and supporter relation R. The occurrence route also supplies none of the other components of that node (esse maximum, perfection, firstness, matter/form exclusion, remoteness, naming)."
+  }
 }

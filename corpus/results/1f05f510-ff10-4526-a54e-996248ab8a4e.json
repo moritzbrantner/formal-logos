@@ -1,0 +1,11 @@
+{
+  "id": "1f05f510-ff10-4526-a54e-996248ab8a4e",
+  "label": "Thinker-local anti-brute-root closes the contingent horn of the Cogito fork",
+  "argument_id": "6da968da-9c15-4f94-abbd-6ee8dd2f8a0f",
+  "challenge_module": "TruthCore.Results.Causality.CogitoAncestorNecessaryConcrete.Challenge",
+  "solution_module": "TruthCore.Results.Causality.CogitoAncestorNecessaryConcrete.Solution",
+  "theorem": "TruthCore.Results.Causality.CogitoAncestorNecessaryConcrete.necessaryAncestorOfFork",
+  "comparator_config": "results/1f05f510-ff10-4526-a54e-996248ab8a4e/comparator.json",
+  "status": "solution-present",
+  "description": "Derives the Cogito's necessary concrete ground-ancestor from the thinker-local fork and the thinker-local anti-brute-root principle by refuting the contingent-root horn. Conditional on both open premises."
+}
