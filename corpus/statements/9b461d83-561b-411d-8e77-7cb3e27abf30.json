@@ -6,7 +6,9 @@
   "definition_ids": [
     "4a52e22b-c56f-4814-9661-9ef540301cb4",
     "7011ffa0-1d24-4e36-84e2-714a38cbdeac",
-    "a6e1ef95-8138-5cfc-8fe2-1202ba3b9a5c"
+    "a6e1ef95-8138-5cfc-8fe2-1202ba3b9a5c",
+    "68f277cc-e5fc-4665-86b5-2fed6d82cdba",
+    "ec03adb4-2382-4c92-9795-5bf4fc2b4a04"
   ],
   "connection_plan": {
     "target_statement_id": "608a262d-08fe-4dfd-9413-67e2ecf35b84",

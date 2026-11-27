@@ -524,8 +524,11 @@ the marker on the same two-bit domain. The composition is
 adaptive controls and the proposition criterion for exact identifiability.
 The result uses no probability over histories. For a stochastic replacement,
 an equal observed sample is compatible with different observation laws.
-Establishing equal laws across an adaptive repertoire would need matched
-transition and readout distributions on the admitted histories.
+The stochastic comparison requires equality of the induced transcript laws
+for the policies and horizons claimed. A suitable matching of stochastic
+transitions and readouts is one sufficient route. For example, if every readout
+is constant, a transition that preserves a hidden bit and one that toggles it
+induce the same transcript laws even though their hidden-state transitions differ.
 
 A calibration statistic computed solely from the matched transcript preserves
 that match. Calibration with a further trace can split it if production and

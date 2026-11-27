@@ -5,7 +5,8 @@
   "lean_declaration": "TruthCore.Science.HistoryObservationLaws.ScheduleBoundary",
   "definition_ids": [
     "10d0fb41-49a3-404f-898f-caabd0d0324e",
-    "58d12f26-3402-5f67-b768-3c71f3381894"
+    "58d12f26-3402-5f67-b768-3c71f3381894",
+    "ec03adb4-2382-4c92-9795-5bf4fc2b4a04"
   ],
   "connection_plan": {
     "target_statement_id": "608a262d-08fe-4dfd-9413-67e2ecf35b84",
