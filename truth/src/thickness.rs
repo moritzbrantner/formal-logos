@@ -71,9 +71,9 @@ pub struct FrontierInputs {
     /// The closed statements (any closure reason).
     pub closed: HashSet<String>,
     /// The edges of the reaching walk ([`crate::frontier::Frontier::root_edges`]).
-    /// Empty when the inputs are read from a report JSON
+    /// `None` when the inputs are read from a report JSON
     /// ([`inputs_from_report`]), which does not carry them.
-    pub root_edges: Vec<crate::frontier::RootEdge>,
+    pub root_edges: Option<Vec<crate::frontier::RootEdge>>,
 }
 
 /// Records by kind in file order, as Python `load_dir` lists them.
@@ -109,7 +109,7 @@ impl<'a> Records<'a> {
 pub fn frontier_inputs(root: &str, records: &Records, flags: &[Flag]) -> FrontierInputs {
     let frontier = Frontier::new(root, records, flags);
     let mut inputs = inputs_from_report(root, &frontier.report(false));
-    inputs.root_edges = frontier.root_edges();
+    inputs.root_edges = Some(frontier.root_edges());
     inputs
 }
 
@@ -204,7 +204,7 @@ pub fn inputs_from_report(root: &str, report: &Value) -> FrontierInputs {
             .flatten()
             .map(|(id, _)| id.clone())
             .collect(),
-        root_edges: Vec::new(),
+        root_edges: None,
     }
 }
 

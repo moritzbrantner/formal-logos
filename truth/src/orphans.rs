@@ -14,8 +14,9 @@
 //! unplaced. [`gate`] (`truth orphans --base REV --gate`) fails on results
 //! new or changed since a base revision that are unplaced; pre-existing
 //! unplaced results are backlog. A reaching result also gets a provenance
-//! ([`provenance`]): substantive, transcription, loop-back, bare-premise
-//! strength registration, unverified route or refutation support. The gate
+//! ([`provenance`]): substantive, itself a transcription, closed or open
+//! transcription route, loop-back, bare-premise strength registration,
+//! unverified route or refutation support. The gate
 //! reports it and warns on new undeclared heuristic transcriptions; neither
 //! fails it.
 //!
@@ -270,10 +271,18 @@ pub const SUBSTANTIVE: &str = "substantive";
 /// order they are tried, with their report titles. Navigation, not warrant:
 /// none of them closes or supports anything; they say what the placement
 /// rests on (docs/corpus-model.md, "Result placement").
-pub const PROVENANCES: [(&str, &str); 6] = [
+pub const PROVENANCES: [(&str, &str); 8] = [
     ("loop_back", "loop-back"),
     ("registration_bare", "bare-premise strength registration"),
-    ("transcription", "transcription"),
+    ("transcription_self", "itself a transcription"),
+    (
+        "transcription_closed",
+        "only through transcriptions with closed premises (rule (d))",
+    ),
+    (
+        "transcription_open",
+        "only through a transcription with an open premise",
+    ),
     ("unverified_route", "unverified route"),
     ("refutation_support", "refutation support"),
     (SUBSTANTIVE, "substantive derivation"),
@@ -298,15 +307,15 @@ impl<'f> Upward<'f> {
         Self { edges: index }
     }
 
-    /// A shortest path from `start` up to `root` through edges of the
-    /// `allowed` kinds that never enters a `blocked` statement, as the
-    /// edges taken in order; `None` when there is none.
+    /// A shortest path from `start` up to `root` through `allowed` edges
+    /// that never enters a `blocked` statement, as the edges taken in order;
+    /// `None` when there is none.
     fn path(
         &self,
         start: &str,
         root: &str,
         blocked: &BTreeSet<&str>,
-        allowed: &[EdgeKind],
+        allowed: &dyn Fn(&RootEdge) -> bool,
     ) -> Option<Vec<&'f RootEdge>> {
         if start == root {
             return Some(Vec::new());
@@ -317,7 +326,7 @@ impl<'f> Upward<'f> {
         while let Some(current) = queue.pop_front() {
             for edge in self.edges.get(current.as_str()).into_iter().flatten() {
                 let next = edge.conclusion.as_str();
-                if !allowed.contains(&edge.kind) || blocked.contains(next) || !seen.insert(next) {
+                if !allowed(edge) || blocked.contains(next) || !seen.insert(next) {
                     continue;
                 }
                 parent.insert(next, edge);
@@ -339,6 +348,47 @@ impl<'f> Upward<'f> {
     }
 }
 
+/// What the provenance walk knows about transcription arguments: whether all
+/// of an argument's premises are closed (rule (d) carries closure through it)
+/// and whether its transcription kind is declared on every result.
+struct TranscriptionSteps<'a> {
+    premises_closed: HashMap<&'a str, bool>,
+    declared: HashMap<&'a str, bool>,
+}
+
+impl<'a> TranscriptionSteps<'a> {
+    fn new(records: &Records<'a>, frontier: &FrontierInputs) -> Self {
+        let mut declared: HashMap<&str, bool> = HashMap::new();
+        for result in &records.results {
+            if let Some(kind) = frontier.transcription_results.get(text(result, "id")) {
+                let entry = declared.entry(text(result, "argument_id")).or_insert(true);
+                *entry &= kind.declared;
+            }
+        }
+        let premises_closed = records
+            .arguments
+            .iter()
+            .filter(|argument| declared.contains_key(text(argument, "id")))
+            .map(|argument| {
+                (
+                    text(argument, "id"),
+                    list(argument, "premise_statement_ids")
+                        .iter()
+                        .all(|premise| frontier.closed.contains(*premise)),
+                )
+            })
+            .collect();
+        Self {
+            premises_closed,
+            declared,
+        }
+    }
+
+    fn closed(&self, argument: &str) -> bool {
+        self.premises_closed.get(argument).copied().unwrap_or(false)
+    }
+}
+
 /// The provenance of one `reaching` result, first match wins:
 ///
 /// 1. `loop_back`: its conclusion reaches the root only through a path that
@@ -346,28 +396,32 @@ impl<'f> Upward<'f> {
 ///    derivation adds no root contact its premise did not already have.
 /// 2. `registration_bare`: the argument backs a strength registration and
 ///    every premise is bare (no stating claim, no support) and unclosed.
-/// 3. `transcription`: the result is itself a transcription (it contributes
-///    at most rule (d) closure), or every path avoiding its premises enters a
-///    transcription argument.
-/// 4. `unverified_route`: every such path enters an argument record without
+/// 3. `transcription_self`: the result is itself a transcription (invariant
+///    16); it contributes at most rule (d) closure.
+/// 4. `substantive`: its conclusion reaches the root through verified
+///    non-transcription arguments only, avoiding its premises.
+/// 5. `transcription_closed`: every such path enters a transcription, and
+///    some path enters only transcriptions whose premises are all closed, so
+///    rule (d) carries closure through them: closure, no independent warrant.
+/// 6. `transcription_open`: every such path enters a transcription with an
+///    open premise, which carries neither closure nor warrant.
+/// 7. `unverified_route`: every such path enters an argument record without
 ///    a verified result (admitted by the walk where the conclusion is not
 ///    routed).
-/// 5. `refutation_support`: the conclusion is not on a root route but
-///    supports a verified refutation of a recorded rival of a root-path
-///    statement.
-/// 6. `substantive`: a non-transcription result whose conclusion reaches the
-///    root through verified non-transcription arguments only, avoiding its
-///    premises.
+///
+/// `refutation_support` (or `transcription_self`) applies when the
+/// conclusion is not on a root route but supports a verified refutation of a
+/// recorded rival of a root-path statement.
 ///
 /// The JSON carries the category, a shortest witnessing `route` (statement,
 /// argument, statement, ..., root) and, for each transcription argument on
-/// it, whether all of that argument's premises are closed (rule (d) carries
-/// closure through it). A `loop_back` route is one that re-enters a premise,
-/// listed under `reentered_premises`.
+/// it, whether its kind is declared and whether all its premises are closed.
+/// A `loop_back` route is one that re-enters a premise, listed under
+/// `reentered_premises`.
 fn provenance(
     upward: &Upward,
     frontier: &FrontierInputs,
-    arguments: &HashMap<&str, &Record>,
+    steps: &TranscriptionSteps,
     argument: &Record,
     self_transcription: bool,
 ) -> Value {
@@ -390,34 +444,28 @@ fn provenance(
             path.iter()
                 .filter(|edge| edge.kind == EdgeKind::Transcription)
                 .map(|edge| {
-                    let closed = arguments
-                        .get(edge.argument_id.as_str())
-                        .is_some_and(|step| {
-                            list(step, "premise_statement_ids")
-                                .iter()
-                                .all(|premise| frontier.closed.contains(*premise))
-                        });
-                    json!({"argument_id": edge.argument_id, "premises_closed": closed})
+                    let id = edge.argument_id.as_str();
+                    json!({
+                        "argument_id": id,
+                        "declared": steps.declared.get(id).copied().unwrap_or(false),
+                        "premises_closed": steps.closed(id),
+                    })
                 })
                 .collect(),
         )
     };
     if !frontier.reaching_root.contains(conclusion) {
         let category = if self_transcription {
-            "transcription"
+            "transcription_self"
         } else {
             "refutation_support"
         };
         return json!({"category": category, "route": Value::Null});
     }
-    let all = [
-        EdgeKind::Sound,
-        EdgeKind::Transcription,
-        EdgeKind::Unverified,
-    ];
-    let Some(free) = upward.path(conclusion, root, &premises, &all) else {
+    let any = |_: &RootEdge| true;
+    let Some(free) = upward.path(conclusion, root, &premises, &any) else {
         let looped = upward
-            .path(conclusion, root, &BTreeSet::new(), &all)
+            .path(conclusion, root, &BTreeSet::new(), &any)
             .unwrap_or_default();
         let reentered: Vec<&str> = looped
             .iter()
@@ -438,24 +486,32 @@ fn provenance(
             frontier.statement_depths.get(*premise).copied() == Some("bare")
                 && !frontier.closed.contains(*premise)
         });
-    let sound = upward.path(conclusion, root, &premises, &[EdgeKind::Sound]);
+    let sound = |edge: &RootEdge| edge.kind == EdgeKind::Sound;
+    let closed = |edge: &RootEdge| {
+        edge.kind == EdgeKind::Sound
+            || (edge.kind == EdgeKind::Transcription && steps.closed(&edge.argument_id))
+    };
+    let transcribed = |edge: &RootEdge| edge.kind != EdgeKind::Unverified;
+    let best = upward
+        .path(conclusion, root, &premises, &sound)
+        .map(|path| (SUBSTANTIVE, path))
+        .or_else(|| {
+            upward
+                .path(conclusion, root, &premises, &closed)
+                .map(|path| ("transcription_closed", path))
+        })
+        .or_else(|| {
+            upward
+                .path(conclusion, root, &premises, &transcribed)
+                .map(|path| ("transcription_open", path))
+        })
+        .unwrap_or(("unverified_route", free));
     let (category, path) = if bare_registration {
-        ("registration_bare", sound.unwrap_or(free))
-    } else if let (false, Some(path)) = (self_transcription, &sound) {
-        (SUBSTANTIVE, path.clone())
-    } else if let Some(path) = sound.clone().or_else(|| {
-        upward.path(
-            conclusion,
-            root,
-            &premises,
-            &[EdgeKind::Sound, EdgeKind::Transcription],
-        )
-    }) {
-        ("transcription", path)
+        ("registration_bare", best.1)
     } else if self_transcription {
-        ("transcription", free)
+        ("transcription_self", best.1)
     } else {
-        ("unverified_route", free)
+        best
     };
     json!({
         "category": category,
@@ -565,7 +621,8 @@ pub fn place<'a>(records: &Records<'a>, frontier: &FrontierInputs) -> Vec<Placem
             "object_id": text(relation, "object_id"),
         })
     };
-    let upward = Upward::new(&frontier.root_edges);
+    let upward = frontier.root_edges.as_deref().map(Upward::new);
+    let steps = TranscriptionSteps::new(records, frontier);
     let mut placements = Vec::new();
     for result in &records.results {
         if !matches!(text(result, "status"), "solution-present" | "verified") {
@@ -635,15 +692,12 @@ pub fn place<'a>(records: &Records<'a>, frontier: &FrontierInputs) -> Vec<Placem
             .transcription_results
             .get(result_id)
             .map(|kind| kind.kind.clone());
-        let provenance = (state == REACHING).then(|| {
-            provenance(
-                &upward,
-                frontier,
-                &arguments,
-                argument,
-                transcription.is_some(),
-            )
-        });
+        // No provenance without the walk's edges (inputs read from a report
+        // JSON): every result would look like a loop-back.
+        let provenance = upward
+            .as_ref()
+            .filter(|_| state == REACHING)
+            .map(|upward| provenance(upward, frontier, &steps, argument, transcription.is_some()));
         placements.push(Placement {
             result,
             argument,
@@ -937,7 +991,10 @@ pub fn format_gate(report: &Value) -> String {
         lines.push(String::new());
         lines.push(
             "Judged results that reach the root without a substantive derivation (placed, \
-             not failed; report them as such, never as support):"
+             not failed). A transcription_closed route carries rule (d) closure to the \
+             root but no independent warrant, and transcription_self contributes at most \
+             rule (d) closure; loop-back, bare-registration, open-transcription and \
+             unverified routes add no support to the root. Report each by its category:"
                 .into(),
         );
         for entry in judged_reaching {
@@ -2778,9 +2835,9 @@ mod tests {
         // The judged reaching result is reported with its provenance.
         assert_eq!(
             report["judged"][0]["provenance"]["category"],
-            "transcription"
+            "transcription_self"
         );
-        assert_eq!(report["judged_provenance_counts"]["transcription"], 1);
+        assert_eq!(report["judged_provenance_counts"]["transcription_self"], 1);
 
         // Declared: no warning. Flagged at the base already: no warning.
         let mut declared = result.clone();
@@ -2894,7 +2951,7 @@ mod tests {
             NEXT.fetch_add(1, Ordering::Relaxed)
         )));
         let root = &dir.0;
-        for id in ["ROOT", "A", "X", "B", "D", "E", "S", "W", "R"] {
+        for id in ["ROOT", "A", "X", "B", "D", "E", "S", "W", "R", "F", "G"] {
             write(
                 root,
                 &format!("corpus/statements/{id}.json"),
@@ -2930,6 +2987,15 @@ mod tests {
         // D reaches only through the declared transcription TR; E supports D.
         argument("TR", &["D"], "A", Some("assembly"));
         argument("DER", &["E"], "D", None);
+        // F reaches only through the undeclared transcription TRO, whose other
+        // premise G is open: no closure passes through it.
+        argument("TRO", &["F", "G"], "A", None);
+        write(
+            root,
+            "TruthCore/Results/Case/TRO/Solution.lean",
+            "theorem t (P Q R : Prop) (h : P → Q → R) (hp : P) (hq : Q) : R := by\n  exact h hp hq\n",
+        );
+        argument("DERF", &["E"], "F", None);
         // S strengthens W (W on the root path); S is bare and open.
         argument("WUP", &["W"], "A", None);
         argument("REG", &["S"], "W", None);
@@ -2954,13 +3020,19 @@ mod tests {
             found["LOOP"]["route"],
             json!(["B", "BUP", "A", "TOP", "ROOT"])
         );
-        assert_eq!(category("TR"), "transcription");
-        assert_eq!(category("DER"), "transcription");
+        assert_eq!(category("TR"), "transcription_self");
+        assert_eq!(category("DER"), "transcription_closed");
         // D is closed as the conclusion of the verified non-transcription
         // DER (rule (a)), so rule (d) carries closure through TR.
         assert_eq!(
             found["DER"]["transcription_arguments"],
-            json!([{"argument_id": "TR", "premises_closed": true}])
+            json!([{"argument_id": "TR", "declared": true, "premises_closed": true}])
+        );
+        assert_eq!(category("TRO"), "transcription_self");
+        assert_eq!(category("DERF"), "transcription_open");
+        assert_eq!(
+            found["DERF"]["transcription_arguments"],
+            json!([{"argument_id": "TRO", "declared": false, "premises_closed": false}])
         );
         assert_eq!(category("REG"), "registration_bare");
         assert_eq!(found["SUB"]["route"], json!(["A", "TOP", "ROOT"]));
