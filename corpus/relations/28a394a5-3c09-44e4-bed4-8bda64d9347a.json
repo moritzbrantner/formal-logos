@@ -1,0 +1,10 @@
+{
+  "id": "28a394a5-3c09-44e4-bed4-8bda64d9347a",
+  "label": "Test by ExistentialSelfActualization.controls (b8e866ea)",
+  "subject_kind": "result",
+  "subject_id": "63208bf9-26e6-56be-b6db-911a75a1f910",
+  "predicate": "tests",
+  "object_kind": "argument",
+  "object_id": "b8e866ea-bd28-5316-b054-3951d43d6233",
+  "note": "The tokens for bearer true, its occurring act, and product false have increasing ranks zero to two. The two interface clauses, irreflexivity and transitivity hold together, with the act producing the distinct candidate false."
+}

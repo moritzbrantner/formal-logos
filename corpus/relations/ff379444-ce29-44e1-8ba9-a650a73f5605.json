@@ -1,0 +1,10 @@
+{
+  "id": "ff379444-ce29-44e1-8ba9-a650a73f5605",
+  "label": "Test by GroundedBeginnings.controls (71df1177)",
+  "subject_kind": "result",
+  "subject_id": "d3d432c9-4a65-466d-9dff-5e4dc6f9d24a",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "71df1177-b082-46e9-ab85-6815b3ed1650",
+  "note": "Omit the requirement that a beginning have a concrete ground present at its earlier absence or later. At true the ground of the individual present at time 2 is present only at time 0, so post-absence grounding is well-founded and time 1 is empty and time 2 is populated."
+}

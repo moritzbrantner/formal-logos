@@ -1,0 +1,10 @@
+{
+  "id": "d6353706-337c-4cba-83e4-c0aba510f785",
+  "label": "Test by UnderivedRootRoute.underivedRouteControls (82cfaf26)",
+  "subject_kind": "result",
+  "subject_id": "eb7f5423-fec4-590a-97dc-73ff632c7f79",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "82cfaf26-fc86-54ab-8328-9a7b2bdbbe21",
+  "note": "Omit actual grounding well-foundedness from the underived-root bundle. In the one-world Nat profile all candidates are present and each n is grounded by n+1. All other nonlogical inputs hold, and no candidate lacks an incoming supporter."
+}

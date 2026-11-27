@@ -1,0 +1,10 @@
+{
+  "id": "51c8d435-e686-448f-909a-85ea8c58cd10",
+  "label": "Test by SelectedAncestry.controls (1b1e3f09)",
+  "subject_kind": "result",
+  "subject_id": "28a794d6-0e79-5abd-a5ce-b54ba38a1932",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "1b1e3f09-f2e9-5949-9c3b-8f7fce26a403",
+  "note": "Omit foundation on the selected cone. At false each member of the actual contingent successor chain is grounded by its successor. Every member is absent at accessible true, and there is no necessary concretum."
+}

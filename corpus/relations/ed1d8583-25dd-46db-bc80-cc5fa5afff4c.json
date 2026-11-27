@@ -1,0 +1,10 @@
+{
+  "id": "ed1d8583-25dd-46db-bc80-cc5fa5afff4c",
+  "label": "Test by GroundedBeginnings.controls (81c39a34)",
+  "subject_kind": "result",
+  "subject_id": "d3d432c9-4a65-466d-9dff-5e4dc6f9d24a",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "81c39a34-8188-4df5-b433-256a249630ca",
+  "note": "With integer times at true, each integer bearer is present from its own index onward and grounded by its predecessor. Grounding restricted to bearers absent at any fixed earlier moment is well-founded, while grounding among all concrete bearers ever present in that history is not."
+}
