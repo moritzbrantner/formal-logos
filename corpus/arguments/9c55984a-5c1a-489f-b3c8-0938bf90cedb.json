@@ -1,0 +1,28 @@
+{
+  "id": "9c55984a-5c1a-489f-b3c8-0938bf90cedb",
+  "label": "No unexplained absence at roots, from essence-grounded modality and positive ESSENCE_6",
+  "premise_statement_ids": [
+    "906f9077-478e-4730-a46b-5c6ce27c62c0",
+    "f6f956a1-c1bb-4d92-8278-f50c4a33ff97",
+    "61a0b3e6-b115-4533-9148-82b17b149616"
+  ],
+  "conclusion_statement_id": "9281317d-1f0a-4522-b91c-58cc07652e92",
+  "inference_ids": [
+    "53e3851c-e17e-4ab3-ad55-64cbce7bc43b"
+  ],
+  "meaning": "Fix an actual root r at w and a determination d that r lacks while some admissible profile q contains all of r's determinations and d (an unexplained absence). Positivity makes every ESSENCE_6 condition on r's profile hold of q. Essence-grounded modality then gives a world v accessible from w at which r has every member of q, in particular d. Necessity of the root's absences gives r the determination d at w, a contradiction. So no actual root has an unexplained absence. The derivation is a relocation: under N, EM and factivity of essential conditions, positivity is equivalent to the conclusion (Lean-only positivityOfNoUnexplainedAbsence), so the argument separates N and EM from the contested load, which sits on positivity; under the necessity direction of member grounding positivity is in turn equivalent to carriage (positiveEssenceFromCarriage with carriedOfPositive), a second relocation. The conclusion covers only case (iii): an absence of noesis made inadmissible with the root's profile (case i or ii) satisfies all three premises and the conclusion. The main theorem uses no axioms. The Comparator companion essenceControls (three Mathlib axioms; the #2153 carrier with the open family, the source the only actual root) gives a positive witness and, for each premise, a row where it fails, the other two hold and the conclusion fails: a contingent lack of noesis (N fails), a necessary lack that no nature grounds (EM fails), and a nature with the negative clause 'lacks noesis' (positivity fails). The rows are assignments of the stated relations, not models of essence.",
+  "definition_ids": [
+    "3f8e5e3c-e85a-4388-af9c-4da1c8a02069",
+    "8e1ba83c-04e3-4bd3-8e25-e0c532a703a6",
+    "52352824-6be9-53c6-83d4-82fed9a08cbb",
+    "f8948e28-b13a-5244-95f1-41a05cd4fff2",
+    "3aba5f19-f48d-50db-bc57-93ba2e99f845",
+    "a5452da9-32eb-47d4-98fb-0da507cf4ce5"
+  ],
+  "disambiguation_ids": [
+    "1aef8986-ed29-564f-9803-d812d2ff63e1"
+  ],
+  "strong_version_needed": {
+    "61a0b3e6-b115-4533-9148-82b17b149616": "The weaker carriage premise gives an essential condition only at extensions in which no root determination requires a lack; with N and EM alone it does not exclude an unexplained absence (row 3 of carriageControls has a carried clause cutting off an admissible extension). It suffices together with the necessity direction of member grounding, which is the separate registered route positiveEssenceFromCarriage."
+  }
+}

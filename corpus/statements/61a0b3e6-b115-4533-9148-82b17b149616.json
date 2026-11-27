@@ -1,0 +1,15 @@
+{
+  "id": "61a0b3e6-b115-4533-9148-82b17b149616",
+  "label": "Every ESSENCE_6 condition on a root's profile holds at its admissible extensions",
+  "paraphrase": "OPEN, analyst formulation, attribution deferred: for every actual concrete root r at w, every ESSENCE_6 condition on r's profile holds of every admissible intrinsic profile that contains all of r's real determinations at w. Natures constrain a root's profile only through the admissibility constraints and the presence of its determinations; no essential condition is a negative clause that cuts off an admissible extension. Under N, EM and factivity of essential conditions it is equivalent to 'no actual root has an unexplained absence' (positivityOfNoUnexplainedAbsence), so it relocates that premise into essence form.",
+  "lean_declaration": "TruthCore.Causality.RootClosure.RootEssentialConditionsPositive",
+  "definition_ids": [
+    "52352824-6be9-53c6-83d4-82fed9a08cbb",
+    "3aba5f19-f48d-50db-bc57-93ba2e99f845",
+    "3f8e5e3c-e85a-4388-af9c-4da1c8a02069",
+    "8e1ba83c-04e3-4bd3-8e25-e0c532a703a6"
+  ],
+  "disambiguation_ids": [
+    "1aef8986-ed29-564f-9803-d812d2ff63e1"
+  ]
+}

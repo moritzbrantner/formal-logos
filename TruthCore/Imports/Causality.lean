@@ -286,6 +286,7 @@ public import TruthCore.Causality.RelayFeedInventory
 public import TruthCore.Causality.RelaySourceRecognition
 public import TruthCore.Causality.RestatedPremises
 public import TruthCore.Causality.RivalRefutationsRound2
+public import TruthCore.Causality.RootClosure
 public import TruthCore.Causality.RootEssenceIdentity
 public import TruthCore.Causality.RootGroundComposition
 public import TruthCore.Causality.RootIntellectWill
