@@ -145,6 +145,7 @@ public import TruthCore.Causality.GivingChoiceNar
 public import TruthCore.Causality.GivingPlanExceptions
 public import TruthCore.Causality.GodMaximalCausal
 public import TruthCore.Causality.GodNamingSenses
+public import TruthCore.Causality.GoodFavouring
 public import TruthCore.Causality.GradedSupportFoundation
 public import TruthCore.Causality.GradesFrame
 public import TruthCore.Causality.GreatestDegreeRootRoute
