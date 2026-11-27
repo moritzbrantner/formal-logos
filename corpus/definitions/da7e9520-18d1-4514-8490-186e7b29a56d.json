@@ -1,0 +1,9 @@
+{
+  "id": "da7e9520-18d1-4514-8490-186e7b29a56d",
+  "label": "Produced because of its goodness: favouring depends on betterness with D-realization fixed",
+  "term": "because of its goodness (controlled goodness reading)",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.GoodFavouring.BecauseOfGoodness",
+  "definition": "BecauseOfGoodness good fitOf φ s x y is DependsUnder good fitOf φ s x y: at s the betterness standard ranks x over y and the source favours x over y, and in some scenario with the same realization of D (fitOf) where the betterness standard does not rank x over y, the source does not favour x over y. A source determined to D fails; a good-general source tracking betterness passes, whatever the bearer; a perverse or biased profile favouring what is not better fails.",
+  "note": "Analyst reading BECAUSE_OF_GOODNESS_2. It needs scenarios in which goodness varies while D-realization is fixed; if goodness facts are necessary given the candidates, those scenarios are counterpossible, and without them no profile aligned with goodness meets this reading (GoodDependenceLaws law 4). See docs/notes/optimal-creation-choice.md §§65–69."
+}

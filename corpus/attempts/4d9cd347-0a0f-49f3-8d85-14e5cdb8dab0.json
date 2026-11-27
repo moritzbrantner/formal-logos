@@ -42,23 +42,22 @@
     "785a4e63-9c0f-4d9c-8745-b4cebc2c5cde",
     "PR-2104"
   ],
-  "blocker": "Defend the exact original-measure exclusion: a noncognitive source cannot ground the recipient-relative finite limits without received restriction, forbidden composition, an external determiner or incompatible modal necessity. Alternatively identify actual apprehension as governing K in service of D, or substantiate the rival’s simple joint productive constitution. The same noncognitive body/end and the knowing-director plus separate intellectual-unmoved-reduction clauses remain needed for the existing local bundle; the rational recipient used to articulate D cannot replace that body.",
+  "blocker": "Defend the exact original-measure exclusion: a noncognitive source cannot ground the recipient-relative finite limits without received restriction, forbidden composition, an external determiner or incompatible modal necessity; after #2145 Lane 2b this includes testing whether a content determination of the source's favouring is such a limitation (Lane 1 hook) and whether good-general favouring without apprehension is coherent (content-generality question). Alternatively identify actual apprehension as governing K in service of D, or substantiate the rival's simple joint productive constitution. The same noncognitive body/end and the knowing-director plus separate intellectual-unmoved-reduction clauses remain needed for the existing local bundle; the rational recipient used to articulate D cannot replace that body.",
   "current_assessment": {
-    "date": "2026-11-25",
+    "date": "2026-11-27",
     "statement_ids": [
       "65c409cc-eb7f-4d66-8e2d-60c8e5138ed6",
       "29818edd-9f5a-5414-baa2-9a7d0c8abf18"
     ],
-    "scope": "Joint specification, beneficial finite measure and original cognitive ordering in the matched necessary-source comparison; preserves the witness-local Fifth Way connection and complete bundle.",
-    "assessment": "De veritate q.5 a.2 identifies explanatory work beyond separate activities: their beneficial limit, manner and mutual fit. An original whole-order account must ground the access and correction relations K required for the independently characterized epistemic good D, not borrow them from prior arrangement. Practical understanding offers a positive unified account. The strongest noncognitive rival proposes a genuinely owned joint D-manifestation, which can constrain K without treating each coordination as unrelated. The dependence D→K does not establish that ultimate power, its efficacy or simplicity. Finite recipient measure alone establishes neither a receiver in the source, a capacity ceiling nor exhaustive manifestation in every exercise. Applying natural-agency necessity to the retained nonnecessitating source is the disputed extension. Genuine recipient inquiry supplies no self-refutation of source noncognition. The tested arguments do not establish exclusive original cognitive direction or actual practical governance.",
-    "next_test": "Defend the exact original-measure exclusion: a noncognitive source cannot ground the recipient-relative finite limits without received restriction, forbidden composition, an external determiner or incompatible modal necessity. Alternatively identify actual apprehension as governing K in service of D, or substantiate the rival’s simple joint productive constitution. The same noncognitive body/end and the knowing-director plus separate intellectual-unmoved-reduction clauses remain needed for the existing local bundle; the rational recipient used to articulate D cannot replace that body.",
-    "note": "docs/notes/teleology-first-mover.md#joint-specification-and-the-finite-measure-of-a-whole-order-2026-11-25-provisional",
-    "supersedes": "Refines the accepted distinguishing-determinations assessment through beneficial joint fit, the stronger D→K reply and the finite-measure test. It preserves the original-ordering application gap, seven-premise scope, first-mover/maximum identity obligations and prior stopped recognition findings.",
+    "scope": "Finite-measure test of original ordering under content-fixed favouring (#2145 Lane 2b); preserves the witness-local Fifth Way connection and complete bundle.",
+    "assessment": "Typing the source's favouring as a profile across variation scenarios makes explicit an option already implicit in the rival's simple joint productive constitution: a determination of its favouring to one content. On interpretation it fixes D's measures; the model types favouring only, and whether that determination is free of reception and of a ceiling is conditional on the Lane 1 hook (whether content determination at an unlimited root is a limitation). Such a profile meets the end-content reading of acting because of its goodness as defined, and fails the controlled goodness reading, as a determined will does, a verdict that discriminates only if counterpossible goodness variation is admitted. As typed, a good-general profile avoids the determination whether or not it is cognitive, explaining a finite measure by goodness only where a better or undominated measure exists and otherwise by a contingent exercise on both sides. So the test does not change the parity; the open points move to which sense of original finality is needed (only ORIGINAL_FINALITY_2 includes non-coincidence with goodness), the content-generality question (compare the earlier finding that productive containment is not yet intentional presence) and the Lane 1 hook.",
+    "next_test": "Test whether a favouring that is a function of the betterness of arbitrary candidate contents is a cognitive relation; assess E4; after #2153, test whether content determination at an unlimited root is a limitation. The full witness-local bundle and identity/maximality inputs remain required.",
+    "note": "docs/notes/teleology-first-mover.md#finite-measure-under-content-fixed-favouring-2145-2026-11-27",
+    "reviewed_revision": "dbf825b4a563269d9ecf96f06aad96378b476a43",
     "review": "accepted_qualified",
-    "publication": "published",
-    "evidence": "Independent reviewer /root/three_arguments_review accepted the complete §§54–58 synthesis, both companion additions, all three current assessments and the actual proposed PR body with qualifications at local e215162f2988e7386f99e6ec436ad429dff0f839, tree 3692e0165b53c1e11821afc5104d2758aab2fff0; PR-body SHA-256 4da631c4c7eed71af980a63864d0cbea19c69c90c38f8cf710afce4819f96ffc. No substantiated P1/P2 finding or semantic repair was required. The reviewer independently checked the relevant primary passages, complete A/B/holder and local-teleology theorem types, strongest intrinsic-final rival and exact replacement/withholding definitions. The published reviewed snapshot 2f0c8a902e62efec133f776e7abe52e2bf7729d9 has exactly the same tree, with prior PR head and current main retained as parents. Later changes reconcile review/publication disposition only. Corpus consistency, offline attribution, generators, new links/current references and whitespace passed on the proposal; unchanged formal certification and prior regeneration/bundle evidence are reused. The replacement table remains hand-checked, with no PowerFor constitution, setup invariance, D, simplicity or full ultimate model certified, and inherits no certificate from replacementG. No new Lean, Comparator/NanoDa result, source binding, support edge or premise discharge. Delivered-head CI is recorded separately in draft PR-1962. Acceptance covers the conditional explanatory comparison, source interpretation and quantifier audit; it does not establish either ultimate constitution, actual practical governance, jointly admissible metaphysical alternatives, complete explanatory equivalence or the exclusive intellectual bridge.",
-    "reviewed_revision": "2f0c8a902e62efec133f776e7abe52e2bf7729d9",
-    "reviewed_local_revision": "e215162f2988e7386f99e6ec436ad429dff0f839"
+    "publication": "unpublished",
+    "evidence": "Delivered on branch research/impersonal-finality with results 652f9917, b5fe7a87, da0125fd (focused Lean build, bind-check, Comparator and NanoDa). Independent semantic challenge at 49e56a19f (cc5ecdc80..49e56a19f: four P1, nine P2) repaired at 4b7604832; the targeted re-check at dbf825b4a accepted all three registered steps (652f9917, b5fe7a87, da0125fd) with no remaining P1.",
+    "supersedes": "Refines the 2026-11-25 finite-measure assessment (now in assessment_history) by making the content-determination option and the good-general profile explicit; its other findings are retained."
   },
   "assessment_history": [
     {
@@ -94,6 +93,23 @@
       "evidence": "Independent reviewer /root/forms_unity_review accepted the complete §§49–53 continuation, both companion additions, all three current assessments and the actual PR body with qualifications at local dc0bead65187da9709dfda8a84b4df90f30fb0e4, tree c58596ed79d006dca8b1f3ee4de06b4a3e9c41fd; PR-body SHA-256 5c2e9515133cd3e68ad2ab141e0ed1c7feec758197c478f59481365e3c8240f8. Initial full review at 83512f46517fc088a796d095720c24805fa6e565 identified one P1: nonexhaustion does not establish admissible alternatives. The targeted recheck accepted the symmetric alternative-order and rational-policy repair. No unresolved substantiated P1/P2 finding remains. The published reviewed snapshot 0a5781d9c80e6db4ff612bb2e6ffc48b3826b22b has exactly the same Git tree. Later edits reconcile review/publication disposition only; the connected GitHub API preserves the existing branch ancestry. The reviewer independently inspected the relevant source readings, actual formal types/full bundles, strongest rival, symmetric constitutive criterion and preservation of prior assessments. Corpus consistency, offline attribution, generated docs/imports, new links/current references and whitespace passed on the proposal; unchanged A/B, bundle and proof evidence is reused from the preceding successful checkpoint. No new proof input or fresh full local Lean/Comparator/NanoDa certification is claimed. Draft PR-1962 records delivered-head CI separately. Acceptance does not establish either ultimate constitution, a metaphysically possible strictly simple noncognitive source, source cognition, actual practical governance, admissible alternative orders, global explanatory equivalence or an open premise.",
       "reviewed_revision": "0a5781d9c80e6db4ff612bb2e6ffc48b3826b22b",
       "reviewed_local_revision": "dc0bead65187da9709dfda8a84b4df90f30fb0e4"
+    },
+    {
+      "date": "2026-11-25",
+      "statement_ids": [
+        "65c409cc-eb7f-4d66-8e2d-60c8e5138ed6",
+        "29818edd-9f5a-5414-baa2-9a7d0c8abf18"
+      ],
+      "scope": "Joint specification, beneficial finite measure and original cognitive ordering in the matched necessary-source comparison; preserves the witness-local Fifth Way connection and complete bundle.",
+      "assessment": "De veritate q.5 a.2 identifies explanatory work beyond separate activities: their beneficial limit, manner and mutual fit. An original whole-order account must ground the access and correction relations K required for the independently characterized epistemic good D, not borrow them from prior arrangement. Practical understanding offers a positive unified account. The strongest noncognitive rival proposes a genuinely owned joint D-manifestation, which can constrain K without treating each coordination as unrelated. The dependence D→K does not establish that ultimate power, its efficacy or simplicity. Finite recipient measure alone establishes neither a receiver in the source, a capacity ceiling nor exhaustive manifestation in every exercise. Applying natural-agency necessity to the retained nonnecessitating source is the disputed extension. Genuine recipient inquiry supplies no self-refutation of source noncognition. The tested arguments do not establish exclusive original cognitive direction or actual practical governance.",
+      "next_test": "Defend the exact original-measure exclusion: a noncognitive source cannot ground the recipient-relative finite limits without received restriction, forbidden composition, an external determiner or incompatible modal necessity. Alternatively identify actual apprehension as governing K in service of D, or substantiate the rival’s simple joint productive constitution. The same noncognitive body/end and the knowing-director plus separate intellectual-unmoved-reduction clauses remain needed for the existing local bundle; the rational recipient used to articulate D cannot replace that body.",
+      "note": "docs/notes/teleology-first-mover.md#joint-specification-and-the-finite-measure-of-a-whole-order-2026-11-25-provisional",
+      "supersedes": "Refines the accepted distinguishing-determinations assessment through beneficial joint fit, the stronger D→K reply and the finite-measure test. It preserves the original-ordering application gap, seven-premise scope, first-mover/maximum identity obligations and prior stopped recognition findings.",
+      "review": "accepted_qualified",
+      "publication": "published",
+      "evidence": "Independent reviewer /root/three_arguments_review accepted the complete §§54–58 synthesis, both companion additions, all three current assessments and the actual proposed PR body with qualifications at local e215162f2988e7386f99e6ec436ad429dff0f839, tree 3692e0165b53c1e11821afc5104d2758aab2fff0; PR-body SHA-256 4da631c4c7eed71af980a63864d0cbea19c69c90c38f8cf710afce4819f96ffc. No substantiated P1/P2 finding or semantic repair was required. The reviewer independently checked the relevant primary passages, complete A/B/holder and local-teleology theorem types, strongest intrinsic-final rival and exact replacement/withholding definitions. The published reviewed snapshot 2f0c8a902e62efec133f776e7abe52e2bf7729d9 has exactly the same tree, with prior PR head and current main retained as parents. Later changes reconcile review/publication disposition only. Corpus consistency, offline attribution, generators, new links/current references and whitespace passed on the proposal; unchanged formal certification and prior regeneration/bundle evidence are reused. The replacement table remains hand-checked, with no PowerFor constitution, setup invariance, D, simplicity or full ultimate model certified, and inherits no certificate from replacementG. No new Lean, Comparator/NanoDa result, source binding, support edge or premise discharge. Delivered-head CI is recorded separately in draft PR-1962. Acceptance covers the conditional explanatory comparison, source interpretation and quantifier audit; it does not establish either ultimate constitution, actual practical governance, jointly admissible metaphysical alternatives, complete explanatory equivalence or the exclusive intellectual bridge.",
+      "reviewed_revision": "2f0c8a902e62efec133f776e7abe52e2bf7729d9",
+      "reviewed_local_revision": "e215162f2988e7386f99e6ec436ad429dff0f839"
     }
   ],
   "workers": [
@@ -112,6 +128,21 @@
       "effort": "high",
       "date": "2026-11-27",
       "pr": "PR-2120"
+    },
+    {
+      "role": "author",
+      "provider": "anthropic",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "date": "2026-11-27"
+    },
+    {
+      "role": "repair",
+      "provider": "anthropic",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "date": "2026-11-27",
+      "pr": "PR-2163"
     }
   ]
 }

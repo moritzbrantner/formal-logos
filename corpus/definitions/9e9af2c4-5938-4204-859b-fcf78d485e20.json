@@ -1,0 +1,9 @@
+{
+  "id": "9e9af2c4-5938-4204-859b-fcf78d485e20",
+  "label": "Invariant explanans: one choice cell containing every compared history",
+  "term": "invariant explanans",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.SelectionScope.InvariantExplanans",
+  "definition": "InvariantExplanans F m a: every two histories through m are related by a's choice relation, so level a has a single cell. Example: a source's necessary nature, propensity, standing will or generative finality, the same in every compared history. Non-example: an exercise (adoption, actualization) that differs between histories with different outcomes.",
+  "note": "Stipulative. The STIT surrogate for an explanans that does not vary across the compared scope; it does not assert that any real source is invariant. See docs/notes/optimal-creation-choice.md §59."
+}

@@ -1,0 +1,9 @@
+{
+  "id": "188efb7f-0b64-4a54-a462-f053a5cd84e6",
+  "label": "ORIGINAL_FINALITY_2: ORIGINAL_FINALITY_1 plus dependence on goodness with D-realization fixed",
+  "term": "original finality (for-the-good reading)",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.GoodFavouring.OriginalFinalityForGood",
+  "definition": "OriginalFinalityForGood good fit fitOf φ s x y: OriginalFinality good fit φ s x y together with E4, non-coincidence of the origin's favouring with goodness, typed as BecauseOfGoodness good fitOf φ s x y (the favouring depends on betterness with the realization of D held fixed): the end operates as good.",
+  "note": "Analyst reading ORIGINAL_FINALITY_2. Under it original finality requires BECAUSE_OF_GOODNESS_2 by definition; the open question becomes whether any noncognitive profile can meet it, which needs admissible variation of goodness at fixed D-realization and, for the apprehended plan, the content-generality and SpecifiesGiving-as-dependence bridges. See docs/notes/optimal-creation-choice.md §§65–69."
+}

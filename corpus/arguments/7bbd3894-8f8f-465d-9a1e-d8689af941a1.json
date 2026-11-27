@@ -1,0 +1,16 @@
+{
+  "id": "7bbd3894-8f8f-465d-9a1e-d8689af941a1",
+  "label": "Joint-absence power scope controls, by finite models",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "a57320d7-b873-435b-afb9-7ef4f72ffc46",
+  "inference_ids": [
+    "47eb2d6a-5cfb-44b6-b9df-c65f5997a553"
+  ],
+  "meaning": "Nonvacuity applies actualAbsencePowerOfTotal on the three-world frame. In the replacement frame the actual contingent c is absent at true while d is contingent there, so total noncreation fails at both worlds. In the four-world non-Euclidean frame, b sees only itself, so nothing is contingent there and g (necessary) exists there; no accessible world lacks both c and d. In the three-world frame the maximally specific power holds for total noncreation (true only at none) but not for actual absence (true at some true too).",
+  "definition_ids": [
+    "578e81cd-d0fb-4921-9a02-7e250d5310cb",
+    "88f9f6e8-997b-5f7d-afa1-c501954c3807",
+    "a7985f66-16b1-4f0f-bb7f-4988d2377790",
+    "bf7eddca-8291-4744-8470-379babcd7781"
+  ]
+}
