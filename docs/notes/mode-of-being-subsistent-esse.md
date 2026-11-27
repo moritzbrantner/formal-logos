@@ -19,7 +19,8 @@ Baseline: main `3b0910230`.
 This is a provisional judgment under the systematic loop. It changes no frontier
 rule or closure, and no existing theorem or Challenge. **Review status:** the
 independent semantic challenge at `a13b3024` accepted it with qualifications (5 P1,
-7 P2). The repairs are in §9; a focused re-check is pending.
+7 P2), and the re-check at `5f1c1e7a` again accepted it with qualifications (1 P1,
+7 P2). The repairs of both are in §9; a focused re-check is pending.
 
 ## 1. The source, in full
 
@@ -116,8 +117,13 @@ so God lacks life. The answer has two parts.
   ratione". The living is more perfect than what is *only* a being, because the
   living is also a being. This removes objection 3's inference from "vivere est
   perfectius quam esse" to "what is ipsum esse lacks life". It does so without R-act:
-  it is a point about what is being *tantum*, against a comparison of rationes.
-  Objection 3 is therefore **undercut** by ad 3's first clause.
+  it is a point about what is being *tantum*, against a comparison of rationes. It
+  blocks the step "vivens > ens, so vivere > esse", because that comparison is with
+  ens *tantum*. Objection 3 *as stated* is therefore **undercut** by ad 3's first
+  clause.
+  - *Residual form.* "Ipsum esse is ens tantum", so it lacks life. The first clause
+    does not answer this; only the second clause does, and only with the act-of-being
+    reading. That residual form is the quantifier view's claim (§5).
 - **Second clause.** What participates esse need not participate it "secundum omnem
   modum essendi". But "ipsum esse Dei includit in se vitam et sapientiam", because
   "nulla de perfectionibus essendi potest deesse ei quod est ipsum esse subsistens".
@@ -130,7 +136,8 @@ formal-or-eminent (HAVING_EVERY_PERFECTION_1) from really having pure determinat
 (HAVING_EVERY_PERFECTION_2), and `02d16349` lists the formal/eminent distinction as an
 open choice. So the stating claim `1c66ee49` now attaches to a new formal-or-eminent
 sibling, `9a0a4951` (`OwnBeingLacksNoPerfectionOfBeingInAct`: what is its own being
-lacks no perfection of being, being in act in it formally or eminently). Its relation
+lacks no perfection of being, being in act in it in the shared frame's `F.InAct`,
+IN_ACT_4, whose mode is open: formal, virtual or eminent). Its relation
 to `d164b1ff` (real `Has`) is `supports`, with that gap note. This matches SCG I.28
 (claim `1c67e58f`, also `supports`). The application to life and wisdom remains
 `supports` on `c4fb87a6`.
@@ -202,8 +209,17 @@ being" (revision conditions, §6).
 | d164b1ff + c4fb87a6 | d164b1ff holds trivially, and c4fb87a6 fails for life and wisdom | d164b1ff is the subsistent-esse principle, and c4fb87a6 is R-act₂ with purity |
 
 **The R-act₁ → R-act₂ bridge is missing.** The controls certify that R-act₁, with the
-reception and purity interfaces, does not give R-act₂ on the stated vocabulary. The
-two theses are counted separately.
+reception and purity interfaces, does not give R-act₂ on the stated interfaces. That
+is non-entailment from the vocabulary alone: R-act₁ and those interfaces never mention
+`OfEsse`, so the result shows only that a bridge is needed. The candidate bridge is
+the q.7 a.1 family (`ReceptionLimitation`): unreceived esse is unlimited, so it
+includes every pure perfection. The two theses are counted separately.
+
+**R-act₂ is `c4fb87a6` read as perfection of esse.** This is recorded as a
+`logically_equivalent_to` relation from `254ee26f` to `c4fb87a6`, with the evidence
+`intensiveEsseIffPurePertainsToEsse` (`Iff.rfl`, a Comparator companion of the
+controls). It is a sense identification. `62ca3d65` (PERFECTION_OF_BEING) is now
+linked from `c4fb87a6`, `d164b1ff`, `8c07547d` and `859b50dd`.
 
 **A recorded gap, not repaired here.** DEF-MODE-OF-BEING's `lean_declaration` names
 the constraining premise `PerfectionsAreModesOfBeing`, not a declaration of
@@ -216,10 +232,10 @@ recorded on #2103.
 | Claim | Strongest positive warrant | Shared with |
 | --- | --- | --- |
 | R-dep | Near-analytic. It is stated by q.4 a.1 ad 3 and q.3 a.4 (`7067553d`) and given as the sentence's ground. | Granted by every rival considered. |
-| R-act₁ (esse received and limited, `8c64b036`) | q.4 a.1 ad 3 ("sicut receptum ad recipiens"); q.3 a.4 ("esse est actualitas omnis formae vel naturae"). The explanatory rationale assessed in causal-perfection-transfer (2026-11-24): a received act explains contraction, so an unreceived act has no principled restriction. | The reception and participation framework (sub-bundle A of the 2026-11-18 cluster assessment), the real-distinction premises of the q.3 a.4 routes, and the reception inputs of the route to OwnBeing. **One commitment, counted once.** |
+| R-act₁ (esse received and limited, `8c64b036`) | q.4 a.1 ad 3 ("sicut receptum ad recipiens"); q.3 a.4 ("esse est actualitas omnis formae vel naturae"). The explanatory rationale assessed in causal-perfection-transfer (2026-11-24): a received act explains contraction, so an unreceived act has no principled restriction. | A shared-warrant cluster of logically distinct members: `7fcfcee8` and `7de89edb` (conditional on reception), `14325c83` (negative), `7338142d`, `1304b462`. These hold vacuously where nothing is received. Of the route premises, `29e71e43` assumes the reception half for creatures, and with `7de89edb` the limited half. |
 | R-act₂ (intensive esse, `254ee26f`) | Textual: ad 3's "includit in se vitam et sapientiam" and "secundum omnem modum essendi"; the q.4 a.1 ad 3 gloss "et etiam ipsarum formarum". No argument on file derives it from R-act₁ (the controls show R-act₁ does not give it on the stated interfaces). | It *is* `c4fb87a6` in the PERFECTION_OF_BEING_2 sense, and the act reading of `791fa216`. Counted separately from R-act₁. |
-| `9a0a4951` (formal-or-eminent whole power) | Stated by ad 3 (claim `1c66ee49`). The second proof gives an analogy: subsistent heat would lack nothing of the power of heat. | — |
-| `d164b1ff` (whole power, real `Has`) | Supported by ad 3 (`1c66ee49`) and SCG I.28 (`1c67e58f`). Real having, as against eminent containment, is not settled by either passage. | Under R-act₂, close to a meaning postulate of "subsistent being". |
+| `9a0a4951` (formal-or-eminent whole power) | Stated by ad 3 (claim `1c66ee49`). The second proof gives an analogy: subsistent heat would lack nothing of the power of heat. | Under R-act₂, at most this "not lacking" is a meaning postulate of "subsistent being". |
+| `d164b1ff` (whole power, real `Has`) | Supported by ad 3 (`1c66ee49`) and SCG I.28 (`1c67e58f`). Real having, as against eminent containment, is not settled by either passage. | Not a meaning postulate even under R-act₂. Locus (b) needs it in the PERFECTION_OF_BEING_2 sense as a separate premise (§5). |
 | `c4fb87a6`, for life and wisdom | Ad 3's treatment of life and wisdom as perfections of being (`supports`). | R-act₂ (identical in the act sense). |
 | `2f6b9eff` (a total cause causes each mode) | On the act reading, near-analytic. On the dependence reading, it is the full transfer thesis (concurrence). | The secondary-cause rival `e3da0672` targets it on that reading (2026-11-18 restatement). |
 
@@ -234,13 +250,13 @@ needs R-act₂ is therefore limited to the readings examined here.
 **Denial of R-dep:** some perfection is had without being. No position considered
 holds it. It conflicts with `7067553d`, which is stated twice.
 
-**Objection 3 (being is less perfect than life, so ipsum esse lacks life):
-undercut.** Ad 3's first clause removes its inference without R-act (§1). It is not a
-surviving rival.
+**Objection 3 as stated (being is less perfect than life, so ipsum esse lacks life):
+undercut.** Ad 3's first clause removes its inference without R-act (§1).
 
-**The strongest surviving rival: the quantifier view (thin existence).** This is
-separate from objection 3. It does not compare esse with life; it denies that there is
-an act of being at all.
+**The strongest surviving rival: the quantifier view (thin existence).** It does not
+compare esse with life. It denies that there is an act of being at all, and so holds
+objection 3's residual form: ipsum esse, if anything, is ens tantum. Only ad 3's
+second clause answers that, and only on the act-of-being reading.
 
 - *Account.* Life and wisdom are contents of essences. Existence is the
   instantiation of an essence and adds no content. "Subsistent being", if coherent,
@@ -287,17 +303,35 @@ an act of being at all.
 So this is not parity. Because the explanatory comparison has not been run, I do not
 convert the asymmetry into a verdict.
 
-**The negated-premise test at locus (b).** Given R-act₂, the purity of life and
-wisdom, and the source's being its own being, "whatever is its own being has life and
-wisdom" follows (the composite; the control's act profile). Negating that conclusion
-for an impersonal source that is its own being forces rejecting **R-act₂ or
-OwnBeing**:
+**The negated-premise test at locus (b).** The composite `ownBeingPairIffEveryPure`
+needs `d164b1ff` as well as R-act₂. The inconsistent bundle, for a source s, is:
 
-- rejecting R-act₂ is open to the quantifier view, which also rejects R-act₁;
-- the controls show that keeping R-act₁ while rejecting R-act₂ is consistent on the
-  stated interfaces. No source or defender of that combination is on file, so it is
-  recorded as a logical option, not as a rival with weight;
-- rejecting OwnBeing leads to a determinate-nature source, with the E and L
+> {OwnBeing(s); `d164b1ff` in the PERFECTION_OF_BEING_2 sense (what is its own being
+> really has every perfection of esse); R-act₂; wisdom is pure (`44e39691`);
+> ¬Has(s, wisdom)}
+
+Its inconsistency is the forward direction of `ownBeingPairIffEveryPure`, with
+`OfBeing := OfEsse`. An impersonal source that is its own being and does not really
+have wisdom must reject at least one member. Which one is not forced. The controls
+show that R-act₂, purity and OwnBeing can hold without real having: in the thin profile
+with `OfEsse := pure`, `hasThin false true` is false, so `d164b1ff` read intensively
+fails. The options are:
+
+- **reject R-act₂.** This is open to the quantifier view, which also rejects R-act₁.
+  The controls show that keeping R-act₁ while rejecting R-act₂ is consistent on the
+  stated interfaces. No source or defender of that combination is on file, so it is a
+  logical option, not a rival with weight.
+- **Keep `9a0a4951`, reject real `Has`** (`d164b1ff` in the intensive sense). The
+  source lacks no perfection of being formally, virtually or eminently, without really
+  having each as a determination. The controls witness it: a frame where the source is
+  in act in every respect in the mode-open sense, yet does not really have the stand-in
+  for life. R-act₂ makes at most "not lacking" a meaning postulate, not real having.
+  No defender is on file, so it carries no weight as a rival until one is sourced.
+  - It matters: an impersonal source could lack no perfection eminently or virtually
+    without being alive or wise. That is the power-eminence reading of PR #2166 and
+    locus (a) of PR #2170.
+- **Reject purity of wisdom.** `44e39691` is stipulative and open.
+- **Reject OwnBeing.** This leads to a determinate-nature source, with the E and L
   obligations of the 2026-11-24 assessment.
 
 **Substantive Objection Standard, both sides.**
@@ -309,7 +343,7 @@ OwnBeing**:
 | R-act₁ and R-act₂, by the quantifier view | A rival framework (2026-11-23). Unresolved; comparison not run. Positive warrant is on file for R-act₁ and textually for R-act₂; none for the rival's distinctive claim. |
 | R-act, by Kant's thesis | Relevance not established; no weight |
 | `9a0a4951` | No substantive objection identified |
-| `d164b1ff` (real `Has`) | No objection identified. The gap is the reading: ad 3 states not lacking, not real having. |
+| `d164b1ff` (real `Has`, PERFECTION_OF_BEING_2) | No objection identified. The gap is the reading: ad 3 states not lacking, not real having. Keeping `9a0a4951` while rejecting it is an open logical option, with no defender on file. |
 | `c4fb87a6` for life and wisdom | Holds under R-act₂ (identical in the act sense); fails under the quantifier view |
 | `2f6b9eff` on the dependence reading | The secondary-cause rival `e3da0672`, restated (2026-11-18), unchanged |
 
@@ -327,27 +361,41 @@ OwnBeing**:
    because nothing on file fixes the primitive independently of R-act. On the act
    reading `2f6b9eff` is near-analytic.
 3. **Beyond R-dep, two act-of-being theses, counted separately.**
-   - R-act₁ (received, limited esse) is one commitment with the reception framework
-     and the real-distinction premises.
+   - R-act₁ (received, limited esse) belongs to a shared-warrant cluster of logically
+     distinct members (§4). Of the route premises, `29e71e43` assumes part of it.
    - R-act₂ (intensive esse) is `c4fb87a6` in the act sense and the act reading of
      `791fa216`.
-   - The R-act₁ → R-act₂ bridge is missing; the controls certify non-entailment on the
-     stated interfaces.
-4. **Rivals.** Objection 3 is undercut by ad 3's first clause. The quantifier view is
-   the strongest surviving rival. Its standing is unresolved, and the comparison has
+   - The R-act₁ → R-act₂ bridge is missing. The controls certify non-entailment on the
+     stated interfaces, from the vocabulary alone. The candidate bridge is "unreceived
+     esse is unlimited, so it includes every pure perfection" (q.7 a.1).
+4. **Rivals.** Objection 3 as stated is undercut by ad 3's first clause. Its residual
+   form, "ipsum esse is ens tantum", is the quantifier view's claim, and only the second
+   clause answers it. The quantifier view is the strongest surviving rival. Its standing is unresolved, and the comparison has
    not been run. The asymmetry is recorded: R-act₁ has positive warrant on file, R-act₂
    textual warrant, and the rival's distinctive claim none.
-5. **Locus (b).** An impersonal source that is its own being must reject R-act₂ or
-   OwnBeing. The theistic content of the second proof and ad 3 is conditional on
-   R-act₂, OwnBeing and the purity classification. Purity of life and wisdom is
+5. **Locus (b).** An impersonal source that is its own being and does not really have
+   wisdom must reject at least one member of {OwnBeing, `d164b1ff` in the
+   PERFECTION_OF_BEING_2 sense, R-act₂, purity of wisdom}. Which one is not forced.
+   - "Keep `9a0a4951`, reject real Has" is an open logical option with no defender on
+     file. R-act₂ makes at most "not lacking" a meaning postulate.
+   - The theistic content of the second proof and ad 3 is conditional on all four
+     members.
+
+   Purity of life and wisdom is
    stipulative: wisdom's purity is the open premise `44e39691` (`WisdomIsPure`),
    and ad 3 gives examples, not a criterion. Reaching intellect from really had
    wisdom needs further bridges, registered on main by PR #2162:
    - `pureActRootsKnowThemselvesFromPurity` (result `fd01e30c`, → `00d02e10`) takes
-     `fe67d766` (every actual root has every pure perfection; produced by `7d8bbdcb`
-     from `d164b1ff` and `c4fb87a6`), wisdom's purity, and the open capacity,
-     exercise-or-potency and grounding premises (`d41af47e`, `d73266a0`,
-     `03a5e479`);
+     seven premises:
+     - `a30c5963`, actual roots have no limiting principle;
+     - `26e8e6ed`, an unlimited being is its own being;
+     - `fe67d766`, every actual root has every pure perfection;
+     - `44e39691`, wisdom's purity;
+     - the open capacity, exercise-or-potency and grounding premises (`d41af47e`,
+       `d73266a0`, `03a5e479`).
+   - `fe67d766` is produced by `7d8bbdcb` from eleven premises: `ee4ab504`, `0436de86`,
+     `cb1cdea9`, `be639b3f`, `61bd42e5`, `86efed1a`, `363a528c`, `b35ce743`,
+     `26e8e6ed`, `d164b1ff`, `c4fb87a6`;
    - `godHasIntellectFromRootPerfection` (result `c256d381`) needs the open
      recognition premise `8ba44d60` (intrinsic self-knowledge → HAS_INTELLECT_1).
 
@@ -381,9 +429,13 @@ closed.
 
 Count each item once.
 
-- **R-act₁ is one commitment.** It carries:
-  - the reception framework (`7fcfcee8`, `14325c83`, `7338142d`);
-  - the real-distinction premises of the q.3 a.4 routes;
+- **R-act₁ heads a shared-warrant cluster of logically distinct members.** The
+  members are `7fcfcee8` and `7de89edb` (conditional on reception), `14325c83`
+  (negative), `7338142d` and `1304b462`. Each holds vacuously where nothing is received,
+  so they share warrant without sharing content. The route premises that actually assume
+  R-act₁ are:
+  - `29e71e43`, the reception half for creatures;
+  - `29e71e43` with `7de89edb`, the limited half;
   - the reception inputs of the route to OwnBeing (as in `32ac7e4e`).
 - **R-act₂ is a second commitment.** It carries:
   - `c4fb87a6` in the PERFECTION_OF_BEING_2 sense (identical with it);
@@ -406,12 +458,14 @@ Count each item once.
 - **The transfer locus.** `b26c10a0` = `5e281daf` + the pair. On the act reading the
   load sits on R-act₂ and `5e281daf`; on the dependence reading it sits on
   `2f6b9eff`. The secondary-cause rival `e3da0672` bears only on the latter.
-- **Locus (b)** of PR #2170 = `d164b1ff` (supported) + `c4fb87a6` + OwnBeing. Beyond
-  OwnBeing, its content is R-act₂ and the purity classification. Its route to OwnBeing
-  uses R-act₁.
+- **Locus (b)** of PR #2170 = `d164b1ff` in the PERFECTION_OF_BEING_2 sense
+  (supported) + `c4fb87a6` (= R-act₂) + OwnBeing + purity. Real having is a separate
+  member: R-act₂ does not make it a meaning postulate. Its route to OwnBeing uses
+  R-act₁.
 - **Possession (PR #2166) is separate.** Possession at the universal source is
   near-analytic on the power reading. The impersonal-source question of PR #2170 is
-  located here: in R-act₂ and OwnBeing.
+  located here: in R-act₂, real having, OwnBeing and purity. Keeping `9a0a4951` while
+  rejecting real having joins locus (b) to the power-eminence reading.
 
 ## 8. Next discriminating test
 
@@ -449,3 +503,16 @@ it.
 | P2-5 wisdom to intellect; purity | **Accepted.** The bridge is named: via `fe67d766`, results `fd01e30c` and `c256d381` (PR #2162), with the open capacity, exercise, grounding and recognition premises. Wisdom's purity is the open premise `44e39691`; the classification is stipulative. | §6.5 |
 | P2-6 "R-mode presupposes R-act" | **Accepted.** Qualified by the unread "vivere viventibus est esse" lead. | §4, §6 revision conditions |
 | P2-7 R-act records; DEF-MODE-OF-BEING gap | **Accepted.** R-act₁ and R-act₂ are statements with source arguments noted, not mere candidate primitives. The gap is recorded on #2103. | statements, §3 |
+
+**Re-check at `5f1c1e7a` (accept-qualified, 1 P1, 7 P2):**
+
+| Finding | Disposition | Where |
+| --- | --- | --- |
+| P1 the locus-(b) test drops `d164b1ff` | **Accepted.** The inconsistent bundle now includes real `Has` and purity, and no member is forced. "Keep `9a0a4951`, reject real Has" is an open option with no defender on file. R-act₂ makes at most "not lacking" a meaning postulate. New controls cover R-act₂, purity and OwnBeing without real having, and `9a0a4951` without real having. | Lean controls, `859b50dd`, §4, §5, §6.5, §7, attempt |
+| P2-1 `9a0a4951` takes a free `InAct` | **Accepted.** Restated over `F : GradesFrame` with `F.InAct` (IN_ACT_4). | Lean, `9a0a4951`, §1 |
+| P2-2 R-act₂ = `c4fb87a6` untyped | **Accepted.** `logically_equivalent_to` relation with `intensiveEsseIffPurePertainsToEsse` as evidence. `62ca3d65` is linked from `c4fb87a6`, `d164b1ff`, `8c07547d` and `859b50dd`. | relation, records, §3 |
+| P2-3 non-entailment from vocabulary alone | **Accepted.** "On the stated interfaces" restored in `0a2bf1a0` and `254ee26f`. The candidate bridge is named (q.7 a.1, unreceived esse unlimited, so it includes every pure perfection). | DEF, `254ee26f`, §3, §6.3 |
+| P2-4 R-act₁ "content shared with" | **Accepted.** Restated as a shared-warrant cluster of logically distinct members, with the route premises that assume it. | `8c64b036`, §4, §6.3, §7 |
+| P2-5 incomplete premise lists | **Accepted.** `fd01e30c` (seven premises) and `7d8bbdcb` (eleven) are listed in full. | §6.5 |
+| P2-6 objection 3's residual form | **Accepted.** The first clause blocks "vivens > ens ⇒ vivere > esse". The residual form "ipsum esse is ens tantum" is answered only by the second clause and is the quantifier view's claim. | §1, §5, §6.4 |
+| P2-7 "reused_unchanged_audit" | **Accepted.** Reclassified as `bounded_inspection`, with the finding reworded. The MODE_OF_BEING_2 sense-type gap stays recorded on #2103. | naming-first-mover-migration.json |

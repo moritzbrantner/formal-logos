@@ -4,7 +4,7 @@
   "input_statement_ids": [],
   "output_statement_id": "859b50dd-d198-4534-9706-da5a26417825",
   "rule": "Explicit finite profiles over Bool, checked by decision",
-  "meaning": "Two profiles of one subsistent source differing only in the reading of 'perfection of being' and what the source has: on the thin one whole-power possession holds and purity-as-perfection-of-being fails at the stand-in for life; on the act one both hold. The thin profile also satisfies R-act₁ with the reception and purity interfaces while R-act₂ fails. A structural surrogate.",
+  "meaning": "Two profiles of one subsistent source differing only in the reading of 'perfection of being' and what the source has: on the thin one whole-power possession holds and purity-as-perfection-of-being fails at the stand-in for life; on the act one both hold. The thin profile also satisfies R-act₁ with the reception and purity interfaces while R-act₂ fails. A structural surrogate. Locus (b): R-act₂, purity and own being without real having (d164b1ff intensive fails); 9a0a4951 kept while real having is rejected. Companion: intensiveEsseIffPurePertainsToEsse, R-act₂ as c4fb87a6 read as perfection of esse.",
   "assumption_statement_ids": [],
   "discharged_statement_ids": []
 }
