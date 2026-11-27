@@ -8,6 +8,11 @@ lean = "RegressHeadcountCriterion"
 paraphrase = "A headcount advantage surviving every finite addition is exactly a finite charged inventory against an infinite one. An acyclic regress supplies an infinite charged inventory if its visited bearers have distinct charges. A shared countable infinity of other objects can make two total inventories equipotent despite this advantage in additions."
 definitions = ["Headcount advantage after every finite addition"]
 
+[statement.connection_plan]
+target_statement_id = "82cfaf26-fc86-54ab-8328-9a7b2bdbbe21"
+missing_bridge = "Apply the second clause of RegressHeadcountCriterion to ConcreteExistentialSupply.graph m w for the rival in which actual concrete grounding at w is acyclic (5e002319-3828-4de8-96bc-98ebf34072d7) but has a descending chain of actual concreta, with an injective charge on the visited grounds, so the finite well-founded account has a headcount advantage surviving every finite addition; then add an explicit, separately assessed parsimony-acceptance premise that at matched explanatory adequacy the account with that advantage is to be preferred."
+blocker = "No charge assignment for actual concrete grounds is formalized (token charges and charges for independent explanatory assumptions can give different verdicts, and a shared law may carry one charge), no matched-adequacy comparison of the two accounts of the same recipient exists, and no parsimony-acceptance premise is recorded. The headcount comparison leaves the acyclic regress consistent, so it cannot by itself support the well-foundedness premise."
+
 [[argument]]
 id = "Count distinct posits along an acyclic regress against a finite alternative"
 theorem = "headcountCriterion"
