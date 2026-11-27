@@ -6,18 +6,22 @@
   "inference_ids": [
     "d21c01f3-9706-48b7-9b97-157fea993fc3"
   ],
-  "meaning": "Two profiles of one subsistent source differing only in the reading of 'perfection of being' and what the source has: on the thin one whole-power possession holds and purity-as-perfection-of-being fails at the stand-in for life; on the act one both hold. A structural surrogate.",
+  "meaning": "Two profiles of one subsistent source differing only in the reading of 'perfection of being' and what the source has: on the thin one whole-power possession holds and purity-as-perfection-of-being fails at the stand-in for life; on the act one both hold. The thin profile also satisfies R-act₁ with the reception and purity interfaces while R-act₂ fails. A structural surrogate.",
   "definition_ids": [
-    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "0a2bf1a0-bfc5-45d7-966a-a28919b6e847",
+    "84147eb5-88ef-46e7-9a0d-9c18d5137f16",
+    "6ced5205-e6a4-585e-950e-3b22e7c9ef01",
+    "4433942e-aaf6-55a9-b777-66e55638103d",
     "65e38ffa-5a1c-55d0-935c-6538d843b780",
     "3aba5f19-f48d-50db-bc57-93ba2e99f845",
-    "5dc08b95-ca15-52ab-b8cd-2b558e9a13f7",
-    "5f851204-5991-5e16-87f1-e8b3ed729708"
+    "5dc08b95-ca15-52ab-b8cd-2b558e9a13f7"
   ],
   "disambiguation_ids": [
     "1aef8986-ed29-564f-9803-d812d2ff63e1",
     "1795a62e-f78b-5f5b-94e7-9e7490824811",
     "dc9c0a1b-1759-5b1c-9ab9-ee7bea8847b7",
-    "b1640e51-d7d4-5a80-9992-29fa1ded8048"
-  ]
+    "b1640e51-d7d4-5a80-9992-29fa1ded8048",
+    "62ca3d65-8dd4-4187-abe1-a928b3045f12"
+  ],
+  "sense_mixing_control": true
 }

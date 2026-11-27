@@ -7,5 +7,5 @@
   "theorem": "TruthCore.Results.Causality.ModeOfBeingMiddleTerm.modesPairIffTotalTransfer",
   "comparator_config": "results/7b468e42-fd65-4c0c-a9de-003ae9a16d79/comparator.json",
   "status": "solution-present",
-  "description": "Forward: from a mode of being of an actual perfection and the total-cause premise, the total cause causes the perfection. Backward: take 'mode of being' to be 'had in act'; the mode premise is then trivial and the total-cause premise is the composite. Premise-free: it is the equivalence itself, a certificate that the decomposition shifts the load rather than lightening it."
+  "description": "Forward: from a mode of being of an actual perfection and the total-cause premise, the total cause causes the perfection. Backward: take 'mode of being' to be 'had in act'; the mode premise is then trivial and the total-cause premise is the composite. Premise-free: the equivalence of the pair, existentially closed over the primitive, with the composite. It is an instance of a general fact about middle-term decompositions; that the decomposition shifts rather than lightens this load is a judgment resting on the absence of any independent fixing of the primitive beyond the act-of-being thesis."
 }

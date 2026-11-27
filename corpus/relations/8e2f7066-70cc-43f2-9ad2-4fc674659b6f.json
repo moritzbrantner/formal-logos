@@ -1,0 +1,10 @@
+{
+  "id": "8e2f7066-70cc-43f2-9ad2-4fc674659b6f",
+  "label": "Source support for whole-power real possession from q.4 a.2 ad 3",
+  "subject_kind": "claim",
+  "subject_id": "1c66ee49-5521-48d5-9001-700c5b14ddbd",
+  "predicate": "supports",
+  "object_kind": "statement",
+  "object_id": "d164b1ff-ad31-5fbc-8ef9-eb0db51ebd96",
+  "note": "Ad 3 says that none of the perfections of being can be lacking to subsistent being and that God's esse 'includit in se vitam et sapientiam'. The premise says that what is its own being has every perfection of being as a real determination (Has). The passage does not settle real having: the same article satisfies 'not lacking' through eminent preexistence (first proof) and 'ut unum' (ad 1), and DISAMB dc9c0a1b separates eminently containing from really having; 02d16349 lists this as an open choice. Kept as support, like the SCG I.28 claim 1c67e58f."
+}

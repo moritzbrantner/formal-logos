@@ -1,0 +1,11 @@
+{
+  "id": "8c64b036-3db9-4143-9a8d-d7814cc84c79",
+  "label": "R-act1: the esse of whatever is not its own being is received in a principle and limited",
+  "paraphrase": "Analyst formulation, attribution deferred: the reception thesis of the act of being. For every x that is not its own being, x's esse is received in some principle, as act in receiving potency (EsseReceivedIn), and x's esse is limited (EsseLimited). It is the content shared with the reception framework (7fcfcee8, 14325c83) and the real-distinction premises of the q.3 a.4 routes. It does not say that every pure perfection is a perfection of esse (R-act2): the thin profile of the mode-of-being controls satisfies it while R-act2 fails. Its source arguments (q.4 a.1 ad 3, q.3 a.4, De ente c.4) are to be assessed, not taken as a bare primitive. Open.",
+  "lean_declaration": "TruthCore.Causality.ModeOfBeingMiddleTerm.FiniteEsseReceivedAndLimited",
+  "definition_ids": [
+    "4433942e-aaf6-55a9-b777-66e55638103d",
+    "6ced5205-e6a4-585e-950e-3b22e7c9ef01",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "id": "254ee26f-01d5-4359-bdde-5779b6e80533",
+  "label": "R-act2, intensive esse: every pure perfection is a perfection of esse itself",
+  "paraphrase": "Analyst formulation, attribution deferred: every pure perfection is a perfection of esse itself (PERFECTION_OF_BEING_2, IntensiveEsseFrame.OfEsse), so that subsistent esse includes it. It is c4fb87a6 with 'perfection of being' read in the intensive sense. q.4 a.1 ad 3 states the act thesis in two steps ('comparatur enim ad omnia ut actus ... unde ipsum esse est actualitas omnium rerum, et etiam ipsarum formarum'), and q.4 a.2 ad 3 applies it to life and wisdom. Reception of esse (R-act1) does not give it: the bridge from R-act1 to R-act2 is missing. Purity of life and wisdom is a stipulative classification (DEF-PURE-PERFECTION). Open.",
+  "lean_declaration": "TruthCore.Causality.ModeOfBeingMiddleTerm.IntensiveEsse",
+  "definition_ids": [
+    "0a2bf1a0-bfc5-45d7-966a-a28919b6e847",
+    "65e38ffa-5a1c-55d0-935c-6538d843b780"
+  ],
+  "disambiguation_ids": [
+    "62ca3d65-8dd4-4187-abe1-a928b3045f12"
+  ]
+}

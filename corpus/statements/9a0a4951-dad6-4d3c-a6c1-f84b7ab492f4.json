@@ -1,0 +1,14 @@
+{
+  "id": "9a0a4951-dad6-4d3c-a6c1-f84b7ab492f4",
+  "label": "What is its own being lacks no perfection of being, being in act in it formally or eminently",
+  "paraphrase": "The formal-or-eminent reading of ST I q.4 a.2 ad 3's reason clause ('nulla de perfectionibus essendi potest deesse ei quod est ipsum esse subsistens'): whatever is its own being is in act, in the frame's mode-open act, in every perfection of being. 'Not lacking' is read as being in act formally or eminently, the HAVING_EVERY_PERFECTION_1 side of DISAMB dc9c0a1b, not as really having the perfection as a determination (d164b1ff, the HAVING_EVERY_PERFECTION_2 side). The same article satisfies 'not lacking' through eminent preexistence (first proof) and 'ut unum' (ad 1). Sibling reading, not a strength-ordered version: no statement relates InAct to Has.",
+  "lean_declaration": "TruthCore.Causality.ModeOfBeingMiddleTerm.OwnBeingLacksNoPerfectionOfBeingInAct",
+  "definition_ids": [
+    "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168",
+    "5f851204-5991-5e16-87f1-e8b3ed729708"
+  ],
+  "disambiguation_ids": [
+    "dc9c0a1b-1759-5b1c-9ab9-ee7bea8847b7",
+    "dba7b1de-f3a0-57af-9af9-b2a4da3136fa"
+  ]
+}
