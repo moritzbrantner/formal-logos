@@ -1068,3 +1068,74 @@ The recorded profile and role diagnostics establish the displayed finite compari
 ## Research attempts citing this note
 
 - [Subsistent wisdom and same-source intrinsic self-understanding bridge test](../../corpus/attempts/d3a0e98a-8c92-4236-92bb-a3e22d49b172.json)
+
+## Identifying the source from the represented actual history
+
+The [#2051 boundary](../../corpus/results/38ebb0ba-2e44-44a2-8bb1-61617e0b5200.json)
+compares the same designated maximum in the existing #468 ladder. The
+admissibility profile requires its necessary underived signature and
+the five structural premises. Pair each route with a #1867 copy/toggle
+schedule and observe the entire generated Boolean trace. Adjacent bits
+determine whether that step copied or toggled, so the full trace
+recovers the schedule in this class. A law that agrees on the actual
+input but differs on an unvisited input is outside the copy/toggle
+restriction. The trace provides no test of such differences by itself.
+
+The intellectual and simple impersonal assignments use the same fixed
+copy schedule, so they agree at every recorded time and give opposite
+HAS_INTELLECT_1 and HAS_WILL_1 values at the designated root. The
+source predicates come from the #468 route. Their relation to the
+schedule is unspecified, which is precisely why a schedule can be
+paired with either route. This control supplies a formal failure of
+identification on the stated admissible class. The restriction by
+the existing immateriality-to-intellect and intellect-to-will premises
+retains the intellectual witness, and both attributes are true on
+every remaining model. The work of ruling out rivals in that
+restriction comes from the added premises.
+
+At matched scope ask what accounts for the particular actual order,
+including its laws and any selecting exercise, as in the
+[whole-series comparison](../../corpus/attempts/a5958e25-0904-46cb-a9e8-62ca5f3f5286.json)
+and [#311](unique-feedback-explanation-311.md). The controlled output
+here is a single represented trace. The richer explanatory question
+requires the full order and a credible account of its actuality.
+
+| Account | Positive proposal and outstanding demand at that scope |
+| --- | --- |
+| Personal necessary source | Reasons and understood goods make an order intelligible, and actual agent-causal exercise could select it without a necessarily obtaining reason alone entailing it. A tied optimum shows why permissibility and actual selection are distinct. The productive exercise, its same-bearer attribution and why it provides an adequate stopping point still need warrant. Intellect and will as capacities do not establish that exercise. |
+| Necessary impersonal ground | A necessarily existing source with a constitutive constraint or a genuine productive power could explain common stable structure. If independently necessary content entails a unique whole order on the same accessible domain, it conflicts with any actual contingency of that order. A nonnecessitating power can preserve alternatives and then owes an account of actual exercise or structural determination, assessed under the same demand as personal selection. |
+| Brute stable order or primitive law | Stable laws and initial conditions can explain derivative events and sustain calibrated local induction while taking their own actuality as primitive. A best-system account instead earns descriptive and predictive economy from the stable mosaic. Both leave the ultimate why-this-order demand unsatisfied if that demand is warranted. The existing #1867 stable and finite-change controls bear specifically against inferring unrestricted law schedules from lack of an ultimate explanation. This wider option is assessed here without treating it as a witness to the #468 necessary-source signature. |
+
+**Provisional assessment.** Output parity gives no ranking on the
+specified record. Reason-guided choice offers a positive contrastive
+proposal where independently warranted reasons and genuine exercise
+are available. The same record gives no comparative basis for judging
+whether that proposal succeeds here, whether impersonal determination
+does, or whether an ultimate explanation is required. Neither rival's
+falsity or relative probability follows from the equality of the
+records. The quantity identified by a schedule reconstruction is an
+actual transition code, so it carries no conclusion about absence of
+explanation.
+
+**OPEN applicability bridge.** Show that the same designated source
+actually produces or determines the selected whole order under an
+independently specified account of production or determination. For
+identification by reports, specify feasible public observations or
+interventions, their measurement rules and why, against the strongest
+matched impersonal alternative, every same-history pair with
+different attributes disagrees on at least one permitted report. No
+source intervention is presently justified. The distinct laboratory
+control in `IdentifiabilityExamples.Surgery` splits a fiber when a
+public input is changed, using the existing response mechanisms.
+It leaves the availability of a source-sensitive experiment open.
+
+Reopen the comparison on a positive same-source exercise with
+independently supported reasons, a defended constraint that rules out
+one rival while preserving the same explanatory scope, or a calibrated
+report meeting the separation test. Prior positive routes via
+nonreceptive self-apprehension and attribute recognition retain their
+scopes. The typed `tests` edge targets the immateriality-to-intellect
+premise on the stage-two route. It supplies a scope diagnostic and
+carries no premise discharge.
+
+[Identifiability attempt](../../corpus/attempts/e2b70b2f-b6c8-4e46-b85a-c417aecfdcf6.json)

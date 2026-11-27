@@ -1,0 +1,10 @@
+{
+  "id": "d1ee5059-eb4f-47af-bb92-b431dc1f0ed1",
+  "label": "Test by Recognition omissions certificate",
+  "subject_kind": "result",
+  "subject_id": "efc50de4-5299-4e97-94cc-00e57d0da92b",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "1a3bbdc6-722c-4758-ab2f-b51628d8feee",
+  "note": "Tests omission of coverage in the first hidden-cost interpretation retaining apparent pointlessness, permission and narrow theism."
+}

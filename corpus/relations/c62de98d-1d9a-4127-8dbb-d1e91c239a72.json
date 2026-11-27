@@ -1,0 +1,10 @@
+{
+  "id": "c62de98d-1d9a-4127-8dbb-d1e91c239a72",
+  "label": "Test by Finite interpretations for the eleven derivations of rou for Every operation through a (1)",
+  "subject_kind": "result",
+  "subject_id": "133783a4-07b1-5727-9fca-7f9fb474db54",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "12bdfec3-81f6-59e6-91df-88b323ff860e",
+  "note": "Tests omitting this premise in the encoded everyFormInclinedFromFinality argument, with the other premises retained and the conclusion false in each corresponding control."
+}

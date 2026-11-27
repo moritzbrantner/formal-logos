@@ -71,7 +71,7 @@ pub const HELP: &str = "Usage: truth [--root PATH] [--json] status
        truth [--root PATH] [--json] frontier [--reaching-root] [--routes] [--frontier-root STATEMENT] [--fixture FILE]
        truth [--root PATH] [--json] frontier-diff --base REV [--head REV] [--frontier-root STATEMENT]
        truth [--root PATH] [--json] orphans [--frontier-root STATEMENT] [--by module|family | --senses | --base REV]
-       truth [--root PATH] [--json] connectivity [--frontier-root STATEMENT] [--list-isolated N]
+       truth [--root PATH] [--json] connectivity [--frontier-root STATEMENT] [--list-isolated N | --base REV]
        truth [--root PATH] [--json] bridges --constants FILE (--queue-file FILE | --target ID)...
              [--targets N] [--top K] [--pool M]
        truth [--root PATH] [--json] related STATEMENT [--limit N]

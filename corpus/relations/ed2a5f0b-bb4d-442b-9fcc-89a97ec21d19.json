@@ -1,0 +1,10 @@
+{
+  "id": "ed2a5f0b-bb4d-442b-9fcc-89a97ec21d19",
+  "label": "Test by Finite interpretations for the seven derivations of caus for Whatever causes a quality (1)",
+  "subject_kind": "result",
+  "subject_id": "86d080aa-4c6e-5f85-a86e-333c805d0093",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "d5a94eb1-72d2-53e0-9a52-9787b5b61a8d",
+  "note": "Tests omitting this premise in the encoded nothingMovesExceptInAct argument, with the other premises retained and the conclusion false in each corresponding control."
+}

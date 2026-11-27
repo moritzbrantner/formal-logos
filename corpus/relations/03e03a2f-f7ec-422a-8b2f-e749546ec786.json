@@ -1,0 +1,10 @@
+{
+  "id": "03e03a2f-f7ec-422a-8b2f-e749546ec786",
+  "label": "Test by Joint mathematical package: genuine Mathlib convergence/ for Every closed subset W of (1)",
+  "subject_kind": "result",
+  "subject_id": "695a73ac-2b13-5219-8b88-a963c29e6688",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "cad37467-5957-516c-aabf-5434d06486d0",
+  "note": "Checks the instance of closed-set limit admission in its stated indexed setting, including finite controls for dropping closure or the tail conditions."
+}

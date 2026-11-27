@@ -1,0 +1,10 @@
+{
+  "id": "75044d25-c391-4898-a898-4ec013d01e60",
+  "label": "Test by Controls for the typed LORD_2 and BLESSED_2 readings, ch for Whatever is PERFECT_2 and (1)",
+  "subject_kind": "result",
+  "subject_id": "8306684c-ca33-474b-b212-fd7013c3783a",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "dc3ec456-9fd1-4e1a-8690-c529fe831ee2",
+  "note": "Tests the converse strength implication in the registered interpretation. Same InAct, HasIntellect and MostBlessed. The strong version gives BLESSED_1 to every perfect being with intellect; the weak one only to such a being that is also good as to being and in act in understanding. Control part 3: a perfect intellectual being not in act in understanding satisfies the weak version and falsifies the strong one."
+}

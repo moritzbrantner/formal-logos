@@ -54,3 +54,33 @@ conclusion = "Controls for the grounded perfection-transfer derivation"
 axioms = []
 rule = "Explicit finite interpretations, checked by decision or case analysis"
 meaning = "Omission: in the concurrent interpretation (full shared background) only nonuniversal transfer fails and unrestricted transfer fails; with one self-causing being only no self-causation of esse fails and unrestricted transfer and the residual fail; with a source that does not transfer skill only universal-scope transfer fails and unrestricted transfer fails. Strictness: nonuniversal transfer holds where the residual fails. Nonvacuity: all premises and the conclusion hold where a nonuniversal cause actually causes another's esse. Model-witnessed facts about these interpretations only; they show where each premise is needed, not that any premise is false."
+
+[[relation]]
+id = "Test by Controls for the grounded perfection-transfer derivation, checked"
+label = "Test by Controls for the grounded perfection-transfer derivation, checked"
+subject_kind = "result"
+subject_id = "40f6a49b-4582-4e3e-bb12-81e818c51262"
+predicate = "tests"
+object_kind = "statement"
+object_id = "10cd24ed-3878-489b-819e-02820a6ef2cd"
+note = "Tests omission of this premise from causeOfBeingCausesEveryPerfectionGrounded in the three designated transfer interpretations, with exactly one substantive input dropped at a time."
+
+[[relation]]
+id = "Test by Controls for the grounded perfection-transfer derivation for Universal esse CAUSE_2: c (1)"
+label = "Test by Controls for the grounded perfection-transfer derivation for Universal esse CAUSE_2: c (1)"
+subject_kind = "result"
+subject_id = "40f6a49b-4582-4e3e-bb12-81e818c51262"
+predicate = "tests"
+object_kind = "statement"
+object_id = "b26c10a0-983d-5a88-aa03-cc601bc1ddc6"
+note = "Tests omission of this premise from causeOfBeingCausesEveryPerfectionGrounded in the three designated transfer interpretations, with exactly one substantive input dropped at a time."
+
+[[relation]]
+id = "Test by Controls for the grounded perfection-transfer derivation for UNITING-CAUSE_3"
+label = "Test by Controls for the grounded perfection-transfer derivation for UNITING-CAUSE_3"
+subject_kind = "result"
+subject_id = "40f6a49b-4582-4e3e-bb12-81e818c51262"
+predicate = "tests"
+object_kind = "statement"
+object_id = "b62a64ab-ac11-569a-b8e8-de51a74b058f"
+note = "Tests omission of this premise from causeOfBeingCausesEveryPerfectionGrounded in the three designated transfer interpretations, with exactly one substantive input dropped at a time."

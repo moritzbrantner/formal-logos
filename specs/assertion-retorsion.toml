@@ -217,3 +217,53 @@ predicate = "refutes"
 object_kind = "statement"
 object_id = "Nobody believes any supplied content"
 note = "The assertion witness believes the denial under the explicit sincerity bridge in the same belief relation."
+
+[[relation]]
+id = "Test by Assertion retorsion controls for the five separate bridges"
+label = "Test by Assertion retorsion controls for the five separate bridges"
+subject_kind = "result"
+subject_id = "306fab99-55eb-456d-ae19-28afcc6703d6"
+predicate = "tests"
+object_kind = "statement"
+object_id = "13b5b929-dfc0-4ce0-8b3b-f00430024030"
+note = "Tests omitted representation as existing in the interpretation with a thought and an empty existence extension."
+
+[[relation]]
+id = "Test by Assertion retorsion controls for the five separate bridg for Assertions of this conten (1)"
+label = "Test by Assertion retorsion controls for the five separate bridg for Assertions of this conten (1)"
+subject_kind = "result"
+subject_id = "306fab99-55eb-456d-ae19-28afcc6703d6"
+predicate = "tests"
+object_kind = "statement"
+object_id = "1edfc1d1-34d4-4f3e-99e6-e07a6ba58ffc"
+note = "Tests omitted cognitive realization with an assertion marker and no occurring thought."
+
+[[relation]]
+id = "Test by Assertion retorsion controls for the five separate bridg for Assertion of this content (1)"
+label = "Test by Assertion retorsion controls for the five separate bridg for Assertion of this content (1)"
+subject_kind = "result"
+subject_id = "306fab99-55eb-456d-ae19-28afcc6703d6"
+predicate = "tests"
+object_kind = "statement"
+object_id = "42114721-87d8-44b7-8057-255c732fd7df"
+note = "Tests omitted meaningfulness in the assertion-marker interpretation with an empty cognitive-content extension."
+
+[[relation]]
+id = "Test by Assertion retorsion controls for the five separate bridg for Thought realizations of a (1)"
+label = "Test by Assertion retorsion controls for the five separate bridg for Thought realizations of a (1)"
+subject_kind = "result"
+subject_id = "306fab99-55eb-456d-ae19-28afcc6703d6"
+predicate = "tests"
+object_kind = "statement"
+object_id = "bbfacacc-6f44-4ca0-b9ba-75962a2a1d2e"
+note = "Tests omitted experienced realization in the interpretation where a thought realizes the assertion and no episode is experienced."
+
+[[relation]]
+id = "Test by Assertion retorsion controls for the five separate bridg for Assertions of the denial (1)"
+label = "Test by Assertion retorsion controls for the five separate bridg for Assertions of the denial (1)"
+subject_kind = "result"
+subject_id = "306fab99-55eb-456d-ae19-28afcc6703d6"
+predicate = "tests"
+object_kind = "statement"
+object_id = "fdd06612-3e84-4711-8a14-afe458507066"
+note = "Tests omitted sincerity in the one-agent interpretation asserting the no-beliefs content despite an empty belief predicate and an available reason."

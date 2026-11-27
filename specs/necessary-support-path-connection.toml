@@ -133,3 +133,23 @@ object_id = "df42581f-5fff-4b5f-8b40-6e16d2b890f2"
 verification_result_id = "Actual paths give support coverage via their last edge"
 strictness_result_id = "Path-scope strictness and coverage-versus-path separation certificate"
 note = "Same Profile, actual world and grounding interpretation. The single-premise theorem certifies the implication; the named populated control separates the commitments. No premise is established. For coverage strictness, rootedPair violates even necessary-source paths, hence also all-source paths by restrictPaths."
+
+[[relation]]
+id = "Test by Path-scope strictness and coverage-versus-path separation certificate"
+label = "Test by Path-scope strictness and coverage-versus-path separation certificate"
+subject_kind = "result"
+subject_id = "9d1d6f89-b0e3-409e-83df-3ec7f310c2f1"
+predicate = "tests"
+object_kind = "statement"
+object_id = "c36b509c-3057-40f5-ac0b-60751fb0cf27"
+note = "Tests the converse strength implication in the registered interpretation. Same Profile, actual world and grounding interpretation. The single-premise theorem certifies the implication; the named populated control separates the commitments."
+
+[[relation]]
+id = "Test by Changing-direct-support actual-path application certificate"
+label = "Test by Changing-direct-support actual-path application certificate"
+subject_kind = "result"
+subject_id = "021068fa-6203-4e54-ab4f-1330189d1cd3"
+predicate = "tests"
+object_kind = "statement"
+object_id = "1f61f12c-2b5c-5871-bf56-03c65844ae30"
+note = "Tests the converse strength implication in the registered interpretation. Same Profile, actual world and grounding interpretation. The single-premise theorem certifies the implication; the named populated control separates the commitments."

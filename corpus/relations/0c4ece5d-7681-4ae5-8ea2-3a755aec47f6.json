@@ -1,0 +1,10 @@
+{
+  "id": "0c4ece5d-7681-4ae5-8ea2-3a755aec47f6",
+  "label": "Test by Ayer's 1936 test is trivial: in any TRUTH_CONDITIONAL_LANGUAGE_4, a sentence s is…",
+  "subject_kind": "result",
+  "subject_id": "8f115674-5ecd-5abf-9103-4415e3ab01cb",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "92ad4e06-5b99-529d-9501-5a86917dbfa4",
+  "note": "Tests the 1936 criterion with the disjunctive auxiliary premise on any observation not entailed by the selected sentence's negation."
+}

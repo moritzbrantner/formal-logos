@@ -1,0 +1,10 @@
+{
+  "id": "b99d590a-fda4-4f96-a812-e6610e8ec38e",
+  "label": "Test by Finite interpretations for the eight root-wiring derivat for Negation of the exact cou (1)",
+  "subject_kind": "result",
+  "subject_id": "6e7d86fe-21e0-537d-9ad7-ca2d3a5cd010",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "8f183538-204e-5a50-8a07-3d88dc999b47",
+  "note": "Tests omission of this premise from movedOnlyAsInPotencyFromCountertupleRefutation in the finite moved-not-potent countertuple interpretation."
+}

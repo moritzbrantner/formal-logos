@@ -43,3 +43,13 @@ premises = []
 conclusion = "Temporal coverage and life calibration omission controls"
 rule = "Explicit finite witnesses and boundary elimination"
 meaning = "Nonvacuity and carrying omissions for temporal transport only, not metaphysical possibility or a renewed immutability-alone investigation."
+
+[[relation]]
+id = "Test by Temporal coverage omission controls verified"
+label = "Test by Temporal coverage omission controls verified"
+subject_kind = "result"
+subject_id = "8ba56dc8-9e82-4c46-b89e-3648acab3255"
+predicate = "tests"
+object_kind = "argument"
+object_id = "fbd0011a-80ca-4401-9bbd-883cc276311e"
+note = "Tests coverage and life-to-existence calibration for the everlasting consumer in separate finite omission assignments and an inhabited positive control."

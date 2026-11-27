@@ -1,0 +1,10 @@
+{
+  "id": "830e7011-3bfc-45be-8f23-f4656a1e9d05",
+  "label": "Test by Controls for the typed LORD_3 reading, checked",
+  "subject_kind": "result",
+  "subject_id": "96ce418a-a2d7-40ac-bf8d-cf698f16f4dc",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "c691e3d0-5dd0-404a-a1dd-9a4a278dcd31",
+  "note": "Tests the converse strength implication in the registered interpretation. Same IsGod, InAct, GoodIn, WillsGoodFor and esse. The strong version gives a willed good to every existing being, God included; the weak one only to a distinct intellectual being whose being God causes. Control part 5: with no intellectual being other than God and no willing, the weak version holds and the strong one fails."
+}

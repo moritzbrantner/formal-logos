@@ -42,3 +42,13 @@ conclusion = "Individuated veracity assembled routes jointly witnessed at one be
 axioms = ["propext", "Classical.choice", "Quot.sound"]
 rule = "Evaluate the existing selective sample and its existential erasure"
 meaning = "Analyst witness, unattributed. Reuses the checked selective sample of the #1410 controls and the erasure representation theorem: one bearer satisfies both routes' premises and the representation for its induced legacy profile, actually asserts, and the legacy target holds nonvacuously. The kernel proof uses propext and Quot.sound only. No divine applicability, arbitrary legacy representation, moral norm or cognition mechanism follows from the finite sample."
+
+[[relation]]
+id = "Test by Assembled veracity routes are jointly nonvacuous at one bearer"
+label = "Test by Assembled veracity routes are jointly nonvacuous at one bearer"
+subject_kind = "result"
+subject_id = "75e72e5e-942a-42d4-a3ab-519acb18ee25"
+predicate = "tests"
+object_kind = "argument"
+object_id = "9cb3d63f-de88-4184-b87d-709e7d89606b"
+note = "Tests nonvacuity of the composed assertion route using the reused populated selective-veracity assignment."

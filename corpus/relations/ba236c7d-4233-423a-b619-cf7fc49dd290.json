@@ -1,0 +1,10 @@
+{
+  "id": "ba236c7d-4233-423a-b619-cf7fc49dd290",
+  "label": "Test by Sustaining-causation controls checked",
+  "subject_kind": "result",
+  "subject_id": "b12b253b-7031-41f3-ac3f-42b7bad3d166",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "140544c4-3152-4543-9590-9567acf874a2",
+  "note": "Tests the presence-to-act bridge in the finite IMMENSE_2 presence derivation."
+}

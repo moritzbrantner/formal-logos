@@ -1,0 +1,10 @@
+{
+  "id": "2e9881c9-b037-4f7e-8538-4035e82d19d7",
+  "label": "Test by One existing production fixture separates single origin from identity by all ancestors",
+  "subject_kind": "result",
+  "subject_id": "2eed6fe3-331d-40cd-80a3-641e21ec899f",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "53cc2c53-1f9a-4e4a-8402-3ac464fa8352",
+  "note": "Tests identity by matching ancestors in a three-object graph where distinct effects share their sole strict ancestor."
+}

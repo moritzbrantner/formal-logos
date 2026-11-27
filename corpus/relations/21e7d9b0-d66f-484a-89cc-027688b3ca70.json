@@ -1,0 +1,10 @@
+{
+  "id": "21e7d9b0-d66f-484a-89cc-027688b3ca70",
+  "label": "Test by Controls for the CREATURE_1 and CREATURE_2 senses, checked",
+  "subject_kind": "result",
+  "subject_id": "ad2b5334-2477-462a-ae50-d389dcda55ee",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "5969873b-a619-4880-a92d-77e1f2752513",
+  "note": "Tests transfer from being caused by another to CREATURE_1 on the finite profile where no universal cause supplies the selected bearer."
+}

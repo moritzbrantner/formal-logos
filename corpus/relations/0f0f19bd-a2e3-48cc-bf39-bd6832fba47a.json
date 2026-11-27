@@ -1,0 +1,10 @@
+{
+  "id": "0f0f19bd-a2e3-48cc-bf39-bd6832fba47a",
+  "label": "Test by Surrogate controls for local versus global Euclidean access checked",
+  "subject_kind": "result",
+  "subject_id": "9bfd7ece-248f-48e9-8671-2c741e669351",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "d65fb12b-7a85-479a-8c40-4b10f8b3c7c8",
+  "note": "Tests whether actual-only Euclidean access gives local transitivity in the clustered counterframe, with the appendix keeping local transitivity despite global Euclidean failure."
+}

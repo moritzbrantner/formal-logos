@@ -1,0 +1,10 @@
+{
+  "id": "e99ba5de-bccc-43c3-964a-4eea858e8ff9",
+  "label": "Test by Finite interpretations for the nine derivations of round for Whatever grounds a thing' (1)",
+  "subject_kind": "result",
+  "subject_id": "9b1c8d31-2458-5ece-9902-ea7dd0371d6c",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "a4606a6b-8209-58d9-b221-a26a7f31b0e1",
+  "note": "Tests omitting this premise in the encoded actPriorFromGround argument, with the other premises retained and the conclusion false in each corresponding control."
+}

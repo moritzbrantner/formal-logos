@@ -1,0 +1,10 @@
+{
+  "id": "cdabd525-4b10-4f2f-94c0-aaa4574e181c",
+  "label": "Test by Holder-root identification controls checked for Whatever has power for the actual cont (1)",
+  "subject_kind": "result",
+  "subject_id": "d8073ba0-ff27-479a-adbe-05086acb1da1",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "b517ca3e-503e-4346-b0e0-7b99ad4e875d",
+  "note": "Tests holder presence by admitting a holder only in the nonactual world while retaining the other step-one conditions."
+}

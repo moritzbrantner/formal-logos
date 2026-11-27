@@ -54,3 +54,13 @@ object_id = "Time-local body mate uniqueness"
 verification_result_id = "All-time stability yields local uniqueness"
 strictness_result_id = "Form mate control certificate"
 note = "Sole-premise universal specialization; the changed-mate profile in the closed certificate retains UniqueAt but violates StableMate. Both use the same attachment relation parameters. Source and person applicability remain open."
+
+[[relation]]
+id = "Test by Time-local form mate exclusivity does not ensure all-time stability"
+label = "Test by Time-local form mate exclusivity does not ensure all-time stability"
+subject_kind = "result"
+subject_id = "23d2d521-1024-4ee3-bb04-80ace39cfd1f"
+predicate = "tests"
+object_kind = "statement"
+object_id = "cde66fea-13d4-40e5-b849-adc7b5176d15"
+note = "Tests the converse strength implication in the registered interpretation. Sole-premise universal specialization; the changed-mate profile in the closed certificate retains UniqueAt but violates StableMate. Both use the same attachment relation parameters. Source and person applicability remain open."

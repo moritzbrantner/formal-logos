@@ -1,0 +1,10 @@
+{
+  "id": "2f09b011-9817-449c-8ef5-b6eb7c898edf",
+  "label": "Test by Formal fact: 'every POTENCY_1 is being actualized', 'wha for Nothing is simultaneously (1)",
+  "subject_kind": "result",
+  "subject_id": "8353d90e-9bdb-52cd-bda6-85745282cde4",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "c6d6379b-6a9b-55b5-a701-3df289dfcca4",
+  "note": "Tests omitting nonoverlap from the five-input motion-based act-priority derivation in its typed model class."
+}

@@ -1,0 +1,10 @@
+{
+  "id": "b136ef89-9ca3-44f7-abd2-d18724449c69",
+  "label": "Test by Finite interpretations for the fourteen derivations of round 2: for each premise other than…",
+  "subject_kind": "result",
+  "subject_id": "7ebb0ab0-4022-5113-9810-67b4afa60cfc",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "0436de86-6579-53f2-9ff5-2111ba44ebae",
+  "note": "Tests omitting this premise in the encoded intellectualExerciseRequiresActFromExistence argument, with the other premises retained and the conclusion false in each corresponding control."
+}

@@ -258,3 +258,73 @@ delta_statement_id = "The route's modal frame is symmetric (route frame premise 
 evidence_result_ids = { implication = "KTB route frame entails KT route frame", equivalence = "KTB route frame is the KT route frame plus symmetry" }
 statement_parameter_indices = { stronger = [0, 1, 2], weaker = [0, 1, 2], delta = [0, 1, 2] }
 note = "Difference of the KTB and KT route frame premises: KTB adds to KT exactly that the route's frame is symmetric (axiom B). Same frame m.ontic.frame. Strictness is recorded on the strengthens registration (two-world order frame); no separator setting is recorded here."
+
+[[relation]]
+id = "Test by KTB route frame is the KT route frame plus symmetry"
+label = "Test by KTB route frame is the KT route frame plus symmetry"
+subject_kind = "result"
+subject_id = "3e0e4f55-093f-4e26-ab80-2928ece4e2af"
+predicate = "tests"
+object_kind = "statement"
+object_id = "60795e6e-1fe1-5c55-9718-bc2a22867244"
+note = "Checks the exact decomposition of the stronger statement into the weaker version and the registered delta under the comparison's shared interpretation."
+
+[[relation]]
+id = "Test by S4 route frame is the KT route frame plus transitivity"
+label = "Test by S4 route frame is the KT route frame plus transitivity"
+subject_kind = "result"
+subject_id = "6ab159fc-250c-49b1-9d47-970798e2ce92"
+predicate = "tests"
+object_kind = "statement"
+object_id = "d8d91023-300e-50f4-9cc5-e62f44a1aa04"
+note = "Checks the exact decomposition of the stronger statement into the weaker version and the registered delta under the comparison's shared interpretation."
+
+[[relation]]
+id = "Test by S5 route frame is the KTB route frame plus transitivity"
+label = "Test by S5 route frame is the KTB route frame plus transitivity"
+subject_kind = "result"
+subject_id = "6041a2b6-32c0-4832-8553-43bd7cd5e97a"
+predicate = "tests"
+object_kind = "statement"
+object_id = "873d057f-e58e-53cc-a054-093f7c5a4238"
+note = "Checks the exact decomposition of the stronger statement into the weaker version and the registered delta under the comparison's shared interpretation."
+
+[[relation]]
+id = "Test by S5 route frame is the S4 route frame plus symmetry"
+label = "Test by S5 route frame is the S4 route frame plus symmetry"
+subject_kind = "result"
+subject_id = "e2575d88-098f-461a-9326-02b2903ec78d"
+predicate = "tests"
+object_kind = "statement"
+object_id = "873d057f-e58e-53cc-a054-093f7c5a4238"
+note = "Checks the exact decomposition of the stronger statement into the weaker version and the registered delta under the comparison's shared interpretation."
+
+[[relation]]
+id = "Test by Frame-class strictness controls, checked"
+label = "Test by Frame-class strictness controls, checked"
+subject_kind = "result"
+subject_id = "bffe3578-9ae5-4fe5-9bad-594ee928797d"
+predicate = "tests"
+object_kind = "statement"
+object_id = "60795e6e-1fe1-5c55-9718-bc2a22867244"
+note = "Tests the converse strength implication in the registered interpretation. Same route Profile and frame. KTB adds symmetry to KT; the two-world order frame is KT and not KTB."
+
+[[relation]]
+id = "Test by Frame-class strictness controls, checked for The accessibility relation of the route's (1)"
+label = "Test by Frame-class strictness controls, checked for The accessibility relation of the route's (1)"
+subject_kind = "result"
+subject_id = "bffe3578-9ae5-4fe5-9bad-594ee928797d"
+predicate = "tests"
+object_kind = "statement"
+object_id = "873d057f-e58e-53cc-a054-093f7c5a4238"
+note = "Tests the converse strength implication in the registered interpretation. Same route Profile and frame. S5 adds transitivity to KTB; the reflexive symmetric non-transitive path is KTB and not S5."
+
+[[relation]]
+id = "Test by Frame-class strictness controls, checked for The accessibility relation of the route's (2)"
+label = "Test by Frame-class strictness controls, checked for The accessibility relation of the route's (2)"
+subject_kind = "result"
+subject_id = "bffe3578-9ae5-4fe5-9bad-594ee928797d"
+predicate = "tests"
+object_kind = "statement"
+object_id = "d8d91023-300e-50f4-9cc5-e62f44a1aa04"
+note = "Tests the converse strength implication in the registered interpretation. Same route Profile and frame. S4 adds transitivity to KT; the reflexive non-transitive chain is KT and not S4."

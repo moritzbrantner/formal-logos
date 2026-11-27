@@ -1,0 +1,29 @@
+[batch]
+vocab = "TruthCore.Causality.GivingChoiceNar"
+results = "TruthCore.Results.Causality.GivingChoiceNar"
+
+[[statement]]
+id = "No admissible withholding cell for a NECESSARY_2 grounded recipient"
+lean = "NoAdmissibleWithholdingCellForNecessaryGrounded"
+paraphrase = "Analyst formulation. Fix an actual root g, a NECESSARY_2 actual concretum x it grounds, and a representative history k. If the selected world map sends k to an accessible world where g exists, the cell represented by k cannot guarantee that g withholds giving x being. Only the representative is required to map to an accessible world retaining g."
+definitions = ["38b92bb6-33ae-5817-85c6-b5a1afa63bd1", "c57e2682-08e6-527e-950f-0fa0a7ff11ef", "a1b2e330-388f-4120-bc5c-969642317792", "62dfa893-b633-4513-9790-8f9a0a3087e0", "1b8baf77-84fa-5513-a138-7fa14840dd87", "beb654a7-e204-5f4c-a7b4-45e886ba7109", "c54f0922-eb5c-4abd-9bde-6586e4127424"]
+disambiguations = ["DISAMB-NECESSARY", "DISAMB-CONCRETE-ABSTRACT-CRITERIA"]
+
+[[argument]]
+id = "Rigidity excludes admissible cells withholding NECESSARY_2 grounded recipients"
+theorem = "rigidity_excludes_admissible_withholding_cell"
+premises = ["eeccc832-02c7-426a-bb16-d269260751be"]
+conclusion = "No admissible withholding cell for a NECESSARY_2 grounded recipient"
+axioms = []
+rule = "Apply giving rigidity at the reflexive cell representative"
+meaning = "Reflexivity places the representative in its own withholding cell. Bridge (b2) requires this same root to give the same NECESSARY_2 grounded recipient being at that representative's mapped world, since the world is accessible and retains the root. The two conclusions contradict."
+
+[[argument]]
+id = "NAR from admissible root cells and exclusion of NECESSARY_2 recipient withholding"
+theorem = "nar_of_admissible_cells_and_recipient_exclusion"
+strong_version_needed = {"0dd78706-e6f7-40a6-9232-eac3df1c0ae9" = "Retains the frozen all-recipient proof for comparison. The necessary-only route supplies the restriction that suffices for NAR."}
+premises = ["0c27f65a-6a6b-438a-b96c-b2bab9f21ac3", "46a468b2-8132-4ef4-bd31-6e8292013f3b", "0dd78706-e6f7-40a6-9232-eac3df1c0ae9", "No admissible withholding cell for a NECESSARY_2 grounded recipient"]
+conclusion = "43651417-cd19-43d7-8f70-8def61acb0f0"
+axioms = []
+rule = "Apply common-root reach and eliminate the grounded case by the recipient cell exclusion"
+meaning = "For any NECESSARY_2 actual concretum, common-root reach either identifies it as the root or gives the root as its ground. In the grounded case the selected cell has an admissible representative by the two STIT premises, contradicting recipient exclusion with the same profile, frame and map. Only root and reach are used from the intellectual common-root premise. Instantiating the exclusion with rigidity reuses the original composed N1 assumptions."

@@ -1,0 +1,10 @@
+{
+  "id": "706535e8-ba33-4141-bc95-7fc865e8f759",
+  "label": "Test by At each observed cutoff, a supplied stable copy-law prof for Bounded induction tests: (1)",
+  "subject_kind": "result",
+  "subject_id": "3d8486c8-76ac-5adb-bfcb-50f9ca7614cc",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "8bba1b58-ae87-598d-8c28-6eed9a5e6943",
+  "note": "Tests the exact prediction boundary on the stable and open-future continuation profiles, with grounding varied separately from law admission."
+}

@@ -1,0 +1,10 @@
+{
+  "id": "200135b0-558b-461b-b675-d871824da7be",
+  "label": "Test by For any selected candidate, global well-founded actual-c for Every actual contingent c (1)",
+  "subject_kind": "result",
+  "subject_id": "a76dc25b-fba0-5c07-8f61-00c0a8ce1a6d",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "c71c068c-bbae-5ed5-a99d-70b155c8d239",
+  "note": "Tests local versus global contingent dependence using a model where the selected ancestry cone retains dependence but the global condition fails."
+}

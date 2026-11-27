@@ -1,0 +1,10 @@
+{
+  "id": "d2cb965f-0ba4-4a07-b69e-024178343ba1",
+  "label": "Test by Total-holding controls checked for A total-holding series cannot go on to infinity",
+  "subject_kind": "result",
+  "subject_id": "727d5a3f-5af7-4dcc-9e8d-5a9897b23135",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "c4e333da-9ca7-4861-a4ac-947bb4371547",
+  "note": "Tests satisfiability of the total-holding regress restriction on the card-and-floor interpretation despite the mutual holding cycle excluded by the unrestricted version."
+}

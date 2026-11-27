@@ -1,0 +1,10 @@
+{
+  "id": "680effac-a43b-4311-a330-ae73907ae7c1",
+  "label": "Test by Controls for the grounded perfection-transfer derivation for Universal esse CAUSE_2: c (1)",
+  "subject_kind": "result",
+  "subject_id": "40f6a49b-4582-4e3e-bb12-81e818c51262",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "b26c10a0-983d-5a88-aa03-cc601bc1ddc6",
+  "note": "Tests omission of this premise from causeOfBeingCausesEveryPerfectionGrounded in the three designated transfer interpretations, with exactly one substantive input dropped at a time."
+}

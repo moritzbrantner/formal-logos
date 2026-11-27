@@ -30,3 +30,13 @@ conclusion = "Revision uptake controls structural certificate"
 rule = "Boolean routing evaluation"
 meaning = "Echoed recommendation retains the old selector under either assessment; transmission and inversion both change output with assessment; noise following a closed gate leaves assessment ineffective. These structural controls establish no understanding, competence, freedom or ownership. Analyst formulation for #945; no root discharge; attribution deferred."
 axioms = []
+
+[[relation]]
+id = "Test by Revision uptake controls structural certificate by port evaluation"
+label = "Test by Revision uptake controls structural certificate by port evaluation"
+subject_kind = "result"
+subject_id = "d0d6abaa-3a02-4892-9d89-f457fb67a720"
+predicate = "tests"
+object_kind = "statement"
+object_id = "8f3850f0-fd7a-441b-ad6b-723750781b68"
+note = "Tests the scope of Boolean recommendation sensitivity with echo, inversion and closed-gate noise, which distinguish sensitivity to the port from successful assessment."

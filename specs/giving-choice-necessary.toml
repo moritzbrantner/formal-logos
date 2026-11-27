@@ -1,0 +1,38 @@
+[batch]
+vocab = "TruthCore.Causality.GivingChoiceNar"
+results = "TruthCore.Results.Causality.GivingChoiceNecessary"
+
+[[statement]]
+id = "Each NECESSARY_2 grounded actual recipient has a withholding cell"
+lean = "RootsHaveNecessaryWithholdingCells"
+paraphrase = "OPEN analyst formulation. At the selected world, every NECESSARY_2 actual concretum directly grounded by an actual root has a cell of that root consisting only of histories whose mapped worlds lack its giving to that recipient. The recipient can determine the cell. Accessibility and the root's existence at the mapped worlds are separate inputs."
+definitions = ["38b92bb6-33ae-5817-85c6-b5a1afa63bd1", "c57e2682-08e6-527e-950f-0fa0a7ff11ef", "a1b2e330-388f-4120-bc5c-969642317792", "62dfa893-b633-4513-9790-8f9a0a3087e0", "1b8baf77-84fa-5513-a138-7fa14840dd87", "beb654a7-e204-5f4c-a7b4-45e886ba7109", "c54f0922-eb5c-4abd-9bde-6586e4127424"]
+disambiguations = ["DISAMB-NECESSARY", "DISAMB-CONCRETE-ABSTRACT-CRITERIA"]
+
+[[argument]]
+id = "All-recipient cells entail NECESSARY_2 recipient cells"
+theorem = "necessary_cells_of_all_cells"
+premises = ["0dd78706-e6f7-40a6-9232-eac3df1c0ae9"]
+conclusion = "Each NECESSARY_2 grounded actual recipient has a withholding cell"
+axioms = []
+rule = "Restrict the universal coverage of withholding cells to necessary recipients"
+meaning = "On the same world map and profile, each NECESSARY_2 grounded actual recipient is covered by all-recipient withholding. This single-application weakening certifies the strength order."
+
+[[argument]]
+id = "NAR from admissible cells restricted to NECESSARY_2 recipients"
+theorem = "nar_of_necessary_cells_and_recipient_exclusion"
+premises = ["0c27f65a-6a6b-438a-b96c-b2bab9f21ac3", "46a468b2-8132-4ef4-bd31-6e8292013f3b", "Each NECESSARY_2 grounded actual recipient has a withholding cell", "bf7b9a2d-d98f-49a4-a236-c963c4830693"]
+conclusion = "43651417-cd19-43d7-8f70-8def61acb0f0"
+axioms = []
+rule = "Apply bare common-root reach and eliminate a necessary grounded recipient by cell exclusion"
+meaning = "The common root either is the necessary actual concretum or directly grounds it. In the grounding case, necessity puts the recipient within the restricted cell premise. Admissibility at its representative contradicts recipient exclusion. The Lean proof uses bare common-root reach. The registered argument obtains it from the intellectual common-root premise because the bare-root record has legacy links to several unbridged senses."
+
+[[relation]]
+id = "All-recipient cell coverage strengthens NECESSARY_2 recipient coverage"
+subject_kind = "statement"
+subject_id = "0dd78706-e6f7-40a6-9232-eac3df1c0ae9"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "Each NECESSARY_2 grounded actual recipient has a withholding cell"
+verification_result_id = "All-recipient cells entail NECESSARY_2 recipient cells"
+note = "All other inputs are held fixed. The weaker sibling requires cells only for recipients that are NECESSARY_2 at the selected world."

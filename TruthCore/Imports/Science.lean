@@ -3,7 +3,10 @@ module
 
 public import TruthCore.Science.AdaptiveHistoryAccess
 public import TruthCore.Science.FineTuningEvidence
+public import TruthCore.Science.FineTuningInformation
 public import TruthCore.Science.FineTuningSelection
+public import TruthCore.Science.Identifiability
+public import TruthCore.Science.IdentifiabilityExamples
 public import TruthCore.Science.InductionSelection
 public import TruthCore.Science.MeasurementCalibration
 public import TruthCore.Science.PolynomialInduction

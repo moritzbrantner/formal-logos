@@ -1,0 +1,10 @@
+{
+  "id": "df67a720-05fa-4969-9de8-501f8731adb8",
+  "label": "Test by Without the scope premise the dilemma fails: there is a for For every NORM_ON_CLAIMS_3 (1)",
+  "subject_kind": "result",
+  "subject_id": "deea7004-0d10-5224-ba22-a86e2e8d77bb",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "620f5e6c-d3dd-56a8-97c3-1603245b281c",
+  "note": "Tests omission of the self-scope condition in a Boolean norm that holds while the exempted acceptable thesis fails the standard."
+}

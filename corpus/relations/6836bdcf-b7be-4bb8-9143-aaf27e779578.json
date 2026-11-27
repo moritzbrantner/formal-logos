@@ -1,0 +1,10 @@
+{
+  "id": "6836bdcf-b7be-4bb8-9143-aaf27e779578",
+  "label": "Test by Explicit finite S5 models distinguish singleton root col for In every S5 frame, full-p (1)",
+  "subject_kind": "result",
+  "subject_id": "1bb0ac1f-5e23-5ceb-9699-3ca1adf18a70",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "1f21c751-c8eb-570e-8359-b139fe4fbcff",
+  "note": "Tests the single-component qualification on disconnected S5, where the root has all three full-predicate collapse statuses and an outside label fails collapse; separately tests removing S5 at the shared sink."
+}

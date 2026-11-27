@@ -1,0 +1,10 @@
+{
+  "id": "7e4a9dc4-d717-4361-8915-ad11eb71b6ce",
+  "label": "Test by In the stipulated one-name one-predicate Boolean-carrier language, original and swapped…",
+  "subject_kind": "result",
+  "subject_id": "21abc4c1-6924-5486-a377-57ab06a0017f",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "cb86e3e2-f392-5022-931c-6f110a000bba",
+  "note": "Tests the exact uniqueness law on the fixed singleton anchor that distinguishes the two Boolean first-order interpretations with identical sentence truth."
+}

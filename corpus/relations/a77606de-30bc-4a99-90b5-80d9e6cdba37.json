@@ -1,0 +1,10 @@
+{
+  "id": "a77606de-30bc-4a99-90b5-80d9e6cdba37",
+  "label": "Test by Recover the missing requirements and exact witnesses fro for A giving plan rejects wit (1)",
+  "subject_kind": "result",
+  "subject_id": "839a93fa-8011-46c7-9215-b126b93d40e7",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "b1d7825e-a1ae-4f86-af2e-1b9819055e0f",
+  "note": "Checks when the end-placement requirement fails in the governing-plan interpretation."
+}

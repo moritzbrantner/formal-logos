@@ -1,0 +1,10 @@
+{
+  "id": "af3e4508-f214-408f-990e-18a6287d2226",
+  "label": "Test by Controls of the round-3 Christ-and-Church batch: one fin for Commission reports from t (1)",
+  "subject_kind": "result",
+  "subject_id": "47011ff0-25d2-587e-844a-17d6b1a7b11f",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "1d693b5c-ea47-5df4-baae-d034bfddba42",
+  "note": "Tests omitting this premise in the encoded commissionReportsFromTestimony argument, with the other premises retained and the conclusion false in each corresponding control."
+}

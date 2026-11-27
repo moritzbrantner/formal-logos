@@ -1,0 +1,25 @@
+{
+  "id": "4d047904-9277-4f86-b911-48ce64407a1c",
+  "label": "All-recipient cells entail NECESSARY_2 recipient cells",
+  "premise_statement_ids": [
+    "0dd78706-e6f7-40a6-9232-eac3df1c0ae9"
+  ],
+  "conclusion_statement_id": "e1c6cc9b-1bd3-470e-a42a-5404ddf60577",
+  "inference_ids": [
+    "a8dd7143-4aee-4d6d-8b22-861352156ce6"
+  ],
+  "meaning": "On the same world map and profile, each NECESSARY_2 grounded actual recipient is covered by all-recipient withholding. This single-application weakening certifies the strength order.",
+  "definition_ids": [
+    "62dfa893-b633-4513-9790-8f9a0a3087e0",
+    "c57e2682-08e6-527e-950f-0fa0a7ff11ef",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "a1b2e330-388f-4120-bc5c-969642317792",
+    "c54f0922-eb5c-4abd-9bde-6586e4127424"
+  ],
+  "disambiguation_ids": [
+    "623ddbf6-9683-5361-bae4-e348a00ec680",
+    "83264cf5-01fe-52fc-9a00-eeb024f6496e"
+  ]
+}

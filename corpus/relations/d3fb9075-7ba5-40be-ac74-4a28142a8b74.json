@@ -1,0 +1,10 @@
+{
+  "id": "d3fb9075-7ba5-40be-ac74-4a28142a8b74",
+  "label": "Test by Finite interpretations for the eight derivations of roun for OPEN reading of ST I q.7 (1)",
+  "subject_kind": "result",
+  "subject_id": "27d0aa1f-bd7c-5946-b886-0dea80ab650e",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "e2462fa8-1958-5ab7-827d-fb99c2175f02",
+  "note": "Tests omitting this premise in the encoded nothingElseReachesPrimary argument, with the other premises retained and the conclusion false in each corresponding control."
+}

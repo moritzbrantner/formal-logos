@@ -1,0 +1,10 @@
+{
+  "id": "d4efdb8e-32db-41c2-b40b-4476b310057a",
+  "label": "Test by Strong supplementation is equivalent to the existing Ove for For the supplied fixed Ma (1)",
+  "subject_kind": "result",
+  "subject_id": "a164e3cd-b595-5550-9791-67290fed3ac3",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "645aaccf-04a8-5e87-bd89-cc2b9c2c65d5",
+  "note": "Checks the exact overlap criterion on arbitrary supplied partial orders under the strong supplementation condition."
+}

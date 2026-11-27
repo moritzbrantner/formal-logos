@@ -47,3 +47,23 @@ premises = ["A bearer is numerically identified by all its nonempty-path ancesto
 conclusion = "861e20d6-7d65-5856-85cf-0cd0d0c167f3"
 rule = "Exclude incoming paths at sources and apply the universal identity criterion"
 meaning = "A nonempty path ending at a source would give it an incoming final edge. Any two sources therefore agree on every strict ancestor, and the universal criterion identifies them. This argument requires neither population, well-foundedness nor excluded middle. The same criterion also applies to dependent beings, where the sibling control shows how it exceeds source uniqueness."
+
+[[relation]]
+id = "Test by One existing production fixture separates single origin from identity by all ancestors"
+label = "Test by One existing production fixture separates single origin from identity by all ancestors"
+subject_kind = "result"
+subject_id = "2eed6fe3-331d-40cd-80a3-641e21ec899f"
+predicate = "tests"
+object_kind = "statement"
+object_id = "53cc2c53-1f9a-4e4a-8402-3ac464fa8352"
+note = "Tests identity by matching ancestors in a three-object graph where distinct effects share their sole strict ancestor."
+
+[[relation]]
+id = "Test by One existing production fixture separates single origin for Every two distinct bearers (1)"
+label = "Test by One existing production fixture separates single origin for Every two distinct bearers (1)"
+subject_kind = "result"
+subject_id = "2eed6fe3-331d-40cd-80a3-641e21ec899f"
+predicate = "tests"
+object_kind = "statement"
+object_id = "88082a9b-1b20-44e5-a7e3-c3b5223eb6b6"
+note = "Tests pairwise ancestry comparison in the same three-object graph with two incomparable effects of one source."

@@ -1,0 +1,10 @@
+{
+  "id": "57902d93-7aa2-48d2-a149-90d45e05b7b8",
+  "label": "Test by A two-entity interpretation has a same-account causal ed for If a distinct cause and e (1)",
+  "subject_kind": "result",
+  "subject_id": "bed98986-7fdd-56f0-805b-89b930719c17",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "4ed7eae3-c5dd-531b-90fa-b42528bd22c9",
+  "note": "Tests strict comparison using the finite same-account tie that satisfies the non-strict comparison."
+}

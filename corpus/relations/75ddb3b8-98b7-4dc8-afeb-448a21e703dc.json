@@ -1,0 +1,10 @@
+{
+  "id": "75ddb3b8-98b7-4dc8-afeb-448a21e703dc",
+  "label": "Test by Esse-cause priority controls, checked",
+  "subject_kind": "result",
+  "subject_id": "0de15acc-6313-4111-a6a5-9ef5487f1a0f",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "7a63a3fe-a29f-5282-8106-79fedcb10d08",
+  "note": "Tests omission of this premise from actualEsseCausePriority in the typed esse-cause and actual-grounding omission profiles."
+}

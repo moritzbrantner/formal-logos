@@ -1,0 +1,10 @@
+{
+  "id": "e6bbfd4a-dda7-49e1-a000-e42e11b8c422",
+  "label": "Test by Finite interpretations for the eight derivations of roun for OPEN Lean-bound reading o (1)",
+  "subject_kind": "result",
+  "subject_id": "27d0aa1f-bd7c-5946-b886-0dea80ab650e",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "791fa216-ce40-5e7d-82c5-0bd5fe245446",
+  "note": "Tests omitting this premise in the encoded universalCauseTransfers argument, with the other premises retained and the conclusion false in each corresponding control."
+}

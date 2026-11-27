@@ -1,0 +1,10 @@
+{
+  "id": "34b86982-7ae9-4d9a-a17b-07011870f409",
+  "label": "Test by S5 node is the S4 node plus a symmetric frame",
+  "subject_kind": "result",
+  "subject_id": "55d28645-5b35-41e1-bb67-e14080b667f4",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "7089ce3d-3855-5bfb-a3c3-c202e8ff458a",
+  "note": "Checks the exact decomposition of the stronger statement into the weaker version and the registered delta under the comparison's shared interpretation."
+}

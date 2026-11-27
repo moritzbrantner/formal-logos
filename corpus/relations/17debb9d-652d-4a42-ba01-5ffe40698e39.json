@@ -1,0 +1,10 @@
+{
+  "id": "17debb9d-652d-4a42-ba01-5ffe40698e39",
+  "label": "Test by Joint absence and replacement controls on finite equivalence frames",
+  "subject_kind": "result",
+  "subject_id": "4eda66b6-a2c1-439e-984f-f22a0c747727",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "90b222c4-376f-4dab-8a20-adf639316685",
+  "note": "Tests omission of roster amalgamation in the populated Boolean profiles with finite roster, accessible individual absences and no joint absence."
+}

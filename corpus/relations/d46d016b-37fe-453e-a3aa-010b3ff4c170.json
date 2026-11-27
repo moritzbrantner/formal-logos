@@ -1,0 +1,10 @@
+{
+  "id": "d46d016b-37fe-453e-a3aa-010b3ff4c170",
+  "label": "Test by For any shared Being/Respect vocabulary, under explicitl for The cause of a thing's be (1)",
+  "subject_kind": "result",
+  "subject_id": "7edad3eb-cf0f-590a-86af-1daf4890cdb8",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "f8ba2429-b4f1-5712-a4d3-798213963d34",
+  "note": "Checks the exact decomposition of the stronger statement into the weaker version and the registered delta under the comparison's shared interpretation."
+}

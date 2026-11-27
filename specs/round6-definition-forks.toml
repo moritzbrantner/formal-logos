@@ -193,3 +193,133 @@ premises = []
 conclusion = "STMT-ROUND6-DEFINITION-FORKS-CONTROLS"
 rule = "Explicit finite interpretations"
 meaning = "Finite interpretations for the ten derivations of round 6: for each premise except excluded middle, a hand-written model (societies Three or Unit, beings Bool, the nine-power carrier) in which the other premises hold and the conclusion fails (23 omission models, checked by decide or short proofs), and one joint nonvacuity witness per map in which every premise and conclusion holds with populated antecedents. Satisfiability and omission only; no model is claimed to describe Church history or reality."
+
+[[relation]]
+id = "Test by Finite interpretations for the ten derivations of round 6: for each premise except excluded…"
+label = "Test by Finite interpretations for the ten derivations of round 6: for each premise except excluded…"
+subject_kind = "result"
+subject_id = "d3dd4601-36f0-51a2-a5f4-29fc87e49e84"
+predicate = "tests"
+object_kind = "statement"
+object_id = "0075b6ed-766b-51af-88f4-b6c4a91ba6a0"
+note = "Tests omitting this premise in the encoded churchJointFromAspects, namedChurchCoverageFromAspects arguments, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the ten derivations of round for For any being g, if Jesus (1)"
+label = "Test by Finite interpretations for the ten derivations of round for For any being g, if Jesus (1)"
+subject_kind = "result"
+subject_id = "d3dd4601-36f0-51a2-a5f4-29fc87e49e84"
+predicate = "tests"
+object_kind = "statement"
+object_id = "1bd154e6-6ff4-5810-baff-e10433d1766a"
+note = "Tests omitting this premise in the encoded institutionLinkFromTeachingGrant argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the ten derivations of round for Visible authoritative spir (1)"
+label = "Test by Finite interpretations for the ten derivations of round for Visible authoritative spir (1)"
+subject_kind = "result"
+subject_id = "d3dd4601-36f0-51a2-a5f4-29fc87e49e84"
+predicate = "tests"
+object_kind = "statement"
+object_id = "1c083654-1ed5-5e25-873c-1dc5bd48c992"
+note = "Tests omitting this premise in the encoded churchJointFromAspects, churchVisibleFromAspects, namedChurchCoverageFromAspects arguments, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the ten derivations of round for Every power the fixed tabl (1)"
+label = "Test by Finite interpretations for the ten derivations of round for Every power the fixed tabl (1)"
+subject_kind = "result"
+subject_id = "d3dd4601-36f0-51a2-a5f4-29fc87e49e84"
+predicate = "tests"
+object_kind = "statement"
+object_id = "1d1edbd9-27ab-55c9-bfd2-1007dcc85f0b"
+note = "Tests omitting this premise in the encoded teachingInclusiveFromBounds, namedGovernanceCoverageFromBounds arguments, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the ten derivations of round for Every visible authoritativ (1)"
+label = "Test by Finite interpretations for the ten derivations of round for Every visible authoritativ (1)"
+subject_kind = "result"
+subject_id = "d3dd4601-36f0-51a2-a5f4-29fc87e49e84"
+predicate = "tests"
+object_kind = "statement"
+object_id = "2f10f0f7-90ae-5822-9014-a9ccbffc5ae2"
+note = "Tests omitting this premise in the encoded churchVisibleFromAspects argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the ten derivations of round for For every GOD_4 candidate (1)"
+label = "Test by Finite interpretations for the ten derivations of round for For every GOD_4 candidate (1)"
+subject_kind = "result"
+subject_id = "d3dd4601-36f0-51a2-a5f4-29fc87e49e84"
+predicate = "tests"
+object_kind = "statement"
+object_id = "63f5b040-f322-50db-8d78-811245fffab3"
+note = "Tests omitting this premise in the encoded immediateFailsFromEnvoyFounding argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the ten derivations of round for For any being g: if Jesus (1)"
+label = "Test by Finite interpretations for the ten derivations of round for For any being g: if Jesus (1)"
+subject_kind = "result"
+subject_id = "d3dd4601-36f0-51a2-a5f4-29fc87e49e84"
+predicate = "tests"
+object_kind = "statement"
+object_id = "820771a7-1173-510f-88ec-445b203fb1fd"
+note = "Tests omitting this premise in the encoded institutionLinkFromTeachingGrant argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the ten derivations of round for Every Johannine commission (1)"
+label = "Test by Finite interpretations for the ten derivations of round for Every Johannine commission (1)"
+subject_kind = "result"
+subject_id = "d3dd4601-36f0-51a2-a5f4-29fc87e49e84"
+predicate = "tests"
+object_kind = "statement"
+object_id = "a8365742-e60c-51e8-8e1b-881e7adbf2fe"
+note = "Tests omitting this premise in the encoded johnIndependentFromStrands argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the ten derivations of round for For some GOD_4 candidate g (1)"
+label = "Test by Finite interpretations for the ten derivations of round for For some GOD_4 candidate g (1)"
+subject_kind = "result"
+subject_id = "d3dd4601-36f0-51a2-a5f4-29fc87e49e84"
+predicate = "tests"
+object_kind = "statement"
+object_id = "b1e34a68-8015-5707-8ba0-1c4f93706109"
+note = "Tests omitting this premise in the encoded immediateFailsFromEnvoyFounding argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the ten derivations of round for Some scoped spiritual comm (1)"
+label = "Test by Finite interpretations for the ten derivations of round for Some scoped spiritual comm (1)"
+subject_kind = "result"
+subject_id = "d3dd4601-36f0-51a2-a5f4-29fc87e49e84"
+predicate = "tests"
+object_kind = "statement"
+object_id = "b21a4851-8bfc-50df-9413-2223d212ca0b"
+note = "Tests omitting this premise in the encoded spiritualFailsFromInvisibleCommunion argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the ten derivations of round for The selected governing pre (1)"
+label = "Test by Finite interpretations for the ten derivations of round for The selected governing pre (1)"
+subject_kind = "result"
+subject_id = "d3dd4601-36f0-51a2-a5f4-29fc87e49e84"
+predicate = "tests"
+object_kind = "statement"
+object_id = "b85ee5a5-8a4f-5da1-bab3-bc5453e51b2c"
+note = "Tests omitting this premise in the encoded narrowFailsFromTeaching, teachingInclusiveFromBounds arguments, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the ten derivations of round for Every Church-criterion soc (1)"
+label = "Test by Finite interpretations for the ten derivations of round for Every Church-criterion soc (1)"
+subject_kind = "result"
+subject_id = "d3dd4601-36f0-51a2-a5f4-29fc87e49e84"
+predicate = "tests"
+object_kind = "statement"
+object_id = "d13f6ca0-0b66-5f86-8994-0e2c91deafbf"
+note = "Tests omitting this premise in the encoded churchJointFromAspects, churchVisibleFromAspects, spiritualFailsFromInvisibleCommunion, namedChurchCoverageFromAspects arguments, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the ten derivations of round for Every power satisfying the (1)"
+label = "Test by Finite interpretations for the ten derivations of round for Every power satisfying the (1)"
+subject_kind = "result"
+subject_id = "d3dd4601-36f0-51a2-a5f4-29fc87e49e84"
+predicate = "tests"
+object_kind = "statement"
+object_id = "fc2912b3-613c-52cc-84d3-9135cc456efe"
+note = "Tests omitting this premise in the encoded teachingInclusiveFromBounds, namedGovernanceCoverageFromBounds, institutionLinkFromTeachingGrant arguments, with the other premises retained and the conclusion false in each corresponding control."

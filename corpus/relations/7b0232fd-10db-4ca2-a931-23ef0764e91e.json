@@ -1,0 +1,10 @@
+{
+  "id": "7b0232fd-10db-4ca2-a931-23ef0764e91e",
+  "label": "Test by Separate strict-order control for the two mixed interfaces",
+  "subject_kind": "result",
+  "subject_id": "7f355eb0-7687-4b20-8aed-2ba9f15978fa",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "8550ca62-92d1-5ef0-af17-9de5bf272262",
+  "note": "Tests replacing one common strict priority relation by two separate ones on the Unit bearer and Unit act, whose union contains a closed walk."
+}

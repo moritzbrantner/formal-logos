@@ -1,0 +1,10 @@
+{
+  "id": "85ad138c-ffb0-4dd6-9867-d4f4152ee957",
+  "label": "Test by Compare circular supply with admitted and exercised source-only alternatives",
+  "subject_kind": "result",
+  "subject_id": "07a1a262-7645-47b7-9bd8-a9a1939d8656",
+  "predicate": "tests",
+  "object_kind": "argument",
+  "object_id": "4df18b31-1b44-4d5c-abef-15d203c6c2f7",
+  "note": "Tests the borrowing trap and its removal while retaining the same source, recipient and actual path credit in the matched exercise records."
+}

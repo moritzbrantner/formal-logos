@@ -1,0 +1,10 @@
+{
+  "id": "c6c6b00a-0b22-48f1-a307-8a43fa9303b6",
+  "label": "Test by Successor model for the strict-ground map at the efficient-cause consumer",
+  "subject_kind": "result",
+  "subject_id": "a01e0429-1544-453d-973b-779f186c1654",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "0f49d71e-09e6-5a9c-b7e7-e0e9b8fe769c",
+  "note": "Tests the selected premise in the following setting. Nat, Unit, D(x,y) iff x < y; E(c,x,()) and C(c,x) iff c = x+1; P(c,x) iff x < c. The atoms are labels. strictGroundConsumerAllowsInfiniteCauses; every f has cause f+1 even though each cause is independent of its effect. The certificate provides both PLG consistency and the distinct-edge map under the identity labelling, together with the cause-independence consumer on that same interpretation."
+}

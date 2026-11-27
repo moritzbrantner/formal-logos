@@ -1,0 +1,10 @@
+{
+  "id": "42148ee6-1695-4800-a349-69f8a4ddbdec",
+  "label": "Test by Finite interpretations for the eleven derivations of rou for Every actualizing form is (1)",
+  "subject_kind": "result",
+  "subject_id": "133783a4-07b1-5727-9fca-7f9fb474db54",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "144b0405-9800-5032-bf9c-5f26a2d4d2d1",
+  "note": "Tests omitting this premise in the encoded everyFormInclinedFromFinality argument, with the other premises retained and the conclusion false in each corresponding control."
+}

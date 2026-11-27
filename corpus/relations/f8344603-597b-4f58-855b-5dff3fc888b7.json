@@ -1,0 +1,10 @@
+{
+  "id": "f8344603-597b-4f58-855b-5dff3fc888b7",
+  "label": "Test by Finite interpretations for the thirteen derivations of r for What is SIMPLY_PRIOR_1 to (1)",
+  "subject_kind": "result",
+  "subject_id": "59d1be21-3572-5381-8674-06d17ec79c97",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "70e98bb5-a96d-5d69-870d-e6bd0df2b813",
+  "note": "Tests omitting this premise in the encoded simplyPriorGroundViaEsseCause argument, with the other premises retained and the conclusion false in each corresponding control."
+}

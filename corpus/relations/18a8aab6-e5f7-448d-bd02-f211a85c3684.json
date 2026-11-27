@@ -1,0 +1,10 @@
+{
+  "id": "18a8aab6-e5f7-448d-bd02-f211a85c3684",
+  "label": "Test by Populated interpretation controls export the exact part- for Every existing proper par (1)",
+  "subject_kind": "result",
+  "subject_id": "e2744e44-9252-5a2b-a95e-57fe091fa9d7",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "d677b0c4-ce93-5d51-a157-17105d546228",
+  "note": "Tests omission of existing-part coverage with plurality, whole-composition application and a remote simple in one stipulated frame."
+}

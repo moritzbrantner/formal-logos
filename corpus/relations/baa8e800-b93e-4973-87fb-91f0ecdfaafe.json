@@ -1,0 +1,10 @@
+{
+  "id": "baa8e800-b93e-4973-87fb-91f0ecdfaafe",
+  "label": "Test by An endorsement disagreement and limited knowledge coexis for Every test sentence has a (1)",
+  "subject_kind": "result",
+  "subject_id": "121f634a-a462-51db-9274-c93bae7cf30e",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "dbf0c4c2-9d64-5b2a-a18f-4342dcbdc723",
+  "note": "Tests whether endorsement disagreement or limited knowledge changes truth by retaining a fixed truth profile."
+}

@@ -1,0 +1,10 @@
+{
+  "id": "502ae936-cfc8-419d-addb-993a55798103",
+  "label": "Test by De ente extrinsic-source controls",
+  "subject_kind": "result",
+  "subject_id": "08275113-da24-4510-ab91-1d2553eb1c88",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "4ccb319f-9b7e-41fd-a560-d4affa25816b",
+  "note": "Tests omission of this premise from distinctEsseOtherCauseFromCaused in the brute, self-cause or nonactual-cause interpretation for the corresponding premise."
+}

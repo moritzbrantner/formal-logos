@@ -1,0 +1,10 @@
+{
+  "id": "f782bd63-3269-4dd3-b5f0-48bad629a1cc",
+  "label": "Test by Rivals of the fourteen stage-two attribute premises surv for Every composite has a cau (1)",
+  "subject_kind": "result",
+  "subject_id": "120dd28f-c1e6-4fa2-8acf-26d0c1d5162a",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "ca07cae9-6102-564e-a7fd-efb013744b3d",
+  "note": "Tests the selected premise in the following setting. Same Composite and CausesIn predicates and esse respect; one being, one respect. Control.uncausedComposite in Control.Certificate. Other two premises of StageTwo.GodIsSimple.godIsSimple hold: God is maximal in being, and a cause of a quality in another is more such. Its conclusion (God is not composite) fails."
+}

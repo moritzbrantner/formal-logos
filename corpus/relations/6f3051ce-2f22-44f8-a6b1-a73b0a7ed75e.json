@@ -1,0 +1,10 @@
+{
+  "id": "6f3051ce-2f22-44f8-a6b1-a73b0a7ed75e",
+  "label": "Test by Controls for the typed IMMENSE_2 and INCOMPREHENSIBLE_2 readings, checked",
+  "subject_kind": "result",
+  "subject_id": "ccba9330-f025-4a69-af2d-82f7c50ab01c",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "c7c32f20-2637-4497-8053-f259d02aa922",
+  "note": "Tests the converse strength implication in the registered interpretation. Same InAct, CausesIn, esse and Immense. The strong version gives IMMENSE_1 to every cause of the being of all; the weak one only to such a cause that is also INFINITE_1. Control part 2: a cause of the being of all that is not infinite satisfies the weak version and falsifies the strong one."
+}

@@ -1,0 +1,10 @@
+{
+  "id": "15c86761-3c20-4976-964a-8cf39ec78bd5",
+  "label": "Test by Mutual-dependence omission controls for strict-grounding interpretation",
+  "subject_kind": "result",
+  "subject_id": "4bb9685c-42fb-4427-9d89-496f78394b62",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "42756c07-03cd-4b54-8ed6-ed6c1a5132aa",
+  "note": "Tests omitting the intended dependence-to-strict-ground mapping while retaining consistency of the Fine-style theory, leaving counterfactual dependence unlinked."
+}

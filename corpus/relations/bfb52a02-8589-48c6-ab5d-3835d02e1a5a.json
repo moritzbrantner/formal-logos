@@ -1,0 +1,10 @@
+{
+  "id": "bfb52a02-8589-48c6-ab5d-3835d02e1a5a",
+  "label": "Test by Finite interpretations for the ten derivations of round for Visible authoritative spir (1)",
+  "subject_kind": "result",
+  "subject_id": "d3dd4601-36f0-51a2-a5f4-29fc87e49e84",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "1c083654-1ed5-5e25-873c-1dc5bd48c992",
+  "note": "Tests omitting this premise in the encoded churchJointFromAspects, churchVisibleFromAspects, namedChurchCoverageFromAspects arguments, with the other premises retained and the conclusion false in each corresponding control."
+}

@@ -1,0 +1,10 @@
+{
+  "id": "d6d03272-6fef-4ad7-a5c5-9e676ff0afc3",
+  "label": "Test by A weak thesis whose own formulation lies outside its dem for Second-order self-applica (1)",
+  "subject_kind": "result",
+  "subject_id": "ddfb436d-4893-57a2-81a4-ed2c04e4418e",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "cea40225-d1f4-5330-a4e9-6e7c0e6628eb",
+  "note": "Tests the outside-domain branch using a Boolean weak thesis acceptable while the restricted norm holds and the strong norm fails on that thesis."
+}

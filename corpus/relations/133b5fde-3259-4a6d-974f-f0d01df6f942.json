@@ -1,0 +1,10 @@
+{
+  "id": "133b5fde-3259-4a6d-974f-f0d01df6f942",
+  "label": "Test by Finite interpretations for Every real determination of a first UNMOVED_2 mover is a pu (1)",
+  "subject_kind": "result",
+  "subject_id": "7349a3d5-f4c0-5464-bf00-d97e8b505715",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "e0c1f0de-83c4-5176-b0f1-b6e6c2237136",
+  "note": "Tests omission of purity of all determinations in the finite first-mover uniqueness bundle."
+}

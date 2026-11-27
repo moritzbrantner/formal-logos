@@ -1,0 +1,10 @@
+{
+  "id": "ef045bd9-25e6-4985-a66b-f6ff66693f7c",
+  "label": "Test by Classify consistency of a supplied PLG presentation by strict steps and weak returns",
+  "subject_kind": "result",
+  "subject_id": "00f2cd7c-c0a7-4eef-b57a-e59bde59b204",
+  "predicate": "tests",
+  "object_kind": "argument",
+  "object_id": "4bd8457a-2c92-4d47-bcb6-d32fda38af75",
+  "note": "Checks the sufficiency and exact boundary of the no-return criterion for consistency of the supplied theory, with predecessor-set ranks in the positive direction."
+}

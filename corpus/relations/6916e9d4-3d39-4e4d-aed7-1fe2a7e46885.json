@@ -1,0 +1,10 @@
+{
+  "id": "6916e9d4-3d39-4e4d-aed7-1fe2a7e46885",
+  "label": "Test by In the stipulated variant of Scott's ESSENCE_2 and NE th for The selected individual a (1)",
+  "subject_kind": "result",
+  "subject_id": "124d4e27-02d4-541e-9c61-3e5b0b4e6327",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "f062ef5f-82a4-58d4-86bc-b1eb0d8943a1",
+  "note": "Tests the effect of restricting both quantifiers to world-invariant properties in Scott's constant-domain embedding."
+}

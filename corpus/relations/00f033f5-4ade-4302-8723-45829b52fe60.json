@@ -1,0 +1,10 @@
+{
+  "id": "00f033f5-4ade-4302-8723-45829b52fe60",
+  "label": "Test by Formal controls: on any frame, box-existence gives actua for 4 schema: whatever is NEC (1)",
+  "subject_kind": "result",
+  "subject_id": "53ca8e9d-dfad-5b55-b395-6ecb4c3e46bf",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "b5fea0e6-a058-512f-bf11-ca740ebd3f06",
+  "note": "Tests iterated box-existence on the reflexive nontransitive chain where box-existence holds but its box does not."
+}

@@ -1725,6 +1725,47 @@ fn validate_settlement_actions(statement: &Obj) -> Res<()> {
     Ok(())
 }
 
+/// The optional `connection_plan` of a statement (AGENTS.md, "Connect every
+/// library to the case"): a statement outside the root's component names the
+/// root-route statement it is meant to reach, the missing bridge and the
+/// blocker. `truth connectivity --base` requires it of new disconnection.
+pub(crate) fn validate_connection_plan(statement: &Obj, statements: &HashSet<&str>) -> Res<()> {
+    let Some(plan) = statement.get("connection_plan") else {
+        return Ok(());
+    };
+    let plan = plan
+        .as_object()
+        .ok_or("connection_plan must be an object")?;
+    if let Some(field) = plan
+        .keys()
+        .find(|key| !CONNECTION_PLAN_FIELDS.contains(&key.as_str()))
+    {
+        return Err(format!(
+            "connection_plan has unknown field {field}; allowed: {}",
+            CONNECTION_PLAN_FIELDS.join(", ")
+        ));
+    }
+    for field in CONNECTION_PLAN_FIELDS {
+        if !string(plan, field).is_some_and(|value| !value.trim().is_empty()) {
+            return Err(format!(
+                "connection_plan.{field} must be a non-empty string"
+            ));
+        }
+    }
+    let target = text(plan, "target_statement_id");
+    if !statements.contains(target) {
+        return Err(format!(
+            "connection_plan.target_statement_id {target} is not a known statement id"
+        ));
+    }
+    if target == text(statement, "id") {
+        return Err("connection_plan.target_statement_id must name another statement".into());
+    }
+    Ok(())
+}
+
+const CONNECTION_PLAN_FIELDS: [&str; 3] = ["target_statement_id", "missing_bridge", "blocker"];
+
 fn validate_case_split(
     result: &Obj,
     statements: &HashSet<&str>,
@@ -2765,6 +2806,11 @@ fn validate(
         }
         validate_self_evident(path, fields, &claim_ids, &result_ids, &statement_ids)?;
         validate_settlement_actions(fields).map_err(|error| format!("{path}: {error}"))?;
+        validate_connection_plan(fields, &statement_ids)
+            .map_err(|error| format!("{path}: {error}"))?;
+        if let Some(plan) = fields.get("connection_plan").and_then(Value::as_object) {
+            validate_prose_ids(path, plan, &["missing_bridge", "blocker"], &citable)?;
+        }
         used_definitions.extend(validate_term_links(
             path,
             fields,
@@ -4661,6 +4707,50 @@ mod tests {
             let mut relations = registrations.clone();
             relations.push(comparison(extra));
             assert_eq!(strength_difference_warnings(&refs(&relations)).len(), 3);
+        }
+    }
+
+    #[test]
+    fn connection_plans_are_optional_and_validated() {
+        let statements = HashSet::from(["S", "T"]);
+        let validate = |plan: Option<serde_json::Value>| {
+            let mut statement = obj(serde_json::json!({"id": "S", "paraphrase": "s"}));
+            if let Some(plan) = plan {
+                statement.insert("connection_plan".into(), plan);
+            }
+            validate_connection_plan(&statement, &statements)
+        };
+        assert_eq!(validate(None), Ok(()));
+        let plan = |target: &str, bridge: &str| {
+            serde_json::json!({"target_statement_id": target,
+                "missing_bridge": bridge, "blocker": "No typed vocabulary yet."})
+        };
+        assert_eq!(validate(Some(plan("T", "S implies T."))), Ok(()));
+        for (plan, error) in [
+            (serde_json::json!([]), "connection_plan must be an object"),
+            (
+                plan("T", " "),
+                "connection_plan.missing_bridge must be a non-empty string",
+            ),
+            (
+                serde_json::json!({"target_statement_id": "T", "missing_bridge": "b"}),
+                "connection_plan.blocker must be a non-empty string",
+            ),
+            (
+                plan("U", "b"),
+                "connection_plan.target_statement_id U is not a known statement id",
+            ),
+            (
+                plan("S", "b"),
+                "connection_plan.target_statement_id must name another statement",
+            ),
+            (
+                serde_json::json!({"target_statement_id": "T", "missing_bridge": "b",
+                    "blocker": "x", "issue": 1}),
+                "connection_plan has unknown field issue; allowed: target_statement_id, missing_bridge, blocker",
+            ),
+        ] {
+            assert_eq!(validate(Some(plan)), Err(error.to_owned()));
         }
     }
 

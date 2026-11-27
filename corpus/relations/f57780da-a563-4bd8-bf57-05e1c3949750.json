@@ -1,0 +1,10 @@
+{
+  "id": "f57780da-a563-4bd8-bf57-05e1c3949750",
+  "label": "Test by Finite interpretations for the eleven derivations of rou for Causal explanations are c (1)",
+  "subject_kind": "result",
+  "subject_id": "133783a4-07b1-5727-9fca-7f9fb474db54",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "68172f57-65d2-53fe-930e-936ef99d9d60",
+  "note": "Tests omitting this premise in the encoded finitePredecessorsFromModes argument, with the other premises retained and the conclusion false in each corresponding control."
+}

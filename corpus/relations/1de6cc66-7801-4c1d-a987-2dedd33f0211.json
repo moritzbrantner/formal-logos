@@ -1,0 +1,10 @@
+{
+  "id": "1de6cc66-7801-4c1d-a987-2dedd33f0211",
+  "label": "Test by Finite interpretations for the eight derivations of roun for If y does not depend for (1)",
+  "subject_kind": "result",
+  "subject_id": "27d0aa1f-bd7c-5946-b886-0dea80ab650e",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "8ab3d114-d6e2-5f6d-805b-ae901f56d39b",
+  "note": "Tests omitting this premise in the encoded nonmutualDependenceSuffices argument, with the other premises retained and the conclusion false in each corresponding control."
+}

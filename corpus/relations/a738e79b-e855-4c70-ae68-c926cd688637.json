@@ -1,0 +1,10 @@
+{
+  "id": "a738e79b-e855-4c70-ae68-c926cd688637",
+  "label": "Test by Witness-local hiddenness controls verified for Witness-only access requirement",
+  "subject_kind": "result",
+  "subject_id": "c76bf052-c7a6-4438-b8e4-f7f26bac0fb2",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "c18f6b6a-93cb-40fd-8fd6-7b03ce0941b1",
+  "note": "Tests omission of witness-only access exclusion in the finite God-present control retaining witness openness and a nonresistant nonbeliever."
+}

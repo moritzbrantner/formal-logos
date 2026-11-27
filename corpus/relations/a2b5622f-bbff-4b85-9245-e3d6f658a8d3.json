@@ -1,0 +1,10 @@
+{
+  "id": "a2b5622f-bbff-4b85-9245-e3d6f658a8d3",
+  "label": "Test by One finite assignment satisfying the generic Form princi for The base feature grounds (1)",
+  "subject_kind": "result",
+  "subject_id": "5ea67ac7-55f9-5e8d-b156-d816a7f662f2",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "738828f3-26d8-5842-a520-1023534349e9",
+  "note": "Tests independence of directed grounding from the selection biconditional by retaining one common selection assignment and comparing the empty and grounded expansions."
+}

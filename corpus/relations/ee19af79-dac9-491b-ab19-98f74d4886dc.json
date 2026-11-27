@@ -1,0 +1,10 @@
+{
+  "id": "ee19af79-dac9-491b-ab19-98f74d4886dc",
+  "label": "Test by Non-concrete-priority rival of the simple-priority bridge survives, checked",
+  "subject_kind": "result",
+  "subject_id": "6b135d43-0592-451b-81c7-de48e761cf2b",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "86efed1a-f353-5b5d-9431-df7fc643ace1",
+  "note": "Tests the selected premise in the following setting. Same Profile, selected world and PriorSimply as the premise; one world, two candidates. Control.abstractPrior in Control.AbstractPriorSurvives; abstractPriorSurvives proves the listed conjuncts. Control.abstractPrior at its one world with abstractPriorTo: the rival, concrete population, WholeRosterNotTrapped, EveryContingentGroundedAt and excluded middle hold; NecessaryActualFirstAt fails. Consumer tested: NecessaryFirstBeing.necessaryFirst."
+}

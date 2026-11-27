@@ -1,0 +1,10 @@
+{
+  "id": "e145bfd0-f55e-4ff0-bab3-16d75964e0e3",
+  "label": "Test by Finite interpretations for the nine derivations of round for Something HAS_INTELLECT_1",
+  "subject_kind": "result",
+  "subject_id": "9b1c8d31-2458-5ece-9902-ea7dd0371d6c",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "5854ef2b-41dd-5617-99d2-f53a850c35fd",
+  "note": "Tests omitting this premise in the encoded immaterialIntellectualFromGrades argument, with the other premises retained and the conclusion false in each corresponding control."
+}

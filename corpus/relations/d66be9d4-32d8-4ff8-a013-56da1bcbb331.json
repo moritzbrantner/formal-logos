@@ -1,0 +1,10 @@
+{
+  "id": "d66be9d4-32d8-4ff8-a013-56da1bcbb331",
+  "label": "Test by Finite interpretations and one general equivalence",
+  "subject_kind": "result",
+  "subject_id": "5a398e97-a75b-5d14-a3f8-f99946aec6b9",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "abe615df-25ae-5aa9-8611-140ca98ae522",
+  "note": "Tests the converse strength implication in the registered interpretation. Sole-premise restriction to purely determined beings; strict on the Black-style carrier. The uniqueness route PURE-INDISCERNIBILITY-FIRST-MOVER-UNIQUENESS uses the weak version."
+}

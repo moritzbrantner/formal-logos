@@ -1,0 +1,10 @@
+{
+  "id": "d5d20746-496c-4335-885f-e79f4f0cd440",
+  "label": "Test by Finite interpretations for the seven derivations of caus for An efficient cause does n (1)",
+  "subject_kind": "result",
+  "subject_id": "86d080aa-4c6e-5f85-a86e-333c805d0093",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "47b151ca-f500-5a7c-80d4-33bb90247ee3",
+  "note": "Tests omitting this premise in the encoded efficientCausePrior, nothingEfficientCauseOfItself, noMutualEfficientCausation arguments, with the other premises retained and the conclusion false in each corresponding control."
+}

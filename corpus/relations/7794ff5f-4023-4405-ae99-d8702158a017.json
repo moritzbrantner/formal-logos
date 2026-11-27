@@ -1,0 +1,10 @@
+{
+  "id": "7794ff5f-4023-4405-ae99-d8702158a017",
+  "label": "Test by GOD_1: the naming premise read nominally is analytic",
+  "subject_kind": "result",
+  "subject_id": "07fbf440-0132-533b-82d0-3b205a7bb5e2",
+  "predicate": "tests",
+  "object_kind": "argument",
+  "object_id": "b7e2768a-ae2c-56f9-8089-acca1e1b44d0",
+  "note": "Checks the definitional naming application in the GOD_1 interpretation before the bridge to the GOD_4 predicate."
+}

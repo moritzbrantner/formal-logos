@@ -1,0 +1,10 @@
+{
+  "id": "4a56fea0-a26d-44c9-bcef-00ca6f3d856e",
+  "label": "Test by For every mathematical linear order and shared x,y, y > x holds exactly when y ≥ x and y ≠ x",
+  "subject_kind": "result",
+  "subject_id": "3648f9c4-fac1-5a49-b361-14477cdcf461",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "51bb0eeb-f3fb-5ce1-9e11-a127788f8506",
+  "note": "Checks the exact decomposition of the stronger statement into the weaker version and the registered delta under the comparison's shared interpretation."
+}

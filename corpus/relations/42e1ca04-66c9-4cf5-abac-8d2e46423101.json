@@ -1,0 +1,10 @@
+{
+  "id": "42e1ca04-66c9-4cf5-abac-8d2e46423101",
+  "label": "Test by Holder-root identification controls checked for At most one being has power for the ac (1)",
+  "subject_kind": "result",
+  "subject_id": "d8073ba0-ff27-479a-adbe-05086acb1da1",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "5f93d4f0-3780-45f6-9d65-da8ced71c922",
+  "note": "Tests the uniqueness input on a willed non-GOD_4 holder alongside a distinct GOD_4 holder without will."
+}

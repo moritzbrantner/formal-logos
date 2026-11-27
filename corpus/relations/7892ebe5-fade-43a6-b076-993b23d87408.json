@@ -1,0 +1,10 @@
+{
+  "id": "7892ebe5-fade-43a6-b076-993b23d87408",
+  "label": "Test by Finite interpretations for the eleven derivations of rou for CAUSE_3: Each effect has (1)",
+  "subject_kind": "result",
+  "subject_id": "133783a4-07b1-5727-9fca-7f9fb474db54",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "b3853b1b-cb6d-5fdd-bb94-d8ad99034561",
+  "note": "Tests omitting this premise in the encoded finitePredecessorsFromModes argument, with the other premises retained and the conclusion false in each corresponding control."
+}

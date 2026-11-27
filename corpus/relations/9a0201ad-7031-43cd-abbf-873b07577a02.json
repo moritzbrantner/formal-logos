@@ -1,0 +1,10 @@
+{
+  "id": "9a0201ad-7031-43cd-abbf-873b07577a02",
+  "label": "Test by Finite interpretations for the thirteen derivations of r for If an actual concretum x (1)",
+  "subject_kind": "result",
+  "subject_id": "59d1be21-3572-5381-8674-06d17ec79c97",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "2e248016-f8bf-5d8a-931e-7f9ebbb13e42",
+  "note": "Tests omitting this premise in the encoded esseCauseGroundViaDependence, simplyPriorGroundViaDependence, necessityCauseGroundViaDependence, contingentGroundedViaDependence arguments, with the other premises retained and the conclusion false in each corresponding control."
+}

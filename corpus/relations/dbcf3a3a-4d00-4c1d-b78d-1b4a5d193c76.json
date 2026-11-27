@@ -1,0 +1,10 @@
+{
+  "id": "dbcf3a3a-4d00-4c1d-b78d-1b4a5d193c76",
+  "label": "Test by Inert-emptiness controls checked for Every individual temporally present at any time i (1)",
+  "subject_kind": "result",
+  "subject_id": "ed27d6ae-685d-434e-b00f-b3c8121a3709",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "85497562-9d71-558a-9a1e-e4b7c321488a",
+  "note": "Tests omission of this premise from necessaryConcrete in the separate typed history controls retaining the modal frame conditions and both other history premises."
+}

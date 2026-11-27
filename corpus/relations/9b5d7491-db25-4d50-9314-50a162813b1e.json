@@ -1,0 +1,10 @@
+{
+  "id": "9b5d7491-db25-4d50-9314-50a162813b1e",
+  "label": "Test by Finite interpretations for the seven derivations of caus for Every received perfection (1)",
+  "subject_kind": "result",
+  "subject_id": "86d080aa-4c6e-5f85-a86e-333c805d0093",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "cdb79aa6-eaff-5fd8-b094-410d9df021c0",
+  "note": "Tests omitting this premise in the encoded causeOfQualityMoreSuch argument, with the other premises retained and the conclusion false in each corresponding control."
+}

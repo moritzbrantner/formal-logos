@@ -1,0 +1,10 @@
+{
+  "id": "cc1c77cb-8eb0-43e2-b5f3-8dc5a792f33d",
+  "label": "Test by Three exact finite controls: compatible productive set/F for The supplied counter-witn (1)",
+  "subject_kind": "result",
+  "subject_id": "105ad261-8897-573c-b403-0a1bd42acc13",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "ad2df87a-b74c-5123-b5e4-e021cc36dc4a",
+  "note": "Tests shifting a causal counterexample from another world to the selected world while the selected commitment still holds."
+}

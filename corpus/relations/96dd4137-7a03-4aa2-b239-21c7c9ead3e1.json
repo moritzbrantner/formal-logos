@@ -1,0 +1,10 @@
+{
+  "id": "96dd4137-7a03-4aa2-b239-21c7c9ead3e1",
+  "label": "Test by Finite interpretations with one component for Every component of anything is in POTENC (1)",
+  "subject_kind": "result",
+  "subject_id": "77d2339e-c0d5-5527-95cd-29c539cf72d1",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "86f10ec3-3068-5066-8ba1-3c85baeb1a22",
+  "note": "Tests omission of this premise from noComponentFirst in the one-component interpretation in which the component becomes first in being."
+}

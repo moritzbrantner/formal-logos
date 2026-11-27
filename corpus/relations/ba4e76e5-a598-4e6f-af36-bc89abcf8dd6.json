@@ -1,0 +1,10 @@
+{
+  "id": "ba4e76e5-a598-4e6f-af36-bc89abcf8dd6",
+  "label": "Test by Rigid profile actualist population adapter omission certificates",
+  "subject_kind": "result",
+  "subject_id": "9a4e34cf-1357-4edf-a2be-2160695a6024",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "84ae3700-f0a9-5d49-9c8c-0ccc9cb40e8a",
+  "note": "Tests omitting unique profile bearer identity on the alternating two-world fixture, retaining profile population but with no necessary candidate."
+}

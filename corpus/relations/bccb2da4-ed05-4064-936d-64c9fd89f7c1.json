@@ -1,0 +1,10 @@
+{
+  "id": "bccb2da4-ed05-4064-936d-64c9fd89f7c1",
+  "label": "Test by Motion and mover fork finite controls for Whatever is moved in a respect of physical M (1)",
+  "subject_kind": "result",
+  "subject_id": "5db223fc-5fee-4023-90eb-247fbf074ab2",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "6882f4cf-2869-5fe2-ae79-b1dfd6f88026",
+  "note": "Tests omission of the physical mover premise in the finite Unit profile keeping scope coverage and residual coverage."
+}

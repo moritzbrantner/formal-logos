@@ -1,0 +1,10 @@
+{
+  "id": "5482ee1e-a82c-4873-8269-7357eac7c6f1",
+  "label": "Test by Controls for the typed LORD_2 and BLESSED_2 readings, checked",
+  "subject_kind": "result",
+  "subject_id": "8306684c-ca33-474b-b212-fd7013c3783a",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "bb3d4417-b2f6-4310-9433-21ff2e386780",
+  "note": "Tests the converse strength implication in the registered interpretation. Same InAct, CausesIn, esse and IsLord. The strong version gives LORD_1 to every cause of the being of all; the weak one only to such a cause that also governs everything else. Control part 2: a cause of the being of all that governs nothing satisfies the weak version and falsifies the strong one."
+}

@@ -1,0 +1,10 @@
+{
+  "id": "d80b303e-a7d4-4f04-b67a-4b52c447af74",
+  "label": "Test by Per-accidens response-family model controls for Every-removal retained capacity",
+  "subject_kind": "result",
+  "subject_id": "bbfad776-4451-4bb1-9fda-ba62c31a19ed",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "ad2d36f3-848d-42d4-b916-78f6c84c2538",
+  "note": "Tests whether preserving exercise under some removal suffices for all-removal capacity on the integer-dated response profiles."
+}

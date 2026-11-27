@@ -1,0 +1,10 @@
+{
+  "id": "b219a352-e853-4915-9930-2e0c7f3ec6af",
+  "label": "Test by Motion and mover fork finite controls for Residual motion has a same-respect mover",
+  "subject_kind": "result",
+  "subject_id": "5db223fc-5fee-4023-90eb-247fbf074ab2",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "d758b09d-9f7c-4641-bc9b-3916fa3f37d4",
+  "note": "Tests omission of residual mover coverage in the finite Unit profile keeping scope coverage and the physical mover principle."
+}

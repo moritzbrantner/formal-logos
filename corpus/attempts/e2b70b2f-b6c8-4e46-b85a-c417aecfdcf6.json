@@ -1,0 +1,36 @@
+{
+  "id": "e2b70b2f-b6c8-4e46-b85a-c417aecfdcf6",
+  "label": "Does the same represented actual history determine intellect and will at the root?",
+  "statement_ids": [
+    "180f5ad2-a421-541a-85c9-9bca578b4a43",
+    "090be689-b77f-51a1-9d5d-caf339169e4b",
+    "582769fa-8501-4421-8282-ea6c74202628"
+  ],
+  "date": "2026-11-26",
+  "kind": "countermodel",
+  "outcome": "succeeded",
+  "summary": "The #468 intellectual and simple impersonal assignments share the structural maximum and necessary underived signature. At the same #1867 copy schedule they give the same complete represented trace and opposite root intellect and will. The trace identifies the copy/toggle schedule within that law class. The independently imposed attribute premises give an inhabited restriction where both attributes hold. See the actual-history section of docs/notes/physical-ground-468.md for matched explanatory alternatives and the provisional assessment. The model combines existing assignments with a schedule and has no rule making a source produce that schedule.",
+  "blocker": "OPEN: same-source production of the particular actual order and an independently warranted domain restriction or permitted source-sensitive report that separates different attribute values on every tied fiber. A Boolean history alone represents neither exercise of intellect and will nor adequate ultimate explanation.",
+  "evidence": [
+    "38ebb0ba-2e44-44a2-8bb1-61617e0b5200",
+    "PR-2099"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2099"
+    },
+    {
+      "role": "repair",
+      "provider": "claude",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2099"
+    }
+  ]
+}

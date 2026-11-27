@@ -1,0 +1,10 @@
+{
+  "id": "c72d7e5d-f91e-4548-b7fd-d058edd84f39",
+  "label": "Screened and calibrated sampling rows test binary report discrimination (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "ad278bbf-84c0-4833-8810-e451c4797574",
+  "rule": "Evaluate the report laws and compare their likelihoods at one interior prior",
+  "meaning": "The two screened sampling rows give the same certain fine report even at unequal model weights. The calibrated sampling pair gives distinct report likelihoods and positive mutual information at the same comparison prior.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

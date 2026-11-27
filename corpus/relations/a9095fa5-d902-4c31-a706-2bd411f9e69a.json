@@ -1,0 +1,10 @@
+{
+  "id": "a9095fa5-d902-4c31-a706-2bd411f9e69a",
+  "label": "Test by Universal law projection under unrestricted future suffixes",
+  "subject_kind": "result",
+  "subject_id": "6e3bad3f-b479-4ccd-8426-5c2979b6f26e",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "83bad780-5acf-5235-a30b-8572b3d2cb2a",
+  "note": "Tests the open-future prediction obstruction with every possible Boolean suffix at each fixed finite record, extending the two-next-value comparisons."
+}

@@ -1,0 +1,10 @@
+{
+  "id": "276aa5c5-950b-4b4a-8fd7-da7cd36c0b8b",
+  "label": "Test by The unchanged causal copying mechanism admits an attitude-free control",
+  "subject_kind": "result",
+  "subject_id": "8de536c8-8d38-4787-acc6-fa01a94c72fc",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "12c60e82-fa46-434a-9c92-ec22ccdabcfd",
+  "note": "Tests the exact-value copying guarantee in the original populated causal history with absent assertion, assent and plans."
+}

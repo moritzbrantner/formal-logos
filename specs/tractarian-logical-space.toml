@@ -125,3 +125,13 @@ delta_statement_id = "The selected formula is truth-functional (box-free)"
 evidence_result_ids = { implication = "Tautology strengthens K validity", equivalence = "Tautology factors as K validity plus truth-functionality" }
 statement_parameter_indices = { stronger = [0, 1], weaker = [0, 1], delta = [0, 1] }
 note = "Difference of tautology and K validity of the same formula: the strong version adds exactly that the formula is truth-functional (no box or diamond). Strictness is witnessed in the controls by the K axiom instance with q := p, which is K-valid and not truth-functional; it is a substitution instance of a propositional tautology, so strictness comes only from the fragment restriction and every K-valid box formula is an equal witness."
+
+[[relation]]
+id = "Test by Tautology factors as K validity plus truth-functionality"
+label = "Test by Tautology factors as K validity plus truth-functionality"
+subject_kind = "result"
+subject_id = "3f38adba-0028-4d03-8437-4b6bcdfa5a05"
+predicate = "tests"
+object_kind = "statement"
+object_id = "72861c3a-fff5-4149-bb9d-43985330b4c6"
+note = "Checks the exact decomposition of the stronger statement into the weaker version and the registered delta under the comparison's shared interpretation."

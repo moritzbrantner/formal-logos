@@ -1,0 +1,10 @@
+{
+  "id": "b98c8434-8934-4940-8cfc-98c25833b687",
+  "label": "Test by Finite interpretations for the eleven derivations of rou for An efficient cause is pri (1)",
+  "subject_kind": "result",
+  "subject_id": "133783a4-07b1-5727-9fca-7f9fb474db54",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "e078f07b-a4b8-595e-a3ee-02dd83474450",
+  "note": "Tests omitting this premise in the encoded noLoopsFromPriority, wellFoundedFromPriority arguments, with the other premises retained and the conclusion false in each corresponding control."
+}

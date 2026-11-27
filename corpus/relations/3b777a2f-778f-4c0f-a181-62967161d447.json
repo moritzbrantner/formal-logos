@@ -1,0 +1,10 @@
+{
+  "id": "3b777a2f-778f-4c0f-a181-62967161d447",
+  "label": "Test by For each of the four hiddenness premises there is an int for At the actual world some (1)",
+  "subject_kind": "result",
+  "subject_id": "a73f8a32-6e94-5307-86a3-f9f48445347f",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "62d4c4c4-9834-5acb-ba7b-260e040c7009",
+  "note": "Tests omission of this premise from noGod in the respective finite hiddenness assignment where GOD exists and the other three premises are maintained."
+}

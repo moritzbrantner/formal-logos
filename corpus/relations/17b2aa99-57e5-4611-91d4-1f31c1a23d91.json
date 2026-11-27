@@ -1,0 +1,10 @@
+{
+  "id": "17b2aa99-57e5-4611-91d4-1f31c1a23d91",
+  "label": "Test by The specified four-world model has epistemic S5 blocks { for The supplied admissible-c (1)",
+  "subject_kind": "result",
+  "subject_id": "f22550f8-2207-54ef-a3b6-ca102b9e7be0",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "534eb2da-165f-5bd5-9c51-da78e4e4e069",
+  "note": "Tests restriction of admissibility in the finite profile where ordinary admissible truths satisfy knowability but the selected Moore conjunction falls outside the family."
+}

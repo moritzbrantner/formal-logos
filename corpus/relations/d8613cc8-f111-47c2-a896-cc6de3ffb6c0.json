@@ -1,0 +1,10 @@
+{
+  "id": "d8613cc8-f111-47c2-a896-cc6de3ffb6c0",
+  "label": "Test by Inert-emptiness controls checked",
+  "subject_kind": "result",
+  "subject_id": "ed27d6ae-685d-434e-b00f-b3c8121a3709",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "0cb07f05-5268-4685-8213-0eefa9ec4255",
+  "note": "Tests omission of this premise from necessaryConcrete in the separate typed history controls retaining the modal frame conditions and both other history premises."
+}

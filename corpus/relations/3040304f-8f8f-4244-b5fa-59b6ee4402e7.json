@@ -1,0 +1,10 @@
+{
+  "id": "3040304f-8f8f-4244-b5fa-59b6ee4402e7",
+  "label": "Test by Finite models separating reflexive distinct-nonmutual dependence from asymmetry",
+  "subject_kind": "result",
+  "subject_id": "0ccf914c-9ba9-47aa-96d3-53fbf5ebfeca",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "da8e6b60-4dab-5858-9c8d-f6e84c821970",
+  "note": "Tests unrestricted asymmetry on two reflexive models retaining distinct nonmutuality, including a two-element order with a distinct edge."
+}

@@ -1,0 +1,10 @@
+{
+  "id": "ab90746e-b1a1-4ac7-bb25-af684297443e",
+  "label": "Test by Four exact extensions of the old Megarian Unit models: n for Weak OPEN POTENCY_1 inter (1)",
+  "subject_kind": "result",
+  "subject_id": "ebca5ef3-a723-5d3d-98a2-3d4ec0e930e0",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "d93acdf0-12aa-5d47-bd75-7df4e3b65204",
+  "note": "Tests omitting the guarded move-to-potency analysis by retaining the Megarian actual-motion background and populating potency without a matching unactualized capacity."
+}

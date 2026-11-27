@@ -1,0 +1,11 @@
+{
+  "id": "5b4d6b33-0b00-4b93-8878-5b05ff6c18fa",
+  "label": "NAR from admissible root cells and exclusion of NECESSARY_2 recipient withholding",
+  "argument_id": "fccc4968-119a-4671-9afc-a44e2fc11ae9",
+  "challenge_module": "TruthCore.Results.Causality.GivingChoiceNar.Challenge",
+  "solution_module": "TruthCore.Results.Causality.GivingChoiceNar.Solution",
+  "theorem": "TruthCore.Results.Causality.GivingChoiceNar.nar_of_admissible_cells_and_recipient_exclusion",
+  "comparator_config": "results/5b4d6b33-0b00-4b93-8878-5b05ff6c18fa/comparator.json",
+  "status": "solution-present",
+  "description": "For any NECESSARY_2 actual concretum, common-root reach either identifies it as the root or gives the root as its ground. In the grounded case the selected cell has an admissible representative by the two STIT premises, contradicting recipient exclusion with the same profile, frame and map. Only root and reach are used from the intellectual common-root premise. Instantiating the exclusion with rigidity reuses the original composed N1 assumptions."
+}

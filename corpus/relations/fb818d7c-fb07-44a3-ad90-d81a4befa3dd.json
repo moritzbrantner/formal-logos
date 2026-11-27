@@ -1,0 +1,10 @@
+{
+  "id": "fb818d7c-fb07-44a3-ad90-d81a4befa3dd",
+  "label": "Test by Epistemic authority finite controls",
+  "subject_kind": "result",
+  "subject_id": "2930b66a-b5e3-4f3f-b2d3-758d84c0e54d",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "0c1a5185-eb02-4905-be59-2bb4d8f95ff7",
+  "note": "Tests omitting goal-relative force from the indifference argument by using the Unit-subject independent-force interpretation with indifference still available."
+}

@@ -102,3 +102,23 @@ evidence_result_ids = { implication = "The universal origin bridge gives its sel
 separator = { setting = "otherOnlySetting", result_id = "Other-only origin frame separates the origin bridges" }
 statement_parameter_indices = { stronger = [0, 1, 2, 3, 4, 5, 6], weaker = [0, 1, 2, 3, 4, 5, 6], delta = [0, 1, 2, 3, 4, 5, 6] }
 note = "Difference of the universal and self-edge origin-to-exercise bridges: both require an occurring existence-producing exercise of the originator for self-origin edges; the universal form adds exactly that every origin edge between distinct beings is realized by its source's productive exercise. The delta is the bridge's ordinary-origination clause, where the builder case and Hall-style omission and prevention cases (distinct relata) bear; it does not mention self-edges. The broad dependence reading of CAUSE_4 bears on the weak version only through a self-edge such as the Smith whole, which stays OPEN. The other-only separator is a finite interpretation, not a claim about real origination."
+
+[[relation]]
+id = "Test by Other-only origin frame separates the origin bridges"
+label = "Test by Other-only origin frame separates the origin bridges"
+subject_kind = "result"
+subject_id = "44001670-8287-47bf-815b-c5719bee6449"
+predicate = "tests"
+object_kind = "statement"
+object_id = "be90bb15-c2ce-44cd-ae2d-5ec6dc4c24c9"
+note = "Strictness control: in the other-only frame with no exercises the self-edge bridge holds vacuously and the universal bridge fails at the edge true to false."
+
+[[relation]]
+id = "Test by Universal origin bridge is the self-edge sibling plus the distinct-relata clause"
+label = "Test by Universal origin bridge is the self-edge sibling plus the distinct-relata clause"
+subject_kind = "result"
+subject_id = "b50802b2-a4d9-4682-9af6-990f8be04cf3"
+predicate = "tests"
+object_kind = "statement"
+object_id = "be90bb15-c2ce-44cd-ae2d-5ec6dc4c24c9"
+note = "Checks the exact decomposition of the stronger statement into the weaker version and the registered delta under the comparison's shared interpretation."

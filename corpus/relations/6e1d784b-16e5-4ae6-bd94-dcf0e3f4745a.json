@@ -1,0 +1,10 @@
+{
+  "id": "6e1d784b-16e5-4ae6-bd94-dcf0e3f4745a",
+  "label": "Test by The finite zero/one/two extensions have the advertised multiplicities; nonempty one- and…",
+  "subject_kind": "result",
+  "subject_id": "bfbd32c9-f0a4-5e47-b08d-d3635b5eb721",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "cb86e3e2-f392-5022-931c-6f110a000bba",
+  "note": "Tests the definite-description equivalence on two-label assignments with a singleton and a two-member extension."
+}

@@ -57,3 +57,13 @@ conclusion = "Moral attitude profile separation controls"
 rule = "Explicit construction and projection"
 meaning = "Same-domain finite separators: stable truth with an attitude ground satisfies only the intervention candidate; variable truth with no ground satisfies only the grounding candidate; stable actual truth with no grounds jointly satisfies both; stable falsity satisfies invariance and no attitude ancestors but fails the intervention candidate. Restricted interventions can hide truth variation at an excluded profile. Formal profiles only, not metaphysical possibility or causal overdetermination."
 sense_mixing_control = true
+
+[[relation]]
+id = "Test by Moral intervention and grounding finite comparisons"
+label = "Test by Moral intervention and grounding finite comparisons"
+subject_kind = "result"
+subject_id = "70c14b36-1cc6-4d1d-86d7-56afbeae0bba"
+predicate = "tests"
+object_kind = "statement"
+object_id = "1a786096-6f33-4f5c-9725-73cc0bbfebd4"
+note = "Tests omission of grounding stability using a finite profile with actual truth, no attitude grounds and variation across admitted interventions."

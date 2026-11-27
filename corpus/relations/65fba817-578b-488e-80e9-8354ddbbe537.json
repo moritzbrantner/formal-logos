@@ -1,0 +1,10 @@
+{
+  "id": "65fba817-578b-488e-80e9-8354ddbbe537",
+  "label": "Test by Full effect first cause checked comparisons",
+  "subject_kind": "result",
+  "subject_id": "e28502a4-1b86-4fd7-8bdc-7d9b34e5b699",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "a2e48b9a-892c-591c-b0a1-87f8ab5937fa",
+  "note": "Tests the selected premise in the following setting. Same carrier, graph and inclusion for full effect priority and source/outgoing; no modal transport or actual-domain restriction. Fixture.graph, Fixture.effectRequirement, Fixture.Object.origin and the SAME effect witness Fixture.Object.effect; Comparisons records the distinct other caused effect. Fixed three-atom identity-inclusion graph with origin producing effect and other, and requirement effect other only. Requirement and production are stipulated primitives, not certified reality."
+}

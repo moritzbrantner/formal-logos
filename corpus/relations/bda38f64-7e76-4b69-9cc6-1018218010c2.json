@@ -1,0 +1,10 @@
+{
+  "id": "bda38f64-7e76-4b69-9cc6-1018218010c2",
+  "label": "Test by Formal fact: 'every POTENCY_1 is being actualized', 'wha for Every POTENCY_1 is being (1)",
+  "subject_kind": "result",
+  "subject_id": "8353d90e-9bdb-52cd-bda6-85745282cde4",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "4f75d58e-8b48-58df-945d-3d670964d9b9",
+  "note": "Tests omitting universal actualization in the motion-based act-priority derivation through an inactive potency in the same act/motion vocabulary."
+}

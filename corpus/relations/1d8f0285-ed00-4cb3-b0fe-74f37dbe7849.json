@@ -1,0 +1,10 @@
+{
+  "id": "1d8f0285-ed00-4cb3-b0fe-74f37dbe7849",
+  "label": "Test by Origin-deletion controls checked",
+  "subject_kind": "result",
+  "subject_id": "70d098fe-048d-4bcd-b48e-e9ca293b0ba0",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "d827a4e2-88c9-4dc9-9cec-442dd673524e",
+  "note": "Tests deletion and its accessible-world scope across the three explicit origin-tolerance models, retaining the core origin commitments as recorded."
+}

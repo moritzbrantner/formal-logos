@@ -1,0 +1,10 @@
+{
+  "id": "06ebae5d-03ad-4fd0-be29-7501680a9f30",
+  "label": "Test by Three coarse schema controls: local face-value status wi for Stronger analyst profile (1)",
+  "subject_kind": "result",
+  "subject_id": "ebd8974c-8bf8-55b8-bf1d-9a6a812ba418",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "b917f813-5020-5506-b7cd-eac478ddff72",
+  "note": "Tests whether local face-value status and matched-content invariance travel together in the specified coarse discourse profiles."
+}

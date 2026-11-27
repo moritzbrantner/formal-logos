@@ -1,0 +1,10 @@
+{
+  "id": "008ee20a-fc43-4cfd-b9b1-a27e79cb438b",
+  "label": "Test by Finite interpretations for the eight derivations of roun for The esse of every CREATUR (1)",
+  "subject_kind": "result",
+  "subject_id": "27d0aa1f-bd7c-5946-b886-0dea80ab650e",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "29e71e43-1d34-5008-8811-897fbddda209",
+  "note": "Tests omitting this premise in the encoded nothingElseReachesPrimary argument, with the other premises retained and the conclusion false in each corresponding control."
+}

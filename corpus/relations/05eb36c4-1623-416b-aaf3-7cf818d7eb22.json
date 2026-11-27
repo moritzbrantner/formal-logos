@@ -1,0 +1,10 @@
+{
+  "id": "05eb36c4-1623-416b-aaf3-7cf818d7eb22",
+  "label": "Test by Every maximum in being is GOD_2 factors as reduced naming plus the clause outside it",
+  "subject_kind": "result",
+  "subject_id": "16501a16-dbcd-46ba-8b03-fa88701e1ae9",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "957a71fe-ba7e-5633-bef2-f5d287362fc5",
+  "note": "Checks the exact decomposition of the stronger statement into the weaker version and the registered delta under the comparison's shared interpretation."
+}

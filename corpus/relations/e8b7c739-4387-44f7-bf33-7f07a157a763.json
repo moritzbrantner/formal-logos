@@ -1,0 +1,10 @@
+{
+  "id": "e8b7c739-4387-44f7-bf33-7f07a157a763",
+  "label": "Test by Giver-of-being controls, checked for Every existent at the selected world is CONCRETE_6",
+  "subject_kind": "result",
+  "subject_id": "cd075a84-bb64-4c05-a592-21072621d30f",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "0e02cd69-8fb0-4859-8287-937440c84b5b",
+  "note": "Tests omission of existence-to-concreteness on a profile assigning one abstract cause despite universal existence."
+}

@@ -1,0 +1,10 @@
+{
+  "id": "369b36bd-988e-4155-9f34-2cd40eb7885e",
+  "label": "Test by Relational-receipt controls checked for Whatever has received esse is receiving it at (1)",
+  "subject_kind": "result",
+  "subject_id": "584bac58-203a-4083-821e-a3c46daac8e3",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "964928dc-9067-45d4-8de3-c91e27cbe1c6",
+  "note": "Tests omission of present receipt when the given esse is expressed by a persisting relational predicate and an onset receipt."
+}

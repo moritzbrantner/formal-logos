@@ -1,0 +1,10 @@
+{
+  "id": "1b661b03-ea5b-4846-b138-562826d3a2f8",
+  "label": "Test by Finite models for the modal-principle branches of the NE for 4 schema: whatever is NEC (1)",
+  "subject_kind": "result",
+  "subject_id": "ee82c652-d18e-5583-ac14-8982ddc3ac9c",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "b5fea0e6-a058-512f-bf11-ca740ebd3f06",
+  "note": "Tests omission of this premise from forkS4 in the corresponding hand-written modal frames for the S4 fork."
+}

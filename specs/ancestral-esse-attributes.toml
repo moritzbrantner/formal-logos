@@ -33,3 +33,13 @@ conclusion = "A populated actual esse chain separates same-field perfection from
 axioms = []
 rule = "Evaluate the existing unity, perfection and supreme-goodness predicates on a populated two-edge chain"
 meaning = "Reuse the Q44 three-bearer chain with esse and further represented respects. The last bearer is actual at esse and in an additional respect. Every present esse edge transfers each actual effect-perfection, and the named source is good at esse by goodness-as-actuality. The absent source-to-last-bearer cause at the additional respect falsifies the direct causal conjunct of supreme goodness. The checked assignment tests the distinction between an ancestry route and a direct cause on these exact predicates."
+
+[[relation]]
+id = "Test by Populated actual esse chain separation verified"
+label = "Test by Populated actual esse chain separation verified"
+subject_kind = "result"
+subject_id = "1c69c33c-8882-4ff4-b8b8-064cd66b8eae"
+predicate = "tests"
+object_kind = "statement"
+object_id = "e0dae79f-c042-5a08-a148-725d0468df91"
+note = "Tests extending the direct-causal goodness guarantee to finite grounding ancestry on the reused Q44 three-bearer chain."

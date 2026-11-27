@@ -1,0 +1,10 @@
+{
+  "id": "490e761f-3ac1-4d71-b4f1-c445db065ec3",
+  "label": "Test by Stage-one rival survival controls checked for If a beginning of contingent concrete re (1)",
+  "subject_kind": "result",
+  "subject_id": "7b545360-7d87-400f-89cd-44ac707103a8",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "df89f0d2-c051-5859-aa80-5898ec5c0a65",
+  "note": "Tests the selected premise in the following setting. Same Scenario carrier and selected world; two mutually accessible worlds. PossibleCauseOfContingency.bruteOnly, group 5 of Control.Certificate, reusing bruteOnlyPossibleBeginning, bruteOnlyNoExternalCause and bruteOnlyNoNecessary. Euclidean and reflexive frame hold in the existing PossibleCauseOfContingency.bruteOnly; the possible beginning is part of the rival."
+}

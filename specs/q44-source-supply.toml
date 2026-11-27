@@ -69,3 +69,13 @@ conclusion = "Finite controls for q44 ancestor-to-source supply"
 axioms = []
 rule = "Causal-chain induction, explicit reception argument and equality elimination"
 meaning = "Seven finite controls distinguish participant actuality, represented distinction, causal composition, the unreceived-to-OwnBeing step, qualification of the selected witness and uniqueness, and a positive composition case. The common-ancestor property is witnessed with explicit nonempty chains, not assumed to equal a causal edge. The models test formal interfaces and do not provide evidence against the interpreted metaphysical premises or certify rival worldviews."
+
+[[relation]]
+id = "Test by Q44 ancestor source-supply controls, checked"
+label = "Test by Q44 ancestor source-supply controls, checked"
+subject_kind = "result"
+subject_id = "406fbe1a-1613-4af9-afcf-33cea6682eb2"
+predicate = "tests"
+object_kind = "statement"
+object_id = "bc1810e5-1070-5585-9b0f-e17ca3547ac7"
+note = "Tests omitting the unreceived-to-own-being bridge in the finite q.44 participant-and-source profile."

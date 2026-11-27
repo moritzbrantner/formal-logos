@@ -1,0 +1,10 @@
+{
+  "id": "a0e0a66e-1bb1-473b-9515-7ba0aa4cf364",
+  "label": "Test by Formal fact: 'every POTENCY_1 is being actualized', 'wha for A thing moves another in (1)",
+  "subject_kind": "result",
+  "subject_id": "8353d90e-9bdb-52cd-bda6-85745282cde4",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "f296a694-aeea-5fa7-bdbf-0076530f9441",
+  "note": "Tests omitting the mover-in-act premise from the five-input motion-based act-priority derivation in its typed model class."
+}

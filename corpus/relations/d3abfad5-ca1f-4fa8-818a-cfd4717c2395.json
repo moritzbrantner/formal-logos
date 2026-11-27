@@ -1,0 +1,10 @@
+{
+  "id": "d3abfad5-ca1f-4fa8-818a-cfd4717c2395",
+  "label": "Test by Finite interpretations for the eight derivations of roun for Causing another's perfect (1)",
+  "subject_kind": "result",
+  "subject_id": "27d0aa1f-bd7c-5946-b886-0dea80ab650e",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "e0088de9-28eb-533c-a1e7-662f780cc0e2",
+  "note": "Tests omitting this premise in the encoded causePerfectionNotReceivedInEffect argument, with the other premises retained and the conclusion false in each corresponding control."
+}

@@ -1,0 +1,10 @@
+{
+  "id": "347e6cfe-52d2-490b-a281-bbc1c518c4db",
+  "label": "Observer-conditioned likelihood equality determines binary report independence",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "27379412-f94e-44b0-8e29-1b548bc142d1",
+  "inference_ids": [
+    "a4400464-5a05-43ac-b9a4-d32b9b91b8bf"
+  ],
+  "meaning": "For the supplied observer-conditioned comparison prior with two positive masses, KL vanishes precisely when both Bernoulli report laws coincide. Equality of their fine-report masses is necessary and sufficient for that equality."
+}
