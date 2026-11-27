@@ -1,0 +1,21 @@
+{
+  "id": "d61f1fa7-53a8-45ee-bb8f-6d6f85de4818",
+  "label": "Given dependence, each unde bridge is equivalent to what it delivers",
+  "paraphrase": "Premise-free, over every grades frame. (1) Given R-dep, the first 'unde' bridge is equivalent to 'esse is the actuality of every form had in act'. (2) Given R-dep, the first bridge and the nature in act, the second bridge is equivalent to 'whatever is not its own being has its esse received in its nature'. (3) Given R-dep, the first bridge and the witness premise, inclusion is equivalent to R-act2. (4) On the dependence reading (ACTUALIZED_THROUGH_1) the first bridge holds in every frame. Each equivalence is formally immediate ((3) holds by construction), so the certificate fixes where the load sits; that the inference is therefore explicative, making the act-of-being commitment explicit rather than deriving it from dependence, is the analyst's judgment. Since every result is generic in the frame, (4) also shows that the act reading does no work on this route.",
+  "lean_declaration": "TruthCore.Causality.DependenceToActOfBeing.UndeLoadMap",
+  "definition_ids": [
+    "799e0ff7-9705-4b50-89a9-a8463c1b4f22",
+    "82ab06d0-5328-4d85-b3a2-4a13532d9524",
+    "97c4f504-4792-43c6-9f61-ae23df732d5f",
+    "ad76481a-f038-4652-9c6e-0e0441eee7e5",
+    "4433942e-aaf6-55a9-b777-66e55638103d",
+    "0a2bf1a0-bfc5-45d7-966a-a28919b6e847",
+    "65e38ffa-5a1c-55d0-935c-6538d843b780",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"
+  ],
+  "disambiguation_ids": [
+    "a409105e-8389-46ce-b14b-bebbc2864198",
+    "62ca3d65-8dd4-4187-abe1-a928b3045f12",
+    "5921354b-51e6-5da3-8d8c-e9041840fd9f"
+  ]
+}

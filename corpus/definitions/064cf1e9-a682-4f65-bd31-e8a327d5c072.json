@@ -1,0 +1,9 @@
+{
+  "id": "064cf1e9-a682-4f65-bd31-e8a327d5c072",
+  "label": "MODE_OF_BEING_1: dependence reading, r is a mode of x's being when x has r in act and has being",
+  "term": "dependence reading of mode of being",
+  "definition": "`DependenceMode F x r`: x has r in act and has being (F.InAct x r ∧ F.InAct x F.esse). It reads 'perfections pertain to the perfection of being' through the q.4 a.2 ground 'secundum hoc enim aliqua perfecta sunt, quod aliquo modo esse habent' taken as a necessary condition: nothing has a perfection without having being. Distinguishing conditions: unlike the constitutive sense (MODE_OF_BEING_2, DEF-MODE-OF-BEING), it does not say that r is a determination of the act of being itself; it is granted by views that recognize no act of being beyond instantiation.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.ModeOfBeingMiddleTerm.DependenceMode",
+  "note": "Stipulative analyst definition, attribution deferred; navigated from I q.4 a.2 co. (second proof) and I q.4 a.1 ad 3, read in the materialized SCTA witnesses. Aquinas uses the ground to support the constitutive reading (docs/notes/mode-of-being-subsistent-esse.md)."
+}

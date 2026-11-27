@@ -1,0 +1,11 @@
+{
+  "id": "65a56bc5-9ac0-4b75-ab29-80679827eb04",
+  "label": "The q.7 a.1 bridge load map, checked",
+  "argument_id": "955f0e7e-824d-472c-adc6-ed364b1cb48c",
+  "challenge_module": "TruthCore.Results.Causality.DependenceToActOfBeing.Challenge",
+  "solution_module": "TruthCore.Results.Causality.DependenceToActOfBeing.Solution",
+  "theorem": "TruthCore.Results.Causality.DependenceToActOfBeing.q7BridgeLoadMap",
+  "comparator_config": "results/65a56bc5-9ac0-4b75-ab29-80679827eb04/comparator.json",
+  "status": "solution-present",
+  "description": "Premise-free. The q.7 a.1 bridge yields the locus-(b) composite from 7338142d, 1304b462 and 'unlimited esse has every pure perfection'; on the measure reading the last premise is analytic (by excluded middle), so the content moves to 1304b462. A certificate of where the load sits, not of warrant."
+}
