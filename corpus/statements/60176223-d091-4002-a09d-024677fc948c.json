@@ -1,0 +1,16 @@
+{
+  "id": "60176223-d091-4002-a09d-024677fc948c",
+  "label": "Every perfection of another thing whose being a universal cause of being causes is in that cause",
+  "paraphrase": "Analyst formulation, attribution deferred: q.4 a.2 preexistence 64498e7e restricted to universal causes of being. If c causes the being of every other being that has being (CausesAllInGenus at esse, DEF-UNIVERSAL-ESSE-CAUSE-SCOPE), then for every x other than c whose being c causes, every perfection x has is in c (the frame's InAct, IN_ACT_4, one predicate on both sides as in 64498e7e). It says nothing about nonuniversal causes of being. It is the scope that the q.4 a.2 first proof applies explicitly ('cum ergo Deus sit prima causa effectiva rerum, oportet omnium rerum perfectiones praeexistere in Deo'), and the scope in which every God-route consumer of 64498e7e except perfectFromAncestry uses it. Open.",
+  "lean_declaration": "TruthCore.Causality.UniversalPreexistence.UniversalSourcePreexistence",
+  "definition_ids": [
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "c19faf56-0908-5e6e-8c39-ccba40dce5d1",
+    "5cbd5a0a-9055-4b69-af39-bd0bff1279fd",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"
+  ],
+  "disambiguation_ids": [
+    "dba7b1de-f3a0-57af-9af9-b2a4da3136fa",
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b"
+  ]
+}

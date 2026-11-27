@@ -1,0 +1,11 @@
+{
+  "id": "efb48248-5d90-42b7-9bf9-0c862a0bd0b9",
+  "label": "Q.4 a.2 preexistence entails its universal-source restriction",
+  "argument_id": "9aad936b-3bad-46e1-a9b9-4041b24a7ea2",
+  "challenge_module": "TruthCore.Results.Causality.UniversalPreexistence.Challenge",
+  "solution_module": "TruthCore.Results.Causality.UniversalPreexistence.Solution",
+  "theorem": "TruthCore.Results.Causality.UniversalPreexistence.universalPreexistenceOfPreexistence",
+  "comparator_config": "results/efb48248-5d90-42b7-9bf9-0c862a0bd0b9/comparator.json",
+  "status": "solution-present",
+  "description": "Strength order registration: preexistence for every cause of being entails its restriction to universal causes and distinct effects. Application only; it establishes neither. Strictness is not certified here."
+}
