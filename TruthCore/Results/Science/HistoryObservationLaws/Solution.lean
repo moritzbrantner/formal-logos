@@ -30,7 +30,7 @@ private theorem identifies_law_iff {M O T : Type} [MeasurableSpace O]
   · intro h p q same
     apply h p q
     rw [law_eq_dirac, law_eq_dirac] at same
-    exact Measure.dirac_eq_dirac_iff.mp same
+    exact (dirac_eq_dirac_iff (α := O)).mp same
 
 theorem historicalBoundary : HistoricalBoundary := by
   have controls := TruthCore.Results.Science.AdaptiveHistoryAccess.historyControls
@@ -47,10 +47,10 @@ theorem scheduleBoundary : ScheduleBoundary := by
   obtain ⟨switched, copy, _, _, _, switchedNext, copyNext⟩ :=
     TruthCore.Results.Explanation.NoFoundationLawChaos.lawSwitch.2.2 n k hn
   refine ⟨?_, ?_⟩
-  · have same : prefix n (generated copySchedule) = prefix n (generated (toggleFrom k)) :=
+  · have same : recordThrough n (generated copySchedule) = recordThrough n (generated (toggleFrom k)) :=
       funext fun i => (copy.2 i.val i.isLt).trans ((switched.2 i.val i.isLt).symm)
     rw [law_eq_dirac, law_eq_dirac, same]
   · rw [law_eq_dirac, law_eq_dirac, switchedNext, copyNext]
-    exact Measure.dirac_ne_dirac_iff.mpr Bool.noConfusion
+    exact (dirac_ne_dirac_iff (α := Bool)).mpr Bool.noConfusion
 
 end TruthCore.Results.Science.HistoryObservationLaws

@@ -1,0 +1,13 @@
+{
+  "challenge_module": "TruthCore.Results.Science.HistoryObservationLaws.Challenge",
+  "solution_module": "TruthCore.Results.Science.HistoryObservationLaws.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Science.HistoryObservationLaws.scheduleBoundary"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "enable_nanoda": true
+}

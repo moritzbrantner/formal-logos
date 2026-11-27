@@ -1,0 +1,10 @@
+{
+  "id": "87573e7c-3b04-4f8b-89b9-45431a299ec2",
+  "label": "Prefix observation laws test exposure of the delayed switch",
+  "subject_kind": "argument",
+  "subject_id": "6f5a709e-e397-4ca1-b87a-39bc2e905eae",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "1c262955-7c5e-4066-a562-aed00158d52c",
+  "note": "Tests observational exposure of the supplied law switch at two observation scopes. It contributes no restriction or warrant on metaphysical admissibility."
+}

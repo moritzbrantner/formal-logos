@@ -1,0 +1,14 @@
+{
+  "id": "6f5a709e-e397-4ca1-b87a-39bc2e905eae",
+  "label": "Compare prefix and successor observation laws across a delayed switch",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "823496e6-37d3-4739-b66a-7b70b049fa5b",
+  "inference_ids": [
+    "8eaf743b-07f4-4b41-ae1c-e1ff9cc9530e"
+  ],
+  "meaning": "NoFoundationLawChaos.lawSwitch supplies the two complete paths, equal all-true prefix conditions and opposite states at the switching successor. The same deterministic experiment wrapper yields equal prefix laws and different successor laws. Agreement of the exact old-record observation laws is compatible with distinct transition rules and possible prospective discrimination within the supplied class. No inference from absence of explanation to the admission of this pair or the admission of any richer class is encoded.",
+  "definition_ids": [
+    "10d0fb41-49a3-404f-898f-caabd0d0324e",
+    "58d12f26-3402-5f67-b768-3c71f3381894"
+  ]
+}

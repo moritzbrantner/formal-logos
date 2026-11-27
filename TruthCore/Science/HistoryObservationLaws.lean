@@ -41,7 +41,7 @@ def HistoricalBoundary : Prop :=
   Identifies (deterministic (transcript audit probe 1)).law PastOccurred
 
 /-- Read only the finite record through the cutoff, inclusive. -/
-def prefix (n : Nat) (f : Trace) : Fin (n + 1) → Bool := fun i => f i.val
+def recordThrough (n : Nat) (f : Trace) : Fin (n + 1) → Bool := fun i => f i.val
 
 /-- If the two schedules are supplied, the exact law of the old record
 cannot distinguish them. The observation at the switching successor has
@@ -50,7 +50,7 @@ def ScheduleBoundary : Prop :=
   ∀ n k, n ≤ k →
     let copy := generated copySchedule
     let switched := generated (toggleFrom k)
-    (deterministic (prefix n)).law copy = (deterministic (prefix n)).law switched ∧
+    (deterministic (recordThrough n)).law copy = (deterministic (recordThrough n)).law switched ∧
     (deterministic (fun f : Trace => f (k + 1))).law copy ≠
       (deterministic (fun f : Trace => f (k + 1))).law switched
 

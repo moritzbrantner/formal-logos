@@ -1,0 +1,15 @@
+{
+  "id": "c57d8091-a040-4a9f-924a-151de3044056",
+  "label": "Transfer adaptive historical classification to exact deterministic transcript laws",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "9b461d83-561b-411d-8e77-7cb3e27abf30",
+  "inference_ids": [
+    "e51c01c7-5159-4089-881a-3bf6f5422820"
+  ],
+  "meaning": "Combines the blind and audit classifiers from AdaptiveHistoryAccess.historyControls with the exact proposition-identification criterion in Science.Identifiability. The deterministic Experiment.law is the Dirac measure at its transcript. Discrete transcripts have separating measurable singletons, so the full measure provides exactly the original transcript distinctions. No shared sample between genuinely random channels would by itself establish equality of their laws.",
+  "definition_ids": [
+    "4a52e22b-c56f-4814-9661-9ef540301cb4",
+    "7011ffa0-1d24-4e36-84e2-714a38cbdeac",
+    "a6e1ef95-8138-5cfc-8fe2-1202ba3b9a5c"
+  ]
+}

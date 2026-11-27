@@ -3,7 +3,7 @@ vocab = "TruthCore.Science.HistoryObservationLaws"
 results = "TruthCore.Results.Science.HistoryObservationLaws"
 
 [[statement]]
-id = "Exact deterministic observation laws distinguish past markers only in the supplied audit"
+id = "Exact deterministic transcript laws separate the blind history test from the supplied audit"
 lean = "HistoricalBoundary"
 definitions = ["4a52e22b-c56f-4814-9661-9ef540301cb4", "7011ffa0-1d24-4e36-84e2-714a38cbdeac", "a6e1ef95-8138-5cfc-8fe2-1202ba3b9a5c"]
 paraphrase = "In the two-bit history surrogate, for every finite length and deterministic adaptive policy on the blind interface, the exact probability law of the transcript fails to identify the stipulated past-event marker. The exact transcript law of the supplied one-action audit identifies it on the same inputs. Each model has a deterministic readout, so those laws are point masses, with no prior across models. Real historical truth, admissibility, stochastic matching and epistemic warrant are open."
@@ -12,7 +12,7 @@ paraphrase = "In the two-bit history surrogate, for every finite length and dete
 id = "Transfer adaptive historical classification to exact deterministic transcript laws"
 theorem = "historicalBoundary"
 premises = []
-conclusion = "Exact deterministic observation laws distinguish past markers only in the supplied audit"
+conclusion = "Exact deterministic transcript laws separate the blind history test from the supplied audit"
 axioms = ["propext", "Classical.choice", "Quot.sound"]
 rule = "Map a point mass through the transcript, use injectivity of Dirac, and reuse the adaptive controls"
 meaning = "Combines the blind and audit classifiers from AdaptiveHistoryAccess.historyControls with the exact proposition-identification criterion in Science.Identifiability. The deterministic Experiment.law is the Dirac measure at its transcript. Discrete transcripts have separating measurable singletons, so the full measure provides exactly the original transcript distinctions. No shared sample between genuinely random channels would by itself establish equality of their laws."
@@ -24,7 +24,7 @@ definitions = ["10d0fb41-49a3-404f-898f-caabd0d0324e", "58d12f26-3402-5f67-b768-
 paraphrase = "For any record cutoff n and switch date k at or after n, the copy and delayed-toggle schedules have the same exact observation law for the finite trace through n. The observation of their state at the successor of k has different laws. These are per-schedule point masses, without weights over the two schedules, and the result is conditional on that supplied pair of alternatives."
 
 [[argument]]
-id = "Compare prefix and successor observation laws on the certified copy and delayed-toggle schedules"
+id = "Compare prefix and successor observation laws across a delayed switch"
 theorem = "scheduleBoundary"
 premises = []
 conclusion = "Late deterministic law changes preserve the prefix observation law and split the successor law"
@@ -44,7 +44,7 @@ note = "Tests whether access to the entire observation law instead of a realized
 [[relation]]
 id = "Prefix observation laws test exposure of the delayed switch"
 subject_kind = "argument"
-subject_id = "Compare prefix and successor observation laws on the certified copy and delayed-toggle schedules"
+subject_id = "Compare prefix and successor observation laws across a delayed switch"
 predicate = "tests"
 object_kind = "statement"
 object_id = "1c262955-7c5e-4066-a562-aed00158d52c"
