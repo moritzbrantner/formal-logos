@@ -11,6 +11,7 @@
   "meaning": "The well-founded relation includes the same classifier and relative necessity guards on both candidates. The standard asymmetry theorem excludes opposite edges under these guards. Strictness uses a single admitted world, a roster of natural-number candidates all existing and classified as concrete, and a strict grade MoreIn esse a b defined by b < a. This grade is asymmetric and has an endless ascent.",
   "definition_ids": [
     "293d6ad6-ea47-4861-bef7-ee05eef2090a",
+    "9146789d-5b36-572f-baa1-7eef28967793",
     "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
     "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
     "5766de66-8a37-5b04-aa65-9eec53319f50",
