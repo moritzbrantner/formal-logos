@@ -238,7 +238,7 @@ subject_id = "8ad1804e-06d1-4491-ba96-d3382245f2ad"
 predicate = "tests"
 object_kind = "statement"
 object_id = "f0ac2f76-62fe-4b9b-8427-e0ca8d7a3cef"
-note = "Omit the transfer from power for actual-roster absence to power over each member's esse. At false in replacementG, g has the joint-absence power and is present, but the unindexed esse-power relation gives g power over d, which replaces c at true. It gives g no esse power over the origin-contingent c."
+note = "Omit the transfer to power over each member's esse on the thin PowerFor reading. In replacementG, c is the only contingent concretum at the origin false. The thin reading counts g's giving d being at accessible true as power for the roster's absence because c is absent there. The giving does no causal work in c's absence. The independent, world-unindexed PowerOver assignment grants g power over d's esse and withholds it for c."
 
 [[relation]]
 id = "30fb437a-662d-4dcd-9ea7-63317036bb51"
@@ -258,7 +258,7 @@ subject_id = "8ad1804e-06d1-4491-ba96-d3382245f2ad"
 predicate = "tests"
 object_kind = "statement"
 object_id = "9f7b1778-84c9-40cf-a1b6-a91a960b0590"
-note = "Omit the requirement that holders of the actual-absence power give being to each actual contingent concretum. In replacementG, g gives being only to replacement d at true and never to origin-contingent c. Factive giving and the other premises hold while withholding fails."
+note = "Omit the creator/conserver requirement that a holder give being at the origin false to every concretum contingent there. On the thin PowerFor reading, g's giving d being at accessible true counts as power for the roster's absence because c is absent there. The giving does no causal work in c's absence, and g never gives c being. Factive giving and the other premises hold on this reading, while withholding fails."
 
 [[relation]]
 id = "e3d8cea7-e5c9-49e5-9196-8b1ea1814d45"
@@ -379,3 +379,13 @@ predicate = "tests"
 object_kind = "argument"
 object_id = "81b1b020-b8d6-45fe-9f3a-18689173c6a6"
 note = "In theistG origin false and accessible absence world true are mutually accessible. Contingent c is present at false only. The same concrete g exists at both and has the power for false obtaining at true. The nonlogical premise bundle is jointly satisfied."
+
+[[relation]]
+id = "9d810671-1792-48d1-ac39-5bdbeecad0bb"
+label = "Test by PrussPowerPremises.twoMemberCollective (259571ae)"
+subject_kind = "result"
+subject_id = "9bba1325-f031-450d-b506-f91ca9f0bc46"
+predicate = "tests"
+object_kind = "argument"
+object_id = "259571ae-36c0-44ff-804b-d3f138c0a363"
+note = "Tests whether the route has a model with two contingent concreta at the origin even when powers for individual absence fail. In twoMemberG, c and d are present and contingent at (true, true). The concrete g holds the joint-absence power there and is present at accessible (false, false), where both members are absent. The model jointly witnesses all five nonlogical premises. The argument separately assumes excluded middle."

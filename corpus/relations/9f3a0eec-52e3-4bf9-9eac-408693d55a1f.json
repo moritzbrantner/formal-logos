@@ -1,0 +1,10 @@
+{
+  "id": "9f3a0eec-52e3-4bf9-9eac-408693d55a1f",
+  "label": "Test by PrussPowerPremises.twoMemberCollective (259571ae)",
+  "subject_kind": "result",
+  "subject_id": "9bba1325-f031-450d-b506-f91ca9f0bc46",
+  "predicate": "tests",
+  "object_kind": "argument",
+  "object_id": "259571ae-36c0-44ff-804b-d3f138c0a363",
+  "note": "Tests whether the route has a model with two contingent concreta at the origin even when powers for individual absence fail. In twoMemberG, c and d are present and contingent at (true, true). The concrete g holds the joint-absence power there and is present at accessible (false, false), where both members are absent. The model jointly witnesses all five nonlogical premises. The argument separately assumes excluded middle."
+}

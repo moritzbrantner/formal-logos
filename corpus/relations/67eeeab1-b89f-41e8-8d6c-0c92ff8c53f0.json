@@ -6,5 +6,5 @@
   "predicate": "tests",
   "object_kind": "statement",
   "object_id": "f0ac2f76-62fe-4b9b-8427-e0ca8d7a3cef",
-  "note": "Omit the transfer from power for actual-roster absence to power over each member's esse. At false in replacementG, g has the joint-absence power and is present, but the unindexed esse-power relation gives g power over d, which replaces c at true. It gives g no esse power over the origin-contingent c."
+  "note": "Omit the transfer to power over each member's esse on the thin PowerFor reading. In replacementG, c is the only contingent concretum at the origin false. The thin reading counts g's giving d being at accessible true as power for the roster's absence because c is absent there. The giving does no causal work in c's absence. The independent, world-unindexed PowerOver assignment grants g power over d's esse and withholds it for c."
 }

@@ -56,7 +56,7 @@ id = "Pruss actual-absence route: laws, nonvacuity, omission, replacement and S4
 lean = "Model.ActualAbsenceControls"
 paraphrase = "Premise-free law and finite models (structural surrogates). Law: with Euclidean access the global possibility that no concrete being is contingent implies Pruss's possibility that every actual contingent concretum is absent. Models: nonvacuity of the sibling on the theist frame and on a non-Euclidean frame (the sibling needs no Euclidean premise); one omission model for each of its five non-logical premises; replacement (one actual concretum possibly absent, Pruss's premise holding, the global premise failing because a non-actual being is contingent elsewhere) and Van Cleve's point (two actual contingents, each possibly absent, never jointly absent, on a Euclidean frame: Pruss's and the global premise both fail); and, on a reflexive transitive non-Euclidean frame, #248's unrestricted conceivability bridge holding for a conceiver of both a being's necessary existence and its absence, in two models: one with the being not actual at the reading world, one with it actual there; so law 9 of the framework controls depends on Euclidean access."
 definitions = ["bf7eddca-8291-4744-8470-379babcd7781", "6ecf24d5-5001-4571-937c-2632ac8c2c66", "1b8baf77-84fa-5513-a138-7fa14840dd87", "13c0abe7-25f7-4921-b52e-9f732edd6f2c", "DEF-KANT-MODAL-NECESSITY", "DEF-KANT-MODAL-CONTINGENCY", "DEF-KANT-ONTOLOGICAL-MODEL"]
-disambiguations = ["DISAMB-CONCRETE-ABSTRACT-CRITERIA", "DISAMB-KANT-CONTINGENCY", "f5dda05f-ba3c-4fdf-82a3-e4803c24ddb5"]
+disambiguations = ["DISAMB-CONCRETE-ABSTRACT-CRITERIA", "DISAMB-KANT-CONTINGENCY"]
 
 [[argument]]
 id = "A necessary concrete power-holder, by Aristotelian modality and Pruss's possibility"
