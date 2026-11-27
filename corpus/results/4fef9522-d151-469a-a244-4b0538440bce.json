@@ -1,0 +1,11 @@
+{
+  "id": "4fef9522-d151-469a-a244-4b0538440bce",
+  "label": "No unexplained absence at roots, from essence-grounded modality and positive ESSENCE_6",
+  "argument_id": "9c55984a-5c1a-489f-b3c8-0938bf90cedb",
+  "challenge_module": "TruthCore.Results.Causality.RootClosure.Challenge",
+  "solution_module": "TruthCore.Results.Causality.RootClosure.Solution",
+  "theorem": "TruthCore.Results.Causality.RootClosure.noUnexplainedAbsenceFromPositiveEssence",
+  "comparator_config": "results/4fef9522-d151-469a-a244-4b0538440bce/comparator.json",
+  "status": "solution-present",
+  "description": "Fix an actual root r at w and a determination d that r lacks while some admissible profile q contains all of r's determinations and d (an unexplained absence). Positivity makes every ESSENCE_6 condition on r's profile hold of q. Essence-grounded modality then gives a world v accessible from w at which r has every member of q, in particular d. Necessity of the root's absences gives r the determination d at w, a contradiction. So no actual root has an unexplained absence. The derivation is a relocation: under N, EM and factivity of essential conditions, positivity is equivalent to the conclusion (Lean-only positivityOfNoUnexplainedAbsence), so the argument separates N and EM from the contested load, which sits on positivity; under the necessity direction of member grounding positivity is in turn equivalent to carriage (positiveEssenceFromCarriage with carriedOfPositive), a second relocation. The conclusion covers only case (iii): an absence of noesis made inadmissible with the root's profile (case i or ii) satisfies all three premises and the conclusion. The main theorem uses no axioms. The Comparator companion essenceControls (three Mathlib axioms; the #2153 carrier with the open family, the source the only actual root) gives a positive witness and, for each premise, a row where it fails, the other two hold and the conclusion fails: a contingent lack of noesis (N fails), a necessary lack that no nature grounds (EM fails), and a nature with the negative clause 'lacks noesis' (positivity fails). The rows are assignments of the stated relations, not models of essence."
+}
