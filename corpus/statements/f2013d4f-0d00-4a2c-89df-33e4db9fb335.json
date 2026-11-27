@@ -1,0 +1,23 @@
+{
+  "id": "f2013d4f-0d00-4a2c-89df-33e4db9fb335",
+  "label": "Act, non-reception and thin profiles of the unde inference: controls",
+  "paraphrase": "Closed finite profiles over two beings and three stand-in respects (being, a nature, wisdom); statements about them only. Act profile: R-dep, both unde bridges, the nature in act and 7de89edb hold, and so does R-act1. Non-reception profile, read with the act relation (esse actualizes the nature but is not received in it) and with the dependence relation: R-dep, the first bridge, the nature in act and 7de89edb hold; the second bridge and R-act1 fail; the essence-only account and finitude in perfection hold. Omitting the first bridge: R-act1 fails though the rest holds. Reception without the nature premise: R-act1, 7de89edb and the capacity bridge hold and finitude fails. For R-act2: with intensive inclusion it holds; with thin inclusion, or with no actualization recorded, it fails while R-dep, the first bridge where present and the witness premise hold. Neither the extensions nor the Lean types tell the act relation from the dependence relation: both senses have type B → R → R → Prop, so bind-check does not enforce the distinction; only the definition records state it.",
+  "lean_declaration": "TruthCore.Causality.DependenceToActOfBeing.Control.Controls",
+  "definition_ids": [
+    "799e0ff7-9705-4b50-89a9-a8463c1b4f22",
+    "82ab06d0-5328-4d85-b3a2-4a13532d9524",
+    "97c4f504-4792-43c6-9f61-ae23df732d5f",
+    "ad76481a-f038-4652-9c6e-0e0441eee7e5",
+    "dbae9538-e7f2-47ef-9fdd-f8b6c98efaf5",
+    "4433942e-aaf6-55a9-b777-66e55638103d",
+    "6ced5205-e6a4-585e-950e-3b22e7c9ef01",
+    "0a2bf1a0-bfc5-45d7-966a-a28919b6e847",
+    "84147eb5-88ef-46e7-9a0d-9c18d5137f16",
+    "65e38ffa-5a1c-55d0-935c-6538d843b780"
+  ],
+  "disambiguation_ids": [
+    "a409105e-8389-46ce-b14b-bebbc2864198",
+    "62ca3d65-8dd4-4187-abe1-a928b3045f12",
+    "5921354b-51e6-5da3-8d8c-e9041840fd9f"
+  ]
+}

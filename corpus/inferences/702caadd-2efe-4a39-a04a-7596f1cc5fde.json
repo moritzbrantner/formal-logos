@@ -1,0 +1,10 @@
+{
+  "id": "702caadd-2efe-4a39-a04a-7596f1cc5fde",
+  "label": "Given dependence, each unde bridge is equivalent to what it delivers, checked (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "d61f1fa7-53a8-45ee-bb8f-6d6f85de4818",
+  "rule": "Prove each equivalence from its side conditions; check the dependence reading directly",
+  "meaning": "Premise-free load map. It certifies that, given R-dep, each bridge of the unde inference is equivalent to the part of R-act1 or R-act2 it delivers, and that on the dependence reading the first bridge is analytic. A certificate of where the load sits, not of warrant.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

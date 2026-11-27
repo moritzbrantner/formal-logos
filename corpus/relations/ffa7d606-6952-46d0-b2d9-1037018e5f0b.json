@@ -1,0 +1,10 @@
+{
+  "id": "ffa7d606-6952-46d0-b2d9-1037018e5f0b",
+  "label": "Modal ontological controls test the rigidity bridge",
+  "subject_kind": "result",
+  "subject_id": "bc8eea6a-231c-473e-8bf6-e4301b057c36",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "e3c64b61-df23-410e-bb2f-b56bfb58ecd0",
+  "note": "Strictness model fixedPlusVisitor for the strength order: the GOD_4 conclusion and persistence hold while rigidity fails, so persistence does not entail rigidity and the conclusion does not entail rigidity."
+}

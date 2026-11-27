@@ -1,0 +1,9 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.OriginDeletionIncompatibility.Challenge",
+  "solution_module": "TruthCore.Results.Causality.OriginDeletionIncompatibility.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.OriginDeletionIncompatibility.deletionExcludesNecessaryConcrete"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}

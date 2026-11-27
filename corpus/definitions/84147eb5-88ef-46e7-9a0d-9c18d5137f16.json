@@ -1,0 +1,9 @@
+{
+  "id": "84147eb5-88ef-46e7-9a0d-9c18d5137f16",
+  "label": "PERFECTION_OF_BEING_1: thin reading, only being itself is a perfection of being",
+  "term": "thin reading of perfection of being",
+  "definition": "`ThinOfBeing being d`: d is a perfection of being only if d is the determination `being` itself. On this reading, 'whatever is its own being lacks no perfection of being' says only that it has being. Distinguishing conditions: it is the reading of a view on which existence adds no content to an essence; it does not count life or wisdom as perfections of being (contrast PERFECTION_OF_BEING_2).",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.ModeOfBeingMiddleTerm.ThinOfBeing",
+  "note": "Stipulative analyst definition of a rival reading, attributed to no source; introduced for docs/notes/mode-of-being-subsistent-esse.md."
+}
