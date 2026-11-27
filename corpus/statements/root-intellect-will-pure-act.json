@@ -2,13 +2,12 @@
   "id": "124e21e6-11bc-5a5e-9c6a-fd4eb49aba44",
   "label": "ONE and the SAME n is an actual concrete selected root at w, exists at every world accessible from…",
   "legacy_id": "STMT-ROOT-INTELLECT-WILL-PURE-ACT",
-  "paraphrase": "ONE and the SAME n is an actual concrete selected root at w, exists at every world accessible from w, has equal represented p.esseOf/p.essenceOf values, is noncomposite, has no distinct simply-prior predecessor, is not a matter-form composite, enters the composition of nothing, has the supplied intellect and will predicates, and has no potency in any supplied respect. This explicitly conjoins pure act INSIDE the old root/intellect/will existential. No witness identification between separate existential results, positive actuality/perfection, completeness of the respect domain, other-world rootness, unique necessary individual, God, eternity, omniscience or freedom is asserted.",
+  "paraphrase": "ONE and the SAME n is an actual concrete selected root at w, exists at every world accessible from w, has equal represented p.esseOf/p.essenceOf values, is noncomposite, has no distinct simply-prior predecessor, is not a matter-form composite, enters the composition of nothing, has the supplied intellect and will predicates, and has no potency in any supplied respect under the independently supplied InPotency predicate. This explicitly conjoins pure act INSIDE the old root/intellect/will existential. No witness identification between separate existential results, positive actuality/perfection, completeness of the respect domain, other-world rootness, unique necessary individual, God, eternity, omniscience or freedom is asserted.",
   "lean_declaration": "TruthCore.Causality.RootIntellectWillPureAct.NecessaryRootIntellectWillPureActAt",
   "definition_ids": [
     "6eb6b132-923a-5f08-9022-feddaba929b9",
     "6740d461-9f1e-526f-8c3a-7e5e85b5315f",
     "c57e2682-08e6-527e-950f-0fa0a7ff11ef",
-    "c86cc1d1-c09f-5296-8ab9-2e5ddf217dce",
     "beb654a7-e204-5f4c-a7b4-45e886ba7109",
     "1b8baf77-84fa-5513-a138-7fa14840dd87",
     "c2c8b139-fb8a-5ce2-8add-ec55a60d8b0b",
@@ -16,12 +15,9 @@
     "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
     "baddf770-36bf-542f-bb3c-2297342d5452",
     "e1ff44df-ed97-5990-8424-1abd720f23ea",
-    "f8948e28-b13a-5244-95f1-41a05cd4fff2",
     "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
     "0ea9feb8-1f92-5b11-aa74-2f2e567c6106",
     "183b48d2-1753-583d-aef9-4199cff86231",
-    "56c9a230-137d-5207-9262-27196af6e713",
-    "e232f6c0-f1f9-5c99-9e26-946a8abe4f2e",
     "fc6f0e12-470f-5717-8c5b-ece7a450fe59",
     "9969dfc2-1f2e-50be-b5e6-1f9cd402c7a6",
     "211a6432-8b8f-53ed-85e3-75173bb15b24",
@@ -35,7 +31,7 @@
     "7c64b499-6dba-5e03-bdf3-5acea95d8836",
     "c2e13bb8-679a-55ea-8754-ae77d345bcd2",
     "a49e4cf1-ca4f-5519-9724-892af257cedb",
-    "9f874532-f37e-590b-bec9-a9affb2762ac",
+    "3ea2762f-1a85-5059-b4e7-d29f192b16b6",
     "c65e6d6e-3024-5dbd-982f-ea18ba11c1a2"
   ],
   "disambiguation_ids": [
@@ -55,9 +51,9 @@
     "002f42cb-3015-5644-80b3-d408538394e6",
     "3b0d67c5-59e4-5556-a728-26bd567f0fb1",
     "1aef8986-ed29-564f-9803-d812d2ff63e1",
-    "86d198f5-e724-558a-8fce-b0a1e3592e08",
     "6f1d1395-7c1d-5bd5-a45d-03380857aed6",
     "d16b94fa-886f-54f3-85a3-7fc0c43d2b58",
-    "06fb4f51-ff5f-5c5e-b947-844f20de4174"
+    "06fb4f51-ff5f-5c5e-b947-844f20de4174",
+    "508617ab-cf24-5f3b-a387-64b3991359ec"
   ]
 }
