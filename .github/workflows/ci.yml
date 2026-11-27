@@ -257,6 +257,24 @@ jobs:
               exit "$status"
             } 2>&1 | tee -a "$GITHUB_STEP_SUMMARY"
           fi
+      # Result placement (owner decision, 2026-11-27, #2103): typed contact is not enough
+      # for verified results. The gate fails when a result new since the base, whose
+      # argument changed, or that lost its placement, neither reaches the root nor is a
+      # placed diagnostic or rival nor carries a connection_plan to a root-path statement.
+      # Pre-existing unplaced results are reported as backlog. connectivity --base above
+      # still judges statements, which this gate does not cover.
+      - name: Gate new results on reaching the root or placement
+        if: always() && github.event_name == 'pull_request'
+        run: |
+          set -o pipefail
+          {
+            echo "### Placement gate (\`truth orphans --base HEAD^1 --gate\`)"
+            echo '```text'
+            status=0
+            target/release/truth orphans --base HEAD^1 --gate || status=$?
+            echo '```'
+            exit "$status"
+          } 2>&1 | tee -a "$GITHUB_STEP_SUMMARY"
       # Attribution self-check (#989, owner decision 2026-11-05): on a PR, every new or
       # changed stating claim (or claim whose statement text or passage changed) must
       # record "The passage states X, which is the premise." CI checks the record
