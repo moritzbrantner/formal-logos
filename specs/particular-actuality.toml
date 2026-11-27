@@ -20,12 +20,20 @@ lean = "InheritsEsseCuts"
 paraphrase = "Positive supply of the selected bearer's actuality in the original group interpretation, together with loss of its productive supply under every restriction of admitted groups that removes supply of the same bearer's esse. The intrinsic seeds are fixed. A cut is an operation on supply records. Identifying an actual giver's contribution, a physically admissible change or a respect-specific productive cause needs further evidence."
 definitions = ["DEF-ACT","DEF-ESSE","DEF-JOINT-CAUSAL-GROUPS","DEF-DERIVATIVE-JOINT-SUPPLY"]
 disambiguations = ["DISAMB-IN-ACT"]
+[statement.connection_plan]
+target_statement_id = "2f6b9eff-84a1-5310-9abb-19985f3282c3"
+missing_bridge = "A calibration premise on the same records, indices, InAct and esse with three inputs: (i) c is a total cause of x's being; (ii) r is a selected actual respect of x whose supply inherits every cut to the supply of x's esse (this statement); (iii) the records represent c's contribution, that is, the admitted records producing x's esse are c's contribution to x's being. From (i) to (iii) it concludes CausesIn c x r. Together with coverage (every mode of being of x is a selected actual respect of x in the records), this would give TotalCauseCausesModesOfBeing 2f6b9eff for the records' bearers, and with 791fa216 the transfer premise of universalCauseTransfers. It is stated over supply records and does not presuppose 2f6b9eff."
+blocker = "Supply membership records contribution, not effective responsibility. The populated joint control (Control.Certificate, result 0b462078) satisfies the cut-inheritance interface, 791fa216 and the transfer background while universal transfer b26c10a0 fails under the independently assigned causal table. No warrant is recorded for identifying an actual giver's contribution with the records that a cut removes, and an inherited cut concerns restrictions of records with fixed seeds, not possible worlds (docs/notes/actuality-esse-research.md, section 9)."
 
 [[statement]]
 id = "With nonintrinsic bearer esse, a single deletion exactly tests all inherited esse cuts"
 lean = "SingleDeletionTest"
 paraphrase = "For any indexed group interpretation in which the esse index of each selected actual's bearer is not an intrinsic seed, every selected actual has original supply and inherits all cuts to the bearer's esse supply iff each has original supply and lacks supply after deleting every group whose effect is that bearer's esse. This checks absence of a supply route bypassing the indexed esse within the fixed complete choice of records and intrinsic seeds. It does not classify causes of that esse, establish ontological adequacy, or test whether group deletion itself represents a possible event."
 definitions = ["DEF-ACT","DEF-ESSE","DEF-JOINT-CAUSAL-GROUPS","DEF-DERIVATIVE-JOINT-SUPPLY"]
+[statement.connection_plan]
+target_statement_id = "2f6b9eff-84a1-5310-9abb-19985f3282c3"
+missing_bridge = "The calibration premise planned for the cut-inheritance statement ca58266a, from inherited esse cuts and a giver's represented contribution to CausesIn c x r. Once that route exists, this equivalence is the exact test of its cut-inheritance input on nonintrinsic bearer esse and is linked to ca58266a by tests."
+blocker = "The calibration premise is unwarranted, as recorded in the plan of ca58266a, so ca58266a is not on a root route and a tests link to it would place nothing."
 
 [[statement]]
 id = "Populated joint and enabling realization controls with secondary-only causal transfer assignment"
@@ -69,3 +77,12 @@ conclusion = "Populated joint and enabling realization controls with secondary-o
 rule = "Use the existing secondary-only model and construct supply derivations and cut obstructions on its four indexed roles"
 meaning = "The same recipient and skill are tested in each variant. Suppressing the recipient's esse record keeps the producer's esse available and leaves only the enabler variant able to supply the skill. Suppressing the recipient's skill record spares its esse. The original effective-cause table is independently assigned and fails universal transfer even in the joint variant. A positive supply tree in the enabler variant is not an occurrence with an absent subject."
 axioms = []
+
+[[relation]]
+id = "The populated joint realization control tests universal transfer"
+subject_kind = "result"
+subject_id = "0b462078-ca02-4731-945c-8b088d1b69ad"
+predicate = "tests"
+object_kind = "statement"
+object_id = "b26c10a0-983d-5a88-aa03-cc601bc1ddc6"
+note = "Control.Certificate in the four-role secondary-only causal interpretation: the transfer background, PerfectionsAreModesOfBeing 791fa216, the joint bearer interface ModeUsesBearer and cut inheritance InheritsEsseCuts all hold, while UniversalCauseTransfersPerfections b26c10a0 fails for the independently assigned causal table. So record-level cut inheritance with these inputs does not entail b26c10a0. The non-entailment holds for a structural reason: the causal table CausesIn is assigned independently of the supply records, so nothing about the records can constrain it, and no inheritance fact could. The failure of b26c10a0 in this causal interpretation is not new: SecondaryOnlyTransferSurvives already witnesses it, and the certificate reuses that conjunct. What the control adds is that the supply-side interface also holds there. The theorem universalCauseTransfers omits 2f6b9eff (TotalCauseCausesModesOfBeing), but this certificate does not interpret that premise, so the edge targets b26c10a0, the statement the model actually falsifies. The missing step is the calibration bridge planned on ca58266a. A statement about this interpretation only."
