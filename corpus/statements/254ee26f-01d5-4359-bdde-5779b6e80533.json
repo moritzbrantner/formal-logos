@@ -9,5 +9,10 @@
   ],
   "disambiguation_ids": [
     "62ca3d65-8dd4-4187-abe1-a928b3045f12"
-  ]
+  ],
+  "connection_plan": {
+    "target_statement_id": "c4fb87a6-047d-5f3d-b3e3-8dc0c4bbc946",
+    "missing_bridge": "A registered sense bridge identifying PERFECTION_OF_BEING_2's primitive OfEsse with the OfBeing primitive of c4fb87a6 over the same determinations, so that R-act2 supplies c4fb87a6 in the intensive sense.",
+    "blocker": "Both statements have the same universal shape (every pure perfection is OfX), so a derivation would be a transcription and add no warrant; the identification is a sense choice recorded in DISAMB 62ca3d65, under review in PR #2171. The independent question is whether R-act2 itself is warranted; the q.4 a.1 ad 3 unde inference only makes it explicit (docs/notes/rdep-to-ract.md)."
+  }
 }
