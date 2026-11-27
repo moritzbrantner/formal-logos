@@ -19,7 +19,7 @@ class BundleAuditTest(unittest.TestCase):
 
     def test_all_specialization_and_consumer_scope(self):
         audit = bundle_audit.check(audit=json.loads(bundle_audit.AUDITS[1].read_text()))
-        self.assertEqual(len(audit['records']), 152)
+        self.assertEqual(len(audit['records']), 153)
         self.assertTrue({legacy_uuid('definition', 'DEF-INDEPENDENT-POTENCY'), legacy_uuid('disambiguation', 'DISAMB-POTENCY')} <=
                         {row['id'] for row in audit['records']})
         self.assertEqual(sum(row['kind'] == 'results' for row in audit['records']), 5)
