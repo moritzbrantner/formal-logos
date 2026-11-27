@@ -1,0 +1,15 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.BegunOrHomogeneousGiving.Challenge",
+  "solution_module": "TruthCore.Results.Causality.BegunOrHomogeneousGiving.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.BegunOrHomogeneousGiving.concurrentOfBegunOrHomogeneous",
+    "TruthCore.Results.Causality.BegunOrHomogeneousGiving.controls",
+    "TruthCore.Results.Causality.BegunOrHomogeneousGiving.nonvacuity"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "enable_nanoda": true
+}
