@@ -1,0 +1,10 @@
+{
+  "id": "283eb735-e84e-4f21-ad14-929d3f5a5923",
+  "label": "Test by NecessaryConcreteRouteBridge.necessaryRouteControls (c71c068c)",
+  "subject_kind": "result",
+  "subject_id": "d492d6e9-e381-5628-ba20-18e7855c322d",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "c71c068c-bbae-5ed5-a99d-70b155c8d239",
+  "note": "Omit an actual concrete ground for each actual contingent concretum. In contingentRootProfile both candidates are present at true, but only false is present at false. The contingent root true has no ground. BeginningLawControl separately has one ungrounded individual present at every time at true and absent at false. It satisfies the ground-for-beginnings rule while failing the contingent grounding premise at true."
+}

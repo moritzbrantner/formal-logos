@@ -1,0 +1,10 @@
+{
+  "id": "3c226a43-3f77-4440-b904-888c57ad5da5",
+  "label": "Test by ContingencyGrounding.controls (82ad1978)",
+  "subject_kind": "result",
+  "subject_id": "cafd9800-2fee-4fb6-a52f-bec0f1479d7f",
+  "predicate": "tests",
+  "object_kind": "argument",
+  "object_id": "82ad1978-da75-416d-a3e1-fbc9d2d4cf2b",
+  "note": "Witness all five power-grounding premises together at true. The two actual bearers are the necessary f and the contingent x. The frame gives x simple corruptibility and gives f both POWER_OVER_ESSE_1 over x and a distinct simply prior CAUSE_2 at esse. Reception and matter-form composition realize the passive-to-receptive premise."
+}
