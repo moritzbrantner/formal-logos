@@ -32,7 +32,8 @@
     "1dbd7440-9639-46ce-b1fa-901b7077458f",
     "67b278a7-c9a8-4c9f-b4a7-71410922f26c",
     "PR-1950",
-    "0bccf9e4-eb36-41e7-ae46-f12d335138cf"
+    "0bccf9e4-eb36-41e7-ae46-f12d335138cf",
+    "PR-2108"
   ],
   "blocker": "Open: every bridge (bb7e4426, 622dbf36, e81ec2fe with its mode-gap premise, bd305511) and 82cfaf26 remain open premises; bd305511 keeps the necessary-condition scope condition (oxygen and flame) and depends on natural versus divine-power possibility under DEF-CAN-BE-WITHOUT's real possibility; no root route consumes 87aa978c (plan: existential secunda via instance to 3d01134d, adding only a weaker-premise alternative) or 522506d1 (plan: to c51a07a1, blocked by the same-bearer identification of the first in being with the first unmoved mover); the source-free global-structure rival targets AGWF and so every member of the order; the lean4export binder-info merge is a lane C tooling defect. Next test: a reading-B variant of the sense inclusion (from 446e3f2a), which needs the stronger premise that the cause of every existential link is efficiently caused in a respect relevant to its causing x's being.",
   "workers": [
@@ -41,7 +42,8 @@
       "provider": "codex",
       "model": "gpt-6.2-sol",
       "effort": "high",
-      "date": "2026-11-27"
+      "date": "2026-11-27",
+      "pr": "PR-2108"
     }
   ]
 }

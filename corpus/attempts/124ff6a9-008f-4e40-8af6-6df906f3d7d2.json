@@ -28,7 +28,8 @@
     "99e3da8f-6e3c-48b2-9894-6ed2c0559154",
     "PR-1529",
     "1f9a4796-42ab-481c-b86e-147799399363",
-    "a16015ef-f9b3-410b-a267-46895acd2788"
+    "a16015ef-f9b3-410b-a267-46895acd2788",
+    "PR-2108"
   ],
   "blocker": "Open: every new premise (ca55ed3a, d8024a38, 7371403f, 966c08c6) and the reused ones; the decisive question remains ca07cae9 at a first being and e078f07b's respect-unrestricted form. Next tests: (0) connection plan for the timed plenitude conclusion 8caca2bf: premises at every time or an open timed-to-untimed bridge, checked against the eternity consumers; (1) search for a corpus statement of a temporal beginning and test joint satisfiability with d256e6d2 on one Before/now profile; (2) formalize respect-indexed priority (PriorIn c x r) and test whether e078f07b's unrestricted form follows from it plus a bridge, or whether a dipolar model satisfies the respect-indexed version with every other root premise; (3) derive ca07cae9 at a first being from existing PSR premises, or record why not. Literature named here (Oppy, Hartshorne, Whitehead, Molnar, Mumford and Anjum) is unread.",
   "workers": [
@@ -37,7 +38,8 @@
       "provider": "codex",
       "model": "gpt-6.2-sol",
       "effort": "high",
-      "date": "2026-11-27"
+      "date": "2026-11-27",
+      "pr": "PR-2108"
     }
   ]
 }

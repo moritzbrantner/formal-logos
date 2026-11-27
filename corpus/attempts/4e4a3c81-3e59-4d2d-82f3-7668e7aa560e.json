@@ -30,7 +30,8 @@
     "8353b4b6-b22b-45d2-8216-a32b12df5707",
     "PR-2007",
     "a16015ef-f9b3-410b-a267-46895acd2788",
-    "383cd59b-2244-4dc0-a5c4-a3dd4c610b72"
+    "383cd59b-2244-4dc0-a5c4-a3dd4c610b72",
+    "PR-2108"
   ],
   "current_assessment": {
     "date": "2026-11-26",
@@ -56,7 +57,8 @@
       "provider": "codex",
       "model": "gpt-6.2-sol",
       "effort": "high",
-      "date": "2026-11-27"
+      "date": "2026-11-27",
+      "pr": "PR-2108"
     }
   ]
 }
