@@ -1,0 +1,11 @@
+{
+  "id": "2abc0501-70df-4c88-9a59-b3b3752f578e",
+  "label": "Carriage of ESSENCE_6 exclusions at roots, from positive ESSENCE_6 at roots",
+  "argument_id": "ef59020f-fc98-42a4-8779-cd039d3c8997",
+  "challenge_module": "TruthCore.Results.Causality.RootClosure.Challenge",
+  "solution_module": "TruthCore.Results.Causality.RootClosure.Solution",
+  "theorem": "TruthCore.Results.Causality.RootClosure.carriedOfPositive",
+  "comparator_config": "results/2abc0501-70df-4c88-9a59-b3b3752f578e/comparator.json",
+  "status": "solution-present",
+  "description": "Strength-order certificate: positivity of root essences implies carriage. Establishes no premise."
+}

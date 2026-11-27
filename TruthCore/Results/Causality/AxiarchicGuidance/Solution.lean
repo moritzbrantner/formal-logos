@@ -80,7 +80,11 @@ theorem fixedNotGuided {S X R Z : Type} (w : S → R → X → Nat)
 /-- Registration: if a respect's ranking is realized on stand-ins that carry only
 an overall degree `deg`, and the ranking is irreflexive, then it ranks no
 candidate over another of the same degree. A degree-only stand-in does not
-register a respect in which two overall-tied candidates differ. -/
+register a respect in which two overall-tied candidates differ. The lemma concerns
+only overall-degree-only representations. It does not show that registration needs
+a separate stand-in for each respect: one individuating stand-in per candidate
+(for example `deg := id`) can carry several respect-indexed rankings, on either
+account. -/
 theorem degreeOnlyRegistersNoRespectBetweenTies {X C : Type} (rkr : X → X → Prop)
     (rel : C → C → Prop) (deg : X → C) (hReal : ∀ x y, rkr x y ↔ InvImage rel deg x y)
     (hIrr : ∀ x, ¬ rkr x x) (x y : X) (hTie : deg x = deg y) : ¬ rkr y x :=
@@ -114,8 +118,8 @@ theorem secondOrderStandardNotDependedOn {S X D Z : Type} (good : S → X → X 
     (fun _ _ _ => rfl)
 
 /-- Under the scenario-relative standard, if each profile's agreement with value
-is the same in every scenario (as at a necessary source), the standard is
-invariant and no second-order profile depends on it under any control. -/
+is scenario-invariant (only where value does not vary, not the good-general
+setting), the standard is invariant and nothing depends on it under any control. -/
 theorem invariantAlignmentNoSecondOrderDependence {S X D Z : Type} (good : S → X → X → Prop)
     (favours : Profile S X → D)
     (hInv : ∀ φ s t, TruthCore.Causality.GoodFavouring.AlignedAt φ good s ↔
@@ -169,9 +173,9 @@ theorem guidanceTable : GuidanceTable := by
   exact absurd (show w .base .fit .d < w .base .fit .c from h) (by decide)
 
 /-- Lean-only: under the scenario-relative standard a second-order profile can
-depend on it. The fit-blind profile agrees with value at `base`, not at `raised`,
-so a bearer whose favourings agree with value only sometimes is not confined to a
-fixed second-order orientation. -/
+depend on it. The first-ranked favouring tracks value everywhere (it can be a
+necessary source's own); the dependence comes from the alternative's agreement
+varying, not from the bearer being contingent. -/
 theorem scenarioRelativeStandardDependedOn :
     TruthCore.Causality.GoodFavouring.DependsUnder (SecondOrderStandardAt good id) noCtrl
       (SecondOrderStandardAt good id) .raised goodTracking extraOnly := by
