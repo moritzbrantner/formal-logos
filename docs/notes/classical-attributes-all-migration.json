@@ -157,12 +157,12 @@
       "path": "corpus/statements/act-simply-prior-to-potency.json",
       "status": "unresolved",
       "classification": "open_premise",
-      "finding": "Retained explicit open commitment: Act is simply prior to potency: whatever is in potency in a respect is simply posterior to some being that is in act in that respect. Exact applications are bound by the scoped Challenges. Existing source/attempt evidence is reused, not a renewed source-fidelity certification.",
+      "finding": "Retained explicit open commitment: Act is simply prior to potency: whatever is in potency in a respect is simply posterior to some being that is in act in that respect. Exact applications are bound by the scoped Challenges. Existing source/attempt evidence is reused, not a renewed source-fidelity certification. The fixed Lean declaration takes a supplied potency predicate. Producer-specific specializations are recorded at their arguments. The potency disambiguation applies at each fixed predicate instantiation.",
       "before": {
         "sha256": "24fe5978433819bc66b38f876a3b33560bd8c6ee9dcb572a78fd0e922937b109",
         "lean_declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.ActSimplyPriorToPotencyReading"
       },
-      "reviewed_sha256": "16980be0eb5fc3e63b33ea886434964205f8d0140ad784e724e1f6d606091c24"
+      "reviewed_sha256": "09f157406ebb1bdefa3699a8cbe815586771dff514a9b170db0a5efd8a8ff6fe"
     },
     {
       "kind": "statements",
