@@ -3915,7 +3915,8 @@ Answers to the brief's questions:
   selection where another explains only a range, nor the reverse. The
   selection step is not settled. Under SELECTING_AN_OUTCOME_2 on cells,
   selecting a contingent outcome is met only by a level whose actual cell is
-  inside the outcome class, so the standard is met trivially. Necessary
+  inside the actual outcome class (laws 1, 5), and any such level meets it
+  (law 8), so the standard is met trivially. Necessary
   manifestation is the only frame whose invariant level selects, and it pays
   with the contingency of c. That cost falls equally on a necessitated will
   (§41).
@@ -3969,9 +3970,10 @@ Strictness controls:
 
 The §56 replacement table is now certified. It satisfies #1897's
 `ActualAbsenceByWithholding` with a source that gives something at every
-world. The registered STIT controls `pointwiseNotJoint` and
-`tiedNoEmptyChoice` are included as the decision-frame form: each recipient
-can be ensured absent while no cell omits all creation. Total refraining
+world. The registered STIT controls are included as the decision-frame form. In
+`pointwiseNotJoint` each recipient can be ensured absent while no cell omits
+all creation. In `tiedNoEmptyChoice` only the optional recipient 1 is
+ensured absent; recipient 0 is in every cell, and no cell omits all creation. Total refraining
 here is a giving-level notion. It does not say that no contingent concretum
 exists at the refraining world (brute beings are not excluded), and it is
 not `NoContingentConcreteIn` (world-level total noncreation,
@@ -4114,16 +4116,18 @@ is a second hook.
 
 - *Selection.* The determination standard on cells (SELECTING_AN_OUTCOME_2)
   does not discriminate. Invariant levels explain exactly the range. A
-  contingent selection is met only by a level as fine as the outcome
-  partition, so it is met trivially, by any account that posits such a
-  level, including a bare re-description of the outcome. Parity between
+  contingent selection is met only by a level whose actual cell lies inside
+  the actual outcome class (laws 1, 5), and any such level meets it (law 8).
+  So it is met trivially, by any account that posits such a level, including
+  a bare re-description of the outcome. Parity between
   adoption and actualization under this standard is definitional. The
   selection step remains open: favouring by apprehended content and operative
   content are untested, not defeated. Necessary manifestation alone selects
   invariantly, at the price of the effect's contingency.
 - *Omission.* The giving-level omission scopes are certified. A necessarily
-  productive source keeps individual and replacement omission and loses
-  giving-level total refraining.
+  productive source excludes giving-level total refraining. It *can permit*
+  individual and replacement omission: the replacement frame witnesses both,
+  and Van Cleve's frame shows that it need not permit replacement.
 - *`0050b6ed`.* It needs only replacement.
 
 **Strongest standing rival:** the matched impersonal exercise account, a
@@ -4169,10 +4173,19 @@ head `249d18648c7cb6bdcc2856bbb6a17a4d30bbf28e`. Its P1 findings were these:
 
 P2s covered the Euclidean control's contingent holder, the uncertified
 accounts table, cross-carrier bridges, sense links, premise IDs and
-individuation. All are repaired in this section, in §§59–62 and in the
-records. The fixed-giver clause is strengthened to "gives each recipient
-wherever it exists", law 8 is added, and the Euclidean control is replaced
-by the reviewer's witness. The re-check of the repaired head is pending.
+individuation. The repairs are at head
+`0d64316aa8632f765573a0f194e2f16444075815`. The fixed-giver clause is
+strengthened to "gives each recipient wherever it exists", law 8 is added,
+and the Euclidean control is replaced by the reviewer's witness.
+
+A targeted re-check at `0d64316aa` accepted all six registered steps with no
+remaining P1. The final commit changes only review-state text and wording, with no Lean
+declaration or proof change (one docstring is reworded):
+
+- the "only" of a contingent selection is credited to laws 1 and 5;
+- the TOTAL_REFRAINING resolution is reworded;
+- Codex findings: necessary production *can permit*, rather than *keeps*,
+  the weaker scopes; `tiedNoEmptyChoice` omits only optional recipients.
 
 ## Research attempts citing this note
 

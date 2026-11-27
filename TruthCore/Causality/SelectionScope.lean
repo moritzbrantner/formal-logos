@@ -375,9 +375,10 @@ open TruthCore.Modal.PrussPowerPremises.Model (Bg V3 vanCleveG theistG allC gPow
    productive, and #1897's `ActualAbsenceByWithholding` holds.
 6. The theist surrogate: total refraining.
 7. The registered STIT controls on the decision frame: each single recipient
-   can be ensured absent while no cell omits all creation (`pointwiseNotJoint`),
-   and two tied optimal outputs each omit an optional recipient while every
-   cell creates the common one (`tiedNoEmptyChoice`). -/
+   can be ensured absent while no cell omits all creation (`pointwiseNotJoint`);
+   and, of two tied optimal outputs, optional recipient 1 can be ensured absent
+   while recipient 0 is created in every cell, so no cell omits all creation
+   (`tiedNoEmptyChoice`; only optional recipients are omissible there). -/
 def OmissionScopeTable : Prop :=
   (∀ (W B T R : Type) (F : CausalityFrame W B T R) (w : W) (g : B),
     (WithholdsAllAt F w g → WithholdsActualRosterAt F w g) ∧
