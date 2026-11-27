@@ -76,6 +76,12 @@ theorem same_cell_same_profile (a b : A) (h : F.Through m) (out : F.Through m �
     ExplainsContrast a h out y ↔ ExplainsContrast b h out y :=
   ⟨fun hp k hk => hp k ((hsame k).2 hk), fun hp k hk => hp k ((hsame k).1 hk)⟩
 
+theorem outcome_fine_selects (a : A) (h : F.Through m) (out : F.Through m → X)
+    (hfine : ∀ k, (F.choice m a).r h k ↔ out k = out h) :
+    SelectsActual a h out ∧ (ContingentOutcome h out → Dstit a h (InCell a h)) := by
+  have hs : SelectsActual a h out := fun k hk => (hfine k).1 hk
+  exact ⟨hs, fun hc => (relocation a h out hs hc).1⟩
+
 end RangeSelection
 
 theorem selectionRangeLaws : SelectionRangeLaws :=
@@ -85,7 +91,8 @@ theorem selectionRangeLaws : SelectionRangeLaws :=
     fun _ _ _ _ _ _ a h out hinv => invariant_selects_iff a h out hinv,
     fun _ _ _ _ _ _ a h out => selects_iff_all a h out,
     fun _ _ _ _ _ _ a h out hs hc => relocation a h out hs hc,
-    fun _ _ _ _ _ _ a b h out y hsame => same_cell_same_profile a b h out y hsame⟩
+    fun _ _ _ _ _ _ a b h out y hsame => same_cell_same_profile a b h out y hsame,
+    fun _ _ _ _ _ _ a h out hfine => outcome_fine_selects a h out hfine⟩
 
 /-! ### The four-account table -/
 
@@ -162,11 +169,11 @@ theorem productive_not_all {F : CausalityFrame W B T R} {w : W} {g : B}
   obtain ⟨x, hx⟩ := hnec v hv hg
   exact hall x hx
 
-theorem fixed_not_each {F : CausalityFrame W B T R} {w : W} {g x : B} (hfix : FixedGiver F g)
-    (hw : F.history.ontic.ExistsAt w g) (hx : GivesTo F w g x) : ¬ WithholdsEachAt F w g := by
-  intro hEach
-  obtain ⟨v, _, hgv, hn⟩ := hEach x hx
-  exact hn ((hfix w v hw hgv x).1 hx)
+theorem fixed_gives_everywhere {F : CausalityFrame W B T R} {w : W} {g : B}
+    (hfix : FixedGiver F g) (hw : F.history.ontic.ExistsAt w g) (x : B) (hx : GivesTo F w g x)
+    (v : W) (_ : F.history.ontic.frame.access w v) (hgv : F.history.ontic.ExistsAt v g) :
+    GivesTo F v g x :=
+  (hfix w v hw hgv x).1 hx
 
 end Omission
 
@@ -203,7 +210,7 @@ theorem repl_productive : NecessarilyGivesSomeAt replGivingG false .g := by
 theorem omissionScopeTable : OmissionScopeTable := by
   refine ⟨fun _ _ _ _ _ _ _ => ⟨withholdsAll_roster, roster_each⟩,
     fun _ _ _ _ _ _ _ => productive_not_all,
-    fun _ _ _ _ _ _ _ _ hfix hw hx => fixed_not_each hfix hw hx, ⟨?_, ?_, ?_⟩, ⟨?_, ?_,
+    fun _ _ _ _ _ _ _ hfix hw => fixed_gives_everywhere hfix hw, ⟨?_, ?_, ?_⟩, ⟨?_, ?_,
     repl_productive, ?_⟩, ?_, TruthCore.Models.STITControls.pointwiseNotJoint, ?_⟩
   · rintro x ⟨_, -, hx, hne⟩
     cases x with
@@ -384,7 +391,7 @@ theorem actualAbsencePowerScopeControls : ActualAbsencePowerScopeControls := by
   refine ⟨⟨totalThree, euclidThree, possibilityPower_monotone _ _,
       actualAbsencePowerOfTotal _ _ _ _ _ totalThree euclidThree (possibilityPower_monotone _ _)⟩,
     ⟨actualRepl, euclidRepl, possibilityPower_monotone _ _, ?_, repl_productive, ?_⟩,
-    ⟨?_, possibilityPower_monotone _ _, ?_, ?_⟩, ⟨?_, euclidThree, ?_, ?_⟩⟩
+    ⟨?_, possibilityPower_monotone _ _, ?_, ?_, ?_⟩, ⟨?_, euclidThree, ?_, ?_⟩⟩
   · intro h
     obtain ⟨_, v, _, hno, _⟩ := h .g rfl
     cases v
@@ -395,25 +402,24 @@ theorem actualAbsencePowerScopeControls : ActualAbsencePowerScopeControls := by
   · exact ⟨.g, Or.inl rfl, ⟨true, trivial, repl_noActual, Or.inl rfl⟩, true, trivial,
       repl_noActual, Or.inl rfl, fun x _ hc => repl_each x hc⟩
   · rintro _ rfl
-    refine ⟨⟨by decide, by decide⟩, .b, Or.inl ⟨rfl, rfl⟩, ?_, ⟨by decide, by decide⟩⟩
-    rintro x _ ⟨hxb, u, hu, hxu⟩
-    rcases hu with ⟨h, _⟩ | ⟨h, _⟩ | ⟨_, rfl⟩
-    · cases h
-    · cases h
-    · exact hxu hxb
+    refine ⟨Or.inl rfl, .b, trivial, ?_, Or.inl rfl⟩
+    rintro x _ ⟨_, u, hu, hxu⟩
+    cases u <;> simp [qFrame, gFrame, qAcc] at hu
+    cases x <;> simp [qFrame, gFrame, qEx] at hxu
+  · intro _ _
+    exact Or.inl rfl
   · intro hE
-    have := hE .a .b .c (Or.inl ⟨rfl, rfl⟩) (Or.inr (Or.inl ⟨rfl, rfl⟩))
-    rcases this with ⟨h, _⟩ | ⟨h, _⟩ | ⟨_, h⟩ <;> cases h
+    have := hE .a .b .e1 trivial trivial
+    simp [qFrame, gFrame, qAcc] at this
   · intro h
-    obtain ⟨_, v, hv, hno, hgv⟩ := h .g rfl
-    have hvb : v = .b := by
-      rcases hv with ⟨_, rfl⟩ | ⟨_, rfl⟩ | ⟨h, _⟩
-      · rfl
-      · exact (hgv.2 rfl).elim
-      · cases h
-    subst hvb
-    exact hno .g trivial ⟨⟨by decide, by decide⟩, .c, Or.inr (Or.inl ⟨rfl, rfl⟩),
-      fun h => h.2 rfl⟩ hgv
+    obtain ⟨v, _, hnone, _⟩ := (h .g rfl).2
+    have hc : ContingentAt qFrame.history.ontic .a .c :=
+      ⟨Or.inr (Or.inl ⟨rfl, by decide⟩), .e1, trivial, by simp [qFrame, gFrame, qEx]⟩
+    have hd : ContingentAt qFrame.history.ontic .a .d :=
+      ⟨Or.inr (Or.inr ⟨rfl, by decide⟩), .e2, trivial, by simp [qFrame, gFrame, qEx]⟩
+    have h1 := hnone .c trivial hc
+    have h2 := hnone .d trivial hd
+    cases v <;> simp [qFrame, gFrame, qEx] at h1 h2
   · rintro _ rfl
     exact ⟨Or.inl rfl, rfl, fun v hv => three_total_only_none v hv⟩
   · intro hm

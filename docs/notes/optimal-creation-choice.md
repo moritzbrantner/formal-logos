@@ -3859,13 +3859,21 @@ Result `54e1279c` (`selectionRangeLaws`, premise-free, placed diagnostic
    cell. The contrast between the actual explanans and its alternatives is
    determined by nothing invariant;
 7. **label independence**: two levels with the same actual cell explain the
-   same contrasts.
+   same contrasts. This is definitional, because `Cstit` reads only cells;
+8. **trivial satisfaction**: a level whose actual cell is the actual outcome
+   class selects the actual outcome, and with a contingent outcome it sees to
+   its own cell. The outcome partition itself, a bare re-description of the
+   outcome, meets the standard.
 
 This is the cell-level form of the existing fact-level
 `ContainedSelection.RestrictionBoundary` (`9a2c5f49`) and the #742 core
 (§39). Law 6 states the relocation as a cell-level theorem: whatever
 selects a contingent outcome by determination is itself contingent, and its
-own contrast falls back under law 3.
+own contrast falls back under law 3. Laws 7 and 8 fix what the standard
+can and cannot do: it cannot tell explaining the selection from re-describing
+it. `SelectsActual` and `ExplainsContrast` are the cell-level analogue of
+SELECTING_AN_OUTCOME_2 (`59b60fe6`), not one of its senses, and no bridge to
+`ContrastRelevant` is claimed.
 
 ### 60. Four matched accounts: what each explains
 
@@ -3879,9 +3887,9 @@ only in scope and cells.
 | Account (encoding) | Some production ("rather than none") | Range ("rather than z") | Actual selection ("c rather than d") | Premises and stopping point |
 | --- | --- | --- | --- | --- |
 | Necessary manifestation (scope {c}; nature only) | yes, by the nature | yes | yes, but c is not contingent (law 4) | Strict efficacy of an invariant act; excluded by contingency of c (`6ef579ca` #555 core) |
-| Invariant D-range source (scope {c, d}; nature only): impersonal propensity matched to D, intrinsic generative finality, or a standing will with no exercise datum | yes, by the nature | yes | no (law 3) | Explains the range only; the selection is unexplained by determination |
-| Invariant permissive source (scope {none, c, d}) | no | yes | no | Total refraining is in scope, so "rather than none" falls inside U |
-| Exercise account (scope {c, d}; nature + exercise): rational adoption, propensity actualization, or generative exercise | yes | yes | yes, by the exercise level | The exercise is contingent (`Dstit` of its cell) and the invariant nature does not see to it (law 6) |
+| Invariant D-range frame (scope {c, d}; nature only), assigned by interpretation to an impersonal propensity matched to D, intrinsic generative finality, or a standing will with no exercise datum | yes, by the nature | yes | no (law 3) | Explains the range only; the selection is unexplained by determination |
+| Invariant permissive source (scope {none, c, d}) | no | yes | no | Omission (`none`) is in scope, so "rather than none" falls inside U |
+| Exercise frame (scope {c, d}; nature + an exercise level whose cells are the outcome partition), assigned by interpretation to rational adoption, propensity actualization, or generative exercise | yes | yes | yes, by the exercise level | The exercise is contingent (`Dstit` of its cell) and the invariant nature does not see to it (law 6) |
 | Permissive exercise (scope {none, c, d}) | yes, by the exercise only; the nature does not explain it | yes | yes, by the exercise level | As above |
 
 Answers to the brief's questions:
@@ -3890,33 +3898,52 @@ Answers to the brief's questions:
   adoption that is itself contingent.** This is law 6 at the exercise level.
   The adoption's own contrast (adopting c rather than d) is not explained by
   the invariant intellect and will (law 3 applied to the cell).
-- **That stopping point is not of a different kind from a chance outcome
-  under the identical criterion.** The matched propensity actualization and
-  the generative exercise have the same cells, so by law 7 they explain
-  exactly the same contrasts. A bare chance outcome with no exercise datum
-  stops at the outcome partition itself. The matched adoption partitions the
-  histories exactly by outcome, so determination does not separate those
-  either. This is the cell-level counterpart of the `WillVersusChance` flip
-  law (law 5, `ec6627bf`). A standard that admits "adoption" as a stop but
-  refuses "actualization" by name is #742's circular `PersonalStop`.
-- **Parity is certified for this standard.** No account explains the actual
-  selection where another, matched and under the same standard, explains only
-  a range. Each nonnecessitating account can explain the range by its
-  invariant level, and the selection only by a contingent exercise level.
-  Necessary manifestation is the sole account whose invariant level selects.
-  It pays with the contingency of c, and that cost falls equally on a
-  necessitated will (§41).
+- **Under this standard the adoption is not a different kind of stopping
+  point from a chance outcome, but that parity is definitional.** Rational
+  adoption, propensity actualization and generative exercise are one frame,
+  `exerciseSource`, by interpretive assignment. Law 7 then gives them the
+  same contrast profile because `Cstit` reads only cells. Law 8 shows more:
+  any level as fine as the outcome partition selects, including a bare chance
+  outcome that stops at the outcome itself. This is the cell-level
+  counterpart of the `WillVersusChance` flip law (law 5, `ec6627bf`). A
+  standard that admits "adoption" as a stop but refuses "actualization" by
+  name would be #742's circular `PersonalStop`.
+- **What the finding is worth.** It shows that this standard does not
+  discriminate. The invariant D-range frame explains only the range and the
+  exercise frame selects. They differ only in whether an outcome-fine level
+  is posited, so the table does *not* show that one account explains the
+  selection where another explains only a range, nor the reverse. The
+  selection step is not settled. Under SELECTING_AN_OUTCOME_2 on cells,
+  selecting a contingent outcome is met only by a level whose actual cell is
+  inside the outcome class, so the standard is met trivially. Necessary
+  manifestation is the only frame whose invariant level selects, and it pays
+  with the contingency of c. That cost falls equally on a necessitated will
+  (§41).
 
 What determination cannot see is what §§40, 57 and 58 locate as the
-discriminator: whether the exercise is an intellectual inclination governed
-by apprehended content (an answer to *what for*), and whether its content
-gives the source reasons that *favour* c over d without determining it. Both
-are separate explananda. The current judgment of §57 is unchanged: no
-unconditional ranking between the strongest personal and impersonal
-constitutions. What is new is that the selection step is settled as parity,
-by a certified standard, rather than as an open comparison.
+discriminator. One is whether the exercise is an intellectual inclination
+governed by apprehended content (an answer to *what for*). The other is
+whether that content gives the source reasons that *favour* c over d without
+determining it (SELECTING_AN_OUTCOME_1, itself a sense of selecting). Both
+remain untested, not defeated. A discriminating test needs a standard on
+which the explanans is individuated independently of the outcome partition,
+for example by content fixed before the outcome, or a favouring relation
+with comparative content. The current judgment of §57 is unchanged: there is
+no unconditional ranking between the strongest personal and impersonal
+constitutions.
 
-### 61. Three omission scopes, certified
+**Individuation fork (unresolved, hook for Investigation 4).**
+`InvariantExplanans` and the exercise level fold two models into "a
+contingent exercise". On one, the source's act is intrinsically invariant
+and only its terminus is contingent (the classical simplicity model). On the
+other, the exercise itself varies. On the cell carrier both give the
+exercise level the outcome partition. Whether an intrinsically invariant act
+with a contingent terminus is a contingent explanans, or an invariant one
+with a varying relation, is a philosophical individuation question. It is
+recorded here, not resolved. It bears on Lane 1's limitation question and on
+#1380's supervenience obligation.
+
+### 61. Three omission scopes, certified (giving level)
 
 Result `72c06088` (`omissionScopeTable`, placed diagnostic `tests`
 `0050b6ed`) types three giving-level omission scopes on the shared
@@ -3924,11 +3951,14 @@ Result `72c06088` (`omissionScopeTable`, placed diagnostic `tests`
 recipient is withheld at some accessible world where the source exists.
 **Whole-actual-roster withholding with replacement allowed**
 (`WithholdsActualRosterAt`): at one such world the source gives none of its
-actual recipients. **Total refraining** (`WithholdsAllAt`): at one such
-world it gives nothing. Total refraining entails roster withholding, which
+actual recipients. **Total refraining** at the giving level
+(`WithholdsAllAt`, TOTAL_REFRAINING_1 of disambiguation `6ce98992`): at one
+such world it gives nothing. Total refraining entails roster withholding, which
 entails individual omission. A **necessarily productive** source
-(`NecessarilyGivesSomeAt`) never totally refrains. A fixed giver
-(necessary manifestation) that gives something withholds nothing.
+(`NecessarilyGivesSomeAt`) never totally refrains. A fixed giver existing at w gives each of
+its recipients at w at every accessible world where it exists, so it
+withholds none of them. Reading a fixed giver as a necessary manifestation is
+an OPEN interpretive bridge.
 Strictness controls:
 
 | Frame | Individual | Whole roster (replacement) | Total | Necessarily productive |
@@ -3944,20 +3974,27 @@ world. The registered STIT controls `pointwiseNotJoint` and
 can be ensured absent while no cell omits all creation. Total refraining
 here is a giving-level notion. It does not say that no contingent concretum
 exists at the refraining world (brute beings are not excluded), and it is
-not `NoContingentConcreteIn`.
+not `NoContingentConcreteIn` (world-level total noncreation,
+TOTAL_REFRAINING_2). Recipients are individuated by provenance with rigid
+beings (EFFECT_INDIVIDUATION_1, `1cb16a7f`). Under role individuation the
+replacement frame withholds nothing. Compare `DISAMB-BOUNDED-OMISSION`
+(`08ec72dc`), which concerns world populations, not one source's giving.
 
-Which accounts can satisfy which scopes, at matched reach:
+Which accounts can satisfy which scopes, at matched reach. This table is an
+analyst classification, not a certified result:
 
-| Account | Individual | Whole roster | Total refraining |
+| Account | Individual | Whole roster | Total refraining (giving level) |
 | --- | --- | --- | --- |
 | Necessary manifestation | no | no | no |
 | Categorical intrinsic generative finality (some D-realization in every exercise) | yes | yes | no |
 | Necessarily productive propensity (omission outside its range) | yes | yes | no |
-| Maximizing will for which some creation beats omission (§62) | yes | yes | no |
+| Maximizing will for which some creation beats omission (§62) | yes only with two or more undominated creations (tie or incomparability); with a unique undominated creation it always picks it and withholds nothing | as for individual | no |
 | Permissive propensity (omission in range) | yes | yes | yes |
 | Permissive rational free exercise | yes | yes | yes |
 
-Combined with law 3 this gives an exact **trade-off for every account**. An
+Combined with law 3, and through an OPEN cross-carrier bridge identifying the
+STIT outcome `none` with giving-level `WithholdsAllAt`, this gives a
+**trade-off for every account**. An
 invariant level explains "some production rather than none" exactly when
 total refraining is outside the account's scope. No account can explain
 production rather than none by its invariant nature and also keep total
@@ -3979,14 +4016,16 @@ o is undominated exactly when no creation is strictly better. A creation is
 undominated exactly when it is undominated among creations and not below o.
 A unique undominated creation in a finite C strictly surpasses every other
 creation. If C is strictly improvable and some creation beats o, no decision
-is undominated. **A policy that chooses an undominated decision at every
+is undominated (both conditions are needed: without a creation above o, o can
+be undominated). **A policy that chooses an undominated decision at every
 world of a scope never chooses omission there when some creation strictly
 beats it.** A control with two incomparable creations above omission shows
 that such a policy can still omit each particular creation.
 
 So the fork forces some production, though not a particular effect, for
 *any* account that necessarily chooses undominated complete decisions when a
-creation is better than omission. The theorem is neutral between a
+creation is better than omission. Reading "never chooses omission" as the
+giving-level `NecessarilyGivesSomeAt` is an OPEN cross-carrier bridge. The theorem is neutral between a
 maximizing will and an optimizing impersonal nature. An account that keeps
 total refraining must reject that policy, or make omission undominated
 (incomparable with or equal to the best creations), or deny that any
@@ -3999,46 +4038,63 @@ derives them from perfect goodness.
 `0050b6ed` ("Every GOD_4 exists at w and has power for the actual
 contingents' joint absence") is consumed by `834ddcfa` and `bc4d81f6` on the
 GOD_4 HAS_WILL_1 routes. Its Lean type asks for a `PowerFor` the joint
-absence of the beings contingent at w (`NoActualContingentConcreteIn`):
-replacement scope. Its recorded motivation cites "could have refrained from
-creating" (ST I q.19 a.3, navigation): total scope. **Decision: the premise
-as typed needs only the replacement scope.** Evidence:
+absence of the beings contingent at w (`NoActualContingentConcreteIn`), which
+is the replacement scope. Its recorded motivation cites "could have refrained
+from creating" (ST I q.19 a.3, navigation). Read at the world level, that
+motivation is total noncreation (TOTAL_REFRAINING_2, `NoContingentConcreteIn`).
+**Decision: the premise as typed needs only the replacement scope.**
+Evidence:
 
 - **Conditional support option** (`adb23c1c`, `actualAbsencePowerOfTotal`,
-  zero axioms). The total-refraining sibling `a8dedf3f` (every GOD_4 has a
-  power for there being no contingent concretum), Euclidean access
-  `62b4a40a` and the monotone-power bridge `6fdd3f60` entail `0050b6ed`. With
-  Euclidean access, an accessible world with no contingent concretum lacks
-  every concretum contingent at w. Monotonicity carries the power along that
-  entailment.
+  zero axioms). The world-level total-noncreation power `a8dedf3f` (every
+  GOD_4 has a power for there being no contingent concretum), Euclidean access
+  `62b4a40a` and the monotone-power bridge `6fdd3f60` together entail
+  `0050b6ed`. With Euclidean access, an accessible world with no contingent
+  concretum lacks every concretum contingent at w. Monotonicity carries the
+  power along that entailment.
 - **Controls** (`44e8200e`, placed diagnostic). Nonvacuity: all premises and
-  the conclusion hold on a three-world frame. On the §56 replacement frame,
-  `0050b6ed` holds while its total sibling fails and the source gives
-  something at every world. Euclidean access is needed (non-Euclidean frame
-  a→b, a→c, b→b). Monotonicity is needed (a maximally specific power, an
-  encoding artifact). The possibility reading of `PowerFor` used in the
-  controls has no causal content.
+  the conclusion hold on a three-world frame.
+  - On the §56 replacement frame, `0050b6ed` holds, the total-noncreation
+    power fails, and the source gives something at every world (control 2).
+  - Euclidean access is needed. Control 3 uses the four-world non-Euclidean
+    frame (a sees b, e1, e2; each sees only itself) with a *necessary*
+    holder; the reviewer of PR #2154 supplied this witness.
+  - Monotonicity is needed (control 4, with a maximally specific power, an
+    encoding artifact).
+  - The possibility reading of `PowerFor` used in the controls has no causal
+    content.
+- **Independence.** Controls 2–4 show that `a8dedf3f` and `0050b6ed` are
+  independent as typed. Only the bundle of `a8dedf3f`, Euclidean access and
+  monotone powers is stronger than `0050b6ed`.
 
-No `strengthens` relation is registered: the passage from the total sibling
-needs two further premises. The weakest version that suffices in
-`834ddcfa`'s route is `0050b6ed` itself. The frozen Challenge is unchanged.
-Its direct-assumption option remains, and it is the more economical warrant:
-the replacement possibility (these creatures jointly absent, possibly with
-others) is weaker than total refraining and carries neither bridge. The new
-derivation shows what the recorded total warrant needs. It does not increase
-the warrant above the direct option, because `a8dedf3f` is stronger than
-`0050b6ed` and the monotone bridge has its own cost: any power becomes a
-power for whatever holds at every accessible world.
+No `strengthens` relation is registered. The weakest version that suffices
+in `834ddcfa`'s route is `0050b6ed` itself, and the frozen Challenge is
+unchanged. The direct-assumption option remains. The replacement possibility
+(these creatures jointly absent, possibly with others) carries neither
+bridge. The new derivation shows what the recorded total-noncreation warrant
+needs. It does not raise the warrant above the direct option: it adds the
+independent premise `a8dedf3f` and the monotone bridge, whose cost is that
+any power becomes a power for whatever holds at every accessible world. The
+replacement scope presupposes provenance individuation of recipients with
+rigid beings (EFFECT_INDIVIDUATION_1, `1cb16a7f`).
 
-**Consequence for the will route.** `0050b6ed` does not distinguish an
-optional creator from a necessarily productive source, whether that source
-is a maximizing will or a categorically purposive impersonal nature (§§61,
-62). The work of separating will from chance on that route lies entirely in
-its other premises: the willed holder (`963e9689`, with intellect and one
-power) or DNP_inv (`bc4d81f6`). Neither needs total refraining. The computed
-frontier delta moves `0050b6ed` from bare to closed by rule (a), proved from
-open leaves. It is not established, and its open inputs are now listed
-separately (`a8dedf3f`, `6fdd3f60`; `62b4a40a` was already on the frontier).
+**Consequence for the will route.** As typed, with `PowerFor` left free, the
+structural surrogate (control 2) satisfies `0050b6ed` with a source that
+gives something at every accessible world. So `0050b6ed` does not by itself
+distinguish an optional creator from a necessarily productive source, whether
+that source is a maximizing will or a categorically purposive impersonal
+nature. Separating will from chance on these routes is done by their other
+premises:
+
+- on `834ddcfa`: the willed holder `fdd2b1cf` and rational power as will
+  `65e0179f`;
+- on `bc4d81f6`: holder set-up invariance `a065c332` and `a9776d21`, the
+  latter the conclusion of argument C through DNP_inv `55892476`.
+
+None of them needs total refraining in either sense. The computed frontier delta moves
+`0050b6ed` from bare to closed by rule (a), proved from open leaves. It is
+not established. Its new open inputs are `a8dedf3f` and `6fdd3f60`;
+`62b4a40a` was already on the frontier.
 
 ### 64. Cross-investigation hook, current conclusion and next tests
 
@@ -4050,42 +4106,73 @@ positive determination of which effects are produced. Whether that
 determination at an unlimited root counts as a limitation
 (`Modal.LimitationPossibility`, `RootMultiplication.HasLimitingPrinciple`)
 is Lane 1's question. The same question applies to a will whose standing
-orientation fixes the same U. The hook is symmetric.
+orientation fixes the same U. The hook is symmetric. The individuation fork
+of §60 (invariant act with a contingent terminus versus a varying exercise)
+is a second hook.
 
-**Current conclusion (provisional).** At the selection step the certified
-verdict is parity. Under one determination standard, every
-nonnecessitating account explains the range by its invariant level and the
-actual selection only by a contingent exercise that nothing invariant
-determines. Rational adoption is not a different kind of stop from a
-matched actualization. Necessary manifestation alone selects invariantly,
-at the price of the effect's contingency. The omission scopes are now
-certified. A necessarily productive source, personal or impersonal, keeps
-individual and replacement omission and loses total refraining.
-`0050b6ed` needs only replacement. **Strongest standing rival:** the
-matched impersonal exercise account, a good-directed generative nature with
-a contingent primitive exercise. Its price is a contingent exercise that its
-invariant nature does not determine. That is the same price the personal
-account pays at the adoption. No substantive objection specific to it was
-identified at this standard.
+**Current conclusion (provisional).**
+
+- *Selection.* The determination standard on cells (SELECTING_AN_OUTCOME_2)
+  does not discriminate. Invariant levels explain exactly the range. A
+  contingent selection is met only by a level as fine as the outcome
+  partition, so it is met trivially, by any account that posits such a
+  level, including a bare re-description of the outcome. Parity between
+  adoption and actualization under this standard is definitional. The
+  selection step remains open: favouring by apprehended content and operative
+  content are untested, not defeated. Necessary manifestation alone selects
+  invariantly, at the price of the effect's contingency.
+- *Omission.* The giving-level omission scopes are certified. A necessarily
+  productive source keeps individual and replacement omission and loses
+  giving-level total refraining.
+- *`0050b6ed`.* It needs only replacement.
+
+**Strongest standing rival:** the matched impersonal exercise account, a
+good-directed generative nature with a contingent primitive exercise. Its
+price is a contingent exercise that its invariant nature does not determine.
+That is the same price the personal account pays at the adoption. No
+substantive objection specific to it was identified at this standard.
 
 **Revision conditions and next discriminating tests.**
 
-1. *Favouring with content*: test whether an apprehended D gives a source
-   pro tanto reasons favouring c over d (SELECTING_AN_OUTCOME_1) that a
-   nonapprehending D-directed nature cannot have. This needs D's comparative
-   content and connects to the finite-measure test of Investigation 2
+1. *A discriminating selection standard*: one on which the explanans is
+   individuated independently of the outcome partition (content fixed before
+   the outcome), or favouring with comparative content
+   (SELECTING_AN_OUTCOME_1). Test whether an apprehended D gives a source pro
+   tanto reasons favouring c over d that a nonapprehending D-directed nature
+   cannot have. This connects to the finite-measure test of Investigation 2
    (`teleology-first-mover.md` 1270–1292).
-2. *Permission boundary*: total refraining with categorical goodness needs
-   an undominated omission. Warrant for omission's incomparability with, or
-   equality to, the best creations would change §§61–62 for both sides
-   alike.
+2. *Permission boundary*: giving-level total refraining with categorical
+   goodness needs an undominated omission. Warrant for omission's
+   incomparability with, or equality to, the best creations would change
+   §§61–62 for both sides alike.
 3. *Supervenience*: #1380's obligation (§41) applies to any invariant
    source claimed to know which exercise obtains. It is an additional
    obligation of the personal exercise account that a noncognitive source
    does not have. It is a live test, not a refutation.
-4. A frame-level `strengthens` registration of `a8dedf3f` ⇒ `0050b6ed` would
+4. A frame-level `strengthens`-style registration from the bundle would
    become available if Euclidean access and power monotonicity were fixed as
    background of the selected frame.
+5. *OPEN cross-carrier bridges*: the STIT outcome `none` to giving-level
+   `WithholdsAllAt` (§61 trade-off); "never chooses omission" to
+   `NecessarilyGivesSomeAt` (§62); fixed giver to necessary manifestation
+   (§61).
+
+**Review record.** The independent semantic challenge of PR #2154 ran at
+head `249d18648c7cb6bdcc2856bbb6a17a4d30bbf28e`. Its P1 findings were these:
+
+- "stronger" was claimed where the statements are independent;
+- prose said ∀¬ where the fixed-giver clause typed ¬∀;
+- a hypothesis was missing from the fork description;
+- parity, true by construction, was presented as settling the selection
+  step;
+- "total refraining" was used in two senses.
+
+P2s covered the Euclidean control's contingent holder, the uncertified
+accounts table, cross-carrier bridges, sense links, premise IDs and
+individuation. All are repaired in this section, in §§59–62 and in the
+records. The fixed-giver clause is strengthened to "gives each recipient
+wherever it exists", law 8 is added, and the Euclidean control is replaced
+by the reviewer's witness. The re-check of the repaired head is pending.
 
 ## Research attempts citing this note
 

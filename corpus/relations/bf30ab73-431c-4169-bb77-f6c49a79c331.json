@@ -6,5 +6,5 @@
   "predicate": "tests",
   "object_kind": "statement",
   "object_id": "0050b6ed-3c7d-4d6a-b97a-417837d76184",
-  "note": "Shows that an undominated-decision policy with a creation above omission excludes total refraining but not replacement, the scope 0050b6ed needs."
+  "note": "Shows that an undominated-decision policy with a creation above omission never chooses omission but can avoid each creation, the scope 0050b6ed needs."
 }

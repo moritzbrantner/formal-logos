@@ -5,5 +5,5 @@
   "basis": "stipulative",
   "lean_declaration": "TruthCore.Causality.SelectionScope.WithholdsActualRosterAt",
   "definition": "WithholdsActualRosterAt F w g: at one accessible world v where g exists, g gives being (GivesTo) to none of the beings it gives being to at w; it may give being to others at v. WithholdsEachAt F w g: each being g gives at w is withheld at some accessible world where g exists (different recipients may use different worlds).",
-  "note": "Stipulative giving-level counterpart of NoActualContingentConcreteIn (the actual-population omission scope of optimal-creation-choice.md §56). It neither requires nor excludes that no contingent concretum exists at v. See docs/notes/optimal-creation-choice.md §61."
+  "note": "Stipulative giving-level counterpart of NoActualContingentConcreteIn (the actual-population omission scope of optimal-creation-choice.md §56). It neither requires nor excludes that no contingent concretum exists at v. See docs/notes/optimal-creation-choice.md §61. Compare DISAMB-BOUNDED-OMISSION (bounded omission versus whole-roster absence), which concerns world populations rather than one source's giving. Recipients are individuated by provenance with rigid beings (EFFECT_INDIVIDUATION_1 of disambiguation 1cb16a7f); under role individuation a replacement is not an omission."
 }

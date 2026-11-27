@@ -5,5 +5,5 @@
   "basis": "stipulative",
   "lean_declaration": "TruthCore.Causality.SelectionScope.WithholdsAllAt",
   "definition": "WithholdsAllAt F w g: at one accessible world v where g exists, g gives being to nothing. Not the same as there being no contingent concrete being at v: brute or otherwise-caused beings are not excluded.",
-  "note": "Stipulative giving-level reading of 'could have refrained from creating' (total noncreation scope of optimal-creation-choice.md §56). See docs/notes/optimal-creation-choice.md §61."
+  "note": "Stipulative giving-level reading of 'could have refrained from creating' (total noncreation scope of optimal-creation-choice.md §56). See docs/notes/optimal-creation-choice.md §61. This is TOTAL_REFRAINING_1; world-level total noncreation (NoContingentConcreteIn) is TOTAL_REFRAINING_2. Compare DISAMB-BOUNDED-OMISSION."
 }

@@ -6,7 +6,7 @@
   "inference_ids": [
     "43d5a016-8224-41d0-b4e7-8f50d17ae0ac"
   ],
-  "meaning": "Law 1 is the definition of Cstit read as cell-range exclusion. Law 2 is set algebra, using that the cell range lies in the realized range. Law 3: with one cell, Cstit of 'not y' quantifies over every history. Law 4: with one cell, selection says every history has the actual outcome. Law 5 uses excluded middle on the outcome of a cell member. Law 6: a history with another outcome lies outside the selecting cell, so the cell proposition is not necessary, and a single-cell level's cell contains that history. Law 7 transports Cstit along equal cells. Not a transcription: the definitions do not contain the laws.",
+  "meaning": "Law 1 is the definition of Cstit read as cell-range exclusion. Law 2 is set algebra, using that the cell range lies in the realized range. Law 3: with one cell, Cstit of 'not y' quantifies over every history. Law 4: with one cell, selection says every history has the actual outcome. Law 5 uses excluded middle on the outcome of a cell member. Law 6: a history with another outcome lies outside the selecting cell, so the cell proposition is not necessary, and a single-cell level's cell contains that history. Law 7 transports Cstit along equal cells. Law 8 applies law 6 to an outcome-fine cell. Laws 1, 5 and 7 are near-definitional; laws 2, 3, 4, 6 and 8 have short proofs.",
   "definition_ids": [
     "5a818c39-1ba6-4cce-adf6-246d1d49fd1e",
     "9e9af2c4-5938-4204-859b-fcf78d485e20"

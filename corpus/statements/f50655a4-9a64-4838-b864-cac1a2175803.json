@@ -1,12 +1,15 @@
 {
   "id": "f50655a4-9a64-4838-b864-cac1a2175803",
   "label": "Three omission scopes of giving are strictly ordered; necessary production keeps only the weaker two",
-  "paraphrase": "Analyst formulation on the shared causality frame. For every frame, world w and being g: total refraining (at some accessible world where g exists it gives nothing) implies withholding the whole actual roster (at some accessible world where g exists it gives none of the beings it gives at w, replacements allowed), which implies withholding each actual recipient individually (possibly at different worlds); a source that gives something at every accessible world where it exists never totally refrains; a fixed giver existing at w that gives something there withholds no recipient individually. Strictness controls: Van Cleve's frame with a giver withholds each recipient but not the whole roster and is necessarily productive; the replacement frame (g gives c at false and d at true) withholds the whole actual roster, does not totally refrain, is necessarily productive and satisfies #1897's ActualAbsenceByWithholding; the theist surrogate totally refrains. The registered STIT decision-frame controls pointwiseNotJoint and tiedNoEmptyChoice are included: each single recipient can be ensured absent while no cell omits all creation. Finite surrogates only.",
+  "paraphrase": "Analyst formulation on the shared causality frame, recipients individuated by provenance with rigid beings (EFFECT_INDIVIDUATION_1 of 1cb16a7f; under role individuation a replacement is no omission). For every frame, world w and being g: giving-level total refraining (TOTAL_REFRAINING_1: at some accessible world where g exists it gives nothing) implies withholding the whole actual roster (at some accessible world where g exists it gives none of the beings it gives at w, replacements allowed), which implies withholding each actual recipient individually (possibly at different worlds); a source that gives something at every accessible world where it exists never refrains totally in that giving-level sense; a fixed giver existing at w gives each of its recipients at w at every accessible world where it exists. Strictness controls: Van Cleve's frame with a giver withholds each recipient but not the whole roster and is necessarily productive; the replacement frame (g gives c at false and d at true) withholds the whole actual roster, does not totally refrain, is necessarily productive and satisfies #1897's ActualAbsenceByWithholding; the theist surrogate totally refrains. The registered STIT decision-frame controls pointwiseNotJoint and tiedNoEmptyChoice are included: each single recipient can be ensured absent while no cell omits all creation. Finite surrogates only; compare DISAMB-BOUNDED-OMISSION for world-population omission.",
   "lean_declaration": "TruthCore.Causality.SelectionScope.OmissionScopeTable",
   "definition_ids": [
     "6f842f97-5de9-4fbc-8b1b-ac50a49a738e",
     "3c8f25cf-97ae-4d0f-bd4e-c46d3eba8ec4",
     "a7985f66-16b1-4f0f-bb7f-4988d2377790",
     "62dfa893-b633-4513-9790-8f9a0a3087e0"
+  ],
+  "disambiguation_ids": [
+    "6ce98992-366e-4115-a0db-e240a7701e42"
   ]
 }

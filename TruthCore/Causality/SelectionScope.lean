@@ -37,9 +37,23 @@ actual roster with replacement allowed (`WithholdsActualRosterAt`), or wholly
 
 **Part C (scope of `0050b6ed`).** `GodsHoldActualAbsencePower` asks for a power
 for the joint absence of the concrete beings contingent at `w` (replacement
-allowed). Its cited warrant (total refraining) is the stronger
-`GodsHoldTotalAbsencePower`; the passage needs Euclidean access and the
-monotonicity of `PowerFor` under accessible entailment.
+allowed). Its cited warrant (refraining from creating) is read at the world
+level as the total-noncreation power `GodsHoldTotalAbsencePower`. The two are
+independent as typed (controls 2–4 of `ActualAbsencePowerScopeControls`); only
+the bundle of the total-noncreation power, Euclidean access and the
+monotonicity of `PowerFor` under accessible entailment entails `0050b6ed`.
+
+**Two senses of "total refraining".** TOTAL_REFRAINING_1 is giving-level
+(`WithholdsAllAt`: the source gives nothing at some accessible world).
+TOTAL_REFRAINING_2 is world-level total noncreation (`NoContingentConcreteIn`:
+no contingent concretum at some accessible world), the content of
+`GodsHoldTotalAbsencePower`. Neither entails the other without bridges (a
+source may give only necessary concreta; contingent concreta may be brute).
+
+**Individuation.** The omission scopes and the replacement frames identify
+recipients by provenance with rigid beings (EFFECT_INDIVIDUATION_1, `1cb16a7f`).
+Under role individuation (EFFECT_INDIVIDUATION_2) the replacement frame
+withholds nothing.
 
 Every model below is a finite structural surrogate. It witnesses only the stated
 formal interpretation, never a metaphysical possibility, and supplies no
@@ -127,7 +141,13 @@ end RangeSelection
    cell: the contrast between the actual explanans and its alternatives is not
    determined by anything invariant.
 7. **Label independence.** Two levels with the same actual cell explain exactly
-   the same contrasts; the standard consults the cell partition only. -/
+   the same contrasts; the standard consults the cell partition only. This is
+   definitional (`Cstit` reads only cells).
+8. **Trivial satisfaction.** A level whose actual cell is the actual outcome
+   class selects the actual outcome, and with a contingent outcome it sees to
+   its own cell. So the outcome partition itself (a bare re-description of
+   the outcome) meets the standard: determination on cells cannot tell
+   explaining the selection from re-describing it. -/
 def SelectionRangeLaws : Prop :=
   (∀ (M H A X : Type) (F : BranchingFrame M H A) (m : M) (a : A) (h : F.Through m)
       (out : F.Through m → X) (y : X),
@@ -154,7 +174,11 @@ def SelectionRangeLaws : Prop :=
   (∀ (M H A X : Type) (F : BranchingFrame M H A) (m : M) (a b : A) (h : F.Through m)
       (out : F.Through m → X) (y : X),
     (∀ k, (F.choice m a).r h k ↔ (F.choice m b).r h k) →
-      (ExplainsContrast a h out y ↔ ExplainsContrast b h out y))
+      (ExplainsContrast a h out y ↔ ExplainsContrast b h out y)) ∧
+  (∀ (M H A X : Type) (F : BranchingFrame M H A) (m : M) (a : A) (h : F.Through m)
+      (out : F.Through m → X),
+    (∀ k, (F.choice m a).r h k ↔ out k = out h) →
+      SelectsActual a h out ∧ (ContingentOutcome h out → Dstit a h (InCell a h)))
 
 /-! ### The matched four-account model
 
@@ -229,7 +253,9 @@ abbrev permissiveRange := accountFrame permissiveScope noExercise
 
 /-- Exercise account: scope `Fit` and a varying exercise level. The rational
 free exercise (adoption), the propensity's actualization and the generative
-nature's exercise all have this encoding when matched. -/
+nature's exercise are assigned this one encoding by interpretation: nothing in
+the frame distinguishes them, and its exercise cells are exactly the outcome
+partition (law 8: the standard is met by any outcome-fine level). -/
 abbrev exerciseSource := accountFrame fitScope outcomeExercise
 
 /-- The same with total omission in scope. -/
@@ -339,8 +365,9 @@ open TruthCore.Modal.PrussPowerPremises.Model (Bg V3 vanCleveG theistG allC gPow
 1. Total refraining gives whole-roster withholding, which gives individual
    omission of each recipient.
 2. A necessarily productive source never totally refrains.
-3. A fixed giver (necessary manifestation) existing at `w` that gives something
-   there withholds no recipient individually.
+3. A fixed giver existing at `w` gives each of its recipients at `w` at every
+   accessible world where it exists: it withholds no recipient. (Identifying a
+   fixed giver with a necessary manifestation is an OPEN interpretive bridge.)
 4. Van Cleve's frame with a giver: each actual recipient is individually
    withheld, the whole roster is not, and the source is necessarily productive.
 5. §56's replacement table: the whole actual roster is withheld (by
@@ -357,8 +384,9 @@ def OmissionScopeTable : Prop :=
     (WithholdsActualRosterAt F w g → WithholdsEachAt F w g)) ∧
   (∀ (W B T R : Type) (F : CausalityFrame W B T R) (w : W) (g : B),
     NecessarilyGivesSomeAt F w g → ¬ WithholdsAllAt F w g) ∧
-  (∀ (W B T R : Type) (F : CausalityFrame W B T R) (w : W) (g x : B),
-    FixedGiver F g → F.history.ontic.ExistsAt w g → GivesTo F w g x → ¬ WithholdsEachAt F w g) ∧
+  (∀ (W B T R : Type) (F : CausalityFrame W B T R) (w : W) (g : B),
+    FixedGiver F g → F.history.ontic.ExistsAt w g → ∀ x, GivesTo F w g x →
+      ∀ v, F.history.ontic.frame.access w v → F.history.ontic.ExistsAt v g → GivesTo F v g x) ∧
   (WithholdsEachAt vanCleveG .a .g ∧ ¬ WithholdsActualRosterAt vanCleveG .a .g ∧
     NecessarilyGivesSomeAt vanCleveG .a .g) ∧
   (WithholdsActualRosterAt replGivingG false .g ∧ ¬ WithholdsAllAt replGivingG false .g ∧
@@ -421,10 +449,11 @@ section PowerScope
 
 variable {W B T R : Type}
 
-/-- OPEN (strong sibling of `0050b6ed`, total refraining): every GOD_4 exists at
+/-- OPEN (total-noncreation power, TOTAL_REFRAINING_2): every GOD_4 exists at
 `w` and has at `w` a power for there being no contingent concrete being. The
 reading of "could have refrained from creating" at the level of contingent
-concreta (ST I q.19 a.3; navigation only). -/
+concreta (ST I q.19 a.3; navigation only). Independent of `0050b6ed` as typed;
+with Euclidean access and monotone powers it entails `0050b6ed`. -/
 def GodsHoldTotalAbsencePower (F : CausalityFrame W B T R)
     (PowerFor : W → B → (W → Prop) → Prop) (concrete : B → Prop) (IsGod : B → Prop) (w : W) :
     Prop :=
@@ -466,10 +495,34 @@ the monotonicity bridge is needed. -/
 def onlyNonePower (_ : Option Bool) (y : Bg) (p : Option Bool → Prop) : Prop :=
   y = .g ∧ ∀ v, p v → v = none
 
-/-- Non-Euclidean access `a → b`, `a → c`, `b → b` (ModalGrounding's `ptAccess`). -/
-def ptFrame : CausalityFrame TruthCore.Modal.ModalGrounding.Model.Pt Bg Unit Bool :=
-  gFrame TruthCore.Modal.ModalGrounding.Model.ptAccess
-    (fun v x => x ≠ .d ∧ v ≠ .c) fun _ _ _ => False
+/-- Four worlds for the Euclidean control. -/
+inductive Q
+  | a
+  | b
+  | e1
+  | e2
+  deriving DecidableEq
+
+/-- Non-Euclidean access: `a` sees `b`, `e1`, `e2`; each of those sees only
+itself. -/
+def qAcc : Q → Q → Prop
+  | .a, .b => True
+  | .a, .e1 => True
+  | .a, .e2 => True
+  | .b, .b => True
+  | .e1, .e1 => True
+  | .e2, .e2 => True
+  | _, _ => False
+
+/-- `g` everywhere (necessary); `c` absent only at `e1`; `d` absent only at `e2`. -/
+def qEx (v : Q) (x : Bg) : Prop :=
+  x = .g ∨ (x = .c ∧ v ≠ .e1) ∨ (x = .d ∧ v ≠ .e2)
+
+/-- The Euclidean control frame (reviewer's witness, PR 2154): at `b` nothing is
+contingent (it sees only itself), while no accessible world lacks both `c`
+and `d`. The holder `g` is necessary. -/
+def qFrame : CausalityFrame Q Bg Unit Bool :=
+  gFrame qAcc qEx fun _ _ _ => False
 
 end Model
 
@@ -479,14 +532,18 @@ open TruthCore.Modal.PrussPowerPremises.Model (Bg allC gPower) in
 
 1. Nonvacuity: on the three-world frame with the possibility reading every
    premise of `actualAbsencePowerOfTotal` and its conclusion hold.
-2. Strictness and productive compatibility: on §56's replacement frame with the
+2. `0050b6ed` without total noncreation: on §56's replacement frame with the
    possibility reading, `0050b6ed` holds with Euclidean access and monotone
-   powers, its total-refraining sibling fails, the giver is necessarily
-   productive and #1897's withholding holds.
-3. Euclidean access needed: on the non-Euclidean frame the total sibling and
-   monotonicity hold and `0050b6ed` fails.
+   powers, the total-noncreation power fails, the giver gives something at
+   every accessible world and #1897's withholding holds.
+3. Euclidean access needed: on the non-Euclidean frame `qFrame`, with a
+   necessary holder, the total-noncreation power and monotonicity hold and
+   `0050b6ed` fails.
 4. Monotonicity needed: on the three-world frame with the maximally specific
-   power the total sibling and Euclidean access hold and `0050b6ed` fails. -/
+   power the total-noncreation power and Euclidean access hold and `0050b6ed`
+   fails.
+Controls 2–4 show that `0050b6ed` and the total-noncreation power are
+independent as typed; only the bundle with both bridges is stronger. -/
 def ActualAbsencePowerScopeControls : Prop :=
   (GodsHoldTotalAbsencePower threeG (possibilityPower threeG) allC (· = .g) (some false) ∧
     TruthCore.Modal.Euclidean threeG.history.ontic.frame ∧
@@ -498,10 +555,11 @@ def ActualAbsencePowerScopeControls : Prop :=
     ¬ GodsHoldTotalAbsencePower replGivingG (possibilityPower replGivingG) allC (· = .g) false ∧
     NecessarilyGivesSomeAt replGivingG false .g ∧
     ActualAbsenceByWithholding replGivingG (possibilityPower replGivingG) allC false) ∧
-  (GodsHoldTotalAbsencePower ptFrame (possibilityPower ptFrame) allC (· = .g) .a ∧
-    PowerForMonotoneAt ptFrame (possibilityPower ptFrame) .a ∧
-    ¬ TruthCore.Modal.Euclidean ptFrame.history.ontic.frame ∧
-    ¬ GodsHoldActualAbsencePower ptFrame (possibilityPower ptFrame) allC (· = .g) .a) ∧
+  (GodsHoldTotalAbsencePower qFrame (possibilityPower qFrame) allC (· = .g) .a ∧
+    PowerForMonotoneAt qFrame (possibilityPower qFrame) .a ∧
+    NecessaryAt qFrame.history.ontic .a .g ∧
+    ¬ TruthCore.Modal.Euclidean qFrame.history.ontic.frame ∧
+    ¬ GodsHoldActualAbsencePower qFrame (possibilityPower qFrame) allC (· = .g) .a) ∧
   (GodsHoldTotalAbsencePower threeG onlyNonePower allC (· = .g) (some false) ∧
     TruthCore.Modal.Euclidean threeG.history.ontic.frame ∧
     ¬ PowerForMonotoneAt threeG onlyNonePower (some false) ∧
