@@ -8,7 +8,7 @@
   "date": "2026-11-14",
   "kind": "countermodel",
   "outcome": "succeeded",
-  "summary": "Finite Bool/Bool controls (EssenceReasonSeparation.checks) separate modal necessity (NECESSARY_EXISTENCE_BY_OWN_NATURE_2), own-essence membership (_3, OwnEssentialExistence) and the candidate intrinsic reason token (_4, CandidateIntrinsicReason) in both directions, and show that ModalRequiresExistence holds symmetrically where EssenceRequiresExistence holds in one direction only. The sourced sense _1 is recorded as an interpretation fork between _3 and _4. Restoration tests from the semantic challenge on PR #1597: Fine-style factivity and bearer-indexed intrinsic tokens leave all controls intact, since every being exists everywhere. Control (1) violates ExistencePSR; psr_keeps_nature_without_intrinsic_reason gives a sound ExistencePSR model with A, B and not candidate C (only a circumstance token explains). candidate_intrinsic_of_psr_without_other_reasons derives candidate C from ExistencePSR plus the exclusion of circumstance tokens and of other bearers' intrinsic tokens, without using B. Both are checked lemmas in the vocabulary module, not registered results. Reuse of BruteFoundationExplanations.NecessitatesExistenceAt needs a presence bridge from ExistencePSR.Model to ExplanationProfile; with presence read as the bearer's existence the test is tautologous. Root-premise delta none.\n\nCuration pass 2, lane D (#2103, 2026-11-27). 1b5c14e3 remains unplaced. The essence-membership and candidate intrinsic-reason comparisons are off path at this scope. Both bearers exist at both worlds. One assignment has false's own existence among its essence facts with an empty explanation relation. Another has the intrinsic token explain it with empty essence membership. A directed essence assignment retains symmetric modal requirements.",
+  "summary": "Finite Bool/Bool controls (EssenceReasonSeparation.checks) separate modal necessity (NECESSARY_EXISTENCE_BY_OWN_NATURE_2), own-essence membership (_3, OwnEssentialExistence) and the candidate intrinsic reason token (_4, CandidateIntrinsicReason) in both directions, and show that ModalRequiresExistence holds symmetrically where EssenceRequiresExistence holds in one direction only. The sourced sense _1 is recorded as an interpretation fork between _3 and _4. Restoration tests from the semantic challenge on PR #1597: Fine-style factivity and bearer-indexed intrinsic tokens leave all controls intact, since every being exists everywhere. Control (1) violates ExistencePSR; psr_keeps_nature_without_intrinsic_reason gives a sound ExistencePSR model with A, B and not candidate C (only a circumstance token explains). candidate_intrinsic_of_psr_without_other_reasons derives candidate C from ExistencePSR plus the exclusion of circumstance tokens and of other bearers' intrinsic tokens, without using B. Both are checked lemmas in the vocabulary module, not registered results. Reuse of BruteFoundationExplanations.NecessitatesExistenceAt needs a presence bridge from ExistencePSR.Model to ExplanationProfile; with presence read as the bearer's existence the test is tautologous. Root-premise delta none.\n\nCuration pass 2, lane D (#2103, 2026-11-27). 1b5c14e3 remains unplaced. The essence-membership and candidate intrinsic-reason comparisons are off path at this scope. Both bearers exist at both worlds. One assignment has false's own existence among its essence facts with an empty explanation relation. Another has the intrinsic token explain it with empty essence membership. A directed essence assignment retains symmetric modal requirements.\n\nCuration pass 2, lane D batch 3 (#2103, 2026-11-27). 1b5c14e3 remains unplaced. The separate rigid two-bearer models hold the same selected existence and necessity readings and omit CandidateIntrinsicReason or OwnEssentialExistence respectively. The third fixture gives mutual modal co-requirement and asymmetric essence requirement on its supplied predicates. The exact token and essence clauses tested here lack root-path registrations.",
   "evidence": [
     "1b5c14e3-5372-4f94-84cb-03b769b3f245",
     "PR-1597"
@@ -22,6 +22,13 @@
       "effort": "high",
       "date": "2026-11-27",
       "pr": "PR-2134"
+    },
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-27"
     }
   ]
 }

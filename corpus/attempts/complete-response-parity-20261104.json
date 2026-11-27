@@ -10,10 +10,19 @@
   ],
   "kind": "countermodel",
   "outcome": "succeeded",
-  "summary": "Constructed a finite countermodel for the proposed discriminator that complete joint sufficiency of every causal record plus matched two-input public response determines the number of graph foundations. Reused #744's finite single-source graph, but changed only hidden root occurrence to the conjunction of the two scenario bits so every root-to-input record becomes sufficient; reused #735's plural exercise unchanged. The Lean certificate proves all four public truth-table rows match, all-record sufficiency, coherence, two contributor indispensability, inductive Supply, least/common source in the strengthened single control versus neither in the plural control, and the original single fixture's counterexample to all-record sufficiency. The models have distinct hidden carriers and record structures; no real-world causal or modal equivalence is claimed. The new theorem compiled and its hosted Comparator shard passed in PR #974 at commit ef0a6323ba10fdf12f08ff2f667f481c5c4cca65. Full-library and independent NanoDa validation are separate final CI gates.",
+  "summary": "Constructed a finite countermodel for the proposed discriminator that complete joint sufficiency of every causal record plus matched two-input public response determines the number of graph foundations. Reused #744's finite single-source graph, but changed only hidden root occurrence to the conjunction of the two scenario bits so every root-to-input record becomes sufficient; reused #735's plural exercise unchanged. The Lean certificate proves all four public truth-table rows match, all-record sufficiency, coherence, two contributor indispensability, inductive Supply, least/common source in the strengthened single control versus neither in the plural control, and the original single fixture's counterexample to all-record sufficiency. The models have distinct hidden carriers and record structures; no real-world causal or modal equivalence is claimed. The new theorem compiled and its hosted Comparator shard passed in PR #974 at commit ef0a6323ba10fdf12f08ff2f667f481c5c4cca65. Full-library and independent NanoDa validation are separate final CI gates.\n\nCuration pass 2, lane D batch 3 (#2103, 2026-11-27). 02048060 remains unplaced. On the original single graph, record ra fails joint sufficiency. Replacing the source occurrence by the conjunction of the two inputs makes every exercised record sufficient in the completed single profile, which has a least event. The matched plural profile has full inductive supply and no least event. These are comparisons of the selected exercised-group and scenario predicates.",
   "blocker": "Philosophical bridge OPEN: explain why supplied scenario sufficiency corresponds to genuine productive/per se explanation rather than regular co-occurrence, without presupposing uniqueness, and apply that criterion to both the single and plural models. No root premise discharged.",
   "evidence": [
     "02048060-b774-58e9-861b-646b6c08d708",
     "PR-974"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-27"
+    }
   ]
 }
