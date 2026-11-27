@@ -48,7 +48,7 @@
     "supersedes": "none: the #2171 assessment (attempt 1b16fb17) and the esse-root-leaves assessment are kept; the latter's grade of 29e71e43 is qualified here, not revised.",
     "review": "unreviewed",
     "publication": "unpublished",
-    "evidence": "Proposed delivery on branch research/rdep-to-ract (stacked on PR #2171); independent semantic challenge pending before merge.",
+    "evidence": "Proposed delivery in PR #2173 (stacked on PR #2171); independent semantic challenge pending before merge.",
     "reviewed_revision": "5f1c1e7a166fcde70baa1a138061f4aaa7b76486"
   },
   "workers": [
@@ -57,7 +57,8 @@
       "provider": "claude",
       "model": "claude-opus-5-5",
       "effort": "high",
-      "date": "2026-11-27"
+      "date": "2026-11-27",
+      "pr": "PR-2173"
     }
   ]
 }
