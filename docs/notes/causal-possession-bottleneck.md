@@ -24,7 +24,8 @@ closure. The next version repaired every finding and added the consumer audit
 
 A re-check at head `7c483b6a` accepted that version with qualifications: five P1
 and five P2 findings. From the Lean proofs of all 73 consumers it confirmed that
-every direct stage-one God-route use is at esse. It also confirmed that the two
+every direct stage-one God-route use is at esse, except the older `1dff22d0` and
+`892db443`, which have siblings. It also confirmed that the two
 older arbitrary-respect derivations have siblings, and that MORE_3 and MORE_4 are
 distinct declarations. Its findings were:
 
