@@ -1,0 +1,11 @@
+{
+  "id": "47499442-c093-4885-b748-e5cdd4952dc5",
+  "label": "A root without represented limitation and finite reach give GOD_4 simplicity",
+  "argument_id": "b76efce4-a60f-426e-b2e2-0c5cbceab0ff",
+  "challenge_module": "TruthCore.Results.Causality.NamedRootStructuralAttributes.Challenge",
+  "solution_module": "TruthCore.Results.Causality.NamedRootStructuralAttributes.Solution",
+  "theorem": "TruthCore.Results.Causality.NamedRootStructuralAttributes.simpleOfReach",
+  "comparator_config": "results/47499442-c093-4885-b748-e5cdd4952dc5/comparator.json",
+  "status": "solution-present",
+  "description": "Take the actual root n at w from the existential bundle and use the first disjunct of HasLimitingPrinciple to derive its noncomposition. For each bearer g satisfying IsGod, the open reach premise supplies a finite path to n in the same profile at w. The actual-root condition excludes an incoming last edge, so namedRootOfReach gives g = n. Transport noncomposition with the same Composite predicate. Only actual roothood and absence of the composition horn are used from the existing bundle. The remaining horns and accessible-world existence are retained as conjuncts of the existing support option. This universal conclusion makes no existence assertion."
+}

@@ -1,0 +1,13 @@
+{
+  "id": "4b107dc7-fd19-4956-8bb7-a904c265d35d",
+  "label": "A root without represented limitation and finite reach give GOD_4 simplicity (inference)",
+  "input_statement_ids": [
+    "6c37be2d-578b-5248-93b3-80fa32585e62",
+    "75974d26-9483-4e1b-81a9-693a90ee9d0f"
+  ],
+  "output_statement_id": "9f4e5f17-e808-5c58-9eac-faacbb5c3a56",
+  "rule": "Identify the concrete root by finite grounding reach and exclude the composition horn on the same witness",
+  "meaning": "Take the actual root n at w from the existential bundle and use the first disjunct of HasLimitingPrinciple to derive its noncomposition. For each bearer g satisfying IsGod, the open reach premise supplies a finite path to n in the same profile at w. The actual-root condition excludes an incoming last edge, so namedRootOfReach gives g = n. Transport noncomposition with the same Composite predicate. Only actual roothood and absence of the composition horn are used from the existing bundle. The remaining horns and accessible-world existence are retained as conjuncts of the existing support option. This universal conclusion makes no existence assertion.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

@@ -1,0 +1,31 @@
+[batch]
+vocab = "TruthCore.Causality.RootIntellectWill"
+results = "TruthCore.Results.Causality.NamedRootStructuralAttributes"
+
+[[argument]]
+id = "A root without represented limitation and finite reach give GOD_4 simplicity"
+theorem = "simpleOfReach"
+premises = ["6c37be2d-578b-5248-93b3-80fa32585e62", "75974d26-9483-4e1b-81a9-693a90ee9d0f"]
+conclusion = "9f4e5f17-e808-5c58-9eac-faacbb5c3a56"
+axioms = []
+rule = "Identify the concrete root by finite grounding reach and exclude the composition horn on the same witness"
+meaning = "Take the actual root n at w from the existential bundle and use the first disjunct of HasLimitingPrinciple to derive its noncomposition. For each bearer g satisfying IsGod, the open reach premise supplies a finite path to n in the same profile at w. The actual-root condition excludes an incoming last edge, so namedRootOfReach gives g = n. Transport noncomposition with the same Composite predicate. Only actual roothood and absence of the composition horn are used from the existing bundle. The remaining horns and accessible-world existence are retained as conjuncts of the existing support option. This universal conclusion makes no existence assertion."
+
+[[argument]]
+id = "A root with intellect and finite reach give GOD_4 intellectual capacity"
+theorem = "intellectOfReach"
+comparator_theorems = ["reachOmission"]
+premises = ["beede613-2c17-5fe1-829e-16829d781cfd", "75974d26-9483-4e1b-81a9-693a90ee9d0f"]
+conclusion = "29818edd-9f5a-5414-baa2-9a7d0c8abf18"
+axioms = []
+rule = "Identify the named bearer with the actual root by finite grounding reach and transport intellectual capacity"
+meaning = "The bundle supplies one actual root n at w and intellectual capacity of that same n. For each g satisfying IsGod, the open reach premise and n's roothood give g = n by namedRootOfReach on the same m and w. Transfer the same HasIntellect predicate by equality. This route uses the actual-root and intellectual-capacity conjuncts of the existing bundle. The Comparator companion omits the reach premise. In the existing plurality profile under explicit excluded middle, the bundle holds at left, while naming only the instrument fails the reach premise and both named capacity conclusions."
+
+[[argument]]
+id = "A root with will and finite reach give GOD_4 the capacity of will"
+theorem = "willOfReach"
+premises = ["beede613-2c17-5fe1-829e-16829d781cfd", "75974d26-9483-4e1b-81a9-693a90ee9d0f"]
+conclusion = "66aecdd7-ea4e-55c6-9377-10db08893854"
+axioms = []
+rule = "Identify the named bearer with the actual root by finite grounding reach and transport will"
+meaning = "The bundle supplies the actual root n at w and will of that same n. For each g satisfying IsGod, the open reach premise and n's roothood give g = n by namedRootOfReach on the same m and w. Transfer the same HasWill predicate by equality. This proof uses the bundle's actual-root and will conjuncts. The intellect-to-will application can warrant the will conjunct in upstream producers. Here the named conclusion is derived by identifying the bearer with the witness that already has will."

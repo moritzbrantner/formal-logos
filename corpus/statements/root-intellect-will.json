@@ -1,6 +1,6 @@
 {
   "id": "beede613-2c17-5fe1-829e-16829d781cfd",
-  "label": "One actual necessary root is altogether immaterial and has intellect and will",
+  "label": "One actual NECESSARY_2 root HAS_INTELLECT_1 and HAS_WILL_1",
   "legacy_id": "STMT-ROOT-INTELLECT-WILL",
   "paraphrase": "One individual n is an actual concrete root of the supplied grounding relation at w and exists at every world accessible from w. Its represented esse and essence agree in the supplied profile. It is noncomposite, has no distinct predecessor under the supplied simple priority, is free of matter-form composition, enters the composition of nothing, and satisfies the supplied predicates for intellectual capacity and will. The same witness satisfies each conjunct.",
   "lean_declaration": "TruthCore.Causality.RootIntellectWill.NecessaryRootIntellectWillAt",
