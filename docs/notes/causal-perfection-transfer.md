@@ -5780,7 +5780,7 @@ worlds is the terminus. That account is open:
 - [simplicity-collapse-555.md](simplicity-collapse-555.md) leaves "Decree as
   respect" and `ModalCapacity` open;
 - premise lane E's section "Closure for a root's own determinations"
-  (`research/premise-e-closure`, `classicalSelectionControl`) finds that the
+  (PR #2174, `classicalSelectionControl`) finds that the
   classical root keeps its necessary profile only on the same account.
 
 This is **one** price for the classical root, the same one lane E records for
@@ -5826,7 +5826,10 @@ disputed profiles.
 - **(Rs) Standard-relative loss and arbitrariness.** A favouring is restricted
   if it misses a verdict of its standard or makes an unbacked one. Three ways
   to choose the standard:
-  - **per bearer**: each favouring is measured by its own formal object;
+  - **per bearer**: a bearer's standard is the formal object of its *kind of
+    operation*, not its own particular content. A one-domain knower is
+    measured by truth, the object of knowing as such, not by the truths of its
+    domain;
   - **common value**: every favouring is measured by STANDARD_OF_FAVOURING_1;
   - **common D**: every favouring is measured by STANDARD_OF_FAVOURING_2.
 
@@ -5834,16 +5837,16 @@ disputed profiles.
 | --- | --- | --- | --- | --- | --- |
 | knower of one domain (standard: truth) | limiting only if "knows only A" is A-knowledge plus a compatible lack; specification if it is an exclusive capacity profile | limiting | limiting | limiting | limiting |
 | triangle, exactly three sides | specification | no verdicts; no verdict | no standard of correctness for a figure; no verdict | same | same |
-| will fixed on the good as such | specification | restricted: a standing physical tie-break extends it without conflict (`refinementCondemnsGoodTracking`) | not restricted (its own formal object is the good) | not restricted | restricted (unbacked at c over d at `cBetter`) |
+| will fixed on the good as such | specification | restricted: a standing physical tie-break extends it without conflict (`refinementCondemnsGoodTracking`) | not restricted (the formal object of willing is the good) | not restricted | restricted (unbacked at c over d at `cBetter`) |
 | selection among ties | out of scope: not a verdict (A3) | same | same | same | same |
-| favouring fixed to D | specification under `3e6ae3e7` (exclusive); a compatible lack without it | restricted: `better ⊔ dNature` extends it without conflict (`refinementCondemnsDNature`) | not restricted (its own formal object is D) | restricted if betterness varies within a D-class (`variationForcesLossOrArbitrariness`) | not restricted |
-| good-tracking favouring | specification | restricted (row 3) | not restricted | not restricted | restricted |
+| favouring fixed to D | specification under `3e6ae3e7` (exclusive); a compatible lack without it | restricted: `better ⊔ dNature` extends it without conflict (`refinementCondemnsDNature`) | depends on its kind of operation: not restricted if it is a natural appetite (object D); restricted if value varies within a D-class and it is a rational appetite (object the good) | restricted if betterness varies within a D-class (`variationForcesLossOrArbitrariness`) | not restricted |
+| good-tracking favouring | specification | restricted (row 3) | not restricted (as a rational appetite) | not restricted | restricted |
 
 **Readings.**
 
 - **The will datum is not neutral.** "A will fixed on the good as such is not
-  limited" is correct per bearer, because the will's own formal object is the
-  good. As a datum against a *common* standard, it presupposes that the common
+  limited" is correct per bearer, because the formal object of willing, as a
+  kind of operation, is the good. As a datum against a *common* standard, it presupposes that the common
   standard is value. It therefore cannot count against (Rs) common D, and it is
   not used to reject (R0).
 - **(I)** is symmetric, but it is decided by how an alternative is analysed: as
@@ -5867,8 +5870,15 @@ disputed profiles.
 - **(Rs)** is the only tested criterion that applies by one function to both
   sides and classifies the uncontroversial cases (knower, triangle) correctly.
   Its verdict on the disputed pair depends on how the standard is fixed:
-  - Per bearer, D-fixity is not a limitation, and `e2357adc` receives no
-    support from (Rs).
+  - Per bearer, the verdict depends on the kind of operation a root's
+    favouring is. As a natural appetite, its formal object is D and D-fixity
+    is no limitation. As a rational appetite, its formal object is the good and
+    D-fixity is a limitation whenever betterness varies within a D-class. The
+    per-bearer rule therefore gives no free verdict either way. It relocates
+    the question to whether a root's favouring is a natural or a rational
+    appetite. Measuring a bearer by its own particular content instead would
+    misclassify the one-domain knower as unrestricted, so that reading is not
+    used.
   - With a common value standard, the D-nature is restricted whenever
     betterness varies within a D-class.
   - With a common D standard, the good-tracking profile is restricted.
@@ -5904,14 +5914,22 @@ disambiguated separately (DISAMB `da16b898`).
    unless a single common standard of favouring is fixed, and fixed as value.
    - (I) leaves the question to `3e6ae3e7`.
    - (R0) condemns both profiles.
-   - (Rs) per bearer exempts D-fixity.
+   - (Rs) per bearer turns on whether a root's favouring is a natural or a
+     rational appetite.
 
    `e2357adc`'s warrant therefore reduces to three claims: a common standard
    governs every favouring; it is value; and value varies within a D-class.
    Its sharp form is "a root's pure favouring makes exactly value's verdicts".
-   This is a relocation, not independent warrant. The D-rival's position is
-   coherent and at parity in form. Either each favouring is measured by its own
+   On the per-bearer rule the same warrant reappears as the claim that a
+   root's favouring is a rational, not a natural, appetite. This is a
+   relocation, not independent warrant. The D-rival's position is coherent and
+   at parity in form. Its favouring is a natural appetite, with D as its
    formal object, or the common standard is end-realization.
+
+   **The crux.** Whether an original source's favouring is a natural appetite
+   or a rational appetite is where premise lanes C and P converge. Lane C asks
+   it as whether value-responsiveness to non-present candidates is
+   apprehension. Lane P asks it as which standard measures the favouring.
 
 **A6. Registered route** (argument `b86a2364`, result `da9f2d3c`, theorem
 `actualRootFavouringIsGoodGeneralFromStandard`, zero axioms). Premises:
@@ -5926,8 +5944,11 @@ disambiguated separately (DISAMB `da16b898`).
 The conclusion is horn A's `7fca65ec`. A pure favouring makes exactly value's
 verdicts, so it is good-general at the standard's own witness.
 The three new premises are stated with `ValueStandard good`
-(STANDARD_OF_FAVOURING_1), which is definitionally `good`. It marks the sense so
-that `bind-check` checks it.
+(STANDARD_OF_FAVOURING_1), which is definitionally `good`. The marker is a
+declared-primitive tag. `bind-check` sees the tag, not the reading. It does not
+make mixing the senses a type error: `ValueStandard (EndRealizationStandard
+fit)` reduces to `EndRealizationStandard fit` by `rfl`. The conclusion's
+`good` is untagged, and the controls use `fitOrder` directly.
 
 The route does not use the admissible family, joint compossibility,
 root-profile admissibility, pure admissibility, the structural L, `e2357adc`,
@@ -6175,7 +6196,9 @@ does not use joint compossibility.
     incomparability, and only on the open extrinsic-decree account. The
     classical side's own requirement-form premises force it onto that account.
   - The measure question reduces to how the standard of favouring is fixed:
-    per bearer, common value, or common D. This is at parity in form.
+    common value, common D, or per kind of operation. On the last, it reduces
+    to whether a root's favouring is a natural or a rational appetite, the
+    question where lanes C and P converge. This is at parity in form.
 - The reception fork stays at parity. The unrestricted enumerative rule fails,
   and the constitutive support relocates to a restricted criterion.
 - The immutability candidate is now conditional. On the A-theory, without the
@@ -6190,10 +6213,11 @@ does not use joint compossibility.
 | --- | --- | --- | --- | --- | --- |
 | Personal root (good-tracking will) | unrestricted | restricted (unbacked at c over d) | unrestricted | a contingent exercise; escapes exclusion only on the extrinsic-decree account, with its extra personal commitment | selects against its own favouring |
 | Impersonal good-general nature (axiarchic) | unrestricted | restricted (unbacked at c over d) | unrestricted | a contingent exercise, if permissive; not a determination of it | selects against its own favouring |
-| Impersonal D-nature | restricted if value varies within a D-class | unrestricted | unrestricted | a contingent exercise among tied D-realizers | does not arise while some candidate realizes D |
+| Impersonal D-nature | restricted if value varies within a D-class | unrestricted | unrestricted as a natural appetite; as a rational appetite, as under common value | a contingent exercise among tied D-realizers | does not arise while some candidate realizes D |
 
-**Strongest standing rival and its price.** The D-nature whose favouring is
-measured by its own formal object (per bearer) or by end-realization (common D).
+**Strongest standing rival and its price.** The D-nature whose favouring is a
+natural appetite, with D as its formal object, or whose favouring is measured
+by end-realization (common D).
 
 - It denies that a common value standard governs a root's favouring, and so
   denies the value-sense bridges (or, on horn A, `e2357adc`).
@@ -6218,9 +6242,10 @@ Nothing here is a formal establishment, and formal validity is unchanged.
 
 **Next discriminating tests.**
 
-1. Per bearer or common standard? Is there a non-question-begging argument that
-   the favouring of an *original* source of finality is measured by value
-   rather than by its own end content? Test whether "originating ends as goods"
+1. Natural or rational appetite? Is there a non-question-begging argument that
+   the favouring of an *original* source of finality is a rational appetite,
+   measured by value, rather than a natural appetite, measured by its end
+   content? This is lanes C and P's shared crux. Test whether "originating ends as goods"
    says more than the value-sense bridges restated.
 2. Goodness variation within a D-class for an original source. A6 needs it as
    a bare premise; horn A entails it.
@@ -6235,44 +6260,39 @@ Nothing here is a formal establishment, and formal validity is unchanged.
 7. Encode the (Id) reading of simplicity for favouring (tokens name parts of
    one real favouring) and retest horn A under it.
 
-**Review state.** The independent semantic challenge of `c0f1e0177`
-(delivery `0221583ed`) accepted the Lean:
-- `da9f2d3c` is valid and not a transcription;
-- the three Comparator companions are accepted;
-- every Lean-only lemma is correctly stated.
+**Review state.** The review ran in three steps.
 
-It found eight P1s in the prose:
-1. the locus exemption depended silently on the extrinsic-decree account;
-2. the exclusion was attributed to the restriction principle;
-3. the tie-scoped exemption was stated generally, and the no-best case was
-   missing;
-4. the will datum was applied asymmetrically;
-5. the ORIGINAL_FINALITY mapping was overstated;
-6. a relocation was presented as lighter, horizontal support;
-7. B tested only enumeration;
-8. C dropped its conditional and attached the bridge to the wrong
-   determination.
+1. **Independent semantic challenge** of `c0f1e0177` (delivery `0221583ed`).
+   It accepted the Lean: `da9f2d3c` is valid and is not a transcription, its
+   three Comparator companions hold, and every Lean-only lemma is correctly
+   stated. In the prose it found eight P1s and six P2s:
+   - P1: the locus exemption silently assumed the extrinsic-decree account;
+   - P1: the exclusion was misattributed;
+   - P1: the tie scope was missing, and so was the no-best case;
+   - P1: the will datum was applied asymmetrically;
+   - P1: the ORIGINAL_FINALITY mapping was overstated;
+   - P1: a relocation was presented as lighter, horizontal support;
+   - P1: section B tested only enumeration;
+   - P1: section C's conditional was missing;
+   - P2s on D's cost, on variation, on the R0 cell, on the betterness record,
+     on the standards disambiguation and on bare variation.
+2. **Repairs** at `cc951fe09`:
+   - the rewritten sections;
+   - DISAMB `da16b898` with DEFs `e14aa0f0` and `b2eab05f`;
+   - the sense marker in the result type;
+   - the new Lean-only lemmas.
+3. **Targeted re-check** of `3a081ef06`. All fourteen findings were fixed. It
+   found one new P1: the per-bearer standard was applied at different levels
+   to the knower and to the D-nature. It also found two P2s: the marker is
+   only nominal, and lane E was cited by branch name. All three are fixed in
+   the commit that adds this paragraph:
+   - per bearer now means the formal object of a kind of operation, and the D
+     verdict turns on natural versus rational appetite;
+   - the marker is disclosed as a tag;
+   - lane E is cited as PR #2174.
 
-It also found six P2s:
-1. D's cost claim was not conditional;
-2. variation was stated as equivalent to non-factoring;
-3. the R0 cell was wrong at `valueless`;
-4. no record defined the betterness standard;
-5. the standards split had no disambiguation;
-6. the bare variation premise on A6 alone was not stated.
-
-The repairs in the commit that adds this paragraph:
-- rewrite A2–A6, B, C, D and the assessment as above;
-- add DISAMB `da16b898` with DEFs `e14aa0f0` and `b2eab05f` and their Lean
-  declarations;
-- state the new premises of `da9f2d3c` with the sense marker
-  `ValueStandard good`, so the main theorem's Challenge type changes only by
-  that definitional marker;
-- add the Lean-only lemmas `noBestSelectionAgainstFavouring`, `noBestNat`,
-  `endRealizerUndominated`, `refinementCondemnsDNature`,
-  `variationIffSomeGoodGeneral` and `factoringDeniesVariation`.
-
-A targeted re-check has not been run yet.
+The delivery is accepted as qualified at `3a081ef06`. The final wording fix was
+made after that.
 
 [Attempt record](../../corpus/attempts/7ee3e5eb-37b5-4157-b591-f8d38a833ab1.json)
 
