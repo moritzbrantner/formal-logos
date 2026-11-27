@@ -9,7 +9,7 @@
   "date": "2026-10-28",
   "kind": "countermodel",
   "outcome": "succeeded",
-  "summary": "The exact Bool/Nat parity model separates local depth-one termination and finite worlds from cross-world union WF. The union equals reverse successor, is finite-cycle-free, has an incoming predecessor at every Nat, and has no common underived individual. Rejected repair: finite prefixes cannot certify the infinite countermodel because their cutoff creates an artificial root. Reused #518 vocabulary and main theorem without reproving it. No source reading, metaphysical possibility or root-premise discharge is claimed. Interactive Lean preview elaborated the full model and solution inline against the coordinator supplied workspace at 75192b1c; final Comparator and NanoDa remain CI authorities. The final preview reuses Mathlib WellFounded.not_rightTotal; #print axioms reports exactly propext, Classical.choice and Quot.sound, matching the permitted Mathlib policy. The initial core-omega variant already required propext/Quot.sound and was replaced with the approved Mathlib relation theorem rather than advertising zero axioms.\n\nCuration pass 2, lane D (#2103, 2026-11-27). 6844043f remains unplaced. The parity support edge is n+1 to n at the world selected by target parity. The exact omitted hypothesis is the generic WellFoundedUnionNecessarySupport (6af3bd73), which is off the root path. The control uses the generic Ontic/support setting and this audit adds no concrete-Profile instantiation.",
+  "summary": "The exact Bool/Nat parity model separates local depth-one termination and finite worlds from cross-world union WF. The union equals reverse successor, is finite-cycle-free, has an incoming predecessor at every Nat, and has no common underived individual. Rejected repair: finite prefixes cannot certify the infinite countermodel because their cutoff creates an artificial root. Reused #518 vocabulary and main theorem without reproving it. No source reading, metaphysical possibility or root-premise discharge is claimed. Interactive Lean preview elaborated the full model and solution inline against the coordinator supplied workspace at 75192b1c; final Comparator and NanoDa remain CI authorities. The final preview reuses Mathlib WellFounded.not_rightTotal; #print axioms reports exactly propext, Classical.choice and Quot.sound, matching the permitted Mathlib policy. The initial core-omega variant already required propext/Quot.sound and was replaced with the approved Mathlib relation theorem rather than advertising zero axioms.\n\nCuration pass 2, lane D batch 3 (#2103, 2026-11-27). 6844043f tests 6af3bd73. Omit well-foundedness of the union of necessary-bearer support from base false. Every Nat bearer exists at both worlds. Each local relation has no two-edge path, while the union has n + 1 supporting n at the world selected by the parity of n. The union is cycle-free and has an infinite descending chain.",
   "evidence": [
     "6844043f-7a10-5f75-b2a3-93712d07f2b7",
     "PR-612"
@@ -22,6 +22,13 @@
       "effort": "high",
       "date": "2026-11-27",
       "pr": "PR-2112"
+    },
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-27"
     }
   ]
 }
