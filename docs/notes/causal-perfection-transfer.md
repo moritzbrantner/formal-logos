@@ -4963,7 +4963,11 @@ interpretive layer of B as presented. Its findings were repaired at `6cac8d105`:
 - PURE_ACT_1 labels.
 
 The targeted re-check at `fce2ba69d` accepted all steps and found no
-remaining P1.
+remaining P1 in the content it checked. The certified difference for the
+member-grounding strength order (`mgOverSufficiencyExact`, `strictSeparates`)
+was added afterwards and checked at `2ee185e3f`. That check found one P1, a
+wording error that reversed the direction of the difference statement, which
+is fixed in the commit that adds this sentence.
 
 **Next discriminating tests.**
 

@@ -6,5 +6,5 @@
   "predicate": "tests",
   "object_kind": "statement",
   "object_id": "6bba8431-d3f7-47f5-85cf-8c69d32b082f",
-  "note": "Premise-free certificate: member grounding holds exactly when its sufficiency direction and its necessity direction (every admissible profile is exclusion-free) hold. It decomposes the premise into the part the derivations use and the part they do not."
+  "note": "Premise-free certificate: member grounding holds exactly when its sufficiency direction and its necessity direction (every admissible profile is exclusion-free) hold. It decomposes the premise into the part the derivations use and the part they do not. Definitional; no evidential weight."
 }

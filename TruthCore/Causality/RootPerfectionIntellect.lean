@@ -125,9 +125,9 @@ def ExclusionFreeAdmissible (Admissible : Set D → Prop)
 
 /-- Difference of member grounding over its sufficiency direction (#1598),
 OPEN, not asserted: every admissible profile is exclusion-free (the necessity
-direction). It is what member grounding adds: every inadmissibility-relevant
-constraint is a member's requirement of a lack, so admissible profiles contain
-no such requirement. -/
+direction). It is what member grounding adds: the part that makes every
+member's requirement of a lack binding: a profile containing one is
+inadmissible. -/
 def AdmissibleIsExclusionFree (Admissible : Set D → Prop)
     (RequiresLack : D → Set D → Prop) : Prop :=
   ∀ q, Admissible q → ExclusionFree RequiresLack q
