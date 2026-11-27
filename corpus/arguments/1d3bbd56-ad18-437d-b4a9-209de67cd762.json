@@ -1,0 +1,20 @@
+{
+  "id": "1d3bbd56-ad18-437d-b4a9-209de67cd762",
+  "label": "Received esse adds nothing to the essence-only derivation of finitude, checked",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "2817ceab-e913-4512-9bbb-ff4acb5d68de",
+  "inference_ids": [
+    "dccd7122-8871-4e02-ba45-c980b9f0c4e4"
+  ],
+  "meaning": "Premise-free comparison at matching scope: finitude in perfection of whatever is not its own being follows on the essence-only account and on the reception account, both from the same nature premise; the reception premises imply the essence-only premise on non-own beings.",
+  "definition_ids": [
+    "97c4f504-4792-43c6-9f61-ae23df732d5f",
+    "4433942e-aaf6-55a9-b777-66e55638103d",
+    "65e38ffa-5a1c-55d0-935c-6538d843b780",
+    "ad76481a-f038-4652-9c6e-0e0441eee7e5",
+    "dbae9538-e7f2-47ef-9fdd-f8b6c98efaf5"
+  ],
+  "disambiguation_ids": [
+    "5921354b-51e6-5da3-8d8c-e9041840fd9f"
+  ]
+}

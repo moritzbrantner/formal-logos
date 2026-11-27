@@ -1,0 +1,9 @@
+{
+  "id": "74837d29-c0ed-4e15-b7fa-4169f087d950",
+  "label": "Real-composition reading of reception of esse: received in a principle really other than it",
+  "term": "real-composition reading of reception of esse",
+  "definition": "`RealCompositionReception EsseReceivedIn esseOf x r`: the esse of x is received in r (RECEPTION_OF_ESSE_1, whose real constitution is open) and r is really other than that esse, in a principle sort read as real identity. Distinguishing conditions: the constitution-open sense can be satisfied by a distinction of reason with a foundation in the thing, which Suárez admits as 'metaphysical contraction' (DM XXXI, XIII.18); this sense cannot. Suárez denies it ('non ut est potentia in qua recipitur', XIII.18).",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.DependenceToActOfBeing.RealCompositionReception",
+  "note": "Stipulative analyst definition, attribution deferred; DM XXXI XIII.17-18 read in the pinned local copy of the Castellote-Renemann edition (sha256 1df6c70b, pp. 80-81) for this distinction (docs/notes/rdep-to-ract.md)."
+}

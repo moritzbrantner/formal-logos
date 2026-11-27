@@ -1,0 +1,10 @@
+{
+  "id": "eb3cb1e6-07c0-4fd4-8b15-0cd1167686a0",
+  "label": "Test by the unde load map of the dependence premise",
+  "subject_kind": "argument",
+  "subject_id": "9a876fd1-3b2d-4ab5-b566-8fb4ba432c5d",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "7067553d-cad9-5d79-b6b2-912e35051530",
+  "note": "Tests how far 7067553d (R-dep) carries toward the act-of-being theses: given it, every further bridge is equivalent to what it delivers, and the first bridge is analytic on the dependence reading."
+}

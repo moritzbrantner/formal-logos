@@ -1,0 +1,25 @@
+{
+  "id": "62ca3d65-8dd4-4187-abe1-a928b3045f12",
+  "label": "Perfection of being: thin reading versus intensive reading",
+  "term": "perfection of being (OfBeing)",
+  "term_label": "PERFECTION_OF_BEING",
+  "sense_definition_ids": [
+    "84147eb5-88ef-46e7-9a0d-9c18d5137f16",
+    "0a2bf1a0-bfc5-45d7-966a-a28919b6e847"
+  ],
+  "resolution": "The registered premises d164b1ff and c4fb87a6 use the primitive OfBeing and leave its reading open. PERFECTION_OF_BEING_1 (ThinOfBeing): only being itself; on it d164b1ff holds trivially and c4fb87a6 fails for life and wisdom. PERFECTION_OF_BEING_2 (IntensiveEsseFrame.OfEsse): a perfection of esse itself; on it c4fb87a6 is R-act₂ (IntensiveEsse). Reception of esse in essence (R-act₁) does not settle which reading holds: the ModeOfBeingMiddleTerm controls satisfy R-act₁ with the reception and purity interfaces while R-act₂ fails on the thin reading. No statement relates the two senses.",
+  "senses": [
+    {
+      "id": "876be771-17d8-4512-a402-6a97682cc216",
+      "label": "PERFECTION_OF_BEING_1",
+      "definition_id": "84147eb5-88ef-46e7-9a0d-9c18d5137f16",
+      "lean_declaration": "TruthCore.Causality.ModeOfBeingMiddleTerm.ThinOfBeing"
+    },
+    {
+      "id": "ace92276-f93d-4105-8751-29b1ca71ac4a",
+      "label": "PERFECTION_OF_BEING_2",
+      "definition_id": "0a2bf1a0-bfc5-45d7-966a-a28919b6e847",
+      "lean_declaration": "TruthCore.Causality.ModeOfBeingMiddleTerm.IntensiveEsseFrame.OfEsse"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "id": "d69e9493-2672-4cb6-9f75-7c7af28bf16e",
+  "label": "A holder MOTION_3 held in no respect, from the unlosable first holder",
+  "premise_statement_ids": [
+    "5eb16c61-cbc4-4338-8e7d-e50b46401f07",
+    "89f0d0d5-d22b-4811-bab6-1fa0d1830644",
+    "6e2176cd-eeb6-413c-8fd2-7b2df4a34ad4",
+    "f856b295-6f8f-40e8-aa64-236b3ab9aa85"
+  ],
+  "conclusion_statement_id": "de1f6c17-7af8-455c-8660-d1f9bfcb3878",
+  "inference_ids": [
+    "7892facf-c4e7-4f5d-bc15-787135bc7dbd"
+  ],
+  "meaning": "5eb16c61 supplies, under double negation, an f that presently actualizes some other x in r, is in act in r and could not lack its act in r. Suppose f were MOTION_3 held in some respect s. Then f is in act in s and, by the first lackability premise, could lack its act in s; by 6e2176cd it is in act as to being and could lack being; by the second lackability premise, since f is in act in r, it could lack its act in r, against the choice of f. So f is held in no respect, and the same f holds x. All on one Holding, one Lackability, one InAct and one esse. This is the passage (2') from the operative respect to every respect that docs/notes/caused-mover-cstar.md 10.5 records as unformulated. It does not use the esse instance f834ee65, the timed present-moment reading or any giving relation, so it neither duplicates nor depends on the connection plans of f834ee65 and f360bb6f. Each lackability premise is needed (controls parts 2 and 3) and the bundle is satisfiable with a holder (part 1). All premises stay open.",
+  "definition_ids": [
+    "56b438a0-7fcc-4dd5-916b-1d2e2162310b",
+    "6ab9a832-6b0f-47ac-9f08-144444bf1cb1",
+    "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "ea1904bc-bdfa-4835-a4a7-8545c5221e2e"
+  ],
+  "disambiguation_ids": [
+    "a59fd0ac-f276-528d-8dc3-c3eddd331ac7"
+  ]
+}
