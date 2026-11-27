@@ -340,13 +340,19 @@ OwnBeing**:
 5. **Locus (b).** An impersonal source that is its own being must reject R-act₂ or
    OwnBeing. The theistic content of the second proof and ad 3 is conditional on
    R-act₂, OwnBeing and the purity classification. Purity of life and wisdom is
-   stipulative: `hPureWisdom` is an explicit input in `WholePowerPerfection`, and
-   ad 3 gives examples, not a criterion. Reaching intellect from really had wisdom
-   needs a further bridge (`godHasIntellectFromWisdomCapacity` and
-   `godHasIntellectFromWholePowerWisdom`, `WholePowerPerfection/Solution.lean` lines
-   222 and 244). Those take `WisdomSelfCapacity` and an open recognition premise to
-   HAS_INTELLECT_1, and are not registered results. Personhood is a further step
-   again. `RootIntellectWill` is a separate immateriality route.
+   stipulative: wisdom's purity is the open premise `44e39691` (`WisdomIsPure`),
+   and ad 3 gives examples, not a criterion. Reaching intellect from really had
+   wisdom needs further bridges, registered on main by PR #2162:
+   - `pureActRootsKnowThemselvesFromPurity` (result `fd01e30c`, → `00d02e10`) takes
+     `fe67d766` (every actual root has every pure perfection; produced by `7d8bbdcb`
+     from `d164b1ff` and `c4fb87a6`), wisdom's purity, and the open capacity,
+     exercise-or-potency and grounding premises (`d41af47e`, `d73266a0`,
+     `03a5e479`);
+   - `godHasIntellectFromRootPerfection` (result `c256d381`) needs the open
+     recognition premise `8ba44d60` (intrinsic self-knowledge → HAS_INTELLECT_1).
+
+   Personhood is a further step again. `RootIntellectWill` is a separate
+   immateriality route.
 6. **`d164b1ff` stays supported.** Ad 3 states the formal-or-eminent sibling
    `9a0a4951` (claim `1c66ee49`), and supports `d164b1ff`, as SCG I.28 does
    (`1c67e58f`). Real having, as against eminent containment, stays open (DISAMB
@@ -440,6 +446,6 @@ it.
 | P2-2 objection 3 | **Accepted.** Undercut by ad 3's first clause without R-act. The quantifier view is a separate surviving rival. | §1, §5 |
 | P2-3 "parity" | **Accepted.** Standing: unresolved, comparison not run. The asymmetry of positive warrant on file is recorded. | §5, §6.4 |
 | P2-4 next test | **Accepted.** Formalize the q.4 a.1 ad 3 "unde" inference. | §8 |
-| P2-5 wisdom to intellect; purity | **Accepted.** The bridge (unregistered `godHasIntellectFrom…` theorems, recognition premise) is named. Purity is stipulative. | §6.5 |
+| P2-5 wisdom to intellect; purity | **Accepted.** The bridge is named: via `fe67d766`, results `fd01e30c` and `c256d381` (PR #2162), with the open capacity, exercise, grounding and recognition premises. Wisdom's purity is the open premise `44e39691`; the classification is stipulative. | §6.5 |
 | P2-6 "R-mode presupposes R-act" | **Accepted.** Qualified by the unread "vivere viventibus est esse" lead. | §4, §6 revision conditions |
 | P2-7 R-act records; DEF-MODE-OF-BEING gap | **Accepted.** R-act₁ and R-act₂ are statements with source arguments noted, not mere candidate primitives. The gap is recorded on #2103. | statements, §3 |
