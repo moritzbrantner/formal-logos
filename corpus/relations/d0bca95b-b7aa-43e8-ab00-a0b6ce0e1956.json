@@ -1,0 +1,10 @@
+{
+  "id": "d0bca95b-b7aa-43e8-ab00-a0b6ce0e1956",
+  "label": "Test by NecessaryConcreteRouteBridge.necessaryRouteControls (3c468121)",
+  "subject_kind": "result",
+  "subject_id": "d492d6e9-e381-5628-ba20-18e7855c322d",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "3c468121-b8fe-5342-a1ab-d35009e5fdd4",
+  "note": "Omit the link from a cause of a supplied necessary being's esse to a cause of its necessity. True is necessary relative to the sole world, and false causes true at esse, but the necessity-cause relation is empty."
+}

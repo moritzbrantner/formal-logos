@@ -1,0 +1,10 @@
+{
+  "id": "626b9c62-5a1b-4dbb-8dd5-49451ecaab0b",
+  "label": "Test by ContingencyGrounding.controls (b62a64ab)",
+  "subject_kind": "result",
+  "subject_id": "cafd9800-2fee-4fb6-a52f-bec0f1479d7f",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "b62a64ab-ac11-569a-b8e8-de51a74b058f",
+  "note": "Omit the prohibition of self-esse-causation. In selfCauser, f both has POWER_OVER_ESSE_1 over its own esse and causes it. At true f is contingent, and the frame has no distinct esse-cause. The other four C2 route premises hold."
+}
