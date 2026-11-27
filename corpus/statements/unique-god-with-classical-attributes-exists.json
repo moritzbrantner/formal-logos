@@ -1,8 +1,8 @@
 {
   "id": "20a2b6a3-83e7-5ea0-be63-9dbc03c302b3",
-  "label": "There is one and the same being that is God, is the only being to which the skeleton's IsGod…",
+  "label": "There is one and the same being that is God, is the only being to which the skeleton's IsGod\u2026",
   "legacy_id": "STMT-UNIQUE-GOD-WITH-CLASSICAL-ATTRIBUTES-EXISTS",
-  "paraphrase": "On a single signature there is a being g that satisfies GOD_4, every being satisfying that same God predicate equals g, and the signature’s primitive classical-attributes field holds of g.",
+  "paraphrase": "On a single signature there is a being g that satisfies GOD_4, every being satisfying that same God predicate equals g, and the signature\u2019s primitive classical-attributes field holds of g.",
   "lean_declaration": "TruthCore.Case.Catholicism.UniqueClassicalGodExists",
   "definition_ids": [
     "b1415b6b-19b0-5a0e-aa0c-0ab32f350141",
@@ -12,5 +12,10 @@
   ],
   "disambiguation_ids": [
     "205a39c3-915d-5fe4-8076-a9ff91329e08"
-  ]
+  ],
+  "connection_plan": {
+    "target_statement_id": "d5ac1620-1de5-5cd8-862e-cfdfd6d8b8a5",
+    "missing_bridge": "For assembly 398f4323, establish GodExists, GodIsOne and the primitive universal field premises before taking closure through the existing assembly. For assembly 822de823, establish the necessary classical root bundle before taking closure through its projection and the existing identity transfer.",
+    "blocker": "The field is already an input to 398f4323, so returning to it is circular. The full necessary classical root input to 822de823 is open, so the projection currently carries no closure. Other producers of this conclusion have the existing direct identity-transport consumer."
+  }
 }

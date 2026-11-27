@@ -980,12 +980,12 @@
       "path": "corpus/statements/unique-god-with-classical-attributes-exists.json",
       "status": "inspected",
       "classification": "reused_unchanged_audit",
-      "finding": "Reuse unchanged prior audit disposition: Exactly \u2203g, \u03c3.IsGod g \u2227 IsTheOneGod \u03c3.IsGod g \u2227 \u03c3.HasClassicalAttributes g. Fourth-Way m and First-Way f remain the single respective witness; uniqueness ranges over original \u03c3.IsGod, including in Q11-NATURE. 2026-11-27 type/link reconciliation: the quantified binder and signature are unchanged. Retain the witness, GOD_4, numerical uniqueness and the primitive field links. The discarded terms describe earlier derivations and do not occur in this endpoint.",
+      "finding": "Reuse unchanged prior audit disposition: Exactly \u2203g, \u03c3.IsGod g \u2227 IsTheOneGod \u03c3.IsGod g \u2227 \u03c3.HasClassicalAttributes g. Fourth-Way m and First-Way f remain the single respective witness; uniqueness ranges over original \u03c3.IsGod, including in Q11-NATURE. 2026-11-27 type/link reconciliation: the quantified binder and signature are unchanged. Retain the witness, GOD_4, numerical uniqueness and the primitive field links. The discarded terms describe earlier derivations and do not occur in this endpoint. The connection plan documents only the open-premise assembly producers.",
       "before": {
         "sha256": "9c1652a18e12bb35f55b1478bb315866fed3c5cec8dfd892bbca08849ef62dc2",
         "lean_declaration": "TruthCore.Case.Catholicism.UniqueClassicalGodExists"
       },
-      "reviewed_sha256": "aa8baa0582619d957363a2662ebbd8baca3a922ca818ddbf0c47a9c738f43bb1"
+      "reviewed_sha256": "22f90afc0c60dba0e89404e84abb5cd31c32dd2490b500cad4af52829acdc6ed"
     },
     {
       "kind": "statements",

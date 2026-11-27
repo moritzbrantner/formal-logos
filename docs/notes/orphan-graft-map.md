@@ -640,13 +640,18 @@ definition record, and the reviewed bundle audits track the revised scope.
   identifies the potency-free first bearer with the positive attribute witness
   by uniqueness of actual roots at the same world in the same grounding
   profile. The transported potency exclusion supplies immutability and
-  eternity. The negative-attribute package still needs a complementary
-  positive witness or an argument for the positive attributes at its root.
+  eternity. A second [same-witness composition](../../specs/necessary-negative-attribute-connection.toml)
+  takes the negative attribute package directly and transports its potency
+  exclusion, noncomposition and remoteness. One producer of that package
+  takes the first-root proposition as input, and the whole-roster producer
+  derives that same subargument internally.
 - The [existential regress composition](../../specs/existential-regress-connection.toml)
   places the existential series upstream of the per se actual-esse regress
   through the existing efficiency bridge. Its independent support uses the
   existential regress directly or derives it via the wider efficient series.
-  The producer that starts from the per se actual-esse regress gives a cycle.
+  Producer `0d89840b` starts from the per se actual-esse regress and gives a
+  cycle. Its separate placement plan records a forward ancestry use. Producer
+  `c6a1167b` takes the broader efficient-series regress and the sense inclusion.
   The existential-to-actual edge bridge thus retains a connection plan through
   independent predecessor coverage. The holding plans require matching modal
   lackability and grounding calibrations.

@@ -286,6 +286,7 @@ public import TruthCore.Results.Causality.NecessaryConcreteUnderivedFromNecessit
 public import TruthCore.Results.Causality.NecessaryFirstAttributeConnection.Solution
 public import TruthCore.Results.Causality.NecessaryFirstAttributes.Solution
 public import TruthCore.Results.Causality.NecessaryFirstBeing.Solution
+public import TruthCore.Results.Causality.NecessaryNegativeAttributeConnection.Solution
 public import TruthCore.Results.Causality.NecessaryRootFork.Solution
 public import TruthCore.Results.Causality.NecessaryRootGodExistence.Reduced.Solution
 public import TruthCore.Results.Causality.NecessaryRootGodExistence.Solution

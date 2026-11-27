@@ -1,6 +1,6 @@
 {
   "id": "593d7307-c8e1-5863-9776-a26cfe09d20c",
-  "label": "Some n is an actual concretum at w, has no ACTUAL_CONCRETE_GROUND_1 under the selected relation…",
+  "label": "Some n is an actual concretum at w, has no ACTUAL_CONCRETE_GROUND_1 under the selected relation\u2026",
   "legacy_id": "STMT-NECESSARY-FIRST-BEING-PURE-ACT",
   "paraphrase": "Some n is an actual concretum at w, has no actual concrete ground under the selected relation there, exists at each world accessible from w, and has no distinct simply-prior predecessor. This same n is in potency in no supplied respect (the existing PureAct predicate), without asserting any positive InAct perfection or completeness of the respect domain. No uniqueness, maximum, God identification, universal causality or other-world rootness is asserted.",
   "lean_declaration": "TruthCore.Causality.NecessaryFirstBeing.NecessaryActualFirstPureActAt",
@@ -12,7 +12,8 @@
     "a49e4cf1-ca4f-5519-9724-892af257cedb",
     "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
     "52352824-6be9-53c6-83d4-82fed9a08cbb",
-    "a1b2e330-388f-4120-bc5c-969642317792"
+    "a1b2e330-388f-4120-bc5c-969642317792",
+    "3ea2762f-1a85-5059-b4e7-d29f192b16b6"
   ],
   "disambiguation_ids": [
     "9403807f-f7d4-5ce8-a8ba-ca53ed932959",
@@ -28,6 +29,12 @@
     "4b02d34a-9226-5009-9ac2-3b52f4222b21",
     "83264cf5-01fe-52fc-9a00-eeb024f6496e",
     "1795a62e-f78b-5f5b-94e7-9e7490824811",
-    "002f42cb-3015-5644-80b3-d408538394e6"
-  ]
+    "002f42cb-3015-5644-80b3-d408538394e6",
+    "508617ab-cf24-5f3b-a387-64b3991359ec"
+  ],
+  "connection_plan": {
+    "target_statement_id": "da3facd6-008e-5e76-92fa-677350c2dfdb",
+    "missing_bridge": "For assembly 930c6d8c, establish the same first mover to be an actual, first, necessary and potency-free root on the selected profile. The existing projection can then carry that closure onward to the same-root classical attribute composition.",
+    "blocker": "The input of this projection is still open. Other producers of the same conclusion supply the necessary first root conditionally, without relying on this projection."
+  }
 }
