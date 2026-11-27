@@ -1,0 +1,10 @@
+{
+  "id": "9ae3a099-03ec-4728-98a9-cfd6d5851816",
+  "label": "Test by ContingentAncestry.strictness (1b1e3f09)",
+  "subject_kind": "result",
+  "subject_id": "a9769c12-8d0b-597e-842c-ad47ae43b5dc",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "1b1e3f09-f2e9-5949-9c3b-8f7fce26a403",
+  "note": "The contingent portion of the target's cone at false is founded. Its two necessary ancestors ground each other, defeating full-cone foundation and leaving no actual root ancestor in that cone."
+}
