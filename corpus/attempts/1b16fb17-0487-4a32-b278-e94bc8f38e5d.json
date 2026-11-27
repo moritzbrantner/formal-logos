@@ -21,7 +21,8 @@
     "1cf43a42-2c4e-41c2-9129-9aff47208686",
     "ac77ec02-0049-4fba-9f62-a4be1a8c4e8d",
     "d2d4df7a-b0d8-429a-a00b-35b8d86a313d",
-    "1c66ee49-5521-48d5-9001-700c5b14ddbd"
+    "1c66ee49-5521-48d5-9001-700c5b14ddbd",
+    "PR-2171"
   ],
   "blocker": "Both loci rest, beyond the dependence reading, on the act-of-being thesis (esse as the act of all acts, even of forms; q.4 a.1 ad 3, q.3 a.4), shared with the reception framework and the real-distinction premises; neither it nor its rival, the quantifier view, has a defended assessment on file. Next: assess the act of being itself (q.3 a.4 first proof, De ente c.4) against a defended reduction to instantiation, or compare their explanations of limitation.",
   "current_assessment": {
@@ -49,7 +50,8 @@
       "provider": "claude",
       "model": "claude-opus-5-5",
       "effort": "high",
-      "date": "2026-11-27"
+      "date": "2026-11-27",
+      "pr": "PR-2171"
     }
   ]
 }
