@@ -1,0 +1,16 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.PurityCriteria.Challenge",
+  "solution_module": "TruthCore.Results.Causality.PurityCriteria.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.PurityCriteria.actualRootFavouringIsGoodGeneralFromStandard",
+    "TruthCore.Results.Causality.PurityCriteria.standardControls",
+    "TruthCore.Results.Causality.PurityCriteria.standardRelativity",
+    "TruthCore.Results.Causality.PurityCriteria.refinementCondemnsGoodTracking"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "enable_nanoda": true
+}

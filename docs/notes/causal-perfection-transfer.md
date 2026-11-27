@@ -6670,6 +6670,689 @@ After publication as #2175, Codex review at `b508b3721` raised two P1s.
 [Attempt record](../../corpus/attempts/421caba9-f0d9-44f6-b9d9-ae81b0e374bb.json)
 
 
+## When is a restriction of content a limitation? The purity premises under one criterion (2026-11-27; provisional, #2145)
+
+### Question, fixed meanings and reuse
+
+Program [#2145](https://github.com/moritzbrantner/truth-core/issues/2145),
+premise lane P. The purity family carries the pure-perfection route and horn A:
+
+- the purity of wisdom `44e39691` (route `fd01e30c` → `c256d381` → `29818edd`);
+- the purity of good-generality `e2357adc` (horn A `22ee1b3b`), whose only
+  recorded positive warrant is the relocated principle "restriction of content
+  is limitation";
+- joint compossibility `500d0e2d`, relocated into requirement form through
+  `0c8631bd` and member grounding;
+- one favouring per source `3e6ae3e7`, with no derivation.
+
+Four questions, in priority order:
+
+- **A.** Is restricting favouring content a limitation? Test a criterion that
+  separates a limiting restriction from a non-limiting specification. Apply it
+  in the same way to the classical God's own choice-specification.
+- **B.** Is reception constitutive of cognition? Run the reference-class test.
+- **C.** Does immutability exclude tensed knowing?
+- **D.** Are two non-conflicting favourings of one simple bearer a real
+  composition?
+
+Reused without change:
+
+- from #2162: `RequiresLack`, `ExclusionFreeAdmissible` and
+  `PureRequiresNoPureLack`, with `allPureAdmissible`;
+- from #2172: the favouring tokens, `GoodGeneral`, `OneFavouringRealization`,
+  the control carrier and its helper lemmas (`ggBetter`, `dNatureFactors`,
+  `factorsThroughNotGoodGeneral`, `noConflictDNatureBetter`);
+- the Lane 2b model and `GoodDependenceLaws`;
+- RootPurity `c78c77da` and `a30c5963`;
+- Mathlib's pointwise order and join on relations (`≤`, `⊔`;
+  `subrelation_iff_le`).
+
+Lean:
+[vocabulary](../../TruthCore/Causality/PurityCriteria.lean),
+[results and controls](../../TruthCore/Results/Causality/PurityCriteria/Solution.lean),
+[spec](../../specs/purity-criteria.toml).
+
+**Two senses of "profile".** This section keeps them apart:
+
+- The **favouring profile** of a favouring determination is the favouring as a
+  function of the variation scenario (`GoodFavouring.Profile`). Its *verdicts*
+  are the triples (s, x, y) at which it favours x over y.
+- The **determination profile** of a bearer is the set of its real
+  determinations (`Has`, `ActualProfile`).
+
+**New vocabulary**, each item with a stipulative definition record:
+
+- **Missed verdict** `MissesVerdict std φ` (`53634064`). The standard ranks x
+  over y at some scenario, and φ does not favour x over y there.
+- **Unbacked verdict** `UnbackedVerdict std φ` (`8e29c4fa`). φ favours x over y
+  at some scenario, and the standard does not rank x over y there.
+- **The standard of favouring**, disambiguated in DISAMB STANDARD_OF_FAVOURING
+  (`da16b898`):
+  - STANDARD_OF_FAVOURING_1, the betterness ranking read as value
+    (`ValueStandardOrder`, DEF `e14aa0f0`, a structure with a declared-primitive
+    relation field `better`);
+  - STANDARD_OF_FAVOURING_2, the end-realization ordering
+    (`EndRealizationOrder`, DEF `b2eab05f`, with field `ranks`;
+    `EndRealizationStandard fit` builds it from an end-realization feature).
+
+  The two senses are distinct Lean types. Passing from one to the other needs an
+  explicit construction from the other's relation; an unbridged mix fails to
+  typecheck.
+
+  No earlier record defined the ranking itself. DEF `071b24f0` only requires it
+  to be read as value.
+
+The bridge statements `720bccc2` and `a141e6a8` (`MissingValueVerdictIsImpure`,
+`UnbackedValueVerdictIsImpure`) and the registered argument use sense 1 only. The
+D-relative form is the generic `MissingVerdictIsImpure` and
+`UnbackedVerdictIsImpure` applied to an end-realization order's relation. It
+appears only in a Lean-only control (`standardRelativity`) and is not a corpus
+statement.
+
+### A. Is restricting content a limitation?
+
+**A1. Requirement form.** Under one-favouring realization, a favouring fixed to
+content D and good-generality are never in one admissible profile. The #2162
+vocabulary reads this through the sufficiency direction, contrapositively:
+some member of that pair requires the lack of some members of the pair.
+
+`exclusiveAlternativesNotBothPure` (Lean-only) gives the general form. Assume:
+
+- the sufficiency direction `ExclusionFreeAdmissible`;
+- `PureRequiresNoPureLack`;
+- that the tokens of a family are exclusive (`ExclusiveTokens`; for favouring
+  tokens this follows from `OneFavouringRealization`, by
+  `favouringTokensExclusive`).
+
+Then two distinct tokens of the family are never both pure. This is control
+row 3b of horn A, stated for any family. It does not say which token is the
+pure one. Under these premises, "is the requirement limiting?" becomes "which
+member is pure?", and the requirement form does not answer that.
+
+**A2. The classical choice-specification, and which premises press on it.**
+Apply the same mechanism to a choice that is a real determination.
+
+- Suppose a root's selection of c over the value-tied d were a real
+  determination `tok c` of its determination profile.
+- Suppose `tok d` is an exclusive alternative on a par in purity
+  (`PurityParity`).
+
+Then `parAlternativeExcludedAtRoot` (Lean-only) shows that no actual root has
+`tok c`. **The exclusion does not come from the restriction principle.** It
+uses neither the loss and arbitrariness bridges nor `e2357adc`. Its premises
+are:
+
+- RootPurity `c78c77da`;
+- `a30c5963`;
+- the sufficiency direction and `PureRequiresNoPureLack` `0c8631bd`, the
+  requirement form into which #2162 relocated joint compossibility, on which
+  the classical pure-perfection route itself relies;
+- exclusivity and parity of the two choice tokens.
+
+So the classical side's own requirement-form premises force it to deny that
+its free selection among ties is a real determination of the root. This is a
+cross-lane result.
+
+The classical choice-specification escapes only on the **extrinsic-decree
+account**, also called the relation-of-reason account. On that account God's
+free willing of c adds no real intrinsic determination; what differs between
+worlds is the terminus. That account is open:
+
+- [simplicity-collapse-555.md](simplicity-collapse-555.md) leaves "Decree as
+  respect" and `ModalCapacity` open;
+- premise lane E's section "Closure for a root's own determinations"
+  (PR #2174, `classicalSelectionControl`) finds that the
+  classical root keeps its necessary profile only on the same account.
+
+This is **one** price for the classical root, the same one lane E records for
+it, and it is not counted twice.
+
+**The burden is not symmetric.** An impersonal permissive propensity's chance
+outcome is uncontroversially not a determination of the propensity. The
+personal side must hold something more: that the selection is the root's own
+free willing and yet not a real determination of it. That extra commitment
+falls on the personal side only.
+
+**A3. Which kind of restriction the measure can reach.** The loss and
+arbitrariness bridges concern only the verdicts of a favouring profile. The
+D-nature's fixity is in its favouring profile: in every scenario it favours by
+end-realization. A selection among value-tied or value-incomparable candidates
+is not a verdict of any value-tracking favouring profile, and the bridges are
+silent on it.
+
+That exemption is **scoped to ties and incomparability**. It does not cover
+creation in general:
+
+- RootPurity, `a30c5963` and the two value-sense bridges force every favouring
+  determination of an actual root to make exactly value's verdicts
+  (`actualRootHasOneFavouringFromStandard` and the main theorem).
+- In the strictly improvable case (no best creatable measure; §65 law 5 of
+  [optimal-creation-choice.md](optimal-creation-choice.md)),
+  `noBestSelectionAgainstFavouring` and its instance `noBestNat` (Lean-only)
+  show that such a favouring favours, over whatever is selected, another
+  candidate of the range. A value-tracking root, personal or axiarchic, then
+  selects against its own favouring.
+- A favouring that tracks the end-realization ordering never faces this while
+  some candidate realizes the end: `endRealizerUndominated` (Lean-only) shows
+  that every end-realizer is undominated.
+
+**A4. The measure, tested on ordinary cases.** Three candidate criteria are
+applied by the same function to the brief's ordinary cases and to the two
+disputed profiles.
+
+- **(I) Co-determinates.** An exclusive alternative of the same respect is a
+  specification. Only the lack of a compatible addition is a limitation.
+- **(R0) Value-free refinement.** A profile that a non-conflicting profile
+  strictly extends is restricted.
+- **(Rs) Standard-relative loss and arbitrariness.** A favouring is restricted
+  if it misses a verdict of its standard or makes an unbacked one. Three ways
+  to choose the standard:
+  - **per bearer**: a bearer's standard is the formal object of its *kind of
+    operation*, not its own particular content. A one-domain knower is
+    measured by truth, the object of knowing as such, not by the truths of its
+    domain;
+  - **common value**: every favouring is measured by STANDARD_OF_FAVOURING_1;
+  - **common D**: every favouring is measured by STANDARD_OF_FAVOURING_2.
+
+| Case | (I) | (R0) | (Rs) per bearer | (Rs) common value | (Rs) common D |
+| --- | --- | --- | --- | --- | --- |
+| knower of one domain (standard: truth) | limiting only if "knows only A" is A-knowledge plus a compatible lack; specification if it is an exclusive capacity profile | limiting | limiting | limiting | limiting |
+| triangle, exactly three sides | specification | no verdicts; no verdict | no standard of correctness for a figure; no verdict | same | same |
+| will fixed on the good as such | specification | restricted: a standing physical tie-break extends it without conflict (`refinementCondemnsGoodTracking`) | not restricted (the formal object of willing is the good) | not restricted | restricted (unbacked at c over d at `cBetter`) |
+| selection among ties | out of scope: not a verdict (A3) | same | same | same | same |
+| favouring fixed to D | specification under `3e6ae3e7` (exclusive); a compatible lack without it | restricted: `better ⊔ dNature` extends it without conflict (`refinementCondemnsDNature`) | depends on its kind of operation: not restricted if it is a natural appetite (object D); restricted if value varies within a D-class and it is a rational appetite (object the good) | restricted if betterness varies within a D-class (`variationForcesLossOrArbitrariness`) | not restricted |
+| good-tracking favouring | specification | restricted (row 3) | not restricted (as a rational appetite) | not restricted | restricted |
+
+**Readings.**
+
+- **The will datum is not neutral.** "A will fixed on the good as such is not
+  limited" is correct per bearer, because the formal object of willing, as a
+  kind of operation, is the good. As a datum against a *common* standard, it presupposes that the common
+  standard is value. It therefore cannot count against (Rs) common D, and it is
+  not used to reject (R0).
+- **(I)** is symmetric, but it is decided by how an alternative is analysed: as
+  an exclusive co-determinate or as a compatible addition.
+  - For knowers that analysis is not in dispute.
+  - For favouring, `3e6ae3e7` supplies it. With one-favouring realization, the
+    D-favouring and the good-general favouring are exclusive co-determinates,
+    so (I) counts D-fixity as a specification.
+  - Without it, suppose the family admits the D-root's profile together with
+    good-generality, as the row-7 family does. Then the D-root's lack of
+    good-generality is case (iii), and E applies (D below).
+
+  So under (I), horn A's two premises pull against each other.
+- **(R0)** is rejected on a ground that does not use the will datum. It counts
+  both disputed profiles as restricted (`refinementCondemnsDNature`,
+  `refinementCondemnsGoodTracking`). More generally, it counts as restricted
+  every profile that some non-conflicting profile extends. So it measures
+  perfection by the number of discriminations, and neither side's favouring
+  survives it. A thermometer that also responds to pressure is not a better
+  thermometer.
+- **(Rs)** is the only tested criterion that applies by one function to both
+  sides and classifies the uncontroversial cases (knower, triangle) correctly.
+  Its verdict on the disputed pair depends on how the standard is fixed:
+  - Per bearer, the verdict depends on the kind of operation a root's
+    favouring is. As a natural appetite, its formal object is D and D-fixity
+    is no limitation. As a rational appetite, its formal object is the good and
+    D-fixity is a limitation whenever betterness varies within a D-class. The
+    per-bearer rule therefore gives no free verdict either way. It relocates
+    the question to whether a root's favouring is a natural or a rational
+    appetite. Measuring a bearer by its own particular content instead would
+    misclassify the one-domain knower as unrestricted, so that reading is not
+    used.
+  - With a common value standard, the D-nature is restricted whenever
+    betterness varies within a D-class.
+  - With a common D standard, the good-tracking profile is restricted.
+  - `standardRelativity` locates the whole dispute in the model at one verdict.
+    In every genuine scenario the two profiles agree except on c over d at
+    `cBetter`. There the value bridges condemn the D-nature and the D bridges
+    condemn the good-tracking profile.
+
+**A5. What the relocated thesis says.** Together with RootPurity and
+`a30c5963`, the two value-sense bridges entail that a root's pure favouring
+makes **exactly value's verdicts**, at every scenario and every pair.
+
+How this compares with ORIGINAL_FINALITY_2 needs care. ORIGINAL_FINALITY_2 is
+ORIGINAL_FINALITY_1 plus dependence on goodness with end-realization fixed
+(`BecauseOfGoodness`) at one scenario and one pair. ORIGINAL_FINALITY_1 itself
+contains dependence on end-realization (`BecauseOfContent`).
+
+- Exact tracking plus variation gives only the goodness-dependence component,
+  at the variation witness (`exactTrackingGivesGoodnessDependence`, Lean-only).
+  It is strictly stronger than that component, which holds at one pair.
+- It does not by itself give ORIGINAL_FINALITY_2.
+  `exactTrackingWithoutOriginalFinality` (Lean-only, zero axioms) is a
+  counterexample: the profile equals `good`, `good` varies at a fixed
+  end-realization, and nothing realizes the end. Exact tracking and variation
+  hold, but `OriginalFinalityForGood` fails at every scenario and pair, because
+  its ORIGINAL_FINALITY_1 component needs `BecauseOfContent`.
+- So the comparison holds only against an explicit ORIGINAL_FINALITY_1
+  background. Where the root's favouring meets ORIGINAL_FINALITY_1 at the
+  variation witness, exact value tracking supplies the rest of
+  ORIGINAL_FINALITY_2 there, and exact tracking says more than that one pair.
+
+ORIGINAL_FINALITY_1 is not an end-content standard either: its first condition
+is that the favoured arrangement is better (`good s x y`). This section therefore does not identify
+the senses of the standard with the ORIGINAL_FINALITY senses. The standard is
+disambiguated separately (DISAMB `da16b898`).
+
+**Verdict on A (provisional).**
+
+1. *The choice-specification.* The classical God's selection among ties is
+   exempt from the measure, because it is not a verdict of a value-tracking
+   favouring profile. That exemption is scoped to ties and incomparability. It
+   escapes exclusion as a real determination only on the open extrinsic-decree
+   account. The classical side's own requirement-form premises, not the
+   restriction principle, force it onto that account
+   (`parAlternativeExcludedAtRoot`). The account's price is the extra personal
+   commitment that a free willing is no real determination. It is the same
+   price as lane E's, counted once. In the no-best case a value-tracking root,
+   personal or axiarchic, selects against its own favouring. The D-nature does
+   not face this.
+2. *The measure.* No tested criterion makes content-fixed favouring limiting
+   unless a single common standard of favouring is fixed, and fixed as value.
+   - (I) leaves the question to `3e6ae3e7`.
+   - (R0) condemns both profiles.
+   - (Rs) per bearer turns on whether a root's favouring is a natural or a
+     rational appetite.
+
+   `e2357adc`'s warrant therefore reduces to three claims: a common standard
+   governs every favouring; it is value; and value varies within a D-class.
+   Its sharp form is "a root's pure favouring makes exactly value's verdicts".
+   On the per-bearer rule the same warrant reappears as the claim that a
+   root's favouring is a rational, not a natural, appetite. This is a
+   relocation, not independent warrant. The D-rival's position is coherent and
+   at parity in form. Its favouring is a natural appetite, with D as its
+   formal object, or the common standard is end-realization.
+
+   **The crux.** Whether an original source's favouring is a natural appetite
+   or a rational appetite is where premise lanes C and P converge. Lane C asks
+   it as whether value-responsiveness to non-present candidates is
+   apprehension. Lane P asks it as which standard measures the favouring.
+
+**A6. Registered route** (argument `b86a2364`, result `da9f2d3c`, theorem
+`actualRootFavouringIsGoodGeneralFromStandard`, zero axioms). Premises:
+
+- excluded middle `ee4ab504`;
+- `a30c5963`;
+- RootPurity `c78c77da`;
+- the loss bridge `720bccc2`;
+- the arbitrariness bridge `a141e6a8`;
+- variation `ca3c311d` (betterness varies within an end-realization class).
+
+The conclusion is horn A's `7fca65ec`. A pure favouring makes exactly value's
+verdicts, so it is good-general at the standard's own witness.
+The three new premises take a value order `v : ValueStandardOrder S X`
+(STANDARD_OF_FAVOURING_1). The conclusion is stated for its relation
+`v.better`, by explicit projection, because `7fca65ec`'s ranking parameter is
+untagged. An `EndRealizationOrder` cannot be passed for `v`. Using one needs an
+explicit construction `⟨e.ranks⟩`, which would be a sense bridge.
+
+The route does not use the admissible family, joint compossibility,
+root-profile admissibility, pure admissibility, the structural L, `e2357adc`,
+`3e6ae3e7` or E.
+
+**Status.** It is a **conditional alternative formulation inside the purity
+family**. It shares `e2357adc`'s rationale and adds no independent warrant:
+- The two bridges are the precise, value-relative form of the rationale
+  recorded for `e2357adc`.
+- They absorb the bearer-level uniqueness that `3e6ae3e7` supplied to horn A:
+  `actualRootHasOneFavouringFromStandard` (Lean-only) derives one favouring per
+  actual root from them.
+- It is neither a horizontal support family nor a lighter bundle. What it
+  changes is the precision of the premise, not the warrant.
+
+**Variation.** On this route alone, variation is a bare premise. Relative to
+horn A it is no extra cost: `hornAPremisesGiveVariation` (Lean-only) derives it
+from pure admissibility `ee287fd3`, the purity of good-generality and
+one-favouring realization. Two further facts about it:
+- `variationIffSomeGoodGeneral`: variation holds exactly when some profile is
+  good-general.
+- `factoringDeniesVariation`: betterness factoring through end-realization
+  implies its denial.
+
+`standardControls` (Comparator companion) gives six rows on the #2172 carrier:
+
+1. positive witness;
+2. a composite root;
+3. the D-favouring counted impure at an unlimited root (RootPurity fails);
+4. the empty favouring counted pure (the loss bridge fails);
+5. the degenerate `everything` favouring counted pure (the arbitrariness bridge
+   fails);
+6. the value order coincides with the end-realization ordering (betterness
+   factors through end-realization, `variationCore`'s fourth member): the
+   D-favouring is pure and tracks the value order exactly, and only variation
+   fails.
+
+Disclosures:
+
+- `everything` (every candidate favoured over every candidate, itself
+  included) is a forced, degenerate relation. It serves only as the
+  arbitrariness control.
+- Every row uses the value sense. Row 6 is a value order whose relation is
+  the D ordering's relation. That is not the D sense; the D-relative form
+  appears only in `standardRelativity`.
+- The assignments say nothing about what favouring, purity or value are.
+
+### B. The reception fork as a reference-class comparison
+
+The constitutive side's recorded justification (in the purity-of-intellect
+section above) has two parts:
+
+1. every otherwise known cognition is receptive;
+2. the Aristotelian account of the possible intellect makes understanding a
+   being-informed.
+
+This section tests the first part. The second part is not tested here.
+
+`enumerativeRuleOvergeneralizes` (Lean-only) compiles the reference-class test
+for the **unrestricted** enumerative rule. Suppose:
+
+- every known instance has a feature F, so F is constitutive;
+- every known instance of every kind is finite;
+- finitude is impure;
+- a kind with an impure constitutive feature is not pure.
+
+Then no kind with a known instance is pure. A position that holds some
+determination pure, while knowing it only through finite instances, cannot
+hold the unrestricted rule. The #1892 rival holds its source's own being and
+pure act, so it is such a position. So is the classical side.
+
+The result refutes only the unrestricted rule. Three candidate restrictions:
+
+1. *Variation among known instances.* No known knower lacks finitude, so this
+   criterion cannot exempt finitude. Neither side can use it.
+2. *Gradient.* A feature is accidental to a kind if the kind's perfection does
+   not decrease as the feature decreases. More capacious knowers know more, so
+   finitude is exempt.
+   - Whether object-reception is also exempt depends on whether two kinds of
+     cognition count as cognition without reception from their object:
+     knowledge of one's own intentional action, and reflexive awareness of
+     one's own act. See the practical-knowledge discussion in
+     [optimal-creation-choice.md](optimal-creation-choice.md) (secondary
+     navigation; whether such knowledge is causal or reaches actual effects is
+     disputed there).
+   - The rival can reply that such knowers still receive elsewhere, for means
+     and circumstances. That reply admits two readings. On one, reception
+     belongs to every act of a finite knower. On the other, reception is a
+     feature of the knower, not of each act. The cases do not decide between
+     them.
+3. *Explanatory relevance (a causal criterion of content).* Only features
+   that explain cognition's being about its object count. On this criterion,
+   being about a distinct object requires information from it. This restricted
+   rule escapes the finitude parallel, because finitude does not explain
+   aboutness. It would make reception constitutive of cognition of a distinct
+   object. Self-apprehension by a source that receives nothing is the disputed
+   case. The corpus records no argument either way on whether self-aboutness
+   needs transfer.
+
+**Verdict on B (provisional).** The unrestricted enumerative rule fails the
+reference-class test. The constitutive side's support therefore relocates to a
+restricted criterion: the possible-intellect account, or the causal criterion
+of content (candidate 3). That criterion remains unresolved. The mode side's
+recorded consideration is also untested:
+- the perfective element is the grasp;
+- self-apprehension has no distinct object to receive.
+
+Neither side has a criterion that settles the fork. The verdict on
+`44e39691` stays **parity on the reception fork**. The parity can be broken in
+two ways:
+- an argument that self-aboutness does, or does not, need information
+  transfer;
+- an independent test of the possible-intellect account.
+
+### C. Immutability versus tensed knowing
+
+`tensedOmniscienceExcludesImmutability` (Lean-only) proves the core. Suppose a
+knower's state is:
+
+- tensed-omniscient (at each time it knows every content true then);
+- veridical;
+- immutable.
+
+If some content is true at one time and false at another, no such knower
+exists.
+
+`tenselessReading` (Lean-only control) uses two times and the contents `now t`
+and `dated t t'`. A tenseless knower there is immutable and veridical. For each
+tensed truth `now t` at t it knows `dated t t`, but it never knows any `now t`.
+
+**Two readings.**
+
+- **(i) Tensed facts known as tensed** (irreducibly tensed content, the
+  A-theory). The rival's candidate needs this reading. It also needs tensed
+  omniscience to be a pure perfection and to be part of noesis.
+- **(ii) Tenseless knowledge of every dated content suffices.** The classical
+  side can take this reading. Under the A-theory, it then accepts that the root
+  lacks knowledge of what time it is now.
+  - An earlier draft compared that lack to lacking another knower's de se
+    knowledge. The comparison does not hold. "It is now t" is available to
+    every knower at t. A de se content is available to one subject only. So the
+    lack is one that every temporal knower at t does not have, and the
+    comparison does not lower its price.
+
+**Where the purity question falls.** `TensedOmniscience` is a property held at
+every time, not a first-order state. For it to be impure, the relevant bridge
+must apply to the property, not to `KnowsAt` states. The bridge needed is:
+
+> a determination whose possession entails successive first-order states
+> involves potency.
+
+The bridge is stated here, not established.
+
+**Recorded A-theoretic rival** (Substantive Objection Standard):
+
+- *Target:* that bridge, and through it the impurity of tensed omniscience.
+- *Mechanism:* tensed omniscience is one standing perfection: knowing whatever
+  is true when it is true. The succession of first-order states mirrors the
+  world's becoming. It is not a passage from potency in the knower's
+  perfection.
+- *Independent justification:* the A-theoretic account of objective temporal
+  becoming. Tensed truths are basic
+  ([time-passage-indexing-regress.md](time-passage-indexing-regress.md),
+  "tensed primitive-time reply"). On that account, perfect knowledge of reality
+  includes knowing the present as present.
+- *Relevance:* direct. If the rival is right, immutability requires the lack of
+  a pure determination. Then either `PureRequiresNoPureLack` `0c8631bd` or the
+  purity of immutability must go.
+- *Status:* standing, conditional on the A-theory. It targets tensed knowing,
+  not self-apprehension. An immutable state can contain a constant self-content,
+  so the candidate does not reach the wisdom route.
+
+**Verdict on C (conditional).**
+
+- Under reading (ii), which the B-theory supports, there is no conflict.
+- Under reading (i), the candidate yields a pure-requires-pure-lack instance
+  unless the restated bridge holds. The A-theorist denies that bridge, with the
+  mechanism above.
+
+So `0c8631bd` is safe from this candidate on the B-theory, or on the restated
+bridge. On the A-theory without the bridge, the candidate stands against
+`0c8631bd` or against the purity of immutability. In neither case does it
+reach the purity of wisdom.
+
+### D. One favouring per source
+
+**No derivation of composition.** `Composite` is a primitive. The encoded
+simplicity holds at a root with several distinct determinations (`esse`,
+`goodGen`, wisdom). Nothing in `Composite`, `ConstitutivelySimple` or
+`HasLimitingPrinciple` makes two favouring tokens a composition. So "two
+favourings make a composition" is not derivable from the encoding. The open
+bridge is #1879's question: is real distinction among a simple bearer's
+determinations composition? That question is the same for every root with
+several attributes.
+
+**Two readings of row 7's two favourings** (D and good-tracking):
+
+- **(Id)** One real favouring under two descriptions: distinction of reason,
+  the classical simplicity reading. `unionGoodGeneral` and
+  `rowSevenUnionAndAbsence` (Lean-only) show that the union is good-general at
+  the `cBetter` witness, where the D-favouring is silent.
+- **(R)** Two really distinct favourings. The root then has a good-tracking
+  token.
+
+**Where the criterion applies.**
+
+- Under (R), the cognition criterion `3b40009e` quantifies over every favouring
+  token, so it applies to the good-tracking token.
+- Under (Id), the root's one real favouring is good-general. The criterion
+  applies to it once it is the bearer's favouring determination.
+
+So, *given the criterion*, a second good-tracking favouring does not help a
+noncognitive rival. A row-7 root with only the D-favouring is different. In the
+row-7 family, its lack of the good-tracking favouring and of good-generality is
+an unexplained absence, case (iii) (`rowSevenUnionAndAbsence`).
+
+**Verdict on D (provisional).** `3e6ae3e7` as stated, at the level of
+admissible profiles, still has no derivation.
+
+- Its bearer-level counterpart, one favouring per actual root, follows from the
+  A6 bridges with RootPurity. That is a different statement.
+- Denying `3e6ae3e7` is not cost-free for the noncognitive rival. Conditionally
+  on the row-7 family, it costs either the criterion or E. The criterion is a
+  direct assumption at parity, which the axiarchic rival already denies.
+- Outside that family the rival has other options. It can deny pure
+  admissibility of good-generality (`ee287fd3`; horn A row 5, case (i)), or it
+  can deny joint compossibility (case (ii)).
+
+### Joint compossibility
+
+`exclusiveAlternativesNotBothPure` gives the general effect of the
+requirement-form premises on any exclusive family. A2 shows that these
+premises, not the restriction principle, are what press on an intrinsic
+choice. The #2162 relocation verdict on `500d0e2d` is unchanged. The A6 route
+does not use joint compossibility.
+
+### Assessment, standing rival and graph effect
+
+**What changed.**
+
+- `7fca65ec` has a conditional alternative formulation inside the purity
+  family (A6). It does not use `e2357adc` as a premise, but it shares its
+  rationale. It also absorbs `3e6ae3e7`'s bearer-level uniqueness. Through
+  `30c6f4c5` and `fad1a1ac` it reaches GOD_4 HAS_INTELLECT_1.
+- "Restriction of content is limitation" is made precise as a two-sense
+  standard-relative criterion (DISAMB `da16b898`) and tested.
+  - The classical choice-specification is exempt only for ties and
+    incomparability, and only on the open extrinsic-decree account. The
+    classical side's own requirement-form premises force it onto that account.
+  - The measure question reduces to how the standard of favouring is fixed:
+    common value, common D, or per kind of operation. On the last, it reduces
+    to whether a root's favouring is a natural or a rational appetite, the
+    question where lanes C and P converge. This is at parity in form.
+- The reception fork stays at parity. The unrestricted enumerative rule fails,
+  and the constitutive support relocates to a restricted criterion.
+- The immutability candidate is now conditional. On the A-theory, without the
+  restated bridge, it stands against `0c8631bd` or the purity of immutability,
+  not against the wisdom route.
+- Denying `3e6ae3e7` costs the noncognitive rival the criterion or E in the
+  row-7 family. Elsewhere it has other options.
+
+**One comparison under one set of criteria.**
+
+| Profile | (Rs) common value | (Rs) common D | (Rs) per bearer | Selection among ties | No best creatable measure |
+| --- | --- | --- | --- | --- | --- |
+| Personal root (good-tracking will) | unrestricted | restricted (unbacked at c over d) | unrestricted | a contingent exercise; escapes exclusion only on the extrinsic-decree account, with its extra personal commitment | selects against its own favouring |
+| Impersonal good-general nature (axiarchic) | unrestricted | restricted (unbacked at c over d) | unrestricted | a contingent exercise, if permissive; not a determination of it | selects against its own favouring |
+| Impersonal D-nature | restricted if value varies within a D-class | unrestricted | unrestricted as a natural appetite; as a rational appetite, as under common value | a contingent exercise among tied D-realizers | does not arise while some candidate realizes D |
+
+**Strongest standing rival and its price.** The D-nature whose favouring is a
+natural appetite, with D as its formal object, or whose favouring is measured
+by end-realization (common D).
+
+- It denies that a common value standard governs a root's favouring, and so
+  denies the value-sense bridges (or, on horn A, `e2357adc`).
+- On its account, the goodness of its ends is not originated by its favouring.
+
+It is at parity in form with the common value standard. The axiarchic rival is
+not touched: it is good-general and denies the criterion. It shares the no-best
+price with the personal root.
+
+**Provisional judgment.**
+
+- `e2357adc` remains open. Its warrant is relocated to "a common standard
+  governs every favouring, it is value, and value varies within a D-class".
+  Its sharp form is "a root's pure favouring makes exactly value's verdicts".
+  That is strictly stronger than the goodness-dependence component of
+  ORIGINAL_FINALITY_2. It gives ORIGINAL_FINALITY_2 itself only against an
+  ORIGINAL_FINALITY_1 background (A5).
+- The A6 route is a conditional reformulation, not added support.
+- `44e39691` stays at parity on the reception fork.
+- The classical selection carries the extrinsic-decree price (shared with lane
+  E, counted once) and, with the axiarchic rival, the no-best price.
+
+Nothing here is a formal establishment, and formal validity is unchanged.
+
+**Next discriminating tests.**
+
+1. Natural or rational appetite? Is there a non-question-begging argument that
+   the favouring of an *original* source of finality is a rational appetite,
+   measured by value, rather than a natural appetite, measured by its end
+   content? This is lanes C and P's shared crux. Test whether "originating ends as goods"
+   says more than the value-sense bridges restated.
+2. Goodness variation within a D-class for an original source. A6 needs it as
+   a bare premise; horn A entails it.
+3. The extrinsic-decree account: test it together with lane E's
+   `classicalSelectionControl` and #555's "Decree as respect".
+4. The no-best case: does a value-tracking root's selection against its own
+   favouring cost more than an impersonal propensity's? Is it a price at all,
+   given §62?
+5. Self-aboutness without information transfer (B, candidate 3), and an
+   independent test of the possible-intellect account.
+6. The restated bridge of C against the A-theoretic account of becoming.
+7. Encode the (Id) reading of simplicity for favouring (tokens name parts of
+   one real favouring) and retest horn A under it.
+
+**Review state.** The review ran in three steps.
+
+1. **Independent semantic challenge** of `c0f1e0177` (delivery `0221583ed`).
+   It accepted the Lean: `da9f2d3c` is valid and is not a transcription, its
+   three Comparator companions hold, and every Lean-only lemma is correctly
+   stated. In the prose it found eight P1s and six P2s:
+   - P1: the locus exemption silently assumed the extrinsic-decree account;
+   - P1: the exclusion was misattributed;
+   - P1: the tie scope was missing, and so was the no-best case;
+   - P1: the will datum was applied asymmetrically;
+   - P1: the ORIGINAL_FINALITY mapping was overstated;
+   - P1: a relocation was presented as lighter, horizontal support;
+   - P1: section B tested only enumeration;
+   - P1: section C's conditional was missing;
+   - P2s on D's cost, on variation, on the R0 cell, on the betterness record,
+     on the standards disambiguation and on bare variation.
+2. **Repairs** at `cc951fe09`:
+   - the rewritten sections;
+   - DISAMB `da16b898` with DEFs `e14aa0f0` and `b2eab05f`;
+   - the sense marker in the result type;
+   - the new Lean-only lemmas.
+3. **Targeted re-check** of `3a081ef06`. All fourteen findings were fixed. It
+   found one new P1: the per-bearer standard was applied at different levels
+   to the knower and to the D-nature. It also found two P2s: the marker is
+   only nominal, and lane E was cited by branch name. All three are fixed in
+   the commit that adds this paragraph:
+   - per bearer now means the formal object of a kind of operation, and the D
+     verdict turns on natural versus rational appetite;
+   - the marker is disclosed as a tag;
+   - lane E is cited as PR #2174.
+
+The delivery is accepted as qualified at `3a081ef06`. The final wording fix was
+made after that.
+
+4. **Codex review of draft PR #2177** at `32575cefa`. It left three P1
+   threads, all fixed in the commit that adds this item:
+   - **Distinct Lean types for the senses.** They are now the structures
+     `ValueStandardOrder` and `EndRealizationOrder`. The registered premises
+     are `MissingValueVerdictIsImpure`, `UnbackedValueVerdictIsImpure` and
+     `BetternessVariesWithinEndClass` on a `ValueStandardOrder`, and an
+     unbridged mix fails to typecheck.
+   - **The ORIGINAL_FINALITY_2 comparison** is qualified (A5), with the
+     counterexample `exactTrackingWithoutOriginalFinality`.
+   - **`parAlternativeExcludedAtRoot`** now takes the shared `CausalityFrame`
+     and uses its `PriorSimply`.
+
+   Fixes 1 and 3 change types, so they await a short re-check.
+
+[Attempt record](../../corpus/attempts/7ee3e5eb-37b5-4157-b591-f8d38a833ab1.json)
+
 ## Research attempts citing this note
 
 - [Batch certification of eight exploration maps deriving eight bare root-path premises from deeper…](../../corpus/attempts/round2-perfection-primacy.json)
