@@ -11,7 +11,7 @@
   ],
   "kind": "derivation",
   "outcome": "succeeded",
-  "summary": "Selected-content equivalence, factive discrimination, projection-supervenience no-go, canonical S5 exact profile discrimination and finite omission/1-2-4 controls elaborated in bound shared preview. Reused #555 causal trilemma rather than duplicating it. Full draft judgment, rival positive accounts, failed finite-decidability approach, verification boundary and remaining tests: docs/notes/foreknowledge-discrimination-1380.md. No root discharge. Continuation distinguishes aptitude, actual presentation and success; tests two-form error/selection and sensor/replay intervention cases without treating accuracy as cognition. See the existing note for positive causal-essential/extrinsic/open-future accounts and original proposal coverage. Repaired both illegal-axiom proofs without changing Challenge or policy; bound combined preview reports zero axioms.",
+  "summary": "Selected-content equivalence, factive discrimination, projection-supervenience no-go, canonical S5 exact profile discrimination and finite omission/1-2-4 controls elaborated in bound shared preview. Reused #555 causal trilemma rather than duplicating it. Full draft judgment, rival positive accounts, failed finite-decidability approach, verification boundary and remaining tests: docs/notes/foreknowledge-discrimination-1380.md. No root discharge. Continuation distinguishes aptitude, actual presentation and success; tests two-form error/selection and sensor/replay intervention cases without treating accuracy as cognition. See the existing note for positive causal-essential/extrinsic/open-future accounts and original proposal coverage. Repaired both illegal-axiom proofs without changing Challenge or policy; bound combined preview reports zero axioms.\n\nCuration pass 2, lane D batch 4 (#2103, 2026-11-27). 83877f25 tests 2b20b5af. Use the empty Bool epistemic accessibility relation for the structural test. At the selected world `true` the self-loop is absent. Both worlds satisfy `Complete` for the selected content `id` vacuously and have identical access rows, although `id` differs between `false` and `true`. The discrimination proof uses the self-loop at its second world to derive profile agreement from equal rows.",
   "blocker": "New intentional-apprehension assessment requires independent semantic challenge. Actual reference-fixing/intentional norms are absent from the capacity signature; next discriminating test is an independently specified constitutive/exemplar account against duplicate capacity/accuracy surrogates. This requires master allocation of shared semantic vocabulary, not another row lemma. Final delivered-head certification pending.",
   "evidence": [
     "067b5373-8169-42a6-8f80-cf7874761eb9",
@@ -19,5 +19,14 @@
     "960ff448-a569-4db4-8878-df52470738c0",
     "1afbe242-2258-4253-8739-f3daf7d31f17",
     "PR-1383"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-27"
+    }
   ]
 }
