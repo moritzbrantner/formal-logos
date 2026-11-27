@@ -1,10 +1,10 @@
 {
   "id": "0ae22f2b-b957-50f6-b309-2c13cbd1ede2",
-  "label": "Some n is an actual concretum at w, has no ACTUAL_CONCRETE_GROUND_1 under\u2026, by Constructive-proof",
+  "label": "Some n is an actual concretum at w, has no ACTUAL_CONCRETE_GROUND_1 under…, by Constructive-proof",
   "legacy_id": "INF-STRICT-PRIORITY-PURE-ACT",
   "input_statement_ids": [
     "73f6b3c8-b325-5ed8-b632-960a078a773b",
-    "3b2d2d46-baa6-4772-a2db-bb3daeb092fc",
+    "a4d3261a-3239-5b44-9953-64ab1b0ed762",
     "08e493f8-68b1-562d-9218-fc3245b2cf1f"
   ],
   "output_statement_id": "593d7307-c8e1-5863-9776-a26cfe09d20c",
