@@ -9,12 +9,21 @@
   ],
   "kind": "derivation",
   "outcome": "succeeded",
-  "summary": "A stipulated planning-language semantics derives acceptance-preserving modus ponens structurally instead of assuming primitive ValidMP. Singleton compatible states use distinct direct/induced forbidden-action atoms and leave a third action permitted; a second state refutes affirming the consequent. Lean build, bind-check and the conventional Comparator/NanoDa result gate pass. The primary Gibbard response motivates permission versus picking but explicitly differs on false-antecedent indicative truth; no historical semantic identification, actual-psychology bridge, theory-answer upgrade or root-premise discharge follows. Definitions and remaining gaps are in docs/expressivist-embedding-boundary.md.",
+  "summary": "A stipulated planning-language semantics derives acceptance-preserving modus ponens structurally instead of assuming primitive ValidMP. Singleton compatible states use distinct direct/induced forbidden-action atoms and leave a third action permitted; a second state refutes affirming the consequent. Lean build, bind-check and the conventional Comparator/NanoDa result gate pass. The primary Gibbard response motivates permission versus picking but explicitly differs on false-antecedent indicative truth; no historical semantic identification, actual-psychology bridge, theory-answer upgrade or root-premise discharge follows. Definitions and remaining gaps are in docs/expressivist-embedding-boundary.md.\n\nCuration pass 2, lane D (#2103, 2026-11-27). c70aa25c remains unplaced. The acceptance-preservation and converse tests in PlanStateEmbeddingControl are off path. The singleton converse model accepts the prohibition of the induced action and the conditional from the direct-action prohibition. It permits the direct action and abstaining, so acceptance of the direct-action prohibition fails.",
   "evidence": [
     "c70aa25c-6858-5354-ab0e-5306b9f60a9e",
     "91f36c85-17b3-5043-b105-3944d3d8d67e",
     "dcca546d-6976-5eb8-a60a-750d73983cb8",
     "add2d90b-631c-571d-a2ae-70d30fd6a1b4",
     "PR-472"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-27"
+    }
   ]
 }
