@@ -1,0 +1,16 @@
+{
+  "id": "89d82643-cf45-4933-90b3-83a89f6210f2",
+  "label": "Second unde: a nature actual through an esse other than itself receives that esse",
+  "paraphrase": "OPEN, analyst formulation of the second 'unde' of ST I q.4 a.1 ad 3 ('Unde non comparatur ad alia sicut recipiens ad receptum: sed magis sicut receptum ad recipiens') and of q.3 a.4 co.'s 'Oportet igitur quod ipsum esse comparetur ad essentiam quae est aliud ab ipso, sicut actus ad potentiam', in its weakest form, at the nature, attribution deferred. For every x: if x's nature is actual in x through esse (ACTUALIZED_THROUGH_2) and the nature is not being itself, then x's esse is received in that nature as act in receiving potency (RECEPTION_OF_ESSE_1). 'Not being itself' is distinctness of content, which every view considered grants; the real composition of the receiving principle is the content this bridge adds.",
+  "lean_declaration": "TruthCore.Causality.DependenceToActOfBeing.ActualizedQuiddityReceivesEsse",
+  "definition_ids": [
+    "82ab06d0-5328-4d85-b3a2-4a13532d9524",
+    "97c4f504-4792-43c6-9f61-ae23df732d5f",
+    "4433942e-aaf6-55a9-b777-66e55638103d",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"
+  ],
+  "disambiguation_ids": [
+    "a409105e-8389-46ce-b14b-bebbc2864198",
+    "5921354b-51e6-5da3-8d8c-e9041840fd9f"
+  ]
+}

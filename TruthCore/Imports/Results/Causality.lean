@@ -137,6 +137,7 @@ public import TruthCore.Results.Causality.DependenceGroundingPriority.Solution
 public import TruthCore.Results.Causality.DependenceOrderSenses.Solution
 public import TruthCore.Results.Causality.DependenceStrictGroundMap.Solution
 public import TruthCore.Results.Causality.DependenceStrictGroundMapStrength.Solution
+public import TruthCore.Results.Causality.DependenceToActOfBeing.Solution
 public import TruthCore.Results.Causality.DerivativeJointPower.Solution
 public import TruthCore.Results.Causality.DirectEsseGenusOmissionControl.Solution
 public import TruthCore.Results.Causality.DirectEsseRootGodExistence.ExistenceOnly.Solution

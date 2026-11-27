@@ -1,0 +1,11 @@
+{
+  "id": "96fc4767-bb7a-4103-afa0-bc68a051daeb",
+  "label": "R-act1 from dependence through the two unde bridges, checked",
+  "argument_id": "a811f5a3-09ba-4648-ae0c-8e0e66c07649",
+  "challenge_module": "TruthCore.Results.Causality.DependenceToActOfBeing.Challenge",
+  "solution_module": "TruthCore.Results.Causality.DependenceToActOfBeing.Solution",
+  "theorem": "TruthCore.Results.Causality.DependenceToActOfBeing.ractOneFromDependence",
+  "comparator_config": "results/96fc4767-bb7a-4103-afa0-bc68a051daeb/comparator.json",
+  "status": "solution-present",
+  "description": "Take x whose nature is not being itself. Its nature is in act, so by R-dep x has being; by the first unde its nature is actual through esse; by the second, since the nature is not being itself, x's esse is received in its nature; received esse is limited. Own being is read as esse tantum (the nature is being itself). Given R-dep, the first bridge and the nature in act, the second bridge is equivalent to the reception half of the conclusion (undeLoadMap), so this derivation makes the commitment explicit."
+}

@@ -1,0 +1,9 @@
+{
+  "id": "82ab06d0-5328-4d85-b3a2-4a13532d9524",
+  "label": "ACTUALIZED_THROUGH_2: act reading, r is actual in x through the act a",
+  "term": "act reading of actualized through",
+  "definition": "`ActualizationFrame.ActualizedBy x r a`, explicitly primitive: in x, the respect r is actual through the act a, as q.4 a.1 ad 3 says esse is 'actualitas omnium rerum, et etiam ipsarum formarum' and q.3 a.4 co. that 'esse est actualitas omnis formae vel naturae'. Distinguishing conditions: it is not co-possession (ACTUALIZED_THROUGH_1); no law relates the two, and no structural property (transitivity, irreflexivity) is assumed. Open semantic obligation: what makes an act the act through which a form is actual, beyond the dependence of every actuality on being. Example: a form actual in matter (q.7 a.1 parallel); for esse itself no example independent of the thesis is on file.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.DependenceToActOfBeing.ActualizationFrame.ActualizedBy",
+  "note": "Stipulative analyst definition, attribution deferred; navigated from ST I q.4 a.1 ad 3, q.3 a.4 co. and De ente capp.3-4 (Baur/Koch), read in the materialized witnesses (docs/notes/rdep-to-ract.md)."
+}

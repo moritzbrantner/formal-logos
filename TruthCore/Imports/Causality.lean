@@ -94,6 +94,7 @@ public import TruthCore.Causality.DependenceGroundingPriority
 public import TruthCore.Causality.DependenceOrderSenses
 public import TruthCore.Causality.DependenceStrictGroundMap
 public import TruthCore.Causality.DependenceStrictGroundMapStrength
+public import TruthCore.Causality.DependenceToActOfBeing
 public import TruthCore.Causality.DerivativeJointPower
 public import TruthCore.Causality.DirectEsseGenusOmissionControl
 public import TruthCore.Causality.DirectEsseRootGoodnessOmission

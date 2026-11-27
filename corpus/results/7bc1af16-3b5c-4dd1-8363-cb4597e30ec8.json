@@ -1,0 +1,11 @@
+{
+  "id": "7bc1af16-3b5c-4dd1-8363-cb4597e30ec8",
+  "label": "R-act2 from dependence through the first unde and inclusion, checked",
+  "argument_id": "678d45f5-971a-414b-a0fb-01a701f07ee2",
+  "challenge_module": "TruthCore.Results.Causality.DependenceToActOfBeing.Challenge",
+  "solution_module": "TruthCore.Results.Causality.DependenceToActOfBeing.Solution",
+  "theorem": "TruthCore.Results.Causality.DependenceToActOfBeing.ractTwoFromDependence",
+  "comparator_config": "results/7bc1af16-3b5c-4dd1-8363-cb4597e30ec8/comparator.json",
+  "status": "solution-present",
+  "description": "For a pure perfection d, some x has d in act; by R-dep x has being; by the first unde d is actual in x through esse; by inclusion d is a perfection of esse itself. Given the first three premises, inclusion is equivalent to the conclusion (undeLoadMap)."
+}

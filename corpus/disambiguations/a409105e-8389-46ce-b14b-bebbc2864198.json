@@ -1,0 +1,25 @@
+{
+  "id": "a409105e-8389-46ce-b14b-bebbc2864198",
+  "label": "Actualized through: dependence reading versus act reading",
+  "term": "actualized through (ActualizedBy)",
+  "term_label": "ACTUALIZED_THROUGH",
+  "sense_definition_ids": [
+    "799e0ff7-9705-4b50-89a9-a8463c1b4f22",
+    "82ab06d0-5328-4d85-b3a2-4a13532d9524"
+  ],
+  "resolution": "ACTUALIZED_THROUGH_1 (DeflatedActualizedBy) reads 'r is actual in x through esse' as 'x has r in act and has being'; ACTUALIZED_THROUGH_2 (ActualizationFrame.ActualizedBy) is the act reading, esse as the act by which r is actual. The q.4 a.1 ad 3 first 'unde' bridge DependenceIsActualization is stated with ACTUALIZED_THROUGH_2; on ACTUALIZED_THROUGH_1 it holds in every frame (undeLoadMap), so a passage from its dependence ground to the act reading is exactly the step at issue. Each argument uses one sense; the load map and controls are premise-free sense-mixing controls.",
+  "senses": [
+    {
+      "id": "ab735e5a-7128-42c2-896c-26629ff09aaa",
+      "label": "ACTUALIZED_THROUGH_1",
+      "definition_id": "799e0ff7-9705-4b50-89a9-a8463c1b4f22",
+      "lean_declaration": "TruthCore.Causality.DependenceToActOfBeing.DeflatedActualizedBy"
+    },
+    {
+      "id": "e3020b2a-b733-4912-8116-c8768f117f56",
+      "label": "ACTUALIZED_THROUGH_2",
+      "definition_id": "82ab06d0-5328-4d85-b3a2-4a13532d9524",
+      "lean_declaration": "TruthCore.Causality.DependenceToActOfBeing.ActualizationFrame.ActualizedBy"
+    }
+  ]
+}

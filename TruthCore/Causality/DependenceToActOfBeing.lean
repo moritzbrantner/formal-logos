@@ -129,26 +129,31 @@ def NoCreatureIsOwnBeing (Creature OwnBeing : B → Prop) : Prop :=
 /-! ## Limitation at matching scope
 
 The explanandum shared by every view: a being whose nature is not being itself
-lacks some pure perfection. `Admits n d`: the nature `n` admits the perfection
-`d` (the nature's capacity, "capacitas naturae recipientis"). -/
+lacks some pure perfection. -/
+
+/-- The capacity of a nature, explicitly primitive. -/
+structure CapacityFrame (R : Type) where
+  /-- `Admits n d`: the nature `n` admits the perfection `d` (the nature's
+  capacity, "capacitas naturae recipientis", De ente c.4). -/
+  Admits : R → R → Prop
 
 /-- Essence-only account: a being has in act only what its nature admits. -/
 def HasOnlyWhatNatureAdmits (F : GradesFrame W B T R) (A : ActualizationFrame B R)
-    (Admits : R → R → Prop) : Prop :=
-  ∀ x d, F.InAct x d → Admits (A.quiddity x) d
+    (C : CapacityFrame R) : Prop :=
+  ∀ x d, F.InAct x d → C.Admits (A.quiddity x) d
 
 /-- Reception account, De ente c.4 "limitatum ... ad capacitatem naturae
 recipientis": what has its esse received in its nature has in act only what
 that nature admits. -/
 def ReceivedEsseOnlyToCapacity (F : GradesFrame W B T R) (A : ActualizationFrame B R)
-    (Admits : R → R → Prop) (EsseReceivedIn : B → R → Prop) : Prop :=
-  ∀ x d, EsseReceivedIn x (A.quiddity x) → F.InAct x d → Admits (A.quiddity x) d
+    (C : CapacityFrame R) (EsseReceivedIn : B → R → Prop) : Prop :=
+  ∀ x d, EsseReceivedIn x (A.quiddity x) → F.InAct x d → C.Admits (A.quiddity x) d
 
 /-- Shared by both accounts: a nature other than being itself excludes some
 pure perfection. -/
 def NatureOtherThanBeingExcludesSomePure (F : GradesFrame W B T R)
-    (A : ActualizationFrame B R) (Admits : R → R → Prop) (Pure : R → Prop) : Prop :=
-  ∀ x, A.quiddity x ≠ F.esse → ∃ d, Pure d ∧ ¬ Admits (A.quiddity x) d
+    (A : ActualizationFrame B R) (C : CapacityFrame R) (Pure : R → Prop) : Prop :=
+  ∀ x, A.quiddity x ≠ F.esse → ∃ d, Pure d ∧ ¬ C.Admits (A.quiddity x) d
 
 /-- The explanandum, finitude in perfection: what is not its own being lacks
 some pure perfection. -/
@@ -179,17 +184,17 @@ nothing to the derivation: the reception account implies the essence-only
 account on every being that is not its own being. -/
 def LimitationComparison : Prop :=
   ∀ (W B T R : Type) (F : GradesFrame W B T R) (A : ActualizationFrame B R)
-    (Admits : R → R → Prop) (EsseReceivedIn : B → R → Prop) (Pure : R → Prop),
-    (HasOnlyWhatNatureAdmits F A Admits →
-      NatureOtherThanBeingExcludesSomePure F A Admits Pure →
+    (C : CapacityFrame R) (EsseReceivedIn : B → R → Prop) (Pure : R → Prop),
+    (HasOnlyWhatNatureAdmits F A C →
+      NatureOtherThanBeingExcludesSomePure F A C Pure →
       FiniteInPerfection F A Pure) ∧
     (QuiddityReceivesEsse F A EsseReceivedIn →
-      ReceivedEsseOnlyToCapacity F A Admits EsseReceivedIn →
-      NatureOtherThanBeingExcludesSomePure F A Admits Pure →
+      ReceivedEsseOnlyToCapacity F A C EsseReceivedIn →
+      NatureOtherThanBeingExcludesSomePure F A C Pure →
       FiniteInPerfection F A Pure) ∧
     (QuiddityReceivesEsse F A EsseReceivedIn →
-      ReceivedEsseOnlyToCapacity F A Admits EsseReceivedIn →
-      ∀ x, ¬ OwnBeingByQuiddity F A x → ∀ d, F.InAct x d → Admits (A.quiddity x) d)
+      ReceivedEsseOnlyToCapacity F A C EsseReceivedIn →
+      ∀ x, ¬ OwnBeingByQuiddity F A x → ∀ d, F.InAct x d → C.Admits (A.quiddity x) d)
 
 /-! ## Controls -/
 
@@ -241,8 +246,8 @@ def noLimited (_ : Bool) : Prop := False
 def pure (d : Fin 3) : Prop := d = 2
 
 /-- Natures admit everything but wisdom; or everything. -/
-def admitsNotWisdom (_ d : Fin 3) : Prop := d ≠ 2
-def admitsAll (_ _ : Fin 3) : Prop := True
+def admitsNotWisdom : CapacityFrame (Fin 3) := ⟨fun _ d => d ≠ 2⟩
+def admitsAll : CapacityFrame (Fin 3) := ⟨fun _ _ => True⟩
 
 /-- Statements about these finite profiles only.
 

@@ -87,7 +87,7 @@ theorem undeLoadMap : UndeLoadMap := by
 /-- Both accounts of finitude need the nature premise; reception factors
 through the essence-only account. -/
 theorem limitationComparison : LimitationComparison := by
-  intro W B T R F A Admits EsseReceivedIn Pure
+  intro W B T R F A C EsseReceivedIn Pure
   refine ⟨?_, ?_, ?_⟩
   · intro hOnly hExcl x hNotOwn
     obtain ⟨d, hd, hNot⟩ := hExcl x hNotOwn

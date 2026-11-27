@@ -1,0 +1,31 @@
+{
+  "id": "a811f5a3-09ba-4648-ae0c-8e0e66c07649",
+  "label": "R-act1 from dependence through the two unde bridges, checked",
+  "premise_statement_ids": [
+    "7067553d-cad9-5d79-b6b2-912e35051530",
+    "8d7e24dc-20b9-44b8-8c5f-7bac55774f34",
+    "89d82643-cf45-4933-90b3-83a89f6210f2",
+    "073e1411-ad82-4b6c-af8d-58829b2afa01",
+    "7de89edb-e3a8-59ee-9740-8d0ce7c8ea24"
+  ],
+  "conclusion_statement_id": "8c64b036-3db9-4143-9a8d-d7814cc84c79",
+  "inference_ids": [
+    "20bb201d-c26b-4b03-b94e-30d756e440fa"
+  ],
+  "meaning": "Take x whose nature is not being itself. Its nature is in act, so by R-dep x has being; by the first unde its nature is actual through esse; by the second, since the nature is not being itself, x's esse is received in its nature; received esse is limited. Own being is read as esse tantum (the nature is being itself). Given R-dep, the first bridge and the nature in act, the second bridge is equivalent to the reception half of the conclusion (undeLoadMap), so this derivation makes the commitment explicit.",
+  "definition_ids": [
+    "82ab06d0-5328-4d85-b3a2-4a13532d9524",
+    "97c4f504-4792-43c6-9f61-ae23df732d5f",
+    "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "6ced5205-e6a4-585e-950e-3b22e7c9ef01",
+    "4433942e-aaf6-55a9-b777-66e55638103d"
+  ],
+  "disambiguation_ids": [
+    "3b0d67c5-59e4-5556-a728-26bd567f0fb1",
+    "19190b6e-359f-590c-b434-4e6f5803da4f",
+    "5921354b-51e6-5da3-8d8c-e9041840fd9f",
+    "dba7b1de-f3a0-57af-9af9-b2a4da3136fa",
+    "a409105e-8389-46ce-b14b-bebbc2864198"
+  ]
+}
