@@ -13,7 +13,8 @@
   "blocker": "The contingency premise still needs independent warrant. The use of these two selected laws does not assign a case application to the remaining clauses of the composite actualist-domain certificate.",
   "evidence": [
     "e6a55f69-d26f-5867-aed8-379cc98fafcc",
-    "42f919df-6092-472c-b827-daa07cc2c304"
+    "42f919df-6092-472c-b827-daa07cc2c304",
+    "PR-2152"
   ],
   "workers": [
     {
@@ -21,7 +22,8 @@
       "provider": "codex",
       "model": "gpt-6.2-sol",
       "effort": "high",
-      "date": "2026-11-27"
+      "date": "2026-11-27",
+      "pr": "PR-2152"
     }
   ]
 }
