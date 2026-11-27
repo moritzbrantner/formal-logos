@@ -6561,7 +6561,7 @@ It also found five P2s:
    commitment.
 5. Two citation scopes were too strong.
 
-All are repaired in the commit following `8a36e93f0`:
+All are repaired on this branch after `8a36e93f0`:
 
 - the faithful guidance encoding with `respectBlindNotGuided`;
 - `singleRespectTrackerNotGuided`, with the D-nature claim restricted;

@@ -126,7 +126,7 @@ theorem guidanceTable : GuidanceTable := by
     · intro r' z hr; cases r' <;> cases z <;> first | rfl | exact absurd rfl hr
     · intro z hz; cases z <;> first | rfl | exact absurd rfl hz
   have hOutX : ∀ φ : Profile Scen Cand, φ .base .c .d → Outweighed w good φ .base .fit .c .d :=
-    fun φ h => ⟨by decide, by simp [good, w], h⟩
+    fun φ h => ⟨by decide, trivial, h⟩
   have hBlindExtra : BlindTo w extraOnly .fit := by
     intro s t hOther x y
     show w s .extra y < w s .extra x ↔ w t .extra y < w t .extra x
@@ -140,15 +140,14 @@ theorem guidanceTable : GuidanceTable := by
   have hNotTrackExtra : ¬ Tracks extraOnly good := by
     intro h
     have := (h .raised .c .d).1 (by decide : w Scen.raised .extra .d < w Scen.raised .extra .c)
-    exact absurd this (by simp [good, w])
-  refine ⟨hRaise, ⟨hOutX _ (by simp [goodTracking, good, w]), .raised, rfl, hRaise,
-      (by simp [goodTracking, good, w])⟩,
-    ⟨hOutX _ (by simp [extraOnly, w]), respectBlindNotGuided w good noCtrl extraOnly .fit
+    exact this
+  refine ⟨hRaise, ⟨hOutX _ trivial, .raised, rfl, hRaise, trivial⟩,
+    ⟨hOutX _ (show w .base .extra .d < w .base .extra .c by decide), respectBlindNotGuided w good noCtrl extraOnly .fit
       hBlindExtra hAsymmExtra .base .c .d⟩,
     ⟨hOutX _ ⟨rfl, rfl⟩, fixedNotGuided w good noCtrl fixedC hFixed hAsymmFixed .base .fit .c .d⟩,
     ?_, fun _ => ⟨goodTracking, extraOnly, rfl, rfl, hTrackGood, hNotTrackExtra⟩⟩
   rintro ⟨-, -, h⟩
-  exact absurd h (by simp [fitNature, w])
+  exact absurd (show w .base .fit .d < w .base .fit .c from h) (by decide)
 
 end Control
 

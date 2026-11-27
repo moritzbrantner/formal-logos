@@ -105,7 +105,8 @@ Two candidates `c`, `d`; two respects, `fit` (realization of the recipient good)
 and `extra` (further content fit does not record); two scenarios. In `base`, `d`
 weighs more in fit and `c` in the extra respect, and `c` is better overall: the
 fit reason for `d` is outweighed. In `raised`, `d`'s fit weight alone is raised,
-and `d` is better overall. Overall betterness is the larger sum of weights. -/
+and `d` is better overall. Overall betterness is the larger sum of weights, given
+as a table. -/
 namespace Control
 
 /-- Candidates. -/
@@ -134,8 +135,12 @@ def w : Scen → Respect → Cand → Nat
   | _, .extra, .c => 3
   | _, .extra, .d => 0
 
-/-- Overall betterness: the larger sum of weights. -/
-def good (s : Scen) (x y : Cand) : Prop := w s .fit y + w s .extra y < w s .fit x + w s .extra x
+/-- Overall betterness: the larger sum of weights (base: `c` 4 against `d` 2;
+raised: `d` 6 against `c` 4), given as a table. -/
+def good : Scen → Cand → Cand → Prop
+  | .base, .c, .d => True
+  | .raised, .d, .c => True
+  | _, _, _ => False
 
 /-- The good-tracking profile, shared by the personal source and A4. -/
 def goodTracking : Profile Scen Cand := good
