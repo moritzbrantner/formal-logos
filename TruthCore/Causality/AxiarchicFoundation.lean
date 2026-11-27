@@ -99,9 +99,43 @@ def FavouringIrreflexive (Has : B → D → Prop) (favours : GoodFavouring.Profi
     Prop :=
   ∀ b φ, Has b (favours φ) → ∀ s x, ¬ φ s x x
 
+/-! ## Three senses of containment (disambiguation CONTAINED_IN)
+
+The locus bridges and the antecedent of the recognition bridge use containment in
+the generic sense. The recognition bridge's consequent (the contained stand-in is
+an apprehended content about the candidate) is containment in the intentional
+sense; the rival's contained-but-unapprehended stand-ins (powers, modes of
+imitability) are containment in the virtual sense. The recognition bridge is the
+explicit passage from the generic to the intentional sense. The intentional and
+virtual senses are reduced here to the free relations `Apprehends` and `About`;
+the classical difference between having the form of another as other and having
+the power to produce it is not captured beyond that. The premise types
+use these declarations: `Independent` and `NoMerelyProducedStandIn` state
+containment as `ContainsGenerically` (CONTAINED_IN_1), and the recognition bridge's
+antecedent is `ContainsGenerically` while its consequent is `ContainsIntentionally`
+(CONTAINED_IN_2), so binding can see which sense each premise uses and the bridge
+is the only premise reaching both. -/
+
+/-- CONTAINED_IN_1 (generic): the item is contained in the bearer, intentionally or
+virtually; the relation does not say which. -/
+def ContainsGenerically (Contains : B → C → Prop) (b : B) (e : C) : Prop := Contains b e
+
+/-- CONTAINED_IN_2 (intentional): the item is contained in the bearer and the bearer
+apprehends it as a content about some candidate. -/
+def ContainsIntentionally (Contains : B → C → Prop) (About : C → X → Prop)
+    (Apprehends : B → C → Prop) (b : B) (e : C) : Prop :=
+  Contains b e ∧ (∃ x, About e x) ∧ Apprehends b e
+
+/-- CONTAINED_IN_3 (virtual): any item contained in the bearer without being
+apprehended by it, for example a power to produce, a mode in which the bearer
+is imitable, its one undifferentiated nature or a sub-personal item. -/
+def ContainsVirtually (Contains : B → C → Prop) (Apprehends : B → C → Prop) (b : B) (e : C) :
+    Prop :=
+  Contains b e ∧ ¬ Apprehends b e
+
 /-- An item `e` is independent of the bearer `b`: `b` neither contains nor produces it. -/
 def Independent (Contains Produces : B → C → Prop) (b : B) (e : C) : Prop :=
-  ¬ Contains b e ∧ ¬ Produces b e
+  ¬ ContainsGenerically Contains b e ∧ ¬ Produces b e
 
 /-- OPEN own-favouring bridge (horn 1 excluded): the stand-in of a candidate that
 is not a present input, in a bearer's own favouring determination, is not
@@ -122,14 +156,16 @@ discrimination, not the produced item, is then the first stand-in. -/
 def NoMerelyProducedStandIn (Has : B → D → Prop) (favours : GoodFavouring.Profile S X → D)
     (Present : S → X → Prop) (stand : B → X → C) (Contains Produces : B → C → Prop) : Prop :=
   ∀ b φ s x, Has b (favours φ) → ¬ Present s x →
-    ¬ (Produces b (stand b x) ∧ ¬ Contains b (stand b x))
+    ¬ (Produces b (stand b x) ∧ ¬ ContainsGenerically Contains b (stand b x))
 
 /-- OPEN containment-recognition bridge: if a bearer's favouring determination
 depends on value with end content fixed (BECAUSE_OF_GOODNESS_2) for a pair `z`,
 `w` in either order, `z` is not a present input, the stand-in of `z` is contained
 in the bearer, and it differs from the stand-in of `w` (it individuates `z`
 against `w`), then that contained stand-in is a content about `z` that the bearer
-itself apprehends. Its antecedent adds containment and individuation, but given
+itself apprehends, that is, contains intentionally (CONTAINED_IN_2, which includes
+the containment and adds aboutness and apprehension). Its antecedent adds
+containment (CONTAINED_IN_1) and individuation, but given
 the other premises of the registered derivation every good-general bearer meets
 them, so it narrows nothing there; its consequent is more specific (the
 apprehended content is the stand-in). Given those premises it is strictly
@@ -142,39 +178,8 @@ def ContainedStandInIsApprehended (Has : B → D → Prop)
     (About : C → X → Prop) (Apprehends : B → C → Prop) : Prop :=
   ∀ b φ s z w, Has b (favours φ) →
     (BecauseOfGoodness good fitOf φ s z w ∨ BecauseOfGoodness good fitOf φ s w z) →
-    ¬ Present s z → Contains b (stand b z) → stand b z ≠ stand b w →
-      About (stand b z) z ∧ Apprehends b (stand b z)
-
-/-! ## Three senses of containment (disambiguation CONTAINED_IN)
-
-The locus bridges and the antecedent of the recognition bridge use containment in
-the generic sense. The recognition bridge's consequent (the contained stand-in is
-an apprehended content about the candidate) is containment in the intentional
-sense; the rival's contained-but-unapprehended stand-ins (powers, modes of
-imitability) are containment in the virtual sense. The recognition bridge is the
-explicit passage from the generic to the intentional sense. The intentional and
-virtual senses are reduced here to the free relations `Apprehends` and `About`;
-the classical difference between having the form of another as other and having
-the power to produce it is not captured beyond that. No premise's type uses these
-three declarations (the generic one is the raw parameter `Contains`), so bind-check
-cannot catch a mixing of the senses; the tags live in the records and prose. -/
-
-/-- CONTAINED_IN_1 (generic): the item is contained in the bearer, intentionally or
-virtually; the relation does not say which. -/
-def ContainsGenerically (Contains : B → C → Prop) (b : B) (e : C) : Prop := Contains b e
-
-/-- CONTAINED_IN_2 (intentional): the item is contained in the bearer and the bearer
-apprehends it as a content about some candidate. -/
-def ContainsIntentionally (Contains : B → C → Prop) (About : C → X → Prop)
-    (Apprehends : B → C → Prop) (b : B) (e : C) : Prop :=
-  Contains b e ∧ (∃ x, About e x) ∧ Apprehends b e
-
-/-- CONTAINED_IN_3 (virtual): any item contained in the bearer without being
-apprehended by it, for example a power to produce, a mode in which the bearer
-is imitable, its one undifferentiated nature or a sub-personal item. -/
-def ContainsVirtually (Contains : B → C → Prop) (Apprehends : B → C → Prop) (b : B) (e : C) :
-    Prop :=
-  Contains b e ∧ ¬ Apprehends b e
+    ¬ Present s z → ContainsGenerically Contains b (stand b z) → stand b z ≠ stand b w →
+      About (stand b z) z ∧ ContainsIntentionally Contains About Apprehends b (stand b z)
 
 /-- The containment-recognition bridge with its consequent weakened to the
 cognition criterion's: some content about some candidate is apprehended by the
@@ -188,7 +193,7 @@ def ContainedStandInYieldsApprehension (Has : B → D → Prop)
     (About : C → X → Prop) (Apprehends : B → C → Prop) : Prop :=
   ∀ b φ s z w, Has b (favours φ) →
     (BecauseOfGoodness good fitOf φ s z w ∨ BecauseOfGoodness good fitOf φ s w z) →
-    ¬ Present s z → Contains b (stand b z) → stand b z ≠ stand b w →
+    ¬ Present s z → ContainsGenerically Contains b (stand b z) → stand b z ≠ stand b w →
       ∃ c y, About c y ∧ Apprehends b c
 
 /-! ## Finite controls
@@ -330,5 +335,57 @@ def AxiarchicControls : Prop :=
     ¬ crit allInSrc appNone)
 
 end Control
+
+/-! ## What value-dependence of an aligned order witnesses
+
+A profile that tracks an intrinsic order `f` other than value (aligned powers, A3)
+is good-general as soon as `f` and the value order coincide on one witnessing
+pair at one scenario and fail together at one scenario agreeing on the control
+(law 3 of `GoodDependenceLaws`). It need not coincide with value anywhere else.
+The finite witness below has two strict orders on three candidates that agree on
+the witnessing pair, fail together in the second scenario, and rank another pair
+oppositely in the first. -/
+namespace AlignmentControl
+
+/-- Two scenarios with the same end content. -/
+inductive Sc
+  | s0
+  | s1
+
+/-- Three candidates. -/
+inductive Ca
+  | a
+  | b
+  | c
+  deriving DecidableEq
+
+/-- The value order: at `s0`, `a` over `b` and `c` over `a`; nothing at `s1`. -/
+def value : Sc → Ca → Ca → Prop
+  | .s0, .a, .b => True
+  | .s0, .c, .a => True
+  | _, _, _ => False
+
+/-- An intrinsic power order: at `s0`, `a` over `b` and `a` over `c`; nothing at
+`s1`. -/
+def power : Sc → Ca → Ca → Prop
+  | .s0, .a, .b => True
+  | .s0, .a, .c => True
+  | _, _, _ => False
+
+/-- One end content for both scenarios. -/
+def sameEnd (_ : Sc) : Unit := ()
+
+/-- No candidate is a present input. -/
+def noneHere (_ : Sc) (_ : Ca) : Prop := False
+
+/-- The power-tracking profile is good-general (the two orders coincide on `a`
+over `b` at `s0` and both fail at `s1`), both orders are irreflexive and
+asymmetric, and they rank `a` and `c` oppositely at `s0`. -/
+def WitnessOnlyAlignment : Prop :=
+  ImpersonalFoundationJoint.GoodGeneral value sameEnd noneHere power ∧
+  (∀ s x y, value s x y → ¬ value s y x) ∧ (∀ s x y, power s x y → ¬ power s y x) ∧
+  power .s0 .a .c ∧ value .s0 .c .a
+
+end AlignmentControl
 
 end TruthCore.Causality.AxiarchicFoundation
