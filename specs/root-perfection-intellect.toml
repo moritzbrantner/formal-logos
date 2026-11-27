@@ -139,4 +139,87 @@ predicate = "strengthens"
 object_kind = "statement"
 object_id = "Every exclusion-free profile is admissible"
 verification_result_id = "Exclusion-free profiles are admissible, from member grounding"
-note = "Same Admissible family and RequiresLack relation. The strong version is a biconditional; the weak one is its right-to-left direction, which is all the three derivations use. The strictness row of constitutiveControls (every profile admissible, noesis requiring its own lack) satisfies the weak version and fails the strong one."
+strictness_result_id = "The all-admissible family separates member grounding from sufficiency"
+note = "Same Admissible family and RequiresLack relation. The strong version is a biconditional; the weak one is its right-to-left direction, which is all the three derivations use. The strictness row of constitutiveControls (every profile admissible, noesis requiring its own lack) satisfies the weak version and fails the strong one; the certified difference is the necessity direction, every admissible profile is exclusion-free."
+
+[[statement]]
+id = "Every admissible profile is exclusion-free"
+lean = "AdmissibleIsExclusionFree"
+definitions = ["3f8e5e3c-e85a-4388-af9c-4da1c8a02069", "22c26860-7e66-4a0c-97db-6a9ecdc8c941", "88f7c656-f484-4737-a872-b2d78c604322"]
+paraphrase = "Difference statement of member-grounded admissibility over its sufficiency direction (#1598), OPEN, not asserted: every admissible intrinsic profile is exclusion-free, so no member of an admissible profile requires the lack of some of its members. It is the necessity direction of member grounding, the part that makes every member's requirement of a lack binding: a profile containing one is inadmissible."
+
+[[statement]]
+id = "Member grounding holds exactly when sufficiency and its difference hold"
+lean = "MGOverSufficiencyExact"
+definitions = ["3f8e5e3c-e85a-4388-af9c-4da1c8a02069", "22c26860-7e66-4a0c-97db-6a9ecdc8c941", "88f7c656-f484-4737-a872-b2d78c604322"]
+paraphrase = "For every carrier, admissible family and requirement relation: a profile is admissible exactly when exclusion-free if and only if every exclusion-free profile is admissible and every admissible profile is exclusion-free. A premise-free comparison; it asserts none of the three statements."
+
+[[statement]]
+id = "The all-admissible family with self-excluding noesis separates member grounding from sufficiency"
+lean = "Control.StrictSeparates"
+definitions = ["3f8e5e3c-e85a-4388-af9c-4da1c8a02069", "22c26860-7e66-4a0c-97db-6a9ecdc8c941", "88f7c656-f484-4737-a872-b2d78c604322"]
+paraphrase = "On the five #1970 determinations, with every profile admissible and noesis requiring its own lack, every exclusion-free profile is admissible while member grounding fails (the profile containing noesis is admissible but not exclusion-free). A structural assignment only."
+
+[[argument]]
+id = "Member grounding is sufficiency plus its difference"
+theorem = "mgOverSufficiencyExact"
+axioms = []
+premises = []
+conclusion = "Member grounding holds exactly when sufficiency and its difference hold"
+rule = "Split the biconditional into its two directions and recombine"
+meaning = "Certified difference (#1598) of the registration 'member-grounded admissibility strengthens exclusion-free admissibility', with no background: member grounding holds iff its sufficiency direction holds and every admissible profile is exclusion-free. Premise-free and constructive; it asserts none of the statements compared."
+description = "Premise-free equivalence certificate for the strength comparison of member grounding over its sufficiency direction. Establishes no premise."
+
+[[argument]]
+id = "The all-admissible family separates member grounding from sufficiency"
+theorem = "strictSeparates"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+premises = []
+conclusion = "The all-admissible family with self-excluding noesis separates member grounding from sufficiency"
+rule = "Finite check (row 8 of constitutiveControls)"
+meaning = "With every profile admissible and noesis requiring its own lack, the sufficiency direction holds and member grounding fails: the strengthening is strict. A structural interpretation only."
+description = "Strictness control for member grounding over its sufficiency direction. Establishes no premise."
+
+[[relation]]
+id = "Member grounding over sufficiency: certified difference"
+subject_kind = "statement"
+subject_id = "6bba8431-d3f7-47f5-85cf-8c69d32b082f"
+predicate = "strength_comparison"
+object_kind = "statement"
+object_id = "Every exclusion-free profile is admissible"
+comparison_spec = "mgOverSufficiency"
+delta_statement_id = "Every admissible profile is exclusion-free"
+evidence_result_ids = { implication = "Exclusion-free profiles are admissible, from member grounding", equivalence = "Member grounding is sufficiency plus its difference" }
+separator = { setting = "Control.strictSetting", result_id = "The all-admissible family separates member grounding from sufficiency" }
+statement_parameter_indices = { stronger = [0, 1, 2], weaker = [0, 1, 2], delta = [0, 1, 2] }
+note = "Difference of member grounding over its sufficiency direction: member grounding adds exactly that every admissible profile is exclusion-free (the necessity direction). No background. The separator is a finite interpretation."
+
+[[relation]]
+id = "Test by RootPerfectionIntellect.mgOverSufficiencyExact (6bba8431)"
+label = "Test by RootPerfectionIntellect.mgOverSufficiencyExact (6bba8431)"
+subject_kind = "result"
+subject_id = "bae83585-0656-4bde-aff5-9d45bc3d70ea"
+predicate = "tests"
+object_kind = "statement"
+object_id = "6bba8431-d3f7-47f5-85cf-8c69d32b082f"
+note = "Premise-free certificate: member grounding holds exactly when its sufficiency direction and its necessity direction (every admissible profile is exclusion-free) hold. It decomposes the premise into the part the derivations use and the part they do not. Definitional; no evidential weight."
+
+[[relation]]
+id = "Test by RootPerfectionIntellect.strictSeparates (6bba8431)"
+label = "Test by RootPerfectionIntellect.strictSeparates (6bba8431)"
+subject_kind = "result"
+subject_id = "d6bfcd0d-d172-46ef-9b55-3183678903e0"
+predicate = "tests"
+object_kind = "statement"
+object_id = "6bba8431-d3f7-47f5-85cf-8c69d32b082f"
+note = "With every profile admissible and noesis requiring its own lack, the sufficiency direction holds and member grounding fails: member grounding is strictly stronger than what the derivations use."
+
+[[relation]]
+id = "Test by RootPerfectionIntellect.strictSeparates (89c988d9)"
+label = "Test by RootPerfectionIntellect.strictSeparates (89c988d9)"
+subject_kind = "result"
+subject_id = "d6bfcd0d-d172-46ef-9b55-3183678903e0"
+predicate = "tests"
+object_kind = "statement"
+object_id = "Every admissible profile is exclusion-free"
+note = "In the separating assignment the necessity direction fails (the admissible profile containing self-excluding noesis is not exclusion-free) while the sufficiency direction holds, so the difference is not implied by the sufficiency direction."

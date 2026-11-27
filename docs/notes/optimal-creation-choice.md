@@ -4495,13 +4495,22 @@ model types favouring only, not measures or power. Whether that determination
 is neither received nor a ceiling on power is conditional on hook 1 below:
 whether a content determination at an unlimited root is a limitation.
 
-A good-general profile, personal or not, avoids that determination. Its measure
-is then explained in one of two ways:
+A good-general profile, personal or not, avoids that determination. What
+goodness then contributes to its measure depends on the candidate measures:
 
-- If a better or undominated measure exists, the measure is explained by
-  goodness (law 4 of §65 and the §62 fork).
-- If measures are tied or strictly improvable, the measure is explained by a
-  contingent exercise (§65 law 5, §59 law 6), on both sides.
+- If one measure is better than every relevant rival measure, a good-tracking
+  profile favours it over each rival (as `cBetter` does for c). That is
+  favouring by goodness at the actual history, not determination.
+- If several measures are undominated (tied or incomparable), goodness favours
+  none of them over the others. Then no good-bounded profile selects among them
+  (§65 law 4), and an undominated measure's merely existing does not explain why
+  this one occurs. The choice among undominated measures is unresolved by
+  goodness and is left to a contingent exercise (§59 law 6), on both sides.
+  The `actual` scenario is such a case: c and d are both undominated, and
+  neither good-tracking profile favours c over d.
+- If every measure is strictly improvable, no good-bounded profile selects any
+  measure (§65 law 5). Under the §62 fork no decision is undominated in that
+  case either.
 
 So the q.19 a.4 contrast becomes: what apprehension avoids, a good-general
 profile also avoids, as typed. What remains is whether good-generality without

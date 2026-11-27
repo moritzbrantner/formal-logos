@@ -88,6 +88,11 @@ theorem exclusionFreeAdmissibleOfMemberGrounding {D : Type} (Admissible : Set D 
     ExclusionFreeAdmissible Admissible RequiresLack := by
   sorry
 
+/-- Certified difference: member grounding is its sufficiency direction plus
+its necessity direction. Premise-free and constructive. -/
+theorem mgOverSufficiencyExact : MGOverSufficiencyExact := by
+  sorry
+
 /-- Joint compossibility `500d0e2d` from the sufficiency direction and the
 purity premise. The insertion law's admissibility hypotheses are not used. -/
 theorem jointCompossibilityOfExclusionFreeAdmissibility {D : Type}
@@ -234,6 +239,12 @@ theorem constitutiveControls :
       ¬ rootAdm bruteTriple TruthCore.Causality.SourceIntellectControls.ProfileControls.pure) ∧
     (ExclusionFreeAdmissible anyProfile noesisSelfExcluding ∧
       ¬ MemberGroundedAdmissibility anyProfile noesisSelfExcluding) := by
+  sorry
+
+/-- Strictness of member grounding over its sufficiency direction: with every
+profile admissible and `noesis` requiring its own lack, the sufficiency
+direction holds and member grounding fails. -/
+theorem strictSeparates : StrictSeparates := by
   sorry
 
 end TruthCore.Results.Causality.RootPerfectionIntellect

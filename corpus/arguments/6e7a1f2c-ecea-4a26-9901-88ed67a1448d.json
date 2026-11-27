@@ -1,0 +1,15 @@
+{
+  "id": "6e7a1f2c-ecea-4a26-9901-88ed67a1448d",
+  "label": "Member grounding is sufficiency plus its difference",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "34e719e6-38d9-4ccc-88b0-4137f51aa92b",
+  "inference_ids": [
+    "b8d5baf1-c039-45f7-b788-dcf113d95e19"
+  ],
+  "meaning": "Certified difference (#1598) of the registration 'member-grounded admissibility strengthens exclusion-free admissibility', with no background: member grounding holds iff its sufficiency direction holds and every admissible profile is exclusion-free. Premise-free and constructive; it asserts none of the statements compared.",
+  "definition_ids": [
+    "22c26860-7e66-4a0c-97db-6a9ecdc8c941",
+    "3f8e5e3c-e85a-4388-af9c-4da1c8a02069",
+    "88f7c656-f484-4737-a872-b2d78c604322"
+  ]
+}

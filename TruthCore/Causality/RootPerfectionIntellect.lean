@@ -5,6 +5,7 @@ public import TruthCore.Causality.WholePowerPerfection
 public import TruthCore.Causality.NecessaryFirstBeing
 public import TruthCore.Causality.ActualAncestralSource
 public import TruthCore.Causality.PureActRoot
+public import TruthCore.Logic.StrengthComparison
 
 /-! # From every pure perfection to intellect, and a constitutive reading of admissibility (#2145)
 
@@ -121,6 +122,31 @@ and other extra admissibility constraints. Together with
 def ExclusionFreeAdmissible (Admissible : Set D → Prop)
     (RequiresLack : D → Set D → Prop) : Prop :=
   ∀ q, ExclusionFree RequiresLack q → Admissible q
+
+/-- Difference of member grounding over its sufficiency direction (#1598),
+OPEN, not asserted: every admissible profile is exclusion-free (the necessity
+direction). It is what member grounding adds: the part that makes every
+member's requirement of a lack binding: a profile containing one is
+inadmissible. -/
+def AdmissibleIsExclusionFree (Admissible : Set D → Prop)
+    (RequiresLack : D → Set D → Prop) : Prop :=
+  ∀ q, Admissible q → ExclusionFree RequiresLack q
+
+/-- The strength comparison of member grounding over its sufficiency direction,
+with the necessity direction as its difference. -/
+def mgOverSufficiency (Admissible : Set D → Prop) (RequiresLack : D → Set D → Prop) :
+    TruthCore.Logic.StrengthComparison.ComparisonSpec where
+  stronger := MemberGroundedAdmissibility Admissible RequiresLack
+  weaker := ExclusionFreeAdmissible Admissible RequiresLack
+  delta := AdmissibleIsExclusionFree Admissible RequiresLack
+
+/-- Premise-free equivalence: member grounding holds exactly when its
+sufficiency direction and its necessity direction hold. -/
+def MGOverSufficiencyExact : Prop :=
+  ∀ {D : Type} (Admissible : Set D → Prop) (RequiresLack : D → Set D → Prop),
+    MemberGroundedAdmissibility Admissible RequiresLack ↔
+      ExclusionFreeAdmissible Admissible RequiresLack ∧
+        AdmissibleIsExclusionFree Admissible RequiresLack
 
 /-- OPEN: no pure determination requires the joint lack of pure
 determinations. The rationale is DEF-PURE-PERFECTION: requiring the lack of a
@@ -242,6 +268,16 @@ def rootAdm (adm : Set Determination → Prop) (src : Set Determination) : Prop 
 /-- Every determination of the root is pure (`3b39e0ba`). -/
 def rootPure (src : Set Determination) : Prop :=
   ActualRootDeterminationsArePure rootProfile true (has src) isPure
+
+/-- The strictness setting: every profile admissible, `noesis` requiring its
+own lack. -/
+def strictSetting : TruthCore.Logic.StrengthComparison.ComparisonSpec :=
+  mgOverSufficiency anyProfile noesisSelfExcluding
+
+/-- In `strictSetting` the sufficiency direction holds and member grounding
+fails. -/
+def StrictSeparates : Prop :=
+  TruthCore.Logic.StrengthComparison.Separation strictSetting
 
 end Control
 
