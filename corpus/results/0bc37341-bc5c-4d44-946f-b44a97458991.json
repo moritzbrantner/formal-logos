@@ -1,0 +1,11 @@
+{
+  "id": "0bc37341-bc5c-4d44-946f-b44a97458991",
+  "label": "Two-world tests of fixed-content divine assent and actual access",
+  "argument_id": "23d737da-bd38-4089-903c-080d4985d479",
+  "challenge_module": "TruthCore.Results.Causality.FixedContentDoxasticVeracity.Challenge",
+  "solution_module": "TruthCore.Results.Causality.FixedContentDoxasticVeracity.Solution",
+  "theorem": "TruthCore.Results.Causality.FixedContentDoxasticVeracity.controls",
+  "comparator_config": "results/0bc37341-bc5c-4d44-946f-b44a97458991/comparator.json",
+  "status": "solution-present",
+  "description": "The contingent content is true at the selected alternative in both profiles. Designating it as actual gives the nonvacuous positive application, while designating the other world keeps calibration and KD45 but gives false assent. With that same nonreflexive pointed frame and an everywhere-true content, accuracy holds."
+}

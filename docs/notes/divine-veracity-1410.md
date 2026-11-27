@@ -1488,3 +1488,93 @@ the coverage and normative commitments, or confer new formal certification.
 The reviewed local snapshot has the identical Git tree as published revision
 [`813aed9c`](https://github.com/moritzbrantner/formal-logos/commit/813aed9c2aa3251ba1a5e4c8d3970e321ed83640).
 The findings are published on `agent/source-independence-history`, not merged.
+
+## Actual access and represented divine assent (#2057)
+
+The target is `GodAssentAccurate` (7dd8a624-b04d-4ea0-9ecf-2d9e5cab95ad).
+The calibration fixes the existing individuated attitude relation, the
+world/content semantics and a content-to-legacy-proposition report before
+matching any assent. Each legacy assent (DOXASTIC_BELIEF_1) must be covered
+by an independently assented content with that report, such that truth of that
+content at actuality implies its report. A second clause calibrates each independently assented
+content of the same bearer to its accessibility box (DOXASTIC_BELIEF_2).
+The proof uses the same content in both clauses. If the supplied alternatives
+include actuality, evaluating the box there and disquoting yields the legacy
+proposition. The existing sincerity route consumes the resulting assent
+accuracy claim; confirmation-to-assertion remains a separate input.
+
+The first draft allowed a new world predicate for each assent. Its frozen
+`AssentRepresented` expresses only the structural conditional that an actual
+self-edge would make the assent true. In the reverse direction, the predicate
+`fun w => access actual w ∨ p` is believed and agrees with the assented
+proposition at actuality whenever that conditional holds. Lean checks the
+equivalence in `unrestrictedRepresentationIff`. The old theorem remains a
+structural boundary. The corpus route uses `FixedAssentCalibration`, which can
+fail through lack of an independently assented matching content or failure of
+the given box to support that content. It does not manufacture a truth
+condition suited to accessibility. The representation is one-way from legacy
+assent. Recovery of exact content identity from a legacy Prop remains open.
+
+The three fixed-content controls use the same two-world interpretation. In
+the positive case, the standpoint designates the world where the selected
+contingent content is true, and the actual edge is present. In the omission,
+the alternatives and individuated assents stay fixed and the other world is
+designated actual, with the corresponding report evaluated as false there.
+The bearer still believes the contingent content and the frame still satisfies
+KD45. It now has a false legacy assent under the same calibration. In the
+third control, the same nonreflexive pointed frame selects an everywhere-true
+content and its only legacy assent is to True. Accuracy holds. Self-access
+characterizes local factivity when every world predicate is tested. For this
+application it is a uniform sufficient condition; on selected contents the
+truth conditions and the assents may already suffice without it.
+
+**Provisional assessment.** The fixed calibration and the actual edge give
+a conditional support route to the existing accuracy premise. Actual
+access has independent content as a property of a supplied frame, but
+selecting the frame merely to guarantee the intended result would beg the
+question. The proper-object and truth-as-cognitive-good considerations
+above give a positive reason to investigate actual truth access for a
+perfect intellect. The exact transfer from perfect intellectual operation
+to truth-bearing awareness of a selected contingent content remains OPEN.
+The matched fallible alternative accepts the same contingent content on
+the available alternatives even when actuality falls outside them.
+`DoxasticThreshold.skewFixedControl` gives that mechanism a concrete
+evidential basis for an idealized fallible subject: the same event is
+accepted at 0.9 and believed in a fixed KD45 profile while its complement
+has positive measure and contains the actual point. The policy's normative
+entitlement, and transfer to the same divine bearer, remain open.
+Reassess when the same-bearer actual-operation argument can establish
+availability of one independently identified contingent content and justify
+the corresponding interpretation and calibration. An independently
+justified counterexample under the same perfection standard would also
+revise the assessment.
+
+The knowledge bridge uses inclusion from belief successors to epistemic
+successors at the actual world. The distributed specialization preserves
+the witnessing agent and uses inclusion at the witnessing time. The
+reverse-inclusion control gives knowledge with withholding. The biased
+KD45 frame fails T and permits belief without knowledge for a reflexive
+epistemic frame. Alternating successors show that seriality alone leaves
+both introspection principles open. Requiring a fixed nonempty heavy core
+supplies KD45 for a selected probability policy. The local equivalence
+requires no match beyond the selected world. The lottery failure uses the
+intersection closure that any single row of a relation already imposes.
+
+The two Moore contents, `p ∧ ¬ Bp` and `p ∧ B¬p`, are each true at the
+biased frame's designated world. The withholding control also realizes
+the former without the latter. For a sincere assertion by the speaker
+described by the content at the same speech context, positive introspection
+carries belief of the first conjunct to a selected successor. The omissive
+second conjunct says that belief is absent there. The commissive second
+conjunct adds belief in the negation there and conflicts with serial
+consistency. This uses local assertion-to-belief from `AssertionRetorsion`
+and follows `PerformedDenial` in distinguishing truth at a world from
+conditions on performance. The frame choice is time-local. Application
+to human speech or epistemic entitlement requires separate warrant.
+
+Belief in a proposition representing justification can be false. The
+ordinary reason for suspension in the existing count profile targets a
+different attitude from adopting the belief. The preference-independent
+authority bridge in #930 and the sense migration in #1376 remain OPEN.
+Revision and stability under updates belong to the separate AGM/DEL work
+and #1424.
