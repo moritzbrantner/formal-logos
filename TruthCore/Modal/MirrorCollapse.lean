@@ -131,10 +131,13 @@ def DecreeSuffices {X : Type} (o : Ontic W B) (Has : W → B → D → Prop) (w 
 
 /-- OPEN premise (world-level essence-grounded possibility, ESSENCE_5): every world
 at which every essential truth of every being holds is accessible from `w`.
-Whatever no nature excludes is possible. The world-level counterpart of lane E's
-EM (`f6f956a1`, root profiles) and of `ModalGrounding.EssentialExclusionAccount`
-(absence of one being). Powers-based accounts, modal primitivism and Humean
-recombination deny it in different ways. -/
+Whatever no nature excludes is possible. The world-level counterpart of
+`ModalGrounding.EssentialExclusionAccount` (absence of one being). Lane E's EM
+(`f6f956a1`, #2174) is a different-grain counterpart over ESSENCE_6 profile
+conditions; no ESSENCE_5/ESSENCE_6 bridge is asserted. Powers-based accounts deny
+it (a world no nature excludes can lack a power for it). Humean recombination does
+not deny it; modal primitivism denies only that possibility is grounded in
+essences. -/
 def EssenceGroundedWorldPossibility (o : Ontic W B) (w : W)
     (Essential : B → (W → Prop) → Prop) : Prop :=
   ∀ v, (∀ x φ, EssentialTruth Essential x φ → φ v) → o.frame.access w v
@@ -374,12 +377,14 @@ personal case's intrinsic-profile premises.
    does not strictly suffice for the effect (#555's nonnecessitating necessary
    act); no fact intrinsic to the source discriminates the effect's presence from
    its absence; the act's terminus does discriminate it, and is not intrinsic to
-   the source. So the contrast is carried only by an extrinsic fact.
-2. **Real decree under N.** A real decree family that is exclusive at `w`: under
-   lane E's N for an actual root, every decree the root has at an accessible world
-   is its actual one. If moreover the actual decree suffices for the effect, the
-   effect is contingent only if some accessible world lacking it has no decree at
-   all. With a decree at every accessible world the effect is not contingent.
+   the source. So no intrinsic fact carries the contrast; the terminus does.
+2. **Real decree under N.** A real decree family that is exclusive at `w`: for any
+   bearer meeting lane E's necessity condition N at `w` (for instance an actual
+   root), every decree of the family that the bearer has at an accessible world is
+   its actual one. If moreover the actual decree suffices for the effect, the
+   effect is contingent only if some accessible world lacking it has no decree of
+   the family. With a decree of the family at every accessible world the effect is
+   not contingent.
 3. **Joint model.** On `rr…`, the account holds together with RootPurity
    (`c78c77da`), `a30c5963`, N at the root (`AbsencesNecessaryFor`), the
    requirement-form premises (`0c8631bd`, the

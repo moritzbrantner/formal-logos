@@ -330,8 +330,9 @@ show that the terminus is the only discriminating fact.
 So the account is coherent in the framework and its exact cost is #555's: at the
 intrinsic level it is the *nonnecessitating necessary act* (strict sufficiency
 and contrast lost at the effect); no intrinsic fact carries the contrast, and the
-extrinsic terminus does, whose own variation has only the invariant act as reason, which does
-not discriminate it — #555's `relocated` pattern, "the gap moves one step back".
+extrinsic terminus does. Interpretation, not certified by any type: the
+terminus's own variation has, among the source's intrinsic facts, only the
+invariant act as a reason, which does not discriminate it — #555's `relocated` pattern, "the gap moves one step back".
 It is the `oneRespect` exit of #555 finding 4: no decree is a respect.
 
 **Does the account collapse under the personal case's own premises?** No, on the
@@ -378,17 +379,24 @@ effect is not contingent. This replaces #555's readings
 **Parity.** `RelationOfReasonAt` mentions neither intellect nor will. An
 impersonal permissive propensity whose chance outcome is its terminus satisfies
 every clause, and clauses 1–2 then give it the identical price at the level of
-the formal account (lane P's extra descriptive commitment is below). This agrees with
+the formal account (lane P's claim of an asymmetric burden is below). This agrees with
 [will-versus-chance.md](will-versus-chance.md) §7 ("contrastive explanation of
 which effects: none typed", both columns) and sharpens it: on an invariant
 profile no intrinsic fact discriminates at all.
 
-**Lane P's asymmetry, assessed at the same level.** Lane P records a
-*descriptive* structural cost: only the personal side calls its own invariant
-act "willing x", a content-specific predicate whose truth then varies
-extrinsically, while the propensity's "produced b" is relational on its face.
-Lane P records no inductive or other support for treating that as a defect. At
-the level of the formal account the two readings are the same conjunction.
+**Lane P's asymmetry, assessed at the same level.** Lane P's claim, as it stands
+([causal-perfection-transfer.md](causal-perfection-transfer.md), "The burden is
+not symmetric"): an impersonal permissive propensity's chance outcome is
+uncontroversially not a determination of the propensity; the personal side must
+hold something more, that the selection is the root's own free willing and yet
+not a real determination of it; "That extra commitment falls on the personal
+side only." Lane P thus asserts an asymmetric burden, not merely a description.
+*This lane's assessment, not lane P's:* the extra commitment is descriptive (the
+personal side calls its invariant act "willing x", a content-specific predicate
+whose truth then varies extrinsically, while the propensity's "produced b" is
+relational on its face); at the level of the formal account the two readings are
+the same conjunction; and no warrant is given, by lane P or here, for counting
+the extra commitment as a defect rather than a further assertion.
 
 This lane reconstructed a possible objection behind it, and states it as its own:
 
@@ -429,8 +437,7 @@ CPT. Both readings reverse spatial handedness. The owner's left/right example
 survives as the CPT-mirror: the CPT image of a world with a left hand has a right
 hand made of antimatter, its history run in reverse.
 ESSENCE_5 (`EssentialTruth`, DEF `7cf63236`) is the grain at which natures
-constrain worlds; ESSENCE_5 (`EssentialTruth`, DEF `7cf63236`) is the
-grain at which natures constrain worlds. Four OPEN premises at the actual world
+constrain worlds. Four OPEN premises at the actual world
 `w`:
 
 | Premise | Lean | Denial (necessitarian option) |
@@ -474,7 +481,7 @@ for preservation is exactly the warrant for "the mirror world is possible", a
 possibility premise in the style of modal-ontological arguments. Rows 6 and 9
 drop essence grounding necessity, so they do not show otherwise; rows 7, 8 and 10
 show that the possibility principle, reversal and chirality are each not
-recoverable from the conclusion. The argument is valid and not a transcription;
+recoverable from the conclusion together with the other four premises. The argument is valid and not a transcription;
 it is a *localization*: a concrete necessitarian who grounds possibility in
 essences must deny one named premise (fork clause 8).
 
@@ -527,8 +534,9 @@ placed by `tests` on `c94b5446`):
    necessity, the possibility principle and factivity, preservation holds
    exactly when the mirror image is accessible.
 10. *Option 1 at a root, through a bridge.* With clause 7's premises and the open
-    sense bridge `OrientationInNatureCarried` (an orientation in an actual root's
-    ESSENCE_5 nature is carried by an orientation token it really has), no
+    sense bridge `OrientationInNatureCarried` (an orientation in the ESSENCE_5
+    nature of any being, roots included, is carried by an orientation token it
+    really has), no
     ESSENCE_5 truth of an actual root holds at `w` and fails at `σ w`. The bridge
     is the orientation instance of lane E's carriage pattern (LE), stated between
     ESSENCE_5 and `Has`; lane E's ESSENCE_6 definition `8e1ba83c` asserts no
@@ -540,7 +548,7 @@ placed by `tests` on `c94b5446`):
 | --- | --- | --- | --- | --- |
 | Impersonal necessitarian (emanation) | necessary | yes | its nature, only via option 1, 2 or 3 | option 1 (at a root: excluded only with the open carriage bridge, clause 10; at creatures for σ = P on dispositional essentialism), option 2 (σ w = w: relationalism about global orientation), or brute |
 | Personal necessitarian (necessary choice of the best) | necessary | yes | as above; "best" cannot select if value is qualitative and σ-invariant (clause 5) | identical to the impersonal necessitarian |
-| Classical personal root, relation-of-reason account | contingent | no | no intrinsic fact (clause 6); the extrinsic terminus discriminates | #555's non-contrastive price (A above); plus lane P's descriptive commitment ("willing x") |
+| Classical personal root, relation-of-reason account | contingent | no | no intrinsic fact (clause 6); the extrinsic terminus discriminates | #555's non-contrastive price (A above); plus the extra commitment lane P places on the personal side only ("willing x" with no real determination; this lane assesses it as descriptive) |
 | Personal root with a real, varying selection | contingent | no | the selection (intrinsic, varies) | denies N; at a root whose selection token has an exclusive mirror alternative on a par in purity, denies one of the purity premises (clause 7 applied to selection tokens) |
 | Impersonal permissive propensity, invariant | contingent | no | no intrinsic fact (clause 6) | #555's non-contrastive price, identical to the classical row |
 | Impersonal propensity with a varying outcome state | contingent | no | the outcome state | as the varying personal selection |
@@ -606,8 +614,9 @@ pay identical prices, and the necessitarian rows pay identical prices.
 - The relation-of-reason account avoids collapse at #555's price: a contingent
   fact whose intrinsic reason neither strictly suffices nor discriminates. At the
   level of the formal account it is the same price an impersonal permissive
-  account pays (clause 1 applies verbatim); lane P's descriptive commitment is
-  extra on the personal side, and whether it is a defect stays open (A above).
+  account pays (clause 1 applies verbatim); lane P holds that an extra
+  commitment falls on the personal side only; this lane assesses it as
+  descriptive, and whether it is a defect stays open (A above).
   The classical side does pay here, as the table's third row shows.
 - The personal case's tested profile premises do not force collapse (clause 3).
   They do force the classical root off the real-decree reading (#2174 N via
@@ -640,10 +649,10 @@ lane; it pays the classical root's price.
 2. Add lane E's EM, LE and E to the joint model once #2174 is on main; this
    needs an ESSENCE_5/ESSENCE_6 bridge, since lane E's EM is stated over
    ESSENCE_6. Rewrite clause 7 to call lane P's theorem once it lands.
-5. Warrant, or rejection, for the carriage bridge `OrientationInNatureCarried`.
-3. Model `0050b6ed` (power for the joint absence of actual contingents) on the
+3. Warrant, or rejection, for the carriage bridge `OrientationInNatureCarried`.
+4. Model `0050b6ed` (power for the joint absence of actual contingents) on the
    `CausalityFrame` overlay together with the relation-of-reason account.
-4. A route-wide sweep for necessitating PSR premises on routes to `66aecdd7`.
+5. A route-wide sweep for necessitating PSR premises on routes to `66aecdd7`.
 
 **Pre-report self-checks.** (1) Relocation probe: under essence grounding
 necessity the preservation premise is the mirror image's possibility (clause 9);
@@ -672,9 +681,28 @@ overlay.
 
 **Review state.** The independent semantic challenge of `d7aef0e32` accepted
 the Lean and every type match, and did not accept the assessment (six P1, seven
-P2): the load of the mirror argument (◇mirror), parity violation under P, the
-missing ESSENCE_5-to-token bridge for clause 7, clause 1 presented as a cost,
-lane P's asymmetry mischaracterized, and "coextensive/only" overstated. The
-repairs above answer each; adopted review probes are `pres_iff_mirrorPossible`
-and `rootAbilityForced`, and the restored-potency row is in the certificate. A
-targeted re-check is outstanding.
+P2). Its findings, as reconstructed here:
+
+- the mirror argument's load is the mirror world's possibility (◇mirror), not
+  preservation as a separate warrant (repaired: `pres_iff_mirrorPossible`,
+  fork clause 9);
+- parity fails under the plain reflection P (weak interaction), so σ is read as
+  CPT conjugation (repaired: P/CPT distinction in the premises and table);
+- clause 7 reached no root nature without an ESSENCE_5-to-token bridge
+  (repaired: open bridge `OrientationInNatureCarried`, fork clause 10);
+- fork clause 1 was presented as a cost although it restates collapse with
+  essence-grounded possibility (repaired: recorded as a restatement);
+- lane P's asymmetry was mischaracterized (repaired above; finished at the
+  re-check);
+- "coextensive" and "only" overstated what the certificate ranges over
+  (repaired: other extrinsic facts are not ranged over);
+- creature potency was missing from the joint model (repaired: `rrCanBe`,
+  `rrPotency`, `rootAbilityForced`).
+
+The targeted re-check of `4d89b861d` found two P1s in the
+`RelationOfReasonCertificate` docstring ("only an extrinsic fact"; "every decree
+the root has"), lane P's claim still understated as "descriptive", an uncertified
+"only" in the relocation sentence, and five P2s (the carriage bridge ranges over
+every being; a stale `EssenceGroundedWorldPossibility` docstring; a duplicated
+sentence; gap numbering; "not recoverable" without the other four premises). All
+are repaired in the following commit.
