@@ -1,0 +1,10 @@
+{
+  "id": "aa0c1283-2ff4-43d5-bd10-506a9e882b31",
+  "label": "Test by ExplanatoryClosure.certificate (9acbdc2b)",
+  "subject_kind": "result",
+  "subject_id": "f85ac952-c629-597c-b903-741815744b9a",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "9acbdc2b-8a51-5bd1-aa9c-3b42eca37467",
+  "note": "In the populated all-on scenario of family .cycle, the exercised group for target d includes enabler p. A closed account by exercised records exists. ReasonClosed would place both p and its reason q in the account. They are contingent there and agree across all admitted scenarios, so that reason violates the noncopy clause."
+}

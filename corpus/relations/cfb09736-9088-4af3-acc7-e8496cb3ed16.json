@@ -1,0 +1,10 @@
+{
+  "id": "cfb09736-9088-4af3-acc7-e8496cb3ed16",
+  "label": "Test by S4.ScopeBoundary.checks (1b1462e6)",
+  "subject_kind": "result",
+  "subject_id": "856628fa-fae0-50bf-adbf-0663a5ae5376",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "1b1462e6-c285-448c-87e2-3053bc05a341",
+  "note": "In `pockets true`, `.root` accesses `.right` and the collapsed singleton `.left`, while `.right` cannot access `.left`. This falsifies `EuclideanAt` at `.root`. Full-predicate collapse is possible from `.root`, but `.right` and `.twin` see only their own noncollapsed pair. Thus `◇MC` holds at `.root` and `□◇MC` fails there for full-predicate collapse. The fixed-language row satisfies `□◇MC`."
+}

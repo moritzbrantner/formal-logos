@@ -9,7 +9,7 @@
   ],
   "kind": "derivation",
   "outcome": "succeeded",
-  "summary": "Applied one set of modal and coverage tests to a brute terminus, a necessary ground, a contingent law, an unexplained whole, necessary stops and a stop-free domain, and tested the owner's no-brute-indispensable-foundation norm. Findings: two inconsistent cores with deletions; a fork for a terminal fact doing work on a contingent truth (brute, contingent self-reason, or noncontingent with nonnecessitating work); in the named models the necessary ground fails necessitating work, ground false fails unrestricted coverage, ground true passes it by a self-reason, and the target copy of ground false also has that self-reason. Rejected: reading brute as lacking evidence (the norm's verdict and support vary independently); treating the norm as excluding brute truths (twin roots and an isolated brute fact satisfy it); a bare preference for more explained facts (the target copy gains under it); reading WorkNecessitates as the right contrastive standard (no such claim is certified: non-necessitating and hyperintensional accounts reject it). Classification: no internal inconsistency of any rival was found; the cores are conditional constraints whose members are all open, and each survivor pays a stated cost it may knowingly accept. Not attempted or open: item 4 of the owner follow-up, a specific source-supported rational preference principle; no source was read, so nothing is attributed. Not modeled: personal agency, stability of Humean laws over time, joint rather than alternative reasons, actual-world designation (#751).",
+  "summary": "Applied one set of modal and coverage tests to a brute terminus, a necessary ground, a contingent law, an unexplained whole, necessary stops and a stop-free domain, and tested the owner's no-brute-indispensable-foundation norm. Findings: two inconsistent cores with deletions; a fork for a terminal fact doing work on a contingent truth (brute, contingent self-reason, or noncontingent with nonnecessitating work); in the named models the necessary ground fails necessitating work, ground false fails unrestricted coverage, ground true passes it by a self-reason, and the target copy of ground false also has that self-reason. Rejected: reading brute as lacking evidence (the norm's verdict and support vary independently); treating the norm as excluding brute truths (twin roots and an isolated brute fact satisfy it); a bare preference for more explained facts (the target copy gains under it); reading WorkNecessitates as the right contrastive standard (no such claim is certified: non-necessitating and hyperintensional accounts reject it). Classification: no internal inconsistency of any rival was found; the cores are conditional constraints whose members are all open, and each survivor pays a stated cost it may knowingly accept. Not attempted or open: item 4 of the owner follow-up, a specific source-supported rational preference principle; no source was read, so nothing is attributed. Not modeled: personal agency, stability of Humean laws over time, joint rather than alternative reasons, actual-world designation (#751).\n\nCuration pass 2, lane D batch 3 (#2103, 2026-11-27). 288f9cef tests baf22110. Omit contingency of the supplied target true at false. In necessaryStop both facts hold at both worlds, and false is the explanation for true. SingleStop, factivity, necessitation, well-foundedness of the reason relation at false, and NoBruteFoundation all hold in this fact arena. 0b57c4fd tests baf22110. Omit contingency of the supplied fact c in the first stopping core. Every fact in necessaryStop is true in both accessible worlds from false, so any supplied c fails that premise. The other premises NoBrute at false, factivity, necessitation and well-founded reasons at false hold.",
   "blocker": "No independent justification for either norm, for necessitation as a requirement on reasons, or for a principled line for self-reasons is certified. A source-supported preference principle remains open (#750 owns the adequacy norm).",
   "evidence": [
     "0b57c4fd-2ac3-5953-9607-92a7defb8fa2",
@@ -18,5 +18,15 @@
     "9d1bdcc3-732f-5188-bfb2-5b913322b1c8",
     "22829a6d-116c-5edc-9b4e-16ada04fc7ee",
     "PR-808"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-27",
+      "pr": "PR-2136"
+    }
   ]
 }

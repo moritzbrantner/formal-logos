@@ -1,0 +1,9 @@
+{
+  "id": "33a61d37-01ea-4c9d-97b7-c27700e69ded",
+  "label": "Supplied-profile counterfactual truth and internal acceptance",
+  "term": "supplied-profile counterfactual truth and internal acceptance",
+  "definition": "The frame fixes one content in a supplied attitude-profile truth family, selects changed-approval alternatives, and gives separate assertion and licensing predicates for the counterfactual sentence. Counterfactual holds when the content holds at the designated actual profile and at every selected alternative. InternalAcceptance holds when the practice asserts and licenses that sentence at the actual profile.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Metaethics.InternalCounterfactual.Frame",
+  "note": "The two tests separate truth of the explicit-profile candidate from internal acceptance. Application requires evidence for the changed-approval selection and the assertion and licensing interpretation of the practice. Closest-world truth, ontic independence and the source reading are separate commitments."
+}
