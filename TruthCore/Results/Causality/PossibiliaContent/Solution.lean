@@ -171,7 +171,7 @@ restricted to the route, is strictly stronger than the root criterion given them
 (`rootCriterionWithoutConceptualism`). -/
 
 /-- The root criterion implies the weakened existential form. -/
-theorem rootCriterionGivesRestrictedConceptualism {W B D S X Z C : Type}
+theorem rootCriterionGivesExistentialStandInApprehension {W B D S X Z C : Type}
     (m : Profile W B) (w : W) (Has : B → D → Prop)
     (favours : TruthCore.Causality.GoodFavouring.Profile S X → D)
     (good : S → X → X → Prop) (fitOf : S → Z) (Present : S → X → Prop)
@@ -185,7 +185,7 @@ theorem rootCriterionGivesRestrictedConceptualism {W B D S X Z C : Type}
 
 /-- The weakened existential form with the other premises (minus the
 conceptualist and content premises) gives the root criterion. -/
-theorem restrictedConceptualismGivesRootCriterion {W B D S X Z C : Type}
+theorem existentialStandInApprehensionGivesRootCriterion {W B D S X Z C : Type}
     (m : Profile W B) (w : W) (Has : B → D → Prop)
     (favours : TruthCore.Causality.GoodFavouring.Profile S X → D)
     (good : S → X → X → Prop) (fitOf : S → Z) (Present : S → X → Prop)

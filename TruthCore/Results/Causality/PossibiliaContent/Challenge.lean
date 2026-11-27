@@ -72,10 +72,11 @@ theorem actualRootsApprehendFromRootCriterion {W B D S X Z C : Type}
 
 /-! ## Lean-only: relocation probe
 
-The conceptualist premise restricted to the root route
-(`NonRealStandInYieldsApprehension`) is equivalent to the root criterion given
-the other premises; the general premise is strictly stronger than the root
-criterion given them (`rootCriterionWithoutConceptualism`). -/
+Given the other premises, the root criterion is equivalent to the weakened
+existential form `NonRealStandInYieldsApprehension` (some apprehended content
+about some candidate, not the stand-in itself). The conceptualist premise, even
+restricted to the route, is strictly stronger than the root criterion given them
+(`rootCriterionWithoutConceptualism`). -/
 
 /-! ## Controls -/
 
@@ -95,3 +96,4 @@ theorem rootCriterionWithoutConceptualism : RootCriterionWithoutConceptualism :=
   sorry
 
 end TruthCore.Results.Causality.PossibiliaContent
+

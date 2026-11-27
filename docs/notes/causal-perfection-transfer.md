@@ -6834,8 +6834,8 @@ before production. That sibling and its bridge are not registered (next test
 
 **Relocation probe** (pre-report self-check 1).
 
-- `rootCriterionGivesRestrictedConceptualism` and
-  `restrictedConceptualismGivesRootCriterion` (Lean-only): given the other
+- `rootCriterionGivesExistentialStandInApprehension` and
+  `existentialStandInApprehensionGivesRootCriterion` (Lean-only): given the other
   premises, the root criterion is equivalent to a *weakened existential form*,
   `NonRealStandInYieldsApprehension`. That form says that if an actual root
   with a good-general favouring has a non-real contained stand-in of a
@@ -6920,8 +6920,9 @@ representations, as the instances on the powers side are carried by real
 powers. So it is no asymmetry at a simple root. This verdict depends on the
 analyst's assessment that human non-real plurality is always carried by plural
 real representations; a human act with several non-real objects and no plural
-real representations would be an established personal instance and would
-break the parity (next test 7). Besides, A4 can take the template reading and
+real representations would give the personal side an instance A4 lacks,
+while both objection rows still stand (next test 7; the A4 counterpart is an
+uncontested mind-independent non-real plurality, which E did not find). Besides, A4 can take the template reading and
 deny aboutness. That costs A4 the content premise. A possible further price is
 recorded, not established: the template's counterfactual matching is itself a
 non-factive standing for non-present candidates, and if it is aboutness under
@@ -7115,8 +7116,11 @@ registered. A1's price at `65805e5a` remains conditional on it.
    the content premise.
 7. *A human act with several non-real objects.* Is there one human act with
    several non-real objects that is not carried by plural real
-   representations? An instance would be an established personal precedent
-   and would break the parity in D.
+   representations? An instance would be an established personal precedent:
+   it would give the personal side an instance A4 lacks, while both objection
+   rows of D still stand. The A4 counterpart is an uncontested
+   mind-independent non-real plurality in any bearer; E found none outside
+   contested Scotist formalities.
 
 **Review record.** An independent semantic challenge of
 `ad04834f7..95077bd33` ran after delivery. Its itemized findings were not
@@ -7187,6 +7191,14 @@ one point (P1). All six are repaired in the commit after `36d6d8fbb`:
 6. *P2: this review record* is updated.
 
 No Lean statement or proof changed in this round.
+
+A coordinator re-check of `fb3805453` accepted these repairs and found
+residues, fixed in the following commit. The Lean-only probe theorems are
+renamed `rootCriterionGivesExistentialStandInApprehension` and
+`existentialStandInApprehensionGivesRootCriterion`. The attempt's blocker marks
+its instance claim as the analyst's assessment. Next test 7 says what an
+instance would change, and names the A4 counterpart. The Challenge comment for
+the relocation probe is regenerated; no theorem statement changed.
 
 [Attempt record](../../corpus/attempts/0d8b9153-ad65-48a3-be6a-478612f0e2a1.json)
 
