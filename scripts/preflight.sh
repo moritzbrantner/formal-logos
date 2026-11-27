@@ -55,6 +55,8 @@ step "corpus check" target/release/truth check
 step "attribution self-check" target/release/truth attribution-check --base "$base"
 step "connectivity gate (new statements join the root component or record a connection_plan)" \
   target/release/truth connectivity --base "$base"
+step "placement gate (new results reach the root, are placed, or record a connection_plan)" \
+  target/release/truth orphans --base "$base" --gate
 step "batch specs regenerate their records" python3 scripts/argument_batch.py records --check specs/*.toml
 step "bundle audit" python3 scripts/bundle_audit.py
 step "generated docs tables" python3 scripts/docs_index.py

@@ -1,0 +1,10 @@
+{
+  "id": "a0c28bf9-4378-4532-acc9-5c5c075df4fb",
+  "label": "Test by UnderivedRootRoute.underivedRouteControls (56f68b40)",
+  "subject_kind": "result",
+  "subject_id": "eb7f5423-fec4-590a-97dc-73ff632c7f79",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "56f68b40-9737-59a0-8cac-5610980a1547",
+  "note": "Omit inhabitedness from the underived-root bundle. The one-world empty carrier satisfies the other four nonlogical inputs, with no bearer available to witness an underived root."
+}

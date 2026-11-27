@@ -1,0 +1,11 @@
+{
+  "id": "0bccf9e4-eb36-41e7-ae46-f12d335138cf",
+  "label": "No PER_SE_5 esse regress from SERIES_OF_CAUSES_4 and the efficiency bridge",
+  "argument_id": "046db269-23b9-4a72-b935-9cbdfe25d3e9",
+  "challenge_module": "TruthCore.Results.Causality.ExistentialRegressConnection.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ExistentialRegressConnection.Solution",
+  "theorem": "TruthCore.Results.Causality.ExistentialRegressConnection.actualRegressFromPresentEfficientRegress",
+  "comparator_config": "results/0bccf9e4-eb36-41e7-ae46-f12d335138cf/comparator.json",
+  "status": "solution-present",
+  "description": "The explicitly supplied efficiency bridge maps each distinct mode-unspecified actual esse cause to a present efficient cause at esse. Keep the given AsCaused conjunct to get a SERIES_OF_CAUSES_4 edge. The accessibility on that relation gives accessibility along its PER_SE_5 subrelation. The SERIES_OF_CAUSES_4 premise may be assumed directly or obtained through the SERIES_OF_CAUSES_3 inclusion. Its existing derivation from the target PER_SE_5 regress cannot provide independent support for that target."
+}

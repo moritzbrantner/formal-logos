@@ -1,0 +1,11 @@
+{
+  "id": "383cd59b-2244-4dc0-a5c4-a3dd4c610b72",
+  "label": "The necessary classical GOD_4 root from positive attributes and pure actuality",
+  "argument_id": "c51dcda1-7764-4e16-81ce-117057919e70",
+  "challenge_module": "TruthCore.Results.Causality.NecessaryFirstAttributeConnection.Challenge",
+  "solution_module": "TruthCore.Results.Causality.NecessaryFirstAttributeConnection.Solution",
+  "theorem": "TruthCore.Results.Causality.NecessaryFirstAttributeConnection.classicalRootFromFirstAndPositive",
+  "comparator_config": "results/383cd59b-2244-4dc0-a5c4-a3dd4c610b72/comparator.json",
+  "status": "solution-present",
+  "description": "On one profile at one world, the positive root's uniqueness among actual roots identifies it with the potency-free first being. Use that being's existing PureAct proof for immutability and eternity. The verified maximum-equals-root lemma supplies the nominal description's uniqueness condition under the listed causal and actuality premises. The full nominal bridge names this root GOD_4, and global GOD_4 unity and the explicit sufficiency map give the corresponding remaining field. Neither uniqueness of all necessary beings nor an intrinsic interpretation of the positive profile follows."
+}

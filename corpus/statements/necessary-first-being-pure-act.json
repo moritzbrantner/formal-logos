@@ -1,6 +1,6 @@
 {
   "id": "593d7307-c8e1-5863-9776-a26cfe09d20c",
-  "label": "Some n is an actual concretum at w, has no ACTUAL_CONCRETE_GROUND_1 under the selected relation…",
+  "label": "Some n is an actual concretum at w, has no ACTUAL_CONCRETE_GROUND_1 under the selected relation\u2026",
   "legacy_id": "STMT-NECESSARY-FIRST-BEING-PURE-ACT",
   "paraphrase": "Some n is an actual concretum at w, has no actual concrete ground under the selected relation there, exists at each world accessible from w, and has no distinct simply-prior predecessor. This same n is in potency in no supplied respect (the existing PureAct predicate), without asserting any positive InAct perfection or completeness of the respect domain. No uniqueness, maximum, God identification, universal causality or other-world rootness is asserted.",
   "lean_declaration": "TruthCore.Causality.NecessaryFirstBeing.NecessaryActualFirstPureActAt",
@@ -8,18 +8,12 @@
     "c2e13bb8-679a-55ea-8754-ae77d345bcd2",
     "25e19d5a-5cdf-5916-a888-f6a0ce970f11",
     "1d9aa4d9-18cc-5930-95fb-5af65e32c0f8",
-    "c57e2682-08e6-527e-950f-0fa0a7ff11ef",
-    "c86cc1d1-c09f-5296-8ab9-2e5ddf217dce",
     "beb654a7-e204-5f4c-a7b4-45e886ba7109",
-    "1b8baf77-84fa-5513-a138-7fa14840dd87",
-    "c2c8b139-fb8a-5ce2-8add-ec55a60d8b0b",
     "a49e4cf1-ca4f-5519-9724-892af257cedb",
-    "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168",
-    "9f874532-f37e-590b-bec9-a9affb2762ac",
     "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
-    "baddf770-36bf-542f-bb3c-2297342d5452",
-    "e1ff44df-ed97-5990-8424-1abd720f23ea",
-    "f8948e28-b13a-5244-95f1-41a05cd4fff2"
+    "52352824-6be9-53c6-83d4-82fed9a08cbb",
+    "a1b2e330-388f-4120-bc5c-969642317792",
+    "3ea2762f-1a85-5059-b4e7-d29f192b16b6"
   ],
   "disambiguation_ids": [
     "9403807f-f7d4-5ce8-a8ba-ca53ed932959",
@@ -35,6 +29,12 @@
     "4b02d34a-9226-5009-9ac2-3b52f4222b21",
     "83264cf5-01fe-52fc-9a00-eeb024f6496e",
     "1795a62e-f78b-5f5b-94e7-9e7490824811",
-    "002f42cb-3015-5644-80b3-d408538394e6"
-  ]
+    "002f42cb-3015-5644-80b3-d408538394e6",
+    "508617ab-cf24-5f3b-a387-64b3991359ec"
+  ],
+  "connection_plan": {
+    "target_statement_id": "da3facd6-008e-5e76-92fa-677350c2dfdb",
+    "missing_bridge": "For assembly 930c6d8c, establish the same first mover to be an actual, first, necessary and potency-free root on the selected profile. The existing projection can then carry that closure onward to the same-root classical attribute composition.",
+    "blocker": "The input of this projection is still open. Other producers of the same conclusion supply the necessary first root conditionally, without relying on this projection."
+  }
 }

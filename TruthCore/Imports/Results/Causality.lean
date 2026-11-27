@@ -177,6 +177,7 @@ public import TruthCore.Results.Causality.ExerciseContribution.Solution
 public import TruthCore.Results.Causality.ExistenceAccountIntegration.Solution
 public import TruthCore.Results.Causality.ExistenceSenseRoute.Solution
 public import TruthCore.Results.Causality.ExistentialPriorityOrder.Solution
+public import TruthCore.Results.Causality.ExistentialRegressConnection.Solution
 public import TruthCore.Results.Causality.ExistentialSelfActualization.Solution
 public import TruthCore.Results.Causality.ExistsSenseMeaning.Solution
 public import TruthCore.Results.Causality.ExternalCandidateNecessity.Solution
@@ -259,6 +260,7 @@ public import TruthCore.Results.Causality.ModalNecessaryBeingActuality.Solution
 public import TruthCore.Results.Causality.ModalSenseSupport.Solution
 public import TruthCore.Results.Causality.MotionMapsBatch1.Solution
 public import TruthCore.Results.Causality.MotionMoverFork.Solution
+public import TruthCore.Results.Causality.MutualSupportAsymmetry.Solution
 public import TruthCore.Results.Causality.NamingVeracityBatch1.Solution
 public import TruthCore.Results.Causality.NarDerivation.Solution
 public import TruthCore.Results.Causality.NarGrafts.Solution
@@ -284,8 +286,10 @@ public import TruthCore.Results.Causality.NecessaryConcreteFromUniqueRoot.Soluti
 public import TruthCore.Results.Causality.NecessaryConcreteRouteBridge.Solution
 public import TruthCore.Results.Causality.NecessaryConcreteUnderived.Solution
 public import TruthCore.Results.Causality.NecessaryConcreteUnderivedFromNecessity.Solution
+public import TruthCore.Results.Causality.NecessaryFirstAttributeConnection.Solution
 public import TruthCore.Results.Causality.NecessaryFirstAttributes.Solution
 public import TruthCore.Results.Causality.NecessaryFirstBeing.Solution
+public import TruthCore.Results.Causality.NecessaryNegativeAttributeConnection.Solution
 public import TruthCore.Results.Causality.NecessaryRootFork.Solution
 public import TruthCore.Results.Causality.NecessaryRootGodExistence.Reduced.Solution
 public import TruthCore.Results.Causality.NecessaryRootGodExistence.Solution
@@ -341,6 +345,7 @@ public import TruthCore.Results.Causality.ProductiveStore.Solution
 public import TruthCore.Results.Causality.ProductiveSustained.Solution
 public import TruthCore.Results.Causality.ProtectiveProcess.Solution
 public import TruthCore.Results.Causality.PureActRoot.Solution
+public import TruthCore.Results.Causality.PureActRootImmutability.Solution
 public import TruthCore.Results.Causality.PureActThisness.Solution
 public import TruthCore.Results.Causality.PureIndiscernibility.Solution
 public import TruthCore.Results.Causality.Q44EssentialSource.Solution
@@ -365,6 +370,7 @@ public import TruthCore.Results.Causality.RelaySourceRecognition.Solution
 public import TruthCore.Results.Causality.RestatedPremises.Solution
 public import TruthCore.Results.Causality.RivalRefutationsRound2.Solution
 public import TruthCore.Results.Causality.RootEssenceIdentity.Solution
+public import TruthCore.Results.Causality.RootGroundComposition.Solution
 public import TruthCore.Results.Causality.RootIntellectWill.Solution
 public import TruthCore.Results.Causality.RootIntellectWillOmission.Solution
 public import TruthCore.Results.Causality.RootIntellectWillPureAct.Solution

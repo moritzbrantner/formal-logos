@@ -188,6 +188,7 @@ public import TruthCore.Causality.ModalNecessaryBeingActuality
 public import TruthCore.Causality.ModalSenseSupport
 public import TruthCore.Causality.MotionMapsBatch1
 public import TruthCore.Causality.MotionMoverFork
+public import TruthCore.Causality.MutualSupportAsymmetry
 public import TruthCore.Causality.NamedPotentialCauser
 public import TruthCore.Causality.NamingVeracityBatch1
 public import TruthCore.Causality.NarDerivation
@@ -274,6 +275,7 @@ public import TruthCore.Causality.RelaySourceRecognition
 public import TruthCore.Causality.RestatedPremises
 public import TruthCore.Causality.RivalRefutationsRound2
 public import TruthCore.Causality.RootEssenceIdentity
+public import TruthCore.Causality.RootGroundComposition
 public import TruthCore.Causality.RootIntellectWill
 public import TruthCore.Causality.RootIntellectWillOmission
 public import TruthCore.Causality.RootIntellectWillPureAct

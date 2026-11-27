@@ -1,0 +1,15 @@
+[batch]
+vocab = "TruthCore.Causality.DependenceOrderSenses"
+results = "TruthCore.Results.Causality.ExistentialRegressConnection"
+
+[[argument]]
+id = "No PER_SE_5 esse regress from SERIES_OF_CAUSES_4 and the efficiency bridge"
+theorem = "actualRegressFromPresentEfficientRegress"
+premises = ["87aa978c-f33c-4fc6-8881-5ff6484f8a7a", "e0088de9-28eb-533c-a1e7-662f780cc0e2"]
+conclusion = "ea251340-c89e-4535-a00f-6323cd8403a5"
+disambiguations = ["57f80020-fa6f-5b69-be58-b4cf95b7226f"]
+sense_bridges = [
+  { term = "UNITING_CAUSE_VERSUS_EFFICIENT_CAUSE", from = "UNITING_CAUSE_VERSUS_EFFICIENT_CAUSE_3", to = "UNITING_CAUSE_VERSUS_EFFICIENT_CAUSE_2", statement_id = "e0088de9-28eb-533c-a1e7-662f780cc0e2" },
+]
+rule = "Accessibility transfers along an edge inclusion"
+meaning = "The explicitly supplied efficiency bridge maps each distinct mode-unspecified actual esse cause to a present efficient cause at esse. Keep the given AsCaused conjunct to get a SERIES_OF_CAUSES_4 edge. The accessibility on that relation gives accessibility along its PER_SE_5 subrelation. The SERIES_OF_CAUSES_4 premise may be assumed directly or obtained through the SERIES_OF_CAUSES_3 inclusion. Its existing derivation from the target PER_SE_5 regress cannot provide independent support for that target."

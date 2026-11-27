@@ -14,6 +14,7 @@ id = "Begun coming-to-be without a founded past or a necessary individual, in a 
 lean = "Control.Certificate"
 paraphrase = "Closed mathematical control, every individual counted concrete, two mutually accessible worlds, integer individuals, times WithBot Int (a first moment followed by moments with no earliest one, the order-theoretic feature of continuous time with a beginning). At the selected world individual n exists and is present at every integer time from n on; nothing is present at the first moment; nothing exists at the other world. In this one interpretation: begun coming-to-be is possible; founded coming-to-be is not; presence gives existence; every contingent individual has an existing individual, its predecessor, related to it by the control's grounding relation and present at a strictly earlier moment whenever it is present; no concrete individual is necessary at either world; and inert emptiness fails. Separately, for non-negative rational times (continuous time with a beginning): every moment's past has a beginning, and no moment after 0 has a founded past."
 definitions = ["History of begun coming-to-be", "Past of a moment with a beginning", "History of founded coming-to-be", "Inert emptiness: a concrete-empty moment is followed only by concrete-empty moments", "DEF-COUNT-TEMPORAL-HISTORY-PRESENCE", "DEF-KANT-MODAL-CONTINGENCY"]
+disambiguations = ["DISAMB-CAUSAL-SERIES", "DISAMB-CONCRETE-ABSTRACT-CRITERIA"]
 
 [[argument]]
 id = "Founded coming-to-be gives begun coming-to-be"
@@ -71,3 +72,13 @@ predicate = "alternative_to"
 object_kind = "statement"
 object_id = "Possibly, every contingent concrete thing comes to be in a history whose past has a beginning"
 note = "Not the negation of the premise: the two are incompatible by the checked derivation of the possible contingent-free past, and both can fail together. Neither is established."
+
+[[relation]]
+id = "c3e6ad3b-28e4-4cb2-aa78-4342a2a2ed27"
+label = "Test by BegunComingToBe.controls (78a44599)"
+subject_kind = "result"
+subject_id = "dac51b9f-5ba2-470f-aca4-d0bba20c73a9"
+predicate = "tests"
+object_kind = "statement"
+object_id = "78a44599-dc67-4d1f-988a-ed84b8c517f9"
+note = "In the WithBot Int history, at true the empty bottom precedes every integer time. A contingent bearer is present at a moment with a begun past and all contingents come to be, but integer moments above bottom admit descending chains and no accessible history satisfies founded coming-to-be."

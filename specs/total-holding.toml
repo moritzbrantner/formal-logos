@@ -60,6 +60,11 @@ lean = "TotalHolderOfLackableActGivesBeing"
 paraphrase = "Conclusion: if z totally holds x in r (definition edca52e4-f224-491d-ac45-5816fac1a9fd), x is in act in r and x could lack that act (Lackability.CanLack, definition 56b438a0-7fcc-4dd5-916b-1d2e2162310b), then z presently actualizes x as to being (Holding.ActualizesNow z x esse, the holding relation read at esse). So under the C* support bundle a holder that does not presently actualize the held thing as to being, such as a hook holding a lamp, is not a total holder of the held thing's lackable act: whatever presently actualizes it as to being co-holds that act. It concerns lackable acts only. 'Gives being' here is the holding relation at esse; identifying such a z with a giver of being in the timed sense of the esse-root routes (BeingGiving.GivesAt) would need the converse of clause (c) of the present-moment reading dedc431f-4f04-40e9-b519-3243d1874c18, which is not formulated."
 definitions = ["edca52e4-f224-491d-ac45-5816fac1a9fd", "56b438a0-7fcc-4dd5-916b-1d2e2162310b", "6ab9a832-6b0f-47ac-9f08-144444bf1cb1", "DEF-ESSE", "DEF-ACT"]
 
+[statement.connection_plan]
+target_statement_id = "c71c068c-bbae-5ed5-a99d-70b155c8d239"
+missing_bridge = "Show that each actual contingent concretum has a total holder of some currently possessed lackable act. Apply the result to that holder and translate its giving at esse into actual concrete grounding at the same world."
+blocker = "Holding in a respect alone does not supply total holding. The latter excludes a co-holder and reverse holding. The existential scope of total holding and the same-holder grounding calibration both remain open."
+
 [[statement]]
 id = "Whatever is in POTENCY_1 in some respect is in act as to being and could lack being"
 lean = "PotencyBringsLackableBeing"
@@ -73,6 +78,11 @@ lean = "UnheldInBeingIsPureAct"
 paraphrase = "Conclusion: whatever is not MOTION_3 held as to being (definition ea1904bc-bdfa-4835-a4a7-8545c5221e2e at the respect esse: it is not the case both that it is in act as to being and that something other than it presently actualizes it as to being) is in POTENCY_1 in no respect (PureAct of adopted potency, DEF-PURE-ACT, DEF-POTENCY). The antecedent also holds of whatever in the domain is not in act as to being, so the claim covers those items too. A fortiori a holder unheld in every respect is PURE_ACT_1. It is a claim about every item of the domain, not only about holders."
 definitions = ["ea1904bc-bdfa-4835-a4a7-8545c5221e2e", "DEF-PURE-ACT", "DEF-POTENCY", "DEF-ESSE"]
 disambiguations = ["a59fd0ac-f276-528d-8dc3-c3eddd331ac7", "508617ab-cf24-5f3b-a387-64b3991359ec", "b1640e51-d7d4-5a80-9992-29fa1ded8048"]
+
+[statement.connection_plan]
+target_statement_id = "da3facd6-008e-5e76-92fa-677350c2dfdb"
+missing_bridge = "For the selected positive necessary root, show that holding at esse would give an incoming selected actual concrete ground and align its InAct and CanBe fields with the potency reading in the attribute route. Then use its lack of incoming ground to obtain PureAct at that root."
+blocker = "The untimed holding predicate supplies neither the world-local grounding calibration nor alignment of adopted potency with the independently supplied InPotency of the root attribute endpoint."
 
 [[statement]]
 id = "Total-holding controls: cards on a floor, co-held holder, unheld giver with a POTENCY_1"
