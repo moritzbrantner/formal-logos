@@ -1,0 +1,10 @@
+{
+  "id": "4f02d5d3-366f-4f33-b888-1713be88ae17",
+  "label": "Test by FinitePopulationCoverControls.checks (390ac3ab)",
+  "subject_kind": "result",
+  "subject_id": "a243e1b6-e217-55aa-80ba-a5fab5fc8324",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "390ac3ab-48ec-596e-9890-4d2364e81cf9",
+  "note": "Omit AccessibleSuccessor in the finite-cover route. The Unit world has no access edges and the individual carrier is Empty. Finite cover, absence amalgamation, and individual contingency all hold vacuously. The joint-absence conclusion still needs an accessible world, so it fails in this frame."
+}
