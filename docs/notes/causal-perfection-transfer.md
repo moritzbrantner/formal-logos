@@ -7090,11 +7090,11 @@ Two corollaries apply the law to each mode in the same way:
 | natural, D (D-directed nature) | `dNature` | end state (ad unum); not by the empty apprehension state | no | tracks D-realization exactly | misses c over d at `cBetter` |
 | rational, D (determined will) | `determinedWill` | full apprehension state | no | measured by the good (its kind's object), misses c over d at `cBetter` | misses c over d at `cBetter` |
 
-The last row of the grid adds the cognition criterion. With the good-tracking
-source it holds when the source apprehends (`appSource`) and fails when nothing
-is apprehended (`appNone`). The per-bearer bridge, the object premise and the
-value-sense verdicts take the same values in both good-tracking cells, because
-they read only the profile.
+The last conjunct of `appetiteGrid` adds the cognition criterion. With the
+good-tracking source it holds when the source apprehends (`appSource`) and fails
+when nothing is apprehended (`appNone`). The per-bearer and value-sense verdicts
+in the grid read only the profile, so they are the same in both good-tracking
+cells.
 
 Disclosures:
 
@@ -7116,8 +7116,8 @@ is apprehended (`appNone`), and the cognition criterion fails. The horn-A positi
 witness (`favouringControls` row 1, with `e2357adc` true) uses the same source,
 favouring `better` and purity assignment, so the purity of good-generality holds
 there as well. The two compiled facts are separate conjunctions about the same
-assignments. This is the model
-the brief asked for: a good-general natural appetite that satisfies purity.
+assignments. This is the model the lane's question asked for: a good-general
+natural appetite that satisfies purity.
 
 It does not weaken the purity route's conclusion. That conclusion is
 good-generality, and the model has it. It shows where the route stops: every
@@ -7139,7 +7139,7 @@ determination to one end.
 
 The countermodel is grid row 1. Drop determination to one end, and a natural
 state that records the candidates' full content fixes a good-general natural
-appetite. So the separation needs exactly that premise.
+appetite while the dichotomy holds. So the separation needs that premise.
 
 **Where determination to one end goes at a root.** For finite natural forms it
 is the classical datum: a form is this form, and its inclination is to this end
@@ -7157,7 +7157,8 @@ simple, unlimited root it is the point in dispute:
   - What it holds is that the root orders the candidates by those perfections
     *through understanding* (q.15 a.2). That is the claim `d1fb6414` states.
 - **The Fifth-Way family stops at the same point.** The knowing-director premise
-  `564ce19b` excludes natural appetite at a root with any object, D or the good.
+  `564ce19b`, with the premise that nothing directs a root, excludes noncognitive
+  tending at a root with any object, D or the good.
   That family's recorded obstacle, at first-source recognition `acc06edc`, is
   "why the final ordering … must be an end present as an object of thought
   rather than as a source's intrinsic directive nature"
@@ -7179,8 +7180,7 @@ D-rival at a root (C below). None of the four is derived here.
 **Symmetry on the rational side.** By the fixer law, a rational appetite is
 good-general only if its apprehension state carries the variation of value
 within a D-class. An apprehension state that consists only of a self-content,
-constant across the scenarios, does not. The wisdom
-route (`fd01e30c` → `c256d381` → `29818edd`) gives intellect as
+constant across the scenarios, does not. The wisdom route (`fd01e30c` → `c256d381` → `29818edd`) gives intellect as
 self-understanding. It does not by itself give a value-guiding apprehension of
 the candidates, and nothing here uses it as if it did.
 
