@@ -5710,7 +5710,7 @@ D-relative notions. The functions are the same.
 
 **A1. Requirement form.** Under one-favouring realization, a favouring fixed to
 content D and good-generality are never in one admissible profile. Read with
-the #2162 vocabulary, some member of that pair requires the lack of the other.
+the #2162 vocabulary (the sufficiency direction, contrapositively), some member of that pair requires the lack of some members of the pair.
 `exclusiveAlternativesNotBothPure` (Lean-only) gives the general form. Assume:
 
 - the sufficiency direction `ExclusionFreeAdmissible`;
@@ -5747,9 +5747,10 @@ motivate the criterion, and neither mentions purity:
 
 - a necessary root has a world-invariant profile, but what is selected varies
   across worlds if creation is contingent. A selection token in the profile
-  would make the selection necessary. This is the "varying exercise" branch of
-  the §60 fork, which the Lane 4 section counts once, as a price shared by
-  every root under (a) and (b).
+  would make the selection necessary. The Lane 4 section records this conflict
+  for the "varying exercise" branch of the §60 fork, on both sides alike. The
+  classical view takes the "invariant act, contingent terminus" branch, whose
+  selection price Lane 4 counts once, as shared by every root.
 - the criterion classifies an impersonal permissive propensity's selection
   among ties in the same way.
 
@@ -5778,7 +5779,7 @@ applied in one table by the same function.
 | triangle, exactly three sides | specification | no verdicts to refine; no verdict | no standard of correctness for a figure; no verdict | same |
 | will fixed on the good as such | specification | **restricted**: a standing physical tie-break strictly refines it without conflict (`refinementCondemnsGoodTracking`) | not restricted: it tracks the standard | restricted: unbacked at c over d at `cBetter` |
 | personal source's selection among ties | specification | not a profile; out of scope (A2) | out of scope (A2); a *standing* tie-break would be unbacked | same |
-| favouring fixed to D | specification under `3e6ae3e7` (exclusive); a compatible lack without it | restricted (the good-tracking profile refines it in genuine scenarios) | restricted if betterness varies within a D-class (`variationForcesLossOrArbitrariness`) | not restricted: it tracks the standard |
+| favouring fixed to D | specification under `3e6ae3e7` (exclusive); a compatible lack without it | restricted: in genuine scenarios the good-tracking profile has all its verdicts and one more, with no conflict (`standardRelativity`, `noConflictDNatureBetter`) | restricted if betterness varies within a D-class (`variationForcesLossOrArbitrariness`) | not restricted: it tracks the standard |
 | good-tracking favouring | specification | restricted (as row 3) | not restricted | restricted |
 
 Readings:
@@ -5789,11 +5790,13 @@ Readings:
   - With one-favouring realization, the D-favouring and good-general favouring
     are exclusive co-determinates, so (I) counts D-fixity as a mere
     specification.
-  - Without it, the D-root lacks a compatible favouring. That is case (iii) of
-    the trichotomy, and so the E premise (D below).
+  - Without it, if the family admits the D-root's profile together with
+    good-generality (as the row-7 family does), the D-root's lack of it is case
+    (iii) of the trichotomy, and so the E premise applies (D below).
   So under (I), horn A's two premises pull against each other.
 - **(R0)** fails the will case. It counts the good-tracking profile itself as
-  restricted, which would make `e2357adc`'s own subject impure. Adding
+  restricted, which would make the good-tracking favouring that horn A needs
+  impure. Adding
   discriminations is not more perfection unless they answer to the respect's
   standard. A thermometer that also responds to pressure is not a better
   thermometer.
@@ -5814,8 +5817,9 @@ Readings:
 knowing. That is why the one-domain knower is uncontroversial. For favouring,
 the standard is the disputed point.
 
-- The value standard is the content of ORIGINAL_FINALITY_2 (`0bbbf98c`) and of
-  the classical thesis that every inclination is toward its object under the
+- The value standard corresponds to ORIGINAL_FINALITY_2 (`0bbbf98c`), which
+  requires the origin's favouring to depend on goodness, and to the classical
+  thesis that every inclination is toward its object under the
   aspect of good. That thesis is navigation only, with attribution deferred.
 - The D standard is ORIGINAL_FINALITY_1, with the end content as the formal
   object. Under it, the goodness of the root's ends is not something its
@@ -5870,8 +5874,10 @@ The route does not use:
 - `3e6ae3e7`;
 - E.
 
-The variation premise is not an extra cost. It is the fourth member of
-`variationCore`, which horn A also needs, given its other three members.
+The variation premise is not an extra cost. Horn A's premises entail it:
+`hornAPremisesGiveVariation` (Lean-only) derives it from pure admissibility
+`ee287fd3`, the purity of good-generality and one-favouring realization, the
+other three members of `variationCore`.
 `actualRootHasOneFavouringFromStandard` (Lean-only) derives one favouring per
 actual root from the same bridges (see D).
 
@@ -5965,7 +5971,7 @@ knower's state is:
 - immutable;
 
 and some content is true at one time and false at another. That is impossible.
-`tenselessReading` (Comparator-free control) uses two times and contents
+`tenselessReading` (Lean-only control) uses two times and contents
 `now t` and `dated t t'`. A tenseless knower is immutable and veridical. For
 each tensed truth `now t` at t it knows `dated t t`, but it never knows any
 `now t`.
@@ -6020,8 +6026,10 @@ There are two readings of it:
 - **(R) Two really distinct favourings.** The root then has a good-general
   favouring token.
 
-Under either reading the cognition criterion `3b40009e` applies, because it
-quantifies over every favouring token. So row 7 with a good-tracking second
+Under (R) the cognition criterion `3b40009e`, which quantifies over every
+favouring token, applies to the good-tracking token. Under (Id) the root's one
+real favouring is good-general, so the criterion applies to it as soon as it is
+the bearer's favouring determination. So row 7 with a good-tracking second
 favouring does not help a *noncognitive* rival. A row-7 root with only the
 D-favouring is different: in the row-7 family, its lack of the good-tracking
 favouring and of good-generality is an unexplained absence, case (iii)
@@ -6066,9 +6074,9 @@ premises' effect on any exclusive family. The #2162 relocation verdict on
 
 | Profile | Value standard (OF_2) | D standard (OF_1) | Selection among ties |
 | --- | --- | --- | --- |
-| Personal root (good-tracking will) | unrestricted | restricted (unbacked at c over d) | contingent exercise, outside the profile |
-| Impersonal good-general nature (axiarchic) | unrestricted | restricted | outside the profile, if permissive |
-| Impersonal D-nature | restricted if value varies within a D-class | unrestricted | outside the profile, if permissive; none if categorical |
+| Personal root (good-tracking will) | unrestricted | restricted (unbacked at c over d) | a contingent exercise outside the profile |
+| Impersonal good-general nature (axiarchic) | unrestricted | restricted (unbacked at c over d) | a contingent exercise outside the profile |
+| Impersonal D-nature | restricted if value varies within a D-class | unrestricted | a contingent exercise among tied D-realizers, outside the profile |
 
 **Strongest standing rival and its price.** The D-nature that takes its end
 content as the measure of its favouring (ORIGINAL_FINALITY_1). Its prices:

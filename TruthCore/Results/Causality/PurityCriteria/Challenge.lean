@@ -40,23 +40,7 @@ theorem actualRootFavouringIsGoodGeneralFromStandard {W B T R D P S X Z : Type}
     ActualRootFavouringIsGoodGeneral m w Has favours good fitOf Present := by
   sorry
 
-/-- Lean-only. The two standard bridges already give one favouring per actual
-root: any two favouring determinations of an actual root are pure (RootPurity),
-so both make exactly the verdicts of `good`, so they name the same profile. This
-is a bearer-level counterpart of the uniqueness clause of one-favouring
-realization (`3e6ae3e7`), derived rather than assumed; it is not that
-statement, which concerns admissible profiles. A root with two distinct
-favourings (control row 7 of horn A) must deny one of the bridges. -/
-
 /-! ## Symmetric alternatives -/
-
-/-- Lean-only. The restriction principle applied to an intrinsic choice: if a
-root's choice of `a` were a real determination with an exclusive alternative `b`
-on a par in purity, then under the same premises no actual root could have it.
-Actual roots have only pure determinations (RootPurity), parity makes `tok b`
-pure too, and the two cannot both be pure. This hits a personal and an
-impersonal root alike; it does not touch a selection that is not a token of
-the root's profile. -/
 
 /-! ## D. Two favourings and their union -/
 
@@ -75,5 +59,14 @@ open TruthCore.Results.Causality.ImpersonalFoundationJoint
   (ggBetter dNatureFactors notGGdNature dNatureNeBetter factorsThroughNotGoodGeneral)
 open TruthCore.Causality.IntentionalExemplarExtension.Control (rootProfile)
 open TruthCore.Causality.RootPerfectionExclusion.Control (composite rep)
+
+theorem standardControls : StandardControls := by
+  sorry
+
+theorem standardRelativity : StandardRelativity := by
+  sorry
+
+theorem refinementCondemnsGoodTracking : RefinementCondemnsGoodTracking := by
+  sorry
 
 end TruthCore.Results.Causality.PurityCriteria

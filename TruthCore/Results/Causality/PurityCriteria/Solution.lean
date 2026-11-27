@@ -51,13 +51,10 @@ theorem actualRootFavouringIsGoodGeneralFromStandard {W B T R D P S X Z : Type}
   obtain ⟨s, x, y, ⟨hg, -, t, ht, hng, -⟩, hPres⟩ := hVaries
   exact ⟨s, x, y, ⟨hg, hGe s x y hg, t, ht, hng, fun h => hng (hLe t x y h)⟩, hPres⟩
 
-/-- Lean-only. The two standard bridges already give one favouring per actual
-root: any two favouring determinations of an actual root are pure (RootPurity),
-so both make exactly the verdicts of `good`, so they name the same profile. This
-is a bearer-level counterpart of the uniqueness clause of one-favouring
-realization (`3e6ae3e7`), derived rather than assumed; it is not that
-statement, which concerns admissible profiles. A root with two distinct
-favourings (control row 7 of horn A) must deny one of the bridges. -/
+/-- Lean-only. The two standard bridges give one favouring per actual root: two
+favouring determinations of an actual root are pure, so both track `good` and
+name the same profile. A bearer-level counterpart of the uniqueness clause of
+`3e6ae3e7`, derived, not that statement (which concerns admissible profiles). -/
 theorem actualRootHasOneFavouringFromStandard {W B T R D P S X : Type}
     (F : CausalityFrame W B T R) (m : Profile W B) (w : W)
     (Has : B → D → Prop) (Pure : D → Prop) (Composite : B → Prop) (essence esse : B → P)
@@ -77,6 +74,22 @@ theorem actualRootHasOneFavouringFromStandard {W B T R D P S X : Type}
       fun hg => (hEM (χ s x y)).elim id fun hn => (hLoss χ ⟨s, x, y, hg, hn⟩ hP).elim⟩
   funext s x y
   exact propext ((hTrack φ hφ s x y).trans (hTrack ψ hψ s x y).symm)
+
+/-- Lean-only. Horn A's premises entail the variation premise: pure admissibility,
+the purity of good-generality and one-favouring realization give a good-general
+profile, whose dependence on `good` is a variation witness for `good` itself. -/
+theorem hornAPremisesGiveVariation {D S X Z : Type} (Admissible : Set D → Prop)
+    (Pure : D → Prop) (favours : TruthCore.Causality.GoodFavouring.Profile S X → D)
+    (goodGen : D) (good : S → X → X → Prop) (fitOf : S → Z) (Present : S → X → Prop)
+    (hPureAdm : TruthCore.Causality.RootPerfectionExclusion.PureDeterminationsAdmissible
+      Admissible Pure)
+    (hPureGG : TruthCore.Causality.ImpersonalFoundationJoint.GoodGeneralityIsPure Pure goodGen)
+    (hOne : OneFavouringRealization Admissible favours goodGen good fitOf Present) :
+    BetternessVariesWithinEndClass good fitOf Present := by
+  obtain ⟨q, hq, hg⟩ := hPureAdm goodGen hPureGG
+  obtain ⟨ψ, -, hgg⟩ := hOne q hq
+  obtain ⟨s, x, y, ⟨hs, -, t, ht, hnt, -⟩, hPres⟩ := hgg hg
+  exact ⟨s, x, y, ⟨hs, hs, t, ht, hnt, hnt⟩, hPres⟩
 
 /-- Lean-only. If betterness varies within an end-realization class, every
 profile that factors through end-realization (a nature determined to its end
@@ -123,13 +136,10 @@ theorem exclusiveAlternativesNotBothPure {D A : Type} (Admissible : Set D → Pr
         · rw [Set.mem_singleton_iff.1 hd]; exact hb
   exact hab (hEx _ hAdm a b (by simp) (by simp))
 
-/-- Lean-only. The restriction principle applied to an intrinsic choice: if a
-root's choice of `a` were a real determination with an exclusive alternative `b`
-on a par in purity, then under the same premises no actual root could have it.
-Actual roots have only pure determinations (RootPurity), parity makes `tok b`
-pure too, and the two cannot both be pure. This hits a personal and an
-impersonal root alike; it does not touch a selection that is not a token of
-the root's profile. -/
+/-- Lean-only. An intrinsic choice token `tok a` with an exclusive alternative
+`tok b` on a par in purity is had by no actual root, under RootPurity and the
+requirement-form premises. It hits personal and impersonal roots alike and does
+not touch a selection that is not a token of the root's profile. -/
 theorem parAlternativeExcludedAtRoot {W B D P A : Type} (m : Profile W B) (w : W)
     (Admissible : Set D → Prop) (RequiresLack : D → Set D → Prop) (Has : B → D → Prop)
     (Pure : D → Prop) (Composite : B → Prop) (Prior : B → B → Prop) (essence esse : B → P)
