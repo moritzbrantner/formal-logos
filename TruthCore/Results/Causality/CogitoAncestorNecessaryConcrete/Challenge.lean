@@ -9,9 +9,9 @@ open TruthCore.Causality.CogitoNecessaryConcrete (NecessaryConcreteAncestorOfThi
 `NecessaryConcreteAt` on the same profile, world and occurrence data. The
 vocabulary lemma keeps the ancestor `x` and its concreteness, existence at `w`
 and `NecessaryAt` at `w`, and drops the bearer, episode and ancestry facts. -/
-theorem necessaryConcreteOfThinkerAncestor {W B Episode : Type} (m : Profile W B)
-    (Occurs : Episode → Prop) (Bears : B → Episode → Prop) (w : W)
-    (hAncestor : NecessaryConcreteAncestorOfThinker m Occurs Bears w) :
+theorem necessaryConcreteOfThinkerAncestor {W B Episode : Type} {m : Profile W B}
+    {Occurs : Episode → Prop} {Bears : B → Episode → Prop} {w : W}
+    (h : NecessaryConcreteAncestorOfThinker m Occurs Bears w) :
     NecessaryConcreteAt m w := by
   sorry
 

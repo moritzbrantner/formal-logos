@@ -13,11 +13,11 @@ open TruthCore.Causality.CogitoNecessaryConcrete (NecessaryConcreteAncestorOfThi
 `NecessaryConcreteAt` on the same profile, world and occurrence data. The
 vocabulary lemma keeps the ancestor `x` and its concreteness, existence at `w`
 and `NecessaryAt` at `w`, and drops the bearer, episode and ancestry facts. -/
-theorem necessaryConcreteOfThinkerAncestor {W B Episode : Type} (m : Profile W B)
-    (Occurs : Episode → Prop) (Bears : B → Episode → Prop) (w : W)
-    (hAncestor : NecessaryConcreteAncestorOfThinker m Occurs Bears w) :
-    NecessaryConcreteAt m w :=
-  necessaryConcreteAt_of_ancestor hAncestor
+theorem necessaryConcreteOfThinkerAncestor {W B Episode : Type} {m : Profile W B}
+    {Occurs : Episode → Prop} {Bears : B → Episode → Prop} {w : W}
+    (h : NecessaryConcreteAncestorOfThinker m Occurs Bears w) :
+    NecessaryConcreteAt m w := by
+  exact necessaryConcreteAt_of_ancestor h
 
 /-- The thinker-local anti-brute-root principle closes the contingent horn of
 the thinker-local fork: a contingent concrete root among a bearer's
