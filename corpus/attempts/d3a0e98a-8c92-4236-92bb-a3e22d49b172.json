@@ -12,7 +12,8 @@
   "blocker": "Philosophically unresolved: defend wisdom as an intrinsic pure perfection at the selected subsistent source, explain source-intrinsic intentional grounding rather than merely correct noncognitive signal production, give the CanApprehend primitive a constraint separating own capacity from productive power, and independently justify the restricted capacity-to-actual-apprehension bridge under POTENCY_2 without conflating active productive powers with passive potency.",
   "evidence": [
     "PR-1866",
-    "PR-1986"
+    "PR-1986",
+    "PR-2153"
   ],
   "workers": [
     {
@@ -20,7 +21,8 @@
       "provider": "anthropic",
       "model": "claude-opus-5-5",
       "effort": "high",
-      "date": "2026-11-27"
+      "date": "2026-11-27",
+      "pr": "PR-2153"
     }
   ]
 }

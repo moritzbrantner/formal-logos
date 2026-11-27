@@ -20,7 +20,8 @@
     "7f5da225-ae77-4427-bff7-38e0ac7a8a74",
     "8914ec51-7846-4392-9a3e-f689d821b902",
     "4a4b130c-b408-45dd-aec1-42cd45de5cd8",
-    "a10da856-a3f7-403e-bf04-ac4fd77be630"
+    "a10da856-a3f7-403e-bf04-ac4fd77be630",
+    "PR-2153"
   ],
   "workers": [
     {
@@ -28,7 +29,8 @@
       "provider": "anthropic",
       "model": "claude-opus-5-5",
       "effort": "high",
-      "date": "2026-11-27"
+      "date": "2026-11-27",
+      "pr": "PR-2153"
     }
   ],
   "current_assessment": {
@@ -44,8 +46,8 @@
     "note": "docs/notes/causal-perfection-transfer.md#why-could-a-pure-perfection-be-absent-at-an-unlimited-root-2026-11-27-provisional-2145",
     "reviewed_revision": "4981176245e2b39d90b587770b4e9fc4fd80dadd",
     "review": "unreviewed",
-    "publication": "unpublished",
-    "evidence": "Proposed delivery 4981176245e2b39d90b587770b4e9fc4fd80dadd on branch research/impersonal-intellect; independent semantic challenge not yet run.",
+    "publication": "published",
+    "evidence": "Draft PR-2153 at proposed delivery 4981176245e2b39d90b587770b4e9fc4fd80dadd; the independent semantic challenge has not yet run.",
     "supersedes": "None; 72a86cf4, 521613fc and 58750abd keep their scoped assessments."
   }
 }
