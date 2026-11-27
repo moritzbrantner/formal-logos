@@ -1,0 +1,27 @@
+{
+  "id": "44ab4c7b-0a4d-4d15-8ead-c9cae0eacf8a",
+  "label": "Actual grounding well-foundedness gives selected-world acyclicity",
+  "premise_statement_ids": [
+    "82cfaf26-fc86-54ab-8328-9a7b2bdbbe21"
+  ],
+  "conclusion_statement_id": "5e002319-3828-4de8-96bc-98ebf34072d7",
+  "inference_ids": [
+    "d7c75f02-f0ff-4c3f-8db6-c6b7afd7827d"
+  ],
+  "meaning": "Use the actual-concrete grounding graph with nodes restricted to candidates concrete and existing at the supplied world and with the same Profile.grounds edges there. Well-foundedness of those edges excludes every nonempty finite return path by the graph law. This introduces no actual inhabitant and requires no excluded-middle premise.",
+  "definition_ids": [
+    "58fee8ed-9b44-5399-95c8-5d239bea898d",
+    "008cb21a-256c-5a90-822c-acd4591d699a",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "1dff2d68-1348-5e7e-8ee7-248af63c8c53",
+    "a1b2e330-388f-4120-bc5c-969642317792"
+  ],
+  "disambiguation_ids": [
+    "6e92c6e3-edf0-5d7e-b2b3-788b24b8b768",
+    "623ddbf6-9683-5361-bae4-e348a00ec680",
+    "7507d645-874d-5434-add8-2f49c2801d36",
+    "b9adce48-6b86-5f58-b2ea-b25f51c70cbd",
+    "c529e8d3-43e3-53a8-a82f-3955e9815265",
+    "83264cf5-01fe-52fc-9a00-eeb024f6496e"
+  ]
+}
