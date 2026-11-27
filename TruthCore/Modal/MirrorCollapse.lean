@@ -179,8 +179,10 @@ def EssentialTruthsPreservedByMirrorAt (Essential : B → (W → Prop) → Prop)
 (global spatial handedness) holds at the mirror image of `w` exactly when it fails
 at `w`. Reflection and CPT conjugation are both intended to reverse spatial
 handedness; this premise says that the given map does at `w`.
-A relationalist about orientation who identifies a world with its global mirror
-image (`σ w = w`) denies it. -/
+A relationalist about global orientation, who rejects a global handedness
+feature, denies it. Identifying `w` with its mirror image (`σ w = w`) also denies
+it; for the CPT map that identity needs more than orientation relationalism:
+charge conjugation and time reversal must be identified away as well. -/
 def HandednessReversedAt (σ : W → W) (H : W → Prop) (w : W) : Prop :=
   H (σ w) ↔ ¬ H w
 
@@ -503,7 +505,9 @@ account.
    handedness, the mirror image violates no essential truth and is not accessible.
 4. **Option 2 is exact.** Under collapse, essence-grounded possibility,
    factivity and preservation, the mirror image is the actual world, so no
-   feature is reversed by the mirror.
+   feature is reversed by the mirror. The identity is derived from these four
+   premises, not from relationalism about orientation; for the CPT map it needs
+   charge conjugation and time reversal identified away too.
 5. **Rules.** A rule that singles out the actual world among the worlds violating
    no essential truth, applied where the mirror image violates none, holds at the
    actual world and fails at its mirror image when handedness is reversed: a

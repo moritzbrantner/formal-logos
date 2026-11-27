@@ -17,7 +17,7 @@
       "A translation or rotation, which preserves handedness."
     ],
     "open_obligations": [
-      "Whether the CPT image of the actual world is a distinct world (relationalism about global orientation identifies it with the actual world).",
+      "Whether the CPT image of the actual world is a distinct world. Relationalism about global spatial orientation rejects a global handedness feature (denying 314f6b15) but does not identify the CPT image with the actual world, since the image also exchanges matter and antimatter and reverses the history; identity with the whole CPT image (τ.image w = w) needs an additional explicit identification commitment, such as charge/time-reversal relationalism or the qualitative identity of CPT-related worlds as wholes.",
       "Whether any nature contains an orientation that the CPT image violates (EssentialTruthsPreservedByCPTAt)."
     ]
   }

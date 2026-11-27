@@ -453,7 +453,7 @@ constrain worlds. Four OPEN premises at the actual world
 | every world violating no essential truth is possible | `EssenceGroundedWorldPossibility` | option 3: the mirror image is impossible though no nature excludes it (brute); also denied by powers accounts. Humean recombination does not deny it; primitivism denies only the grounding |
 | every essential truth holds at `w` | `EssentialTruthsHoldAt` | the actual world violates a nature (not a live option where essence grounds necessity on a reflexive frame) |
 | the mirror image satisfies every essential truth `w` satisfies | `EssentialTruthsPreservedByMirrorAt` (registered: `EssentialTruthsPreservedByCPTAt`, MIRROR_2) | option 1: some nature contains an orientation (for MIRROR_1 = P, available at creaturely law-natures on dispositional essentialism) |
-| the mirror image has the opposite handedness | `HandednessReversedAt` (registered: `HandednessReversedByCPTAt`, MIRROR_2) | option 2: no distinct mirror image (relationalism about orientation) |
+| the mirror image has the opposite handedness | `HandednessReversedAt` (registered: `HandednessReversedByCPTAt`, MIRROR_2) | option 2a: relationalism about global orientation rejects a global handedness feature (it does not make the CPT image the actual world); option 2b: no distinct mirror image (identity with the whole image, for CPT needing charge conjugation and time reversal identified away; clause 4 derives it only under collapse, possibility, factivity and preservation) |
 
 **The full-collapse form** (`notCollapsedFromMirror`, Lean-only, axiom-free):
 the four premises give `185ce448` (the route's world is not collapsed). It is not
@@ -532,7 +532,17 @@ placed by `tests` on `c94b5446`):
 3. *Option 3 is exact.* Under collapse, factivity, preservation and reversal,
    the mirror image violates no essential truth and is not accessible.
 4. *Option 2 is exact.* Under collapse, the possibility principle, factivity and
-   preservation, `σ w = w` and the mirror reverses nothing.
+   preservation, `σ w = w` and the mirror reverses nothing. The identity is
+   derived only under these four premises, not from relationalism. Option 2
+   therefore splits. (2a) Relationalism about global spatial orientation rejects
+   a global handedness feature: it denies reversal, but the CPT image still
+   differs from `w` (matter and antimatter exchanged, history reversed), so under
+   collapse, the possibility principle, factivity and preservation clause 4 still
+   demands `τ.image w = w`. (2b) Identity with the whole CPT image needs an
+   additional explicit identification commitment: charge/time-reversal
+   relationalism, or that CPT-related worlds are qualitatively identical as
+   wholes. For the plain reflection P, (2a) with the identity of indiscernibles
+   may give the identity, since P changes only spatial orientation.
 5. *Rules.* A rule that singles out `w` among the unexcluded worlds, where the
    mirror image is unexcluded and handedness reversed, holds at `w` and fails at
    `σ w`: a necessitating rule is itself not mirror-invariant. "Is best" is
@@ -573,7 +583,7 @@ placed by `tests` on `c94b5446`):
 
 | Account | Handedness | Rule needed | What explains this handedness rather than that | Price recorded |
 | --- | --- | --- | --- | --- |
-| Impersonal necessitarian (emanation) | necessary | yes | its nature, only via option 1, 2 or 3 | option 1 (at a root: excluded only with the open carriage bridge, clause 10; at creatures for σ = P on dispositional essentialism), option 2 (σ w = w: relationalism about global orientation), or brute |
+| Impersonal necessitarian (emanation) | necessary | yes | its nature, only via option 1, 2 or 3 | option 1 (at a root: excluded only with the open carriage bridge, clause 10; at creatures for σ = P on dispositional essentialism), option 2 (σ w = w; for CPT this needs, beyond relationalism about global orientation, charge conjugation and time reversal identified away, e.g. charge/time-reversal relationalism or CPT-related worlds qualitatively identical as wholes), or brute |
 | Personal necessitarian (necessary choice of the best) | necessary | yes | as above; "best" cannot select if value is qualitative and σ-invariant (clause 5) | identical to the impersonal necessitarian |
 | Classical personal root, relation-of-reason account | contingent | no | no intrinsic fact (clause 6); the extrinsic terminus discriminates | #555's non-contrastive price (A above); plus the extra commitment lane P places on the personal side only ("willing x" with no real determination; this lane assesses it as descriptive) |
 | Personal root with a real, varying selection | contingent | no | the selection (intrinsic, varies) | denies N; at a root whose selection token has an exclusive mirror alternative on a par in purity, denies one of the purity premises (clause 7 applied to selection tokens) |
@@ -598,9 +608,11 @@ pay identical prices, and the necessitarian rows pay identical prices.
 - It motivates parity in purity for lane P's mechanism without any value tie, if
   purity is mirror-invariant: wherever the world has a mirror twin, a real
   selection token then has an equally pure alternative.
-- It is weaker than the tie case in one respect: relationalism about
-  orientation (option 2) dissolves it, while it does not dissolve a tie between
-  qualitatively different arrangements.
+- It is weaker than the tie case in one respect: identity of mirror-related
+  worlds (option 2) dissolves it, while it does not dissolve a tie between
+  qualitatively different arrangements. For the P-twin relationalism about
+  orientation may suffice for that identity; for the CPT-twin it does not, and
+  the identity needs charge conjugation and time reversal identified away too.
 - Against non-necessitarian accounts it adds nothing beyond the tie case.
 
 ### C. Counter-intuitiveness as evidence
@@ -618,7 +630,12 @@ pay identical prices, and the necessitarian rows pay identical prices.
 - **The necessitarian's strongest reply.** Identity of indiscernibles with
   relationalism about orientation (Leibniz's translation argument `7dd2af35`,
   navigation for reflection): the "two" worlds are two descriptions of one, so
-  (a) confuses distinct representations with distinct possibilities. A second
+  (a) confuses distinct representations with distinct possibilities. For the
+  P-twin this may go through. For the CPT-twin, relationalism about orientation
+  only rejects a global handedness feature; the twin still differs in matter and
+  antimatter and in the direction of time, so the reply needs an additional
+  identification commitment (charge/time-reversal relationalism, or CPT-related
+  worlds qualitatively identical as wholes). A second
   reply: modal intuitions about global symmetries are unreliable, because the
   imagined difference makes no difference to anything within the world.
   Kant's incongruent counterparts (navigation only) point the other way for a
@@ -628,8 +645,11 @@ pay identical prices, and the necessitarian rows pay identical prices.
   reading. Under essence grounding necessity, accepting preservation *is*
   accepting the mirror world's possibility (clause 9), so the argument adds the
   symmetry consideration to a direct modal intuition; it does not replace one.
-  The necessitarian's reply costs relationalism about global orientation (σ w =
-  w for this σ, clause 4); clause 1 adds no further cost to a necessitarian who
+  The necessitarian's reply, for the CPT reading, costs identity with the whole
+  CPT image (`τ.image w = w`, which clause 4 derives only under collapse, the
+  possibility principle, factivity and preservation): relationalism about
+  global orientation plus an explicit identification of charge-conjugated and
+  time-reversed worlds; relationalism alone only denies reversal. Clause 1 adds no further cost to a necessitarian who
   already holds essence-grounded possibility. Prima facie evidence of low weight
   against necessitarianism that also holds essence-grounded possibility; neutral
   between personal and impersonal non-necessitarian accounts. The earlier
@@ -662,8 +682,14 @@ vertical work there should stop; the live horizontal question is the cognition
 lane's: whether the invariant act acts for reasons.
 
 **Strongest standing rival and its price.** For the necessitarian rival
-(personal or impersonal): option 2 (relationalism about global orientation,
-σ w = w), or a powers account on which the possibility principle fails, or, for
+(personal or impersonal), priced alike for every necessitarian account: option 2,
+identity with the whole CPT image (`τ.image w = w`), which needs relationalism
+about global orientation **and** an additional explicit identification
+commitment (charge/time-reversal relationalism, or CPT-related worlds
+qualitatively identical as wholes); relationalism about orientation alone only
+rejects a global handedness feature and, by clause 4, leaves a full-collapse
+necessitarian who keeps the possibility principle, factivity and preservation
+still needing the identity; or a powers account on which the possibility principle fails, or, for
 the plain reflection, option 1 at creaturely law-natures. For the non-necessitarian impersonal rival: none from this
 lane; it pays the classical root's price.
 
@@ -752,3 +778,11 @@ the local premise. (2) P and CPT shared one primitive meaning. They are now
 senses MIRROR_1 and MIRROR_2 of disambiguation `dec35f6f` with distinct Lean
 types; the registered argument declares MIRROR = MIRROR_2, and `truth semantics`
 reports MIRROR_2 as its single sense.
+
+A further Codex P1 on `c094132d0` (comment 4723537199): relationalism about global
+orientation had been priced as identity with the mirror image. For MIRROR_2 it
+only rejects a global handedness feature; identity with the whole CPT image
+needs an additional identification of charge-conjugated and time-reversed
+worlds. Option 2 is now split and priced that way in the premise table, fork
+clause 4, the account table, section C and the strongest-rival paragraph, alike
+for every necessitarian account. No Lean type changed.
