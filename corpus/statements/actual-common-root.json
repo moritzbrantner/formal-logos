@@ -1,18 +1,16 @@
 {
   "id": "a6b46d2e-fb76-5123-8fbd-aca4cdc8ebd9",
-  "label": "One actual CONCRETE_6 root at w directly grounds each other actual CONCRETE_6",
+  "label": "One root grounds each other existent classified as concrete by the selected profile",
   "legacy_id": "STMT-ACTUAL-COMMON-ROOT",
   "lean_declaration": "TruthCore.Causality.ActualCommonRoot.ActualCommonRootAt",
-  "paraphrase": "One actual concrete root at w directly grounds every other actual concretum in the SAME selected relation; every actual concretum is that root or has the direct ground edge from it. No necessity, global well-foundedness, complete explanation or God identity follows.",
+  "paraphrase": "At w there is a root that exists at w and is classified as concrete by the selected profile. Each other candidate that exists at w and satisfies the same classifier has a direct grounding edge from that root in the selected relation at w. The classifier is the supplied m.concrete. The conclusion supplies neither necessity nor global well-foundedness, complete explanation or God identity.",
   "definition_ids": [
     "1620ba7e-edb9-56c4-bd02-3ece55903b1c",
     "c57e2682-08e6-527e-950f-0fa0a7ff11ef",
     "a1b2e330-388f-4120-bc5c-969642317792",
-    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
-    "008cb21a-256c-5a90-822c-acd4591d699a"
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
   ],
   "disambiguation_ids": [
-    "623ddbf6-9683-5361-bae4-e348a00ec680",
     "6e92c6e3-edf0-5d7e-b2b3-788b24b8b768",
     "c529e8d3-43e3-53a8-a82f-3955e9815265"
   ]

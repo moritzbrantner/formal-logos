@@ -1,8 +1,8 @@
 {
   "id": "3818558a-d30a-4804-8624-f0a874c17e45",
-  "label": "Composition of selected grounding edges that start at an actual CONCRETE_6 root",
+  "label": "Grounding edges from a root compose under the profile classifier",
   "term": "root-starting actual grounding composition",
-  "definition": "At the selected world w, if r is an actual concrete root and x is actual concrete, then the selected actual concrete grounding edges r to y and y to x give the selected actual concrete grounding edge r to x. The first edge supplies actual concreteness of r and the second supplies actual concreteness of y.",
+  "definition": "At w, let r be a root and x an existent classified as concrete by the selected profile. If the grounding edges from r to y and from y to x hold at w, with both sources existing at w and satisfying that classifier, the grounding edge from r to x holds at w with the same source guard.",
   "basis": "stipulative",
   "lean_declaration": "TruthCore.Causality.RootGroundComposition.RootGroundsComposeAt",
   "definition_ids": [
@@ -10,5 +10,5 @@
     "a1b2e330-388f-4120-bc5c-969642317792",
     "beb654a7-e204-5f4c-a7b4-45e886ba7109"
   ],
-  "note": "Analyst structural condition. It represents root-mediated composition as a direct edge of the supplied grounding relation, rather than merely finite reachability. A directed chain r to y to x without a selected edge from r to x violates it when r is a root and all three are actual concreta. In a graph with all such shortcut edges the condition holds. Whether the selected real grounding or productive relation has this closure remains open. Full transitivity of the actual-concrete graph suffices, and the condition imposes no composition law on pairs whose source is not a root."
+  "note": "Analyst structural condition. It represents root-mediated composition as a direct edge of the supplied grounding relation, rather than merely finite reachability. A directed chain r to y to x without a selected edge from r to x violates it when r is a root and all three are actual concreta. In a graph with all such shortcut edges the condition holds. Whether the selected real grounding or productive relation has this closure remains open. Full transitivity of the actual-concrete graph suffices, and the condition imposes no composition law on pairs whose source is not a root. The concreteness classifier is the supplied m.concrete. An application in the esse-in-re sense would require m.concrete := HasEsseInRe InAct esse or the corresponding equivalence."
 }

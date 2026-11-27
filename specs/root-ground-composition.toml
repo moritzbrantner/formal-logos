@@ -3,17 +3,19 @@ vocab = "TruthCore.Causality.RootGroundComposition"
 results = "TruthCore.Results.Causality.RootGroundComposition"
 
 [[statement]]
-id = "Selected grounding composes along CONCRETE_6 edges starting at an actual root"
+id = "c80768f5-a04e-43ba-bc66-3af231a177b5"
+label = "Grounding edges from a root compose among existents classified as concrete by the selected profile"
 lean = "RootGroundsComposeAt"
 definitions = ["3818558a-d30a-4804-8624-f0a874c17e45", "c57e2682-08e6-527e-950f-0fa0a7ff11ef", "a1b2e330-388f-4120-bc5c-969642317792", "beb654a7-e204-5f4c-a7b4-45e886ba7109"]
-disambiguations = ["623ddbf6-9683-5361-bae4-e348a00ec680", "c529e8d3-43e3-53a8-a82f-3955e9815265"]
-paraphrase = "Open analyst premise. If r is an actual concrete root, x is actual concrete, and the selected actual concrete ground edges r to y and y to x hold at w, then the edge r to x holds in the same relation at w. Both starting points of the two edges are actual concreta. No assumption is made for composition beginning at a nonroot, for absent endpoints, or for other worlds."
+disambiguations = ["c529e8d3-43e3-53a8-a82f-3955e9815265"]
+paraphrase = "Open analyst premise. For a root r and recipient x that exist at w and are classified as concrete by the selected profile, take grounding edges from r to y and from y to x in the selected relation at w. Both edge sources must exist at w and satisfy the same classifier. Then the grounding edge from r to x holds at w, with the same source guard. The law is restricted to root-starting edges, existents covered by that classifier, and the selected world."
 
 [[argument]]
 id = "Root-starting composition gives a direct common root from finite ancestry"
 theorem = "directRootOfAncestry"
-premises = ["96082032-91f1-586b-9db8-e42edbb5e52e", "Selected grounding composes along CONCRETE_6 edges starting at an actual root"]
+comparator_theorems = ["composeOfDirectRoot", "compositionIffDirectRootOfAncestry"]
+premises = ["96082032-91f1-586b-9db8-e42edbb5e52e", "c80768f5-a04e-43ba-bc66-3af231a177b5"]
 conclusion = "STMT-ACTUAL-COMMON-ROOT"
 rule = "Induction on each actual ground path with the same root"
-meaning = "Instantiate the source graph at ConcreteExistentialSupply.graph m w, whose nodes and edges are the actual concrete endpoints and the selected grounds at w. Its supplied source is an actual root: any actual concrete ground of it would give an incoming edge. For any actual recipient, the finite path supplied by the ancestry premise either is empty, is one edge, or extends a compressed path by one edge. In the final case apply the explicit root-starting composition premise. The empty case gives identity and requires no self-edge. The uniqueness field of the ancestry bundle is redundant: a different source would have to take a nonempty first step on its path to the supplied root, contradicting its sourcehood. Neither global transitivity nor well-foundedness is required. The existing mediated-chain control has the ancestry premise and lacks direct common grounding, so the composition premise fails there. The result supplies one selected grounding edge per distinct actual recipient and no stronger causal interpretation."
+meaning = "Instantiate the source graph at ConcreteExistentialSupply.graph m w, whose nodes and edges are the actual concrete endpoints and the selected grounds at w. Its supplied source is an actual root: any actual concrete ground of it would give an incoming edge. For any actual recipient, the finite path supplied by the ancestry premise either is empty, is one edge, or extends a compressed path by one edge. In the final case apply the explicit root-starting composition premise. The empty case gives identity and requires no self-edge. The uniqueness field of the ancestry bundle is redundant: a different source would have to take a nonempty first step on its path to the supplied root, contradicting its sourcehood. Neither global transitivity nor well-foundedness is required. The existing mediated-chain control has the ancestry premise and lacks direct common grounding, so the composition premise fails there. The result supplies one selected grounding edge per distinct recipient that exists at w and is classified as concrete by the selected profile. The companion converse derives composition from direct coverage alone, so under finite common ancestry the two propositions are equivalent. This exposes the exact commitment for direct coverage and supplies no independent warrant for it."
 axioms = []

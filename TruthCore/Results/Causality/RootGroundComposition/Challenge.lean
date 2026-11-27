@@ -17,4 +17,14 @@ theorem directRootOfAncestry {W B : Type} (m : Profile W B) (w : W)
     ActualCommonRootAt m w := by
   sorry
 
+theorem composeOfDirectRoot {W B : Type} (m : Profile W B) (w : W)
+    (hDirect : ActualCommonRootAt m w) :
+    RootGroundsComposeAt m w := by
+  sorry
+
+theorem compositionIffDirectRootOfAncestry {W B : Type} (m : Profile W B) (w : W)
+    (hAncestry : RootedAtUniqueSource (graph m w)) :
+    RootGroundsComposeAt m w ↔ ActualCommonRootAt m w := by
+  sorry
+
 end TruthCore.Results.Causality.RootGroundComposition

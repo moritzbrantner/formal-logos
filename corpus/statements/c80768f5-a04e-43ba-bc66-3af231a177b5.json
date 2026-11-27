@@ -1,7 +1,7 @@
 {
   "id": "c80768f5-a04e-43ba-bc66-3af231a177b5",
-  "label": "Selected grounding composes along CONCRETE_6 edges starting at an actual root",
-  "paraphrase": "Open analyst premise. If r is an actual concrete root, x is actual concrete, and the selected actual concrete ground edges r to y and y to x hold at w, then the edge r to x holds in the same relation at w. Both starting points of the two edges are actual concreta. No assumption is made for composition beginning at a nonroot, for absent endpoints, or for other worlds.",
+  "label": "Grounding edges from a root compose among existents classified as concrete by the selected profile",
+  "paraphrase": "Open analyst premise. For a root r and recipient x that exist at w and are classified as concrete by the selected profile, take grounding edges from r to y and from y to x in the selected relation at w. Both edge sources must exist at w and satisfy the same classifier. Then the grounding edge from r to x holds at w, with the same source guard. The law is restricted to root-starting edges, existents covered by that classifier, and the selected world.",
   "lean_declaration": "TruthCore.Causality.RootGroundComposition.RootGroundsComposeAt",
   "definition_ids": [
     "3818558a-d30a-4804-8624-f0a874c17e45",
@@ -10,7 +10,6 @@
     "beb654a7-e204-5f4c-a7b4-45e886ba7109"
   ],
   "disambiguation_ids": [
-    "623ddbf6-9683-5361-bae4-e348a00ec680",
     "c529e8d3-43e3-53a8-a82f-3955e9815265"
   ]
 }

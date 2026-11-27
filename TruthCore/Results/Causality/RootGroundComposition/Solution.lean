@@ -38,4 +38,26 @@ theorem directRootOfAncestry {W B : Type} (m : Profile W B) (w : W)
           hFirst ⟨y.property.1, y.property.2, edge⟩)
   exact ⟨r.val, hRoot, fun x hx => compress (reach ⟨x, hx⟩) hRoot⟩
 
+/-- Coverage identifies each actual root with the covering root. An incoming
+edge to the target then excludes the identity case of coverage. -/
+theorem composeOfDirectRoot {W B : Type} (m : Profile W B) (w : W)
+    (hDirect : ActualCommonRootAt m w) :
+    RootGroundsComposeAt m w := by
+  obtain ⟨n, _, hCover⟩ := hDirect
+  intro r y x hr hx _ hyx
+  have hSame : r = n := by
+    rcases hCover r hr.1 with hEq | hIncoming
+    · exact hEq
+    · exact (hr.2 n hIncoming).elim
+  subst r
+  rcases hCover x hx with hEq | hGround
+  · subst x
+    exact (hr.2 y hyx).elim
+  · exact hGround
+
+theorem compositionIffDirectRootOfAncestry {W B : Type} (m : Profile W B) (w : W)
+    (hAncestry : RootedAtUniqueSource (graph m w)) :
+    RootGroundsComposeAt m w ↔ ActualCommonRootAt m w := by
+  exact ⟨directRootOfAncestry m w hAncestry, composeOfDirectRoot m w⟩
+
 end TruthCore.Results.Causality.RootGroundComposition

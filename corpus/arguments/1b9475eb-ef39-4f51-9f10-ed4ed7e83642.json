@@ -9,12 +9,11 @@
   "inference_ids": [
     "d1d7cec1-546c-4a04-b21d-01064e5d8e8b"
   ],
-  "meaning": "Instantiate the source graph at ConcreteExistentialSupply.graph m w, whose nodes and edges are the actual concrete endpoints and the selected grounds at w. Its supplied source is an actual root: any actual concrete ground of it would give an incoming edge. For any actual recipient, the finite path supplied by the ancestry premise either is empty, is one edge, or extends a compressed path by one edge. In the final case apply the explicit root-starting composition premise. The empty case gives identity and requires no self-edge. The uniqueness field of the ancestry bundle is redundant: a different source would have to take a nonempty first step on its path to the supplied root, contradicting its sourcehood. Neither global transitivity nor well-foundedness is required. The existing mediated-chain control has the ancestry premise and lacks direct common grounding, so the composition premise fails there. The result supplies one selected grounding edge per distinct actual recipient and no stronger causal interpretation.",
+  "meaning": "Instantiate the source graph at ConcreteExistentialSupply.graph m w, whose nodes and edges are the actual concrete endpoints and the selected grounds at w. Its supplied source is an actual root: any actual concrete ground of it would give an incoming edge. For any actual recipient, the finite path supplied by the ancestry premise either is empty, is one edge, or extends a compressed path by one edge. In the final case apply the explicit root-starting composition premise. The empty case gives identity and requires no self-edge. The uniqueness field of the ancestry bundle is redundant: a different source would have to take a nonempty first step on its path to the supplied root, contradicting its sourcehood. Neither global transitivity nor well-foundedness is required. The existing mediated-chain control has the ancestry premise and lacks direct common grounding, so the composition premise fails there. The result supplies one selected grounding edge per distinct recipient that exists at w and is classified as concrete by the selected profile. The companion converse derives composition from direct coverage alone, so under finite common ancestry the two propositions are equivalent. This exposes the exact commitment for direct coverage and supplies no independent warrant for it.",
   "definition_ids": [
     "3818558a-d30a-4804-8624-f0a874c17e45",
     "1620ba7e-edb9-56c4-bd02-3ece55903b1c",
     "c57e2682-08e6-527e-950f-0fa0a7ff11ef",
-    "008cb21a-256c-5a90-822c-acd4591d699a",
     "822c9912-2313-584b-b2b7-77031da20107",
     "beb654a7-e204-5f4c-a7b4-45e886ba7109",
     "1dff2d68-1348-5e7e-8ee7-248af63c8c53",
