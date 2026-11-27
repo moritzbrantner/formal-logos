@@ -26,7 +26,8 @@
     "PR-1933",
     "08c4864c-8d48-4270-a21e-da87f43f80a4",
     "07a1a262-7645-47b7-9bd8-a9a1939d8656",
-    "83d0e838-cfd4-4249-9cc5-620f19bc6321"
+    "83d0e838-cfd4-4249-9cc5-620f19bc6321",
+    "PR-2105"
   ],
   "blocker": "The resource result constrains an account offered as complete at its claimed scope; it does not supply the missing coverage principle that every actual contingent bearer has an adequate existential explanation. A faithful actual-prerequisite domain, exhaustive alternative-account scope, an adequacy-to-#312-token bridge and the existing BX1/BX2 would still be needed toward 608a262d and B2. Same-bearer modal inheritance also needs the real essence/dependence and accessibility application. Next distinct test: inspect a concrete proposed ultimate explanation of the same bearer and its actual prerequisites, then determine whether an independently warranted alternative explains their actual obtaining or only the restriction on their role; alternatively defend the contingent primitive as an adequate ultimate stop. Restore alternative routes and revise the obstruction if one succeeds. No further law-recombination or arbitrary-event assumption is needed or claimed.\n\nNext distinct audit test. Track the same bearer and its actual prerequisite under a concrete rival explanation, checking an alternative independently operative contributor before applying the cut. If the rival only supplies an explanation of the restriction, ask separately what warrants coverage of the bearer’s actual existence.",
   "current_assessment": {
@@ -54,7 +55,8 @@
       "provider": "codex",
       "model": "gpt-6.2-sol",
       "effort": "high",
-      "date": "2026-11-27"
+      "date": "2026-11-27",
+      "pr": "PR-2105"
     }
   ]
 }
