@@ -19,7 +19,9 @@
 //! - a `strength_comparison` or `strengthens` relation also joins its object
 //!   to the statements it certifies: its delta and remainder statements and
 //!   the statements of the results it names as evidence (implication,
-//!   equivalence, separator, strictness);
+//!   equivalence, separator, strictness). A result stands for its argument's
+//!   conclusion *and premises*, as for a `result` endpoint, so an evidence
+//!   result's premises join too;
 //! - an attempt joins the statements it names.
 //!
 //! The method is that of the cohesive-graph measurement script
