@@ -262,6 +262,7 @@ public import TruthCore.Results.Causality.MetricGrimReaper.Solution
 public import TruthCore.Results.Causality.ModalFrameStrength.Solution
 public import TruthCore.Results.Causality.ModalNecessaryBeingActuality.Solution
 public import TruthCore.Results.Causality.ModalSenseSupport.Solution
+public import TruthCore.Results.Causality.ModeOfBeingMiddleTerm.Solution
 public import TruthCore.Results.Causality.MotionMapsBatch1.Solution
 public import TruthCore.Results.Causality.MotionMoverFork.Solution
 public import TruthCore.Results.Causality.MutualSupportAsymmetry.Solution
