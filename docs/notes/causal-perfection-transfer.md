@@ -4262,12 +4262,21 @@ the background that makes the cases meaningful:
    under (i). Each premise below therefore quantifies over the same family.
 2. **Positive nature as profile.** g's positive nature is represented by
    its `Has` profile. A holistic constraint not represented by any one
-   determination is represented by restricting the family, so it falls
-   under (i). A primitive totality fact that restricts neither is
+   determination is represented by restricting the family. It falls under
+   (i) only if it excludes k from every admissible profile. If it admits k
+   alone but forbids k together with g's profile, it falls under (ii): the
+   joint-conflict family admits every pure pair and forbids the triple
+   `a`, `b`, noesis. A primitive totality fact that restricts neither is
    exactly what (iii) leaves.
-3. **No extrinsic case at a root.** An absence at a caused bearer could be
-   fixed by what its ground gave. At an `ActualRoot` no actual concrete
-   ground exists, so no fourth, extrinsic case arises there.
+3. **No grounding-relation case at a root.** An absence at a caused bearer
+   could be fixed by what its ground gave. At an `ActualRoot` no actual
+   concrete being grounds g under the selected relation, so no explanation
+   through that relation arises there. `ActualRoot` excludes only such
+   incoming grounding edges (DEF-ACTUAL-ROOT). The claim that every
+   extrinsic explanation of an absence would supply such a ground is an
+   **open bridge**. Without it, an extrinsic explanation of another kind
+   would be a fourth case, and E is read here only together with that
+   bridge.
 4. **Purity is outside the trichotomy.** Coverage holds for any k. The
    arguments below use that k is pure. Denying that intellect is a pure
    perfection is a fourth response that the trichotomy does not classify.
@@ -4372,8 +4381,10 @@ admissible it is equivalent to Mathlib `Maximal` of that profile in the
 family (`noUnexplainedAbsenceIffMaximal`). Restricted to pure
 determinations, and given the other premises, it would be equivalent to
 the conclusion. Its warrant therefore has to be the general one. A root
-has no extrinsic determiner, so whatever bounds its profile should be its
-admissibility constraints or its positive profile.
+has no actual concrete ground under the selected relation. Given the open
+bridge that any extrinsic determiner of its profile would be such a ground,
+whatever bounds its profile should be its admissibility constraints or its
+positive profile.
 
 Tests:
 
@@ -4408,7 +4419,7 @@ Tests:
   sufficient reason at roots. That warrant is not yet in the graph. E's
   support value is no greater than that warrant.
 
-| Explanation of the absence | Impersonal root lacking noesis | Personal root lacking a | What it needs |
+| Explanation of the absence | Impersonal root lacking noesis | Root whose profile has noesis but lacks a (profile level only) | What it needs |
 | --- | --- | --- | --- |
 | (i) constraints alone | k inadmissible with simplicity or another constraint | a inadmissible | a positive incompatibility with an admissibility constraint |
 | (ii) positive profile | joint pure-content conflict | joint conflict with noesis | denial of joint compossibility, with a positive account |
@@ -4486,8 +4497,9 @@ only as far as a closure principle at roots is independently warranted.
 `fe67d766`. They do not establish it. Joint compossibility has a
 substantive positive rationale in the purity definition. No positive
 pure-content conflict has been supplied, so the rival's best option is
-(i) or (iii) rather than (ii). E has the general rootless-determiner
-rationale and is neutral in form. Given the background it decides exactly
+(i) or (iii) rather than (ii). E has the general rationale that a
+root has no actual concrete ground (with the open bridge that any extrinsic
+determiner would be one) and is neutral in form. Given the background it decides exactly
 the point at issue, so its support value equals the independent warrant
 for a closure principle at roots, which is not yet in the graph. Its denial
 is a primitive, not a contradiction. No unconditional winner is claimed. The comparison now
@@ -4505,7 +4517,13 @@ are repaired at `07046c461abfa1a863ee1ac68ff261e33a2745aa`:
 - the `standingRival` personal variant was over-read.
 
 The targeted re-check at `ddec20b4721d5f1b9121714865f168b3d59a08bd`
-accepted all four registered steps and found no remaining P1. A later
+accepted all four registered steps and found no remaining P1. After that
+re-check, three automated review threads on `f880e762c` were addressed in
+prose scope only, with no formal change: a holistic restriction of the
+family falls under (ii) unless it excludes k everywhere; "no extrinsic
+case at a root" is narrowed to the selected grounding relation, with the
+wider exclusion an open bridge; and the profile-level parity row is not
+read as a source that understands. A later
 commit changes only durable review-state text and one wording repair in §D.
 
 **Next discriminating tests.**

@@ -38,9 +38,16 @@ is relative to that family: narrowing it can move an absence from case 3 to
 case 1 or 2, which is why each premise below quantifies over the same family.
 The "positive nature" of a bearer is represented by its `Has` profile; a
 holistic constraint not represented by any determination must be represented
-as a restriction of `Admissible`, so it falls under case 1. Extrinsic
-explanation by a ground is not one of the cases: at an `ActualRoot` no
-actual concrete ground exists.
+as a restriction of `Admissible`. Such a restriction falls under case 1 only
+if it excludes `k` from every admissible profile. If it admits `k` alone but
+forbids its combination with the bearer's profile, it falls under case 2;
+`ProfileControls.jointConflict` is such a family (every pure pair admissible,
+the triple `a`, `b`, `noesis` forbidden). Extrinsic explanation is not one of
+the cases. At an `ActualRoot` there is no explanation through the selected
+actual-concrete grounding relation, because no actual concrete being grounds
+the root. Whether every extrinsic explanation of an absence would supply such
+a ground is an OPEN bridge that `ActualRoot` does not contain; reading
+`NoUnexplainedAbsenceAtRoots` as excluding all unexplained absences uses it.
 
 The premises below are OPEN analyst bridges. The limitation senses stay
 distinct (`DISAMB-NB-A8-LIMITATION-AND-ENTAILMENT`, `DISAMB-ESSE-LIMITATION`):
@@ -209,7 +216,8 @@ def noBrute (adm : Set Determination → Prop) (src : Set Determination) : Prop 
 def full (src : Set Determination) : Prop :=
   ActualRootHasEveryPureDetermination rootProfile true (has src) isPure
 
-/-- The source's actual profile when it has intellect but lacks `a`. -/
+/-- A source profile containing the token `noesis` but lacking `a`. No
+apprehension relation is assigned with it; it is a profile-level check only. -/
 def personal : Set Determination := {Determination.esse, Determination.b, Determination.noesis}
 /-- The source's actual profile with a nonpure limiter. -/
 def limitedMode : Set Determination := insert Determination.limiter positive
