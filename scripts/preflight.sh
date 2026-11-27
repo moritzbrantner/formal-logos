@@ -70,36 +70,55 @@ changed=$(
     git ls-files --others --exclude-standard
   } | sort -u
 )
+# The same, deletions included: a deleted record can break a pinned count too.
+touched=$(
+  {
+    git diff --name-only "$base"...HEAD
+    git diff --name-only --cached
+    git diff --name-only
+    git ls-files --others --exclude-standard
+  } | sort -u
+)
 
 # Every batch spec must also regenerate unchanged once this branch is merged with
 # origin/main (#2139: two PRs that each passed broke main together through a stale
 # regeneration). When HEAD is behind origin/main, check the committed merge result in
-# a scratch copy; the working tree is not touched.
-merged_specs() {
-  local upstream=origin/main out tree tmp status=0
+# a scratch copy under .cache/ (gitignored, on disk rather than the shared /tmp); the
+# working tree is not touched. A subshell, so its EXIT trap removes the scratch copy.
+merged_specs() (
+  upstream=origin/main
   if ! git rev-parse --verify -q "$upstream^{commit}" >/dev/null; then
     echo "no $upstream: skipped"
-    return 0
+    exit 0
   fi
   if git merge-base --is-ancestor "$upstream" HEAD; then
     echo "HEAD contains $upstream: the check above already covers the merge"
-    return 0
+    exit 0
   fi
-  if ! out=$(git merge-tree --write-tree --no-messages HEAD "$upstream"); then
+  status=0
+  out=$(git merge-tree --write-tree --no-messages HEAD "$upstream") || status=$?
+  if (( status == 1 )); then
     echo "HEAD does not merge cleanly with $upstream: merge it, resolve the conflicts and rerun" >&2
-    return 1
+    exit 1
+  elif (( status != 0 )); then
+    echo "git merge-tree failed (exit $status); is git 2.38 or later installed?" >&2
+    exit "$status"
   fi
   tree=${out%%$'\n'*}
-  tmp=$(mktemp -d "${TMPDIR:-/tmp}/preflight-merge.XXXXXX")
-  git archive "$tree" corpus results specs scripts | tar -x -C "$tmp"
-  (cd "$tmp" && python3 scripts/argument_batch.py records --check specs/*.toml) || status=$?
-  rm -rf "$tmp"
-  if (( status != 0 )); then
+  mkdir -p .cache
+  tmp=$(mktemp -d .cache/preflight-merge.XXXXXX)
+  trap 'rm -rf "$tmp"' EXIT
+  # pipefail (set above) makes a failure of either side fail the condition.
+  if ! git archive "$tree" corpus results specs scripts | tar -x -C "$tmp"; then
+    echo "could not extract the merge result into $tmp" >&2
+    exit 1
+  fi
+  if ! (cd "$tmp" && python3 scripts/argument_batch.py records --check specs/*.toml); then
     echo "the merge with $upstream leaves records stale: merge $upstream, regenerate with" \
       "'python3 scripts/argument_batch.py records SPEC --write --fix' and rerun" >&2
+    exit 1
   fi
-  return "$status"
-}
+)
 step "batch specs regenerate their records on the merge with origin/main" merged_specs
 
 step "bundle audit" python3 scripts/bundle_audit.py
@@ -108,7 +127,10 @@ step "bundle audit" python3 scripts/bundle_audit.py
 # bundles, so a corpus change can break them without touching the audit itself.
 # Scoped: they run only when a corpus record or an audited bundle input changed.
 audit_tests() {
-  if ! grep -qE '^(corpus/|docs/notes/[^/]*-migration\.json$|scripts/(test_)?bundle_audit\.py$|apps/corpus-explorer/src/lib/bundle-audit)' <<<"$changed"; then
+  local inputs='^(corpus/|docs/notes/[^/]*-migration\.json$|scripts/(test_)?bundle_audit\.py$'
+  inputs+='|scripts/(corpus_ids|lean_test_support)\.py$|scripts/fixtures/[^/]*Migration\.lean$'
+  inputs+='|apps/corpus-explorer/src/lib/(bundle-audit|corpus-ids))'
+  if ! grep -qE "$inputs" <<<"$touched"; then
     echo "no corpus record or audited bundle input changed: skipped"
     return 0
   fi
