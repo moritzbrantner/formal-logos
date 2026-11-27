@@ -5,15 +5,16 @@ results = "TruthCore.Results.Causality.RootClosure"
 [[statement]]
 id = "No actual root could have a determination it lacks"
 lean = "RootAbsencesNecessary"
-definitions = ["52352824-6be9-53c6-83d4-82fed9a08cbb", "3aba5f19-f48d-50db-bc57-93ba2e99f845"]
-paraphrase = "OPEN, analyst formulation, attribution deferred: for every actual concrete root r of the selected grounding relation at w, every world v accessible from w and every determination d, if r really has d at v then r really has d at w. The root's absences are necessary: it could not have had a determination it actually lacks. It says nothing about why they are necessary. A root whose profile is contingent (as on a Humean recombination account) denies it."
+definitions = ["52352824-6be9-53c6-83d4-82fed9a08cbb", "3aba5f19-f48d-50db-bc57-93ba2e99f845", "f8948e28-b13a-5244-95f1-41a05cd4fff2"]
+disambiguations = ["DISAMB-NECESSARY"]
+paraphrase = "OPEN, analyst formulation, attribution deferred: for every actual concrete root r of the selected grounding relation at w, every world v accessible from w in the supplied frame and every determination d, if r really has d at v then r really has d at w. The root's absences are NECESSARY_11 (a box over the frame's accessibility from w): it could not have had a determination it actually lacks. It says nothing about why they are. A root whose profile is contingent (as on a Humean recombination account) denies it. So does a classical root whose free selection of one undominated outcome is a real intrinsic determination that differs at an accessible world (Lean-only classicalSelectionControl); a classical root keeps it only on the relation-of-reason reading, on which the selection adds no real intrinsic determination, which is open."
 
 [[statement]]
 id = "Whatever no ESSENCE_6 condition excludes is possible for an actual root"
 lean = "EssenceGroundedRootProfileModality"
 definitions = ["52352824-6be9-53c6-83d4-82fed9a08cbb", "3aba5f19-f48d-50db-bc57-93ba2e99f845", "8e1ba83c-04e3-4bd3-8e25-e0c532a703a6"]
 disambiguations = ["DISAMB-ESSENCE"]
-paraphrase = "OPEN, analyst formulation, attribution deferred: essence-grounded modality for root profiles. For every actual concrete root r at w and every set q of determinations, if q satisfies every ESSENCE_6 condition on r's profile (every condition C such that it lies in the nature of some being that r's profile satisfies C), then at some world accessible from w r really has every member of q. Whatever no nature excludes is possible for the root, so a necessary profile fact needs an essential condition excluding its contrary. It is the profile counterpart of the essentialist account of possibility (EssentialExclusionAccount) and an instance of the Finean 'necessitarian actualist' view that essences are the source of necessity (navigation only). Powers-based accounts (possibility needs a power), Humean recombination and modal primitivism deny it in different ways."
+paraphrase = "OPEN, analyst formulation, attribution deferred: essence-grounded modality for root profiles. For every actual concrete root r at w and every set q of determinations, if q satisfies every ESSENCE_6 condition on r's profile (every condition C such that it lies in the nature of some being that r's profile satisfies C), then at some world accessible from w r really has every member of q. Whatever no nature excludes is possible for the root, so a necessary profile fact needs an essential condition excluding its contrary. It is the profile counterpart of the essentialist account of possibility (EssentialExclusionAccount) and an instance of the Finean 'necessitarian actualist' view that essences are the source of necessity (navigation only). Powers-based accounts (possibility needs a power), Humean recombination and modal primitivism deny it in different ways. It is stronger than Fine's account: only essences of beings are consulted, each condition is on one bearer's profile, and the admissible family is not consulted."
 
 [[statement]]
 id = "Every ESSENCE_6 condition on a root's profile holds at its admissible extensions"
@@ -40,7 +41,7 @@ premises = ["No actual root could have a determination it lacks", "Whatever no E
 conclusion = "9281317d-1f0a-4522-b91c-58cc07652e92"
 axioms = ["propext", "Classical.choice", "Quot.sound"]
 rule = "Positivity puts every essential condition at the admissible extension; essence-grounded modality realizes it at an accessible world; necessity of the root's absences returns the missing determination to the actual world"
-meaning = "Fix an actual root r at w and a determination d that r lacks while some admissible profile q contains all of r's determinations and d (an unexplained absence). Positivity makes every ESSENCE_6 condition on r's profile hold of q. Essence-grounded modality then gives a world v accessible from w at which r has every member of q, in particular d. Necessity of the root's absences gives r the determination d at w, a contradiction. So no actual root has an unexplained absence. The derivation is a relocation: under N, EM and factivity of essential conditions, positivity is equivalent to the conclusion (Lean-only positivityOfNoUnexplainedAbsence), so the argument adds the warrant of N and EM, which have support outside this dispute, and moves the contested load to positivity. The main theorem uses no axioms. The Comparator companion essenceControls (three Mathlib axioms; the #2153 carrier with the open family, the source the only actual root) gives a positive witness and, for each premise, a row where it fails, the other two hold and the conclusion fails: a contingent lack of noesis (N fails), a necessary lack that no nature grounds (EM fails), and a nature with the negative clause 'lacks noesis' (positivity fails). The rows are assignments of the stated relations, not models of essence."
+meaning = "Fix an actual root r at w and a determination d that r lacks while some admissible profile q contains all of r's determinations and d (an unexplained absence). Positivity makes every ESSENCE_6 condition on r's profile hold of q. Essence-grounded modality then gives a world v accessible from w at which r has every member of q, in particular d. Necessity of the root's absences gives r the determination d at w, a contradiction. So no actual root has an unexplained absence. The derivation is a relocation: under N, EM and factivity of essential conditions, positivity is equivalent to the conclusion (Lean-only positivityOfNoUnexplainedAbsence), so the argument separates N and EM from the contested load, which sits on positivity; under the necessity direction of member grounding positivity is in turn equivalent to carriage (positiveEssenceFromCarriage with carriedOfPositive), a second relocation. The conclusion covers only case (iii): an absence of noesis made inadmissible with the root's profile (case i or ii) satisfies all three premises and the conclusion. The main theorem uses no axioms. The Comparator companion essenceControls (three Mathlib axioms; the #2153 carrier with the open family, the source the only actual root) gives a positive witness and, for each premise, a row where it fails, the other two hold and the conclusion fails: a contingent lack of noesis (N fails), a necessary lack that no nature grounds (EM fails), and a nature with the negative clause 'lacks noesis' (positivity fails). The rows are assignments of the stated relations, not models of essence."
 
 [[argument]]
 id = "Positive root essences, from carriage and the necessity direction of member grounding"
@@ -51,7 +52,7 @@ premises = ["682e6436-a44f-40d6-bc02-7cb5f4a2b754", "89c988d9-34b2-4aee-9e1a-bf4
 conclusion = "Every ESSENCE_6 condition on a root's profile holds at its admissible extensions"
 axioms = ["propext", "Classical.choice", "Quot.sound"]
 rule = "An admissible extension is exclusion-free, so no root determination requires a lack within it; carriage then gives every essential condition there"
-meaning = "Fix an actual root r at w, an ESSENCE_6 condition C on its profile and an admissible profile q containing r's determinations. The necessity direction of member grounding makes q exclusion-free: no member of q, and so no determination of r, requires the lack of a subset of q. Carriage then gives C at q. The necessity direction is the part of member grounding (6bba8431) not used by the #2162 derivations, so this argument makes the shared rationale of E and member grounding explicit as a shared premise: both say that a root's negative facts are fixed by what its determinations require. The main theorem uses no axioms. The Comparator companion carriageControls (three Mathlib axioms; same carrier) gives a positive witness, a row where the negative clause 'lacks noesis' is carried by no determination (carriage fails, the necessity direction holds, positivity fails) and a row where the clause is carried by the pure a requiring the lack of noesis while the family still admits every pure profile (carriage holds, the necessity direction fails, positivity fails). In that row the purity of requirements (0c8631bd) also fails."
+meaning = "Fix an actual root r at w, an ESSENCE_6 condition C on its profile and an admissible profile q containing r's determinations. The necessity direction of member grounding makes q exclusion-free: no member of q, and so no determination of r, requires the lack of a subset of q. Carriage then gives C at q. The necessity direction is the part of member grounding (6bba8431) not used by the #2162 derivations, so this argument makes the shared rationale of E and member grounding explicit as a shared premise: both say that a root's negative facts are fixed by what its determinations require. Under that direction carriage is equivalent to positivity (with carriedOfPositive), so this is a relocation; carriage together with that direction is strictly stronger than positivity, since positivity does not imply the direction. The main theorem uses no axioms. The Comparator companion carriageControls (three Mathlib axioms; same carrier) gives a positive witness, a row where the negative clause 'lacks noesis' is carried by no determination (carriage fails, the necessity direction holds, positivity fails) and a row where the clause is carried by the pure a requiring the lack of noesis while the family still admits every pure profile (carriage holds, the necessity direction fails, positivity fails). In that row the purity of requirements (0c8631bd) also fails."
 
 [[argument]]
 id = "Carriage of root essential exclusions, from positive root essences"
@@ -74,4 +75,43 @@ predicate = "strengthens"
 object_kind = "statement"
 object_id = "682e6436-a44f-40d6-bc02-7cb5f4a2b754"
 verification_result_id = "Carriage of root essential exclusions, from positive root essences"
-note = "Same root profile, admissible family and ESSENCE_6 relation. The strong version gives every essential condition at every admissible extension; the weak one only at extensions in which no root determination requires a lack. Row 3 of carriageControls satisfies the weak version and fails the strong one. The derivation of the strong version from the weak one uses the necessity direction of member grounding (89c988d9)."
+strictness_result_id = "Carried closure separates positive root essences from carriage"
+note = "Same root profile, admissible family and ESSENCE_6 relation. The strong version gives every essential condition at every admissible extension; the weak one only at extensions in which no root determination requires a lack. Row 3 of carriageControls (the strictness result) satisfies the weak version and fails the strong one. The necessity direction of member grounding (89c988d9) together with the weak version gives the strong one, but it is not the difference of the strong over the weak version: carriage with that direction is strictly stronger than positivity, since positivity does not imply the necessity direction. No certified difference is registered."
+
+[[statement]]
+id = "The carried-closure assignment separates positive root essences from carriage"
+lean = "Control.CarriedClosureSeparates"
+definitions = ["3f8e5e3c-e85a-4388-af9c-4da1c8a02069", "8e1ba83c-04e3-4bd3-8e25-e0c532a703a6", "88f7c656-f484-4737-a872-b2d78c604322"]
+disambiguations = ["DISAMB-ESSENCE"]
+paraphrase = "On the #2153 carrier with the open admissible family, the source having esse, a and b at both worlds, its nature containing the ESSENCE_6 clause 'lacks noesis' and the pure a requiring the lack of noesis: carriage of ESSENCE_6 exclusions at the root holds and positivity of root ESSENCE_6 fails. A structural assignment only."
+
+[[argument]]
+id = "Carried closure separates positive root essences from carriage"
+label = "Carried closure separates positive ESSENCE_6 at roots from carriage"
+theorem = "carriedClosureSeparates"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+premises = []
+conclusion = "The carried-closure assignment separates positive root essences from carriage"
+rule = "Finite check (row 3 of carriageControls)"
+meaning = "With the closure 'lacks noesis' carried by the pure a, carriage holds and positivity fails: the strengthening of carriage by positivity is strict. A structural interpretation only; in the same row the necessity direction of member grounding and the purity of requirements fail."
+description = "Strictness control for positivity of root essences over carriage. Establishes no premise."
+
+[[relation]]
+id = "Test by RootClosure.carriedClosureSeparates (61a0b3e6)"
+label = "Test by RootClosure.carriedClosureSeparates (61a0b3e6)"
+subject_kind = "result"
+subject_id = "2f9866e3-a768-40a2-b166-eb1a277d1fff"
+predicate = "tests"
+object_kind = "statement"
+object_id = "Every ESSENCE_6 condition on a root's profile holds at its admissible extensions"
+note = "With the closure 'lacks noesis' carried by the pure a and every pure profile admissible, carriage holds and positivity fails: positivity is strictly stronger than carriage, and carriage alone does not give it."
+
+[[relation]]
+id = "Test by RootClosure.carriedClosureSeparates (682e6436)"
+label = "Test by RootClosure.carriedClosureSeparates (682e6436)"
+subject_kind = "result"
+subject_id = "2f9866e3-a768-40a2-b166-eb1a277d1fff"
+predicate = "tests"
+object_kind = "statement"
+object_id = "682e6436-a44f-40d6-bc02-7cb5f4a2b754"
+note = "Carriage is satisfied by an assignment whose closure is carried by a pure determination requiring the lack of a pure one; there the purity of requirements (0c8631bd) and the necessity direction of member grounding fail, which is what blocks the carried closure at a root."

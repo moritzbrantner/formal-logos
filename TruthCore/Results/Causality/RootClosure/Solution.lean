@@ -128,12 +128,11 @@ section Truthmakers
 open TruthCore.Explanation.PSRStrength (Arena Access)
 open TruthCore.Explanation.TruthmakerTheories (Making Sound MakerNecessitation NeedsMakerAt)
 
-/-- Truthmaker necessitation does not discriminate makers of a necessary fact.
-If `f` holds at every world accessible from `w` and `b` exists at `w`, the
-making relation "`b` makes `f` true at `w`" is sound, gives `f` its needed
-maker at `w`, and necessitates `f`. Any existent, the root itself included,
-is such a maker; choosing the root's determinations as the relevant maker needs
-a relevance constraint, which is LE in truthmaker form. -/
+/-- Necessitation-style making does not discriminate makers of a necessary fact:
+any existent at `w` is a sound, needed and necessitating maker of a fact true at
+every accessible world. A relevance constraint alone would still admit the
+root's nature, negative clause included; it yields LE only with the further
+thesis that natures contain no uncarried negative clauses. -/
 theorem necessaryFactAnyMaker {W B F : Type} (A : Arena W B F) (w : W) (b : B) (f : F)
     (hb : A.ontic.ExistsAt w b) (hf : ∀ v, Access A w v → A.holds v f) (hw : A.holds w f) :
     let M : Making W B F := fun u c g => u = w ∧ c = b ∧ g = f
@@ -323,6 +322,24 @@ theorem carriageControls :
     ⟨notLENeg, mgNoReq, notEPNeg _ _ positiveSubPure⟩,
     ⟨leCarried, notMGCarried, notEPNeg _ _ positiveSubPure, notPureReqCarried,
       nOf _ _ subset_rfl, emNeg, notEPositive _⟩⟩
+
+/-- Strictness certificate for "positive root essences strengthen carriage":
+row 3 of `carriageControls`. -/
+theorem carriedClosureSeparates : CarriedClosureSeparates :=
+  ⟨leCarried, notEPNeg _ _ positiveSubPure⟩
+
+/-- Cross-investigation control (Inv. 1 × Inv. 3). A classical source with
+every pure determination at both worlds, whose free selection of an outcome is
+read as a real intrinsic determination that differs across accessible worlds,
+fails N: at world `false` it has "selected `false`", which it lacks at `true`.
+Under the relation-of-reason reading the selection is not in its profile, and
+row 1 of `essenceControls` applies instead. -/
+theorem classicalSelectionControl :
+    (∀ v d, d ∈ pureSet → hasSel v true (.inl d)) ∧
+    ¬ RootAbsencesNecessary rootProfile true hasSel := by
+  refine ⟨fun v d hd => by cases v <;> exact hd, fun h => ?_⟩
+  have := h true ((rootIff true).2 rfl) false trivial (.inr false) rfl
+  exact absurd this (by simp [hasSel])
 
 end Controls
 

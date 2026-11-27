@@ -118,4 +118,9 @@ theorem carriageControls :
       cN positive positive ∧ cEM essNeg positive positive ∧ ¬ cE positive positive) := by
   sorry
 
+/-- Strictness certificate for "positive root essences strengthen carriage":
+row 3 of `carriageControls`. -/
+theorem carriedClosureSeparates : CarriedClosureSeparates := by
+  sorry
+
 end TruthCore.Results.Causality.RootClosure

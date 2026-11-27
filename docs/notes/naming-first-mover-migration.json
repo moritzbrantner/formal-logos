@@ -1934,7 +1934,7 @@
         "sha256": "a1e8d9bf8760827372213c8f9450c9acac57e23ecd2080273ce407ee817220c5",
         "lean_declaration": null
       },
-      "reviewed_sha256": "6bf24c9d7a36355afa83596fa394f749cf29ded0e6ac67a90ccb3f1b0c7f2c01"
+      "reviewed_sha256": "9ceac397d076def45a944fbd1715e63f398124ecfafe941ea22f7174c874993b"
     },
     {
       "kind": "disambiguations",

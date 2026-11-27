@@ -7,5 +7,6 @@
   "object_kind": "statement",
   "object_id": "682e6436-a44f-40d6-bc02-7cb5f4a2b754",
   "verification_result_id": "2abc0501-70df-4c88-9a59-b3b3752f578e",
-  "note": "Same root profile, admissible family and ESSENCE_6 relation. The strong version gives every essential condition at every admissible extension; the weak one only at extensions in which no root determination requires a lack. Row 3 of carriageControls satisfies the weak version and fails the strong one. The derivation of the strong version from the weak one uses the necessity direction of member grounding (89c988d9)."
+  "strictness_result_id": "2f9866e3-a768-40a2-b166-eb1a277d1fff",
+  "note": "Same root profile, admissible family and ESSENCE_6 relation. The strong version gives every essential condition at every admissible extension; the weak one only at extensions in which no root determination requires a lack. Row 3 of carriageControls (the strictness result) satisfies the weak version and fails the strong one. The necessity direction of member grounding (89c988d9) together with the weak version gives the strong one, but it is not the difference of the strong over the weak version: carriage with that direction is strictly stronger than positivity, since positivity does not imply the necessity direction. No certified difference is registered."
 }

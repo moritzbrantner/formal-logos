@@ -15,7 +15,7 @@ profile, `FactPSR` is unbound, and truthmaker maximalism is met by a totality
 fact. This module asks whether an essentialist account of modality supplies E
 and exactly where the rival's escape must lie.
 
-**Hyperintensional essence for profiles (ESSENCE_6).** `Ess y x C` reads "it
+**Essence with profile conditions (ESSENCE_6).** `Ess y x C` reads "it
 lies in the nature of `y` that `x`'s profile satisfies the condition `C`", for
 a condition `C : Set D → Prop` on sets of real determinations. It is a
 declared PRIMITIVE parameter. The existing ESSENCE_5 (`ModalGrounding.
@@ -23,7 +23,10 @@ EssentialTruth`) takes world-propositions, and that is too coarse here: a
 world-proposition about `x`'s profile cannot say what the essential condition
 demands of a profile that no world realizes, so "the condition excludes `k`"
 would hold vacuously of every unrealized profile. A condition on profiles
-states its content directly. No bridge to ESSENCE_5 is asserted.
+states its content directly. It is finer than world-propositions, not
+hyperintensional: `C` is an extensional predicate on `Set D`. It also has two
+place arguments (the being whose nature it is, the bearer whose profile is
+constrained) where ESSENCE_5 has one. No bridge to ESSENCE_5 is asserted.
 
 **Four premises.**
 
@@ -90,7 +93,11 @@ def RootAbsencesNecessary (m : Profile W B) (w : W) (HasAt : W → B → D → P
 determinations that satisfies every essential condition (of any being) on an
 actual root's profile is included in that root's profile at some accessible
 world. Whatever no nature excludes is possible for the root. Powers-based,
-Humean and primitivist accounts of modality deny it in different ways. -/
+Humean and primitivist accounts of modality deny it in different ways. It is
+stronger than Fine's account: only essences of beings are consulted (none of
+determinations or other items), each condition is on one bearer's profile,
+and the admissible family is not consulted, so admissibility constrains the
+root's possibilities only as far as some nature contains it. -/
 def EssenceGroundedRootProfileModality (m : Profile W B) (w : W)
     (Ess : B → B → (Set D → Prop) → Prop) (HasAt : W → B → D → Prop) : Prop :=
   ∀ r, ActualRoot m w r → ∀ q : Set D,
@@ -138,7 +145,8 @@ These are assignments of the stated relations only; they say nothing about
 what essence, requirement or admissibility metaphysically are. -/
 namespace Control
 
-open TruthCore.Causality.SourceIntellectControls.ProfileControls (Determination effect openProfile)
+open TruthCore.Causality.SourceIntellectControls.ProfileControls
+  (Determination effect openProfile positive)
 open TruthCore.Causality.IntentionalExemplarExtension.Control (rootProfile)
 open TruthCore.Causality.RootPerfectionExclusion (NoUnexplainedAbsenceAtRoots)
 
@@ -185,6 +193,27 @@ abbrev cLE (ess : Bool → Bool → (Set Determination → Prop) → Prop) (s t 
 /-- E on the control carrier, with the open family. -/
 abbrev cE (s t : Set Determination) : Prop :=
   NoUnexplainedAbsenceAtRoots rootProfile true openProfile (hasAt s t true)
+
+/-- Strictness of positivity over carriage on the control carrier: with the
+source's profile `{esse, a, b}` at both worlds, its nature containing the
+clause "lacks `noesis`", and the pure `a` requiring the lack of `noesis`,
+carriage holds and positivity fails (row 3 of `carriageControls`). A finite
+assignment only. -/
+def CarriedClosureSeparates : Prop :=
+  cLE essNeg positive positive aExcludesNoesis ∧ ¬ cEP essNeg positive positive
+
+/-- Determinations for the selection control: the #1970 determinations, and
+`inr b`, "the source has selected outcome `b`", read as a REAL intrinsic
+determination of the source (the reading the relation-of-reason account
+denies). -/
+abbrev SelDet := Determination ⊕ Bool
+
+/-- The classical source has every pure #1970 determination at both worlds and
+has selected outcome `v` at world `v`; the effect has nothing. -/
+def hasSel : Bool → Bool → SelDet → Prop
+  | _, true, .inl d => d ∈ TruthCore.Causality.SourceIntellectControls.ProfileControls.pure
+  | v, true, .inr b => b = v
+  | _, false, _ => False
 
 end Control
 
@@ -235,9 +264,10 @@ for the contingent selection and for the root's necessary lack is honored:
 the exercised power is a reason for the selection and the bare negative clause
 is a reason for the lack. The stronger necessitating standard fails, and it
 fails at the selection, not at the lack: the clause necessitates the lack, the
-power does not necessitate the selection. Neither existing standard counts
-against the bare clause; only a constraint on what may serve as a reason for a
-root's profile fact (LE) does. A finite scene, not a model of agency. -/
+power does not necessitate the selection. Neither registered `WhyStance`
+standard separates the two facts against the bare clause; a constraint on what
+may serve as a reason for a root's profile fact (LE) would, but LE is not in the
+scene. A finite scene, not a model of agency. -/
 theorem selectionParity :
     Contingent scene true SFact.select ∧ ¬ Contingent scene true SFact.lack ∧
     WhyHonors stance scene true ∧ ¬ WhyHonorsNecessitating stance scene true ∧
