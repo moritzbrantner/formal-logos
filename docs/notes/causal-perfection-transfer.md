@@ -7301,6 +7301,29 @@ other than the root is available to apprehend an item contained in the root
 before production. That sibling and its bridge are not registered (next test
 4).
 
+*What denying the premise takes.* The negation of `cde7f1dd` is only that some
+non-real item contained in a bearer is not apprehended by that bearer. It does
+not say that the item is mind-independent. Two deniers must be kept apart.
+
+- *The intermediate denier*: a non-real item in a bearer that another intellect
+  apprehends, or on which its being depends. It denies `cde7f1dd` while keeping
+  the dictum.
+- *A4* (and a Scotist reading): the modes are non-real, contained and
+  mind-independent. Mind-independence is an additional commitment beyond the
+  denial.
+
+Does the intermediate denier matter at a root? Before production it needs
+another intellect, not produced by the root, to apprehend or ground items in
+the root. In the analyst's judgment that intellect is an independent being
+beside the root: the independent locus (horn 1), whose price lane C recorded at
+`65805e5a`, conditional on the unregistered inclusive reading of (b). This is
+not typed; the dictum-faithful sibling with its root bridge (next test 4) would
+type it. So at a root the live denier is A4, and the comparison in D is between
+the personal account and A4, not between `cde7f1dd` and every denial of it. Off
+the root the intermediate denier has candidate instances (E), which bear
+against the general bearer-indexed form, not against the personal account at
+the root.
+
 **Relocation probe** (pre-report self-check 1).
 
 - `rootCriterionGivesExistentialStandInApprehension` and
@@ -7402,7 +7425,8 @@ apprehension (A, next test 6). **Parity at the status step.**
 
 The premise is general, so its warrant can come from other domains in which
 non-real items are posited. For each domain, the question is where the
-mind-independent accounts put the items.
+mind-independent accounts put the items. This tests A4's kind of denial only.
+The intermediate denier (C) is treated after the findings.
 
 *Evidence boundary.* Every author and position named in this section and in
 tables A and D was recalled from memory. None was source-checked, and all are
@@ -7443,6 +7467,20 @@ undecided are the analyst's assessments, not reports of a literature.
 5. *Not counted.* A4's status is unusual across domains. Under the
    Substantive Objection Standard unusualness is not a price, and the personal
    status is equally unusual.
+
+*The intermediate denier off the root.* A counterinstance to `cde7f1dd` needs
+less than a mind-independent item: a non-real item in a bearer that the bearer
+does not apprehend. Candidate instances come from the classical account
+itself: a privation predicated of its subject (blindness in an eye) or an
+extrinsic denomination (being known, said of a stone), each conceived as an
+item by an intellect other than its subject (navigation). Whether these count
+depends on whether CONTAINED_IN_1's "intrinsic determination" clause (DEF
+`c917dda9`) covers a privation or denomination conceived as an item. The
+definition makes that reading available but does not settle it. If it does,
+the general bearer-indexed premise is false off the root, and only a
+root-restricted or dictum-faithful form remains (next test 4). This is an
+analyst judgment. It bears on the general form's warrant, not on the
+comparison with A4 at the root (C).
 
 So the conceptualist premise does **not** have independent warrant from its
 domain-general record that would discriminate it from A4's denial. What it has
@@ -7502,8 +7540,15 @@ also with no instance elsewhere, together with the Euthyphro dilemma for ideas.
 
 **Provisional judgment.** **Parity.** The conceptualist premise is a direct
 assumption with a defensible primitive role. Its domain-general record does not
-discriminate it from A4's denial. The cognition criterion's overall warrant
-does not change. What changed:
+discriminate it from A4's denial. The denial of `cde7f1dd` is only
+non-apprehension by the containing bearer; A4's mind-independence is an
+additional commitment. The intermediate denier (another intellect apprehends or
+grounds the item) needs, at a root, an intellect beside the root before
+production, which in the analyst's judgment is the independent locus priced at
+`65805e5a` (C). Off the root its candidate instances (E) count against the
+general bearer-indexed form, which strengthens the case for the dictum-faithful
+sibling (next test 4). The cognition criterion's overall warrant does not
+change. What changed:
 
 - a second route shape to `3a32d91c`, which avoids `3b40009e` and `d1fb6414`.
   It re-presents the same dispute and is not additional evidence. A4 (control
@@ -7576,6 +7621,9 @@ registered. A1's price at `65805e5a` remains conditional on it.
    apprehended by some apprehender" with an explicit root bridge: nothing other
    than the root is available to apprehend an item contained in the root before
    production. Then test whether the bridge is independent of the disputed step.
+   The sibling would also type the claim that the intermediate denier (C) lands
+   on the independent locus at a root, and would avoid the candidate
+   counterinstances of the general form off the root (E).
 5. *The pair-restricted present-input premise.* Register the weakest version of
    `fce9e0a3`, on which only the witnessed pair is non-present, if a
    pair-restricted present-input relation is added to the shared signature.
@@ -7668,6 +7716,18 @@ renamed `rootCriterionGivesExistentialStandInApprehension` and
 its instance claim as the analyst's assessment. Next test 7 says what an
 instance would change, and names the A4 counterpart. The Challenge comment for
 the relocation probe is regenerated; no theorem statement changed.
+
+After publication as #2180, Codex review raised one P1 (comment 4723624754).
+Statement `cde7f1dd` called its denial the claim that some bearer contains a
+non-real item mind-independently. The negation requires only a non-real
+contained item that its bearer does not apprehend; another intellect could
+apprehend it. The denial is now stated as non-apprehension by the containing
+bearer, and A4's mind-independence as an additional commitment, in statement
+`cde7f1dd`, the Lean docstrings, C (the intermediate denier and whether it
+matters at a root), E (its candidate instances off the root), the provisional
+judgment, next test 4 and the attempt. Table D and the parity verdict compare
+the personal account with A4 and are unchanged. No Lean statement or proof
+changed.
 
 [Attempt record](../../corpus/attempts/0d8b9153-ad65-48a3-be6a-478612f0e2a1.json)
 

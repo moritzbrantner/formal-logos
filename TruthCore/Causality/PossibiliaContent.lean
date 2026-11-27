@@ -36,9 +36,12 @@ dependence, indexes apprehension to the containing bearer, and ranges over every
 non-real contained item rather than over beings of reason (the two ranges
 coincide only if every non-real item is a being of reason, which A4 denies). Its
 warrant is assessed in other domains (negations, possibilia,
-propositions, relations to non-existents, distinctions within one thing). The
-rival A4 denies it: its modes are non-real, contained and mind-independent (a
-Scotist formal distinction a parte rei is the developed precedent). The content
+propositions, relations to non-existents, distinctions within one thing). Its
+negation needs only a non-real contained item that its containing bearer does
+not apprehend; another intellect might apprehend it, or its being might depend
+on another intellect. The rival A4 denies it with an additional commitment: its
+modes are non-real, contained and mind-independent (a Scotist formal
+distinction a parte rei is the developed precedent). The content
 premise `NonRealStandInIsAbout` says that such a stand-in is about its
 candidate; a template reading of the modes denies it.
 
@@ -91,9 +94,11 @@ contained item, not only over beings of reason; the dictum reaches A4's modes
 only if every non-real item is a being of reason, which A4 denies. So it is not
 a consequence of the dictum. It is general: it does not mention favouring, value
 or roots. A
-bearer that apprehends nothing contains no non-real item. Denied by an account
-on which a simple nature contains mind-independent non-real modes (A4, the #1892
-objective-eminence status). -/
+bearer that apprehends nothing contains no non-real item. Its negation is only
+that some non-real contained item is not apprehended by its containing bearer;
+another intellect may still apprehend it or ground it. A4, on which a simple
+nature contains mind-independent non-real modes (the #1892 objective-eminence
+status), denies it with that additional commitment. -/
 def NonRealContainmentIsApprehension (Contains RealConstituent : B → C → Prop)
     (Apprehends : B → C → Prop) : Prop :=
   ∀ b e, NonRealContained Contains RealConstituent b e → Apprehends b e
