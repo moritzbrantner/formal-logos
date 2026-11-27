@@ -1,0 +1,10 @@
+{
+  "id": "70bbd65e-2008-4940-94bf-212cde3e634e",
+  "label": "Test by ForeknowledgeDiscrimination.controls (2b20b5af)",
+  "subject_kind": "result",
+  "subject_id": "83877f25-de95-4c1b-bfd6-dc56203c0284",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "2b20b5af-d653-56ba-8001-35903fb3d1ea",
+  "note": "Use the empty Bool epistemic accessibility relation for the structural test. At the selected world `true` the self-loop is absent. Both worlds satisfy `Complete` for the selected content `id` vacuously and have identical access rows, although `id` differs between `false` and `true`. The discrimination proof uses the self-loop at its second world to derive profile agreement from equal rows."
+}

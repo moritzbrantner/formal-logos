@@ -1,0 +1,10 @@
+{
+  "id": "3811231a-47fe-4e17-98a1-2a0edbc23d8e",
+  "label": "Test by CausalHarvest.contingentPredecessorControl (96d25c42)",
+  "subject_kind": "result",
+  "subject_id": "e6fe48f4-3103-5535-aba0-aec6ba5abd20",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "96d25c42-71aa-5fa0-841d-9aa62d91e1be",
+  "note": "Omit NoContingentGroundOfNecessary with the chosen support relation m.Causes. At reading world false both bearers exist and true causes false. The accessible world true retains only false, so the actual supporter is contingent. The necessary-only union is empty. The reading-world causal edges form a two-cycle, so this test applies to the route with union well-foundedness."
+}

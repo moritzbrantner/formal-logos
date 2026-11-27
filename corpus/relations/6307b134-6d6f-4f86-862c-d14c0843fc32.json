@@ -1,0 +1,10 @@
+{
+  "id": "6307b134-6d6f-4f86-862c-d14c0843fc32",
+  "label": "Test by ActualExistenceAdequacy.comparison (c94b5446)",
+  "subject_kind": "result",
+  "subject_id": "689c8180-1c0a-558c-84d6-e2aa1e5cdb49",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "c94b5446-e7e7-5b36-9bed-288959725526",
+  "note": "The sole Unit bearer is concrete in both observational profiles and exists at the selected world `true`. Each profile accesses `false`, where the same bearer is absent. `Target` witnesses `SomeActualContingentAt` independently in `chain` and `fork` on the same observational data."
+}

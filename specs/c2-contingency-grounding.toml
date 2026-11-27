@@ -350,16 +350,6 @@ object_id = "f68a5d87-45ea-4686-82a6-8b71f722b90a"
 note = "Witness simplicity, identity-scoped reception, receiver potency and receptive irreflexivity in the two-bearer witness frame. The first mover f moves x in heat, and x receives esse in a principle distinct from and in receptive potency to x's esse. The first mover f has neither reception nor matter-form composition."
 
 [[relation]]
-id = "a7a1762d-5d30-49c4-8866-f9e20878e764"
-label = "Test by ContingencyGrounding.controls (f644aee8)"
-subject_kind = "result"
-subject_id = "cafd9800-2fee-4fb6-a52f-bec0f1479d7f"
-predicate = "tests"
-object_kind = "argument"
-object_id = "f644aee8-8d2d-4221-8846-ad901ce7c258"
-note = "Witness the First Way premise bundle at true with two present bearers. The unreceived pure-act first mover f moves the contingent x in heat. The only contingent bearer x satisfies C2 by reception and by a distinct prior esse-cause. The argument takes excluded middle explicitly."
-
-[[relation]]
 id = "f14842c1-a170-4f41-a5a8-c862ad38f5a5"
 label = "Test by ContingencyGrounding.controls (38394aad)"
 subject_kind = "result"
