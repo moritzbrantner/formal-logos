@@ -1,6 +1,7 @@
 module
 
 public import TruthCore.Science.FineTuningInformation
+public import TruthCore.Explanation.HistorySelection
 import Mathlib.Tactic.FieldSimp
 import Mathlib.Tactic.Positivity
 import Mathlib.Tactic.Ring
@@ -211,10 +212,42 @@ theorem observerWeightUnderdetermination : ObserverWeightUnderdetermination := b
     refine ⟨p / s.weight 0, (1-p) / s.weight 1,
       div_pos hp s.evidence_pos, div_pos (sub_pos.mpr hp') hother, ?_⟩
     have hx : s.weight 0 * (p / s.weight 0) = p := by
-      field_simp [ne_of_gt s.evidence_pos]
+      field_simp [ne_of_gt s.evidence_pos] <;> ring
     have hy : s.weight 1 * ((1-p) / s.weight 1) = 1-p := by
-      field_simp [ne_of_gt hother]
-    rw [weightedLikelihood, hx, hy, show p + (1-p) = 1 by ring, div_one]
+      field_simp [ne_of_gt hother] <;> ring
+    have hsum : p + (1-p) = 1 := by ring
+    rw [weightedLikelihood, hx, hy, hsum, div_one]
+
+/-- Compose with the repository's exact identifiability criterion. There is
+no decoder, even one of arbitrary complexity, which reads the entire fixed
+ontology profile and returns the correct observer likelihood for every
+interior measure. This does not assert that every physical law has this defect. -/
+theorem no_scope_decoder (possible reachable : Set Bool) :
+    ¬ ∃ recover : (Set Bool × Set Bool × Set Universe × (Universe → Bool)) → ℝ,
+      ∀ p : InteriorRate, recover (scopeData possible reachable p) =
+        (observationLaw p.val).real fineEvent := by
+  intro h
+  exact (observationalUnderdetermination.2.2 possible reachable)
+    ((TruthCore.Science.Identifiability.total_factor_iff _ _).mp h).1
+
+/-- #736's evidence-only criterion, not a new definition of metaphysical
+adequacy. Every truth-vector derived from the fixed scope data is invariant;
+the proposition that the report has probability at least one half is not.
+The basis can be infinite, and no restrictions on the readout are imposed. -/
+theorem threshold_not_evidence_only (possible reachable : Set Bool) (R : Type)
+    (read : (Set Bool × Set Bool × Set Universe × (Universe → Bool)) → R → Prop)
+    (basis : R → Prop) :
+    ¬ TruthCore.Explanation.HistorySelection.EvidenceOnly
+      (fun (p : InteriorRate) r => read (scopeData possible reachable p) r) basis
+      (fun p => (1/2 : ℝ) ≤ (observationLaw p.val).real fineEvent) := by
+  intro h
+  let lo : InteriorRate :=
+    ⟨⟨1/100, by norm_num, by norm_num⟩, by norm_num, by norm_num⟩
+  let hi : InteriorRate :=
+    ⟨⟨99/100, by norm_num, by norm_num⟩, by norm_num, by norm_num⟩
+  have he := h lo hi (by intro r _; rfl)
+  simp only [fine_probability] at he
+  norm_num [lo, hi] at he
 
 end Plenitude
 
