@@ -1,0 +1,46 @@
+# #2145 premise lane P: the purity premises under one criterion. Is a
+# restriction of favouring content a limitation? A standard-relative reading of
+# the principle (loss and arbitrariness bridges) gives horn A's conclusion
+# without the admissible family, joint compossibility, the purity of
+# good-generality or one-favouring realization. Analyst formulations,
+# attribution deferred. See docs/notes/causal-perfection-transfer.md, section
+# "When is a restriction of content a limitation? The purity premises under one
+# criterion".
+
+[batch]
+vocab = "TruthCore.Causality.PurityCriteria"
+results = "TruthCore.Results.Causality.PurityCriteria"
+
+[[statement]]
+id = "720bccc2-2114-4f6c-ab8a-a16aab3c9de3"
+label = "A favouring determination that misses a verdict of value is not pure"
+lean = "MissingVerdictIsImpure"
+definitions = ["65e38ffa-5a1c-55d0-935c-6538d843b780", "abd8cfa4-1887-47d5-86cc-e0f6092e4ded", "071b24f0-ef72-4012-8c7d-ab3be3335961", "53634064-7959-4c9d-90c5-7dc88b741bea"]
+paraphrase = "OPEN analyst bridge, attribution deferred: for every favouring profile phi, if phi misses a verdict of the betterness standard (for some scenario and candidates x, y, x is better than y there and phi does not favour x over y there), then the real determination that a favouring of the bearer is phi is not a pure perfection (DEF-PURE-PERFECTION; the same purity parameter as the #2153 premises). With the standard read as value (DEF 071b24f0) it is the loss half of 'restriction of favouring content is limitation'. The Lean type takes the standard as a parameter: the same function with the end-realization ordering as standard is the D-relative form, under which the good-tracking profile, not the D-directed one, is the restricted one. It says nothing about a contingent selection that is not part of a profile."
+
+[[statement]]
+id = "a141e6a8-7ef7-443f-82fd-ee8a6c8663c5"
+label = "A favouring determination that makes a verdict value does not back is not pure"
+lean = "UnbackedVerdictIsImpure"
+definitions = ["65e38ffa-5a1c-55d0-935c-6538d843b780", "abd8cfa4-1887-47d5-86cc-e0f6092e4ded", "071b24f0-ef72-4012-8c7d-ab3be3335961", "8e29c4fa-2f76-4158-a088-42cd7fcf6250"]
+paraphrase = "OPEN analyst bridge, attribution deferred: for every favouring profile phi, if phi makes a verdict the betterness standard does not back (for some scenario and candidates x, y, phi favours x over y there and x is not better than y there), then the real determination that a favouring of the bearer is phi is not a pure perfection (DEF-PURE-PERFECTION). With the standard read as value it is the arbitrariness half of 'restriction of favouring content is limitation': a standing preference against value, or among value-tied candidates, is not a pure perfection. It concerns the profile, the favouring as a function of the scenario; a contingent selection among candidates the profile leaves unranked is not a verdict of the profile and is not covered."
+
+[[statement]]
+id = "ca3c311d-dab7-417d-8eb7-87c81fe82029"
+label = "Betterness varies within an end-realization class"
+lean = "BetternessVariesWithinEndClass"
+definitions = ["071b24f0-ef72-4012-8c7d-ab3be3335961", "b28d7e04-694b-442b-a42b-65f39190956f"]
+disambiguations = ["8430c7dc-2972-4f47-87a9-ce4676533cdf"]
+paraphrase = "OPEN analyst premise, attribution deferred: for some variation scenario s and candidates x, y, at least one not a present input at s, x is better than y at s, and at some scenario that agrees with s on end-realization x is not better than y. It is good-generality of the betterness standard itself (BECAUSE_OF_GOODNESS_2 applied to the standard as a profile). Its denial, that betterness factors through end-realization, makes nothing good-general on any side and is one of the four members of the #2172 variationCore. It does not say which scenarios are metaphysically possible; on the control carrier the witness is cBetter against actual."
+
+[[argument]]
+id = "b86a2364-8255-43f7-a725-08503ef2f1a5"
+label = "Actual-root favourings are good-general, from nonlimitation and the value standard"
+theorem = "actualRootFavouringIsGoodGeneralFromStandard"
+comparator_theorems = ["standardControls", "standardRelativity", "refinementCondemnsGoodTracking"]
+premises = ["ee4ab504-c8fe-59bc-bc96-7cbeefed6410", "a30c5963-cb81-5366-aab0-2454363e18f7", "c78c77da-91b0-5928-bd5f-ba670a6f3660", "720bccc2-2114-4f6c-ab8a-a16aab3c9de3", "a141e6a8-7ef7-443f-82fd-ee8a6c8663c5", "ca3c311d-dab7-417d-8eb7-87c81fe82029"]
+conclusion = "7fca65ec-8565-46fe-a5fe-bfdfcf0ed245"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+senses = {BECAUSE_OF_GOODNESS = "BECAUSE_OF_GOODNESS_2"}
+rule = "Actual roots have only pure determinations; the two standard bridges make a pure favouring track betterness exactly; betterness varies within an end-realization class, so the favouring is good-general at the same witness"
+meaning = "Fix an actual root r at w and a favouring determination favours phi of r. Actual roots have no represented limiting principle (its distinct simply prior being is the shared CausalityFrame's PriorSimply, PRIOR_1), so by the RootPurity bridge every real determination of r is pure, favours phi among them. By excluded middle and the loss bridge, phi favours x over y wherever x is better than y; by excluded middle and the arbitrariness bridge, phi favours x over y only where x is better than y. Betterness varies within an end-realization class: some x is better than y at s, at least one of them not a present input, and not at a scenario t that agrees with s on end-realization. Then phi favours x over y at s and not at t, so phi depends on betterness with end-realization fixed and is good-general. The argument uses neither the #2153 admissible family nor joint compossibility, root-profile admissibility, pure admissibility, the structural L, the purity of good-generality e2357adc or one-favouring realization 3e6ae3e7; nor the #2153 E premise. The main theorem uses no axioms. Comparator companions (Mathlib axioms): standardControls gives, on the #2153 two-being carrier with the Lane 2b profiles, a positive witness and for each non-logical premise a row where it fails, the others hold and the conclusion fails; its last row is the D-relative form, with the end-realization ordering as the standard, where the D-directed favouring is pure and tracks its standard and the variation premise fails. standardRelativity shows that the D-directed and good-tracking profiles agree in every genuine scenario except on c over d at cBetter, so the value bridges condemn the first and the D bridges the second at the same verdict. refinementCondemnsGoodTracking shows that a value-free refinement criterion would count the good-tracking profile itself as restricted. The assignments say nothing about what favouring, purity or value are."

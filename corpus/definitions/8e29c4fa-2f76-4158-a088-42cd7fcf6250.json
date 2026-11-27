@@ -1,0 +1,9 @@
+{
+  "id": "8e29c4fa-2f76-4158-a088-42cd7fcf6250",
+  "label": "Unbacked verdict: a profile favours what its standard does not rank higher",
+  "term": "unbacked verdict relative to a standard (UnbackedVerdict std φ)",
+  "definition": "UnbackedVerdict std φ, for a standard std and a favouring profile φ: for some scenario s and candidates x, y, φ favours x over y at s and the standard does not rank x over y at s. With std the value ranking (DEF 071b24f0), the profile prefers something that is not better: a preference against value, or a standing preference among candidates the standard leaves unranked (a tie-break). It concerns the profile, the favouring as a function of the scenario; a contingent selection among candidates the profile leaves unranked is not a verdict of the profile.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.PurityCriteria.UnbackedVerdict",
+  "note": "Stipulative analyst notion (#2145 premise lane P), attribution deferred. It is the arbitrariness half of a standard-relative reading of 'restriction of content is limitation'; see docs/notes/causal-perfection-transfer.md, section 'When is a restriction of content a limitation?'."
+}

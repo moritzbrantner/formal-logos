@@ -1,0 +1,12 @@
+{
+  "id": "a141e6a8-7ef7-443f-82fd-ee8a6c8663c5",
+  "label": "A favouring determination that makes a verdict value does not back is not pure",
+  "paraphrase": "OPEN analyst bridge, attribution deferred: for every favouring profile phi, if phi makes a verdict the betterness standard does not back (for some scenario and candidates x, y, phi favours x over y there and x is not better than y there), then the real determination that a favouring of the bearer is phi is not a pure perfection (DEF-PURE-PERFECTION). With the standard read as value it is the arbitrariness half of 'restriction of favouring content is limitation': a standing preference against value, or among value-tied candidates, is not a pure perfection. It concerns the profile, the favouring as a function of the scenario; a contingent selection among candidates the profile leaves unranked is not a verdict of the profile and is not covered.",
+  "lean_declaration": "TruthCore.Causality.PurityCriteria.UnbackedVerdictIsImpure",
+  "definition_ids": [
+    "65e38ffa-5a1c-55d0-935c-6538d843b780",
+    "abd8cfa4-1887-47d5-86cc-e0f6092e4ded",
+    "071b24f0-ef72-4012-8c7d-ab3be3335961",
+    "8e29c4fa-2f76-4158-a088-42cd7fcf6250"
+  ]
+}

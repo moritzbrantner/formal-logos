@@ -1,0 +1,12 @@
+{
+  "id": "720bccc2-2114-4f6c-ab8a-a16aab3c9de3",
+  "label": "A favouring determination that misses a verdict of value is not pure",
+  "paraphrase": "OPEN analyst bridge, attribution deferred: for every favouring profile phi, if phi misses a verdict of the betterness standard (for some scenario and candidates x, y, x is better than y there and phi does not favour x over y there), then the real determination that a favouring of the bearer is phi is not a pure perfection (DEF-PURE-PERFECTION; the same purity parameter as the #2153 premises). With the standard read as value (DEF 071b24f0) it is the loss half of 'restriction of favouring content is limitation'. The Lean type takes the standard as a parameter: the same function with the end-realization ordering as standard is the D-relative form, under which the good-tracking profile, not the D-directed one, is the restricted one. It says nothing about a contingent selection that is not part of a profile.",
+  "lean_declaration": "TruthCore.Causality.PurityCriteria.MissingVerdictIsImpure",
+  "definition_ids": [
+    "65e38ffa-5a1c-55d0-935c-6538d843b780",
+    "abd8cfa4-1887-47d5-86cc-e0f6092e4ded",
+    "071b24f0-ef72-4012-8c7d-ab3be3335961",
+    "53634064-7959-4c9d-90c5-7dc88b741bea"
+  ]
+}
