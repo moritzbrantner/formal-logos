@@ -6685,7 +6685,7 @@ is produced. The aim was to place each rival's best answer, not to refute it.
 | Lewisian concrete possibilia | real concrete worlds | horn 1. They are individuated by being, not by aboutness. A value ranking needs value-facts at those worlds |
 | Meinongian or Zalta-style abstract objects that encode properties | objects given by a comprehension principle, independent of any bearer | horn 1. To be *in* the root they need a further principle that the root grounds exactly these encodings: A4's own grounding primitive |
 | Cognitive-act theories: propositions as types of creaturely acts of predication (Soames, King, Hanks; navigation) | derived from creaturely minds | no stand-ins before creatures. At the root this is horn 3 (nowhere), or act types that exist uninstantiated, which are abstract items (horn 1) |
-| Powers-based modality (Vetter; Borghini and Williams; navigation) | real potentialities of actual bearers, individuated by their manifestations | specifying a manifestation that does not exist leads to Bird's relata problem. Bird and Tugby answer with uninstantiated Platonic properties (horn 1); Molnar answers with primitive directedness of *real* powers. B shows that real plurality is excluded at a simple root |
+| Powers-based modality (Vetter; Borghini and Williams; navigation) | real potentialities of actual bearers, individuated by their manifestations | specifying a manifestation that does not exist leads to Bird's relata problem. Bird and Tugby answer with uninstantiated Platonic properties (navigation; horn 1); Molnar answers with primitive directedness of *real* powers. B shows that real plurality is excluded at a simple root |
 | A4: modes of imitability of the root's nature, not understood | in the root | needs non-real containment (B) |
 
 *Two exclusions that bind both sides.* Covariation, natural signs and
@@ -6825,7 +6825,7 @@ lane C's five premises and has the good-tracking favouring at the root `true`.
 | 2 | as row 1, nothing apprehended | conceptualist premise | fails | A4: mind-independent non-real modes |
 | 3 | `inner o`, every contained item real | root simplicity | fails | real powers or real representations in a composite source |
 | 4 | as row 1, nothing about anything | content premise | fails | a template reading of the modes, here with apprehension kept |
-| 5 | `c` absent through `blob`, the rest present through themselves; only `blob` contained | no present candidates | fails | a source facing present inputs |
+| 5 | `c` absent, standing through `blob`; the rest present, standing through independent items; only `blob` contained | no present candidates | fails | a source facing present inputs |
 
 Disclosed artifacts:
 
@@ -6856,7 +6856,7 @@ does an established instance of that kind exist outside the root?
 | If the distinction were only founded, not actual | the stand-ins are not distinct items; by realization and irreflexivity there is no favouring (lane C's nowhere horn) | the same |
 | Its characteristic objection | Euthyphro for ideas: if the intellect finds the distinctions, they are there without it and apprehension does no work for individuation; if it makes them, what guides it is the nature's foundation, and why a subject is needed is the open question | Ockham's identity objection: items really identical with one nature cannot differ in properties; Scotists reply that formal non-identity is compatible with real identity. No consensus |
 | Established instance of the same kind outside the root | none. Human distinctions of reason (convex and concave in one curve) are carried by a real plurality of representations, which simplicity excludes at the root | none. Non-real formalities a parte rei are contested wherever they are posited; real powers and holes are real items |
-| Non-factive standing for a non-present candidate | undisputed for minds (we think of what does not exist) | disputed for powers (Bird and Mumford deny that dispositional directedness is intentional). A4 need not use powers, and a template reading needs no aboutness |
+| Non-factive standing for a non-present candidate | undisputed for minds (we think of what does not exist) | disputed for powers (critics of physical intentionality, Bird among them, deny that dispositional directedness is intentional; navigation). A4 need not use powers, and a template reading needs no aboutness |
 | Value-dependence | ideas track value grounded in the nature | the modes share that ground (A4 is not A3) |
 
 *Verdict on the table.* Each side posits a non-real plurality in one simple
