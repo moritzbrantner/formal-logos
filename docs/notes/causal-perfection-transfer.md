@@ -6387,21 +6387,33 @@ as their definition guarantees.
 
 **Registration was argued, not tested.** A stronger reading asks whether the
 outweighed reason is *registered* in the source's actual state. That is a
-question about stand-ins, not about the profile. Lean-only
-`degreeOnlyRegistersNoRespectBetweenTies` gives one constraint: a stand-in that
-carries only an overall degree records no respect in which two overall-tied
-candidates differ.
+question about how rankings are realized on stand-ins, not about the profile.
+Lean-only `degreeOnlyRegistersNoRespectBetweenTies` gives one constraint, and
+only this one. Suppose a respect's strict ranking is realized through a map that
+carries only an overall degree. Then it ranks no candidate over another of the
+same overall degree. So an overall-degree-only representation cannot register a
+respect in which two overall-tied candidates differ.
 
-Registering respects therefore needs per-respect stand-ins.
+The lemma does not show that registration needs a separate stand-in for each
+respect. One individuating stand-in per candidate, as in round 2's
+interpretation, can carry several respect-indexed rankings. For example, take the
+stand-in map to be the identity and each respect's relation to be that respect's
+ranking. This option is open to both accounts:
 
-- *For A4*, these are per-respect modes. This is a *new commitment*: round 2's
-  A4 had one ranked mode per candidate.
-- *For the personal account*, these are per-respect ideas. Ideas "of each thing
-  in each respect" are an analyst extension of the q.15 a.2 account of many
-  ideas, not a reading of it.
+- *For A4*: respect-indexed rankings over its one ranked mode per candidate.
+- *For the personal account*: respect-indexed rankings over its one idea per
+  candidate.
 
-The counterparts first proposed do not register a respect. The antecedent will
-(q.19 a.6 ad 1) and "a mode's own degree" are both per-candidate degrees.
+On both sides, ranking by respect is an analyst extension of what was stated:
+round 2's value-ranked modes for A4, and the q.15 a.2 account of many ideas for
+the personal source (not a reading of it). So registration imposes the same
+demand on both accounts, with the same kind of representation available, and it
+does not discriminate. It adds no per-respect modes or ideas as a new commitment
+of either side.
+
+The counterparts first proposed carry only overall degrees: the antecedent will
+(q.19 a.6 ad 1) and "a mode's own degree". Read that way, the lemma applies to
+both, and neither registers a respect between overall ties.
 
 ### 2. Self-application
 
@@ -6501,7 +6513,7 @@ here.
 | Test (one criterion) | Personal source | A4 (imitability exemplars) | Discriminates? |
 | --- | --- | --- | --- |
 | Counterfactual guidance, outweighed reason raised alone | passes (good-tracking profile) | passes (same profile) | no; profile-level, and A4 is a structural duplicate |
-| Registration of the outweighed respect in the actual state | needs per-respect ideas (an analyst extension) | needs per-respect modes (a new commitment) | not tested; the demand is the same and the proposed payments differ (below) |
+| Registration of the outweighed respect in the actual state | not by overall degrees alone; respect-indexed rankings over one idea per candidate are available (an analyst extension) | not by overall degrees alone; respect-indexed rankings over one mode per candidate are available (an analyst extension) | no; argued, not tested, and the same demand with the same kind of representation on both sides |
 | Weak self-application: own favouring over a non-present determination | reduces to the criterion at second order | the same | no; relocates the same bridge |
 | Strong self-application: responsiveness to the second-order standard | on the global standard, no dependence; on the scenario-relative standard, dependence possible (also at a necessary source) | the same | no; parity follows from the structural duplicate |
 | Self-love | yes (q.19 a.3) | the rival's own posit | no |
@@ -6510,14 +6522,15 @@ here.
 
 ### Same demand, different proposed payments
 
-The two accounts face the same articulation demand: many value-ranked,
-respect-articulated items in one simple nature (#1879). They propose different
+The two accounts face the same articulation demand: many value-ranked items,
+ranked in several respects, in one simple nature (#1879). Registration adds
+nothing to this demand that differs between the sides (section 1). They propose different
 payments.
 
 - **The personal account** pays with a plurality that exists *in being
   understood*: many ideas through one essence, as relations of reason.
 - **A4** must pay with a *mind-independent, non-composing* plurality. That is
-  the #1892 objective-eminence status, now multiplied by respect.
+  the #1892 objective-eminence status, for items ranked in several respects.
 
 Whether A4's payment is coherent is not a structural question about profiles or
 stand-ins, which A4 duplicates by definition. It is a question about the status
@@ -6545,16 +6558,20 @@ of that plurality.
 - *"A further mark the D-nature fails" for Lane 2b's D-nature.* It is not
   `Fixed`, and it failed only vacuously on this carrier.
 - *Counting guidance as evidence of mind.* Guidance is profile-level.
-- *Counting registration as cognitive.* It was argued, not tested, and the
-  per-candidate counterparts do not register a respect.
+- *Counting registration as cognitive.* It was argued, not tested. The
+  overall-degree counterparts do not register a respect between ties, and
+  respect-indexed rankings over one stand-in per candidate are available to both.
+- *Per-respect stand-ins as a requirement of registration, and per-respect modes
+  as a new commitment of A4.* `degreeOnlyRegistersNoRespectBetweenTies` excludes
+  only overall-degree-only representations (Codex P1 on PR #2178).
 - *Counting self-apprehension as a discriminator.* It presupposes the dispute.
 - *Counting the necessity of self-favouring against A4.* The personal source's
   self-love is necessary too.
 
-**Standing rival and price.** A4, now with per-respect modes as a new
-commitment. Its payment for the shared articulation demand is a mind-independent,
-non-composing plurality of value-ranked, respect-articulated modes. The personal
-payment is a plurality in being understood.
+**Standing rival and price.** A4, with no new commitment from this round. Its
+payment for the shared articulation demand is a mind-independent, non-composing
+plurality of value-ranked modes, ranked in several respects. The personal payment
+is a plurality in being understood.
 
 **Provisional judgment.** No change at `d1fb6414`. Within this program no
 substantive objection to A4 has been identified beyond the recognition bridge it
@@ -6565,8 +6582,8 @@ added, discharged or reclassified.
 
 **Next discriminating tests.**
 
-1. *Coherence of the payment.* Can a plurality of value-ranked,
-   respect-articulated modes in a simple nature be at once mind-independent and
+1. *Coherence of the payment.* Can a plurality of modes ranked in several
+   respects in a simple nature be at once mind-independent and
    non-composing? Equivalently: does such a plurality need a unifying principle
    that only being understood supplies? This joins #1879 (articulation under
    simplicity) and #1892 (intelligibility without intellection). It is not a
@@ -6622,6 +6639,19 @@ claim of no second-order dependence at the root were overstated, because the
 lemma's hypothesis fails where value varies, as it must in the good-general
 setting. The claims were withdrawn and qualified in the following commit, with
 no new formal content. The review is closed at the repair cap.
+
+A Codex review on PR #2178 (comment 4723059108) then found one P1. The prose
+inferred from `degreeOnlyRegistersNoRespectBetweenTies` that registration needs
+per-respect stand-ins, and it called per-respect modes a new commitment of A4.
+That exceeds the lemma, which excludes only representing a respect's strict
+ranking through an overall-degree map that identifies the tied candidates. One
+individuating stand-in per candidate can carry several respect-indexed rankings
+(the identity map, with each relation that respect's ranking), on both sides.
+This also overstated the repair of P2-4 above. The registration paragraph, the
+table row, the articulation demand, the rejected approaches, the standing rival
+and price, the Lean doc comment and the attempt record are restricted
+accordingly. Registration is now recorded as the same demand on both accounts,
+not a discriminator and not a price of A4. No formal content changed.
 
 [Attempt record](../../corpus/attempts/6429463e-be7f-467a-a64f-de8d2e13c06e.json)
 

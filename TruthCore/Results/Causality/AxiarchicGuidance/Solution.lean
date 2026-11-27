@@ -80,7 +80,11 @@ theorem fixedNotGuided {S X R Z : Type} (w : S → R → X → Nat)
 /-- Registration: if a respect's ranking is realized on stand-ins that carry only
 an overall degree `deg`, and the ranking is irreflexive, then it ranks no
 candidate over another of the same degree. A degree-only stand-in does not
-register a respect in which two overall-tied candidates differ. -/
+register a respect in which two overall-tied candidates differ. The lemma concerns
+only overall-degree-only representations. It does not show that registration needs
+a separate stand-in for each respect: one individuating stand-in per candidate
+(for example `deg := id`) can carry several respect-indexed rankings, on either
+account. -/
 theorem degreeOnlyRegistersNoRespectBetweenTies {X C : Type} (rkr : X → X → Prop)
     (rel : C → C → Prop) (deg : X → C) (hReal : ∀ x y, rkr x y ↔ InvImage rel deg x y)
     (hIrr : ∀ x, ¬ rkr x x) (x y : X) (hTie : deg x = deg y) : ¬ rkr y x :=
