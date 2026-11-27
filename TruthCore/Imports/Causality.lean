@@ -189,6 +189,7 @@ public import TruthCore.Causality.ModalSenseSupport
 public import TruthCore.Causality.MotionMapsBatch1
 public import TruthCore.Causality.MotionMoverFork
 public import TruthCore.Causality.NamedPotentialCauser
+public import TruthCore.Causality.NamedRootStructuralAttributes
 public import TruthCore.Causality.NamingVeracityBatch1
 public import TruthCore.Causality.NarDerivation
 public import TruthCore.Causality.NarGrafts

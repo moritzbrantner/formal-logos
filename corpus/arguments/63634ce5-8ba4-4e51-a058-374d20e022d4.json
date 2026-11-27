@@ -1,0 +1,22 @@
+{
+  "id": "63634ce5-8ba4-4e51-a058-374d20e022d4",
+  "label": "The two composition kinds entail the matter-form inclusion",
+  "premise_statement_ids": [
+    "d7741cdc-881b-5bda-85ce-d70223162f78"
+  ],
+  "conclusion_statement_id": "6a9199b7-6c64-4496-ac3b-30505b1658a4",
+  "inference_ids": [
+    "e674bad9-4228-4d48-a732-34045f43749c"
+  ],
+  "meaning": "The same MatterForm and Composite predicates appear on both sides. The full law additionally forces composition wherever the represented maps differ. The strictness companion interprets both predicates as true only of true on Bool, and the represented maps as constantly false and true. Matter-form inclusion holds at both candidates and applies at true. The full law would require composition of false because its maps differ.",
+  "definition_ids": [
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "183b48d2-1753-583d-aef9-4199cff86231",
+    "85f7f569-ab4d-514b-aa2c-cf75171ad105",
+    "e0010549-b46d-4aaa-8ea2-a2aa203fad2c"
+  ],
+  "disambiguation_ids": [
+    "1aef8986-ed29-564f-9803-d812d2ff63e1"
+  ],
+  "weakening": true
+}
