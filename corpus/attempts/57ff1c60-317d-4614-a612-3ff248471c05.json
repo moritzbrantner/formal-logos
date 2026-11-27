@@ -1,0 +1,53 @@
+{
+  "id": "57ff1c60-317d-4614-a612-3ff248471c05",
+  "label": "Preexistence bottleneck: q.4 a.2 scope, universal-source restriction and the impersonal source",
+  "date": "2026-11-27",
+  "statement_ids": [
+    "64498e7e-7f10-54a0-9ec0-c65e6076de1f",
+    "f8ba2429-b4f1-5712-a4d3-798213963d34",
+    "10cd24ed-3878-489b-819e-02820a6ef2cd",
+    "b26c10a0-983d-5a88-aa03-cc601bc1ddc6",
+    "d0fc96b7-fd2d-504e-912f-925de3b1e6ed",
+    "791fa216-ce40-5e7d-82c5-0bd5fe245446",
+    "60176223-d091-4002-a09d-024677fc948c",
+    "66252c05-49e7-4505-9644-e8f8ed823f1d"
+  ],
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "Warrant-phase checkpoint 2 on q.4 a.2 preexistence 64498e7e (direct premise of about 40 God-route arguments). The materialized SCTA witness of I q.4 a.2 was read: the first proof grounds preexistence in 'effectus praeexistit virtute in causa agente' plus the thesis that this is a more perfect mode, and applies 'omnium rerum perfectiones' to God as first effective cause. The Lean statement is stronger than the passage in mode (one InAct on both sides), in perfection scope (every perfection of a thing whose being c causes) and in cause scope (every cause of being); it does not encode the more-perfect-mode thesis. Consumer audit (library-wide scan of application sites): every God-route application uses it only with a universal source of being as cause, except perfectFromAncestry (intermediate causes of being); the rest are strength and bridge registrations. Verified: universal-source preexistence 60176223 from universal transfer b26c10a0 and universal-source possession 66252c05 (no f8ba2429, no 10cd24ed); strength orders from 64498e7e and d0fc96b7; a sibling of perfectFromGodCause for 78b7c124 consuming universal-source preexistence; and an impersonal-source control in which universal and unrestricted transfer, universal-source possession and preexistence, 64498e7e and the inclusive perfection of the source all hold while the source lacks life formally. No premise is established, defeated in the frontier sense, or closed.",
+  "evidence": [
+    "916fe2ae-de45-445d-a8d5-c0f5328d1b14",
+    "efb48248-5d90-42b7-9bf9-0c862a0bd0b9",
+    "a35e5195-abe4-4389-a171-3a0def89d8ae",
+    "56649c09-3434-4926-a154-45b2d47ab77d",
+    "d180310f-4eda-44be-8c26-cca3347040bf"
+  ],
+  "blocker": "Universal-source preexistence rests on universal transfer b26c10a0, whose inputs 5e281daf, 2f6b9eff and the mode-of-being thesis 791fa216 (the q.4 a.2 second-proof premise) are unassessed; the passage's more-perfect-mode thesis is unencoded and is where the impersonal-source rival differs; perfectFromAncestry still needs nonuniversal transfer 10cd24ed.",
+  "current_assessment": {
+    "date": "2026-11-27",
+    "statement_ids": [
+      "64498e7e-7f10-54a0-9ec0-c65e6076de1f",
+      "60176223-d091-4002-a09d-024677fc948c",
+      "f8ba2429-b4f1-5712-a4d3-798213963d34",
+      "10cd24ed-3878-489b-819e-02820a6ef2cd"
+    ],
+    "scope": "Q.4 a.2 preexistence as encoded (one mode-open InAct, every perfection of a thing whose being c causes, every cause of being) and its universal-source restriction, under DEF-CAUSE-OF-PERFECTION's CAUSE_2 at esse, the DISAMB-IN-ACT senses and DEF-UNIVERSAL-ESSE-CAUSE-SCOPE.",
+    "assessment": "64498e7e as encoded is stronger than I q.4 a.2 in mode, in perfection scope and in cause scope; its direct option on claim 50df1fd8 supports the universal-source restriction (the passage's own application to God as first effective cause) and the agent-produced form, while the extension to every perfection of a thing caused by any cause of being is the analyst's and faces an objection kept conditionally on reading generators as causes of being (perfections the effect acquires from other causes). Every God-route application except perfectFromAncestry needs only universal-source preexistence, which is derived without nonuniversal transfer and is now consumed by a sibling for 78b7c124. On the inclusive (power) reading, universal-source preexistence is near-analytic given universal transfer and does not discriminate classical theism from an impersonal universal source (control); the passage's more-perfect-mode thesis, which is not encoded in 64498e7e, is where they differ, and in the corpus that content sits in the downstream intrinsic-perfection bridges. Preexistence's real load at the universal source is universal transfer b26c10a0 with its unassessed inputs, chiefly the mode-of-being thesis 791fa216, plus the possession principle assessed in PR-2166. perfectFromAncestry is the one consumer needing 10cd24ed. First grades; no earlier judgment is revised.",
+    "next_test": "Assess universal transfer b26c10a0 through its inputs, first the mode-of-being thesis 791fa216 (q.4 a.2 second proof); then the esse-comparative checkpoint of PR-2166.",
+    "note": "docs/notes/preexistence-bottleneck.md#6-provisional-judgment-2026-11-27-unreviewed",
+    "supersedes": "none: the 2026-11-18 causal-perfection-transfer assessment of f8ba2429, b26c10a0 and 10cd24ed and the 2026-11-24 intrinsic-perfection assessment are kept and reused.",
+    "review": "unreviewed",
+    "publication": "unpublished",
+    "evidence": "Proposed delivery on branch research/preexistence-bottleneck; independent semantic challenge pending before merge.",
+    "reviewed_revision": "814a43bb20e0855ef8094ec6e533ea7ddaf06057"
+  },
+  "workers": [
+    {
+      "role": "author",
+      "provider": "claude",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "date": "2026-11-27"
+    }
+  ]
+}
