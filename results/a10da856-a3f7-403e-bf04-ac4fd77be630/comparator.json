@@ -1,0 +1,14 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.RootPerfectionExclusion.Challenge",
+  "solution_module": "TruthCore.Results.Causality.RootPerfectionExclusion.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.RootPerfectionExclusion.rootPerfectionFromNoUnexplainedAbsenceUnlimited",
+    "TruthCore.Results.Causality.RootPerfectionExclusion.esseControls"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "enable_nanoda": true
+}

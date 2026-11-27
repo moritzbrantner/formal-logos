@@ -1,0 +1,38 @@
+{
+  "id": "31c791ab-43e8-4217-b297-5bdcc3bab5ad",
+  "label": "Every actual root has every pure perfection, from no unexplained absence and esse givers",
+  "premise_statement_ids": [
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410",
+    "08178314-2ec9-459e-82b1-5ff10b49c383",
+    "dc7514e6-ccac-4d8d-bd73-56e7a98b5292",
+    "0a9d3a40-4777-4352-a4b4-2126c0055924",
+    "ee287fd3-3890-4739-8407-a27d7c81191d",
+    "9281317d-1f0a-4522-b91c-58cc07652e92"
+  ],
+  "conclusion_statement_id": "fe67d766-3e9f-57b5-bbff-c3e2c50c56fd",
+  "inference_ids": [
+    "dcffcc81-fac2-43a1-b63e-4c3ddd1d831d"
+  ],
+  "meaning": "Fix an actual root r at w and a pure k. By excluded middle r has k or lacks it. If r lacks k, no unexplained absence at actual roots says no admissible profile contains r's determinations and k. The root's profile is admissible and k occurs in some admissible profile, so the formal-limitation L bridge makes r's esse limited. The existing rootUnlimited (#1914) derives from the limited-esse giver premise that the actual root r is not limited, because a limited actual concretum has a distinct actual concrete ground. So r has k. This is the E and L composition of the 2026-11-24 note with the limited-esse giver. The main theorem uses no axioms. The Comparator companion esseControls (three Mathlib axioms) evaluates the giver premise and the formal-limitation L bridge over the admissible families of structuralControls: the L bridge holds with nothing limited for the open family, so the standing-rival row (only no unexplained absence fails) carries over; it fails with nothing limited for the joint-conflict family and the finite-mode profile; and at a limited source with no causal edge the L bridge holds while the giver premise fails.",
+  "definition_ids": [
+    "3f8e5e3c-e85a-4388-af9c-4da1c8a02069",
+    "52352824-6be9-53c6-83d4-82fed9a08cbb",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "008cb21a-256c-5a90-822c-acd4591d699a",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "6ced5205-e6a4-585e-950e-3b22e7c9ef01",
+    "d8e2ed12-8089-5202-ae51-e807cf611c76",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "65e38ffa-5a1c-55d0-935c-6538d843b780",
+    "3aba5f19-f48d-50db-bc57-93ba2e99f845",
+    "956247e3-ca78-5f54-a8b1-6e725735c754",
+    "a1b2e330-388f-4120-bc5c-969642317792",
+    "a5452da9-32eb-47d4-98fb-0da507cf4ce5"
+  ],
+  "disambiguation_ids": [
+    "19190b6e-359f-590c-b434-4e6f5803da4f",
+    "dc9c0a1b-1759-5b1c-9ab9-ee7bea8847b7",
+    "b1640e51-d7d4-5a80-9992-29fa1ded8048",
+    "567c3e74-9514-52d9-b3b6-f5a3af078784"
+  ]
+}

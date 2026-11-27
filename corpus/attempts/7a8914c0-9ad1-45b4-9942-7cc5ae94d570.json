@@ -1,0 +1,34 @@
+{
+  "id": "7a8914c0-9ad1-45b4-9942-7cc5ae94d570",
+  "label": "Absence of a pure perfection at an unlimited root: three explanations and compiled E and L",
+  "date": "2026-11-27",
+  "statement_ids": [
+    "fe67d766-3e9f-57b5-bbff-c3e2c50c56fd",
+    "9281317d-1f0a-4522-b91c-58cc07652e92",
+    "500d0e2d-c7e3-41a6-a152-01e4cda8fce5",
+    "ee287fd3-3890-4739-8407-a27d7c81191d",
+    "0a9d3a40-4777-4352-a4b4-2126c0055924",
+    "4ff76ab8-bd4e-4a22-9cff-5f2d854697d6",
+    "dc7514e6-ccac-4d8d-bd73-56e7a98b5292",
+    "69a5dcdc-a7c2-4cf6-b973-4d78320bf341"
+  ],
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "#2145 Investigation 1. Encoded the owner's three explanations of a pure perfection's absence at a root over one admissible profile family (TruthCore.Causality.RootPerfectionExclusion): exclusion by the admissibility constraints alone, by the positive profile (jointly; a single excluder is one case and pairwise compatibility does not suffice), or unexplained. absenceTrichotomy and absenceTrichotomyExclusive prove classical coverage and exclusivity relative to one family; the background (fixed family, positive nature as Has-profile, no extrinsic case at a root, purity outside the trichotomy) carries the content. The L bridge is derived in both limitation senses from joint compossibility plus the RootPurity bridge (structural) or a determination-to-esse bridge (formal); two root-reaching arguments compose E (no unexplained absence at actual roots) with L and the root's nonlimitation to conclude fe67d766, the second through rootUnlimited. Controls on one carrier show each open premise load-bearing: the joint-conflict row is a non-contracting exclusion model in this encoding and fails only joint compossibility among the L inputs; the standing-rival row fails only E; exact closure fails pure admissibility; an infinite all-pure profile fails root-profile admissibility. The A8 classifier route makes absence itself limiting (contraposed fullness) and is not a discriminating L. Under the exercise-or-potency reading, pure act and ab esse ad posse, own aptitude and exercise coincide at an own-being source, but productive and exemplary roles survive: the #1892 ImpersonalEminence source satisfies the collapse premises and violates only E; a personal source lacking an admissible pure determination violates E identically.",
+  "blocker": "The derivation is conditional. Open: joint compossibility of pure determinations within the admissible family (positive rationale from DEF-PURE-PERFECTION, not a proof); E, no unexplained absence at actual roots (general rootless-determiner rationale; the rival's primitive closure is coherent and applies symmetrically); admissibility of noesis with simplicity (the articulation objection); admissibility of the root's actual profile; the determination-to-esse bridge; and purity of intellect itself, which the trichotomy does not classify.",
+  "evidence": [
+    "7f5da225-ae77-4427-bff7-38e0ac7a8a74",
+    "8914ec51-7846-4392-9a3e-f689d821b902",
+    "4a4b130c-b408-45dd-aec1-42cd45de5cd8",
+    "a10da856-a3f7-403e-bf04-ac4fd77be630"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "anthropic",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "date": "2026-11-27"
+    }
+  ]
+}

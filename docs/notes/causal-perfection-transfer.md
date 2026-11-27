@@ -4214,6 +4214,263 @@ the repaired shared determination, graph scope and remaining test at
 the stated model consequences with these scopes. The recorded assessment
 remains provisional. [Scoped assessment record](../../corpus/attempts/521613fc-cbc8-4a88-8cca-51c0161bda6d.json)
 
+## Why could a pure perfection be absent at an unlimited root? (2026-11-27; provisional, #2145)
+
+### Question, fixed meanings and reuse
+
+Program [#2145](https://github.com/moritzbrantner/truth-core/issues/2145),
+Investigation 1. Suppose a pure perfection k (the shared subject-grounded
+apprehension of the sections above, or any other pure determination) is
+absent at an actual root g. The owner's three candidate explanations are:
+(i) k is incompatible with metaphysical simplicity; (ii) some positive
+intrinsic determination of g excludes k; (iii) nothing positively explains
+the exclusion. This section encodes the three, asks under which background
+they are exhaustive, and builds in Lean the E and L composition that the
+[limitation-bridge section](#the-limitation-bridge-two-separable-obligations-not-another-synonym)
+left in prose. Baseline `8a25ab101`. Reused without change:
+`HasCompatibleExtension` and `possessedIfCompatibleAndOmissionFixed`
+(#1970), the four-profile families of `ProfileControls`, the structural
+`HasLimitingPrinciple`, the primitive `Limited` with `rootUnlimited` (#1914),
+`RootPurity.UnlimitedDeterminationsArePure` (`c78c77da`),
+`ActualRootsWithoutLimitingPrinciple` (`a30c5963`), the limited-esse giver
+premise `08178314`, the #1892 `ImpersonalEminence` source, the
+`WisdomSelfUnderstanding` exercise-or-potency bridge, and Mathlib's
+`Maximal`. Lean: [vocabulary](../../TruthCore/Causality/RootPerfectionExclusion.lean),
+[results and controls](../../TruthCore/Results/Causality/RootPerfectionExclusion/Solution.lean).
+[Attempt record](../../corpus/attempts/7a8914c0-9ad1-45b4-9942-7cc5ae94d570.json)
+
+All three cases are stated over one primitive family `Admissible` of
+intrinsic profiles (sets of real determinations that a simple, unreceived,
+necessary source could jointly have; [definition](../../corpus/definitions/3f8e5e3c-e85a-4388-af9c-4da1c8a02069.json)):
+
+| Case | Lean | Content |
+| --- | --- | --- |
+| (i) | `AbsenceFromAdmissibility` | g lacks k and no admissible profile contains k |
+| (ii) | `AbsenceFromPositiveProfile` | g lacks k, k is in some admissible profile, but none contains all of g's determinations and k |
+| (iii) | `UnexplainedAbsence` ([definition](../../corpus/definitions/a5452da9-32eb-47d4-98fb-0da507cf4ce5.json)) | g lacks k although an admissible profile contains all of g's determinations and k |
+
+### A. Coverage and its background
+
+`absenceTrichotomy` proves from excluded middle that every absence is one
+of the three; `absenceTrichotomyExclusive` proves that no two hold
+together. Coverage is classical bookkeeping. Its substantive content is in
+the background that makes the cases meaningful:
+
+1. **One fixed family.** The classification is relative to `Admissible`.
+   Narrowing the family moves an absence: with the exact-closure family
+   (only g's actual profile is admissible) the same absence of noesis falls
+   under (i). Each premise below therefore quantifies over the same family.
+2. **Positive nature as profile.** g's positive nature is represented by
+   its `Has` profile. A holistic constraint not represented by any one
+   determination is represented by restricting the family, so it falls
+   under (i). A primitive totality fact that restricts neither is
+   exactly what (iii) leaves.
+3. **No extrinsic case at a root.** An absence at a caused bearer could be
+   fixed by what its ground gave. At an `ActualRoot` no actual concrete
+   ground exists, so no fourth, extrinsic case arises there.
+4. **Purity is outside the trichotomy.** Coverage holds for any k. The
+   arguments below use that k is pure. Denying that intellect is a pure
+   perfection is a fourth response that the trichotomy does not classify.
+   It remains the open purity obligation of `d3a0e98a` and `521613fc`.
+
+Reading of (ii). "Some positive determination P excludes k" has a
+single-determination reading and a joint-profile reading.
+`singleExcluderGivesPositiveExclusion` shows the first yields (ii). The
+converse fails: in the joint-conflict family every pure pair is admissible
+(`jointConflictPairwise`), yet g's profile jointly excludes noesis. Case
+(ii) is the joint reading.
+
+### B. From positive exclusion to limitation: L is derived
+
+The prose E/L factorization took L ("a nature-based exclusion of a pure
+mode restricts esse") as an open bridge. It risked being contraposed
+fullness. Two registered results derive L from premises that mention no
+absence:
+
+- `positiveExclusionLimits` [7f5da225]: excluded middle, the RootPurity
+  bridge `c78c77da` (no represented limiting principle gives only pure
+  determinations) and **joint compossibility**
+  `500d0e2d` (an admissible profile of pure determinations stays admissible
+  when an admissible pure determination is added) give L in the structural
+  sense `4ff76ab8`: a bearer with an admissible profile that excludes an
+  admissible pure k has a represented limiting principle.
+- `positiveExclusionLimitsEsse` [4a4b130c]: excluded middle, the
+  determination-to-esse bridge `69a5dcdc` (a bearer with an impure real
+  determination has limited esse) and joint compossibility give L in the
+  formal-limitation sense `dc7514e6`.
+
+Two root-reaching compositions then conclude `fe67d766`, every actual
+concrete root has every pure perfection:
+
+- `rootPerfectionFromNoUnexplainedAbsence` [8914ec51]: excluded middle,
+  `a30c5963` (actual roots have no represented limiting principle), the
+  structural L `4ff76ab8`, admissibility of each root's profile `0a9d3a40`,
+  admissibility of each pure determination `ee287fd3` and no unexplained
+  absence at actual roots `9281317d`.
+- `rootPerfectionFromNoUnexplainedAbsenceUnlimited` [a10da856]: the same
+  with the giver premise `08178314` and the formal L `dc7514e6`, through
+  `rootUnlimited`. This is the prose E∘L, now compiled. Its core step is
+  `possessedIfCompatibleAndOmissionFixed` (`rootHasCompatibleFromNoUnexplainedAbsence`).
+
+The two limitation senses stay apart (`19190b6e`): each argument uses one.
+All four theorems use no axioms.
+
+**What carries (ii).** The joint-conflict row of `structuralControls` is a
+coherent non-contracting exclusion model *in this encoding*. The source has
+no represented limiting principle, only pure determinations, nothing
+limited, every pure pair admissible and no unexplained absence, yet it
+lacks noesis because its pure profile jointly excludes it. Of the inputs
+to the two L derivations, only joint compossibility fails there. So the
+answer to B is exact: given joint compossibility and either
+determination-to-limitation bridge, (ii) entails a limiting principle that
+the root lacks. Without joint compossibility, (ii) survives at an
+unlimited root. The model stipulates the conflict and does not explain
+it. A rival who takes this horn owes a positive account of why two
+limitation-free actualities exclude each other. The articulation
+objection above is the live candidate. As stated there, it targets
+admissibility of noesis with simplicity (case i) rather than a
+conflict between pure modes.
+
+**Warrant for joint compossibility.** On DEF-PURE-PERFECTION a pure
+determination involves no limitation. If two such actualities could not
+be had together, at least one would determine its bearer so as to exclude
+a positive actuality. That is the role of a limiting principle in the
+act/recipient account. This is a positive reason, but it is not a proof.
+The rival can hold that incompatibility of positive contents needs no
+limitation in either (the same regress-stopping move as necessary
+incompatibilities in the truthmaker section above). Compossibility is
+stated as a one-step insertion law, not as admissibility of every set of
+pure determinations. `anchorControl` shows why the root's own profile must
+be anchored separately (`0a9d3a40`). With an infinite all-pure root
+profile and only finite admissible profiles, every other premise holds and
+the root lacks a pure determination.
+
+**The A8 classifier is not a discriminating L.** In
+`classifierRouteIgnoresExplanation` the classifier route reaches
+`fe67d766` with no admissible family and no case analysis. Its two
+premises are that lacking each pure k is classifier-limiting, and that a
+bearer of a classifier-limiting property has limited esse. The absence
+alone becomes limiting, which is contraposed fullness. `BackwardClosedAt`
+would make P limiting once "lacks k" is, so it is idle once that premise
+holds. The registered L instead runs through a positive impure
+determination or a represented limiting principle.
+
+### C. Unexplained absence and the same standard
+
+No unexplained absence at actual roots (`9281317d`) is the E premise. It
+is stated for every determination, pure or not. When the root's profile is
+admissible it is equivalent to Mathlib `Maximal` of that profile in the
+family (`noUnexplainedAbsenceIffMaximal`). Restricted to pure
+determinations, and given the other premises, it would be equivalent to
+the conclusion. Its warrant therefore has to be the general one. A root
+has no extrinsic determiner, so whatever bounds its profile should be its
+admissibility constraints or its positive profile.
+
+Tests:
+
+- **Nonlimitation does not supply it.** The standing-rival row has
+  `a30c5963`, the RootPurity bridge, joint compossibility, both L bridges
+  (nothing limited, giver premise holding), admissibility of the root
+  profile and of every pure determination. Only E fails, and the source's
+  lack of noesis is unexplained.
+- **The existential PSR does not supply it.** `608a262d` quantifies over
+  beings contingent at w and over existence facts. Its type mentions no
+  determination or absence, and the root is not contingent there. Reaching
+  E needs a PSR for the closure of a necessary root's profile. That is a
+  distinct and stronger scope. No such bridge is in the graph.
+- **Same standard.** `standingRival` puts the same failure on the #1892
+  source. It is a necessary actual root with own being, nonvacuous pure
+  act and constitutive simplicity. It has an own exemplar form norming an
+  actual knower, and it apprehends nothing. On that source a personal
+  variant has noesis but lacks the admissible pure `a`. It violates E in
+  exactly the same way. E is not an anti-impersonal premise. It
+  condemns any root, personal or not, whose profile is closed by a
+  primitive totality fact short of an admissible completion.
+
+| Explanation of the absence | Impersonal root lacking noesis | Personal root lacking a | What it needs |
+| --- | --- | --- | --- |
+| (i) constraints alone | k inadmissible with simplicity | a inadmissible | a positive incompatibility with simplicity |
+| (ii) positive profile | joint pure-content conflict | joint conflict with noesis | denial of joint compossibility, with a positive account |
+| (iii) unexplained | primitive closure | primitive closure | denial of E, with the cost of an unexplained negative closure at a root |
+
+### D. The four roles at subsistent esse
+
+`aptitudeIffExerciseAtPureAct` takes the classical simplicity reading as
+explicit premises, not as a definitional equality. The premises are the
+exercise-or-potency bridge (an unexercised own self-directed capacity
+leaves the source in potency in the understanding respect), pure act, and
+ab esse ad posse. Under them own capacity and actual exercise coincide at
+an own-being source. An unexercised own aptitude is therefore excluded.
+It would be the dormant-capacity profile of `WisdomSelfUnderstanding.Control`
+(case 2), which reintroduces a potency. Productive power to make knowers
+and objective exemplarity are not capacities of the source's own
+apprehension, and the collapse leaves them separate. `standingRival`
+checks this on the #1892 source. With its own capacity identified with
+its actual apprehension, the collapse premises hold, and the source has
+neither aptitude nor exercise. "Productive capacity for knowers without
+understanding" survives the simplicity reading in this encoding. The
+reading forces the impersonal profile into the no-aptitude corner. It
+does not exclude that corner.
+
+### Assessment, standing rival and graph effect
+
+**What changed.** The prose E∘L is now two verified conditional support
+options for `fe67d766`, one per limitation sense. L is no longer a bare
+bridge. It is derived from joint compossibility and a bridge that mentions
+no absence. The three explanations of an absence are each tied to one
+open premise:
+
+- (i) to admissibility of each pure determination `ee287fd3`;
+- (ii) to joint compossibility `500d0e2d`, given RootPurity or the
+  determination-to-esse bridge;
+- (iii) to E `9281317d`.
+
+Each premise is load-bearing in the stated encoding, by an assignment
+where it fails while the others hold and a root lacks a pure determination.
+`a30c5963`'s existing derivation now reaches the root through this route.
+
+**Standing rival and price.** The strongest surviving impersonal profile
+is the #1892 eminent source with no intellectual aptitude. Simplicity
+pushes it there and does not remove it. It must take one of four
+positions:
+
+- deny that understanding is pure;
+- deny that noesis is admissible with simplicity, which needs a positive
+  articulation argument (the two-fork test above);
+- deny joint compossibility, which needs a positive incompatibility
+  between limitation-free actualities;
+- or accept an unexplained negative closure at the root.
+
+The last option is coherent and is the cheapest formally. A personal
+source with a stipulated roster would pay the same price.
+
+**Provisional judgment.** These results are conditional support for
+`fe67d766`. They do not establish it. Joint compossibility has a
+substantive positive rationale in the purity definition. No positive
+pure-content conflict has been supplied, so the rival's best option is
+(i) or (iii) rather than (ii). E has the general rootless-determiner
+rationale and applies symmetrically. Its denial is a primitive, not a
+contradiction. No unconditional winner is claimed. The comparison now
+turns on two questions: does a necessary root's profile need an intrinsic
+explanation of its closure, and is noesis admissible with simplicity?
+Formal validity is unchanged by this judgment. The independent semantic
+challenge of this delivery has not yet run.
+
+**Next discriminating tests.**
+
+1. Give `Admissible` a constitutive reading, for example "no member
+   limits another". Test whether joint compossibility is derivable or
+   only restated.
+2. Encode the #1879 two-fork articulation test as a restriction of the
+   family. Decide whether real articulation forces case (i) for noesis.
+3. Compare E with the feature-uniform consistency norm of
+   `BruteContingencyParity`. Test whether a stance that demands reasons
+   for contingent existence must, on a shared feature, demand them for a
+   root's closure.
+4. Register the wisdom-to-intellect theorems with an explicit purity
+   statement, so `fe67d766` reaches `29818edd` with every bridge visible.
+   This was deferred from this delivery.
+
 ## Research attempts citing this note
 
 - [Batch certification of eight exploration maps deriving eight bare root-path premises from deeper…](../../corpus/attempts/round2-perfection-primacy.json)

@@ -1,0 +1,92 @@
+[batch]
+vocab = "TruthCore.Causality.RootPerfectionExclusion"
+results = "TruthCore.Results.Causality.RootPerfectionExclusion"
+
+[[statement]]
+id = "Every actual root's profile is admissible"
+lean = "RootProfilesAdmissible"
+definitions = ["52352824-6be9-53c6-83d4-82fed9a08cbb", "3aba5f19-f48d-50db-bc57-93ba2e99f845", "3f8e5e3c-e85a-4388-af9c-4da1c8a02069"]
+paraphrase = "OPEN, analyst formulation, attribution deferred: for every actual concrete root r of the selected grounding relation at w, the set of r's real determinations is an admissible intrinsic profile: it can be had together by a simple, unreceived, necessary source. It anchors the admissible family to the actual root's own profile."
+
+[[statement]]
+id = "Pure determinations are jointly compossible within the admissible family"
+lean = "PureExtensionsAdmissible"
+definitions = ["65e38ffa-5a1c-55d0-935c-6538d843b780", "3f8e5e3c-e85a-4388-af9c-4da1c8a02069"]
+paraphrase = "OPEN, analyst formulation, attribution deferred: joint compossibility of pure perfections relative to one admissible family. If q is an admissible profile whose members are all pure, and k is pure and occurs in some admissible profile, then q with k added is admissible. It is a one-step insertion law; pairwise compatibility of pure determinations does not imply it, and it does not say that every set of pure determinations is admissible."
+
+[[statement]]
+id = "Each pure determination occurs in some admissible profile"
+lean = "PureDeterminationsAdmissible"
+definitions = ["65e38ffa-5a1c-55d0-935c-6538d843b780", "3f8e5e3c-e85a-4388-af9c-4da1c8a02069"]
+paraphrase = "OPEN, analyst formulation, attribution deferred: every pure determination belongs to at least one admissible intrinsic profile, so no pure determination is excluded by the admissibility constraints (simplicity and the other necessary constraints) alone. Its denial for intellect is the claim that understanding is incompatible with metaphysical simplicity."
+
+[[statement]]
+id = "No actual root has an unexplained absence"
+lean = "NoUnexplainedAbsenceAtRoots"
+definitions = ["52352824-6be9-53c6-83d4-82fed9a08cbb", "3aba5f19-f48d-50db-bc57-93ba2e99f845", "3f8e5e3c-e85a-4388-af9c-4da1c8a02069", "a5452da9-32eb-47d4-98fb-0da507cf4ce5"]
+paraphrase = "OPEN, analyst formulation, attribution deferred: at every actual concrete root r at w and for every determination d, pure or not, it is not the case that r lacks d while some admissible profile contains all of r's real determinations and d. Every omission at an actual root is fixed by the admissibility constraints or by the root's positive profile. With the root's profile admissible it says that profile is maximal in the admissible family. It applies alike to a personal and an impersonal root."
+
+[[statement]]
+id = "Positive exclusion of an admissible pure determination brings a LIMITING_PRINCIPLE_2"
+lean = "PositiveProfileExclusionLimits"
+definitions = ["a919ce52-6c8b-5e0f-9aaa-5b570bded78b", "3aba5f19-f48d-50db-bc57-93ba2e99f845", "65e38ffa-5a1c-55d0-935c-6538d843b780", "3f8e5e3c-e85a-4388-af9c-4da1c8a02069"]
+disambiguations = ["19190b6e-359f-590c-b434-4e6f5803da4f"]
+paraphrase = "OPEN, analyst formulation, attribution deferred: for every bearer x and pure determination k, if x's real-determination profile is admissible, k occurs in some admissible profile, and no admissible profile contains x's determinations together with k, then x has one of the three represented limiting principles (LIMITATION_OF_ESSE_VERSUS_REPRESENTED_LIMITING_2: composite, esse other than essence, or a distinct simply prior being). It is the L bridge in the structural sense; it does not say that a mere absence is a limitation."
+
+[[statement]]
+id = "Positive exclusion of an admissible pure determination makes esse LIMITED_ESSE_1"
+lean = "PositiveProfileExclusionLimitsEsse"
+definitions = ["6ced5205-e6a4-585e-950e-3b22e7c9ef01", "3aba5f19-f48d-50db-bc57-93ba2e99f845", "65e38ffa-5a1c-55d0-935c-6538d843b780", "3f8e5e3c-e85a-4388-af9c-4da1c8a02069"]
+disambiguations = ["19190b6e-359f-590c-b434-4e6f5803da4f"]
+paraphrase = "OPEN, analyst formulation, attribution deferred: for every bearer x and pure determination k, if x's real-determination profile is admissible, k occurs in some admissible profile, and no admissible profile contains x's determinations together with k, then the act of being of x is limited in the primitive formal sense (LIMITATION_OF_ESSE_VERSUS_REPRESENTED_LIMITING_1). It is the L bridge in the formal-limitation sense; it does not say that a mere absence is a limitation."
+
+[[statement]]
+id = "A bearer with an impure real determination has LIMITED_ESSE_1"
+lean = "ImpureDeterminationLimitsEsse"
+definitions = ["6ced5205-e6a4-585e-950e-3b22e7c9ef01", "3aba5f19-f48d-50db-bc57-93ba2e99f845", "65e38ffa-5a1c-55d0-935c-6538d843b780"]
+disambiguations = ["19190b6e-359f-590c-b434-4e6f5803da4f"]
+paraphrase = "OPEN, analyst formulation, attribution deferred: every bearer that really has a determination which is not pure (one involving potency, limitation or reception) has limited esse in the primitive formal sense (LIMITATION_OF_ESSE_VERSUS_REPRESENTED_LIMITING_1). It mentions no absence and no excluded perfection."
+
+[[argument]]
+id = "Positive exclusion brings a LIMITING_PRINCIPLE_2, from joint compossibility"
+label = "Positive exclusion brings a LIMITING_PRINCIPLE_2, from joint compossibility"
+theorem = "positiveExclusionLimits"
+comparator_theorems = ["structuralControls"]
+premises = ["ee4ab504-c8fe-59bc-bc96-7cbeefed6410", "c78c77da-91b0-5928-bd5f-ba670a6f3660", "Pure determinations are jointly compossible within the admissible family"]
+conclusion = "Positive exclusion of an admissible pure determination brings a LIMITING_PRINCIPLE_2"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Excluded middle on the limiting principle; otherwise purity of the whole profile and joint compossibility give a compatible completion"
+meaning = "Fix a bearer x whose real-determination profile is admissible, and a pure k that occurs in some admissible profile while no admissible profile contains x's determinations and k. By excluded middle x has a represented limiting principle or not. If not, the open RootPurity bridge makes every determination of x pure. Joint compossibility then makes x's profile with k added admissible. That profile contains x's determinations and k, contradicting the exclusion. So x has a represented limiting principle. The L bridge in the structural sense is thereby derived from two premises that mention no absence. The main theorem uses no axioms. In the Comparator companion structuralControls (three Mathlib axioms), the joint-conflict row keeps the RootPurity bridge and fails joint compossibility and the conclusion, and the finite-mode row with a noncomposite source keeps joint compossibility and fails the RootPurity bridge and the conclusion."
+
+[[argument]]
+id = "Every actual root has every pure perfection, from no unexplained absence"
+label = "Every actual root has every pure perfection, from no unexplained absence"
+theorem = "rootPerfectionFromNoUnexplainedAbsence"
+comparator_theorems = ["structuralControls", "anchorControl", "standingRival"]
+premises = ["ee4ab504-c8fe-59bc-bc96-7cbeefed6410", "a30c5963-cb81-5366-aab0-2454363e18f7", "Positive exclusion of an admissible pure determination brings a LIMITING_PRINCIPLE_2", "Every actual root's profile is admissible", "Each pure determination occurs in some admissible profile", "No actual root has an unexplained absence"]
+conclusion = "fe67d766-3e9f-57b5-bbff-c3e2c50c56fd"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Excluded middle on possession; an absence is not unexplained, so the positive profile excludes the pure determination, which brings a limiting principle the root lacks"
+meaning = "Fix an actual root r at w and a pure k. By excluded middle r has k or lacks it. If r lacks k, no unexplained absence at actual roots says no admissible profile contains r's determinations and k. The root's profile is admissible and k occurs in some admissible profile. The structural L bridge then gives r a represented limiting principle, which the existing statement that actual roots have none excludes. So r has k. The main theorem uses no axioms; the Comparator companions use the three Mathlib axioms. structuralControls (one carrier, source true the only actual root) witnesses every premise and the conclusion, and gives for four of the five non-logical premises an assignment where it fails, the other premises hold and the conclusion fails; anchorControl does this for the fifth. Where no unexplained absence fails, the source's lack of noesis is unexplained; where the L bridge fails, joint compossibility fails and the lack is a positive exclusion; where admissibility of each pure determination fails, noesis is in no admissible profile; the finite-mode rows have a nonpure limiter. anchorControl has an infinite all-pure root profile and finite admissible profiles: only admissibility of the root's profile fails. standingRival puts the no-unexplained-absence failure on the same source as the #1892 impersonal eminence model and shows a personal source lacking the admissible pure a violates the same premise. The models are assignments of the stated relations, not metaphysical possibilities."
+
+[[argument]]
+id = "Positive exclusion makes esse LIMITED_ESSE_1, from joint compossibility"
+label = "Positive exclusion makes esse LIMITED_ESSE_1, from joint compossibility"
+theorem = "positiveExclusionLimitsEsse"
+comparator_theorems = ["esseControls"]
+premises = ["ee4ab504-c8fe-59bc-bc96-7cbeefed6410", "A bearer with an impure real determination has LIMITED_ESSE_1", "Pure determinations are jointly compossible within the admissible family"]
+conclusion = "Positive exclusion of an admissible pure determination makes esse LIMITED_ESSE_1"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Excluded middle on limitation and on each determination's purity; otherwise joint compossibility gives a compatible completion"
+meaning = "Fix a bearer x whose real-determination profile is admissible, and a pure k that occurs in some admissible profile while no admissible profile contains x's determinations and k. By excluded middle x has limited esse or not. If not, each determination of x is pure: excluded middle on its purity, and an impure one would limit x's esse by the determination-to-esse bridge. Joint compossibility makes x's profile with k added admissible, contradicting the exclusion. So x has limited esse. The L bridge in the formal-limitation sense is thereby derived from two premises that mention no absence. The main theorem uses no axioms. In the Comparator companion esseControls (three Mathlib axioms), with nothing limited, the joint-conflict family keeps the determination-to-esse bridge and fails the conclusion (joint compossibility fails there by structuralControls), and the finite-mode profile fails the determination-to-esse bridge and the conclusion (joint compossibility holds for that family)."
+
+[[argument]]
+id = "Every actual root has every pure perfection, from no unexplained absence and esse givers"
+label = "Every actual root has every pure perfection, from no unexplained absence and esse givers"
+theorem = "rootPerfectionFromNoUnexplainedAbsenceUnlimited"
+comparator_theorems = ["esseControls"]
+premises = ["ee4ab504-c8fe-59bc-bc96-7cbeefed6410", "08178314-2ec9-459e-82b1-5ff10b49c383", "Positive exclusion of an admissible pure determination makes esse LIMITED_ESSE_1", "Every actual root's profile is admissible", "Each pure determination occurs in some admissible profile", "No actual root has an unexplained absence"]
+conclusion = "fe67d766-3e9f-57b5-bbff-c3e2c50c56fd"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Excluded middle on possession; an absence is not unexplained, so the positive profile excludes the pure determination and limits the root's esse, which rootUnlimited excludes"
+meaning = "Fix an actual root r at w and a pure k. By excluded middle r has k or lacks it. If r lacks k, no unexplained absence at actual roots says no admissible profile contains r's determinations and k. The root's profile is admissible and k occurs in some admissible profile, so the formal-limitation L bridge makes r's esse limited. The existing rootUnlimited (#1914) derives from the limited-esse giver premise that the actual root r is not limited, because a limited actual concretum has a distinct actual concrete ground. So r has k. This is the E and L composition of the 2026-11-24 note with the limited-esse giver. The main theorem uses no axioms. The Comparator companion esseControls (three Mathlib axioms) evaluates the giver premise and the formal-limitation L bridge over the admissible families of structuralControls: the L bridge holds with nothing limited for the open family, so the standing-rival row (only no unexplained absence fails) carries over; it fails with nothing limited for the joint-conflict family and the finite-mode profile; and at a limited source with no causal edge the L bridge holds while the giver premise fails."

@@ -1,0 +1,17 @@
+{
+  "id": "dcffcc81-fac2-43a1-b63e-4c3ddd1d831d",
+  "label": "Every actual root has every pure perfection, from no unexplained absence and esse givers (inference)",
+  "input_statement_ids": [
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410",
+    "08178314-2ec9-459e-82b1-5ff10b49c383",
+    "dc7514e6-ccac-4d8d-bd73-56e7a98b5292",
+    "0a9d3a40-4777-4352-a4b4-2126c0055924",
+    "ee287fd3-3890-4739-8407-a27d7c81191d",
+    "9281317d-1f0a-4522-b91c-58cc07652e92"
+  ],
+  "output_statement_id": "fe67d766-3e9f-57b5-bbff-c3e2c50c56fd",
+  "rule": "Excluded middle on possession; an absence is not unexplained, so the positive profile excludes the pure determination and limits the root's esse, which rootUnlimited excludes",
+  "meaning": "Fix an actual root r at w and a pure k. By excluded middle r has k or lacks it. If r lacks k, no unexplained absence at actual roots says no admissible profile contains r's determinations and k. The root's profile is admissible and k occurs in some admissible profile, so the formal-limitation L bridge makes r's esse limited. The existing rootUnlimited (#1914) derives from the limited-esse giver premise that the actual root r is not limited, because a limited actual concretum has a distinct actual concrete ground. So r has k. This is the E and L composition of the 2026-11-24 note with the limited-esse giver. The main theorem uses no axioms. The Comparator companion esseControls (three Mathlib axioms) evaluates the giver premise and the formal-limitation L bridge over the admissible families of structuralControls: the L bridge holds with nothing limited for the open family, so the standing-rival row (only no unexplained absence fails) carries over; it fails with nothing limited for the joint-conflict family and the finite-mode profile; and at a limited source with no causal edge the L bridge holds while the giver premise fails.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

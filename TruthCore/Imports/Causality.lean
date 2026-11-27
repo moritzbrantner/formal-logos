@@ -282,6 +282,7 @@ public import TruthCore.Causality.RootIntellectWillOmission
 public import TruthCore.Causality.RootIntellectWillPureAct
 public import TruthCore.Causality.RootIntellectWillPureActPlurality
 public import TruthCore.Causality.RootMultiplication
+public import TruthCore.Causality.RootPerfectionExclusion
 public import TruthCore.Causality.RootPositiveIntellectWill
 public import TruthCore.Causality.RootPositiveIntellectWillControl
 public import TruthCore.Causality.RootPurity
