@@ -11,11 +11,14 @@
     "196e6606-d61b-59c4-a12b-7ce056936b92",
     "04c75ec4-ff41-48b4-9012-c0857d7ad3a6",
     "8c07547d-832e-4d78-85e8-f33e0149131d",
-    "f2fa8028-0527-45a9-a109-2eae3a9df6fa"
+    "f2fa8028-0527-45a9-a109-2eae3a9df6fa",
+    "9a0a4951-dad6-4d3c-a6c1-f84b7ab492f4",
+    "8c64b036-3db9-4143-9a8d-d7814cc84c79",
+    "254ee26f-01d5-4359-bdde-5779b6e80533"
   ],
   "kind": "derivation",
   "outcome": "succeeded",
-  "summary": "Warrant-phase checkpoint 3 on the ST I q.4 a.2 sentence 'omnium autem perfectiones pertinent ad perfectionem essendi' (5c5281dd). I q.4 a.2 (objection 3, second proof, ad 3) and I q.4 a.1 ad 3 were read in the materialized SCTA witnesses. The sentence's own ground ('secundum hoc enim aliqua perfecta sunt, quod aliquo modo esse habent') gives only the dependence reading (196e6606, 7067553d). Ad 3 answers objection 3, which is the impersonal-source rival, by treating life and wisdom as perfections of being; its reason clause states the whole-power principle d164b1ff generally (new stating claim 1c66ee49; supports on c4fb87a6 for life and wisdom). Consumer audit: ModeOfBeing occurs only in 791fa216 and one other premise in every consumer (afb8cba3 with 2f6b9eff; a0b0e697 and 2d54eb1b with 9e3109ea); OfBeing occurs only in d164b1ff and c4fb87a6, used together in 7d8bbdcb, 95c04a6d and ff74a7ac. Verified: each pair is equivalent to its composite with the primitive as middle term (modesPairIffTotalTransfer, ownBeingPairIffEveryPure); on the dependence reading 791fa216 follows from 7067553d and the whole transfer load sits on 2f6b9eff (dependenceReading); thin and act profiles of one subsistent source (controls). Beyond the dependence reading both loci rest on the act-of-being thesis of q.4 a.1 ad 3 and q.3 a.4, the same commitment as the reception framework; the strongest rival is the quantifier view (2026-11-23 existence-in-essence-identity), which grants the dependence reading and the form of d164b1ff and denies the act of being and c4fb87a6 for life and wisdom; parity on current evidence. No premise is established, defeated in the frontier sense, or closed; d164b1ff moves from supported to stated.",
+  "summary": "Warrant-phase checkpoint 3 on the ST I q.4 a.2 sentence 'omnium autem perfectiones pertinent ad perfectionem essendi' (5c5281dd), read with objection 3, the second proof, ad 3 and q.4 a.1 ad 3 in the materialized SCTA witnesses. The ground, as a necessary condition, gives the dependence reading; Aquinas uses it for the constitutive reading. Ad 3's first clause undercuts objection 3; its reason clause states the formal-or-eminent whole-power sibling 9a0a4951 (claim 1c66ee49), which supports d164b1ff. Both premise pairs are equivalent to their composites when existentially closed over the primitive (general Barbara fact, certified). New senses: MODE_OF_BEING (8eb007a6) and PERFECTION_OF_BEING (62ca3d65). The act-of-being thesis is split into R-act1 (8c64b036) and R-act2 (254ee26f); controls certify that R-act1 with the reception and purity interfaces does not give R-act2. The quantifier view stands unresolved, comparison not run.",
   "evidence": [
     "7b468e42-fd65-4c0c-a9de-003ae9a16d79",
     "1cf43a42-2c4e-41c2-9129-9aff47208686",
@@ -24,7 +27,7 @@
     "1c66ee49-5521-48d5-9001-700c5b14ddbd",
     "PR-2171"
   ],
-  "blocker": "Both loci rest, beyond the dependence reading, on the act-of-being thesis (esse as the act of all acts, even of forms; q.4 a.1 ad 3, q.3 a.4), shared with the reception framework and the real-distinction premises; neither it nor its rival, the quantifier view, has a defended assessment on file. Next: assess the act of being itself (q.3 a.4 first proof, De ente c.4) against a defended reduction to instantiation, or compare their explanations of limitation.",
+  "blocker": "Beyond the dependence reading both loci rest on R-act2 (intensive esse), and the route to OwnBeing on R-act1; no bridge from R-act1 to R-act2 and no formalized inference from dependence to either is on file, and the explanatory comparison with the quantifier view has not been run. Next: formalize the q.4 a.1 ad 3 'unde' inference from dependence to R-act and locate its missing bridge.",
   "current_assessment": {
     "date": "2026-11-27",
     "statement_ids": [
@@ -32,17 +35,20 @@
       "791fa216-ce40-5e7d-82c5-0bd5fe245446",
       "2f6b9eff-84a1-5310-9abb-19985f3282c3",
       "c4fb87a6-047d-5f3d-b3e3-8dc0c4bbc946",
-      "d164b1ff-ad31-5fbc-8ef9-eb0db51ebd96"
+      "d164b1ff-ad31-5fbc-8ef9-eb0db51ebd96",
+      "9a0a4951-dad6-4d3c-a6c1-f84b7ab492f4",
+      "8c64b036-3db9-4143-9a8d-d7814cc84c79",
+      "254ee26f-01d5-4359-bdde-5779b6e80533"
     ],
-    "scope": "The q.4 a.2 sentence 5c5281dd in its three registered readings (dependence 196e6606/7067553d, mode 791fa216 with primitive ModeOfBeing, pure perfection c4fb87a6 with primitive OfBeing), the transfer pair 791fa216 and 2f6b9eff, and the subsistent-esse pair d164b1ff and c4fb87a6, under the shared GradesFrame and the WholePowerPerfection vocabulary.",
-    "assessment": "The sentence's own ground supports only the dependence reading, which every rival grants, and on that reading 791fa216 carries no load: the whole transfer load sits on 2f6b9eff (certified). Each premise pair is its composite with a primitive middle term (certified), so the decompositions shift the load and add no warrant: their warrant is that of 'a total cause of being causes every actual perfection' and 'whatever is its own being has every pure perfection'. What the two loci say beyond the dependence reading rests on the act-of-being thesis (q.4 a.1 ad 3: esse is the actuality of all things, even of forms; q.3 a.4), which is the same commitment as the reception and participation framework and the real-distinction premises and must be counted once. The strongest rival, the quantifier view, grants the dependence reading and the form of d164b1ff, denies the act of being and c4fb87a6 for life and wisdom, and conflicts with no accepted floor item; on current evidence the standing is parity. Within the act-of-being thesis, the subsistent-esse locus excludes an impersonal source that is its own being. d164b1ff is now stated by ad 3. First grades; no earlier judgment is revised.",
-    "next_test": "Assess the act-of-being thesis itself: the q.3 a.4 first proof and De ente c.4 against a defended reduction of the act of being to instantiation, or an explanatory comparison of limitation by received act against limitation by essential content.",
-    "note": "docs/notes/mode-of-being-subsistent-esse.md#6-provisional-judgment-2026-11-27-unreviewed",
-    "supersedes": "none: the 2026-11-18 cluster assessment (sub-bundle A, b26c10a0 conditional standing), the 2026-11-23 existence-in-essence-identity parity and the 2026-11-24 intrinsic-perfection assessment are kept and reused.",
+    "scope": "The q.4 a.2 sentence 5c5281dd in its three registered readings (dependence 196e6606/7067553d, mode 791fa216 with primitive ModeOfBeing, pure perfection c4fb87a6 with primitive OfBeing), the transfer pair 791fa216 and 2f6b9eff, and the subsistent-esse pair d164b1ff and c4fb87a6, under the shared GradesFrame and the WholePowerPerfection vocabulary. Repaired after challenge: the act-of-being thesis split into R-act1 (8c64b036, received and limited esse) and R-act2 (254ee26f, intensive esse); the ad 3 claim on the formal-or-eminent sibling 9a0a4951.",
+    "assessment": "Read as a necessary condition, the sentence's ground yields the dependence reading, which every rival grants; on it 791fa216 carries no load and the whole transfer load sits on 2f6b9eff (certified). Aquinas uses the ground for the constitutive reading ('secundum hoc ... quod', 'unde sequitur', the 'unde' of q.4 a.1 ad 3); whether it warrants that reading turns on the unformalized inference from dependence to an act-of-being thesis. Each pair, existentially closed over its primitive, is equivalent to its composite (certified; a general fact about Barbara decompositions). That the decompositions shift the load rather than lighten it is a judgment resting on the absence of any fixing of the primitive independent of the act-of-being theses; on the act reading 2f6b9eff is near-analytic. Beyond dependence the loci rest on two theses counted separately: R-act1 (received, limited esse; one commitment with the reception framework and real-distinction premises) and R-act2 (intensive esse; identical with c4fb87a6 in the act sense). The R-act1 to R-act2 bridge is missing; the controls certify non-entailment on the stated interfaces. Objection 3 is undercut by ad 3's first clause without R-act. The quantifier view is the strongest surviving rival; its standing is unresolved and the comparison has not been run, with an asymmetry recorded: R-act1 has positive warrant on file, R-act2 textual warrant, and the rival's distinctive claim none. An impersonal source that is its own being must reject R-act2 or OwnBeing; the theistic content of locus (b) is conditional on R-act2, OwnBeing and a stipulative purity classification, and reaching intellect needs a further, unregistered recognition bridge. Ad 3 states the formal-or-eminent sibling 9a0a4951; d164b1ff stays supported, as with SCG I.28. First grades; no earlier judgment is revised.",
+    "next_test": "Formalize the q.4 a.1 ad 3 'unde' inference from the dependence reading (7067553d) to R-act1 and to R-act2, locate the weakest bridge for each, and test whether the quantifier view, which grants dependence, can reject that bridge only by rejecting the act of being itself.",
+    "note": "docs/notes/mode-of-being-subsistent-esse.md#6-provisional-judgment-2026-11-27-repaired-after-challenge",
+    "supersedes": "the 2026-11-27 first-grade assessment (now in assessment_history); the 2026-11-18 cluster assessment, the 2026-11-23 existence-in-essence-identity work and the 2026-11-24 intrinsic-perfection assessment are kept and reused.",
     "review": "unreviewed",
     "publication": "unpublished",
-    "evidence": "Proposed delivery on branch research/mode-of-being-subsistent-esse; independent semantic challenge pending before merge.",
-    "reviewed_revision": "d06df957d2806e8085cafe0fa6e414d26c6a832b"
+    "evidence": "Repairs of the challenge at a13b3024cbb75d27e7e63e741c9231aaeb162eae on branch research/mode-of-being-subsistent-esse; focused re-check pending.",
+    "reviewed_revision": "a13b3024cbb75d27e7e63e741c9231aaeb162eae"
   },
   "workers": [
     {
@@ -52,6 +58,27 @@
       "effort": "high",
       "date": "2026-11-27",
       "pr": "PR-2171"
+    }
+  ],
+  "assessment_history": [
+    {
+      "date": "2026-11-27",
+      "statement_ids": [
+        "5c5281dd-089a-5c2c-bb3e-509cd422e404",
+        "791fa216-ce40-5e7d-82c5-0bd5fe245446",
+        "2f6b9eff-84a1-5310-9abb-19985f3282c3",
+        "c4fb87a6-047d-5f3d-b3e3-8dc0c4bbc946",
+        "d164b1ff-ad31-5fbc-8ef9-eb0db51ebd96"
+      ],
+      "scope": "The q.4 a.2 sentence 5c5281dd in its three registered readings (dependence 196e6606/7067553d, mode 791fa216 with primitive ModeOfBeing, pure perfection c4fb87a6 with primitive OfBeing), the transfer pair 791fa216 and 2f6b9eff, and the subsistent-esse pair d164b1ff and c4fb87a6, under the shared GradesFrame and the WholePowerPerfection vocabulary.",
+      "assessment": "The sentence's own ground supports only the dependence reading, which every rival grants, and on that reading 791fa216 carries no load: the whole transfer load sits on 2f6b9eff (certified). Each premise pair is its composite with a primitive middle term (certified), so the decompositions shift the load and add no warrant: their warrant is that of 'a total cause of being causes every actual perfection' and 'whatever is its own being has every pure perfection'. What the two loci say beyond the dependence reading rests on the act-of-being thesis (q.4 a.1 ad 3: esse is the actuality of all things, even of forms; q.3 a.4), which is the same commitment as the reception and participation framework and the real-distinction premises and must be counted once. The strongest rival, the quantifier view, grants the dependence reading and the form of d164b1ff, denies the act of being and c4fb87a6 for life and wisdom, and conflicts with no accepted floor item; on current evidence the standing is parity. Within the act-of-being thesis, the subsistent-esse locus excludes an impersonal source that is its own being. d164b1ff is now stated by ad 3. First grades; no earlier judgment is revised.",
+      "next_test": "Assess the act-of-being thesis itself: the q.3 a.4 first proof and De ente c.4 against a defended reduction of the act of being to instantiation, or an explanatory comparison of limitation by received act against limitation by essential content.",
+      "note": "docs/notes/mode-of-being-subsistent-esse.md#9-review-repairs-challenge-at-a13b3024",
+      "supersedes": "none: the 2026-11-18 cluster assessment (sub-bundle A, b26c10a0 conditional standing), the 2026-11-23 existence-in-essence-identity parity and the 2026-11-24 intrinsic-perfection assessment are kept and reused.",
+      "review": "accepted_qualified",
+      "publication": "unpublished",
+      "evidence": "Independent semantic challenge at a13b3024cbb75d27e7e63e741c9231aaeb162eae accepted with qualifications (5 P1, 7 P2): the ad 3 claim overattributed real Has; R-act conflated received-limited esse with intensive esse; the certificates prove a general Barbara fact; the ground was said to support only R-dep; sense metadata; parity was asymmetric. Repaired in the current assessment.",
+      "reviewed_revision": "a13b3024cbb75d27e7e63e741c9231aaeb162eae"
     }
   ]
 }

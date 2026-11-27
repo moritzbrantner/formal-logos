@@ -25,11 +25,13 @@ sunt, quod aliquo modo esse habent") on which two loci of the case rest.
 
 In every registered consumer each primitive occurs in exactly the two premises of
 its pair. `modesPairIffTotalTransfer` and `ownBeingPairIffEveryPure` show what such
-a pair says when nothing else constrains the primitive: exactly the composite
-claim, with the primitive as a middle term. A decomposition of this kind adds no
-warrant beyond whatever fixes the primitive's meaning. `dependenceReading` shows
-how the load moves under the weakest reading of "mode of being", the one the
-sentence's own "secundum hoc enim" clause supplies.
+a pair says when nothing else constrains the primitive: existentially closed over
+the primitive, the pair is equivalent to the composite claim. This is a general fact
+about any such middle-term decomposition, not something special to these pairs.
+`dependenceReading` shows how the load moves under the weakest reading of "mode of
+being", the one the sentence's "secundum hoc enim" clause yields when read as a
+necessary condition. Aquinas uses that clause for a constitutive reading; that use
+is not encoded here.
 
 Everything about transfer is over the shared `GradesFrame` (`F.InAct` IN_ACT_4,
 `F.CausesIn` CAUSE_2, `F.esse`). `TotalCauseOfBeing` is the primitive of
@@ -67,8 +69,9 @@ def ModesPairIffTotalTransfer (F : GradesFrame W B T R)
       TotalCauseCausesModesOfBeing TotalCauseOfBeing ModeOfBeing F.CausesIn) ↔
     TotalCauseCausesEveryActualPerfection F TotalCauseOfBeing
 
-/-- The dependence reading of "mode of being", from the sentence's own ground
-("secundum hoc enim aliqua perfecta sunt, quod aliquo modo esse habent"): `r` is a
+/-- MODE_OF_BEING_1, the dependence reading of "mode of being": the sentence's
+ground ("secundum hoc enim aliqua perfecta sunt, quod aliquo modo esse habent")
+read as a necessary condition. `r` is a
 mode of `x`'s being when `x` has `r` in act and has being. -/
 def DependenceMode (F : GradesFrame W B T R) (x : B) (r : R) : Prop :=
   F.InAct x r ∧ F.InAct x F.esse

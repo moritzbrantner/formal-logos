@@ -1131,12 +1131,12 @@
       "path": "corpus/definitions/esse.json",
       "status": "inspected",
       "classification": "intentional_abstraction",
-      "finding": "Existing interpretation retained: The distinguished respect `esse`: `InAct x esse` says that x has being. Esse is the actuality of all things, even of forms: nothing has actuality except insofar as it is. Being 'maximal in being' and 'cause of being' are said with respect to this respect. No new structural law, source attribution or independently established premise is introduced.",
+      "finding": "Existing interpretation retained: The distinguished respect `esse`: `InAct x esse` says that x has being. Esse is the actuality of all things, even of forms: nothing has actuality except insofar as it is. Being 'maximal in being' and 'cause of being' are said with respect to this respect. No new structural law, source attribution or independently established premise is introduced. Re-inspected 2026-11-27 (#2171): only a note was added, recording the 'actuality of all things, even of forms' gloss as a contested act-of-being reading that the declaration does not certify; term, definition text, basis, claims and Lean declaration unchanged.",
       "before": {
         "sha256": "6f4a5f087692cee6d9fd1c4c096d6d271781f5eecf343b14d4563f6aa06ef748",
         "lean_declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.ActualityOnlyInsofarAsBeingReading"
       },
-      "reviewed_sha256": "4b7125592500da7e1c1a45ea94d9ba2d06eb4c2e605182bcb0dffeae38df8ae9"
+      "reviewed_sha256": "188b15462750aefc9b6881c37eab600f7e4cd49a2ac4d888100a833eb76356c0"
     },
     {
       "kind": "definitions",
