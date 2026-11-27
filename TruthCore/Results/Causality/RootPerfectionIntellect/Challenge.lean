@@ -182,14 +182,6 @@ theorem stepTwoControls :
       ¬ godIntellect true False) := by
   sorry
 
-/-- A requirement of presence: `noesis` needs the impure `limiter` alongside it.
-No requirement-of-lack relation makes this family member-grounded (downward
-closure fails), and no relation satisfies the sufficiency direction together
-with the purity premise (`{noesis}` is all pure and inadmissible); yet every
-pure determination is admissible somewhere and joint compossibility fails. The
-failure is grounded in what a member requires, but not in a requirement of
-lack. (Reviewer probe.) -/
-
 /-- Constitutive-admissibility controls on the #1970 determinations, stated
 for the sufficiency direction `ExclusionFreeAdmissible` that the registered
 derivations use. Each row names the requirement relation, the family and which

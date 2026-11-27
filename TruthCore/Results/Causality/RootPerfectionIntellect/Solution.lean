@@ -508,12 +508,10 @@ theorem notSuffNoNoesis : ¬ ExclusionFreeAdmissible noNoesis noRequirement := b
   exact (h {Determination.noesis} (exclusionFreeNone _)) rfl
 
 /-- A requirement of presence: `noesis` needs the impure `limiter` alongside it.
-No requirement-of-lack relation makes this family member-grounded (downward
-closure fails), and no relation satisfies the sufficiency direction together
-with the purity premise (`{noesis}` is all pure and inadmissible); yet every
-pure determination is admissible somewhere and joint compossibility fails. The
-failure is grounded in what a member requires, but not in a requirement of
-lack. (Reviewer probe.) -/
+It is member-grounded for no relation, fails sufficiency with purity for every
+relation (the singleton of noesis is all pure and inadmissible), admits each
+pure determination somewhere and fails joint compossibility. The failure is
+grounded in a member's requirement of presence, not of lack. (Reviewer probe.) -/
 theorem presenceRequirement :
     (∀ RL, ¬ MemberGroundedAdmissibility needsLimiter RL) ∧
     ¬ (∃ RL, ExclusionFreeAdmissible needsLimiter RL ∧ PureRequiresNoPureLack RL isPure) ∧
