@@ -1,0 +1,12 @@
+{
+  "id": "d7c75f02-f0ff-4c3f-8db6-c6b7afd7827d",
+  "label": "Actual grounding well-foundedness gives selected-world acyclicity (inference)",
+  "input_statement_ids": [
+    "82cfaf26-fc86-54ab-8328-9a7b2bdbbe21"
+  ],
+  "output_statement_id": "5e002319-3828-4de8-96bc-98ebf34072d7",
+  "rule": "Specialize the regress schema's constructive cycle exclusion",
+  "meaning": "Use the actual-concrete grounding graph with nodes restricted to candidates concrete and existing at the supplied world and with the same Profile.grounds edges there. Well-foundedness of those edges excludes every nonempty finite return path by the graph law. This introduces no actual inhabitant and requires no excluded-middle premise.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}
