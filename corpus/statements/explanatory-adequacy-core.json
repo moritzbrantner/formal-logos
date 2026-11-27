@@ -18,8 +18,7 @@
   "disambiguation_ids": [
     "6a897910-d301-56c0-963d-d2f019de3de7",
     "f7bae38e-9b21-54fe-8236-2646c230568b",
-    "f9e260b1-c206-5d41-a054-fac13cf68e67",
-    "6bfbf069-4e30-59c5-a265-fa87d4463b33"
+    "f9e260b1-c206-5d41-a054-fac13cf68e67"
   ],
   "lean_declaration": "TruthCore.Explanation.ExplanatoryAdequacy.Core"
 }

@@ -13,8 +13,7 @@
     "1ac12831-1341-5fb5-9624-07f083eb4d19"
   ],
   "disambiguation_ids": [
-    "f9e260b1-c206-5d41-a054-fac13cf68e67",
-    "6bfbf069-4e30-59c5-a265-fa87d4463b33"
+    "f9e260b1-c206-5d41-a054-fac13cf68e67"
   ],
   "lean_declaration": "TruthCore.Explanation.PSRStrength.CollapseCore"
 }

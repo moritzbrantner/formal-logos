@@ -6,5 +6,5 @@
   "predicate": "tests",
   "object_kind": "statement",
   "object_id": "baf22110-9b54-5c11-a44a-c8447518b824",
-  "note": "Omit the existence of a contingent fact in the collapse core. In allNecessary all admitted fact values are fixed across accessible worlds, and the model at false satisfies the remaining hypotheses, including coverage and the aggregate condition."
+  "note": "Omit contingency of the supplied fact `c` at `false`. Every fact holds at both worlds in `allNecessary`, so every choice of `c` fails that premise."
 }
