@@ -1,0 +1,10 @@
+{
+  "id": "dcbf6e17-d307-4ea6-84f7-14379f31c527",
+  "label": "Test by MetricGrimReaper.controls (37d4e072)",
+  "subject_kind": "result",
+  "subject_id": "83fd4e6f-e390-4741-bce8-015154e6b5be",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "37d4e072-212b-4b99-a4ff-bf10d94d5a52",
+  "note": "Omit co-possible adjacent pieces along spaced descents. The integer pivot history is populated at accessible world 1 and has no lower time bound. With silent registers no station issues, so adjacent pieces fail and the patchwork conditional holds vacuously."
+}
