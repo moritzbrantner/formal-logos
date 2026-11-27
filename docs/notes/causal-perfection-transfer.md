@@ -7766,6 +7766,441 @@ made after that.
 
 [Attempt record](../../corpus/attempts/7ee3e5eb-37b5-4157-b591-f8d38a833ab1.json)
 
+## Natural or rational appetite? The purity premises and the object of an original source's favouring (2026-11-27; provisional, #2145)
+
+### Question, fixed meanings and reuse
+
+Program [#2145](https://github.com/moritzbrantner/truth-core/issues/2145),
+lane H3. Three angles on the purity family (wisdom `44e39691`, good-generality
+`e2357adc`, joint compossibility `500d0e2d`) ended in relocation or parity:
+member grounding (#2162), the value-standard relocation and the reception fork
+(lane P, [above](#when-is-a-restriction-of-content-a-limitation-the-purity-premises-under-one-criterion-2026-11-27-provisional-2145)).
+Lane P left the family at one crux. Measured per bearer, by the formal object of
+its kind of operation, a favouring fixed to end content D is limiting or not
+according to "whether a root's favouring is a natural or a rational appetite".
+
+The question here is whether that crux discriminates.
+
+- A natural appetite tends to its good without apprehending it: a heavy body
+  tends downward, a plant to its form.
+- A rational appetite tends to good *as apprehended*.
+- Does good-generality, favouring that depends on value with end content held
+  fixed (`071b24f0`), *require* the rational form? Or can a natural appetite be
+  good-general, for example a nature whose tendency is fixed to "the better"
+  (the axiarchic or A4 rival)?
+
+One standard is applied to both forms throughout.
+
+Reused without change:
+
+- Lane 2b's profiles, scenarios and `GoodDependenceLaws`
+  ([optimal-creation-choice.md §§65–69](optimal-creation-choice.md#favouring-end-content-and-goodness-under-one-standard-2145-2026-11-27));
+- `GoodGeneral`, the favouring tokens and the #2153/#2172 carrier;
+- lane P's `ValueStandardOrder` (STANDARD_OF_FAVOURING_1), `MissesVerdict`,
+  `UnbackedVerdict`, the value-sense bridges `720bccc2`/`a141e6a8`, variation
+  `ca3c311d` and `standardControls`;
+- RootPurity `c78c77da` and `a30c5963`;
+- lane C's loci and the containment-recognition bridge `d1fb6414`
+  ([above](#individuating-non-present-candidates-the-axiarchic-rival-and-the-cognition-criterion-2026-11-27-provisional-2145));
+- Mathlib's `Function.FactorsThrough`.
+
+Lean:
+[vocabulary](../../TruthCore/Causality/AppetiteStandard.lean),
+[results and controls](../../TruthCore/Results/Causality/AppetiteStandard/Solution.lean),
+[spec](../../specs/appetite-standard.toml).
+
+New vocabulary, each with a stipulative definition record:
+
+- **Fixed by** `FixedBy φ f` (`177138ed`): scenarios that agree on the feature f
+  receive the same favouring. It says what the favouring can respond to, not
+  what causes it.
+- **Natural appetite** `NaturalAppetite n φ` (`8cb01456`): φ is fixed by the
+  bearer's natural state n, intended as its non-apprehensive state in each
+  scenario (the response of its form or nature to the candidates). No type
+  requires the natural state to be non-apprehensive.
+- **Rational appetite** `RationalAppetite a φ` (`6b466d9f`): φ is fixed by the
+  bearer's apprehension state a, what it apprehends of the candidates in each
+  scenario.
+  - `NaturalState` and `ApprehensionState` are distinct structures.
+  - The two definitions are favouring-level counterparts of the two senses of
+    disambiguation `c40e9cab` (natural inclination; appetite following
+    apprehension). They do not type the power.
+  - The modes are not exclusive in Lean: a favouring is fixed by both states
+    when the two are correlated in the scenario space.
+- **Formal object** `obj b φ` (`f58cd6bf`): the ranking that measures bearer
+  b's favouring φ, intended as the formal object of b's kind of operation, not
+  φ's particular content. For a will it is the good; for a natural tendency it
+  is the end of the nature. It is indexed by the bearer because one profile can
+  belong to bearers of different kinds: Lane 2b's `dNature` and `determinedWill`
+  are the same function `fitOrder`. It is a Lean parameter, and the intended
+  constraint is stated in the record.
+- **Determination to one end** `NaturalStateAdUnum n fitOf` (`e69e3826`): the
+  natural state is fixed by end-realization. Sense restriction: this is
+  determination to one end-*content class*. A nature determined to the good as
+  such (the will as nature, ST I q.82 a.1, navigation only; A4) is not ad unum
+  in this sense, and the encoding does not cover the claim that such a
+  determination is also "to one".
+
+### A. Two coordinates: what fixes a favouring, and what measures it
+
+"Natural or rational" joins two questions:
+
+- **mode**: what fixes the favouring, a natural state or an apprehension state;
+- **object**: what the favouring is measured by, an end content D or the good.
+
+The classical pairing is natural with D, rational with the good. Neither pairing
+is forced. A will with a fixed preference for D is rational with object D (Lane
+2b's `determinedWill`). A nature whose tendency is fixed to the better is
+natural with object the good (A4).
+
+**The fixer law** (`fixerCarriesValueVariation`, Lean-only, zero axioms).
+
+- Suppose a favouring is fixed by a feature f and is good-general.
+- Then f itself separates two scenarios of one end-realization class at which
+  value ranks the witnessing pair differently.
+- Whatever fixes a good-general favouring must carry the variation of value
+  within a D-class. This holds whether f is a natural state, an apprehension
+  state or the value order itself.
+
+Two corollaries apply the law to each mode in the same way:
+
+- `constantApprehensionNotGoodGeneral`: a rational appetite of a constant
+  apprehension state is not good-general. A bearer that apprehends nothing has
+  a constant apprehension state. So does a bearer whose apprehension does not
+  vary with the candidates, for example one that apprehends only a constant
+  self-content.
+- `adUnumNaturalNotGoodGeneral`: a natural appetite of a state determined to one
+  end is not good-general.
+
+**The grid** (`appetiteGrid`, Comparator companion). On Lane 2b's carrier:
+
+| Cell | Profile | Fixed by | Good-general | Measured by its own object | Common value standard |
+| --- | --- | --- | --- | --- | --- |
+| natural, the good (A4) | `better` | content state (not ad unum); not by the empty apprehension state | yes | tracks the value order exactly | no missed or unbacked verdict |
+| rational, the good (personal) | `better` | full apprehension state; not by the inert natural state | yes | tracks the value order exactly | no missed or unbacked verdict |
+| natural, D (D-directed nature) | `dNature` | end state (ad unum); not by the empty apprehension state | no | tracks D-realization exactly | misses c over d at `cBetter` |
+| rational, D (determined will) | `determinedWill`, the same function as `dNature` | full apprehension state | no | for a willing bearer, the good (kind rule): misses c over d at `cBetter` | misses c over d at `cBetter` |
+
+The fifth column depends on the bearer, not the profile. Rows 3 and 4 are one
+profile. The last conjunct of `appetiteGrid` compiles a two-bearer model of it:
+a natural bearer measured by D-realization and a willing bearer measured by the
+good (bearer-indexed `kindObj`). There the kind rule holds without fixing the
+natural bearer's object, the natural bearer's favouring makes exactly its
+object's verdicts, the willing bearer's identical favouring does not, and the
+per-bearer bridge fails if that shared token is pure.
+
+A further conjunct adds the cognition criterion on the good-tracking source: it
+holds with Lane 4's apprehension relation `appSource` and fails with `appNone`.
+Those `Apprehends` relations are linked to the apprehension states of this
+module only by interpretation. The value-sense verdicts read only the profile,
+so they are the same in rows 1 and 2.
+
+Disclosures:
+
+- On this carrier a scenario is individuated by the candidates' content, so the
+  content state is the scenario itself (`id`). So is the full apprehension
+  state. Every profile is fixed by such a state, so "fixed by the content
+  state" is no constraint on this carrier. The two good-tracking cells are the
+  same profile, and so are the two D cells (`dNature = determinedWill`). The
+  difference is which structure is said to carry the profile, and `Apprehends`
+  is free. This is lane C's finding at the profile level (GoodFavouringTable
+  row 7): a profile cannot separate the modes.
+- Which account a cell represents is an interpretive assignment.
+
+### B. Does good-generality require the rational form?
+
+**What the encoding shows.** `GoodGeneral` and the route's premises do not
+encode mode. `formalObjectControls` row 1 satisfies every premise of the
+registered route and its conclusion at the actual root of the #2153 carrier.
+Its favouring `better` is fixed by the content state (as every profile on this
+carrier is) and not by the empty apprehension state, and with Lane 4's `appNone`
+relation the cognition criterion fails. The horn-A positive witness
+(`favouringControls` row 1, with `e2357adc` true) uses the same source,
+favouring and purity assignment; the two compiled facts are separate
+conjunctions about the same assignments.
+
+This does not show that a non-apprehensive state *can* carry value variation:
+no type requires the content state to be non-apprehensive, and
+`noApprehension`/`appNone` are linked only by interpretation. Whether a
+non-apprehensive state can carry value variation is the disputed step
+`d1fb6414` / `3b40009e`. What the finite model shows is narrower: in this
+encoding, the separation below needs determination to one end.
+
+The purity route's conclusion is good-generality. Every step from it to
+intellect (result `30c6f4c5` onward) goes through the cognition criterion
+`3b40009e`.
+
+**A separation under stated premises** (`goodGeneralIsRationalUnderAdUnum`,
+Lean-only, zero axioms). Assume:
+
+- the mode dichotomy: the favouring is a natural appetite of n or a rational
+  appetite of a;
+- n is determined to one end.
+
+Then every good-general favouring is a rational appetite of a.
+`adUnumNoncognitiveNotGoodGeneral` adds that, under the same two premises, a
+bearer with a constant apprehension state has no good-general favouring. That
+is the cognition criterion's exclusion for a noncognitive bearer, reached from
+determination to one end.
+
+The countermodel is grid row 1. Drop determination to one end, and a natural
+state that records the candidates' full content fixes a good-general favouring
+that is not a rational appetite of the empty apprehension state, while the
+dichotomy holds. So, in this encoding, the separation needs that premise.
+
+**Where determination to one end goes at a root.** For finite natural forms it
+is the classical datum: a form is this form, and its inclination is to this end
+(ST I q.59 a.1, q.80 a.1, q.19 a.4 second reason; navigation only). At a
+simple, unlimited root it is the point in dispute:
+
+- **The rival's account.** A4's root contains distinct, value-ranked modes for
+  the candidates without apprehending them. That is a natural state that is not
+  determined to one end-content class. Lane C's sharp form of the question is whether a
+  contained, individuating, value-guiding stand-in is apprehended, `d1fb6414`.
+- **The classical side cannot use it as a free premise** (analyst reading).
+  - On its own account the root's essence contains the perfections of every
+    candidate (ST I q.4 a.2, eminent containment; navigation only), so the
+    essence is not determined to one end.
+  - What it holds is that the root orders the candidates by those perfections
+    *through understanding* (q.15 a.2). That is the claim `d1fb6414` states.
+- **The Fifth-Way family stops at the same point.** The knowing-director premise
+  `564ce19b`, with the premise that nothing directs a root, excludes noncognitive
+  tending at a root with any object, D or the good.
+  That family's recorded obstacle, at first-source recognition `acc06edc`, is
+  "why the final ordering … must be an end present as an object of thought
+  rather than as a source's intrinsic directive nature"
+  ([immaterial-intellect-reception.md](../immaterial-intellect-reception.md)).
+
+So neither side accepts determination to one end at the root. The rival denies
+it by positing value-ranked modes. The classical side denies it through eminent
+containment, yet affirms `d1fb6414`. The separation theorem therefore does not
+apply at the root, and no implication or `strengthens` relation links
+`NaturalStateAdUnum` to `3b40009e` or `d1fb6414`. The mode question at the root
+returns to `d1fb6414` / `3b40009e` (analyst judgment, counted once). The Fifth
+Way's knowing-director premise `564ce19b` is a distinct, stronger premise that
+also covers a D-directed root. Its family stalls at the same recognition step
+(`acc06edc`), and its standing rival, the intrinsic directive nature, includes
+the purity family's D-rival at a root (C below). None of these is derived here.
+
+**Symmetry on the rational side.** By the fixer law, a rational appetite is
+good-general only if its apprehension state carries the variation of value
+within a D-class. An apprehension state that consists only of a self-content,
+constant across the scenarios, does not. The wisdom route (`fd01e30c` → `c256d381` → `29818edd`) gives intellect as
+self-understanding. It does not by itself give a value-guiding apprehension of
+the candidates, and nothing here uses it as if it did.
+
+### C. The object coordinate: what the purity family needs
+
+**Registered route** (argument `d4a5623f`, result `05a4e794`, theorem
+`actualRootFavouringIsGoodGeneralFromFormalObject`, main theorem zero axioms).
+Premises:
+
+- `a30c5963` (actual roots have no represented limiting principle);
+- RootPurity `c78c77da`;
+- the per-bearer bridge `2306492a`, new and open: a pure favouring determination
+  makes exactly the verdicts of its formal object;
+- the object premise `f2e8eb42`, new and open: the formal object of every
+  favouring of an actual root is the value order (STANDARD_OF_FAVOURING_1);
+- variation `ca3c311d`.
+
+The conclusion is horn A's `7fca65ec`. Neither new premise mentions a mode.
+
+**What the route separates.** Lane P's value-sense bridges (A6, `da9f2d3c`)
+combine content the D-rival accepts with content it denies. This route splits
+them:
+
+- `valueBridgesArePerBearerConstant` and `perBearerConstantGivesValueBridges`
+  (Lean-only): the two value-sense bridges give the per-bearer bridge with every
+  favouring of every bearer measured by value (using excluded middle).
+  Conversely, that per-bearer bridge gives the value-sense verdicts for every
+  favouring some bearer has.
+- `perBearerAndObjectGiveRootValueVerdicts` (Lean-only): the per-bearer bridge
+  and the object premise give the value-sense verdicts at every pure favouring
+  of an actual root.
+- `formalObjectControls` row 5 (Comparator companion): Lane 2b's D-directed
+  nature measured by its own end. RootPurity, the per-bearer bridge and
+  variation hold, and only the object premise fails.
+
+The D-rival therefore accepts the per-bearer measure. It denies exactly one
+thing: that the formal object of a root's favouring is the good.
+
+**Correcting lane P's crux.** Lane P's per-bearer cell reads "not restricted if
+it is a natural appetite (object D); restricted … if it is a rational appetite
+(object the good)". That pairs mode with object. On the per-bearer rule, with
+the formal object indexed by the bearer:
+
+- The kind rule for willing ("the object of willing is the good",
+  `RationalObjectIsValue`) applies to favourings a bearer has that are rational
+  appetites of that bearer. It gives the object premise if every favouring of
+  an actual root is a rational appetite of the root (`rationalKindGivesObject`,
+  Lean-only). That hypothesis is the disputed mode step itself.
+- The kind rule says nothing about a natural bearer's object. Its formal object
+  is the end of its nature, which may be D or, as on A4, the good. The object
+  premise also holds in `formalObjectControls` row 1, whose favouring is not a
+  rational appetite of the empty apprehension state. Since that row does not
+  type non-apprehension (above), this shows only that the object premise does
+  not encode mode.
+- The per-bearer verdict on a bearer's favouring turns on its formal object for
+  that bearer. Mode enters only through the kind rule, in one direction: a
+  rational bearer's object is the good. The grid's two-bearer model shows the
+  same profile measured differently for a natural and a willing bearer.
+
+**Three presentations of the object coordinate**, counted once:
+
+1. lane P's common value standard (the value-sense bridges, A6);
+2. the per-bearer bridge with the object premise (this route);
+3. commitment (e) read under ORIGINAL_FINALITY_2.
+   - `originalFinalityForGoodGivesGoodGeneral` (Lean-only): ORIGINAL_FINALITY_2
+     at one pair, with a non-present candidate, gives good-generality of that
+     favouring. At a root nothing is a present input, so (e) in sense 2 gives
+     horn A's conclusion for that favouring without the purity family.
+   - By definition ORIGINAL_FINALITY_2 is ORIGINAL_FINALITY_1 plus dependence
+     on value with D fixed at that pair. That dependence is the disputed point
+     the object premise yields with the per-bearer bridge and variation, stated
+     at one pair. The D-rival accepts (e) in sense 1 only (GoodFavouringTable
+     row 9). So this answers lane P's next test 1: "originating ends as goods"
+     restates the object coordinate and adds no independent warrant.
+
+**Candidate warrant for the object premise that is not one of these.** One
+analysis is recorded here and not formalized. Given variation, every account
+has to say where value is grounded, the D-rival included.
+
+- **Value grounded in the root's nature.** Value is the degree to which a
+  candidate imitates or participates the root, A4's common ground. Then the
+  D-rival's favouring ranks by D, and the nature it belongs to grounds a
+  different ranking. Its fixity to D among orderings its own nature grounds is
+  then a determination with no recorded explanation. The objection to it is E
+  `9281317d` (no unexplained absence at roots) or a premise that a nature's
+  favouring follows the ordering that nature grounds. E is in the graph (lanes
+  E and H2 own it); the second premise is not.
+- **Value independent of the root.** This is the independent-locus price of
+  lane C's A1 (`65805e5a`, the inclusive sole-foundation reading, which is not
+  registered).
+- **Value produced by the root.** This is the bootstrapping price (`69b9f887`).
+
+Lane C's individuation trilemma applied to candidates' stand-ins. This one
+applies to the value order itself, and so it reaches the D-rival too. It is a
+next test, not a result. Its first horn relocates to E, which lanes E and H2
+own.
+
+### D. One standard, both forms
+
+| Account (mode, object) | Good-general | Per-bearer measure | Object premise | Cognition criterion | Where it pays |
+| --- | --- | --- | --- | --- | --- |
+| Personal root (rational, the good) | yes | unrestricted | holds by the kind rule, given that its favouring is a rational appetite of the root (`rationalKindGivesObject`'s `hRat`, the disputed mode step) | holds | `hRat` at the root, which corresponds, by analyst judgment, to `d1fb6414`'s positive side; the exemplar-containment problem under simplicity (#1879), shared with A4 (lane C) |
+| Imitability exemplarism, A4 (natural, the good) | yes | unrestricted | holds | denies | the object premise by stipulation of its nature's end (no kind rule applies to a natural bearer); the mode coordinate: `d1fb6414` / `3b40009e` (parity, lane C) |
+| D-directed nature (natural, D) | no | unrestricted | denies | not engaged | the object premise; if value is grounded in its nature, an unrecorded fixity to D (to E); otherwise lane C's locus prices for value itself |
+| Determined will (rational, D; the same profile as the D-directed nature, borne by a willing bearer) | no | restricted: by the kind rule its object for a willing bearer is the good, and it misses c over d at `cBetter` | holds by the kind rule; its favouring does not track that object | not engaged | no actual root has it, given RootPurity, the per-bearer bridge and the kind rule (`perBearerAndObjectGiveRootValueVerdicts`; the grid's two-bearer model) |
+
+The same functions are applied to every row. Each row's prices are stated on its
+own premises.
+
+### Assessment, standing rival and graph effect
+
+**What was clarified, connected and tested.**
+
+- Lane P's crux is two coordinates, typed separately:
+  - mode: what fixes the favouring, `NaturalAppetite` / `RationalAppetite`;
+  - object: what measures it, the formal object.
+- The purity family needs only the object coordinate. The registered route
+  (`05a4e794`) reaches horn A's conclusion from the per-bearer measure and the
+  object premise. Neither mentions a mode. The D-rival accepts the measure and
+  denies only the object premise (control row 5).
+- `GoodGeneral` and the route's premises do not encode mode. Whether a
+  non-apprehensive state can carry value variation is the disputed step
+  `d1fb6414` / `3b40009e`; the encoding neither shows nor excludes it
+  (controls row 1, grid row 1).
+- Under the mode dichotomy and determination to one end-content class,
+  good-generality requires the rational form
+  (`goodGeneralIsRationalUnderAdUnum`). In this encoding the countermodel
+  shows that determination to one end is needed. Neither side accepts it at the
+  root, so the separation does not apply there, and the mode question returns to
+  `d1fb6414` / `3b40009e` (analyst judgment, counted once). The Fifth Way's
+  first-source recognition stalls at the same step.
+- "Originating ends as goods" (ORIGINAL_FINALITY_2) gives good-generality at
+  one pair: a third presentation of the object coordinate.
+
+**Strongest standing rival and its price.** Unchanged in substance: the
+D-directed nature as a natural appetite whose formal object is D. It is the
+Fifth Way's intrinsic directive nature at a root, in its D-directed form. Its
+price is now located precisely:
+
+- it denies the object premise `f2e8eb42`;
+- given variation it must say where value is grounded, with three priced
+  options (C).
+
+No substantive objection to it beyond these was identified. On the mode
+coordinate, A4 stays at parity with the personal account (lane C; its round-3
+counterfactual-guidance and self-application tests did not separate them, see
+[above](#counterfactual-guidance-and-self-application-against-imitability-exemplars-2026-11-27-provisional-2145)).
+
+**Provisional judgment.** This angle also relocates. It is the fourth on the
+purity family, after the three angles listed at the top of this section. It
+does not discriminate the purity family by itself.
+
+- The mode half relocates exactly onto the cognition criterion's dependency
+  (`3b40009e` / `d1fb6414`, shared with `564ce19b` / `acc06edc`).
+- The object half relocates onto the object premise. Its three presentations
+  (A6's common value, this route, (e) in sense 2) are one assumption.
+- `e2357adc` remains open. Its per-bearer warrant is the object premise. The
+  natural-versus-rational question bears on it only through the kind rule, as
+  a sufficient condition whose hypothesis is the disputed mode step.
+- `44e39691` and `500d0e2d` are unchanged by this section.
+- Nothing is established, and no premise is discharged. The registered route is
+  a conditional reformulation inside the purity family. It localizes the
+  D-rival's denial and adds no independent warrant.
+
+**Graph.** One registered result, `05a4e794` (argument `d4a5623f`), concluding
+statement `7fca65ec`. From there the path to the root runs: statement
+`7fca65ec` → argument `cc00d109` (result `30c6f4c5`) → statement `3a32d91c` →
+argument `c5b14912` (result `fad1a1ac`) → statement `29818edd`. `7fca65ec` is
+already closed by other routes. This result adds a conditional support bundle
+with three open premises (the per-bearer bridge `2306492a` and the object
+premise `f2e8eb42`, both new, and variation `ca3c311d`) and changes no closure.
+Reused closed premises: `a30c5963` and `c78c77da`.
+
+**Next discriminating tests.**
+
+1. *Where is value grounded, for the D-rival* (C)? Register the three loci for
+   the value order, each with its price. Test whether "a nature's favouring
+   follows the ordering its nature grounds" has warrant independent of E.
+2. *A root-level determination-to-one-end premise* with simplicity as an input:
+   can it be stated without presupposing that the root's virtual containment is
+   not value-discriminating?
+3. *Rational appetite without candidate-varying apprehension*: whether the
+   classical root's apprehension of candidates is grounded in its
+   self-apprehension. That would connect the wisdom route (self-understanding)
+   to the apprehension state required by the fixer law.
+4. Horizontal, per the three-angles rule: the purity family has now had four
+   angles. Leave it until test 1 or a new mode-coordinate argument is
+   available.
+
+**Review state.**
+
+1. **Independent semantic challenge** of `be1e3bb2b`: three P1s and four P2s.
+   - P1: the profile-indexed formal object could not give one profile two
+     objects (`dNature = determinedWill`), and the kind rule had no `Has`
+     restriction, so it fixed the D-nature's object too.
+   - P1: "good-generality does not require the rational form" overstated row 1,
+     whose natural state constrains nothing.
+   - P1: "the first three state one disputed step at different strengths" had
+     no support, and it conflicted with the classical side's denial of ad unum.
+   - P2s: the end-content restriction of ad unum; the personal row's price;
+     the interpretive link between `noApprehension` and `appNone`; mixed
+     statement and result IDs in the route chain, and closure.
+2. **Repairs.** The formal object is now indexed by the bearer, and the
+   per-bearer bridge, the object premise and the kind rule (with `Has`) changed
+   type. The Challenge was regenerated, and the grid gained the two-bearer
+   model. The prose of B, C, D and the assessment was rescoped as above. DEFs
+   `f58cd6bf` and `e69e3826` were updated.
+3. **Targeted re-check** of `be1e3bb2b..7924bf51c`: all seven findings fixed;
+   new types non-vacuous; each control row still fails exactly its claimed
+   premise. Two new wording P2s (the personal row's "which is `d1fb6414`'s
+   positive side" made an analyst correspondence; A4's object-premise price by
+   stipulation of its nature's end) were fixed in the following commit.
+
+[Attempt record](../../corpus/attempts/f366f20e-0bd3-40cc-a8f3-595c2ec5194f.json)
+
 ## Inquiry and closure at the root: does the PSR presupposed by inquiry reach a necessary root's absences? (2026-11-27; provisional, #2145)
 
 ### Question, fixed meanings and reuse
