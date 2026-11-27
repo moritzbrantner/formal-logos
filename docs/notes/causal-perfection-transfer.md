@@ -4245,7 +4245,7 @@ necessary source could jointly have; [definition](../../corpus/definitions/3f8e5
 
 | Case | Lean | Content |
 | --- | --- | --- |
-| (i) | `AbsenceFromAdmissibility` | g lacks k and no admissible profile contains k |
+| (i) | `AbsenceFromAdmissibility` | g lacks k and no admissible profile contains k (k is incompatible with simplicity or another admissibility constraint) |
 | (ii) | `AbsenceFromPositiveProfile` | g lacks k, k is in some admissible profile, but none contains all of g's determinations and k |
 | (iii) | `UnexplainedAbsence` ([definition](../../corpus/definitions/a5452da9-32eb-47d4-98fb-0da507cf4ce5.json)) | g lacks k although an admissible profile contains all of g's determinations and k |
 
@@ -4272,6 +4272,13 @@ the background that makes the cases meaningful:
    arguments below use that k is pure. Denying that intellect is a pure
    perfection is a fourth response that the trichotomy does not classify.
    It remains the open purity obligation of `d3a0e98a` and `521613fc`.
+5. **The bearer's own profile is admissible.** If g's actual profile is
+   itself inadmissible, no admissible profile contains it, so every k that
+   is admissible somewhere is classified as (ii) only vacuously.
+   `anchorControl` is such a case: its root's absence of the pure `0` is
+   formally (ii), though no positive determination excludes `0`. The gloss
+   of (ii) as exclusion by g's positive determinations therefore needs
+   admissibility of the root's profile (`0a9d3a40`).
 
 Reading of (ii). "Some positive determination P excludes k" has a
 single-determination reading and a joint-profile reading.
@@ -4321,9 +4328,11 @@ no represented limiting principle, only pure determinations, nothing
 limited, every pure pair admissible and no unexplained absence, yet it
 lacks noesis because its pure profile jointly excludes it. Of the inputs
 to the two L derivations, only joint compossibility fails there. So the
-answer to B is exact: given joint compossibility and either
-determination-to-limitation bridge, (ii) entails a limiting principle that
-the root lacks. Without joint compossibility, (ii) survives at an
+answer to B is exact: given joint compossibility, either
+determination-to-limitation bridge and admissibility of the root's own
+profile (`0a9d3a40`), (ii) entails a limiting principle that the root
+lacks. Without joint compossibility, or without root-profile admissibility
+(`anchorControl`, where the case is vacuous), (ii) survives at an
 unlimited root. The model stipulates the conflict and does not explain
 it. A rival who takes this horn owes a positive account of why two
 limitation-free actualities exclude each other. The articulation
@@ -4378,20 +4387,36 @@ Tests:
   determination or absence, and the root is not contingent there. Reaching
   E needs a PSR for the closure of a necessary root's profile. That is a
   distinct and stronger scope. No such bridge is in the graph.
-- **Same standard.** `standingRival` puts the same failure on the #1892
-  source. It is a necessary actual root with own being, nonvacuous pure
-  act and constitutive simplicity. It has an own exemplar form norming an
-  actual knower, and it apprehends nothing. On that source a personal
-  variant has noesis but lacks the admissible pure `a`. It violates E in
-  exactly the same way. E is not an anti-impersonal premise. It
-  condemns any root, personal or not, whose profile is closed by a
-  primitive totality fact short of an admissible completion.
+- **The #1892 source.** `standingRival` puts the same failure on the
+  #1892 source. It is a necessary actual root with own being, nonvacuous
+  pure act and constitutive simplicity. It has an own exemplar form norming
+  an actual knower, and it apprehends nothing. The `Has` profile and the
+  #1892 apprehension relations are separate assignments on the same beings.
+  A bridge conjunct links them for this row: a being has noesis in `Has`
+  exactly when it apprehends some content in the #1892 relation.
+- **Form versus role.** As a `Has`-profile parity check, a source whose
+  profile has noesis but lacks the admissible pure `a` violates E in the
+  same way. That source is not a personal variant of the #1892 source: no
+  apprehension relation is assigned to it, and nobody in the dispute holds
+  such a source. E is neutral in form, but so is `fe67d766`, which also
+  condemns any root, personal or not. Given the background premises, E
+  decides exactly the point at issue. The impersonal profile satisfies every
+  other premise and violates only E, and restricted to pure determinations
+  E is equivalent to the conclusion. It stands in the same logical position
+  as the classifier route ruled out above as contraposed fullness. What
+  differs is only its claimed independent warrant, a closure principle of
+  sufficient reason at roots. That warrant is not yet in the graph. E's
+  support value is no greater than that warrant.
 
 | Explanation of the absence | Impersonal root lacking noesis | Personal root lacking a | What it needs |
 | --- | --- | --- | --- |
-| (i) constraints alone | k inadmissible with simplicity | a inadmissible | a positive incompatibility with simplicity |
+| (i) constraints alone | k inadmissible with simplicity or another constraint | a inadmissible | a positive incompatibility with an admissibility constraint |
 | (ii) positive profile | joint pure-content conflict | joint conflict with noesis | denial of joint compossibility, with a positive account |
 | (iii) unexplained | primitive closure | primitive closure | denial of E, with the cost of an unexplained negative closure at a root |
+
+The table compares the form of each explanation. It is not a parity verdict
+on E. Only the impersonal column is a position held in the dispute, and E
+counts against it only as far as a closure principle at roots is warranted.
 
 ### D. The four roles at subsistent esse
 
@@ -4400,15 +4425,17 @@ explicit premises, not as a definitional equality. The premises are the
 exercise-or-potency bridge (an unexercised own self-directed capacity
 leaves the source in potency in the understanding respect), pure act, and
 ab esse ad posse. Under them own capacity and actual exercise coincide at
-an own-being source. An unexercised own aptitude is therefore excluded.
+an own-being source, for contents about that source (`About c g`). An unexercised own aptitude is therefore excluded.
 It would be the dormant-capacity profile of `WisdomSelfUnderstanding.Control`
 (case 2), which reintroduces a potency. Productive power to make knowers
 and objective exemplarity are not capacities of the source's own
-apprehension, and the collapse leaves them separate. `standingRival`
-checks this on the #1892 source. With its own capacity identified with
-its actual apprehension, the collapse premises hold, and the source has
-neither aptitude nor exercise. "Productive capacity for knowers without
-understanding" survives the simplicity reading in this encoding. The
+apprehension. That they remain separate is not a theorem. It rests on a
+joint model: `standingRival` assigns the #1892 source, with its own
+capacity *set equal to* its actual apprehension. That choice makes the
+exercise-or-potency conjunct and ab esse ad posse trivial. The collapse
+premises then hold, and the source has neither aptitude nor exercise.
+"Productive capacity for knowers without understanding" survives the
+simplicity reading in this encoding. For self-directed contents the
 reading forces the impersonal profile into the no-aptitude corner. It
 does not exclude that corner.
 
@@ -4422,11 +4449,19 @@ open premise:
 
 - (i) to admissibility of each pure determination `ee287fd3`;
 - (ii) to joint compossibility `500d0e2d`, given RootPurity or the
-  determination-to-esse bridge;
+  determination-to-esse bridge and admissibility of the root's profile
+  `0a9d3a40`;
 - (iii) to E `9281317d`.
 
-Each premise is load-bearing in the stated encoding, by an assignment
-where it fails while the others hold and a root lacks a pure determination.
+Each premise of both routes is load-bearing in the stated encoding. For
+each there is an assignment where it fails, the others hold and a root lacks
+a pure determination. `structuralControls` and `anchorControl` cover the
+structural route. `esseControls` evaluates the giver premise and both
+formal-sense bridges on the same admissible families, including the
+exact-closure and anchoring rows. The giver premise fails there because the
+limited source is a root without an actual concrete ground. The controls
+share the two beings and the root relation; `anchorControl` uses
+natural-number determinations.
 `a30c5963`'s existing derivation now reaches the root through this route.
 
 **Standing rival and price.** The strongest surviving impersonal profile
@@ -4442,19 +4477,33 @@ positions:
 - or accept an unexplained negative closure at the root.
 
 The last option is coherent and is the cheapest formally. A personal
-source with a stipulated roster would pay the same price.
+source with a stipulated roster would pay the same price in form. In the
+actual dispute only the impersonal profile pays it, so the cost counts
+only as far as a closure principle at roots is independently warranted.
 
 **Provisional judgment.** These results are conditional support for
 `fe67d766`. They do not establish it. Joint compossibility has a
 substantive positive rationale in the purity definition. No positive
 pure-content conflict has been supplied, so the rival's best option is
 (i) or (iii) rather than (ii). E has the general rootless-determiner
-rationale and applies symmetrically. Its denial is a primitive, not a
-contradiction. No unconditional winner is claimed. The comparison now
+rationale and is neutral in form. Given the background it decides exactly
+the point at issue, so its support value equals the independent warrant
+for a closure principle at roots, which is not yet in the graph. Its denial
+is a primitive, not a contradiction. No unconditional winner is claimed. The comparison now
 turns on two questions: does a necessary root's profile need an intrinsic
 explanation of its closure, and is noesis admissible with simplicity?
-Formal validity is unchanged by this judgment. The independent semantic
-challenge of this delivery has not yet run.
+Formal validity is unchanged by this judgment.
+
+**Review state.** The independent semantic challenge reviewed head
+`f880e762c`. It accepted all four registered steps as valid conditional
+derivations, not transcriptions. It found three P1s and nine P2s, which
+are repaired at REPAIR_HEAD:
+
+- (ii) needs root-profile admissibility;
+- the parity verdict on E was overstated;
+- the `standingRival` personal variant was over-read.
+
+The coordinator's targeted re-check of the repairs has not yet run.
 
 **Next discriminating tests.**
 

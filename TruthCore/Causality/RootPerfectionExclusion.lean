@@ -16,10 +16,15 @@ family `Admissible` of intrinsic profiles (sets of real determinations):
 1. `AbsenceFromAdmissibility`: no admissible profile contains `k` at all. With
    `Admissible` read as the profiles a metaphysically simple, unreceived source
    could jointly have, this is the home of "k is incompatible with simplicity"
-   (for example the real-duality fork of the Plotinian objection).
+   (for example the real-duality fork of the Plotinian objection), or with the
+   other admissibility constraints (unreceivedness, necessity, any further
+   warranted incompatibility).
 2. `AbsenceFromPositiveProfile`: `k` occurs in some admissible profile, but no
-   admissible profile contains both the bearer's actual determinations and `k`:
-   the bearer's positive determinations, singly or only jointly, exclude `k`.
+   admissible profile contains both the bearer's actual determinations and `k`.
+   When the bearer's own profile is admissible, its positive determinations,
+   singly or only jointly, exclude `k`. When that profile is itself
+   inadmissible, every `k` admissible somewhere falls here vacuously, so the
+   gloss needs `RootProfilesAdmissible` (see `anchorControl`).
 3. `UnexplainedAbsence`: an admissible profile contains the bearer's actual
    determinations together with `k`, yet the bearer lacks `k`. Neither the
    admissibility constraints nor the positive profile fix the omission.
@@ -98,8 +103,9 @@ def PureDeterminationsAdmissible (Admissible : Set D → Prop) (Pure : D → Pro
 
 /-- OPEN, general over every determination (pure or not): no actual root has an
 unexplained absence. Every omission at an actual root is fixed by the
-admissibility constraints or by the root's positive profile. It applies in the
-same way to a personal and an impersonal root. -/
+admissibility constraints or by the root's positive profile. It has the same
+form for a personal and an impersonal root; given the other premises it is
+equivalent, for pure determinations, to the conclusion it is used for. -/
 def NoUnexplainedAbsenceAtRoots (m : Profile W B) (w : W) (Admissible : Set D → Prop)
     (Has : B → D → Prop) : Prop :=
   ∀ r, ActualRoot m w r → ∀ d, ¬ UnexplainedAbsence Admissible Has r d
@@ -130,9 +136,10 @@ def ImpureDeterminationLimitsEsse (Has : B → D → Prop) (Pure : D → Prop)
 
 /-! ## Finite controls
 
-One carrier for every control: the two-being, two-world `rootProfile` of the
+The same two beings for every control: the two-being, two-world `rootProfile` of the
 #1873 controls (source `true`, the only actual root at `true`; effect `false`,
-grounded by it) and the five #1970 determinations (`esse`, `a`, `b`, `noesis`
+grounded by it) and, except in the anchoring control (natural-number
+determinations), the five #1970 determinations (`esse`, `a`, `b`, `noesis`
 pure; `limiter` not pure). The source's profile `src` and the admissible family
 vary; the effect always has `esse` and `noesis`. Structural limitation: the
 effect has a distinct simply-prior being; the source has none and is composite
@@ -275,12 +282,20 @@ def limitsEsse (adm : Set Determination → Prop) (src : Set Determination)
 def impureLimits (src : Set Determination) (L : Bool → Prop) : Prop :=
   ImpureDeterminationLimitsEsse (has src) isPure L
 
-/-- Formal-limitation controls for the second pair of arguments, reusing the
-admissibility rows above: positive witness; standing rival (only
-no-unexplained-absence fails); pure-content obstruction (joint compossibility
-and the L bridge fail with nothing limited); finite-mode blocker with nothing
-limited (the determination-to-esse bridge and the L bridge fail); and a limited
-source with no giver (the giver premise fails). -/
+/-- Formal-limitation controls for the second pair of arguments. They evaluate
+the giver premise, the determination-to-esse bridge and the formal L bridge
+over the admissible families of `StructuralControls` and `AnchorControl`, whose
+admissibility, compossibility and no-unexplained-absence facts carry over
+unchanged: positive witness; standing rival (only no-unexplained-absence
+fails); pure-content obstruction (with nothing limited the L bridge fails, and
+joint compossibility fails there); finite-mode blocker with nothing limited
+(the determination-to-esse bridge and the L bridge fail); a limited source with
+no causal edge (the giver premise fails because the source is a root, which has
+no actual concrete ground, and because the causal relation is emptied); the
+exact-closure family (the L bridge holds with nothing limited, so the failure of
+pure admissibility is the only failing premise there); and the anchoring
+control (the L bridge holds with nothing limited, so the failure of root-profile
+admissibility is the only failing premise there). -/
 def EsseControls : Prop :=
   (giver noLimit ∧ impureLimits pure noLimit ∧ limitsEsse openProfile pure noLimit) ∧
   (giver noLimit ∧ impureLimits positive noLimit ∧ limitsEsse openProfile positive noLimit) ∧
@@ -288,28 +303,40 @@ def EsseControls : Prop :=
   (giver noLimit ∧ ¬ impureLimits limitedMode noLimit ∧
     ¬ limitsEsse finiteMode limitedMode noLimit) ∧
   (¬ giver sourceLimited ∧ impureLimits limitedMode sourceLimited ∧
-    limitsEsse finiteMode limitedMode sourceLimited)
+    limitsEsse finiteMode limitedMode sourceLimited) ∧
+  (giver noLimit ∧ limitsEsse exactClosure positive noLimit) ∧
+  PositiveProfileExclusionLimitsEsse finiteAdmissible hasFromOne allPure noLimit
 
 open TruthCore.Results.Causality.IntentionalExemplarExtension.ObjectiveEminence.Control
   (ImpersonalEminence effectPotency)
 open TruthCore.Results.Causality.IntentionalExemplarExtension.ImmanentSelfPresence.Control
   (own)
 
-/-- The standing impersonal profile on one source. The #1892 source `true`
+/-- The standing impersonal profile on one carrier. The #1892 source `true`
 (necessary actual root, own being, nonvacuously pure act, constitutively
 simple, own exemplar form norming an actual knower, apprehending nothing)
-satisfies the exercise-or-potency reading with its own capacity equal to its
-actual apprehension (`effectOnly`), so the simplicity collapse holds while it
-has neither aptitude nor exercise. On the same source and carrier, the
-structural premises other than no-unexplained-absence hold, and its absence of
-`noesis` is unexplained (case iii). A personal source that has `noesis` but
-lacks the admissible pure `a` violates the same premise in the same way. -/
+satisfies the exercise-or-potency reading when its own capacity is SET EQUAL to
+its actual apprehension (`effectOnly`); that choice makes the exercise-or-potency
+conjunct trivial, so the simplicity collapse holds while the source has
+neither aptitude nor exercise. The `Has` profile and the #1892 apprehension
+relations are separate assignments on the same beings. The bridge conjunct
+links them for the impersonal profile: a being has `noesis` in `Has` exactly
+when it apprehends some content in `effectOnly`. With that link, the structural
+premises other than no-unexplained-absence hold, and the source's absence of
+`noesis` is unexplained (case iii).
+
+The last three conjuncts are a `Has`-profile parity check only. A source whose
+`Has` profile contains `noesis` but lacks the admissible pure `a` violates the
+same premise. It is not a personal variant of the #1892 source: in the #1892
+relations conjoined here that source still apprehends nothing, and no
+apprehension relation is assigned to the variant. -/
 def StandingRival : Prop :=
   ImpersonalEminence ∧
   TruthCore.Causality.WholePowerPerfection.WisdomSelfUnderstanding.SelfCapacityExercisedOrPotent
     own about effectOnly effectOnly effectPotency () ∧
   TruthCore.Latin.Aquinas.SummaTheologiae.PureAct effectPotency true ∧
   (∀ c, ¬ effectOnly true c) ∧
+  (∀ x, has positive x Determination.noesis ↔ ∃ c, effectOnly x c) ∧
   roots False ∧ purity positive False ∧ extend openProfile ∧
   limits openProfile positive False ∧ rootAdm openProfile positive ∧ pureAdm openProfile ∧
   UnexplainedAbsence openProfile (has positive) true Determination.noesis ∧

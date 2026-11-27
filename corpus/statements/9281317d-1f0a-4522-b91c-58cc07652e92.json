@@ -1,7 +1,7 @@
 {
   "id": "9281317d-1f0a-4522-b91c-58cc07652e92",
   "label": "No actual root has an unexplained absence",
-  "paraphrase": "OPEN, analyst formulation, attribution deferred: at every actual concrete root r at w and for every determination d, pure or not, it is not the case that r lacks d while some admissible profile contains all of r's real determinations and d. Every omission at an actual root is fixed by the admissibility constraints or by the root's positive profile. With the root's profile admissible it says that profile is maximal in the admissible family. It applies alike to a personal and an impersonal root.",
+  "paraphrase": "OPEN, analyst formulation, attribution deferred: at every actual concrete root r at w and for every determination d, pure or not, it is not the case that r lacks d while some admissible profile contains all of r's real determinations and d. Every omission at an actual root is fixed by the admissibility constraints or by the root's positive profile. With the root's profile admissible it says that profile is maximal in the admissible family. It has the same form for a personal and an impersonal root; given the other premises of the arguments that use it, its restriction to pure determinations is equivalent to their conclusion, so its support value is the independent warrant for a closure principle at roots.",
   "lean_declaration": "TruthCore.Causality.RootPerfectionExclusion.NoUnexplainedAbsenceAtRoots",
   "definition_ids": [
     "52352824-6be9-53c6-83d4-82fed9a08cbb",

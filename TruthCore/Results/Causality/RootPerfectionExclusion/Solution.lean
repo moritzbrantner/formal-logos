@@ -476,7 +476,7 @@ theorem esseControls : EsseControls := by
     ⟨giverNoLimit, impureLimitsOf _ _ positivePure, limitsEsseOpen _ _⟩,
     ⟨giverNoLimit, impureLimitsOf _ _ positivePure, fun h => ?_⟩,
     ⟨giverNoLimit, fun h => ?_, fun h => ?_⟩,
-    ⟨fun h => ?_, ?_, ?_⟩⟩
+    ⟨fun h => ?_, ?_, ?_⟩, ⟨giverNoLimit, ?_⟩, ?_⟩
   · obtain ⟨p, hp, hn, _⟩ := jointConflictPairwise Determination.noesis (by simp [memPure])
       Determination.noesis (by simp [memPure])
     exact h true Determination.noesis jointPositive (by simp [isPure, memPure]) ⟨p, hp, hn⟩
@@ -496,13 +496,27 @@ theorem esseControls : EsseControls := by
     | false =>
       exact (hNo ⟨insert k effect, finiteCompatible _ k effectFinite (by simp [effect]) hk,
         Set.subset_insert _ _, Set.mem_insert _ _⟩).elim
+  · intro x k hAdm _ hkAdm hNo
+    obtain ⟨q, hq, hkq⟩ := hkAdm
+    refine (hNo ⟨ActualProfile (has positive) x, hAdm, subset_refl _, ?_⟩).elim
+    unfold exactClosure at hAdm hq
+    rw [hAdm]
+    rw [hq] at hkq
+    exact hkq
+  · intro x k hAdm _ _ hNo
+    cases x with
+    | true => exact (Set.Ici_infinite 1 hAdm).elim
+    | false => exact (hNo ⟨{k}, Set.finite_singleton k, fun _ hd => hd.elim, rfl⟩).elim
 
 theorem standingRival : StandingRival := by
   refine ⟨TruthCore.Results.Causality.IntentionalExemplarExtension.ObjectiveEminence.controls.1,
-    fun _ _ _ _ h => Or.inl h, (fun _ h => by cases h), (fun _ h => by cases h.1),
+    fun _ _ _ _ h => Or.inl h, (fun _ h => by cases h), (fun _ h => by cases h.1), ?_,
     (rootsIff False).2 not_false, purityOf _ _ fun _ => positivePure, extendOpen,
     limitsOpen _ _, rootAdmOf _ _ profileComparisons.2.2.1.1, pureAdmOpen,
     unexplainedPositive, by simp [has, personal], ?_, fun h => ?_⟩
+  · intro x
+    cases x <;> simp [has, positive, effect,
+      TruthCore.Causality.IntentionalExemplarExtension.Control.effectOnly]
   · exact ⟨by simp [has, personal], openCompatible personal _ (by simp [openProfile, personal])
       (by simp [isPure, memPure])⟩
   · exact h true ((rootIff true).2 rfl) Determination.a
