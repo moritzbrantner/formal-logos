@@ -56,7 +56,8 @@ open TruthCore.Causality.GoodFavouring.Model
 open TruthCore.Causality.ImpersonalFoundationJoint.Control
   (Det favTok noInputs hasSrc personalSrc dNatureSrc purePos pureNoGG roots gg anyFamily)
 open TruthCore.Results.Causality.ImpersonalFoundationJoint
-  (ggBetter dNatureFactors notGGdNature dNatureNeBetter factorsThroughNotGoodGeneral)
+  (ggBetter dNatureFactors notGGdNature dNatureNeBetter factorsThroughNotGoodGeneral
+    noConflictDNatureBetter)
 open TruthCore.Causality.IntentionalExemplarExtension.Control (rootProfile)
 open TruthCore.Causality.RootPerfectionExclusion.Control (composite rep)
 

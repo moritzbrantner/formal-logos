@@ -1,0 +1,9 @@
+{
+  "id": "e14aa0f0-6271-42a2-9762-52a8285c3180",
+  "label": "STANDARD_OF_FAVOURING_1: the betterness ranking read as value",
+  "term": "standard of favouring, value sense (ValueStandard good)",
+  "definition": "ValueStandard good is the supplied ranking good of candidates in each variation scenario, read as value: good s x y says that x is a better good than y at s. It is a declared primitive: Lean does not type value, and the declaration only marks the sense of the parameter. Examples: a candidate arrangement that benefits its recipients more than another ranks above it. Non-examples: lower action of a path, greater weight, realizing a given end content D (each may coincide with value at a scenario without being it). Nothing in the record says that value factors through end-realization or that it varies within an end-realization class; the latter is the open premise BetternessVariesWithinEndClass.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.PurityCriteria.ValueStandard",
+  "note": "Stipulative analyst notion (#2145 premise lane P), attribution deferred. It names the value reading that DEF 071b24f0 requires of the parameter good in GoodGeneral; no earlier record defined the ranking itself. See docs/notes/causal-perfection-transfer.md, section 'When is a restriction of content a limitation?'."
+}

@@ -26,14 +26,16 @@ applied to every side by the same function and can fail.
   OPEN bridges `MissingVerdictIsImpure` and `UnbackedVerdictIsImpure` read
   "restriction of content is limitation" as: a favouring determination that
   misses, or adds to, the verdicts of the standard is not a pure perfection.
-  Their content depends on which standard is supplied; with `std` the value
-  ranking (DEF 071b24f0) they are the value-relative form, and with `std` the
-  end-realization ordering they are the D-relative form. Both forms use the same
+  Their content depends on which standard is supplied: STANDARD_OF_FAVOURING_1,
+  the betterness ranking read as value (`ValueStandard`), gives the
+  value-relative form; STANDARD_OF_FAVOURING_2, the end-realization ordering
+  (`EndRealizationStandard`), gives the D-relative form. Both forms use the same
   functions.
 * **Variation.** `BetternessVariesWithinEndClass` is good-generality of the
   standard itself: betterness ranks some pair at one scenario and not at another
-  that agrees on end-realization. It is the fourth member of the #2172
-  `variationCore`.
+  that agrees on end-realization. Betterness factoring through end-realization
+  (the fourth member of the #2172 `variationCore`) implies its denial; the
+  converse fails in general because of the present-input clause.
 * **Symmetric alternatives.** `ExclusiveTokens` (no admissible profile has two
   distinct tokens of one family) and `PurityParity` (two tokens of the family
   are pure together or not at all) state what an intrinsic, exclusive choice
@@ -84,8 +86,9 @@ def MissingVerdictIsImpure (Pure : D → Prop) (favours : GoodFavouring.Profile 
 /-- OPEN arbitrariness bridge, the second half: a favouring determination whose
 profile makes a verdict that the standard does not back is not pure. With `std`
 the value ranking it says that a standing preference among value-tied candidates
-is not a pure perfection; it says nothing about a contingent selection among
-them that is not part of the profile. -/
+is not a pure perfection. It says nothing about a selection among them that is
+not a verdict of the favouring profile; whether such a selection is a real
+determination of the bearer is a separate question. -/
 def UnbackedVerdictIsImpure (Pure : D → Prop) (favours : GoodFavouring.Profile S X → D)
     (std : GoodFavouring.Profile S X) : Prop :=
   ∀ φ, UnbackedVerdict std φ → ¬ Pure (favours φ)
@@ -94,11 +97,28 @@ def UnbackedVerdictIsImpure (Pure : D → Prop) (favours : GoodFavouring.Profile
 For some scenario `s` and pair `x`, `y`, at least one of them not a present input
 at `s`, `good` ranks `x` over `y` at `s` and does not at some scenario that
 agrees with `s` on end-realization. It is good-generality of the standard
-itself; its denial (betterness factors through end-realization) is the fourth
-member of `variationCore`. -/
+itself, and holds exactly when some profile is good-general
+(`variationIffSomeGoodGeneral`). Betterness factoring through end-realization
+(the fourth member of `variationCore`) implies its denial; the converse fails in
+general because of the present-input clause. -/
 def BetternessVariesWithinEndClass (good : S → X → X → Prop) (fitOf : S → Z)
     (Present : S → X → Prop) : Prop :=
   GoodGeneral good fitOf Present good
+
+/-! ## Senses of the standard of favouring (DISAMB STANDARD_OF_FAVOURING) -/
+
+/-- STANDARD_OF_FAVOURING_1: the betterness ranking read as VALUE (x is a better
+good than y at the scenario). It is a declared PRIMITIVE: the supplied parameter
+`good`, which Lean does not type as value; this declaration only marks the sense.
+Distinguishing condition: it is not the end-realization ordering, and nothing
+here says it factors through end-realization. -/
+def ValueStandard (good : S → X → X → Prop) : GoodFavouring.Profile S X := good
+
+/-- STANDARD_OF_FAVOURING_2: the end-realization ordering. `x` ranks over `y` at
+`s` exactly when `x` realizes the end D at `s` and `y` does not (the Lane 2b
+`fitOrder` pattern). -/
+def EndRealizationStandard (fit : S → X → Bool) : GoodFavouring.Profile S X :=
+  fun s x y => fit s x = true ∧ fit s y = false
 
 /-! ## Symmetric alternatives -/
 

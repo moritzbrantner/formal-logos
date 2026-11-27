@@ -1,13 +1,15 @@
 {
   "id": "ca3c311d-dab7-417d-8eb7-87c81fe82029",
   "label": "Betterness varies within an end-realization class",
-  "paraphrase": "OPEN analyst premise, attribution deferred: for some variation scenario s and candidates x, y, at least one not a present input at s, x is better than y at s, and at some scenario that agrees with s on end-realization x is not better than y. It is good-generality of the betterness standard itself (BECAUSE_OF_GOODNESS_2 applied to the standard as a profile). Its denial, that betterness factors through end-realization, makes nothing good-general on any side and is one of the four members of the #2172 variationCore. It does not say which scenarios are metaphysically possible; on the control carrier the witness is cBetter against actual.",
+  "paraphrase": "OPEN analyst premise, attribution deferred: for some variation scenario s and candidates x, y, at least one not a present input at s, x is a better good than y at s (STANDARD_OF_FAVOURING_1), and at some scenario that agrees with s on end-realization x is not better than y. It is good-generality of the betterness standard itself (BECAUSE_OF_GOODNESS_2 applied to the standard as a profile) and holds exactly when some profile is good-general. Betterness factoring through end-realization (a member of the #2172 variationCore) implies its denial; the converse fails in general because of the present-input clause. It does not say which scenarios are metaphysically possible; on the control carrier the witness is cBetter against actual.",
   "lean_declaration": "TruthCore.Causality.PurityCriteria.BetternessVariesWithinEndClass",
   "definition_ids": [
     "071b24f0-ef72-4012-8c7d-ab3be3335961",
+    "e14aa0f0-6271-42a2-9762-52a8285c3180",
     "b28d7e04-694b-442b-a42b-65f39190956f"
   ],
   "disambiguation_ids": [
-    "8430c7dc-2972-4f47-87a9-ce4676533cdf"
+    "8430c7dc-2972-4f47-87a9-ce4676533cdf",
+    "da16b898-110d-457b-81fb-b987f55f07c3"
   ]
 }

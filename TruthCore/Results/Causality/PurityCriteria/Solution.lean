@@ -105,6 +105,55 @@ theorem variationForcesLossOrArbitrariness {S X Z : Type} (good : S → X → X 
     exact Or.inr ⟨t, x, y, by rw [hEq]; exact hφ, hng⟩
   · exact Or.inl ⟨s, x, y, hg, hφ⟩
 
+/-- Lean-only. Variation holds exactly when some profile is good-general. -/
+theorem variationIffSomeGoodGeneral {S X Z : Type} (good : S → X → X → Prop) (fitOf : S → Z)
+    (Present : S → X → Prop) :
+    BetternessVariesWithinEndClass good fitOf Present ↔
+      ∃ φ : TruthCore.Causality.GoodFavouring.Profile S X, GoodGeneral good fitOf Present φ := by
+  constructor
+  · intro h; exact ⟨good, h⟩
+  · rintro ⟨φ, s, x, y, ⟨hs, -, t, ht, hnt, -⟩, hPres⟩
+    exact ⟨s, x, y, ⟨hs, hs, t, ht, hnt, hnt⟩, hPres⟩
+
+/-- Lean-only. Betterness factoring through end-realization denies variation
+(law 4 of `GoodDependenceLaws`). -/
+theorem factoringDeniesVariation {S X Z : Type} (good : S → X → X → Prop) (fitOf : S → Z)
+    (Present : S → X → Prop) (hFac : Function.FactorsThrough good fitOf) :
+    ¬ BetternessVariesWithinEndClass good fitOf Present :=
+  TruthCore.Results.Causality.ImpersonalFoundationJoint.factorsThroughNotGoodGeneral good fitOf
+    Present good hFac
+
+/-- Lean-only no-best control. If a favouring makes exactly the verdicts of `good`
+and every candidate in a range is strictly improvable within it, then for every
+candidate selected from the range the favouring favours another candidate of the
+range over it: any selection goes against the favouring. -/
+theorem noBestSelectionAgainstFavouring {S X : Type} (good φ : S → X → X → Prop)
+    (hTrack : ∀ s x y, φ s x y ↔ good s x y) (s : S) (R : Set X)
+    (hImp : ∀ x ∈ R, ∃ y ∈ R, good s y x) : ∀ x ∈ R, ∃ y ∈ R, φ s y x := by
+  intro x hx
+  obtain ⟨y, hy, hg⟩ := hImp x hx
+  exact ⟨y, hy, (hTrack s y x).2 hg⟩
+
+/-- Lean-only. Under the end-realization standard every candidate that realizes
+the end is undominated: no candidate ranks over it. A favouring that tracks this
+standard never faces the no-best case while some candidate realizes the end. -/
+theorem endRealizerUndominated {S X : Type} (fit : S → X → Bool) (s : S) (x : X)
+    (hx : fit s x = true) : ∀ y, ¬ EndRealizationStandard fit s y x := by
+  rintro y ⟨-, h⟩
+  rw [hx] at h
+  exact Bool.noConfusion h
+
+/-- Lean-only instance of the no-best case: with the natural numbers as candidates
+and `m` better than `n` exactly when `n < m`, every candidate is strictly
+improvable, so a favouring that tracks this ranking favours some candidate over
+whatever is selected. -/
+theorem noBestNat (φ : Unit → Nat → Nat → Prop) (hTrack : ∀ s x y, φ s x y ↔ y < x) :
+    ∀ n, ∃ m, φ () m n := by
+  intro n
+  obtain ⟨m, -, h⟩ := noBestSelectionAgainstFavouring (fun _ x y => y < x) φ hTrack () Set.univ
+    (fun x _ => ⟨x + 1, trivial, Nat.lt_succ_self x⟩) n trivial
+  exact ⟨m, h⟩
+
 /-! ## Symmetric alternatives -/
 
 /-- Lean-only. The favouring tokens of one-favouring realization are exclusive. -/
@@ -211,7 +260,8 @@ open TruthCore.Causality.GoodFavouring.Model
 open TruthCore.Causality.ImpersonalFoundationJoint.Control
   (Det favTok noInputs hasSrc personalSrc dNatureSrc purePos pureNoGG roots gg anyFamily)
 open TruthCore.Results.Causality.ImpersonalFoundationJoint
-  (ggBetter dNatureFactors notGGdNature dNatureNeBetter factorsThroughNotGoodGeneral)
+  (ggBetter dNatureFactors notGGdNature dNatureNeBetter factorsThroughNotGoodGeneral
+    noConflictDNatureBetter)
 open TruthCore.Causality.IntentionalExemplarExtension.Control (rootProfile)
 open TruthCore.Causality.RootPerfectionExclusion.Control (composite rep)
 
@@ -369,6 +419,21 @@ theorem refinementCondemnsGoodTracking : RefinementCondemnsGoodTracking := by
     · exact h2 h1
   · simp [better, fitOrder, fits, physTieBreak, physOrder, physical]
   · simp [better, fitOrder, fits]
+
+/-- Lean-only. The value-free refinement test also counts the D-directed profile
+as restricted: its union with the good-tracking profile contains it, differs from
+it at `c` over `d` at `cBetter`, and never favours a pair against it. -/
+theorem refinementCondemnsDNature :
+    dNature ≤ better ⊔ dNature ∧ dNature ≠ better ⊔ dNature ∧
+      (∀ s x y, ¬ (dNature s x y ∧ (better ⊔ dNature) s y x)) := by
+  refine ⟨le_sup_right, ?_, ?_⟩
+  · intro h
+    have := congrFun (congrFun (congrFun h .cBetter) .c) .d
+    simp [dNature, better, fitOrder, fits] at this
+  · intro s x y ⟨h1, h2⟩
+    rcases h2 with h2 | h2
+    · exact noConflictDNatureBetter.1 s x y ⟨h1, h2⟩
+    · cases s <;> cases x <;> cases y <;> simp_all [dNature, fitOrder, fits]
 
 /-- Lean-only. The two non-conflicting favourings of row 7 of horn A's controls
 (the D-directed and the good-tracking profile), read as one real favouring, give

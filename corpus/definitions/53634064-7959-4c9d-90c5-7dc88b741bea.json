@@ -2,7 +2,7 @@
   "id": "53634064-7959-4c9d-90c5-7dc88b741bea",
   "label": "Missed verdict: a profile fails to favour what its standard ranks higher",
   "term": "missed verdict of a standard (MissesVerdict std φ)",
-  "definition": "MissesVerdict std φ, for a standard std and a favouring profile φ (each a ranking of candidates in each variation scenario): for some scenario s and candidates x, y, the standard ranks x over y at s and φ does not favour x over y at s. With std the value ranking (DEF 071b24f0), the profile fails to favour something that is better. It measures the profile only against the supplied standard; the same function applied with the end-realization ordering as std measures it against end content instead.",
+  "definition": "MissesVerdict std φ, for a standard std and a favouring profile φ (each a ranking of candidates in each variation scenario): for some scenario s and candidates x, y, the standard ranks x over y at s and φ does not favour x over y at s. With std the value ranking (STANDARD_OF_FAVOURING_1, DEF e14aa0f0), the profile fails to favour something that is better. It measures the profile only against the supplied standard; the same function with the end-realization ordering (STANDARD_OF_FAVOURING_2, DEF b2eab05f) measures it against end content instead.",
   "basis": "stipulative",
   "lean_declaration": "TruthCore.Causality.PurityCriteria.MissesVerdict",
   "note": "Stipulative analyst notion (#2145 premise lane P), attribution deferred. It is the loss half of a standard-relative reading of 'restriction of content is limitation'; see docs/notes/causal-perfection-transfer.md, section 'When is a restriction of content a limitation?'. Profiles are not total rankings, so missing a verdict is not the same as favouring the opposite."

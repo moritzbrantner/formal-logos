@@ -1,0 +1,25 @@
+{
+  "id": "da16b898-110d-457b-81fb-b987f55f07c3",
+  "label": "Standard of favouring: value ranking or end-realization ordering",
+  "term": "standard of favouring",
+  "sense_definition_ids": [
+    "e14aa0f0-6271-42a2-9762-52a8285c3180",
+    "b2eab05f-01b6-4ec8-a367-5cb6702a18f3"
+  ],
+  "resolution": "The loss and arbitrariness bridges (MissingVerdictIsImpure, UnbackedVerdictIsImpure) measure a favouring profile against a standard, and their verdict on the disputed pair depends on which. STANDARD_OF_FAVOURING_1 (ValueStandard): the betterness ranking read as value; with it a favouring determined to end content D misses a verdict wherever betterness varies within a D-class, and the good-tracking favouring tracks it exactly. STANDARD_OF_FAVOURING_2 (EndRealizationStandard): the end-realization ordering; with it the good-tracking favouring makes an unbacked verdict (c over d at cBetter on the control carrier) and the D-directed favouring tracks it exactly. The statements 720bccc2 and a141e6a8 and the registered argument b86a2364 use sense 1 only: the parameter good is the value ranking. The D-relative form is the same Lean function applied with sense 2; it appears only in Lean-only controls (standardControls row 6, standardRelativity) and is not a corpus statement. No step passes between the senses: neither is defined from the other, and on the control carrier they differ at one verdict in genuine scenarios. Whether a single standard governs every favouring, and which, or whether each favouring is measured by its own formal object, is the open question of docs/notes/causal-perfection-transfer.md, section 'When is a restriction of content a limitation?'.",
+  "term_label": "STANDARD_OF_FAVOURING",
+  "senses": [
+    {
+      "id": "9eadf812-1e1b-499d-8b2d-50aa57314df3",
+      "label": "STANDARD_OF_FAVOURING_1",
+      "definition_id": "e14aa0f0-6271-42a2-9762-52a8285c3180",
+      "lean_declaration": "TruthCore.Causality.PurityCriteria.ValueStandard"
+    },
+    {
+      "id": "559bb7f0-d06d-42ea-825f-b7ec5180b364",
+      "label": "STANDARD_OF_FAVOURING_2",
+      "definition_id": "b2eab05f-01b6-4ec8-a367-5cb6702a18f3",
+      "lean_declaration": "TruthCore.Causality.PurityCriteria.EndRealizationStandard"
+    }
+  ]
+}
