@@ -7,7 +7,7 @@ open TruthCore.Causality.AxiarchicGuidance
 open TruthCore.Causality.GoodFavouring (Profile Tracks Fixed)
 open TruthCore.Causality.AxiarchicFoundation (FavouringRealizedOnItems FavouringIrreflexive)
 
-/-! ## Counterfactual guidance is a property of the profile and the value structure -/
+/-! ## Counterfactual guidance by an outweighed reason -/
 
 /-! ## Self-application -/
 

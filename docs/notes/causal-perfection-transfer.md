@@ -6305,116 +6305,157 @@ After publication as #2175, Codex review at `b508b3721` raised two P1s.
 This is premise lane C, round 3. The
 [previous section](#individuating-non-present-candidates-the-axiarchic-rival-and-the-cognition-criterion-2026-11-27-provisional-2145)
 left the containment-recognition bridge `d1fb6414` at parity with the strongest
-rival, A4. A4 is a source that contains individuating, value-ranked modes of
-imitability, which guide its favouring, but that does not apprehend them.
+rival, A4: a source that contains individuating, value-ranked modes of
+imitability that guide its favouring, without apprehending them.
 
-The owner approved two tests of that gap. Each is applied identically to A4 and
-to the personal source.
+The owner approved two tests of that gap, each applied identically to A4 and to
+the personal source:
 
 1. **Counterfactual guidance.** Is the source sensitive to outweighed reasons
    that it does not act on?
 2. **Self-application.** Does the source take its own favouring as an object?
 
+One limit applies from the start. A4 is *defined* as a structural duplicate of
+the personal source: the same profile, stand-ins and loci (round 2, control rows
+1 and 2). So parity on every structural test follows from round 2's definitions.
+This round's negative result is therefore not further evidence for parity. What
+it adds is the exact form of each test, and the conclusion that a different
+kind of question is needed (see the assessment).
+
 Lean: [vocabulary](../../TruthCore/Causality/AxiarchicGuidance.lean),
 [results](../../TruthCore/Results/Causality/AxiarchicGuidance/Solution.lean),
 [spec](../../specs/axiarchic-guidance.toml). Everything is an analyst
-formulation with attribution deferred. Authors are named for navigation only.
+formulation with attribution deferred, and authors are named for navigation
+only.
 
 New vocabulary, each with a stipulative definition:
 
-- **Outweighed reason** `Outweighed` (`35ab5a34`): at s, in respect r, y is
-  better than x; overall x is better; and the favouring favours x over y.
-- **Counterfactual guidance** `GuidedByOutweighed` (`96f1dfe9`): the reason is
-  outweighed at s, and in some scenario that agrees on the control and keeps
-  respect r's ranking, the favouring favours y over x.
-
-Respect-wise and overall betterness are parameters, read as value rankings. No
-rule aggregating respects into the overall ranking is typed.
+- **Outweighed reason** `Outweighed` (`35ab5a34`). Value is graded by respect:
+  `w s r x` is the weight of x in respect r at s. A reason is outweighed at s
+  when r weighs y above x, yet x is better overall and the favouring favours x.
+- **Counterfactual guidance** `GuidedByOutweighed` (`96f1dfe9`). The reason is
+  outweighed at s, and in some scenario that agrees on the control and *raises
+  y's weight in r alone* (`RaisesOnly`, which holds every other respect and
+  every other candidate fixed), the favouring favours y over x.
+- **Second-order standard** `SecondOrderStandard` (`58b2e4b3`). A favouring
+  that tracks the value order ranks above one that does not.
 
 ### 1. Counterfactual guidance
 
+**The faithful form.** An earlier draft asked only for *some* scenario keeping
+r's ranking in which the favouring follows y. The semantic challenge showed that
+this was too weak: a profile blind to r passed it, because the flip came from
+removing the outweighing respect. The test now requires the reason itself to
+make the difference. Raise y in r alone, and the favouring must follow y.
+
 **What it separates** (`guidanceTable`, `1587c760`, placed diagnostic testing
-`d1fb6414`). The carrier has candidates c and d, respects fit and extra content,
-and two scenarios:
+`d1fb6414`). The carrier has candidates c and d, respects fit and extra with
+graded weights, and scenario base, in which d's fit reason is outweighed by c's
+extra weight. Scenario raised raises d's fit weight alone. Results:
 
-- in base, the reason for d (fit) is outweighed by c's extra content;
-- in alt, the extra respect ties them, so d is better overall.
+- *The good-tracking profile is guided.* The personal source and A4 share this
+  profile.
+- *A fit-blind profile is not guided.* It follows the extra respect only. It
+  meets the outweighed condition, but raising fit changes nothing for it.
+  Lean-only `respectBlindNotGuided` proves this in general: a profile blind to
+  respect r, if asymmetric, is guided by no outweighed r-reason.
+- *A fixed favouring is not guided* (`fixedNotGuided`).
+- *A fit-only nature faces no outweighed fit reason here.*
 
-The profiles give these verdicts:
+**The D-nature, stated with its scope.** Lean-only
+`singleRespectTrackerNotGuided` covers a profile that follows one respect alone.
+Such a profile is guided by no outweighed reason in any respect. An outweighed
+reason in its own respect never arises, and it is blind to every other respect.
 
-- The good-tracking profile is guided. The personal source and A4 share this
-  profile (round 2, control rows 1 and 2).
-- A favouring fixed to c meets the outweighed condition at base but is never
-  guided (Lean-only `fixedNotGuided`, in general for fixed asymmetric profiles).
-- A nature directed to fit alone does not favour c over d at base, so for it the
-  fit reason is not outweighed.
+This is the D-nature's form only when its end content is one respect of a
+graded value. Lane 2b's `dNature = fitOrder` is not `Fixed`, and on a carrier
+where fit itself varies it could be guided under the earlier, weaker test. The
+earlier claim of "a further compiled mark the D-nature fails" is withdrawn in
+that form. Only the single-respect statement above stands.
 
-So the test discriminates something: it separates favouring that tracks overall
-value from favouring fixed to one content, which is the D-nature's form. This is
-an additional mark the D-nature fails. Like BECAUSE_OF_GOODNESS_2, it needs a
-scenario in which overall value changes while the outweighed respect is kept.
+**Why it does not discriminate at the gap.**
 
-**Why it does not discriminate at the gap.** Lean-only `guidanceOfTracking`
-shows that, for a profile tracking overall betterness, guidance holds exactly
-when the value structure supplies it. The respect must rank y over x and x must
-be better at s, and some scenario must keep that ranking while y is better
-overall. The bearer plays no role. `guidanceLabelIndependent` adds that profiles
-tracking the same feature get the same verdicts. The personal source and A4
-share their profile, so they pass or fail together. This is law 6 of
-`GoodDependenceLaws` applied to a new counterfactual test.
+- `guidanceOfTracking`: for a profile tracking overall betterness, guidance
+  holds exactly when the value structure supplies it.
+- `guidanceLabelIndependent`: profiles tracking the same feature get the same
+  verdicts.
 
-**The non-extensional form: registration.** A stronger reading of "sensitive
-to an outweighed reason" asks whether the reason is *registered* in the
-source's actual state, even though it does not prevail. That is a question
-about stand-ins, not about the profile.
+The personal source and A4 share their profile, so they pass or fail together,
+as their definition guarantees.
 
-Lean-only `degreeOnlyRegistersNoRespectBetweenTies` (an instance of round 2's
-`unindividuatedNotFavoured`) proves one point. A stand-in that carries only an
-overall degree registers no respect in which two overall-tied candidates
-differ. Registration therefore needs *articulated* stand-ins, which carry
-respect-wise rankings.
+**Registration was argued, not tested.** A stronger reading asks whether the
+outweighed reason is *registered* in the source's actual state. That is a
+question about stand-ins, not about the profile. Lean-only
+`degreeOnlyRegistersNoRespectBetweenTies` gives one constraint: a stand-in that
+carries only an overall degree records no respect in which two overall-tied
+candidates differ.
 
-Both accounts can have them:
+Registering respects therefore needs per-respect stand-ins.
 
-- divine ideas of each thing in each respect (q.15 a.2, navigation only);
-- A4's modes of imitability in several respects, since a candidate can imitate
-  the source's wisdom more fully and its power less.
+- *For A4*, these are per-respect modes. This is a *new commitment*: round 2's
+  A4 had one ranked mode per candidate.
+- *For the personal account*, these are per-respect ideas. Ideas "of each thing
+  in each respect" are an analyst extension of the q.15 a.2 account of many
+  ideas, not a reading of it.
 
-Under simplicity this articulation is #1879's question, unchanged and shared.
-
-The personal account's classical name for registration of the outweighed is
-the antecedent will: God wills antecedently what he does not will consequently
-(ST I q.19 a.6 ad 1; navigation only). The A4 counterpart is a mode's own degree
-favouring its candidate over omission, outweighed in the comparison. Both are
-available. Neither is shown to require apprehension.
+The counterparts first proposed do not register a respect. The antecedent will
+(q.19 a.6 ad 1) and "a mode's own degree" are both per-candidate degrees.
 
 ### 2. Self-application
 
-`SelfApplies`: a second-order favouring, whose candidates are the bearer's
+**Weak form.** `SelfApplies`: a second-order favouring, whose candidates are
 determinations, favours one of the bearer's own favouring determinations over
-some determination d. Lean-only `selfApplicationIndividuates`: under round 2's
-realization and irreflexivity premises, read at second order, the stand-in of
-the bearer's own favouring differs from that of d.
+some determination d. `SelfApplies` does not require that the bearer lacks d.
 
-The alternative d is not one of the bearer's determinations. It is therefore a
-non-present candidate of the second-order favouring. From there round 2's
-trilemma applies unchanged. Its main theorem is stated for any candidate type;
-with determinations as candidates, it is the second-order criterion. So
-self-application *reduces* to the cognition criterion one level up, with the
-same premises and the same residual bridge. It does not add a discriminator.
+Lean-only `selfApplicationIndividuates`: under round 2's realization and
+irreflexivity at second order, the stand-in of the bearer's own favouring
+differs from that of d. When d is not one of the bearer's determinations, d is a
+non-present candidate of the second-order favouring. Round 2's trilemma then
+applies unchanged, since its main theorem holds for any candidate type. So the
+weak form reduces to the cognition criterion one level up.
 
-There are three other readings of "takes its own favouring as an object":
+**Strong form.** `SelfAppliesToStandard`: the second-order favouring ranks a
+favouring of the bearer above another favouring by the second-order standard,
+favouring the value-tracking favouring over one that does not track value. The
+table exhibits the standard: the good-tracking profile ranks over the fit-blind
+one in every scenario.
 
-- *As a term of favouring* (self-love). Both accounts can have it. The personal
-  source wills its own goodness necessarily (ST I q.19 a.3; navigation only).
-  On the rival side, Plotinus's One is described as love of itself (Enn. VI.8.15;
-  navigation only). This is a self-favouring the rival tradition posits without
-  intellect in the One.
-- *As ranked against alternatives to itself.* At a necessary source,
-  alternatives to its own favouring are not possible for it. The personal
-  source's will of its own goodness is necessary in the same way. Both lack
-  this, so it does not discriminate.
-- *As an object of apprehension* (self-knowledge, as in the #1731
+Lean-only `secondOrderStandardNotDependedOn` proves that the standard is the same
+in every scenario, because tracking quantifies over all scenarios. So no
+second-order profile depends on it under any control (law 4 of
+`GoodDependenceLaws`). Strong self-application is therefore a fixed
+second-order orientation, not a value-dependent one, whoever bears it. That is
+parity at second order.
+
+There is a further consequence for both sides. Responsiveness to one's own
+standard, where that standard is necessary, has the form of an orientation fixed
+to one content. The rationale behind horn A of Lane 4 is "restriction of
+favouring content is limitation". If it were extended to second-order
+favourings, it would reach the personal source's necessary self-love as much as
+any rival. Horn A as encoded concerns first-order favourings, so this extension
+is not made here.
+
+**Other readings.**
+
+- *Self-love* (the source's own goodness as a term of favouring). Both accounts
+  can have it.
+  - On the personal side: the will of its own goodness, which is necessary
+    (ST I q.19 a.3; navigation only).
+  - On the rival side, as an analyst reading: Plotinus describes the One as love
+    of itself (Enn. VI.8.15; navigation only). That treatise also uses
+    quasi-intellective language of the One, so it is not cited as a
+    noncognitive precedent. A noncognitive self-favouring is the rival's own
+    posit.
+- *Possible alternatives versus non-present candidates.* These must be kept
+  apart.
+  - A second-order favouring can rank the bearer's favouring above a
+    determination the bearer lacks, a non-present candidate (the weak form).
+  - At a necessary source, no alternative to its own favouring is *possible*
+    for it. The personal source's will of its own goodness is necessary in the
+    same way.
+  - So ranking *possible* alternatives to itself is unavailable to both, while
+    ranking non-present determinations is available to both.
+- *Self-apprehension* (self-knowledge, as in the #1731
   `IntrinsicSelfKnowledge`). The personal account has it by definition and A4
   lacks it by definition. Used as a discriminator, this presupposes the
   disputed apprehension.
@@ -6423,66 +6464,106 @@ There are three other readings of "takes its own favouring as an object":
 
 | Test (one criterion) | Personal source | A4 (imitability exemplars) | Discriminates? |
 | --- | --- | --- | --- |
-| Counterfactual guidance by an outweighed reason | passes (good-tracking profile) | passes (same profile) | no; profile-level (`guidanceLabelIndependent`) |
-| Registration of the outweighed reason in the actual state | needs articulated ideas (antecedent will) | needs articulated modes (a mode's own degree) | no; shared articulation price (#1879) |
-| Self-application as second-order favouring over alternatives | reduces to the criterion at second order | the same | no; relocates the same bridge |
-| Self-love (own goodness as a term of favouring) | yes (q.19 a.3) | available (Plotinus's One) | no |
-| Ranking alternatives to its own favouring | unavailable at a necessary source | unavailable | no |
+| Counterfactual guidance, outweighed reason raised alone | passes (good-tracking profile) | passes (same profile) | no; profile-level, and A4 is a structural duplicate |
+| Registration of the outweighed respect in the actual state | needs per-respect ideas (an analyst extension) | needs per-respect modes (a new commitment) | not tested; the demand is the same and the proposed payments differ (below) |
+| Weak self-application: own favouring over a non-present determination | reduces to the criterion at second order | the same | no; relocates the same bridge |
+| Strong self-application: responsiveness to the second-order standard | a fixed second-order orientation | the same | no; the standard is scenario-invariant |
+| Self-love | yes (q.19 a.3) | the rival's own posit | no |
+| Ranking possible alternatives to its own favouring | unavailable at a necessary source | unavailable | no |
 | Self-apprehension | yes by definition | no by definition | presupposes the dispute |
 
-The D-nature fails the first test, because its favouring is fixed to one content.
+### Same demand, different proposed payments
+
+The two accounts face the same articulation demand: many value-ranked,
+respect-articulated items in one simple nature (#1879). They propose different
+payments.
+
+- **The personal account** pays with a plurality that exists *in being
+  understood*: many ideas through one essence, as relations of reason.
+- **A4** must pay with a *mind-independent, non-composing* plurality. That is
+  the #1892 objective-eminence status, now multiplied by respect.
+
+Whether A4's payment is coherent is not a structural question about profiles or
+stand-ins, which A4 duplicates by definition. It is a question about the status
+of that plurality.
 
 ### Assessment
 
-**Clarified.** Both owner-approved tests were applied under one standard. Their
-non-question-begging forms are of two kinds:
+**Clarified.**
 
-- *profile-level* (counterfactual guidance), which is blind to the difference
-  between A4 and the personal source by label independence;
-- *realization-level* (registration and self-application), where the two
-  accounts share structure and price.
-
-Their discriminating form, self-apprehension, presupposes apprehension. Neither
-test changes round 2's parity. A positive by-product: counterfactual guidance
-is a further, compiled mark that the D-nature fails.
+- Both owner-approved tests were applied in their strongest encoded forms under
+  one standard: guidance with the reason raised alone, and self-application to
+  the second-order standard.
+- Guidance separates good-tracking favouring from blind and fixed favouring.
+  It is blind to the difference between A4 and the personal source.
+- Strong self-application is a fixed orientation for both sides.
+- Registration and weak self-application relocate the same demand.
+- Because A4 is a structural duplicate, none of this is new evidence for
+  parity. It shows that a structural test cannot separate the two.
 
 **Rejected approaches, with reasons.**
 
-- Counting guidance as evidence of mind: it is profile-level, and A4 shares the
-  profile.
-- Counting registration of outweighed reasons as cognitive: degree-only
-  stand-ins fail it, but articulated modes pass it without apprehension.
-- Counting self-apprehension as a discriminator: it presupposes the dispute.
-- Counting the necessity of the source's self-favouring against A4: the
-  personal source's self-love is necessary too.
+- *The weak guidance test.* A respect-blind profile passed it.
+- *"A further mark the D-nature fails" for Lane 2b's D-nature.* It is not
+  `Fixed`, and it failed only vacuously on this carrier.
+- *Counting guidance as evidence of mind.* Guidance is profile-level.
+- *Counting registration as cognitive.* It was argued, not tested, and the
+  per-candidate counterparts do not register a respect.
+- *Counting self-apprehension as a discriminator.* It presupposes the dispute.
+- *Counting the necessity of self-favouring against A4.* The personal source's
+  self-love is necessary too.
 
-**Standing rival and price.** A4 is unchanged. It holds a plurality of
-value-ranked, respect-articulated modes in one nature. That plurality guides
-favouring and registers outweighed respects. It is neither real composition,
-nor real relations to non-existents, nor mind-dependent. It may include a
-noncognitive self-favouring. The personal source pays the same articulation
-price, and differs only in apprehension.
+**Standing rival and price.** A4, now with per-respect modes as a new
+commitment. Its payment for the shared articulation demand is a mind-independent,
+non-composing plurality of value-ranked, respect-articulated modes. The personal
+payment is a plurality in being understood.
 
-**Provisional judgment.** No change. The two tests do not discriminate between
-A4 and apprehension. Within this program no substantive objection to A4 has
-been identified beyond the recognition bridge it denies.
+**Provisional judgment.** No change at `d1fb6414`. Within this program no
+substantive objection to A4 has been identified beyond the recognition bridge it
+denies.
 
-**Graph.** One placed diagnostic, `1587c760` (`tests` `d1fb6414`). No premise
-is added, discharged or reclassified.
+**Graph.** One placed diagnostic, `1587c760` (`tests` `d1fb6414`). No premise is
+added, discharged or reclassified.
 
 **Next discriminating tests.**
 
-1. *Error and correction.* At an essentially omniscient source this is
-   counterpossible, as
-   [mind-physicalism-fork-419](mind-physicalism-fork-419.md#test-whether-value-sensitive-production-requires-representation)
-   noted. Is there any non-counterpossible analogue for a necessary source?
-2. *Unity of the articulated modes.* Does one act that registers many respects
-   need a principle of unity that only apprehension supplies, or does a nature
-   unify its modes as well? This is #1879 for A4 and the personal source alike.
-3. *Explanatory use beyond favouring.* Does the source's relation to its modes
-   do any work, for example in truth or intelligibility of creatures, that
-   requires them to be *for* the source? This is the #1892 objective-eminence
-   question, asked through its consequences.
+1. *Coherence of the payment.* Can a plurality of value-ranked,
+   respect-articulated modes in a simple nature be at once mind-independent and
+   non-composing? Equivalently: does such a plurality need a unifying principle
+   that only being understood supplies? This joins #1879 (articulation under
+   simplicity) and #1892 (intelligibility without intellection). It is not a
+   structural test that A4 duplicates by definition.
+2. *Error and correction.* At an essentially omniscient source this is
+   counterpossible
+   ([mind-physicalism-fork-419](mind-physicalism-fork-419.md#test-whether-value-sensitive-production-requires-representation)).
+   Is there a non-counterpossible analogue for a necessary source?
+3. *Explanatory use beyond favouring.* Does the source's relation to its modes do
+   work, for example in the truth or intelligibility of creatures, that requires
+   the modes to be *for* the source?
+
+**Review record.** The independent semantic challenge of
+`ad289e982..8a36e93f0` found three P1s:
+
+1. The guidance test did not require the outweighed reason to make a
+   difference.
+2. The D-nature claim was overstated.
+3. Self-application was weakened.
+
+It also found five P2s:
+
+1. The non-present alternative was assumed but not required.
+2. The table conflated possible and non-present alternatives.
+3. The symmetry was misstated as the same price rather than different payments.
+4. Registration was argued rather than tested, and per-respect modes were a new
+   commitment.
+5. Two citation scopes were too strong.
+
+All are repaired in the commit following `8a36e93f0`:
+
+- the faithful guidance encoding with `respectBlindNotGuided`;
+- `singleRespectTrackerNotGuided`, with the D-nature claim restricted;
+- strong self-application, with `secondOrderStandardNotDependedOn`;
+- the prose and table above.
 
 [Attempt record](../../corpus/attempts/6429463e-be7f-467a-a64f-de8d2e13c06e.json)
 

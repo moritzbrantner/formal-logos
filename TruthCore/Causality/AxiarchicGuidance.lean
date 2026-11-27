@@ -15,27 +15,30 @@ approved two tests of the remaining gap, to be applied identically to the
 personal source.
 
 **Counterfactual guidance.** Is the source sensitive to reasons it does not act
-on? Betterness is given respect by respect (`rk r s x y`: in respect `r`, `x` is
-better than `y` at `s`) and overall (`good`). A reason for `y` over `x` in respect
-`r` is *outweighed* at `s` when overall `x` is better and the favouring favours
-`x` (`Outweighed`). The favouring is *guided* by that outweighed reason when, in
-some scenario that agrees on the control and keeps the respect's ranking, the
-favouring follows it (`GuidedByOutweighed`). Whether the outweighed reason is
-also *registered* in the source's actual state is a question about the stand-ins
-of round 2: a stand-in that carries only an overall degree registers no respect
-in which two overall-tied candidates differ (`degreeOnlyRegistersNoRespectBetweenTies`
-in the results module).
+on? Value is graded respect by respect: `w s r x` is the weight of candidate `x`
+in respect `r` at scenario `s`. A reason for `y` over `x` in respect `r` is
+*outweighed* at `s` when `r` weighs `y` above `x`, yet overall `x` is better and
+the favouring favours `x` (`Outweighed`). The favouring is *guided* by that
+reason when the reason itself makes a difference: in some scenario that agrees
+on the control, raises `y`'s weight in `r` alone and holds every other respect
+and every other candidate fixed (`RaisesOnly`), the favouring favours `y` over
+`x` (`GuidedByOutweighed`). A profile blind to `r` is never guided by an
+outweighed `r`-reason (`respectBlindNotGuided`, results module).
 
 **Self-application.** Does the source take its own favouring as an object? A
-second-order favouring `favours2 ψ` has the bearer's own determinations as its
-candidates; the bearer *self-applies* when such a favouring favours one of its
-own favouring determinations over some determination (`SelfApplies`).
+second-order favouring has determinations as its candidates. In its weak form
+it favours one of the bearer's own favouring determinations over some
+determination (`SelfApplies`). In its strong form it is responsive to the
+standard of its own favouring: it favours a favouring that tracks the value
+order over one that does not (`SecondOrderStandard`, read as a second-order
+value ranking).
 
 Every model in `Control` is a finite structural surrogate; it witnesses only the
 stated formal interpretation, never a metaphysical possibility. Which account a
-profile represents is an interpretive assignment: the personal source and A4
-share their profile, stand-ins and loci (round 2, control rows 1 and 2), so every
-test stated on these carries gives them the same verdict. -/
+profile represents is an interpretive assignment. A4 is defined as a structural
+duplicate of the personal source (round 2, control rows 1 and 2: the same
+profile, stand-ins and loci), so parity on every test stated on these carriers
+follows from that definition and is not further evidence. -/
 
 @[expose] public section
 
@@ -45,35 +48,64 @@ open TruthCore.Causality.GoodFavouring (Profile Tracks Fixed)
 
 variable {S X R Z B D : Type}
 
-/-- An OUTWEIGHED REASON at `s`: in respect `r` the candidate `y` is better than
-`x`, yet overall `x` is better than `y` and the profile favours `x` over `y`. -/
-def Outweighed (rk : R → S → X → X → Prop) (good : S → X → X → Prop) (φ : Profile S X)
+/-- An OUTWEIGHED REASON at `s`: respect `r` weighs `y` above `x`, yet overall
+`x` is better than `y` and the profile favours `x` over `y`. -/
+def Outweighed (w : S → R → X → Nat) (good : S → X → X → Prop) (φ : Profile S X)
     (s : S) (r : R) (x y : X) : Prop :=
-  rk r s y x ∧ good s x y ∧ φ s x y
+  w s r x < w s r y ∧ good s x y ∧ φ s x y
 
-/-- COUNTERFACTUAL GUIDANCE by an outweighed reason: the reason for `y` in respect
-`r` is outweighed at `s`, and in some scenario `t` that agrees with `s` on the
-control `ctrl` and keeps respect `r`'s ranking of `y` over `x`, the profile
-favours `y` over `x`. The reason the source does not act on at `s` would make a
-difference to its favouring where it is not outweighed. -/
-def GuidedByOutweighed (rk : R → S → X → X → Prop) (good : S → X → X → Prop) (ctrl : S → Z)
+/-- `t` RAISES `y` IN RESPECT `r` ALONE over `s`: every other respect weighs every
+candidate as at `s`, respect `r` weighs every candidate other than `y` as at `s`,
+and it weighs `y` more. -/
+def RaisesOnly (w : S → R → X → Nat) (s t : S) (r : R) (y : X) : Prop :=
+  (∀ r' z, r' ≠ r → w t r' z = w s r' z) ∧ (∀ z, z ≠ y → w t r z = w s r z) ∧
+    w s r y < w t r y
+
+/-- COUNTERFACTUAL GUIDANCE by an outweighed reason: the reason for `y` in
+respect `r` is outweighed at `s`, and in some scenario `t` that agrees with `s`
+on the control and raises `y` in respect `r` alone, the profile favours `y` over
+`x`. The reason itself, not the removal of what outweighs it, makes the
+difference. -/
+def GuidedByOutweighed (w : S → R → X → Nat) (good : S → X → X → Prop) (ctrl : S → Z)
     (φ : Profile S X) (s : S) (r : R) (x y : X) : Prop :=
-  Outweighed rk good φ s r x y ∧ ∃ t, ctrl t = ctrl s ∧ rk r t y x ∧ φ t y x
+  Outweighed w good φ s r x y ∧ ∃ t, ctrl t = ctrl s ∧ RaisesOnly w s t r y ∧ φ t y x
 
-/-- SELF-APPLICATION: some second-order favouring determination of `b`, whose
-candidates are determinations, favours at some scenario one of `b`'s own
-(first-order) favouring determinations over some determination `d`. -/
+/-- A profile is BLIND TO RESPECT `r`: it is the same in any two scenarios that
+weigh every candidate alike in every other respect. -/
+def BlindTo (w : S → R → X → Nat) (φ : Profile S X) (r : R) : Prop :=
+  ∀ s t, (∀ r' z, r' ≠ r → w t r' z = w s r' z) → ∀ x y, φ s x y ↔ φ t x y
+
+/-- WEAK SELF-APPLICATION: some second-order favouring determination of `b`,
+whose candidates are determinations, favours at some scenario one of `b`'s own
+favouring determinations over some determination `d`. It does not require that
+`b` lacks `d`. -/
 def SelfApplies (Has : B → D → Prop) (favours : Profile S X → D)
     (favours2 : Profile S D → D) (b : B) : Prop :=
   ∃ ψ φ s d, Has b (favours2 ψ) ∧ Has b (favours φ) ∧ ψ s (favours φ) d
 
-/-! ## Finite control for counterfactual guidance
+/-- The SECOND-ORDER STANDARD: a favouring determination that tracks the value
+order `good` ranks above one that does not. Read as a second-order value ranking
+of favourings. It is the same in every scenario, since `Tracks` quantifies over
+all of them. -/
+def SecondOrderStandard (good : S → X → X → Prop) (favours : Profile S X → D) :
+    S → D → D → Prop :=
+  fun _ d d' => ∃ φ φ', d = favours φ ∧ d' = favours φ' ∧ Tracks φ good ∧ ¬ Tracks φ' good
+
+/-- STRONG SELF-APPLICATION: some second-order favouring of `b` favours, at some
+scenario, one of `b`'s own favouring determinations over another favouring
+determination, and the second-order standard ranks them that way. -/
+def SelfAppliesToStandard (Has : B → D → Prop) (good : S → X → X → Prop)
+    (favours : Profile S X → D) (favours2 : Profile S D → D) (b : B) : Prop :=
+  ∃ ψ φ φ' s, Has b (favours2 ψ) ∧ Has b (favours φ) ∧ ψ s (favours φ) (favours φ') ∧
+    SecondOrderStandard good favours s (favours φ) (favours φ')
+
+/-! ## Finite control
 
 Two candidates `c`, `d`; two respects, `fit` (realization of the recipient good)
-and `extra` (further content that fit does not record); two scenarios. In `base`,
-`d` is better in fit, `c` is better in the extra respect, and overall `c` is
-better: the reason for `d` is outweighed. In `alt` the extra respect ties them
-and overall `d` is better. -/
+and `extra` (further content fit does not record); two scenarios. In `base`, `d`
+weighs more in fit and `c` in the extra respect, and `c` is better overall: the
+fit reason for `d` is outweighed. In `raised`, `d`'s fit weight alone is raised,
+and `d` is better overall. Overall betterness is the larger sum of weights. -/
 namespace Control
 
 /-- Candidates. -/
@@ -88,53 +120,59 @@ inductive Respect
   | extra
   deriving DecidableEq
 
-/-- Scenarios: `base` (the reason for `d` is outweighed) and `alt` (it is not). -/
+/-- Scenarios: `base` and `raised` (`d`'s fit weight alone raised). -/
 inductive Scen
   | base
-  | alt
+  | raised
   deriving DecidableEq
 
-/-- Respect-wise betterness. -/
-def rk : Respect → Scen → Cand → Cand → Prop
-  | .fit, _, .d, .c => True
-  | .extra, .base, .c, .d => True
-  | _, _, _, _ => False
+/-- Respect weights. -/
+def w : Scen → Respect → Cand → Nat
+  | _, .fit, .c => 1
+  | .base, .fit, .d => 2
+  | .raised, .fit, .d => 6
+  | _, .extra, .c => 3
+  | _, .extra, .d => 0
 
-/-- Overall betterness. -/
-def good : Scen → Cand → Cand → Prop
-  | .base, .c, .d => True
-  | .alt, .d, .c => True
-  | _, _, _ => False
+/-- Overall betterness: the larger sum of weights. -/
+def good (s : Scen) (x y : Cand) : Prop := w s .fit y + w s .extra y < w s .fit x + w s .extra x
 
-/-- The good-tracking profile, shared by the personal source and A4 (round 2,
-control rows 1 and 2). -/
+/-- The good-tracking profile, shared by the personal source and A4. -/
 def goodTracking : Profile Scen Cand := good
 
-/-- A fixed favouring of `c` over `d` (determined to one content). -/
+/-- A fit-blind profile that follows the extra respect alone. -/
+def extraOnly : Profile Scen Cand := fun s x y => w s .extra y < w s .extra x
+
+/-- A fixed favouring of `c` over `d`. -/
 def fixedC : Profile Scen Cand := fun _ x y => x = .c ∧ y = .d
 
-/-- A nature directed to fit alone. -/
-def fitNature : Profile Scen Cand := rk .fit
+/-- A nature that follows fit alone (the D-nature's form on this carrier). -/
+def fitNature : Profile Scen Cand := fun s x y => w s .fit y < w s .fit x
 
 /-- No control beyond the scenario space. -/
 def noCtrl (_ : Scen) : Unit := ()
 
 /-- Counterfactual guidance at `base` by the outweighed fit reason for `d` over
-`c`:
+`c`, with `raised` raising `d`'s fit weight alone:
 
-1. the good-tracking profile (personal and A4 alike) is guided by it;
-2. the fixed favouring of `c` meets the outweighed condition but is not guided;
-3. the fit nature does not favour `c` over `d` at `base`, so for it the reason
-   is not outweighed.
-
-Registration of the outweighed reason in the source's actual state is not a
-property of the profile; it is posed separately on stand-ins
-(`degreeOnlyRegistersNoRespectBetweenTies`). -/
+1. `raised` raises `d` in fit alone over `base`;
+2. the good-tracking profile (personal source and A4 alike) is guided;
+3. the fit-blind profile meets the outweighed condition and is not guided;
+4. the fixed favouring meets the outweighed condition and is not guided;
+5. the fit nature does not favour `c` over `d` at `base`, so for it the reason
+   is not outweighed;
+6. strong self-application: with favourings as their own determinations, the
+   second-order standard ranks the good-tracking profile over the fit-blind one,
+   in every scenario alike. -/
 def GuidanceTable : Prop :=
-  GuidedByOutweighed rk good noCtrl goodTracking .base .fit .c .d ∧
-  (Outweighed rk good fixedC .base .fit .c .d ∧
-    ¬ GuidedByOutweighed rk good noCtrl fixedC .base .fit .c .d) ∧
-  ¬ Outweighed rk good fitNature .base .fit .c .d
+  RaisesOnly w .base .raised .fit .d ∧
+  GuidedByOutweighed w good noCtrl goodTracking .base .fit .c .d ∧
+  (Outweighed w good extraOnly .base .fit .c .d ∧
+    ¬ GuidedByOutweighed w good noCtrl extraOnly .base .fit .c .d) ∧
+  (Outweighed w good fixedC .base .fit .c .d ∧
+    ¬ GuidedByOutweighed w good noCtrl fixedC .base .fit .c .d) ∧
+  ¬ Outweighed w good fitNature .base .fit .c .d ∧
+  (∀ s, SecondOrderStandard good id s goodTracking extraOnly)
 
 end Control
 
