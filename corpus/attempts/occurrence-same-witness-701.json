@@ -11,7 +11,7 @@
   ],
   "kind": "derivation",
   "outcome": "succeeded",
-  "summary": "Issue #701: direct #564→#686 existential composition can silently replace the selected necessary ancestor; necessity alone does not exclude incoming support. Retain the no-ground property already present in #564 Acc descent using a shared helper and project to its original frozen theorem. The SAME minimal ancestor is necessary under the existing anti-brute premise. An explicit existing-support→actual-concrete-ground bridge then makes that n actually underived; apply imported #680 actual_not_not_identity_direct at n, retaining the original five q3 commitments/interfaces and explicit EM. The #680 varying/pairProfile necessary recipient control is extended with an occurring thought and all six non-logical #564 premises: recipient true itself witnesses the old weaker conclusion but has a supporting source and distinct esse. Source false is underived and has identity in that same interpretation. Rejected: asserting necessary means underived, restating a proved existential as a fresh premise, replacing the #564 witness with the #686-selected source, identifying ordinary event cause with esse support, or interpreting represented equality as divine uniqueness. No historical attribution, no new source claim. Root-premise delta none. See docs/notes/occurrence-same-witness.md for exact scope and residual philosophical burden. Maintenance #713 factors the definitionally identical world-local absence condition into NoExistingSupportAt and shares explicit EM-to-identity composition with the union and selected-world consumers. Existing Challenges, theorem types, thirteen occurrence hypotheses, statement identities and root premises are unchanged; see the same linked note.",
+  "summary": "Issue #701: direct #564→#686 existential composition can silently replace the selected necessary ancestor; necessity alone does not exclude incoming support. Retain the no-ground property already present in #564 Acc descent using a shared helper and project to its original frozen theorem. The SAME minimal ancestor is necessary under the existing anti-brute premise. An explicit existing-support→actual-concrete-ground bridge then makes that n actually underived; apply imported #680 actual_not_not_identity_direct at n, retaining the original five q3 commitments/interfaces and explicit EM. The #680 varying/pairProfile necessary recipient control is extended with an occurring thought and all six non-logical #564 premises: recipient true itself witnesses the old weaker conclusion but has a supporting source and distinct esse. Source false is underived and has identity in that same interpretation. Rejected: asserting necessary means underived, restating a proved existential as a fresh premise, replacing the #564 witness with the #686-selected source, identifying ordinary event cause with esse support, or interpreting represented equality as divine uniqueness. No historical attribution, no new source claim. Root-premise delta none. See docs/notes/occurrence-same-witness.md for exact scope and residual philosophical burden. Maintenance #713 factors the definitionally identical world-local absence condition into NoExistingSupportAt and shares explicit EM-to-identity composition with the union and selected-world consumers. Existing Challenges, theorem types, thirteen occurrence hypotheses, statement identities and root premises are unchanged; see the same linked note.\n\nCuration pass 2, lane D batch 3 (#2103, 2026-11-27). 7be43948 remains unplaced. Both Bool bearers are present at both worlds. The thought-bearer true qualifies as a necessary ancestor and receives actual support from false at reading world true. Its represented esse and essence are distinct. The control separates the arbitrary-witness inference from the minimal-ancestor conclusion, whose chosen witness excludes incoming actual concrete grounds. The off-path cogito-ancestor argument separately registers unrestricted excluded middle alongside its six instantiated nonlogical premises.",
   "evidence": [
     "1896d985-690f-5748-b71f-0b5657180bd5",
     "7be43948-f08b-51db-869d-76471ccff608",
@@ -20,5 +20,15 @@
     "PR-710",
     "PR-714"
   ],
-  "blocker": "Independent warrant for actual occurrence, bearer and concrete-world bridges, real grounding semantics, ancestry accessibility and anti-brute premise, actual-support-to-concrete-ground mapping, q3 cause/exhaustion and actuality interfaces. No root consumer changed; no premise discharged."
+  "blocker": "Independent warrant for actual occurrence, bearer and concrete-world bridges, real grounding semantics, ancestry accessibility and anti-brute premise, actual-support-to-concrete-ground mapping, q3 cause/exhaustion and actuality interfaces. No root consumer changed; no premise discharged.",
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-27",
+      "pr": "PR-2135"
+    }
+  ]
 }

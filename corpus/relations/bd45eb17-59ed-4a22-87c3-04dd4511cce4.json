@@ -1,0 +1,10 @@
+{
+  "id": "bd45eb17-59ed-4a22-87c3-04dd4511cce4",
+  "label": "Test by ConservativeReasonExpansion.checks (6c6191dc)",
+  "subject_kind": "result",
+  "subject_id": "6cebe7ba-83b6-5b26-b18d-940157a3111d",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "6c6191dc-082d-4417-b675-b32d4fab4573",
+  "note": "Under the supplied weak token interpretation, `firstEffect` is contingent at `false`, and `.intrinsic firstEffect` explains `.fact firstEffect` there. `BruteContingencyParity.source` maps that very token to `firstEffect`, falsifying the distinct-source requirement. The same populated row satisfies local contingent reason coverage at `false` through `ExistencePSR`."
+}
