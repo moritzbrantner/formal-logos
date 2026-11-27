@@ -1,0 +1,63 @@
+{
+  "id": "05f20bb4-1b78-4ccd-b3ff-4d94554c26d1",
+  "label": "The unde inference from dependence on being to the act of being: bridges, limitation and rivals",
+  "date": "2026-11-27",
+  "statement_ids": [
+    "7067553d-cad9-5d79-b6b2-912e35051530",
+    "8c64b036-3db9-4143-9a8d-d7814cc84c79",
+    "254ee26f-01d5-4359-bdde-5779b6e80533",
+    "8d7e24dc-20b9-44b8-8c5f-7bac55774f34",
+    "89d82643-cf45-4933-90b3-83a89f6210f2",
+    "073e1411-ad82-4b6c-af8d-58829b2afa01",
+    "11437cb4-494a-47c3-b70b-7d66d4a25c78",
+    "fdd2213a-90ee-4f7c-86cd-ca4872549bd6",
+    "21b08802-710a-4225-bb91-85ff73da80b1",
+    "29e71e43-1d34-5008-8811-897fbddda209",
+    "7de89edb-e3a8-59ee-9740-8d0ce7c8ea24",
+    "d61f1fa7-53a8-45ee-bb8f-6d6f85de4818",
+    "2817ceab-e913-4512-9bbb-ff4acb5d68de",
+    "f2013d4f-0d00-4a2c-89df-33e4db9fb335"
+  ],
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "Warrant-phase checkpoint 4. ST I q.4 a.1 (objection 3 and ad 3), q.3 a.4 (three proofs, ad 1, ad 2), De ente capp.3-4 (Baur/Koch) and q.7 a.1-2 were read in the materialized witnesses. The q.4 a.1 ad 3 inference was formalized: R-dep (7067553d) with the first unde (8d7e24dc, ACTUALIZED_THROUGH_2), the second unde (89d82643, reception at the nature), the nature in act (073e1411) and 7de89edb gives R-act1 (ractOneFromDependence); with the witness (11437cb4) and inclusion (fdd2213a) it gives R-act2. The load map certifies that, given R-dep, each bridge is equivalent to what it delivers and the first is analytic on the dependence reading (ACTUALIZED_THROUGH_1): the inference makes the commitment explicit. The limitation comparison certifies that finitude in perfection follows from the nature premise with or without reception, and that reception factors through the essence-only account. R-act1 with q.7 a.2 ad 1 (21b08802) gives a new support option for the esse-root leaf 29e71e43.",
+  "evidence": [
+    "d53d259e-731f-4175-ab46-b7eeaae16e1e",
+    "f3a50206-a3bc-4104-8212-99c2fe44a84d",
+    "56e315ff-27a3-4db9-b42a-7b71e80592f2",
+    "7277b7d1-0233-4f37-a211-28732f883669",
+    "96fc4767-bb7a-4103-afa0-bc68a051daeb",
+    "7bc1af16-3b5c-4dd1-8363-cb4597e30ec8"
+  ],
+  "blocker": "No argument on file for the composition step (an act other in content than the nature, had from another, is received in the nature as in a really distinct potency) that a rival granting dependence and caused existence must accept; R-act2 has textual warrant only. Next: formalize agreement-and-difference and test for a criterion of non-trivial shared perfection independent of the act reading; otherwise move horizontally to degrees of being or the OwnBeing E/L obligations.",
+  "current_assessment": {
+    "date": "2026-11-27",
+    "statement_ids": [
+      "7067553d-cad9-5d79-b6b2-912e35051530",
+      "8c64b036-3db9-4143-9a8d-d7814cc84c79",
+      "254ee26f-01d5-4359-bdde-5779b6e80533",
+      "8d7e24dc-20b9-44b8-8c5f-7bac55774f34",
+      "89d82643-cf45-4933-90b3-83a89f6210f2",
+      "fdd2213a-90ee-4f7c-86cd-ca4872549bd6",
+      "29e71e43-1d34-5008-8811-897fbddda209"
+    ],
+    "scope": "The q.4 a.1 ad 3 'unde' inference and its parallels (q.3 a.4 second proof, De ente capp.3-4, q.7 a.1-2) from R-dep to R-act1 and R-act2, over the shared GradesFrame with respect identity as content identity and own being as esse tantum; rivals: the quantifier view and Suárez's real-identity account; limitation at the scope of finitude in perfection and plurality of finite beings.",
+    "assessment": "The unde inference is explicative, not probative: given R-dep, each bridge is equivalent to what it delivers (certified), and its stated grounds (R-dep; signification in q.3 a.4) are granted by every rival. Two separating steps: the act reading of 'actuality of forms' separates the quantifier view; the composition step (real reception: second unde = q.3 a.4 'oportet igitur' = De ente DE1 major with DE4 = q.7 a.2 'necesse est') separates Suárez too, and is one commitment. No argument on file for the composition step must be accepted by a rival granting R-dep and caused existence; its material instances carry over only through an analogy that De ente's 'aequivoce' leaves unargued. R-act1 in the real-reception sense: weak to moderate as an argued thesis; not defeated. At matching scope reception is not needed: finitude in perfection follows from the shared nature premise (certified), plurality from De ente's own modes of difference and matter; the essence-only accounts (quantifier view; Suárez) are favored there by parsimony. Overall standing unresolved; agreement-and-difference is the strongest open candidate for a shared explanandum. R-act2 gains nothing from the unde; De ente cap.4 supports only power-eminence at subsistent esse (9a0a4951), so locus (b)'s impersonal-source exclusion rests on R-act2 with textual warrant only. The esse-root-leaves grade of 29e71e43 ('P, moderate to strong') rests on q.7 a.2, whose 'necesse est' rests on the same composition step: recorded as a qualification, that assessment not edited. The quantifier view now has one item of positive warrant at matching scope on file (scope-limited parsimony); the semantic success of the quantificational analysis does not discriminate (q.3 a.4 ad 2). First grades.",
+    "next_test": "Formalize agreement-and-difference (many beings agree in being, differ in nature) and test whether any criterion of non-trivial shared perfection is independent of the act reading; if none, move horizontally to degrees of being (5a948c37, e462cf2f) or the OwnBeing E/L obligations.",
+    "note": "docs/notes/rdep-to-ract.md#7-provisional-judgment-2026-11-27-unreviewed",
+    "supersedes": "none: the #2171 assessment (attempt 1b16fb17) and the esse-root-leaves assessment are kept; the latter's grade of 29e71e43 is qualified here, not revised.",
+    "review": "unreviewed",
+    "publication": "unpublished",
+    "evidence": "Proposed delivery on branch research/rdep-to-ract (stacked on PR #2171); independent semantic challenge pending before merge.",
+    "reviewed_revision": "5f1c1e7a166fcde70baa1a138061f4aaa7b76486"
+  },
+  "workers": [
+    {
+      "role": "author",
+      "provider": "claude",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "date": "2026-11-27"
+    }
+  ]
+}
