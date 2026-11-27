@@ -24,5 +24,8 @@
     "d16b94fa-886f-54f3-85a3-7fc0c43d2b58",
     "6f1d1395-7c1d-5bd5-a45d-03380857aed6",
     "5d15d8f2-1080-53c9-886f-cee2a4ff23a9"
-  ]
+  ],
+  "strong_version_needed": {
+    "78945dde-2e6b-4e40-9383-ecb615208930": "Asymmetry permits infinite ascent, so support edges can form an infinite ascending chain in the same grade. The proof needs well-foundedness to transfer it to the support union."
+  }
 }

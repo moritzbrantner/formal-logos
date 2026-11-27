@@ -23,12 +23,22 @@ paraphrase = "OPEN analyst premise, attribution deferred, the SERIES_OF_CAUSES_4
 definitions = ["57348ddc-eaa0-4f0d-bf3f-ce358f452b53", "69c0b23e-54c7-57a1-871f-839c6e5514c6", "4bca086d-1fa5-4b0d-bf2b-a22f3f0ac740", "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"]
 disambiguations = ["81c233d4-01b4-528c-8bbd-7da228443ffe"]
 
+[statement.connection_plan]
+target_statement_id = "3d01134d-0b03-4469-a81a-a18d6e179fa0"
+missing_bridge = "For producer 0d89840b, independently supply an existential predecessor for each actual distinct-esse bearer: a terminal actual giver whose esse is its essence, or a continuing distinct-esse giver whose present per se edge is of SERIES_OF_CAUSES_4. Use the resulting accessibility to descend and the existing link conversion to recover a chain of actual esse causes."
+blocker = "This producer assumes the per se actual-esse regress that the new accessibility transfer concludes. It needs a forward use with independent predecessor coverage instead of that return path. Producer c6a1167b has a separate use through its wider efficient-series input."
+
 [[statement]]
 id = "Every SERIES_OF_CAUSES_4 link is a PER_SE_5 actual CAUSE_2 of being"
 lean = "PerSeEsseLinksArePerSeEsseCauses"
 paraphrase = "OPEN analyst bridge, attribution deferred, e8664ab8 restated on SERIES_OF_CAUSES_4: whenever here and now c efficiently causes the being of x per se, as caused (CausesBeingAsCaused, definition 57348ddc), c is a per se actual cause of the being of x in the q.3 a.4 profile (PerSeActualEsseCause, PER_SE_5): c is other than x, both are in act as to being, CausesIn c x esse (CAUSE_2, mode unspecified, tenseless) and AsCaused c x. The per se conjunct is shared with the antecedent, so the content is the passage from present efficient causing of being to a distinct actual cause of being. The hand-and-stick case that falsifies e8664ab8 on SERIES_OF_CAUSES_3 does not touch it: the hand causes the stick's motion, not its being, so it is no SERIES_OF_CAUSES_4 link. No substantive objection identified beyond the shared reading of the world-free InAct of the q.3 a.4 profile as being in act at the reading world."
 definitions = ["57348ddc-eaa0-4f0d-bf3f-ce358f452b53", "4bca086d-1fa5-4b0d-bf2b-a22f3f0ac740", "8163859b-95b3-4dd2-8a69-541bd332f32f", "211a6432-8b8f-53ed-85e3-75173bb15b24", "69c0b23e-54c7-57a1-871f-839c6e5514c6", "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"]
 disambiguations = ["81c233d4-01b4-528c-8bbd-7da228443ffe", "002f42cb-3015-5644-80b3-d408538394e6", "00e0d443-eb39-56a3-9179-9c8852ca4a2b", "57f80020-fa6f-5b69-be58-b4cf95b7226f"]
+
+[statement.connection_plan]
+target_statement_id = "3d01134d-0b03-4469-a81a-a18d6e179fa0"
+missing_bridge = "Independently supply present existential predecessors for actual distinct-esse bearers: at each step, either a terminal actual esse-is-essence giver with an actual esse edge, or a distinct-esse giver with a SERIES_OF_CAUSES_4 edge. Descend under independently supplied SERIES_OF_CAUSES_4 accessibility and use the conversion of each nonterminal edge to PER_SE_5 actual causation to build the actual esse chain."
+blocker = "The existing bridge can help obtain existential accessibility only by starting from the PER_SE_5 regress. Returning to that same regress is circular for this producer. A genuine forward consumer needs independently justified coverage of actual distinct-esse bearers by the present existential predecessor step, including why a continuing giver causes as caused."
 
 [[statement]]
 id = "A present efficient cause of another's being is an actual CAUSE_2 of its being"
