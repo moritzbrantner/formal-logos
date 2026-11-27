@@ -76,6 +76,28 @@ theorem contingentFromChiralMirror {W B : Type} (m : Profile W B) (w : W)
   refine ⟨x, hx, hxw, σ w, hAcc, fun hxσ => ?_⟩
   exact iff_not_self ((hOnly (σ w) hxσ).symm.trans hRev)
 
+/-- Lean-only (review probe, adopted). Under essence grounding necessity at `w`,
+essence-grounded possibility and factivity, preservation by the mirror is
+equivalent to the accessibility of the mirror image: the mirror argument's load
+is the possibility of the mirror world. -/
+theorem pres_iff_mirrorPossible {W B : Type} (o : Ontic W B) (w : W)
+    (E : B → (W → Prop) → Prop) (σ : W → W) (hEGN : EssenceGroundsNecessityAt o w E)
+    (hEM : EssenceGroundedWorldPossibility o w E) (hFact : EssentialTruthsHoldAt E w) :
+    EssentialTruthsPreservedByMirrorAt E σ w ↔ o.frame.access w (σ w) :=
+  ⟨fun hP => hEM _ fun x φ h => hP x φ h (hFact x φ h),
+   fun hA x φ h _ => hEGN x φ h _ hA⟩
+
+/-- Lean-only (review probe, adopted). At a bearer with no potency, the IX.6
+reading forces every ability to be an actuality: reading ability as act at the
+root is forced, not a degeneracy of the carrier. -/
+theorem rootAbilityForced {B R : Type} (InAct InPotency CanBe : B → R → Prop) (g : B)
+    (h96 : TruthCore.Greek.Aristotle.Metaphysics.PotencyIsUnactualizedCapacityReading InAct
+      InPotency CanBe)
+    (hImm : ∀ r, ¬ InPotency g r) : ∀ r, CanBe g r → InAct g r := by
+  intro r hc
+  by_contra hn
+  exact hImm r ((h96 g r).2 ⟨hc, hn⟩)
+
 /-- Lean-only. Under invariance, an intrinsic fact has the same value at every
 accessible world as at `w`. -/
 theorem intrinsicConstant {W B D : Type} (o : Ontic W B) (Has : W → B → D → Prop) (w : W)
@@ -85,7 +107,7 @@ theorem intrinsicConstant {W B D : Type} (o : Ontic W B) (Has : W → B → D �
 
 /-- The mirror fork. -/
 theorem mirrorFork : MirrorForkCertificate := by
-  refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩
+  refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩
   · intro W B o w E hMC hEM v hv
     exact collapseIdentifiesUnexcluded o w E hMC hEM v hv
   · intro W B o w E σ H hMC hEM hFact hRev
@@ -134,6 +156,25 @@ theorem mirrorFork : MirrorForkCertificate := by
     obtain ⟨x, hx, hxw, v, hv, hnv⟩ :=
       contingentFromChiralMirror m w E σ H hEM hFact hPres hRev hChiral
     exact hnv (hNec x hx hxw v hv)
+  · intro W B o w E σ hEGN hEM hFact
+    exact pres_iff_mirrorPossible o w E σ hEGN hEM hFact
+  · intro W B D P m w Admissible RequiresLack Has Pure Composite Prior essence esse left right E σ
+      hRoots hPurity hSuff hPure hEx hPar hCarry r hr φ hφ hw
+    by_contra hn
+    have hNone : ¬ (Pure left ∧ Pure right) := by
+      rintro ⟨hl, hrt⟩
+      have hAdm : Admissible {left, right} :=
+        TruthCore.Results.Causality.RootPerfectionIntellect.allPureAdmissible Admissible
+          RequiresLack Pure hSuff hPure _ fun d hd => by
+            rcases hd with rfl | hd
+            · exact hl
+            · rw [Set.mem_singleton_iff.1 hd]; exact hrt
+      exact hEx _ hAdm (by simp) (by simp)
+    rcases hCarry r φ hφ hw hn with hl | hrt
+    · have hPl : Pure left := hPurity r (hRoots r hr) _ hl
+      exact hNone ⟨hPl, hPar.1 hPl⟩
+    · have hPr : Pure right := hPurity r (hRoots r hr) _ hrt
+      exact hNone ⟨hPar.2 hPr, hPr⟩
 
 /-! ## Mirror controls -/
 
@@ -293,7 +334,7 @@ theorem relationOfReason : RelationOfReasonCertificate := by
     fun W B D X o Has w g x dec c hN hEx hc hSuff hCont =>
       noDecreeWorldUnderN o Has w g x dec c hN hEx hc hSuff hCont, ?_⟩
   refine ⟨⟨?_, ⟨Determination.esse, ?_, ?_⟩, ⟨rfl, rfl⟩, ?_, rr_contingent⟩, ?_, ?_, ?_, ?_, ?_,
-    ?_, ⟨false, trivial, rr_contingent⟩, ?_, ?_, fun v _ d h => ?_, rr_actualRoot⟩
+    ?_, ⟨false, trivial, rr_contingent⟩, ?_, ?_, ?_, fun v _ d h => ?_, rr_actualRoot⟩
   · intro v _ d
     rfl
   · simp [rrOutput, rrHas, TruthCore.Causality.SourceIntellectControls.ProfileControls.pure]
@@ -323,9 +364,14 @@ theorem relationOfReason : RelationOfReasonCertificate := by
   · intro h
     have := h (fun v => v = true) trivial rfl false trivial
     cases this
-  · refine ⟨fun x r => ?_, fun r h => h, fun v r _ h => ?_⟩
-    · simp [rrNoPotency]
+  · refine ⟨fun x r => Iff.rfl, ?_, fun v r _ h => Or.inl ?_⟩
+    · rintro r ⟨hc, hn⟩
+      rcases hc with h | ⟨h, -⟩
+      · exact hn h
+      · cases h
     · cases v <;> exact h
+  · exact ⟨Determination.limiter, Or.inr ⟨rfl, rfl⟩, by
+      simp [rrHas, TruthCore.Causality.SourceIntellectControls.ProfileControls.effect]⟩
   · cases v <;> exact h
 
 end TruthCore.Results.Modal.MirrorCollapse

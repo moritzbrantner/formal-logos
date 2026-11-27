@@ -1,7 +1,7 @@
 {
   "id": "314f6b15-5743-4894-8b4f-b8fe3e692022",
   "label": "The global mirror image of the actual world has the opposite handedness",
-  "paraphrase": "OPEN, analyst formulation, attribution deferred: the feature H (global handedness) holds at the mirror image σ w exactly when it fails at w. The mirror image is a different arrangement. A relationalist about orientation who identifies a world with its global mirror image (σ w = w) denies it; so does anyone for whom global handedness is no feature of a world.",
+  "paraphrase": "OPEN, analyst formulation, attribution deferred: the feature H (global spatial handedness) holds at the mirror image σ w exactly when it fails at w. The mirror image is a different arrangement. Spatial reflection and CPT conjugation both reverse spatial handedness. A relationalist about orientation who identifies a world with its global mirror image (σ w = w) denies it; so does anyone for whom global handedness is no feature of a world.",
   "lean_declaration": "TruthCore.Modal.MirrorCollapse.HandednessReversedAt",
   "definition_ids": [
     "3fc924f3-6226-41ae-8032-f63ea44f27a9"

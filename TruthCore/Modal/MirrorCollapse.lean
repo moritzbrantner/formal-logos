@@ -145,17 +145,33 @@ grounds necessity" on a frame reflexive at `w`. -/
 def EssentialTruthsHoldAt (Essential : B → (W → Prop) → Prop) (w : W) : Prop :=
   ∀ x φ, EssentialTruth Essential x φ → φ w
 
+/-- Essence grounds necessity, at the world level and at `w`: every ESSENCE_5 truth
+of every being holds at every world accessible from `w`. The `Ontic` counterpart of
+`ModalGrounding.EssenceGroundsNecessity` (stated there over a `CausalityFrame`).
+With it and reflexivity at `w` factivity follows; with it, essence-grounded
+possibility and factivity, preservation by the mirror is equivalent to the mirror
+image's accessibility (`pres_iff_mirrorPossible`). -/
+def EssenceGroundsNecessityAt (o : Ontic W B) (w : W) (Essential : B → (W → Prop) → Prop) :
+    Prop :=
+  ∀ x φ, EssentialTruth Essential x φ → ∀ v, o.frame.access w v → φ v
+
 /-- OPEN premise (orientation-free natures, at `w`): every essential truth of every
 being that holds at `w` holds at the mirror image `σ w`. No nature contains a
-condition that the actual arrangement meets and its global mirror image violates.
-A nature that contains a primitive orientation, or an essential truth about which
-of two incongruent counterparts is realized, denies it. -/
+condition that the actual arrangement meets and its mirror image violates. Under
+essence grounding necessity, essence-grounded possibility and factivity it is
+equivalent to the mirror image's possibility (`pres_iff_mirrorPossible`). For the
+plain spatial reflection P it is doubtful on dispositional essentialism: the weak
+interaction is not reflection-invariant, so the P-image of the actual world
+violates the law-grounding natures of creaturely kinds (option 1 at a creature).
+With `σ` read as CPT conjugation, under which local Lorentz-invariant quantum field
+theory is invariant, creaturely law-natures give no such violation. -/
 def EssentialTruthsPreservedByMirrorAt (Essential : B → (W → Prop) → Prop) (σ : W → W)
     (w : W) : Prop :=
   ∀ x φ, EssentialTruth Essential x φ → φ w → φ (σ w)
 
 /-- OPEN premise (the mirror image is a different arrangement): the feature `H`
-(global handedness) holds at the mirror image of `w` exactly when it fails at `w`.
+(global spatial handedness) holds at the mirror image of `w` exactly when it fails
+at `w`. Reflection and CPT conjugation both reverse spatial handedness.
 A relationalist about orientation who identifies a world with its global mirror
 image (`σ w = w`) denies it. -/
 def HandednessReversedAt (σ : W → W) (H : W → Prop) (w : W) : Prop :=
@@ -181,6 +197,17 @@ def SelectsAmongUnexcluded (Essential : B → (W → Prop) → Prop) (ρ : W →
 /-- No admissible profile contains both orientation tokens. -/
 def OrientationTokensExclusive (Admissible : Set D → Prop) (left right : D) : Prop :=
   ∀ q, Admissible q → left ∈ q → right ∈ q → False
+
+/-- OPEN sense bridge (ESSENCE_5 to real determinations, carriage of orientation):
+if an ESSENCE_5 truth of `r` holds at `w` and fails at the mirror image `σ w` (an
+orientation in `r`'s nature), then `r` really has one of the two orientation tokens.
+Orientation in a nature is carried by a real determination of its bearer. It is
+the orientation instance of the carriage pattern of lane E's LE (#2174), stated
+between ESSENCE_5 and `Has`; lane E records no bridge between ESSENCE_5 and its
+ESSENCE_6, and none is asserted here beyond this premise. -/
+def OrientationInNatureCarried (Essential : B → (W → Prop) → Prop) (Has : B → D → Prop)
+    (σ : W → W) (w : W) (left right : D) : Prop :=
+  ∀ r φ, EssentialTruth Essential r φ → φ w → ¬ φ (σ w) → Has r left ∨ Has r right
 
 /-- The two orientation tokens are on a par in purity: one is a pure perfection
 exactly when the other is. A mirror that preserves every qualitative feature
@@ -235,8 +262,14 @@ def rrHas : Bool → Bool → Determination → Prop
 /-- Purity on the carrier: the four pure #1970 determinations. -/
 def rrPure (d : Determination) : Prop := d ∈ pure
 
-/-- No being is in potency in any respect (the classical immutability reading). -/
-def rrNoPotency (_ _ : Bool) (_ : Determination) : Prop := False
+/-- Ability on the carrier: what each being has, and for the effect also the
+impure `limiter`, which it can have and does not (restored creature potency). -/
+def rrCanBe (v x : Bool) (d : Determination) : Prop :=
+  rrHas v x d ∨ (x = false ∧ d = Determination.limiter)
+
+/-- Potency exactly as the IX.6 reading gives it from `rrCanBe` and `rrHas`: the
+effect is in potency to `limiter`; the root is in potency to nothing. -/
+def rrPotency (v x : Bool) (d : Determination) : Prop := rrCanBe v x d ∧ ¬ rrHas v x d
 
 /-- The effect is composite (a represented limiting principle); the root is not. -/
 def rrComposite (x : Bool) : Prop := x = false
@@ -380,16 +413,19 @@ def RelationOfReasonCertificate : Prop :=
     AdmissibleIsExclusionFree rrAdmissible rrRequiresLack ∧
     NoBruteContingentExistenceAt rrModel true ∧
     SomeActualContingentAt rrProfile true ∧ RouteNotCollapsedAt rrOntic true ∧
-    TruthCore.Modal.SimplicityCollapse.ReadingsAt rrOntic rrHas rrNoPotency rrHas true true ∧
+    TruthCore.Modal.SimplicityCollapse.ReadingsAt rrOntic rrHas rrPotency rrCanBe true true ∧
+    (∃ d, rrPotency true false d) ∧
     AbsencesNecessaryFor rrOntic rrHas true true ∧
     (∀ r, ActualRoot rrProfile true r ↔ r = true))
 
 /-- The mirror fork for a necessitarian, and what the mirror case says of every
 account.
 
-1. **Option 2 generalizes.** Under actual collapse and world-level
-   essence-grounded possibility, every world violating no essential truth is the
-   actual world.
+1. **Collapse with essence-grounded possibility, restated.** Under actual
+   collapse and world-level essence-grounded possibility, every world violating
+   no essential truth is the actual world. This is one term from the two
+   premises; a necessitarian who holds both already asserts it, so it records no
+   further cost.
 2. **Option 1 is exact.** Under collapse, essence-grounded possibility,
    factivity and reversed handedness, some essential truth holds at the actual
    world and fails at its mirror image.
@@ -408,12 +444,20 @@ account.
    mirror image (handedness either way).
 7. **An orientation token at a root.** Under `a30c5963`, RootPurity, the
    sufficiency direction, `0c8631bd`, exclusivity of the two orientation tokens
-   and their parity in purity, no actual root has either token.
+   and their parity in purity, no actual root has either token. This concerns
+   real determinations (`Has`), not ESSENCE_5 truths.
 8. **Concrete necessitarianism.** If every actual concrete being is necessary,
    and there is a chiral individual, then with factivity, preservation and
    reversed handedness, world-level essence-grounded possibility fails: the
    concrete necessitarian, not only the full-collapse necessitarian, must take
-   one of the fork's options (or deny the chiral individual). -/
+   one of the fork's options (or deny the chiral individual).
+9. **Preservation is the mirror's possibility.** Under essence grounding
+   necessity at `w`, essence-grounded possibility and factivity, preservation by
+   the mirror holds exactly when the mirror image is accessible.
+10. **Option 1 at a root, through the carriage bridge.** With clause 7's
+    premises and the open bridge `OrientationInNatureCarried`, no ESSENCE_5 truth
+    of an actual root holds at `w` and fails at its mirror image. Without the
+    bridge, clause 7 says nothing about orientation in a root's nature. -/
 def MirrorForkCertificate : Prop :=
   (∀ (W B : Type) (o : Ontic W B) (w : W) (E : B → (W → Prop) → Prop),
     RouteCollapsedAt o w → EssenceGroundedWorldPossibility o w E →
@@ -450,7 +494,21 @@ def MirrorForkCertificate : Prop :=
     TruthCore.Causality.ContingentBeingNode.EveryActualConcreteNecessaryAt m w →
     EssentialTruthsHoldAt E w → EssentialTruthsPreservedByMirrorAt E σ w →
     HandednessReversedAt σ H w → ChiralIndividualAt m w H →
-    ¬ EssenceGroundedWorldPossibility m.ontic w E)
+    ¬ EssenceGroundedWorldPossibility m.ontic w E) ∧
+  (∀ (W B : Type) (o : Ontic W B) (w : W) (E : B → (W → Prop) → Prop) (σ : W → W),
+    EssenceGroundsNecessityAt o w E → EssenceGroundedWorldPossibility o w E →
+    EssentialTruthsHoldAt E w →
+    (EssentialTruthsPreservedByMirrorAt E σ w ↔ o.frame.access w (σ w))) ∧
+  (∀ (W B D P : Type) (m : Profile W B) (w : W) (Admissible : Set D → Prop)
+      (RequiresLack : D → Set D → Prop) (Has : B → D → Prop) (Pure : D → Prop)
+      (Composite : B → Prop) (Prior : B → B → Prop) (essence esse : B → P) (left right : D)
+      (E : B → (W → Prop) → Prop) (σ : W → W),
+    ActualRootsWithoutLimitingPrinciple m w Composite Prior essence esse →
+    UnlimitedDeterminationsArePure Composite Prior essence esse Has Pure →
+    ExclusionFreeAdmissible Admissible RequiresLack → PureRequiresNoPureLack RequiresLack Pure →
+    OrientationTokensExclusive Admissible left right → OrientationPurityParity Pure left right →
+    OrientationInNatureCarried E Has σ w left right →
+    ∀ r, ActualRoot m w r → ∀ φ, EssentialTruth E r φ → φ w → φ (σ w))
 
 /-- Controls for the chiral mirror argument (the companion of
 `contingentFromChiralMirror`). `P1`…`P5` are essence-grounded possibility,
@@ -467,14 +525,18 @@ factivity, preservation, reversal and a chiral individual at the actual world;
   3. the mirror is the identity (option 2): reversal fails;
   4. an unsatisfiable essential truth: factivity fails;
   5. the being present at both worlds: no chiral individual.
-* Rows 6–10, relocation probe: one premise deleted, the other four kept, and `C`
-  still holds, so no premise is equivalent to `C` given the other four:
+* Rows 6–10: one premise deleted, the other four kept, and `C` still holds:
   6. the oriented nature with universal access (preservation fails);
   7. three worlds, an unexcluded inaccessible world (possibility fails);
   8. the identity mirror with universal access (reversal fails);
   9. the unsatisfiable essential truth with universal access (factivity fails);
   10. three worlds, the being present at the actual world and at the unexcluded
-      world `none`, absent at the mirror image (no chiral individual). -/
+      world `none`, absent at the mirror image (no chiral individual).
+  Rows 6 and 9 violate essence grounding necessity (`EssenceGroundsNecessityAt`),
+  which is the source of factivity. Under that principle, essence-grounded
+  possibility and factivity, preservation is equivalent to the accessibility of
+  the mirror image (`pres_iff_mirrorPossible`, fork clause 9), so the argument's
+  load is the possibility of the mirror world; these rows do not show otherwise. -/
 def MirrorControls : Prop :=
   -- row 0
   (EssenceGroundedWorldPossibility (cProfile univAccess).ontic true noEss ∧
