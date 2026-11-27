@@ -1,0 +1,10 @@
+{
+  "id": "e8a48d7f-d928-4505-b076-8da9cc0eb49a",
+  "label": "Worldwise deletion attacks the necessary concretum at the selected world",
+  "subject_kind": "statement",
+  "subject_id": "2f055224-2c79-4c18-8f7d-ba3420fc116f",
+  "predicate": "attacks",
+  "object_kind": "statement",
+  "object_id": "b19ffd92-01bd-5c0b-9643-e7407137ea5e",
+  "note": "Target: b19ffd92 (some concrete individual exists at w and at every world accessible from w), on the root routes. Mechanism: read on the same Ontic and concreteness predicate, worldwise deletion at the selected world w gives, for any concrete individual existing at w, an accessible world lacking it, which contradicts b19ffd92 at w directly (DeletionAt at w applied to its witness). Independent justification: the origin-tolerance account 5389a062 with an empty world c3f62370, or with origin-compatible deletion ed582cc8, derives worldwise deletion (results 1ca3d0d0 and 5ef604b9), a modal metaphysics of free recombination constrained only by origin essentialism. Relevance: it is the universal-contingency rival to every necessary-concretum route; argument d7c63935 derives from origin access and further premises that every possible world contains some individual (01243297), which bears on the empty-world variant. The attack does not decide between the two; it records that they cannot both hold at one world."
+}
