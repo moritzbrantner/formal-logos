@@ -8,6 +8,11 @@ lean = "Boundary"
 paraphrase = "Among truthful event lists for a supplied history profile, covering all occurrences is equivalent to correctness of inferring absence from nonmembership and absence implying nonmembership. In two finite histories, a single policy reports just the later event truthfully in both, while the earlier event occurs in only one. No classifier of those disclosed lists recovers earlier occurrence across the pair. The complete lists identify that target across the pair."
 definitions = ["dd7b91ea-5284-4558-bac5-7a0759843b0c", "7011ffa0-1d24-4e36-84e2-714a38cbdeac"]
 
+[statement.connection_plan]
+target_statement_id = "c1deb2ee-770d-5030-9e5c-302e33028811"
+missing_bridge = "For a specified event domain and interval, establish that a sign communicates record completeness or that an independently warranted coverage rule licenses the same absence inference."
+blocker = "The list model supplies neither an actual divine confirmation of completeness nor the coverage or provenance of any actual set of records. Its tests concern the existing positive-record guarantees."
+
 [[argument]]
 id = "Test occurrence identification under truthful selective disclosure"
 theorem = "boundary"

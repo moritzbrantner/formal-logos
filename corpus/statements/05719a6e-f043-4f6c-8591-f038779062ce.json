@@ -6,5 +6,10 @@
   "definition_ids": [
     "dd7b91ea-5284-4558-bac5-7a0759843b0c",
     "7011ffa0-1d24-4e36-84e2-714a38cbdeac"
-  ]
+  ],
+  "connection_plan": {
+    "target_statement_id": "c1deb2ee-770d-5030-9e5c-302e33028811",
+    "missing_bridge": "For a specified event domain and interval, establish that a sign communicates record completeness or that an independently warranted coverage rule licenses the same absence inference.",
+    "blocker": "The list model supplies neither an actual divine confirmation of completeness nor the coverage or provenance of any actual set of records. Its tests concern the existing positive-record guarantees."
+  }
 }
