@@ -1,0 +1,10 @@
+{
+  "id": "d0ca5006-bc74-4e87-9b3b-bac93a0a3d86",
+  "label": "Test by NecessarySimplePlurality.jointControl (034eb68f)",
+  "subject_kind": "result",
+  "subject_id": "fc997d75-6ab1-518a-9ccc-b4f2a9d036bc",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "034eb68f-6b29-5854-9f66-e4e760b9cfa8",
+  "note": "Omit differentiation in represented act between distinct first movers. Left and right are distinct and each moves the common instrument in drive without being moved. Each is in act in all three modeled respects. Equality or distinctness is decidable on the four-bearer carrier."
+}
