@@ -6351,8 +6351,8 @@ The profiles give these verdicts:
 
 So the test discriminates something: it separates favouring that tracks overall
 value from favouring fixed to one content, which is the D-nature's form. This is
-an additional mark the D-nature fails. It does not depend on the
-goodness-variation witness that BECAUSE_OF_GOODNESS_2 needs.
+an additional mark the D-nature fails. Like BECAUSE_OF_GOODNESS_2, it needs a
+scenario in which overall value changes while the outweighed respect is kept.
 
 **Why it does not discriminate at the gap.** Lean-only `guidanceOfTracking`
 shows that, for a profile tracking overall betterness, guidance holds exactly

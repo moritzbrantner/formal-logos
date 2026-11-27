@@ -11,14 +11,6 @@ open TruthCore.Causality.AxiarchicFoundation (FavouringRealizedOnItems Favouring
 
 /-! ## Self-application -/
 
-/-- Self-application individuates at second order: if a bearer's second-order
-favourings are realized on stand-ins and are irreflexive, then when it favours one
-of its own favouring determinations over `d`, the stand-in of that determination
-differs from the stand-in of `d`. The round-2 trilemma then applies to `d`
-exactly as to a first-order candidate (the main theorem of round 2 is stated for
-any candidate type, so with determinations as candidates it is the second-order
-criterion). -/
-
 /-! ## Control -/
 
 open TruthCore.Causality.AxiarchicGuidance.Control

@@ -64,13 +64,10 @@ theorem degreeOnlyRegistersNoRespectBetweenTies {X C : Type} (rkr : X → X → 
 
 /-! ## Self-application -/
 
-/-- Self-application individuates at second order: if a bearer's second-order
-favourings are realized on stand-ins and are irreflexive, then when it favours one
-of its own favouring determinations over `d`, the stand-in of that determination
-differs from the stand-in of `d`. The round-2 trilemma then applies to `d`
-exactly as to a first-order candidate (the main theorem of round 2 is stated for
-any candidate type, so with determinations as candidates it is the second-order
-criterion). -/
+/-- Self-application individuates at second order: with realization and
+irreflexivity for second-order favourings, the stand-in of the bearer's own
+favouring differs from that of `d`; with determinations as candidates the round-2
+result is the second-order criterion. -/
 theorem selfApplicationIndividuates {B D S X C : Type} (Has : B → D → Prop)
     (favours : Profile S X → D) (favours2 : Profile S D → D) (stand : B → D → C)
     (rel : B → Profile S D → S → C → C → Prop)
