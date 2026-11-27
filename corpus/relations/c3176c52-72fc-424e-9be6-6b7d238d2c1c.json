@@ -1,0 +1,10 @@
+{
+  "id": "c3176c52-72fc-424e-9be6-6b7d238d2c1c",
+  "label": "Test by ComprehensionByMeasure.controls (ea1c35a5)",
+  "subject_kind": "result",
+  "subject_id": "40ec77b1-c79e-4308-9830-4d5a35fe8cb2",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "ea1c35a5-6c8b-41f4-8029-aea2166d74cf",
+  "note": "Omit the requirement that a non-INFINITE_1 bearer has nonmaximal act. In high both bearers have top act and top knowability, with knowing bounded by each knower's act. The non-INFINITE_1 intellect consequently reaches the INFINITE_1 bearer's knowability."
+}
