@@ -6,7 +6,7 @@ PR #2171). Can the dependence of every actuality on being (R-dep, `7067553d`), w
 every rival grants, warrant the act-of-being theses R-act₁ (`8c64b036`, esse received
 and limited) and R-act₂ (`254ee26f`, intensive esse)?
 
-Baseline: main `1c76d343`, with PR #2171 (head `5f1c1e7a`) merged in, because R-act₁
+Baseline: main `1c76d343`, with PR #2171 (head `d06eda76`) merged in, because R-act₁
 and R-act₂ are registered there.
 
 [Attempt record](../../corpus/attempts/05f20bb4-1b78-4ccd-b3ff-4d94554c26d1.json) ·
@@ -170,6 +170,8 @@ Results, all verified (Comparator and NanoDa):
 
   Extensions cannot tell the act relation from the dependence relation. Only the typed
   senses do, so the "non-reception profile" is one model read two ways.
+- **`q7BridgeLoadMap`** (`9655a913`, statement `0c1a3ec8`) and **`q7Controls`**
+  (`65a56bc5`, statement `6694d214`) cover the q.7 a.1 bridge (§5a).
 
 **Sufficiency and need.** Each derivation is valid, and the controls show each bridge
 is needed on those profiles.
@@ -285,6 +287,52 @@ the q.7 a.1 premise. It is not at matching scope.
   kept, sense-relative rival (esse-root-leaves.md, row 14). It is a different explanandum
   and is not assessed here.
 
+### 5a. The q.7 a.1 bridge: from reception toward intensive esse
+
+The #2171 re-check named the candidate bridge from R-act₁ to R-act₂: unreceived esse is
+unlimited, so it includes every pure perfection. The text is ST I q.7 a.1 co.:
+"infinitum secundum quod se tenet ex parte formae non determinatae per materiam, habet
+rationem perfecti. Illud autem quod est maxime formale omnium, est ipsum esse".
+
+`q7BridgeLoadMap` (`9655a913`, premise-free) certifies two things.
+
+1. The locus-(b) composite, that what is its own being really has every pure perfection,
+   follows from three premises, without `d164b1ff` or `c4fb87a6`:
+   - `7338142d` (own being is no recipient, with Recipient read as "has its esse
+     received somewhere");
+   - `1304b462` (esse is limited only through reception);
+   - "unlimited esse really has every pure perfection".
+2. On the **measure reading** of limitation (`LimitedByMeasure`, DEF `f971eabf`: lacking
+   some pure perfection), "unlimited esse has every pure perfection" holds in every
+   interpretation.
+
+`q7Controls` (`65a56bc5`) runs one source that is its own being and has only being:
+- on the **role reading** (only what is received is limited), `7338142d` and `1304b462`
+  hold, and "unlimited esse has every pure perfection" fails;
+- on the measure reading, that premise holds, and `1304b462` fails: the source is limited
+  without being received.
+
+So the bridge **shifts** the intensive content:
+- on the role reading, it sits in "unlimited esse has every pure perfection", which is
+  R-act₂'s content stated for beings;
+- on the measure reading, it sits in `1304b462`, "only reception limits esse". The
+  esse-root-leaves assessment already calls `1304b462` "the substantive claim that only
+  reception limits esse" on that reading.
+
+A source with only being, the quantifier view's source, rejects the one premise that
+carries the content on each reading. The rival grants the step thought to separate the
+views (non-reception of own being) and rejects the step that carries the content. Its
+ground is the same as before: the thinness of existence. The bridge's grounds in q.7 a.1,
+"maxime formale … ut ex superioribus patet", go back to q.4 a.1 ad 3 (§1).
+
+**The option "keep `9a0a4951`, reject real Has"** (from the #2171 re-check) belongs to
+the option set here as well. The q.7 a.1 bridge and the locus-(b) composite conclude
+*real* having. R-act₂ makes at most "not lacking", the formal-or-eminent `9a0a4951`, a
+meaning postulate of subsistent esse. An impersonal source could lack no perfection
+eminently or virtually without really having life or wisdom. No defender of that option
+is on file, so it carries no weight as a rival until one is sourced. It joins locus (b)
+to the power-eminence reading (PR #2166, locus (a) of #2170).
+
 ## 6. The rival's positive warrant at matching scope
 
 - **The quantifier view.**
@@ -327,12 +375,21 @@ the q.7 a.1 premise. It is not at matching scope.
    **unresolved**. Its distinctive explananda presuppose it, and the strongest open
    candidate for a shared one (agreement and difference) needs a non-question-begging
    criterion.
-5. **R-act₂ has no support from the "unde" beyond restatement.** De ente cap.4 supports
-   only power-eminence for subsistent esse (HAVING_EVERY_PERFECTION_1, `9a0a4951`).
-   - The impersonal-source exclusion at locus (b) (#2171 judgment 5) therefore rests on
-     R-act₂ with textual warrant only.
-   - Re-routing locus (b) through power-eminence would join locus (a) of #2170, where an
-     impersonal source is not excluded.
+5. **R-act₂ has no support from the "unde" beyond restatement.** The q.7 a.1 bridge
+   also only shifts it (certified):
+   - on the role reading the content sits in "unlimited esse has every pure perfection";
+   - on the measure reading it sits in `1304b462`;
+   - a source with only being rejects whichever carries it.
+
+   De ente cap.4 supports only power-eminence for subsistent esse
+   (HAVING_EVERY_PERFECTION_1, `9a0a4951`).
+   - The impersonal-source exclusion at locus (b) needs the whole bundle: {OwnBeing,
+     `d164b1ff` read intensively (real Has), R-act₂, purity}, or the q.7 a.1 premises in
+     its place. Rejecting one member is forced; none in particular.
+   - R-act₂ itself has textual warrant only.
+   - "Keep `9a0a4951`, reject real Has" is an open logical option, with no defender on
+     file. It joins locus (b) to locus (a) of #2170, where an impersonal source is not
+     excluded.
 6. **Qualification of an existing grade.** esse-root-leaves.md grades `29e71e43`
    "P, moderate to strong" on its q.7 a.2 reading. That reading's "necesse est" rests on
    the composition step, grounded in q.4 a.1 ad 3 (§4).
@@ -368,17 +425,24 @@ These are first grades. Nothing is established or defeated in the frontier sense
   - De ente DE1 + DE4;
   - q.7 a.2 co., and thereby `29e71e43` on both its q.7 a.2 support and its new
     `ractOneFromDependence` option;
-  - `7de89edb` on the role reading;
-  - the reception framework (`7fcfcee8`, `14325c83`, `7338142d`).
-- **R-act₂** (intensive esse) has textual warrant only. Locus (b)'s
-  impersonal-source exclusion rests on it.
+  - `7de89edb` on the role reading.
+
+  The reception cluster (`7fcfcee8`, `14325c83`, `7338142d`, `1304b462`) has logically
+  distinct members, conditional or negative. Each holds vacuously where nothing is
+  received, so they share warrant with the composition step without sharing its content.
+- **R-act₂** (intensive esse) has textual warrant only. It is registered as
+  `logically_equivalent_to` `c4fb87a6` read as perfection of esse. Its q.7 a.1
+  substitute moves its content to "unlimited esse has every pure perfection" (role
+  reading) or to `1304b462` (measure reading). Locus (b)'s impersonal-source exclusion
+  rests on it together with real having (`d164b1ff`), OwnBeing and purity.
 - **Power-eminence** at subsistent esse (De ente cap.4) is the possession reading of
   PR #2166. It supports `9a0a4951`, not R-act₂.
 
 ## 9. Next discriminating test
 
-The vertical approach to R-act₁ now has one discriminating candidate left. **Formalize
-the agreement-and-difference argument** and test whether any criterion of "non-trivial
+The vertical approach to R-act₁ and R-act₂ now has one discriminating candidate left;
+the unde and the q.7 a.1 bridge both only shift the load. **Formalize the
+agreement-and-difference argument** and test whether any criterion of "non-trivial
 shared perfection" is independent of the act reading. If none is, the vertical line is
 exhausted. Then move horizontally:
 - to the degrees-of-being node (`5a948c37`, `e462cf2f`), where the quantifier view's
