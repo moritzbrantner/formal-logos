@@ -1,0 +1,66 @@
+[batch]
+vocab = "TruthCore.Causality.MutualSupportAsymmetry"
+results = "TruthCore.Results.Causality.MutualSupportAsymmetry"
+
+[[statement]]
+id = "The fixed grade is asymmetric on NECESSARY_2 candidates selected by the profile"
+lean = "NecessaryGradeAsymmetric"
+definitions = ["293d6ad6-ea47-4861-bef7-ee05eef2090a", "38b92bb6-33ae-5817-85c6-b5a1afa63bd1", "5766de66-8a37-5b04-aa65-9eec53319f50"]
+paraphrase = "Open analyst premise. Among candidates classified as concrete by the supplied profile and existing at every world accessible from w, MoreIn esse a b excludes MoreIn esse b a. No separate selected-world existence guard is built in. The comparison is the same at every admitted world. The law excludes opposite comparisons and self-comparisons on this domain, without imposing well-foundedness."
+
+[[argument]]
+id = "Asymmetric grade excludes mutual NECESSARY_2 support"
+theorem = "noMutualSupport"
+premises = ["40ce286d-b26d-4773-8a92-0a68da477414", "The fixed grade is asymmetric on NECESSARY_2 candidates selected by the profile"]
+conclusion = "47a34ac9-5496-43de-a9ac-61f688790148"
+rule = "Map opposite support edges to opposite comparisons at the same grade"
+meaning = "Take both existing source guards and both selected-relation edges from the rival at its two admitted worlds. These worlds need not be accessible from w; the two candidates satisfy the same classifier and the same NECESSARY_2 condition relative to w. The ascent hypothesis maps the two edges to opposite comparisons at esse, contradicting local asymmetry. The proof also works when the candidates or worlds coincide. Both hypotheses remain open. Excluding mutual support leaves longer cycles and infinite descent open."
+axioms = []
+
+[[argument]]
+id = "Well-founded NECESSARY_2 grades are asymmetric on the same candidates"
+theorem = "asymmetricOfWellFounded"
+comparator_theorems = ["asymmetricGradeWithoutFoundation"]
+premises = ["78945dde-2e6b-4e40-9383-ecb615208930"]
+conclusion = "The fixed grade is asymmetric on NECESSARY_2 candidates selected by the profile"
+rule = "Apply well-founded asymmetry to the same guarded grade"
+meaning = "The well-founded relation includes the same classifier and relative necessity guards on both candidates. The standard asymmetry theorem excludes opposite edges under these guards. Strictness uses a single admitted world, a roster of natural-number candidates all existing and classified as concrete, and a strict grade MoreIn esse a b defined by b < a. This grade is asymmetric and has an endless ascent."
+weakening = true
+axioms = []
+
+[[relation]]
+id = "Well-founded NECESSARY_2 grades strengthen their asymmetry"
+subject_kind = "statement"
+subject_id = "78945dde-2e6b-4e40-9383-ecb615208930"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "The fixed grade is asymmetric on NECESSARY_2 candidates selected by the profile"
+verification_result_id = "Well-founded NECESSARY_2 grades are asymmetric on the same candidates"
+note = "Strict on the same guarded grade, witnessed by asymmetricGradeWithoutFoundation in the backing Comparator configuration."
+
+[[relation]]
+id = "Asymmetric grade excludes the recorded mutual-support rival"
+subject_kind = "argument"
+subject_id = "Asymmetric grade excludes mutual NECESSARY_2 support"
+predicate = "refutes"
+object_kind = "statement"
+object_id = "12a167a4-dd1d-4f04-92e5-c22325cbbd1a"
+note = "The conclusion is exactly the negation of the rival under ascent at the two admitted worlds and asymmetry on the same candidate pair. Neither premise is established."
+
+[[relation]]
+id = "No novel support conditionally excludes the recorded mutual-support rival"
+subject_kind = "argument"
+subject_id = "a5e08c0c-1b6c-4979-8c7a-14ba5789deb8"
+predicate = "refutes"
+object_kind = "statement"
+object_id = "12a167a4-dd1d-4f04-92e5-c22325cbbd1a"
+note = "Existing verified conditional negation on the same profile. Actual reflexivity, well-founded actual grounding and no novel necessary support exclude the rival. These are open inputs."
+
+[[relation]]
+id = "Well-founded grade conditionally excludes the recorded mutual-support rival"
+subject_kind = "argument"
+subject_id = "cf9e82cd-4758-47ec-ba61-ddeaa2671747"
+predicate = "refutes"
+object_kind = "statement"
+object_id = "12a167a4-dd1d-4f04-92e5-c22325cbbd1a"
+note = "Existing verified conditional negation under rigid ascent and well-founded grade among the selected necessary candidates. For this exclusion the weaker asymmetry bundle is now available. Both existing inputs remain open."

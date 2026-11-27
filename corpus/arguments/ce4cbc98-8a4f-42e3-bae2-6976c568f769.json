@@ -1,0 +1,24 @@
+{
+  "id": "ce4cbc98-8a4f-42e3-bae2-6976c568f769",
+  "label": "Well-founded NECESSARY_2 grades are asymmetric on the same candidates",
+  "premise_statement_ids": [
+    "78945dde-2e6b-4e40-9383-ecb615208930"
+  ],
+  "conclusion_statement_id": "d0d25272-e577-4c79-8988-2954f37c076e",
+  "inference_ids": [
+    "50b46cb9-766e-4b0a-98e2-7bcbe0d02a82"
+  ],
+  "meaning": "The well-founded relation includes the same classifier and relative necessity guards on both candidates. The standard asymmetry theorem excludes opposite edges under these guards. Strictness uses a single admitted world, a roster of natural-number candidates all existing and classified as concrete, and a strict grade MoreIn esse a b defined by b < a. This grade is asymmetric and has an endless ascent.",
+  "definition_ids": [
+    "293d6ad6-ea47-4861-bef7-ee05eef2090a",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "5766de66-8a37-5b04-aa65-9eec53319f50",
+    "2100cf9a-27ed-57e9-9daa-4b94b6780fe7"
+  ],
+  "disambiguation_ids": [
+    "d16b94fa-886f-54f3-85a3-7fc0c43d2b58",
+    "5d15d8f2-1080-53c9-886f-cee2a4ff23a9"
+  ],
+  "weakening": true
+}

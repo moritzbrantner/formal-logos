@@ -1,0 +1,13 @@
+{
+  "id": "293d6ad6-ea47-4861-bef7-ee05eef2090a",
+  "label": "Asymmetry of the fixed grade on NECESSARY_2 candidates selected by the profile classifier",
+  "term": "asymmetry of the necessary-candidate grade",
+  "definition": "If each of a and b satisfies the supplied concreteness classifier and exists at every world accessible from w, then MoreIn esse a b excludes MoreIn esse b a. The comparison has no world parameter.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.MutualSupportAsymmetry.NecessaryGradeAsymmetric",
+  "definition_ids": [
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "5766de66-8a37-5b04-aa65-9eec53319f50"
+  ],
+  "note": "Analyst restriction of grade asymmetry to the given rigid necessary candidates. The supplied classifier and comparative need separate interpretation. Reverse comparisons and loops violate asymmetry; arbitrarily long or infinite nonreversing sequences can satisfy it. An ordinary strict numerical grade instantiates the structure. Application to existential grounding still requires a separately warranted ascent premise."
+}
