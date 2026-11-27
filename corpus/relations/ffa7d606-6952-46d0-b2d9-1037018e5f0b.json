@@ -6,5 +6,5 @@
   "predicate": "tests",
   "object_kind": "statement",
   "object_id": "e3c64b61-df23-410e-bb2f-b56bfb58ecd0",
-  "note": "Omission model swapped: each world has its own concrete GOD_4, so the boxed conditional, possibility and both frame conditions hold, rigidity fails and neither conclusion holds. Strictness model fixedPlusVisitor: the GOD_4 conclusion holds while rigidity fails, so the conclusion does not entail the bridge."
+  "note": "Strictness model fixedPlusVisitor for the strength order: the GOD_4 conclusion and persistence hold while rigidity fails, so persistence does not entail rigidity and the conclusion does not entail rigidity."
 }

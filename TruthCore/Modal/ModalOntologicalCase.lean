@@ -21,7 +21,8 @@ necessity: de re necessity alone does not give concreteness (#2106).
 `Box G` is de dicto: different GOD_4 concreta may witness `G` at different
 worlds (`DeDicto` of #435 with this presence). The passage to the de re
 `NecessaryAt` of one individual is the explicit open premise
-`GodPresenceRigidAt`. Neither Scott's nor the Gödel 1970 essence-based
+`GodPresencePersistsAt`; the stronger sibling `GodPresenceRigidAt` adds a
+cross-world uniqueness commitment the route does not use. Neither Scott's nor the Gödel 1970 essence-based
 `NecessaryExistence` occurs, and Gödel's `GodLike` is not used, so no
 identification of GOD_4 with a Gödel–Scott God concept is made here.
 -/
@@ -59,14 +60,41 @@ def GodNecessaryIfExistentAt (σ : Signature) (m : Profile W σ.Being) (w : W) :
 def GodPossiblyExistsAt (σ : Signature) (m : Profile W σ.Being) (w : W) : Prop :=
   PossibleExistence m.ontic.frame (GodConcreteExists σ m) w
 
-/-- The de dicto to de re bridge, anchored at the standpoint: any concrete
-GOD_4 existing at a world accessible from `w` is the same individual as any
-concrete GOD_4 existing at `w`. It asserts no existence. It does not exclude
-a GOD_4 concretum at worlds inaccessible from `w`, and it is weaker than
-uniqueness across all accessible worlds pairwise. -/
+/-- Rigidity of concrete GOD_4 presence, anchored at the standpoint: any
+concrete GOD_4 existing at a world accessible from `w` is the same individual
+as any concrete GOD_4 existing at `w`. It asserts no existence. Given
+reflexivity at `w` it entails that at most one concrete GOD_4 exists at `w`
+(`atMostOne_of_rigid`), and, if one does, that every concrete GOD_4 at an
+accessible world is that one: a cross-world uniqueness commitment. Given
+reflexivity at `w` it is weaker than pairwise identity across all worlds
+accessible from `w`; without reflexivity the two are incomparable. The route
+uses the weaker `GodPresencePersistsAt` (`persists_of_rigid`). -/
 def GodPresenceRigidAt (σ : Signature) (m : Profile W σ.Being) (w : W) : Prop :=
   ∀ v x y, m.ontic.frame.access w v → GodConcretePresent σ m x w →
     GodConcretePresent σ m y v → y = x
+
+/-- The de dicto to de re bridge used by the route: every concrete GOD_4 at
+`w` exists at every world accessible from `w` at which some concrete GOD_4
+exists. It asserts no existence and no uniqueness: other concrete GOD_4 may
+exist at `w` or at accessible worlds. -/
+def GodPresencePersistsAt (σ : Signature) (m : Profile W σ.Being) (w : W) : Prop :=
+  ∀ x, GodConcretePresent σ m x w → ∀ v, m.ontic.frame.access w v →
+    (∃ y, GodConcretePresent σ m y v) → m.ontic.ExistsAt v x
+
+/-- Rigidity entails persistence. -/
+theorem persists_of_rigid (σ : Signature) (m : Profile W σ.Being) (w : W)
+    (hRigid : GodPresenceRigidAt σ m w) : GodPresencePersistsAt σ m w := by
+  intro x hx v hv ⟨y, hy⟩
+  have hyx : y = x := hRigid v x y hv hx hy
+  exact hyx ▸ hy.2.2
+
+/-- The uniqueness consequence of rigidity: with reflexivity at `w`, at most
+one concrete GOD_4 exists at `w`. -/
+theorem atMostOne_of_rigid (σ : Signature) (m : Profile W σ.Being) (w : W)
+    (hReflexive : m.ontic.frame.access w w) (hRigid : GodPresenceRigidAt σ m w)
+    (x y : σ.Being) (hx : GodConcretePresent σ m x w) (hy : GodConcretePresent σ m y w) :
+    y = x :=
+  hRigid w x y hReflexive hx hy
 
 /-- One and the same concrete GOD_4 exists at `w` and at every world accessible
 from `w` (de re, accessibility-relative). No all-world existence, uniqueness
@@ -80,18 +108,15 @@ theorem box_iff_deDicto (σ : Signature) (m : Profile W σ.Being) (w : W) :
       DeDicto m.ontic.frame (fun x v => GodConcretePresent σ m x v) w :=
   Iff.rfl
 
-/-- With reflexivity at `w`, the rigidity bridge turns the de dicto box into
+/-- With reflexivity at `w`, the persistence bridge turns the de dicto box into
 an actual de re necessary concrete GOD_4. -/
-theorem necessaryGod_of_box_rigid (σ : Signature) (m : Profile W σ.Being) (w : W)
+theorem necessaryGod_of_box_persists (σ : Signature) (m : Profile W σ.Being) (w : W)
     (hReflexive : m.ontic.frame.access w w)
-    (hRigid : GodPresenceRigidAt σ m w)
+    (hPersists : GodPresencePersistsAt σ m w)
     (hBox : Box m.ontic.frame (GodConcreteExists σ m) w) :
     NecessaryGodConcreteAt σ m w := by
   obtain ⟨x, hx⟩ := hBox w hReflexive
-  refine ⟨x, hx.1, hx.2.1, hx.2.2, fun v hv => ?_⟩
-  obtain ⟨y, hy⟩ := hBox v hv
-  have hxy : y = x := hRigid v x y hv hx hy
-  exact hxy ▸ hy.2.2
+  exact ⟨x, hx.1, hx.2.1, hx.2.2, fun v hv => hPersists x hx v hv (hBox v hv)⟩
 
 /-! ## Finite controls -/
 
@@ -150,37 +175,39 @@ def fixedPlusVisitor : Profile Bool boolSignature.Being :=
 /-- Omission and nonvacuity controls at standpoint `false`.
 (1) `onlyHere`: every premise but `GodNecessaryIfExistentAt` holds; both conclusions fail.
 (2) `nobody`: every premise but `GodPossiblyExistsAt` holds; both conclusions fail.
-(3) `swapped`: every premise but `GodPresenceRigidAt` holds; both conclusions fail.
+(3) `swapped`: every premise but `GodPresencePersistsAt` holds; both conclusions fail.
 (4) `fixedOne`: all five premises and both conclusions hold (population: two
 candidates, one existing at both worlds).
-(5) `fixedPlusVisitor`: the GOD_4 conclusion holds while the rigidity bridge
-fails, so the conclusion does not entail the bridge. -/
+(5) `fixedPlusVisitor`: the GOD_4 conclusion and the persistence bridge hold
+while rigidity fails: the conclusion does not entail rigidity, and persistence
+is strictly weaker than rigidity. -/
 def Controls : Prop :=
   (EuclideanAt onlyHere.ontic.frame false ∧ ActualReflexive onlyHere.ontic false ∧
     GodPossiblyExistsAt boolSignature onlyHere false ∧
-    GodPresenceRigidAt boolSignature onlyHere false ∧
+    GodPresencePersistsAt boolSignature onlyHere false ∧
     ¬ GodNecessaryIfExistentAt boolSignature onlyHere false ∧
     ¬ NecessaryGodConcreteAt boolSignature onlyHere false ∧
     ¬ NecessaryConcreteAt onlyHere false) ∧
   (EuclideanAt nobody.ontic.frame false ∧ ActualReflexive nobody.ontic false ∧
     GodNecessaryIfExistentAt boolSignature nobody false ∧
-    GodPresenceRigidAt boolSignature nobody false ∧
+    GodPresencePersistsAt boolSignature nobody false ∧
     ¬ GodPossiblyExistsAt boolSignature nobody false ∧
     ¬ NecessaryGodConcreteAt boolSignature nobody false ∧
     ¬ NecessaryConcreteAt nobody false) ∧
   (EuclideanAt swapped.ontic.frame false ∧ ActualReflexive swapped.ontic false ∧
     GodNecessaryIfExistentAt boolSignature swapped false ∧
     GodPossiblyExistsAt boolSignature swapped false ∧
-    ¬ GodPresenceRigidAt boolSignature swapped false ∧
+    ¬ GodPresencePersistsAt boolSignature swapped false ∧
     ¬ NecessaryGodConcreteAt boolSignature swapped false ∧
     ¬ NecessaryConcreteAt swapped false) ∧
   (EuclideanAt fixedOne.ontic.frame false ∧ ActualReflexive fixedOne.ontic false ∧
     GodNecessaryIfExistentAt boolSignature fixedOne false ∧
     GodPossiblyExistsAt boolSignature fixedOne false ∧
-    GodPresenceRigidAt boolSignature fixedOne false ∧
+    GodPresencePersistsAt boolSignature fixedOne false ∧
     NecessaryGodConcreteAt boolSignature fixedOne false ∧
     NecessaryConcreteAt fixedOne false) ∧
   (NecessaryGodConcreteAt boolSignature fixedPlusVisitor false ∧
+    GodPresencePersistsAt boolSignature fixedPlusVisitor false ∧
     ¬ GodPresenceRigidAt boolSignature fixedPlusVisitor false)
 
 end TruthCore.Modal.ModalOntologicalCase

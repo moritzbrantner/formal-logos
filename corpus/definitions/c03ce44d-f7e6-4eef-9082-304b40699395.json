@@ -1,9 +1,9 @@
 {
   "id": "c03ce44d-f7e6-4eef-9082-304b40699395",
-  "label": "Rigidity of concrete GOD_4 presence from the standpoint (de dicto to de re bridge)",
+  "label": "Rigidity of concrete GOD_4 presence from the standpoint",
   "term": "concrete GOD_4 presence is rigid from the standpoint",
   "basis": "stipulative",
   "lean_declaration": "TruthCore.Modal.ModalOntologicalCase.GodPresenceRigidAt",
-  "definition": "GodPresenceRigidAt σ m w: for every world v accessible from w and all x, y, if x is a concrete GOD_4 existing at w and y is a concrete GOD_4 existing at v, then y = x. It asserts no existence. It is anchored at w: it constrains only the comparison with GOD_4 concreta existing at w, so it is weaker than pairwise identity across all accessible worlds, and it says nothing about worlds inaccessible from w.",
-  "note": "The explicit de dicto to de re bridge of the modal ontological route: with reflexivity at w it turns the de dicto box of GodConcreteExists into de re NecessaryAt of one individual (necessaryGod_of_box_rigid). Its positive warrant, if any, is classical theism's uniqueness of God applied across worlds together with rigid candidate identity; that warrant is not recorded here and the premise stays open. The controls show it is needed (swapped) and that the conclusion does not entail it (fixedPlusVisitor)."
+  "definition": "GodPresenceRigidAt σ m w: for every world v accessible from w and all x, y, if x is a concrete GOD_4 existing at w and y is a concrete GOD_4 existing at v, then y = x. It asserts no existence. Uniqueness consequence: given reflexivity at w, at most one concrete GOD_4 exists at w (atMostOne_of_rigid), and if one exists there, every concrete GOD_4 at an accessible world is that same individual, a cross-world uniqueness commitment. Given reflexivity at w it is weaker than pairwise identity across all worlds accessible from w; without reflexivity the two are incomparable (w not seeing itself, x only at w and y only at an accessible v satisfy pairwise identity and violate rigidity).",
+  "note": "The stronger sibling of the route's bridge GodPresencePersistsAt: rigidity entails persistence (persists_of_rigid, registered as a strength order) and the fixedPlusVisitor control shows the converse fails. The route does not use rigidity; its uniqueness content would need classical theism's uniqueness of God applied across worlds, which is not recorded here. Open; analyst formulation, attribution deferred."
 }

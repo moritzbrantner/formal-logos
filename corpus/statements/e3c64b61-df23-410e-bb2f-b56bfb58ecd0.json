@@ -1,7 +1,7 @@
 {
   "id": "e3c64b61-df23-410e-bb2f-b56bfb58ecd0",
   "label": "Concrete GOD_4 presence is rigid from the standpoint",
-  "paraphrase": "For every world v accessible from the standpoint w, any concrete GOD_4 existing at v is the same individual as any concrete GOD_4 existing at w. Asserts no existence and says nothing about worlds inaccessible from w. The de dicto to de re bridge of the modal ontological route.",
+  "paraphrase": "For every world v accessible from the standpoint w, any concrete GOD_4 existing at v is the same individual as any concrete GOD_4 existing at w. Asserts no existence and says nothing about worlds inaccessible from w. Given reflexivity at w it entails that at most one concrete GOD_4 exists at w and, if one does, that every concrete GOD_4 at an accessible world is that one: a cross-world uniqueness commitment. The stronger sibling of the persistence bridge; the route does not use it.",
   "lean_declaration": "TruthCore.Modal.ModalOntologicalCase.GodPresenceRigidAt",
   "definition_ids": [
     "c03ce44d-f7e6-4eef-9082-304b40699395",

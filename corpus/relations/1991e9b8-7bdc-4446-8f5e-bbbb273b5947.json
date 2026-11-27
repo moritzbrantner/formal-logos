@@ -1,0 +1,10 @@
+{
+  "id": "1991e9b8-7bdc-4446-8f5e-bbbb273b5947",
+  "label": "Modal ontological controls test the persistence bridge",
+  "subject_kind": "result",
+  "subject_id": "bc8eea6a-231c-473e-8bf6-e4301b057c36",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "cce5a30e-c72f-43e6-ba29-19f8be68feeb",
+  "note": "Omission model swapped: each world has its own concrete GOD_4, so the boxed conditional, possibility and both frame conditions hold, persistence fails (the GOD_4 at the standpoint is absent from the other world) and neither conclusion holds."
+}

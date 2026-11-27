@@ -6,5 +6,5 @@
   "predicate": "tests",
   "object_kind": "argument",
   "object_id": "410f8588-f2b8-48fd-87a2-8f4255f49679",
-  "note": "Nonvacuity model fixedOne satisfies every registered premise of the argument (EuclideanAt, ActualReflexive, the boxed conditional, possibility and rigidity; there are no logical premises) and its conclusion. Population: two candidates, one existing at both worlds, the other nowhere."
+  "note": "Nonvacuity model fixedOne satisfies every registered premise of the argument (EuclideanAt, ActualReflexive, the boxed conditional, possibility and persistence; there are no logical premises) and its conclusion. Population: two candidates, one existing at both worlds, the other nowhere."
 }

@@ -6,5 +6,5 @@
   "predicate": "tests",
   "object_kind": "statement",
   "object_id": "b1b17cef-ea68-4dd1-8b3e-9e28c029d289",
-  "note": "Omission model onlyHere: Euclidean and reflexive access, possibility and rigidity hold, the boxed conditional fails, and neither conclusion holds."
+  "note": "Omission model onlyHere: Euclidean and reflexive access, possibility and persistence hold, the boxed conditional fails, and neither conclusion holds."
 }

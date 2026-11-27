@@ -19,27 +19,45 @@ definitions = ["337b660c-ffd3-4316-af08-424ca641d6c9", "539443e8-0f99-4cb9-925f-
 disambiguations = ["7181df76-d6ed-5226-a34b-08910ddbe6a0"]
 
 [[statement]]
+id = "Concrete GOD_4 presence persists from the standpoint"
+lean = "GodPresencePersistsAt"
+paraphrase = "Every concrete GOD_4 existing at the standpoint w exists at every world accessible from w at which some concrete GOD_4 exists. Asserts no existence and no uniqueness: other concrete GOD_4 may exist at w or at accessible worlds. The de dicto to de re bridge of the modal ontological route."
+definitions = ["a287fbf6-eef6-4588-8ea9-ecf8e44581e1", "c9576df7-8e9e-4ecc-a031-cc1560c733d9", "f8948e28-b13a-5244-95f1-41a05cd4fff2", "88f9f6e8-997b-5f7d-afa1-c501954c3807", "beb654a7-e204-5f4c-a7b4-45e886ba7109"]
+
+[[statement]]
 id = "Concrete GOD_4 presence is rigid from the standpoint"
 lean = "GodPresenceRigidAt"
-paraphrase = "For every world v accessible from the standpoint w, any concrete GOD_4 existing at v is the same individual as any concrete GOD_4 existing at w. Asserts no existence and says nothing about worlds inaccessible from w. The de dicto to de re bridge of the modal ontological route."
+paraphrase = "For every world v accessible from the standpoint w, any concrete GOD_4 existing at v is the same individual as any concrete GOD_4 existing at w. Asserts no existence and says nothing about worlds inaccessible from w. Given reflexivity at w it entails that at most one concrete GOD_4 exists at w and, if one does, that every concrete GOD_4 at an accessible world is that one: a cross-world uniqueness commitment. The stronger sibling of the persistence bridge; the route does not use it."
 definitions = ["c03ce44d-f7e6-4eef-9082-304b40699395", "c9576df7-8e9e-4ecc-a031-cc1560c733d9", "f8948e28-b13a-5244-95f1-41a05cd4fff2", "88f9f6e8-997b-5f7d-afa1-c501954c3807", "beb654a7-e204-5f4c-a7b4-45e886ba7109"]
 
 [[statement]]
 id = "Modal ontological case omission, nonvacuity and strictness controls"
 lean = "Controls"
-paraphrase = "In two-world, two-candidate models whose frame is reflexive and Euclidean and where both candidates are GOD_4 and concrete: omitting the boxed conditional, the possibility premise or the rigidity bridge (each other premise holding) leaves both the GOD_4 de re necessity (NecessaryGodConcreteAt) and NecessaryConcreteAt false; with all five premises both hold; and NecessaryGodConcreteAt can hold while the rigidity bridge fails. Formal models only."
-definitions = ["c9576df7-8e9e-4ecc-a031-cc1560c733d9", "539443e8-0f99-4cb9-925f-fb522d3cc042", "a09a6897-aec8-45f2-8cfe-5ae7bab3b8d4", "337b660c-ffd3-4316-af08-424ca641d6c9", "c03ce44d-f7e6-4eef-9082-304b40699395", "57a59849-0854-494d-b3ef-34942dd11812"]
+paraphrase = "In two-world, two-candidate models whose frame is reflexive and Euclidean and where both candidates are GOD_4 and concrete: omitting the boxed conditional, the possibility premise or the persistence bridge (each other premise holding) leaves both the GOD_4 de re necessity (NecessaryGodConcreteAt) and NecessaryConcreteAt false; with all five premises both hold; and NecessaryGodConcreteAt and persistence can hold while rigidity fails. Formal models only."
+definitions = ["c9576df7-8e9e-4ecc-a031-cc1560c733d9", "539443e8-0f99-4cb9-925f-fb522d3cc042", "a09a6897-aec8-45f2-8cfe-5ae7bab3b8d4", "337b660c-ffd3-4316-af08-424ca641d6c9", "a287fbf6-eef6-4588-8ea9-ecf8e44581e1", "c03ce44d-f7e6-4eef-9082-304b40699395", "57a59849-0854-494d-b3ef-34942dd11812"]
 
 [[argument]]
 id = "Modal ontological argument on the case profile gives a necessary concretum"
 theorem = "necessaryConcreteOfModal"
-premises = ["1b1462e6-c285-448c-87e2-3053bc05a341", "2b20b5af-d653-56ba-8001-35903fb3d1ea", "Concrete GOD_4 is necessary if existent at the standpoint", "Possibly some concrete GOD_4 exists at the standpoint", "Concrete GOD_4 presence is rigid from the standpoint"]
+premises = ["1b1462e6-c285-448c-87e2-3053bc05a341", "2b20b5af-d653-56ba-8001-35903fb3d1ea", "Concrete GOD_4 is necessary if existent at the standpoint", "Possibly some concrete GOD_4 exists at the standpoint", "Concrete GOD_4 presence persists from the standpoint"]
 conclusion = "b19ffd92-01bd-5c0b-9643-e7407137ea5e"
 axioms = []
-rule = "Possibility, boxed conditional and Euclidean access give the de dicto box; reflexivity and the rigidity bridge fix one individual"
-meaning = "On one case signature σ, profile m and standpoint w. All five inputs are supplied premises; nothing is derived about them. The possibility premise gives an accessible world v with a concrete GOD_4. The boxed conditional at w makes G (some concrete GOD_4 exists) necessary at v. Euclidean access at w only (1b1462e6) gives v access to every world accessible from w, so G holds at all of them: a de dicto box, whose witnesses may differ. Reflexivity at w (2b20b5af) gives a concrete GOD_4 x existing at w, and the rigidity bridge identifies every GOD_4 witness at an accessible world with x, so x exists at every accessible world. The conclusion NecessaryConcreteAt (b19ffd92) takes that same x with its concreteness, existence at w and NecessaryAt at w; x's GOD_4-hood is used to apply the bridge but is not part of the conclusion. Concreteness and GOD_4-hood come only from the possibility premise. Neither Scott's nor Gödel's NecessaryExistence is used, so no Gödel–Scott sense or God concept is identified with GOD_4. No excluded middle. SuccessorConnected (0523281a) is the exact frame condition for the forward escalation over all G; EuclideanAt is used because it is already a root-path premise and the proof needs only one successor step. The controls show each of the three new premises is needed and that the conclusion does not entail the bridge."
-description = "The modal ontological argument on the case profile: possibility, the boxed necessary-if-existent conditional and selected-world Euclidean access give a de dicto box of concrete GOD_4 existence; reflexivity and the explicit rigidity bridge make it one de re necessary concrete GOD_4, which witnesses the root-path NecessaryConcreteAt. Conditional on all five premises."
-sense_bridges = [{ term = "NECESSARY", from = "NECESSARY_11", to = "NECESSARY_2", statement_id = "Concrete GOD_4 presence is rigid from the standpoint", role = "premise" }]
+rule = "Possibility, boxed conditional and Euclidean access give the de dicto box; reflexivity and the persistence bridge fix one individual"
+meaning = "On one case signature σ, profile m and standpoint w. All five inputs are supplied premises; nothing is derived about them. The possibility premise gives an accessible world v with a concrete GOD_4. The boxed conditional at w makes G (some concrete GOD_4 exists) necessary at v. Euclidean access at w only (1b1462e6) gives v access to every world accessible from w, so G holds at all of them: a de dicto box, whose witnesses may differ. Reflexivity at w (2b20b5af) gives a concrete GOD_4 x existing at w, and the persistence bridge makes x exist at every accessible world, because the box supplies some concrete GOD_4 there. The conclusion NecessaryConcreteAt (b19ffd92) takes that same x with its concreteness, existence at w and NecessaryAt at w; x's GOD_4-hood is used to apply the bridge but is not part of the conclusion. Concreteness and GOD_4-hood come only from the possibility premise. The bridge assumes no uniqueness; the stronger rigidity sibling is registered as strengthening it and is not used. Neither Scott's nor Gödel's NecessaryExistence is used, so no Gödel–Scott sense or God concept is identified with GOD_4. No excluded middle. SuccessorConnected (0523281a) is the exact frame condition for the forward escalation over all G; EuclideanAt is used because it is already a root-path premise and the proof needs only one successor step. The controls show each of the three new premises is needed and that the conclusion does not entail rigidity."
+description = "The modal ontological argument on the case profile: possibility, the boxed necessary-if-existent conditional and selected-world Euclidean access give a de dicto box of concrete GOD_4 existence; reflexivity and the explicit persistence bridge make it one de re necessary concrete GOD_4, which witnesses the root-path NecessaryConcreteAt. Conditional on all five premises."
+sense_bridges = [{ term = "NECESSARY", from = "NECESSARY_11", to = "NECESSARY_2", statement_id = "Concrete GOD_4 presence persists from the standpoint", role = "premise" }]
+
+[[argument]]
+id = "Rigidity of concrete GOD_4 presence gives persistence"
+theorem = "persistsOfRigid"
+premises = ["Concrete GOD_4 presence is rigid from the standpoint"]
+conclusion = "Concrete GOD_4 presence persists from the standpoint"
+axioms = []
+transcription = "instantiation"
+weakening = true
+rule = "Instantiate persists_of_rigid"
+meaning = "Same signature, profile and standpoint. If x is a concrete GOD_4 at w and some concrete GOD_4 y exists at an accessible v, rigidity gives y = x, so x exists at v. The backing result of the strength order rigidity strengthens persistence; the fixedPlusVisitor control shows the converse fails. Declared an instantiation of the vocabulary lemma."
+description = "Strength order backing result (instantiation): rigidity of concrete GOD_4 presence entails the persistence bridge."
 
 [[argument]]
 id = "Modal ontological case controls"
@@ -48,8 +66,19 @@ premises = []
 conclusion = "Modal ontological case omission, nonvacuity and strictness controls"
 axioms = ["propext", "Classical.choice", "Quot.sound"]
 rule = "Evaluate the five finite models by simp"
-meaning = "Premise-free finite models at standpoint false of two-world, two-candidate profiles with universal access (reflexive and Euclidean), every candidate GOD_4 and concrete (category-constant). onlyHere omits the boxed conditional, nobody omits possibility, swapped omits rigidity; each keeps the other four premises and falsifies both conclusions. fixedOne satisfies all five premises and both conclusions (one candidate at both worlds, the other nowhere). fixedPlusVisitor satisfies the GOD_4 conclusion and falsifies rigidity. Models witness only their formal interpretation."
-description = "Omission controls for the boxed conditional, possibility and rigidity premises, a nonvacuity model of the whole argument, and a model where the conclusion holds without the rigidity bridge."
+meaning = "Premise-free finite models at standpoint false of two-world, two-candidate profiles with universal access (reflexive and Euclidean), every candidate GOD_4 and concrete (category-constant). onlyHere omits the boxed conditional, nobody omits possibility, swapped omits persistence; each keeps the other four premises and falsifies both conclusions. fixedOne satisfies all five premises and both conclusions (one candidate at both worlds, the other nowhere). fixedPlusVisitor satisfies the GOD_4 conclusion and persistence and falsifies rigidity. Models witness only their formal interpretation."
+description = "Omission controls for the boxed conditional, possibility and persistence premises, a nonvacuity model of the whole argument, and a strictness model where persistence holds and rigidity fails."
+
+[[relation]]
+id = "Concrete GOD_4 rigidity strengthens persistence from the standpoint"
+subject_kind = "statement"
+subject_id = "Concrete GOD_4 presence is rigid from the standpoint"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "Concrete GOD_4 presence persists from the standpoint"
+verification_result_id = "Rigidity of concrete GOD_4 presence gives persistence"
+strictness_result_id = "Modal ontological case controls"
+note = "Same signature, profile and standpoint. Rigidity identifies every accessible concrete GOD_4 with every concrete GOD_4 at w; persistence only requires each concrete GOD_4 at w to exist wherever some concrete GOD_4 exists. The difference is the cross-world uniqueness content (with reflexivity, at most one concrete GOD_4 at w). fixedPlusVisitor satisfies persistence and violates rigidity."
 
 [[relation]]
 id = "Modal ontological controls test the boxed conditional"
@@ -58,7 +87,7 @@ subject_id = "Modal ontological case controls"
 predicate = "tests"
 object_kind = "statement"
 object_id = "Concrete GOD_4 is necessary if existent at the standpoint"
-note = "Omission model onlyHere: Euclidean and reflexive access, possibility and rigidity hold, the boxed conditional fails, and neither conclusion holds."
+note = "Omission model onlyHere: Euclidean and reflexive access, possibility and persistence hold, the boxed conditional fails, and neither conclusion holds."
 
 [[relation]]
 id = "Modal ontological controls test the possibility premise"
@@ -67,7 +96,16 @@ subject_id = "Modal ontological case controls"
 predicate = "tests"
 object_kind = "statement"
 object_id = "Possibly some concrete GOD_4 exists at the standpoint"
-note = "Omission model nobody: Euclidean and reflexive access, the boxed conditional and rigidity hold vacuously, possibility fails, and neither conclusion holds."
+note = "Omission model nobody: Euclidean and reflexive access, the boxed conditional and persistence hold vacuously, possibility fails, and neither conclusion holds."
+
+[[relation]]
+id = "Modal ontological controls test the persistence bridge"
+subject_kind = "result"
+subject_id = "Modal ontological case controls"
+predicate = "tests"
+object_kind = "statement"
+object_id = "Concrete GOD_4 presence persists from the standpoint"
+note = "Omission model swapped: each world has its own concrete GOD_4, so the boxed conditional, possibility and both frame conditions hold, persistence fails (the GOD_4 at the standpoint is absent from the other world) and neither conclusion holds."
 
 [[relation]]
 id = "Modal ontological controls test the rigidity bridge"
@@ -76,7 +114,7 @@ subject_id = "Modal ontological case controls"
 predicate = "tests"
 object_kind = "statement"
 object_id = "Concrete GOD_4 presence is rigid from the standpoint"
-note = "Omission model swapped: each world has its own concrete GOD_4, so the boxed conditional, possibility and both frame conditions hold, rigidity fails and neither conclusion holds. Strictness model fixedPlusVisitor: the GOD_4 conclusion holds while rigidity fails, so the conclusion does not entail the bridge."
+note = "Strictness model fixedPlusVisitor for the strength order: the GOD_4 conclusion and persistence hold while rigidity fails, so persistence does not entail rigidity and the conclusion does not entail rigidity."
 
 [[relation]]
 id = "Modal ontological controls test the whole argument"
@@ -85,4 +123,4 @@ subject_id = "Modal ontological case controls"
 predicate = "tests"
 object_kind = "argument"
 object_id = "Modal ontological argument on the case profile gives a necessary concretum"
-note = "Nonvacuity model fixedOne satisfies every registered premise of the argument (EuclideanAt, ActualReflexive, the boxed conditional, possibility and rigidity; there are no logical premises) and its conclusion. Population: two candidates, one existing at both worlds, the other nowhere."
+note = "Nonvacuity model fixedOne satisfies every registered premise of the argument (EuclideanAt, ActualReflexive, the boxed conditional, possibility and persistence; there are no logical premises) and its conclusion. Population: two candidates, one existing at both worlds, the other nowhere."
