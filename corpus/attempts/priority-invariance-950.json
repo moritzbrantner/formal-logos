@@ -46,7 +46,7 @@
   },
   "workers": [
     {
-      "role": "research worker",
+      "role": "author",
       "provider": "codex",
       "model": "gpt-6.2-sol",
       "effort": "high",
