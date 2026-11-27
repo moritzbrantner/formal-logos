@@ -1,0 +1,59 @@
+{
+  "id": "d6bcce8a-1d42-463b-99f3-8d8e44d96fd4",
+  "label": "Does an impersonal source explain the actual selection or only a permitted range?",
+  "statement_ids": [
+    "0050b6ed-3c7d-4d6a-b97a-417837d76184",
+    "608a262d-08fe-4dfd-9413-67e2ecf35b84",
+    "66aecdd7-ea4e-55c6-9377-10db08893854",
+    "a8dedf3f-8890-460f-b50c-47f06198bdac",
+    "6fdd3f60-5c3d-4251-8d91-bdceb7e2f419"
+  ],
+  "date": "2026-11-27",
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "See docs/notes/optimal-creation-choice.md sections 59-64 (#2145 Lane 2). Verified results: 54e1279c (choice-cell determination laws: an invariant explanans explains exactly the realized range; selecting a contingent outcome requires a contingent explanans level that no invariant level sees to; the standard reads only cells (law 7, definitional) and any outcome-fine level meets it (law 8); the #1953 decomposition), f66e83d4 (matched four-frame table: necessary manifestation, invariant D-range frame, permissive frame, exercise frame; account assignments are interpretive), 72c06088 (giving-level omission scopes strictly ordered; a necessarily productive source excludes giving-level total refraining and can permit individual and replacement omission (witnessed in models; Van Cleve's frame shows replacement need not be permitted); a fixed giver gives each recipient wherever it exists; the section 56 replacement table certified with ActualAbsenceByWithholding; STIT controls pointwiseNotJoint and tiedNoEmptyChoice registered), cdde5406 (the #1953 complete-decision fork with Mathlib Maximal: an undominated-decision policy with a creation above omission never chooses omission, yet can avoid each creation), adb23c1c (0050b6ed from the world-level total-noncreation power a8dedf3f, Euclidean access 62b4a40a and monotone powers 6fdd3f60), 44e8200e (a8dedf3f and 0050b6ed independent as typed; only the bundle with both bridges is stronger; each bridge needed, the Euclidean control with a necessary holder). Finding: the determination standard on cells does not discriminate selection from re-description, so the selection step stays open. Decision: 0050b6ed needs only the replacement scope. Semantic challenge at 249d18648 found 5 P1 and 8 P2 issues, repaired at 0d64316aa; the targeted re-check at 0d64316aa accepted all six registered steps with no remaining P1.",
+  "blocker": "Not blocked for the assigned formal questions. The determination standard on choice cells is met by any outcome-fine level, so it cannot separate rational adoption, actualization, generative exercise or a bare re-description of the outcome. A discriminating test needs a standard individuating the explanans independently of the outcome partition, or pro tanto favouring by apprehended content (connects to the Investigation 2 finite-measure test), a warranted permission boundary that makes omission undominated, or the #1380 supervenience obligation of a knowing invariant source.",
+  "evidence": [
+    "54e1279c-543d-4cfe-8811-5a66a3a33216",
+    "f66e83d4-aab0-4a64-8331-712f427355b4",
+    "72c06088-c632-47eb-a1ed-38fbcd2c4c64",
+    "cdde5406-3265-401b-a2eb-f2a1defc91ed",
+    "adb23c1c-92c9-4810-8883-c0b66f04cd8d",
+    "44e8200e-ec3f-4cda-8900-506e291e1240",
+    "PR-2154"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "anthropic",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "date": "2026-11-27",
+      "pr": "PR-2154"
+    },
+    {
+      "role": "repair",
+      "provider": "anthropic",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "date": "2026-11-27",
+      "pr": "PR-2154"
+    }
+  ],
+  "current_assessment": {
+    "date": "2026-11-27",
+    "statement_ids": [
+      "0050b6ed-3c7d-4d6a-b97a-417837d76184",
+      "608a262d-08fe-4dfd-9413-67e2ecf35b84"
+    ],
+    "scope": "Range versus actual selection under one determination standard; omission scope of the GOD_4 joint-absence power",
+    "assessment": "Under the determination standard on choice cells (SELECTING_AN_OUTCOME_2), invariant levels of any account explain exactly the range, and a contingent selection is met only by an outcome-fine level, trivially; so this standard does not discriminate and the selection step remains open, with favouring and apprehended content untested. 0050b6ed needs only the replacement scope; as typed, with PowerFor free, a structural surrogate satisfies it with a necessarily productive source, and the will routes discriminate through their other premises (fdd2b1cf, 65e0179f; a065c332, a9776d21).",
+    "next_test": "Find a selection standard that individuates the explanans independently of the outcome partition, or test pro tanto favouring by apprehended content (Investigation 2 finite-measure test); test a warranted permission boundary that makes omission undominated.",
+    "note": "docs/notes/optimal-creation-choice.md#range-selection-and-omission-scope-under-one-standard-2145-2026-11-27",
+    "reviewed_revision": "0d64316aa8632f765573a0f194e2f16444075815",
+    "review": "accepted_qualified",
+    "publication": "unpublished",
+    "evidence": "Draft PR-2154. The six results passed the focused Lean build, binding check, Comparator and NanoDa. Independent semantic challenge at 249d18648c7cb6bdcc2856bbb6a17a4d30bbf28e (5 P1, 8 P2) was repaired at 0d64316aa8632f765573a0f194e2f16444075815; the targeted re-check at 0d64316aa accepted all six registered steps with no remaining P1. The final commit changes only review-state text and wording, with no Lean declaration or proof change (laws 1 and 5 credited for the 'only'; the TOTAL_REFRAINING resolution; Codex wording on permitted scopes and tied-output omission).",
+    "supersedes": "None. It specifies the selection and omission-scope comparison of sections 39, 56 and 57 without revising their overall judgments."
+  }
+}

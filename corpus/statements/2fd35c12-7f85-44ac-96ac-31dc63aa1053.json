@@ -1,0 +1,13 @@
+{
+  "id": "2fd35c12-7f85-44ac-96ac-31dc63aa1053",
+  "label": "Four-account table: manifestation selects without contingency; ranges; contingent exercises",
+  "paraphrase": "Analyst formulation on one finite carrier: four candidate outcomes (total omission none, D-realizing creations c and d, unfit creation z), actual outcome c, two explanatory levels of one source (nature: one cell; exercise: cells equal to the outcome partition). Necessary manifestation (scope c only): its nature excludes none, z and d and selects c, and c is not contingent. Invariant D-range source (scope c, d): its nature excludes none and z but not d, does not select, and c is contingent. Invariant permissive source (scope none, c, d): its nature excludes z but not none. Exercise frame (scope c, d): its exercise level selects c, c is contingent, the exercise level deliberatively sees to its own cell, the nature level does not see to that cell, and the nature level does not exclude d. Permissive exercise frame (scope none, c, d): the exercise level excludes none, the nature level does not, and the exercise level deliberatively sees to its own cell. Which philosophical account each frame represents (impersonal propensity, generative finality or standing will for the invariant D-range frame; rational adoption, propensity actualization or generative exercise for the exercise frame) is an interpretive assignment, not typed. Finite structural surrogates; no intellect, apprehension, chance measure or goodness is typed.",
+  "lean_declaration": "TruthCore.Causality.SelectionScope.FourAccountTable",
+  "definition_ids": [
+    "5a818c39-1ba6-4cce-adf6-246d1d49fd1e",
+    "9e9af2c4-5938-4204-859b-fcf78d485e20"
+  ],
+  "disambiguation_ids": [
+    "59b60fe6-1bfe-512f-a90c-17416218bba4"
+  ]
+}
