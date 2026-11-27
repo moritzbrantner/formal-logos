@@ -1,0 +1,27 @@
+{
+  "id": "b07f01e7-28c3-4b49-8ea1-c993e39873a1",
+  "label": "Objective probability law, realization and productive grounding boundary",
+  "paraphrase": "Two normalized binary physical outcome PMFs have positive mass on both outcomes, differ on the true outcome (3/4 vs 1/4), and assign nonzero IID likelihood to every finite record. Matched operative contexts retain the same admitted outcomes, record and credence but differ in physical law; the same mathematical law is also represented without operative realization. The law is fixed by its explicit selector, not a constant description. An exact law fact is contingent in the matched arena; it violates contingent-fact PSR if no reason is admitted, and a true admitted base reason does not fix the law. Generally an actual law fact represented by an operative distribution differing at an accessible operative rival is contingent, hence has an admitted reason under contingent-fact PSR. Essential-description determination forces distinct descriptions at operative different-law contexts. Attaching the same PMF to existing actual single and chain target2 exercises does not determine productive Supply. Given an actual concrete law realizer, complete cone foundation, local contingent dependence and excluded middle, the same realizer has a necessary concrete root ancestor by the existing selected-ancestry theorem. Neither real-world applicability, a law-realizing causal ground of the exact distribution, nor personal agency is established.",
+  "lean_declaration": "TruthCore.Explanation.ObjectiveProbability.Certificate",
+  "definition_ids": [
+    "32ab2937-0d02-452d-86cf-0113c6d50ed7",
+    "3f7a62b4-76d9-4621-adc4-b8c5c810b202",
+    "d84f1b39-397f-4b80-b3b6-4201e37d3100",
+    "7ec53aa6-58ba-4a82-b55d-ad53435f03cb",
+    "c9574404-a0e5-4a88-a24f-60b87e41d226",
+    "cf2d9a1c-3b66-5bd1-9b30-a29b21d32969",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "9c6e4314-2e35-52ff-951e-db752a3c8ce2",
+    "99f27f99-cf28-58bb-9e08-eb3fe8e752c1",
+    "c86cc1d1-c09f-5296-8ab9-2e5ddf217dce",
+    "c57e2682-08e6-527e-950f-0fa0a7ff11ef",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "e1ff44df-ed97-5990-8424-1abd720f23ea"
+  ],
+  "disambiguation_ids": [
+    "a236004c-7bef-5ecb-a3b6-7ab5b25ce654",
+    "c529e8d3-43e3-53a8-a82f-3955e9815265",
+    "6e92c6e3-edf0-5d7e-b2b3-788b24b8b768",
+    "7507d645-874d-5434-add8-2f49c2801d36"
+  ]
+}

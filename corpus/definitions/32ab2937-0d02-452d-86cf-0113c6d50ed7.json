@@ -1,0 +1,9 @@
+{
+  "id": "32ab2937-0d02-452d-86cf-0113c6d50ed7",
+  "label": "Physical probability profile",
+  "term": "physical probability profile",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Explanation.ObjectiveProbability.LawProfile",
+  "definition": "A mathematical PMF of physical outcomes assigned at each context, separate from credence, observed record, admitted outcomes, and primitive actual operative status.",
+  "note": "No probability on context indices, no assumption that a PMF acts as a cause. Actual propensity interpretation is open."
+}

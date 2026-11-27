@@ -1,0 +1,29 @@
+{
+  "id": "cf82ce06-6a8a-4dc1-9b0d-582e2036c993",
+  "label": "Objective probability law as a distinct cosmological explanandum",
+  "statement_ids": [
+    "b07f01e7-28c3-4b49-8ea1-c993e39873a1",
+    "4c1de755-a0ad-5536-bfc8-db3fa6c57126",
+    "177b9b54-212d-5162-b288-d0cb70899f3d",
+    "aa6a9f58-a800-50ca-aa74-201d13efbbe4"
+  ],
+  "date": "2026-11-27",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "Candidate Lean certificate extends PSRLaterAxes and the selected actual-concrete ancestry argument, without assuming probabilities over metaphysical worlds. #2142 at 77bbab66 is draft with failed CI; no dependency imported. Main CI 45957495671 was still running; preceding successful main CI 45954588956 at d97e6a0d differs in Lean inputs only by NamedRootStructuralAttributes and its aggregators, not the reused modules or toolchain. Matched binary laws and a common finite record test exact law determination; the separate operative bit is a formal realization control, not a metaphysical counterexample. Brute law preserves law-data but rejects contingent-fact PSR if law contingency is granted. Dispositional essentialism survives if a complete intrinsic nature fixes the law: then the nature's actuality, not bare mathematical parameters, is the relevant grounding target. A mathematical necessitarian must connect abstract structure to concrete realization; a Humean frequency account can summarize a whole mosaic but finite records do not identify the generating law, and the actuality/order of the mosaic remains the target of existing whole-history research. A personal source may intentionally realize a law, but intention alone is not a specified distribution-fixing reason; no stochastic selection of metaphysical worlds is needed. Provisional judgment: objective probabilistic order sharpens the actual-law and actual-realizer explananda; the strongest conditional route is the existing necessary-root argument applied to an actual concrete realizer with cone foundation and contingent dependence. A bridge showing that the necessary source itself grounds the precise propensity, and the existing intellect/will and same-witness divine-profile conditions, remain separate. No warranted metaphysical contingency inferred from the matched formal contexts. No new root edge claimed. Author did not run repository CLI, worker preflight, local Lean, Comparator/NanoDa or independent semantic challenge; no verified status claimed.",
+  "evidence": [
+    "b0dd0673-74b8-47e6-9573-649f10630b9d",
+    "43d045d9-9713-5539-9054-8b1a52290d04",
+    "ef1815c4-25cc-5cbc-9ac5-3a64e9b7df65",
+    "PR-2142"
+  ],
+  "blocker": "Run focused Lean build, truth related/semantics/dossier, binding, Comparator, NanoDa, computed frontier diff and independent semantic review. Then assess a physical actual-realizer witness and same-source precise-law grounding, against the strongest essentialist and mathematical rivals.",
+  "workers": [
+    {
+      "role": "author",
+      "provider": "openai",
+      "model": "GPT-6.2",
+      "date": "2026-11-27"
+    }
+  ]
+}

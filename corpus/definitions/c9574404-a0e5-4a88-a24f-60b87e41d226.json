@@ -1,0 +1,9 @@
+{
+  "id": "c9574404-a0e5-4a88-a24f-60b87e41d226",
+  "label": "Reason determines an operative law",
+  "term": "reason determines an operative law",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Explanation.ObjectiveProbability.FixesLaw",
+  "definition": "Every accessible operative context where the reason holds has the same propensity as the designated context.",
+  "note": "This is determination of law parameters, not necessitation of outcomes. Admitted explanatory relations need not meet it."
+}

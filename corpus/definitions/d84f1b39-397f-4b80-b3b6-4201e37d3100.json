@@ -1,0 +1,9 @@
+{
+  "id": "d84f1b39-397f-4b80-b3b6-4201e37d3100",
+  "label": "Exact obtaining of a probability law",
+  "term": "exact obtaining of a probability law",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Explanation.ObjectiveProbability.RepresentsLaw",
+  "definition": "A fact holds at a context exactly when a supplied law is operative there and its propensity equals the specified mathematical distribution.",
+  "note": "This is a semantic application bridge, not reification of probability as a concrete being."
+}

@@ -1,0 +1,10 @@
+{
+  "id": "1495ab84-1ec4-4dc9-8e17-8ae86b6f8236",
+  "label": "Construct matched law models and apply existing selected ancestry",
+  "input_statement_ids": [],
+  "output_statement_id": "b07f01e7-28c3-4b49-8ea1-c993e39873a1",
+  "rule": "model-construction",
+  "meaning": "Normalize binary laws; prove full point support, positive likelihood for every finite IID record and unequal mass. Separate physical and epistemic data in matched contexts. Instantiate the existing Arena and derive the PSR and fixed-description implications. Reuse the single/chain actual exercise Supply and necessaryRootAncestor results, retaining their exact application assumptions.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

@@ -1,0 +1,11 @@
+{
+  "id": "b0dd0673-74b8-47e6-9573-649f10630b9d",
+  "label": "Objective probability law, realization and productive grounding boundary",
+  "argument_id": "9b1d7b14-6e3d-44c4-bd0a-7131cd9a01e1",
+  "challenge_module": "TruthCore.Results.Explanation.ObjectiveProbability.Challenge",
+  "solution_module": "TruthCore.Results.Explanation.ObjectiveProbability.Solution",
+  "theorem": "TruthCore.Results.Explanation.ObjectiveProbability.certificate",
+  "comparator_config": "results/b0dd0673-74b8-47e6-9573-649f10630b9d/comparator.json",
+  "status": "solution-present",
+  "description": "Candidate closed controls and conditional applications of existing PSR, productive Supply and actual-concrete ancestry. No independent premise discharge; verification pending."
+}
