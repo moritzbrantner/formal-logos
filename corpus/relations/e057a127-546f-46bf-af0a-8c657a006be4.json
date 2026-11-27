@@ -1,0 +1,38 @@
+{
+  "id": "e057a127-546f-46bf-af0a-8c657a006be4",
+  "label": "Member grounding over sufficiency: certified difference",
+  "subject_kind": "statement",
+  "subject_id": "6bba8431-d3f7-47f5-85cf-8c69d32b082f",
+  "predicate": "strength_comparison",
+  "object_kind": "statement",
+  "object_id": "63e88cef-e95b-4350-a0e2-4107e51caa90",
+  "comparison_spec": "TruthCore.Causality.RootPerfectionIntellect.mgOverSufficiency",
+  "delta_statement_id": "89c988d9-34b2-4aee-9e1a-bf4a304c032b",
+  "background_statement_ids": [],
+  "evidence_result_ids": {
+    "equivalence": "bae83585-0656-4bde-aff5-9d45bc3d70ea",
+    "implication": "65990bb6-edc0-43e1-910b-92e474fba70c"
+  },
+  "separator": {
+    "setting": "TruthCore.Causality.RootPerfectionIntellect.Control.strictSetting",
+    "result_id": "d6bfcd0d-d172-46ef-9b55-3183678903e0"
+  },
+  "statement_parameter_indices": {
+    "stronger": [
+      0,
+      1,
+      2
+    ],
+    "weaker": [
+      0,
+      1,
+      2
+    ],
+    "delta": [
+      0,
+      1,
+      2
+    ]
+  },
+  "note": "Difference of member grounding over its sufficiency direction: member grounding adds exactly that every admissible profile is exclusion-free (the necessity direction). No background. The separator is a finite interpretation."
+}
