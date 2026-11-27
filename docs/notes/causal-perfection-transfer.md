@@ -7830,7 +7830,9 @@ world already secures the presupposition. The contingency restriction is
 therefore set by the mechanism itself. A Della Rocca-style charge that stopping
 at contingent facts is arbitrary (the `Selective` standing of #756) does not
 apply to an inquiry-based PSR: the feature that draws its line, contingency,
-is the feature on which the argument's force depends.
+is the feature on which the argument's force depends. In #756 terms the
+inquiry PSR is `Restricted` relative to contingency, and clause 2 shows that
+this line is not drawn by having a reason.
 
 Clause 5: on the profile's frame, with lack facts represented and N, every
 lack of an actual root is necessary and not contingent. Together with clause
@@ -7856,8 +7858,9 @@ keeps factivity, necessitation, distribution (under the conjunct law),
 contingent irreflexivity and reason independence. So a demand to extend the
 PSR's scope to necessary root facts, made uniform in the admitted sense, costs
 the impersonal rival nothing: clause 10 is the rival with profile `{esse, a,
-b}` meeting N, the lack facts, `FactPSR` at both worlds, every quality
-condition, every #756 bridge and `GlobalDefeatUnreasoned`, with support from
+b}` meeting N, the lack facts, `FactPSR` at both worlds with factive,
+distributing, contingently irreflexive and independent (not necessitating)
+reasons, every #756 bridge and `GlobalDefeatUnreasoned`, with support from
 the observed event for its lack of noesis, while E and the sense bridge fail.
 
 The quality conditions that would exclude such cheap reasons are scoped to
@@ -7919,10 +7922,12 @@ inference nor E.
 **The reasoning by which the root's other attributes are inferred.**
 Candidate (b). In the graph, E is a premise only of the two arguments for
 "every actual root has every pure perfection" (`fe67d766`: `31c791ab`,
-`d3051570`). The attributes the impersonal rival accepts (necessary
-existence, simplicity, pure act, own being) are derived without E. Rejecting E
-therefore undermines no inference the rival itself uses. No self-undermining
-charge is available on the present graph.
+`d3051570`; `truth semantics` on `9281317d`). The attributes the impersonal
+rival accepts (necessary existence, simplicity, pure act, own being) are not
+conclusions of either argument, and `fe67d766` is a thesis the rival rejects,
+so whatever graph routes support those attributes do not run through E.
+Rejecting E undermines no inference the rival itself uses. No
+self-undermining charge is available on the present graph.
 
 ### E. A horizontal route: E without N or EM, and the symmetric test
 
@@ -7935,8 +7940,9 @@ assumed directly.
 
 This route differs from lane E's route `4fef9522` in two ways:
 
-- It needs neither N (`906f9077`) nor EM (`f6f956a1`), so it is open to a
-  powers theorist who rejects essence-grounded modality.
+- It needs neither N (`906f9077`) nor EM (`f6f956a1`). A powers theorist who
+  rejects essence-grounded modality is not thereby barred from it; whether the
+  powers account supplies XN is next test 2.
 - It does not cost the classical root N. In `essentialExclusionControls` row
   5, lane E's selection carrier (every pure determination, a selection read as
   a real intrinsic determination that varies across worlds, each selection
@@ -7974,7 +7980,7 @@ admissibility.
 The negation of E keeps the rival's lack of noesis as case (iii). Against the
 inquiry routes the rival must deny one of:
 
-| Premise | Impersonal root lacking noesis (case iii) | Classical root (every pure perfection) | Independent motivation for the denial |
+| Premise | Impersonal root lacking noesis (case iii) | Classical root (every pure perfection) | Motivation for denying it |
 | --- | --- | --- | --- |
 | PSR for root lack facts | not needed: the rival meets it with admitted reasons (clause 10) | meets it the same way | none needed |
 | lack facts | not needed | not needed | none |

@@ -28,8 +28,8 @@ Three gaps are separated.
 * **Cheap extension.** `necessaryReasons` adds, to any reason relation, the
   necessary truths as reasons for the necessary truths. With excluded middle
   it meets the unrestricted `FactPSR` wherever `ContingentPSR` held, keeps
-  every #755 quality condition, and turns `GlobalDefeat` into its unrestricted
-  form. The one quality condition that reaches necessary targets,
+  every #755 quality condition (distribution under the conjunct law), and
+  turns `GlobalDefeat` into its unrestricted form. The one quality condition that reaches necessary targets,
   `StoppingPoints.WorkIndependent` at every reason, forces every explained
   necessary truth to have a contingent reason, for every root alike.
 * **Sense.** `PositivelyFixedAbsence` is the sense of "explained" that E uses

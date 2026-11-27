@@ -7,5 +7,5 @@
   "object_kind": "statement",
   "object_id": "2cf517c3-a6c3-4652-9bad-af3ca6edab0f",
   "verification_result_id": "d0040551-f797-426b-afe4-e75888e58e5a",
-  "note": "Same arena and world. The strong version gives an admitted reason to every fact true at w, the weak one to the true lack facts of actual roots. No strictness result is registered; any arena with a true unexplained fact that is not a root lack fact separates them."
+  "note": "Same arena and world. The strong version gives an admitted reason to every fact true at w, the weak one to the true lack facts of actual roots. No strictness result is registered."
 }
