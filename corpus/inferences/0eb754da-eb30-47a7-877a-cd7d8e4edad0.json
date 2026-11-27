@@ -1,0 +1,12 @@
+{
+  "id": "0eb754da-eb30-47a7-877a-cd7d8e4edad0",
+  "label": "All-actual concreteness restricts to necessary actual fusion parts (inference)",
+  "input_statement_ids": [
+    "0e02cd69-8fb0-4859-8287-937440c84b5b"
+  ],
+  "output_statement_id": "00c40c6f-b55e-4393-ad9d-24f8fc16df3f",
+  "rule": "Restriction of concreteness calibration",
+  "meaning": "Every actual part in the selected fusion scope is an actual existent. Apply the global calibration at that same world.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

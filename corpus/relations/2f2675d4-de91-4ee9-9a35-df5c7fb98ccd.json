@@ -1,0 +1,11 @@
+{
+  "id": "2f2675d4-de91-4ee9-9a35-df5c7fb98ccd",
+  "label": "Global actual-part existence strengthens selected fusion part existence",
+  "subject_kind": "statement",
+  "subject_id": "bbe8900a-7d33-5e6b-a76c-1947ecf7fa6e",
+  "predicate": "strengthens",
+  "object_kind": "statement",
+  "object_id": "3423b8ec-a37c-4755-b9b1-173da5249d6e",
+  "verification_result_id": "2e49b024-b763-4627-84e7-32cab886cd1e",
+  "note": "The global policy covers the selected actual sum and each of its actual causes. Its extra scope covers other actual wholes and their parts at the same world."
+}

@@ -1,0 +1,12 @@
+{
+  "id": "ab653471-0f62-4437-a15e-441e2d00836d",
+  "label": "Global part existence restricts to the selected fusion scope (inference)",
+  "input_statement_ids": [
+    "bbe8900a-7d33-5e6b-a76c-1947ecf7fa6e"
+  ],
+  "output_statement_id": "3423b8ec-a37c-4755-b9b1-173da5249d6e",
+  "rule": "Restriction of selected-world actual part existence",
+  "meaning": "Apply global part existence to the actual sum in the first case and the actual causal bearer in the second case, using the same order.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

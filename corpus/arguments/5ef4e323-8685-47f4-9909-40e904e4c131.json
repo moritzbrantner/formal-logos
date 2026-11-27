@@ -1,0 +1,54 @@
+{
+  "id": "5ef4e323-8685-47f4-9909-40e904e4c131",
+  "label": "A necessary CONCRETE_6 individual from the locally calibrated fusion",
+  "premise_statement_ids": [
+    "523917cf-d978-5a15-87fc-61186d7e59de",
+    "3423b8ec-a37c-4755-b9b1-173da5249d6e",
+    "76667657-a3ed-565a-b9fe-26f4eac81272",
+    "b699ecfb-08f7-5864-a671-1205c8f5792f",
+    "21265cfa-522d-5151-9435-b4e8f55c0c0f",
+    "00c40c6f-b55e-4393-ad9d-24f8fc16df3f"
+  ],
+  "conclusion_statement_id": "b19ffd92-01bd-5c0b-9643-e7407137ea5e",
+  "inference_ids": [
+    "c5e2244b-2f34-420e-9792-2a7060f8461c"
+  ],
+  "meaning": "Deny any actual NECESSARY_2 concretum. A necessary part of the chosen actual sum or of any of its actual causes would exist by the local actual-part policy and be concrete by the local calibration, contradicting the denial. The actual sum therefore gets a cause with actual endpoints. Its cause has no necessary parts, so it belongs to the selected fusion family. The upper-bound clause makes the cause a part of the sum, hence they overlap, contradicting causal nonoverlap. The conclusion does not identify the concrete necessary witness with the selected sum or its cause. The actual Sum2 premise explicitly fixes its family by the no-necessary-parts predicate.",
+  "definition_ids": [
+    "04ecf669-22fb-43a1-97c6-c54556d5cd5f",
+    "1d9f541d-b904-43a5-b89f-6c736d41cb10",
+    "51940f1e-6413-42ff-b8d6-d0d2b2100c3e",
+    "c47495e8-91a6-53e8-88aa-5672c3bdc314",
+    "008cb21a-256c-5a90-822c-acd4591d699a",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "e1ff44df-ed97-5990-8424-1abd720f23ea",
+    "baddf770-36bf-542f-bb3c-2297342d5452",
+    "069e3555-ca4a-5737-ae1a-8e2cb67e3be5",
+    "9ec56dce-572e-5230-8247-6b3e994cb98a",
+    "a5dc3398-60e8-4748-8967-6169fcf94eaf",
+    "c3339c0f-64ce-4d88-b2ad-11ad32dbbdcb",
+    "d7c8fc33-25df-4667-9e11-a9b2074a617e"
+  ],
+  "disambiguation_ids": [
+    "6ded9b1f-94fc-5f81-8e71-24ce27962165",
+    "623ddbf6-9683-5361-bae4-e348a00ec680",
+    "7507d645-874d-5434-add8-2f49c2801d36",
+    "8db2b1c9-f3a6-55d3-b7e9-4939c27923e2"
+  ],
+  "sense_bridges": [
+    {
+      "term": "ACTUAL_FUSION_BARE_NECESSARY_EXISTENCE",
+      "from": "c851427f-2953-45c7-993a-aa9a58f7a665",
+      "to": "95a3d30d-c4fc-43e8-ab4a-66a0cfd1a172",
+      "statement_id": "523917cf-d978-5a15-87fc-61186d7e59de"
+    },
+    {
+      "term": "NO_NECESSARY_PARTS_ORDINARY_CONTINGENCY_SELECTED",
+      "from": "b4ffd228-af72-4f53-9f37-bfad5960dff8",
+      "to": "50aed763-e509-408b-b274-de3056b72174",
+      "statement_id": "523917cf-d978-5a15-87fc-61186d7e59de"
+    }
+  ]
+}

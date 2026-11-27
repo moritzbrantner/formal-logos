@@ -5,15 +5,10 @@
   "lean_declaration": "TruthCore.Causality.ActualFusionNecessaryBeing.ActualNoNecessaryPartsHaveCausesAt",
   "paraphrase": "At the selected world, every actually existing candidate with NoNecessaryPartsAt has some cause in the SAME primitive Ontic.Causes relation. This OPEN causal policy is not ordinary contingent-existence PSR, explanatory sufficiency, a cause by definition or an independent source theorem.",
   "definition_ids": [
-    "c47495e8-91a6-53e8-88aa-5672c3bdc314",
-    "84b1dc2c-48e6-5465-af21-48015fbf3cbe",
+    "c3339c0f-64ce-4d88-b2ad-11ad32dbbdcb",
     "069e3555-ca4a-5737-ae1a-8e2cb67e3be5",
-    "9ec56dce-572e-5230-8247-6b3e994cb98a",
-    "094da9ef-9edb-5e88-8b7b-2eb87488e90d",
     "beb654a7-e204-5f4c-a7b4-45e886ba7109",
-    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
-    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
-    "e1ff44df-ed97-5990-8424-1abd720f23ea"
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1"
   ],
   "disambiguation_ids": [
     "6ded9b1f-94fc-5f81-8e71-24ce27962165",

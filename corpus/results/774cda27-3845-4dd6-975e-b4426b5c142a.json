@@ -1,0 +1,11 @@
+{
+  "id": "774cda27-3845-4dd6-975e-b4426b5c142a",
+  "label": "An actual CONCRETE_6 object with no necessary parts witnesses CONTINGENCY_1",
+  "argument_id": "3fced1d1-daf4-4f2a-9c5d-c5c6a137e201",
+  "challenge_module": "TruthCore.Results.Causality.CompositionRoutes.Challenge",
+  "solution_module": "TruthCore.Results.Causality.CompositionRoutes.Solution",
+  "theorem": "TruthCore.Results.Causality.CompositionRoutes.actualContingentOfNoNecessaryParts",
+  "comparator_config": "results/774cda27-3845-4dd6-975e-b4426b5c142a/comparator.json",
+  "status": "solution-present",
+  "description": "The specified actual concrete object is its own part under the fixed reflexive partial order, so no necessary parts entails that the same object fails de re necessity. Classically some accessible world omits it; selected-world actuality supplies the other conjunct of ContingentAt. In composition with the existing L3 result c3073ba5, select that theorem's very sum on the same Ontic, world and order and supply its actuality and concreteness separately. No actuality of a fusion follows from its Sum2 specification, and no account of a proper component, substantial composition or causation is assumed."
+}

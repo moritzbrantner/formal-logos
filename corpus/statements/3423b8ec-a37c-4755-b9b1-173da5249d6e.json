@@ -1,0 +1,11 @@
+{
+  "id": "3423b8ec-a37c-4755-b9b1-173da5249d6e",
+  "label": "Selected fusion parts exist at the actual world",
+  "paraphrase": "Open actual-part policy: if the selected sum exists at w, its parts and the parts of each of its actual causes exist at w, on the one supplied partial order and ontology.",
+  "lean_declaration": "TruthCore.Causality.LocalActualFusion.SelectedFusionPartsExistAt",
+  "definition_ids": [
+    "a5dc3398-60e8-4748-8967-6169fcf94eaf",
+    "d7c8fc33-25df-4667-9e11-a9b2074a617e",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ]
+}
