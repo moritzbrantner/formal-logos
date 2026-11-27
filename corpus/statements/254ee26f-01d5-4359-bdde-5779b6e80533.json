@@ -9,5 +9,10 @@
   ],
   "disambiguation_ids": [
     "62ca3d65-8dd4-4187-abe1-a928b3045f12"
-  ]
+  ],
+  "connection_plan": {
+    "target_statement_id": "c4fb87a6-047d-5f3d-b3e3-8dc0c4bbc946",
+    "missing_bridge": "A decision of DISAMB 62ca3d65 that c4fb87a6, as used on its root routes (7d8bbdcb, 95c04a6d, ff74a7ac), takes PERFECTION_OF_BEING_2, so that R-act2 supplies it (the identity is registered as logically_equivalent_to).",
+    "blocker": "DISAMB 62ca3d65 leaves the sense of c4fb87a6's primitive OfBeing undecided between the thin and intensive readings; the registered equivalence holds only on the intensive reading, which is the contested act-of-being thesis (docs/notes/mode-of-being-subsistent-esse.md)."
+  }
 }
