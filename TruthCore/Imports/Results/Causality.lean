@@ -381,6 +381,7 @@ public import TruthCore.Results.Causality.RootIntellectWillReduced.Solution
 public import TruthCore.Results.Causality.RootIntellectWillStrictPureAct.Solution
 public import TruthCore.Results.Causality.RootMultiplication.Solution
 public import TruthCore.Results.Causality.RootNonlimitationFromCompositionKinds.Solution
+public import TruthCore.Results.Causality.RootPerfectionExclusion.Solution
 public import TruthCore.Results.Causality.RootPositiveIntellectWill.Solution
 public import TruthCore.Results.Causality.RootPositiveIntellectWillControl.Solution
 public import TruthCore.Results.Causality.RootPurity.Solution
