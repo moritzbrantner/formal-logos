@@ -13,7 +13,8 @@
   "evidence": [
     "PR-1866",
     "PR-1986",
-    "PR-2153"
+    "PR-2153",
+    "PR-2162"
   ],
   "workers": [
     {
@@ -29,7 +30,8 @@
       "provider": "anthropic",
       "model": "claude-opus-5-5",
       "effort": "high",
-      "date": "2026-11-27"
+      "date": "2026-11-27",
+      "pr": "PR-2162"
     }
   ]
 }
