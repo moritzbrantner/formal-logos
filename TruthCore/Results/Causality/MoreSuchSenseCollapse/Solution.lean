@@ -56,4 +56,20 @@ theorem controls : Control.Controls := by
   refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩
   all_goals decide
 
+set_option synthInstance.maxSize 1024 in
+set_option synthInstance.maxHeartbeats 200000 in
+/-- The degree-indexed interpretation, checked by decision. The larger instance
+budget only lets instance search assemble the `Decidable` instance of the
+negated three-variable quantifier. -/
+theorem ordinaryControls : Control.OrdinaryControls := by
+  dsimp [Control.OrdinaryControls, FormalPossessionGap, OrdinaryComparativeGap,
+    OrdinaryMoreSuch, OrdinaryComparative, EminentComparative,
+    TruthCore.Greek.Aristotle.Metaphysics.CauseOfQualityInAnotherIsMoreSuchReading,
+    Control.grades3, Control.act3, TruthCore.Causality.CartesianAdequacy.gradesOf,
+    Control.causes3, Control.formal3, Control.virtual3, Control.temp, Control.surpasses,
+    TruthCore.Latin.Aquinas.SummaTheologiae.MovesOnlyAsInActReading,
+    TruthCore.Causality.TermSenseForks.ActFrame.InActFormallyOrVirtually]
+  refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩
+  all_goals decide
+
 end TruthCore.Results.Causality.MoreSuchSenseCollapse

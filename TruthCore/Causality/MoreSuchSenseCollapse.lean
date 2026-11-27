@@ -83,6 +83,45 @@ def MoreSuchPackageForcesFormalPossession (G : GradesFrame W B T R) (A : ActFram
   MoreSuchHasThePerfectionReading A.InActFormally G.MoreIn →
   FormalDistinctCausePossession G A
 
+/-! ## Two determinations of the comparative
+
+`G.MoreIn` (MORE_1) is primitive. The two declarations below are candidate
+determinations of it for the "more such" premise; neither is its definition, and
+no statement identifies either with it. -/
+
+/-- MORE_3, the ordinary comparative: `x` is more `r` than `y` when both have `r`
+formally and `x`'s measured degree of `r` is strictly higher, as one body is
+hotter than another by temperature. It is the represented-degree comparative
+(MORE_2) restricted to formal possessors of `r`; the degree `deg` is a supplied
+measure with a strict order `<` (a preorder's, for MORE_2). -/
+def OrdinaryComparative {D : Type} [instD : LT D] (A : ActFrame B R) (deg : R → B → D)
+    (r : R) (x y : B) : Prop :=
+  A.InActFormally x r ∧ A.InActFormally y r ∧ deg r y < deg r x
+
+/-- MORE_4, the eminent comparative: `x` is more `r` than `y` by eminence when `x`
+has `r` virtually (IN_ACT_2) and surpasses `y` in the mode of having `r`.
+`Surpasses r x y` is an explicitly **primitive** parameter: "`x`'s way of having
+`r` is higher than `y`'s". No record specifies it at arbitrary `r`; its only
+recorded instance is the order by approach to a primary at being
+(DISAMB-ORDER-OF-BEING). It is declared here so that the ordinary and eminent
+readings of "more such" are distinct types; it settles nothing about eminence. -/
+def EminentComparative (A : ActFrame B R) (Surpasses : R → B → B → Prop)
+    (r : R) (x y : B) : Prop :=
+  A.InActVirtually x r ∧ Surpasses r x y
+
+/-- "More such" read with the ordinary comparative (the MORE_3 reading of
+d5a94eb1): every distinct cause of `x`'s being `r` is more `r` than `x` by
+measured degree, both having `r` formally. -/
+def OrdinaryMoreSuch {D : Type} [instD : LT D] (G : GradesFrame W B T R) (A : ActFrame B R)
+    (deg : R → B → D) : Prop :=
+  CauseOfQualityInAnotherIsMoreSuchReading G.CausesIn (OrdinaryComparative A deg)
+
+/-- The exact negation of `OrdinaryMoreSuch`: some `c`, distinct from `x`, causes
+`x`'s being `r` and is not more `r` than `x` on the ordinary comparative. -/
+def OrdinaryComparativeGap {D : Type} [instD : LT D] (G : GradesFrame W B T R)
+    (A : ActFrame B R) (deg : R → B → D) : Prop :=
+  ∃ c x r, c ≠ x ∧ G.CausesIn c x r ∧ ¬ OrdinaryComparative A deg r c x
+
 /-! ## A finite interpretation shaped like induction heating -/
 
 namespace Control
@@ -158,6 +197,65 @@ def Controls : Prop :=
   CauseOfQualityInAnotherIsMoreSuchReading eminentGrades.CausesIn eminentGrades.MoreIn ∧
   MoreSuchHasThePerfectionReading act.InActFormallyOrVirtually eminentGrades.MoreIn ∧
   ¬ MoreSuchHasThePerfectionReading act.InActFormally eminentGrades.MoreIn
+
+/-! ### Respects fixed by degree
+
+Beings as above (`false` the coil, `true` the workpiece). Respects: `0` being,
+`1` having some heat, `2` having heat at or above the workpiece's degree. The
+coil causes the workpiece's respects `1` and `2`. Degrees of heat, read as
+temperatures in °C: coil 40, workpiece 1000. -/
+
+/-- The coil causes the workpiece's heat in both heat respects. -/
+def causes3 (c x : Bool) (r : Fin 3) : Prop := c = false ∧ x = true ∧ r ≠ 0
+
+/-- Both have being and some heat formally; only the workpiece has heat at its
+own degree formally. -/
+def formal3 (b : Bool) (r : Fin 3) : Prop := r ≠ 2 ∨ b = true
+
+/-- The coil has both heat respects virtually. -/
+def virtual3 (b : Bool) (r : Fin 3) : Prop := b = false ∧ r ≠ 0
+
+/-- Measured degree of heat (respect `1`): coil 40, workpiece 1000. -/
+def temp (r : Fin 3) (b : Bool) : Nat := if r = 1 then (if b then 1000 else 40) else 0
+
+/-- The eminent surpassing relation, stipulated: the coil surpasses the
+workpiece in both heat respects. -/
+def surpasses (r : Fin 3) (x y : Bool) : Prop := r ≠ 0 ∧ x = false ∧ y = true
+
+/-- The coil also moves the workpiece in both heat respects: it reduces the
+workpiece from cold to hot. -/
+def act3 : ActFrame Bool (Fin 3) where
+  InActFormally := formal3
+  InActVirtually := virtual3
+  InPotency := fun _ _ => False
+  MovedIn := fun _ _ => False
+  MovesIn := causes3
+
+def grades3 : GradesFrame Unit Bool Unit (Fin 3) :=
+  TruthCore.Causality.CartesianAdequacy.gradesOf act3.InActFormallyOrVirtually
+    (OrdinaryComparative (instD := instLTNat) act3 temp) causes3 0
+
+/-- Statements about this interpretation only. The coil has some heat formally
+(respect `1`) but not heat at the workpiece's degree (respect `2`); so the formal
+possession gap is witnessed only at the degree-indexed respect. On the ordinary
+comparative the coil is not hotter: the ordinary-comparative gap holds and the
+ordinary reading of "more such" fails. Read with the stipulated eminent
+comparative, "more such" holds. The coil moves the workpiece in the heat
+respects: "nothing moves except as in act" fails read with formal act and holds
+read with inclusive act. -/
+def OrdinaryControls : Prop :=
+  act3.InActFormally false 1 ∧
+  ¬ act3.InActFormally false 2 ∧
+  FormalPossessionGap grades3 act3 ∧
+  (∀ c x, c ≠ x → grades3.CausesIn c x 1 → act3.InActFormally c 1) ∧
+  OrdinaryComparativeGap (instD := instLTNat) grades3 act3 temp ∧
+  ¬ OrdinaryMoreSuch (instD := instLTNat) grades3 act3 temp ∧
+  CauseOfQualityInAnotherIsMoreSuchReading grades3.CausesIn
+    (EminentComparative act3 surpasses) ∧
+  ¬ TruthCore.Latin.Aquinas.SummaTheologiae.MovesOnlyAsInActReading act3.MovesIn
+      act3.InActFormally ∧
+  TruthCore.Latin.Aquinas.SummaTheologiae.MovesOnlyAsInActReading act3.MovesIn
+      act3.InActFormallyOrVirtually
 
 end Control
 
