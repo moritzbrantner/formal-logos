@@ -1,0 +1,17 @@
+{
+  "id": "a8a43166-6904-48ff-bfa7-8b535e00c4a4",
+  "label": "An actual root's absence with an admitted reason is positively fixed (EXPLAINED_ABSENCE_1 to _2)",
+  "paraphrase": "OPEN sense bridge, analyst formulation, attribution deferred: for every actual concrete root r at w and every determination d that r lacks at w, if the arena admits some reason at w for the fact lack r d (EXPLAINED_ABSENCE_1), then the absence is positively fixed (EXPLAINED_ABSENCE_2): either no admissible profile contains all of r's real determinations together with d, or some real determination of r requires the lack of a set containing d whose other members r has. It passes between the two senses of EXPLAINED_ABSENCE. Its rationale is that negative facts at a root have positive grounds, the rationale shared with carriage (682e6436), member grounding and E. E alone implies it for every arena (positiveLackReasonsOfNoUnexplainedAbsence); with the PSR for root lack facts, the lack facts and the necessity direction of member grounding it implies E; the reason-essence thesis, carriage and the necessity direction imply it (InquiryScopeMap clause 7).",
+  "lean_declaration": "TruthCore.Explanation.InquiryClosure.RootLackReasonsPositive",
+  "definition_ids": [
+    "52352824-6be9-53c6-83d4-82fed9a08cbb",
+    "3aba5f19-f48d-50db-bc57-93ba2e99f845",
+    "3f8e5e3c-e85a-4388-af9c-4da1c8a02069",
+    "88f7c656-f484-4737-a872-b2d78c604322",
+    "6d3a3ecb-f92f-42da-b6bb-4ea99e3ea48d",
+    "04c93d61-3c02-4e68-a48d-cfc72d6882c4"
+  ],
+  "disambiguation_ids": [
+    "bb604f7b-9e16-4168-b433-be76bd3995a9"
+  ]
+}
