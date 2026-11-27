@@ -168,3 +168,12 @@ delta_statement_id = "Concrete GOD_4 is accessibly unique whenever one exists at
 evidence_result_ids = { implication = "Rigidity of concrete GOD_4 presence gives persistence", equivalence = "Rigidity is persistence plus accessible uniqueness of concrete GOD_4" }
 statement_parameter_indices = { stronger = [0, 1, 2, 3], weaker = [0, 1, 2, 3], delta = [0, 1, 2, 3] }
 note = "Difference of rigidity over persistence: rigidity adds exactly that, whenever a concrete GOD_4 exists at the standpoint, every accessible world has at most one concrete GOD_4. No background. Strictness of the order is certified separately by fixedPlusVisitor in the controls."
+
+[[relation]]
+id = "Modal ontological certified difference tests its delta"
+subject_kind = "result"
+subject_id = "Rigidity is persistence plus accessible uniqueness of concrete GOD_4"
+predicate = "tests"
+object_kind = "statement"
+object_id = "Concrete GOD_4 is accessibly unique whenever one exists at the standpoint"
+note = "The equivalence certificate shows that this condition is exactly what rigidity adds to persistence: rigidity holds iff persistence and this condition hold, with no background."
