@@ -1,0 +1,10 @@
+{
+  "id": "30dc07f4-f096-48cd-a7c2-8050e68368e8",
+  "label": "Test by PrussPowerPremises.prussPowerControls (938650b0)",
+  "subject_kind": "result",
+  "subject_id": "8ad1804e-06d1-4491-ba96-d3382245f2ad",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "938650b0-ff50-5c60-8b70-5b7dc600eaaf",
+  "note": "Omit symmetry of access in the route from an absence world back to the origin. In forwardG, false accesses true, where the actual contingent c is absent, but true accesses only itself. With no powers assigned the absence-world clauses hold vacuously and no holder of the actuality power exists."
+}

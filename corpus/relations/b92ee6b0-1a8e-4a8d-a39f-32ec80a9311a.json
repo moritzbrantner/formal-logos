@@ -1,0 +1,10 @@
+{
+  "id": "b92ee6b0-1a8e-4a8d-a39f-32ec80a9311a",
+  "label": "Test by PrussPowerPremises.prussPowerControls (d1593e5c)",
+  "subject_kind": "result",
+  "subject_id": "8ad1804e-06d1-4491-ba96-d3382245f2ad",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "d1593e5c-38ff-46a9-9bbb-cede6f825bc9",
+  "note": "Omit the bridge from withheld giving to power over esse. In theistG at false, g gives c being there and withholds it at true. No esse powers are assigned, so the bridge and the distributive conclusion fail."
+}

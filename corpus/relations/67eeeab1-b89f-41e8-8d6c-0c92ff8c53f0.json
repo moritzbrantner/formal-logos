@@ -1,0 +1,10 @@
+{
+  "id": "67eeeab1-b89f-41e8-8d6c-0c92ff8c53f0",
+  "label": "Test by PrussPowerPremises.prussPowerControls (f0ac2f76)",
+  "subject_kind": "result",
+  "subject_id": "8ad1804e-06d1-4491-ba96-d3382245f2ad",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "f0ac2f76-62fe-4b9b-8427-e0ca8d7a3cef",
+  "note": "Omit the transfer from power for actual-roster absence to power over each member's esse. At false in replacementG, g has the joint-absence power and is present, but the unindexed esse-power relation gives g power over d, which replaces c at true. It gives g no esse power over the origin-contingent c."
+}

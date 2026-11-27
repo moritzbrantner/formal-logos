@@ -1,0 +1,10 @@
+{
+  "id": "7cf648d5-25e6-43ab-a374-4cff4050da96",
+  "label": "Test by ModalGroundingActualAbsence.actualAbsenceControls (95bf8780)",
+  "subject_kind": "result",
+  "subject_id": "6cf3a8ce-9dff-434d-affb-787923538830",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "95bf8780-0e3c-49ba-b636-2274e2997a30",
+  "note": "Omit grounding for absence of the actual contingent roster. At true in creatureFrame the contingent creature exists and is absent at the other accessible world. No candidate has a power for its absence, so no necessary concrete holder exists."
+}

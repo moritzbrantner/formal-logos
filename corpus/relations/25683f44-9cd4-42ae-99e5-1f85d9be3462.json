@@ -1,0 +1,10 @@
+{
+  "id": "25683f44-9cd4-42ae-99e5-1f85d9be3462",
+  "label": "Test by ModalGroundingActualAbsence.actualAbsenceControls (c76b6e2c)",
+  "subject_kind": "result",
+  "subject_id": "6cf3a8ce-9dff-434d-affb-787923538830",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "c76b6e2c-1ca0-47fd-a9d0-2c2faa3d1174",
+  "note": "Omit the premise that some concretum is contingent at the origin. In emptyFrame no candidate exists at true or at its accessible world. Joint absence is accessible for the empty roster, yet no candidate can witness the holder conclusion."
+}

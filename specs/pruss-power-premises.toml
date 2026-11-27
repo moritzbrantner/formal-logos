@@ -114,7 +114,7 @@ id = "Pruss power premises: laws, nonvacuity, collective and distributive separa
 label = "Pruss power premises: laws, nonvacuity, collective/distributive separations, omissions, rivals"
 lean = "Model.Controls"
 paraphrase = "Premise-free laws and finite models (structural surrogates, not metaphysical possibility). Laws: (1) a one-way (fixed) giver existing at w has no power for the actual contingents' joint absence satisfying P2-delta; (2) P1-prime, P2-delta, P4-prime and P5 exclude that every being at w is a fixed giver; (3) collapse: a fixed giver necessary at w, with factive giving, gives being at w only to beings necessary at w; (4) necessary fixed-output (deterministic) sources: if every concrete being contingent at w is given being at w by some necessary fixed giver (one or an aggregate), with factive giving, none is contingent (a chancy necessary source is not a fixed giver and is not covered); (5) under the holders-give-each reading with factive giving, P2-prime and P5 give P2-delta; (6) the joint absence realized by withholding, with P5, gives a two-way giver that is not a fixed giver; (7) Pruss's direction relocates the abstention: a being at w and at a world lacking the actual contingents that gives one of them being at w is, with factive giving, a two-way giver; (8) a concrete being at w present, for each actual contingent concretum, at an accessible world lacking it is, with excluded middle, necessary (the joint one carries the argument); (9) with excluded middle, a holder with POWER_OVER_ESSE_1 over each actual contingent concretum makes every concrete foundational being at w necessary, without a Euclidean premise. Models: theist nonvacuity of every argument; collective without distributive (replacement on the thin reading of PowerFor: the holder has POWER_OVER_ESSE_1 over the replacement it gives being, none over the actual contingent, and the transfer fails; one actual contingent, so collective and distributive coincide here; the separation shown is PowerFor to POWER_OVER_ESSE_1, already for one member); distributive without collective (Van Cleve with a common holder: P4-prime and initiator presence fail); mutual annihilators (distributive grounding with varying holders, no necessary being); eight omission models; three rivals (inert necessary being, with P1-prime failing by the model's choice of no powers; necessary fixed-output (deterministic) source; positive-outcome powers only, under which P1-prime fails and Pruss's direction holds)."
-definitions = ["bf7eddca-8291-4744-8470-379babcd7781", "62dfa893-b633-4513-9790-8f9a0a3087e0", "7bc1d667-fda2-4744-b055-9ba6cbe7f648", "bd4c434d-be19-43ca-936b-f33eb6c15a8c", "e006ddeb-2c88-4835-8558-2f360cc5a3eb", "3fd6bddb-f10c-4df4-8694-3eb5e7c28617", "7fcf846e-d0ef-400e-89c0-7c82b94edde7", "1b8baf77-84fa-5513-a138-7fa14840dd87", "DEF-KANT-MODAL-NECESSITY", "DEF-KANT-MODAL-CONTINGENCY", "DEF-KANT-ONTOLOGICAL-MODEL"]
+definitions = ["bf7eddca-8291-4744-8470-379babcd7781", "62dfa893-b633-4513-9790-8f9a0a3087e0", "7bc1d667-fda2-4744-b055-9ba6cbe7f648", "bd4c434d-be19-43ca-936b-f33eb6c15a8c", "e006ddeb-2c88-4835-8558-2f360cc5a3eb", "3fd6bddb-f10c-4df4-8694-3eb5e7c28617", "7fcf846e-d0ef-400e-89c0-7c82b94edde7", "1b8baf77-84fa-5513-a138-7fa14840dd87", "DEF-KANT-MODAL-NECESSITY", "DEF-KANT-MODAL-CONTINGENCY", "DEF-KANT-ONTOLOGICAL-MODEL", "153fcebf-66f6-53de-bad7-82a30a359c9c"]
 disambiguations = ["f5dda05f-ba3c-4fdf-82a3-e4803c24ddb5", "197f0097-f2ae-4a47-8770-3d43758f737b", "DISAMB-CONCRETE-ABSTRACT-CRITERIA", "DISAMB-KANT-CONTINGENCY"]
 
 [[statement]]
@@ -229,3 +229,153 @@ conclusion = "Pruss power premises: laws, nonvacuity, collective and distributiv
 rule = "General laws and explicit finite models"
 meaning = "Premise-free: nine laws (one-way exclusion, collapse, necessary fixed-output (deterministic) sources, P2-delta from the creator reading, withholding as two-way giving, the relocated abstention in Pruss's direction, the joint one, PGP's verdict from the distributive powers) and finite models (theist nonvacuity, collective without distributive, distributive without collective, mutual annihilators, eight omissions, three rivals). Model-witnessed separations only; no premise is established and no reality claim is made."
 description = "Premise-free laws and models for the power premises of the route with Pruss's own premise. Sense-mixing control: they relate MODAL_CONTINGENCY_1, NECESSARY_2, POWER_OVER_ESSE_1 and the frame (NECESSARY_11 carrier) without a bridge premise. Establishes no premise."
+
+[[relation]]
+id = "0cd7ad37-3e66-4c20-8237-69c4365cff63"
+label = "Test by PrussPowerPremises.prussPowerControls (f0ac2f76)"
+subject_kind = "result"
+subject_id = "8ad1804e-06d1-4491-ba96-d3382245f2ad"
+predicate = "tests"
+object_kind = "statement"
+object_id = "f0ac2f76-62fe-4b9b-8427-e0ca8d7a3cef"
+note = "Omit the transfer from power for actual-roster absence to power over each member's esse. At false in replacementG, g has the joint-absence power and is present, but the unindexed esse-power relation gives g power over d, which replaces c at true. It gives g no esse power over the origin-contingent c."
+
+[[relation]]
+id = "30fb437a-662d-4dcd-9ea7-63317036bb51"
+label = "Test by PrussPowerPremises.prussPowerControls (5cf75a6b)"
+subject_kind = "result"
+subject_id = "8ad1804e-06d1-4491-ba96-d3382245f2ad"
+predicate = "tests"
+object_kind = "statement"
+object_id = "5cf75a6b-c3be-4ed5-acdf-c163383dd7f2"
+note = "Omit the exercise-difference premise. In inertG at false, g is a concrete, necessarily present holder of the actual-roster absence power. The giving relation is empty at both worlds, so the necessary varying-giver conclusion fails despite the other premises."
+
+[[relation]]
+id = "76c5db7c-db59-44c3-8d30-3f66fce60d5b"
+label = "Test by PrussPowerPremises.prussPowerControls (9f7b1778)"
+subject_kind = "result"
+subject_id = "8ad1804e-06d1-4491-ba96-d3382245f2ad"
+predicate = "tests"
+object_kind = "statement"
+object_id = "9f7b1778-84c9-40cf-a1b6-a91a960b0590"
+note = "Omit the requirement that holders of the actual-absence power give being to each actual contingent concretum. In replacementG, g gives being only to replacement d at true and never to origin-contingent c. Factive giving and the other premises hold while withholding fails."
+
+[[relation]]
+id = "e3d8cea7-e5c9-49e5-9196-8b1ea1814d45"
+label = "Test by PrussPowerPremises.prussPowerControls (3ef41442)"
+subject_kind = "result"
+subject_id = "8ad1804e-06d1-4491-ba96-d3382245f2ad"
+predicate = "tests"
+object_kind = "statement"
+object_id = "3ef41442-431a-4bed-83bd-4458ed623f5f"
+note = "Omit factivity of giving. In nonFactiveG with origin false, g is recorded as giving c being at both worlds. At true c is absent, yet the giving record remains. The other premises hold and the joint absence lacks the required withholding witness."
+
+[[relation]]
+id = "af5e9478-236f-4510-8ee9-a7cbb827c90d"
+label = "Test by PrussPowerPremises.prussPowerControls (d1593e5c)"
+subject_kind = "result"
+subject_id = "8ad1804e-06d1-4491-ba96-d3382245f2ad"
+predicate = "tests"
+object_kind = "statement"
+object_id = "d1593e5c-38ff-46a9-9bbb-cede6f825bc9"
+note = "Omit the bridge from withheld giving to power over esse. In theistG at false, g gives c being there and withholds it at true. No esse powers are assigned, so the bridge and the distributive conclusion fail."
+
+[[relation]]
+id = "588db401-f2eb-49ca-bb26-ae6896712ddf"
+label = "Test by PrussPowerPremises.prussPowerControls (938650b0)"
+subject_kind = "result"
+subject_id = "8ad1804e-06d1-4491-ba96-d3382245f2ad"
+predicate = "tests"
+object_kind = "statement"
+object_id = "938650b0-ff50-5c60-8b70-5b7dc600eaaf"
+note = "Omit symmetry of access in the route from an absence world back to the origin. In forwardG, false accesses true, where the actual contingent c is absent, but true accesses only itself. With no powers assigned the absence-world clauses hold vacuously and no holder of the actuality power exists."
+
+[[relation]]
+id = "a29a06ee-add1-44a0-8559-0198abbb60c9"
+label = "Test by PrussPowerPremises.prussPowerControls (607e94cf)"
+subject_kind = "result"
+subject_id = "8ad1804e-06d1-4491-ba96-d3382245f2ad"
+predicate = "tests"
+object_kind = "statement"
+object_id = "607e94cf-07df-46c1-9b75-452e50762211"
+note = "Omit grounding at the absence worlds for the origin's obtaining. In theistG with no powers, the worlds access each other and c is absent at true. Initiator presence and holder concreteness there hold vacuously, while the actuality power is absent."
+
+[[relation]]
+id = "17b6293c-3b13-4440-b715-143c186f7392"
+label = "Test by PrussPowerPremises.prussPowerControls (9c8e99e7)"
+subject_kind = "result"
+subject_id = "8ad1804e-06d1-4491-ba96-d3382245f2ad"
+predicate = "tests"
+object_kind = "statement"
+object_id = "9c8e99e7-3e7c-42c3-8e9e-d37dfe17ae7f"
+note = "Omit initiator presence at the absence worlds. In absentHolderG at origin false, g exists at true where it holds a power for false obtaining, yet g is absent at false. Grounding and the other nonlogical premises hold, and the required actual holder fails."
+
+[[relation]]
+id = "c553df56-5c05-4efc-acb6-3d50df78e72d"
+label = "Test by PrussPowerPremises.prussPowerControls (887d5efc)"
+subject_kind = "result"
+subject_id = "8ad1804e-06d1-4491-ba96-d3382245f2ad"
+predicate = "tests"
+object_kind = "statement"
+object_id = "887d5efc-caf6-4972-b592-8d4f1dbf5f49"
+note = "Omit concreteness of the holder at the absence worlds. In theistG with only c and d concrete, g alone holds the power from the absence world and is present at both worlds. It fails the concrete holder requirement."
+
+[[relation]]
+id = "ac2b8095-d91f-4153-8be2-86e5cff196b5"
+label = "Test by PrussPowerPremises.prussPowerControls (18e5bd4e)"
+subject_kind = "result"
+subject_id = "8ad1804e-06d1-4491-ba96-d3382245f2ad"
+predicate = "tests"
+object_kind = "statement"
+object_id = "18e5bd4e-8178-468e-b867-fbaf9c5988ad"
+note = "Omit joint absence from the route grounded at absence worlds. In vanCleveG at a, c and d are both present and contingent, but every accessible world keeps one of them. The absence-world rules hold vacuously, and the conclusion requiring an accessible joint absence fails."
+
+[[relation]]
+id = "1f498631-80f1-4fdd-8b90-e75067bb1716"
+label = "Test by PrussPowerPremises.prussPowerControls (18ad47bf)"
+subject_kind = "result"
+subject_id = "8ad1804e-06d1-4491-ba96-d3382245f2ad"
+predicate = "tests"
+object_kind = "argument"
+object_id = "18ad47bf-e45d-4f0b-866e-e1e2697d2229"
+note = "In theistG at false, g exists and holds a power for the joint absence of the roster containing c. There is an accessible world omitting c, and the transfer assigns the same holder g power over c's esse. The four premises hold together."
+
+[[relation]]
+id = "c31d7a13-9aa4-4b48-8450-a3ebfb844320"
+label = "Test by PrussPowerPremises.prussPowerControls (61e207fc)"
+subject_kind = "result"
+subject_id = "8ad1804e-06d1-4491-ba96-d3382245f2ad"
+predicate = "tests"
+object_kind = "argument"
+object_id = "61e207fc-db4c-4afb-8dba-0155e035a4df"
+note = "In theistG at false, c is a contingent concretum and absent at true. The present concrete holder g gives c being at false and has a different giving pattern at true. Grounding, exercise difference, holder concreteness and both possibility and population conditions hold."
+
+[[relation]]
+id = "7156b5a3-8209-431c-9250-62ad5cada4da"
+label = "Test by PrussPowerPremises.prussPowerControls (f872a512)"
+subject_kind = "result"
+subject_id = "8ad1804e-06d1-4491-ba96-d3382245f2ad"
+predicate = "tests"
+object_kind = "argument"
+object_id = "f872a512-c5a9-4188-8e6d-4823c184da1e"
+note = "In theistG g gives c being at false and is still present at the accessible world true, where c is absent and no giving occurs. The holder-to-recipient and factive-giving clauses hold jointly with the actual-roster absence premises."
+
+[[relation]]
+id = "f4ef05b2-46c0-4445-b210-3bafe317049b"
+label = "Test by PrussPowerPremises.prussPowerControls (11afcb55)"
+subject_kind = "result"
+subject_id = "8ad1804e-06d1-4491-ba96-d3382245f2ad"
+predicate = "tests"
+object_kind = "argument"
+object_id = "11afcb55-dea9-4d5b-a992-34de8852394e"
+note = "In theistG at false, g gives c being and withholds it at true. The actual-absence withholding predicate and the bridge to g's esse power over c hold jointly."
+
+[[relation]]
+id = "462e9ec7-bda3-4ad8-bfd1-4dcc0633741f"
+label = "Test by PrussPowerPremises.prussPowerControls (81b1b020)"
+subject_kind = "result"
+subject_id = "8ad1804e-06d1-4491-ba96-d3382245f2ad"
+predicate = "tests"
+object_kind = "argument"
+object_id = "81b1b020-b8d6-45fe-9f3a-18689173c6a6"
+note = "In theistG origin false and accessible absence world true are mutually accessible. Contingent c is present at false only. The same concrete g exists at both and has the power for false obtaining at true. The nonlogical premise bundle is jointly satisfied."
