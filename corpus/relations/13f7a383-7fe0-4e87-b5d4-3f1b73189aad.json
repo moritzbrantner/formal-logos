@@ -1,0 +1,10 @@
+{
+  "id": "13f7a383-7fe0-4e87-b5d4-3f1b73189aad",
+  "label": "Test by ConcurrentActualization.controls (c4661518)",
+  "subject_kind": "result",
+  "subject_id": "955ef523-695d-4920-b88d-bf6e737e71e0",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "c4661518-33cc-4a53-ae55-cb986be9c2b5",
+  "note": "Omit giver presence in immense2PresentToAllOfAnothers. With absentGiver and alwaysGiving, sustaining and presence as act hold, while the giver true is absent at a time when it gives false being."
+}
