@@ -1,0 +1,9 @@
+{
+  "id": "fcfb7a8b-1373-4437-89c3-b7893d850031",
+  "label": "Independent of a bearer: an item the bearer neither contains nor produces",
+  "term": "independent of a bearer (Independent)",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.AxiarchicFoundation.Independent",
+  "definition": "Independent Contains Produces b e: the bearer b neither contains nor produces the item e. Examples: on Platonism, a Form that a demiurge contemplates; on Leslie-type axiarchism, an abstract value-fact whose requiredness is creatively effective. Non-examples: an idea in the bearer; a product of the bearer. Defined as the complement of containment and production, so that with excluded middle every item is contained, produced or independent.",
+  "note": "Stipulative analyst notion (#2145 premise lane C), attribution deferred. See docs/notes/causal-perfection-transfer.md, section 'Individuating non-present candidates: the axiarchic rival and the cognition criterion'."
+}
