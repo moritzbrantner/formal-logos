@@ -207,8 +207,8 @@ disambiguations = ["DISAMB-KANT-CONTINGENCY","DISAMB-ESSE-RECEPTION","DISAMB-REC
 id = "e332dbe0-8cd1-4d0b-8e97-15a4ab87c202"
 label = "First Way received-esse controls and POTENCY_1 boundary"
 lean = "Model.ReceptionControls"
-paraphrase = "Premise-free general result plus three finite semantic interpretations. Universal law: combining R1, R2 at ADOPTED unactualized POTENCY_1 in the esse respect and the existing-at-w → in-act-of-esse interface excludes all contingent beings at w. Positive nonvacuous witness: a contingent being receives esse in a principle and the principle is in receptive potency to its already possessed act; the unactualized subject transfer fails. Conservation model: contingent first mover is pure act under the adopted subject-level distribution but is externally supported and prior-caused in its esse exactly where it exists; firstness in being fails, and identity-scoped reception can be falsified by receipt in another principle. Brute candidate: a contingent first pure-act mover whose represented essence/esse differ but with no reception. These establish logical independence and a causal support interpretation, not metaphysical possibility."
-definitions = ["DEF-KANT-MODAL-CONTINGENCY","DEF-KANT-ONTOLOGICAL-MODEL","DEF-ESSE-RECEIVED-IN","DEF-RECEPTIVE-POTENCY","DEF-ESSENCE-THOMISTIC-NATURE","DEF-ESSE","DEF-POTENCY"]
+paraphrase = "Premise-free general result plus three finite semantic interpretations. Universal law: combining R1, R2 at ADOPTED unactualized POTENCY_1 in the esse respect and the existing-at-w → in-act-of-esse interface excludes all contingent beings at w. Positive nonvacuous witness: a contingent being receives esse in a principle and the principle is in receptive potency to its already possessed act; R2 holds for the free `subjectPotencyAtEsse` predicate and fails for `AdoptedPotency.InPotency actAtEsse canBeAny`. Conservation model: contingent first mover is pure act under the stipulated `movedPotency` assignment but is externally supported and prior-caused in its esse exactly where it exists; firstness in being fails, and identity-scoped reception can be falsified by receipt in another principle. Brute candidate: a contingent first pure-act mover whose represented essence/esse differ but with no reception. These establish logical independence and a causal support interpretation, not metaphysical possibility."
+definitions = ["DEF-KANT-MODAL-CONTINGENCY","DEF-KANT-ONTOLOGICAL-MODEL","DEF-ESSE-RECEIVED-IN","DEF-RECEPTIVE-POTENCY","DEF-ESSENCE-THOMISTIC-NATURE","DEF-ESSE","DEF-POTENCY", "DEF-INDEPENDENT-POTENCY", "fc6f0e12-470f-5717-8c5b-ece7a450fe59", "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168"]
 disambiguations = ["DISAMB-KANT-CONTINGENCY","DISAMB-ESSE-RECEPTION","DISAMB-RECEPTIVE-POTENCY","DISAMB-ESSENCE","DISAMB-POTENCY","DISAMB-POTENCY-IN-SUBJECT-VS-IN-ANOTHER"]
 
 [[argument]]
@@ -232,9 +232,9 @@ sense_mixing_control = true
 premises = []
 conclusion = "e332dbe0-8cd1-4d0b-8e97-15a4ab87c202"
 rule = "General same-respect impossibility theorem and explicit finite reception/conservation/brute models"
-meaning = "Controls show that, if adopted POTENCY_1 means unactualized capacity, R2 plus R1 and the selected-world esse actuality interface exclude all contingent beings there; they do NOT derive a philosophically warranted B4. A genuinely received esse in a receptive principle can coexist with actual existence; a contingent POTENCY_1-pure-act mover can be under an external conserved-source mechanism (and cannot also be first in being); an unreceived contingent first mover demonstrates R1 is additional explanatory content even when esse differs from essence. These are typed structural tests, not a proof of philosophical possibility."
+meaning = "Controls show that, if adopted POTENCY_1 means unactualized capacity, R2 plus R1 and the selected-world esse actuality interface exclude all contingent beings there; they do NOT derive a philosophically warranted B4. The reception witness has an existing contingent bearer whose receiving principle is in receptive potency to its esse. R2 holds under the independently supplied subjectPotencyAtEsse and fails under AdoptedPotency.InPotency actAtEsse canBeAny. In the conservation model the contingent mover is pure act under the stipulated movedPotency assignment, and the simply prior esse-cause supports it exactly in the worlds where it exists. The unreceived contingent first mover shows that distinct esse and essence can coexist with failure of R1. These are typed structural tests, not a proof of philosophical possibility."
 description = "General law and finite, world-support-coupled semantic controls. Distinguishes receptive potency from unactualized POTENCY_1, with no premise discharged."
-definitions = ["DEF-KANT-MODAL-CONTINGENCY","DEF-KANT-ONTOLOGICAL-MODEL","DEF-ESSE-RECEIVED-IN","DEF-RECEPTIVE-POTENCY","DEF-ESSENCE-THOMISTIC-NATURE","DEF-ESSE","DEF-POTENCY"]
+definitions = ["DEF-KANT-MODAL-CONTINGENCY","DEF-KANT-ONTOLOGICAL-MODEL","DEF-ESSE-RECEIVED-IN","DEF-RECEPTIVE-POTENCY","DEF-ESSENCE-THOMISTIC-NATURE","DEF-ESSE","DEF-POTENCY", "DEF-INDEPENDENT-POTENCY", "fc6f0e12-470f-5717-8c5b-ece7a450fe59", "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168"]
 disambiguations = ["DISAMB-KANT-CONTINGENCY","DISAMB-ESSE-RECEPTION","DISAMB-RECEPTIVE-POTENCY","DISAMB-ESSENCE","DISAMB-POTENCY","DISAMB-POTENCY-IN-SUBJECT-VS-IN-ANOTHER"]
 
 
@@ -270,3 +270,33 @@ predicate = "tests"
 object_kind = "statement"
 object_id = "3c9d683b-7ecf-4e35-b2cf-2997fbc1a3b2"
 note = "Tests the contingent-to-potency-or-cause alternatives on the finite Bool frames of the first-mover necessity batch, with potency and distinct causes assigned separately."
+
+[[relation]]
+id = "2150057f-81c9-4838-a812-d308c7a54650"
+label = "Test by FirstMoverNecessity.receptionControls (ae9d9473)"
+subject_kind = "result"
+subject_id = "ed10e3b5-4804-4fa8-bb17-cc1835c24659"
+predicate = "tests"
+object_kind = "statement"
+object_id = "ae9d9473-34f1-4b51-8f13-41d340d64ad1"
+note = "Test contingent receipt in the bruteFirst variant at reading world true. The supplied first mover f is present there and absent at false, and its represented esse and essence are distinct. The reception relation is empty, so f fails R1 despite satisfying the represented esse distinction."
+
+[[relation]]
+id = "9485639e-f126-4fee-8e45-3dd03aadb085"
+label = "Test by FirstMoverNecessity.receptionControls (65f3d0c7)"
+subject_kind = "result"
+subject_id = "ed10e3b5-4804-4fa8-bb17-cc1835c24659"
+predicate = "tests"
+object_kind = "statement"
+object_id = "65f3d0c7-cc3d-4ce3-a4a9-6fa38bf722cb"
+note = "Omit identity-scoped own-essence reception in conserved with essenceByBeing and esseTrue. The contingent f at true has its esse and essence both represented by true but receives in principle false. The receipt premise, the receiver reading and receptive irreflexivity remain satisfied."
+
+[[relation]]
+id = "7e365995-19ff-4817-9095-9b3297e6d4b3"
+label = "Test by FirstMoverNecessity.receptionControls (c4bc08b3)"
+subject_kind = "result"
+subject_id = "ed10e3b5-4804-4fa8-bb17-cc1835c24659"
+predicate = "tests"
+object_kind = "argument"
+object_id = "c4bc08b3-5684-428d-abe9-7fd943d20f60"
+note = "Witness all four reception premises together at world true, with both bearers present and x contingent. X receives esse in principle false. The receptive potency edge goes from false to esse-principle true, so the receiver condition and irreflexivity hold. The same frame satisfies identity-scoped receipt."
