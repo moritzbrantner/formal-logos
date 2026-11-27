@@ -5,5 +5,10 @@
   "lean_declaration": "TruthCore.Logic.RegressHeadcount.RegressHeadcountCriterion",
   "definition_ids": [
     "daeae08d-3a0b-46fc-b932-18eda7ff5f37"
-  ]
+  ],
+  "connection_plan": {
+    "target_statement_id": "82cfaf26-fc86-54ab-8328-9a7b2bdbbe21",
+    "missing_bridge": "Apply the second clause of RegressHeadcountCriterion to ConcreteExistentialSupply.graph m w for the rival in which actual concrete grounding at w is acyclic (5e002319-3828-4de8-96bc-98ebf34072d7) but has a descending chain of actual concreta, with an injective charge on the visited grounds, so the finite well-founded account has a headcount advantage surviving every finite addition; then add an explicit, separately assessed parsimony-acceptance premise that at matched explanatory adequacy the account with that advantage is to be preferred.",
+    "blocker": "No charge assignment for actual concrete grounds is formalized (token charges and charges for independent explanatory assumptions can give different verdicts, and a shared law may carry one charge), no matched-adequacy comparison of the two accounts of the same recipient exists, and no parsimony-acceptance premise is recorded. The headcount comparison leaves the acyclic regress consistent, so it cannot by itself support the well-foundedness premise."
+  }
 }
