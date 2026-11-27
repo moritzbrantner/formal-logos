@@ -6264,6 +6264,195 @@ All four are fixed in the following commit.
 [Attempt record](../../corpus/attempts/421caba9-f0d9-44f6-b9d9-ae81b0e374bb.json)
 
 
+## Counterfactual guidance and self-application against imitability exemplars (2026-11-27; provisional, #2145)
+
+### Question and fixed meanings
+
+This is premise lane C, round 3. The
+[previous section](#individuating-non-present-candidates-the-axiarchic-rival-and-the-cognition-criterion-2026-11-27-provisional-2145)
+left the containment-recognition bridge `d1fb6414` at parity with the strongest
+rival, A4. A4 is a source that contains individuating, value-ranked modes of
+imitability, which guide its favouring, but that does not apprehend them.
+
+The owner approved two tests of that gap. Each is applied identically to A4 and
+to the personal source.
+
+1. **Counterfactual guidance.** Is the source sensitive to outweighed reasons
+   that it does not act on?
+2. **Self-application.** Does the source take its own favouring as an object?
+
+Lean: [vocabulary](../../TruthCore/Causality/AxiarchicGuidance.lean),
+[results](../../TruthCore/Results/Causality/AxiarchicGuidance/Solution.lean),
+[spec](../../specs/axiarchic-guidance.toml). Everything is an analyst
+formulation with attribution deferred. Authors are named for navigation only.
+
+New vocabulary, each with a stipulative definition:
+
+- **Outweighed reason** `Outweighed` (`35ab5a34`): at s, in respect r, y is
+  better than x; overall x is better; and the favouring favours x over y.
+- **Counterfactual guidance** `GuidedByOutweighed` (`96f1dfe9`): the reason is
+  outweighed at s, and in some scenario that agrees on the control and keeps
+  respect r's ranking, the favouring favours y over x.
+
+Respect-wise and overall betterness are parameters, read as value rankings. No
+rule aggregating respects into the overall ranking is typed.
+
+### 1. Counterfactual guidance
+
+**What it separates** (`guidanceTable`, `1587c760`, placed diagnostic testing
+`d1fb6414`). The carrier has candidates c and d, respects fit and extra content,
+and two scenarios:
+
+- in base, the reason for d (fit) is outweighed by c's extra content;
+- in alt, the extra respect ties them, so d is better overall.
+
+The profiles give these verdicts:
+
+- The good-tracking profile is guided. The personal source and A4 share this
+  profile (round 2, control rows 1 and 2).
+- A favouring fixed to c meets the outweighed condition at base but is never
+  guided (Lean-only `fixedNotGuided`, in general for fixed asymmetric profiles).
+- A nature directed to fit alone does not favour c over d at base, so for it the
+  fit reason is not outweighed.
+
+So the test discriminates something: it separates favouring that tracks overall
+value from favouring fixed to one content, which is the D-nature's form. This is
+an additional mark the D-nature fails. It does not depend on the
+goodness-variation witness that BECAUSE_OF_GOODNESS_2 needs.
+
+**Why it does not discriminate at the gap.** Lean-only `guidanceOfTracking`
+shows that, for a profile tracking overall betterness, guidance holds exactly
+when the value structure supplies it. The respect must rank y over x and x must
+be better at s, and some scenario must keep that ranking while y is better
+overall. The bearer plays no role. `guidanceLabelIndependent` adds that profiles
+tracking the same feature get the same verdicts. The personal source and A4
+share their profile, so they pass or fail together. This is law 6 of
+`GoodDependenceLaws` applied to a new counterfactual test.
+
+**The non-extensional form: registration.** A stronger reading of "sensitive
+to an outweighed reason" asks whether the reason is *registered* in the
+source's actual state, even though it does not prevail. That is a question
+about stand-ins, not about the profile.
+
+Lean-only `degreeOnlyRegistersNoRespectBetweenTies` (an instance of round 2's
+`unindividuatedNotFavoured`) proves one point. A stand-in that carries only an
+overall degree registers no respect in which two overall-tied candidates
+differ. Registration therefore needs *articulated* stand-ins, which carry
+respect-wise rankings.
+
+Both accounts can have them:
+
+- divine ideas of each thing in each respect (q.15 a.2, navigation only);
+- A4's modes of imitability in several respects, since a candidate can imitate
+  the source's wisdom more fully and its power less.
+
+Under simplicity this articulation is #1879's question, unchanged and shared.
+
+The personal account's classical name for registration of the outweighed is
+the antecedent will: God wills antecedently what he does not will consequently
+(ST I q.19 a.6 ad 1; navigation only). The A4 counterpart is a mode's own degree
+favouring its candidate over omission, outweighed in the comparison. Both are
+available. Neither is shown to require apprehension.
+
+### 2. Self-application
+
+`SelfApplies`: a second-order favouring, whose candidates are the bearer's
+determinations, favours one of the bearer's own favouring determinations over
+some determination d. Lean-only `selfApplicationIndividuates`: under round 2's
+realization and irreflexivity premises, read at second order, the stand-in of
+the bearer's own favouring differs from that of d.
+
+The alternative d is not one of the bearer's determinations. It is therefore a
+non-present candidate of the second-order favouring. From there round 2's
+trilemma applies unchanged. Its main theorem is stated for any candidate type;
+with determinations as candidates, it is the second-order criterion. So
+self-application *reduces* to the cognition criterion one level up, with the
+same premises and the same residual bridge. It does not add a discriminator.
+
+There are three other readings of "takes its own favouring as an object":
+
+- *As a term of favouring* (self-love). Both accounts can have it. The personal
+  source wills its own goodness necessarily (ST I q.19 a.3; navigation only).
+  On the rival side, Plotinus's One is described as love of itself (Enn. VI.8.15;
+  navigation only). This is a self-favouring the rival tradition posits without
+  intellect in the One.
+- *As ranked against alternatives to itself.* At a necessary source,
+  alternatives to its own favouring are not possible for it. The personal
+  source's will of its own goodness is necessary in the same way. Both lack
+  this, so it does not discriminate.
+- *As an object of apprehension* (self-knowledge, as in the #1731
+  `IntrinsicSelfKnowledge`). The personal account has it by definition and A4
+  lacks it by definition. Used as a discriminator, this presupposes the
+  disputed apprehension.
+
+### Same-standard table
+
+| Test (one criterion) | Personal source | A4 (imitability exemplars) | Discriminates? |
+| --- | --- | --- | --- |
+| Counterfactual guidance by an outweighed reason | passes (good-tracking profile) | passes (same profile) | no; profile-level (`guidanceLabelIndependent`) |
+| Registration of the outweighed reason in the actual state | needs articulated ideas (antecedent will) | needs articulated modes (a mode's own degree) | no; shared articulation price (#1879) |
+| Self-application as second-order favouring over alternatives | reduces to the criterion at second order | the same | no; relocates the same bridge |
+| Self-love (own goodness as a term of favouring) | yes (q.19 a.3) | available (Plotinus's One) | no |
+| Ranking alternatives to its own favouring | unavailable at a necessary source | unavailable | no |
+| Self-apprehension | yes by definition | no by definition | presupposes the dispute |
+
+The D-nature fails the first test, because its favouring is fixed to one content.
+
+### Assessment
+
+**Clarified.** Both owner-approved tests were applied under one standard. Their
+non-question-begging forms are of two kinds:
+
+- *profile-level* (counterfactual guidance), which is blind to the difference
+  between A4 and the personal source by label independence;
+- *realization-level* (registration and self-application), where the two
+  accounts share structure and price.
+
+Their discriminating form, self-apprehension, presupposes apprehension. Neither
+test changes round 2's parity. A positive by-product: counterfactual guidance
+is a further, compiled mark that the D-nature fails.
+
+**Rejected approaches, with reasons.**
+
+- Counting guidance as evidence of mind: it is profile-level, and A4 shares the
+  profile.
+- Counting registration of outweighed reasons as cognitive: degree-only
+  stand-ins fail it, but articulated modes pass it without apprehension.
+- Counting self-apprehension as a discriminator: it presupposes the dispute.
+- Counting the necessity of the source's self-favouring against A4: the
+  personal source's self-love is necessary too.
+
+**Standing rival and price.** A4 is unchanged. It holds a plurality of
+value-ranked, respect-articulated modes in one nature. That plurality guides
+favouring and registers outweighed respects. It is neither real composition,
+nor real relations to non-existents, nor mind-dependent. It may include a
+noncognitive self-favouring. The personal source pays the same articulation
+price, and differs only in apprehension.
+
+**Provisional judgment.** No change. The two tests do not discriminate between
+A4 and apprehension. Within this program no substantive objection to A4 has
+been identified beyond the recognition bridge it denies.
+
+**Graph.** One placed diagnostic, `1587c760` (`tests` `d1fb6414`). No premise
+is added, discharged or reclassified.
+
+**Next discriminating tests.**
+
+1. *Error and correction.* At an essentially omniscient source this is
+   counterpossible, as
+   [mind-physicalism-fork-419](mind-physicalism-fork-419.md#test-whether-value-sensitive-production-requires-representation)
+   noted. Is there any non-counterpossible analogue for a necessary source?
+2. *Unity of the articulated modes.* Does one act that registers many respects
+   need a principle of unity that only apprehension supplies, or does a nature
+   unify its modes as well? This is #1879 for A4 and the personal source alike.
+3. *Explanatory use beyond favouring.* Does the source's relation to its modes
+   do any work, for example in truth or intelligibility of creatures, that
+   requires them to be *for* the source? This is the #1892 objective-eminence
+   question, asked through its consequences.
+
+[Attempt record](../../corpus/attempts/6429463e-be7f-467a-a64f-de8d2e13c06e.json)
+
+
 ## Research attempts citing this note
 
 - [Batch certification of eight exploration maps deriving eight bare root-path premises from deeper…](../../corpus/attempts/round2-perfection-primacy.json)

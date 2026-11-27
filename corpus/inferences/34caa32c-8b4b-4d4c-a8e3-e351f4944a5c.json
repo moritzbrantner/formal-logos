@@ -1,0 +1,10 @@
+{
+  "id": "34caa32c-8b4b-4d4c-a8e3-e351f4944a5c",
+  "label": "Guidance table, by computation (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "e4a72e8f-07e7-4891-878d-64226da0b9ce",
+  "rule": "Evaluate the definitions on the finite carrier",
+  "meaning": "The good-tracking profile favours c over d at base, where d is better in fit but c better overall, and favours d over c at alt, where fit is kept and d is better overall: guided. The fixed favouring of c over d meets the outweighed condition at base and never favours d over c: not guided. The fit nature favours d over c at base, so the fit reason is not outweighed for it. The verdicts depend on the profile and the value structure only (guidanceOfTracking, guidanceLabelIndependent).",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

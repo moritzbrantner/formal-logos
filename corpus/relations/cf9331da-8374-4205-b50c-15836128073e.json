@@ -1,0 +1,10 @@
+{
+  "id": "cf9331da-8374-4205-b50c-15836128073e",
+  "label": "Guidance table tests the containment-recognition bridge",
+  "subject_kind": "result",
+  "subject_id": "1587c760-beab-4eba-8699-6a23b402335b",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "d1fb6414-976e-4833-908d-17787cca2502",
+  "note": "Applies the owner-approved counterfactual-guidance test identically to the personal source and to the imitability-exemplar rival; both pass with the same profile, so the test does not discriminate at the recognition bridge."
+}

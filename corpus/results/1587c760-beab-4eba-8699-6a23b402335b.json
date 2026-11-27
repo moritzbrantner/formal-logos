@@ -1,0 +1,11 @@
+{
+  "id": "1587c760-beab-4eba-8699-6a23b402335b",
+  "label": "Guidance table, by computation",
+  "argument_id": "dafcf55b-98e2-4430-b065-a4e6ff176764",
+  "challenge_module": "TruthCore.Results.Causality.AxiarchicGuidance.Challenge",
+  "solution_module": "TruthCore.Results.Causality.AxiarchicGuidance.Solution",
+  "theorem": "TruthCore.Results.Causality.AxiarchicGuidance.guidanceTable",
+  "comparator_config": "results/1587c760-beab-4eba-8699-6a23b402335b/comparator.json",
+  "status": "solution-present",
+  "description": "A placed diagnostic for d1fb6414. Counterfactual guidance by outweighed reasons separates good-tracking favouring from favouring fixed to one content, and it is a property of the profile and the value structure: profiles tracking the same feature receive the same verdicts (guidanceLabelIndependent). The personal source and the imitability-exemplar rival share the good-tracking profile, so the test gives them the same verdict and does not discriminate between apprehension and contained unapprehended modes. Establishes no premise."
+}

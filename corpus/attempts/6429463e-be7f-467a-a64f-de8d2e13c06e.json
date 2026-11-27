@@ -1,0 +1,27 @@
+{
+  "id": "6429463e-be7f-467a-a64f-de8d2e13c06e",
+  "label": "Counterfactual guidance and self-application against imitability exemplars (#2145 lane C round 3)",
+  "statement_ids": [
+    "d1fb6414-976e-4833-908d-17787cca2502",
+    "3b40009e-1c56-4cce-86ba-1980fd2cb9a7",
+    "e4a72e8f-07e7-4891-878d-64226da0b9ce"
+  ],
+  "date": "2026-11-27",
+  "kind": "derivation",
+  "outcome": "failed",
+  "summary": "See docs/notes/causal-perfection-transfer.md, section 'Counterfactual guidance and self-application against imitability exemplars'. Follows attempt 421caba9 (round 2), which left the containment-recognition bridge d1fb6414 at parity with A4 (contained, individuating, value-ranked modes of imitability guiding favouring, not apprehended). Owner-approved tests, applied identically to A4 and the personal source. (1) Counterfactual guidance by outweighed reasons (GuidedByOutweighed): placed diagnostic 1587c760 (guidanceTable, tests d1fb6414) shows the good-tracking profile guided, a fixed favouring not guided (Lean-only fixedNotGuided, general for fixed asymmetric profiles), a fit-only nature not facing the outweighed reason; Lean-only guidanceOfTracking and guidanceLabelIndependent show the test is profile-level, so A4 and the personal source (same profile) get the same verdict. Registration of outweighed reasons in the actual state needs articulated stand-ins (Lean-only degreeOnlyRegistersNoRespectBetweenTies: a degree-only stand-in registers no respect between overall-tied candidates); both accounts can have articulated stand-ins (ideas per respect, antecedent will; modes per respect), sharing #1879's articulation price. (2) Self-application (SelfApplies): Lean-only selfApplicationIndividuates; with determinations as candidates the round-2 theorem is the second-order criterion, so self-application relocates the same bridge one level up. Self-love is available to both (q.19 a.3; Plotinus Enn. VI.8.15, navigation only); ranking alternatives to its own favouring is unavailable to both at a necessary source; self-apprehension presupposes the dispute. Rejected: guidance as evidence of mind (profile-level); registration as cognitive (articulated modes pass without apprehension); self-apprehension as discriminator (question-begging); necessity of self-favouring against A4 (shared). A positive by-product: counterfactual guidance is a further compiled mark the D-nature fails.",
+  "blocker": "Both owner-approved tests yield parity between A4 and the personal source: their non-question-begging forms are profile-level (blind by label independence) or realization-level (shared structure and price), and their discriminating form presupposes apprehension. Next tests: a non-counterpossible analogue of error and correction at a necessary source; whether the unity of articulated modes needs a principle only apprehension supplies (#1879 for both); whether the source's relation to its modes does explanatory work (truth, intelligibility of creatures) that requires them to be for the source (#1892 through its consequences).",
+  "evidence": [
+    "1587c760-beab-4eba-8699-6a23b402335b",
+    "1895c9f3-8099-4117-aa9e-c1c7fd4b7f87"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "anthropic",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "date": "2026-11-27"
+    }
+  ]
+}

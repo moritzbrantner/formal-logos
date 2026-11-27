@@ -1,0 +1,14 @@
+{
+  "id": "dafcf55b-98e2-4430-b065-a4e6ff176764",
+  "label": "Guidance table, by computation",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "e4a72e8f-07e7-4891-878d-64226da0b9ce",
+  "inference_ids": [
+    "34caa32c-8b4b-4d4c-a8e3-e351f4944a5c"
+  ],
+  "meaning": "The good-tracking profile favours c over d at base, where d is better in fit but c better overall, and favours d over c at alt, where fit is kept and d is better overall: guided. The fixed favouring of c over d meets the outweighed condition at base and never favours d over c: not guided. The fit nature favours d over c at base, so the fit reason is not outweighed for it. The verdicts depend on the profile and the value structure only (guidanceOfTracking, guidanceLabelIndependent).",
+  "definition_ids": [
+    "35ab5a34-4c6a-4327-97a2-a739a4263257",
+    "96f1dfe9-ff9f-41a1-aeec-37746dde1256"
+  ]
+}

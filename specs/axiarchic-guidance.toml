@@ -1,0 +1,36 @@
+# #2145 premise lane C, round 3: counterfactual guidance by outweighed reasons
+# and self-application, applied identically to the personal source and to the
+# imitability-exemplar rival A4. A placed diagnostic of the containment-recognition
+# bridge d1fb6414. Analyst formulations, attribution deferred. See
+# docs/notes/causal-perfection-transfer.md, section "Counterfactual guidance and
+# self-application against imitability exemplars".
+
+[batch]
+vocab = "TruthCore.Causality.AxiarchicGuidance"
+results = "TruthCore.Results.Causality.AxiarchicGuidance"
+
+[[statement]]
+id = "Guidance table: good-tracking favouring is guided by outweighed reasons, fixed favouring is not"
+lean = "Control.GuidanceTable"
+definitions = ["35ab5a34-4c6a-4327-97a2-a739a4263257", "96f1dfe9-ff9f-41a1-aeec-37746dde1256"]
+paraphrase = "Analyst formulation on one finite carrier: two candidates c and d, two respects (fit, and extra content that fit does not record) and two scenarios. In base, d is better in fit, c is better in the extra respect, and c is better overall; in alt the extra respect ties them and d is better overall. At base, for the fit reason for d over c: (1) the good-tracking profile, which the personal source and the imitability-exemplar rival share, is guided by that outweighed reason (it favours d over c at alt); (2) a favouring fixed to c over d meets the outweighed condition but is not guided; (3) a nature directed to fit alone does not favour c over d at base, so for it the reason is not outweighed. Which account a profile represents is an interpretive assignment; the test is profile-level, so it gives the personal source and the rival the same verdict. A finite structural surrogate; no apprehension, simplicity or aggregation of respects is typed."
+
+[[argument]]
+id = "Guidance table, by computation"
+theorem = "guidanceTable"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+premises = []
+conclusion = "Guidance table: good-tracking favouring is guided by outweighed reasons, fixed favouring is not"
+rule = "Evaluate the definitions on the finite carrier"
+meaning = "The good-tracking profile favours c over d at base, where d is better in fit but c better overall, and favours d over c at alt, where fit is kept and d is better overall: guided. The fixed favouring of c over d meets the outweighed condition at base and never favours d over c: not guided. The fit nature favours d over c at base, so the fit reason is not outweighed for it. The verdicts depend on the profile and the value structure only (guidanceOfTracking, guidanceLabelIndependent)."
+description = "A placed diagnostic for d1fb6414. Counterfactual guidance by outweighed reasons separates good-tracking favouring from favouring fixed to one content, and it is a property of the profile and the value structure: profiles tracking the same feature receive the same verdicts (guidanceLabelIndependent). The personal source and the imitability-exemplar rival share the good-tracking profile, so the test gives them the same verdict and does not discriminate between apprehension and contained unapprehended modes. Establishes no premise."
+
+[[relation]]
+id = "Guidance table tests the containment-recognition bridge"
+label = "Guidance table tests the containment-recognition bridge"
+subject_kind = "result"
+subject_id = "Guidance table, by computation"
+predicate = "tests"
+object_kind = "statement"
+object_id = "d1fb6414-976e-4833-908d-17787cca2502"
+note = "Applies the owner-approved counterfactual-guidance test identically to the personal source and to the imitability-exemplar rival; both pass with the same profile, so the test does not discriminate at the recognition bridge."

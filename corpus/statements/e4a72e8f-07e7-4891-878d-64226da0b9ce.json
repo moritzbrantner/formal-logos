@@ -1,0 +1,10 @@
+{
+  "id": "e4a72e8f-07e7-4891-878d-64226da0b9ce",
+  "label": "Guidance table: good-tracking favouring is guided by outweighed reasons, fixed favouring is not",
+  "paraphrase": "Analyst formulation on one finite carrier: two candidates c and d, two respects (fit, and extra content that fit does not record) and two scenarios. In base, d is better in fit, c is better in the extra respect, and c is better overall; in alt the extra respect ties them and d is better overall. At base, for the fit reason for d over c: (1) the good-tracking profile, which the personal source and the imitability-exemplar rival share, is guided by that outweighed reason (it favours d over c at alt); (2) a favouring fixed to c over d meets the outweighed condition but is not guided; (3) a nature directed to fit alone does not favour c over d at base, so for it the reason is not outweighed. Which account a profile represents is an interpretive assignment; the test is profile-level, so it gives the personal source and the rival the same verdict. A finite structural surrogate; no apprehension, simplicity or aggregation of respects is typed.",
+  "lean_declaration": "TruthCore.Causality.AxiarchicGuidance.Control.GuidanceTable",
+  "definition_ids": [
+    "35ab5a34-4c6a-4327-97a2-a739a4263257",
+    "96f1dfe9-ff9f-41a1-aeec-37746dde1256"
+  ]
+}
