@@ -73,8 +73,8 @@ disambiguations = ["e151d506-c074-4e5d-a0f9-e9c51f1a73d7"]
 id = "Controls for comprehension by degrees of act, knowability and knowing"
 lean = "Control.Controls"
 paraphrase = "Closed controls on interpretations with two beings (Bool; true alone INFINITE_1; both have intellect) and the degree scale Bool (false < true): (1) nonvacuity: all four premises and the sense bridge hold, the bridge 'No intellect that is not INFINITE_1 comprehends an INFINITE_1 being' holds, true comprehends itself in both senses and false COMPREHEND_2s itself; (2)-(5) each of the four premises omitted in turn, the other three hold and false (not INFINITE_1) COMPREHEND_2s true (INFINITE_1); parts 2 and 4 also show maximal knowability and the non-maximal-power premise each fail while the other holds; (6) with everything comprehending everything in the primitive sense, the COMPREHEND_2 bridge holds and the sense bridge and the COMPREHEND_1 bridge fail; (7) with nothing comprehending in the primitive sense, the sense bridge holds and its converse fails; (8) on any Preorder scale with no maximum, 'Whatever is INFINITE_1 has a maximal degree of act' entails that nothing is INFINITE_1. Statements about these interpretations only."
-definitions = ["5b196f1c-210d-450e-b3f1-33e214f9f45d", "431287d4-f1b4-4e18-ad6e-555f49f1e39a", "1218cc1e-e6ef-4f27-9036-d6e28cae67ad", "4afe4ab4-f8cc-4120-b284-f1f0140e76c1", "DEF-INFINITE"]
-disambiguations = ["e151d506-c074-4e5d-a0f9-e9c51f1a73d7"]
+definitions = ["5b196f1c-210d-450e-b3f1-33e214f9f45d", "431287d4-f1b4-4e18-ad6e-555f49f1e39a", "1218cc1e-e6ef-4f27-9036-d6e28cae67ad", "4afe4ab4-f8cc-4120-b284-f1f0140e76c1", "DEF-INFINITE", "88bc0655-9dd0-5879-ba1b-3fca9f86c1f4"]
+disambiguations = ["e151d506-c074-4e5d-a0f9-e9c51f1a73d7", "587c53cf-c2a8-51f6-b8c1-013e67756dc6", "c0fda0ee-3508-5101-94ba-043e3eb28b0e"]
 
 # ---------------------------------------------------------------- arguments
 
@@ -127,3 +127,73 @@ axioms = ["propext", "Classical.choice", "Quot.sound"]
 sense_mixing_control = true
 rule = "Explicit two-being interpretations on the degree scale Bool, checked by case analysis; the scale-commitment part by Mathlib exists_gt"
 meaning = "Nonvacuity: all premises and the sense bridge hold together with the bridge bbac932e, an INFINITE_1 being comprehends itself in both senses, and a finite intellect COMPREHEND_2s a finite being. Each of the four premises is needed: omitting it, the other three hold and a non-INFINITE_1 intellect COMPREHEND_2s the INFINITE_1 being. The sense bridge is needed (the COMPREHEND_2 bridge holds while the COMPREHEND_1 bridge fails), and its converse is not assumed (sense mixing fails without it). On a scale with no maximum, 'Whatever is INFINITE_1 has a maximal degree of act' entails that nothing is INFINITE_1. A finite countermodel shows a premise is needed in that interpretation, not that it is false."
+
+[[relation]]
+id = "8270f616-1977-437d-af45-459680e19877"
+label = "Test by ComprehensionByMeasure.controls (af79c4ee)"
+subject_kind = "result"
+subject_id = "40ec77b1-c79e-4308-9830-4d5a35fe8cb2"
+predicate = "tests"
+object_kind = "statement"
+object_id = "af79c4ee-6bd1-4e6c-85b0-734a8b6975c4"
+note = "Omit maximal act of the INFINITE_1 bearer. In flat, both act and knowability take the bottom degree. The other three measure policies hold, but the non-INFINITE_1 intellect reaches the INFINITE_1 bearer's knowability."
+
+[[relation]]
+id = "222ed183-e30d-4252-9cfc-fdf868fb4c22"
+label = "Test by ComprehensionByMeasure.controls (7921f9c8)"
+subject_kind = "result"
+subject_id = "40ec77b1-c79e-4308-9830-4d5a35fe8cb2"
+predicate = "tests"
+object_kind = "statement"
+object_id = "7921f9c8-81f4-4af5-b945-d98787d12f42"
+note = "Omit the act-to-knowability lower bound. In lowKnowability, the INFINITE_1 bearer has top act and bottom knowability. The other three measure policies hold, and the other intellect reaches that bottom degree of knowability."
+
+[[relation]]
+id = "de9fc87f-932f-47d4-9fd4-d5c7f4a73032"
+label = "Test by ComprehensionByMeasure.controls (ea1c35a5)"
+subject_kind = "result"
+subject_id = "40ec77b1-c79e-4308-9830-4d5a35fe8cb2"
+predicate = "tests"
+object_kind = "statement"
+object_id = "ea1c35a5-6c8b-41f4-8029-aea2166d74cf"
+note = "Omit the requirement that a non-INFINITE_1 bearer has nonmaximal act. In high both bearers have top act and top knowability, with knowing bounded by each knower's act. The non-INFINITE_1 intellect consequently reaches the INFINITE_1 bearer's knowability."
+
+[[relation]]
+id = "37be43f0-d375-418d-b5b3-6a18be6c267e"
+label = "Test by ComprehensionByMeasure.controls (7db53cde)"
+subject_kind = "result"
+subject_id = "40ec77b1-c79e-4308-9830-4d5a35fe8cb2"
+predicate = "tests"
+object_kind = "statement"
+object_id = "7db53cde-911c-48ec-ab4f-054a00288148"
+note = "Omit the upper bound on knowing by the knower's act. In overreach, act and knowability match each bearer but both intellects know at the top degree. Thus the non-INFINITE_1 intellect reaches the INFINITE_1 bearer's knowability."
+
+[[relation]]
+id = "bf67b8cc-6c41-486a-b425-88e7cdbf7b94"
+label = "Test by ComprehensionByMeasure.controls (76997ac8)"
+subject_kind = "result"
+subject_id = "40ec77b1-c79e-4308-9830-4d5a35fe8cb2"
+predicate = "tests"
+object_kind = "statement"
+object_id = "76997ac8-6d14-4e62-af85-eb648fc83861"
+note = "Omit the bridge from COMPREHEND_1 to COMPREHEND_2. The exact measures exclude measured comprehension of the INFINITE_1 bearer by the other intellect. The primitive relation is assigned to every pair, so the primitive conclusion fails."
+
+[[relation]]
+id = "c88cc8a2-5529-4668-bf4c-71eec50dc3de"
+label = "Test by ComprehensionByMeasure.controls (90a61ab0)"
+subject_kind = "result"
+subject_id = "40ec77b1-c79e-4308-9830-4d5a35fe8cb2"
+predicate = "tests"
+object_kind = "argument"
+object_id = "90a61ab0-a180-40d1-b806-87a9370a2378"
+note = "With exact measures, act and knowability coincide for both bearers, and true is INFINITE_1 with the top degree. Both premises of the maximal-knowability derivation hold jointly."
+
+[[relation]]
+id = "78723d41-eb7c-4a8f-b0a3-040c8ea25d4d"
+label = "Test by ComprehensionByMeasure.controls (48ee4206)"
+subject_kind = "result"
+subject_id = "40ec77b1-c79e-4308-9830-4d5a35fe8cb2"
+predicate = "tests"
+object_kind = "argument"
+object_id = "48ee4206-002c-4528-b2eb-b76ce152e254"
+note = "With exact measures, the non-INFINITE_1 bearer has the bottom degree of act and each knower knows only at its own act degree. Both premises of the nonmaximal-power derivation hold jointly."
