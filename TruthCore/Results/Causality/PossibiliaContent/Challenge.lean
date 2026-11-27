@@ -16,14 +16,6 @@ open TruthCore.Results.Causality.AxiarchicFoundation (favouredIndividuated)
 
 /-! ## The shared demand, derived -/
 
-/-- THE SHARED DEMAND. A constitutively simple bearer whose good-general
-favouring has only non-present candidates has a stand-in that is in it without
-being a real constituent of it. Realization and irreflexivity give two distinct
-stand-ins, the two locus bridges put both in the bearer, and simplicity forbids
-both being real. The theorem holds whatever the bearer is: it binds the personal
-source (its ideas cannot be a real plurality) and the rival (its modes or powers
-cannot be) alike. -/
-
 /-! ## The root criterion from conceptualism about non-real being -/
 
 /-- The root cognition criterion, derived. An actual root `r` has a good-general
@@ -93,5 +85,13 @@ open TruthCore.Causality.SelectionScope (Outcome)
 open TruthCore.Causality.GoodFavouring.Model (Scenario fits better fitOrder)
 open TruthCore.Causality.ImpersonalFoundationJoint.Control (Det favTok hasSrc personalSrc noInputs)
 open TruthCore.Causality.IntentionalExemplarExtension.Control (rootProfile)
+
+/-- One carrier, five rows (see `PossibiliaControls`). -/
+theorem possibiliaControls : PossibiliaControls := by
+  sorry
+
+/-- Relocation probe (see `RootCriterionWithoutConceptualism`). -/
+theorem rootCriterionWithoutConceptualism : RootCriterionWithoutConceptualism := by
+  sorry
 
 end TruthCore.Results.Causality.PossibiliaContent

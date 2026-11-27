@@ -43,13 +43,11 @@ theorem distinctNotBothReal {B C : Type} (RealConstituent : B → C → Prop) (b
     ¬ (RealConstituent b e ∧ RealConstituent b e') :=
   fun h => hne (hSimple e e' h.1 h.2)
 
-/-- THE SHARED DEMAND. A constitutively simple bearer whose good-general
-favouring has only non-present candidates has a stand-in that is in it without
-being a real constituent of it. Realization and irreflexivity give two distinct
-stand-ins, the two locus bridges put both in the bearer, and simplicity forbids
-both being real. The theorem holds whatever the bearer is: it binds the personal
-source (its ideas cannot be a real plurality) and the rival (its modes or powers
-cannot be) alike. -/
+/-- THE SHARED DEMAND. A simple bearer whose good-general favouring has only
+non-present candidates has a stand-in in it that is not a real constituent:
+realization and irreflexivity give two distinct stand-ins, the locus bridges put
+both in the bearer, and simplicity forbids both being real. It binds the personal
+source (no real plurality of ideas) and the rival (none of modes or powers). -/
 theorem simpleBearerHasNonRealStandIn {B D S X Z C : Type}
     (Has : B → D → Prop) (favours : TruthCore.Causality.GoodFavouring.Profile S X → D)
     (good : S → X → X → Prop) (fitOf : S → Z) (Present : S → X → Prop)
