@@ -1,0 +1,16 @@
+{
+  "id": "69b9f887-582a-479c-924b-e7328f3930b4",
+  "label": "No own favouring has a merely produced stand-in for a non-present candidate",
+  "paraphrase": "OPEN source-of-differences bridge, analyst formulation, attribution deferred: for every bearer b with a favouring determination, every scenario s and every candidate x that is not a present input at s, b's stand-in for x is not an item that b produces (makes as something other than itself) without containing it (CONTAINED_IN_1). Rationale: to produce distinct items for x and y the bearer would already have to discriminate x from y (a common principle must contain what distinguishes its effects; ST I q.14 a.6, navigation only), and that contained discrimination, not the produced item, is then the first stand-in. It excludes a realm of possibles that the source makes and that then guides its favouring. It does not concern items grounded in b without being made by it, such as modes of b's own nature, which are contained if they are b's determinations.",
+  "lean_declaration": "TruthCore.Causality.AxiarchicFoundation.NoMerelyProducedStandIn",
+  "definition_ids": [
+    "abd8cfa4-1887-47d5-86cc-e0f6092e4ded",
+    "fae7bbb8-931c-4a95-9f44-1d59921d1c83",
+    "b28d7e04-694b-442b-a42b-65f39190956f",
+    "c917dda9-f382-48fa-8cc1-a0b9e609c164",
+    "b71adcba-9430-4c3b-a87e-60471247d2dd"
+  ],
+  "disambiguation_ids": [
+    "4c3751a6-6b32-47f2-89c4-d094dabe5613"
+  ]
+}
