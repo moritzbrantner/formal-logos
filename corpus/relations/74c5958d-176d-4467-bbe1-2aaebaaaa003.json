@@ -1,0 +1,10 @@
+{
+  "id": "74c5958d-176d-4467-bbe1-2aaebaaaa003",
+  "label": "The contingent bearer conditionally refutes global forward guarded universal transfer",
+  "subject_kind": "argument",
+  "subject_id": "cad42854-dea2-46e5-80d4-a6d89b216a6e",
+  "predicate": "refutes",
+  "object_kind": "statement",
+  "object_id": "f084efde-c461-49d4-9f7d-902abc81b5f9",
+  "note": "Conditional on STMT-SOME-ACTUAL-CONTINGENT. The argument identifies a commitment of the transfer policy on the same profile. The contingency premise therefore still requires independent warrant."
+}

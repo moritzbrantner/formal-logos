@@ -1,0 +1,12 @@
+{
+  "id": "b6fcc03f-a8a9-449b-a244-c60d669db7b1",
+  "label": "An actual contingent concrete bearer rules out global forward guarded universal transfer (inference)",
+  "input_statement_ids": [
+    "c94b5446-e7e7-5b36-9bed-288959725526"
+  ],
+  "output_statement_id": "9cdae436-0192-4ad7-b56a-4937e22c8c12",
+  "rule": "Actualist domain correspondence and elimination of the contingent witness",
+  "meaning": "The contingency premise gives one existing concrete bearer at the selected world and its absence at an accessible world. Apply boxAllToAllBox_iff to the same Ontic to obtain increasing domains from the proposed transfer. Apply increasing_excludes_contingency to that bearer at the selected world. The only open premise is the route's existing contingency node.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

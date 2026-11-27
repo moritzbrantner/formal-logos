@@ -1,0 +1,24 @@
+{
+  "id": "cad42854-dea2-46e5-80d4-a6d89b216a6e",
+  "label": "Actualist forward transfer fails on the contingency route",
+  "premise_statement_ids": [
+    "c94b5446-e7e7-5b36-9bed-288959725526"
+  ],
+  "conclusion_statement_id": "9cdae436-0192-4ad7-b56a-4937e22c8c12",
+  "inference_ids": [
+    "b6fcc03f-a8a9-449b-a244-c60d669db7b1"
+  ],
+  "meaning": "The contingency premise gives one existing concrete bearer at the selected world and its absence at an accessible world. Apply boxAllToAllBox_iff to the same Ontic to obtain increasing domains from the proposed transfer. Apply increasing_excludes_contingency to that bearer at the selected world. The only open premise is the route's existing contingency node.",
+  "definition_ids": [
+    "a3b39c76-f1cb-53e8-bf5e-9e64d75f02bf",
+    "008cb21a-256c-5a90-822c-acd4591d699a",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ],
+  "disambiguation_ids": [
+    "623ddbf6-9683-5361-bae4-e348a00ec680",
+    "fd336f80-973c-5b24-80c2-9f95b84abc89",
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f"
+  ]
+}

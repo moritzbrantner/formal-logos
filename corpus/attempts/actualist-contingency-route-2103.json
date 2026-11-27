@@ -1,0 +1,27 @@
+{
+  "id": "59dccbcb-3bea-4bad-92cb-833984eed47f",
+  "label": "Forward guarded quantifier transfer on the contingency route",
+  "date": "2026-11-27",
+  "statement_ids": [
+    "c94b5446-e7e7-5b36-9bed-288959725526",
+    "f084efde-c461-49d4-9f7d-902abc81b5f9",
+    "9cdae436-0192-4ad7-b56a-4937e22c8c12"
+  ],
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "Lane F (#2103). The actualist-domain package in necessary-individual-quantifier-shift identified the exact equivalence of forward guarded transfer and increasing domains on a rigid candidate roster; it also proved that increasing domains exclude ContingentAt. Apply those two laws to m.ontic of the existing contingency route. The only premise is SomeActualContingentAt at the supplied world. Its existent bearer and absence across one accessible edge suffice to rule out the global transfer. The result makes the transfer policy's domain commitment explicit. It provides no warrant for the contingency node, and does not address the reverse transfer, counterpart semantics or restricted predicate inventories. The GOD_NAMING work already proves the equivalence of the rigid-name and box-K readings; registering either as a new support route would merely restate the box-K commitment.",
+  "blocker": "The contingency premise still needs independent warrant. The use of these two selected laws does not assign a case application to the remaining clauses of the composite actualist-domain certificate.",
+  "evidence": [
+    "e6a55f69-d26f-5867-aed8-379cc98fafcc",
+    "42f919df-6092-472c-b827-daa07cc2c304"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-27"
+    }
+  ]
+}

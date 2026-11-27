@@ -1,0 +1,13 @@
+{
+  "id": "9cdae436-0192-4ad7-b56a-4937e22c8c12",
+  "label": "The route does not admit global forward guarded universal transfer",
+  "paraphrase": "The forward transfer from a box of existence-guarded universal quantification to an existence-guarded universal quantification of a box fails on the supplied Ontic profile. This is the negation of the policy over all worlds and all total world-indexed predicates.",
+  "lean_declaration": "TruthCore.Modal.ActualistContingencyRoute.NoRouteForwardTransfer",
+  "definition_ids": [
+    "a3b39c76-f1cb-53e8-bf5e-9e64d75f02bf",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ],
+  "disambiguation_ids": [
+    "fd336f80-973c-5b24-80c2-9f95b84abc89"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "id": "f084efde-c461-49d4-9f7d-902abc81b5f9",
+  "label": "The route admits forward guarded universal transfer at every world",
+  "paraphrase": "Rival domain policy on the route's Ontic profile. For every world u and total world-indexed predicate P, if every existing candidate at each world accessible from u satisfies P there, then each candidate existing at u satisfies P at every world accessible from u. Both guards use the same rigid candidate roster and the supplied world-relative existence field.",
+  "lean_declaration": "TruthCore.Modal.ActualistContingencyRoute.RouteForwardTransfer",
+  "definition_ids": [
+    "a3b39c76-f1cb-53e8-bf5e-9e64d75f02bf",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ],
+  "disambiguation_ids": [
+    "fd336f80-973c-5b24-80c2-9f95b84abc89"
+  ]
+}
