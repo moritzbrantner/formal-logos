@@ -9,11 +9,20 @@
   "date": "2026-10-28",
   "kind": "derivation",
   "outcome": "succeeded",
-  "summary": "Finite-list omission, full-cover joint absence, necessary-population incompatibility and explicit-EM positive DeRe reconstructed and packaged in Challenge/Solution with zero-axiom Comparator configurations. Alternating, infinite-tail and successor-free controls also elaborate with zero axioms. Exact warm-service evidence and interpretive limits persist in docs/notes/finite-population-cover-533.md. This successful derivation attempt does not establish its metaphysical policies or change root closure; canonical final CI certification remains pending.",
+  "summary": "Finite-list omission, full-cover joint absence, necessary-population incompatibility and explicit-EM positive DeRe reconstructed and packaged in Challenge/Solution with zero-axiom Comparator configurations. Alternating, infinite-tail and successor-free controls also elaborate with zero axioms. Exact warm-service evidence and interpretive limits persist in docs/notes/finite-population-cover-533.md. This successful derivation attempt does not establish its metaphysical policies or change root closure; canonical final CI certification remains pending.\n\nCuration pass 2, lane D (#2103, 2026-11-27). a243e1b6 tests 390ac3ab. Omit AccessibleSuccessor in the finite-cover route. The Unit world has no access edges and the individual carrier is Empty. Finite cover, absence amalgamation, and individual contingency all hold vacuously. The joint-absence conclusion still needs an accessible world, so it fails in this frame. The alternating model fails AbsenceAmalgamation, and the inhabited infinite-tail model satisfies amalgamation but fails FinitePopulationCover. Both stronger requirements have off-path registrations at these exact scopes.",
   "evidence": [
     "dd025239-76a8-5e59-b5e0-16a1ae9dae37",
     "a243e1b6-e217-55aa-80ba-a5fab5fc8324",
     "PR-614",
     "PR-627"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-27"
+    }
   ]
 }
