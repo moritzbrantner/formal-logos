@@ -1,10 +1,10 @@
 {
   "id": "cda7c835-8e8b-4783-97be-38fa2e6f06be",
-  "label": "Test by AtomisticUniversalCausePriority.consistency (74d3060e)",
+  "label": "Test by AtomisticUniversalCausePriority.consistency (f60704c5)",
   "subject_kind": "result",
   "subject_id": "4a9a186e-a31a-590b-be72-627b80efc284",
   "predicate": "tests",
   "object_kind": "argument",
-  "object_id": "74d3060e-be21-5864-bd5e-ffb1a93c9d61",
-  "note": "Witness the atomistic source bundle in the two-object identity-parthood interpretation. Both objects are minimal and the sole complete-production edge joins distinct objects. The effect is the one caused simple and its own fusion. The same model also supplies source priority, with proper-part priority vacuous. The argument takes excluded middle explicitly."
+  "object_id": "f60704c5-e5e3-521a-82e0-f0c8f4b32cc0",
+  "note": "In the populated two-object identity-parthood fixture, the sole incoming edge is from origin to effect. Any two incoming complete causes of the same effect coincide, supplying the sole registered premise UniqueCausePerEffect on that graph."
 }

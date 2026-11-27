@@ -1,0 +1,10 @@
+{
+  "id": "65b0daab-3f7d-441c-b56f-00bb7694cf08",
+  "label": "Test by ActualExistenceAdequacy.realization (c94b5446)",
+  "subject_kind": "result",
+  "subject_id": "a426c365-effb-5ed5-a840-d747fbeea1d6",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "c94b5446-e7e7-5b36-9bed-288959725526",
+  "note": "In the tagged-world realizations, the sole concrete Unit bearer exists at `.inl true` and is absent at the accessible `.inl false`. Both profiles therefore witness `SomeActualContingentAt` at the selected observation even though only `chain` varies the bearer's existence across supplied settings."
+}

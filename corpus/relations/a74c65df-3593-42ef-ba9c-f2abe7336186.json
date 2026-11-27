@@ -1,0 +1,10 @@
+{
+  "id": "a74c65df-3593-42ef-ba9c-f2abe7336186",
+  "label": "Test by NecessaryConcreteUnderived.jointWitness (c71c068c)",
+  "subject_kind": "result",
+  "subject_id": "b6bac955-5380-523b-8bdb-b0666f9420ce",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "c71c068c-bbae-5ed5-a99d-70b155c8d239",
+  "note": "At the selected world false both bearers are actual concreta. The bearer true is absent at the accessible world true and is contingent. The bearer false grounds it at the selected world, exercising EveryContingentGroundedAt on the populated contingent class."
+}

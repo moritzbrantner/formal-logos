@@ -308,16 +308,6 @@ object_id = "62b4a40a-919e-5da4-998c-131c386b7361"
 note = "Omit Euclidean access. In nonEuclidean at a, the power holder true is present at a and at the contingent-free accessible world b, which accesses only itself. That holder is absent at c, also accessible from a, so the required origin-relative necessity fails."
 
 [[relation]]
-id = "44327799-6f8f-4846-b029-74445afe2106"
-label = "Test by ModalGrounding.controls (be4b04bf)"
-subject_kind = "result"
-subject_id = "ef54f023-8184-406a-9b0c-caa2df7415b0"
-predicate = "tests"
-object_kind = "argument"
-object_id = "be4b04bf-9050-4278-80ce-574d1505d9eb"
-note = "At true in theistFrame, false is a present contingent concretum, and the other accessible world has no contingent concretum. The power holder true is concrete and exists at both worlds. All global-route nonlogical premises hold in this model."
-
-[[relation]]
 id = "776c40ea-17ee-49c3-9505-461cd4a3b8e0"
 label = "Test by ModalGrounding.controls (3847c481)"
 subject_kind = "result"

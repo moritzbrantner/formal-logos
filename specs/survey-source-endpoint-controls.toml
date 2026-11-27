@@ -26,13 +26,3 @@ predicate = "tests"
 object_kind = "statement"
 object_id = "c1d16add-865b-4ac6-a790-4e6e85fe0ac5"
 note = "Omit source productivity in the sole self-accessing world. Its one existing bearer has no incoming cause from an existing bearer and no outgoing cause. Accessible-causer concreteness holds vacuously. The selected profile has an empty concrete predicate and hence no necessary concrete witness."
-
-[[relation]]
-id = "bb1a497b-2f47-42d9-9214-7c5e7472e4a1"
-label = "Test by SurveySourceEndpointControls.endpointObstruction (e5351fc0)"
-subject_kind = "result"
-subject_id = "4fe18ea3-6e78-4d06-b9f0-c8fe88cc3482"
-predicate = "tests"
-object_kind = "argument"
-object_id = "e5351fc0-d6f9-53a9-afab-e435ba9ac58f"
-note = "Witness all four nonlogical premises in the single populated world. Its frame is self-accessing and Euclidean, there are no contingent bearers, and the one actual bearer has a source path of length zero, so headless coverage fails there. The argument takes excluded middle explicitly."
