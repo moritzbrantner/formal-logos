@@ -1,0 +1,15 @@
+# Lane F application of the constructive regress law to the selected grounding graph.
+[batch]
+vocab = "TruthCore.Causality.GroundedOccupantRegress"
+results = "TruthCore.Results.Logic.ActualGroundingAcyclicity"
+
+[[argument]]
+id = "Actual grounding well-foundedness gives selected-world acyclicity"
+theorem = "actualGroundingAcyclicOfWF"
+premises = ["STMT-ACTUAL-GROUNDING-WF"]
+conclusion = "5e002319-3828-4de8-96bc-98ebf34072d7"
+axioms = []
+transcription = "instantiation"
+rule = "Specialize the regress schema's constructive cycle exclusion"
+meaning = "Use the actual-concrete grounding graph with nodes restricted to candidates concrete and existing at the supplied world and with the same Profile.grounds edges there. Well-foundedness of those edges excludes every nonempty finite return path by the graph law. This introduces no actual inhabitant and requires no excluded-middle premise."
+description = "Instantiates the constructive cycle-exclusion law on the exact selected-world grounding graph. It identifies acyclicity as a consequence of the existing well-foundedness commitment."
