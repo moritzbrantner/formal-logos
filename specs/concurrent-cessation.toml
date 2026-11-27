@@ -7,6 +7,7 @@ definitions = ["9bd9cc6b-61c5-4180-bd8f-b1e90555689a", "a2ba53c6-6eca-4572-acf1-
 id = "Cessation coverage and ungiven continuation comparison"
 lean = "Certificate"
 paraphrase = "For arbitrary sampled process models, causal coverage of cessation and no terminal destructive cause give double-negated next presence of the same initially present bearer. Continued weak giving is classically equivalent to failure of continuation without any giver. Coverage plus that failure premise yields a terminal process witness whenever a previously present recipient has no next giver. The existing ConcurrentlyActualized premise restricts to continued giving on a matching selected-world process dictionary. Reused temporal inertia and sustained histories respectively satisfy causal coverage with failure and success of concurrent actualization; the inertial process dictionary contains a sound actual loss of the other bearer. These are conditional laws and structural interpretations, not actual conservation or rival defeat."
+definitions = ["9bd9cc6b-61c5-4180-bd8f-b1e90555689a", "a2ba53c6-6eca-4572-acf1-8bd78a0967a5", "158301bc-9585-4145-be60-34f08c9f922c", "6e811e85-b983-5988-b20a-f4f3ee83c50e", "4433942e-aaf6-55a9-b777-66e55638103d"]
 
 [[argument]]
 id = "Causal cessation separates historical persistence from current giving"
@@ -16,3 +17,13 @@ conclusion = "Cessation coverage and ungiven continuation comparison"
 axioms = ["propext", "Classical.choice", "Quot.sound"]
 rule = "Cessation contradiction, classical contraposition, exact restriction of the existing root premise, and process coverage on reused temporal controls"
 meaning = "Checks the next test of attempt 05bc2722 at root-reaching concurrent actualization 40a97664, consumed by sustainingOfConcurrentActualization argument366a6ea3. The causal cessation law does not by itself select inertia or giving: it holds in the existing inertial and sustained histories. Adding no-giver/no-continuation does not independently defend continued giving because the two are classically equivalent on the same received, prior-present bearer. Causal coverage then requires a represented terminal process on any resulting loss; identifying withdrawal with that process remains an interpretation obligation, not a theorem about actual causes. Matching temporal presence to process existence permits the exact root premise to imply its continuation restriction. No converse covers time zero, first appearances or dense-time limits. All hypotheses remain internal to the certificate; no new root support option, source claim, physical possibility or metaphysical premise is asserted."
+
+[[relation]]
+id = "925b1786-a4f8-4f76-91b9-b9b3e9850b5c"
+label = "Test by ConcurrentCessation.certificate (40a97664)"
+subject_kind = "result"
+subject_id = "610e21dc-7679-4cfb-be45-b0534a7bae3b"
+predicate = "tests"
+object_kind = "statement"
+object_id = "40a97664-e481-42d7-8458-78374a61aa26"
+note = "In the one-world inertia history, the received bearer false is present at samples 1 and 2. Its only giving occurs at 1, so weak concurrent actualization fails at 2. The sampled cessation law still holds and is exercised on the other bearer true, which has a represented terminal loss between samples 1 and 2."

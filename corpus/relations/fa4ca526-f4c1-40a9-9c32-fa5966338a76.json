@@ -1,0 +1,10 @@
+{
+  "id": "fa4ca526-f4c1-40a9-9c32-fa5966338a76",
+  "label": "Test by StoppingPoints.foundationNormTest (baf22110)",
+  "subject_kind": "result",
+  "subject_id": "288f9cef-97f7-5c19-b971-ac178f7b2a5a",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "baf22110-9b54-5c11-a44a-c8447518b824",
+  "note": "Omit contingency of the supplied target true at false. In necessaryStop both facts hold at both worlds, and false is the explanation for true. SingleStop, factivity, necessitation, well-foundedness of the reason relation at false, and NoBruteFoundation all hold in this fact arena."
+}

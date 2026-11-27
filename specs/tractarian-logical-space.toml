@@ -135,3 +135,13 @@ predicate = "tests"
 object_kind = "statement"
 object_id = "72861c3a-fff5-4149-bb9d-43985330b4c6"
 note = "Checks the exact decomposition of the stronger statement into the weaker version and the registered delta under the comparison's shared interpretation."
+
+[[relation]]
+id = "9288ac0e-4339-44ef-802c-461ebebd18fa"
+label = "Test by TractarianLogicalSpace.controls (873d057f)"
+subject_kind = "result"
+subject_id = "8366ef48-9ff4-48db-be62-3d97f9803c1a"
+predicate = "tests"
+object_kind = "statement"
+object_id = "873d057f-e58e-53cc-a054-093f7c5a4238"
+note = "On the shared `Unit → Prop` frame every world accesses every world and the sole Unit bearer exists throughout. `JointRouteModel` verifies `OnticFrameS5` alongside the necessary-root witness and the one-atom logical-space valuation on that frame."

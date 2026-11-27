@@ -1,0 +1,10 @@
+{
+  "id": "be1b32d1-53c4-4107-964a-06fde8607325",
+  "label": "Test by ParityUnionRegress.checks (6af3bd73)",
+  "subject_kind": "result",
+  "subject_id": "6844043f-7a10-5f75-b2a3-93712d07f2b7",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "6af3bd73-f2bc-5018-ba2f-ec7f97d6c059",
+  "note": "Omit well-foundedness of the union of necessary-bearer support from base false. Every Nat bearer exists at both worlds. Each local relation has no two-edge path, while the union has n + 1 supporting n at the world selected by the parity of n. The union is cycle-free and has an infinite descending chain."
+}

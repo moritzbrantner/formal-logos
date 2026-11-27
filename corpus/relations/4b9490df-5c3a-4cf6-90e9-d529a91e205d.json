@@ -1,0 +1,10 @@
+{
+  "id": "4b9490df-5c3a-4cf6-90e9-d529a91e205d",
+  "label": "Test by PrussPowerPremises.twoMemberCollective (95bf8780)",
+  "subject_kind": "result",
+  "subject_id": "9bba1325-f031-450d-b506-f91ca9f0bc46",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "95bf8780-0e3c-49ba-b636-2274e2997a30",
+  "note": "At the selected world (true, true), c and d are both present and contingent. Joint absence fails there and holds at the accessible world (false, false), so both antecedents of ActualAbsenceGrounded hold. The present g has the stipulated propositional PowerFor their joint absence. Individual absence grounding fails."
+}
