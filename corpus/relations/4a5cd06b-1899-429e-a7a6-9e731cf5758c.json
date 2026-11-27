@@ -1,0 +1,10 @@
+{
+  "id": "4a5cd06b-1899-429e-a7a6-9e731cf5758c",
+  "label": "Test by SimplicityCollapse.rootExposure (c85e8ef5)",
+  "subject_kind": "result",
+  "subject_id": "9cac6a2b-b4a6-523d-98b3-e0dab1989c75",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "c85e8ef5-3dc4-502d-90f8-da1429e33fd8",
+  "note": "Omit the unactualized-capacity reading at false. In noCreation, the source is in act in respect false there, has every represented ability, and has no represented potency. Respect true is therefore an unactualized ability at false that lacks the required potency. The immutability and modal-capacity clauses at false hold, and the first effect exists only at false."
+}
