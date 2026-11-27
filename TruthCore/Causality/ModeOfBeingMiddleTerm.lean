@@ -4,6 +4,7 @@ public import TruthCore.Causality.Round2PerfectionPrimacy
 public import TruthCore.Causality.WholePowerPerfection
 public import TruthCore.Causality.GradesFrame
 public import TruthCore.Latin.Aquinas.SummaTheologiae.PrimaPars.Question4.Article1
+public import TruthCore.Causality.ReceptionLimitation
 
 /-!
 # The q.4 a.2 sentence "omnium perfectiones pertinent ad perfectionem essendi"
@@ -99,6 +100,47 @@ def OwnBeingPairIffEveryPure (OwnBeing : B → Prop) (Has : B → D → Prop)
       PurePerfectionsPertainToBeing Pure OfBeing) ↔
     OwnBeingHasEveryPurePerfection OwnBeing Has Pure
 
+/-! ## Senses and the two act-of-being theses
+
+"Perfection of being" has two readings that the pair leaves open.
+PERFECTION_OF_BEING_1, thin: only being itself is a perfection of being
+(`ThinOfBeing`). PERFECTION_OF_BEING_2, intensive esse: a perfection of esse
+itself, a way of being that the act of being includes (`IntensiveEsseFrame.OfEsse`,
+an explicitly primitive field).
+
+Two different act-of-being theses are separated here. R-act₁
+(`FiniteEsseReceivedAndLimited`): the esse of whatever is not its own being is
+received in a principle and limited. R-act₂ (`IntensiveEsse`): every pure
+perfection is a perfection of esse itself. The controls show that R-act₁, with the
+reception and purity interfaces, does not give R-act₂. -/
+
+/-- PERFECTION_OF_BEING_1, thin reading: `d` is a perfection of being only if it is
+the determination `being` itself. -/
+def ThinOfBeing (being : D) (d : D) : Prop := d = being
+
+/-- The primitive of PERFECTION_OF_BEING_2. -/
+structure IntensiveEsseFrame (D : Type) where
+  /-- `OfEsse d`: `d` is a perfection of esse itself, a way of being that the act
+  of being includes (intensive esse). Explicitly primitive. -/
+  OfEsse : D → Prop
+
+/-- R-act₂, intensive esse: every pure perfection is a perfection of esse itself. -/
+def IntensiveEsse (I : IntensiveEsseFrame D) (Pure : D → Prop) : Prop :=
+  ∀ d, Pure d → I.OfEsse d
+
+/-- R-act₁: the esse of whatever is not its own being is received in a principle,
+as act in receiving potency, and is limited. -/
+def FiniteEsseReceivedAndLimited {P : Type} (OwnBeing : B → Prop)
+    (EsseReceivedIn : B → P → Prop) (EsseLimited : B → Prop) : Prop :=
+  ∀ x, ¬ OwnBeing x → (∃ p, EsseReceivedIn x p) ∧ EsseLimited x
+
+/-- Ad 3 read formally or eminently: whatever is its own being lacks no perfection
+of being, being in act in it in the frame's mode-open act ("nulla de perfectionibus
+essendi potest deesse"), not necessarily having it as a real determination. -/
+def OwnBeingLacksNoPerfectionOfBeingInAct (OwnBeing : B → Prop)
+    (InAct : B → R → Prop) (OfBeing : R → Prop) : Prop :=
+  ∀ x, OwnBeing x → ∀ r, OfBeing r → InAct x r
+
 /-! ## Two readings of "perfection of being" on one subsistent source -/
 
 namespace Control
@@ -122,18 +164,36 @@ def ofBeingThin (d : Bool) : Prop := d = false
 source has every determination. -/
 def hasAct (_ _ : Bool) : Prop := True
 
+/-- Recipients: only the effect. -/
+def recipient (b : Bool) : Prop := b = true
+
+/-- The effect's esse is received in its (single) principle and is limited. -/
+def received (b : Bool) (_ : Unit) : Prop := b = true
+
+def limited (b : Bool) : Prop := b = true
+
 /-- Statements about these two profiles only. Thin profile: the source is its own
 being and lacks no perfection of being (`d164b1ff` holds), but the pure
 determination standing for life is not a perfection of being (`c4fb87a6` fails),
 and the source lacks it. Act profile, with the same source and purity: both
-premises hold and the source has every pure determination. -/
+premises hold and the source has every pure determination. On the thin profile,
+with the effect as the only recipient, R-act₁ (`FiniteEsseReceivedAndLimited`),
+own being is no recipient (`7338142d`) and a nonrecipient's determinations are
+pure (`32695660`) all hold, while R-act₂ (`IntensiveEsse`) with the thin reading
+fails; with the intensive reading taken as purity it holds. -/
 def Controls : Prop :=
   OwnBeingLacksNoPerfectionOfBeing ownBeing hasThin ofBeingThin ∧
   ¬ PurePerfectionsPertainToBeing pure ofBeingThin ∧
   ¬ OwnBeingHasEveryPurePerfection ownBeing hasThin pure ∧
   OwnBeingLacksNoPerfectionOfBeing ownBeing hasAct pure ∧
   PurePerfectionsPertainToBeing pure pure ∧
-  OwnBeingHasEveryPurePerfection ownBeing hasAct pure
+  OwnBeingHasEveryPurePerfection ownBeing hasAct pure ∧
+  FiniteEsseReceivedAndLimited ownBeing received limited ∧
+  TruthCore.Causality.ReceptionLimitation.OwnBeingIsNoRecipient ownBeing recipient ∧
+  TruthCore.Causality.ReceptionLimitation.NonRecipientDeterminationsArePure
+    recipient hasThin pure ∧
+  ¬ IntensiveEsse ⟨ofBeingThin⟩ pure ∧
+  IntensiveEsse ⟨pure⟩ pure
 
 end Control
 

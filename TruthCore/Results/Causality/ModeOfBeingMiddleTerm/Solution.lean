@@ -55,8 +55,12 @@ theorem controls : Control.Controls := by
   dsimp [Control.Controls, OwnBeingHasEveryPurePerfection,
     TruthCore.Causality.WholePowerPerfection.OwnBeingLacksNoPerfectionOfBeing,
     TruthCore.Causality.WholePowerPerfection.PurePerfectionsPertainToBeing,
-    Control.ownBeing, Control.pure, Control.hasThin, Control.ofBeingThin, Control.hasAct]
-  refine ⟨?_, ?_, ?_, ?_, ?_, ?_⟩
+    Control.ownBeing, Control.pure, Control.hasThin, Control.ofBeingThin, Control.hasAct,
+    FiniteEsseReceivedAndLimited, IntensiveEsse,
+    TruthCore.Causality.ReceptionLimitation.OwnBeingIsNoRecipient,
+    TruthCore.Causality.ReceptionLimitation.NonRecipientDeterminationsArePure,
+    Control.recipient, Control.received, Control.limited]
+  refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩
   all_goals decide
 
 end TruthCore.Results.Causality.ModeOfBeingMiddleTerm
