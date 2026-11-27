@@ -95,6 +95,7 @@ public import TruthCore.Causality.DependenceGroundingPriority
 public import TruthCore.Causality.DependenceOrderSenses
 public import TruthCore.Causality.DependenceStrictGroundMap
 public import TruthCore.Causality.DependenceStrictGroundMapStrength
+public import TruthCore.Causality.DependenceToActOfBeing
 public import TruthCore.Causality.DerivativeJointPower
 public import TruthCore.Causality.DirectEsseGenusOmissionControl
 public import TruthCore.Causality.DirectEsseRootGoodnessOmission
@@ -190,6 +191,7 @@ public import TruthCore.Causality.MetricGrimReaper
 public import TruthCore.Causality.MixedSupplierCensus
 public import TruthCore.Causality.ModalNecessaryBeingActuality
 public import TruthCore.Causality.ModalSenseSupport
+public import TruthCore.Causality.ModeOfBeingMiddleTerm
 public import TruthCore.Causality.MoreSuchSenseCollapse
 public import TruthCore.Causality.MotionMapsBatch1
 public import TruthCore.Causality.MotionMoverFork

@@ -1,0 +1,10 @@
+{
+  "id": "018b9605-3a1f-49b8-9096-d7511e9e3a04",
+  "label": "Test by the unde load map of CREATURE_1 reception",
+  "subject_kind": "argument",
+  "subject_id": "9a876fd1-3b2d-4ab5-b566-8fb4ba432c5d",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "29e71e43-1d34-5008-8811-897fbddda209",
+  "note": "Tests the q.4 a.1 ad 3 support option for 29e71e43: its reception bridge is equivalent, given R-dep, to the reception it delivers."
+}

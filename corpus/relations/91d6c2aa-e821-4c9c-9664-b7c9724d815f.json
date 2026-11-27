@@ -1,0 +1,10 @@
+{
+  "id": "91d6c2aa-e821-4c9c-9664-b7c9724d815f",
+  "label": "Test by the thin and act controls of R-act1",
+  "subject_kind": "argument",
+  "subject_id": "0a723259-d2e3-4daf-b9d6-72fbcf677411",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "8c64b036-3db9-4143-9a8d-d7814cc84c79",
+  "note": "Non-entailment test: R-act1 holds on the thin profile, with own being no recipient and a nonrecipient's determinations pure, while R-act2 fails; reception of esse does not give intensive esse in this interpretation."
+}
