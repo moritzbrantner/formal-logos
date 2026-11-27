@@ -66,4 +66,27 @@ theorem calibrationStrictness : Control.CalibrationStrictness := by
     have hTrue := h true (Or.inl rfl)
     simp [Control.strictProfile] at hTrue
 
+theorem profileCalibrationOfExisting {W B : Type} (m : Profile W B) (w : W)
+    (hConcrete : EveryExistentConcreteAt m.ontic m.concrete w) :
+    ProfileExistentConcreteAt m w :=
+  hConcrete
+
+theorem localCalibrationOfProfile {W B : Type} [PartialOrder B]
+    (m : Profile W B) (w : W) (sum : B)
+    (hConcrete : ProfileExistentConcreteAt m w) :
+    SelectedActualFusionPartsConcreteAt m w sum :=
+  concreteOfGlobal m w sum hConcrete
+
+theorem calibrationExactDifference : CalibrationExactDifference := by
+  intro W B _ m w sum
+  change ProfileExistentConcreteAt m w ↔
+    SelectedActualFusionPartsConcreteAt m w sum ∧ OutsideFusionActualConcreteAt m w sum
+  constructor
+  · intro h
+    exact ⟨localCalibrationOfProfile m w sum h, fun p hp _ => h p hp⟩
+  · rintro ⟨hLocal, hOutside⟩ p hp
+    by_cases hPart : SelectedFusionPart m.ontic w sum p
+    · exact hLocal p hp hPart
+    · exact hOutside p hp hPart
+
 end TruthCore.Results.Causality.LocalActualFusion

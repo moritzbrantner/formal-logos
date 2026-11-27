@@ -72,7 +72,7 @@ object_kind = "statement"
 object_id = "Actual parts in the selected fusion scope are CONCRETE_6"
 verification_result_id = "0b3b66b9-79f8-4b3f-bb1a-0014630785b0"
 strictness_result_id = "The proper scope of the selected fusion calibration"
-note = "Fix the same profile, selected world, sum and order. Universal classification implies the localized classification; the two-world control strictly separates the reverse."
+note = "Fix the same profile, selected world, sum and order. Universal classification adds the concreteness of actual candidates outside the local scope. The background-free comparison certifies the exact difference with the same global clause in its definitionally equal Profile form. The two-world control separates the reverse."
 
 [[relation]]
 id = "The local calibration control tests universal actual concreteness"
@@ -82,3 +82,77 @@ predicate = "tests"
 object_kind = "statement"
 object_id = "0e02cd69-8fb0-4859-8287-937440c84b5b"
 note = "The same profile satisfies the local policy while its actual abstract candidate violates the global policy."
+
+[[statement]]
+id = "Actual existents on the supplied profile are CONCRETE_6"
+lean = "ProfileExistentConcreteAt"
+paraphrase = "On the supplied profile, every individual existing at the selected world is CONCRETE_6. This is the original global calibration applied to the profile's existing Ontic and concreteness predicate."
+definitions = ["c651b2bd-5178-4367-9182-3e235625fde3", "008cb21a-256c-5a90-822c-acd4591d699a", "beb654a7-e204-5f4c-a7b4-45e886ba7109"]
+disambiguations = ["623ddbf6-9683-5361-bae4-e348a00ec680"]
+
+[[statement]]
+id = "Actual individuals outside the selected fusion scope are CONCRETE_6"
+lean = "OutsideFusionActualConcreteAt"
+paraphrase = "At w every actual individual outside SelectedFusionPart for this sum is CONCRETE_6. The scope excludes the parts of the selected sum and the parts of every actual cause of that sum, in the same order."
+definitions = ["4295a4ac-0a5a-4ea7-88b3-8a3551415dd5", "d7c8fc33-25df-4667-9e11-a9b2074a617e", "008cb21a-256c-5a90-822c-acd4591d699a", "beb654a7-e204-5f4c-a7b4-45e886ba7109"]
+disambiguations = ["623ddbf6-9683-5361-bae4-e348a00ec680"]
+connection_plan = { target_statement_id = "0e02cd69-8fb0-4859-8287-937440c84b5b", missing_bridge = "An application with independently warranted concreteness for both the local and outside classes.", blocker = "The outside calibration by itself classifies no in-scope actual individual. Its role here is the exact difference in the strength comparison." }
+
+[[statement]]
+id = "Global actuality calibration is local calibration plus outside-scope calibration"
+lean = "CalibrationExactDifference"
+paraphrase = "For each supplied profile, selected world, sum and partial order, global actual concreteness is equivalent to the conjunction of actual concreteness in and outside the selected fusion scope. It assumes neither calibration."
+definitions = ["c651b2bd-5178-4367-9182-3e235625fde3", "4295a4ac-0a5a-4ea7-88b3-8a3551415dd5", "04ecf669-22fb-43a1-97c6-c54556d5cd5f", "008cb21a-256c-5a90-822c-acd4591d699a"]
+disambiguations = ["623ddbf6-9683-5361-bae4-e348a00ec680"]
+connection_plan = { target_statement_id = "0e02cd69-8fb0-4859-8287-937440c84b5b", missing_bridge = "A root-route application that uses the certified partition with both calibration conjuncts supplied.", blocker = "The equivalence compares the scopes formally. The existing root derivations consume calibration premises, and the strength registry records this certificate separately." }
+
+[[argument]]
+id = "The global concreteness calibration in profile form"
+theorem = "profileCalibrationOfExisting"
+premises = ["0e02cd69-8fb0-4859-8287-937440c84b5b"]
+conclusion = "Actual existents on the supplied profile are CONCRETE_6"
+rule = "Definitional instantiation on the supplied profile"
+meaning = "Use the identical global calibration on m.ontic and m.concrete. This packages the parameters for the strength checker."
+transcription = "instantiation"
+axioms = []
+
+[[argument]]
+id = "Profile global calibration implies local fusion calibration"
+theorem = "localCalibrationOfProfile"
+premises = ["Actual existents on the supplied profile are CONCRETE_6"]
+conclusion = "Actual parts in the selected fusion scope are CONCRETE_6"
+rule = "Restrict the global calibration to actual individuals in scope"
+meaning = "Apply the existing global-to-local proof to the definitionally equal profile form, with the same world, sum and order."
+axioms = []
+
+[[argument]]
+id = "Exact difference of the global and selected fusion calibrations"
+theorem = "calibrationExactDifference"
+premises = []
+conclusion = "Global actuality calibration is local calibration plus outside-scope calibration"
+rule = "Partition actual individuals by selected fusion scope"
+meaning = "The global policy applies to actual individuals in either scope. Conversely, an actual individual is either in SelectedFusionPart or outside it, so the corresponding conjunct supplies its concreteness. The partition uses classical excluded middle and zero background assumptions."
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+
+[[relation]]
+id = "Global actual-part existence strengthens selected fusion part existence"
+subject_kind = "statement"
+subject_id = "bbe8900a-7d33-5e6b-a76c-1947ecf7fa6e"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "3423b8ec-a37c-4755-b9b1-173da5249d6e"
+verification_result_id = "2e49b024-b763-4627-84e7-32cab886cd1e"
+note = "The global policy covers the selected actual sum and each of its actual causes. Its extra scope covers other actual wholes and their parts at the same world."
+
+[[relation]]
+id = "Exact outside-scope difference for fusion concreteness calibration"
+subject_kind = "statement"
+subject_id = "Actual existents on the supplied profile are CONCRETE_6"
+predicate = "strength_comparison"
+object_kind = "statement"
+object_id = "Actual parts in the selected fusion scope are CONCRETE_6"
+comparison_spec = "calibrationComparison"
+delta_statement_id = "Actual individuals outside the selected fusion scope are CONCRETE_6"
+evidence_result_ids = {implication = "Profile global calibration implies local fusion calibration", equivalence = "Exact difference of the global and selected fusion calibrations"}
+statement_parameter_indices = {stronger = [0, 1, 3, 4], weaker = [0, 1, 2, 3, 4, 5], delta = [0, 1, 2, 3, 4, 5]}
+note = "The global clause uses the definitionally equal Profile form because the checker selects direct telescope parameters and the original global predicate takes separate Ontic and concrete parameters. There is no background claim. The same sum, ontology and partial order define the local region and its complement."

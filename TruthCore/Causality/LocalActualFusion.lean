@@ -3,6 +3,7 @@ module
 public import TruthCore.Causality.ActualFusionNecessaryBeing
 public import TruthCore.Causality.BruteFoundationBoundary
 public import TruthCore.Logic.CogitoEsse
+public import TruthCore.Logic.StrengthComparison
 
 @[expose] public section
 
@@ -27,6 +28,28 @@ def SelectedActualFusionPartsConcreteAt {W B : Type} [PartialOrder B]
     (m : Profile W B) (w : W) (sum : B) : Prop :=
   ∀ p, m.ontic.ExistsAt w p →
     SelectedFusionPart m.ontic w sum p → m.concrete p
+
+/-- Global calibration on the same profile used by the local premise. -/
+def ProfileExistentConcreteAt {W B : Type} (m : Profile W B) (w : W) : Prop :=
+  EveryExistentConcreteAt m.ontic m.concrete w
+
+/-- The complement of the local fusion calibration at this world. -/
+def OutsideFusionActualConcreteAt {W B : Type} [PartialOrder B]
+    (m : Profile W B) (w : W) (sum : B) : Prop :=
+  ∀ p, m.ontic.ExistsAt w p →
+    ¬ SelectedFusionPart m.ontic w sum p → m.concrete p
+
+/-- Compare both scopes on the same profile, world, sum, and order. -/
+def calibrationComparison {W B : Type} [PartialOrder B]
+    (m : Profile W B) (w : W) (sum : B) : TruthCore.Logic.StrengthComparison.ComparisonSpec where
+  stronger := ProfileExistentConcreteAt m w
+  weaker := SelectedActualFusionPartsConcreteAt m w sum
+  delta := OutsideFusionActualConcreteAt m w sum
+
+/-- Global calibration is exactly the local and outside-scope calibrations. -/
+def CalibrationExactDifference : Prop :=
+  ∀ {W B : Type} [PartialOrder B] (m : Profile W B) (w : W) (sum : B),
+    TruthCore.Logic.StrengthComparison.Equivalence (calibrationComparison m w sum)
 
 namespace Control
 

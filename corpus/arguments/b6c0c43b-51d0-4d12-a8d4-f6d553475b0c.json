@@ -23,5 +23,8 @@
     "6f1d1395-7c1d-5bd5-a45d-03380857aed6",
     "7507d645-874d-5434-add8-2f49c2801d36",
     "83264cf5-01fe-52fc-9a00-eeb024f6496e"
-  ]
+  ],
+  "strong_version_needed": {
+    "0e02cd69-8fb0-4859-8287-937440c84b5b": "NecessaryBeing supplies an arbitrary actual necessary witness. Neither premise places that witness among the selected sum's parts or the parts of its actual causes, so the localized calibration does not reach it."
+  }
 }

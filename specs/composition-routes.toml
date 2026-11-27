@@ -11,6 +11,7 @@ conclusion = "STMT-NECESSARY-CONCRETE-AT"
 rule = "Existential elimination and selected-world concreteness calibration"
 meaning = "Keep the very individual that exists at the selected world and at all accessible worlds in this Profile. Apply the existing all-actual-existents concreteness premise at the selected world to that individual's actual existence. Both endpoints use NECESSARY_2, parameterized by the same accessibility frame. The only new fact about the witness is that it satisfies m.concrete. The calibration is itself supported conditionally by the existence-to-act and esse-in-re policies (978fc7b1), so this route inherits their scope. No claim about sourcehood or necessary causation follows. The mixed two-world control has actual concrete population and bare actual necessity with no necessary concretum."
 disambiguations = ["623ddbf6-9683-5361-bae4-e348a00ec680", "6f1d1395-7c1d-5bd5-a45d-03380857aed6", "7507d645-874d-5434-add8-2f49c2801d36", "83264cf5-01fe-52fc-9a00-eeb024f6496e"]
+strong_version_needed = {"0e02cd69-8fb0-4859-8287-937440c84b5b" = "NecessaryBeing supplies an arbitrary actual necessary witness. Neither premise places that witness among the selected sum's parts or the parts of its actual causes, so the localized calibration does not reach it."}
 axioms = []
 
 [[argument]]

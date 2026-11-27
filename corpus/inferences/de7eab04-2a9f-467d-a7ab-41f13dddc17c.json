@@ -1,0 +1,12 @@
+{
+  "id": "de7eab04-2a9f-467d-a7ab-41f13dddc17c",
+  "label": "The global concreteness calibration in profile form (inference)",
+  "input_statement_ids": [
+    "0e02cd69-8fb0-4859-8287-937440c84b5b"
+  ],
+  "output_statement_id": "dd5cd8fa-cc79-4a1c-8871-3fc7633dfb3f",
+  "rule": "Definitional instantiation on the supplied profile",
+  "meaning": "Use the identical global calibration on m.ontic and m.concrete. This packages the parameters for the strength checker.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

@@ -1,0 +1,20 @@
+{
+  "id": "ebb46b39-a10a-4ef3-bf53-8c91d111e488",
+  "label": "Global actuality calibration is local calibration plus outside-scope calibration",
+  "paraphrase": "For each supplied profile, selected world, sum and partial order, global actual concreteness is equivalent to the conjunction of actual concreteness in and outside the selected fusion scope. It assumes neither calibration.",
+  "lean_declaration": "TruthCore.Causality.LocalActualFusion.CalibrationExactDifference",
+  "definition_ids": [
+    "c651b2bd-5178-4367-9182-3e235625fde3",
+    "4295a4ac-0a5a-4ea7-88b3-8a3551415dd5",
+    "04ecf669-22fb-43a1-97c6-c54556d5cd5f",
+    "008cb21a-256c-5a90-822c-acd4591d699a"
+  ],
+  "disambiguation_ids": [
+    "623ddbf6-9683-5361-bae4-e348a00ec680"
+  ],
+  "connection_plan": {
+    "target_statement_id": "0e02cd69-8fb0-4859-8287-937440c84b5b",
+    "missing_bridge": "A root-route application that uses the certified partition with both calibration conjuncts supplied.",
+    "blocker": "The equivalence compares the scopes formally. The existing root derivations consume calibration premises, and the strength registry records this certificate separately."
+  }
+}

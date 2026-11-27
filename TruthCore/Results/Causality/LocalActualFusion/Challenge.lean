@@ -33,4 +33,18 @@ theorem concreteOfGlobal {W B : Type} [PartialOrder B]
 theorem calibrationStrictness : Control.CalibrationStrictness := by
   sorry
 
+theorem profileCalibrationOfExisting {W B : Type} (m : Profile W B) (w : W)
+    (hConcrete : EveryExistentConcreteAt m.ontic m.concrete w) :
+    ProfileExistentConcreteAt m w := by
+  sorry
+
+theorem localCalibrationOfProfile {W B : Type} [PartialOrder B]
+    (m : Profile W B) (w : W) (sum : B)
+    (hConcrete : ProfileExistentConcreteAt m w) :
+    SelectedActualFusionPartsConcreteAt m w sum := by
+  sorry
+
+theorem calibrationExactDifference : CalibrationExactDifference := by
+  sorry
+
 end TruthCore.Results.Causality.LocalActualFusion

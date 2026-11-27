@@ -8,5 +8,5 @@
   "object_id": "00c40c6f-b55e-4393-ad9d-24f8fc16df3f",
   "verification_result_id": "0b3b66b9-79f8-4b3f-bb1a-0014630785b0",
   "strictness_result_id": "c10c1536-846b-4445-a8e6-634718136d52",
-  "note": "Fix the same profile, selected world, sum and order. Universal classification implies the localized classification; the two-world control strictly separates the reverse."
+  "note": "Fix the same profile, selected world, sum and order. Universal classification adds the concreteness of actual candidates outside the local scope. The background-free comparison certifies the exact difference with the same global clause in its definitionally equal Profile form. The two-world control separates the reverse."
 }

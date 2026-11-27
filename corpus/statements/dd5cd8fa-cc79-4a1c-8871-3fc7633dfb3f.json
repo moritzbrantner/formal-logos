@@ -1,0 +1,14 @@
+{
+  "id": "dd5cd8fa-cc79-4a1c-8871-3fc7633dfb3f",
+  "label": "Actual existents on the supplied profile are CONCRETE_6",
+  "paraphrase": "On the supplied profile, every individual existing at the selected world is CONCRETE_6. This is the original global calibration applied to the profile's existing Ontic and concreteness predicate.",
+  "lean_declaration": "TruthCore.Causality.LocalActualFusion.ProfileExistentConcreteAt",
+  "definition_ids": [
+    "c651b2bd-5178-4367-9182-3e235625fde3",
+    "008cb21a-256c-5a90-822c-acd4591d699a",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ],
+  "disambiguation_ids": [
+    "623ddbf6-9683-5361-bae4-e348a00ec680"
+  ]
+}
