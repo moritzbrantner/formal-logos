@@ -299,6 +299,7 @@ public import TruthCore.Results.Causality.NecessaryRootGodUniqueness.Solution
 public import TruthCore.Results.Causality.NecessaryRootUniqueMaximum.Solution
 public import TruthCore.Results.Causality.NecessaryRootUniqueness.Solution
 public import TruthCore.Results.Causality.NecessarySenseBridges.Solution
+public import TruthCore.Results.Causality.NecessarySenseClassicalConverse.Solution
 public import TruthCore.Results.Causality.NecessarySenseFork.Solution
 public import TruthCore.Results.Causality.NecessarySimplePlurality.Solution
 public import TruthCore.Results.Causality.NecessarySupportActualScope.Solution
