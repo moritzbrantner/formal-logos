@@ -1,0 +1,10 @@
+{
+  "id": "138763f7-85f3-431e-a4d4-1f40812b2f6b",
+  "label": "Everything-moved control tests moved is held",
+  "subject_kind": "result",
+  "subject_id": "2b40780f-5571-4697-9a49-71df8ffc4f9f",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "e2f44380-12a3-46e5-9353-866d8c4aedad",
+  "note": "Comparator companion controls, part 5: with the sole holder, MovesIn read as holding another and MovedIn true everywhere, the MOTION_3 first holder and HoldingAnotherIsMoving hold; MovedIsHeld and the First-Way reading fail."
+}

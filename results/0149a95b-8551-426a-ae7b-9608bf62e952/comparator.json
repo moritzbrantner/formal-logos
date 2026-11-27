@@ -1,0 +1,9 @@
+{
+  "challenge_module": "TruthCore.Results.Modal.ModalOntologicalCase.Challenge",
+  "solution_module": "TruthCore.Results.Modal.ModalOntologicalCase.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Modal.ModalOntologicalCase.necessaryConcreteOfModal"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}

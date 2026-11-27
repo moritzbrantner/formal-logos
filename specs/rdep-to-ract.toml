@@ -1,0 +1,353 @@
+# Warrant phase, checkpoint 4 (2026-11-27, #2103, #143): the "unde" inference of ST I
+# q.4 a.1 ad 3 from the dependence of every actuality on being (R-dep, 7067553d) to the
+# act-of-being theses R-act1 (8c64b036) and R-act2 (254ee26f), with q.3 a.4's second
+# proof and De ente capp.3-4. Each bridge is located, shown sufficient, shown needed on
+# finite profiles, and compared with what it delivers given R-dep. A limitation
+# comparison at matching scope and a connection of R-act1 to the creature-reception
+# leaf 29e71e43 of the esse-root routes are included. Assessment:
+# docs/notes/rdep-to-ract.md. Analyst formulations, attribution deferred. Nothing is
+# established.
+
+[batch]
+vocab = "TruthCore.Causality.DependenceToActOfBeing"
+results = "TruthCore.Results.Causality.DependenceToActOfBeing"
+definitions = []
+disambiguations = []
+
+[[statement]]
+id = "8d7e24dc-20b9-44b8-8c5f-7bac55774f34"
+label = "First unde: what a thing has in act, given that it has being, is actual in it through esse"
+lean = "DependenceIsActualization"
+paraphrase = "OPEN, analyst formulation of the first 'unde' of ST I q.4 a.1 ad 3 ('Nihil enim habet actualitatem, nisi inquantum est: unde ipsum esse est actualitas omnium rerum, et etiam ipsarum formarum'), attribution deferred. For every x and respect r: if x has r in act and x has being, then r is actual in x through esse, stated with the frame field ActualizedBy, intended as the act reading (ACTUALIZED_THROUGH_2); the field has the same type as the dependence relation (ACTUALIZED_THROUGH_1), and the derivations using this bridge are generic in the frame, so they also hold on the dependence reading, where this bridge is analytic. The route is sense-neutral in 'actualized through'. With R-dep (7067553d) it is equivalent to 'esse is the actuality of every form had in act'. On the dependence reading (ACTUALIZED_THROUGH_1) it holds in every frame. It does not say that esse is received or limited."
+definitions = ["82ab06d0-5328-4d85-b3a2-4a13532d9524", "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72", "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168"]
+disambiguations = ["a409105e-8389-46ce-b14b-bebbc2864198"]
+
+[[statement]]
+id = "89d82643-cf45-4933-90b3-83a89f6210f2"
+label = "Second unde: a nature actual through an esse other than itself receives that esse"
+lean = "ActualizedQuiddityReceivesEsse"
+paraphrase = "OPEN, analyst formulation of the second 'unde' of ST I q.4 a.1 ad 3 ('Unde non comparatur ad alia sicut recipiens ad receptum: sed magis sicut receptum ad recipiens') and of q.3 a.4 co.'s 'Oportet igitur quod ipsum esse comparetur ad essentiam quae est aliud ab ipso, sicut actus ad potentiam', in its content form at the nature, attribution deferred. This is the STRONG version: its antecedent asks only distinctness of content between the nature and being. Its weaker sibling reads q.3 a.4's 'aliud' as real otherness (registered as strengthens). It bundles (i) real otherness with (ii) reception in the nature. For every x: if x's nature is actual in x through esse (ACTUALIZED_THROUGH_2) and the nature is not being itself, then x's esse is received in that nature as act in receiving potency (RECEPTION_OF_ESSE_1). 'Not being itself' is distinctness of content, which every view considered grants. RECEPTION_OF_ESSE_1 leaves the constitution of the receiving principle open; on the real-composition sense (RECEPTION_OF_ESSE_VERSUS_EXTERNAL_CAUSE_5) Suárez denies it."
+definitions = ["82ab06d0-5328-4d85-b3a2-4a13532d9524", "97c4f504-4792-43c6-9f61-ae23df732d5f", "4433942e-aaf6-55a9-b777-66e55638103d", "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"]
+disambiguations = ["a409105e-8389-46ce-b14b-bebbc2864198", "5921354b-51e6-5da3-8d8c-e9041840fd9f"]
+
+[[statement]]
+id = "073e1411-ad82-4b6c-af8d-58829b2afa01"
+label = "Every being in the domain has its nature in act"
+lean = "QuiddityInAct"
+paraphrase = "OPEN, analyst formulation, attribution deferred: every being in the domain is actually what it is, its nature (the respect in which it is what it is) being in act in it. The domain is actual beings; for a merely possible being it would fail."
+definitions = ["97c4f504-4792-43c6-9f61-ae23df732d5f", "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168"]
+disambiguations = []
+
+[[statement]]
+id = "11437cb4-494a-47c3-b70b-7d66d4a25c78"
+label = "Every pure perfection is had in act by something"
+lean = "PurePerfectionsActualSomewhere"
+paraphrase = "OPEN, analyst formulation, attribution deferred: for every pure perfection d some being has d in act (for wisdom and life, the creatures in which they are found). It restricts the inclusion step to perfections that are actual somewhere."
+definitions = ["65e38ffa-5a1c-55d0-935c-6538d843b780", "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168"]
+disambiguations = []
+
+[[statement]]
+id = "fdd2213a-90ee-4f7c-86cd-ca4872549bd6"
+label = "A pure perfection actual through esse is a perfection of esse itself"
+lean = "ActualizedPureIsOfEsse"
+paraphrase = "OPEN, analyst formulation, attribution deferred: for every x and pure perfection d, if d is actual in x through esse (the frame field, intended as ACTUALIZED_THROUGH_2; sense-neutral as above) then d is a perfection of esse itself (PERFECTION_OF_BEING_2, intensive esse). With R-dep, the first 'unde' and the witness premise it is equivalent to R-act2 (254ee26f). The text closest to it is the q.4 a.2 sentence 'omnium autem perfectiones pertinent ad perfectionem essendi' (5c5281dd) read constitutively, the sentence whose ground is under test."
+definitions = ["82ab06d0-5328-4d85-b3a2-4a13532d9524", "0a2bf1a0-bfc5-45d7-966a-a28919b6e847", "65e38ffa-5a1c-55d0-935c-6538d843b780", "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"]
+disambiguations = ["a409105e-8389-46ce-b14b-bebbc2864198", "62ca3d65-8dd4-4187-abe1-a928b3045f12"]
+
+[[statement]]
+id = "21b08802-710a-4225-bb91-85ff73da80b1"
+label = "No CREATURE_1 has being itself as its nature"
+lean = "NoCreatureIsOwnBeing"
+paraphrase = "OPEN, analyst formulation, attribution deferred: no CREATURE_1 is its own being. ST I q.7 a.2 ad 1, read in the pinned witness, says 'hoc est contra rationem facti, quod essentia rei sit ipsum esse eius, quia esse subsistens non est esse creatum'; that passage is the nearest source and is not attributed as a stating claim here. With R-act1 it gives the creature-reception leaf 29e71e43."
+definitions = ["afcdd2c5-1167-5a73-97d7-cb99a6ad5817", "ad76481a-f038-4652-9c6e-0e0441eee7e5"]
+disambiguations = ["c49de1e9-c34f-424f-b144-b80c885974ca"]
+
+[[statement]]
+id = "d61f1fa7-53a8-45ee-bb8f-6d6f85de4818"
+label = "Given dependence, each unde bridge is equivalent to what it delivers"
+lean = "UndeLoadMap"
+paraphrase = "Premise-free, over every grades frame. (1) Given R-dep, the first 'unde' bridge is equivalent to 'esse is the actuality of every form had in act'. (2) Given R-dep, the first bridge and the nature in act, the second bridge is equivalent to 'whatever is not its own being has its esse received in its nature'. (3) Given R-dep, the first bridge and the witness premise, inclusion is equivalent to R-act2. (4) On the dependence reading (ACTUALIZED_THROUGH_1) the first bridge holds in every frame. Each equivalence is formally immediate ((3) holds by construction), so the certificate fixes where the load sits; that the inference is therefore explicative, making the act-of-being commitment explicit rather than deriving it from dependence, is the analyst's judgment. Since every result is generic in the frame, (4) also shows that the act reading does no work on this route."
+definitions = ["799e0ff7-9705-4b50-89a9-a8463c1b4f22", "82ab06d0-5328-4d85-b3a2-4a13532d9524", "97c4f504-4792-43c6-9f61-ae23df732d5f", "ad76481a-f038-4652-9c6e-0e0441eee7e5", "4433942e-aaf6-55a9-b777-66e55638103d", "0a2bf1a0-bfc5-45d7-966a-a28919b6e847", "65e38ffa-5a1c-55d0-935c-6538d843b780", "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"]
+disambiguations = ["a409105e-8389-46ce-b14b-bebbc2864198", "62ca3d65-8dd4-4187-abe1-a928b3045f12", "5921354b-51e6-5da3-8d8c-e9041840fd9f"]
+
+[[statement]]
+id = "2817ceab-e913-4512-9bbb-ff4acb5d68de"
+label = "Received esse adds nothing to the essence-only derivation of finitude in perfection"
+lean = "LimitationComparison"
+paraphrase = "Premise-free, over every grades frame. Explanandum: whatever is not its own being lacks some pure perfection. (1) Essence-only: if each being has in act only what its nature admits, and a nature other than being itself excludes some pure perfection, the explanandum follows. (2) Reception: if whatever is not its own being has its esse received in its nature, and received esse gives only what the nature admits ('limitatum ... ad capacitatem naturae recipientis', De ente cap.4), and the same nature premise holds, the explanandum follows. (3) The reception premises imply the essence-only premise on every being that is not its own being. Both derivations need the nature premise. The implications are formally immediate; that reception is therefore not needed for this explanandum is the analyst's judgment, and not a claim that reception is false."
+definitions = ["97c4f504-4792-43c6-9f61-ae23df732d5f", "dbae9538-e7f2-47ef-9fdd-f8b6c98efaf5", "ad76481a-f038-4652-9c6e-0e0441eee7e5", "4433942e-aaf6-55a9-b777-66e55638103d", "65e38ffa-5a1c-55d0-935c-6538d843b780"]
+disambiguations = ["5921354b-51e6-5da3-8d8c-e9041840fd9f"]
+
+[[statement]]
+id = "f2013d4f-0d00-4a2c-89df-33e4db9fb335"
+label = "Act, non-reception and thin profiles of the unde inference: controls"
+lean = "Control.Controls"
+paraphrase = "Closed finite profiles over two beings and three stand-in respects (being, a nature, wisdom); statements about them only. Act profile: R-dep, both unde bridges, the nature in act and 7de89edb hold, and so does R-act1. Non-reception profile, read with the act relation (esse actualizes the nature but is not received in it) and with the dependence relation: R-dep, the first bridge, the nature in act and 7de89edb hold; the second bridge and R-act1 fail; the essence-only account and finitude in perfection hold. Omitting the first bridge: R-act1 fails though the rest holds. Reception without the nature premise: R-act1, 7de89edb and the capacity bridge hold and finitude fails. For R-act2: with intensive inclusion it holds; with thin inclusion, or with no actualization recorded, it fails while R-dep, the first bridge where present and the witness premise hold. Neither the extensions nor the Lean types tell the act relation from the dependence relation: both senses have type B → R → R → Prop, so bind-check does not enforce the distinction; only the definition records state it."
+definitions = ["799e0ff7-9705-4b50-89a9-a8463c1b4f22", "82ab06d0-5328-4d85-b3a2-4a13532d9524", "97c4f504-4792-43c6-9f61-ae23df732d5f", "ad76481a-f038-4652-9c6e-0e0441eee7e5", "dbae9538-e7f2-47ef-9fdd-f8b6c98efaf5", "4433942e-aaf6-55a9-b777-66e55638103d", "6ced5205-e6a4-585e-950e-3b22e7c9ef01", "0a2bf1a0-bfc5-45d7-966a-a28919b6e847", "84147eb5-88ef-46e7-9a0d-9c18d5137f16", "65e38ffa-5a1c-55d0-935c-6538d843b780"]
+disambiguations = ["a409105e-8389-46ce-b14b-bebbc2864198", "62ca3d65-8dd4-4187-abe1-a928b3045f12", "5921354b-51e6-5da3-8d8c-e9041840fd9f"]
+
+[[argument]]
+id = "a811f5a3-09ba-4648-ae0c-8e0e66c07649"
+label = "R-act1 from dependence through the two unde bridges, checked"
+theorem = "ractOneFromDependence"
+definitions = ["82ab06d0-5328-4d85-b3a2-4a13532d9524", "97c4f504-4792-43c6-9f61-ae23df732d5f", "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168", "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72", "6ced5205-e6a4-585e-950e-3b22e7c9ef01", "4433942e-aaf6-55a9-b777-66e55638103d", "ad76481a-f038-4652-9c6e-0e0441eee7e5"]
+description = "Near-transcription (single application): given R-dep, the first unde and the nature in act, the second unde is equivalent to the reception half of R-act1 (undeLoadMap, conjunct 2), so the proof applies that bridge to deliver its own content; the limited half comes from 7de89edb. Own being is read as esse tantum (OWN_BEING_1, DEF ad76481a). Generic in the frame, so it holds on the dependence reading of 'actualized through' as well. It makes the commitment explicit and closes nothing by itself."
+transcription = "single_application"
+premises = ["7067553d-cad9-5d79-b6b2-912e35051530", "8d7e24dc-20b9-44b8-8c5f-7bac55774f34", "89d82643-cf45-4933-90b3-83a89f6210f2", "073e1411-ad82-4b6c-af8d-58829b2afa01", "7de89edb-e3a8-59ee-9740-8d0ce7c8ea24"]
+conclusion = "8c64b036-3db9-4143-9a8d-d7814cc84c79"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Chain dependence, actualization, reception and limitation at the nature"
+meaning = "Take x whose nature is not being itself. Its nature is in act, so by R-dep x has being; by the first unde its nature is actual through esse; by the second, since the nature is not being itself, x's esse is received in its nature; received esse is limited. Own being is read as esse tantum (the nature is being itself). Given R-dep, the first bridge and the nature in act, the second bridge is equivalent to the reception half of the conclusion (undeLoadMap), so this derivation makes the commitment explicit."
+
+[[argument]]
+id = "678d45f5-971a-414b-a0fb-01a701f07ee2"
+label = "R-act2 from dependence through the first unde and inclusion, checked"
+theorem = "ractTwoFromDependence"
+description = "Near-transcription (single application): given R-dep, the first unde and the witness premise, inclusion is equivalent to R-act2 (undeLoadMap, conjunct 3), so the proof applies inclusion to deliver its own content. Generic in the frame. It makes the commitment explicit and closes nothing by itself."
+transcription = "single_application"
+premises = ["7067553d-cad9-5d79-b6b2-912e35051530", "8d7e24dc-20b9-44b8-8c5f-7bac55774f34", "11437cb4-494a-47c3-b70b-7d66d4a25c78", "fdd2213a-90ee-4f7c-86cd-ca4872549bd6"]
+conclusion = "254ee26f-01d5-4359-bdde-5779b6e80533"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Witness the pure perfection, actualize it through esse, include it in esse"
+meaning = "For a pure perfection d, some x has d in act; by R-dep x has being; by the first unde d is actual in x through esse; by inclusion d is a perfection of esse itself. Given the first three premises, inclusion is equivalent to the conclusion (undeLoadMap)."
+
+[[argument]]
+id = "a476da53-25ef-46a4-9b46-6c75faccba11"
+label = "CREATURE_1 reception from R-act1 and CREATURE_1 not being its own being, checked"
+theorem = "creatureReceptionFromActOfBeing"
+premises = ["8c64b036-3db9-4143-9a8d-d7814cc84c79", "21b08802-710a-4225-bb91-85ff73da80b1"]
+conclusion = "29e71e43-1d34-5008-8811-897fbddda209"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Instantiate R-act1 at a creature"
+meaning = "A creature is not its own being, so by R-act1 its esse is received in some principle. A further support option for the creature-reception leaf of the esse-root routes, alongside its q.7 a.2 support; through the first derivation it rests on the two unde bridges."
+
+[[argument]]
+id = "9a876fd1-3b2d-4ab5-b566-8fb4ba432c5d"
+label = "Given dependence, each unde bridge is equivalent to what it delivers, checked"
+theorem = "undeLoadMap"
+premises = []
+conclusion = "d61f1fa7-53a8-45ee-bb8f-6d6f85de4818"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+sense_mixing_control = true
+rule = "Prove each equivalence from its side conditions; check the dependence reading directly"
+meaning = "Premise-free load map. It certifies that, given R-dep, each bridge of the unde inference is equivalent to the part of R-act1 or R-act2 it delivers, and that on the dependence reading the first bridge is analytic. A certificate of where the load sits, not of warrant."
+
+[[argument]]
+id = "1d3bbd56-ad18-437d-b4a9-209de67cd762"
+label = "Received esse adds nothing to the essence-only derivation of finitude, checked"
+theorem = "limitationComparison"
+premises = []
+conclusion = "2817ceab-e913-4512-9bbb-ff4acb5d68de"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Derive the explanandum on each account and factor the reception account through the essence-only one"
+meaning = "Premise-free comparison at matching scope: finitude in perfection of whatever is not its own being follows on the essence-only account and on the reception account, both from the same nature premise; the reception premises imply the essence-only premise on non-own beings."
+
+[[argument]]
+id = "eda5d3e4-79af-4735-aeee-3796e13ae93f"
+label = "Act, non-reception and thin profiles of the unde inference: controls, checked"
+theorem = "controls"
+premises = []
+conclusion = "f2013d4f-0d00-4a2c-89df-33e4db9fb335"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+sense_mixing_control = true
+rule = "Explicit finite profiles over Bool and Fin 3, checked by decision"
+meaning = "Finite profiles showing that each bridge of the two derivations is needed on them, that the non-reception profile satisfies R-dep, the first bridge and the essence-only account while R-act1 fails, and that reception without the nature premise does not give finitude. A structural surrogate."
+
+[[relation]]
+id = "eb3cb1e6-07c0-4fd4-8b15-0cd1167686a0"
+label = "Test by the unde load map of the dependence premise"
+subject_kind = "argument"
+subject_id = "9a876fd1-3b2d-4ab5-b566-8fb4ba432c5d"
+predicate = "tests"
+object_kind = "statement"
+object_id = "7067553d-cad9-5d79-b6b2-912e35051530"
+note = "Tests how far 7067553d (R-dep) carries toward the act-of-being theses: given it, every further bridge is equivalent to what it delivers, and the first bridge is analytic on the dependence reading."
+
+[[relation]]
+id = "018b9605-3a1f-49b8-9096-d7511e9e3a04"
+label = "Test by the unde load map of CREATURE_1 reception"
+subject_kind = "argument"
+subject_id = "9a876fd1-3b2d-4ab5-b566-8fb4ba432c5d"
+predicate = "tests"
+object_kind = "statement"
+object_id = "29e71e43-1d34-5008-8811-897fbddda209"
+note = "Tests the q.4 a.1 ad 3 support option for 29e71e43: its reception bridge is equivalent, given R-dep, to the reception it delivers."
+
+[[relation]]
+id = "ba92e80f-4972-4576-9cca-d67be0f0e8df"
+label = "Test by the limitation comparison of received esse being limited"
+subject_kind = "argument"
+subject_id = "1d3bbd56-ad18-437d-b4a9-209de67cd762"
+predicate = "tests"
+object_kind = "statement"
+object_id = "7de89edb-e3a8-59ee-9740-8d0ce7c8ea24"
+note = "Tests the explanatory role of 7de89edb on the measure reading of limitation: finitude in perfection follows from the nature premise with or without reception."
+
+[[relation]]
+id = "436e7d95-6ff1-42f8-b5de-1a9d9764971e"
+label = "Test by the unde controls of CREATURE_1 reception"
+subject_kind = "argument"
+subject_id = "eda5d3e4-79af-4735-aeee-3796e13ae93f"
+predicate = "tests"
+object_kind = "statement"
+object_id = "29e71e43-1d34-5008-8811-897fbddda209"
+note = "The non-reception profile satisfies R-dep, the first unde and the essence-only account of finitude while reception fails."
+
+# ---------------------------------------------------------------- 2026-11-27: the q.7 a.1 bridge (re-check of PR #2171, P2-3)
+
+[[statement]]
+id = "0c1a3ec8-f374-4669-9b79-d43ab70bc439"
+label = "The q.7 a.1 bridge moves the intensive content between its premises by the reading of limitation"
+lean = "Q7BridgeLoadMap"
+paraphrase = "Premise-free, for every own-being predicate, reception relation, limitation predicate, real-determination relation and purity predicate. (1) If what is its own being is no recipient of esse (7338142d at Recipient := has its esse received somewhere), esse is limited only through reception (1304b462), and unlimited esse really has every pure perfection, then whatever is its own being really has every pure perfection: the locus-(b) composite, without d164b1ff or c4fb87a6. (2) On the measure reading of limitation (lacking some pure perfection), 'unlimited esse has every pure perfection' holds in every interpretation. So on the measure reading the intensive content sits in 1304b462 (only reception limits); on the role reading it sits in 'unlimited esse has every pure perfection'. The conclusion concerns real having (Has), not the formal-or-eminent 9a0a4951."
+definitions = ["f971eabf-d723-46c4-a34a-35a5af154abb", "6ced5205-e6a4-585e-950e-3b22e7c9ef01", "4433942e-aaf6-55a9-b777-66e55638103d", "5dc08b95-ca15-52ab-b8cd-2b558e9a13f7", "3aba5f19-f48d-50db-bc57-93ba2e99f845", "65e38ffa-5a1c-55d0-935c-6538d843b780"]
+disambiguations = ["19190b6e-359f-590c-b434-4e6f5803da4f", "5921354b-51e6-5da3-8d8c-e9041840fd9f", "dc9c0a1b-1759-5b1c-9ab9-ee7bea8847b7"]
+
+[[statement]]
+id = "6694d214-277c-4db8-81dc-a8c99c45cce2"
+label = "A source with only being against the q.7 a.1 bridge: controls"
+lean = "Control.Q7Controls"
+paraphrase = "Closed finite profile; statements about it only. A source that is its own being and has only being, and a received effect that has everything; two stand-in determinations, both pure. Role reading (only what is received is limited): own being is no recipient and limitation is only through reception, but unlimited esse does not have every pure perfection and the source lacks the stand-in for life. Measure reading: unlimited esse has every pure perfection, but the source is limited without being received, so limitation only through reception fails. A quantifier-view source fails one premise of the bridge on each reading."
+definitions = ["f971eabf-d723-46c4-a34a-35a5af154abb", "6ced5205-e6a4-585e-950e-3b22e7c9ef01", "4433942e-aaf6-55a9-b777-66e55638103d", "3aba5f19-f48d-50db-bc57-93ba2e99f845", "65e38ffa-5a1c-55d0-935c-6538d843b780"]
+disambiguations = ["19190b6e-359f-590c-b434-4e6f5803da4f", "5921354b-51e6-5da3-8d8c-e9041840fd9f"]
+
+[[argument]]
+id = "955f0e7e-824d-472c-adc6-ed364b1cb48c"
+label = "The q.7 a.1 bridge load map, checked"
+theorem = "q7BridgeLoadMap"
+premises = []
+conclusion = "0c1a3ec8-f374-4669-9b79-d43ab70bc439"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Chain non-reception, limitation only through reception and unlimited perfection; check the measure reading directly"
+meaning = "Premise-free. The q.7 a.1 bridge yields the locus-(b) composite from 7338142d, 1304b462 and 'unlimited esse has every pure perfection'; on the measure reading the last premise is analytic (by excluded middle), so the content moves to 1304b462. A certificate of where the load sits, not of warrant."
+
+[[argument]]
+id = "5fc76be7-2fee-4d7a-8aa7-b9aa3941e600"
+label = "A source with only being against the q.7 a.1 bridge: controls, checked"
+theorem = "q7Controls"
+premises = []
+conclusion = "6694d214-277c-4db8-81dc-a8c99c45cce2"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Explicit finite profile over Bool, checked by decision"
+meaning = "One source with only being, read with the role and the measure reading of limitation: each reading makes a different premise of the q.7 a.1 bridge fail. A structural surrogate."
+
+[[relation]]
+id = "876ab993-6fc0-4320-a2ce-db0282d358dd"
+label = "Test by the q.7 a.1 load map of limitation only through reception"
+subject_kind = "argument"
+subject_id = "955f0e7e-824d-472c-adc6-ed364b1cb48c"
+predicate = "tests"
+object_kind = "statement"
+object_id = "1304b462-4a10-5dd0-995a-db5feb21d98e"
+note = "On the measure reading the intensive content of the q.7 a.1 bridge sits in 1304b462 (only reception limits esse)."
+
+[[relation]]
+id = "ea84e2f6-792a-4b7b-b297-2d647f49ce79"
+label = "Test by the q.7 a.1 controls of limitation only through reception"
+subject_kind = "argument"
+subject_id = "5fc76be7-2fee-4d7a-8aa7-b9aa3941e600"
+predicate = "tests"
+object_kind = "statement"
+object_id = "1304b462-4a10-5dd0-995a-db5feb21d98e"
+note = "On the measure reading a source with only being is limited without being received, so 1304b462 fails there."
+
+[[relation]]
+id = "5dec0b75-a465-4e51-baf8-643eede3fc7b"
+label = "Test by the q.7 a.1 load map of whole-power real possession"
+subject_kind = "argument"
+subject_id = "955f0e7e-824d-472c-adc6-ed364b1cb48c"
+predicate = "tests"
+object_kind = "statement"
+object_id = "d164b1ff-ad31-5fbc-8ef9-eb0db51ebd96"
+note = "The q.7 a.1 bridge reaches the locus-(b) composite without d164b1ff and c4fb87a6, at the price of 'unlimited esse really has every pure perfection' or of 1304b462 on the measure reading."
+
+# ---------------------------------------------------------------- 2026-11-27 review repairs: the composition step unbundled
+
+[[statement]]
+id = "94036513-8146-4137-8cce-daf40577369d"
+label = "Second unde, real-otherness form: a nature actual through a really other esse receives it"
+lean = "ActualizedRealOtherQuiddityReceivesEsse"
+paraphrase = "OPEN, analyst formulation, attribution deferred: the weaker sibling of 89d82643, reading q.3 a.4's 'ad essentiam quae est aliud ab ipso' as real otherness. For every x: if x's nature is actual in x through esse, is other in content than being itself, and x's esse is not really identical with its essence (OWN_BEING_2 fails), then x's esse is received in its nature (RECEPTION_OF_ESSE_1). With real otherness of whatever is not esse tantum it gives back 89d82643 (compositionStepUnbundled). Suárez's profile satisfies it vacuously."
+definitions = ["82ab06d0-5328-4d85-b3a2-4a13532d9524", "97c4f504-4792-43c6-9f61-ae23df732d5f", "4433942e-aaf6-55a9-b777-66e55638103d", "87f9e331-d75e-41c5-994f-125c4969deb5", "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"]
+disambiguations = ["a409105e-8389-46ce-b14b-bebbc2864198", "5921354b-51e6-5da3-8d8c-e9041840fd9f", "1bff3cb4-f73b-42d4-ba2c-ff782e9df39b"]
+connection_plan = { target_statement_id = "29e71e43-1d34-5008-8811-897fbddda209", missing_bridge = "Real otherness of whatever is not esse tantum (NonOwnBeingsHaveRealOtherness), so that this sibling with the first unde and the nature in act gives CREATURE_1 reception. Its registered route is De ente stage (b): 860eae63 to a576300f (at most one actual being whose esse is its essence), plus a real-identity being that is esse tantum.", blocker = "Real otherness via stage (b) rests on stage (b)'s premises read on OWN_BEING_2, 75b5b027 (two real-identity beings share one nature), f13d1cdd (no added difference) and 38ed105c (no matter), which together amount to the bridge OWN_BEING_2 => OWN_BEING_1 (RealIdentityIsEsseTantum). The source states f13d1cdd and 38ed105c of esse tantum (OWN_BEING_1). On a real-identity account of creatures such as Suárez's, material creatures falsify 38ed105c on OWN_BEING_2 and plausibly f13d1cdd, while 75b5b027 holds for two humans and fails only across species. Support through stage (b)'s existential form would also presuppose a real-identity being that is esse tantum, close to the GOD_4 conclusion. Stage (b) shares 7fcfcee8 and 14325c83 with the reception cluster." }
+
+[[statement]]
+id = "f2871bf1-63f2-4045-bee5-af0a35e56b29"
+label = "The composition step is real otherness plus reception, and stage (b) supplies real otherness"
+lean = "CompositionStepUnbundled"
+paraphrase = "Premise-free, over every grades frame and principle sort. (1) The content form of the second unde (89d82643) gives its real-otherness form. (2) Real otherness of whatever is not esse tantum, with the real-otherness form, gives back the content form. (3) If at most one being has its esse really identical with its essence, and some such being is esse tantum, then whatever is not esse tantum has real otherness. (4) The non-existential bridge OWN_BEING_2 => OWN_BEING_1 (whatever has its esse really identical with its essence is esse tantum) gives real otherness by itself. Caution on (3): its existential premise, a real-identity being that is esse tantum, is close to the GOD_4 conclusion that 29e71e43 serves on the esse-root routes, so support for real otherness through (3) would beg the question there; (4) is the form that does not. Formally immediate; it locates the load, it does not supply warrant."
+definitions = ["82ab06d0-5328-4d85-b3a2-4a13532d9524", "97c4f504-4792-43c6-9f61-ae23df732d5f", "4433942e-aaf6-55a9-b777-66e55638103d", "87f9e331-d75e-41c5-994f-125c4969deb5", "ad76481a-f038-4652-9c6e-0e0441eee7e5"]
+disambiguations = ["a409105e-8389-46ce-b14b-bebbc2864198", "5921354b-51e6-5da3-8d8c-e9041840fd9f", "1bff3cb4-f73b-42d4-ba2c-ff782e9df39b"]
+
+[[statement]]
+id = "f8a2db99-54a2-450e-9c94-2a6af0068e4e"
+label = "Suárez's profile against the unbundled composition step: controls"
+lean = "Control.UnbundledControls"
+paraphrase = "Closed finite profile; statements about it only. Two beings whose nature is other than being itself, each with its esse really identical with its own essence (esseOf and essenceOf the identity on beings), esse actualizing the nature, nothing received. Checked: the inline at-most-one formula over real identity fails; the bridge OWN_BEING_2 => OWN_BEING_1 fails; real otherness of non-own beings fails; the real-otherness form of the second unde holds vacuously; its content form fails. It models nothing about shared natures, added differences, matter or the other premises of argument 07b1fac4."
+definitions = ["82ab06d0-5328-4d85-b3a2-4a13532d9524", "97c4f504-4792-43c6-9f61-ae23df732d5f", "4433942e-aaf6-55a9-b777-66e55638103d", "87f9e331-d75e-41c5-994f-125c4969deb5", "ad76481a-f038-4652-9c6e-0e0441eee7e5"]
+disambiguations = ["a409105e-8389-46ce-b14b-bebbc2864198", "5921354b-51e6-5da3-8d8c-e9041840fd9f", "1bff3cb4-f73b-42d4-ba2c-ff782e9df39b"]
+
+[[argument]]
+id = "48777e17-41e3-4761-923e-ebcf7394b8b6"
+label = "Content form of the second unde gives its real-otherness form, checked"
+theorem = "secondUndeContentGivesRealOther"
+premises = ["89d82643-cf45-4933-90b3-83a89f6210f2"]
+conclusion = "94036513-8146-4137-8cce-daf40577369d"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Weaken the antecedent"
+meaning = "The real-otherness form adds an antecedent to the content form, so the content form gives it. Backing of the strength registration."
+
+[[argument]]
+id = "f539bba2-1418-4a82-96d9-d55d973b6ae9"
+label = "The composition step is real otherness plus reception, checked"
+theorem = "compositionStepUnbundled"
+premises = []
+conclusion = "f2871bf1-63f2-4045-bee5-af0a35e56b29"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+sense_mixing_control = true
+rule = "Prove each implication; derive real otherness from at-most-one by substitution"
+meaning = "Premise-free load map of the composition step: content form = real-otherness form plus real otherness of non-own beings; at-most-one real identity with an esse-tantum real-identity being gives real otherness (existential, near the GOD_4 conclusion); so does the non-existential bridge OWN_BEING_2 => OWN_BEING_1. Formally immediate."
+
+[[argument]]
+id = "b7480e89-a3e2-4380-8553-9b8b52012540"
+label = "Suárez's profile against the unbundled composition step: controls, checked"
+theorem = "unbundledControls"
+premises = []
+conclusion = "f8a2db99-54a2-450e-9c94-2a6af0068e4e"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+sense_mixing_control = true
+rule = "Explicit finite profile over Bool, checked by decision"
+meaning = "Two real-identity beings that are not esse tantum and receive nothing: the inline at-most-one formula and the bridge OWN_BEING_2 => OWN_BEING_1 fail, real otherness fails, the real-otherness form holds vacuously, the content form fails. Nothing about shared natures is modelled. A structural surrogate."
+
+[[relation]]
+id = "09f6c23a-f600-4ff5-b8b4-6da44df7ee13"
+label = "Content form of the second unde strengthens its real-otherness form"
+subject_kind = "statement"
+subject_id = "89d82643-cf45-4933-90b3-83a89f6210f2"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "94036513-8146-4137-8cce-daf40577369d"
+verification_result_id = "48777e17-41e3-4761-923e-ebcf7394b8b6"
+strictness_result_id = "b7480e89-a3e2-4380-8553-9b8b52012540"
+note = "The content form asks only distinctness of content between nature and being; the real-otherness form also asks real otherness of esse and essence. In Suárez's profile the weak form holds vacuously and the strong fails."
+
+[[relation]]
+id = "8ff86201-0dfa-4336-aa9c-f5c5cadc1c84"
+label = "Test by the unbundled composition step of at most one real-identity being"
+subject_kind = "argument"
+subject_id = "f539bba2-1418-4a82-96d9-d55d973b6ae9"
+predicate = "tests"
+object_kind = "statement"
+object_id = "a576300f-4b01-45ae-902c-cfe3d0fbf2de"
+note = "Shows what a576300f contributes to the composition step: with a real-identity being that is esse tantum, at-most-one gives real otherness (conjunct 3, existential and close to the GOD_4 conclusion); conjunct 4 gives it from the non-existential bridge OWN_BEING_2 => OWN_BEING_1."
+
+[[relation]]
+id = "1611d4f5-d354-40a5-89cc-b1b75038d68d"
+label = "Test by Suárez's profile of at most one real-identity being"
+subject_kind = "argument"
+subject_id = "b7480e89-a3e2-4380-8553-9b8b52012540"
+predicate = "tests"
+object_kind = "statement"
+object_id = "a576300f-4b01-45ae-902c-cfe3d0fbf2de"
+note = "The profile falsifies the inline at-most-one formula over real identity and the bridge OWN_BEING_2 => OWN_BEING_1; it does not model shared natures or the other premises of argument 07b1fac4 that yield a576300f."

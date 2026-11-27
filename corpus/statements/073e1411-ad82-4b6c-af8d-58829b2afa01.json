@@ -1,0 +1,10 @@
+{
+  "id": "073e1411-ad82-4b6c-af8d-58829b2afa01",
+  "label": "Every being in the domain has its nature in act",
+  "paraphrase": "OPEN, analyst formulation, attribution deferred: every being in the domain is actually what it is, its nature (the respect in which it is what it is) being in act in it. The domain is actual beings; for a merely possible being it would fail.",
+  "lean_declaration": "TruthCore.Causality.DependenceToActOfBeing.QuiddityInAct",
+  "definition_ids": [
+    "97c4f504-4792-43c6-9f61-ae23df732d5f",
+    "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168"
+  ]
+}

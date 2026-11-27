@@ -1,0 +1,32 @@
+# Certificate for the typed rival relation e8a48d7f (worldwise deletion 2f055224
+# attacks the necessary concretum b19ffd92). Curation pass 2 of #2103 (lane E
+# batch 7, review repair). Analyst formulation, attribution deferred.
+
+[batch]
+vocab = "TruthCore.Causality.OriginDeletionIncompatibility"
+results = "TruthCore.Results.Causality.OriginDeletionIncompatibility"
+
+[[statement]]
+id = "Worldwise deletion excludes a necessary concretum at any world of the same profile"
+lean = "DeletionExcludesNecessaryConcrete"
+paraphrase = "Closed result about the formal readings, attribution deferred: for every profile m and world w, if worldwise deletion holds for m's Ontic and concreteness predicate (every concrete individual existing at any world v is absent from some world accessible from v, 2f055224), then no concrete individual exists at w and at every world accessible from w (b19ffd92 fails at w). Deletion at w applied to the would-be witness gives an accessible world lacking it. Neither reading is asserted; the certificate shows only that they cannot both hold at one world of one profile."
+definitions = ["10a7b462-bc9a-4ec6-ab78-1242816a5331", "97f37f5c-7f82-5077-9bb9-6cfc8673631d", "38b92bb6-33ae-5817-85c6-b5a1afa63bd1", "beb654a7-e204-5f4c-a7b4-45e886ba7109", "baddf770-36bf-542f-bb3c-2297342d5452"]
+disambiguations = ["7507d645-874d-5434-add8-2f49c2801d36"]
+
+[[argument]]
+id = "Worldwise deletion and a necessary concretum are incompatible"
+theorem = "deletionExcludesNecessaryConcrete"
+premises = []
+conclusion = "Worldwise deletion excludes a necessary concretum at any world of the same profile"
+axioms = []
+rule = "Apply deletion at w to the necessary concretum's witness"
+meaning = "Given worldwise deletion on a profile's Ontic and concreteness predicate and a concrete x existing at w and at every world accessible from w, deletion at w gives an accessible world u lacking x, while x exists at u. A premise-free certificate of the incompatibility recorded by the attacks relation e8a48d7f; it decides neither statement."
+
+[[relation]]
+id = "The deletion incompatibility certificate tests the necessary concretum"
+subject_kind = "result"
+subject_id = "Worldwise deletion and a necessary concretum are incompatible"
+predicate = "tests"
+object_kind = "statement"
+object_id = "b19ffd92-01bd-5c0b-9643-e7407137ea5e"
+note = "Certificate deletionExcludesNecessaryConcrete: on every profile, b19ffd92 at a world w fails whenever worldwise deletion 2f055224 holds for that profile's Ontic and concreteness predicate. It tests b19ffd92 against its recorded rival 2f055224 (relation e8a48d7f) and is a statement about the formal readings only."

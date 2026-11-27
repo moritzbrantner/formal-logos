@@ -1,0 +1,10 @@
+{
+  "id": "ea559179-ea5f-47ff-890e-2b5544693682",
+  "label": "Test by the mode pair certificate of the total-cause premise",
+  "subject_kind": "argument",
+  "subject_id": "1bbbd5ed-2aab-4776-9571-cf43a2d03718",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "2f6b9eff-84a1-5310-9abb-19985f3282c3",
+  "note": "Shows that 2f6b9eff with 791fa216 says exactly the composite; with ModeOfBeing read as 'had in act' 2f6b9eff is the composite itself."
+}

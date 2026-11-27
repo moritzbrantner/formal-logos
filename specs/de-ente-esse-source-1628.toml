@@ -29,14 +29,16 @@ definitions = ["2a19c5e4-6c0b-4733-a3dd-e207899b8547", "183b48d2-1753-583d-aef9-
 [[statement]]
 id = "No difference is added to the nature of a being whose esse is its essence"
 lean = "EsseTantumReceivesNoDifferenceReading"
-paraphrase = "For every x whose represented esse equals its represented essence, no difference is added to x's nature (not AddsDifference x). Reading of De ente c.3 [69874] (Baur/Koch; Leonine c.4): 'si autem ponatur aliqua res, quae sit esse tantum, ita ut ipsum esse sit subsistens, hoc esse non recipiet additionem differentiae, quia iam non esset esse tantum, sed esse et praeter hoc forma aliqua'."
+paraphrase = "For every x whose represented esse equals its represented essence, no difference is added to x's nature (not AddsDifference x). Reading of De ente c.3 [69874] (Baur/Koch; Leonine c.4): 'si autem ponatur aliqua res, quae sit esse tantum, ita ut ipsum esse sit subsistens, hoc esse non recipiet additionem differentiae, quia iam non esset esse tantum, sed esse et praeter hoc forma aliqua'. Sense gap (2026-11-27): the source sentence ('si autem ponatur aliqua res, quae sit esse tantum') is about esse tantum (OWN_BEING_1); this Lean reading states it of beings whose represented esse equals their represented essence (OWN_BEING_2). On OWN_BEING_2 a real-identity account of creatures can deny it; see DISAMB 1bff3cb4 and docs/notes/rdep-to-ract.md."
 definitions = ["2a19c5e4-6c0b-4733-a3dd-e207899b8547", "183b48d2-1753-583d-aef9-4199cff86231", "DEF-ESSE"]
+disambiguations = ["1bff3cb4-f73b-42d4-ba2c-ff782e9df39b"]
 
 [[statement]]
 id = "The nature of a being whose esse is its essence is not received in matter"
 lean = "EsseTantumNotInMatterReading"
-paraphrase = "For every x whose represented esse equals its represented essence, x's nature is not received in matter (not InMatter x). Reading of De ente c.3 [69874] (Baur/Koch; Leonine c.4): 'et multo minus reciperet additionem materiae, quia iam esset esse non subsistens sed materiale'."
+paraphrase = "For every x whose represented esse equals its represented essence, x's nature is not received in matter (not InMatter x). Reading of De ente c.3 [69874] (Baur/Koch; Leonine c.4): 'et multo minus reciperet additionem materiae, quia iam esset esse non subsistens sed materiale'. Sense gap (2026-11-27): the source sentence ('si autem ponatur aliqua res, quae sit esse tantum') is about esse tantum (OWN_BEING_1); this Lean reading states it of beings whose represented esse equals their represented essence (OWN_BEING_2). On OWN_BEING_2 a real-identity account of creatures can deny it; see DISAMB 1bff3cb4 and docs/notes/rdep-to-ract.md."
 definitions = ["2a19c5e4-6c0b-4733-a3dd-e207899b8547", "183b48d2-1753-583d-aef9-4199cff86231", "DEF-ESSE"]
+disambiguations = ["1bff3cb4-f73b-42d4-ba2c-ff782e9df39b"]
 
 [[statement]]
 id = "At most one actual being has its esse identical with its essence"

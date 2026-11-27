@@ -1,0 +1,9 @@
+{
+  "id": "87f9e331-d75e-41c5-994f-125c4969deb5",
+  "label": "Own being as real identity: the esse of x is really identical with its essence",
+  "term": "own being as real identity of esse and essence",
+  "definition": "`EsseReallyIsEssence esseOf essenceOf x`: the esse of x is really identical with its essence, the represented identity esseOf x = essenceOf x of the q.3 a.4 and De ente profiles, read as real identity (the sense of a576300f, 'at most one actual being has its esse identical with its essence'). Distinguishing conditions: unlike esse tantum (OwnBeingByQuiddity, DEF ad76481a) it does not say that x's nature is being itself; a creature whose existence is really identical with its essence (Suárez, DM XXXI) has it while its nature is, say, humanity.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.DependenceToActOfBeing.EsseReallyIsEssence",
+  "note": "Stipulative analyst definition, attribution deferred; it names the represented identity already used by the q.3 a.4 and De ente profiles (docs/notes/de-ente-esse-source-1628.md, docs/notes/rdep-to-ract.md)."
+}
