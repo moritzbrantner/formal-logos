@@ -1,0 +1,10 @@
+{
+  "id": "de9e2b6d-25d7-42ec-8abc-fc640329a681",
+  "label": "Asymmetric grade excludes the recorded mutual-support rival",
+  "subject_kind": "argument",
+  "subject_id": "a43516c3-836d-407a-b3a9-f3cb6f961d10",
+  "predicate": "refutes",
+  "object_kind": "statement",
+  "object_id": "12a167a4-dd1d-4f04-92e5-c22325cbbd1a",
+  "note": "The conclusion is exactly the negation of the rival under ascent at the two admitted worlds and asymmetry on the same candidate pair. Neither premise is established."
+}
