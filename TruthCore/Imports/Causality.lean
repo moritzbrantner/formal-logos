@@ -191,6 +191,7 @@ public import TruthCore.Causality.MixedSupplierCensus
 public import TruthCore.Causality.ModalNecessaryBeingActuality
 public import TruthCore.Causality.ModalSenseSupport
 public import TruthCore.Causality.ModeOfBeingMiddleTerm
+public import TruthCore.Causality.MoreSuchSenseCollapse
 public import TruthCore.Causality.MotionMapsBatch1
 public import TruthCore.Causality.MotionMoverFork
 public import TruthCore.Causality.MutualSupportAsymmetry

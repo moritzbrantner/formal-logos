@@ -1,0 +1,10 @@
+{
+  "id": "17658e46-236a-452d-a405-eebe6244cd12",
+  "label": "Test by the degree-indexed induction controls of nothing moves except as in act",
+  "subject_kind": "result",
+  "subject_id": "15d89a59-2725-410a-853c-b27d4c1b4f5e",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "f296a694-aeea-5fa7-bdbf-0076530f9441",
+  "note": "The coil moves the workpiece from cold to hot in the heat respects. The formal (IN_ACT_1) reading of the premise fails at the degree-indexed respect (heat at or above the workpiece's degree), which the coil lacks formally; at the respect of having some heat the coil has heat formally and that instance holds. The inclusive (IN_ACT_3) reading holds. By DISAMB-IN-ACT the prima via then needs non-simultaneity on the inclusive reading, where the Metaphysics IX.6 support, given for formal act, does not carry over."
+}

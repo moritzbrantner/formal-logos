@@ -1,0 +1,17 @@
+{
+  "id": "e7db0c0f-77c1-4e5e-862a-8c61b9fa36a0",
+  "label": "Some distinct cause of a quality in another is not MORE_3 more such than it",
+  "paraphrase": "Analyst formulation, attribution deferred: the exact negation of the MORE_3 reading of 'more such'. Some c, distinct from x, causes x's being r (CAUSE_2) and is not more r than x on the ordinary comparative (it lacks r formally, or x lacks r formally, or c's measured degree of r is not strictly higher). Warrant, outside Lean, with r read as 'having some heat' and the degree as temperature: in induction heating the water-cooled coil (typically below about 60 °C) causes a workpiece's heat at roughly 800-1200 °C and is not hotter than it. This is stated as standard engineering practice, not read from a pinned source. The case needs only that CAUSE_2 counts the coil, which DEF-CAUSE-OF-PERFECTION's effective responsibility does. Open.",
+  "lean_declaration": "TruthCore.Causality.MoreSuchSenseCollapse.OrdinaryComparativeGap",
+  "definition_ids": [
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "5c5e062c-43ce-4b4e-af4e-45bf93dd8196",
+    "a5bda545-3e76-5240-808d-25f897a07be5",
+    "00bd3c0c-010a-559c-a2a0-b4fbf49cbaf1"
+  ],
+  "disambiguation_ids": [
+    "cdb0de59-5015-4fa6-986c-4cd1527dd2b3",
+    "dba7b1de-f3a0-57af-9af9-b2a4da3136fa",
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b"
+  ]
+}
