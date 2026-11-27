@@ -1,0 +1,10 @@
+{
+  "id": "5e66669d-8130-4d08-8092-28ae8bc9728e",
+  "label": "Test by NoBruteCompatibility.checks (c71c068c)",
+  "subject_kind": "result",
+  "subject_id": "57ca3421-758d-5cc8-8373-b802f4eab7a4",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "c71c068c-bbae-5ed5-a99d-70b155c8d239",
+  "note": "Omit grounding closure for the actual contingent concreta at false. The populated boundaryRival graph has one root (false, false) and one child at that world. Stipulated intrinsic reason tokens give sound existence coverage, while the root is absent at true and has no existing concrete supporter at false. The restricted graph is well-founded."
+}
