@@ -5,5 +5,16 @@
   "definition": "Given the Catholicism case signature σ and a being g, σ.HasClassicalAttributes g is the signature’s primitive predicate for the full classical attribute field at g.",
   "lean_declaration": "TruthCore.Case.Catholicism.Signature.HasClassicalAttributes",
   "note": "The case signature supplies the predicate on its being carrier. The separately stated ClassicalAttributesSuffice maps a concrete nine-predicate bundle to this field. The field has no definitional eliminator into individual attributes. Its application and the interpretation of the sufficiency map remain open.",
-  "basis": "stipulative"
+  "basis": "stipulative",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "For a supplied case signature and a being on its carrier, the field is intended to ascribe the classical attributes collectively to that being. Each attribute in the separately supplied nine-predicate sufficiency condition is evaluated at that same being.",
+    "examples_unavailable": "An actual application would require the metaphysical and naming premises under investigation. ClassicalAttributesJointWitness and NecessaryClassicalGodRootControl provide interpretations of the field on formal carriers.",
+    "exclusions": [
+      "The field differs from the signature’s GOD_4 predicate and from the explicit conjunction NineClassicalAttributes. Its Lean declaration gives no eliminator into a particular attribute."
+    ],
+    "open_obligations": [
+      "The nine-to-field implication and any stronger interpretation or converse require separate warrant."
+    ]
+  }
 }

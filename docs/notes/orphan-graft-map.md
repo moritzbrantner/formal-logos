@@ -622,3 +622,31 @@ and invalid reconstructions, and the status of any defeaters for that
 basis. For an absolute-truth application, defend the direction of capture
 for that very content. Neither the replay nor the Boolean enumeration
 measures a person's grasp or licenses the proposed capture.
+
+## Curation pass 2 follow-up (2026-11-27)
+
+The metadata prune anticipated above was applied to the unique-classical-God
+bundle and the necessary, potency-free first root. Each record now links the
+propositions used in its type. The primitive attribute field has a separate
+definition record, and the reviewed bundle audits track the revised scope.
+
+- The [classical attribute compositions](../../specs/attribute-hub-connections.toml)
+  transfer the field along the unique God witness's identity, and derive the
+  field using separately proved unity, perfection and first-being potency
+  exclusion. The nine-to-field premise remains explicit in the latter route.
+  Assembling a unique witness from the universal field and then transferring
+  back to the field would be circular.
+- The [necessary first-root composition](../../specs/necessary-first-attribute-connection.toml)
+  identifies the potency-free first bearer with the positive attribute witness
+  by uniqueness of actual roots at the same world in the same grounding
+  profile. The transported potency exclusion supplies immutability and
+  eternity. The negative-attribute package still needs a complementary
+  positive witness or an argument for the positive attributes at its root.
+- The [existential regress composition](../../specs/existential-regress-connection.toml)
+  places the existential series upstream of the per se actual-esse regress
+  through the existing efficiency bridge. Its independent support uses the
+  existential regress directly or derives it via the wider efficient series.
+  The producer that starts from the per se actual-esse regress gives a cycle.
+  The existential-to-actual edge bridge thus retains a connection plan through
+  independent predecessor coverage. The holding plans require matching modal
+  lackability and grounding calibrations.
