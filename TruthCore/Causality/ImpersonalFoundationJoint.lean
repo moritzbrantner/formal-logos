@@ -412,8 +412,10 @@ restriction of `good` to value is what keeps the law out.
 4. If betterness is the D-realization ordering itself (no variation of goodness
    at fixed end content), not even the good-tracking profile is good-general.
 5. With `good` := lower action and fixed endpoints, a least-action law is
-   good-general in the formal sense; with a value ranking under which the paths
-   do not differ, it is not. -/
+   good-general in the formal sense. With `noValue`, the empty ranking, it is
+   not; that half is trivial (nothing depends on an empty ranking) and models
+   only the stated assumption that the paths do not differ in value, which is
+   what "does not depend on value at all" rests on. -/
 def CriterionTable : Prop :=
   (gg goodGeneral ∧ gg rational ∧ goodGeneral = rational) ∧
   (¬ gg dNature ∧ ¬ gg determinedWill ∧ ¬ gg proxy ∧ ¬ gg chance) ∧

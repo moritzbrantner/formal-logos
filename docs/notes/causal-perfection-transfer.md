@@ -5064,25 +5064,25 @@ favourings are jointly admissible, and the root still has no represented
 limiting principle (`a30c5963` holds). A simple root may also carry several
 other distinct determinations (`esse`, `goodGen`, wisdom).
 
-**Its own price (whoever denies it).** A favouring profile is a bearer's
-complete ranking of the candidates in every scenario. Two distinct complete
-rankings over the same candidates conflict at some pair and scenario, unless
-each belongs to a different respect: two powers, as in a human being's natural
-inclination and will.
+**Its own price (whoever denies it).** A favouring profile
+(`GoodFavouring.Profile`) is any relation of candidates per scenario. It need
+not be total, and two distinct profiles need not conflict. The D-directed
+`dNature` and the good-tracking `better` are distinct, yet neither ever
+favours y over x where the other favours x over y (the semantic challenge's
+probe `NoConflict`).
 
-So a rival who denies one-favouring realization holds one of two positions:
+So a rival who denies one-favouring realization can hold a single bearer with
+two distinct, non-conflicting favouring relations in one respect: a fixed
+D-favouring alongside a value-dependent favouring that ranks more pairs. That
+is exactly the row-7 configuration. The price of that position is to say what
+makes these *two* favourings of one simple bearer rather than one favouring,
+the union of the two relations.
 
-- two non-conflicting favourings in two respects;
-- conflicting favourings in one bearer.
-
-The first is the question whether really distinct powers are a composition.
-The #2153 `Composite` does not encode that question. The second is incoherent
-for a total ranking.
-
-Why would two favourings compose, when `esse`, `goodGen` and wisdom do not?
-The answer offered for the premise is this. Those determinations are not
-rival total rankings of one domain, but two favourings are. This is a stated
-rationale, not a derivation.
+Neither side has a derivation here. `3e6ae3e7` is an open reading with a weak
+rationale: a simple source's inclination is one. Making that rationale precise
+would need a further open reading, for example that a favouring profile is
+maximal (the bearer's whole favouring), and that reading is not adopted
+here.
 
 **Result A** (`actualRootFavouringIsGoodGeneral`, `22ee1b3b`, registered,
 zero axioms). The premises are:
@@ -5227,13 +5227,16 @@ first mark alone.
 The first mark needs `good` to be value. The semantic challenge's probe is now
 compiled as `criterionTable` row 5. In it a toy least-action law, with
 `good` := lower action and `fitOf` := fixed endpoints, satisfies the formal
-definition. With a value ranking under which the paths do not differ, it does
-not. So:
+definition. With the empty ranking (`noValue`) it does not. That half is
+trivial: it models only the stated assumption that the paths do not differ in
+value. So:
 
 - *Under a generic ranking*, a variational law is an independent noncognitive
   instance of both marks. It would refute the criterion.
 - *Under the value reading*, which is the adopted one, a variational law does
-  not depend on value at all, so it fails the first mark. This is not because
+  not depend on value at all, so it fails the first mark. This rests on the
+  assumption that candidate paths do not differ in value; Lean does not
+  establish it. This is not because
   it "factors through its own fixed functional": in the probe, the law's
   favouring varies while the endpoints stay fixed.
 
@@ -5298,11 +5301,12 @@ object.**
 - *Target:* `980e6482` as a reading of (e).
 - *Mechanism:* the root originates finality only as an object of appetite. It
   is what other things tend toward, and has no favouring of its own.
-- *Independent justification:* Aristotle, Metaph. Λ.7 1072b3, where the first
-  mover moves as an object of love; and Plotinus's One. Navigation only; this
+- *Independent justification:* the mode of moving as an object of love
+  (Aristotle, Metaph. Λ.7 1072b3), and Plotinus's One. Navigation only; this
   is an analyst formulation with attribution deferred.
 - *Relevance:* such a root can be simple, necessary and noncognitive, which is
-  exactly the target. It meets neither ORIGINAL_FINALITY_1 nor _2. Those senses
+  exactly the target. The noncognitive form rests on Plotinus alone, since
+  Aristotle's first mover is itself thinking (νόησις νοήσεως, Λ.9). It meets neither ORIGINAL_FINALITY_1 nor _2. Those senses
   require the origin's own favouring (`0bbbf98c`), so the disambiguation does
   not cover this reading.
 - *Status:* standing. It is not encoded as a third sense here, because that
@@ -5411,14 +5415,14 @@ anything else.
 | Configuration | (e) taken in | Denies | Price (beyond the shared selection price of D) |
 | --- | --- | --- | --- |
 | D-nature at a composite root | sense 1 | `a30c5963` (row 2) | gives up (a) as encoded |
-| D-nature with two favourings at a simple root | sense 1 | one-favouring realization `3e6ae3e7` (row 7), keeping `a30c5963` | two non-conflicting favourings in distinct respects at a root without a represented limiting principle; owes why really distinct powers are not a composition |
+| D-nature with two favourings at a simple root | sense 1 | one-favouring realization `3e6ae3e7` (row 7), keeping `a30c5963` | two distinct non-conflicting favouring relations in one respect at a root without a represented limiting principle; owes why they are two favourings rather than their union |
 | D-nature with impure D-favouring at an unlimited root | sense 1 | RootPurity (row 3a) | an impure determination with no represented limiting principle |
 | D-nature with pure D-favouring | sense 1 | joint compossibility (row 3b) | two pure actualities that exclude each other with no limitation in either; owes a positive account (the #1970 and #2153 burden) |
 | D-nature, good-generality impure | sense 1 | `e2357adc` (row 6) | restriction of favouring content is not limitation; or the criterion plus the constitutive side of the reception fork (one commitment that also denies the purity of wisdom) |
 | D-nature, good-generality inadmissible | sense 1 | `ee287fd3` for good-generality (row 5, case i) | a positive incompatibility of good-generality with simplicity |
 | Any D-nature with no goodness variation within a D-class | sense 1 | one of the `variationCore` four | if betterness factors through end-realization, nothing is good-general, for either side |
 | Axiarchic good-general foundation | sense 2 | the criterion (row 4 of B) | a primitive efficacy of the value of non-present candidates without its presence as content; at parity with the criterion |
-| Final cause as object | neither favouring sense | `980e6482` (row 3 of B) | a root that favours nothing is "originally responsible" for an order it does not select; untested |
+| Final cause as object (noncognitive form: Plotinian) | neither favouring sense | `980e6482` (row 3 of B) | a root that favours nothing is "originally responsible" for an order it does not select; untested |
 
 In every row (d) is (d1) with ties, or (d2) for a permissive propensity (see
 C).
@@ -5491,7 +5495,8 @@ New open premises:
 1. The axiarchic good-general noncognitive foundation. It denies the
    criterion with a primitive. The two sides are at parity on the criterion,
    and A does not touch this rival.
-2. The final cause as object. It takes (e) in neither favouring sense. It is
+2. The final cause as object, in its noncognitive Plotinian form (Aristotle's
+   first mover thinks). It takes (e) in neither favouring sense. It is
    recorded and its price is untested.
 3. The D-nature with good-generality impure. It holds either that restricting
    content is not limitation, or the criterion together with the constitutive
@@ -5503,8 +5508,10 @@ named premise. The premises differ in how much positive rationale they have.
 - `e2357adc` rests on the relocated transfer principle, "restriction of
   content is limitation". The rival denies that principle, and no independent
   argument is recorded either way.
-- `3e6ae3e7` has a stated rationale: favourings are rival total rankings.
-  Whether really distinct powers compose is left open.
+- `3e6ae3e7` has no derivation and only a weak rationale: a simple source's
+  inclination is one. Its denial, two distinct non-conflicting favourings in
+  one respect, is coherent in the controls (row 7). Its price is to explain
+  why these are two favourings rather than their union.
 - The criterion is a direct assumption with a rationale. It stands at parity
   with the axiarchic denial.
 
@@ -5552,13 +5559,14 @@ the last two premises.
 *Remaining, with their commitments.* Such a foundation can still be:
 
 - composite;
-- simple, with two favourings in distinct powers;
+- simple, with two distinct non-conflicting favourings;
 - a bearer of a pure determination-to-one that excludes another pure
   perfection;
 - a foundation whose good-generality is impure or inadmissible;
 - good-general and noncognitive, by a primitive denial of the criterion (at
   parity);
-- the final cause as object, with no favouring of its own.
+- the final cause as object, with no favouring of its own (noncognitive in its
+  Plotinian form; Aristotle's first mover thinks).
 
 *Shared, not discriminating.* Selection among tied creations. Contingency of
 creation as such (d2), which separates permissive from categorical accounts.
@@ -5581,9 +5589,10 @@ fork once the criterion is granted. They differ only in the closing premise.
 1. Is restriction of favouring content a limitation (row 3b)? Encode a
    favouring confined to one content as `RequiresLack` of good-generality,
    and test it against `PureRequiresNoPureLack` on both sides.
-2. Do really distinct powers at a root without a represented limiting
-   principle amount to a composition? This is the price of denying
-   `3e6ae3e7`.
+2. What individuates favourings: are two distinct non-conflicting favouring
+   relations of one bearer two favourings or one (their union)? This is the
+   price of denying `3e6ae3e7`. A maximality reading of favouring profiles is
+   one candidate, not adopted here.
 3. Value-responsiveness without presence as content: state the axiarchic
    relation positively and test whether it differs from apprehension in more
    than its name.
@@ -5631,7 +5640,16 @@ The repairs:
 - DEF `3ece6dfe` (`About`) is added and DEF `07f3fb85` is extended;
 - the remaining prose is repaired as listed.
 
-A targeted re-check is pending.
+These repairs are at `437ed0179`. The targeted re-check at `f5ced2da4`
+accepted all four P1 and nine P2 repairs. It found one new P1, introduced by
+the P1-2 repair: the rationale for `3e6ae3e7` called favouring profiles
+"complete" or "total" rankings, which is false of `GoodFavouring.Profile` and
+of the model, since `dNature` and `better` are distinct and never conflict. It
+also found four P2s: the row-5 triviality of `noValue`, the Aristotle/Plotinus
+scope of the final-cause rival, the attempt wording, and this record. All are
+fixed in the following commit. The price of denying `3e6ae3e7` is now a single
+bearer with two distinct non-conflicting favourings in one respect, and
+`3e6ae3e7` is marked as having no derivation and only a weak rationale.
 
 [Attempt record](../../corpus/attempts/e03ee9b6-ce0a-4d64-b648-851f501db3ae.json)
 
