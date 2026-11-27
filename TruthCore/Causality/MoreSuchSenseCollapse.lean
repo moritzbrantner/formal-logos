@@ -144,8 +144,10 @@ def received (y r z : Bool) : Prop := y = true ∧ r = true ∧ z = true
 /-- The recipient's heat is limited by the recipient, and only by reception. -/
 def limited (y r z : Bool) : Prop := received y r z
 
-/-- Formal comparative: the recipient is hotter than the source. -/
-def moreFormal (r x y : Bool) : Prop := r = true ∧ x = true ∧ y = false
+/-- A stipulated comparative on which the recipient is hotter than the source.
+It is not MORE_3: `OrdinaryComparative` needs both comparands to have the
+respect formally, and here the source lacks it, so MORE_3 holds of no pair. -/
+def workpieceHotter (r x y : Bool) : Prop := r = true ∧ x = true ∧ y = false
 
 /-- Eminent comparative: the source, having heat as a power to produce it,
 exceeds the recipient in heat by eminence. -/
@@ -158,10 +160,10 @@ def act : ActFrame Bool Bool where
   MovedIn := fun _ _ => False
   MovesIn := fun _ _ _ => False
 
-/-- The case with the formal comparative. Its frame `InAct` is the inclusive
+/-- The case with the stipulated workpiece-hotter comparative. Its frame `InAct` is the inclusive
 reading; the controls below name the act predicate of each premise explicitly. -/
 def formalGrades : GradesFrame Unit Bool Unit Bool :=
-  TruthCore.Causality.CartesianAdequacy.gradesOf act.InActFormallyOrVirtually moreFormal
+  TruthCore.Causality.CartesianAdequacy.gradesOf act.InActFormallyOrVirtually workpieceHotter
     causes false
 
 /-- The same case with the eminent comparative. -/
@@ -169,8 +171,9 @@ def eminentGrades : GradesFrame Unit Bool Unit Bool :=
   TruthCore.Causality.CartesianAdequacy.gradesOf act.InActFormallyOrVirtually moreEminent
     causes false
 
-/-- Statements about these two interpretations only. With the formal
-comparative: the formal possession gap holds; inclusive distinct-cause possession
+/-- Statements about these two interpretations only. With the stipulated
+workpiece-hotter comparative (not MORE_3; heat is the threshold quality "being
+hot"): the formal possession gap holds; inclusive distinct-cause possession
 (formal or virtual) and the four reception premises hold; "what is more such has
 the perfection" holds with formal act; the exceeding step read with inclusive act
 fails, "more such" fails and formal possession fails. With the eminent
@@ -222,6 +225,13 @@ def temp (r : Fin 3) (b : Bool) : Nat := if r = 1 then (if b then 1000 else 40) 
 workpiece in both heat respects. -/
 def surpasses (r : Fin 3) (x y : Bool) : Prop := r ≠ 0 ∧ x = false ∧ y = true
 
+/-- The workpiece's heat respects are received in the workpiece. -/
+def received3 (y : Bool) (r : Fin 3) (z : Bool) : Prop := y = true ∧ r ≠ 0 ∧ z = true
+
+/-- The workpiece's heat respects are limited by the workpiece, and only by
+reception. -/
+def limited3 (y : Bool) (r : Fin 3) (z : Bool) : Prop := received3 y r z
+
 /-- The coil also moves the workpiece in both heat respects: it reduces the
 workpiece from cold to hot. -/
 def act3 : ActFrame Bool (Fin 3) where
@@ -242,7 +252,10 @@ comparative the coil is not hotter: the ordinary-comparative gap holds and the
 ordinary reading of "more such" fails. Read with the stipulated eminent
 comparative, "more such" holds. The coil moves the workpiece in the heat
 respects: "nothing moves except as in act" fails read with formal act and holds
-read with inclusive act. -/
+read with inclusive act. With the frame comparative MORE_3 (`grades3.MoreIn` is
+`OrdinaryComparative act3 temp`): inclusive distinct-cause possession, the four
+reception premises and the more-such bearer read with formal act hold, and the
+exceeding step read with inclusive act fails. -/
 def OrdinaryControls : Prop :=
   act3.InActFormally false 1 ∧
   ¬ act3.InActFormally false 2 ∧
@@ -255,7 +268,15 @@ def OrdinaryControls : Prop :=
   ¬ TruthCore.Latin.Aquinas.SummaTheologiae.MovesOnlyAsInActReading act3.MovesIn
       act3.InActFormally ∧
   TruthCore.Latin.Aquinas.SummaTheologiae.MovesOnlyAsInActReading act3.MovesIn
-      act3.InActFormallyOrVirtually
+      act3.InActFormallyOrVirtually ∧
+  DistinctCauseHasWhatItGives grades3.CausesIn act3.InActFormallyOrVirtually ∧
+  CausedPerfectionIsReceivedInEffect grades3.CausesIn received3 ∧
+  ReceivedPerfectionIsLimitedByRecipient received3 limited3 ∧
+  PerfectionLimitedOnlyThroughReception received3 limited3 ∧
+  CauseHasPerfectionNotAsReceivedInEffect grades3.CausesIn received3 ∧
+  MoreSuchHasThePerfectionReading act3.InActFormally grades3.MoreIn ∧
+  ¬ UnlimitedPossessionExceedsLimited act3.InActFormallyOrVirtually limited3
+      grades3.MoreIn
 
 end Control
 

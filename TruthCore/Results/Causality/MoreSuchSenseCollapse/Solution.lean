@@ -51,7 +51,7 @@ theorem controls : Control.Controls := by
     TruthCore.Greek.Aristotle.Metaphysics.CauseOfQualityInAnotherIsMoreSuchReading,
     Control.formalGrades, Control.eminentGrades, Control.act,
     TruthCore.Causality.CartesianAdequacy.gradesOf, Control.causes, Control.formal,
-    Control.virtual, Control.received, Control.limited, Control.moreFormal,
+    Control.virtual, Control.received, Control.limited, Control.workpieceHotter,
     Control.moreEminent, TruthCore.Causality.TermSenseForks.ActFrame.InActFormallyOrVirtually]
   refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩
   all_goals decide
@@ -68,8 +68,16 @@ theorem ordinaryControls : Control.OrdinaryControls := by
     Control.grades3, Control.act3, TruthCore.Causality.CartesianAdequacy.gradesOf,
     Control.causes3, Control.formal3, Control.virtual3, Control.temp, Control.surpasses,
     TruthCore.Latin.Aquinas.SummaTheologiae.MovesOnlyAsInActReading,
+    TruthCore.Case.Catholicism.PreexistenceWithoutTransfer.DistinctCauseHasWhatItGives,
+    TruthCore.Causality.CausalMapsBatch1.CausedPerfectionIsReceivedInEffect,
+    TruthCore.Causality.CausalMapsBatch1.ReceivedPerfectionIsLimitedByRecipient,
+    TruthCore.Causality.CausalMapsBatch1.PerfectionLimitedOnlyThroughReception,
+    TruthCore.Causality.CausalMapsBatch1.CauseHasPerfectionNotAsReceivedInEffect,
+    TruthCore.Causality.CausalMapsBatch1.UnlimitedPossessionExceedsLimited,
+    TruthCore.Latin.Aquinas.SummaTheologiae.MoreSuchHasThePerfectionReading,
+    Control.received3, Control.limited3,
     TruthCore.Causality.TermSenseForks.ActFrame.InActFormallyOrVirtually]
-  refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩
+  refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩
   all_goals decide
 
 end TruthCore.Results.Causality.MoreSuchSenseCollapse
