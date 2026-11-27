@@ -1,0 +1,9 @@
+{
+  "id": "eb96d3f9-3c9a-45b5-9fd3-62a5f5ccafbd",
+  "label": "Classical attributes field of the case signature",
+  "term": "The skeleton’s classical-attributes field",
+  "definition": "Given the Catholicism case signature σ and a being g, σ.HasClassicalAttributes g is the signature’s primitive predicate for the full classical attribute field at g.",
+  "lean_declaration": "TruthCore.Case.Catholicism.Signature.HasClassicalAttributes",
+  "note": "The case signature supplies the predicate on its being carrier. The separately stated ClassicalAttributesSuffice maps a concrete nine-predicate bundle to this field. The field has no definitional eliminator into individual attributes. Its application and the interpretation of the sufficiency map remain open.",
+  "basis": "stipulative"
+}
