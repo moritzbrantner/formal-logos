@@ -1,0 +1,9 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.UnlocatedRootNecessity.Challenge",
+  "solution_module": "TruthCore.Results.Causality.UnlocatedRootNecessity.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.UnlocatedRootNecessity.emptyPopulationOmission"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}
