@@ -705,4 +705,7 @@ the root has"), lane P's claim still understated as "descriptive", an uncertifie
 "only" in the relocation sentence, and five P2s (the carriage bridge ranges over
 every being; a stale `EssenceGroundedWorldPossibility` docstring; a duplicated
 sentence; gap numbering; "not recoverable" without the other four premises). All
-are repaired in the following commit.
+are repaired in `d111a0f8a`. The confirmation review of `d111a0f8a` found one
+residual: the cross-reference in causal-perfection-transfer.md (R2) still called
+lane P's commitment "descriptive". It now quotes lane P's claim and marks the
+"descriptive" judgment as lane M's own; no other new overstatement was found.
