@@ -1155,7 +1155,7 @@ implementations stay until their retirement (#954, R2).
 
 ## `orphans`
 
-`truth orphans [--frontier-root STATEMENT-ID] [--by module|family]` lists
+`truth orphans [--frontier-root STATEMENT-ID] [--by module|family] [--all]` lists
 verified results (status `solution-present` or `verified`) whose argument
 conclusion does not reach the frontier root (default
 `STMT-CATHOLICISM-TRUE`) and which do not support a verified recorded refutation
@@ -1167,6 +1167,39 @@ already reach the root, so such work is otherwise invisible to round
 selection. Reaching the root is the same route-aware walk as `thickness`;
 The retired parity script checked the disconnected set against Python's
 `reaching_root_statements` plus `corpus.refutation_support`.
+
+Each verified result also gets a **placement state** (owner decision,
+2026-11-27; `docs/corpus-model.md`, "Result placement"), the first that
+applies: `reaching` (the connected notion above), `placed_diagnostic` (a
+premise-free result whose result or argument `tests` a root-path statement or
+an argument concluding one), `placed_rival` (an `alternative_to` or `attacks`
+relation between its conclusion and a root-path statement, either direction;
+its argument `attacks` or `refutes` one; or a root-path argument `refutes` its
+conclusion), `planned` (a valid `connection_plan` on its conclusion targeting
+a root-path statement) and `unplaced`. `--json` gives `state_counts` over all
+verified results, `transcription_state_counts` for the transcriptions among
+them, per group `placed_count`, `planned_count`, `unplaced_count` and
+`state_counts`, and per result its `state` and `placed_by` (the relation or
+plan target). The text lists, per group, only the unplaced conclusions and
+omits groups without one; `--all` lists every disconnected result with its
+state and transcription kind. Contact lines read `contact (on root path):`:
+they name root-path statements as leads, not disconnected results.
+
+`truth orphans --base REV --gate` is the **placement gate**. It computes the
+states at the head and at the base (read like `frontier-diff`, "head rules on
+base data") and judges each verified head result that is new (no verified
+result with its ID at the base), whose argument changed (another argument id,
+conclusion, premise or commitment set), or that was placed at the base and is
+unplaced now. It exits 1 when a judged result is `unplaced`, naming the
+conclusion, the result and the change, and stating the honest options: a real
+derivation to a root-path statement, a `tests` link for a diagnostic, a typed
+rival relation, or a `connection_plan` naming the exact missing bridge
+(contrived edges and tautological bridges are not acceptable; reviewers check
+every new edge). Unplaced results that are not judged are the backlog, counted
+but never failed. An unreadable base is a `revision_error` (exit 1). `--gate`
+requires `--base`; `--base` excludes `--by`, `--senses` and `--all`. CI runs it
+on every pull request against `HEAD^1`, beside `connectivity --base`, which
+still judges statements; `scripts/preflight.sh` runs it against the merge base.
 
 `truth orphans --base REV` ports `scripts/orphan_summary.py --base REV`, the
 Markdown table CI adds to a PR's job summary: the disconnected count at the
@@ -1200,7 +1233,8 @@ statements, and up to five nearest root-path contacts, ranked by tier:
    `corpus.py related`.
 
 Contacts are discovery leads, not equivalences or entailments. Text output
-lists eight conclusions per group; `--json` lists every result and conclusion.
+lists eight unplaced conclusions per group; `--all` and `--json` list every
+disconnected result.
 
 `truth orphans --senses` lists root-path disambiguations (linked, directly or
 through a sense definition, from a statement reaching the root or an argument
