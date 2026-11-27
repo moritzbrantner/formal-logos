@@ -1,0 +1,18 @@
+{
+  "id": "b4a0e5cc-bf24-42cb-8b4a-39ee9bdd2937",
+  "label": "Preexistence at the universal source: impersonal-source controls",
+  "paraphrase": "Closed finite interpretation; statements about it only. Three beings (a source, a living effect, a nonliving effect) and two respects (being, and a Boolean stand-in labelled 'life'). The source causes the being and every formally had perfection of each other being; everything has being formally; only the living effect has the stand-in respect formally; the source has it virtually (IN_ACT_2). The frame's act is inclusive (formal or virtual). Checked: the source is a universal cause of being; universal-scope transfer b26c10a0, universal-source possession, universal-source preexistence, q.4 a.2 preexistence 64498e7e, unrestricted transfer f8ba2429 and 'nothing has actuality except insofar as it is' hold; the frame's act is contained in the act frame's inclusive act (GradesActIsInclusive) and conversely, so the two coincide; the source has the stand-in respect inclusively and is perfect in the inclusive sense of GodIsPerfect when it alone is named; the source does not have the stand-in respect formally. A separate stipulated mode order, unrelated to the source's frame, satisfies the weak version of the q.4 a.2 mode step (an agent's power above material potency) and falsifies the strong version (above every other mode), witnessing that the strong version is strictly stronger. Encoding artifacts, disclosed: 'life' is a Boolean stand-in respect, not any recorded sense of LIVING; the virtual relation is stipulated, and whether it is read as a power to produce or as higher-mode containment is not encoded; no comparative of bearers is used. It shows that these premises, on the inclusive reading and for this stand-in respect, do not by themselves give the source formal or intrinsic possession; it is not evidence that an impersonal source exists or is possible.",
+  "lean_declaration": "TruthCore.Causality.UniversalPreexistence.Control.Controls",
+  "definition_ids": [
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "c19faf56-0908-5e6e-8c39-ccba40dce5d1",
+    "a5bda545-3e76-5240-808d-25f897a07be5",
+    "f7833666-c764-5624-a766-708949d9feee",
+    "115f23e3-2a19-5dcb-bc7f-96408004f110",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"
+  ],
+  "disambiguation_ids": [
+    "dba7b1de-f3a0-57af-9af9-b2a4da3136fa",
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b"
+  ]
+}

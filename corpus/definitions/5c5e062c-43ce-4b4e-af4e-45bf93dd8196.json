@@ -1,0 +1,9 @@
+{
+  "id": "5c5e062c-43ce-4b4e-af4e-45bf93dd8196",
+  "label": "MORE_3: ordinary comparative, both have r formally and x's measured degree of r is higher",
+  "term": "more and less in a perfection, ordinary comparative",
+  "definition": "`OrdinaryComparative A deg r x y`: x and y both have r formally (IN_ACT_1, `A.InActFormally`) and y's measured degree of r is strictly below x's (`deg r y < deg r x`), as one body is hotter than another by temperature. It is the represented-degree comparative (MORE_2) restricted to formal possessors of r, with a supplied measure `deg`. Distinguishing conditions: unlike MORE_1 it imposes formal possession on both comparands and a measured order; unlike MORE_4 it gives no weight to a higher mode of having r. On it, a cause that does not have r formally, or has it to a lower measured degree than its effect, is not more r than the effect.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.MoreSuchSenseCollapse.OrdinaryComparative",
+  "note": "Stipulative analyst definition, attribution deferred. It fixes the reading on which the paraphrase of STMT-CAUSE-OF-QUALITY-IN-ANOTHER-IS-MORE-SUCH gives its example ('the cause of another's heat is hotter'); it does not claim that Aristotle's Posterior Analytics I.2 sentence means this comparative. Its relation to the primitive MoreIn is carried by no statement. Introduced for the causal possession assessment (docs/notes/causal-possession-bottleneck.md)."
+}

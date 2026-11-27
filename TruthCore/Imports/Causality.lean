@@ -189,6 +189,7 @@ public import TruthCore.Causality.MetricGrimReaper
 public import TruthCore.Causality.MixedSupplierCensus
 public import TruthCore.Causality.ModalNecessaryBeingActuality
 public import TruthCore.Causality.ModalSenseSupport
+public import TruthCore.Causality.MoreSuchSenseCollapse
 public import TruthCore.Causality.MotionMapsBatch1
 public import TruthCore.Causality.MotionMoverFork
 public import TruthCore.Causality.MutualSupportAsymmetry
@@ -370,6 +371,7 @@ public import TruthCore.Causality.UnderivedRootRoute
 public import TruthCore.Causality.UniqueFeedback
 public import TruthCore.Causality.UniqueRootQuartaControl
 public import TruthCore.Causality.UnityHandoff
+public import TruthCore.Causality.UniversalPreexistence
 public import TruthCore.Causality.UnlocatedRootNecessity
 public import TruthCore.Causality.UnmovedAtNoTime
 public import TruthCore.Causality.WholePowerClassification
