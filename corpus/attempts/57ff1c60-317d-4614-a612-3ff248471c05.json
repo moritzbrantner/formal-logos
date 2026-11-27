@@ -20,7 +20,8 @@
     "efb48248-5d90-42b7-9bf9-0c862a0bd0b9",
     "a35e5195-abe4-4389-a171-3a0def89d8ae",
     "56649c09-3434-4926-a154-45b2d47ab77d",
-    "d180310f-4eda-44be-8c26-cca3347040bf"
+    "d180310f-4eda-44be-8c26-cca3347040bf",
+    "PR-2170"
   ],
   "blocker": "Universal-source preexistence rests on universal transfer b26c10a0, whose inputs 5e281daf, 2f6b9eff and the mode-of-being thesis 791fa216 (the q.4 a.2 second-proof premise) are unassessed; the passage's more-perfect-mode thesis is unencoded and is where the impersonal-source rival differs; perfectFromAncestry still needs nonuniversal transfer 10cd24ed.",
   "current_assessment": {
@@ -47,7 +48,8 @@
       "provider": "claude",
       "model": "claude-opus-5-5",
       "effort": "high",
-      "date": "2026-11-27"
+      "date": "2026-11-27",
+      "pr": "PR-2170"
     }
   ]
 }
