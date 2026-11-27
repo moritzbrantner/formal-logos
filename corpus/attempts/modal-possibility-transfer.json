@@ -8,9 +8,18 @@
   "date": "2026-10-28",
   "kind": "derivation",
   "outcome": "succeeded",
-  "summary": "Derived the exact E-to-M diamond bridge iff local accessibility inclusion, and the reversed box bridge, constructively using the existing modal semantics. Two Bool descriptions with E universal and M identity show the inclusion cannot be omitted even for equivalence frames: P has a candidate witness and an epistemic witness at false, but no metaphysical witness there. Rejected treating the carrier as all genuine metaphysical worlds or interpreting lack of contradiction proof as possibility. No geometry, modal duality or collapse matrix duplicated. Actual adequacy of the two relations remains open; no historical attribution and no root-premise change.",
+  "summary": "Derived the exact E-to-M diamond bridge iff local accessibility inclusion, and the reversed box bridge, constructively using the existing modal semantics. Two Bool descriptions with E universal and M identity show the inclusion cannot be omitted even for equivalence frames: P has a candidate witness and an epistemic witness at false, but no metaphysical witness there. Rejected treating the carrier as all genuine metaphysical worlds or interpreting lack of contradiction proof as possibility. No geometry, modal duality or collapse matrix duplicated. Actual adequacy of the two relations remains open; no historical attribution and no root-premise change.\n\nCuration pass 2, lane D batch 3 (#2103, 2026-11-27). 5aff626e remains unplaced. At false, the universal epistemic profile admits the true witness of description, while the identity profile has only false as a successor. IncludedAt from epistemic to metaphysical fails at false despite both profiles having equivalence access. This is the exact two-relation transfer premise, with no root-path registration.",
   "evidence": [
     "5aff626e-02c5-503d-b654-04d282304927",
     "PR-637"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-27"
+    }
   ]
 }

@@ -1,0 +1,10 @@
+{
+  "id": "1bce389b-063d-4c5d-a216-55317ff04352",
+  "label": "Test by B.Countermodels.checks (d65fb12b)",
+  "subject_kind": "result",
+  "subject_id": "e4c056c7-2a7e-5926-a92a-c0651d174037",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "d65fb12b-7a85-479a-8c40-4b10f8b3c7c8",
+  "note": "In the reflexive symmetric B chain at left, left accesses middle and middle accesses right. Left lacks the edge to right. This pair witnesses failure of TransitiveAt at left on the same reflexive symmetric frame."
+}
